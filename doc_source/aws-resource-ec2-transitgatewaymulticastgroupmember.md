@@ -14,7 +14,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[GroupIpAddress](#cfn-ec2-transitgatewaymulticastgroupmember-groupipaddress)" : String,
       "[NetworkInterfaceId](#cfn-ec2-transitgatewaymulticastgroupmember-networkinterfaceid)" : String,
-      "[TransitGatewayAttachmentId](#cfn-ec2-transitgatewaymulticastgroupmember-transitgatewayattachmentid)" : String,
       "[TransitGatewayMulticastDomainId](#cfn-ec2-transitgatewaymulticastgroupmember-transitgatewaymulticastdomainid)" : String
     }
 }
@@ -27,7 +26,6 @@ Type: AWS::EC2::TransitGatewayMulticastGroupMember
 Properties: 
   [GroupIpAddress](#cfn-ec2-transitgatewaymulticastgroupmember-groupipaddress): String
   [NetworkInterfaceId](#cfn-ec2-transitgatewaymulticastgroupmember-networkinterfaceid): String
-  [TransitGatewayAttachmentId](#cfn-ec2-transitgatewaymulticastgroupmember-transitgatewayattachmentid): String
   [TransitGatewayMulticastDomainId](#cfn-ec2-transitgatewaymulticastgroupmember-transitgatewaymulticastdomainid): String
 ```
 
@@ -35,25 +33,19 @@ Properties:
 
 `GroupIpAddress`  <a name="cfn-ec2-transitgatewaymulticastgroupmember-groupipaddress"></a>
 The IP address assigned to the transit gateway multicast group\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NetworkInterfaceId`  <a name="cfn-ec2-transitgatewaymulticastgroupmember-networkinterfaceid"></a>
 The group members' network interface IDs to register with the transit gateway multicast group\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`TransitGatewayAttachmentId`  <a name="cfn-ec2-transitgatewaymulticastgroupmember-transitgatewayattachmentid"></a>
-The ID of the transit gateway attachment\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `TransitGatewayMulticastDomainId`  <a name="cfn-ec2-transitgatewaymulticastgroupmember-transitgatewaymulticastdomainid"></a>
 The ID of the transit gateway multicast domain\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -91,6 +83,9 @@ The type of source\.
 
 `SubnetId`  <a name="SubnetId-fn::getatt"></a>
 The ID of the subnet\.
+
+`TransitGatewayAttachmentId`  <a name="TransitGatewayAttachmentId-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## See also<a name="aws-resource-ec2-transitgatewaymulticastgroupmember--seealso"></a>
 + [RegisterTransitGatewayMulticastGroupMembers](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RegisterTransitGatewayMulticastGroupMembers.html) in the *Amazon EC2 API Reference*

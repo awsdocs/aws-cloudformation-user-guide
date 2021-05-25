@@ -210,16 +210,20 @@ Note: It is not currently possible to use the `!Ref` command to reference a scri
 
 ### Ref<a name="aws-resource-gamelift-fleet-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the fleet ID, such as `fleet-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the fleet ID\. For example: `fleet-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-gamelift-fleet-return-values-fn--getatt"></a>
 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
 #### <a name="aws-resource-gamelift-fleet-return-values-fn--getatt-fn--getatt"></a>
 
 `FleetId`  <a name="FleetId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+A unique identifier for the fleet\. For example: `fleet-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
 
 ## Examples<a name="aws-resource-gamelift-fleet--examples"></a>
 
@@ -446,4 +450,3 @@ Resources:
 + [ Create GameLift resources using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 +  [Setting up GameLift fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-intro.html) in the *Amazon GameLift Developer Guide* 
 + [CreateFleet](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateFleet.html) in the *Amazon GameLift API Reference* 
-

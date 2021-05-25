@@ -18,7 +18,7 @@ This example demonstrates how to:
 
 The AWS CloudFormation helper script `cfn-init` is used to perform each of these actions, based on information in the `AWS::CloudFormation::Init` resource in the Windows Single Server Sharepoint Foundation template\.
 
-The AWS::CloudFormation::Init section is named "SharePointFoundation", and begins with a standard declaration:
+The `AWS::CloudFormation::Init` section is named "SharePointFoundation", and begins with a standard declaration:
 
 ```
 "SharePointFoundation": {
@@ -28,7 +28,7 @@ The AWS::CloudFormation::Init section is named "SharePointFoundation", and begin
        "config" : {
 ```
 
-After this, the **files** section of AWS::CloudFormation::Init is declared:
+After this, the **files** section of `AWS::CloudFormation::Init` is declared:
 
 ```
 "files" : {
@@ -57,7 +57,7 @@ After this, the **files** section of AWS::CloudFormation::Init is declared:
 
 Three files are created here and placed in the `C:\cfn` directory on the server instance\. They are:
 + `cfn-hup.conf`, the configuration file for cfn\-hup\.
-+ `cfn-auto-reloader.conf`, the configuration file for the hook used by cfn\-hup to initiate an update \(calling cfn\-init\) when the metadata in AWS::CloudFormation::Init changes\.
++ `cfn-auto-reloader.conf`, the configuration file for the hook used by cfn\-hup to initiate an update \(calling cfn\-init\) when the metadata in `AWS::CloudFormation::Init` changes\.
 
 There is also a file that is downloaded to the server: `SharePointFoundation.exe`\. This file is used to install SharePoint on the server instance\.
 
@@ -137,7 +137,7 @@ If all goes well, an Elastic IP is used to provide access to the SharePoint inst
 
 Once stack creation is complete, the IP address supplied by EIP will be displayed in the **Outputs** tab of the AWS CloudFormation console\. However, before you can access the instance you will need to retrieve the auto\-generated temporary Administrator password for the instance\. For more information, see [Connecting to your Windows instance using RDP](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/connecting_to_windows_instance.html) in the *Amazon EC2 User Guide for Windows Instances*\.
 
-## How to manage Windows services<a name="w8978ab1c23c33c15c11"></a>
+## How to manage Windows services<a name="w9005ab1c23c33c15c11"></a>
 
 You manage Windows services in the same way as Linux services, except that you use a `windows` key instead of `sysvinit`\. The following example starts the `cfn-hup` service, sets it to Automatic, and restarts the service if cfn\-init modifies the `c:\cfn\cfn-hup.conf` or `c:\cfn\hooks.d\cfn-auto-reloader.conf` configuration files\.
 

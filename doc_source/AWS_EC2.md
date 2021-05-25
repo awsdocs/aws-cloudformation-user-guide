@@ -53,6 +53,7 @@
 + [AWS::EC2::TransitGatewayMulticastDomainAssociation](aws-resource-ec2-transitgatewaymulticastdomainassociation.md)
 + [AWS::EC2::TransitGatewayMulticastGroupMember](aws-resource-ec2-transitgatewaymulticastgroupmember.md)
 + [AWS::EC2::TransitGatewayMulticastGroupSource](aws-resource-ec2-transitgatewaymulticastgroupsource.md)
++ [AWS::EC2::TransitGatewayPeeringAttachment](aws-resource-ec2-transitgatewaypeeringattachment.md)
 + [AWS::EC2::TransitGatewayRoute](aws-resource-ec2-transitgatewayroute.md)
 + [AWS::EC2::TransitGatewayRouteTable](aws-resource-ec2-transitgatewayroutetable.md)
 + [AWS::EC2::TransitGatewayRouteTableAssociation](aws-resource-ec2-transitgatewayroutetableassociation.md)

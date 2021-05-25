@@ -62,7 +62,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-gamelift-matchmakingruleset-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The unique Amazon Resource Name \(ARN\) assigned to the rule set\.
+The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html)\) for the script\. For example: `arn:aws:gamelift:us-west-2::matchmakingruleset/myrulesetname`\.
 
 `Name`  <a name="Name-fn::getatt"></a>
 The unique name of the rule set\.

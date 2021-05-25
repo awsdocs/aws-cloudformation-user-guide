@@ -16,7 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[S3](#cfn-appflow-flow-destinationconnectorproperties-s3)" : S3DestinationProperties,
   "[Salesforce](#cfn-appflow-flow-destinationconnectorproperties-salesforce)" : SalesforceDestinationProperties,
   "[Snowflake](#cfn-appflow-flow-destinationconnectorproperties-snowflake)" : SnowflakeDestinationProperties,
-  "[Upsolver](#cfn-appflow-flow-destinationconnectorproperties-upsolver)" : UpsolverDestinationProperties
+  "[Upsolver](#cfn-appflow-flow-destinationconnectorproperties-upsolver)" : UpsolverDestinationProperties,
+  "[Zendesk](#cfn-appflow-flow-destinationconnectorproperties-zendesk)" : ZendeskDestinationProperties
 }
 ```
 
@@ -37,6 +38,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     SnowflakeDestinationProperties
   [Upsolver](#cfn-appflow-flow-destinationconnectorproperties-upsolver): 
     UpsolverDestinationProperties
+  [Zendesk](#cfn-appflow-flow-destinationconnectorproperties-zendesk): 
+    ZendeskDestinationProperties
 ```
 
 ## Properties<a name="aws-properties-appflow-flow-destinationconnectorproperties-properties"></a>
@@ -81,6 +84,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The properties required to query Upsolver\.   
 *Required*: No  
 *Type*: [UpsolverDestinationProperties](aws-properties-appflow-flow-upsolverdestinationproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Zendesk`  <a name="cfn-appflow-flow-destinationconnectorproperties-zendesk"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [ZendeskDestinationProperties](aws-properties-appflow-flow-zendeskdestinationproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-appflow-flow-destinationconnectorproperties--seealso"></a>

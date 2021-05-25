@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ApplyOnlyAtCronInterval](#cfn-ssm-association-applyonlyatcroninterval)" : Boolean,
       "[AssociationName](#cfn-ssm-association-associationname)" : String,
       "[AutomationTargetParameterName](#cfn-ssm-association-automationtargetparametername)" : String,
+      "[CalendarNames](#cfn-ssm-association-calendarnames)" : [ String, ... ],
       "[ComplianceSeverity](#cfn-ssm-association-complianceseverity)" : String,
       "[DocumentVersion](#cfn-ssm-association-documentversion)" : String,
       "[InstanceId](#cfn-ssm-association-instanceid)" : String,
@@ -39,6 +40,8 @@ Properties:
   [ApplyOnlyAtCronInterval](#cfn-ssm-association-applyonlyatcroninterval): Boolean
   [AssociationName](#cfn-ssm-association-associationname): String
   [AutomationTargetParameterName](#cfn-ssm-association-automationtargetparametername): String
+  [CalendarNames](#cfn-ssm-association-calendarnames): 
+    - String
   [ComplianceSeverity](#cfn-ssm-association-complianceseverity): String
   [DocumentVersion](#cfn-ssm-association-documentversion): String
   [InstanceId](#cfn-ssm-association-instanceid): String
@@ -77,6 +80,12 @@ Specify the target for the association\. This target is required for association
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CalendarNames`  <a name="cfn-ssm-association-calendarnames"></a>
+The names or Amazon Resource Names \(ARNs\) of the Systems Manager Change Calendar type documents your associations are gated under\. The associations only run when that Change Calendar is open\. For more information, see [AWS Systems Manager Change Calendar](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-change-calendar)\.  
+*Required*: No  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ComplianceSeverity`  <a name="cfn-ssm-association-complianceseverity"></a>
@@ -140,7 +149,7 @@ An S3 bucket where you want to store the output details of the request\.
 `Parameters`  <a name="cfn-ssm-association-parameters"></a>
 The parameters for the runtime configuration of the document\.  
 *Required*: No  
-*Type*: Map of [ParameterValues](aws-properties-ssm-association-parametervalues.md)  
+*Type*: Map of List  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduleExpression`  <a name="cfn-ssm-association-scheduleexpression"></a>

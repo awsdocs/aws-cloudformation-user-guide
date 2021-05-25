@@ -10,7 +10,7 @@ CloudFormation doesn't monitor rollback triggers when it rolls back a stack duri
 
 You can add a maximum of five rollback triggers\. To add a rollback trigger, you specify the ARN \(Amazon Resource Name\) of the CloudWatch alarm\. Currently, only **AWS::CloudWatch::Alarm** types can be used as rollback triggers\.
 
-If a given Cloudwatch alarm is missing, the entire stack operation fails and is rolled back\.
+If a given CloudWatch alarm is missing, the entire stack operation fails and is rolled back\.
 
 Be aware that access to Amazon CloudWatch requires credentials\. Those credentials must have permissions to access AWS resources, such as retrieving CloudWatch metric data about your cloud resources\. For more information, see [Authentication and access control for Amazon CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html) in Amazon CloudWatch User Guide\.
 

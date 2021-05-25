@@ -14,7 +14,7 @@ Best practices are recommendations that can help you use AWS CloudFormation more
 + [Do not embed credentials in your templates](security-best-practices.md#creds)
 + [Use AWS\-specific parameter types](#parmtypes)
 + [Use parameter constraints](#parmconstraints)
-+ [Use AWS::CloudFormation::Init to deploy software applications on Amazon EC2 instances](#cfninit)
++ [Use `AWS::CloudFormation::Init` to deploy software applications on Amazon EC2 instances](#cfninit)
 + [Use the latest helper scripts](#helper-scripts)
 + [Validate templates before using them](#validate)
 
@@ -66,7 +66,7 @@ If your template requires inputs for existing AWS\-specific values, such as exis
 
 With constraints, you can describe allowed input values so that CloudFormation catches any not valid values before creating a stack\. You can set constraints such as a minimum length, maximum length, and allowed patterns\. For example, you can set constraints on a database user name value so that it must be a minimum length of eight character and contain only alphanumeric characters\. For more information, see [Parameters](parameters-section-structure.md)\.
 
-## Use AWS::CloudFormation::Init to deploy software applications on Amazon EC2 instances<a name="cfninit"></a>
+## Use `AWS::CloudFormation::Init` to deploy software applications on Amazon EC2 instances<a name="cfninit"></a>
 
 When you launch stacks, you can install and configure software applications on Amazon EC2 instances by using the cfn\-init helper script and the `AWS::CloudFormation::Init` resource\. By using `AWS::CloudFormation::Init`, you can describe the configurations that you want rather than scripting procedural steps\. You can also update configurations without recreating instances\. And if anything goes wrong with your configuration, CloudFormation generates logs that you can use to investigate issues\.
 

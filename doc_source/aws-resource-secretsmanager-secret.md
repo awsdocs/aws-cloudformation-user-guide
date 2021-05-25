@@ -266,7 +266,7 @@ The following example replicates a primary secret to `us-east-1` and `us-east-2`
         ReplicaRegions:
           - Region: 'us-east-1'
             KmsKeyId: 'alias/exampleAlias'
-          - Region: 'us-east-1'
+          - Region: 'us-east-2'
 ```
 
 ## See also<a name="aws-resource-secretsmanager-secret--seealso"></a>

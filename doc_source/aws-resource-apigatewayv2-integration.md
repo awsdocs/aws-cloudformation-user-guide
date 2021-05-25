@@ -199,20 +199,20 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Integration creation example<a name="aws-resource-apigatewayv2-integration--examples--Integration_creation_example"></a>
 
-The following example creates an `integration` resource named `MyIntegration` for the `MyApi` API, whose credentials are specified by `MyCredentialsArn`\.
+The following example creates a Lambda integration for an HTTP API\. For full examples, see [example CloudFormation templates](https://github.com/awsdocs/amazon-api-gateway-developer-guide/tree/main/cloudformation-templates) on GitHub\.
 
 #### JSON<a name="aws-resource-apigatewayv2-integration--examples--Integration_creation_example--json"></a>
 
 ```
 {
-    "MyIntegration": {
+    "Integration": {
         "Type": "AWS::ApiGatewayV2::Integration",
         "Properties": {
             "ApiId": {
-                "Ref": "MyApi"
+                "Ref": "HTTPApi"
             },
             "Description": "Lambda Integration",
-            "IntegrationType": "AWS",
+            "IntegrationType": "AWS_PROXY",
             "IntegrationUri": {
                 "Fn::Join": [
                     "",
@@ -227,15 +227,17 @@ The following example creates an `integration` resource named `MyIntegration` fo
                         },
                         ":lambda:path/2015-03-31/functions/",
                         {
-                            "Ref": "MyLambdaFunction"
+                            "Fn::GetAtt": [
+                                "MyLambdaFunction",
+                                "Arn"
+                            ]
                         },
                         "/invocations"
                     ]
                 ]
             },
-            "CredentialsArn": "MyCredentialsArn",
-            "IntegrationMethod": "GET",
-            "ConnectionType": "INTERNET"
+            "IntegrationMethod": "POST",
+            "PayloadFormatVersion": "2.0"
         }
     }
 }
@@ -244,24 +246,23 @@ The following example creates an `integration` resource named `MyIntegration` fo
 #### YAML<a name="aws-resource-apigatewayv2-integration--examples--Integration_creation_example--yaml"></a>
 
 ```
-MyIntegration:
+Integration:
   Type: 'AWS::ApiGatewayV2::Integration'
   Properties:
-    ApiId: !Ref MyApi
+    ApiId: !Ref HTTPApi
     Description: Lambda Integration
-    IntegrationType: AWS
-    IntegrationUri: !Join 
+    IntegrationType: AWS_PROXY
+    IntegrationUri: !Join
       - ''
       - - 'arn:'
         - !Ref 'AWS::Partition'
         - ':apigateway:'
         - !Ref 'AWS::Region'
         - ':lambda:path/2015-03-31/functions/'
-        - !Ref MyLambdaFunction
+        - !GetAtt MyLambdaFunction.Arn
         - /invocations
-    CredentialsArn: MyCredentialsArn
-    IntegrationMethod: GET
-    ConnectionType: INTERNET
+    IntegrationMethod: POST
+    PayloadFormatVersion: '2.0'
 ```
 
 ### Integration with parameter mapping for an HTTP API<a name="aws-resource-apigatewayv2-integration--examples--Integration_with_parameter_mapping_for_an_HTTP_API"></a>

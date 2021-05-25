@@ -54,7 +54,7 @@ An array of CopyAction objects, which contains the details of the copy operation
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableContinuousBackup`  <a name="cfn-backup-backupplan-backupruleresourcetype-enablecontinuousbackup"></a>
-Not currently supported by AWS CloudFormation\.  
+Enables continuous backup and point\-in\-time restores \(PITR\)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -58,7 +58,7 @@ The version that is associated with a build or script\. Version strings do not n
 
 ### Ref<a name="aws-resource-gamelift-script-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `ScriptId`, such as `script-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `ScriptId`\. For example: `script-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -71,10 +71,10 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-gamelift-script-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The unique Amazon Resource Name \(ARN\) for the script\.
+The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html)\) for the script\. For example: `arn:aws:gamelift:us-west-2::script/script-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
 
 `Id`  <a name="Id-fn::getatt"></a>
-A unique identifier for a Realtime script\.
+A unique identifier for a Realtime script\. For example: `script-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
 
 ## Examples<a name="aws-resource-gamelift-script--examples"></a>
 

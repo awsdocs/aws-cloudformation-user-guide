@@ -27,7 +27,7 @@ If your template includes nested stacks \(for example, stacks described in other
 
      Choose **Choose File** to select the template file that you want to upload\. The template can be a maximum size of 1 MB\. Once you have chosen your template, CloudFormation uploads the file and displays the S3 URL\.
 
-     If you use the CLI or API to create a stack, you can upload a template with a maximum size of 51,200 bytes\.
+     If you use the AWS CLI or API to create a stack, you can upload a template with a maximum size of 51,200 bytes\.
 **Note**  
 If you upload a local template file, CloudFormation uploads it to an Amazon Simple Storage Service \(Amazon S3\) bucket in your AWS account\. If you don't already have an S3 bucket that was created by CloudFormation, it creates a unique bucket for each Region in which you upload a template file\. If you already have an S3 bucket that was created by AWS CloudFormation in your AWS account, CloudFormation adds the template to that bucket\.  
 Considerations to keep in mind about S3 buckets created by CloudFormation  

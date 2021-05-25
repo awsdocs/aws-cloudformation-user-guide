@@ -1,6 +1,6 @@
 # AWS::SSMIncidents::ReplicationSet<a name="aws-resource-ssmincidents-replicationset"></a>
 
-The `AWS::SSMIncidents::ReplicationSet` resource specifies a set of Regions that Incident Manager data will be replicate and the KMS key used to encrypt the data\.
+The `AWS::SSMIncidents::ReplicationSet` resource specifies a set of Regions that Incident Manager data is replicated to and the KMS key used to encrypt the data\.
 
 ## Syntax<a name="aws-resource-ssmincidents-replicationset-syntax"></a>
 

@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DataflowEndpointName`  <a name="cfn-groundstation-config-dataflowendpointconfig-dataflowendpointname"></a>
  The name of the dataflow endpoint to use during contacts\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

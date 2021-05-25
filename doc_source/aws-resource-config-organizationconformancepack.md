@@ -49,7 +49,7 @@ A list of `ConformancePackInputParameter` objects\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeliveryS3Bucket`  <a name="cfn-config-organizationconformancepack-deliverys3bucket"></a>
-Amazon S3 bucket where AWS Config stores conformance pack templates\.   
+The name of the Amazon S3 bucket where AWS Config stores conformance pack templates\.   
 This field is optional\.
 *Required*: No  
 *Type*: String  

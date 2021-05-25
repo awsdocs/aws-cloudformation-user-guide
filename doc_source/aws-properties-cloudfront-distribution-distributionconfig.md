@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CNAMEs](#cfn-cloudfront-distribution-distributionconfig-cnames)" : [ String, ... ],
   "[Comment](#cfn-cloudfront-distribution-distributionconfig-comment)" : String,
   "[CustomErrorResponses](#cfn-cloudfront-distribution-distributionconfig-customerrorresponses)" : [ CustomErrorResponse, ... ],
-  "[CustomOrigin](#cfn-cloudfront-distribution-distributionconfig-customorigin)" : CustomOrigin,
+  "[CustomOrigin](#cfn-cloudfront-distribution-distributionconfig-customorigin)" : LegacyCustomOrigin,
   "[DefaultCacheBehavior](#cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior)" : DefaultCacheBehavior,
   "[DefaultRootObject](#cfn-cloudfront-distribution-distributionconfig-defaultrootobject)" : String,
   "[Enabled](#cfn-cloudfront-distribution-distributionconfig-enabled)" : Boolean,
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Origins](#cfn-cloudfront-distribution-distributionconfig-origins)" : [ Origin, ... ],
   "[PriceClass](#cfn-cloudfront-distribution-distributionconfig-priceclass)" : String,
   "[Restrictions](#cfn-cloudfront-distribution-distributionconfig-restrictions)" : Restrictions,
-  "[S3Origin](#cfn-cloudfront-distribution-distributionconfig-s3origin)" : S3Origin,
+  "[S3Origin](#cfn-cloudfront-distribution-distributionconfig-s3origin)" : LegacyS3Origin,
   "[ViewerCertificate](#cfn-cloudfront-distribution-distributionconfig-viewercertificate)" : ViewerCertificate,
   "[WebACLId](#cfn-cloudfront-distribution-distributionconfig-webaclid)" : String
 }
@@ -45,7 +45,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CustomErrorResponses](#cfn-cloudfront-distribution-distributionconfig-customerrorresponses): 
     - CustomErrorResponse
   [CustomOrigin](#cfn-cloudfront-distribution-distributionconfig-customorigin): 
-    CustomOrigin
+    LegacyCustomOrigin
   [DefaultCacheBehavior](#cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior): 
     DefaultCacheBehavior
   [DefaultRootObject](#cfn-cloudfront-distribution-distributionconfig-defaultrootobject): String
@@ -62,7 +62,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Restrictions](#cfn-cloudfront-distribution-distributionconfig-restrictions): 
     Restrictions
   [S3Origin](#cfn-cloudfront-distribution-distributionconfig-s3origin): 
-    S3Origin
+    LegacyS3Origin
   [ViewerCertificate](#cfn-cloudfront-distribution-distributionconfig-viewercertificate): 
     ViewerCertificate
   [WebACLId](#cfn-cloudfront-distribution-distributionconfig-webaclid): String
@@ -106,7 +106,7 @@ For more information about custom error pages, see [Customizing Error Responses]
 `CustomOrigin`  <a name="cfn-cloudfront-distribution-distributionconfig-customorigin"></a>
 Not currently supported by AWS CloudFormation\.  
 *Required*: No  
-*Type*: CustomOrigin  
+*Type*: [LegacyCustomOrigin](aws-properties-cloudfront-distribution-legacycustomorigin.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultCacheBehavior`  <a name="cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior"></a>
@@ -190,7 +190,7 @@ A complex type that identifies ways in which you want to restrict distribution o
 `S3Origin`  <a name="cfn-cloudfront-distribution-distributionconfig-s3origin"></a>
 Not currently supported by AWS CloudFormation\.  
 *Required*: No  
-*Type*: S3Origin  
+*Type*: [LegacyS3Origin](aws-properties-cloudfront-distribution-legacys3origin.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ViewerCertificate`  <a name="cfn-cloudfront-distribution-distributionconfig-viewercertificate"></a>

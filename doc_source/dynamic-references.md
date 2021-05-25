@@ -9,7 +9,7 @@ CloudFormation currently supports the following dynamic reference patterns:
 
 Some considerations when using dynamic references:
 + You can include up to 60 dynamic references in a stack template\.
-+ For transforms, such as AWS::Include and AWS::Serverless, AWS CloudFormation doesn't resolve dynamic references prior to invoking any transforms\. Rather, AWS CloudFormation passes the literal string of the dynamic reference to the transform\. Dynamic references \(including those inserted into the processed template as the result of a transform\) are resolved when you execute the change set using the template\.
++ For transforms, such as `AWS::Include` and `AWS::Serverless`, AWS CloudFormation doesn't resolve dynamic references prior to invoking any transforms\. Rather, AWS CloudFormation passes the literal string of the dynamic reference to the transform\. Dynamic references \(including those inserted into the processed template as the result of a transform\) are resolved when you execute the change set using the template\.
 + Dynamic references for secure values, such as `ssm-secure` and `secretsmanager`, aren't currently supported in [custom resources](template-custom-resources.md)\.
 
 **Note**  

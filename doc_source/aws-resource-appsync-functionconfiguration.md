@@ -87,7 +87,8 @@ The `Function` request mapping template\. Functions support only the 2018\-05\-2
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequestMappingTemplateS3Location`  <a name="cfn-appsync-functionconfiguration-requestmappingtemplates3location"></a>
-The location of a request mapping template in an Amazon S3 bucket\. Use this if you want to provision with a template file in Amazon S3 rather than embedding it in your CloudFormation template\.   
+Describes a Sync configuration for a resolver\.  
+Contains information on which Conflict Detection, as well as Resolution strategy, should be performed when the resolver is invoked\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -105,7 +106,8 @@ The location of a response mapping template in an Amazon S3 bucket\. Use this if
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SyncConfig`  <a name="cfn-appsync-functionconfiguration-syncconfig"></a>
-Not currently supported by AWS CloudFormation\.  
+Describes a Sync configuration for a resolver\.  
+Contains information on which Conflict Detection as well as Resolution strategy should be performed when the resolver is invoked\.  
 *Required*: No  
 *Type*: [SyncConfig](aws-properties-appsync-functionconfiguration-syncconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

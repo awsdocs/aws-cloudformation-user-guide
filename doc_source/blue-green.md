@@ -240,7 +240,7 @@ Specifies resources used for traffic routing\.
 The listener to be used by your load balancer to direct traffic to your target groups\.  
 *Required*: Yes    
 `Type`  
-The type of the resource\. AWS::ElasticLoadBalancingV2::Listener  
+The type of the resource\. `AWS::ElasticLoadBalancingV2::Listener`  
 *Required*: Yes  
 `LogicalID`  
 The logical ID of the resource\.  
@@ -249,7 +249,7 @@ The logical ID of the resource\.
 The listener to be used by your load balancer to direct traffic to your target groups\.  
 *Required*: Yes    
 `Type`  
-The type of the resource\. AWS::ElasticLoadBalancingV2::Listener  
+The type of the resource\. `AWS::ElasticLoadBalancingV2::Listener`  
 *Required*: Yes  
 `LogicalID`  
 The logical ID of the resource\.  
@@ -259,7 +259,7 @@ Logical ID of resources to use as target groups to route traffic to the register
 *Required*: Yes
 
 `Type`  
-The type of hook\. AWS::CodeDeploy::BlueGreen  
+The type of hook\. `AWS::ElasticLoadBalancingV2::Listener`  
 *Required*: Yes
 
 ## IAM permissions necessary for blue/green deployments<a name="blue-green-iam"></a>

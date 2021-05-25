@@ -49,7 +49,7 @@ To resolve this situation, try the following:
   This includes [nested stacks](using-cfn-nested-stacks.md) whose root stacks have termination protection enabled\. Disable termination protection on the root stack, then perform the delete operation again\. It's strongly recommended that you don't delete nested stacks directly, but only delete them as part of deleting the root stack and all its resources\.
 
   For more information, see [Protecting a stack from being deleted](using-cfn-protect-stacks.md)\.
-+ For all other issues, if you have AWS Support, you can create a Technical Support case\. See [Contacting support](#contacting-support)\.
++ For all other issues, if you have AWS Support, you can create a AWS Support case\. See [Contacting support](#contacting-support)\.
 
 ### Dependency error<a name="troubleshooting-errors-dependency-error"></a>
 
@@ -57,7 +57,7 @@ To resolve a dependency error, add a `DependsOn` attribute to resources that dep
 
 ### Error parsing parameter when passing a list<a name="troubleshooting-errors-error-parsing-parameter-when-passing-a-list"></a>
 
-When you use the AWS Command Line Interface or AWS CloudFormation to pass in a list, add the escape character \(`\`\) before each comma\. The following sample shows how you specify an input parameter when using the CLI\.
+When you use the AWS Command Line Interface or AWS CloudFormation to pass in a list, add the escape character \(`\`\) before each comma\. The following sample shows how you specify an input parameter when using the AWS CLI\.
 
 ```
 ParameterKey=CIDR,ParameterValue='10.10.0.0/16\,10.10.0.0/24\,10.10.1.0/24'
@@ -140,7 +140,7 @@ Delete resources that you don't need or request a [limit increase](https://docs.
 Resource didn't stabilize  
 A resource didn't respond because the operation might have exceeded the AWS CloudFormation timeout period or an AWS service might have been interrupted\. No change is required\. After the resource operation is complete or the AWS service is back in operation, continue rolling back the update\.
 
-To continue rolling back an update, you can use the AWS CloudFormation console or AWS command line interface \(CLI\)\. For more information, see [Continue rolling back an update](using-cfn-updating-stacks-continueupdaterollback.md)\.
+To continue rolling back an update, you can use the AWS CloudFormation console or AWS command line interface \(AWS CLI\)\. For more information, see [Continue rolling back an update](using-cfn-updating-stacks-continueupdaterollback.md)\.
 
 If none of these solutions work, you can skip the resources that AWS CloudFormation can't successfully roll back\. For more information, see the `ResourcesToSkip` parameter for the [ContinueUpdateRollback](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ContinueUpdateRollback.html) action in the *AWS CloudFormation API Reference*\. AWS CloudFormation sets the status of the specified resources to `UPDATE_COMPLETE` and continues to roll back the stack\. After the rollback is complete, the state of the skipped resources will be inconsistent with the state of the resources in the stack template\. Before you perform another stack update, you must modify the resources or update the stack to be consistent with each other\. If you don't, subsequent stack updates might fail and make your stack unrecoverable\.
 

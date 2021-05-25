@@ -27,4 +27,4 @@ The console doesn't provide a drop\-down list or enable you to search for values
 
 ## Group and sort parameters<a name="cfn-using-console-create-stack-parameters-sort"></a>
 
-The console alphabetically lists input parameters by their logical ID\. When you create a template, you can use the `AWS::CloudFormation::Interface` metadata key to override the default ordering\. For more information and an example of the `AWS::CloudFormation::Interface` metadata key, see [AWS::CloudFormation::Interface](aws-resource-cloudformation-interface.md)\.
+The console alphabetically lists input parameters by their logical ID\. When you create a template, you can use the `AWS::CloudFormation::Interface` metadata key to override the default ordering\. For more information and an example of the `AWS::CloudFormation::Interface` metadata key, see [`AWS::CloudFormation::Interface`](aws-resource-cloudformation-interface.md)\.

@@ -162,15 +162,23 @@ The following examples create a Step Functions state machine\.
 #### JSON<a name="aws-resource-stepfunctions-statemachine--examples--Using_a_Single-Line_Property--json"></a>
 
 ```
-{ "AWSTemplateFormatVersion":"2010-09-09", "Description":"An
-            example template for a Step Functions state machine.", "Resources":{ "MyStateMachine":{
-            "Type":"AWS::StepFunctions::StateMachine", "Properties":{
-            "StateMachineName":"HelloWorld-StateMachine", "StateMachineType":"STANDARD",
-            "DefinitionString":"{\"StartAt\": \"HelloWorld\", \"States\": {\"HelloWorld\":
-            {\"Type\": \"Task\", \"Resource\":
+{  
+   "AWSTemplateFormatVersion":"2010-09-09",
+   "Description":"An example template for a Step Functions state machine.",
+   "Resources":{  
+      "MyStateMachine":{  
+         "Type":"AWS::StepFunctions::StateMachine",
+         "Properties":{  
+            "StateMachineName":"HelloWorld-StateMachine",
+            "StateMachineType":"STANDARD",
+            "DefinitionString":"{\"StartAt\": \"HelloWorld\", 
+            \"States\": {\"HelloWorld\": {\"Type\": \"Task\", \"Resource\": 
             \"arn:aws:lambda:us-east-1:111122223333;:function:HelloFunction\", \"End\": true}}}",
-            "RoleArn":"arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1;" }
-            } } }
+            "RoleArn":"arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1;"
+         }
+      }
+   }
+}
 ```
 
 ### Using the Fn::Join Intrinsic Function<a name="aws-resource-stepfunctions-statemachine--examples--Using_the_Fn::Join_Intrinsic_Function"></a>
@@ -178,17 +186,47 @@ The following examples create a Step Functions state machine\.
 #### JSON<a name="aws-resource-stepfunctions-statemachine--examples--Using_the_Fn::Join_Intrinsic_Function--json"></a>
 
 ```
-{ "AWSTemplateFormatVersion" : "2010-09-09", "Description" : "An
-            example template for a Step Functions state machine.", "Resources": { "MyStateMachine":
-            { "Type": "AWS::StepFunctions::StateMachine", "Properties": { "StateMachineName" :
-            "HelloWorld-StateMachine", "StateMachineType":"STANDARD", "DefinitionString" : {
-            "Fn::Join": [ "\n", [ "{", " \"StartAt\": \"HelloWorld\",", " \"States\" : {", "
-            \"HelloWorld\" : {", " \"Type\" : \"Task\", ", " \"Resource\" :
-            \"arn:aws:lambda:us-east-1:111122223333:function:HelloFunction\",", " \"End\" : true", "
-            }", " }", "}" ] ] }, "RoleArn" :
-            "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1", "Tags": [ {
-            "Key": "keyname1", "Value": "value1" }, { "Key": "keyname2", "Value": "value2" } ] } } }
+{
+    "AWSTemplateFormatVersion" : "2010-09-09",
+    "Description" : "An example template for a Step Functions state machine.",
+    "Resources": {
+       "MyStateMachine": {
+          "Type": "AWS::StepFunctions::StateMachine",
+             "Properties": {
+                "StateMachineName" : "HelloWorld-StateMachine",
+                "StateMachineType":"STANDARD",
+                "DefinitionString" : {
+                   "Fn::Join": [
+                      "\n",
+                      [
+                         "{",
+                         "    \"StartAt\": \"HelloWorld\",",
+                         "    \"States\" : {",
+                         "        \"HelloWorld\" : {",
+                         "            \"Type\" : \"Task\", ",
+                         "            \"Resource\" : \"arn:aws:lambda:us-east-1:111122223333:function:HelloFunction\",",
+                         "            \"End\" : true",
+                         "        }",
+                         "    }",
+                         "}"
+                      ]
+                   ]
+                },
+   	      "RoleArn" : "arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1",
+            "Tags": [
+                    {
+                        "Key": "keyname1",
+                        "Value": "value1"
+                    },
+                    {
+                        "Key": "keyname2",
+                        "Value": "value2"
+                    }
+                ] 
             }
+        }
+    }
+}
 ```
 
 ### Including Tags<a name="aws-resource-stepfunctions-statemachine--examples--Including_Tags"></a>
@@ -196,14 +234,32 @@ The following examples create a Step Functions state machine\.
 #### YAML<a name="aws-resource-stepfunctions-statemachine--examples--Including_Tags--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: '2010-09-09' Description: An example
-            template for a Step Functions state machine. Resources: MyStateMachine: Type:
-            AWS::StepFunctions::StateMachine Properties: StateMachineName: HelloWorld-StateMachine
-            DefinitionString: |- { "StartAt": "HelloWorld", "States": { "HelloWorld": { "Type":
-            "Task", "Resource": "arn:aws:lambda:us-east-1:111122223333:function:HelloFunction",
-            "End": true } } } RoleArn:
-            arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1 Tags: - Key:
-            "keyname1" Value: "value1" - Key: "keyname2" Value: "value2"
+AWSTemplateFormatVersion: '2010-09-09'
+Description: An example template for a Step Functions state machine.
+Resources:
+  MyStateMachine:
+    Type: AWS::StepFunctions::StateMachine
+    Properties:
+      StateMachineName: HelloWorld-StateMachine
+      DefinitionString: |-
+        {
+          "StartAt": "HelloWorld",
+          "States": {
+            "HelloWorld": {
+              "Type": "Task",
+              "Resource": "arn:aws:lambda:us-east-1:111122223333:function:HelloFunction",
+              "End": true
+            }
+          }
+        }
+      RoleArn: arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1
+      Tags:
+        -
+          Key: "keyname1"
+          Value: "value1"
+        -
+          Key: "keyname2"
+          Value: "value2"
 ```
 
 ### Using DefinitionSubstitutions<a name="aws-resource-stepfunctions-statemachine--examples--Using_DefinitionSubstitutions"></a>
@@ -213,13 +269,19 @@ In this example template, `HelloFunction:` is defined for the `DefinitionSubstit
 #### YAML<a name="aws-resource-stepfunctions-statemachine--examples--Using_DefinitionSubstitutions--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: "2010-09-09" Description: An example
-            template for a Step Functions state machine. Resources: MyStateMachine: Type:
-            AWS::StepFunctions::StateMachine Properties: StateMachineName: HelloWorld-StateMachine
-            DefinitionS3Location: Bucket: example_bucket Key: hello_world.json
-            DefinitionSubstitutions: HelloFunction:
-            arn:aws:lambda:us-east-1:111122223333:function:HelloFunction RoleArn:
-            arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1
+AWSTemplateFormatVersion: "2010-09-09"
+Description: An example template for a Step Functions state machine.
+Resources:
+  MyStateMachine:
+    Type: AWS::StepFunctions::StateMachine
+    Properties:
+      StateMachineName: HelloWorld-StateMachine
+      DefinitionS3Location:
+        Bucket: example_bucket
+        Key: hello_world.json
+      DefinitionSubstitutions:
+        HelloFunction: arn:aws:lambda:us-east-1:111122223333:function:HelloFunction
+      RoleArn: arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1
 ```
 
 ### hello\_world\.json<a name="aws-resource-stepfunctions-statemachine--examples--hello_world.json"></a>
@@ -229,6 +291,14 @@ AWSTemplateFormatVersion: "2010-09-09" Description: An example
 #### JSON<a name="aws-resource-stepfunctions-statemachine--examples--hello_world.json--json"></a>
 
 ```
-{ "StartAt": "HelloWorld", "States": { "HelloWorld": { "Type":
-            "Task", "Resource": "${HelloFunction}", "End": true } } }
+{
+  "StartAt": "HelloWorld",
+  "States": {
+    "HelloWorld": {
+      "Type": "Task",
+      "Resource": "${HelloFunction}",
+      "End": true
+    }
+  }
+}
 ```

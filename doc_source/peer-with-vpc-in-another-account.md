@@ -156,7 +156,7 @@ In this step, you'll create the VPC and role in the *accepter account*\.
 
 1. Choose **I acknowledge that AWS CloudFormation might create IAM resources**, and then choose **Create stack**\.
 
-## Step 2: Create a template that includes AWS::EC2::VPCPeeringConnection<a name="step-2-create-template-for-vpc-peering-connection-owner"></a>
+## Step 2: Create a template that includes `AWS::EC2::VPCPeeringConnection`<a name="step-2-create-template-for-vpc-peering-connection-owner"></a>
 
 Now that you've created the VPC and cross\-account role, you can peer with the VPC using another AWS account \(the *requester account*\)\.
 

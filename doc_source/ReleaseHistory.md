@@ -4,11 +4,19 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| [Updated resources](AWS_CloudFormation.md) | The following resource was updated: AWS::CloudFormation::StackSet\. 
+| [New resources](AWS_EC2.md) | The following resource was added: AWS::EC2::TransitGatewayPeeringAttachment\. 
 
- [AWS::CloudFormation::StackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)  
-Use the `CallAs` property type to specify whether you are acting as an account administrator in the organization's management account or as a delegated administrator in a member account\.  | May 14, 2021 | 
-| [Updated resources](#ReleaseHistory) | The following resource was updated: AWS::CloudFormation::StackSet\. 
+ [AWS::EC2::TransitGatewayPeeringAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html)   
+Use the `TransitGatewayPeeringAttachment` resource to request transit gateway peering attachment between the specified transit gateway \(requester\) and a peer transit gateway \(accepter\)\.  | May 20, 2021 | 
+| [New resource](AWS_AppRunner.md) | The following resource was added: AWS::AppRunner::Service\. 
+
+ [AWS::AppRunner::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-service.html)   
+Use the `AWS::AppRunner::Service` resource to create or update an AWS App Runner service\.  | May 20, 2021 | 
+| [New resource](AWS_IoTCoreDeviceAdvisor.md) | The following resource was added: AWS::IoTCoreDeviceAdvisor::SuiteDefinition 
+
+ [SuiteDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotcoredeviceadvisor-suitedefinition.htm)   
+Use the `SuiteDefinition` resource to create a new test suite configuration for Device Advisor\.  | May 20, 2021 | 
+| [Updated resources](AWS_CloudFormation.md) | The following resource was updated: AWS::CloudFormation::StackSet\. 
 
  [AWS::CloudFormation::StackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)  
 Use the `CallAs` property type to specify whether you are acting as an account administrator in the organization's management account or as a delegated administrator in a member account\.  | May 14, 2021 | 
@@ -25,19 +33,6 @@ Use the `AWS::ECS::CapacityProvider ManagedScaling.InstanceWarmupPeriod` resourc
  [AWS::Elasticsearch::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html)   
 Use the `EncryptionAtRestOptions` property to specify whether the domain should encrypt data at rest, and if so, the AWS Key Management Service \(KMS\) key to use\.  
 Use the `NodeToNodeEncryptionOptions` property to specify whether node\-to\-node encryption is enabled\.  | May 14, 2021 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::S3::Bucket\. 
-
- [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)   
-Use the `ExpiredObjectDeleteMarker` property to specify whether Amazon S3 will remove a delete marker with no noncurrent versions\.  | May 14, 2021 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::Elasticsearch::Domain\. 
-
- [AWS::Elasticsearch::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html)   
-Use the `EncryptionAtRestOptions` property to specify whether the domain should encrypt data at rest, and if so, the AWS Key Management Service \(KMS\) key to use\.  
-Use the `NodeToNodeEncryptionOptions` property to specify whether node\-to\-node encryption is enabled\.  | May 14, 2021 | 
-| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::ECS::CapacityProvider 
-
- [AWS::ECS::CapacityProvider ManagedScaling](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-managedscaling.html)   
-Use the `AWS::ECS::CapacityProvider ManagedScaling.InstanceWarmupPeriod` resource to set an instance warmup period for newly launched Amazon EC2 instances\.  | May 14, 2021 | 
 | [New resources](AWS_SSMContacts.md) | The following resources were added: AWS::SSMContacts::Contact and AWS::SSMContacts::ContactChannel 
 
  [AWS::SSMContacts::Contact](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html)   
@@ -56,10 +51,6 @@ Use the `ReplicationSet` resource to specify a set of Regions that Incident Mana
 
  [AWS::SSMIncidents::ResponsePlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html)   
 Use the `ResponsePlan` resource to specify the details of the response plan that are used when creating an incident\.  | May 14, 2021 | 
-| [New resource](#ReleaseHistory) | The following resource was added: AWS::DynamoDB::GlobalTable 
-
- [AWS::DynamoDB::GlobalTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html)   
-Use the `AWS::DynamoDB::GlobalTable` resource to create DynamoDB global tables\.  | May 14, 2021 | 
 | [Updated resources](AWS_ECR.md) | The following resources were updated: AWS::ECR::Repository 
 
  [AWS::ECR::Repository](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html)   
@@ -692,7 +683,7 @@ Use the `AWS::ImageBuilder::ContainerRecipe` resource to create a container reci
 | [Updated resource](AWS_ApiGatewayV2.md) | The following resource was updated: `AWS::ApiGatewayV2::Stage`\. 
 
  [AWS::ApiGatewayV2::Stage](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-stage.html)   
-Use the `AWS::ApiGatewayV2::Stage` resource to configure a stage for an API\.  | January 28, 2021 | 
+Added the attribute `AccessPolicyId` for internal use only\.  | January 28, 2021 | 
 | [New resource](AWS_LookoutVision.md) | The following resource was added: AWS::LookoutVision:Project\. 
 
  [AWS::LookoutVision:Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_LookoutVision.html)   
@@ -1220,7 +1211,7 @@ Use the `Tags` property to specify tags for the job queue\.  | October 22, 2020 
 | [Updated resource](AWS_AppSync.md) | The following resource was updated: AWS::AppSync::ApiKey\. 
 
  [AWS::AppSync::ApiKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html)   
-Use the `ApiKeyID` property to specify the API key ID\.  | October 22, 2020 | 
+Use the `ApiKeyId` property to specify the API key ID\.  | October 22, 2020 | 
 | [Updated resource](AWS_CloudFront.md) | The following resource was updated: AWS::CloudFront::Distribution\. 
 
 [AWS::CloudFront::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)  

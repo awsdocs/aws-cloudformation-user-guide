@@ -82,7 +82,7 @@ To view examples of how to construct a metric policy for your use case, see [Exa
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Policy`  <a name="cfn-mediastore-container-policy"></a>
-Creates an access policy for the specified container to restrict the users and clients that can access it\. For information about the data that is included in an access policy, see the [AWS Identity and Access Management User Guide](https://aws.amazon.com/documentation/iam/)\.  
+Creates an access policy for the specified container to restrict the users and clients that can access it\. For information about the data that is included in an access policy, see the [AWS Identity and Access Management User Guide](https://docs.aws.amazon.com/iam/)\.  
 For this release of the REST API, you can create only one policy for a container\. If you enter `PutContainerPolicy` twice, the second command modifies the existing policy\.   
 *Required*: No  
 *Type*: String  

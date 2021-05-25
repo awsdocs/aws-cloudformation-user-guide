@@ -1,6 +1,6 @@
 # AWS::ApiGatewayV2::Stage<a name="aws-resource-apigatewayv2-stage"></a>
 
-The `AWS::ApiGatewayV2::Stage` resource updates a stage for an API\.
+The `AWS::ApiGatewayV2::Stage` resource specifies a stage for an API\. Each stage is a named reference to a deployment of the API and is made available for client applications to call\. To learn more, see [Working with stages for HTTP APIs ](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-stages.html) and [Deploy a WebSocket API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-set-up-websocket-deployment.html)\.
 
 ## Syntax<a name="aws-resource-apigatewayv2-stage-syntax"></a>
 

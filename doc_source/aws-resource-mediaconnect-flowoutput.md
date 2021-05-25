@@ -93,7 +93,7 @@ The maximum latency in milliseconds for Zixi\-based streams\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-mediaconnect-flowoutput-name"></a>
-The name of the output\. This value must be unique within the current flow\.  
+The name of the VPC interface\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -2,7 +2,7 @@
 
 ## Description<a name="cfn-init-Description"></a>
 
-The cfn\-init helper script reads template metadata from the AWS::CloudFormation::Init key and acts accordingly to:
+The cfn\-init helper script reads template metadata from the `AWS::CloudFormation::Init` key and acts accordingly to:
 + Fetch and parse metadata from CloudFormation
 + Install packages
 + Write files to disk
@@ -11,7 +11,7 @@ The cfn\-init helper script reads template metadata from the AWS::CloudFormation
 **Note**  
 If you use cfn\-init to update an existing file, it creates a backup copy of the original file in the same directory with a \.bak extension\. For example, if you update `/path/to/file_name`, the action produces two files: `/path/to/file_name.bak` contains the original file's contents and `/path/to/file_name` contains the updated contents\.
 
-For information about the template metadata, see [AWS::CloudFormation::Init](aws-resource-init.md)\.
+For information about the template metadata, see [`AWS::CloudFormation::Init`](aws-resource-init.md)\.
 
 **Note**  
 cfn\-init does not require credentials, so you do not need to use the `--access-key`, `--secret-key`, `--role`, or `--credential-file` options\. However, if no credentials are specified, CloudFormation checks for stack membership and limits the scope of the call to the stack that the instance belongs to\.
@@ -53,7 +53,7 @@ cfn-init --stack|-s stack.name.or.id \
 
 ## Example<a name="cfn-init-Examples"></a>
 
-### Amazon Linux example<a name="w8978ab1c33c42c29b9b2"></a>
+### Amazon Linux example<a name="w9005ab1c33c42c29b9b2"></a>
 
 The following snippet shows the `UserData` property of an EC2 instance, which runs the `InstallAndRun` configset that is associated with the `WebServerInstance` resource\.
 

@@ -651,7 +651,7 @@ In the following example, sections marked with an ellipsis \(`...`\) are omitted
 }
 ```
 
-The `UserData` property runs two shell commands: install the CloudFormation helper scripts and then run the [cfn\-init](cfn-init.md) helper script\. Because the helper scripts are updated periodically, running the `yum install -y aws-cfn-bootstrap` command ensures that you get the latest helper scripts\. When you run cfn\-init, it reads metadata from the [AWS::CloudFormation::Init](aws-resource-init.md) resource, which describes the actions to be carried out by cfn\-init\. For example, you can use cfn\-init and AWS::CloudFormation::Init to install packages, write files to disk, or start a service\. In our case, cfn\-init installs the listed packages \(httpd, mysql, and php\) and creates the `/var/www/html/index.php` file \(a sample PHP application\)\.
+The `UserData` property runs two shell commands: install the CloudFormation helper scripts and then run the [cfn\-init](cfn-init.md) helper script\. Because the helper scripts are updated periodically, running the `yum install -y aws-cfn-bootstrap` command ensures that you get the latest helper scripts\. When you run cfn\-init, it reads metadata from the [`AWS::CloudFormation::Init`](aws-resource-init.md) resource, which describes the actions to be carried out by cfn\-init\. For example, you can use cfn\-init and `AWS::CloudFormation::Init` to install packages, write files to disk, or start a service\. In our case, cfn\-init installs the listed packages \(httpd, mysql, and php\) and creates the `/var/www/html/index.php` file \(a sample PHP application\)\.
 
 ## LAMP configuration<a name="deployment-walkthrough-config"></a>
 

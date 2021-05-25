@@ -61,7 +61,7 @@ The type of the contact channel\. Incident Manager supports three contact method
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ContactId`  <a name="cfn-ssmcontacts-contactchannel-contactid"></a>
-The Amazon Resource Name \(ARN\) of the contact channel\.  
+The Amazon Resource Name \(ARN\) of the contact you are adding the contact channel to\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

@@ -31,7 +31,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MaximumRecordAgeInSeconds](#cfn-lambda-eventsourcemapping-maximumrecordageinseconds)" : Integer,
       "[MaximumRetryAttempts](#cfn-lambda-eventsourcemapping-maximumretryattempts)" : Integer,
       "[ParallelizationFactor](#cfn-lambda-eventsourcemapping-parallelizationfactor)" : Integer,
-      "[PartialBatchResponse](#cfn-lambda-eventsourcemapping-partialbatchresponse)" : Boolean,
       "[Queues](#cfn-lambda-eventsourcemapping-queues)" : [ String, ... ],
       "[SelfManagedEventSource](#cfn-lambda-eventsourcemapping-selfmanagedeventsource)" : SelfManagedEventSource,
       "[SourceAccessConfigurations](#cfn-lambda-eventsourcemapping-sourceaccessconfigurations)" : [ SourceAccessConfiguration, ... ],
@@ -60,7 +59,6 @@ Properties:
   [MaximumRecordAgeInSeconds](#cfn-lambda-eventsourcemapping-maximumrecordageinseconds): Integer
   [MaximumRetryAttempts](#cfn-lambda-eventsourcemapping-maximumretryattempts): Integer
   [ParallelizationFactor](#cfn-lambda-eventsourcemapping-parallelizationfactor): Integer
-  [PartialBatchResponse](#cfn-lambda-eventsourcemapping-partialbatchresponse): Boolean
   [Queues](#cfn-lambda-eventsourcemapping-queues): 
     - String
   [SelfManagedEventSource](#cfn-lambda-eventsourcemapping-selfmanagedeventsource): 
@@ -171,12 +169,6 @@ Valid Values: `ReportBatchItemFailures`
 *Type*: Integer  
 *Minimum*: `1`  
 *Maximum*: `10`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`PartialBatchResponse`  <a name="cfn-lambda-eventsourcemapping-partialbatchresponse"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Queues`  <a name="cfn-lambda-eventsourcemapping-queues"></a>

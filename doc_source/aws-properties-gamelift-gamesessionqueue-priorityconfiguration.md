@@ -6,8 +6,6 @@ Custom prioritization settings for use by a game session queue when placing new 
 
 Changing the priority order will affect how game sessions are placed\.
 
-Priority configurations are part of a [AWS::GameLift::GameSessionQueue](aws-resource-gamelift-gamesessionqueue.md)\.
-
 ## Syntax<a name="aws-properties-gamelift-gamesessionqueue-priorityconfiguration-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

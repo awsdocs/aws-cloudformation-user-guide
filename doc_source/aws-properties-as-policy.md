@@ -96,6 +96,7 @@ One of the following policy types:
 +  `TargetTrackingScaling` 
 +  `StepScaling` 
 +  `SimpleScaling` \(default\)
++  `PredictiveScaling` 
 For more information, see [Target tracking scaling policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-target-tracking.html) and [Step and simple scaling policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: Conditional  
 *Type*: String  

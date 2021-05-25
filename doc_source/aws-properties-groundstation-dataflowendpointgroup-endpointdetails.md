@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DataflowEndpoint](#cfn-groundstation-dataflowendpointgroup-endpointdetails-dataflowendpoint)" : DataflowEndpoint,
+  "[Endpoint](#cfn-groundstation-dataflowendpointgroup-endpointdetails-endpoint)" : DataflowEndpoint,
   "[SecurityDetails](#cfn-groundstation-dataflowendpointgroup-endpointdetails-securitydetails)" : SecurityDetails
 }
 ```
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-groundstation-dataflowendpointgroup-endpointdetails-syntax.yaml"></a>
 
 ```
-  [DataflowEndpoint](#cfn-groundstation-dataflowendpointgroup-endpointdetails-dataflowendpoint): 
+  [Endpoint](#cfn-groundstation-dataflowendpointgroup-endpointdetails-endpoint): 
     DataflowEndpoint
   [SecurityDetails](#cfn-groundstation-dataflowendpointgroup-endpointdetails-securitydetails): 
     SecurityDetails
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-groundstation-dataflowendpointgroup-endpointdetails-properties"></a>
 
-`DataflowEndpoint`  <a name="cfn-groundstation-dataflowendpointgroup-endpointdetails-dataflowendpoint"></a>
+`Endpoint`  <a name="cfn-groundstation-dataflowendpointgroup-endpointdetails-endpoint"></a>
  Information about the endpoint such as name and the endpoint address\.   
 *Required*: No  
 *Type*: [DataflowEndpoint](aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.md)  

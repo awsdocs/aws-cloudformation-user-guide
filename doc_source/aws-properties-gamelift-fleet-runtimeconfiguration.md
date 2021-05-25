@@ -60,4 +60,3 @@ A collection of server process configurations that identify what server processe
 +  [Deploy a Realtime Servers fleet](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-fleets-creating.html) in the *Amazon GameLift Developer Guide* 
 +  [Run multiple processes on a fleet](https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-multiprocess.html) in the *Amazon GameLift Developer Guide* 
 +  [RuntimeConfiguration](https://docs.aws.amazon.com/gamelift/latest/apireference/API_RuntimeConfiguration.html) in the *Amazon GameLift API Reference* 
-

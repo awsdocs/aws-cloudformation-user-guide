@@ -290,7 +290,7 @@ When you use the AWS CloudFormation console to create or update a stack, the con
 
 In the metadata key, you can specify the groups to create, the parameters to include in each group, and the order in which the console shows each parameter within its group\. You can also define friendly parameter names so that the console shows descriptive names instead of logical IDs\. All parameters that you reference in the metadata key must be declared in the `Parameters` section of the template\.
 
-For more information and an example of the `AWS::CloudFormation::Interface` metadata key, see [AWS::CloudFormation::Interface](aws-resource-cloudformation-interface.md)\.
+For more information and an example of the `AWS::CloudFormation::Interface` metadata key, see [`AWS::CloudFormation::Interface`](aws-resource-cloudformation-interface.md)\.
 
 ## Examples<a name="parameters-section-examples"></a>
 
@@ -470,7 +470,7 @@ DbSubnet3:
 
 
 
-#### AWS::SSM::Parameter::Value<String> type<a name="parameters-section-ssm-examples-example1"></a>
+#### `AWS::SSM::Parameter::Value`<String> type<a name="parameters-section-ssm-examples-example1"></a>
 
 The following template declares an `AWS::SSM::Parameter::Value<String>` parameter type\.
 
@@ -517,7 +517,7 @@ aws cloudformation create-stack --stack-name S1 --template-body example template
 
  
 
-#### AWS::SSM::Parameter::Value<AWS::EC2::Image::Id> type<a name="parameters-section-ssm-examples-example2"></a>
+#### `AWS::SSM::Parameter::Value`<`AWS::EC2::Image::Id`> type<a name="parameters-section-ssm-examples-example2"></a>
 
 The following template declares an `AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>` parameter type\.
 

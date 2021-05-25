@@ -88,11 +88,28 @@ The following examples create a Step Functions activity\.
 #### JSON<a name="aws-resource-stepfunctions-activity--examples----json"></a>
 
 ```
-{ "AWSTemplateFormatVersion" : "2010-09-09", "Description" : "An
-            example template for a Step Functions activity.", "Resources" : { "MyActivity" : {
-            "Type" : "AWS::StepFunctions::Activity", "Properties" : { "Name" : "myActivity", "Tags":
-            [ { "Key": "keyname1", "Value": "value1" }, { "Key": "keyname2", "Value": "value2" } ] }
-            } } }
+{
+   "AWSTemplateFormatVersion" : "2010-09-09",
+   "Description" : "An example template for a Step Functions activity.",
+   "Resources" : {
+      "MyActivity" : {
+         "Type" : "AWS::StepFunctions::Activity",
+         "Properties" : {
+            "Name" : "myActivity",
+            "Tags": [
+                    {
+                        "Key": "keyname1",
+                        "Value": "value1"
+                    },
+                    {
+                        "Key": "keyname2",
+                        "Value": "value2"
+                    }
+                ]
+        }
+      }
+   }
+}
 ```
 
 ### <a name="aws-resource-stepfunctions-activity--examples--"></a>
@@ -100,8 +117,18 @@ The following examples create a Step Functions activity\.
 #### YAML<a name="aws-resource-stepfunctions-activity--examples----yaml"></a>
 
 ```
-AWSTemplateFormatVersion: "2010-09-09" Description: "A sample
-            template for a Step Functions activity" Resources: MyActivity: Type:
-            "AWS::StepFunctions::Activity" Properties: Name: myActivity Tags: - Key: "keyname1"
-            Value: "value1" - Key: "keyname2" Value: "value2"
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "A sample template for a Step Functions activity"
+Resources: 
+  MyActivity:
+    Type: "AWS::StepFunctions::Activity"
+    Properties: 
+      Name: myActivity
+      Tags:
+        -
+          Key: "keyname1"
+          Value: "value1"
+        -
+          Key: "keyname2"
+          Value: "value2"
 ```
