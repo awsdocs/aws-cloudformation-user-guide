@@ -116,8 +116,8 @@ Resources:
   ExecutionStatusChangeSchema:
     Type: AWS::EventSchemas::Schema
     Properties:Ref
-      Registry: 'aws.events'
-      Name: ExecutionStatusChange
+      RegistryName: 'aws.events'
+      SchemaName: ExecutionStatusChange
       Description: 'event emitted when the status of a state machine execution change'
       Type: OpenApi3
       Content: >
