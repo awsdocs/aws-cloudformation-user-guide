@@ -111,7 +111,7 @@ Resources:
     Properties:
       Description: "Lifecycle Policy using CloudFormation"
       State: "ENABLED"
-      ExecutionRoleArn: "arn:aws:iam::123456789012:role/AWSDataLifecycleManagerDefaultRole"
+      ExecutionRoleArn: "arn:aws:iam::123456789012:role/service-role/AWSDataLifecycleManagerDefaultRole"
       PolicyDetails:
         ResourceTypes:
           - "VOLUME"
@@ -149,7 +149,7 @@ Resources:
             "Properties": {
                 "Description": "Lifecycle Policy using CloudFormation",
                 "State": "ENABLED",
-                "ExecutionRoleArn": "arn:aws:iam::123456789012:role/AWSDataLifecycleManagerDefaultRole",
+                "ExecutionRoleArn": "arn:aws:iam::123456789012:role/service-role/AWSDataLifecycleManagerDefaultRole",
                 "PolicyDetails": {
                     "ResourceTypes": [
                         "VOLUME"
