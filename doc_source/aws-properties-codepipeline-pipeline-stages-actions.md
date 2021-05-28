@@ -59,7 +59,7 @@ The values can be represented in either JSON or YAML format\. For example, the J
 `InputArtifacts`  <a name="cfn-codepipeline-pipeline-stages-actions-inputartifacts"></a>
 The name or ID of the artifact consumed by the action, such as a test or build artifact\.  
 For a CodeBuild action with multiple input artifacts, one of your input sources must be designated the PrimarySource\. For more information, see the [CodeBuild action reference page](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference-CodeBuild.html) in the *AWS CodePipeline User Guide*\.
-*Required*: No  
+*Required*: Yes  
 *Type*: List of [InputArtifact](aws-properties-codepipeline-pipeline-stages-actions-inputartifacts.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
