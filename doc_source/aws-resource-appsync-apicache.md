@@ -104,18 +104,45 @@ The following example creates an ApiCache for your GraphQL API\.
 #### YAML<a name="aws-resource-appsync-apicache--examples--ApiCache_Creation_Example--yaml"></a>
 
 ```
-Parameters: graphQlApiId: Type: String Resources: ApiCache: Type:
-            'AWS::AppSync::ApiCache' Properties: ApiId: graphQlApiId Type: T2_SMALL
-            ApiCachingBehavior: FULL_REQUEST_CACHING Ttl: 1200 TransitEncryptionEnabled: true
-            AtRestEncryptionEnabled: true
+Parameters:
+  graphQlApiId:
+    Type: String
+
+Resources:
+  ApiCache:
+    Type: AWS::AppSync::ApiCache
+    Properties:
+      ApiId: !Ref graphQlApiId
+      Type: SMALL
+      ApiCachingBehavior: FULL_REQUEST_CACHING
+      Ttl: 1200
+      TransitEncryptionEnabled: true
+      AtRestEncryptionEnabled: true
 ```
 
 #### JSON<a name="aws-resource-appsync-apicache--examples--ApiCache_Creation_Example--json"></a>
 
 ```
-{ "Parameters": { "graphQlApiId": { "Type": "String" } },
-            "Resources": { "ApiCache": { "Type": "AWS::AppSync::ApiCache", "Properties": { "ApiId":
-            "graphQlApiId", "Type": "T2_SMALL", "ApiCachingBehavior": "FULL_REQUEST_CACHING", "Ttl":
-            1200, "TransitEncryptionEnabled": true, "AtRestEncryptionEnabled": true } } }
-            }
+{
+  "Parameters": {
+    "graphQlApiId": {
+      "Type": "String"
+    }
+  },
+  "Resources": {
+    "ApiCache": {
+      "Type": "AWS::AppSync::ApiCache",
+      "Properties": {
+        "ApiId": {
+          "Ref": "graphQlApiId"
+        },
+        "Type": "SMALL",
+        "ApiCachingBehavior": "FULL_REQUEST_CACHING",
+        "Ttl": 1200,
+        "TransitEncryptionEnabled": true,
+        "AtRestEncryptionEnabled": true
+      }
+    }
+  }
+}
 ```
