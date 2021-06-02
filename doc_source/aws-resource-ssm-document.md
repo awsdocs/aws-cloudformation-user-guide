@@ -107,7 +107,7 @@ Specify a target type to define the kinds of resources the document can run on\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VersionName`  <a name="cfn-ssm-document-versionname"></a>
-An optional field specifying the version of the artifact you are creating with the document\. For example, "Release 12, Update 6"\. This value is unique across all versions of a document, and cannot be changed\.  
+An optional field specifying the version of the artifact you are creating with the document\. For example, "Release-12_Update-6"\. This value is unique across all versions of a document, and cannot be changed\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `^[a-zA-Z0-9_\-.]{1,128}$`  
