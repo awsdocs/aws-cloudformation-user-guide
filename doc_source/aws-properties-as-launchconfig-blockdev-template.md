@@ -73,8 +73,8 @@ You must specify either a `VolumeSize` or a `SnapshotId`\. If you specify both `
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeType`  <a name="cfn-as-launchconfig-blockdev-template-volumetype"></a>
-The volume type, which can be `standard` for Magnetic, `io1` for Provisioned IOPS SSD, `gp2` for General Purpose SSD, `st1` for Throughput Optimized HDD, or `sc1` for Cold HDD\. For more information, see [Amazon EBS volume types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
-Valid values: `standard` \| `io1` \| `gp2` \| `st1` \| `sc1`   
+The volume type, which can be `standard` for Magnetic, `io1` for Provisioned IOPS SSD, `gp2` or `gp3` for General Purpose SSD, `st1` for Throughput Optimized HDD, or `sc1` for Cold HDD\. For more information, see [Amazon EBS volume types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+Valid values: `standard` \| `io1` \| `gp2` \| `gp3` \| `st1` \| `sc1`   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
