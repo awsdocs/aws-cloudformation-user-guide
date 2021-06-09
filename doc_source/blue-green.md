@@ -601,10 +601,10 @@ If you then made any changes to properties in the `"BlueTaskSet"` resource that 
                         ]
                     }
                 },
-                "PlatformVersion": "1.3.0",
+                "PlatformVersion": "1.4.0",
                 "Scale": {
                     "Unit": "PERCENT",
-                    "Value": 1
+                    "Value": 100
                 },
                 "Service": {
                     "Ref": "ECSDemoService"
@@ -839,10 +839,10 @@ Resources:
           Subnets:
             - !Ref Subnet1
             - !Ref Subnet2
-      PlatformVersion: 1.3.0
+      PlatformVersion: 1.4.0
       Scale:
         Unit: PERCENT
-        Value: 1
+        Value: 100
       Service: !Ref ECSDemoService
       TaskDefinition: !Ref BlueTaskDefinition
       LoadBalancers:
