@@ -148,7 +148,7 @@ Valid Values: `ReportBatchItemFailures`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumRecordAgeInSeconds`  <a name="cfn-lambda-eventsourcemapping-maximumrecordageinseconds"></a>
-\(Streams only\) Discard records older than the specified age\. The default value is infinite \(\-1\)\. When set to infinite \(\-1\), failed records are retried until the record expires\.  
+\(Streams only\) Discard records older than the specified age\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `-1`  
