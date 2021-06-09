@@ -208,12 +208,12 @@ You must specify the `StreamSpecification` property to use this attribute\.
 `TableId`  <a name="TableId-fn::getatt"></a>
 Unique identifier for the table, such as `a123b456-01ab-23cd-123a-111222aaabbb`\. The `TableId` returned is that of the replica in the region the stack is deployed to\.
 
-## Examples<a name="aws-resource-dynamodb-table--examples"></a>
+## Examples<a name="aws-resource-dynamodb-global-table--examples"></a>
 ### On-Demand DynamoDB Global Table with a Global Secondary Index<a name="aws-resource-dynamodb-global-table--examples--On-Demand DynamoDB Global Table with a Global Secondary Index"></a>
 
 The following sample creates a DynamoDB Global table with `Album`, `Artist`, `Sales`, `NumberOfSongs` as attributes\. The primary key includes the `Album` attribute as the hash key and `Artist` attribute as the range key\. The table also includes one global secondary index\. For querying the number of sales for a given artist, the global secondary index uses the `Sales` attribute as the hash key and the `Artist` attribute as the range key\.
 
-#### JSON<a name="aws-resource-dynamodb-table--examples--DynamoDB_Global_Table_with_Global_Secondary_Indexe--json"></a>
+#### JSON<a name="aws-resource-dynamodb-global-table--examples--DynamoDB_Global_Table_with_Global_Secondary_Indexe--json"></a>
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
@@ -286,7 +286,7 @@ The following sample creates a DynamoDB Global table with `Album`, `Artist`, `Sa
 }
 ```
 
-#### YAML<a name="aws-resource-dynamodb-table--examples--DynamoDB_Global_Table_with_Global_Secondary_Indexe--yaml"></a>
+#### YAML<a name="aws-resource-dynamodb-global-table--examples--DynamoDB_Global_Table_with_Global_Secondary_Indexe--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
