@@ -207,3 +207,521 @@ You must specify the `StreamSpecification` property to use this attribute\.
 
 `TableId`  <a name="TableId-fn::getatt"></a>
 Unique identifier for the table, such as `a123b456-01ab-23cd-123a-111222aaabbb`\. The `TableId` returned is that of the replica in the region the stack is deployed to\.
+
+## Examples<a name="aws-resource-dynamodb-table--examples"></a>
+### On-Demand DynamoDB Global Table with a Global Secondary Index<a name="aws-resource-dynamodb-global-table--examples--On-Demand DynamoDB Global Table with a Global Secondary Index"></a>
+
+The following sample creates a DynamoDB Global table with `Album`, `Artist`, `Sales`, `NumberOfSongs` as attributes\. The primary key includes the `Album` attribute as the hash key and `Artist` attribute as the range key\. The table also includes one global secondary index\. For querying the number of sales for a given artist, the global secondary index uses the `Sales` attribute as the hash key and the `Artist` attribute as the range key\.
+
+#### JSON<a name="aws-resource-dynamodb-table--examples--DynamoDB_Global_Table_with_Global_Secondary_Indexe--json"></a>
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "MyGlobalTable": {
+            "Type": "AWS::DynamoDB::GlobalTable",
+            "Properties": {
+                "AttributeDefinitions": [
+                    {
+                        "AttributeName": "Album",
+                        "AttributeType": "S"
+                    },
+                    {
+                        "AttributeName": "Artist",
+                        "AttributeType": "S"
+                    },
+                    {
+                        "AttributeName": "Sales",
+                        "AttributeType": "S"
+                    },
+                    {
+                        "AttributeName": "NumberOfSongs",
+                        "AttributeType": "S"
+                    }
+                ],
+                "BillingMode": "PAY_PER_REQUEST",
+                "GlobalSecondaryIndexes": [
+                    {
+                        "IndexName": "GSI1",
+                        "KeySchema": [
+                            {
+                                "AttributeName": "Sales",
+                                "KeyType": "HASH"
+                            },
+                            {
+                                "AttributeName": "Artist",
+                                "KeyType": "RANGE"
+                            }
+                        ],
+                        "Projection": {
+                            "ProjectionType": "ALL"
+                        }
+                    }
+                ],
+                "KeySchema": [
+                    {
+                        "AttributeName": "Album",
+                        "KeyType": "HASH"
+                    },
+                    {
+                        "AttributeName": "Artist",
+                        "KeyType": "RANGE"
+                    }
+                ],
+                "Replicas": [
+                    {
+                        "Region": "us-east-1"
+                    },
+                    {
+                        "Region": "eu-west-1"
+                    }
+                ],
+                "TableName": "MyGT",
+                "StreamSpecification": {
+                    "StreamViewType": "NEW_AND_OLD_IMAGES"
+                }
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-dynamodb-table--examples--DynamoDB_Global_Table_with_Global_Secondary_Indexe--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  MyGlobalTable:
+    Type: 'AWS::DynamoDB::GlobalTable'
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: Album
+          AttributeType: S
+        - AttributeName: Artist
+          AttributeType: S
+        - AttributeName: Sales
+          AttributeType: S
+        - AttributeName: NumberOfSongs
+          AttributeType: S
+      BillingMode: PAY_PER_REQUEST
+      GlobalSecondaryIndexes:
+        - IndexName: GSI1
+          KeySchema:
+            - AttributeName: Sales
+              KeyType: HASH
+            - AttributeName: Artist
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+      KeySchema:
+        - AttributeName: Album
+          KeyType: HASH
+        - AttributeName: Artist
+          KeyType: RANGE
+      Replicas:
+        - Region: us-east-1
+        - Region: eu-west-1
+      TableName: MyGT
+      StreamSpecification:
+        StreamViewType: NEW_AND_OLD_IMAGES
+```
+
+### DynamoDB Global Table with Application Auto Scaling<a name="aws-resource-dynamodb-global-table--examples--DynamoDB_Global_Table_with_Application_Auto_Scaling"></a>
+
+This example sets up a DynamoDB Global table in Provisioned mode using Application Auto Scaling. It also includes two Global Secondary Indexes which also utilizes Application Auto Scaling
+
+#### JSON<a name="aws-resource-dynamodb-global-table--examples--DynamoDB_Global_Table_with_Application_Auto_Scaling--json"></a>
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "MyGlobalTable": {
+            "Type": "AWS::DynamoDB::GlobalTable",
+            "Properties": {
+                "TableName": "myTableName",
+                "BillingMode": "PROVISIONED",
+                "AttributeDefinitions": [
+                    {
+                        "AttributeName": "Album",
+                        "AttributeType": "S"
+                    },
+                    {
+                        "AttributeName": "Artist",
+                        "AttributeType": "S"
+                    },
+                    {
+                        "AttributeName": "Sales",
+                        "AttributeType": "N"
+                    },
+                    {
+                        "AttributeName": "NumberOfSongs",
+                        "AttributeType": "N"
+                    }
+                ],
+                "KeySchema": [
+                    {
+                        "AttributeName": "Album",
+                        "KeyType": "HASH"
+                    },
+                    {
+                        "AttributeName": "Artist",
+                        "KeyType": "RANGE"
+                    }
+                ],
+                "GlobalSecondaryIndexes": [
+                    {
+                        "IndexName": "myGSI",
+                        "KeySchema": [
+                            {
+                                "AttributeName": "Sales",
+                                "KeyType": "HASH"
+                            },
+                            {
+                                "AttributeName": "Artist",
+                                "KeyType": "RANGE"
+                            }
+                        ],
+                        "Projection": {
+                            "NonKeyAttributes": [
+                                "Album",
+                                "NumberOfSongs"
+                            ],
+                            "ProjectionType": "INCLUDE"
+                        },
+                        "WriteProvisionedThroughputSettings": {
+                            "WriteCapacityAutoScalingSettings": {
+                                "MaxCapacity": 40000,
+                                "MinCapacity": 5,
+                                "SeedCapacity": 5,
+                                "TargetTrackingScalingPolicyConfiguration": {
+                                    "DisableScaleIn": true,
+                                    "ScaleInCooldown": 300,
+                                    "ScaleOutCooldown": 300,
+                                    "TargetValue": 70
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "IndexName": "myGSI2",
+                        "KeySchema": [
+                            {
+                                "AttributeName": "NumberOfSongs",
+                                "KeyType": "HASH"
+                            },
+                            {
+                                "AttributeName": "Sales",
+                                "KeyType": "RANGE"
+                            }
+                        ],
+                        "Projection": {
+                            "NonKeyAttributes": [
+                                "Album",
+                                "Artist"
+                            ],
+                            "ProjectionType": "INCLUDE"
+                        },
+                        "WriteProvisionedThroughputSettings": {
+                            "WriteCapacityAutoScalingSettings": {
+                                "MaxCapacity": 40000,
+                                "MinCapacity": 5,
+                                "SeedCapacity": 5,
+                                "TargetTrackingScalingPolicyConfiguration": {
+                                    "DisableScaleIn": true,
+                                    "ScaleInCooldown": 300,
+                                    "ScaleOutCooldown": 300,
+                                    "TargetValue": 70
+                                }
+                            }
+                        }
+                    }
+                ],
+                "Replicas": [
+                    {
+                        "Region": "eu-west-1",
+                        "ReadProvisionedThroughputSettings": {
+                            "ReadCapacityAutoScalingSettings": {
+                                "MaxCapacity": 40000,
+                                "MinCapacity": 5,
+                                "SeedCapacity": 5,
+                                "TargetTrackingScalingPolicyConfiguration": {
+                                    "DisableScaleIn": true,
+                                    "ScaleInCooldown": 300,
+                                    "ScaleOutCooldown": 300,
+                                    "TargetValue": 70
+                                }
+                            }
+                        },
+                        "GlobalSecondaryIndexes": [
+                            {
+                                "IndexName": "myGSI",
+                                "ReadProvisionedThroughputSettings": {
+                                    "ReadCapacityAutoScalingSettings": {
+                                        "MaxCapacity": 40000,
+                                        "MinCapacity": 5,
+                                        "SeedCapacity": 5,
+                                        "TargetTrackingScalingPolicyConfiguration": {
+                                            "DisableScaleIn": true,
+                                            "ScaleInCooldown": 300,
+                                            "ScaleOutCooldown": 300,
+                                            "TargetValue": 70
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "IndexName": "myGSI2",
+                                "ReadProvisionedThroughputSettings": {
+                                    "ReadCapacityAutoScalingSettings": {
+                                        "MaxCapacity": 40000,
+                                        "MinCapacity": 5,
+                                        "SeedCapacity": 5,
+                                        "TargetTrackingScalingPolicyConfiguration": {
+                                            "DisableScaleIn": true,
+                                            "ScaleInCooldown": 300,
+                                            "ScaleOutCooldown": 300,
+                                            "TargetValue": 70
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "Region": "us-east-1",
+                        "ReadProvisionedThroughputSettings": {
+                            "ReadCapacityAutoScalingSettings": {
+                                "MaxCapacity": 40000,
+                                "MinCapacity": 5,
+                                "SeedCapacity": 5,
+                                "TargetTrackingScalingPolicyConfiguration": {
+                                    "DisableScaleIn": true,
+                                    "ScaleInCooldown": 300,
+                                    "ScaleOutCooldown": 300,
+                                    "TargetValue": 70
+                                }
+                            }
+                        },
+                        "GlobalSecondaryIndexes": [
+                            {
+                                "IndexName": "myGSI",
+                                "ReadProvisionedThroughputSettings": {
+                                    "ReadCapacityAutoScalingSettings": {
+                                        "MaxCapacity": 40000,
+                                        "MinCapacity": 5,
+                                        "SeedCapacity": 5,
+                                        "TargetTrackingScalingPolicyConfiguration": {
+                                            "DisableScaleIn": true,
+                                            "ScaleInCooldown": 300,
+                                            "ScaleOutCooldown": 300,
+                                            "TargetValue": 70
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "IndexName": "myGSI2",
+                                "ReadProvisionedThroughputSettings": {
+                                    "ReadCapacityAutoScalingSettings": {
+                                        "MaxCapacity": 40000,
+                                        "MinCapacity": 5,
+                                        "SeedCapacity": 5,
+                                        "TargetTrackingScalingPolicyConfiguration": {
+                                            "DisableScaleIn": true,
+                                            "ScaleInCooldown": 300,
+                                            "ScaleOutCooldown": 300,
+                                            "TargetValue": 70
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "StreamSpecification": {
+                    "StreamViewType": "NEW_AND_OLD_IMAGES"
+                },
+                "WriteProvisionedThroughputSettings": {
+                    "WriteCapacityAutoScalingSettings": {
+                        "MaxCapacity": 40000,
+                        "MinCapacity": 5,
+                        "SeedCapacity": 5,
+                        "TargetTrackingScalingPolicyConfiguration": {
+                            "DisableScaleIn": true,
+                            "ScaleInCooldown": 300,
+                            "ScaleOutCooldown": 300,
+                            "TargetValue": 70
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-dynamodb-global-table--examples--DynamoDB_Global_Table_with_Application_Auto_Scaling--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  MyGlobalTable:
+    Type: AWS::DynamoDB::GlobalTable
+    Properties: 
+      TableName: "myTableName"
+      BillingMode: "PROVISIONED"
+      AttributeDefinitions: 
+        - 
+          AttributeName: "Album"
+          AttributeType: "S"
+        - 
+          AttributeName: "Artist"
+          AttributeType: "S"
+        - 
+          AttributeName: "Sales"
+          AttributeType: "N"
+        - 
+          AttributeName: "NumberOfSongs"
+          AttributeType: "N"
+      KeySchema: 
+        - 
+          AttributeName: "Album"
+          KeyType: "HASH"
+        - 
+          AttributeName: "Artist"
+          KeyType: "RANGE"
+      GlobalSecondaryIndexes: 
+        - 
+          IndexName: "myGSI"
+          KeySchema: 
+            - 
+              AttributeName: "Sales"
+              KeyType: "HASH"
+            - 
+              AttributeName: "Artist"
+              KeyType: "RANGE"
+          Projection: 
+            NonKeyAttributes: 
+              - "Album"
+              - "NumberOfSongs"
+            ProjectionType: "INCLUDE"
+          WriteProvisionedThroughputSettings:
+            WriteCapacityAutoScalingSettings:
+              MaxCapacity: 40000
+              MinCapacity: 5
+              SeedCapacity: 5
+              TargetTrackingScalingPolicyConfiguration: 
+                DisableScaleIn: True
+                ScaleInCooldown: 300
+                ScaleOutCooldown: 300
+                TargetValue: 70
+        -
+          IndexName: "myGSI2"
+          KeySchema: 
+            - 
+              AttributeName: "NumberOfSongs"
+              KeyType: "HASH"
+            - 
+              AttributeName: "Sales"
+              KeyType: "RANGE"
+          Projection: 
+            NonKeyAttributes: 
+              - "Album"
+              - "Artist"
+            ProjectionType: "INCLUDE"
+          WriteProvisionedThroughputSettings:
+            WriteCapacityAutoScalingSettings:
+              MaxCapacity: 40000
+              MinCapacity: 5
+              SeedCapacity: 5
+              TargetTrackingScalingPolicyConfiguration: 
+                DisableScaleIn: True
+                ScaleInCooldown: 300
+                ScaleOutCooldown: 300
+                TargetValue: 70
+      Replicas: 
+        - Region: "eu-west-1"
+          ReadProvisionedThroughputSettings:
+            ReadCapacityAutoScalingSettings:
+              MaxCapacity: 40000
+              MinCapacity: 5
+              SeedCapacity: 5
+              TargetTrackingScalingPolicyConfiguration: 
+                DisableScaleIn: True
+                ScaleInCooldown: 300
+                ScaleOutCooldown: 300
+                TargetValue: 70
+          GlobalSecondaryIndexes:
+            -
+              IndexName: "myGSI"
+              ReadProvisionedThroughputSettings:
+                ReadCapacityAutoScalingSettings:
+                  MaxCapacity: 40000
+                  MinCapacity: 5
+                  SeedCapacity: 5
+                  TargetTrackingScalingPolicyConfiguration: 
+                    DisableScaleIn: True
+                    ScaleInCooldown: 300
+                    ScaleOutCooldown: 300
+                    TargetValue: 70
+            -
+              IndexName: "myGSI2"
+              ReadProvisionedThroughputSettings:
+                ReadCapacityAutoScalingSettings:
+                  MaxCapacity: 40000
+                  MinCapacity: 5
+                  SeedCapacity: 5
+                  TargetTrackingScalingPolicyConfiguration: 
+                    DisableScaleIn: True
+                    ScaleInCooldown: 300
+                    ScaleOutCooldown: 300
+                    TargetValue: 70
+        - Region: "us-east-1"
+          ReadProvisionedThroughputSettings:
+            ReadCapacityAutoScalingSettings:
+              MaxCapacity: 40000
+              MinCapacity: 5
+              SeedCapacity: 5
+              TargetTrackingScalingPolicyConfiguration: 
+                DisableScaleIn: True
+                ScaleInCooldown: 300
+                ScaleOutCooldown: 300
+                TargetValue: 70
+          GlobalSecondaryIndexes:
+            -
+              IndexName: "myGSI"
+              ReadProvisionedThroughputSettings:
+                ReadCapacityAutoScalingSettings:
+                  MaxCapacity: 40000
+                  MinCapacity: 5
+                  SeedCapacity: 5
+                  TargetTrackingScalingPolicyConfiguration: 
+                    DisableScaleIn: True
+                    ScaleInCooldown: 300
+                    ScaleOutCooldown: 300
+                    TargetValue: 70
+            -
+              IndexName: "myGSI2"
+              ReadProvisionedThroughputSettings:
+                ReadCapacityAutoScalingSettings:
+                  MaxCapacity: 40000
+                  MinCapacity: 5
+                  SeedCapacity: 5
+                  TargetTrackingScalingPolicyConfiguration: 
+                    DisableScaleIn: True
+                    ScaleInCooldown: 300
+                    ScaleOutCooldown: 300
+                    TargetValue: 70
+      StreamSpecification:
+        StreamViewType: "NEW_AND_OLD_IMAGES"
+      WriteProvisionedThroughputSettings:
+        WriteCapacityAutoScalingSettings:
+          MaxCapacity: 40000
+          MinCapacity: 5
+          SeedCapacity: 5
+          TargetTrackingScalingPolicyConfiguration: 
+            DisableScaleIn: True
+            ScaleInCooldown: 300
+            ScaleOutCooldown: 300
+            TargetValue: 70
+```
