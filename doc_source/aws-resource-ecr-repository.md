@@ -110,7 +110,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 Returns the Amazon Resource Name \(ARN\) for the specified `AWS::ECR::Repository` resource\. For example, `arn:aws:ecr:eu-west-1:123456789012:repository/test-repository `\.
 
 `RepositoryUri`  <a name="RepositoryUri-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Returns the Uri of the repository\. For example, `123456789012.dkr.ecr.us-west-1.amazonaws.com/test-repository`\.
 
 ## Examples<a name="aws-resource-ecr-repository--examples"></a>
 
