@@ -88,7 +88,7 @@ For example, you can use the `AWS::NoValue` parameter when you want to use a sna
   "Properties" : {
     "AllocatedStorage" : "5",
     "DBInstanceClass" : "db.t2.small",
-    "Engine" : "MySQL",
+    "Engine" : "mysql",
     "EngineVersion" : "5.5",
     "MasterUsername" : { "Ref" : "DBUser" },
     "MasterUserPassword" : { "Ref" : "DBPassword" },
@@ -112,7 +112,7 @@ MyDB:
   Properties:
     AllocatedStorage: '5'
     DBInstanceClass: db.t2.small
-    Engine: MySQL
+    Engine: mysql
     EngineVersion: '5.5'
     MasterUsername:
       Ref: DBUser

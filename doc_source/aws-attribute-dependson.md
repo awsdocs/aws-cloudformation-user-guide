@@ -73,7 +73,7 @@ The following template contains an [AWS::EC2::Instance](https://docs.aws.amazon.
 40.             "Properties" : {
 41.                "AllocatedStorage" : "5",
 42.                "DBInstanceClass" : "db.t2.small",
-43.                "Engine" : "MySQL",
+43.                "Engine" : "mysql",
 44.                "EngineVersion" : "5.5",
 45.                "MasterUsername" : "MyName",
 46.                "MasterUserPassword" : "MyPassword"
@@ -114,7 +114,7 @@ The following template contains an [AWS::EC2::Instance](https://docs.aws.amazon.
 26.     Properties:
 27.       AllocatedStorage: '5'
 28.       DBInstanceClass: db.t2.small
-29.       Engine: MySQL
+29.       Engine: mysql
 30.       EngineVersion: '5.5'
 31.       MasterUsername: MyName
 32.       MasterUserPassword: MyPassword

@@ -778,8 +778,8 @@ The following example creates an Amazon RDS MySQL DB instance with Enhanced Moni
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS CloudFormation Sample Template for creating an Amazon RDS DB instance: Sample template showing 
-how to create a DB instance with Enhanced Monitoring enabled. **WARNING** This template creates an RDS DB instance. You will 
+    "Description": "AWS CloudFormation Sample Template for creating an Amazon RDS DB instance: Sample template showing
+how to create a DB instance with Enhanced Monitoring enabled. **WARNING** This template creates an RDS DB instance. You will
 be billed for the AWS resources used if you create a stack from this template.",
     "Parameters": {
         "DBInstanceID": {
@@ -849,7 +849,7 @@ be billed for the AWS resources used if you create a stack from this template.",
                 "AllocatedStorage": {
                     "Ref": "DBAllocatedStorage"
                 },
-                "Engine": "MySQL",
+                "Engine": "mysql",
                 "EngineVersion": "8.0.16",
                 "MasterUsername": {
                     "Ref": "DBUsername"
@@ -870,9 +870,9 @@ be billed for the AWS resources used if you create a stack from this template.",
 ```
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  Description": "AWS CloudFormation Sample Template for creating an Amazon RDS DB instance: 
-  Sample template showing how to create a DB instance with Enhanced Monitoring enabled. 
-  **WARNING** This template creates an RDS DB instance. You will be billed for the AWS 
+  Description": "AWS CloudFormation Sample Template for creating an Amazon RDS DB instance:
+  Sample template showing how to create a DB instance with Enhanced Monitoring enabled.
+  **WARNING** This template creates an RDS DB instance. You will be billed for the AWS
   resources used if you create a stack from this template.
 Parameters:
   DBInstanceID:
@@ -929,7 +929,7 @@ Resources:
       DBName: !Ref DBName
       DBInstanceClass: !Ref DBInstanceClass
       AllocatedStorage: !Ref DBAllocatedStorage
-      Engine: MySQL
+      Engine: mysql
       EngineVersion: 8.0.16
       MasterUsername: !Ref DBUsername
       MasterUserPassword: !Ref DBPassword
