@@ -232,7 +232,7 @@ A string used to name the user pool\.
 *Minimum*: `1`  
 *Maximum*: `128`  
 *Pattern*: `[\w\s+=,.@-]+`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: Updates are not supported\.
 
 `UserPoolTags`  <a name="cfn-cognito-userpool-userpooltags"></a>
 The tag keys and values to assign to the user pool\. A tag is a label that you can use to categorize and manage user pools in different ways, such as by purpose, owner, environment, or other criteria\.  
