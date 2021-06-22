@@ -26,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[KeyPolicy](#cfn-kms-key-keypolicy)" : Json,
       "[KeySpec](#cfn-kms-key-keyspec)" : String,
       "[KeyUsage](#cfn-kms-key-keyusage)" : String,
+      "[MultiRegion](#cfn-kms-key-multiregion)" : Boolean,
       "[PendingWindowInDays](#cfn-kms-key-pendingwindowindays)" : Integer,
       "[Tags](#cfn-kms-key-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -43,6 +44,7 @@ Properties:
   [KeyPolicy](#cfn-kms-key-keypolicy): Json
   [KeySpec](#cfn-kms-key-keyspec): String
   [KeyUsage](#cfn-kms-key-keyusage): String
+  [MultiRegion](#cfn-kms-key-multiregion): Boolean
   [PendingWindowInDays](#cfn-kms-key-pendingwindowindays): Integer
   [Tags](#cfn-kms-key-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -69,14 +71,14 @@ For information about the key states of a CMK, see [Key state: Effect on your CM
 
 `EnableKeyRotation`  <a name="cfn-kms-key-enablekeyrotation"></a>
 Enables automatic rotation of the key material for the specified customer master key \(CMK\)\. By default, automation key rotation is not enabled\.  
-Automatic key rotation is not supported on asymmetric CMKs\. For asymmetric CMKs, omit the `EnableKeyRotation` property or set it to `false`\.  
+AWS KMS does not support automatic key rotation on asymmetric CMKs\. For asymmetric CMKs, omit the `EnableKeyRotation` property or set it to `false`\.  
 When you enable automatic rotation, AWS KMS automatically creates new key material for the CMK 365 days after the enable \(or reenable\) date and every 365 days thereafter\. AWS KMS retains all key material until you delete the CMK\. For detailed information about automatic key rotation, see [Rotating customer master keys](https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) in the *AWS Key Management Service Developer Guide*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeyPolicy`  <a name="cfn-kms-key-keypolicy"></a>
-The key policy that authorizes use of the CMK\. The key policy must observe the following rules\.  
+The key policy that authorizes use of the CMK\. The key policy must conform to the following rules\.  
 + The key policy must allow the caller to make a subsequent [PutKeyPolicy](https://docs.aws.amazon.com/kms/latest/APIReference/API_PutKeyPolicy.html) request on the CMK\. This reduces the risk that the CMK becomes unmanageable\. For more information, refer to the scenario in the [Default key policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section of the * *AWS Key Management Service Developer Guide* *\.
 + Each statement in the key policy must contain one or more principals\. The principals in the key policy must exist and be visible to AWS KMS\. When you create a new AWS principal \(for example, an IAM user or role\), you might need to enforce a delay before including the new principal in a key policy because the new principal might not be immediately visible to AWS KMS\. For more information, see [Changes that I make are not always immediately visible](https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_general.html#troubleshoot_general_eventual-consistency) in the *AWS Identity and Access Management User Guide*\.
 + The key policy size limit is 32 kilobytes \(32768 bytes\)\.
@@ -107,7 +109,7 @@ AWS KMS supports the following key specs for CMKs:
   + `ECC_SECG_P256K1` \(secp256k1\), commonly used for cryptocurrencies\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KeyUsage`  <a name="cfn-kms-key-keyusage"></a>
 Determines the [cryptographic operations](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations) for which you can use the CMK\. The default value is `ENCRYPT_DECRYPT`\. This property is required only for asymmetric CMKs\. You can't change the `KeyUsage` value after the CMK is created\.  
@@ -119,13 +121,25 @@ Select only one valid value\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ENCRYPT_DECRYPT | SIGN_VERIFY`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MultiRegion`  <a name="cfn-kms-key-multiregion"></a>
+Creates a multi\-Region primary CMK that you can replicate in other AWS Regions\.  
+If you change the `MultiRegion` property of an existing CMK, the existing CMK is scheduled for deletion and a new CMK is created with the specified `Multi-Region` value\. While the scheduled deletion is pending, you can't use the existing CMK\. Unless you [cancel the scheduled deletion](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html#deleting-keys-scheduling-key-deletion) of the CMK outside of CloudFormation, all data encrypted under the existing CMK becomes unrecoverable when the CMK is deleted\.
+For a multi\-Region CMK, set to this property to `true`\. For a single\-Region CMK, omit this property or set it to `false`\. The default value is `false`\.  
+*Multi\-Region keys* are an AWS KMS feature that lets you create multiple interoperable CMKs in different AWS Regions\. Because these CMKs have the same key ID, key material, and other metadata, you can use them to encrypt data in one AWS Region and decrypt it in a different AWS Region without making a cross\-Region call or exposing the plaintext data\. For more information, see [Using multi\-Region keys](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html) in the *AWS Key Management Service Developer Guide*\.  
+You can create a symmetric or asymmetric multi\-Region CMK, and you can create a multi\-Region CMK with imported key material\. However, you cannot create a multi\-Region CMK in a custom key store\.  
+To create a replica of this primary key in a different AWS Region , create an [AWS::KMS::ReplicaKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replica-key.html) resource in a CloudFormation stack in the replica Region\. Specify the key ARN of this primary key\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PendingWindowInDays`  <a name="cfn-kms-key-pendingwindowindays"></a>
 Specifies the number of days in the waiting period before AWS KMS deletes a CMK that has been removed from a CloudFormation stack\. Enter a value between 7 and 30 days\. The default value is 30 days\.  
-When you remove a customer master key \(CMK\) from a CloudFormation stack, AWS KMS schedules the CMK for deletion and starts the mandatory waiting period\. The `PendingWindowInDays` property determines the length of waiting period\. During the waiting period, the key state of CMK is `Pending Deletion`, which prevents the CMK from being used in cryptographic operations\. When the waiting period expires, AWS KMS permanently deletes the CMK\.  
+When you remove a customer master key \(CMK\) from a CloudFormation stack, AWS KMS schedules the CMK for deletion and starts the mandatory waiting period\. The `PendingWindowInDays` property determines the length of waiting period\. During the waiting period, the key state of CMK is `Pending Deletion` or `Pending Replica Deletion`, which prevents the CMK from being used in cryptographic operations\. When the waiting period expires, AWS KMS permanently deletes the CMK\.  
+AWS KMS will not delete a [multi\-Region primary key](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html) that has replica keys\. If you remove a multi\-Region primary key from a CloudFormation stack, its key state changes to `PendingReplicaDeletion` so it cannot be replicated or used in cryptographic operations\. This state can persist indefinitely\. When the last of its replica keys is deleted, the key state of the primary key changes to `PendingDeletion` and the waiting period specified by `PendingWindowInDays` begins\. When this waiting period expires, AWS KMS deletes the primary key\. For details, see [Deleting multi\-Region keys](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-delete.html) in the *AWS Key Management Service Developer Guide*\.  
 You cannot use a CloudFormation template to cancel deletion of the CMK after you remove it from the stack, regardless of the waiting period\. If you specify a CMK in your template, even one with the same name, CloudFormation creates a new CMK\. To cancel deletion of a CMK, use the AWS KMS console or the [CancelKeyDeletion](https://docs.aws.amazon.com/kms/latest/APIReference/API_CancelKeyDeletion.html) operation\.  
-For information about the `PendingDeletion` key state, see [Key state: Effect on your CMK](https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html) in the *AWS Key Management Service Developer Guide*\. For more information about deleting CMKs, see the [ScheduleKeyDeletion](https://docs.aws.amazon.com/kms/latest/APIReference/API_ScheduleKeyDeletion.html) operation in the *AWS Key Management Service API Reference* and [Deleting customer master keys](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html) in the *AWS Key Management Service Developer Guide*\.   
+For information about the `Pending Deletion` and `Pending Replica Deletion` key states, see [Key state: Effect on your CMK](https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html) in the *AWS Key Management Service Developer Guide*\. For more information about deleting CMKs, see the [ScheduleKeyDeletion](https://docs.aws.amazon.com/kms/latest/APIReference/API_ScheduleKeyDeletion.html) operation in the *AWS Key Management Service API Reference* and [Deleting customer master keys](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html) in the *AWS Key Management Service Developer Guide*\.   
 *Minimum*: 7  
 *Maximum*: 30  
 *Required*: No  
@@ -133,7 +147,7 @@ For information about the `PendingDeletion` key state, see [Key state: Effect on
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-kms-key-tags"></a>
-An array of key\-value pairs to apply to this resource\.  
+Assigns one or more tags to the replica key\.  
 Tagging or untagging a CMK can allow or deny permission to the CMK\. For details, see [Using ABAC in AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/abac.html) in the *AWS Key Management Service Developer Guide*\.
 For information about tags in AWS KMS, see [Tagging keys](https://docs.aws.amazon.com/kms/latest/developerguide/tagging-keys.html) in the *AWS Key Management Service Developer Guide*\. For information about tags in CloudFormation, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
@@ -173,111 +187,34 @@ The following example creates a symmetric CMK\. The key policy for the CMK allow
 #### JSON<a name="aws-resource-kms-key--examples--Create_a_symmetric_CMK--json"></a>
 
 ```
-"myKey" : {
-  "Type" : "AWS::KMS::Key",
-  "Properties" : {
-    "Description" : "An example symmetric CMK",
-    "EnableKeyRotation": true,
-    "PendingWindowInDays": 20,
-    "KeyPolicy" : {
-      "Version": "2012-10-17",
-      "Id": "key-default-1",
-      "Statement": [
-        {
-          "Sid": "Enable IAM User Permissions",
-          "Effect": "Allow",
-          "Principal": {"AWS": "arn:aws:iam::111122223333:root"},
-          "Action": "kms:*",
-          "Resource": "*"
-        },
-        {
-          "Sid": "Allow administration of the key",
-          "Effect": "Allow",
-          "Principal": { "AWS": "arn:aws:iam::111122223333:user/Alice" },
-          "Action": [
-            "kms:Create*",
-            "kms:Describe*",
-            "kms:Enable*",
-            "kms:List*",
-            "kms:Put*",
-            "kms:Update*",
-            "kms:Revoke*",
-            "kms:Disable*",
-            "kms:Get*",
-            "kms:Delete*",
-            "kms:ScheduleKeyDeletion",
-            "kms:CancelKeyDeletion"
-          ],
-          "Resource": "*"
-        },
-        {
-          "Sid": "Allow use of the key",
-          "Effect": "Allow",
-          "Principal": { "AWS": "arn:aws:iam::111122223333:user/Bob" },
-          "Action": [
-            "kms:DescribeKey",
-            "kms:Encrypt",
-            "kms:Decrypt",
-            "kms:ReEncrypt*",
-            "kms:GenerateDataKey",
-            "kms:GenerateDataKeyWithoutPlaintext"
-          ], 
-          "Resource": "*"
-        }    
-      ]
-    }
-  }
-}
+"myKey" : { "Type" : "AWS::KMS::Key", "Properties" : { "Description"
+        : "An example symmetric CMK", "EnableKeyRotation": true, "PendingWindowInDays": 20,
+        "KeyPolicy" : { "Version": "2012-10-17", "Id": "key-default-1", "Statement": [ { "Sid":
+        "Enable IAM User Permissions", "Effect": "Allow", "Principal": {"AWS":
+        "arn:aws:iam::111122223333:root"}, "Action": "kms:*", "Resource": "*" }, { "Sid": "Allow
+        administration of the key", "Effect": "Allow", "Principal": { "AWS":
+        "arn:aws:iam::111122223333:user/Alice" }, "Action": [ "kms:Create*", "kms:Describe*",
+        "kms:Enable*", "kms:List*", "kms:Put*", "kms:Update*", "kms:Revoke*", "kms:Disable*",
+        "kms:Get*", "kms:Delete*", "kms:ScheduleKeyDeletion", "kms:CancelKeyDeletion" ], "Resource":
+        "*" }, { "Sid": "Allow use of the key", "Effect": "Allow", "Principal": { "AWS":
+        "arn:aws:iam::111122223333:user/Bob" }, "Action": [ "kms:DescribeKey", "kms:Encrypt",
+        "kms:Decrypt", "kms:ReEncrypt*", "kms:GenerateDataKey",
+        "kms:GenerateDataKeyWithoutPlaintext" ], "Resource": "*" } ] } } }
 ```
 
 #### YAML<a name="aws-resource-kms-key--examples--Create_a_symmetric_CMK--yaml"></a>
 
 ```
-myKey:
-  Type: AWS::KMS::Key
-  Properties:
-    Description: An example symmetric CMK
-    EnableKeyRotation: true
-    PendingWindowInDays: 20
-    KeyPolicy:
-      Version: '2012-10-17'
-      Id: key-default-1
-      Statement:
-      - Sid: Enable IAM User Permissions
-        Effect: Allow
-        Principal:
-          AWS: arn:aws:iam::111122223333:root
-        Action: kms:*
-        Resource: '*'
-      - Sid: Allow administration of the key
-        Effect: Allow
-        Principal:
-          AWS: arn:aws:iam::111122223333:user/Alice
-        Action:
-        - kms:Create*
-        - kms:Describe*
-        - kms:Enable*
-        - kms:List*
-        - kms:Put*
-        - kms:Update*
-        - kms:Revoke*
-        - kms:Disable*
-        - kms:Get*
-        - kms:Delete*
-        - kms:ScheduleKeyDeletion
-        - kms:CancelKeyDeletion
-        Resource: '*'
-      - Sid: Allow use of the key
-        Effect: Allow
-        Principal:
-          AWS: arn:aws:iam::111122223333:user/Bob
-        Action:
-        - kms:DescribeKey
-        - kms:Encrypt
-        - kms:Decrypt
-        - kms:ReEncrypt*
-        - kms:GenerateDataKey
-        - kms:GenerateDataKeyWithoutPlaintext
+myKey: Type: AWS::KMS::Key Properties: Description: An example
+        symmetric CMK EnableKeyRotation: true PendingWindowInDays: 20 KeyPolicy: Version:
+        '2012-10-17' Id: key-default-1 Statement: - Sid: Enable IAM User Permissions Effect: Allow
+        Principal: AWS: arn:aws:iam::111122223333:root Action: kms:* Resource: '*' - Sid: Allow
+        administration of the key Effect: Allow Principal: AWS: arn:aws:iam::111122223333:user/Alice
+        Action: - kms:Create* - kms:Describe* - kms:Enable* - kms:List* - kms:Put* - kms:Update* -
+        kms:Revoke* - kms:Disable* - kms:Get* - kms:Delete* - kms:ScheduleKeyDeletion -
+        kms:CancelKeyDeletion Resource: '*' - Sid: Allow use of the key Effect: Allow Principal:
+        AWS: arn:aws:iam::111122223333:user/Bob Action: - kms:DescribeKey - kms:Encrypt -
+        kms:Decrypt - kms:ReEncrypt* - kms:GenerateDataKey - kms:GenerateDataKeyWithoutPlaintext
         Resource: '*'
 ```
 
@@ -285,78 +222,29 @@ myKey:
 
 The following example creates a symmetric CMK with one resource tag\.
 
+**Note**  
+Tagging or untagging a CMK can allow or deny permission to the CMK\. For details, see [Using ABAC in AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/abac.html) in the *AWS Key Management Service Developer Guide*\.
+
 #### JSON<a name="aws-resource-kms-key--examples--Create_a_symmetric_CMK_with_a_resource_tag--json"></a>
 
 ```
-"myKeyWithTag" : {
-      "Type" : "AWS::KMS::Key",
-      "Properties" : {
-        "KeyPolicy" : {
-          "Version": "2012-10-17",
-          "Id": "key-default-1",
-          "Statement": [
-            {
-              "Sid": "Enable IAM User Permissions",
-              "Effect": "Allow",
-              "Principal": {
-                "AWS": { "Fn::Join" : ["" , ["arn:aws:iam::", {"Ref" : "AWS::AccountId"} ,":root" ]] }
-              },
-              "Action": "kms:*",
-              "Resource": "*"
-            }
-          ]
-        },
-        "Tags" : [
-          {
-            "Key" : {"Ref" : "Key"},
-            "Value" : {"Ref" : "Value"}
-          }
-        ]
-      }
-    }
-  },
-  "Parameters" : {
-    "Key" : {
-      "Type" : "String"
-    },
-    "Value" : {
-      "Type" : "String"
-    }
-  }
-}
+"myKeyWithTag" : { "Type" : "AWS::KMS::Key", "Properties" : {
+        "KeyPolicy" : { "Version": "2012-10-17", "Id": "key-default-1", "Statement": [ { "Sid":
+        "Enable IAM User Permissions", "Effect": "Allow", "Principal": { "AWS": { "Fn::Join" : ["" ,
+        ["arn:aws:iam::", {"Ref" : "AWS::AccountId"} ,":root" ]] } }, "Action": "kms:*", "Resource":
+        "*" } ] }, "Tags" : [ { "Key" : {"Ref" : "Key"}, "Value" : {"Ref" : "Value"} } ] } } },
+        "Parameters" : { "Key" : { "Type" : "String" }, "Value" : { "Type" : "String" } }
+        }
 ```
 
 #### YAML<a name="aws-resource-kms-key--examples--Create_a_symmetric_CMK_with_a_resource_tag--yaml"></a>
 
 ```
-myKeyWithTag:
-    Type: AWS::KMS::Key
-    Properties:
-      KeyPolicy:
-        Version: '2012-10-17'
-        Id: key-default-1
-        Statement:
-        - Sid: Enable IAM User Permissions
-          Effect: Allow
-          Principal:
-            AWS:
-              Fn::Join:
-              - ''
-              - - 'arn:aws:iam::'
-                - Ref: AWS::AccountId
-                - :root
-          Action: kms:*
-          Resource: '*'
-      Tags:
-      - Key:
-          Ref: Key
-        Value:
-          Ref: Value
-Parameters:
-  Key:
-    Type: String
-  Value:
-    Type: String
+myKeyWithTag: Type: AWS::KMS::Key Properties: KeyPolicy: Version:
+        '2012-10-17' Id: key-default-1 Statement: - Sid: Enable IAM User Permissions Effect: Allow
+        Principal: AWS: Fn::Join: - '' - - 'arn:aws:iam::' - Ref: AWS::AccountId - :root Action:
+        kms:* Resource: '*' Tags: - Key: Ref: Key Value: Ref: Value Parameters: Key: Type: String
+        Value: Type: String
 ```
 
 ### Create an asymmetric CMK<a name="aws-resource-kms-key--examples--Create_an_asymmetric_CMK"></a>
@@ -366,110 +254,81 @@ The following example creates an RSA asymmetric CMK for signing and verification
 #### JSON<a name="aws-resource-kms-key--examples--Create_an_asymmetric_CMK--json"></a>
 
 ```
-"RSASigningKey" : {
-  "Type" : "AWS::KMS::Key",
-  "Properties" : {
-    "Description" : "RSA-3047 asymmetric CMK for signing and verification",
-    "KeySpec" : "RSA_3072",
-    "KeyUsage" : "SIGN_VERIFY",
-    "KeyPolicy" : {
-      "Version": "2012-10-17",
-      "Id": "key-default-1",
-      "Statement": [
-        {
-          "Sid": "Enable IAM User Permissions",
-          "Effect": "Allow",
-          "Principal": {"AWS": "arn:aws:iam::111122223333:root"},
-          "Action": "kms:*",
-          "Resource": "*"
-        },
-        {
-          "Sid": "Allow administration of the key",
-          "Effect": "Allow",
-          "Principal": { "AWS": "arn:aws:iam::111122223333:role/Admin" },
-          "Action": [
-            "kms:Create*",
-            "kms:Describe*",
-            "kms:Enable*",
-            "kms:List*",
-            "kms:Put*",
-            "kms:Update*",
-            "kms:Revoke*",
-            "kms:Disable*",
-            "kms:Get*",
-            "kms:Delete*",
-            "kms:ScheduleKeyDeletion",
-            "kms:CancelKeyDeletion"
-          ],
-          "Resource": "*"
-        },
-        {
-          "Sid": "Allow use of the key",
-          "Effect": "Allow",
-          "Principal": { "AWS": "arn:aws:iam::111122223333:role/Developer" },
-          "Action": [
-            "kms:Sign",
-            "kms:Verify",
-            "kms:DescribeKey"
-          ], 
-          "Resource": "*"
-        }    
-      ]
-    }
-  }
-}
+"RSASigningKey" : { "Type" : "AWS::KMS::Key", "Properties" : {
+        "Description" : "RSA-3047 asymmetric CMK for signing and verification", "KeySpec" :
+        "RSA_3072", "KeyUsage" : "SIGN_VERIFY", "KeyPolicy" : { "Version": "2012-10-17", "Id":
+        "key-default-1", "Statement": [ { "Sid": "Enable IAM User Permissions", "Effect": "Allow",
+        "Principal": {"AWS": "arn:aws:iam::111122223333:root"}, "Action": "kms:*", "Resource": "*"
+        }, { "Sid": "Allow administration of the key", "Effect": "Allow", "Principal": { "AWS":
+        "arn:aws:iam::111122223333:role/Admin" }, "Action": [ "kms:Create*", "kms:Describe*",
+        "kms:Enable*", "kms:List*", "kms:Put*", "kms:Update*", "kms:Revoke*", "kms:Disable*",
+        "kms:Get*", "kms:Delete*", "kms:ScheduleKeyDeletion", "kms:CancelKeyDeletion" ], "Resource":
+        "*" }, { "Sid": "Allow use of the key", "Effect": "Allow", "Principal": { "AWS":
+        "arn:aws:iam::111122223333:role/Developer" }, "Action": [ "kms:Sign", "kms:Verify",
+        "kms:DescribeKey" ], "Resource": "*" } ] } } }
 ```
 
 #### YAML<a name="aws-resource-kms-key--examples--Create_an_asymmetric_CMK--yaml"></a>
 
 ```
-RSASigningKey:
-  Type: AWS::KMS::Key
-  Properties:
-    Description: RSA-3047 asymmetric CMK for signing and verification
-    KeySpec: RSA_3072
-    KeyUsage: SIGN_VERIFY
-    KeyPolicy:
-      Version: '2012-10-17'
-      Id: key-default-1
-      Statement:
-      - Sid: Enable IAM User Permissions
-        Effect: Allow
-        Principal:
-          AWS: arn:aws:iam::111122223333:root
-        Action: kms:*
-        Resource: '*'
-      - Sid: Allow administration of the key
-        Effect: Allow
-        Principal:
-          AWS: arn:aws:iam::111122223333:role/Admin
-        Action:
-        - kms:Create*
-        - kms:Describe*
-        - kms:Enable*
-        - kms:List*
-        - kms:Put*
-        - kms:Update*
-        - kms:Revoke*
-        - kms:Disable*
-        - kms:Get*
-        - kms:Delete*
-        - kms:ScheduleKeyDeletion
-        - kms:CancelKeyDeletion
-        Resource: '*'
-      - Sid: Allow use of the key
-        Effect: Allow
-        Principal:
-          AWS: arn:aws:iam::111122223333:role/Developer
-        Action:        
-        - kms:Sign
-        - kms:Verify
-        - kms:DescribeKey
-        Resource: '*'
+RSASigningKey: Type: AWS::KMS::Key Properties: Description: RSA-3047
+        asymmetric CMK for signing and verification KeySpec: RSA_3072 KeyUsage: SIGN_VERIFY
+        KeyPolicy: Version: '2012-10-17' Id: key-default-1 Statement: - Sid: Enable IAM User
+        Permissions Effect: Allow Principal: AWS: arn:aws:iam::111122223333:root Action: kms:*
+        Resource: '*' - Sid: Allow administration of the key Effect: Allow Principal: AWS:
+        arn:aws:iam::111122223333:role/Admin Action: - kms:Create* - kms:Describe* - kms:Enable* -
+        kms:List* - kms:Put* - kms:Update* - kms:Revoke* - kms:Disable* - kms:Get* - kms:Delete* -
+        kms:ScheduleKeyDeletion - kms:CancelKeyDeletion Resource: '*' - Sid: Allow use of the key
+        Effect: Allow Principal: AWS: arn:aws:iam::111122223333:role/Developer Action: - kms:Sign -
+        kms:Verify - kms:DescribeKey Resource: '*'
+```
+
+### Create a multi\-Region primary CMK<a name="aws-resource-kms-key--examples--Create_a_multi-Region_primary_CMK"></a>
+
+The following example creates a multi\-Region primary CMK\.
+
+*Multi\-Region keys* are an AWS KMS feature that lets you create multiple interoperable CMKs in different AWS Regions\. Because these CMKs have the same key ID, key material, and other metadata, you can use them to encrypt data in one AWS Region and decrypt it in a different AWS Region without making a cross\-Region call or exposing the plaintext data\. For more information, see [Using multi\-Region keys](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html) in the *AWS Key Management Service Developer Guide*\.
+
+To replicate this primary key into a different AWS Region , use the [AWS::KMS::ReplicaKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replica-key.html) CloudFormation resource\.
+
+#### JSON<a name="aws-resource-kms-key--examples--Create_a_multi-Region_primary_CMK--json"></a>
+
+```
+"myPrimaryKey" : { "Type" : "AWS::KMS::Key", "Properties" : {
+        "Description" : "An example multi-Region primary key", "MultiRegion": true,
+        "EnableKeyRotation": true, "PendingWindowInDays": 10, "KeyPolicy" : { "Version":
+        "2012-10-17", "Id": "key-default-1", "Statement": [ { "Sid": "Enable IAM User Permissions",
+        "Effect": "Allow", "Principal": {"AWS": "arn:aws:iam::111122223333:root"}, "Action":
+        "kms:*", "Resource": "*" }, { "Sid": "Allow administration of the key", "Effect": "Allow",
+        "Principal": { "AWS": "arn:aws:iam::111122223333:user/Alice" }, "Action": [
+        "kms:ReplicateKey", "kms:Create*", "kms:Describe*", "kms:Enable*", "kms:List*", "kms:Put*",
+        "kms:Update*", "kms:Revoke*", "kms:Disable*", "kms:Get*", "kms:Delete*",
+        "kms:ScheduleKeyDeletion", "kms:CancelKeyDeletion" ], "Resource": "*" }, { "Sid": "Allow use
+        of the key", "Effect": "Allow", "Principal": { "AWS": "arn:aws:iam::111122223333:user/Bob"
+        }, "Action": [ "kms:DescribeKey", "kms:Encrypt", "kms:Decrypt", "kms:ReEncrypt*",
+        "kms:GenerateDataKey", "kms:GenerateDataKeyWithoutPlaintext" ], "Resource": "*" } ] } }
+        }
+```
+
+#### YAML<a name="aws-resource-kms-key--examples--Create_a_multi-Region_primary_CMK--yaml"></a>
+
+```
+myPrimaryKey: Type: AWS::KMS::Key Properties: Description: An example
+        multi-Region primary key MultiRegion: true EnableKeyRotation: true PendingWindowInDays 10
+        KeyPolicy: Version: '2012-10-17' Id: key-default-1 Statement: - Sid: Enable IAM User
+        Permissions Effect: Allow Principal: AWS: arn:aws:iam::111122223333:root Action: kms:*
+        Resource: '*' - Sid: Allow administration of the key Effect: Allow Principal: AWS:
+        arn:aws:iam::111122223333:user/Alice Action: - kms:ReplicateKey - kms:Create* -
+        kms:Describe* - kms:Enable* - kms:List* - kms:Put* - kms:Update* - kms:Revoke* -
+        kms:Disable* - kms:Get* - kms:Delete* - kms:ScheduleKeyDeletion - kms:CancelKeyDeletion
+        Resource: '*' - Sid: Allow use of the key Effect: Allow Principal: AWS:
+        arn:aws:iam::111122223333:user/Bob Action: - kms:DescribeKey - kms:Encrypt - kms:Decrypt -
+        kms:ReEncrypt* - kms:GenerateDataKey - kms:GenerateDataKeyWithoutPlaintext Resource:
+        '*'
 ```
 
 ## See also<a name="aws-resource-kms-key--seealso"></a>
-+  [Creating keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.
-+  [CreateKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html) in the *AWS Key Management Service API Reference*\.
 +  [Customer master keys](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys) in the *AWS Key Management Service Developer Guide*\.
-
++  [CreateKey](https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html) in the *AWS Key Management Service API Reference*\.
++  [Creating keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) in the *AWS Key Management Service Developer Guide*\.
++  [Creating multi\-Region primary keys](https://docs.aws.amazon.com/kms/latest/developerguide/create-primary-keys.html) in the *AWS Key Management Service Developer Guide*\.

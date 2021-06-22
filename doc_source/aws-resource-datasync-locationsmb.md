@@ -101,6 +101,7 @@ The key\-value pair that represents the tag that you want to add to the location
 
 `User`  <a name="cfn-datasync-locationsmb-user"></a>
 The user who can mount the share, has the permissions to access files and folders in the SMB share\.  
+For information about choosing a user name that ensures sufficient permissions to files, folders, and metadata, see [user](create-smb-location.html#SMBuser)\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `104`  

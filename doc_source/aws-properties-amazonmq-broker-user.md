@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-amazonmq-broker-user-properties"></a>
 
 `ConsoleAccess`  <a name="cfn-amazonmq-broker-user-consoleaccess"></a>
-Enables access to the ActiveMQ Web Console for the ActiveMQ user\. Does not apply to RabbitMQ brokers\.  
+Enables access to the ActiveMQ web console for the ActiveMQ user\. Does not apply to RabbitMQ brokers\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

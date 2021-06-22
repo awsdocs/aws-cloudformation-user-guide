@@ -74,10 +74,9 @@ The configuration settings for your image test components, which includes a togg
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InfrastructureConfigurationArn`  <a name="cfn-imagebuilder-image-infrastructureconfigurationarn"></a>
-The Amazon Resource Name \(ARN\) of the infrastructure configuration used to create this image\.  
+The Amazon Resource Name \(ARN\) of the infrastructure configuration associated with this image pipeline\.  
 *Required*: Yes  
 *Type*: String  
-*Pattern*: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:[0-9]{12}|aws):(?:image-recipe|container-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|[0-9]+)\.(?:x|[0-9]+)\.(?:x|[0-9]+))(?:/[0-9]+)?)?$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-imagebuilder-image-tags"></a>
@@ -106,7 +105,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 Returns the Amazon Resource Name \(ARN\) of the image\. For example, `arn:aws:imagebuilder:us-west-2:123456789012:image/mybasicrecipe/2019.12.03/1`\.
 
 `ImageId`  <a name="ImageId-fn::getatt"></a>
-Returns the AMI ID of the EC2 AMI in the Region in which you are using Image Builder\.
+Returns the AMI ID of the Amazon EC2 AMI in the Region in which you are using Image Builder\.
 
 `Name`  <a name="Name-fn::getatt"></a>
 Returns the name of the image\.

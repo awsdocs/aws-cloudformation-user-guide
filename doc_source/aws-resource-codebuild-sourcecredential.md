@@ -3,7 +3,7 @@
  Information about the credentials for a GitHub, GitHub Enterprise, or Bitbucket repository\. We strongly recommend that you use AWS Secrets Manager to store your credentials\. If you use Secrets Manager, you must have secrets in your secrets manager\. For more information, see [ Using Dynamic References to Specify Template Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)\. 
 
 **Important**  
- For security purposes, do not use plain text in your CloudFormation template to store your credentials\. 
+ For security purposes, do not use plain text in your AWS CloudFormation template to store your credentials\. 
 
 ## Syntax<a name="aws-resource-codebuild-sourcecredential-syntax"></a>
 
@@ -66,9 +66,9 @@ Properties:
 
 ## Examples<a name="aws-resource-codebuild-sourcecredential--examples"></a>
 
-### Create Bitbucket source credentials using AWS Secrets Manager<a name="aws-resource-codebuild-sourcecredential--examples--Create_Bitbucket_source_credentials_using_AWS_Secrets_Manager"></a>
+### Create Bitbucket source credentials using AWS Secrets Manager<a name="aws-resource-codebuild-sourcecredential--examples--Create_Bitbucket_source_credentials_using_"></a>
 
-#### YAML<a name="aws-resource-codebuild-sourcecredential--examples--Create_Bitbucket_source_credentials_using_AWS_Secrets_Manager--yaml"></a>
+#### YAML<a name="aws-resource-codebuild-sourcecredential--examples--Create_Bitbucket_source_credentials_using_--yaml"></a>
 
 ```
 CodeBuildSourceCredential:
@@ -80,7 +80,7 @@ CodeBuildSourceCredential:
     AuthType: BASIC_AUTH
 ```
 
-#### JSON<a name="aws-resource-codebuild-sourcecredential--examples--Create_Bitbucket_source_credentials_using_AWS_Secrets_Manager--json"></a>
+#### JSON<a name="aws-resource-codebuild-sourcecredential--examples--Create_Bitbucket_source_credentials_using_--json"></a>
 
 ```
 {
@@ -96,9 +96,9 @@ CodeBuildSourceCredential:
 }
 ```
 
-### Create GitHub Enterprise source credentials using AWS Secrets Manager<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_Enterprise_source_credentials_using_AWS_Secrets_Manager"></a>
+### Create GitHub Enterprise source credentials using AWS Secrets Manager<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_Enterprise_source_credentials_using_"></a>
 
-#### YAML<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_Enterprise_source_credentials_using_AWS_Secrets_Manager--yaml"></a>
+#### YAML<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_Enterprise_source_credentials_using_--yaml"></a>
 
 ```
 Resources:
@@ -110,7 +110,7 @@ Resources:
       AuthType: PERSONAL_ACCESS_TOKEN
 ```
 
-#### JSON<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_Enterprise_source_credentials_using_AWS_Secrets_Manager--json"></a>
+#### JSON<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_Enterprise_source_credentials_using_--json"></a>
 
 ```
 {
@@ -127,9 +127,9 @@ Resources:
 }
 ```
 
-### Create GitHub source credentials using AWS Secrets Manager<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_source_credentials_using_AWS_Secrets_Manager"></a>
+### Create GitHub source credentials using AWS Secrets Manager<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_source_credentials_using_"></a>
 
-#### YAML<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_source_credentials_using_AWS_Secrets_Manager--yaml"></a>
+#### YAML<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_source_credentials_using_--yaml"></a>
 
 ```
 Resources:
@@ -141,7 +141,7 @@ Resources:
       AuthType: PERSONAL_ACCESS_TOKEN
 ```
 
-#### JSON<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_source_credentials_using_AWS_Secrets_Manager--json"></a>
+#### JSON<a name="aws-resource-codebuild-sourcecredential--examples--Create_GitHub_source_credentials_using_--json"></a>
 
 ```
 {

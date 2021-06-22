@@ -102,7 +102,7 @@ A description of the stack set\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExecutionRoleName`  <a name="cfn-cloudformation-stackset-executionrolename"></a>
-The name of the IAM execution role to use to create the stack set\. If you do not specify an execution role, AWS CloudFormation uses the AWSCloudFormationStackSetExecutionRole role for the stack set operation\.  
+The name of the IAM execution role to use to create the stack set\. If you do not specify an execution role, AWS CloudFormation uses the `AWSCloudFormationStackSetExecutionRole` role for the stack set operation\.  
 *Minimum*: `1`  
 *Maximum*: `64`  
 *Pattern*: `[a-zA-Z_0-9+=,.@-]+`  

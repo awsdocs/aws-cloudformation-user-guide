@@ -1,6 +1,6 @@
 # AWS::IoTSiteWise::Portal<a name="aws-resource-iotsitewise-portal"></a>
 
-Creates a portal, which can contain projects and dashboards\. Before you can create a portal, you must enable AWS Single Sign\-On\. AWS IoT SiteWise Monitor uses AWS SSO to manage user permissions\. For more information, see [Enabling AWS SSO](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/monitor-get-started.html#mon-gs-sso) in the *AWS IoT SiteWise User Guide*\.
+Creates a portal, which can contain projects and dashboards\. Before you can create a portal, you must enable AWS SSO\. AWS IoT SiteWise Monitor uses AWS SSO to manage user permissions\. For more information, see [Enabling AWS SSO](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/monitor-get-started.html#mon-gs-sso) in the *AWS IoT SiteWise User Guide*\.
 
 **Note**  
 Before you can sign in to a new portal, you must add at least one AWS SSO user or group to that portal\. For more information, see [Adding or removing portal administrators](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/administer-portals.html#portal-change-admins) in the *AWS IoT SiteWise User Guide*\.

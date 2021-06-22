@@ -37,7 +37,7 @@ The ARN of the IAM role that AWS Backup uses to authenticate when backing up the
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ListOfTags`  <a name="cfn-backup-backupselection-backupselectionresourcetype-listoftags"></a>
-An array of conditions used to specify a set of resources to assign to a backup plan; for example, `"StringEquals": {"Department":"accounting"`\.  
+An array of conditions used to specify a set of resources to assign to a backup plan; for example, `"STRINGEQUALS": {"Department":"accounting"`\.  
 *Required*: No  
 *Type*: List of [ConditionResourceType](aws-properties-backup-backupselection-conditionresourcetype.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

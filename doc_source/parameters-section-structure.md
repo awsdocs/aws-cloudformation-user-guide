@@ -204,7 +204,7 @@ An Amazon EBS volume ID, such as `vol-3cdd3f56`\.
 A VPC ID, such as `vpc-a123baa3`\.
 
 `AWS::Route53::HostedZone::Id`  
-An Amazon Route 53 hosted zone ID, such as `Z23YXV4OVPL04A`\.
+An Amazon Route 53 hosted zone ID, such as `Z23YXV4OVPL04A`\.
 
 `List<AWS::EC2::AvailabilityZone::Name>`  
 An array of Availability Zones for a region, such as `us-west-2a, us-west-2b`\.
@@ -231,7 +231,7 @@ An array of Amazon EBS volume IDs, such as `vol-3cdd3f56, vol-4cdd3f56`\.
 An array of VPC IDs, such as `vpc-a123baa3, vpc-b456baa3`\.
 
 `List<AWS::Route53::HostedZone::Id>`  
-An array of Amazon Route 53 hosted zone IDs, such as `Z23YXV4OVPL04A, Z23YXV4OVPL04B`\.
+An array of Amazon Route 53 hosted zone IDs, such as `Z23YXV4OVPL04A, Z23YXV4OVPL04B`\.
 
 ## SSM parameter types<a name="aws-ssm-parameter-types"></a>
 
@@ -376,7 +376,7 @@ Parameters:
 
 #### AWS CLI and API support<a name="parameters-section-cli-support"></a>
 
-Currently, users can't use the AWS CLI or AWS CloudFormation API to view a list of valid values for AWS\-specific parameters\. However, they can view information about each parameter, such as the parameter type, by using the [aws cloudformation get\-template\-summary](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template-summary.html) command or [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_GetTemplateSummary.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_GetTemplateSummary.html) API\.
+Currently, users can't use the AWS CLI or AWS CloudFormation API to view a list of valid values for AWS\-specific parameters\. However, they can view information about each parameter, such as the parameter type, by using the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template-summary.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template-summary.html) command or [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_GetTemplateSummary.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_GetTemplateSummary.html) API\.
 
 ### Comma\-delimited list parameter type<a name="parameters-section-structure-comma-list-type"></a>
 
@@ -515,7 +515,7 @@ The following command creates a stack based on the example template\. It provide
 aws cloudformation create-stack --stack-name S1 --template-body example template --parameters ParameterKey=InstanceType,ParameterValue=myInstanceType
 ```
 
- 
+ 
 
 #### `AWS::SSM::Parameter::Value`<`AWS::EC2::Image::Id`> type<a name="parameters-section-ssm-examples-example2"></a>
 

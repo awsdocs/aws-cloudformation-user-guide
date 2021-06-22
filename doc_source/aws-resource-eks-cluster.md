@@ -116,7 +116,7 @@ The `certificate-authority-data` for your cluster\.
 
 `ClusterSecurityGroupId`  <a name="ClusterSecurityGroupId-fn::getatt"></a>
 The cluster security group that was created by Amazon EKS for the cluster\. Managed node groups use this security group for control plane to data plane communication\.  
-This parameter is only returned by Amazon EKS clusters that support managed node groups\. For more information, see [Managed Node Groups](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html) in the *Amazon EKS User Guide*\. 
+This parameter is only returned by Amazon EKS clusters that support managed node groups\. For more information, see [Managed node groups](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html) in the *Amazon EKS User Guide*\. 
 
 `EncryptionConfigKeyArn`  <a name="EncryptionConfigKeyArn-fn::getatt"></a>
 Amazon Resource Name \(ARN\) or alias of the customer master key \(CMK\)\.
@@ -130,11 +130,11 @@ The issuer URL for the cluster's OIDC identity provider, such as `https://oidc.e
 
 ## Examples<a name="aws-resource-eks-cluster--examples"></a>
 
-### Create a Cluster<a name="aws-resource-eks-cluster--examples--Create_a_Cluster"></a>
+### Create a cluster<a name="aws-resource-eks-cluster--examples--Create_a_cluster"></a>
 
-The following example creates an Amazon EKS cluster called prod\.
+The following example creates an Amazon EKS cluster named `prod`\.
 
-#### JSON<a name="aws-resource-eks-cluster--examples--Create_a_Cluster--json"></a>
+#### JSON<a name="aws-resource-eks-cluster--examples--Create_a_cluster--json"></a>
 
 ```
 {
@@ -160,7 +160,7 @@ The following example creates an Amazon EKS cluster called prod\.
 }
 ```
 
-#### YAML<a name="aws-resource-eks-cluster--examples--Create_a_Cluster--yaml"></a>
+#### YAML<a name="aws-resource-eks-cluster--examples--Create_a_cluster--yaml"></a>
 
 ```
 Resources:
@@ -181,4 +181,4 @@ Resources:
 
 ## See also<a name="aws-resource-eks-cluster--seealso"></a>
 +  [Clusters](https://docs.aws.amazon.com/eks/latest/userguide/clusters.html) in the *Amazon EKS User Guide *\.
-+  [CreateCluster](https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateCluster.html) in the *Amazon EKS API Reference *\.
++  [https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateCluster.html](https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateCluster.html) in the *Amazon EKS API Reference *\.

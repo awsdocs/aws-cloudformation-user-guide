@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeGuruReviewer::RepositoryAssociation",
   "Properties" : {
+      "[BucketName](#cfn-codegurureviewer-repositoryassociation-bucketname)" : String,
       "[ConnectionArn](#cfn-codegurureviewer-repositoryassociation-connectionarn)" : String,
       "[Name](#cfn-codegurureviewer-repositoryassociation-name)" : String,
       "[Owner](#cfn-codegurureviewer-repositoryassociation-owner)" : String,
@@ -32,6 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::CodeGuruReviewer::RepositoryAssociation
 Properties: 
+  [BucketName](#cfn-codegurureviewer-repositoryassociation-bucketname): String
   [ConnectionArn](#cfn-codegurureviewer-repositoryassociation-connectionarn): String
   [Name](#cfn-codegurureviewer-repositoryassociation-name): String
   [Owner](#cfn-codegurureviewer-repositoryassociation-owner): String
@@ -41,6 +43,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-codegurureviewer-repositoryassociation-properties"></a>
+
+`BucketName`  <a name="cfn-codegurureviewer-repositoryassociation-bucketname"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConnectionArn`  <a name="cfn-codegurureviewer-repositoryassociation-connectionarn"></a>
  The Amazon Resource Name \(ARN\) of an AWS CodeStar Connections connection\. Its format is `arn:aws:codestar-connections:region-id:aws-account_id:connection/connection-id`\. For more information, see [Connection](https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_Connection.html) in the *AWS CodeStar Connections API Reference*\.   

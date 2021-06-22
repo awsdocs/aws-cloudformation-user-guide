@@ -1,4 +1,4 @@
-# Amazon S3 on Outposts resource type reference<a name="AWS_S3Outposts"></a>
+# Amazon Simple Storage Service on Outposts resource type reference<a name="AWS_S3Outposts"></a>
 
 **Resource types**
 + [AWS::S3Outposts::AccessPoint](aws-resource-s3outposts-accesspoint.md)

@@ -87,7 +87,7 @@ The type of source\.
 The ID of the subnet\.
 
 `TransitGatewayAttachmentId`  <a name="TransitGatewayAttachmentId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ID of the transit gateway attachment\.
 
 ## See also<a name="aws-resource-ec2-transitgatewaymulticastgroupsource--seealso"></a>
 + [RegisterTransitGatewayMulticastGroupSources](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RegisterTransitGatewayMulticastGroupSources.html) in the *Amazon EC2 API Reference*

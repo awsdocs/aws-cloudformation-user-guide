@@ -1,6 +1,6 @@
 # AWS::QLDB::Stream<a name="aws-resource-qldb-stream"></a>
 
-The `AWS::QLDB::Stream` resource creates a journal stream for a given Amazon Quantum Ledger Database \(Amazon QLDB\) ledger\. The stream captures every document revision that is committed to the ledger's journal and delivers the data to a specified Amazon Kinesis Data Streams resource\.
+The `AWS::QLDB::Stream` resource specifies a journal stream for a given Amazon Quantum Ledger Database \(Amazon QLDB\) ledger\. The stream captures every document revision that is committed to the ledger's journal and delivers the data to a specified Amazon Kinesis Data Streams resource\.
 
 For more information, see [StreamJournalToKinesis](https://docs.aws.amazon.com/qldb/latest/developerguide/API_StreamJournalToKinesis.html) in the *Amazon QLDB API Reference*\.
 

@@ -121,7 +121,7 @@ The revision number of the configuration\.
 
 ```
 {
-  "Description": "Create an Amazon MQ ActiveMQ configuration",
+  "Description": "Create an Amazon MQ for ActiveMQ configuration",
     "Configuration1": {
       "Type": "AWS::AmazonMQ::Configuration",
       "Properties": {
@@ -140,7 +140,7 @@ The revision number of the configuration\.
 
 ```
 --- 
-Description: "Create an Amazon MQ ActiveMQ configuration"
+Description: "Create an Amazon MQ for ActiveMQ configuration"
 Resources: 
   Configuration: 
     Type: "AWS::AmazonMQ::Configuration"

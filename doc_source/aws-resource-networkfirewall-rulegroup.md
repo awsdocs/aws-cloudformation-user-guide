@@ -55,7 +55,6 @@ A description of the rule group\.
 
 `RuleGroup`  <a name="cfn-networkfirewall-rulegroup-rulegroup"></a>
 An object that defines the rule group rules\.   
-You must provide either this rule group setting or a `Rules` setting, but not both\. 
 *Required*: No  
 *Type*: [RuleGroup](aws-properties-networkfirewall-rulegroup-rulegroup.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -68,7 +68,7 @@ The language code\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotificationArns`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-notificationarns"></a>
-Passed to CloudFormation\. The SNS topic ARNs to which to publish stack\-related events\.  
+Passed to AWS CloudFormation\. The SNS topic ARNs to which to publish stack\-related events\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `5`  

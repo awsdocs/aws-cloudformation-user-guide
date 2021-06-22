@@ -87,8 +87,8 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 `Type`  <a name="cfn-ivs-channel-type"></a>
 The channel type, which determines the allowable resolution and bitrate\. *If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately\.* Valid values:  
-+  `STANDARD`: Multiple qualities are generated from the original input, to automatically give viewers the best experience for their devices and network conditions\. Vertical resolution can be up to 1080 and bitrate can be up to 8\.5 Mbps\.
-+  `BASIC`: delivers the original input to viewers\. The viewer’s video\-quality choice is limited to the original input\. Vertical resolution can be up to 480 and bitrate can be up to 1\.5 Mbps\.
++  `STANDARD`: Multiple qualities are generated from the original input, to automatically give viewers the best experience for their devices and network conditions\. Resolution can be up to 1080p and bitrate can be up to 8\.5 Mbps\.
++  `BASIC`: delivers the original input to viewers\. The viewer’s video\-quality choice is limited to the original input\. Resolution can be up to 480p and bitrate can be up to 1\.5 Mbps\.
 *Default*: `STANDARD`  
 *Required*: No  
 *Type*: String  

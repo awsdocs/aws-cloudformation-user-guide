@@ -83,7 +83,6 @@ If you specify a name, you can't perform updates that require replacement of thi
 
 `RoleArn`  <a name="cfn-events-rule-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the role that is used for target invocation\.  
-If you're setting an event bus in another account as the target and that account granted permission to your account through an organization instead of directly by the account ID, you must specify a `RoleArn` with proper permissions in the `Target` structure, instead of here in this parameter\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

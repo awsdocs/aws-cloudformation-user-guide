@@ -94,7 +94,7 @@ If an engine version number is not specified when a replication instance is crea
 `KmsKeyId`  <a name="cfn-dms-replicationinstance-kmskeyid"></a>
 An AWS KMS key identifier that is used to encrypt the data on the replication instance\.  
 If you don't specify a value for the `KmsKeyId` parameter, then AWS DMS uses your default encryption key\.  
-AWS KMS creates the default encryption key for your AWS account\. Your AWS account has a different default encryption key for each AWS Region\.  
+ AWS KMS creates the default encryption key for your AWS account\. Your AWS account has a different default encryption key for each AWS Region\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

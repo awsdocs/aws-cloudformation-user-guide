@@ -342,13 +342,13 @@ Resources:
       DBInstanceClass: db.r5.xlarge
 ```
 
-### Adding an AWS Region to an Aurora database cluster<a name="aws-resource-rds-globalcluster--examples--Adding_an_AWS_Region_to_an_Aurora_database_cluster"></a>
+### Adding a Region to an Aurora database cluster<a name="aws-resource-rds-globalcluster--examples--Adding_a_Region_to_an_Aurora_database_cluster"></a>
 
 The following example creates a new Aurora DB cluster, attaches it to a global database cluster as a read\-only secondary cluster, and then adds a DB instance to the new DB cluster\.
 
 Specify the `GlobalClusterIdentifier` of a global database cluster with the primary DB cluster in a separate AWS Region\.
 
-#### JSON<a name="aws-resource-rds-globalcluster--examples--Adding_an_AWS_Region_to_an_Aurora_database_cluster--json"></a>
+#### JSON<a name="aws-resource-rds-globalcluster--examples--Adding_a_Region_to_an_Aurora_database_cluster--json"></a>
 
 ```
 {
@@ -388,7 +388,7 @@ Specify the `GlobalClusterIdentifier` of a global database cluster with the prim
 }
 ```
 
-#### YAML<a name="aws-resource-rds-globalcluster--examples--Adding_an_AWS_Region_to_an_Aurora_database_cluster--yaml"></a>
+#### YAML<a name="aws-resource-rds-globalcluster--examples--Adding_a_Region_to_an_Aurora_database_cluster--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09

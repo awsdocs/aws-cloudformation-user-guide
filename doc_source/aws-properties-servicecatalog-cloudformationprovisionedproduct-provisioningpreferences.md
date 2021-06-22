@@ -113,8 +113,8 @@ Deletes a stack instance in the stack set represented by the provisioned product
 `StackSetRegions`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences-stacksetregions"></a>
 One or more AWS Regions where the provisioned product will be available\.  
 Applicable only to a `CFN_STACKSET` provisioned product type\.  
-The specified regions should be within the list of regions from the `STACKSET` constraint\. To get the list of regions in the `STACKSET` constraint, use the `DescribeProvisioningParameters` operation\.  
-If no values are specified, the default value is all regions from the `STACKSET` constraint\.  
+The specified Regions should be within the list of regions from the `STACKSET` constraint\. To get the list of Regions in the `STACKSET` constraint, use the `DescribeProvisioningParameters` operation\.  
+If no values are specified, the default value is all Regions from the `STACKSET` constraint\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

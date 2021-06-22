@@ -24,6 +24,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `FunctionARN`  <a name="cfn-cloudfront-function-functionmetadata-functionarn"></a>
 The Amazon Resource Name \(ARN\) of the function\. The ARN uniquely identifies the function\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -126,7 +126,7 @@ MountTarget:
 ```
 
 ## See also<a name="aws-resource-efs-mounttarget--seealso"></a>
-+  [Amazon EFS: How It Works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html) 
-+  [Creating Mount Targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) 
-+  [Walkthrough: Mounting a File System On\-Premises](https://docs.aws.amazon.com/efs/latest/ug/efs-onpremises.html) 
++  [Amazon EFS: How it works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html) 
++  [Creating mount targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) 
++  [Walkthrough: Mounting a file system on\-premises](https://docs.aws.amazon.com/efs/latest/ug/efs-onpremises.html) 
 

@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::DistributionConfiguration LaunchTemplateConfiguration<a name="aws-properties-imagebuilder-distributionconfiguration-launchtemplateconfiguration"></a>
 
-<a name="aws-properties-imagebuilder-distributionconfiguration-launchtemplateconfiguration-description"></a>The `LaunchTemplateConfiguration` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::ImageBuilder::DistributionConfiguration](aws-resource-imagebuilder-distributionconfiguration.md)\.
+Identifies an Amazon EC2 launch template to use for a specific account\.
 
 ## Syntax<a name="aws-properties-imagebuilder-distributionconfiguration-launchtemplateconfiguration-syntax"></a>
 
@@ -27,19 +27,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-imagebuilder-distributionconfiguration-launchtemplateconfiguration-properties"></a>
 
 `AccountId`  <a name="cfn-imagebuilder-distributionconfiguration-launchtemplateconfiguration-accountid"></a>
-Not currently supported by AWS CloudFormation\.  
+The account ID that this configuration applies to\.  
 *Required*: No  
 *Type*: String  
+*Pattern*: `^[0-9]{12}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LaunchTemplateId`  <a name="cfn-imagebuilder-distributionconfiguration-launchtemplateconfiguration-launchtemplateid"></a>
-Not currently supported by AWS CloudFormation\.  
+Identifies the Amazon EC2 launch template to use\.  
 *Required*: No  
 *Type*: String  
+*Pattern*: `^lt-[a-z0-9-_]{17}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SetDefaultVersion`  <a name="cfn-imagebuilder-distributionconfiguration-launchtemplateconfiguration-setdefaultversion"></a>
-Not currently supported by AWS CloudFormation\.  
+Set the specified Amazon EC2 launch template as the default launch template for the specified account\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

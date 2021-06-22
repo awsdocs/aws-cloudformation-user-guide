@@ -1,6 +1,6 @@
 # AWS::ServiceDiscovery::PrivateDnsNamespace<a name="aws-resource-servicediscovery-privatednsnamespace"></a>
 
-Creates a private namespace based on DNS, which is visible only inside a specified Amazon VPC\. The namespace defines your service naming scheme\. For example, if you name your namespace `example.com` and name your service `backend`, the resulting DNS name for the service is `backend.example.com`\. For the current quota on the number of namespaces that you can create using the same AWS account, see [AWS Cloud Map Limits](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html) in the *AWS Cloud Map Developer Guide*\.
+Creates a private namespace based on DNS, which is visible only inside a specified Amazon VPC\. The namespace defines your service naming scheme\. For example, if you name your namespace `example.com` and name your service `backend`, the resulting DNS name for the service is `backend.example.com`\. Service instances that are registered using a private DNS namespace can be discovered using either a `DiscoverInstances` request or using DNS\. For the current quota on the number of namespaces that you can create using the same AWS account, see [ AWS Cloud Map Limits](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html) in the * AWS Cloud Map Developer Guide*\.
 
 ## Syntax<a name="aws-resource-servicediscovery-privatednsnamespace-syntax"></a>
 
@@ -42,7 +42,7 @@ A description for the namespace\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-servicediscovery-privatednsnamespace-name"></a>
-The name that you want to assign to this namespace\. When you create a private DNS namespace, AWS Cloud Map automatically creates an Amazon Route 53 private hosted zone that has the same name as the namespace\.  
+The name that you want to assign to this namespace\. When you create a private DNS namespace, AWS Cloud Map automatically creates an Amazon Route 53 private hosted zone that has the same name as the namespace\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `1024`  

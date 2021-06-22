@@ -1,6 +1,6 @@
 # AWS::CodeDeploy::DeploymentGroup AlarmConfiguration<a name="aws-properties-codedeploy-deploymentgroup-alarmconfiguration"></a>
 
- The `AlarmConfiguration` property type configuresCloudWatch alarms for an AWS CodeDeploy deployment group\. `AlarmConfiguration` is a property of the [DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html) resource\. 
+ The `AlarmConfiguration` property type configures CloudWatch alarms for an AWS CodeDeploy deployment group\. `AlarmConfiguration` is a property of the [DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html) resource\. 
 
 ## Syntax<a name="aws-properties-codedeploy-deploymentgroup-alarmconfiguration-syntax"></a>
 
@@ -41,8 +41,8 @@ Indicates whether the alarm configuration is enabled\.
 
 `IgnorePollAlarmFailure`  <a name="cfn-codedeploy-deploymentgroup-alarmconfiguration-ignorepollalarmfailure"></a>
 Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from Amazon CloudWatch\. The default value is `false`\.  
-+  `true`: The deployment proceeds even if alarm status information can't be retrieved from Amazon CloudWatch\.
-+  `false`: The deployment stops if alarm status information can't be retrieved from Amazon CloudWatch\.
++  `true`: The deployment proceeds even if alarm status information can't be retrieved from CloudWatch\.
++  `false`: The deployment stops if alarm status information can't be retrieved from CloudWatch\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

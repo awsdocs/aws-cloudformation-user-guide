@@ -74,6 +74,8 @@ Sets the instance state to transition to after the lifecycle actions are complet
 
 The following example defines a warm pool for an Auto Scaling group\.
 
+For examples of CloudFormation stack templates with warm pools, see our [GitHub repository](https://github.com/aws-samples/amazon-ec2-auto-scaling-group-examples)\. 
+
 ### Auto Scaling group with warm pool<a name="aws-resource-autoscaling-warmpool--examples--Auto_Scaling_group_with_warm_pool"></a>
 
 The following template snippet shows an AWS::AutoScaling::WarmPool resource for an Auto Scaling group where you specify values for the `MinSize` and `PoolState` properties\. 

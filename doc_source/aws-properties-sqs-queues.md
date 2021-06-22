@@ -1,16 +1,16 @@
 # AWS::SQS::Queue<a name="aws-properties-sqs-queues"></a>
 
-The `AWS::SQS::Queue` resource creates an Amazon Simple Queue Service \(Amazon SQS\) standard or FIFO queue\.
+The `AWS::SQS::Queue` resource creates an Amazon SQS standard or FIFO queue\.
 
 Keep the following caveats in mind:
 + If you don't specify the `FifoQueue` property, Amazon SQS creates a standard queue\.
 **Note**  
-You can't change the queue type after you create it and you can't convert an existing standard queue into a FIFO queue\. You must either create a new FIFO queue for your application or delete your existing standard queue and recreate it as a FIFO queue\. For more information, see [Moving From a Standard Queue to a FIFO Queue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-moving) in the *Amazon Simple Queue Service Developer Guide*\. 
+You can't change the queue type after you create it and you can't convert an existing standard queue into a FIFO queue\. You must either create a new FIFO queue for your application or delete your existing standard queue and recreate it as a FIFO queue\. For more information, see [Moving from a standard queue to a FIFO queue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues-moving.html) in the *Amazon SQS Developer Guide*\. 
 + If you don't provide a value for a property, the queue is created with the default value for the property\.
 + If you delete a queue, you must wait at least 60 seconds before creating a queue with the same name\.
 + To successfully create a new queue, you must provide a queue name that adheres to the [limits related to queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-queues.html) and is unique within the scope of your queues\.
 
-For more information about creating FIFO \(first\-in\-first\-out\) queues, see the tutorial [Create a Queue Using AWS CloudFormation](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-create-queue.html#create-queue-cloudformation) in the *Amazon Simple Queue Service Developer Guide*\.
+For more information about creating FIFO \(first\-in\-first\-out\) queues, see [Creating an Amazon SQS queue \(AWS CloudFormation\)](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/screate-queue-cloudformation.html) in the *Amazon SQS Developer Guide*\.
 
 ## Syntax<a name="aws-properties-sqs-queues-syntax"></a>
 
@@ -23,8 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SQS::Queue",
   "Properties" : {
       "[ContentBasedDeduplication](#aws-sqs-queue-contentbaseddeduplication)" : Boolean,
+      "[DeduplicationScope](#aws-sqs-queue-deduplicationscope)" : String,
       "[DelaySeconds](#aws-sqs-queue-delayseconds)" : Integer,
       "[FifoQueue](#aws-sqs-queue-fifoqueue)" : Boolean,
+      "[FifoThroughputLimit](#aws-sqs-queue-fifothroughputlimit)" : String,
       "[KmsDataKeyReusePeriodSeconds](#aws-sqs-queue-kmsdatakeyreuseperiodseconds)" : Integer,
       "[KmsMasterKeyId](#aws-sqs-queue-kmsmasterkeyid)" : String,
       "[MaximumMessageSize](#aws-sqs-queue-maxmesgsize)" : Integer,
@@ -44,8 +46,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::SQS::Queue
 Properties: 
   [ContentBasedDeduplication](#aws-sqs-queue-contentbaseddeduplication): Boolean
+  [DeduplicationScope](#aws-sqs-queue-deduplicationscope): String
   [DelaySeconds](#aws-sqs-queue-delayseconds): Integer
   [FifoQueue](#aws-sqs-queue-fifoqueue): Boolean
+  [FifoThroughputLimit](#aws-sqs-queue-fifothroughputlimit): String
   [KmsDataKeyReusePeriodSeconds](#aws-sqs-queue-kmsdatakeyreuseperiodseconds): Integer
   [KmsMasterKeyId](#aws-sqs-queue-kmsmasterkeyid): String
   [MaximumMessageSize](#aws-sqs-queue-maxmesgsize): Integer
@@ -61,9 +65,16 @@ Properties:
 ## Properties<a name="aws-properties-sqs-queues-properties"></a>
 
 `ContentBasedDeduplication`  <a name="aws-sqs-queue-contentbaseddeduplication"></a>
-For first\-in\-first\-out \(FIFO\) queues, specifies whether to enable content\-based deduplication\. During the deduplication interval, Amazon SQS treats messages that are sent with identical content as duplicates and delivers only one copy of the message\. For more information, see the `ContentBasedDeduplication` attribute for the ` [CreateQueue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) ` action in the *Amazon Simple Queue Service API Reference*\.  
+For first\-in\-first\-out \(FIFO\) queues, specifies whether to enable content\-based deduplication\. During the deduplication interval, Amazon SQS treats messages that are sent with identical content as duplicates and delivers only one copy of the message\. For more information, see the `ContentBasedDeduplication` attribute for the ` [CreateQueue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) ` action in the *Amazon SQS API Reference*\.  
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DeduplicationScope`  <a name="aws-sqs-queue-deduplicationscope"></a>
+For high throughput for FIFO queues, specifies whether message deduplication occurs at the message group or queue level\. Valid values are `messageGroup` and `queue`\.  
+To enable high throughput for a FIFO queue, set this attribute to `messageGroup` *and* set the `FifoThroughputLimit` attribute to `perMessageGroupId`\. If you set these attributes to anything other than these values, normal throughput is in effect and deduplication occurs as specified\. For more information, see [High throughput for FIFO queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/high-throughput-fifo.html) and [Quotas related to messages](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/quotas-messages.html) in the *Amazon SQS Developer Guide*\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DelaySeconds`  <a name="aws-sqs-queue-delayseconds"></a>
@@ -73,22 +84,29 @@ The time in seconds for which the delivery of all messages in the queue is delay
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FifoQueue`  <a name="aws-sqs-queue-fifoqueue"></a>
-If set to true, creates a FIFO queue\. If you don't specify this property, Amazon SQS creates a standard queue\. For more information, see [FIFO \(First\-In\-First\-Out\) Queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html) in the *Amazon Simple Queue Service Developer Guide*\.  
+If set to true, creates a FIFO queue\. If you don't specify this property, AAmazon SQS creates a standard queue\. For more information, see [FIFO queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html) in the *Amazon SQS Developer Guide*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`FifoThroughputLimit`  <a name="aws-sqs-queue-fifothroughputlimit"></a>
+For high throughput for FIFO queues, specifies whether the FIFO queue throughput quota applies to the entire queue or per message group\. Valid values are `perQueue` and `perMessageGroupId`\.  
+To enable high throughput for a FIFO queue, set this attribute to `perMessageGroupId` *and* set the `DeduplicationScope` attribute to `messageGroup`\. If you set these attributes to anything other than these values, normal throughput is in effect and deduplication occurs as specified\. For more information, see [High throughput for FIFO queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/high-throughput-fifo.html) and [Quotas related to messages](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/quotas-messages.html) in the *Amazon SQS Developer Guide*\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `KmsDataKeyReusePeriodSeconds`  <a name="aws-sqs-queue-kmsdatakeyreuseperiodseconds"></a>
 The length of time in seconds for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again\. The value must be an integer between 60 \(1 minute\) and 86,400 \(24 hours\)\. The default is 300 \(5 minutes\)\.  
-A shorter time period provides better security, but results in more calls to AWS KMS, which might incur charges after Free Tier\. For more information, see [How Does the Data Key Reuse Period Work?](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html#sqs-how-does-the-data-key-reuse-period-work) in the *Amazon Simple Queue Service Developer Guide*\.
+A shorter time period provides better security, but results in more calls to AWS KMS, which might incur charges after Free Tier\. For more information, see [Encryption at rest](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html#sqs-how-does-the-data-key-reuse-period-work) in the *Amazon SQS Developer Guide*\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsMasterKeyId`  <a name="aws-sqs-queue-kmsmasterkeyid"></a>
 The ID of an AWS managed customer master key \(CMK\) for Amazon SQS or a custom CMK\. To use the AWS managed CMK for Amazon SQS, specify the \(default\) alias `alias/aws/sqs`\. For more information, see the following:  
-+  [Protecting Data Using Server\-Side Encryption \(SSE\) and AWS KMS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html) in the *Amazon Simple Queue Service Developer Guide* 
-+  [CreateQueue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) in the *Amazon Simple Queue Service API Reference* 
++  [Encryption at rest](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html) in the *Amazon SQS Developer Guide* 
++  [CreateQueue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) in the *Amazon SQS API Reference* 
 +  The Customer Master Keys section of the [AWS Key Management Service Best Practices](https://d0.awsstatic.com/whitepapers/aws-kms-best-practices.pdf) whitepaper 
 *Required*: No  
 *Type*: String  
@@ -107,21 +125,21 @@ The number of seconds that Amazon SQS retains a message\. You can specify an int
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `QueueName`  <a name="aws-sqs-queue-name"></a>
-A name for the queue\. To create a FIFO queue, the name of your FIFO queue must end with the `.fifo` suffix\. For more information, see [FIFO \(First\-In\-First\-Out\) Queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html) in the *Amazon Simple Queue Service Developer Guide*\.  
-If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the queue name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html) in the *AWS CloudFormation User Guide*\.   
+A name for the queue\. To create a FIFO queue, the name of your FIFO queue must end with the `.fifo` suffix\. For more information, see [FIFO queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html) in the *Amazon SQS Developer Guide*\.  
+If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the queue name\. For more information, see [Name type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html) in the *AWS CloudFormation User Guide*\.   
 If you specify a name, you can't perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ReceiveMessageWaitTimeSeconds`  <a name="aws-sqs-queue-receivemsgwaittime"></a>
-Specifies the duration, in seconds, that the ReceiveMessage action call waits until a message is in the queue in order to include it in the response, rather than returning an empty response if a message isn't yet available\. You can specify an integer from 1 to 20\. Short polling is used as the default or when you specify 0 for this property\. For more information, see [Amazon SQS Long Poll](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-long-polling.html)\.  
+Specifies the duration, in seconds, that the ReceiveMessage action call waits until a message is in the queue in order to include it in the response, rather than returning an empty response if a message isn't yet available\. You can specify an integer from 1 to 20\. Short polling is used as the default or when you specify 0 for this property\. For more information, see [Consuming messages using long polling](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-short-and-long-polling.html#sqs-long-polling) in the *Amazon SQS Developer Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RedrivePolicy`  <a name="aws-sqs-queue-redrive"></a>
-A string that includes the parameters for the dead\-letter queue functionality \(redrive policy\) of the source queue\. For more information about the redrive policy and dead\-letter queues, see [Using Amazon SQS Dead\-Letter Queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html) in the *Amazon Simple Queue Service Developer Guide*\.   
+A string that includes the parameters for the dead\-letter queue functionality \(redrive policy\) of the source queue\. For more information about the redrive policy and dead\-letter queues, see [Amazon SQS dead\-letter queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html) in the *Amazon SQS Developer Guide*\.   
 The dead\-letter queue of a FIFO queue must also be a FIFO queue\. Similarly, the dead\-letter queue of a standard queue must also be a standard queue\.
  *JSON*   
  `{ "deadLetterTargetArn" : String, "maxReceiveCount" : Integer }`   
@@ -135,7 +153,7 @@ The dead\-letter queue of a FIFO queue must also be a FIFO queue\. Similarly, th
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-sqs-queue-tags"></a>
-The tags that you attach to this queue\. For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) in the *AWS CloudFormation User Guide*\.  
+The tags that you attach to this queue\. For more information, see [Resource tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) in the *AWS CloudFormation User Guide*\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -143,7 +161,7 @@ The tags that you attach to this queue\. For more information, see [Resource Tag
 `VisibilityTimeout`  <a name="aws-sqs-queue-visiblitytimeout"></a>
 The length of time during which a message will be unavailable after a message is delivered from the queue\. This blocks other components from receiving the same message and gives the initial component time to process and delete the message from the queue\.  
 Values must be from 0 to 43,200 seconds \(12 hours\)\. If you don't specify a value, AWS CloudFormation uses the default value of 30 seconds\.  
-For more information about Amazon SQS queue visibility timeouts, see [Visibility Timeout](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html) in the *Amazon Simple Queue Service Developer Guide*\.  
+For more information about Amazon SQS queue visibility timeouts, see [Visibility timeout](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html) in the *Amazon SQS Developer Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -406,5 +424,5 @@ Outputs:
 ```
 
 ## See also<a name="aws-properties-sqs-queues--seealso"></a>
-+  [What is Amazon Simple Queue Service?](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html) in the *Amazon Simple Queue Service Developer Guide* 
-+  ` [CreateQueue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) ` in the *Amazon Simple Queue Service API Reference* 
++  [What is Amazon Simple Queue Service?](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html) in the *Amazon SQS Developer Guide* 
++  ` [CreateQueue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) ` in the *Amazon SQS API Reference* 

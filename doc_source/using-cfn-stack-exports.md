@@ -22,7 +22,7 @@ To see the values that you can import, list all the exported output values by us
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-exports.png)
 
 **To list exported output values \(AWS CLI\)**
-+ Run the [aws cloudformation list\-exports](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html) command\.
++ Run the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-exports.html) command\.
 
 **To list exported output values \(API\)**
 + Run the [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ListExports.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ListExports.html) API\.

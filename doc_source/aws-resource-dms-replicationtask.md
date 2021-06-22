@@ -58,7 +58,7 @@ Indicates when you want a change data capture \(CDC\) operation to start\. Use e
 Date Example: \-\-cdc\-start\-position “2018\-03\-08T12:12:12”  
 Checkpoint Example: \-\-cdc\-start\-position "checkpoint:V1\#27\#mysql\-bin\-changelog\.157832:1975:\-1:2002:677883278264080:mysql\-bin\-changelog\.157832:1876\#0\#0\#\*\#0\#93"  
 LSN Example: \-\-cdc\-start\-position “mysql\-bin\-changelog\.000024:373”  
-When you use this task setting with a source PostgreSQL database, a logical replication slot should already be created and associated with the source endpoint\. You can verify this by setting the `slotName` extra connection attribute to the name of this logical replication slot\. For more information, see [Extra Connection Attributes When Using PostgreSQL as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.PostgreSQL.html#CHAP_Source.PostgreSQL.ConnectionAttrib)\.
+When you use this task setting with a source PostgreSQL database, a logical replication slot should already be created and associated with the source endpoint\. You can verify this by setting the `slotName` extra connection attribute to the name of this logical replication slot\. For more information, see [Extra Connection Attributes When Using PostgreSQL as a Source for AWS DMS ](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.PostgreSQL.html#CHAP_Source.PostgreSQL.ConnectionAttrib)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -101,7 +101,7 @@ Constraints:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplicationTaskSettings`  <a name="cfn-dms-replicationtask-replicationtasksettings"></a>
-Overall settings for the task, in JSON format\. For more information, see [Specifying Task Settings for AWS Database Migration Service Tasks](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html) in the *AWS Database Migration User Guide\.*   
+Overall settings for the task, in JSON format\. For more information, see [Specifying Task Settings for AWS Database Migration Service Tasks](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html) in the * AWS Database Migration Service User Guide\.*   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -119,7 +119,7 @@ An Amazon Resource Name \(ARN\) that uniquely identifies the source endpoint\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TableMappings`  <a name="cfn-dms-replicationtask-tablemappings"></a>
-The table mappings for the task, in JSON format\. For more information, see [Using Table Mapping to Specify Task Settings](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html) in the *AWS Database Migration Service User Guide\.*   
+The table mappings for the task, in JSON format\. For more information, see [Using Table Mapping to Specify Task Settings](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html) in the * AWS Database Migration Service User Guide\.*   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

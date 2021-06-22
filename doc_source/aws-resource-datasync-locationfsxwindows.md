@@ -90,6 +90,7 @@ The key\-value pair that represents a tag that you want to add to the resource\.
 
 `User`  <a name="cfn-datasync-locationfsxwindows-user"></a>
 The user who has the permissions to access files and folders in the FSx for Windows File Server file system\.  
+For information about choosing a user name that ensures sufficient permissions to files, folders, and metadata, see [user](create-fsx-location.html#FSxWuser)\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `104`  

@@ -229,3 +229,59 @@ SampleEventBusPolicy:
                 StringEquals:
                     "aws:PrincipalOrgID": "o-1234567890"
 ```
+
+### Grant Permission to an Organization using a custom event bus<a name="aws-resource-events-eventbuspolicy--examples--Grant_Permission_to_an_Organization_using_a_custom_event_bus"></a>
+
+The following example grants permission to all AWS accounts in the organization with an organization ID of `o\-1234567890` using a custom event bus\.
+
+#### JSON<a name="aws-resource-events-eventbuspolicy--examples--Grant_Permission_to_an_Organization_using_a_custom_event_bus--json"></a>
+
+```
+"SampleCustomEventBus": {
+    "Type": "AWS::Events::EventBus",
+    "Properties": {
+        "Name": "MyCustomEventBus"
+     }
+}
+"SampleCustomEventBusPolicy": {
+    "Type": "AWS::Events::EventBusPolicy",
+    "Properties": {
+        "StatementId": "MyCustomEventBusStatement",
+        "Principal": {
+            "AWS": "*"
+        },
+        "Action": "events:PutEvents",
+        "EventBusName": {
+            "Ref": "SampleCustomEventBus"
+        },
+        "Condition": {
+            "Key": "aws:PrincipalOrgID",
+            "Type": "StringEquals",
+            "Value": "o-1234567890"
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-events-eventbuspolicy--examples--Grant_Permission_to_an_Organization_using_a_custom_event_bus--yaml"></a>
+
+```
+SampleCustomEventBus: 
+    Type: AWS::Events::EventBus
+    Properties:
+        Name: "MyCustomEventBus"
+
+SampleCustomEventBusPolicy: 
+    Type: AWS::Events::EventBusPolicy
+    Properties: 
+        StatementId: "MyCustomEventBusStatement"
+        Principal: 
+             AWS: "*"
+        Action: "events:PutEvents"
+        EventBusName:
+            Ref: "SampleCustomEventBus"
+        Condition:
+            Key: 'aws:PrincipalOrgID'
+            Type: 'StringEquals'
+            Value: "o-1234567890"
+```

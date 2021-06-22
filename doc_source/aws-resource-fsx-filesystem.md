@@ -149,6 +149,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 #### <a name="aws-resource-fsx-filesystem-return-values-fn--getatt-fn--getatt"></a>
 
+`DNSName`  <a name="DNSName-fn::getatt"></a>
+Use the DNSName value to access the DNS name of your Amazon FSx file system\. The DNS name identifies the file system\.
+
 `LustreMountName`  <a name="LustreMountName-fn::getatt"></a>
 Use the LustreMountName value when mounting an Amazon FSx for Lustre file system\. For SCRATCH\_1 deployment types, this value is always "fsx"\. For SCRATCH\_2 and PERSISTENT\_1 deployment types, this value is a string that is unique within an AWS Region\. For more information, see [Mounting from an Amazon EC2 Instance](https://docs.aws.amazon.com/fsx/latest/LustreGuide/mounting-ec2-instance.html)\.
 
@@ -187,10 +190,11 @@ The following examples create a 1\.2 TiB persistent Amazon FSx for Lustre file s
                     }
                 ],
                 "LustreConfiguration": {
-                    "AutoImportPolicy" : "NEW",                    
+                    "AutoImportPolicy" : "NEW",               
                     "CopyTagsToBackups" : true,
                     "DeploymentType": "PERSISTENT_1",
                     "PerUnitStorageThroughput": 200,                    
+                    "DataCompressionType": "LZ4",
                     "ImportPath": {
                         "Fn::Join": [
                             "",
@@ -247,6 +251,7 @@ Resources:
         CopyTagsToBackups: true
         DeploymentType: "PERSISTENT_1"
         PerUnitStorageThroughput: 200
+        DataCompression: "LZ4"
         ImportPath: !Join ["", ["s3://", !ImportValue LustreCFNS3ImportBucketName]]
         ExportPath: !Join ["", ["s3://", !ImportValue LustreCFNS3ExportPath]]
         WeeklyMaintenanceStartTime: "2:20:30"

@@ -1,6 +1,6 @@
 # AWS::ServiceDiscovery::Service DnsRecord<a name="aws-properties-servicediscovery-service-dnsrecord"></a>
 
-A complex type that contains information about the Route 53 DNS records that you want AWS Cloud Map to create when you register an instance\.
+A complex type that contains information about the Route 53 DNS records that you want AWS Cloud Map to create when you register an instance\.
 
 ## Syntax<a name="aws-properties-servicediscovery-service-dnsrecord-syntax"></a>
 
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `TTL`  <a name="cfn-servicediscovery-service-dnsrecord-ttl"></a>
 The amount of time, in seconds, that you want DNS resolvers to cache the settings for this record\.  
-Alias records don't include a TTL because Route 53 uses the TTL for the AWS resource that an alias record routes traffic to\. If you include the `AWS_ALIAS_DNS_NAME` attribute when you submit a [RegisterInstance](https://docs.aws.amazon.com/cloud-map/latest/api/API_RegisterInstance.html) request, the `TTL` value is ignored\. Always specify a TTL for the service; you can use a service to register instances that create either alias or non\-alias records\.
+Alias records don't include a TTL because Route 53 uses the TTL for the AWS resource that an alias record routes traffic to\. If you include the `AWS_ALIAS_DNS_NAME` attribute when you submit a [RegisterInstance](https://docs.aws.amazon.com/cloud-map/latest/api/API_RegisterInstance.html) request, the `TTL` value is ignored\. Always specify a TTL for the service; you can use a service to register instances that create either alias or non\-alias records\.
 *Required*: Yes  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -71,6 +71,6 @@ If you specify settings for an `SRV` record and if you specify values for `AWS_I
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-servicediscovery-service-dnsrecord--seealso"></a>
-+  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#aws-resource-servicediscovery-service-return-values) in the topic [AWS::ServiceDiscovery::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html) 
-+  [DnsRecord](https://docs.aws.amazon.com/cloud-map/latest/api/API_DnsRecord.html) in the *AWS Cloud Map API Reference* 
++  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#aws-resource-servicediscovery-service-return-values) in the topic [AWS::ServiceDiscovery::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html)
++ [DnsRecord](https://docs.aws.amazon.com/cloud-map/latest/api/API_DnsRecord.html) in the *AWS Cloud Map API Reference*
 

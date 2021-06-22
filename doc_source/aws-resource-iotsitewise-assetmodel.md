@@ -55,7 +55,7 @@ A description for the asset model\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AssetModelHierarchies`  <a name="cfn-iotsitewise-assetmodel-assetmodelhierarchies"></a>
-The hierarchy definitions of the asset model\. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model\. For more information, see [Defining relationships between assets](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html) in the *AWS IoT SiteWise User Guide*\.  
+The hierarchy definitions of the asset model\. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model\. For more information, see [Defining relationships between assets](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html) in the *AWS IoT SiteWiseUser Guide*\.  
 You can specify up to 10 hierarchies per asset model\. For more information, see [Quotas](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html) in the *AWS IoT SiteWise User Guide*\.  
 *Required*: No  
 *Type*: List of [AssetModelHierarchy](aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.md)  

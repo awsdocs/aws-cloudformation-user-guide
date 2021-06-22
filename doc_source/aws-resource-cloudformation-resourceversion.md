@@ -48,13 +48,13 @@ The Amazon Resource Name \(ARN\) of the IAM role for CloudFormation to assume wh
 *Minimum*: `1`  
 *Maximum*: `256`  
 *Pattern*: `arn:.+:iam::[0-9]{12}:role/.+`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LoggingConfig`  <a name="cfn-cloudformation-resourceversion-loggingconfig"></a>
 Logging configuration information for a resource\.  
 *Required*: No  
 *Type*: [LoggingConfig](aws-properties-cloudformation-resourceversion-loggingconfig.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SchemaHandlerPackage`  <a name="cfn-cloudformation-resourceversion-schemahandlerpackage"></a>
 A url to the S3 bucket containing the resource project package that contains the neccessary files for the resource you want to register\.  
@@ -64,7 +64,7 @@ The user registering the resource must be able to access the package in the S3 b
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `4096`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TypeName`  <a name="cfn-cloudformation-resourceversion-typename"></a>
 The name of the resource being registered\.  
@@ -81,7 +81,7 @@ The following organization namespaces are reserved and cannot be used in your re
 *Minimum*: `10`  
 *Maximum*: `204`  
 *Pattern*: `[A-Za-z0-9]{2,64}::[A-Za-z0-9]{2,64}::[A-Za-z0-9]{2,64}(::MODULE){0,1}`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-cloudformation-resourceversion-return-values"></a>
 

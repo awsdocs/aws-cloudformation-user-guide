@@ -16,6 +16,9 @@ All SageMaker Studio traffic between the domain and the EFS volume is through th
 
   When internet access is disabled, you won't be able to run a Studio notebook or to train or host models unless your VPC has an interface endpoint to the SageMaker API and runtime or a NAT gateway and your security groups allow outbound connections\.
 
+**Important**  
+NFS traffic over TCP on port 2049 needs to be allowed in both inbound and outbound rules in order to launch a SageMaker Studio app successfully\.
+
 For more information, see [Connect SageMaker Studio Notebooks to Resources in a VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-notebooks-and-internet-access.html)\.
 
 ## Syntax<a name="aws-resource-sagemaker-domain-syntax"></a>

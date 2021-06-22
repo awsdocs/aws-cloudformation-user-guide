@@ -1,6 +1,6 @@
 # AWS::AutoScalingPlans::ScalingPlan PredefinedLoadMetricSpecification<a name="aws-properties-autoscalingplans-scalingplan-predefinedloadmetricspecification"></a>
 
- `PredefinedLoadMetricSpecification` is a subproperty of [ScalingInstruction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html) that specifies a predefined load metric for predictive scaling to use with AWS Auto Scaling\.
+ `PredefinedLoadMetricSpecification` is a subproperty of [ScalingInstruction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html) that specifies a predefined load metric for predictive scaling to use with AWS Auto Scaling \(Auto Scaling Plans\)\.
 
 After creating your scaling plan, you can use the AWS Auto Scaling console to visualize forecasts for the specified metric\. For more information, see [View Scaling Information for a Resource](https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-create-scaling-plan.html#gs-view-resource) in the *AWS Auto Scaling User Guide*\.
 

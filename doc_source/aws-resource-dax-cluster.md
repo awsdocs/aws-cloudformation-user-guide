@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::DAX::Cluster",
   "Properties" : {
       "[AvailabilityZones](#cfn-dax-cluster-availabilityzones)" : [ String, ... ],
+      "[ClusterEndpointEncryptionType](#cfn-dax-cluster-clusterendpointencryptiontype)" : String,
       "[ClusterName](#cfn-dax-cluster-clustername)" : String,
       "[Description](#cfn-dax-cluster-description)" : String,
       "[IAMRoleARN](#cfn-dax-cluster-iamrolearn)" : String,
@@ -36,6 +37,7 @@ Type: AWS::DAX::Cluster
 Properties: 
   [AvailabilityZones](#cfn-dax-cluster-availabilityzones): 
     - String
+  [ClusterEndpointEncryptionType](#cfn-dax-cluster-clusterendpointencryptiontype): String
   [ClusterName](#cfn-dax-cluster-clustername): String
   [Description](#cfn-dax-cluster-description): String
   [IAMRoleARN](#cfn-dax-cluster-iamrolearn): String
@@ -59,6 +61,12 @@ The Availability Zones \(AZs\) in which the cluster nodes will reside after the 
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ClusterEndpointEncryptionType`  <a name="cfn-dax-cluster-clusterendpointencryptiontype"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClusterName`  <a name="cfn-dax-cluster-clustername"></a>
 The name of the DAX cluster\.  
@@ -183,6 +191,9 @@ Returns a value similar to the following:
 ```
 mydaxcluster.0h3d6x.clustercfg.dax.use1.cache.amazonaws.com:8111
 ```
+
+`ClusterDiscoveryEndpointURL`  <a name="ClusterDiscoveryEndpointURL-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-dax-cluster--examples"></a>
 

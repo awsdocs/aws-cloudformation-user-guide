@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-codecontent-properties"></a>
 
 `S3ContentLocation`  <a name="cfn-kinesisanalyticsv2-application-codecontent-s3contentlocation"></a>
-Information about the Amazon S3 bucket containing the application code\.  
+Information about the Amazon S3 bucket that contains the application code\.  
 *Required*: No  
 *Type*: [S3ContentLocation](aws-properties-kinesisanalyticsv2-application-s3contentlocation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

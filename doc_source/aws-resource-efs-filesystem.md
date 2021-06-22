@@ -1,6 +1,6 @@
 # AWS::EFS::FileSystem<a name="aws-resource-efs-filesystem"></a>
 
-The `AWS::EFS::FileSystem` resource creates a new, empty file system in Amazon Elastic File System \(Amazon EFS\)\. You must create a mount target \([AWS::EFS::MountTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html)\) to mount your EFS file system on an Amazon Elastic Compute Cloud \(Amazon EC2\) instance or another compute resource\. 
+The `AWS::EFS::FileSystem` resource creates a new, empty file system in Amazon Elastic File System \(Amazon EFS\)\. You must create a mount target \([AWS::EFS::MountTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html)\) to mount your EFS file system on an Amazon EC2 or other AWS cloud compute resource\. 
 
 ## Syntax<a name="aws-resource-efs-filesystem-syntax"></a>
 
@@ -73,13 +73,13 @@ Not currently supported by AWS CloudFormation\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Encrypted`  <a name="cfn-efs-filesystem-encrypted"></a>
-A Boolean value that, if true, creates an encrypted file system\. When creating an encrypted file system, you have the option of specifying a KmsKeyId for an existing AWS Key Management Service \(AWS KMS\) customer master key \(CMK\)\. If you don't specify a CMK, then the default CMK for Amazon EFS, `/aws/elasticfilesystem`, is used to protect the encrypted file system\.   
+A Boolean value that, if true, creates an encrypted file system\. When creating an encrypted file system, you have the option of specifying a KmsKeyId for an existing AWS KMS key\. If you don't specify a KMS key, then the default KMS key for Amazon EFS, `/aws/elasticfilesystem`, is used to protect the encrypted file system\.   
 *Required*: Conditional  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FileSystemPolicy`  <a name="cfn-efs-filesystem-filesystempolicy"></a>
-The `FileSystemPolicy` for the EFS file system\. A file system policy is an IAM resource policy used to control NFS access to an EFS file system\. For more information, see [Using IAM to Control NFS Access to Amazon EFS](https://docs.aws.amazon.com/efs/latest/ug/iam-access-control-nfs-efs.html) in the *Amazon EFS User Guide*\.  
+The `FileSystemPolicy` for the EFS file system\. A file system policy is an IAM resource policy used to control NFS access to an EFS file system\. For more information, see [Using IAM to control NFS access to Amazon EFS](https://docs.aws.amazon.com/efs/latest/ug/iam-access-control-nfs-efs.html) in the *Amazon EFS User Guide*\.  
 *Required*: No  
 *Type*: Json  
 *Minimum*: `1`  
@@ -88,13 +88,13 @@ The `FileSystemPolicy` for the EFS file system\. A file system policy is an IAM 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FileSystemTags`  <a name="cfn-efs-filesystem-filesystemtags"></a>
-A value that specifies to create one or more tags associated with the file system\. Each tag is a user\-defined key\-value pair\. Name your file system on creation by including a `"Key":"Name","Value":"{value}"` key\-value pair\.  
+Use to create one or more tags associated with the file system\. Each tag is a user\-defined key\-value pair\. Name your file system on creation by including a `"Key":"Name","Value":"{value}"` key\-value pair\. Each key must be unique\. For more information, see [Tagging AWS resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the * AWS General Reference Guide*\.  
 *Required*: No  
 *Type*: List of [ElasticFileSystemTag](aws-properties-efs-filesystem-elasticfilesystemtag.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-efs-filesystem-kmskeyid"></a>
-The ID of the AWS KMS customer master key \(CMK\) to be used to protect the encrypted file system\. This parameter is only required if you want to use a nondefault CMK\. If this parameter is not specified, the default CMK for Amazon EFS is used\. This ID can be in one of the following formats:  
+The ID of the AWS KMS key to be used to protect the encrypted file system\. This parameter is only required if you want to use a nondefault KMS key\. If this parameter is not specified, the default KMS key for Amazon EFS is used\. This ID can be in one of the following formats:  
 + Key ID \- A unique identifier of the key, for example `1234abcd-12ab-34cd-56ef-1234567890ab`\.
 + ARN \- An Amazon Resource Name \(ARN\) for the key, for example `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`\.
 + Key alias \- A previously created display name for a key, for example `alias/projectKey1`\.
@@ -107,7 +107,7 @@ If `KmsKeyId` is specified, the `Encrypted` parameter must be set to true\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LifecyclePolicies`  <a name="cfn-efs-filesystem-lifecyclepolicies"></a>
-A list of policies used by EFS lifecycle management to transition files to the Infrequent Access \(IA\) storage class\.  
+A list of one LifecyclePolicy that tells EFS lifecycle management when to transition files to the Infrequent Access \(IA\) storage classes\.  
 *Required*: No  
 *Type*: List of [LifecyclePolicy](aws-properties-efs-filesystem-lifecyclepolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -724,6 +724,6 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-efs-filesystem--seealso"></a>
-+  [Amazon EFS: How It Works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html) 
-+  [Creating an Amazon Elastic File System](https://docs.aws.amazon.com/efs/latest/ug/creating-using-fs.html) 
++  [Amazon EFS: How it works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html) 
++  [Creating an Amazon EFS file system](https://docs.aws.amazon.com/efs/latest/ug/creating-using-fs.html) 
 

@@ -1,6 +1,6 @@
 # AWS::IoTSiteWise::AccessPolicy IamUser<a name="aws-properties-iotsitewise-accesspolicy-iamuser"></a>
 
-Contains information about an AWS Identity and Access Management \(IAM\) user\.
+Contains information about an AWS Identity and Access Management user\.
 
 ## Syntax<a name="aws-properties-iotsitewise-accesspolicy-iamuser-syntax"></a>
 

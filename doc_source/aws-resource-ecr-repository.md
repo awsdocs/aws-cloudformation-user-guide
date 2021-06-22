@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECR::Repository",
   "Properties" : {
-      "[EncryptionConfiguration](#cfn-ecr-repository-encryptionconfiguration)" : Json,
-      "[ImageScanningConfiguration](#cfn-ecr-repository-imagescanningconfiguration)" : Json,
+      "[EncryptionConfiguration](#cfn-ecr-repository-encryptionconfiguration)" : EncryptionConfiguration,
+      "[ImageScanningConfiguration](#cfn-ecr-repository-imagescanningconfiguration)" : ImageScanningConfiguration,
       "[ImageTagMutability](#cfn-ecr-repository-imagetagmutability)" : String,
       "[LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy)" : LifecyclePolicy,
       "[RepositoryName](#cfn-ecr-repository-repositoryname)" : String,
@@ -28,8 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ECR::Repository
 Properties: 
-  [EncryptionConfiguration](#cfn-ecr-repository-encryptionconfiguration): Json
-  [ImageScanningConfiguration](#cfn-ecr-repository-imagescanningconfiguration): Json
+  [EncryptionConfiguration](#cfn-ecr-repository-encryptionconfiguration): 
+    EncryptionConfiguration
+  [ImageScanningConfiguration](#cfn-ecr-repository-imagescanningconfiguration): 
+    ImageScanningConfiguration
   [ImageTagMutability](#cfn-ecr-repository-imagetagmutability): String
   [LifecyclePolicy](#cfn-ecr-repository-lifecyclepolicy): 
     LifecyclePolicy
@@ -44,13 +46,13 @@ Properties:
 `EncryptionConfiguration`  <a name="cfn-ecr-repository-encryptionconfiguration"></a>
 The encryption configuration for the repository\. This determines how the contents of your repository are encrypted at rest\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [EncryptionConfiguration](aws-properties-ecr-repository-encryptionconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ImageScanningConfiguration`  <a name="cfn-ecr-repository-imagescanningconfiguration"></a>
 The image scanning configuration for the repository\. This determines whether images are scanned for known vulnerabilities after being pushed to the repository\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [ImageScanningConfiguration](aws-properties-ecr-repository-imagescanningconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageTagMutability`  <a name="cfn-ecr-repository-imagetagmutability"></a>
@@ -77,7 +79,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RepositoryPolicyText`  <a name="cfn-ecr-repository-repositorypolicytext"></a>
-The JSON repository policy text to apply to the repository\. For more information, see [Amazon ECR Repository Policies](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html) in the *Amazon Elastic Container Registry User Guide*\.  
+The JSON repository policy text to apply to the repository\. For more information, see [Amazon ECR repository policies](https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html) in the *Amazon Elastic Container Registry User Guide*\.  
 *Required*: No  
 *Type*: Json  
 *Minimum*: `0`  
@@ -110,7 +112,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 Returns the Amazon Resource Name \(ARN\) for the specified `AWS::ECR::Repository` resource\. For example, `arn:aws:ecr:eu-west-1:123456789012:repository/test-repository `\.
 
 `RepositoryUri`  <a name="RepositoryUri-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Returns the URI for the specified `AWS::ECR::Repository` resource\. For example, `123456789012.dkr.ecr.us-west-2.amazonaws.com/repository`\.
 
 ## Examples<a name="aws-resource-ecr-repository--examples"></a>
 

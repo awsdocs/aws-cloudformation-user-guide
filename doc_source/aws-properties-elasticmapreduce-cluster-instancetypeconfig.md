@@ -59,7 +59,7 @@ A configuration classification that applies when provisioning cluster instances,
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EbsConfiguration`  <a name="cfn-elasticmapreduce-cluster-instancetypeconfig-ebsconfiguration"></a>
-The configuration of Amazon Elastic Block Storage \(Amazon EBS\) attached to each instance as defined by `InstanceType`\.   
+The configuration of Amazon Elastic Block Store \(Amazon EBS\) attached to each instance as defined by `InstanceType`\.   
 *Required*: No  
 *Type*: [EbsConfiguration](aws-properties-elasticmapreduce-cluster-ebsconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

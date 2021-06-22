@@ -5,12 +5,12 @@ You can use two AWS CLI commands to get information about your AWS CloudFormatio
 **Note**  
 See [AWS CloudFormation resources](using-iam-template.md#resource-level-permissions) for a discussion of how IAM policies may limit what a user can do with these two AWS CLI commands\.
 
-## aws cloudformation list\-stacks<a name="using-cfn-describing-stacks-list-stacks"></a>
+## `aws cloudformation list-stacks`<a name="using-cfn-describing-stacks-list-stacks"></a>
 
 The `aws cloudformation list-stacks` command enables you to get a list of any of the stacks you have created \(even those which have been deleted up to 90 days\)\. You can use an option to filter results by stack status, such as `CREATE_COMPLETE` and `DELETE_COMPLETE`\. The `aws cloudformation list-stacks` command returns summary information about any of your running or deleted stacks, including the name, stack identifier, template, and status\.
 
 **Note**  
-The aws cloudformation list\-stacks command returns information on deleted stacks for 90 days after they have been deleted\.
+The `aws cloudformation list-stacks` command returns information on deleted stacks for 90 days after they have been deleted\.
 
 The following example shows a summary of all stacks that have a status of `CREATE_COMPLETE`:
 
@@ -30,7 +30,7 @@ S3 bucket. You will be billed for the AWS resources used if you create a stack f
 ]
 ```
 
-## aws cloudformation describe\-stacks<a name="using-cfn-describing-stacks-describe-stacks"></a>
+## `aws cloudformation describe-stacks`<a name="using-cfn-describing-stacks-describe-stacks"></a>
 
 The `aws cloudformation describe-stacks` command provides information on your running stacks\. You can use an option to filter results on a stack name\. This command returns information about the stack, including the name, stack identifier, and status\.
 
@@ -65,11 +65,11 @@ You will be billed for the AWS resources used if you create a stack from this te
 
 If you don't use the `--stack-name` option to limit the output to one stack, information on all your running stacks is returned\.
 
-## Stack status codes<a name="w9005ab1c23c15c17c11"></a>
+## Stack status codes<a name="w9219ab1c23c15c17c11"></a>
 
 You can specify one or more stack status codes to list only stacks with the specified status codes\. The following table describes each stack status code:
 
-### <a name="w9005ab1c23c15c17c11b4"></a>
+### <a name="w9219ab1c23c15c17c11b4"></a>
 
 
 | Stack Status | Description | 

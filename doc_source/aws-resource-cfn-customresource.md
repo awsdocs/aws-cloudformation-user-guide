@@ -34,7 +34,7 @@ Properties:
 
 `ServiceToken`  <a name="cfn-customresource-servicetoken"></a>
 Only one property is defined by AWS for a custom resource: `ServiceToken`\. All other properties are defined by the service provider\.
-The service token that was given to the template developer by the service provider to access the service, such as an Amazon SNS topic ARN or Lambda function ARN\. The service token must be from the same region in which you are creating the stack\.  
+The service token that was given to the template developer by the service provider to access the service, such as an Amazon SNS topic ARN or Lambda function ARN\. The service token must be from the same Region in which you are creating the stack\.  
 Updates are not supported\.  
 *Required*: Yes  
 *Type*: String  
@@ -140,11 +140,11 @@ Outputs:
       - responseKey2
 ```
 
-### Using an AWS Lambda function in a custom resource<a name="aws-resource-cfn-customresource--examples--Using_an_AWS_Lambda_function_in_a_custom_resource"></a>
+### Using a Lambda function in a custom resource<a name="aws-resource-cfn-customresource--examples--Using_a_Lambda_function_in_a_custom_resource"></a>
 
-With Lambda functions and custom resources, you can run custom code in response to stack events \(create, update, and delete\)\. The following custom resource invokes a Lambda function and sends it the StackName property as input\. The function uses this property to get outputs from the appropriate stack\.
+With AWS Lambda functions and custom resources, you can run custom code in response to stack events \(create, update, and delete\)\. The following custom resource invokes a Lambda function and sends it the StackName property as input\. The function uses this property to get outputs from the appropriate stack\.
 
-#### JSON<a name="aws-resource-cfn-customresource--examples--Using_an_AWS_Lambda_function_in_a_custom_resource--json"></a>
+#### JSON<a name="aws-resource-cfn-customresource--examples--Using_a_Lambda_function_in_a_custom_resource--json"></a>
 
 ```
 {
@@ -178,7 +178,7 @@ With Lambda functions and custom resources, you can run custom code in response 
 }
 ```
 
-#### YAML<a name="aws-resource-cfn-customresource--examples--Using_an_AWS_Lambda_function_in_a_custom_resource--yaml"></a>
+#### YAML<a name="aws-resource-cfn-customresource--examples--Using_a_Lambda_function_in_a_custom_resource--yaml"></a>
 
 ```
 MyCustomResource:

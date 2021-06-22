@@ -1,6 +1,6 @@
 # AWS::AuditManager::Assessment<a name="aws-resource-auditmanager-assessment"></a>
 
- The `AWS::AuditManager::Assessment` resource is an AWS Audit Manager resource type that defines the scope of audit evidence collected by AWS Audit Manager\. An AWS Audit Manager assessment is an implementation of an AWS Audit Manager framework\. 
+ The `AWS::AuditManager::Assessment` resource is an AWS Audit Manager resource type that defines the scope of audit evidence collected by Audit Manager\. An Audit Manager assessment is an implementation of an Audit Manager framework\. 
 
 ## Syntax<a name="aws-resource-auditmanager-assessment-syntax"></a>
 
@@ -140,9 +140,6 @@ The time when the assessment was created\. For example, `1607582033.373`\.
 
 `Delegations`  <a name="Delegations-fn::getatt"></a>
 The delegations associated with the assessment\. 
-
-`FrameworkId`  <a name="FrameworkId-fn::getatt"></a>
-The unique identifier for the framework\. For example, `1aaa1111-22b2-33c3-3333-d44dd4d444dd`\.
 
 ## See also<a name="aws-resource-auditmanager-assessment--seealso"></a>
 + [CreateAssessment](https://docs.aws.amazon.com/audit-manager/latest/APIReference/API_CreateAssessment.html) in the *AWS Audit Manager API Reference*\.

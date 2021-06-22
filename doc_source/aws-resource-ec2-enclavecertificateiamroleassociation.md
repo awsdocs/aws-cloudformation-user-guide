@@ -1,10 +1,10 @@
 # AWS::EC2::EnclaveCertificateIamRoleAssociation<a name="aws-resource-ec2-enclavecertificateiamroleassociation"></a>
 
-Associates an AWS Identity and Access Management \(IAM\) role with an AWS Certificate Manager \(ACM\) certificate\. This enables the certificate to be used by the ACM for Nitro Enclaves application inside an enclave\. For more information, see [AWS Certificate Manager for Nitro Enclaves](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave-refapp.html) in the *AWS Nitro Enclaves User Guide*\.
+Associates an AWS Identity and Access Management \(IAM\) role with an AWS Certificate Manager \(ACM\) certificate\. This enables the certificate to be used by the ACM for Nitro Enclaves application inside an enclave\. For more information, see [ AWS Certificate Manager for Nitro Enclaves](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave-refapp.html) in the * AWS Nitro Enclaves User Guide*\.
 
-When the IAM role is associated with the ACM certificate, the certificate, certificate chain, and encrypted private key are placed in an Amazon S3 bucket that only the associated IAM role can access\. The private key of the certificate is encrypted with an AWS\-managed KMS customer master \(CMK\) that has an attached attestation\-based CMK policy\.
+When the IAM role is associated with the ACM certificate, the certificate, certificate chain, and encrypted private key are placed in an Amazon S3 bucket that only the associated IAM role can access\. The private key of the certificate is encrypted with an AWS managed key that has an attached attestation\-based key policy\.
 
-To enable the IAM role to access the Amazon S3 object, you must grant it permission to call `s3:GetObject` on the Amazon S3 bucket returned by the command\. To enable the IAM role to access the AWS KMS CMK, you must grant it permission to call `kms:Decrypt` on the AWS KMS CMK returned by the command\. For more information, see [ Grant the role permission to access the certificate and encryption key](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave-refapp.html#add-policy) in the *AWS Nitro Enclaves User Guide*\.
+To enable the IAM role to access the Amazon S3 object, you must grant it permission to call `s3:GetObject` on the Amazon S3 bucket returned by the command\. To enable the IAM role to access the KMS key, you must grant it permission to call `kms:Decrypt` on the KMS key returned by the command\. For more information, see [ Grant the role permission to access the certificate and encryption key](https://docs.aws.amazon.com/enclaves/latest/user/nitro-enclave-refapp.html#add-policy) in the * AWS Nitro Enclaves User Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-enclavecertificateiamroleassociation-syntax"></a>
 
@@ -70,7 +70,7 @@ The name of the Amazon S3 bucket to which the certificate was uploaded\.
 The Amazon S3 object key where the certificate, certificate chain, and encrypted private key bundle are stored\. The object key is formatted as follows: `role_arn`/`certificate_arn`\.
 
 `EncryptionKmsKeyId`  <a name="EncryptionKmsKeyId-fn::getatt"></a>
-The ID of the AWS KMS CMK used to encrypt the private key of the certificate\.
+The ID of the AWS KMS key used to encrypt the private key of the certificate\.
 
 ## Examples<a name="aws-resource-ec2-enclavecertificateiamroleassociation--examples"></a>
 

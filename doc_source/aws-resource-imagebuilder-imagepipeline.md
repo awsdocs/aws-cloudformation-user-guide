@@ -102,7 +102,7 @@ The name of the image pipeline\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Schedule`  <a name="cfn-imagebuilder-imagepipeline-schedule"></a>
-The schedule of the image pipeline\. A schedule configures how often and when a pipeline will automatically create a new image\.  
+The schedule of the image pipeline\. A schedule configures how often and when a pipeline automatically creates a new image\.  
 *Required*: No  
 *Type*: [Schedule](aws-properties-imagebuilder-imagepipeline-schedule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

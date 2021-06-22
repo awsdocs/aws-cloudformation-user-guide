@@ -18,7 +18,7 @@ You must use expressions for all parameters in `DynamoDBv2Action`\. The expressi
 
    `'GreenhouseTemperatureTable ' + $input.GreenhouseInput.date` 
 
-For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the *AWS IoT Events Developer Guide*\.
+For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the * AWS IoT Events Developer Guide*\.
 
 The value for the `type` parameter in `Payload` must be `JSON`\.
 

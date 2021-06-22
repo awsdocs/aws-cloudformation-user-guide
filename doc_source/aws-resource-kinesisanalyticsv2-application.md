@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration)" : ApplicationConfiguration,
       "[ApplicationDescription](#cfn-kinesisanalyticsv2-application-applicationdescription)" : String,
+      "[ApplicationMode](#cfn-kinesisanalyticsv2-application-applicationmode)" : String,
       "[ApplicationName](#cfn-kinesisanalyticsv2-application-applicationname)" : String,
       "[RuntimeEnvironment](#cfn-kinesisanalyticsv2-application-runtimeenvironment)" : String,
       "[ServiceExecutionRole](#cfn-kinesisanalyticsv2-application-serviceexecutionrole)" : String,
@@ -30,6 +31,7 @@ Properties:
   [ApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration): 
     ApplicationConfiguration
   [ApplicationDescription](#cfn-kinesisanalyticsv2-application-applicationdescription): String
+  [ApplicationMode](#cfn-kinesisanalyticsv2-application-applicationmode): String
   [ApplicationName](#cfn-kinesisanalyticsv2-application-applicationname): String
   [RuntimeEnvironment](#cfn-kinesisanalyticsv2-application-runtimeenvironment): String
   [ServiceExecutionRole](#cfn-kinesisanalyticsv2-application-serviceexecutionrole): String
@@ -53,6 +55,13 @@ The description of the application\.
 *Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ApplicationMode`  <a name="cfn-kinesisanalyticsv2-application-applicationmode"></a>
+To create a Kinesis Data Analytics Studio notebook, you must set the mode to `INTERACTIVE`\. However, for a Kinesis Data Analytics for Apache Flink application, the mode is optional\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `INTERACTIVE | STREAMING`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `ApplicationName`  <a name="cfn-kinesisanalyticsv2-application-applicationname"></a>
 The name of the application\.  
 *Required*: No  
@@ -66,7 +75,7 @@ The name of the application\.
 The runtime environment for the application \(`SQL-1_0`, `FLINK-1_6`, `FLINK-1_8`, or `FLINK-1_11`\)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `FLINK-1_11 | FLINK-1_6 | FLINK-1_8 | SQL-1_0`  
+*Allowed values*: `FLINK-1_11 | FLINK-1_6 | FLINK-1_8 | SQL-1_0 | ZEPPELIN-FLINK-1_0`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceExecutionRole`  <a name="cfn-kinesisanalyticsv2-application-serviceexecutionrole"></a>
@@ -93,340 +102,85 @@ A list of one or more tags to assign to the application\. A tag is a key\-value 
 #### JSON<a name="aws-resource-kinesisanalyticsv2-application--examples--Create_an_application--json"></a>
 
 ```
-{
-    "Description": "Sample KinesisAnalytics via CloudFormation",
-    "Resources": {
-        "BasicApplication": {
-            "Type": "AWS::KinesisAnalyticsV2::Application",
-            "Properties": {
-                "ApplicationName": "sampleApplication",
-                "ApplicationDescription": "SampleApp",
-                "RuntimeEnvironment": "SQL-1_0",
-                "ServiceExecutionRole": {
-                    "Fn::GetAtt": [
-                        "ServiceExecutionRole",
-                        "Arn"
-                    ]
-                },
-                "ApplicationConfiguration": {
-                    "SqlApplicationConfiguration": {
-                        "Inputs": [
-                            {
-                                "NamePrefix": "exampleNamePrefix",
-                                "InputSchema": {
-                                    "RecordColumns": [
-                                        {
-                                            "Name": "example",
-                                            "SqlType": "VARCHAR(16)",
-                                            "Mapping": "$.example"
-                                        }
-                                    ],
-                                    "RecordFormat": {
-                                        "RecordFormatType": "JSON",
-                                        "MappingParameters": {
-                                            "JSONMappingParameters": {
-                                                "RecordRowPath": "$"
-                                            }
-                                        }
-                                    }
-                                },
-                                "KinesisStreamsInput": {
-                                    "ResourceARN": {
-                                        "Fn::GetAtt": [
-                                            "InputKinesisStream",
-                                            "Arn"
-                                        ]
-                                    }
-                                }
-                            }
-                        ]
-                    },
-                    "ApplicationCodeConfiguration": {
-                        "CodeContent": {
-                            "TextContent": "Example Application Code"
-                        },
-                        "CodeContentType": "PLAINTEXT"
-                    }
-                }
-            }
-        },
-        "ServiceExecutionRole": {
-            "Type": "AWS::IAM::Role",
-            "Properties": {
-                "AssumeRolePolicyDocument": {
-                    "Version": "2012-10-17",
-                    "Statement": [
-                        {
-                            "Effect": "Allow",
-                            "Principal": {
-                                "Service": "kinesisanalytics.amazonaws.com"
-                            },
-                            "Action": "sts:AssumeRole"
-                        }
-                    ]
-                },
-                "Path": "/",
-                "Policies": [
-                    {
-                        "PolicyName": "Open",
-                        "PolicyDocument": {
-                            "Version": "2012-10-17",
-                            "Statement": [
-                                {
-                                    "Effect": "Allow",
-                                    "Action": "*",
-                                    "Resource": "*"
-                                }
-                            ]
-                        }
-                    } 
-                ]
-            }
-        },
-        "InputKinesisStream": {
-            "Type": "AWS::Kinesis::Stream",
-            "Properties": {
-                "ShardCount": 1
-            }
-        },
-        "KinesisAnalyticsRole": {
-            "Type": "AWS::IAM::Role",
-            "Properties": {
-                "AssumeRolePolicyDocument": {
-                    "Version": "2012-10-17",
-                    "Statement": [
-                        {
-                            "Effect": "Allow",
-                            "Principal": {
-                                "Service": "kinesisanalytics.amazonaws.com"
-                            },
-                            "Action": "sts:AssumeRole"
-                        }
-                    ]
-                },
-                "Path": "/",
-                "Policies": [
-                    {
-                        "PolicyName": "Open",
-                        "PolicyDocument": {
-                            "Version": "2012-10-17",
-                            "Statement": [
-                                {
-                                    "Effect": "Allow",
-                                    "Action": "*",
-                                    "Resource": "*"
-                                }
-                            ]
-                        }
-                    }
-                ]
-            }
-        },
-        "BasicApplicationOutputs": {
-            "Type": "AWS::KinesisAnalyticsV2::ApplicationOutput",
-            "DependsOn": "BasicApplication",
-            "Properties": {
-                "ApplicationName": {
-                    "Ref": "BasicApplication"
-                },
-                "Output": {
-                    "Name": "exampleOutput",
-                    "DestinationSchema": {
-                        "RecordFormatType": "CSV"
-                    },
-                    "KinesisStreamsOutput": {
-                        "ResourceARN": {
-                            "Fn::GetAtt": [
-                                "OutputKinesisStream",
-                                "Arn"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
-        "OutputKinesisStream": {
-            "Type": "AWS::Kinesis::Stream",
-            "Properties": {
-                "ShardCount": 1
-            }
-        },
-        "BasicApplicationReferenceDataSource": {
-            "Type": "AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource",
-            "DependsOn": "BasicApplicationOutputs",
-            "Properties": {
-                "ApplicationName": {
-                    "Ref": "BasicApplication"
-                },
-                "ReferenceDataSource": {
-                    "TableName": "exampleTable",
-                    "ReferenceSchema": {
-                        "RecordColumns": [
-                            {
-                                "Name": "example",
-                                "SqlType": "VARCHAR(16)",
-                                "Mapping": "$.example"
-                            }
-                        ],
-                        "RecordFormat": {
-                            "RecordFormatType": "JSON",
-                            "MappingParameters": {
-                                "JSONMappingParameters": {
-                                    "RecordRowPath": "$"
-                                }
-                            }
-                        }
-                    },
-                    "S3ReferenceDataSource": {
-                        "BucketARN": {
-                            "Fn::GetAtt": [
-                                "S3Bucket",
-                                "Arn"
-                            ]
-                        },
-                        "FileKey": "fakeKey"
-                    }
-                }
-            }
-        },
-        "S3Bucket": {
-            "Type": "AWS::S3::Bucket"
-        }
-    },
-    "Outputs": {
-        "ApplicationPhysicalResourceId": {
-            "Value": {
-                "Ref": "BasicApplication"
-            }
-        }
-    }
-}
+{ "Description": "Sample KinesisAnalytics via CloudFormation",
+                "Resources": { "BasicApplication": { "Type": "AWS::KinesisAnalyticsV2::Application",
+                "Properties": { "ApplicationName": "sampleApplication", "ApplicationDescription":
+                "SampleApp", "RuntimeEnvironment": "SQL-1_0", "ServiceExecutionRole": {
+                "Fn::GetAtt": [ "ServiceExecutionRole", "Arn" ] }, "ApplicationConfiguration": {
+                "SqlApplicationConfiguration": { "Inputs": [ { "NamePrefix": "exampleNamePrefix",
+                "InputSchema": { "RecordColumns": [ { "Name": "example", "SqlType": "VARCHAR(16)",
+                "Mapping": "$.example" } ], "RecordFormat": { "RecordFormatType": "JSON",
+                "MappingParameters": { "JSONMappingParameters": { "RecordRowPath": "$" } } } },
+                "KinesisStreamsInput": { "ResourceARN": { "Fn::GetAtt": [ "InputKinesisStream",
+                "Arn" ] } } } ] }, "ApplicationCodeConfiguration": { "CodeContent": { "TextContent":
+                "Example Application Code" }, "CodeContentType": "PLAINTEXT" } } } },
+                "ServiceExecutionRole": { "Type": "AWS::IAM::Role", "Properties": {
+                "AssumeRolePolicyDocument": { "Version": "2012-10-17", "Statement": [ { "Effect":
+                "Allow", "Principal": { "Service": "kinesisanalytics.amazonaws.com" }, "Action":
+                "sts:AssumeRole" } ] }, "Path": "/", "Policies": [ { "PolicyName": "Open",
+                "PolicyDocument": { "Version": "2012-10-17", "Statement": [ { "Effect": "Allow",
+                "Action": "*", "Resource": "*" } ] } } ] } }, "InputKinesisStream": { "Type":
+                "AWS::Kinesis::Stream", "Properties": { "ShardCount": 1 } }, "KinesisAnalyticsRole":
+                { "Type": "AWS::IAM::Role", "Properties": { "AssumeRolePolicyDocument": { "Version":
+                "2012-10-17", "Statement": [ { "Effect": "Allow", "Principal": { "Service":
+                "kinesisanalytics.amazonaws.com" }, "Action": "sts:AssumeRole" } ] }, "Path": "/",
+                "Policies": [ { "PolicyName": "Open", "PolicyDocument": { "Version": "2012-10-17",
+                "Statement": [ { "Effect": "Allow", "Action": "*", "Resource": "*" } ] } } ] } },
+                "BasicApplicationOutputs": { "Type": "AWS::KinesisAnalyticsV2::ApplicationOutput",
+                "DependsOn": "BasicApplication", "Properties": { "ApplicationName": { "Ref":
+                "BasicApplication" }, "Output": { "Name": "exampleOutput", "DestinationSchema": {
+                "RecordFormatType": "CSV" }, "KinesisStreamsOutput": { "ResourceARN": {
+                "Fn::GetAtt": [ "OutputKinesisStream", "Arn" ] } } } } }, "OutputKinesisStream": {
+                "Type": "AWS::Kinesis::Stream", "Properties": { "ShardCount": 1 } },
+                "BasicApplicationReferenceDataSource": { "Type":
+                "AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource", "DependsOn":
+                "BasicApplicationOutputs", "Properties": { "ApplicationName": { "Ref":
+                "BasicApplication" }, "ReferenceDataSource": { "TableName": "exampleTable",
+                "ReferenceSchema": { "RecordColumns": [ { "Name": "example", "SqlType":
+                "VARCHAR(16)", "Mapping": "$.example" } ], "RecordFormat": { "RecordFormatType":
+                "JSON", "MappingParameters": { "JSONMappingParameters": { "RecordRowPath": "$" } } }
+                }, "S3ReferenceDataSource": { "BucketARN": { "Fn::GetAtt": [ "S3Bucket", "Arn" ] },
+                "FileKey": "fakeKey" } } } }, "S3Bucket": { "Type": "AWS::S3::Bucket" } },
+                "Outputs": { "ApplicationPhysicalResourceId": { "Value": { "Ref": "BasicApplication"
+                } } } }
 ```
 
 #### YAML<a name="aws-resource-kinesisanalyticsv2-application--examples--Create_an_application--yaml"></a>
 
 ```
 Description: Sample KinesisAnalytics via CloudFormation
-
-Description: Sample KinesisAnalytics via CloudFormation
-Resources:
-  BasicApplication:
-    Type: 'AWS::KinesisAnalyticsV2::Application'
-    Properties:
-      ApplicationName: sampleApplication
-      ApplicationDescription: SampleApp
-      RuntimeEnvironment: SQL-1_0
-      ServiceExecutionRole: !GetAtt 
-        - ServiceExecutionRole
-        - Arn
-      ApplicationConfiguration:
-        SqlApplicationConfiguration:
-          Inputs:
-            - NamePrefix: exampleNamePrefix
-              InputSchema:
-                RecordColumns:
-                  - Name: example
-                    SqlType: VARCHAR(16)
-                    Mapping: $.example
-                RecordFormat:
-                  RecordFormatType: JSON
-                  MappingParameters:
-                    JSONMappingParameters:
-                      RecordRowPath: $
-              KinesisStreamsInput:
-                ResourceARN: !GetAtt 
-                  - InputKinesisStream
-                  - Arn
-        ApplicationCodeConfiguration:
-          CodeContent:
-            TextContent: Example Application Code
-          CodeContentType: PLAINTEXT
-  ServiceExecutionRole:
-    Type: 'AWS::IAM::Role'
-    Properties:
-      AssumeRolePolicyDocument:
-        Version: 2012-10-17
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service: kinesisanalytics.amazonaws.com
-            Action: 'sts:AssumeRole'
-      Path: /
-      Policies:
-        - PolicyName: Open
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
-              - Effect: Allow
-                Action: '*'
-                Resource: '*'
-  InputKinesisStream:
-    Type: 'AWS::Kinesis::Stream'
-    Properties:
-      ShardCount: 1
-  KinesisAnalyticsRole:
-    Type: 'AWS::IAM::Role'
-    Properties:
-      AssumeRolePolicyDocument:
-        Version: 2012-10-17
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service: kinesisanalytics.amazonaws.com
-            Action: 'sts:AssumeRole'
-      Path: /
-      Policies:
-        - PolicyName: Open
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
-              - Effect: Allow
-                Action: '*'
-                Resource: '*'
-  BasicApplicationOutputs:
-    Type: 'AWS::KinesisAnalyticsV2::ApplicationOutput'
-    DependsOn: BasicApplication
-    Properties:
-      ApplicationName: !Ref BasicApplication
-      Output:
-        Name: exampleOutput
-        DestinationSchema:
-          RecordFormatType: CSV
-        KinesisStreamsOutput:
-          ResourceARN: !GetAtt 
-            - OutputKinesisStream
-            - Arn
-  OutputKinesisStream:
-    Type: 'AWS::Kinesis::Stream'
-    Properties:
-      ShardCount: 1
-  BasicApplicationReferenceDataSource:
-    Type: 'AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource'
-    DependsOn: BasicApplicationOutputs
-    Properties:
-      ApplicationName: !Ref BasicApplication
-      ReferenceDataSource:
-        TableName: exampleTable
-        ReferenceSchema:
-          RecordColumns:
-            - Name: example
-              SqlType: VARCHAR(16)
-              Mapping: $.example
-          RecordFormat:
-            RecordFormatType: JSON
-            MappingParameters:
-              JSONMappingParameters:
-                RecordRowPath: $
-        S3ReferenceDataSource:
-          BucketARN: !GetAtt 
-            - S3Bucket
-            - Arn
-          FileKey: fakeKey
-  S3Bucket:
-    Type: 'AWS::S3::Bucket'
-Outputs:
-  ApplicationPhysicalResourceId:
-    Value: !Ref BasicApplication
+                Description: Sample KinesisAnalytics via CloudFormation Resources: BasicApplication:
+                Type: 'AWS::KinesisAnalyticsV2::Application' Properties: ApplicationName:
+                sampleApplication ApplicationDescription: SampleApp RuntimeEnvironment: SQL-1_0
+                ServiceExecutionRole: !GetAtt - ServiceExecutionRole - Arn ApplicationConfiguration:
+                SqlApplicationConfiguration: Inputs: - NamePrefix: exampleNamePrefix InputSchema:
+                RecordColumns: - Name: example SqlType: VARCHAR(16) Mapping: $.example RecordFormat:
+                RecordFormatType: JSON MappingParameters: JSONMappingParameters: RecordRowPath: $
+                KinesisStreamsInput: ResourceARN: !GetAtt - InputKinesisStream - Arn
+                ApplicationCodeConfiguration: CodeContent: TextContent: Example Application Code
+                CodeContentType: PLAINTEXT ServiceExecutionRole: Type: 'AWS::IAM::Role' Properties:
+                AssumeRolePolicyDocument: Version: 2012-10-17 Statement: - Effect: Allow Principal:
+                Service: kinesisanalytics.amazonaws.com Action: 'sts:AssumeRole' Path: / Policies: -
+                PolicyName: Open PolicyDocument: Version: 2012-10-17 Statement: - Effect: Allow
+                Action: '*' Resource: '*' InputKinesisStream: Type: 'AWS::Kinesis::Stream'
+                Properties: ShardCount: 1 KinesisAnalyticsRole: Type: 'AWS::IAM::Role' Properties:
+                AssumeRolePolicyDocument: Version: 2012-10-17 Statement: - Effect: Allow Principal:
+                Service: kinesisanalytics.amazonaws.com Action: 'sts:AssumeRole' Path: / Policies: -
+                PolicyName: Open PolicyDocument: Version: 2012-10-17 Statement: - Effect: Allow
+                Action: '*' Resource: '*' BasicApplicationOutputs: Type:
+                'AWS::KinesisAnalyticsV2::ApplicationOutput' DependsOn: BasicApplication Properties:
+                ApplicationName: !Ref BasicApplication Output: Name: exampleOutput
+                DestinationSchema: RecordFormatType: CSV KinesisStreamsOutput: ResourceARN: !GetAtt
+                - OutputKinesisStream - Arn OutputKinesisStream: Type: 'AWS::Kinesis::Stream'
+                Properties: ShardCount: 1 BasicApplicationReferenceDataSource: Type:
+                'AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource' DependsOn:
+                BasicApplicationOutputs Properties: ApplicationName: !Ref BasicApplication
+                ReferenceDataSource: TableName: exampleTable ReferenceSchema: RecordColumns: - Name:
+                example SqlType: VARCHAR(16) Mapping: $.example RecordFormat: RecordFormatType: JSON
+                MappingParameters: JSONMappingParameters: RecordRowPath: $ S3ReferenceDataSource:
+                BucketARN: !GetAtt - S3Bucket - Arn FileKey: fakeKey S3Bucket: Type:
+                'AWS::S3::Bucket' Outputs: ApplicationPhysicalResourceId: Value: !Ref
+                BasicApplication
 ```
 
 ## See also<a name="aws-resource-kinesisanalyticsv2-application--seealso"></a>

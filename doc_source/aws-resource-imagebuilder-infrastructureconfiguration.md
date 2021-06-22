@@ -78,7 +78,7 @@ The instance types of the infrastructure configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeyPair`  <a name="cfn-imagebuilder-infrastructureconfiguration-keypair"></a>
-The EC2 key pair of the infrastructure configuration\.  
+The Amazon EC2 key pair of the infrastructure configuration\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -86,7 +86,7 @@ The EC2 key pair of the infrastructure configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Logging`  <a name="cfn-imagebuilder-infrastructureconfiguration-logging"></a>
-The logging configuration of the infrastructure configuration\.  
+The logging configuration defines where Image Builder uploads your logs\.  
 *Required*: No  
 *Type*: [Logging](aws-properties-imagebuilder-infrastructureconfiguration-logging.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -158,7 +158,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 Returns the Amazon Resource Name \(ARN\) of the infrastructure configuration\. The following pattern is applied: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`\.
 
 `Name`  <a name="Name-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The name of the infrastructure configuration\.
 
 ## Examples<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples"></a>
 

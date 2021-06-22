@@ -60,14 +60,14 @@ The description of the service\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DnsConfig`  <a name="cfn-servicediscovery-service-dnsconfig"></a>
-A complex type that contains information about the Route 53 DNS records that you want AWS Cloud Map to create when you register an instance\.  
+A complex type that contains information about the Route 53 DNS records that you want AWS Cloud Map to create when you register an instance\.  
 *Required*: No  
 *Type*: [DnsConfig](aws-properties-servicediscovery-service-dnsconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckConfig`  <a name="cfn-servicediscovery-service-healthcheckconfig"></a>
  *Public DNS and HTTP namespaces only\.* A complex type that contains settings for an optional health check\. If you specify settings for a health check, AWS Cloud Map associates the health check with the records that you specify in `DnsConfig`\.  
-For information about the charges for health checks, see [Amazon Route 53 Pricing](http://aws.amazon.com/route53/pricing/)\.  
+For information about the charges for health checks, see [Amazon Route 53 Pricing](http://aws.amazon.com/route53/pricing/)\.  
 *Required*: No  
 *Type*: [HealthCheckConfig](aws-properties-servicediscovery-service-healthcheckconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -102,7 +102,7 @@ The tags for the service\. Each tag consists of a key and an optional value, bot
 *Update requires*: Updates are not supported\.
 
 `Type`  <a name="cfn-servicediscovery-service-type"></a>
-If present, specifies that the service instances are only discoverable using the `DiscoverInstances` API operation\. No DNS records will be registered for the service instances\. The only valid value is `HTTP`\.  
+If present, specifies that the service instances are only discoverable using the `DiscoverInstances` API operation\. No DNS records is registered for the service instances\. The only valid value is `HTTP`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `HTTP`  

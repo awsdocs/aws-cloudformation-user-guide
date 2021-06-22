@@ -92,7 +92,7 @@ Specifies the full POSIX identity, including user ID \(`Uid`\), group ID \(`Gid`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Role`  <a name="cfn-transfer-user-role"></a>
-Specifies the IAM role that controls your users' access to your Amazon S3 bucket or EFS file system\. The policies attached to this role will determine the level of access you want to provide your users when transferring files into and out of your Amazon S3 bucket or EFS file system\. The IAM role should also contain a trust relationship that allows the server to access your resources when servicing your users' transfer requests\.  
+Specifies the Amazon Resource Name \(ARN\) of the IAM role that controls your users' access to your Amazon S3 bucket or EFS file system\. The policies attached to this role determine the level of access that you want to provide your users when transferring files into and out of your Amazon S3 bucket or EFS file system\. The IAM role should also contain a trust relationship that allows the server to access your resources when servicing your users' transfer requests\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
@@ -202,7 +202,7 @@ The following example associates a user with a server\.
          "Fn::GetAtt": "Server.ServerId"
        },
        "SshPublicKeys": [
-         "ssh-rsa AAA"
+         "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAn5ZA7REHaFT40KsZzYnuS7vzdP8n46akEpXLpzrOkbRPEqoOXlDk8f+2SrnANUGfjVVnTqhdrI7S90B4lyBIdWdinhVUK+W0we8j6nCMhtnjigXs6dtxvESUEzrWLWlQpPNJXDSnZEEWoQ/q7W4xXynD6GM3pko36ipA5Xv6hQWC7faYOb2FWLzN1NsngaowO1R6FRau+/oIu"
        ],
        "Tags": [
          {
@@ -244,7 +244,7 @@ User:
   ServerId:
     Fn::GetAtt: Server.ServerId
   SshPublicKeys:
-    - ssh-rsa AAA
+  - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAn5ZA7REHaFT40KsZzYnuS7vzdP8n46akEpXLpzrOkbRPEqoOXlDk8f+2SrnANUGfjVVnTqhdrI7S90B4lyBIdWdinhVUK+W0we8j6nCMhtnjigXs6dtxvESUEzrWLWlQpPNJXDSnZEEWoQ/q7W4xXynD6GM3pko36ipA5Xv6hQWC7faYOb2FWLzN1NsngaowO1R6FRau+/oIu
   Tags:
     - Key: KeyName
       Value: ValueName

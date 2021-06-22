@@ -73,7 +73,7 @@ Change sets for nested stacks are **Enabled** by default, which will create chan
 ------
 
 **To create a change set \(AWS CLI\)**
-+ Run the [aws cloudformation create\-change\-set](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-change-set.html) command\.
++ Run the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-change-set.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-change-set.html) command\.
 
   You submit your changes as command options\. You can specify new parameter values, a modified template, or both\. For example, the following command creates a change set named `SampleChangeSet` for the `SampleStack` stack\. The change set uses the current stack's template, but with a different value for the `Purpose` parameter:
 

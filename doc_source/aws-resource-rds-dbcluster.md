@@ -7,7 +7,7 @@ You can only create this resource in AWS Regions where Amazon Aurora is supporte
 
 **Updating DB clusters**
 
-When properties labeled "*Update requires:* [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)" are updated, AWS CloudFormation first creates a replacement DB cluster, then changes references from other dependent resources to point to the replacement DB cluster, and finally deletes the old DB cluster\.
+When properties labeled "*Update requires:* [ Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)" are updated, AWS CloudFormation first creates a replacement DB cluster, then changes references from other dependent resources to point to the replacement DB cluster, and finally deletes the old DB cluster\.
 
 **Important**  
 We highly recommend that you take a snapshot of the database before updating the stack\. If you don't, you lose the data when AWS CloudFormation replaces your DB cluster\. To preserve your data, perform the following procedure:  
@@ -117,7 +117,7 @@ Properties:
 ## Properties<a name="aws-resource-rds-dbcluster-properties"></a>
 
 `AssociatedRoles`  <a name="cfn-rds-dbcluster-associatedroles"></a>
-Provides a list of the AWS Identity and Access Management \(IAM\) roles that are associated with the DB cluster\. IAM roles that are associated with a DB cluster grant permission for the DB cluster to access other AWS services on your behalf\.  
+Provides a list of the AWS Identity and Access Management \(IAM\) roles that are associated with the DB cluster\. IAM roles that are associated with a DB cluster grant permission for the DB cluster to access other Amazon Web Services on your behalf\.  
 *Required*: No  
 *Type*: List of [DBClusterRole](aws-properties-rds-dbcluster-dbclusterrole.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -168,7 +168,6 @@ Example: `my-cluster1`
 The name of the DB cluster parameter group to associate with this DB cluster\.  
 If you apply a parameter group to an existing DB cluster, then its DB instances might need to reboot\. This can result in an outage while the DB instances are rebooting\.  
 If you apply a change to parameter group associated with a stopped DB cluster, then the update stack waits until the DB cluster is started\.
- If this argument is omitted, `default.aurora5.6` is used\. If `default.aurora5.6` is used, specifying `aurora-mysql` or `aurora-postgresql` for the `Engine` property might result in an error\.
 To list all of the available DB cluster parameter group names, use the following command:  
 `aws rds describe-db-cluster-parameter-groups --query "DBClusterParameterGroups[].DBClusterParameterGroupName" --output text`  
 *Required*: No  

@@ -1,6 +1,6 @@
 # AWS::IAM::Role<a name="aws-resource-iam-role"></a>
 
-Creates a new role for your AWS account\. For more information about roles, see [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html)\. For information about quotas for role names and the number of roles you can create, see [IAM and STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
+Creates a new role for your AWS account\. For more information about roles, see [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html)\. For information about quotas for role names and the number of roles you can create, see [IAM and AWS STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
 
 ## Syntax<a name="aws-resource-iam-role-syntax"></a>
 
@@ -156,11 +156,11 @@ For more information about IDs, see [IAM Identifiers](https://docs.aws.amazon.co
 
 
 
-### IAM Role with Embedded Policy and Instance Profiles<a name="aws-resource-iam-role--examples--IAM_Role_with_Embedded_Policy_and_Instance_Profiles"></a>
+### IAM Role with Embedded Policy and Instance Profiles<a name="aws-resource-iam-role--examples--_Role_with_Embedded_Policy_and_Instance_Profiles"></a>
 
 This example shows an embedded policy in the `AWS::IAM::Role`\. The policy is specified inline in the `Policies` property of the `AWS::IAM::Role`\.
 
-#### <a name="aws-resource-iam-role--examples--IAM_Role_with_Embedded_Policy_and_Instance_Profiles--language_sc3_fgs_qjb"></a>
+#### <a name="aws-resource-iam-role--examples--_Role_with_Embedded_Policy_and_Instance_Profiles--language_sc3_fgs_qjb"></a>
 
 ```
 {
@@ -218,7 +218,7 @@ This example shows an embedded policy in the `AWS::IAM::Role`\. The policy is sp
 }
 ```
 
-#### YAML<a name="aws-resource-iam-role--examples--IAM_Role_with_Embedded_Policy_and_Instance_Profiles--yaml"></a>
+#### YAML<a name="aws-resource-iam-role--examples--_Role_with_Embedded_Policy_and_Instance_Profiles--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
@@ -252,11 +252,11 @@ Resources:
         - !Ref RootRole
 ```
 
-### IAM Role with External Policy and Instance Profiles<a name="aws-resource-iam-role--examples--IAM_Role_with_External_Policy_and_Instance_Profiles"></a>
+### IAM Role with External Policy and Instance Profiles<a name="aws-resource-iam-role--examples--_Role_with_External_Policy_and_Instance_Profiles"></a>
 
 In this example, the Policy and InstanceProfile resources are specified externally to the IAM Role\. They refer to the role by specifying its name, "RootRole", in their respective `Roles` properties\.
 
-#### JSON<a name="aws-resource-iam-role--examples--IAM_Role_with_External_Policy_and_Instance_Profiles--json"></a>
+#### JSON<a name="aws-resource-iam-role--examples--_Role_with_External_Policy_and_Instance_Profiles--json"></a>
 
 ```
 {
@@ -308,7 +308,7 @@ In this example, the Policy and InstanceProfile resources are specified external
 }
 ```
 
-#### YAML<a name="aws-resource-iam-role--examples--IAM_Role_with_External_Policy_and_Instance_Profiles--yaml"></a>
+#### YAML<a name="aws-resource-iam-role--examples--_Role_with_External_Policy_and_Instance_Profiles--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"

@@ -150,7 +150,7 @@ The following example creates a Cost Category "Department" with two rules\.
           "Values": [ "222222222222" ]
           }
         }
-      }
+
     ]'
 ```
 

@@ -10,16 +10,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ChannelTargetInfo](#cfn-ssmcontacts-contact-targets-channeltargetinfo)" : Json,
-  "[ContactTargetInfo](#cfn-ssmcontacts-contact-targets-contacttargetinfo)" : Json
+  "[ChannelTargetInfo](#cfn-ssmcontacts-contact-targets-channeltargetinfo)" : ChannelTargetInfo,
+  "[ContactTargetInfo](#cfn-ssmcontacts-contact-targets-contacttargetinfo)" : ContactTargetInfo
 }
 ```
 
 ### YAML<a name="aws-properties-ssmcontacts-contact-targets-syntax.yaml"></a>
 
 ```
-  [ChannelTargetInfo](#cfn-ssmcontacts-contact-targets-channeltargetinfo): Json
-  [ContactTargetInfo](#cfn-ssmcontacts-contact-targets-contacttargetinfo): Json
+  [ChannelTargetInfo](#cfn-ssmcontacts-contact-targets-channeltargetinfo): 
+    ChannelTargetInfo
+  [ContactTargetInfo](#cfn-ssmcontacts-contact-targets-contacttargetinfo): 
+    ContactTargetInfo
 ```
 
 ## Properties<a name="aws-properties-ssmcontacts-contact-targets-properties"></a>
@@ -27,11 +29,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `ChannelTargetInfo`  <a name="cfn-ssmcontacts-contact-targets-channeltargetinfo"></a>
 Information about the contact channel Incident Manager is engaging\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [ChannelTargetInfo](aws-properties-ssmcontacts-contact-channeltargetinfo.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ContactTargetInfo`  <a name="cfn-ssmcontacts-contact-targets-contacttargetinfo"></a>
 The contact that Incident Manager is engaging during an incident\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [ContactTargetInfo](aws-properties-ssmcontacts-contact-contacttargetinfo.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

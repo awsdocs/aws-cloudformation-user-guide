@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualGateway VirtualGatewayListenerTlsAcmCertificate<a name="aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate"></a>
 
-An object that represents an AWS Certicate Manager \(ACM\) certificate\.
+An object that represents an AWS Certificate Manager certificate\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate-syntax"></a>
 

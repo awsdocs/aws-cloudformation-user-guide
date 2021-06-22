@@ -146,7 +146,7 @@ Resources:
 
 The following example registers two versions of a module\. Note the following:
 + The example uses the `DependsOn` attribute to ensure that CloudFormation provisions version one before version two\.
-+ CloudFormation sets version one of the module as the default version, as it is registered first\. \(This assumes no other versions of the module are currently registered in this account and region\.\)
++ CloudFormation sets version one of the module as the default version, as it is registered first\. \(This assumes no other versions of the module are currently registered in this account and Region\.\)
 
 #### JSON<a name="aws-resource-cloudformation-moduleversion--examples--Registering_multiple_module_versions--json"></a>
 

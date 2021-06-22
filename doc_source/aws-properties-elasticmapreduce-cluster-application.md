@@ -4,7 +4,7 @@
 
 With Amazon EMR release version 4\.0 and later, the only accepted parameter is the application `Name`\. To pass arguments to these applications, you use configuration classifications specified using JSON objects in a `Configuration` property\. For more information, see [Configuring Applications](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html)\.
 
-With earlier Amazon EMR releases, the application is any Amazon or third\-party software that you can add to the cluster\. You can specify the version of the application and arguments to pass to it\. Amazon EMR accepts and forwards the argument list to the corresponding installation script as a bootstrap action argument\.
+With earlier Amazon EMR releases, the application is any AWS or third\-party software that you can add to the cluster\. You can specify the version of the application and arguments to pass to it\. Amazon EMR accepts and forwards the argument list to the corresponding installation script as a bootstrap action argument\.
 
 ## Syntax<a name="aws-properties-elasticmapreduce-cluster-application-syntax"></a>
 

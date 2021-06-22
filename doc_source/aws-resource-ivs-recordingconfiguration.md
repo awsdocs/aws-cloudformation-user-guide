@@ -40,7 +40,7 @@ A destination configuration contains information about where recorded video will
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-ivs-recordingconfiguration-name"></a>
-An arbitrary string \(a nickname\) assigned to a recording configuration that helps the customer identify that resource\. The value does not need to be unique\.  
+Recording\-configuration name\. The value does not need to be unique\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appsync-graphqlapi-additionalauthenticationprovider-properties"></a>
 
 `AuthenticationType`  <a name="cfn-appsync-graphqlapi-additionalauthenticationprovider-authenticationtype"></a>
-The authentication type for API key, AWS IAM, OIDC, or Amazon Cognito user pools\.  
+The authentication type for API key, AWS Identity and Access Management, OIDC, or Amazon Cognito user pools\.  
 Valid Values: `API_KEY` \| `AWS_IAM` \| `OPENID_CONNECT` \| `AMAZON_COGNITO_USER_POOLS`  
 *Required*: Yes  
 *Type*: String  

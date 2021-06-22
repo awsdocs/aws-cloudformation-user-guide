@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::ImageRecipe ComponentConfiguration<a name="aws-properties-imagebuilder-imagerecipe-componentconfiguration"></a>
 
- The image recipe component configuration includes the configuration details of this component\. 
+ Configuration details of the component\.
 
 ## Syntax<a name="aws-properties-imagebuilder-imagerecipe-componentconfiguration-syntax"></a>
 

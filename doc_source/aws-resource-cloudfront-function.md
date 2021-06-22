@@ -89,3 +89,6 @@ The ARN of the function\. For example:
 `arn:aws:cloudfront::123456789012:function/ExampleFunction`\.  
 To get the function ARN, use the following syntax:  
 `!GetAtt Function_Logical_ID.FunctionMetadata.FunctionARN`
+
+`FunctionMetadata.FunctionARN`  <a name="FunctionMetadata.FunctionARN-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.

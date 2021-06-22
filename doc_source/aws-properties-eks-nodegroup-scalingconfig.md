@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The current number of nodes that the managed node group should maintain\.  
 *Required*: No  
 *Type*: Double  
-*Minimum*: `1`  
+*Minimum*: `0`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxSize`  <a name="cfn-eks-nodegroup-scalingconfig-maxsize"></a>
@@ -44,5 +44,5 @@ The maximum number of nodes that the managed node group can scale out to\. For i
 The minimum number of nodes that the managed node group can scale in to\.  
 *Required*: No  
 *Type*: Double  
-*Minimum*: `1`  
+*Minimum*: `0`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

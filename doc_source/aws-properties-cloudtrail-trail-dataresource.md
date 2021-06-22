@@ -16,13 +16,13 @@ The following example demonstrates how logging works when you configure logging 
 
 1. The `PutObject` API operation occurred for an object in an S3 bucket that the CloudTrail user didn't specify for the trail\. The trail doesn’t log the event\.
 
-The following example demonstrates how logging works when you configure logging of AWS Lambda data events for a Lambda function named *MyLambdaFunction*, but not for all AWS Lambda functions\.
+The following example demonstrates how logging works when you configure logging of AWS Lambda data events for a Lambda function named *MyLambdaFunction*, but not for all Lambda functions\.
 
 1. A user runs a script that includes a call to the *MyLambdaFunction* function and the *MyOtherLambdaFunction* function\.
 
-1. The `Invoke` API operation on *MyLambdaFunction* is an AWS Lambda API\. It is recorded as a data event in CloudTrail\. Because the CloudTrail user specified logging data events for *MyLambdaFunction*, any invocations of that function are logged\. The trail processes and logs the event\. 
+1. The `Invoke` API operation on *MyLambdaFunction* is an Lambda API\. It is recorded as a data event in CloudTrail\. Because the CloudTrail user specified logging data events for *MyLambdaFunction*, any invocations of that function are logged\. The trail processes and logs the event\.
 
-1. The `Invoke` API operation on *MyOtherLambdaFunction* is an AWS Lambda API\. Because the CloudTrail user did not specify logging data events for all Lambda functions, the `Invoke` operation for *MyOtherLambdaFunction* does not match the function specified for the trail\. The trail doesn’t log the event\. 
+1. The `Invoke` API operation on *MyOtherLambdaFunction* is an Lambda API\. Because the CloudTrail user did not specify logging data events for all Lambda functions, the `Invoke` operation for *MyOtherLambdaFunction* does not match the function specified for the trail\. The trail doesn’t log the event\. 
 
 ## Syntax<a name="aws-properties-cloudtrail-trail-dataresource-syntax"></a>
 
@@ -56,14 +56,14 @@ The `AWS::S3Outposts::Object`, `AWS::ManagedBlockchain::Node`, and `AWS::S3Objec
 
 `Values`  <a name="cfn-cloudtrail-trail-dataresource-values"></a>
 An array of Amazon Resource Name \(ARN\) strings or partial ARN strings for the specified objects\.  
-+ To log data events for all objects in all S3 buckets in your AWS account, specify the prefix as `arn:aws:s3:::`\. 
++ To log data events for all objects in all S3 buckets in your AWS account, specify the prefix as `arn:aws:s3:::`\.
 **Note**  
-This will also enable logging of data event activity performed by any user or role in your AWS account, even if that activity is performed on a bucket that belongs to another AWS account\. 
+This also enables logging of data event activity performed by any user or role in your AWS account, even if that activity is performed on a bucket that belongs to another AWS account\.
 + To log data events for all objects in an S3 bucket, specify the bucket and an empty object prefix such as `arn:aws:s3:::bucket-1/`\. The trail logs data events for all objects in this S3 bucket\.
 + To log data events for specific objects, specify the S3 bucket and object prefix such as `arn:aws:s3:::bucket-1/example-images`\. The trail logs data events for objects in this S3 bucket that match the prefix\.
 + To log data events for all Lambda functions in your AWS account, specify the prefix as `arn:aws:lambda`\.
 **Note**  
-This will also enable logging of `Invoke` activity performed by any user or role in your AWS account, even if that activity is performed on a function that belongs to another AWS account\. 
+This also enables logging of `Invoke` activity performed by any user or role in your AWS account, even if that activity is performed on a function that belongs to another AWS account\. 
 + To log data events for a specific Lambda function, specify the function ARN\.
 **Note**  
 Lambda function ARNs are exact\. For example, if you specify a function ARN *arn:aws:lambda:us\-west\-2:111111111111:function:helloworld*, data events will only be logged for *arn:aws:lambda:us\-west\-2:111111111111:function:helloworld*\. They will not be logged for *arn:aws:lambda:us\-west\-2:111111111111:function:helloworld2*\.

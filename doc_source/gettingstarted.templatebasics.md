@@ -721,7 +721,7 @@ Each output value has a name, a Value attribute that contains declaration of the
 http://mywptests-elasticl-1gb51l6sl8y5v-206169572.us-east-2.elb.amazonaws.com/wp-admin/install.php
 ```
 
-In the Get Started tutorial, we used this link to conveniently go to the installation page for the WordPress blog that we created\. CloudFormation generates the output values after it finishes creating the stack\. You can view output values in the Outputs tab of the CloudFormation console or by using the aws cloudformation describe\-stacks command\.
+In the Get Started tutorial, we used this link to conveniently go to the installation page for the WordPress blog that we created\. CloudFormation generates the output values after it finishes creating the stack\. You can view output values in the Outputs tab of the CloudFormation console or by using the `aws cloudformation describe-stacks` command\.
 
 ## Next steps<a name="gettingstarted.templatebasics.learnmore"></a>
 

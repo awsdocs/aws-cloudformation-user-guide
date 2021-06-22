@@ -256,3 +256,13 @@ You can register multiple versions of the same module in a given account and reg
 + To guarantee uniform results, if you are including modules in a stack template for use with stack sets, you should ensure that the same version of the module is set as the default version in all the accounts and regions in which you are planning to deploy your stack instances\. This includes for modules that are nested in other modules\. For more information on stack sets, see [Working with stack sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)\.
 
 For more information on registering new versions of a module, or changing the default version of a module, see [Using the AWS CloudFormation registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html)\.
+
+## Activating public modules for use in your account<a name="module-enabling"></a>
+
+In order to successfully activate a public module in your account and region, the following must be true for each third\-party public extension \(resource or module\) included in the module:
++ The extension must already be activated in your account and region\.
+
+  If the extension in the module uses a type name alias, the extension must be registered in your account and region using the same type name alias\. For more information, see [Specifying aliases to refer to extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable-alias)\.
++ The extension version currently activated must be one of the supported major versions of that extension specified in the module\. For more information, see [Model requirements for publishing a public module](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules-structure.html#modules-structure-publishing-prereqs) in the *CloudFormation CLI User Guide*\.
+
+If you do not have the correct third\-party public extensions and extension versions activated, CloudFormation will fail the operation with an error listing the extensions and/or versions that need to be activated before the module can be successfully activated\.

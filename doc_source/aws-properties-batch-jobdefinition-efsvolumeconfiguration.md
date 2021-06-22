@@ -1,6 +1,6 @@
 # AWS::Batch::JobDefinition EfsVolumeConfiguration<a name="aws-properties-batch-jobdefinition-efsvolumeconfiguration"></a>
 
-This is used when you are using an Amazon Elastic File System file system for job storage\. For more information, see [Amazon EFS Volumes](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html) in the *AWS Batch User Guide*\.
+This is used when you are using an Amazon Elastic File System file system for job storage\. For more information, see [Amazon EFS Volumes](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html) in the * AWS Batch User Guide*\.
 
 ## Syntax<a name="aws-properties-batch-jobdefinition-efsvolumeconfiguration-syntax"></a>
 

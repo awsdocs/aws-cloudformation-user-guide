@@ -188,7 +188,7 @@ This example creates a canary that uses an existing script stored in an S3 bucke
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS CloudFormation Sample Template for AWS Synthetics: Create a Canary using this template",
+    "Description": "CloudFormation Sample Template for CloudWatch Synthetics: Create a Canary using this template",
     "Resources": {
         "SyntheticsCanary": {
             "Type": "AWS::Synthetics::Canary",
@@ -257,7 +257,7 @@ This example creates a canary and passes the script code directly into the canar
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS CloudFormation Sample Template for AWS Synthetics: Create a Canary using this template",
+    "Description": "CloudFormation Sample Template for CloudWatch Synthetics: Create a Canary using this template",
     "Resources": {
         "SyntheticsCanary": {
             "Type": "AWS::Synthetics::Canary",

@@ -85,7 +85,7 @@ A value that determines the type of logs that DataSync publishes to a log stream
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Mtime`  <a name="cfn-datasync-task-options-mtime"></a>
-A value that indicates the last time that a file was modified \(that is, a file was written to\) before the PREPARING phase\.   
+A value that indicates the last time that a file was modified \(that is, a file was written to\) before the PREPARING phase\. This option is required for cases when you need to run the same task more than one time\.   
 Default value: PRESERVE\.   
 PRESERVE: Preserve original `Mtime` \(recommended\)  
  NONE: Ignore `Mtime`\.   
@@ -105,7 +105,7 @@ Some storage classes have specific behaviors that can affect your S3 storage cos
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PosixPermissions`  <a name="cfn-datasync-task-options-posixpermissions"></a>
-A value that determines which users or groups can access a file for a specific purpose such as reading, writing, or execution of the file\.   
+A value that determines which users or groups can access a file for a specific purpose such as reading, writing, or execution of the file\. This option should only be set for NFS, EFS, and S3 locations\. For more information about what metadata is copied by DataSync, see [Metadata Copied by DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied)\.   
 Default value: PRESERVE\.  
 PRESERVE: Preserve POSIX\-style permissions \(recommended\)\.  
 NONE: Ignore permissions\.   
@@ -126,7 +126,7 @@ REMOVE: Delete destination files that aren’t present in the source\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PreserveDevices`  <a name="cfn-datasync-task-options-preservedevices"></a>
-A value that determines whether AWS DataSync should preserve the metadata of block and character devices in the source file system, and recreate the files with that device name and metadata on the destination\.  
+A value that determines whether AWS DataSync should preserve the metadata of block and character devices in the source file system, and re\-create the files with that device name and metadata on the destination\. DataSync does not copy the contents of such devices, only the name and metadata\.   
 AWS DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an end\-of\-file \(EOF\) marker\.
 Default value: NONE\.  
 NONE: Ignore special devices \(recommended\)\.   

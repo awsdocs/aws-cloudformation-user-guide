@@ -35,7 +35,7 @@ The encryption settings for the copied snapshot\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetainRule`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyaction-retainrule"></a>
-Not currently supported by AWS CloudFormation\.  
+Specifies the retention rule for cross\-Region snapshot copies\.  
 *Required*: No  
 *Type*: [CrossRegionCopyRetainRule](aws-properties-dlm-lifecyclepolicy-crossregioncopyretainrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

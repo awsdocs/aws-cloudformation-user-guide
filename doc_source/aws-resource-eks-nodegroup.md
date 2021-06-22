@@ -30,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Subnets](#cfn-eks-nodegroup-subnets)" : [ String, ... ],
       "[Tags](#cfn-eks-nodegroup-tags)" : Json,
       "[Taints](#cfn-eks-nodegroup-taints)" : [ Taint, ... ],
+      "[UpdateConfig](#cfn-eks-nodegroup-updateconfig)" : UpdateConfig,
       "[Version](#cfn-eks-nodegroup-version)" : String
     }
 }
@@ -62,6 +63,8 @@ Properties:
   [Tags](#cfn-eks-nodegroup-tags): Json
   [Taints](#cfn-eks-nodegroup-taints): 
     - Taint
+  [UpdateConfig](#cfn-eks-nodegroup-updateconfig): 
+    UpdateConfig
   [Version](#cfn-eks-nodegroup-version): String
 ```
 
@@ -130,7 +133,7 @@ The Amazon Resource Name \(ARN\) of the IAM role to associate with your node gro
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ReleaseVersion`  <a name="cfn-eks-nodegroup-releaseversion"></a>
-The AMI version of the Amazon EKS\-optimized AMI to use with your node group \(for example, `1.14.7-YYYYMMDD`\)\. By default, the latest available AMI version for the node group's current Kubernetes version is used\. For more information, see [Amazon EKS\-Optimized Linux AMI Versions](https://docs.aws.amazon.com/eks/latest/userguide/eks-linux-ami-versions.html) in the *Amazon EKS User Guide*\.  
+The AMI version of the Amazon EKS optimized AMI to use with your node group \(for example, `1.14.7-YYYYMMDD`\)\. By default, the latest available AMI version for the node group's current Kubernetes version is used\. For more information, see [Amazon EKS optimized Linux AMI Versions](https://docs.aws.amazon.com/eks/latest/userguide/eks-linux-ami-versions.html) in the *Amazon EKS User Guide*\.  
 Changing this value triggers an update of the node group if one is available\. However, only the latest available AMI release version is valid as an input\. You cannot roll back to a previous AMI release version\.
 *Required*: No  
 *Type*: String  
@@ -164,6 +167,13 @@ The metadata to apply to the node group to assist with categorization and organi
 The Kubernetes taints to be applied to the nodes in the node group when they are created\. Effect is one of `No_Schedule`, `Prefer_No_Schedule`, or `No_Execute`\. Kubernetes taints can be used together with tolerations to control how workloads are scheduled to your nodes\.  
 *Required*: No  
 *Type*: List of [Taint](aws-properties-eks-nodegroup-taint.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`UpdateConfig`  <a name="cfn-eks-nodegroup-updateconfig"></a>
+The update configuration for the node group\.  
+This CloudFormation property is not currently supported\.
+*Required*: No  
+*Type*: [UpdateConfig](aws-properties-eks-nodegroup-updateconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-eks-nodegroup-version"></a>
@@ -205,7 +215,7 @@ The name associated with an Amazon EKS managed node group\.
 
 ### Create a managed node group<a name="aws-resource-eks-nodegroup--examples--Create_a_managed_node_group"></a>
 
-The following example creates an Amazon EKS managed node group called `standard` in the `prod` cluster\.
+The following example creates an Amazon EKS managed node group named `standard` in the `prod` cluster\.
 
 #### JSON<a name="aws-resource-eks-nodegroup--examples--Create_a_managed_node_group--json"></a>
 

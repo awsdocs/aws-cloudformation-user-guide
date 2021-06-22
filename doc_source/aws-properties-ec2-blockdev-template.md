@@ -62,8 +62,8 @@ This parameter is required for `io1` and `io2` volumes\. The default for `gp3` v
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-ec2-instance-ebs-kmskeyid"></a>
-The identifier of the AWS Key Management Service \(AWS KMS\) customer managed CMK to use for Amazon EBS encryption\. If `KmsKeyId` is specified, the encrypted state must be `true`\. If the encrypted state is `true` but you do not specify `KmsKeyId`, your AWS managed CMK for EBS is used\.  
-You can specify the CMK using any of the following:  
+The identifier of the AWS KMS key to use for Amazon EBS encryption\. If `KmsKeyId` is specified, the encrypted state must be `true`\. If the encrypted state is `true` but you do not specify `KmsKeyId`, your KMS key for EBS is used\.  
+You can specify the KMS key using any of the following:  
 + Key ID\. For example, 1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
 + Key alias\. For example, alias/ExampleAlias\.
 + Key ARN\. For example, arn:aws:kms:us\-east\-1:012345678910:1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.

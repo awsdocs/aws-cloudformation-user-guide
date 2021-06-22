@@ -88,8 +88,8 @@ The percentage of targets to receive a deployed configuration during each interv
 
 `GrowthType`  <a name="cfn-appconfig-deploymentstrategy-growthtype"></a>
 The algorithm used to define how percentage grows over time\. AWS AppConfig supports the following growth types:  
- **Linear**: For this type, AppConfig processes the deployment by dividing the total number of targets by the value specified for `Step percentage`\. For example, a linear deployment that uses a `Step percentage` of 10 deploys the configuration to 10 percent of the hosts\. After those deployments are complete, the system deploys the configuration to the next 10 percent\. This continues until 100% of the targets have successfully received the configuration\.  
- **Exponential**: For this type, AppConfig processes the deployment exponentially using the following formula: `G*(2^N)`\. In this formula, `G` is the growth factor specified by the user and `N` is the number of steps until the configuration is deployed to all targets\. For example, if you specify a growth factor of 2, then the system rolls out the configuration as follows:  
+ **Linear**: For this type, AWS AppConfig processes the deployment by dividing the total number of targets by the value specified for `Step percentage`\. For example, a linear deployment that uses a `Step percentage` of 10 deploys the configuration to 10 percent of the hosts\. After those deployments are complete, the system deploys the configuration to the next 10 percent\. This continues until 100% of the targets have successfully received the configuration\.  
+ **Exponential**: For this type, AWS AppConfig processes the deployment exponentially using the following formula: `G*(2^N)`\. In this formula, `G` is the growth factor specified by the user and `N` is the number of steps until the configuration is deployed to all targets\. For example, if you specify a growth factor of 2, then the system rolls out the configuration as follows:  
  `2*(2^0)`   
  `2*(2^1)`   
  `2*(2^2)`   

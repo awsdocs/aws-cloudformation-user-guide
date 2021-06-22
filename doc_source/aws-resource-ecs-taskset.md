@@ -66,7 +66,7 @@ The launch type that new tasks in the task set will use\. For more information, 
 If a `launchType` is specified, the `capacityProviderStrategy` parameter must be omitted\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `EC2 | FARGATE`  
+*Allowed values*: `EC2 | EXTERNAL | FARGATE`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LoadBalancers`  <a name="cfn-ecs-taskset-loadbalancers"></a>

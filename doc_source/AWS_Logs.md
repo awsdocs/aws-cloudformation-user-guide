@@ -1,4 +1,4 @@
-# CloudWatch Logs resource type reference<a name="AWS_Logs"></a>
+# Amazon CloudWatch Logs resource type reference<a name="AWS_Logs"></a>
 
 **Resource types**
 + [AWS::Logs::Destination](aws-resource-logs-destination.md)

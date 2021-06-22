@@ -1,6 +1,6 @@
 # AWS::ServiceCatalogAppRegistry::Application<a name="aws-resource-servicecatalogappregistry-application"></a>
 
-Represents a Service Catalog AppRegistry application that is the top\-level node in a hierarchy of related cloud resource abstractions\.
+Represents a AWS Service Catalog AppRegistry application that is the top\-level node in a hierarchy of related cloud resource abstractions\.
 
 ## Syntax<a name="aws-resource-servicecatalogappregistry-application-syntax"></a>
 

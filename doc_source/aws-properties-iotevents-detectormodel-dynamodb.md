@@ -18,7 +18,7 @@ You must use expressions for all parameters in `DynamoDBAction`\. The expression
 
    `'GreenhouseTemperatureTable ' + $input.GreenhouseInput.date` 
 
-For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the *AWS IoT Events Developer Guide*\.
+For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the * AWS IoT Events Developer Guide*\.
 
 If the defined payload type is a string, `DynamoDBAction` writes non\-JSON data to the DynamoDB table as binary data\. The DynamoDB console displays the data as Base64\-encoded text\. The value for the `payloadField` parameter is `<payload-field>_raw`\.
 

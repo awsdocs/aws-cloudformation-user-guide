@@ -72,7 +72,7 @@ The ID of the resource\.
 The type of resource, for example a VPC attachment\.
 
 `State`  <a name="State-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The state of the resource\.
 
 ## See also<a name="aws-resource-ec2-transitgatewaymulticastdomainassociation--seealso"></a>
 + [AssociateTransitGatewayMulticastDomain](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AssociateTransitGatewayMulticastDomain.html) in the *Amazon EC2 API Reference*

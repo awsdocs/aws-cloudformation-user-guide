@@ -37,6 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PluginsS3Path](#cfn-mwaa-environment-pluginss3path)" : String,
       "[RequirementsS3ObjectVersion](#cfn-mwaa-environment-requirementss3objectversion)" : String,
       "[RequirementsS3Path](#cfn-mwaa-environment-requirementss3path)" : String,
+      "[Schedulers](#cfn-mwaa-environment-schedulers)" : Integer,
       "[SourceBucketArn](#cfn-mwaa-environment-sourcebucketarn)" : String,
       "[Tags](#cfn-mwaa-environment-tags)" : TagMap,
       "[WebserverAccessMode](#cfn-mwaa-environment-webserveraccessmode)" : String,
@@ -67,6 +68,7 @@ Properties:
   [PluginsS3Path](#cfn-mwaa-environment-pluginss3path): String
   [RequirementsS3ObjectVersion](#cfn-mwaa-environment-requirementss3objectversion): String
   [RequirementsS3Path](#cfn-mwaa-environment-requirementss3path): String
+  [Schedulers](#cfn-mwaa-environment-schedulers): Integer
   [SourceBucketArn](#cfn-mwaa-environment-sourcebucketarn): String
   [Tags](#cfn-mwaa-environment-tags): 
     TagMap
@@ -166,6 +168,12 @@ The relative path of the requirements\.txt file in your Amazon S3 bucket\. For e
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Schedulers`  <a name="cfn-mwaa-environment-schedulers"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SourceBucketArn`  <a name="cfn-mwaa-environment-sourcebucketarn"></a>
 The ARN of the Amazon S3 bucket where your DAG code and supporting files are stored\.  
 *Required*: No  
@@ -207,6 +215,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The ARN for the Amazon MWAA environment\.
+
+`LoggingConfiguration.DagProcessingLogs.CloudWatchLogGroupArn`  <a name="LoggingConfiguration.DagProcessingLogs.CloudWatchLogGroupArn-fn::getatt"></a>
+The ARN for the CloudWatch Logs group where the Apache Airflow DAG processing logs are published\.
 
 `WebserverUrl`  <a name="WebserverUrl-fn::getatt"></a>
 The URL of your Apache Airflow UI\.

@@ -1,6 +1,6 @@
 # AWS::AuditManager::Assessment Scope<a name="aws-properties-auditmanager-assessment-scope"></a>
 
- The `Scope` property type specifies the wrapper that contains the AWS accounts and AWS services in scope for the assessment\. 
+ The `Scope` property type specifies the wrapper that contains the AWS accounts and services in scope for the assessment\. 
 
 ## Syntax<a name="aws-properties-auditmanager-assessment-scope-syntax"></a>
 

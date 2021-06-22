@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::Component<a name="aws-resource-imagebuilder-component"></a>
 
-Components are orchestration documents that define a sequence of steps for downloading, installing, and configuring software packages or for defining tests to run on software packages\. They also define validation and security hardening steps\. A component is defined using a YAML document format\. For more information, see [Using Documents in EC2 Image Builder](https://docs.aws.amazon.com/imagebuilder/latest/userguide/image-builder-application-documents.html)\.
+Components are orchestration documents that define a sequence of steps for downloading, installing, and configuring software packages or for defining tests to run on software packages\. They also define validation and security hardening steps\. A component is defined using a YAML document format\. For more information, see [Using Documents in Image Builder](https://docs.aws.amazon.com/imagebuilder/latest/userguide/image-builder-application-documents.html)\.
 
 ## Syntax<a name="aws-resource-imagebuilder-component-syntax"></a>
 
@@ -105,7 +105,7 @@ The tags associated with the component\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Uri`  <a name="cfn-imagebuilder-component-uri"></a>
-The URI of the component document\.  
+The uri of the component\. Must be an Amazon S3 URL and the requester must have permission to access the Amazon S3 bucket\. If you use Amazon S3, you can specify component content up to your service quota\. Either `data` or `uri` can be used to specify the data within the component\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -140,7 +140,7 @@ Returns the Amazon Resource Name \(ARN\) of the component\. The following patter
 Returns the encryption status of the component\. For example `true` or `false`\.
 
 `Name`  <a name="Name-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Returns the name of the component\.
 
 `Type`  <a name="Type-fn::getatt"></a>
 Returns the component type\. For example, `BUILD` or `TEST`\.

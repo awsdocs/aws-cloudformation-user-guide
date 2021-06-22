@@ -15,7 +15,7 @@ You must use expressions for all parameters in `IotSiteWiseAction`\. The express
 
 You must specify either `propertyAlias` or both `assetId` and `propertyId` to identify the target asset property in AWS IoT SiteWise\.
 
-For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the *AWS IoT Events Developer Guide*\.
+For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the * AWS IoT Events Developer Guide*\.
 
 ## Syntax<a name="aws-properties-iotevents-detectormodel-iotsitewise-syntax"></a>
 

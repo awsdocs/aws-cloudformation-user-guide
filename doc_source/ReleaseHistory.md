@@ -4,6 +4,157 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Publish public third\-party extensions](#ReleaseHistory) | Use public extensions provided by third\-party publishers, just as you would extensions from Amazon\.For more information, see [Using public extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html)\. For information on publishing third\-party public extensions, see [Publishing extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish.html) in the *CloudFormation CLI User Guide*\. | June 21, 2021 | 
+| [Refactor and China rebranding](AWS_ImageBuilder.md) | Fixed issues with the formatting and updated per China rebranding guidance\. | June 18, 2021 | 
+| [Updated resources](AWS_AppMesh.md) | The following resources were updated: AWS::AppMesh::VirtualNode, AWS::AppMesh::GatewayRoute, and AWS::AppMesh::Route 
+
+ [AWS::AppMesh::VirtualNode](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualnode.html)   
+Use the `DnsServiceDiscovery` property to represent the DNS service discovery information for your virtual node\. 
+
+ [AWS::AppMesh::GatewayRoute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html)   
+Use the `GatewayRouteHostnameMatch` property to represent the gateway route hostname to match\.  
+Use the `GatewayRouteHostnameRewrite ` property to represent the gateway route host name to rewrite\.  
+Use the `GrpcGatewayRouteMetadata` property to represent the metadata of the gateway route\.  
+Use the `GrpcGatewayRouteRewrite` property to represent the the gateway route to rewrite\.  
+Use the `GrpcMetadataMatchMethod` property to represent the method header to be matched\.  
+Use the `HttpGatewayRouteHeader` property to represent the HTTP header in the gateway route\.  
+Use the `HttpGatewayRoutePathRewrite` property to represent the path to rewrite\.  
+Use the `HttpGatewayRoutePrefixRewrite` property to represent the beginning characters of the route to rewrite\.  
+Use the `HttpGatewayRouteRewrite` property to represent the beginning characters of the route to rewrite\.  
+Use the `HttpGatewayRoutePathRewrite` property to represent the beginning characters of the route to rewrite\. 
+
+ [AWS::AppMesh::Route](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-route.html)   
+Use the `HttpQueryParameter` property to represent the query parameter in the request\.  | June 17, 2021 | 
+| [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::AppMesh::VirtualNode, AWS::AppMesh::GatewayRoute, and AWS::AppMesh::Route 
+
+ [AWS::AppMesh::VirtualNode](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualnode.html)   
+Use the `DnsServiceDiscovery` property to represent the DNS service discovery information for your virtual node\. 
+
+ [AWS::AppMesh::GatewayRoute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-gatewayroute.html)   
+Use the `GatewayRouteHostnameMatch` property to represent the gateway route hostname to match\.  
+Use the `GatewayRouteHostnameRewrite ` property to represent the gateway route host name to rewrite\.  
+Use the `GrpcGatewayRouteMetadata` property to represent the metadata of the gateway route\.  
+Use the `GrpcGatewayRouteRewrite` property to represent the the gateway route to rewrite\.  
+Use the `GrpcMetadataMatchMethod` property to represent the method header to be matched\.  
+Use the `HttpGatewayRouteHeader` property to represent the HTTP header in the gateway route\.  
+Use the `HttpGatewayRoutePathRewrite` property to represent the path to rewrite\.  
+Use the `HttpGatewayRoutePrefixRewrite` property to represent the beginning characters of the route to rewrite\.  
+Use the `HttpGatewayRouteRewrite` property to represent the beginning characters of the route to rewrite\.  
+Use the `HttpGatewayRoutePathRewrite` property to represent the beginning characters of the route to rewrite\. 
+
+ [AWS::AppMesh::Route](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-route.html)   
+Use the `HttpQueryParameter` property to represent the query parameter in the request\.  | June 17, 2021 | 
+| [Updated resource](AWS_KMS.md) | The following resource was updated: AWS::KMS::Key\. 
+
+ [AWS::KMS::Key](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html)   
+Use the `MultiRegionKey` property to specify multi\-Region primary keys\.  | June 17, 2021 | 
+| [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::KMS::Key 
+
+ [AWS::KMS::Key](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html)   
+Use the `MultiRegionKey` property to specify multi\-Region primary keys\.  | June 17, 2021 | 
+| [New resource](AWS_KMS.md) | The following resource was added: AWS::KMS::ReplicaKey\. 
+
+ [AWS::KMS::ReplicaKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replica-key.html)   
+Use the `AWS::KMS::ReplicaKey` resource to specify a replica of a specified multi\-Region primary key\.  | June 17, 2021 | 
+| [New resource](#ReleaseHistory) | The following resource was added: AWS::KMS::ReplicaKey 
+
+ [AWS::KMS::ReplicaKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replica-key.html)   
+Use the `AWS::KMS::ReplicaKey` resource to specify a replica of a specified multi\-Region primary key\.  | June 17, 2021 | 
+| [Updated resource](AWS_EC2.md) | The following resource was updated: AWS::EC2::NatGateway 
+
+ [AWS::EC2::NatGateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html)   
+Use the `ConnectivityType` property to indicate whether the NAT gateway supports public or private connectivity\.  | June 11, 2021 | 
+| [Updated resources](AWS_RAM.md) | The following resource was updated: `AWS::RAM:ResourceShare` 
+
+ [AWS::RAM::ResourceShare](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html)   
+Use the `PermissionArns` property to specify the Amazon Resource Names \(ARNs\) of the permissions to associate with the resource share\.  | June 10, 2021 | 
+| [Updated resource](AWS_KinesisAnalyticsV2.md) | The following resource was updated: AWS::KinesisAnalyticsV2::Application 
+
+ [AWS::KinesisAnalyticsV2::Application ApplicationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationconfiguration.html)   
+You can use the ZeppelinApplicationConfiguration property to create Studio notebook applications that use Apache Zeppelin\. You can use the notebook interactively, and you can deploy it as a continuously running streaming application with durable state and autoscaling features\.  | June 10, 2021 | 
+| [Updated resource](AWS_SQS.md) | The following resource was updated: AWS::SQS::Queue 
+
+ [AWS::SQS::Queue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sqs-queues.html)   
+You can now use the `DeduplicationScope` and `FifoThroughputLimit`properties to enable higher throughput for FIFO queues\.  | June 10, 2021 | 
+| [Updated resource](AWS_SSM.md) | The following resource was updated: AWS::SSM::Document 
+
+ [AWS::SSM::Document](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html)   
+Use the `Attachments` property to specify a list of key and value pairs that describe attachments to a version of a document\. Use the `Requires` property to specify a list of SSM documents required by a document\. This parameter is used exclusively by AWS AppConfig\. When a user creates an AWS AppConfig configuration in an SSM document, the user must also specify a required document for validation purposes\. In this case, an ApplicationConfiguration document requires an ApplicationConfigurationSchema document for validation purposes\. For more information, see [Creating a configuration and a configuration profile ](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-configuration-and-profile.html) in the *AWS AppConfig User Guide*\.  | June 10, 2021 | 
+| [Updated resource](AWS_FSx.md) | The following resource was updated: AWS::FSx::FileSystem 
+
+[AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
+Use the `DNSName` attribute to access the DNS name of your Amazon FSx file system\.  | June 7, 2021 | 
+| [New resource](AWS_Location.md) | The following resources were added: `AWS::Location::GeofenceCollection`, `AWS::Location::Map`, `AWS::Location::PlaceIndex`, `AWS::Location::RouteCalculator`, `AWS::Location::Tracker`, and `AWS::Location::TrackerConsumer`\. 
+
+ [AWS::Location::GeofenceCollection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html)   
+Use the `AWS::Location::GeofenceCollection` resource to specify the ability to detect and act when a tracked device enters or exits a defined geographical boundary\. 
+
+ [AWS::Location::Map](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-map.html)   
+Use the `AWS::Location::Map` resource to specify a map resource in your AWS account, which provides map tiles of different styles sourced from available data providers\. 
+
+ [AWS::Location::PlaceIndex](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-placeindex.html)   
+Use the `AWS::Location::PlaceIndex` resource to specify a place index resource in your AWS account, which supports Places functions with geospatial data sourced from your chosen data provider\. 
+
+ [AWS::Location::RouteCalculator](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-routecalculator.html)   
+Use the `AWS::Location::RouteCalculator` resource to specify a route calculator resource in your AWS account\. 
+
+ [AWS::Location::Tracker](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html)   
+Use the `AWS::Location::Tracker` resource to specify a tracker resource in your AWS account, which lets you receive current and historical location of devices\. 
+
+ [AWS::Location::TrackerConsumer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-trackerconsumer.html)   
+Use the `AWS::Location::TrackerConsumer` resource to specify an association between a geofence collection and a tracker resource\.  | June 7, 2021 | 
+| [New resources](AWS_Transfer.md) | The following resources were added: 
+
+ [AWS::Transfer::Access](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-access.html)   
+Use the `Access` resource to specify which groups in the directory should have access to upload and download files over the enabled protocols using AWS Transfer Family\.  | June 3, 2021 | 
+| [Updated resources](AWS_MediaPackage.md) | The following resources were updated: AWS::MediaPackage::Channel, AWS::MediaPackage::OriginEndpoint, AWS::MediaPackage::PackagingConfiguration, and AWS::MediaPackage::PackagingGroup\. 
+
+ [AWS::MediaPackage::Channel\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-channel.html)   
+Use the `EgressAccessLogs` property to specify egress access logs for your channel\.  
+Use the `IngressAccessLogs` property to specify ingress access logs for your channel\. 
+
+ [AWS::MediaPackage::OriginEndpoint\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html)   
+Use the `CmafEncryption.ConstantInitializationVector` property to specify an optional 128\-bit, 16\-byte hex value represented by a 32\-character string, used in conjunction with the key for encrypting blocks\. If you don't specify a value, then MediaPackage creates the constant initialization vector \(IV\)\. 
+
+ [AWS::MediaPackage::PackagingConfiguration\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packagingconfiguration.html)   
+Use the `CmafPackage.IncludeEncoderConfigurationInSegments` property to place your encoder's metadata into every video segment instead of the init fragment, which is the default behavior\. This lets you use different SPS/PPS/VPS settings for your assets during content playback\. 
+
+ [AWS::MediaPackage::PackagingGroup\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html)   
+Use the `EgressAccessLogs` property to configure egress access logs for your packaging group\.  | May 27, 2021 | 
+| [Updated resource](AWS_ACMPCA.md) | The following resource was updated: AWS::ACMPCA::CertificateAuthority\. 
+
+ [AWS::ACMPCA::CertificateAuthority](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html)   
+Use the `S3ObjectAcl` property to restrict public access to your CRLs\.  | May 27, 2021 | 
+| [Updated resource](AWS_FraudDetector.md) | The following resource was updated: AWS::FraudDetector::Detector\. 
+
+ [AWS::FraudDetector::Detector](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-detector.html)   
+Use the `AssociatedModels` property to associate models with the detector\.  | May 27, 2021 | 
+| [Updated resource](AWS_FSx.md) | The following resource was updated: AWS::FSx::FileSystem 
+
+[AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
+In the [LustreConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html) property type, use `DataCompressionType` to specify the type of data compression used by an Amazon FSx for Lustre file system\.  | May 27, 2021 | 
+| [Updated resource](AWS_MWAA.md) | The following resource was updated: AWS::MWAA::Environment 
+
+ [ModuleLoggingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-moduleloggingconfiguration.html)   
+In the `ModuleLoggingConfiguration` property type, the `CloudWatchLogGroupArn` response property type for the CloudWatch Logs ARN where Apache Airflow DAG logs are published was removed from the request to enable logs, and is being returned in the response\. 
+
+ [AirflowConfigurationOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowconfigurationoptions)   
+In the `AirflowConfigurationOptions` property type, use a `PrimitiveType` of `Json` to add an Apache Airflow configuration option\. 
+
+ [MinWorkers](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-minworkers)   
+Use the `MinWorkers` property to specify the minimum number of Apache Airflow workers that run in an environment\.  | May 27, 2021 | 
+| [Updated resource](AWS_QLDB.md) | The following resource was updated: AWS::QLDB::Ledger 
+
+ [AWS::QLDB::Ledger](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-ledger.html)   
+The `PermissionsMode` property has changed so that an update requires no interruption\.  | May 27, 2021 | 
+| [New resource](AWS_CUR.md) | The following resource was added: AWS::CUR::ReportDefinition 
+
+ [AWS::CUR::ReportDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cur-reportdefinition.html)   
+Use the `AWS::CUR::ReportDefinition` resource to define AWS Cost and Usage Report\.  | May 27, 2021 | 
+| [Region availability](AWS_AmazonMQ.md) | The following resources were updated: AWS::AmazonMQ::Broker 
+
+ [AWS::AmazonMQ::Broker](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html)   
+Amazon MQ for RabbitMQ is now available in the Amazon Web Services China \(Bejing\) and the Amazon Web Services China \(Ningxia\) Regions\.  | May 26, 2021 | 
 | [New resources](AWS_EC2.md) | The following resource was added: AWS::EC2::TransitGatewayPeeringAttachment\. 
 
  [AWS::EC2::TransitGatewayPeeringAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html)   
@@ -28,6 +179,10 @@ Use the `AWS::ECS::TaskDefinition EphemeralStorage` resource to define a custom 
 
  [AWS::ECS::CapacityProvider ManagedScaling](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-managedscaling.html)   
 Use the `AWS::ECS::CapacityProvider ManagedScaling.InstanceWarmupPeriod` resource to set an instance warmup period for newly launched Amazon EC2 instances\.  | May 14, 2021 | 
+| [Updated resource](AWS_EKS.md) | The following resource was updated: `AWS::EKS::Nodegroup` 
+
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)   
+Use the `Taints` property to specify whether you want to have the effect of `No_Schedule`, `Prefer_No_Schedule`, or `No_Execute` applied to your node group\.  | May 14, 2021 | 
 | [Updated resource](AWS_Elasticsearch.md) | The following resource was updated: AWS::Elasticsearch::Domain\. 
 
  [AWS::Elasticsearch::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html)   
@@ -127,10 +282,6 @@ Use the `AWS::FinSpace::Environment` resource to specify an Amazon FinSpace envi
 
 [AWS::Detective::Graph](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html)  
 Use the `Tags` property to assign tag values to the behavior graph\.  | April 29, 2021 | 
-| [Updated resource](AWS_EKS.md) | The following resource was updated to return the `OpenIdConnectIssuerUrl` when creating a cluster: AWS::EKS::Cluster\. 
-
- [AWS::EKS::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html)   
-Returns the `OpenIdConnectIssuerUrl` when creating a cluster\.  | April 29, 2021 | 
 | [New resource](AWS_IoTFleetHub.md) | The following resource was added: AWS::IoTFleetHub::Application 
 
  [AWS::IoTFleetHub::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleethub-application.html)   
@@ -146,6 +297,19 @@ Use the `AWS::SES::ContactList` resource to create a list that contains contacts
 
  [AWS::IoTWireless::TaskDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html)   
  Gets information about the gateway task definition for a wireless gateway\.   | April 26, 2021 | 
+| [New resources](AWS_NimbleStudio.md) | The following resources were added: AWS::NimbleStudio::Studio, AWS::NimbleStudio::StudioComponent, AWS::NimbleStudio::StreamingImage, and AWS::NimbleStudio::LaunchProfile\. 
+
+ [AWS::NimbleStudio::Studio](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html)   
+Use the `AWS::NimbleStudio::Studio` resource to specify a studio resource\. 
+
+ [AWS::NimbleStudio::StudioComponent](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html)   
+Use the `AWS::NimbleStudio::StudioComponent` resource to configure studio components, including types of workstations, render farms, license servers, and shared file systems\. 
+
+ [AWS::NimbleStudio::StreamingImage](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html)   
+Use the `AWS::NimbleStudio::StreamingImage` resource to configure a machine image, including operating system and software, that can be launched as a virtual workstation in a streaming session\. 
+
+ [AWS::NimbleStudio::LaunchProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html)   
+Use the `AWS::NimbleStudio::LaunchProfile` resource to specify user access permissions to studio components\.  | April 26, 2021 | 
 | [Updated resources](AWS_ElastiCache.md) | AWS::ElastiCache::CacheCluster, AWS::ElastiCache::ReplicationGroup\. 
 
  [AWS::ElastiCache::CacheCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html)   
@@ -171,7 +335,7 @@ Use the `AWS::AutoScaling::WarmPool` resource to specify a warm pool for an Auto
 | [Updated resources](AWS_CloudFormation.md) | The following resource was updated: AWS::CloudFormation::StackSet\. 
 
  [AWS::CloudFormation::StackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)  
-Use the `RegionConcurrencyType` property type to specify the concurrency type of deploying StackSets operations in regions\.  | April 15, 2021 | 
+Use the `RegionConcurrencyType` property type to specify the concurrency type of deploying StackSets operations in Regions\.  | April 15, 2021 | 
 | [Updated resource](AWS_ApiGateway.md) | The following resource was updated: AWS::ApiGateway::RestApi\. 
 
  [AWS::ApiGateway::RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html)   
@@ -180,17 +344,10 @@ Use the `Mode` property to specify how API Gateway handles resource updates when
 
  [AWS::IVS::Channel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html)   
 Use the `RecordingConfiguration` property to specify an Amazon IVS RecordingConfiguration, which stores configuration information related to recording your live stream to a data store\.  | April 15, 2021 | 
-| [Updated resource](AWS_MWAA.md) | The following resource was updated: AWS::MWAA::Environment 
-
- [AirflowConfigurationOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowconfigurationoptions)   
-In the `AirflowConfigurationOptions` property type, use a `PrimitiveType` of `Json` to add an Apache Airflow configuration option\. 
-
- [MinWorkers](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-minworkers)   
-Use the `MinWorkers` property to specify the minimum number of Apache Airflow workers that run in an environment\.  | April 15, 2021 | 
 | [New resources](AWS_EC2.md) | The following resource was added: AWS::EC2::EnclaveCertificateIamRoleAssociation\. 
 
  [AWS::EC2::EnclaveCertificateIamRoleAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-enclavecertificateiamroleassociation.html)   
-Use the `EnclaveCertificateIamRoleAssociation` resource to associate an AWS Identity and Access Management \(IAM\) role with an AWS Certificate Manager \(ACM\) certificate\.   | April 15, 2021 | 
+Use the `EnclaveCertificateIamRoleAssociation` resource to associate an AWS Identity and Access Management \(IAM\) role with an AWS Certificate Manager \(ACM\) certificate\.  | April 15, 2021 | 
 | [New resource](AWS_IVS.md) | The following resource was added: AWS::IVS::RecordingConfiguration 
 
  [AWS::IVS::RecordingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html)   
@@ -468,9 +625,9 @@ Use the `AWS::SageMaker::Image` resource to create a new Image in Amazon SageMak
 
  [AWS::SageMaker::ImageVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html)   
 Use the `AWS::SageMaker::ImageVersion` resource to create a new ImageVersion in Amazon SageMaker\.  | February 25, 2021 | 
-| [New resource](AWS_EKS.md) | The following resource was added: AWS::EKS::Addon\. 
+| [New resource](AWS_EKS.md) | The following resource was added: `AWS::EKS::Addon`\. 
 
- [AWS::EKS::Addon](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html)   
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html)   
 Use the `AWS::EKS::Addon` resource to create an Amazon EKS add\-on\.  | February 25, 2021 | 
 | [New resource](AWS_IAM.md) | The following resources were added: AWS::IAM::OIDCProvider, AWS::IAM::SAMLProvider, AWS::IAM::ServerCertificate, and AWS::IAM::VirtualMFADevice\. 
 
@@ -500,22 +657,22 @@ The behavior of the `BranchName` property on update has changed to be consistent
 | [Updated resources](AWS_AppMesh.md) | The following resources were updated: AWS::AppMesh::VirtualNode and AWS::AppMesh::VirtualGateway 
 
  [AWS::AppMesh::VirtualNode](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualnode.html)   
-Use the `ClientTlsCertificate` property represents the client's certificate\.  
-Use the `SubjectAlternativeNames` property represents the subject alternative names secured by the certificate\.  
-Use the `TlsValidationContextSdsTrust` property represents a Transport Layer Security \(TLS\) Secret Discovery Service validation context trust\.  
-Use the `ListenerTlsValidationContextTrust` property represents a listener's Transport Layer Security \(TLS\) validation context trust\.  
-Use the `SubjectAlternativeNameMatchers` represents the methods by which a subject alternative name on a peer Transport Layer Security \(TLS\) certificate can be matched\.  
-Use the `ListenerTlsSdsCertificate` property represents the listener's Secret Discovery Service certificate\.  
-Use the `ListenerTlsValidationContext` property represents a listener's Transport Layer Security \(TLS\) validation context\. 
+Use the `ClientTlsCertificate` property to represent the client's certificate\.  
+Use the `SubjectAlternativeNames` property to represent the subject alternative names secured by the certificate\.  
+Use the `TlsValidationContextSdsTrust` property to represent a Transport Layer Security \(TLS\) Secret Discovery Service validation context trust\.  
+Use the `ListenerTlsValidationContextTrust` property to represent a listener's Transport Layer Security \(TLS\) validation context trust\.  
+Use the `SubjectAlternativeNameMatchers` property to represent the methods by which a subject alternative name on a peer Transport Layer Security \(TLS\) certificate can be matched\.  
+Use the `ListenerTlsSdsCertificate` property to represent the listener's Secret Discovery Service certificate\.  
+Use the `ListenerTlsValidationContext` property to represent a listener's Transport Layer Security \(TLS\) validation context\. 
 
  [AWS::AppMesh::VirtualGateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualgateway.html)   
 Use the `VirtualGatewayListenerTlsValidationContextTrust` property to specify validation context trust\.  
 Use the `VirtualGatewayTlsValidationContextSdsTrust ` property to represent a virtual gateway's listener's Transport Layer Security \(TLS\) Secret Discovery Service validation context trust\.  
 Use the `SubjectAlternativeNames` property represents the subject alternative names secured by the certificate\.  
-Use the `VirtualGatewayListenerTlsSdsCertificate` property represents the virtual gateway's listener's Secret Discovery Service certificate\.  
-Use the `VirtualGatewayClientTlsCertificate` property represents the virtual gateway's client's Transport Layer Security \(TLS\) certificate\.  
-Use the `VirtualGatewayListenerTlsValidationContext` property represents a virtual gateway's listener's Transport Layer Security \(TLS\) validation context\.  
-Use the `SubjectAlternativeNameMatchers` property represents the methods by which a subject alternative name on a peer Transport Layer Security \(TLS\) certificate can be matched\.  | February 18, 2021 | 
+Use the `VirtualGatewayListenerTlsSdsCertificate` property to represent the virtual gateway's listener's Secret Discovery Service certificate\.  
+Use the `VirtualGatewayClientTlsCertificate` property to represent the virtual gateway's client's Transport Layer Security \(TLS\) certificate\.  
+Use the `VirtualGatewayListenerTlsValidationContext` property to represent a virtual gateway's listener's Transport Layer Security \(TLS\) validation context\.  
+Use the `SubjectAlternativeNameMatchers` property to represent the methods by which a subject alternative name on a peer Transport Layer Security \(TLS\) certificate can be matched\.  | February 18, 2021 | 
 | [Updated resources](AWS_IoTWireless.md) | The following resource was updated: AWS::IoTWireless::ServiceProfile 
 
  [AWS::IoTWireless::ServiceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-serviceprofile.html)   
@@ -679,7 +836,7 @@ Consists of a primary cluster that accepts writes and an associated secondary cl
 | [New resource](AWS_ImageBuilder.md) | Added the following resource: AWS::ImageBuilder::ContainerRecipe\. 
 
  [AWS::ImageBuilder::ContainerRecipe](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html)   
-Use the `AWS::ImageBuilder::ContainerRecipe` resource to create a container recipe in the EC2 Image Builder service\.  | February 4, 2021 | 
+Use the `AWS::ImageBuilder::ContainerRecipe` resource to create a container recipe in the Image Builder service\.  | February 4, 2021 | 
 | [Updated resource](AWS_ApiGatewayV2.md) | The following resource was updated: `AWS::ApiGatewayV2::Stage`\. 
 
  [AWS::ApiGatewayV2::Stage](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-stage.html)   
@@ -909,10 +1066,10 @@ Use the `BucketKeyEnabled` property to specify an S3 Bucket Key with default enc
 | [New resources](AWS_CloudFormation.md) | The following resources were added: AWS::CloudFormation::ModuleDefaultVersion and AWS::CloudFormation::ModuleVersion\. 
 
  [AWS::CloudFormation::ModuleDefaultVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)   
-Use the `AWS::CloudFormation::ModuleDefaultVersion` resource to specify the default version of a module, which will be used in CloudFormation operations for this account and region\. 
+Use the `AWS::CloudFormation::ModuleDefaultVersion` resource to specify the default version of a module, which will be used in CloudFormation operations for this account and Region\. 
 
  [AWS::CloudFormation::ModuleVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)   
-Use the `AWS::CloudFormation::ModuleVersion` resource to register the specified version of the module with the CloudFormation service, making it available for use in CloudFormation templates in this account and region\.  | December 18, 2020 | 
+Use the `AWS::CloudFormation::ModuleVersion` resource to register the specified version of the module with the CloudFormation service, making it available for use in CloudFormation templates in this account and Region\.  | December 18, 2020 | 
 | [New resources](AWS_DevOpsGuru.md) | The following resources were added: `AWS::DevOpsGuru::NotificationChannel`, `AWS::DevOpsGuru::ResourceCollection` 
 
  [AWS::DevOpsGuru::NotificationChannel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-notificationchannel.html)   
@@ -997,9 +1154,9 @@ In the [Code](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws
 
  [AWS::SSO::InstanceAccessControlAttributeConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-instanceaccesscontrolattributeconfiguration.html)   
 Use the `AWS::SSO::InstanceAccessControlAttributeConfiguration` resource to configure attribute\-based access control \(ABAC\) in AWS SSO\.  | December 18, 2020 | 
-| [Updated resource](AWS_EKS.md) | The following resource was updated to support specifying a capacity type for a node group: AWS::EKS::Nodegroup\. 
+| [Updated resource](AWS_EKS.md) | The following resource was updated to support specifying a capacity type for a node group: `AWS::EKS::Nodegroup`\. 
 
- [AWS::EKS::Nodegroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)   
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)   
 Use the `CapacityType` property to specify whether you want to use Spot or On\-Demand instance types for your node group\.  | December 17, 2020 | 
 | [Updated resource](AWS_GameLift.md) | The following resource was updated: AWS::GameLift::MatchmakingConfiguration\. 
 
@@ -1227,7 +1384,7 @@ In the [ElasticsearchClusterConfig](https://docs.aws.amazon.com/AWSCloudFormatio
 | [Updated resource](AWS_EMR.md) | The following resource was updated: AWS::EMR::Cluster\. 
 
  [AWS::EMR::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html)   
-Use the `LogEncryptionKmsKeyId` property to specify the AWS KMS customer master key \(CMK\) used for encrypting log files\.  
+Use the `LogEncryptionKmsKeyId` property to specify the AWS KMS key used for encrypting log files\.  
 Use the `ManagedScalingPolicy` property to create a managed scaling policy for an Amazon EMR cluster\.  
 Use the `StepConcurrencyLevel` property to specify the number of steps that can be executed concurrently\.  | October 22, 2020 | 
 | [Updated resource](AWS_Events.md) | The following resource was updated: AWS::Events::Rule\. 
@@ -1249,10 +1406,6 @@ DeliveryStreamEncryptionConfigurationInput property type is now supported for th
  [AWS::SNS::Topic](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html)   
 Use the `ContentBasedDeduplication` property to enable content\-based deduplication for FIFO topics\.  
 Use the `FifoTopic` property to create a FIFO topic\.  | October 22, 2020 | 
-| [Updated resource](AWS_Transfer.md) | The following resource was updated: AWS::Transfer::Server\. 
-
- [AWS::Transfer::Server](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)   
-In the [EndpointDetails](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-endpointdetails.html) property type, use the `SecurityGroupIds` property to specify a list of security groups IDs that are available to attach to your server's endpoint\.  | October 22, 2020 | 
 | [New resources](AWS_MediaPackage.md) | The following resources were added: AWS::MediaPackage::Asset, AWS::MediaPackage::Channel, , AWS::MediaPackage::OriginEndpoint, AWS::MediaPackage::PackagingConfiguration, and AWS::MediaPackage::PackagingGroup\. 
 
  [AWS::MediaPackage::Asset\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html)   
@@ -1278,6 +1431,12 @@ Use the `BlockPublicPolicy` when adding resource policies to Secrets Manager\.  
 
  [AWS::AmazonMQ::Broker](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html)   
 Use the `LdapServerMetadata` property to to authenticate and authorize connections to a broker\.  | October 9, 2020 | 
+| [Updated resource](AWS_CloudTrail.md) | The following resource was updated: AWS::CloudTrail::Trail 
+
+ [AWS::CloudTrail::Trail](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html)   
+Use the `ExcludeManagementEventSources` property to exclude exclude AWS Key Management Service \(AWS KMS\) events from a trail's logs\.  
+Use the `InsightSelectors` property to specify the Insights event type when you want to log Insights events on your trail\.  
+Use the `IsOrganizationTrail` property to create an AWS Organizations trail, if Organizations is enabled in your account\.  | October 8, 2020 | 
 | [New resources](AWS_CodeArtifact.md) | The following resources were added: AWS::CodeArtifact::Domain and AWS::CodeArtifact::Repository\. 
 
  [AWS::CodeArtifact::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-domain.html)   
@@ -1326,12 +1485,12 @@ Specifies the details of the job's `tmpfs` mount\.  | October 1, 2020 |
  [AWS::CloudFront::CachePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cachepolicy.html)   
 In the `AWS::CloudFront::CachePolicy` resource, some properties are now required that previously were not required\.  
 In the [AWS::CloudFront::CachePolicy ParametersInCacheKeyAndForwardedToOrigin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin.html) property type, use the `EnableAcceptEncodingBrotli` property to enable CloudFront to serve compressed objects to viewers that support the Brotli compression format\. For more information, see [Compression support](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-policy-compressed-objects) in the *Amazon CloudFront Developer Guide*\.  | October 1, 2020 | 
-| [Updated resource](AWS_EKS.md) | The following resource was updated to support specifying a custom CIDR for Kubernetes service IP address assignment: AWS::EKS::Cluster\. 
+| [Updated resource](AWS_EKS.md) | The following resource was updated to support specifying a custom CIDR for Kubernetes service IP address assignment: `AWS::EKS::Cluster`\. 
 
- [AWS::EKS::Cluster](https://docs.aws.amazon.com/aws-resource-eks-cluster.html)   
+ [https://docs.aws.amazon.com/aws-resource-eks-cluster.html](https://docs.aws.amazon.com/aws-resource-eks-cluster.html)   
 Use the `KubernetesNetworkConfig` property to specify a Kubernetes network configuration\. 
 
- [AWS::EKS::Cluster KubernetesNetworkConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html)   
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html)   
 Use the `ServiceIpv4Cidr` property to specify the CIDR block that you want Kubernetes to assign service IP addresses from\.  | October 1, 2020 | 
 | [New resource](AWS_WorkSpaces.md) | The following resource was added: `AWS::WorkSpaces::ConnectionAlias` 
 
@@ -1404,11 +1563,11 @@ Use the `AWS::CloudFront::RealtimeLogConfig` resource to create a new real\-time
 
  [AWS::CodeGuruReviewer::RepositoryAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codegurureviewer-repositoryassociation.html)   
 The `AWS::CodeGuruReviewer::RepositoryAssociation` resource describes an associated repository that contains source code to be analyzed by AWS CodeGuru Reviewer\. For more information, see [RespositoryAssociation](https://docs.aws.amazon.com/codeguru/latest/reviewer-api/API_RepositoryAssociation.html) in the *AWS CodeGuru Reviewer API Reference*\.  | September 3, 2020 | 
-| [New resource](AWS_EKS.md) | The following resource was added: AWS::EKS::FargateProfile\. 
+| [New resource](AWS_EKS.md) | The following resource was added: `AWS::EKS::FargateProfile`\. 
 
- [AWS::EKS::FargateProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-fargateprofile.html)   
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-fargateprofile.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-fargateprofile.html)   
 Use the `AWS::EKS::FargateProfile` resource to create an AWS Fargate profile\.  | September 3, 2020 | 
-| [Updated resource](AWS_CodeCommit.md) | The following resource was updated: AWS::CodeCommit::Repository Code 
+| [Updated resource](AWS_CodeCommit.md) | The following resource was updated: `AWS::CodeCommit::Repository Code` 
 
  [AWS::CodeCommit::Repository Code](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-code.html)   
 Use the `BranchName` property to specify a branch name to be used as the default branch when importing code into a repository\.  | August 31, 2020 | 
@@ -1431,9 +1590,9 @@ Use the `AWS::Route53Resolver::ResolverQueryLoggingConfigAssociation` resource t
 
  [AWS::KMS::Key](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html)   
 Added a `KeyId` attribute to the [return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#aws-resource-kms-key-return-values)\.  | August 26, 2020 | 
-| [Updated resource](AWS_EKS.md) | The following resource was updated to support use of a launch template: AWS::EKS::Nodegroup\. 
+| [Updated resource](AWS_EKS.md) | The following resource was updated to support use of a launch template: `AWS::EKS::Nodegroup`\. 
 
- [AWS::EKS::Nodegroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)   
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)   
 Use the `LaunchTemplate` property to specify a launch template specification that can be used to deploy or update a managed node group\. If you use a launch template to deploy a node group, some settings that you normally set for a node group must be moved into the launch template\. The text for affected settings has been updated to note that\.  | August 20, 2020 | 
 | [Updated resources](AWS_ECS.md) | The following resources were updated: AWS::ECS::TaskDefinition 
 
@@ -1608,6 +1767,10 @@ Use the `Tags` property to add tag keys and values to an AWS Cloud Map service\.
 
  [AWS::ECS::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html)   
 Use the `CapacityProviderStrategyItem` property to specify the capacity provider strategy when creating a cluster\.  | June 18, 2020 | 
+| [Updated resource](AWS_AutoScaling.md) | The following resource was updated: AWS::AutoScaling::ScheduledAction\. 
+
+ [AWS::AutoScaling::ScheduledAction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-scheduledaction.html)   
+Use the `TimeZone` property to create recurring scheduled actions in the local time zone\. If your time zone observes Daylight Saving Time \(DST\), the recurring action automatically adjusts for Daylight Saving Time\.  | June 18, 2020 | 
 | [Updated resource](AWS_FMS.md) | The following resources were updated: AWS::FMS::Policy IEMap\. 
 
  [AWS::FMS::Policy IEMap](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-iemap.html)   
@@ -1708,7 +1871,7 @@ Use the `AWS::GlobalAccelerator::EndpointGroup` resource to create or update an 
 
  [ AWS::GlobalAccelerator::Listener](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html)   
 Use the `AWS::GlobalAccelerator::Listener` resource to create or update a listener for AWS Global Accelerator\.  | May 14, 2020 | 
-| [New resources](AWS_Macie.md) | The following resources were added: AWS::Macie::CustomDataIdentifier, AWS::Macie::FindingsFilter, and AWS::Macie::Session 
+| [New resources](AWS_Macie.md) | The following resources were added: `AWS::Macie::CustomDataIdentifier`, `AWS::Macie::FindingsFilter`, and `AWS::Macie::Session` 
 
  [AWS::Macie::CustomDataIdentifier](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-customdataidentifier.html)   
 Use the `AWS::Macie::CustomDataIdentifier` resource to create a custom data identifier in Amazon Macie\. 
@@ -1730,7 +1893,7 @@ Use the `WaitForSuccessTimeoutSeconds` property to specify the number of seconds
 | [New resource](AWS_ImageBuilder.md) | The following resource was added: AWS::ImageBuilder::Image\. 
 
  [AWS::ImageBuilder::Image](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html)   
-Use the `AWS::ImageBuilder::Image` resource to create an image in the EC2 Image Builder service\.  | May 7, 2020 | 
+Use the `AWS::ImageBuilder::Image` resource to create an image in the Image Builder service\.  | May 7, 2020 | 
 | [Updated resource](AWS_Synthetics.md) | The following resource was updated: AWS::Synthetics::Canary\. 
 
  [AWS::Synthetics::Canary](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html)   
@@ -1746,19 +1909,19 @@ Use the `LustreMountName` attribute when mounting an Amazon FSx for Lustre file 
 | [New resources](AWS_ImageBuilder.md) | The following resources were added: AWS::ImageBuilder::Component, AWS::ImageBuilder::DistributionConfiguration, AWS::ImageBuilder::ImagePipeline, AWS::ImageBuilder::ImageRecipe, and AWS::ImageBuilder::InfrastructureConfiguration\. 
 
  [AWS::ImageBuilder::Component](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html)   
-Use the `AWS::ImageBuilder::Component` resource to create a component in the EC2 Image Builder service\. 
+Use the `AWS::ImageBuilder::Component` resource to create a component in the Image Builder service\. 
 
  [AWS::ImageBuilder::DistributionConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-distributionconfiguration.html)   
-Use the `AWS::ImageBuilder::DistributionConfiguration` resource to create a distribution configuration in the EC2 Image Builder service\. 
+Use the `AWS::ImageBuilder::DistributionConfiguration` resource to create a distribution configuration in the Image Builder service\. 
 
  [AWS::ImageBuilder::ImagePipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html)   
-Use the `AWS::ImageBuilder::ImagePipeline` resource to create an image pipeline in the EC2 Image Builder service\. 
+Use the `AWS::ImageBuilder::ImagePipeline` resource to create an image pipeline in the Image Builder service\. 
 
  [AWS::ImageBuilder::ImageRecipe](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html)   
-Use the `AWS::ImageBuilder::ImageRecipe` resource to create an image recipe in the EC2 Image Builder service\.  
+Use the `AWS::ImageBuilder::ImageRecipe` resource to create an image recipe in the Image Builder service\.  
 
  [AWS::ImageBuilder::InfrastructureConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html)   
-Use the `AWS::ImageBuilder::InfrastructureConfiguration` resource to create an infrastructure configuration in the EC2 Image Builder service\.  | April 23, 2020 | 
+Use the `AWS::ImageBuilder::InfrastructureConfiguration` resource to create an infrastructure configuration in the Image Builder service\.  | April 23, 2020 | 
 | [New resource](AWS_CE.md) | The following resource was added: AWS::CE::CostCategory 
 
  [AWS::CE::CostCategory](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_CE.html)   
@@ -1896,13 +2059,13 @@ In the [ SageMakerMachineLearningModelResourceData](https://docs.aws.amazon.com/
 
  [AWS::CloudFront::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)   
 In the [DistributionConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html) property type, use the `OriginGroups` property to specify information about origin groups for this distribution\.  | March 5, 2020 | 
-| [Updated resource](AWS_EKS.md) | The following resource was updated to support envelope encryption of secrets with AWS KMS: AWS::EKS::Cluster 
+| [Updated resource](AWS_EKS.md) | The following resource was updated to support envelope encryption of secrets with AWS Key Management Service: `AWS::EKS::Cluster` 
 
- [AWS::EKS::Cluster EncryptionConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html)   
-Use the `AWS::EKS::Cluster EncryptionConfig` property to specify the encryption configuration for a Amazon EKS cluster\. 
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-encryptionconfig.html)   
+Use the `AWS::EKS::Cluster EncryptionConfig` property to specify the encryption configuration for an Amazon EKS cluster\. 
 
- [AWS::EKS::Cluster Provider](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-provider.html)   
-Use the `AWS::EKS::Cluster Provider` property to specify the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) used to encrypt the secrets for a Amazon EKS cluster\.  | March 5, 2020 | 
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-provider.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-provider.html)   
+Use the `AWS::EKS::Cluster Provider` property to specify the AWS Key Management Service customer master key \(CMK\) used to encrypt the secrets for an Amazon EKS cluster\.  | March 5, 2020 | 
 | [New resource](AWS_Athena.md) | The following resource was added: AWS::Athena::WorkGroup 
 
  [AWS::Athena::WorkGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html)   
@@ -1918,7 +2081,7 @@ Use the `AWS::CodeStarConnections::Connection` resource to specify Connection\. 
 | [New resource](AWS_CloudWatch.md) | The following resource was added: AWS::CloudWatch::CompositeAlarm\. 
 
  [AWS::CloudWatch::CompositeAlarm](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html)   
-Use the `AWS::CloudWatch::CompositeAlarm` property to create a composite alarm\. Composite alarms evaluate their alarm state based on the alarm states of other CloudWatch rules\.  | March 2, 2020 | 
+Use the `AWS::CloudWatch::CompositeAlarm` property to create a composite alarm\. Composite alarms evaluate their alarm state based on the alarm states of other CloudWatchrules\.  | March 2, 2020 | 
 | [Updated resource](AWS_AppMesh.md) | The following resource was updated: AWS::AppMesh::VirtualNode 
 
  [AWS::AppMesh::VirtualNode](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualnode.html)   
@@ -2019,7 +2182,7 @@ Use the `Tags` property to add tag keys and values to an AWS OpsWorks for Chef A
 | [New resource](AWS_WAFv2.md) | The following resource was added: AWS::WAFv2::WebACLAssociation\. 
 
  [AWS WAFv2](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_WAFv2.html)   
-Use the web ACL association to define an association between a web ACL and a regional application resource, to protect the resource\. A regional application can be an Application Load Balancer \(ALB\), Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. For CloudFront distributions, you use AWS::CloudFront::Distribution to manage the association\.   | February 6, 2020 | 
+Use the web ACL association to define an association between a web ACL and a regional application resource, to protect the resource\. A regional application can be an Application Load Balancer \(ALB\), Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. For Amazon CloudFront distributions, you use AWS::CloudFront::Distribution to manage the association\.   | February 6, 2020 | 
 | [New resources](AWS_ACMPCA.md) | The following resources were added: AWS::ACMPCA::Certificate, AWS::ACMPCA::CertificateAuthority, AWS::ACMPCA::CertificateAuthorityActivation\. 
 
  [AWS::ACMPCA::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html)   
@@ -2290,13 +2453,13 @@ In the [Code](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws
  [AWS::AppSync::ApiCache](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html)   
 Use the `AWS::AppSync::ApiCache` resource to enable resolver caching with AWS AppSync\.  | November 21, 2019 | 
 | [Drift Detection for Stack Sets](#ReleaseHistory) | You can now run drift detection on a stack set and all the stack instances it includes\.When CloudFormation performs drift detection on a stack set, it performs drift detection on the stack associated with each stack instance in the stack set\. For more details, see [Detecting Unmanaged Configuration Changes in Stack Sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html)\. | November 19, 2019 | 
-| [Updated resource](AWS_EKS.md) | The following resource was updated to support Amazon EKS managed node groups: AWS::EKS::Cluster 
+| [Updated resource](AWS_EKS.md) | The following resource was updated to support Amazon EKS managed node groups: `AWS::EKS::Cluster` 
 
- [AWS::EKS::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html)   
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html)   
 Use the `AWS::EKS::Cluster` resource to create a new Amazon EKS cluster\.  | November 18, 2019 | 
 | [New resource](AWS_EKS.md) | The following resource was added: AWS::EKS::Nodegroup 
 
- [AWS::EKS::Nodegroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)   
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)   
 Use the `AWS::EKS::Nodegroup` resource to create a new Amazon EKS managed node group\.  | November 18, 2019 | 
 | [CloudFormation registry now available](#ReleaseHistory) | Use the CloudFormation registry to view private and public resources that are available for use in your CloudFormation account\.For more information, see [Using the CloudFormation Registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html) | November 18, 2019 | 
 | [CloudFormation registry API actions](#ReleaseHistory) | The following API actions for managing types in the CloudFormation registry are now available\.For more information about the CloudFormation registry, see [Using the CloudFormation Registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html) 
@@ -3297,7 +3460,7 @@ Use the `AWS::IoTAnalytics::Datastore` resource to create a data store\. A data 
 
  [AWS::IoTAnalytics::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-pipeline.html)   
 Use the `AWS::IoTAnalytics::Pipeline` resource to create a pipeline\. A pipeline consumes messages from one or more channels and allows you to process the messages before storing them in a data store\.  | December 13, 2018 | 
-| [The CAPABILITY\_AUTO\_EXPAND capability is now available\.](#ReleaseHistory) | Use the `CAPABILITY_AUTO_EXPAND` capability to create or update a stack directly from a stack template that contains macros, without first reviewing the resulting changes in a change set first\.For more information, see [CreateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) or [UpdateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStack.html) in *AWS CloudFormation API Reference*\. | December 7, 2018 | 
+| [The `CAPABILITY_AUTO_EXPAND` capability is now available\.](#ReleaseHistory) | Use the `CAPABILITY_AUTO_EXPAND` capability to create or update a stack directly from a stack template that contains macros, without first reviewing the resulting changes in a change set first\.For more information, see [CreateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) or [UpdateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStack.html) in *AWS CloudFormation API Reference*\. | December 7, 2018 | 
 | [Updated resource](#ReleaseHistory) | The following resource was updated: AWS::CodeBuild::Project\. 
 
  [AWS::CodeBuild::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)   
@@ -3367,10 +3530,10 @@ Use the `AWS::EC2::EC2Fleet` resource to launch an EC2 Fleet that can include mu
 Use the `AWS::Kinesis::StreamConsumer` resource to to register a consumer with a Kinesis data stream\. 
 
  [AWS::Route53Resolver::ResolverEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html)   
-Use the `AWS::Route53Resolver::ResolverEndpoint` resource to specify settings for inbound or outbound endpoints for Amazon Route 53\. 
+Use the `AWS::Route53Resolver::ResolverEndpoint` resource to specify settings for inbound or outbound endpoints for Amazon Route 53\. 
 
  [AWS::Route53Resolver::ResolverRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html)   
-Use the `AWS::Route53Resolver::ResolverRule` resource to specify detailed information about a resolver rule, which specifies how to route DNS queries out of a VPC for Amazon Route 53\.  | November 20, 2018 | 
+Use the `AWS::Route53Resolver::ResolverRule` resource to specify detailed information about a resolver rule, which specifies how to route DNS queries out of a VPC for Amazon Route 53\.  | November 20, 2018 | 
 | [Updated resources ](#ReleaseHistory) | The following resources were updated: AWS::ApiGateway::Deployment, AWS::ApiGateway::Stage, AWS::AutoScaling::AutoScalingGroup, AWS::EC2::EIP, AWS::ElasticLoadBalancingV2::Listener, AWS::EMR::Cluster, AWS::OpsWorks::Layer, AWS::RDS::DBCluster, AWS::RDS::DBInstance, AWS::S3::Bucket, and AWS::SNS::Topic\. 
 
  [AWS::ApiGateway::Deployment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-deployment.html)   
@@ -3478,7 +3641,7 @@ Use the `RegionalDomainName` attribute with the Fn::GetAtt function to return th
  [AWS::Workspaces::Workspace](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html)   
 Use the `Tags` property to specify the tags \(key\-value pairs\) that you want to attach to the WorkSpace\.  
 Use the `WorkspaceProperties` property to specify information about a WorkSpace\.  | November 9, 2018 | 
-| [The secretsmanager dynamic reference is now available\.](#ReleaseHistory) | Use the `secretsmanager` dynamic reference to retrieve entire secrets or secret values that are stored in AWS Secrets Manager for use in your templates\. *Secrets* can be database credentials, passwords, third\-party API keys, and even arbitrary text\. Using the `secretsmanager` dynamic reference guarantees that neither Secrets Manager nor CloudFormation logs or persists any resolved secret value\.For more information, see [Using Dynamic References to Specify Template Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)\. | November 9, 2018 | 
+| [The `secretsmanager` dynamic reference is now available\.](#ReleaseHistory) | Use the `secretsmanager` dynamic reference to retrieve entire secrets or secret values that are stored in AWS Secrets Manager for use in your templates\. *Secrets* can be database credentials, passwords, third\-party API keys, and even arbitrary text\. Using the `secretsmanager` dynamic reference guarantees that neither Secrets Manager nor CloudFormation logs or persists any resolved secret value\.For more information, see [Using Dynamic References to Specify Template Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)\. | November 9, 2018 | 
 | [New resources](#ReleaseHistory) | The following resources were added: AWS::DLM::LifecyclePolicy, AWS::SecretsManager::ResourcePolicy, AWS::SecretsManager::RotationSchedule, AWS::SecretsManager::Secret, and AWS::SecretsManager::SecretTargetAttachment\. 
 
  [AWS::DLM::LifecyclePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dlm-lifecyclepolicy.html)   
@@ -3673,9 +3836,9 @@ Use the `XMLClassifier` property to specify AWS Glue classifier for XML content\
  [AWS::ApiGateway::DomainName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html)   
 
 Use the following attributes with the `Fn::GetAtt` intrinsic function:
-+ The `DistributionHostedZoneId` attribute returns the region\-agnostic Amazon Route 53 Hosted Zone ID of the edge\-optimized endpoint\.
++ The `DistributionHostedZoneId` attribute returns the region\-agnostic Amazon Route 53 Hosted Zone ID of the edge\-optimized endpoint\.
 + The `RegionalDomainName` attribute returns the domain name associated with the regional endpoint for this custom domain name\.
-+ The `RegionalHostedZoneId` attribute returns the region\-specific Amazon Route 53 Hosted Zone ID of the regional endpoint\. 
++ The `RegionalHostedZoneId` attribute returns the region\-specific Amazon Route 53 Hosted Zone ID of the regional endpoint\. 
 
  [AWS::CertificateManager::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html)  
 Use the `ValidationMethod` property to specify the method you want to use if you are requesting a public certificate to validate that you own or control a domain\. 
@@ -4070,7 +4233,7 @@ The following table describes important changes in each release of the AWS Cloud
 |  Resource update  |  April 8, 2015  |  For the [AWS::CloudFormation::CustomResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html) resource, you can specify Lambda function Amazon Resource Names \(ARNs\) in the `ServiceToken` property\.  |  2010\-05\-15  | 
 |  Amazon RDS update  |  December 24, 2014  |  AWS CloudFormation added two new properties for RDS DB instances\. You can associate an option group with a DB instance and specify the DB instance storage type\. For more information, see [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)\.  |  2010\-05\-15  | 
 |  Elastic Load Balancing update  |  December 24, 2014  |  You can use the `ConnectionSettings` property to specify how long connections can remain idle\. For more information, see [AWS::ElasticLoadBalancing::LoadBalancer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html)\.  |  2010\-05\-15  | 
-|  Route 53 update  |  November 6, 2014  |  You can now provision and manage Route 53 [hosted zones](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html) , [health checks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html), [failover record sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html) , and [geolocation record sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html) \.  |  2010\-05\-15  | 
+|  Route 53 update  |  November 6, 2014  |  You can now provision and manage Route 53 [hosted zones](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html) , [health checks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html), [failover record sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html) , and [geolocation record sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html) \.  |  2010\-05\-15  | 
 |  Auto Scaling rolling update enhancement  |  November 6, 2014  |  During an update, you can use the `WaitOnResourceSignals` flag to instruct AWS CloudFormation to wait for instances to signal success\. That way, AWS CloudFormation won't update the next batch of instances until the current batch is ready\. For more information, see [UpdatePolicy Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html)\.  |  2010\-05\-15  | 
 |  New VPC Fn:GetAtt attributes  |  November 6, 2014  |  Given a VPC ID, you can retrieve the default security group and network ACL for that VPC\. For more information, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.  |  2010\-05\-15  | 
 |  New AWS\-specific parameter types  |  November 6, 2014  |  You can specify AWS\-specific parameter types in your AWS CloudFormation templates\. In the AWS CloudFormation console, these parameter types provide a drop\-down list of valid values\. With the API or CLI, AWS CloudFormation can quickly validate values for these parameter types before creating or updating a stack\. For more information, see [Parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html)\.  |  2010\-05\-15  | 
@@ -4138,7 +4301,7 @@ The following table describes important changes in each release of the AWS Cloud
 |  New feature  |  February 2, 2012  |  You can now update properties for the following resources in an existing stack: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html) For a complete list of updatable resources and details about what to consider when updating a stack, see [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)\.  |  2010\-05\-15  | 
 |  Restructured guide  |  February 2, 2012  |  Reorganized existing sections into new sections: [Working with AWS CloudFormation Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-guide.html) and **Managing Stacks**\. Moved [Template Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-reference.html) to the top level of the Table of Contents\. Moved [Estimating the Cost of Your AWS CloudFormation Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-paying.html) to the Getting Started section\.  |  2010\-05\-15  | 
 |  New content  |  February 2, 2012  |  Added three new sections: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
-|  New feature  |  May 26, 2011  |  AWS CloudFormation now provides the aws cloudformation list\-stacks command, which enables you to list stacks filtered by stack status\. Deleted stacks can be listed for up to 90 days after they have been deleted\.  For more information, see [Describing and Listing Your Stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html)\.  |  2010\-05\-15  | 
-|  New features  |  May 26, 2011  |  The aws cloudformation describe\-stack\-resources and aws cloudformation get\-template commands now enable you to get information from stacks that have been deleted for 90 days after they have been deleted\.  For more information, see [Listing Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-listing-stack-resources.html) and [Retrieving a Template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-get-template.html)\.  |  2010\-05\-15  | 
+|  New feature  |  May 26, 2011  |  AWS CloudFormation now provides the `aws cloudformation list-stacks` command, which enables you to list stacks filtered by stack status\. Deleted stacks can be listed for up to 90 days after they have been deleted\.  For more information, see [Describing and Listing Your Stacks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html)\.  |  2010\-05\-15  | 
+|  New features  |  May 26, 2011  |  The `aws cloudformation describe-stack-resources` and `aws cloudformation get-template` commands now enable you to get information from stacks that have been deleted for 90 days after they have been deleted\.  For more information, see [Listing Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-listing-stack-resources.html) and [Retrieving a Template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-get-template.html)\.  |  2010\-05\-15  | 
 |  New link  |  March 1, 2011  |  AWS CloudFormation endpoint information is now located in the AWS General Reference\. For more information, go to Regions and Endpoints in [Amazon Web Services General Reference](http://docs.aws.amazon.com/general/latest/gr/index.html?rande.html)\.  |  2010\-05\-15  | 
 |  Initial release  |  February 25, 2011  |  This is the initial public release of AWS CloudFormation\.  |  2010\-05\-15  | 

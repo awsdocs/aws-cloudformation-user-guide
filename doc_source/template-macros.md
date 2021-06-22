@@ -103,7 +103,7 @@ AWS CloudFormation expects the underlying function to return a response in the f
 
   The error message that explains why the transform failed\. CloudFormation displays this error message in the **Events** pane of the **Stack details** page for your stack\.
 
-  For example, "Error creating change set: Transform *AWS account number*::*macro name* failed with: *error message string*"\.
+  For example, "Error creating change set: Transform *AWS account account number*::*macro name* failed with: *error message string*"\.
 
 For information about additional considerations when creating macros, see [Considerations when creating AWS CloudFormation macro definitions](#template-macros-considerations)\.
 

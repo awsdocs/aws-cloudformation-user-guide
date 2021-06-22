@@ -139,7 +139,7 @@ A list of CloudFront functions that are associated with this cache behavior\. Cl
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LambdaFunctionAssociations`  <a name="cfn-cloudfront-distribution-cachebehavior-lambdafunctionassociations"></a>
-A complex type that contains zero or more Lambda function associations for a cache behavior\.  
+A complex type that contains zero or more Lambda@Edge function associations for a cache behavior\.  
 *Required*: No  
 *Type*: List of [LambdaFunctionAssociation](aws-properties-cloudfront-distribution-lambdafunctionassociation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

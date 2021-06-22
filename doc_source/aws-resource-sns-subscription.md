@@ -1,6 +1,6 @@
 # AWS::SNS::Subscription<a name="aws-resource-sns-subscription"></a>
 
-The `AWS::SNS::Subscription` resource subscribes an endpoint to an Amazon Simple Notification Service \(Amazon SNS\) topic\. For a subscription to be created, the owner of the endpoint must confirm the subscription\.
+The `AWS::SNS::Subscription` resource subscribes an endpoint to an Amazon SNS topic\. For a subscription to be created, the owner of the endpoint must confirm the subscription\.
 
 ## Syntax<a name="aws-resource-sns-subscription-syntax"></a>
 
@@ -44,45 +44,45 @@ Properties:
 ## Properties<a name="aws-resource-sns-subscription-properties"></a>
 
 `DeliveryPolicy`  <a name="cfn-sns-subscription-deliverypolicy"></a>
-The delivery policy JSON assigned to the subscription\. Enables the subscriber to define the message delivery retry strategy in the case of an HTTP/S endpoint subscribed to the topic\. For more information, see ` [GetSubscriptionAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSubscriptionAttributes.html) ` in the *Amazon Simple Notification Service API Reference* and [Message Delivery Retries](https://docs.aws.amazon.com/sns/latest/dg/sns-message-delivery-retries.html) in the *Amazon SNS Developer Guide*\.  
+The delivery policy JSON assigned to the subscription\. Enables the subscriber to define the message delivery retry strategy in the case of an HTTP/S endpoint subscribed to the topic\. For more information, see ` [GetSubscriptionAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSubscriptionAttributes.html) ` in the *Amazon SNS API Reference* and [Message delivery retries](https://docs.aws.amazon.com/sns/latest/dg/sns-message-delivery-retries.html) in the *Amazon SNS Developer Guide*\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Endpoint`  <a name="cfn-sns-endpoint"></a>
-The subscription's endpoint\. The endpoint value depends on the protocol that you specify\. For more information, see the `Endpoint` parameter of the ` [Subscribe](https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) ` action in the *Amazon Simple Notification Service API Reference*\.  
+The subscription's endpoint\. The endpoint value depends on the protocol that you specify\. For more information, see the `Endpoint` parameter of the ` [Subscribe](https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) ` action in the *Amazon SNS API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FilterPolicy`  <a name="cfn-sns-subscription-filterpolicy"></a>
-The filter policy JSON assigned to the subscription\. Enables the subscriber to filter out unwanted messages\. For more information, see ` [GetSubscriptionAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSubscriptionAttributes.html) ` in the *Amazon Simple Notification Service API Reference* and [Message Filtering](https://docs.aws.amazon.com/sns/latest/dg/sns-message-filtering.html) in the *Amazon SNS Developer Guide*\.  
+The filter policy JSON assigned to the subscription\. Enables the subscriber to filter out unwanted messages\. For more information, see ` [GetSubscriptionAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSubscriptionAttributes.html) ` in the *Amazon SNS API Reference* and [Message filtering](https://docs.aws.amazon.com/sns/latest/dg/sns-message-filtering.html) in the *Amazon SNS Developer Guide*\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-sns-protocol"></a>
-The subscription's protocol\. For more information, see the `Protocol` parameter of the ` [Subscribe](https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) ` action in the *Amazon Simple Notification Service API Reference*\.  
+The subscription's protocol\. For more information, see the `Protocol` parameter of the ` [Subscribe](https://docs.aws.amazon.com/sns/latest/api/API_Subscribe.html) ` action in the *Amazon SNS API Reference*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RawMessageDelivery`  <a name="cfn-sns-subscription-rawmessagedelivery"></a>
-When set to `true`, enables raw message delivery\. Raw messages don't contain any JSON formatting and can be sent to Amazon SQS and HTTP/S endpoints\. For more information, see ` [GetSubscriptionAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSubscriptionAttributes.html) ` in the *Amazon Simple Notification Service API Reference*\.  
+When set to `true`, enables raw message delivery\. Raw messages don't contain any JSON formatting and can be sent to Amazon SQS and HTTP/S endpoints\. For more information, see ` [GetSubscriptionAttributes](https://docs.aws.amazon.com/sns/latest/api/API_GetSubscriptionAttributes.html) ` in the *Amazon SNS API Reference*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RedrivePolicy`  <a name="cfn-sns-subscription-redrivepolicy"></a>
 When specified, sends undeliverable messages to the specified Amazon SQS dead\-letter queue\. Messages that can't be delivered due to client errors \(for example, when the subscribed endpoint is unreachable\) or server errors \(for example, when the service that powers the subscribed endpoint becomes unavailable\) are held in the dead\-letter queue for further analysis or reprocessing\.  
-For more information about the redrive policy and dead\-letter queues, see [Amazon SQS dead\-letter queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html) in the *Amazon Simple Queue Service Developer Guide*\.  
+For more information about the redrive policy and dead\-letter queues, see [Amazon SQS dead\-letter queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html) in the *Amazon SQS Developer Guide*\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Region`  <a name="cfn-sns-subscription-region"></a>
 For cross\-region subscriptions, the region in which the topic resides\.  
-If no region is specified, CloudFormation uses the region of the caller as the default\.  
+If no region is specified, AWS CloudFormation uses the region of the caller as the default\.  
 If you perform an update operation that only updates the `Region` property of a `AWS::SNS::Subscription` resource, that operation will fail unless you are either:  
 + Updating the `Region` from `NULL` to the caller region\.
 + Updating the `Region` from the caller region to `NULL`\.

@@ -20,7 +20,7 @@ This section provides a number of example scenarios that you can use to understa
 + [AWS OpsWorks template snippets](quickref-opsworks.md)
 + [Amazon Redshift template snippets](quickref-redshift.md)
 + [Amazon RDS template snippets](quickref-rds.md)
-+ [Route 53 template snippets](quickref-route53.md)
++ [Route 53 template snippets](quickref-route53.md)
 + [Amazon S3 template snippets](quickref-s3.md)
 + [Amazon SNS template snippets](quickref-sns.md)
 + [Amazon SQS template snippets](scenario-sqs-queue.md)

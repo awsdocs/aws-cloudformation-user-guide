@@ -120,7 +120,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 Returns the Amazon Resource Name \(ARN\) of the image recipe\. For example, `arn:aws:imagebuilder:us-east-1:123456789012:image-recipe/mybasicrecipe/2019.12.03`\.
 
 `Name`  <a name="Name-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The name of the image recipe\.
 
 ## Examples<a name="aws-resource-imagebuilder-imagerecipe--examples"></a>
 
@@ -214,5 +214,5 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-imagebuilder-imagerecipe--seealso"></a>
-+ [Create a basic image recipe](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-recipe) in the *EC2 Image Builder User Guide*\.
++ [Create a basic image recipe](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-recipe) in the *Image Builder User Guide*\.
 

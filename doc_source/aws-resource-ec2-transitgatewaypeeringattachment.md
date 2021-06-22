@@ -1,6 +1,6 @@
 # AWS::EC2::TransitGatewayPeeringAttachment<a name="aws-resource-ec2-transitgatewaypeeringattachment"></a>
 
-Requests a transit gateway peering attachment between the specified transit gateway \(requester\) and a peer transit gateway \(accepter\)\. The transit gateways must be in different Regions\. The peer transit gateway can be in your account or a different AWS account\. 
+Requests a transit gateway peering attachment between the specified transit gateway \(requester\) and a peer transit gateway \(accepter\)\. The transit gateways must be in different Regions\. The peer transit gateway can be in your account or a different AWS account\.
 
 After you create the peering attachment, the owner of the accepter transit gateway must accept the attachment request\.
 
@@ -39,7 +39,7 @@ Properties:
 ## Properties<a name="aws-resource-ec2-transitgatewaypeeringattachment-properties"></a>
 
 `PeerAccountId`  <a name="cfn-ec2-transitgatewaypeeringattachment-peeraccountid"></a>
-The AWS account ID of the owner of the transit gateway\.  
+The ID of the AWS account that owns the transit gateway\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -89,9 +89,6 @@ The time the transit gateway peering attachment was created\.
 
 `State`  <a name="State-fn::getatt"></a>
 The state of the transit gateway peering attachment\. Note that the `initiating` state has been deprecated\.
-
-`Status`  <a name="Status-fn::getatt"></a>
-The status of the transit gateway peering attachment\.
 
 `TransitGatewayAttachmentId`  <a name="TransitGatewayAttachmentId-fn::getatt"></a>
 The ID of the transit gateway peering attachment\.

@@ -28,7 +28,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[FileSystemConfigs](#cfn-lambda-function-filesystemconfigs)" : [ FileSystemConfig, ... ],
       "[FunctionName](#cfn-lambda-function-functionname)" : String,
       "[Handler](#cfn-lambda-function-handler)" : String,
-      "[Id](#cfn-lambda-function-id)" : String,
       "[ImageConfig](#cfn-lambda-function-imageconfig)" : ImageConfig,
       "[KmsKeyArn](#cfn-lambda-function-kmskeyarn)" : String,
       "[Layers](#cfn-lambda-function-layers)" : [ String, ... ],
@@ -62,7 +61,6 @@ Properties:
     - FileSystemConfig
   [FunctionName](#cfn-lambda-function-functionname): String
   [Handler](#cfn-lambda-function-handler): String
-  [Id](#cfn-lambda-function-id): String
   [ImageConfig](#cfn-lambda-function-imageconfig): 
     ImageConfig
   [KmsKeyArn](#cfn-lambda-function-kmskeyarn): String
@@ -139,12 +137,6 @@ The name of the method within your code that Lambda calls to execute your functi
 *Pattern*: `[^\s]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Id`  <a name="cfn-lambda-function-id"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `ImageConfig`  <a name="cfn-lambda-function-imageconfig"></a>
 Configuration values that override the container image Dockerfile settings\. See [Container settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms)\.   
 *Required*: No  
@@ -214,7 +206,7 @@ The amount of time that Lambda allows a function to run before stopping it\. The
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TracingConfig`  <a name="cfn-lambda-function-tracingconfig"></a>
-Set `Mode` to `Active` to sample and trace a subset of incoming requests with [AWS X\-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html)\.  
+Set `Mode` to `Active` to sample and trace a subset of incoming requests with [X\-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html)\.  
 *Required*: No  
 *Type*: [TracingConfig](aws-properties-lambda-function-tracingconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

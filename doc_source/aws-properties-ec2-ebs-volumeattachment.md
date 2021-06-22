@@ -6,7 +6,7 @@ Before this resource can be deleted \(and therefore the volume detached\), you m
 
 If an Amazon EBS volume is the root device of an instance, it cannot be detached while the instance is in the "running" state\. To detach the root volume, stop the instance first\.
 
-If the root volume is detached from an instance with an AWS Marketplace product code, then the AWS Marketplace product codes from that volume are no longer associated with the instance\.
+If the root volume is detached from an instance with an AWS Marketplace product code, then the product codes from that volume are no longer associated with the instance\.
 
 ## Syntax<a name="aws-properties-ec2-ebs-volumeattachment-syntax"></a>
 

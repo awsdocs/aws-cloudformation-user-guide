@@ -61,44 +61,20 @@ The name of the application\.
 #### JSON<a name="aws-resource-kinesisanalyticsv2-applicationoutput--examples--Create_an_ApplicationOutput_object--json"></a>
 
 ```
-{
-    "Type": "AWS::KinesisAnalyticsV2::ApplicationOutput",
-    "Properties": {
-        "ApplicationName": {
-            "Ref": "BasicApplication"
-        },
-        "Output": {
-            "Name": "exampleOutput",
-            "DestinationSchema": {
-                "RecordFormatType": "CSV"
-            },
-            "KinesisStreamsOutput": {
-                "ResourceARN": {
-                    "Fn::GetAtt": [
-                        "OutputKinesisStream",
-                        "Arn"
-                    ]
-                }
-            }
-        }
-    }
-}
+{ "Type": "AWS::KinesisAnalyticsV2::ApplicationOutput",
+                "Properties": { "ApplicationName": { "Ref": "BasicApplication" }, "Output": {
+                "Name": "exampleOutput", "DestinationSchema": { "RecordFormatType": "CSV" },
+                "KinesisStreamsOutput": { "ResourceARN": { "Fn::GetAtt": [ "OutputKinesisStream",
+                "Arn" ] } } } } }
 ```
 
 #### YAML<a name="aws-resource-kinesisanalyticsv2-applicationoutput--examples--Create_an_ApplicationOutput_object--yaml"></a>
 
 ```
-Type: 'AWS::KinesisAnalyticsV2::ApplicationOutput'
-Properties:
-  ApplicationName: !Ref BasicApplication
-  Output:
-    Name: exampleOutput
-    DestinationSchema:
-      RecordFormatType: CSV
-    KinesisStreamsOutput:
-      ResourceARN: !GetAtt 
-        - OutputKinesisStream
-        - Arn
+Type: 'AWS::KinesisAnalyticsV2::ApplicationOutput' Properties:
+                ApplicationName: !Ref BasicApplication Output: Name: exampleOutput
+                DestinationSchema: RecordFormatType: CSV KinesisStreamsOutput: ResourceARN: !GetAtt
+                - OutputKinesisStream - Arn
 ```
 
 ## See also<a name="aws-resource-kinesisanalyticsv2-applicationoutput--seealso"></a>

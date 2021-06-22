@@ -2,7 +2,7 @@
 
 The AWS::AutoScaling::ScheduledAction resource specifies an Amazon EC2 Auto Scaling scheduled action so that the Auto Scaling group can change the number of instances available for your application in response to predictable load changes\. 
 
-When you update a stack with an Auto Scaling group and scheduled action, CloudFormation always sets the min size, max size, and desired capacity properties of your group to the values that are defined in the `AWS::AutoScaling::AutoScalingGroup` section of your template\. However, you might not want CloudFormation to do that when you have a scheduled action in effect\. You can use an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) to prevent CloudFormation from changing the min size, max size, or desired capacity property values during a stack update unless you modified the individual values in your template\. If you have rolling updates enabled, before you can update the Auto Scaling group, you must suspend scheduled actions by specifying an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\. You can find sample update policies for rolling updates in [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)\.
+When you update a stack with an Auto Scaling group and scheduled action, CloudFormation always sets the min size, max size, and desired capacity properties of your group to the values that are defined in the `AWS::AutoScaling::AutoScalingGroup` section of your template\. However, you might not want CloudFormation to do that when you have a scheduled action in effect\. You can use an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) to prevent CloudFormation from changing the min size, max size, or desired capacity property values during a stack update unless you modified the individual values in your template\. If you have rolling updates enabled, before you can update the Auto Scaling group, you must suspend scheduled actions by specifying an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the Auto Scaling group\. You can find a sample update policy for rolling updates in [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)\.
 
 For more information, see [Scheduled scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/schedule_time.html) and [Suspending and resuming scaling processes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
@@ -22,7 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MaxSize](#cfn-as-scheduledaction-maxsize)" : Integer,
       "[MinSize](#cfn-as-scheduledaction-minsize)" : Integer,
       "[Recurrence](#cfn-as-scheduledaction-recurrence)" : String,
-      "[StartTime](#cfn-as-scheduledaction-starttime)" : String
+      "[StartTime](#cfn-as-scheduledaction-starttime)" : String,
+      "[TimeZone](#cfn-as-scheduledaction-timezone)" : String
     }
 }
 ```
@@ -39,14 +40,18 @@ Properties:
   [MinSize](#cfn-as-scheduledaction-minsize): Integer
   [Recurrence](#cfn-as-scheduledaction-recurrence): String
   [StartTime](#cfn-as-scheduledaction-starttime): String
+  [TimeZone](#cfn-as-scheduledaction-timezone): String
 ```
 
 ## Properties<a name="aws-resource-as-scheduledaction-properties"></a>
 
 `AutoScalingGroupName`  <a name="cfn-as-scheduledaction-asgname"></a>
-The name or Amazon Resource Name \(ARN\) of the Auto Scaling group\.  
+The name of the Auto Scaling group\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DesiredCapacity`  <a name="cfn-as-scheduledaction-desiredcapacity"></a>
@@ -57,7 +62,7 @@ You must specify at least one of the following properties: `MaxSize`, `MinSize`,
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndTime`  <a name="cfn-as-scheduledaction-endtime"></a>
-The date and time in UTC for the recurring schedule to end\. For example, `"2019-06-01T00:00:00Z"`\.   
+The date and time for the recurring schedule to end, in UTC\. For example, `"2021-06-01T00:00:00Z"`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -77,16 +82,31 @@ You must specify at least one of the following properties: `MaxSize`, `MinSize`,
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Recurrence`  <a name="cfn-as-scheduledaction-recurrence"></a>
-The recurring schedule for this action, in Unix cron syntax format\. For more information about cron syntax, see [Crontab](http://crontab.org/)\.   
-Specifying the `StartTime` and `EndTime` properties with `Recurrence` property forms the start and stop boundaries of the recurring action\.   
+The recurring schedule for this action\. This format consists of five fields separated by white spaces: \[Minute\] \[Hour\] \[Day\_of\_Month\] \[Month\_of\_Year\] \[Day\_of\_Week\]\. For more information about this format, see [Crontab](http://crontab.org)\.  
+When `StartTime` and `EndTime` are specified with `Recurrence`, they form the boundaries of when the recurring action starts and stops\.  
+Cron expressions use Universal Coordinated Time \(UTC\) by default\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`StartTime`  <a name="cfn-as-scheduledaction-starttime"></a>
+The date and time for this action to start, in YYYY\-MM\-DDThh:mm:ssZ format in UTC/GMT only\. For example, `"2021-06-01T00:00:00Z"`\.   
+If you specify `Recurrence` and `StartTime`, Amazon EC2 Auto Scaling performs the action at this time, and then performs the action based on the specified recurrence\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`StartTime`  <a name="cfn-as-scheduledaction-starttime"></a>
-The date and time in UTC for this action to start\. For example, `"2019-06-01T00:00:00Z"`\.   
+`TimeZone`  <a name="cfn-as-scheduledaction-timezone"></a>
+Specifies the time zone for a cron expression\. If a time zone is not provided, UTC is used by default\.   
+Valid values are the canonical names of the IANA time zones, derived from the IANA Time Zone Database \(such as `Etc/GMT+9` or `Pacific/Tahiti`\)\. For more information, see [https://en\.wikipedia\.org/wiki/List\_of\_tz\_database\_time\_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-as-scheduledaction-return-values"></a>
@@ -99,13 +119,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-as-scheduledaction--examples"></a>
 
-The following example schedule scaling actions for an Auto Scaling group\.
+The following examples schedule scaling actions for an Auto Scaling group\.
 
-### Scheduled scaling action<a name="aws-resource-as-scheduledaction--examples--Scheduled_scaling_action"></a>
+### Scheduled actions that run on a recurring schedule<a name="aws-resource-as-scheduledaction--examples--Scheduled_actions_that_run_on_a_recurring_schedule"></a>
 
-The following template snippet includes two scheduled actions that scale the number of instances in an Auto Scaling group\. The `ScheduledActionOut` action starts at 7 AM every day and sets the Auto Scaling group to a minimum of five Amazon EC2 instances with a maximum of 10\. The `ScheduledActionIn` action starts at 7 PM every day and sets the Auto Scaling group to a minimum and maximum of one Amazon EC2 instance\. 
+The following template snippet includes two scheduled actions that scale the number of instances in an Auto Scaling group\. The `ScheduledActionOut` action starts at 7 AM every day and sets the Auto Scaling group to a minimum of five Amazon EC2 instances with a maximum of 10\. The `ScheduledActionIn` action starts at 7 PM every day and sets the Auto Scaling group to a minimum and maximum of one Amazon EC2 instance\. The time zone is not provided\. As a result, these scheduled actions will recur in UTC time\. 
 
-#### JSON<a name="aws-resource-as-scheduledaction--examples--Scheduled_scaling_action--json"></a>
+#### JSON<a name="aws-resource-as-scheduledaction--examples--Scheduled_actions_that_run_on_a_recurring_schedule--json"></a>
 
 ```
 {
@@ -136,7 +156,7 @@ The following template snippet includes two scheduled actions that scale the num
 }
 ```
 
-#### YAML<a name="aws-resource-as-scheduledaction--examples--Scheduled_scaling_action--yaml"></a>
+#### YAML<a name="aws-resource-as-scheduledaction--examples--Scheduled_actions_that_run_on_a_recurring_schedule--yaml"></a>
 
 ```
 ---
@@ -155,4 +175,40 @@ Resources:
       MaxSize: 1
       MinSize: 1
       Recurrence: "0 19 * * *"
+```
+
+### Scheduled scaling action that occurs only once<a name="aws-resource-as-scheduledaction--examples--Scheduled_scaling_action_that_occurs_only_once"></a>
+
+The following template snippet includes a one\-time scheduled action\. At the date and time specified for `StartTime` \(4:00 PM UTC on March 31, 2021\), if the group currently has more than 1 instance, it scales in to 1 instance\. If the group currently has no instances, it scales out to 1 instance\. 
+
+#### JSON<a name="aws-resource-as-scheduledaction--examples--Scheduled_scaling_action_that_occurs_only_once--json"></a>
+
+```
+{
+  "Resources":{
+    "OneTimeScheduledAction":{
+      "Type":"AWS::AutoScaling::ScheduledAction",
+      "Properties":{
+        "AutoScalingGroupName":{
+          "Ref":"myASG"
+        },
+        "DesiredCapacity":"1",
+        "StartTime":"2021-03-31T16:00:00Z"
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-as-scheduledaction--examples--Scheduled_scaling_action_that_occurs_only_once--yaml"></a>
+
+```
+---
+Resources:
+  OneTimeScheduledAction:
+    Type: 'AWS::AutoScaling::ScheduledAction'
+    Properties:
+      AutoScalingGroupName: !Ref myASG
+      DesiredCapacity: '1'
+      StartTime: '2021-03-31T16:00:00Z'
 ```

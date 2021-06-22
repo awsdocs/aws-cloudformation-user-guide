@@ -148,7 +148,6 @@ To learn more using retry policy settings and using dead\-letter queues, see [Ev
 
 `RoleArn`  <a name="cfn-events-rule-target-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role to be used for this target when the rule is triggered\. If one rule triggers multiple targets, you can use a different IAM role for each target\.  
-If you're setting an event bus in another account as the target and that account granted permission to your account through an organization instead of directly by the account ID, you must specify a `RoleArn` with proper permissions here in this parameter\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

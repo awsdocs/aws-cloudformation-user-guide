@@ -60,8 +60,8 @@ The AWS account identifier of the owner of the Amazon S3 bucket\. This allows re
 
 `Packaging`  <a name="cfn-codebuild-reportgroup-s3reportexportconfig-packaging"></a>
  The type of build output artifact to create\. Valid values include:   
-+  `NONE`: AWS CodeBuild creates the raw data in the output bucket\. This is the default if packaging is not specified\. 
-+  `ZIP`: AWS CodeBuild creates a ZIP file with the raw data in the output bucket\. 
++  `NONE`: CodeBuild creates the raw data in the output bucket\. This is the default if packaging is not specified\. 
++  `ZIP`: CodeBuild creates a ZIP file with the raw data in the output bucket\. 
 *Required*: No  
 *Type*: String  
 *Allowed values*: `NONE | ZIP`  

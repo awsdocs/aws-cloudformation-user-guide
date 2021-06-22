@@ -34,7 +34,7 @@ The output format for the records created on the endpoint\. The message format i
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceAccessRoleArn`  <a name="cfn-dms-endpoint-kinesissettings-serviceaccessrolearn"></a>
-The Amazon Resource Name \(ARN\) for the AWS Identity and Access Management \(IAM\) role that AWS DMS uses to write to the Kinesis data stream\.  
+The Amazon Resource Name \(ARN\) for the IAM role that AWS DMS uses to write to the Kinesis data stream\. The role must allow the `iam:PassRole` action\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

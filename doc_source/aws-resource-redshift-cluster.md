@@ -26,15 +26,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DBName](#cfn-redshift-cluster-dbname)" : String,
       "[ElasticIp](#cfn-redshift-cluster-elasticip)" : String,
       "[Encrypted](#cfn-redshift-cluster-encrypted)" : Boolean,
-      "[HsmClientCertificateIdentifier](#cfn-redshift-cluster-hsmclientcertidentifier)" : String,
-      "[HsmConfigurationIdentifier](#cfn-redshift-cluster-HsmConfigurationIdentifier)" : String,
+      "[Endpoint](#cfn-redshift-cluster-endpoint)" : Json,
+      "[HsmClientCertificateIdentifier](#cfn-redshift-cluster-hsmclientcertificateidentifier)" : String,
+      "[HsmConfigurationIdentifier](#cfn-redshift-cluster-hsmconfigurationidentifier)" : String,
       "[IamRoles](#cfn-redshift-cluster-iamroles)" : [ String, ... ],
       "[KmsKeyId](#cfn-redshift-cluster-kmskeyid)" : String,
       "[LoggingProperties](#cfn-redshift-cluster-loggingproperties)" : LoggingProperties,
       "[MasterUsername](#cfn-redshift-cluster-masterusername)" : String,
       "[MasterUserPassword](#cfn-redshift-cluster-masteruserpassword)" : String,
       "[NodeType](#cfn-redshift-cluster-nodetype)" : String,
-      "[NumberOfNodes](#cfn-redshift-cluster-nodetype)" : Integer,
+      "[NumberOfNodes](#cfn-redshift-cluster-numberofnodes)" : Integer,
       "[OwnerAccount](#cfn-redshift-cluster-owneraccount)" : String,
       "[Port](#cfn-redshift-cluster-port)" : Integer,
       "[PreferredMaintenanceWindow](#cfn-redshift-cluster-preferredmaintenancewindow)" : String,
@@ -65,8 +66,9 @@ Properties:
   [DBName](#cfn-redshift-cluster-dbname): String
   [ElasticIp](#cfn-redshift-cluster-elasticip): String
   [Encrypted](#cfn-redshift-cluster-encrypted): Boolean
-  [HsmClientCertificateIdentifier](#cfn-redshift-cluster-hsmclientcertidentifier): String
-  [HsmConfigurationIdentifier](#cfn-redshift-cluster-HsmConfigurationIdentifier): String
+  [Endpoint](#cfn-redshift-cluster-endpoint): Json
+  [HsmClientCertificateIdentifier](#cfn-redshift-cluster-hsmclientcertificateidentifier): String
+  [HsmConfigurationIdentifier](#cfn-redshift-cluster-hsmconfigurationidentifier): String
   [IamRoles](#cfn-redshift-cluster-iamroles): 
     - String
   [KmsKeyId](#cfn-redshift-cluster-kmskeyid): String
@@ -75,7 +77,7 @@ Properties:
   [MasterUsername](#cfn-redshift-cluster-masterusername): String
   [MasterUserPassword](#cfn-redshift-cluster-masteruserpassword): String
   [NodeType](#cfn-redshift-cluster-nodetype): String
-  [NumberOfNodes](#cfn-redshift-cluster-nodetype): Integer
+  [NumberOfNodes](#cfn-redshift-cluster-numberofnodes): Integer
   [OwnerAccount](#cfn-redshift-cluster-owneraccount): String
   [Port](#cfn-redshift-cluster-port): Integer
   [PreferredMaintenanceWindow](#cfn-redshift-cluster-preferredmaintenancewindow): String
@@ -99,8 +101,7 @@ Default: `true`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutomatedSnapshotRetentionPeriod`  <a name="cfn-redshift-cluster-automatedsnapshotretentionperiod"></a>
-The number of days that automated snapshots are retained\. If the value is 0, automated snapshots are disabled\. Even if automated snapshots are disabled, you can still create manual snapshots when you want with CreateClusterSnapshot\.   
-You can't disable automated snapshots for RA3 node types\. Set the automated retention period from 1\-35 days\.  
+The number of days that automated snapshots are retained\. If the value is 0, automated snapshots are disabled\. Even if automated snapshots are disabled, you can still create manual snapshots when you want with [CreateClusterSnapshot](https://docs.aws.amazon.com/redshift/latest/APIReference/API_CreateClusterSnapshot.html) in the *Amazon Redshift API Reference*\.   
 Default: `1`   
 Constraints: Must be a value from 0 to 35\.  
 *Required*: No  
@@ -207,14 +208,20 @@ Default: false
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`HsmClientCertificateIdentifier`  <a name="cfn-redshift-cluster-hsmclientcertidentifier"></a>
+`Endpoint`  <a name="cfn-redshift-cluster-endpoint"></a>
+The connection endpoint\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HsmClientCertificateIdentifier`  <a name="cfn-redshift-cluster-hsmclientcertificateidentifier"></a>
 Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`HsmConfigurationIdentifier`  <a name="cfn-redshift-cluster-HsmConfigurationIdentifier"></a>
+`HsmConfigurationIdentifier`  <a name="cfn-redshift-cluster-hsmconfigurationidentifier"></a>
 Specifies the name of the HSM configuration that contains the information the Amazon Redshift cluster can use to retrieve and store keys in an HSM\.  
 *Required*: No  
 *Type*: String  
@@ -242,7 +249,7 @@ Specifies logging information, such as queries and connection attempts, for the 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MasterUsername`  <a name="cfn-redshift-cluster-masterusername"></a>
-The user name associated with the master user account for the cluster that is being created\.  
+The user name associated with the admin user account for the cluster that is being created\.  
 Constraints:  
 + Must be 1 \- 128 alphanumeric characters\. The user name can't be `PUBLIC`\.
 + First character must be a letter\.
@@ -253,7 +260,7 @@ Constraints:
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MasterUserPassword`  <a name="cfn-redshift-cluster-masteruserpassword"></a>
-The password associated with the master user account for the cluster that is being created\.  
+The password associated with the admin user account for the cluster that is being created\.  
 Constraints:  
 + Must be between 8 and 64 characters in length\.
 + Must contain at least one uppercase letter\.
@@ -273,7 +280,7 @@ Valid Values: `ds2.xlarge` \| `ds2.8xlarge` \| `dc1.large` \| `dc1.8xlarge` \| `
 *Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`NumberOfNodes`  <a name="cfn-redshift-cluster-nodetype"></a>
+`NumberOfNodes`  <a name="cfn-redshift-cluster-numberofnodes"></a>
 The number of compute nodes in the cluster\. This parameter is required when the **ClusterType** parameter is specified as `multi-node`\.   
 For information about determining how many nodes you need, go to [ Working with Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes) in the *Amazon Redshift Cluster Management Guide*\.   
 If you don't specify this parameter, you get a single\-node cluster\. When requesting a multi\-node cluster, you must specify the number of nodes that you want in the cluster\.  
@@ -284,7 +291,7 @@ Constraints: Value must be at least 1 and no more than 100\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OwnerAccount`  <a name="cfn-redshift-cluster-owneraccount"></a>
-The AWS customer account used to create or copy the snapshot\. Required if you are restoring a snapshot you do not own, optional if you own the snapshot\.  
+The AWS account used to create or copy the snapshot\. Required if you are restoring a snapshot you do not own, optional if you own the snapshot\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `2147483647`  
@@ -364,11 +371,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 #### <a name="aws-resource-redshift-cluster-return-values-fn--getatt-fn--getatt"></a>
 
-`Endpoint.Address`  <a name="Endpoint.Address-fn::getatt"></a>
-The connection endpoint for the Amazon Redshift cluster\. For example: `examplecluster.cg034hpkmmjt.us-east-1.redshift.amazonaws.com`\.
-
-`Endpoint.Port`  <a name="Endpoint.Port-fn::getatt"></a>
-The port number on which the Amazon Redshift cluster accepts connections\. For example: `5439`\.
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-redshift-cluster--examples"></a>
 
@@ -416,6 +420,6 @@ myCluster:
 ```
 
 ## See also<a name="aws-resource-redshift-cluster--seealso"></a>
-+ For a complete example template, see [Amazon Redshift Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-redshift.html)\.
++ For a complete example template, see [Amazon Redshift Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-redshift.html) \.
 +  [CreateCluster](https://docs.aws.amazon.com/redshift/latest/APIReference/API_CreateCluster.html) in the *Redshift API Reference*\.
 

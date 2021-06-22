@@ -35,7 +35,7 @@ Properties:
 
 `AWSServiceName`  <a name="cfn-iam-servicelinkedrole-awsservicename"></a>
 The service principal for the AWS service to which this role is attached\. You use a string similar to a URL but without the http:// in front\. For example: `elasticbeanstalk.amazonaws.com`\.   
-Service principals are unique and case\-sensitive\. To find the exact service principal for your service\-linked role, see [AWS services that work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html) in the *IAM User Guide*\. Look for the services that have **Yes **in the **Service\-Linked Role** column\. Choose the **Yes** link to view the service\-linked role documentation for that service\.  
+Service principals are unique and case\-sensitive\. To find the exact service principal for your service\-linked role, see [ AWS services that work with IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html) in the *IAM User Guide*\. Look for the services that have **Yes **in the **Service\-Linked Role** column\. Choose the **Yes** link to view the service\-linked role documentation for that service\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -66,11 +66,11 @@ The description of the role\.
 
 
 
-### Create an IAM Service\-Linked Role for Auto Scaling<a name="aws-resource-iam-servicelinkedrole--examples--Create_an_IAM_Service-Linked_Role_for_Auto_Scaling"></a>
+### IAM Service\-Linked Role for Auto Scaling<a name="aws-resource-iam-servicelinkedrole--examples--_Service-Linked_Role_for_Auto_Scaling"></a>
 
 The following example creates a service\-linked role that can be assumed by the Auto Scaling service\.
 
-#### JSON<a name="aws-resource-iam-servicelinkedrole--examples--Create_an_IAM_Service-Linked_Role_for_Auto_Scaling--json"></a>
+#### JSON<a name="aws-resource-iam-servicelinkedrole--examples--_Service-Linked_Role_for_Auto_Scaling--json"></a>
 
 ```
 {
@@ -95,7 +95,7 @@ The following example creates a service\-linked role that can be assumed by the 
 }
 ```
 
-#### YAML<a name="aws-resource-iam-servicelinkedrole--examples--Create_an_IAM_Service-Linked_Role_for_Auto_Scaling--yaml"></a>
+#### YAML<a name="aws-resource-iam-servicelinkedrole--examples--_Service-Linked_Role_for_Auto_Scaling--yaml"></a>
 
 ```
 Description: SLR resource create test - Auto Scaling

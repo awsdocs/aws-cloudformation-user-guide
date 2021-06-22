@@ -1,6 +1,6 @@
 # AWS::EMR::Studio<a name="aws-resource-emr-studio"></a>
 
-The AWS::EMR::Studio resource specifies an Amazon EMR Studio\. An EMR Studio is a web\-based, integrated development environment for fully managed Jupyter notebooks that run on Amazon EMR clusters\. For more information, see the [https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio.html](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio.html)\.
+The `AWS::EMR::Studio` resource specifies an Amazon EMR Studio\. An EMR Studio is a web\-based, integrated development environment for fully managed Jupyter notebooks that run on Amazon EMR clusters\. For more information, see the [https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio.html](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio.html)\.
 
 ## Syntax<a name="aws-resource-emr-studio-syntax"></a>
 

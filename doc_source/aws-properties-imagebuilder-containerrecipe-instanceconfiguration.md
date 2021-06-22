@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::ContainerRecipe InstanceConfiguration<a name="aws-properties-imagebuilder-containerrecipe-instanceconfiguration"></a>
 
-<a name="aws-properties-imagebuilder-containerrecipe-instanceconfiguration-description"></a>The `InstanceConfiguration` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::ImageBuilder::ContainerRecipe](aws-resource-imagebuilder-containerrecipe.md)\.
+Defines a custom source AMI and block device mapping configurations of an instance used for building and testing container images\.
 
 ## Syntax<a name="aws-properties-imagebuilder-containerrecipe-instanceconfiguration-syntax"></a>
 
@@ -26,13 +26,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-imagebuilder-containerrecipe-instanceconfiguration-properties"></a>
 
 `BlockDeviceMappings`  <a name="cfn-imagebuilder-containerrecipe-instanceconfiguration-blockdevicemappings"></a>
-Not currently supported by AWS CloudFormation\.  
+Defines the block devices to attach for building an instance from this Image Builder AMI\.  
 *Required*: No  
 *Type*: List of [InstanceBlockDeviceMapping](aws-properties-imagebuilder-containerrecipe-instanceblockdevicemapping.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Image`  <a name="cfn-imagebuilder-containerrecipe-instanceconfiguration-image"></a>
-Not currently supported by AWS CloudFormation\.  
+The AMI ID to use as the base image for a container build and test instance\. If not specified, Image Builder will use the appropriate ECS\-optimized AMI as a base image\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

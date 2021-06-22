@@ -1,6 +1,6 @@
 # AWS::IoTEvents::DetectorModel AssetPropertyTimestamp<a name="aws-properties-iotevents-detectormodel-assetpropertytimestamp"></a>
 
-A structure that contains timestamp information\. For more information, see [TimeInNanos](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_TimeInNanos.html) in the *AWS IoT SiteWise API Reference*\.
+A structure that contains timestamp information\. For more information, see [TimeInNanos](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_TimeInNanos.html) in the * AWS IoT SiteWise API Reference*\.
 
 You must use expressions for all parameters in `AssetPropertyTimestamp`\. The expressions accept literals, operators, functions, references, and substitution templates\.
 
@@ -13,7 +13,7 @@ You must use expressions for all parameters in `AssetPropertyTimestamp`\. The ex
 
    `'${$input.TemperatureInput.sensorData.timestamp / 1000}'` 
 
-For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the *AWS IoT Events Developer Guide*\.
+For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the * AWS IoT Events Developer Guide*\.
 
 ## Syntax<a name="aws-properties-iotevents-detectormodel-assetpropertytimestamp-syntax"></a>
 

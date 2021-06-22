@@ -74,7 +74,7 @@ A description of the configuration profile\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LocationUri`  <a name="cfn-appconfig-configurationprofile-locationuri"></a>
-A URI to locate the configuration\. You can specify the AppConfig hosted configuration store, Systems Manager \(SSM\) document, an SSM Parameter Store parameter, or an Amazon S3 object\. For the hosted configuration store, specify `hosted`\. For an SSM document, specify either the document name in the format `ssm-document://<Document_name>` or the Amazon Resource Name \(ARN\)\. For a parameter, specify either the parameter name in the format `ssm-parameter://<Parameter_name>` or the ARN\. For an Amazon S3 object, specify the URI in the following format: `s3://<bucket>/<objectKey> `\. Here is an example: s3://my\-bucket/my\-app/us\-east\-1/my\-config\.json  
+A URI to locate the configuration\. You can specify the AWS AppConfig hosted configuration store, Systems Manager \(SSM\) document, an SSM Parameter Store parameter, or an Amazon S3 object\. For the hosted configuration store, specify `hosted`\. For an SSM document, specify either the document name in the format `ssm-document://<Document_name>` or the Amazon Resource Name \(ARN\)\. For a parameter, specify either the parameter name in the format `ssm-parameter://<Parameter_name>` or the ARN\. For an Amazon S3 object, specify the URI in the following format: `s3://<bucket>/<objectKey> `\. Here is an example: s3://my\-bucket/my\-app/us\-east\-1/my\-config\.json  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -91,7 +91,7 @@ A name for the configuration profile\.
 
 `RetrievalRoleArn`  <a name="cfn-appconfig-configurationprofile-retrievalrolearn"></a>
 The ARN of an IAM role with permission to access the configuration at the specified LocationUri\.  
-A retrieval role ARN is not required for configurations stored in the AppConfig hosted configuration store\. It is required for all other sources that store your configuration\. 
+A retrieval role ARN is not required for configurations stored in the AWS AppConfig hosted configuration store\. It is required for all other sources that store your configuration\. 
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  

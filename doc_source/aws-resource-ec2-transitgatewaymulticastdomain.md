@@ -73,7 +73,7 @@ The time the multicast domain was created\.
 The state of the multicast domain\.
 
 `TransitGatewayMulticastDomainArn`  <a name="TransitGatewayMulticastDomainArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The Amazon Resource Name \(ARN\) of the multicast domain\.
 
 `TransitGatewayMulticastDomainId`  <a name="TransitGatewayMulticastDomainId-fn::getatt"></a>
 The ID of the multicast domain\.

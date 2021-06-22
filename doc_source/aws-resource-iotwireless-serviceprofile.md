@@ -65,59 +65,59 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 `Arn`  <a name="Arn-fn::getatt"></a>
 The ARN of the service profile created\.
 
-`ChannelMask`  <a name="ChannelMask-fn::getatt"></a>
-The ChannelMask value\. It has a maximum length of 2048 characters\.
-
-`DevStatusReqFreq`  <a name="DevStatusReqFreq-fn::getatt"></a>
-The DevStatusReqFreq value\. The minimum value is 0 and maximum value is 2147483647\.
-
-`DlBucketSize`  <a name="DlBucketSize-fn::getatt"></a>
-The DLBucketSize value\. The minimum value is 0 and maximum value is 2147483647\.
-
-`DlRate`  <a name="DlRate-fn::getatt"></a>
-The DLRate value\. The minimum value is 0 and maximum value is 2147483647\.
-
-`DlRatePolicy`  <a name="DlRatePolicy-fn::getatt"></a>
-The DLRatePolicy value\. Maximum length is 256 characters\.
-
-`DrMax`  <a name="DrMax-fn::getatt"></a>
-The DRMax value\. The minimum value is 0 and maximum value is 15\.
-
-`DrMin`  <a name="DrMin-fn::getatt"></a>
-The DRMin value\. The minimum value is 0 and maximum value is 15\.
-
-`HrAllowed`  <a name="HrAllowed-fn::getatt"></a>
-The HRAllowed value that describes whether handover roaming is allowed\.
-
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the service profile created\.
 
-`MinGwDiversity`  <a name="MinGwDiversity-fn::getatt"></a>
-The MinGwDiversity value\. The minimum value is 1 and maximum value is 100\.
+`LoRaWAN.ChannelMask`  <a name="LoRaWAN.ChannelMask-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
-`NwkGeoLoc`  <a name="NwkGeoLoc-fn::getatt"></a>
-The NwkGeoLoc value\.
+`LoRaWAN.DevStatusReqFreq`  <a name="LoRaWAN.DevStatusReqFreq-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
-`PrAllowed`  <a name="PrAllowed-fn::getatt"></a>
-The PRAllowed value that describes whether passive roaming is allowed\.
+`LoRaWAN.DlBucketSize`  <a name="LoRaWAN.DlBucketSize-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
-`RaAllowed`  <a name="RaAllowed-fn::getatt"></a>
-The RAAllowed value that describes whether roaming activation is allowed\.
+`LoRaWAN.DlRate`  <a name="LoRaWAN.DlRate-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
-`ReportDevStatusBattery`  <a name="ReportDevStatusBattery-fn::getatt"></a>
-The ReportDevStatusBattery value\.
+`LoRaWAN.DlRatePolicy`  <a name="LoRaWAN.DlRatePolicy-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
-`ReportDevStatusMargin`  <a name="ReportDevStatusMargin-fn::getatt"></a>
-The ReportDevStatusMargin value\.
+`LoRaWAN.DrMax`  <a name="LoRaWAN.DrMax-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
-`TargetPer`  <a name="TargetPer-fn::getatt"></a>
-The TargetPer value\. The minimum value is 0 and maximum value is 100\.
+`LoRaWAN.DrMin`  <a name="LoRaWAN.DrMin-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
-`UlBucketSize`  <a name="UlBucketSize-fn::getatt"></a>
-The UlBucketSize value\. The minimum value is 0 and maximum value is 2147483647\.
+`LoRaWAN.HrAllowed`  <a name="LoRaWAN.HrAllowed-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
-`UlRate`  <a name="UlRate-fn::getatt"></a>
-The ULRate value\. The minimum value is 0 and maximum value is 2147483647\.
+`LoRaWAN.MinGwDiversity`  <a name="LoRaWAN.MinGwDiversity-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
-`UlRatePolicy`  <a name="UlRatePolicy-fn::getatt"></a>
-The ULRatePolicy value\. Maximum length is 256 characters\.
+`LoRaWAN.NwkGeoLoc`  <a name="LoRaWAN.NwkGeoLoc-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.PrAllowed`  <a name="LoRaWAN.PrAllowed-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.RaAllowed`  <a name="LoRaWAN.RaAllowed-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.ReportDevStatusBattery`  <a name="LoRaWAN.ReportDevStatusBattery-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.ReportDevStatusMargin`  <a name="LoRaWAN.ReportDevStatusMargin-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.TargetPer`  <a name="LoRaWAN.TargetPer-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.UlBucketSize`  <a name="LoRaWAN.UlBucketSize-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.UlRate`  <a name="LoRaWAN.UlRate-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.UlRatePolicy`  <a name="LoRaWAN.UlRatePolicy-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.

@@ -35,7 +35,7 @@ The authorization type required by the HTTP endpoint\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AwsIamConfig`  <a name="cfn-appsync-datasource-authorizationconfig-awsiamconfig"></a>
-The AWS IAM settings\.  
+The AWS Identity and Access Management settings\.  
 *Required*: No  
 *Type*: [AwsIamConfig](aws-properties-appsync-datasource-awsiamconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

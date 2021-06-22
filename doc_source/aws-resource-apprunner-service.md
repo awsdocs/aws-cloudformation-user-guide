@@ -155,7 +155,8 @@ This example illustrates creating a service based on a Python source code reposi
             "Port": "8080",
             "RuntimeEnvironmentVariables": [
               {
-                "NAME": "Jane"
+                "Name": "NAME",
+                "Value": "Jane"
               }
             ]
           }
@@ -194,7 +195,8 @@ Properties:
           Port: 8080
           RuntimeEnvironmentVariables:
             -
-              NAME: Jane
+              Name: NAME
+              Value: Jane
   InstanceConfiguration:
     Cpu: 256
     Memory: 1024
@@ -222,7 +224,8 @@ This example illustrates creating a service based on an image stored in Amazon E
           "Port": "8080",
           "RuntimeEnvironmentVariables": [
             {
-              "NAME": "Jane"
+              "Name": "NAME",
+              "Value": "Jane"
             }
           ]
         }
@@ -252,7 +255,8 @@ Properties:
         Port: 8080
         RuntimeEnvironmentVariables:
           -
-            NAME: Jane
+            Name: NAME
+            Value: Jane
   InstanceConfiguration:
     Cpu: 256
     Memory: 1024

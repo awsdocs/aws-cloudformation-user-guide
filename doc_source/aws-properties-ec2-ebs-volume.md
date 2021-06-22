@@ -4,13 +4,15 @@ Specifies an Amazon Elastic Block Store \(Amazon EBS\) volume\.
 
 When you use AWS CloudFormation to update an Amazon EBS volume that modifies `Iops`, `Size`, or `VolumeType`, there is a cooldown period before another operation can occur\. This can cause your stack to report being in `UPDATE_IN_PROGRESS` or `UPDATE_ROLLBACK_IN_PROGRESS` for long periods of time\.
 
-Amazon EBS does not support sizing down an Amazon EBS volume\. AWS CloudFormation will not attempt to modify an Amazon EBS volume to a smaller size on rollback\.
+Amazon EBS does not support sizing down an Amazon EBS volume\. AWS CloudFormation does not attempt to modify an Amazon EBS volume to a smaller size on rollback\.
 
 Some common scenarios when you might encounter a cooldown period for Amazon EBS include:
 + You successfully update an Amazon EBS volume and the update succeeds\. When you attempt another update within the cooldown window, that update will be subject to a cooldown period\.
 + You successfully update an Amazon EBS volume and the update succeeds but another change in your `update-stack` call fails\. The rollback will be subject to a cooldown period\.
 
 For more information on the cooldown period, see [Requirements when modifying volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/modify-volume-requirements.html)\.
+
+**DeletionPolicy attribute**
 
 To control how AWS CloudFormation handles the volume when the stack is deleted, set a deletion policy for your volume\. You can choose to retain the volume, to delete the volume, or to create a snapshot of the volume\. For more information, see [DeletionPolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)\.
 
@@ -97,11 +99,11 @@ This parameter is required for `io1` and `io2` volumes\. The default for `gp3` v
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-ec2-ebs-volume-kmskeyid"></a>
-The identifier of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) to use for Amazon EBS encryption\. If `KmsKeyId` is specified, the encrypted state must be `true`\.  
-If you omit this property and your account is enabled for encryption by default, or **Encrypted** is set to `true`, then the volume is encrypted using the default CMK specified for your account\. If your account does not have a default CMK, then the volume is encrypted using the AWS managed CMK\.  
-Alternatively, if you want to specify a different CMK, you can specify one of the following:  
+The identifier of the AWS KMS key to use for Amazon EBS encryption\. If `KmsKeyId` is specified, the encrypted state must be `true`\.  
+If you omit this property and your account is enabled for encryption by default, or **Encrypted** is set to `true`, then the volume is encrypted using the default key specified for your account\. If your account does not have a default key, then the volume is encrypted using the AWS managed key\.  
+Alternatively, if you want to specify a different key, you can specify one of the following:  
 + Key ID\. For example, 1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
-+ Key alias\. Specify the alias for the CMK, prefixed with `alias/`\. For example, for a CMK with the alias `my_cmk`, use `alias/my_cmk`\. Or to specify the AWS managed CMK, use `alias/aws/ebs`\.
++ Key alias\. Specify the alias for the key, prefixed with `alias/`\. For example, for a key with the alias `my_cmk`, use `alias/my_cmk`\. Or to specify the AWS managed key, use `alias/aws/ebs`\.
 + Key ARN\. For example, arn:aws:kms:us\-east\-1:012345678910:key/1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
 + Alias ARN\. For example, arn:aws:kms:us\-east\-1:012345678910:alias/ExampleAlias\.
 *Required*: No  
@@ -110,7 +112,7 @@ Alternatively, if you want to specify a different CMK, you can specify one of th
 
 `MultiAttachEnabled`  <a name="cfn-ec2-ebs-volume-multiattachenabled"></a>
 Indicates whether Amazon EBS Multi\-Attach is enabled\.  
-AWS CloudFormation does not currently support updating a single\-attach volume to be multi\-attach enabled, updating a multi\-attach enabled volume to be single\-attach, or updating the size or number of I/O operations per second \(IOPS\) of a multi\-attach enabled volume\.
+AWS CloudFormation does not currently support updating a single\-attach volume to be multi\-attach enabled, updating a multi\-attach enabled volume to be single\-attach, or updating the size or number of I/O operations per second \(IOPS\) of a multi\-attach enabled volume\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -176,9 +178,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### Encrypted Amazon EBS volume with DeletionPolicy to make a snapshot on delete<a name="aws-properties-ec2-ebs-volume--examples--Encrypted_Amazon_EBS_volume_with_DeletionPolicy_to_make_a_snapshot_on_delete"></a>
+### Encrypted Amazon EBS volume with DeletionPolicy<a name="aws-properties-ec2-ebs-volume--examples--Encrypted_Amazon_EBS_volume_with_DeletionPolicy"></a>
 
-#### JSON<a name="aws-properties-ec2-ebs-volume--examples--Encrypted_Amazon_EBS_volume_with_DeletionPolicy_to_make_a_snapshot_on_delete--json"></a>
+The following example creates an encrypted `gp2` volume with a DeletionPolicy attribute that creates a snapshot of the volume when the stack is deleted\.
+
+#### JSON<a name="aws-properties-ec2-ebs-volume--examples--Encrypted_Amazon_EBS_volume_with_DeletionPolicy--json"></a>
 
 ```
 "NewVolume" : {
@@ -196,7 +200,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 }
 ```
 
-#### YAML<a name="aws-properties-ec2-ebs-volume--examples--Encrypted_Amazon_EBS_volume_with_DeletionPolicy_to_make_a_snapshot_on_delete--yaml"></a>
+#### YAML<a name="aws-properties-ec2-ebs-volume--examples--Encrypted_Amazon_EBS_volume_with_DeletionPolicy--yaml"></a>
 
 ```
 NewVolume:
@@ -211,9 +215,11 @@ NewVolume:
   DeletionPolicy: Snapshot
 ```
 
-### Amazon EBS volume with 100 provisioned IOPS<a name="aws-properties-ec2-ebs-volume--examples--Amazon_EBS_volume_with_100_provisioned_IOPS"></a>
+### Provisioned IOPS SSD io1 volume<a name="aws-properties-ec2-ebs-volume--examples--Provisioned_IOPS_SSD_io1_volume"></a>
 
-#### JSON<a name="aws-properties-ec2-ebs-volume--examples--Amazon_EBS_volume_with_100_provisioned_IOPS--json"></a>
+The following example creates a 100 GiB `io1` with `100` provisioned IOPS\.
+
+#### JSON<a name="aws-properties-ec2-ebs-volume--examples--Provisioned_IOPS_SSD_io1_volume--json"></a>
 
 ```
 "NewVolume" : {
@@ -227,7 +233,7 @@ NewVolume:
 }
 ```
 
-#### YAML<a name="aws-properties-ec2-ebs-volume--examples--Amazon_EBS_volume_with_100_provisioned_IOPS--yaml"></a>
+#### YAML<a name="aws-properties-ec2-ebs-volume--examples--Provisioned_IOPS_SSD_io1_volume--yaml"></a>
 
 ```
 NewVolume:

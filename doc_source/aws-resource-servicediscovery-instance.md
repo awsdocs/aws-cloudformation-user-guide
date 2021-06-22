@@ -37,7 +37,7 @@ A string map that contains the following information for the service that you sp
 + For each attribute, the applicable value\.
 Supported attribute keys include the following:    
 AWS\_ALIAS\_DNS\_NAME  
-If you want AWS Cloud Map to create a Route 53 alias record that routes traffic to an Elastic Load Balancing load balancer, specify the DNS name that is associated with the load balancer\. For information about how to get the DNS name, see [AliasTarget\->DNSName](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html#Route53-Type-AliasTarget-DNSName) in the *Route 53 API Reference*\.  
+If you want AWS Cloud Map to create a Route 53 alias record that routes traffic to an Elastic Load Balancing load balancer, specify the DNS name that is associated with the load balancer\. For information about how to get the DNS name, see [AliasTarget\->DNSName](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html#Route53-Type-AliasTarget-DNSName) in the *Route 53 API Reference*\.  
 Note the following:  
 + The configuration for the service that is specified by `ServiceId` must include settings for an `A` record, an `AAAA` record, or both\.
 + In the service that is specified by `ServiceId`, the value of `RoutingPolicy` must be `WEIGHTED`\.
@@ -67,9 +67,9 @@ This value is required if you specified settings for an `SRV` record or a Route�
 
 `InstanceId`  <a name="cfn-servicediscovery-instance-instanceid"></a>
 An identifier that you want to associate with the instance\. Note the following:  
-+ If the service that is specified by `ServiceId` includes settings for an `SRV` record, the value of `InstanceId` is automatically included as part of the value for the `SRV` record\. For more information, see [DnsRecord > Type](https://docs.aws.amazon.com/cloud-map/latest/api/API_DnsRecord.html#cloudmap-Type-DnsRecord-Type)\.
++ If the service that's specified by `ServiceId` includes settings for an `SRV` record, the value of `InstanceId` is automatically included as part of the value for the `SRV` record\. For more information, see [DnsRecord > Type](https://docs.aws.amazon.com/cloud-map/latest/api/API_DnsRecord.html#cloudmap-Type-DnsRecord-Type)\.
 + You can use this value to update an existing instance\.
-+ To register a new instance, you must specify a value that is unique among instances that you register by using the same service\. 
++ To register a new instance, you must specify a value that's unique among instances that you register by using the same service\. 
 + If you specify an existing `InstanceId` and `ServiceId`, AWS Cloud Map updates the existing DNS records, if any\. If there's also an existing health check, AWS Cloud Map deletes the old health check and creates a new one\. 
 **Note**  
 The health check isn't deleted immediately, so it will still appear for a while if you submit a `ListHealthChecks` request, for example\.

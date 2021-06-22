@@ -45,7 +45,7 @@ CloudFormation executes the changes described in your root change set and nested
 ------
 
 **To execute a change set \(AWS CLI\)**
-+ Run the [aws cloudformation execute\-change\-set](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/execute-change-set.html) command\.
++ Run the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/execute-change-set.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/execute-change-set.html) command\.
 
   Specify the change set ID of the change set that you want to execute, as shown in the following example:
 
@@ -55,4 +55,4 @@ CloudFormation executes the changes described in your root change set and nested
 
   The command in the example executes a change set with the ID `arn:aws:cloudformation:us-east-1:123456789012:changeSet/SampleChangeSet/1a2345b6-0000-00a0-a123-00abc0abc000`\.
 
-  After you run the command, CloudFormation starts updating the stack\. To view the stack's progress, use the [aws cloudformation describe\-stacks](using-cfn-describing-stacks.md) command\.
+  After you run the command, CloudFormation starts updating the stack\. To view the stack's progress, use the [`aws cloudformation describe-stacks`](using-cfn-describing-stacks.md) command\.

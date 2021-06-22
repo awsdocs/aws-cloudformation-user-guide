@@ -235,7 +235,7 @@ For more template snippets, see [Auto scaling template snippets](https://docs.aw
 
 This example shows a launch configuration with a `BlockDeviceMappings` property that lists two devices: a 30 gigabyte EBS root volume mapped to /dev/sda1 and a 100 gigabyte EBS volume mapped to /dev/sdm\. The /dev/sdm volume uses the default EBS volume type based on the region and is not deleted when terminating the instance it is attached to\. 
 
-CloudFormation supports parameters from the AWS Systems Manager Parameter Store\. In this example, the `ImageId` property of the AWS::AutoScaling::LaunchConfiguration references the latest Amazon Linux 2 AMI \(EBS\-backed image\) from the Parameter Store\. For more information, see [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) in the *AWS Systems Manager User Guide* and the blog post [Query for the latest Amazon Linux AMI IDs using AWS Systems Manager Parameter Store](http://aws.amazon.com/blogs/compute/query-for-the-latest-amazon-linux-ami-ids-using-aws-systems-manager-parameter-store/) on the AWS Compute Blog\.
+CloudFormation supports parameters from the AWS Systems Manager Parameter Store\. In this example, the `ImageId` property references the latest Amazon Linux 2 AMI \(EBS\-backed image\) from the Parameter Store\. For more information, see [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) in the *AWS Systems Manager User Guide* and the blog post [Query for the latest Amazon Linux AMI IDs using AWS Systems Manager Parameter Store](http://aws.amazon.com/blogs/compute/query-for-the-latest-amazon-linux-ami-ids-using-aws-systems-manager-parameter-store/) on the AWS Compute Blog\.
 
 #### JSON<a name="aws-properties-as-launchconfig--examples--Amazon_EBS-backed_AMI_and_defined_block_device_mappings--json"></a>
 
@@ -271,7 +271,7 @@ CloudFormation supports parameters from the AWS Systems Manager Parameter Store\
             "DeviceName":"/dev/sda1",
             "Ebs":{
               "VolumeSize":"30",
-              "VolumeType":"gp2"
+              "VolumeType":"gp3"
             }
           },
           {
@@ -319,7 +319,7 @@ Resources:
         - DeviceName: /dev/sda1
           Ebs: 
             VolumeSize: 30
-            VolumeType: "gp2"
+            VolumeType: "gp3"
         - DeviceName: /dev/sdm
           Ebs: 
             VolumeSize: 100
@@ -330,7 +330,7 @@ Resources:
 
 This example shows a launch configuration that launches Spot Instances in the Auto Scaling group\. This launch configuration will only be active if the current Spot price is less than the price in the template specification \(0\.045\)\. It also demonstrates a launch configuration that uses the `IamInstanceProfile` property\. For an example of a full template, including the definition of, and further references from the [InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html) object referenced here as `RootInstanceProfile`, see [auto\_scaling\_with\_instance\_profile\.template](https://s3.amazonaws.com/cloudformation-templates-us-east-1/auto_scaling_with_instance_profile.template)\.
 
-In this example, the `ImageId` property of the AWS::AutoScaling::LaunchConfiguration references the latest Amazon Linux AMI \(instance store/S3\-backed image\) from the Parameter Store\. The BlockDeviceMappings property lists a virtual device `ephemeral0` mapped to /dev/sdc\.
+In this example, the `ImageId` property references the latest Amazon Linux AMI \(instance store/S3\-backed image\) from the Parameter Store\. The BlockDeviceMappings property lists a virtual device `ephemeral0` mapped to /dev/sdc\.
 
 #### JSON<a name="aws-properties-as-launchconfig--examples--Instance_store-backed_AMI_with_Spot_price_and_IAM_role--json"></a>
 

@@ -88,7 +88,7 @@ The rule statements used to identify the web requests that you want to allow, bl
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-wafv2-webacl-scope"></a>
-Specifies whether this is for an AWS CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
+Specifies whether this is for an Amazon CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
 For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virginia\) Region, `us-east-1`\.
 *Required*: Yes  
 *Type*: String  
@@ -145,7 +145,7 @@ The following shows an example web ACL specification\. This example includes cus
 
 ```
 Description: Create WebACL example
-Resources:
+            Resources:
   ExampleWebACL:
     Type: 'AWS::WAFv2::WebACL'
     Properties:
@@ -217,7 +217,7 @@ Resources:
 
 ```
 "Description": "Create WebACL example",
-"Resources": {
+            "Resources": {
     "ExampleWebACL": {
       "Type": "AWS::WAFv2::WebACL",
       "Properties": {
@@ -273,7 +273,7 @@ Resources:
             },
             "Statement": {
               "ManagedRuleGroupStatement": {
-                "VendorName": "AWS",
+            "VendorName": "AWS",
                 "Name": "AWSManagedRulesCommonRuleSet",
                 "ExcludedRules": []
               }

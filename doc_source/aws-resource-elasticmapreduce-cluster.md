@@ -150,7 +150,7 @@ Attributes for Kerberos configuration when Kerberos authentication is enabled us
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LogEncryptionKmsKeyId`  <a name="cfn-elasticmapreduce-cluster-logencryptionkmskeyid"></a>
- The AWS KMS customer master key \(CMK\) used for encrypting log files\. This attribute is only available with EMR version 5\.30\.0 and later, excluding EMR 6\.0\.0\.   
+ The AWS KMS key used for encrypting log files\. This attribute is only available with EMR version 5\.30\.0 and later, excluding EMR 6\.0\.0\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
