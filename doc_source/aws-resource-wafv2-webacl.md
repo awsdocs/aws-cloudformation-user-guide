@@ -145,7 +145,7 @@ The following shows an example web ACL specification\. This example includes cus
 
 ```
 Description: Create WebACL example
-            Resources:
+Resources:
   ExampleWebACL:
     Type: 'AWS::WAFv2::WebACL'
     Properties:
@@ -217,7 +217,7 @@ Description: Create WebACL example
 
 ```
 "Description": "Create WebACL example",
-            "Resources": {
+"Resources": {
     "ExampleWebACL": {
       "Type": "AWS::WAFv2::WebACL",
       "Properties": {
