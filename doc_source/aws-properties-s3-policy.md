@@ -89,7 +89,9 @@ The following sample is a bucket policy that is attached to the DOC\-EXAMPLE\-BU
                                 ]
                             ]
                         },
-                        "Principal": "*",
+                        "Principal": {
+                            "AWS": "*"
+                        },
                         "Condition": {
                             "StringLike": {
                                 "aws:Referer": [
@@ -123,7 +125,8 @@ SampleBucketPolicy:
             - - 'arn:aws:s3:::'
               - !Ref DOC-EXAMPLE-BUCKET
               - /*
-          Principal: '*'
+          Principal: 
+            AWS: '*'
           Condition:
             StringLike:
               'aws:Referer':
