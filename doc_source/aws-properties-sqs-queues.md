@@ -84,7 +84,7 @@ The time in seconds for which the delivery of all messages in the queue is delay
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FifoQueue`  <a name="aws-sqs-queue-fifoqueue"></a>
-If set to true, creates a FIFO queue\. If you don't specify this property, AAmazon SQS creates a standard queue\. For more information, see [FIFO queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html) in the *Amazon SQS Developer Guide*\.  
+If set to true, creates a FIFO queue\. If you don't specify this property, Amazon SQS creates a standard queue\. For more information, see [FIFO queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html) in the *Amazon SQS Developer Guide*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
