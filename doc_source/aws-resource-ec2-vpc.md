@@ -119,7 +119,7 @@ The following example specifies a VPC\.
       "CidrBlock" : "10.0.0.0/16",
       "EnableDnsSupport" : "false",
       "EnableDnsHostnames" : "false",
-      "InstanceTenancy" : "dedicated",
+      "InstanceTenancy" : "default",
       "Tags" : [ {"Key" : "stack", "Value" : "production"} ]
    }
 }
@@ -134,7 +134,7 @@ myVPC:
     CidrBlock: 10.0.0.0/16
     EnableDnsSupport: 'false'
     EnableDnsHostnames: 'false'
-    InstanceTenancy: dedicated
+    InstanceTenancy: default
     Tags:
      - Key: stack
        Value: production
