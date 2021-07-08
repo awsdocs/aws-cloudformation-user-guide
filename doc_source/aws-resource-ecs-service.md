@@ -462,7 +462,7 @@ The following example defines a service with a parameter that enables users to s
         "LoadBalancers": [{
           "ContainerName": {"Ref" : "AppName"},
           "ContainerPort": {"Ref":"AppContainerPort"},
-          "LoadBalancerName": {"Ref": "elb"}
+          "LoadBalancerName": {"Fn::GetAtt" : [ "elb", "LoadBalancerName" ]}
         }],
         "PlacementStrategies": [{
           "Type" : "binpack",
@@ -622,7 +622,7 @@ Resources:
       LoadBalancers:
         - ContainerName: !Ref AppName
           ContainerPort: !Ref AppContainerPort
-          LoadBalancerName: !Ref elb
+          LoadBalancerName: !GetAtt elb.LoadBalancerName
       PlacementStrategies:
         - Type: binpack
           Field: memory
