@@ -102,7 +102,7 @@ The description for the API stage\.
 `RouteSettings`  <a name="cfn-apigatewayv2-stage-routesettings"></a>
 Route settings for the stage\.  
 *Required*: No  
-*Type*: [Json](aws-properties-apigatewayv2-stage-routesettings.md)  
+*Type*: [RouteSettings](aws-properties-apigatewayv2-stage-routesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StageName`  <a name="cfn-apigatewayv2-stage-stagename"></a>
