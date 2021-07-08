@@ -1,6 +1,6 @@
 # AWS::LakeFormation::Permissions DataLakePrincipal<a name="aws-properties-lakeformation-permissions-datalakeprincipal"></a>
 
-The AWS Lake Formation principal\.
+The Amazon Resource Name (ARN) of Lake Formation principal\.
 
 ## Syntax<a name="aws-properties-lakeformation-permissions-datalakeprincipal-syntax"></a>
 
