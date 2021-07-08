@@ -812,8 +812,8 @@ be billed for the AWS resources used if you create a stack from this template.",
             "Default": "50",
             "Description": "The size of the database (GiB)",
             "Type": "Number",
-            "MinValue": "5",
-            "MaxValue": "1024",
+            "MinValue": "20",
+            "MaxValue": "65536",
             "ConstraintDescription": "must be between 20 and 65536 GiB."
         },
         "DBUsername": {
@@ -904,8 +904,8 @@ Parameters:
     Default: '50'
     Description: The size of the database (GiB)
     Type: Number
-    MinValue: '5'
-    MaxValue: '1024'
+    MinValue: '20'
+    MaxValue: '65536'
     ConstraintDescription: must be between 20 and 65536 GiB.
   DBUsername:
     NoEcho: 'true'
