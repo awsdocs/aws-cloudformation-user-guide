@@ -7,6 +7,9 @@ Your organization can have up to five registered delegated administrators at one
 **Important**  
 Delegated administrators have full permissions to deploy to accounts in your organization\. The management account cannot limit delegated administrator permissions to deploy to specific OUs or to perform specific stack set operations\.
 
+** Hint - Note ** 
+Please remember that the IAM role to be used from the Privileged account to create the stack sets should have the Organizations:List* IAM permission.
+
 You can register delegated administrators for your organization in the following Regions: US East \(Ohio\), US East \(N\. Virginia\), US West \(N\. California\), US West \(Oregon\), Asia Pacific \(Mumbai\), Asia Pacific \(Seoul\), Asia Pacific \(Singapore\), Asia Pacific \(Sydney\), Asia Pacific \(Tokyo\), Canada \(Central\), Europe \(Frankfurt\), Europe \(Ireland\), Europe \(London\), Europe \(Paris\), Europe \(Stockholm\), South America \(São Paulo\), AWS GovCloud \(US\-East\), and AWS GovCloud \(US\-West\)\.
 
 You can register and deregister delegated administrators using the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation/), [AWS CLI](https://aws.amazon.com/cli/), or [AWS SDKs](https://aws.amazon.com/tools/)\.
