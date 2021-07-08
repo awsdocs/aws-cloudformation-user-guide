@@ -226,7 +226,7 @@ Resources:
     Type: AWS::EC2::NetworkInterface
     Properties:
       SubnetId: !Ref SubnetId
-      Description: Interface for controlling traffic such as SSH
+      Description: Interface for web traffic
       GroupSet: 
       - !Ref WebSecurityGroup
       SourceDestCheck: true
