@@ -44,7 +44,7 @@ The AWS Lake Formation principal\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Permissions`  <a name="cfn-lakeformation-permissions-permissions"></a>
-The permissions granted or revoked\.  
+The permissions granted or revoked. Allowed values: CREATE_TABLE, DESCRIBE, ALTER, DROP, SUPER.\
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
