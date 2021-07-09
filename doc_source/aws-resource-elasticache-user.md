@@ -41,7 +41,7 @@ Properties:
 
 `AccessString`  <a name="cfn-elasticache-user-accessstring"></a>
 Access permissions string used for this user\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Pattern*: `.*\S.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
