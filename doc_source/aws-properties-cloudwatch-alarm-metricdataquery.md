@@ -74,8 +74,7 @@ The granularity, in seconds, of the returned data points\. For metrics with regu
 
 `ReturnData`  <a name="cfn-cloudwatch-alarm-metricdataquery-returndata"></a>
 This option indicates whether to return the timestamps and raw data values of this metric\.  
-When you create an alarm based on a metric math expression, specify `True` for this value for only the one math expression that the alarm is based on\. You must specify `False` for `ReturnData` for all the other metrics and expressions used in the alarm\.  
-This field is required\.  
+When you create an alarm based on a metric math expression, specify `True` for this value for only the one math expression that the alarm is based on\. You must specify `False` for `ReturnData` for all the other metrics and expressions used in the alarm\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
