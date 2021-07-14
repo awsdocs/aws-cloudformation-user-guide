@@ -7,7 +7,14 @@ CloudFormation currently supports the following dynamic reference patterns:
 + [`ssm-secure`](#dynamic-references-ssm-secure-strings), for secure strings stored in AWS Systems Manager Parameter Store
 + [`secretsmanager`](#dynamic-references-secretsmanager), for entire secrets or specific secret values that are stored in AWS Secrets Manager
 
-Some considerations when using dynamic references:
+## Considerations when using dynamic references<a name="dynamic-references-considerations"></a>
+
+Below are considerations you should take into account when using dynamic references:
+
+**Important**  
+We strongly recommend against including dynamic references, or any sensitive data, in resource properties that are part of a resource's primary identifier\.  
+When a dynamic reference parameter is included in a property that forms a primary resource identifier, CloudFormation may use the *actual plaintext value* in the primary resource identifier\. This resource ID may appear in any derived outputs or destinations\.  
+To determine which resource properties comprise a resource type's primary identifier, refer to the [resource reference documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html) for that resource\. In the **Return values** section, the `Ref` function return value represents the resource properties that comprise the resource type's primary identifier\.
 + You can include up to 60 dynamic references in a stack template\.
 + For transforms, such as `AWS::Include` and `AWS::Serverless`, AWS CloudFormation doesn't resolve dynamic references prior to invoking any transforms\. Rather, AWS CloudFormation passes the literal string of the dynamic reference to the transform\. Dynamic references \(including those inserted into the processed template as the result of a transform\) are resolved when you execute the change set using the template\.
 + Dynamic references for secure values, such as `ssm-secure` and `secretsmanager`, aren't currently supported in [custom resources](template-custom-resources.md)\.
@@ -192,7 +199,7 @@ Use the `secretsmanager` dynamic reference to retrieve entire secrets or secret 
 ### Important considerations when using dynamic parameters for Secrets Manager secrets<a name="dynamic-references-secretsmanager-considerations"></a>
 
 You should take the following important security considerations into account when using dynamic parameters to specify Secrets Manager secrets in your stack templates:
-+ The `secretsmanager` dynamic reference can be used in all resource properties\. Using the `secretsmanager` dynamic reference guarantees that neither Secrets Manager nor CloudFormation logs will persists any resolved secret value\. However, the secret value may show up in the service whose resource it is being used in\. You should review your usage to avoid leaking secret data\.
++ The `secretsmanager` dynamic reference can be used in all resource properties\. Using the `secretsmanager` dynamic reference indicates that neither Secrets Manager nor CloudFormation logs should persist any resolved secret value\. However, the secret value may show up in the service whose resource it is being used in\. You should review your usage to avoid leaking secret data\.
 + Updating a secret in Secrets Manager doesn't automatically update the secret in CloudFormation\. In order for CloudFormation to update a `secretsmanager` dynamic reference, you must perform a stack update that updates the resource containing the dynamic reference, either by updating the resource property that contains the `secretsmanager` dynamic reference, or updating another of the resource's properties\.
 
   For example, suppose in your template you specify the `MasterPassword` property of an `[AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)` resource to be a `secretsmanager` dynamic reference, and then create a stack from the template\. You later update that secret's value in Secret Manager, but don't update the `AWS::RDS::DBInstance` resource in your template\. In this case, even if you perform a stack update, the secret value in the `MasterPassword` property isn't updated, and remains the previous secret value\.

@@ -55,5 +55,5 @@ Fn::GetAtt returns a value for a specified attribute of this type\. For more inf
 
 #### <a name="aws-resource-s3-storagelens-return-values-fn--getatt-fn--getatt"></a>
 
-`StorageLensArn`  <a name="StorageLensArn-fn::getatt"></a>
-This resource contains the details of the S3 Storage Lens ARN\. This resource is read\-only\.
+`StorageLensConfiguration.StorageLensArn`  <a name="StorageLensConfiguration.StorageLensArn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.

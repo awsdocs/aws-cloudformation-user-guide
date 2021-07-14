@@ -77,7 +77,7 @@ The ARNs of the certificates that AWS IoT passes to the device during the TLS ha
 
 `ServiceType`  <a name="cfn-iot-domainconfiguration-servicetype"></a>
 The type of service delivered by the endpoint\.  
-AWS IoT Core currently supports only the `DATA` service type\.
+ AWS IoT Core currently supports only the `DATA` service type\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

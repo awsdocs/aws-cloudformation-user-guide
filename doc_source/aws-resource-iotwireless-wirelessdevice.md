@@ -14,9 +14,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-iotwireless-wirelessdevice-description)" : String,
       "[DestinationName](#cfn-iotwireless-wirelessdevice-destinationname)" : String,
+      "[LastUplinkReceivedAt](#cfn-iotwireless-wirelessdevice-lastuplinkreceivedat)" : String,
       "[LoRaWAN](#cfn-iotwireless-wirelessdevice-lorawan)" : LoRaWANDevice,
       "[Name](#cfn-iotwireless-wirelessdevice-name)" : String,
       "[Tags](#cfn-iotwireless-wirelessdevice-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[ThingArn](#cfn-iotwireless-wirelessdevice-thingarn)" : String,
       "[Type](#cfn-iotwireless-wirelessdevice-type)" : String
     }
 }
@@ -29,11 +31,13 @@ Type: AWS::IoTWireless::WirelessDevice
 Properties: 
   [Description](#cfn-iotwireless-wirelessdevice-description): String
   [DestinationName](#cfn-iotwireless-wirelessdevice-destinationname): String
+  [LastUplinkReceivedAt](#cfn-iotwireless-wirelessdevice-lastuplinkreceivedat): String
   [LoRaWAN](#cfn-iotwireless-wirelessdevice-lorawan): 
     LoRaWANDevice
   [Name](#cfn-iotwireless-wirelessdevice-name): String
   [Tags](#cfn-iotwireless-wirelessdevice-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [ThingArn](#cfn-iotwireless-wirelessdevice-thingarn): String
   [Type](#cfn-iotwireless-wirelessdevice-type): String
 ```
 
@@ -48,6 +52,12 @@ The description of the new resource\. Maximum length is 2048\.
 `DestinationName`  <a name="cfn-iotwireless-wirelessdevice-destinationname"></a>
 The name of the destination to assign to the new wireless device\. Can have only have alphanumeric, \- \(hyphen\) and \_ \(underscore\) characters and it can't have any spaces\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LastUplinkReceivedAt`  <a name="cfn-iotwireless-wirelessdevice-lastuplinkreceivedat"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -68,6 +78,12 @@ An array of key\-value pairs to apply to this resource\. Tags can have a minimum
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ThingArn`  <a name="cfn-iotwireless-wirelessdevice-thingarn"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-iotwireless-wirelessdevice-type"></a>

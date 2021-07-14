@@ -1,6 +1,6 @@
 # AWS::SSMContacts::Contact<a name="aws-resource-ssmcontacts-contact"></a>
 
-The `AWS::SSMContacts::Contact` resource specifies a contact\. Incident Manager Contacts are a subset of actions and data types that you can use for managing responder engagement and interaction\.
+The `AWS::SSMContacts::Contact` resource specifies a contact or escalation plan\. Incident Manager contacts are a subset of actions and data types that you can use for managing responder engagement and interaction\.
 
 ## Syntax<a name="aws-resource-ssmcontacts-contact-syntax"></a>
 

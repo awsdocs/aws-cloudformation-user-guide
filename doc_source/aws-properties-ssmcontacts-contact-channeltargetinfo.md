@@ -25,9 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ssmcontacts-contact-channeltargetinfo-properties"></a>
 
 `ChannelId`  <a name="cfn-ssmcontacts-contact-channeltargetinfo-channelid"></a>
-Not currently supported by AWS CloudFormation\.  
+The Amazon Resource Name \(ARN\) of the contact channel\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `2048`  
+*Pattern*: `arn:(aws|aws-cn|aws-us-gov):ssm-contacts:[-\w+=\/,.@]*:[0-9]+:([\w+=\/,.@:-]+)*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetryIntervalInMinutes`  <a name="cfn-ssmcontacts-contact-channeltargetinfo-retryintervalinminutes"></a>

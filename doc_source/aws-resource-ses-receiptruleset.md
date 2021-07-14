@@ -58,7 +58,7 @@ Specifies a collection of receipt rules that are applied to incoming email\.
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS SES ReceiptRuleSet Sample Template",
+    "Description": "Amazon SES ReceiptRuleSet Sample Template",
     "Parameters": {
         "ReceiptRuleSetName": {
             "Type": "String"
@@ -81,7 +81,7 @@ Specifies a collection of receipt rules that are applied to incoming email\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: AWS SES ReceiptRuleSet Sample Template
+Description: Amazon SES ReceiptRuleSet Sample Template
 Parameters:
   ReceiptRuleSetName:
     Type: String

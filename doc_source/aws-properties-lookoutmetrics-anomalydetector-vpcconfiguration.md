@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[SecurityGroupIdList](#cfn-lookoutmetrics-anomalydetector-vpcconfiguration-securitygroupidlist)" : SecurityGroupIdList,
-  "[SubnetIdList](#cfn-lookoutmetrics-anomalydetector-vpcconfiguration-subnetidlist)" : SubnetIdList
+  "[SecurityGroupIdList](#cfn-lookoutmetrics-anomalydetector-vpcconfiguration-securitygroupidlist)" : [ String, ... ],
+  "[SubnetIdList](#cfn-lookoutmetrics-anomalydetector-vpcconfiguration-subnetidlist)" : [ String, ... ]
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [SecurityGroupIdList](#cfn-lookoutmetrics-anomalydetector-vpcconfiguration-securitygroupidlist): 
-    SecurityGroupIdList
+    - String
   [SubnetIdList](#cfn-lookoutmetrics-anomalydetector-vpcconfiguration-subnetidlist): 
-    SubnetIdList
+    - String
 ```
 
 ## Properties<a name="aws-properties-lookoutmetrics-anomalydetector-vpcconfiguration-properties"></a>
@@ -29,11 +29,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `SecurityGroupIdList`  <a name="cfn-lookoutmetrics-anomalydetector-vpcconfiguration-securitygroupidlist"></a>
 An array of strings containing the list of security groups\.  
 *Required*: Yes  
-*Type*: [SecurityGroupIdList](aws-properties-lookoutmetrics-anomalydetector-securitygroupidlist.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetIdList`  <a name="cfn-lookoutmetrics-anomalydetector-vpcconfiguration-subnetidlist"></a>
 An array of strings containing the Amazon VPC subnet IDs \(e\.g\., `subnet-0bb1c79de3EXAMPLE`\.  
 *Required*: Yes  
-*Type*: [SubnetIdList](aws-properties-lookoutmetrics-anomalydetector-subnetidlist.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

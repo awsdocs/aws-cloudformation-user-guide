@@ -96,7 +96,7 @@ The replication groups that comprise the Global datastore\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegionalConfigurations`  <a name="cfn-elasticache-globalreplicationgroup-regionalconfigurations"></a>
-The AWS Regions that comprise the Global Datastore\.  
+The Amazon Regions that comprise the Global Datastore\.  
 *Required*: No  
 *Type*: List of [RegionalConfiguration](aws-properties-elasticache-globalreplicationgroup-regionalconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

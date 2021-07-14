@@ -77,7 +77,7 @@ Change sets don't indicate whether your stack update will be successful\. For ex
 
 1. Execute the change set that you want to apply to your stack\. CloudFormation updates your stack by updating only the resources that you modified and signals that your stack has been successfully updated\. If the stack updates fails, CloudFormation rolls back changes to restore the stack to the last known working state\.
 
-## Deleting a stack<a name="w9219ab1b5c17c19"></a>
+## Deleting a stack<a name="w9292ab1b5c17c19"></a>
 
 When you delete a stack, you specify the stack to delete, and CloudFormation deletes the stack and all the resources in that stack\. You can delete stacks by using the CloudFormation [console](cfn-console-delete-stack.md), [API](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeleteStack.html), or [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/delete-stack.html)\.
 
@@ -85,6 +85,6 @@ If you want to delete a stack but want to retain some resources in that stack, y
 
 After all the resources have been deleted, CloudFormation signals that your stack has been successfully deleted\. If CloudFormation can't delete a resource, the stack won't be deleted\. Any resources that haven't been deleted will remain until you can successfully delete the stack\.
 
-## Additional resources<a name="w9219ab1b5c17c21"></a>
+## Additional resources<a name="w9292ab1b5c17c21"></a>
 + For more information about creating CloudFormation templates, see [Template anatomy](template-anatomy.md)\.
 + For more information about creating, updating, or deleting stacks, see [Working with stacks](stacks.md)\.

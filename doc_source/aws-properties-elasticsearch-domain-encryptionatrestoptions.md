@@ -1,6 +1,6 @@
 # AWS::Elasticsearch::Domain EncryptionAtRestOptions<a name="aws-properties-elasticsearch-domain-encryptionatrestoptions"></a>
 
-Whether the domain should encrypt data at rest, and if so, the AWS Key Management Service \(KMS\) key to use\.
+Whether the domain should encrypt data at rest, and if so, the AWS Key Management Service key to use\.
 
 ## Syntax<a name="aws-properties-elasticsearch-domain-encryptionatrestoptions-syntax"></a>
 

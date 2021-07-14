@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ssmcontacts-contact-stage-properties"></a>
 
 `DurationInMinutes`  <a name="cfn-ssmcontacts-contact-stage-durationinminutes"></a>
-The time to wait until beginning the next stage\.  
+The time to wait until beginning the next stage\. The duration can only be set to 0 if a target is specified\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `0`  

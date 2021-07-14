@@ -47,7 +47,7 @@ Properties:
 
 `CloudWatchLogGroupArn`  <a name="cfn-datasync-task-cloudwatchloggrouparn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon CloudWatch log group that is used to monitor and log events in the task\.   
-For more information about how to use CloudWatch Logs with DataSync, see [Monitoring Your Task](https://docs.aws.amazon.com/datasync/latest/userguide/monitor-datasync.html#cloudwatchlogs) in the *AWS DataSync User Guide\.*   
+For more information about how to use CloudWatch Logs with DataSync, see [Monitoring Your Task](https://docs.aws.amazon.com/datasync/latest/userguide/monitor-datasync.html#cloudwatchlogs) in the * AWS DataSync User Guide\.*   
 For more information about these groups, see [Working with Log Groups and Log Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html) in the *Amazon CloudWatch Logs User Guide*\.  
 *Required*: No  
 *Type*: String  

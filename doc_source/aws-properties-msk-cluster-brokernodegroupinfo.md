@@ -40,7 +40,7 @@ This parameter is currently not in use\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClientSubnets`  <a name="cfn-msk-cluster-brokernodegroupinfo-clientsubnets"></a>
-The list of subnets to connect to in the client virtual private cloud \(VPC\)\. AWS creates elastic network interfaces inside these subnets\. Client applications use elastic network interfaces to produce and consume data\.   
+The list of subnets to connect to in the client virtual private cloud \(VPC\)\. Amazon creates elastic network interfaces inside these subnets\. Client applications use elastic network interfaces to produce and consume data\.   
 Specify exactly two subnets if you are using the US West \(N\. California\) Region\. For other Regions where Amazon MSK is available, you can specify either two or three subnets\. The subnets that you specify must be in distinct Availability Zones\. When you create a cluster, Amazon MSK distributes the broker nodes evenly across the subnets that you specify\.  
 Client subnets can't be in Availability Zone us\-east\-1e\.  
 *Required*: Yes  
@@ -54,7 +54,7 @@ The type of Amazon EC2 instances to use for brokers\. The following instance typ
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroups`  <a name="cfn-msk-cluster-brokernodegroupinfo-securitygroups"></a>
-The AWS security groups to associate with the elastic network interfaces in order to specify who can connect to and communicate with the Amazon MSK cluster\. If you don't specify a security group, Amazon MSK uses the default security group associated with the VPC\. If you specify security groups that were shared with you, you must ensure that you have permissions to them\. Specifically, you need the `ec2:DescribeSecurityGroups` permission\.  
+The security groups to associate with the elastic network interfaces in order to specify who can connect to and communicate with the Amazon MSK cluster\. If you don't specify a security group, Amazon MSK uses the default security group associated with the VPC\. If you specify security groups that were shared with you, you must ensure that you have permissions to them\. Specifically, you need the `ec2:DescribeSecurityGroups` permission\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

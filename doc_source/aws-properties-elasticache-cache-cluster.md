@@ -129,7 +129,7 @@ The following node types are supported by ElastiCache\. Generally speaking, the 
     **M2 node types:** `cache.m2.xlarge`, `cache.m2.2xlarge`, `cache.m2.4xlarge`
 
     **R3 node types:** `cache.r3.large`, `cache.r3.xlarge`, `cache.r3.2xlarge`, `cache.r3.4xlarge`, `cache.r3.8xlarge`
-For region availability, see [Supported Node Types by AWS Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)  
+For region availability, see [Supported Node Types by Amazon Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)  
 **Additional node type info**  
 + All current generation instance types are created in Amazon VPC by default\.
 + Redis append\-only files \(AOF\) are not supported for T1 or T2 instances\.

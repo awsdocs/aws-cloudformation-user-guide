@@ -68,7 +68,7 @@ The temporary password in the welcome email is valid for only 7 days\. If users 
 
 `UserName`  <a name="cfn-appstream-user-username"></a>
 The email address of the user\.  
-Users' email addresses are case\-sensitive\. During login, if they specify an email address that doesn't use the same capitalization as the email address specified when their user pool account was created, a "user does not exist" error message displays\. 
+Users' email addresses are case\-sensitive\. During login, if they specify an email address that doesn't use the same capitalization as the email address specified when their user pool account was created, a "user does not exist" error message displays\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

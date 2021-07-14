@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-databrew-recipe-s3location-properties"></a>
 
 `Bucket`  <a name="cfn-databrew-recipe-s3location-bucket"></a>
-The S3 bucket name\.  
+The Amazon S3 bucket name\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `3`  

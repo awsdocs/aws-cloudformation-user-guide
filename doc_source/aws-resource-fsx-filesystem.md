@@ -64,7 +64,7 @@ The type of Amazon FSx file system, either `LUSTRE` or `WINDOWS`\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-fsx-filesystem-kmskeyid"></a>
-The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the file system's data for Amazon FSx for Windows File Server file systems and persistent Amazon FSx for Lustre file systems at rest\. In either case, if not specified, the Amazon FSx managed key is used\. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using Amazon FSx managed keys\. For more information, see [Encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) in the *AWS Key Management Service API Reference*\.  
+The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the file system's data for Amazon FSx for Windows File Server file systems and persistent Amazon FSx for Lustre file systems at rest\. In either case, if not specified, the Amazon FSx managed key is used\. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using Amazon FSx managed keys\. For more information, see [Encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) in the * AWS Key Management Service API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -251,7 +251,7 @@ Resources:
         CopyTagsToBackups: true
         DeploymentType: "PERSISTENT_1"
         PerUnitStorageThroughput: 200
-        DataCompression: "LZ4"
+        DataCompressionType: "LZ4"
         ImportPath: !Join ["", ["s3://", !ImportValue LustreCFNS3ImportBucketName]]
         ExportPath: !Join ["", ["s3://", !ImportValue LustreCFNS3ExportPath]]
         WeeklyMaintenanceStartTime: "2:20:30"
@@ -305,7 +305,7 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
                     "CopyTagsToBackups": false,
                     "DeploymentType": "MULTI_AZ_1",
                     "PreferredSubnetId": {
-                        "Fn:ImportValue": "MySubnet01"
+                        "Fn::ImportValue": "MySubnet01"
                     },
                     "SelfManagedActiveDirectoryConfiguration": {
                         "DnsIps": [
@@ -406,11 +406,11 @@ Outputs:
     Value: !Ref WindowsSelfManagedADFileSystemWithAllConfigs
 ```
 
-### Create an Amazon FSx for Windows File Server File System in an AWS Managed Active Directory<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an_AWS_Managed_Active_Directory"></a>
+### Create an Amazon FSx for Windows File Server File System in an AWS Managed Active Directory<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an__Managed_Active_Directory"></a>
 
 The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system using HDD storage that is joined to an AWS Managed Active Directory\.
 
-#### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an_AWS_Managed_Active_Directory--json"></a>
+#### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an__Managed_Active_Directory--json"></a>
 
 ```
 {
@@ -454,7 +454,7 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
                     "CopyTagsToBackups": false,
                     "DeploymentType": "MULTI_AZ_1",
                     "PreferredSubnetId": {
-                        "Fn:ImportValue": "CfnFsxMadSubnet01"
+                        "Fn::ImportValue": "CfnFsxMadSubnet01"
                     }
                 }
             }
@@ -470,7 +470,7 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
 }
 ```
 
-#### YAML<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an_AWS_Managed_Active_Directory--yaml"></a>
+#### YAML<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an__Managed_Active_Directory--yaml"></a>
 
 ```
 Resources:

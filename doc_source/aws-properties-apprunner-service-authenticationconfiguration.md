@@ -29,8 +29,8 @@ The Amazon Resource Name \(ARN\) of the IAM role that grants the App Runner serv
 *Required*: No  
 *Type*: String  
 *Minimum*: `29`  
-*Maximum*: `102`  
-*Pattern*: `arn:(aws|aws-us-gov|aws-cn|aws-iso|aws-iso-b):iam::[0-9]{12}:(role|role/service-role)/[\w+=,.@-]{1,64}`  
+*Maximum*: `1024`  
+*Pattern*: `arn:(aws|aws-us-gov|aws-cn|aws-iso|aws-iso-b):iam::[0-9]{12}:(role|role\/service-role)\/[\w+=,.@\-/]{1,1000}`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectionArn`  <a name="cfn-apprunner-service-authenticationconfiguration-connectionarn"></a>

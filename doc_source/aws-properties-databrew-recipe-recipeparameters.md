@@ -402,7 +402,7 @@ Indicates if this column is participating in a split transform\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Input`  <a name="cfn-databrew-recipe-recipeparameters-input"></a>
-The input location to load the dataset from \- Amazon S3 or Data Catalog\.  
+The input location to load the dataset from \- Amazon S3 or AWS Glue Data Catalog\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

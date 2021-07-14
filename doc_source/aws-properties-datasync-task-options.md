@@ -98,7 +98,7 @@ If `Mtime` is set to NONE, `Atime` must also be set to NONE\.
 
 `OverwriteMode`  <a name="cfn-datasync-task-options-overwritemode"></a>
 A value that determines whether files at the destination should be overwritten or preserved when copying files\. If set to `NEVER` a destination file will not be replaced by a source file, even if the destination file differs from the source file\. If you modify files in the destination and you sync the files, you can use this value to protect against overwriting those changes\.   
-Some storage classes have specific behaviors that can affect your S3 storage cost\. For detailed information, see [Considerations when working with Amazon S3 storage classes in DataSync ](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes) in the *AWS DataSync User Guide*\.  
+Some storage classes have specific behaviors that can affect your S3 storage cost\. For detailed information, see [Considerations when working with Amazon S3 storage classes in DataSync ](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes) in the * AWS DataSync User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ALWAYS | NEVER`  
@@ -109,14 +109,14 @@ A value that determines which users or groups can access a file for a specific p
 Default value: PRESERVE\.  
 PRESERVE: Preserve POSIX\-style permissions \(recommended\)\.  
 NONE: Ignore permissions\.   
-AWS DataSync can preserve extant permissions of a source location\.
+ AWS DataSync can preserve extant permissions of a source location\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `NONE | PRESERVE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PreserveDeletedFiles`  <a name="cfn-datasync-task-options-preservedeletedfiles"></a>
-A value that specifies whether files in the destination that don't exist in the source file system should be preserved\. This option can affect your storage cost\. If your task deletes objects, you might incur minimum storage duration charges for certain storage classes\. For detailed information, see [Considerations when working with Amazon S3 storage classes in DataSync ](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes) in the *AWS DataSync User Guide*\.  
+A value that specifies whether files in the destination that don't exist in the source file system should be preserved\. This option can affect your storage cost\. If your task deletes objects, you might incur minimum storage duration charges for certain storage classes\. For detailed information, see [Considerations when working with Amazon S3 storage classes in DataSync ](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes) in the * AWS DataSync User Guide*\.  
 Default value: PRESERVE\.  
 PRESERVE: Ignore such destination files \(recommended\)\.   
 REMOVE: Delete destination files that aren’t present in the source\.  
@@ -127,7 +127,7 @@ REMOVE: Delete destination files that aren’t present in the source\.
 
 `PreserveDevices`  <a name="cfn-datasync-task-options-preservedevices"></a>
 A value that determines whether AWS DataSync should preserve the metadata of block and character devices in the source file system, and re\-create the files with that device name and metadata on the destination\. DataSync does not copy the contents of such devices, only the name and metadata\.   
-AWS DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an end\-of\-file \(EOF\) marker\.
+ AWS DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an end\-of\-file \(EOF\) marker\.
 Default value: NONE\.  
 NONE: Ignore special devices \(recommended\)\.   
 PRESERVE: Preserve character and block device metadata\. This option isn't currently supported for Amazon EFS\.   

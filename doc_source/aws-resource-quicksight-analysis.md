@@ -58,7 +58,7 @@ The ID for the analysis that you're creating\. This ID displays in the URL of th
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AwsAccountId`  <a name="cfn-quicksight-analysis-awsaccountid"></a>
-The ID of the AWS account where you are creating an analysis\.  
+The ID of the AWS account; where you are creating an analysis\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `12`  
@@ -78,7 +78,6 @@ A descriptive name for the analysis that you're creating\. This name displays fo
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
-*Pattern*: `[\u0020-\u00FF]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-quicksight-analysis-parameters"></a>

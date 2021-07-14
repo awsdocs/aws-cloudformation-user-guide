@@ -62,7 +62,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-gamelift-matchmakingruleset-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html)\) for the script\. For example: `arn:aws:gamelift:us-west-2::matchmakingruleset/myrulesetname`\.
+The unique Amazon Resource Name \(ARN\) assigned to the rule set\.
 
 `Name`  <a name="Name-fn::getatt"></a>
 The unique name of the rule set\.
@@ -112,6 +112,6 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-gamelift-matchmakingruleset--seealso"></a>
-+ [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++ [ Create GameLift Resources Using Amazon CloudFront](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 + [ Build a FlexMatch Rule Set](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-rulesets.html) in the *Amazon GameLift Developer Guide*
 +  [ CreateMatchmakingRuleSet](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateMatchmakingRuleSet.html) in the *Amazon GameLift API Reference* 

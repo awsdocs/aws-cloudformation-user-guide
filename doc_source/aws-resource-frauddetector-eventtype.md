@@ -63,7 +63,7 @@ The event type event variables\.
 
 `Labels`  <a name="cfn-frauddetector-eventtype-labels"></a>
 The event type labels\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of [Label](aws-properties-frauddetector-eventtype-label.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

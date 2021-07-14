@@ -52,7 +52,7 @@ The actions that the response plan starts at the beginning of an incident\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ChatChannel`  <a name="cfn-ssmincidents-responseplan-chatchannel"></a>
-The Chatbot chat channel used for collaboration during an incident\.  
+The AWS Chatbot chat channel used for collaboration during an incident\.  
 *Required*: No  
 *Type*: [ChatChannel](aws-properties-ssmincidents-responseplan-chatchannel.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

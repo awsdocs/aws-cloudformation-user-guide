@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CustomerProfiles::Integration",
   "Properties" : {
       "[DomainName](#cfn-customerprofiles-integration-domainname)" : String,
+      "[FlowDefinition](#cfn-customerprofiles-integration-flowdefinition)" : FlowDefinition,
       "[ObjectTypeName](#cfn-customerprofiles-integration-objecttypename)" : String,
       "[Tags](#cfn-customerprofiles-integration-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Uri](#cfn-customerprofiles-integration-uri)" : String
@@ -26,6 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CustomerProfiles::Integration
 Properties: 
   [DomainName](#cfn-customerprofiles-integration-domainname): String
+  [FlowDefinition](#cfn-customerprofiles-integration-flowdefinition): 
+    FlowDefinition
   [ObjectTypeName](#cfn-customerprofiles-integration-objecttypename): String
   [Tags](#cfn-customerprofiles-integration-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -40,9 +43,15 @@ The unique name of the domain\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`FlowDefinition`  <a name="cfn-customerprofiles-integration-flowdefinition"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [FlowDefinition](aws-properties-customerprofiles-integration-flowdefinition.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ObjectTypeName`  <a name="cfn-customerprofiles-integration-objecttypename"></a>
 The name of the profile object type mapping to use\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

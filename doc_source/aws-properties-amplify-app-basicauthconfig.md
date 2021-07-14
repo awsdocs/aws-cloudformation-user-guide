@@ -34,12 +34,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Password`  <a name="cfn-amplify-app-basicauthconfig-password"></a>
 The password for basic authorization\.  
+*Length Constraints:* Minimum length of 1\. Maximum length of 255\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Username`  <a name="cfn-amplify-app-basicauthconfig-username"></a>
 The user name for basic authorization\.  
+*Length Constraints:* Minimum length of 1\. Maximum length of 255\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

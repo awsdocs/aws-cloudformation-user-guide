@@ -79,7 +79,7 @@ Specifies configuration information for the knowledge article types that Amazon 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretArn`  <a name="cfn-kendra-datasource-salesforceconfiguration-secretarn"></a>
-The Amazon Resource Name \(ARN\) of an AWS Secrets Manager secret that contains the key/value pairs required to connect to your Salesforce instance\. The secret must contain a JSON structure with the following keys:  
+The Amazon Resource Name \(ARN\) of an AWS Secrets Managersecret that contains the key/value pairs required to connect to your Salesforce instance\. The secret must contain a JSON structure with the following keys:  
 + authenticationUrl \- The OAUTH endpoint that Amazon Kendra connects to get an OAUTH token\. 
 + consumerKey \- The application public key generated when you created your Salesforce application\.
 + consumerSecret \- The application private key generated when you created your Salesforce application\.

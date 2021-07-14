@@ -1,6 +1,6 @@
 # AWS::DMS::Endpoint S3Settings<a name="aws-properties-dms-endpoint-s3settings"></a>
 
-Settings for exporting data to Amazon S3\. 
+Not currently supported by AWS CloudFormation\. 
 
 ## Syntax<a name="aws-properties-dms-endpoint-s3settings-syntax"></a>
 
@@ -35,45 +35,44 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dms-endpoint-s3settings-properties"></a>
 
 `BucketFolder`  <a name="cfn-dms-endpoint-s3settings-bucketfolder"></a>
- An optional parameter to set a folder name in the S3 bucket\. If provided, tables are created in the path ` bucketFolder/schema_name/table_name/`\. If this parameter isn't specified, then the path used is ` schema_name/table_name/`\.   
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BucketName`  <a name="cfn-dms-endpoint-s3settings-bucketname"></a>
- The name of the S3 bucket\.   
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CompressionType`  <a name="cfn-dms-endpoint-s3settings-compressiontype"></a>
-An optional parameter to use GZIP to compress the target files\. Set to GZIP to compress the target files\. Either set this parameter to NONE \(the default\) or don't use it to leave the files uncompressed\. This parameter applies to both \.csv and \.parquet file formats\.   
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `gzip | none`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CsvDelimiter`  <a name="cfn-dms-endpoint-s3settings-csvdelimiter"></a>
- The delimiter used to separate columns in the \.csv file for both source and target\. The default is a comma\.   
+Not currently supported by AWS CloudFormation\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CsvRowDelimiter`  <a name="cfn-dms-endpoint-s3settings-csvrowdelimiter"></a>
- The delimiter used to separate rows in the \.csv file for both source and target\. The default is a carriage return \(`\n`\)\.   
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExternalTableDefinition`  <a name="cfn-dms-endpoint-s3settings-externaltabledefinition"></a>
- The external table definition\.   
-Conditional: If `S3` is used as a source then `ExternalTableDefinition` is required\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceAccessRoleArn`  <a name="cfn-dms-endpoint-s3settings-serviceaccessrolearn"></a>
- The Amazon Resource Name \(ARN\) used by the service to access the IAM role\. The role must allow the `iam:PassRole` action\. It is a required parameter that enables AWS DMS to write and read objects from an S3 bucket\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

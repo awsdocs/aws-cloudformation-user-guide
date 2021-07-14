@@ -59,20 +59,16 @@ A routing configuration that specifies where traffic is directed for this alias,
 
 ### Ref<a name="aws-resource-gamelift-alias-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the alias ID\. For example: `alias-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the alias ID, such as `alias-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-gamelift-alias-return-values-fn--getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
-
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
-
 #### <a name="aws-resource-gamelift-alias-return-values-fn--getatt-fn--getatt"></a>
 
 `AliasId`  <a name="AliasId-fn::getatt"></a>
-A unique identifier for the alias\. For example: `alias-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\. Alias IDs are unique within a Region\.
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-gamelift-alias--examples"></a>
 
@@ -157,6 +153,6 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-gamelift-alias--seealso"></a>
-+ [ Create GameLift resources using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++ [ Create GameLift resources using Amazon CloudFront](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 +  [Add an alias to a GameLift fleet](https://docs.aws.amazon.com/gamelift/latest/developerguide/aliases-creating.html) in the *Amazon GameLift Developer Guide* 
 +  [CreateAlias](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateAlias.html) in the *Amazon GameLift API Reference* 

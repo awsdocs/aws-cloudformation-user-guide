@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-glue-mltransform-transformencryption-properties"></a>
 
 `MLUserDataEncryption`  <a name="cfn-glue-mltransform-transformencryption-mluserdataencryption"></a>
-An `MLUserDataEncryption` object containing the encryption mode and customer\-provided KMS key ID\.  
+The encryption\-at\-rest settings of the transform that apply to accessing user data\.  
 *Required*: No  
 *Type*: [MLUserDataEncryption](aws-properties-glue-mltransform-transformencryption-mluserdataencryption.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

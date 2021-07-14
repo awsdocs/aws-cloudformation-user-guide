@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::QLDB::Ledger",
   "Properties" : {
       "[DeletionProtection](#cfn-qldb-ledger-deletionprotection)" : Boolean,
+      "[KmsKey](#cfn-qldb-ledger-kmskey)" : String,
       "[Name](#cfn-qldb-ledger-name)" : String,
       "[PermissionsMode](#cfn-qldb-ledger-permissionsmode)" : String,
       "[Tags](#cfn-qldb-ledger-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -28,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::QLDB::Ledger
 Properties: 
   [DeletionProtection](#cfn-qldb-ledger-deletionprotection): Boolean
+  [KmsKey](#cfn-qldb-ledger-kmskey): String
   [Name](#cfn-qldb-ledger-name): String
   [PermissionsMode](#cfn-qldb-ledger-permissionsmode): String
   [Tags](#cfn-qldb-ledger-tags): 
@@ -41,6 +43,12 @@ The flag that prevents a ledger from being deleted by any user\. If not provided
 If deletion protection is enabled, you must first disable it before you can delete the ledger\. You can disable it by calling the `UpdateLedger` operation to set the flag to `false`\.  
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`KmsKey`  <a name="cfn-qldb-ledger-kmskey"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-qldb-ledger-name"></a>

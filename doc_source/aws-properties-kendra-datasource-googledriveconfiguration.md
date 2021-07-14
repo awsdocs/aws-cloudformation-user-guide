@@ -85,7 +85,7 @@ A list of regular expression patterns that apply to path on Google Drive\. Items
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretArn`  <a name="cfn-kendra-datasource-googledriveconfiguration-secretarn"></a>
-The Amazon Resource Name \(ARN\) of a AWS Secrets Manager secret that contains the credentials required to connect to Google Drive\. For more information, see [Using a Google Workspace Drive data source](https://docs.aws.amazon.com/kendra/latest/dg/data-source-google-drive.html)\.  
+The Amazon Resource Name \(ARN\) of a AWS Secrets Managersecret that contains the credentials required to connect to Google Drive\. For more information, see [Using a Google Workspace Drive data source](https://docs.aws.amazon.com/kendra/latest/dg/data-source-google-drive.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

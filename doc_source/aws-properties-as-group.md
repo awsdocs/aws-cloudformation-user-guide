@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AutoScalingGroupName](#cfn-autoscaling-autoscalinggroup-autoscalinggroupname)" : String,
       "[AvailabilityZones](#cfn-as-group-availabilityzones)" : [ String, ... ],
       "[CapacityRebalance](#cfn-as-group-capacityrebalance)" : Boolean,
+      "[Context](#cfn-as-group-context)" : String,
       "[Cooldown](#cfn-as-group-cooldown)" : String,
       "[DesiredCapacity](#cfn-as-group-desiredcapacity)" : String,
       "[HealthCheckGracePeriod](#cfn-as-group-healthcheckgraceperiod)" : Integer,
@@ -55,6 +56,7 @@ Properties:
   [AvailabilityZones](#cfn-as-group-availabilityzones): 
     - String
   [CapacityRebalance](#cfn-as-group-capacityrebalance): Boolean
+  [Context](#cfn-as-group-context): String
   [Cooldown](#cfn-as-group-cooldown): String
   [DesiredCapacity](#cfn-as-group-desiredcapacity): String
   [HealthCheckGracePeriod](#cfn-as-group-healthcheckgraceperiod): Integer
@@ -110,6 +112,12 @@ A list of Availability Zones where instances in the Auto Scaling group can be cr
 Indicates whether Capacity Rebalancing is enabled\. For more information, see [Amazon EC2 Auto Scaling Capacity Rebalancing](https://docs.aws.amazon.com/autoscaling/ec2/userguide/capacity-rebalance.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Context`  <a name="cfn-as-group-context"></a>
+Reserved\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Cooldown`  <a name="cfn-as-group-cooldown"></a>

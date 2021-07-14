@@ -1,6 +1,6 @@
 # AWS::Glue::Workflow<a name="aws-resource-glue-workflow"></a>
 
-The AWS::Glue::Workflow is an AWS Glue resource type that manages AWS Glue workflows\. A workflow is a container for a set of related jobs, crawlers, and triggers in AWS Glue\. Using a workflow, you can design a complex multi\-job extract, transform, and load \(ETL\) activity that AWS Glue can execute and track as single entity\.
+The `AWS::Glue::Workflow` is an AWS Glue resource type that manages AWS Glue workflows\. A workflow is a container for a set of related jobs, crawlers, and triggers in AWS Glue\. Using a workflow, you can design a complex multi\-job extract, transform, and load \(ETL\) activity that AWS Glue can execute and track as single entity\.
 
 ## Syntax<a name="aws-resource-glue-workflow-syntax"></a>
 

@@ -1,6 +1,6 @@
 # AWS::DataBrew::Dataset DatasetParameter<a name="aws-properties-databrew-dataset-datasetparameter"></a>
 
-Represents a dataset paramater that defines type and conditions for a parameter in the S3 path of the dataset\.
+Represents a dataset paramater that defines type and conditions for a parameter in the Amazon S3 path of the dataset\.
 
 ## Syntax<a name="aws-properties-databrew-dataset-datasetparameter-syntax"></a>
 
@@ -51,7 +51,7 @@ The optional filter expression structure to apply additional matching criteria t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-databrew-dataset-datasetparameter-name"></a>
-The name of the parameter that is used in the dataset's S3 path\.  
+The name of the parameter that is used in the dataset's Amazon S3 path\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

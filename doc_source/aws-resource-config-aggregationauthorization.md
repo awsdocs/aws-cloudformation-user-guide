@@ -101,7 +101,7 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "Enable AWS Config",
+    "Description": "Enable Config",
     "Metadata": {
         "AWS::CloudFormation::Interface": {
             "ParameterGroups": [
@@ -384,7 +384,7 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: Enable AWS Config
+Description: Enable Config
 
 Metadata:
   AWS::CloudFormation::Interface:

@@ -115,7 +115,8 @@ Specifies the Amazon Resource Name \(ARN\) of the AWS Identity and Access Manage
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProtocolDetails`  <a name="cfn-transfer-server-protocoldetails"></a>
-Not currently supported by AWS CloudFormation\.  
+Protocol settings that are configured for your server\.  
+ Only valid in the `UpdateServer` API\. 
 *Required*: No  
 *Type*: [ProtocolDetails](aws-properties-transfer-server-protocoldetails.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -146,7 +147,7 @@ Key\-value pairs that can be used to group and search for servers\.
 
 ### Ref<a name="aws-resource-transfer-server-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ServerId, such as `s-01234567890abcdef`, and the server ARN, such as `arn:aws:transfer:us-east-1:123456789012:server/s-01234567890abcdef`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the server ARN, such as `arn:aws:transfer:us-east-1:123456789012:server/s-01234567890abcdef`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

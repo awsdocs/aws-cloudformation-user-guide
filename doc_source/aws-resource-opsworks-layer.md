@@ -209,11 +209,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-opsworks-layer--examples"></a>
 
-### AWS OpsWorks PHP Layer<a name="aws-resource-opsworks-layer--examples--AWS_OpsWorks_PHP_Layer"></a>
+### OpsWorks PHP Layer<a name="aws-resource-opsworks-layer--examples--OpsWorks_PHP_Layer"></a>
 
 The following snippet creates an AWS OpsWorks PHP layer that is associated with the `myStack` AWS OpsWorks stack\. The layer is dependent on the `myApp` AWS OpsWorks application\.
 
-#### JSON<a name="aws-resource-opsworks-layer--examples--AWS_OpsWorks_PHP_Layer--json"></a>
+#### JSON<a name="aws-resource-opsworks-layer--examples--OpsWorks_PHP_Layer--json"></a>
 
 ```
 "myLayer": {
@@ -231,7 +231,7 @@ The following snippet creates an AWS OpsWorks PHP layer that is associated with 
 }
 ```
 
-#### YAML<a name="aws-resource-opsworks-layer--examples--AWS_OpsWorks_PHP_Layer--yaml"></a>
+#### YAML<a name="aws-resource-opsworks-layer--examples--OpsWorks_PHP_Layer--yaml"></a>
 
 ```
 myLayer: 
@@ -571,5 +571,5 @@ Parameters:
 
 ## See also<a name="aws-resource-opsworks-layer--seealso"></a>
 +  [CreateLayer](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateLayer.html) in the *AWS OpsWorks API Reference*\.
-+  [Creating an OpsWorks Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-create.html) in the *AWS OpsWorks User Guide*\.
++  [Creating an AWS OpsWorks Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-create.html) in the *AWS OpsWorks User Guide*\.
 

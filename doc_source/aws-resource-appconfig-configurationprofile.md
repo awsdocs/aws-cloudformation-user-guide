@@ -1,11 +1,11 @@
 # AWS::AppConfig::ConfigurationProfile<a name="aws-resource-appconfig-configurationprofile"></a>
 
-The `AWS::AppConfig::ConfigurationProfile` resource creates a configuration profile that enables AppConfig to access the configuration source\. Valid configuration sources include Systems Manager \(SSM\) documents, SSM Parameter Store parameters, and Amazon S3\. A configuration profile includes the following information\.
+The `AWS::AppConfig::ConfigurationProfile` resource creates a configuration profile that enables AWS AppConfig to access the configuration source\. Valid configuration sources include AWS Systems Manager \(SSM\) documents, SSM Parameter Store parameters, and Amazon S3\. A configuration profile includes the following information\.
 + The Uri location of the configuration data\.
 + The AWS Identity and Access Management \(IAM\) role that provides access to the configuration data\.
 + A validator for the configuration data\. Available validators include either a JSON Schema or the Amazon Resource Name \(ARN\) of an AWS Lambda function\.
 
-AppConfig requires that you create resources and deploy a configuration in the following order:
+AWS AppConfig requires that you create resources and deploy a configuration in the following order:
 
 1. Create an application
 
@@ -17,7 +17,7 @@ AppConfig requires that you create resources and deploy a configuration in the f
 
 1. Deploy the configuration
 
-For more information, see [AWS AppConfig](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html) in the *AWS Systems Manager User Guide*\.
+For more information, see [AWS AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) in the *AWS AppConfig User Guide*\.
 
 ## Syntax<a name="aws-resource-appconfig-configurationprofile-syntax"></a>
 
@@ -122,11 +122,11 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 
 
-### AWS AppConfig Configuration Profile Example \- CodePipeline<a name="aws-resource-appconfig-configurationprofile--examples--AWS_AppConfig_Configuration_Profile_Example_-_CodePipeline"></a>
+### AWS AppConfig Configuration Profile Example \- CodePipeline<a name="aws-resource-appconfig-configurationprofile--examples--_Configuration_Profile_Example_-_CodePipeline"></a>
 
 The following examples creates an AWS AppConfig configuration profile named MyTestConfigurationProfile\. A configuration profile includes source information for accessing your configuration data\. A configuration profile can also include optional validators to ensure your configuration data is syntactically and semantically correct\. The following configuration profile example uses the specified `LocationUri` to retrieve configuration data from AWS CodePipeline\.
 
-#### JSON<a name="aws-resource-appconfig-configurationprofile--examples--AWS_AppConfig_Configuration_Profile_Example_-_CodePipeline--json"></a>
+#### JSON<a name="aws-resource-appconfig-configurationprofile--examples--_Configuration_Profile_Example_-_CodePipeline--json"></a>
 
 ```
 {
@@ -157,7 +157,7 @@ The following examples creates an AWS AppConfig configuration profile named MyTe
 }
 ```
 
-#### YAML<a name="aws-resource-appconfig-configurationprofile--examples--AWS_AppConfig_Configuration_Profile_Example_-_CodePipeline--yaml"></a>
+#### YAML<a name="aws-resource-appconfig-configurationprofile--examples--_Configuration_Profile_Example_-_CodePipeline--yaml"></a>
 
 ```
 Resources:
@@ -176,11 +176,11 @@ Resources:
           Value: test
 ```
 
-### AWS AppConfig Configuration Profile Example \- Parameter Store<a name="aws-resource-appconfig-configurationprofile--examples--AWS_AppConfig_Configuration_Profile_Example_-_Parameter_Store"></a>
+### AWS AppConfig Configuration Profile Example \- Parameter Store<a name="aws-resource-appconfig-configurationprofile--examples--_Configuration_Profile_Example_-_Parameter_Store"></a>
 
 The following examples creats an AWS AppConfig configuration profile named MyTestConfigurationProfile\. A configuration profile includes source information for accessing your configuration data\. A configuration profile can also include optional validators to ensure your configuration data is syntactically and semantically correct\. The following configuration profile example uses the specified `RetrievalRoleArn` and `LocationUri` to retrieve configuration data from an SSM parameter\.
 
-#### JSON<a name="aws-resource-appconfig-configurationprofile--examples--AWS_AppConfig_Configuration_Profile_Example_-_Parameter_Store--json"></a>
+#### JSON<a name="aws-resource-appconfig-configurationprofile--examples--_Configuration_Profile_Example_-_Parameter_Store--json"></a>
 
 ```
 {
@@ -223,7 +223,7 @@ The following examples creats an AWS AppConfig configuration profile named MyTes
 }
 ```
 
-#### YAML<a name="aws-resource-appconfig-configurationprofile--examples--AWS_AppConfig_Configuration_Profile_Example_-_Parameter_Store--yaml"></a>
+#### YAML<a name="aws-resource-appconfig-configurationprofile--examples--_Configuration_Profile_Example_-_Parameter_Store--yaml"></a>
 
 ```
 Resources:
@@ -247,5 +247,5 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-appconfig-configurationprofile--seealso"></a>
-+  [AWS AppConfig](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html) 
++  [AWS AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) 
 +  [Creating a configuration and a configuration profile ](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-configuration-and-profile.html)

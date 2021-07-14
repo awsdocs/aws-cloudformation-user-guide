@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[BatchMode](#cfn-iot-topicrule-timestreamaction-batchmode)" : Boolean,
   "[DatabaseName](#cfn-iot-topicrule-timestreamaction-databasename)" : String,
   "[Dimensions](#cfn-iot-topicrule-timestreamaction-dimensions)" : [ TimestreamDimension, ... ],
   "[RoleArn](#cfn-iot-topicrule-timestreamaction-rolearn)" : String,
@@ -21,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-timestreamaction-syntax.yaml"></a>
 
 ```
+  [BatchMode](#cfn-iot-topicrule-timestreamaction-batchmode): Boolean
   [DatabaseName](#cfn-iot-topicrule-timestreamaction-databasename): String
   [Dimensions](#cfn-iot-topicrule-timestreamaction-dimensions): 
     - TimestreamDimension
@@ -31,6 +33,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-timestreamaction-properties"></a>
+
+`BatchMode`  <a name="cfn-iot-topicrule-timestreamaction-batchmode"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatabaseName`  <a name="cfn-iot-topicrule-timestreamaction-databasename"></a>
 The name of an Amazon Timestream database that has the table to write records into\.  

@@ -169,13 +169,17 @@ Specifies the weekly time range during which system maintenance can occur, in Un
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RestoreToTime`  <a name="cfn-neptune-dbcluster-restoretotime"></a>
-Not currently supported by AWS CloudFormation\.  
+Creates a new DB cluster from a DB snapshot or DB cluster snapshot\.  
+If a DB snapshot is specified, the target DB cluster is created from the source DB snapshot with a default configuration and default security group\.  
+If a DB cluster snapshot is specified, the target DB cluster is created from the source DB cluster restore point with the same configuration as the original source DB cluster, except that the new DB cluster is created with the default security group\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RestoreType`  <a name="cfn-neptune-dbcluster-restoretype"></a>
-Not currently supported by AWS CloudFormation\.  
+Creates a new DB cluster from a DB snapshot or DB cluster snapshot\.  
+If a DB snapshot is specified, the target DB cluster is created from the source DB snapshot with a default configuration and default security group\.  
+If a DB cluster snapshot is specified, the target DB cluster is created from the source DB cluster restore point with the same configuration as the original source DB cluster, except that the new DB cluster is created with the default security group\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -189,7 +193,9 @@ However, if you don't specify the `SnapshotIdentifier`, an empty DB cluster is c
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceDBClusterIdentifier`  <a name="cfn-neptune-dbcluster-sourcedbclusteridentifier"></a>
-Not currently supported by AWS CloudFormation\.  
+Creates a new DB cluster from a DB snapshot or DB cluster snapshot\.  
+If a DB snapshot is specified, the target DB cluster is created from the source DB snapshot with a default configuration and default security group\.  
+If a DB cluster snapshot is specified, the target DB cluster is created from the source DB cluster restore point with the same configuration as the original source DB cluster, except that the new DB cluster is created with the default security group\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -209,7 +215,9 @@ The tags assigned to this cluster\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UseLatestRestorableTime`  <a name="cfn-neptune-dbcluster-uselatestrestorabletime"></a>
-Not currently supported by AWS CloudFormation\.  
+Creates a new DB cluster from a DB snapshot or DB cluster snapshot\.  
+If a DB snapshot is specified, the target DB cluster is created from the source DB snapshot with a default configuration and default security group\.  
+If a DB cluster snapshot is specified, the target DB cluster is created from the source DB cluster restore point with the same configuration as the original source DB cluster, except that the new DB cluster is created with the default security group\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

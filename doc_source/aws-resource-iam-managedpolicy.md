@@ -91,6 +91,7 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 `PolicyDocument`  <a name="cfn-iam-managedpolicy-policydocument"></a>
 The JSON policy document that you want to use as the content for the new policy\.  
 You must provide policies in JSON format in IAM\. However, for AWS CloudFormation templates formatted in YAML, you can provide the policy in JSON or YAML format\. AWS CloudFormation always converts a YAML policy to JSON format before submitting it to IAM\.  
+The maximum length of the policy document that you can pass in this operation, including whitespace, is listed below\. To view the maximum character counts of a managed policy with no whitespaces, see [IAM and AWS STS character quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html#reference_iam-quotas-entity-length)\.  
 To learn more about JSON policy grammar, see [Grammar of the IAM JSON policy language](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_grammar.html) in the *IAM User Guide*\.   
 The [regex pattern](http://wikipedia.org/wiki/regex) used to validate this parameter is a string of characters consisting of the following:  
 + Any printable ASCII character ranging from the space character \(`\u0020`\) through the end of the ASCII character range

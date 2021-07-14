@@ -65,7 +65,7 @@ The KMS key id used to encrypt in the FinSpace environment\.
 *Minimum*: `1`  
 *Maximum*: `1000`  
 *Pattern*: `^[a-zA-Z-0-9-:\/]*$`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-finspace-environment-name"></a>
 The name of the FinSpace environment\.  

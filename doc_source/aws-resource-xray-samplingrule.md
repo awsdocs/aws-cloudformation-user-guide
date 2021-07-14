@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[RuleName](#cfn-xray-samplingrule-rulename)" : String,
       "[SamplingRule](#cfn-xray-samplingrule-samplingrule)" : SamplingRule,
+      "[SamplingRuleRecord](#cfn-xray-samplingrule-samplingrulerecord)" : SamplingRuleRecord,
       "[SamplingRuleUpdate](#cfn-xray-samplingrule-samplingruleupdate)" : SamplingRuleUpdate,
       "[Tags](#cfn-xray-samplingrule-tags)" : [ Json, ... ]
     }
@@ -30,6 +31,8 @@ Properties:
   [RuleName](#cfn-xray-samplingrule-rulename): String
   [SamplingRule](#cfn-xray-samplingrule-samplingrule): 
     SamplingRule
+  [SamplingRuleRecord](#cfn-xray-samplingrule-samplingrulerecord): 
+    SamplingRuleRecord
   [SamplingRuleUpdate](#cfn-xray-samplingrule-samplingruleupdate): 
     SamplingRuleUpdate
   [Tags](#cfn-xray-samplingrule-tags): 
@@ -51,6 +54,12 @@ The sampling rule to be created\.
 Must be provided if creating a new sampling rule\. Not valid when updating an existing sampling rule\.  
 *Required*: Conditional  
 *Type*: [SamplingRule](aws-properties-xray-samplingrule-samplingrule.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SamplingRuleRecord`  <a name="cfn-xray-samplingrule-samplingrulerecord"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [SamplingRuleRecord](aws-properties-xray-samplingrule-samplingrulerecord.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SamplingRuleUpdate`  <a name="cfn-xray-samplingrule-samplingruleupdate"></a>

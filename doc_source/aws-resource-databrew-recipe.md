@@ -1,6 +1,6 @@
 # AWS::DataBrew::Recipe<a name="aws-resource-databrew-recipe"></a>
 
-Creates a new DataBrew transformation recipe\.
+Specifies a new AWS Glue DataBrew transformation recipe\.
 
 ## Syntax<a name="aws-resource-databrew-recipe-syntax"></a>
 

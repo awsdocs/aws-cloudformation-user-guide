@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::EC2Fleet",
   "Properties" : {
+      "[Context](#cfn-ec2-ec2fleet-context)" : String,
       "[ExcessCapacityTerminationPolicy](#cfn-ec2-ec2fleet-excesscapacityterminationpolicy)" : String,
       "[LaunchTemplateConfigs](#cfn-ec2-ec2fleet-launchtemplateconfigs)" : [ FleetLaunchTemplateConfigRequest, ... ],
       "[OnDemandOptions](#cfn-ec2-ec2fleet-ondemandoptions)" : OnDemandOptionsRequest,
@@ -32,6 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EC2::EC2Fleet
 Properties: 
+  [Context](#cfn-ec2-ec2fleet-context): String
   [ExcessCapacityTerminationPolicy](#cfn-ec2-ec2fleet-excesscapacityterminationpolicy): String
   [LaunchTemplateConfigs](#cfn-ec2-ec2fleet-launchtemplateconfigs): 
     - FleetLaunchTemplateConfigRequest
@@ -51,6 +53,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-ec2-ec2fleet-properties"></a>
+
+`Context`  <a name="cfn-ec2-ec2fleet-context"></a>
+Reserved\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcessCapacityTerminationPolicy`  <a name="cfn-ec2-ec2fleet-excesscapacityterminationpolicy"></a>
 Indicates whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2 Fleet\.  
@@ -85,7 +93,9 @@ Describes the configuration of Spot Instances in an EC2 Fleet\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TagSpecifications`  <a name="cfn-ec2-ec2fleet-tagspecifications"></a>
-The key\-value pair for tagging the EC2 Fleet request on creation\. The value for `ResourceType` must be `fleet`, otherwise the fleet request fails\. To tag instances at launch, specify the tags in the [launch template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#create-launch-template)\. For information about tagging after launch, see [Tagging your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)\.  
+The key\-value pair for tagging the EC2 Fleet request on creation\. For more information, see [Tagging your resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources)\.  
+If the fleet type is `instant`, specify a resource type of `fleet` to tag the fleet or `instance` to tag the instances at launch\.  
+If the fleet type is `maintain` or `request`, specify a resource type of `fleet` to tag the fleet\. You cannot specify a resource type of `instance`\. To tag instances at launch, specify the tags in a [launch template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#create-launch-template)\.  
 *Required*: No  
 *Type*: List of [TagSpecification](aws-properties-ec2-ec2fleet-tagspecification.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -103,7 +113,7 @@ Indicates whether running instances should be terminated when the EC2 Fleet expi
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Type`  <a name="cfn-ec2-ec2fleet-type"></a>
-The type of request\. The default value is `maintain`\.  
+The fleet type\. The default value is `maintain`\.  
 +  `maintain` \- The EC2 Fleet places an asynchronous request for your desired capacity, and continues to maintain your desired Spot capacity by replenishing interrupted Spot Instances\.
 +  `request` \- The EC2 Fleet places an asynchronous one\-time request for your desired capacity, but does submit Spot requests in alternative capacity pools if Spot capacity is unavailable, and does not maintain Spot capacity if Spot Instances are interrupted\.
 +  `instant` \- The EC2 Fleet places a synchronous one\-time request for your desired capacity, and returns errors for any instances that could not be launched\.

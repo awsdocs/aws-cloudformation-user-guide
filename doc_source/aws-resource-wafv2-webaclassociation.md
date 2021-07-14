@@ -62,7 +62,7 @@ The Amazon Resource Name \(ARN\) of the web ACL that you want to associate with 
 
 The `Ref` for the resource, containing the resource name, physical ID, and scope, formatted as follows: `name|id|scope`\.
 
-For example: `my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL`
+For example: `my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL`\.
 
 ## Examples<a name="aws-resource-wafv2-webaclassociation--examples"></a>
 

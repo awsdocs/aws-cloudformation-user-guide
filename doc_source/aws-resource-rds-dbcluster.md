@@ -37,6 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AvailabilityZones](#cfn-rds-dbcluster-availabilityzones)" : [ String, ... ],
       "[BacktrackWindow](#cfn-rds-dbcluster-backtrackwindow)" : Long,
       "[BackupRetentionPeriod](#cfn-rds-dbcluster-backuprententionperiod)" : Integer,
+      "[CopyTagsToSnapshot](#cfn-rds-dbcluster-copytagstosnapshot)" : Boolean,
       "[DatabaseName](#cfn-rds-dbcluster-databasename)" : String,
       "[DBClusterIdentifier](#cfn-rds-dbcluster-dbclusteridentifier)" : String,
       "[DBClusterParameterGroupName](#cfn-rds-dbcluster-dbclusterparametergroupname)" : String,
@@ -80,6 +81,7 @@ Properties:
     - String
   [BacktrackWindow](#cfn-rds-dbcluster-backtrackwindow): Long
   [BackupRetentionPeriod](#cfn-rds-dbcluster-backuprententionperiod): Integer
+  [CopyTagsToSnapshot](#cfn-rds-dbcluster-copytagstosnapshot): Boolean
   [DatabaseName](#cfn-rds-dbcluster-databasename): String
   [DBClusterIdentifier](#cfn-rds-dbcluster-dbclusteridentifier): String
   [DBClusterParameterGroupName](#cfn-rds-dbcluster-dbclusterparametergroupname): String
@@ -145,6 +147,12 @@ Constraints:
 + Must be a value from 1 to 35
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CopyTagsToSnapshot`  <a name="cfn-rds-dbcluster-copytagstosnapshot"></a>
+A value that indicates whether to copy all tags from the DB cluster to snapshots of the DB cluster\. The default is not to copy them\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatabaseName`  <a name="cfn-rds-dbcluster-databasename"></a>
@@ -397,7 +405,7 @@ If you plan to update the resource, don't specify VPC security groups in a share
 
 ### Ref<a name="aws-resource-rds-dbcluster-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the DB cluster as an uppercase string\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the DB cluster\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

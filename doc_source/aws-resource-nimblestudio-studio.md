@@ -1,10 +1,10 @@
 # AWS::NimbleStudio::Studio<a name="aws-resource-nimblestudio-studio"></a>
 
-The `AWS::NimbleStudio::Studio` resource creates a new studio resource\. In Nimble Studio, all other resources are contained in a studio\. 
+The `AWS::NimbleStudio::Studio` resource creates a new studio resource\. In Amazon Nimble Studio, all other resources are contained in a studio\. 
 
-When creating a Studio, two IAM roles must be provided: the admin role and the user role\. These roles are assumed by your users when they log in to the Nimble Studio portal\. The user role must have the AmazonNimbleStudio\-StudioUser managed policy attached for the portal to function properly\. The Admin Role must have the AmazonNimbleStudio\-StudioAdmin managed policy attached for the portal to function properly\.
+When creating a studio, two IAM roles must be provided: the admin role and the user role\. These roles are assumed by your users when they log in to the Amazon Nimble Studio portal\. The user role must have the AmazonNimbleStudio\-StudioUser managed policy attached for the portal to function properly\. The Admin Role must have the AmazonNimbleStudio\-StudioAdmin managed policy attached for the portal to function properly\.
 
-You can optionally specify a KMS key in the StudioEncryptionConfiguration\. In Nimble Studio, resource names, descriptions, initialization scripts, and other data you provide are always encrypted at rest using an AWS KMS key\. By default, this key is owned by AWS and managed on your behalf\. You may provide your own AWS KMS key when calling CreateStudio to encrypt this data using a key that you own and manage\. When providing an AWS KMS key during studio creation, Nimble Studio creates KMS grants in your account to provide your studio user and admin roles access to these KMS keys\. If you delete this grant, the studio will no longer be accessible to your portal users\. If you delete the studio KMS key, your studio will no longer be accessible\.
+You can optionally specify an AWS Key Management Service key in the StudioEncryptionConfiguration\. In Nimble Studio, resource names, descriptions, initialization scripts, and other data you provide are always encrypted at rest using an AWS Key Management Service key\. By default, this key is owned by AWS and managed on your behalf\. You may provide your own AWS Key Management Service key when calling CreateStudio to encrypt this data using a key that you own and manage\. When providing an AWS Key Management Service key during studio creation, Amazon Nimble Studio creates AWS Key Management Service grants in your account to provide your studio user and admin roles access to these AWS Key Management Service keys\. If you delete this grant, the studio will no longer be accessible to your portal users\. If you delete the studio AWS Key Management Service key, your studio will no longer be accessible\.
 
 ## Syntax<a name="aws-resource-nimblestudio-studio-syntax"></a>
 
@@ -90,7 +90,7 @@ The IAM role that studio users assume when logging in to the Nimble Studio porta
 The AWS Region where the studio resource is located\. For example, `us-west-2`\.
 
 `SsoClientId`  <a name="SsoClientId-fn::getatt"></a>
-The AWS SSO application client ID that is used to integrate with AWS SSO, which enables AWS SSO users to log into the Nimble Studio portal\.
+The AWS SSO application client ID that is used to integrate with AWS SSO, which enables AWS SSO users to log into the Amazon Nimble Studio portal\.
 
 `StudioId`  <a name="StudioId-fn::getatt"></a>
 The unique identifier for the studio resource\.

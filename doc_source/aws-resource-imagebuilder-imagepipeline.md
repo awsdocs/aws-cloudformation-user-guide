@@ -140,7 +140,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 Returns the Amazon Resource Name \(ARN\) of the image pipeline\. For example, `arn:aws:imagebuilder:us-west-2:123456789012:image-pipeline/mywindows2016pipeline`\.
 
 `Name`  <a name="Name-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Returns the name of the image pipeline\.
 
 ## Examples<a name="aws-resource-imagebuilder-imagepipeline--examples"></a>
 

@@ -49,5 +49,4 @@ To find the ARN for an Application Load Balancer, use the [DescribeLoadBalancers
 
 ## See also<a name="aws-properties-applicationautoscaling-scalingpolicy-predefinedmetricspecification--seealso"></a>
 + [Application Auto Scaling template examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#scenario-app-as-template-examples)
-+ [Target Tracking Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) in the *Application Auto Scaling User Guide*
 

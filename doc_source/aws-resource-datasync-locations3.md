@@ -109,6 +109,8 @@ The URL of the specified Amazon S3 location\.
 
 The following example specifies an S3 location for DataSync\. In this example, the S3 location uses the bucket specified by the Amazon Resource Name \(ARN\) `arn:aws:s3:::MyBucket`\. The access role is specified by the ARN `arn:aws:iam::111222333444:role/MyBucketAccessRole`\. The example uses the `STANDARD` S3 storage class and refers to the subdirectory `/MyFolder`\. 
 
+AWS Security Token Service \(AWS STS\) must be activated in your account and Region for DataSync to assume the IAM role\. For more information about temporary security credentials, see [Temporary security credentials in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html) in the *IAM User Guide*\. 
+
 #### JSON<a name="aws-resource-datasync-locations3--examples--S3_location_for_DataSync--json"></a>
 
 ```

@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ComparisonOperator](#cfn-wafv2-rulegroup-sizeconstraintstatement-comparisonoperator)" : String,
   "[FieldToMatch](#cfn-wafv2-rulegroup-sizeconstraintstatement-fieldtomatch)" : FieldToMatch,
-  "[Size](#cfn-wafv2-rulegroup-sizeconstraintstatement-size)" : Integer,
+  "[Size](#cfn-wafv2-rulegroup-sizeconstraintstatement-size)" : Double,
   "[TextTransformations](#cfn-wafv2-rulegroup-sizeconstraintstatement-texttransformations)" : [ TextTransformation, ... ]
 }
 ```
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ComparisonOperator](#cfn-wafv2-rulegroup-sizeconstraintstatement-comparisonoperator): String
   [FieldToMatch](#cfn-wafv2-rulegroup-sizeconstraintstatement-fieldtomatch): 
     FieldToMatch
-  [Size](#cfn-wafv2-rulegroup-sizeconstraintstatement-size): Integer
+  [Size](#cfn-wafv2-rulegroup-sizeconstraintstatement-size): Double
   [TextTransformations](#cfn-wafv2-rulegroup-sizeconstraintstatement-texttransformations): 
     - TextTransformation
 ```
@@ -50,7 +50,7 @@ The part of a web request that you want AWS WAF to inspect\. For more informatio
 `Size`  <a name="cfn-wafv2-rulegroup-sizeconstraintstatement-size"></a>
 The size, in byte, to compare to the request part, after any transformations\.  
 *Required*: Yes  
-*Type*: Integer  
+*Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TextTransformations`  <a name="cfn-wafv2-rulegroup-sizeconstraintstatement-texttransformations"></a>

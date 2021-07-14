@@ -42,7 +42,7 @@ Properties:
 ## Properties<a name="aws-resource-config-configurationrecorder-properties"></a>
 
 `Name`  <a name="cfn-config-configurationrecorder-name"></a>
-A name for the configuration recorder\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the configuration recorder name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
+A name for the configuration recorder\. If you don't specify a name, AWS CloudFormation CloudFormation generates a unique physical ID and uses that ID for the configuration recorder name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
 After you create a configuration recorder, you cannot rename it\. If you don't want a name that AWS CloudFormation generates, specify a value for this property\. 
 Updates are not supported\.  
 *Required*: No  
@@ -58,7 +58,7 @@ Indicates whether to record configurations for all supported resources or for a 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleARN`  <a name="cfn-config-configurationrecorder-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role that is used to make read or write requests to the delivery channel that you specify and to get configuration details for supported AWS resources\. For more information, see [Permissions for the IAM Role Assigned](https://docs.aws.amazon.com/config/latest/developerguide/iamrole-permissions.html) to AWS Config in the AWS Config Developer Guide\.  
+The Amazon Resource Name \(ARN\) of the IAM \(IAM\) role that is used to make read or write requests to the delivery channel that you specify and to get configuration details for supported AWS resources\. For more information, see [Permissions for the IAM Role Assigned](https://docs.aws.amazon.com/config/latest/developerguide/iamrole-permissions.html) to AWS Config in the AWS Config Developer Guide\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

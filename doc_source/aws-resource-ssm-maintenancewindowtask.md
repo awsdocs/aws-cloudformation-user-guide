@@ -251,10 +251,9 @@ Resources:
         Ref: MaintenanceWindow
       TaskArn: AWS-RunPatchBaseline
       Targets:
-        - Key: WindowTargetIds
-          Values:
-            - Ref: MaintenanceWindowTarget
-
+      - Key: WindowTargetIds
+        Values:
+        - Ref: MaintenanceWindowTarget
   MaintenanceWindow:
     Type: AWS::SSM::MaintenanceWindow
     Properties:
@@ -264,16 +263,15 @@ Resources:
       Description: Maintenance window for instances
       Duration: 1
       Schedule: cron(20 17 ? * MON-FRI *)
-
   MaintenanceWindowTarget:
     Type: AWS::SSM::MaintenanceWindowTarget
-    Properties: 
+    Properties:
       ResourceType: RESOURCE_GROUP
       Targets:
-        - Key: resource-groups:Name
-          Values:
-            - "TestResourceGroup"
-      WindowId: 
+      - Key: resource-groups:Name
+        Values:
+        - TestResourceGroup
+      WindowId:
         Ref: MaintenanceWindow
 ```
 
@@ -328,27 +326,26 @@ The following example creates a maintenance window Run Command task that install
 ---
 Resources:
   MaintenanceWindowRunCommandTask:
-    Type: 'AWS::SSM::MaintenanceWindowTask'
+    Type: AWS::SSM::MaintenanceWindowTask
     Properties:
       WindowId: MaintenanceWindow
       Targets:
-        - Key: WindowTargetIds
-          Values:
-            - MaintenanceWindowTarget
+      - Key: WindowTargetIds
+        Values:
+        - MaintenanceWindowTarget
       TaskType: RUN_COMMAND
       TaskArn: AWS-RunPatchBaseline
       TaskInvocationParameters:
         MaintenanceWindowRunCommandParameters:
-          Comment: Running security updates for OS with no reboot
           Parameters:
             Operation:
-              - Install
+            - Install
             RebootOption:
-              - NoReboot
+            - NoReboot
       MaxConcurrency: 7
-      MaxErrors: 100%
+      MaxErrors: 7
       Priority: 5
-    DependsOn: MaintenanceWindowTarget
+      DependsOn: MaintenanceWindowTarget
 ```
 
 ### Create a Run Command task that runs a PowerShell script<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_Run_Command_task_that_runs_a_PowerShell_script"></a>
@@ -363,7 +360,9 @@ The following example demonstrates running a command with AWS\-RunPowerShellScri
         "MaintenanceWindowRunCommandTask": {
             "Type": "AWS::SSM::MaintenanceWindowTask",
             "Properties": {
-                "WindowId": "MaintenanceWindow",
+                "WindowId": {
+                    "Ref": "MaintenanceWindow"
+                },
                 "Targets": [
                     {
                         "Key": "WindowTargetIds",
@@ -385,13 +384,13 @@ The following example demonstrates running a command with AWS\-RunPowerShellScri
                                 "Get-Service myImportantService | Restart-Service\nGet-ExecutionPolicy -List\nSet-ExecutionPolicy -Scope Process AllSigned\n"
                             ]
                         }
-                    },
-                    "MaxConcurrency": 7,
-                    "MaxErrors": 7,
-                    "Priority": 5
+                    }
                 },
-                "DependsOn": "MaintenanceWindowTarget"
-            }
+                "MaxConcurrency": 7,
+                "MaxErrors": 7,
+                "Priority": 5
+            },
+            "DependsOn": "MaintenanceWindowTarget"
         }
     }
 }
@@ -405,7 +404,7 @@ Resources:
   MaintenanceWindowRunCommandTask:
     Type: 'AWS::SSM::MaintenanceWindowTask'
     Properties:
-      WindowId: MaintenanceWindow
+      WindowId: !Ref MaintenanceWindow
       Targets:
         - Key: WindowTargetIds
           Values:
@@ -414,19 +413,18 @@ Resources:
       TaskArn: AWS-RunPowerShellScript
       TaskInvocationParameters:
         MaintenanceWindowRunCommandParameters:
-          Comment: This is a comment.
+          Comment: This is a comment
           Parameters:
             executionTimeout:
-            - '3600'
-            commands: |- 
-              Get-Service myImportantService | Restart-Service
-              Get-ExecutionPolicy -List
-              Set-ExecutionPolicy -Scope Process AllSigned
-      Priority: 1
-      MaxConcurrency: 5
-      MaxErrors: 5
-      Name: StepFunctionsTask
-      DependsOn: MaintenanceWindowTarget
+              - '3600'
+            commands:
+              - Get-Service myImportantService | Restart-Service
+              - Get-ExecutionPolicy -List
+              - Set-ExecutionPolicy -Scope Process AllSigned
+      MaxConcurrency: 7
+      MaxErrors: 7
+      Priority: 5
+    DependsOn: MaintenanceWindowTarget
 ```
 
 ### Create a task that runs an Automation runbook<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_task_that_runs_an_Automation_runbook"></a>

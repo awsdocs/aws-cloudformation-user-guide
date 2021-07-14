@@ -124,7 +124,7 @@ If you set the [UpgradeElasticsearchVersion](https://docs.aws.amazon.com/AWSClou
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `EncryptionAtRestOptions`  <a name="cfn-elasticsearch-domain-encryptionatrestoptions"></a>
-Whether the domain should encrypt data at rest, and if so, the AWS Key Management Service \(KMS\) key to use\.  
+Whether the domain should encrypt data at rest, and if so, the AWS Key Management Service key to use\.  
 *Required*: No  
 *Type*: [EncryptionAtRestOptions](aws-properties-elasticsearch-domain-encryptionatrestoptions.md)  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

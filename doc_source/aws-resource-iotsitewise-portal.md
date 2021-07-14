@@ -15,6 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoTSiteWise::Portal",
   "Properties" : {
+      "[Alarms](#cfn-iotsitewise-portal-alarms)" : Json,
+      "[NotificationSenderEmail](#cfn-iotsitewise-portal-notificationsenderemail)" : String,
       "[PortalAuthMode](#cfn-iotsitewise-portal-portalauthmode)" : String,
       "[PortalContactEmail](#cfn-iotsitewise-portal-portalcontactemail)" : String,
       "[PortalDescription](#cfn-iotsitewise-portal-portaldescription)" : String,
@@ -30,6 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::IoTSiteWise::Portal
 Properties: 
+  [Alarms](#cfn-iotsitewise-portal-alarms): Json
+  [NotificationSenderEmail](#cfn-iotsitewise-portal-notificationsenderemail): String
   [PortalAuthMode](#cfn-iotsitewise-portal-portalauthmode): String
   [PortalContactEmail](#cfn-iotsitewise-portal-portalcontactemail): String
   [PortalDescription](#cfn-iotsitewise-portal-portaldescription): String
@@ -40,6 +44,18 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-iotsitewise-portal-properties"></a>
+
+`Alarms`  <a name="cfn-iotsitewise-portal-alarms"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`NotificationSenderEmail`  <a name="cfn-iotsitewise-portal-notificationsenderemail"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PortalAuthMode`  <a name="cfn-iotsitewise-portal-portalauthmode"></a>
 The service to use to authenticate users to the portal\. Choose from the following options:  

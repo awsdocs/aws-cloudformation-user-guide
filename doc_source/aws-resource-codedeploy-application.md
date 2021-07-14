@@ -13,7 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CodeDeploy::Application",
   "Properties" : {
       "[ApplicationName](#cfn-codedeploy-application-applicationname)" : String,
-      "[ComputePlatform](#cfn-codedeploy-application-computeplatform)" : String
+      "[ComputePlatform](#cfn-codedeploy-application-computeplatform)" : String,
+      "[Tags](#cfn-codedeploy-application-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -25,6 +26,8 @@ Type: AWS::CodeDeploy::Application
 Properties: 
   [ApplicationName](#cfn-codedeploy-application-applicationname): String
   [ComputePlatform](#cfn-codedeploy-application-computeplatform): String
+  [Tags](#cfn-codedeploy-application-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-codedeploy-application-properties"></a>
@@ -44,6 +47,12 @@ The compute platform that CodeDeploy deploys the application to\.
 *Type*: String  
 *Allowed values*: `ECS | Lambda | Server`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-codedeploy-application-tags"></a>
+ The metadata that you apply to CodeDeploy applications to help you organize and categorize them\. Each tag consists of a key and an optional value, both of which you define\.   
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-codedeploy-application-return-values"></a>
 

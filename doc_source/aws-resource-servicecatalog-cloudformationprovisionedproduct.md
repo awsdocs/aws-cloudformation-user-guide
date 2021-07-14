@@ -2,7 +2,7 @@
 
 Provisions the specified product\.
 
-A provisioned product is a resourced instance of a product\. For example, provisioning a product based on a CloudFormation template launches a CloudFormation stack and its underlying resources\. You can check the status of this request using [DescribeRecord](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_DescribeRecord.html)\.
+A provisioned product is a resourced instance of a product\. For example, provisioning a product based on a AWS CloudFormation template launches a AWS CloudFormation stack and its underlying resources\. You can check the status of this request using [DescribeRecord](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_DescribeRecord.html)\.
 
 If the request contains a tag key with an empty list of values, there is a tag conflict for that key\. Do not include conflicted keys as tags, or this causes the error "Parameter validation failed: Missing required parameter in Tags\[*N*\]:*Value*"\.
 
@@ -105,7 +105,7 @@ You must specify either the ID or the name of the product, but not both\.
 
 `ProductName`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-productname"></a>
 A user\-friendly name for the provisioned product\. This value must be unique for the AWS account and cannot be updated after the product is provisioned\.  
-Each time a stack is created or updated, if `ProductName` is provided it will successfully resolve to `ProductId` as long as only one product exists in the account/region with that `ProductName`\.  
+Each time a stack is created or updated, if `ProductName` is provided it will successfully resolve to `ProductId` as long as only one product exists in the account or Region with that `ProductName`\.  
 You must specify either the name or the ID of the product, but not both\.
 *Required*: Conditional  
 *Type*: String  

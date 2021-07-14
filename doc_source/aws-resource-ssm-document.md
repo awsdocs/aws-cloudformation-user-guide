@@ -193,11 +193,11 @@ document:
 }
 ```
 
-### Join a managed instance to a directory in AWS Directory Service<a name="aws-resource-ssm-document--examples--Join_a_managed_instance_to_a_directory_in_AWS_Directory_Service"></a>
+### Join a managed instance to a directory in AWS Directory Service<a name="aws-resource-ssm-document--examples--Join_a_managed_instance_to_a_directory_in_"></a>
 
 The following SSM document joins instances to a directory in AWS Directory Service\. The three runtime configuration parameters specify which directory the instance joins\. You specify these parameter values when you associate the document with an instance\.
 
-#### YAML<a name="aws-resource-ssm-document--examples--Join_a_managed_instance_to_a_directory_in_AWS_Directory_Service--yaml"></a>
+#### YAML<a name="aws-resource-ssm-document--examples--Join_a_managed_instance_to_a_directory_in_--yaml"></a>
 
 ```
 document: 
@@ -227,7 +227,7 @@ document:
             dnsIpAddresses: "{{ dnsIpAddresses }}"
 ```
 
-#### JSON<a name="aws-resource-ssm-document--examples--Join_a_managed_instance_to_a_directory_in_AWS_Directory_Service--json"></a>
+#### JSON<a name="aws-resource-ssm-document--examples--Join_a_managed_instance_to_a_directory_in_--json"></a>
 
 ```
 "document" : {
