@@ -74,7 +74,7 @@ Default: `false`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-ec2-vpcendpoint-securitygroupids"></a>
-\(Interface endpoint\) The ID of one or more security groups to associate with the endpoint network interface\.  
+\(Interface endpoint\) The ID of one or more security groups to associate with the endpoint network interface\. If this parameter is not specified, the default security group of the VPC will be used\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
