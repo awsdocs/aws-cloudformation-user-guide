@@ -58,7 +58,7 @@ The version that is associated with a build or script\. Version strings do not n
 
 ### Ref<a name="aws-resource-gamelift-script-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `ScriptId`\. For example: `script-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `ScriptId`, such as `script-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -71,16 +71,16 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-gamelift-script-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html)\) for the script\. For example: `arn:aws:gamelift:us-west-2::script/script-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
+The unique Amazon Resource Name \(ARN\) for the script\.
 
 `Id`  <a name="Id-fn::getatt"></a>
-A unique identifier for a Realtime script\. For example: `script-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
+A unique identifier for a Realtime script\.
 
 ## Examples<a name="aws-resource-gamelift-script--examples"></a>
 
 ### Create a Realtime Servers Script<a name="aws-resource-gamelift-script--examples--Create_a_Realtime_Servers_Script"></a>
 
-The following example creates a GameLift script named `MyRealtimeScript`\. The zipped script files are located in an S3 bucket, specified by the `S3Bucket` and `S3Key` input parameters\. The example also creates the AWS Identity and Access Management \(IAM\) role that GameLift assumes so that it has permissions to download the script files\.
+The following example creates a GameLift script named `MyRealtimeScript`\. The zipped script files are located in an S3 bucket, specified by the `S3Bucket` and `S3Key` input parameters\. The example also creates the AWS Identity and Access Management role that GameLift assumes so that it has permissions to download the script files\.
 
 #### JSON<a name="aws-resource-gamelift-script--examples--Create_a_Realtime_Servers_Script--json"></a>
 
@@ -191,6 +191,6 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-gamelift-script--seealso"></a>
-+ [ Create GameLift resources using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++ [ Create GameLift resources using Amazon CloudFront](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 + [ Upload script files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-script-uploading.html#realtime-script-uploading-s3) in the *Amazon GameLift Developer Guide*
 +  [CreateScript](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateScript.html) in the *Amazon GameLift API Reference* 

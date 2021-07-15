@@ -19,7 +19,7 @@ The CloudFormation registry lets you manage the extensions, both public and priv
 
     For more information, see [Using public extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-public)\.
 
-    You can publish your own third\-party extensions to make them available to general CloudFormation users\. For more information, see [Publishing extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish.html) in the *CloudFormation Command Line Interface User Guide*\.
+    You can publish your own third\-party extensions to make them available to general CloudFormation users\. For more information, see [Publishing extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html) in the *CloudFormation Command Line Interface User Guide*\.
 + *Private* extensions are those extensions from third parties that you have explicitly activated for use in your AWS account\. 
 
   There are two kinds of private extensions:

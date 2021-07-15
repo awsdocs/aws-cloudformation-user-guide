@@ -780,9 +780,7 @@ The following example creates an Amazon RDS MySQL DB instance with Enhanced Moni
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS CloudFormation Sample Template for creating an Amazon RDS DB instance: Sample template showing 
-how to create a DB instance with Enhanced Monitoring enabled. **WARNING** This template creates an RDS DB instance. You will 
-be billed for the AWS resources used if you create a stack from this template.",
+    "Description": "AWS CloudFormation Sample Template for creating an Amazon RDS DB instance: Sample template showing how to create a DB instance with Enhanced Monitoring enabled. **WARNING** This template creates an RDS DB instance. You will be billed for the AWS resources used if you create a stack from this template.",
     "Parameters": {
         "DBInstanceID": {
             "Default": "mydbinstance",
@@ -812,8 +810,8 @@ be billed for the AWS resources used if you create a stack from this template.",
             "Default": "50",
             "Description": "The size of the database (GiB)",
             "Type": "Number",
-            "MinValue": "5",
-            "MaxValue": "1024",
+            "MinValue": "20",
+            "MaxValue": "65536",
             "ConstraintDescription": "must be between 20 and 65536 GiB."
         },
         "DBUsername": {
@@ -904,8 +902,8 @@ Parameters:
     Default: '50'
     Description: The size of the database (GiB)
     Type: Number
-    MinValue: '5'
-    MaxValue: '1024'
+    MinValue: '20'
+    MaxValue: '65536'
     ConstraintDescription: must be between 20 and 65536 GiB.
   DBUsername:
     NoEcho: 'true'

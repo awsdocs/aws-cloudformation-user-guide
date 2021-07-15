@@ -79,11 +79,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `CreatedBy`  <a name="cfn-auditmanager-assessment-delegation-createdby"></a>
  The IAM user or role that created the delegation\.   
-*Required*: No  
-*Type*: String  
 *Minimum*: `1`  
 *Maximum*: `100`  
-*Pattern*: `^[a-zA-Z0-9\s-_()\[\]]+$`  
+*Pattern*: `^[a-zA-Z0-9-_()\\[\\]\\s]+$`  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CreationTime`  <a name="cfn-auditmanager-assessment-delegation-creationtime"></a>

@@ -1,6 +1,6 @@
 # AWS::DMS::Endpoint MySqlSettings<a name="aws-properties-dms-endpoint-mysqlsettings"></a>
 
-<a name="aws-properties-dms-endpoint-mysqlsettings-description"></a>The `MySqlSettings` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::DMS::Endpoint](aws-resource-dms-endpoint.md)\.
+Not currently supported by AWS CloudFormation\.
 
 ## Syntax<a name="aws-properties-dms-endpoint-mysqlsettings-syntax"></a>
 

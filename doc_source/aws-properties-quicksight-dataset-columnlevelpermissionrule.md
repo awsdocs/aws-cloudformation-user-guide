@@ -33,7 +33,7 @@ An array of column names\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Principals`  <a name="cfn-quicksight-dataset-columnlevelpermissionrule-principals"></a>
-An array of Amazon Resource Names \(ARNs\) for QuickSight users or groups\.  
+An array of Amazon Resource Names \(ARNs\) for Amazon QuickSightusers or groups\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

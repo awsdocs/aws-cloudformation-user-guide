@@ -79,9 +79,10 @@ Properties:
 `CapacityProviderStrategy`  <a name="cfn-ecs-service-capacityproviderstrategy"></a>
 The capacity provider strategy to use for the service\.  
 A capacity provider strategy consists of one or more capacity providers along with the `base` and `weight` to assign to them\. A capacity provider must be associated with the cluster to be used in a capacity provider strategy\. The PutClusterCapacityProviders API is used to associate a capacity provider with a cluster\. Only capacity providers with an `ACTIVE` or `UPDATING` status can be used\.  
+Review the [Capacity provider considerations](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-capacity-providers.html#capacity-providers-considerations) in the *Amazon Elastic Container Service Developer Guide\.*  
 If a `capacityProviderStrategy` is specified, the `launchType` parameter must be omitted\. If no `capacityProviderStrategy` or `launchType` is specified, the `defaultCapacityProviderStrategy` for the cluster is used\.  
 If specifying a capacity provider that uses an Auto Scaling group, the capacity provider must already be created\. New capacity providers can be created with the CreateCapacityProvider API operation\.  
-To use a AWS Fargate capacity provider, specify either the `FARGATE` or `FARGATE_SPOT` capacity providers\. The AWS Fargate capacity providers are available to all accounts and only need to be associated with a cluster to be used\.  
+To use an AWS Fargate capacity provider, specify either the `FARGATE` or `FARGATE_SPOT` capacity providers\. The AWS Fargate capacity providers are available to all accounts and only need to be associated with a cluster to be used\.  
 The PutClusterCapacityProviders API operation is used to update the list of available capacity providers for a cluster after the cluster is created\.  
 *Required*: No  
 *Type*: List of [CapacityProviderStrategyItem](aws-properties-ecs-service-capacityproviderstrategyitem.md)  
@@ -151,7 +152,7 @@ The network configuration for the service\. This parameter is required for task 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PlacementConstraints`  <a name="cfn-ecs-service-placementconstraints"></a>
-An array of placement constraint objects to use for tasks in your service\. You can specify a maximum of 10 constraints per task \(this limit includes constraints in the task definition and those specified at runtime\)\.   
+An array of placement constraint objects to use for tasks in your service\. You can specify a maximum of 10 constraints per task \(this limit includes constraints in the task definition and those specified at runtime\)\.  
 *Required*: No  
 *Type*: List of [PlacementConstraint](aws-properties-ecs-service-placementconstraint.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -254,7 +255,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The name of the Amazon ECS service, such as `sample-webapp`\.
 
 `ServiceArn`  <a name="ServiceArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Not currently supported in AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-ecs-service--examples"></a>
 

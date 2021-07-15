@@ -46,7 +46,7 @@ Properties:
 ## Properties<a name="aws-resource-gamelift-gamesessionqueue-properties"></a>
 
 `CustomEventData`  <a name="cfn-gamelift-gamesessionqueue-customeventdata"></a>
-Information to be added to all events that are related to this game session queue\.  
+ Information to be added to all events that are related to this game session queue\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -182,6 +182,6 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-gamelift-gamesessionqueue--seealso"></a>
-+ [ Create GameLift resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++ [ Create GameLift resources Using Amazon CloudFront](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 + [ Setting up GameLift queues for game session placement](https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html) in the *Amazon GameLift Developer Guide*
 +  [CreateGameSessionQueue](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateGameSessionQueue.html) in the *Amazon GameLift API Reference* 

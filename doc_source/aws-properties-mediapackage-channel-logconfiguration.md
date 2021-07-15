@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-mediapackage-channel-logconfiguration-properties"></a>
 
 `LogGroupName`  <a name="cfn-mediapackage-channel-logconfiguration-loggroupname"></a>
- Sets a custom AWS CloudWatch log group name\.   
+ Sets a custom Amazon CloudWatch log group name\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

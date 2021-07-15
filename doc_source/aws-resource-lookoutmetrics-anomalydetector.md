@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::LookoutMetrics::AnomalyDetector",
   "Properties" : {
-      "[AnomalyDetectorConfig](#cfn-lookoutmetrics-anomalydetector-anomalydetectorconfig)" : AnomalyDetectorConfig,
+      "[AnomalyDetectorConfig](#cfn-lookoutmetrics-anomalydetector-anomalydetectorconfig)" : Json,
       "[AnomalyDetectorDescription](#cfn-lookoutmetrics-anomalydetector-anomalydetectordescription)" : String,
       "[AnomalyDetectorName](#cfn-lookoutmetrics-anomalydetector-anomalydetectorname)" : String,
       "[KmsKeyArn](#cfn-lookoutmetrics-anomalydetector-kmskeyarn)" : String,
@@ -26,8 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::LookoutMetrics::AnomalyDetector
 Properties: 
-  [AnomalyDetectorConfig](#cfn-lookoutmetrics-anomalydetector-anomalydetectorconfig): 
-    AnomalyDetectorConfig
+  [AnomalyDetectorConfig](#cfn-lookoutmetrics-anomalydetector-anomalydetectorconfig): Json
   [AnomalyDetectorDescription](#cfn-lookoutmetrics-anomalydetector-anomalydetectordescription): String
   [AnomalyDetectorName](#cfn-lookoutmetrics-anomalydetector-anomalydetectorname): String
   [KmsKeyArn](#cfn-lookoutmetrics-anomalydetector-kmskeyarn): String
@@ -40,7 +39,7 @@ Properties:
 `AnomalyDetectorConfig`  <a name="cfn-lookoutmetrics-anomalydetector-anomalydetectorconfig"></a>
 Contains information about the configuration of the anomaly detector\.  
 *Required*: Yes  
-*Type*: [AnomalyDetectorConfig](aws-properties-lookoutmetrics-anomalydetector-anomalydetectorconfig.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AnomalyDetectorDescription`  <a name="cfn-lookoutmetrics-anomalydetector-anomalydetectordescription"></a>

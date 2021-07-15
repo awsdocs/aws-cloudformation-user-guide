@@ -56,9 +56,7 @@ The URL that health check requests are sent to\.
 Default: `"/"`   
 *Required*: No  
 *Type*: String  
-*Minimum*: `0`  
-*Maximum*: `51200`  
-*Pattern*: `.*`  
+*Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-apprunner-service-healthcheckconfiguration-protocol"></a>

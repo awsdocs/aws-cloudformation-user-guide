@@ -1,6 +1,6 @@
 # AWS::Glue::Partition SchemaId<a name="aws-properties-glue-partition-schemaid"></a>
 
-The unique ID of the schema in the AWS Glue schema registry\.
+A structure that contains schema identity fields\. Either this or the `SchemaVersionId` has to be provided\.
 
 ## Syntax<a name="aws-properties-glue-partition-schemaid-syntax"></a>
 

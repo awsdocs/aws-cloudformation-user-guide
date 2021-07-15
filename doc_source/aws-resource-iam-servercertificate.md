@@ -2,7 +2,7 @@
 
 Uploads a server certificate entity for the AWS account\. The server certificate entity includes a public key certificate, a private key, and an optional certificate chain, which should all be PEM\-encoded\.
 
-We recommend that you use [ AWS Certificate Manager](https://docs.aws.amazon.com/acm/) to provision, manage, and deploy your server certificates\. With ACM you can request a certificate, deploy it to AWS resources, and let ACM handle certificate renewals for you\. Certificates provided by ACM are free\. For more information about using ACM, see the [ AWS Certificate Manager User Guide](https://docs.aws.amazon.com/acm/latest/userguide/)\.
+We recommend that you use [ AWS Certificate Manager ](https://docs.aws.amazon.com/acm/) to provision, manage, and deploy your server certificates\. With ACM you can request a certificate, deploy it to AWS resources, and let ACM handle certificate renewals for you\. Certificates provided by ACM are free\. For more information about using ACM, see the [ AWS Certificate Manager User Guide](https://docs.aws.amazon.com/acm/latest/userguide/)\.
 
 For more information about working with server certificates, see [Working with server certificates](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html) in the *IAM User Guide*\. This topic includes a list of AWS services that can use the server certificates that you manage with IAM\.
 

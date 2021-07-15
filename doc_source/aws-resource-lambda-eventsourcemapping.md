@@ -35,6 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SelfManagedEventSource](#cfn-lambda-eventsourcemapping-selfmanagedeventsource)" : SelfManagedEventSource,
       "[SourceAccessConfigurations](#cfn-lambda-eventsourcemapping-sourceaccessconfigurations)" : [ SourceAccessConfiguration, ... ],
       "[StartingPosition](#cfn-lambda-eventsourcemapping-startingposition)" : String,
+      "[StartingPositionTimestamp](#cfn-lambda-eventsourcemapping-startingpositiontimestamp)" : Double,
       "[Topics](#cfn-lambda-eventsourcemapping-topics)" : [ String, ... ],
       "[TumblingWindowInSeconds](#cfn-lambda-eventsourcemapping-tumblingwindowinseconds)" : Integer
     }
@@ -66,6 +67,7 @@ Properties:
   [SourceAccessConfigurations](#cfn-lambda-eventsourcemapping-sourceaccessconfigurations): 
     - SourceAccessConfiguration
   [StartingPosition](#cfn-lambda-eventsourcemapping-startingposition): String
+  [StartingPositionTimestamp](#cfn-lambda-eventsourcemapping-startingpositiontimestamp): Double
   [Topics](#cfn-lambda-eventsourcemapping-topics): 
     - String
   [TumblingWindowInSeconds](#cfn-lambda-eventsourcemapping-tumblingwindowinseconds): Integer
@@ -164,7 +166,7 @@ Valid Values: `ReportBatchItemFailures`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParallelizationFactor`  <a name="cfn-lambda-eventsourcemapping-parallelizationfactor"></a>
-\(Streams only\) The number of batches to process from each shard concurrently\. The default value is 1\.  
+\(Streams only\) The number of batches to process concurrently from each shard\. The default value is 1\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -172,20 +174,20 @@ Valid Values: `ReportBatchItemFailures`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Queues`  <a name="cfn-lambda-eventsourcemapping-queues"></a>
- \(MQ\) The name of the Amazon MQ broker destination queue to consume\.   
+ \(Amazon MQ\) The name of the Amazon MQ broker destination queue to consume\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SelfManagedEventSource`  <a name="cfn-lambda-eventsourcemapping-selfmanagedeventsource"></a>
-The Self\-Managed Apache Kafka cluster for your event source\.  
+The self\-managed Apache Kafka cluster for your event source\.  
 *Required*: No  
 *Type*: [SelfManagedEventSource](aws-properties-lambda-eventsourcemapping-selfmanagedeventsource.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceAccessConfigurations`  <a name="cfn-lambda-eventsourcemapping-sourceaccessconfigurations"></a>
-An array of the authentication protocol, or the VPC components to secure your event source\.  
+An array of the authentication protocol, VPC components, or virtual host to secure and define your event source\.  
 *Required*: No  
 *Type*: List of [SourceAccessConfiguration](aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.md)  
 *Maximum*: `22`  
@@ -198,6 +200,12 @@ The position in a stream from which to start reading\. Required for Amazon Kines
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`StartingPositionTimestamp`  <a name="cfn-lambda-eventsourcemapping-startingpositiontimestamp"></a>
+With `StartingPosition` set to `AT_TIMESTAMP`, the time from which to start reading, in Unix time seconds\.  
+*Required*: No  
+*Type*: Double  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Topics`  <a name="cfn-lambda-eventsourcemapping-topics"></a>
 The name of the Kafka topic\.  

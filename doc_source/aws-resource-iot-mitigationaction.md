@@ -1,6 +1,6 @@
 # AWS::IoT::MitigationAction<a name="aws-resource-iot-mitigationaction"></a>
 
-Defines an action that can be applied to audit findings by using StartAuditMitigationActionsTask\. For API reference, see [CreateMitigationAction](https://docs.aws.amazon.com/apireference/API_CreateMitigationAction.html) and for general information, see [Mitigation actions](https://docs.aws.amazon.com/iot/latest/developerguide/dd-mitigation-actions.html)\.
+Defines an action that can be applied to audit findings by using StartAuditMitigationActionsTask\. For API reference, see [CreateMitigationAction](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateMitigationAction.html) and for general information, see [Mitigation actions](https://docs.aws.amazon.com/iot/latest/developerguide/dd-mitigation-actions.html)\.
 
 ## Syntax<a name="aws-resource-iot-mitigationaction-syntax"></a>
 

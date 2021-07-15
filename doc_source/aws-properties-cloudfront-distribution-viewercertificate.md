@@ -83,7 +83,7 @@ When you’re using SNI only \(you set `SSLSupportMethod` to `sni-only`\), you m
 If the distribution uses the CloudFront domain name such as `d111111abcdef8.cloudfront.net` \(you set `CloudFrontDefaultCertificate` to `true`\), CloudFront automatically sets the security policy to `TLSv1` regardless of the value that you set here\.  
 *Required*: Conditional  
 *Type*: String  
-*Allowed values*: `SSLv3 | TLSv1 | TLSv1.1_2016 | TLSv1.2_2018 | TLSv1.2_2019 | TLSv1_2016`  
+*Allowed values*: `SSLv3 | TLSv1 | TLSv1.1_2016 | TLSv1.2_2018 | TLSv1.2_2019 | TLSv1.2_2021 | TLSv1_2016`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SslSupportMethod`  <a name="cfn-cloudfront-distribution-viewercertificate-sslsupportmethod"></a>

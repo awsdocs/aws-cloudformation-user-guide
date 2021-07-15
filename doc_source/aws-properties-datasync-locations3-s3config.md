@@ -2,7 +2,7 @@
 
 The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role that is used to access an Amazon S3 bucket\.
 
-For detailed information about using such a role, see [Creating a Location for Amazon S3](https://docs.aws.amazon.com/datasync/latest/userguide/working-with-locations.html#create-s3-location) in the *AWS DataSync User Guide*\.
+For detailed information about using such a role, see [Creating a Location for Amazon S3](https://docs.aws.amazon.com/datasync/latest/userguide/working-with-locations.html#create-s3-location) in the * AWS DataSync User Guide*\.
 
 ## Syntax<a name="aws-properties-datasync-locations3-s3config-syntax"></a>
 

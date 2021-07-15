@@ -1,6 +1,6 @@
 # AWS::RDS::OptionGroup<a name="aws-resource-rds-optiongroup"></a>
 
-The `AWS::RDS::OptionGroup` resource creates an option group, to enable and configure features that are specific to a particular DB engine\.
+The `AWS::RDS::OptionGroup` resource creates or updates an option group, to enable and configure features that are specific to a particular DB engine\.
 
 ## Syntax<a name="aws-resource-rds-optiongroup-syntax"></a>
 
@@ -62,8 +62,8 @@ Specifies the major version of the engine that this option group should be assoc
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OptionConfigurations`  <a name="cfn-rds-optiongroup-optionconfigurations"></a>
-A list of all available options  
-*Required*: Yes  
+A list of options and the settings for each option\.  
+*Required*: Conditional  
 *Type*: List of [OptionConfiguration](aws-properties-rds-optiongroup-optionconfigurations.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

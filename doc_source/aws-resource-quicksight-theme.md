@@ -47,7 +47,7 @@ Properties:
 ## Properties<a name="aws-resource-quicksight-theme-properties"></a>
 
 `AwsAccountId`  <a name="cfn-quicksight-theme-awsaccountid"></a>
-The ID of the AWS account where you want to store the new theme\.   
+The ID of the AWS account; where you want to store the new theme\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `12`  
@@ -93,7 +93,7 @@ A map of the key\-value pairs for the resource tag or tags that you want to add 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThemeId`  <a name="cfn-quicksight-theme-themeid"></a>
-An ID for the theme that you want to create\. The theme ID is unique per AWS Region in each AWS account\.  
+An ID for the theme that you want to create\. The theme ID is unique per AWS Region; in each AWS account;\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

@@ -3,9 +3,9 @@
 An AWS Firewall Manager policy\.
 
 Firewall Manager provides the following types of policies: 
-+ A Shield Advanced policy, which applies Shield Advanced protection to specified accounts and resources\.
++ An AWS Shield Advanced policy, which applies Shield Advanced protection to specified accounts and resources\.
 + An AWS WAF policy \(type WAFV2\), which defines rule groups to run first in the corresponding AWS WAF web ACL and rule groups to run last in the web ACL\. 
-+ An AWS WAF Classic policy, which defines a rule group\. AWS WAF Classic doesn't support rule groups in CloudFormation, so, to create WAF Classic policies through CloudFormation, you first need to create your rule groups outside of CloudFormation\. 
++ An AWS WAF Classic policy, which defines a rule group\. AWS WAF Classic doesn't support rule groups in Amazon CloudFront, so, to create AWS WAF Classic policies through CloudFront, you first need to create your rule groups outside of CloudFront\. 
 + A security group policy, which manages VPC security groups across your AWS organization\. 
 + An AWS Network Firewall policy, which provides firewall rules to filter network traffic in specified Amazon VPCs\.
 + A DNS Firewall policy, which provides Amazon Route 53 Resolver DNS Firewall rules to filter DNS queries for specified Amazon VPCs\.
@@ -67,7 +67,7 @@ Properties:
 `DeleteAllPolicyResources`  <a name="cfn-fms-policy-deleteallpolicyresources"></a>
 Used when deleting a policy\. If `true`, Firewall Manager performs cleanup according to the policy type\.  
 For AWS WAF and Shield Advanced policies, Firewall Manager does the following:  
-+ Deletes rule groups created by AWS Firewall Manager
++ Deletes rule groups created by Firewall Manager
 + Removes web ACLs from in\-scope resources 
 + Deletes web ACLs that contain no rules or rule groups 
 For security group policies, Firewall Manager does the following for each security group in the policy:  
@@ -129,7 +129,7 @@ An array of `ResourceTag` objects, used to explicitly include resources in the p
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceType`  <a name="cfn-fms-policy-resourcetype"></a>
-The type of resource protected by or in scope of the policy\. This is in the format shown in the [AWS Resource Types Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)\. To apply this policy to multiple resource types, specify a resource type of `ResourceTypeList` and then specify the resource types in a `ResourceTypeList`\.  
+The type of resource protected by or in scope of the policy\. This is in the format shown in the [ AWS Resource Types Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)\. To apply this policy to multiple resource types, specify a resource type of `ResourceTypeList` and then specify the resource types in a `ResourceTypeList`\.  
 For AWS WAF and Shield Advanced, example resource types include `AWS::ElasticLoadBalancingV2::LoadBalancer` and `AWS::CloudFront::Distribution`\. For a security group common policy, valid values are `AWS::EC2::NetworkInterface` and `AWS::EC2::Instance`\. For a security group content audit policy, valid values are `AWS::EC2::SecurityGroup`, `AWS::EC2::NetworkInterface`, and `AWS::EC2::Instance`\. For a security group usage audit policy, the value is `AWS::EC2::SecurityGroup`\. For an AWS Network Firewall policy or DNS Firewall policy, the value is `AWS::EC2::VPC`\.  
 *Required*: Yes  
 *Type*: String  
@@ -160,7 +160,7 @@ This contains the following settings:
 
     `"ManagedServiceData": "{\"type\": \"WAF\", \"ruleGroups\": [{\"id\":\"12345678-1bcd-9012-efga-0987654321ab\", \"overrideAction\" : {\"type\": \"COUNT\"}}],\"defaultAction\": {\"type\": \"BLOCK\"}}`
 
-    AWS WAF Classic doesn't support rule groups in CloudFormation\. To create a WAF Classic policy through CloudFormation, create your rule groups outside of CloudFormation, then provide the rule group IDs in the WAF managed service data specification\.
+    AWS WAF Classic doesn't support rule groups in CloudFront\. To create a WAF Classic policy through CloudFormation, create your rule groups outside of CloudFront, then provide the rule group IDs in the WAF managed service data specification\.
   + Example: `SECURITY_GROUPS_COMMON` 
 
     `"SecurityServicePolicyData":{"Type":"SECURITY_GROUPS_COMMON","ManagedServiceData":"{\"type\":\"SECURITY_GROUPS_COMMON\",\"revertManualSecurityGroupChanges\":false,\"exclusiveResourceSecurityGroupManagement\":false,\"securityGroups\":[{\"id\":\" sg-000e55995d61a06bd\"}]}"},"RemediationEnabled":false,"ResourceType":"AWS::EC2::NetworkInterface"}`
@@ -212,11 +212,11 @@ The ID of the policy\.
 
 
 
-### Create a Firewall Manager AWS WAF Policy<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_AWS_WAF_Policy"></a>
+### Create a Firewall Manager AWS WAF policy<a name="aws-resource-fms-policy--examples--Create_a___policy"></a>
 
 The following shows an example Firewall Manager WAF policy for the latest version of AWS WAF\. 
 
-#### YAML<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_AWS_WAF_Policy--yaml"></a>
+#### YAML<a name="aws-resource-fms-policy--examples--Create_a___policy--yaml"></a>
 
 ```
 PolicyWAFv2:
@@ -237,7 +237,7 @@ PolicyWAFv2:
                                   "defaultAction":{"type":"BLOCK"}}'
 ```
 
-#### JSON<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_AWS_WAF_Policy--json"></a>
+#### JSON<a name="aws-resource-fms-policy--examples--Create_a___policy--json"></a>
 
 ```
 "PolicyWAFv2": {
@@ -257,11 +257,11 @@ PolicyWAFv2:
 }
 ```
 
-### Create a Firewall Manager AWS WAF Classic Policy<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_AWS_WAF_Classic_Policy"></a>
+### Create a Firewall Manager AWS WAF Classic policy<a name="aws-resource-fms-policy--examples--Create_a___Classic_policy"></a>
 
 The following shows an example Firewall Manager AWS WAF Classic policy\. 
 
-#### YAML<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_AWS_WAF_Classic_Policy--yaml"></a>
+#### YAML<a name="aws-resource-fms-policy--examples--Create_a___Classic_policy--yaml"></a>
 
 ```
 PolicyWAF:
@@ -284,7 +284,7 @@ PolicyWAF:
                                   ]}'
 ```
 
-#### JSON<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_AWS_WAF_Classic_Policy--json"></a>
+#### JSON<a name="aws-resource-fms-policy--examples--Create_a___Classic_policy--json"></a>
 
 ```
 "PolicyWAF": {

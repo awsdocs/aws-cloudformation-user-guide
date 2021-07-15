@@ -1,6 +1,6 @@
 # AWS::DMS::Endpoint SybaseSettings<a name="aws-properties-dms-endpoint-sybasesettings"></a>
 
-<a name="aws-properties-dms-endpoint-sybasesettings-description"></a>The `SybaseSettings` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::DMS::Endpoint](aws-resource-dms-endpoint.md)\.
+Not currently supported by AWS CloudFormation\.
 
 ## Syntax<a name="aws-properties-dms-endpoint-sybasesettings-syntax"></a>
 

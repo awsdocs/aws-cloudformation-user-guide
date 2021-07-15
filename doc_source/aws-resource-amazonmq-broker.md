@@ -161,7 +161,7 @@ Enables Amazon CloudWatch logging for brokers\.
 The scheduled time period relative to UTC during which Amazon MQ begins to apply pending updates or patches to the broker\.  
 *Required*: No  
 *Type*: [MaintenanceWindow](aws-properties-amazonmq-broker-maintenancewindow.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PubliclyAccessible`  <a name="cfn-amazonmq-broker-publiclyaccessible"></a>
 Enables connections from applications outside of the VPC that hosts the broker's subnets\.  
@@ -189,7 +189,7 @@ The list of groups that define which subnets and IP ranges the broker can use fr
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-amazonmq-broker-tags"></a>
-An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.   
+An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *Billing and Cost Management User Guide*\.   
 *Required*: No  
 *Type*: List of [TagsEntry](aws-properties-amazonmq-broker-tagsentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

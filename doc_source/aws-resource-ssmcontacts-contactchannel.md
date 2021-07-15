@@ -47,7 +47,7 @@ The name of the contact channel\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `255`  
-*Pattern*: `^[a-zA-Z0-9_\-\s\.]*$`  
+*Pattern*: `^[\p{L}\p{Z}\p{N}_.\-]*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ChannelType`  <a name="cfn-ssmcontacts-contactchannel-channeltype"></a>

@@ -34,7 +34,7 @@ Specify `True` to match anything except the match criteria\. The default value i
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Match`  <a name="cfn-appmesh-gatewayroute-httpgatewayrouteheader-match"></a>
-Not currently supported by AWS CloudFormation\.  
+An object that represents the method and value to match with the header value sent in a request\. Specify one match method\.  
 *Required*: No  
 *Type*: [HttpGatewayRouteHeaderMatch](aws-properties-appmesh-gatewayroute-httpgatewayrouteheadermatch.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

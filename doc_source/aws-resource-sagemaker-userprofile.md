@@ -50,13 +50,13 @@ The domain ID\.
 A specifier for the type of value specified in SingleSignOnUserValue\. Currently, the only supported value is "UserName"\. If the Domain's AuthMode is SSO, this field is required\. If the Domain's AuthMode is not SSO, this field cannot be specified\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SingleSignOnUserValue`  <a name="cfn-sagemaker-userprofile-singlesignonuservalue"></a>
 The username of the associated AWS Single Sign\-On User for this UserProfile\. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory\. If the Domain's AuthMode is not SSO, this field cannot be specified\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-sagemaker-userprofile-tags"></a>
 An array of key\-value pairs to apply to this resource\.  
@@ -64,7 +64,7 @@ Tags that you specify for the User Profile are also added to all Apps that the U
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UserProfileName`  <a name="cfn-sagemaker-userprofile-userprofilename"></a>
 The user profile name\.  

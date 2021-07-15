@@ -36,7 +36,7 @@ When you create a subscriber, the value of `Address` can't contain line breaks\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-budgets-budgetsaction-subscriber-type"></a>
-Not currently supported by AWS CloudFormation\.  
+The type of notification that AWS sends to a subscriber\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

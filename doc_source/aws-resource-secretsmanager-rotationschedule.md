@@ -81,972 +81,934 @@ The following examples display complete examples of creating a secret, creating 
 
 RDS Secret Rotation
 
-### Configuring RDS DB Secret Rotation<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_RDS_DB_Secret_Rotation"></a>
+### Configuring RDS database secret rotation<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_RDS_database_secret_rotation"></a>
 
-#### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_RDS_DB_Secret_Rotation--json"></a>
-
-```
-{
-        "AWSTemplateFormatVersion": "2010-09-09",
-        "Transform": "AWS::SecretsManager-2020-07-23",
-        "Description": "This is an example template to demonstrate CloudFormation resources for Secrets Manager",
-        "Resources": {
-            "TestVPC": {
-                "Type": "AWS::EC2::VPC",
-                "Properties": {
-                    "CidrBlock": "10.0.0.0/16",
-                    "EnableDnsHostnames": true,
-                    "EnableDnsSupport": true
-                }
-            },
-            "TestSubnet01": {
-                "Type": "AWS::EC2::Subnet",
-                "Properties": {
-                    "CidrBlock": "10.0.96.0/19",
-                    "AvailabilityZone": {
-                        "Fn::Select": [
-                            "0",
-                            {
-                                "Fn::GetAZs": {
-                                    "Ref": "AWS::Region"
-                                }
-                            }
-                        ]
-                    },
-                    "VpcId": {
-                        "Ref": "TestVPC"
-                    }
-                }
-            },
-            "TestSubnet02": {
-                "Type": "AWS::EC2::Subnet",
-                "Properties": {
-                    "CidrBlock": "10.0.128.0/19",
-                    "AvailabilityZone": {
-                        "Fn::Select": [
-                            "1",
-                            {
-                                "Fn::GetAZs": {
-                                    "Ref": "AWS::Region"
-                                }
-                            }
-                        ]
-                    },
-                    "VpcId": {
-                        "Ref": "TestVPC"
-                    }
-                }
-            },
-            "SecretsManagerVPCEndpoint": {
-                "Type": "AWS::EC2::VPCEndpoint",
-                "Properties": {
-                    "SubnetIds": [
-                        {
-                            "Ref": "TestSubnet01"
-                        },
-                        {
-                            "Ref": "TestSubnet02"
-                        }
-                    ],
-                    "SecurityGroupIds": [
-                        {
-                            "Fn::GetAtt": [
-                                "TestVPC",
-                                "DefaultSecurityGroup"
-                            ]
-                        }
-                    ],
-                    "VpcEndpointType": "Interface",
-                    "ServiceName": {
-                        "Fn::Sub": "com.amazonaws.${AWS::Region}.secretsmanager"
-                    },
-                    "PrivateDnsEnabled": true,
-                    "VpcId": {
-                        "Ref": "TestVPC"
-                    }
-                }
-            },
-            "MyRDSInstanceRotationSecret": {
-                "Type": "AWS::SecretsManager::Secret",
-                "Properties": {
-                    "Description": "This is my rds instance secret",
-                    "GenerateSecretString": {
-                        "SecretStringTemplate": "{\"username\": \"admin\"}",
-                        "GenerateStringKey": "password",
-                        "PasswordLength": 16,
-                        "ExcludeCharacters": "\"@/\\"
-                    },
-                    "Tags": [
-                        {
-                            "Key": "AppName",
-                            "Value": "MyApp"
-                        }
-                    ]
-                }
-            },
-            "MyDBInstance": {
-                "Type": "AWS::RDS::DBInstance",
-                "Properties": {
-                    "AllocatedStorage": 20,
-                    "DBInstanceClass": "db.t3.micro",
-                    "Engine": "mysql",
-                    "DBSubnetGroupName": {
-                        "Ref": "MyDBSubnetGroup"
-                    },
-                    "MasterUsername": {
-                        "Fn::Sub": "{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::username}}"
-                    },
-                    "MasterUserPassword": {
-                        "Fn::Sub": "{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::password}}"
-                    },
-                    "BackupRetentionPeriod": 0,
-                    "VPCSecurityGroups": [
-                        {
-                            "Fn::GetAtt": [
-                                "TestVPC",
-                                "DefaultSecurityGroup"
-                            ]
-                        }
-                    ]
-                }
-            },
-            "MyDBSubnetGroup": {
-                "Type": "AWS::RDS::DBSubnetGroup",
-                "Properties": {
-                    "DBSubnetGroupDescription": "Test Group",
-                    "SubnetIds": [
-                        {
-                            "Ref": "TestSubnet01"
-                        },
-                        {
-                            "Ref": "TestSubnet02"
-                        }
-                    ]
-                }
-            },
-            "SecretRDSInstanceAttachment": {
-                "Type": "AWS::SecretsManager::SecretTargetAttachment",
-                "Properties": {
-                    "SecretId": {
-                        "Ref": "MyRDSInstanceRotationSecret"
-                    },
-                    "TargetId": {
-                        "Ref": "MyDBInstance"
-                    },
-                    "TargetType": "AWS::RDS::DBInstance"
-                }
-            },
-            "MySecretRotationSchedule": {
-                "Type": "AWS::SecretsManager::RotationSchedule",
-                "DependsOn": "SecretRDSInstanceAttachment",
-                "Properties": {
-                    "SecretId": {
-                        "Ref": "MyRDSInstanceRotationSecret"
-                    },
-                    "HostedRotationLambda": {
-                        "RotationType": "MySQLSingleUser",
-                        "RotationLambdaName": "SecretsManagerRotation",
-                        "VpcSecurityGroupIds": {
-                            "Fn::GetAtt": [
-                                "TestVPC",
-                                "DefaultSecurityGroup"
-                            ]
-                        },
-                        "VpcSubnetIds": {
-                            "Fn::Join": [
-                                ",",
-                                [
-                                    {
-                                        "Ref": "TestSubnet01"
-                                    },
-                                    {
-                                        "Ref": "TestSubnet02"
-                                    }
-                                ]
-                            ]
-                        }
-                    },
-                    "RotationRules": {
-                        "AutomaticallyAfterDays": 30
-                    }
-                }
-            }
-        }
-    }
-```
-
-#### YAML<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_RDS_DB_Secret_Rotation--yaml"></a>
-
-```
- AWSTemplateFormatVersion: 2010-09-09
- Transform: AWS::SecretsManager-2020-07-23
- Description: "This is an example template to demonstrate CloudFormation resources for Secrets Manager"
- Resources:
-
-      #This is the VPC that the rotation Lambda and the RDS instance will be placed in
-      TestVPC: 
-        Type: AWS::EC2::VPC
-        Properties: 
-          CidrBlock: 10.0.0.0/16
-          EnableDnsHostnames: true
-          EnableDnsSupport: true 
-
-      # Subnet that the rotation Lambda and the RDS instance will be placed in 
-      TestSubnet01:
-        Type: AWS::EC2::Subnet
-        Properties:
-          CidrBlock: 10.0.96.0/19
-          AvailabilityZone:
-            Fn::Select:
-              - '0'
-              - Fn::GetAZs: {Ref: 'AWS::Region'}
-          VpcId:
-            Ref: TestVPC
-
-      TestSubnet02:
-        Type: AWS::EC2::Subnet
-        Properties:
-          CidrBlock: 10.0.128.0/19
-          AvailabilityZone:
-            Fn::Select:
-              - '1'
-              - Fn::GetAZs: {Ref: 'AWS::Region'}
-          VpcId:
-            Ref: TestVPC
-
-      #VPC endpoint that will enable the rotation Lambda to make api calls to Secrets Manager 
-      SecretsManagerVPCEndpoint:
-        Type: AWS::EC2::VPCEndpoint
-        Properties:
-          SubnetIds:
-            - Ref: TestSubnet01
-            - Ref: TestSubnet02
-          SecurityGroupIds:
-            - !GetAtt TestVPC.DefaultSecurityGroup
-          VpcEndpointType: 'Interface'
-          ServiceName: !Sub "com.amazonaws.${AWS::Region}.secretsmanager"
-          PrivateDnsEnabled: true
-          VpcId:
-            Ref: TestVPC
-
-      #This is a Secret resource with a randomly generated password in its SecretString JSON.
-      MyRDSInstanceRotationSecret:
-        Type: AWS::SecretsManager::Secret
-        Properties:
-          Description: 'This is my rds instance secret'
-          GenerateSecretString:
-            SecretStringTemplate: '{"username": "admin"}'
-            GenerateStringKey: 'password'
-            PasswordLength: 16
-            ExcludeCharacters: '"@/\'
-          Tags:
-            -
-              Key: AppName
-              Value: MyApp
-
-      #This is an RDS instance resource. Its master username and password use dynamic references to resolve values from 
-      #SecretsManager. The dynamic reference guarantees that CloudFormation will not log or persist the resolved value 
-      #We sub the Secret resource's logical id in order to construct the dynamic reference, since the Secret's name is being #generated by CloudFormation
-      MyDBInstance:
-        Type: AWS::RDS::DBInstance
-        Properties:
-          AllocatedStorage: 20
-          DBInstanceClass: db.t3.micro
-          Engine: mysql
-          DBSubnetGroupName:
-            Ref: MyDBSubnetGroup
-          MasterUsername: !Sub '{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::username}}'
-          MasterUserPassword: !Sub '{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::password}}'
-          BackupRetentionPeriod: 0
-          VPCSecurityGroups:
-            - !GetAtt TestVPC.DefaultSecurityGroup
-
-      #Database subnet group for the RDS instance 
-      MyDBSubnetGroup: 
-        Type: AWS::RDS::DBSubnetGroup
-        Properties: 
-          DBSubnetGroupDescription: "Test Group"
-          SubnetIds: 
-             - Ref: TestSubnet01
-             - Ref: TestSubnet02
-    
-      #This is a SecretTargetAttachment resource which updates the referenced Secret resource with properties about
-      #the referenced RDS instance
-      SecretRDSInstanceAttachment:
-        Type: AWS::SecretsManager::SecretTargetAttachment
-        Properties:
-          SecretId: !Ref MyRDSRotationSecret
-          TargetId: !Ref MyDBInstance
-          TargetType: AWS::RDS::DBInstance
-     
-      #This is a RotationSchedule resource. It configures rotation of password for the referenced secret using a rotation lambda
-      #The first rotation happens at resource creation time, with subsequent rotations scheduled according to the rotation rules
-      #We explicitly depend on the SecretTargetAttachment resource being created to ensure that the secret contains all the
-      #information necessary for rotation to succeed
-      MySecretRotationSchedule:
-        Type: AWS::SecretsManager::RotationSchedule
-        DependsOn: SecretRDSInstanceAttachment 
-        Properties:
-          SecretId: !Ref MyRDSInstanceRotationSecret
-          HostedRotationLambda:
-            RotationType: MySQLSingleUser
-            RotationLambdaName: SecretsManagerRotation
-            VpcSecurityGroupIds: !GetAtt TestVPC.DefaultSecurityGroup
-            VpcSubnetIds:
-              Fn::Join:
-                - ","
-                - - Ref: TestSubnet01
-                  - Ref: TestSubnet02
-          RotationRules:
-            AutomaticallyAfterDays: 30
-```
-
-### Redshift Cluster Secret Rotation Example<a name="aws-resource-secretsmanager-rotationschedule--examples--Redshift_Cluster_Secret_Rotation_Example"></a>
-
-#### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--Redshift_Cluster_Secret_Rotation_Example--json"></a>
+#### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_RDS_database_secret_rotation--json"></a>
 
 ```
 {
-        "AWSTemplateFormatVersion": "2010-09-09",
-        "Transform": "AWS::SecretsManager-2020-07-23",
-        "Description": "This is an example template to demonstrate CloudFormation resources for Secrets Manager",
-        "Resources": {
-            "TestVPC": {
-                "Type": "AWS::EC2::VPC",
-                "Properties": {
-                    "CidrBlock": "10.0.0.0/16",
-                    "EnableDnsHostnames": true,
-                    "EnableDnsSupport": true
-                }
+   "AWSTemplateFormatVersion":"2010-09-09",
+   "Transform":"AWS::SecretsManager-2020-07-23",
+   "Resources":{
+      "TestVPC":{
+         "Type":"AWS::EC2::VPC",
+         "Properties":{
+            "CidrBlock":"10.0.0.0/16",
+            "EnableDnsHostnames":true,
+            "EnableDnsSupport":true
+         }
+      },
+      "TestSubnet01":{
+         "Type":"AWS::EC2::Subnet",
+         "Properties":{
+            "CidrBlock":"10.0.96.0/19",
+            "AvailabilityZone":{
+               "Fn::Select":[
+                  "0",
+                  {
+                     "Fn::GetAZs":{
+                        "Ref":"AWS::Region"
+                     }
+                  }
+               ]
             },
-            "TestSubnet01": {
-                "Type": "AWS::EC2::Subnet",
-                "Properties": {
-                    "CidrBlock": "10.0.96.0/19",
-                    "AvailabilityZone": {
-                        "Fn::Select": [
-                            "0",
-                            {
-                                "Fn::GetAZs": {
-                                    "Ref": "AWS::Region"
-                                }
-                            }
-                        ]
-                    },
-                    "VpcId": {
-                        "Ref": "TestVPC"
-                    }
-                }
-            },
-            "TestSubnet02": {
-                "Type": "AWS::EC2::Subnet",
-                "Properties": {
-                    "CidrBlock": "10.0.128.0/19",
-                    "AvailabilityZone": {
-                        "Fn::Select": [
-                            "1",
-                            {
-                                "Fn::GetAZs": {
-                                    "Ref": "AWS::Region"
-                                }
-                            }
-                        ]
-                    },
-                    "VpcId": {
-                        "Ref": "TestVPC"
-                    }
-                }
-            },
-            "SecretsManagerVPCEndpoint": {
-                "Type": "AWS::EC2::VPCEndpoint",
-                "Properties": {
-                    "SubnetIds": [
-                        {
-                            "Ref": "TestSubnet01"
-                        },
-                        {
-                            "Ref": "TestSubnet02"
-                        }
-                    ],
-                    "SecurityGroupIds": [
-                        {
-                            "Fn::GetAtt": [
-                                "TestVPC",
-                                "DefaultSecurityGroup"
-                            ]
-                        }
-                    ],
-                    "VpcEndpointType": "Interface",
-                    "ServiceName": {
-                        "Fn::Sub": "com.amazonaws.${AWS::Region}.secretsmanager"
-                    },
-                    "PrivateDnsEnabled": true,
-                    "VpcId": {
-                        "Ref": "TestVPC"
-                    }
-                }
-            },
-            "MyRedshiftSecret": {
-                "Type": "AWS::SecretsManager::Secret",
-                "Properties": {
-                    "Description": "This is my rds instance secret",
-                    "GenerateSecretString": {
-                        "SecretStringTemplate": "{\"username\": \"admin\"}",
-                        "GenerateStringKey": "password",
-                        "PasswordLength": 16,
-                        "ExcludeCharacters": "\"@/\\"
-                    },
-                    "Tags": [
-                        {
-                            "Key": "AppName",
-                            "Value": "MyApp"
-                        }
-                    ]
-                }
-            },
-            "MyRedshiftCluster": {
-                "Type": "AWS::Redshift::Cluster",
-                "Properties": {
-                    "DBName": "myyamldb",
-                    "NodeType": "ds2.xlarge",
-                    "ClusterType": "single-node",
-                    "ClusterSubnetGroupName": {
-                        "Ref": "ResdshiftSubnetGroup"
-                    },
-                    "MasterUsername": {
-                        "Fn::Sub": "{{resolve:secretsmanager:${MyRedshiftSecret}::username}}"
-                    },
-                    "MasterUserPassword": {
-                        "Fn::Sub": "{{resolve:secretsmanager:${MyRedshiftSecret}::password}}"
-                    },
-                    "PubliclyAccessible": false,
-                    "VpcSecurityGroupIds": [
-                        {
-                            "Fn::GetAtt": [
-                                "TestVPC",
-                                "DefaultSecurityGroup"
-                            ]
-                        }
-                    ]
-                }
-            },
-            "ResdshiftSubnetGroup": {
-                "Type": "AWS::Redshift::ClusterSubnetGroup",
-                "Properties": {
-                    "Description": "Test Group",
-                    "SubnetIds": [
-                        {
-                            "Ref": "TestSubnet01"
-                        },
-                        {
-                            "Ref": "TestSubnet02"
-                        }
-                    ]
-                }
-            },
-            "SecretRedshiftAttachment": {
-                "Type": "AWS::SecretsManager::SecretTargetAttachment",
-                "Properties": {
-                    "SecretId": {
-                        "Ref": "MyRedshiftSecret"
-                    },
-                    "TargetId": {
-                        "Ref": "MyRedshiftCluster"
-                    },
-                    "TargetType": "AWS::Redshift::Cluster"
-                }
-            },
-            "MySecretRotationSchedule": {
-                "Type": "AWS::SecretsManager::RotationSchedule",
-                "DependsOn": "SecretRedshiftAttachment",
-                "Properties": {
-                    "SecretId": {
-                        "Ref": "MyRedshiftSecret"
-                    },
-                    "HostedRotationLambda": {
-                        "RotationType": "RedshiftSingleUser",
-                        "RotationLambdaName": "SecretsManagerRotationRedshift",
-                        "VpcSecurityGroupIds": {
-                            "Fn::GetAtt": [
-                                "TestVPC",
-                                "DefaultSecurityGroup"
-                            ]
-                        },
-                        "VpcSubnetIds": {
-                            "Fn::Join": [
-                                ",",
-                                [
-                                    {
-                                        "Ref": "TestSubnet01"
-                                    },
-                                    {
-                                        "Ref": "TestSubnet02"
-                                    }
-                                ]
-                            ]
-                        }
-                    },
-                    "RotationRules": {
-                        "AutomaticallyAfterDays": 30
-                    }
-                }
+            "VpcId":{
+               "Ref":"TestVPC"
             }
-        }
-    }
+         }
+      },
+      "TestSubnet02":{
+         "Type":"AWS::EC2::Subnet",
+         "Properties":{
+            "CidrBlock":"10.0.128.0/19",
+            "AvailabilityZone":{
+               "Fn::Select":[
+                  "1",
+                  {
+                     "Fn::GetAZs":{
+                        "Ref":"AWS::Region"
+                     }
+                  }
+               ]
+            },
+            "VpcId":{
+               "Ref":"TestVPC"
+            }
+         }
+      },
+      "SecretsManagerVPCEndpoint":{
+         "Type":"AWS::EC2::VPCEndpoint",
+         "Properties":{
+            "SubnetIds":[
+               {
+                  "Ref":"TestSubnet01"
+               },
+               {
+                  "Ref":"TestSubnet02"
+               }
+            ],
+            "SecurityGroupIds":[
+               {
+                  "Fn::GetAtt":[
+                     "TestVPC",
+                     "DefaultSecurityGroup"
+                  ]
+               }
+            ],
+            "VpcEndpointType":"Interface",
+            "ServiceName":{
+               "Fn::Sub":"com.amazonaws.${AWS::Region}.secretsmanager"
+            },
+            "PrivateDnsEnabled":true,
+            "VpcId":{
+               "Ref":"TestVPC"
+            }
+         }
+      },
+      "MyRDSInstanceRotationSecret":{
+         "Type":"AWS::SecretsManager::Secret",
+         "Properties":{
+            "GenerateSecretString":{
+               "SecretStringTemplate":"{\"username\": \"admin\"}",
+               "GenerateStringKey":"password",
+               "PasswordLength":16,
+               "ExcludeCharacters":"\"@/\\"
+            },
+            "Tags":[
+               {
+                  "Key":"AppName",
+                  "Value":"MyApp"
+               }
+            ]
+         }
+      },
+      "MyDBInstance":{
+         "Type":"AWS::RDS::DBInstance",
+         "Properties":{
+            "AllocatedStorage":20,
+            "DBInstanceClass":"db.t3.micro",
+            "Engine":"mysql",
+            "DBSubnetGroupName":{
+               "Ref":"MyDBSubnetGroup"
+            },
+            "MasterUsername":{
+               "Fn::Sub":"{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::username}}"
+            },
+            "MasterUserPassword":{
+               "Fn::Sub":"{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::password}}"
+            },
+            "BackupRetentionPeriod":0,
+            "VPCSecurityGroups":[
+               {
+                  "Fn::GetAtt":[
+                     "TestVPC",
+                     "DefaultSecurityGroup"
+                  ]
+               }
+            ]
+         }
+      },
+      "MyDBSubnetGroup":{
+         "Type":"AWS::RDS::DBSubnetGroup",
+         "Properties":{
+            "DBSubnetGroupDescription":"Test Group",
+            "SubnetIds":[
+               {
+                  "Ref":"TestSubnet01"
+               },
+               {
+                  "Ref":"TestSubnet02"
+               }
+            ]
+         }
+      },
+      "SecretRDSInstanceAttachment":{
+         "Type":"AWS::SecretsManager::SecretTargetAttachment",
+         "Properties":{
+            "SecretId":{
+               "Ref":"MyRDSInstanceRotationSecret"
+            },
+            "TargetId":{
+               "Ref":"MyDBInstance"
+            },
+            "TargetType":"AWS::RDS::DBInstance"
+         }
+      },
+      "MySecretRotationSchedule":{
+         "Type":"AWS::SecretsManager::RotationSchedule",
+         "DependsOn":"SecretRDSInstanceAttachment",
+         "Properties":{
+            "SecretId":{
+               "Ref":"MyRDSInstanceRotationSecret"
+            },
+            "HostedRotationLambda":{
+               "RotationType":"MySQLSingleUser",
+               "RotationLambdaName":"SecretsManagerRotation",
+               "VpcSecurityGroupIds":{
+                  "Fn::GetAtt":[
+                     "TestVPC",
+                     "DefaultSecurityGroup"
+                  ]
+               },
+               "VpcSubnetIds":{
+                  "Fn::Join":[
+                     ",",
+                     [
+                        {
+                           "Ref":"TestSubnet01"
+                        },
+                        {
+                           "Ref":"TestSubnet02"
+                        }
+                     ]
+                  ]
+               }
+            },
+            "RotationRules":{
+               "AutomaticallyAfterDays":30
+            }
+         }
+      }
+   }
+}
 ```
 
-#### YAML<a name="aws-resource-secretsmanager-rotationschedule--examples--Redshift_Cluster_Secret_Rotation_Example--yaml"></a>
+#### YAML<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_RDS_database_secret_rotation--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
+---
+AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::SecretsManager-2020-07-23
-Description: "This is an example template to demonstrate CloudFormation resources for Secrets Manager" 
 Resources:
-
-      #This is the VPC that the rotation Lambda and the Redshift cluster will be placed in 
-      TestVPC: 
-        Type: AWS::EC2::VPC
-        Properties: 
-          CidrBlock: 10.0.0.0/16
-          EnableDnsHostnames: true
-          EnableDnsSupport: true 
-
-      # Subnet that the rotation Lambda and the Redshift cluster will be placed in 
-      TestSubnet01:
-        Type: AWS::EC2::Subnet
-        Properties:
-          CidrBlock: 10.0.96.0/19
-          AvailabilityZone:
-            Fn::Select:
-              - '0'
-              - Fn::GetAZs: {Ref: 'AWS::Region'}
-          VpcId:
-            Ref: TestVPC
-
-      TestSubnet02:
-        Type: AWS::EC2::Subnet
-        Properties:
-          CidrBlock: 10.0.128.0/19
-          AvailabilityZone:
-            Fn::Select:
-              - '1'
-              - Fn::GetAZs: {Ref: 'AWS::Region'}
-          VpcId:
-            Ref: TestVPC
-
-      #VPC endpoint that will enable the rotation Lambda to make api calls to Secrets Manager 
-      SecretsManagerVPCEndpoint:
-        Type: AWS::EC2::VPCEndpoint
-        Properties:
-          SubnetIds:
-            - Ref: TestSubnet01
-            - Ref: TestSubnet02
-          SecurityGroupIds:
-            - !GetAtt TestVPC.DefaultSecurityGroup
-          VpcEndpointType: 'Interface'
-          ServiceName: !Sub "com.amazonaws.${AWS::Region}.secretsmanager"
-          PrivateDnsEnabled: true
-          VpcId:
-            Ref: TestVPC
-
-      #This is a Secret resource with a randomly generated password in its SecretString JSON.
-      MyRedshiftSecret:
-        Type: AWS::SecretsManager::Secret
-        Properties:
-          Description: 'This is my rds instance secret'
-          GenerateSecretString:
-            SecretStringTemplate: '{"username": "admin"}'
-            GenerateStringKey: 'password'
-            PasswordLength: 16
-            ExcludeCharacters: '"@/\'
-          Tags:
-            -
-              Key: AppName
-              Value: MyApp
-     
-      # This is a Redshift cluster resource. The master username and password use dynamic references
-      # to resolve values from Secrets Manager. The dynamic reference guarantees that CloudFormation 
-      # will not log or persist the resolved value. We use a Ref to the secret resource's logical id
-      # to construct the dynamic reference, since the secret name is generated by CloudFormation. 
-      MyRedshiftCluster:
-        Type: AWS::Redshift::Cluster
-        Properties:
-          DBName: "myyamldb"
-          NodeType: "ds2.xlarge"
-          ClusterType: "single-node"
-          ClusterSubnetGroupName:
-            Ref: ResdshiftSubnetGroup
-          MasterUsername: !Sub '{{resolve:secretsmanager:${MyRedshiftSecret}::username}}'
-          MasterUserPassword: !Sub '{{resolve:secretsmanager:${MyRedshiftSecret}::password}}'
-          PubliclyAccessible: false
-          VpcSecurityGroupIds:
-            - !GetAtt TestVPC.DefaultSecurityGroup
-
-      #Database subnet group for the Redshift cluster 
-      ResdshiftSubnetGroup: 
-        Type: AWS::Redshift::ClusterSubnetGroup
-        Properties: 
-          Description: "Test Group"
-          SubnetIds: 
-             - Ref: TestSubnet01
-             - Ref: TestSubnet02
-    
-      # This is a SecretTargetAttachment resource which updates the referenced Secret resource with properties about 
-      # the referenced Redshift cluster
-      SecretRedshiftAttachment:
-        Type: AWS::SecretsManager::SecretTargetAttachment
-        Properties:
-          SecretId: !Ref MyRedshiftSecret
-          TargetId: !Ref MyRedshiftCluster
-          TargetType: AWS::Redshift::Cluster
-     
-      #This is a RotationSchedule resource. It configures rotation of password for the referenced secret using a rotation lambda
-      #The first rotation happens at resource creation time, with subsequent rotations scheduled according to the rotation rules
-      #We explicitly depend on the SecretTargetAttachment resource being created to ensure that the secret contains all the
-      #information necessary for rotation to succeed
-      MySecretRotationSchedule:
-        Type: AWS::SecretsManager::RotationSchedule
-        DependsOn: SecretRedshiftAttachment
-        Properties:
-          SecretId: !Ref MyRedshiftSecret
-          HostedRotationLambda:
-            RotationType: RedshiftSingleUser
-            RotationLambdaName: SecretsManagerRotationRedshift
-            VpcSecurityGroupIds: !GetAtt TestVPC.DefaultSecurityGroup
-            VpcSubnetIds:
-              Fn::Join:
-                - ","
-                - - Ref: TestSubnet01
-                  - Ref: TestSubnet02
-          RotationRules:
-            AutomaticallyAfterDays: 30
-```
-
-### DocumentDB Cluster Secret Rotation Example<a name="aws-resource-secretsmanager-rotationschedule--examples--DocumentDB_Cluster_Secret_Rotation_Example"></a>
-
-#### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--DocumentDB_Cluster_Secret_Rotation_Example--json"></a>
-
-```
-{
-        "AWSTemplateFormatVersion": "2010-09-09",
-        "Transform": "AWS::SecretsManager-2020-07-23",
-        "Description": "This is an example template to demonstrate CloudFormation resources for Secrets Manager",
-        "Resources": {
-            "TestVPC": {
-                "Type": "AWS::EC2::VPC",
-                "Properties": {
-                    "CidrBlock": "10.0.0.0/16",
-                    "EnableDnsHostnames": true,
-                    "EnableDnsSupport": true
-                }
-            },
-            "TestSubnet01": {
-                "Type": "AWS::EC2::Subnet",
-                "Properties": {
-                    "CidrBlock": "10.0.96.0/19",
-                    "AvailabilityZone": {
-                        "Fn::Select": [
-                            "0",
-                            {
-                                "Fn::GetAZs": {
-                                    "Ref": "AWS::Region"
-                                }
-                            }
-                        ]
-                    },
-                    "VpcId": {
-                        "Ref": "TestVPC"
-                    }
-                }
-            },
-            "TestSubnet02": {
-                "Type": "AWS::EC2::Subnet",
-                "Properties": {
-                    "CidrBlock": "10.0.128.0/19",
-                    "AvailabilityZone": {
-                        "Fn::Select": [
-                            "1",
-                            {
-                                "Fn::GetAZs": {
-                                    "Ref": "AWS::Region"
-                                }
-                            }
-                        ]
-                    },
-                    "VpcId": {
-                        "Ref": "TestVPC"
-                    }
-                }
-            },
-            "SecretsManagerVPCEndpoint": {
-                "Type": "AWS::EC2::VPCEndpoint",
-                "Properties": {
-                    "SubnetIds": [
-                        {
-                            "Ref": "TestSubnet01"
-                        },
-                        {
-                            "Ref": "TestSubnet02"
-                        }
-                    ],
-                    "SecurityGroupIds": [
-                        {
-                            "Fn::GetAtt": [
-                                "TestVPC",
-                                "DefaultSecurityGroup"
-                            ]
-                        }
-                    ],
-                    "VpcEndpointType": "Interface",
-                    "ServiceName": {
-                        "Fn::Sub": "com.amazonaws.${AWS::Region}.secretsmanager"
-                    },
-                    "PrivateDnsEnabled": true,
-                    "VpcId": {
-                        "Ref": "TestVPC"
-                    }
-                }
-            },
-            "MyDocDBClusterRotationSecret": {
-                "Type": "AWS::SecretsManager::Secret",
-                "Properties": {
-                    "Description": "This is my rds instance secret",
-                    "GenerateSecretString": {
-                        "SecretStringTemplate": "{\"username\": \"someadmin\", \"ssl\": true}",
-                        "GenerateStringKey": "password",
-                        "PasswordLength": 16,
-                        "ExcludeCharacters": "\"@/\\"
-                    },
-                    "Tags": [
-                        {
-                            "Key": "AppName",
-                            "Value": "MyApp"
-                        }
-                    ]
-                }
-            },
-            "MyDocDBCluster": {
-                "Type": "AWS::DocDB::DBCluster",
-                "Properties": {
-                    "DBSubnetGroupName": {
-                        "Ref": "MyDBSubnetGroup"
-                    },
-                    "MasterUsername": {
-                        "Fn::Sub": "{{resolve:secretsmanager:${MyDocDBClusterRotationSecret}::username}}"
-                    },
-                    "MasterUserPassword": {
-                        "Fn::Sub": "{{resolve:secretsmanager:${MyDocDBClusterRotationSecret}::password}}"
-                    },
-                    "VpcSecurityGroupIds": [
-                        {
-                            "Fn::GetAtt": [
-                                "TestVPC",
-                                "DefaultSecurityGroup"
-                            ]
-                        }
-                    ]
-                }
-            },
-            "DocDBInstance": {
-                "Type": "AWS::DocDB::DBInstance",
-                "Properties": {
-                    "DBClusterIdentifier": {
-                        "Ref": "MyDocDBCluster"
-                    },
-                    "DBInstanceClass": "db.r5.large"
-                }
-            },
-            "MyDBSubnetGroup": {
-                "Type": "AWS::DocDB::DBSubnetGroup",
-                "Properties": {
-                    "DBSubnetGroupDescription": "Test Group",
-                    "SubnetIds": [
-                        {
-                            "Ref": "TestSubnet01"
-                        },
-                        {
-                            "Ref": "TestSubnet02"
-                        }
-                    ]
-                }
-            },
-            "SecretDocDBClusterAttachment": {
-                "Type": "AWS::SecretsManager::SecretTargetAttachment",
-                "Properties": {
-                    "SecretId": {
-                        "Ref": "MyDocDBClusterRotationSecret"
-                    },
-                    "TargetId": {
-                        "Ref": "MyDocDBCluster"
-                    },
-                    "TargetType": "AWS::DocDB::DBCluster"
-                }
-            },
-            "MySecretRotationSchedule": {
-                "Type": "AWS::SecretsManager::RotationSchedule",
-                "DependsOn": "SecretDocDBClusterAttachment",
-                "Properties": {
-                    "SecretId": {
-                        "Ref": "MyDocDBClusterRotationSecret"
-                    },
-                    "HostedRotationLambda": {
-                        "RotationType": "MongoDBSingleUser",
-                        "RotationLambdaName": "MongoDBSingleUser",
-                        "VpcSecurityGroupIds": {
-                            "Fn::GetAtt": [
-                                "TestVPC",
-                                "DefaultSecurityGroup"
-                            ]
-                        },
-                        "VpcSubnetIds": {
-                            "Fn::Join": [
-                                ",",
-                                [
-                                    {
-                                        "Ref": "TestSubnet01"
-                                    },
-                                    {
-                                        "Ref": "TestSubnet02"
-                                    }
-                                ]
-                            ]
-                        }
-                    },
-                    "RotationRules": {
-                        "AutomaticallyAfterDays": 30
-                    }
-                }
-            }
-        }
-    }
-```
-
-#### YAML<a name="aws-resource-secretsmanager-rotationschedule--examples--DocumentDB_Cluster_Secret_Rotation_Example--yaml"></a>
-
-```
- 
-        Transform: AWS::SecretsManager-2020-07-23
-        Description: "This is an example template to demonstrate CloudFormation resources for Secrets Manager"
-        Resources:
-        
-        #This is the VPC that the rotation Lambda and the DocDB cluster will be placed in 
-        TestVPC: 
-        Type: AWS::EC2::VPC
-        Properties: 
-        CidrBlock: 10.0.0.0/16
-        EnableDnsHostnames: true
-        EnableDnsSupport: true 
-        
-        # Subnet that the rotation Lambda and the DocDB cluster will be placed in 
-        TestSubnet01:
-        Type: AWS::EC2::Subnet
-        Properties:
-        CidrBlock: 10.0.96.0/19
-        AvailabilityZone:
+  TestVPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsHostnames: true
+      EnableDnsSupport: true
+  TestSubnet01:
+    Type: AWS::EC2::Subnet
+    Properties:
+      CidrBlock: 10.0.96.0/19
+      AvailabilityZone:
         Fn::Select:
         - '0'
-        - Fn::GetAZs: {Ref: 'AWS::Region'}
-        VpcId:
+        - Fn::GetAZs:
+            Ref: AWS::Region
+      VpcId:
         Ref: TestVPC
-        
-        TestSubnet02:
-        Type: AWS::EC2::Subnet
-        Properties:
-        CidrBlock: 10.0.128.0/19
-        AvailabilityZone:
+  TestSubnet02:
+    Type: AWS::EC2::Subnet
+    Properties:
+      CidrBlock: 10.0.128.0/19
+      AvailabilityZone:
         Fn::Select:
         - '1'
-        - Fn::GetAZs: {Ref: 'AWS::Region'}
-        VpcId:
+        - Fn::GetAZs:
+            Ref: AWS::Region
+      VpcId:
         Ref: TestVPC
-        
-        #VPC endpoint that will enable the rotation Lambda to make api calls to Secrets Manager 
-        SecretsManagerVPCEndpoint:
-        Type: AWS::EC2::VPCEndpoint
-        Properties:
-        SubnetIds:
-        - Ref: TestSubnet01
-        - Ref: TestSubnet02
-        SecurityGroupIds:
-        - !GetAtt TestVPC.DefaultSecurityGroup
-        VpcEndpointType: 'Interface'
-        ServiceName: !Sub "com.amazonaws.${AWS::Region}.secretsmanager"
-        PrivateDnsEnabled: true
-        VpcId:
+  SecretsManagerVPCEndpoint:
+    Type: AWS::EC2::VPCEndpoint
+    Properties:
+      SubnetIds:
+      - Ref: TestSubnet01
+      - Ref: TestSubnet02
+      SecurityGroupIds:
+      - Fn::GetAtt:
+        - TestVPC
+        - DefaultSecurityGroup
+      VpcEndpointType: Interface
+      ServiceName:
+        Fn::Sub: com.amazonaws.${AWS::Region}.secretsmanager
+      PrivateDnsEnabled: true
+      VpcId:
         Ref: TestVPC
-        
-        #This is a Secret resource with a randomly generated password in its SecretString JSON.
-        MyDocDBClusterRotationSecret:
-        Type: AWS::SecretsManager::Secret
-        Properties:
-        Description: 'This is my rds instance secret'
-        GenerateSecretString:
-        SecretStringTemplate: '{"username": "someadmin", "ssl": true}'
-        GenerateStringKey: 'password'
+  MyRDSInstanceRotationSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      GenerateSecretString:
+        SecretStringTemplate: '{"username": "admin"}'
+        GenerateStringKey: password
         PasswordLength: 16
-        ExcludeCharacters: '"@/\'
-        Tags:
-        -
-        Key: AppName
+        ExcludeCharacters: "\"@/\\"
+      Tags:
+      - Key: AppName
         Value: MyApp
-        
-        #This is an DocDB cluster resource. Its master username and password use dynamic references to resolve values from 
-        #SecretsManager. The dynamic reference guarantees that CloudFormation will not log or persist the resolved value
-        #We sub the Secret resource's logical id in order to construct the dynamic reference, since the Secret's name is being #generated by CloudFormation
-        MyDocDBCluster:
-        Type: AWS::DocDB::DBCluster
-        Properties:
-        DBSubnetGroupName:
-        Ref: MyDBSubnetGroup 
-        MasterUsername: !Sub '{{resolve:secretsmanager:${MyDocDBClusterRotationSecret}::username}}'
-        MasterUserPassword: !Sub '{{resolve:secretsmanager:${MyDocDBClusterRotationSecret}::password}}'
+  MyDBInstance:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      AllocatedStorage: 20
+      DBInstanceClass: db.t3.micro
+      Engine: mysql
+      DBSubnetGroupName:
+        Ref: MyDBSubnetGroup
+      MasterUsername:
+        Fn::Sub: "{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::username}}"
+      MasterUserPassword:
+        Fn::Sub: "{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::password}}"
+      BackupRetentionPeriod: 0
+      VPCSecurityGroups:
+      - Fn::GetAtt:
+        - TestVPC
+        - DefaultSecurityGroup
+  MyDBSubnetGroup:
+    Type: AWS::RDS::DBSubnetGroup
+    Properties:
+      DBSubnetGroupDescription: Test Group
+      SubnetIds:
+      - Ref: TestSubnet01
+      - Ref: TestSubnet02
+  SecretRDSInstanceAttachment:
+    Type: AWS::SecretsManager::SecretTargetAttachment
+    Properties:
+      SecretId:
+        Ref: MyRDSInstanceRotationSecret
+      TargetId:
+        Ref: MyDBInstance
+      TargetType: AWS::RDS::DBInstance
+  MySecretRotationSchedule:
+    Type: AWS::SecretsManager::RotationSchedule
+    DependsOn: SecretRDSInstanceAttachment
+    Properties:
+      SecretId:
+        Ref: MyRDSInstanceRotationSecret
+      HostedRotationLambda:
+        RotationType: MySQLSingleUser
+        RotationLambdaName: SecretsManagerRotation
         VpcSecurityGroupIds:
-        - !GetAtt TestVPC.DefaultSecurityGroup
-        
-        DocDBInstance:
-        Type: AWS::DocDB::DBInstance
-        Properties:
-        DBClusterIdentifier: !Ref MyDocDBCluster
-        DBInstanceClass: "db.r5.large" 
-        
-        #Database subnet group for the DocDB cluster 
-        MyDBSubnetGroup: 
-        Type: AWS::DocDB::DBSubnetGroup
-        Properties: 
-        DBSubnetGroupDescription: "Test Group"
-        SubnetIds: 
-        - Ref: TestSubnet01
-        - Ref: TestSubnet02
-        
-        #This is a SecretTargetAttachment resource which updates the referenced Secret resource with properties about
-        #the referenced DocDB cluster
-        SecretDocDBClusterAttachment:
-        Type: AWS::SecretsManager::SecretTargetAttachment
-        Properties:
-        SecretId: !Ref MyDocDBClusterRotationSecret
-        TargetId: !Ref MyDocDBCluster
-        TargetType: AWS::DocDB::DBCluster
-        
-        #This is a RotationSchedule resource. It configures rotation of password for the referenced secret using a rotation lambda
-        #The first rotation happens at resource creation time, with subsequent rotations scheduled according to the rotation rules
-        #We explicitly depend on the SecretTargetAttachment resource being created to ensure that the secret contains all the
-        #information necessary for rotation to succeed
-        MySecretRotationSchedule:
-        Type: AWS::SecretsManager::RotationSchedule
-        DependsOn: SecretDocDBClusterAttachment
-        DependsOn: DocDBInstance
-        Properties:
-        SecretId: !Ref MyDocDBClusterRotationSecret
-        HostedRotationLambda:
+          Fn::GetAtt:
+          - TestVPC
+          - DefaultSecurityGroup
+        VpcSubnetIds:
+          Fn::Join:
+          - ","
+          - - Ref: TestSubnet01
+            - Ref: TestSubnet02
+      RotationRules:
+        AutomaticallyAfterDays: 30
+```
+
+### Redshift cluster secret rotation example<a name="aws-resource-secretsmanager-rotationschedule--examples--Redshift_cluster_secret_rotation_example"></a>
+
+#### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--Redshift_cluster_secret_rotation_example--json"></a>
+
+```
+{
+   "AWSTemplateFormatVersion":"2010-09-09",
+   "Transform":"AWS::SecretsManager-2020-07-23",
+   "Resources":{
+      "TestVPC":{
+         "Type":"AWS::EC2::VPC",
+         "Properties":{
+            "CidrBlock":"10.0.0.0/16",
+            "EnableDnsHostnames":true,
+            "EnableDnsSupport":true
+         }
+      },
+      "TestSubnet01":{
+         "Type":"AWS::EC2::Subnet",
+         "Properties":{
+            "CidrBlock":"10.0.96.0/19",
+            "AvailabilityZone":{
+               "Fn::Select":[
+                  "0",
+                  {
+                     "Fn::GetAZs":{
+                        "Ref":"AWS::Region"
+                     }
+                  }
+               ]
+            },
+            "VpcId":{
+               "Ref":"TestVPC"
+            }
+         }
+      },
+      "TestSubnet02":{
+         "Type":"AWS::EC2::Subnet",
+         "Properties":{
+            "CidrBlock":"10.0.128.0/19",
+            "AvailabilityZone":{
+               "Fn::Select":[
+                  "1",
+                  {
+                     "Fn::GetAZs":{
+                        "Ref":"AWS::Region"
+                     }
+                  }
+               ]
+            },
+            "VpcId":{
+               "Ref":"TestVPC"
+            }
+         }
+      },
+      "SecretsManagerVPCEndpoint":{
+         "Type":"AWS::EC2::VPCEndpoint",
+         "Properties":{
+            "SubnetIds":[
+               {
+                  "Ref":"TestSubnet01"
+               },
+               {
+                  "Ref":"TestSubnet02"
+               }
+            ],
+            "SecurityGroupIds":[
+               {
+                  "Fn::GetAtt":[
+                     "TestVPC",
+                     "DefaultSecurityGroup"
+                  ]
+               }
+            ],
+            "VpcEndpointType":"Interface",
+            "ServiceName":{
+               "Fn::Sub":"com.amazonaws.${AWS::Region}.secretsmanager"
+            },
+            "PrivateDnsEnabled":true,
+            "VpcId":{
+               "Ref":"TestVPC"
+            }
+         }
+      },
+      "MyRedshiftSecret":{
+         "Type":"AWS::SecretsManager::Secret",
+         "Properties":{
+            "Description":"This is my rds instance secret",
+            "GenerateSecretString":{
+               "SecretStringTemplate":"{\"username\": \"admin\"}",
+               "GenerateStringKey":"password",
+               "PasswordLength":16,
+               "ExcludeCharacters":"\"@/\\"
+            },
+            "Tags":[
+               {
+                  "Key":"AppName",
+                  "Value":"MyApp"
+               }
+            ]
+         }
+      },
+      "MyRedshiftCluster":{
+         "Type":"AWS::Redshift::Cluster",
+         "Properties":{
+            "DBName":"myyamldb",
+            "NodeType":"ds2.xlarge",
+            "ClusterType":"single-node",
+            "ClusterSubnetGroupName":{
+               "Ref":"ResdshiftSubnetGroup"
+            },
+            "MasterUsername":{
+               "Fn::Sub":"{{resolve:secretsmanager:${MyRedshiftSecret}::username}}"
+            },
+            "MasterUserPassword":{
+               "Fn::Sub":"{{resolve:secretsmanager:${MyRedshiftSecret}::password}}"
+            },
+            "PubliclyAccessible":false,
+            "VpcSecurityGroupIds":[
+               {
+                  "Fn::GetAtt":[
+                     "TestVPC",
+                     "DefaultSecurityGroup"
+                  ]
+               }
+            ]
+         }
+      },
+      "ResdshiftSubnetGroup":{
+         "Type":"AWS::Redshift::ClusterSubnetGroup",
+         "Properties":{
+            "Description":"Test Group",
+            "SubnetIds":[
+               {
+                  "Ref":"TestSubnet01"
+               },
+               {
+                  "Ref":"TestSubnet02"
+               }
+            ]
+         }
+      },
+      "SecretRedshiftAttachment":{
+         "Type":"AWS::SecretsManager::SecretTargetAttachment",
+         "Properties":{
+            "SecretId":{
+               "Ref":"MyRedshiftSecret"
+            },
+            "TargetId":{
+               "Ref":"MyRedshiftCluster"
+            },
+            "TargetType":"AWS::Redshift::Cluster"
+         }
+      },
+      "MySecretRotationSchedule":{
+         "Type":"AWS::SecretsManager::RotationSchedule",
+         "DependsOn":"SecretRedshiftAttachment",
+         "Properties":{
+            "SecretId":{
+               "Ref":"MyRedshiftSecret"
+            },
+            "HostedRotationLambda":{
+               "RotationType":"RedshiftSingleUser",
+               "RotationLambdaName":"SecretsManagerRotationRedshift",
+               "VpcSecurityGroupIds":{
+                  "Fn::GetAtt":[
+                     "TestVPC",
+                     "DefaultSecurityGroup"
+                  ]
+               },
+               "VpcSubnetIds":{
+                  "Fn::Join":[
+                     ",",
+                     [
+                        {
+                           "Ref":"TestSubnet01"
+                        },
+                        {
+                           "Ref":"TestSubnet02"
+                        }
+                     ]
+                  ]
+               }
+            },
+            "RotationRules":{
+               "AutomaticallyAfterDays":30
+            }
+         }
+      }
+   }
+}
+```
+
+#### YAML<a name="aws-resource-secretsmanager-rotationschedule--examples--Redshift_cluster_secret_rotation_example--yaml"></a>
+
+```
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::SecretsManager-2020-07-23
+Resources:
+  TestVPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsHostnames: true
+      EnableDnsSupport: true
+  TestSubnet01:
+    Type: AWS::EC2::Subnet
+    Properties:
+      CidrBlock: 10.0.96.0/19
+      AvailabilityZone:
+        Fn::Select:
+        - '0'
+        - Fn::GetAZs:
+            Ref: AWS::Region
+      VpcId:
+        Ref: TestVPC
+  TestSubnet02:
+    Type: AWS::EC2::Subnet
+    Properties:
+      CidrBlock: 10.0.128.0/19
+      AvailabilityZone:
+        Fn::Select:
+        - '1'
+        - Fn::GetAZs:
+            Ref: AWS::Region
+      VpcId:
+        Ref: TestVPC
+  SecretsManagerVPCEndpoint:
+    Type: AWS::EC2::VPCEndpoint
+    Properties:
+      SubnetIds:
+      - Ref: TestSubnet01
+      - Ref: TestSubnet02
+      SecurityGroupIds:
+      - Fn::GetAtt:
+        - TestVPC
+        - DefaultSecurityGroup
+      VpcEndpointType: Interface
+      ServiceName:
+        Fn::Sub: com.amazonaws.${AWS::Region}.secretsmanager
+      PrivateDnsEnabled: true
+      VpcId:
+        Ref: TestVPC
+  MyRedshiftSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: This is my rds instance secret
+      GenerateSecretString:
+        SecretStringTemplate: '{"username": "admin"}'
+        GenerateStringKey: password
+        PasswordLength: 16
+        ExcludeCharacters: "\"@/\\"
+      Tags:
+      - Key: AppName
+        Value: MyApp
+  MyRedshiftCluster:
+    Type: AWS::Redshift::Cluster
+    Properties:
+      DBName: myyamldb
+      NodeType: ds2.xlarge
+      ClusterType: single-node
+      ClusterSubnetGroupName:
+        Ref: ResdshiftSubnetGroup
+      MasterUsername:
+        Fn::Sub: "{{resolve:secretsmanager:${MyRedshiftSecret}::username}}"
+      MasterUserPassword:
+        Fn::Sub: "{{resolve:secretsmanager:${MyRedshiftSecret}::password}}"
+      PubliclyAccessible: false
+      VpcSecurityGroupIds:
+      - Fn::GetAtt:
+        - TestVPC
+        - DefaultSecurityGroup
+  ResdshiftSubnetGroup:
+    Type: AWS::Redshift::ClusterSubnetGroup
+    Properties:
+      Description: Test Group
+      SubnetIds:
+      - Ref: TestSubnet01
+      - Ref: TestSubnet02
+  SecretRedshiftAttachment:
+    Type: AWS::SecretsManager::SecretTargetAttachment
+    Properties:
+      SecretId:
+        Ref: MyRedshiftSecret
+      TargetId:
+        Ref: MyRedshiftCluster
+      TargetType: AWS::Redshift::Cluster
+  MySecretRotationSchedule:
+    Type: AWS::SecretsManager::RotationSchedule
+    DependsOn: SecretRedshiftAttachment
+    Properties:
+      SecretId:
+        Ref: MyRedshiftSecret
+      HostedRotationLambda:
+        RotationType: RedshiftSingleUser
+        RotationLambdaName: SecretsManagerRotationRedshift
+        VpcSecurityGroupIds:
+          Fn::GetAtt:
+          - TestVPC
+          - DefaultSecurityGroup
+        VpcSubnetIds:
+          Fn::Join:
+          - ","
+          - - Ref: TestSubnet01
+            - Ref: TestSubnet02
+      RotationRules:
+        AutomaticallyAfterDays: 30
+```
+
+### DocumentDB secret rotation example<a name="aws-resource-secretsmanager-rotationschedule--examples--DocumentDB_secret_rotation_example"></a>
+
+#### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--DocumentDB_secret_rotation_example--json"></a>
+
+```
+{
+   "AWSTemplateFormatVersion":"2010-09-09",
+   "Transform":"AWS::SecretsManager-2020-07-23",
+   "Resources":{
+      "TestVPC":{
+         "Type":"AWS::EC2::VPC",
+         "Properties":{
+            "CidrBlock":"10.0.0.0/16",
+            "EnableDnsHostnames":true,
+            "EnableDnsSupport":true
+         }
+      },
+      "TestSubnet01":{
+         "Type":"AWS::EC2::Subnet",
+         "Properties":{
+            "CidrBlock":"10.0.96.0/19",
+            "AvailabilityZone":{
+               "Fn::Select":[
+                  "0",
+                  {
+                     "Fn::GetAZs":{
+                        "Ref":"AWS::Region"
+                     }
+                  }
+               ]
+            },
+            "VpcId":{
+               "Ref":"TestVPC"
+            }
+         }
+      },
+      "TestSubnet02":{
+         "Type":"AWS::EC2::Subnet",
+         "Properties":{
+            "CidrBlock":"10.0.128.0/19",
+            "AvailabilityZone":{
+               "Fn::Select":[
+                  "1",
+                  {
+                     "Fn::GetAZs":{
+                        "Ref":"AWS::Region"
+                     }
+                  }
+               ]
+            },
+            "VpcId":{
+               "Ref":"TestVPC"
+            }
+         }
+      },
+      "SecretsManagerVPCEndpoint":{
+         "Type":"AWS::EC2::VPCEndpoint",
+         "Properties":{
+            "SubnetIds":[
+               {
+                  "Ref":"TestSubnet01"
+               },
+               {
+                  "Ref":"TestSubnet02"
+               }
+            ],
+            "SecurityGroupIds":[
+               {
+                  "Fn::GetAtt":[
+                     "TestVPC",
+                     "DefaultSecurityGroup"
+                  ]
+               }
+            ],
+            "VpcEndpointType":"Interface",
+            "ServiceName":{
+               "Fn::Sub":"com.amazonaws.${AWS::Region}.secretsmanager"
+            },
+            "PrivateDnsEnabled":true,
+            "VpcId":{
+               "Ref":"TestVPC"
+            }
+         }
+      },
+      "MyDocDBClusterRotationSecret":{
+         "Type":"AWS::SecretsManager::Secret",
+         "Properties":{
+            "GenerateSecretString":{
+               "SecretStringTemplate":"{\"username\": \"someadmin\",\"ssl\": true}",
+               "GenerateStringKey":"password",
+               "PasswordLength":16,
+               "ExcludeCharacters":"\"@/\\"
+            },
+            "Tags":[
+               {
+                  "Key":"AppName",
+                  "Value":"MyApp"
+               }
+            ]
+         }
+      },
+      "MyDocDBCluster":{
+         "Type":"AWS::DocDB::DBCluster",
+         "Properties":{
+            "DBSubnetGroupName":{
+               "Ref":"MyDBSubnetGroup"
+            },
+            "MasterUsername":{
+               "Fn::Sub":"{{resolve:secretsmanager:${MyDocDBClusterRotationSecret}::username}}"
+            },
+            "MasterUserPassword":{
+               "Fn::Sub":"{{resolve:secretsmanager:${MyDocDBClusterRotationSecret}::password}}"
+            },
+            "VpcSecurityGroupIds":[
+               {
+                  "Fn::GetAtt":[
+                     "TestVPC",
+                     "DefaultSecurityGroup"
+                  ]
+               }
+            ]
+         }
+      },
+      "DocDBInstance":{
+         "Type":"AWS::DocDB::DBInstance",
+         "Properties":{
+            "DBClusterIdentifier":{
+               "Ref":"MyDocDBCluster"
+            },
+            "DBInstanceClass":"db.r5.large"
+         }
+      },
+      "MyDBSubnetGroup":{
+         "Type":"AWS::DocDB::DBSubnetGroup",
+         "Properties":{
+            "DBSubnetGroupDescription":"",
+            "SubnetIds":[
+               {
+                  "Ref":"TestSubnet01"
+               },
+               {
+                  "Ref":"TestSubnet02"
+               }
+            ]
+         }
+      },
+      "SecretDocDBClusterAttachment":{
+         "Type":"AWS::SecretsManager::SecretTargetAttachment",
+         "Properties":{
+            "SecretId":{
+               "Ref":"MyDocDBClusterRotationSecret"
+            },
+            "TargetId":{
+               "Ref":"MyDocDBCluster"
+            },
+            "TargetType":"AWS::DocDB::DBCluster"
+         }
+      },
+      "MySecretRotationSchedule":{
+         "Type":"AWS::SecretsManager::RotationSchedule",
+         "DependsOn":"SecretDocDBClusterAttachment",
+         "Properties":{
+            "SecretId":{
+               "Ref":"MyDocDBClusterRotationSecret"
+            },
+            "HostedRotationLambda":{
+               "RotationType":"MongoDBSingleUser",
+               "RotationLambdaName":"MongoDBSingleUser",
+               "VpcSecurityGroupIds":{
+                  "Fn::GetAtt":[
+                     "TestVPC",
+                     "DefaultSecurityGroup"
+                  ]
+               },
+               "VpcSubnetIds":{
+                  "Fn::Join":[
+                     ",",
+                     [
+                        {
+                           "Ref":"TestSubnet01"
+                        },
+                        {
+                           "Ref":"TestSubnet02"
+                        }
+                     ]
+                  ]
+               }
+            },
+            "RotationRules":{
+               "AutomaticallyAfterDays":30
+            }
+         }
+      }
+   }
+}
+```
+
+#### YAML<a name="aws-resource-secretsmanager-rotationschedule--examples--DocumentDB_secret_rotation_example--yaml"></a>
+
+```
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::SecretsManager-2020-07-23
+Resources:
+  TestVPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsHostnames: true
+      EnableDnsSupport: true
+  TestSubnet01:
+    Type: AWS::EC2::Subnet
+    Properties:
+      CidrBlock: 10.0.96.0/19
+      AvailabilityZone:
+        Fn::Select:
+        - '0'
+        - Fn::GetAZs:
+            Ref: AWS::Region
+      VpcId:
+        Ref: TestVPC
+  TestSubnet02:
+    Type: AWS::EC2::Subnet
+    Properties:
+      CidrBlock: 10.0.128.0/19
+      AvailabilityZone:
+        Fn::Select:
+        - '1'
+        - Fn::GetAZs:
+            Ref: AWS::Region
+      VpcId:
+        Ref: TestVPC
+  SecretsManagerVPCEndpoint:
+    Type: AWS::EC2::VPCEndpoint
+    Properties:
+      SubnetIds:
+      - Ref: TestSubnet01
+      - Ref: TestSubnet02
+      SecurityGroupIds:
+      - Fn::GetAtt:
+        - TestVPC
+        - DefaultSecurityGroup
+      VpcEndpointType: Interface
+      ServiceName:
+        Fn::Sub: com.amazonaws.${AWS::Region}.secretsmanager
+      PrivateDnsEnabled: true
+      VpcId:
+        Ref: TestVPC
+  MyDocDBClusterRotationSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      GenerateSecretString:
+        SecretStringTemplate: '{\"username\": \"someadmin\",\"ssl\": true}'
+        GenerateStringKey: password
+        PasswordLength: 16
+        ExcludeCharacters: "\"@/\\"
+      Tags:
+      - Key: AppName
+        Value: MyApp
+  MyDocDBCluster:
+    Type: AWS::DocDB::DBCluster
+    Properties:
+      DBSubnetGroupName:
+        Ref: MyDBSubnetGroup
+      MasterUsername:
+        Fn::Sub: "{{resolve:secretsmanager:${MyDocDBClusterRotationSecret}::username}}"
+      MasterUserPassword:
+        Fn::Sub: "{{resolve:secretsmanager:${MyDocDBClusterRotationSecret}::password}}"
+      VpcSecurityGroupIds:
+      - Fn::GetAtt:
+        - TestVPC
+        - DefaultSecurityGroup
+  DocDBInstance:
+    Type: AWS::DocDB::DBInstance
+    Properties:
+      DBClusterIdentifier:
+        Ref: MyDocDBCluster
+      DBInstanceClass: db.r5.large
+  MyDBSubnetGroup:
+    Type: AWS::DocDB::DBSubnetGroup
+    Properties:
+      DBSubnetGroupDescription: ''
+      SubnetIds:
+      - Ref: TestSubnet01
+      - Ref: TestSubnet02
+  SecretDocDBClusterAttachment:
+    Type: AWS::SecretsManager::SecretTargetAttachment
+    Properties:
+      SecretId:
+        Ref: MyDocDBClusterRotationSecret
+      TargetId:
+        Ref: MyDocDBCluster
+      TargetType: AWS::DocDB::DBCluster
+  MySecretRotationSchedule:
+    Type: AWS::SecretsManager::RotationSchedule
+    DependsOn: SecretDocDBClusterAttachment
+    Properties:
+      SecretId:
+        Ref: MyDocDBClusterRotationSecret
+      HostedRotationLambda:
         RotationType: MongoDBSingleUser
         RotationLambdaName: MongoDBSingleUser
-        VpcSecurityGroupIds: !GetAtt TestVPC.DefaultSecurityGroup
+        VpcSecurityGroupIds:
+          Fn::GetAtt:
+          - TestVPC
+          - DefaultSecurityGroup
         VpcSubnetIds:
-        Fn::Join:
-        - ","
-        - - Ref: TestSubnet01
-        - Ref: TestSubnet02
-        RotationRules:
+          Fn::Join:
+          - ","
+          - - Ref: TestSubnet01
+            - Ref: TestSubnet02
+      RotationRules:
         AutomaticallyAfterDays: 30
 ```
 

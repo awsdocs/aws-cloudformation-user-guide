@@ -13,7 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Criteria](#cfn-iot-securityprofile-behavior-criteria)" : BehaviorCriteria,
   "[Metric](#cfn-iot-securityprofile-behavior-metric)" : String,
   "[MetricDimension](#cfn-iot-securityprofile-behavior-metricdimension)" : MetricDimension,
-  "[Name](#cfn-iot-securityprofile-behavior-name)" : String
+  "[Name](#cfn-iot-securityprofile-behavior-name)" : String,
+  "[SuppressAlerts](#cfn-iot-securityprofile-behavior-suppressalerts)" : Boolean
 }
 ```
 
@@ -26,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [MetricDimension](#cfn-iot-securityprofile-behavior-metricdimension): 
     MetricDimension
   [Name](#cfn-iot-securityprofile-behavior-name): String
+  [SuppressAlerts](#cfn-iot-securityprofile-behavior-suppressalerts): Boolean
 ```
 
 ## Properties<a name="aws-properties-iot-securityprofile-behavior-properties"></a>
@@ -52,4 +54,10 @@ The dimension of the metric\.
 The name you've given to the behavior\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SuppressAlerts`  <a name="cfn-iot-securityprofile-behavior-suppressalerts"></a>
+The alert status\. If you set the value to `true`, alerts will be suppressed\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

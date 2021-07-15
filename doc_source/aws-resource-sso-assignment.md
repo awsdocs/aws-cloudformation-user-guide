@@ -59,7 +59,7 @@ The ARN of the permission set\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PrincipalId`  <a name="cfn-sso-assignment-principalid"></a>
-An identifier for an object in AWS SSO, such as a user or group\. PrincipalIds are GUIDs \(For example, f81d4fae\-7dec\-11d0\-a765\-00a0c91e6bf6\)\. For more information about PrincipalIds in AWS SSO, see the [AWS SSO Identity Store API Reference](/singlesignon/latest/IdentityStoreAPIReference/welcome.html)\.  
+An identifier for an object in AWS SSO, such as a user or group\. PrincipalIds are GUIDs \(For example, f81d4fae\-7dec\-11d0\-a765\-00a0c91e6bf6\)\. For more information about PrincipalIds in AWS SSO, see the [ AWS SSO Identity Store API Reference](/singlesignon/latest/IdentityStoreAPIReference/welcome.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -100,11 +100,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### Creating a new assignment for AWS SSO<a name="aws-resource-sso-assignment--examples--Creating_a_new_assignment_for_AWS_SSO"></a>
+### Creating a new assignment for AWS SSO<a name="aws-resource-sso-assignment--examples--Creating_a_new_assignment_for_"></a>
 
 The following example creates a custom assignment, assigning the user `"user_id"` access to account `"arn:aws:organizations::org_master_id:account/org_id/accountId"` with the permissions `"PermissionSet"`\. 
 
-#### JSON<a name="aws-resource-sso-assignment--examples--Creating_a_new_assignment_for_AWS_SSO--json"></a>
+#### JSON<a name="aws-resource-sso-assignment--examples--Creating_a_new_assignment_for_--json"></a>
 
 ```
 {
@@ -127,7 +127,7 @@ The following example creates a custom assignment, assigning the user `"user_id"
 }
 ```
 
-#### YAML<a name="aws-resource-sso-assignment--examples--Creating_a_new_assignment_for_AWS_SSO--yaml"></a>
+#### YAML<a name="aws-resource-sso-assignment--examples--Creating_a_new_assignment_for_--yaml"></a>
 
 ```
 Assignment:

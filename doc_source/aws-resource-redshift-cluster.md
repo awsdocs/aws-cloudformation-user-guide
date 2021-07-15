@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DBName](#cfn-redshift-cluster-dbname)" : String,
       "[ElasticIp](#cfn-redshift-cluster-elasticip)" : String,
       "[Encrypted](#cfn-redshift-cluster-encrypted)" : Boolean,
-      "[Endpoint](#cfn-redshift-cluster-endpoint)" : Json,
+      "[Endpoint](#cfn-redshift-cluster-endpoint)" : Endpoint,
       "[HsmClientCertificateIdentifier](#cfn-redshift-cluster-hsmclientcertificateidentifier)" : String,
       "[HsmConfigurationIdentifier](#cfn-redshift-cluster-hsmconfigurationidentifier)" : String,
       "[IamRoles](#cfn-redshift-cluster-iamroles)" : [ String, ... ],
@@ -66,7 +66,8 @@ Properties:
   [DBName](#cfn-redshift-cluster-dbname): String
   [ElasticIp](#cfn-redshift-cluster-elasticip): String
   [Encrypted](#cfn-redshift-cluster-encrypted): Boolean
-  [Endpoint](#cfn-redshift-cluster-endpoint): Json
+  [Endpoint](#cfn-redshift-cluster-endpoint): 
+    Endpoint
   [HsmClientCertificateIdentifier](#cfn-redshift-cluster-hsmclientcertificateidentifier): String
   [HsmConfigurationIdentifier](#cfn-redshift-cluster-hsmconfigurationidentifier): String
   [IamRoles](#cfn-redshift-cluster-iamroles): 
@@ -211,7 +212,7 @@ Default: false
 `Endpoint`  <a name="cfn-redshift-cluster-endpoint"></a>
 The connection endpoint\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [Endpoint](aws-properties-redshift-cluster-endpoint.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HsmClientCertificateIdentifier`  <a name="cfn-redshift-cluster-hsmclientcertificateidentifier"></a>
@@ -370,6 +371,12 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-redshift-cluster-return-values-fn--getatt-fn--getatt"></a>
+
+`Endpoint.Address`  <a name="Endpoint.Address-fn::getatt"></a>
+The connection endpoint for the Amazon Redshift cluster\. For example: `examplecluster.cg034hpkmmjt.us-east-1.redshift.amazonaws.com`\.
+
+`Endpoint.Port`  <a name="Endpoint.Port-fn::getatt"></a>
+The port number on which the Amazon Redshift cluster accepts connections\. For example: `5439`\.
 
 `Id`  <a name="Id-fn::getatt"></a>
 Not currently supported by AWS CloudFormation\.

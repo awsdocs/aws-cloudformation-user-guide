@@ -1,6 +1,6 @@
 # AWS::DMS::Endpoint RedshiftSettings<a name="aws-properties-dms-endpoint-redshiftsettings"></a>
 
-Provides information that defines an Amazon Redshift endpoint\.
+Not currently supported by AWS CloudFormation\.
 
 ## Syntax<a name="aws-properties-dms-endpoint-redshiftsettings-syntax"></a>
 

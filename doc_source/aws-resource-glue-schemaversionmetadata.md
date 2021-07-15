@@ -1,6 +1,6 @@
 # AWS::Glue::SchemaVersionMetadata<a name="aws-resource-glue-schemaversionmetadata"></a>
 
-The AWS::Glue::SchemaVersionMetadata is an AWS Glue resource type that defines the metadata key\-value pairs for a schema version in AWS Glue Schema Registry\.
+The `AWS::Glue::SchemaVersionMetadata` is an AWS Glue resource type that defines the metadata key\-value pairs for a schema version in AWS Glue Schema Registry\.
 
 ## Syntax<a name="aws-resource-glue-schemaversionmetadata-syntax"></a>
 

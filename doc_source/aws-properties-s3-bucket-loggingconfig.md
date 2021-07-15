@@ -2,6 +2,9 @@
 
 Describes where logs are stored and the prefix that Amazon S3 assigns to all log object keys for a bucket\. For examples and more information, see [PUT Bucket logging](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlogging.html) in the *Amazon S3 API Reference*\.
 
+**Note**  
+To successfully complete the `AWS::S3::Bucket LoggingConfiguration` request, you must have `s3:PutObject` and `s3:PutObjectAcl` in your IAM permissions\.
+
 ## Syntax<a name="aws-properties-s3-bucket-loggingconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

@@ -71,7 +71,7 @@ Properties:
 `AttributeDefinitions`  <a name="cfn-dynamodb-table-attributedef"></a>
 A list of attributes that describe the key schema for the table and indexes\.  
 This property is required to create a DynamoDB table\.  
-Update requires: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)\. Replacement if you edit an existing AttributeDefinition\.   
+Update requires: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)\. Replacement if you edit an existing AttributeDefinition\.  
 *Required*: Conditional  
 *Type*: List of [AttributeDefinition](aws-properties-dynamodb-attributedef.md)  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
@@ -80,11 +80,10 @@ Update requires: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormat
 Specify how you are charged for read and write throughput and how you manage capacity\.  
 Valid values include:  
 +  `PROVISIONED` \- We recommend using `PROVISIONED` for predictable workloads\. `PROVISIONED` sets the billing mode to [Provisioned Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.ProvisionedThroughput.Manual)\.
-+  `PAY_PER_REQUEST` \- We recommend using `PAY_PER_REQUEST` for unpredictable workloads\. `PAY_PER_REQUEST` sets the billing mode to [On\-Demand Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.OnDemand)\. 
++  `PAY_PER_REQUEST` \- We recommend using `PAY_PER_REQUEST` for unpredictable workloads\. `PAY_PER_REQUEST` sets the billing mode to [On\-Demand Mode](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ReadWriteCapacityMode.html#HowItWorks.OnDemand)\.
 If not specified, the default is `PROVISIONED`\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `PAY_PER_REQUEST | PROVISIONED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ContributorInsightsSpecification`  <a name="cfn-dynamodb-contributorinsightsspecification-enabled"></a>
@@ -97,7 +96,7 @@ The settings used to enable or disable CloudWatch Contributor Insights for the s
 Global secondary indexes to be created on the table\. You can create up to 20 global secondary indexes\.  
 If you update a table to include a new global secondary index, AWS CloudFormation initiates the index creation and then proceeds with the stack update\. AWS CloudFormation doesn't wait for the index to complete creation because the backfilling phase can take a long time, depending on the size of the table\. You can't use the index or update the table until the index's status is `ACTIVE`\. You can track its status by using the DynamoDB [DescribeTable](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/describe-table.html) command\.  
 If you add or delete an index during an update, we recommend that you don't update any other resources\. If your stack fails to update and is rolled back while adding a new index, you must manually delete the index\.   
- Updates are not supported\. The following are exceptions:  
+Updates are not supported\. The following are exceptions:  
 + If you update only the provisioned throughput values of global secondary indexes, you can update the table without interruption\.
 + You can delete or add one global secondary index without interruption\. If you do both in the same update \(for example, by changing the index's logical ID\), the update fails\.
 *Required*: No  
@@ -149,7 +148,7 @@ The settings for the DynamoDB table stream, which capture changes to items store
 
 `TableName`  <a name="cfn-dynamodb-table-tablename"></a>
 A name for the table\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the table name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
-If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\. 
+If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `3`  
@@ -403,7 +402,7 @@ Resources:
 
 If you include multiple DynamoDB tables with indexes in a single template, you must include dependencies so that the tables are created sequentially\. DynamoDB limits the number of tables with secondary indexes that are in the creating state\. If you create multiple tables with indexes at the same time, DynamoDB returns an error and the stack operation fails\.
 
-The following sample assumes that the `myFirstDDBTable` table is declared in the same template as the `mySecondDDBTable` table, and both tables include a secondary index\. The `mySecondDDBTable` table includes a dependency on the `myFirstDDBTable` table so that AWS CloudFormation creates the tables one at a time\. 
+The following sample assumes that the `myFirstDDBTable` table is declared in the same template as the `mySecondDDBTable` table, and both tables include a secondary index\. The `mySecondDDBTable` table includes a dependency on the `myFirstDDBTable` table so that AWS CloudFormation creates the tables one at a time\.
 
 #### JSON<a name="aws-resource-dynamodb-table--examples--DynamoDB_Table_with_a_DependsOn_Attribute--json"></a>
 
@@ -469,11 +468,11 @@ The following sample assumes that the `myFirstDDBTable` table is declared in the
 #### YAML<a name="aws-resource-dynamodb-table--examples--DynamoDB_Table_with_a_DependsOn_Attribute--yaml"></a>
 
 ```
-mySecondDDBTable: 
+mySecondDDBTable:
   Type: AWS::DynamoDB::Table
   DependsOn: "myFirstDDBTable"
-  Properties: 
-    AttributeDefinitions: 
+  Properties:
+    AttributeDefinitions:
       - 
         AttributeName: "ArtistId"
         AttributeType: "S"

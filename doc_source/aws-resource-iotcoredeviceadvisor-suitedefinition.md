@@ -2,6 +2,8 @@
 
 Creates a Device Advisor test suite\.
 
+Requires permission to access the [CreateSuiteDefinition](https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions) action\.
+
 ## Syntax<a name="aws-resource-iotcoredeviceadvisor-suitedefinition-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

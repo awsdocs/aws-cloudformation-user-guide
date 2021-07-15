@@ -71,6 +71,7 @@ The following sample is a bucket policy that is attached to the DOC\-EXAMPLE\-BU
                 "Ref": "DOC-EXAMPLE-BUCKET"
             },
             "PolicyDocument": {
+                "Version": "2012-10-17",
                 "Statement": [
                     {
                         "Action": [
@@ -114,6 +115,7 @@ SampleBucketPolicy:
   Properties:
     Bucket: !Ref DOC-EXAMPLE-BUCKET
     PolicyDocument:
+      Version: 2012-10-17
       Statement:
         - Action:
             - 's3:GetObject'

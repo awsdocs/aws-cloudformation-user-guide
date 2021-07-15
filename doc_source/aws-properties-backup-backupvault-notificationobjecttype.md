@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-backup-backupvault-notificationobjecttype-properties"></a>
 
 `BackupVaultEvents`  <a name="cfn-backup-backupvault-notificationobjecttype-backupvaultevents"></a>
-An array of events that indicate the status of jobs to back up resources to the backup vault\.  
+An array of events that indicate the status of jobs to back up resources to the backup vault\. For valid events, see [ BackupVaultEvents](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_PutBackupVaultNotifications.html#API_PutBackupVaultNotifications_RequestSyntax) in the *AWS Backup API Guide*\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

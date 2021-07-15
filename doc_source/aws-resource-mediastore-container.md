@@ -75,8 +75,7 @@ For information about how to construct an object lifecycle policy, see [Componen
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricPolicy`  <a name="cfn-mediastore-container-metricpolicy"></a>
-The metric policy that is associated with the container\. A metric policy allows AWS Elemental MediaStore to send metrics to Amazon CloudWatch\. In the policy, you must indicate whether you want MediaStore to send container\-level metrics\. You can also include rules to define groups of objects that you want MediaStore to send object\-level metrics for\.  
-To view examples of how to construct a metric policy for your use case, see [Example Metric Policies](https://docs.aws.amazon.com/mediastore/latest/ug/policies-metric-examples.html)\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [MetricPolicy](aws-properties-mediastore-container-metricpolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -89,7 +88,7 @@ For this release of the REST API, you can create only one policy for a container
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-mediastore-container-tags"></a>
-A collection of tags associated with a container\. Each tag consists of a key:value pair, which can be anything you define\. Typically, the tag key represents a category \(such as "environment"\) and the tag value represents a specific value within that category \(such as "test," "development," or "production"\)\. You can add up to 50 tags to each container\. For more information about tagging, including naming and usage conventions, see [Tagging Resources in MediaStore](https://docs.aws.amazon.com/mediastore/latest/ug/tagging.html)\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

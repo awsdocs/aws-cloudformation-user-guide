@@ -47,7 +47,7 @@ Specifies an email template, which is used when sending templated email messages
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS SES Template Sample Template",
+    "Description": "Amazon SES Template Sample Template",
     "Parameters": {
         "TemplateName": {
             "Type": "String"
@@ -90,7 +90,7 @@ Specifies an email template, which is used when sending templated email messages
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: AWS SES Template Sample Template
+Description: Amazon SES Template Sample Template
 Parameters:
   TemplateName:
     Type: String

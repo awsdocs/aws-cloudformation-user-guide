@@ -1,6 +1,6 @@
 # AWS::Events::Connection<a name="aws-resource-events-connection"></a>
 
-Creates a connection that contains the authorization information to use to connect to an API destination HTTP endpoint\.
+Creates a connection\. A connection defines the authorization type and credentials to use for authorization with an API destination HTTP endpoint\.
 
 ## Syntax<a name="aws-resource-events-connection-syntax"></a>
 
@@ -34,13 +34,14 @@ Properties:
 ## Properties<a name="aws-resource-events-connection-properties"></a>
 
 `AuthorizationType`  <a name="cfn-events-connection-authorizationtype"></a>
-The type of authorization to use for the connection\. Valid Values: `BASIC` \| `OAUTH_CLIENT_CREDENTIALS` \| `API_KEY`  
+The type of authorization to use for the connection\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `API_KEY | BASIC | OAUTH_CLIENT_CREDENTIALS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthParameters`  <a name="cfn-events-connection-authparameters"></a>
-Contains the authorization parameters to use to authorize with the endpoint\. It must include one of the following: `BasicAuthParameters`, `ApiKeyAuthParameters`, or `OAuthParameters`\.  
+A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters to use to authorize with the endpoint\.   
 *Required*: Yes  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -49,12 +50,17 @@ Contains the authorization parameters to use to authorize with the endpoint\. It
 A description for the connection to create\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `512`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-events-connection-name"></a>
 The name for the connection to create\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `64`  
+*Pattern*: `[\.\-_A-Za-z0-9]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-events-connection-return-values"></a>

@@ -72,7 +72,7 @@ Specifies the Lambda function or functions to use for the data catalog\. The map
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-athena-datacatalog-tags"></a>
-An optional list of comma separated tags \(key\-value pairs\) that are custom attributes for the data catalog\.  
+The tags \(key\-value pairs\) to associate with this resource\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

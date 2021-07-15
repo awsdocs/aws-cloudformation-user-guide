@@ -2,9 +2,6 @@
 
 Represents a Fleet Hub for AWS IoT Device Management web application\.
 
-**Note**  
-Fleet Hub for AWS IoT Device Management is in public preview and is subject to change\.
-
 ## Syntax<a name="aws-resource-iotfleethub-application-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -57,7 +54,7 @@ The name of the web application\.
 
 `RoleArn`  <a name="cfn-iotfleethub-application-rolearn"></a>
 The ARN of the role that the web application assumes when it interacts with AWS IoT Core\.  
-The name of the role must be in the form `AWSIotFleetHub_random_string`\.
+The name of the role must be in the form `FleetHub_random_string`\.
 Pattern: `^arn:[!-~]+$`  
 *Required*: Yes  
 *Type*: String  

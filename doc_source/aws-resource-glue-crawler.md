@@ -145,7 +145,7 @@ The following example creates a crawler for an Amazon S3 target\.
 
 ```
 {
-    "Description": "AWS Glue Crawler Test",
+    "Description": "AWS Glue crawler test",
     "Resources": {
         "MyRole": {
             "Type": "AWS::IAM::Role",

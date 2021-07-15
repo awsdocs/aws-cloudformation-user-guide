@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-gamelift-fleet-locationcapacity-properties"></a>
 
 `DesiredEC2Instances`  <a name="cfn-gamelift-fleet-locationcapacity-desiredec2instances"></a>
-The number of EC2 instances you want to maintain in the specified fleet location\. This value must fall between the minimum and maximum size limits\.  
+The number of Amazon EC2 instances you want to maintain in the specified fleet location\. This value must fall between the minimum and maximum size limits\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `0`  

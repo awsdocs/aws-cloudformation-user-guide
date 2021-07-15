@@ -113,7 +113,7 @@ Defines and enables Amazon CloudWatch metrics and web request sample collection\
 
 The `Ref` for the resource, containing the resource name, physical ID, and scope, formatted as follows: `name|id|scope`\.
 
-For example: `my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL`
+For example: `my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL`\.
 
 ### Fn::GetAtt<a name="aws-resource-wafv2-webacl-return-values-fn--getatt"></a>
 
@@ -145,7 +145,7 @@ The following shows an example web ACL specification\. This example includes cus
 
 ```
 Description: Create WebACL example
-            Resources:
+Resources:
   ExampleWebACL:
     Type: 'AWS::WAFv2::WebACL'
     Properties:
@@ -217,7 +217,7 @@ Description: Create WebACL example
 
 ```
 "Description": "Create WebACL example",
-            "Resources": {
+"Resources": {
     "ExampleWebACL": {
       "Type": "AWS::WAFv2::WebACL",
       "Properties": {
@@ -340,7 +340,7 @@ Resources:
       Scope: REGIONAL
       Description: WebACL for JsonBody Testing
       DefaultAction:
-        Allow:
+        Allow: {}
       VisibilityConfig:
         SampledRequestsEnabled: true
         CloudWatchMetricsEnabled: true
@@ -362,8 +362,8 @@ Resources:
                     IncludedPaths:
                       - /foo
                       - /bar
-                    MatchScope: VALUE
-                    InvalidFallbackBehavior: MATCH
+                  MatchScope: VALUE
+                  InvalidFallbackBehavior: MATCH
               PositionalConstraint: EXACTLY
               SearchString: BadBot
               TextTransformations:

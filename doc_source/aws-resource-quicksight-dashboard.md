@@ -2,7 +2,7 @@
 
 Creates a dashboard from a template\. To first create a template, see the ` CreateTemplate` API operation\.
 
-A dashboard is an entity in QuickSight that identifies QuickSight reports, created from analyses\. You can share QuickSight dashboards\. With the right permissions, you can create scheduled email reports from them\. If you have the correct permissions, you can create a dashboard from a template that exists in a different AWS account\.
+A dashboard is an entity in Amazon QuickSightthat identifies Amazon QuickSight reports, created from analyses\. You can share Amazon QuickSightdashboards\. With the right permissions, you can create scheduled email reports from them\. If you have the correct permissions, you can create a dashboard from a template that exists in a different AWS account\.
 
 ## Syntax<a name="aws-resource-quicksight-dashboard-syntax"></a>
 
@@ -53,7 +53,7 @@ Properties:
 ## Properties<a name="aws-resource-quicksight-dashboard-properties"></a>
 
 `AwsAccountId`  <a name="cfn-quicksight-dashboard-awsaccountid"></a>
-The ID of the AWS account where you want to create the dashboard\.  
+The ID of the AWS account; where you want to create the dashboard\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `12`  
@@ -85,7 +85,6 @@ The display name of the dashboard\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
-*Pattern*: `[\u0020-\u00FF]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-quicksight-dashboard-parameters"></a>
@@ -103,7 +102,7 @@ To specify no permissions, omit the permissions list\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceEntity`  <a name="cfn-quicksight-dashboard-sourceentity"></a>
-The entity that you are using as a source when you create the dashboard\. In `SourceEntity`, you specify the type of object you're using as source\. You can only create a dashboard from a template, so you use a `SourceTemplate` entity\. If you need to create a dashboard from an analysis, first convert the analysis to a template by using the `CreateTheme` API operation\. For `SourceTemplate`, specify the Amazon Resource Name \(ARN\) of the source template\. The `SourceTemplate`ARN can contain any AWS Account and any QuickSight\-supported AWS Region\.   
+The entity that you are using as a source when you create the dashboard\. In `SourceEntity`, you specify the type of object you're using as source\. You can only create a dashboard from a template, so you use a `SourceTemplate` entity\. If you need to create a dashboard from an analysis, first convert the analysis to a template by using the `CreateTheme` API operation\. For `SourceTemplate`, specify the Amazon Resource Name \(ARN\) of the source template\. The `SourceTemplate`ARN can contain any AWS account and any Amazon QuickSight\-supported \.   
 Use the `DataSetReferences` entity within `SourceTemplate` to list the replacement datasets for the placeholders listed in the original\. The schema in each dataset must match its placeholder\.   
 *Required*: No  
 *Type*: [DashboardSourceEntity](aws-properties-quicksight-dashboard-dashboardsourceentity.md)  
@@ -117,7 +116,7 @@ Contains a map of the key\-value pairs for the resource tag or tags assigned to 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThemeArn`  <a name="cfn-quicksight-dashboard-themearn"></a>
-The Amazon Resource Name \(ARN\) of the theme that is being used for this dashboard\. If you add a value for this field, it overrides the value that is used in the source entity\. The theme ARN must exist in the same AWS account where you create the dashboard\.  
+The Amazon Resource Name \(ARN\) of the theme that is being used for this dashboard\. If you add a value for this field, it overrides the value that is used in the source entity\. The theme ARN must exist in the same AWS account; where you create the dashboard\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

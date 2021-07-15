@@ -1,6 +1,6 @@
 # AWS::Lambda::EventSourceMapping SelfManagedEventSource<a name="aws-properties-lambda-eventsourcemapping-selfmanagedeventsource"></a>
 
-The Self\-Managed Apache Kafka cluster for your event source\.
+The self\-managed Apache Kafka cluster for your event source\.
 
 ## Syntax<a name="aws-properties-lambda-eventsourcemapping-selfmanagedeventsource-syntax"></a>
 

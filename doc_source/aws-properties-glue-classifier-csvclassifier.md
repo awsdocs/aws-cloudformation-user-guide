@@ -89,7 +89,7 @@ With `AWS::Glue::Classifier` you can create a custom classifier test\.
 
 ```
 {
-    "Description": "AWS Glue Custom Classifier Test",
+    "Description": "AWS Glue custom classifier test",
     "Resources": {
         "MyCSVclassifier": {
             "Type": "AWS::Glue::Classifier",
@@ -114,7 +114,7 @@ With `AWS::Glue::Classifier` you can create a custom classifier test\.
 #### YAML<a name="aws-properties-glue-classifier-csvclassifier--examples--Create_a_custom_classifier_test--yaml"></a>
 
 ```
-Description: AWS Glue Custom Classifier Test
+Description: AWS Glue custom classifier test
 Resources:
   MyCSVclassifier:
     Type: 'AWS::Glue::Classifier'

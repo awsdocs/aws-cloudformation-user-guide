@@ -1,6 +1,6 @@
 # AWS::IoT::MitigationAction EnableIoTLoggingParams<a name="aws-properties-iot-mitigationaction-enableiotloggingparams"></a>
 
-Parameters used when defining a mitigation action that enable AWS IoT logging\.
+Parameters used when defining a mitigation action that enable AWS IoT Core logging\.
 
 ## Syntax<a name="aws-properties-iot-mitigationaction-enableiotloggingparams-syntax"></a>
 

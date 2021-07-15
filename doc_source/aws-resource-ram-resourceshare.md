@@ -54,7 +54,7 @@ The name of the resource share\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PermissionArns`  <a name="cfn-ram-resourceshare-permissionarns"></a>
-The Amazon Resource Names \(ARNs\) of the permissions to associate with the resource share\. If you do not specify an ARN for the permission, AWS RAM automatically attaches the default version of the permission for each resource type\.  
+The Amazon Resource Names \(ARNs\) of the permissions to associate with the resource share\. If you do not specify an ARN for the permission, AWS RAM automatically attaches the default version of the permission for each resource type\. Only one permission can be associated with each resource type in a resource share\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -62,11 +62,11 @@ The Amazon Resource Names \(ARNs\) of the permissions to associate with the reso
 `Principals`  <a name="cfn-ram-resourceshare-principals"></a>
 The principals to associate with the resource share\. The possible values are:  
 + An AWS account ID
-+ An Amazon Resource Name \(ARN\) of an organization in AWS Organizations\. 
-+ An ARN of an organizational unit \(OU\) in AWS Organizations\. 
++ An Amazon Resource Name \(ARN\) of an organization in AWS Organizations 
++ An ARN of an organizational unit \(OU\) in AWS Organizations 
 + An ARN of an IAM role
 + An ARN of an IAM user
-Not all resource types can be shared with IAM roles and IAM users\. For more information, see [Sharing with IAM roles and IAM users](https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types) in the *AWS Resource Access Manager User Guide*\.
+Not all resource types can be shared with IAM roles and IAM users\. For more information, see [Sharing with IAM roles and IAM users](https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types) in the * AWS Resource Access Manager User Guide*\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

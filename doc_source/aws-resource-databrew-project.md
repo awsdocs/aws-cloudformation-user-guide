@@ -1,6 +1,6 @@
 # AWS::DataBrew::Project<a name="aws-resource-databrew-project"></a>
 
-Creates a new DataBrew project\.
+Specifies a new AWS Glue DataBrew project\.
 
 ## Syntax<a name="aws-resource-databrew-project-syntax"></a>
 

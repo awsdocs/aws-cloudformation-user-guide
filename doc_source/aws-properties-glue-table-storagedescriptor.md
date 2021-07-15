@@ -102,7 +102,6 @@ The user\-supplied properties in key\-value form\.
 
 `SchemaReference`  <a name="cfn-glue-table-storagedescriptor-schemareference"></a>
 An object that references a schema stored in the AWS Glue Schema Registry\.  
-When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference\.  
 *Required*: No  
 *Type*: [SchemaReference](aws-properties-glue-table-schemareference.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

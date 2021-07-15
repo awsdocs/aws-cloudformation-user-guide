@@ -166,7 +166,48 @@ The name of the infrastructure configuration\.
 
 ### Create an infrastructure configuration<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples--Create_an_infrastructure_configuration"></a>
 
-The following example shows the schema for all of the parameters of the InfrastructureConfiguration resource document in both YAML and JSON format \.
+The following example shows the schema for all of the parameters of the InfrastructureConfiguration resource document in both JSON and YAML format\.
+
+#### JSON<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples--Create_an_infrastructure_configuration--json"></a>
+
+```
+{
+	"Resources": {
+		"InfrastructureConfigurationAll": {
+			"Type": "AWS::ImageBuilder::InfrastructureConfiguration",
+			"Properties": {
+				"Name": "infrastructure-configuration-name",
+				"InstanceProfileName": "instance-profile-name",
+				"Description": "description",
+				"InstanceTypes": [
+					"m4.large",
+					"m5.large"
+				],
+				"KeyPair": "key-pair",
+				"Logging": {
+					"S3Logs": {
+						"S3BucketName": "imagebuilder-logging-bucket",
+						"S3KeyPrefix": "imagebuilder-bucket-prefix"
+					}
+				},
+				"SnsTopicArn": {
+					"Ref": "SnsTopicArn"
+				},
+				"TerminateInstanceOnFailure": true,
+				"SecurityGroupIds": [
+					"security-group-id-1",
+					"security-group-id-2"
+				],
+				"SubnetId": "subnet-id",
+				"Tags": {
+					"CustomerInfraConfigTagKey1": "CustomerInfraConfigTagValue1",
+					"CustomerInfraConfigTagKey2": "CustomerInfraConfigTagValue2"
+				}
+			}
+		}
+	}
+}
+```
 
 #### YAML<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples--Create_an_infrastructure_configuration--yaml"></a>
 
@@ -195,45 +236,4 @@ Resources:
       Tags:
         CustomerInfraConfigTagKey1: 'CustomerInfraConfigTagValue1'
         CustomerInfraConfigTagKey2: 'CustomerInfraConfigTagValue2'
-```
-
-#### JSON<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples--Create_an_infrastructure_configuration--json"></a>
-
-```
-{
-    "Resources": {
-        "InfrastructureConfigurationAll": {
-            "Type": "AWS::ImageBuilder::InfrastructureConfiguration",
-            "Properties": {
-                "Name": "infrastructure-configuration-name",
-                "InstanceProfileName": "instance-profile-name",
-                "Description": "description",
-                "InstanceTypes": [
-                    "m4.large",
-                    "m5.large"
-                ],
-                "KeyPair": "key-pair",
-                "Logging": {
-                    "S3Logs": {
-                        "S3BucketName": "imagebuilder-logging-bucket",
-                        "S3KeyPrefix": "imagebuilder-bucket-prefix"
-                    }
-                },
-                "SnsTopicArn": {
-                    "Ref": "SnsTopicArn"
-                },
-                "TerminateInstanceOnFailure": true,
-                "SecurityGroupIds": [
-                    "security-group-id-1",
-                    "security-group-id-2"
-                ],
-                "SubnetId": "subnet-id",
-                "Tags": {
-                    "CustomerInfraConfigTagKey1": "CustomerInfraConfigTagValue1",
-                    "CustomerInfraConfigTagKey2": "CustomerInfraConfigTagValue2"
-                }
-            }
-        }
-    }
-}
 ```

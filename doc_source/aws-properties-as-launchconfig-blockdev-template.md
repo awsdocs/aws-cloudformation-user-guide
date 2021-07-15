@@ -67,9 +67,11 @@ You must specify either a `VolumeSize` or a `SnapshotId`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Throughput`  <a name="cfn-as-launchconfig-blockdev-template-throughput"></a>
-Not currently supported by AWS CloudFormation\.  
+The throughput \(MiBps\) to provision for a `gp3` volume\.   
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `125`  
+*Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeSize`  <a name="cfn-as-launchconfig-blockdev-template-volumesize"></a>

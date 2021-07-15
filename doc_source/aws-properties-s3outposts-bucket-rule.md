@@ -58,7 +58,7 @@ The container for the filter of lifecycle rule\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-s3outposts-bucket-rule-id"></a>
-Not currently supported by AWS CloudFormation\.  
+ Unique identifier for the lifecycle rule\. The value can't be longer than 255 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

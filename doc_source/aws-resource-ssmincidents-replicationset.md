@@ -37,7 +37,7 @@ Determines if the replication set deletion protection is enabled or not\. If del
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Regions`  <a name="cfn-ssmincidents-replicationset-regions"></a>
-Specifies the Region of the replication set\.  
+Specifies the Regions of the replication set\.  
 *Required*: Yes  
 *Type*: List of [ReplicationRegion](aws-properties-ssmincidents-replicationset-replicationregion.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

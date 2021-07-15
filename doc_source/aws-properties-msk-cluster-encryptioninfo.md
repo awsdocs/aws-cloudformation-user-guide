@@ -1,6 +1,6 @@
 # AWS::MSK::Cluster EncryptionInfo<a name="aws-properties-msk-cluster-encryptioninfo"></a>
 
-Includes encryption\-related information, such as the AWS KMS key used for encrypting data at rest and whether you want MSK to encrypt your data in transit\.
+Includes encryption\-related information, such as the Amazon KMS key used for encrypting data at rest and whether you want MSK to encrypt your data in transit\.
 
 ## Syntax<a name="aws-properties-msk-cluster-encryptioninfo-syntax"></a>
 

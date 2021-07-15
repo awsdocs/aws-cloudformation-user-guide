@@ -46,6 +46,3 @@ Specifies the subnets associated with the task\. These subnets must all be in th
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-## See also<a name="aws-properties-events-rule-awsvpcconfiguration--seealso"></a>
-+ [AwsVpcConfiguration](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_AwsVpcConfiguration.html)

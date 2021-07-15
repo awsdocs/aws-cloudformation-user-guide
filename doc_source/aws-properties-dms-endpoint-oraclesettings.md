@@ -1,6 +1,6 @@
 # AWS::DMS::Endpoint OracleSettings<a name="aws-properties-dms-endpoint-oraclesettings"></a>
 
-<a name="aws-properties-dms-endpoint-oraclesettings-description"></a>The `OracleSettings` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::DMS::Endpoint](aws-resource-dms-endpoint.md)\.
+Not currently supported by AWS CloudFormation\.
 
 ## Syntax<a name="aws-properties-dms-endpoint-oraclesettings-syntax"></a>
 

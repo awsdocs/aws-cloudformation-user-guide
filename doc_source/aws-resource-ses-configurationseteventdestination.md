@@ -58,7 +58,7 @@ Specifies an event destination for a configuration set\.
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS SES ConfigurationSetEventDestination Sample Template",
+    "Description": "Amazon SES ConfigurationSetEventDestination Sample Template",
     "Parameters": {
         "ConfigSetName": {
             "Type": "String"
@@ -162,7 +162,7 @@ Specifies an event destination for a configuration set\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: AWS SES ConfigurationSetEventDestination Sample Template
+Description: Amazon SES ConfigurationSetEventDestination Sample Template
 Parameters:
   ConfigSetName:
     Type: String

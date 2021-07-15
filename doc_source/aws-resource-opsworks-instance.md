@@ -77,7 +77,7 @@ Properties:
 `AgentVersion`  <a name="cfn-opsworks-instance-agentversion"></a>
 The default AWS OpsWorks Stacks agent version\. You have the following options:  
 +  `INHERIT` \- Use the stack's default agent version setting\.
-+  *version\_number* \- Use the specified agent version\. This value overrides the stack's default setting\. To update the agent version, edit the instance configuration and specify a new version\. AWS OpsWorks Stacks then automatically installs that version on the instance\.
++  *version\_number* \- Use the specified agent version\. This value overrides the stack's default setting\. To update the agent version, edit the instance configuration and specify a new version\. AWS OpsWorks Stacks installs that version on the instance\.
 The default setting is `INHERIT`\. To specify an agent version, you must use the complete version number, not the abbreviated number shown on the console\. For a list of available agent version numbers, call [DescribeAgentVersions](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeAgentVersions)\. AgentVersion cannot be set to Chef 12\.2\.  
 *Required*: No  
 *Type*: String  
@@ -163,7 +163,7 @@ The instance's operating system, which must be set to one of the following\.
 +  `Red Hat Enterprise Linux 7` 
 + A supported Windows operating system, such as `Microsoft Windows Server 2012 R2 Base`, `Microsoft Windows Server 2012 R2 with SQL Server Express`, `Microsoft Windows Server 2012 R2 with SQL Server Standard`, or `Microsoft Windows Server 2012 R2 with SQL Server Web`\.
 + A custom AMI: `Custom`\.
-Not all operating systems are supported with all versions of Chef\. For more information about the supported operating systems, see [AWS OpsWorks Stacks Operating Systems](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-os.html)\.  
+Not all operating systems are supported with all versions of Chef\. For more information about the supported operating systems, see [ AWS OpsWorks Stacks Operating Systems](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-os.html)\.  
 The default option is the current Amazon Linux version\. If you set this parameter to `Custom`, you must use the [CreateInstance](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateInstance) action's AmiId parameter to specify the custom AMI that you want to use\. Block device mappings are not supported if the value is `Custom`\. For more information about how to use custom AMIs with AWS OpsWorks Stacks, see [Using Custom AMIs](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-custom-ami.html)\.  
 *Required*: No  
 *Type*: String  
@@ -214,7 +214,7 @@ The instance's virtualization type, `paravirtual` or `hvm`\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Volumes`  <a name="cfn-opsworks-instance-volumes"></a>
-A list of AWS OpsWorks volume IDs to associate with the instance\. For more information, see [AWS::OpsWorks::Volume](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html)\.  
+A list of AWS OpsWorks volume IDs to associate with the instance\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html)\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -257,11 +257,11 @@ Use this attribute only when the AWS OpsWorks instance is in an AWS OpsWorks lay
 
 ## Examples<a name="aws-resource-opsworks-instance--examples"></a>
 
-### Create Basic AWS OpsWorks Instances<a name="aws-resource-opsworks-instance--examples--Create_Basic_AWS_OpsWorks_Instances"></a>
+### Create Basic OpsWorks Instances<a name="aws-resource-opsworks-instance--examples--Create_Basic_OpsWorks_Instances"></a>
 
 The following example creates two AWS OpsWorks instances that are associated with the `myStack` AWS OpsWorks stack and the `myLayer` AWS OpsWorks layer:
 
-#### JSON<a name="aws-resource-opsworks-instance--examples--Create_Basic_AWS_OpsWorks_Instances--json"></a>
+#### JSON<a name="aws-resource-opsworks-instance--examples--Create_Basic_OpsWorks_Instances--json"></a>
 
 ```
 "myInstance1" : {
@@ -283,7 +283,7 @@ The following example creates two AWS OpsWorks instances that are associated wit
 }
 ```
 
-#### YAML<a name="aws-resource-opsworks-instance--examples--Create_Basic_AWS_OpsWorks_Instances--yaml"></a>
+#### YAML<a name="aws-resource-opsworks-instance--examples--Create_Basic_OpsWorks_Instances--yaml"></a>
 
 ```
 myInstance1: 

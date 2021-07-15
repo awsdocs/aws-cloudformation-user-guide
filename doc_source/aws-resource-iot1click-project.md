@@ -74,13 +74,13 @@ The name of the project, such as `project-a1bzhi`\.
 
 ## Examples<a name="aws-resource-iot1click-project--examples"></a>
 
-### Declare an AWS IoT 1\-Click project<a name="aws-resource-iot1click-project--examples--Declare_an_AWS_IoT_1-Click_project"></a>
+### Declare a 1\-Click project<a name="aws-resource-iot1click-project--examples--Declare_a_1-Click_project"></a>
 
-#### JSON<a name="aws-resource-iot1click-project--examples--Declare_an_AWS_IoT_1-Click_project--json"></a>
+#### JSON<a name="aws-resource-iot1click-project--examples--Declare_a_1-Click_project--json"></a>
 
 ```
 {
-    "Description": "AWS IoT1Click Project test",
+    "Description": "IoT1Click Project test",
     "Resources": {
         "BasicProject": {
             "Type": "AWS::IoT1Click::Project",
@@ -115,10 +115,10 @@ The name of the project, such as `project-a1bzhi`\.
 }
 ```
 
-#### YAML<a name="aws-resource-iot1click-project--examples--Declare_an_AWS_IoT_1-Click_project--yaml"></a>
+#### YAML<a name="aws-resource-iot1click-project--examples--Declare_a_1-Click_project--yaml"></a>
 
 ```
-Description: "AWS IoT1Click Project test"
+Description: "IoT1Click Project test"
 Resources:
   BasicProject:
     Type: "AWS::IoT1Click::Project"

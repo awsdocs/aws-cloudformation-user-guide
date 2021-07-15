@@ -80,9 +80,9 @@ The name of the registry\.
 
 ## Examples<a name="aws-resource-eventschemas-registry--examples"></a>
 
-### Create a Schema Registry for Events Emitted by AWS Step Functions<a name="aws-resource-eventschemas-registry--examples--Create_a_Schema_Registry_for_Events_Emitted_by_AWS_Step_Functions"></a>
+### Create a Schema Registry for Events Emitted by AWS Step Functions<a name="aws-resource-eventschemas-registry--examples--Create_a_Schema_Registry_for_Events_Emitted_by__Step_Functions"></a>
 
-#### YAML<a name="aws-resource-eventschemas-registry--examples--Create_a_Schema_Registry_for_Events_Emitted_by_AWS_Step_Functions--yaml"></a>
+#### YAML<a name="aws-resource-eventschemas-registry--examples--Create_a_Schema_Registry_for_Events_Emitted_by__Step_Functions--yaml"></a>
 
 ```
 Resources:

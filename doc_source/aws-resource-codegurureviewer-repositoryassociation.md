@@ -117,11 +117,11 @@ The Amazon Resource Name \(ARN\) of the [https://docs.aws.amazon.com/codeguru/la
 
 
 
-### Create an AWS CodeCommit repository association using an existing CodeCommit repository<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an_AWS_CodeCommit_repository_association_using_an_existing_CodeCommit_repository"></a>
+### Create an AWS CodeCommit repository association using an existing CodeCommit repository<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an__CodeCommit_repository_association_using_an_existing_CodeCommit_repository"></a>
 
 The following example creates an Amazon CodeGuru Reviewer repository association using an existing AWS CodeCommit repository named `MyRepository`\.
 
-#### YAML<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an_AWS_CodeCommit_repository_association_using_an_existing_CodeCommit_repository--yaml"></a>
+#### YAML<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an__CodeCommit_repository_association_using_an_existing_CodeCommit_repository--yaml"></a>
 
 ```
 Resources:
@@ -132,7 +132,7 @@ Resources:
       Type: CodeCommit
 ```
 
-#### JSON<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an_AWS_CodeCommit_repository_association_using_an_existing_CodeCommit_repository--json"></a>
+#### JSON<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an__CodeCommit_repository_association_using_an_existing_CodeCommit_repository--json"></a>
 
 ```
 {
@@ -148,11 +148,11 @@ Resources:
 }
 ```
 
-### Create an AWS CodeCommit repository association with a new CodeCommit repository<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an_AWS_CodeCommit_repository_association_with_a_new_CodeCommit_repository"></a>
+### Create an AWS CodeCommit repository association with a new CodeCommit repository<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an__CodeCommit_repository_association_with_a_new_CodeCommit_repository"></a>
 
 The following example creates an AWS CodeCommit repository named `MyRepositoryName`\. Next, it creates an Amazon CodeGuru Reviewer repository association using the CodeCommit repository\. The `DependsOn` property in the `RepositoryAssociation` specifies the CodeCommit repository\. This is because the repository association can be created only after the CodeCommit repository is created\.
 
-#### YAML<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an_AWS_CodeCommit_repository_association_with_a_new_CodeCommit_repository--yaml"></a>
+#### YAML<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an__CodeCommit_repository_association_with_a_new_CodeCommit_repository--yaml"></a>
 
 ```
 Resources:
@@ -167,7 +167,7 @@ Resources:
       Type: CodeCommit
 ```
 
-#### JSON<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an_AWS_CodeCommit_repository_association_with_a_new_CodeCommit_repository--json"></a>
+#### JSON<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an__CodeCommit_repository_association_with_a_new_CodeCommit_repository--json"></a>
 
 ```
 {

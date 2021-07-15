@@ -151,7 +151,33 @@ Returns the component type\. For example, `BUILD` or `TEST`\.
 
 ### Create a component using Data<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_Data_"></a>
 
-The following example shows the schema for the Component resource document in both YAML and JSON format\. This example includes details for the `Data` field \. You can use either the `Data` or `Uri` fields to reference the component document\.
+The following example shows the schema for the Component resource document in both JSON and YAML format\. This example includes details for the `Data` field \. You can use either the `Data` or `Uri` fields to reference the component document\.
+
+#### JSON<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_Data_--json"></a>
+
+```
+{
+	"Resources": {
+		"ComponentAllParameters": {
+			"Type": "AWS::ImageBuilder::Component",
+			"Properties": {
+				"Name": "component-name",
+				"Platform": "Linux",
+				"Version": "1.0.0",
+				"Description": "description",
+				"ChangeDescription": "change-description",
+				"KmsKeyId": "customer-kms-key-id",
+				"SupportedOsVersions": ["Amazon Linux 2"],
+				"Tags": {
+					"CustomerComponentTagKey1": "CustomerComponentTagValue1",
+					"CustomerComponentTagKey2": "CustomerComponentTagValue2"
+				},
+				"Data": "name: HelloWorldTestingLinuxDoc - InlineData\n description: This is hello world testing doc\nschemaVersion: 1.0\n\nphases:\n  - name: build\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Build.\"\n  - name: validate\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Validate.\"\n  - name: test\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Test.\"\n"
+			}
+		}
+	}
+}
+```
 
 #### YAML<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_Data_--yaml"></a>
 
@@ -199,32 +225,6 @@ Resources:
                 inputs:
                   commands:
                     - echo "Hello World! Test."
-```
-
-#### JSON<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_Data_--json"></a>
-
-```
-{
-    "Resources": {
-        "ComponentAllParameters": {
-            "Type": "AWS::ImageBuilder::Component",
-            "Properties": {
-                "Name": "component-name",
-                "Platform": "Linux",
-                "Version": "1.0.0",
-                "Description": "description",
-                "ChangeDescription": "change-description",
-                "KmsKeyId": "customer-kms-key-id",
-                "SupportedOsVersions": ["Amazon Linux 2"],
-                "Tags": {
-                    "CustomerComponentTagKey1": "CustomerComponentTagValue1",
-                    "CustomerComponentTagKey2": "CustomerComponentTagValue2"
-                },
-                "Data": "name: HelloWorldTestingLinuxDoc - InlineData\ndescription: This is hello world testing doc\nschemaVersion: 1.0\n\nphases:\n  - name: build\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Build.\"\n  - name: validate\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Validate.\"\n  - name: test\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Test.\"\n"
-            }
-        }
-    }
-}
 ```
 
 ### Create a component using a Uri<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_a_Uri"></a>

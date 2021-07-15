@@ -65,7 +65,7 @@ A set of alternate data source parameters that you want to share for the credent
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AwsAccountId`  <a name="cfn-quicksight-datasource-awsaccountid"></a>
-The AWS account ID\.  
+The AWS account; ID\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `12`  
@@ -80,7 +80,7 @@ The credentials QuickSight that uses to connect to your underlying source\. Curr
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataSourceId`  <a name="cfn-quicksight-datasource-datasourceid"></a>
-An ID for the data source\. This ID is unique per AWS Region for each AWS account\.   
+An ID for the data source\. This ID is unique per AWS Region; for each AWS account;\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -61,8 +61,6 @@ Constraints:
 + If a `SourceIds` value is supplied, `SourceType` must also be provided\.
 + If the source type is a DB instance, a `DBInstanceIdentifier` value must be supplied\.
 + If the source type is a DB cluster, a `DBClusterIdentifier` value must be supplied\.
-
-  Use a lowercase string when you specify the `DBClusterIdentifier`\. Don't use a `Ref` because it will return the `DBClusterIdentifier` as an uppercase string\.
 + If the source type is a DB parameter group, a `DBParameterGroupName` value must be supplied\.
 + If the source type is a DB security group, a `DBSecurityGroupName` value must be supplied\.
 + If the source type is a DB snapshot, a `DBSnapshotIdentifier` value must be supplied\.

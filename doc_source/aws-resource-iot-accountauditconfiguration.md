@@ -46,21 +46,7 @@ Specifies which audit checks are enabled and disabled for this account\.
 Some data collection might start immediately when certain checks are enabled\. When a check is disabled, any data collected so far in relation to the check is deleted\. To disable a check, set the value of the `Enabled:` key to `false`\.  
 If an enabled check is removed from the template, it will also be disabled\.  
 You can't disable a check if it's used by any scheduled audit\. You must delete the check from the scheduled audit or delete the scheduled audit itself to disable the check\.  
-The following checks are currently supported\.  
-+ `AUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK`
-+ `CA_CERTIFICATE_EXPIRING_CHECK`
-+ `CA_CERTIFICATE_KEY_QUALITY_CHECK`
-+ `CONFLICTING_CLIENT_IDS_CHECK`
-+ `DEVICE_CERTIFICATE_EXPIRING_CHECK`
-+ `DEVICE_CERTIFICATE_KEY_QUALITY_CHECK`
-+ `DEVICE_CERTIFICATE_SHARED_CHECK`
-+ `IOT_POLICY_OVERLY_PERMISSIVE_CHECK`
-+ `IOT_ROLE_ALIAS_ALLOWS_ACCESS_TO_UNUSED_SERVICES_CHECK`
-+ `IOT_ROLE_ALIAS_OVERLY_PERMISSIVE_CHECK`
-+ `LOGGING_DISABLED_CHECK`
-+ `REVOKED_CA_CERTIFICATE_STILL_ACTIVE_CHECK`
-+ `REVOKED_DEVICE_CERTIFICATE_STILL_ACTIVE_CHECK`
-+ `UNAUTHENTICATED_COGNITO_ROLE_OVERLY_PERMISSIVE_CHECK`
+For more information on avialbe auidt checks see [AWS::IoT::AccountAuditConfiguration AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)  
 *Required*: Yes  
 *Type*: [AuditCheckConfigurations](aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -101,14 +87,48 @@ The Amazon Resource Name \(ARN\) of the role that grants permission to AWS IoT t
     "MyAccountAuditConfiguration": {
       "Type": "AWS::IoT::AccountAuditConfiguration",
       "Properties": {
-        "AccountId": {
-          "Fn::Sub": "${AWS::AccountId}"
-        },
+        "AccountId": "${AWS::AccountId}",
         "AuditCheckConfigurations": {
-          "LoggingDisabledCheck": {
+          "AuthenticatedCognitoRoleOverlyPermissiveCheck": {
+            "Enabled": true
+          },
+          "CaCertificateExpiringCheck": {
+            "Enabled": true
+          },
+          "CaCertificateKeyQualityCheck": {
             "Enabled": true
           },
           "ConflictingClientIdsCheck": {
+            "Enabled": true
+          },
+          "DeviceCertificateExpiringCheck": {
+            "Enabled": true
+          },
+          "DeviceCertificateKeyQualityCheck": {
+            "Enabled": true
+          },
+          "DeviceCertificateSharedCheck": {
+            "Enabled": true
+          },
+          "IotPolicyOverlyPermissiveCheck": {
+            "Enabled": true
+          },
+          "IotRoleAliasAllowsAccessToUnusedServicesCheck": {
+            "Enabled": true
+          },
+          "IotRoleAliasOverlyPermissiveCheck": {
+            "Enabled": true
+          },
+          "LoggingDisabledCheck": {
+            "Enabled": true
+          },
+          "RevokedCaCertificateStillActiveCheck": {
+            "Enabled": true
+          },
+          "RevokedDeviceCertificateStillActiveCheck": {
+            "Enabled": true
+          },
+          "UnauthenticatedCognitoRoleOverlyPermissiveCheck": {
             "Enabled": true
           }
         },
@@ -137,15 +157,39 @@ Resources:
     Properties:
       AccountId: !Sub '${AWS::AccountId}'
       AuditCheckConfigurations:
-        LoggingDisabledCheck:
-          Enabled: true
-        ConflictingClientIdsCheck:
-          Enabled: true
+        AuthenticatedCognitoRoleOverlyPermissiveCheck: 
+        	Enabled: True
+        CaCertificateExpiringCheck: 
+        	Enabled: True
+        CaCertificateKeyQualityCheck: 
+        	Enabled: True
+        ConflictingClientIdsCheck: 
+        	Enabled: True
+        DeviceCertificateExpiringCheck: 
+        	Enabled: True
+        DeviceCertificateKeyQualityCheck: 
+        	Enabled: True
+        DeviceCertificateSharedCheck: 
+        	Enabled: True
+        IotPolicyOverlyPermissiveCheck: 
+        	Enabled: True
+        IotRoleAliasAllowsAccessToUnusedServicesCheck: 
+        	Enabled: True
+        IotRoleAliasOverlyPermissiveCheck: 
+        	Enabled: True
+        LoggingDisabledCheck: 
+        	Enabled: True
+        RevokedCaCertificateStillActiveCheck: 
+        	Enabled: True
+        RevokedDeviceCertificateStillActiveCheck: 
+        	Enabled: True
+        UnauthenticatedCognitoRoleOverlyPermissiveCheck: 
+        	Enabled: True
       AuditNotificationTargetConfigurations:
-        Sns:
-          TargetArn: 'arn:aws:sns:us-east-1:123456789012:AuditNotifications'
-          RoleArn: 'arn:aws:iam::123456789012:role/RoleForIoTAuditNotifications'
-          Enabled: true
+         Sns:
+           TargetArn: 'arn:aws:sns:us-east-1:123456789012:AuditNotifications'
+           RoleArn: 'arn:aws:iam::123456789012:role/RoleForIoTAuditNotifications'
+           Enabled: true
       RoleArn: 'arn:aws:iam::123456789012:role/service-role/AWSIoTDeviceDefenderAudit'
 ```
 

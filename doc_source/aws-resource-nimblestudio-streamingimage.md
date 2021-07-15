@@ -1,6 +1,6 @@
 # AWS::NimbleStudio::StreamingImage<a name="aws-resource-nimblestudio-streamingimage"></a>
 
-The `AWS::NimbleStudio::StreamingImage` resource creates a streaming image in a studio\. A streaming image defines the operating system and software to be used in a Nimble Studio streaming session\.
+The `AWS::NimbleStudio::StreamingImage` resource creates a streaming image in a studio\. A streaming image defines the operating system and software to be used in an Amazon Nimble Studio streaming session\.
 
 ## Syntax<a name="aws-resource-nimblestudio-streamingimage-syntax"></a>
 

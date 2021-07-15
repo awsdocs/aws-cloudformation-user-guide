@@ -83,15 +83,27 @@ The following examples create the `alias/exampleAlias` alias for a CMK\. The CMK
 #### JSON<a name="aws-resource-kms-alias--examples--Create_an_alias--json"></a>
 
 ```
-"myAlias" : { "Type" : "AWS::KMS::Alias", "Properties" : {
-        "AliasName" : "alias/exampleAlias", "TargetKeyId" : {"Ref": "myKey"} } }
+{
+    "myAlias": {
+        "Type": "AWS::KMS::Alias",
+        "Properties": {
+            "AliasName": "alias/exampleAlias",
+            "TargetKeyId": {
+                "Ref": "myKey"
+            }
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-kms-alias--examples--Create_an_alias--yaml"></a>
 
 ```
-myAlias: Type: AWS::KMS::Alias Properties: AliasName:
-        alias/exampleAlias TargetKeyId: Ref: myKey
+myAlias:
+  Type: 'AWS::KMS::Alias'
+  Properties:
+    AliasName: alias/exampleAlias
+    TargetKeyId: !Ref myKey
 ```
 
 ## See also<a name="aws-resource-kms-alias--seealso"></a>

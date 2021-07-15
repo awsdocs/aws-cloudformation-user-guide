@@ -1,6 +1,6 @@
 # AWS::CodeStarNotifications::NotificationRule Target<a name="aws-properties-codestarnotifications-notificationrule-target"></a>
 
-Information about the SNS topics or AWS Chatbot clients associated with a notification rule\.
+Information about the AWS Chatbot topics or AWS Chatbot clients associated with a notification rule\.
 
 ## Syntax<a name="aws-properties-codestarnotifications-notificationrule-target-syntax"></a>
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codestarnotifications-notificationrule-target-properties"></a>
 
 `TargetAddress`  <a name="cfn-codestarnotifications-notificationrule-target-targetaddress"></a>
-The Amazon Resource Name \(ARN\) of the Amazon SNS topic or AWS Chatbot client\.  
+The Amazon Resource Name \(ARN\) of the AWS Chatbot topic or AWS Chatbot client\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -33,8 +33,8 @@ The Amazon Resource Name \(ARN\) of the Amazon SNS topic or AWS Chatbot client\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetType`  <a name="cfn-codestarnotifications-notificationrule-target-targettype"></a>
-The target type\. Can be an Amazon SNS topic or AWS Chatbot client\.  
-+ Amazon SNS topics are specified as `SNS`\.
+The target type\. Can be an Amazon Simple Notification Service topic or AWS Chatbot client\.  
++ Amazon Simple Notification Service topics are specified as `SNS`\.
 + AWS Chatbot clients are specified as `AWSChatbotSlack`\.
 *Required*: No  
 *Type*: String  

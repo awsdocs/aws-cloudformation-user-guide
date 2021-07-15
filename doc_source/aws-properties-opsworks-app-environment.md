@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Secure`  <a name="cfn-opsworks-app-environment-secure"></a>
-\(Optional\) Whether the variable's value will be returned by the [DescribeApps](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeApps) action\. To conceal an environment variable's value, set `Secure` to `true`\. `DescribeApps` then returns `*****FILTERED*****` instead of the actual value\. The default value for `Secure` is `false`\.   
+\(Optional\) Whether the variable's value is returned by the [DescribeApps](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeApps) action\. To hide an environment variable's value, set `Secure` to `true`\. `DescribeApps` returns `*****FILTERED*****` instead of the actual value\. The default value for `Secure` is `false`\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

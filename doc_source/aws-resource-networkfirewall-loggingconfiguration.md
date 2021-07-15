@@ -73,11 +73,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### Create a logging configuration for CloudWatch Logs and Kinesis Data Firehose<a name="aws-resource-networkfirewall-loggingconfiguration--examples--Create_a_logging_configuration_for_CloudWatch_Logs_and_Kinesis_Data_Firehose_"></a>
+### Create a logging configuration for CloudWatch Logs and Kinesis Data Firehose<a name="aws-resource-networkfirewall-loggingconfiguration--examples--Create_a_logging_configuration_for__and_Kinesis_Data_Firehose_"></a>
 
-The following shows example logging configuration specifications for alert logs that go to an AWS CloudWatch Logs log group and flow logs that go to an Amazon Kinesis Data Firehose delivery stream\. 
+The following shows example logging configuration specifications for alert logs that go to an Amazon CloudWatch Logs log group and flow logs that go to an Amazon Kinesis Data Firehose delivery stream\. 
 
-#### JSON<a name="aws-resource-networkfirewall-loggingconfiguration--examples--Create_a_logging_configuration_for_CloudWatch_Logs_and_Kinesis_Data_Firehose_--json"></a>
+#### JSON<a name="aws-resource-networkfirewall-loggingconfiguration--examples--Create_a_logging_configuration_for__and_Kinesis_Data_Firehose_--json"></a>
 
 ```
 "SampleLoggingConfiguration": {
@@ -108,7 +108,7 @@ The following shows example logging configuration specifications for alert logs 
 }
 ```
 
-#### YAML<a name="aws-resource-networkfirewall-loggingconfiguration--examples--Create_a_logging_configuration_for_CloudWatch_Logs_and_Kinesis_Data_Firehose_--yaml"></a>
+#### YAML<a name="aws-resource-networkfirewall-loggingconfiguration--examples--Create_a_logging_configuration_for__and_Kinesis_Data_Firehose_--yaml"></a>
 
 ```
 SampleLoggingConfiguration:

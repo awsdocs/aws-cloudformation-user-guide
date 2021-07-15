@@ -19,12 +19,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ApplicationName](#cfn-codedeploy-deploymentgroup-applicationname)" : String,
       "[AutoRollbackConfiguration](#cfn-codedeploy-deploymentgroup-autorollbackconfiguration)" : AutoRollbackConfiguration,
       "[AutoScalingGroups](#cfn-codedeploy-deploymentgroup-autoscalinggroups)" : [ String, ... ],
+      "[BlueGreenDeploymentConfiguration](#cfn-codedeploy-deploymentgroup-bluegreendeploymentconfiguration)" : BlueGreenDeploymentConfiguration,
       "[Deployment](#cfn-codedeploy-deploymentgroup-deployment)" : Deployment,
       "[DeploymentConfigName](#cfn-codedeploy-deploymentgroup-deploymentconfigname)" : String,
       "[DeploymentGroupName](#cfn-codedeploy-deploymentgroup-deploymentgroupname)" : String,
       "[DeploymentStyle](#cfn-codedeploy-deploymentgroup-deploymentstyle)" : DeploymentStyle,
       "[Ec2TagFilters](#cfn-codedeploy-deploymentgroup-ec2tagfilters)" : [ EC2TagFilter, ... ],
       "[Ec2TagSet](#cfn-codedeploy-deploymentgroup-ec2tagset)" : EC2TagSet,
+      "[ECSServices](#cfn-codedeploy-deploymentgroup-ecsservices)" : [ ECSService, ... ],
       "[LoadBalancerInfo](#cfn-codedeploy-deploymentgroup-loadbalancerinfo)" : LoadBalancerInfo,
       "[OnPremisesInstanceTagFilters](#cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters)" : [ TagFilter, ... ],
       "[OnPremisesTagSet](#cfn-codedeploy-deploymentgroup-onpremisestagset)" : OnPremisesTagSet,
@@ -46,6 +48,8 @@ Properties:
     AutoRollbackConfiguration
   [AutoScalingGroups](#cfn-codedeploy-deploymentgroup-autoscalinggroups): 
     - String
+  [BlueGreenDeploymentConfiguration](#cfn-codedeploy-deploymentgroup-bluegreendeploymentconfiguration): 
+    BlueGreenDeploymentConfiguration
   [Deployment](#cfn-codedeploy-deploymentgroup-deployment): 
     Deployment
   [DeploymentConfigName](#cfn-codedeploy-deploymentgroup-deploymentconfigname): String
@@ -56,6 +60,8 @@ Properties:
     - EC2TagFilter
   [Ec2TagSet](#cfn-codedeploy-deploymentgroup-ec2tagset): 
     EC2TagSet
+  [ECSServices](#cfn-codedeploy-deploymentgroup-ecsservices): 
+    - ECSService
   [LoadBalancerInfo](#cfn-codedeploy-deploymentgroup-loadbalancerinfo): 
     LoadBalancerInfo
   [OnPremisesInstanceTagFilters](#cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters): 
@@ -93,6 +99,12 @@ Information about the Amazon CloudWatch alarms that are associated with the depl
  A list of associated Auto Scaling groups that CodeDeploy automatically deploys revisions to when new instances are created\. Duplicates are not allowed\.   
 *Required*: No  
 *Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`BlueGreenDeploymentConfiguration`  <a name="cfn-codedeploy-deploymentgroup-bluegreendeploymentconfiguration"></a>
+Information about blue/green deployment options for a deployment group\.  
+*Required*: No  
+*Type*: [BlueGreenDeploymentConfiguration](aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Deployment`  <a name="cfn-codedeploy-deploymentgroup-deployment"></a>
@@ -137,6 +149,12 @@ Information about the Amazon CloudWatch alarms that are associated with the depl
 Information about groups of tags applied to Amazon EC2 instances\. The deployment group includes only Amazon EC2 instances identified by all the tag groups\. Cannot be used in the same call as `ec2TagFilter`\.  
 *Required*: No  
 *Type*: [EC2TagSet](aws-properties-codedeploy-deploymentgroup-ec2tagset.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ECSServices`  <a name="cfn-codedeploy-deploymentgroup-ecsservices"></a>
+ The target Amazon ECS services in the deployment group\. This applies only to deployment groups that use the Amazon ECS compute platform\. A target Amazon ECS service is specified as an Amazon ECS cluster and service name pair using the format `<clustername>:<servicename>`\.   
+*Required*: No  
+*Type*: List of [ECSService](aws-properties-codedeploy-deploymentgroup-ecsservice.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoadBalancerInfo`  <a name="cfn-codedeploy-deploymentgroup-loadbalancerinfo"></a>

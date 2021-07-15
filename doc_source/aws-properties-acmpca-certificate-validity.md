@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Type](#cfn-acmpca-certificate-validity-type)" : String,
-  "[Value](#cfn-acmpca-certificate-validity-value)" : Integer
+  "[Value](#cfn-acmpca-certificate-validity-value)" : Double
 }
 ```
 
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Type](#cfn-acmpca-certificate-validity-type): String
-  [Value](#cfn-acmpca-certificate-validity-value): Integer
+  [Value](#cfn-acmpca-certificate-validity-value): Double
 ```
 
 ## Properties<a name="aws-properties-acmpca-certificate-validity-properties"></a>
@@ -34,5 +34,5 @@ Specifies whether the `Value` parameter represents days, months, or years\.
 `Value`  <a name="cfn-acmpca-certificate-validity-value"></a>
 A long integer interpreted according to the value of `Type`, below\.  
 *Required*: Yes  
-*Type*: Integer  
+*Type*: Double  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -1,6 +1,6 @@
 # AWS::DMS::Endpoint DocDbSettings<a name="aws-properties-dms-endpoint-docdbsettings"></a>
 
-<a name="aws-properties-dms-endpoint-docdbsettings-description"></a>The `DocDbSettings` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::DMS::Endpoint](aws-resource-dms-endpoint.md)\.
+Not currently supported by AWS CloudFormation\. 
 
 ## Syntax<a name="aws-properties-dms-endpoint-docdbsettings-syntax"></a>
 

@@ -16,8 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[JupyterServerAppSettings](#cfn-sagemaker-userprofile-usersettings-jupyterserverappsettings)" : JupyterServerAppSettings,
   "[KernelGatewayAppSettings](#cfn-sagemaker-userprofile-usersettings-kernelgatewayappsettings)" : KernelGatewayAppSettings,
   "[SecurityGroups](#cfn-sagemaker-userprofile-usersettings-securitygroups)" : [ String, ... ],
-  "[SharingSettings](#cfn-sagemaker-userprofile-usersettings-sharingsettings)" : SharingSettings,
-  "[TensorBoardAppSettings](#cfn-sagemaker-userprofile-usersettings-tensorboardappsettings)" : TensorBoardAppSettings
+  "[SharingSettings](#cfn-sagemaker-userprofile-usersettings-sharingsettings)" : SharingSettings
 }
 ```
 
@@ -33,8 +32,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
   [SharingSettings](#cfn-sagemaker-userprofile-usersettings-sharingsettings): 
     SharingSettings
-  [TensorBoardAppSettings](#cfn-sagemaker-userprofile-usersettings-tensorboardappsettings): 
-    TensorBoardAppSettings
 ```
 
 ## Properties<a name="aws-properties-sagemaker-userprofile-usersettings-properties"></a>
@@ -74,10 +71,4 @@ Amazon SageMaker adds a security group to allow NFS traffic from SageMaker Studi
 Specifies options for sharing SageMaker Studio notebooks\.  
 *Required*: No  
 *Type*: [SharingSettings](aws-properties-sagemaker-userprofile-sharingsettings.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`TensorBoardAppSettings`  <a name="cfn-sagemaker-userprofile-usersettings-tensorboardappsettings"></a>
-The TensorBoard app settings\.  
-*Required*: No  
-*Type*: [TensorBoardAppSettings](aws-properties-sagemaker-userprofile-tensorboardappsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

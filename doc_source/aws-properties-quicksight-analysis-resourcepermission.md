@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-analysis-resourcepermission-properties"></a>
 
 `Actions`  <a name="cfn-quicksight-analysis-resourcepermission-actions"></a>
-The IAM action to grant or revoke permissions on\.  
+The IAMaction to grant or revoke permissions on\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -35,8 +35,8 @@ The IAM action to grant or revoke permissions on\.
 The Amazon Resource Name \(ARN\) of the principal\. This can be one of the following:  
 + The ARN of an Amazon QuickSight user or group associated with a data source or dataset\. \(This is common\.\)
 + The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis, dashboard, template, or theme\. \(This is common\.\)
-+ The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN\. Use this option only to share resources \(templates\) across AWS accounts\. \(This is less common\.\)
-A *sheet*, which is an object that contains a set of visuals that are viewed together on one page in the Amazon QuickSight console\. Every analysis and dashboard contains at least one sheet\. Each sheet contains at least one visualization widget, for example a chart, pivot table, or narrative insight\. Sheets can be associated with other components, such as controls, filters, and so on\.  
++ The ARN of an AWS account root: This is an IAMARN rather than a Amazon QuickSightARN\. Use this option only to share resources \(templates\) across AWS accounts\. \(This is less common\.\)
+A *sheet*, which is an object that contains a set of visuals that are viewed together on one page in Amazon QuickSight\. Every analysis and dashboard contains at least one sheet\. Each sheet contains at least one visualization widget, for example a chart, pivot table, or narrative insight\. Sheets can be associated with other components, such as controls, filters, and so on\.  
 The unique identifier associated with a sheet\.  
 The name of a sheet\. This name is displayed on the sheet's tab in the QuickSight console\.  
 A string parameter\.  
@@ -53,9 +53,9 @@ Declares the physical tables that are available in the underlying data sources\.
 Indicates whether you want to import the data into SPICE\.  
 The folder that contains fields and nested subfolders for your dataset\.  
 Configures the combination and transformation of the data from the physical tables\.  
-The AWS account ID\.  
+The AWS account; ID\.  
 A list of resource permissions on the dataset\.  
-An ID for the dataset that you want to create\. This ID is unique per AWS Region for each AWS account\.  
+An ID for the dataset that you want to create\. This ID is unique per AWS Region; for each AWS account;\.  
 The row\-level security configuration for the data that you want to create\.  
 Contains a map of the key\-value pairs for the resource tag or tags assigned to the dataset\.  
 A set of one or more definitions of a ` ColumnLevelPermissionRule `\.  
@@ -74,7 +74,7 @@ Groupings of columns that work together in certain Amazon QuickSight features\. 
 Geospatial column group that denotes a hierarchy\.  
 A rule defined to grant access on one or more restricted columns\. Each dataset can have multiple rules\. To create a restricted column, you add it to one or more rules\. Each rule must contain at least one column and at least one user or group\. To be able to see a restricted column, a user or group needs to be added to a rule for that column\.  
 An array of column names\.  
-An array of Amazon Resource Names \(ARNs\) for QuickSight users or groups\.  
+An array of Amazon Resource Names \(ARNs\) for Amazon QuickSightusers or groups\.  
 A tag for a column in a [TagColumnOperation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-transformoperation.html#cfn-quicksight-dataset-transformoperation-tagcolumnoperation) structure\. This is a variant type structure\. For this structure to be valid, only one of the attributes can be non\-null\.  
 A geospatial role for a column\.  
 A description for a column\.  
@@ -109,7 +109,7 @@ The operand on the left side of a join\.
 The operand on the right side of a join\.  
 Join key properties of the right operand\.  
 Properties associated with the columns participating in a join\.  
-A value that indicates that a row in a table is uniquely identified by the columns in a join key\. This is used by QuickSight to optimize query performance\.  
+A value that indicates that a row in a table is uniquely identified by the columns in a join key\. This is used by Amazon QuickSightto optimize query performance\.  
 A *logical table* is a unit that joins and that data transformations operate on\. A logical table has a source, which can be either a physical table or result of a join\. When a logical table points to a physical table, the logical table acts as a mutable copy of that physical table through transform operations\.  
 A display name for the logical table\.  
 Transform operations that act on this logical table\.  
@@ -137,19 +137,20 @@ A transform operation that renames a column\.
 The new name for the column\.  
 The name of the column to be renamed\.  
 Permission for the resource\.  
-The IAM action to grand or revoke permisions on  
+The IAMaction to grand or revoke permisions on  
 The Amazon Resource Name \(ARN\) of the principal\. This can be one of the following:  
 + The ARN of an Amazon QuickSight user or group associated with a data source or dataset\. \(This is common\.\)
 + The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis, dashboard, template, or theme\. \(This is common\.\)
-+ The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN\. Use this option only to share resources \(templates\) across AWS accounts\. \(This is less common\.\)
++ The ARN of an AWS account root: This is an IAMARN rather than a Amazon QuickSightARN\. Use this option only to share resources \(templates\) across AWS accounts\. \(This is less common\.\)
 Information about a dataset that contains permissions for row\-level security \(RLS\)\. The permissions dataset maps fields to users or groups\. For more information, see [Using Row\-Level Security \(RLS\) to Restrict Access to a Dataset](https://docs.aws.amazon.com/quicksight/latest/user/restrict-access-to-a-data-set-using-row-level-security.html) in the *Amazon QuickSight User Guide*\.  
 The option to deny permissions by setting `PermissionPolicy` to `DENY_ACCESS` is not supported for new RLS datasets\.  
 The Amazon Resource Name \(ARN\) of the dataset that contains permissions for RLS\.  
 The namespace associated with the dataset that contains permissions for RLS\.  
 The type of permissions to use when interpretting the permissions for RLS\. `DENY_ACCESS` is included for backward compatibility only\.  
-A physical table type for as S3 data source\.  
+A physical table type for an S3 data source\.  
 The Amazon Resource Name \(ARN\) for the data source\.  
-A physical table type for as S3 data source\.  
+A physical table type for an S3 data source\.  
+For non\-JSON files, only `STRING` data types are supported in input columns\.
 Information about the format for the S3 source file or files\.  
 A transform operation that tags a column with additional information\.  
 The column that this operation acts on\.  
@@ -180,11 +181,11 @@ The type of the data source\. Currently, the supported types for this operation 
 Use this parameter only when you want QuickSight to use a VPC connection when connecting to your underlying source\.  
 A set of alternate data source parameters that you want to share for the credentials stored with this data source\. The credentials are applied in tandem with the data source parameters when you copy a data source by using a create or update request\. The API operation compares the `DataSourceParameters` structure that's in the request with the structures in the `AlternateDataSourceParameters` allow list\. If the structures are an exact match, the request is allowed to use the credentials from this existing data source\. If the `AlternateDataSourceParameters` list is null, the `Credentials` originally used with this `DataSourceParameters` are automatically allowed\.  
 Error information from the last update or the creation of the data source\.  
-The AWS account ID\.  
+The AWS account; ID\.  
 A list of resource permissions on the data source\.  
 Secure Socket Layer \(SSL\) properties that apply when QuickSight connects to your underlying source\.  
 The credentials QuickSight that uses to connect to your underlying source\. Currently, only credentials based on user name and password are supported\.  
-An ID for the data source\. This ID is unique per AWS Region for each AWS account\.   
+An ID for the data source\. This ID is unique per AWS Region; for each AWS account;\.   
 Contains a map of the key\-value pairs for the resource tag or tags assigned to the data source\.  
 A display name for the data source\.  
 Amazon Elasticsearch Service parameters\.  
@@ -266,13 +267,13 @@ Port\. This field can be blank if the `ClusterId` is provided\.
 Database\.  
 Host\. This field can be blank if `ClusterId` is provided\.  
 Permission for the resource\.  
-The IAM action to grant or revoke permissions on\.  
+The IAMaction to grant or revoke permissions on\.  
 The Amazon Resource Name \(ARN\) of the principal\. This can be one of the following:  
 + The ARN of an Amazon QuickSight user or group associated with a data source or dataset\. \(This is common\.\)
 + The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis, dashboard, template, or theme\. \(This is common\.\)
-+ The ARN of an AWS account root: This is an IAM ARN rather than a QuickSight ARN\. Use this option only to share resources \(templates\) across AWS accounts\. \(This is less common\.\)
++ The ARN of an AWS account root: This is an IAMARN rather than a Amazon QuickSightARN\. Use this option only to share resources \(templates\) across AWS accounts\. \(This is less common\.\)
 S3 parameters\.  
-Location of the Amazon S3 manifest file\. This is NULL if the manifest file was uploaded in the console\.  
+Location of the Amazon S3 manifest file\. This is NULL if the manifest file was uploaded into QuickSight\.  
 Snowflake parameters\.  
 Warehouse\.  
 Database\.  

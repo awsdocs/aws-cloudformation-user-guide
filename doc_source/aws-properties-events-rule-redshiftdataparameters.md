@@ -1,6 +1,6 @@
 # AWS::Events::Rule RedshiftDataParameters<a name="aws-properties-events-rule-redshiftdataparameters"></a>
 
-These are custom parameters to be used when the target is a Redshift cluster to invoke the Redshift Data API ExecuteStatement based on EventBridge events\.
+These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon Redshift Data API ExecuteStatement based on EventBridge events\.
 
 ## Syntax<a name="aws-properties-events-rule-redshiftdataparameters-syntax"></a>
 

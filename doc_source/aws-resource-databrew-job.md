@@ -1,6 +1,6 @@
 # AWS::DataBrew::Job<a name="aws-resource-databrew-job"></a>
 
-Creates a new DataBrew job\.
+Specifies a new DataBrew job\.
 
 ## Syntax<a name="aws-resource-databrew-job-syntax"></a>
 
@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::DataBrew::Job",
   "Properties" : {
+      "[DataCatalogOutputs](#cfn-databrew-job-datacatalogoutputs)" : [ DataCatalogOutput, ... ],
       "[DatasetName](#cfn-databrew-job-datasetname)" : String,
       "[EncryptionKeyArn](#cfn-databrew-job-encryptionkeyarn)" : String,
       "[EncryptionMode](#cfn-databrew-job-encryptionmode)" : String,
@@ -37,6 +38,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::DataBrew::Job
 Properties: 
+  [DataCatalogOutputs](#cfn-databrew-job-datacatalogoutputs): 
+    - DataCatalogOutput
   [DatasetName](#cfn-databrew-job-datasetname): String
   [EncryptionKeyArn](#cfn-databrew-job-encryptionkeyarn): String
   [EncryptionMode](#cfn-databrew-job-encryptionmode): String
@@ -61,6 +64,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-databrew-job-properties"></a>
+
+`DataCatalogOutputs`  <a name="cfn-databrew-job-datacatalogoutputs"></a>
+One or more artifacts that represent the AWS Glue Data Catalog output from running the job\.  
+*Required*: No  
+*Type*: List of [DataCatalogOutput](aws-properties-databrew-job-datacatalogoutput.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatasetName`  <a name="cfn-databrew-job-datasetname"></a>
 A dataset that the job is to process\.  
@@ -122,7 +131,7 @@ The unique name of the job\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OutputLocation`  <a name="cfn-databrew-job-outputlocation"></a>
-The location in Amazon S3 where the job writes its output\.  
+The location in Amazon S3 or AWS Glue Data Catalog where the job writes its output\.  
 *Required*: No  
 *Type*: [OutputLocation](aws-properties-databrew-job-outputlocation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

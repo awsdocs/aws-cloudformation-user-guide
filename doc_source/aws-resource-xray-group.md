@@ -43,7 +43,7 @@ The filter expression defining the parameters to include traces\.
 
 `GroupName`  <a name="cfn-xray-group-groupname"></a>
 The unique case\-sensitive name of the group\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

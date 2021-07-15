@@ -195,7 +195,7 @@ Type: AWS::ElasticBeanstalk::Environment
 Properties: 
   ApplicationName: 
     Ref: sampleApplication
-  Description: "AWS Elastic Beanstalk Environment running PHP Sample Application"
+    Description: "AWS Elastic Beanstalk Environment running PHP Sample Application"
   EnvironmentName: SamplePHPEnvironment
   TemplateName: DefaultConfiguration
   VersionLabel: "Initial Version"
@@ -230,7 +230,7 @@ Type: AWS::ElasticBeanstalk::Environment
 Properties: 
   ApplicationName: 
     Ref: sampleApplication
-  Description: "AWS Elastic Beanstalk Environment running Python Sample Application"
+    Description: "AWS Elastic Beanstalk Environment running Python Sample Application"
   EnvironmentName: SamplePythonEnvironment
   SolutionStackName: "64bit Amazon Linux 2017.03 v2.5.0 running Python 2.7"
   OptionSettings: 
