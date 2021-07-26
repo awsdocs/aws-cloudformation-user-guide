@@ -65,7 +65,7 @@ Properties:
 
 `GenerateSecretString`  <a name="cfn-secretsmanager-secret-generatesecretstring"></a>
 \(Optional\) Specifies text data that you want to encrypt and store in this new version of the secret\.  
-Either `SecretString` or `SecretBinary` must have a value, but not both\. They cannot both be empty\.  
+Either `SecretString` or `GenerateSecretString` must have a value, but not both\. They cannot both be empty\.  
 If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected secret text in only the `SecretString` parameter\. The Secrets Manager console stores the information as a JSON structure of key/value pairs that the Lambda rotation function knows how to parse\.  
 For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs\. For information on how to format a JSON parameter for the various command line tool environments, see [Using JSON for Parameters](https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json) in the * AWS CLI User Guide*\. For example:  
  `{"username":"bob","password":"abc123xyz456"}`   
@@ -101,7 +101,7 @@ The friendly name of the secret\. You can use forward slashes in the name to rep
 
 `SecretString`  <a name="cfn-secretsmanager-secret-secretstring"></a>
 \(Optional\) Specifies text data that you want to encrypt and store in this new version of the secret\.  
-Either `SecretString` or `SecretBinary` must have a value, but not both\. They cannot both be empty\.  
+Either `SecretString` or `GenerateSecretString` must have a value, but not both\. They cannot both be empty\.  
 If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected secret text in only the `SecretString` parameter\. The Secrets Manager console stores the information as a JSON structure of key/value pairs that the Lambda rotation function knows how to parse\.  
 For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs\. For information on how to format a JSON parameter for the various command line tool environments, see [Using JSON for Parameters](https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json)\. For example:  
  `{"username":"bob","password":"abc123xyz456"}`   
