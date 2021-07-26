@@ -38,7 +38,7 @@ The name of this access point\.
 
 `ObjectLambdaConfiguration`  <a name="cfn-s3objectlambda-accesspoint-objectlambdaconfiguration"></a>
 A configuration used when creating an Object Lambda Access Point\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [ObjectLambdaConfiguration](aws-properties-s3objectlambda-accesspoint-objectlambdaconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
