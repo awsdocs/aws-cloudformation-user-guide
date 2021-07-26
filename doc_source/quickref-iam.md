@@ -209,7 +209,7 @@ You can also pass the AWS access key and secret key to an EC2 instance or Auto S
 4.     AvailabilityZone: "us-east-1a"
 5.     ImageId: ami-0ff8a91507f77f867
 6.     UserData:
-7.       Fn::Base64: !Sub "ACCESS_KEY=${myaccesskey}&SECRET_KEY=${myaccesskey.SecretAccessKey}
+7.       Fn::Base64: !Sub "ACCESS_KEY=${myaccesskey}&SECRET_KEY=${myaccesskey.SecretAccessKey}"
 ```
 
 ## Declaring an IAM group resource<a name="scenario-iam-group"></a>
