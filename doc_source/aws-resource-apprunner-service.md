@@ -222,6 +222,7 @@ This example illustrates creating a service based on an image stored in Amazon E
       "AutoDeploymentsEnabled": true,
       "ImageRepository": {
         "ImageIdentifier": "123456789012.dkr.ecr.us-east-1.amazonaws.com/golang-app:latest",
+        "ImageRepositoryType": "ECR",
         "ImageConfiguration": {
           "Port": "8080",
           "RuntimeEnvironmentVariables": [
@@ -253,6 +254,7 @@ Properties:
     AutoDeploymentsEnabled: true
     ImageRepository:
       ImageIdentifier: "123456789012.dkr.ecr.us-east-1.amazonaws.com/golang-app:latest"
+      ImageRepositoryType: ECR
       ImageConfiguration:
         Port: 8080
         RuntimeEnvironmentVariables:
