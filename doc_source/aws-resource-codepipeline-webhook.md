@@ -179,7 +179,7 @@ Webhook:
   Type: 'AWS::CodePipeline::Webhook' 
   Properties:
     AuthenticationConfiguration: 
-      SecretToken: {{resolve:secretsmanager:MyGitHubSecret:SecretString:token}} 
+      SecretToken: "{{resolve:secretsmanager:MyGitHubSecret:SecretString:token}}"
     Filters: 
     - JsonPath: "$.ref" 
       MatchEquals: refs/heads/{Branch} 
