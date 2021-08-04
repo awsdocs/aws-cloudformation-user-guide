@@ -130,7 +130,6 @@ The port number on which the database accepts connections, such as `27017`\.
 {
    "Type" : "AWS::DocDB::DBInstance",
    "Properties" : {
-      "AutoMinorVersionUpgrade" : true,
       "AvailabilityZone" : "us-east-1c",
       "DBClusterIdentifier" : "sample-cluster",
       "DBInstanceClass" : "db.r5.large",
@@ -146,7 +145,6 @@ The port number on which the database accepts connections, such as `27017`\.
 ```
 Type: "AWS::DocDB::DBInstance"
 Properties:
-   AutoMinorVersionUpgrade: true
    AvailabilityZone: "us-east-1c"
    DBClusterIdentifier: "sample-cluster"
    DBInstanceClass: "db.r5.large"
