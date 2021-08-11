@@ -423,11 +423,9 @@ Resources:
         - "EC2"
         - "FARGATE"
       ContainerDefinitions: 
-        - 
-          Name: "my-app"
+        - Name: "my-app"
           MountPoints: 
-            - 
-              SourceVolume: "my-vol"
+            - SourceVolume: "my-vol"
               ContainerPath: "/var/www/my-vol"
           Image: "amazon/amazon-ecs-sample"
           Cpu: 256
@@ -437,8 +435,7 @@ Resources:
             - "FOREGROUND"
           Memory: 512
           Essential: true
-        - 
-          Name: "busybox"
+        - Name: "busybox"
           Image: "busybox"
           Cpu: 256
           EntryPoint: 
@@ -452,11 +449,9 @@ Resources:
             - ContainerName: my-app
               Condition: START
           VolumesFrom: 
-            - 
-              SourceContainer: "my-app"
+            - SourceContainer: "my-app"
       Volumes: 
-        - 
-          Host: 
+        - Host:
             SourcePath: "/var/lib/docker/vfs/dir/"
           Name: "my-vol"
 ```
