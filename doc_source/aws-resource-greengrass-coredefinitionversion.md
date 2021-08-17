@@ -56,6 +56,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-greengrass-coredefinitionversion--examples"></a>
 
+
+
 ### Create a Core Definition Version<a name="aws-resource-greengrass-coredefinitionversion--examples--Create_a_Core_Definition_Version"></a>
 
 The following example creates two resources: a core definition and a core definition version that contains a core\.
@@ -173,5 +175,5 @@ Outputs:
 ```
 
 ## See also<a name="aws-resource-greengrass-coredefinitionversion--seealso"></a>
-+  [CreateCoreDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createcoredefinitionversion-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [CreateCoreDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createcoredefinitionversion-post.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

@@ -9,4 +9,5 @@ This section details the supported resources, type names, intrinsic functions, a
 + [Resource attribute reference](aws-product-attribute-reference.md)
 + [Intrinsic function reference](intrinsic-function-reference.md)
 + [Pseudo parameters reference](pseudo-parameter-reference.md)
++ [Transform reference](transform-reference.md)
 + [CloudFormation helper scripts reference](cfn-helper-scripts-reference.md)

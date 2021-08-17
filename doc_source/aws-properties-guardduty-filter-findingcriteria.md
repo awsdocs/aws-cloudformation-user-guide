@@ -54,6 +54,7 @@ For a mapping of JSON criterion to their console equivalent see [Finding criteri
 + service\.action\.actionType
 + service\.action\.awsApiCallAction\.api
 + service\.action\.awsApiCallAction\.callerType
++ service\.action\.awsApiCallAction\.errorCode
 + service\.action\.awsApiCallAction\.remoteIpDetails\.city\.cityName
 + service\.action\.awsApiCallAction\.remoteIpDetails\.country\.countryName
 + service\.action\.awsApiCallAction\.remoteIpDetails\.ipAddressV4

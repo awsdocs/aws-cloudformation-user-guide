@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AutomaticBackupRetentionDays](#cfn-fsx-filesystem-lustreconfiguration-automaticbackupretentiondays)" : Integer,
   "[CopyTagsToBackups](#cfn-fsx-filesystem-lustreconfiguration-copytagstobackups)" : Boolean,
   "[DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-lustreconfiguration-dailyautomaticbackupstarttime)" : String,
+  "[DataCompressionType](#cfn-fsx-filesystem-lustreconfiguration-datacompressiontype)" : String,
   "[DeploymentType](#cfn-fsx-filesystem-lustreconfiguration-deploymenttype)" : String,
   "[DriveCacheType](#cfn-fsx-filesystem-lustreconfiguration-drivecachetype)" : String,
   "[ExportPath](#cfn-fsx-filesystem-lustreconfiguration-exportpath)" : String,
@@ -31,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [AutomaticBackupRetentionDays](#cfn-fsx-filesystem-lustreconfiguration-automaticbackupretentiondays): Integer
   [CopyTagsToBackups](#cfn-fsx-filesystem-lustreconfiguration-copytagstobackups): Boolean
   [DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-lustreconfiguration-dailyautomaticbackupstarttime): String
+  [DataCompressionType](#cfn-fsx-filesystem-lustreconfiguration-datacompressiontype): String
   [DeploymentType](#cfn-fsx-filesystem-lustreconfiguration-deploymenttype): String
   [DriveCacheType](#cfn-fsx-filesystem-lustreconfiguration-drivecachetype): String
   [ExportPath](#cfn-fsx-filesystem-lustreconfiguration-exportpath): String
@@ -73,6 +75,16 @@ A recurring daily time, in the format` HH:MM`\. `HH` is the zero\-padded hour of
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`DataCompressionType`  <a name="cfn-fsx-filesystem-lustreconfiguration-datacompressiontype"></a>
+Sets the data compression configuration for the file system\. `DataCompressionType` can have the following values:  
++  `NONE` \- \(Default\) Data compression is turned off when the file system is created\.
++  `LZ4` \- Data compression is turned on with the LZ4 algorithm\.
+For more information, see [Lustre data compression](https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html)\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `LZ4 | NONE`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DeploymentType`  <a name="cfn-fsx-filesystem-lustreconfiguration-deploymenttype"></a>
  Choose `SCRATCH_1` and `SCRATCH_2` deployment types when you need temporary storage and shorter\-term processing of data\. The `SCRATCH_2` deployment type provides in\-transit encryption of data and higher burst throughput capacity than `SCRATCH_1`\.  
 Choose `PERSISTENT_1` deployment type for longer\-term storage and workloads and encryption of data in transit\. To learn more about deployment types, see [ FSx for Lustre Deployment Options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html)\.  
@@ -97,7 +109,7 @@ The Amazon S3 export bucket must be the same as the import bucket specified by `
 *Required*: No  
 *Type*: String  
 *Minimum*: `3`  
-*Maximum*: `900`  
+*Maximum*: `4357`  
 *Pattern*: `^[^\u0000\u0085\u2028\u2029\r\n]{3,4357}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -115,7 +127,7 @@ The default chunk size is 1,024 MiB \(1 GiB\) and can go as high as 512,000 MiB 
 *Required*: No  
 *Type*: String  
 *Minimum*: `3`  
-*Maximum*: `900`  
+*Maximum*: `4357`  
 *Pattern*: `^[^\u0000\u0085\u2028\u2029\r\n]{3,4357}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

@@ -1,6 +1,6 @@
 # AWS::DLM::LifecyclePolicy Schedule<a name="aws-properties-dlm-lifecyclepolicy-schedule"></a>
 
-Specifies a backup schedule\.
+Specifies a backup schedule for a snapshot or AMI lifecycle policy\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-schedule-syntax"></a>
 
@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[FastRestoreRule](#cfn-dlm-lifecyclepolicy-schedule-fastrestorerule)" : FastRestoreRule,
   "[Name](#cfn-dlm-lifecyclepolicy-schedule-name)" : String,
   "[RetainRule](#cfn-dlm-lifecyclepolicy-schedule-retainrule)" : RetainRule,
+  "[ShareRules](#cfn-dlm-lifecyclepolicy-schedule-sharerules)" : [ ShareRule, ... ],
   "[TagsToAdd](#cfn-dlm-lifecyclepolicy-schedule-tagstoadd)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
   "[VariableTags](#cfn-dlm-lifecyclepolicy-schedule-variabletags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
 }
@@ -34,6 +35,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Name](#cfn-dlm-lifecyclepolicy-schedule-name): String
   [RetainRule](#cfn-dlm-lifecyclepolicy-schedule-retainrule): 
     RetainRule
+  [ShareRules](#cfn-dlm-lifecyclepolicy-schedule-sharerules): 
+    - ShareRule
   [TagsToAdd](#cfn-dlm-lifecyclepolicy-schedule-tagstoadd): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VariableTags](#cfn-dlm-lifecyclepolicy-schedule-variabletags): 
@@ -56,6 +59,7 @@ The creation rule\.
 
 `CrossRegionCopyRules`  <a name="cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules"></a>
 The rule for cross\-Region snapshot copies\.  
+You can only specify cross\-Region copy rules for policies that create snapshots in a Region\. If the policy creates snapshots on an Outpost, then you cannot copy the snapshots to a Region or to an Outpost\. If the policy creates snapshots in a Region, then snapshots can be copied to up to three Regions or Outposts\.  
 *Required*: No  
 *Type*: List of [CrossRegionCopyRule](aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.md)  
 *Maximum*: `3`  
@@ -72,14 +76,21 @@ The name of the schedule\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
-*Maximum*: `500`  
-*Pattern*: `[\p{all}]*`  
+*Maximum*: `120`  
+*Pattern*: `[0-9A-Za-z _-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetainRule`  <a name="cfn-dlm-lifecyclepolicy-schedule-retainrule"></a>
 The retention rule\.  
 *Required*: No  
 *Type*: [RetainRule](aws-properties-dlm-lifecyclepolicy-retainrule.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ShareRules`  <a name="cfn-dlm-lifecyclepolicy-schedule-sharerules"></a>
+The rule for sharing snapshots with other AWS accounts\.  
+*Required*: No  
+*Type*: List of [ShareRule](aws-properties-dlm-lifecyclepolicy-sharerule.md)  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TagsToAdd`  <a name="cfn-dlm-lifecyclepolicy-schedule-tagstoadd"></a>

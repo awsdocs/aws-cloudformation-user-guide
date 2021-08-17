@@ -130,6 +130,8 @@ The ID of the AWS Config rule, such as `config-rule-a1bzhi`\.
 
 ## Examples<a name="aws-resource-config-configrule--examples"></a>
 
+
+
 ### Config Rule<a name="aws-resource-config-configrule--examples--Config_Rule"></a>
 
 The following example uses an AWS managed rule that checks whether EC2 volumes resource types have a CostCenter tag\. 

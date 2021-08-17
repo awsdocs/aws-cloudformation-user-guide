@@ -1,6 +1,6 @@
 # AWS::ElasticBeanstalk::Application<a name="aws-properties-beanstalk"></a>
 
-The AWS::ElasticBeanstalk::Application resource is an AWS Elastic Beanstalk resource type that specifies an Elastic Beanstalk application\.
+The AWS::ElasticBeanstalk::Application resource is an AWS Elastic Beanstalk Beanstalk resource type that specifies an Elastic Beanstalk application\.
 
 ## Syntax<a name="aws-properties-beanstalk-syntax"></a>
 

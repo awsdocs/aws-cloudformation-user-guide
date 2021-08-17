@@ -92,7 +92,7 @@ The import operation fails if you modify existing parameters that trigger a crea
    The **Events** pane of the **Stack details** page for your new stack displays\.  
 ![\[The Events tab in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/import-events.png)
 
-1. \(Optional\) Run drift detection on the stack to make sure the template and actual configuration of the imported resources match\. For more information about detecting drift, see [Detect drift on an entire CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\. 
+1. \(Optional\) Run drift detection on the stack to make sure the template and actual configuration of the imported resources match\. For more information about detecting drift, see [Detect drift on an entire CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\.
 
 1. \(Optional\) If your imported resources don't match their expected template configurations, either correct the template configurations or update the resources directly\. In this walkthrough, we correct the template configurations to match their actual configurations\.
 
@@ -100,7 +100,7 @@ The import operation fails if you modify existing parameters that trigger a crea
 
    1. Add the import targets to your template again, making sure that the template configurations match the actual configurations\.
 
-   1. Repeat steps 2\-8 using the modified template to import the resources again\.
+   1. Repeat steps 2–8 using the modified template to import the resources again\.
 
 ## Create a stack from existing resources using the AWS CLI<a name="resource-import-new-stack-cli"></a>
 
@@ -115,7 +115,7 @@ The import operation fails if you modify existing parameters that trigger a crea
 
 1. Compose a list of the target resources from your template and their unique identifiers in the following format\.
 
-   "\[\{\\"ResourceType\\":\\"*AWS::DynamoDB::Table*\\",\\"LogicalResourceId\\":\\"*GamesTable*\\",\\"ResourceIdentifier\\":\{\\"*TableName*\\":\\"*Games*\\"\}\}\]"
+   `[{\"ResourceType\":\"AWS::DynamoDB::Table\",\"LogicalResourceId\":\"GamesTable\",\"ResourceIdentifier\":{\"TableName\":\"Games\"}}]`
 
 1. Create a change set of type `IMPORT` with the following parameters\. `--resources-to-import` does not support inline YAML\.
 
@@ -130,7 +130,7 @@ The import operation fails if you modify existing parameters that trigger a crea
    The AWS CLI also supports text files as input for the `--resources-to-import` parameter, as shown in the following example\.
 
    ```
-   --resources-to-import: file://resourcesToImport.txt
+   --resources-to-import file://resourcesToImport.txt
    ```
 
    In this walkthrough, *file://resourcesToImport\.txt* contains the following\.
@@ -183,4 +183,4 @@ The import operation fails if you modify existing parameters that trigger a crea
 
    1. Add the import targets to your template again, making sure that the template configurations match the actual configurations\.
 
-   1. Repeat steps 4\-7 using the modified template to import the resources again\.
+   1. Repeat steps 4–7 using the modified template to import the resources again\.

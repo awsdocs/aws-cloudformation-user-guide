@@ -27,7 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticloadbalancingv2-listener-forwardconfig-properties"></a>
 
 `TargetGroups`  <a name="cfn-elasticloadbalancingv2-listener-forwardconfig-targetgroups"></a>
-Information about how traffic will be distributed between multiple target groups in a forward rule\.  
+Information about how traffic will be distributed between multiple target groups in a forward rule\.
+When providing multiple TargetGroups each requires the weight property\.
 *Required*: No  
 *Type*: List of [TargetGroupTuple](aws-properties-elasticloadbalancingv2-listener-targetgrouptuple.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -39,6 +40,8 @@ Information about the target group stickiness for a rule\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-elasticloadbalancingv2-listener-forwardconfig--examples"></a>
+
+
 
 ### Weighted Target Groups Example<a name="aws-properties-elasticloadbalancingv2-listener-forwardconfig--examples--Weighted_Target_Groups_Example"></a>
 

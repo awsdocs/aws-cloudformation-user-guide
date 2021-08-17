@@ -60,43 +60,7 @@ For the `AWS::IAM::UserToGroupAddition` resource with the logical ID `MyUserToGr
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Examples<a name="aws-properties-iam-addusertogroup--examples"></a>
-
-### User To Group Addition<a name="aws-properties-iam-addusertogroup--examples--User_To_Group_Addition"></a>
-
-In this example, add the user named "MyUser" to the group named "MyGroup"\.
-
-#### JSON<a name="aws-properties-iam-addusertogroup--examples--User_To_Group_Addition--json"></a>
-
-```
-{
-   "AWSTemplateFormatVersion": "2010-09-09",
-   "Resources" : {
-     "Users" : {
-       "Type" : "AWS::IAM::UserToGroupAddition",
-       "Properties" : {
-         "GroupName": { "Ref" : "MyGroup" },
-         "Users" : [ { "Ref" : "MyUser" } ]
-       }
-     }
-   }
-}
-```
-
-#### YAML<a name="aws-properties-iam-addusertogroup--examples--User_To_Group_Addition--yaml"></a>
-
-```
-AWSTemplateFormatVersion: '2010-09-09'
-Resources:
-  Users:
-    Type: AWS::IAM::UserToGroupAddition
-    Properties:
-      GroupName:
-        Ref: MyGroup
-      Users:
-      - Ref: MyUser
-```
-
 ## See also<a name="aws-properties-iam-addusertogroup--seealso"></a>
 + To view `AWS::IAM::UserToGroupAddition` template example snippets, see [Add Users to a Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-addusertogroup)\. 
 +  [AddUserToGroup](https://docs.aws.amazon.com/IAM/latest/APIReference/API_AddUserToGroup.html) in the *AWS Identity and Access Management API Reference* 
+

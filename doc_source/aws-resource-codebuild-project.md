@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BadgeEnabled](#cfn-codebuild-project-badgeenabled)" : Boolean,
       "[BuildBatchConfig](#cfn-codebuild-project-buildbatchconfig)" : ProjectBuildBatchConfig,
       "[Cache](#cfn-codebuild-project-cache)" : ProjectCache,
+      "[ConcurrentBuildLimit](#cfn-codebuild-project-concurrentbuildlimit)" : Integer,
       "[Description](#cfn-codebuild-project-description)" : String,
       "[EncryptionKey](#cfn-codebuild-project-encryptionkey)" : String,
       "[Environment](#cfn-codebuild-project-environment)" : Environment,
@@ -49,6 +50,7 @@ Properties:
     ProjectBuildBatchConfig
   [Cache](#cfn-codebuild-project-cache): 
     ProjectCache
+  [ConcurrentBuildLimit](#cfn-codebuild-project-concurrentbuildlimit): Integer
   [Description](#cfn-codebuild-project-description): String
   [EncryptionKey](#cfn-codebuild-project-encryptionkey): String
   [Environment](#cfn-codebuild-project-environment): 
@@ -105,6 +107,13 @@ Settings that AWS CodeBuild uses to store and reuse build dependencies\.
 *Type*: [ProjectCache](aws-properties-codebuild-project-projectcache.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ConcurrentBuildLimit`  <a name="cfn-codebuild-project-concurrentbuildlimit"></a>
+The maximum number of concurrent builds that are allowed for this project\.  
+New builds are only started if the current number of builds is less than or equal to this limit\. If the current build count meets this limit, new builds are throttled and are not run\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Description`  <a name="cfn-codebuild-project-description"></a>
 A description that makes the build project easy to identify\.  
 *Required*: No  
@@ -114,9 +123,9 @@ A description that makes the build project easy to identify\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncryptionKey`  <a name="cfn-codebuild-project-encryptionkey"></a>
- The alias or Amazon Resource Name \(ARN\) of the AWS Key Management Service \(AWS KMS\) customer master key \(CMK\) that CodeBuild uses to encrypt the build output\. If you don't specify a value, CodeBuild uses the AWS\-managed CMK for Amazon Simple Storage Service \(Amazon S3\)\.  
- You can use a cross\-account KMS key to encrypt the build output artifacts if your service role has permission to that key\. 
- You can specify either the Amazon Resource Name \(ARN\) of the CMK or, if available, the CMK's alias \(using the format `alias/alias-name `\)\.   
+The AWS Key Management Service customer master key \(CMK\) to be used for encrypting the build output artifacts\.  
+You can use a cross\-account KMS key to encrypt the build output artifacts if your service role has permission to that key\. 
+You can specify either the Amazon Resource Name \(ARN\) of the CMK or, if available, the CMK's alias \(using the format `alias/<alias-name>`\)\. If you don't specify a value, CodeBuild uses the managed CMK for Amazon Simple Storage Service \(Amazon S3\)\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -135,7 +144,7 @@ A description that makes the build project easy to identify\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogsConfig`  <a name="cfn-codebuild-project-logsconfig"></a>
-Information about logs for the build project\. A project can create logs in Amazon CloudWatch Logs, an S3 bucket, or both\.   
+Information about logs for the build project\. A project can create logs in CloudWatch Logs, an S3 bucket, or both\.   
 *Required*: No  
 *Type*: [LogsConfig](aws-properties-codebuild-project-logsconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -179,7 +188,7 @@ An array of `ProjectSourceVersion` objects\. If `secondarySourceVersions` is spe
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceRole`  <a name="cfn-codebuild-project-servicerole"></a>
-The ARN of the AWS Identity and Access Management \(IAM\) role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account\.  
+The ARN of the AWS Identity and Access Management role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -193,12 +202,12 @@ The source code settings for the project, such as the source code's repository t
 
 `SourceVersion`  <a name="cfn-codebuild-project-sourceversion"></a>
 A version of the build input to be built for this project\. If not specified, the latest version is used\. If specified, it must be one of:  
-+ For AWS CodeCommit: the commit ID, branch, or Git tag to use\.
++ For CodeCommit: the commit ID, branch, or Git tag to use\.
 + For GitHub: the commit ID, pull request ID, branch name, or tag name that corresponds to the version of the source code you want to build\. If a pull request ID is specified, it must use the format `pr/pull-request-ID` \(for example `pr/25`\)\. If a branch name is specified, the branch's HEAD commit ID is used\. If not specified, the default branch's HEAD commit ID is used\.
 + For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of the source code you want to build\. If a branch name is specified, the branch's HEAD commit ID is used\. If not specified, the default branch's HEAD commit ID is used\.
-+ For Amazon Simple Storage Service \(Amazon S3\): the version ID of the object that represents the build input ZIP file to use\.
++ For Amazon S3: the version ID of the object that represents the build input ZIP file to use\.
 If `sourceVersion` is specified at the build level, then that version takes precedence over this `sourceVersion` \(at the project level\)\.   
-For more information, see [Source Version Sample with CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-source-version.html) in the *AWS CodeBuild User Guide*\.   
+For more information, see [Source Version Sample with CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-source-version.html) in the * AWS CodeBuild User Guide*\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -250,6 +259,8 @@ The ARN of the AWS CodeBuild project, such as `arn:aws:codebuild:us-west-2:12345
 
 ## Examples<a name="aws-resource-codebuild-project--examples"></a>
 
+
+
 ### Create a project<a name="aws-resource-codebuild-project--examples--Create_a_project"></a>
 
 The following example creates an AWS CodeBuild project\.
@@ -274,6 +285,7 @@ The following example creates an AWS CodeBuild project\.
         "EnvironmentVariables": [
           {
             "Name": "varName",
+            "Type": "varType",
             "Value": "varValue"
           }
         ]
@@ -315,6 +327,7 @@ Project:
       Image: aws/codebuild/java:openjdk-8
       EnvironmentVariables:
       - Name: varName
+        Type: varType
         Value: varValue
     Source:
       Location: codebuild-demo-test/0123ab9a371ebf0187b0fe5614fbb72c

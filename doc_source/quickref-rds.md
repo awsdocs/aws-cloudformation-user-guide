@@ -6,11 +6,11 @@
 + [Amazon RDS DBSecurityGroup resource for CIDR range](#scenario-rds-security-group-cidr)
 + [Amazon RDS DBSecurityGroup with an Amazon EC2 security group](#scenario-rds-security-group-ec2)
 + [Multiple VPC security groups](#scenario-multiple-vpc-security-groups)
-+ [Amazon RDS database instance in a VPC security group](#w6640ab1c19c22c77c15)
++ [Amazon RDS database instance in a VPC security group](#w9292ab1c27c21c76c15)
 
 ## Amazon RDS DB instance resource<a name="scenario-rds-instance"></a>
 
-This example shows an Amazon RDS DB Instance resource\. Because the optional EngineVersion property is not specified, the default engine version is used for this DB Instance\. For details about the default engine version and other default settings, see [CreateDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html)\. The DBSecurityGroups property authorizes network ingress to the AWS::RDS::DBSecurityGroup resources named MyDbSecurityByEC2SecurityGroup and MyDbSecurityByCIDRIPGroup\. For details, see [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)\. The DB Instance resource also has a DeletionPolicy attribute set to Snapshot\. With the Snapshot DeletionPolicy set, AWS CloudFormation will take a snapshot of this DB Instance before deleting it during stack deletion\.
+This example shows an Amazon RDS DB Instance resource\. Because the optional EngineVersion property isn't specified, the default engine version is used for this DB Instance\. For details about the default engine version and other default settings, see [CreateDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html)\. The DBSecurityGroups property authorizes network ingress to the `AWS::RDS::DBSecurityGroup` resources named MyDbSecurityByEC2SecurityGroup and MyDbSecurityByCIDRIPGroup\. For details, see [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)\. The DB Instance resource also has a DeletionPolicy attribute set to Snapshot\. With the Snapshot DeletionPolicy set, AWS CloudFormation will take a snapshot of this DB Instance before deleting it during stack deletion\.
 
 ### JSON<a name="quickref-rds-example-1.json"></a>
 
@@ -49,7 +49,7 @@ This example shows an Amazon RDS DB Instance resource\. Because the optional Eng
 
 ## Amazon RDS oracle database DB instance resource<a name="scenario-rds-oracleinstance"></a>
 
-This example creates an Oracle Database DB Instance resource by specifying the Engine as oracle\-ee with a license model of bring\-your\-own\-license\. For details about the settings for Oracle Database DB instances, see [CreateDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html)\. The DBSecurityGroups property authorizes network ingress to the AWS::RDS::DBSecurityGroup resources named MyDbSecurityByEC2SecurityGroup and MyDbSecurityByCIDRIPGroup\. For details, see [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)\. The DB Instance resource also has a DeletionPolicy attribute set to Snapshot\. With the Snapshot DeletionPolicy set, AWS CloudFormation will take a snapshot of this DB Instance before deleting it during stack deletion\.
+This example creates an Oracle Database DB Instance resource by specifying the Engine as oracle\-ee with a license model of bring\-your\-own\-license\. For details about the settings for Oracle Database DB instances, see [CreateDBInstance](http://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html)\. The DBSecurityGroups property authorizes network ingress to the `AWS::RDS::DBSecurityGroup` resources named MyDbSecurityByEC2SecurityGroup and MyDbSecurityByCIDRIPGroup\. For details, see [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)\. The DB Instance resource also has a DeletionPolicy attribute set to Snapshot\. With the Snapshot DeletionPolicy set, AWS CloudFormation will take a snapshot of this DB Instance before deleting it during stack deletion\.
 
 ### JSON<a name="quickref-rds-example-2.json"></a>
 
@@ -277,7 +277,7 @@ Resources:
         EC2SecurityGroupOwnerId: '111122223333'
 ```
 
-## Amazon RDS database instance in a VPC security group<a name="w6640ab1c19c22c77c15"></a>
+## Amazon RDS database instance in a VPC security group<a name="w9292ab1c27c21c76c15"></a>
 
 This example shows an Amazon RDS database instance associated with an Amazon EC2 VPC security group\.
 

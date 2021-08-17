@@ -33,6 +33,8 @@ The Amazon Resource Name \(ARN\) of the destination resource\.
 
 ## Examples<a name="aws-properties-lambda-eventinvokeconfig-destinationconfig-onfailure--examples"></a>
 
+
+
 ### On\-Failure Destination Configuration<a name="aws-properties-lambda-eventinvokeconfig-destinationconfig-onfailure--examples--On-Failure_Destination_Configuration"></a>
 
 Configure a function to send a record of failed asynchronous invocations to an SQS queue\.
@@ -40,5 +42,6 @@ Configure a function to send a record of failed asynchronous invocations to an S
 #### YAML<a name="aws-properties-lambda-eventinvokeconfig-destinationconfig-onfailure--examples--On-Failure_Destination_Configuration--yaml"></a>
 
 ```
- OnFailure: Destination: arn:aws:sqs:us-east-2:123456789012:dlq
+          OnFailure:
+            Destination: arn:aws:sqs:us-east-2:123456789012:dlq
 ```

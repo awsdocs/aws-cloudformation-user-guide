@@ -43,7 +43,8 @@ Headers that are specified in the `Access-Control-Request-Headers` header\. Thes
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AllowedMethods`  <a name="cfn-s3-bucket-cors-corsrule-allowedmethods"></a>
-An HTTP method that you allow the origin to run\. Valid values are `GET`, `PUT`, `HEAD`, `POST`, and `DELETE`\.  
+An HTTP method that you allow the origin to run\.  
+*Allowed values*: `GET` \| `PUT` \| `HEAD` \| `POST` \| `DELETE`  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -71,3 +72,114 @@ The time in seconds that your browser is to cache the preflight response for the
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-s3-bucket-cors-corsrule--examples"></a>
+
+
+
+### Enable cross\-origin resource sharing<a name="aws-properties-s3-bucket-cors-corsrule--examples--Enable_cross-origin_resource_sharing"></a>
+
+The following example template shows a public S3 bucket with two cross\-origin resource sharing rules\.
+
+#### JSON<a name="aws-properties-s3-bucket-cors-corsrule--examples--Enable_cross-origin_resource_sharing--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "S3Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "AccessControl": "PublicRead",
+                "CorsConfiguration": {
+                    "CorsRules": [
+                        {
+                            "AllowedHeaders": [
+                                "*"
+                            ],
+                            "AllowedMethods": [
+                                "GET"
+                            ],
+                            "AllowedOrigins": [
+                                "*"
+                            ],
+                            "ExposedHeaders": [
+                                "Date"
+                            ],
+                            "Id": "myCORSRuleId1",
+                            "MaxAge": 3600
+                        },
+                        {
+                            "AllowedHeaders": [
+                                "x-amz-*"
+                            ],
+                            "AllowedMethods": [
+                                "DELETE"
+                            ],
+                            "AllowedOrigins": [
+                                "http://www.example.com",
+                                "http://www.example.net"
+                            ],
+                            "ExposedHeaders": [
+                                "Connection",
+                                "Server",
+                                "Date"
+                            ],
+                            "Id": "myCORSRuleId2",
+                            "MaxAge": 1800
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "BucketName": {
+            "Value": {
+                "Ref": "S3Bucket"
+            },
+            "Description": "Name of the sample Amazon S3 bucket with CORS enabled."
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-properties-s3-bucket-cors-corsrule--examples--Enable_cross-origin_resource_sharing--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      AccessControl: PublicRead
+      CorsConfiguration:
+        CorsRules:
+          - AllowedHeaders:
+              - '*'
+            AllowedMethods:
+              - GET
+            AllowedOrigins:
+              - '*'
+            ExposedHeaders:
+              - Date
+            Id: myCORSRuleId1
+            MaxAge: 3600
+          - AllowedHeaders:
+              - x-amz-*
+            AllowedMethods:
+              - DELETE
+            AllowedOrigins:
+              - 'http://www.example.com'
+              - 'http://www.example.net'
+            ExposedHeaders:
+              - Connection
+              - Server
+              - Date
+            Id: myCORSRuleId2
+            MaxAge: 1800
+Outputs:
+  BucketName:
+    Value: !Ref S3Bucket
+    Description: Name of the sample Amazon S3 bucket with CORS enabled.
+```

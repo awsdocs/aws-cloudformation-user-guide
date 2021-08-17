@@ -82,11 +82,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-robomaker-robot--examples"></a>
 
-### Create an AWS RoboMaker Robot<a name="aws-resource-robomaker-robot--examples--Create_an_AWS_RoboMaker_Robot"></a>
+
+
+### Create an AWS RoboMaker Robot<a name="aws-resource-robomaker-robot--examples--Create_an__RoboMaker_Robot"></a>
 
 The following example creates a robot\.
 
-#### JSON<a name="aws-resource-robomaker-robot--examples--Create_an_AWS_RoboMaker_Robot--json"></a>
+#### JSON<a name="aws-resource-robomaker-robot--examples--Create_an__RoboMaker_Robot--json"></a>
 
 ```
 {
@@ -122,7 +124,7 @@ The following example creates a robot\.
 }
 ```
 
-#### YAML<a name="aws-resource-robomaker-robot--examples--Create_an_AWS_RoboMaker_Robot--yaml"></a>
+#### YAML<a name="aws-resource-robomaker-robot--examples--Create_an__RoboMaker_Robot--yaml"></a>
 
 ```
 ---

@@ -35,5 +35,5 @@ The name of the robot software suite \(ROS distribution\)\.
 The version of the robot software suite \(ROS distribution\)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `Dashing | Kinetic | Melodic`  
+*Allowed values*: `Dashing | Foxy | Kinetic | Melodic`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -2,6 +2,8 @@
 
 Information about one audio to extract from the input\.
 
+The parent of this entity is InputSettings\.
+
 ## Syntax<a name="aws-properties-medialive-channel-audioselector-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

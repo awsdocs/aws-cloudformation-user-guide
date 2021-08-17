@@ -2,12 +2,8 @@
 
 The `AWS::RDS::DBSecurityGroup` resource creates or updates an Amazon RDS DB security group\.
 
-**Note**
-
-DB security groups are a part of the EC2-Classic Platform and as such are not supported in all regions. It is advised to use the `AWS::EC2::SecurityGroup` resource in those regions instead. To determine which platform you are on, see [Determining Whether You Are Using the EC2\-VPC or EC2\-Classic Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.FindDefaultVPC.html)\. For more information on the `AWS::EC2::SecurityGroup`, see the documentation for [EC2 security groups](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html).
-
- If you use DB security groups, the settings that you can specify for your DB instances are limited\. For more information, see the [DBSecurityGroups](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbsecuritygroups) property of the `AWS::RDS::DBInstance` resource\.  
- When you specify an `AWS::RDS::DBSecurityGroup` as an argument to the `Ref` function, AWS CloudFormation returns the value of the `DBSecurityGroupName`\.
+**Note**  
+DB security groups are a part of the EC2\-Classic Platform and as such are not supported in all regions\. It is advised to use the `AWS::EC2::SecurityGroup` resource in those regions instead\. To determine which platform you are on, see [Determining Whether You Are Using the EC2\-VPC or EC2\-Classic Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.FindDefaultVPC.html)\. For more information on the `AWS::EC2::SecurityGroup`, see the documentation for [EC2 security groups](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html)\.
 
 ## Syntax<a name="aws-properties-rds-security-group-syntax"></a>
 
@@ -77,11 +73,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-properties-rds-security-group--examples"></a>
 
-### Single VPC security group<a name="aws-properties-rds-security-group--examples--Single_VPC_security_group"></a>
+
+
+### Creating a single VPC security group<a name="aws-properties-rds-security-group--examples--Creating_a_single_VPC_security_group"></a>
 
 The following example creates a single VPC security group, referred to by `EC2SecurityGroupName`\. 
 
-#### JSON<a name="aws-properties-rds-security-group--examples--Single_VPC_security_group--json"></a>
+#### JSON<a name="aws-properties-rds-security-group--examples--Creating_a_single_VPC_security_group--json"></a>
 
 ```
 {
@@ -122,7 +120,7 @@ The following example creates a single VPC security group, referred to by `EC2Se
 }
 ```
 
-#### YAML<a name="aws-properties-rds-security-group--examples--Single_VPC_security_group--yaml"></a>
+#### YAML<a name="aws-properties-rds-security-group--examples--Creating_a_single_VPC_security_group--yaml"></a>
 
 ```
 Resources: 

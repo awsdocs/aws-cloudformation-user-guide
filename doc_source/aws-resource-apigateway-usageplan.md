@@ -87,6 +87,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigateway-usageplan--examples"></a>
 
+
+
 ### Create usage plan<a name="aws-resource-apigateway-usageplan--examples--Create_usage_plan"></a>
 
 The following examples create a usage plan for the Prod API stage, with a quota of 5000 requests per month and a rate limit of 100 requests per second\.
@@ -144,3 +146,4 @@ usagePlan:
 
 ## See also<a name="aws-resource-apigateway-usageplan--seealso"></a>
 + [usageplan:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/usageplan-create/) in the *Amazon API Gateway REST API Reference*
+

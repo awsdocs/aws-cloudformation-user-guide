@@ -4,6 +4,6 @@ AWS CloudFormation allows you to create Microsoft Windows stacks based on Amazon
 
 The topics in this section are designed to demonstrate how common tasks related to creation and management of Windows instances are accomplished with AWS CloudFormation\.
 
-## In this section<a name="w6640ab1c15c29b7"></a>
+## In this section<a name="w9292ab1c23c33b7"></a>
 + [Microsoft Windows Amazon Machine Images \(AMIs\) and AWS CloudFormation templates](cfn-windows-stacks-amis-and-templates.md)
 + [Bootstrapping AWS CloudFormation Windows stacks](cfn-windows-stacks-bootstrapping.md)

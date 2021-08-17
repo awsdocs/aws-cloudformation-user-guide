@@ -57,6 +57,38 @@ The minimum capacity must be less than or equal to the maximum capacity\.
 
 `SecondsUntilAutoPause`  <a name="cfn-rds-dbcluster-scalingconfiguration-secondsuntilautopause"></a>
 The time, in seconds, before an Aurora DB cluster in `serverless` mode is paused\.  
+Specify a value between 300 and 86,400 seconds\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-rds-dbcluster-scalingconfiguration--examples"></a>
+
+
+
+### <a name="aws-properties-rds-dbcluster-scalingconfiguration--examples--"></a>
+
+The following specifies a scaling configuration\.
+
+For a sample template that configures an Aurora Serverless DB cluster, see [ Creating an Amazon Aurora Serverless DB Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#aws-resource-rds-dbcluster--examples--Creating_an_Amazon_Aurora_Serverless_DB_Cluster)\.
+
+#### JSON<a name="aws-properties-rds-dbcluster-scalingconfiguration--examples----json"></a>
+
+```
+"ScalingConfiguration" : {
+                  "AutoPause" : true,
+                  "MinCapacity" : 4,
+                  "MaxCapacity" : 32,
+                  "SecondsUntilAutoPause" : 1000
+              }
+```
+
+#### YAML<a name="aws-properties-rds-dbcluster-scalingconfiguration--examples----yaml"></a>
+
+```
+ScalingConfiguration:
+        AutoPause: true
+        MinCapacity: 4
+        MaxCapacity: 32
+        SecondsUntilAutoPause: 1000
+```

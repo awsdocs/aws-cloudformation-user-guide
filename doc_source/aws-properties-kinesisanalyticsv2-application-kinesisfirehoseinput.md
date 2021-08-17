@@ -33,3 +33,4 @@ The Amazon Resource Name \(ARN\) of the delivery stream\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-kinesisfirehoseinput--seealso"></a>
 +  [KinesisFirehoseInput](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_KinesisFirehoseInput.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

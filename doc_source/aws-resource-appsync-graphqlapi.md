@@ -1,6 +1,6 @@
 # AWS::AppSync::GraphQLApi<a name="aws-resource-appsync-graphqlapi"></a>
 
-The `AWS::AppSync::GraphQLApi` resource creates a new AppSync GraphQL API\. This is the top\-level construct for your application\. For more information, see [Quick Start](https://docs.aws.amazon.com/appsync/latest/devguide/quickstart.html) in the *AWS AppSync Developer Guide*\.
+The `AWS::AppSync::GraphQLApi` resource creates a new AWS AppSync GraphQL API\. This is the top\-level construct for your application\. For more information, see [Quick Start](https://docs.aws.amazon.com/appsync/latest/devguide/quickstart.html) in the *AWS AppSync Developer Guide*\.
 
 ## Syntax<a name="aws-resource-appsync-graphqlapi-syntax"></a>
 
@@ -121,6 +121,8 @@ The Endpoint URL of your GraphQL API\.
 
 ## Examples<a name="aws-resource-appsync-graphqlapi--examples"></a>
 
+
+
 ### GraphQL API Creation Example<a name="aws-resource-appsync-graphqlapi--examples--GraphQL_API_Creation_Example"></a>
 
 The following example creates a GraphQL API\.
@@ -198,3 +200,4 @@ Resources:
 
 ## See also<a name="aws-resource-appsync-graphqlapi--seealso"></a>
 +  [CreateGraphqlApi](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateGraphqlApi.html) operation in the *AWS AppSync API Reference*\.
+

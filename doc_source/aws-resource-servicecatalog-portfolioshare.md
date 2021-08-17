@@ -14,7 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AcceptLanguage](#cfn-servicecatalog-portfolioshare-acceptlanguage)" : String,
       "[AccountId](#cfn-servicecatalog-portfolioshare-accountid)" : String,
-      "[PortfolioId](#cfn-servicecatalog-portfolioshare-portfolioid)" : String
+      "[PortfolioId](#cfn-servicecatalog-portfolioshare-portfolioid)" : String,
+      "[ShareTagOptions](#cfn-servicecatalog-portfolioshare-sharetagoptions)" : Boolean
     }
 }
 ```
@@ -27,6 +28,7 @@ Properties:
   [AcceptLanguage](#cfn-servicecatalog-portfolioshare-acceptlanguage): String
   [AccountId](#cfn-servicecatalog-portfolioshare-accountid): String
   [PortfolioId](#cfn-servicecatalog-portfolioshare-portfolioid): String
+  [ShareTagOptions](#cfn-servicecatalog-portfolioshare-sharetagoptions): Boolean
 ```
 
 ## Properties<a name="aws-resource-servicecatalog-portfolioshare-properties"></a>
@@ -57,6 +59,12 @@ The portfolio identifier\.
 *Pattern*: `^[a-zA-Z0-9_\-]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ShareTagOptions`  <a name="cfn-servicecatalog-portfolioshare-sharetagoptions"></a>
+Indicates whether TagOptions sharing is enabled or disabled for the portfolio share\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Return values<a name="aws-resource-servicecatalog-portfolioshare-return-values"></a>
 
 ### Ref<a name="aws-resource-servicecatalog-portfolioshare-return-values-ref"></a>
@@ -67,3 +75,4 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## See also<a name="aws-resource-servicecatalog-portfolioshare--seealso"></a>
 + [CreatePortfolioShare](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreatePortfolioShare.html) in the *AWS Service Catalog API Reference*
+

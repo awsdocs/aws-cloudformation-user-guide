@@ -82,7 +82,7 @@ Indicates whether to rerun the CodePipeline pipeline after you update it\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-codepipeline-pipeline-rolearn"></a>
-The Amazon Resource Name \(ARN\) for AWS CodePipeline to use to either perform actions with no `actionRoleArn`, or to use to assume roles for actions with an `actionRoleArn`\.  
+The Amazon Resource Name \(ARN\) for CodePipeline to use to either perform actions with no `actionRoleArn`, or to use to assume roles for actions with an `actionRoleArn`\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `1024`  
@@ -122,6 +122,8 @@ The version of the pipeline\.
 A new pipeline is always assigned a version number of 1\. This number increments when a pipeline is updated\.
 
 ## Examples<a name="aws-resource-codepipeline-pipeline--examples"></a>
+
+
 
 ### Pipeline Resource Configuration<a name="aws-resource-codepipeline-pipeline--examples--Pipeline_Resource_Configuration"></a>
 

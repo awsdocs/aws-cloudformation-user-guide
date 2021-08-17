@@ -109,3 +109,4 @@ The configuration for the backup Amazon S3 location\.
 
 ## See also<a name="aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration--seealso"></a>
 +  [SplunkDestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_SplunkDestinationConfiguration.html) in the *Amazon Kinesis Data Firehose API Reference *\. 
+

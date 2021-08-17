@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CloudwatchAlarm](#cfn-iot-topicrule-action-cloudwatchalarm)" : CloudwatchAlarmAction,
+  "[CloudwatchLogs](#cfn-iot-topicrule-action-cloudwatchlogs)" : CloudwatchLogsAction,
   "[CloudwatchMetric](#cfn-iot-topicrule-action-cloudwatchmetric)" : CloudwatchMetricAction,
   "[DynamoDB](#cfn-iot-topicrule-action-dynamodb)" : DynamoDBAction,
   "[DynamoDBv2](#cfn-iot-topicrule-action-dynamodbv2)" : DynamoDBv2Action,
@@ -20,13 +21,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[IotAnalytics](#cfn-iot-topicrule-action-iotanalytics)" : IotAnalyticsAction,
   "[IotEvents](#cfn-iot-topicrule-action-iotevents)" : IotEventsAction,
   "[IotSiteWise](#cfn-iot-topicrule-action-iotsitewise)" : IotSiteWiseAction,
+  "[Kafka](#cfn-iot-topicrule-action-kafka)" : KafkaAction,
   "[Kinesis](#cfn-iot-topicrule-action-kinesis)" : KinesisAction,
   "[Lambda](#cfn-iot-topicrule-action-lambda)" : LambdaAction,
   "[Republish](#cfn-iot-topicrule-action-republish)" : RepublishAction,
   "[S3](#cfn-iot-topicrule-action-s3)" : S3Action,
   "[Sns](#cfn-iot-topicrule-action-sns)" : SnsAction,
   "[Sqs](#cfn-iot-topicrule-action-sqs)" : SqsAction,
-  "[StepFunctions](#cfn-iot-topicrule-action-stepfunctions)" : StepFunctionsAction
+  "[StepFunctions](#cfn-iot-topicrule-action-stepfunctions)" : StepFunctionsAction,
+  "[Timestream](#cfn-iot-topicrule-action-timestream)" : TimestreamAction
 }
 ```
 
@@ -35,6 +38,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CloudwatchAlarm](#cfn-iot-topicrule-action-cloudwatchalarm): 
     CloudwatchAlarmAction
+  [CloudwatchLogs](#cfn-iot-topicrule-action-cloudwatchlogs): 
+    CloudwatchLogsAction
   [CloudwatchMetric](#cfn-iot-topicrule-action-cloudwatchmetric): 
     CloudwatchMetricAction
   [DynamoDB](#cfn-iot-topicrule-action-dynamodb): 
@@ -53,6 +58,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     IotEventsAction
   [IotSiteWise](#cfn-iot-topicrule-action-iotsitewise): 
     IotSiteWiseAction
+  [Kafka](#cfn-iot-topicrule-action-kafka): 
+    KafkaAction
   [Kinesis](#cfn-iot-topicrule-action-kinesis): 
     KinesisAction
   [Lambda](#cfn-iot-topicrule-action-lambda): 
@@ -67,6 +74,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     SqsAction
   [StepFunctions](#cfn-iot-topicrule-action-stepfunctions): 
     StepFunctionsAction
+  [Timestream](#cfn-iot-topicrule-action-timestream): 
+    TimestreamAction
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-action-properties"></a>
@@ -75,6 +84,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Change the state of a CloudWatch alarm\.  
 *Required*: No  
 *Type*: [CloudwatchAlarmAction](aws-properties-iot-topicrule-cloudwatchalarmaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CloudwatchLogs`  <a name="cfn-iot-topicrule-action-cloudwatchlogs"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [CloudwatchLogsAction](aws-properties-iot-topicrule-cloudwatchlogsaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CloudwatchMetric`  <a name="cfn-iot-topicrule-action-cloudwatchmetric"></a>
@@ -131,6 +146,12 @@ Sends data from the MQTT message that triggered the rule to AWS IoT SiteWise ass
 *Type*: [IotSiteWiseAction](aws-properties-iot-topicrule-iotsitewiseaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Kafka`  <a name="cfn-iot-topicrule-action-kafka"></a>
+Send messages to an Amazon Managed Streaming for Apache Kafka \(Amazon MSK\) or self\-managed Apache Kafka cluster\.  
+*Required*: No  
+*Type*: [KafkaAction](aws-properties-iot-topicrule-kafkaaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Kinesis`  <a name="cfn-iot-topicrule-action-kinesis"></a>
 Write data to an Amazon Kinesis stream\.  
 *Required*: No  
@@ -171,4 +192,10 @@ Publish to an Amazon SQS queue\.
 Starts execution of a Step Functions state machine\.  
 *Required*: No  
 *Type*: [StepFunctionsAction](aws-properties-iot-topicrule-stepfunctionsaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Timestream`  <a name="cfn-iot-topicrule-action-timestream"></a>
+Writes attributes from an MQTT message\.  
+*Required*: No  
+*Type*: [TimestreamAction](aws-properties-iot-topicrule-timestreamaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

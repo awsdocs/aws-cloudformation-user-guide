@@ -33,7 +33,7 @@ The ARN of the Amazon Kinesis Data Firehose stream that email sending events sho
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IAMRoleARN`  <a name="cfn-ses-configurationseteventdestination-kinesisfirehosedestination-iamrolearn"></a>
-The ARN of the IAM role that Amazon SES uses to publish email sending events to the Amazon Kinesis Data Firehose stream\.  
+The ARN of the IAM role under which Amazon SES publishes email sending events to the Amazon Kinesis Data Firehose stream\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -2,13 +2,11 @@
 
 Use the `AWS::Include` transform, which is a macro hosted by AWS CloudFormation, to insert boilerplate content into your templates\. The `AWS::Include` transform lets you create a reference to a template snippet in an Amazon S3 bucket\. When [Creating a change set](using-cfn-updating-stacks-changesets-create.md) or [Updating stacks using change sets](using-cfn-updating-stacks-changesets.md), and the templates reference `AWS::Include`, AWS CloudFormation inserts the contents of the specified file at the location of the transform in the template\. The `AWS::Include` function behaves similarly to an `include`, `copy`, or `import` directive in programming languages\.
 
-For example, you might have a Lambda function that you want to reuse in one or more AWS CloudFormation templates\. 
-
-Unlike custom macros, the `AWS::Include` transform doesn't require special permissions to use it because it is hosted by AWS CloudFormation\. It can be used by templates in any account within AWS CloudFormation\. Also, there is no charge incurred when using this transform\. AWS CloudFormation treats the `AWS::Include` transform the same as any other macro in terms of evaluation order and scope\. For more information about macros, see [Using AWS CloudFormation macros to perform custom processing on templates](template-macros.md)\.
+For example, you might have a Lambda function that you want to reuse in one or more AWS CloudFormation templates\.
 
 ## Usage<a name="aws-include-transform-usage"></a>
 
-You can use the `AWS::Include` transform anywhere within the AWS CloudFormation template except in the template parameters section or the template version field\. For example, you can use `AWS::Include` in the mappings section\. 
+You can use the `AWS::Include` transform anywhere within the AWS CloudFormation template except in the template parameters section or the template version field\. For example, you can use `AWS::Include` in the mappings section\.
 
 ### Syntax at the top level of a template<a name="aws-include-syntax-top-level-overview"></a>
 
@@ -38,7 +36,7 @@ To include the `AWS::Include` transform at the top level of a template, in the `
 
 ### Syntax when the transform is embedded within a section of a template<a name="aws-include-syntax-embedded-within-section-overview"></a>
 
-To include a transform that is embedded within a section, use the `` intrinsic function and the following syntax\.
+To include a transform that's embedded within a section, use the ``Fn::Transform`` intrinsic function and the following syntax\.
 
 #### JSON<a name="aws-include-syntax-within-section.json"></a>
 
@@ -74,11 +72,11 @@ When using `AWS::Include`, keep the following considerations in mind\. For gener
 + We currently support Amazon S3 URI, but no other Amazon S3 format \(such as Amazon S3 ARN\)\. It must be an Amazon S3 bucket, as opposed to something like a GitHub repository\.
 + Anyone with access to the Amazon S3 URL can include the snippet in their template\.
 + Your template snippets must be valid YAML or JSON\.
-+ Your template snippets must be valid key–value objects, for example `"KeyName": "keyValue"`\.
++ Your template snippets must be valid key– objects, for example `"KeyName": "keyValue"`\.
 + You can't use `AWS::Include` to reference a template snippet that also uses `AWS::Include`\.
 + If your snippets change, your stack doesn't automatically pick up those changes\. To get those changes, you must update the stack with the updated snippets\. If you update your stack, make sure your included snippets haven't changed without your knowledge\. To verify before updating the stack, check the change set\.
 + When creating templates and snippets, you can mix YAML and JSON template languages\.
-+ We do not currently support using shorthand notations for YAML snippets\.
++ We don't currently support using shorthand notations for YAML snippets\.
 + You can provide a cross\-region replication Amazon S3 URI with `AWS::Include`\. Make sure you check Amazon S3 bucket names when accessing cross\-region replication objects\. For more information, see [Cross\-Region replication](http://docs.aws.amazon.com/AmazonS3/latest/dev/crr.html)\.
 
 ## Example<a name="aws-include-transform-examples"></a>

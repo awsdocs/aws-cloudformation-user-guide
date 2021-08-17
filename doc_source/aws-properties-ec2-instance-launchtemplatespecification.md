@@ -41,7 +41,7 @@ The name of the launch template\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-ec2-instance-launchtemplatespecification-version"></a>
-The version number of the launch template\.AWS CloudFormation does not support specifying `$Latest`, or `$Default` for the template version number\.  
+The version number of the launch template\. AWS CloudFormation does not support specifying `$Latest`, or `$Default` for the template version number\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

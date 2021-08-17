@@ -1,6 +1,6 @@
 # AWS::IoTAnalytics::Dataset<a name="aws-resource-iotanalytics-dataset"></a>
 
-The AWS::IoTAnalytics::Dataset resource stores data retrieved from a data store by applying a "queryAction" \(an SQL query\) or a "containerAction" \(executing a containerized application\)\. The data set can be populated manually by calling "CreateDatasetContent" or automatically according to a "trigger" you specify\. For more information, see [ How to Use AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how) in the *AWS IoT Analytics User Guide*\. 
+The AWS::IoTAnalytics::Dataset resource stores data retrieved from a data store by applying a `queryAction` \(an SQL query\) or a `containerAction` \(executing a containerized application\)\. The data set can be populated manually by calling `CreateDatasetContent` or automatically according to a `trigger` you specify\. For more information, see [ How to Use AWS IoT Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how) in the *AWS IoT Analytics User Guide*\. 
 
 ## Syntax<a name="aws-resource-iotanalytics-dataset-syntax"></a>
 
@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Actions](#cfn-iotanalytics-dataset-actions)" : [ Action, ... ],
       "[ContentDeliveryRules](#cfn-iotanalytics-dataset-contentdeliveryrules)" : [ DatasetContentDeliveryRule, ... ],
       "[DatasetName](#cfn-iotanalytics-dataset-datasetname)" : String,
+      "[LateDataRules](#cfn-iotanalytics-dataset-latedatarules)" : [ LateDataRule, ... ],
       "[RetentionPeriod](#cfn-iotanalytics-dataset-retentionperiod)" : RetentionPeriod,
       "[Tags](#cfn-iotanalytics-dataset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Triggers](#cfn-iotanalytics-dataset-triggers)" : [ Trigger, ... ],
@@ -33,6 +34,8 @@ Properties:
   [ContentDeliveryRules](#cfn-iotanalytics-dataset-contentdeliveryrules): 
     - DatasetContentDeliveryRule
   [DatasetName](#cfn-iotanalytics-dataset-datasetname): String
+  [LateDataRules](#cfn-iotanalytics-dataset-latedatarules): 
+    - LateDataRule
   [RetentionPeriod](#cfn-iotanalytics-dataset-retentionperiod): 
     RetentionPeriod
   [Tags](#cfn-iotanalytics-dataset-tags): 
@@ -46,7 +49,7 @@ Properties:
 ## Properties<a name="aws-resource-iotanalytics-dataset-properties"></a>
 
 `Actions`  <a name="cfn-iotanalytics-dataset-actions"></a>
-The `DatasetAction` objects that automatically create the data set contents\.  
+The `DatasetAction` objects that automatically create the dataset contents\.  
 *Required*: Yes  
 *Type*: List of [Action](aws-properties-iotanalytics-dataset-action.md)  
 *Maximum*: `1`  
@@ -60,7 +63,7 @@ When dataset contents are created they are delivered to destinations specified h
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatasetName`  <a name="cfn-iotanalytics-dataset-datasetname"></a>
-The name of the data set\.  
+The name of the dataset\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -68,8 +71,15 @@ The name of the data set\.
 *Pattern*: `^[a-zA-Z0-9_]+$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`LateDataRules`  <a name="cfn-iotanalytics-dataset-latedatarules"></a>
+A list of data rules that send notifications to CloudWatch, when data arrives late\. To specify `lateDataRules`, the dataset must use a [DeltaTimer](https://docs.aws.amazon.com/iotanalytics/latest/APIReference/API_DeltaTime.html) filter\.  
+*Required*: No  
+*Type*: List of [LateDataRule](aws-properties-iotanalytics-dataset-latedatarule.md)  
+*Maximum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `RetentionPeriod`  <a name="cfn-iotanalytics-dataset-retentionperiod"></a>
-Optional\. How long, in days, message data is kept for the data set\.  
+Optional\. How long, in days, message data is kept for the dataset\.  
 *Required*: No  
 *Type*: [RetentionPeriod](aws-properties-iotanalytics-dataset-retentionperiod.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -83,19 +93,21 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Triggers`  <a name="cfn-iotanalytics-dataset-triggers"></a>
-The `DatasetTrigger` objects that specify when the data set is automatically updated\.  
+The `DatasetTrigger` objects that specify when the dataset is automatically updated\.  
 *Required*: No  
 *Type*: List of [Trigger](aws-properties-iotanalytics-dataset-trigger.md)  
 *Maximum*: `5`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VersioningConfiguration`  <a name="cfn-iotanalytics-dataset-versioningconfiguration"></a>
-Optional\. How many versions of dataset contents are kept\. If not specified or set to null, only the latest version plus the latest succeeded version \(if they are different\) are kept for the time period specified by the `retentionPeriod` parameter\. For more information, see [Keeping Multiple Versions of AWS IoT Analytics Data Sets](https://docs.aws.amazon.com/iotanalytics/latest/userguide/getting-started.html#aws-iot-analytics-dataset-versions) in the *AWS IoT Analytics User Guide*\.  
+Optional\. How many versions of dataset contents are kept\. If not specified or set to null, only the latest version plus the latest succeeded version \(if they are different\) are kept for the time period specified by the `retentionPeriod` parameter\. For more information, see [Keeping Multiple Versions of AWS IoT Analytics datasets](https://docs.aws.amazon.com/iotanalytics/latest/userguide/getting-started.html#aws-iot-analytics-dataset-versions) in the * AWS IoT Analytics User Guide*\.  
 *Required*: No  
 *Type*: [VersioningConfiguration](aws-properties-iotanalytics-dataset-versioningconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-iotanalytics-dataset--examples"></a>
+
+
 
 ### Simple SQL Dataset<a name="aws-resource-iotanalytics-dataset--examples--Simple_SQL_Dataset"></a>
 

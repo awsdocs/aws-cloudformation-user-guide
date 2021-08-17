@@ -38,7 +38,7 @@ The authorization scopes supported by this route\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthorizationType`  <a name="cfn-apigatewayv2-apigatewaymanagedoverrides-routeoverrides-authorizationtype"></a>
-The authorization type for the route\. For HTTP APIs, valid values are `NONE` for open access, or `JWT` for using JSON Web Tokens\.  
+The authorization type for the route\. To learn more, see [AuthorizationType](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-route.html#cfn-apigatewayv2-route-authorizationtype)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

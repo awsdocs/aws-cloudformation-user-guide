@@ -59,6 +59,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-networkmanager-linkassociation--examples"></a>
 
+
+
 ### Link Association<a name="aws-resource-networkmanager-linkassociation--examples--Link_Association"></a>
 
 The following example template creates a global network, site, link, and device\. It creates an association between the link and the device\.

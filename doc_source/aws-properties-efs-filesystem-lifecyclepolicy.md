@@ -1,6 +1,6 @@
 # AWS::EFS::FileSystem LifecyclePolicy<a name="aws-properties-efs-filesystem-lifecyclepolicy"></a>
 
-Describes a policy used by EFS lifecycle management to transition files to the Infrequent Access \(IA\) storage class\. For more information, see [EFS Lifecycle Management](https://docs.aws.amazon.com/efs/latest/ug/lifecycle-management-efs.html) in the *Amazon EFS User Guide*\.
+A policy used by EFS lifecycle management to transition files to the Infrequent Access \(IA\) storage classes\. For more information, see [EFS Lifecycle Management](https://docs.aws.amazon.com/efs/latest/ug/lifecycle-management-efs.html) in the *Amazon EFS User Guide*\.
 
 ## Syntax<a name="aws-properties-efs-filesystem-lifecyclepolicy-syntax"></a>
 

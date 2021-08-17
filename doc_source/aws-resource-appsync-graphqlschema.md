@@ -3,7 +3,7 @@
 The `AWS::AppSync::GraphQLSchema` resource is used for your AWS AppSync GraphQL schema that controls the data model for your API\. Schema files are text written in Schema Definition Language \(SDL\) format\. For more information about schema authoring, see [Designing a GraphQL API](https://docs.aws.amazon.com/appsync/latest/devguide/designing-a-graphql-api.html) in the *AWS AppSync Developer Guide*\.
 
 **Note**  
-When you submit an update, AWS CloudFormation updates resources based on differences between what you submit and the stack's current template\. To cause this resource to be updated you must change a property value for this resource in the CloudFormation template\. Changing the S3 file content without changing a property value will not result in an update operation\.  
+When you submit an update, AWS CloudFormation updates resources based on differences between what you submit and the stack's current template\. To cause this resource to be updated you must change a property value for this resource in the CloudFormation template\. Changing the Amazon S3 file content without changing a property value will not result in an update operation\.  
 See [Update Behaviors of Stack Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html) in the *AWS CloudFormation User Guide*\.
 
 ## Syntax<a name="aws-resource-appsync-graphqlschema-syntax"></a>
@@ -62,6 +62,8 @@ When you pass the logical ID of an `AWS::AppSync::GraphQLSchema` resource to the
 
 ## Examples<a name="aws-resource-appsync-graphqlschema--examples"></a>
 
+
+
 ### GraphQL Schema Creation Example<a name="aws-resource-appsync-graphqlschema--examples--GraphQL_Schema_Creation_Example"></a>
 
 The following example creates a GraphQL Schema and associates it with an existing GraphQL API by passing the GraphQL API ID as a parameter\.
@@ -114,3 +116,4 @@ Resources:
 
 ## See also<a name="aws-resource-appsync-graphqlschema--seealso"></a>
 +  [StartSchemaCreation](https://docs.aws.amazon.com/appsync/latest/APIReference/API_StartSchemaCreation.html) operation in the *AWS AppSync API Reference*\.
+

@@ -54,11 +54,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-vpn-gatewayrouteprop--examples"></a>
 
-### VPN Gateway Route Propagation<a name="aws-resource-ec2-vpn-gatewayrouteprop--examples--VPN_Gateway_Route_Propagation"></a>
+
+
+### VPN gateway route propagation<a name="aws-resource-ec2-vpn-gatewayrouteprop--examples--VPN_gateway_route_propagation"></a>
 
 The following example enables route propagation for the private route table named PrivateRouteTable \.
 
-#### JSON<a name="aws-resource-ec2-vpn-gatewayrouteprop--examples--VPN_Gateway_Route_Propagation--json"></a>
+#### JSON<a name="aws-resource-ec2-vpn-gatewayrouteprop--examples--VPN_gateway_route_propagation--json"></a>
 
 ```
 "myVPNGatewayRouteProp" : {
@@ -70,7 +72,7 @@ The following example enables route propagation for the private route table name
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-vpn-gatewayrouteprop--examples--VPN_Gateway_Route_Propagation--yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpn-gatewayrouteprop--examples--VPN_gateway_route_propagation--yaml"></a>
 
 ```
 Type: AWS::EC2::VPNGatewayRoutePropagation
@@ -82,3 +84,4 @@ Type: AWS::EC2::VPNGatewayRoutePropagation
 
 ## See also<a name="aws-resource-ec2-vpn-gatewayrouteprop--seealso"></a>
 +  [EnableVgwRoutePropagation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableVgwRoutePropagation.html) in the *Amazon EC2 API Reference*
+

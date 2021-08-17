@@ -48,3 +48,4 @@ Whether the canary deployment uses the stage cache\.
 
 ## See also<a name="aws-properties-apigateway-deployment-deploymentcanarysettings--seealso"></a>
 + [Deployment](https://docs.aws.amazon.com/apigateway/api-reference/resource/deployment/) in the *Amazon API Gateway REST API Reference*
+

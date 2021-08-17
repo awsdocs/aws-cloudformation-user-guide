@@ -85,7 +85,11 @@ The ARN of the data stream with which the consumer is registered\.
 
 ## Examples<a name="aws-resource-kinesis-streamconsumer--examples"></a>
 
+
+
 ### Register a Consumer with a Kinesis Data Stream<a name="aws-resource-kinesis-streamconsumer--examples--Register_a_Consumer_with_a_Kinesis_Data_Stream"></a>
+
+
 
 #### JSON<a name="aws-resource-kinesis-streamconsumer--examples--Register_a_Consumer_with_a_Kinesis_Data_Stream--json"></a>
 

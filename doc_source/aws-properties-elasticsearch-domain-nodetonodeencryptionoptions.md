@@ -26,4 +26,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Specifies whether node\-to\-node encryption is enabled, as a Boolean\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

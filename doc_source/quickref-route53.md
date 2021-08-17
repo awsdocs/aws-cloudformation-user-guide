@@ -1,15 +1,15 @@
-# Route 53 template snippets<a name="quickref-route53"></a>
+# Route 53 template snippets<a name="quickref-route53"></a>
 
 **Topics**
 + [Amazon Route 53 resource record set using hosted zone name or ID](#scenario-route53-recordset-by-host)
 + [Using RecordSetGroup to set up weighted resource record sets](#scenario-recordsetgroup-weighted)
 + [Using RecordSetGroup to set up an alias resource record set](#scenario-recordsetgroup-zoneapex)
-+ [Alias resource record set for a CloudFront distribution](#w6832ab1c19c22c81c11)
++ [Alias resource record set for a CloudFront distribution](#w9292ab1c27c21c80c11)
 
 ## Amazon Route 53 resource record set using hosted zone name or ID<a name="scenario-route53-recordset-by-host"></a>
 
 When you create an Amazon Route 53 resource record set, you must specify the hosted zone where you want to add it\. AWS CloudFormation provides two ways to specify a hosted zone:
-+ You can explicitly specify the hosted zone using the `HostedZoneId` property\. 
++ You can explicitly specify the hosted zone using the `HostedZoneId` property\.
 + You can have AWS CloudFormation find the hosted zone using the `HostedZoneName` property\. If you use the `HostedZoneName` property and there are multiple hosted zones with the same name, AWS CloudFormation doesn't create the stack\.
 
 ### Adding RecordSet using HostedZoneId<a name="scenario-recordset-using-id"></a>
@@ -85,11 +85,11 @@ This example adds an Amazon Route 53 resource record set for the domain name "my
 
 ## Using RecordSetGroup to set up weighted resource record sets<a name="scenario-recordsetgroup-weighted"></a>
 
-This example uses an [AWS::Route53::RecordSetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html) to set up two CNAME records for the "example\.com\." hosted zone\. The `RecordSets` property contains the CNAME record sets for the "mysite\.example\.com" DNS name\. Each record set contains an identifier \(`SetIdentifier`\) and weight \(`Weight`\)\. The proportion of internet traffic that is routed to the resources is based on the following calculations:
+This example uses an [AWS::Route53::RecordSetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html) to set up two CNAME records for the "example\.com\." hosted zone\. The `RecordSets` property contains the CNAME record sets for the "mysite\.example\.com" DNS name\. Each record set contains an identifier \(`SetIdentifier`\) and weight \(`Weight`\)\. The proportion of internet traffic that's routed to the resources is based on the following calculations:
 + `Frontend One`: `140/(140+60)` = `140/200` = 70%
 + `Frontend Two`: `60/(140+60)` = `60/200` = 30%
 
-For more information about weighted resource record sets, see [Weighted routing](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted) in the *Amazon Route 53 Developer Guide*\.
+For more information about weighted resource record sets, see [Weighted routing](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted) in the *Amazon Route 53 Developer Guide*\.
 
 ### JSON<a name="quickref-route53-example-3.json"></a>
 
@@ -152,7 +152,7 @@ The following examples use an [AWS::Route53::RecordSetGroup](https://docs.aws.am
 + Version 1 load balancer: `CanonicalHostedZoneNameID` and `DNSName`
 + Version 2 load balancer: `CanonicalHostedZoneID` and `DNSName`
 
-For more information about alias resource record sets, see [Choosing between alias and non\-alias records](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html) in the *Route 53 Developer Guide*\.
+For more information about alias resource record sets, see [Choosing between alias and non\-alias records](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html) in the *Route 53 Developer Guide*\.
 
 ### JSON for version 1 load balancer<a name="quickref-route53-example-4.json"></a>
 
@@ -265,7 +265,7 @@ For more information about alias resource record sets, see [Choosing between ali
 17.         DNSName: !GetAtt 'myELB.DNSName'
 ```
 
-## Alias resource record set for a CloudFront distribution<a name="w6832ab1c19c22c81c11"></a>
+## Alias resource record set for a CloudFront distribution<a name="w9292ab1c27c21c80c11"></a>
 
 The following example creates an alias record set that routes queries to the specified CloudFront distribution\.
 
@@ -275,35 +275,48 @@ When you create alias resource record sets, you must specify `Z2FDTNDATAQYW2` fo
 ### JSON<a name="quickref-route53-example-5.json"></a>
 
 ```
- 1. "myDNS" : {
- 2.     "Type" : "AWS::Route53::RecordSetGroup",
- 3.     "Properties" : {
- 4.         "HostedZoneId" : { "Ref" : "myHostedZoneID" },
- 5.         "RecordSets" : [{
- 6.             "Name" : { "Ref" : "myRecordSetDomainName" },
- 7.             "Type" : "A",
- 8.             "AliasTarget" : {
- 9.                 "HostedZoneId" : "Z2FDTNDATAQYW2",
-10.                 "DNSName" : { "Fn::GetAtt" : ["myCloudFrontDistribution", "DomainName"] }
-11.             }
-12.         }]
-13.     }
-14. }
+ 1. {
+ 2.     "myDNS": {
+ 3.         "Type": "AWS::Route53::RecordSetGroup",
+ 4.         "Properties": {
+ 5.             "HostedZoneId": {
+ 6.                 "Ref": "myHostedZoneID"
+ 7.             },
+ 8.             "RecordSets": [
+ 9.                 {
+10.                     "Name": {
+11.                         "Ref": "myRecordSetDomainName"
+12.                     },
+13.                     "Type": "A",
+14.                     "AliasTarget": {
+15.                         "HostedZoneId": "Z2FDTNDATAQYW2",
+16.                         "DNSName": {
+17.                             "Fn::GetAtt": [
+18.                                 "myCloudFrontDistribution",
+19.                                 "DomainName"
+20.                             ]
+21.                         }
+22.                     }
+23.                 }
+24.             ]
+25.         }
+26.     }
+27. }
 ```
 
 ### YAML<a name="quickref-route53-example-5.yaml"></a>
 
 ```
  1. myDNS:
- 2.   Type: AWS::Route53::RecordSetGroup
+ 2.   Type: 'AWS::Route53::RecordSetGroup'
  3.   Properties:
- 4.     HostedZoneId:
- 5.       Ref: myHostedZoneID
- 6.     RecordSets:
- 7.     - Name:
- 8.         Ref: myRecordSetDomainName
- 9.       Type: A
-10.       AliasTarget:
-11.         HostedZoneId: Z2FDTNDATAQYW2
-12.         DNSName: GetAtt 'myCloudFrontDistribution.DomainName'
+ 4.     HostedZoneId: !Ref myHostedZoneID
+ 5.     RecordSets:
+ 6.       - Name: !Ref myRecordSetDomainName
+ 7.         Type: A
+ 8.         AliasTarget:
+ 9.           HostedZoneId: Z2FDTNDATAQYW2
+10.           DNSName: !GetAtt 
+11.             - myCloudFrontDistribution
+12.             - DomainName
 ```

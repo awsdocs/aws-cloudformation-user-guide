@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `InputName`  <a name="cfn-iotevents-detectormodel-iotevents-inputname"></a>
 The name of the AWS IoT Events input where the data is sent\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  

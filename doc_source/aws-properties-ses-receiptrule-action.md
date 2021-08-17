@@ -80,7 +80,7 @@ Terminates the evaluation of the receipt rule set and optionally publishes a not
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WorkmailAction`  <a name="cfn-ses-receiptrule-action-workmailaction"></a>
-Calls Amazon WorkMail and, optionally, publishes a notification to Amazon SNS\.  
+Calls Amazon WorkMail and, optionally, publishes a notification to Amazon Amazon SNS\.  
 *Required*: No  
 *Type*: [WorkmailAction](aws-properties-ses-receiptrule-workmailaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

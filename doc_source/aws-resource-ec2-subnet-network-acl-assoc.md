@@ -60,11 +60,13 @@ Returns the value of this object's [SubnetId](https://docs.aws.amazon.com/AWSClo
 
 ## Examples<a name="aws-resource-ec2-subnet-network-acl-assoc--examples"></a>
 
-### Subnet Network ACL Association<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_Network_ACL_Association"></a>
+
+
+### Subnet network ACL association<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_network_ACL_association"></a>
 
 The following example associates subnet mySubnet with the myNetworkAcl network ACL\.
 
-#### JSON<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_Network_ACL_Association--json"></a>
+#### JSON<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_network_ACL_association--json"></a>
 
 ```
 "mySubnetNetworkAclAssociation" : {
@@ -76,7 +78,7 @@ The following example associates subnet mySubnet with the myNetworkAcl network A
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_Network_ACL_Association--yaml"></a>
+#### YAML<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_network_ACL_association--yaml"></a>
 
 ```
    mySubnetNetworkAclAssociation:

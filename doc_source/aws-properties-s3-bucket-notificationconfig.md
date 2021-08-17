@@ -52,3 +52,62 @@ The topic to which notifications are sent and the events for which notifications
 *Required*: No  
 *Type*: List of [TopicConfiguration](aws-properties-s3-bucket-notificationconfig-topicconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-s3-bucket-notificationconfig--examples"></a>
+
+
+
+### Receive S3 bucket notifications to an SNS topic<a name="aws-properties-s3-bucket-notificationconfig--examples--Receive_S3_bucket_notifications_to_an_SNS_topic"></a>
+
+The following example template shows an Amazon S3 bucket with a notification configuration that sends an event to the specified SNS topic when S3 has lost all replicas of an object\.
+
+#### JSON<a name="aws-properties-s3-bucket-notificationconfig--examples--Receive_S3_bucket_notifications_to_an_SNS_topic--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "S3Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "AccessControl": "Private",
+                "NotificationConfiguration": {
+                    "TopicConfigurations": [
+                        {
+                            "Topic": "arn:aws:sns:us-east-1:123456789012:TestTopic",
+                            "Event": "s3:ReducedRedundancyLostObject"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "BucketName": {
+            "Value": {
+                "Ref": "S3Bucket"
+            },
+            "Description": "Name of the sample Amazon S3 bucket with a notification configuration."
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-properties-s3-bucket-notificationconfig--examples--Receive_S3_bucket_notifications_to_an_SNS_topic--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      AccessControl: Private
+      NotificationConfiguration:
+        TopicConfigurations:
+          - Topic: 'arn:aws:sns:us-east-1:123456789012:TestTopic'
+            Event: 's3:ReducedRedundancyLostObject'
+Outputs:
+  BucketName:
+    Value: !Ref S3Bucket
+    Description: Name of the sample Amazon S3 bucket with a notification configuration.
+```

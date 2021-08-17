@@ -16,6 +16,8 @@ Note the following:
 
 When you submit a `CreateHostedZone` request, the initial status of the hosted zone is `PENDING`\. For public hosted zones, this means that the NS and SOA records are not yet available on all Route 53 DNS servers\. When the NS and SOA records are available, the status of the zone changes to `INSYNC`\.
 
+The `CreateHostedZone` request requires the caller to have an `ec2:DescribeVpcs` permission\.
+
 ## Syntax<a name="aws-resource-route53-hostedzone-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -62,9 +64,9 @@ If you don't want to specify a comment, omit the `HostedZoneConfig` and `Comment
 
 `HostedZoneTags`  <a name="cfn-route53-hostedzone-hostedzonetags"></a>
 Adds, edits, or deletes tags for a health check or a hosted zone\.  
-For information about using tags for cost allocation, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
+For information about using tags for cost allocation, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the * AWS Billing and Cost Management User Guide*\.  
 *Required*: No  
-*Type*: List of [HostedZoneTag](aws-properties-route53-hostedzone-hostedzonetags.md)  
+*Type*: List of [HostedZoneTag](aws-properties-route53-hostedzone-hostedzonetag.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-route53-hostedzone-name"></a>
@@ -123,8 +125,8 @@ If you want Route 53 to stop sending query logs to CloudWatch Logs, delete the q
 *Private hosted zones:* A complex type that contains information about the VPCs that are associated with the specified hosted zone\.  
 For public hosted zones, omit `VPCs`, `VPCId`, and `VPCRegion`\.
 *Required*: No  
-*Type*: List of [VPC](aws-resource-route53-hostedzone-hostedzonevpcs.md)  
-*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+*Type*: List of [VPC](aws-properties-route53-hostedzone-vpc.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-route53-hostedzone-return-values"></a>
 
@@ -142,11 +144,16 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 #### <a name="aws-resource-route53-hostedzone-return-values-fn--getatt-fn--getatt"></a>
 
+`Id`  <a name="Id-fn::getatt"></a>
+The ID that Amazon Route 53 assigned to the hosted zone when you created it\.
+
 `NameServers`  <a name="NameServers-fn::getatt"></a>
 Returns the set of name servers for the specific hosted zone\. For example: `ns1.example.com`\.  
 This attribute is not supported for private hosted zones\.
 
 ## Examples<a name="aws-resource-route53-hostedzone--examples"></a>
+
+
 
 ### Creating a private hosted zone<a name="aws-resource-route53-hostedzone--examples--Creating_a_private_hosted_zone"></a>
 
@@ -215,3 +222,4 @@ DNS:
 
 ## See also<a name="aws-resource-route53-hostedzone--seealso"></a>
 +  [CreateHostedZone](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html) in the *Amazon Route 53 API Reference*
+

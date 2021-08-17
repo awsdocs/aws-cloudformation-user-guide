@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codebuild-project-batchrestrictions-properties"></a>
 
 `ComputeTypesAllowed`  <a name="cfn-codebuild-project-batchrestrictions-computetypesallowed"></a>
-An array of strings that specify the compute types that are allowed for the batch build\. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the *AWS CodeBuild User Guide* for these values\.   
+An array of strings that specify the compute types that are allowed for the batch build\. See [Build environment compute types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in the * AWS CodeBuild User Guide* for these values\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

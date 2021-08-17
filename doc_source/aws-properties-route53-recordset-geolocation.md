@@ -63,3 +63,4 @@ If you specify `subdivisioncode`, you must also specify `US` for `CountryCode`\.
 ## See also<a name="aws-properties-route53-recordset-geolocation--seealso"></a>
 +  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html#aws-resource-route53-recordsetgroup-return-values) in the topic [AWS::Route53::RecordSetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html) 
 +  [GeoLocation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_GeoLocation.html) in the *Amazon Route 53 API Reference*
+

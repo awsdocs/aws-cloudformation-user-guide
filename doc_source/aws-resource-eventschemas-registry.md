@@ -39,7 +39,7 @@ A description of the registry to be created\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegistryName`  <a name="cfn-eventschemas-registry-registryname"></a>
-The name of the registry\.  
+The name of the schema registry\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -80,15 +80,15 @@ The name of the registry\.
 
 ## Examples<a name="aws-resource-eventschemas-registry--examples"></a>
 
-### Create a Schema Registry for Events Emitted by AWS Step Functions<a name="aws-resource-eventschemas-registry--examples--Create_a_Schema_Registry_for_Events_Emitted_by_AWS_Step_Functions"></a>
+### Create a Schema Registry for Events Emitted by AWS Step Functions<a name="aws-resource-eventschemas-registry--examples--Create_a_Schema_Registry_for_Events_Emitted_by__Step_Functions"></a>
 
-#### YAML<a name="aws-resource-eventschemas-registry--examples--Create_a_Schema_Registry_for_Events_Emitted_by_AWS_Step_Functions--yaml"></a>
+#### YAML<a name="aws-resource-eventschemas-registry--examples--Create_a_Schema_Registry_for_Events_Emitted_by__Step_Functions--yaml"></a>
 
 ```
 Resources:
   StatesSchemasRegistry:
     Type: AWS::EventSchemas::Registry
     Properties:
-      Name: 'aws.states'
+      RegistryName: 'aws.states'
       Description: 'Contains the schemas of events emitted by AWS Step Functions'
 ```

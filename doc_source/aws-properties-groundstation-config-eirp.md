@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Units`  <a name="cfn-groundstation-config-eirp-units"></a>
  The units of the EIRP\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-groundstation-config-eirp-value"></a>
  The value of the EIRP\. Valid values are between 20\.0 to 50\.0 dBW\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

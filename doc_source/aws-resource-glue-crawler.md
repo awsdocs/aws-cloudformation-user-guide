@@ -135,6 +135,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-glue-crawler--examples"></a>
 
+
+
 ### <a name="aws-resource-glue-crawler--examples--"></a>
 
 The following example creates a crawler for an Amazon S3 target\. 
@@ -143,7 +145,7 @@ The following example creates a crawler for an Amazon S3 target\.
 
 ```
 {
-    "Description": "AWS Glue Crawler Test",
+    "Description": "AWS Glue crawler test",
     "Resources": {
         "MyRole": {
             "Type": "AWS::IAM::Role",

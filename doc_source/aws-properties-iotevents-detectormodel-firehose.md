@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DeliveryStreamName`  <a name="cfn-iotevents-detectormodel-firehose-deliverystreamname"></a>
 The name of the Kinesis Data Firehose delivery stream where the data is written\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

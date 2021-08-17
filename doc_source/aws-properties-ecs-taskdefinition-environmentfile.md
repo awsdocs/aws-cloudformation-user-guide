@@ -2,9 +2,9 @@
 
 A list of files containing the environment variables to pass to a container\. You can specify up to ten environment files\. The file must have a `.env` file extension\. Each line in an environment file should contain an environment variable in `VARIABLE=VALUE` format\. Lines beginning with `#` are treated as comments and are ignored\. For more information on the environment variable file syntax, see [Declare default environment variables in file](https://docs.docker.com/compose/env-file/)\.
 
-If there are environment variables specified using the `environment` parameter in a container definition, they take precedence over the variables contained within an environment file\. If multiple environment files are specified that contain the same variable, they are processed from the top down\. It is recommended to use unique variable names\. For more information, see [Specifying Environment Variables](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/taskdef-envfiles.html) in the *Amazon Elastic Container Service Developer Guide*\.
+If there are environment variables specified using the `environment` parameter in a container definition, they take precedence over the variables contained within an environment file\. If multiple environment files are specified that contain the same variable, they are processed from the top down\. It is recommended to use unique variable names\. For more information, see [Specifying environment variables](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/taskdef-envfiles.html) in the *Amazon Elastic Container Service Developer Guide*\.
 
-This field is not valid for containers in tasks using the Fargate launch type\.
+This field is only valid for containers in Fargate tasks that use platform version `1.4.0` or later\.
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-environmentfile-syntax"></a>
 

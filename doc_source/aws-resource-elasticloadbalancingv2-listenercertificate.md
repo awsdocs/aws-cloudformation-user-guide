@@ -45,3 +45,4 @@ The Amazon Resource Name \(ARN\) of the listener\.
 ## See also<a name="aws-resource-elasticloadbalancingv2-listenercertificate--seealso"></a>
 +  [AddListenerCertificates](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_AddListenerCertificates.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
 +  [SSL Certificates](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#https-listener-certificates) in the *User Guide for Application Load Balancers* 
+

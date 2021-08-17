@@ -67,3 +67,4 @@ The end date of the request\. For a one\-time request, the request remains activ
 
 ## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions--seealso"></a>
 +  [ LaunchTemplateSpotMarketOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateSpotMarketOptionsRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

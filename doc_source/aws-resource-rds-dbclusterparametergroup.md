@@ -1,6 +1,8 @@
 # AWS::RDS::DBClusterParameterGroup<a name="aws-resource-rds-dbclusterparametergroup"></a>
 
-The `AWS::RDS::DBClusterParameterGroup` resource creates a new Amazon RDS DB cluster parameter group\. For more information, see [Managing an Amazon Aurora DB Cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_Aurora.html) in the *Amazon Aurora User Guide*\.
+The `AWS::RDS::DBClusterParameterGroup` resource creates a new Amazon RDS DB cluster parameter group\.
+
+For information about configuring parameters for Amazon Aurora DB instances, see [Working with DB parameter groups and DB cluster parameter groups](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_WorkingWithParamGroups.html) in the *Amazon Aurora User Guide*\.
 
 **Note**  
 If you apply a parameter group to a DB cluster, then its DB instances might need to reboot\. This can result in an outage while the DB instances are rebooting\.  
@@ -77,36 +79,37 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-rds-dbclusterparametergroup--examples"></a>
 
+
+
 ### <a name="aws-resource-rds-dbclusterparametergroup--examples--"></a>
 
-The following snippet creates a parameter group that sets the character set database to `UTF32`: 
+The following snippet creates a DB cluster parameter group for an Aurora MySQL DB cluster and sets the `time_zone` and `character_set_database` parameters: 
 
 #### JSON<a name="aws-resource-rds-dbclusterparametergroup--examples----json"></a>
 
 ```
-{
-    "RDSDBClusterParameterGroup": {
-        "Type": "AWS: : RDS: : DBClusterParameterGroup",
+"RDSDBClusterParameterGroup": {
+        "Type": "AWS::RDS::DBClusterParameterGroup",
         "Properties": {
-            "Parameters": {
-                "character_set_database": "utf32"
-            },
+            "Description": "CloudFormation Sample Aurora Cluster Parameter Group",
             "Family": "aurora5.6",
-            "Description": "Asampleparametergroup"
+            "Parameters": {
+                "time_zone": "US/Eastern",
+                "character_set_database": "utf32"
+            }
         }
     }
-}
 ```
 
 #### YAML<a name="aws-resource-rds-dbclusterparametergroup--examples----yaml"></a>
 
 ```
---- 
-RDSDBClusterParameterGroup: 
-  Properties: 
-    Description: "A sample parameter group"
+RDSDBClusterParameterGroup:
+  Type: 'AWS::RDS::DBClusterParameterGroup'
+  Properties:
+    Description: CloudFormation Sample Aurora Cluster Parameter Group
     Family: aurora5.6
-    Parameters: 
+    Parameters:
+      time_zone: US/Eastern
       character_set_database: utf32
-  Type: "AWS::RDS::DBClusterParameterGroup"
 ```

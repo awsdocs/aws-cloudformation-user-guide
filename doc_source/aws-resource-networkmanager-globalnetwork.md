@@ -32,7 +32,7 @@ Properties:
 
 `Description`  <a name="cfn-networkmanager-globalnetwork-description"></a>
 A description of the global network\.  
-Length Constraints: Maximum length of 256 characters\.  
+Constraints: Maximum length of 256 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -66,6 +66,8 @@ The ARN of the global network\. For example, `arn:aws:networkmanager::1234567890
 The ID of the global network\. For example, `global-network-01231231231231231`\.
 
 ## Examples<a name="aws-resource-networkmanager-globalnetwork--examples"></a>
+
+
 
 ### Global Network<a name="aws-resource-networkmanager-globalnetwork--examples--Global_Network"></a>
 

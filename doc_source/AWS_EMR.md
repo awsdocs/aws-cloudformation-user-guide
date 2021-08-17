@@ -6,3 +6,5 @@
 + [AWS::EMR::InstanceGroupConfig](aws-resource-emr-instancegroupconfig.md)
 + [AWS::EMR::SecurityConfiguration](aws-resource-emr-securityconfiguration.md)
 + [AWS::EMR::Step](aws-resource-emr-step.md)
++ [AWS::EMR::Studio](aws-resource-emr-studio.md)
++ [AWS::EMR::StudioSessionMapping](aws-resource-emr-studiosessionmapping.md)

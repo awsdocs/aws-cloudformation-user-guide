@@ -60,7 +60,7 @@ The connection string that Kinesis Data Firehose uses to connect to the Amazon R
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `512`  
-*Pattern*: `jdbc:(redshift|postgresql)://((?!-)[A-Za-z0-9-]{1,63}(?<!-)\.)+redshift\.([a-zA-Z0-9\.]+):\d{1,5}/[a-zA-Z0-9_$]+`  
+*Pattern*: `jdbc:(redshift|postgresql)://((?!-)[A-Za-z0-9-]{1,63}(?<!-)\.)+redshift\.([a-zA-Z0-9\.]+):\d{1,5}/[a-zA-Z0-9_$-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CopyCommand`  <a name="cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-copycommand"></a>

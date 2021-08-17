@@ -84,6 +84,8 @@ The ARN of the CloudWatch Logs destination, such as `arn:aws:logs:us-west-1:1234
 
 ## Examples<a name="aws-resource-logs-destination--examples"></a>
 
+
+
 ### Create a Destination<a name="aws-resource-logs-destination--examples--Create_a_Destination"></a>
 
 In the following example, the target stream \(`TestStream`\) can receive log events from the `logger` IAM user that is in the account `234567890123`\. The user can call only the `PutSubscriptionFilter` action against the `TestDestination` destination\.

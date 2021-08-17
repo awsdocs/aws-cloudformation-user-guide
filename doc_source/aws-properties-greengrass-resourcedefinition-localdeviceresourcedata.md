@@ -1,6 +1,6 @@
 # AWS::Greengrass::ResourceDefinition LocalDeviceResourceData<a name="aws-properties-greengrass-resourcedefinition-localdeviceresourcedata"></a>
 
-<a name="aws-properties-greengrass-resourcedefinition-localdeviceresourcedata-description"></a>Settings for a local device resource, which represents a file under `/dev`\. For more information, see [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-local-resources.html) in the *AWS IoT Greengrass Developer Guide*\.
+<a name="aws-properties-greengrass-resourcedefinition-localdeviceresourcedata-description"></a>Settings for a local device resource, which represents a file under `/dev`\. For more information, see [Access Local Resources with Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-local-resources.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.
 
 <a name="aws-properties-greengrass-resourcedefinition-localdeviceresourcedata-inheritance"></a> In an AWS CloudFormation template, `LocalDeviceResourceData` can be used in the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html) property type\.
 
@@ -40,5 +40,5 @@ The local absolute path of the device resource\. The source path for a device re
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See also<a name="aws-properties-greengrass-resourcedefinition-localdeviceresourcedata--seealso"></a>
-+  [LocalDeviceResourceData](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-localdeviceresourcedata.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [LocalDeviceResourceData](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-localdeviceresourcedata.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

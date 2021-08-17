@@ -59,7 +59,7 @@ Up to five VPC security group IDs, of the form `sg-xxxxxxxx`\. These must be for
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-efs-mounttarget-subnetid"></a>
-The ID of the subnet to add the mount target in\.  
+The ID of the subnet to add the mount target in\. For file systems that use One Zone storage classes, use the subnet that is associated with the file system's Availability Zone\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `15`  
@@ -91,6 +91,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The IPv4 address of the mount target\.
 
 ## Examples<a name="aws-resource-efs-mounttarget--examples"></a>
+
+
 
 ### Declare a Mount Target for an EFS File System<a name="aws-resource-efs-mounttarget--examples--Declare_a_Mount_Target_for_an_EFS_File_System"></a>
 
@@ -124,6 +126,7 @@ MountTarget:
 ```
 
 ## See also<a name="aws-resource-efs-mounttarget--seealso"></a>
-+  [Amazon EFS: How It Works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html) 
-+  [Creating Mount Targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) 
-+  [Walkthrough: Mounting a File System On\-Premises](https://docs.aws.amazon.com/efs/latest/ug/efs-onpremises.html) 
++  [Amazon EFS: How it works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html) 
++  [Creating mount targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) 
++  [Walkthrough: Mounting a file system on\-premises](https://docs.aws.amazon.com/efs/latest/ug/efs-onpremises.html) 
+

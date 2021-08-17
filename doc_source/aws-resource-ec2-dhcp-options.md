@@ -91,6 +91,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### <a name="aws-resource-ec2-dhcp-options--examples--"></a>
 
+
+
 #### YAML<a name="aws-resource-ec2-dhcp-options--examples----yaml"></a>
 
 ```
@@ -106,11 +108,13 @@ myDhcpOptions:
           - 10.2.5.1
         NetbiosNodeType: 2
         Tags: 
-          - Key: project
+        - Key: project
           Value: 123
 ```
 
 ### <a name="aws-resource-ec2-dhcp-options--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-ec2-dhcp-options--examples----json"></a>
 
@@ -133,3 +137,4 @@ myDhcpOptions:
 ## See also<a name="aws-resource-ec2-dhcp-options--seealso"></a>
 +  [CreateDhcpOptions](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateDhcpOptions.html) in the *Amazon Elastic Compute Cloud API Reference* 
 + [DHCP Options Sets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html) in the *Amazon Virtual Private Cloud User Guide*
+

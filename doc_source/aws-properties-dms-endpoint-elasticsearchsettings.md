@@ -48,7 +48,7 @@ To avoid early failure, this counter is only effective after 1000 records are tr
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceAccessRoleArn`  <a name="cfn-dms-endpoint-elasticsearchsettings-serviceaccessrolearn"></a>
-The Amazon Resource Name \(ARN\) used by service to access the IAM role\.  
+The Amazon Resource Name \(ARN\) used by the service to access the IAM role\. The role must allow the `iam:PassRole` action\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

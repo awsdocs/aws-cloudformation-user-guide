@@ -1,8 +1,5 @@
 # AWS::WAFv2::RuleGroup ByteMatchStatement<a name="aws-properties-wafv2-rulegroup-bytematchstatement"></a>
 
-**Note**  
-This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
-
 A rule statement that defines a string match search for AWS WAF to apply to web requests\. The byte match statement provides the bytes to search for, the location in requests that you want AWS WAF to search, and other settings\. The bytes to search for are typically a string that corresponds with ASCII characters\. In the AWS WAF console and the developer guide, this is refered to as a string match statement\.
 
 ## Syntax<a name="aws-properties-wafv2-rulegroup-bytematchstatement-syntax"></a>

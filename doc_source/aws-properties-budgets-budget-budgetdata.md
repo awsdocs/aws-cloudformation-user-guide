@@ -65,7 +65,7 @@ Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Pl
 
 `CostFilters`  <a name="cfn-budgets-budget-budgetdata-costfilters"></a>
 The cost filters, such as service or tag, that are applied to a budget\.  
-AWS Budgets supports the following services as a filter for RI budgets:  
+ AWS Budgets supports the following services as a filter for RI budgets:  
 + Amazon Elastic Compute Cloud \- Compute
 + Amazon Redshift
 + Amazon Relational Database Service
@@ -113,3 +113,4 @@ The length of time until a budget resets the actual and forecasted spend\. `DAIL
 
 ## See also<a name="aws-properties-budgets-budget-budgetdata--seealso"></a>
 +  [Budget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_budget.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+

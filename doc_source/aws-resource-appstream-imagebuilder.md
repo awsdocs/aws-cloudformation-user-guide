@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DisplayName](#cfn-appstream-imagebuilder-displayname)" : String,
       "[DomainJoinInfo](#cfn-appstream-imagebuilder-domainjoininfo)" : DomainJoinInfo,
       "[EnableDefaultInternetAccess](#cfn-appstream-imagebuilder-enabledefaultinternetaccess)" : Boolean,
+      "[IamRoleArn](#cfn-appstream-imagebuilder-iamrolearn)" : String,
       "[ImageArn](#cfn-appstream-imagebuilder-imagearn)" : String,
       "[ImageName](#cfn-appstream-imagebuilder-imagename)" : String,
       "[InstanceType](#cfn-appstream-imagebuilder-instancetype)" : String,
@@ -43,6 +44,7 @@ Properties:
   [DomainJoinInfo](#cfn-appstream-imagebuilder-domainjoininfo): 
     DomainJoinInfo
   [EnableDefaultInternetAccess](#cfn-appstream-imagebuilder-enabledefaultinternetaccess): Boolean
+  [IamRoleArn](#cfn-appstream-imagebuilder-iamrolearn): String
   [ImageArn](#cfn-appstream-imagebuilder-imagearn): String
   [ImageName](#cfn-appstream-imagebuilder-imagename): String
   [InstanceType](#cfn-appstream-imagebuilder-instancetype): String
@@ -96,6 +98,14 @@ Enables or disables default internet access for the image builder\.
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`IamRoleArn`  <a name="cfn-appstream-imagebuilder-iamrolearn"></a>
+The ARN of the IAM role that is applied to the image builder\. To assume a role, the image builder calls the AWS Security Token Service `AssumeRole` API operation and passes the ARN of the role to use\. The operation creates a new session with temporary credentials\. AppStream 2\.0 retrieves the temporary credentials and creates the **appstream\_machine\_role** credential profile on the instance\.  
+For more information, see [Using an IAM Role to Grant Permissions to Applications and Scripts Running on AppStream 2\.0 Streaming Instances](https://docs.aws.amazon.com/appstream2/latest/developerguide/using-iam-roles-to-grant-permissions-to-applications-scripts-streaming-instances.html) in the *Amazon AppStream 2\.0 Administration Guide*\.  
+*Required*: No  
+*Type*: String  
+*Pattern*: `^arn:aws(?:\-cn|\-iso\-b|\-iso|\-us\-gov)?:[A-Za-z0-9][A-Za-z0-9_/.-]{0,62}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9][A-Za-z0-9:_/+=,@.\\-]{0,1023}$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ImageArn`  <a name="cfn-appstream-imagebuilder-imagearn"></a>
 The ARN of the public, private, or shared image to use\.  
 *Required*: No  
@@ -112,6 +122,7 @@ The name of the image used to create the image builder\.
 
 `InstanceType`  <a name="cfn-appstream-imagebuilder-instancetype"></a>
 The instance type to use when launching the image builder\. The following instance types are available:  
++ stream\.standard\.small
 + stream\.standard\.medium
 + stream\.standard\.large
 + stream\.compute\.large
@@ -157,7 +168,7 @@ A unique name for the image builder\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-appstream-imagebuilder-tags"></a>
-An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
+An array of key\-value pairs\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -185,3 +196,4 @@ The URL to start an image builder streaming session, returned as a string\.
 
 ## See also<a name="aws-resource-appstream-imagebuilder--seealso"></a>
 +  [CreateImageBuilder](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateImageBuilder.html) in the *Amazon AppStream 2\.0 API Reference* 
+

@@ -41,6 +41,8 @@ Properties:
 
 `AppId`  <a name="cfn-amplify-domain-appid"></a>
  The unique ID for an Amplify app\.   
+*Length Constraints:* Minimum length of 1\. Maximum length of 20\.  
+*Pattern:* d\[a\-z0\-9\]\+  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -53,12 +55,16 @@ Properties:
 
 `AutoSubDomainIAMRole`  <a name="cfn-amplify-domain-autosubdomainiamrole"></a>
 The required AWS Identity and Access Management \(IAM\) service role for the Amazon Resource Name \(ARN\) for automatically creating subdomains\.  
+*Length Constraints:* Maximum length of 1000\.  
+*Pattern:* ^$\|^arn:aws:iam::\\d\{12\}:role\.\+   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainName`  <a name="cfn-amplify-domain-domainname"></a>
  The domain name for the domain association\.   
+*Length Constraints:* Maximum length of 255\.  
+*Pattern:* ^\(\(\(?\!\-\)\[A\-Za\-z0\-9\-\]\{0,62\}\[A\-Za\-z0\-9\]\)\\\.\)\+\(\(?\!\-\)\[A\-Za\-z0\-9\-\]\{1,62\}\[A\-Za\-z0\-9\]\)\(\\\.\)?$  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

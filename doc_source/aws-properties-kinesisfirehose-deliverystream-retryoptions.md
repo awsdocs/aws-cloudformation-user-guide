@@ -1,6 +1,6 @@
 # AWS::KinesisFirehose::DeliveryStream RetryOptions<a name="aws-properties-kinesisfirehose-deliverystream-retryoptions"></a>
 
-Describes the retry behavior in case Kinesis Data Firehose is unable to deliver data to the specified HTTP endpoint destination, or if it doesn't receive a valid acknowledgment of receipt from the specified HTTP endpoint destination\. 
+Describes the retry behavior in case Kinesis Data Firehose is unable to deliver data to the specified HTTP endpoint destination, or if it doesn't receive a valid acknowledgment of receipt from the specified HTTP endpoint destination\. Kinesis Firehose supports any custom HTTP endpoint or HTTP endpoints owned by supported third\-party service providers, including Datadog, MongoDB, and New Relic\.
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-retryoptions-syntax"></a>
 

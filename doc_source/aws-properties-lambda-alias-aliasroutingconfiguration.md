@@ -31,6 +31,8 @@ The second version, and the percentage of traffic that's routed to it\.
 
 ## Examples<a name="aws-properties-lambda-alias-aliasroutingconfiguration--examples"></a>
 
+
+
 ### Routing Configuration<a name="aws-properties-lambda-alias-aliasroutingconfiguration--examples--Routing_Configuration"></a>
 
 An alias that routes half of incoming requests to a second version\.
@@ -38,7 +40,14 @@ An alias that routes half of incoming requests to a second version\.
 #### YAML<a name="aws-properties-lambda-alias-aliasroutingconfiguration--examples--Routing_Configuration--yaml"></a>
 
 ```
- alias: Type: AWS::Lambda::Alias Properties: FunctionName: !Ref function FunctionVersion:
-        !GetAtt newVersion.Version Name: BLUE RoutingConfig: AdditionalVersionWeights: - FunctionVersion: !GetAtt
-        version.Version FunctionWeight: 0.5
+  alias:
+    Type: AWS::Lambda::Alias
+    Properties:
+      FunctionName: !Ref function
+      FunctionVersion: !GetAtt newVersion.Version
+      Name: BLUE
+      RoutingConfig:
+        AdditionalVersionWeights:
+          - FunctionVersion: !GetAtt version.Version
+            FunctionWeight: 0.5
 ```

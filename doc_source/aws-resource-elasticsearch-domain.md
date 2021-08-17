@@ -92,7 +92,7 @@ Configures Amazon ES to use Amazon Cognito authentication for Kibana\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainEndpointOptions`  <a name="cfn-elasticsearch-domain-domainendpointoptions"></a>
-Specifies additional options for the domain endpoint, such as whether to require HTTPS for all traffic\.  
+Specifies additional options for the domain endpoint, such as whether to require HTTPS for all traffic or whether to use a custom endpoint rather than the default endpoint\.  
 *Required*: No  
 *Type*: [DomainEndpointOptions](aws-properties-elasticsearch-domain-domainendpointoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -124,13 +124,13 @@ If you set the [UpgradeElasticsearchVersion](https://docs.aws.amazon.com/AWSClou
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `EncryptionAtRestOptions`  <a name="cfn-elasticsearch-domain-encryptionatrestoptions"></a>
-Whether the domain should encrypt data at rest, and if so, the AWS Key Management Service \(KMS\) key to use\. Can only be used to create a new domain, not update an existing one\.  
+Whether the domain should encrypt data at rest, and if so, the AWS Key Management Service key to use\.  
 *Required*: No  
 *Type*: [EncryptionAtRestOptions](aws-properties-elasticsearch-domain-encryptionatrestoptions.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `LogPublishingOptions`  <a name="cfn-elasticsearch-domain-logpublishingoptions"></a>
-An object with one or more of the following keys: `SEARCH_SLOW_LOGS`, `ES_APPLICATION_LOGS`, `INDEX_SLOW_LOGS`, depending on the types of logs you want to publish\. Each key needs a valid `LogPublishingOption` value\. See [here](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#aws-resource-elasticsearch-domain--examples) for the full syntax\.  
+An object with one or more of the following keys: `SEARCH_SLOW_LOGS`, `ES_APPLICATION_LOGS`, `INDEX_SLOW_LOGS`, `AUDIT_LOGS`, depending on the types of logs you want to publish\. Each key needs a valid `LogPublishingOption` value\. See [here](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#aws-resource-elasticsearch-domain--examples) for the full syntax\.  
 *Required*: No  
 *Type*: Map of [LogPublishingOption](aws-properties-elasticsearch-domain-logpublishingoption.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -139,10 +139,10 @@ An object with one or more of the following keys: `SEARCH_SLOW_LOGS`, `ES_APPLIC
 Specifies whether node\-to\-node encryption is enabled\.  
 *Required*: No  
 *Type*: [NodeToNodeEncryptionOptions](aws-properties-elasticsearch-domain-nodetonodeencryptionoptions.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `SnapshotOptions`  <a name="cfn-elasticsearch-domain-snapshotoptions"></a>
-The automated snapshot configuration for the Amazon ES domain indices\.  
+**DEPRECATED**\. The automated snapshot configuration for the Amazon ES domain indices\.  
 *Required*: No  
 *Type*: [SnapshotOptions](aws-properties-elasticsearch-domain-snapshotoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -182,49 +182,63 @@ The domain\-specific endpoint that's used for requests to the Elasticsearch APIs
 
 ## Examples<a name="aws-resource-elasticsearch-domain--examples"></a>
 
+
+
 ### Create an Amazon ES domain that contains two data nodes and three master nodes<a name="aws-resource-elasticsearch-domain--examples--Create_an_Amazon_ES_domain_that_contains_two_data_nodes_and_three_master_nodes"></a>
 
-The following example creates an Amazon ES domain running Elasticsearch 7\.4 that contains two data nodes and three dedicated master nodes\. The domain has 40 GiB of storage and enables log publishing for application logs, search slow logs, and index slow logs\. The access policy permits the root user for the AWS account to make all HTTP requests to the domain, such as indexing documents or searching indices\.
+The following example creates an Amazon ES domain running Elasticsearch 7\.10 that contains two data nodes and three dedicated master nodes\. The domain has 40 GiB of storage and enables log publishing for application logs, search slow logs, and index slow logs\. The access policy permits the root user for the AWS account to make all HTTP requests to the domain, such as indexing documents or searching indices\.
 
 #### JSON<a name="aws-resource-elasticsearch-domain--examples--Create_an_Amazon_ES_domain_that_contains_two_data_nodes_and_three_master_nodes--json"></a>
 
 ```
-"ElasticsearchDomain":{
+"ElasticsearchDomain": {
    "Type":"AWS::Elasticsearch::Domain",
-   "Properties":{
-      "DomainName":"test",
-      "ElasticsearchClusterConfig":{
-         "DedicatedMasterEnabled":"true",
-         "InstanceCount":"2",
-         "ZoneAwarenessEnabled":"true",
-         "InstanceType":"m3.medium.elasticsearch",
-         "DedicatedMasterType":"m3.medium.elasticsearch",
-         "DedicatedMasterCount":"3"
+   "Properties": {
+      "DomainName": "test",
+      "ElasticsearchVersion": "7.10",
+      "ElasticsearchClusterConfig": {
+         "DedicatedMasterEnabled": true,
+         "InstanceCount": "2",
+         "ZoneAwarenessEnabled": true,
+         "InstanceType": "m3.medium.elasticsearch",
+         "DedicatedMasterType": "m3.medium.elasticsearch",
+         "DedicatedMasterCount": "3"
       },
       "EBSOptions":{
-         "EBSEnabled":true,
-         "Iops":0,
-         "VolumeSize":20,
-         "VolumeType":"gp2"
+         "EBSEnabled": true,
+         "Iops": "0",
+         "VolumeSize": "20",
+         "VolumeType": "gp2"
       },
-      "SnapshotOptions":{
-         "AutomatedSnapshotStartHour":"0"
-      },
-      "AccessPolicies":{
+      "AccessPolicies": {
          "Version":"2012-10-17",
          "Statement":[
             {
-               "Effect":"Allow",
-               "Principal":{
-                  "AWS":"arn:aws:iam::123456789012:user/es-user"
+               "Effect": "Allow",
+               "Principal": {
+                  "AWS": "arn:aws:iam::123456789012:user/es-user"
                },
                "Action":"es:*",
-               "Resource":"arn:aws:es:us-east-1:123456789012:domain/test/*"
+               "Resource": "arn:aws:es:us-east-1:123456789012:domain/test/*"
             }
          ]
       },
-      "AdvancedOptions":{
-         "rest.action.multi.allow_explicit_index":"true"
+      "LogPublishingOptions": {
+         "ES_APPLICATION_LOGS": {
+           "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-application-logs",
+           "Enabled": true
+         },
+         "SEARCH_SLOW_LOGS": {
+           "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-slow-logs",
+           "Enabled": true
+         },
+         "INDEX_SLOW_LOGS": {
+           "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-index-slow-logs",
+           "Enabled": true
+         }
+      },
+      "AdvancedOptions": {
+         "rest.action.multi.allow_explicit_index": true
       }
    }
 }
@@ -236,32 +250,41 @@ The following example creates an Amazon ES domain running Elasticsearch 7\.4 tha
 ElasticsearchDomain:
   Type: AWS::Elasticsearch::Domain
   Properties:
-    DomainName: "test"
+    DomainName: 'test'
+    ElasticsearchVersion: '7.10'
     ElasticsearchClusterConfig:
-      DedicatedMasterEnabled: "true"
-      InstanceCount: "2"
-      ZoneAwarenessEnabled: "true"
-      InstanceType: "m3.medium.elasticsearch"
-      DedicatedMasterType: "m3.medium.elasticsearch"
-      DedicatedMasterCount: "3"
+      DedicatedMasterEnabled: true
+      InstanceCount: '2'
+      ZoneAwarenessEnabled: true
+      InstanceType: 'm3.medium.elasticsearch'
+      DedicatedMasterType: 'm3.medium.elasticsearch'
+      DedicatedMasterCount: '3'
     EBSOptions:
       EBSEnabled: true
-      Iops: 0
-      VolumeSize: 20
-      VolumeType: "gp2"
-    SnapshotOptions:
-      AutomatedSnapshotStartHour: "0"
+      Iops: '0'
+      VolumeSize: '20'
+      VolumeType: 'gp2'
     AccessPolicies:
-      Version: "2012-10-17"
+      Version: '2012-10-17'
       Statement:
         -
-          Effect: "Allow"
+          Effect: 'Allow'
           Principal:
-            AWS: "arn:aws:iam::123456789012:user/es-user"
-          Action: "es:*"
-          Resource: "arn:aws:es:us-east-1:846973539254:domain/test/*"
+            AWS: 'arn:aws:iam::123456789012:user/es-user'
+          Action: 'es:*'
+          Resource: 'arn:aws:es:us-east-1:846973539254:domain/test/*'
+    LogPublishingOptions:
+      ES_APPLICATION_LOGS:
+          CloudWatchLogsLogGroupArn: 'arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-application-logs'
+          Enabled: true
+      SEARCH_SLOW_LOGS:
+          CloudWatchLogsLogGroupArn: 'arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-slow-logs'
+          Enabled: true
+      INDEX_SLOW_LOGS:
+          CloudWatchLogsLogGroupArn: 'arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-index-slow-logs'
+          Enabled: true
     AdvancedOptions:
-      rest.action.multi.allow_explicit_index: "true"
+      rest.action.multi.allow_explicit_index: true
 ```
 
 ### Create a domain with VPC options<a name="aws-resource-elasticsearch-domain--examples--Create_a_domain_with_VPC_options"></a>
@@ -316,13 +339,10 @@ The following example creates a domain with VPC options\.
           }
         },
         "EBSOptions": {
-          "EBSEnabled": "true",
-          "Iops": 0,
-          "VolumeSize": 10,
+          "EBSEnabled": true,
+          "Iops": "0",
+          "VolumeSize": "10",
           "VolumeType": "standard"
-        },
-        "SnapshotOptions": {
-          "AutomatedSnapshotStartHour": "0"
         },
         "AccessPolicies": {
           "Version": "2012-10-17",
@@ -337,18 +357,8 @@ The following example creates a domain with VPC options\.
             }
           ]
         },
-        "LogPublishingOptions": {
-          "SEARCH_SLOW_LOGS": {
-            "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-slow-logs",
-            "Enabled": "true"
-          },
-          "INDEX_SLOW_LOGS": {
-            "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-index-slow-logs",
-            "Enabled": "true"
-          }
-        },
         "AdvancedOptions": {
-          "rest.action.multi.allow_explicit_index": "true"
+          "rest.action.multi.allow_explicit_index": true
         },
         "Tags": [
           {
@@ -451,10 +461,10 @@ AWSTemplateFormatVersion: '2010-09-09'
 Description: ElasticsearchDomain resource
 Parameters:
   DomainName:
-    Description: User defined Elasticsearch Domain name
+    Description: User-defined Elasticsearch domain name
     Type: String
   ElasticsearchVersion:
-    Description: User defined Elasticsearch Version
+    Description: User-defined Elasticsearch version
     Type: String
   InstanceType:
     Type: String
@@ -479,12 +489,10 @@ Resources:
         InstanceType:
           Ref: InstanceType
       EBSOptions:
-        EBSEnabled: 'true'
-        Iops: 0
-        VolumeSize: 10
-        VolumeType: standard
-      SnapshotOptions:
-        AutomatedSnapshotStartHour: '0'
+        EBSEnabled: true
+        Iops: '0'
+        VolumeSize: '10'
+        VolumeType: 'standard'
       AccessPolicies:
         Version: '2012-10-17'
         Statement:
@@ -493,17 +501,8 @@ Resources:
               AWS: '*'
             Action: 'es:*'
             Resource: '*'
-      LogPublishingOptions:
-        SEARCH_SLOW_LOGS:
-          CloudWatchLogsLogGroupArn: >-
-            arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-slow-logs
-          Enabled: 'true'
-        INDEX_SLOW_LOGS:
-          CloudWatchLogsLogGroupArn: >-
-            arn:aws:logs:us-east-1:123456789012:log-group:/aws/aes/domains/es-index-slow-logs
-          Enabled: 'true'
       AdvancedOptions:
-        rest.action.multi.allow_explicit_index: 'true'
+        rest.action.multi.allow_explicit_index: true
       Tags:
         - Key: foo
           Value: bar

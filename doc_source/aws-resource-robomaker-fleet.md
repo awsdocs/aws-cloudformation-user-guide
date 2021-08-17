@@ -65,11 +65,13 @@ The Amazon Resource Name \(ARN\) of the fleet, such as `arn:aws:robomaker:us-wes
 
 ## Examples<a name="aws-resource-robomaker-fleet--examples"></a>
 
-### Specifies an AWS RoboMaker Fleet<a name="aws-resource-robomaker-fleet--examples--Specifies_an_AWS_RoboMaker_Fleet"></a>
+
+
+### Specifies an AWS RoboMaker Fleet<a name="aws-resource-robomaker-fleet--examples--Specifies_an__RoboMaker_Fleet"></a>
 
 The following example creates a fleet\.
 
-#### JSON<a name="aws-resource-robomaker-fleet--examples--Specifies_an_AWS_RoboMaker_Fleet--json"></a>
+#### JSON<a name="aws-resource-robomaker-fleet--examples--Specifies_an__RoboMaker_Fleet--json"></a>
 
 ```
 {
@@ -94,7 +96,7 @@ The following example creates a fleet\.
 }
 ```
 
-#### YAML<a name="aws-resource-robomaker-fleet--examples--Specifies_an_AWS_RoboMaker_Fleet--yaml"></a>
+#### YAML<a name="aws-resource-robomaker-fleet--examples--Specifies_an__RoboMaker_Fleet--yaml"></a>
 
 ```
 ---

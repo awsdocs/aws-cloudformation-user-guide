@@ -51,7 +51,7 @@ A description of the schema\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegistryName`  <a name="cfn-eventschemas-schema-registryname"></a>
-The name of the registry\.  
+The name of the schema registry\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -115,9 +115,9 @@ The version number of the schema\.
 Resources:
   ExecutionStatusChangeSchema:
     Type: AWS::EventSchemas::Schema
-    Properties:Ref
-      Registry: 'aws.events'
-      Name: ExecutionStatusChange
+    Properties
+      RegistryName: 'aws.events'
+      SchemaName: ExecutionStatusChange
       Description: 'event emitted when the status of a state machine execution change'
       Type: OpenApi3
       Content: >
@@ -127,6 +127,7 @@ Resources:
             "version": "1.0.0",
             "title": "StepFunctionsExecutionStatusChange"
           },
+          "paths":{}
           "components": {
             "schemas": {
               "StepFunctionsExecutionStatusChange": {

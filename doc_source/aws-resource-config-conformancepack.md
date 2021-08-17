@@ -51,8 +51,8 @@ Name of the conformance pack you want to create\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DeliveryS3Bucket`  <a name="cfn-config-conformancepack-deliverys3bucket"></a>
-AWS Config stores intermediate files while processing conformance pack template\.  
-*Required*: Yes  
+The name of the Amazon S3 bucket where AWS Config stores conformance pack templates\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -85,6 +85,8 @@ You must have access to read Amazon S3 bucket\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-config-conformancepack--examples"></a>
+
+
 
 ### Conformance Pack<a name="aws-resource-config-conformancepack--examples--Conformance_Pack"></a>
 

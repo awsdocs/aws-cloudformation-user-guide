@@ -83,6 +83,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigatewayv2-routeresponse--examples"></a>
 
+
+
 ### Route response creation example<a name="aws-resource-apigatewayv2-routeresponse--examples--Route_response_creation_example"></a>
 
 The following example creates a `RouteResponse` resource for a WebSocket API called `MyApi` that already has an `integration` called `MyIntegration` and a `route` called `MyRoute`\.
@@ -119,3 +121,4 @@ MyRouteResponse:
 
 ## See also<a name="aws-resource-apigatewayv2-routeresponse--seealso"></a>
 + [CreateRouteResponse](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-routes-routeid-routeresponses.html#CreateRouteResponse) in the *Amazon API Gateway Version 2 API Reference*
+

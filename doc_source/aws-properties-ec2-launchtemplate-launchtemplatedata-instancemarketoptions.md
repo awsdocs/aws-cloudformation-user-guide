@@ -42,3 +42,4 @@ The options for Spot Instances\.
 
 ## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions--seealso"></a>
 +  [ LaunchTemplateInstanceMarketOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateInstanceMarketOptionsRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

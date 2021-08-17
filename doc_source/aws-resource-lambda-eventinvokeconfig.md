@@ -95,6 +95,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ## Examples<a name="aws-resource-lambda-eventinvokeconfig--examples"></a>
 
+
+
 ### Asynchronous Invocation Configuration<a name="aws-resource-lambda-eventinvokeconfig--examples--Asynchronous_Invocation_Configuration"></a>
 
 Error handling and destination configuration for a version of a function\. Node\.js function and version are included\.
@@ -102,13 +104,39 @@ Error handling and destination configuration for a version of a function\. Node\
 #### YAML<a name="aws-resource-lambda-eventinvokeconfig--examples--Asynchronous_Invocation_Configuration--yaml"></a>
 
 ```
-Resources: function: Type: AWS::Lambda::Function Properties: Handler: index.handler Role:
-          arn:aws:iam::123456789012:role/lambda-role Code: ZipFile: | exports.handler = async
-        (event) => { console.log(JSON.stringify(event, null, 2)); const response = { statusCode: 200, body:
-        JSON.stringify('Hello from Lambda!'), }; return response; }; Runtime: nodejs12.x TracingConfig: Mode: Active
-        version: Type: AWS::Lambda::Version Properties: FunctionName: !Ref function asyncconfig: Type:
-        AWS::Lambda::EventInvokeConfig Properties: DestinationConfig: OnFailure: Destination:
-        arn:aws:sqs:us-east-2:123456789012:dlq OnSuccess: Destination: arn:aws:sqs:us-east-2:123456789012:dlq
-        FunctionName: !Ref function MaximumEventAgeInSeconds: 300 MaximumRetryAttempts: 1 Qualifier: !GetAtt
-        version.Version
+Resources:
+  function:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: index.handler
+      Role: arn:aws:iam::123456789012:role/lambda-role
+      Code:
+        ZipFile: |
+          exports.handler = async (event) => {
+              console.log(JSON.stringify(event, null, 2));
+              const response = {
+                  statusCode: 200,
+                  body: JSON.stringify('Hello from Lambda!'),
+              };
+              return response;
+          };
+      Runtime: nodejs12.x
+      TracingConfig:
+        Mode: Active
+  version:
+    Type: AWS::Lambda::Version
+    Properties:
+      FunctionName: !Ref function
+  asyncconfig:
+    Type: AWS::Lambda::EventInvokeConfig
+    Properties:
+      DestinationConfig:
+          OnFailure:
+            Destination: arn:aws:sqs:us-east-2:123456789012:dlq
+          OnSuccess:
+            Destination: arn:aws:sqs:us-east-2:123456789012:dlq
+      FunctionName: !Ref function
+      MaximumEventAgeInSeconds: 300
+      MaximumRetryAttempts: 1
+      Qualifier: !GetAtt version.Version
 ```

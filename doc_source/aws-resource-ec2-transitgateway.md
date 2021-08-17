@@ -120,13 +120,26 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-ec2-transitgateway-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-ec2-transitgateway-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+The ID of the transit gateway\.
+
 ## Examples<a name="aws-resource-ec2-transitgateway--examples"></a>
 
-### Transit Gateway<a name="aws-resource-ec2-transitgateway--examples--Transit_Gateway"></a>
+
+
+### Create a transit gateway<a name="aws-resource-ec2-transitgateway--examples--Create_a_transit_gateway"></a>
 
 The following example declares a transit gateway\.
 
-#### JSON<a name="aws-resource-ec2-transitgateway--examples--Transit_Gateway--json"></a>
+#### JSON<a name="aws-resource-ec2-transitgateway--examples--Create_a_transit_gateway--json"></a>
 
 ```
 "myTransitGateway": {
@@ -150,7 +163,7 @@ The following example declares a transit gateway\.
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-transitgateway--examples--Transit_Gateway--yaml"></a>
+#### YAML<a name="aws-resource-ec2-transitgateway--examples--Create_a_transit_gateway--yaml"></a>
 
 ```
   myTransitGateway:
@@ -169,4 +182,5 @@ The following example declares a transit gateway\.
 
 ## See also<a name="aws-resource-ec2-transitgateway--seealso"></a>
 +  [CreateTransitGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTransitGateway.html) in the *Amazon EC2 API Reference*
-+  [AWS::RAM::ResourceShare](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html)
++  [AWS::RAM::ResourceShare](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html)
+

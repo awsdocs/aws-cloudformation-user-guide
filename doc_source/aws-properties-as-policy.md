@@ -1,10 +1,8 @@
 # AWS::AutoScaling::ScalingPolicy<a name="aws-properties-as-policy"></a>
 
-Specifies an Amazon EC2 Auto Scaling scaling policy so that the Auto Scaling group can change the number of instances available for your application in response to changing demand\.
+The AWS::AutoScaling::ScalingPolicy resource specifies an Amazon EC2 Auto Scaling scaling policy so that the Auto Scaling group can change the number of instances available for your application in response to changing demand\.
 
-If you create either a step scaling policy or a simple scaling policy, you must also create a CloudWatch alarm that monitors a CloudWatch metric for your Auto Scaling group\. Note that you can associate a CloudWatch alarm with only one scaling policy\. 
-
-For more information about using scaling policies to scale your Auto Scaling group automatically, see [Dynamic Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html) in the *Amazon EC2 Auto Scaling User Guide*\. 
+For more information about using scaling policies to scale your Auto Scaling group automatically, see [Dynamic scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html) in the *Amazon EC2 Auto Scaling User Guide*\. 
 
 ## Syntax<a name="aws-properties-as-policy-syntax"></a>
 
@@ -53,26 +51,20 @@ Properties:
 
 `AdjustmentType`  <a name="cfn-as-scalingpolicy-adjustmenttype"></a>
 Specifies how the scaling adjustment is interpreted\. The valid values are `ChangeInCapacity`, `ExactCapacity`, and `PercentChangeInCapacity`\.   
-Required if the policy type is `StepScaling` or `SimpleScaling`\. For more information, see [Scaling Adjustment Types](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html#as-scaling-adjustment) in the *Amazon EC2 Auto Scaling User Guide*\.  
+Required if the policy type is `StepScaling` or `SimpleScaling`\. For more information, see [Scaling adjustment types](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html#as-scaling-adjustment) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: Conditional  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutoScalingGroupName`  <a name="cfn-as-scalingpolicy-autoscalinggroupname"></a>
-The name or Amazon Resource Name \(ARN\) of the Auto Scaling group that you want to attach the policy to\.   
+The name of the Auto Scaling group\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Cooldown`  <a name="cfn-as-scalingpolicy-cooldown"></a>
 The duration of the policy's cooldown period, in seconds\. When a cooldown period is specified here, it overrides the default cooldown period defined for the Auto Scaling group\.  
-Valid only if the policy type is `SimpleScaling`\. For more information, see [Scaling Cooldowns for Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
+Valid only if the policy type is `SimpleScaling`\. For more information, see [Scaling cooldowns for Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -89,14 +81,11 @@ The aggregation type for the CloudWatch metrics\. The valid values are `Minimum`
 Valid only if the policy type is `StepScaling`\.   
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `32`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinAdjustmentMagnitude`  <a name="cfn-as-scalingpolicy-minadjustmentmagnitude"></a>
 The minimum value to scale by when the adjustment type is `PercentChangeInCapacity`\. For example, suppose that you create a step scaling policy to scale out an Auto Scaling group by 25 percent and you specify a `MinAdjustmentMagnitude` of 2\. If the group has 4 instances and the scaling policy is performed, 25 percent of 4 is 1\. However, because you specified a `MinAdjustmentMagnitude` of 2, Amazon EC2 Auto Scaling scales out the group by 2 instances\.   
-Valid only if the policy type is `StepScaling` or `SimpleScaling`\. For more information, see [Scaling Adjustment Types](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html#as-scaling-adjustment) in the *Amazon EC2 Auto Scaling User Guide*\.  
+Valid only if the policy type is `StepScaling` or `SimpleScaling`\. For more information, see [Scaling adjustment types](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html#as-scaling-adjustment) in the *Amazon EC2 Auto Scaling User Guide*\.  
 Some Auto Scaling groups use instance weights\. In this case, set the `MinAdjustmentMagnitude` to a value that is at least as large as your largest instance weight\.
 *Required*: No  
 *Type*: Integer  
@@ -107,7 +96,7 @@ One of the following policy types:
 +  `TargetTrackingScaling` 
 +  `StepScaling` 
 +  `SimpleScaling` \(default\)
-For more information, see [Target Tracking Scaling Policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-target-tracking.html) and [Step and Simple Scaling Policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
+For more information, see [Target tracking scaling policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-target-tracking.html) and [Step and simple scaling policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -133,7 +122,7 @@ The following predefined metrics are available:
 + `ASGAverageNetworkIn`
 + `ASGAverageNetworkOut`
 + `ALBRequestCountPerTarget` 
-If you specify `ALBRequestCountPerTarget` for the metric, you must specify the `ResourceLabel` parameter with the `PredefinedMetricSpecification`\.  
+If you specify `ALBRequestCountPerTarget` for the metric, you must specify the `ResourceLabel` property with the `PredefinedMetricSpecification`\.  
 *Required*: Conditional  
 *Type*: [TargetTrackingConfiguration](aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -142,7 +131,7 @@ If you specify `ALBRequestCountPerTarget` for the metric, you must specify the `
 
 ### Ref<a name="aws-properties-as-policy-return-values-ref"></a>
 
-When you specify an `AWS::AutoScaling::ScalingPolicy` type as an argument to the `Ref` function, AWS CloudFormation returns the policy Amazon Resource Name \(ARN\)\. For example: `arn:aws:autoscaling:us-east-2:123456789012:scalingPolicy:ab12c4d5-a1b2-a1b2-a1b2-ab12c4d56789:autoScalingGroupName/myStack-AutoScalingGroup-AB12C4D5E6:policyName/myStack-myScalingPolicy-AB12C4D5E6`\.
+When you specify an `AWS::AutoScaling::ScalingPolicy` type as an argument to the `Ref` function, CloudFormation returns the policy Amazon Resource Name \(ARN\)\. For example: `arn:aws:autoscaling:us-east-2:123456789012:scalingPolicy:ab12c4d5-a1b2-a1b2-a1b2-ab12c4d56789:autoScalingGroupName/myStack-AutoScalingGroup-AB12C4D5E6:policyName/myStack-myScalingPolicy-AB12C4D5E6`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
@@ -150,11 +139,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 The following examples specify scaling policies for an Auto Scaling group\.
 
-### Target Tracking Scaling Policy<a name="aws-properties-as-policy--examples--Target_Tracking_Scaling_Policy"></a>
+For more template snippets, see [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)\.
+
+### Target tracking scaling policy<a name="aws-properties-as-policy--examples--Target_tracking_scaling_policy"></a>
 
 The following example creates an Auto Scaling group with two target tracking scaling policies based on the `ASGAverageCPUUtilization` and `ALBRequestCountPerTarget` metrics\. The properties of each of these policies include a `TargetValue` property that references a [parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) value from the same template\.
 
-#### JSON<a name="aws-properties-as-policy--examples--Target_Tracking_Scaling_Policy--json"></a>
+#### JSON<a name="aws-properties-as-policy--examples--Target_tracking_scaling_policy--json"></a>
 
 ```
 {
@@ -298,7 +289,7 @@ The following example creates an Auto Scaling group with two target tracking sca
 }
 ```
 
-#### YAML<a name="aws-properties-as-policy--examples--Target_Tracking_Scaling_Policy--yaml"></a>
+#### YAML<a name="aws-properties-as-policy--examples--Target_tracking_scaling_policy--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -372,14 +363,16 @@ Resources:
         TargetValue: !Ref ALBRequestCountTargetValue
 ```
 
-### Step Scaling Policy<a name="aws-properties-as-policy--examples--Step_Scaling_Policy"></a>
+### Step scaling policy<a name="aws-properties-as-policy--examples--Step_scaling_policy"></a>
 
-The following example creates a scaling policy with the `StepScaling` policy type and the `ChangeInCapacity` adjustment type\. When an associated alarm is triggered, the policy increases the capacity of the Auto Scaling group based on the following step adjustments \(assuming a CloudWatch alarm threshold of 70 percent\): 
+The following example creates a scaling policy with the `StepScaling` policy type and the `ChangeInCapacity` adjustment type\. You must also create a CloudWatch alarm that monitors a CloudWatch metric for your Auto Scaling group\. You can associate a CloudWatch alarm with only one scaling policy\. 
+
+When the associated alarm is triggered, the policy increases the capacity of the Auto Scaling group based on the following step adjustments \(assuming a CloudWatch alarm threshold of 70 percent\): 
 + Increase capacity by 1 when the value of the metric is greater than or equal to 70 percent but less than 85 percent 
 + Increase capacity by 2 when the value of the metric is greater than or equal to 85 percent but less than 95 percent 
 + Increase capacity by 3 when the value of the metric is greater than or equal to 95 percent 
 
-#### JSON<a name="aws-properties-as-policy--examples--Step_Scaling_Policy--json"></a>
+#### JSON<a name="aws-properties-as-policy--examples--Step_scaling_policy--json"></a>
 
 ```
 {
@@ -416,7 +409,7 @@ The following example creates a scaling policy with the `StepScaling` policy typ
 }
 ```
 
-#### YAML<a name="aws-properties-as-policy--examples--Step_Scaling_Policy--yaml"></a>
+#### YAML<a name="aws-properties-as-policy--examples--Step_scaling_policy--yaml"></a>
 
 ```
 ---
@@ -441,11 +434,11 @@ Resources:
           ScalingAdjustment: 3
 ```
 
-### Simple Scaling Policy<a name="aws-properties-as-policy--examples--Simple_Scaling_Policy"></a>
+### Simple scaling policy<a name="aws-properties-as-policy--examples--Simple_scaling_policy"></a>
 
-The following example creates a scaling policy with the `SimpleScaling` policy type and the `ChangeInCapacity` adjustment type\. The policy increases capacity by one when it is triggered\.
+The following example creates a scaling policy with the `SimpleScaling` policy type and the `ChangeInCapacity` adjustment type\. The policy increases capacity by one when it is triggered\. You must also create a CloudWatch alarm that monitors a CloudWatch metric for your Auto Scaling group\. You can associate a CloudWatch alarm with only one scaling policy\. 
 
-#### JSON<a name="aws-properties-as-policy--examples--Simple_Scaling_Policy--json"></a>
+#### JSON<a name="aws-properties-as-policy--examples--Simple_scaling_policy--json"></a>
 
 ```
 {
@@ -466,7 +459,7 @@ The following example creates a scaling policy with the `SimpleScaling` policy t
 }
 ```
 
-#### YAML<a name="aws-properties-as-policy--examples--Simple_Scaling_Policy--yaml"></a>
+#### YAML<a name="aws-properties-as-policy--examples--Simple_scaling_policy--yaml"></a>
 
 ```
 ---

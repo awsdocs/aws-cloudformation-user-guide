@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-transfer-user-homedirectorymapentry-properties"></a>
 
 `Entry`  <a name="cfn-transfer-user-homedirectorymapentry-entry"></a>
-Represents an entry and a target for `HomeDirectoryMappings`\.  
+Represents an entry for `HomeDirectoryMappings`\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `1024`  

@@ -1,8 +1,8 @@
 # Sample templates<a name="conditions-sample-templates"></a>
 
-## Conditionally create resources for a production, development, or test stack<a name="w6640ab1c25c28c21c47b3"></a>
+## Conditionally create resources for a production, development, or test stack<a name="w9292ab1c33c28c21c47b3"></a>
 
-In some cases, you might want to create stacks that are similar but with minor tweaks\. For example, you might have a template that you use for production applications\. You want to create the same production stack so that you can use it for development or testing\. However, for development and testing, you might not require all the extra capacity that's included in a production\-level stack\. Instead, you can use an environment type input parameter in order to conditionally create stack resources that are specific to production, development, or testing, as shown in the following sample: 
+In some cases, you might want to create stacks that are similar but with minor tweaks\. For example, you might have a template that you use for production applications\. You want to create the same production stack so that you can use it for development or testing\. However, for development and testing, you might not require all the extra capacity that's included in a production\-level stack\. Instead, you can use an environment type input parameter to conditionally create stack resources that are specific to production, development, or testing, as shown in the following sample:
 
 **Example JSON**  
 
@@ -138,11 +138,11 @@ You can specify `prod`, `dev`, or `test` for the `EnvType` parameter\. For each 
 
 In the `InstanceType` property, the template nests two `Fn::If` intrinsic functions to determine which instance type to use\. If the `CreateProdResources` condition is true, the instance type is `c1.xlarge`\. If the condition is false, the `CreateDevResources` condition is evaluated\. If the `CreateDevResources` condition is true, the instance type is `m1.large` or else the instance type is `m1.small`\.
 
- In addition to the instance type, the production environment creates and attaches an Amazon EC2 volume to the instance\. The `MountPoint` and `NewVolume` resources are associated with the `CreateProdResources` condition so that the resources are created only if the condition evaluates to true\.
+In addition to the instance type, the production environment creates and attaches an Amazon EC2 volume to the instance\. The `MountPoint` and `NewVolume` resources are associated with the `CreateProdResources` condition so that the resources are created only if the condition evaluates to true\.
 
-## Conditionally assign a resource property<a name="w6640ab1c25c28c21c47b5"></a>
+## Conditionally assign a resource property<a name="w9292ab1c33c28c21c47b5"></a>
 
-In this example, you can create an Amazon RDS DB instance from a snapshot\. If you specify the `DBSnapshotName` parameter, AWS CloudFormation uses the parameter value as the snapshot name when creating the DB instance\. If you keep the default value \(empty string\), AWS CloudFormation removes the `DBSnapshotIdentifier` property and creates a DB instance from scratch\.
+In this example, you can create an Amazon RDS DB instance from a snapshot\. If you specify the `DBSnapshotName` parameter, CloudFormation uses the parameter value as the snapshot name when creating the DB instance\. If you keep the default value \(empty string\), CloudFormation removes the `DBSnapshotIdentifier` property and creates a DB instance from scratch\.
 
 The example defines the `DBUser` and `DBPassword` parameters with their `NoEcho` property set to `true`\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events, except for information stored in the locations specified below\.
 
@@ -154,7 +154,7 @@ The `Metadata` attribute of a resource definition\. For more information, [Metad
 We strongly recommend you do not use these mechanisms to include sensitive information, such as passwords or secrets\.
 
 **Important**  
-Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
+Rather than embedding sensitive information directly in your CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
 For more information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
 **Example JSON**  
@@ -280,11 +280,11 @@ Resources:
         old_passwords: 0
 ```
 
-The `UseDBSnapshot` condition evaluates to true only if the `DBSnapshotName` is not an empty string\. If the `UseDBSnapshot` condition evaluates to true, AWS CloudFormation uses the `DBSnapshotName` parameter value for the `DBSnapshotIdentifier` property\. If the condition evaluates to false, AWS CloudFormation removes the `DBSnapshotIdentifier` property\. The `AWS::NoValue` pseudo parameter removes the corresponding resource property when it is used as a return value\.
+The `UseDBSnapshot` condition evaluates to true only if the `DBSnapshotName` isn't an empty string\. If the `UseDBSnapshot` condition evaluates to true, CloudFormation uses the `DBSnapshotName` parameter value for the `DBSnapshotIdentifier` property\. If the condition evaluates to false, CloudFormation removes the `DBSnapshotIdentifier` property\. The `AWS::NoValue` pseudo parameter removes the corresponding resource property when it's used as a return value\.
 
-## Conditionally use an existing resource<a name="w6640ab1c25c28c21c47b7"></a>
+## Conditionally use an existing resource<a name="w9292ab1c33c28c21c47b7"></a>
 
-In this example, you can use an Amazon EC2 security group that has already been created or you can create a new security group, which is specified in the template\. For the `ExistingSecurityGroup` parameter, you can specify the `default` security group name or `NONE`\. If you specify `default`, AWS CloudFormation uses a security group that has already been created and is named `default`\. If you specify `NONE`, AWS CloudFormation creates the security group that's defined in the template\.
+In this example, you can use an Amazon EC2 security group that has already been created or you can create a new security group, which is specified in the template\. For the `ExistingSecurityGroup` parameter, you can specify the `default` security group name or `NONE`\. If you specify `default`, CloudFormation uses a security group that has already been created and is named `default`\. If you specify `NONE`, CloudFormation creates the security group that's defined in the template\.
 
 **Example JSON**  
 
@@ -388,4 +388,4 @@ To determine whether to create the `NewSecurityGroup` resource, the resource is 
 
 In the `SecurityGroups` property, the template uses the `Fn::If` intrinsic function to determine which security group to use\. If the `CreateNewSecurityGroup` condition evaluates to true, the security group property references the `NewSecurityGroup` resource\. If the `CreateNewSecurityGroup` condition evaluates to false, the security group property references the `ExistingSecurityGroup` parameter \(the `default` security group\)\.
 
-Lastly, the template conditionally outputs the security group ID\. If the `CreateNewSecurityGroup` condition evaluates to true, AWS CloudFormation outputs the security group ID of the `NewSecurityGroup` resource\. If the condition is false, AWS CloudFormation outputs the security group ID of the `ExistingSecurityGroup` resource\.
+Lastly, the template conditionally outputs the security group ID\. If the `CreateNewSecurityGroup` condition evaluates to true, CloudFormation outputs the security group ID of the `NewSecurityGroup` resource\. If the condition is false, CloudFormation outputs the security group ID of the `ExistingSecurityGroup` resource\.

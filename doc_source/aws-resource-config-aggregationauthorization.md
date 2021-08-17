@@ -64,6 +64,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-config-aggregationauthorization--examples"></a>
 
+
+
 ### Authorize Another Account<a name="aws-resource-config-aggregationauthorization--examples--Authorize_Another_Account"></a>
 
 The following example creates an AggregationAuthorization that authorizes another account to aggregate your AWS Config data into a specific region\. 
@@ -99,7 +101,7 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "Enable AWS Config",
+    "Description": "Enable Config",
     "Metadata": {
         "AWS::CloudFormation::Interface": {
             "ParameterGroups": [
@@ -346,7 +348,7 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
             }
         },
         "ConfigAggregator": {
-            "Type": "AWS::Config::ConfigurationAggregatorName",
+            "Type": "AWS::Config::ConfigurationAggregator",
             "Condition": "CreateAggregator",
             "Properties": {
                 "Name": "name",
@@ -382,7 +384,7 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: Enable AWS Config
+Description: Enable Config
 
 Metadata:
   AWS::CloudFormation::Interface:
@@ -528,7 +530,7 @@ Resources:
         SourceIdentifier: S3_BUCKET_PUBLIC_READ_PROHIBITED
 
   ConfigAggregator:
-    Type: AWS::Config::ConfigurationAggregatorName
+    Type: AWS::Config::ConfigurationAggregator
     Condition: CreateAggregator
     Properties:
     ConfigurationAggregatorName: name

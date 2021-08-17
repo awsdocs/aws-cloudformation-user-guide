@@ -37,7 +37,7 @@ Properties:
 
 `Description`  <a name="cfn-networkmanager-site-description"></a>
 A description of your site\.  
-Length Constraints: Maximum length of 256 characters\.  
+Constraints: Maximum length of 256 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -86,6 +86,8 @@ The ARN of the site\. For example, `arn:aws:networkmanager::123456789012:site/gl
 The ID of the site\. For example, `site-444555aaabbb11223`\.
 
 ## Examples<a name="aws-resource-networkmanager-site--examples"></a>
+
+
 
 ### Site<a name="aws-resource-networkmanager-site--examples--Site"></a>
 

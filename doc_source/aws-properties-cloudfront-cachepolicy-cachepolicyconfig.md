@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudfront-cachepolicy-cachepolicyconfig-properties"></a>
 
 `Comment`  <a name="cfn-cloudfront-cachepolicy-cachepolicyconfig-comment"></a>
-A comment to describe the cache policy\.  
+A comment to describe the cache policy\. The comment cannot be longer than 128 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -48,14 +48,14 @@ A comment to describe the cache policy\.
 `DefaultTTL`  <a name="cfn-cloudfront-cachepolicy-cachepolicyconfig-defaultttl"></a>
 The default amount of time, in seconds, that you want objects to stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated\. CloudFront uses this value as the object’s time to live \(TTL\) only when the origin does *not* send `Cache-Control` or `Expires` headers with the object\. For more information, see [Managing How Long Content Stays in an Edge Cache \(Expiration\)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html) in the *Amazon CloudFront Developer Guide*\.  
 The default value for this field is 86400 seconds \(one day\)\. If the value of `MinTTL` is more than 86400 seconds, then the default value for this field is the same as the value of `MinTTL`\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxTTL`  <a name="cfn-cloudfront-cachepolicy-cachepolicyconfig-maxttl"></a>
 The maximum amount of time, in seconds, that objects stay in the CloudFront cache before CloudFront sends another request to the origin to see if the object has been updated\. CloudFront uses this value only when the origin sends `Cache-Control` or `Expires` headers with the object\. For more information, see [Managing How Long Content Stays in an Edge Cache \(Expiration\)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html) in the *Amazon CloudFront Developer Guide*\.  
 The default value for this field is 31536000 seconds \(one year\)\. If the value of `MinTTL` or `DefaultTTL` is more than 31536000 seconds, then the default value for this field is the same as the value of `DefaultTTL`\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -73,6 +73,6 @@ A unique name to identify the cache policy\.
 
 `ParametersInCacheKeyAndForwardedToOrigin`  <a name="cfn-cloudfront-cachepolicy-cachepolicyconfig-parametersincachekeyandforwardedtoorigin"></a>
 The HTTP headers, cookies, and URL query strings to include in the cache key\. The values included in the cache key are automatically included in requests that CloudFront sends to the origin\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [ParametersInCacheKeyAndForwardedToOrigin](aws-properties-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

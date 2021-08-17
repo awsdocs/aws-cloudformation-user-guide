@@ -63,13 +63,13 @@ The description of the data source\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DynamoDBConfig`  <a name="cfn-appsync-datasource-dynamodbconfig"></a>
-AwsRegion and TableName for an Amazon DynamoDB table in your account\.  
+AWS Region and TableName for an Amazon DynamoDB table in your account\.  
 *Required*: No  
 *Type*: [DynamoDBConfig](aws-properties-appsync-datasource-dynamodbconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ElasticsearchConfig`  <a name="cfn-appsync-datasource-elasticsearchconfig"></a>
-AwsRegion and Endpoints for an Amazon Elasticsearch Service domain in your account\.  
+AWS Region and Endpoints for an Amazon Elasticsearch Service domain in your account\.  
 *Required*: No  
 *Type*: [ElasticsearchConfig](aws-properties-appsync-datasource-elasticsearchconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -81,7 +81,7 @@ Endpoints for an HTTP data source\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LambdaConfig`  <a name="cfn-appsync-datasource-lambdaconfig"></a>
-A valid ARN of a Lambda function in your account\.  
+An ARN of a Lambda function in valid ARN format\. This can be the ARN of a Lambda function that exists in the current account or in another account\.  
 *Required*: No  
 *Type*: [LambdaConfig](aws-properties-appsync-datasource-lambdaconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -99,7 +99,7 @@ Relational Database configuration of the relational database data source\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceRoleArn`  <a name="cfn-appsync-datasource-servicerolearn"></a>
-The AWS IAM service role ARN for the data source\. The system assumes this role when accessing the data source\.  
+The AWS Identity and Access Management service role ARN for the data source\. The system assumes this role when accessing the data source\.  
 Required if `Type` is specified as `AWS_LAMBDA`, `AMAZON_DYNAMODB`, or `AMAZON_ELASTICSEARCH`\.   
 *Required*: Conditional  
 *Type*: String  
@@ -137,9 +137,11 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws
 The Amazon Resource Name \(ARN\) of the API key, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/datasources/datasourcename`\. 
 
 `Name`  <a name="Name-fn::getatt"></a>
-Friendly name for you to identify your AppSync data source after creation\.
+Friendly name for you to identify your AWS AppSync data source after creation\.
 
 ## Examples<a name="aws-resource-appsync-datasource--examples"></a>
+
+
 
 ### Data Source Creation Example<a name="aws-resource-appsync-datasource--examples--Data_Source_Creation_Example"></a>
 
@@ -228,3 +230,4 @@ Resources:
 
 ## See also<a name="aws-resource-appsync-datasource--seealso"></a>
 +  [CreateDataSource](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateDataSource.html) operation in the *AWS AppSync API Reference*\.
+

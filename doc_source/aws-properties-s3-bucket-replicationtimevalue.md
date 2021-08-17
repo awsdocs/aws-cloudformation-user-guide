@@ -1,6 +1,6 @@
 # AWS::S3::Bucket ReplicationTimeValue<a name="aws-properties-s3-bucket-replicationtimevalue"></a>
 
-Not currently supported by AWS CloudFormation\.
+ A container specifying the time value for S3 Replication Time Control \(S3 RTC\) and replication metrics `EventThreshold`\. 
 
 ## Syntax<a name="aws-properties-s3-bucket-replicationtimevalue-syntax"></a>
 
@@ -23,7 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-replicationtimevalue-properties"></a>
 
 `Minutes`  <a name="cfn-s3-bucket-replicationtimevalue-minutes"></a>
-Not currently supported by AWS CloudFormation\.  
+ Contains an integer specifying time in minutes\.   
+ Valid value: 15  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -2,6 +2,8 @@
 
  The voting rules for the network to decide if a proposal is accepted 
 
+Applies only to Hyperledger Fabric\.
+
 ## Syntax<a name="aws-properties-managedblockchain-member-votingpolicy-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

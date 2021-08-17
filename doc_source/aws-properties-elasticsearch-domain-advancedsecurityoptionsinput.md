@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticsearch-domain-advancedsecurityoptionsinput-properties"></a>
 
 `Enabled`  <a name="cfn-elasticsearch-domain-advancedsecurityoptionsinput-enabled"></a>
-True to enable fine\-grained access control\.  
+True to enable fine\-grained access control\. You must also enable encryption of data at rest and node\-to\-node encryption\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

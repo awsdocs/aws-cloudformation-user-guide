@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application PropertyGroup<a name="aws-properties-kinesisanalyticsv2-application-propertygroup"></a>
 
-Property key\-value pairs passed into a Flink\-based Kinesis Data Analytics application\.
+Property key\-value pairs passed into an application\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-propertygroup-syntax"></a>
 
@@ -41,3 +41,4 @@ Describes the value of an application execution property key\-value pair\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-propertygroup--seealso"></a>
 +  [PropertyGroup](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_PropertyGroup.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

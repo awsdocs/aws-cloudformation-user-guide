@@ -16,7 +16,7 @@ This walkthrough refers to two accounts: First is an account that allows cross\-
 
 ## Step 1: Create a VPC and a cross\-account role<a name="step-1-create-vpc-and-cross-account-role"></a>
 
- **Create a VPC and a cross\-account access role \(example\)** 
+**Create a VPC and a cross\-account access role \(example\)**
 
 In this step, you'll create the VPC and role in the *accepter account*\.
 
@@ -156,11 +156,11 @@ In this step, you'll create the VPC and role in the *accepter account*\.
 
 1. Choose **I acknowledge that AWS CloudFormation might create IAM resources**, and then choose **Create stack**\.
 
-## Step 2: Create a template that includes AWS::EC2::VPCPeeringConnection<a name="step-2-create-template-for-vpc-peering-connection-owner"></a>
+## Step 2: Create a template that includes `AWS::EC2::VPCPeeringConnection`<a name="step-2-create-template-for-vpc-peering-connection-owner"></a>
 
 Now that you've created the VPC and cross\-account role, you can peer with the VPC using another AWS account \(the *requester account*\)\.
 
- **To create a template that includes the [AWS::EC2::VPCPeeringConnection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html) resource \(example\)** 
+**To create a template that includes the [AWS::EC2::VPCPeeringConnection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html) resource \(example\)**
 
 1. Go back to the AWS CloudFormation console home page\. 
 
@@ -276,7 +276,7 @@ Now that you've created the VPC and cross\-account role, you can peer with the V
 
 You might want to create a highly restrictive policy for peering your VPC with another AWS account\.
 
-The following example template shows how to change the VPC peer owner template \(the *accepter account* created in Step 1 above\) so that it is more restrictive\.
+The following example template shows how to change the VPC peer owner template \(the *accepter account* created in Step 1 above\) so that it's more restrictive\.
 
 **Example JSON**  
 

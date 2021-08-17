@@ -83,7 +83,9 @@ The ARN of the IAM role to be used to run the canary\. This role must already ex
 +  `logs:PutLogEvents` 
 *Required*: Yes  
 *Type*: String  
-*Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso-{0,1}[a-z]{0,1}):[A-Za-z0-9][A-Za-z0-9_/.-]{0,62}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9][A-Za-z0-9:_/+=,@.-]{0,1023}$`  
+*Minimum*: `1`  
+*Maximum*: `2048`  
+*Pattern*: `arn:(aws[a-zA-Z-]*)?:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FailureRetentionPeriod`  <a name="cfn-synthetics-canary-failureretentionperiod"></a>
@@ -111,7 +113,7 @@ A structure that contains input information for a canary run\. If you omit this 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuntimeVersion`  <a name="cfn-synthetics-canary-runtimeversion"></a>
-Specifies the runtime version to use for the canary\. Currently, the only valid value is `syn-1.0`\. For more information about runtime versions, see [ Canary Runtime Versions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Library.html)\.  
+Specifies the runtime version to use for the canary\. For more information about runtime versions, see [ Canary Runtime Versions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Library.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -175,6 +177,8 @@ The state of the canary\. For example, `RUNNING`\.
 
 ## Examples<a name="aws-resource-synthetics-canary--examples"></a>
 
+
+
 ### Canary with script stored in an Amazon S3 bucket<a name="aws-resource-synthetics-canary--examples--Canary_with_script_stored_in_an_Amazon_S3_bucket"></a>
 
 This example creates a canary that uses an existing script stored in an S3 bucket\. The canary is started as soon as it is created\.
@@ -184,7 +188,7 @@ This example creates a canary that uses an existing script stored in an S3 bucke
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS CloudFormation Sample Template for AWS Synthetics: Create a Canary using this template",
+    "Description": "CloudFormation Sample Template for CloudWatch Synthetics: Create a Canary using this template",
     "Resources": {
         "SyntheticsCanary": {
             "Type": "AWS::Synthetics::Canary",
@@ -214,7 +218,7 @@ This example creates a canary that uses an existing script stored in an S3 bucke
                 "StartCanaryAfterCreation": true,
                 "Tags": [
                     {
-                        "Id": "key00AtCreate",
+                        "Key": "key00AtCreate",
                         "Value": "value001AtCreate"
                     }
                 ]
@@ -253,7 +257,7 @@ This example creates a canary and passes the script code directly into the canar
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS CloudFormation Sample Template for AWS Synthetics: Create a Canary using this template",
+    "Description": "CloudFormation Sample Template for CloudWatch Synthetics: Create a Canary using this template",
     "Resources": {
         "SyntheticsCanary": {
             "Type": "AWS::Synthetics::Canary",
@@ -281,11 +285,12 @@ This example creates a canary and passes the script code directly into the canar
                 "SuccessRetentionPeriod": 30,
                 "StartCanaryAfterCreation": false,
                 "Tags": [
-                {
-                    "Id": "key00AtCreate",
-                    "Value": "value001AtCreate"
-                }
-            ]
+                    {
+                        "Id": "key00AtCreate",
+                        "Value": "value001AtCreate"
+                    }
+                ]
+            }
         }
     }
 }

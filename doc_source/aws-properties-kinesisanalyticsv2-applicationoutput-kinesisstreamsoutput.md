@@ -33,3 +33,4 @@ The ARN of the destination Kinesis data stream to write to\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput--seealso"></a>
 +  [KinesisStreamsOutput](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_KinesisStreamsOutput.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

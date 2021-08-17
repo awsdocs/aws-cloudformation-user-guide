@@ -33,3 +33,4 @@ The ARN of the CloudWatch log to receive application messages\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-applicationcloudwatchloggingoption-cloudwatchloggingoption--seealso"></a>
 +  [CloudWatchLoggingOption](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CloudWatchLoggingOption.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

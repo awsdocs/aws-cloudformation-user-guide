@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::InfrastructureConfiguration Logging<a name="aws-properties-imagebuilder-infrastructureconfiguration-logging"></a>
 
-The logging configuration defines where Image Builder uploads your logs\.
+Logging configuration defines where Image Builder uploads your logs\.
 
 ## Syntax<a name="aws-properties-imagebuilder-infrastructureconfiguration-logging-syntax"></a>
 

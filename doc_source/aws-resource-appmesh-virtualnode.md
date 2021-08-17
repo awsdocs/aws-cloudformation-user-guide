@@ -6,12 +6,12 @@ Creates a virtual node within a service mesh\.
 
 You define a `listener` for any inbound traffic that your virtual node expects\. Any virtual service that your virtual node expects to communicate to is specified as a `backend`\.
 
-The response metadata for your new virtual node contains the `arn` that is associated with the virtual node\. Set this value \(either the full ARN or the truncated resource name: for example, `mesh/default/virtualNode/simpleapp`\) as the `APPMESH_VIRTUAL_NODE_NAME` environment variable for your task group's Envoy proxy container in your task definition or pod spec\. This is then mapped to the `node.id` and `node.cluster` Envoy parameters\.
+The response metadata for your new virtual node contains the `arn` that is associated with the virtual node\. Set this value to the full ARN; for example, `arn:aws:appmesh:us-west-2:123456789012:myMesh/default/virtualNode/myApp`\) as the `APPMESH_RESOURCE_ARN` environment variable for your task group's Envoy proxy container in your task definition or pod spec\. This is then mapped to the `node.id` and `node.cluster` Envoy parameters\.
 
 **Note**  
-If you require your Envoy stats or tracing to use a different name, you can override the `node.cluster` value that is set by `APPMESH_VIRTUAL_NODE_NAME` with the `APPMESH_VIRTUAL_NODE_CLUSTER` environment variable\.
+By default, App Mesh uses the name of the resource you specified in `APPMESH_RESOURCE_ARN` when Envoy is referring to itself in metrics and traces\. You can override this behavior by setting the `APPMESH_RESOURCE_CLUSTER` environment variable with your own name\.
 
-For more information about virtual nodes, see [Virtual nodes](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html)\.
+For more information about virtual nodes, see [Virtual nodes](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html)\. You must be using `1.15.0` or later of the Envoy image when setting these variables\. For more information aboutApp Mesh Envoy variables, see [Envoy image](https://docs.aws.amazon.com/app-mesh/latest/userguide/envoy.html) in the AWS App Mesh User Guide\.
 
 ## Syntax<a name="aws-resource-appmesh-virtualnode-syntax"></a>
 
@@ -74,7 +74,7 @@ Optional metadata that you can apply to the virtual node to assist with categori
 
 `VirtualNodeName`  <a name="cfn-appmesh-virtualnode-virtualnodename"></a>
 The name to use for the virtual node\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -301,3 +301,4 @@ Outputs:
 ## See also<a name="aws-resource-appmesh-virtualnode--seealso"></a>
 +  [Virtual Nodes](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html) in the * AWS App Mesh User Guide *\.
 +  [CreateVirtualNode](https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateVirtualNode.html) in the * AWS App Mesh API Reference *\.
+

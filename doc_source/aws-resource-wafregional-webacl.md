@@ -44,12 +44,9 @@ The action to perform if none of the `Rules` contained in the `WebACL` match\. T
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricName`  <a name="cfn-wafregional-webacl-metricname"></a>
-A friendly name or description for the metrics for this `WebACL`\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with maximum length 128 and minimum length one\. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default\_Action\." You can't change `MetricName` after you create the `WebACL`\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
-*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-wafregional-webacl-name"></a>
@@ -76,6 +73,8 @@ An array that contains the action for each `Rule` in a `WebACL`, the priority of
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-wafregional-webacl--examples"></a>
+
+
 
 ### Create a Web ACL<a name="aws-resource-wafregional-webacl--examples--Create_a_Web_ACL"></a>
 

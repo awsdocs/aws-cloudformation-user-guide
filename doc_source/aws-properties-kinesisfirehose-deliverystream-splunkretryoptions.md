@@ -32,3 +32,4 @@ The total amount of time that Kinesis Data Firehose spends on retries\. This dur
 
 ## See also<a name="aws-properties-kinesisfirehose-deliverystream-splunkretryoptions--seealso"></a>
 +  [SplunkRetryOptions](https://docs.aws.amazon.com/firehose/latest/APIReference/API_SplunkRetryOptions.html) in the *Amazon Kinesis Data Firehose API Reference*\. 
+

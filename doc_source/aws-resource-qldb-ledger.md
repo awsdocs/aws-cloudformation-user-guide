@@ -1,6 +1,6 @@
 # AWS::QLDB::Ledger<a name="aws-resource-qldb-ledger"></a>
 
-The `AWS::QLDB::Ledger` resource creates a new Amazon Quantum Ledger Database \(Amazon QLDB\) ledger in your AWS account\. Amazon QLDB is a fully managed ledger database owned by a central trusted authority that provides a transparent, immutable, and cryptographically verifiable transaction log of all of your application changes\.
+The `AWS::QLDB::Ledger` resource specifies a new Amazon Quantum Ledger Database \(Amazon QLDB\) ledger in your AWS account\. Amazon QLDB is a fully managed ledger database that provides a transparent, immutable, and cryptographically verifiable transaction log owned by a central trusted authority\. You can use QLDB to track all application data changes, and maintain a complete and verifiable history of changes over time\.
 
 For more information, see [CreateLedger](https://docs.aws.amazon.com/qldb/latest/developerguide/API_CreateLedger.html) in the *Amazon QLDB API Reference*\.
 
@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::QLDB::Ledger",
   "Properties" : {
       "[DeletionProtection](#cfn-qldb-ledger-deletionprotection)" : Boolean,
+      "[KmsKey](#cfn-qldb-ledger-kmskey)" : String,
       "[Name](#cfn-qldb-ledger-name)" : String,
       "[PermissionsMode](#cfn-qldb-ledger-permissionsmode)" : String,
       "[Tags](#cfn-qldb-ledger-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -28,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::QLDB::Ledger
 Properties: 
   [DeletionProtection](#cfn-qldb-ledger-deletionprotection): Boolean
+  [KmsKey](#cfn-qldb-ledger-kmskey): String
   [Name](#cfn-qldb-ledger-name): String
   [PermissionsMode](#cfn-qldb-ledger-permissionsmode): String
   [Tags](#cfn-qldb-ledger-tags): 
@@ -38,13 +40,19 @@ Properties:
 
 `DeletionProtection`  <a name="cfn-qldb-ledger-deletionprotection"></a>
 The flag that prevents a ledger from being deleted by any user\. If not provided on ledger creation, this feature is enabled \(`true`\) by default\.  
-If deletion protection is enabled, you must first disable it before you can delete the ledger using the QLDB API or the AWS Command Line Interface \(AWS CLI\)\. You can disable it by calling the `UpdateLedger` operation to set the flag to `false`\. The QLDB console disables deletion protection for you when you use it to delete a ledger\.  
+If deletion protection is enabled, you must first disable it before you can delete the ledger\. You can disable it by calling the `UpdateLedger` operation to set the flag to `false`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`KmsKey`  <a name="cfn-qldb-ledger-kmskey"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Name`  <a name="cfn-qldb-ledger-name"></a>
-The name of the ledger that you want to create\. The name must be unique among all of your ledgers in the current AWS Region\.  
+The name of the ledger that you want to create\. The name must be unique among all of the ledgers in your AWS account in the current Region\.  
 Naming constraints for ledger names are defined in [Quotas in Amazon QLDB](https://docs.aws.amazon.com/qldb/latest/developerguide/limits.html#limits.naming) in the *Amazon QLDB Developer Guide*\.  
 *Required*: No  
 *Type*: String  
@@ -54,11 +62,18 @@ Naming constraints for ledger names are defined in [Quotas in Amazon QLDB](https
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PermissionsMode`  <a name="cfn-qldb-ledger-permissionsmode"></a>
-The permissions mode to assign to the ledger that you want to create\.  
+The permissions mode to assign to the ledger that you want to create\. This parameter can have one of the following values:  
++  `ALLOW_ALL`: A legacy permissions mode that enables access control with API\-level granularity for ledgers\.
+
+  This mode allows users who have the `SendCommand` API permission for this ledger to run all PartiQL commands \(hence, `ALLOW_ALL`\) on any tables in the specified ledger\. This mode disregards any table\-level or command\-level IAM permissions policies that you create for the ledger\.
++  `STANDARD`: \(*Recommended*\) A permissions mode that enables access control with finer granularity for ledgers, tables, and PartiQL commands\.
+
+  By default, this mode denies all user requests to run any PartiQL commands on any tables in this ledger\. To allow PartiQL commands to run, you must create IAM permissions policies for specific table resources and PartiQL actions, in addition to the `SendCommand` API permission for the ledger\. For information, see [Getting started with the standard permissions mode](https://docs.aws.amazon.com/qldb/latest/developerguide/getting-started-standard-mode.html) in the *Amazon QLDB Developer Guide*\.
+We strongly recommend using the `STANDARD` permissions mode to maximize the security of your ledger data\.
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `ALLOW_ALL`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Allowed values*: `ALLOW_ALL | STANDARD`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-qldb-ledger-tags"></a>
 An array of key\-value pairs to apply to this resource\.  
@@ -81,9 +96,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-qldb-ledger--examples"></a>
 
+
+
 ### Amazon QLDB Ledger<a name="aws-resource-qldb-ledger--examples--Amazon_QLDB_Ledger"></a>
 
-The following example describes an Amazon QLDB ledger with a `PermissionsMode` of `ALLOW_ALL`\. The only permissions mode currently supported for a QLDB ledger is `ALLOW_ALL`\.
+The following example describes an Amazon QLDB ledger with a `PermissionsMode` of `STANDARD`\.
 
 #### JSON<a name="aws-resource-qldb-ledger--examples--Amazon_QLDB_Ledger--json"></a>
 
@@ -96,7 +113,7 @@ The following example describes an Amazon QLDB ledger with a `PermissionsMode` o
       "Properties": {
         "DeletionProtection": true,
         "Name": "exampleLedger",
-        "PermissionsMode": "ALLOW_ALL",
+        "PermissionsMode": "STANDARD",
         "Tags": [
           {
             "Key": "Domain",
@@ -119,7 +136,7 @@ Resources:
     Properties:
       DeletionProtection: true
       Name: "exampleLedger"
-      PermissionsMode: "ALLOW_ALL"
+      PermissionsMode: "STANDARD"
       Tags:
         - Key: Domain
           Value: Test
@@ -127,3 +144,4 @@ Resources:
 
 ## See also<a name="aws-resource-qldb-ledger--seealso"></a>
 +  [CreateLedger](https://docs.aws.amazon.com/qldb/latest/developerguide/API_CreateLedger.html) in the *Amazon QLDB API Reference*
+

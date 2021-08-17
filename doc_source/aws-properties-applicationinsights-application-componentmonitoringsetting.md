@@ -45,7 +45,7 @@ Component monitoring can be configured in one of the following three modes:
 + `DEFAULT`: The component will be configured with the recommended default monitoring settings of the selected `Tier`\.
 + `CUSTOM`: The component will be configured with the customized monitoring settings that are specified in `CustomComponentConfiguration`\. If used, `CustomComponentConfiguration` must be provided\.
 + `DEFAULT_WITH_OVERWRITE`: The component will be configured with the recommended default monitoring settings of the selected `Tier`, and merged with customized overwrite settings that are specified in `DefaultOverwriteComponentConfiguration`\. If used, `DefaultOverwriteComponentConfiguration` must be provided\.
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -69,6 +69,6 @@ Customized overwrite monitoring settings\. Required if CUSTOM mode is configured
 
 `Tier`  <a name="cfn-applicationinsights-application-componentmonitoringsetting-tier"></a>
 The tier of the application component\. Supported tiers include `DOT_NET_WORKER`, `DOT_NET_WEB`, `DOT_NET_CORE`, `SQL_SERVER`, and `DEFAULT`\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::GlobalAccelerator::EndpointGroup EndpointConfiguration<a name="aws-properties-globalaccelerator-endpointgroup-endpointconfiguration"></a>
 
-A complex type for endpoints\.
+A complex type for endpoints\. A resource must be valid and active when you add it as an endpoint\.
 
 ## Syntax<a name="aws-properties-globalaccelerator-endpointgroup-endpointconfiguration-syntax"></a>
 
@@ -35,7 +35,7 @@ For more information, see [ Preserve Client IP Addresses in AWS Global Accelerat
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointId`  <a name="cfn-globalaccelerator-endpointgroup-endpointconfiguration-endpointid"></a>
-An ID for the endpoint\. If the endpoint is a Network Load Balancer or Application Load Balancer, this is the Amazon Resource Name \(ARN\) of the resource\. If the endpoint is an Elastic IP address, this is the Elastic IP address allocation ID\. For EC2 instances, this is the EC2 instance ID\.   
+An ID for the endpoint\. If the endpoint is a Network Load Balancer or Application Load Balancer, this is the Amazon Resource Name \(ARN\) of the resource\. If the endpoint is an Elastic IP address, this is the Elastic IP address allocation ID\. For Amazon EC2 instances, this is the EC2 instance ID\. A resource must be valid and active when you add it as an endpoint\.  
 An Application Load Balancer can be either internal or internet\-facing\.  
 *Required*: Yes  
 *Type*: String  

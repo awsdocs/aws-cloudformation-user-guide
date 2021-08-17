@@ -2,6 +2,7 @@
 
 **Resource types**
 + [AWS::ImageBuilder::Component](aws-resource-imagebuilder-component.md)
++ [AWS::ImageBuilder::ContainerRecipe](aws-resource-imagebuilder-containerrecipe.md)
 + [AWS::ImageBuilder::DistributionConfiguration](aws-resource-imagebuilder-distributionconfiguration.md)
 + [AWS::ImageBuilder::Image](aws-resource-imagebuilder-image.md)
 + [AWS::ImageBuilder::ImagePipeline](aws-resource-imagebuilder-imagepipeline.md)

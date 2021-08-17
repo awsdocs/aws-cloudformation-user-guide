@@ -33,7 +33,7 @@ An endpoint in customer's account which has enabled `DataCaptureConfig` enabled\
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LocalPath`  <a name="cfn-sagemaker-monitoringschedule-endpointinput-localpath"></a>
@@ -45,7 +45,7 @@ Path to the filesystem where the endpoint data is available to the container\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3DataDistributionType`  <a name="cfn-sagemaker-monitoringschedule-endpointinput-s3datadistributiontype"></a>
-Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key\. Defauts to `FullyReplicated`   
+Whether input data distributed in Amazon S3 is fully replicated or sharded by an S3 key\. Defaults to `FullyReplicated`   
 *Required*: No  
 *Type*: String  
 *Allowed values*: `FullyReplicated | ShardedByS3Key`  

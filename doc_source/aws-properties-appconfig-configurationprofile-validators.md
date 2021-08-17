@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appconfig-configurationprofile-validators-properties"></a>
 
 `Content`  <a name="cfn-appconfig-configurationprofile-validators-content"></a>
-Either the JSON Schema content or the Amazon Resource Name \(ARN\) of an AWS Lambda function\.  
+Either the JSON Schema content or the Amazon Resource Name \(ARN\) of an Lambda function\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -33,7 +33,7 @@ Either the JSON Schema content or the Amazon Resource Name \(ARN\) of an AWS Lam
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-appconfig-configurationprofile-validators-type"></a>
-AWS AppConfig supports validators of type `JSON_SCHEMA` and `LAMBDA`   
+ AWS AppConfig supports validators of type `JSON_SCHEMA` and `LAMBDA`   
 *Required*: No  
 *Type*: String  
 *Allowed values*: `JSON_SCHEMA | LAMBDA`  

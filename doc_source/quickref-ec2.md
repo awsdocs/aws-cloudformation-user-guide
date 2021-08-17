@@ -2,7 +2,7 @@
 
 ## EC2 block device mapping examples<a name="scenario-ec2-bdm"></a>
 
-### EC2 instance with block device mapping<a name="w6640ab1c19c22c39b3b2"></a>
+### EC2 instance with block device mapping<a name="w9292ab1c27c21c39b3b2"></a>
 
 #### JSON<a name="quickref-ec2-example-1.json"></a>
 
@@ -50,7 +50,7 @@ EC2Instance:
             VolumeSize: 100
 ```
 
-### EC2 instance with ephemeral drives<a name="w6640ab1c19c22c39b3b4"></a>
+### EC2 instance with ephemeral drives<a name="w9292ab1c27c21c39b3b4"></a>
 
 #### JSON<a name="quickref-ec2-example-2.json"></a>
 
@@ -89,9 +89,9 @@ EC2Instance:
 	      VirtualName: ephemeral0
 ```
 
-## Assigning an Amazon EC2 elastic IP using AWS::EC2::EIP snippet<a name="scenario-ec2-eip"></a>
+## Assigning an Amazon EC2 elastic IP using `AWS::EC2::EIP` snippet<a name="scenario-ec2-eip"></a>
 
-This example shows how to allocate an Amazon EC2 Elastic IP address and assign it to an Amazon EC2 instance using a [AWS::EC2::EIP resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html)\.
+This example shows how to assign an Amazon EC2 Elastic IP address and assign it to an Amazon EC2 instance using a [AWS::EC2::EIP resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html)\.
 
 ### JSON<a name="quickref-ec2-example-3.json"></a>
 
@@ -113,7 +113,7 @@ This example shows how to allocate an Amazon EC2 Elastic IP address and assign i
 4.     InstanceId: !Ref Logical name of an AWS::EC2::Instance resource
 ```
 
-## Assigning an existing elastic IP to an amazon EC2 instance using AWS::EC2::EIPAssociation snippet<a name="scenario-ec2-eip-association"></a>
+## Assigning an existing elastic IP to an amazon EC2 instance using `AWS::EC2::EIPAssociation` snippet<a name="scenario-ec2-eip-association"></a>
 
 This example shows how to assign an existing Amazon EC2 Elastic IP address to an Amazon EC2 instance using an [AWS::EC2::EIPAssociation resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html)\.
 
@@ -139,7 +139,7 @@ This example shows how to assign an existing Amazon EC2 Elastic IP address to an
 5.     EIP: existing Elastic IP Address
 ```
 
-## Assigning an existing VPC elastic IP to an Amazon EC2 instance using AWS::EC2::EIPAssociation snippet<a name="scenario-ec2-eip-association-vpc"></a>
+## Assigning an existing VPC elastic IP to an Amazon EC2 instance using `AWS::EC2::EIPAssociation` snippet<a name="scenario-ec2-eip-association-vpc"></a>
 
 This example shows how to assign an existing VPC Elastic IP address to an Amazon EC2 instance using an [AWS::EC2::EIPAssociation resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html)\.
 
@@ -167,9 +167,9 @@ This example shows how to assign an existing VPC Elastic IP address to an Amazon
 
 ## Elastic network interface \(ENI\) template snippets<a name="cfn-template-snippets-eni"></a>
 
-### VPC\_EC2\_Instance\_With\_ENI<a name="w6640ab1c19c22c39c13b3"></a>
+### VPC\_EC2\_Instance\_With\_ENI<a name="w9292ab1c27c21c39c13b3"></a>
 
-Sample template showing how to create an instance with two elastic network interface \(ENI\)\. The sample assumes you have already created a VPC\. 
+Sample template showing how to create an instance with two elastic network interface \(ENI\)\. The sample assumes you have already created a VPC\.
 
 #### JSON<a name="cfn-template-snippets-eni-example-1.json"></a>
 
@@ -575,7 +575,7 @@ This snippet shows an AWS::EC2::SecurityGroup resource that describes two securi
 
 ## Amazon EC2 security group resource with LoadBalancer ingress rule<a name="scenario-ec2-security-group-elbingress"></a>
 
-This template shows an AWS::EC2::SecurityGroup resource that contains a security group ingress rule that grants access to the LoadBalancer myELB for TCP on port 80\. Note that the rule uses the `SourceSecurityGroup.OwnerAlias` and `SourceSecurityGroup.GroupName` properties of the myELB resource to specify the source security group of the LoadBalancer\.
+This template shows an AWS::EC2::SecurityGroup resource that contains a security group ingress rule that grants access to the LoadBalancer myELB for TCP on port 80\. The rule uses the `SourceSecurityGroup.OwnerAlias` and `SourceSecurityGroup.GroupName` properties of the myELB resource to specify the source security group of the LoadBalancer\.
 
 ### JSON<a name="quickref-ec2-example-11.json"></a>
 
@@ -655,7 +655,7 @@ Resources:
 
 ## Using AWS::EC2::SecurityGroupIngress to create mutually referencing Amazon EC2 security group resources<a name="scenario-ec2-security-group-ingress"></a>
 
-This snippet shows two AWS::EC2::SecurityGroupIngress resources that add mutual ingress rules to the EC2 security groups SGroup1 and SGroup2\. The SGroup1Ingress resource enables ingress from SGroup2 through TCP/IP port 80 to SGroup1\. The SGroup2Ingress resource enables ingress from SGroup1 through TCP/IP port 80 to SGroup2\. 
+This snippet shows two AWS::EC2::SecurityGroupIngress resources that add mutual ingress rules to the EC2 security groups SGroup1 and SGroup2\. The SGroup1Ingress resource enables ingress from SGroup2 through TCP/IP port 80 to SGroup1\. The SGroup2Ingress resource enables ingress from SGroup1 through TCP/IP port 80 to SGroup2\.
 
 **Note**  
 If you are using an Amazon VPC, use the `AWS::EC2::SecurityGroup` resource and specify the `VpcId` property\.
@@ -758,7 +758,7 @@ This snippet shows a simple Amazon EC2 volume resource with a DeletionPolicy att
 
 ## Amazon EC2 VolumeAttachment resource<a name="scenario-ec2-volumeattachment"></a>
 
-This snippet shows the following resources: an Amazon EC2 instance using an Amazon Linux AMI from the US\-East \(Northern Virginia\) Region, an EC2 security group that allows SSH access to IP addresses, a new Amazon EBS volume sized at 100 GB and in the same Availability Zone as the EC2 instance, and a volume attachment that attaches the new volume to the EC2 instance\. 
+This snippet shows the following resources: an Amazon EC2 instance using an Amazon Linux AMI from the US\-East \(Northern Virginia\) Region, an EC2 security group that allows SSH access to IP addresses, a new Amazon EBS volume sized at 100 GB and in the same Availability Zone as the EC2 instance, and a volume attachment that attaches the new volume to the EC2 instance\.
 
 ### JSON<a name="quickref-ec2-example-14.json"></a>
 

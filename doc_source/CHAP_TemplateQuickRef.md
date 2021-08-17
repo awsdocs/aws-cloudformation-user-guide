@@ -1,6 +1,6 @@
 # Template snippets<a name="CHAP_TemplateQuickRef"></a>
 
-This section provides a number of example scenarios that you can use to understand how to declare various AWS CloudFormation template parts\. You can also use the snippets as a starting point for sections of your custom templates\. 
+This section provides a number of example scenarios that you can use to understand how to declare various AWS CloudFormation template parts\. You can also use the snippets as a starting point for sections of your custom templates\.
 
 **Topics**
 + [General template snippets](quickref-general.md)
@@ -20,7 +20,7 @@ This section provides a number of example scenarios that you can use to understa
 + [AWS OpsWorks template snippets](quickref-opsworks.md)
 + [Amazon Redshift template snippets](quickref-redshift.md)
 + [Amazon RDS template snippets](quickref-rds.md)
-+ [Route 53 template snippets](quickref-route53.md)
++ [Route 53 template snippets](quickref-route53.md)
 + [Amazon S3 template snippets](quickref-s3.md)
 + [Amazon SNS template snippets](quickref-sns.md)
 + [Amazon SQS template snippets](scenario-sqs-queue.md)

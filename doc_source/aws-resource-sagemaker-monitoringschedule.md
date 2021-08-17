@@ -12,12 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::MonitoringSchedule",
   "Properties" : {
-      "[CreationTime](#cfn-sagemaker-monitoringschedule-creationtime)" : String,
       "[EndpointName](#cfn-sagemaker-monitoringschedule-endpointname)" : String,
       "[FailureReason](#cfn-sagemaker-monitoringschedule-failurereason)" : String,
-      "[LastModifiedTime](#cfn-sagemaker-monitoringschedule-lastmodifiedtime)" : String,
       "[LastMonitoringExecutionSummary](#cfn-sagemaker-monitoringschedule-lastmonitoringexecutionsummary)" : MonitoringExecutionSummary,
-      "[MonitoringScheduleArn](#cfn-sagemaker-monitoringschedule-monitoringschedulearn)" : String,
       "[MonitoringScheduleConfig](#cfn-sagemaker-monitoringschedule-monitoringscheduleconfig)" : MonitoringScheduleConfig,
       "[MonitoringScheduleName](#cfn-sagemaker-monitoringschedule-monitoringschedulename)" : String,
       "[MonitoringScheduleStatus](#cfn-sagemaker-monitoringschedule-monitoringschedulestatus)" : String,
@@ -31,13 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SageMaker::MonitoringSchedule
 Properties: 
-  [CreationTime](#cfn-sagemaker-monitoringschedule-creationtime): String
   [EndpointName](#cfn-sagemaker-monitoringschedule-endpointname): String
   [FailureReason](#cfn-sagemaker-monitoringschedule-failurereason): String
-  [LastModifiedTime](#cfn-sagemaker-monitoringschedule-lastmodifiedtime): String
   [LastMonitoringExecutionSummary](#cfn-sagemaker-monitoringschedule-lastmonitoringexecutionsummary): 
     MonitoringExecutionSummary
-  [MonitoringScheduleArn](#cfn-sagemaker-monitoringschedule-monitoringschedulearn): String
   [MonitoringScheduleConfig](#cfn-sagemaker-monitoringschedule-monitoringscheduleconfig): 
     MonitoringScheduleConfig
   [MonitoringScheduleName](#cfn-sagemaker-monitoringschedule-monitoringschedulename): String
@@ -48,18 +42,12 @@ Properties:
 
 ## Properties<a name="aws-resource-sagemaker-monitoringschedule-properties"></a>
 
-`CreationTime`  <a name="cfn-sagemaker-monitoringschedule-creationtime"></a>
-The creation time of the monitoring schedule\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `EndpointName`  <a name="cfn-sagemaker-monitoringschedule-endpointname"></a>
 The name of the endpoint using the monitoring schedule\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FailureReason`  <a name="cfn-sagemaker-monitoringschedule-failurereason"></a>
@@ -68,24 +56,10 @@ Contains the reason a monitoring job failed, if it failed\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`LastModifiedTime`  <a name="cfn-sagemaker-monitoringschedule-lastmodifiedtime"></a>
-The last time the monitoring schedule was modified\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `LastMonitoringExecutionSummary`  <a name="cfn-sagemaker-monitoringschedule-lastmonitoringexecutionsummary"></a>
 Describes metadata on the last execution to run, if there was one\.  
 *Required*: No  
 *Type*: [MonitoringExecutionSummary](aws-properties-sagemaker-monitoringschedule-monitoringexecutionsummary.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`MonitoringScheduleArn`  <a name="cfn-sagemaker-monitoringschedule-monitoringschedulearn"></a>
-The Amazon Resource Name \(ARN\) of the monitoring schedule\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `256`  
-*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MonitoringScheduleConfig`  <a name="cfn-sagemaker-monitoringschedule-monitoringscheduleconfig"></a>
@@ -100,8 +74,8 @@ The name of the monitoring schedule\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*$`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MonitoringScheduleStatus`  <a name="cfn-sagemaker-monitoringschedule-monitoringschedulestatus"></a>
 The status of the monitoring schedule\.  
@@ -124,6 +98,19 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the monitoring schedule\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-sagemaker-monitoringschedule-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-sagemaker-monitoringschedule-return-values-fn--getatt-fn--getatt"></a>
+
+`CreationTime`  <a name="CreationTime-fn::getatt"></a>
+The time when the monitoring schedule was created\.
+
+`LastModifiedTime`  <a name="LastModifiedTime-fn::getatt"></a>
+The last time that the monitoring schedule was modified\.
+
+`MonitoringScheduleArn`  <a name="MonitoringScheduleArn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-sagemaker-monitoringschedule--examples"></a>
 

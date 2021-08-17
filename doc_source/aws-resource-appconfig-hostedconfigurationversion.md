@@ -1,6 +1,6 @@
 # AWS::AppConfig::HostedConfigurationVersion<a name="aws-resource-appconfig-hostedconfigurationversion"></a>
 
-Create a new configuration in the AppConfig hosted configuration store\. Configurations must be 64 KB or smaller\. The AppConfig hosted configuration store provides the following benefits over other configuration store options\.
+Create a new configuration in the AWS AppConfig hosted configuration store\. Configurations must be 64 KB or smaller\. The AWS AppConfig hosted configuration store provides the following benefits over other configuration store options\.
 + You don't need to set up and configure other services such as Amazon Simple Storage Service \(Amazon S3\) or Parameter Store\.
 + You don't need to configure AWS Identity and Access Management \(IAM\) permissions to use the configuration store\.
 + You can store configurations in any content type\.
@@ -92,11 +92,13 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ## Examples<a name="aws-resource-appconfig-hostedconfigurationversion--examples"></a>
 
-### AWS AppConfig hosted configuration<a name="aws-resource-appconfig-hostedconfigurationversion--examples--AWS_AppConfig_hosted_configuration"></a>
 
-The following example creates an AWS AppConfig configuration profile named `MyTestProfile` for an application called `MyApplication`\. AppConfig stores the configuration data for this profile in the AppConfig hosted configuration store\.
 
-#### JSON<a name="aws-resource-appconfig-hostedconfigurationversion--examples--AWS_AppConfig_hosted_configuration--json"></a>
+### AWS AppConfig hosted configuration<a name="aws-resource-appconfig-hostedconfigurationversion--examples--_hosted_configuration"></a>
+
+The following example creates an AWS AppConfig configuration profile named `MyTestProfile` for an application called `MyApplication`\. AWS AppConfig stores the configuration data for this profile in the AWS AppConfig hosted configuration store\.
+
+#### JSON<a name="aws-resource-appconfig-hostedconfigurationversion--examples--_hosted_configuration--json"></a>
 
 ```
 {
@@ -129,7 +131,7 @@ The following example creates an AWS AppConfig configuration profile named `MyTe
 }
 ```
 
-#### YAML<a name="aws-resource-appconfig-hostedconfigurationversion--examples--AWS_AppConfig_hosted_configuration--yaml"></a>
+#### YAML<a name="aws-resource-appconfig-hostedconfigurationversion--examples--_hosted_configuration--yaml"></a>
 
 ```
 Resources:
@@ -154,6 +156,6 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-appconfig-hostedconfigurationversion--seealso"></a>
-+  [AWS AppConfig](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html) 
++  [AWS AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) 
 +  [Creating a configuration and a configuration profile ](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-configuration-and-profile.html)
-+  [About the AppConfig hosted configuration store](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-configuration-and-profile.html#appconfig-creating-configuration-and-profile-about-hosted-store)
++  [About the AWS AppConfig hosted configuration store](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-configuration-and-profile.html#appconfig-creating-configuration-and-profile-about-hosted-store)

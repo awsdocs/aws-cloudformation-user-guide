@@ -1,6 +1,6 @@
 # AWS::Lambda::LayerVersion<a name="aws-resource-lambda-layerversion"></a>
 
-The `AWS::Lambda::LayerVersion` resource creates an [AWS Lambda layer](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html) from a ZIP archive\.
+The `AWS::Lambda::LayerVersion` resource creates a [Lambda layer](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html) from a ZIP archive\.
 
 ## Syntax<a name="aws-resource-lambda-layerversion-syntax"></a>
 
@@ -41,7 +41,7 @@ Properties:
 A list of compatible [function runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html)\. Used for filtering with [ListLayers](https://docs.aws.amazon.com/lambda/latest/dg/API_ListLayers.html) and [ListLayerVersions](https://docs.aws.amazon.com/lambda/latest/dg/API_ListLayerVersions.html)\.  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `5`  
+*Maximum*: `15`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Content`  <a name="cfn-lambda-layerversion-content"></a>
@@ -87,6 +87,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-lambda-layerversion--examples"></a>
 
+
+
 ### Layer Version<a name="aws-resource-lambda-layerversion--examples--Layer_Version"></a>
 
 Create a layer named `my-layer`\.
@@ -94,15 +96,37 @@ Create a layer named `my-layer`\.
 #### JSON<a name="aws-resource-lambda-layerversion--examples--Layer_Version--json"></a>
 
 ```
-"MyLayer": { "Type": "AWS::Lambda::LayerVersion", "Properties": { "CompatibleRuntimes": [
-        "python3.6", "python3.7" ], "Content": { "S3Bucket": "my-bucket-us-west-2-123456789012", "S3Key": "layer.zip" },
-        "Description": "My layer", "LayerName": "my-layer", "LicenseInfo": "MIT" } }
+"MyLayer": {
+    "Type": "AWS::Lambda::LayerVersion",
+    "Properties": {
+        "CompatibleRuntimes": [
+            "python3.6",
+            "python3.7"
+        ],
+        "Content": {
+            "S3Bucket": "my-bucket-us-west-2-123456789012",
+            "S3Key": "layer.zip"
+        },
+        "Description": "My layer",
+        "LayerName": "my-layer",
+        "LicenseInfo": "MIT"
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-lambda-layerversion--examples--Layer_Version--yaml"></a>
 
 ```
-MyLayer: Type: AWS::Lambda::LayerVersion Properties: CompatibleRuntimes: - python3.6 -
-        python3.7 Content: S3Bucket: my-bucket-us-west-2-123456789012 S3Key: layer.zip Description: My layer LayerName:
-        my-layer LicenseInfo: MIT
+MyLayer:
+  Type: AWS::Lambda::LayerVersion
+  Properties:
+    CompatibleRuntimes:
+      - python3.6
+      - python3.7
+    Content:
+      S3Bucket: my-bucket-us-west-2-123456789012
+      S3Key: layer.zip
+    Description: My layer
+    LayerName: my-layer
+    LicenseInfo: MIT
 ```

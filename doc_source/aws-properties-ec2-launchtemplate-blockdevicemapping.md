@@ -44,7 +44,7 @@ Parameters used to automatically set up EBS volumes when the instance is launche
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NoDevice`  <a name="cfn-ec2-launchtemplate-blockdevicemapping-nodevice"></a>
-Suppresses the specified device included in the block device mapping of the AMI\.  
+To omit the device from the block device mapping, specify an empty string\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -57,3 +57,4 @@ The virtual device name \(ephemeralN\)\. Instance store volumes are numbered sta
 
 ## See also<a name="aws-properties-ec2-launchtemplate-blockdevicemapping--seealso"></a>
 +  [ LaunchTemplateBlockDeviceMappingRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateBlockDeviceMappingRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
+

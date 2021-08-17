@@ -1,6 +1,6 @@
 # AWS::Glue::Connection<a name="aws-resource-glue-connection"></a>
 
-The `AWS::Glue::Connection` resource specifies an AWS Glue connection to a data source\. For more information, see [Adding a Connection to Your Data Store](https://docs.aws.amazon.com/dg/populate-add-connection.html) and [Connection Structure](https://docs.aws.amazon.com/dg/aws-glue-api-catalog-connections.html#aws-glue-api-catalog-connections-Connection) in the *AWS Glue Developer Guide*\.
+The `AWS::Glue::Connection` resource specifies an AWS Glue connection to a data source\. For more information, see [Adding a Connection to Your Data Store](https://docs.aws.amazon.com/glue/latest/dg/populate-add-connection.html) and [Connection Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-connections.html#aws-glue-api-catalog-connections-Connection) in the *AWS Glue Developer Guide*\.
 
 ## Syntax<a name="aws-resource-glue-connection-syntax"></a>
 

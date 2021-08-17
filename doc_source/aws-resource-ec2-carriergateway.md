@@ -1,6 +1,6 @@
 # AWS::EC2::CarrierGateway<a name="aws-resource-ec2-carriergateway"></a>
 
-Creates a carrier gateway\. For more information about carrier gateways, see [Carrier gateways](https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#wavelength-carrier-gateway) in the *AWS Wavelength Developer Guide*\.
+Creates a carrier gateway\. For more information about carrier gateways, see [Carrier gateways](https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#wavelength-carrier-gateway) in the * AWS Wavelength Developer Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-carriergateway-syntax"></a>
 
@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::CarrierGateway",
   "Properties" : {
-      "[Tags](#cfn-ec2-carriergateway-tags)" : Tags,
+      "[Tags](#cfn-ec2-carriergateway-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VpcId](#cfn-ec2-carriergateway-vpcid)" : String
     }
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::CarrierGateway
 Properties: 
   [Tags](#cfn-ec2-carriergateway-tags): 
-    Tags
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcId](#cfn-ec2-carriergateway-vpcid): String
 ```
 
@@ -33,7 +33,7 @@ Properties:
 `Tags`  <a name="cfn-ec2-carriergateway-tags"></a>
 The tags assigned to the carrier gateway\.  
 *Required*: No  
-*Type*: [Tags](aws-properties-ec2-carriergateway-tags.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcId`  <a name="cfn-ec2-carriergateway-vpcid"></a>
@@ -68,3 +68,4 @@ The state of the carrier gateway\.
 ## See also<a name="aws-resource-ec2-carriergateway--seealso"></a>
 + [Carrier gateways](https://docs.aws.amazon.com/vpc/latest/userguide/Carrier_Gateway.html) in *Amazon Virtual Private Cloud User Guide*
 + [CreateCarrierGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateCarrierGateway.html) in the *Amazon EC2 API Reference*
+

@@ -83,3 +83,4 @@ A complex type that specifies any AWS accounts that you want to permit to create
 
 ## See also<a name="aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig--seealso"></a>
 +  [StreamingDistributionConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_StreamingDistributionConfig.html) in the *Amazon CloudFront API Reference* 
+

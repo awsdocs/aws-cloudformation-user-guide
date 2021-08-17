@@ -68,7 +68,7 @@ Not all resources support import operations\. See [Resources that support import
 
 1. Open the AWS CloudFormation console to perform a stack update to apply the deletion policy\.
 
-   1. On the **Stacks** page, with the stack selected, choose **Update**, and then choose **Update stack \(standard\)**\.
+   1. On the **Stacks** page, with the stack selected, choose **Update**\.
 
    1. Under **Prepare template**, choose **Replace current template**\.
 
@@ -175,11 +175,11 @@ Not all resources support import operations\. See [Resources that support import
    }
    ```
 
-1. Repeat steps 2\-3 to update the source stack again, this time to delete the target resource from the stack\.
+1. Repeat steps 2–3 to update the source stack again, this time to delete the target resource from the stack\.
 
 1. Perform an import operation to add `GamesTable` to the target stack\.
 
-   1. On the **Stacks** page, with the parent stack selected, choose **Update**, and then choose **Import resources into stack**\.  
+   1. On the **Stacks** page, with the parent stack selected, choose **Stack actions**, and then choose **Import resources into stack**\.  
 ![\[The Import resources into stack option in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/stack-actions-import.png)
 
    1. Read the **Import overview** page for a list of things you're required to provide during this operation\. Then, choose **Next**\.
@@ -199,14 +199,14 @@ Not all resources support import operations\. See [Resources that support import
 
    1. On the **Specify stack details** page, modify any parameters, and then choose **Next**\. This automatically creates a change set\.
 **Important**  
-The import operation fails if you modify existing parameters that trigger a create, update, or delete operation\.
+The import operation fails if you modify existing parameters that initiate a create, update, or delete operation\.
 
-   1. On the **Review *stack\-name*** page, confirm that the correct resource is being imported, and then choose **Import resources**\. This automatically runs the change set created in the last step\. Any [stack\-level tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html) are applied to imported resources at this time\.
+   1. On the **Review *stack\-name*** page, confirm that the correct resource is being imported, and then choose **Import resources**\. This automatically executes the change set created in the last step\. Any [stack\-level tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html) are applied to imported resources at this time\.
 
    1. The **Events** pane of the **Stack details** page for your parent stack displays\.  
 ![\[The Events tab in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/import-events.png)
 **Note**  
-It's not necessary to run drift detection on the parent stack after this import operation because the `AWS::CloudFormation::Stack`resource is already managed by AWS CloudFormation\.
+It's not necessary to run drift detection on the parent stack after this import operation because the `AWS::CloudFormation::Stack` resource is already managed by AWS CloudFormation\.
 
 ## Refactor a stack using the AWS CLI<a name="refactor-stacks-cli"></a>
 
@@ -384,7 +384,7 @@ It's not necessary to run drift detection on the parent stack after this import 
        --template-body file://templateToImport.json
    ```
 
-   The AWS CLI also supports text files as input for the `resources-to-import` parameter, as shown in the following example\. 
+   The AWS CLI also supports text files as input for the `resources-to-import` parameter, as shown in the following example\.
 
    ```
    --resources-to-import: file://resourcesToImport.txt

@@ -1,6 +1,8 @@
 # AWS::MediaLive::Input InputVpcRequest<a name="aws-properties-medialive-input-inputvpcrequest"></a>
 
-The settings for an Amazon VPC input\. 
+Settings that apply only if the input is an push input where the source is on Amazon VPC\.
+
+The parent of this entity is Input\.
 
 ## Syntax<a name="aws-properties-medialive-input-inputvpcrequest-syntax"></a>
 

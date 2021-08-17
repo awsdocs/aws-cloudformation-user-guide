@@ -50,7 +50,20 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-apigateway-clientcertificate-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-apigateway-clientcertificate-return-values-fn--getatt-fn--getatt"></a>
+
+`ClientCertificateId`  <a name="ClientCertificateId-fn::getatt"></a>
+The ID for the client certificate\. For example: `abc123`\.
+
 ## Examples<a name="aws-resource-apigateway-clientcertificate--examples"></a>
+
+
 
 ### Create client certificate<a name="aws-resource-apigateway-clientcertificate--examples--Create_client_certificate"></a>
 
@@ -80,3 +93,4 @@ TestClientCertificate:
 
 ## See also<a name="aws-resource-apigateway-clientcertificate--seealso"></a>
 + [clientcertificate:generate](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/clientcertificate-generate/) in the *Amazon API Gateway REST API Reference*
+

@@ -61,7 +61,7 @@ Specifies the name of the Lambda created to rotate your secret\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RotationType`  <a name="cfn-secretsmanager-rotationschedule-hostedrotationlambda-rotationtype"></a>
-Specifies the type of RotationSchedule used by Secrets Manager\. You can specify one of the following `RotationTypes`:  
+Specifies the type of Rotation Schedule used by Secrets Manager\. You can specify one of the following `RotationTypes`:  
 + MySQLSingleUser
 + MySQLMultiUser
 + PostgreSQLSingleUser
@@ -76,14 +76,14 @@ Specifies the type of RotationSchedule used by Secrets Manager\. You can specify
 + RedshiftMultiUser
 + MongoDBSingleUser
 + MongoDBMultiUser
-The rotation type uses a combination of the target database and the rotation strategy\. For more information on single user and multi user rotation, see [ Rotating Secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html) in the AWS Secrets Manager User’s Guide\.\.  
+The rotation type uses a combination of the target database and the rotation strategy\. For more information on single user and multi user rotation, see [ Rotating Secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html) in the AWS Secrets Manager User’s Guide\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcSecurityGroupIds`  <a name="cfn-secretsmanager-rotationschedule-hostedrotationlambda-vpcsecuritygroupids"></a>
 Specifies the comma\-separated list of security group IDs applied on the target with a secret in rotation\.  
-The templates applies the same security groups as on the rotation Lambda created as part of this stack  
+The templates applies the same security groups as on the rotation Lambda created as part of this stack\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

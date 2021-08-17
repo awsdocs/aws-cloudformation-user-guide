@@ -2,7 +2,7 @@
 
 Contains configuration information for a certificate revocation list \(CRL\)\. Your private certificate authority \(CA\) creates base CRLs\. Delta CRLs are not supported\. You can enable CRLs for your new or an existing private CA by setting the **Enabled** parameter to `true`\. Your private CA writes CRLs to an S3 bucket that you specify in the **S3BucketName** parameter\. You can hide the name of your bucket by specifying a value for the **CustomCname** parameter\. Your private CA copies the CNAME or the S3 bucket name to the **CRL Distribution Points** extension of each certificate it issues\. Your S3 bucket policy must give write permission to ACM Private CA\. 
 
-ACM Private CAA assets that are stored in Amazon S3 can be protected with encryption\. For more information, see [Encrypting Your CRLs](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html#crl-encryption)\.
+ACM Private CA assets that are stored in Amazon S3 can be protected with encryption\. For more information, see [Encrypting Your CRLs](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html#crl-encryption)\.
 
 Your private CA uses the value in the **ExpirationInDays** parameter to calculate the **nextUpdate** field in the CRL\. The CRL is refreshed at 1/2 the age of next update or when a certificate is revoked\. When a certificate is revoked, it is recorded in the next CRL that is generated and in the next audit report\. Only time valid certificates are listed in the CRL\. Expired certificates are not included\. 
 
@@ -38,7 +38,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CustomCname](#cfn-acmpca-certificateauthority-crlconfiguration-customcname)" : String,
   "[Enabled](#cfn-acmpca-certificateauthority-crlconfiguration-enabled)" : Boolean,
   "[ExpirationInDays](#cfn-acmpca-certificateauthority-crlconfiguration-expirationindays)" : Integer,
-  "[S3BucketName](#cfn-acmpca-certificateauthority-crlconfiguration-s3bucketname)" : String
+  "[S3BucketName](#cfn-acmpca-certificateauthority-crlconfiguration-s3bucketname)" : String,
+  "[S3ObjectAcl](#cfn-acmpca-certificateauthority-crlconfiguration-s3objectacl)" : String
 }
 ```
 
@@ -49,6 +50,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Enabled](#cfn-acmpca-certificateauthority-crlconfiguration-enabled): Boolean
   [ExpirationInDays](#cfn-acmpca-certificateauthority-crlconfiguration-expirationindays): Integer
   [S3BucketName](#cfn-acmpca-certificateauthority-crlconfiguration-s3bucketname): String
+  [S3ObjectAcl](#cfn-acmpca-certificateauthority-crlconfiguration-s3objectacl): String
 ```
 
 ## Properties<a name="aws-properties-acmpca-certificateauthority-crlconfiguration-properties"></a>
@@ -62,13 +64,13 @@ Name inserted into the certificate **CRL Distribution Points** extension that en
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-acmpca-certificateauthority-crlconfiguration-enabled"></a>
-Boolean value that specifies whether certificate revocation lists \(CRLs\) are enabled\. You can use this value to enable certificate revocation for a new CA when you call the [CreateCertificateAuthority](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CreateCertificateAuthority.html) action or for an existing CA when you call the [UpdateCertificateAuthority](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UpdateCertificateAuthority.html) action\.   
+Boolean value that specifies whether certificate revocation lists \(CRLs\) are enabled\. You can use this value to enable certificate revocation for a new CA when you call the `CreateCertificateAuthority` operation or for an existing CA when you call the `UpdateCertificateAuthority` operation\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExpirationInDays`  <a name="cfn-acmpca-certificateauthority-crlconfiguration-expirationindays"></a>
-Number of days until a certificate expires\.  
+Validity period of the CRL in days\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -76,9 +78,18 @@ Number of days until a certificate expires\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3BucketName`  <a name="cfn-acmpca-certificateauthority-crlconfiguration-s3bucketname"></a>
-Name of the S3 bucket that contains the CRL\. If you do not provide a value for the **CustomCname** argument, the name of your S3 bucket is placed into the **CRL Distribution Points** extension of the issued certificate\. You can change the name of your bucket by calling the [UpdateCertificateAuthority](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UpdateCertificateAuthority.html) action\. You must specify a bucket policy that allows ACM Private CA to write the CRL to your bucket\.  
+Name of the S3 bucket that contains the CRL\. If you do not provide a value for the **CustomCname** argument, the name of your S3 bucket is placed into the **CRL Distribution Points** extension of the issued certificate\. You can change the name of your bucket by calling the [UpdateCertificateAuthority](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_UpdateCertificateAuthority.html) operation\. You must specify a [bucket policy](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html#s3-policies) that allows ACM Private CA to write the CRL to your bucket\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `3`  
 *Maximum*: `255`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`S3ObjectAcl`  <a name="cfn-acmpca-certificateauthority-crlconfiguration-s3objectacl"></a>
+Determines whether the CRL will be publicly readable or privately held in the CRL Amazon S3 bucket\. If you choose PUBLIC\_READ, the CRL will be accessible over the public internet\. If you choose BUCKET\_OWNER\_FULL\_CONTROL, only the owner of the CRL S3 bucket can access the CRL, and your PKI clients may need an alternative method of access\.   
+If no value is specified, the default is PUBLIC\_READ\.  
+*Note:* This default can cause CA creation to fail in some circumstances\. If you have have enabled the Block Public Access \(BPA\) feature in your S3 account, then you must specify the value of this parameter as `BUCKET_OWNER_FULL_CONTROL`, and not doing so results in an error\. If you have disabled BPA in S3, then you can specify either `BUCKET_OWNER_FULL_CONTROL` or `PUBLIC_READ` as the value\.  
+For more information, see [Blocking public access to the S3 bucket](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html#s3-bpa)\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

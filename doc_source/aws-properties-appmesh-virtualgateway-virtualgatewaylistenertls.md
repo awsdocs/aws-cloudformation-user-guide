@@ -11,7 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Certificate](#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-certificate)" : VirtualGatewayListenerTlsCertificate,
-  "[Mode](#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-mode)" : String
+  "[Mode](#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-mode)" : String,
+  "[Validation](#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-validation)" : VirtualGatewayListenerTlsValidationContext
 }
 ```
 
@@ -21,6 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Certificate](#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-certificate): 
     VirtualGatewayListenerTlsCertificate
   [Mode](#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-mode): String
+  [Validation](#cfn-appmesh-virtualgateway-virtualgatewaylistenertls-validation): 
+    VirtualGatewayListenerTlsValidationContext
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls-properties"></a>
@@ -38,4 +41,10 @@ Specify one of the following modes\.
 + ****DISABLED – Listener only accepts connections without TLS\. 
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Validation`  <a name="cfn-appmesh-virtualgateway-virtualgatewaylistenertls-validation"></a>
+A reference to an object that represents a virtual gateway's listener's Transport Layer Security \(TLS\) validation context\.  
+*Required*: No  
+*Type*: [VirtualGatewayListenerTlsValidationContext](aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontext.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

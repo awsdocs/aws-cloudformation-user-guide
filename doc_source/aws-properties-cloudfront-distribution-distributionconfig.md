@@ -12,8 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Aliases](#cfn-cloudfront-distribution-distributionconfig-aliases)" : [ String, ... ],
   "[CacheBehaviors](#cfn-cloudfront-distribution-distributionconfig-cachebehaviors)" : [ CacheBehavior, ... ],
+  "[CNAMEs](#cfn-cloudfront-distribution-distributionconfig-cnames)" : [ String, ... ],
   "[Comment](#cfn-cloudfront-distribution-distributionconfig-comment)" : String,
   "[CustomErrorResponses](#cfn-cloudfront-distribution-distributionconfig-customerrorresponses)" : [ CustomErrorResponse, ... ],
+  "[CustomOrigin](#cfn-cloudfront-distribution-distributionconfig-customorigin)" : LegacyCustomOrigin,
   "[DefaultCacheBehavior](#cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior)" : DefaultCacheBehavior,
   "[DefaultRootObject](#cfn-cloudfront-distribution-distributionconfig-defaultrootobject)" : String,
   "[Enabled](#cfn-cloudfront-distribution-distributionconfig-enabled)" : Boolean,
@@ -24,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Origins](#cfn-cloudfront-distribution-distributionconfig-origins)" : [ Origin, ... ],
   "[PriceClass](#cfn-cloudfront-distribution-distributionconfig-priceclass)" : String,
   "[Restrictions](#cfn-cloudfront-distribution-distributionconfig-restrictions)" : Restrictions,
+  "[S3Origin](#cfn-cloudfront-distribution-distributionconfig-s3origin)" : LegacyS3Origin,
   "[ViewerCertificate](#cfn-cloudfront-distribution-distributionconfig-viewercertificate)" : ViewerCertificate,
   "[WebACLId](#cfn-cloudfront-distribution-distributionconfig-webaclid)" : String
 }
@@ -36,9 +39,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
   [CacheBehaviors](#cfn-cloudfront-distribution-distributionconfig-cachebehaviors): 
     - CacheBehavior
+  [CNAMEs](#cfn-cloudfront-distribution-distributionconfig-cnames): 
+    - String
   [Comment](#cfn-cloudfront-distribution-distributionconfig-comment): String
   [CustomErrorResponses](#cfn-cloudfront-distribution-distributionconfig-customerrorresponses): 
     - CustomErrorResponse
+  [CustomOrigin](#cfn-cloudfront-distribution-distributionconfig-customorigin): 
+    LegacyCustomOrigin
   [DefaultCacheBehavior](#cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior): 
     DefaultCacheBehavior
   [DefaultRootObject](#cfn-cloudfront-distribution-distributionconfig-defaultrootobject): String
@@ -54,6 +61,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [PriceClass](#cfn-cloudfront-distribution-distributionconfig-priceclass): String
   [Restrictions](#cfn-cloudfront-distribution-distributionconfig-restrictions): 
     Restrictions
+  [S3Origin](#cfn-cloudfront-distribution-distributionconfig-s3origin): 
+    LegacyS3Origin
   [ViewerCertificate](#cfn-cloudfront-distribution-distributionconfig-viewercertificate): 
     ViewerCertificate
   [WebACLId](#cfn-cloudfront-distribution-distributionconfig-webaclid): String
@@ -73,11 +82,14 @@ A complex type that contains zero or more `CacheBehavior` elements\.
 *Type*: List of [CacheBehavior](aws-properties-cloudfront-distribution-cachebehavior.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`CNAMEs`  <a name="cfn-cloudfront-distribution-distributionconfig-cnames"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Comment`  <a name="cfn-cloudfront-distribution-distributionconfig-comment"></a>
-Any comments you want to include about the distribution\.  
-If you don't want to specify a comment, include an empty `Comment` element\.  
-To delete an existing comment, update the distribution configuration and include an empty `Comment` element\.  
-To add or change a comment, update the distribution configuration and specify the new comment\.  
+An optional comment to describe the distribution\. The comment cannot be longer than 128 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -89,6 +101,12 @@ A complex type that controls the following:
 For more information about custom error pages, see [Customizing Error Responses](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/custom-error-pages.html) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
 *Type*: List of [CustomErrorResponse](aws-properties-cloudfront-distribution-customerrorresponse.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomOrigin`  <a name="cfn-cloudfront-distribution-distributionconfig-customorigin"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [LegacyCustomOrigin](aws-properties-cloudfront-distribution-legacycustomorigin.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultCacheBehavior`  <a name="cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior"></a>
@@ -126,11 +144,11 @@ In general, configuring CloudFront to communicate with viewers using HTTP/2 redu
 `IPV6Enabled`  <a name="cfn-cloudfront-distribution-distributionconfig-ipv6enabled"></a>
 If you want CloudFront to respond to IPv6 DNS requests with an IPv6 address for your distribution, specify `true`\. If you specify `false`, CloudFront responds to IPv6 DNS requests with the DNS response code `NOERROR` and with no IP addresses\. This allows viewers to submit a second request, for an IPv4 address for your distribution\.   
 In general, you should enable IPv6 if you have users on IPv6 networks who want to access your content\. However, if you're using signed URLs or signed cookies to restrict access to your content, and if you're using a custom policy that includes the `IpAddress` parameter to restrict the IP addresses that can access your content, don't enable IPv6\. If you want to restrict access to some content by IP address and not restrict access to other content \(or restrict access but not by IP address\), you can create two distributions\. For more information, see [Creating a Signed URL Using a Custom Policy](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-creating-signed-url-custom-policy.html) in the *Amazon CloudFront Developer Guide*\.  
-If you're using an Amazon Route 53 alias resource record set to route traffic to your CloudFront distribution, you need to create a second alias resource record set when both of the following are true:  
+If you're using an Amazon Route 53 AWS Integration alias resource record set to route traffic to your CloudFront distribution, you need to create a second alias resource record set when both of the following are true:  
 + You enable IPv6 for the distribution
 + You're using alternate domain names in the URLs for your objects
-For more information, see [Routing Traffic to an Amazon CloudFront Web Distribution by Using Your Domain Name](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-cloudfront-distribution.html) in the *Amazon Route 53 Developer Guide*\.  
-If you created a CNAME resource record set, either with Amazon Route 53 or with another DNS service, you don't need to make any changes\. A CNAME record will route traffic to your distribution regardless of the IP address format of the viewer request\.  
+For more information, see [Routing Traffic to an Amazon CloudFront Web Distribution by Using Your Domain Name](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-cloudfront-distribution.html) in the * Amazon Route 53 AWS Integration Developer Guide*\.  
+If you created a CNAME resource record set, either with Amazon Route 53 AWS Integration or with another DNS service, you don't need to make any changes\. A CNAME record will route traffic to your distribution regardless of the IP address format of the viewer request\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -169,6 +187,12 @@ A complex type that identifies ways in which you want to restrict distribution o
 *Type*: [Restrictions](aws-properties-cloudfront-distribution-restrictions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`S3Origin`  <a name="cfn-cloudfront-distribution-distributionconfig-s3origin"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [LegacyS3Origin](aws-properties-cloudfront-distribution-legacys3origin.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ViewerCertificate`  <a name="cfn-cloudfront-distribution-distributionconfig-viewercertificate"></a>
 A complex type that determines the distribution’s SSL/TLS configuration for communicating with viewers\.  
 *Required*: No  
@@ -177,10 +201,11 @@ A complex type that determines the distribution’s SSL/TLS configuration for co
 
 `WebACLId`  <a name="cfn-cloudfront-distribution-distributionconfig-webaclid"></a>
 A unique identifier that specifies the AWS WAF web ACL, if any, to associate with this distribution\. To specify a web ACL created using the latest version of AWS WAF, use the ACL ARN, for example `arn:aws:wafv2:us-east-1:123456789012:global/webacl/ExampleWebACL/473e64fd-f30b-4765-81a0-62ad96dd167a`\. To specify a web ACL created using AWS WAF Classic, use the ACL ID, for example `473e64fd-f30b-4765-81a0-62ad96dd167a`\.  
-AWS WAF is a web application firewall that lets you monitor the HTTP and HTTPS requests that are forwarded to CloudFront, and lets you control access to your content\. Based on conditions that you specify, such as the IP addresses that requests originate from or the values of query strings, CloudFront responds to requests either with the requested content or with an HTTP 403 status code \(Forbidden\)\. You can also configure CloudFront to return a custom error page when a request is blocked\. For more information about AWS WAF, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/what-is-aws-waf.html)\.   
+ AWS WAF is a web application firewall that lets you monitor the HTTP and HTTPS requests that are forwarded to CloudFront, and lets you control access to your content\. Based on conditions that you specify, such as the IP addresses that requests originate from or the values of query strings, CloudFront responds to requests either with the requested content or with an HTTP 403 status code \(Forbidden\)\. You can also configure CloudFront to return a custom error page when a request is blocked\. For more information about AWS WAF, see the [ AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/what-is-aws-waf.html)\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-cloudfront-distribution-distributionconfig--seealso"></a>
 +  [DistributionConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DistributionConfig.html) in the *Amazon CloudFront API Reference* 
+

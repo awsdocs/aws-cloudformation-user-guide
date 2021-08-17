@@ -35,9 +35,9 @@ The name or key of the environment variable\.
 
 `Type`  <a name="cfn-codebuild-project-environmentvariable-type"></a>
 The type of environment variable\. Valid values include:  
-+  `PARAMETER_STORE`: An environment variable stored in Amazon EC2 Systems Manager Parameter Store\. To learn how to specify a parameter store environment variable, see [ parameter store reference\-key in the buildspec file](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec.env.parameter-store)\.
++  `PARAMETER_STORE`: An environment variable stored in Systems Manager Parameter Store\. To learn how to specify a parameter store environment variable, see [env/parameter\-store](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec.env.parameter-store) in the * AWS CodeBuild User Guide*\.
 +  `PLAINTEXT`: An environment variable in plain text format\. This is the default value\.
-+  `SECRETS_MANAGER`: An environment variable stored in AWS Secrets Manager\. To learn how to specify a secrets manager environment variable, see [ secrets manager reference\-key in the buildspec file](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec.env.secrets-manager)\.
++  `SECRETS_MANAGER`: An environment variable stored in AWS Secrets Manager\. To learn how to specify a secrets manager environment variable, see [env/secrets\-manager](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec.env.secrets-manager) in the * AWS CodeBuild User Guide*\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `PARAMETER_STORE | PLAINTEXT | SECRETS_MANAGER`  
@@ -49,3 +49,48 @@ We strongly discourage the use of `PLAINTEXT` environment variables to store sen
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-codebuild-project-environmentvariable--examples"></a>
+
+
+
+### <a name="aws-properties-codebuild-project-environmentvariable--examples--"></a>
+
+#### JSON<a name="aws-properties-codebuild-project-environmentvariable--examples----json"></a>
+
+```
+{
+  "Project": {
+    "Environment": {
+      "EnvironmentVariables": [
+        {
+          "Name": "MY_VAR_1",
+          "Type": "PLAINTEXT",
+          "Value": "VAR_1_VALUE"
+        },
+        {
+          "Name": "MY_VAR_2",
+          "Type": "PLAINTEXT",
+          "Value": "VAR_2_VALUE"
+        }
+      ]
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-properties-codebuild-project-environmentvariable--examples----yaml"></a>
+
+```
+Project:
+  Type: AWS::CodeBuild::Project
+  Properties:
+    Environment:
+      EnvironmentVariables:
+        - Name: MY_VAR_1
+          Type: PLAINTEXT
+          Value: VAR_1_VALUE
+        - Name: MY_VAR_2
+          Type: PLAINTEXT
+          Value: VAR_2_VALUE
+```
