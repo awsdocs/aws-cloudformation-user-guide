@@ -296,7 +296,7 @@ The following example creates two VPCs \(`myVPC` and `myPrivateVPC`\) and a subn
              "GroupDescription": "Private instance security group",
              "VpcId" : { "Ref" : "myPrivateVPC" },
              "SecurityGroupIngress" : [
-                 {"IpProtocol" : "icmp", "FromPort" : "-1", "ToPort" : "-1", "CidrIp" : "0.0.0.0/0"}
+                 {"IpProtocol" : "icmp", "FromPort" : -1, "ToPort" : -1, "CidrIp" : "0.0.0.0/0"}
               ]
          }
      },
@@ -306,7 +306,7 @@ The following example creates two VPCs \(`myVPC` and `myPrivateVPC`\) and a subn
             "GroupDescription": "Public instance security group",
             "VpcId" : { "Ref" : "myVPC" },
             "SecurityGroupIngress" : [
-                {"IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : "0.0.0.0/0"}
+                {"IpProtocol" : "tcp", "FromPort" : 22, "ToPort" : 22, "CidrIp" : "0.0.0.0/0"}
             ]
         }
      },
@@ -499,8 +499,8 @@ Resources:
       VpcId: !Ref myPrivateVPC
       SecurityGroupIngress:
         - IpProtocol: icmp
-          FromPort: '-1'
-          ToPort: '-1'
+          FromPort: -1
+          ToPort: -1
           CidrIp: 0.0.0.0/0
   myVPCEC2SecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
@@ -509,8 +509,8 @@ Resources:
       VpcId: !Ref myVPC
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '22'
-          ToPort: '22'
+          FromPort: 22
+          ToPort: 22
           CidrIp: 0.0.0.0/0
   myPrivateInstance:
     Type: 'AWS::EC2::Instance'

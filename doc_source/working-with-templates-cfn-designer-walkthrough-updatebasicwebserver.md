@@ -199,16 +199,16 @@ JSON
               "SecurityGroupIngress": [
                 {
                   "IpProtocol": "tcp",
-                  "FromPort": "80",
-                  "ToPort": "80",
+                  "FromPort": 80,
+                  "ToPort": 80,
                   "CidrIp": "0.0.0.0/0"
                 }
               ],
               "SecurityGroupEgress": [
                 {
                   "IpProtocol": "tcp",
-                  "FromPort": "80",
-                  "ToPort": "80",
+                  "FromPort": 80,
+                  "ToPort": 80,
                   "CidrIp": "0.0.0.0/0"
                 }
               ],
@@ -224,13 +224,13 @@ YAML
               from the Internet
             SecurityGroupIngress:
               - IpProtocol: tcp
-                FromPort: '80'
-                ToPort: '80'
+                FromPort: 80
+                ToPort: 80
                 CidrIp: 0.0.0.0/0
             SecurityGroupEgress:
               - IpProtocol: tcp
-                FromPort: '80'
-                ToPort: '80'
+                FromPort: 80
+                ToPort: 80
                 CidrIp: 0.0.0.0/0
             VpcId: !Ref VPC
       ```  
@@ -243,16 +243,16 @@ JSON
               "SecurityGroupIngress": [
                 {
                   "IpProtocol": "tcp",
-                  "FromPort": "80",
-                  "ToPort": "80",
+                  "FromPort": 80,
+                  "ToPort": 80,
                   "SourceSecurityGroupId": {
                     "Ref": "PublicLoadBalancerSecurityGroup"
                   }
                 },
                 {
                   "IpProtocol": "tcp",
-                  "FromPort": "22",
-                  "ToPort": "22",
+                  "FromPort": 22,
+                  "ToPort": 22,
                   "CidrIp": {
                     "Ref": "SSHLocation"
                   }
@@ -269,12 +269,12 @@ YAML
             GroupDescription: Allow access from load balancer and SSH traffic
             SecurityGroupIngress:
               - IpProtocol: tcp
-                FromPort: '80'
-                ToPort: '80'
+                FromPort: 80
+                ToPort: 80
                 SourceSecurityGroupId: !Ref PublicLoadBalancerSecurityGroup
               - IpProtocol: tcp
-                FromPort: '22'
-                ToPort: '22'
+                FromPort: 22
+                ToPort: 22
                 CidrIp: !Ref SSHLocation
       ```  
 `WebServerLaunchConfig`  

@@ -53,8 +53,8 @@ The Resources section contains the definitions of the AWS resources you want to 
 32.     "Properties" : {
 33.       "GroupDescription" : "Enable HTTP access via port 80 locked down to the load balancer + SSH access",
 34.       "SecurityGroupIngress" : [
-35.         {"IpProtocol" : "tcp", "FromPort" : "80", "ToPort" : "80", "CidrIp" : "0.0.0.0/0"},
-36.         {"IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : { "Ref" : "SSHLocation"}}
+35.         {"IpProtocol" : "tcp", "FromPort" : 80, "ToPort" : 80, "CidrIp" : "0.0.0.0/0"},
+36.         {"IpProtocol" : "tcp", "FromPort" : 22, "ToPort" : 22, "CidrIp" : { "Ref" : "SSHLocation"}}
 37.       ]
 38.     }
 39.   },
@@ -92,13 +92,13 @@ The Resources section contains the definitions of the AWS resources you want to 
 25.       GroupDescription: "Enable HTTP access via port 80 locked down to the load balancer + SSH access"
 26.       SecurityGroupIngress:
 27.       - CidrIp: 0.0.0.0/0
-28.         FromPort: '80'
+28.         FromPort: 80
 29.         IpProtocol: tcp
-30.         ToPort: '80'
+30.         ToPort: 80
 31.       - CidrIp: !Ref SSHLocation
-32.         FromPort: '22'
+32.         FromPort: 22
 33.         IpProtocol: tcp
-34.         ToPort: '22'
+34.         ToPort: 22
 35. 
 36.   ...
 ```

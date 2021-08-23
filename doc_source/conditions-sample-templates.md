@@ -325,8 +325,8 @@ In this example, you can use an Amazon EC2 security group that has already been 
         "GroupDescription" : "Enable HTTP access via port 80",
         "SecurityGroupIngress" : [ {
           "IpProtocol" : "tcp",
-          "FromPort" : "80",
-          "ToPort" : "80",
+          "FromPort" : 80,
+          "ToPort" : 80,
           "CidrIp" : "0.0.0.0/0"
         } ]
       }

@@ -152,8 +152,8 @@ To do this, you define an EC2 security group and then use the intrinsic Ref func
    "Properties" : {
       "GroupDescription" : "Enable HTTP access via port 80 and SSH access",
       "SecurityGroupIngress" : [
-         {"IpProtocol" : "tcp", "FromPort" : "80", "ToPort" : "80", "CidrIp" : "0.0.0.0/0"},
-         {"IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : "0.0.0.0/0"}
+         {"IpProtocol" : "tcp", "FromPort" : 80, "ToPort" : 80, "CidrIp" : "0.0.0.0/0"},
+         {"IpProtocol" : "tcp", "FromPort" : 22, "ToPort" : 22, "CidrIp" : "0.0.0.0/0"}
       ]
    }
 }
@@ -193,12 +193,12 @@ WebServerSecurityGroup:
     GroupDescription: Enable HTTP access via port 80 and SSH access
     SecurityGroupIngress:
     - IpProtocol: tcp
-      FromPort: '80'
-      ToPort: '80'
+      FromPort: 80
+      ToPort: 80
       CidrIp: 0.0.0.0/0
     - IpProtocol: tcp
-      FromPort: '22'
-      ToPort: '22'
+      FromPort: 22
+      ToPort: 22
       CidrIp: 0.0.0.0/0
 ```
 
@@ -291,8 +291,8 @@ This example shows an Amazon RDS database instance associated with an Amazon EC2
       "GroupDescription": "Open database for access",
       "SecurityGroupIngress" : [{
         "IpProtocol" : "tcp",
-        "FromPort" : "3306",
-        "ToPort" : "3306",
+        "FromPort" : 3306,
+        "ToPort" : 3306,
         "SourceSecurityGroupName" : { "Ref" : "WebServerSecurityGroup" }
       }]
     }
@@ -322,8 +322,8 @@ DBEC2SecurityGroup:
     GroupDescription: Open database for access
     SecurityGroupIngress:
     - IpProtocol: tcp
-      FromPort: '3306'
-      ToPort: '3306'
+      FromPort: 3306
+      ToPort: 3306
       SourceSecurityGroupName:
         Ref: WebServerSecurityGroup
 DBInstance:

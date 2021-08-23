@@ -127,8 +127,8 @@ For the latest AMI IDs, see [Amazon ECS\-optimized AMI](https://docs.aws.amazon.
           "Ref":"EcsSecurityGroup"
         },
         "IpProtocol":"tcp",
-        "FromPort":"80",
-        "ToPort":"80",
+        "FromPort":80,
+        "ToPort":80,
         "CidrIp":"0.0.0.0/0"
       }
     },
@@ -139,8 +139,8 @@ For the latest AMI IDs, see [Amazon ECS\-optimized AMI](https://docs.aws.amazon.
           "Ref":"EcsSecurityGroup"
         },
         "IpProtocol":"tcp",
-        "FromPort":"22",
-        "ToPort":"22",
+        "FromPort":22,
+        "ToPort":22,
         "CidrIp":"0.0.0.0/0"
       }
     },
@@ -151,8 +151,8 @@ For the latest AMI IDs, see [Amazon ECS\-optimized AMI](https://docs.aws.amazon.
           "Ref":"EcsSecurityGroup"
         },
         "IpProtocol":"tcp",
-        "FromPort":"31000",
-        "ToPort":"61000",
+        "FromPort":31000,
+        "ToPort":61000,
         "SourceSecurityGroupId":{
           "Ref":"EcsSecurityGroup"
         }
@@ -805,24 +805,24 @@ Resources:
     Properties:
       GroupId: !Ref 'EcsSecurityGroup'
       IpProtocol: tcp
-      FromPort: '80'
-      ToPort: '80'
+      FromPort: 80
+      ToPort: 80
       CidrIp: 0.0.0.0/0
   EcsSecurityGroupSSHinbound:
     Type: AWS::EC2::SecurityGroupIngress
     Properties:
       GroupId: !Ref 'EcsSecurityGroup'
       IpProtocol: tcp
-      FromPort: '22'
-      ToPort: '22'
+      FromPort: 22
+      ToPort: 22
       CidrIp: 0.0.0.0/0
   EcsSecurityGroupALBports:
     Type: AWS::EC2::SecurityGroupIngress
     Properties:
       GroupId: !Ref 'EcsSecurityGroup'
       IpProtocol: tcp
-      FromPort: '31000'
-      ToPort: '61000'
+      FromPort: 31000
+      ToPort: 61000
       SourceSecurityGroupId: !Ref 'EcsSecurityGroup'
   CloudwatchLogsGroup:
     Type: AWS::Logs::LogGroup
