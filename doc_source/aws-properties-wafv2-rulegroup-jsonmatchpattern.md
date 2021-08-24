@@ -40,3 +40,50 @@ Don't use this option to include all paths\. Instead, use the `All` setting\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-wafv2-rulegroup-jsonmatchpattern--examples"></a>
+
+
+
+### Set a JSON match pattern for all paths<a name="aws-properties-wafv2-rulegroup-jsonmatchpattern--examples--Set_a_JSON_match_pattern_for_all_paths_"></a>
+
+The following shows an example JSON match pattern specification for all paths\. 
+
+#### YAML<a name="aws-properties-wafv2-rulegroup-jsonmatchpattern--examples--Set_a_JSON_match_pattern_for_all_paths_--yaml"></a>
+
+```
+MatchPattern:
+  All: {}
+```
+
+#### JSON<a name="aws-properties-wafv2-rulegroup-jsonmatchpattern--examples--Set_a_JSON_match_pattern_for_all_paths_--json"></a>
+
+```
+"MatchPattern": {
+  "All": {}
+}
+```
+
+### Set a JSON match pattern with included paths<a name="aws-properties-wafv2-rulegroup-jsonmatchpattern--examples--Set_a_JSON_match_pattern_with_included_paths_"></a>
+
+The following shows an example JSON match pattern specification with included paths\. 
+
+#### YAML<a name="aws-properties-wafv2-rulegroup-jsonmatchpattern--examples--Set_a_JSON_match_pattern_with_included_paths_--yaml"></a>
+
+```
+MatchPattern:
+  IncludedPaths:
+    - "/dogs/0/name"
+    - "/cats/0/name"
+```
+
+#### JSON<a name="aws-properties-wafv2-rulegroup-jsonmatchpattern--examples--Set_a_JSON_match_pattern_with_included_paths_--json"></a>
+
+```
+"MatchPattern": {
+  "IncludedPaths": [
+    "/dogs/0/name",
+    "/cats/0/name"
+  ]
+}
+```

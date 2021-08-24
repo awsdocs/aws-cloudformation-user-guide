@@ -100,6 +100,7 @@ Specifies whether the trail applies only to the current region or to all regions
 
 `KMSKeyId`  <a name="cfn-cloudtrail-trail-kmskeyid"></a>
 Specifies the AWS KMS key ID to use to encrypt the logs delivered by CloudTrail\. The value can be an alias name prefixed by "alias/", a fully specified ARN to an alias, a fully specified ARN to a key, or a globally unique identifier\.  
+CloudTrail also supports AWS KMS multi\-Region keys\. For more information about multi\-Region keys, see [Using multi\-Region keys](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html) in the * AWS Key Management Service Developer Guide*\.  
 Examples:  
 + alias/MyAliasName
 + arn:aws:kms:us\-east\-2:123456789012:alias/MyAliasName

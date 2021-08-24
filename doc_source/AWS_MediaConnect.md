@@ -1,4 +1,4 @@
-# MediaConnect resource type reference<a name="AWS_MediaConnect"></a>
+# AWS Elemental MediaConnect resource type reference<a name="AWS_MediaConnect"></a>
 
 **Resource types**
 + [AWS::MediaConnect::Flow](aws-resource-mediaconnect-flow.md)

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ActiveDirectoryId](#cfn-fsx-filesystem-windowsconfiguration-activedirectoryid)" : String,
   "[Aliases](#cfn-fsx-filesystem-windowsconfiguration-aliases)" : [ String, ... ],
+  "[AuditLogConfiguration](#cfn-fsx-filesystem-windowsconfiguration-auditlogconfiguration)" : AuditLogConfiguration,
   "[AutomaticBackupRetentionDays](#cfn-fsx-filesystem-windowsconfiguration-automaticbackupretentiondays)" : Integer,
   "[CopyTagsToBackups](#cfn-fsx-filesystem-windowsconfiguration-copytagstobackups)" : Boolean,
   "[DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-windowsconfiguration-dailyautomaticbackupstarttime)" : String,
@@ -29,6 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ActiveDirectoryId](#cfn-fsx-filesystem-windowsconfiguration-activedirectoryid): String
   [Aliases](#cfn-fsx-filesystem-windowsconfiguration-aliases): 
     - String
+  [AuditLogConfiguration](#cfn-fsx-filesystem-windowsconfiguration-auditlogconfiguration): 
+    AuditLogConfiguration
   [AutomaticBackupRetentionDays](#cfn-fsx-filesystem-windowsconfiguration-automaticbackupretentiondays): Integer
   [CopyTagsToBackups](#cfn-fsx-filesystem-windowsconfiguration-copytagstobackups): Boolean
   [DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-windowsconfiguration-dailyautomaticbackupstarttime): String
@@ -63,6 +66,12 @@ For DNS alias names, Amazon FSx stores alphabetic characters as lowercase letter
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AuditLogConfiguration`  <a name="cfn-fsx-filesystem-windowsconfiguration-auditlogconfiguration"></a>
+The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system\.  
+*Required*: No  
+*Type*: [AuditLogConfiguration](aws-properties-fsx-filesystem-windowsconfiguration-auditlogconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutomaticBackupRetentionDays`  <a name="cfn-fsx-filesystem-windowsconfiguration-automaticbackupretentiondays"></a>

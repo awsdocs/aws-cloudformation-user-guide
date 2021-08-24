@@ -1,4 +1,4 @@
-# ServiceCatalogAppRegistry resource type reference<a name="AWS_ServiceCatalogAppRegistry"></a>
+# AWS Service Catalog App Registry resource type reference<a name="AWS_ServiceCatalogAppRegistry"></a>
 
 **Resource types**
 + [AWS::ServiceCatalogAppRegistry::Application](aws-resource-servicecatalogappregistry-application.md)

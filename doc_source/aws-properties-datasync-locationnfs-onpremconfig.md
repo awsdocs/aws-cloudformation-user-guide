@@ -28,4 +28,4 @@ ARNs of the agents to use for an NFS location\.
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `4`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

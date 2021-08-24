@@ -609,8 +609,8 @@ Policy:
       SecurityServicePolicyData:
         Type: DNS_FIREWALL
         ManagedServiceData: !Sub '{"type":"DNS_FIREWALL",
-                                  "preProcessRuleGroups":[{\"ruleGroupId\": \"${PreRuleGroupId}\", \"priority\": 11}],
-                                  "postProcessRuleGroups":[{\"ruleGroupId\": \"${PostRuleGroupId}\", \"priority\": 9902}]}'
+                                  "preProcessRuleGroups":[{"ruleGroupId": "${PreRuleGroupId}", "priority": 11}],
+                                  "postProcessRuleGroups":[{"ruleGroupId": "${PostRuleGroupId}", "priority": 9902}]}'
 ```
 
 #### JSON<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_DNS_Firewall_policy--json"></a>

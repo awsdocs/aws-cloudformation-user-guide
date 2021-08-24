@@ -1,4 +1,4 @@
-# IoTWireless resource type reference<a name="AWS_IoTWireless"></a>
+# AWS IoT Wireless resource type reference<a name="AWS_IoTWireless"></a>
 
 **Resource types**
 + [AWS::IoTWireless::Destination](aws-resource-iotwireless-destination.md)

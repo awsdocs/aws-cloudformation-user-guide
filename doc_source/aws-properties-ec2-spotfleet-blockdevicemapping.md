@@ -44,7 +44,7 @@ Parameters used to automatically set up EBS volumes when the instance is launche
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NoDevice`  <a name="cfn-ec2-spotfleet-blockdevicemapping-nodevice"></a>
-To omit the device from the block device mapping, specify an empty string\.  
+To omit the device from the block device mapping, specify an empty string\. When this property is specified, the device is removed from the block device mapping regardless of the assigned value\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

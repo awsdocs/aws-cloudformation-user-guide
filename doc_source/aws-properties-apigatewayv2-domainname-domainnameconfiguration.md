@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CertificateArn](#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatearn)" : String,
   "[CertificateName](#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatename)" : String,
   "[EndpointType](#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype)" : String,
+  "[OwnershipVerificationCertificateArn](#cfn-apigatewayv2-domainname-domainnameconfiguration-ownershipverificationcertificatearn)" : String,
   "[SecurityPolicy](#cfn-apigatewayv2-domainname-domainnameconfiguration-securitypolicy)" : String
 }
 ```
@@ -25,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CertificateArn](#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatearn): String
   [CertificateName](#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatename): String
   [EndpointType](#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype): String
+  [OwnershipVerificationCertificateArn](#cfn-apigatewayv2-domainname-domainnameconfiguration-ownershipverificationcertificatearn): String
   [SecurityPolicy](#cfn-apigatewayv2-domainname-domainnameconfiguration-securitypolicy): String
 ```
 
@@ -44,6 +46,12 @@ The user\-friendly name of the certificate that will be used by the edge\-optimi
 
 `EndpointType`  <a name="cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype"></a>
 The endpoint type\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`OwnershipVerificationCertificateArn`  <a name="cfn-apigatewayv2-domainname-domainnameconfiguration-ownershipverificationcertificatearn"></a>
+The ARN of the public certificate issued by ACM to validate ownership of your custom domain\. Only required when configuring mutual TLS and using an ACM imported or private CA certificate ARN as the RegionalCertificateArn\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

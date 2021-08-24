@@ -37,6 +37,7 @@ Properties:
 
 `Options`  <a name="cfn-ec2-transitgatewayconnect-options"></a>
 The Connect attachment options\.  
++ protocol \(gre\)
 *Required*: Yes  
 *Type*: [TransitGatewayConnectOptions](aws-properties-ec2-transitgatewayconnect-transitgatewayconnectoptions.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

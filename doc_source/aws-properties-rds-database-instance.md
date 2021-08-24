@@ -376,25 +376,17 @@ By specifying this property, you can create a DB instance from the specified DB 
 Some DB instance properties aren't valid when you restore from a snapshot, such as the `MasterUsername` and `MasterUserPassword` properties\. For information about the properties that you can specify, see the `RestoreDBInstanceFromDBSnapshot` action in the *Amazon RDS API Reference*\.  
 After you restore a DB instance with a `DBSnapshotIdentifier` property, you must specify the same `DBSnapshotIdentifier` property for any future updates to the DB instance\. When you specify this property for an update, the DB instance is not restored from the DB snapshot again, and the data in the database is not changed\. However, if you don't specify the `DBSnapshotIdentifier` property, an empty DB instance is created, and the original DB instance is deleted\. If you specify a property that is different from the previous snapshot restore property, a new DB instance is restored from the specified `DBSnapshotIdentifier` property, and the original DB instance is deleted\.  
 If you specify the `DBSnapshotIdentifier` property to restore a DB instance \(as opposed to specifying it for DB instance updates\), then don't specify the following properties:  
-+ `AllocatedStorage`
-+ `BackupRetentionPeriod`
 + `CharacterSetName`
 + `DBClusterIdentifier`
 + `DBName`
-+ `DBSecurityGroups`
 + `DeleteAutomatedBackups`
 + `EnablePerformanceInsights`
-+ `EngineVersion`
 + `KmsKeyId`
 + `MasterUsername`
-+ `MasterUserPassword`
-+ `MaxAllocatedStorage`
 + `MonitoringInterval`
 + `MonitoringRoleArn`
 + `PerformanceInsightsKMSKeyId`
 + `PerformanceInsightsRetentionPeriod`
-+ `PreferredBackupWindow`
-+ `PreferredMaintenanceWindow`
 + `PromotionTier`
 + `SourceDBInstanceIdentifier`
 + `SourceRegion`
@@ -570,7 +562,7 @@ Constraints: Must contain from 8 to 128 characters\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxAllocatedStorage`  <a name="cfn-rds-dbinstance-maxallocatedstorage"></a>
-The upper limit to which Amazon RDS can automatically scale the storage of the DB instance\.  
+The upper limit in gibibytes \(GiB\) to which Amazon RDS can automatically scale the storage of the DB instance\.  
 For more information about this setting, including limitations that apply to it, see [ Managing capacity automatically with Amazon RDS storage autoscaling](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling) in the *Amazon RDS User Guide*\.  
 *Required*: No  
 *Type*: Integer  

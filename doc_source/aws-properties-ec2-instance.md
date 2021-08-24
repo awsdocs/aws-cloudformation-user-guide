@@ -147,7 +147,7 @@ By default, the block devices specified in the block device mapping for the AMI 
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `CpuOptions`  <a name="cfn-ec2-instance-cpuoptions"></a>
-The CPU options for the instance\.  
+The CPU options for the instance\. For more information, see [Optimize CPU options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 *Required*: No  
 *Type*: [CpuOptions](aws-properties-ec2-instance-cpuoptions.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -255,7 +255,7 @@ You cannot specify this option and the network interfaces option in the same req
 
 `KernelId`  <a name="cfn-ec2-instance-kernelid"></a>
 The ID of the kernel\.  
-We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more information, see [ PV\-GRUB](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html) in the *Amazon EC2 User Guide*\.
+We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more information, see [PV\-GRUB](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html) in the *Amazon EC2 User Guide*\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
@@ -310,7 +310,7 @@ If you make an update to an instance that requires replacement, you must assign 
 
 `RamdiskId`  <a name="cfn-ec2-instance-ramdiskid"></a>
 The ID of the RAM disk to select\. Some kernels require additional drivers at launch\. Check the kernel requirements for information about whether you need to specify a RAM disk\. To find kernel requirements, go to the AWS Resource Center and search for the kernel ID\.  
-We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more information, see [ PV\-GRUB](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html) in the *Amazon EC2 User Guide*\.
+We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more information, see [PV\-GRUB](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedkernels.html) in the *Amazon EC2 User Guide*\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

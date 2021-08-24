@@ -1,14 +1,14 @@
-# AWS::EC2::DHCPOptions<a name="aws-resource-ec2-dhcp-options"></a>
+# AWS::EC2::DHCPOptions<a name="aws-resource-ec2-dhcpoptions"></a>
 
 Specifies a set of DHCP options for your VPC\.
 
 You must specify at least one of the following properties: `DomainNameServers`, `NetbiosNameServers`, `NtpServers`\. If you specify `NetbiosNameServers`, you must specify `NetbiosNodeType`\.
 
-## Syntax<a name="aws-resource-ec2-dhcp-options-syntax"></a>
+## Syntax<a name="aws-resource-ec2-dhcpoptions-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-resource-ec2-dhcp-options-syntax.json"></a>
+### JSON<a name="aws-resource-ec2-dhcpoptions-syntax.json"></a>
 
 ```
 {
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 }
 ```
 
-### YAML<a name="aws-resource-ec2-dhcp-options-syntax.yaml"></a>
+### YAML<a name="aws-resource-ec2-dhcpoptions-syntax.yaml"></a>
 
 ```
 Type: AWS::EC2::DHCPOptions
@@ -41,7 +41,7 @@ Properties:
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
-## Properties<a name="aws-resource-ec2-dhcp-options-properties"></a>
+## Properties<a name="aws-resource-ec2-dhcpoptions-properties"></a>
 
 `DomainName`  <a name="cfn-ec2-dhcpoptions-domainname"></a>
 This value is used to complete unqualified DNS hostnames\. If you're using AmazonProvidedDNS in `us-east-1`, specify `ec2.internal`\. If you're using AmazonProvidedDNS in another Region, specify *region*\.`compute.internal` \(for example, `ap-northeast-1.compute.internal`\)\. Otherwise, specify a domain name \(for example, *MyCompany\.com*\)\.  
@@ -79,21 +79,28 @@ Any tags assigned to the DHCP options set\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return values<a name="aws-resource-ec2-dhcp-options-return-values"></a>
+## Return values<a name="aws-resource-ec2-dhcpoptions-return-values"></a>
 
-### Ref<a name="aws-resource-ec2-dhcp-options-return-values-ref"></a>
+### Ref<a name="aws-resource-ec2-dhcpoptions-return-values-ref"></a>
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Examples<a name="aws-resource-ec2-dhcp-options--examples"></a>
+### Fn::GetAtt<a name="aws-resource-ec2-dhcpoptions-return-values-fn--getatt"></a>
 
-### <a name="aws-resource-ec2-dhcp-options--examples--"></a>
+#### <a name="aws-resource-ec2-dhcpoptions-return-values-fn--getatt-fn--getatt"></a>
+
+`DhcpOptionsId`  <a name="DhcpOptionsId-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+## Examples<a name="aws-resource-ec2-dhcpoptions--examples"></a>
+
+### <a name="aws-resource-ec2-dhcpoptions--examples--"></a>
 
 
 
-#### YAML<a name="aws-resource-ec2-dhcp-options--examples----yaml"></a>
+#### YAML<a name="aws-resource-ec2-dhcpoptions--examples----yaml"></a>
 
 ```
 myDhcpOptions: 
@@ -112,11 +119,11 @@ myDhcpOptions:
           Value: 123
 ```
 
-### <a name="aws-resource-ec2-dhcp-options--examples--"></a>
+### <a name="aws-resource-ec2-dhcpoptions--examples--"></a>
 
 
 
-#### JSON<a name="aws-resource-ec2-dhcp-options--examples----json"></a>
+#### JSON<a name="aws-resource-ec2-dhcpoptions--examples----json"></a>
 
 ```
 {
@@ -134,7 +141,7 @@ myDhcpOptions:
 }
 ```
 
-## See also<a name="aws-resource-ec2-dhcp-options--seealso"></a>
+## See also<a name="aws-resource-ec2-dhcpoptions--seealso"></a>
 +  [CreateDhcpOptions](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateDhcpOptions.html) in the *Amazon Elastic Compute Cloud API Reference* 
 + [DHCP Options Sets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html) in the *Amazon Virtual Private Cloud User Guide*
 

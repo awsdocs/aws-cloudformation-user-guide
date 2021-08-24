@@ -42,14 +42,14 @@ Properties:
 The NFS mount options that DataSync can use to mount your NFS share\.  
 *Required*: No  
 *Type*: [MountOptions](aws-properties-datasync-locationnfs-mountoptions.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OnPremConfig`  <a name="cfn-datasync-locationnfs-onpremconfig"></a>
 Contains a list of Amazon Resource Names \(ARNs\) of agents that are used to connect to an NFS server\.   
 If you are copying data to or from your AWS Snowcone device, see [NFS Server on AWS Snowcone ](https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone) for more information\.  
 *Required*: Yes  
 *Type*: [OnPremConfig](aws-properties-datasync-locationnfs-onpremconfig.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerHostname`  <a name="cfn-datasync-locationnfs-serverhostname"></a>
 The name of the NFS server\. This value is the IP address or Domain Name Service \(DNS\) name of the NFS server\. An agent that is installed on\-premises uses this host name to mount the NFS server in a network\.   
@@ -71,7 +71,7 @@ For information about NFS export configuration, see [18\.7\. The /etc/exports Co
 *Type*: String  
 *Maximum*: `4096`  
 *Pattern*: `^[a-zA-Z0-9_\-\+\./\(\)\p{Zs}]+$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-datasync-locationnfs-tags"></a>
 The key\-value pair that represents the tag that you want to add to the location\. The value can be an empty string\. We recommend using tags to name your resources\.  

@@ -1,4 +1,4 @@
-# ACMPCA resource type reference<a name="AWS_ACMPCA"></a>
+# AWS Certificate Manager Private Certificate Authority resource type reference<a name="AWS_ACMPCA"></a>
 
 **Resource types**
 + [AWS::ACMPCA::Certificate](aws-resource-acmpca-certificate.md)

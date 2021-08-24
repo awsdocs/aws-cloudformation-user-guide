@@ -1,8 +1,8 @@
 # AWS::ApplicationAutoScaling::ScalingPolicy<a name="aws-resource-applicationautoscaling-scalingpolicy"></a>
 
-The `AWS::ApplicationAutoScaling::ScalingPolicy` resource defines a scaling policy that Application Auto Scaling uses to adjust your application resources\. 
+The `AWS::ApplicationAutoScaling::ScalingPolicy` resource defines a scaling policy that Application Auto Scaling uses to adjust the capacity of a scalable target\. 
 
-For more information, see [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_PutScalingPolicy.html) in the *Application Auto Scaling API Reference*\. For more information about Application Auto Scaling scaling policies, see [Target Tracking Scaling Policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) and [Step scaling policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html) in the *Application Auto Scaling User Guide*\.
+For more information, see [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_PutScalingPolicy.html) in the *Application Auto Scaling API Reference*\. For more information about Application Auto Scaling scaling policies, see [Target tracking scaling policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) and [Step scaling policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html) in the *Application Auto Scaling User Guide*\.
 
 ## Syntax<a name="aws-resource-applicationautoscaling-scalingpolicy-syntax"></a>
 
@@ -58,7 +58,7 @@ The name of the scaling policy\.
 The Application Auto Scaling policy type\.   
 The following policy types are supported:   
 `TargetTrackingScaling`—Not supported for Amazon EMR  
-`StepScaling`—Not supported for DynamoDB, Amazon Comprehend, Lambda, or Amazon Keyspaces \(for Apache Cassandra\)  
+`StepScaling`—Not supported for DynamoDB, Amazon Comprehend, Lambda, Amazon Keyspaces \(for Apache Cassandra\), Amazon MSK, or Amazon ElastiCache for Redis\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -79,6 +79,7 @@ The identifier of the resource associated with the scaling policy\. This string 
 + Lambda provisioned concurrency \- The resource type is `function` and the unique identifier is the function name with a function version or alias name suffix that is not `$LATEST`\. Example: `function:my-function:prod` or `function:my-function:1`\.
 + Amazon Keyspaces table \- The resource type is `table` and the unique identifier is the table name\. Example: `keyspace/mykeyspace/table/mytable`\.
 + Amazon MSK cluster \- The resource type and unique identifier are specified using the cluster ARN\. Example: `arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5`\.
++ Amazon ElastiCache replication group \- The resource type is `replication-group` and the unique identifier is the replication group name\. Example: `replication-group/mycluster`\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -89,8 +90,8 @@ The identifier of the resource associated with the scaling policy\. This string 
 `ScalableDimension`  <a name="cfn-applicationautoscaling-scalingpolicy-scalabledimension"></a>
 The scalable dimension\. This string consists of the service namespace, resource type, and scaling property\.  
 +  `ecs:service:DesiredCount` \- The desired task count of an ECS service\.
-+  `ec2:spot-fleet-request:TargetCapacity` \- The target capacity of a Spot Fleet request\.
 +  `elasticmapreduce:instancegroup:InstanceCount` \- The instance count of an EMR Instance Group\.
++  `ec2:spot-fleet-request:TargetCapacity` \- The target capacity of a Spot Fleet request\.
 +  `appstream:fleet:DesiredCapacity` \- The desired capacity of an AppStream 2\.0 fleet\.
 +  `dynamodb:table:ReadCapacityUnits` \- The provisioned read capacity for a DynamoDB table\.
 +  `dynamodb:table:WriteCapacityUnits` \- The provisioned write capacity for a DynamoDB table\.
@@ -105,9 +106,11 @@ The scalable dimension\. This string consists of the service namespace, resource
 +  `cassandra:table:ReadCapacityUnits` \- The provisioned read capacity for an Amazon Keyspaces table\.
 +  `cassandra:table:WriteCapacityUnits` \- The provisioned write capacity for an Amazon Keyspaces table\.
 +  `kafka:broker-storage:VolumeSize` \- The provisioned volume size \(in GiB\) for brokers in an Amazon MSK cluster\.
++  `elasticache:replication-group:NodeGroups` \- The number of node groups for an Amazon ElastiCache replication group\.
++  `elasticache:replication-group:Replicas` \- The number of replicas per node group for an Amazon ElastiCache replication group\.
 *Required*: No  
 *Type*: String  
-*Allowed values*: `appstream:fleet:DesiredCapacity | cassandra:table:ReadCapacityUnits | cassandra:table:WriteCapacityUnits | comprehend:document-classifier-endpoint:DesiredInferenceUnits | comprehend:entity-recognizer-endpoint:DesiredInferenceUnits | custom-resource:ResourceType:Property | dynamodb:index:ReadCapacityUnits | dynamodb:index:WriteCapacityUnits | dynamodb:table:ReadCapacityUnits | dynamodb:table:WriteCapacityUnits | ec2:spot-fleet-request:TargetCapacity | ecs:service:DesiredCount | elasticmapreduce:instancegroup:InstanceCount | kafka:broker-storage:VolumeSize | lambda:function:ProvisionedConcurrency | rds:cluster:ReadReplicaCount | sagemaker:variant:DesiredInstanceCount`  
+*Allowed values*: `appstream:fleet:DesiredCapacity | cassandra:table:ReadCapacityUnits | cassandra:table:WriteCapacityUnits | comprehend:document-classifier-endpoint:DesiredInferenceUnits | comprehend:entity-recognizer-endpoint:DesiredInferenceUnits | custom-resource:ResourceType:Property | dynamodb:index:ReadCapacityUnits | dynamodb:index:WriteCapacityUnits | dynamodb:table:ReadCapacityUnits | dynamodb:table:WriteCapacityUnits | ec2:spot-fleet-request:TargetCapacity | ecs:service:DesiredCount | elasticache:replication-group:NodeGroups | elasticache:replication-group:Replicas | elasticmapreduce:instancegroup:InstanceCount | kafka:broker-storage:VolumeSize | lambda:function:ProvisionedConcurrency | rds:cluster:ReadReplicaCount | sagemaker:variant:DesiredInstanceCount`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ScalingTargetId`  <a name="cfn-applicationautoscaling-scalingpolicy-scalingtargetid"></a>
@@ -121,7 +124,7 @@ You must specify either the `ScalingTargetId` property, or the `ResourceId`, `Sc
 The namespace of the AWS service that provides the resource, or a `custom-resource`\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `appstream | cassandra | comprehend | custom-resource | dynamodb | ec2 | ecs | elasticmapreduce | kafka | lambda | rds | sagemaker`  
+*Allowed values*: `appstream | cassandra | comprehend | custom-resource | dynamodb | ec2 | ecs | elasticache | elasticmapreduce | kafka | lambda | rds | sagemaker`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StepScalingPolicyConfiguration`  <a name="cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration"></a>

@@ -14,6 +14,8 @@ During a nested stack import operation, AWS CloudFormation performs the followin
 
 1. Add the `AWS::CloudFormation::Stack` resource to the parent stack template with a `Retain` [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)\. In the following example parent template, `NestedStack` is the target of the import\.
 
+   **JSON**
+
    ```
    {
      "AWSTemplateFormatVersion" : "2010-09-09",
@@ -53,6 +55,35 @@ During a nested stack import operation, AWS CloudFormation performs the followin
        }
      }
    }
+   ```
+
+   **YAML**
+
+   ```
+   AWSTemplateFormatVersion: 2010-09-09
+   Resources:
+     ServiceTable:
+       Type: 'AWS::DynamoDB::Table'
+       Properties:
+         TableName: Service
+         AttributeDefinitions:
+           - AttributeName: key
+             AttributeType: S
+         KeySchema:
+           - AttributeName: key
+             KeyType: HASH
+         ProvisionedThroughput:
+           ReadCapacityUnits: 5
+           WriteCapacityUnits: 1
+     NestedStack:
+       Type: 'AWS::CloudFormation::Stack'
+       DeletionPolicy: Retain
+       Properties:
+         TemplateURL: >-
+           https://s3.amazonaws.com/cloudformation-templates-us-east-2/EC2ChooseAMI.template
+         Parameters:
+           InstanceType: t1.micro
+           KeyName: mykey
    ```
 
 1. Open the AWS CloudFormation console\.
@@ -90,6 +121,8 @@ It's not necessary to run drift detection on the parent stack after this import 
 
 1. Add the `AWS::CloudFormation::Stack` resource to the parent stack template with a `Retain` [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)\. In the following example parent template, `NestedStack` is the target of the import\.
 
+   **JSON**
+
    ```
    {
      "AWSTemplateFormatVersion" : "2010-09-09",
@@ -131,7 +164,36 @@ It's not necessary to run drift detection on the parent stack after this import 
    }
    ```
 
-1. Create a change set of type `IMPORT` with the following parameters\. `--resources-to-import` does not support inline YAML\.
+   **YAML**
+
+   ```
+   AWSTemplateFormatVersion: 2010-09-09
+   Resources:
+     ServiceTable:
+       Type: 'AWS::DynamoDB::Table'
+       Properties:
+         TableName: Service
+         AttributeDefinitions:
+           - AttributeName: key
+             AttributeType: S
+         KeySchema:
+           - AttributeName: key
+             KeyType: HASH
+         ProvisionedThroughput:
+           ReadCapacityUnits: 5
+           WriteCapacityUnits: 1
+     NestedStack:
+       Type: 'AWS::CloudFormation::Stack'
+       DeletionPolicy: Retain
+       Properties:
+         TemplateURL: >-
+           https://s3.amazonaws.com/cloudformation-templates-us-east-2/EC2ChooseAMI.template
+         Parameters:
+           InstanceType: t1.micro
+           KeyName: mykey
+   ```
+
+1. Create a change set of type `IMPORT` with the following parameters\. `--resources-to-import` doesn't support inline YAML\.
 
    ```
    > aws cloudformation create-change-set
@@ -149,6 +211,8 @@ It's not necessary to run drift detection on the parent stack after this import 
 
    In this walkthrough, *file://resourcesToImport\.txt* contains the following\.
 
+   **JSON**
+
    ```
    [
      {
@@ -159,6 +223,16 @@ It's not necessary to run drift detection on the parent stack after this import 
          }
      }
    ]
+   ```
+
+   **YAML**
+
+   ```
+   ResourceType: 'AWS::CloudFormation::Stack'
+     LogicalResourceId: MyStack
+     ResourceIdentifier:
+       StackId: >-
+         arn:aws:cloudformation:us-east-2:123456789012:stack/mystack-mynestedstack-sggfrhxhum7w/f449b250-b969-11e0-a185-5081d0136786
    ```
 
 1. Review the change set to make sure the correct stack is being imported\.

@@ -89,6 +89,7 @@ For Amazon S3, the ID of the account that owns the resource\. Use this together 
 
 `SourceArn`  <a name="cfn-lambda-permission-sourcearn"></a>
 For AWS services, the ARN of the AWS resource that invokes the function\. For example, an Amazon S3 bucket or Amazon SNS topic\.  
+Note that Lambda configures the comparison using the `StringLike` operator\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `arn:(aws[a-zA-Z0-9-]*):([a-zA-Z0-9\-])+:([a-z]{2}(-gov)?-[a-z]+-\d{1})?:(\d{12})?:(.*)`  

@@ -1,4 +1,4 @@
-# DMS resource type reference<a name="AWS_DMS"></a>
+# AWS Database Migration Service resource type reference<a name="AWS_DMS"></a>
 
 **Resource types**
 + [AWS::DMS::Certificate](aws-resource-dms-certificate.md)

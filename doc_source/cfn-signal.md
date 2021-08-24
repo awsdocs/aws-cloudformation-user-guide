@@ -9,7 +9,7 @@ You use the cfn\-signal script in conjunction with a [CreationPolicy](aws-attrib
 **Note**  
 cfn\-signal doesn't require credentials, so you don't need to use the `--access-key`, `--secret-key`, `--role`, or `--credential-file` options\. However, if no credentials are specified, CloudFormation checks for stack membership and limits the scope of the call to the stack that the instance belongs to\.
 
-## Syntax for resource signaling \(recommended\)<a name="w9292ab1c33c42c31b5"></a>
+## Syntax for resource signaling \(recommended\)<a name="w9463ab1c33c42c33b5"></a>
 
 If you want to signal CloudFormation resources, use the following syntax\.
 
@@ -55,7 +55,7 @@ The options that you can use depend on whether you're signaling a creation polic
 |  `-f, --credential-file` \(resource signaling only\)  |  A file that contains both a secret access key and an access key\. The credential file parameter supersedes the \-\-role, \-\-access\-key, and \-\-secret\-key parameters\. *Type*: String  |  No  | 
 |  `--http-proxy`  |  An HTTP proxy \(non\-SSL\)\. Use the following format: `http://user:password@host:port` *Type*: String  |  No  | 
 |  `--https-proxy`  |  An HTTPS proxy\. Use the following format: `https://user:password@host:port` *Type*: String  |  No  | 
-|  `-i, --id`  |  The unique ID to send\. *Type*: String *Default*: The ID of the Amazon EC2 instance\. If the ID cannot be resolved, the machine's Fully Qualified Domain Name \(FQDN\) is returned\.  |  No  | 
+|  `-i, --id`  |  The unique ID to send\. *Type*: String *Default*: The ID of the Amazon EC2 instance\. If the ID can't be resolved, the machine's Fully Qualified Domain Name \(FQDN\) is returned\.  |  No  | 
 |  `-r, --reason ` \(wait condition handle only\)  |  A status reason for the resource event \(currently only used on failure\) \- defaults to 'Configuration failed' if success is false\. *Type*: String  |  No  | 
 | \-\-region \(resource signaling only\) |  The CloudFormation regional endpoint to use\. *Type*: String *Default*: `us-east-1`  |  No  | 
 | \-\-resource \(resource signaling only\) |  The [logical ID](resources-section-structure.md) of the resource that contains the creations policy you want to signal\. *Type*: String  |  Yes  | 
@@ -68,7 +68,7 @@ The options that you can use depend on whether you're signaling a creation polic
 
 ## Example<a name="cfn-signal-Examples"></a>
 
-### Amazon Linux example<a name="w9292ab1c33c42c31c11b2"></a>
+### Amazon Linux example<a name="w9463ab1c33c42c33c11b3"></a>
 
 A common usage pattern is to use cfn\-init and cfn\-signal together\. The cfn\-signal call uses the return status of the call to cfn\-init \(using the $? shell construct\)\. If the application fails to install, the instance will fail to create and the stack will rollback\. For Windows stacks, see [Bootstrapping AWS CloudFormation Windows stacks](cfn-windows-stacks-bootstrapping.md)\.
 
@@ -193,7 +193,7 @@ Resources:
         Timeout: PT5M
 ```
 
-#### Examples<a name="w9292ab1c33c42c31c11b2b8"></a>
+#### Examples<a name="w9463ab1c33c42c33c11b3b9"></a>
 
 Several CloudFormation sample templates use cfn\-signal, including the following templates\.
 +  [LAMP: Single EC2 instance with local MySQL database](https://s3.amazonaws.com/cloudformation-templates-us-east-1/LAMP_Single_Instance.template) 

@@ -1,6 +1,6 @@
 # AWS::AutoScaling::LaunchConfiguration BlockDevice<a name="aws-properties-as-launchconfig-blockdev-template"></a>
 
- `BlockDevice` is a subproperty of [BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html) that describes an Amazon EBS volume\.
+ `BlockDevice` is a property of the `EBS` property of the [AWS::AutoScaling::LaunchConfiguration BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html) property type that describes an Amazon EBS volume\.
 
 ## Syntax<a name="aws-properties-as-launchconfig-blockdev-template-syntax"></a>
 

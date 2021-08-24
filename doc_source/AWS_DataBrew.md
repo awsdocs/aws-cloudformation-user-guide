@@ -1,4 +1,4 @@
-# DataBrew resource type reference<a name="AWS_DataBrew"></a>
+# AWS Glue DataBrew resource type reference<a name="AWS_DataBrew"></a>
 
 **Resource types**
 + [AWS::DataBrew::Dataset](aws-resource-databrew-dataset.md)

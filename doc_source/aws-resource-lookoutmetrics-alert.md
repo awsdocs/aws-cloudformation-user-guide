@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::LookoutMetrics::Alert",
   "Properties" : {
-      "[Action](#cfn-lookoutmetrics-alert-action)" : Json,
+      "[Action](#cfn-lookoutmetrics-alert-action)" : Action,
       "[AlertDescription](#cfn-lookoutmetrics-alert-alertdescription)" : String,
       "[AlertName](#cfn-lookoutmetrics-alert-alertname)" : String,
       "[AlertSensitivityThreshold](#cfn-lookoutmetrics-alert-alertsensitivitythreshold)" : Integer,
@@ -26,7 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::LookoutMetrics::Alert
 Properties: 
-  [Action](#cfn-lookoutmetrics-alert-action): Json
+  [Action](#cfn-lookoutmetrics-alert-action): 
+    Action
   [AlertDescription](#cfn-lookoutmetrics-alert-alertdescription): String
   [AlertName](#cfn-lookoutmetrics-alert-alertname): String
   [AlertSensitivityThreshold](#cfn-lookoutmetrics-alert-alertsensitivitythreshold): Integer
@@ -38,7 +39,7 @@ Properties:
 `Action`  <a name="cfn-lookoutmetrics-alert-action"></a>
 Action that will be triggered when there is an alert\.  
 *Required*: Yes  
-*Type*: Json  
+*Type*: [Action](aws-properties-lookoutmetrics-alert-action.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AlertDescription`  <a name="cfn-lookoutmetrics-alert-alertdescription"></a>

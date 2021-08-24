@@ -146,7 +146,11 @@ The destination repository for the container image\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Version`  <a name="cfn-imagebuilder-containerrecipe-version"></a>
-The semantic version of the container recipe \(<major>\.<minor>\.<patch>\)\.  
+The semantic version of the container recipe\.  
+The semantic version has four nodes: <major>\.<minor>\.<patch>/<build>\. You can assign values for the first three, and can filter on all of them\.  
+ **Assignment:** For the first three nodes you can assign any positive integer value, including zero, with an upper limit of 2^30\-1, or 1073741823 for each node\. Image Builder automatically assigns the build number, and that is not open for updates\.  
+ **Patterns:** You can use any numeric pattern that adheres to the assignment requirements for the nodes that you can assign\. For example, you might choose a software version pattern, such as 1\.0\.0, or a date, such as 2021\.01\.01\.  
+ **Filtering:** When you retrieve or reference a resource with a semantic version, you can use wildcards \(x\) to filter your results\. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards\. For example, specifying "1\.2\.x", or "1\.x\.x" works to filter list results, but neither "1\.x\.2", nor "x\.2\.x" will work\. You do not have to specify the build \- Image Builder automatically uses a wildcard for that, if applicable\.
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `^[0-9]+\.[0-9]+\.[0-9]+$`  

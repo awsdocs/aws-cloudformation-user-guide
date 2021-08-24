@@ -2,7 +2,7 @@
 
 ## Description<a name="cfn-hup-Description"></a>
 
-The cfn\-hup helper is a daemon that detects changes in resource metadata and runs user\-specified actions when a change is detected\. This allows you to make configuration updates on your running Amazon EC2 instances through the UpdateStack API action\.
+The cfn\-hup helper is a daemon that detects changes in resource metadata and runs user\-specified actions when a change is detected\. This allows you to make configuration updates on your running Amazon EC2 instances through the `UpdateStack` API action\.
 
 ## Syntax<a name="cfn-hup-Syntax"></a>
 
@@ -130,6 +130,6 @@ In the following template snippet, CloudFormation triggers the `cfn-auto-reloade
 ...
 ```
 
-### Additional example<a name="w9292ab1c33c42c35c15b8"></a>
+### Additional example<a name="w9463ab1c33c42c37c15b9"></a>
 
 For a sample template, see [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.

@@ -1,4 +1,4 @@
-# CE resource type reference<a name="AWS_CE"></a>
+# AWS Cost Explorer resource type reference<a name="AWS_CE"></a>
 
 **Resource types**
 + [AWS::CE::AnomalyMonitor](aws-resource-ce-anomalymonitor.md)

@@ -76,6 +76,7 @@ The identifier of the resource associated with the scalable target\. This string
 + Lambda provisioned concurrency \- The resource type is `function` and the unique identifier is the function name with a function version or alias name suffix that is not `$LATEST`\. Example: `function:my-function:prod` or `function:my-function:1`\.
 + Amazon Keyspaces table \- The resource type is `table` and the unique identifier is the table name\. Example: `keyspace/mykeyspace/table/mytable`\.
 + Amazon MSK cluster \- The resource type and unique identifier are specified using the cluster ARN\. Example: `arn:aws:kafka:us-east-1:123456789012:cluster/demo-cluster-1/6357e0b2-0e6a-4b86-a0b4-70df934c2e31-5`\.
++ Amazon ElastiCache replication group \- The resource type is `replication-group` and the unique identifier is the replication group name\. Example: `replication-group/mycluster`\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -93,8 +94,8 @@ To automatically create a service\-linked role \(recommended\), specify the full
 `ScalableDimension`  <a name="cfn-applicationautoscaling-scalabletarget-scalabledimension"></a>
 The scalable dimension associated with the scalable target\. This string consists of the service namespace, resource type, and scaling property\.  
 +  `ecs:service:DesiredCount` \- The desired task count of an ECS service\.
-+  `ec2:spot-fleet-request:TargetCapacity` \- The target capacity of a Spot Fleet request\.
 +  `elasticmapreduce:instancegroup:InstanceCount` \- The instance count of an EMR Instance Group\.
++  `ec2:spot-fleet-request:TargetCapacity` \- The target capacity of a Spot Fleet request\.
 +  `appstream:fleet:DesiredCapacity` \- The desired capacity of an AppStream 2\.0 fleet\.
 +  `dynamodb:table:ReadCapacityUnits` \- The provisioned read capacity for a DynamoDB table\.
 +  `dynamodb:table:WriteCapacityUnits` \- The provisioned write capacity for a DynamoDB table\.
@@ -109,9 +110,11 @@ The scalable dimension associated with the scalable target\. This string consist
 +  `cassandra:table:ReadCapacityUnits` \- The provisioned read capacity for an Amazon Keyspaces table\.
 +  `cassandra:table:WriteCapacityUnits` \- The provisioned write capacity for an Amazon Keyspaces table\.
 +  `kafka:broker-storage:VolumeSize` \- The provisioned volume size \(in GiB\) for brokers in an Amazon MSK cluster\.
++  `elasticache:replication-group:NodeGroups` \- The number of node groups for an Amazon ElastiCache replication group\.
++  `elasticache:replication-group:Replicas` \- The number of replicas per node group for an Amazon ElastiCache replication group\.
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `appstream:fleet:DesiredCapacity | cassandra:table:ReadCapacityUnits | cassandra:table:WriteCapacityUnits | comprehend:document-classifier-endpoint:DesiredInferenceUnits | comprehend:entity-recognizer-endpoint:DesiredInferenceUnits | custom-resource:ResourceType:Property | dynamodb:index:ReadCapacityUnits | dynamodb:index:WriteCapacityUnits | dynamodb:table:ReadCapacityUnits | dynamodb:table:WriteCapacityUnits | ec2:spot-fleet-request:TargetCapacity | ecs:service:DesiredCount | elasticmapreduce:instancegroup:InstanceCount | kafka:broker-storage:VolumeSize | lambda:function:ProvisionedConcurrency | rds:cluster:ReadReplicaCount | sagemaker:variant:DesiredInstanceCount`  
+*Allowed values*: `appstream:fleet:DesiredCapacity | cassandra:table:ReadCapacityUnits | cassandra:table:WriteCapacityUnits | comprehend:document-classifier-endpoint:DesiredInferenceUnits | comprehend:entity-recognizer-endpoint:DesiredInferenceUnits | custom-resource:ResourceType:Property | dynamodb:index:ReadCapacityUnits | dynamodb:index:WriteCapacityUnits | dynamodb:table:ReadCapacityUnits | dynamodb:table:WriteCapacityUnits | ec2:spot-fleet-request:TargetCapacity | ecs:service:DesiredCount | elasticache:replication-group:NodeGroups | elasticache:replication-group:Replicas | elasticmapreduce:instancegroup:InstanceCount | kafka:broker-storage:VolumeSize | lambda:function:ProvisionedConcurrency | rds:cluster:ReadReplicaCount | sagemaker:variant:DesiredInstanceCount`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ScheduledActions`  <a name="cfn-applicationautoscaling-scalabletarget-scheduledactions"></a>
@@ -125,7 +128,7 @@ For more information about using scheduled scaling, see [Scheduled scaling](http
 The namespace of the AWS service that provides the resource, or a `custom-resource`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `appstream | cassandra | comprehend | custom-resource | dynamodb | ec2 | ecs | elasticmapreduce | kafka | lambda | rds | sagemaker`  
+*Allowed values*: `appstream | cassandra | comprehend | custom-resource | dynamodb | ec2 | ecs | elasticache | elasticmapreduce | kafka | lambda | rds | sagemaker`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SuspendedState`  <a name="cfn-applicationautoscaling-scalabletarget-suspendedstate"></a>
@@ -160,7 +163,7 @@ For more template snippets, see [Application Auto Scaling template examples](htt
 The following example creates a scalable target for an [AWS::Cassandra::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html) resource\. Application Auto Scaling can scale the write capacity throughput at a minimum of 1 capacity unit and a maximum of 20\. To register a different resource supported by Application Auto Scaling, specify its namespace in `ServiceNamespace`, its scalable dimension in `ScalableDimension`, its resource ID in `ResourceId`, and its service\-linked role in `RoleARN`\.
 
 **Note**  
-The `RoleArn` property references a service\-linked role that is created after you use Application Auto Scaling with the specified resource for the first time\.
+The `RoleArn` property references a service\-linked role that is created for you after you use Application Auto Scaling with the specified resource for the first time\.
 
 #### JSON<a name="aws-resource-applicationautoscaling-scalabletarget--examples--Register_a_scalable_target--json"></a>
 
@@ -201,4 +204,5 @@ ScalableTarget:
 + [Getting started](https://docs.aws.amazon.com/autoscaling/application/userguide/getting-started.html) in the *Application Auto Scaling User Guide*
 + [How to use AWS CloudFormation to configure auto scaling for Amazon DynamoDB tables and indexes](http://aws.amazon.com/blogs/database/how-to-use-aws-cloudformation-to-configure-auto-scaling-for-amazon-dynamodb-tables-and-indexes/)
 + [Scheduling AWS Lambda Provisioned Concurrency for recurring peak usage](http://aws.amazon.com/blogs/compute/scheduling-aws-lambda-provisioned-concurrency-for-recurring-peak-usage/)
++ [Application Auto Scaling template examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#scenario-app-as-template-examples)
 

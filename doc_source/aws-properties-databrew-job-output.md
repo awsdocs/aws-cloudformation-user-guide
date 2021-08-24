@@ -46,7 +46,7 @@ The compression algorithm used to compress the output text of the job\.
 The data format of the output of the job\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `AVRO | CSV | GLUEPARQUET | JSON | ORC | PARQUET | XML`  
+*Allowed values*: `AVRO | CSV | GLUEPARQUET | JSON | ORC | PARQUET | TABLEAUHYPER | XML`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FormatOptions`  <a name="cfn-databrew-job-output-formatoptions"></a>

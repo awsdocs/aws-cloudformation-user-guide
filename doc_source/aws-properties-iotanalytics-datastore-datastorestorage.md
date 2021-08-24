@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CustomerManagedS3](#cfn-iotanalytics-datastore-datastorestorage-customermanageds3)" : CustomerManagedS3,
+  "[IotSiteWiseMultiLayerStorage](#cfn-iotanalytics-datastore-datastorestorage-iotsitewisemultilayerstorage)" : IotSiteWiseMultiLayerStorage,
   "[ServiceManagedS3](#cfn-iotanalytics-datastore-datastorestorage-servicemanageds3)" : ServiceManagedS3
 }
 ```
@@ -20,6 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CustomerManagedS3](#cfn-iotanalytics-datastore-datastorestorage-customermanageds3): 
     CustomerManagedS3
+  [IotSiteWiseMultiLayerStorage](#cfn-iotanalytics-datastore-datastorestorage-iotsitewisemultilayerstorage): 
+    IotSiteWiseMultiLayerStorage
   [ServiceManagedS3](#cfn-iotanalytics-datastore-datastorestorage-servicemanageds3): 
     ServiceManagedS3
 ```
@@ -30,6 +33,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Use this to store data store data in an S3 bucket that you manage\. The choice of service\-managed or customer\-managed S3 storage cannot be changed after creation of the data store\.  
 *Required*: No  
 *Type*: [CustomerManagedS3](aws-properties-iotanalytics-datastore-customermanageds3.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IotSiteWiseMultiLayerStorage`  <a name="cfn-iotanalytics-datastore-datastorestorage-iotsitewisemultilayerstorage"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [IotSiteWiseMultiLayerStorage](aws-properties-iotanalytics-datastore-iotsitewisemultilayerstorage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceManagedS3`  <a name="cfn-iotanalytics-datastore-datastorestorage-servicemanageds3"></a>

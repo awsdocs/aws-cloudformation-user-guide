@@ -40,7 +40,7 @@ The Amazon Resource Name \(ARN\) of the regular expression pattern set that this
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldToMatch`  <a name="cfn-wafv2-webacl-regexpatternsetreferencestatement-fieldtomatch"></a>
-The part of a web request that you want AWS WAF to inspect\. For more information, see FieldToMatch\.   
+The part of a web request that you want AWS WAF to inspect\.   
 *Required*: Yes  
 *Type*: [FieldToMatch](aws-properties-wafv2-webacl-fieldtomatch.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -46,13 +46,14 @@ Properties:
 ## Properties<a name="aws-resource-iotsitewise-portal-properties"></a>
 
 `Alarms`  <a name="cfn-iotsitewise-portal-alarms"></a>
-Not currently supported by AWS CloudFormation\.  
+Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal\. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range\. For more information, see [Monitoring with alarms](https://docs.aws.amazon.com/iot-sitewise/latest/appguide/monitor-alarms.html) in the * AWS IoT SiteWise Application Guide*\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotificationSenderEmail`  <a name="cfn-iotsitewise-portal-notificationsenderemail"></a>
-Not currently supported by AWS CloudFormation\.  
+The email address that sends alarm notifications\.  
+If you use the [ AWS IoT Events managed Lambda function](https://docs.aws.amazon.com/iotevents/latest/developerguide/lambda-support.html) to manage your emails, you must [verify the sender email address in Amazon SES](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-email-addresses.html)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
