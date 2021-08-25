@@ -206,7 +206,7 @@ Sample template showing how to create an instance with two elastic network inter
       "Properties" : {
         "VpcId" : { "Ref" : "VpcId" },
         "GroupDescription" : "Enable SSH access via port 22",
-        "SecurityGroupIngress" : [ { "IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : "0.0.0.0/0" } ]
+        "SecurityGroupIngress" : [ { "IpProtocol" : "tcp", "FromPort" : 22, "ToPort" : 22, "CidrIp" : "0.0.0.0/0" } ]
       }
     },
     "WebSecurityGroup" : {
@@ -492,13 +492,13 @@ This snippet shows an AWS::EC2::SecurityGroup resource that describes two ingres
  5.      "SecurityGroupIngress" : [
  6.          {
  7.              "IpProtocol" : "tcp",
- 8.              "FromPort" : "80",
- 9.              "ToPort" : "80",
+ 8.              "FromPort" : 80,
+ 9.              "ToPort" : 80,
 10.              "CidrIp" : "0.0.0.0/0"
 11.          },{
 12.              "IpProtocol" : "tcp",
-13.              "FromPort" : "22",
-14.              "ToPort" : "22",
+13.              "FromPort" : 22,
+14.              "ToPort" : 22,
 15.              "CidrIp" : "192.168.1.1/32"
 16.          }
 17.      ]
@@ -538,15 +538,15 @@ This snippet shows an AWS::EC2::SecurityGroup resource that describes two securi
  5.      "SecurityGroupIngress" : [
  6.          {
  7.             "IpProtocol" : "tcp",
- 8.             "FromPort" : "22",
- 9.             "ToPort" : "22",
+ 8.             "FromPort" : 22,
+ 9.             "ToPort" : 22,
 10.             "SourceSecurityGroupName" : "myadminsecuritygroup",
 11.             "SourceSecurityGroupOwnerId" : "123456789012"
 12.          },
 13.          {
 14.             "IpProtocol" : "tcp",
-15.             "FromPort" : "80",
-16.             "ToPort" : "80",
+15.             "FromPort" : 80,
+16.             "ToPort" : 80,
 17.             "SourceSecurityGroupName" : {"Ref" : "mysecuritygroupcreatedincfn"}
 18.          }
 19.      ]
@@ -680,8 +680,8 @@ If you are using an Amazon VPC, use the `AWS::EC2::SecurityGroup` resource and s
 15.          "Properties" : {
 16.              "GroupName" : { "Ref" : "SGroup1" },
 17.              "IpProtocol" : "tcp",
-18.              "ToPort" : "80",
-19.              "FromPort" : "80",
+18.              "ToPort" : 80,
+19.              "FromPort" : 80,
 20.              "SourceSecurityGroupName" : { "Ref" : "SGroup2" }
 21.          }
 22.      },
@@ -690,8 +690,8 @@ If you are using an Amazon VPC, use the `AWS::EC2::SecurityGroup` resource and s
 25.          "Properties" : {
 26.              "GroupName" : { "Ref" : "SGroup2" },
 27.              "IpProtocol" : "tcp",
-28.              "ToPort" : "80",
-29.              "FromPort" : "80",
+28.              "ToPort" : 80,
+29.              "FromPort" : 80,
 30.              "SourceSecurityGroupName" : { "Ref" : "SGroup1" }
 31.          }
 32.      }
@@ -778,8 +778,8 @@ This snippet shows the following resources: an Amazon EC2 instance using an Amaz
 13.      "GroupDescription" : "Enable SSH access via port 22",
 14.      "SecurityGroupIngress" : [ {
 15.        "IpProtocol" : "tcp",
-16.        "FromPort" : "22",
-17.        "ToPort" : "22",
+16.        "FromPort" : 22,
+17.        "ToPort" : 22,
 18.        "CidrIp" : "0.0.0.0/0"
 19.      } ]
 20.    }

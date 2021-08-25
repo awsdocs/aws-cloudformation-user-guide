@@ -97,14 +97,14 @@ JSON
       "SecurityGroupIngress": [
           {
               "IpProtocol": "tcp",
-              "FromPort": "80",
-              "ToPort": "80",
+              "FromPort": 80,
+              "ToPort": 80,
               "CidrIp": "0.0.0.0/0"
           },
           {
               "IpProtocol": "tcp",
-              "FromPort": "22",
-              "ToPort": "22",
+              "FromPort": 22,
+              "ToPort": 22,
               "CidrIp": {
                   "Ref": "SSHLocation"
               }
@@ -123,12 +123,12 @@ WebServerSecurityGroup:
     GroupDescription: Allow access from HTTP and SSH traffic
     SecurityGroupIngress:
       - IpProtocol: tcp
-        FromPort: '80'
-        ToPort: '80'
+        FromPort: 80
+        ToPort: 80
         CidrIp: 0.0.0.0/0
       - IpProtocol: tcp
-        FromPort: '22'
-        ToPort: '22'
+        FromPort: 22
+        ToPort: 22
         CidrIp: !Ref SSHLocation
 ```
 

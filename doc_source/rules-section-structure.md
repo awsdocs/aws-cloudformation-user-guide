@@ -600,14 +600,14 @@ You will be billed for the AWS resources used if you create a stack from this te
                             "UseALBSSL",
                             {
                                 "IpProtocol": "tcp",
-                                "FromPort": "443",
-                                "ToPort": "443",
+                                "FromPort": 443,
+                                "ToPort": 443,
                                 "CidrIp": "0.0.0.0/0"
                             },
                             {
                                 "IpProtocol": "tcp",
-                                "FromPort": "80",
-                                "ToPort": "80",
+                                "FromPort": 80,
+                                "ToPort": 80,
                                 "CidrIp": "0.0.0.0/0"
                             }
                         ]
@@ -694,8 +694,8 @@ You will be billed for the AWS resources used if you create a stack from this te
                 "SecurityGroupIngress": [
                     {
                         "IpProtocol": "tcp",
-                        "FromPort": "80",
-                        "ToPort": "80",
+                        "FromPort": 80,
+                        "ToPort": 80,
                         "SourceSecurityGroupId": {
                             "Fn::Select": [
                                 0,
@@ -710,8 +710,8 @@ You will be billed for the AWS resources used if you create a stack from this te
                     },
                     {
                         "IpProtocol": "tcp",
-                        "FromPort": "22",
-                        "ToPort": "22",
+                        "FromPort": 22,
+                        "ToPort": 22,
                         "CidrIp": {
                             "Ref": "SSHLocation"
                         }
@@ -1135,12 +1135,12 @@ Resources:
         - !If 
           - UseALBSSL
           - IpProtocol: tcp
-            FromPort: '443'
-            ToPort: '443'
+            FromPort: 443
+            ToPort: 443
             CidrIp: 0.0.0.0/0
           - IpProtocol: tcp
-            FromPort: '80'
-            ToPort: '80'
+            FromPort: 80
+            ToPort: 80
             CidrIp: 0.0.0.0/0
   ApplicationLoadBalancer:
     Type: 'AWS::ElasticLoadBalancingV2::LoadBalancer'
@@ -1184,16 +1184,16 @@ Resources:
       GroupDescription: Enable SSH access and HTTP access on the inbound port
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '80'
-          ToPort: '80'
+          FromPort: 80
+          ToPort: 80
           SourceSecurityGroupId: !Select 
             - 0
             - !GetAtt 
               - ApplicationLoadBalancer
               - SecurityGroups
         - IpProtocol: tcp
-          FromPort: '22'
-          ToPort: '22'
+          FromPort: 22
+          ToPort: 22
           CidrIp: !Ref SSHLocation
       VpcId: !Ref VpcId
   RecordSet:

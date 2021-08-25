@@ -53,14 +53,14 @@ In the example, when AWS CloudFormation creates the `AllSecurityGroups` custom r
         "VpcId" : {"Ref" : "ExistingVPC"},
         "SecurityGroupIngress" : [{
           "IpProtocol" : "tcp",
-          "FromPort" : "80",
-          "ToPort" : "80",
+          "FromPort" : 80,
+          "ToPort" : 80,
           "CidrIp" : "0.0.0.0/0"
         }],
         "SecurityGroupEgress" : [{
           "IpProtocol" : "tcp",
-          "FromPort" : "80",
-          "ToPort" : "80",
+          "FromPort" : 80,
+          "ToPort" : 80,
           "CidrIp" : "0.0.0.0/0"
         }]
       }
@@ -192,13 +192,13 @@ Resources:
         Ref: ExistingVPC
       SecurityGroupIngress:
       - IpProtocol: tcp
-        FromPort: '80'
-        ToPort: '80'
+        FromPort: 80
+        ToPort: 80
         CidrIp: 0.0.0.0/0
       SecurityGroupEgress:
       - IpProtocol: tcp
-        FromPort: '80'
-        ToPort: '80'
+        FromPort: 80
+        ToPort: 80
         CidrIp: 0.0.0.0/0
   AllSecurityGroups:
     Type: Custom::Split

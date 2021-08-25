@@ -414,9 +414,9 @@ The following example creates a domain with VPC options\.
         },
         "SecurityGroupIngress": [
           {
-            "FromPort": "443",
+            "FromPort": 443,
             "IpProtocol": "tcp",
-            "ToPort": "443",
+            "ToPort": 443,
             "CidrIp": "0.0.0.0/0"
           }
         ]
@@ -534,9 +534,9 @@ Resources:
       GroupName:
         Ref: SGName
       SecurityGroupIngress:
-        - FromPort: '443'
+        - FromPort: 443
           IpProtocol: tcp
-          ToPort: '443'
+          ToPort: 443
           CidrIp: 0.0.0.0/0
 Outputs:
   DomainArn:

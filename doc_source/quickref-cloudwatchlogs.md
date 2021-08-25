@@ -498,12 +498,12 @@ Resources:
       GroupDescription: Enable HTTP access via port 80 and SSH access via port 22
       SecurityGroupIngress:
       - IpProtocol: tcp
-        FromPort: '80'
-        ToPort: '80'
+        FromPort: 80
+        ToPort: 80
         CidrIp: 0.0.0.0/0
       - IpProtocol: tcp
-        FromPort: '22'
-        ToPort: '22'
+        FromPort: 22
+        ToPort: 22
         CidrIp:
           Ref: SSHLocation
   WebServerHost:
@@ -1263,12 +1263,12 @@ Resources:
       GroupDescription: Enable HTTP access via port 80 and RDP access via port 3389
       SecurityGroupIngress:
       - IpProtocol: tcp
-        FromPort: '80'
-        ToPort: '80'
+        FromPort: 80
+        ToPort: 80
         CidrIp: 0.0.0.0/0
       - IpProtocol: tcp
-        FromPort: '3389'
-        ToPort: '3389'
+        FromPort: 3389
+        ToPort: 3389
         CidrIp: !Ref 'RDPLocation'
   LogRole:
     Type: AWS::IAM::Role

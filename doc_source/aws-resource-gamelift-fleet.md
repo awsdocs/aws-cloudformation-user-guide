@@ -249,14 +249,14 @@ Note: the JSON example shows how to escape the slashes \(`\\`\)\.
                 "DesiredEc2Instances": 1,
                 "EC2InboundPermissions": [
                     {
-                        "FromPort": "1234",
-                        "ToPort": "1324",
+                        "FromPort": 1234,
+                        "ToPort": 1324,
                         "IpRange": "0.0.0.0/24",
                         "Protocol": "TCP"
                     },
                     {
-                        "FromPort": "1356",
-                        "ToPort": "1578",
+                        "FromPort": 1356,
+                        "ToPort": 1578,
                         "IpRange": "192.168.0.0/24",
                         "Protocol": "UDP"
                     }
@@ -305,12 +305,12 @@ Resources:
       Description: Description of my Game Fleet
       DesiredEc2Instances: 1
       EC2InboundPermissions:
-        - FromPort: '1234'
-          ToPort: '1324'
+        - FromPort: 1234
+          ToPort: 1324
           IpRange: 0.0.0.0/24
           Protocol: TCP
-        - FromPort: '1356'
-          ToPort: '1578'
+        - FromPort: 1356
+          ToPort: 1578
           IpRange: 192.168.0.0/24
           Protocol: UDP
       EC2InstanceType: c4.large
@@ -352,14 +352,14 @@ The following example creates and configures a GameLift fleet to run Realtime Se
                 "DesiredEC2Instances": 1,
                 "EC2InboundPermissions": [
                     {
-                        "FromPort": "1234",
-                        "ToPort": "1324",
+                        "FromPort": 1234,
+                        "ToPort": 1324,
                         "IpRange": "0.0.0.0/24",
                         "Protocol": "TCP"
                     },
                     {
-                        "FromPort": "1356",
-                        "ToPort": "1578",
+                        "FromPort": 1356,
+                        "ToPort": 1578,
                         "IpRange": "192.168.0.0/24",
                         "Protocol": "UDP"
                     }
@@ -413,12 +413,12 @@ Resources:
       Description: Description of my game fleet
       DesiredEC2Instances: 1     
       EC2InboundPermissions:
-        - FromPort: '1234'
-          ToPort: '1324'
+        - FromPort: 1234
+          ToPort: 1324
           IpRange: 0.0.0.0/24
           Protocol: TCP
-        - FromPort: '1356'
-          ToPort: '1578'
+        - FromPort: 1356
+          ToPort: 1578
           IpRange: 192.168.0.0/24
           Protocol: UDP
       EC2InstanceType: c4.large
