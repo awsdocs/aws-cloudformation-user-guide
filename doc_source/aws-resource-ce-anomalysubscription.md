@@ -38,26 +38,26 @@ Properties:
 ## Properties<a name="aws-resource-ce-anomalysubscription-properties"></a>
 
 `Frequency`  <a name="cfn-ce-anomalysubscription-frequency"></a>
- The frequency at which anomaly reports are sent over email\.   
+The frequency that anomaly reports are sent over email\.   
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `DAILY | IMMEDIATE | WEEKLY`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MonitorArnList`  <a name="cfn-ce-anomalysubscription-monitorarnlist"></a>
- A list of cost anomaly monitors\.   
+A list of cost anomaly monitors\.   
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Subscribers`  <a name="cfn-ce-anomalysubscription-subscribers"></a>
- A list of subscribers to notify\.   
+A list of subscribers to notify\.   
 *Required*: Yes  
 *Type*: List of [Subscriber](aws-properties-ce-anomalysubscription-subscriber.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubscriptionName`  <a name="cfn-ce-anomalysubscription-subscriptionname"></a>
- The name for the subscription\.   
+The name for the subscription\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `0`  
@@ -66,7 +66,7 @@ Properties:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Threshold`  <a name="cfn-ce-anomalysubscription-threshold"></a>
- The dollar value that triggers a notification if the threshold is exceeded\.   
+The dollar value that triggers a notification if the threshold is exceeded\.   
 *Required*: Yes  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -131,8 +131,8 @@ The following example shows two monitors attached to a subscription\.
         "Threshold": 100,
         "Frequency": "DAILY",
         "MonitorArnList": [
-          "CustomAnomalyMonitorWithLinkedAccount",
-          "AnomalyServiceMonitor"
+          {"Ref": "CustomAnomalyMonitorWithLinkedAccount"},
+          {"Ref": "AnomalyServiceMonitor"}
         ],
         "Subscribers": [
           {

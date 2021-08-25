@@ -1,6 +1,6 @@
 # AWS::Cassandra::Table BillingMode<a name="aws-properties-cassandra-table-billingmode"></a>
 
-Determines the billing mode for the table \- on\-demand or provisioned\.
+Determines the billing mode for the table \- On\-demand or provisioned\.
 
 ## Syntax<a name="aws-properties-cassandra-table-billingmode-syntax"></a>
 
@@ -30,8 +30,8 @@ The billing mode for the table:
 + On\-demand mode \- `ON_DEMAND`
 + Provisioned mode \- `PROVISIONED`
 **Note**  
-If you choose `PROVISIONED` mode, then you'll also need to specify provisioned throughput \(read and write capacity\) for the table\.
-Valid Values: `ON_DEMAND` \| `PROVISIONED`  
+If you choose `PROVISIONED` mode, then you also need to specify provisioned throughput \(read and write capacity\) for the table\.
+Valid values: `ON_DEMAND` \| `PROVISIONED`  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

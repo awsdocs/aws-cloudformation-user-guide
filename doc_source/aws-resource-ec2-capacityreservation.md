@@ -85,6 +85,7 @@ Indicates whether the Capacity Reservation supports instances with temporary, bl
 
 `InstanceCount`  <a name="cfn-ec2-capacityreservation-instancecount"></a>
 The number of instances for which to reserve capacity\.  
+Valid range: 1 \- 1000  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

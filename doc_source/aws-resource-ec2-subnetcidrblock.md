@@ -45,7 +45,7 @@ The ID of the subnet\.
 
 ### Ref<a name="aws-resource-ec2-subnetcidrblock-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the subnet CIDR block\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the association ID for the subnet’s IPv6 CIDR block\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

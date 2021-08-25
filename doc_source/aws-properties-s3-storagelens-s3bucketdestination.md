@@ -40,7 +40,7 @@ This property contains the details of the AWS account ID of the S3 Storage Lens 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Arn`  <a name="cfn-s3-storagelens-s3bucketdestination-arn"></a>
-This property contains the details of the ARN of the bucket destination of the S3 Storage Lens export \.  
+This property contains the details of the ARN of the bucket destination of the S3 Storage Lens export\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

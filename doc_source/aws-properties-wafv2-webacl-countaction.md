@@ -43,15 +43,15 @@ The following shows an example count action specification\.
 #### YAML<a name="aws-properties-wafv2-webacl-countaction--examples--Set_an_count_action_--yaml"></a>
 
 ```
-          Action:
-            Count: {}
+Action:
+  Count: {}
 ```
 
 #### JSON<a name="aws-properties-wafv2-webacl-countaction--examples--Set_an_count_action_--json"></a>
 
 ```
-     "Action": 
-      {"Count": 
-        {}
-         }
+"Action": 
+  {"Count": 
+    {}
+  }
 ```

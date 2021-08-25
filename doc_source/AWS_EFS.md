@@ -1,4 +1,4 @@
-# EFS resource type reference<a name="AWS_EFS"></a>
+# Amazon Elastic File System resource type reference<a name="AWS_EFS"></a>
 
 **Resource types**
 + [AWS::EFS::AccessPoint](aws-resource-efs-accesspoint.md)

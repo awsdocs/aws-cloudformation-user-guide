@@ -1,6 +1,6 @@
 # AWS::Transfer::User<a name="aws-resource-transfer-user"></a>
 
-The `AWS::Transfer::User` resource creates a user and associates them with an existing server\. You can only create and associate users with servers that have the `IdentityProviderType` set to `SERVICE_MANAGED`\. Using parameters for `CreateUser`, you can specify the user name, set the home directory, store the user's public key, and assign the user's AWS Identity and Access Management \(IAM\) role\. You can also optionally add a scope\-down policy, and assign metadata with tags that can be used to group and search for users\.
+The `AWS::Transfer::User` resource creates a user and associates them with an existing server\. You can only create and associate users with servers that have the `IdentityProviderType` set to `SERVICE_MANAGED`\. Using parameters for `CreateUser`, you can specify the user name, set the home directory, store the user's public key, and assign the user's AWS Identity and Access Management \(IAM\) role\. You can also optionally add a session policy, and assign metadata with tags that can be used to group and search for users\.
 
 ## Syntax<a name="aws-resource-transfer-user-syntax"></a>
 
@@ -60,8 +60,8 @@ A `HomeDirectory` example is `/bucket_name/home/mydirectory`\.
 
 `HomeDirectoryMappings`  <a name="cfn-transfer-user-homedirectorymappings"></a>
 Logical directory mappings that specify what Amazon S3 paths and keys should be visible to your user and how you want to make them visible\. You will need to specify the "`Entry`" and "`Target`" pair, where `Entry` shows how the path is made visible and `Target` is the actual Amazon S3 path\. If you only specify a target, it will be displayed as is\. You will need to also make sure that your IAM role provides access to paths in `Target`\. The following is an example\.  
- `'[ { "Entry": "your-personal-report.pdf", "Target": "/bucket3/customized-reports/${transfer:UserName}.pdf" } ]'`   
-In most cases, you can use this value instead of the scope\-down policy to lock your user down to the designated home directory \("chroot"\)\. To do this, you can set `Entry` to '/' and set `Target` to the HomeDirectory parameter value\.  
+ `'[ { "Entry": "/", "Target": "/bucket3/customized-reports/" } ]'`   
+In most cases, you can use this value instead of the session policy to lock your user down to the designated home directory \("chroot"\)\. To do this, you can set `Entry` to '/' and set `Target` to the HomeDirectory parameter value\.  
 If the target of a logical directory entry does not exist in Amazon S3, the entry will be ignored\. As a workaround, you can use the Amazon S3 API to create 0 byte objects as place holders for your directory\. If using the CLI, use the `s3api` call instead of `s3` so you can use the put\-object operation\. For example, you use the following: `AWS s3api put-object --bucket bucketname --key path/to/folder/`\. Make sure that the end of the key name ends in a '/' for it to be considered a folder\.
 *Required*: No  
 *Type*: List of [HomeDirectoryMapEntry](aws-properties-transfer-user-homedirectorymapentry.md)  
@@ -69,16 +69,16 @@ If the target of a logical directory entry does not exist in Amazon S3, the entr
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HomeDirectoryType`  <a name="cfn-transfer-user-homedirectorytype"></a>
-The type of landing directory \(folder\) you want your users' home directory to be when they log into the server\. If you set it to `PATH`, the user will see the absolute Amazon S3 bucket or EFS paths as is in their file transfer protocol clients\. If you set it `LOGICAL`, you will need to provide mappings in the `HomeDirectoryMappings` for how you want to make Amazon S3 or EFS paths visible to your users\.  
+The type of landing directory \(folder\) you want your users' home directory to be when they log into the server\. If you set it to `PATH`, the user will see the absolute Amazon S3 bucket or EFS paths as is in their file transfer protocol clients\. If you set it `LOGICAL`, you need to provide mappings in the `HomeDirectoryMappings` for how you want to make Amazon S3 or EFS paths visible to your users\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `LOGICAL | PATH`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Policy`  <a name="cfn-transfer-user-policy"></a>
-A scope\-down policy for your user so you can use the same IAM role across multiple users\. This policy scopes down user access to portions of their Amazon S3 bucket\. Variables that you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`\.  
-For scope\-down policies, AWS Transfer Family stores the policy as a JSON blob, instead of the Amazon Resource Name \(ARN\) of the policy\. You save the policy as a JSON blob and pass it in the `Policy` argument\.  
-For an example of a scope\-down policy, see [Example scope\-down policy](https://docs.aws.amazon.com/transfer/latest/userguide/scope-down-policy.html)\.  
+A session policy for your user so you can use the same IAM role across multiple users\. This policy restricts user access to portions of their Amazon S3 bucket\. Variables that you can use inside this policy include `${Transfer:UserName}`, `${Transfer:HomeDirectory}`, and `${Transfer:HomeBucket}`\.  
+For session policies, AWS Transfer Family stores the policy as a JSON blob, instead of the Amazon Resource Name \(ARN\) of the policy\. You save the policy as a JSON blob and pass it in the `Policy` argument\.  
+For an example of a session policy, see [Example session policy](https://docs.aws.amazon.com/transfer/latest/userguide/session-policy.html)\.  
 For more information, see [AssumeRole](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html) in the *AWS Security Token Service API Reference*\.
 *Required*: No  
 *Type*: String  
@@ -176,27 +176,27 @@ The following example associates a user with a server\.
       "Properties": {
          "HomeDirectoryMappings": [
             {
-               "Entry": "/our-personal-report.pdf",
-               "Target": "/my-bucket/customized-reports/${transfer:UserName}.pdf"
+               "Entry": "/",
+               "Target": "/my-bucket/"
             }
          ],
          "HomeDirectoryType": "LOGICAL",
          "Policy": {
-           "Fn::Sub": {
-             "Version": "2012-10-17T00:00:00.000Z",
-             "Statement": {
-               "Sid": "AllowFullAccessToBucket",
-               "Action": "s3:*",
-               "Effect": "Allow",
-               "Resource": [
-                  "arn:${AWS::Partition}:s3:::my-bucket",
-                  "arn:${AWS::Partition}:s3:::my-bucket/*"
+           "Fn::Sub": "{
+             \"Version\": \"2012-10-17T00:00:00.000Z\",
+             \"Statement\": {
+                \"Sid\": \"AllowFullAccessToBucket\",
+                \"Action\": \"s3:*\",
+                \"Effect\": \"Allow\",
+                \"Resource\": [
+                   \"arn:${AWS::Partition}:s3:::my-bucket\",
+                   \"arn:${AWS::Partition}:s3:::my-bucket/*\"
                ]
              }
-          }
+          }"
        },
        "Role": {
-         "Fn::Sub": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/Admin"
+         "Fn::Sub": "arn:aws:iam::${AWS::AccountId}:role/Admin"
        },
        "ServerId": {
          "Fn::GetAtt": "Server.ServerId"
@@ -221,34 +221,34 @@ The following example associates a user with a server\.
 User:
   Type: AWS::Transfer::User
   Properties:
-  HomeDirectoryMappings:
-    - Entry: /our-personal-report.pdf
-      Target: /my-bucket/customized-reports/${transfer:UserName}.pdf
-  HomeDirectoryType: LOGICAL
-  Policy:
-    Fn::Sub: |
-      {
-        "Version": "2012-10-17T00:00:00.000Z",
-        "Statement": {
-          "Sid": "AllowFullAccessToBucket",
-          "Action": "s3:*",
-          "Effect": "Allow",
-          "Resource": [
-            "arn:${AWS::Partition}:s3:::my-bucket",
-            "arn:${AWS::Partition}:s3:::my-bucket/*"
-          ]
+    HomeDirectoryMappings:
+      - Entry: /
+        Target: /my-bucket/
+    HomeDirectoryType: LOGICAL
+    Policy:
+      Fn::Sub: |
+        {
+          "Version": "2012-10-17",
+          "Statement": {
+            "Sid": "AllowFullAccessToBucket",
+            "Action": "s3:*",
+            "Effect": "Allow",
+            "Resource": [
+              "arn:aws:s3:::my-bucket",
+              "arn:aws:s3:::my-bucket/*"
+            ]
+          }
         }
-      }
-  Role:
-    Fn::Sub: arn:${AWS::Partition}:iam::${AWS::AccountId}:role/Admin
-  ServerId:
-    Fn::GetAtt: Server.ServerId
-  SshPublicKeys:
-  - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAn5ZA7REHaFT40KsZzYnuS7vzdP8n46akEpXLpzrOkbRPEqoOXlDk8f+2SrnANUGfjVVnTqhdrI7S90B4lyBIdWdinhVUK+W0we8j6nCMhtnjigXs6dtxvESUEzrWLWlQpPNJXDSnZEEWoQ/q7W4xXynD6GM3pko36ipA5Xv6hQWC7faYOb2FWLzN1NsngaowO1R6FRau+/oIu
-  Tags:
-    - Key: KeyName
-      Value: ValueName
-  UserName: my-user
+    Role:
+      Fn::Sub: arn:aws:iam::${AWS::AccountId}:role/Admin
+    ServerId:
+      Fn::GetAtt: Server.ServerId
+    SshPublicKeys:
+     - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAn5ZA7REHaFT40KsZzYnuS7vzdP8n46akEpXLpzrOkbRPEqoOXlDk8f+2SrnANUGfjVVnTqhdrI7S90B4lyBIdWdinhVUK+W0we8j6nCMhtnjigXs6dtxvESUEzrWLWlQpPNJXDSnZEEWoQ/q7W4xXynD6GM3pko36ipA5Xv6hQWC7faYOb2FWLzN1NsngaowO1R6FRau+/oIu
+    Tags:
+      - Key: KeyName
+        Value: ValueName
+    UserName: my-user
 ```
 
 ## See also<a name="aws-resource-transfer-user--seealso"></a>

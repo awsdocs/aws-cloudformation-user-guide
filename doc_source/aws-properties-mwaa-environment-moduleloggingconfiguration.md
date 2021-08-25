@@ -1,6 +1,6 @@
 # AWS::MWAA::Environment ModuleLoggingConfiguration<a name="aws-properties-mwaa-environment-moduleloggingconfiguration"></a>
 
-Defines the type of logs to send for the Apache Airflow log type \(e\.g\. `DagProcessingLogs`\)\. Valid values: `CloudWatchLogGroupArn`, `Enabled`, `LogLevel`\.
+Defines the type of logs to send for the Apache Airflow log type \(e\.g\. `DagProcessingLogs`\)\. 
 
 ## Syntax<a name="aws-properties-mwaa-environment-moduleloggingconfiguration-syntax"></a>
 

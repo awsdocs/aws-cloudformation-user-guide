@@ -1,4 +1,4 @@
-# IoTSiteWise resource type reference<a name="AWS_IoTSiteWise"></a>
+# AWS IoT SiteWise resource type reference<a name="AWS_IoTSiteWise"></a>
 
 **Resource types**
 + [AWS::IoTSiteWise::AccessPolicy](aws-resource-iotsitewise-accesspolicy.md)

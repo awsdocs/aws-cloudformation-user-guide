@@ -74,3 +74,105 @@ The ARN of the task definition to use if the event target is an Amazon ECS task\
 *Minimum*: `1`  
 *Maximum*: `1600`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-events-rule-ecsparameters--examples"></a>
+
+
+
+### <a name="aws-properties-events-rule-ecsparameters--examples--"></a>
+
+The following example defines the ECS parameters\.
+
+#### JSON<a name="aws-properties-events-rule-ecsparameters--examples----json"></a>
+
+```
+{
+  "LaunchType": "FARGATE",
+  "NetworkConfiguration": {
+    "AwsVpcConfiguration": {
+      "AssignPublicIp": "DISABLED",
+      "SecurityGroups": [
+        {
+          "Fn: : GetAtt": [
+            "ScheduledFargateTaskScheduledTaskDefSecurityGroupE075BC19",
+            "GroupId"
+          ]
+        }
+      ],
+      "Subnets": [
+        {
+          "Ref": "VpcPrivateSubnet1Subnet536B997A"
+        }
+      ]
+    }
+  },
+  "TaskCount": 2,
+  "TaskDefinitionArn": {
+     "Ref": "ScheduledFargateTaskScheduledTaskDef521FA675"
+  },
+  "enableECSManagedTags": true,
+  "placementConstraints": [ 
+    { 
+        "expression": "attribute:ecs.instance-type == t2.small",
+        "type": "memberOf"
+    }
+  ],
+  "placementStrategy": [ 
+  { 
+     "field": "instanceId",
+     "type ": "binpack"
+  }
+  ],
+  "propagateTags": "TASK_DEFINITION",
+  "referenceId": "idopsks",
+  "startedBy": "surearu",
+  "tags": [ 
+      { 
+          "key": "maintask",
+          "value ": "taskvalue"
+      }
+  ]
+}
+```
+
+#### YAML<a name="aws-properties-events-rule-ecsparameters--examples----yaml"></a>
+
+```
+LaunchType: "FARGATE"
+NetworkConfiguration:
+  AwsVpcConfiguration:
+    AssignPublicIp: "DISABLED"
+    SecurityGroups:
+      Fn: : GetAtt:
+        "ScheduledFargateTaskScheduledTaskDefSecurityGroupE075BC19",
+        "GroupId"
+    Subnets:
+      Ref: 
+        "VpcPrivateSubnet1Subnet536B997A"
+TaskCount: 2
+TaskDefinitionArn:
+  Ref: 
+    "ScheduledFargateTaskScheduledTaskDef521FA675"
+enableECSManagedTags: true
+placementConstraints:  
+  expression: 
+    "attribute:ecs.instance-type == t2.small"
+  type: 
+    "memberOf"
+placementStrategy: 
+  field: 
+    "instanceId"
+  type: 
+    "binpack"
+propagateTags: 
+  "TASK_DEFINITION"
+referenceId: 
+  "idopsks"
+startedBy: 
+  "surearu"
+tags:
+  key: 
+    "maintask"
+  value: 
+    "taskvalue"
+```

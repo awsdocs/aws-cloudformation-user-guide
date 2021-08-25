@@ -1,4 +1,4 @@
-# Signer resource type reference<a name="AWS_Signer"></a>
+# AWS Signer resource type reference<a name="AWS_Signer"></a>
 
 **Resource types**
 + [AWS::Signer::ProfilePermission](aws-resource-signer-profilepermission.md)

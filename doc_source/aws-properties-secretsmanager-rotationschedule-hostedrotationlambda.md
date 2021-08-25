@@ -43,13 +43,13 @@ Specifies the ARN of the KMS key\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MasterSecretArn`  <a name="cfn-secretsmanager-rotationschedule-hostedrotationlambda-mastersecretarn"></a>
-Specifies the ARN of the MasterSecret that contains a privileged user’s credentials\. The Lambda uses this secret to rotate the current secret\. See [Permissions Required to Automatically Rotate Secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets-required-permissions.html)\.  
+Specifies the ARN of the primary secret that contains superuser credentials\. The Lambda uses this secret to rotate the current secret\. See [Permissions Required to Automatically Rotate Secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets-required-permissions.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MasterSecretKmsKeyArn`  <a name="cfn-secretsmanager-rotationschedule-hostedrotationlambda-mastersecretkmskeyarn"></a>
-Specifies the ARN of the KMS key used to encrypt the master secret\. You only need this property if you use a master secret to rotate the current secret, and you encrypt the master secret with a custom CMK\.  
+Specifies the ARN of the KMS key Secrets Manageruses to encrypt the primary secret\. You only need this property if you use a primary secret to rotate the current secret, and you encrypt the primary secret with a customer managed key instead of the AWS managed key `aws/secretsmanager`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

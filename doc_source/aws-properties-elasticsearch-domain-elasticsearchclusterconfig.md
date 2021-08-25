@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[ColdStorageOptions](#cfn-elasticsearch-domain-elasticsearchclusterconfig-coldstorageoptions)" : ColdStorageOptions,
   "[DedicatedMasterCount](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastercount)" : Integer,
   "[DedicatedMasterEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmasterenabled)" : Boolean,
   "[DedicatedMasterType](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastertype)" : String,
@@ -26,6 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticsearch-domain-elasticsearchclusterconfig-syntax.yaml"></a>
 
 ```
+  [ColdStorageOptions](#cfn-elasticsearch-domain-elasticsearchclusterconfig-coldstorageoptions): 
+    ColdStorageOptions
   [DedicatedMasterCount](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastercount): Integer
   [DedicatedMasterEnabled](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmasterenabled): Boolean
   [DedicatedMasterType](#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastertype): String
@@ -40,6 +43,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-elasticsearch-domain-elasticsearchclusterconfig-properties"></a>
+
+`ColdStorageOptions`  <a name="cfn-elasticsearch-domain-elasticsearchclusterconfig-coldstorageoptions"></a>
+Specifies cold storage options for the domain\.  
+*Required*: No  
+*Type*: [ColdStorageOptions](aws-properties-elasticsearch-domain-coldstorageoptions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DedicatedMasterCount`  <a name="cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastercount"></a>
 The number of instances to use for the master node\. If you specify this property, you must specify true for the DedicatedMasterEnabled property\.  

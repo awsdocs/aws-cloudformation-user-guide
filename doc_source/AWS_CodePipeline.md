@@ -1,4 +1,4 @@
-# CodePipeline resource type reference<a name="AWS_CodePipeline"></a>
+# AWS CodePipeline resource type reference<a name="AWS_CodePipeline"></a>
 
 **Resource types**
 + [AWS::CodePipeline::CustomActionType](aws-resource-codepipeline-customactiontype.md)

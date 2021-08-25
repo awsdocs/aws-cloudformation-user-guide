@@ -29,7 +29,7 @@ The following command creates a \.zip file containing the function's source code
 **Package command**
 
 ```
-aws cloudformation package --template /path_to_template/template.json --s3-bucket mybucket --output json > packaged-template.json
+aws cloudformation package --template /path_to_template/template.json --s3-bucket mybucket --output-template-file packaged-template.json --use-json
 ```
 
 The command saves the template that it generates to the path specified by the `--output` option\. The command replaces the artifact with the S3 location, as shown in the following example:

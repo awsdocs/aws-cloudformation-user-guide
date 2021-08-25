@@ -1,6 +1,6 @@
 # AWS::SSMContacts::Contact Targets<a name="aws-properties-ssmcontacts-contact-targets"></a>
 
-The contact or contact channel that is being engaged\.
+The contact or contact channel that's being engaged\.
 
 ## Syntax<a name="aws-properties-ssmcontacts-contact-targets-syntax"></a>
 

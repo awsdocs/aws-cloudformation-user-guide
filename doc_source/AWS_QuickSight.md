@@ -1,4 +1,4 @@
-# QuickSight resource type reference<a name="AWS_QuickSight"></a>
+# Amazon QuickSight resource type reference<a name="AWS_QuickSight"></a>
 
 **Resource types**
 + [AWS::QuickSight::Analysis](aws-resource-quicksight-analysis.md)

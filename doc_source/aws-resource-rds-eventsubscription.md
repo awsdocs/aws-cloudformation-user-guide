@@ -122,18 +122,17 @@ The following example creates an event subscription for an existing database ins
 
 ```
 --- 
-myEventSubscription: 
-  Properties: 
-    Enabled: false
-    EventCategories: 
-      - "configuration change"
+myEventSubscription:
+  Type: 'AWS::RDS::EventSubscription'
+  Properties:
+    EventCategories:
+      - configuration change
       - failure
       - deletion
-    SnsTopicArn: "arn:aws:sns:us-west-2:123456789012:example-topic"
-    SourceIds: 
+    SnsTopicArn: 'arn:aws:sns:us-west-2:123456789012:example-topic'
+    SourceIds:
       - db-instance-1
-      - 
-        Ref: myDBInstance
+      - !Ref myDBInstance
     SourceType: db-instance
-  Type: "AWS::RDS::EventSubscription"
+    Enabled: false
 ```

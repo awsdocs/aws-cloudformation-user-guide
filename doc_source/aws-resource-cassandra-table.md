@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[BillingMode](#cfn-cassandra-table-billingmode)" : BillingMode,
       "[ClusteringKeyColumns](#cfn-cassandra-table-clusteringkeycolumns)" : [ ClusteringKeyColumn, ... ],
+      "[EncryptionSpecification](#cfn-cassandra-table-encryptionspecification)" : EncryptionSpecification,
       "[KeyspaceName](#cfn-cassandra-table-keyspacename)" : String,
       "[PartitionKeyColumns](#cfn-cassandra-table-partitionkeycolumns)" : [ Column, ... ],
       "[PointInTimeRecoveryEnabled](#cfn-cassandra-table-pointintimerecoveryenabled)" : Boolean,
@@ -33,6 +34,8 @@ Properties:
     BillingMode
   [ClusteringKeyColumns](#cfn-cassandra-table-clusteringkeycolumns): 
     - ClusteringKeyColumn
+  [EncryptionSpecification](#cfn-cassandra-table-encryptionspecification): 
+    EncryptionSpecification
   [KeyspaceName](#cfn-cassandra-table-keyspacename): String
   [PartitionKeyColumns](#cfn-cassandra-table-partitionkeycolumns): 
     - Column
@@ -48,8 +51,8 @@ Properties:
 
 `BillingMode`  <a name="cfn-cassandra-table-billingmode"></a>
 The billing mode for the table, which determines how you'll be charged for reads and writes:  
-+ **On\-demand mode** \(default\) \- you pay based on the actual reads and writes your application performs\.
-+ **Provisioned mode** \- lets you specify the number of reads and writes per second that you need for your application\.
++ **On\-demand mode** \(default\) \- You pay based on the actual reads and writes your application performs\.
++ **Provisioned mode** \- Lets you specify the number of reads and writes per second that you need for your application\.
 If you don't specify a value for this property, then the table will use on\-demand mode\.  
 *Required*: No  
 *Type*: [BillingMode](aws-properties-cassandra-table-billingmode.md)  
@@ -60,6 +63,17 @@ One or more columns that determine how the table data is sorted\.
 *Required*: No  
 *Type*: List of [ClusteringKeyColumn](aws-properties-cassandra-table-clusteringkeycolumn.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EncryptionSpecification`  <a name="cfn-cassandra-table-encryptionspecification"></a>
+The encryption at rest options for the table\.  
++ **AWS owned key** \(default\) \- The key is owned by Amazon Keyspaces\.
++ **Customer managed key** \- The key is stored in your account and is created, owned, and managed by you\.
+**Note**  
+If you choose encryption with a customer managed key, you must specify a valid customer managed KMS key with permissions granted to Amazon Keyspaces\.
+For more information, see [Encryption at Rest in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/EncryptionAtRest.html) in the *Amazon Keyspaces Developer Guide*\.  
+*Required*: No  
+*Type*: [EncryptionSpecification](aws-properties-cassandra-table-encryptionspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeyspaceName`  <a name="cfn-cassandra-table-keyspacename"></a>
 The name of the keyspace in which to create the table\. The keyspace must already exist\.  
@@ -88,7 +102,7 @@ One or more columns that are not part of the primary key \- that is, columns tha
 `TableName`  <a name="cfn-cassandra-table-tablename"></a>
 The name of the table to be created\. The table name is case sensitive\. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the table name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
-*Length Constraints:* Minimum length of 3\. Maximum length of 255\.  
+*Length constraints:* Minimum length of 3\. Maximum length of 255\.  
 *Pattern:* `^[a-zA-Z0-9][a-zA-Z0-9_]{1,47}$`  
 *Required*: No  
 *Type*: String  
@@ -154,124 +168,11 @@ Resources:
           ColumnType: ASCII
 ```
 
-### Create a Table Using Provisioned Mode<a name="aws-resource-cassandra-table--examples--Create_a_Table_Using_Provisioned_Mode"></a>
+### Create a Table Using All Options<a name="aws-resource-cassandra-table--examples--Create_a_Table_Using_All_Options"></a>
 
-The following example creates a table with specific read and write capacity\.
+The following example creates a table with specific read and write capacity, PITR, tags, and encryption settings\. To run this sample, you must replace the key ARN in the example with your own\.
 
-#### JSON<a name="aws-resource-cassandra-table--examples--Create_a_Table_Using_Provisioned_Mode--json"></a>
-
-```
-{
-  "AWSTemplateFormatVersion":"2010-09-09",
-  "Resources":{
-    "mySecondTable":{
-      "Type":"AWS::Cassandra::Table",
-      "Properties":{
-        "KeyspaceName":"MyNewKeyspace",
-        "TableName":"Employees",
-        "PartitionKeyColumns":[
-          {
-            "ColumnName":"id",
-            "ColumnType":"ASCII"
-          }
-        ],
-        "ClusteringKeyColumns":[
-          {
-            "Column":{
-              "ColumnName":"division",
-              "ColumnType":"ASCII"
-            },
-            "OrderBy":"ASC"
-          }
-        ],
-        "RegularColumns":[
-          {
-            "ColumnName":"name",
-            "ColumnType":"TEXT"
-          },
-          {
-            "ColumnName":"region",
-            "ColumnType":"TEXT"
-          },
-          {
-            "ColumnName":"project",
-            "ColumnType":"TEXT"
-          },
-          {
-            "ColumnName":"role",
-            "ColumnType":"TEXT"
-          },
-          {
-            "ColumnName":"pay_scale",
-            "ColumnType":"TEXT"
-          },
-          {
-            "ColumnName":"vacation_hrs",
-            "ColumnType":"FLOAT"
-          },
-          {
-            "ColumnName":"manager_id",
-            "ColumnType":"TEXT"
-          }
-        ],
-        "BillingMode":{
-          "Mode":"PROVISIONED",
-          "ProvisionedThroughput":{
-            "ReadCapacityUnits":5,
-            "WriteCapacityUnits":5
-          }
-        }
-      }
-    }
-  }
-}
-```
-
-#### YAML<a name="aws-resource-cassandra-table--examples--Create_a_Table_Using_Provisioned_Mode--yaml"></a>
-
-```
-AWSTemplateFormatVersion: '2010-09-09'
-Resources:
-  mySecondTable:
-    Type: AWS::Cassandra::Table
-    Properties:
-      KeyspaceName: MyNewKeyspace
-      TableName: Employees
-      PartitionKeyColumns:
-      - ColumnName: id
-        ColumnType: ASCII
-      ClusteringKeyColumns:
-      - Column:
-          ColumnName: division
-          ColumnType: ASCII
-        OrderBy: ASC
-      RegularColumns:
-      - ColumnName: name
-        ColumnType: TEXT
-      - ColumnName: region
-        ColumnType: TEXT
-      - ColumnName: project
-        ColumnType: TEXT
-      - ColumnName: role
-        ColumnType: TEXT
-      - ColumnName: pay_scale
-        ColumnType: TEXT
-      - ColumnName: vacation_hrs
-        ColumnType: FLOAT
-      - ColumnName: manager_id
-        ColumnType: TEXT
-      BillingMode:
-        Mode: PROVISIONED
-        ProvisionedThroughput:
-          ReadCapacityUnits: 5
-          WriteCapacityUnits: 5
-```
-
-### Create a Table with Point\-in\-time Recovery enabled and with tags\.<a name="aws-resource-cassandra-table--examples--Create_a_Table_with_Point-in-time_Recovery_enabled_and_with_tags."></a>
-
-The following example creates a table with point\-in\-time enabled and with tags\.
-
-#### JSON<a name="aws-resource-cassandra-table--examples--Create_a_Table_with_Point-in-time_Recovery_enabled_and_with_tags.--json"></a>
+#### JSON<a name="aws-resource-cassandra-table--examples--Create_a_Table_Using_All_Options--json"></a>
 
 ```
 {
@@ -327,6 +228,13 @@ The following example creates a table with point\-in\-time enabled and with tags
                   "ColumnType": "TEXT"
                }
             ],
+		"BillingMode":{
+          	"Mode":"PROVISIONED",
+          	"ProvisionedThroughput":{
+            	"ReadCapacityUnits":5,
+            	"WriteCapacityUnits":5
+          	}
+                },
             "PointInTimeRecoveryEnabled": true,
             "Tags": [
                {
@@ -337,14 +245,18 @@ The following example creates a table with point\-in\-time enabled and with tags
                   "Key": "tag2",
                   "Value": "val2"
                }
-            ]
+            ],
+            "EncryptionSpecification": {
+                "EncryptionType": "CUSTOMER_MANAGED_KMS_KEY",
+                "KmsKeyIdentifier": "arn:aws:kms:eu-west-1:5555555555555:key/11111111-1111-111-1111-111111111111"
+            }
          }
       }
    }
 }
 ```
 
-#### YAML<a name="aws-resource-cassandra-table--examples--Create_a_Table_with_Point-in-time_Recovery_enabled_and_with_tags.--yaml"></a>
+#### YAML<a name="aws-resource-cassandra-table--examples--Create_a_Table_Using_All_Options--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
@@ -388,4 +300,7 @@ Resources:
           Value: val1
         - Key: tag2
           Value: val2
+      EncryptionSpecification:
+        EncryptionType: CUSTOMER_MANAGED_KMS_KEY
+        KmsKeyIdentifier: arn:aws:kms:eu-west-1:5555555555555:key/11111111-1111-111-1111-111111111111
 ```

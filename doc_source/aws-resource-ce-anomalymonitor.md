@@ -34,14 +34,14 @@ Properties:
 ## Properties<a name="aws-resource-ce-anomalymonitor-properties"></a>
 
 `MonitorDimension`  <a name="cfn-ce-anomalymonitor-monitordimension"></a>
- The dimensions to evaluate\.   
+The dimensions to evaluate\.   
 *Required*: No  
 *Type*: String  
 *Allowed values*: `SERVICE`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MonitorName`  <a name="cfn-ce-anomalymonitor-monitorname"></a>
- The name of the monitor\.   
+The name of the monitor\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `0`  
@@ -56,7 +56,7 @@ The array of `MonitorSpecification` in JSON array format\. For instance, you can
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MonitorType`  <a name="cfn-ce-anomalymonitor-monitortype"></a>
- The possible type values\.   
+The possible type values\.   
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `CUSTOM | DIMENSIONAL`  

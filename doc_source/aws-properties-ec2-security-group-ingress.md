@@ -233,8 +233,8 @@ Like the previous example, the following example allows one\-way traffic from an
                     ]
                 },
                 "IpProtocol": "tcp",
-                "FromPort": "80",
-                "ToPort": "80",
+                "FromPort": 80,
+                "ToPort": 80,
                 "SourceSecurityGroupId": "sg-12345678",
                 "SourceSecurityGroupOwnerId": "123456789012"
             }
@@ -258,8 +258,8 @@ Resources:
     Properties:
       GroupId: !GetAtt TargetSG.GroupId
       IpProtocol: tcp
-      FromPort: '80'
-      ToPort: '80'
+      FromPort: 80
+      ToPort: 80
       SourceSecurityGroupId: sg-12345678
       SourceSecurityGroupOwnerId: '123456789012'
 ```

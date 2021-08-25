@@ -74,7 +74,7 @@ You must specify at least one of the following properties: `AbortIncompleteMulti
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExpiredObjectDeleteMarker`  <a name="cfn-s3-bucket-rule-expiredobjectdeletemarker"></a>
-Indicates whether Amazon S3 will remove a delete marker with no noncurrent versions\. If set to true, the delete marker will be expired\. This cannot be specified with `ExpirationInDays`, `ExpirationDate`, or `TagFilters`\.  
+Indicates whether Amazon S3 will remove a delete marker without any noncurrent versions\. If set to true, the delete marker will be removed if there are no noncurrent versions\. This cannot be specified with `ExpirationInDays`, `ExpirationDate`, or `TagFilters`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

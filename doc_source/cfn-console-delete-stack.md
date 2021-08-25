@@ -10,7 +10,7 @@
 
 1. Select **Delete stack** when prompted\.
 **Note**  
-The stack deletion opertaion can't be stopped once the stack deletion has begun\. The stack proceeds to the `DELETE_IN_PROGRESS` state\.
+The stack deletion operation can't be stopped once the stack deletion has begun\. The stack proceeds to the `DELETE_IN_PROGRESS` state\.
 
    After the stack deletion is complete, the stack will be in the `DELETE_COMPLETE` state\. Stacks in the `DELETE_COMPLETE` state aren't displayed in the CloudFormation console by default\. To display deleted stacks, you must change the stack view filter as described in [Viewing deleted stacks on the AWS CloudFormation consoleViewing deleted stacks](cfn-console-view-deleted-stacks.md)\.
 

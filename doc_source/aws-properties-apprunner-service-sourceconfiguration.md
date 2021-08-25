@@ -38,8 +38,8 @@ Describes the resources that are needed to authenticate access to some source re
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutoDeploymentsEnabled`  <a name="cfn-apprunner-service-sourceconfiguration-autodeploymentsenabled"></a>
-If `true`, continuous integration from the source repository is enabled for the App Runner service\. Each repository change \(source code commit or new image version\) starts a deployment\.  
-Default: `true`   
+If `true`, continuous integration from the source repository is enabled for the App Runner service\. Each repository change \(including any source code commit or new image version\) starts a deployment\.  
+Default: App Runner sets to `false` for a source image that uses an ECR Public repository or an ECR repository that's in an AWS account other than the one that the service is in\. App Runner sets to `true` in all other cases \(which currently include a source code repository or a source image using a same\-account ECR repository\)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -146,8 +146,8 @@ You're probably wondering how you set properties on one resource based on the na
                 "SecurityGroupIngress": [
                     {
                         "IpProtocol": "tcp",
-                        "FromPort": "22",
-                        "ToPort": "22",
+                        "FromPort": 22,
+                        "ToPort": 22,
                         "CidrIp": "0.0.0.0/0"
                     }
                 ]
@@ -174,8 +174,8 @@ Resources:
       GroupDescription: Enable SSH access via port 22
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '22'
-          ToPort: '22'
+          FromPort: 22
+          ToPort: 22
           CidrIp: 0.0.0.0/0
 ```
 
@@ -206,8 +206,8 @@ The SecurityGroups property is a list of security groups, and in the previous ex
                 "SecurityGroupIngress": [
                     {
                         "IpProtocol": "tcp",
-                        "FromPort": "22",
-                        "ToPort": "22",
+                        "FromPort": 22,
+                        "ToPort": 22,
                         "CidrIp": "0.0.0.0/0"
                     }
                 ]
@@ -235,8 +235,8 @@ Resources:
       GroupDescription: Enable SSH access via port 22
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '22'
-          ToPort: '22'
+          FromPort: 22
+          ToPort: 22
           CidrIp: 0.0.0.0/0
 ```
 
@@ -277,8 +277,8 @@ In the example above, the KeyName property of the [AWS::EC2::Instance](https://d
         "SecurityGroupIngress": [
           {
             "IpProtocol": "tcp",
-            "FromPort": "22",
-            "ToPort": "22",
+            "FromPort": 22,
+            "ToPort": 22,
             "CidrIp": "0.0.0.0/0"
           }
         ]
@@ -310,12 +310,12 @@ Resources:
       GroupDescription: Enable SSH access via port 22
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '22'
-          ToPort: '22'
+          FromPort: 22
+          ToPort: 22
           CidrIp: 0.0.0.0/0
 ```
 
-The Ref function is handy if the parameter or the value returned for a resource is exactly what you want; however, you may need other attributes of a resource\. For example, if you want to create a CloudFront distribution with an S3 origin, you need to specify the bucket location by using a DNS\-style address\. A number of resources have additional attributes whose values you can use in your template\. To get these attributes, you use the [Fn::GetAtt](intrinsic-function-reference-getatt.md) function\. The following template creates a CloudFront distribution resource that specifies the DNS name of an S3 bucket resource using Fn::GetAtt function to get the bucket's DomainName attribute\.
+The Ref function is handy if the parameter or the value returned for a resource is exactly what you want; however, you may need other attributes of a resource\. For example, if you want to create a CloudFront distribution with an S3 origin, you need to specify the bucket location by using a DNS\-style address\. A number of resources have additional attributes whose values you can use in your template\. To get these attributes, you use the [Fn::GetAtt](intrinsic-function-reference-getatt.md) function\. The following template creates an Amazon CloudFront distribution resource that specifies the DNS name of an S3 bucket resource using Fn::GetAtt function to get the bucket's DomainName attribute\.
 
 ### JSON<a name="gettingstarted.templatebasics.multiple.json6"></a>
 
@@ -450,7 +450,7 @@ For the `String` type, you can use the following attributes to declare constrain
 
 For the `Number` type, you can declare the following constraints: `MinValue`, `MaxValue`, `Default`, and `AllowedValues`\. A number can be an integer or a float value\. In the example above, the `WebServerPort` parameter must be a number between 1 and 65535 inclusive \(`MinValue`, `MaxValue`\)\.
 
-Earlier in this section, we mentioned that parameters are a good way to specify sensitive or implementation\-specific data, such as passwords or user names, that you need to use but do not want to embed in the template itself\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events, except for information stored in the locations specified below\. In the example above, the `WordPressUser` parameter value is not visible to anyone viewing the stack's settings, and its value is returned as asterisks\.
+Earlier in this section, we mentioned that parameters are a good way to specify sensitive or implementation\-specific data, such as passwords or user names, that you need to use but don't want to embed in the template itself\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events, except for information stored in the locations specified below\. In the example above, the `WordPressUser` parameter value isn't visible to anyone viewing the stack's settings, and its value is returned as asterisks\.
 
 **Important**  
 Using the `NoEcho` attribute does not mask any information stored in the following:  

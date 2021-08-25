@@ -43,17 +43,17 @@ The following shows an example allow action specification\.
 #### YAML<a name="aws-properties-wafv2-webacl-allowaction--examples--Set_an_allow_action_--yaml"></a>
 
 ```
-          Action:
-            Allow: {}
+Action:
+  Allow: {}
 ```
 
 #### JSON<a name="aws-properties-wafv2-webacl-allowaction--examples--Set_an_allow_action_--json"></a>
 
 ```
-     "Action": 
-      {"Allow": 
-        {}
-         }
+"Action": 
+  {"Allow": 
+    {}
+  }
 ```
 
 ### Set an allow action with a custom request setting<a name="aws-properties-wafv2-webacl-allowaction--examples--Set_an_allow_action_with_a_custom_request_setting"></a>
@@ -63,30 +63,30 @@ The following shows an example allow action specification with custom request ha
 #### YAML<a name="aws-properties-wafv2-webacl-allowaction--examples--Set_an_allow_action_with_a_custom_request_setting--yaml"></a>
 
 ```
-        Allow:
-          CustomRequestHandling:
-            InsertHeaders:
-              - Name: AllowActionHeader1Name
-                Value: AllowActionHeader1Value
-              - Name: AllowActionHeader2Name
-                Value: AllowActionHeader2Value
+Allow:
+  CustomRequestHandling:
+    InsertHeaders:
+      - Name: AllowActionHeader1Name
+        Value: AllowActionHeader1Value
+      - Name: AllowActionHeader2Name
+        Value: AllowActionHeader2Value
 ```
 
 #### JSON<a name="aws-properties-wafv2-webacl-allowaction--examples--Set_an_allow_action_with_a_custom_request_setting--json"></a>
 
 ```
-          "Allow": {
-            "CustomRequestHandling": {
-              "InsertHeaders": [
-                {
-                  "Name": "AllowActionHeader1Name",
-                  "Value": "AllowActionHeader1Value"
-                },
-                {
-                  "Name": "AllowActionHeader2Name",
-                  "Value": "AllowActionHeader2Value"
-                }
-              ]
-            }
-          }
+"Allow": {
+   "CustomRequestHandling": {
+     "InsertHeaders": [
+       {
+         "Name": "AllowActionHeader1Name",
+         "Value": "AllowActionHeader1Value"
+       },
+       {
+         "Name": "AllowActionHeader2Name",
+         "Value": "AllowActionHeader2Value"
+       }
+     ]
+   }
+}
 ```

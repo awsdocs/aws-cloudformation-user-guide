@@ -123,7 +123,7 @@ For additional examples, see [Assigning an Amazon EC2 Elastic IP Using AWS::EC2:
         "Properties" : {
             "VpcId" : { "Ref" : "VpcId" },
             "GroupDescription" : "Enable SSH access via port 22",
-            "SecurityGroupIngress" : [ { "IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : "0.0.0.0/0" } ]
+            "SecurityGroupIngress" : [ { "IpProtocol" : "tcp", "FromPort" : 22, "ToPort" : 22, "CidrIp" : "0.0.0.0/0" } ]
         }
     },
     "WebSecurityGroup" : {

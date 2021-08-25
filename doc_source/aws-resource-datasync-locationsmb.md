@@ -49,7 +49,7 @@ The Amazon Resource Names \(ARNs\) of agents to use for a Simple Message Block \
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `4`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Domain`  <a name="cfn-datasync-locationsmb-domain"></a>
 The name of the Windows domain that the SMB server belongs to\.  
@@ -57,13 +57,13 @@ The name of the Windows domain that the SMB server belongs to\.
 *Type*: String  
 *Maximum*: `253`  
 *Pattern*: `^([A-Za-z0-9]+[A-Za-z0-9-.]*)*[A-Za-z0-9-]*[A-Za-z0-9]$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MountOptions`  <a name="cfn-datasync-locationsmb-mountoptions"></a>
 The mount options used by DataSync to access the SMB server\.  
 *Required*: No  
 *Type*: [MountOptions](aws-properties-datasync-locationsmb-mountoptions.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Password`  <a name="cfn-datasync-locationsmb-password"></a>
 The password of the user who can mount the share, has the permissions to access files and folders in the SMB share\.  
@@ -71,7 +71,7 @@ The password of the user who can mount the share, has the permissions to access 
 *Type*: String  
 *Maximum*: `104`  
 *Pattern*: `^.{0,104}$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerHostname`  <a name="cfn-datasync-locationsmb-serverhostname"></a>
 The name of the SMB server\. This value is the IP address or Domain Name Service \(DNS\) name of the SMB server\. An agent that is installed on\-premises uses this hostname to mount the SMB server in a network\.  
@@ -90,7 +90,7 @@ To transfer all the data in the folder you specified, DataSync needs to have per
 *Type*: String  
 *Maximum*: `4096`  
 *Pattern*: `^[a-zA-Z0-9_\-\+\./\(\)\$\p{Zs}]+$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-datasync-locationsmb-tags"></a>
 The key\-value pair that represents the tag that you want to add to the location\. The value can be an empty string\. We recommend using tags to name your resources\.  
@@ -106,7 +106,7 @@ For information about choosing a user name that ensures sufficient permissions t
 *Type*: String  
 *Maximum*: `104`  
 *Pattern*: `^[^\x5B\x5D\\/:;|=,+*?]{1,104}$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-datasync-locationsmb-return-values"></a>
 

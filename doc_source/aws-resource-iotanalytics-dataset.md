@@ -68,7 +68,7 @@ The name of the dataset\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9_]+$`  
+*Pattern*: `(^(?!_{2}))(^[a-zA-Z0-9_]+$)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LateDataRules`  <a name="cfn-iotanalytics-dataset-latedatarules"></a>
@@ -100,7 +100,7 @@ The `DatasetTrigger` objects that specify when the dataset is automatically upda
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VersioningConfiguration`  <a name="cfn-iotanalytics-dataset-versioningconfiguration"></a>
-Optional\. How many versions of dataset contents are kept\. If not specified or set to null, only the latest version plus the latest succeeded version \(if they are different\) are kept for the time period specified by the `retentionPeriod` parameter\. For more information, see [Keeping Multiple Versions of AWS IoT Analytics datasets](https://docs.aws.amazon.com/iotanalytics/latest/userguide/getting-started.html#aws-iot-analytics-dataset-versions) in the * AWS IoT Analytics User Guide*\.  
+Optional\. How many versions of dataset contents are kept\. If not specified or set to null, only the latest version plus the latest succeeded version \(if they are different\) are kept for the time period specified by the `retentionPeriod` parameter\. For more information, see [ Keeping Multiple Versions of AWS IoT Analytics datasets](https://docs.aws.amazon.com/iotanalytics/latest/userguide/getting-started.html#aws-iot-analytics-dataset-versions) in the * AWS IoT Analytics User Guide*\.  
 *Required*: No  
 *Type*: [VersioningConfiguration](aws-properties-iotanalytics-dataset-versioningconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

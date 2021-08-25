@@ -2,6 +2,9 @@
 
 Creates a project in the specified portal\.
 
+**Note**  
+Make sure that the project name and description don't contain confidential information\.
+
 ## Syntax<a name="aws-resource-iotsitewise-project-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

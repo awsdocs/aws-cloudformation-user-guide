@@ -27,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[StartCanaryAfterCreation](#cfn-synthetics-canary-startcanaryaftercreation)" : Boolean,
       "[SuccessRetentionPeriod](#cfn-synthetics-canary-successretentionperiod)" : Integer,
       "[Tags](#cfn-synthetics-canary-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[VisualReference](#cfn-synthetics-canary-visualreference)" : VisualReference,
       "[VPCConfig](#cfn-synthetics-canary-vpcconfig)" : VPCConfig
     }
 }
@@ -52,6 +53,8 @@ Properties:
   [SuccessRetentionPeriod](#cfn-synthetics-canary-successretentionperiod): Integer
   [Tags](#cfn-synthetics-canary-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [VisualReference](#cfn-synthetics-canary-visualreference): 
+    VisualReference
   [VPCConfig](#cfn-synthetics-canary-vpcconfig): 
     VPCConfig
 ```
@@ -145,6 +148,12 @@ The number of days to retain data about successful runs of this canary\. If you 
 The list of key\-value pairs that are associated with the canary\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`VisualReference`  <a name="cfn-synthetics-canary-visualreference"></a>
+If this canary performs visual monitoring by comparing screenshots, this structure contains the ID of the canary run to use as the baseline for screenshots, and the coordinates of any parts of the screen to ignore during the visual monitoring comparison\.  
+*Required*: No  
+*Type*: [VisualReference](aws-properties-synthetics-canary-visualreference.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VPCConfig`  <a name="cfn-synthetics-canary-vpcconfig"></a>

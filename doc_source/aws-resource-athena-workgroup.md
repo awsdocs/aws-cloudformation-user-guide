@@ -112,6 +112,9 @@ The date and time the workgroup was created, as a UNIX timestamp in seconds\. Fo
 `WorkGroupConfiguration.EngineVersion.EffectiveEngineVersion`  <a name="WorkGroupConfiguration.EngineVersion.EffectiveEngineVersion-fn::getatt"></a>
 Not currently supported by AWS CloudFormation\.
 
+`WorkGroupConfigurationUpdates.EngineVersion.EffectiveEngineVersion`  <a name="WorkGroupConfigurationUpdates.EngineVersion.EffectiveEngineVersion-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-athena-workgroup--examples"></a>
 
 ### Creating an Athena WorkGroup<a name="aws-resource-athena-workgroup--examples--Creating_an_Athena_WorkGroup"></a>
