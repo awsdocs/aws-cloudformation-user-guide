@@ -1,4 +1,4 @@
-# KMS resource type reference<a name="AWS_KMS"></a>
+# AWS Key Management Service resource type reference<a name="AWS_KMS"></a>
 
 **Resource types**
 + [AWS::KMS::Alias](aws-resource-kms-alias.md)

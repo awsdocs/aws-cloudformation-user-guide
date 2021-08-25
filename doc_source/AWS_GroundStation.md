@@ -1,4 +1,4 @@
-# GroundStation resource type reference<a name="AWS_GroundStation"></a>
+# AWS Ground Station resource type reference<a name="AWS_GroundStation"></a>
 
 **Resource types**
 + [AWS::GroundStation::Config](aws-resource-groundstation-config.md)

@@ -1,4 +1,4 @@
-# EC2 resource type reference<a name="AWS_EC2"></a>
+# Amazon Elastic Compute Cloud resource type reference<a name="AWS_EC2"></a>
 
 **Resource types**
 + [AWS::EC2::CapacityReservation](aws-resource-ec2-capacityreservation.md)
@@ -8,7 +8,7 @@
 + [AWS::EC2::ClientVpnRoute](aws-resource-ec2-clientvpnroute.md)
 + [AWS::EC2::ClientVpnTargetNetworkAssociation](aws-resource-ec2-clientvpntargetnetworkassociation.md)
 + [AWS::EC2::CustomerGateway](aws-resource-ec2-customer-gateway.md)
-+ [AWS::EC2::DHCPOptions](aws-resource-ec2-dhcp-options.md)
++ [AWS::EC2::DHCPOptions](aws-resource-ec2-dhcpoptions.md)
 + [AWS::EC2::EC2Fleet](aws-resource-ec2-ec2fleet.md)
 + [AWS::EC2::EgressOnlyInternetGateway](aws-resource-ec2-egressonlyinternetgateway.md)
 + [AWS::EC2::EIP](aws-properties-ec2-eip.md)

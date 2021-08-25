@@ -8,7 +8,7 @@ A multi\-Region *primary key* is a fully functional symmetric or asymmetric CMK 
 
 A multi\-Region *replica key* is a fully functional symmetric or asymmetric CMK that has the same key ID and key material as a multi\-Region primary key, but is located in a different AWS Region of the same AWS partition\. There can be multiple replicas of a primary key, but each must be in a different AWS Region \.
 
-A primary key and its replicas have the same key ID and key material\. They also have the same key spec, key usage, key material origin, and automatic key rotation status\. These properties are known as *shared properties*\. If they change, AWS KMS synchronizes the change to all related multi\-Region keys\. All other properties of a replica key can differ, including its key policy, tags, aliases, and key state\. AWS KMS does not synchronize these properties\.
+A primary key and its replicas have the same key ID and key material\. They also have the same key spec, key usage, key material origin, and automatic key rotation status\. These properties are known as *shared properties*\. If they change, AWS Key Management Service synchronizes the change to all related multi\-Region keys\. All other properties of a replica key can differ, including its key policy, tags, aliases, and key state\. AWS Key Management Service does not synchronize these properties\.
 
 ## Syntax<a name="aws-resource-kms-replicakey-syntax"></a>
 
@@ -47,8 +47,9 @@ Properties:
 ## Properties<a name="aws-resource-kms-replicakey-properties"></a>
 
 `Description`  <a name="cfn-kms-replicakey-description"></a>
-A description of the CMK\. Use a description that helps you decide whether the CMK is appropriate for a task\. The default value is an empty string \(no description\)\.  
-The description is not a shared property of multi\-Region keys\. You can specify the same description or a different description for each key in a set of related multi\-Region keys\. AWS KMS does not synchronize this property\.  
+A description of the CMK\.   
+The default value is an empty string \(no description\)\.  
+The description is not a shared property of multi\-Region keys\. You can specify the same description or a different description for each key in a set of related multi\-Region keys\. AWS Key Management Service does not synchronize this property\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -66,7 +67,7 @@ For information about the key states of a CMK, see [Key state: Effect on your CM
 
 `KeyPolicy`  <a name="cfn-kms-replicakey-keypolicy"></a>
 The key policy that authorizes use of the replica key\.  
-The key policy is not a shared property of multi\-Region keys\. You can specify the same key policy or a different key policy for each key in a set of related multi\-Region keys\. AWS KMS does not synchronize this property\.  
+The key policy is not a shared property of multi\-Region keys\. You can specify the same key policy or a different key policy for each key in a set of related multi\-Region keys\. AWS Key Management Service does not synchronize this property\.  
 The key policy must conform to the following rules\.  
 + The key policy must give the caller [PutKeyPolicy](https://docs.aws.amazon.com/kms/latest/APIReference/API_PutKeyPolicy.html) permission on the CMK\. This reduces the risk that the CMK becomes unmanageable\. For more information, refer to the scenario in the [Default key policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section of the * *AWS Key Management Service Developer Guide* *\.
 + Each statement in the key policy must contain one or more principals\. The principals in the key policy must exist and be visible to AWS KMS\. When you create a new AWSprincipal \(for example, an IAM user or role\), you might need to enforce a delay before including the new principal in a key policy because the new principal might not be immediately visible to AWS KMS\. For more information, see [Changes that I make are not always immediately visible](https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_general.html#troubleshoot_general_eventual-consistency) in the *AWS Identity and Access Management User Guide*\.
@@ -103,7 +104,7 @@ Specify the key ARN of an existing multi\-Region primary key\. For example, `arn
 `Tags`  <a name="cfn-kms-replicakey-tags"></a>
 Assigns one or more tags to the replica key\.  
 Tagging or untagging a CMK can allow or deny permission to the CMK\. For details, see [Using ABAC in AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/abac.html) in the *AWS Key Management Service Developer Guide*\.
-Tags are not a shared property of multi\-Region keys\. You can specify the same tags or different tags for each key in a set of related multi\-Region keys\. AWS KMS does not synchronize this property\.  
+Tags are not a shared property of multi\-Region keys\. You can specify the same tags or different tags for each key in a set of related multi\-Region keys\. AWS Key Management Service does not synchronize this property\.  
 Each tag consists of a tag key and a tag value\. Both the tag key and the tag value are required, but the tag value can be an empty \(null\) string\. You cannot have more than one tag on a CMK with the same tag key\. If you specify an existing tag key with a different tag value, AWS KMS replaces the current tag value with the specified one\.  
 When you assign tags to an AWSresource, AWSgenerates a cost allocation report with usage and costs aggregated by tags\. Tags can also be used to control access to a CMK\. For details, see [Tagging keys](https://docs.aws.amazon.com/kms/latest/developerguide/tagging-keys.html)\.  
 *Required*: No  

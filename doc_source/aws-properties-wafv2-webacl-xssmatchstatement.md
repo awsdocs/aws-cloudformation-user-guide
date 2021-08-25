@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-webacl-xssmatchstatement-properties"></a>
 
 `FieldToMatch`  <a name="cfn-wafv2-webacl-xssmatchstatement-fieldtomatch"></a>
-The part of a web request that you want AWS WAF to inspect\. For more information, see FieldToMatch\.   
+The part of a web request that you want AWS WAF to inspect\.   
 *Required*: Yes  
 *Type*: [FieldToMatch](aws-properties-wafv2-webacl-fieldtomatch.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

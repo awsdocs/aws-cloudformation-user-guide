@@ -1,4 +1,4 @@
-# Location resource type reference<a name="AWS_Location"></a>
+# Amazon Location Service resource type reference<a name="AWS_Location"></a>
 
 **Resource types**
 + [AWS::Location::GeofenceCollection](aws-resource-location-geofencecollection.md)

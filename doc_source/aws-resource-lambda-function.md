@@ -8,6 +8,8 @@ You set the package type to `Zip` if the deployment package is a [\.zip file arc
 
 You can use [code signing](https://docs.aws.amazon.com/lambda/latest/dg/configuration-codesigning.html) if your deployment package is a \.zip file archive\. To enable code signing for this function, specify the ARN of a code\-signing configuration\. When a user attempts to deploy a code package with `UpdateFunctionCode`, Lambda checks that the code package has a valid signature from a trusted publisher\. The code\-signing configuration includes a set of signing profiles, which define the trusted publishers for this function\.
 
+Note that you configure [provisioned concurrency](https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html) on a `AWS::Lambda::Version` or a `AWS::Lambda::Alias`\.
+
 For a complete introduction to Lambda functions, see [What is Lambda?](https://docs.aws.amazon.com/lambda/latest/dg/lambda-welcome.html) in the *Lambda developer guide\.*
 
 ## Syntax<a name="aws-resource-lambda-function-syntax"></a>
@@ -89,9 +91,11 @@ The code for the function\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CodeSigningConfigArn`  <a name="cfn-lambda-function-codesigningconfigarn"></a>
-Not currently supported by AWS CloudFormation\.  
+To enable code signing for this function, specify the ARN of a code\-signing configuration\. A code\-signing configuration includes a set of signing profiles, which define the trusted publishers for this function\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `200`  
+*Pattern*: `arn:(aws[a-zA-Z-]*)?:lambda:[a-z]{2}((-gov)|(-iso(b?)))?-[a-z]+-\d{1}:\d{12}:code-signing-config:csc-[a-z0-9]{17}`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeadLetterConfig`  <a name="cfn-lambda-function-deadletterconfig"></a>
@@ -189,7 +193,7 @@ The Amazon Resource Name \(ARN\) of the function's execution role\.
 The identifier of the function's [runtime](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html)\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `dotnetcore1.0 | dotnetcore2.0 | dotnetcore2.1 | dotnetcore3.1 | go1.x | java11 | java8 | java8.al2 | nodejs | nodejs10.x | nodejs12.x | nodejs14.x | nodejs4.3 | nodejs4.3-edge | nodejs6.10 | nodejs8.10 | provided | provided.al2 | python2.7 | python3.6 | python3.7 | python3.8 | ruby2.5 | ruby2.7`  
+*Allowed values*: `dotnetcore1.0 | dotnetcore2.0 | dotnetcore2.1 | dotnetcore3.1 | go1.x | java11 | java8 | java8.al2 | nodejs | nodejs10.x | nodejs12.x | nodejs14.x | nodejs4.3 | nodejs4.3-edge | nodejs6.10 | nodejs8.10 | provided | provided.al2 | python2.7 | python3.6 | python3.7 | python3.8 | python3.9 | ruby2.5 | ruby2.7`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-lambda-function-tags"></a>

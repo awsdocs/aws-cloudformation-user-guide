@@ -14,7 +14,7 @@ If you use cfn\-init to update an existing file, it creates a backup copy of the
 For information about the template metadata, see [`AWS::CloudFormation::Init`](aws-resource-init.md)\.
 
 **Note**  
-cfn\-init does not require credentials, so you do not need to use the `--access-key`, `--secret-key`, `--role`, or `--credential-file` options\. However, if no credentials are specified, CloudFormation checks for stack membership and limits the scope of the call to the stack that the instance belongs to\.
+cfn\-init doesn't require credentials, so you don't need to use the `--access-key`, `--secret-key`, `--role`, or `--credential-file` options\. However, if no credentials are specified, CloudFormation checks for stack membership and limits the scope of the call to the stack that the instance belongs to\.
 
 ## Syntax<a name="cfn-init-Syntax"></a>
 
@@ -53,7 +53,7 @@ cfn-init --stack|-s stack.name.or.id \
 
 ## Example<a name="cfn-init-Examples"></a>
 
-### Amazon Linux example<a name="w9292ab1c33c42c29b9b2"></a>
+### Amazon Linux example<a name="w9463ab1c33c42c31b9b3"></a>
 
 The following snippet shows the `UserData` property of an EC2 instance, which runs the `InstallAndRun` configset that is associated with the `WebServerInstance` resource\.
 

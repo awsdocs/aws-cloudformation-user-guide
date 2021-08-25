@@ -50,7 +50,7 @@ Properties:
 Specifies the containers in the inference pipeline\.  
 *Required*: No  
 *Type*: List of [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)  
-*Maximum*: `5`  
+*Maximum*: `15`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EnableNetworkIsolation`  <a name="cfn-sagemaker-model-enablenetworkisolation"></a>

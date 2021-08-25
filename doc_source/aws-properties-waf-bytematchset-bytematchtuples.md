@@ -69,7 +69,7 @@ The value that you want AWS WAF to search for\. AWS WAF searches for the specifi
 You must specify this property or the `TargetStringBase64` property\.   
 Valid values depend on the values that you specified for `FieldToMatch`:  
 +  `HEADER`: The value that you want AWS WAF to search for in the request header that you specified in `FieldToMatch`, for example, the value of the `User-Agent` or `Referer` header\.
-+  `METHOD`: The HTTP method, which indicates the type of operation specified in the request\. CloudFront supports the following methods: `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, and `PUT`\.
++  `METHOD`: The HTTP method, which indicates the type of operation specified in the request\. Amazon CloudFront supports the following methods: `DELETE`, `GET`, `HEAD`, `OPTIONS`, `PATCH`, `POST`, and `PUT`\.
 +  `QUERY_STRING`: The value that you want AWS WAF to search for in the query string, which is the part of a URL that appears after a `?` character\.
 +  `URI`: The value that you want AWS WAF to search for in the part of a URL that identifies a resource, for example, `/images/daily-ad.jpg`\.
 +  `BODY`: The part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form\. The request body immediately follows the request headers\. Note that only the first `8192` bytes of the request body are forwarded to AWS WAF for inspection\. To allow or block requests based on the length of the body, you can create a size constraint set\. 

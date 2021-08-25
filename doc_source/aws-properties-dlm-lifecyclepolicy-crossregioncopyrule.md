@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[CmkArn](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-cmkarn)" : String,
   "[CopyTags](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-copytags)" : Boolean,
+  "[DeprecateRule](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-deprecaterule)" : CrossRegionCopyDeprecateRule,
   "[Encrypted](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-encrypted)" : Boolean,
   "[RetainRule](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-retainrule)" : CrossRegionCopyRetainRule,
   "[Target](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-target)" : String,
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CmkArn](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-cmkarn): String
   [CopyTags](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-copytags): Boolean
+  [DeprecateRule](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-deprecaterule): 
+    CrossRegionCopyDeprecateRule
   [Encrypted](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-encrypted): Boolean
   [RetainRule](#cfn-dlm-lifecyclepolicy-crossregioncopyrule-retainrule): 
     CrossRegionCopyRetainRule
@@ -46,6 +49,12 @@ The Amazon Resource Name \(ARN\) of the AWS KMS key to use for EBS encryption\. 
 Indicates whether to copy all user\-defined tags from the source snapshot to the cross\-Region snapshot copy\.  
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DeprecateRule`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyrule-deprecaterule"></a>
+The AMI deprecation rule for cross\-Region AMI copies created by the rule\.  
+*Required*: No  
+*Type*: [CrossRegionCopyDeprecateRule](aws-properties-dlm-lifecyclepolicy-crossregioncopydeprecaterule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Encrypted`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyrule-encrypted"></a>

@@ -1,4 +1,4 @@
-# CloudWatch resource type reference<a name="AWS_CloudWatch"></a>
+# Amazon CloudWatch resource type reference<a name="AWS_CloudWatch"></a>
 
 **Resource types**
 + [AWS::CloudWatch::Alarm](aws-properties-cw-alarm.md)

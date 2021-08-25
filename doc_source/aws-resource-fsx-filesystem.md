@@ -503,3 +503,113 @@ Outputs:
   FileSystemId:
     Value: !Ref WindowsMadFileSystemWithAllConfigs
 ```
+
+### Create an Amazon FSx for Windows File Server File System with file access audit event logging enabled<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_with_file_access_audit_event_logging_enabled"></a>
+
+The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system with file access auditing enabled\. Audit event logs are emitted when end users make successful or failed attempts to access files, folders, and file shares on the file system\.
+
+#### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_with_file_access_audit_event_logging_enabled--json"></a>
+
+```
+{
+    "Resources": {
+        "WindowsMadFileSystemWithAllConfigs": {
+            "Type": "Dev::FSx::FileSystem",
+            "Properties": {
+                "FileSystemType": "WINDOWS",
+                "StorageCapacity": 100,
+                "SubnetIds": [
+                    {
+                        "Fn::ImportValue": "CfnFsxMadSubnet01"
+                    },
+                    {
+                        "Fn::ImportValue": "CfnFsxMadSubnet02"
+                    }
+                ],
+                "SecurityGroupIds": [
+                    {
+                        "Fn::ImportValue": "CfnWindowsIngressSecurityGroupId"
+                    }
+                ],
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "windows"
+                    }
+                ],
+                "WindowsConfiguration": {
+                    "ActiveDirectoryId": {
+                        "Fn::ImportValue": "CfnFsxMadDirectoryServiceId"
+                    },
+                    "ThroughputCapacity": 32,
+                    "DeploymentType": "MULTI_AZ_1",
+                    "PreferredSubnetId": {
+                        "Fn::ImportValue": "CfnFsxMadSubnet01"
+                    }
+                    "AuditLogConfiguration": {
+                        "FileAccessAuditLogLevel": "SUCCESS_AND_FAILURE",
+                        "FileShareAccessAuditLogLevel": "SUCCESS_AND_FAILURE",
+                        "AuditLogDestination": 
+                        {
+                          "Fn::Select": [
+                            0,
+                            {
+                              "Fn::Split": [
+                                ":*",
+                                {
+                                  "Fn::ImportValue": "CfnWindowsFileAccessAuditingLogGroupArn"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "FileSystemId": {
+             "Value": {
+                "Ref": "WindowsMadFileSystemWithAllConfigs"
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_with_file_access_audit_event_logging_enabled--yaml"></a>
+
+```
+Resources:
+  WindowsMadFileSystemWithAllConfigs:
+    Type: "AWS::FSx::FileSystem"
+    Properties:
+      FileSystemType: "WINDOWS"
+      StorageCapacity: 100
+      SubnetIds:
+        - !ImportValue CfnFsxMadSubnet01
+        - !ImportValue CfnFsxMadSubnet02
+      SecurityGroupIds:
+        - !ImportValue WindowsIngressSecurityGroupId
+      Tags:
+        - Key: Name
+          Value: windows
+      WindowsConfiguration:
+        ActiveDirectoryId: !ImportValue CfnFsxMadDirectoryServiceId
+        ThroughputCapacity: 32
+        DeploymentType: MULTI_AZ_1
+        PreferredSubnetId: !ImportValue CfnFsxMadSubnet01
+        AuditLogConfiguration:
+          FileAccessAuditLogLevel: "SUCCESS_AND_FAILURE"
+          FileShareAccessAuditLogLevel: "SUCCESS_AND_FAILURE"
+          AuditLogDestination: !Select
+            - 0
+            - !Split
+              - ':*'
+              - 'Fn::ImportValue': WindowsFileAccessAuditingLogGroupArn
+                
+Outputs:
+    FileSystemId:
+      Value: !Ref WindowsMadFileSystemWithAllConfigs
+```

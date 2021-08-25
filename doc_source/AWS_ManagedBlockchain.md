@@ -1,4 +1,4 @@
-# ManagedBlockchain resource type reference<a name="AWS_ManagedBlockchain"></a>
+# Amazon Managed Blockchain resource type reference<a name="AWS_ManagedBlockchain"></a>
 
 **Resource types**
 + [AWS::ManagedBlockchain::Member](aws-resource-managedblockchain-member.md)

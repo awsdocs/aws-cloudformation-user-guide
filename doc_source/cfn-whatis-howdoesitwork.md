@@ -2,7 +2,7 @@
 
 When creating a stack, AWS CloudFormation makes underlying service calls to AWS to provision and configure your resources\. CloudFormation can only perform actions that you have permission to do\. For example, to create EC2 instances by using CloudFormation, you need permissions to create instances\. You'll need similar permissions to terminate instances when you delete stacks with instances\. You use [AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/) \(IAM\) to manage permissions\.
 
-The calls that CloudFormation makes are all declared by your template\. For example, suppose you have a template that describes an EC2 instance with a `t1.micro` instance type\. When you use that template to create a stack, CloudFormation calls the Amazon EC2 create instance API and specifies the instance type as `t1.micro`\. The following diagram summarizes the CloudFormation workflow for creating stacks\.
+The calls that CloudFormation makes are all declared by your template\. For example, suppose you have a template that describes an EC2 instance with a `t2.micro` instance type\. When you use that template to create a stack, CloudFormation calls the Amazon EC2 create instance API and specifies the instance type as `t2.micro`\. The following diagram summarizes the CloudFormation workflow for creating stacks\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/create-stack-diagram.png)
 
@@ -18,7 +18,7 @@ The calls that CloudFormation makes are all declared by your template\. For exam
          "Type" : "AWS::EC2::Instance",
          "Properties" : {
            "ImageId" : "ami-0ff8a91507f77f867",
-           "InstanceType" : "t1.micro"
+           "InstanceType" : "t2.micro"
          }
        }
      }
@@ -34,7 +34,7 @@ The calls that CloudFormation makes are all declared by your template\. For exam
        Type: AWS::EC2::Instance
        Properties:
          ImageId: ami-0ff8a91507f77f867
-         InstanceType: t1.micro
+         InstanceType: t2.micro
    ```
 
 1. Save the template locally or in an S3 bucket\. If you created a template, save it with a file extension like: `.json`, `.yaml`, or `.txt`\.
@@ -77,7 +77,7 @@ Change sets don't indicate whether your stack update will be successful\. For ex
 
 1. Execute the change set that you want to apply to your stack\. CloudFormation updates your stack by updating only the resources that you modified and signals that your stack has been successfully updated\. If the stack updates fails, CloudFormation rolls back changes to restore the stack to the last known working state\.
 
-## Deleting a stack<a name="w9292ab1b5c17c19"></a>
+## Deleting a stack<a name="w9463ab1b5c17c19"></a>
 
 When you delete a stack, you specify the stack to delete, and CloudFormation deletes the stack and all the resources in that stack\. You can delete stacks by using the CloudFormation [console](cfn-console-delete-stack.md), [API](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeleteStack.html), or [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/delete-stack.html)\.
 
@@ -85,6 +85,6 @@ If you want to delete a stack but want to retain some resources in that stack, y
 
 After all the resources have been deleted, CloudFormation signals that your stack has been successfully deleted\. If CloudFormation can't delete a resource, the stack won't be deleted\. Any resources that haven't been deleted will remain until you can successfully delete the stack\.
 
-## Additional resources<a name="w9292ab1b5c17c21"></a>
+## Additional resources<a name="w9463ab1b5c17c21"></a>
 + For more information about creating CloudFormation templates, see [Template anatomy](template-anatomy.md)\.
 + For more information about creating, updating, or deleting stacks, see [Working with stacks](stacks.md)\.

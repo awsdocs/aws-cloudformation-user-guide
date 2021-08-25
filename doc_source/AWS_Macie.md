@@ -1,4 +1,4 @@
-# Macie resource type reference<a name="AWS_Macie"></a>
+# Amazon Macie resource type reference<a name="AWS_Macie"></a>
 
 **Resource types**
 + [AWS::Macie::CustomDataIdentifier](aws-resource-macie-customdataidentifier.md)

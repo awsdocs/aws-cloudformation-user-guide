@@ -85,7 +85,7 @@ A list of key\-value pairs containing the Airflow configuration options for your
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AirflowVersion`  <a name="cfn-mwaa-environment-airflowversion"></a>
-The version of Apache Airflow to use for the environment\. If no value is specified, defaults to the latest version\. Valid values: `v2.0.2`, `1.10.12`\.  
+The version of Apache Airflow to use for the environment\. If no value is specified, defaults to the latest version\. Valid values: `2.0.2`, `1.10.12`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -220,6 +220,18 @@ The ARN for the Amazon MWAA environment\.
 
 `LoggingConfiguration.DagProcessingLogs.CloudWatchLogGroupArn`  <a name="LoggingConfiguration.DagProcessingLogs.CloudWatchLogGroupArn-fn::getatt"></a>
 The ARN for the CloudWatch Logs group where the Apache Airflow DAG processing logs are published\.
+
+`LoggingConfiguration.SchedulerLogs.CloudWatchLogGroupArn`  <a name="LoggingConfiguration.SchedulerLogs.CloudWatchLogGroupArn-fn::getatt"></a>
+The ARN for the CloudWatch Logs group where the Apache Airflow Scheduler logs are published\.
+
+`LoggingConfiguration.TaskLogs.CloudWatchLogGroupArn`  <a name="LoggingConfiguration.TaskLogs.CloudWatchLogGroupArn-fn::getatt"></a>
+The ARN for the CloudWatch Logs group where the Apache Airflow task logs are published\.
+
+`LoggingConfiguration.WebserverLogs.CloudWatchLogGroupArn`  <a name="LoggingConfiguration.WebserverLogs.CloudWatchLogGroupArn-fn::getatt"></a>
+The ARN for the CloudWatch Logs group where the Apache Airflow Web server logs are published\.
+
+`LoggingConfiguration.WorkerLogs.CloudWatchLogGroupArn`  <a name="LoggingConfiguration.WorkerLogs.CloudWatchLogGroupArn-fn::getatt"></a>
+The ARN for the CloudWatch Logs group where the Apache Airflow Worker logs are published\.
 
 `WebserverUrl`  <a name="WebserverUrl-fn::getatt"></a>
 The URL of your Apache Airflow UI\.

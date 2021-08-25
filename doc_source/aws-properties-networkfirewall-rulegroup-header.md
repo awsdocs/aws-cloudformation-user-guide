@@ -47,7 +47,7 @@ For more information about CIDR notation, see the Wikipedia entry [Classless Int
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DestinationPort`  <a name="cfn-networkfirewall-rulegroup-header-destinationport"></a>
-The destination port to inspect for\. You can specify an individual port, for example `1994` and you can specify a port range, for example `1990-1994`\. To match with any port, specify `ANY`\.   
+The destination port to inspect for\. You can specify an individual port, for example `1994` and you can specify a port range, for example `1990:1994`\. To match with any port, specify `ANY`\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -84,7 +84,7 @@ For more information about CIDR notation, see the Wikipedia entry [Classless Int
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourcePort`  <a name="cfn-networkfirewall-rulegroup-header-sourceport"></a>
-The source port to inspect for\. You can specify an individual port, for example `1994` and you can specify a port range, for example `1990-1994`\. To match with any port, specify `ANY`\.   
+The source port to inspect for\. You can specify an individual port, for example `1994` and you can specify a port range, for example `1990:1994`\. To match with any port, specify `ANY`\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

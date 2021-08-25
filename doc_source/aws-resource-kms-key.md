@@ -53,7 +53,8 @@ Properties:
 ## Properties<a name="aws-resource-kms-key-properties"></a>
 
 `Description`  <a name="cfn-kms-key-description"></a>
-A description of the CMK\. Use a description that helps you to distinguish this CMK from others in the account, such as its intended use\.  
+A description of the CMK\.  
+Use a description that helps you decide whether the CMK is appropriate for a task\. The default value is an empty string \(no description\)\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

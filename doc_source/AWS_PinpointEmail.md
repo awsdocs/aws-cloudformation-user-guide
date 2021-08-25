@@ -1,4 +1,4 @@
-# PinpointEmail resource type reference<a name="AWS_PinpointEmail"></a>
+# Amazon Pinpoint Email resource type reference<a name="AWS_PinpointEmail"></a>
 
 **Resource types**
 + [AWS::PinpointEmail::ConfigurationSet](aws-resource-pinpointemail-configurationset.md)

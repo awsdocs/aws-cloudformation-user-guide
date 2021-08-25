@@ -1,4 +1,4 @@
-# CodeBuild resource type reference<a name="AWS_CodeBuild"></a>
+# AWS CodeBuild resource type reference<a name="AWS_CodeBuild"></a>
 
 **Resource types**
 + [AWS::CodeBuild::Project](aws-resource-codebuild-project.md)

@@ -170,8 +170,7 @@ The Kubernetes taints to be applied to the nodes in the node group when they are
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UpdateConfig`  <a name="cfn-eks-nodegroup-updateconfig"></a>
-The update configuration for the node group\.  
-This CloudFormation property is not currently supported\.
+The node group update configuration\.  
 *Required*: No  
 *Type*: [UpdateConfig](aws-properties-eks-nodegroup-updateconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

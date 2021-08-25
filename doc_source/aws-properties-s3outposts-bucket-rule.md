@@ -1,6 +1,6 @@
 # AWS::S3Outposts::Bucket Rule<a name="aws-properties-s3outposts-bucket-rule"></a>
 
-A container for a Amazon S3 on Outposts bucket lifecycle rule\.
+A container for an Amazon S3 on Outposts bucket lifecycle rule\.
 
 ## Syntax<a name="aws-properties-s3outposts-bucket-rule-syntax"></a>
 
@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3outposts-bucket-rule-properties"></a>
 
 `AbortIncompleteMultipartUpload`  <a name="cfn-s3outposts-bucket-rule-abortincompletemultipartupload"></a>
-The container for abort incomplete multipart upload  
+The container for the abort incomplete multipart upload rule\.  
 *Required*: No  
 *Type*: [AbortIncompleteMultipartUpload](aws-properties-s3outposts-bucket-abortincompletemultipartupload.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -52,19 +52,19 @@ Specifies the expiration for the lifecycle of the object in the form of days tha
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Filter`  <a name="cfn-s3outposts-bucket-rule-filter"></a>
-The container for the filter of lifecycle rule\.  
+The container for the filter of the lifecycle rule\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-s3outposts-bucket-rule-id"></a>
- Unique identifier for the lifecycle rule\. The value can't be longer than 255 characters\.  
+ The unique identifier for the lifecycle rule\. The value can't be longer than 255 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Status`  <a name="cfn-s3outposts-bucket-rule-status"></a>
-If 'Enabled', the rule is currently being applied\. If 'Disabled', the rule is not currently being applied\.   
+If `Enabled`, the rule is currently being applied\. If `Disabled`, the rule is not currently being applied\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

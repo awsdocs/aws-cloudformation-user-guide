@@ -5,7 +5,7 @@ AWS CloudFormation stores the template you use to create your stack as part of t
 **Note**  
 The `aws cloudformation get-template` command returns the deleted stacks templates for up to 90 days after the stack has been deleted\.
 
-The following example shows the template for the `myteststack` stack:
+The following example shows the template for the `myteststack` stack\.
 
 ```
  1. PROMPT> aws cloudformation get-template --stack-name myteststack

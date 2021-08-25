@@ -518,7 +518,7 @@ The following command creates a stack based on the example template\. It provide
 aws cloudformation create-stack --stack-name S1 --template-body example template --parameters ParameterKey=InstanceType,ParameterValue=myInstanceType
 ```
 
- 
+ 
 
 #### `AWS::SSM::Parameter::Value`<`AWS::EC2::Image::Id`> type<a name="parameters-section-ssm-examples-example2"></a>
 

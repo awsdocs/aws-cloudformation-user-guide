@@ -1,4 +1,4 @@
-# Config resource type reference<a name="AWS_Config"></a>
+# AWS Config resource type reference<a name="AWS_Config"></a>
 
 **Resource types**
 + [AWS::Config::AggregationAuthorization](aws-resource-config-aggregationauthorization.md)

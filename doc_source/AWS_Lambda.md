@@ -1,4 +1,4 @@
-# Lambda resource type reference<a name="AWS_Lambda"></a>
+# AWS Lambda resource type reference<a name="AWS_Lambda"></a>
 
 **Resource types**
 + [AWS::Lambda::Alias](aws-resource-lambda-alias.md)

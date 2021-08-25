@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DestinationPorts`  <a name="cfn-networkfirewall-rulegroup-matchattributes-destinationports"></a>
 The destination ports to inspect for\. If not specified, this matches with any destination port\. This setting is only used for protocols 6 \(TCP\) and 17 \(UDP\)\.   
-You can specify individual ports, for example `1994` and you can specify port ranges, for example `1990-1994`\.   
+You can specify individual ports, for example `1994` and you can specify port ranges, for example `1990:1994`\.   
 *Required*: No  
 *Type*: List of [PortRange](aws-properties-networkfirewall-rulegroup-portrange.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -59,7 +59,7 @@ The protocols to inspect for, specified using each protocol's assigned internet 
 
 `SourcePorts`  <a name="cfn-networkfirewall-rulegroup-matchattributes-sourceports"></a>
 The source ports to inspect for\. If not specified, this matches with any source port\. This setting is only used for protocols 6 \(TCP\) and 17 \(UDP\)\.   
-You can specify individual ports, for example `1994` and you can specify port ranges, for example `1990-1994`\.   
+You can specify individual ports, for example `1994` and you can specify port ranges, for example `1990:1994`\.   
 *Required*: No  
 *Type*: List of [PortRange](aws-properties-networkfirewall-rulegroup-portrange.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

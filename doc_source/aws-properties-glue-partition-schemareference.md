@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[SchameVersionId](#cfn-glue-partition-schemareference-schameversionid)" : String,
   "[SchemaId](#cfn-glue-partition-schemareference-schemaid)" : SchemaId,
+  "[SchemaVersionId](#cfn-glue-partition-schemareference-schemaversionid)" : String,
   "[SchemaVersionNumber](#cfn-glue-partition-schemareference-schemaversionnumber)" : Integer
 }
 ```
@@ -19,24 +19,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-glue-partition-schemareference-syntax.yaml"></a>
 
 ```
-  [SchameVersionId](#cfn-glue-partition-schemareference-schameversionid): String
   [SchemaId](#cfn-glue-partition-schemareference-schemaid): 
     SchemaId
+  [SchemaVersionId](#cfn-glue-partition-schemareference-schemaversionid): String
   [SchemaVersionNumber](#cfn-glue-partition-schemareference-schemaversionnumber): Integer
 ```
 
 ## Properties<a name="aws-properties-glue-partition-schemareference-properties"></a>
 
-`SchameVersionId`  <a name="cfn-glue-partition-schemareference-schameversionid"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `SchemaId`  <a name="cfn-glue-partition-schemareference-schemaid"></a>
 A structure that contains schema identity fields\. Either this or the `SchemaVersionId` has to be provided\.  
 *Required*: No  
 *Type*: [SchemaId](aws-properties-glue-partition-schemaid.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SchemaVersionId`  <a name="cfn-glue-partition-schemareference-schemaversionid"></a>
+The unique ID assigned to a version of the schema\. Either this or the `SchemaId` has to be provided\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SchemaVersionNumber`  <a name="cfn-glue-partition-schemareference-schemaversionnumber"></a>

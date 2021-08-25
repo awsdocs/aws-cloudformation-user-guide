@@ -1,4 +1,4 @@
-# IoT resource type reference<a name="AWS_IoT"></a>
+# AWS IoT resource type reference<a name="AWS_IoT"></a>
 
 **Resource types**
 + [AWS::IoT::AccountAuditConfiguration](aws-resource-iot-accountauditconfiguration.md)
