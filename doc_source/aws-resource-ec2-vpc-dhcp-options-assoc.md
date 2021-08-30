@@ -43,21 +43,23 @@ The ID of the VPC\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-vpc-dhcp-options-assoc-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpc-dhcp-options-assoc-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpc-dhcp-options-assoc-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the DHCP options association\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the DHCP options association\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples"></a>
 
-### VPC DHCP Options Association<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_Options_Association"></a>
+
+
+### VPC DHCP options association<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_options_association"></a>
 
 The following example uses the `Ref` intrinsic function to associate the myDHCPOptions DHCP options with the myVPC VPC\. The VPC and DHCP options can be declared in the same template or added as input parameters\. For more information about the VPC or the DHCP options resources, see AWS::EC2::VPC or AWS::EC2::DHCPOptions\. 
 
-#### JSON<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_Options_Association--json"></a>
+#### JSON<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_options_association--json"></a>
 
 ```
 "myVPCDHCPOptionsAssociation" : {
@@ -69,7 +71,7 @@ The following example uses the `Ref` intrinsic function to associate the myDHCPO
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_Options_Association--yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpc-dhcp-options-assoc--examples--VPC_DHCP_options_association--yaml"></a>
 
 ```
 myVPCDHCPOptionsAssociation:
@@ -81,6 +83,7 @@ myVPCDHCPOptionsAssociation:
        Ref: myDHCPOptions
 ```
 
-## See Also<a name="aws-resource-ec2-vpc-dhcp-options-assoc--seealso"></a>
+## See also<a name="aws-resource-ec2-vpc-dhcp-options-assoc--seealso"></a>
 +  [AssociateDhcpOptions](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AssociateDhcpOptions.html) in the *Amazon EC2 API Reference*
 + [DHCP Options Sets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html) in the *Amazon Virtual Private Cloud User Guide*
+

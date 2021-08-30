@@ -18,8 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::ConnectorDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-connectordefinition-initialversion)" : [ConnectorDefinitionVersion](aws-properties-greengrass-connectordefinition-connectordefinitionversion.md),
-      "[Name](#cfn-greengrass-connectordefinition-name)" : String
+      "[InitialVersion](#cfn-greengrass-connectordefinition-initialversion)" : ConnectorDefinitionVersion,
+      "[Name](#cfn-greengrass-connectordefinition-name)" : String,
+      "[Tags](#cfn-greengrass-connectordefinition-tags)" : Json
     }
 }
 ```
@@ -30,8 +31,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::ConnectorDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-connectordefinition-initialversion): 
-    [ConnectorDefinitionVersion](aws-properties-greengrass-connectordefinition-connectordefinitionversion.md)
+    ConnectorDefinitionVersion
   [Name](#cfn-greengrass-connectordefinition-name): String
+  [Tags](#cfn-greengrass-connectordefinition-tags): Json
 ```
 
 ## Properties<a name="aws-resource-greengrass-connectordefinition-properties"></a>
@@ -49,7 +51,22 @@ The name of the connector definition\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-connectordefinition-return-values"></a>
+`Tags`  <a name="cfn-greengrass-connectordefinition-tags"></a>
+Application\-specific metadata to attach to the connector definition\. You can use tags in IAM policies to control access to AWS IoT Greengrass resources\. You can also use tags to categorize your resources\. For more information, see [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.  
+This `Json` property type is processed as a map of key\-value pairs\. It uses the following format, which is different from most `Tags` implementations in AWS CloudFormation templates\.  
+
+```
+"Tags": {
+    "KeyName0": "value",
+    "KeyName1": "value",
+    "KeyName2": "value"
+}
+```
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-greengrass-connectordefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-connectordefinition-return-values-ref"></a>
 
@@ -78,6 +95,8 @@ The ARN of the last `ConnectorDefinitionVersion` that was added to the `Connecto
 The name of the `ConnectorDefinition`, such as `MyConnectorDefinition`\. 
 
 ## Examples<a name="aws-resource-greengrass-connectordefinition--examples"></a>
+
+
 
 ### Connector Definition Snippet<a name="aws-resource-greengrass-connectordefinition--examples--Connector_Definition_Snippet"></a>
 
@@ -156,6 +175,6 @@ TestConnectorDefinition:
                 - defaultSns
 ```
 
-## See Also<a name="aws-resource-greengrass-connectordefinition--seealso"></a>
-+  [CreateConnectorDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createconnectordefinition-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+## See also<a name="aws-resource-greengrass-connectordefinition--seealso"></a>
++  [CreateConnectorDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createconnectordefinition-post.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

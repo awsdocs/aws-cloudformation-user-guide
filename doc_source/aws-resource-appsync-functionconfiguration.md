@@ -2,6 +2,10 @@
 
 The `AWS::AppSync::FunctionConfiguration` resource defines the functions in GraphQL APIs to perform certain operations\. You can use pipeline resolvers to attach functions\. For more information, see [Pipeline Resolvers](https://docs.aws.amazon.com/appsync/latest/devguide/pipeline-resolvers.html) in the *AWS AppSync Developer Guide*\. 
 
+**Note**  
+When you submit an update, AWS CloudFormation updates resources based on differences between what you submit and the stack's current template\. To cause this resource to be updated you must change a property value for this resource in the AWS CloudFormation template\. Changing the Amazon S3 file content without changing a property value will not result in an update operation\.  
+See [Update Behaviors of Stack Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html) in the *AWS CloudFormation User Guide*\.
+
 ## Syntax<a name="aws-resource-appsync-functionconfiguration-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -20,7 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RequestMappingTemplate](#cfn-appsync-functionconfiguration-requestmappingtemplate)" : String,
       "[RequestMappingTemplateS3Location](#cfn-appsync-functionconfiguration-requestmappingtemplates3location)" : String,
       "[ResponseMappingTemplate](#cfn-appsync-functionconfiguration-responsemappingtemplate)" : String,
-      "[ResponseMappingTemplateS3Location](#cfn-appsync-functionconfiguration-responsemappingtemplates3location)" : String
+      "[ResponseMappingTemplateS3Location](#cfn-appsync-functionconfiguration-responsemappingtemplates3location)" : String,
+      "[SyncConfig](#cfn-appsync-functionconfiguration-syncconfig)" : SyncConfig
     }
 }
 ```
@@ -39,6 +44,8 @@ Properties:
   [RequestMappingTemplateS3Location](#cfn-appsync-functionconfiguration-requestmappingtemplates3location): String
   [ResponseMappingTemplate](#cfn-appsync-functionconfiguration-responsemappingtemplate): String
   [ResponseMappingTemplateS3Location](#cfn-appsync-functionconfiguration-responsemappingtemplates3location): String
+  [SyncConfig](#cfn-appsync-functionconfiguration-syncconfig): 
+    SyncConfig
 ```
 
 ## Properties<a name="aws-resource-appsync-functionconfiguration-properties"></a>
@@ -80,7 +87,8 @@ The `Function` request mapping template\. Functions support only the 2018\-05\-2
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequestMappingTemplateS3Location`  <a name="cfn-appsync-functionconfiguration-requestmappingtemplates3location"></a>
-The location of a request mapping template in an Amazon S3 bucket\. Use this if you want to provision with a template file in Amazon S3 rather than embedding it in your CloudFormation template\.   
+Describes a Sync configuration for a resolver\.  
+Contains information on which Conflict Detection, as well as Resolution strategy, should be performed when the resolver is invoked\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -97,7 +105,14 @@ The location of a response mapping template in an Amazon S3 bucket\. Use this if
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appsync-functionconfiguration-return-values"></a>
+`SyncConfig`  <a name="cfn-appsync-functionconfiguration-syncconfig"></a>
+Describes a Sync configuration for a resolver\.  
+Contains information on which Conflict Detection as well as Resolution strategy should be performed when the resolver is invoked\.  
+*Required*: No  
+*Type*: [SyncConfig](aws-properties-appsync-functionconfiguration-syncconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-appsync-functionconfiguration-return-values"></a>
 
 ### Ref<a name="aws-resource-appsync-functionconfiguration-return-values-ref"></a>
 
@@ -126,6 +141,8 @@ The unique ID of this function\.
 The name of the function\.
 
 ## Examples<a name="aws-resource-appsync-functionconfiguration--examples"></a>
+
+
 
 ### Function Creation Example<a name="aws-resource-appsync-functionconfiguration--examples--Function_Creation_Example"></a>
 
@@ -227,5 +244,6 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-appsync-functionconfiguration--seealso"></a>
+## See also<a name="aws-resource-appsync-functionconfiguration--seealso"></a>
 +  [CreateFunction](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateFunction.html) operation in the *AWS AppSync API Reference*\.
+

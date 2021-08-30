@@ -1,5 +1,7 @@
 # AWS::Elasticsearch::Domain SnapshotOptions<a name="aws-properties-elasticsearch-domain-snapshotoptions"></a>
 
+**DEPRECATED**\. For domains running Elasticsearch 5\.3 and later, Amazon ES takes hourly automated snapshots, making this setting irrelevant\. For domains running earlier versions of Elasticsearch, Amazon ES takes daily automated snapshots\.
+
 The automated snapshot configuration for the Amazon ES domain indices\.
 
 ## Syntax<a name="aws-properties-elasticsearch-domain-snapshotoptions-syntax"></a>

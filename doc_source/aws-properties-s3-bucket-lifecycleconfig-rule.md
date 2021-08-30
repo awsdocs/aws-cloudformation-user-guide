@@ -1,6 +1,6 @@
 # AWS::S3::Bucket Rule<a name="aws-properties-s3-bucket-lifecycleconfig-rule"></a>
 
-Specifies lifecycle rules for an Amazon S3 bucket\. For more information, see [PUT Bucket lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlifecycle.html) in the *Amazon Simple Storage Service API Reference*\.
+Specifies lifecycle rules for an Amazon S3 bucket\. For more information, see [Put Bucket Lifecycle Configuration](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTlifecycle.html) in the *Amazon S3 API Reference*\.
 
 ## Syntax<a name="aws-properties-s3-bucket-lifecycleconfig-rule-syntax"></a>
 
@@ -10,18 +10,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AbortIncompleteMultipartUpload](#cfn-s3-bucket-rule-abortincompletemultipartupload)" : [AbortIncompleteMultipartUpload](aws-properties-s3-bucket-abortincompletemultipartupload.md),
+  "[AbortIncompleteMultipartUpload](#cfn-s3-bucket-rule-abortincompletemultipartupload)" : AbortIncompleteMultipartUpload,
   "[ExpirationDate](#cfn-s3-bucket-lifecycleconfig-rule-expirationdate)" : Timestamp,
   "[ExpirationInDays](#cfn-s3-bucket-lifecycleconfig-rule-expirationindays)" : Integer,
+  "[ExpiredObjectDeleteMarker](#cfn-s3-bucket-rule-expiredobjectdeletemarker)" : Boolean,
   "[Id](#cfn-s3-bucket-lifecycleconfig-rule-id)" : String,
   "[NoncurrentVersionExpirationInDays](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversionexpirationindays)" : Integer,
-  "[NoncurrentVersionTransition](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition)" : [NoncurrentVersionTransition](aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.md),
-  "[NoncurrentVersionTransitions](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransitions)" : [ [NoncurrentVersionTransition](aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.md), ... ],
+  "[NoncurrentVersionTransition](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition)" : NoncurrentVersionTransition,
+  "[NoncurrentVersionTransitions](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransitions)" : [ NoncurrentVersionTransition, ... ],
   "[Prefix](#cfn-s3-bucket-lifecycleconfig-rule-prefix)" : String,
   "[Status](#cfn-s3-bucket-lifecycleconfig-rule-status)" : String,
-  "[TagFilters](#cfn-s3-bucket-rule-tagfilters)" : [ [TagFilter](aws-properties-s3-bucket-tagfilter.md), ... ],
-  "[Transition](#cfn-s3-bucket-lifecycleconfig-rule-transition)" : [Transition](aws-properties-s3-bucket-lifecycleconfig-rule-transition.md),
-  "[Transitions](#cfn-s3-bucket-lifecycleconfig-rule-transitions)" : [ [Transition](aws-properties-s3-bucket-lifecycleconfig-rule-transition.md), ... ]
+  "[TagFilters](#cfn-s3-bucket-rule-tagfilters)" : [ TagFilter, ... ],
+  "[Transition](#cfn-s3-bucket-lifecycleconfig-rule-transition)" : Transition,
+  "[Transitions](#cfn-s3-bucket-lifecycleconfig-rule-transitions)" : [ Transition, ... ]
 }
 ```
 
@@ -29,29 +30,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AbortIncompleteMultipartUpload](#cfn-s3-bucket-rule-abortincompletemultipartupload): 
-    [AbortIncompleteMultipartUpload](aws-properties-s3-bucket-abortincompletemultipartupload.md)
+    AbortIncompleteMultipartUpload
   [ExpirationDate](#cfn-s3-bucket-lifecycleconfig-rule-expirationdate): Timestamp
   [ExpirationInDays](#cfn-s3-bucket-lifecycleconfig-rule-expirationindays): Integer
+  [ExpiredObjectDeleteMarker](#cfn-s3-bucket-rule-expiredobjectdeletemarker): Boolean
   [Id](#cfn-s3-bucket-lifecycleconfig-rule-id): String
   [NoncurrentVersionExpirationInDays](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversionexpirationindays): Integer
   [NoncurrentVersionTransition](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition): 
-    [NoncurrentVersionTransition](aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.md)
+    NoncurrentVersionTransition
   [NoncurrentVersionTransitions](#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransitions): 
-    - [NoncurrentVersionTransition](aws-properties-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition.md)
+    - NoncurrentVersionTransition
   [Prefix](#cfn-s3-bucket-lifecycleconfig-rule-prefix): String
   [Status](#cfn-s3-bucket-lifecycleconfig-rule-status): String
   [TagFilters](#cfn-s3-bucket-rule-tagfilters): 
-    - [TagFilter](aws-properties-s3-bucket-tagfilter.md)
+    - TagFilter
   [Transition](#cfn-s3-bucket-lifecycleconfig-rule-transition): 
-    [Transition](aws-properties-s3-bucket-lifecycleconfig-rule-transition.md)
+    Transition
   [Transitions](#cfn-s3-bucket-lifecycleconfig-rule-transitions): 
-    - [Transition](aws-properties-s3-bucket-lifecycleconfig-rule-transition.md)
+    - Transition
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-lifecycleconfig-rule-properties"></a>
 
 `AbortIncompleteMultipartUpload`  <a name="cfn-s3-bucket-rule-abortincompletemultipartupload"></a>
-Specifies a lifecycle rule that aborts incomplete multipart uploads to an Amazon S3 bucket\.  
+Specifies a lifecycle rule that stops incomplete multipart uploads to an Amazon S3 bucket\.  
 You must specify at least one of the following properties: `AbortIncompleteMultipartUpload`, `ExpirationDate`, `ExpirationInDays`, `NoncurrentVersionExpirationInDays`, `NoncurrentVersionTransition`, `NoncurrentVersionTransitions`, `Transition`, or `Transitions`\.  
 *Required*: Conditional  
 *Type*: [AbortIncompleteMultipartUpload](aws-properties-s3-bucket-abortincompletemultipartupload.md)  
@@ -69,6 +71,12 @@ Indicates the number of days after creation when objects are deleted from Amazon
 You must specify at least one of the following properties: `AbortIncompleteMultipartUpload`, `ExpirationDate`, `ExpirationInDays`, `NoncurrentVersionExpirationInDays`, `NoncurrentVersionTransition`, `NoncurrentVersionTransitions`, `Transition`, or `Transitions`\.  
 *Required*: Conditional  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ExpiredObjectDeleteMarker`  <a name="cfn-s3-bucket-rule-expiredobjectdeletemarker"></a>
+Indicates whether Amazon S3 will remove a delete marker without any noncurrent versions\. If set to true, the delete marker will be removed if there are no noncurrent versions\. This cannot be specified with `ExpirationInDays`, `ExpirationDate`, or `TagFilters`\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-s3-bucket-lifecycleconfig-rule-id"></a>
@@ -100,6 +108,7 @@ You must specify at least one of the following properties: `AbortIncompleteMulti
 
 `Prefix`  <a name="cfn-s3-bucket-lifecycleconfig-rule-prefix"></a>
 Object key prefix that identifies one or more objects to which this rule applies\.  
+Replacement must be made for object keys containing special characters \(such as carriage returns\) when using XML requests\. For more information, see [ XML related object key constraints](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-keys.html#object-key-xml-related-constraints)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -108,7 +117,7 @@ Object key prefix that identifies one or more objects to which this rule applies
 If `Enabled`, the rule is currently being applied\. If `Disabled`, the rule is not currently being applied\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Disabled | Enabled`  
+*Allowed values*: `Disabled | Enabled`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TagFilters`  <a name="cfn-s3-bucket-rule-tagfilters"></a>
@@ -130,3 +139,79 @@ You must specify at least one of the following properties: `AbortIncompleteMulti
 *Required*: Conditional  
 *Type*: List of [Transition](aws-properties-s3-bucket-lifecycleconfig-rule-transition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-s3-bucket-lifecycleconfig-rule--examples"></a>
+
+
+
+### Manage the lifecycle for S3 objects<a name="aws-properties-s3-bucket-lifecycleconfig-rule--examples--Manage_the_lifecycle_for_S3_objects"></a>
+
+The following example template shows an S3 bucket with a lifecycle configuration rule\. The rule applies to all objects with the `glacier` key prefix\. The objects are transitioned to Glacier after one day, and deleted after one year\.
+
+#### JSON<a name="aws-properties-s3-bucket-lifecycleconfig-rule--examples--Manage_the_lifecycle_for_S3_objects--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "S3Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "AccessControl": "Private",
+                "LifecycleConfiguration": {
+                    "Rules": [
+                        {
+                            "Id": "GlacierRule",
+                            "Prefix": "glacier",
+                            "Status": "Enabled",
+                            "ExpirationInDays": 365,
+                            "Transitions": [
+                                {
+                                    "TransitionInDays": 1,
+                                    "StorageClass": "GLACIER"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "BucketName": {
+            "Value": {
+                "Ref": "S3Bucket"
+            },
+            "Description": "Name of the sample Amazon S3 bucket with a lifecycle configuration."
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-properties-s3-bucket-lifecycleconfig-rule--examples--Manage_the_lifecycle_for_S3_objects--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      AccessControl: Private
+      LifecycleConfiguration:
+        Rules:
+          - Id: GlacierRule
+            Prefix: glacier
+            Status: Enabled
+            ExpirationInDays: 365
+            Transitions:
+              - TransitionInDays: 1
+                StorageClass: GLACIER
+Outputs:
+  BucketName:
+    Value: !Ref S3Bucket
+    Description: Name of the sample Amazon S3 bucket with a lifecycle configuration.
+```
+
+## See also<a name="aws-properties-s3-bucket-lifecycleconfig-rule--seealso"></a>
++ AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+

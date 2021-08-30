@@ -43,26 +43,26 @@ The primary IPv4 CIDR block for the VPC\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EnableDnsHostnames`  <a name="cfn-aws-ec2-vpc-EnableDnsHostnames"></a>
-Indicates whether the instances launched in the VPC get DNS hostnames\. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not\.  
+Indicates whether the instances launched in the VPC get DNS hostnames\. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not\. Disabled by default for nondefault VPCs\. For more information, see [DNS Support in Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-support)\.  
 You can only enable DNS hostnames if you've enabled DNS support\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableDnsSupport`  <a name="cfn-aws-ec2-vpc-EnableDnsSupport"></a>
-Indicates whether the DNS resolution is supported for the VPC\. If enabled, queries to the Amazon provided DNS server at the 169\.254\.169\.253 IP address, or the reserved IP address at the base of the VPC network range "plus two" succeed\. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled\.  
+Indicates whether the DNS resolution is supported for the VPC\. If enabled, queries to the Amazon provided DNS server at the 169\.254\.169\.253 IP address, or the reserved IP address at the base of the VPC network range "plus two" succeed\. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled\. Enabled by default\. For more information, see [DNS Support in Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-support)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceTenancy`  <a name="cfn-aws-ec2-vpc-instancetenancy"></a>
 The allowed tenancy of instances launched into the VPC\.   
-+ `"default"`: Instances can be launched with any tenancy\.
-+ `"dedicated"`: Any instance launched into the VPC automatically has dedicated tenancy, unless you launch it with the default tenancy\.
++ `"default"`: An instance launched into the VPC runs on shared hardware by default, unless you explicitly specify a different tenancy during instance launch\.
++ `"dedicated"`: An instance launched into the VPC is a Dedicated Instance by default, unless you explicitly specify a tenancy of host during instance launch\. You cannot specify a tenancy of default during instance launch\.
 Updating `InstanceTenancy` requires no replacement only if you are updating its value from `"dedicated"` to `"default"`\. Updating `InstanceTenancy` from `"default"` to `"dedicated"` requires replacement\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `dedicated | default | host`  
+*Allowed values*: `dedicated | default | host`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-aws-ec2-vpc-tags"></a>
@@ -71,11 +71,11 @@ The tags for the VPC\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-vpc-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpc-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpc-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the VPC\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the VPC\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -104,6 +104,8 @@ A list of IPv6 CIDR blocks that are associated with the VPC, such as `[ 2001:db8
 
 ## Examples<a name="aws-resource-ec2-vpc--examples"></a>
 
+
+
 ### VPC<a name="aws-resource-ec2-vpc--examples--VPC"></a>
 
 The following example specifies a VPC\.
@@ -115,10 +117,11 @@ The following example specifies a VPC\.
    "Type" : "AWS::EC2::VPC",
    "Properties" : {
       "CidrBlock" : "10.0.0.0/16",
-      "EnableDnsSupport" : "false",
-      "EnableDnsHostnames" : "false",
-      "InstanceTenancy" : "dedicated",
-      "Tags" : [ {"Key" : "foo", "Value" : "bar"} ]
+      "EnableDnsSupport" : "true",
+      "EnableDnsHostnames" : "true",
+      "Tags" : [ 
+         {"Key" : "stack", "Value" : "production"} 
+      ]
    }
 }
 ```
@@ -130,14 +133,14 @@ myVPC:
   Type: AWS::EC2::VPC
   Properties:
     CidrBlock: 10.0.0.0/16
-    EnableDnsSupport: 'false'
-    EnableDnsHostnames: 'false'
-    InstanceTenancy: dedicated
+    EnableDnsSupport: 'true'
+    EnableDnsHostnames: 'true'
     Tags:
-     - Key: foo
-       Value: bar
+     - Key: stack
+       Value: production
 ```
 
-## See Also<a name="aws-resource-ec2-vpc--seealso"></a>
+## See also<a name="aws-resource-ec2-vpc--seealso"></a>
 +  [CreateVpc](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpc.html) in the *Amazon EC2 API Reference*
 +  [Your VPC and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon Virtual Private Cloud User Guide*
+

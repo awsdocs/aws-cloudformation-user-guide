@@ -1,0 +1,11 @@
+# AWS DataSync resource type reference<a name="AWS_DataSync"></a>
+
+**Resource types**
++ [AWS::DataSync::Agent](aws-resource-datasync-agent.md)
++ [AWS::DataSync::LocationEFS](aws-resource-datasync-locationefs.md)
++ [AWS::DataSync::LocationFSxWindows](aws-resource-datasync-locationfsxwindows.md)
++ [AWS::DataSync::LocationNFS](aws-resource-datasync-locationnfs.md)
++ [AWS::DataSync::LocationObjectStorage](aws-resource-datasync-locationobjectstorage.md)
++ [AWS::DataSync::LocationS3](aws-resource-datasync-locations3.md)
++ [AWS::DataSync::LocationSMB](aws-resource-datasync-locationsmb.md)
++ [AWS::DataSync::Task](aws-resource-datasync-task.md)

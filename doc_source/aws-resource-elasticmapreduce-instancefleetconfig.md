@@ -17,8 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ClusterId](#cfn-elasticmapreduce-instancefleetconfig-clusterid)" : String,
       "[InstanceFleetType](#cfn-elasticmapreduce-instancefleetconfig-instancefleettype)" : String,
-      "[InstanceTypeConfigs](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfigs)" : [ [InstanceTypeConfig](aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.md), ... ],
-      "[LaunchSpecifications](#cfn-elasticmapreduce-instancefleetconfig-launchspecifications)" : [InstanceFleetProvisioningSpecifications](aws-properties-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications.md),
+      "[InstanceTypeConfigs](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfigs)" : [ InstanceTypeConfig, ... ],
+      "[LaunchSpecifications](#cfn-elasticmapreduce-instancefleetconfig-launchspecifications)" : InstanceFleetProvisioningSpecifications,
       "[Name](#cfn-elasticmapreduce-instancefleetconfig-name)" : String,
       "[TargetOnDemandCapacity](#cfn-elasticmapreduce-instancefleetconfig-targetondemandcapacity)" : Integer,
       "[TargetSpotCapacity](#cfn-elasticmapreduce-instancefleetconfig-targetspotcapacity)" : Integer
@@ -34,9 +34,9 @@ Properties:
   [ClusterId](#cfn-elasticmapreduce-instancefleetconfig-clusterid): String
   [InstanceFleetType](#cfn-elasticmapreduce-instancefleetconfig-instancefleettype): String
   [InstanceTypeConfigs](#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfigs): 
-    - [InstanceTypeConfig](aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.md)
+    - InstanceTypeConfig
   [LaunchSpecifications](#cfn-elasticmapreduce-instancefleetconfig-launchspecifications): 
-    [InstanceFleetProvisioningSpecifications](aws-properties-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications.md)
+    InstanceFleetProvisioningSpecifications
   [Name](#cfn-elasticmapreduce-instancefleetconfig-name): String
   [TargetOnDemandCapacity](#cfn-elasticmapreduce-instancefleetconfig-targetondemandcapacity): Integer
   [TargetSpotCapacity](#cfn-elasticmapreduce-instancefleetconfig-targetspotcapacity): Integer
@@ -51,14 +51,14 @@ The unique identifier of the EMR cluster\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceFleetType`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancefleettype"></a>
-The node type that the instance fleet hosts\. Valid values are MASTER,CORE,and TASK\.  
+The node type that the instance fleet hosts\.  
+*Allowed Values*: TASK  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CORE | MASTER | TASK`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceTypeConfigs`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancetypeconfigs"></a>
-`InstanceTypeConfigs` determine the EC2 instances that Amazon EMR attempts to provision to fulfill On\-Demand and Spot target capacities\. There can be a maximum of 5 instance type configurations in a fleet, each one specified using an `InstanceTypeConfig`\.  
+`InstanceTypeConfigs` determine the EC2 instances that Amazon EMR attempts to provision to fulfill On\-Demand and Spot target capacities\.  
 The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\.
 *Required*: No  
 *Type*: List of [InstanceTypeConfig](aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.md)  
@@ -95,7 +95,7 @@ If not specified or set to 0, only On\-Demand instances are provisioned for the 
 *Minimum*: `0`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-elasticmapreduce-instancefleetconfig-return-values"></a>
+## Return values<a name="aws-resource-elasticmapreduce-instancefleetconfig-return-values"></a>
 
 ### Ref<a name="aws-resource-elasticmapreduce-instancefleetconfig-return-values-ref"></a>
 

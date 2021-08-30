@@ -18,8 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::LoggerDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-loggerdefinition-initialversion)" : [LoggerDefinitionVersion](aws-properties-greengrass-loggerdefinition-loggerdefinitionversion.md),
-      "[Name](#cfn-greengrass-loggerdefinition-name)" : String
+      "[InitialVersion](#cfn-greengrass-loggerdefinition-initialversion)" : LoggerDefinitionVersion,
+      "[Name](#cfn-greengrass-loggerdefinition-name)" : String,
+      "[Tags](#cfn-greengrass-loggerdefinition-tags)" : Json
     }
 }
 ```
@@ -30,8 +31,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::LoggerDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-loggerdefinition-initialversion): 
-    [LoggerDefinitionVersion](aws-properties-greengrass-loggerdefinition-loggerdefinitionversion.md)
+    LoggerDefinitionVersion
   [Name](#cfn-greengrass-loggerdefinition-name): String
+  [Tags](#cfn-greengrass-loggerdefinition-tags): Json
 ```
 
 ## Properties<a name="aws-resource-greengrass-loggerdefinition-properties"></a>
@@ -49,7 +51,22 @@ The name of the logger definition\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-loggerdefinition-return-values"></a>
+`Tags`  <a name="cfn-greengrass-loggerdefinition-tags"></a>
+Application\-specific metadata to attach to the logger definition\. You can use tags in IAM policies to control access to AWS IoT Greengrass resources\. You can also use tags to categorize your resources\. For more information, see [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.  
+This `Json` property type is processed as a map of key\-value pairs\. It uses the following format, which is different from most `Tags` implementations in AWS CloudFormation templates\.  
+
+```
+"Tags": {
+    "KeyName0": "value",
+    "KeyName1": "value",
+    "KeyName2": "value"
+}
+```
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-greengrass-loggerdefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-loggerdefinition-return-values-ref"></a>
 
@@ -78,6 +95,8 @@ The ARN of the last `LoggerDefinitionVersion` that was added to the `LoggerDefin
 The name of the `LoggerDefinition`, such as `MyLoggerDefinition`\. 
 
 ## Examples<a name="aws-resource-greengrass-loggerdefinition--examples"></a>
+
+
 
 ### Logger Definition Snippet<a name="aws-resource-greengrass-loggerdefinition--examples--Logger_Definition_Snippet"></a>
 
@@ -123,6 +142,6 @@ TestLoggerDefinition:
           Space: '128'
 ```
 
-## See Also<a name="aws-resource-greengrass-loggerdefinition--seealso"></a>
-+  [CreateLoggerDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createloggerdefinition-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+## See also<a name="aws-resource-greengrass-loggerdefinition--seealso"></a>
++  [CreateLoggerDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createloggerdefinition-post.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

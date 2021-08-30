@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Backup::BackupPlan",
   "Properties" : {
-      "[BackupPlan](#cfn-backup-backupplan-backupplan)" : [BackupPlanResourceType](aws-properties-backup-backupplan-backupplanresourcetype.md),
-      "[BackupPlanTags](#cfn-backup-backupplan-backupplantags)" : Json
+      "[BackupPlan](#cfn-backup-backupplan-backupplan)" : BackupPlanResourceType,
+      "[BackupPlanTags](#cfn-backup-backupplan-backupplantags)" : {Key : Value, ...}
     }
 }
 ```
@@ -24,8 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Backup::BackupPlan
 Properties: 
   [BackupPlan](#cfn-backup-backupplan-backupplan): 
-    [BackupPlanResourceType](aws-properties-backup-backupplan-backupplanresourcetype.md)
-  [BackupPlanTags](#cfn-backup-backupplan-backupplantags): Json
+    BackupPlanResourceType
+  [BackupPlanTags](#cfn-backup-backupplan-backupplantags): 
+    Key : Value
 ```
 
 ## Properties<a name="aws-resource-backup-backupplan-properties"></a>
@@ -39,10 +40,10 @@ Uniquely identifies the backup plan to be associated with the selection of resou
 `BackupPlanTags`  <a name="cfn-backup-backupplan-backupplantags"></a>
 To help organize your resources, you can assign your own metadata to the resources that you create\. Each tag is a key\-value pair\. The specified tags are assigned to all backups created with this plan\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-backup-backupplan-return-values"></a>
+## Return values<a name="aws-resource-backup-backupplan-return-values"></a>
 
 ### Ref<a name="aws-resource-backup-backupplan-return-values-ref"></a>
 

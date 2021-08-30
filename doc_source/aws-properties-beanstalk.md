@@ -1,6 +1,6 @@
 # AWS::ElasticBeanstalk::Application<a name="aws-properties-beanstalk"></a>
 
-The AWS::ElasticBeanstalk::Application resource is an AWS Elastic Beanstalk resource type that specifies an Elastic Beanstalk application\.
+The AWS::ElasticBeanstalk::Application resource is an AWS Elastic Beanstalk Beanstalk resource type that specifies an Elastic Beanstalk application\.
 
 ## Syntax<a name="aws-properties-beanstalk-syntax"></a>
 
@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ApplicationName](#cfn-elasticbeanstalk-application-name)" : String,
       "[Description](#cfn-elasticbeanstalk-application-description)" : String,
-      "[ResourceLifecycleConfig](#cfn-elasticbeanstalk-application-resourcelifecycleconfig)" : [ApplicationResourceLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.md)
+      "[ResourceLifecycleConfig](#cfn-elasticbeanstalk-application-resourcelifecycleconfig)" : ApplicationResourceLifecycleConfig
     }
 }
 ```
@@ -27,7 +27,7 @@ Properties:
   [ApplicationName](#cfn-elasticbeanstalk-application-name): String
   [Description](#cfn-elasticbeanstalk-application-description): String
   [ResourceLifecycleConfig](#cfn-elasticbeanstalk-application-resourcelifecycleconfig): 
-    [ApplicationResourceLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.md)
+    ApplicationResourceLifecycleConfig
 ```
 
 ## Properties<a name="aws-properties-beanstalk-properties"></a>
@@ -54,7 +54,7 @@ Specifies an application resource lifecycle configuration to prevent your applic
 *Type*: [ApplicationResourceLifecycleConfig](aws-properties-elasticbeanstalk-application-applicationresourcelifecycleconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-beanstalk-return-values"></a>
+## Return values<a name="aws-properties-beanstalk-return-values"></a>
 
 ### Ref<a name="aws-properties-beanstalk-return-values-ref"></a>
 
@@ -87,5 +87,5 @@ Properties:
   Description: "AWS Elastic Beanstalk PHP Sample Application"
 ```
 
-## See Also<a name="aws-properties-beanstalk--seealso"></a>
+## See also<a name="aws-properties-beanstalk--seealso"></a>
 + For a complete Elastic Beanstalk sample template, see [Elastic Beanstalk Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-elasticbeanstalk.html)\.

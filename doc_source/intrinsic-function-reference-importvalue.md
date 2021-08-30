@@ -11,6 +11,10 @@ Similarly, the `ImportValue` function can't include `Ref` or `GetAtt` functions 
 You can't delete a stack if another stack references one of its outputs\.
 You can't modify or remove an output value that is referenced by another stack\.
 
+## <a name="intrinsic-function-reference-importvalue-examples"></a>
+
+### JSON<a name="intrinsic-function-reference-importvalue-export.json"></a>
+
 Stack A Export
 
 ```
@@ -27,6 +31,32 @@ Stack A Export
   }
 }
 ```
+
+### YAML<a name="intrinsic-function-reference-importvalue-export.yaml"></a>
+
+Stack A Export
+
+```
+Outputs:
+  PublicSubnet:
+    Description: The subnet ID to use for public web servers
+    Value:
+      Ref: PublicSubnet
+    Export:
+      Name:
+        'Fn::Sub': '${AWS::StackName}-SubnetID'
+  WebServerSecurityGroup:
+    Description: The security group ID to use for public web servers
+    Value:
+      'Fn::GetAtt':
+        - WebServerSecurityGroup
+        - GroupId
+    Export:
+      Name:
+        'Fn::Sub': '${AWS::StackName}-SecurityGroupID'
+```
+
+### JSON<a name="intrinsic-function-reference-importvalue-import.json"></a>
 
 Stack B Import
 
@@ -49,7 +79,29 @@ Stack B Import
 }
 ```
 
-## Declaration<a name="w4784ab1c21c24c41c15"></a>
+### YAML<a name="intrinsic-function-reference-importvalue-import.yaml"></a>
+
+Stack B Import
+
+```
+Resources:
+  WebServerInstance:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-a1b23456
+      NetworkInterfaces:
+        - GroupSet:
+            - !ImportValue 
+              'Fn::Sub': '${NetworkStackNameParameter}-SecurityGroupID'
+          AssociatePublicIpAddress: 'true'
+          DeviceIndex: '0'
+          DeleteOnTermination: 'true'
+          SubnetId: !ImportValue 
+            'Fn::Sub': '${NetworkStackNameParameter}-SubnetID'
+```
+
+## Declaration<a name="w9463ab1c33c28c41b9"></a>
 
 ### JSON<a name="intrinsic-function-reference-importvalue-syntax.json"></a>
 
@@ -72,7 +124,7 @@ Alternatively, you can use the short form:
 ```
 
 **Important**  
-You can't use the short form of `!ImportValue` when it contains a `!Sub`\. The following example is valid for AWS CloudFormation, but *not* valid for YAML:   
+You can't use the short form of `!ImportValue` when it contains a `!Sub`\. The following example is valid for AWS CloudFormation, but *not* valid for YAML:  
 
 ```
 !ImportValue
@@ -85,16 +137,16 @@ Fn::ImportValue:
   !Sub "${NetworkStack}-SubnetID"
 ```
 
-## Parameters<a name="w4784ab1c21c24c41c17"></a>
+## Parameters<a name="w9463ab1c33c28c41c11"></a>
 
 sharedValueToImport  
 The stack output value that you want to import\.
 
-## Return Value<a name="w4784ab1c21c24c41c19"></a>
+## Return value<a name="w9463ab1c33c28c41c13"></a>
 
 The stack output value\.
 
-## Example<a name="w4784ab1c21c24c41c21"></a>
+## Example<a name="w9463ab1c33c28c41c15"></a>
 
 ### JSON<a name="intrinsic-function-reference-importvalue-example.json"></a>
 
@@ -109,7 +161,7 @@ Fn::ImportValue:
   !Sub "${NetworkStackName}-SecurityGroupID"
 ```
 
-## Supported Functions<a name="w4784ab1c21c24c41c23"></a>
+## Supported functions<a name="w9463ab1c33c28c41c17"></a>
 
 You can use the following functions in the `Fn::ImportValue` function\. The value of these functions can't depend on a resource\.
 + `Fn::Base64`

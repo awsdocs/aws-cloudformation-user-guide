@@ -1,5 +1,9 @@
 # AWS::WAF::ByteMatchSet<a name="aws-resource-waf-bytematchset"></a>
 
+**Note**  
+This is ** AWS WAF Classic** documentation\. For more information, see [ AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF **, use the AWS WAFV2 API and see the [ AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
+
 The `AWS::WAF::ByteMatchSet` resource creates an AWS WAF `ByteMatchSet` that identifies a part of a web request that you want to inspect\.
 
 ## Syntax<a name="aws-resource-waf-bytematchset-syntax"></a>
@@ -12,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAF::ByteMatchSet",
   "Properties" : {
-      "[ByteMatchTuples](#cfn-waf-bytematchset-bytematchtuples)" : [ [ByteMatchTuple](aws-properties-waf-bytematchset-bytematchtuples.md), ... ],
+      "[ByteMatchTuples](#cfn-waf-bytematchset-bytematchtuples)" : [ ByteMatchTuple, ... ],
       "[Name](#cfn-waf-bytematchset-name)" : String
     }
 }
@@ -24,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAF::ByteMatchSet
 Properties: 
   [ByteMatchTuples](#cfn-waf-bytematchset-bytematchtuples): 
-    - [ByteMatchTuple](aws-properties-waf-bytematchset-bytematchtuples.md)
+    - ByteMatchTuple
   [Name](#cfn-waf-bytematchset-name): String
 ```
 
@@ -42,9 +46,10 @@ A friendly name or description of the `ByteMatchSet`\. You can't change `Name` a
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-waf-bytematchset-return-values"></a>
+## Return values<a name="aws-resource-waf-bytematchset-return-values"></a>
 
 ### Ref<a name="aws-resource-waf-bytematchset-return-values-ref"></a>
 
@@ -53,6 +58,8 @@ A friendly name or description of the `ByteMatchSet`\. You can't change `Name` a
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-waf-bytematchset--examples"></a>
+
+
 
 ### HTTP Referers<a name="aws-resource-waf-bytematchset--examples--HTTP_Referers"></a>
 
@@ -110,7 +117,7 @@ BadReferers:
           Data: "referer"
         TargetString: "badrefer2"
         TextTransformation: "NONE"
-PositionalConstraint: "CONTAINS"
+        PositionalConstraint: "CONTAINS"
 ```
 
 ### Associate a ByteMatchSet with a Web ACL Rule<a name="aws-resource-waf-bytematchset--examples--Associate_a_ByteMatchSet_with_a_Web_ACL_Rule"></a>
@@ -149,7 +156,7 @@ BadReferersRule:
         DataId: 
           Ref: "BadReferers"
         Negated: false
-Type: "ByteMatch"
+        Type: "ByteMatch"
 ```
 
 ### Create a Web ACL<a name="aws-resource-waf-bytematchset--examples--Create_a_Web_ACL"></a>
@@ -162,7 +169,7 @@ The following example associates the `BadReferersRule` rule with a web ACL\. The
 "MyWebACL": {
   "Type": "AWS::WAF::WebACL",
   "Properties": {
-    "Name": "WebACL to block blacklisted IP addresses",
+    "Name": "WebACL to block IP addresses",
     "DefaultAction": {
       "Type": "ALLOW"
     },
@@ -186,7 +193,7 @@ The following example associates the `BadReferersRule` rule with a web ACL\. The
 MyWebACL: 
   Type: "AWS::WAF::WebACL"
   Properties: 
-    Name: "WebACL to block blacklisted IP addresses"
+    Name: "WebACL to block IP addresses"
     DefaultAction: 
       Type: "ALLOW"
     MetricName: "MyWebACL"
@@ -196,5 +203,5 @@ MyWebACL:
           Type: "BLOCK"
         Priority: 1
         RuleId: 
-Ref: "BadReferersRule"
+          Ref: "BadReferersRule"
 ```

@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ApplicationCode](#cfn-kinesisanalytics-application-applicationcode)" : String,
       "[ApplicationDescription](#cfn-kinesisanalytics-application-applicationdescription)" : String,
       "[ApplicationName](#cfn-kinesisanalytics-application-applicationname)" : String,
-      "[Inputs](#cfn-kinesisanalytics-application-inputs)" : [ [Input](aws-properties-kinesisanalytics-application-input.md), ... ]
+      "[Inputs](#cfn-kinesisanalytics-application-inputs)" : [ Input, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Properties:
   [ApplicationDescription](#cfn-kinesisanalytics-application-applicationdescription): String
   [ApplicationName](#cfn-kinesisanalytics-application-applicationname): String
   [Inputs](#cfn-kinesisanalytics-application-inputs): 
-    - [Input](aws-properties-kinesisanalytics-application-input.md)
+    - Input
 ```
 
 ## Properties<a name="aws-resource-kinesisanalytics-application-properties"></a>
@@ -71,6 +71,8 @@ To create the in\-application stream, you need to specify a schema to transform 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-kinesisanalytics-application--examples"></a>
+
+
 
 ### Creating an Amazon Kinesis Data Analytics Application<a name="aws-resource-kinesisanalytics-application--examples--Creating_an_Amazon_Kinesis_Data_Analytics_Application"></a>
 

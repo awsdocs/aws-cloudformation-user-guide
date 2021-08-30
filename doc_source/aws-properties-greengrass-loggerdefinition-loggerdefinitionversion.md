@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Loggers](#cfn-greengrass-loggerdefinition-loggerdefinitionversion-loggers)" : [ [Logger](aws-properties-greengrass-loggerdefinition-logger.md), ... ]
+  "[Loggers](#cfn-greengrass-loggerdefinition-loggerdefinitionversion-loggers)" : [ Logger, ... ]
 }
 ```
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Loggers](#cfn-greengrass-loggerdefinition-loggerdefinitionversion-loggers): 
-    - [Logger](aws-properties-greengrass-loggerdefinition-logger.md)
+    - Logger
 ```
 
 ## Properties<a name="aws-properties-greengrass-loggerdefinition-loggerdefinitionversion-properties"></a>
@@ -34,6 +34,6 @@ The loggers in this version\.
 *Type*: List of [Logger](aws-properties-greengrass-loggerdefinition-logger.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-loggerdefinition-loggerdefinitionversion--seealso"></a>
-+  [LoggerDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-loggerdefinitionversion.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+## See also<a name="aws-properties-greengrass-loggerdefinition-loggerdefinitionversion--seealso"></a>
++  [LoggerDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-loggerdefinitionversion.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

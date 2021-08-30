@@ -10,16 +10,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AddAttributes](#cfn-iotanalytics-pipeline-activity-addattributes)" : [AddAttributes](aws-properties-iotanalytics-pipeline-addattributes.md),
-  "[Channel](#cfn-iotanalytics-pipeline-activity-channel)" : [Channel](aws-properties-iotanalytics-pipeline-channel.md),
-  "[Datastore](#cfn-iotanalytics-pipeline-activity-datastore)" : [Datastore](aws-properties-iotanalytics-pipeline-datastore.md),
-  "[DeviceRegistryEnrich](#cfn-iotanalytics-pipeline-activity-deviceregistryenrich)" : [DeviceRegistryEnrich](aws-properties-iotanalytics-pipeline-deviceregistryenrich.md),
-  "[DeviceShadowEnrich](#cfn-iotanalytics-pipeline-activity-deviceshadowenrich)" : [DeviceShadowEnrich](aws-properties-iotanalytics-pipeline-deviceshadowenrich.md),
-  "[Filter](#cfn-iotanalytics-pipeline-activity-filter)" : [Filter](aws-properties-iotanalytics-pipeline-filter.md),
-  "[Lambda](#cfn-iotanalytics-pipeline-activity-lambda)" : [Lambda](aws-properties-iotanalytics-pipeline-lambda.md),
-  "[Math](#cfn-iotanalytics-pipeline-activity-math)" : [Math](aws-properties-iotanalytics-pipeline-math.md),
-  "[RemoveAttributes](#cfn-iotanalytics-pipeline-activity-removeattributes)" : [RemoveAttributes](aws-properties-iotanalytics-pipeline-removeattributes.md),
-  "[SelectAttributes](#cfn-iotanalytics-pipeline-activity-selectattributes)" : [SelectAttributes](aws-properties-iotanalytics-pipeline-selectattributes.md)
+  "[AddAttributes](#cfn-iotanalytics-pipeline-activity-addattributes)" : AddAttributes,
+  "[Channel](#cfn-iotanalytics-pipeline-activity-channel)" : Channel,
+  "[Datastore](#cfn-iotanalytics-pipeline-activity-datastore)" : Datastore,
+  "[DeviceRegistryEnrich](#cfn-iotanalytics-pipeline-activity-deviceregistryenrich)" : DeviceRegistryEnrich,
+  "[DeviceShadowEnrich](#cfn-iotanalytics-pipeline-activity-deviceshadowenrich)" : DeviceShadowEnrich,
+  "[Filter](#cfn-iotanalytics-pipeline-activity-filter)" : Filter,
+  "[Lambda](#cfn-iotanalytics-pipeline-activity-lambda)" : Lambda,
+  "[Math](#cfn-iotanalytics-pipeline-activity-math)" : Math,
+  "[RemoveAttributes](#cfn-iotanalytics-pipeline-activity-removeattributes)" : RemoveAttributes,
+  "[SelectAttributes](#cfn-iotanalytics-pipeline-activity-selectattributes)" : SelectAttributes
 }
 ```
 
@@ -27,25 +27,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AddAttributes](#cfn-iotanalytics-pipeline-activity-addattributes): 
-    [AddAttributes](aws-properties-iotanalytics-pipeline-addattributes.md)
+    AddAttributes
   [Channel](#cfn-iotanalytics-pipeline-activity-channel): 
-    [Channel](aws-properties-iotanalytics-pipeline-channel.md)
+    Channel
   [Datastore](#cfn-iotanalytics-pipeline-activity-datastore): 
-    [Datastore](aws-properties-iotanalytics-pipeline-datastore.md)
+    Datastore
   [DeviceRegistryEnrich](#cfn-iotanalytics-pipeline-activity-deviceregistryenrich): 
-    [DeviceRegistryEnrich](aws-properties-iotanalytics-pipeline-deviceregistryenrich.md)
+    DeviceRegistryEnrich
   [DeviceShadowEnrich](#cfn-iotanalytics-pipeline-activity-deviceshadowenrich): 
-    [DeviceShadowEnrich](aws-properties-iotanalytics-pipeline-deviceshadowenrich.md)
+    DeviceShadowEnrich
   [Filter](#cfn-iotanalytics-pipeline-activity-filter): 
-    [Filter](aws-properties-iotanalytics-pipeline-filter.md)
+    Filter
   [Lambda](#cfn-iotanalytics-pipeline-activity-lambda): 
-    [Lambda](aws-properties-iotanalytics-pipeline-lambda.md)
+    Lambda
   [Math](#cfn-iotanalytics-pipeline-activity-math): 
-    [Math](aws-properties-iotanalytics-pipeline-math.md)
+    Math
   [RemoveAttributes](#cfn-iotanalytics-pipeline-activity-removeattributes): 
-    [RemoveAttributes](aws-properties-iotanalytics-pipeline-removeattributes.md)
+    RemoveAttributes
   [SelectAttributes](#cfn-iotanalytics-pipeline-activity-selectattributes): 
-    [SelectAttributes](aws-properties-iotanalytics-pipeline-selectattributes.md)
+    SelectAttributes
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-pipeline-activity-properties"></a>

@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool Policies<a name="aws-properties-cognito-userpool-policies"></a>
 
-`Policies` is a property of the [AWS::Cognito::UserPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html) resource that defines the password policies of an Amazon Cognito User Pool\.
+The policy associated with a user pool\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-policies-syntax"></a>
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[PasswordPolicy](#cfn-cognito-userpool-policies-passwordpolicy)" : [PasswordPolicy](aws-properties-cognito-userpool-passwordpolicy.md)
+  "[PasswordPolicy](#cfn-cognito-userpool-policies-passwordpolicy)" : PasswordPolicy
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [PasswordPolicy](#cfn-cognito-userpool-policies-passwordpolicy): 
-    [PasswordPolicy](aws-properties-cognito-userpool-passwordpolicy.md)
+    PasswordPolicy
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-policies-properties"></a>

@@ -39,7 +39,7 @@ Properties:
 The architecture of the robot\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ARM64 | ARMHF | X86_64`  
+*Allowed values*: `ARM64 | ARMHF | X86_64`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Fleet`  <a name="cfn-robomaker-robot-fleet"></a>
@@ -54,6 +54,7 @@ The Greengrass group associated with the robot\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1224`  
+*Pattern*: `.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-robomaker-robot-name"></a>
@@ -71,7 +72,7 @@ A map that contains tag keys and tag values that are attached to the robot\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-robomaker-robot-return-values"></a>
+## Return values<a name="aws-resource-robomaker-robot-return-values"></a>
 
 ### Ref<a name="aws-resource-robomaker-robot-return-values-ref"></a>
 
@@ -81,11 +82,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-robomaker-robot--examples"></a>
 
-### Create an AWS RoboMaker Robot<a name="aws-resource-robomaker-robot--examples--Create_an_AWS_RoboMaker_Robot"></a>
+
+
+### Create an AWS RoboMaker Robot<a name="aws-resource-robomaker-robot--examples--Create_an__RoboMaker_Robot"></a>
 
 The following example creates a robot\.
 
-#### JSON<a name="aws-resource-robomaker-robot--examples--Create_an_AWS_RoboMaker_Robot--json"></a>
+#### JSON<a name="aws-resource-robomaker-robot--examples--Create_an__RoboMaker_Robot--json"></a>
 
 ```
 {
@@ -121,7 +124,7 @@ The following example creates a robot\.
 }
 ```
 
-#### YAML<a name="aws-resource-robomaker-robot--examples--Create_an_AWS_RoboMaker_Robot--yaml"></a>
+#### YAML<a name="aws-resource-robomaker-robot--examples--Create_an__RoboMaker_Robot--yaml"></a>
 
 ```
 ---

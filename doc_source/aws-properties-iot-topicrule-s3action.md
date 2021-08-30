@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[BucketName](#cfn-iot-topicrule-s3action-bucketname)" : String,
+  "[CannedAcl](#cfn-iot-topicrule-s3action-cannedacl)" : String,
   "[Key](#cfn-iot-topicrule-s3action-key)" : String,
   "[RoleArn](#cfn-iot-topicrule-s3action-rolearn)" : String
 }
@@ -20,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [BucketName](#cfn-iot-topicrule-s3action-bucketname): String
+  [CannedAcl](#cfn-iot-topicrule-s3action-cannedacl): String
   [Key](#cfn-iot-topicrule-s3action-key): String
   [RoleArn](#cfn-iot-topicrule-s3action-rolearn): String
 ```
@@ -32,8 +34,14 @@ The Amazon S3 bucket\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`CannedAcl`  <a name="cfn-iot-topicrule-s3action-cannedacl"></a>
+The Amazon S3 canned ACL that controls access to the object identified by the object key\. For more information, see [S3 canned ACLs](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl)\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Key`  <a name="cfn-iot-topicrule-s3action-key"></a>
-The object key\.  
+The object key\. For more information, see [Actions, resources, and condition keys for Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/list_amazons3.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

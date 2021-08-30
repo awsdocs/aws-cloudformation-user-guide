@@ -1,6 +1,6 @@
 # AWS::SES::ReceiptFilter Filter<a name="aws-properties-ses-receiptfilter-filter"></a>
 
-A data structure that describes the IP address filter that you want to specify\. This structure consists of a name, an IP address range, and whether to allow or block mail from it\.
+Specifies an IP address filter\.
 
 ## Syntax<a name="aws-properties-ses-receiptfilter-filter-syntax"></a>
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[IpFilter](#cfn-ses-receiptfilter-filter-ipfilter)" : [IpFilter](aws-properties-ses-receiptfilter-ipfilter.md),
+  "[IpFilter](#cfn-ses-receiptfilter-filter-ipfilter)" : IpFilter,
   "[Name](#cfn-ses-receiptfilter-filter-name)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [IpFilter](#cfn-ses-receiptfilter-filter-ipfilter): 
-    [IpFilter](aws-properties-ses-receiptfilter-ipfilter.md)
+    IpFilter
   [Name](#cfn-ses-receiptfilter-filter-name): String
 ```
 
@@ -32,8 +32,8 @@ A structure that provides the IP addresses to block or allow, and whether to blo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ses-receiptfilter-filter-name"></a>
-The name of the IP address filter\. The name must:  
-+ Only contain ASCII letters \(a–z, A–Z\), numbers \(0–9\), underscores \(\_\), or dashes \(\-\)\.
+The name of the IP address filter\. The name must meet the following requirements:  
++ Contain only ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
 + Start and end with a letter or number\.
 + Contain 64 characters or fewer\.
 *Required*: No  

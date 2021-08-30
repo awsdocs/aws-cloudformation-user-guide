@@ -1,4 +1,4 @@
-# Integrated JSON and YAML Editor<a name="working-with-templates-cfn-designer-json-editor"></a>
+# Integrated JSON and YAML editor<a name="working-with-templates-cfn-designer-json-editor"></a>
 
 Use Designer's integrated JSON and YAML editor to view and edit template details\. For example, you can use the integrated editor to define the properties of a resource or to change a template parameter\. The integrated editor has two views: a **Components** view and a **Template** view\.
 
@@ -12,7 +12,7 @@ To make broad changes to your template, use the **Template** view\. In the **Tem
 
 ![\[Screenshot of the integrated JSON and YAML editor with raw JSON.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/designer-jsoneditor.png)
 
-## Converting templates into YAML or JSON<a name="w4784ab1c17c17c13c17c15"></a>
+## Converting templates into YAML or JSON<a name="w9463ab1c27c17c13c17c15"></a>
 
 You can convert a valid template back and forth between JSON and YAML by selecting the appropriate radio button in **Choose template language**\. Designer can only convert valid YAML or valid JSON templates\. If the conversion succeeds, the **Messages** pane displays a message like: *Successfully converted the template to YAML*\. 
 
@@ -24,7 +24,7 @@ Once you choose a template language, any new resources you drag onto the canvas 
 **Note**  
 When you convert a template to YAML, Designer uses short form notation for functions\. For example, `- !GetAtt`\. In addition, any visual links that you draw will use short form notation in YAML mode\. For more information about intrinsic functions, see [`Ref`](intrinsic-function-reference-ref.md)\.
 
-## Autocomplete<a name="w4784ab1c17c17c13c17c17"></a>
+## Autocomplete<a name="w9463ab1c27c17c13c17c17"></a>
 
 The integrated JSON and YAML editor includes an auto\-complete feature that helps you specify resource properties, so you don't have to remember property names\. To see a list of valid properties in a JSON template, press **Ctrl\+Space** within the `Properties` curly braces \(`{}`\), as shown in the following example:
 
@@ -34,12 +34,12 @@ For a YAML template, you can first delete the opening and closing curly braces a
 
 ![\[Autocomplete options in a YAML example.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/designer-yamleditor-autocomplete.png)
 
-## Keyboard Shortcuts<a name="w4784ab1c17c17c13c17c19"></a>
+## Keyboard shortcuts<a name="w9463ab1c27c17c13c17c19"></a>
 
 Designer's integrated JSON and YAML editor provides the following keyboard shortcuts:
 
 Ctrl\+Space  
-Within the `Properties` key of a resource, lists all of the available properties for the resource\.
+Within the `Properties` key of a resource, lists all the available properties for the resource\.
 
 Ctrl\+F  
 Searches for a specified value\.  

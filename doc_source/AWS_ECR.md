@@ -1,4 +1,7 @@
-# Amazon ECR Resource Type Reference<a name="AWS_ECR"></a>
+# Amazon ECR resource type reference<a name="AWS_ECR"></a>
 
-**Resource Types**
+**Resource types**
++ [AWS::ECR::PublicRepository](aws-resource-ecr-publicrepository.md)
++ [AWS::ECR::RegistryPolicy](aws-resource-ecr-registrypolicy.md)
++ [AWS::ECR::ReplicationConfiguration](aws-resource-ecr-replicationconfiguration.md)
 + [AWS::ECR::Repository](aws-resource-ecr-repository.md)

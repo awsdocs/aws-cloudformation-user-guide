@@ -43,11 +43,11 @@ The ID of the subnet\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-subnet-network-acl-assoc-return-values"></a>
+## Return values<a name="aws-resource-ec2-subnet-network-acl-assoc-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-subnet-network-acl-assoc-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the subnet network ACL association\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the subnet network ACL association\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -60,11 +60,13 @@ Returns the value of this object's [SubnetId](https://docs.aws.amazon.com/AWSClo
 
 ## Examples<a name="aws-resource-ec2-subnet-network-acl-assoc--examples"></a>
 
-### Subnet Network ACL Association<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_Network_ACL_Association"></a>
+
+
+### Subnet network ACL association<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_network_ACL_association"></a>
 
 The following example associates subnet mySubnet with the myNetworkAcl network ACL\.
 
-#### JSON<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_Network_ACL_Association--json"></a>
+#### JSON<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_network_ACL_association--json"></a>
 
 ```
 "mySubnetNetworkAclAssociation" : {
@@ -76,7 +78,7 @@ The following example associates subnet mySubnet with the myNetworkAcl network A
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_Network_ACL_Association--yaml"></a>
+#### YAML<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_network_ACL_association--yaml"></a>
 
 ```
    mySubnetNetworkAclAssociation:

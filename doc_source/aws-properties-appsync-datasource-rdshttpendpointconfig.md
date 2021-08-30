@@ -33,13 +33,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appsync-datasource-rdshttpendpointconfig-properties"></a>
 
 `AwsRegion`  <a name="cfn-appsync-datasource-rdshttpendpointconfig-awsregion"></a>
-AWS Region for RDS HTTP endpoint\.  
+ AWS Region for RDS HTTP endpoint\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AwsSecretStoreArn`  <a name="cfn-appsync-datasource-rdshttpendpointconfig-awssecretstorearn"></a>
-AWS secret store ARN for database credentials\.  
+ AWS secret store ARN for database credentials\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -51,7 +51,7 @@ Logical database name\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DbClusterIdentifier`  <a name="cfn-appsync-datasource-rdshttpendpointconfig-dbclusteridentifier"></a>
-Amazon RDS cluster identifier\.  
+Amazon RDS cluster ARN\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

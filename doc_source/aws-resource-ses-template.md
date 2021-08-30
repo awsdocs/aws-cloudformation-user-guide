@@ -1,8 +1,6 @@
 # AWS::SES::Template<a name="aws-resource-ses-template"></a>
 
-Specifies an email template\. Email templates enable you to send personalized email to one or more destinations in a single API operation\. For more information, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-personalized-email-api.html)\.
-
-You can execute this operation no more than once per second\.
+Specifies an email template\. Email templates enable you to send personalized email to one or more destinations in a single API operation\.
 
 ## Syntax<a name="aws-resource-ses-template-syntax"></a>
 
@@ -14,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SES::Template",
   "Properties" : {
-      "[Template](#cfn-ses-template-template)" : [Template](aws-properties-ses-template-template.md)
+      "[Template](#cfn-ses-template-template)" : Template
     }
 }
 ```
@@ -25,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::SES::Template
 Properties: 
   [Template](#cfn-ses-template-template): 
-    [Template](aws-properties-ses-template-template.md)
+    Template
 ```
 
 ## Properties<a name="aws-resource-ses-template-properties"></a>
@@ -42,12 +40,14 @@ Specifies an email template, which is used when sending templated email messages
 
 ### <a name="aws-resource-ses-template--examples--"></a>
 
+
+
 #### JSON<a name="aws-resource-ses-template--examples----json"></a>
 
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS SES Template Sample Template",
+    "Description": "Amazon SES Template Sample Template",
     "Parameters": {
         "TemplateName": {
             "Type": "String"
@@ -90,7 +90,7 @@ Specifies an email template, which is used when sending templated email messages
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES Template Sample Template'
+Description: Amazon SES Template Sample Template
 Parameters:
   TemplateName:
     Type: String
@@ -102,7 +102,7 @@ Parameters:
     Type: String
 Resources:
   Template:
-    Type: AWS::SES::Template
+    Type: 'AWS::SES::Template'
     Properties:
       Template:
         TemplateName: !Ref TemplateName

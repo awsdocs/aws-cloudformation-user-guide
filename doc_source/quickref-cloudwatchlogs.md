@@ -1,13 +1,13 @@
-# Amazon CloudWatch Logs Template Snippets<a name="quickref-cloudwatchlogs"></a>
+# Amazon CloudWatch Logs template snippets<a name="quickref-cloudwatchlogs"></a>
 
-Amazon CloudWatch Logs can monitor your system, application, and custom log files from Amazon EC2 instances or other sources\. You can use AWS CloudFormation to provision and manage log groups and metric filters\. For more information about getting started with Amazon CloudWatch Logs, see [Monitoring System, Application, and Custom Log Files ](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatchLogs.html) in the *Amazon CloudWatch User Guide*\.
+Amazon CloudWatch Logs can monitor your system, application, and custom log files from Amazon EC2 instances or other sources\. You can use AWS CloudFormation to provision and manage log groups and metric filters\. For more information about getting started with Amazon CloudWatch Logs, see [Monitoring system, application, and custom log files ](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatchLogs.html) in the *Amazon CloudWatch User Guide*\.
 
 **Topics**
-+ [Send Logs to CloudWatch Logs from a Linux Instance](#quickref-cloudwatchlogs-example1)
-+ [Send Logs to CloudWatch Logs from a Windows Instance](#quickref-cloudwatchlogs-example2)
-+ [See Also](#w4784ab1c17c23c31c11)
++ [Send logs to CloudWatch Logs from a Linux instance](#quickref-cloudwatchlogs-example1)
++ [Send logs to CloudWatch Logs from a Windows instance](#quickref-cloudwatchlogs-example2)
++ [See also](#w9463ab1c27c21c31c11)
 
-## Send Logs to CloudWatch Logs from a Linux Instance<a name="quickref-cloudwatchlogs-example1"></a>
+## Send logs to CloudWatch Logs from a Linux instance<a name="quickref-cloudwatchlogs-example1"></a>
 
 The following template describes a web server and its custom metrics\. Log events from the web server's log provides the data for the custom metrics\. To send log events to a custom metric, the `UserData` field installs a CloudWatch Logs agent on the Amazon EC2 instance\. The configuration information for the agent, such as the location of the server log file, the log group name, and the log stream name, are defined in the `/tmp/cwlogs/apacheaccess.conf` file\. The log stream is created after the web server starts sending log events to the `/var/log/httpd/access_log` file\.
 
@@ -15,7 +15,7 @@ The following template describes a web server and its custom metrics\. Log event
 A note about permissions: The `WebServerHost` instance references the `LogRoleInstanceProfile` instance profile, which in turn references the `LogRole` role\. `LogRole` specifies the `s3:GetObject` permission for *arn:aws:s3:::\**\.  
 This permission is required because `WebServerHost` downloads the CloudWatch Logs agent \(`awslogs-agent-setup.py`\) from Amazon S3 in the `UserData` section\.
 
-The two metric filters describe how the log information is transformed into CloudWatch metrics\. The 404 metric counts the number of 404 occurrences\. The size metric tracks the size of a request\. The two CloudWatch alarms will send notifications if there are more than two 404s within two minutes or if the average request size is over 3500 KB over 10 minutes\.
+The two metric filters describe how the log information is transformed into CloudWatch metrics\. The 404 metric counts the number of 404 occurrences\. The size metric tracks the size of a request\. The two CloudWatch alarms will send notifications if there are more than two 404s within 2 minutes or if the average request size is over 3500 KB over 10 minutes\.
 
 ### JSON<a name="quickref-cloudwatchlogs-example.json"></a>
 
@@ -498,12 +498,12 @@ Resources:
       GroupDescription: Enable HTTP access via port 80 and SSH access via port 22
       SecurityGroupIngress:
       - IpProtocol: tcp
-        FromPort: '80'
-        ToPort: '80'
+        FromPort: 80
+        ToPort: 80
         CidrIp: 0.0.0.0/0
       - IpProtocol: tcp
-        FromPort: '22'
-        ToPort: '22'
+        FromPort: 22
+        ToPort: 22
         CidrIp:
           Ref: SSHLocation
   WebServerHost:
@@ -669,11 +669,11 @@ Outputs:
     Value: !Ref WebServerLogGroup
 ```
 
-## Send Logs to CloudWatch Logs from a Windows Instance<a name="quickref-cloudwatchlogs-example2"></a>
+## Send logs to CloudWatch Logs from a Windows instance<a name="quickref-cloudwatchlogs-example2"></a>
 
 The following template configures CloudWatch Logs for a Windows 2012R2 instance\.
 
-The CloudWatch Logs agent on Windows \(SSM agent on Windows 2012R2 and Windows 2016 AMIs\) only sends logs after it is started, so any logs that are generated prior to startup are not sent\. To work around this, the template helps to ensure that the agent starts before any logs are written by:
+The CloudWatch Logs agent on Windows \(SSM agent on Windows 2012R2 and Windows 2016 AMIs\) only sends logs after it's started, so any logs that are generated before startup aren't sent\. To work around this, the template helps to ensure that the agent starts before any logs are written by:
 + Configuring the agent setup as the first `config` item in cfn\-init `configSets`\.
 + Using `waitAfterCompletion` to insert a pause after the command that starts the agent\.
 
@@ -780,7 +780,7 @@ The CloudWatch Logs agent on Windows \(SSM agent on Windows 2012R2 and Windows 2
                                 }
                             ]
                         },
-                        "ManagedPolicyArns" : [ "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM"],
+                        "ManagedPolicyArns" : [ "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"],
                         "Path": "/",
                         "Policies": [
                             {
@@ -1263,12 +1263,12 @@ Resources:
       GroupDescription: Enable HTTP access via port 80 and RDP access via port 3389
       SecurityGroupIngress:
       - IpProtocol: tcp
-        FromPort: '80'
-        ToPort: '80'
+        FromPort: 80
+        ToPort: 80
         CidrIp: 0.0.0.0/0
       - IpProtocol: tcp
-        FromPort: '3389'
-        ToPort: '3389'
+        FromPort: 3389
+        ToPort: 3389
         CidrIp: !Ref 'RDPLocation'
   LogRole:
     Type: AWS::IAM::Role
@@ -1283,7 +1283,7 @@ Resources:
           Action:
           - sts:AssumeRole
       ManagedPolicyArns:
-      - arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM
+      - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
       Path: /
       Policies:
       - PolicyName: LogRolePolicy
@@ -1583,6 +1583,6 @@ Outputs:
     Value: !Ref 'LogGroup'
 ```
 
-## See Also<a name="w4784ab1c17c23c31c11"></a>
+## See also<a name="w9463ab1c27c21c31c11"></a>
 
-For more information about CloudWatch Logs resources, see [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html) or [AWs::Logs::MetricFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html)\.
+For more information about CloudWatch Logs resources, see [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html) or [AWS::Logs::MetricFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html)\.

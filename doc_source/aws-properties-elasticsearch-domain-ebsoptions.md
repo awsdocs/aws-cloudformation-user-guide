@@ -47,7 +47,7 @@ The size \(in GiB\) of the EBS volume for each data node\. The minimum and maxim
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeType`  <a name="cfn-elasticsearch-domain-ebsoptions-volumetype"></a>
-The EBS volume type to use with the Amazon ES domain, such as standard, gp2, io1, st1, or sc1\. For more information about each type, see [Amazon EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+The EBS volume type to use with the Amazon ES domain, such as standard, gp2, or io1\. For more information about each type, see [Amazon EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

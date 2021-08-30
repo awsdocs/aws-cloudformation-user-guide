@@ -1,4 +1,4 @@
-# Template Anatomy<a name="template-anatomy"></a>
+# Template anatomy<a name="template-anatomy"></a>
 
 A template is a JSON\- or YAML\-formatted text file that describes your AWS infrastructure\. The following examples show an AWS CloudFormation template structure and its sections\.
 
@@ -19,6 +19,10 @@ The following example shows a JSON\-formatted template fragment\.
   "Parameters" : {
     set of parameters
   },
+  
+  "Rules" : {
+    set of rules
+  },
 
   "Mappings" : {
     set of mappings
@@ -35,7 +39,7 @@ The following example shows a JSON\-formatted template fragment\.
   "Resources" : {
     set of resources
   },
-
+  
   "Outputs" : {
     set of outputs
   }
@@ -59,6 +63,9 @@ Metadata:
 Parameters:
   set of parameters
 
+Rules:
+  set of rules
+
 Mappings:
   set of mappings
 
@@ -75,12 +82,12 @@ Outputs:
   set of outputs
 ```
 
-## Template Sections<a name="template-anatomy-sections"></a>
+## Template sections<a name="template-anatomy-sections"></a>
 
-Templates include several major sections\. The `Resources` section is the only required section\. Some sections in a template can be in any order\. However, as you build your template, it can be helpful to use the logical order shown in the following list because values in one section might refer to values from a previous section\. 
+Templates include several major sections\. The `Resources` section is the only required section\. Some sections in a template can be in any order\. However, as you build your template, it can be helpful to use the logical order shown in the following list because values in one section might refer to values from a previous section\.
 
 **[Format Version \(optional\)](format-version-structure.md)**  
-The AWS CloudFormation template version that the template conforms to\. The template format version is not the same as the API or WSDL version\. The template format version can change independently of the API and WSDL versions\.
+The AWS CloudFormation template version that the template conforms to\. The template format version isn't the same as the API or WSDL version\. The template format version can change independently of the API and WSDL versions\.
 
 **[Description \(optional\)](template-description-structure.md)**  
 A text string that describes the template\. This section must always follow the template format version section\.
@@ -90,6 +97,9 @@ Objects that provide additional information about the template\.
 
 **[Parameters \(optional\)](parameters-section-structure.md)**  
 Values to pass to your template at runtime \(when you create or update a stack\)\. You can refer to parameters from the `Resources` and `Outputs` sections of the template\.
+
+**[Rules \(optional\)](rules-section-structure.md)**  
+Validates a parameter or a combination of parameters passed to a template during a stack creation or stack update\.
 
 **[Mappings \(optional\)](mappings-section-structure.md)**  
 A mapping of keys and associated values that you can use to specify conditional parameter values, similar to a lookup table\. You can match a key to a corresponding value by using the [Fn::FindInMap](intrinsic-function-reference-findinmap.md) intrinsic function in the `Resources` and `Outputs` sections\.

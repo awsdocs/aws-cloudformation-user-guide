@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Execution](#cfn-greengrass-functiondefinitionversion-defaultconfig-execution)" : [Execution](aws-properties-greengrass-functiondefinitionversion-execution.md)
+  "[Execution](#cfn-greengrass-functiondefinitionversion-defaultconfig-execution)" : Execution
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Execution](#cfn-greengrass-functiondefinitionversion-defaultconfig-execution): 
-    [Execution](aws-properties-greengrass-functiondefinitionversion-execution.md)
+    Execution
 ```
 
 ## Properties<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-properties"></a>
@@ -31,6 +31,6 @@ Configuration settings for the Lambda execution environment on the AWS IoT Green
 *Type*: [Execution](aws-properties-greengrass-functiondefinitionversion-execution.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig--seealso"></a>
-+  [FunctionDefaultConfig](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functiondefaultconfig.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+## See also<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig--seealso"></a>
++  [FunctionDefaultConfig](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functiondefaultconfig.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

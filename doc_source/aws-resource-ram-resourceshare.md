@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AllowExternalPrincipals](#cfn-ram-resourceshare-allowexternalprincipals)" : Boolean,
       "[Name](#cfn-ram-resourceshare-name)" : String,
+      "[PermissionArns](#cfn-ram-resourceshare-permissionarns)" : [ String, ... ],
       "[Principals](#cfn-ram-resourceshare-principals)" : [ String, ... ],
       "[ResourceArns](#cfn-ram-resourceshare-resourcearns)" : [ String, ... ],
       "[Tags](#cfn-ram-resourceshare-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -28,6 +29,8 @@ Type: AWS::RAM::ResourceShare
 Properties: 
   [AllowExternalPrincipals](#cfn-ram-resourceshare-allowexternalprincipals): Boolean
   [Name](#cfn-ram-resourceshare-name): String
+  [PermissionArns](#cfn-ram-resourceshare-permissionarns): 
+    - String
   [Principals](#cfn-ram-resourceshare-principals): 
     - String
   [ResourceArns](#cfn-ram-resourceshare-resourcearns): 
@@ -39,7 +42,7 @@ Properties:
 ## Properties<a name="aws-resource-ram-resourceshare-properties"></a>
 
 `AllowExternalPrincipals`  <a name="cfn-ram-resourceshare-allowexternalprincipals"></a>
-Indicates whether principals outside your AWS organization can be associated with a resource share\.  
+Indicates whether principals outside your organization in AWS Organizations can be associated with a resource share\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -50,14 +53,26 @@ The name of the resource share\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`PermissionArns`  <a name="cfn-ram-resourceshare-permissionarns"></a>
+The Amazon Resource Names \(ARNs\) of the permissions to associate with the resource share\. If you do not specify an ARN for the permission, AWS RAM automatically attaches the default version of the permission for each resource type\. Only one permission can be associated with each resource type in a resource share\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Principals`  <a name="cfn-ram-resourceshare-principals"></a>
-The principals to associate with the resource share\. The possible values are IDs of AWS accounts, the ARN of an OU or organization from AWS Organizations\.  
+The principals to associate with the resource share\. The possible values are:  
++ An AWS account ID
++ An Amazon Resource Name \(ARN\) of an organization in AWS Organizations 
++ An ARN of an organizational unit \(OU\) in AWS Organizations 
++ An ARN of an IAM role
++ An ARN of an IAM user
+Not all resource types can be shared with IAM roles and IAM users\. For more information, see [Sharing with IAM roles and IAM users](https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types) in the * AWS Resource Access Manager User Guide*\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceArns`  <a name="cfn-ram-resourceshare-resourcearns"></a>
-The Amazon Resource Names \(ARN\) of the resources to associate with the resource share\.  
+The Amazon Resource Names \(ARNs\) of the resources to associate with the resource share\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -68,7 +83,7 @@ One or more tags\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ram-resourceshare-return-values"></a>
+## Return values<a name="aws-resource-ram-resourceshare-return-values"></a>
 
 ### Ref<a name="aws-resource-ram-resourceshare-return-values-ref"></a>
 
@@ -145,6 +160,7 @@ Resources:
 }
 ```
 
-## See Also<a name="aws-resource-ram-resourceshare--seealso"></a>
+## See also<a name="aws-resource-ram-resourceshare--seealso"></a>
 +  [CreateResourceShare](https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html) in the *AWS Resource Access Manager API Reference* 
 +  [AWS Resource Access Manager User Guide](https://docs.aws.amazon.com/ram/latest/userguide) 
+

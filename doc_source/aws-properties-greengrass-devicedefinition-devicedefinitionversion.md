@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Devices](#cfn-greengrass-devicedefinition-devicedefinitionversion-devices)" : [ [Device](aws-properties-greengrass-devicedefinition-device.md), ... ]
+  "[Devices](#cfn-greengrass-devicedefinition-devicedefinitionversion-devices)" : [ Device, ... ]
 }
 ```
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Devices](#cfn-greengrass-devicedefinition-devicedefinitionversion-devices): 
-    - [Device](aws-properties-greengrass-devicedefinition-device.md)
+    - Device
 ```
 
 ## Properties<a name="aws-properties-greengrass-devicedefinition-devicedefinitionversion-properties"></a>
@@ -34,6 +34,6 @@ The devices in this version\.
 *Type*: List of [Device](aws-properties-greengrass-devicedefinition-device.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-devicedefinition-devicedefinitionversion--seealso"></a>
-+  [DeviceDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-devicedefinitionversion.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+## See also<a name="aws-properties-greengrass-devicedefinition-devicedefinitionversion--seealso"></a>
++  [DeviceDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-devicedefinitionversion.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

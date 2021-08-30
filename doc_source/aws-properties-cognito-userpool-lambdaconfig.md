@@ -1,11 +1,6 @@
 # AWS::Cognito::UserPool LambdaConfig<a name="aws-properties-cognito-userpool-lambdaconfig"></a>
 
-`LambdaConfig` is a property of the [AWS::Cognito::UserPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html) resource that defines the AWS Lambda configuration of an Amazon Cognito User Pool\.
-
-**Note**  
-In a push model, event sources \(such as Amazon S3 and custom applications\) need permission to invoke a function\. So you will need to make an extra call to add permission for these event sources to invoke your Lambda function\.  
-For more information on using the Lambda API to add permission, see [ AddPermission ](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html)\.   
-For adding permission using the AWS CLI, see [ add\-permission ](https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html)\.
+Specifies the configuration for AWS Lambda triggers\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-lambdaconfig-syntax"></a>
 
@@ -16,12 +11,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CreateAuthChallenge](#cfn-cognito-userpool-lambdaconfig-createauthchallenge)" : String,
+  "[CustomEmailSender](#cfn-cognito-userpool-lambdaconfig-customemailsender)" : CustomEmailSender,
   "[CustomMessage](#cfn-cognito-userpool-lambdaconfig-custommessage)" : String,
+  "[CustomSMSSender](#cfn-cognito-userpool-lambdaconfig-customsmssender)" : CustomSMSSender,
   "[DefineAuthChallenge](#cfn-cognito-userpool-lambdaconfig-defineauthchallenge)" : String,
+  "[KMSKeyID](#cfn-cognito-userpool-lambdaconfig-kmskeyid)" : String,
   "[PostAuthentication](#cfn-cognito-userpool-lambdaconfig-postauthentication)" : String,
   "[PostConfirmation](#cfn-cognito-userpool-lambdaconfig-postconfirmation)" : String,
   "[PreAuthentication](#cfn-cognito-userpool-lambdaconfig-preauthentication)" : String,
   "[PreSignUp](#cfn-cognito-userpool-lambdaconfig-presignup)" : String,
+  "[PreTokenGeneration](#cfn-cognito-userpool-lambdaconfig-pretokengeneration)" : String,
+  "[UserMigration](#cfn-cognito-userpool-lambdaconfig-usermigration)" : String,
   "[VerifyAuthChallengeResponse](#cfn-cognito-userpool-lambdaconfig-verifyauthchallengeresponse)" : String
 }
 ```
@@ -30,12 +30,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CreateAuthChallenge](#cfn-cognito-userpool-lambdaconfig-createauthchallenge): String
+  [CustomEmailSender](#cfn-cognito-userpool-lambdaconfig-customemailsender): 
+    CustomEmailSender
   [CustomMessage](#cfn-cognito-userpool-lambdaconfig-custommessage): String
+  [CustomSMSSender](#cfn-cognito-userpool-lambdaconfig-customsmssender): 
+    CustomSMSSender
   [DefineAuthChallenge](#cfn-cognito-userpool-lambdaconfig-defineauthchallenge): String
+  [KMSKeyID](#cfn-cognito-userpool-lambdaconfig-kmskeyid): String
   [PostAuthentication](#cfn-cognito-userpool-lambdaconfig-postauthentication): String
   [PostConfirmation](#cfn-cognito-userpool-lambdaconfig-postconfirmation): String
   [PreAuthentication](#cfn-cognito-userpool-lambdaconfig-preauthentication): String
   [PreSignUp](#cfn-cognito-userpool-lambdaconfig-presignup): String
+  [PreTokenGeneration](#cfn-cognito-userpool-lambdaconfig-pretokengeneration): String
+  [UserMigration](#cfn-cognito-userpool-lambdaconfig-usermigration): String
   [VerifyAuthChallengeResponse](#cfn-cognito-userpool-lambdaconfig-verifyauthchallengeresponse): String
 ```
 
@@ -50,6 +57,12 @@ Creates an authentication challenge\.
 *Pattern*: `arn:[\w+=/,.@-]+:[\w+=/,.@-]+:([\w+=/,.@-]*)?:[0-9]+:[\w+=/,.@-]+(:[\w+=/,.@-]+)?(:[\w+=/,.@-]+)?`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`CustomEmailSender`  <a name="cfn-cognito-userpool-lambdaconfig-customemailsender"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [CustomEmailSender](aws-properties-cognito-userpool-customemailsender.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `CustomMessage`  <a name="cfn-cognito-userpool-lambdaconfig-custommessage"></a>
 A custom Message AWS Lambda trigger\.  
 *Required*: No  
@@ -59,6 +72,12 @@ A custom Message AWS Lambda trigger\.
 *Pattern*: `arn:[\w+=/,.@-]+:[\w+=/,.@-]+:([\w+=/,.@-]*)?:[0-9]+:[\w+=/,.@-]+(:[\w+=/,.@-]+)?(:[\w+=/,.@-]+)?`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`CustomSMSSender`  <a name="cfn-cognito-userpool-lambdaconfig-customsmssender"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [CustomSMSSender](aws-properties-cognito-userpool-customsmssender.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DefineAuthChallenge`  <a name="cfn-cognito-userpool-lambdaconfig-defineauthchallenge"></a>
 Defines the authentication challenge\.  
 *Required*: No  
@@ -66,6 +85,12 @@ Defines the authentication challenge\.
 *Minimum*: `20`  
 *Maximum*: `2048`  
 *Pattern*: `arn:[\w+=/,.@-]+:[\w+=/,.@-]+:([\w+=/,.@-]*)?:[0-9]+:[\w+=/,.@-]+(:[\w+=/,.@-]+)?(:[\w+=/,.@-]+)?`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`KMSKeyID`  <a name="cfn-cognito-userpool-lambdaconfig-kmskeyid"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PostAuthentication`  <a name="cfn-cognito-userpool-lambdaconfig-postauthentication"></a>
@@ -97,6 +122,24 @@ A pre\-authentication AWS Lambda trigger\.
 
 `PreSignUp`  <a name="cfn-cognito-userpool-lambdaconfig-presignup"></a>
 A pre\-registration AWS Lambda trigger\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `20`  
+*Maximum*: `2048`  
+*Pattern*: `arn:[\w+=/,.@-]+:[\w+=/,.@-]+:([\w+=/,.@-]*)?:[0-9]+:[\w+=/,.@-]+(:[\w+=/,.@-]+)?(:[\w+=/,.@-]+)?`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PreTokenGeneration`  <a name="cfn-cognito-userpool-lambdaconfig-pretokengeneration"></a>
+A Lambda trigger that is invoked before token generation\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `20`  
+*Maximum*: `2048`  
+*Pattern*: `arn:[\w+=/,.@-]+:[\w+=/,.@-]+:([\w+=/,.@-]*)?:[0-9]+:[\w+=/,.@-]+(:[\w+=/,.@-]+)?(:[\w+=/,.@-]+)?`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`UserMigration`  <a name="cfn-cognito-userpool-lambdaconfig-usermigration"></a>
+The user migration Lambda config type\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  

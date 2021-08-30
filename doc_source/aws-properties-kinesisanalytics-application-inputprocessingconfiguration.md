@@ -1,6 +1,6 @@
 # AWS::KinesisAnalytics::Application InputProcessingConfiguration<a name="aws-properties-kinesisanalytics-application-inputprocessingconfiguration"></a>
 
-Provides a description of a processor that is used to preprocess the records in the stream before being processed by your application code\. Currently, the only input processor available is [AWS Lambda](https://docs.aws.amazon.com/lambda/)\.
+Provides a description of a processor that is used to preprocess the records in the stream before being processed by your application code\. Currently, the only input processor available is [ AWS Lambda](https://docs.aws.amazon.com/lambda/)\.
 
 ## Syntax<a name="aws-properties-kinesisanalytics-application-inputprocessingconfiguration-syntax"></a>
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[InputLambdaProcessor](#cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor)" : [InputLambdaProcessor](aws-properties-kinesisanalytics-application-inputlambdaprocessor.md)
+  "[InputLambdaProcessor](#cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor)" : InputLambdaProcessor
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [InputLambdaProcessor](#cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor): 
-    [InputLambdaProcessor](aws-properties-kinesisanalytics-application-inputlambdaprocessor.md)
+    InputLambdaProcessor
 ```
 
 ## Properties<a name="aws-properties-kinesisanalytics-application-inputprocessingconfiguration-properties"></a>

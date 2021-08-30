@@ -31,7 +31,7 @@ Properties:
 ## Properties<a name="aws-resource-ec2-network-acl-properties"></a>
 
 `Tags`  <a name="cfn-ec2-networkacl-tags"></a>
-An arbitrary set of tags \(key–value pairs\) for this ACL\.  
+An arbitrary set of tags \(key\-value pairs\) for this ACL\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -42,7 +42,7 @@ The ID of the VPC for the network ACL\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-network-acl-return-values"></a>
+## Return values<a name="aws-resource-ec2-network-acl-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-network-acl-return-values-ref"></a>
 
@@ -51,6 +51,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ec2-network-acl--examples"></a>
+
+
 
 ### Network ACL<a name="aws-resource-ec2-network-acl--examples--Network_ACL"></a>
 
@@ -63,7 +65,7 @@ The following example creates a Network ACL in a VPC\.
    "Type" : "AWS::EC2::NetworkAcl",
    "Properties" : {
       "VpcId" : { "Ref" : "myVPC" },
-      "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
+      "Tags" : [ { "Key" : "stack", "Value" : "production" } ]
    }
 }
 ```
@@ -77,10 +79,11 @@ The following example creates a Network ACL in a VPC\.
          VpcId:
            Ref: myVPC
          Tags:
-         - Key: foo
-           Value: bar
+         - Key: stack
+           Value: production
 ```
 
-## See Also<a name="aws-resource-ec2-network-acl--seealso"></a>
+## See also<a name="aws-resource-ec2-network-acl--seealso"></a>
 + [CreateNetworkAcl](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateNetworkAcl.html) in the *Amazon EC2 API Reference*
 + [Network ACLs](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html) in the *Amazon Virtual Private Cloud User Guide*
+

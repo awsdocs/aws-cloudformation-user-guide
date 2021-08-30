@@ -1,4 +1,4 @@
-# Elasticsearch Resource Type Reference<a name="AWS_Elasticsearch"></a>
+# Amazon Elasticsearch Service resource type reference<a name="AWS_Elasticsearch"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::Elasticsearch::Domain](aws-resource-elasticsearch-domain.md)

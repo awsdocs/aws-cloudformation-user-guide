@@ -1,6 +1,6 @@
 # AWS::IoTAnalytics::Pipeline Datastore<a name="aws-properties-iotanalytics-pipeline-datastore"></a>
 
-The 'datastore' activity that specifies where to store the processed data\.
+The datastore activity that specifies where to store the processed data\.
 
 ## Syntax<a name="aws-properties-iotanalytics-pipeline-datastore-syntax"></a>
 
@@ -30,11 +30,11 @@ The name of the data store where processed messages are stored\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9_]+$`  
+*Pattern*: `(^(?!_{2}))(^[a-zA-Z0-9_]+$)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-iotanalytics-pipeline-datastore-name"></a>
-The name of the 'datastore' activity\.  
+The name of the datastore activity\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

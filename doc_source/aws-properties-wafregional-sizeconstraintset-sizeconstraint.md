@@ -1,5 +1,9 @@
 # AWS::WAFRegional::SizeConstraintSet SizeConstraint<a name="aws-properties-wafregional-sizeconstraintset-sizeconstraint"></a>
 
+**Note**  
+This is ** AWS WAF Classic** documentation\. For more information, see [ AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF **, use the AWS WAFV2 API and see the [ AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
+
 Specifies a constraint on the size of a part of the web request\. AWS WAF uses the `Size`, `ComparisonOperator`, and `FieldToMatch` to build an expression in the form of "`Size` `ComparisonOperator` size in bytes of `FieldToMatch`"\. If that expression is true, the `SizeConstraint` is considered to match\.
 
 ## Syntax<a name="aws-properties-wafregional-sizeconstraintset-sizeconstraint-syntax"></a>
@@ -11,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ComparisonOperator](#cfn-wafregional-sizeconstraintset-sizeconstraint-comparisonoperator)" : String,
-  "[FieldToMatch](#cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch)" : [FieldToMatch](aws-properties-wafregional-sizeconstraintset-fieldtomatch.md),
+  "[FieldToMatch](#cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch)" : FieldToMatch,
   "[Size](#cfn-wafregional-sizeconstraintset-sizeconstraint-size)" : Integer,
   "[TextTransformation](#cfn-wafregional-sizeconstraintset-sizeconstraint-texttransformation)" : String
 }
@@ -22,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ComparisonOperator](#cfn-wafregional-sizeconstraintset-sizeconstraint-comparisonoperator): String
   [FieldToMatch](#cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch): 
-    [FieldToMatch](aws-properties-wafregional-sizeconstraintset-fieldtomatch.md)
+    FieldToMatch
   [Size](#cfn-wafregional-sizeconstraintset-sizeconstraint-size): Integer
   [TextTransformation](#cfn-wafregional-sizeconstraintset-sizeconstraint-texttransformation): String
 ```
@@ -39,11 +43,11 @@ The type of comparison you want AWS WAF to perform\. AWS WAF uses this in combin
  **GT**: Used to test if the `Size` is strictly greater than the size of the `FieldToMatch`   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `EQ | GE | GT | LE | LT | NE`  
+*Allowed values*: `EQ | GE | GT | LE | LT | NE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldToMatch`  <a name="cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch"></a>
-Specifies where in a web request to look for the size constraint\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: [FieldToMatch](aws-properties-wafregional-sizeconstraintset-fieldtomatch.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -51,7 +55,7 @@ Specifies where in a web request to look for the size constraint\.
 `Size`  <a name="cfn-wafregional-sizeconstraintset-sizeconstraint-size"></a>
 The size in bytes that you want AWS WAF to compare against the size of the specified `FieldToMatch`\. AWS WAF uses this in combination with `ComparisonOperator` and `FieldToMatch` to build an expression in the form of "`Size` `ComparisonOperator` size in bytes of `FieldToMatch`"\. If that expression is true, the `SizeConstraint` is considered to match\.  
 Valid values for size are 0 \- 21474836480 bytes \(0 \- 20 GB\)\.  
-If you specify `URI` for the value of `Type`, the / in the URI counts as one character\. For example, the URI `/logo.jpg` is nine characters long\.  
+If you specify `URI` for the value of `Type`, the / in the URI path that you specify counts as one character\. For example, the URI `/logo.jpg` is nine characters long\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -59,7 +63,7 @@ If you specify `URI` for the value of `Type`, the / in the URI counts as one cha
 `TextTransformation`  <a name="cfn-wafregional-sizeconstraintset-sizeconstraint-texttransformation"></a>
 Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF\. If you specify a transformation, AWS WAF performs the transformation on `FieldToMatch` before inspecting a request for a match\.  
 You can only specify a single type of TextTransformation\.  
-Note that if you choose `BODY` for the value of `Type`, you must choose `NONE` for `TextTransformation` because CloudFront forwards only the first 8192 bytes for inspection\.   
+Note that if you choose `BODY` for the value of `Type`, you must choose `NONE` for `TextTransformation` because the API Gateway API or Application Load Balancer forward only the first 8192 bytes for inspection\.   
  **NONE**   
 Specify `NONE` if you don't want to perform any text transformations\.  
  **CMD\_LINE**   
@@ -92,5 +96,5 @@ Use this option to convert uppercase letters \(A\-Z\) to lowercase \(a\-z\)\.
 Use this option to decode a URL\-encoded value\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CMD_LINE | COMPRESS_WHITE_SPACE | HTML_ENTITY_DECODE | LOWERCASE | NONE | URL_DECODE`  
+*Allowed values*: `CMD_LINE | COMPRESS_WHITE_SPACE | HTML_ENTITY_DECODE | LOWERCASE | NONE | URL_DECODE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -10,20 +10,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CloudwatchAlarm](#cfn-iot-topicrule-action-cloudwatchalarm)" : [CloudwatchAlarmAction](aws-properties-iot-topicrule-cloudwatchalarmaction.md),
-  "[CloudwatchMetric](#cfn-iot-topicrule-action-cloudwatchmetric)" : [CloudwatchMetricAction](aws-properties-iot-topicrule-cloudwatchmetricaction.md),
-  "[DynamoDB](#cfn-iot-topicrule-action-dynamodb)" : [DynamoDBAction](aws-properties-iot-topicrule-dynamodbaction.md),
-  "[DynamoDBv2](#cfn-iot-topicrule-action-dynamodbv2)" : [DynamoDBv2Action](aws-properties-iot-topicrule-dynamodbv2action.md),
-  "[Elasticsearch](#cfn-iot-topicrule-action-elasticsearch)" : [ElasticsearchAction](aws-properties-iot-topicrule-elasticsearchaction.md),
-  "[Firehose](#cfn-iot-topicrule-action-firehose)" : [FirehoseAction](aws-properties-iot-topicrule-firehoseaction.md),
-  "[IotAnalytics](#cfn-iot-topicrule-action-iotanalytics)" : [IotAnalyticsAction](aws-properties-iot-topicrule-iotanalyticsaction.md),
-  "[Kinesis](#cfn-iot-topicrule-action-kinesis)" : [KinesisAction](aws-properties-iot-topicrule-kinesisaction.md),
-  "[Lambda](#cfn-iot-topicrule-action-lambda)" : [LambdaAction](aws-properties-iot-topicrule-lambdaaction.md),
-  "[Republish](#cfn-iot-topicrule-action-republish)" : [RepublishAction](aws-properties-iot-topicrule-republishaction.md),
-  "[S3](#cfn-iot-topicrule-action-s3)" : [S3Action](aws-properties-iot-topicrule-s3action.md),
-  "[Sns](#cfn-iot-topicrule-action-sns)" : [SnsAction](aws-properties-iot-topicrule-snsaction.md),
-  "[Sqs](#cfn-iot-topicrule-action-sqs)" : [SqsAction](aws-properties-iot-topicrule-sqsaction.md),
-  "[StepFunctions](#cfn-iot-topicrule-action-stepfunctions)" : [StepFunctionsAction](aws-properties-iot-topicrule-stepfunctionsaction.md)
+  "[CloudwatchAlarm](#cfn-iot-topicrule-action-cloudwatchalarm)" : CloudwatchAlarmAction,
+  "[CloudwatchLogs](#cfn-iot-topicrule-action-cloudwatchlogs)" : CloudwatchLogsAction,
+  "[CloudwatchMetric](#cfn-iot-topicrule-action-cloudwatchmetric)" : CloudwatchMetricAction,
+  "[DynamoDB](#cfn-iot-topicrule-action-dynamodb)" : DynamoDBAction,
+  "[DynamoDBv2](#cfn-iot-topicrule-action-dynamodbv2)" : DynamoDBv2Action,
+  "[Elasticsearch](#cfn-iot-topicrule-action-elasticsearch)" : ElasticsearchAction,
+  "[Firehose](#cfn-iot-topicrule-action-firehose)" : FirehoseAction,
+  "[Http](#cfn-iot-topicrule-action-http)" : HttpAction,
+  "[IotAnalytics](#cfn-iot-topicrule-action-iotanalytics)" : IotAnalyticsAction,
+  "[IotEvents](#cfn-iot-topicrule-action-iotevents)" : IotEventsAction,
+  "[IotSiteWise](#cfn-iot-topicrule-action-iotsitewise)" : IotSiteWiseAction,
+  "[Kafka](#cfn-iot-topicrule-action-kafka)" : KafkaAction,
+  "[Kinesis](#cfn-iot-topicrule-action-kinesis)" : KinesisAction,
+  "[Lambda](#cfn-iot-topicrule-action-lambda)" : LambdaAction,
+  "[Republish](#cfn-iot-topicrule-action-republish)" : RepublishAction,
+  "[S3](#cfn-iot-topicrule-action-s3)" : S3Action,
+  "[Sns](#cfn-iot-topicrule-action-sns)" : SnsAction,
+  "[Sqs](#cfn-iot-topicrule-action-sqs)" : SqsAction,
+  "[StepFunctions](#cfn-iot-topicrule-action-stepfunctions)" : StepFunctionsAction,
+  "[Timestream](#cfn-iot-topicrule-action-timestream)" : TimestreamAction
 }
 ```
 
@@ -31,33 +37,45 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CloudwatchAlarm](#cfn-iot-topicrule-action-cloudwatchalarm): 
-    [CloudwatchAlarmAction](aws-properties-iot-topicrule-cloudwatchalarmaction.md)
+    CloudwatchAlarmAction
+  [CloudwatchLogs](#cfn-iot-topicrule-action-cloudwatchlogs): 
+    CloudwatchLogsAction
   [CloudwatchMetric](#cfn-iot-topicrule-action-cloudwatchmetric): 
-    [CloudwatchMetricAction](aws-properties-iot-topicrule-cloudwatchmetricaction.md)
+    CloudwatchMetricAction
   [DynamoDB](#cfn-iot-topicrule-action-dynamodb): 
-    [DynamoDBAction](aws-properties-iot-topicrule-dynamodbaction.md)
+    DynamoDBAction
   [DynamoDBv2](#cfn-iot-topicrule-action-dynamodbv2): 
-    [DynamoDBv2Action](aws-properties-iot-topicrule-dynamodbv2action.md)
+    DynamoDBv2Action
   [Elasticsearch](#cfn-iot-topicrule-action-elasticsearch): 
-    [ElasticsearchAction](aws-properties-iot-topicrule-elasticsearchaction.md)
+    ElasticsearchAction
   [Firehose](#cfn-iot-topicrule-action-firehose): 
-    [FirehoseAction](aws-properties-iot-topicrule-firehoseaction.md)
+    FirehoseAction
+  [Http](#cfn-iot-topicrule-action-http): 
+    HttpAction
   [IotAnalytics](#cfn-iot-topicrule-action-iotanalytics): 
-    [IotAnalyticsAction](aws-properties-iot-topicrule-iotanalyticsaction.md)
+    IotAnalyticsAction
+  [IotEvents](#cfn-iot-topicrule-action-iotevents): 
+    IotEventsAction
+  [IotSiteWise](#cfn-iot-topicrule-action-iotsitewise): 
+    IotSiteWiseAction
+  [Kafka](#cfn-iot-topicrule-action-kafka): 
+    KafkaAction
   [Kinesis](#cfn-iot-topicrule-action-kinesis): 
-    [KinesisAction](aws-properties-iot-topicrule-kinesisaction.md)
+    KinesisAction
   [Lambda](#cfn-iot-topicrule-action-lambda): 
-    [LambdaAction](aws-properties-iot-topicrule-lambdaaction.md)
+    LambdaAction
   [Republish](#cfn-iot-topicrule-action-republish): 
-    [RepublishAction](aws-properties-iot-topicrule-republishaction.md)
+    RepublishAction
   [S3](#cfn-iot-topicrule-action-s3): 
-    [S3Action](aws-properties-iot-topicrule-s3action.md)
+    S3Action
   [Sns](#cfn-iot-topicrule-action-sns): 
-    [SnsAction](aws-properties-iot-topicrule-snsaction.md)
+    SnsAction
   [Sqs](#cfn-iot-topicrule-action-sqs): 
-    [SqsAction](aws-properties-iot-topicrule-sqsaction.md)
+    SqsAction
   [StepFunctions](#cfn-iot-topicrule-action-stepfunctions): 
-    [StepFunctionsAction](aws-properties-iot-topicrule-stepfunctionsaction.md)
+    StepFunctionsAction
+  [Timestream](#cfn-iot-topicrule-action-timestream): 
+    TimestreamAction
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-action-properties"></a>
@@ -66,6 +84,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Change the state of a CloudWatch alarm\.  
 *Required*: No  
 *Type*: [CloudwatchAlarmAction](aws-properties-iot-topicrule-cloudwatchalarmaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CloudwatchLogs`  <a name="cfn-iot-topicrule-action-cloudwatchlogs"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [CloudwatchLogsAction](aws-properties-iot-topicrule-cloudwatchlogsaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CloudwatchMetric`  <a name="cfn-iot-topicrule-action-cloudwatchmetric"></a>
@@ -98,10 +122,34 @@ Write to an Amazon Kinesis Firehose stream\.
 *Type*: [FirehoseAction](aws-properties-iot-topicrule-firehoseaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Http`  <a name="cfn-iot-topicrule-action-http"></a>
+Send data to an HTTPS endpoint\.  
+*Required*: No  
+*Type*: [HttpAction](aws-properties-iot-topicrule-httpaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `IotAnalytics`  <a name="cfn-iot-topicrule-action-iotanalytics"></a>
 Sends message data to an AWS IoT Analytics channel\.  
 *Required*: No  
 *Type*: [IotAnalyticsAction](aws-properties-iot-topicrule-iotanalyticsaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IotEvents`  <a name="cfn-iot-topicrule-action-iotevents"></a>
+Sends an input to an AWS IoT Events detector\.  
+*Required*: No  
+*Type*: [IotEventsAction](aws-properties-iot-topicrule-ioteventsaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IotSiteWise`  <a name="cfn-iot-topicrule-action-iotsitewise"></a>
+Sends data from the MQTT message that triggered the rule to AWS IoT SiteWise asset properties\.  
+*Required*: No  
+*Type*: [IotSiteWiseAction](aws-properties-iot-topicrule-iotsitewiseaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Kafka`  <a name="cfn-iot-topicrule-action-kafka"></a>
+Send messages to an Amazon Managed Streaming for Apache Kafka \(Amazon MSK\) or self\-managed Apache Kafka cluster\.  
+*Required*: No  
+*Type*: [KafkaAction](aws-properties-iot-topicrule-kafkaaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Kinesis`  <a name="cfn-iot-topicrule-action-kinesis"></a>
@@ -144,4 +192,10 @@ Publish to an Amazon SQS queue\.
 Starts execution of a Step Functions state machine\.  
 *Required*: No  
 *Type*: [StepFunctionsAction](aws-properties-iot-topicrule-stepfunctionsaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Timestream`  <a name="cfn-iot-topicrule-action-timestream"></a>
+Writes attributes from an MQTT message\.  
+*Required*: No  
+*Type*: [TimestreamAction](aws-properties-iot-topicrule-timestreamaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

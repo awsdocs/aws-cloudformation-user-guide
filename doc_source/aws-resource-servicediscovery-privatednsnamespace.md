@@ -1,6 +1,6 @@
 # AWS::ServiceDiscovery::PrivateDnsNamespace<a name="aws-resource-servicediscovery-privatednsnamespace"></a>
 
-Creates a private namespace based on DNS, which will be visible only inside a specified Amazon VPC\. The namespace defines your service naming scheme\. For example, if you name your namespace `example.com` and name your service `backend`, the resulting DNS name for the service will be `backend.example.com`\. For the current limit on the number of namespaces that you can create using the same AWS account, see [AWS Cloud Map Limits](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html) in the *AWS Cloud Map Developer Guide*\.
+Creates a private namespace based on DNS, which is visible only inside a specified Amazon VPC\. The namespace defines your service naming scheme\. For example, if you name your namespace `example.com` and name your service `backend`, the resulting DNS name for the service is `backend.example.com`\. Service instances that are registered using a private DNS namespace can be discovered using either a `DiscoverInstances` request or using DNS\. For the current quota on the number of namespaces that you can create using the same AWS account, see [ AWS Cloud Map quotas](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html) in the * AWS Cloud Map Developer Guide*\.
 
 ## Syntax<a name="aws-resource-servicediscovery-privatednsnamespace-syntax"></a>
 
@@ -14,6 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-servicediscovery-privatednsnamespace-description)" : String,
       "[Name](#cfn-servicediscovery-privatednsnamespace-name)" : String,
+      "[Properties](#cfn-servicediscovery-privatednsnamespace-properties)" : Properties,
+      "[Tags](#cfn-servicediscovery-privatednsnamespace-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Vpc](#cfn-servicediscovery-privatednsnamespace-vpc)" : String
     }
 }
@@ -26,6 +28,10 @@ Type: AWS::ServiceDiscovery::PrivateDnsNamespace
 Properties: 
   [Description](#cfn-servicediscovery-privatednsnamespace-description): String
   [Name](#cfn-servicediscovery-privatednsnamespace-name): String
+  [Properties](#cfn-servicediscovery-privatednsnamespace-properties): 
+    Properties
+  [Tags](#cfn-servicediscovery-privatednsnamespace-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Vpc](#cfn-servicediscovery-privatednsnamespace-vpc): String
 ```
 
@@ -36,14 +42,28 @@ A description for the namespace\.
 *Required*: No  
 *Type*: String  
 *Maximum*: `1024`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-servicediscovery-privatednsnamespace-name"></a>
 The name that you want to assign to this namespace\. When you create a private DNS namespace, AWS Cloud Map automatically creates an Amazon Route 53 private hosted zone that has the same name as the namespace\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `1024`  
+*Pattern*: `^[!-~]{1,1024}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Properties`  <a name="cfn-servicediscovery-privatednsnamespace-properties"></a>
+Properties for the private DNS namespace\.  
+*Required*: No  
+*Type*: [Properties](aws-properties-servicediscovery-privatednsnamespace-properties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-servicediscovery-privatednsnamespace-tags"></a>
+The tags for the namespace\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
+*Update requires*: Updates are not supported\.
 
 `Vpc`  <a name="cfn-servicediscovery-privatednsnamespace-vpc"></a>
 The ID of the Amazon VPC that you want to associate the namespace with\.  
@@ -52,7 +72,7 @@ The ID of the Amazon VPC that you want to associate the namespace with\.
 *Maximum*: `64`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-servicediscovery-privatednsnamespace-return-values"></a>
+## Return values<a name="aws-resource-servicediscovery-privatednsnamespace-return-values"></a>
 
 ### Ref<a name="aws-resource-servicediscovery-privatednsnamespace-return-values-ref"></a>
 
@@ -76,6 +96,8 @@ The ID of the private namespace\.
 
 ## Examples<a name="aws-resource-servicediscovery-privatednsnamespace--examples"></a>
 
+
+
 ### Create a private DNS namespace<a name="aws-resource-servicediscovery-privatednsnamespace--examples--Create_a_private_DNS_namespace"></a>
 
 The following example creates a private DNS namespace named `private-example.com`\.
@@ -86,9 +108,16 @@ The following example creates a private DNS namespace named `private-example.com
 {
   "Type" : "AWS::ServiceDiscovery::PrivateDnsNamespace",
   "Properties" : {
-    "Description" : "Cloud Map private DNS namespace for resources for example.com website",
+    "Description" : "AWS Cloud Map private DNS namespace for resources for example.com website",
     "Vpc" : "vpc-12345678",
-    "Name" : "private-example.com"
+    "Name" : "private-example.com",
+    "Properties": {
+      "DnsProperties": {
+        "SOA": {
+          "TTL": 100
+        }
+      }
+    }
   }
 }
 ```
@@ -98,10 +127,15 @@ The following example creates a private DNS namespace named `private-example.com
 ```
 Type: 'AWS::ServiceDiscovery::PrivateDnsNamespace'
 Properties:
-  Description: Cloud Map private DNS namespace for resources for example.com website
+  Description: AWS Cloud Map private DNS namespace for resources for example.com website
   Vpc: vpc-12345678
   Name: private-example.com
+  Properties:
+    DnsProperties:
+      SOA:
+        TTL: 100
 ```
 
-## See Also<a name="aws-resource-servicediscovery-privatednsnamespace--seealso"></a>
-+  [CreatePrivateDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePrivateDnsNamespace.html) in the *AWS Cloud Map API Reference* 
+## See also<a name="aws-resource-servicediscovery-privatednsnamespace--seealso"></a>
++ [CreatePrivateDnsNamespace](https://docs.aws.amazon.com/cloud-map/latest/api/API_CreatePrivateDnsNamespace.html) in the *AWS Cloud Map API Reference*
+

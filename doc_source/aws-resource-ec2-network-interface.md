@@ -16,9 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[GroupSet](#cfn-awsec2networkinterface-groupset)" : [ String, ... ],
       "[InterfaceType](#cfn-ec2-networkinterface-interfacetype)" : String,
       "[Ipv6AddressCount](#cfn-ec2-networkinterface-ipv6addresscount)" : Integer,
-      "[Ipv6Addresses](#cfn-ec2-networkinterface-ipv6addresses)" : [InstanceIpv6Address](aws-properties-ec2-networkinterface-instanceipv6address.md),
+      "[Ipv6Addresses](#cfn-ec2-networkinterface-ipv6addresses)" : [ InstanceIpv6Address, ... ],
       "[PrivateIpAddress](#cfn-awsec2networkinterface-privateipaddress)" : String,
-      "[PrivateIpAddresses](#cfn-awsec2networkinterface-privateipaddresses)" : [ [PrivateIpAddressSpecification](aws-properties-ec2-network-interface-privateipspec.md), ... ],
+      "[PrivateIpAddresses](#cfn-awsec2networkinterface-privateipaddresses)" : [ PrivateIpAddressSpecification, ... ],
       "[SecondaryPrivateIpAddressCount](#cfn-awsec2networkinterface-secondaryprivateipcount)" : Integer,
       "[SourceDestCheck](#cfn-awsec2networkinterface-sourcedestcheck)" : Boolean,
       "[SubnetId](#cfn-awsec2networkinterface-subnetid)" : String,
@@ -38,10 +38,10 @@ Properties:
   [InterfaceType](#cfn-ec2-networkinterface-interfacetype): String
   [Ipv6AddressCount](#cfn-ec2-networkinterface-ipv6addresscount): Integer
   [Ipv6Addresses](#cfn-ec2-networkinterface-ipv6addresses): 
-    [InstanceIpv6Address](aws-properties-ec2-networkinterface-instanceipv6address.md)
+    - InstanceIpv6Address
   [PrivateIpAddress](#cfn-awsec2networkinterface-privateipaddress): String
   [PrivateIpAddresses](#cfn-awsec2networkinterface-privateipaddresses): 
-    - [PrivateIpAddressSpecification](aws-properties-ec2-network-interface-privateipspec.md)
+    - PrivateIpAddressSpecification
   [SecondaryPrivateIpAddressCount](#cfn-awsec2networkinterface-secondaryprivateipcount): Integer
   [SourceDestCheck](#cfn-awsec2networkinterface-sourcedestcheck): Boolean
   [SubnetId](#cfn-awsec2networkinterface-subnetid): String
@@ -64,10 +64,10 @@ A list of security group IDs associated with this network interface\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InterfaceType`  <a name="cfn-ec2-networkinterface-interfacetype"></a>
-The type of network interface\.  
+Indicates the type of network interface\. To create an Elastic Fabric Adapter \(EFA\), specify `efa`\. For more information, see [ Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon Elastic Compute Cloud User Guide*\. To create a trunk network interface, specify `efa`\. For more information, see [ Network interface trunking](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/eni-trunking.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `efa | interface | natGateway`  
+*Allowed values*: `branch | efa | trunk`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ipv6AddressCount`  <a name="cfn-ec2-networkinterface-ipv6addresscount"></a>
@@ -79,7 +79,7 @@ The number of IPv6 addresses to assign to a network interface\. Amazon EC2 autom
 `Ipv6Addresses`  <a name="cfn-ec2-networkinterface-ipv6addresses"></a>
 One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface\. If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and don't specify this property\.  
 *Required*: No  
-*Type*: [InstanceIpv6Address](aws-properties-ec2-networkinterface-instanceipv6address.md)  
+*Type*: List of [InstanceIpv6Address](aws-properties-ec2-networkinterface-instanceipv6address.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivateIpAddress`  <a name="cfn-awsec2networkinterface-privateipaddress"></a>
@@ -91,7 +91,8 @@ Assigns a single private IP address to the network interface, which is used as t
 `PrivateIpAddresses`  <a name="cfn-awsec2networkinterface-privateipaddresses"></a>
 Assigns a list of private IP addresses to the network interface\. You can specify a primary private IP address by setting the value of the `Primary` property to `true` in the `PrivateIpAddressSpecification` property\. If you want EC2 to automatically assign private IP addresses, use the `SecondaryPrivateIpAddressCount` property and do not specify this property\.  
 *Required*: No  
-*Type*: List of [PrivateIpAddressSpecification](aws-properties-ec2-network-interface-privateipspec.md)
+*Type*: List of [PrivateIpAddressSpecification](aws-properties-ec2-network-interface-privateipspec.md)  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `SecondaryPrivateIpAddressCount`  <a name="cfn-awsec2networkinterface-secondaryprivateipcount"></a>
 The number of secondary private IPv4 addresses to assign to a network interface\. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet's IPv4 CIDR range\. You can't specify this option and specify more than one private IP address using `privateIpAddresses`\.  
@@ -101,7 +102,7 @@ The number of IP addresses you can assign to a network interface varies by insta
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceDestCheck`  <a name="cfn-awsec2networkinterface-sourcedestcheck"></a>
-Indicates whether traffic to or from the instance is validated\.  
+Enable or disable source/destination checks, which ensure that the instance is either the source or the destination of any traffic that it receives\. If the value is `true`, source/destination checks are enabled; otherwise, they are disabled\. The default value is `true`\. You must disable source/destination checks if the instance runs services such as network address translation, routing, or firewalls\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -113,12 +114,12 @@ The ID of the subnet to associate with the network interface\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-awsec2networkinterface-tags"></a>
-An arbitrary set of tags \(key–value pairs\) for this network interface\.  
+An arbitrary set of tags \(key\-value pairs\) for this network interface\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-network-interface-return-values"></a>
+## Return values<a name="aws-resource-ec2-network-interface-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-network-interface-return-values-ref"></a>
 
@@ -142,21 +143,19 @@ Returns the secondary private IP addresses of the network interface\. For exampl
 
 ## Examples<a name="aws-resource-ec2-network-interface--examples"></a>
 
- *Tip* 
 
-For more `NetworkInterface` template examples, see [Elastic Network Interface \(ENI\) Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-template-snippets-eni.html)\.
 
-### Simple Standalone ENI<a name="aws-resource-ec2-network-interface--examples--Simple_Standalone_ENI"></a>
+### Basic network interface<a name="aws-resource-ec2-network-interface--examples--Basic_network_interface"></a>
 
-This is a simple standalone Elastic Network Interface \(ENI\), using all of the available properties\.
+This example creates a standalone elastic network interface \(ENI\)\. To learn how to attach this network interface to an instance at launch, see the next example on this page\.
 
-#### JSON<a name="aws-resource-ec2-network-interface--examples--Simple_Standalone_ENI--json"></a>
+#### JSON<a name="aws-resource-ec2-network-interface--examples--Basic_network_interface--json"></a>
 
 ```
 "myENI" : {
    "Type" : "AWS::EC2::NetworkInterface",
    "Properties" : {
-      "Tags": [{"Key":"foo","Value":"bar"}],
+      "Tags": [{"Key":"stack","Value":"production"}],
       "Description": "A nice description.",
       "SourceDestCheck": "false",
       "GroupSet": ["sg-75zzz219"],
@@ -166,15 +165,15 @@ This is a simple standalone Elastic Network Interface \(ENI\), using all of the 
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-network-interface--examples--Simple_Standalone_ENI--yaml"></a>
+#### YAML<a name="aws-resource-ec2-network-interface--examples--Basic_network_interface--yaml"></a>
 
 ```
    myENI:
       Type: AWS::EC2::NetworkInterface
       Properties:
          Tags:
-         - Key: foo
-           Value: bar
+         - Key: stack
+           Value: production
          Description: A nice description.
          SourceDestCheck: 'false'
          GroupSet:
@@ -183,11 +182,11 @@ This is a simple standalone Elastic Network Interface \(ENI\), using all of the 
          PrivateIpAddress: 10.0.0.16
 ```
 
-### ENI on an EC2 instance<a name="aws-resource-ec2-network-interface--examples--ENI_on_an_EC2_instance"></a>
+### Attach a network interface to an EC2 instance at launch<a name="aws-resource-ec2-network-interface--examples--Attach_a_network_interface_to_an_EC2_instance_at_launch"></a>
 
-This is an example of an ENI on an EC2 instance\. In this example, one ENI is added to the instance\. If you want to add more than one ENI, you can specify a list for the NetworkInterface property\. However, you can specify multiple ENIs only if all the ENIs have just private IP addresses \(no associated public IP address\)\. If you have an ENI with a public IP address, specify it and then use the `AWS::EC2::NetworkInterfaceAttachment` resource to add additional ENIs\.
+This example attaches a network interface an EC2 instance\. You can use the NetworkInterface property to add more than one network interface\. However, you can specify multiple network interfaces if they all have only private IP addresses \(no associated public IP address\)\. If you have a network interface with a public IP address, specify when you launch the instance and then use `AWS::EC2::NetworkInterfaceAttachment` to attach the additional network interfaces\.
 
-#### JSON<a name="aws-resource-ec2-network-interface--examples--ENI_on_an_EC2_instance--json"></a>
+#### JSON<a name="aws-resource-ec2-network-interface--examples--Attach_a_network_interface_to_an_EC2_instance_at_launch--json"></a>
 
 ```
 "Ec2Instance" : {
@@ -198,14 +197,14 @@ This is an example of an ENI on an EC2 instance\. In this example, one ENI is ad
       "SecurityGroupIds" : [{ "Ref" : "WebSecurityGroup" }],
       "SubnetId" : { "Ref" : "SubnetId" },
       "NetworkInterfaces" : [ {
-         "NetworkInterfaceId" : {"Ref" : "controlXface"}, "DeviceIndex" : "1" } ],
+         "NetworkInterfaceId" : {"Ref" : "myENI"}, "DeviceIndex" : "1" } ],
       "Tags" : [ {"Key" : "Role", "Value" : "Test Instance"}],
       "UserData" : { "Fn::Base64" : { "Ref" : "WebServerPort" }}
    }
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-network-interface--examples--ENI_on_an_EC2_instance--yaml"></a>
+#### YAML<a name="aws-resource-ec2-network-interface--examples--Attach_a_network_interface_to_an_EC2_instance_at_launch--yaml"></a>
 
 ```
 Ec2Instance:
@@ -224,8 +223,8 @@ Ec2Instance:
          Ref: SubnetId
       NetworkInterfaces:
       - NetworkInterfaceId:
-         Ref: controlXface
-         DeviceIndex: '1'
+         Ref: myENI
+        DeviceIndex: '0'
       Tags:
       - Key: Role
         Value: Test Instance
@@ -234,5 +233,6 @@ Ec2Instance:
             Ref: WebServerPort
 ```
 
-## See Also<a name="aws-resource-ec2-network-interface--seealso"></a>
+## See also<a name="aws-resource-ec2-network-interface--seealso"></a>
 + [NetworkInterface](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_NetworkInterface.html) in the *Amazon Elastic Compute Cloud API Reference*
+

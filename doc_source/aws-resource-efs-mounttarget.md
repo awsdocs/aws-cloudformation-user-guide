@@ -38,12 +38,17 @@ Properties:
 The ID of the file system for which to create the mount target\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `128`  
+*Pattern*: `^(arn:aws[-a-z]*:elasticfilesystem:[0-9a-z-:]+:file-system/fs-[0-9a-f]{8,40}|fs-[0-9a-f]{8,40})$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IpAddress`  <a name="cfn-efs-mounttarget-ipaddress"></a>
 Valid IPv4 address within the address range of the specified subnet\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `7`  
+*Maximum*: `15`  
+*Pattern*: `^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityGroups`  <a name="cfn-efs-mounttarget-securitygroups"></a>
@@ -54,12 +59,15 @@ Up to five VPC security group IDs, of the form `sg-xxxxxxxx`\. These must be for
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-efs-mounttarget-subnetid"></a>
-The ID of the subnet to add the mount target in\.  
+The ID of the subnet to add the mount target in\. For file systems that use One Zone storage classes, use the subnet that is associated with the file system's Availability Zone\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `15`  
+*Maximum*: `47`  
+*Pattern*: `^subnet-[0-9a-f]{8,40}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-efs-mounttarget-return-values"></a>
+## Return values<a name="aws-resource-efs-mounttarget-return-values"></a>
 
 ### Ref<a name="aws-resource-efs-mounttarget-return-values-ref"></a>
 
@@ -71,11 +79,24 @@ For the Amazon EFS file system mount target `fsmt-12345678`, Ref returns the mou
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-efs-mounttarget-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-efs-mounttarget-return-values-fn--getatt-fn--getatt"></a>
+
+`IpAddress`  <a name="IpAddress-fn::getatt"></a>
+The IPv4 address of the mount target\.
+
 ## Examples<a name="aws-resource-efs-mounttarget--examples"></a>
+
+
 
 ### Declare a Mount Target for an EFS File System<a name="aws-resource-efs-mounttarget--examples--Declare_a_Mount_Target_for_an_EFS_File_System"></a>
 
-The following example declares a mount target that is associated with a file system, subnet, and security group, which are all declared in the same template\. EC2 instances that are in the same Availability Zone \(AZ\) as the mount target can use the mount target to connect to the associated file system\. For information about mounting file systems on EC2 instances, see [Mounting File Systems](efs/latest/ug/mounting-fs.html) in the *EFS User Guide*\.
+The following example declares a mount target that is associated with a file system, subnet, and security group, which are all declared in the same template\. EC2 instances that are in the same Availability Zone \(AZ\) as the mount target can use the mount target to connect to the associated file system\. For information about mounting file systems on EC2 instances, see [Mounting File Systems](https://docs.aws.amazon.com/efs/latest/ug/mounting-fs.html) in the *EFS User Guide*\.
 
 #### JSON<a name="aws-resource-efs-mounttarget--examples--Declare_a_Mount_Target_for_an_EFS_File_System--json"></a>
 
@@ -101,11 +122,11 @@ MountTarget:
     SubnetId: 
       Ref: "Subnet"
     SecurityGroups: 
-      - 
-Ref: "MountTargetSecurityGroup"
+      - Ref: "MountTargetSecurityGroup"
 ```
 
-## See Also<a name="aws-resource-efs-mounttarget--seealso"></a>
-+  [Amazon EFS: How It Works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html) 
-+  [Creating Mount Targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) 
-+  [Walkthrough: Mounting a File System On\-Premises](https://docs.aws.amazon.com/efs/latest/ug/efs-onpremises.html) 
+## See also<a name="aws-resource-efs-mounttarget--seealso"></a>
++  [Amazon EFS: How it works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html) 
++  [Creating mount targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) 
++  [Walkthrough: Mounting a file system on\-premises](https://docs.aws.amazon.com/efs/latest/ug/efs-onpremises.html) 
+

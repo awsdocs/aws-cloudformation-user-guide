@@ -35,10 +35,10 @@ Properties:
 The placement strategy\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `cluster | partition | spread`  
+*Allowed values*: `cluster | partition | spread`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-placementgroup-return-values"></a>
+## Return values<a name="aws-resource-ec2-placementgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-placementgroup-return-values-ref"></a>
 
@@ -48,11 +48,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-placementgroup--examples"></a>
 
-### Create a Placement Group<a name="aws-resource-ec2-placementgroup--examples--Create_a_Placement_Group"></a>
+
+
+### Create a placement group<a name="aws-resource-ec2-placementgroup--examples--Create_a_placement_group"></a>
 
 The following example declares a placement group with a cluster placement strategy\. 
 
-#### JSON<a name="aws-resource-ec2-placementgroup--examples--Create_a_Placement_Group--json"></a>
+#### JSON<a name="aws-resource-ec2-placementgroup--examples--Create_a_placement_group--json"></a>
 
 ```
 "PlacementGroup" : {
@@ -63,7 +65,7 @@ The following example declares a placement group with a cluster placement strate
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-placementgroup--examples--Create_a_Placement_Group--yaml"></a>
+#### YAML<a name="aws-resource-ec2-placementgroup--examples--Create_a_placement_group--yaml"></a>
 
 ```
 PlacementGroup:

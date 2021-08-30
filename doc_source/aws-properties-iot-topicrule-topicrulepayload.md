@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Actions](#cfn-iot-topicrule-topicrulepayload-actions)" : [ [Action](aws-properties-iot-topicrule-action.md), ... ],
+  "[Actions](#cfn-iot-topicrule-topicrulepayload-actions)" : [ Action, ... ],
   "[AwsIotSqlVersion](#cfn-iot-topicrule-topicrulepayload-awsiotsqlversion)" : String,
   "[Description](#cfn-iot-topicrule-topicrulepayload-description)" : String,
-  "[ErrorAction](#cfn-iot-topicrule-topicrulepayload-erroraction)" : [Action](aws-properties-iot-topicrule-action.md),
+  "[ErrorAction](#cfn-iot-topicrule-topicrulepayload-erroraction)" : Action,
   "[RuleDisabled](#cfn-iot-topicrule-topicrulepayload-ruledisabled)" : Boolean,
   "[Sql](#cfn-iot-topicrule-topicrulepayload-sql)" : String
 }
@@ -23,11 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Actions](#cfn-iot-topicrule-topicrulepayload-actions): 
-    - [Action](aws-properties-iot-topicrule-action.md)
+    - Action
   [AwsIotSqlVersion](#cfn-iot-topicrule-topicrulepayload-awsiotsqlversion): String
   [Description](#cfn-iot-topicrule-topicrulepayload-description): String
   [ErrorAction](#cfn-iot-topicrule-topicrulepayload-erroraction): 
-    [Action](aws-properties-iot-topicrule-action.md)
+    Action
   [RuleDisabled](#cfn-iot-topicrule-topicrulepayload-ruledisabled): Boolean
   [Sql](#cfn-iot-topicrule-topicrulepayload-sql): String
 ```
@@ -42,6 +42,7 @@ The actions associated with the rule\.
 
 `AwsIotSqlVersion`  <a name="cfn-iot-topicrule-topicrulepayload-awsiotsqlversion"></a>
 The version of the SQL rules engine to use when evaluating the rule\.  
+The default value is 2015\-10\-08\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -60,12 +61,12 @@ The action to take when an error occurs\.
 
 `RuleDisabled`  <a name="cfn-iot-topicrule-topicrulepayload-ruledisabled"></a>
 Specifies whether the rule is disabled\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Sql`  <a name="cfn-iot-topicrule-topicrulepayload-sql"></a>
-The SQL statement used to query the topic\. For more information, see [AWS IoT SQL Reference](https://docs.aws.amazon.com/iot/latest/developerguide/iot-rules.html#aws-iot-sql-reference) in the *AWS IoT Developer Guide*\.  
+The SQL statement used to query the topic\. For more information, see [ AWS IoT SQL Reference](https://docs.aws.amazon.com/iot/latest/developerguide/iot-sql-reference.html) in the * AWS IoT Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
