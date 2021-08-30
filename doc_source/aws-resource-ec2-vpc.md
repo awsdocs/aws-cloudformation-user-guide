@@ -117,10 +117,11 @@ The following example specifies a VPC\.
    "Type" : "AWS::EC2::VPC",
    "Properties" : {
       "CidrBlock" : "10.0.0.0/16",
-      "EnableDnsSupport" : "false",
-      "EnableDnsHostnames" : "false",
-      "InstanceTenancy" : "default",
-      "Tags" : [ {"Key" : "stack", "Value" : "production"} ]
+      "EnableDnsSupport" : "true",
+      "EnableDnsHostnames" : "true",
+      "Tags" : [ 
+         {"Key" : "stack", "Value" : "production"} 
+      ]
    }
 }
 ```
@@ -132,9 +133,8 @@ myVPC:
   Type: AWS::EC2::VPC
   Properties:
     CidrBlock: 10.0.0.0/16
-    EnableDnsSupport: 'false'
-    EnableDnsHostnames: 'false'
-    InstanceTenancy: default
+    EnableDnsSupport: 'true'
+    EnableDnsHostnames: 'true'
     Tags:
      - Key: stack
        Value: production
