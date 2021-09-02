@@ -174,7 +174,6 @@ Places an Object Lock configuration on the specified bucket\. The rule specified
 Indicates whether this bucket has an Object Lock configuration enabled\. Enable `ObjectLockEnabled` when you apply `ObjectLockConfiguration` to a bucket\.   
 *Required*: No  
 *Type*: Boolean  
-*Allowed values*: `Enabled`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OwnershipControls`  <a name="cfn-s3-bucket-ownershipcontrols"></a>
