@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-synthetics-canary-code-properties"></a>
 
 `Handler`  <a name="cfn-synthetics-canary-code-handler"></a>
-The entry point to use for the source code when running the canary\. This value must end with the string `.handler`\. The string is limited to 29 characters or fewer\.  
+The entry point to use for the source code when running the canary\. This value must be `pageLoadBlueprint.handler`\.  
 *Required*: Conditional  
 *Type*: String  
 *Minimum*: `1`  
