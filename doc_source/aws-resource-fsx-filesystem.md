@@ -57,14 +57,14 @@ The ID of the source backup\. Specifies the backup you are copying\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FileSystemType`  <a name="cfn-fsx-filesystem-filesystemtype"></a>
-The type of Amazon FSx file system, either `LUSTRE` or `WINDOWS`\.  
+The type of Amazon FSx file system, which can be `LUSTRE`, `WINDOWS`, or `ONTAP`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `LUSTRE | WINDOWS`  
+*Allowed values*: `LUSTRE | ONTAP | WINDOWS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-fsx-filesystem-kmskeyid"></a>
-The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the file system's data for Amazon FSx for Windows File Server file systems and persistent Amazon FSx for Lustre file systems at rest\. In either case, if not specified, the Amazon FSx managed key is used\. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using Amazon FSx managed keys\. For more information, see [Encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) in the * AWS Key Management Service API Reference*\.  
+The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the file system's data for Amazon FSx for Windows File Server file systems, Amazon FSx for NetApp ONTAP file systems, and persistent Amazon FSx for Lustre file systems at rest\. If not specified, the Amazon FSx managed key is used\. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using Amazon FSx managed keys\. For more information, see [Encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) in the * AWS Key Management Service API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -99,7 +99,7 @@ For Windows file systems:
 
 `StorageType`  <a name="cfn-fsx-filesystem-storagetype"></a>
 Sets the storage type for the file system you're creating\. Valid values are `SSD` and `HDD`\.  
-+ Set to `SSD` to use solid state drive storage\. SSD is supported on all Windows and Lustre deployment types\.
++ Set to `SSD` to use solid state drive storage\. SSD is supported on all Windows, Lustre, and ONTAP deployment types\.
 + Set to `HDD` to use hard disk drive storage\. HDD is supported on `SINGLE_AZ_2` and `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT` Lustre file system deployment types\. 
  Default value is `SSD`\. For more information, see [ Storage Type Options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options) in the *Amazon FSx for Windows User Guide* and [Multiple Storage Options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options) in the *Amazon FSx for Lustre User Guide*\.   
 *Required*: No  
@@ -108,7 +108,7 @@ Sets the storage type for the file system you're creating\. Valid values are `SS
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-fsx-filesystem-subnetids"></a>
-Specifies the IDs of the subnets that the file system will be accessible from\. For Windows `MULTI_AZ_1` file system deployment types, provide exactly two subnet IDs, one for the preferred file server and one for the standby file server\. You specify one of these subnets as the preferred subnet using the `WindowsConfiguration > PreferredSubnetID` property\. For more information, see [ Availability and durability: Single\-AZ and Multi\-AZ file systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html)\.  
+Specifies the IDs of the subnets that the file system will be accessible from\. For Windows and ONTAP `MULTI_AZ_1` file system deployment types, provide exactly two subnet IDs, one for the preferred file server and one for the standby file server\. You specify one of these subnets as the preferred subnet using the `WindowsConfiguration > PreferredSubnetID` or `OntapConfiguration > PreferredSubnetID` properties\. For more information, see [ Availability and durability: Single\-AZ and Multi\-AZ file systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html) in the *Amazon FSx for Windows User Guide* and [ Availability and durability](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html) in the *Amazon FSx for ONTAP User Guide*\.  
 For Windows `SINGLE_AZ_1` and `SINGLE_AZ_2` file system deployment types and Lustre file systems, provide exactly one subnet ID\. The file server is launched in that subnet's Availability Zone\.  
 *Required*: Yes  
 *Type*: List of String  

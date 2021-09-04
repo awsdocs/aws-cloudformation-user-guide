@@ -366,38 +366,192 @@ myEC2:
 }
 ```
 
-### Create a Systems Manager document that enables you to send JSON content as a string<a name="aws-resource-ssm-document--examples--Create_a__document_that_enables_you_to_send_JSON_content_as_a_string"></a>
+### Create a Systems Manager document for Session Manager preferences<a name="aws-resource-ssm-document--examples--Create_a__document_for_Session_Manager_preferences"></a>
 
-The following example creates a new Systems Manager command document\. The document enables you to send JSON content as a string\.
+The following example creates a Systems Manager `Session` type document for Session Manager preferences\. Before using this example template replace the placeholder values\.
 
-#### JSON<a name="aws-resource-ssm-document--examples--Create_a__document_that_enables_you_to_send_JSON_content_as_a_string--json"></a>
+#### JSON<a name="aws-resource-ssm-document--examples--Create_a__document_for_Session_Manager_preferences--json"></a>
 
 ```
----
-Type: AWS::SSM::Document
-Properties:
-  Content: '{"schemaVersion": "2.2",  "description": "Command Document Example JSON
-    Template",  "parameters": {    "Message": {      "type": "String", "description":
-    "Example",      "default": "Hello World"    }  },  "mainSteps": [    { "action":
-    "aws:runPowerShellScript",      "name": "example",      "inputs": {        "runCommand":
-    [ "Write-Output {{Message}}" ]      }    }  ]}'
-  DocumentType: Command
+{
+   "Resources":{
+      "SessionPreferencesDocument":{
+         "Type":"AWS::SSM::Document",
+         "Properties":{
+            "Name":"SSM-SessionManagerRunShell",
+            "Content":{
+               "schemaVersion":"1.0",
+               "description":"Document to hold regional settings for Session Manager",
+               "sessionType":"Standard_Stream",
+               "inputs":{
+                  "s3BucketName":"DOC-EXAMPLE-BUCKET",
+                  "s3KeyPrefix":"MyBucketPrefix",
+                  "s3EncryptionEnabled":true,
+                  "cloudWatchLogGroupName":"MyLogGroupName",
+                  "cloudWatchEncryptionEnabled":true,
+                  "cloudWatchStreamingEnabled":false,
+                  "kmsKeyId":"MyKMSKeyID",
+                  "runAsEnabled":false,
+                  "runAsDefaultUser":"MyDefaultRunAsUser",
+                  "idleSessionTimeout":"20",
+                  "shellProfile":{
+                     "windows":"example commands",
+                     "linux":"example commands"
+                  }
+               }
+            },
+            "DocumentType":"Session"
+         }
+      }
+   },
+   "Outputs":{
+      "DocumentName":{
+         "Description":"Session Manager preferences document",
+         "Value":"SSM-SessionManagerRunShell"
+      }
+   }
+}
+```
+
+#### YAML<a name="aws-resource-ssm-document--examples--Create_a__document_for_Session_Manager_preferences--yaml"></a>
+
+```
+Resources:
+  SessionPreferencesDocument:
+    Type: AWS::SSM::Document
+    Properties:
+      Name: SSM-SessionManagerRunShell
+      Content:
+        schemaVersion: '1.0'
+        description: Document to hold regional settings for Session Manager
+        sessionType: Standard_Stream
+        inputs:
+          s3BucketName: 'DOC-EXAMPLE-BUCKET'
+          s3KeyPrefix: 'MyBucketPrefix'
+          s3EncryptionEnabled: true
+          cloudWatchLogGroupName: 'MyLogGroupName'
+          cloudWatchEncryptionEnabled: true
+          cloudWatchStreamingEnabled: false
+          kmsKeyId: 'MyKMSKeyID'
+          runAsEnabled: false
+          runAsDefaultUser: 'MyDefaultRunAsUser'
+          idleSessionTimeout: '20'
+          shellProfile:
+            windows: example commands
+            linux: example commands
+      DocumentType: Session
+Outputs:
+  DocumentName:
+    Description: "Session Manager preferences document"
+    Value: SSM-SessionManagerRunShell
+```
+
+### Create a Systems Manager document with JSON content<a name="aws-resource-ssm-document--examples--Create_a__document_with_JSON_content"></a>
+
+The following example creates a new Systems Manager command document with JSON content\.
+
+#### JSON<a name="aws-resource-ssm-document--examples--Create_a__document_with_JSON_content--json"></a>
+
+```
+{
+   "Type":"AWS::SSM::Document",
+   "Properties":{
+      "Content":"{\"schemaVersion\": \"2.2\",  \"description\": \"Command Document Example JSON\nTemplate\",  \"parameters\": {    \"Message\": {      \"type\": \"String\", \"description\":\n\"Example\",      \"default\": \"Hello World\"    }  },  \"mainSteps\": [    { \"action\":\n\"aws:runPowerShellScript\",      \"name\": \"example\",      \"inputs\": {        \"runCommand\":\n[ \"Write-Output {{Message}}\" ]      }    }  ]}",
+      "DocumentType":"Command",
+      "DocumentFormat":"JSON"
+   }
+}
+```
+
+#### YAML<a name="aws-resource-ssm-document--examples--Create_a__document_with_JSON_content--yaml"></a>
+
+```
+--- 
+Type: "AWS::SSM::Document"
+Properties: 
+  Content: "{\"schemaVersion\": \"2.2\",  \"description\": \"Command Document Example JSON Template\",  \"parameters\": {    \"Message\": {      \"type\": \"String\", \"description\": \"Example\",      \"default\": \"Hello World\"    }  },  \"mainSteps\": [    { \"action\": \"aws:runPowerShellScript\",      \"name\": \"example\",      \"inputs\": {        \"runCommand\": [ \"Write-Output {{Message}}\" ]      }    }  ]}"
   DocumentFormat: JSON
-```
-
-#### YAML<a name="aws-resource-ssm-document--examples--Create_a__document_that_enables_you_to_send_JSON_content_as_a_string--yaml"></a>
-
-```
----
-Type: AWS::SSM::Document
-Properties:
-  Content: '{"schemaVersion": "2.2",  "description": "Command Document Example JSON
-    Template",  "parameters": {    "Message": {      "type": "String", "description":
-    "Example",      "default": "Hello World"    }  },  "mainSteps": [    { "action":
-    "aws:runPowerShellScript",      "name": "example",      "inputs": {        "runCommand":
-    [ "Write-Output {{Message}}" ]      }    }  ]}'
   DocumentType: Command
-  DocumentFormat: JSON
+```
+
+### Create a Systems Manager Distributor package<a name="aws-resource-ssm-document--examples--Create_a__Distributor_package"></a>
+
+The following example creates a new Systems Manager Distributor package\.
+
+#### JSON<a name="aws-resource-ssm-document--examples--Create_a__Distributor_package--json"></a>
+
+```
+{
+        "Resources": {
+        "ExamplePackageDocument": {
+            "Type": "AWS::SSM::Document",
+            "Properties": {
+                "Content": "{\"files\": {\"NewPackage_WINDOWS.zip\": {\"checksums\": {\"sha256\": \"36aeb0ec2c706013cf8c68163459678f7f6daa9489cd3f91d52799331EXAMPLE\"}}}, \"publisher\": \"publisherName\", \"schemaVersion\": \"2.0\", \"packages\": {\"_any\": {\"_any\": {\"x86_64\": {\"file\": \"NewPackage_WINDOWS.zip\"}}}}, \"version\": \"1.0\"}",
+                "DocumentType": "Package",
+                "Attachments": [
+                    {
+                        "Key": "SourceUrl",
+                        "Values": [
+                            "s3://example-package-path/valid-package"
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-ssm-document--examples--Create_a__Distributor_package--yaml"></a>
+
+```
+Resources:
+  ExamplePackageDocument:
+    Type: AWS::SSM::Document
+    Properties:
+      Content: '{\"files\": {\"NewPackage_WINDOWS.zip\": {\"checksums\":
+        {\"sha256\": \"36aeb0ec2c706013cf8c68163459678f7f6daa9489cd3f91d52799331EXAMPLE\"}}},
+        \"publisher\": \"publisherName\", \"schemaVersion\":
+        \"2.0\", \"packages\": {\"_any\": {\"_any\": {\"x86_64\": {\"file\": \"NewPackage_WINDOWS.zip\"}}}},
+        \"version\": \"1.0\"}'
+      DocumentType: Package
+      Attachments:
+      - Key: SourceUrl
+        Values:
+        - "s3://example-package-path/valid-package"
+```
+
+### Create a Systems Manager Change Calendar document<a name="aws-resource-ssm-document--examples--Create_a__Change_Calendar_document"></a>
+
+The following example creates a new Systems Manager Change Calendar document\.
+
+#### JSON<a name="aws-resource-ssm-document--examples--Create_a__Change_Calendar_document--json"></a>
+
+```
+{
+   "Resources":{
+      "ExampleChangeCalendarDocument":{
+         "Type":"AWS::SSM::Document",
+         "Properties":{
+            "Content":"BEGIN:VCALENDAR\r\nPRODID:-//AWS//Change Calendar 1.0//EN\r\nVERSION:2.0\r\nX-CALENDAR-TYPE:DEFAULT_OPEN\r\nX-WR-CALDESC:test\r\nBEGIN:VTODO\r\nDTSTAMP:20200320T004207Z\r\nUID:3b5af39a-d0b3-4049-a839-d7bb8af01f92\r\nSUMMARY:Add events to this calendar.\r\nEND:VTODO\r\nEND:VCALENDAR\r\n",
+            "DocumentType":"ChangeCalendar",
+            "DocumentFormat":"TEXT"
+         }
+      }
+   }
+}
+```
+
+#### YAML<a name="aws-resource-ssm-document--examples--Create_a__Change_Calendar_document--yaml"></a>
+
+```
+Resources:
+  ExampleChangeCalendarDocument:
+    Type: 'AWS::SSM::Document'
+    Properties:
+      Content: "BEGIN:VCALENDAR\r\nPRODID:-//AWS//Change Calendar 1.0//EN\r\nVERSION:2.0\r\nX-CALENDAR-TYPE:DEFAULT_OPEN\r\nX-WR-CALDESC:test\r\nBEGIN:VTODO\r\nDTSTAMP:20200320T004207Z\r\nUID:3b5af39a-d0b3-4049-a839-d7bb8af01f92\r\nSUMMARY:Add events to this calendar.\r\nEND:VTODO\r\nEND:VCALENDAR\r\n"
+      DocumentType: ChangeCalendar
+      DocumentFormat: TEXT
 ```
 
 ## See also<a name="aws-resource-ssm-document--seealso"></a>

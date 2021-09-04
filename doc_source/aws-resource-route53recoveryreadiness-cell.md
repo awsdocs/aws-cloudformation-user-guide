@@ -40,7 +40,7 @@ The name of the cell to create\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Cells`  <a name="cfn-route53recoveryreadiness-cell-cells"></a>
-A list of cell Amazon Resource Names \(ARNs\) contained within this cell, for use in nested cells\. For example, Availability Zones within specific Regions\.  
+A list of cell Amazon Resource Names \(ARNs\) contained within this cell, for use in nested cells\. For example, Availability Zones within specific AWS Regions\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

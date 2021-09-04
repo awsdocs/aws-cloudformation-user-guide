@@ -33,13 +33,13 @@ Properties:
 
 `ClusterArn`  <a name="cfn-route53recoverycontrol-routingcontrol-clusterarn"></a>
 The Amazon Resource Name \(ARN\) of the cluster that includes the routing control\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ControlPanelArn`  <a name="cfn-route53recoverycontrol-routingcontrol-controlpanelarn"></a>
 The Amazon Resource Name \(ARN\) of the control panel that includes the routing control\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -47,7 +47,7 @@ The Amazon Resource Name \(ARN\) of the control panel that includes the routing 
 The name of the routing control\. You can use any non\-white space character in the name\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-route53recoverycontrol-routingcontrol-return-values"></a>
 

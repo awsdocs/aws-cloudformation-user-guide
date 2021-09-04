@@ -115,7 +115,7 @@ The import operation fails if you modify existing parameters that initiate a cre
 1. The **Events** pane of the **Stack details** page for your parent stack displays\.  
 ![\[The Events tab in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/import-events.png)
 **Note**  
-It's not necessary to run drift detection on the parent stack after this import operation because the `AWS::CloudFormation::Stack`resource was already managed by AWS CloudFormation\.
+It's not necessary to run drift detection on the parent stack after this import operation because the `AWS::CloudFormation::Stack` resource was already managed by AWS CloudFormation\.
 
 ## Nest an existing stack using the AWS CLI<a name="resource-import-nested-stacks-cli"></a>
 

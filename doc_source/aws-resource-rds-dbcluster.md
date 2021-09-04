@@ -17,6 +17,8 @@ If you want to restore your DB cluster using a DB cluster snapshot, modify the u
 After you restore a DB cluster with a `SnapshotIdentifier` property, you must specify the same `SnapshotIdentifier` property for any future updates to the DB cluster\. When you specify this property for an update, the DB cluster is not restored from the DB cluster snapshot again, and the data in the database is not changed\. However, if you don't specify the `SnapshotIdentifier` property, an empty DB cluster is created, and the original DB cluster is deleted\. If you specify a property that is different from the previous snapshot restore property, a new DB cluster is restored from the specified `SnapshotIdentifier` property, and the original DB cluster is deleted\.
 Update the stack\.
 
+Currently, when you are updating the stack for an Aurora Serverless DB cluster, you can't include changes to any other properties when you specify one of the following properties: `PreferredBackupWindow`, `PreferredMaintenanceWindow`, and `Port`\. This limitation doesn't apply to provisioned DB clusters\.
+
 For more information about updating other properties of this resource, see ` [ModifyDBCluster](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBCluster.html)`\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)\.
 
 **Deleting DB clusters**

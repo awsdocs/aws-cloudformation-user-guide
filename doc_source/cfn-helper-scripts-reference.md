@@ -19,7 +19,7 @@ The CloudFormation helper scripts are preinstalled on Amazon Linux AMI images\.
 
 ## Downloading packages for other platforms<a name="cfn-helper-scripts-reference-downloads"></a>
 
-For Linux/Unix distributions other than Amazon Linux AMI images and for Microsoft Windows \(2008 or later\), you can download the aws\-cfn\-bootstrap package\.
+<a name="cfn-helper-scripts-reference-downloads"></a>For Linux/Unix distributions other than Amazon Linux AMI images and for Microsoft Windows \(2008 or later\), you can download the aws\-cfn\-bootstrap package\.
 
 **Note**  
 Version 2\.0–1 and above of the helper scripts support Python 3\.4 and above\. If you need helper scripts that support an earlier version of Python, see [Release History for CloudFormation Helper Scripts 1\.4](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html#releasehistory-aws-cfn-bootstrap-v1)\.
@@ -46,31 +46,9 @@ If you do specify an option, keep in mind which permissions the various helper s
 
 For more information on using CloudFormation\-specific actions and condition context keys in IAM policies, see [Controlling access with AWS Identity and Access Management](using-iam-template.md)\.
 
-## Displaying the current version<a name="cfn-helper-scripts-reference-display-version"></a>
-
-To display the installed version of helper scripts, do the following:
-
-**Windows**
-
-1. In the **Search** box, type "Apps and Features"\.
-
-1. Choose *aws\-cfn\-bootstrap*\.
-
-   The version is displayed in the list of apps open for aws\-cfn\-bootstrap\.
-
-**Linux**
-
-In your terminal, run `sudo apt list aws-cfn-bootstrap`\.
-
 ## Using the latest version<a name="cfn-helper-scripts-reference-latest-version"></a>
 
-The helper scripts are updated periodically\. If you use the helper scripts, ensure that your launched instances are using the latest version of the scripts\.
-
-**Windows**
-
-Download and install [the latest version](#cfn-helper-scripts-reference-downloads)\.
-
-**Linux**
+The helper scripts are updated periodically\. If you use the helper scripts, ensure that your launched instances are using the latest version of the scripts:
 + Include the following command in the `UserData` property of your template before you call the scripts\. This command ensures that you get the latest version:
 
   `yum install -y aws-cfn-bootstrap`
@@ -94,7 +72,6 @@ For the version history of the aws\-cfn\-bootstrap package, see [Release history
 + [Amazon Linux AMI images](#cfn-helper-scripts-reference-amazon-amis)
 + [Downloading packages for other platforms](#cfn-helper-scripts-reference-downloads)
 + [Permissions for helper scripts](#cfn-helper-scripts-reference-permissions)
-+ [Displaying the current version](#cfn-helper-scripts-reference-display-version)
 + [Using the latest version](#cfn-helper-scripts-reference-latest-version)
 + [cfn\-init](cfn-init.md)
 + [cfn\-signal](cfn-signal.md)

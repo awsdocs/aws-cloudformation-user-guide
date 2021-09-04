@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CloudWatchLogGroupArn](#cfn-datasync-task-cloudwatchloggrouparn)" : String,
       "[DestinationLocationArn](#cfn-datasync-task-destinationlocationarn)" : String,
       "[Excludes](#cfn-datasync-task-excludes)" : [ FilterRule, ... ],
+      "[Includes](#cfn-datasync-task-includes)" : [ FilterRule, ... ],
       "[Name](#cfn-datasync-task-name)" : String,
       "[Options](#cfn-datasync-task-options)" : Options,
       "[Schedule](#cfn-datasync-task-schedule)" : TaskSchedule,
@@ -32,6 +33,8 @@ Properties:
   [CloudWatchLogGroupArn](#cfn-datasync-task-cloudwatchloggrouparn): String
   [DestinationLocationArn](#cfn-datasync-task-destinationlocationarn): String
   [Excludes](#cfn-datasync-task-excludes): 
+    - FilterRule
+  [Includes](#cfn-datasync-task-includes): 
     - FilterRule
   [Name](#cfn-datasync-task-name): String
   [Options](#cfn-datasync-task-options): 
@@ -64,6 +67,13 @@ The Amazon Resource Name \(ARN\) of an AWS storage resource's location\.
 `Excludes`  <a name="cfn-datasync-task-excludes"></a>
 A list of filter rules that determines which files to exclude from a task\. The list should contain a single filter string that consists of the patterns to exclude\. The patterns are delimited by "\|" \(that is, a pipe\), for example, `"/folder1|/folder2"`\.   
    
+*Required*: No  
+*Type*: List of [FilterRule](aws-properties-datasync-task-filterrule.md)  
+*Maximum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Includes`  <a name="cfn-datasync-task-includes"></a>
+A list of filter rules that determines which files to include when running a task\. The pattern contains a single filter string that consists of the patterns to include\. The patterns are delimited by "\|" \(that is, a pipe\), for example, `"/folder1|/folder2"`\.  
 *Required*: No  
 *Type*: List of [FilterRule](aws-properties-datasync-task-filterrule.md)  
 *Maximum*: `1`  

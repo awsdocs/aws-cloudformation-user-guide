@@ -1,6 +1,6 @@
 # AWS::ElastiCache::CacheCluster KinesisFirehoseDestinationDetails<a name="aws-properties-elasticache-cachecluster-kinesisfirehosedestinationdetails"></a>
 
-The configuration details of the Kinesis Data Firehose destination\.
+The configuration details of the Kinesis Data Firehose destination\. Note that this field is marked as required but only if Kinesis Data Firehose was chosen as the destination\.
 
 ## Syntax<a name="aws-properties-elasticache-cachecluster-kinesisfirehosedestinationdetails-syntax"></a>
 

@@ -60,3 +60,124 @@ The `InputTemplate` can also be valid JSON with varibles in quotes or out, as in
 *Minimum*: `1`  
 *Maximum*: `8192`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-events-rule-inputtransformer--examples"></a>
+
+
+
+### Transform input into a string<a name="aws-properties-events-rule-inputtransformer--examples--Transform_input_into_a_string"></a>
+
+The following example takes `instance` and `state` and outputs a string\. 
+
+#### JSON<a name="aws-properties-events-rule-inputtransformer--examples--Transform_input_into_a_string--json"></a>
+
+```
+"InputTransformer": {
+    "InputPathsMap": {
+       "instance": "$.detail.instance-id",
+       "state": "$.detail.state"
+    },
+    "InputTemplate": "\"instance <instance> is in <state>\"\n  }\n"
+}
+```
+
+#### YAML<a name="aws-properties-events-rule-inputtransformer--examples--Transform_input_into_a_string--yaml"></a>
+
+```
+InputTransformer:
+  InputPathsMap:
+    "instance" : "$.detail.instance-id"
+    "state" : "$.detail.state"
+  InputTemplate: |
+    "instance <instance> is in <state>"
+```
+
+### Transform input into JSON<a name="aws-properties-events-rule-inputtransformer--examples--Transform_input_into_JSON"></a>
+
+The following example takes `instance` and `state` and outputs JSON that includes strings and variables\.
+
+#### JSON<a name="aws-properties-events-rule-inputtransformer--examples--Transform_input_into_JSON--json"></a>
+
+```
+"InputTransformer": {
+    "InputPathsMap": {
+       "instance": "$.detail.instance-id",
+       "state": "$.detail.state"
+    },
+    "InputTemplate": "{\n   \"instance\" : <instance>,\n   \"state\" : <state>,\n   \"instanceStatus\": \"instance \\\"<instance>\\\" is in <state>\"\n}\n"
+}
+```
+
+#### YAML<a name="aws-properties-events-rule-inputtransformer--examples--Transform_input_into_JSON--yaml"></a>
+
+```
+InputTransformer:
+  InputPathsMap:
+    "instance" : "$.detail.instance-id"
+    "state" : "$.detail.state"
+  InputTemplate: |
+    {
+       "instance" : <instance>,
+       "state" : <state>,
+       "instanceStatus": "instance \"<instance>\" is in <state>"
+    }
+```
+
+### Transform input and substitute a variable<a name="aws-properties-events-rule-inputtransformer--examples--Transform_input_and_substitute_a_variable"></a>
+
+The following example defines a variable `RootDomainName`\. It then takes `instance` and `state`, substitutes `RootDomainName` for `domain`, and outputs JSON\.
+
+#### JSON<a name="aws-properties-events-rule-inputtransformer--examples--Transform_input_and_substitute_a_variable--json"></a>
+
+```
+"Parameters": {
+    "RootDomainName": {
+        "Description": "Domain name to use",
+        "Type": "String",
+        "Default": "testdomain.com"
+    }
+},
+```
+
+#### JSON<a name="aws-properties-events-rule-inputtransformer--examples--Transform_input_and_substitute_a_variable--json"></a>
+
+```
+"InputTransformer": {
+    "InputPathsMap": {
+       "instance": "$.detail.instance-id",
+       "state": "$.detail.state"
+    },
+    "InputTemplate": {
+        "Fn::Sub": [
+            "{\n   \"domain\": \"${Domain}\",\n   \"instance\" : <instance>,\n   \"state\" : <state>,\n   \"instanceStatus\": \"instance \\\"<instance>\\\" is in <state>\"\n} - ( Domain: !Ref RootDomainName )\n"
+        ]
+    }
+}
+```
+
+#### YAML<a name="aws-properties-events-rule-inputtransformer--examples--Transform_input_and_substitute_a_variable--yaml"></a>
+
+```
+Parameters:
+  RootDomainName:
+    Description: Domain name to use
+    Type: String
+    Default: testdomain.com
+```
+
+#### YAML<a name="aws-properties-events-rule-inputtransformer--examples--Transform_input_and_substitute_a_variable--yaml"></a>
+
+```
+InputTransformer:
+  InputPathsMap:
+    "instance" : "$.detail.instance-id"
+    "state" : "$.detail.state"
+  InputTemplate: !Sub 
+    - |
+      {
+         "domain": "${Domain}",
+         "instance" : <instance>,
+         "state" : <state>,
+         "instanceStatus": "instance \"<instance>\" is in <state>"
+      } - ( Domain: !Ref RootDomainName )
+```

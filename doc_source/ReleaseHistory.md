@@ -4,6 +4,46 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_Cassandra.md) | The following resource was updated: `AWS::Cassandra::Table`\. 
+
+ [AWS::Cassandra::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html)   
+Use the `AWS::Cassandra::Table` resource to add new regular columns to existing tables in Amazon Keyspaces \(for Apache Cassandra\)\.  | September 3, 2021 | 
+| [Updated resources](AWS_Transfer.md) | The following resource was updated: AWS::Transfer::Server 
+
+[AWS::Transfer::Server WorkflowDetail](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-workflowdetail)  
+Use the `WorkflowDetail` property to specify the steps and other details for a workflow\. 
+
+[AWS::Transfer::Server WorkflowDetails](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-workflowdetails)  
+Use the `WorkflowDetails` property as a container for the `WorkflowDetails` property\.  | September 2, 2021 | 
+| [Updated resource](AWS_ACMPCA.md) | The following resource was added: AWS::ACMPCA::CertificateAuthority OcspConfiguration\. The following resource was updated: AWS::ACMPCA::CertificateAuthority RevocationConfiguration\. 
+
+ [AWS::ACMPCA::CertificateAuthority OcspConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-ocspconfiguration.html)   
+Use the `AWS::ACMPCA::CertificateAuthority OcspConfiguration` object to configure Online Certificate Status Protocol \(OCSP\) support on a CA\.  | September 2, 2021 | 
+| [Updated resource](AWS_DataSync.md) | The following resource was updated: AWS::DataSync::Task\. 
+
+ [AWS::DataSync::Task](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html)   
+Use the `Includes` property to specify files to include in a task\.  | September 2, 2021 | 
+| [Updated resource](AWS_EventSchemas.md) | The following resource was Updated: `AWS::EventSchemas::Discoverer`\. 
+
+ [AWS::EventSchemas::Discoverer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-discoverer.html)   
+Use the `CrossAccount` property to allow event schemas from other accounts to be discovered\.   | September 2, 2021 | 
+| [Updated resource](AWS_KinesisFirehose.md) | The following resource was updated: AWS::KinesisFirehose::DeliveryStream 
+
+ [AWS::KinesisFirehose::DeliveryStream](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html)   
+DynamicPartitioningConfiguration property type is now supported for the delivery streams in CloudFormation\.  | September 2, 2021 | 
+| [New resource](AWS_IoT.md) | The following resource is new: AWS::IoT::FleetMetric 
+
+ [AWS::IoT::FleetMetric](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html)   
+Use the `AWS::IoT::FleetMetric` resource to specify a fleet metric\.  | September 2, 2021 | 
+| [New resource](AWS_S3.md) | The following resources were added: AWS::S3::MultiRegionAccessPoint and AWS::S3::MultiRegionAccessPointPolicy\. 
+
+ [AWS::S3::MultiRegionAccessPoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspoint.html)   
+Use the `AWS::S3::MultiRegionAccessPoint` resource to create an S3 Multi\-Region Access Point configuration\. 
+
+ [AWS::S3::MultiRegionAccessPointPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspointpolicy.html)   
+Use the `AWS::S3::MultiRegionAccessPointPolicy` resource to create an S3 Multi\-Region Access Point Policy configuration\.  | September 2, 2021 | 
+| [Terminology change](AWS_KMS.md) | AWS KMS is replacing the term *customer master key \(CMK\)* with *AWS KMS key* and *KMS key*\. The concept has not changed\. To prevent breaking changes, AWS KMS is keeping some variations of this term\. | August 30, 2021 | 
+| [Stack failure options](#ReleaseHistory) | You can iteratively develop your applications when provisioning failures are encountered by starting from the point of failure without rolling back successfully provisioned resources\. By specifying stack failure options, you can troubleshoot resources in a `CREATE_FAILED` or `UPDATE_FAILED` status\. You can provision failure options for all stack deployments and change set operations\.For more information, see [Stack failure options](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stack-failure-options.html)\. | August 30, 2021 | 
 | [Updated resource](AWS_CodeBuild.md) | The following resource was updated: AWS::CodeBuild::Project 
 
  [AWS::CodeBuild::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)   
@@ -14,9 +54,27 @@ The `ResourceAccessRole` and `Visibility` properties were added to support publi
 Use the `PredictiveScalingConfiguration` property to specify a predictive scaling policy configuration for an Auto Scaling group\.  | August 19, 2021 | 
 | [Updated resource](AWS_Redshift.md) | The following resource was updated: AWS::Redshift::Cluster\. 
 
- [Amazon Redshift resource type reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_Redshift.html)   
-AWS::Redshift::Cluster added the following properties: AquaConfigurationStatus, AvailabilityZoneRelocation, AvailabilityZoneRelocationStatus, Classic, DeferMaintenance, DeferMaintenanceDuration, DeferMaintenanceEndTime, DeferMaintenanceIdentifier, DeferMaintenanceStartTime, DestinationRegion, EnhancedVpcRouting, MaintenanceTrackName, ManualSnapshotRetentionPeriod, ResourceAction, RevisionTarget, RotateEncryptionKey, SnapshotCopyGrantName, SnapshotCopyManual, and SnapshotCopyRetentionPeriod\.  | August 19, 2021 | 
-| [New resource](AWS_SageMaker.md) | The following resource was update: AWS::SageMaker::EndpointConfig 
+ Updated the [AWS::Redshift::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html) resource to add the following properties\.   
+[AquaConfigurationStatus](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-aquaconfigurationstatus)  
+[AvailabilityZoneRelocation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-availabilityzonerelocation)  
+[AvailabilityZoneRelocationStatus](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-availabilityzonerelocationstatus)  
+[Classic](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-classic)  
+[DeferMaintenance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-defermaintenance)  
+[DeferMaintenanceDuration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-defermaintenanceduration)  
+[DeferMaintenanceEndTime](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-defermaintenanceendtime)  
+[DeferMaintenanceIdentifier](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-defermaintenanceidentifier)  
+[DeferMaintenanceStartTime](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-defermaintenancestarttime)  
+[DestinationRegion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-destinationregion)  
+[EnhancedVpcRouting ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-enhancedvpcrouting)  
+[MaintenanceTrackName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-maintenancetrackname)  
+[ManualSnapshotRetentionPeriod](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-manualsnapshotretentionperiod)  
+[ResourceAction ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-resourceaction)  
+[RevisionTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-revisiontarget)  
+[RotateEncryptionKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-rotateencryptionkey)  
+[SnapshotCopyGrantName ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-snapshotcopygrantname)  
+[SnapshotCopyManual](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-snapshotcopymanual)  
+[SnapshotCopyRetentionPeriod](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-snapshotcopyretentionperiod)  | August 19, 2021 | 
+| [Updated resource](AWS_SageMaker.md) | The following resource was updated: AWS::SageMaker::EndpointConfig 
 
  [AWS::SageMaker::EndpointConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html)   
 In the [AsyncInferenceClientConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceclientconfig.html) property type, use the `MaxConcurrentInvocationsPerInstance` property to set the maximum number of concurent requests\.  
@@ -31,10 +89,6 @@ Use the `ColdStorageOptions` property to specify whether to enable cold storage 
 
  [AWS::WAFv2::WebACL](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html)   
 You can now specify the version to use for managed rule groups\. For information, see `ManagedRuleGroupStatement`\.  | August 12, 2021 | 
-| [Updated resources](AWS_WAFv2.md) | The following resources were added: AWS::WAFv2::LoggingConfiguration\. 
-
- [AWS::WAFv2::LoggingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html)   
-You can now define an association between Amazon Kinesis Data Firehose destinations and a web ACL resource, for logging from AWS WAF\.   | August 12, 2021 | 
 | [Updated resource](AWS_ApiGateway.md) | The following resource was updated: AWS::ApiGateway::DomainName\. 
 
  [AWS::ApiGateway::DomainName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html)   
@@ -52,6 +106,10 @@ The ServerSideKmsKeyId property has changed so that an update requires replaceme
 
  [AWS::SageMaker::Model](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model.html)   
 In the [ImageConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition-imageconfig.html) property type, use the `RepositoryAuthConfig` property to specify an authentication configuration for the private docker registry where your model image is hosted\.  | August 12, 2021 | 
+| [Updated resource](AWS_WAFv2.md) | The following resource was added: AWS::WAFv2::LoggingConfiguration\. 
+
+ [AWS::WAFv2::LoggingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html)   
+You can now define an association between Amazon Kinesis Data Firehose destinations and a web ACL resource, for logging from AWS WAF\.   | August 12, 2021 | 
 | [Updated resource](AWS_AppSync.md) | The following resource was updated: AWS::AppSync::GraphQLApi 
 
  [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html)   
@@ -76,29 +134,29 @@ Use the `AWS::S3Outposts::EndPoint.AccessType` property to create an endpoint us
 | [New resource](AWS_Route53RecoveryControl.md) | The following resources were released: AWS::Route53RecoveryControl::Cluster, AWS::Route53RecoveryControl::ControlPanel, AWS::Route53RecoveryControl::RoutingControl, AWS::Route53RecoveryControl::SafetyRule 
 
  [AWS::Route53RecoveryControl::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html)   
-Use the `AWS::Route53RecoveryControl::Cluster` to host on/off switches for a routing control\. 
+Use the `AWS::Route53RecoveryControl::Cluster` to host routing controls, which are simple on/off switches for routing traffic\. 
 
  [AWS::Route53RecoveryControl::ControlPanel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-controlpanel.html)   
-Use the `AWS::Route53RecoveryControl::ControlPanel` to define a group of routing controls that can be changed together in a single transaction\. 
+Use the `AWS::Route53RecoveryControl::ControlPanel` to define a group of routing controls that can be updated together in a single transaction\. 
 
  [AWS::Route53RecoveryControl::RoutingControl](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-routingcontrol.html)   
 Use the `AWS::Route53RecoveryControl::RoutingControl` to fail over traffic to an application replica, to recover your application across Availability Zones or Regions\. 
 
  [AWS::Route53RecoveryControl::SafetyRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-safetyrule.html)   
-Use the `AWS::Route53RecoveryControl::SafetyRule` to place safeguards on your routing controls, to avoid things like disabling all routing controls at once\.   | July 29, 2021 | 
+Use the `AWS::Route53RecoveryControl::SafetyRule` to configure safeguards for routing controls, to avoid things like turning off routing controls at once and stopping all traffic flow\.   | July 29, 2021 | 
 | [New resource](AWS_Route53RecoveryReadiness.md) | The following resources were released: AWS::Route53RecoveryReadiness::Cell, AWS::Route53RecoveryReadiness::ReadinessCheck, AWS::Route53RecoveryReadiness::RecoveryGroup, AWS::Route53RecoveryReadiness::ResourceSet 
 
  [AWS::Route53RecoveryReadiness::Cell](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-cell.html)   
 Use the `AWS::Route53RecoveryReadiness::Cell` to define a single cell for an application\. 
 
  [AWS::Route53RecoveryReadiness::ReadinessCheck](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-readinesscheck.html)   
-Use the `AWS::Route53RecoveryReadiness::ReadinessCheck` to check application scalability and configuration\. Route 53 Application Recovery Controller uses readiness checks to determine the readiness of the resources in a resource set\. 
+Use the `AWS::Route53RecoveryReadiness::ReadinessCheck` to check application readiness for failover\. Amazon Route 53 Application Recovery Controller uses readiness checks to determine the readiness of the resources in a resource set\. 
 
  [AWS::Route53RecoveryReadiness::RecoveryGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-recoverygroup.html)   
-Use the `AWS::Route53RecoveryReadiness::RecoveryGroup` to define a recovery group for an application\. A recovery group includes a list of the cells that make up the application\. 
+Use the `AWS::Route53RecoveryReadiness::RecoveryGroup` to define a recovery group for an application\. A recovery group models an application and includes cells that represent application replicas\. 
 
  [AWS::Route53RecoveryReadiness::ResourceSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-resourceset.html)   
-Use the `AWS::Route53RecoveryReadiness::ResourceSet` to define a group of resources that you can associate with a readiness check\.\.  | July 29, 2021 | 
+Use the `AWS::Route53RecoveryReadiness::ResourceSet` to define a group of resources of a single type that you can associate with a readiness check\.  | July 29, 2021 | 
 | [Import stacks to stack set](#ReleaseHistory) | The AWS CloudFormation *stack import* operation can import existing stacks into new or existing stack sets, so that you can migrate existing stacks to a stack set in one operation\.For more information, see [Importing stacks into a stack set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-import.html)\. | July 28, 2021 | 
 | [Updated resource](AWS_CloudWatch.md) | The following resource was updated: AWS::CloudWatch::Alarm\. 
 
@@ -1307,7 +1365,7 @@ Use the `AWS::SageMaker::ModelExplainabilityJobDefinition` resource to create a 
 Use the `AWS::SageMaker::ModelQualityJobDefinition` resource to create a monitoring job that monitors quality drift in your model\. 
 
  [AWS::SageMaker::ModelPackageGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackagegroup.html)   
-Use the `AWS::SageMaker::ModelPackageGroup` resource to create a a group of related models\. 
+Use the `AWS::SageMaker::ModelPackageGroup` resource to create a group of related models\. 
 
  [AWS::SageMaker::Pipeline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html)   
 Use the `AWS::SageMaker::Pipeline` resource to specify shell scripts that run when you create and/or start a SageMaker Pipeline\. For information about SageMaker Pipelines, see [SageMaker Pipelines](https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines.html) in the *Amazon SageMaker Developer Guide*\.  | December 18, 2020 | 
@@ -1387,7 +1445,7 @@ Added the `Statement` property\. Use the `Statement` property to add a statement
 | [Updated resource](AWS_KMS.md) | The following resource was updated: AWS::KMS::Key\. 
 
  [AWS::KMS::Key](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html)   
-Added support for asymmetric CMKs, including the `KeySpec` property and the SIGN\_VERIFY value for the `KeyUsage` property\.  | November 19, 2020 | 
+Added support for asymmetric KMS keys, including the `KeySpec` property and the SIGN\_VERIFY value for the `KeyUsage` property\.  | November 19, 2020 | 
 | [New resources](AWS_CloudFront.md) | The following resources were added: AWS::CloudFront::KeyGroup and AWS::CloudFront::PublicKey\. 
 
  [AWS::CloudFront::KeyGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-keygroup.html)   
@@ -2899,7 +2957,7 @@ In the [SSESpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/U
 
  [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)   
 Use the `CpuOptions` property to specify the CPU options for the instance\.  
-In the [Ebs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-template.html) property type, use the `KmsKeyId` property to specify an identifier \(key ID, key alias, ID ARN, or alias ARN\) for a customer managed CMK under which the EBS volume is encrypted\. 
+In the [Ebs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-template.html) property type, use the `KmsKeyId` property to specify an identifier \(key ID, key alias, ID ARN, or alias ARN\) for a customer managed key under which the EBS volume is encrypted\. 
 
  [AWS::ECS::TaskDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html)   
 Use the `IpcMode` property to specify the IPC resource namespace to use for the containers in the task\. The valid values are `host`, `task`, or `none`\.  
@@ -3046,7 +3104,7 @@ Use the `Tags` property to provide information about one or more tag key\-value 
 | [Updated resources](#ReleaseHistory) | The following resource was updated: AWS::AmazonMQ::Broker\. 
 
  [ AWS::AmazonMQ::Broker](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html)   
-Use the `encryptionOptions` property to specify an AWS\-owned CMK or a customer\-managed CMK\.  | July 22, 2019 | 
+Use the `encryptionOptions` property to specify an AWS owned key or a customer managed key\.  | July 22, 2019 | 
 | [Updated resources](#ReleaseHistory) | The following resources were updated: AWS::Amplify::App and AWS::Amplify::Branch\. 
 
 [AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html)  
@@ -3792,13 +3850,13 @@ In the [Action](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/a
 + Use the `StepFunctionsAction` property to start execution of a Step Functions state machine\. 
 
  [AWS::KMS::Key](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html)   
-Use the `PendingWindowInDays` property to specify the waiting period, specified in number of days, after which AWS KMS deletes the customer master key \(CMK\)\. 
+Use the `PendingWindowInDays` property to specify the waiting period, specified in number of days, after which AWS Key Management Service deletes the AWS KMS key\. 
 
  [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)   
 Use the `EnableCloudwatchLogsExports` property to specify the list of log types that need to be enabled for exporting to CloudWatch Logs\.  
 Use the `EnableIAMDatabaseAuthentication` property to enable mapping of AWS Identity and Access Management \(IAM\) accounts to database accounts\.  
 Use the `EnablePerformanceInsights` property to enable Performance Insights for the DB instance\.  
-Use the `PerformanceInsightsKMSKeyId` property to specify the AWS KMS key identifier for encryption of Performance Insights data\. The AWS KMS key ID is the Amazon Resource Name \(ARN\), AWS KMS key identifier, or the AWS KMS key alias for the AWS KMS encryption key\.  
+Use the `PerformanceInsightsKMSKeyId` property to specify the KMS key identifier for encryption of Performance Insights data\. The KMS key ID is the Amazon Resource Name \(ARN\), KMS key identifier, or the KMS key alias for the AWS KMS encryption key\.  
 Use the `PerformanceInsightsRetentionPeriod` property to specify the amount of time, in days, to retain Performance Insights data\.  
 Use the `ProcessorFeatures` property to specify the number of CPU cores and the number of threads per core for the DB instance class of the DB instance\.  
 Use the `PromotionTier` property to specify the order in which an Aurora Replica is promoted to the primary instance after a failure of the existing primary instance\. 
@@ -4262,7 +4320,7 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Release Date | Description | API Version | 
 | --- | --- | --- | --- | 
-|  Updated resources  |  July 22, 2019  |  Use the `encryptionOptions` property to specify an AWS\-owned CMK or a customer\-managed CMK for Amazon MQ brokers\.  |  2010\-05\-15  | 
+|  Updated resources  |  July 22, 2019  |  Use the `encryptionOptions` property to specify an AWS owned key or a customer managed key for Amazon MQ brokers\.  |  2010\-05\-15  | 
 |  Stack set naming convention  |  April 10, 2018  |  AWS CloudFormation stacks created using stack sets now follow a new naming convention, in which the stack name contains the stack set name\.  |  2010\-05\-15  | 
 |  New resources  |  April 10, 2018  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 
 |  Updated resource  |  April 10, 2018  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ReleaseHistory.html)  |  2010\-05\-15  | 

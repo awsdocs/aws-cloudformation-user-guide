@@ -50,7 +50,7 @@ The name of the resource set to create\.
 `ResourceSetType`  <a name="cfn-route53recoveryreadiness-resourceset-resourcesettype"></a>
 The resource type of the resources in the resource set\. Enter one of the following values for resource type:  
 AWS::AutoScaling::AutoScalingGroup, AWS::CloudWatch::Alarm, AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume, AWS::ElasticLoadBalancing::LoadBalancer, AWS::ElasticLoadBalancingV2::LoadBalancer, AWS::MSK::Cluster, AWS::RDS::DBCluster, AWS::Route53::HealthCheck, AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC, AWS::EC2::VPNConnection, AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource\.   
-Note that AWS::Route53RecoveryReadiness::DNSTargetResource is only used for this setting and it isn't an actual AWS CloudFormation resource type\.   
+Note that AWS::Route53RecoveryReadiness::DNSTargetResource is only used for this setting\. It isn't an actual AWS CloudFormation resource type\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

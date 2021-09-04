@@ -1,6 +1,6 @@
 # AWS::EC2::NetworkInterface<a name="aws-resource-ec2-network-interface"></a>
 
-Describes a network interface in an Elastic Compute Cloud \(EC2\) instance for AWS CloudFormation\.
+Describes a network interface in an Amazon EC2 instance for AWS CloudFormation\.
 
 ## Syntax<a name="aws-resource-ec2-network-interface-syntax"></a>
 
@@ -234,5 +234,5 @@ Ec2Instance:
 ```
 
 ## See also<a name="aws-resource-ec2-network-interface--seealso"></a>
-+ [NetworkInterface](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_NetworkInterface.html) in the *Amazon Elastic Compute Cloud API Reference*
++ [NetworkInterface](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_NetworkInterface.html) in the *Amazon EC2 API Reference*
 

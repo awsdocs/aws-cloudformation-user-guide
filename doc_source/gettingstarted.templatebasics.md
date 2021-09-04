@@ -27,7 +27,7 @@ AWS::ProductIdentifier::ResourceType
 
 For example, the resource type for an Amazon S3 bucket is [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html)\. For a full list of resource types, see [Template reference](template-reference.md)\.
 
-Let's take a look at a very basic template\. The following template declares a single resource of type `AWS::S3::Bucket:` with the name HelloBucket\.
+Let's take a look at a basic template\. The following template declares a single resource of type `AWS::S3::Bucket:` with the name HelloBucket\.
 
 ### JSON<a name="gettingstarted.templatebasics.simple.json"></a>
 
@@ -49,7 +49,7 @@ Resources:
     Type: AWS::S3::Bucket
 ```
 
-If you use this template to create a stack, AWS CloudFormation will create an Amazon S3 bucket\. Creating a bucket is simple, because CloudFormation can create a bucket with default settings\. For other resources, such as an Auto Scaling group or EC2 instance, CloudFormation requires more information\. Resource declarations use a `Properties` attribute to specify the information used to create a resource\.
+If you use this template to create a stack, AWS CloudFormation will create an Amazon S3 bucket\. Creating a bucket is simple, because CloudFormation can create a bucket with default settings\. For other resources, such as an Amazon EC2 Auto Scaling group or EC2 instance, CloudFormation requires more information\. Resource declarations use a `Properties` attribute to specify the information used to create a resource\.
 
 Depending on the resource type, some properties are required, such as the ImageId property for an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource, and others are optional\. Some properties have default values, such as the AccessControl property of the `AWS::S3::Bucket` resource, so specifying a value for those properties is optional\. Other properties aren't required but may add functionality that you want, such as the WebsiteConfiguration property of the `AWS::S3::Bucket` resource\. Specifying a value for such properties is entirely optional and based on your needs\. In the example above, because the `AWS::S3::Bucket` resource has only optional properties and we didn't need any of the optional features, we could accept the defaults and omit the Properties attribute\.
 
@@ -315,7 +315,7 @@ Resources:
           CidrIp: 0.0.0.0/0
 ```
 
-The Ref function is handy if the parameter or the value returned for a resource is exactly what you want; however, you may need other attributes of a resource\. For example, if you want to create a CloudFront distribution with an S3 origin, you need to specify the bucket location by using a DNS\-style address\. A number of resources have additional attributes whose values you can use in your template\. To get these attributes, you use the [Fn::GetAtt](intrinsic-function-reference-getatt.md) function\. The following template creates an Amazon CloudFront distribution resource that specifies the DNS name of an S3 bucket resource using Fn::GetAtt function to get the bucket's DomainName attribute\.
+The Ref function is handy if the parameter or the value returned for a resource is exactly what you want; however, you may need other attributes of a resource\. For example, if you want to create a CloudFront distribution with an S3 origin, you need to specify the bucket location by using a DNS\-style address\. A number of resources have additional attributes whose values you can use in your template\. To get these attributes, you use the [Fn::GetAtt](intrinsic-function-reference-getatt.md) function\. The following template creates a CloudFront distribution resource that specifies the DNS name of an S3 bucket resource using Fn::GetAtt function to get the bucket's DomainName attribute\.
 
 ### JSON<a name="gettingstarted.templatebasics.multiple.json6"></a>
 
@@ -442,9 +442,9 @@ Parameters:
 
 For parameters with default values, CloudFormation uses the default values unless users specify another value\. If you omit the default attribute, users are required to specify a value for that parameter; however, requiring the user to input a value does not ensure that the value is valid\. To validate the value of a parameter, you can declare constraints or specify an AWS\-specific parameter type\.
 
-You'll notice that the `KeyName` parameter has no `Default` attribute and the other parameters do\. For example, the `WordPress` parameter has the attribute `Default: admin`, but the `KeyName` parameter has none\. Users must specify a key name value at stack creation\. If they don’t, CloudFormation fails to create the stack and throws an exception: `Parameters: [KeyName] must have values`\.
+You'll notice that the `KeyName` parameter has no `Default` attribute and the other parameters do\. For example, the `WordPressUser` parameter has the attribute `Default: admin`, but the `KeyName` parameter has none\. Users must specify a key name value at stack creation\. If they don’t, CloudFormation fails to create the stack and throws an exception: `Parameters: [KeyName] must have values`\.
 
-For AWS\-specific parameter types, CloudFormation validates input values against existing values in the user's AWS account and in the region where they are creating the stack *before* creating any stack resources\. In the sample template, the `KeyName` parameter is an AWS\-specific parameter type of `AWS::EC2::KeyPair::KeyName`\. CloudFormation checks that users specify a valid EC2 key pair name before creating the stack\. Another example of an AWS\-specific parameter type is `AWS::EC2::VPC::Id`, which requires users to specify a valid VPC ID\. In addition to upfront validation, the AWS console shows a drop\-down list of valid values for AWS\-specific parameter types, such as valid EC2 key pair names or VPC IDs, when users use the Create Stack wizard\.
+For AWS\-specific parameter types, CloudFormation validates input values against existing values in the user's AWS account and in the region where they're creating the stack *before* creating any stack resources\. In the sample template, the `KeyName` parameter is an AWS\-specific parameter type of `AWS::EC2::KeyPair::KeyName`\. CloudFormation checks that users specify a valid EC2 key pair name before creating the stack\. Another example of an AWS\-specific parameter type is `AWS::EC2::VPC::Id`, which requires users to specify a valid VPC ID\. In addition to upfront validation, the AWS console shows a drop\-down list of valid values for AWS\-specific parameter types, such as valid EC2 key pair names or VPC IDs, when users use the Create Stack wizard\.
 
 For the `String` type, you can use the following attributes to declare constraints: `MinLength`, `MaxLength`, `Default`, `AllowedValues`, and `AllowedPattern`\. In the example above, the `WordPressUser` parameter has three constraints: the parameter value must be 1 to 16 character long \(`MinLength`, `MaxLength`\) and must begin with a letter followed by any combination of letters and numbers \(`AllowedPattern`\)\.
 
@@ -469,7 +469,7 @@ Parameters are a great way to enable users to specify unique or sensitive values
 
 To avoid this problem, you need a way to specify the right AMI ID based on a conditional input \(in this example, the region where the stack is created\)\. There are two template features that can help, the Mappings object and the `AWS::Region` pseudo parameter\.
 
-The `AWS::Region` pseudo parameter is a value that CloudFormation resolves as the region where the stack is created\. Pseudo parameters are resolved by CloudFormation when you create the stack\. Mappings enable you to use an input value as a condition that determines another value\. Similar to a switch statement, a mapping associates one set of values with another\. Using the `AWS::Region` parameter together with a mapping, you can ensure that an AMI ID appropriate to the region is specified\. The following template contains a Mappings object with a mapping named RegionMap that is used to map an AMI ID to the appropriate region\.
+The `AWS::Region` pseudo parameter is a value that CloudFormation resolves as the region where the stack is created\. Pseudo parameters are resolved by CloudFormation when you create the stack\. Mappings enable you to use an input value as a condition that determines another value\. Similar to a switch statement, a mapping associates one set of values with another\. Using the `AWS::Region` parameter together with a mapping, you can ensure that an AMI ID appropriate to the region is specified\. The following template contains a Mappings object with a mapping named RegionMap that's used to map an AMI ID to the appropriate region\.
 
 ### JSON<a name="gettingstarted.templatebasics.mappings.json"></a>
 
@@ -556,14 +556,14 @@ Resources:
       UserData: !Base64 '80'
 ```
 
-In the RegionMap, each region is mapped to a name\-value pair\. The name\-value pair is a label, and the value to map\. In the RegionMap, AMI is the label and the AMI ID is the value\. To use a map to return a value, you use the [Fn::FindInMap](intrinsic-function-reference-findinmap.md) function, passing the name of the map, the value used to find the mapped value, and the label of the mapped value you want to return\. In the example above, the ImageId property of the resource Ec2Instance uses the Fn::FindInMap function to determine its value by specifying RegionMap as the map to use, AWS::Region as the input value to map from, and AMI as the label to identify the value to map to\. For example, if this template were used to create a stack in the us\-west\-1 region, ImageId would be set to ami\-655a0a20\. 
+In the RegionMap, each region is mapped to a name\-value pair\. The name\-value pair is a label, and the value to map\. In the RegionMap, AMI is the label and the AMI ID is the value\. To use a map to return a value, you use the [Fn::FindInMap](intrinsic-function-reference-findinmap.md) function, passing the name of the map, the value used to find the mapped value, and the label of the mapped value you want to return\. In the example above, the ImageId property of the resource Ec2Instance uses the Fn::FindInMap function to determine its value by specifying RegionMap as the map to use, AWS::Region as the input value to map from, and AMI as the label to identify the value to map to\. For example, if this template were used to create a stack in the US West \(N\. California\) Region, `ImageId` would be set to `ami-655a0a20`\. 
 
 **Tip**  
 The `AWS::Region` pseudo parameter enables you to get the region where the stack is created\. Some resources, such as [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html), [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html), and [AWS::ElasticLoadBalancing::LoadBalancer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html), have a property that specifies availability zones\. You can use the [Fn::GetAZs function](intrinsic-function-reference-getavailabilityzones.md) to get the list of all availability zones in a region\.
 
 ## Constructed values and output values<a name="gettingstarted.templatebasics.outputs"></a>
 
-Parameters and mappings are an excellent way to pass or determine specific values at stack creation time, but there can be situations where a value from a parameter or other resource attribute is only part of the value you need\. For example, in the following fragment from the WordPress template, the Fn::Join function constructs the Target subproperty of the HealthCheck property for the ElasticLoadBalancer resource by concatenating the WebServerPort parameter with other literal strings to form the value needed\.
+Parameters and mappings are an excellent way to pass or determine specific values at stack creation time, but there can be situations where a value from a parameter or other resource attribute is only part of the value you need\. For example, in the following fragment from the WordPress template, the Fn::Join function constructs the `Target` subproperty of the `HealthCheck` property for the `ElasticLoadBalancer` resource by concatenating the `WebServerPort` parameter with other literal strings to form the value needed\.
 
 ### JSON<a name="gettingstarted.templatebasics.outputs.json"></a>
 
@@ -726,14 +726,16 @@ In the Get Started tutorial, we used this link to conveniently go to the install
 ## Next steps<a name="gettingstarted.templatebasics.learnmore"></a>
 
 We just walked through the basic parts of a template and how to use them\. You learned the following about templates:
-+ Declaring resources and their properties
-+ Referencing other resources with the Ref function and resource attributes using the Fn::GetAtt function
-+ Using parameters to enable users to specify values at stack creation time and using constraints to validate parameter input
-+ Using mappings to determine conditional values
-+ Using the Fn::Join function to construct values based on parameters, resource attributes, and other strings
++ Declaring resources and their properties\.
++ Referencing other resources with the Ref function and resource attributes using the Fn::GetAtt function\.
++ Using parameters to enable users to specify values at stack creation time and using constraints to validate parameter input\.
++ Using mappings to determine conditional values\.
++ Using the Fn::Join function to construct values based on parameters, resource attributes, and other strings\.
 + Using output values to capture information about the stack's resources\.
 
-We didn't cover two top level objects in a template: AWSTemplateFormatVersion and Description\. AWSTemplateFormatVersion is simply the version of the template format— if you don't specify it, CloudFormation will use the latest version\. The Description is any valid JSON or YAML string\. This description appears in the Specify Parameters page of the Create Stack wizard\. For more information, see [Format version](format-version-structure.md) and [Description](template-description-structure.md)\.
+We didn't cover two top level objects in a template: AWSTemplateFormatVersion and Description\. AWSTemplateFormatVersion is simply the version of the template format— if you don't specify it, CloudFormation will use the latest version\.
+
+The Description is any valid JSON or YAML string\. This description appears in the Specify Parameters page of the Create Stack wizard\. For more information, see [Format version](format-version-structure.md) and [Description](template-description-structure.md)\.
 
 Of course, there are more advanced template and stack features\. Here is a list of a few important ones that you'll want to learn more about:
 

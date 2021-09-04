@@ -1,6 +1,6 @@
 # AWS::EC2::Volume<a name="aws-properties-ec2-ebs-volume"></a>
 
-Specifies an Amazon Elastic Block Store \(Amazon EBS\) volume\.
+Specifies an Amazon Elastic Block Store \(Amazon EBS\) volume\. You can attach the volume to an instance in the same Availability Zone using [AWS::EC2::VolumeAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html)\.
 
 When you use AWS CloudFormation to update an Amazon EBS volume that modifies `Iops`, `Size`, or `VolumeType`, there is a cooldown period before another operation can occur\. This can cause your stack to report being in `UPDATE_IN_PROGRESS` or `UPDATE_ROLLBACK_IN_PROGRESS` for long periods of time\.
 
@@ -246,4 +246,4 @@ NewVolume:
 ```
 
 ## See also<a name="aws-properties-ec2-ebs-volume--seealso"></a>
-+  [ CreateVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the *Amazon Elastic Compute Cloud API Reference*
++  [ CreateVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the *Amazon EC2 API Reference*

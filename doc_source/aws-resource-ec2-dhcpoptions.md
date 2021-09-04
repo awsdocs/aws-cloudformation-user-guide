@@ -89,10 +89,14 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Fn::GetAtt<a name="aws-resource-ec2-dhcpoptions-return-values-fn--getatt"></a>
 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
 #### <a name="aws-resource-ec2-dhcpoptions-return-values-fn--getatt-fn--getatt"></a>
 
 `DhcpOptionsId`  <a name="DhcpOptionsId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ID of the DHCP options set\.
 
 ## Examples<a name="aws-resource-ec2-dhcpoptions--examples"></a>
 
@@ -142,6 +146,6 @@ myDhcpOptions:
 ```
 
 ## See also<a name="aws-resource-ec2-dhcpoptions--seealso"></a>
-+  [CreateDhcpOptions](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateDhcpOptions.html) in the *Amazon Elastic Compute Cloud API Reference* 
-+ [DHCP Options Sets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html) in the *Amazon Virtual Private Cloud User Guide*
++  [CreateDhcpOptions](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateDhcpOptions.html) in the *Amazon EC2 API Reference* 
++ [DHCP options sets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html) in the *Amazon VPC User Guide*
 

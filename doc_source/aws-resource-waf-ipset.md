@@ -43,7 +43,7 @@ The IP address type \(`IPV4` or `IPV6`\) and the IP address range \(in CIDR nota
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-waf-ipset-name"></a>
-A friendly name or description of the `IPSet`\. You can't change the name of an `IPSet` after you create it\.  
+The name of the `IPSet`\. You can't change the name of an `IPSet` after you create it\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

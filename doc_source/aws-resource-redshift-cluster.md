@@ -545,7 +545,7 @@ The connection endpoint for the Amazon Redshift cluster\. For example: `examplec
 The port number on which the Amazon Redshift cluster accepts connections\. For example: `5439`\.
 
 `Id`  <a name="Id-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+A unique identifier for the cluster\. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying\. For example: `myexamplecluster` 
 
 ## Examples<a name="aws-resource-redshift-cluster--examples"></a>
 

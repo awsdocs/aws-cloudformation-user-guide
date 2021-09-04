@@ -85,5 +85,5 @@ myEgressOnlyInternetGateway:
 ```
 
 ## See also<a name="aws-resource-ec2-egressonlyinternetgateway--seealso"></a>
-+  [CreateEgressOnlyInternetGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateEgressOnlyInternetGateway.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [CreateEgressOnlyInternetGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateEgressOnlyInternetGateway.html) in the *Amazon EC2 API Reference* 
 

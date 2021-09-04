@@ -85,7 +85,7 @@ In this walkthrough, we provide the following example template, called `Template
 
 1. On the **Specify stack details** page, modify any parameters, and then choose **Next**\. This automatically creates a change set\.
 **Important**  
-The import operation fails if you modify existing parameters that trigger a create, update, or delete operation\.
+The import operation fails if you modify existing parameters that initiate a create, update, or delete operation\.
 
 1. On the **Review *stack\-name*** page, confirm that the correct resources are being imported, and then choose **Import resources**\. This automatically executes the change set created in the last step\.
 

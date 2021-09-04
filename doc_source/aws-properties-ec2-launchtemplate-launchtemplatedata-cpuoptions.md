@@ -39,4 +39,4 @@ The number of threads per CPU core\. To disable multithreading for the instance,
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-cpuoptions--seealso"></a>
-+ [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in the *Amazon EC2 User Guide*\.
++ [Optimize CPU options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) in the *Amazon EC2 User Guide*\.

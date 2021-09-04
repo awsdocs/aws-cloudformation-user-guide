@@ -1,6 +1,6 @@
 # AWS::ElastiCache::CacheCluster CloudWatchLogsDestinationDetails<a name="aws-properties-elasticache-cachecluster-cloudwatchlogsdestinationdetails"></a>
 
-Configuration details of a CloudWatch Logs destination\.
+Configuration details of a CloudWatch Logs destination\. Note that this field is marked as required but only if CloudWatch Logs was chosen as the destination\.
 
 ## Syntax<a name="aws-properties-elasticache-cachecluster-cloudwatchlogsdestinationdetails-syntax"></a>
 

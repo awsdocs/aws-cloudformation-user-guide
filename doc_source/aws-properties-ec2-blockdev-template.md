@@ -132,4 +132,4 @@ BlockDeviceMappings:
 ```
 
 ## See also<a name="aws-properties-ec2-blockdev-template--seealso"></a>
-+  [ CreateVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the *Amazon Elastic Compute Cloud API Reference*
++  [ CreateVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVolume.html) in the *Amazon EC2 API Reference*

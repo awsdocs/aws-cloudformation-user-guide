@@ -138,4 +138,4 @@ BlockDeviceMappings:
 ```
 
 ## See also<a name="aws-properties-ec2-blockdev-mapping--seealso"></a>
-+  [ Amazon EC2 Instance Store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the *Amazon Elastic Compute Cloud User Guide*\.
++  [ Amazon EC2 instance store](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html) in the *Amazon EC2 User Guide*\.

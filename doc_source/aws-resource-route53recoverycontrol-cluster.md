@@ -1,6 +1,6 @@
 # AWS::Route53RecoveryControl::Cluster<a name="aws-resource-route53recoverycontrol-cluster"></a>
 
-Defines the array of all the clusters in an account\.
+Returns an array of all the clusters in an account\.
 
 ## Syntax<a name="aws-resource-route53recoverycontrol-cluster-syntax"></a>
 
@@ -29,7 +29,7 @@ Properties:
 
 `Name`  <a name="cfn-route53recoverycontrol-cluster-name"></a>
 Name of the cluster\. You can use any non\-white space character in the name\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

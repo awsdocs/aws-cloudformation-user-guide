@@ -124,7 +124,7 @@ Key\-value pairs that can be used to group and search for users\. Tags are metad
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserName`  <a name="cfn-transfer-user-username"></a>
-A unique string that identifies a user and is associated with a as specified by the `ServerId`\. This user name must be a minimum of 3 and a maximum of 100 characters long\. The following are valid characters: a\-z, A\-Z, 0\-9, underscore '\_', hyphen '\-', period '\.', and at sign '@'\. The user name can't start with a hyphen, period, or at sign\.  
+A unique string that identifies a user and is associated with a `ServerId`\. This user name must be a minimum of 3 and a maximum of 100 characters long\. The following are valid characters: a\-z, A\-Z, 0\-9, underscore '\_', hyphen '\-', period '\.', and at sign '@'\. The user name can't start with a hyphen, period, or at sign\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `3`  

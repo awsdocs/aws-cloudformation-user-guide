@@ -37,7 +37,7 @@ Valid values: `ON_DEMAND` \| `PROVISIONED`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProvisionedThroughput`  <a name="cfn-cassandra-table-billingmode-provisionedthroughput"></a>
-The provisioned read capacity and write capacity for the table\. For more information, see [Provisioned Throughput Capacity Mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned) in the *Amazon Keyspaces Developer Guide*\.  
+The provisioned read capacity and write capacity for the table\. For more information, see [Provisioned throughput capacity mode](https://docs.aws.amazon.com/keyspaces/latest/devguide/ReadWriteCapacityMode.html#ReadWriteCapacityMode.Provisioned) in the *Amazon Keyspaces Developer Guide*\.  
 *Required*: No  
 *Type*: [ProvisionedThroughput](aws-properties-cassandra-table-provisionedthroughput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

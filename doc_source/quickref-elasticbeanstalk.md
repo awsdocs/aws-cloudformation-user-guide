@@ -55,7 +55,7 @@ Replace `solution-stack` with a solution stack name \(platform version\)\. For a
           {
             "Namespace": "aws:autoscaling:launchconfiguration",
             "OptionName": "IamInstanceProfile",
-            "Value": null
+            "Value": {"Ref": "MyInstanceProfile"}
           }
         ],
         "SolutionStackName": "solution-stack"
@@ -94,7 +94,7 @@ Replace `solution-stack` with a solution stack name \(platform version\)\. For a
     },
     "MyInstanceProfile": {
         "Type": "AWS::IAM::InstanceProfile",
-        "Properties": { "Roles": [ null ] }
+        "Properties": {"Ref": "MyInstanceProfile"}
         }
    }
 ```

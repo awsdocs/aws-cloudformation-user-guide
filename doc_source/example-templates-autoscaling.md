@@ -448,14 +448,14 @@ You can get the latest version of this sample template at [https://s3\.amazonaws
         "GroupDescription" : "Enable SSH access and HTTP from the load balancer only",
         "SecurityGroupIngress" : [ {
           "IpProtocol" : "tcp",
-          "FromPort" : "22",
-          "ToPort" : "22",
+          "FromPort" : 22,
+          "ToPort" : 22,
           "CidrIp" : { "Ref" : "SSHLocation"}
         },
         {
           "IpProtocol" : "tcp",
-          "FromPort" : "80",
-          "ToPort" : "80",
+          "FromPort" : 80,
+          "ToPort" : 80,
           "SourceSecurityGroupOwnerId" : {"Fn::GetAtt" : ["ElasticLoadBalancer", "SourceSecurityGroup.OwnerAlias"]},
           "SourceSecurityGroupName" : {"Fn::GetAtt" : ["ElasticLoadBalancer", "SourceSecurityGroup.GroupName"]}
         } ]

@@ -99,8 +99,7 @@ The Resources section contains the definitions of the AWS resources you want to 
 32.         FromPort: 22
 33.         IpProtocol: tcp
 34.         ToPort: 22
-35. 
-36.   ...
+35.   ...
 ```
 
 If you have created EC2 instances before, you can recognize properties, such as `ImageId`, `InstanceType`, and `KeyName`, that determine the configuration of the instance\. Resource declarations are an efficient way to specify all these configuration settings at once\. When you put resource declarations in a template, you can create and configure all the declared resources by using the template to create a stack\. Create a new stack that uses the same template to launch the same configuration of resources\.

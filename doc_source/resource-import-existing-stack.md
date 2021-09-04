@@ -86,7 +86,7 @@ In this walkthrough, we provide the following example template, called `Template
 
 1. On the **Specify stack details** page, update any parameters, and then choose **Next**\. This automatically creates a change set\.
 **Note**  
-The import operation fails if you modify existing parameters that trigger a create, update, or delete operation\.
+The import operation fails if you modify existing parameters that initiate a create, update, or delete operation\.
 
 1. On the **Review *stack\-name*** page, review the resources to import, and then choose **Import resources**\. This automatically executes the change set created in the last step\. Any [stack\-level tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html) are applied to imported resources at this time\.
 

@@ -1,6 +1,6 @@
 # AWS::Route53RecoveryControl::SafetyRule AssertionRule<a name="aws-properties-route53recoverycontrol-safetyrule-assertionrule"></a>
 
-An assertion rule enforces that, when a routing control state is changed, that the criteria set by the rule configuration is met\. Otherwise, the change to the routing control is not accepted\.
+An assertion rule enforces that, when you change a routing control state, that the criteria that you set in the rule configuration is met\. Otherwise, the change to the routing control is not accepted\. For example, the criteria might be that at least one routing control state is `On` after the transation so that traffic continues to flow to at least one cell for the application\. This ensures that you avoid a fail\-open scenario\.
 
 ## Syntax<a name="aws-properties-route53recoverycontrol-safetyrule-assertionrule-syntax"></a>
 

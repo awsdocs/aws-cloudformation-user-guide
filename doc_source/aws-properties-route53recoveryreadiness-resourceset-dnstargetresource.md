@@ -1,6 +1,6 @@
 # AWS::Route53RecoveryReadiness::ResourceSet DNSTargetResource<a name="aws-properties-route53recoveryreadiness-resourceset-dnstargetresource"></a>
 
-A component for DNS/routing control readiness checks, used when `ResourceSet` `ResourceSetType` is set to `AWS::Route53RecoveryReadiness::DNSTargetResource`\. 
+A component for DNS/routing control readiness checks\.
 
 ## Syntax<a name="aws-properties-route53recoveryreadiness-resourceset-dnstargetresource-syntax"></a>
 

@@ -1,6 +1,6 @@
 # AWS::Cassandra::Table<a name="aws-resource-cassandra-table"></a>
 
-The `AWS::Cassandra::Table` resource allows you to create a new table in Amazon Keyspaces \(for Apache Cassandra\)\. For more information, see [Create a Keyspace and a Table](https://docs.aws.amazon.com/keyspaces/latest/devguide/getting-started.ddl.html) in the *Amazon Keyspaces Developer Guide*\.
+The `AWS::Cassandra::Table` resource allows you to create a new table in Amazon Keyspaces \(for Apache Cassandra\)\. For more information, see [Create a keyspace and a table](https://docs.aws.amazon.com/keyspaces/latest/devguide/getting-started.ddl.html) in the *Amazon Keyspaces Developer Guide*\.
 
 ## Syntax<a name="aws-resource-cassandra-table-syntax"></a>
 
@@ -70,7 +70,7 @@ The encryption at rest options for the table\.
 + **Customer managed key** \- The key is stored in your account and is created, owned, and managed by you\.
 **Note**  
 If you choose encryption with a customer managed key, you must specify a valid customer managed KMS key with permissions granted to Amazon Keyspaces\.
-For more information, see [Encryption at Rest in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/EncryptionAtRest.html) in the *Amazon Keyspaces Developer Guide*\.  
+For more information, see [Encryption at rest in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/EncryptionAtRest.html) in the *Amazon Keyspaces Developer Guide*\.  
 *Required*: No  
 *Type*: [EncryptionSpecification](aws-properties-cassandra-table-encryptionspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -95,12 +95,13 @@ Specifies if point\-in\-time recovery is enabled or disabled for the table\. The
 
 `RegularColumns`  <a name="cfn-cassandra-table-regularcolumns"></a>
 One or more columns that are not part of the primary key \- that is, columns that are *not* defined as partition key columns or clustering key columns\.  
+You can add regular columns to existing tables by adding them to the template\.  
 *Required*: No  
 *Type*: List of [Column](aws-properties-cassandra-table-column.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableName`  <a name="cfn-cassandra-table-tablename"></a>
-The name of the table to be created\. The table name is case sensitive\. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the table name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
+The name of the table to be created\. The table name is case sensitive\. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the table name\. For more information, see [Name type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Length constraints:* Minimum length of 3\. Maximum length of 255\.  
 *Pattern:* `^[a-zA-Z0-9][a-zA-Z0-9_]{1,47}$`  
@@ -128,11 +129,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### Create a Table with Minimal Options<a name="aws-resource-cassandra-table--examples--Create_a_Table_with_Minimal_Options"></a>
+### Create a table with minimal options<a name="aws-resource-cassandra-table--examples--Create_a_table_with_minimal_options"></a>
 
 The following example creates a new table\. The table will have a system\-generated name, and will use on\-demand billing\.
 
-#### JSON<a name="aws-resource-cassandra-table--examples--Create_a_Table_with_Minimal_Options--json"></a>
+#### JSON<a name="aws-resource-cassandra-table--examples--Create_a_table_with_minimal_options--json"></a>
 
 ```
 {
@@ -154,7 +155,7 @@ The following example creates a new table\. The table will have a system\-genera
 }
 ```
 
-#### YAML<a name="aws-resource-cassandra-table--examples--Create_a_Table_with_Minimal_Options--yaml"></a>
+#### YAML<a name="aws-resource-cassandra-table--examples--Create_a_table_with_minimal_options--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -168,11 +169,11 @@ Resources:
           ColumnType: ASCII
 ```
 
-### Create a Table Using All Options<a name="aws-resource-cassandra-table--examples--Create_a_Table_Using_All_Options"></a>
+### Create a table using all options<a name="aws-resource-cassandra-table--examples--Create_a_table_using_all_options"></a>
 
 The following example creates a table with specific read and write capacity, PITR, tags, and encryption settings\. To run this sample, you must replace the key ARN in the example with your own\.
 
-#### JSON<a name="aws-resource-cassandra-table--examples--Create_a_Table_Using_All_Options--json"></a>
+#### JSON<a name="aws-resource-cassandra-table--examples--Create_a_table_using_all_options--json"></a>
 
 ```
 {
@@ -256,7 +257,7 @@ The following example creates a table with specific read and write capacity, PIT
 }
 ```
 
-#### YAML<a name="aws-resource-cassandra-table--examples--Create_a_Table_Using_All_Options--yaml"></a>
+#### YAML<a name="aws-resource-cassandra-table--examples--Create_a_table_using_all_options--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
@@ -303,4 +304,140 @@ Resources:
       EncryptionSpecification:
         EncryptionType: CUSTOMER_MANAGED_KMS_KEY
         KmsKeyIdentifier: arn:aws:kms:eu-west-1:5555555555555:key/11111111-1111-111-1111-111111111111
+```
+
+### Add new columns to an existing table<a name="aws-resource-cassandra-table--examples--Add_new_columns_to_an_existing_table"></a>
+
+The following example shows how to add five new columns to the existing table `my_table`\. Only regular columns can be added to a table\.
+
+#### JSON<a name="aws-resource-cassandra-table--examples--Add_new_columns_to_an_existing_table--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "MyNewTable": {
+      "Type": "AWS::Cassandra::Table",
+      "Properties": {
+        "KeyspaceName": "MyNewKeyspace",
+        "PartitionKeyColumns": [
+          {
+            "ColumnName": "Message",
+            "ColumnType": "ASCII"
+          }
+        ],
+        "RegularColumns": [
+          {
+            "ColumnName": "name",
+            "ColumnType": "TEXT"
+          },
+          {
+            "ColumnName": "region",
+            "ColumnType": "TEXT"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+#### JSON<a name="aws-resource-cassandra-table--examples--Add_new_columns_to_an_existing_table--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "MyNewTable": {
+      "Type": "AWS::Cassandra::Table",
+      "Properties": {
+        "KeyspaceName": "MyNewKeyspace",
+        "PartitionKeyColumns": [
+          {
+            "ColumnName": "Message",
+            "ColumnType": "ASCII"
+          }
+        ],
+        "RegularColumns": [
+          {
+            "ColumnName": "name",
+            "ColumnType": "TEXT"
+          },
+          {
+            "ColumnName": "region",
+            "ColumnType": "TEXT"
+          },
+          {
+            "ColumnName": "project",
+            "ColumnType": "TEXT"
+          },
+          {
+            "ColumnName": "role",
+            "ColumnType": "TEXT"
+          },
+          {
+            "ColumnName": "pay_scale",
+            "ColumnType": "TEXT"
+          },
+          {
+            "ColumnName": "vacation_hrs",
+            "ColumnType": "FLOAT"
+          },
+          {
+            "ColumnName": "manager_id",
+            "ColumnType": "TEXT"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-cassandra-table--examples--Add_new_columns_to_an_existing_table--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  my_table:
+    Type: 'AWS::Cassandra::Table'
+    Properties:
+      KeyspaceName: my_keyspace
+      PartitionKeyColumns:
+        - ColumnName: Message
+          ColumnType: ASCII
+      RegularColumns:
+        - ColumnName: name
+          ColumnType: TEXT
+        - ColumnName: region
+          ColumnType: TEXT
+```
+
+#### YAML<a name="aws-resource-cassandra-table--examples--Add_new_columns_to_an_existing_table--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  my_table:
+    Type: 'AWS::Cassandra::Table'
+    Properties:
+      KeyspaceName: my_keyspace
+      PartitionKeyColumns:
+        - ColumnName: Message
+          ColumnType: ASCII
+      RegularColumns:
+        - ColumnName: name
+          ColumnType: TEXT
+        - ColumnName: region
+          ColumnType: TEXT
+        - ColumnName: project
+          ColumnType: TEXT
+        - ColumnName: role
+          ColumnType: TEXT
+        - ColumnName: pay_scale
+          ColumnType: TEXT
+        - ColumnName: vacation_hrs
+          ColumnType: FLOAT
+        - ColumnName: manager_id
+          ColumnType: TEXT
 ```

@@ -2,9 +2,6 @@
 
 Contains information about a composite model in an asset model\. This object contains the asset property definitions that you define in the composite model\. You can use composite asset models to define alarms on this asset model\.
 
-**Note**  
-The alarms feature is in preview release for AWS IoT SiteWise, AWS IoT Events, and SiteWise Monitor, and is subject to change\. We recommend that you use this feature only with test data, and not in production environments\. For more information, see [Monitoring data with alarms](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/industrial-alarms.html) in the *AWS IoT SiteWise User Guide*\.
-
 If you use the `AssetModelCompositeModel` property to create an alarm, you must use the following information to define three asset model properties:
 + Use an asset model property to specify the alarm type\.
   + The name must be `AWS/ALARM_TYPE`\.

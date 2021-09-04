@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EventSchemas::Discoverer",
   "Properties" : {
+      "[CrossAccount](#cfn-eventschemas-discoverer-crossaccount)" : Boolean,
       "[Description](#cfn-eventschemas-discoverer-description)" : String,
       "[SourceArn](#cfn-eventschemas-discoverer-sourcearn)" : String,
       "[Tags](#cfn-eventschemas-discoverer-tags)" : [ TagsEntry, ... ]
@@ -24,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EventSchemas::Discoverer
 Properties: 
+  [CrossAccount](#cfn-eventschemas-discoverer-crossaccount): Boolean
   [Description](#cfn-eventschemas-discoverer-description): String
   [SourceArn](#cfn-eventschemas-discoverer-sourcearn): String
   [Tags](#cfn-eventschemas-discoverer-tags): 
@@ -31,6 +33,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-eventschemas-discoverer-properties"></a>
+
+`CrossAccount`  <a name="cfn-eventschemas-discoverer-crossaccount"></a>
+Allows for the discovery of the event schemas that are sent to the event bus from another account\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-eventschemas-discoverer-description"></a>
 A description for the discoverer\.  
@@ -65,6 +73,9 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-eventschemas-discoverer-return-values-fn--getatt-fn--getatt"></a>
+
+`CrossAccount`  <a name="CrossAccount-fn::getatt"></a>
+Defines whether event schemas from other accounts are discovered\. Default is True\.
 
 `DiscovererArn`  <a name="DiscovererArn-fn::getatt"></a>
 The ARN of the discoverer\.

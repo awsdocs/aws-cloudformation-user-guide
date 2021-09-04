@@ -42,5 +42,5 @@ The tags to apply to the resource\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-ec2-launchtemplate-tagspecification--seealso"></a>
-+  [ LaunchTemplateTagSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateTagSpecificationRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [ LaunchTemplateTagSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateTagSpecificationRequest.html) in the *Amazon EC2 API Reference* 
 

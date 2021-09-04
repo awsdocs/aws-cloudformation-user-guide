@@ -1,6 +1,6 @@
 # AWS::Route53RecoveryControl::ControlPanel<a name="aws-resource-route53recoverycontrol-controlpanel"></a>
 
-Create a new control panel\. A control panel represents a group of routing controls that can be changed together in a single transaction\. You can use a control panel to centrally view the operational status of applications across your organization, and trigger multi\-app failovers in a single transaction, for example, to failover an Availability Zone \(AZ\) or AWS Region\.
+Creates a new control panel\. A control panel represents a group of routing controls that can be changed together in a single transaction\. You can use a control panel to centrally view the operational status of applications across your organization, and trigger multi\-app failovers in a single transaction, for example, to fail over an Availability Zone or AWS Region\.
 
 ## Syntax<a name="aws-resource-route53recoverycontrol-controlpanel-syntax"></a>
 
@@ -31,7 +31,7 @@ Properties:
 
 `ClusterArn`  <a name="cfn-route53recoverycontrol-controlpanel-clusterarn"></a>
 The Amazon Resource Name \(ARN\) of the cluster for the control panel\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -39,7 +39,7 @@ The Amazon Resource Name \(ARN\) of the cluster for the control panel\.
 The name of the control panel\. You can use any non\-white space character in the name\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-route53recoverycontrol-controlpanel-return-values"></a>
 

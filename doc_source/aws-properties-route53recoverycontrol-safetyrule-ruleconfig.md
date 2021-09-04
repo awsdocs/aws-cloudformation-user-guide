@@ -1,6 +1,6 @@
 # AWS::Route53RecoveryControl::SafetyRule RuleConfig<a name="aws-properties-route53recoverycontrol-safetyrule-ruleconfig"></a>
 
-The rule configuration for an assertion rule or gating rule\. This is the criteria that you set for specific assertion controls \(routing controls\) or gating controls\. This configuration specifies how many controls must be enabled after a transaction completes\.
+The rule configuration for an assertion rule\. That is, the criteria that you set for specific assertion controls \(routing controls\) that specify how many control states must be `ON` after a transaction completes\.
 
 ## Syntax<a name="aws-properties-route53recoverycontrol-safetyrule-ruleconfig-syntax"></a>
 
@@ -39,7 +39,7 @@ The value of N, when you specify an `ATLEAST` rule type\. That is, `Threshold` i
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Type`  <a name="cfn-route53recoverycontrol-safetyrule-ruleconfig-type"></a>
-A rule can be one of the following: ATLEAST, AND, or OR\.  
+A rule can be one of the following: `ATLEAST`, `AND`, or `OR`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -172,5 +172,5 @@ The following example uses the VPC ID from a VPC named myVPC that was declared e
 
 ## See also<a name="aws-resource-ec2-subnet--seealso"></a>
 +  [CreateSubnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSubnet.html) in the *Amazon EC2 API Reference*
-+  [Your VPC and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon Virtual Private Cloud User Guide*
++  [VPC and subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon VPC User Guide*
 
