@@ -201,18 +201,17 @@ The ID of the record, such as `rec-rjeatvy434trk`\.
          SimpleLambda:
            Type: AWS::ServiceCatalog::CloudFormationProvisionedProduct
            Properties:
-            ProductName: Basic Lambda
-            ProvisioningArtifactName: '1.0'
+             ProductName: Basic Lambda
+             ProvisioningArtifactName: '1.0'
             
          SimpleApiGateway:
            Type: AWS::ServiceCatalog::CloudFormationProvisionedProduct
            Properties:
-            ProductName: API Gateway
-            ProvisioningArtifactName: '1.0'
-            ProvisioningParameters:
-               -
-                  Key: LambdaArn
-                  Value: !GetAtt [SimpleLambda, Outputs.SCLambdaArn]
+             ProductName: API Gateway
+             ProvisioningArtifactName: '1.0'
+             ProvisioningParameters:
+               - Key: LambdaArn
+                 Value: !GetAtt [SimpleLambda, Outputs.SCLambdaArn]
 ```
 
 ## See also<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct--seealso"></a>
