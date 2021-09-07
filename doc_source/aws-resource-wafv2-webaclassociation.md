@@ -39,7 +39,7 @@ The Amazon Resource Name \(ARN\) of the resource to associate with the web ACL\.
 The ARN must be in one of the following formats:  
 + For an Application Load Balancer: `arn:aws:elasticloadbalancing:region:account-id:loadbalancer/app/load-balancer-name/load-balancer-id ` 
 + For an Amazon API Gateway REST API: `arn:aws:apigateway:region::/restapis/api-id/stages/stage-name ` 
-+ For an AWS AppSync GraphQL API: `arn:aws:appsync:region:account-id:apis/ GraphQLApiId`
++ For an AWS AppSync GraphQL API: `arn:aws:appsync:region:account-id:apis/GraphQLApiId`
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
@@ -65,8 +65,6 @@ The `Ref` for the resource, containing the resource name, physical ID, and scope
 For example: `my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL`\.
 
 ## Examples<a name="aws-resource-wafv2-webaclassociation--examples"></a>
-
-
 
 ### Create a web ACL association<a name="aws-resource-wafv2-webaclassociation--examples--Create_a_web_ACL_association"></a>
 
