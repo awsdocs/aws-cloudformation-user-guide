@@ -1,6 +1,6 @@
 # AWS::ElasticLoadBalancingV2::Listener<a name="aws-resource-elasticloadbalancingv2-listener"></a>
 
-Specifies a listener for an Application Load Balancer or Network Load Balancer\.
+Specifies a listener for an Application Load Balancer, Network Load Balancer, or Gateway Load Balancer\.
 
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-listener-syntax"></a>
 
