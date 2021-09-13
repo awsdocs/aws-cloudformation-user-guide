@@ -337,7 +337,7 @@ taskdefinition:
 
 ### Create an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition"></a>
 
-The following example defines an Amazon ECS task definition that specifies EC2 and FARGATE as required compatibilities\.
+The following example defines an Amazon ECS task definition that specifies EC2 as required compatibilities\.
 
 #### JSON<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition--json"></a>
 
@@ -349,8 +349,7 @@ The following example defines an Amazon ECS task definition that specifies EC2 a
             "Type": "AWS::ECS::TaskDefinition",
             "Properties": {
                 "RequiresCompatibilities": [
-                    "EC2",
-                    "FARGATE"
+                    "EC2"
                 ],
                 "ContainerDefinitions": [
                     {
@@ -421,7 +420,6 @@ Resources:
     Properties: 
       RequiresCompatibilities:
         - "EC2"
-        - "FARGATE"
       ContainerDefinitions: 
         - 
           Name: "my-app"

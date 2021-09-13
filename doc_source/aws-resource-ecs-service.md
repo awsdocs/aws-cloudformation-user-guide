@@ -108,7 +108,8 @@ The deployment controller to use for the service\. If no deployment controller i
 
 `DesiredCount`  <a name="cfn-ecs-service-desiredcount"></a>
 The number of instantiations of the specified task definition to place and keep running on your cluster\.  
-If a desired count is not specified, a default value of `1` is used\. When using the `DAEMON` scheduling strategy, the desired count is not required\.  
+For new services, if a desired count is not specified, a default value of `1` is used\. When using the `DAEMON` scheduling strategy, the desired count is not required\.  
+For existing services, if a desired count is not specified, it is omitted from the operation\.  
 *Required*: Conditional  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

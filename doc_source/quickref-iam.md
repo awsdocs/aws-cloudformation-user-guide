@@ -167,7 +167,7 @@ You can get the secret key for an `AWS::IAM::AccessKey` resource using the `Fn::
 
 ### <a name="quickref-iam-access-key-3"></a>
 
-You can also pass the AWS access key and secret key to an EC2 instance or Auto Scaling group defined in the template\. The following `[AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)` declaration uses the `UserData` property to pass the access key and secret key for the `myaccesskey` resource\.
+You can also pass the AWS access key and secret key to an Amazon EC2 instance or Auto Scaling group defined in the template\. The following `[AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)` declaration uses the `UserData` property to pass the access key and secret key for the `myaccesskey` resource\.
 
 #### JSON<a name="quickref-iam-example-4.json"></a>
 
@@ -299,10 +299,10 @@ The `[AWS::IAM::UserToGroupAddition](https://docs.aws.amazon.com/AWSCloudFormati
 
 ## Declaring an IAM policy<a name="scenario-iam-policy"></a>
 
-This snippet shows how to create a policy and apply it to multiple groups using an `[AWS::IAM::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html)` resource named `mypolicy`\. The `mypolicy` resource contains a `PolicyDocument` property that allows `GetObject`, `PutObject`, and `PutObjectAcl` actions on the objects in the S3 bucket represented by the ARN `arn:aws:s3:::myAWSBucket`\. The `mypolicy` resource applies the policy to an existing group named `myexistinggroup1` and a group `mygroup` that is declared in the template as an `[AWS::IAM::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)` resource\. This example shows how to apply a policy to a group using the `Groups` property; however, you can alternatively use the `Users` property to add a policy document to a list of users\.
+This snippet shows how to create a policy and apply it to multiple groups using an `[AWS::IAM::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html)` resource named `mypolicy`\. The `mypolicy` resource contains a `PolicyDocument` property that allows `GetObject`, `PutObject`, and `PutObjectAcl` actions on the objects in the S3 bucket represented by the ARN `arn:aws:s3:::myAWSBucket`\. The `mypolicy` resource applies the policy to an existing group named `myexistinggroup1` and a group `mygroup` that's declared in the template as an `[AWS::IAM::Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-group.html)` resource\. This example shows how to apply a policy to a group using the `Groups` property; however, you can alternatively use the `Users` property to add a policy document to a list of users\.
 
 **Important**  
-The Amazon SNS policy actions that are [declared in the `AWS::IAM::Policy` resource](#scenario-iam-policy) differ from the Amazon SNS topic policy actions that are [declared in the `AWS::SNS::TopicPolicy` resource](#scenario-sns-policy)\. For example, the policy actions `sns:Unsubscribe` and `sns:SetSubscriptionAttributes` are valid for the `AWS::IAM::Policy` resource, but are invalid for the `AWS::SNS::TopicPolicy` resource\. For more information about valid Amazon SNS policy actions that you can use with the `AWS::IAM::Policy` resource, see [Special information for Amazon SNS policies](https://docs.aws.amazon.com/sns/latest/dg/AccessPolicyLanguage_SpecialInfo.html) in the *Amazon Simple Notification Service Developer Guide*\. 
+The Amazon SNS policy actions that are [declared in the `AWS::IAM::Policy` resource](#scenario-iam-policy) differ from the Amazon SNS topic policy actions that are [declared in the `AWS::SNS::TopicPolicy` resource](#scenario-sns-policy)\. For example, the policy actions `sns:Unsubscribe` and `sns:SetSubscriptionAttributes` are valid for the `AWS::IAM::Policy` resource, but are invalid for the `AWS::SNS::TopicPolicy` resource\. For more information about valid Amazon SNS policy actions that you can use with the `AWS::IAM::Policy` resource, see [Special information for Amazon SNS policies](https://docs.aws.amazon.com/sns/latest/dg/AccessPolicyLanguage_SpecialInfo.html) in the *Amazon Simple Notification Service Developer Guide*\.
 
 ### JSON<a name="quickref-iam-example-7.json"></a>
 
@@ -401,7 +401,7 @@ This snippet shows how to create a policy and apply it to an Amazon S3 bucket us
 This snippet shows how to create a policy and apply it to an Amazon SNS topic using the `[AWS::SNS::TopicPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html)` resource\. The `mysnspolicy` resource contains a `PolicyDocument` property that allows the `[AWS::IAM::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html)` resource `myuser` to perform the `Publish` action on an `[AWS::SNS::Topic](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-topic.html)` resource `mytopic`\. In the snippet, the `Fn::GetAtt` function gets the ARN for the `myuser` resource and the `Ref` function gets the ARN for the `mytopic` resource\.
 
 **Important**  
-The Amazon SNS policy actions that are [declared in the `AWS::IAM::Policy` resource](#scenario-iam-policy) differ from the Amazon SNS topic policy actions that are [declared in the `AWS::SNS::TopicPolicy` resource](#scenario-sns-policy)\. For example, the policy actions `sns:Unsubscribe` and `sns:SetSubscriptionAttributes` are valid for the `AWS::IAM::Policy` resource, but are invalid for the `AWS::SNS::TopicPolicy` resource\. For more information about valid Amazon SNS policy actions that you can use with the `AWS::IAM::Policy` resource, see [Special information for Amazon SNS policies](https://docs.aws.amazon.com/sns/latest/dg/AccessPolicyLanguage_SpecialInfo.html) in the *Amazon Simple Notification Service Developer Guide*\. 
+The Amazon SNS policy actions that are [declared in the `AWS::IAM::Policy` resource](#scenario-iam-policy) differ from the Amazon SNS topic policy actions that are [declared in the `AWS::SNS::TopicPolicy` resource](#scenario-sns-policy)\. For example, the policy actions `sns:Unsubscribe` and `sns:SetSubscriptionAttributes` are valid for the `AWS::IAM::Policy` resource, but are invalid for the `AWS::SNS::TopicPolicy` resource\. For more information about valid Amazon SNS policy actions that you can use with the `AWS::IAM::Policy` resource, see [Special information for Amazon SNS policies](https://docs.aws.amazon.com/sns/latest/dg/AccessPolicyLanguage_SpecialInfo.html) in the *Amazon Simple Notification Service Developer Guide*\.
 
 ### JSON<a name="quickref-iam-example-9.json"></a>
 
@@ -502,7 +502,7 @@ This snippet shows how to create a policy and apply it to an Amazon SQS queue us
 
 ## IAM role template examples<a name="scenarios-iamroles"></a>
 
-This section provides CloudFormation template examples for IAM Roles for EC2 Instances\.
+This section provides CloudFormation template examples for IAM roles for EC2 Instances\.
 
 For more information about IAM roles, see [Working with Roles](http://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html) in the *AWS Identity and Access Management User Guide*\.
 
@@ -621,7 +621,7 @@ Resources:
 
 ### IAM role with AutoScaling group<a name="scenario-iamrole-asg"></a>
 
-In this example, the instance profile is referenced by the `IamInstanceProfile` property of an AutoScaling Group Launch Configuration\.
+In this example, the instance profile is referenced by the `IamInstanceProfile` property of an AutoScaling Group launch configuration\.
 
 #### JSON<a name="quickref-iam-example-12.json"></a>
 

@@ -4,6 +4,12 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_CloudTrail.md) | The following resource was updated: AWS::CloudTrail::Trail 
+
+ [AWS::CloudTrail::Trail](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html)   
+Use the `ExcludeManagementEventSources` property to exclude exclude AWS Key Management Service \(AWS KMS\) events from a trail's logs\.  
+Use the `InsightSelectors` property to specify the Insights event type when you want to log Insights events on your trail\.  
+Use the `IsOrganizationTrail` property to create an AWS Organizations trail, if Organizations is enabled in your account\.  | September 10, 2021 | 
 | [Updated resource](AWS_Cassandra.md) | The following resource was updated: `AWS::Cassandra::Table`\. 
 
  [AWS::Cassandra::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html)   
@@ -3565,7 +3571,7 @@ In the [ProjectTriggers](https://docs.aws.amazon.com/AWSCloudFormation/latest/Us
 | [New resources](#ReleaseHistory) | The following resources were added: AWS::FSx::FileSystem, AWS::KinesisAnalyticsv2::Application, AWS::KinesisAnalyticsv2::ApplicationCloudWatchLoggingOption, AWS::KinesisAnalyticsv2::ApplicationOutput, and AWS::KinesisAnalyticsv2::ApplicationReferenceDataSource\. 
 
  [AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)   
-Use the `AWS::FSx::FileSystem` resource to create a new Amazon FSx for Lustre or Amazon FSx for Windows File Server file system\. 
+Use the `AWS::FSx::FileSystem` resource to create a new FSx for Lustre or FSx for Windows File Server file system\. 
 
  [AWS::KinesisAnalyticsV2::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-application.html)   
 Use the `AWS::KinesisAnalyticsV2::Application` resource to create an Amazon Kinesis Data Analytics application\. 

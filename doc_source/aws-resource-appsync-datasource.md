@@ -1,6 +1,6 @@
 # AWS::AppSync::DataSource<a name="aws-resource-appsync-datasource"></a>
 
-The `AWS::AppSync::DataSource` resource creates data sources for resolvers in AWS AppSync to connect to, such as Amazon DynamoDB, AWS Lambda, and Amazon Elasticsearch Service\. Resolvers use these data sources to fetch data when clients make GraphQL calls\. 
+The `AWS::AppSync::DataSource` resource creates data sources for resolvers in AWS AppSync to connect to, such as Amazon DynamoDB, AWS Lambda, and Amazon OpenSearch Service\. Resolvers use these data sources to fetch data when clients make GraphQL calls\. 
 
 ## Syntax<a name="aws-resource-appsync-datasource-syntax"></a>
 
@@ -69,7 +69,7 @@ AWS Region and TableName for an Amazon DynamoDB table in your account\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ElasticsearchConfig`  <a name="cfn-appsync-datasource-elasticsearchconfig"></a>
-AWS Region and Endpoints for an Amazon Elasticsearch Service domain in your account\.  
+AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account\.  
 *Required*: No  
 *Type*: [ElasticsearchConfig](aws-properties-appsync-datasource-elasticsearchconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -108,7 +108,7 @@ Required if `Type` is specified as `AWS_LAMBDA`, `AMAZON_DYNAMODB`, or `AMAZON_E
 `Type`  <a name="cfn-appsync-datasource-type"></a>
 The type of the data source\.  
 +  **AMAZON\_DYNAMODB**: The data source is an Amazon DynamoDB table\.
-+  **AMAZON\_ELASTICSEARCH**: The data source is an Amazon Elasticsearch Service domain\.
++  **AMAZON\_ELASTICSEARCH**: The data source is an Amazon OpenSearch Service domain\.
 +  **AWS\_LAMBDA**: The data source is an AWS Lambda function\.
 +  **NONE**: There is no data source\. This type is used when you wish to invoke a GraphQL operation without connecting to a data source, such as performing data transformation with resolvers or triggering a subscription to be invoked from a mutation\.
 +  **HTTP**: The data source is an HTTP endpoint\.

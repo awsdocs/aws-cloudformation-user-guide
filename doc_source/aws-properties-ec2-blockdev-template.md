@@ -4,6 +4,9 @@ Specifies a block device for an EBS volume\.
 
  `Ebs` is a property of the [ Amazon EC2 BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-mapping.html) property\.
 
+**Important**  
+After the instance is running, you can modify only the `DeleteOnTermination` parameters for the attached volumes without interrupting the instance\. Modifying any other parameter results in instance [ replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)\.
+
 ## Syntax<a name="aws-properties-ec2-blockdev-template-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -45,6 +48,7 @@ Indicates whether the EBS volume is deleted on instance termination\. For more i
 `Encrypted`  <a name="cfn-ec2-blockdev-template-encrypted"></a>
 Indicates whether the volume should be encrypted\. The effect of setting the encryption state to `true` depends on the volume origin \(new or from a snapshot\), starting encryption state, ownership, and whether encryption by default is enabled\. For more information, see [Encryption by default](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#encryption-by-default) in the *Amazon Elastic Compute Cloud User Guide*\.  
 Encrypted Amazon EBS volumes must be attached to instances that support Amazon EBS encryption\. For more information, see [Supported instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)\.  
+After the instance is running, modifying this parameter results in instance [ replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -57,6 +61,7 @@ The following are the supported values for each volume type:
 +  `io2`: 100\-64,000 IOPS
 For `io1` and `io2` volumes, we guarantee 64,000 IOPS only for [Instances built on the Nitro System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)\. Other instance families guarantee performance up to 32,000 IOPS\.  
 This parameter is required for `io1` and `io2` volumes\. The default for `gp3` volumes is 3,000 IOPS\. This parameter is not supported for `gp2`, `st1`, `sc1`, or `standard` volumes\.  
+After the instance is running, modifying this parameter results in instance [ replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)\.
 *Required*: Conditional  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -68,6 +73,7 @@ You can specify the KMS key using any of the following:
 + Key alias\. For example, alias/ExampleAlias\.
 + Key ARN\. For example, arn:aws:kms:us\-east\-1:012345678910:1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
 + Alias ARN\. For example, arn:aws:kms:us\-east\-1:012345678910:alias/ExampleAlias\.
+After the instance is running, modifying this parameter results in instance [ replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -75,6 +81,7 @@ You can specify the KMS key using any of the following:
 `SnapshotId`  <a name="cfn-ec2-blockdev-template-snapshotid"></a>
 The ID of the snapshot\.  
 If you specify both `SnapshotId` and `VolumeSize`, `VolumeSize` must be equal or greater than the size of the snapshot\.  
+After the instance is running, modifying this parameter results in instance [ replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)\.
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -86,12 +93,14 @@ The following are the supported volumes sizes for each volume type:
 +  `io1` and `io2`: 4\-16,384
 +  `st1` and `sc1`: 125\-16,384
 +  `standard`: 1\-1,024
+After the instance is running, modifying this parameter results in instance [ replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)\.
 *Required*: Conditional  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeType`  <a name="cfn-ec2-blockdev-template-volumetype"></a>
 The volume type\. For more information, see [Amazon EBS volume types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon EC2 User Guide*\. If the volume type is `io1` or `io2`, you must specify the IOPS that the volume supports\.  
+After the instance is running, modifying this parameter results in instance [ replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `gp2 | gp3 | io1 | io2 | sc1 | st1 | standard`  

@@ -29,7 +29,7 @@ Certificate revocation lists created by ACM Private CA are DER\-encoded\. You ca
 
  `openssl crl -inform DER -text -in crl_path -noout` 
 
-For more information, see [Planning a certificate revocation list \(CRL\)](https://docs.aws.amazon.com/acm-pca/latest/userguide/crl-planning.html) in the *AWS Certificate Manager Private Certificate Authority \(PCA\) User Guide* 
+For more information, see [Planning a certificate revocation list \(CRL\)](https://docs.aws.amazon.com/acm-pca/latest/userguide/crl-planning.html) in the * AWS Certificate Manager Private Certificate Authority \(PCA\) User Guide* 
 
 ## Syntax<a name="aws-properties-acmpca-certificateauthority-crlconfiguration-syntax"></a>
 

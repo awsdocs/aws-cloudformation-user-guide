@@ -1683,7 +1683,7 @@ Amazon's trademarks and trade dress may not be used in
             + [AWS::EMRContainers::VirtualCluster ContainerInfo](aws-properties-emrcontainers-virtualcluster-containerinfo.md)
             + [AWS::EMRContainers::VirtualCluster ContainerProvider](aws-properties-emrcontainers-virtualcluster-containerprovider.md)
             + [AWS::EMRContainers::VirtualCluster EksInfo](aws-properties-emrcontainers-virtualcluster-eksinfo.md)
-      + [Amazon Elasticsearch Service resource type reference](AWS_Elasticsearch.md)
+      + [Amazon OpenSearch Service resource type reference](AWS_Elasticsearch.md)
          + [AWS::Elasticsearch::Domain](aws-resource-elasticsearch-domain.md)
             + [AWS::Elasticsearch::Domain AdvancedSecurityOptionsInput](aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.md)
             + [AWS::Elasticsearch::Domain CognitoOptions](aws-properties-elasticsearch-domain-cognitooptions.md)

@@ -31,7 +31,7 @@ Flag enabling use of the Online Certificate Status Protocol \(OCSP\) for validat
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OcspCustomCname`  <a name="cfn-acmpca-certificateauthority-ocspconfiguration-ocspcustomcname"></a>
-By default, ACM Private CA injects an AWS domain into certificates being validated by the Online Certificate Status Protocol \(OCSP\)\. A customer can alternatively use this object to define a CNAME specifying a customized OCSP domain\.  
+By default, ACM Private CA injects an Amazon domain into certificates being validated by the Online Certificate Status Protocol \(OCSP\)\. A customer can alternatively use this object to define a CNAME specifying a customized OCSP domain\.  
 Note: The value of the CNAME must not include a protocol prefix such as "http://" or "https://"\.  
 *Required*: No  
 *Type*: String  

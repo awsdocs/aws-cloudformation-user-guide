@@ -308,41 +308,54 @@ Tagging or untagging a KMS key can allow or deny permission to the KMS key\. For
 #### JSON<a name="aws-resource-kms-key--examples--Create_a_symmetric_KMS_key_with_a_resource_tag--json"></a>
 
 ```
-"myKeyWithTag" : {
-      "Type" : "AWS::KMS::Key",
-      "Properties" : {
-        "KeyPolicy" : {
-          "Version": "2012-10-17",
-          "Id": "key-default-1",
-          "Statement": [
-            {
-              "Sid": "Enable IAM User Permissions",
-              "Effect": "Allow",
-              "Principal": {
-                "AWS": { "Fn::Join" : ["" , ["arn:aws:iam::", {"Ref" : "AWS::AccountId"} ,":root" ]] }
-              },
-              "Action": "kms:*",
-              "Resource": "*"
-            }
-          ]
+"myKeyWithTag": {
+    "Type": "AWS::KMS::Key",
+    "Properties": {
+        "KeyPolicy": {
+            "Version": "2012-10-17",
+            "Id": "key-default-1",
+            "Statement": [
+                {
+                    "Sid": "Enable IAM User Permissions",
+                    "Effect": "Allow",
+                    "Principal": {
+                        "AWS": {
+                            "Fn::Join": [
+                                "",
+                                [
+                                    "arn:aws:iam::",
+                                    {
+                                        "Ref": "AWS::AccountId"
+                                    },
+                                    ":root"
+                                ]
+                            ]
+                        }
+                    },
+                    "Action": "kms:*",
+                    "Resource": "*"
+                }
+            ]
         },
-        "Tags" : [
-          {
-            "Key" : {"Ref" : "Key"},
-            "Value" : {"Ref" : "Value"}
-          }
+        "Tags": [
+            {
+                "Key": {
+                    "Ref": "Key"
+                },
+                "Value": {
+                    "Ref": "Value"
+                }
+            }
         ]
-      }
-    }
-  },
-  "Parameters" : {
-    "Key" : {
-      "Type" : "String"
     },
-    "Value" : {
-      "Type" : "String"
+    "Parameters": {
+        "Key": {
+            "Type": "String"
+        },
+        "Value": {
+            "Type": "String"
+        }
     }
-  }
 }
 ```
 
@@ -350,33 +363,30 @@ Tagging or untagging a KMS key can allow or deny permission to the KMS key\. For
 
 ```
 myKeyWithTag:
-    Type: AWS::KMS::Key
-    Properties:
-      KeyPolicy:
-        Version: '2012-10-17'
-        Id: key-default-1
-        Statement:
+  Type: 'AWS::KMS::Key'
+  Properties:
+    KeyPolicy:
+      Version: 2012-10-17
+      Id: key-default-1
+      Statement:
         - Sid: Enable IAM User Permissions
           Effect: Allow
           Principal:
-            AWS:
-              Fn::Join:
+            AWS: !Join 
               - ''
               - - 'arn:aws:iam::'
-                - Ref: AWS::AccountId
-                - :root
-          Action: kms:*
+                - !Ref 'AWS::AccountId'
+                - ':root'
+          Action: 'kms:*'
           Resource: '*'
-      Tags:
-      - Key:
-          Ref: Key
-        Value:
-          Ref: Value
-Parameters:
-  Key:
-    Type: String
-  Value:
-    Type: String
+    Tags:
+      - Key: !Ref Key
+        Value: !Ref Value
+  Parameters:
+    Key:
+      Type: String
+    Value:
+      Type: String
 ```
 
 ### Create an asymmetric KMS key<a name="aws-resource-kms-key--examples--Create_an_asymmetric_KMS_key"></a>

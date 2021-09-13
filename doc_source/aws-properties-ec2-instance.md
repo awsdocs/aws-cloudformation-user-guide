@@ -141,7 +141,8 @@ This parameter is not supported by [DescribeImageAttribute](https://docs.aws.ama
 
 `BlockDeviceMappings`  <a name="cfn-ec2-instance-blockdevicemappings"></a>
 The block device mapping entries that defines the block devices to attach to the instance at launch\.  
-By default, the block devices specified in the block device mapping for the AMI are used\. You can override the AMI block device mapping using the instance block device mapping\. For the root volume, you can override only the volume size, volume type, volume encryption settings, and the `DeleteOnTermination` setting\. After the instance is running, you can modify only the `DeleteOnTermination` settings of the attached EBS volumes\.  
+By default, the block devices specified in the block device mapping for the AMI are used\. You can override the AMI block device mapping using the instance block device mapping\. For the root volume, you can override only the volume size, volume type, volume encryption settings, and the `DeleteOnTermination` setting\.  
+After the instance is running, you can modify only the `DeleteOnTermination` parameter for the attached volumes without interrupting the instance\. Modifying any other parameter results in instance [ replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)\.
 *Required*: No  
 *Type*: List of [BlockDeviceMapping](aws-properties-ec2-blockdev-mapping.md)  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

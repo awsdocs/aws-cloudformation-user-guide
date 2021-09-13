@@ -78,7 +78,7 @@ service-provider::service-name::data-type-name
 + [Elastic Load Balancing V2](AWS_ElasticLoadBalancingV2.md)
 + [Amazon EMR](AWS_EMR.md)
 + [Amazon EMR on EKS](AWS_EMRContainers.md)
-+ [Amazon ES](AWS_Elasticsearch.md)
++ [OpenSearch Service](AWS_Elasticsearch.md)
 + [Amazon EventBridge](AWS_Events.md)
 + [Amazon EventBridge Schemas](AWS_EventSchemas.md)
 + [FinSpace](AWS_FinSpace.md)

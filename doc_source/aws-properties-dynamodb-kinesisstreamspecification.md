@@ -27,6 +27,8 @@ The ARN for a specific Kinesis data stream\.
 Length Constraints: Minimum length of 37\. Maximum length of 1024\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `37`  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-dynamodb-kinesisstreamspecification--seealso"></a>
