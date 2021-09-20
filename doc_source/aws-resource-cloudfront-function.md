@@ -52,7 +52,7 @@ A flag that determines whether to automatically publish the function to the `LIV
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FunctionCode`  <a name="cfn-cloudfront-function-functioncode"></a>
-The function code\. For more information about writing a CloudFront function, see [Writing function code for CloudFront Functions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/writing-function-code.html) in the *Amazon CloudFront Developer Guide*\.  
+The function code\. For now it supports only the code inside template file. You can't refere to the external file with JS code like in AWS Lambda. For more information about writing a CloudFront function, see [Writing function code for CloudFront Functions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/writing-function-code.html) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -92,3 +92,41 @@ To get the function ARN, use the following syntax:
 
 `FunctionMetadata.FunctionARN`  <a name="FunctionMetadata.FunctionARN-fn::getatt"></a>
 Not currently supported by AWS CloudFormation\.
+
+## Examples<a name="aws-resource-cloudfront-function-examples"></a>
+
+### Add security headers<a name="aws-resource-cloudfront-function-examples-add_security_headers"></a>
+
+The following example specifies a CloudFront Function which adds security headers to the response. It should be assigned to **viewer-response** event.
+
+#### YAML<a name="aws-resource-cloudfront-function-examples-add_security_header-yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  CloudFrontSecurityFunction:
+    Type: AWS::CloudFront::Function
+    Properties:
+      Name: !Sub ${AWS::StackName}-security-function
+      AutoPublish: true
+      FunctionCode: |
+        function handler(event) {
+          var response = event.response;
+          var headers = response.headers;
+          
+          headers['strict-transport-security'] = { value: 'max-age=63072000; includeSubdomains; preload'}; 
+          headers['content-security-policy'] = { value: "default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'"}; 
+          headers['x-content-type-options'] = { value: 'nosniff'}; 
+          headers['x-frame-options'] = {value: 'DENY'}; 
+          headers['x-xss-protection'] = {value: '1; mode=block'}; 
+          
+          return response;
+        }
+      FunctionConfig:
+        Comment: Add security headers
+        Runtime: cloudfront-js-1.0
+```
+
+## See also<a name="aws-resource-cloudfront-function-seealso"></a>
++  [Customizing at the edge with CloudFront Functions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-functions.html)
++  [CloudFront Functions Examples](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/functions-example-code.html)
