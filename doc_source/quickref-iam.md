@@ -504,7 +504,7 @@ This snippet shows how to create a policy and apply it to an Amazon SQS queue us
 
 This section provides CloudFormation template examples for IAM roles for EC2 Instances\.
 
-For more information about IAM roles, see [Working with Roles](http://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html) in the *AWS Identity and Access Management User Guide*\.
+For more information about IAM roles, see [Working with roles](http://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html) in the *AWS Identity and Access Management User Guide*\.
 
 ### IAM role with EC2<a name="scenario-iamrole-ec2"></a>
 

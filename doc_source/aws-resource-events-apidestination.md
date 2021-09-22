@@ -113,3 +113,82 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The ARN of the API destination that was created by the request\.
+
+## Examples<a name="aws-resource-events-apidestination--examples"></a>
+
+
+
+### Create an ApiDestination for PagerDuty<a name="aws-resource-events-apidestination--examples--Create_an_ApiDestination_for_PagerDuty"></a>
+
+The following example creates an ApiDestination connection to PagerDuty\.
+
+#### JSON<a name="aws-resource-events-apidestination--examples--Create_an_ApiDestination_for_PagerDuty--json"></a>
+
+```
+"Parameters": {
+   "PagerDutyAPIKeyParam": {
+       "Type": "String",
+       "Description": "API Key for the PagerDuty Environment",
+       "NoEcho": true
+},
+"Resources": {
+   "MyConnection": {
+       "Type": "AWS::Events::Connection",
+       "Properties": {
+           "AuthorizationType": "API_KEY",
+           "Description": "Connection to PagerDuty API",
+           "AuthParameters": {
+               "ApiKeyAuthParameters": {
+                   "ApiKeyName": "PagerDuty Authorization",
+                   "ApiKeyValue": {
+                       "Ref": "PagerDutyAPIKeyParam"
+                   }
+               }
+           }
+       }
+   },
+   "MyApiDestination": {
+       "Type": "AWS::Events::ApiDestination",
+       "Properties": {
+           "ConnectionArn": {
+               "Fn::GetAtt": [
+                   "MyConnection",
+                   "Arn"
+               ]
+           },
+           "Description": "API Destination to send events to PagerDuty",
+           "HttpMethod": "POST",
+           "InvocationEndpoint": "https://events.pagerduty.com/v2/enqueue"
+      }
+   },
+}
+```
+
+#### YAML<a name="aws-resource-events-apidestination--examples--Create_an_ApiDestination_for_PagerDuty--yaml"></a>
+
+```
+Parameters:
+  PagerDutyAPIKeyParam: 
+    Type: String
+    Description: API Key for the PagerDuty Environment
+    NoEcho: True
+        
+Resources:
+  MyConnection:
+    Type: AWS::Events::Connection
+    Properties:
+      AuthorizationType: API_KEY
+      Description: Connection to PagerDuty API
+      AuthParameters:
+        ApiKeyAuthParameters:
+          ApiKeyName: PagerDuty Authorization
+          ApiKeyValue: !Ref PagerDutyAPIKeyParam
+        
+  MyApiDestination:
+    Type: AWS::Events::ApiDestination
+    Properties:
+      ConnectionArn: !GetAtt MyConnection.Arn
+      Description: API Destination to send events to PagerDuty
+      HttpMethod: POST
+      InvocationEndpoint: https://events.pagerduty.com/v2/enqueue
+```

@@ -31,7 +31,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DeferMaintenance](#cfn-redshift-cluster-defermaintenance)" : Boolean,
       "[DeferMaintenanceDuration](#cfn-redshift-cluster-defermaintenanceduration)" : Integer,
       "[DeferMaintenanceEndTime](#cfn-redshift-cluster-defermaintenanceendtime)" : String,
-      "[DeferMaintenanceIdentifier](#cfn-redshift-cluster-defermaintenanceidentifier)" : String,
       "[DeferMaintenanceStartTime](#cfn-redshift-cluster-defermaintenancestarttime)" : String,
       "[DestinationRegion](#cfn-redshift-cluster-destinationregion)" : String,
       "[ElasticIp](#cfn-redshift-cluster-elasticip)" : String,
@@ -90,7 +89,6 @@ Properties:
   [DeferMaintenance](#cfn-redshift-cluster-defermaintenance): Boolean
   [DeferMaintenanceDuration](#cfn-redshift-cluster-defermaintenanceduration): Integer
   [DeferMaintenanceEndTime](#cfn-redshift-cluster-defermaintenanceendtime): String
-  [DeferMaintenanceIdentifier](#cfn-redshift-cluster-defermaintenanceidentifier): String
   [DeferMaintenanceStartTime](#cfn-redshift-cluster-defermaintenancestarttime): String
   [DestinationRegion](#cfn-redshift-cluster-destinationregion): String
   [ElasticIp](#cfn-redshift-cluster-elasticip): String
@@ -277,13 +275,6 @@ An integer indicating the duration of the maintenance window in days\. If you sp
 A timestamp indicating end time for the deferred maintenance window\. If you specify an end time, you can't specify a duration\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`DeferMaintenanceIdentifier`  <a name="cfn-redshift-cluster-defermaintenanceidentifier"></a>
-A unique identifier for the deferred maintenance window\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeferMaintenanceStartTime`  <a name="cfn-redshift-cluster-defermaintenancestarttime"></a>
@@ -537,6 +528,9 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-redshift-cluster-return-values-fn--getatt-fn--getatt"></a>
+
+`DeferMaintenanceIdentifier`  <a name="DeferMaintenanceIdentifier-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 `Endpoint.Address`  <a name="Endpoint.Address-fn::getatt"></a>
 The connection endpoint for the Amazon Redshift cluster\. For example: `examplecluster.cg034hpkmmjt.us-east-1.redshift.amazonaws.com`\.

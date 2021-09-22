@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSource MariaDbParameters<a name="aws-properties-quicksight-datasource-mariadbparameters"></a>
 
-MariaDB parameters\.
+The parameters for MariaDB\.
 
 ## Syntax<a name="aws-properties-quicksight-datasource-mariadbparameters-syntax"></a>
 

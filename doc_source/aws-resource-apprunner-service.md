@@ -54,7 +54,7 @@ The Amazon Resource Name \(ARN\) of an App Runner automatic scaling configuratio
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncryptionConfiguration`  <a name="cfn-apprunner-service-encryptionconfiguration"></a>
-An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs\. By default, App Runner uses an AWS managed CMK\.  
+An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs\. By default, App Runner uses an AWS managed key\.  
 *Required*: No  
 *Type*: [EncryptionConfiguration](aws-properties-apprunner-service-encryptionconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

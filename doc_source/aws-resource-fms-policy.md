@@ -8,7 +8,7 @@ Firewall Manager provides the following types of policies:
 + An AWS WAF Classic policy, which defines a rule group\. AWS WAF Classic doesn't support rule groups in Amazon CloudFront, so, to create AWS WAF Classic policies through CloudFront, you first need to create your rule groups outside of CloudFront\. 
 + A security group policy, which manages VPC security groups across your AWS organization\. 
 + An AWS Network Firewall policy, which provides firewall rules to filter network traffic in specified Amazon VPCs\.
-+ A DNS Firewall policy, which provides Amazon Route 53 Resolver DNS Firewall rules to filter DNS queries for specified Amazon VPCs\.
++ A DNS Firewall policy, which provides Amazon Route 53 Resolver DNS Firewall rules to filter DNS queries for specified Amazon VPCs\.
 
 Each policy is specific to one of the types\. If you want to enforce more than one policy type across accounts, create multiple policies\. You can create multiple policies for each type\.
 

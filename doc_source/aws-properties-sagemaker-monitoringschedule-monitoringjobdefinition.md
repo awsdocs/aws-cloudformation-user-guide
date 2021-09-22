@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[BaselineConfig](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-baselineconfig)" : BaselineConfig,
-  "[Environment](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-environment)" : Environment,
+  "[Environment](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-environment)" : {Key : Value, ...},
   "[MonitoringAppSpecification](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringappspecification)" : MonitoringAppSpecification,
   "[MonitoringInputs](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringinputs)" : [ MonitoringInput, ... ],
   "[MonitoringOutputConfig](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringoutputconfig)" : MonitoringOutputConfig,
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BaselineConfig](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-baselineconfig): 
     BaselineConfig
   [Environment](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-environment): 
-    Environment
+    Key : Value
   [MonitoringAppSpecification](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringappspecification): 
     MonitoringAppSpecification
   [MonitoringInputs](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringinputs): 
@@ -55,7 +55,7 @@ Baseline configuration used to validate that the data conforms to the specified 
 `Environment`  <a name="cfn-sagemaker-monitoringschedule-monitoringjobdefinition-environment"></a>
 Sets the environment variables in the Docker container\.  
 *Required*: No  
-*Type*: [Environment](aws-properties-sagemaker-monitoringschedule-environment.md)  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MonitoringAppSpecification`  <a name="cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringappspecification"></a>

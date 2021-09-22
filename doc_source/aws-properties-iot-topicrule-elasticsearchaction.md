@@ -2,6 +2,9 @@
 
 Describes an action that writes data to an Amazon OpenSearch Service domain\.
 
+**Note**  
+The `Elasticsearch` action can only be used by existing rule actions\. To create a new rule action or to update an existing rule action, use the `OpenSearch` rule action instead\. For more information, see [OpenSearchAction](https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html)\.
+
 ## Syntax<a name="aws-properties-iot-topicrule-elasticsearchaction-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

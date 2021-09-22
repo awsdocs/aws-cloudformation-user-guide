@@ -58,6 +58,7 @@
 + [AWS::EC2::TransitGatewayRouteTable](aws-resource-ec2-transitgatewayroutetable.md)
 + [AWS::EC2::TransitGatewayRouteTableAssociation](aws-resource-ec2-transitgatewayroutetableassociation.md)
 + [AWS::EC2::TransitGatewayRouteTablePropagation](aws-resource-ec2-transitgatewayroutetablepropagation.md)
++ [AWS::EC2::TransitGatewayVpcAttachment](aws-resource-ec2-transitgatewayvpcattachment.md)
 + [AWS::EC2::Volume](aws-properties-ec2-ebs-volume.md)
 + [AWS::EC2::VolumeAttachment](aws-properties-ec2-ebs-volumeattachment.md)
 + [AWS::EC2::VPC](aws-resource-ec2-vpc.md)

@@ -303,7 +303,7 @@ AWS CloudFormation templates that are stored in an S3 bucket must be accessible 
 
 1. Review the information for the stack\. When you're satisfied with the settings, choose **Create**\.
 
-Your stack might take several minutes to create— but you probably don't want to just sit around waiting\. If you're like us, you'll want to know how the stack creation is going\.
+Your stack might take several minutes to create – but you probably don't want to just sit around waiting\. If you're like us, you'll want to know how the stack creation is going\.
 
 ## Step 4: Monitor the progress of stack creation<a name="GettingStarted.Walkthrough.monitor"></a>
 
@@ -369,4 +369,4 @@ The status for `MyWPTestStack` changes to `DELETE_IN_PROGRESS`\. In the same way
 
 Congratulations\! You successfully picked a template, created a stack, viewed, and used its resources, and deleted the stack and its resources\. Not only that, you were able to set up a WordPress blog using a CloudFormation template\. You can find other templates in the [AWS CloudFormation sample template library](http://aws.amazon.com/cloudformation/aws-cloudformation-templates/)\.
 
-Now it's time to learn more about templates so that you can easily modify existing templates or create your own: [Learn template basics](gettingstarted.templatebasics.md)\.
+Now it's time to learn more about templates so that you can modify existing templates or create your own: [Learn template basics](gettingstarted.templatebasics.md)\.

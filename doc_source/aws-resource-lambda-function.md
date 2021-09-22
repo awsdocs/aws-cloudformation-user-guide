@@ -4,7 +4,7 @@ The `AWS::Lambda::Function` resource creates a Lambda function\. To create a fun
 
 You set the package type to `Image` if the deployment package is a [container image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html)\. For a container image, the code property must include the URI of a container image in the Amazon ECR registry\. You do not need to specify the handler and runtime properties\. 
 
-You set the package type to `Zip` if the deployment package is a [\.zip file archive](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-zip)\. For a \.zip file archive, the code property specifies the location of the \.zip file\. You must also specify the handler and runtime properties\.
+You set the package type to `Zip` if the deployment package is a [\.zip file archive](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-zip)\. For a \.zip file archive, the code property specifies the location of the \.zip file\. You must also specify the handler and runtime properties\. For a Python example, see [ Deploy Python Lambda functions with \.zip file archives](https://docs.aws.amazon.com/lambda/latest/dg/python-package.html)\.
 
 You can use [code signing](https://docs.aws.amazon.com/lambda/latest/dg/configuration-codesigning.html) if your deployment package is a \.zip file archive\. To enable code signing for this function, specify the ARN of a code\-signing configuration\. When a user attempts to deploy a code package with `UpdateFunctionCode`, Lambda checks that the code package has a valid signature from a trusted publisher\. The code\-signing configuration includes a set of signing profiles, which define the trusted publishers for this function\.
 
@@ -203,7 +203,7 @@ A list of [tags](https://docs.aws.amazon.com/lambda/latest/dg/tagging.html) to a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Timeout`  <a name="cfn-lambda-function-timeout"></a>
-The amount of time that Lambda allows a function to run before stopping it\. The default is 3 seconds\. The maximum allowed value is 900 seconds\. For additional information, see [Lambda execution environment](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html)\.  
+The amount of time \(in seconds\) that Lambda allows a function to run before stopping it\. The default is 3 seconds\. The maximum allowed value is 900 seconds\. For additional information, see [Lambda execution environment](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-context.html)\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  

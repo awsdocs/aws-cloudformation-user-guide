@@ -61,7 +61,7 @@ For the syntax and information about each function, see [Condition functions](in
 
 ## Examples<a name="conditions-section-structure-examples"></a>
 
-### Simple condition<a name="w9928ab1c27c15c23c17b3"></a>
+### Simple condition<a name="w10032ab1c27c15c23c17b3"></a>
 
 The following sample template includes an `EnvType` input parameter, where you can specify `prod` to create a stack for production or `test` to create a stack for testing\. For a production environment, AWS CloudFormation creates an Amazon EC2 instance and attaches a volume to the instance\. For a test environment, AWS CloudFormation creates only the Amazon EC2 instance\.
 
@@ -170,7 +170,7 @@ Resources:
         - AvailabilityZone
 ```
 
-#### Nested condition<a name="w9928ab1c27c15c23c17b3c11"></a>
+#### Nested condition<a name="w10032ab1c27c15c23c17b3c11"></a>
 
 The following sample template references a condition within another condition\. You can create a stack that creates an s3 bucket\. For a stack deployed in a production environment, AWS CloudFormation creates a policy for the S3 bucket\.
 

@@ -40,7 +40,7 @@ You can use your own bucket and manage its permissions by manually uploading tem
 
      To view more templates samples and snippets, organized by AWS service, click **View more sample templates**\.  
 **Create template in Designer**  
-Create or modify a template using AWS CloudFormation Designer, a drag\-and\-drop interface for graphically diagramming your templates\. For more information, see [What is AWS CloudFormation Designer?](working-with-templates-cfn-designer.md)\.
+Create or modify a template using AWS CloudFormation Designer, a drag and drop interface for graphically diagramming your templates\. For more information, see [What is AWS CloudFormation Designer?](working-with-templates-cfn-designer.md)\.
 
 1. To accept your settings, choose **Next**, and proceed with [specifying the stack name and parameters](cfn-using-console-create-stack-parameters.md)\.
 

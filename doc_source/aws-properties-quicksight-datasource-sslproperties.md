@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSource SslProperties<a name="aws-properties-quicksight-datasource-sslproperties"></a>
 
-Secure Socket Layer \(SSL\) properties that apply when QuickSight connects to your underlying data source\.
+Secure Socket Layer \(SSL\) properties that apply when Amazon QuickSight connects to your underlying data source\.
 
 ## Syntax<a name="aws-properties-quicksight-datasource-sslproperties-syntax"></a>
 

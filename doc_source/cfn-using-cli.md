@@ -5,7 +5,7 @@ With the AWS Command Line Interface \(AWS CLI\), you can create, monitor, update
 If you use Windows PowerShell, AWS also offers the [AWS Tools for Windows PowerShell](http://aws.amazon.com/powershell/)\.
 
 **Note**  
-The prior AWS CloudFormation CLI tools are still available, but not recommended\. If you need information about the prior AWS CloudFormation CLI tools, see the [AWS CloudFormation CLI Reference](https://s3.amazonaws.com/awsdocs/AWSCloudFormation/2010-05-15/cfn-ug-cli-ref-09172013.pdf) in the documentation archive\.
+The prior AWS CLI tools are still available, but not recommended\. If you need information about the prior AWS CloudFormation CLI tools, see the [AWS CloudFormation CLI Reference](https://s3.amazonaws.com/awsdocs/AWSCloudFormation/2010-05-15/cfn-ug-cli-ref-09172013.pdf) in the documentation archive\.
 
 **Topics**
 + [Creating a stack](using-cfn-cli-creating-stack.md)

@@ -17,8 +17,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EnableLogFileValidation](#cfn-cloudtrail-trail-enablelogfilevalidation)" : Boolean,
       "[EventSelectors](#cfn-cloudtrail-trail-eventselectors)" : [ EventSelector, ... ],
       "[IncludeGlobalServiceEvents](#cfn-cloudtrail-trail-includeglobalserviceevents)" : Boolean,
+      "[InsightSelectors](#cfn-cloudtrail-trail-insightselectors)" : [ InsightSelector, ... ],
       "[IsLogging](#cfn-cloudtrail-trail-islogging)" : Boolean,
       "[IsMultiRegionTrail](#cfn-cloudtrail-trail-ismultiregiontrail)" : Boolean,
+      "[IsOrganizationTrail](#cfn-cloudtrail-trail-isorganizationtrail)" : Boolean,
       "[KMSKeyId](#cfn-cloudtrail-trail-kmskeyid)" : String,
       "[S3BucketName](#cfn-cloudtrail-trail-s3bucketname)" : String,
       "[S3KeyPrefix](#cfn-cloudtrail-trail-s3keyprefix)" : String,
@@ -40,8 +42,11 @@ Properties:
   [EventSelectors](#cfn-cloudtrail-trail-eventselectors): 
     - EventSelector
   [IncludeGlobalServiceEvents](#cfn-cloudtrail-trail-includeglobalserviceevents): Boolean
+  [InsightSelectors](#cfn-cloudtrail-trail-insightselectors): 
+    - InsightSelector
   [IsLogging](#cfn-cloudtrail-trail-islogging): Boolean
   [IsMultiRegionTrail](#cfn-cloudtrail-trail-ismultiregiontrail): Boolean
+  [IsOrganizationTrail](#cfn-cloudtrail-trail-isorganizationtrail): Boolean
   [KMSKeyId](#cfn-cloudtrail-trail-kmskeyid): String
   [S3BucketName](#cfn-cloudtrail-trail-s3bucketname): String
   [S3KeyPrefix](#cfn-cloudtrail-trail-s3keyprefix): String
@@ -86,6 +91,12 @@ Specifies whether the trail is publishing events from global services such as IA
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`InsightSelectors`  <a name="cfn-cloudtrail-trail-insightselectors"></a>
+Specifies whether a trail has insight types specified in an `InsightSelector` list\.  
+*Required*: No  
+*Type*: List of [InsightSelector](aws-properties-cloudtrail-trail-insightselector.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `IsLogging`  <a name="cfn-cloudtrail-trail-islogging"></a>
 Whether the CloudTrail trail is currently logging AWS API calls\.  
 *Required*: Yes  
@@ -94,6 +105,12 @@ Whether the CloudTrail trail is currently logging AWS API calls\.
 
 `IsMultiRegionTrail`  <a name="cfn-cloudtrail-trail-ismultiregiontrail"></a>
 Specifies whether the trail applies only to the current region or to all regions\. The default is false\. If the trail exists only in the current region and this value is set to true, shadow trails \(replications of the trail\) will be created in the other regions\. If the trail exists in all regions and this value is set to false, the trail will remain in the region where it was created, and its shadow trails in other regions will be deleted\. As a best practice, consider using trails that log events in all regions\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IsOrganizationTrail`  <a name="cfn-cloudtrail-trail-isorganizationtrail"></a>
+Specifies whether the trail is created for all accounts in an organization in AWS Organizations, or only for the current AWS account\. The default is false, and cannot be true unless the call is made on behalf of an AWS account that is the management account for an organization in AWS Organizations\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

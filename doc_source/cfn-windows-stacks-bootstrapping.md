@@ -10,10 +10,10 @@ The template can be viewed in its entirety at the following URL:
 + [https://s3\.amazonaws\.com/cloudformation\-templates\-us\-east\-1/Windows\_Single\_Server\_SharePoint\_Foundation\.template ](https://s3.amazonaws.com/cloudformation-templates-us-east-1/Windows_Single_Server_SharePoint_Foundation.template)
 
 This example demonstrates how to:
-+ Create an IAM User and Security Group for access to the instance
-+ Configure initialization files: `cfn-credentials`, `cfn-hup.conf`, and `cfn-auto-reloader.conf`
++ Create an IAM User and security group for access to the instance\.
++ Configure initialization files: `cfn-credentials`, `cfn-hup.conf`, and `cfn-auto-reloader.conf`\.
 + Download and install a package such as Sharepoint Foundation 2010 on the server instance\.
-+ Use a WaitCondition to ensure resources are ready 
++ Use a WaitCondition to ensure resources are ready\.
 + Retrieve an IP for the instance with Amazon Elastic IP \(EIP\)\.
 
 The AWS CloudFormation helper script `cfn-init` is used to perform each of these actions, based on information in the `AWS::CloudFormation::Init` resource in the Windows Single Server Sharepoint Foundation template\.
@@ -55,11 +55,11 @@ After this, the **files** section of `AWS::CloudFormation::Init` is declared:
 },
 ```
 
-Three files are created here and placed in the `C:\cfn` directory on the server instance\. They are:
+Three files are created here and placed in the `C:\cfn` directory on the server instance\. They're:
 + `cfn-hup.conf`, the configuration file for cfn\-hup\.
 + `cfn-auto-reloader.conf`, the configuration file for the hook used by cfn\-hup to initiate an update \(calling cfn\-init\) when the metadata in `AWS::CloudFormation::Init` changes\.
 
-There is also a file that is downloaded to the server: `SharePointFoundation.exe`\. This file is used to install SharePoint on the server instance\.
+There is also a file that's downloaded to the server: `SharePointFoundation.exe`\. This file is used to install SharePoint on the server instance\.
 
 **Important**  
 Because paths on Windows use a backslash \('\\'\) character, you must always remember to properly escape all backslashes by prepending another backslash whenever you refer to a Windows path in the AWS CloudFormation template\.
@@ -135,9 +135,9 @@ If all goes well, an Elastic IP is used to provide access to the SharePoint inst
  }
 ```
 
-Once stack creation is complete, the IP address supplied by EIP will be displayed in the **Outputs** tab of the AWS CloudFormation console\. However, before you can access the instance you will need to retrieve the auto\-generated temporary Administrator password for the instance\. For more information, see [Connecting to your Windows instance using RDP](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/connecting_to_windows_instance.html) in the *Amazon EC2 User Guide for Windows Instances*\.
+Once stack creation is complete, the IP address supplied by EIP will be displayed in the **Outputs** tab of the AWS CloudFormation console\. However, before you can access the instance you will need to retrieve the generated temporary Administrator password for the instance\. For more information, see [Connecting to your Windows instance using RDP](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/connecting_to_windows_instance.html) in the *Amazon EC2 User Guide for Windows Instances*\.
 
-## How to manage Windows services<a name="w9928ab1c23c35c15c11"></a>
+## How to manage Windows services<a name="w10032ab1c23c36c15c11"></a>
 
 You manage Windows services in the same way as Linux services, except that you use a `windows` key instead of `sysvinit`\. The following example starts the `cfn-hup` service, sets it to Automatic, and restarts the service if cfn\-init modifies the `c:\cfn\cfn-hup.conf` or `c:\cfn\hooks.d\cfn-auto-reloader.conf` configuration files\.
 

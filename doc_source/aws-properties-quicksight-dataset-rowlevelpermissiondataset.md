@@ -53,7 +53,7 @@ The namespace associated with the dataset that contains permissions for RLS\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PermissionPolicy`  <a name="cfn-quicksight-dataset-rowlevelpermissiondataset-permissionpolicy"></a>
-The type of permissions to use when interpretting the permissions for RLS\. `DENY_ACCESS` is included for backward compatibility only\.  
+The type of permissions to use when interpreting the permissions for RLS\. `DENY_ACCESS` is included for backward compatibility only\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `DENY_ACCESS | GRANT_ACCESS`  

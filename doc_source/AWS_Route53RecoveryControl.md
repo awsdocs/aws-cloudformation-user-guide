@@ -1,4 +1,4 @@
-# Amazon Route 53 Recovery Control resource type reference<a name="AWS_Route53RecoveryControl"></a>
+# Amazon Route 53 Recovery Control resource type reference<a name="AWS_Route53RecoveryControl"></a>
 
 **Resource types**
 + [AWS::Route53RecoveryControl::Cluster](aws-resource-route53recoverycontrol-cluster.md)

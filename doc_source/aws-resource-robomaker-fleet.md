@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::RoboMaker::Fleet",
   "Properties" : {
       "[Name](#cfn-robomaker-fleet-name)" : String,
-      "[Tags](#cfn-robomaker-fleet-tags)" : Json
+      "[Tags](#cfn-robomaker-fleet-tags)" : {Key : Value, ...}
     }
 }
 ```
@@ -24,7 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::RoboMaker::Fleet
 Properties: 
   [Name](#cfn-robomaker-fleet-name): String
-  [Tags](#cfn-robomaker-fleet-tags): Json
+  [Tags](#cfn-robomaker-fleet-tags): 
+    Key : Value
 ```
 
 ## Properties<a name="aws-resource-robomaker-fleet-properties"></a>
@@ -41,7 +42,7 @@ The name of the fleet\.
 `Tags`  <a name="cfn-robomaker-fleet-tags"></a>
 The list of all tags added to the fleet\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-robomaker-fleet-return-values"></a>

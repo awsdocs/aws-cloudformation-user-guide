@@ -59,7 +59,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 The following example grants access permissions to CloudWatch\.
 
-It is very important to note where you need to use the name versus the alias for the Multi\-Region Access Point\. In the following example, the name is `DOC-EXAMPLE-MULTI-REGION-ACCESS-POINT`, the alias of the Multi\-Region Access Point is `mfzwi23gnjvgw.mrap`, and the AWS account is `123456789012`\. For more information about how ARNs for Multi\-Region Access Points work, see [ Making requests using a Multi\-Region Access Point](https://docs.aws.amazon.com/AmazonS3/latest/latest/userguide/MultiRegionAccessPointRequests.html) in the in the *Amazon S3 User Guide*\.
+It is very important to note where you need to use the name versus the alias for the Multi\-Region Access Point\. In the following example, the name is `DOC-EXAMPLE-MULTI-REGION-ACCESS-POINT`, the alias of the Multi\-Region Access Point is `mfzwi23gnjvgw.mrap`, and the AWS account is `123456789012`\. For more information about how ARNs for Multi\-Region Access Points work, see [ Making requests using a Multi\-Region Access Point](https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPointRequests.html) in the in the *Amazon S3 User Guide*\.
 
 #### JSON<a name="aws-resource-s3-multiregionaccesspointpolicy--examples--Simple_Multi-Region_Access_Point_Policy--json"></a>
 

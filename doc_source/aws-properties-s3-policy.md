@@ -114,7 +114,7 @@ This key should be used carefully\. It is dangerous to include a publicly known 
 
 ```
 SampleBucketPolicy:
-  Type: 'AWS::S3::BucketPolicy'
+  Type: AWS::S3::BucketPolicy
   Properties:
     Bucket: !Ref DOC-EXAMPLE-BUCKET
     PolicyDocument:

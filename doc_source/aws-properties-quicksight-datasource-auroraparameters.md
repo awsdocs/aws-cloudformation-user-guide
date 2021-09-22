@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSource AuroraParameters<a name="aws-properties-quicksight-datasource-auroraparameters"></a>
 
-Amazon Aurora parameters\.
+Parameters for Amazon Aurora\.
 
 ## Syntax<a name="aws-properties-quicksight-datasource-auroraparameters-syntax"></a>
 

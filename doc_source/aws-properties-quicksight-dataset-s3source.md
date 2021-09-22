@@ -36,7 +36,7 @@ The Amazon Resource Name \(ARN\) for the data source\.
 
 `InputColumns`  <a name="cfn-quicksight-dataset-s3source-inputcolumns"></a>
 A physical table type for an S3 data source\.  
-For non\-JSON files, only `STRING` data types are supported in input columns\.
+For files that aren't JSON, only `STRING` data types are supported in input columns\.
 *Required*: Yes  
 *Type*: List of [InputColumn](aws-properties-quicksight-dataset-inputcolumn.md)  
 *Maximum*: `2048`  

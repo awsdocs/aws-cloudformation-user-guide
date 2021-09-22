@@ -70,7 +70,7 @@ The cost filters, such as service or tag, that are applied to a budget\.
 + Amazon Redshift
 + Amazon Relational Database Service
 + Amazon ElastiCache
-+ Amazon OpenSearch Service
++  Amazon OpenSearch Service 
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

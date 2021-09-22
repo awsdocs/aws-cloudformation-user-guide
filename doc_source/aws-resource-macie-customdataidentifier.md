@@ -95,12 +95,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the custom data identifier\.
 
-`CreatedAt`  <a name="CreatedAt-fn::getatt"></a>
-The date and time, in UTC and extended ISO 8601 format, when the custom data identifier was created\.
-
-`Deleted`  <a name="Deleted-fn::getatt"></a>
-Specifies whether the custom data identifier was deleted\. If you delete a custom data identifier, Amazon Macie doesn't delete it permanently\. Instead, it soft deletes the identifier\.
-
 `Id`  <a name="Id-fn::getatt"></a>
 The unique identifier for the custom data identifier\.
 

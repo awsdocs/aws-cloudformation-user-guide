@@ -1,4 +1,4 @@
-# Amazon Route 53 Resolver resource type reference<a name="AWS_Route53Resolver"></a>
+# Amazon Route 53 Resolver resource type reference<a name="AWS_Route53Resolver"></a>
 
 **Resource types**
 + [AWS::Route53Resolver::FirewallDomainList](aws-resource-route53resolver-firewalldomainlist.md)

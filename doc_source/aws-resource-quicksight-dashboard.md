@@ -53,7 +53,7 @@ Properties:
 ## Properties<a name="aws-resource-quicksight-dashboard-properties"></a>
 
 `AwsAccountId`  <a name="cfn-quicksight-dashboard-awsaccountid"></a>
-The ID of the AWS account; where you want to create the dashboard\.  
+The ID of the AWS account where you want to create the dashboard\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `12`  
@@ -62,17 +62,17 @@ The ID of the AWS account; where you want to create the dashboard\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DashboardId`  <a name="cfn-quicksight-dashboard-dashboardid"></a>
-The ID for the dashboard, also added to the IAM policy\.  
+The ID for the dashboard, also added to the IAMpolicy\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `2048`  
+*Maximum*: `512`  
 *Pattern*: `[\w\-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DashboardPublishOptions`  <a name="cfn-quicksight-dashboard-dashboardpublishoptions"></a>
 Options for publishing the dashboard when you create it:  
-+  `AvailabilityStatus` for `AdHocFilteringOption` \- This status can be either `ENABLED` or `DISABLED`\. When this is set to `DISABLED`, QuickSight disables the left filter pane on the published dashboard, which can be used for ad hoc \(one\-time\) filtering\. This option is `ENABLED` by default\. 
++  `AvailabilityStatus` for `AdHocFilteringOption` \- This status can be either `ENABLED` or `DISABLED`\. When this is set to `DISABLED`, Amazon QuickSight disables the left filter pane on the published dashboard, which can be used for ad hoc \(one\-time\) filtering\. This option is `ENABLED` by default\. 
 +  `AvailabilityStatus` for `ExportToCSVOption` \- This status can be either `ENABLED` or `DISABLED`\. The visual option to export data to \.CSV format isn't enabled when this is set to `DISABLED`\. This option is `ENABLED` by default\. 
 +  `VisibilityState` for `SheetControlsOption` \- This visibility state can be either `COLLAPSED` or `EXPANDED`\. This option is `COLLAPSED` by default\. 
 *Required*: No  
@@ -94,7 +94,7 @@ The parameters for the creation of the dashboard, which you want to use to overr
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Permissions`  <a name="cfn-quicksight-dashboard-permissions"></a>
-A structure that contains the permissions of the dashboard\. You can use this structure for granting permissions by providing a list of IAM action information for each principal ARN\.   
+A structure that contains the permissions of the dashboard\. You can use this structure for granting permissions by providing a list of IAMaction information for each principal ARN\.   
 To specify no permissions, omit the permissions list\.  
 *Required*: No  
 *Type*: List of [ResourcePermission](aws-properties-quicksight-dashboard-resourcepermission.md)  
@@ -102,7 +102,7 @@ To specify no permissions, omit the permissions list\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceEntity`  <a name="cfn-quicksight-dashboard-sourceentity"></a>
-The entity that you are using as a source when you create the dashboard\. In `SourceEntity`, you specify the type of object you're using as source\. You can only create a dashboard from a template, so you use a `SourceTemplate` entity\. If you need to create a dashboard from an analysis, first convert the analysis to a template by using the `CreateTheme` API operation\. For `SourceTemplate`, specify the Amazon Resource Name \(ARN\) of the source template\. The `SourceTemplate`ARN can contain any AWS account and any Amazon QuickSight\-supported \.   
+The entity that you are using as a source when you create the dashboard\. In `SourceEntity`, you specify the type of object you're using as source\. You can only create a dashboard from a template, so you use a `SourceTemplate` entity\. If you need to create a dashboard from an analysis, first convert the analysis to a template by using the `CreateTemplate` API operation\. For `SourceTemplate`, specify the Amazon Resource Name \(ARN\) of the source template\. The `SourceTemplate`ARN can contain any AWS account; and any QuickSight\-supported AWS Region;\.   
 Use the `DataSetReferences` entity within `SourceTemplate` to list the replacement datasets for the placeholders listed in the original\. The schema in each dataset must match its placeholder\.   
 *Required*: No  
 *Type*: [DashboardSourceEntity](aws-properties-quicksight-dashboard-dashboardsourceentity.md)  
@@ -116,7 +116,7 @@ Contains a map of the key\-value pairs for the resource tag or tags assigned to 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThemeArn`  <a name="cfn-quicksight-dashboard-themearn"></a>
-The Amazon Resource Name \(ARN\) of the theme that is being used for this dashboard\. If you add a value for this field, it overrides the value that is used in the source entity\. The theme ARN must exist in the same AWS account; where you create the dashboard\.  
+The Amazon Resource Name \(ARN\) of the theme that is being used for this dashboard\. If you add a value for this field, it overrides the value that is used in the source entity\. The theme ARN must exist in the same AWS account where you create the dashboard\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

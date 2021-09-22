@@ -55,7 +55,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Resource policy example<a name="aws-resource-logs-resourcepolicy--examples--Resource_policy_example"></a>
 
-The following example creates a resource policy that allows Route 53 to write log events to a log group that has this policy attached\.
+The following example creates a resource policy that allows Route 53 to write log events to a log group that has this policy attached\.
 
 #### JSON<a name="aws-resource-logs-resourcepolicy--examples--Resource_policy_example--json"></a>
 

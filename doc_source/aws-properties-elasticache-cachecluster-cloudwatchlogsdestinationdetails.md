@@ -24,6 +24,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `LogGroup`  <a name="cfn-elasticache-cachecluster-cloudwatchlogsdestinationdetails-loggroup"></a>
 The name of the CloudWatch Logs log group\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

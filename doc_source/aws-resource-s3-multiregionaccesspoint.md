@@ -1,6 +1,6 @@
 # AWS::S3::MultiRegionAccessPoint<a name="aws-resource-s3-multiregionaccesspoint"></a>
 
-The `AWS::S3::MultiRegionAccessPoint` resource creates an Amazon S3 Multi\-Region Access Point\. To learn more about Multi\-Region Access Points, see [ Multi\-Region Access Points in Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/latest/userguide/MultiRegionAccessPoints.html) in the in the *Amazon S3 User Guide*\.
+The `AWS::S3::MultiRegionAccessPoint` resource creates an Amazon S3 Multi\-Region Access Point\. To learn more about Multi\-Region Access Points, see [ Multi\-Region Access Points in Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPoints.html) in the in the *Amazon S3 User Guide*\.
 
 ## Syntax<a name="aws-resource-s3-multiregionaccesspoint-syntax"></a>
 

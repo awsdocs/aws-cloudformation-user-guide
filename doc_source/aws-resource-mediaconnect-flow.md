@@ -86,7 +86,7 @@ The Amazon Resource Name \(ARN\) of the flow\.
 The Availability Zone that the flow was created in\. These options are limited to the Availability Zones within the current AWS Region\.
 
 `Source.IngestIp`  <a name="Source.IngestIp-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The IP address that the flow listens on for incoming content\.
 
 `Source.SourceArn`  <a name="Source.SourceArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ARN of the source\.

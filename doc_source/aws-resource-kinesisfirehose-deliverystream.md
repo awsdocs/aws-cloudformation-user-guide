@@ -443,174 +443,102 @@ The following example uses the `ExtendedS3DestinationConfiguration` property to 
 
 ```
 {
-  "AWSTemplateFormatVersion" : "2010-09-09",
-  "Description" : "Stack for Firehose DeliveryStream S3 Destination.",
-  "Resources": {
-    "deliverystream": {
-      "DependsOn": ["deliveryPolicy"],
-      "Type": "AWS::KinesisFirehose::DeliveryStream",
-      "Properties": {
-        "ExtendedS3DestinationConfiguration": {
-          "BucketARN": {"Fn::Join": ["", ["arn:aws:s3:::", {"Ref":"s3bucket"}]]},
-          "BufferingHints": {
-            "IntervalInSeconds": "60",
-            "SizeInMBs": "50"
-          },
-          "CompressionFormat": "UNCOMPRESSED",
-          "Prefix": "firehose/",
-          "RoleARN": {"Fn::GetAtt" : ["deliveryRole", "Arn"] },
-          "ProcessingConfiguration" : {
-            "Enabled": "true",
-            "Processors": [
+  "Resources":{ 
+    "Firehose":{
+      "Type" : "AWS::KinesisFirehose::DeliveryStream",
+      "Properties" : {
+          "DeliveryStreamName" : "tester-partitioning-delimiter",
+          "DeliveryStreamType" : "DirectPut",
+          "ExtendedS3DestinationConfiguration": 
             {
-              "Parameters": [ 
-              { 
-                "ParameterName": "LambdaArn",
-                "ParameterValue": {"Fn::GetAtt" : ["myLambda", "Arn"] } 
-              }],
-              "Type": "Lambda"
-            }]
-          }
-        }
-      }
-    },
-    "s3bucket": {
-      "Type": "AWS::S3::Bucket",
-      "Properties": {
-        "VersioningConfiguration": {
-          "Status": "Enabled"
-        }
-      }
-    },
-    "deliveryRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Sid": "",
-              "Effect": "Allow",
-              "Principal": {
-                "Service": "firehose.amazonaws.com"
+              "BucketARN": "arn:aws:s3:::dp-firehose-test",
+              "BufferingHints": {
+                "SizeInMBs": 128,
+                "IntervalInSeconds": 900
               },
-              "Action": "sts:AssumeRole",
-              "Condition": {
-                "StringEquals": {
-                  "sts:ExternalId": {"Ref":"AWS::AccountId"}
+              "CompressionFormat": "UNCOMPRESSED",
+              "ErrorOutputPrefix": "table/error/!{firehose:error-output-type}/dt=!{timestamp:yyyy'-'MM'-'dd}/h=!{timestamp:HH}/",
+              "Prefix": "YYYY=!{partitionKeyFromQuery:YYYY}/MM=!{partitionKeyFromQuery:MM}//DD=!{partitionKeyFromQuery:DD}/HH=!{partitionKeyFromQuery:HH}/REGION=!{partitionKeyFromQuery:REGION}/SITEID=!{partitionKeyFromQuery:SITEID}/",
+              "RoleARN": "arn:aws:iam::012345678912:role/service-role/KinesisFirehoseServiceRole-dp-kinesis-f-us-east-1-012345678912", 
+              "DynamicPartitioningConfiguration": 
+              {
+                "Enabled": true,
+                "RetryOptions": {
+                  "DurationInSeconds": 300
+                  }
+                },
+                "ProcessingConfiguration": {
+                  "Enabled": true,
+                  "Processors": [
+                  {
+                    "Type": "MetadataExtraction",
+                    "Parameters": [
+                      {
+                      "ParameterName": "MetadataExtractionQuery",
+                      "ParameterValue": "{YYYY : (.ts/1000) | strftime(\"%Y\"), MM : (.ts/1000) | strftime(\"%m\"), DD : (.ts/1000) | strftime(\"%d\"), HH: (.ts/1000) | strftime(\"%H\")}"
+                      },
+                      {
+                        "ParameterName": "JsonParsingEngine",
+                        "ParameterValue": "JQ-1.6"
+                      }
+                    ]
+                  },
+				    {
+                    "Type": "AppendDelimiterToRecord",
+                    "Parameters": [
+                        {
+                        "ParameterName": "Delimiter",
+                        "ParameterValue": "\\n"
+                      }
+                    ]
+                  }
+                ] 
                 }
               }
             }
-          ]
+          }
         }
       }
-    },
-    "deliveryPolicy": {
-      "Type": "AWS::IAM::Policy",
-      "Properties": {
-        "PolicyName": "firehose_delivery_policy",
-        "PolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Action": [
-                "s3:AbortMultipartUpload",
-                "s3:GetBucketLocation",
-                "s3:GetObject",
-                "s3:ListBucket",
-                "s3:ListBucketMultipartUploads",
-                "s3:PutObject"
-              ],
-              "Resource": [
-                {"Fn::Join": ["", ["arn:aws:s3:::", {"Ref":"s3bucket"}]]},
-                {"Fn::Join": ["", ["arn:aws:s3:::", {"Ref":"s3bucket"}, "*"]]}
-              ]
-            }
-          ]
-        },
-        "Roles": [{"Ref": "deliveryRole"}]
-      }
-    }
-  }
-}
 ```
 
 #### YAML<a name="aws-resource-kinesisfirehose-deliverystream--examples--Specify_an_Amazon_S3_Destination_for_the_Delivery_Stream--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
-Description: Stack for Firehose DeliveryStream S3 Destination.
+---
 Resources:
-  deliverystream:
-    DependsOn:
-      - deliveryPolicy
+  Firehose:
     Type: AWS::KinesisFirehose::DeliveryStream
     Properties:
+      DeliveryStreamName: tester-partitioning-delimiter
+      DeliveryStreamType: DirectPut
       ExtendedS3DestinationConfiguration:
-        BucketARN: !Join 
-          - ''
-          - - 'arn:aws:s3:::'
-            - !Ref s3bucket
+        BucketARN: arn:aws:s3:::dp-firehose-test
         BufferingHints:
-          IntervalInSeconds: '60'
-          SizeInMBs: '50'
+          SizeInMBs: 128
+          IntervalInSeconds: 900
         CompressionFormat: UNCOMPRESSED
-        Prefix: firehose/
-        RoleARN: !GetAtt deliveryRole.Arn
+        ErrorOutputPrefix: table/error/!{firehose:error-output-type}/dt=!{timestamp:yyyy'-'MM'-'dd}/h=!{timestamp:HH}/
+        Prefix: YYYY=!{partitionKeyFromQuery:YYYY}/MM=!{partitionKeyFromQuery:MM}//DD=!{partitionKeyFromQuery:DD}/HH=!{partitionKeyFromQuery:HH}/REGION=!{partitionKeyFromQuery:REGION}/SITEID=!{partitionKeyFromQuery:SITEID}/
+        RoleARN: arn:aws:iam::012345678912:role/service-role/KinesisFirehoseServiceRole-dp-kinesis-f-us-east-1-012345678912
+        DynamicPartitioningConfiguration:
+          Enabled: true
+          RetryOptions:
+            DurationInSeconds: 300
         ProcessingConfiguration:
-          Enabled: 'true'
+          Enabled: true
           Processors:
-            - Parameters:
-                - ParameterName: LambdaArn
-                  ParameterValue: !GetAtt myLambda.Arn 
-              Type: Lambda 
-  s3bucket:
-    Type: AWS::S3::Bucket
-    Properties:
-      VersioningConfiguration:
-        Status: Enabled
-  deliveryRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Version: 2012-10-17
-        Statement:
-          - Sid: ''
-            Effect: Allow
-            Principal:
-              Service: firehose.amazonaws.com
-            Action: 'sts:AssumeRole'
-            Condition:
-              StringEquals:
-                'sts:ExternalId': !Ref 'AWS::AccountId'
-  deliveryPolicy:
-    Type: AWS::IAM::Policy
-    Properties:
-      PolicyName: firehose_delivery_policy
-      PolicyDocument:
-        Version: 2012-10-17
-        Statement:
-          - Effect: Allow
-            Action:
-              - 's3:AbortMultipartUpload'
-              - 's3:GetBucketLocation'
-              - 's3:GetObject'
-              - 's3:ListBucket'
-              - 's3:ListBucketMultipartUploads'
-              - 's3:PutObject'
-            Resource:
-              - !Join 
-                - ''
-                - - 'arn:aws:s3:::'
-                  - !Ref s3bucket
-              - !Join 
-                - ''
-                - - 'arn:aws:s3:::'
-                  - !Ref s3bucket
-                  - '*'
-      Roles:
-        - !Ref deliveryRole
+          - Type: MetadataExtraction
+            Parameters:
+            - ParameterName: MetadataExtractionQuery
+              ParameterValue: '{YYYY : (.ts/1000) | strftime("%Y"), MM : (.ts/1000)
+                | strftime("%m"), DD : (.ts/1000) | strftime("%d"), HH: (.ts/1000)
+                | strftime("%H")}'
+            - ParameterName: JsonParsingEngine
+              ParameterValue: JQ-1.6
+          - Type: AppendDelimiterToRecord
+            Parameters:
+            - ParameterName: Delimiter
+              ParameterValue: "\\n"
 ```
 
 ### Specify a Kinesis Stream as the Source for the Delivery Stream<a name="aws-resource-kinesisfirehose-deliverystream--examples--Specify_a_Kinesis_Stream_as_the_Source_for_the_Delivery_Stream"></a>

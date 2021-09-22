@@ -1,4 +1,4 @@
-# Amazon Route 53 Recovery Readiness resource type reference<a name="AWS_Route53RecoveryReadiness"></a>
+# Amazon Route 53 Recovery Readiness resource type reference<a name="AWS_Route53RecoveryReadiness"></a>
 
 **Resource types**
 + [AWS::Route53RecoveryReadiness::Cell](aws-resource-route53recoveryreadiness-cell.md)

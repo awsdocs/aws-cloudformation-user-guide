@@ -196,7 +196,7 @@ The name of the security configuration applied to the cluster\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceRole`  <a name="cfn-elasticmapreduce-cluster-servicerole"></a>
-The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf\.  
+The IAM role that Amazon EMR assumes in order to access AWS resources on your behalf\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
