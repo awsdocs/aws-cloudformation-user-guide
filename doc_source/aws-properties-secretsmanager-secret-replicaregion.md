@@ -33,7 +33,7 @@ Can be an `ARN`, `Key ID`, or `Alias`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Region`  <a name="cfn-secretsmanager-secret-replicaregion-region"></a>
-\(Optional\) A string that represents a `Region`, for example "us\-east\-1"\.  
+A string that represents a `Region`, for example "us\-east\-1"\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
