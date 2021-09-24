@@ -132,6 +132,7 @@ service-provider::service-name::data-type-name
 + [MediaPackage](AWS_MediaPackage.md)
 + [MediaStore](AWS_MediaStore.md)
 + [Amazon MQ](AWS_AmazonMQ.md)
++ [MemoryDB](AWS_MemoryDB.md)
 + [Amazon MSK](AWS_MSK.md)
 + [MWAA](AWS_MWAA.md)
 + [Amazon Neptune](AWS_Neptune.md)

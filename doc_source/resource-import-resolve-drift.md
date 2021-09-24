@@ -114,9 +114,9 @@ In this example, let's assume a user changed a resource *outside* of CloudFormat
 
 Our stack is now out of date, our resources are live, but we want to preserve the intended resource configuration\. We can do this by resolving drift through an import operation, without interrupting services\.
 
-## Resolve drift with an import operation using the CloudFormation console<a name="w10032ab1c23c19c19c24"></a>
+## Resolve drift with an import operation using the CloudFormation console<a name="w10072ab1c23c19c19c24"></a>
 
-### Step 1\. Update stack with Retain deletion policy<a name="w10032ab1c23c19c19c24b3"></a>
+### Step 1\. Update stack with Retain deletion policy<a name="w10072ab1c23c19c19c24b3"></a>
 
 **To update stack using a `DeletionPolicy` attribute with the `Retain` option**
 
@@ -166,7 +166,7 @@ To resolve drift through an import operation, without interrupting services, spe
 
 ------
 
-### Step 2\. Remove drifted resources, related parameters, and outputs<a name="w10032ab1c23c19c19c24b5"></a>
+### Step 2\. Remove drifted resources, related parameters, and outputs<a name="w10072ab1c23c19c19c24b5"></a>
 
 **To remove drifted resources, related parameters, and outputs**
 
@@ -248,7 +248,7 @@ Resources:
 
 ------
 
-### Step 3\. Update template to match the live state of your resources<a name="w10032ab1c23c19c19c24b7"></a>
+### Step 3\. Update template to match the live state of your resources<a name="w10072ab1c23c19c19c24b7"></a>
 
 **To update template to match the live state of resources**
 

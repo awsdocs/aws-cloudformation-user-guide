@@ -36,7 +36,7 @@ Use this to store data store data in an S3 bucket that you manage\. The choice o
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IotSiteWiseMultiLayerStorage`  <a name="cfn-iotanalytics-datastore-datastorestorage-iotsitewisemultilayerstorage"></a>
-Not currently supported by AWS CloudFormation\.  
+Use this to store data used by AWS IoT SiteWise in an Amazon S3 bucket that you manage\. You can't change the choice of Amazon S3 storage after your data store is created\.  
 *Required*: No  
 *Type*: [IotSiteWiseMultiLayerStorage](aws-properties-iotanalytics-datastore-iotsitewisemultilayerstorage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -66,37 +66,45 @@ If your extension calls AWS APIs as part of its functionality, you must create a
 
 ## Configuring extensions at the account level<a name="registry-set-configuration"></a>
 
-An extension can include configuration properties meant to apply to all instances of the extension in a given account and region\. For example, if the extension needs to access a third\-party web service, the extension author might have included properties in the extension configuration definition where you can specify your credentials for that service\. When you set configuration properties, CloudFormation saves this information at the account and region level\. From then on, CloudFormation can access those configuration properties during operations involving any instances of that extension in your account and region\. This way, configuration properties are available to CloudFormation during all extension operations, and not just ones that explicitly involve a stack template\. For example, CloudFormation can access the configuration properties during `read` and `list` events, operations that don't explictly involve the stack template\.
+An extension can include configuration properties meant to apply to all instances of the extension for a given account and Region\. The extension author defines these in the extension's definition configuration\. If there are any required properties in the extension's configuration definition, you must specify those properties before you can use the extension in your account and Region\.
 
-If the configuration properties of an extension include any properties that are required, you must specify those properties before you can use the extension in your account and region\.
-
-For more information about defining configuration data when developing an extension, see [Defining the account\-level configuration of an extension](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-model.html#resource-type-howto-configuration) in the *CloudFormation CLI User Guide*\.<a name="registry-set-configuration-procedure"></a>
-
-**To specify configuration properties for an extension in the CloudFormation console**
-
-1. Use the CloudFormation registry to [find the extension](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-view-procedure)\.
-
-1. From **Actions**, select **Edit**, and then select **Edit configuration**\.
-
-   CloudFormation displays the **Configure extension** page\. To view the current configuration schema for the extension, make sure **View configuration schema** is activated\.
-
-1. In the **Configuration JSON** text box, enter a JSON string that represents the configuration schema you want to specify for this extension\.
-
-1. Select **Configure extension**\.
-
-**To specify configuration properties for an extension using the AWS CLI**
-+ Use the `[set\-type\-configuration](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/set-type-configuration.html)` command to specify the configuration settings to be used with the extension in this account and region\. The JSON you pass to specify the configuration properties must validate against the schema defined in the typeConfiguration element of the extension's schema\. 
+For more information about how configuration definitions are defined when developing an extension, see [Defining the account\-level configuration of an extension](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-model.html#resource-type-howto-configuration) in the *CloudFormation CLI User Guide*\.
 
 **To view the current configuration data for an extension in the CloudFormation console**
 
 1. Use the CloudFormation registry to [find the extension](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-view-procedure)\.
 
-1. Select the extension name to view extension details\.
+1. Choose the extension to view the extension details\.
 
-1. On the extension details page, select the **Configuration** tab\.
+1. On the extension details page, choose the **Configuration** tab\.
+
+1. Expand the **Configuration schema** tab to see the configuration schema defined for the extension\.
+
+1. Expand the **Configuration** tab to see the current configuration that you have set for this extension\.
 
 **To view the current configuration data for an extension in the AWS CLI**
-+ Use the [describe\-type](cli/latest/reference/cloudformation/describe-type.html) command to return detailed information about the extension\. The `ConfigurationSchema` element contains the current configuration properties of the extension in a given account and region\.
++ Use the [describe\-type](cli/latest/reference/cloudformation/describe-type.html) command to return detailed information about the extension\. The `ConfigurationSchema` element of the output contains the current configuration definition of the extension in a given Region\.
+
+  Alternatively, use the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/batch-describe-type-configurations.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/batch-describe-type-configurations.html) command to return configuration data about multiple extensions\.<a name="registry-set-configuration-procedure"></a>
+
+**To specify configuration properties for an extension in the CloudFormation console**
+
+1. Use the CloudFormation registry to [find the extension](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-view-procedure) in your account's activated extensions\.
+
+1. Select the extension to view the extension details\.
+
+1. On the extension details page, from the **Configuration** tab, select **Edit configuration**\.
+
+   Alternatively, from **Actions**, select **Edit**, and then select **Edit configuration**\.
+
+   CloudFormation displays the **Configure extension** page\. Make sure that **View configuration schema** is toggled on to see the extension's current configuration definition schema\.
+
+1. In the **Configuration JSON** text box, enter a JSON string that represents the configuration schema you want to set for this extension\. It must validate against the schema defined in **Configuration schema**\.
+
+1. Select **Configure extension**\.
+
+**To specify configuration properties for an extension using the AWS CLI**
++ Use the `[set\-type\-configuration](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/set-type-configuration.html)` command to specify the configuration to be used with the extension in your account and Region\. The JSON you pass for `--configuration` must validate against the extension's configuration definition schema\.
 
 ## Specifying which version of a private extension to use<a name="registry-set-version"></a>
 

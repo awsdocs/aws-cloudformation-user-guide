@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::ImageRecipe SystemsManagerAgent<a name="aws-properties-imagebuilder-imagerecipe-systemsmanageragent"></a>
 
-Contains settings for the SSM agent on your build instance\.
+Contains settings for the Systems Manager agent on your build instance\.
 
 ## Syntax<a name="aws-properties-imagebuilder-imagerecipe-systemsmanageragent-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-imagebuilder-imagerecipe-systemsmanageragent-properties"></a>
 
 `UninstallAfterBuild`  <a name="cfn-imagebuilder-imagerecipe-systemsmanageragent-uninstallafterbuild"></a>
-Controls whether the SSM agent is removed from your final build image, prior to creating the new AMI\. If this is set to true, then the agent is removed from the final image\. If it's set to false, then the agent is left in, so that it is included in the new AMI\. The default value is false\.  
+Controls whether the Systems Manager agent is removed from your final build image, prior to creating the new AMI\. If this is set to true, then the agent is removed from the final image\. If it's set to false, then the agent is left in, so that it is included in the new AMI\. The default value is false\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
