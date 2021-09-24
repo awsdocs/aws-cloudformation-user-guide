@@ -25,8 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `CaseSensitive`  <a name="cfn-cognito-userpool-usernameconfiguration-casesensitive"></a>
 Specifies whether username case sensitivity will be applied for all users in the user pool through Cognito APIs\.  
 Valid values include:  
-+  ** `True` **: Enables case sensitivity for all username input\. When this option is set to `True`, users must sign in using the exact capitalization of their given username\. For example, “UserName”\. This is the default value\.
-+  ** `False` **: Disables case insensitivity for all username input\. For example, when this option is set to `False`, users will be able to sign in using either "username" or "Username"\. This option also enables both `preferred_username` and `email` alias to be case insensitive, in addition to the `username` attribute\.
++  ** `True` **: Enables case sensitivity for all username input\. When this option is set to `True`, users must sign in using the exact capitalization of their given username\. For example, “UserName”\. This is the default value\. This option also enables both `preferred_username` and `email` alias to be case insensitive, in addition to the `username` attribute\.
++  ** `False` **: Disables case insensitivity for all username input\. For example, when this option is set to `False`, users will be able to sign in using either "username" or "Username"\. 
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
