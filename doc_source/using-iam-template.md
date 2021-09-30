@@ -263,7 +263,7 @@ The following example policy allows users to use only the `https://s3.amazonaws.
       "Action" : [ "cloudformation:CreateStack", "cloudformation:UpdateStack" ],
       "Resource" : "*",
       "Condition" : {
-        "ForAllValues:StringEquals" : {
+        "StringEquals" : {
           "cloudformation:TemplateUrl" : [ "https://s3.amazonaws.com/testbucket/test.template" ]
         }
       }
