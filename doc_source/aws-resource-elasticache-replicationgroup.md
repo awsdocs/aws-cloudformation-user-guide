@@ -211,7 +211,7 @@ If you're going to launch your cluster in an Amazon VPC, you need to create a su
 
 `Engine`  <a name="cfn-elasticache-replicationgroup-engine"></a>
 The name of the cache engine to be used for the clusters in this replication group\. Must be Redis\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
