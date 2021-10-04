@@ -61,6 +61,7 @@ Specifies whether AWS IoT validates the token signature in an authorization requ
 
 `Status`  <a name="cfn-iot-authorizer-status"></a>
 The status of the authorizer\.  
+Valid values: `ACTIVE` \| `INACTIVE`  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

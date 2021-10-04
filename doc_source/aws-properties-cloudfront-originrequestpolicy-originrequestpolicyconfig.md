@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudfront-originrequestpolicy-originrequestpolicyconfig-properties"></a>
 
 `Comment`  <a name="cfn-cloudfront-originrequestpolicy-originrequestpolicyconfig-comment"></a>
-A comment to describe the origin request policy\.  
+A comment to describe the origin request policy\. The comment cannot be longer than 128 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

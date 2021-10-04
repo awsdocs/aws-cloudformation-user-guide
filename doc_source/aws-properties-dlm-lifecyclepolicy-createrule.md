@@ -58,7 +58,7 @@ The interval unit\.
 
 `Location`  <a name="cfn-dlm-lifecyclepolicy-createrule-location"></a>
 Specifies the destination for snapshots created by the policy\. To create snapshots in the same Region as the source resource, specify `CLOUD`\. To create snapshots on the same Outpost as the source resource, specify `OUTPOST_LOCAL`\. If you omit this parameter, `CLOUD` is used by default\.  
-If the policy targets resources in an AWS Region, then you must create snapshots in the same Region as the source resource\.   
+If the policy targets resources in an AWS Region, then you must create snapshots in the same Region as the source resource\.  
 If the policy targets resources on an Outpost, then you can create snapshots on the same Outpost as the source resource, or in the Region of that Outpost\.  
 *Required*: No  
 *Type*: String  

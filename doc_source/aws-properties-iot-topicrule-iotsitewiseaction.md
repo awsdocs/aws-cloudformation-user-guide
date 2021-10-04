@@ -32,7 +32,7 @@ A list of asset property value entries\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iot-topicrule-iotsitewiseaction-rolearn"></a>
-The ARN of the role that grants AWS IoT permission to send an asset property value to AWS IoTSiteWise\. \(`"Action": "iotsitewise:BatchPutAssetPropertyValue"`\)\. The trust policy can restrict access to specific asset hierarchy paths\.  
+The ARN of the role that grants AWS IoT permission to send an asset property value to AWS IoT SiteWise\. \(`"Action": "iotsitewise:BatchPutAssetPropertyValue"`\)\. The trust policy can restrict access to specific asset hierarchy paths\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

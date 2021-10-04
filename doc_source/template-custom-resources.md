@@ -1,5 +1,12 @@
 # Custom resources<a name="template-custom-resources"></a>
 
+**Note**  
+The CloudFormation registry offers several advantages over custom resources, such advantages include:  
+Supports the modeling, provisioning, and managing of third\-party application resources
+Supports the `Create`, `Read`, `Update`, `Delete`, and `List` \(`CRUDL`\) operations
+Supports drift detection on private and third\-party resource types
+Unlike custom resources, registry based resources won't need to associate an Amazon SNS topic or a Lambda function to perform `CRUDL` operations\. For more information about the CloudFormation registry, see [Using the AWS CloudFormation registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html)\.
+
 Custom resources enable you to write custom provisioning logic in templates that AWS CloudFormation runs anytime you create, update \(if you changed the custom resource\), or delete stacks\. For example, you might want to include resources that aren't available as AWS CloudFormation [resource types](aws-template-resource-type-ref.md)\. You can include those resources by using custom resources\. That way you can still manage all your related resources in a single stack\.
 
 Use the [AWS::CloudFormation::CustomResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html) or [Custom::*MyCustomResourceTypeName*](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html#aws-resource-cfn-customresource--remarks) resource type to define custom resources in your templates\. Custom resources require one property: the service token, which specifies where AWS CloudFormation sends requests to, such as an Amazon SNS topic\.
@@ -20,11 +27,11 @@ Owns the custom resource and determines how to handle and respond to requests fr
 AWS CloudFormation  
 During a stack operation, sends a request to a service token that is specified in the template, and then waits for a response before proceeding with the stack operation\.
 
- The template developer and custom resource provider can be the same person or entity, but the process is the same\. The following steps describe the general process:
+The template developer and custom resource provider can be the same person or entity, but the process is the same\. The following steps describe the general process:
 
 1. The template developer defines a custom resource in their template, which includes a service token and any input data parameters\. Depending on the custom resource, the input data might be required; however, the service token is always required\.
 
-   The service token specifies where AWS CloudFormation sends requests to, such as to an Amazon SNS topic ARN or to an AWS Lambda function ARN\. For more information, see [AWS::CloudFormation::CustomResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html)\. The service token and the structure of the input data is defined by the custom resource provider\.
+   The service token specifies where AWS CloudFormation sends requests to, such as an Amazon SNS topic ARN or an AWS Lambda function ARN\. For more information, see [AWS::CloudFormation::CustomResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html)\. The service token and the structure of the input data is defined by the custom resource provider\.
 
 1. Whenever anyone uses the template to create, update, or delete a custom resource, AWS CloudFormation sends a request to the specified service token\. The service token must be in the same region in which you are creating the stack\.
 

@@ -55,7 +55,7 @@ Identifies a Kinesis data stream as the destination\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LambdaOutput`  <a name="cfn-kinesisanalyticsv2-applicationoutput-output-lambdaoutput"></a>
-Identifies an AWS Lambda function as the destination\.  
+Identifies an Amazon Lambda function as the destination\.  
 *Required*: No  
 *Type*: [LambdaOutput](aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

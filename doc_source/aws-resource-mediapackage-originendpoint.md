@@ -104,7 +104,7 @@ Parameters for Apple HLS packaging\.
 The manifest ID is required and must be unique within the OriginEndpoint\. The ID can't be changed after the endpoint is created\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ManifestName`  <a name="cfn-mediapackage-originendpoint-manifestname"></a>
 A short string that's appended to the end of the endpoint URL to create a unique path to this endpoint\.  

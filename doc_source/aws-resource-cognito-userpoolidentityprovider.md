@@ -309,7 +309,7 @@ UserPoolIdentityProvider:
       key_id: "YourApplePrivateKeyID",
       private_key: "YourApplePrivateKey",
       authorize_scopes: "public_profile,email"
-    ProviderType: "Facebook"
+    ProviderType: "SignInWithApple"
     AttributeMapping:
       email: "email"
 ```

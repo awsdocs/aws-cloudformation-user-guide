@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel Mpeg2FilterSettings<a name="aws-properties-medialive-channel-mpeg2filtersettings"></a>
 
-Mpeg2 Filter Settings
+Settings to configure video filters that apply to the MPEG\-2 codec\.
+
+The parent of this entity is Mpeg2FilterSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-mpeg2filtersettings-syntax"></a>
 

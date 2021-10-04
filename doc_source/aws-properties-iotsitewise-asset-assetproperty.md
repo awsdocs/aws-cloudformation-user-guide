@@ -28,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Alias`  <a name="cfn-iotsitewise-asset-assetproperty-alias"></a>
 The property alias that identifies the property, such as an OPC\-UA server data stream path \(for example, `/company/windfarm/3/turbine/7/temperature`\)\. For more information, see [Mapping industrial data streams to asset properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/connect-data-streams.html) in the *AWS IoT SiteWise User Guide*\.  
+The property alias must have 1\-1000 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

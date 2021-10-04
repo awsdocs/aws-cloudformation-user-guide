@@ -4,7 +4,7 @@ Specifies the default version of a module\. The default version of the module wi
 
 To register a module version, use the `[AWS::CloudFormation::ModuleVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)` resource\.
 
-For more information using modules, see [Using modules to encapsulate and reuse resource configurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/modules.html) and [Registering extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-register) in the *CloudFormation User Guide*\. For information on developing modules, see [Developing modules](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules.html) in the *CloudFormation CLI User Guide*\. 
+For more information using modules, see [Using modules to encapsulate and reuse resource configurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/modules.html) and [Registering extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-register) in the *CloudFormation User Guide*\. For information on developing modules, see [Developing modules](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules.html) in the *CloudFormation CLI User Guide*\.
 
 ## Syntax<a name="aws-resource-cloudformation-moduledefaultversion-syntax"></a>
 
@@ -68,7 +68,7 @@ Conditional: You must specify either `Arn`, or `ModuleName` and `VersionId`\.
 
 ### Ref<a name="aws-resource-cloudformation-moduledefaultversion-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the module version\. 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the module version\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -87,29 +87,7 @@ Considerations when managing the default module version:
 
 ### Specifying the default module version<a name="aws-resource-cloudformation-moduledefaultversion--examples--Specifying_the_default_module_version"></a>
 
-The following example registers two versions of a module, and then sets the second version as the default version for CloudFormation to use\. Note that the example uses the `DependsOn` attribute to ensure that CloudFormation provisions version one before version two\. 
-
-#### YAML<a name="aws-resource-cloudformation-moduledefaultversion--examples--Specifying_the_default_module_version--yaml"></a>
-
-```
-AWSTemplateFormatVersion: 2010-09-09
-Resources:
-  ModuleVersion1:
-    Type: 'AWS::CloudFormation::ModuleVersion'
-    Properties:
-      ModuleName: 'My::Sample::Test::MODULE'
-      ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v1.zip'
-  ModuleVersion2:
-    Type: 'AWS::CloudFormation::ModuleVersion'
-    Properties:
-      ModuleName: 'My::Sample::Test::MODULE'
-      ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v2.zip'
-    DependsOn: ModuleVersion1
-  ModuleDefaultVersion:
-    Type: 'AWS::CloudFormation::ModuleDefaultVersion'
-    Properties:
-      Arn: !Ref ModuleVersion2
-```
+The following example registers two versions of a module, and then sets the second version as the default version for CloudFormation to use\. Note that the example uses the `DependsOn` attribute to ensure that CloudFormation provisions version one before version two\.
 
 #### JSON<a name="aws-resource-cloudformation-moduledefaultversion--examples--Specifying_the_default_module_version--json"></a>
 
@@ -142,4 +120,26 @@ Resources:
         }
     }
 }
+```
+
+#### YAML<a name="aws-resource-cloudformation-moduledefaultversion--examples--Specifying_the_default_module_version--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  ModuleVersion1:
+    Type: 'AWS::CloudFormation::ModuleVersion'
+    Properties:
+      ModuleName: 'My::Sample::Test::MODULE'
+      ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v1.zip'
+  ModuleVersion2:
+    Type: 'AWS::CloudFormation::ModuleVersion'
+    Properties:
+      ModuleName: 'My::Sample::Test::MODULE'
+      ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v2.zip'
+    DependsOn: ModuleVersion1
+  ModuleDefaultVersion:
+    Type: 'AWS::CloudFormation::ModuleDefaultVersion'
+    Properties:
+      Arn: !Ref ModuleVersion2
 ```

@@ -29,7 +29,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PropagateTags](#cfn-ecs-service-propagatetags)" : String,
       "[Role](#cfn-ecs-service-role)" : String,
       "[SchedulingStrategy](#cfn-ecs-service-schedulingstrategy)" : String,
-      "[ServiceArn](#cfn-ecs-service-servicearn)" : String,
       "[ServiceName](#cfn-ecs-service-servicename)" : String,
       "[ServiceRegistries](#cfn-ecs-service-serviceregistries)" : [ ServiceRegistry, ... ],
       "[Tags](#cfn-ecs-service-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -67,7 +66,6 @@ Properties:
   [PropagateTags](#cfn-ecs-service-propagatetags): String
   [Role](#cfn-ecs-service-role): String
   [SchedulingStrategy](#cfn-ecs-service-schedulingstrategy): String
-  [ServiceArn](#cfn-ecs-service-servicearn): String
   [ServiceName](#cfn-ecs-service-servicename): String
   [ServiceRegistries](#cfn-ecs-service-serviceregistries): 
     - ServiceRegistry
@@ -81,9 +79,10 @@ Properties:
 `CapacityProviderStrategy`  <a name="cfn-ecs-service-capacityproviderstrategy"></a>
 The capacity provider strategy to use for the service\.  
 A capacity provider strategy consists of one or more capacity providers along with the `base` and `weight` to assign to them\. A capacity provider must be associated with the cluster to be used in a capacity provider strategy\. The PutClusterCapacityProviders API is used to associate a capacity provider with a cluster\. Only capacity providers with an `ACTIVE` or `UPDATING` status can be used\.  
+Review the [Capacity provider considerations](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-capacity-providers.html#capacity-providers-considerations) in the *Amazon Elastic Container Service Developer Guide\.*  
 If a `capacityProviderStrategy` is specified, the `launchType` parameter must be omitted\. If no `capacityProviderStrategy` or `launchType` is specified, the `defaultCapacityProviderStrategy` for the cluster is used\.  
 If specifying a capacity provider that uses an Auto Scaling group, the capacity provider must already be created\. New capacity providers can be created with the CreateCapacityProvider API operation\.  
-To use a AWS Fargate capacity provider, specify either the `FARGATE` or `FARGATE_SPOT` capacity providers\. The AWS Fargate capacity providers are available to all accounts and only need to be associated with a cluster to be used\.  
+To use an AWS Fargate capacity provider, specify either the `FARGATE` or `FARGATE_SPOT` capacity providers\. The AWS Fargate capacity providers are available to all accounts and only need to be associated with a cluster to be used\.  
 The PutClusterCapacityProviders API operation is used to update the list of available capacity providers for a cluster after the cluster is created\.  
 *Required*: No  
 *Type*: List of [CapacityProviderStrategyItem](aws-properties-ecs-service-capacityproviderstrategyitem.md)  
@@ -102,14 +101,15 @@ Optional deployment parameters that control how many tasks run during the deploy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentController`  <a name="cfn-ecs-service-deploymentcontroller"></a>
-The deployment controller to use for the service\.  
+The deployment controller to use for the service\. If no deployment controller is specified, the default value of `ECS` is used\.  
 *Required*: No  
 *Type*: [DeploymentController](aws-properties-ecs-service-deploymentcontroller.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DesiredCount`  <a name="cfn-ecs-service-desiredcount"></a>
 The number of instantiations of the specified task definition to place and keep running on your cluster\.  
-If a desired count is not specified, a default value of `1` is used\. When using the `DAEMON` scheduling strategy, the desired count is not required\.  
+For new services, if a desired count is not specified, a default value of `1` is used\. When using the `DAEMON` scheduling strategy, the desired count is not required\.  
+For existing services, if a desired count is not specified, it is omitted from the operation\.  
 *Required*: Conditional  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -121,7 +121,7 @@ Specifies whether to enable Amazon ECS managed tags for the tasks within the ser
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EnableExecuteCommand`  <a name="cfn-ecs-service-enableexecutecommand"></a>
-Not currently supported by AWS CloudFormation\.  
+Whether or not the execute command functionality is enabled for the service\. If `true`, the execute command functionality is enabled for all containers in tasks as part of the service\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -137,7 +137,7 @@ If your service's tasks take a while to start and respond to Elastic Load Balanc
 The launch type on which to run your service\. For more information, see [Amazon ECS Launch Types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `EC2 | FARGATE`  
+*Allowed values*: `EC2 | EXTERNAL | FARGATE`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LoadBalancers`  <a name="cfn-ecs-service-loadbalancers"></a>
@@ -165,7 +165,7 @@ The placement strategy objects to use for tasks in your service\. You can specif
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PlatformVersion`  <a name="cfn-ecs-service-platformversion"></a>
-The platform version that your tasks in the service are running on\. A platform version is specified only for tasks using the Fargate launch type\. If one isn't specified, the `LATEST` platform version is used by default\. For more information, see [AWS Fargate platform versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The platform version that your tasks in the service are running on\. A platform version is specified only for tasks using the Fargate launch type\. If one isn't specified, the `LATEST` platform version is used by default\. For more information, see [ AWS Fargate platform versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -197,21 +197,15 @@ Tasks using the Fargate launch type or the `CODE_DEPLOY` or `EXTERNAL` deploymen
 *Allowed values*: `DAEMON | REPLICA`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`ServiceArn`  <a name="cfn-ecs-service-servicearn"></a>
-The ARN that identifies the service\. The ARN contains the `arn:aws:ecs` namespace, followed by the Region of the service, the AWS account ID of the service owner, the `service` namespace, and then the service name\. For example, `arn:aws:ecs:region:012345678910:service/my-service`\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `ServiceName`  <a name="cfn-ecs-service-servicename"></a>
-The name of your service\. Up to 255 letters \(uppercase and lowercase\), numbers, and hyphens are allowed\. Service names must be unique within a cluster, but you can have similarly named services in multiple clusters within a Region or across multiple Regions\.  
+The name of your service\. Up to 255 letters \(uppercase and lowercase\), numbers, underscores, and hyphens are allowed\. Service names must be unique within a cluster, but you can have similarly named services in multiple clusters within a Region or across multiple Regions\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceRegistries`  <a name="cfn-ecs-service-serviceregistries"></a>
-The details of the service discovery registries to assign to this service\. For more information, see [Service discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html)\.  
-Service discovery is supported for Fargate tasks if you are using platform version v1\.1\.0 or later\. For more information, see [AWS Fargate platform versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html)\.
+The details of the service discovery registry to associate with this service\. For more information, see [Service discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html)\.  
+Each service may be associated with one service registry\. Multiple service registries per service isn't supported\.
 *Required*: No  
 *Type*: List of [ServiceRegistry](aws-properties-ecs-service-serviceregistry.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -260,6 +254,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Name`  <a name="Name-fn::getatt"></a>
 The name of the Amazon ECS service, such as `sample-webapp`\.
+
+`ServiceArn`  <a name="ServiceArn-fn::getatt"></a>
+Not currently supported in AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-ecs-service--examples"></a>
 
@@ -683,4 +680,36 @@ Resources:
 Outputs:
   Cluster:
     Value: !Ref cluster
+```
+
+### Define a service with ECS Exec enabled<a name="aws-resource-ecs-service--examples--Define_a_service_with_ECS_Exec_enabled"></a>
+
+The following example defines a service with ECS Exec enabled\. For more information, see [Using ECS Exec for debugging](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html) in the *Amazon ECS Developer Guide*\.
+
+#### JSON<a name="aws-resource-ecs-service--examples--Define_a_service_with_ECS_Exec_enabled--json"></a>
+
+```
+"ECSService": {
+  "Type": "AWS::ECS::Service",
+  "Properties" : {
+    "Cluster": { "Ref": "ECSCluster" },
+    "DesiredCount": 1,
+    "TaskDefinition" : { "Ref": "ECSTaskDefinition" },
+    "EnableExecuteCommand": "true"
+  }
+}
+```
+
+#### YAML<a name="aws-resource-ecs-service--examples--Define_a_service_with_ECS_Exec_enabled--yaml"></a>
+
+```
+ECSService: 
+  Type: AWS::ECS::Service
+  Properties: 
+    Cluster: 
+      Ref: "ECSCluster"
+    DesiredCount: 1
+    TaskDefinition: 
+      Ref: "ECSTaskDefinition"
+    EnableExecuteCommand: true
 ```

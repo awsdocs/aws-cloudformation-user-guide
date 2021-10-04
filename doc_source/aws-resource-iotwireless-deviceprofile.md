@@ -34,7 +34,7 @@ Properties:
 ## Properties<a name="aws-resource-iotwireless-deviceprofile-properties"></a>
 
 `LoRaWAN`  <a name="cfn-iotwireless-deviceprofile-lorawan"></a>
-LoRaWAN device profile object\.  
+LoRaWANDeviceProfile object\.  
 *Required*: No  
 *Type*: [LoRaWANDeviceProfile](aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

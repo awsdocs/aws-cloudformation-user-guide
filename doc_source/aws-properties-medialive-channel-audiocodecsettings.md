@@ -71,7 +71,7 @@ The setup to pass through the Dolby audio codec to the output\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WavSettings`  <a name="cfn-medialive-channel-audiocodecsettings-wavsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+Settings for audio encoded with the WAV codec\.  
 *Required*: No  
 *Type*: [WavSettings](aws-properties-medialive-channel-wavsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

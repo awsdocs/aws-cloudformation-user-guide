@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::Image ImageTestsConfiguration<a name="aws-properties-imagebuilder-image-imagetestsconfiguration"></a>
 
-The image tests configuration is the configuration of the image tests, which includes the test enablement status and timeout minutes\.
+When you create an image or container recipe with Image Builder, you can add the build or test components that are used to create the final image\. You must have at least one build component to create a recipe, but test components are not required\. If you have added tests, they run after the image is created, to ensure that the target image is functional and can be used reliably for launching Amazon EC2 instances\.
 
 ## Syntax<a name="aws-properties-imagebuilder-image-imagetestsconfiguration-syntax"></a>
 

@@ -7,7 +7,7 @@ When you update a stack, you submit changes, such as new input parameter values 
 **Note**  
 When updating a stack, AWS CloudFormation might interrupt resources or replace updated resources, depending on which properties you update\. For more information about resource update behaviors, see [Update behaviors of stack resources](using-cfn-updating-stacks-update-behaviors.md)\.
 
- **Update methods** 
+**Update methods**
 
 AWS CloudFormation provides two methods for updating stacks: *direct update* or creating and executing *change sets*\. When you directly update a stack, you submit changes and AWS CloudFormation immediately deploys them\. Use direct updates when you want to quickly deploy your updates\.
 

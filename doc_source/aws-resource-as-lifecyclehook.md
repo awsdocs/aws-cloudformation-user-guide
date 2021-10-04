@@ -1,8 +1,10 @@
 # AWS::AutoScaling::LifecycleHook<a name="aws-resource-as-lifecyclehook"></a>
 
-The AWS::AutoScaling::LifecycleHook resource specifies lifecycle hooks for an Auto Scaling group\. Lifecycle hooks specify actions to perform when Amazon EC2 Auto Scaling launches or terminates instances\. When you use a lifecycle hook, the Auto Scaling group pauses the instance either after it is launched \(before it is put into service\) or as it is terminated \(before it is fully terminated\)\. 
+The `AWS::AutoScaling::LifecycleHook` resource specifies lifecycle hooks for an Auto Scaling group\. These hooks enable an Auto Scaling group to be aware of events in the Auto Scaling instance lifecycle, and then perform a custom action when the corresponding lifecycle event occurs\. A lifecycle hook provides a specified amount of time \(one hour by default\) to complete the lifecycle action before the instance transitions to the next state\. 
 
-For more information, see [PutLifecycleHook](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutLifecycleHook.html) in the *Amazon EC2 Auto Scaling API Reference* and [Amazon EC2 Auto Scaling lifecycle hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+There are two types of lifecycle hooks that can be implemented: launch lifecycle hooks and termination lifecycle hooks\. Use a launch lifecycle hook to prepare instances for use or to delay instances from registering behind the load balancer before their configuration has been applied completely\. Use a termination lifecycle hook to prepare running instances to be shut down\. 
+
+For more information, see [Amazon EC2 Auto Scaling lifecycle hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide* and [PutLifecycleHook](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutLifecycleHook.html) in the *Amazon EC2 Auto Scaling API Reference*\.
 
 ## Syntax<a name="aws-resource-as-lifecyclehook-syntax"></a>
 
@@ -51,12 +53,13 @@ The name of the Auto Scaling group for the lifecycle hook\.
 
 `DefaultResult`  <a name="cfn-as-lifecyclehook-defaultresult"></a>
 The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs\. The valid values are `CONTINUE` and `ABANDON` \(default\)\.  
+For more information, see [Adding lifecycle hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/adding-lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HeartbeatTimeout`  <a name="cfn-as-lifecyclehook-heartbeattimeout"></a>
-The amount of time, in seconds, that can elapse before the lifecycle hook times out\. If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the `DefaultResult` property\.  
+The maximum time, in seconds, that can elapse before the lifecycle hook times out\. The range is from `30` to `7200` seconds\. The default value is `3600` seconds \(1 hour\)\. If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the `DefaultResult` property\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -94,7 +97,7 @@ The Amazon Resource Name \(ARN\) of the notification target that Amazon EC2 Auto
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleARN`  <a name="cfn-as-lifecyclehook-rolearn"></a>
-The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target, for example, an Amazon SNS topic or an Amazon SQS queue\. For information about creating this role, see [Preparing for notifications](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html#preparing-for-notification) in the *Amazon EC2 Auto Scaling User Guide*\.  
+The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target, for example, an Amazon SNS topic or an Amazon SQS queue\. For information about creating this role, see [Configuring a notification target for a lifecycle hook](https://docs.aws.amazon.com/autoscaling/ec2/userguide/configuring-lifecycle-hook-notifications.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -109,34 +112,30 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-as-lifecyclehook--examples"></a>
 
-The following examples specify lifecycle hooks\.
+The following examples specify lifecycle hooks\. 
+
+For examples of CloudFormation stack templates with lifecycle hooks, see our [GitHub repository](https://github.com/aws-samples/amazon-ec2-auto-scaling-group-examples)\. Included are examples of launch lifecycle hooks that work with a user data script that is defined in the Auto Scaling group's launch template\.
 
 ### Lifecycle hook for instance termination<a name="aws-resource-as-lifecyclehook--examples--Lifecycle_hook_for_instance_termination"></a>
 
-The following example specifies a lifecycle hook that supports a custom action at instance termination\. It uses the `Ref` intrinsic function to refer to an Auto Scaling group \(whose logical name is `myASG`\) that is declared elsewhere in the same template\.
+The following example specifies a lifecycle hook that supports a custom action at instance termination\. It uses the `Ref` intrinsic function to refer to an Auto Scaling group \(whose logical name is `myASG`\) that is declared elsewhere in the same template\. It uses the `NotificationMetadata` property to specify additional information to be sent with the notification, such as the name of the cluster to which the instance belongs\.
 
-Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties to specify the Amazon SNS topic and IAM role to use to receive notification when a lifecycle action occurs\.
+This snippet does not include the Lambda/EventBridge rule resources that would need to exist or be created to complete the configuration\. For information about creating these resources, see [Configuring a notification target for a lifecycle hook](https://docs.aws.amazon.com/autoscaling/ec2/userguide/configuring-lifecycle-hook-notifications.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 #### JSON<a name="aws-resource-as-lifecyclehook--examples--Lifecycle_hook_for_instance_termination--json"></a>
 
 ```
 {
-  "myLifecycleHook":{
+  "myTerminationLifecycleHook":{
     "Type":"AWS::AutoScaling::LifecycleHook",
     "Properties":{
       "AutoScalingGroupName":{
         "Ref":"myASG"
       },
       "LifecycleTransition":"autoscaling:EC2_INSTANCE_TERMINATING",
-      "NotificationTargetARN":{
-        "Ref":"lifecycleHookTopic"
-      },
-      "RoleARN":{
-        "Fn::GetAtt":[
-          "lifecycleHookRole",
-          "Arn"
-        ]
-      }
+      "HeartbeatTimeout": 300,
+      "DefaultResult": "CONTINUE",
+      "NotificationMetadata": "optional metadata"
     }
   }
 }
@@ -146,25 +145,22 @@ Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties 
 
 ```
 ---
-myLifecycleHook: 
+myTerminationLifecycleHook: 
   Type: AWS::AutoScaling::LifecycleHook
   Properties: 
     AutoScalingGroupName: 
       Ref: myASG
     LifecycleTransition: "autoscaling:EC2_INSTANCE_TERMINATING"
-    NotificationTargetARN: 
-      Ref: lifecycleHookTopic
-    RoleARN: 
-      Fn::GetAtt: 
-        - lifecycleHookRole
-        - Arn
+    HeartbeatTimeout: 300
+    DefaultResult: "CONTINUE"
+    NotificationMetadata: "optional metadata"
 ```
 
 ### Lifecycle hook for instance launch<a name="aws-resource-as-lifecyclehook--examples--Lifecycle_hook_for_instance_launch"></a>
 
-The following example specifies a lifecycle hook that supports a custom action at instance launch\. The lifecycle hook is added to a new Auto Scaling group that's created from the same snippet\. For more information, see [LifecycleHookSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification.html)\. 
+The following example specifies a lifecycle hook that supports a custom action at instance launch\. The lifecycle hook is added to a new Auto Scaling group that's created from the same snippet\.
 
-Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties to specify the Amazon SQS queue and IAM role to use to receive notification when a lifecycle action occurs\.
+This example solution uses the `NotificationTargetARN` and `RoleARN` properties to specify the Amazon SQS queue and IAM role to use to receive notification when a lifecycle action occurs\. This snippet does not include the Amazon SQS queue and IAM role resources that would need to exist or be created to complete the configuration\. For information about creating these resources, see [Configuring a notification target for a lifecycle hook](https://docs.aws.amazon.com/autoscaling/ec2/userguide/configuring-lifecycle-hook-notifications.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 #### JSON<a name="aws-resource-as-lifecyclehook--examples--Lifecycle_hook_for_instance_launch--json"></a>
 
@@ -174,33 +170,30 @@ Note that the snippet uses the `NotificationTargetARN` and `RoleARN` properties 
   "Parameters":{
     "Subnets":{
       "Type":"CommaDelimitedList"
-    },
-    "AZs":{
-      "Type":"CommaDelimitedList"
     }
   },
   "Resources":{
     "myASG":{
       "Type":"AWS::AutoScaling::AutoScalingGroup",
       "Properties":{
-        "AvailabilityZones":[
-          {
-            "Ref":"AZs"
-          }
-        ],
-        "VPCZoneIdentifier":{
-          "Ref":"Subnets"
-        },
         "DesiredCapacity":"2",
         "MaxSize":"3",
         "MinSize":"1",
-        "LaunchConfigurationName":{
-          "Ref":"myLaunchConfig"
+        "LaunchTemplate": {
+          "LaunchTemplateId": {
+            "Ref":"myLaunchTemplate"
+          },
+          "Version":{
+            "Ref":"myLaunchTemplateVersionNumber"
+          }
+        },
+        "VPCZoneIdentifier":{
+          "Ref":"Subnets"
         },
         "LifecycleHookSpecificationList":[
           {
             "LifecycleTransition":"autoscaling:EC2_INSTANCE_LAUNCHING",
-            "LifecycleHookName":"myLifecycleHook",
+            "LifecycleHookName":"myLaunchLifecycleHook",
             "HeartbeatTimeout":4800,
             "NotificationTargetARN":{
               "Fn::GetAtt":[
@@ -244,16 +237,16 @@ Resources:
   myASG:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
-      AvailabilityZones:
-        - !Ref AZs
-      VPCZoneIdentifier: !Ref Subnets
       DesiredCapacity: '2'
       MaxSize: '3'
       MinSize: '1'
-      LaunchConfigurationName: !Ref myLaunchConfig
+      LaunchTemplate:
+        LaunchTemplateId: !Ref myLaunchTemplate
+        Version: !Ref myLaunchTemplateVersionNumber
+      VPCZoneIdentifier: !Ref Subnets
       LifecycleHookSpecificationList:
         - LifecycleTransition: "autoscaling:EC2_INSTANCE_LAUNCHING"
-          LifecycleHookName: "myLifecycleHook"
+          LifecycleHookName: "myLaunchLifecycleHook"
           HeartbeatTimeout: 4800
           NotificationTargetARN: !GetAtt SQS.Arn
           RoleARN: !Join 

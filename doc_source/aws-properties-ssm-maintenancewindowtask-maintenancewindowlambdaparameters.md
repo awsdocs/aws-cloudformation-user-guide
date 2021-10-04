@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-properties"></a>
 
 `ClientContext`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-clientcontext"></a>
-Client\-specific information to pass to the Lambda function that you're invoking\. You can then use the `context` variable to process the client information in your Lambda function\.  
+Client\-specific information to pass to the AWS Lambda function that you're invoking\. You can then use the `context` variable to process the client information in your AWS Lambda function\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -37,7 +37,7 @@ Client\-specific information to pass to the Lambda function that you're invoking
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Payload`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-payload"></a>
-JSON to provide to your Lambda function as input\.  
+JSON to provide to your AWS Lambda function as input\.  
 Although `Type` is listed as "String" for this property, the payload content must be formatted as a Base64\-encoded binary data object\.
 *Length Constraint:* 4096  
 *Required*: No  
@@ -45,7 +45,7 @@ Although `Type` is listed as "String" for this property, the payload content mus
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Qualifier`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-qualifier"></a>
-A Lambda function version or alias name\. If you specify a function version, the action uses the qualified function Amazon Resource Name \(ARN\) to invoke a specific Lambda function\. If you specify an alias name, the action uses the alias ARN to invoke the Lambda function version that the alias points to\.  
+An AWS Lambda function version or alias name\. If you specify a function version, the action uses the qualified function Amazon Resource Name \(ARN\) to invoke a specific Lambda function\. If you specify an alias name, the action uses the alias ARN to invoke the Lambda function version that the alias points to\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

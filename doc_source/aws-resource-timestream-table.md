@@ -1,6 +1,6 @@
 # AWS::Timestream::Table<a name="aws-resource-timestream-table"></a>
 
-The CreateTable operation adds a new table to an existing database in your account\. In an AWS account, table names must be at least unique within each Region if they are in the same database\. You may have identical table names in the same Region if the tables are in seperate databases\. While creating the table, you must specify the table name, database name, and the retention properties\. [Service quotas apply](https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html)\. See [code sample](https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.create-table.html) for details\. 
+The CreateTable operation adds a new table to an existing database in your account\. In an AWS account, table names must be at least unique within each Region if they are in the same database\. You may have identical table names in the same Region if the tables are in separate databases\. While creating the table, you must specify the table name, database name, and the retention properties\. [Service quotas apply](https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html)\. See [code sample](https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.create-table.html) for details\. 
 
 ## Syntax<a name="aws-resource-timestream-table-syntax"></a>
 
@@ -36,11 +36,9 @@ Properties:
 
 `DatabaseName`  <a name="cfn-timestream-table-databasename"></a>
 The name of the Timestream database that contains this table\.  
+*Length Constraints*: Minimum length of 3 bytes\. Maximum length of 256 bytes\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `3`  
-*Maximum*: `64`  
-*Pattern*: `[a-zA-Z0-9_.-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RetentionProperties`  <a name="cfn-timestream-table-retentionproperties"></a>
@@ -53,7 +51,7 @@ See the following examples:
 
 ```
 {
-    "Type" : "AWS::Timestream::Table", 
+    "Type" : AWS::Timestream::Table", 
     "Properties" : {
         "DatabaseName" : "TestDatabase", 
         "TableName" : "TestTable", 
@@ -82,11 +80,9 @@ Properties:
 
 `TableName`  <a name="cfn-timestream-table-tablename"></a>
 The name of the Timestream table\.  
+*Length Constraints*: Minimum length of 3 bytes\. Maximum length of 256 bytes\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `3`  
-*Maximum*: `64`  
-*Pattern*: `[a-zA-Z0-9_.-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-timestream-table-tags"></a>
@@ -111,3 +107,6 @@ The `Fn::GetAtt` returns a value for the specified attribute of this type\. The 
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The `arn` of the table\.
+
+`Name`  <a name="Name-fn::getatt"></a>
+The name of the table\.

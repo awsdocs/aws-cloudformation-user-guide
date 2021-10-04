@@ -2,7 +2,7 @@
 
 A *channel* is a type of platform that you can deliver messages to\. You can use the email channel to send email to users\. Before you can use Amazon Pinpoint to send email, you must enable the email channel for an Amazon Pinpoint application\.
 
-The AWS::Pinpoint::EmailChannel resource defines the status, identity, and other settings of the email channel for an application\.
+The EmailChannel resource represents the status, identity, and other settings of the email channel for an application
 
 ## Syntax<a name="aws-resource-pinpoint-emailchannel-syntax"></a>
 
@@ -40,13 +40,13 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-emailchannel-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-emailchannel-applicationid"></a>
-The unique identifier for the application that the email channel applies to\.  
+The unique identifier for the Amazon Pinpoint application that you're specifying the email channel for\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConfigurationSet`  <a name="cfn-pinpoint-emailchannel-configurationset"></a>
-The configuration set that you want to apply to email that you send through the channel by using the Amazon Pinpoint Email API\.  
+The [Amazon SES configuration set](https://docs.aws.amazon.com/ses/latest/APIReference/API_ConfigurationSet.html) that you want to apply to messages that you send through the channel\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

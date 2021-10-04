@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel EbuTtDDestinationSettings<a name="aws-properties-medialive-channel-ebuttddestinationsettings"></a>
 
-Ebu Tt DDestination Settings
+Settings for EBU\-TT captions in the output\.
+
+The parent of this entity is CaptionDestinationSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-ebuttddestinationsettings-syntax"></a>
 
@@ -10,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[CopyrightHolder](#cfn-medialive-channel-ebuttddestinationsettings-copyrightholder)" : String,
   "[FillLineGap](#cfn-medialive-channel-ebuttddestinationsettings-filllinegap)" : String,
   "[FontFamily](#cfn-medialive-channel-ebuttddestinationsettings-fontfamily)" : String,
   "[StyleControl](#cfn-medialive-channel-ebuttddestinationsettings-stylecontrol)" : String
@@ -19,12 +22,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-medialive-channel-ebuttddestinationsettings-syntax.yaml"></a>
 
 ```
+  [CopyrightHolder](#cfn-medialive-channel-ebuttddestinationsettings-copyrightholder): String
   [FillLineGap](#cfn-medialive-channel-ebuttddestinationsettings-filllinegap): String
   [FontFamily](#cfn-medialive-channel-ebuttddestinationsettings-fontfamily): String
   [StyleControl](#cfn-medialive-channel-ebuttddestinationsettings-stylecontrol): String
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-ebuttddestinationsettings-properties"></a>
+
+`CopyrightHolder`  <a name="cfn-medialive-channel-ebuttddestinationsettings-copyrightholder"></a>
+Applies only if you plan to convert these source captions to EBU\-TT\-D or TTML in an output\. Complete this field if you want to include the name of the copyright holder in the copyright metadata tag in the TTML  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FillLineGap`  <a name="cfn-medialive-channel-ebuttddestinationsettings-filllinegap"></a>
 Specifies how to handle the gap between the lines \(in multi\-line captions\)\. \- enabled: Fill with the captions background color \(as specified in the input captions\)\. \- disabled: Leave the gap unfilled\.  

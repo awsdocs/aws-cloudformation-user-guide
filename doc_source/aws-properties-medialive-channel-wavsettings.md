@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel WavSettings<a name="aws-properties-medialive-channel-wavsettings"></a>
 
-Wav Settings
+The setup of WAV audio in the output\.
+
+The parent of this entity is AudioCodecSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-wavsettings-syntax"></a>
 

@@ -51,7 +51,7 @@ Use to configure device IOPS\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `100`  
-*Maximum*: `10000`  
+*Maximum*: `64000`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-kmskeyid"></a>
@@ -82,5 +82,5 @@ Overrides the volume size of the device\.
 Overrides the volume type of the device\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `gp2 | io1 | io2 | sc1 | st1 | standard`  
+*Allowed values*: `gp2 | gp3 | io1 | io2 | sc1 | st1 | standard`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

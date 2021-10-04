@@ -108,9 +108,9 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### IAM Policy with policy group<a name="aws-resource-iam-policy--examples--IAM_Policy_with_policy_group"></a>
+### IAM Policy with policy group<a name="aws-resource-iam-policy--examples--_Policy_with_policy_group"></a>
 
-#### JSON<a name="aws-resource-iam-policy--examples--IAM_Policy_with_policy_group--json"></a>
+#### JSON<a name="aws-resource-iam-policy--examples--_Policy_with_policy_group--json"></a>
 
 ```
 {
@@ -140,7 +140,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 }
 ```
 
-#### YAML<a name="aws-resource-iam-policy--examples--IAM_Policy_with_policy_group--yaml"></a>
+#### YAML<a name="aws-resource-iam-policy--examples--_Policy_with_policy_group--yaml"></a>
 
 ```
 Type: 'AWS::IAM::Policy'
@@ -159,9 +159,9 @@ Properties:
     - !Ref CFNUserGroup
 ```
 
-### IAM Policy with specified role<a name="aws-resource-iam-policy--examples--IAM_Policy_with_specified_role"></a>
+### IAM Policy with specified role<a name="aws-resource-iam-policy--examples--_Policy_with_specified_role"></a>
 
-#### JSON<a name="aws-resource-iam-policy--examples--IAM_Policy_with_specified_role--json"></a>
+#### JSON<a name="aws-resource-iam-policy--examples--_Policy_with_specified_role--json"></a>
 
 ```
 {
@@ -187,7 +187,7 @@ Properties:
 }
 ```
 
-#### YAML<a name="aws-resource-iam-policy--examples--IAM_Policy_with_specified_role--yaml"></a>
+#### YAML<a name="aws-resource-iam-policy--examples--_Policy_with_specified_role--yaml"></a>
 
 ```
 Type: 'AWS::IAM::Policy'

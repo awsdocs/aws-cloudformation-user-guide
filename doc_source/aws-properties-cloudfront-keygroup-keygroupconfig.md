@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudfront-keygroup-keygroupconfig-properties"></a>
 
 `Comment`  <a name="cfn-cloudfront-keygroup-keygroupconfig-comment"></a>
-A comment to describe the key group\.  
+A comment to describe the key group\. The comment cannot be longer than 128 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

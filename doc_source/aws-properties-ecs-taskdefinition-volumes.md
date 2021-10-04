@@ -53,7 +53,7 @@ Windows containers can mount whole directories on the same drive as `$env:Progra
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-ecs-taskdefinition-volumes-name"></a>
-The name of the volume\. Up to 255 letters \(uppercase and lowercase\), numbers, and hyphens are allowed\. This name is referenced in the `sourceVolume` parameter of container definition `mountPoints`\.  
+The name of the volume\. Up to 255 letters \(uppercase and lowercase\), numbers, underscores, and hyphens are allowed\. This name is referenced in the `sourceVolume` parameter of container definition `mountPoints`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IoTAnalytics::Datastore",
   "Properties" : {
       "[DatastoreName](#cfn-iotanalytics-datastore-datastorename)" : String,
+      "[DatastorePartitions](#cfn-iotanalytics-datastore-datastorepartitions)" : DatastorePartitions,
       "[DatastoreStorage](#cfn-iotanalytics-datastore-datastorestorage)" : DatastoreStorage,
       "[FileFormatConfiguration](#cfn-iotanalytics-datastore-fileformatconfiguration)" : FileFormatConfiguration,
       "[RetentionPeriod](#cfn-iotanalytics-datastore-retentionperiod)" : RetentionPeriod,
@@ -27,6 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IoTAnalytics::Datastore
 Properties: 
   [DatastoreName](#cfn-iotanalytics-datastore-datastorename): String
+  [DatastorePartitions](#cfn-iotanalytics-datastore-datastorepartitions): 
+    DatastorePartitions
   [DatastoreStorage](#cfn-iotanalytics-datastore-datastorestorage): 
     DatastoreStorage
   [FileFormatConfiguration](#cfn-iotanalytics-datastore-fileformatconfiguration): 
@@ -45,8 +48,14 @@ The name of the data store\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9_]+$`  
+*Pattern*: `(^(?!_{2}))(^[a-zA-Z0-9_]+$)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`DatastorePartitions`  <a name="cfn-iotanalytics-datastore-datastorepartitions"></a>
+Information about the partition dimensions in a data store\.  
+*Required*: No  
+*Type*: [DatastorePartitions](aws-properties-iotanalytics-datastore-datastorepartitions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatastoreStorage`  <a name="cfn-iotanalytics-datastore-datastorestorage"></a>
 Where data store data is stored\.  

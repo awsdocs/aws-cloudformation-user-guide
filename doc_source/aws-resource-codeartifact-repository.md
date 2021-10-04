@@ -49,7 +49,7 @@ Properties:
 *Required*: No  
 *Type*: String  
 *Maximum*: `1000`  
-*Pattern*: `\P{C}+`  
+*Pattern*: `\P{C}*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainName`  <a name="cfn-codeartifact-repository-domainname"></a>

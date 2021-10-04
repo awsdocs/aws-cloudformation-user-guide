@@ -16,6 +16,8 @@ Note the following:
 
 When you submit a `CreateHostedZone` request, the initial status of the hosted zone is `PENDING`\. For public hosted zones, this means that the NS and SOA records are not yet available on all Route 53 DNS servers\. When the NS and SOA records are available, the status of the zone changes to `INSYNC`\.
 
+The `CreateHostedZone` request requires the caller to have an `ec2:DescribeVpcs` permission\.
+
 ## Syntax<a name="aws-resource-route53-hostedzone-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -62,7 +64,7 @@ If you don't want to specify a comment, omit the `HostedZoneConfig` and `Comment
 
 `HostedZoneTags`  <a name="cfn-route53-hostedzone-hostedzonetags"></a>
 Adds, edits, or deletes tags for a health check or a hosted zone\.  
-For information about using tags for cost allocation, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
+For information about using tags for cost allocation, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the * AWS Billing and Cost Management User Guide*\.  
 *Required*: No  
 *Type*: List of [HostedZoneTag](aws-properties-route53-hostedzone-hostedzonetag.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -59,11 +59,11 @@ Specifies the AWS SSO identity store attributes to add to your ABAC configuratio
 
 
 
-### Enabling and configuring attributes used for access control in AWS SSO<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration--examples--Enabling_and_configuring_attributes_used_for_access_control_in_AWS_SSO"></a>
+### Enabling and configuring attributes used for access control in AWS SSO<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration--examples--Enabling_and_configuring_attributes_used_for_access_control_in_"></a>
 
 The following example enables ABAC in AWS SSO and creates a new attribute key `CostCenter` that is mapped to the Value `“${path:enterprise.costCenter}”` which is coming from your identity source\.
 
-#### JSON<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration--examples--Enabling_and_configuring_attributes_used_for_access_control_in_AWS_SSO--json"></a>
+#### JSON<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration--examples--Enabling_and_configuring_attributes_used_for_access_control_in_--json"></a>
 
 ```
 {
@@ -88,7 +88,7 @@ The following example enables ABAC in AWS SSO and creates a new attribute key `C
 }
 ```
 
-#### YAML<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration--examples--Enabling_and_configuring_attributes_used_for_access_control_in_AWS_SSO--yaml"></a>
+#### YAML<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration--examples--Enabling_and_configuring_attributes_used_for_access_control_in_--yaml"></a>
 
 ```
 Resources:

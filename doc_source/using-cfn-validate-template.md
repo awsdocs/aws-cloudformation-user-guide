@@ -7,7 +7,7 @@ The `aws cloudformation validate-template` command is designed to check only the
 
 To check the operational validity, you need to attempt to create the stack\. There is no sandbox or test area for AWS CloudFormation stacks, so you are charged for the resources you create during testing\.
 
-During validation, AWS CloudFormation first checks if the template is valid JSON\. If it isn't, AWS CloudFormation checks if the template is valid YAML\. If both checks fail, AWS CloudFormation returns a template validation error\. You can validate templates locally by using the `--template-body` parameter, or remotely with the `--template-url` parameter\. The following example validates a template in a remote location:
+During validation, AWS CloudFormation first checks if the template is valid JSON\. If it isn't, CloudFormation checks if the template is valid YAML\. If both checks fail, CloudFormation returns a template validation error\. You can validate templates locally by using the `--template-body` parameter, or remotely with the `--template-url` parameter\. The following example validates a template in a remote location:
 
 ```
 PROMPT> aws cloudformation validate-template --template-url https://s3.amazonaws.com/cloudformation-templates-us-east-1/S3_Bucket.template
@@ -21,7 +21,7 @@ You will be billed for the AWS resources used if you create a stack from this te
 
 The expected result is no error message, with information about all parameters listed\.
 
-The following example shows an error with a local template file:
+The following example shows an error with a local template file\.
 
 ```
 PROMPT> aws cloudformation validate-template --template-body file:///home/local/test/sampletemplate.json

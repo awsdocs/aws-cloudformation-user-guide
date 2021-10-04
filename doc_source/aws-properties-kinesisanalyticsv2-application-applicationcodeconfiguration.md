@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application ApplicationCodeConfiguration<a name="aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration"></a>
 
-Describes code configuration for a Flink\-based Kinesis Data Analytics application\.
+Describes code configuration for an application\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration-syntax"></a>
 

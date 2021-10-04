@@ -34,7 +34,7 @@ Properties:
 
 `ServiceToken`  <a name="cfn-customresource-servicetoken"></a>
 Only one property is defined by AWS for a custom resource: `ServiceToken`\. All other properties are defined by the service provider\.
-The service token that was given to the template developer by the service provider to access the service, such as an Amazon SNS topic ARN or Lambda function ARN\. The service token must be from the same region in which you are creating the stack\.  
+The service token that was given to the template developer by the service provider to access the service, such as an Amazon SNS topic ARN or Lambda function ARN\. The service token must be from the same Region in which you are creating the stack\.  
 Updates are not supported\.  
 *Required*: Yes  
 *Type*: String  
@@ -52,9 +52,9 @@ Using your own resource type names helps you quickly differentiate the types of 
 
  *Replacing a custom resource during an update* 
 
-You can update custom resources that require a replacement of the underlying physical resource\. When you update a custom resource in a CloudFormation template, CloudFormation sends an update request to that custom resource\. If the custom resource requires a replacement, the new custom resource must send a response with the new physical ID\. When CloudFormation receives the response, it compares the `PhysicalResourceId` between the old and new custom resources\. If they are different, CloudFormation recognizes the update as a replacement and sends a delete request to the old resource\. For a step\-by\-step walkthrough of this process, see [Stack updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources-sns.html#crpg-walkthrough-stack-updates)\. 
+You can update custom resources that require a replacement of the underlying physical resource\. When you update a custom resource in a CloudFormation template, CloudFormation sends an update request to that custom resource\. If the custom resource requires a replacement, the new custom resource must send a response with the new physical ID\. When CloudFormation receives the response, it compares the `PhysicalResourceId` between the old and new custom resources\. If they are different, CloudFormation recognizes the update as a replacement and sends a delete request to the old resource\. For a step\-by\-step walkthrough of this process, see [Stack updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources-sns.html#crpg-walkthrough-stack-updates)\.
 
-Note the following: 
+Note the following:
 + You can monitor the progress of the update in the Events tab\. For more information, see [Viewing stack data and resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-view-stack-data-resources.html)\.
 + For more information about resource behavior during updates, see [AWS CloudFormation stacks updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)\.
 
@@ -76,84 +76,121 @@ All properties other than `ServiceToken`, and all `Fn::GetAtt` resource attribut
 
 ```
 {
-  "AWSTemplateFormatVersion" : "2010-09-09",
-  "Resources" : {
-    "MyFrontEndTest" : {
-      "Type": "Custom::PingTester",
-      "Version" : "1.0",
-      "Properties" : {
-        "ServiceToken": "arn:aws:sns:us-east-1:84969EXAMPLE:CRTest",
-        "key1" : "string",
-        "key2" : [ "list" ],
-        "key3" : { "key4" : "map" }
-      }
-    }
-  },
-  "Outputs" : {
-    "CustomResourceAttribute1" : {
-      "Value" : { "Fn::GetAtt" : ["MyFrontEndTest", "responseKey1"] }
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "MyFrontEndTest": {
+            "Type": "Custom::PingTester",
+            "Version": "1.0",
+            "Properties": {
+                "ServiceToken": "arn:aws:sns:us-east-1:84969EXAMPLE:CRTest",
+                "key1": "string",
+                "key2": [
+                    "list"
+                ],
+                "key3": {
+                    "key4": "map"
+                }
+            }
+        }
     },
-    "CustomResourceAttribute2" : {
-      "Value" : { "Fn::GetAtt" : ["MyFrontEndTest", "responseKey2"] }
+    "Outputs": {
+        "CustomResourceAttribute1": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "MyFrontEndTest",
+                    "responseKey1"
+                ]
+            }
+        },
+        "CustomResourceAttribute2": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "MyFrontEndTest",
+                    "responseKey2"
+                ]
+            }
+        }
     }
-  }
 }
 ```
 
 #### YAML<a name="aws-resource-cfn-customresource--examples--Creating_a_custom_resource_definition_in_a_template--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: "2010-09-09"
-Resources: 
-  MyFrontEndTest: 
-    Type: "Custom::PingTester"
-    Version: "1.0"
-    Properties: 
-      ServiceToken: "arn:aws:sns:us-east-1:84969EXAMPLE:CRTest"
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  MyFrontEndTest:
+    Type: 'Custom::PingTester'
+    Version: '1.0'
+    Properties:
+      ServiceToken: 'arn:aws:sns:us-east-1:84969EXAMPLE:CRTest'
       key1: string
-      key2: 
+      key2:
         - list
-      key3: 
+      key3:
         key4: map
-Outputs: 
-  CustomResourceAttribute1: 
-    Value: 
-      Fn::GetAtt: 
-        - MyFrontEndTest
-        - responseKey1
-  CustomResourceAttribute2: 
-    Value: 
-      Fn::GetAtt: 
-        - MyFrontEndTest
-        - responseKey2
+Outputs:
+  CustomResourceAttribute1:
+    Value: !GetAtt 
+      - MyFrontEndTest
+      - responseKey1
+  CustomResourceAttribute2:
+    Value: !GetAtt 
+      - MyFrontEndTest
+      - responseKey2
 ```
 
-### Using an AWS Lambda function in a custom resource<a name="aws-resource-cfn-customresource--examples--Using_an_AWS_Lambda_function_in_a_custom_resource"></a>
+### Using a Lambda function in a custom resource<a name="aws-resource-cfn-customresource--examples--Using_a_Lambda_function_in_a_custom_resource"></a>
 
-With Lambda functions and custom resources, you can run custom code in response to stack events \(create, update, and delete\)\. The following custom resource invokes a Lambda function and sends it the StackName property as input\. The function uses this property to get outputs from the appropriate stack\.
+With AWS Lambda functions and custom resources, you can run custom code in response to stack events \(create, update, and delete\)\. The following custom resource invokes a Lambda function and sends it the StackName property as input\. The function uses this property to get outputs from the appropriate stack\.
 
-#### JSON<a name="aws-resource-cfn-customresource--examples--Using_an_AWS_Lambda_function_in_a_custom_resource--json"></a>
+#### JSON<a name="aws-resource-cfn-customresource--examples--Using_a_Lambda_function_in_a_custom_resource--json"></a>
 
 ```
-"MyCustomResource" : {
-  "Type" : "Custom::TestLambdaCrossStackRef",
-  "Properties" : {
-    "ServiceToken": { "Fn::Join": [ "", [ "arn:aws:lambda:", { "Ref": "AWS::Region" }, ":", { "Ref": "AWS::AccountId" }, ":function:", {"Ref" : "LambdaFunctionName"} ] ] },
-    "StackName": {
-      "Ref": "NetworkStackName"
+{
+    "MyCustomResource": {
+        "Type": "Custom::TestLambdaCrossStackRef",
+        "Properties": {
+            "ServiceToken": {
+                "Fn::Join": [
+                    "",
+                    [
+                        "arn:aws:lambda:",
+                        {
+                            "Ref": "AWS::Region"
+                        },
+                        ":",
+                        {
+                            "Ref": "AWS::AccountId"
+                        },
+                        ":function:",
+                        {
+                            "Ref": "LambdaFunctionName"
+                        }
+                    ]
+                ]
+            },
+            "StackName": {
+                "Ref": "NetworkStackName"
+            }
+        }
     }
-  }
 }
 ```
 
-#### YAML<a name="aws-resource-cfn-customresource--examples--Using_an_AWS_Lambda_function_in_a_custom_resource--yaml"></a>
+#### YAML<a name="aws-resource-cfn-customresource--examples--Using_a_Lambda_function_in_a_custom_resource--yaml"></a>
 
 ```
-MyCustomResource: 
-  Type: "Custom::TestLambdaCrossStackRef"
-  Properties: 
-    ServiceToken:
-      !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:${LambdaFunctionName}
-    StackName: 
-      Ref: "NetworkStackName"
+MyCustomResource:
+      Type: 'Custom::TestLambdaCrossStackRef'
+      Properties:
+      ServiceToken: !Join 
+      - ''
+      - - 'arn:aws:lambda:'
+      - !Ref 'AWS::Region'
+      - ':'
+      - !Ref 'AWS::AccountId'
+      - ':function:'
+      - !Ref LambdaFunctionName
+      StackName: !Ref NetworkStackName
 ```

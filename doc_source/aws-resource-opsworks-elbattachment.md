@@ -30,13 +30,13 @@ Properties:
 ## Properties<a name="aws-resource-opsworks-elbattachment-properties"></a>
 
 `ElasticLoadBalancerName`  <a name="cfn-opsworks-elbattachment-elbname"></a>
-The Elastic Load Balancing instance's name\.  
+The Elastic Load Balancing instance name\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LayerId`  <a name="cfn-opsworks-elbattachment-layerid"></a>
-The AWS OpsWorks layer ID that the Elastic Load Balancing load balancer will be attached to\.  
+The AWS OpsWorks layer ID to which the Elastic Load Balancing load balancer is attached\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

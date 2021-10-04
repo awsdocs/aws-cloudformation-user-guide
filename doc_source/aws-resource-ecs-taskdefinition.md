@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinitions)" : [ ContainerDefinition, ... ],
       "[Cpu](#cfn-ecs-taskdefinition-cpu)" : String,
+      "[EphemeralStorage](#cfn-ecs-taskdefinition-ephemeralstorage)" : EphemeralStorage,
       "[ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn)" : String,
       "[Family](#cfn-ecs-taskdefinition-family)" : String,
       "[InferenceAccelerators](#cfn-ecs-taskdefinition-inferenceaccelerators)" : [ InferenceAccelerator, ... ],
@@ -39,6 +40,8 @@ Properties:
   [ContainerDefinitions](#cfn-ecs-taskdefinition-containerdefinitions): 
     - ContainerDefinition
   [Cpu](#cfn-ecs-taskdefinition-cpu): String
+  [EphemeralStorage](#cfn-ecs-taskdefinition-ephemeralstorage): 
+    EphemeralStorage
   [ExecutionRoleArn](#cfn-ecs-taskdefinition-executionrolearn): String
   [Family](#cfn-ecs-taskdefinition-family): String
   [InferenceAccelerators](#cfn-ecs-taskdefinition-inferenceaccelerators): 
@@ -77,6 +80,12 @@ The number of `cpu` units used by the task\. If you are using the EC2 launch typ
 + 4096 \(4 vCPU\) \- Available `memory` values: Between 8192 \(8 GB\) and 30720 \(30 GB\) in increments of 1024 \(1 GB\)
 *Required*: No  
 *Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EphemeralStorage`  <a name="cfn-ecs-taskdefinition-ephemeralstorage"></a>
+The ephemeral storage settings to use for tasks run with the task definition\.  
+*Required*: No  
+*Type*: [EphemeralStorage](aws-properties-ecs-taskdefinition-ephemeralstorage.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExecutionRoleArn`  <a name="cfn-ecs-taskdefinition-executionrolearn"></a>
@@ -182,7 +191,7 @@ The following basic restrictions apply to tags:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TaskRoleArn`  <a name="cfn-ecs-taskdefinition-taskrolearn"></a>
-The short name or full Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role that grants containers in the task permission to call AWS APIs on your behalf\. For more information, see [Amazon ECS Task Role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The short name or full Amazon Resource Name \(ARN\) of the AWS Identity and Access Management role that grants containers in the task permission to call AWS APIs on your behalf\. For more information, see [Amazon ECS Task Role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 IAM roles for tasks on Windows require that the `-EnableTaskIAMRole` option is set when you launch the Amazon ECS\-optimized Windows AMI\. Your containers must also run some configuration code in order to take advantage of the feature\. For more information, see [Windows IAM roles for tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows_task_IAM_roles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
@@ -206,13 +215,6 @@ In the following example, the `Ref` function returns the ARN of the `MyTaskDefin
  `{ "Ref": "MyTaskDefinition" }` 
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
-
-### Fn::GetAtt<a name="aws-resource-ecs-taskdefinition-return-values-fn--getatt"></a>
-
-#### <a name="aws-resource-ecs-taskdefinition-return-values-fn--getatt-fn--getatt"></a>
-
-`TaskDefinitionArn`  <a name="TaskDefinitionArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-ecs-taskdefinition--examples"></a>
 
@@ -335,7 +337,7 @@ taskdefinition:
 
 ### Create an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition"></a>
 
-The following example defines an Amazon ECS task definition that specifies EC2 and FARGATE as required compatibilities\.
+The following example defines an Amazon ECS task definition that specifies EC2 as required compatibilities\.
 
 #### JSON<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition--json"></a>
 
@@ -347,8 +349,7 @@ The following example defines an Amazon ECS task definition that specifies EC2 a
             "Type": "AWS::ECS::TaskDefinition",
             "Properties": {
                 "RequiresCompatibilities": [
-                    "EC2",
-                    "FARGATE"
+                    "EC2"
                 ],
                 "ContainerDefinitions": [
                     {
@@ -419,7 +420,6 @@ Resources:
     Properties: 
       RequiresCompatibilities:
         - "EC2"
-        - "FARGATE"
       ContainerDefinitions: 
         - 
           Name: "my-app"

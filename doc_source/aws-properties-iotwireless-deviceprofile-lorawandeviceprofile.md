@@ -1,6 +1,6 @@
 # AWS::IoTWireless::DeviceProfile LoRaWANDeviceProfile<a name="aws-properties-iotwireless-deviceprofile-lorawandeviceprofile"></a>
 
-<a name="aws-properties-iotwireless-deviceprofile-lorawandeviceprofile-description"></a>The `LoRaWANDeviceProfile` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::IoTWireless::DeviceProfile](aws-resource-iotwireless-deviceprofile.md)\.
+LoRaWAN device profile object\.
 
 ## Syntax<a name="aws-properties-iotwireless-deviceprofile-lorawandeviceprofile-syntax"></a>
 
@@ -49,85 +49,85 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotwireless-deviceprofile-lorawandeviceprofile-properties"></a>
 
 `ClassBTimeout`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-classbtimeout"></a>
-Not currently supported by AWS CloudFormation\.  
+The ClassBTimeout value\. This has a minimum of 0 and maximum of 1000\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClassCTimeout`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-classctimeout"></a>
-Not currently supported by AWS CloudFormation\.  
+The ClassCTimeout value\. This has a minimum of 0 and maximum of 1000\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MacVersion`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-macversion"></a>
-Not currently supported by AWS CloudFormation\.  
+The MAC version \(such as OTAA 1\.1 or OTAA 1\.0\.3\) to use with this device profile\. This has a maximum length of 64 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxDutyCycle`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-maxdutycycle"></a>
-Not currently supported by AWS CloudFormation\.  
+The MaxDutyCycle value\. This has a minimum of 0 and a maximum of 100\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxEirp`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-maxeirp"></a>
-Not currently supported by AWS CloudFormation\.  
+The MaxEIRP value\. This has a minimum of 0 and a maximum of 15\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PingSlotDr`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-pingslotdr"></a>
-Not currently supported by AWS CloudFormation\.  
+The PingSlotDR value\. This has a minimum of 0 and maximum of 15\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PingSlotFreq`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-pingslotfreq"></a>
-Not currently supported by AWS CloudFormation\.  
+The PingSlotFreq value\. This has a minimum of 1000000 and a maximum of 16700000\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PingSlotPeriod`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-pingslotperiod"></a>
-Not currently supported by AWS CloudFormation\.  
+The PingSlotPeriod value\. This has a minimum of 128 and maximum of 4096\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegParamsRevision`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-regparamsrevision"></a>
-Not currently supported by AWS CloudFormation\.  
+The version of regional parameters\. This has a maximum of 64 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RfRegion`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-rfregion"></a>
-Not currently supported by AWS CloudFormation\.  
+The frequency band \(RFRegion\) value\. The maximum length is 64\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Supports32BitFCnt`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-supports32bitfcnt"></a>
-Not currently supported by AWS CloudFormation\.  
+The Supports32BitFCnt value\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SupportsClassB`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-supportsclassb"></a>
-Not currently supported by AWS CloudFormation\.  
+The SupportsClassB value\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SupportsClassC`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-supportsclassc"></a>
-Not currently supported by AWS CloudFormation\.  
+The SupportsClassC value\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SupportsJoin`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-supportsjoin"></a>
-Not currently supported by AWS CloudFormation\.  
+The SupportsJoin value\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

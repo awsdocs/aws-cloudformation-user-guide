@@ -8,14 +8,7 @@ The cluster control plane is provisioned across multiple Availability Zones and 
 
 Amazon EKS nodes run in your AWS account and connect to your cluster's control plane via the Kubernetes API server endpoint and a certificate file that is created for your cluster\.
 
-You can use the `endpointPublicAccess` and `endpointPrivateAccess` parameters to enable or disable public and private access to your cluster's Kubernetes API server endpoint\. By default, public access is enabled, and private access is disabled\. For more information, see [Amazon EKS Cluster Endpoint Access Control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the * *Amazon EKS User Guide* *\. 
-
-You can use the `logging` parameter to enable or disable exporting the Kubernetes control plane logs for your cluster to CloudWatch Logs\. By default, cluster control plane logs aren't exported to CloudWatch Logs\. For more information, see [Amazon EKS Cluster Control Plane Logs](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html) in the * *Amazon EKS User Guide* *\.
-
-**Note**  
-CloudWatch Logs ingestion, archive storage, and data scanning rates apply to exported control plane logs\. For more information, see [Amazon CloudWatch Pricing](http://aws.amazon.com/cloudwatch/pricing/)\.
-
-Cluster creation typically takes between 10 and 15 minutes\. After you create an Amazon EKS cluster, you must configure your Kubernetes tooling to communicate with the API server and launch nodes into your cluster\. For more information, see [Managing Cluster Authentication](https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html) and [Launching Amazon EKS nodes](https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html) in the *Amazon EKS User Guide*\.
+Cluster creation typically takes several minutes\. After you create an Amazon EKS cluster, you must configure your Kubernetes tooling to communicate with the API server and launch nodes into your cluster\. For more information, see [Managing Cluster Authentication](https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html) and [Launching Amazon EKS nodes](https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html) in the *Amazon EKS User Guide*\.
 
 ## Syntax<a name="aws-resource-eks-cluster-syntax"></a>
 
@@ -123,7 +116,7 @@ The `certificate-authority-data` for your cluster\.
 
 `ClusterSecurityGroupId`  <a name="ClusterSecurityGroupId-fn::getatt"></a>
 The cluster security group that was created by Amazon EKS for the cluster\. Managed node groups use this security group for control plane to data plane communication\.  
-This parameter is only returned by Amazon EKS clusters that support managed node groups\. For more information, see [Managed Node Groups](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html) in the *Amazon EKS User Guide*\. 
+This parameter is only returned by Amazon EKS clusters that support managed node groups\. For more information, see [Managed node groups](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html) in the *Amazon EKS User Guide*\. 
 
 `EncryptionConfigKeyArn`  <a name="EncryptionConfigKeyArn-fn::getatt"></a>
 Amazon Resource Name \(ARN\) or alias of the customer master key \(CMK\)\.
@@ -131,13 +124,17 @@ Amazon Resource Name \(ARN\) or alias of the customer master key \(CMK\)\.
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
 The endpoint for your Kubernetes API server, such as `https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com`\.
 
+`OpenIdConnectIssuerUrl`  <a name="OpenIdConnectIssuerUrl-fn::getatt"></a>
+The issuer URL for the cluster's OIDC identity provider, such as `https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E`\. If you need to remove `https://` from this output value, you can include the following code in your template\.  
+ `!Select [1, !Split ["//", !GetAtt EKSCluster.OpenIdConnectIssuerUrl]]`
+
 ## Examples<a name="aws-resource-eks-cluster--examples"></a>
 
-### Create a Cluster<a name="aws-resource-eks-cluster--examples--Create_a_Cluster"></a>
+### Create a cluster<a name="aws-resource-eks-cluster--examples--Create_a_cluster"></a>
 
-The following example creates an Amazon EKS cluster called prod\.
+The following example creates an Amazon EKS cluster named `prod`\.
 
-#### JSON<a name="aws-resource-eks-cluster--examples--Create_a_Cluster--json"></a>
+#### JSON<a name="aws-resource-eks-cluster--examples--Create_a_cluster--json"></a>
 
 ```
 {
@@ -163,7 +160,7 @@ The following example creates an Amazon EKS cluster called prod\.
 }
 ```
 
-#### YAML<a name="aws-resource-eks-cluster--examples--Create_a_Cluster--yaml"></a>
+#### YAML<a name="aws-resource-eks-cluster--examples--Create_a_cluster--yaml"></a>
 
 ```
 Resources:
@@ -184,4 +181,4 @@ Resources:
 
 ## See also<a name="aws-resource-eks-cluster--seealso"></a>
 +  [Clusters](https://docs.aws.amazon.com/eks/latest/userguide/clusters.html) in the *Amazon EKS User Guide *\.
-+  [CreateCluster](https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateCluster.html) in the *Amazon EKS API Reference *\.
++  [https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateCluster.html](https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateCluster.html) in the *Amazon EKS API Reference *\.

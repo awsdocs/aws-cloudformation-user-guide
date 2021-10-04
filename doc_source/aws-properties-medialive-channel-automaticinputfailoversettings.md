@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel AutomaticInputFailoverSettings<a name="aws-properties-medialive-channel-automaticinputfailoversettings"></a>
 
-The settings for Automatic Input Failover\.
+Settings to configure the conditions that will define the input as unhealthy and that will make MediaLive fail over to the other input in the input failover pair\.
+
+The parent of this entity is InputAttachment\.
 
 ## Syntax<a name="aws-properties-medialive-channel-automaticinputfailoversettings-syntax"></a>
 

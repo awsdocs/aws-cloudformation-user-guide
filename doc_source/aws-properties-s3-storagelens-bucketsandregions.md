@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-storagelens-bucketsandregions-properties"></a>
 
 `Buckets`  <a name="cfn-s3-storagelens-bucketsandregions-buckets"></a>
-This property contains the details of the buckets for the Amazon S3 Storage Lens configuration\. This should be the bucket Amazon Resource Name\(ARN\)\. For valid values, see [Buckets ARN format here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents) in the *Amazon Simple Storage Service API Guide*\.  
+This property contains the details of the buckets for the Amazon S3 Storage Lens configuration\. This should be the bucket Amazon Resource Name\(ARN\)\. For valid values, see [Buckets ARN format here](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_Include.html#API_control_Include_Contents) in the *Amazon S3 API Reference*\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

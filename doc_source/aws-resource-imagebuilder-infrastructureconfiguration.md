@@ -67,7 +67,8 @@ The instance profile of the infrastructure configuration\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `1024`  
+*Maximum*: `256`  
+*Pattern*: `^[\w+=,.@-]+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceTypes`  <a name="cfn-imagebuilder-infrastructureconfiguration-instancetypes"></a>
@@ -77,7 +78,7 @@ The instance types of the infrastructure configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeyPair`  <a name="cfn-imagebuilder-infrastructureconfiguration-keypair"></a>
-The EC2 key pair of the infrastructure configuration\.  
+The Amazon EC2 key pair of the infrastructure configuration\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -85,7 +86,7 @@ The EC2 key pair of the infrastructure configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Logging`  <a name="cfn-imagebuilder-infrastructureconfiguration-logging"></a>
-The logging configuration of the infrastructure configuration\.  
+The logging configuration defines where Image Builder uploads your logs\.  
 *Required*: No  
 *Type*: [Logging](aws-properties-imagebuilder-infrastructureconfiguration-logging.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -156,13 +157,57 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the infrastructure configuration\. The following pattern is applied: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`\.
 
+`Name`  <a name="Name-fn::getatt"></a>
+The name of the infrastructure configuration\.
+
 ## Examples<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples"></a>
 
 
 
 ### Create an infrastructure configuration<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples--Create_an_infrastructure_configuration"></a>
 
-The following example shows the schema for all of the parameters of the InfrastructureConfiguration resource document in both YAML and JSON format \.
+The following example shows the schema for all of the parameters of the InfrastructureConfiguration resource document in both JSON and YAML format\.
+
+#### JSON<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples--Create_an_infrastructure_configuration--json"></a>
+
+```
+{
+	"Resources": {
+		"InfrastructureConfigurationAll": {
+			"Type": "AWS::ImageBuilder::InfrastructureConfiguration",
+			"Properties": {
+				"Name": "infrastructure-configuration-name",
+				"InstanceProfileName": "instance-profile-name",
+				"Description": "description",
+				"InstanceTypes": [
+					"m4.large",
+					"m5.large"
+				],
+				"KeyPair": "key-pair",
+				"Logging": {
+					"S3Logs": {
+						"S3BucketName": "imagebuilder-logging-bucket",
+						"S3KeyPrefix": "imagebuilder-bucket-prefix"
+					}
+				},
+				"SnsTopicArn": {
+					"Ref": "SnsTopicArn"
+				},
+				"TerminateInstanceOnFailure": true,
+				"SecurityGroupIds": [
+					"security-group-id-1",
+					"security-group-id-2"
+				],
+				"SubnetId": "subnet-id",
+				"Tags": {
+					"CustomerInfraConfigTagKey1": "CustomerInfraConfigTagValue1",
+					"CustomerInfraConfigTagKey2": "CustomerInfraConfigTagValue2"
+				}
+			}
+		}
+	}
+}
+```
 
 #### YAML<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples--Create_an_infrastructure_configuration--yaml"></a>
 
@@ -191,45 +236,4 @@ Resources:
       Tags:
         CustomerInfraConfigTagKey1: 'CustomerInfraConfigTagValue1'
         CustomerInfraConfigTagKey2: 'CustomerInfraConfigTagValue2'
-```
-
-#### JSON<a name="aws-resource-imagebuilder-infrastructureconfiguration--examples--Create_an_infrastructure_configuration--json"></a>
-
-```
-{
-    "Resources": {
-        "InfrastructureConfigurationAll": {
-            "Type": "AWS::ImageBuilder::InfrastructureConfiguration",
-            "Properties": {
-                "Name": "infrastructure-configuration-name",
-                "InstanceProfileName": "instance-profile-name",
-                "Description": "description",
-                "InstanceTypes": [
-                    "m4.large",
-                    "m5.large"
-                ],
-                "KeyPair": "key-pair",
-                "Logging": {
-                    "S3Logs": {
-                        "S3BucketName": "imagebuilder-logging-bucket",
-                        "S3KeyPrefix": "imagebuilder-bucket-prefix"
-                    }
-                },
-                "SnsTopicArn": {
-                    "Ref": "SnsTopicArn"
-                },
-                "TerminateInstanceOnFailure": true,
-                "SecurityGroupIds": [
-                    "security-group-id-1",
-                    "security-group-id-2"
-                ],
-                "SubnetId": "subnet-id",
-                "Tags": {
-                    "CustomerInfraConfigTagKey1": "CustomerInfraConfigTagValue1",
-                    "CustomerInfraConfigTagKey2": "CustomerInfraConfigTagValue2"
-                }
-            }
-        }
-    }
-}
 ```

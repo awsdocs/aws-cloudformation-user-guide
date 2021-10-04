@@ -1,11 +1,11 @@
 # AWS::AutoScalingPlans::ScalingPlan<a name="aws-resource-autoscalingplans-scalingplan"></a>
 
-The `AWS::AutoScalingPlans::ScalingPlan` resource defines a scaling plan that AWS Auto Scaling uses to scale the following application resources:
+The `AWS::AutoScalingPlans::ScalingPlan` resource defines an AWS Auto Scaling scaling plan\. A scaling plan is used to scale application resources to size them appropriately to ensure that enough resource is available in the application at peak times and to reduce allocated resource during periods of low utilization\. The following resources can be added to a scaling plan:
 + Amazon EC2 Auto Scaling groups
-+ Amazon EC2 Spot Fleet requests 
++ Amazon EC2 Spot Fleet requests
 + Amazon ECS services
-+ Amazon DynamoDB tables and global secondary indexes 
-+ Amazon Aurora Replicas 
++ Amazon DynamoDB tables and global secondary indexes
++ Amazon Aurora Replicas
 
 For more information, see the [AWS Auto Scaling User Guide](https://docs.aws.amazon.com/autoscaling/plans/userguide/what-is-aws-auto-scaling.html)\. 
 

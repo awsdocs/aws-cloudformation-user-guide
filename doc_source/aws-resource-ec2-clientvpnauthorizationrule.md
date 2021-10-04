@@ -67,11 +67,11 @@ The IPv4 address range, in CIDR notation, of the network for which access is bei
 
 ## Examples<a name="aws-resource-ec2-clientvpnauthorizationrule--examples"></a>
 
-### Adding an authorization rule to a Client VPN endpoint<a name="aws-resource-ec2-clientvpnauthorizationrule--examples--Adding_an_authorization_rule_to_a_Client_VPN_endpoint"></a>
+### Add an authorization rule to a client VPN endpoint<a name="aws-resource-ec2-clientvpnauthorizationrule--examples--Add_an_authorization_rule_to_a_client_VPN_endpoint"></a>
 
 The following example adds an authorization rule that grants all users access to the internet\.
 
-#### YAML<a name="aws-resource-ec2-clientvpnauthorizationrule--examples--Adding_an_authorization_rule_to_a_Client_VPN_endpoint--yaml"></a>
+#### YAML<a name="aws-resource-ec2-clientvpnauthorizationrule--examples--Add_an_authorization_rule_to_a_client_VPN_endpoint--yaml"></a>
 
 ```
 myAuthRule:
@@ -84,7 +84,7 @@ myAuthRule:
     Description: "myAuthRule"
 ```
 
-#### JSON<a name="aws-resource-ec2-clientvpnauthorizationrule--examples--Adding_an_authorization_rule_to_a_Client_VPN_endpoint--json"></a>
+#### JSON<a name="aws-resource-ec2-clientvpnauthorizationrule--examples--Add_an_authorization_rule_to_a_client_VPN_endpoint--json"></a>
 
 ```
 "myAuthRule": {

@@ -1,6 +1,6 @@
 # AWS::IoTSiteWise::Portal<a name="aws-resource-iotsitewise-portal"></a>
 
-Creates a portal, which can contain projects and dashboards\. Before you can create a portal, you must enable AWS Single Sign\-On\. AWS IoT SiteWise Monitor uses AWS SSO to manage user permissions\. For more information, see [Enabling AWS SSO](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/monitor-get-started.html#mon-gs-sso) in the *AWS IoT SiteWise User Guide*\.
+Creates a portal, which can contain projects and dashboards\. Before you can create a portal, you must enable AWS SSO\. AWS IoT SiteWise Monitor uses AWS SSO to manage user permissions\. For more information, see [Enabling AWS SSO](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/monitor-get-started.html#mon-gs-sso) in the *AWS IoT SiteWise User Guide*\.
 
 **Note**  
 Before you can sign in to a new portal, you must add at least one AWS SSO user or group to that portal\. For more information, see [Adding or removing portal administrators](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/administer-portals.html#portal-change-admins) in the *AWS IoT SiteWise User Guide*\.
@@ -15,6 +15,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoTSiteWise::Portal",
   "Properties" : {
+      "[Alarms](#cfn-iotsitewise-portal-alarms)" : Json,
+      "[NotificationSenderEmail](#cfn-iotsitewise-portal-notificationsenderemail)" : String,
+      "[PortalAuthMode](#cfn-iotsitewise-portal-portalauthmode)" : String,
       "[PortalContactEmail](#cfn-iotsitewise-portal-portalcontactemail)" : String,
       "[PortalDescription](#cfn-iotsitewise-portal-portaldescription)" : String,
       "[PortalName](#cfn-iotsitewise-portal-portalname)" : String,
@@ -29,6 +32,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::IoTSiteWise::Portal
 Properties: 
+  [Alarms](#cfn-iotsitewise-portal-alarms): Json
+  [NotificationSenderEmail](#cfn-iotsitewise-portal-notificationsenderemail): String
+  [PortalAuthMode](#cfn-iotsitewise-portal-portalauthmode): String
   [PortalContactEmail](#cfn-iotsitewise-portal-portalcontactemail): String
   [PortalDescription](#cfn-iotsitewise-portal-portaldescription): String
   [PortalName](#cfn-iotsitewise-portal-portalname): String
@@ -38,6 +44,29 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-iotsitewise-portal-properties"></a>
+
+`Alarms`  <a name="cfn-iotsitewise-portal-alarms"></a>
+Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal\. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range\. For more information, see [Monitoring with alarms](https://docs.aws.amazon.com/iot-sitewise/latest/appguide/monitor-alarms.html) in the * AWS IoT SiteWise Application Guide*\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`NotificationSenderEmail`  <a name="cfn-iotsitewise-portal-notificationsenderemail"></a>
+The email address that sends alarm notifications\.  
+If you use the [ AWS IoT Events managed Lambda function](https://docs.aws.amazon.com/iotevents/latest/developerguide/lambda-support.html) to manage your emails, you must [verify the sender email address in Amazon SES](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-email-addresses.html)\.
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PortalAuthMode`  <a name="cfn-iotsitewise-portal-portalauthmode"></a>
+The service to use to authenticate users to the portal\. Choose from the following options:  
++  `SSO` – The portal uses AWS Single Sign\-On to authenticate users and manage user permissions\. Before you can create a portal that uses AWS SSO, you must enable AWS SSO\. For more information, see [Enabling AWS SSO](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/monitor-get-started.html#mon-gs-sso) in the *AWS IoT SiteWise User Guide*\. This option is only available in AWS Regions other than the China Regions\.
++  `IAM` – The portal uses AWS Identity and Access Management \(IAM\) to authenticate users and manage user permissions\. This option is only available in China \(Beijing\)\.
+You can't change this value after you create a portal\.  
+Default: `SSO`   
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PortalContactEmail`  <a name="cfn-iotsitewise-portal-portalcontactemail"></a>
 The AWS administrator's contact email address\.  
@@ -98,8 +127,4 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 `PortalStartUrl`  <a name="PortalStartUrl-fn::getatt"></a>
 The public URL for the AWS IoT SiteWise Monitor portal\.  
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
-
-`PortalStatus`  <a name="PortalStatus-fn::getatt"></a>
-The status of the portal, which contains a state \(`CREATING` after successfully calling this operation\) and any error message\.  
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

@@ -1,4 +1,4 @@
-# NetworkManager resource type reference<a name="AWS_NetworkManager"></a>
+# Transit Gateway Network Manager resource type reference<a name="AWS_NetworkManager"></a>
 
 **Resource types**
 + [AWS::NetworkManager::CustomerGatewayAssociation](aws-resource-networkmanager-customergatewayassociation.md)

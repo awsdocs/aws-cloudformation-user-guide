@@ -2,6 +2,8 @@
 
 MediaLive will perform a failover if content is not detected in this input for the specified period\.
 
+The parent of this entity is FailoverConditionSettings\.
+
 ## Syntax<a name="aws-properties-medialive-channel-inputlossfailoversettings-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

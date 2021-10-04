@@ -34,7 +34,7 @@ Lists all the audio groups that are used with the video output stream\. This inp
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `M3u8Settings`  <a name="cfn-medialive-channel-standardhlssettings-m3u8settings"></a>
-Not currently supported by AWS CloudFormation\.  
+Settings for the M3U8 container\.  
 *Required*: No  
 *Type*: [M3u8Settings](aws-properties-medialive-channel-m3u8settings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

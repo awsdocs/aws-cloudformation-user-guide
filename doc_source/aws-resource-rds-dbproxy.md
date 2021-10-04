@@ -138,13 +138,16 @@ The Amazon Resource Name \(ARN\) representing the target group\.
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
 The writer endpoint for the RDS DB instance or Aurora DB cluster\.
 
+`VpcId`  <a name="VpcId-fn::getatt"></a>
+The VPC ID to associate with the DB proxy\.
+
 ## Examples<a name="aws-resource-rds-dbproxy--examples"></a>
 
-### Creating a DB Proxy and registering a DB instance<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_registering_a_DB_instance"></a>
+### Creating a DB proxy and registering a DB instance<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_proxy_and_registering_a_DB_instance"></a>
 
 The following example creates a DB proxy and registers a DB instance\.
 
-#### JSON<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_registering_a_DB_instance--json"></a>
+#### JSON<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_proxy_and_registering_a_DB_instance--json"></a>
 
 ```
 {
@@ -227,7 +230,7 @@ The following example creates a DB proxy and registers a DB instance\.
 }
 ```
 
-#### YAML<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_registering_a_DB_instance--yaml"></a>
+#### YAML<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_proxy_and_registering_a_DB_instance--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09

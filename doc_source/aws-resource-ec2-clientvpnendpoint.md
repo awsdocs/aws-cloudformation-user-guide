@@ -115,7 +115,7 @@ Default Value: `enabled`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerCertificateArn`  <a name="cfn-ec2-clientvpnendpoint-servercertificatearn"></a>
-The ARN of the server certificate\. For more information, see the [AWS Certificate Manager User Guide](https://docs.aws.amazon.com/acm/latest/userguide/)\.  
+The ARN of the server certificate\. For more information, see the [ AWS Certificate Manager User Guide](https://docs.aws.amazon.com/acm/latest/userguide/)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -123,7 +123,7 @@ The ARN of the server certificate\. For more information, see the [AWS Certifica
 `SplitTunnel`  <a name="cfn-ec2-clientvpnendpoint-splittunnel"></a>
 Indicates whether split\-tunnel is enabled on the AWS Client VPN endpoint\.  
 By default, split\-tunnel on a VPN endpoint is disabled\.  
-For information about split\-tunnel VPN endpoints, see [Split\-Tunnel AWS Client VPN Endpoint](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html) in the *AWS Client VPN Administrator Guide*\.  
+For information about split\-tunnel VPN endpoints, see [Split\-tunnel AWS Client VPN endpoint](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html) in the * AWS Client VPN Administrator Guide*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -166,11 +166,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-clientvpnendpoint--examples"></a>
 
-### Creating a Client VPN endpoint<a name="aws-resource-ec2-clientvpnendpoint--examples--Creating_a_Client_VPN_endpoint"></a>
+### Client VPN endpoint<a name="aws-resource-ec2-clientvpnendpoint--examples--Client_VPN_endpoint"></a>
 
 The following example creates a Client VPN endpoint that uses Active Directory authentication and assigns client IP addresses from the `10.0.0.0/22` CIDR range\.
 
-#### YAML<a name="aws-resource-ec2-clientvpnendpoint--examples--Creating_a_Client_VPN_endpoint--yaml"></a>
+#### YAML<a name="aws-resource-ec2-clientvpnendpoint--examples--Client_VPN_endpoint--yaml"></a>
 
 ```
 myClientVpnEndpoint:
@@ -195,7 +195,7 @@ myClientVpnEndpoint:
     TransportProtocol: "udp"
 ```
 
-#### JSON<a name="aws-resource-ec2-clientvpnendpoint--examples--Creating_a_Client_VPN_endpoint--json"></a>
+#### JSON<a name="aws-resource-ec2-clientvpnendpoint--examples--Client_VPN_endpoint--json"></a>
 
 ```
 "myClientVpnEndpoint": {

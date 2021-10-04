@@ -17,7 +17,7 @@ The `Metadata` attribute of a resource definition\. For more information, [Metad
 We strongly recommend you do not use these mechanisms to include sensitive information, such as passwords or secrets\.
 
 **Important**  
-Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
+Rather than embedding sensitive information directly in your CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
 For more information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
 The following example creates the `myteststack` stack in an Amazon S3 bucket:
@@ -26,10 +26,15 @@ The following example creates the `myteststack` stack in an Amazon S3 bucket:
 1. PROMPT> aws cloudformation create-stack \
 2. --stack-name myteststack \
 3. --template-body file://home/testuser/mytemplate.json \
-4. --parameters ParameterKey=Parm1, ParameterValue=test1 ParameterKey=Parm2, ParameterValue=test2 \
-5. {
-6.   "StackId" : "arn:aws:cloudformation:us-west-2:123456789012:stack/myteststack/330b0120-1771-11e4-af37-50ba1b98bea6"
-7. }
+4. --parameters ParameterKey=Parm1,ParameterValue=test1 ParameterKey=Parm2,ParameterValue=test2
+```
+
+CloudFormation returns the following output:
+
+```
+{
+  "StackId" : "arn:aws:cloudformation:us-west-2:123456789012:stack/myteststack/330b0120-1771-11e4-af37-50ba1b98bea6"
+}
 ```
 
 The following example creates the `myteststack` stack in an AWS Systems Manager document:

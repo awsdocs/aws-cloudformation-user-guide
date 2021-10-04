@@ -68,5 +68,56 @@ The ARN of the service profile created\.
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the service profile created\.
 
-`LoRaWANResponse`  <a name="LoRaWANResponse-fn::getatt"></a>
+`LoRaWAN.ChannelMask`  <a name="LoRaWAN.ChannelMask-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.DevStatusReqFreq`  <a name="LoRaWAN.DevStatusReqFreq-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.DlBucketSize`  <a name="LoRaWAN.DlBucketSize-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.DlRate`  <a name="LoRaWAN.DlRate-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.DlRatePolicy`  <a name="LoRaWAN.DlRatePolicy-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.DrMax`  <a name="LoRaWAN.DrMax-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.DrMin`  <a name="LoRaWAN.DrMin-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.HrAllowed`  <a name="LoRaWAN.HrAllowed-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.MinGwDiversity`  <a name="LoRaWAN.MinGwDiversity-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.NwkGeoLoc`  <a name="LoRaWAN.NwkGeoLoc-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.PrAllowed`  <a name="LoRaWAN.PrAllowed-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.RaAllowed`  <a name="LoRaWAN.RaAllowed-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.ReportDevStatusBattery`  <a name="LoRaWAN.ReportDevStatusBattery-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.ReportDevStatusMargin`  <a name="LoRaWAN.ReportDevStatusMargin-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.TargetPer`  <a name="LoRaWAN.TargetPer-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.UlBucketSize`  <a name="LoRaWAN.UlBucketSize-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.UlRate`  <a name="LoRaWAN.UlRate-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+`LoRaWAN.UlRatePolicy`  <a name="LoRaWAN.UlRatePolicy-fn::getatt"></a>
 Not currently supported by AWS CloudFormation\.

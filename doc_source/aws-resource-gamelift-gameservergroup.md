@@ -107,7 +107,7 @@ A flag that indicates whether instances in the game server group are protected f
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceDefinitions`  <a name="cfn-gamelift-gameservergroup-instancedefinitions"></a>
-The set of EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling instances in the corresponding Auto Scaling group\.   
+The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling instances in the corresponding Auto Scaling group\.   
 *Required*: Yes  
 *Type*: List of [InstanceDefinition](aws-properties-gamelift-gameservergroup-instancedefinition.md)  
 *Maximum*: `20`  
@@ -132,7 +132,7 @@ Not currently supported by AWS CloudFormation\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-gamelift-gameservergroup-rolearn"></a>
-The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html)\) for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups\.  
+The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html)\) for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

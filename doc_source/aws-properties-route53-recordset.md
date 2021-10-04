@@ -327,7 +327,7 @@ Resources:
       Name: test.example.com
       ResourceRecords:
       - 192.0.2.99
-      TTL: '900'
+      TTL: 900
       Type: A
 ```
 
@@ -410,7 +410,7 @@ Resources:
       Comment: DNS name for my instance.
       Name: !Join ['', [!Ref 'Ec2Instance', ., !Ref 'AWS::Region', ., !Ref 'HostedZone', .]]
       Type: A
-      TTL: '900'
+      TTL: 900
       ResourceRecords:
       - !GetAtt Ec2Instance.PublicIp
 ```

@@ -1,6 +1,6 @@
 # AWS::EC2::LaunchTemplate<a name="aws-resource-ec2-launchtemplate"></a>
 
-Specifies a launch template for an Amazon EC2 instance\. A launch template contains the parameters to launch an instance\. For more information, see [Launching an instance from a launch template](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-launch-templates.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+Specifies a launch template for an Amazon EC2 instance\. A launch template contains the parameters to launch an instance\. For more information, see [Launch an instance from a launch template](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-launch-templates.html) in the *Amazon EC2 User Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-launchtemplate-syntax"></a>
 
@@ -13,7 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::LaunchTemplate",
   "Properties" : {
       "[LaunchTemplateData](#cfn-ec2-launchtemplate-launchtemplatedata)" : LaunchTemplateData,
-      "[LaunchTemplateName](#cfn-ec2-launchtemplate-launchtemplatename)" : String
+      "[LaunchTemplateName](#cfn-ec2-launchtemplate-launchtemplatename)" : String,
+      "[TagSpecifications](#cfn-ec2-launchtemplate-tagspecifications)" : [ LaunchTemplateTagSpecification, ... ]
     }
 }
 ```
@@ -26,6 +27,8 @@ Properties:
   [LaunchTemplateData](#cfn-ec2-launchtemplate-launchtemplatedata): 
     LaunchTemplateData
   [LaunchTemplateName](#cfn-ec2-launchtemplate-launchtemplatename): String
+  [TagSpecifications](#cfn-ec2-launchtemplate-tagspecifications): 
+    - LaunchTemplateTagSpecification
 ```
 
 ## Properties<a name="aws-resource-ec2-launchtemplate-properties"></a>
@@ -44,6 +47,12 @@ A name for the launch template\.
 *Maximum*: `128`  
 *Pattern*: `[a-zA-Z0-9\(\)\.\-/_]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`TagSpecifications`  <a name="cfn-ec2-launchtemplate-tagspecifications"></a>
+The tags to apply to the launch template during creation\.  
+*Required*: No  
+*Type*: List of [LaunchTemplateTagSpecification](aws-properties-ec2-launchtemplate-launchtemplatetagspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-ec2-launchtemplate-return-values"></a>
 

@@ -108,11 +108,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-trafficmirrorsession--examples"></a>
 
-### Create a Traffic Mirror Session<a name="aws-resource-ec2-trafficmirrorsession--examples--Create_a_Traffic_Mirror_Session"></a>
+### Create a traffic mirror session<a name="aws-resource-ec2-trafficmirrorsession--examples--Create_a_traffic_mirror_session"></a>
 
 This is a traffic mirror session that mirrors the first 100 bytes in each packet\.
 
-#### JSON<a name="aws-resource-ec2-trafficmirrorsession--examples--Create_a_Traffic_Mirror_Session--json"></a>
+#### JSON<a name="aws-resource-ec2-trafficmirrorsession--examples--Create_a_traffic_mirror_session--json"></a>
 
 ```
 {
@@ -137,7 +137,7 @@ This is a traffic mirror session that mirrors the first 100 bytes in each packet
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-trafficmirrorsession--examples--Create_a_Traffic_Mirror_Session--yaml"></a>
+#### YAML<a name="aws-resource-ec2-trafficmirrorsession--examples--Create_a_traffic_mirror_session--yaml"></a>
 
 ```
 SampleTrafficMirrorSession:
@@ -156,6 +156,6 @@ SampleTrafficMirrorSession:
 ```
 
 ## See also<a name="aws-resource-ec2-trafficmirrorsession--seealso"></a>
-+ [Traffic Mirror Sessions](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-how-it-works.html#traffic-mirroring-sessions) in *Traffic Mirroring*
++ [Traffic mirror sessions](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-sessions.html) in *Traffic Mirroring*
 + [CreateTrafficMirrorSession](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTrafficMirrorSession.html) in the *Amazon EC2 API Reference*
 

@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ContainerArguments](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-containerarguments)" : [ String, ... ],
   "[ContainerEntrypoint](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-containerentrypoint)" : [ String, ... ],
-  "[Environment](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-environment)" : Environment,
+  "[Environment](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-environment)" : {Key : Value, ...},
   "[ImageUri](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-imageuri)" : String,
   "[PostAnalyticsProcessorSourceUri](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-postanalyticsprocessorsourceuri)" : String,
   "[RecordPreprocessorSourceUri](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-recordpreprocessorsourceuri)" : String
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ContainerEntrypoint](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-containerentrypoint): 
     - String
   [Environment](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-environment): 
-    Environment
+    Key : Value
   [ImageUri](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-imageuri): String
   [PostAnalyticsProcessorSourceUri](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-postanalyticsprocessorsourceuri): String
   [RecordPreprocessorSourceUri](#cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-recordpreprocessorsourceuri): String
@@ -52,7 +52,7 @@ The entrypoint for a container used to run a monitoring job\.
 `Environment`  <a name="cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-environment"></a>
 Sets the environment variables in the container that the monitoring job runs\.  
 *Required*: No  
-*Type*: [Environment](aws-properties-sagemaker-dataqualityjobdefinition-environment.md)  
+*Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ImageUri`  <a name="cfn-sagemaker-dataqualityjobdefinition-dataqualityappspecification-imageuri"></a>

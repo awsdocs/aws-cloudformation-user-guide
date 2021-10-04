@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AttachmentFieldMappings](#cfn-kendra-datasource-confluenceattachmentconfiguration-attachmentfieldmappings)" : ConfluenceAttachmentFieldMappingsList,
+  "[AttachmentFieldMappings](#cfn-kendra-datasource-confluenceattachmentconfiguration-attachmentfieldmappings)" : [ ConfluenceAttachmentToIndexFieldMapping, ... ],
   "[CrawlAttachments](#cfn-kendra-datasource-confluenceattachmentconfiguration-crawlattachments)" : Boolean
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AttachmentFieldMappings](#cfn-kendra-datasource-confluenceattachmentconfiguration-attachmentfieldmappings): 
-    ConfluenceAttachmentFieldMappingsList
+    - ConfluenceAttachmentToIndexFieldMapping
   [CrawlAttachments](#cfn-kendra-datasource-confluenceattachmentconfiguration-crawlattachments): Boolean
 ```
 
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Defines how attachment metadata fields should be mapped to index fields\. Before you can map a field, you must first create an index field with a matching type using the console or the `UpdateIndex` operation\.  
 If you specify the `AttachentFieldMappings` parameter, you must specify at least one field mapping\.  
 *Required*: No  
-*Type*: [ConfluenceAttachmentFieldMappingsList](aws-properties-kendra-datasource-confluenceattachmentfieldmappingslist.md)  
+*Type*: List of [ConfluenceAttachmentToIndexFieldMapping](aws-properties-kendra-datasource-confluenceattachmenttoindexfieldmapping.md)  
 *Maximum*: `11`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

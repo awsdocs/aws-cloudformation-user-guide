@@ -51,9 +51,9 @@ Properties:
 ## Properties<a name="aws-resource-datasync-agent-properties"></a>
 
 `ActivationKey`  <a name="cfn-datasync-agent-activationkey"></a>
-Your agent activation key\. You can get the activation key either by sending an HTTP GET request with redirects that enable you to get the agent IP address \(port 80\)\. Alternatively, you can get it from the AWS DataSync console\.  
+Your agent activation key\. You can get the activation key either by sending an HTTP GET request with redirects that enable you to get the agent IP address \(port 80\)\. Alternatively, you can get it from the DataSync console\.  
 The redirect URL returned in the response provides you the activation key for your agent in the query string parameter `activationKey`\. It might also include other activation\-related parameters; however, these are merely defaults\. The arguments you pass to this API call determine the actual configuration of your agent\.  
-For more information, see [Activating an Agent](https://docs.aws.amazon.com/datasync/latest/userguide/working-with-agents.html#activating-agent) in the *AWS DataSync User Guide\.*   
+For more information, see [Creating and activating an agent](https://docs.aws.amazon.com/datasync/latest/userguide/activating-agent.html) in the * AWS DataSync User Guide\.*   
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `29`  
@@ -70,7 +70,8 @@ The name you configured for your agent\. This value is a text reference that is 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupArns`  <a name="cfn-datasync-agent-securitygrouparns"></a>
-The ARNs of the security groups used to protect your data transfer task subnets\. See CreateAgentRequest$SubnetArns\.  
+The ARNs of the security groups used to protect your data transfer task subnets\. See [SecurityGroupArns](https://docs.aws.amazon.com/datasync/latest/userguide/API_Ec2Config.html#DataSync-Type-Ec2Config-SecurityGroupArns)\.  
+*Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):ec2:[a-z\-0-9]*:[0-9]{12}:security-group/.*$`  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `1`  
@@ -93,7 +94,7 @@ Valid characters for key and value are letters, spaces, and numbers representabl
 
 `VpcEndpointId`  <a name="cfn-datasync-agent-vpcendpointid"></a>
 The ID of the VPC \(virtual private cloud\) endpoint that the agent has access to\. This is the client\-side VPC endpoint, also called a PrivateLink\. If you don't have a PrivateLink VPC endpoint, see [Creating a VPC Endpoint Service Configuration](https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-service.html#create-endpoint-service) in the *Amazon VPC User Guide*\.  
-For more information about activating your agent in a private network based on Amazon VPC, see [Using AWS DataSync in a Virtual Private Cloud](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-in-vpc.html)in the *AWS DataSync User Guide\.*  
+For more information about activating your agent in a private network based on Amazon VPC, see [Using AWS DataSync in a Virtual Private Cloud](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-in-vpc.html) in the *AWS DataSync User Guide\.*  
 VPC endpoint ID looks like this: `vpce-01234d5aff67890e1`\.  
 *Required*: No  
 *Type*: String  

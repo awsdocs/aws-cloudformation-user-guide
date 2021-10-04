@@ -32,7 +32,7 @@ The ID for the customer\-provided KMS key\.
 
 `MLUserDataEncryptionMode`  <a name="cfn-glue-mltransform-transformencryption-mluserdataencryption-mluserdataencryptionmode"></a>
 The encryption mode applied to user data\. Valid values are:  
-+ DISABLED: encryption is disabled
++ DISABLED: encryption is disabled\.
 + SSEKMS: use of server\-side encryption with AWS Key Management Service \(SSE\-KMS\) for user data stored in Amazon S3\.
 *Required*: Yes  
 *Type*: String  

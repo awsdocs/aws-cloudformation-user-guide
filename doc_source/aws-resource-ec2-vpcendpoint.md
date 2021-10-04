@@ -1,8 +1,8 @@
 # AWS::EC2::VPCEndpoint<a name="aws-resource-ec2-vpcendpoint"></a>
 
-Specifies a VPC endpoint for a service\. An endpoint enables you to create a private connection between your VPC and the service\. The service may be provided by AWS, an AWS Marketplace Partner, or another AWS account\. For more information, see [VPC Endpoints](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) in the *Amazon Virtual Private Cloud User Guide*\.
+Specifies a VPC endpoint for a service\. An endpoint enables you to create a private connection between your VPC and the service\. The service may be provided by AWS, an AWS Marketplace Partner, or another AWS account\. For more information, see [VPC Endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/vpc-endpoints.html) in the *AWS PrivateLink User Guide*\.
 
-A `gateway` endpoint serves as a target for a route in your route table for traffic destined for the AWS service\. You can specify an endpoint policy to attach to the endpoint, which will control access to the service from your VPC\. You can also specify the VPC route tables that use the endpoint\.
+A `gateway` endpoint serves as a target for a route in your route table for traffic destined for the AWS service\. You can specify an endpoint policy to attach to the endpoint, which controls access to the service from your VPC\. You can also specify the VPC route tables that use the endpoint\.
 
 For information about connectivity when you use a gateway endpoint to connect to an Amazon S3 bucket from an EC2 instance, see [Why can’t I connect to an S3 bucket using a gateway VPC endpoint](http://aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint)\.
 
@@ -53,7 +53,8 @@ Properties:
 ## Properties<a name="aws-resource-ec2-vpcendpoint-properties"></a>
 
 `PolicyDocument`  <a name="cfn-ec2-vpcendpoint-policydocument"></a>
-\(Interface and gateway endpoints\) A policy to attach to the endpoint that controls access to the service\. The policy must be in valid JSON format\. If this parameter is not specified, we attach a default policy that allows full access to the service\.  
+\(Interface and gateway endpoints\) A policy to attach to the endpoint that controls access to the service\. If this parameter is not specified, we attach a default policy that allows full access to the service\.  
+For CloudFormation templates in YAML, you can provide the policy in JSON or YAML format\. AWS CloudFormation converts YAML policies to JSON format before calling the API to create or modify the VPC endpoint\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -136,33 +137,35 @@ If you update the `PrivateDnsEnabled` or `SubnetIds` properties, the DNS entries
 
 
 
-### VPC Endpoint<a name="aws-resource-ec2-vpcendpoint--examples--VPC_Endpoint"></a>
+### VPC endpoint<a name="aws-resource-ec2-vpcendpoint--examples--VPC_endpoint"></a>
 
 The following example specifies a VPC endpoint that allows only the s3:GetObject action on the examplebucket bucket\. Traffic to S3 within subnets that are associated with the routetableA and routetableB route tables is automatically routed through the VPC endpoint\. 
 
-#### JSON<a name="aws-resource-ec2-vpcendpoint--examples--VPC_Endpoint--json"></a>
+#### JSON<a name="aws-resource-ec2-vpcendpoint--examples--VPC_endpoint--json"></a>
 
 ```
-"S3Endpoint" : {
-   "Type" : "AWS::EC2::VPCEndpoint",
-   "Properties" : {
-      "PolicyDocument" : {
-         "Version":"2012-10-17",
-         "Statement":[{
-            "Effect":"Allow",
-            "Principal": "*",
-            "Action":["s3:GetObject"],
-            "Resource":["arn:aws:s3:::examplebucket/*"]
-         }]
-   },
-   "RouteTableIds" : [ {"Ref" : "routetableA"}, {"Ref" : "routetableB"} ],
-   "ServiceName" : { "Fn::Sub": "com.amazonaws.${AWS::Region}.s3" },
-   "VpcId" : {"Ref" : "VPCID"}
- }
+{
+   "S3Endpoint": {
+      "Type": "AWS::EC2::VPCEndpoint",
+	  "Properties": {
+         "PolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [{
+               "Effect": "Allow",
+               "Principal": "*",
+               "Action": ["s3:GetObject"],
+               "Resource": ["arn:aws:s3:::examplebucket/*"]
+            }]
+         },
+         "RouteTableIds": [{"Ref": "routetableA"}, {"Ref": "routetableB"}],
+         "ServiceName": {"Fn::Sub": "com.amazonaws.${AWS::Region}.s3"},
+         "VpcId": {"Ref": "VPCID"}
+      }
+   }
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-vpcendpoint--examples--VPC_Endpoint--yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpcendpoint--examples--VPC_endpoint--yaml"></a>
 
 ```
 S3Endpoint:

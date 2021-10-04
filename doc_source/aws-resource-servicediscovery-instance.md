@@ -67,15 +67,16 @@ This value is required if you specified settings for an `SRV` record or a RouteÂ
 
 `InstanceId`  <a name="cfn-servicediscovery-instance-instanceid"></a>
 An identifier that you want to associate with the instance\. Note the following:  
-+ If the service that is specified by `ServiceId` includes settings for an `SRV` record, the value of `InstanceId` is automatically included as part of the value for the `SRV` record\. For more information, see [DnsRecord > Type](https://docs.aws.amazon.com/cloud-map/latest/api/API_DnsRecord.html#cloudmap-Type-DnsRecord-Type)\.
++ If the service that's specified by `ServiceId` includes settings for an `SRV` record, the value of `InstanceId` is automatically included as part of the value for the `SRV` record\. For more information, see [DnsRecord > Type](https://docs.aws.amazon.com/cloud-map/latest/api/API_DnsRecord.html#cloudmap-Type-DnsRecord-Type)\.
 + You can use this value to update an existing instance\.
-+ To register a new instance, you must specify a value that is unique among instances that you register by using the same service\. 
-+ If you specify an existing `InstanceId` and `ServiceId`, AWS Cloud Map updates the existing DNS records\. If there's also an existing health check, AWS Cloud Map deletes the old health check and creates a new one\. 
++ To register a new instance, you must specify a value that's unique among instances that you register by using the same service\. 
++ If you specify an existing `InstanceId` and `ServiceId`, AWS Cloud Map updates the existing DNS records, if any\. If there's also an existing health check, AWS Cloud Map deletes the old health check and creates a new one\. 
 **Note**  
 The health check isn't deleted immediately, so it will still appear for a while if you submit a `ListHealthChecks` request, for example\.
 *Required*: No  
 *Type*: String  
 *Maximum*: `64`  
+*Pattern*: `^[0-9a-zA-Z_/:.@-]+$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceId`  <a name="cfn-servicediscovery-instance-serviceid"></a>

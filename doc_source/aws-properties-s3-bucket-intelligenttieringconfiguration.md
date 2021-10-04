@@ -60,7 +60,8 @@ A container for a key\-value pair\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tierings`  <a name="cfn-s3-bucket-intelligenttieringconfiguration-tierings"></a>
-Specifies the S3 Intelligent\-Tiering storage class tier of the configuration\.  
+Specifies a list of S3 Intelligent\-Tiering storage class tiers in the configuration\. At least one tier must be defined in the list\. At most, you can specify two tiers in the list, one for each available AccessTier: `ARCHIVE_ACCESS` and `DEEP_ARCHIVE_ACCESS`\.  
+You only need Intelligent Tiering Configuration enabled on a bucket if you want to automatically move objects stored in the Intelligent\-Tiering storage class to Archive Access or Deep Archive Access tiers\.
 *Required*: Yes  
 *Type*: List of [Tiering](aws-properties-s3-bucket-tiering.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -2,7 +2,7 @@
 
 Associates an Elastic IP address with an instance or a network interface\. Before you can use an Elastic IP address, you must allocate it to your account\.
 
-An Elastic IP address is for use in either the EC2\-Classic platform or in a VPC\. For more information, see [Elastic IP Addresses](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+An Elastic IP address is for use in either the EC2\-Classic platform or in a VPC\. For more information, see [Elastic IP Addresses](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) in the *Amazon EC2 User Guide*\.
 
 \[EC2\-Classic, VPC in an EC2\-VPC\-only account\] If the Elastic IP address is already associated with a different instance, it is disassociated from that instance and associated with the specified instance\. If you associate an Elastic IP address with an instance that has an existing Elastic IP address, the existing address is disassociated from the instance, but remains allocated to your account\.
 
@@ -82,13 +82,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-properties-ec2-eip-association--examples"></a>
 
-### Associating an Elastic IP address to an instance<a name="aws-properties-ec2-eip-association--examples--Associating_an_Elastic_IP_address_to_an_instance"></a>
+### Associate an Elastic IP address to an instance<a name="aws-properties-ec2-eip-association--examples--Associate_an_Elastic_IP_address_to_an_instance"></a>
 
 The following example creates an instance with two elastic network interfaces \(ENI\)\. The example assumes that you have an existing VPC\.
 
 For additional examples, see [Assigning an Amazon EC2 Elastic IP Using AWS::EC2::EIP Snippet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2.html#scenario-ec2-eip)\.
 
-#### JSON<a name="aws-properties-ec2-eip-association--examples--Associating_an_Elastic_IP_address_to_an_instance--json"></a>
+#### JSON<a name="aws-properties-ec2-eip-association--examples--Associate_an_Elastic_IP_address_to_an_instance--json"></a>
 
 ```
   "Resources" : {
@@ -123,7 +123,7 @@ For additional examples, see [Assigning an Amazon EC2 Elastic IP Using AWS::EC2:
         "Properties" : {
             "VpcId" : { "Ref" : "VpcId" },
             "GroupDescription" : "Enable SSH access via port 22",
-            "SecurityGroupIngress" : [ { "IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : "0.0.0.0/0" } ]
+            "SecurityGroupIngress" : [ { "IpProtocol" : "tcp", "FromPort" : 22, "ToPort" : 22, "CidrIp" : "0.0.0.0/0" } ]
         }
     },
     "WebSecurityGroup" : {

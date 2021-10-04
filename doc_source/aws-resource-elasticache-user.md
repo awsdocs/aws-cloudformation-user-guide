@@ -1,6 +1,6 @@
 # AWS::ElastiCache::User<a name="aws-resource-elasticache-user"></a>
 
-For Redis engine version 6\.x onwards: Creates a Redis user\. For more information, see [Using Role Based Access Control \(RBAC\)](AmazonElastiCache/latest/red-ug/Clusters.RBAC.html)\.
+For Redis engine version 6\.x onwards: Creates a Redis user\. For more information, see [Using Role Based Access Control \(RBAC\)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html)\.
 
 ## Syntax<a name="aws-resource-elasticache-user-syntax"></a>
 
@@ -47,10 +47,12 @@ Access permissions string used for this user\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Engine`  <a name="cfn-elasticache-user-engine"></a>
+
 The current supported value is `redis`\.
 *Required*: Yes
 *Type*: String
 *Pattern*: `[a-zA-Z]*`
+
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NoPasswordRequired`  <a name="cfn-elasticache-user-nopasswordrequired"></a>

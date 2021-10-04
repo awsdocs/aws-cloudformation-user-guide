@@ -13,6 +13,12 @@ When you are finished with the AWS CloudFormation StackSets Getting Started walk
 
 ## Delete a stack set using the AWS CLI<a name="stacksets-delete-set-cli"></a>
 
+When acting as a delegated administrator, you must set the `--call-as` parameter to `DELEGATED_ADMIN` each time you run a StackSets command\.
+
+```
+--call-as DELEGATED_ADMIN
+```
+
 1. Run the following command\. When you are prompted to confirm, type **y**, and then press **Enter**\.
 
    ```
@@ -27,7 +33,13 @@ When you are finished with the AWS CloudFormation StackSets Getting Started walk
 
 ## Delete service roles \(optional\)<a name="stacksets-delete-roles"></a>
 
-Delete the service roles that StackSets required for stack set creation\. For self\-managed stack sets, the roles you created as part of the [Prerequisites for stack set operations](stacksets-prereqs.md) for the walkthrough in this guide are named **AWSCloudFormationStackSetAdministrationRole** in the administrator account, and **AwsCloudFormationStackSetExecutionRole** in each target account\. For more information about deleting roles, see [Deleting roles and instance profiles](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_delete.html) in the *IAM User Guide*\.
+Delete the service roles that StackSets required for stack set creation\.
+
+**For self\-managed stack sets**, the roles you created as part of the [Prerequisites for stack set operations](stacksets-prereqs.md) for the walkthrough in this guide are named `AWSCloudFormationStackSetAdministrationRole` in the administrator account, and `AwsCloudFormationStackSetExecutionRole` in each target account\.
+
+**For service\-managed stack sets**, the roles that were automatically created by StackSets as part of the [Prerequisites for stack set operations](stacksets-prereqs.md) for the walkthrough in this guide have the suffix `CloudFormationStackSetsOrgAdmin` in the organization management account, and `CloudFormationStackSetsOrgMember` in each target account\.
+
+For more information about deleting roles, see [Deleting roles and instance profiles](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_manage_delete.html) in the *IAM User Guide*\. 
 
 **To delete a service role by using the AWS Management Console**
 

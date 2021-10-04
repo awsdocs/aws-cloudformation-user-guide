@@ -6,7 +6,7 @@ Only capacity providers that are already associated with a cluster and have an `
 
 If specifying a capacity provider that uses an Auto Scaling group, the capacity provider must already be created\. New Auto Scaling group capacity providers can be created with the `CreateCapacityProvider` API operation\.
 
-To use a AWS Fargate capacity provider, specify either the `FARGATE` or `FARGATE_SPOT` capacity providers\. The AWS Fargate capacity providers are available to all accounts and only need to be associated with a cluster to be used in a capacity provider strategy\.
+To use an AWS Fargate capacity provider, specify either the `FARGATE` or `FARGATE_SPOT` capacity providers\. The AWS Fargate capacity providers are available to all accounts and only need to be associated with a cluster to be used in a capacity provider strategy\.
 
 ## Syntax<a name="aws-properties-ecs-service-capacityproviderstrategyitem-syntax"></a>
 

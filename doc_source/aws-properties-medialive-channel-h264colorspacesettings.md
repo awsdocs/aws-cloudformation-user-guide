@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel H264ColorSpaceSettings<a name="aws-properties-medialive-channel-h264colorspacesettings"></a>
 
-H264 Color Space Settings
+Settings for configuring color space in an H264 video encode\.
+
+The parent of this entity is H264Settings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-h264colorspacesettings-syntax"></a>
 
@@ -36,13 +38,13 @@ Not currently supported by AWS CloudFormation\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Rec601Settings`  <a name="cfn-medialive-channel-h264colorspacesettings-rec601settings"></a>
-Not currently supported by AWS CloudFormation\.  
+Settings to configure the handling of Rec601 color space\.  
 *Required*: No  
 *Type*: [Rec601Settings](aws-properties-medialive-channel-rec601settings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Rec709Settings`  <a name="cfn-medialive-channel-h264colorspacesettings-rec709settings"></a>
-Not currently supported by AWS CloudFormation\.  
+Settings to configure the handling of Rec709 color space\.  
 *Required*: No  
 *Type*: [Rec709Settings](aws-properties-medialive-channel-rec709settings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

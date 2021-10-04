@@ -70,7 +70,7 @@ If the job runs on Fargate resources, then you must not specify `nodeProperties`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-batch-jobdefinition-parameters"></a>
-Default parameters or parameter substitution placeholders that are set in the job definition\. Parameters are specified as a key\-value pair mapping\. Parameters in a `SubmitJob` request override any corresponding parameter defaults from the job definition\. For more information about specifying parameters, see [Job Definition Parameters](https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html) in the *AWS Batch User Guide*\.  
+Default parameters or parameter substitution placeholders that are set in the job definition\. Parameters are specified as a key\-value pair mapping\. Parameters in a `SubmitJob` request override any corresponding parameter defaults from the job definition\. For more information about specifying parameters, see [Job Definition Parameters](https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html) in the * AWS Batch User Guide*\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -106,7 +106,7 @@ The timeout configuration for jobs that are submitted with this job definition\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-batch-jobdefinition-type"></a>
-The type of job definition\. For more information about multi\-node parallel jobs, see [Creating a multi\-node parallel job definition](https://docs.aws.amazon.com/batch/latest/userguide/multi-node-job-def.html) in the *AWS Batch User Guide*\.  
+The type of job definition\. For more information about multi\-node parallel jobs, see [Creating a multi\-node parallel job definition](https://docs.aws.amazon.com/batch/latest/userguide/multi-node-job-def.html) in the * AWS Batch User Guide*\.  
 If the job is run on Fargate resources, then `multinode` isn't supported\.
 *Required*: Yes  
 *Type*: String  

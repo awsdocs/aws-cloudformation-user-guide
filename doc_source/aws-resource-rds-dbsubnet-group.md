@@ -2,7 +2,7 @@
 
 The `AWS::RDS::DBSubnetGroup` resource creates a database subnet group\. Subnet groups must contain at least two subnets in two different Availability Zones in the same region\. 
 
-For more information, see [ Working with DB Subnet Groups](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html#USER_VPC.Subnets) in the *Amazon RDS User Guide*\.
+For more information, see [Working with DB subnet groups](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html#USER_VPC.Subnets) in the *Amazon RDS User Guide*\.
 
 ## Syntax<a name="aws-resource-rds-dbsubnet-group-syntax"></a>
 
@@ -38,13 +38,13 @@ Properties:
 ## Properties<a name="aws-resource-rds-dbsubnet-group-properties"></a>
 
 `DBSubnetGroupDescription`  <a name="cfn-rds-dbsubnetgroup-dbsubnetgroupdescription"></a>
-The description for the DB Subnet Group\.  
+The description for the DB subnet group\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBSubnetGroupName`  <a name="cfn-rds-dbsubnetgroup-dbsubnetgroupname"></a>
-The name for the DB Subnet Group\. This value is stored as a lowercase string\.  
+The name for the DB subnet group\. This value is stored as a lowercase string\.  
 Constraints: Must contain no more than 255 lowercase alphanumeric characters or hyphens\. Must not be "Default"\.  
 Example: `mysubnetgroup`   
 *Required*: No  
@@ -52,7 +52,7 @@ Example: `mysubnetgroup`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-rds-dbsubnetgroup-subnetids"></a>
-The EC2 Subnet IDs for the DB Subnet Group\.  
+The EC2 Subnet IDs for the DB subnet group\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

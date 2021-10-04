@@ -38,7 +38,7 @@ An identity pool ID in the format `REGION:GUID`\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleMappings`  <a name="cfn-cognito-identitypoolroleattachment-rolemappings"></a>
-How users for a specific identity provider are mapped to roles\. This is a string to the `RoleMapping` object map\. The string identifies the identity provider\. For example: "graph\.facebook\.com" or "cognito\-idp\.us\-east\-1\.amazonaws\.com/us\-east\-1\_abcdefghi:app\_client\_id"\.  
+How users for a specific identity provider are mapped to roles\. This is a string to the `RoleMapping` object map\. The string identifies the identity provider\. For example: `graph.facebook.com` or `cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id`\.  
 If the `IdentityProvider` field isn't provided in this object, the string is used as the identity provider name\.  
 For more information, see the [RoleMapping property](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html)\.  
 *Required*: No  

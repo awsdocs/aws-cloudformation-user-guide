@@ -60,5 +60,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `BackupPlanId`  <a name="BackupPlanId-fn::getatt"></a>
 Uniquely identifies a backup plan\.
 
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 `SelectionId`  <a name="SelectionId-fn::getatt"></a>
 Uniquely identifies a request to assign a set of resources to a backup plan\.

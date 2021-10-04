@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
-*Pattern*: `^(S|s)3:\/\/[a-zA-Z0-9-_\/.]+$`  
+*Pattern*: `^(S|s)3:\/\/[a-zA-Z0-9\-\.\(\)\'\*\_\!\/]+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DestinationType`  <a name="cfn-auditmanager-assessment-assessmentreportsdestination-destinationtype"></a>

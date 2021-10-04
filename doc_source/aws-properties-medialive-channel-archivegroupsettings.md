@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[ArchiveCdnSettings](#cfn-medialive-channel-archivegroupsettings-archivecdnsettings)" : ArchiveCdnSettings,
   "[Destination](#cfn-medialive-channel-archivegroupsettings-destination)" : OutputLocationRef,
   "[RolloverInterval](#cfn-medialive-channel-archivegroupsettings-rolloverinterval)" : Integer
 }
@@ -20,12 +21,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-medialive-channel-archivegroupsettings-syntax.yaml"></a>
 
 ```
+  [ArchiveCdnSettings](#cfn-medialive-channel-archivegroupsettings-archivecdnsettings): 
+    ArchiveCdnSettings
   [Destination](#cfn-medialive-channel-archivegroupsettings-destination): 
     OutputLocationRef
   [RolloverInterval](#cfn-medialive-channel-archivegroupsettings-rolloverinterval): Integer
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-archivegroupsettings-properties"></a>
+
+`ArchiveCdnSettings`  <a name="cfn-medialive-channel-archivegroupsettings-archivecdnsettings"></a>
+Settings to configure the destination of an Archive output\.  
+*Required*: No  
+*Type*: [ArchiveCdnSettings](aws-properties-medialive-channel-archivecdnsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Destination`  <a name="cfn-medialive-channel-archivegroupsettings-destination"></a>
 A directory and base file name where archive files should be written\.  

@@ -47,7 +47,7 @@ Name of the EC2 Security Group to include in the authorization\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EC2SecurityGroupOwnerId`  <a name="cfn-elasticache-securitygroupingress-ec2securitygroupownerid"></a>
-Specifies the AWS Account ID of the owner of the EC2 security group specified in the EC2SecurityGroupName property\. The AWS access key ID is not an acceptable value\.   
+Specifies the Amazon Account ID of the owner of the EC2 security group specified in the EC2SecurityGroupName property\. The Amazon access key ID is not an acceptable value\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

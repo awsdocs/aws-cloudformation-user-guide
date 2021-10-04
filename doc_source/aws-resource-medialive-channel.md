@@ -23,7 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LogLevel](#cfn-medialive-channel-loglevel)" : String,
       "[Name](#cfn-medialive-channel-name)" : String,
       "[RoleArn](#cfn-medialive-channel-rolearn)" : String,
-      "[Tags](#cfn-medialive-channel-tags)" : Json
+      "[Tags](#cfn-medialive-channel-tags)" : Json,
+      "[Vpc](#cfn-medialive-channel-vpc)" : VpcOutputSettings
     }
 }
 ```
@@ -48,12 +49,14 @@ Properties:
   [Name](#cfn-medialive-channel-name): String
   [RoleArn](#cfn-medialive-channel-rolearn): String
   [Tags](#cfn-medialive-channel-tags): Json
+  [Vpc](#cfn-medialive-channel-vpc): 
+    VpcOutputSettings
 ```
 
 ## Properties<a name="aws-resource-medialive-channel-properties"></a>
 
 `CdiInputSpecification`  <a name="cfn-medialive-channel-cdiinputspecification"></a>
-Specification of CDI inputs for this channel  
+Specification of CDI inputs for this channel\.  
 *Required*: No  
 *Type*: [CdiInputSpecification](aws-properties-medialive-channel-cdiinputspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -111,6 +114,12 @@ A collection of tags for this channel\. Each tag is a key\-value pair\.
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Vpc`  <a name="cfn-medialive-channel-vpc"></a>
+Settings to enable VPC mode in the channel, so that the endpoints for all outputs are in your VPC\.  
+*Required*: No  
+*Type*: [VpcOutputSettings](aws-properties-medialive-channel-vpcoutputsettings.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-medialive-channel-return-values"></a>
 

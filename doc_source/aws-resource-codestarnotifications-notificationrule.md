@@ -1,6 +1,6 @@
 # AWS::CodeStarNotifications::NotificationRule<a name="aws-resource-codestarnotifications-notificationrule"></a>
 
-Creates a notification rule for a resource\. The rule specifies the events you want notifications about and the targets \(such as Amazon SNS topics or AWS Chatbot clients configured for Slack\) where you want to receive them\.
+Creates a notification rule for a resource\. The rule specifies the events you want notifications about and the targets \(such as AWS Chatbot topics or AWS Chatbot clients configured for Slack\) where you want to receive them\.
 
 ## Syntax<a name="aws-resource-codestarnotifications-notificationrule-syntax"></a>
 
@@ -42,7 +42,7 @@ Properties:
 ## Properties<a name="aws-resource-codestarnotifications-notificationrule-properties"></a>
 
 `DetailType`  <a name="cfn-codestarnotifications-notificationrule-detailtype"></a>
-The level of detail to include in the notifications for this resource\. BASIC will include only the contents of the event as it would appear in AWS CloudWatch\. FULL will include any supplemental information provided by AWS CodeStar Notifications and/or the service for the resource for which the notification is created\.  
+The level of detail to include in the notifications for this resource\. `BASIC` will include only the contents of the event as it would appear in Amazon CloudWatch\. `FULL` will include any supplemental information provided by AWS CodeStar Notifications and/or the service for the resource for which the notification is created\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `BASIC | FULL`  
@@ -71,20 +71,20 @@ The Amazon Resource Name \(ARN\) of the resource to associate with the notificat
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Status`  <a name="cfn-codestarnotifications-notificationrule-status"></a>
-The status of the notification rule\. The default value is ENABLED\. If the status is set to DISABLED, notifications aren't sent for the notification rule\.  
+The status of the notification rule\. The default value is `ENABLED`\. If the status is set to `DISABLED`, notifications aren't sent for the notification rule\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-codestarnotifications-notificationrule-tags"></a>
-A list of tags to apply to this notification rule\. Key names cannot start with "aws"\.   
+A list of tags to apply to this notification rule\. Key names cannot start with "`aws`"\.   
 *Required*: No  
 *Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Targets`  <a name="cfn-codestarnotifications-notificationrule-targets"></a>
-A list of Amazon Resource Names \(ARNs\) of Amazon SNS topics and AWS Chatbot clients to associate with the notification rule\.  
+A list of Amazon Resource Names \(ARNs\) of AWS Chatbot topics and AWS Chatbot clients to associate with the notification rule\.  
 *Required*: Yes  
 *Type*: List of [Target](aws-properties-codestarnotifications-notificationrule-target.md)  
 *Maximum*: `10`  
@@ -95,6 +95,13 @@ A list of Amazon Resource Names \(ARNs\) of Amazon SNS topics and AWS Chatbot cl
 ### Ref<a name="aws-resource-codestarnotifications-notificationrule-return-values-ref"></a>
 
 When the logical ID of this resource is provided to the Ref intrinsic function, `Ref` returns the notification rule ARN\. 
+
+### Fn::GetAtt<a name="aws-resource-codestarnotifications-notificationrule-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-codestarnotifications-notificationrule-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-codestarnotifications-notificationrule--examples"></a>
 

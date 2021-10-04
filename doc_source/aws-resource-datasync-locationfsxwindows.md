@@ -67,9 +67,10 @@ The password of the user who has the permissions to access files and folders in 
 
 `SecurityGroupArns`  <a name="cfn-datasync-locationfsxwindows-securitygrouparns"></a>
 The Amazon Resource Names \(ARNs\) of the security groups that are to use to configure the FSx for Windows File Server file system\.  
+*Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):ec2:[a-z\-0-9]*:[0-9]{12}:security-group/.*$`  
+*Length Constraints*: Maximum length of 128\.  
 *Required*: Yes  
 *Type*: List of String  
-*Maximum*: `5`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Subdirectory`  <a name="cfn-datasync-locationfsxwindows-subdirectory"></a>
@@ -89,6 +90,7 @@ The key\-value pair that represents a tag that you want to add to the resource\.
 
 `User`  <a name="cfn-datasync-locationfsxwindows-user"></a>
 The user who has the permissions to access files and folders in the FSx for Windows File Server file system\.  
+For information about choosing a user name that ensures sufficient permissions to files, folders, and metadata, see [user](create-fsx-location.html#FSxWuser)\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `104`  

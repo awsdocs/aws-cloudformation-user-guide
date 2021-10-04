@@ -27,4 +27,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The strategy to use when Amazon EC2 emits a signal that your Spot Instance is at an elevated risk of being interrupted\.  
 *Required*: No  
 *Type*: [SpotCapacityRebalance](aws-properties-ec2-spotfleet-spotcapacityrebalance.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

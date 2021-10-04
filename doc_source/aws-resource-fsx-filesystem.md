@@ -51,20 +51,20 @@ Properties:
 ## Properties<a name="aws-resource-fsx-filesystem-properties"></a>
 
 `BackupId`  <a name="cfn-fsx-filesystem-backupid"></a>
-The ID of the backup\. Specifies the backup to use if you're creating a file system from an existing backup\.  
+The ID of the source backup\. Specifies the backup you are copying\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FileSystemType`  <a name="cfn-fsx-filesystem-filesystemtype"></a>
-The type of Amazon FSx file system, either `LUSTRE` or `WINDOWS`\.  
+The type of Amazon FSx file system, which can be `LUSTRE` or `WINDOWS`\.  
+*Allowed Values*: `LUSTRE` \| `WINDOWS`  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `LUSTRE | WINDOWS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-fsx-filesystem-kmskeyid"></a>
-The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the file system's data for Amazon FSx for Windows File Server file systems and persistent Amazon FSx for Lustre file systems at rest\. In either case, if not specified, the Amazon FSx managed key is used\. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using Amazon FSx managed keys\. For more information, see [Encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) in the *AWS Key Management Service API Reference*\.  
+The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the file system's data for Amazon FSx for Windows File Server file systems and persistent Amazon FSx for Lustre file systems at rest\. If not specified, the Amazon FSx managed key is used\. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using Amazon FSx managed keys\. For more information, see [Encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) in the * AWS Key Management Service API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -108,7 +108,7 @@ Sets the storage type for the file system you're creating\. Valid values are `SS
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-fsx-filesystem-subnetids"></a>
-Specifies the IDs of the subnets that the file system will be accessible from\. For Windows `MULTI_AZ_1` file system deployment types, provide exactly two subnet IDs, one for the preferred file server and one for the standby file server\. You specify one of these subnets as the preferred subnet using the `WindowsConfiguration > PreferredSubnetID` property\.  
+Specifies the IDs of the subnets that the file system will be accessible from\. For the Windows `MULTI_AZ_1` file system deployment type, provide exactly two subnet IDs, one for the preferred file server and one for the standby file server\. You specify one of these subnets as the preferred subnet using the `WindowsConfiguration > PreferredSubnetID` property\. For more information, see [ Availability and durability: Single\-AZ and Multi\-AZ file systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html) in the *Amazon FSx for Windows User Guide*\.  
 For Windows `SINGLE_AZ_1` and `SINGLE_AZ_2` file system deployment types and Lustre file systems, provide exactly one subnet ID\. The file server is launched in that subnet's Availability Zone\.  
 *Required*: Yes  
 *Type*: List of String  
@@ -149,6 +149,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 #### <a name="aws-resource-fsx-filesystem-return-values-fn--getatt-fn--getatt"></a>
 
+`DNSName`  <a name="DNSName-fn::getatt"></a>
+Use the DNSName value to access the DNS name of your Amazon FSx file system\. The DNS name identifies the file system\.
+
 `LustreMountName`  <a name="LustreMountName-fn::getatt"></a>
 Use the LustreMountName value when mounting an Amazon FSx for Lustre file system\. For SCRATCH\_1 deployment types, this value is always "fsx"\. For SCRATCH\_2 and PERSISTENT\_1 deployment types, this value is a string that is unique within an AWS Region\. For more information, see [Mounting from an Amazon EC2 Instance](https://docs.aws.amazon.com/fsx/latest/LustreGuide/mounting-ec2-instance.html)\.
 
@@ -187,10 +190,11 @@ The following examples create a 1\.2 TiB persistent Amazon FSx for Lustre file s
                     }
                 ],
                 "LustreConfiguration": {
-                    "AutoImportPolicy" : "NEW",                    
+                    "AutoImportPolicy" : "NEW",               
                     "CopyTagsToBackups" : true,
                     "DeploymentType": "PERSISTENT_1",
                     "PerUnitStorageThroughput": 200,                    
+                    "DataCompressionType": "LZ4",
                     "ImportPath": {
                         "Fn::Join": [
                             "",
@@ -247,6 +251,7 @@ Resources:
         CopyTagsToBackups: true
         DeploymentType: "PERSISTENT_1"
         PerUnitStorageThroughput: 200
+        DataCompressionType: "LZ4"
         ImportPath: !Join ["", ["s3://", !ImportValue LustreCFNS3ImportBucketName]]
         ExportPath: !Join ["", ["s3://", !ImportValue LustreCFNS3ExportPath]]
         WeeklyMaintenanceStartTime: "2:20:30"
@@ -257,7 +262,7 @@ Outputs:
 
 ### Create an Amazon FSx for Windows File Server File System in a Self\-managed Active Directory<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_a_Self-managed_Active_Directory"></a>
 
-The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system joined to a Self\-managed active directory\.
+The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system joined to a self\-managed active directory\.
 
 #### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_a_Self-managed_Active_Directory--json"></a>
 
@@ -291,13 +296,16 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
                 ],
                 "WindowsConfiguration": {
                     "ThroughputCapacity": 8,
+                    "Aliases": [
+                        "financials.corp.example.com"
+                    ],
                     "WeeklyMaintenanceStartTime": "4:16:30",
                     "DailyAutomaticBackupStartTime": "01:00",
                     "AutomaticBackupRetentionDays": 30,
                     "CopyTagsToBackups": false,
                     "DeploymentType": "MULTI_AZ_1",
                     "PreferredSubnetId": {
-                        "Fn:ImportValue": "MySubnet01"
+                        "Fn::ImportValue": "MySubnet01"
                     },
                     "SelfManagedActiveDirectoryConfiguration": {
                         "DnsIps": [
@@ -368,6 +376,8 @@ Resources:
           Value: windows
       WindowsConfiguration:
         ThroughputCapacity: 8
+        Aliases: 
+            - financials.corp.example.com         
         WeeklyMaintenanceStartTime: '4:16:30'
         DailyAutomaticBackupStartTime: '01:00'
         AutomaticBackupRetentionDays: 30
@@ -396,11 +406,11 @@ Outputs:
     Value: !Ref WindowsSelfManagedADFileSystemWithAllConfigs
 ```
 
-### Create an Amazon FSx for Windows File Server File System in an AWS Managed Active Directory<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an_AWS_Managed_Active_Directory"></a>
+### Create an Amazon FSx for Windows File Server File System in an AWS Managed Active Directory<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an__Managed_Active_Directory"></a>
 
 The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system using HDD storage that is joined to an AWS Managed Active Directory\.
 
-#### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an_AWS_Managed_Active_Directory--json"></a>
+#### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an__Managed_Active_Directory--json"></a>
 
 ```
 {
@@ -435,13 +445,16 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
                         "Fn::ImportValue": "CfnFsxMadDirectoryServiceId"
                     },
                     "ThroughputCapacity": 8,
+                    "Aliases": [
+                        "financials.corp.example.com"
+                    ],
                     "WeeklyMaintenanceStartTime": "4:16:30",
                     "DailyAutomaticBackupStartTime": "01:00",
                     "AutomaticBackupRetentionDays": 90,
                     "CopyTagsToBackups": false,
                     "DeploymentType": "MULTI_AZ_1",
                     "PreferredSubnetId": {
-                        "Fn:ImportValue": "CfnFsxMadSubnet01"
+                        "Fn::ImportValue": "CfnFsxMadSubnet01"
                     }
                 }
             }
@@ -457,7 +470,7 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
 }
 ```
 
-#### YAML<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an_AWS_Managed_Active_Directory--yaml"></a>
+#### YAML<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an__Managed_Active_Directory--yaml"></a>
 
 ```
 Resources:
@@ -478,6 +491,8 @@ Resources:
       WindowsConfiguration:
         ActiveDirectoryId: !ImportValue CfnFsxMadDirectoryServiceId
         ThroughputCapacity: 8
+        Aliases: 
+            - financials.corp.example.com
         WeeklyMaintenanceStartTime: '4:16:30'
         DailyAutomaticBackupStartTime: '01:00'
         AutomaticBackupRetentionDays: 90
@@ -487,4 +502,114 @@ Resources:
 Outputs:
   FileSystemId:
     Value: !Ref WindowsMadFileSystemWithAllConfigs
+```
+
+### Create an Amazon FSx for Windows File Server File System with file access audit event logging enabled<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_with_file_access_audit_event_logging_enabled"></a>
+
+The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system with file access auditing enabled\. Audit event logs are emitted when end users make successful or failed attempts to access files, folders, and file shares on the file system\.
+
+#### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_with_file_access_audit_event_logging_enabled--json"></a>
+
+```
+{
+    "Resources": {
+        "WindowsMadFileSystemWithAllConfigs": {
+            "Type": "Dev::FSx::FileSystem",
+            "Properties": {
+                "FileSystemType": "WINDOWS",
+                "StorageCapacity": 100,
+                "SubnetIds": [
+                    {
+                        "Fn::ImportValue": "CfnFsxMadSubnet01"
+                    },
+                    {
+                        "Fn::ImportValue": "CfnFsxMadSubnet02"
+                    }
+                ],
+                "SecurityGroupIds": [
+                    {
+                        "Fn::ImportValue": "CfnWindowsIngressSecurityGroupId"
+                    }
+                ],
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "windows"
+                    }
+                ],
+                "WindowsConfiguration": {
+                    "ActiveDirectoryId": {
+                        "Fn::ImportValue": "CfnFsxMadDirectoryServiceId"
+                    },
+                    "ThroughputCapacity": 32,
+                    "DeploymentType": "MULTI_AZ_1",
+                    "PreferredSubnetId": {
+                        "Fn::ImportValue": "CfnFsxMadSubnet01"
+                    }
+                    "AuditLogConfiguration": {
+                        "FileAccessAuditLogLevel": "SUCCESS_AND_FAILURE",
+                        "FileShareAccessAuditLogLevel": "SUCCESS_AND_FAILURE",
+                        "AuditLogDestination": 
+                        {
+                          "Fn::Select": [
+                            0,
+                            {
+                              "Fn::Split": [
+                                ":*",
+                                {
+                                  "Fn::ImportValue": "CfnWindowsFileAccessAuditingLogGroupArn"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "FileSystemId": {
+             "Value": {
+                "Ref": "WindowsMadFileSystemWithAllConfigs"
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_with_file_access_audit_event_logging_enabled--yaml"></a>
+
+```
+Resources:
+  WindowsMadFileSystemWithAllConfigs:
+    Type: "AWS::FSx::FileSystem"
+    Properties:
+      FileSystemType: "WINDOWS"
+      StorageCapacity: 100
+      SubnetIds:
+        - !ImportValue CfnFsxMadSubnet01
+        - !ImportValue CfnFsxMadSubnet02
+      SecurityGroupIds:
+        - !ImportValue WindowsIngressSecurityGroupId
+      Tags:
+        - Key: Name
+          Value: windows
+      WindowsConfiguration:
+        ActiveDirectoryId: !ImportValue CfnFsxMadDirectoryServiceId
+        ThroughputCapacity: 32
+        DeploymentType: MULTI_AZ_1
+        PreferredSubnetId: !ImportValue CfnFsxMadSubnet01
+        AuditLogConfiguration:
+          FileAccessAuditLogLevel: "SUCCESS_AND_FAILURE"
+          FileShareAccessAuditLogLevel: "SUCCESS_AND_FAILURE"
+          AuditLogDestination: !Select
+            - 0
+            - !Split
+              - ':*'
+              - 'Fn::ImportValue': WindowsFileAccessAuditingLogGroupArn
+                
+Outputs:
+    FileSystemId:
+      Value: !Ref WindowsMadFileSystemWithAllConfigs
 ```

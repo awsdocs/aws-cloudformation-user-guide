@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LoRaWAN](#cfn-iotwireless-wirelessgateway-lorawan)" : LoRaWANGateway,
       "[Name](#cfn-iotwireless-wirelessgateway-name)" : String,
       "[Tags](#cfn-iotwireless-wirelessgateway-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[ThingName](#cfn-iotwireless-wirelessgateway-thingname)" : String
+      "[ThingArn](#cfn-iotwireless-wirelessgateway-thingarn)" : String
     }
 }
 ```
@@ -34,7 +34,7 @@ Properties:
   [Name](#cfn-iotwireless-wirelessgateway-name): String
   [Tags](#cfn-iotwireless-wirelessgateway-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-  [ThingName](#cfn-iotwireless-wirelessgateway-thingname): String
+  [ThingArn](#cfn-iotwireless-wirelessgateway-thingarn): String
 ```
 
 ## Properties<a name="aws-resource-iotwireless-wirelessgateway-properties"></a>
@@ -70,8 +70,8 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`ThingName`  <a name="cfn-iotwireless-wirelessgateway-thingname"></a>
-The name of the thing associated with the wireless gateway\. The value is empty if a thing isn't associated with the gateway\.  
+`ThingArn`  <a name="cfn-iotwireless-wirelessgateway-thingarn"></a>
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -92,5 +92,5 @@ The ARN of the wireless gateway created\.
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the wireless gateway created\.
 
-`ThingArn`  <a name="ThingArn-fn::getatt"></a>
-The ARN of the thing associated with the device\. The parameter is empty if a thing was not associated with the device\.
+`ThingName`  <a name="ThingName-fn::getatt"></a>
+The name of the thing associated with the wireless gateway\. The value is empty if a thing isn't associated with the gateway\.

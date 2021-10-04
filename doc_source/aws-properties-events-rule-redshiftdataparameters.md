@@ -1,6 +1,6 @@
 # AWS::Events::Rule RedshiftDataParameters<a name="aws-properties-events-rule-redshiftdataparameters"></a>
 
-These are custom parameters to be used when the target is a Redshift cluster to invoke the Redshift Data API ExecuteStatement based on EventBridge events\.
+These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the Amazon Redshift Data API ExecuteStatement based on EventBridge events\.
 
 ## Syntax<a name="aws-properties-events-rule-redshiftdataparameters-syntax"></a>
 
@@ -38,7 +38,6 @@ The name of the database\. Required when authenticating using temporary credenti
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `64`  
-*Pattern*: `([a-zA-Z0-9]+)|(\$(\.[\w_-]+(\[(\d+|\*)\])*)*)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DbUser`  <a name="cfn-events-rule-redshiftdataparameters-dbuser"></a>
@@ -47,7 +46,6 @@ The database user name\. Required when authenticating using temporary credential
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
-*Pattern*: `([a-zA-Z0-9]+)|(\$(\.[\w_-]+(\[(\d+|\*)\])*)*)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretManagerArn`  <a name="cfn-events-rule-redshiftdataparameters-secretmanagerarn"></a>

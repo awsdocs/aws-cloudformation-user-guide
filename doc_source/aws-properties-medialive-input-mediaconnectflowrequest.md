@@ -1,6 +1,8 @@
 # AWS::MediaLive::Input MediaConnectFlowRequest<a name="aws-properties-medialive-input-mediaconnectflowrequest"></a>
 
-The settings for a MediaConnect Flow\.
+Settings that apply only if the input is a MediaConnect input\.
+
+The parent of this entity is Input\.
 
 ## Syntax<a name="aws-properties-medialive-input-mediaconnectflowrequest-syntax"></a>
 

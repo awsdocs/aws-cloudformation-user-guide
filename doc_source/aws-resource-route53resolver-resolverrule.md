@@ -103,7 +103,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-route53resolver-resolverrule-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the resolver rule, such as `arn:aws:route53Resolver:us-east-1:123456789012:resolver-rule/resolver-rule-a1bzhi`\.
+The Amazon Resource Name \(ARN\) of the resolver rule, such as `arn:aws:route53resolver:us-east-1:123456789012:resolver-rule/resolver-rule-a1bzhi`\.
 
 `DomainName`  <a name="DomainName-fn::getatt"></a>
 DNS queries for this domain name are forwarded to the IP addresses that are specified in TargetIps\. If a query matches multiple resolver rules \(example\.com and www\.example\.com\), the query is routed using the resolver rule that contains the most specific domain name \(www\.example\.com\)\.

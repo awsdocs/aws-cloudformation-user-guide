@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualGateway VirtualGatewayTlsValidationContextAcmTrust<a name="aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust"></a>
 
-An object that represents a Transport Layer Security \(TLS\) validation context trust for an AWS Certicate Manager \(ACM\) certificate\.
+An object that represents a Transport Layer Security \(TLS\) validation context trust for an AWS Certificate Manager certificate\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust-syntax"></a>
 

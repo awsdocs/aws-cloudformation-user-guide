@@ -1,6 +1,6 @@
 # AWS::Lambda::Alias<a name="aws-resource-lambda-alias"></a>
 
-The `AWS::Lambda::Alias` resource creates an [alias](https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html) for a Lambda function version\. Use aliases to provide clients with a function identifier that you can update to invoke a different version\.
+The `AWS::Lambda::Alias` resource creates an [alias](https://docs.aws.amazon.com/lambda/latest/dg/configuration-aliases.html) for a Lambda function version\. Use aliases to provide clients with a function identifier that you can update to invoke a different version\.
 
 You can also map an alias to split invocation requests between two versions\. Use the `RoutingConfig` parameter to specify a second version and the percentage of invocation requests that it receives\.
 
@@ -83,7 +83,7 @@ The name of the alias\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProvisionedConcurrencyConfig`  <a name="cfn-lambda-alias-provisionedconcurrencyconfig"></a>
-Specifies a provisioned concurrency configuration for a function's alias\.  
+Specifies a [provisioned concurrency](https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html) configuration for a function's alias\.  
 *Required*: No  
 *Type*: [ProvisionedConcurrencyConfiguration](aws-properties-lambda-alias-provisionedconcurrencyconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

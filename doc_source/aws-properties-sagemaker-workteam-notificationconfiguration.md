@@ -1,6 +1,6 @@
 # AWS::SageMaker::Workteam NotificationConfiguration<a name="aws-properties-sagemaker-workteam-notificationconfiguration"></a>
 
-Configures SNS notifications of available or expiring work items for work teams\.
+Configures Amazon SNS notifications of available or expiring work items for work teams\.
 
 ## Syntax<a name="aws-properties-sagemaker-workteam-notificationconfiguration-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-sagemaker-workteam-notificationconfiguration-properties"></a>
 
 `NotificationTopicArn`  <a name="cfn-sagemaker-workteam-notificationconfiguration-notificationtopicarn"></a>
-The ARN for the SNS topic to which notifications should be published\.  
+The ARN for the Amazon SNS topic to which notifications should be published\.  
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `arn:aws[a-z\-]*:sns:[a-z0-9\-]*:[0-9]{12}:[a-zA-Z0-9_.-]*`  

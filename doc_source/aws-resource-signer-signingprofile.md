@@ -1,6 +1,6 @@
 # AWS::Signer::SigningProfile<a name="aws-resource-signer-signingprofile"></a>
 
-Creates a signing profile\. A signing profile is a code signing template that can be used to carry out a pre\-defined signing job\. For more information, see [http://docs.aws.amazon.com/signer/latest/developerguide/gs-profile.html](http://docs.aws.amazon.com/signer/latest/developerguide/gs-profile.html) 
+Creates a signing profile\. A signing profile is a code signing template that can be used to carry out a pre\-defined signing job\. 
 
 ## Syntax<a name="aws-resource-signer-signingprofile-syntax"></a>
 

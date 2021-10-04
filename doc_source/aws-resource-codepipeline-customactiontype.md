@@ -74,11 +74,11 @@ The details of the output artifact of the action, such as its commit ID\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Provider`  <a name="cfn-codepipeline-customactiontype-provider"></a>
-The provider of the service used in the custom action, such as AWS CodeDeploy\.  
+The provider of the service used in the custom action, such as CodeDeploy\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `25`  
+*Maximum*: `35`  
 *Pattern*: `[0-9A-Za-z_-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

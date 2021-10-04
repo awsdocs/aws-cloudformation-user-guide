@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel AudioSilenceFailoverSettings<a name="aws-properties-medialive-channel-audiosilencefailoversettings"></a>
 
-<a name="aws-properties-medialive-channel-audiosilencefailoversettings-description"></a>The `AudioSilenceFailoverSettings` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::MediaLive::Channel](aws-resource-medialive-channel.md)\.
+MediaLive will perform a failover if audio is not detected in this input for the specified period\.
+
+The parent of this entity is FailoverConditionSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-audiosilencefailoversettings-syntax"></a>
 

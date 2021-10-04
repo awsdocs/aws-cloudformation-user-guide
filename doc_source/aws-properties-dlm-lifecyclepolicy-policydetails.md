@@ -74,7 +74,7 @@ The default is `EBS_SNAPSHOT_MANAGEMENT`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceLocations`  <a name="cfn-dlm-lifecyclepolicy-policydetails-resourcelocations"></a>
-The location of the resources to backup\. If the source resources are located in an AWS Region, specify `CLOUD`\. If the source resources are located on an AWS Outpost in your account, specify `OUTPOST`\.   
+The location of the resources to backup\. If the source resources are located in an AWS Region, specify `CLOUD`\. If the source resources are located on an Outpost in your account, specify `OUTPOST`\.   
 If you specify `OUTPOST`, Amazon Data Lifecycle Manager backs up all resources of the specified type with matching target tags across all of the Outposts in your account\.  
 *Required*: No  
 *Type*: List of String  

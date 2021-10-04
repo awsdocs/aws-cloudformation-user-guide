@@ -31,5 +31,5 @@ One or more specific IPv6 addresses from the IPv6 CIDR block range of your subne
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-ec2-launchtemplate-ipv6add--seealso"></a>
-+  [ InstanceIpv6AddressRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_InstanceIpv6AddressRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [ InstanceIpv6AddressRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_InstanceIpv6AddressRequest.html) in the *Amazon EC2 API Reference* 
 

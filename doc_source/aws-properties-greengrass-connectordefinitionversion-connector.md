@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `ConnectorArn`  <a name="cfn-greengrass-connectordefinitionversion-connector-connectorarn"></a>
 The Amazon Resource Name \(ARN\) of the connector\.  
-For more information about AWS\-provided connectors, see [AWS\-Provided Greengrass Connectors](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors-list.html)\.  
+For more information about connectors provided by AWS, see [Greengrass Connectors Provided by AWS](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors-list.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -43,7 +43,7 @@ A descriptive or arbitrary ID for the connector\. This value must be unique with
 
 `Parameters`  <a name="cfn-greengrass-connectordefinitionversion-connector-parameters"></a>
 The parameters or configuration that the connector uses\.  
-For more information about AWS\-provided connectors, see [AWS\-Provided Greengrass Connectors](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors-list.html)\.  
+For more information about connectors provided by AWS, see [Greengrass Connectors Provided by AWS](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors-list.html)\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

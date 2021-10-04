@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CertPolicyId](#cfn-acmpca-certificate-policyinformation-certpolicyid)" : String,
-  "[PolicyQualifiers](#cfn-acmpca-certificate-policyinformation-policyqualifiers)" : PolicyQualifierInfoList
+  "[PolicyQualifiers](#cfn-acmpca-certificate-policyinformation-policyqualifiers)" : [ PolicyQualifierInfo, ... ]
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CertPolicyId](#cfn-acmpca-certificate-policyinformation-certpolicyid): String
   [PolicyQualifiers](#cfn-acmpca-certificate-policyinformation-policyqualifiers): 
-    PolicyQualifierInfoList
+    - PolicyQualifierInfo
 ```
 
 ## Properties<a name="aws-properties-acmpca-certificate-policyinformation-properties"></a>
@@ -37,6 +37,6 @@ Specifies the object identifier \(OID\) of the certificate policy under which th
 `PolicyQualifiers`  <a name="cfn-acmpca-certificate-policyinformation-policyqualifiers"></a>
 Modifies the given `CertPolicyId` with a qualifier\. ACM Private CA supports the certification practice statement \(CPS\) qualifier\.  
 *Required*: No  
-*Type*: [PolicyQualifierInfoList](aws-properties-acmpca-certificate-policyqualifierinfolist.md)  
+*Type*: List of [PolicyQualifierInfo](aws-properties-acmpca-certificate-policyqualifierinfo.md)  
 *Maximum*: `20`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

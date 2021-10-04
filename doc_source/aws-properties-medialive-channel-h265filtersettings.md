@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel H265FilterSettings<a name="aws-properties-medialive-channel-h265filtersettings"></a>
 
-H265 Filter Settings
+Settings to configure video filters that apply to the H265 codec\.
+
+The parent of this entity is H265Settings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-h265filtersettings-syntax"></a>
 

@@ -9,11 +9,11 @@ AWS CloudFormation provides the following Python helper scripts that you can use
 You call the scripts directly from your template\. The scripts work in conjunction with resource metadata that's defined in the same template\. The scripts run on the Amazon EC2 instance during the stack creation process\.
 
 **Note**  
-The scripts are not executed by default\. You must include calls in your template to execute specific helper scripts\.
+The scripts aren't executed by default\. You must include calls in your template to execute specific helper scripts\.
 
 ## Amazon Linux AMI images<a name="cfn-helper-scripts-reference-amazon-amis"></a>
 
-The AWS CloudFormation helper scripts are preinstalled on Amazon Linux AMI images\.
+The CloudFormation helper scripts are preinstalled on Amazon Linux AMI images\.
 + On the latest Amazon Linux AMI version, the scripts are installed in `/opt/aws/bin`\.
 + On previous Amazon Linux AMI versions, the aws\-cfn\-bootstrap package that contains the scripts is located in the Yum repository\.
 
@@ -22,7 +22,7 @@ The AWS CloudFormation helper scripts are preinstalled on Amazon Linux AMI image
 <a name="cfn-helper-scripts-reference-downloads"></a>For Linux/Unix distributions other than Amazon Linux AMI images and for Microsoft Windows \(2008 or later\), you can download the aws\-cfn\-bootstrap package\.
 
 **Note**  
-Version 2\.0\-1 and above of the helper scripts support Python 3\.4 and above\. If you need helper scripts that support an earlier version of Python, see [Release History for CloudFormation Helper Scripts 1\.4](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html#releasehistory-aws-cfn-bootstrap-v1)\.
+Version 2\.0–1 and above of the helper scripts support Python 3\.4 and above\. If you need helper scripts that support an earlier version of Python, see [Release History for CloudFormation Helper Scripts 1\.4](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html#releasehistory-aws-cfn-bootstrap-v1)\.
 
 
 | File format | Download URL | 
@@ -33,18 +33,18 @@ Version 2\.0\-1 and above of the helper scripts support Python 3\.4 and above\. 
 
 ## Permissions for helper scripts<a name="cfn-helper-scripts-reference-permissions"></a>
 
-By default, helper scripts do not require credentials, so you do not need to use the `--access-key`, `--secret-key`, `--role`, or `--credential-file` options\. However, if no credentials are specified, AWS CloudFormation checks for stack membership and limits the scope of the call to the stack that the instance belongs to\.
+By default, helper scripts don't require credentials, so you don't need to use the `--access-key`, `--secret-key`, `--role`, or `--credential-file` options\. However, if no credentials are specified, CloudFormation checks for stack membership and limits the scope of the call to the stack that the instance belongs to\.
 
 If you choose to specify an option, we recommend that you specify only one of the following:
 + `--role`
 + `--credential-file`
 + `--access-key` together with `--secret-key`
 
-If you do specify an option, keep in mind which permissions the various helper scripts require: 
+If you do specify an option, keep in mind which permissions the various helper scripts require:
 + `cfn-signal` requires [ `cloudformation:SignalResource`](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SignalResource.html)
 + All other helper scripts require [ `cloudformation:DescribeStackResource`](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStackResources.html)
 
-For more information on using AWS CloudFormation\-specific actions and condition context keys in IAM policies, see [Controlling access with AWS Identity and Access Management](using-iam-template.md)\.
+For more information on using CloudFormation\-specific actions and condition context keys in IAM policies, see [Controlling access with AWS Identity and Access Management](using-iam-template.md)\.
 
 ## Using the latest version<a name="cfn-helper-scripts-reference-latest-version"></a>
 
@@ -56,14 +56,14 @@ The helper scripts are updated periodically\. If you use the helper scripts, ens
 
   `sudo yum install -y aws-cfn-bootstrap`
 **Note**  
-Running `sudo yum install -y aws-cfn-bootstrap` installs the helper scripts from the `yum` repository\. Currently, the `yum` repo contains version 1\.4\-32 of the helper scripts, which does not support Python 2\.6\.
+Running `sudo yum install -y aws-cfn-bootstrap` installs the helper scripts from the `yum` repository\.
 + If you don't include the `yum install` command and you use the `cfn-hup` script, then you'll need to manually update the script in each Amazon EC2 Linux instance using these commands:
 
   `sudo yum install -y aws-cfn-bootstrap`
 
   `sudo /sbin/service cfn-hup restart`
 **Note**  
-Running `sudo yum install -y aws-cfn-bootstrap` installs the helper scripts from the `yum` repository\. Currently, the `yum` repo contains version 1\.4\-32 of the helper scripts, which does not support Python 2\.6\.
+Running `sudo yum install -y aws-cfn-bootstrap` installs the helper scripts from the `yum` repository\.
 + If you use the source code for the scripts to work with another version of Linux or a different platform, and you have created your own certificate trust store, you'll also need to keep the trust store updated\.
 
 For the version history of the aws\-cfn\-bootstrap package, see [Release history for AWS CloudFormation helper scripts](releasehistory-aws-cfn-bootstrap.md)\.

@@ -1,8 +1,8 @@
 # AWS::DataSync::Task Options<a name="aws-properties-datasync-task-options"></a>
 
-Represents the options that are available to control the behavior of a StartTaskExecution operation\. Behavior includes preserving metadata such as user ID \(UID\), group ID \(GID\), and file permissions, and also overwriting files in the destination, data integrity verification, and so on\.
+Represents the options that are available to control the behavior of a [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html) operation\. Behavior includes preserving metadata such as user ID \(UID\), group ID \(GID\), and file permissions, and also overwriting files in the destination, data integrity verification, and so on\.
 
-A task has a set of default options associated with it\. If you don't specify an option in StartTaskExecution, the default value is used\. You can override the defaults options on each task execution by specifying an overriding `Options` value to StartTaskExecution\.
+A task has a set of default options associated with it\. If you don't specify an option in [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html), the default value is used\. You can override the defaults options on each task execution by specifying an overriding `Options` value to [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html)\.
 
 ## Syntax<a name="aws-properties-datasync-task-options-syntax"></a>
 
@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[PosixPermissions](#cfn-datasync-task-options-posixpermissions)" : String,
   "[PreserveDeletedFiles](#cfn-datasync-task-options-preservedeletedfiles)" : String,
   "[PreserveDevices](#cfn-datasync-task-options-preservedevices)" : String,
+  "[SecurityDescriptorCopyFlags](#cfn-datasync-task-options-securitydescriptorcopyflags)" : String,
   "[TaskQueueing](#cfn-datasync-task-options-taskqueueing)" : String,
   "[TransferMode](#cfn-datasync-task-options-transfermode)" : String,
   "[Uid](#cfn-datasync-task-options-uid)" : String,
@@ -40,6 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [PosixPermissions](#cfn-datasync-task-options-posixpermissions): String
   [PreserveDeletedFiles](#cfn-datasync-task-options-preservedeletedfiles): String
   [PreserveDevices](#cfn-datasync-task-options-preservedevices): String
+  [SecurityDescriptorCopyFlags](#cfn-datasync-task-options-securitydescriptorcopyflags): String
   [TaskQueueing](#cfn-datasync-task-options-taskqueueing): String
   [TransferMode](#cfn-datasync-task-options-transfermode): String
   [Uid](#cfn-datasync-task-options-uid): String
@@ -85,7 +87,7 @@ A value that determines the type of logs that DataSync publishes to a log stream
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Mtime`  <a name="cfn-datasync-task-options-mtime"></a>
-A value that indicates the last time that a file was modified \(that is, a file was written to\) before the PREPARING phase\.   
+A value that indicates the last time that a file was modified \(that is, a file was written to\) before the PREPARING phase\. This option is required for cases when you need to run the same task more than one time\.   
 Default value: PRESERVE\.   
 PRESERVE: Preserve original `Mtime` \(recommended\)  
  NONE: Ignore `Mtime`\.   
@@ -98,25 +100,25 @@ If `Mtime` is set to NONE, `Atime` must also be set to NONE\.
 
 `OverwriteMode`  <a name="cfn-datasync-task-options-overwritemode"></a>
 A value that determines whether files at the destination should be overwritten or preserved when copying files\. If set to `NEVER` a destination file will not be replaced by a source file, even if the destination file differs from the source file\. If you modify files in the destination and you sync the files, you can use this value to protect against overwriting those changes\.   
-Some storage classes have specific behaviors that can affect your S3 storage cost\. For detailed information, see using\-storage\-classes in the *AWS DataSync User Guide*\.  
+Some storage classes have specific behaviors that can affect your S3 storage cost\. For detailed information, see [Considerations when working with Amazon S3 storage classes in DataSync ](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes) in the * AWS DataSync User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ALWAYS | NEVER`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PosixPermissions`  <a name="cfn-datasync-task-options-posixpermissions"></a>
-A value that determines which users or groups can access a file for a specific purpose such as reading, writing, or execution of the file\.   
+A value that determines which users or groups can access a file for a specific purpose such as reading, writing, or execution of the file\. This option should only be set for NFS, EFS, and S3 locations\. For more information about what metadata is copied by DataSync, see [Metadata Copied by DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html#metadata-copied)\.   
 Default value: PRESERVE\.  
 PRESERVE: Preserve POSIX\-style permissions \(recommended\)\.  
 NONE: Ignore permissions\.   
-AWS DataSync can preserve extant permissions of a source location\.
+ AWS DataSync can preserve extant permissions of a source location\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `NONE | PRESERVE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PreserveDeletedFiles`  <a name="cfn-datasync-task-options-preservedeletedfiles"></a>
-A value that specifies whether files in the destination that don't exist in the source file system should be preserved\. This option can affect your storage cost\. If your task deletes objects, you might incur minimum storage duration charges for certain storage classes\. For detailed information, see using\-storage\-classes in the *AWS DataSync User Guide*\.  
+A value that specifies whether files in the destination that don't exist in the source file system should be preserved\. This option can affect your storage cost\. If your task deletes objects, you might incur minimum storage duration charges for certain storage classes\. For detailed information, see [Considerations when working with Amazon S3 storage classes in DataSync ](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes) in the * AWS DataSync User Guide*\.  
 Default value: PRESERVE\.  
 PRESERVE: Ignore such destination files \(recommended\)\.   
 REMOVE: Delete destination files that aren’t present in the source\.  
@@ -126,8 +128,8 @@ REMOVE: Delete destination files that aren’t present in the source\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PreserveDevices`  <a name="cfn-datasync-task-options-preservedevices"></a>
-A value that determines whether AWS DataSync should preserve the metadata of block and character devices in the source file system, and recreate the files with that device name and metadata on the destination\.  
-AWS DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an end\-of\-file \(EOF\) marker\.
+A value that determines whether AWS DataSync should preserve the metadata of block and character devices in the source file system, and re\-create the files with that device name and metadata on the destination\. DataSync does not copy the contents of such devices, only the name and metadata\.   
+ AWS DataSync can't sync the actual contents of such devices, because they are nonterminal and don't return an end\-of\-file \(EOF\) marker\.
 Default value: NONE\.  
 NONE: Ignore special devices \(recommended\)\.   
 PRESERVE: Preserve character and block device metadata\. This option isn't currently supported for Amazon EFS\.   
@@ -136,9 +138,28 @@ PRESERVE: Preserve character and block device metadata\. This option isn't curre
 *Allowed values*: `NONE | PRESERVE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SecurityDescriptorCopyFlags`  <a name="cfn-datasync-task-options-securitydescriptorcopyflags"></a>
+A value that determines which components of the SMB security descriptor are copied from source to destination objects\.   
+This value is only used for transfers between SMB and Amazon FSx for Windows File Server locations, or between two Amazon FSx for Windows File Server locations\. For more information about how DataSync handles metadata, see [How DataSync Handles Metadata and Special Files](https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html)\.   
+Default value: OWNER\_DACL\.  
+ **OWNER\_DACL**: For each copied object, DataSync copies the following metadata:  
++ Object owner\.
++ NTFS discretionary access control lists \(DACLs\), which determine whether to grant access to an object\.
+When choosing this option, DataSync does NOT copy the NTFS system access control lists \(SACLs\), which are used by administrators to log attempts to access a secured object\.  
+ **OWNER\_DACL\_SACL**: For each copied object, DataSync copies the following metadata:  
++ Object owner\.
++ NTFS discretionary access control lists \(DACLs\), which determine whether to grant access to an object\.
++ NTFS system access control lists \(SACLs\), which are used by administrators to log attempts to access a secured object\.
+Copying SACLs requires granting additional permissions to the Windows user that DataSync uses to access your SMB location\. For information about choosing a user that ensures sufficient permissions to files, folders, and metadata, see [user](create-smb-location.html#SMBuser)\.  
+ **NONE**: None of the SMB security descriptor components are copied\. Destination objects are owned by the user that was provided for accessing the destination location\. DACLs and SACLs are set based on the destination server’s configuration\.   
+*Required*: No  
+*Type*: String  
+*Allowed values*: `NONE | OWNER_DACL | OWNER_DACL_SACL`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `TaskQueueing`  <a name="cfn-datasync-task-options-taskqueueing"></a>
 A value that determines whether tasks should be queued before executing the tasks\. If set to `ENABLED`, the tasks will be queued\. The default is `ENABLED`\.  
-If you use the same agent to run multiple tasks, you can enable the tasks to run in series\. For more information, see queue\-task\-execution\.  
+If you use the same agent to run multiple tasks, you can enable the tasks to run in series\. For more information, see [Queueing task executions](https://docs.aws.amazon.com/datasync/latest/userguide/run-task.html#queue-task-execution)\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DISABLED | ENABLED`  
@@ -165,7 +186,7 @@ NONE: Ignore UID and GID\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VerifyMode`  <a name="cfn-datasync-task-options-verifymode"></a>
-A value that determines whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred\. For more information, see create\-task   
+A value that determines whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred\. For more information, see [Configure task settings](https://docs.aws.amazon.com/datasync/latest/userguide/create-task.html)\.   
 Default value: POINT\_IN\_TIME\_CONSISTENT\.  
 ONLY\_FILES\_TRANSFERRED \(recommended\): Perform verification only on files that were transferred\.   
 POINT\_IN\_TIME\_CONSISTENT: Scan the entire source and entire destination at the end of the transfer to verify that source and destination are fully synchronized\. This option isn't supported when transferring to S3 Glacier or S3 Glacier Deep Archive storage classes\.  

@@ -1,6 +1,6 @@
 # AWS::CodeDeploy::DeploymentGroup EC2TagFilter<a name="aws-properties-codedeploy-deploymentgroup-ec2tagfilter"></a>
 
-Information about an EC2 tag filter\.
+Information about an Amazon EC2 tag filter\.
 
 For more information about using tags and tag groups to help manage your Amazon EC2 instances and on\-premises instances, see [ Tagging Instances for Deployment Groups in AWS CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-tagging.html) in the *AWS CodeDeploy User Guide*\.
 

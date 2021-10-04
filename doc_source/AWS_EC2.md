@@ -1,4 +1,4 @@
-# EC2 resource type reference<a name="AWS_EC2"></a>
+# Amazon Elastic Compute Cloud resource type reference<a name="AWS_EC2"></a>
 
 **Resource types**
 + [AWS::EC2::CapacityReservation](aws-resource-ec2-capacityreservation.md)
@@ -8,11 +8,12 @@
 + [AWS::EC2::ClientVpnRoute](aws-resource-ec2-clientvpnroute.md)
 + [AWS::EC2::ClientVpnTargetNetworkAssociation](aws-resource-ec2-clientvpntargetnetworkassociation.md)
 + [AWS::EC2::CustomerGateway](aws-resource-ec2-customer-gateway.md)
-+ [AWS::EC2::DHCPOptions](aws-resource-ec2-dhcp-options.md)
++ [AWS::EC2::DHCPOptions](aws-resource-ec2-dhcpoptions.md)
 + [AWS::EC2::EC2Fleet](aws-resource-ec2-ec2fleet.md)
 + [AWS::EC2::EgressOnlyInternetGateway](aws-resource-ec2-egressonlyinternetgateway.md)
 + [AWS::EC2::EIP](aws-properties-ec2-eip.md)
 + [AWS::EC2::EIPAssociation](aws-properties-ec2-eip-association.md)
++ [AWS::EC2::EnclaveCertificateIamRoleAssociation](aws-resource-ec2-enclavecertificateiamroleassociation.md)
 + [AWS::EC2::FlowLog](aws-resource-ec2-flowlog.md)
 + [AWS::EC2::GatewayRouteTableAssociation](aws-resource-ec2-gatewayroutetableassociation.md)
 + [AWS::EC2::Host](aws-resource-ec2-host.md)
@@ -47,10 +48,17 @@
 + [AWS::EC2::TrafficMirrorTarget](aws-resource-ec2-trafficmirrortarget.md)
 + [AWS::EC2::TransitGateway](aws-resource-ec2-transitgateway.md)
 + [AWS::EC2::TransitGatewayAttachment](aws-resource-ec2-transitgatewayattachment.md)
++ [AWS::EC2::TransitGatewayConnect](aws-resource-ec2-transitgatewayconnect.md)
++ [AWS::EC2::TransitGatewayMulticastDomain](aws-resource-ec2-transitgatewaymulticastdomain.md)
++ [AWS::EC2::TransitGatewayMulticastDomainAssociation](aws-resource-ec2-transitgatewaymulticastdomainassociation.md)
++ [AWS::EC2::TransitGatewayMulticastGroupMember](aws-resource-ec2-transitgatewaymulticastgroupmember.md)
++ [AWS::EC2::TransitGatewayMulticastGroupSource](aws-resource-ec2-transitgatewaymulticastgroupsource.md)
++ [AWS::EC2::TransitGatewayPeeringAttachment](aws-resource-ec2-transitgatewaypeeringattachment.md)
 + [AWS::EC2::TransitGatewayRoute](aws-resource-ec2-transitgatewayroute.md)
 + [AWS::EC2::TransitGatewayRouteTable](aws-resource-ec2-transitgatewayroutetable.md)
 + [AWS::EC2::TransitGatewayRouteTableAssociation](aws-resource-ec2-transitgatewayroutetableassociation.md)
 + [AWS::EC2::TransitGatewayRouteTablePropagation](aws-resource-ec2-transitgatewayroutetablepropagation.md)
++ [AWS::EC2::TransitGatewayVpcAttachment](aws-resource-ec2-transitgatewayvpcattachment.md)
 + [AWS::EC2::Volume](aws-properties-ec2-ebs-volume.md)
 + [AWS::EC2::VolumeAttachment](aws-properties-ec2-ebs-volumeattachment.md)
 + [AWS::EC2::VPC](aws-resource-ec2-vpc.md)

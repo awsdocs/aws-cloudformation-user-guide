@@ -48,6 +48,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AudioSelectors`  <a name="cfn-medialive-channel-inputsettings-audioselectors"></a>
 Information about the specific audio to extract from the input\.  
+The parent of this entity is InputSettings\.  
 *Required*: No  
 *Type*: List of [AudioSelector](aws-properties-medialive-channel-audioselector.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

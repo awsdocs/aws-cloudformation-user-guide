@@ -2,6 +2,8 @@
 
 The settings for the CDN of an HLS output\.
 
+The parent of this entity is HlsGroupSettings\.
+
 ## Syntax<a name="aws-properties-medialive-channel-hlscdnsettings-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -13,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[HlsAkamaiSettings](#cfn-medialive-channel-hlscdnsettings-hlsakamaisettings)" : HlsAkamaiSettings,
   "[HlsBasicPutSettings](#cfn-medialive-channel-hlscdnsettings-hlsbasicputsettings)" : HlsBasicPutSettings,
   "[HlsMediaStoreSettings](#cfn-medialive-channel-hlscdnsettings-hlsmediastoresettings)" : HlsMediaStoreSettings,
+  "[HlsS3Settings](#cfn-medialive-channel-hlscdnsettings-hlss3settings)" : HlsS3Settings,
   "[HlsWebdavSettings](#cfn-medialive-channel-hlscdnsettings-hlswebdavsettings)" : HlsWebdavSettings
 }
 ```
@@ -26,6 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     HlsBasicPutSettings
   [HlsMediaStoreSettings](#cfn-medialive-channel-hlscdnsettings-hlsmediastoresettings): 
     HlsMediaStoreSettings
+  [HlsS3Settings](#cfn-medialive-channel-hlscdnsettings-hlss3settings): 
+    HlsS3Settings
   [HlsWebdavSettings](#cfn-medialive-channel-hlscdnsettings-hlswebdavsettings): 
     HlsWebdavSettings
 ```
@@ -48,6 +53,12 @@ The settings for Basic Put for the HLS output\.
 Sets up MediaStore as the destination for the HLS output\.  
 *Required*: No  
 *Type*: [HlsMediaStoreSettings](aws-properties-medialive-channel-hlsmediastoresettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HlsS3Settings`  <a name="cfn-medialive-channel-hlscdnsettings-hlss3settings"></a>
+Sets up Amazon S3 as the destination for this HLS output\.  
+*Required*: No  
+*Type*: [HlsS3Settings](aws-properties-medialive-channel-hlss3settings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HlsWebdavSettings`  <a name="cfn-medialive-channel-hlscdnsettings-hlswebdavsettings"></a>

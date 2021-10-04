@@ -33,7 +33,7 @@ The particular action to be performed in the recipe step\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConditionExpressions`  <a name="cfn-databrew-recipe-recipestep-conditionexpressions"></a>
-One or more conditions that must be met, in order for the recipe step to succeed\.  
+One or more conditions that must be met for the recipe step to succeed\.  
 All of the conditions in the array must be met\. In other words, all of the conditions must be combined using a logical AND operation\.
 *Required*: No  
 *Type*: List of [ConditionExpression](aws-properties-databrew-recipe-conditionexpression.md)  

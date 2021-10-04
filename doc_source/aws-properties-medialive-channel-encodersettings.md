@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CaptionDescriptions](#cfn-medialive-channel-encodersettings-captiondescriptions)" : [ CaptionDescription, ... ],
   "[FeatureActivations](#cfn-medialive-channel-encodersettings-featureactivations)" : FeatureActivations,
   "[GlobalConfiguration](#cfn-medialive-channel-encodersettings-globalconfiguration)" : GlobalConfiguration,
+  "[MotionGraphicsConfiguration](#cfn-medialive-channel-encodersettings-motiongraphicsconfiguration)" : MotionGraphicsConfiguration,
   "[NielsenConfiguration](#cfn-medialive-channel-encodersettings-nielsenconfiguration)" : NielsenConfiguration,
   "[OutputGroups](#cfn-medialive-channel-encodersettings-outputgroups)" : [ OutputGroup, ... ],
   "[TimecodeConfig](#cfn-medialive-channel-encodersettings-timecodeconfig)" : TimecodeConfig,
@@ -43,6 +44,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     FeatureActivations
   [GlobalConfiguration](#cfn-medialive-channel-encodersettings-globalconfiguration): 
     GlobalConfiguration
+  [MotionGraphicsConfiguration](#cfn-medialive-channel-encodersettings-motiongraphicsconfiguration): 
+    MotionGraphicsConfiguration
   [NielsenConfiguration](#cfn-medialive-channel-encodersettings-nielsenconfiguration): 
     NielsenConfiguration
   [OutputGroups](#cfn-medialive-channel-encodersettings-outputgroups): 
@@ -86,7 +89,7 @@ The encoding information for output captions\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FeatureActivations`  <a name="cfn-medialive-channel-encodersettings-featureactivations"></a>
-Feature Activations  
+Settings to enable specific features\.   
 *Required*: No  
 *Type*: [FeatureActivations](aws-properties-medialive-channel-featureactivations.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -97,8 +100,14 @@ The configuration settings that apply to the entire channel\.
 *Type*: [GlobalConfiguration](aws-properties-medialive-channel-globalconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`MotionGraphicsConfiguration`  <a name="cfn-medialive-channel-encodersettings-motiongraphicsconfiguration"></a>
+Settings to enable and configure the motion graphics overlay feature in the channel\.  
+*Required*: No  
+*Type*: [MotionGraphicsConfiguration](aws-properties-medialive-channel-motiongraphicsconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `NielsenConfiguration`  <a name="cfn-medialive-channel-encodersettings-nielsenconfiguration"></a>
-Nielsen configuration settings\.  
+The settings to configure Nielsen watermarks\.  
 *Required*: No  
 *Type*: [NielsenConfiguration](aws-properties-medialive-channel-nielsenconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,8 +1,8 @@
 # AWS::MediaLive::Channel M2tsSettings<a name="aws-properties-medialive-channel-m2tssettings"></a>
 
-The configuration of the M2TS in the UDP output\.
+The configuration of the M2TS in the output\.
 
-The parent of this entity is UdpContainerSettings\.
+The parents of this entity are ArchiveContainerSettings and UdpContainerSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-m2tssettings-syntax"></a>
 
@@ -252,7 +252,7 @@ Includes or excludes the ES Rate field in the PES header\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EtvPlatformPid`  <a name="cfn-medialive-channel-m2tssettings-etvplatformpid"></a>
-The PID for the input source ETV Platform data to this output\. You can enter it as a decimal or hexadecimal value\. Valid values are 32 \(or 0x20\)\.\.8182 \(or 0x1ff6\)\.  
+The PID for the input source ETV Platform data to this output\. You can enter it as a decimal or hexadecimal value\. Valid values are 32 \(or 0x20\) to 8182 \(or 0x1ff6\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

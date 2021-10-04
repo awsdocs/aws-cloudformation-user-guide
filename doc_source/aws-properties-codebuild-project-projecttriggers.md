@@ -28,7 +28,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codebuild-project-projecttriggers-properties"></a>
 
 `BuildType`  <a name="cfn-codebuild-project-projecttriggers-buildtype"></a>
-Not currently supported by AWS CloudFormation\.  
+ Specifies the type of build this webhook will trigger\. Allowed values are:     
+BUILD  
+A single build  
+BUILD\_BATCH  
+A batch build
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

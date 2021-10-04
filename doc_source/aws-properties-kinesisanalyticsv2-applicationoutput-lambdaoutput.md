@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::ApplicationOutput LambdaOutput<a name="aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput"></a>
 
-When you configure a SQL\-based Kinesis Data Analytics application's output, identifies an AWS Lambda function as the destination\. You provide the function Amazon Resource Name \(ARN\) of the Lambda function\. 
+When you configure a SQL\-based Kinesis Data Analytics application's output, identifies an Amazon Lambda function as the destination\. You provide the function Amazon Resource Name \(ARN\) of the Lambda function\. 
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `ResourceARN`  <a name="cfn-kinesisanalyticsv2-applicationoutput-lambdaoutput-resourcearn"></a>
 The Amazon Resource Name \(ARN\) of the destination Lambda function to write to\.  
-To specify an earlier version of the Lambda function than the latest, include the Lambda function version in the Lambda function ARN\. For more information about Lambda ARNs, see [Example ARNs: AWS Lambda](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda) 
+To specify an earlier version of the Lambda function than the latest, include the Lambda function version in the Lambda function ARN\. For more information about Lambda ARNs, see [Example ARNs: Amazon Lambda](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-lambda) 
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

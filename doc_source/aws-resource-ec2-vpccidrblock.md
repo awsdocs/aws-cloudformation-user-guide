@@ -16,6 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AmazonProvidedIpv6CidrBlock](#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock)" : Boolean,
       "[CidrBlock](#cfn-ec2-vpccidrblock-cidrblock)" : String,
+      "[Ipv6CidrBlock](#cfn-ec2-vpccidrblock-ipv6cidrblock)" : String,
+      "[Ipv6Pool](#cfn-ec2-vpccidrblock-ipv6pool)" : String,
       "[VpcId](#cfn-ec2-vpccidrblock-vpcid)" : String
     }
 }
@@ -28,6 +30,8 @@ Type: AWS::EC2::VPCCidrBlock
 Properties: 
   [AmazonProvidedIpv6CidrBlock](#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock): Boolean
   [CidrBlock](#cfn-ec2-vpccidrblock-cidrblock): String
+  [Ipv6CidrBlock](#cfn-ec2-vpccidrblock-ipv6cidrblock): String
+  [Ipv6Pool](#cfn-ec2-vpccidrblock-ipv6pool): String
   [VpcId](#cfn-ec2-vpccidrblock-vpcid): String
 ```
 
@@ -41,6 +45,19 @@ Requests an Amazon\-provided IPv6 CIDR block with a /56 prefix length for the VP
 
 `CidrBlock`  <a name="cfn-ec2-vpccidrblock-cidrblock"></a>
 An IPv4 CIDR block to associate with the VPC\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Ipv6CidrBlock`  <a name="cfn-ec2-vpccidrblock-ipv6cidrblock"></a>
+An IPv6 CIDR block from the IPv6 address pool\. You must also specify `Ipv6Pool` in the request\.  
+To let Amazon choose the IPv6 CIDR block for you, omit this parameter\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Ipv6Pool`  <a name="cfn-ec2-vpccidrblock-ipv6pool"></a>
+The ID of an IPv6 address pool from which to allocate the IPv6 CIDR block\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -89,11 +106,11 @@ Ipv6VPCCidrBlock:
       VpcId: !Ref TestVPCIpv6
 ```
 
-### Associate an IPv4 CIDR block and Amazon\-provided IPv6 CIDR block<a name="aws-resource-ec2-vpccidrblock--examples--Associate_an_IPv4_CIDR_block_and_Amazon-provided_IPv6_CIDR_block"></a>
+### Associate an IPv4 CIDR block and an Amazon\-provided IPv6 CIDR block<a name="aws-resource-ec2-vpccidrblock--examples--Associate_an_IPv4_CIDR_block_and_an_Amazon-provided_IPv6_CIDR_block"></a>
 
 The following example associates an IPv4 CIDR block and an Amazon\-provided IPv6 CIDR block with a VPC\. It also outputs the list of IPv4 CIDR block association IDs and IPv6 CIDR blocks that are associated with the VPC\. 
 
-#### JSON<a name="aws-resource-ec2-vpccidrblock--examples--Associate_an_IPv4_CIDR_block_and_Amazon-provided_IPv6_CIDR_block--json"></a>
+#### JSON<a name="aws-resource-ec2-vpccidrblock--examples--Associate_an_IPv4_CIDR_block_and_an_Amazon-provided_IPv6_CIDR_block--json"></a>
 
 ```
 {
@@ -167,7 +184,7 @@ The following example associates an IPv4 CIDR block and an Amazon\-provided IPv6
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-vpccidrblock--examples--Associate_an_IPv4_CIDR_block_and_Amazon-provided_IPv6_CIDR_block--yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpccidrblock--examples--Associate_an_IPv4_CIDR_block_and_an_Amazon-provided_IPv6_CIDR_block--yaml"></a>
 
 ```
 Resources:

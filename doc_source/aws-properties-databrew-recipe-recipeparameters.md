@@ -402,7 +402,7 @@ Indicates if this column is participating in a split transform\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Input`  <a name="cfn-databrew-recipe-recipeparameters-input"></a>
-The input location to load the dataset from \- Amazon S3 or Data Catalog\.  
+The input location to load the dataset from \- Amazon S3 or AWS Glue Data Catalog\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -522,7 +522,7 @@ The ending pattern to split between\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PatternOptions`  <a name="cfn-databrew-recipe-recipeparameters-patternoptions"></a>
-For splitting by multiple delimiters: A JSON\-encoded string that lists the patterns inte format\. For example: `[{\"pattern\":\"1\",\"includeInSplit\":true}]`  
+For splitting by multiple delimiters: A JSON\-encoded string that lists the patterns in the format\. For example: `[{\"pattern\":\"1\",\"includeInSplit\":true}]`  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -2,6 +2,8 @@
 
 The AWS::MediaConnect::FlowSource resource is the external video content that includes configuration information \(encryption and source type\) and a network address\. Each flow has at least one source\. A standard source comes from a source other than another AWS Elemental MediaConnect flow, such as an on\-premises encoder\. An entitled source comes from a MediaConnect flow that is owned by another AWS account and has granted an entitlement to your account\.
 
+Note: MediaConnect does not currently support using CloudFormation to add sources that use the SRT\-listener protocol\.
+
 ## Syntax<a name="aws-resource-mediaconnect-flowsource-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -93,7 +95,7 @@ The maximum latency in milliseconds for RIST and Zixi\-based streams\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-mediaconnect-flowsource-name"></a>
-The name of the source\.  
+The name of the VPC interface\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

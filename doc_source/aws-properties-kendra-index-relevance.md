@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Freshness](#cfn-kendra-index-relevance-freshness)" : Boolean,
   "[Importance](#cfn-kendra-index-relevance-importance)" : Integer,
   "[RankOrder](#cfn-kendra-index-relevance-rankorder)" : String,
-  "[ValueImportanceItems](#cfn-kendra-index-relevance-valueimportanceitems)" : ValueImportanceItems
+  "[ValueImportanceItems](#cfn-kendra-index-relevance-valueimportanceitems)" : [ ValueImportanceItem, ... ]
 }
 ```
 
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Importance](#cfn-kendra-index-relevance-importance): Integer
   [RankOrder](#cfn-kendra-index-relevance-rankorder): String
   [ValueImportanceItems](#cfn-kendra-index-relevance-valueimportanceitems): 
-    ValueImportanceItems
+    - ValueImportanceItem
 ```
 
 ## Properties<a name="aws-properties-kendra-index-relevance-properties"></a>
@@ -69,5 +69,5 @@ Only applies to `LONG` and `DOUBLE` fields\.
 An array of key\-value pairs that contains an array of values that should be given a different boost when they appear in the search result list\. For example, if you are boosting query terms that match the department field in the result, query terms that match the department field are boosted in the result\. You can add entries from the department field to boost documents with those values higher\.  
 For example, you can add entries to the map with names of departments\. If you add "HR", 5 and "Legal",3 those departments are given special attention when they appear in the metadata of a document\.  
 *Required*: No  
-*Type*: [ValueImportanceItems](aws-properties-kendra-index-valueimportanceitems.md)  
+*Type*: List of [ValueImportanceItem](aws-properties-kendra-index-valueimportanceitem.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

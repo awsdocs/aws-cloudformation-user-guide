@@ -2,7 +2,7 @@
 
 Creates a new IAM user for your AWS account\.
 
- For information about limitations on the number of IAM users you can create, see [Limitations on IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*\.
+ For information about quotas for the number of IAM users you can create, see [IAM and AWS STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
 
 ## Syntax<a name="aws-properties-iam-user-syntax"></a>
 
@@ -49,13 +49,15 @@ Properties:
 ## Properties<a name="aws-properties-iam-user-properties"></a>
 
 `Groups`  <a name="cfn-iam-user-groups"></a>
-A list of groups to which you want to add the user\.  
+A list of group names to which you want to add the user\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoginProfile`  <a name="cfn-iam-user-loginprofile"></a>
- Creates a password for the specified user, giving the user the ability to access AWS services through the AWS Management Console\. For more information about managing passwords, see [Managing Passwords](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_ManagingLogins.html) in the *IAM User Guide*\.  
+Creates a password for the specified IAM user\. A password allows an IAM user to access AWS services through the AWS Management Console\.  
+You can use the AWS CLI, the AWS API, or the **Users** page in the IAM console to create a password for any IAM user\. Use [ChangePassword](https://docs.aws.amazon.com/IAM/latest/APIReference/API_ChangePassword.html) to update your own existing password in the **My Security Credentials** page in the AWS Management Console\.  
+For more information about managing passwords, see [Managing passwords](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_ManagingLogins.html) in the *IAM User Guide*\.  
 *Required*: No  
 *Type*: [LoginProfile](aws-properties-iam-user-loginprofile.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -68,7 +70,7 @@ For more information about ARNs, see [Amazon Resource Names \(ARNs\) and AWS Ser
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Path`  <a name="cfn-iam-user-path"></a>
- The path for the user name\. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
+ The path for the user name\. For more information about paths, see [IAM identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
 This parameter is optional\. If it is not included, it defaults to a slash \(/\)\.  
 This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of either a forward slash \(/\) by itself or a string that must begin and end with forward slashes\. In addition, it can contain any ASCII character from the \! \(`\u0021`\) through the DEL character \(`\u007F`\), including most punctuation characters, digits, and upper and lowercased letters\.  
 *Required*: No  
@@ -93,8 +95,8 @@ For information about limits on the number of inline policies that you can embed
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-iam-user-tags"></a>
-A list of tags that you want to attach to the newly created user\. Each tag consists of a key name and an associated value\. For more information about tagging, see [Tagging IAM Identities](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html) in the *IAM User Guide*\.  
-If any one of the tags is invalid or if you exceed the allowed number of tags per user, then the entire request fails and the user is not created\.
+A list of tags that you want to attach to the new user\. Each tag consists of a key name and an associated value\. For more information about tagging, see [Tagging IAM resources](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html) in the *IAM User Guide*\.  
+If any one of the tags is invalid or if you exceed the allowed maximum number of tags, then the entire request fails and the resource is not created\.
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `50`  

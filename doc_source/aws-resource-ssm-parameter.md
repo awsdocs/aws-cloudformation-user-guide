@@ -83,7 +83,7 @@ The name of the parameter\.
 
 `Policies`  <a name="cfn-ssm-parameter-policies"></a>
 Information about the policies assigned to a parameter\.  
- [Assigning parameter policies](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-policies.html) in the *AWS Systems Manager User Guide*\.  
+ [Assigning parameter policies](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-policies.html) in the * AWS Systems Manager User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -120,7 +120,7 @@ The parameter value\.
 
 ### Ref<a name="aws-resource-ssm-parameter-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Name of the SSM parameter\. For example, `ssm-myparameter-ABCNPH3XCAO6`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the SSM parameter\. For example, `ssm-myparameter-ABCNPH3XCAO6`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

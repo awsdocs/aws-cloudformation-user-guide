@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dlm-lifecyclepolicy-encryptionconfiguration-properties"></a>
 
 `CmkArn`  <a name="cfn-dlm-lifecyclepolicy-encryptionconfiguration-cmkarn"></a>
-The Amazon Resource Name \(ARN\) of the AWS KMS customer master key \(CMK\) to use for EBS encryption\. If this parameter is not specified, your AWS managed CMK for EBS is used\.  
+The Amazon Resource Name \(ARN\) of the AWS KMS key to use for EBS encryption\. If this parameter is not specified, the default KMS key for the account is used\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

@@ -48,7 +48,7 @@ Provides configuration information for crawling knowledge articles in the Servic
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretArn`  <a name="cfn-kendra-datasource-servicenowconfiguration-secretarn"></a>
-The Amazon Resource Name \(ARN\) of the AWS Secret Manager secret that contains the user name and password required to connect to the ServiceNow instance\.  
+The Amazon Resource Name \(ARN\) of the AWS Secrets Manager secret that contains the user name and password required to connect to the ServiceNow instance\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

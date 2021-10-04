@@ -1,6 +1,6 @@
 # AWS::EC2::CarrierGateway<a name="aws-resource-ec2-carriergateway"></a>
 
-Creates a carrier gateway\. For more information about carrier gateways, see [Carrier gateways](https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#wavelength-carrier-gateway) in the *AWS Wavelength Developer Guide*\.
+Creates a carrier gateway\. For more information about carrier gateways, see [Carrier gateways](https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#wavelength-carrier-gateway) in the * AWS Wavelength Developer Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-carriergateway-syntax"></a>
 
@@ -66,6 +66,6 @@ The AWS account ID of the owner of the carrier gateway\.
 The state of the carrier gateway\.
 
 ## See also<a name="aws-resource-ec2-carriergateway--seealso"></a>
-+ [Carrier gateways](https://docs.aws.amazon.com/vpc/latest/userguide/Carrier_Gateway.html) in *Amazon Virtual Private Cloud User Guide*
++ [Carrier gateways](https://docs.aws.amazon.com/vpc/latest/userguide/Carrier_Gateway.html) in *Amazon VPC User Guide*
 + [CreateCarrierGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateCarrierGateway.html) in the *Amazon EC2 API Reference*
 

@@ -1,4 +1,4 @@
-# DataSync resource type reference<a name="AWS_DataSync"></a>
+# AWS DataSync resource type reference<a name="AWS_DataSync"></a>
 
 **Resource types**
 + [AWS::DataSync::Agent](aws-resource-datasync-agent.md)

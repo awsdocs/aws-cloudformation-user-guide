@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel Fmp4HlsSettings<a name="aws-properties-medialive-channel-fmp4hlssettings"></a>
 
-Fmp4 Hls Settings
+Settings for the fMP4 containers\.
+
+The parent of this entity is HlsSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-fmp4hlssettings-syntax"></a>
 

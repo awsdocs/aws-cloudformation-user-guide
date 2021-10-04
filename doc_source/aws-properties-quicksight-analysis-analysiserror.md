@@ -1,6 +1,6 @@
 # AWS::QuickSight::Analysis AnalysisError<a name="aws-properties-quicksight-analysis-analysiserror"></a>
 
-A metadata error structure for an analysis\.
+Analysis error\.
 
 ## Syntax<a name="aws-properties-quicksight-analysis-analysiserror-syntax"></a>
 

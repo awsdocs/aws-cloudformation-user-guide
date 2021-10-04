@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudfront-cachepolicy-cachepolicyconfig-properties"></a>
 
 `Comment`  <a name="cfn-cloudfront-cachepolicy-cachepolicyconfig-comment"></a>
-A comment to describe the cache policy\.  
+A comment to describe the cache policy\. The comment cannot be longer than 128 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

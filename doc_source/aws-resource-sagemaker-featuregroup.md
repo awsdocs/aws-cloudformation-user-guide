@@ -87,13 +87,13 @@ The name of the `FeatureGroup`\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OfflineStoreConfig`  <a name="cfn-sagemaker-featuregroup-offlinestoreconfig"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration of an `OfflineStore`\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OnlineStoreConfig`  <a name="cfn-sagemaker-featuregroup-onlinestoreconfig"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration of an `OnlineStore`\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

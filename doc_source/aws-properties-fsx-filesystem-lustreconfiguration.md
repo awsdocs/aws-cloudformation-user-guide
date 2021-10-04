@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AutomaticBackupRetentionDays](#cfn-fsx-filesystem-lustreconfiguration-automaticbackupretentiondays)" : Integer,
   "[CopyTagsToBackups](#cfn-fsx-filesystem-lustreconfiguration-copytagstobackups)" : Boolean,
   "[DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-lustreconfiguration-dailyautomaticbackupstarttime)" : String,
+  "[DataCompressionType](#cfn-fsx-filesystem-lustreconfiguration-datacompressiontype)" : String,
   "[DeploymentType](#cfn-fsx-filesystem-lustreconfiguration-deploymenttype)" : String,
   "[DriveCacheType](#cfn-fsx-filesystem-lustreconfiguration-drivecachetype)" : String,
   "[ExportPath](#cfn-fsx-filesystem-lustreconfiguration-exportpath)" : String,
@@ -31,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [AutomaticBackupRetentionDays](#cfn-fsx-filesystem-lustreconfiguration-automaticbackupretentiondays): Integer
   [CopyTagsToBackups](#cfn-fsx-filesystem-lustreconfiguration-copytagstobackups): Boolean
   [DailyAutomaticBackupStartTime](#cfn-fsx-filesystem-lustreconfiguration-dailyautomaticbackupstarttime): String
+  [DataCompressionType](#cfn-fsx-filesystem-lustreconfiguration-datacompressiontype): String
   [DeploymentType](#cfn-fsx-filesystem-lustreconfiguration-deploymenttype): String
   [DriveCacheType](#cfn-fsx-filesystem-lustreconfiguration-drivecachetype): String
   [ExportPath](#cfn-fsx-filesystem-lustreconfiguration-exportpath): String
@@ -71,6 +73,16 @@ A boolean flag indicating whether tags for the file system should be copied to b
 A recurring daily time, in the format` HH:MM`\. `HH` is the zero\-padded hour of the day \(0\-23\), and `MM` is the zero\-padded minute of the hour\. For example, `05:00` specifies 5 AM daily\. Only valid for use with `PERSISTENT_1` deployment types\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DataCompressionType`  <a name="cfn-fsx-filesystem-lustreconfiguration-datacompressiontype"></a>
+Sets the data compression configuration for the file system\. `DataCompressionType` can have the following values:  
++  `NONE` \- \(Default\) Data compression is turned off when the file system is created\.
++  `LZ4` \- Data compression is turned on with the LZ4 algorithm\.
+For more information, see [Lustre data compression](https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html)\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `LZ4 | NONE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentType`  <a name="cfn-fsx-filesystem-lustreconfiguration-deploymenttype"></a>

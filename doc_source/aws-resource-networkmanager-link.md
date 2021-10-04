@@ -49,7 +49,7 @@ The bandwidth for the link\.
 
 `Description`  <a name="cfn-networkmanager-link-description"></a>
 A description of the link\.  
-Length Constraints: Maximum length of 256 characters\.  
+Constraints: Maximum length of 256 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -62,8 +62,7 @@ The ID of the global network\.
 
 `Provider`  <a name="cfn-networkmanager-link-provider"></a>
 The provider of the link\.  
-Constraints: Cannot include the following characters: \| \\ ^  
-Length Constraints: Maximum length of 128 characters\.  
+Constraints: Maximum length of 128 characters\. Cannot include the following characters: \| \\ ^  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -82,8 +81,7 @@ The tags for the link\.
 
 `Type`  <a name="cfn-networkmanager-link-type"></a>
 The type of the link\.  
-Constraints: Cannot include the following characters: \| \\ ^  
-Length Constraints: Maximum length of 128 characters\.  
+Constraints: Maximum length of 128 characters\. Cannot include the following characters: \| \\ ^  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,4 +1,4 @@
-# Network Firewall resource type reference<a name="AWS_NetworkFirewall"></a>
+# AWS Network Firewall resource type reference<a name="AWS_NetworkFirewall"></a>
 
 **Resource types**
 + [AWS::NetworkFirewall::Firewall](aws-resource-networkfirewall-firewall.md)

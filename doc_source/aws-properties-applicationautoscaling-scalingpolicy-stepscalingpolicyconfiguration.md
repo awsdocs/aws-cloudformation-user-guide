@@ -1,6 +1,6 @@
 # AWS::ApplicationAutoScaling::ScalingPolicy StepScalingPolicyConfiguration<a name="aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration"></a>
 
- `StepScalingPolicyConfiguration` is a property of [ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html) that specifies a step scaling policy configuration to use with Application Auto Scaling\. 
+ `StepScalingPolicyConfiguration` is a property of the [AWS::ApplicationAutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html) resource that specifies a step scaling policy configuration for Application Auto Scaling\. 
 
 For more information, see [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/application/APIReference/API_PutScalingPolicy.html) in the *Application Auto Scaling API Reference*\. For more information about step scaling policies, see [Step scaling policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html) in the *Application Auto Scaling User Guide*\.
 
@@ -44,7 +44,7 @@ Specifies whether the `ScalingAdjustment` value in the `StepAdjustment` property
 The amount of time, in seconds, to wait for a previous scaling activity to take effect\.   
 With scale\-out policies, the intention is to continuously \(but not excessively\) scale out\. After Application Auto Scaling successfully scales out using a step scaling policy, it starts to calculate the cooldown time\. The scaling policy won't increase the desired capacity again unless either a larger scale out is triggered or the cooldown period ends\. While the cooldown period is in effect, capacity added by the initiating scale\-out activity is calculated as part of the desired capacity for the next scale\-out activity\. For example, when an alarm triggers a step scaling policy to increase the capacity by 2, the scaling activity completes successfully, and a cooldown period starts\. If the alarm triggers again during the cooldown period but at a more aggressive step adjustment of 3, the previous increase of 2 is considered part of the current capacity\. Therefore, only 1 is added to the capacity\.  
 With scale\-in policies, the intention is to scale in conservatively to protect your application’s availability, so scale\-in activities are blocked until the cooldown period has expired\. However, if another alarm triggers a scale\-out activity during the cooldown period after a scale\-in activity, Application Auto Scaling scales out the target immediately\. In this case, the cooldown period for the scale\-in activity stops and doesn't complete\.  
-Application Auto Scaling provides a default value of 300 for the following scalable targets:  
+Application Auto Scaling provides a default value of 600 for Amazon ElastiCache replication groups and a default value of 300 for the following scalable targets:  
 + ECS services
 + Spot Fleet requests
 + EMR clusters

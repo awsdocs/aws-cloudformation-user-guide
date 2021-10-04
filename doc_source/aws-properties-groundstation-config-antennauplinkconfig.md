@@ -10,8 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[SpectrumConfig](#cfn-groundstation-config-antennauplinkconfig-spectrumconfig)" : SpectrumConfig,
-  "[TargetEirp](#cfn-groundstation-config-antennauplinkconfig-targeteirp)" : Eirp
+  "[SpectrumConfig](#cfn-groundstation-config-antennauplinkconfig-spectrumconfig)" : UplinkSpectrumConfig,
+  "[TargetEirp](#cfn-groundstation-config-antennauplinkconfig-targeteirp)" : Eirp,
+  "[TransmitDisabled](#cfn-groundstation-config-antennauplinkconfig-transmitdisabled)" : Boolean
 }
 ```
 
@@ -19,23 +20,30 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [SpectrumConfig](#cfn-groundstation-config-antennauplinkconfig-spectrumconfig): 
-    SpectrumConfig
+    UplinkSpectrumConfig
   [TargetEirp](#cfn-groundstation-config-antennauplinkconfig-targeteirp): 
     Eirp
+  [TransmitDisabled](#cfn-groundstation-config-antennauplinkconfig-transmitdisabled): Boolean
 ```
 
 ## Properties<a name="aws-properties-groundstation-config-antennauplinkconfig-properties"></a>
 
 `SpectrumConfig`  <a name="cfn-groundstation-config-antennauplinkconfig-spectrumconfig"></a>
  Defines the spectrum configuration\.   
-*Required*: Yes  
-*Type*: [SpectrumConfig](aws-properties-groundstation-config-spectrumconfig.md)  
+*Required*: No  
+*Type*: [UplinkSpectrumConfig](aws-properties-groundstation-config-uplinkspectrumconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetEirp`  <a name="cfn-groundstation-config-antennauplinkconfig-targeteirp"></a>
  The equivalent isotropically radiated power \(EIRP\) to use for uplink transmissions\. Valid values are between 20\.0 to 50\.0 dBW\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: [Eirp](aws-properties-groundstation-config-eirp.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TransmitDisabled`  <a name="cfn-groundstation-config-antennauplinkconfig-transmitdisabled"></a>
+ Whether or not uplink transmit is disabled\.   
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-groundstation-config-antennauplinkconfig--examples"></a>

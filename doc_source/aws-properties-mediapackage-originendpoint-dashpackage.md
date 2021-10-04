@@ -22,7 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[SegmentDurationSeconds](#cfn-mediapackage-originendpoint-dashpackage-segmentdurationseconds)" : Integer,
   "[SegmentTemplateFormat](#cfn-mediapackage-originendpoint-dashpackage-segmenttemplateformat)" : String,
   "[StreamSelection](#cfn-mediapackage-originendpoint-dashpackage-streamselection)" : StreamSelection,
-  "[SuggestedPresentationDelaySeconds](#cfn-mediapackage-originendpoint-dashpackage-suggestedpresentationdelayseconds)" : Integer
+  "[SuggestedPresentationDelaySeconds](#cfn-mediapackage-originendpoint-dashpackage-suggestedpresentationdelayseconds)" : Integer,
+  "[UtcTiming](#cfn-mediapackage-originendpoint-dashpackage-utctiming)" : String,
+  "[UtcTimingUri](#cfn-mediapackage-originendpoint-dashpackage-utctiminguri)" : String
 }
 ```
 
@@ -46,6 +48,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [StreamSelection](#cfn-mediapackage-originendpoint-dashpackage-streamselection): 
     StreamSelection
   [SuggestedPresentationDelaySeconds](#cfn-mediapackage-originendpoint-dashpackage-suggestedpresentationdelayseconds): Integer
+  [UtcTiming](#cfn-mediapackage-originendpoint-dashpackage-utctiming): String
+  [UtcTimingUri](#cfn-mediapackage-originendpoint-dashpackage-utctiminguri): String
 ```
 
 ## Properties<a name="aws-properties-mediapackage-originendpoint-dashpackage-properties"></a>
@@ -147,4 +151,16 @@ Limitations for outputs from the endpoint, based on the video bitrate\.
 Amount of time \(in seconds\) that the player should be from the live point at the end of the manifest\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`UtcTiming`  <a name="cfn-mediapackage-originendpoint-dashpackage-utctiming"></a>
+ Determines the type of UTC timing included in the DASH Media Presentation Description \(MPD\)\.   
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`UtcTimingUri`  <a name="cfn-mediapackage-originendpoint-dashpackage-utctiminguri"></a>
+ Specifies the value attribute of the UTC timing field when utcTiming is set to HTTP\-ISO or HTTP\-HEAD\.   
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

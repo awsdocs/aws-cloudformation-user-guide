@@ -30,12 +30,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Condition`  <a name="cfn-amplify-app-customrule-condition"></a>
  The condition for a URL rewrite or redirect rule, such as a country code\.   
+*Length Constraints:* Minimum length of 0\. Maximum length of 2048\.   
+*Pattern:* \(?s\)\.\*  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Source`  <a name="cfn-amplify-app-customrule-source"></a>
  The source pattern for a URL rewrite or redirect rule\.   
+*Length Constraints:* Minimum length of 1\. Maximum length of 2048\.  
+*Pattern:* \(?s\)\.\+  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -52,12 +56,16 @@ Represents a 302 temporary redirect rule\.
 Represents a 404 redirect rule\.  
 404\-200  
 Represents a 404 rewrite rule\.
+*Length Constraints:* Minimum length of 3\. Maximum length of 7\.  
+*Pattern:* \.\{3,7\}  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Target`  <a name="cfn-amplify-app-customrule-target"></a>
  The target pattern for a URL rewrite or redirect rule\.   
+*Length Constraints:* Minimum length of 1\. Maximum length of 2048\.  
+*Pattern:* \(?s\)\.\+  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

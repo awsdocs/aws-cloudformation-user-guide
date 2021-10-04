@@ -49,7 +49,7 @@ Properties:
 
 `DetectorModelDefinition`  <a name="cfn-iotevents-detectormodel-detectormodeldefinition"></a>
 Information that defines how a detector operates\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [DetectorModelDefinition](aws-properties-iotevents-detectormodel-detectormodeldefinition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -88,7 +88,7 @@ This parameter uses a JSON\-path expression to select the attribute\-value pair 
 
 `RoleArn`  <a name="cfn-iotevents-detectormodel-rolearn"></a>
 The ARN of the role that grants permission to AWS IoT Events to perform its operations\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  

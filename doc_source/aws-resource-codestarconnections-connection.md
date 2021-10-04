@@ -2,7 +2,7 @@
 
 The AWS::CodeStarConnections::Connection resource can be used to connect external source providers with services like AWS CodePipeline\.
 
- **Note:** A connection created through CloudFormation is in `PENDING` status by default\. You can make its status `AVAILABLE` by updating the connection in the console\.
+ **Note:** A connection created through AWS CloudFormation is in `PENDING` status by default\. You can make its status `AVAILABLE` by updating the connection in the console\.
 
 ## Syntax<a name="aws-resource-codestarconnections-connection-syntax"></a>
 

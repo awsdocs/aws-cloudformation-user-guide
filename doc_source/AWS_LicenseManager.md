@@ -1,4 +1,4 @@
-# LicenseManager resource type reference<a name="AWS_LicenseManager"></a>
+# AWS License Manager resource type reference<a name="AWS_LicenseManager"></a>
 
 **Resource types**
 + [AWS::LicenseManager::Grant](aws-resource-licensemanager-grant.md)

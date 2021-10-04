@@ -67,8 +67,8 @@ Indicates whether data trace logging is enabled for methods in the stage\. API G
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HttpMethod`  <a name="cfn-apigateway-stage-methodsetting-httpmethod"></a>
-The HTTP method\. To apply settings to multiple resources and methods, specify an asterisk \(`*`\) in both `HttpMethod` and `ResourcePath`\.  
-*Required*: No  
+The HTTP method\. To apply settings to multiple resources and methods, specify an asterisk \(`*`\) for the `HttpMethod` and `/*` for the `ResourcePath`\. This parameter is required when you specify a `MethodSetting`\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -85,8 +85,8 @@ Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourcePath`  <a name="cfn-apigateway-stage-methodsetting-resourcepath"></a>
-The resource path for this method\. Forward slashes \(`/`\) are encoded as `~1` and the initial slash must include a forward slash\. For example, the path value `/resource/subresource` must be encoded as `/~1resource~1subresource`\. To specify the root path, use only a slash \(`/`\)\. To apply settings to multiple resources and methods, specify an asterisk \(`*`\) in both `HttpMethod` and `ResourcePath`\.  
-*Required*: No  
+The resource path for this method\. Forward slashes \(`/`\) are encoded as `~1` and the initial slash must include a forward slash\. For example, the path value `/resource/subresource` must be encoded as `/~1resource~1subresource`\. To specify the root path, use only a slash \(`/`\)\. To apply settings to multiple resources and methods, specify an asterisk \(`*`\) for the `HttpMethod` and `/*` for the `ResourcePath`\. This parameter is required when you specify a `MethodSetting`\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

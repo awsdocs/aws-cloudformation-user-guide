@@ -47,28 +47,31 @@ Properties:
 ## Properties<a name="aws-resource-quicksight-theme-properties"></a>
 
 `AwsAccountId`  <a name="cfn-quicksight-theme-awsaccountid"></a>
-Not currently supported by AWS CloudFormation\.  
+The ID of the AWS account where you want to store the new theme\.   
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `12`  
+*Maximum*: `12`  
+*Pattern*: `^[0-9]{12}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BaseThemeId`  <a name="cfn-quicksight-theme-basethemeid"></a>
-The Amazon QuickSight\-defined ID of the theme that a custom theme inherits from\. All themes initially inherit from a default QuickSight theme\.  
+The ID of the theme that a custom theme will inherit from\. All themes inherit from one of the starting themes defined by Amazon QuickSight\. For a list of the starting themes, use `ListThemes` or choose **Themes** from within a Amazon QuickSight analysis\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `2048`  
+*Maximum*: `512`  
 *Pattern*: `[\w\-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Configuration`  <a name="cfn-quicksight-theme-configuration"></a>
-The theme configuration, which contains all the theme display properties\.  
+The theme configuration, which contains the theme display properties\.  
 *Required*: No  
 *Type*: [ThemeConfiguration](aws-properties-quicksight-theme-themeconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-quicksight-theme-name"></a>
-The name that the user gives to the theme\.  
+A display name for the theme\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -76,51 +79,50 @@ The name that the user gives to the theme\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Permissions`  <a name="cfn-quicksight-theme-permissions"></a>
-Not currently supported by AWS CloudFormation\.  
+A valid grouping of resource permissions to apply to the new theme\.   
 *Required*: No  
 *Type*: List of [ResourcePermission](aws-properties-quicksight-theme-resourcepermission.md)  
+*Maximum*: `64`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-quicksight-theme-tags"></a>
-Not currently supported by AWS CloudFormation\.  
+A map of the key\-value pairs for the resource tag or tags that you want to add to the resource\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThemeId`  <a name="cfn-quicksight-theme-themeid"></a>
-The identifier that the user gives to the theme\.  
+An ID for the theme that you want to create\. The theme ID is unique per AWS Region in each AWS account\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `2048`  
+*Maximum*: `512`  
 *Pattern*: `[\w\-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VersionDescription`  <a name="cfn-quicksight-theme-versiondescription"></a>
-Not currently supported by AWS CloudFormation\.  
+A description of the first version of the theme that you're creating\. Every time `UpdateTheme` is called, a new version is created\. Each version of the theme has a description of the version in the `VersionDescription` field\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `512`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-quicksight-theme-return-values"></a>
-
-### Ref<a name="aws-resource-quicksight-theme-return-values-ref"></a>
 
 ### Fn::GetAtt<a name="aws-resource-quicksight-theme-return-values-fn--getatt"></a>
 
 #### <a name="aws-resource-quicksight-theme-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The Amazon Resource Name \(ARN\) of the theme\.
 
 `CreatedTime`  <a name="CreatedTime-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The time the theme was created\.
 
 `LastUpdatedTime`  <a name="LastUpdatedTime-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The time the theme was last updated\.
 
 `Type`  <a name="Type-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
-
-`Version`  <a name="Version-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Theme type\.

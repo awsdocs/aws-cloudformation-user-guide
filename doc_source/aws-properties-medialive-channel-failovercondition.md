@@ -2,6 +2,8 @@
 
 Failover Condition settings\. There can be multiple failover conditions inside AutomaticInputFailoverSettings\.
 
+The parent of this entity is AutomaticInputFailoverSettings\.
+
 ## Syntax<a name="aws-properties-medialive-channel-failovercondition-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -24,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-failovercondition-properties"></a>
 
 `FailoverConditionSettings`  <a name="cfn-medialive-channel-failovercondition-failoverconditionsettings"></a>
-Failover condition type\-specific settings\.  
+Settings for a specific failover condition\.  
 *Required*: No  
 *Type*: [FailoverConditionSettings](aws-properties-medialive-channel-failoverconditionsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

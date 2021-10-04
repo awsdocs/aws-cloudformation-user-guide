@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel CdiInputSpecification<a name="aws-properties-medialive-channel-cdiinputspecification"></a>
 
-<a name="aws-properties-medialive-channel-cdiinputspecification-description"></a>The `CdiInputSpecification` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::MediaLive::Channel](aws-resource-medialive-channel.md)\.
+The input specification for this channel\. It specifies the key characteristics of CDI inputs for this channel, when those characteristics are different from other inputs\. 
+
+This entity is at the top level in the channel\.
 
 ## Syntax<a name="aws-properties-medialive-channel-cdiinputspecification-syntax"></a>
 

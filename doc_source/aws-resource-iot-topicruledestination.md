@@ -47,13 +47,13 @@ Confirmation was completed, and traffic to this destination is allowed\. You can
 DISABLED  
 Confirmation was completed, and traffic to this destination is not allowed\. You can set status to `ENABLED` by calling `UpdateTopicRuleDestination`\.  
 ERROR  
-Confirmation could not be completed, for example if the confirmation timed out\. You can call `GetTopicRuleDestination` for details about the error\. You can set status to `IN_PROGRESS` by calling `UpdateTopicRuleDestination`\. Calling `UpdateTopicRuleDestination` causes a new confirmation challenge to be sent to your confirmation endpoint\.
+Confirmation could not be completed; for example, if the confirmation timed out\. You can call `GetTopicRuleDestination` for details about the error\. You can set status to `IN_PROGRESS` by calling `UpdateTopicRuleDestination`\. Calling `UpdateTopicRuleDestination` causes a new confirmation challenge to be sent to your confirmation endpoint\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcProperties`  <a name="cfn-iot-topicruledestination-vpcproperties"></a>
-Specifies a VPC with the specified IPv4 CIDR block\. The smallest VPC you can create uses a /28 netmask \(16 IPv4 addresses\), and the largest uses a /16 netmask \(65,536 IPv4 addresses\)\.  
+Properties of the virtual private cloud \(VPC\) connection\.  
 *Required*: No  
 *Type*: [VpcDestinationProperties](aws-properties-iot-topicruledestination-vpcdestinationproperties.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -82,4 +82,4 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 The topic rule destination URL\.
 
 `StatusReason`  <a name="StatusReason-fn::getatt"></a>
-Additional details or reason why the topic rule destination is in the current status\.
+Not currently supported by AWS CloudFormation\.

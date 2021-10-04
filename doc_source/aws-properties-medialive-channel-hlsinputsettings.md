@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-hlsinputsettings-properties"></a>
 
 `Bandwidth`  <a name="cfn-medialive-channel-hlsinputsettings-bandwidth"></a>
-When specified, the HLS stream with the m3u8 BANDWIDTH that most closely matches this value is chosen\. Otherwise, the highest bandwidth stream in the m3u8 is chosen\. The bitrate is specified in bits per second, as in an HLS manifest\.  
+When specified, the HLS stream with the m3u8 bandwidth that most closely matches this value is chosen\. Otherwise, the highest bandwidth stream in the m3u8 is chosen\. The bitrate is specified in bits per second, as in an HLS manifest\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

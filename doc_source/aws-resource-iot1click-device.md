@@ -68,9 +68,9 @@ A Boolean value indicating whether the device is enabled \(`true`\) or not \(`fa
 
 ## Examples<a name="aws-resource-iot1click-device--examples"></a>
 
-### Enable an AWS IoT Device<a name="aws-resource-iot1click-device--examples--Enable_an_AWS_IoT_Device"></a>
+### Enable a device<a name="aws-resource-iot1click-device--examples--Enable_a_device"></a>
 
-#### JSON<a name="aws-resource-iot1click-device--examples--Enable_an_AWS_IoT_Device--json"></a>
+#### JSON<a name="aws-resource-iot1click-device--examples--Enable_a_device--json"></a>
 
 ```
 {
@@ -84,7 +84,7 @@ A Boolean value indicating whether the device is enabled \(`true`\) or not \(`fa
 }
 ```
 
-#### YAML<a name="aws-resource-iot1click-device--examples--Enable_an_AWS_IoT_Device--yaml"></a>
+#### YAML<a name="aws-resource-iot1click-device--examples--Enable_a_device--yaml"></a>
 
 ```
 SampleDevice:

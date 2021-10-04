@@ -80,7 +80,7 @@ A unique identifier for a Realtime script\.
 
 ### Create a Realtime Servers Script<a name="aws-resource-gamelift-script--examples--Create_a_Realtime_Servers_Script"></a>
 
-The following example creates a GameLift script named `MyRealtimeScript`\. The zipped script files are located in an S3 bucket, specified by the `S3Bucket` and `S3Key` input parameters\. The example also creates the AWS Identity and Access Management \(IAM\) role that GameLift assumes so that it has permissions to download the script files\.
+The following example creates a GameLift script named `MyRealtimeScript`\. The zipped script files are located in an S3 bucket, specified by the `S3Bucket` and `S3Key` input parameters\. The example also creates the AWS Identity and Access Management role that GameLift assumes so that it has permissions to download the script files\.
 
 #### JSON<a name="aws-resource-gamelift-script--examples--Create_a_Realtime_Servers_Script--json"></a>
 
@@ -191,6 +191,6 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-gamelift-script--seealso"></a>
-+ [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
-+ [ Upload Script Files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-script-uploading.html#realtime-script-uploading-s3) in the *Amazon GameLift Developer Guide*
++ [ Create GameLift resources using Amazon CloudFront](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++ [ Upload script files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-script-uploading.html#realtime-script-uploading-s3) in the *Amazon GameLift Developer Guide*
 +  [CreateScript](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateScript.html) in the *Amazon GameLift API Reference* 

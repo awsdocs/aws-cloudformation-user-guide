@@ -1,6 +1,6 @@
 # AWS::Batch::JobDefinition FargatePlatformConfiguration<a name="aws-properties-batch-jobdefinition-containerproperties-fargateplatformconfiguration"></a>
 
-The platform configuration for jobs running on Fargate resources\. For jobs that run on EC2 resources, you shouldn't specify this parameter\.
+The platform configuration for jobs that are running on Fargate resources\. Jobs that run on EC2 resources must not specify this parameter\.
 
 ## Syntax<a name="aws-properties-batch-jobdefinition-containerproperties-fargateplatformconfiguration-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-jobdefinition-containerproperties-fargateplatformconfiguration-properties"></a>
 
 `PlatformVersion`  <a name="cfn-batch-jobdefinition-containerproperties-fargateplatformconfiguration-platformversion"></a>
-The AWS Fargate platform version where the jobs are running\. A platform version is specified only for jobs running on Fargate resources\. If one isn't specified, the `LATEST` platform version is used by default\. This uses a recent, approved version of the AWS Fargate platform for compute resources\. For more information, see [AWS Fargate platform versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The AWS Fargate platform version where the jobs are running\. A platform version is specified only for jobs that are running on Fargate resources\. If one isn't specified, the `LATEST` platform version is used by default\. This uses a recent, approved version of the AWS Fargate platform for compute resources\. For more information, see [ AWS Fargate platform versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

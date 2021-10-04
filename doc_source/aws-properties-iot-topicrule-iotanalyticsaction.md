@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[BatchMode](#cfn-iot-topicrule-iotanalyticsaction-batchmode)" : Boolean,
   "[ChannelName](#cfn-iot-topicrule-iotanalyticsaction-channelname)" : String,
   "[RoleArn](#cfn-iot-topicrule-iotanalyticsaction-rolearn)" : String
 }
@@ -18,11 +19,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-iotanalyticsaction-syntax.yaml"></a>
 
 ```
+  [BatchMode](#cfn-iot-topicrule-iotanalyticsaction-batchmode): Boolean
   [ChannelName](#cfn-iot-topicrule-iotanalyticsaction-channelname): String
   [RoleArn](#cfn-iot-topicrule-iotanalyticsaction-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-iotanalyticsaction-properties"></a>
+
+`BatchMode`  <a name="cfn-iot-topicrule-iotanalyticsaction-batchmode"></a>
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ChannelName`  <a name="cfn-iot-topicrule-iotanalyticsaction-channelname"></a>
 The name of the IoT Analytics channel to which message data will be sent\.  

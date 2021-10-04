@@ -1,6 +1,6 @@
 # AWS::ECR::ReplicationConfiguration ReplicationRule<a name="aws-properties-ecr-replicationconfiguration-replicationrule"></a>
 
-An array of objects representing the replication destinations for a replication configuration\. A replication configuration may contain only one replication rule but the rule may contain one or more replication destinations\.
+An array of objects representing the replication destinations and repository filters for a replication configuration\.
 
 ## Syntax<a name="aws-properties-ecr-replicationconfiguration-replicationrule-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecr-replicationconfiguration-replicationrule-properties"></a>
 
 `Destinations`  <a name="cfn-ecr-replicationconfiguration-replicationrule-destinations"></a>
-An array of objects representing the details of a replication destination\.  
+An array of objects representing the destination for a replication rule\.  
 *Required*: Yes  
 *Type*: List of [ReplicationDestination](aws-properties-ecr-replicationconfiguration-replicationdestination.md)  
 *Maximum*: `25`  

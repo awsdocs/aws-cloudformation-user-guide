@@ -37,7 +37,7 @@ The number of milliseconds a token is valid after being authenticated\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClientId`  <a name="cfn-appsync-graphqlapi-openidconnectconfig-clientid"></a>
-The client identifier of the Relying party at the OpenID identity provider\. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider\. You can specify a regular expression so the AWS AppSync can validate against multiple client identifiers at a time\.  
+The client identifier of the Relying party at the OpenID identity provider\. This identifier is typically obtained when the Relying party is registered with the OpenID identity provider\. You can specify a regular expression so that AWS AppSync can validate against multiple client identifiers at a time\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

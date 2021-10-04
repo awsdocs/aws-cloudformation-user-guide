@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ses-receiptrule-addheaderaction-properties"></a>
 
 `HeaderName`  <a name="cfn-ses-receiptrule-addheaderaction-headername"></a>
-The name of the header that you want to add to the incoming message\. The name has to contain at least one character, and can contain up to 50 characters\. It can only consist of alphanumeric \(a–z, A–Z, 0–9\) characters and dashes\.  
+The name of the header to add to the incoming message\. The name must contain at least one character, and can contain up to 50 characters\. It consists of alphanumeric \(a–z, A–Z, 0–9\) characters and dashes\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HeaderValue`  <a name="cfn-ses-receiptrule-addheaderaction-headervalue"></a>
-The content that you want to include in the header\. This value can contain up to 2048 characters\. It can't contain newline \(`\n`\) or carraige return \(`\r`\) characters\.  
+The content to include in the header\. This value can contain up to 2048 characters\. It can't contain newline \(`\n`\) or carriage return \(`\r`\) characters\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

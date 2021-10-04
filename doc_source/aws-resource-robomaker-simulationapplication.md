@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RobotSoftwareSuite](#cfn-robomaker-simulationapplication-robotsoftwaresuite)" : RobotSoftwareSuite,
       "[SimulationSoftwareSuite](#cfn-robomaker-simulationapplication-simulationsoftwaresuite)" : SimulationSoftwareSuite,
       "[Sources](#cfn-robomaker-simulationapplication-sources)" : [ SourceConfig, ... ],
-      "[Tags](#cfn-robomaker-simulationapplication-tags)" : Json
+      "[Tags](#cfn-robomaker-simulationapplication-tags)" : {Key : Value, ...}
     }
 }
 ```
@@ -38,7 +38,8 @@ Properties:
     SimulationSoftwareSuite
   [Sources](#cfn-robomaker-simulationapplication-sources): 
     - SourceConfig
-  [Tags](#cfn-robomaker-simulationapplication-tags): Json
+  [Tags](#cfn-robomaker-simulationapplication-tags): 
+    Key : Value
 ```
 
 ## Properties<a name="aws-resource-robomaker-simulationapplication-properties"></a>
@@ -62,19 +63,19 @@ The name of the simulation application\.
 The rendering engine for the simulation application\.  
 *Required*: Yes  
 *Type*: [RenderingEngine](aws-properties-robomaker-simulationapplication-renderingengine.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RobotSoftwareSuite`  <a name="cfn-robomaker-simulationapplication-robotsoftwaresuite"></a>
 The robot software suite \(ROS distribution\) used by the simulation application\.  
 *Required*: Yes  
 *Type*: [RobotSoftwareSuite](aws-properties-robomaker-simulationapplication-robotsoftwaresuite.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SimulationSoftwareSuite`  <a name="cfn-robomaker-simulationapplication-simulationsoftwaresuite"></a>
 The simulation software suite used by the simulation application\.  
 *Required*: Yes  
 *Type*: [SimulationSoftwareSuite](aws-properties-robomaker-simulationapplication-simulationsoftwaresuite.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Sources`  <a name="cfn-robomaker-simulationapplication-sources"></a>
 The sources of the simulation application\.  
@@ -85,7 +86,7 @@ The sources of the simulation application\.
 `Tags`  <a name="cfn-robomaker-simulationapplication-tags"></a>
 A map that contains tag keys and tag values that are attached to the simulation application\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-robomaker-simulationapplication-return-values"></a>
@@ -114,11 +115,11 @@ The current revision id\.
 
 
 
-### Create an AWS RoboMaker Simulation Application<a name="aws-resource-robomaker-simulationapplication--examples--Create_an_AWS_RoboMaker_Simulation_Application"></a>
+### Create an AWS RoboMaker Simulation Application<a name="aws-resource-robomaker-simulationapplication--examples--Create_an__RoboMaker_Simulation_Application"></a>
 
 The following example creates a simulation application\.
 
-#### JSON<a name="aws-resource-robomaker-simulationapplication--examples--Create_an_AWS_RoboMaker_Simulation_Application--json"></a>
+#### JSON<a name="aws-resource-robomaker-simulationapplication--examples--Create_an__RoboMaker_Simulation_Application--json"></a>
 
 ```
 {
@@ -162,7 +163,7 @@ The following example creates a simulation application\.
 }
 ```
 
-#### YAML<a name="aws-resource-robomaker-simulationapplication--examples--Create_an_AWS_RoboMaker_Simulation_Application--yaml"></a>
+#### YAML<a name="aws-resource-robomaker-simulationapplication--examples--Create_an__RoboMaker_Simulation_Application--yaml"></a>
 
 ```
 ---

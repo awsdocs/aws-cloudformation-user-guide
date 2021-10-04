@@ -1,6 +1,6 @@
 # AWS::IoT::TopicRuleDestination VpcDestinationProperties<a name="aws-properties-iot-topicruledestination-vpcdestinationproperties"></a>
 
-The properties of a VPC destination\.
+The properties of a virtual private cloud \(VPC\) destination\.
 
 ## Syntax<a name="aws-properties-iot-topicruledestination-vpcdestinationproperties-syntax"></a>
 
@@ -31,19 +31,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicruledestination-vpcdestinationproperties-properties"></a>
 
 `RoleArn`  <a name="cfn-iot-topicruledestination-vpcdestinationproperties-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the VPC\.  
+The ARN of a role that has permission to create and attach to elastic network interfaces \(ENIs\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityGroups`  <a name="cfn-iot-topicruledestination-vpcdestinationproperties-securitygroups"></a>
-The security groups associated with the VPC\.  
+The security groups of the VPC destination\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-iot-topicruledestination-vpcdestinationproperties-subnetids"></a>
-The ID of the subnet\.  
+The subnet IDs of the VPC destination\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
