@@ -1,6 +1,6 @@
 # AWS::KinesisFirehose::DeliveryStream DynamicPartitioningConfiguration<a name="aws-properties-kinesisfirehose-deliverystream-dynamicpartitioningconfiguration"></a>
 
-The `DynamicPartitioningConfiguration` property type specifies the configuration of the dynamic partitioning mechanism that creates targeted data sets from the streaming data by partitioning it based on partition keys\. 
+The `DynamicPartitioningConfiguration` property type specifies the configuration of the dynamic partitioning mechanism that creates targeted data sets from the streaming data by partitioning it based on partition keys\.
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-dynamicpartitioningconfiguration-syntax"></a>
 
@@ -32,7 +32,7 @@ Specifies whether dynamic partitioning is enabled for this Kinesis Data Firehose
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetryOptions`  <a name="cfn-kinesisfirehose-deliverystream-dynamicpartitioningconfiguration-retryoptions"></a>
-Specifies the retry behavior in case Kinesis Data Firehose is unable to deliver data to an Amazon S3 prefix\.   
+Specifies the retry behavior in case Kinesis Data Firehose is unable to deliver data to an Amazon S3 prefix\.  
 *Required*: No  
 *Type*: [RetryOptions](aws-properties-kinesisfirehose-deliverystream-retryoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

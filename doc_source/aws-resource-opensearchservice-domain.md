@@ -1,6 +1,6 @@
 # AWS::OpenSearchService::Domain<a name="aws-resource-opensearchservice-domain"></a>
 
-The AWS::OpenSearchService::Domain resource creates an Amazon OpenSearch Service domain\.
+The AWS::OpenSearchService::Domain resource creates an Amazon OpenSearch Service \(successor to Amazon Elasticsearch Service\) domain\.
 
 ## Syntax<a name="aws-resource-opensearchservice-domain-syntax"></a>
 
@@ -123,14 +123,14 @@ Whether the domain should encrypt data at rest, and if so, the AWS KMS key to us
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineVersion`  <a name="cfn-opensearchservice-domain-engineversion"></a>
-The version of OpenSearch to use\. The value must be in the format `OpenSearch_X.Y`\. If not specified, the latest version of OpenSearch is used\. For information about the versions that OpenSearch Service supports, see [Supported versions of OpenSearch and Elasticsearch](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/what-is.html#choosing-version) in the *Amazon OpenSearch Service Developer Guide*\.  
+The version of OpenSearch to use\. The value must be in the format `OpenSearch_X.Y` or `Elasticsearch_X.Y`\. If not specified, the latest version of OpenSearch is used\. For information about the versions that OpenSearch Service supports, see [Supported versions of OpenSearch and Elasticsearch](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/what-is.html#choosing-version) in the *Amazon OpenSearch Service Developer Guide*\.  
 If you set the [EnableVersionUpgrade](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html#cfn-attributes-updatepolicy-upgradeopensearchdomain) update policy to `true`, you can update `EngineVersion` without interruption\. When `EnableVersionUpgrade` is set to `false`, or is not specified, updating `EngineVersion` results in [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogPublishingOptions`  <a name="cfn-opensearchservice-domain-logpublishingoptions"></a>
-An object with one or more of the following keys: `SEARCH_SLOW_LOGS`, `APPLICATION_LOGS`, `INDEX_SLOW_LOGS`, `AUDIT_LOGS`, depending on the types of logs you want to publish\. Each key needs a valid `LogPublishingOption` value\. For the full syntax, see the [examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#aws-resource-opensearchservice-domain--examples)\.  
+An object with one or more of the following keys: `SEARCH_SLOW_LOGS`, `ES_APPLICATION_LOGS`, `INDEX_SLOW_LOGS`, `AUDIT_LOGS`, depending on the types of logs you want to publish\. Each key needs a valid `LogPublishingOption` value\. For the full syntax, see the [examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#aws-resource-opensearchservice-domain--examples)\.  
 *Required*: No  
 *Type*: Map of [LogPublishingOption](aws-properties-opensearchservice-domain-logpublishingoption.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -172,7 +172,10 @@ Fn::GetAtt returns a value for a specified attribute of this type\. For more inf
 #### <a name="aws-resource-opensearchservice-domain-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the domain, such as `arn:aws:es:us-west-2:123456789012:domain/mystack-1ab2cdefghij`\. This returned value is the same as the one returned by `AWS::OpenSearchService::Domain.DomainArn`\.
+The Amazon Resource Name \(ARN\) of the domain, such as `arn:aws:es:us-west-2:123456789012:domain/mystack-1ab2cdefghij`\. This returned value is the same as the one returned by `AWS::OpenSearchService::Domain.Arn`\.
+
+`DomainArn`  <a name="DomainArn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 `DomainEndpoint`  <a name="DomainEndpoint-fn::getatt"></a>
 The domain\-specific endpoint used for requests to the OpenSearch APIs, such as `search-mystack-1ab2cdefghij-ab1c2deckoyb3hofw7wpqa3cm.us-west-1.es.amazonaws.com`\.
@@ -224,7 +227,7 @@ The following example creates an OpenSearch Service domain running OpenSearch 1\
          ]
       },
       "LogPublishingOptions": {
-         "APPLICATION_LOGS": {
+         "ES_APPLICATION_LOGS": {
            "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-east-1:123456789012:log-group:/aws/opensearch/domains/opensearch-application-logs",
            "Enabled": true
          },
@@ -275,7 +278,7 @@ OpenSearchServiceDomain:
           Action: 'es:*'
           Resource: 'arn:aws:es:us-east-1:846973539254:domain/test/*'
     LogPublishingOptions:
-      APPLICATION_LOGS:
+      ES_APPLICATION_LOGS:
           CloudWatchLogsLogGroupArn: 'arn:aws:logs:us-east-1:123456789012:log-group:/aws/opensearch/domains/opensearch-application-logs'
           Enabled: true
       SEARCH_SLOW_LOGS:
@@ -427,11 +430,11 @@ The following example creates a domain with VPC options\.
     }
   },
   "Outputs": {
-    "DomainArn": {
+    "Arn": {
       "Value": {
         "Fn::GetAtt": [
           "OpenSearchServiceDomain",
-          "DomainArn"
+          "Arn"
         ]
       }
     },
@@ -543,11 +546,11 @@ Resources:
           ToPort: 443
           CidrIp: 0.0.0.0/0
 Outputs:
-  DomainArn:
+  Arn:
     Value:
       'Fn::GetAtt':
         - OpenSearchServiceDomain
-        - DomainArn
+        - Arn
   DomainEndpoint:
     Value:
       'Fn::GetAtt':

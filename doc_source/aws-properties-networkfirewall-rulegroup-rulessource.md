@@ -44,7 +44,7 @@ These rules contain the inspection criteria and the action to take for traffic t
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
-*Maximum*: `1000000`  
+*Maximum*: `2000000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StatefulRules`  <a name="cfn-networkfirewall-rulegroup-rulessource-statefulrules"></a>

@@ -1,19 +1,15 @@
 # AWS::SecretsManager::Secret<a name="aws-resource-secretsmanager-secret"></a>
 
-The `AWS::SecretsManager::Secret` resource creates a secret and stores it in Secrets Manager\. For more information, see [Secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/terms-concepts.html#term_secret) in the *AWS Secrets Manager User Guide*, and the [CreateSecret API](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html) in the *AWS Secrets Manager API Reference*\.
+Creates a new secret\. A *secret* is a set of credentials, such as a user name and password, that you store in an encrypted form in Secrets Manager\. The secret also includes the connection information to access a database or other service, which Secrets Manager doesn't encrypt\. A secret in Secrets Manager consists of both the protected secret data and the important information needed to manage the secret\.
 
-To specify the `SecretString` encrypted value for the secret, specify either the `GenerateSecretString` or the `SecretString` property in this resource\. You must specify one or the other, but you can't specify both\. We recommend that you use the `GenerateSecretString` property to dynamically generate a random password\. See the [first two examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html#aws-resource-secretsmanager-secret-hardcoded) later in this topic\.
+For information about creating a secret in the console, see [Create a secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_create-basic-secret.html)\.
 
-**Note**  
-You can't generate a secret with a `SecretBinary` secret value using AWS CloudFormation\. You can only create a `SecretString` text\-based secret value\.
+For information about creating a secret using the CLI or SDK, see [CreateSecret](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html)\.
+
+To specify the encrypted value for the secret, you must include either the `GenerateSecretString` or the `SecretString` property, but not both\. We recommend that you use the `GenerateSecretString` property to generate a random password as shown in the examples\. You can't generate a secret with a `SecretBinary` secret value using AWS CloudFormation\.
 
 **Note**  
 Do not create a dynamic reference using a backslash `(\)` as the final value\. AWS CloudFormation cannot resolve those references, which causes a resource failure\. 
-
-After you create the basic secret, you can do any of the following:
-+ Configure the secret with details of the Secrets Manager supported [database or service](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html#full-rotation-support) with credentials stored in the secret\. 
-+ Attach a resource\-based permissions policy to the secret by defining a [AWS::SecretsManager::ResourcePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html) resource type\.
-+ Configure the secret to rotate after a specified number of days by defining a [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html) resource type\.
 
 ## Syntax<a name="aws-resource-secretsmanager-secret-syntax"></a>
 
@@ -57,28 +53,25 @@ Properties:
 ## Properties<a name="aws-resource-secretsmanager-secret-properties"></a>
 
 `Description`  <a name="cfn-secretsmanager-secret-description"></a>
-\(Optional\) Specifies a user\-provided description of the secret\.  
+The description of the secret\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `2048`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GenerateSecretString`  <a name="cfn-secretsmanager-secret-generatesecretstring"></a>
-\(Optional\) Specifies text data that you want to encrypt and store in this new version of the secret\.  
-Either `GenerateSecretString` or `SecretString` must have a value, but not both\. They cannot both be empty\. We recommend that you use the `GenerateSecretString` property to dynamically generate a random password\.  
-If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected secret text in only the `SecretString` parameter\. The Secrets Manager console stores the information as a JSON structure of key/value pairs that the Lambda rotation function knows how to parse\.  
-For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs\. For information on how to format a JSON parameter for the various command line tool environments, see [Using JSON for Parameters](https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json) in the * AWS CLI User Guide*\. For example:  
- `{"username":"bob","password":"abc123xyz456"}`   
-If your command\-line tool or SDK requires quotation marks around the parameter, you should use single quotes to avoid confusion with the double quotes required in the JSON text\.   
+A structure that specifies how to generate a password to encrypt and store in the secret\.   
+Either `GenerateSecretString` or `SecretString` must have a value, but not both\. They cannot both be empty\.  
+We recommend that you specify the maximum length and include every character type that the system you are generating a password for can support\.  
 *Required*: No  
 *Type*: [GenerateSecretString](aws-properties-secretsmanager-secret-generatesecretstring.md)  
-*Minimum*: `0`  
-*Maximum*: `65536`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-secretsmanager-secret-kmskeyid"></a>
-\(Optional\) Specifies the ARN, Key ID, or alias of the AWS KMS key that Secrets Manager uses to encrypt the `SecretString` value for versions of this secret\. If you don't specify this value, then Secrets Manager uses the AWS managed key `aws/secretsmanager`\. If `aws/secretsmanager` doesn't exist, Secrets Manager creates the key the first time it encrypts the value\.  
-You must use credentials from the same account that owns the secret to use the AWS managed key `aws/secretsmanager` to encrypt and decrypt\. If you use credentials from a different account, then you must create a customer managed key and specify the ARN of the key in this field\. 
+The ARN, key ID, or alias of the AWS KMS key that Secrets Manager uses to encrypt the secret value in the secret\.  
+To use a AWS KMS key in a different account, use the key ARN or the alias ARN\.  
+If you don't specify this value, then Secrets Manager uses the key `aws/secretsmanager`\. If that key doesn't yet exist, then Secrets Manager creates it for you automatically the first time it encrypts the secret value\.  
+If the secret is in a different AWS account from the credentials calling the API, then you can't use `aws/secretsmanager` to encrypt the secret, and you must create and use a customer managed AWS KMS key\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -86,35 +79,41 @@ You must use credentials from the same account that owns the secret to use the A
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-secretsmanager-secret-name"></a>
-The friendly name of the secret\. You can use forward slashes in the name to represent a path hierarchy\. For example, `/prod/databases/dbserver1` could represent the secret for a server named `dbserver1` in the folder `databases` in the folder `prod`\.   
-Do not end your secret name with a hyphen followed by six characters\. If you do so, you risk confusion and unexpected results when searching for a secret by partial ARN\. Secrets Manager automatically adds a hyphen and six random characters at the end of the ARN\.  
+The name of the new secret\.  
+The secret name can contain ASCII letters, numbers, and the following characters: /\_\+=\.@\-  
+Do not end your secret name with a hyphen followed by six characters\. If you do so, you risk confusion and unexpected results when searching for a secret by partial ARN\. Secrets Manager automatically adds a hyphen and six random characters after the secret name at the end of the ARN\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `256`  
+*Maximum*: `512`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ReplicaRegions`  <a name="cfn-secretsmanager-secret-replicaregions"></a>
-\(Optional\) Custom type consisting of a `Region` \(required\) and the `KmsKeyId` which can be an `ARN`, `Key ID`, or `Alias`\.  
+A custom type that specifies a `Region` and the `KmsKeyId` for a replica secret\.  
 *Required*: No  
 *Type*: List of [ReplicaRegion](aws-properties-secretsmanager-secret-replicaregion.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretString`  <a name="cfn-secretsmanager-secret-secretstring"></a>
-\(Optional\) Specifies text data that you want to encrypt and store in this new version of the secret\.  
-Either `GenerateSecretString` or `SecretString` must have a value, but not both\. They cannot both be empty\. We recommend that you use the `GenerateSecretString` property to dynamically generate a random password\.   
-If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected secret text in only the `SecretString` parameter\. The Secrets Manager console stores the information as a JSON structure of key/value pairs that the Lambda rotation function knows how to parse\.  
-For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs\. For information on how to format a JSON parameter for the various command line tool environments, see [Using JSON for Parameters](https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json)\. For example:  
- `{"username":"bob","password":"abc123xyz456"}`   
-If your command\-line tool or SDK requires quotation marks around the parameter, you should use single quotes to avoid confusion with the double quotes required in the JSON text\.   
+The text to encrypt and store in the secret\. We recommend you use a JSON structure of key/value pairs for your secret value\.   
+Either `GenerateSecretString` or `SecretString` must have a value, but not both\. They cannot both be empty\. We recommend that you use the `GenerateSecretString` property to generate a random password\.   
 *Required*: No  
 *Type*: String  
-*Minimum*: `0`  
-*Maximum*: `65536`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-secretsmanager-secret-tags"></a>
-The list of user\-defined tags associated with the secret\. Use tags to manage your AWS resources\. For additional information about tags, see [TagResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.   
+A list of tags to attach to the secret\. Each tag is a key and value pair of strings in a JSON text string, for example:  
+ `[{"Key":"CostCenter","Value":"12345"},{"Key":"environment","Value":"production"}]`   
+Secrets Manager tag key names are case sensitive\. A tag with the key "ABC" is a different tag from one with key "abc"\.  
+If you check tags in permissions policies as part of your security strategy, then adding or removing a tag can change permissions\. If the completion of this operation would result in you losing your permissions for this secret, then Secrets Manager blocks the operation and returns an `Access Denied` error\. For more information, see [Control access to secrets using tags](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#tag-secrets-abac) and [Limit access to identities with tags that match secrets' tags](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#auth-and-access_tags2)\.  
+For information about how to format a JSON parameter for the various command line tool environments, see [Using JSON for Parameters](https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json)\. If your command\-line tool or SDK requires quotation marks around the parameter, you should use single quotes to avoid confusion with the double quotes required in the JSON text\.  
+The following restrictions apply to tags:  
++ Maximum number of tags per secret: 50
++ Maximum key length: 127 Unicode characters in UTF\-8
++ Maximum value length: 255 Unicode characters in UTF\-8
++ Tag keys and values are case sensitive\.
++ Do not use the `aws:` prefix in your tag names or values because AWS reserves it for AWS use\. You can't edit or delete tag names or values with this prefix\. Tags with this prefix do not count against your tags per secret limit\.
++ If you use your tagging schema across multiple services and resources, other services might have restrictions on allowed characters\. Generally allowed characters: letters, spaces, and numbers representable in UTF\-8, plus the following special characters: \+ \- = \. \_ : / @\.
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -273,8 +272,8 @@ MyReplicatedSecret:
 ```
 
 ## See also<a name="aws-resource-secretsmanager-secret--seealso"></a>
-+  [CreateSecret](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html) API in the AWS Secrets Manager API Reference
-+  [Secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/terms-concepts.html#term_secret) in the AWS Secrets Manager User Guide
++  [CreateSecret](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html) in the AWS Secrets Manager API Reference
++  [Create and manage secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/managing-secrets.html) in the AWS Secrets Manager User Guide 
 +  [AWS::SecretsManager::ResourcePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html)
 +  [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)
 +  [AWS::SecretsManager::SecretReplicaRegion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-replicaregion.html) 

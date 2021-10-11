@@ -10,7 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Destinations](#cfn-ecr-replicationconfiguration-replicationrule-destinations)" : [ ReplicationDestination, ... ]
+  "[Destinations](#cfn-ecr-replicationconfiguration-replicationrule-destinations)" : [ ReplicationDestination, ... ],
+  "[RepositoryFilters](#cfn-ecr-replicationconfiguration-replicationrule-repositoryfilters)" : [ RepositoryFilter, ... ]
 }
 ```
 
@@ -19,6 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Destinations](#cfn-ecr-replicationconfiguration-replicationrule-destinations): 
     - ReplicationDestination
+  [RepositoryFilters](#cfn-ecr-replicationconfiguration-replicationrule-repositoryfilters): 
+    - RepositoryFilter
 ```
 
 ## Properties<a name="aws-properties-ecr-replicationconfiguration-replicationrule-properties"></a>
@@ -28,4 +31,11 @@ An array of objects representing the destination for a replication rule\.
 *Required*: Yes  
 *Type*: List of [ReplicationDestination](aws-properties-ecr-replicationconfiguration-replicationdestination.md)  
 *Maximum*: `25`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RepositoryFilters`  <a name="cfn-ecr-replicationconfiguration-replicationrule-repositoryfilters"></a>
+An array of objects representing the filters for a replication rule\. Specifying a repository filter for a replication rule provides a method for controlling which repositories in a private registry are replicated\.  
+*Required*: No  
+*Type*: List of [RepositoryFilter](aws-properties-ecr-replicationconfiguration-repositoryfilter.md)  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

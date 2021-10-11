@@ -56,7 +56,7 @@ The ID of the AWS account where you want to store the new theme\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BaseThemeId`  <a name="cfn-quicksight-theme-basethemeid"></a>
-The ID of the theme that a custom theme will inherit from\. All themes inherit from one of the starting themes defined by Amazon QuickSight\. For a list of the starting themes, use `ListThemes` or choose **Themes** from within a Amazon QuickSight analysis\.   
+The ID of the theme that a custom theme will inherit from\. All themes inherit from one of the starting themes defined by Amazon QuickSight\. For a list of the starting themes, use `ListThemes` or choose **Themes** from within an analysis\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

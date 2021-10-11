@@ -1,6 +1,6 @@
 # AWS::SageMaker::MonitoringSchedule StoppingCondition<a name="aws-properties-sagemaker-monitoringschedule-stoppingcondition"></a>
 
-Specifies a limit to how long a model training job, model compilation job, or hyperparameter tuning job can run\. It also specifies how long a managed Spot training job has to complete\. When the job reaches the time limit, Amazon SageMaker ends the training or compilation job\. Use this API to cap model training costs\.
+Specifies a limit to how long a model training job or model compilation job can run\. It also specifies how long a managed spot training job has to complete\. When the job reaches the time limit, Amazon SageMaker ends the training or compilation job\. Use this API to cap model training costs\.
 
 To stop a training job, Amazon SageMaker sends the algorithm the `SIGTERM` signal, which delays job termination for 120 seconds\. Algorithms can use this 120\-second window to save the model artifacts, so the results of training are not lost\. 
 

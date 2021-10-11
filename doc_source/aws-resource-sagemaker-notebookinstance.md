@@ -202,66 +202,62 @@ The following example creates a notebook instance\.
 
 ```
 {
-  "Description": "Basic NotebookInstance test update to a different instance type",
-  "Resources": {
-    "BasicNotebookInstance": {
-      "Type": "AWS::SageMaker::NotebookInstance",
-      "Properties": {
-        "InstanceType": "ml.t2.large",
-        "RoleArn": { "Fn::GetAtt" : [ "ExecutionRole", "Arn" ] }
-      }
-    },
-    "ExecutionRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "sagemaker.amazonaws.com"
-                ]
-              },
-              "Action": [
-                "sts:AssumeRole"
-              ]
-            }
-          ]
-        },
-        "Path": "/",
-        "Policies": [
-          {
-            "PolicyName": "root",
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Effect": "Allow",
-                  "Action": "*",
-                  "Resource": "*"
+    "Description": "Create Basic Notebook",
+    "Resources": {
+        "BasicNotebookInstance": {
+            "Type": "AWS::SageMaker::NotebookInstance",
+            "Properties": {
+                "InstanceType": "ml.t2.large",
+                "RoleArn": {
+                    "Fn::GetAtt": [
+                        "ExecutionRole",
+                        "Arn"
+                    ]
                 }
-              ]
             }
-          }
-        ]
-      }
+        },
+        "ExecutionRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "sagemaker.amazonaws.com"
+                                ]
+                            },
+                            "Action": [
+                                "sts:AssumeRole"
+                            ]
+                        }
+                    ]
+                },
+                "Path": "/",
+                "ManagedPolicyArns": [
+                    {
+                        "Fn::Sub": "arn:${AWS::Partition}:iam::aws:policy/AmazonSageMakerFullAccess"
+                    }
+                ]
+            }
+        }
+    },
+    "Outputs": {
+        "BasicNotebookInstanceId": {
+            "Value": {
+                "Ref": "BasicNotebookInstance"
+            }
+        }
     }
-  },
-  "Outputs": {
-    "BasicNotebookInstanceId": {
-       "Value": { "Ref" : "BasicNotebookInstance" }
-       }
-  },
-  
 }
 ```
 
 #### YAML<a name="aws-resource-sagemaker-notebookinstance--examples--SageMaker_Notebook_Instance_Example--yaml"></a>
 
 ```
-Description: "Basic NotebookInstance test update to a different instance type"
+Description: "Create basic notebook instance"
 Resources:
   BasicNotebookInstance:
     Type: "AWS::SageMaker::NotebookInstance"
@@ -282,16 +278,8 @@ Resources:
             Action: 
               - "sts:AssumeRole"
       Path: "/"
-      Policies: 
-        - 
-          PolicyName: "root"
-          PolicyDocument: 
-            Version: "2012-10-17"
-            Statement: 
-              - 
-                Effect: "Allow"
-                Action: "*"
-                Resource: "*"
+      ManagedPolicyArns:
+        - !Sub "arn:${AWS::Partition}:iam::aws:policy/AmazonSageMakerFullAccess"
 Outputs:
   BasicNotebookInstanceId:
     Value: !Ref BasicNotebookInstance

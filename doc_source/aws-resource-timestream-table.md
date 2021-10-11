@@ -36,57 +36,30 @@ Properties:
 
 `DatabaseName`  <a name="cfn-timestream-table-databasename"></a>
 The name of the Timestream database that contains this table\.  
-*Length Constraints*: Minimum length of 3 bytes\. Maximum length of 256 bytes\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `3`  
+*Maximum*: `64`  
+*Pattern*: `[a-zA-Z0-9_.-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RetentionProperties`  <a name="cfn-timestream-table-retentionproperties"></a>
-The retention duration for the memory store and magnetic store\. This object has the following attributes:  
-+ *MemoryStoreRetentionPeriodInHours*: Retention duration for memory store, in hours\.
-+ *MagneticStoreRetentionPeriodInDays*: Retention duration for magnetic store, in days\.
-Both attributes are of type `string`\. Both attributes are **required** when `RetentionProperties` is specified\.  
-See the following examples:  
-**JSON**  
-
-```
-{
-    "Type" : AWS::Timestream::Table", 
-    "Properties" : {
-        "DatabaseName" : "TestDatabase", 
-        "TableName" : "TestTable", 
-        "RetentionProperties" : {
-            "MemoryStoreRetentionPeriodInHours": "24",
-            "MagneticStoreRetentionPeriodInDays": "7"
-        }
-    } 
-}
-```
-**YAML**  
-
-```
-Type: AWS::Timestream::Table
-DependsOn: TestDatabase
-Properties:
-    TableName: "TestTable"
-    DatabaseName: "TestDatabase"
-    RetentionProperties:
-        MemoryStoreRetentionPeriodInHours: "24"
-        MagneticStoreRetentionPeriodInDays: "7"
-```
+The retention duration for the memory store and magnetic store\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableName`  <a name="cfn-timestream-table-tablename"></a>
 The name of the Timestream table\.  
-*Length Constraints*: Minimum length of 3 bytes\. Maximum length of 256 bytes\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `3`  
+*Maximum*: `64`  
+*Pattern*: `[a-zA-Z0-9_.-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-timestream-table-tags"></a>
-The tags to add to the table  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -94,10 +67,6 @@ The tags to add to the table
 ## Return values<a name="aws-resource-timestream-table-return-values"></a>
 
 ### Ref<a name="aws-resource-timestream-table-return-values-ref"></a>
-
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the table name `TABLE_NAME` in the form `DATABASE_NAME|TABLE_NAME`\. `DATABASE_NAME` is the name of the Timestream database that the table is contained in\. 
-
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-timestream-table-return-values-fn--getatt"></a>
 

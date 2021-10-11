@@ -4,8 +4,6 @@ Registers your account as a publisher of public extensions in the CloudFormation
 
 For information on requirements for registering as a public extension publisher, see [Registering your account to publish CloudFormation extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-prereqs) in the *CloudFormation CLI User Guide*\.
 
-
-
 ## Syntax<a name="aws-resource-cloudformation-publisher-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

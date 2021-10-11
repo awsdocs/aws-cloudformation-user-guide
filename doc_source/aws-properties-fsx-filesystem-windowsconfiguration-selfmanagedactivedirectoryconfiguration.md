@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-properties"></a>
 
 `DnsIps`  <a name="cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-dnsips"></a>
-A list of up to two IP addresses of DNS servers or domain controllers in the self\-managed AD directory\.   
+A list of up to three IP addresses of DNS servers or domain controllers in the self\-managed AD directory\.   
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `3`  

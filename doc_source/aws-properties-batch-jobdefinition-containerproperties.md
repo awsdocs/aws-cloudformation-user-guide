@@ -138,10 +138,7 @@ The Amazon ECS container agent running on a container instance must register the
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Memory`  <a name="cfn-batch-jobdefinition-containerproperties-memory"></a>
-This parameter indicates the memory hard limit \(in MiB\) for a container\. If your container attempts to exceed the specified number, it's terminated\. You must specify at least 4 MiB of memory for a job using this parameter\. The memory hard limit can be specified in several places\. It must be specified for each node at least once\.  
-This parameter maps to `Memory` in the [Create a container](https://docs.docker.com/engine/api/v1.23/#create-a-container) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.23/) and the `--memory` option to [docker run](https://docs.docker.com/engine/reference/run/)\.  
-This parameter is supported on EC2 resources but isn't supported on Fargate resources\. For Fargate resources, you should specify the memory requirement using `resourceRequirements`\. You can also do this for EC2 resources\.  
-If you're trying to maximize your resource utilization by providing your jobs as much memory as possible for a particular instance type, see [Memory Management](https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html) in the * AWS Batch User Guide*\.
+This parameter is deprecated, use `resourceRequirements` to specify the memory requirements for the job definition\. It's not supported for jobs that run on Fargate resources\. For jobs run on EC2 resources, it specifies the memory hard limit \(in MiB\) for a container\. If your container attempts to exceed the specified number, it's terminated\. You must specify at least 4 MiB of memory for a job using this parameter\. The memory hard limit can be specified in several places\. It must be specified for each node at least once\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -197,9 +194,8 @@ The user name to use inside the container\. This parameter maps to `User` in the
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Vcpus`  <a name="cfn-batch-jobdefinition-containerproperties-vcpus"></a>
-The number of vCPUs reserved for the job\. Each vCPU is equivalent to 1,024 CPU shares\. This parameter maps to `CpuShares` in the [Create a container](https://docs.docker.com/engine/api/v1.23/#create-a-container) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.23/) and the `--cpu-shares` option to [docker run](https://docs.docker.com/engine/reference/run/)\. The number of vCPUs must be specified but can be specified in several places\. You must specify it at least once for each node\.  
-This parameter is supported on EC2 resources but isn't supported for jobs that run on Fargate resources\. For these resources, use `resourceRequirements` instead\. You can use this parameter or `resourceRequirements` structure but not both\.  
-This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided\. For jobs that run on Fargate resources, you must specify the vCPU requirement for the job using `resourceRequirements`\.
+This parameter is deprecated, use `resourceRequirements` to specify the vCPU requirements for the job definition\. It's not supported for jobs that run on Fargate resources\. For jobs run on EC2 resources, it specifies the number of vCPUs reserved for the job\.  
+Each vCPU is equivalent to 1,024 CPU shares\. This parameter maps to `CpuShares` in the [Create a container](https://docs.docker.com/engine/api/v1.23/#create-a-container) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.23/) and the `--cpu-shares` option to [docker run](https://docs.docker.com/engine/reference/run/)\. The number of vCPUs must be specified but can be specified in several places\. You must specify it at least once for each node\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

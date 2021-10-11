@@ -49,7 +49,7 @@ Properties:
 ## Properties<a name="aws-properties-stack-properties"></a>
 
 `NotificationARNs`  <a name="cfn-cloudformation-stack-notificationarns"></a>
-The Simple Notification Service \(SNS\) topic ARNs to publish stack related events\. You can find your SNS topic ARNs using the SNS console or your Command Line Interface \(CLI\)\.  
+The Amazon Simple Notification Service \(Amazon SNS\) topic ARNs to publish stack related events\. You can find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line Interface \(CLI\)\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `5`  
@@ -148,7 +148,7 @@ Parameters:
 
 ### Nested stack<a name="aws-properties-stack--examples--Nested_stack"></a>
 
-You could use the following template to embed a stack \(myStackWithParams\) using the EC2ChooseAMI\.template and use the Parameters property in the AWS::CloudFormation::Stack resource to specify an InstanceType and KeyName\.
+You could use the following template to embed a stack \(myStackWithParams\) using the EC2ChooseAMI\.template and use the Parameters property in the `AWS::CloudFormation::Stack` resource to specify an `InstanceType` and `KeyName`\.
 
 #### JSON<a name="aws-properties-stack--examples--Nested_stack--json"></a>
 

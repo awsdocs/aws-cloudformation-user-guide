@@ -108,7 +108,7 @@ If multiple versions of an extension are available, you can use the **Version** 
 
 1. Specify the configuration data, if necessary \(optional\)\.
 
-   If the extension requires additional configuration at the account and region level, CloudFormation includes the **Configuration** section on the the **Activate extension** page\. You have the option to specify the configuration data now, or after the extension has been activated\.
+   If the extension requires additional configuration at the account and region level, CloudFormation includes the **Configuration** section on the **Activate extension** page\. You have the option to specify the configuration data now, or after the extension has been activated\.
    + To specify the configuration data while enabling the extension:
 
      1. Select **Configure now**, and then select **Activate extension and continue**\.
@@ -123,7 +123,7 @@ If multiple versions of an extension are available, you can use the **Version** 
 
      To specify configuration data for an extension that is already activated, see [Configuring extensions at the account level](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration)\.
 
-   If the extension does not require configuration, you will not see the the **Configuration** section\. Select **Activate extension**\.
+   If the extension does not require configuration, you will not see the **Configuration** section\. Select **Activate extension**\.
 
    Once the extension is successfully activated, CloudFormation displays the details page for that extension\.
 

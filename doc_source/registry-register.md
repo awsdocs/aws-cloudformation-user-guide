@@ -36,7 +36,7 @@ For more information, see [Actions, Resources, and Condition Keys for Amazon S3]
 **Note**  
 If your extension calls AWS APIs as part of its functionality, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account\. You can then specify this execution role using the `--execution-role-arn` parameter\. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials\.
 
-   For example\. the following command registers the `My::Resource::Example` resource type in the current AWS account:
+   For example, the following command registers the `My::Resource::Example` resource type in the current AWS account:
 
    ```
    aws cloudformation register-type --type-name My::Resource::Example --schema-handler-package [s3 object path] --type RESOURCE

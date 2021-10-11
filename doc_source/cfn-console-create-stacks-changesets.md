@@ -28,7 +28,7 @@ To create a change set for a new stack, select your stack template and specify t
    + Launches a new stack with a status of `REVIEW_IN_PROGRESS`\.
    + Creates a change set for the new stack that reflects the stack configuration you specified in the previous steps\.
 
-   CloudFormation displays the **Change sets** page for the proposed stack\. While CloudFormation creates the change set, its status is `CREATE_IN_PROGRESS`, and its execution status is `UNAVAILABLE`\. When CloudFormation completes succesfully creating the change set, it sets the change set status to `CREATE_COMPLETE`, and its execution status is `AVAILABLE`\. The stack status is updated to `REVIEW_IN_PROGRESS`\. At this point, you can execute the change set to complete creating the new stack\.
+   CloudFormation displays the **Change sets** page for the proposed stack\. While CloudFormation creates the change set, its status is `CREATE_IN_PROGRESS`, and its execution status is `UNAVAILABLE`\. When CloudFormation completes successfully creating the change set, it sets the change set status to `CREATE_COMPLETE`, and its execution status is `AVAILABLE`\. The stack status is updated to `REVIEW_IN_PROGRESS`\. At this point, you can execute the change set to complete creating the new stack\.
 
    In the **Changes** pane, CloudFormation displays the proposed configuration of your stack\.
 

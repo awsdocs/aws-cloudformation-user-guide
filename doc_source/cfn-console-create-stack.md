@@ -28,6 +28,6 @@ After creating a stack, you can monitor the stack's progress, view the stack's r
 1. Create a new stack by using one of the following options:
    + Choose **Create Stack**\. This is the *only* option if you have a currently running stack\.
    + Choose **Create Stack** on the **Stacks** page\. This option is visible only if you have no running stacks\.  
-![\[The Create Stack button in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-create-stack-stacks-create-stack.png)
+![\[The Create Stack button in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/../images/console-create-stack-stacks-create-stack.png)
 
 Next, you [choose a stack template](cfn-using-console-create-stack-template.md)\.

@@ -33,8 +33,8 @@ Contains settings for the Systems Manager agent on your build instance\.
 
 `UserDataOverride`  <a name="cfn-imagebuilder-imagerecipe-additionalinstanceconfiguration-userdataoverride"></a>
 Use this property to provide commands or a command script to run when you launch your build instance\.  
-The userDataOverride property replaces any commands that Image Builder might have added to ensure that Systems Manager is installed on your Linux build instance\. If you override the user data, make sure that you add commands to install Systems Manager, if it is not pre\-installed on your source image\.
-*Required*: Yes  
+The userDataOverride property replaces any commands that Image Builder might have added to ensure that Systems Manager is installed on your Linux build instance\. If you override the user data, make sure that you add commands to install Systems Manager, if it is not pre\-installed on your base image\.
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `21847`  

@@ -32,7 +32,7 @@ Indicates the encryption setting for data in transit between clients and brokers
 The default value is `TLS`\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InCluster`  <a name="cfn-msk-cluster-encryptionintransit-incluster"></a>
 When set to true, it indicates that data communication among the broker nodes of the cluster is encrypted\. When set to false, the communication happens in plaintext\. The default value is true\.  

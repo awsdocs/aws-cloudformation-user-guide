@@ -139,20 +139,20 @@ The import operation fails if you modify existing parameters that initiate a cre
 
    ```
    [
-     {
+      {
          "ResourceType":"AWS::DynamoDB::Table",
          "LogicalResourceId":"GamesTable",
-         "ResourceIdentifier": {
-           "TableName":"Games"
+         "ResourceIdentifier":{
+            "TableName":"Games"
          }
-     },
-     {
+      },
+      {
          "ResourceType":"AWS::DynamoDB::Table",
          "LogicalResourceId":"ServiceTable",
-         "ResourceIdentifier": {
-           "TableName":"Service"
+         "ResourceIdentifier":{
+            "TableName":"Service"
          }
-     }
+      }
    ]
    ```
 

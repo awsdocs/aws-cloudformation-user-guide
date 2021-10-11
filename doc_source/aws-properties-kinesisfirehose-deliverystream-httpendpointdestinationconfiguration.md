@@ -46,7 +46,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-httpendpointdestinationconfiguration-properties"></a>
 
 `BufferingHints`  <a name="cfn-kinesisfirehose-deliverystream-httpendpointdestinationconfiguration-bufferinghints"></a>
-The buffering options that can be used before data is delivered to the specified destination\. Kinesis Data Firehose treats these options as hints, and it might choose to use more optimal values\. The SizeInMBs and IntervalInSeconds parameters are optional\. However, if you specify a value for one of them, you must also provide a value for the other\.   
+The buffering options that can be used before data is delivered to the specified destination\. Kinesis Data Firehose treats these options as hints, and it might choose to use more optimal values\. The SizeInMBs and IntervalInSeconds parameters are optional\. However, if you specify a value for one of them, you must also provide a value for the other\.  
 *Required*: No  
 *Type*: [BufferingHints](aws-properties-kinesisfirehose-deliverystream-bufferinghints.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -70,19 +70,19 @@ Describes the data processing configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequestConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-httpendpointdestinationconfiguration-requestconfiguration"></a>
- The configuration of the request sent to the HTTP endpoint specified as the destination\.   
+The configuration of the request sent to the HTTP endpoint specified as the destination\.  
 *Required*: No  
 *Type*: [HttpEndpointRequestConfiguration](aws-properties-kinesisfirehose-deliverystream-httpendpointrequestconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetryOptions`  <a name="cfn-kinesisfirehose-deliverystream-httpendpointdestinationconfiguration-retryoptions"></a>
-Describes the retry behavior in case Kinesis Data Firehose is unable to deliver data to the specified HTTP endpoint destination, or if it doesn't receive a valid acknowledgment of receipt from the specified HTTP endpoint destination\.   
+Describes the retry behavior in case Kinesis Data Firehose is unable to deliver data to the specified HTTP endpoint destination, or if it doesn't receive a valid acknowledgment of receipt from the specified HTTP endpoint destination\.  
 *Required*: No  
 *Type*: [RetryOptions](aws-properties-kinesisfirehose-deliverystream-retryoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleARN`  <a name="cfn-kinesisfirehose-deliverystream-httpendpointdestinationconfiguration-rolearn"></a>
-Kinesis Data Firehose uses this IAM role for all the permissions that the delivery stream needs\.   
+Kinesis Data Firehose uses this IAM role for all the permissions that the delivery stream needs\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -91,7 +91,7 @@ Kinesis Data Firehose uses this IAM role for all the permissions that the delive
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3BackupMode`  <a name="cfn-kinesisfirehose-deliverystream-httpendpointdestinationconfiguration-s3backupmode"></a>
-Describes the S3 bucket backup options for the data that Kinesis Data Firehose delivers to the HTTP endpoint destination\. You can back up all documents \(AllData\) or only the documents that Kinesis Data Firehose could not deliver to the specified HTTP endpoint destination \(FailedDataOnly\)\.   
+Describes the S3 bucket backup options for the data that Kinesis Data Firehose delivers to the HTTP endpoint destination\. You can back up all documents \(AllData\) or only the documents that Kinesis Data Firehose could not deliver to the specified HTTP endpoint destination \(FailedDataOnly\)\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `AllData | FailedDataOnly`  

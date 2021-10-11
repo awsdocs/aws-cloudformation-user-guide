@@ -127,7 +127,7 @@ Required\.
 
 **version**  
 An integer that specifies the version of the parameter to use\. You must specify the exact version\. You can't currently specify that AWS CloudFormation use the latest version of a parameter\. For more information, see [Working with parameter versions](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-versions.html) in the *AWS Systems Manager User Guide*  
-Required\.
+Optional\.
 
 ### Example<a name="dynamic-references-ssm-secure-example"></a>
 
@@ -163,7 +163,7 @@ Additional considerations to note when using the `ssm-secure` dynamic reference 
 + CloudFormation does store the literal dynamic reference, which contains the plaintext parameter name of the secure string\.
 + For change sets, CloudFormation compares the literal dynamic reference string\. It doesn't resolve and compare the actual values of `ssm-secure` references\.
 + Dynamic references for secure values, such as `ssm-secure` and `secretsmanager`, aren't currently supported in [custom resources](template-custom-resources.md)\.
-+ In cases where CloudFormation must rollback a stack update, that update rollback operation will fail if the previously specified version of a secure string parameter is no longer available\. in such cases, do one of the following:
++ In cases where CloudFormation must rollback a stack update, that update rollback operation will fail if the previously specified version of a secure string parameter is no longer available\. In such cases, do one of the following:
   + Use `CONTINUE_UPDATE_ROLLBACK` to skip the resource\.
   + Recreate the secure string parameter in the Systems Manager Parameter Store, and update it until the parameter version reaches the version used in the template\. Then use `CONTINUE_UPDATE_ROLLBACK` without skipping the resource\.
 + Currently, AWS CloudFormation doesn't support cross\-account SSM parameter access\.

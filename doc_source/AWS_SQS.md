@@ -2,4 +2,4 @@
 
 **Resource types**
 + [AWS::SQS::Queue](aws-properties-sqs-queues.md)
-+ [AWS::SQS::QueuePolicy](aws-properties-sqs-policy.md)
++ [AWS::SQS::QueuePolicy](aws-resource-sqs-queuepolicy.md)

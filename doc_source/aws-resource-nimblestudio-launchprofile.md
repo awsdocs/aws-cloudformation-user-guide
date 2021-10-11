@@ -47,7 +47,7 @@ Properties:
 ## Properties<a name="aws-resource-nimblestudio-launchprofile-properties"></a>
 
 `Description`  <a name="cfn-nimblestudio-launchprofile-description"></a>
- A human\-readable description of the launch profile\.  
+A human\-readable description of the launch profile\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -59,7 +59,7 @@ Unique identifiers for a collection of EC2 subnets\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LaunchProfileProtocolVersions`  <a name="cfn-nimblestudio-launchprofile-launchprofileprotocolversions"></a>
-The version number of the protocol that is used by the launch profile\. The only valid version is "2021\-03\-31"\.   
+The version number of the protocol that is used by the launch profile\. The only valid version is "2021\-03\-31"\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -83,7 +83,7 @@ Unique identifiers for a collection of studio components that can be used with t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StudioId`  <a name="cfn-nimblestudio-launchprofile-studioid"></a>
-The unique identifier for a studio resource\. In Nimble Studio, all other resources are contained in a studio resource\.   
+The unique identifier for a studio resource\. In Nimble Studio, all other resources are contained in a studio resource\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

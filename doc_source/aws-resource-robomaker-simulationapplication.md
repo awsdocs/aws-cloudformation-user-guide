@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::RoboMaker::SimulationApplication",
   "Properties" : {
       "[CurrentRevisionId](#cfn-robomaker-simulationapplication-currentrevisionid)" : String,
+      "[Environment](#cfn-robomaker-simulationapplication-environment)" : String,
       "[Name](#cfn-robomaker-simulationapplication-name)" : String,
       "[RenderingEngine](#cfn-robomaker-simulationapplication-renderingengine)" : RenderingEngine,
       "[RobotSoftwareSuite](#cfn-robomaker-simulationapplication-robotsoftwaresuite)" : RobotSoftwareSuite,
@@ -29,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::RoboMaker::SimulationApplication
 Properties: 
   [CurrentRevisionId](#cfn-robomaker-simulationapplication-currentrevisionid): String
+  [Environment](#cfn-robomaker-simulationapplication-environment): String
   [Name](#cfn-robomaker-simulationapplication-name): String
   [RenderingEngine](#cfn-robomaker-simulationapplication-renderingengine): 
     RenderingEngine
@@ -50,6 +52,12 @@ The current revision id\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Environment`  <a name="cfn-robomaker-simulationapplication-environment"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Name`  <a name="cfn-robomaker-simulationapplication-name"></a>
 The name of the simulation application\.  
 *Required*: No  
@@ -61,7 +69,7 @@ The name of the simulation application\.
 
 `RenderingEngine`  <a name="cfn-robomaker-simulationapplication-renderingengine"></a>
 The rendering engine for the simulation application\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [RenderingEngine](aws-properties-robomaker-simulationapplication-renderingengine.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -79,7 +87,7 @@ The simulation software suite used by the simulation application\.
 
 `Sources`  <a name="cfn-robomaker-simulationapplication-sources"></a>
 The sources of the simulation application\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: List of [SourceConfig](aws-properties-robomaker-simulationapplication-sourceconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

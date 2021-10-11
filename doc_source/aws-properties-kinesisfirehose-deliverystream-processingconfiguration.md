@@ -1,6 +1,6 @@
 # AWS::KinesisFirehose::DeliveryStream ProcessingConfiguration<a name="aws-properties-kinesisfirehose-deliverystream-processingconfiguration"></a>
 
-The `ProcessingConfiguration` property configures data processing for an Amazon Kinesis Data Firehose delivery stream\. 
+The `ProcessingConfiguration` property configures data processing for an Amazon Kinesis Data Firehose delivery stream\.
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-processingconfiguration-syntax"></a>
 

@@ -96,7 +96,7 @@ If you specify an API Gateway REST API or EventBridge ApiDestination as a target
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-events-rule-target-id"></a>
-The ID of the target\. We recommend using a memorable and unique string\.  
+The ID of the target within the specified rule\. Use this ID to reference the target when updating the rule\. We recommend using a memorable and unique string\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudformation-typeactivation-loggingconfig-properties"></a>
 
 `LogGroupName`  <a name="cfn-cloudformation-typeactivation-loggingconfig-loggroupname"></a>
-The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the extension's handlers\.  
+The Amazon CloudWatch Logs group to which CloudFormation sends error logging information when invoking the extension's handlers\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -34,7 +34,7 @@ The Amazon CloudWatch log group to which CloudFormation sends error logging info
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LogRoleArn`  <a name="cfn-cloudformation-typeactivation-loggingconfig-logrolearn"></a>
-The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs\.  
+The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch Logs\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

@@ -1,6 +1,6 @@
 # AWS::APS::Workspace<a name="aws-resource-aps-workspace"></a>
 
-The `AWS::APS::Workspace` type specifies an Amazon Managed Service for Prometheus \(AMP\) workspace\. A *workspace* is a logical and isolated Prometheus server dedicated to Prometheus resources such as metrics\. You can have one or more workspaces in each Region in your account\.
+The `AWS::APS::Workspace` type specifies an Amazon Managed Service for Prometheus \(Amazon Managed Service for Prometheus\) workspace\. A *workspace* is a logical and isolated Prometheus server dedicated to Prometheus resources such as metrics\. You can have one or more workspaces in each Region in your account\.
 
 ## Syntax<a name="aws-resource-aps-workspace-syntax"></a>
 
@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::APS::Workspace",
   "Properties" : {
+      "[AlertManagerDefinition](#cfn-aps-workspace-alertmanagerdefinition)" : String,
       "[Alias](#cfn-aps-workspace-alias)" : String,
       "[Tags](#cfn-aps-workspace-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -23,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::APS::Workspace
 Properties: 
+  [AlertManagerDefinition](#cfn-aps-workspace-alertmanagerdefinition): String
   [Alias](#cfn-aps-workspace-alias): String
   [Tags](#cfn-aps-workspace-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -30,9 +32,15 @@ Properties:
 
 ## Properties<a name="aws-resource-aps-workspace-properties"></a>
 
+`AlertManagerDefinition`  <a name="cfn-aps-workspace-alertmanagerdefinition"></a>
+The alert manager definition for the workspace, as a string\. For more information, see [ Alert manager and templating](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-alert-manager.html)\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Alias`  <a name="cfn-aps-workspace-alias"></a>
 An alias that you assign to this workspace to help you identify it\. It does not need to be unique\.  
- The alias can be as many as 100 characters and can include any type of characters\. AMP automatically strips any blank spaces from the beginning and end of the alias that you specify\.   
+ The alias can be as many as 100 characters and can include any type of characters\. Amazon Managed Service for Prometheus automatically strips any blank spaces from the beginning and end of the alias that you specify\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -53,7 +61,9 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Fn::GetAtt<a name="aws-resource-aps-workspace-return-values-fn--getatt"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-aps-workspace-return-values-fn--getatt-fn--getatt"></a>
 
@@ -68,9 +78,9 @@ The workspace ID\. For example: `ws-EXAMPLE-3687-4ac9-853c-EXAMPLEe8f`\.
 
 ## Examples<a name="aws-resource-aps-workspace--examples"></a>
 
-### AMP workspace example<a name="aws-resource-aps-workspace--examples--_workspace_example"></a>
+### Amazon Managed Service for Prometheus workspace example<a name="aws-resource-aps-workspace--examples--_workspace_example"></a>
 
-The following example creates an AMP workspace with an alias and one tag\.
+The following example creates an Amazon Managed Service for Prometheus workspace with an alias and one tag\.
 
 #### JSON<a name="aws-resource-aps-workspace--examples--_workspace_example--json"></a>
 

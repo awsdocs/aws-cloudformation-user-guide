@@ -91,7 +91,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The set of IP addresses for the VPC\. For example, `10.0.0.0/16`\.
 
 `CidrBlockAssociations`  <a name="CidrBlockAssociations-fn::getatt"></a>
-A list of IPv4 CIDR block association IDs for the VPC\. For example, `[ vpc-cidr-assoc-0280ab6b ]`\.
+The IPv4 CIDR block association IDs for the VPC\. For example, `[ vpc-cidr-assoc-0280ab6b ]`\.
 
 `DefaultNetworkAcl`  <a name="DefaultNetworkAcl-fn::getatt"></a>
 The default network ACL ID that is associated with the VPC\. For example, `acl-814dafe3`\.
@@ -100,7 +100,7 @@ The default network ACL ID that is associated with the VPC\. For example, `acl-8
 The default security group ID that is associated with the VPC\. For example, `sg-b178e0d3`\.
 
 `Ipv6CidrBlocks`  <a name="Ipv6CidrBlocks-fn::getatt"></a>
-A list of IPv6 CIDR blocks that are associated with the VPC, such as `[ 2001:db8:1234:1a00::/56 ]`\.
+The IPv6 CIDR blocks that are associated with the VPC, such as `[ 2001:db8:1234:1a00::/56 ]`\.
 
 ## Examples<a name="aws-resource-ec2-vpc--examples"></a>
 
@@ -108,7 +108,7 @@ A list of IPv6 CIDR blocks that are associated with the VPC, such as `[ 2001:db8
 
 ### VPC<a name="aws-resource-ec2-vpc--examples--VPC"></a>
 
-The following example specifies a VPC\.
+The following example specifies a VPC with an IPv4 address\. For an example with IPv6 enabled, see [Creating an IPv6 enabled VPC](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-cidr.html#intrinsic-function-reference-cidr-example2)\.
 
 #### JSON<a name="aws-resource-ec2-vpc--examples--VPC--json"></a>
 

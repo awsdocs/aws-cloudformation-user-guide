@@ -22,6 +22,9 @@ During an import operation, CloudFormation performs the following validations\.
 
 CloudFormation doesn't check that the template configuration matches the actual configuration of resource properties\.
 
+**Important**  
+Verify that resources and their properties defined in the template match the intended configuration of the resource import to avoid unexpected changes\.
+
 ## Resource import status codes<a name="resource-import-status-codes"></a>
 
 This table describes the various status types used with `resource import`\.

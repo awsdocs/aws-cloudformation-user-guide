@@ -1,8 +1,8 @@
 # AWS::QuickSight::Dashboard<a name="aws-resource-quicksight-dashboard"></a>
 
-Creates a dashboard from a template\. To first create a template, see the ` CreateTemplate` API operation\.
+Creates a dashboard from a template\. To first create a template, see the `CreateTemplate` API operation\.
 
-A dashboard is an entity in Amazon QuickSightthat identifies Amazon QuickSight reports, created from analyses\. You can share Amazon QuickSightdashboards\. With the right permissions, you can create scheduled email reports from them\. If you have the correct permissions, you can create a dashboard from a template that exists in a different AWS account\.
+A dashboard is an entity in Amazon QuickSight that identifies Amazon QuickSight reports, created from analyses\. You can share Amazon QuickSight dashboards\. With the right permissions, you can create scheduled email reports from them\. If you have the correct permissions, you can create a dashboard from a template that exists in a different AWS account\.
 
 ## Syntax<a name="aws-resource-quicksight-dashboard-syntax"></a>
 
@@ -62,7 +62,7 @@ The ID of the AWS account where you want to create the dashboard\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DashboardId`  <a name="cfn-quicksight-dashboard-dashboardid"></a>
-The ID for the dashboard, also added to the IAMpolicy\.  
+The ID for the dashboard, also added to the IAM policy\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -94,7 +94,7 @@ The parameters for the creation of the dashboard, which you want to use to overr
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Permissions`  <a name="cfn-quicksight-dashboard-permissions"></a>
-A structure that contains the permissions of the dashboard\. You can use this structure for granting permissions by providing a list of IAMaction information for each principal ARN\.   
+A structure that contains the permissions of the dashboard\. You can use this structure for granting permissions by providing a list of IAM action information for each principal ARN\.   
 To specify no permissions, omit the permissions list\.  
 *Required*: No  
 *Type*: List of [ResourcePermission](aws-properties-quicksight-dashboard-resourcepermission.md)  
@@ -102,7 +102,7 @@ To specify no permissions, omit the permissions list\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceEntity`  <a name="cfn-quicksight-dashboard-sourceentity"></a>
-The entity that you are using as a source when you create the dashboard\. In `SourceEntity`, you specify the type of object you're using as source\. You can only create a dashboard from a template, so you use a `SourceTemplate` entity\. If you need to create a dashboard from an analysis, first convert the analysis to a template by using the `CreateTemplate` API operation\. For `SourceTemplate`, specify the Amazon Resource Name \(ARN\) of the source template\. The `SourceTemplate`ARN can contain any AWS account; and any QuickSight\-supported AWS Region;\.   
+The entity that you are using as a source when you create the dashboard\. In `SourceEntity`, you specify the type of object that you want to use\. You can only create a dashboard from a template, so you use a `SourceTemplate` entity\. If you need to create a dashboard from an analysis, first convert the analysis to a template by using the `CreateTemplate` API operation\. For `SourceTemplate`, specify the Amazon Resource Name \(ARN\) of the source template\. The `SourceTemplate`ARN can contain any AWS account; and any QuickSight\-supported AWS Region\.   
 Use the `DataSetReferences` entity within `SourceTemplate` to list the replacement datasets for the placeholders listed in the original\. The schema in each dataset must match its placeholder\.   
 *Required*: No  
 *Type*: [DashboardSourceEntity](aws-properties-quicksight-dashboard-dashboardsourceentity.md)  

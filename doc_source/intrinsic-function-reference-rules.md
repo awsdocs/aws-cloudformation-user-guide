@@ -247,7 +247,7 @@ The following example returns the value of the `Department` tag for the VPC that
 "Fn::ValueOf" : ["ElbVpc", "Tags.Department"]
 ```
 
-If you specify multiple values for a parameter, the Fn::ValueOf function can return a list\. For example, you can specify multiple subnets and get a list of Availability Zones where each member is the Avalibility Zone of a particular subnet:
+If you specify multiple values for a parameter, the Fn::ValueOf function can return a list\. For example, you can specify multiple subnets and get a list of Availability Zones where each member is the Availability Zone of a particular subnet:
 
 ```
 "Fn::ValueOf" : ["ListOfElbSubnets", "AvailabilityZone"]

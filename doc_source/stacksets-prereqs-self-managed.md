@@ -1,5 +1,15 @@
 # Grant self\-managed permissions<a name="stacksets-prereqs-self-managed"></a>
 
+With self\-managed permissions, you create the AWS Identity and Access Management \(IAM\) roles required by StackSets to deploy across accounts and AWS Regions\. These roles are necessary to establish a trusted relationship between the account you're administering the stack set from and the account you're deploying stack instances to\. Using this permissions model, StackSets can deploy to any AWS account in which you have permissions to create an IAM role\.
+
+**Topics**
++ [Self\-managed permissions](#w10116ab1c29c15c15b7)
++ [Set up basic permissions for stack set operations](#stacksets-prereqs-accountsetup)
++ [Set up advanced permissions options for stack set operations](#stacksets-prereqs-advanced-perms)
++ [Set up global keys to mitigate confused deputy problems](#confused-deputy-mitigation)
+
+## Self\-managed permissions<a name="w10116ab1c29c15c15b7"></a>
+
 To set up the required permissions for creating a **service\-managed** stack set, see [Enable trusted access with AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)\.
 
 Before you create a stack set with **self\-managed** permissions, you need to establish a trust relationship between the administrator and target accounts by creating IAM roles in each account\.
@@ -405,3 +415,60 @@ Similarly, the user can also specify a customized execution role\. If they speci
 ### Set up permissions for specific stack set operations<a name="stacksets-prereqs-iam-actions"></a>
 
 In addition, you can set up permissions for which user and groups can perform specific stack set operations, such as creating, updating, or deleting stack sets or stack instances\. For more information, see [Actions, resources, and condition keys for AWS CloudFormation](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awscloudformation.html) in the *IAM User Guide*\.
+
+## Set up global keys to mitigate confused deputy problems<a name="confused-deputy-mitigation"></a>
+
+When StackSets assumes the **Administration** role in your **administrator** account, StackSets populates your **administrator** account ID and StackSets Amazon Resource Name \(ARN\)\. Therefore, you can define conditions for [global keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourceaccount) `aws:SourceAccount` and `aws:SourceArn` in the trust relationships to prevent [confused deputy problems](https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html)\. See the following example\.
+
+**Example Global keys for `aws:SourceAccount` and `aws:SourceArn`**  
+When using StackSets, define the global keys `aws:SourceAccount` and `aws:SourceArn` in your `AWSCloudFormationStackSetAdministrationRole` trust policy to prevent confused deputy problems\.  
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "cloudformation.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {
+                "StringEquals": {
+                    "aws:SourceAccount": "111122223333"
+                },
+                "StringLike": {
+                    "aws:SourceArn": "arn:aws:cloudformation:*:111122223333:stackset/*"
+                }
+            }
+        }
+    ]
+}
+```
+
+**Example StackSets ARNs**  
+Specify your associated StackSets ARNs for finer control\.  
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "cloudformation.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {
+                "StringEquals": {
+                    "aws:SourceAccount": "111122223333",
+                    "aws:SourceArn": [
+                        "arn:aws:cloudformation:STACKSETS-REGION:111122223333:stackset/STACK-SET-ID-1",
+                        "arn:aws:cloudformation:STACKSETS-REGION:111122223333:stackset/STACK-SET-ID-2",
+                     ]
+                }
+            }
+        }
+    ]
+}
+```

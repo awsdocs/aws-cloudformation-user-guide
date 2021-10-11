@@ -49,7 +49,7 @@ If you perform a stack update that updates any property that requires [replaceme
 Updating properties in these resources that don't require resource replacement doesn't trigger a green deployment\.
 
 You can't include updates to the above resources with updates to other resources in the same stack update\. If you need to update resources in the list above in addition to other resources in the same stack, do one of the following:
-+ Perform two seperate stack update operations: one that includes only the updates to the above resources, and a separate stack update that includes changes to any other resources\.
++ Perform two separate stack update operations: one that includes only the updates to the above resources, and a separate stack update that includes changes to any other resources\.
 + Remove the `Transform` and `Hook` sections from your template and then perform the stack update\. In this case, CloudFormation won't perform a green deployment\.
 
 ## Considerations when managing ECS blue/green deployments using CloudFormation<a name="blue-green-considerations"></a>
@@ -274,7 +274,7 @@ For more information, see [Actions, resources, and condition keys for CodeDeploy
 
 The following example sets up an ECS blue/green deployment through CodeDeploy, with a traffic routing progress of 15 percent per step, with a stabilization period of 5 minutes between each step\. Creating a stack with the template would provision the initial configuration of the deployment\.
 
-If you then made any changes to properties in the `"BlueTaskSet"` resource that require that resource be replaced, CloudFormation would then inititiate a green deployment as part of the stack update\.
+If you then made any changes to properties in the `"BlueTaskSet"` resource that require that resource be replaced, CloudFormation would then initiate a green deployment as part of the stack update\.
 
 ### JSON<a name="blue-green-template-example.json"></a>
 

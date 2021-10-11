@@ -170,7 +170,7 @@ By default, all associations use `AUTO` mode\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-ssm-association-targets"></a>
-The targets for the association\. You must specify the `InstanceId` or `Targets` property\.  
+The targets for the association\. You must specify the `InstanceId` or `Targets` property\. You can target all instances in an AWS account by specifying the `InstanceIds` key with a value of `*`\. To view a JSON and a YAML example that targets all instances, see "Create an association for all managed instances in an AWS account" on the Examples page\.  
 *Required*: Conditional  
 *Type*: List of [Target](aws-properties-ssm-association-target.md)  
 *Maximum*: `5`  

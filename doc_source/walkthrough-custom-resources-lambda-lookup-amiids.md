@@ -51,11 +51,11 @@ The function takes an instance's architecture and region as inputs from an AWS C
 
 1. Choose or create a bucket that's located in the same region in which you'll create your AWS CloudFormation stack\. Record the bucket name\.
 
-   You'll save the sample package in this bucket\. For more information about creating a bucket, see [Creating a bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/CreatingaBucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
+   You'll save the sample package in this bucket\. For more information about creating a bucket, see [Creating a bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/CreatingaBucket.html) in the *Amazon Simple Storage Service User Guide*\.
 
 1. Upload the sample package to the bucket that you chose or created\.
 
-   For more information about uploading objects, see [Uploading objects](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/UploadingObjectsintoAmazonS3.html) in the *Amazon Simple Storage Service Console User Guide*\.
+   For more information about uploading objects, see [Uploading objects](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/UploadingObjectsintoAmazonS3.html) in the *Amazon Simple Storage Service User Guide*\.
 
 With the package in Amazon S3, you can now specify its location in the Lambda resource declaration of the AWS CloudFormation template\. The next step demonstrates how you declare the function and invoke it by using a custom resource\. You'll also see how to use the results of the function to specify the AMI ID of an EC2 instance\.
 
@@ -326,5 +326,5 @@ All the resources that you created are deleted\.
 
 Now that you understand how to create and use Lambda functions with AWS CloudFormation, you can use the sample template and code from this walkthrough to build other stacks and functions\.
 
-## Related information<a name="w10072ab1c27c23c16b7c29"></a>
+## Related information<a name="w10116ab1c27c23c16b7c29"></a>
 + [AWS CloudFormation Custom Resource Reference](crpg-ref.md)

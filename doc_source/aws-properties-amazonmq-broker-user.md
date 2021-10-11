@@ -1,6 +1,6 @@
 # AWS::AmazonMQ::Broker User<a name="aws-properties-amazonmq-broker-user"></a>
 
-The list of broker users \(persons or applications\) who can access queues and topics\. For RabbitMQ brokers, one and only one administrative user is accepted and created when a broker is first provisioned\. All subsequent broker users are created via the RabbitMQ web console or by using the RabbitMQ management API\. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes \(\- \. \_ \~\)\. This value must be 2\-100 characters long\.
+The list of broker users \(persons or applications\) who can access queues and topics\. For Amazon MQ for RabbitMQ brokers, one and only one administrative user is accepted and created when a broker is first provisioned\. All subsequent broker users are created via the RabbitMQ web console or by using the RabbitMQ management API\.
 
 ## Syntax<a name="aws-properties-amazonmq-broker-user-syntax"></a>
 
@@ -48,7 +48,8 @@ The password of the user\. This value must be at least 12 characters long, must 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Username`  <a name="cfn-amazonmq-broker-user-username"></a>
-The username of the broker user\. This value can contain only alphanumeric characters, dashes, periods, underscores, and tildes \(\- \. \_ \~\)\. This value must be 2\-100 characters long\.  
+The username of the broker user\. For Amazon MQ for ActiveMQ brokers, this value can contain only alphanumeric characters, dashes, periods, underscores, and tildes \(\- \. \_ \~\)\. For Amazon MQ for RabbitMQ brokers, this value can contain only alphanumeric characters, dashes, periods, underscores \(\- \. \_\)\. This value must not contain a tilde \(\~\) character\. Amazon MQ prohibts using guest as a valid usename\. This value must be 2\-100 characters long\.  
+We strongly recommend that you never use any personally identifiable information in your broker usernames
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -49,7 +49,7 @@ The name of the subnet group to be used for the cluster\.
 
 `SubnetIds`  <a name="cfn-memorydb-subnetgroup-subnetids"></a>
 A list of Amazon VPC subnet IDs for the subnet group\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

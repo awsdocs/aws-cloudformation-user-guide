@@ -1,6 +1,6 @@
 # Amazon Simple Notification Service\-backed custom resources<a name="template-custom-resources-sns"></a>
 
-When you associate an Amazon SNS topic with a custom resource, you use Amazon SNS notifications to invoke custom provisioning logic\. With custom resources and Amazon SNS, you can enable scenarios such as adding new resources to a stack and injecting dynamic data into a stack\. For example, when you create a stack, AWS CloudFormation can send a `create` request to a topic that's monitored by an application that's running on an Amazon Elastic Compute Cloud instance\. The Amazon SNS notification triggers the application to carry out additional provisioning tasks, such as retrieve a pool of allow\-listed Elastic IP adresses\. After it's done, the application sends a response \(and any output data\) that notifies AWS CloudFormation to proceed with the stack operation\.
+When you associate an Amazon SNS topic with a custom resource, you use Amazon SNS notifications to invoke custom provisioning logic\. With custom resources and Amazon SNS, you can enable scenarios such as adding new resources to a stack and injecting dynamic data into a stack\. For example, when you create a stack, AWS CloudFormation can send a `create` request to a topic that's monitored by an application that's running on an Amazon Elastic Compute Cloud instance\. The Amazon SNS notification triggers the application to carry out additional provisioning tasks, such as retrieve a pool of allow\-listed Elastic IP addresses\. After it's done, the application sends a response \(and any output data\) that notifies AWS CloudFormation to proceed with the stack operation\.
 
 ## Walkthrough: Using Amazon Simple Notification Service to create custom resources<a name="walkthrough-custom-resources-sns-adding-nonaws-resource"></a>
 
@@ -238,7 +238,7 @@ For detailed information about the request and response objects involved in `Upd
 
 For detailed information about the request and response objects involved in `Delete` requests, see [Delete](crpg-ref-requesttypes-delete.md) in the [Custom resource reference](crpg-ref.md)\.
 
-### See also<a name="w10072ab1c27c23c14b5c12"></a>
+### See also<a name="w10116ab1c27c23c14b5c12"></a>
 + [AWS CloudFormation Custom Resource Reference](crpg-ref.md)
 + [AWS::CloudFormation::CustomResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html)
 + [Fn::GetAtt](intrinsic-function-reference-getatt.md)

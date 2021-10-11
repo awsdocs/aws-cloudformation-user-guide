@@ -46,7 +46,7 @@ The ARN of the AWS SSO instance under which the operation will be executed\.
 *Type*: String  
 *Minimum*: `10`  
 *Maximum*: `1224`  
-*Pattern*: `arn:aws:sso:::instance/(sso)?ins-[a-zA-Z0-9-.]{16}`  
+*Pattern*: `arn:(aws|aws-us-gov|aws-cn|aws-iso|aws-iso-b):sso:::instance/(sso)?ins-[a-zA-Z0-9-.]{16}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration-return-values"></a>

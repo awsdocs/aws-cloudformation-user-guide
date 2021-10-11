@@ -33,6 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MessageRetentionPeriod](#aws-sqs-queue-msgretentionperiod)" : Integer,
       "[QueueName](#aws-sqs-queue-name)" : String,
       "[ReceiveMessageWaitTimeSeconds](#aws-sqs-queue-receivemsgwaittime)" : Integer,
+      "[RedriveAllowPolicy](#aws-sqs-queue-redriveallowpolicy)" : Json,
       "[RedrivePolicy](#aws-sqs-queue-redrive)" : Json,
       "[Tags](#cfn-sqs-queue-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VisibilityTimeout](#aws-sqs-queue-visiblitytimeout)" : Integer
@@ -56,6 +57,7 @@ Properties:
   [MessageRetentionPeriod](#aws-sqs-queue-msgretentionperiod): Integer
   [QueueName](#aws-sqs-queue-name): String
   [ReceiveMessageWaitTimeSeconds](#aws-sqs-queue-receivemsgwaittime): Integer
+  [RedriveAllowPolicy](#aws-sqs-queue-redriveallowpolicy): Json
   [RedrivePolicy](#aws-sqs-queue-redrive): Json
   [Tags](#cfn-sqs-queue-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -136,6 +138,17 @@ If you specify a name, you can't perform updates that require replacement of thi
 Specifies the duration, in seconds, that the ReceiveMessage action call waits until a message is in the queue in order to include it in the response, rather than returning an empty response if a message isn't yet available\. You can specify an integer from 1 to 20\. Short polling is used as the default or when you specify 0 for this property\. For more information, see [Consuming messages using long polling](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-short-and-long-polling.html#sqs-long-polling) in the *Amazon SQS Developer Guide*\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RedriveAllowPolicy`  <a name="aws-sqs-queue-redriveallowpolicy"></a>
+The string that includes the parameters for the permissions for the dead\-letter queue redrive permission and which source queues can specify dead\-letter queues as a JSON object\. The parameters are as follows:  
++ `redrivePermission`: The permission type that defines which source queues can specify the current queue as the dead\-letter queue\. Valid values are:
+  + `allowAll`: \(Default\) Any source queues in this AWS account in the same Region can specify this queue as the dead\-letter queue\.
+  + `denyAll`: No source queues can specify this queue as the dead\-letter queue\.
+  + `byQueue`: Only queues specified by the `sourceQueueArns` parameter can specify this queue as the dead\-letter queue\.
++ `sourceQueueArns`: The Amazon Resource Names \(ARN\)s of the source queues that can specify this queue as the dead\-letter queue and redrive messages\. You can specify this parameter only when the `redrivePermission` parameter is set to `byQueue`\. You can specify up to 10 source queue ARNs\. To allow more than 10 source queues to specify dead\-letter queues, set the `redrivePermission` parameter to `allowAll`\.
+*Required*: No  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RedrivePolicy`  <a name="aws-sqs-queue-redrive"></a>

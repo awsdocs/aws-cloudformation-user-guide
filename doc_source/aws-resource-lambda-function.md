@@ -22,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Lambda::Function",
   "Properties" : {
+      "[Architectures](#cfn-lambda-function-architectures)" : [ String, ... ],
       "[Code](#cfn-lambda-function-code)" : Code,
       "[CodeSigningConfigArn](#cfn-lambda-function-codesigningconfigarn)" : String,
       "[DeadLetterConfig](#cfn-lambda-function-deadletterconfig)" : DeadLetterConfig,
@@ -51,6 +52,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Lambda::Function
 Properties: 
+  [Architectures](#cfn-lambda-function-architectures): 
+    - String
   [Code](#cfn-lambda-function-code): 
     Code
   [CodeSigningConfigArn](#cfn-lambda-function-codesigningconfigarn): String
@@ -83,6 +86,13 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-lambda-function-properties"></a>
+
+`Architectures`  <a name="cfn-lambda-function-architectures"></a>
+The instruction set architecture that the function supports\. Enter a string array with one of the valid values\. The default value is `x86_64`\.  
+*Required*: No  
+*Type*: List of String  
+*Maximum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Code`  <a name="cfn-lambda-function-code"></a>
 The code for the function\.  

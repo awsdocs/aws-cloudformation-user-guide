@@ -49,7 +49,7 @@ The description of the [AWS::SSO::PermissionSet](#aws-resource-sso-permissionset
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `700`  
-*Pattern*: `[\p{L}\p{M}\p{Z}\p{S}\p{N}\p{P}]*`  
+*Pattern*: `[\u0009\u000A\u000D\u0020-\u007E\u00A0-\u00FF]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InlinePolicy`  <a name="cfn-sso-permissionset-inlinepolicy"></a>
@@ -67,7 +67,7 @@ The ARN of the SSO instance under which the operation will be executed\. For mor
 *Type*: String  
 *Minimum*: `10`  
 *Maximum*: `1224`  
-*Pattern*: `arn:aws:sso:::instance/(sso)?ins-[a-zA-Z0-9-.]{16}`  
+*Pattern*: `arn:(aws|aws-us-gov|aws-cn|aws-iso|aws-iso-b):sso:::instance/(sso)?ins-[a-zA-Z0-9-.]{16}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ManagedPolicies`  <a name="cfn-sso-permissionset-managedpolicies"></a>

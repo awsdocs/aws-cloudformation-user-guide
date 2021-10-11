@@ -1,6 +1,6 @@
 # AWS::S3::Bucket OwnershipControlsRule<a name="aws-properties-s3-bucket-ownershipcontrolsrule"></a>
 
-Specifies an object ownership rule\.
+Specifies an object ownership rule\. Object Ownership is an Amazon S3 bucket setting that you can use to control ownership of new objects that are uploaded to your buckets see [Controlling object ownership](https://docs.aws.amazon.com/AmazonS3/latest/userguide/about-object-ownership.html) in the *Amazon S3 User Guide* for more information\. 
 
 ## Syntax<a name="aws-properties-s3-bucket-ownershipcontrolsrule-syntax"></a>
 

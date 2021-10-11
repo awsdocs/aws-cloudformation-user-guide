@@ -139,7 +139,7 @@ The ID of the subnet's VPC, such as `vpc-11ad4878`\.
 
 ### Subnet<a name="aws-resource-ec2-subnet--examples--Subnet"></a>
 
-The following example uses the VPC ID from a VPC named myVPC that was declared elsewhere in the same template\.
+The following example uses the VPC ID from a VPC named myVPC that was declared elsewhere in the same template\. For an example with IPv6 enabled, see [Creating an IPv6 enabled VPC](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-cidr.html#intrinsic-function-reference-cidr-example2)\.
 
 #### JSON<a name="aws-resource-ec2-subnet--examples--Subnet--json"></a>
 

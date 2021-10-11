@@ -87,6 +87,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 #### <a name="aws-resource-efs-mounttarget-return-values-fn--getatt-fn--getatt"></a>
 
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 `IpAddress`  <a name="IpAddress-fn::getatt"></a>
 The IPv4 address of the mount target\.
 

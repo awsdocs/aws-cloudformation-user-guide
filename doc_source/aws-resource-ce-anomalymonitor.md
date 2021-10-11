@@ -281,8 +281,8 @@ The following example shows two anomaly monitors attached to an anomaly subscrip
         "Threshold": 100,
         "Frequency": "DAILY",
         "MonitorArnList": [
-          { "Ref": "CustomAnomalyMonitorWithLinkedAccount" },
-          { "Ref": "AnomalyServiceMonitor" }
+         { “Ref”: "CustomAnomalyMonitorWithLinkedAccount"},
+         { "Ref": "AnomalyServiceMonitor"}
         ],
         "Subscribers": [
           {

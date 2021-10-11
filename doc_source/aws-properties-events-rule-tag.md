@@ -1,6 +1,9 @@
 # AWS::Events::Rule Tag<a name="aws-properties-events-rule-tag"></a>
 
-A key\-value pair associated with an AWS resource\. In EventBridge, rules and event buses support tagging\.
+A key\-value pair associated with an ECS Target of an EventBridge rule\. The tag will be propagated to ECS by EventBridge when starting an ECS task based on a matched event\. 
+
+**Important**  
+Currently, tags are only available when using ECS with EventBridge\.
 
 ## Syntax<a name="aws-properties-events-rule-tag-syntax"></a>
 

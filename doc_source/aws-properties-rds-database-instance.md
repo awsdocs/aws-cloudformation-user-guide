@@ -438,15 +438,15 @@ The list of log types that need to be enabled for exporting to CloudWatch Logs\.
  **Amazon Aurora**   
 Not applicable\. CloudWatch Logs exports are managed by the DB cluster\.   
  **MariaDB**   
-Possible values are `audit`, `error`, `general`, and `slowquery`\.   
+Valid values: `audit`, `error`, `general`, `slowquery`   
  **Microsoft SQL Server**   
-Possible values are `agent` and `error`\.   
+Valid values: `agent`, `error`   
  **MySQL**   
-Possible values are `audit`, `error`, `general`, and `slowquery`\.   
+Valid values: `audit`, `error`, `general`, `slowquery`   
  **Oracle**   
-Possible values are `alert`, `audit`, `listener`, and `trace`\.   
+Valid values: `alert`, `audit`, `listener`, `trace`   
  **PostgreSQL**   
-Possible values are `postgresql` and `upgrade`\.   
+Valid values: `postgresql`, `upgrade`   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -541,6 +541,35 @@ The master user name for the DB instance\.
 If you specify the `SourceDBInstanceIdentifier` or `DBSnapshotIdentifier` property, don't specify this property\. The value is inherited from the source DB instance or snapshot\.
  **Amazon Aurora**   
 Not applicable\. The name for the master user is managed by the DB cluster\.   
+ **MariaDB**   
+Constraints:  
++ Required for MariaDB\.
++ Must be 1 to 16 letters or numbers\.
++ Can't be a reserved word for the chosen database engine\.
+ **Microsoft SQL Server**   
+Constraints:  
++ Required for SQL Server\.
++ Must be 1 to 128 letters or numbers\.
++ The first character must be a letter\.
++ Can't be a reserved word for the chosen database engine\.
+ **MySQL**   
+Constraints:  
++ Required for MySQL\.
++ Must be 1 to 16 letters or numbers\.
++ First character must be a letter\.
++ Can't be a reserved word for the chosen database engine\.
+ **Oracle**   
+Constraints:  
++ Required for Oracle\.
++ Must be 1 to 30 letters or numbers\.
++ First character must be a letter\.
++ Can't be a reserved word for the chosen database engine\.
+ **PostgreSQL**   
+Constraints:  
++ Required for PostgreSQL\.
++ Must be 1 to 63 letters or numbers\.
++ First character must be a letter\.
++ Can't be a reserved word for the chosen database engine\.
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
