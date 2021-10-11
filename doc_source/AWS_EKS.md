@@ -1,4 +1,4 @@
-# EKS resource type reference<a name="AWS_EKS"></a>
+# Amazon Elastic Kubernetes Service resource type reference<a name="AWS_EKS"></a>
 
 **Resource types**
 + [AWS::EKS::Addon](aws-resource-eks-addon.md)

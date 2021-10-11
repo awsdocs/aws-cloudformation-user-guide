@@ -47,7 +47,7 @@ For stacks that contain macros, choose **View original template** to view the us
 
 The following table describes stack status codes:
 
-### <a name="w9292ab1c23c13c17b5b4"></a>
+### <a name="w10072ab1c23c13c17b5b4"></a>
 
 
 | Stack Status | Description | 
@@ -63,11 +63,11 @@ The following table describes stack status codes:
 |  `ROLLBACK_FAILED`  |  Unsuccessful removal of one or more stacks after a failed stack creation or after an explicitly canceled stack creation\. Delete the stack or view the stack events to see any associated error messages\.  | 
 |  `ROLLBACK_IN_PROGRESS`  |  Ongoing removal of one or more stacks after a failed stack creation or after an explicitly canceled stack creation\.  | 
 |  `UPDATE_COMPLETE`  | Successful update of one or more stacks\. | 
-|  `UPDATE_COMPLETE_CLEANUP_IN_PROGRESS`  |  Ongoing removal of old resources for one or more stacks after a successful stack update\. For stack updates that require resources to be replaced, AWS CloudFormation creates the new resources first and then deletes the old resources to help reduce any interruptions with your stack\. In this state, the stack has been updated and is usable, but AWS CloudFormation is still deleting the old resources\.  | 
+|  `UPDATE_COMPLETE_CLEANUP_IN_PROGRESS`  |  Ongoing removal of old resources for one or more stacks after a successful stack update\. For stack updates that require resources to be replaced, CloudFormation creates the new resources first and then deletes the old resources to help reduce any interruptions with your stack\. In this state, the stack has been updated and is usable, but CloudFormation is still deleting the old resources\.  | 
 |  `UPDATE_FAILED`  | Unsuccessful update of one or more stacks\. View the stack events to see any associated error messages\. | 
 |  `UPDATE_IN_PROGRESS`  |  Ongoing update of one or more stacks\.  | 
 |  `UPDATE_ROLLBACK_COMPLETE`  |  Successful return of one or more stacks to a previous working state after a failed stack update\.  | 
-|  `UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS`  |  Ongoing removal of new resources for one or more stacks after a failed stack update\. In this state, the stack has been rolled back to its previous working state and is usable, but AWS CloudFormation is still deleting any new resources it created during the stack update\.  | 
+|  `UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS`  |  Ongoing removal of new resources for one or more stacks after a failed stack update\. In this state, the stack has been rolled back to its previous working state and is usable, but CloudFormation is still deleting any new resources it created during the stack update\.  | 
 |  `UPDATE_ROLLBACK_FAILED`  |  Unsuccessful return of one or more stacks to a previous working state after a failed stack update\. When in this state, you can delete the stack or [continue rollback](using-cfn-updating-stacks-continueupdaterollback.md)\. You might need to fix errors before your stack can return to a working state\. Or, you can contact AWS Support to restore the stack to a usable state\.  | 
 |  `UPDATE_ROLLBACK_IN_PROGRESS`  |  Ongoing return of one or more stacks to the previous working state after failed stack update\.  | 
 |  `IMPORT_IN_PROGRESS`  |  The import operation is currently in progress\.  | 

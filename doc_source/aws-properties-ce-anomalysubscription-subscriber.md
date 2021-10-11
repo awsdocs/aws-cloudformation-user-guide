@@ -1,6 +1,6 @@
 # AWS::CE::AnomalySubscription Subscriber<a name="aws-properties-ce-anomalysubscription-subscriber"></a>
 
- The recipient of `AnomalySubscription` notifications\. 
+The recipient of `AnomalySubscription` notifications\. 
 
 ## Syntax<a name="aws-properties-ce-anomalysubscription-subscriber-syntax"></a>
 
@@ -36,14 +36,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Status`  <a name="cfn-ce-anomalysubscription-subscriber-status"></a>
- Indicates if the subscriber accepts the notifications\.   
+Indicates if the subscriber accepts the notifications\.   
 *Required*: No  
 *Type*: String  
 *Allowed values*: `CONFIRMED | DECLINED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-ce-anomalysubscription-subscriber-type"></a>
- The notification delivery channel\.   
+The notification delivery channel\.   
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `EMAIL | SNS`  

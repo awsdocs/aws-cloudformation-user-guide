@@ -6,7 +6,7 @@
 + [Amazon RDS DBSecurityGroup resource for CIDR range](#scenario-rds-security-group-cidr)
 + [Amazon RDS DBSecurityGroup with an Amazon EC2 security group](#scenario-rds-security-group-ec2)
 + [Multiple VPC security groups](#scenario-multiple-vpc-security-groups)
-+ [Amazon RDS database instance in a VPC security group](#w9292ab1c27c21c76c15)
++ [Amazon RDS database instance in a VPC security group](#w10072ab1c27c21c76c15)
 
 ## Amazon RDS DB instance resource<a name="scenario-rds-instance"></a>
 
@@ -152,8 +152,8 @@ To do this, you define an EC2 security group and then use the intrinsic Ref func
    "Properties" : {
       "GroupDescription" : "Enable HTTP access via port 80 and SSH access",
       "SecurityGroupIngress" : [
-         {"IpProtocol" : "tcp", "FromPort" : "80", "ToPort" : "80", "CidrIp" : "0.0.0.0/0"},
-         {"IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : "0.0.0.0/0"}
+         {"IpProtocol" : "tcp", "FromPort" : 80, "ToPort" : 80, "CidrIp" : "0.0.0.0/0"},
+         {"IpProtocol" : "tcp", "FromPort" : 22, "ToPort" : 22, "CidrIp" : "0.0.0.0/0"}
       ]
    }
 }
@@ -193,12 +193,12 @@ WebServerSecurityGroup:
     GroupDescription: Enable HTTP access via port 80 and SSH access
     SecurityGroupIngress:
     - IpProtocol: tcp
-      FromPort: '80'
-      ToPort: '80'
+      FromPort: 80
+      ToPort: 80
       CidrIp: 0.0.0.0/0
     - IpProtocol: tcp
-      FromPort: '22'
-      ToPort: '22'
+      FromPort: 22
+      ToPort: 22
       CidrIp: 0.0.0.0/0
 ```
 
@@ -277,7 +277,7 @@ Resources:
         EC2SecurityGroupOwnerId: '111122223333'
 ```
 
-## Amazon RDS database instance in a VPC security group<a name="w9292ab1c27c21c76c15"></a>
+## Amazon RDS database instance in a VPC security group<a name="w10072ab1c27c21c76c15"></a>
 
 This example shows an Amazon RDS database instance associated with an Amazon EC2 VPC security group\.
 
@@ -291,8 +291,8 @@ This example shows an Amazon RDS database instance associated with an Amazon EC2
       "GroupDescription": "Open database for access",
       "SecurityGroupIngress" : [{
         "IpProtocol" : "tcp",
-        "FromPort" : "3306",
-        "ToPort" : "3306",
+        "FromPort" : 3306,
+        "ToPort" : 3306,
         "SourceSecurityGroupName" : { "Ref" : "WebServerSecurityGroup" }
       }]
     }
@@ -322,8 +322,8 @@ DBEC2SecurityGroup:
     GroupDescription: Open database for access
     SecurityGroupIngress:
     - IpProtocol: tcp
-      FromPort: '3306'
-      ToPort: '3306'
+      FromPort: 3306
+      ToPort: 3306
       SourceSecurityGroupName:
         Ref: WebServerSecurityGroup
 DBInstance:

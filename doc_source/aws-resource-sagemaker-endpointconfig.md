@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::EndpointConfig",
   "Properties" : {
+      "[AsyncInferenceConfig](#cfn-sagemaker-endpointconfig-asyncinferenceconfig)" : AsyncInferenceConfig,
       "[DataCaptureConfig](#cfn-sagemaker-endpointconfig-datacaptureconfig)" : DataCaptureConfig,
       "[EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname)" : String,
       "[KmsKeyId](#cfn-sagemaker-endpointconfig-kmskeyid)" : String,
@@ -26,6 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SageMaker::EndpointConfig
 Properties: 
+  [AsyncInferenceConfig](#cfn-sagemaker-endpointconfig-asyncinferenceconfig): 
+    AsyncInferenceConfig
   [DataCaptureConfig](#cfn-sagemaker-endpointconfig-datacaptureconfig): 
     DataCaptureConfig
   [EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname): String
@@ -37,6 +40,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-sagemaker-endpointconfig-properties"></a>
+
+`AsyncInferenceConfig`  <a name="cfn-sagemaker-endpointconfig-asyncinferenceconfig"></a>
+Specifies configuration for how an endpoint performs asynchronous inference\.  
+*Required*: No  
+*Type*: [AsyncInferenceConfig](aws-properties-sagemaker-endpointconfig-asyncinferenceconfig.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DataCaptureConfig`  <a name="cfn-sagemaker-endpointconfig-datacaptureconfig"></a>
 Specifies how to capture endpoint data for model monitor\. The data capture configuration applies to all production variants hosted at the endpoint\.  

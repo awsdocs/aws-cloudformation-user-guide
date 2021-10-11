@@ -91,7 +91,7 @@ Example: `arn:aws:s3Outposts:::DOC-EXAMPLE-BUCKET`
 
 ## Examples<a name="aws-resource-s3outposts-bucket--examples"></a>
 
-The following examples creates an Amazon S3 on Outposts bucket using AWS CloudFormation
+The following examples create an Amazon S3 on Outposts bucket using AWS CloudFormation\.
 
 ### Create an S3 on Outposts bucket<a name="aws-resource-s3outposts-bucket--examples--Create_an_S3_on_Outposts_bucket"></a>
 
@@ -120,7 +120,7 @@ The following example creates an S3 on Outposts bucket without tags or lifecycle
             }
         },
         "ExampleS3OutpostsStackID": {
-            "Description": "The Stack ID",
+            "Description": "The stack ID",
             "Value": {
                 "Ref": "AWS::StackID"
             },
@@ -151,7 +151,7 @@ Outputs:
     Value:
       Ref: ExampleS3OutpostsBucket
   ExampleS3OutpostsStackID:
-    Description: The Stack ID
+    Description: The stack ID
     Value:
       Ref: AWS::StackID
     Export:
@@ -196,7 +196,7 @@ The following example creates an S3 on Outposts bucket with tags and no lifecycl
             }
         },
         "ExampleS3OutpostsStackID": {
-            "Description": "The Stack ID",
+            "Description": "The stack ID",
             "Value": {
                 "Ref": "AWS::StackID"
             },
@@ -232,7 +232,7 @@ Outputs:
     Value:
       Ref: ExampleS3OutpostsBucket
   ExampleS3OutpostsStackID:
-    Description: The Stack ID
+    Description: The stack ID
     Value:
       Ref: AWS::StackID
     Export:
@@ -326,7 +326,7 @@ All lifecycle rules must have values for either `ExpirationInDays`, `ExpirationD
             }
         },
         "ExampleStackID": {
-            "Description": "The Stack ID",
+            "Description": "The stack ID",
             "Value": {
                 "Ref": "AWS::StackID"
             },
@@ -390,7 +390,7 @@ Outputs:
     Value:
       Ref: ExampleS3OutpostsBucket
   ExampleStackID:
-    Description: The Stack ID
+    Description: The stack ID
     Value:
       Ref: AWS::StackID
     Export:

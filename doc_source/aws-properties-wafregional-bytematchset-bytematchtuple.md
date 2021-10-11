@@ -38,7 +38,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafregional-bytematchset-bytematchtuple-properties"></a>
 
 `FieldToMatch`  <a name="cfn-wafregional-bytematchset-bytematchtuple-fieldtomatch"></a>
-The part of a web request that you want AWS WAF to search, such as a specified header or a query string\.  
+The part of a web request that you want AWS WAF to inspect, such as a specific header or a query string\.   
 *Required*: Yes  
 *Type*: [FieldToMatch](aws-properties-wafregional-bytematchset-fieldtomatch.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -10,10 +10,6 @@ When you create or update a rule, incoming events might not immediately start ma
 
 A rule must contain at least an EventPattern or ScheduleExpression\. Rules with EventPatterns are triggered when a matching event is observed\. Rules with ScheduleExpressions self\-trigger based on the given schedule\. A rule can have both an EventPattern and a ScheduleExpression, in which case the rule triggers on matching events as well as on a schedule\.
 
-When you initially create a rule, you can optionally assign one or more tags to the rule\. Tags can help you organize and categorize your resources\. You can also use them to scope user permissions, by granting a user permission to access or change only rules with certain tag values\. To use the `PutRule` operation and assign tags, you must have both the `events:PutRule` and `events:TagResource` permissions\.
-
-If you are updating an existing rule, any tags you specify in the `PutRule` operation are ignored\. To update the tags of an existing rule, use [TagResource](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_TagResource.html) and [UntagResource](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UntagResource.html)\.
-
 Most services in AWS treat : or / as the same character in Amazon Resource Names \(ARNs\)\. However, EventBridge uses an exact match in event patterns and rules\. Be sure to use the correct ARN characters when creating event patterns so that they match the ARN syntax in the event you want to match\.
 
 In EventBridge, it is possible to create rules that lead to infinite loops, where a rule is fired repeatedly\. For example, a rule might detect that ACLs have changed on an S3 bucket, and trigger software to change them to the desired state\. If the rule is not written carefully, the subsequent change to the ACLs fires the rule again, creating an infinite loop\.
@@ -128,6 +124,7 @@ You can configure the following as targets for Events:
 + CodeBuild project
 + CodePipeline
 + Amazon EC2 `CreateSnapshot` API call
++ EC2 Image Builder
 + Amazon EC2 `RebootInstances` API call
 + Amazon EC2 `StopInstances` API call
 + Amazon EC2 `TerminateInstances` API call
@@ -141,7 +138,7 @@ You can configure the following as targets for Events:
 +  AWS Lambda function
 + Redshift clusters \(Data API statement execution\)
 + Amazon SNS topic
-+ Amazon SQS queues \(includes FIFO queues
++ Amazon SQS queues \(includes FIFO queues\)
 + SSM Automation
 + SSM OpsItem
 + SSM Run Command

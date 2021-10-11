@@ -38,7 +38,7 @@ The Amazon Resource Name \(ARN\) of the principal\. This can be one of the follo
 + The ARN of an AWS account root: This is an IAMARN rather than a Amazon QuickSightARN\. Use this option only to share resources \(templates\) across AWS accounts\. \(This is less common\.\)
 A *sheet*, which is an object that contains a set of visuals that are viewed together on one page in Amazon QuickSight\. Every analysis and dashboard contains at least one sheet\. Each sheet contains at least one visualization widget, for example a chart, pivot table, or narrative insight\. Sheets can be associated with other components, such as controls, filters, and so on\.  
 The unique identifier associated with a sheet\.  
-The name of a sheet\. This name is displayed on the sheet's tab in the QuickSight console\.  
+The name of a sheet\. This name is displayed on the sheet's tab in the Amazon QuickSight console\.  
 A string parameter\.  
 The values of a string parameter\.  
 A display name for a string parameter\.  
@@ -48,14 +48,14 @@ The time this dataset version was last updated\.
   
   
 The Amazon Resource Name \(ARN\) of the dataset\.  
-Groupings of columns that work together in certain QuickSight features\. Currently, only geospatial hierarchy is supported\.  
+Groupings of columns that work together in certain Amazon QuickSight features\. Currently, only geospatial hierarchy is supported\.  
 Declares the physical tables that are available in the underlying data sources\.  
 Indicates whether you want to import the data into SPICE\.  
 The folder that contains fields and nested subfolders for your dataset\.  
 Configures the combination and transformation of the data from the physical tables\.  
-The AWS account; ID\.  
+The AWS account ID\.  
 A list of resource permissions on the dataset\.  
-An ID for the dataset that you want to create\. This ID is unique per AWS Region; for each AWS account;\.  
+An ID for the dataset that you want to create\. This ID is unique per AWS Region for each AWS account\.  
 The row\-level security configuration for the data that you want to create\.  
 Contains a map of the key\-value pairs for the resource tag or tags assigned to the dataset\.  
 A set of one or more definitions of a ` ColumnLevelPermissionRule `\.  
@@ -146,11 +146,11 @@ Information about a dataset that contains permissions for row\-level security \(
 The option to deny permissions by setting `PermissionPolicy` to `DENY_ACCESS` is not supported for new RLS datasets\.  
 The Amazon Resource Name \(ARN\) of the dataset that contains permissions for RLS\.  
 The namespace associated with the dataset that contains permissions for RLS\.  
-The type of permissions to use when interpretting the permissions for RLS\. `DENY_ACCESS` is included for backward compatibility only\.  
+The type of permissions to use when interpreting the permissions for RLS\. `DENY_ACCESS` is included for backward compatibility only\.  
 A physical table type for an S3 data source\.  
 The Amazon Resource Name \(ARN\) for the data source\.  
 A physical table type for an S3 data source\.  
-For non\-JSON files, only `STRING` data types are supported in input columns\.
+For files that aren't JSON, only `STRING` data types are supported in input columns\.
 Information about the format for the S3 source file or files\.  
 A transform operation that tags a column with additional information\.  
 The column that this operation acts on\.  
@@ -175,31 +175,31 @@ The time that this data source was created\.
 The last time that this data source was updated\.  
 The structure of a data source\.  
 The Amazon Resource Name \(ARN\) of the dataset\.  
-The parameters that QuickSight uses to connect to your underlying source\.  
-The type of the data source\. Currently, the supported types for this operation are: `ATHENA, AURORA, AURORA_POSTGRESQL, AMAZON_ELASTICSEARCH, MARIADB, MYSQL, POSTGRESQL, PRESTO, REDSHIFT, S3, SNOWFLAKE, SPARK, SQLSERVER, TERADATA`\. Use `ListDataSources` to return a list of all data sources\.  
- `AMAZON_ELASTICSEARCH` is for Amazon managed Elasticsearch Service\.  
-Use this parameter only when you want QuickSight to use a VPC connection when connecting to your underlying source\.  
+The parameters that Amazon QuickSight uses to connect to your underlying source\.  
+The type of the data source\. To return a list of all data sources, use `ListDataSources`\.  
+Use `AMAZON_ELASTICSEARCH` for Amazon OpenSearch Service\.  
+Use this parameter only when you want Amazon QuickSight to use a VPC connection when connecting to your underlying source\.  
 A set of alternate data source parameters that you want to share for the credentials stored with this data source\. The credentials are applied in tandem with the data source parameters when you copy a data source by using a create or update request\. The API operation compares the `DataSourceParameters` structure that's in the request with the structures in the `AlternateDataSourceParameters` allow list\. If the structures are an exact match, the request is allowed to use the credentials from this existing data source\. If the `AlternateDataSourceParameters` list is null, the `Credentials` originally used with this `DataSourceParameters` are automatically allowed\.  
 Error information from the last update or the creation of the data source\.  
-The AWS account; ID\.  
+The AWS account ID\.  
 A list of resource permissions on the data source\.  
-Secure Socket Layer \(SSL\) properties that apply when QuickSight connects to your underlying source\.  
-The credentials QuickSight that uses to connect to your underlying source\. Currently, only credentials based on user name and password are supported\.  
-An ID for the data source\. This ID is unique per AWS Region; for each AWS account;\.   
+Secure Socket Layer \(SSL\) properties that apply when Amazon QuickSight connects to your underlying source\.  
+The credentials Amazon QuickSight that uses to connect to your underlying source\. Currently, only credentials based on user name and password are supported\.  
+An ID for the data source\. This ID is unique per AWS Region for each AWS account\.   
 Contains a map of the key\-value pairs for the resource tag or tags assigned to the data source\.  
 A display name for the data source\.  
-Amazon Elasticsearch Service parameters\.  
-The Amazon Elasticsearch Service domain\.  
-Amazon Athena parameters\.  
+The parameters for OpenSearch\.  
+The OpenSearch domain\.  
+Parameters for Amazon Athena\.  
 The workgroup that Amazon Athena uses\.  
-Amazon Aurora parameters\.  
+Parameters for Amazon Aurora\.  
 Port\.  
 Database\.  
 Host\.  
-Amazon Aurora with PostgreSQL compatibility parameters\.  
-Port\.  
-Database\.  
-Host\.  
+Parameters for Amazon Aurora PostgreSQL\-Compatible Edition\.  
+The port that Amazon Aurora PostgreSQL is listening on\.  
+The Amazon Aurora PostgreSQL database to connect to\.  
+The Amazon Aurora PostgreSQL\-Compatible host to connect to\.  
 AWS IoT Analytics parameters\.  
 Dataset name\.  
 The combination of user name and password that are used as credentials\.  
@@ -216,52 +216,52 @@ The parameters that Amazon QuickSight uses to connect to your underlying source\
 Jira parameters\.  
 The base URL of the Jira site\.  
 Twitter parameters\.  
-Aurora PostgreSQL parameters\.  
+The parameters for Amazon Aurora\.  
 ServiceNow parameters\.  
-Teradata parameters\.  
-Amazon RDS parameters\.  
-Amazon Athena parameters\.  
-Spark parameters\.  
-MariaDB parameters\.  
-Presto parameters\.  
+The parameters for Teradata\.  
+The parameters for Amazon RDS\.  
+The parameters for Amazon Athena\.  
+The parameters for Spark\.  
+The parameters for MariaDB\.  
+The parameters for Presto\.  
 AWS IoT Analytics parameters\.  
-Amazon Redshift parameters\.  
-MySQL parameters\.  
-SQL Server parameters\.  
-Snowflake parameters\.  
-Amazon Elasticsearch Service parameters\.  
-PostgreSQL parameters\.  
-S3 parameters\.  
-Amazon Aurora MySQL parameters\.  
+The parameters for Amazon Redshift\.  
+The parameters for MySQL\.  
+The parameters for SQL Server\.  
+The parameters for Snowflake\.  
+The parameters for OpenSearch\.  
+The parameters for PostgreSQL\.  
+The parameters for S3\.  
+The parameters for Amazon Aurora MySQL\.  
 Jira parameters\.  
 Amazon S3 manifest file location\.  
 Amazon S3 bucket\.  
 Amazon S3 key that identifies an object\.  
-MariaDB parameters\.  
+The parameters for MariaDB\.  
 Port\.  
 Database\.  
 Host\.  
-MySQL parameters\.  
-Port\.  
-Database\.  
-Host\.  
-Oracle parameters\.  
+The parameters for MySQL\.  
 Port\.  
 Database\.  
 Host\.  
 Oracle parameters\.  
-PostgreSQL parameters\.  
 Port\.  
 Database\.  
 Host\.  
-Presto parameters\.  
+Oracle parameters\.  
+The parameters for PostgreSQL\.  
+Port\.  
+Database\.  
+Host\.  
+The parameters for Presto\.  
 Port\.  
 Host\.  
 Catalog\.  
-Amazon RDS parameters\.  
+The parameters for Amazon RDS\.  
 Instance ID\.  
 Database\.  
-Amazon Redshift parameters\. The `ClusterId` field can be blank if `Host` and `Port` are both set\. The `Host` and `Port` fields can be blank if the `ClusterId` field is set\.  
+The parameters for Amazon Redshift\. The `ClusterId` field can be blank if `Host` and `Port` are both set\. The `Host` and `Port` fields can be blank if the `ClusterId` field is set\.  
 Cluster ID\. This field can be blank if the `Host` and `Port` are provided\.  
 Port\. This field can be blank if the `ClusterId` is provided\.  
 Database\.  
@@ -272,22 +272,22 @@ The Amazon Resource Name \(ARN\) of the principal\. This can be one of the follo
 + The ARN of an Amazon QuickSight user or group associated with a data source or dataset\. \(This is common\.\)
 + The ARN of an Amazon QuickSight user, group, or namespace associated with an analysis, dashboard, template, or theme\. \(This is common\.\)
 + The ARN of an AWS account root: This is an IAMARN rather than a Amazon QuickSightARN\. Use this option only to share resources \(templates\) across AWS accounts\. \(This is less common\.\)
-S3 parameters\.  
-Location of the Amazon S3 manifest file\. This is NULL if the manifest file was uploaded into QuickSight\.  
-Snowflake parameters\.  
+The parameters for S3\.  
+Location of the Amazon S3 manifest file\. This is NULL if the manifest file was uploaded into Amazon QuickSight\.  
+The parameters for Snowflake\.  
 Warehouse\.  
 Database\.  
 Host\.  
-Spark parameters\.  
+The parameters for Spark\.  
 Port\.  
 Host\.  
-SQL Server parameters\.  
+The parameters for SQL Server\.  
 Port\.  
 Database\.  
 Host\.  
-Secure Socket Layer \(SSL\) properties that apply when QuickSight connects to your underlying data source\.  
+Secure Socket Layer \(SSL\) properties that apply when Amazon QuickSight connects to your underlying data source\.  
 A Boolean option to control whether SSL should be disabled\.  
-Teradata parameters\.  
+The parameters for Teradata\.  
 Port\.  
 Database\.  
 Host\.  

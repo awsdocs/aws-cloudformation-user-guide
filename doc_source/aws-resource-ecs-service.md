@@ -108,7 +108,8 @@ The deployment controller to use for the service\. If no deployment controller i
 
 `DesiredCount`  <a name="cfn-ecs-service-desiredcount"></a>
 The number of instantiations of the specified task definition to place and keep running on your cluster\.  
-If a desired count is not specified, a default value of `1` is used\. When using the `DAEMON` scheduling strategy, the desired count is not required\.  
+For new services, if a desired count is not specified, a default value of `1` is used\. When using the `DAEMON` scheduling strategy, the desired count is not required\.  
+For existing services, if a desired count is not specified, it is omitted from the operation\.  
 *Required*: Conditional  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -152,7 +153,7 @@ The network configuration for the service\. This parameter is required for task 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PlacementConstraints`  <a name="cfn-ecs-service-placementconstraints"></a>
-An array of placement constraint objects to use for tasks in your service\. You can specify a maximum of 10 constraints per task \(this limit includes constraints in the task definition and those specified at runtime\)\.  
+An array of placement constraint objects to use for tasks in your service\. You can specify a maximum of 10 constraints per task \(this limit includes constraints in the task definition and those specified at runtime\)\.   
 *Required*: No  
 *Type*: List of [PlacementConstraint](aws-properties-ecs-service-placementconstraint.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -71,6 +71,7 @@ The name you configured for your agent\. This value is a text reference that is 
 
 `SecurityGroupArns`  <a name="cfn-datasync-agent-securitygrouparns"></a>
 The ARNs of the security groups used to protect your data transfer task subnets\. See [SecurityGroupArns](https://docs.aws.amazon.com/datasync/latest/userguide/API_Ec2Config.html#DataSync-Type-Ec2Config-SecurityGroupArns)\.  
+*Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):ec2:[a-z\-0-9]*:[0-9]{12}:security-group/.*$`  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `1`  

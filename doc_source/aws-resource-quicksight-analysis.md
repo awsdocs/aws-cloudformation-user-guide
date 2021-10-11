@@ -53,12 +53,12 @@ The ID for the analysis that you're creating\. This ID displays in the URL of th
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `2048`  
+*Maximum*: `512`  
 *Pattern*: `[\w\-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AwsAccountId`  <a name="cfn-quicksight-analysis-awsaccountid"></a>
-The ID of the AWS account; where you are creating an analysis\.  
+The ID of the AWS account where you are creating an analysis\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `12`  
@@ -73,7 +73,7 @@ Not currently supported by AWS CloudFormation\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-quicksight-analysis-name"></a>
-A descriptive name for the analysis that you're creating\. This name displays for the analysis in the QuickSight console\.   
+A descriptive name for the analysis that you're creating\. This name displays for the analysis in the Amazon QuickSight console\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -108,7 +108,7 @@ Contains a map of the key\-value pairs for the resource tag or tags assigned to 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThemeArn`  <a name="cfn-quicksight-analysis-themearn"></a>
-The ARN for the theme to apply to the analysis that you're creating\. To see the theme in the QuickSight console, make sure that you have access to it\.  
+The ARN for the theme to apply to the analysis that you're creating\. To see the theme in the Amazon QuickSight console, make sure that you have access to it\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

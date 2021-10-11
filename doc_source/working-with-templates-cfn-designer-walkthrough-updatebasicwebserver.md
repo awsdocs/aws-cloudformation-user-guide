@@ -1,6 +1,6 @@
 # Walkthrough: Use AWS CloudFormation Designer to modify a stack's template<a name="working-with-templates-cfn-designer-walkthrough-updatebasicwebserver"></a>
 
-You can use AWS CloudFormation Designer to easily modify a stack's template, and then submit it to AWS CloudFormation to update the stack\. Typically, when you modify a stack, you need to get a copy of its template, modify the template in a text editor, and then use CloudFormation to update the stack\. With AWS CloudFormation Designer, you can quickly get a copy of any running stack's template, modify it, and then update the stack without ever leaving the console\.
+You can use AWS CloudFormation Designer to modify a stack's template, and then submit it to AWS CloudFormation to update the stack\. Typically, when you modify a stack, you need to get a copy of its template, modify the template in a text editor, and then use CloudFormation to update the stack\. With AWS CloudFormation Designer, you can quickly get a copy of any running stack's template, modify it, and then update the stack without ever leaving the console\.
 
 In this walkthrough, we'll start with a [basic web server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md) stack, and then modify it so that the web server is scalable and durable\.
 
@@ -199,16 +199,16 @@ JSON
               "SecurityGroupIngress": [
                 {
                   "IpProtocol": "tcp",
-                  "FromPort": "80",
-                  "ToPort": "80",
+                  "FromPort": 80,
+                  "ToPort": 80,
                   "CidrIp": "0.0.0.0/0"
                 }
               ],
               "SecurityGroupEgress": [
                 {
                   "IpProtocol": "tcp",
-                  "FromPort": "80",
-                  "ToPort": "80",
+                  "FromPort": 80,
+                  "ToPort": 80,
                   "CidrIp": "0.0.0.0/0"
                 }
               ],
@@ -224,13 +224,13 @@ YAML
               from the Internet
             SecurityGroupIngress:
               - IpProtocol: tcp
-                FromPort: '80'
-                ToPort: '80'
+                FromPort: 80
+                ToPort: 80
                 CidrIp: 0.0.0.0/0
             SecurityGroupEgress:
               - IpProtocol: tcp
-                FromPort: '80'
-                ToPort: '80'
+                FromPort: 80
+                ToPort: 80
                 CidrIp: 0.0.0.0/0
             VpcId: !Ref VPC
       ```  
@@ -243,16 +243,16 @@ JSON
               "SecurityGroupIngress": [
                 {
                   "IpProtocol": "tcp",
-                  "FromPort": "80",
-                  "ToPort": "80",
+                  "FromPort": 80,
+                  "ToPort": 80,
                   "SourceSecurityGroupId": {
                     "Ref": "PublicLoadBalancerSecurityGroup"
                   }
                 },
                 {
                   "IpProtocol": "tcp",
-                  "FromPort": "22",
-                  "ToPort": "22",
+                  "FromPort": 22,
+                  "ToPort": 22,
                   "CidrIp": {
                     "Ref": "SSHLocation"
                   }
@@ -269,16 +269,16 @@ YAML
             GroupDescription: Allow access from load balancer and SSH traffic
             SecurityGroupIngress:
               - IpProtocol: tcp
-                FromPort: '80'
-                ToPort: '80'
+                FromPort: 80
+                ToPort: 80
                 SourceSecurityGroupId: !Ref PublicLoadBalancerSecurityGroup
               - IpProtocol: tcp
-                FromPort: '22'
-                ToPort: '22'
+                FromPort: 22
+                ToPort: 22
                 CidrIp: !Ref SSHLocation
       ```  
 `WebServerLaunchConfig`  
-The launch configuration has a number of different properties that you need to specify, so we'll highlight just a few of them\. The `InstanceType` and `ImageId` properties use the parameter and mapping values that were already specified in the template\. You specify the instance type as a parameter value when you create a stack\. The `ImageId` value is a mapping that is based on your stack's region and the instance type that you specified\.  
+The launch configuration has a number of different properties that you need to specify, so we'll highlight just a few of them\. The `InstanceType` and `ImageId` properties use the parameter and mapping values that were already specified in the template\. You specify the instance type as a parameter value when you create a stack\. The `ImageId` value is a mapping that's based on your stack's region and the instance type that you specified\.  
 In the `UserData` property, we specify configurations scripts that run after the instance is up and running\. The configuration information is defined in the instance's metadata, which we'll add in the next step\.  
 JSON  
 

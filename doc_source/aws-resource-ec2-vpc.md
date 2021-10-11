@@ -117,10 +117,11 @@ The following example specifies a VPC\.
    "Type" : "AWS::EC2::VPC",
    "Properties" : {
       "CidrBlock" : "10.0.0.0/16",
-      "EnableDnsSupport" : "false",
-      "EnableDnsHostnames" : "false",
-      "InstanceTenancy" : "dedicated",
-      "Tags" : [ {"Key" : "stack", "Value" : "production"} ]
+      "EnableDnsSupport" : "true",
+      "EnableDnsHostnames" : "true",
+      "Tags" : [ 
+         {"Key" : "stack", "Value" : "production"} 
+      ]
    }
 }
 ```
@@ -132,9 +133,8 @@ myVPC:
   Type: AWS::EC2::VPC
   Properties:
     CidrBlock: 10.0.0.0/16
-    EnableDnsSupport: 'false'
-    EnableDnsHostnames: 'false'
-    InstanceTenancy: dedicated
+    EnableDnsSupport: 'true'
+    EnableDnsHostnames: 'true'
     Tags:
      - Key: stack
        Value: production
@@ -142,5 +142,5 @@ myVPC:
 
 ## See also<a name="aws-resource-ec2-vpc--seealso"></a>
 +  [CreateVpc](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpc.html) in the *Amazon EC2 API Reference*
-+  [Your VPC and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon Virtual Private Cloud User Guide*
++  [VPC and subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon VPC User Guide*
 

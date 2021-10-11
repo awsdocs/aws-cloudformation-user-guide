@@ -1,6 +1,6 @@
 # AWS::EC2::NetworkInterface<a name="aws-resource-ec2-network-interface"></a>
 
-Describes a network interface in an Elastic Compute Cloud \(EC2\) instance for AWS CloudFormation\.
+Describes a network interface in an Amazon EC2 instance for AWS CloudFormation\.
 
 ## Syntax<a name="aws-resource-ec2-network-interface-syntax"></a>
 
@@ -64,10 +64,10 @@ A list of security group IDs associated with this network interface\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InterfaceType`  <a name="cfn-ec2-networkinterface-interfacetype"></a>
-Indicates the type of network interface\. To create an Elastic Fabric Adapter \(EFA\), specify `efa`\. For more information, see [ Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+Indicates the type of network interface\. To create an Elastic Fabric Adapter \(EFA\), specify `efa`\. For more information, see [ Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon Elastic Compute Cloud User Guide*\. To create a trunk network interface, specify `efa`\. For more information, see [ Network interface trunking](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/eni-trunking.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `efa`  
+*Allowed values*: `branch | efa | trunk`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ipv6AddressCount`  <a name="cfn-ec2-networkinterface-ipv6addresscount"></a>
@@ -234,5 +234,5 @@ Ec2Instance:
 ```
 
 ## See also<a name="aws-resource-ec2-network-interface--seealso"></a>
-+ [NetworkInterface](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_NetworkInterface.html) in the *Amazon Elastic Compute Cloud API Reference*
++ [NetworkInterface](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_NetworkInterface.html) in the *Amazon EC2 API Reference*
 

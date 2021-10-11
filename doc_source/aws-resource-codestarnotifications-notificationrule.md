@@ -96,6 +96,13 @@ A list of Amazon Resource Names \(ARNs\) of AWS Chatbot topics and AWS Chatbot c
 
 When the logical ID of this resource is provided to the Ref intrinsic function, `Ref` returns the notification rule ARN\. 
 
+### Fn::GetAtt<a name="aws-resource-codestarnotifications-notificationrule-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-codestarnotifications-notificationrule-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-codestarnotifications-notificationrule--examples"></a>
 
 

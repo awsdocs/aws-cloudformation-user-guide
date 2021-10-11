@@ -69,37 +69,37 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-datasource-datasourceparameters-properties"></a>
 
 `AmazonElasticsearchParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-amazonelasticsearchparameters"></a>
-Amazon Elasticsearch Service parameters\.  
+The parameters for OpenSearch\.  
 *Required*: No  
 *Type*: [AmazonElasticsearchParameters](aws-properties-quicksight-datasource-amazonelasticsearchparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AthenaParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-athenaparameters"></a>
-Amazon Athena parameters\.  
+The parameters for Amazon Athena\.  
 *Required*: No  
 *Type*: [AthenaParameters](aws-properties-quicksight-datasource-athenaparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuroraParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-auroraparameters"></a>
-Amazon Aurora MySQL parameters\.  
+The parameters for Amazon Aurora MySQL\.  
 *Required*: No  
 *Type*: [AuroraParameters](aws-properties-quicksight-datasource-auroraparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuroraPostgreSqlParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-aurorapostgresqlparameters"></a>
-Aurora PostgreSQL parameters\.  
+The parameters for Amazon Aurora\.  
 *Required*: No  
 *Type*: [AuroraPostgreSqlParameters](aws-properties-quicksight-datasource-aurorapostgresqlparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MariaDbParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-mariadbparameters"></a>
-MariaDB parameters\.  
+The parameters for MariaDB\.  
 *Required*: No  
 *Type*: [MariaDbParameters](aws-properties-quicksight-datasource-mariadbparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MySqlParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-mysqlparameters"></a>
-MySQL parameters\.  
+The parameters for MySQL\.  
 *Required*: No  
 *Type*: [MySqlParameters](aws-properties-quicksight-datasource-mysqlparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -111,55 +111,55 @@ Oracle parameters\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PostgreSqlParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-postgresqlparameters"></a>
-PostgreSQL parameters\.  
+The parameters for PostgreSQL\.  
 *Required*: No  
 *Type*: [PostgreSqlParameters](aws-properties-quicksight-datasource-postgresqlparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrestoParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-prestoparameters"></a>
-Presto parameters\.  
+The parameters for Presto\.  
 *Required*: No  
 *Type*: [PrestoParameters](aws-properties-quicksight-datasource-prestoparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RdsParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-rdsparameters"></a>
-Amazon RDS parameters\.  
+The parameters for Amazon RDS\.  
 *Required*: No  
 *Type*: [RdsParameters](aws-properties-quicksight-datasource-rdsparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RedshiftParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-redshiftparameters"></a>
-Amazon Redshift parameters\.  
+The parameters for Amazon Redshift\.  
 *Required*: No  
 *Type*: [RedshiftParameters](aws-properties-quicksight-datasource-redshiftparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Parameters`  <a name="cfn-quicksight-datasource-datasourceparameters-s3parameters"></a>
-S3 parameters\.  
+The parameters for S3\.  
 *Required*: No  
 *Type*: [S3Parameters](aws-properties-quicksight-datasource-s3parameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnowflakeParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-snowflakeparameters"></a>
-Snowflake parameters\.  
+The parameters for Snowflake\.  
 *Required*: No  
 *Type*: [SnowflakeParameters](aws-properties-quicksight-datasource-snowflakeparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SparkParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-sparkparameters"></a>
-Spark parameters\.  
+The parameters for Spark\.  
 *Required*: No  
 *Type*: [SparkParameters](aws-properties-quicksight-datasource-sparkparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SqlServerParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-sqlserverparameters"></a>
-SQL Server parameters\.  
+The parameters for SQL Server\.  
 *Required*: No  
 *Type*: [SqlServerParameters](aws-properties-quicksight-datasource-sqlserverparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TeradataParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-teradataparameters"></a>
-Teradata parameters\.  
+The parameters for Teradata\.  
 *Required*: No  
 *Type*: [TeradataParameters](aws-properties-quicksight-datasource-teradataparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

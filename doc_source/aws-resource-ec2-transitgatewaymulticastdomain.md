@@ -36,6 +36,9 @@ Properties:
 
 `Options`  <a name="cfn-ec2-transitgatewaymulticastdomain-options"></a>
 The options for the transit gateway multicast domain\.  
++ autoAcceptSharedAssociations \(enable \| disable\)
++ igmpv2Support \(enable \| disable\)
++ staticSourcesSupport \(enable \| disable\)
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -52,14 +52,14 @@ Optional\. The access key is used if credentials are required to access the self
 *Minimum*: `8`  
 *Maximum*: `200`  
 *Pattern*: `^.+$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AgentArns`  <a name="cfn-datasync-locationobjectstorage-agentarns"></a>
 The Amazon Resource Name \(ARN\) of the agents associated with the self\-managed object storage server location\.  
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `4`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BucketName`  <a name="cfn-datasync-locationobjectstorage-bucketname"></a>
 The bucket on the self\-managed object storage server that is used to read data from\.  
@@ -77,7 +77,7 @@ Optional\. The secret key is used if credentials are required to access the self
 *Minimum*: `8`  
 *Maximum*: `200`  
 *Pattern*: `^.+$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerHostname`  <a name="cfn-datasync-locationobjectstorage-serverhostname"></a>
 The name of the self\-managed object storage server\. This value is the IP address or Domain Name Service \(DNS\) name of the object storage server\. An agent uses this host name to mount the object storage server in a network\.   
@@ -93,14 +93,14 @@ The port that your self\-managed object storage server accepts inbound network t
 *Type*: Integer  
 *Minimum*: `1`  
 *Maximum*: `65536`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerProtocol`  <a name="cfn-datasync-locationobjectstorage-serverprotocol"></a>
 The protocol that the object storage server uses to communicate\. Valid values are HTTP or HTTPS\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `HTTP | HTTPS`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Subdirectory`  <a name="cfn-datasync-locationobjectstorage-subdirectory"></a>
 The subdirectory in the self\-managed object storage server that is used to read data from\.  
@@ -108,7 +108,7 @@ The subdirectory in the self\-managed object storage server that is used to read
 *Type*: String  
 *Maximum*: `4096`  
 *Pattern*: `^[a-zA-Z0-9_\-\+\./\(\)\p{Zs}]*$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-datasync-locationobjectstorage-tags"></a>
 The key\-value pair that represents the tag that you want to add to the location\. The value can be an empty string\. We recommend using tags to name your resources\.  

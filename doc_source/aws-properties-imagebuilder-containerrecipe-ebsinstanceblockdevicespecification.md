@@ -51,7 +51,7 @@ Use to configure device IOPS\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `100`  
-*Maximum*: `10000`  
+*Maximum*: `64000`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-imagebuilder-containerrecipe-ebsinstanceblockdevicespecification-kmskeyid"></a>

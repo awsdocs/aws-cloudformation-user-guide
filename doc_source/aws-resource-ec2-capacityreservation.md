@@ -1,6 +1,6 @@
 # AWS::EC2::CapacityReservation<a name="aws-resource-ec2-capacityreservation"></a>
 
-Creates a new Capacity Reservation with the specified attributes\. For more information, see [Capacity Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+Creates a new Capacity Reservation with the specified attributes\. For more information, see [Capacity Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html) in the *Amazon EC2 User Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-capacityreservation-syntax"></a>
 
@@ -85,6 +85,7 @@ Indicates whether the Capacity Reservation supports instances with temporary, bl
 
 `InstanceCount`  <a name="cfn-ec2-capacityreservation-instancecount"></a>
 The number of instances for which to reserve capacity\.  
+Valid range: 1 \- 1000  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -159,5 +160,5 @@ Returns the tenancy of the Capacity Reservation\. For example: `dedicated`\.
 Returns the total number of instances for which the Capacity Reservation reserves capacity\. For example: `15`\.
 
 ## See also<a name="aws-resource-ec2-capacityreservation--seealso"></a>
-+  [ On\-Demand Capacity Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html) in the *Amazon Elastic Compute Cloud User Guide for Linux Instances* 
++  [ On\-Demand Capacity Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html) in the *Amazon EC2 User Guide* 
 

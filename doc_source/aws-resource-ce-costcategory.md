@@ -15,7 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DefaultValue](#cfn-ce-costcategory-defaultvalue)" : String,
       "[Name](#cfn-ce-costcategory-name)" : String,
       "[Rules](#cfn-ce-costcategory-rules)" : String,
-      "[RuleVersion](#cfn-ce-costcategory-ruleversion)" : String
+      "[RuleVersion](#cfn-ce-costcategory-ruleversion)" : String,
+      "[SplitChargeRules](#cfn-ce-costcategory-splitchargerules)" : String
     }
 }
 ```
@@ -29,6 +30,7 @@ Properties:
   [Name](#cfn-ce-costcategory-name): String
   [Rules](#cfn-ce-costcategory-rules): String
   [RuleVersion](#cfn-ce-costcategory-ruleversion): String
+  [SplitChargeRules](#cfn-ce-costcategory-splitchargerules): String
 ```
 
 ## Properties<a name="aws-resource-ce-costcategory-properties"></a>
@@ -57,6 +59,13 @@ Rules are processed in order\. If there are multiple rules that match the line i
 The rule schema version in this particular Cost Category\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SplitChargeRules`  <a name="cfn-ce-costcategory-splitchargerules"></a>
+ The split charge rules that are used to allocate your charges between your Cost Category values\.   
+*Required*: No  
+*Type*: String  
+*Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-ce-costcategory-return-values"></a>

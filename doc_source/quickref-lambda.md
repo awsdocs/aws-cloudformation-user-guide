@@ -1,6 +1,6 @@
 # AWS Lambda template<a name="quickref-lambda"></a>
 
-## <a name="w9292ab1c27c21c64b3"></a>
+## <a name="w10072ab1c27c21c64b3"></a>
 
 The following template uses an AWS Lambda \(Lambda\) function and custom resource to append a new security group to a list of existing security groups\. This function is useful when you want to build a list of security groups dynamically, so that your list includes both new and existing security groups\. For example, you can pass a list of existing security groups as a parameter value, append the new value to the list, and then associate all your values with an EC2 instance\. For more information about the Lambda function resource type, see [AWS::Lambda::Function](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html)\.
 
@@ -53,14 +53,14 @@ In the example, when AWS CloudFormation creates the `AllSecurityGroups` custom r
         "VpcId" : {"Ref" : "ExistingVPC"},
         "SecurityGroupIngress" : [{
           "IpProtocol" : "tcp",
-          "FromPort" : "80",
-          "ToPort" : "80",
+          "FromPort" : 80,
+          "ToPort" : 80,
           "CidrIp" : "0.0.0.0/0"
         }],
         "SecurityGroupEgress" : [{
           "IpProtocol" : "tcp",
-          "FromPort" : "80",
-          "ToPort" : "80",
+          "FromPort" : 80,
+          "ToPort" : 80,
           "CidrIp" : "0.0.0.0/0"
         }]
       }
@@ -88,7 +88,7 @@ In the example, when AWS CloudFormation creates the `AllSecurityGroups` custom r
             "};"
           ]]}
         },
-        "Runtime": "nodejs8.10"
+        "Runtime": "nodejs14.x"
       }
     },
     "MyEC2Instance" : {
@@ -192,13 +192,13 @@ Resources:
         Ref: ExistingVPC
       SecurityGroupIngress:
       - IpProtocol: tcp
-        FromPort: '80'
-        ToPort: '80'
+        FromPort: 80
+        ToPort: 80
         CidrIp: 0.0.0.0/0
       SecurityGroupEgress:
       - IpProtocol: tcp
-        FromPort: '80'
-        ToPort: '80'
+        FromPort: 80
+        ToPort: 80
         CidrIp: 0.0.0.0/0
   AllSecurityGroups:
     Type: Custom::Split
@@ -221,7 +221,7 @@ Resources:
              responseData.Value.push(event.ResourceProperties.AppendedItem);
              response.send(event, context, response.SUCCESS, responseData);
           };
-      Runtime: nodejs8.10
+      Runtime: nodejs14.x
   MyEC2Instance:
     Type: AWS::EC2::Instance
     Properties:

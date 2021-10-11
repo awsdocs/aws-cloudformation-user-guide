@@ -1,4 +1,4 @@
-# QLDB resource type reference<a name="AWS_QLDB"></a>
+# Amazon QLDB resource type reference<a name="AWS_QLDB"></a>
 
 **Resource types**
 + [AWS::QLDB::Ledger](aws-resource-qldb-ledger.md)

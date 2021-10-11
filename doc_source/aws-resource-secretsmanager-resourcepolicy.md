@@ -110,25 +110,25 @@ The following example shows how to attach a resource\-based policy to a secret\.
 
 ```
 ---
-AWS: ~
-Action: "secretsmanager:DeleteSecret"
-BlockPublicPolicy: true
-Description: "This is a secret that I want to attach a resource-based policy to"
-Effect: Deny
-? "Fn::Sub"
-: "arn:aws:iam::${AWS::AccountId}:root"
-MySecret: ~
-MySecretResourcePolicy: ~
-Principal: ~
-Properties: ~
-Ref: MySecret
-ResourcePolicy: ~
-SecretId: ~
-Statement: 
-- 
-Resource: "*"
-Type: "AWS::SecretsManager::ResourcePolicy"
-Version: "2012-10-17"
+MySecret:
+  Type: AWS::SecretsManager::Secret
+  Properties:
+    Description: This is a secret that I want to attach a resource-based policy to
+MySecretResourcePolicy:
+  Type: AWS::SecretsManager::ResourcePolicy
+  Properties:
+    BlockPublicPolicy: True
+    SecretId:
+      Ref: MySecret
+    ResourcePolicy:
+      Version: '2012-10-17'
+      Statement:
+      - Resource: "*"
+        Action: secretsmanager:DeleteSecret
+        Effect: Deny
+        Principal:
+          AWS:
+            Fn::Sub: arn:aws:iam::${AWS::AccountId}:root
 ```
 
 ## See also<a name="aws-resource-secretsmanager-resourcepolicy--seealso"></a>

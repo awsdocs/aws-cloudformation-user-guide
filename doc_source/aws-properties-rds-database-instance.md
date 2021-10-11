@@ -224,10 +224,12 @@ A value that indicates whether minor engine upgrades are applied automatically t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailabilityZone`  <a name="cfn-rds-dbinstance-availabilityzone"></a>
-The Availability Zone that the database instance will be created in\.  
-Default: A random, system\-chosen Availability Zone in the endpoint's region\.  
+ The Availability Zone \(AZ\) where the database will be created\. For information on AWS Regions and Availability Zones, see [Regions and Availability Zones](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\.   
+Default: A random, system\-chosen Availability Zone in the endpoint's AWS Region\.  
  Example: `us-east-1d`   
- Constraint: The AvailabilityZone parameter cannot be specified if the MultiAZ parameter is set to `true`\. The specified Availability Zone must be in the same region as the current endpoint\.   
+ Constraint: The `AvailabilityZone` parameter can't be specified if the DB instance is a Multi\-AZ deployment\. The specified Availability Zone must be in the same AWS Region as the current endpoint\.   
+If you're creating a DB instance in an RDS on VMware environment, specify the identifier of the custom Availability Zone to create the DB instance in\.  
+For more information about RDS on VMware, see the [ RDS on VMware User Guide\.](https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html) 
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -376,25 +378,17 @@ By specifying this property, you can create a DB instance from the specified DB 
 Some DB instance properties aren't valid when you restore from a snapshot, such as the `MasterUsername` and `MasterUserPassword` properties\. For information about the properties that you can specify, see the `RestoreDBInstanceFromDBSnapshot` action in the *Amazon RDS API Reference*\.  
 After you restore a DB instance with a `DBSnapshotIdentifier` property, you must specify the same `DBSnapshotIdentifier` property for any future updates to the DB instance\. When you specify this property for an update, the DB instance is not restored from the DB snapshot again, and the data in the database is not changed\. However, if you don't specify the `DBSnapshotIdentifier` property, an empty DB instance is created, and the original DB instance is deleted\. If you specify a property that is different from the previous snapshot restore property, a new DB instance is restored from the specified `DBSnapshotIdentifier` property, and the original DB instance is deleted\.  
 If you specify the `DBSnapshotIdentifier` property to restore a DB instance \(as opposed to specifying it for DB instance updates\), then don't specify the following properties:  
-+ `AllocatedStorage`
-+ `BackupRetentionPeriod`
 + `CharacterSetName`
 + `DBClusterIdentifier`
 + `DBName`
-+ `DBSecurityGroups`
 + `DeleteAutomatedBackups`
 + `EnablePerformanceInsights`
-+ `EngineVersion`
 + `KmsKeyId`
 + `MasterUsername`
-+ `MasterUserPassword`
-+ `MaxAllocatedStorage`
 + `MonitoringInterval`
 + `MonitoringRoleArn`
 + `PerformanceInsightsKMSKeyId`
 + `PerformanceInsightsRetentionPeriod`
-+ `PreferredBackupWindow`
-+ `PreferredMaintenanceWindow`
 + `PromotionTier`
 + `SourceDBInstanceIdentifier`
 + `SourceRegion`
@@ -427,7 +421,7 @@ Not applicable\. You can enable or disable deletion protection for the DB cluste
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Domain`  <a name="cfn-rds-dbinstance-domain"></a>
-The Active Directory directory ID to create the DB instance in\. Currently, only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances can be created in an Active Directory Domain\.  
+The Active Directory directory ID to create the DB instance in\. Currently, only Microsoft SQL Server, Oracle, and PostgreSQL DB instances can be created in an Active Directory Domain\.  
 For more information, see [ Kerberos Authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html) in the *Amazon RDS User Guide*\.  
 *Required*: No  
 *Type*: String  
@@ -570,7 +564,7 @@ Constraints: Must contain from 8 to 128 characters\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxAllocatedStorage`  <a name="cfn-rds-dbinstance-maxallocatedstorage"></a>
-The upper limit to which Amazon RDS can automatically scale the storage of the DB instance\.  
+The upper limit in gibibytes \(GiB\) to which Amazon RDS can automatically scale the storage of the DB instance\.  
 For more information about this setting, including limitations that apply to it, see [ Managing capacity automatically with Amazon RDS storage autoscaling](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling) in the *Amazon RDS User Guide*\.  
 *Required*: No  
 *Type*: Integer  

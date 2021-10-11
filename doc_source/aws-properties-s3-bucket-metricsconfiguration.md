@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AccessPointArn](#cfn-s3-bucket-metricsconfiguration-accesspointarn)" : String,
   "[Id](#cfn-s3-bucket-metricsconfiguration-id)" : String,
   "[Prefix](#cfn-s3-bucket-metricsconfiguration-prefix)" : String,
   "[TagFilters](#cfn-s3-bucket-metricsconfiguration-tagfilters)" : [ TagFilter, ... ]
@@ -19,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-s3-bucket-metricsconfiguration-syntax.yaml"></a>
 
 ```
+  [AccessPointArn](#cfn-s3-bucket-metricsconfiguration-accesspointarn): String
   [Id](#cfn-s3-bucket-metricsconfiguration-id): String
   [Prefix](#cfn-s3-bucket-metricsconfiguration-prefix): String
   [TagFilters](#cfn-s3-bucket-metricsconfiguration-tagfilters): 
@@ -26,6 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-metricsconfiguration-properties"></a>
+
+`AccessPointArn`  <a name="cfn-s3-bucket-metricsconfiguration-accesspointarn"></a>
+The access point that was used while performing operations on the object\. The metrics configuration only includes objects that meet the filter's criteria\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-s3-bucket-metricsconfiguration-id"></a>
 The ID used to identify the metrics configuration\. This can be any value you choose that helps you identify your metrics configuration\.  

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::DataBrew::Job",
   "Properties" : {
+      "[DatabaseOutputs](#cfn-databrew-job-databaseoutputs)" : [ DatabaseOutput, ... ],
       "[DataCatalogOutputs](#cfn-databrew-job-datacatalogoutputs)" : [ DataCatalogOutput, ... ],
       "[DatasetName](#cfn-databrew-job-datasetname)" : String,
       "[EncryptionKeyArn](#cfn-databrew-job-encryptionkeyarn)" : String,
@@ -23,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-databrew-job-name)" : String,
       "[OutputLocation](#cfn-databrew-job-outputlocation)" : OutputLocation,
       "[Outputs](#cfn-databrew-job-outputs)" : [ Output, ... ],
+      "[ProfileConfiguration](#cfn-databrew-job-profileconfiguration)" : ProfileConfiguration,
       "[ProjectName](#cfn-databrew-job-projectname)" : String,
       "[Recipe](#cfn-databrew-job-recipe)" : Recipe,
       "[RoleArn](#cfn-databrew-job-rolearn)" : String,
@@ -38,6 +40,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::DataBrew::Job
 Properties: 
+  [DatabaseOutputs](#cfn-databrew-job-databaseoutputs): 
+    - DatabaseOutput
   [DataCatalogOutputs](#cfn-databrew-job-datacatalogoutputs): 
     - DataCatalogOutput
   [DatasetName](#cfn-databrew-job-datasetname): String
@@ -53,6 +57,8 @@ Properties:
     OutputLocation
   [Outputs](#cfn-databrew-job-outputs): 
     - Output
+  [ProfileConfiguration](#cfn-databrew-job-profileconfiguration): 
+    ProfileConfiguration
   [ProjectName](#cfn-databrew-job-projectname): String
   [Recipe](#cfn-databrew-job-recipe): 
     Recipe
@@ -64,6 +70,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-databrew-job-properties"></a>
+
+`DatabaseOutputs`  <a name="cfn-databrew-job-databaseoutputs"></a>
+Represents a list of JDBC database output objects which defines the output destination for a DataBrew recipe job to write into\.  
+*Required*: No  
+*Type*: List of [DatabaseOutput](aws-properties-databrew-job-databaseoutput.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataCatalogOutputs`  <a name="cfn-databrew-job-datacatalogoutputs"></a>
 One or more artifacts that represent the AWS Glue Data Catalog output from running the job\.  
@@ -140,6 +152,12 @@ The location in Amazon S3 or AWS Glue Data Catalog where the job writes its outp
 One or more artifacts that represent output from running the job\.  
 *Required*: No  
 *Type*: List of [Output](aws-properties-databrew-job-output.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ProfileConfiguration`  <a name="cfn-databrew-job-profileconfiguration"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [ProfileConfiguration](aws-properties-databrew-job-profileconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProjectName`  <a name="cfn-databrew-job-projectname"></a>

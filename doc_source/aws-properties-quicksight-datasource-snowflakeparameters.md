@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSource SnowflakeParameters<a name="aws-properties-quicksight-datasource-snowflakeparameters"></a>
 
-Snowflake parameters\.
+The parameters for Snowflake\.
 
 ## Syntax<a name="aws-properties-quicksight-datasource-snowflakeparameters-syntax"></a>
 

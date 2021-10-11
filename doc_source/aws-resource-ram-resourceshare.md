@@ -72,7 +72,7 @@ Not all resource types can be shared with IAM roles and IAM users\. For more inf
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceArns`  <a name="cfn-ram-resourceshare-resourcearns"></a>
-The Amazon Resource Names \(ARNs\) of the resources to associate with the resource share\.  
+The ARNs of the resources to associate with the resource share\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

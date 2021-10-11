@@ -139,15 +139,15 @@ Specifies the duration, in seconds, that the ReceiveMessage action call waits un
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RedrivePolicy`  <a name="aws-sqs-queue-redrive"></a>
-A string that includes the parameters for the dead\-letter queue functionality \(redrive policy\) of the source queue\. For more information about the redrive policy and dead\-letter queues, see [Amazon SQS dead\-letter queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-dead-letter-queues.html) in the *Amazon SQS Developer Guide*\.   
+The string that includes the parameters for the dead\-letter queue functionality of the source queue as a JSON object\. The parameters are as follows:  
++ `deadLetterTargetArn`: The Amazon Resource Name \(ARN\) of the dead\-letter queue to which Amazon SQS moves messages after the value of `maxReceiveCount` is exceeded\.
++ `maxReceiveCount`: The number of times a message is delivered to the source queue before being moved to the dead\-letter queue\. When the `ReceiveCount` for a message exceeds the `maxReceiveCount` for a queue, Amazon SQS moves the message to the dead\-letter\-queue\.
 The dead\-letter queue of a FIFO queue must also be a FIFO queue\. Similarly, the dead\-letter queue of a standard queue must also be a standard queue\.
  *JSON*   
  `{ "deadLetterTargetArn" : String, "maxReceiveCount" : Integer }`   
  *YAML*   
  `deadLetterTargetArn : String `   
  `maxReceiveCount : Integer `   
-+  `deadLetterTargetArn` – The Amazon Resource Name \(ARN\) of the dead\-letter queue to which Amazon SQS moves messages after the value of `maxReceiveCount` is exceeded\.
-+  `maxReceiveCount` – The number of times a message is delivered to the source queue before being moved to the dead\-letter queue\.
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

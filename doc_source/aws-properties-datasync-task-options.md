@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[PosixPermissions](#cfn-datasync-task-options-posixpermissions)" : String,
   "[PreserveDeletedFiles](#cfn-datasync-task-options-preservedeletedfiles)" : String,
   "[PreserveDevices](#cfn-datasync-task-options-preservedevices)" : String,
+  "[SecurityDescriptorCopyFlags](#cfn-datasync-task-options-securitydescriptorcopyflags)" : String,
   "[TaskQueueing](#cfn-datasync-task-options-taskqueueing)" : String,
   "[TransferMode](#cfn-datasync-task-options-transfermode)" : String,
   "[Uid](#cfn-datasync-task-options-uid)" : String,
@@ -40,6 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [PosixPermissions](#cfn-datasync-task-options-posixpermissions): String
   [PreserveDeletedFiles](#cfn-datasync-task-options-preservedeletedfiles): String
   [PreserveDevices](#cfn-datasync-task-options-preservedevices): String
+  [SecurityDescriptorCopyFlags](#cfn-datasync-task-options-securitydescriptorcopyflags): String
   [TaskQueueing](#cfn-datasync-task-options-taskqueueing): String
   [TransferMode](#cfn-datasync-task-options-transfermode): String
   [Uid](#cfn-datasync-task-options-uid): String
@@ -134,6 +136,25 @@ PRESERVE: Preserve character and block device metadata\. This option isn't curre
 *Required*: No  
 *Type*: String  
 *Allowed values*: `NONE | PRESERVE`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SecurityDescriptorCopyFlags`  <a name="cfn-datasync-task-options-securitydescriptorcopyflags"></a>
+A value that determines which components of the SMB security descriptor are copied from source to destination objects\.   
+This value is only used for transfers between SMB and Amazon FSx for Windows File Server locations, or between two Amazon FSx for Windows File Server locations\. For more information about how DataSync handles metadata, see [How DataSync Handles Metadata and Special Files](https://docs.aws.amazon.com/datasync/latest/userguide/special-files.html)\.   
+Default value: OWNER\_DACL\.  
+ **OWNER\_DACL**: For each copied object, DataSync copies the following metadata:  
++ Object owner\.
++ NTFS discretionary access control lists \(DACLs\), which determine whether to grant access to an object\.
+When choosing this option, DataSync does NOT copy the NTFS system access control lists \(SACLs\), which are used by administrators to log attempts to access a secured object\.  
+ **OWNER\_DACL\_SACL**: For each copied object, DataSync copies the following metadata:  
++ Object owner\.
++ NTFS discretionary access control lists \(DACLs\), which determine whether to grant access to an object\.
++ NTFS system access control lists \(SACLs\), which are used by administrators to log attempts to access a secured object\.
+Copying SACLs requires granting additional permissions to the Windows user that DataSync uses to access your SMB location\. For information about choosing a user that ensures sufficient permissions to files, folders, and metadata, see [user](create-smb-location.html#SMBuser)\.  
+ **NONE**: None of the SMB security descriptor components are copied\. Destination objects are owned by the user that was provided for accessing the destination location\. DACLs and SACLs are set based on the destination server’s configuration\.   
+*Required*: No  
+*Type*: String  
+*Allowed values*: `NONE | OWNER_DACL | OWNER_DACL_SACL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TaskQueueing`  <a name="cfn-datasync-task-options-taskqueueing"></a>

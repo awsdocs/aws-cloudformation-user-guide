@@ -35,5 +35,5 @@ The processor parameters\.
 The type of processor\. Valid values: `Lambda`\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `Lambda`  
+*Allowed values*: `AppendDelimiterToRecord | Lambda | MetadataExtraction | RecordDeAggregation`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

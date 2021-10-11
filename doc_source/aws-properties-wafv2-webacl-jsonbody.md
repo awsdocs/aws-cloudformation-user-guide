@@ -58,3 +58,40 @@ Valid Values: `ALL` \| `KEY` \| `VALUE`
 *Type*: String  
 *Allowed values*: `ALL | KEY | VALUE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-wafv2-webacl-jsonbody--examples"></a>
+
+
+
+### Set the JSON body specification<a name="aws-properties-wafv2-webacl-jsonbody--examples--Set_the_JSON_body_specification_"></a>
+
+The following shows an example JSON body field to match specification\. 
+
+#### YAML<a name="aws-properties-wafv2-webacl-jsonbody--examples--Set_the_JSON_body_specification_--yaml"></a>
+
+```
+FieldToMatch:
+  JsonBody:
+    MatchPattern:
+      IncludedPaths:
+      - "/dogs/0/name"
+      - "/cats/0/name"
+    MatchScope: ALL
+    InvalidFallbackBehavior: EVALUATE_AS_STRING
+```
+
+#### JSON<a name="aws-properties-wafv2-webacl-jsonbody--examples--Set_the_JSON_body_specification_--json"></a>
+
+```
+"FieldToMatch": {
+  "JsonBody": {
+    "MatchPattern": {
+      "IncludedPaths": [
+        "/dogs/0/name",
+        "/cats/0/name"
+      ]
+    },
+    "MatchScope": "ALL",
+    "InvalidFallbackBehavior": "EVALUATE_AS_STRING"
+   }
+```

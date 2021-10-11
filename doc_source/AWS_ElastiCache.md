@@ -1,4 +1,4 @@
-# ElastiCache resource type reference<a name="AWS_ElastiCache"></a>
+# Amazon ElastiCache resource type reference<a name="AWS_ElastiCache"></a>
 
 **Resource types**
 + [AWS::ElastiCache::CacheCluster](aws-properties-elasticache-cache-cluster.md)

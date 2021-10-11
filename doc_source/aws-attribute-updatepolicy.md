@@ -1,6 +1,6 @@
 # UpdatePolicy attribute<a name="aws-attribute-updatepolicy"></a>
 
-Use the `UpdatePolicy` attribute to specify how AWS CloudFormation handles updates to the [AWS::AppStream::Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html), or [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html) resources\.
+Use the `UpdatePolicy` attribute to specify how AWS CloudFormation handles updates to the [AWS::AppStream::Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html), or [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html) resources\.
 + For `AWS::AppStream::Fleet` resource, CloudFormation can update your image builder with newer AppStream 2\.0 agent software\. For more information see, [Manage AppStream 2\.0 Versions](https://docs.aws.amazon.com/appstream2/latest/developerguide/base-images-agent.html)\.
 + For `AWS::AutoScaling::AutoScalingGroup` resources, CloudFormation invokes one of three update policies depending on the type of change you make or whether a scheduled action is associated with the Auto Scaling group\.
   + The `AutoScalingReplacingUpdate` and `AutoScalingRollingUpdate` policies apply *only* when you do one or more of the following:
@@ -12,7 +12,7 @@ Use the `UpdatePolicy` attribute to specify how AWS CloudFormation handles updat
     If both the `AutoScalingReplacingUpdate` and `AutoScalingRollingUpdate` policies are specified, setting the `WillReplace` property to `true` gives `AutoScalingReplacingUpdate` precedence\.
   + The `AutoScalingScheduledAction` policy applies when you update a stack that includes an Auto Scaling group with an associated scheduled action\.
 + For `AWS::ElastiCache::ReplicationGroup` resources, CloudFormation can modify a replication group's shards by adding or removing shards, rather than replacing the entire resource\. For more information, see [UseOnlineResharding policy](#cfn-attributes-updatepolicy-useonlineresharding)\.
-+ For `AWS::Elasticsearch::Domain` resources, CloudFormation can upgrade an Amazon ES domain to a new version of Elasticsearch without replacing the entire resource\. For more information, see [EnableVersionUpgrade policy](#cfn-attributes-updatepolicy-upgradeelasticsearchdomain)\.
++ For `AWS::OpenSearchService::Domain` and legacy `AWS::Elasticsearch::Domain` resources, CloudFormation can upgrade an OpenSearch Service domain to a new version of OpenSearch or Elasticsearch without replacing the entire resource\. For more information, see [EnableVersionUpgrade policy](#cfn-attributes-updatepolicy-upgradeopensearchdomain)\.
 + For `AWS::Lambda::Alias` resources, CloudFormation performs an CodeDeploy deployment when the version changes on the alias\. For more information, see [CodeDeployLambdaAliasUpdate policy](#cfn-attributes-updatepolicy-codedeploylambdaaliasupdate)\.
 
 ## AutoScalingReplacingUpdate policy<a name="cfn-attributes-updatepolicy-replacingupdate"></a>
@@ -218,19 +218,19 @@ UpdatePolicy:
   UseOnlineResharding: Boolean
 ```
 
-## EnableVersionUpgrade policy<a name="cfn-attributes-updatepolicy-upgradeelasticsearchdomain"></a>
+## EnableVersionUpgrade policy<a name="cfn-attributes-updatepolicy-upgradeopensearchdomain"></a>
 
-To upgrade an Amazon ES domain to a new version of Elasticsearch rather than replacing the entire [AWS::Elasticsearch::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html) resource, use the `EnableVersionUpgrade` update policy\.
+To upgrade an OpenSearch Service domain to a new version of OpenSearch or Elasticsearch rather than replacing the entire [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html) or [AWS::Elasticsearch::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html) resource, use the `EnableVersionUpgrade` update policy\.
 
-If `EnableVersionUpgrade` is set to `true`, you can update the `ElasticsearchVersion` property of the `AWS::Elasticsearch::Domain` resource, and CloudFormation will update that property without interruption\. When `EnableVersionUpgrade` is set to `false`, or not specified, updating the `ElasticsearchVersion` property results in CloudFormation replacing the entire `AWS::Elasticsearch::Domain` resource\.
+If `EnableVersionUpgrade` is set to `true`, you can update the `EngineVersion` property of the `AWS::OpenSearchService::Domain` resource \(or the `ElasticsearchVersion` property of the legacy `AWS::Elasticsearch::Domain` resource\), and CloudFormation will update that property without interruption\. When `EnableVersionUpgrade` is set to `false`, or not specified, updating the `EngineVersion` or `ElasticsearchVersion` property results in CloudFormation replacing the entire `AWS::OpenSearchService::Domain`/`AWS::Elasticsearch::Domain` resource\.
 
 The `EnableVersionUpgrade` update policy has no properties\.
 
-For more information about upgrading Amazon ES domains, see [UpgradeElasticsearchDomain](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-configuration-api.html#es-configuration-api-actions-upgrade-domain) in the Amazon Elasticsearch Service Developer Guide\.
+For more information about upgrading OpenSearch Service domains, see [UpgradeDomain](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/configuration-api.html#configuration-api-actions-upgrade-domain) in the Amazon OpenSearch Service Developer Guide\.
 
-### Syntax<a name="cfn-attributes-updatepolicy-upgradeelasticsearchdomain-syntax"></a>
+### Syntax<a name="cfn-attributes-updatepolicy-upgradeopensearchdomain-syntax"></a>
 
-#### JSON<a name="cfn-attributes-updatepolicy-upgradeelasticsearchdomain-syntax.json"></a>
+#### JSON<a name="cfn-attributes-updatepolicy-upgradeopensearchdomain-syntax.json"></a>
 
 ```
 "UpdatePolicy" : {
@@ -238,7 +238,7 @@ For more information about upgrading Amazon ES domains, see [UpgradeElasticsearc
 }
 ```
 
-#### YAML<a name="cfn-attributes-updatepolicy-upgradeelasticsearchdomain-syntax.yaml"></a>
+#### YAML<a name="cfn-attributes-updatepolicy-upgradeopensearchdomain-syntax.yaml"></a>
 
 ```
 UpdatePolicy:
@@ -279,7 +279,7 @@ UpdatePolicy:
 
 `AfterAllowTrafficHook`  <a name="cfn-attributes-updatepolicy-codedeploylambdaaliasupdate-afterallowtraffichook"></a>
 The name of the Lambda function to run after traffic routing completes\.  
-*Required: *No  
+*Required*: No  
 *Type: *String
 
 `ApplicationName`  <a name="cfn-attributes-updatepolicy-codedeploylambdaaliasupdate-applicationname"></a>
@@ -289,12 +289,12 @@ The name of the CodeDeploy application\.
 
 `BeforeAllowTrafficHook`  <a name="cfn-attributes-updatepolicy-codedeploylambdaaliasupdate-beforeallowtraffichook"></a>
 The name of the Lambda function to run before traffic routing starts\.  
-*Required: *No  
+*Required*: No  
 *Type: *String
 
 `DeploymentGroupName`  <a name="cfn-attributes-updatepolicy-codedeploylambdaaliasupdate-deploymentgroupname"></a>
 The name of the CodeDeploy deployment group\. This is where the traffic\-shifting policy is set\.  
-*Required: *Yes  
+*Required*: Yes  
 *Type: *String
 
 For an example that specifies the `UpdatePolicy` attribute for an `AWS::Lambda::Alias` resource, see [Lambda alias update policy](#aws-resource-lambda-alias-example)\.
@@ -303,7 +303,7 @@ For an example that specifies the `UpdatePolicy` attribute for an `AWS::Lambda::
 
 The following examples show how to add an update policy to an Auto Scaling group and how to maintain availability when updating metadata\.
 
-### Add an UpdatePolicy to an Auto Scaling group<a name="w9292ab1c33c23c23c19b4"></a>
+### Add an UpdatePolicy to an Auto Scaling group<a name="w10072ab1c33c23c23c19b5"></a>
 
 The following example shows how to add an update policy\. During an update, the Auto Scaling group updates instances in batches of two and keeps a minimum of one instance in service\. Because the `WaitOnResourceSignals` flag is set, the Auto Scaling group waits for new instances that are added to the group\. The new instances must signal the Auto Scaling group before it updates the next batch of instances\.
 
@@ -379,7 +379,7 @@ ScheduledAction:
     StartTime: '2017-06-02T20 : 00 : 00Z'
 ```
 
-### AutoScalingReplacingUpdate policy<a name="w9292ab1c33c23c23c19b6"></a>
+### AutoScalingReplacingUpdate policy<a name="w10072ab1c33c23c23c19b7"></a>
 
 The following example declares a policy that forces an associated Auto Scaling group to be replaced during an update\. For the update to succeed, a percentage of instances \(specified by the `MinSuccessfulPercentParameter` parameter\) must signal success within the `Timeout` period\.
 
@@ -416,7 +416,7 @@ CreationPolicy:
     MinSuccessfulInstancesPercent: !Ref 'MinSuccessfulPercentParameter'
 ```
 
-### Maintain availability when updating the metadata for the cfn\-init helper script<a name="w9292ab1c33c23c23c19b8"></a>
+### Maintain availability when updating the metadata for the cfn\-init helper script<a name="w10072ab1c33c23c23c19b9"></a>
 
 When you install software applications on your instances, you might use the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html) metadata key and the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html) helper script to bootstrap the instances in your Auto Scaling group\. CloudFormation installs the packages, runs the commands, and performs other bootstrapping actions described in the metadata\.
 
@@ -427,7 +427,7 @@ Forcing a rolling update requires CloudFormation to create a new instance and th
 
 To force a rolling update, change the logical ID of the launch configuration resource, and then update the stack and any references pointing to the original logic ID \(such as the associated Auto Scaling group\)\. CloudFormation triggers a rolling update on the Auto Scaling group, replacing all instances\.
 
-### Original template<a name="w9292ab1c33c23c23c19c10"></a>
+### Original template<a name="w10072ab1c33c23c23c19c11"></a>
 
 ```
 "LaunchConfig": {
@@ -441,7 +441,7 @@ To force a rolling update, change the logical ID of the launch configuration res
 }
 ```
 
-### Updated logical ID<a name="w9292ab1c33c23c23c19c12"></a>
+### Updated logical ID<a name="w10072ab1c33c23c23c19c13"></a>
 
 ```
 "LaunchConfigUpdateRubygemsPkg": {

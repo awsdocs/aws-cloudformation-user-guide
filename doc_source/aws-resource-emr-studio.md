@@ -50,7 +50,7 @@ Properties:
 ## Properties<a name="aws-resource-emr-studio-properties"></a>
 
 `AuthMode`  <a name="cfn-emr-studio-authmode"></a>
-Specifies whether the Studio authenticates users using single sign\-on \(SSO\) or IAM\. Amazon EMR Studio currently only supports SSO authentication\.  
+Specifies whether the Studio authenticates users using AWS SSO or IAM\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `IAM | SSO`  
@@ -115,7 +115,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserRole`  <a name="cfn-emr-studio-userrole"></a>
-The Amazon Resource Name \(ARN\) of the IAM user role that will be assumed by users and groups logged in to a Studio\. The permissions attached to this IAM role can be scoped down for each user or group using session policies\.  
+The Amazon Resource Name \(ARN\) of the IAM user role that will be assumed by users and groups logged in to a Studio\. The permissions attached to this IAM role can be scoped down for each user or group using session policies\. You only need to specify `UserRole` when you set `AuthMode` to `SSO`\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `0`  

@@ -88,6 +88,7 @@ This parameter is not supported by [CreateFleet](https://docs.aws.amazon.com/AWS
 `Tenancy`  <a name="cfn-ec2-ec2fleet-placement-tenancy"></a>
 The tenancy of the instance \(if the instance is running in a VPC\)\. An instance with a tenancy of `dedicated` runs on single\-tenant hardware\. The `host` tenancy is not supported for the [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html) command\.  
 This parameter is not supported by [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet)\.  
+T3 instances that use the `unlimited` CPU credit option do not support `host` tenancy\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `dedicated | default | host`  

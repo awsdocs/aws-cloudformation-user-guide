@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `TargetAddress`  <a name="cfn-codestarnotifications-notificationrule-target-targetaddress"></a>
 The Amazon Resource Name \(ARN\) of the AWS Chatbot topic or AWS Chatbot client\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `320`  
@@ -36,7 +36,7 @@ The Amazon Resource Name \(ARN\) of the AWS Chatbot topic or AWS Chatbot client\
 The target type\. Can be an Amazon Simple Notification Service topic or AWS Chatbot client\.  
 + Amazon Simple Notification Service topics are specified as `SNS`\.
 + AWS Chatbot clients are specified as `AWSChatbotSlack`\.
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Pattern*: `^[A-Za-z]+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

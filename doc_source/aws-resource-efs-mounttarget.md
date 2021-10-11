@@ -55,7 +55,7 @@ Valid IPv4 address within the address range of the specified subnet\.
 Up to five VPC security group IDs, of the form `sg-xxxxxxxx`\. These must be for the same VPC as subnet specified\.  
 *Required*: Yes  
 *Type*: List of String  
-*Maximum*: `5`  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-efs-mounttarget-subnetid"></a>

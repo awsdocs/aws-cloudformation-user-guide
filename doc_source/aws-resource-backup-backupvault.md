@@ -3,7 +3,7 @@
 Creates a logical container where backups are stored\. A `CreateBackupVault` request includes a name, optionally one or more resource tags, an encryption key, and a request ID\.
 
 **Note**  
-Sensitive data, such as passport numbers, should not be included the name of a backup vault\.
+Do not include sensitive data, such as passport numbers, in the name of a backup vault\.
 
 ## Syntax<a name="aws-resource-backup-backupvault-syntax"></a>
 

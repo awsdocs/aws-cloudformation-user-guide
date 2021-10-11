@@ -3,9 +3,9 @@
 *Dynamic references* provide a compact, powerful way for you to specify external values that are stored and managed in other services, such as the Systems Manager Parameter Store, in your stack templates\. When you use a dynamic reference, CloudFormation retrieves the value of the specified reference when necessary during stack and change set operations\.
 
 CloudFormation currently supports the following dynamic reference patterns:
-+ [`ssm`](#dynamic-references-ssm), for plaintext values stored in AWS Systems Manager Parameter Store
-+ [`ssm-secure`](#dynamic-references-ssm-secure-strings), for secure strings stored in AWS Systems Manager Parameter Store
-+ [`secretsmanager`](#dynamic-references-secretsmanager), for entire secrets or specific secret values that are stored in AWS Secrets Manager
++ [`ssm`](#dynamic-references-ssm), for plaintext values stored in AWS Systems Manager Parameter Store\.
++ [`ssm-secure`](#dynamic-references-ssm-secure-strings), for secure strings stored in AWS Systems Manager Parameter Store\.
++ [`secretsmanager`](#dynamic-references-secretsmanager), for entire secrets or specific secret values that are stored in AWS Secrets Manager\.
 
 ## Considerations when using dynamic references<a name="dynamic-references-considerations"></a>
 
@@ -16,7 +16,7 @@ We strongly recommend against including dynamic references, or any sensitive dat
 When a dynamic reference parameter is included in a property that forms a primary resource identifier, CloudFormation may use the *actual plaintext value* in the primary resource identifier\. This resource ID may appear in any derived outputs or destinations\.  
 To determine which resource properties comprise a resource type's primary identifier, refer to the [resource reference documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html) for that resource\. In the **Return values** section, the `Ref` function return value represents the resource properties that comprise the resource type's primary identifier\.
 + You can include up to 60 dynamic references in a stack template\.
-+ For transforms, such as `AWS::Include` and `AWS::Serverless`, AWS CloudFormation doesn't resolve dynamic references prior to invoking any transforms\. Rather, AWS CloudFormation passes the literal string of the dynamic reference to the transform\. Dynamic references \(including those inserted into the processed template as the result of a transform\) are resolved when you execute the change set using the template\.
++ For transforms, such as `AWS::Include` and `AWS::Serverless`, AWS CloudFormation doesn't resolve dynamic references before invoking any transforms\. Rather, AWS CloudFormation passes the literal string of the dynamic reference to the transform\. Dynamic references \(including those inserted into the processed template as the result of a transform\) are resolved when you execute the change set using the template\.
 + Dynamic references for secure values, such as `ssm-secure` and `secretsmanager`, aren't currently supported in [custom resources](template-custom-resources.md)\.
 
 **Note**  
@@ -100,12 +100,12 @@ Additional considerations to note when using the `ssm` dynamic reference pattern
   A parameter label is a user\-defined alias to help you manage different versions of a parameter\. For more information, see [Labeling parameters](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-labels.html) in the *AWS Systems Manager User Guide*\.
 
   A public parameter is a parameter provided by an AWS service for use with that service, and stored in AWS Systems Manager Parameter Store\. For an example of public parameters, see [Retrieving the Amazon ECS\-optimized AMI metadata](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/retrieve-ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.
-+ CloudFormation does not currently support drift detection on dynamic references\. For `ssm` dynamic references where you have not specified the parameter version, we recommend that, if you update the parameter version in SSM, you also perform a stack update operation on any stacks that include the `ssm` dynamic reference, in order to fetch the latest parameter version\.
++ CloudFormation doesn't currently support drift detection on dynamic references\. For `ssm` dynamic references where you haven't specified the parameter version, we recommend that, if you update the parameter version in SSM, you also perform a stack update operation on any stacks that include the `ssm` dynamic reference, in order to fetch the latest parameter version\.
 + To verify which version of an the `ssm` dynamic reference will be used in a stack operation, [create a change set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-create.html) for the stack operation\. Then [review the processed template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-view.html) on the **Template** tab\.
 
 ## SSM secure string parameters<a name="dynamic-references-ssm-secure-strings"></a>
 
-Use the `ssm-secure` dynamic reference pattern to specify AWS Systems Manager SecureString type parameters in your templates\. For `ssm-secure` dynamic references, AWS CloudFormation never stores the actual parameter value\. AWS CloudFormation accesses the parameter value during create and update operations for stacks and change sets\. Currently, secure string parameters can only be used for [resource properties that support](#template-parameters-dynamic-patterns-resources) the `ssm-secure` dynamic reference pattern\.
+Use the `ssm-secure` dynamic reference pattern to specify AWS Systems Manager `SecureString` type parameters in your templates\. For `ssm-secure` dynamic references, AWS CloudFormation never stores the actual parameter value\. AWS CloudFormation accesses the parameter value during create and update operations for stacks and change sets\. Currently, secure string parameters can only be used for [resource properties that support](#template-parameters-dynamic-patterns-resources) the `ssm-secure` dynamic reference pattern\.
 
 A *secure string parameter* is any sensitive data that needs to be stored and referenced in a secure manner\. That is, data that you don't want users to alter or reference in clear text, such as passwords or license keys\. For more information on secure strings, see [Use secure string parameters](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-about.html#sysman-paramstore-securestring) in the *AWS Systems Manager User Guide*\.
 
@@ -199,7 +199,7 @@ Use the `secretsmanager` dynamic reference to retrieve entire secrets or secret 
 ### Important considerations when using dynamic parameters for Secrets Manager secrets<a name="dynamic-references-secretsmanager-considerations"></a>
 
 You should take the following important security considerations into account when using dynamic parameters to specify Secrets Manager secrets in your stack templates:
-+ The `secretsmanager` dynamic reference can be used in all resource properties\. Using the `secretsmanager` dynamic reference indicates that neither Secrets Manager nor CloudFormation logs should persist any resolved secret value\. However, the secret value may show up in the service whose resource it is being used in\. You should review your usage to avoid leaking secret data\.
++ The `secretsmanager` dynamic reference can be used in all resource properties\. Using the `secretsmanager` dynamic reference indicates that neither Secrets Manager nor CloudFormation logs should persist any resolved secret value\. However, the secret value may show up in the service whose resource it's being used in\. Review your usage to avoid leaking secret data\.
 + Updating a secret in Secrets Manager doesn't automatically update the secret in CloudFormation\. In order for CloudFormation to update a `secretsmanager` dynamic reference, you must perform a stack update that updates the resource containing the dynamic reference, either by updating the resource property that contains the `secretsmanager` dynamic reference, or updating another of the resource's properties\.
 
   For example, suppose in your template you specify the `MasterPassword` property of an `[AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)` resource to be a `secretsmanager` dynamic reference, and then create a stack from the template\. You later update that secret's value in Secret Manager, but don't update the `AWS::RDS::DBInstance` resource in your template\. In this case, even if you perform a stack update, the secret value in the `MasterPassword` property isn't updated, and remains the previous secret value\.
@@ -212,7 +212,7 @@ You should take the following important security considerations into account whe
 
   Then, when you update the `password` value, you would need to update this segment with the new `version-id` and perform a stack update\. For more examples of using version\-id, see [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager-example)\.
 
-  Also, consider using Secrets Manager to automatically rotate the secret for a secured service or database\. For more information, see [Rotating your AWS Secrets Manager secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html)\.
+  Also, consider using Secrets Manager to automatically rotate the secret for a secured service or database\. For more information, see [Rotating your Secrets Manager secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html)\.
 + Dynamic references for secure values, such as `secretsmanager`, aren't currently supported in [custom resources](template-custom-resources.md)\.
 
 ### Permissions required<a name="dynamic-references-secretsmanager-permissions"></a>
@@ -247,7 +247,7 @@ This segment may not include the colon character \( `:`\)\.
 
 ### Examples<a name="dynamic-references-secretsmanager-example"></a>
 
-The following example uses the `secret-name` and `json-key` segments to retrieve the username and password values stored in the MyRDSSecret secret\. By default, the secret version retrieved is the version with the version stage value of `AWSCURRENT`\.
+The following example uses the `secret-name` and `json-key` segments to retrieve the user name and password values stored in the MyRDSSecret secret\. By default, the secret version retrieved is the version with the version stage value of `AWSCURRENT`\.
 
 #### JSON<a name="dynamic-references-secretsmanager-example.json"></a>
 

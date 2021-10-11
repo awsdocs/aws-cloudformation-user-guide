@@ -199,7 +199,7 @@ sgwithoutegress:
 ```
 
 ## See also<a name="aws-properties-ec2-security-group--seealso"></a>
-+  [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) in the *Amazon VPC User Guide*
-+  [EC2\-Classic](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-classic-platform.html) in the *Amazon EC2 User Guide for Linux Instances* for information about accounts that support EC2\-Classic security groups
-+  [Amazon EC2 Security Groups for Linux Instances ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html) in the *Amazon EC2 User Guide for Linux Instances*
++  [Security groups for your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) in the *Amazon VPC User Guide*
++  [Amazon EC2 security groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html) in the *Amazon EC2 User Guide for Linux Instances*
++  [Amazon EC2 security groups](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-security-groups.html) in the *Amazon EC2 User Guide for Windows Instances*
 

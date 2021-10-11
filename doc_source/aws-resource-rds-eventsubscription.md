@@ -38,13 +38,13 @@ Properties:
 ## Properties<a name="aws-resource-rds-eventsubscription-properties"></a>
 
 `Enabled`  <a name="cfn-rds-eventsubscription-enabled"></a>
- A Boolean value; set to **true** to activate the subscription, set to **false** to create the subscription but not active it\.   
+ A value that indicates whether to activate the subscription\. If the event notification subscription isn't activated, the subscription is created but not active\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventCategories`  <a name="cfn-rds-eventsubscription-eventcategories"></a>
- A list of event categories for a SourceType that you want to subscribe to\. You can see a list of the categories for a given SourceType in the [Events](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html) topic in the Amazon RDS User Guide or by using the **DescribeEventCategories** action\.   
+ A list of event categories for a particular source type \(`SourceType`\) that you want to subscribe to\. You can see a list of the categories for a given source type in [Events](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html) in the *Amazon RDS User Guide* or by using the `DescribeEventCategories` operation\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -122,18 +122,17 @@ The following example creates an event subscription for an existing database ins
 
 ```
 --- 
-myEventSubscription: 
-  Properties: 
-    Enabled: false
-    EventCategories: 
-      - "configuration change"
+myEventSubscription:
+  Type: 'AWS::RDS::EventSubscription'
+  Properties:
+    EventCategories:
+      - configuration change
       - failure
       - deletion
-    SnsTopicArn: "arn:aws:sns:us-west-2:123456789012:example-topic"
-    SourceIds: 
+    SnsTopicArn: 'arn:aws:sns:us-west-2:123456789012:example-topic'
+    SourceIds:
       - db-instance-1
-      - 
-        Ref: myDBInstance
+      - !Ref myDBInstance
     SourceType: db-instance
-  Type: "AWS::RDS::EventSubscription"
+    Enabled: false
 ```

@@ -27,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `SecurityGroupArns`  <a name="cfn-datasync-locationefs-ec2config-securitygrouparns"></a>
 The Amazon Resource Names \(ARNs\) of the security groups that are configured for the Amazon EC2 resource\.  
+*Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):ec2:[a-z\-0-9]*:[0-9]{12}:security-group/.*$`  
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `5`  

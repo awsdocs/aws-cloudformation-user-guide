@@ -54,7 +54,7 @@ The name of the log group\. If you don't specify a name, AWS CloudFormation gene
 
 `RetentionInDays`  <a name="cfn-logs-loggroup-retentionindays"></a>
 The number of days to retain the log events in the specified log group\. Possible values are: 1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, and 3653\.  
-If you omit `retentionInDays` in a `PutRetentionPolicy` operation, the events in the log group are always retained and never expire\.  
+To set a log group to never have log events expire, use [DeleteRetentionPolicy](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DeleteRetentionPolicy.html)\.   
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

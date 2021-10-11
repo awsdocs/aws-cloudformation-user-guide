@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[HealthCheckProtocol](#cfn-elasticloadbalancingv2-targetgroup-healthcheckprotocol)" : String,
       "[HealthCheckTimeoutSeconds](#cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds)" : Integer,
       "[HealthyThresholdCount](#cfn-elasticloadbalancingv2-targetgroup-healthythresholdcount)" : Integer,
+      "[IpAddressType](#cfn-elasticloadbalancingv2-targetgroup-ipaddresstype)" : String,
       "[Matcher](#cfn-elasticloadbalancingv2-targetgroup-matcher)" : Matcher,
       "[Name](#cfn-elasticloadbalancingv2-targetgroup-name)" : String,
       "[Port](#cfn-elasticloadbalancingv2-targetgroup-port)" : Integer,
@@ -48,6 +49,7 @@ Properties:
   [HealthCheckProtocol](#cfn-elasticloadbalancingv2-targetgroup-healthcheckprotocol): String
   [HealthCheckTimeoutSeconds](#cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds): Integer
   [HealthyThresholdCount](#cfn-elasticloadbalancingv2-targetgroup-healthythresholdcount): Integer
+  [IpAddressType](#cfn-elasticloadbalancingv2-targetgroup-ipaddresstype): String
   [Matcher](#cfn-elasticloadbalancingv2-targetgroup-matcher): 
     Matcher
   [Name](#cfn-elasticloadbalancingv2-targetgroup-name): String
@@ -119,6 +121,12 @@ The number of consecutive health checks successes required before considering an
 *Minimum*: `2`  
 *Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IpAddressType`  <a name="cfn-elasticloadbalancingv2-targetgroup-ipaddresstype"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Matcher`  <a name="cfn-elasticloadbalancingv2-targetgroup-matcher"></a>
 \[HTTP/HTTPS health checks\] The HTTP or gRPC codes to use when checking for a successful response from a target\.  

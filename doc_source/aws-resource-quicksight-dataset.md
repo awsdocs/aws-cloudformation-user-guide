@@ -61,7 +61,7 @@ Properties:
 ## Properties<a name="aws-resource-quicksight-dataset-properties"></a>
 
 `AwsAccountId`  <a name="cfn-quicksight-dataset-awsaccountid"></a>
-The AWS account; ID\.  
+The AWS account ID\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `12`  
@@ -70,7 +70,7 @@ The AWS account; ID\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ColumnGroups`  <a name="cfn-quicksight-dataset-columngroups"></a>
-Groupings of columns that work together in certain QuickSight features\. Currently, only geospatial hierarchy is supported\.  
+Groupings of columns that work together in certain Amazon QuickSight features\. Currently, only geospatial hierarchy is supported\.  
 *Required*: No  
 *Type*: List of [ColumnGroup](aws-properties-quicksight-dataset-columngroup.md)  
 *Maximum*: `8`  
@@ -83,7 +83,7 @@ A set of one or more definitions of a ` ColumnLevelPermissionRule `\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataSetId`  <a name="cfn-quicksight-dataset-datasetid"></a>
-An ID for the dataset that you want to create\. This ID is unique per AWS Region; for each AWS account;\.  
+An ID for the dataset that you want to create\. This ID is unique per AWS Region for each AWS account\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

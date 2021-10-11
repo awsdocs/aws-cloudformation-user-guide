@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSource AuroraPostgreSqlParameters<a name="aws-properties-quicksight-datasource-aurorapostgresqlparameters"></a>
 
-Amazon Aurora with PostgreSQL compatibility parameters\.
+Parameters for Amazon Aurora PostgreSQL\-Compatible Edition\.
 
 ## Syntax<a name="aws-properties-quicksight-datasource-aurorapostgresqlparameters-syntax"></a>
 
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-datasource-aurorapostgresqlparameters-properties"></a>
 
 `Database`  <a name="cfn-quicksight-datasource-aurorapostgresqlparameters-database"></a>
-Database\.  
+The Amazon Aurora PostgreSQL database to connect to\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -35,7 +35,7 @@ Database\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Host`  <a name="cfn-quicksight-datasource-aurorapostgresqlparameters-host"></a>
-Host\.  
+The Amazon Aurora PostgreSQL\-Compatible host to connect to\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -43,7 +43,7 @@ Host\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Port`  <a name="cfn-quicksight-datasource-aurorapostgresqlparameters-port"></a>
-Port\.  
+The port that Amazon Aurora PostgreSQL is listening on\.  
 *Required*: Yes  
 *Type*: Double  
 *Minimum*: `1`  

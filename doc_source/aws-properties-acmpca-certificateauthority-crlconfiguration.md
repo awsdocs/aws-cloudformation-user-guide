@@ -4,7 +4,9 @@ Contains configuration information for a certificate revocation list \(CRL\)\. Y
 
 ACM Private CA assets that are stored in Amazon S3 can be protected with encryption\. For more information, see [Encrypting Your CRLs](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaCreateCa.html#crl-encryption)\.
 
-Your private CA uses the value in the **ExpirationInDays** parameter to calculate the **nextUpdate** field in the CRL\. The CRL is refreshed at 1/2 the age of next update or when a certificate is revoked\. When a certificate is revoked, it is recorded in the next CRL that is generated and in the next audit report\. Only time valid certificates are listed in the CRL\. Expired certificates are not included\. 
+Your private CA uses the value in the **ExpirationInDays** parameter to calculate the **nextUpdate** field in the CRL\. The CRL is refreshed at 1/2 the age of next update or when a certificate is revoked\. When a certificate is revoked, it is recorded in the next CRL that is generated and in the next audit report\. Only time valid certificates are listed in the CRL\. Expired certificates are not included\.
+
+A CRL is typically updated approximately 30 minutes after a certificate is revoked\. If for any reason a CRL update fails, ACM Private CA makes further attempts every 15 minutes\.
 
 CRLs contain the following fields:
 +  **Version**: The current version number defined in RFC 5280 is V2\. The integer value is 0x1\. 
@@ -26,6 +28,8 @@ CRLs contain the following fields:
 Certificate revocation lists created by ACM Private CA are DER\-encoded\. You can use the following OpenSSL command to list a CRL\.
 
  `openssl crl -inform DER -text -in crl_path -noout` 
+
+For more information, see [Planning a certificate revocation list \(CRL\)](https://docs.aws.amazon.com/acm-pca/latest/userguide/crl-planning.html) in the * AWS Certificate Manager Private Certificate Authority \(PCA\) User Guide* 
 
 ## Syntax<a name="aws-properties-acmpca-certificateauthority-crlconfiguration-syntax"></a>
 

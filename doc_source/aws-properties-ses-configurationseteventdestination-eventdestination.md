@@ -3,9 +3,9 @@
 Contains information about an event destination\.
 
 **Note**  
-When you create or update an event destination, you must provide one, and only one, destination\. The destination can be Amazon CloudWatch, Amazon Kinesis Data Firehose or Amazon Simple Notification Service \(Amazon SNS\)\.
+When you create or update an event destination, you must provide one, and only one, destination\. The destination can be Amazon CloudWatch, Amazon Kinesis Firehose or Amazon Simple Notification Service \(Amazon SNS\)\.
 
-Event destinations are associated with configuration sets, which enable you to publish email sending events to Amazon CloudWatch, Amazon Kinesis Data Firehose, or Amazon Simple Notification Service \(Amazon SNS\)\. For information about using configuration sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html)\.
+Event destinations are associated with configuration sets, which enable you to publish email sending events to Amazon CloudWatch, Amazon Kinesis Firehose, or Amazon Simple Notification Service \(Amazon SNS\)\. For information about using configuration sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html)\.
 
 ## Syntax<a name="aws-properties-ses-configurationseteventdestination-eventdestination-syntax"></a>
 
@@ -51,7 +51,7 @@ Sets whether Amazon SES publishes events to this destination when you send an em
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KinesisFirehoseDestination`  <a name="cfn-ses-configurationseteventdestination-eventdestination-kinesisfirehosedestination"></a>
-An object that contains the delivery stream ARN and the IAM role ARN associated with an Amazon Kinesis Data Firehose event destination\.  
+An object that contains the delivery stream ARN and the IAM role ARN associated with an Amazon Kinesis Firehose event destination\.  
 *Required*: No  
 *Type*: [KinesisFirehoseDestination](aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

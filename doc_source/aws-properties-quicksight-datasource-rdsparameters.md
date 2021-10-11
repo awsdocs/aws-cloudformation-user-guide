@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSource RdsParameters<a name="aws-properties-quicksight-datasource-rdsparameters"></a>
 
-Amazon RDS parameters\.
+The parameters for Amazon RDS\.
 
 ## Syntax<a name="aws-properties-quicksight-datasource-rdsparameters-syntax"></a>
 

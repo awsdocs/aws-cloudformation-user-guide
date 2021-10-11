@@ -1,4 +1,4 @@
-# SSO resource type reference<a name="AWS_SSO"></a>
+# AWS Single Sign\-On resource type reference<a name="AWS_SSO"></a>
 
 **Resource types**
 + [AWS::SSO::Assignment](aws-resource-sso-assignment.md)

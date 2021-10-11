@@ -1,6 +1,6 @@
 # AWS::Cassandra::Keyspace<a name="aws-resource-cassandra-keyspace"></a>
 
-The `AWS::Cassandra::Keyspace` resource allows you to create a new keyspace in Amazon Keyspaces \(for Apache Cassandra\)\. For more information, see [Create a Keyspace and a Table](https://docs.aws.amazon.com/keyspaces/latest/devguide/getting-started.ddl.html) in the *Amazon Keyspaces Developer Guide*\.
+The `AWS::Cassandra::Keyspace` resource allows you to create a new keyspace in Amazon Keyspaces \(for Apache Cassandra\)\. For more information, see [Create a keyspace and a table](https://docs.aws.amazon.com/keyspaces/latest/devguide/getting-started.ddl.html) in the *Amazon Keyspaces Developer Guide*\.
 
 ## Syntax<a name="aws-resource-cassandra-keyspace-syntax"></a>
 
@@ -31,8 +31,8 @@ Properties:
 ## Properties<a name="aws-resource-cassandra-keyspace-properties"></a>
 
 `KeyspaceName`  <a name="cfn-cassandra-keyspace-keyspacename"></a>
-The name of the keyspace to be created\. The keyspace name is case sensitive\. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the keyspace name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
-*Length Constraints:* Minimum length of 3\. Maximum length of 255\.  
+The name of the keyspace to be created\. The keyspace name is case sensitive\. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the keyspace name\. For more information, see [Name type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
+*Length constraints:* Minimum length of 3\. Maximum length of 255\.  
 *Pattern:* `^[a-zA-Z0-9][a-zA-Z0-9_]{1,47}$`  
 *Required*: No  
 *Type*: String  

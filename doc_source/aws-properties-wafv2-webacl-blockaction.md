@@ -43,17 +43,17 @@ The following shows an example block action specification\.
 #### YAML<a name="aws-properties-wafv2-webacl-blockaction--examples--Set_an_block_action_--yaml"></a>
 
 ```
-          Action:
-            Block: {}
+Action:
+  Block: {}
 ```
 
 #### JSON<a name="aws-properties-wafv2-webacl-blockaction--examples--Set_an_block_action_--json"></a>
 
 ```
-     "Action": 
-      {"Block": 
-        {}
-         }
+"Action": 
+  {"Block": 
+    {}
+  }
 ```
 
 ### Set a block action with a custom response setting<a name="aws-properties-wafv2-webacl-blockaction--examples--Set_a_block_action_with_a_custom_response_setting"></a>
@@ -63,34 +63,34 @@ The following shows an example block action specification with a custom response
 #### YAML<a name="aws-properties-wafv2-webacl-blockaction--examples--Set_a_block_action_with_a_custom_response_setting--yaml"></a>
 
 ```
-            Block:
-              CustomResponse:
-                ResponseCode: 503
-                CustomResponseBodyKey: CustomResponseBodyKey1
-                ResponseHeaders:
-                  - Name: BlockActionHeader1Name
-                    Value: BlockActionHeader1Value
-                  - Name: BlockActionHeader2Name
-                    Value: BlockActionHeader2Value
+Block:
+  CustomResponse:
+    ResponseCode: 503
+    CustomResponseBodyKey: CustomResponseBodyKey1
+    ResponseHeaders:
+      - Name: BlockActionHeader1Name
+        Value: BlockActionHeader1Value
+      - Name: BlockActionHeader2Name
+        Value: BlockActionHeader2Value
 ```
 
 #### JSON<a name="aws-properties-wafv2-webacl-blockaction--examples--Set_a_block_action_with_a_custom_response_setting--json"></a>
 
 ```
-              "Block": {
-                "CustomResponse": {
-                  "ResponseCode": 503,
-                  "CustomResponseBodyKey": "CustomResponseBodyKey1",
-                  "ResponseHeaders": [
-                    {
-                      "Name": "BlockActionHeader1Name",
-                      "Value": "BlockActionHeader1Value"
-                    },
-                    {
-                      "Name": "BlockActionHeader2Name",
-                      "Value": "BlockActionHeader2Value"
-                    }
-                  ]
-                }
-              }
+"Block": {
+  "CustomResponse": {
+    "ResponseCode": 503,
+    "CustomResponseBodyKey": "CustomResponseBodyKey1",
+    "ResponseHeaders": [
+      {
+        "Name": "BlockActionHeader1Name",
+        "Value": "BlockActionHeader1Value"
+      },
+      {
+        "Name": "BlockActionHeader2Name",
+        "Value": "BlockActionHeader2Value"
+      }
+    ]
+  }
+}
 ```

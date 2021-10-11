@@ -1,4 +1,4 @@
-# CloudFront resource type reference<a name="AWS_CloudFront"></a>
+# Amazon CloudFront resource type reference<a name="AWS_CloudFront"></a>
 
 **Resource types**
 + [AWS::CloudFront::CachePolicy](aws-resource-cloudfront-cachepolicy.md)

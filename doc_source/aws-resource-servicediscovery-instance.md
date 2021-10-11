@@ -37,7 +37,7 @@ A string map that contains the following information for the service that you sp
 + For each attribute, the applicable value\.
 Supported attribute keys include the following:    
 AWS\_ALIAS\_DNS\_NAME  
-If you want AWS Cloud Map to create a Route 53 alias record that routes traffic to an Elastic Load Balancing load balancer, specify the DNS name that is associated with the load balancer\. For information about how to get the DNS name, see [AliasTarget\->DNSName](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html#Route53-Type-AliasTarget-DNSName) in the *Route 53 API Reference*\.  
+If you want AWS Cloud Map to create a Route 53 alias record that routes traffic to an Elastic Load Balancing load balancer, specify the DNS name that is associated with the load balancer\. For information about how to get the DNS name, see [AliasTarget\->DNSName](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html#Route53-Type-AliasTarget-DNSName) in the *Route 53 API Reference*\.  
 Note the following:  
 + The configuration for the service that is specified by `ServiceId` must include settings for an `A` record, an `AAAA` record, or both\.
 + In the service that is specified by `ServiceId`, the value of `RoutingPolicy` must be `WEIGHTED`\.

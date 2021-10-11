@@ -60,6 +60,9 @@ The name of the Amazon S3 bucket to which the policy applies\.
 
 The following sample is a bucket policy that is attached to the DOC\-EXAMPLE\-BUCKET bucket and allows GET requests that originate from www\.example\.com and example\.net: 
 
+**Important**  
+This key should be used carefully\. It is dangerous to include a publicly known referer header value\. Unauthorized parties can use modified or custom browsers to provide any `aws:referer` value that they choose\. As a result, `aws:referer` should not be used to prevent unauthorized parties from making direct AWS requests\. It is offered only to allow customers to protect their digital content, such as content stored in Amazon S3, from being referenced on unauthorized third\-party sites\. For more information, see [https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-referer](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-referer) in the *IAM User Guide*\.
+
 #### JSON<a name="aws-properties-s3-policy--examples--Bucket_policy_that_allows_GET_requests_from_specific_referers--json"></a>
 
 ```
@@ -111,7 +114,7 @@ The following sample is a bucket policy that is attached to the DOC\-EXAMPLE\-BU
 
 ```
 SampleBucketPolicy:
-  Type: 'AWS::S3::BucketPolicy'
+  Type: AWS::S3::BucketPolicy
   Properties:
     Bucket: !Ref DOC-EXAMPLE-BUCKET
     PolicyDocument:

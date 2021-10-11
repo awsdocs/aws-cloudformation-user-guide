@@ -32,9 +32,9 @@ The name and data type of this clustering key column\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OrderBy`  <a name="cfn-cassandra-table-clusteringkeycolumn-orderby"></a>
-The order in which this column's data will be stored:  
-+ `ASC` \(default\) \- the column's data will be stored in ascending order\.
-+ `DESC` \- the column's data will be stored in descending order\.
+The order in which this column's data is stored:  
++ `ASC` \(default\) \- The column's data is stored in ascending order\.
++ `DESC` \- The column's data is stored in descending order\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

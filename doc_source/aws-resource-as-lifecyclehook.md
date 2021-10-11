@@ -1,6 +1,6 @@
 # AWS::AutoScaling::LifecycleHook<a name="aws-resource-as-lifecyclehook"></a>
 
-The AWS::AutoScaling::LifecycleHook resource specifies lifecycle hooks for an Auto Scaling group\. These hooks enable an Auto Scaling group to be aware of events in the Auto Scaling instance lifecycle, and then perform a custom action when the corresponding lifecycle event occurs\. A lifecycle hook provides a specified amount of time \(one hour by default\) to complete the lifecycle action before the instance transitions to the next state\. 
+The `AWS::AutoScaling::LifecycleHook` resource specifies lifecycle hooks for an Auto Scaling group\. These hooks enable an Auto Scaling group to be aware of events in the Auto Scaling instance lifecycle, and then perform a custom action when the corresponding lifecycle event occurs\. A lifecycle hook provides a specified amount of time \(one hour by default\) to complete the lifecycle action before the instance transitions to the next state\. 
 
 There are two types of lifecycle hooks that can be implemented: launch lifecycle hooks and termination lifecycle hooks\. Use a launch lifecycle hook to prepare instances for use or to delay instances from registering behind the load balancer before their configuration has been applied completely\. Use a termination lifecycle hook to prepare running instances to be shut down\. 
 
@@ -53,6 +53,7 @@ The name of the Auto Scaling group for the lifecycle hook\.
 
 `DefaultResult`  <a name="cfn-as-lifecyclehook-defaultresult"></a>
 The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs\. The valid values are `CONTINUE` and `ABANDON` \(default\)\.  
+For more information, see [Adding lifecycle hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/adding-lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

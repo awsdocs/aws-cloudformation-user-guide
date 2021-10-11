@@ -49,16 +49,16 @@ The following shows an example web ACL default action specification that sets th
 #### YAML<a name="aws-properties-wafv2-webacl-defaultaction--examples--Set_a_web_ACL_default_action--yaml"></a>
 
 ```
-      DefaultAction:
-        Block: {}
+DefaultAction:
+    Block: {}
 ```
 
 #### JSON<a name="aws-properties-wafv2-webacl-defaultaction--examples--Set_a_web_ACL_default_action--json"></a>
 
 ```
-      "DefaultAction": {
-          "Block": {}
-        }
+"DefaultAction": {
+    "Block": {}
+}
 ```
 
 ### Set a customized web ACL default action<a name="aws-properties-wafv2-webacl-defaultaction--examples--Set_a_customized_web_ACL_default_action_"></a>
@@ -68,33 +68,33 @@ The following shows an example web ACL default action specification with customi
 #### YAML<a name="aws-properties-wafv2-webacl-defaultaction--examples--Set_a_customized_web_ACL_default_action_--yaml"></a>
 
 ```
-      DefaultAction:
-        Allow:
-          CustomRequestHandling:
-            InsertHeaders:
-              - Name: AllowActionHeader1Name
-                Value: AllowActionHeader1Value
-              - Name: AllowActionHeader2Name
-                Value: AllowActionHeader2Value
+DefaultAction:
+  Allow:
+    CustomRequestHandling:
+      InsertHeaders:
+        - Name: AllowActionHeader1Name
+          Value: AllowActionHeader1Value
+        - Name: AllowActionHeader2Name
+          Value: AllowActionHeader2Value
 ```
 
 #### JSON<a name="aws-properties-wafv2-webacl-defaultaction--examples--Set_a_customized_web_ACL_default_action_--json"></a>
 
 ```
-        "DefaultAction": {
-          "Allow": {
-            "CustomRequestHandling": {
-              "InsertHeaders": [
-                {
-                  "Name": "AllowActionHeader1Name",
-                  "Value": "AllowActionHeader1Value"
-                },
-                {
-                  "Name": "AllowActionHeader2Name",
-                  "Value": "AllowActionHeader2Value"
-                }
-              ]
-            }
-          }
+"DefaultAction": {
+  "Allow": {
+    "CustomRequestHandling": {
+      "InsertHeaders": [
+        {
+          "Name": "AllowActionHeader1Name",
+          "Value": "AllowActionHeader1Value"
+        },
+        {
+          "Name": "AllowActionHeader2Name",
+          "Value": "AllowActionHeader2Value"
         }
+      ]
+    }
+  }
+}
 ```

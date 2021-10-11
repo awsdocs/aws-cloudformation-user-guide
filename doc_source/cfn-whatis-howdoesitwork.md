@@ -2,7 +2,7 @@
 
 When creating a stack, AWS CloudFormation makes underlying service calls to AWS to provision and configure your resources\. CloudFormation can only perform actions that you have permission to do\. For example, to create EC2 instances by using CloudFormation, you need permissions to create instances\. You'll need similar permissions to terminate instances when you delete stacks with instances\. You use [AWS Identity and Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/) \(IAM\) to manage permissions\.
 
-The calls that CloudFormation makes are all declared by your template\. For example, suppose you have a template that describes an EC2 instance with a `t1.micro` instance type\. When you use that template to create a stack, CloudFormation calls the Amazon EC2 create instance API and specifies the instance type as `t1.micro`\. The following diagram summarizes the CloudFormation workflow for creating stacks\.
+The calls that CloudFormation makes are all declared by your template\. For example, suppose you have a template that describes an EC2 instance with a `t2.micro` instance type\. When you use that template to create a stack, CloudFormation calls the Amazon EC2 create instance API and specifies the instance type as `t2.micro`\. The following diagram summarizes the CloudFormation workflow for creating stacks\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/create-stack-diagram.png)
 
@@ -18,7 +18,7 @@ The calls that CloudFormation makes are all declared by your template\. For exam
          "Type" : "AWS::EC2::Instance",
          "Properties" : {
            "ImageId" : "ami-0ff8a91507f77f867",
-           "InstanceType" : "t1.micro"
+           "InstanceType" : "t2.micro"
          }
        }
      }
@@ -34,12 +34,12 @@ The calls that CloudFormation makes are all declared by your template\. For exam
        Type: AWS::EC2::Instance
        Properties:
          ImageId: ami-0ff8a91507f77f867
-         InstanceType: t1.micro
+         InstanceType: t2.micro
    ```
 
 1. Save the template locally or in an S3 bucket\. If you created a template, save it with a file extension like: `.json`, `.yaml`, or `.txt`\.
 
-1. Create a CloudFormation stack by specifying the location of your template file, such as a path on your local computer or an Amazon S3 URL\. If the template contains parameters, you can specify input values when you create the stack\. Parameters enable you to pass in values to your template so that you can customize your resources each time you create a stack\.
+1. Create a CloudFormation stack by specifying the location of your template file, such as a path on your local computer or an Amazon S3 URL\. If the template contains parameters, you can specify input values when you create the stack\. Parameters allow you to pass in values to your template so that you can customize your resources each time you create a stack\.
 
    You can create stacks by using the CloudFormation [console](cfn-console-create-stack.md), [API](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html), or [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html)\.
 **Note**  
@@ -52,7 +52,7 @@ After all the resources have been created, CloudFormation reports that your stac
 
 ## Updating a stack with change sets<a name="updating-stack-with-change-sets"></a>
 
-When you need to update your stack's resources, you can modify the stack's template\. You don't need to create a new stack and delete the old one\. To update a stack, create a change set by submitting a modified version of the original stack template, different input parameter values, or both\. CloudFormation compares the modified template with the original template and generates a change set\. The change set lists the proposed changes\. After reviewing the changes, you can execute the change set to update your stack or you can create a new change set\. The following diagram summarizes the workflow for updating a stack\.
+When you need to update your stack's resources, you can modify the stack's template\. You don't need to create a new stack and delete the old one\. To update a stack, create a change set by submitting a modified version of the original stack template, different input parameter values, or both\. CloudFormation compares the modified template with the original template and generates a change set\. The change set lists the proposed changes\. After reviewing the changes, you can start the change set to update your stack or you can create a new change set\. The following diagram summarizes the workflow for updating a stack\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/update-stack-diagram.png)
 
@@ -75,9 +75,9 @@ If you specify a template that's stored on your local computer, CloudFormation a
 **Important**  
 Change sets don't indicate whether your stack update will be successful\. For example, a change set doesn't check if you will surpass an account [quota](cloudformation-limits.md), if you're updating a [resource](aws-template-resource-type-ref.md) that doesn't support updates, or if you have insufficient [permissions](using-iam-template.md) to modify a resource, which can cause a stack update to fail\.
 
-1. Execute the change set that you want to apply to your stack\. CloudFormation updates your stack by updating only the resources that you modified and signals that your stack has been successfully updated\. If the stack updates fails, CloudFormation rolls back changes to restore the stack to the last known working state\.
+1. Initiate the change set that you want to apply to your stack\. CloudFormation updates your stack by updating only the resources that you modified and signals that your stack has been successfully updated\. If the stack updates fails, CloudFormation rolls back changes to restore the stack to the last known working state\.
 
-## Deleting a stack<a name="w9292ab1b5c17c19"></a>
+## Deleting a stack<a name="how-to-delete-a-stack"></a>
 
 When you delete a stack, you specify the stack to delete, and CloudFormation deletes the stack and all the resources in that stack\. You can delete stacks by using the CloudFormation [console](cfn-console-delete-stack.md), [API](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeleteStack.html), or [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/delete-stack.html)\.
 
@@ -85,6 +85,6 @@ If you want to delete a stack but want to retain some resources in that stack, y
 
 After all the resources have been deleted, CloudFormation signals that your stack has been successfully deleted\. If CloudFormation can't delete a resource, the stack won't be deleted\. Any resources that haven't been deleted will remain until you can successfully delete the stack\.
 
-## Additional resources<a name="w9292ab1b5c17c21"></a>
+## Additional resources<a name="what-is-cfn-additional-resource"></a>
 + For more information about creating CloudFormation templates, see [Template anatomy](template-anatomy.md)\.
 + For more information about creating, updating, or deleting stacks, see [Working with stacks](stacks.md)\.

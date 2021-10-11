@@ -2,6 +2,8 @@
 
 Associates the specified attachment with the specified transit gateway route table\. You can associate one route table with an attachment\.
 
+Before you can update the route table associated with an attachment, you must disassociate the transit gateway route table that is currently associated with the attachment\. First update the stack to remove the associated transit gateway route table, and then update the stack with the ID of the new transit gateway route table to associate\.
+
 ## Syntax<a name="aws-resource-ec2-transitgatewayroutetableassociation-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

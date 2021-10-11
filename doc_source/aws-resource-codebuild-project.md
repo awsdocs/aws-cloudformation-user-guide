@@ -24,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LogsConfig](#cfn-codebuild-project-logsconfig)" : LogsConfig,
       "[Name](#cfn-codebuild-project-name)" : String,
       "[QueuedTimeoutInMinutes](#cfn-codebuild-project-queuedtimeoutinminutes)" : Integer,
+      "[ResourceAccessRole](#cfn-codebuild-project-resourceaccessrole)" : String,
       "[SecondaryArtifacts](#cfn-codebuild-project-secondaryartifacts)" : [ Artifacts, ... ],
       "[SecondarySources](#cfn-codebuild-project-secondarysources)" : [ Source, ... ],
       "[SecondarySourceVersions](#cfn-codebuild-project-secondarysourceversions)" : [ ProjectSourceVersion, ... ],
@@ -33,6 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Tags](#cfn-codebuild-project-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TimeoutInMinutes](#cfn-codebuild-project-timeoutinminutes)" : Integer,
       "[Triggers](#cfn-codebuild-project-triggers)" : ProjectTriggers,
+      "[Visibility](#cfn-codebuild-project-visibility)" : String,
       "[VpcConfig](#cfn-codebuild-project-vpcconfig)" : VpcConfig
     }
 }
@@ -61,6 +63,7 @@ Properties:
     LogsConfig
   [Name](#cfn-codebuild-project-name): String
   [QueuedTimeoutInMinutes](#cfn-codebuild-project-queuedtimeoutinminutes): Integer
+  [ResourceAccessRole](#cfn-codebuild-project-resourceaccessrole): String
   [SecondaryArtifacts](#cfn-codebuild-project-secondaryartifacts): 
     - Artifacts
   [SecondarySources](#cfn-codebuild-project-secondarysources): 
@@ -76,6 +79,7 @@ Properties:
   [TimeoutInMinutes](#cfn-codebuild-project-timeoutinminutes): Integer
   [Triggers](#cfn-codebuild-project-triggers): 
     ProjectTriggers
+  [Visibility](#cfn-codebuild-project-visibility): String
   [VpcConfig](#cfn-codebuild-project-vpcconfig): 
     VpcConfig
 ```
@@ -166,6 +170,13 @@ The number of minutes a build is allowed to be queued before it times out\.
 *Maximum*: `480`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ResourceAccessRole`  <a name="cfn-codebuild-project-resourceaccessrole"></a>
+The ARN of the IAM role that enables CodeBuild to access the CloudWatch Logs and Amazon S3 artifacts for the project's builds\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SecondaryArtifacts`  <a name="cfn-codebuild-project-secondaryartifacts"></a>
  A list of `Artifacts` objects\. Each artifacts object specifies output settings that the project generates during a build\.   
 *Required*: No  
@@ -188,7 +199,7 @@ An array of `ProjectSourceVersion` objects\. If `secondarySourceVersions` is spe
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceRole`  <a name="cfn-codebuild-project-servicerole"></a>
-The ARN of the AWS Identity and Access Management role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account\.  
+The ARN of the IAM role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS account\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -232,6 +243,16 @@ How long, in minutes, from 5 to 480 \(8 hours\), for AWS CodeBuild to wait befor
  For an existing AWS CodeBuild build project that has its source code stored in a GitHub repository, enables AWS CodeBuild to begin automatically rebuilding the source code every time a code change is pushed to the repository\.   
 *Required*: No  
 *Type*: [ProjectTriggers](aws-properties-codebuild-project-projecttriggers.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Visibility`  <a name="cfn-codebuild-project-visibility"></a>
+Specifies the visibility of the project's builds\. Possible values are:    
+PUBLIC\_READ  
+The project builds are visible to the public\.  
+PRIVATE  
+The project builds are not visible to the public\.
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcConfig`  <a name="cfn-codebuild-project-vpcconfig"></a>

@@ -43,7 +43,7 @@ The IP address type \(`IPV4` or `IPV6`\) and the IP address range \(in CIDR nota
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-waf-ipset-name"></a>
-A friendly name or description of the `IPSet`\. You can't change the name of an `IPSet` after you create it\.  
+The name of the `IPSet`\. You can't change the name of an `IPSet` after you create it\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -70,10 +70,10 @@ The following example defines a set of IP addresses for a web access control lis
 #### JSON<a name="aws-resource-waf-ipset--examples--Define_IP_Addresses--json"></a>
 
 ```
-"MyIPSetBlacklist": {
+"MyIPSetDenylist": {
   "Type": "AWS::WAF::IPSet",
   "Properties": {
-    "Name": "IPSet for blacklisted IP adresses",
+    "Name": "IPSet for deny listed IP addresses",
     "IPSetDescriptors": [
       {
         "Type" : "IPV4",
@@ -91,10 +91,10 @@ The following example defines a set of IP addresses for a web access control lis
 #### YAML<a name="aws-resource-waf-ipset--examples--Define_IP_Addresses--yaml"></a>
 
 ```
-MyIPSetBlacklist: 
+MyIPSetDenylist: 
   Type: "AWS::WAF::IPSet"
   Properties: 
-    Name: "IPSet for blacklisted IP adresses"
+    Name: "IPSet for deny listed IP addresses"
     IPSetDescriptors: 
       - 
         Type: "IPV4"
@@ -106,7 +106,7 @@ MyIPSetBlacklist:
 
 ### Associate an IPSet with a Web ACL Rule<a name="aws-resource-waf-ipset--examples--Associate_an_IPSet_with_a_Web_ACL_Rule"></a>
 
-The following example associates the `MyIPSetBlacklist` IP Set with a web ACL rule\.
+The following example associates the `MyIPSetDenylist` IP Set with a web ACL rule\.
 
 #### JSON<a name="aws-resource-waf-ipset--examples--Associate_an_IPSet_with_a_Web_ACL_Rule--json"></a>
 
@@ -118,7 +118,7 @@ The following example associates the `MyIPSetBlacklist` IP Set with a web ACL ru
     "MetricName" : "MyIPSetRule",
     "Predicates": [
       {
-        "DataId" : {  "Ref" : "MyIPSetBlacklist" },
+        "DataId" : {  "Ref" : "MyIPSetDenylist" },
         "Negated" : false,
         "Type" : "IPMatch"
       }
@@ -138,7 +138,7 @@ MyIPSetRule:
     Predicates: 
       - 
         DataId: 
-          Ref: "MyIPSetBlacklist"
+          Ref: "MyIPSetDenylist"
         Negated: false
         Type: "IPMatch"
 ```
@@ -153,7 +153,7 @@ The following example associates the `MyIPSetRule` rule with a web ACL\. The web
 "MyWebACL": {
   "Type": "AWS::WAF::WebACL",
   "Properties": {
-    "Name": "WebACL to block blacklisted IP addresses",
+    "Name": "WebACL to block IP addresses",
     "DefaultAction": {
       "Type": "ALLOW"
     },
@@ -177,7 +177,7 @@ The following example associates the `MyIPSetRule` rule with a web ACL\. The web
 MyWebACL: 
   Type: "AWS::WAF::WebACL"
   Properties: 
-    Name: "WebACL to block blacklisted IP addresses"
+    Name: "WebACL to block IP addresses"
     DefaultAction: 
       Type: "ALLOW"
     MetricName: "MyWebACL"

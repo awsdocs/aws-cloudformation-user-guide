@@ -111,7 +111,8 @@ Write to a DynamoDB table\. This is a new version of the DynamoDB action\. It al
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Elasticsearch`  <a name="cfn-iot-topicrule-action-elasticsearch"></a>
-Write data to an Amazon Elasticsearch Service domain\.  
+Write data to an Amazon OpenSearch Service domain\.  
+The `Elasticsearch` action can only be used by existing rule actions\. To create a new rule action or to update an existing rule action, use the `OpenSearch` rule action instead\. For more information, see [OpenSearchAction](https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html)\.
 *Required*: No  
 *Type*: [ElasticsearchAction](aws-properties-iot-topicrule-elasticsearchaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
