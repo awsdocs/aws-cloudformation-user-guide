@@ -124,7 +124,7 @@ The following example creates a CodeCommit repository named *MyDemoRepo*\. The n
                 "BranchName": "development",
                 "S3": {
                     "Bucket": "MySourceCodeBucket",
-                    "Keya": "MyKey",
+                    "Key": "MyKey",
                     "ObjectVersion": "1"
                 }
             }
