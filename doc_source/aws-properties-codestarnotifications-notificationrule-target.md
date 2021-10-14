@@ -25,7 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codestarnotifications-notificationrule-target-properties"></a>
 
 `TargetAddress`  <a name="cfn-codestarnotifications-notificationrule-target-targetaddress"></a>
-The Amazon Resource Name \(ARN\) of the AWS Chatbot topic or AWS Chatbot client\.  
+The Amazon Resource Name \(ARN\) of the AWS Chatbot client if `TargetType: AWSChatbotSlack`.
+For `TargetType: SNS` it must be topic's ARN\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
