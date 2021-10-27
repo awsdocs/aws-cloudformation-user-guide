@@ -62,6 +62,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `DomainName`  <a name="DomainName-fn::getatt"></a>
 The domain name of the resource, such as `d111111abcdef8.cloudfront.net`\.
 
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-cloudfront-distribution--examples"></a>
 
 

@@ -1,6 +1,6 @@
 # AWS::Greengrass::ResourceDefinitionVersion SecretsManagerSecretResourceData<a name="aws-properties-greengrass-resourcedefinitionversion-secretsmanagersecretresourcedata"></a>
 
-<a name="aws-properties-greengrass-resourcedefinitionversion-secretsmanagersecretresourcedata-description"></a>Settings for a secret resource, which references a secret from AWS Secrets Manager\. AWS IoT Greengrass stores a local, encrypted copy of the secret on the Greengrass core, where it can be securely accessed by connectors and Lambda functions\. For more information, see [Deploy Secrets to the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/latest/developerguide/secrets.html) in the *AWS IoT Greengrass Developer Guide*\.
+<a name="aws-properties-greengrass-resourcedefinitionversion-secretsmanagersecretresourcedata-description"></a>Settings for a secret resource, which references a secret from AWS Secrets Manager\. AWS IoT Greengrass stores a local, encrypted copy of the secret on the Greengrass core, where it can be securely accessed by connectors and Lambda functions\. For more information, see [Deploy Secrets to the AWS IoT Greengrass Core](https://docs.aws.amazon.com/greengrass/latest/developerguide/secrets.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.
 
 <a name="aws-properties-greengrass-resourcedefinitionversion-secretsmanagersecretresourcedata-inheritance"></a> In an AWS CloudFormation template, `SecretsManagerSecretResourceData` can be used in the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourcedatacontainer.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourcedatacontainer.html) property type\.
 
@@ -40,5 +40,5 @@ The Amazon Resource Name \(ARN\) of the Secrets Manager secret to make available
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See also<a name="aws-properties-greengrass-resourcedefinitionversion-secretsmanagersecretresourcedata--seealso"></a>
-+  [SecretsManagerSecretResourceData](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-secretsmanagersecretresourcedata.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [SecretsManagerSecretResourceData](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-secretsmanagersecretresourcedata.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoTSiteWise::AssetModel",
   "Properties" : {
+      "[AssetModelCompositeModels](#cfn-iotsitewise-assetmodel-assetmodelcompositemodels)" : [ AssetModelCompositeModel, ... ],
       "[AssetModelDescription](#cfn-iotsitewise-assetmodel-assetmodeldescription)" : String,
       "[AssetModelHierarchies](#cfn-iotsitewise-assetmodel-assetmodelhierarchies)" : [ AssetModelHierarchy, ... ],
       "[AssetModelName](#cfn-iotsitewise-assetmodel-assetmodelname)" : String,
@@ -26,6 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::IoTSiteWise::AssetModel
 Properties: 
+  [AssetModelCompositeModels](#cfn-iotsitewise-assetmodel-assetmodelcompositemodels): 
+    - AssetModelCompositeModel
   [AssetModelDescription](#cfn-iotsitewise-assetmodel-assetmodeldescription): String
   [AssetModelHierarchies](#cfn-iotsitewise-assetmodel-assetmodelhierarchies): 
     - AssetModelHierarchy
@@ -38,6 +41,12 @@ Properties:
 
 ## Properties<a name="aws-resource-iotsitewise-assetmodel-properties"></a>
 
+`AssetModelCompositeModels`  <a name="cfn-iotsitewise-assetmodel-assetmodelcompositemodels"></a>
+The composite asset models that are part of this asset model\. Composite asset models are asset models that contain specific properties\. Each composite model has a type that defines the properties that the composite model supports\. You can use composite asset models to define alarms on this asset model\.  
+*Required*: No  
+*Type*: List of [AssetModelCompositeModel](aws-properties-iotsitewise-assetmodel-assetmodelcompositemodel.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `AssetModelDescription`  <a name="cfn-iotsitewise-assetmodel-assetmodeldescription"></a>
 A description for the asset model\.  
 *Required*: No  
@@ -45,7 +54,7 @@ A description for the asset model\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AssetModelHierarchies`  <a name="cfn-iotsitewise-assetmodel-assetmodelhierarchies"></a>
-The hierarchy definitions of the asset model\. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model\. For more information, see [Defining relationships between assets](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html) in the *AWS IoT SiteWise User Guide*\.  
+The hierarchy definitions of the asset model\. Each hierarchy specifies an asset model whose assets can be children of any other assets created from this asset model\. For more information, see [Defining relationships between assets](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-hierarchies.html) in the *AWS IoT SiteWiseUser Guide*\.  
 You can specify up to 10 hierarchies per asset model\. For more information, see [Quotas](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html) in the *AWS IoT SiteWise User Guide*\.  
 *Required*: No  
 *Type*: List of [AssetModelHierarchy](aws-properties-iotsitewise-assetmodel-assetmodelhierarchy.md)  

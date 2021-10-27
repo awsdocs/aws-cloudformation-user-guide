@@ -2,7 +2,7 @@
 
 The `AWS::AutoScaling::LaunchConfiguration` resource specifies the launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances\. 
 
-When you update the launch configuration for an Auto Scaling group, AWS CloudFormation deletes that resource and creates a new launch configuration with the updated properties and a new name\. Existing instances are not affected\. To update existing instances when you update the `AWS::AutoScaling::LaunchConfiguration` resource, you can specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the group\. You can find sample update policies for rolling updates in [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)\. 
+When you update the launch configuration for an Auto Scaling group, CloudFormation deletes that resource and creates a new launch configuration with the updated properties and a new name\. Existing instances are not affected\. To update existing instances when you update the `AWS::AutoScaling::LaunchConfiguration` resource, you can specify an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) for the group\. You can find sample update policies for rolling updates in [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)\. 
 
 For more information, see [CreateLaunchConfiguration](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CreateLaunchConfiguration.html) in the *Amazon EC2 Auto Scaling API Reference* and [Launch configurations](https://docs.aws.amazon.com/autoscaling/ec2/userguide/LaunchConfiguration.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
@@ -219,6 +219,12 @@ When the logical ID of this resource is provided to the `Ref` intrinsic function
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
+## Remarks<a name="aws-properties-as-launchconfig--remarks"></a>
+
+CloudFormation marks the Auto Scaling group as successful \(by setting its status to CREATE\_COMPLETE\) when its desired capacity is reached\. However, if `SpotPrice` is set in the launch configuration, then desired capacity is not used as a criteria for success\. Whether your request is fulfilled depends on Spot Instance capacity and your maximum price\. If the current Spot price is less than your specified maximum price, Amazon EC2 Auto Scaling uses the desired capacity as the target capacity for the group\. If the request for Spot Instances is unsuccessful, it keeps trying\. 
+
+You cannot define a duration for the Spot Instances as you can with a [Spot Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html#fixed-duration-spot-instances)\.
+
 ## Examples<a name="aws-properties-as-launchconfig--examples"></a>
 
 The following examples create launch configurations that can be used by an Auto Scaling group to configure Amazon EC2 instances\. 
@@ -229,7 +235,7 @@ For more template snippets, see [Auto scaling template snippets](https://docs.aw
 
 This example shows a launch configuration with a `BlockDeviceMappings` property that lists two devices: a 30 gigabyte EBS root volume mapped to /dev/sda1 and a 100 gigabyte EBS volume mapped to /dev/sdm\. The /dev/sdm volume uses the default EBS volume type based on the region and is not deleted when terminating the instance it is attached to\. 
 
-CloudFormation supports parameters from the AWS Systems Manager Parameter Store\. In this example, the `ImageId` property of the AWS::AutoScaling::LaunchConfiguration references the latest Amazon Linux 2 AMI \(EBS\-backed image\) from the Parameter Store\. For more information, see [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) in the *AWS Systems Manager User Guide* and the blog post [Query for the latest Amazon Linux AMI IDs using AWS Systems Manager Parameter Store](http://aws.amazon.com/blogs/compute/query-for-the-latest-amazon-linux-ami-ids-using-aws-systems-manager-parameter-store/) on the AWS Compute Blog\.
+CloudFormation supports parameters from the AWS Systems Manager Parameter Store\. In this example, the `ImageId` property references the latest Amazon Linux 2 AMI \(EBS\-backed image\) from the Parameter Store\. For more information, see [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) in the *AWS Systems Manager User Guide* and the blog post [Query for the latest Amazon Linux AMI IDs using AWS Systems Manager Parameter Store](http://aws.amazon.com/blogs/compute/query-for-the-latest-amazon-linux-ami-ids-using-aws-systems-manager-parameter-store/) on the AWS Compute Blog\.
 
 #### JSON<a name="aws-properties-as-launchconfig--examples--Amazon_EBS-backed_AMI_and_defined_block_device_mappings--json"></a>
 
@@ -265,7 +271,7 @@ CloudFormation supports parameters from the AWS Systems Manager Parameter Store\
             "DeviceName":"/dev/sda1",
             "Ebs":{
               "VolumeSize":"30",
-              "VolumeType":"gp2"
+              "VolumeType":"gp3"
             }
           },
           {
@@ -313,7 +319,7 @@ Resources:
         - DeviceName: /dev/sda1
           Ebs: 
             VolumeSize: 30
-            VolumeType: "gp2"
+            VolumeType: "gp3"
         - DeviceName: /dev/sdm
           Ebs: 
             VolumeSize: 100
@@ -324,7 +330,7 @@ Resources:
 
 This example shows a launch configuration that launches Spot Instances in the Auto Scaling group\. This launch configuration will only be active if the current Spot price is less than the price in the template specification \(0\.045\)\. It also demonstrates a launch configuration that uses the `IamInstanceProfile` property\. For an example of a full template, including the definition of, and further references from the [InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html) object referenced here as `RootInstanceProfile`, see [auto\_scaling\_with\_instance\_profile\.template](https://s3.amazonaws.com/cloudformation-templates-us-east-1/auto_scaling_with_instance_profile.template)\.
 
-In this example, the `ImageId` property of the AWS::AutoScaling::LaunchConfiguration references the latest Amazon Linux AMI \(instance store/S3\-backed image\) from the Parameter Store\. The BlockDeviceMappings property lists a virtual device `ephemeral0` mapped to /dev/sdc\.
+In this example, the `ImageId` property references the latest Amazon Linux AMI \(instance store/S3\-backed image\) from the Parameter Store\. The BlockDeviceMappings property lists a virtual device `ephemeral0` mapped to /dev/sdc\.
 
 #### JSON<a name="aws-properties-as-launchconfig--examples--Instance_store-backed_AMI_with_Spot_price_and_IAM_role--json"></a>
 
@@ -416,11 +422,11 @@ For more performance tips, see [Amazon EBS volume performance on Linux instances
         "KeyName":{
           "Ref":"KeyName"
         },
-        "UserData": {"Fn::Join": ["", [
+        "UserData": {"Fn::Base64": {"Fn::Join": ["", [
           "#!/bin/bash -x\n",
           "/opt/aws/bin/cfn-init -v --stack ", {"Ref": "AWS::StackName"}, " --resource myLaunchConfig ", " --configsets default ", " --region ", {"Ref": "AWS::Region"}, "\n",
           "/opt/aws/bin/cfn-signal -e $? --stack ", {"Ref": "AWS::StackName"}, " --resource myASG ", " --region ", {"Ref": "AWS::Region"}, "\n"
-        ]]},
+        ]]}},
         "EbsOptimized":"true"
       }
     }

@@ -2,7 +2,7 @@
 
 The optional `Mappings` section matches a key to a corresponding set of named values\. For example, if you want to set values based on a region, you can create a mapping that uses the region name as a key and contains the values you want to specify for each specific region\. You use the `Fn::FindInMap` intrinsic function to retrieve values in a map\.
 
-You cannot include parameters, pseudo parameters, or intrinsic functions in the `Mappings` section\.
+You can't include parameters, pseudo parameters, or intrinsic functions in the `Mappings` section\.
 
 ## Syntax<a name="mappings-section-structure-syntax"></a>
 
@@ -47,7 +47,7 @@ Mappings:
 
 The following example shows a `Mappings` section with a map `RegionMap`, which contains five keys that map to name\-value pairs containing single string values\. The keys are region names\. Each name\-value pair is the AMI ID for the HVM64 AMI in the region represented by the key\.
 
-The name\-value pairs have a name \(HVM64 in the example\) and a value\. By naming the values, you can map more than one set of values to a key\. 
+The name\-value pairs have a name \(HVM64 in the example\) and a value\. By naming the values, you can map more than one set of values to a key\.
 
 #### JSON<a name="mappings-section-structure-example1.json"></a>
 
@@ -180,7 +180,7 @@ Resources:
 
 ### Input parameter and FindInMap<a name="mappings-section-structure-examples-findinmap"></a>
 
-You can use an input parameter with the `Fn::FindInMap` function to refer to a specific value in a map\. For example, suppose you have a list of regions and environment types that map to a specific AMI ID\. You can select the AMI ID that your stack uses by using an input parameter \(`EnvironmentType`\)\. To determine the region, use the `AWS::Region` pseudo parameter, which gets the AWS region in which you create the stack\.
+You can use an input parameter with the `Fn::FindInMap` function to refer to a specific value in a map\. For example, suppose you have a list of regions and environment types that map to a specific AMI ID\. You can select the AMI ID that your stack uses by using an input parameter \(`EnvironmentType`\)\. To determine the region, use the `AWS::Region` pseudo parameter, which gets the AWS Region in which you create the stack\.
 
 #### JSON<a name="mappings-section-structure-example4.json"></a>
 

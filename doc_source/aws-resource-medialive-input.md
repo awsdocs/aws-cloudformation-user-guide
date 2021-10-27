@@ -54,13 +54,13 @@ Properties:
 ## Properties<a name="aws-resource-medialive-input-properties"></a>
 
 `Destinations`  <a name="cfn-medialive-input-destinations"></a>
-The destination settings for push types of inputs\. If the input is a pull type, these settings don't apply\.   
+Settings that apply only if the input is a push type of input\.  
 *Required*: No  
 *Type*: List of [InputDestinationRequest](aws-properties-medialive-input-inputdestinationrequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputDevices`  <a name="cfn-medialive-input-inputdevices"></a>
-Settings for the devices\.  
+Settings that apply only if the input is an Elemental Link input\.  
 *Required*: No  
 *Type*: List of [InputDeviceSettings](aws-properties-medialive-input-inputdevicesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -90,7 +90,7 @@ The IAM role for MediaLive to assume when creating a MediaConnect input or Amazo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Sources`  <a name="cfn-medialive-input-sources"></a>
-The source settings for a pull type of input\. These settings don't apply if the input is a push type\.   
+Settings that apply only if the input is a pull type of input\.   
 *Required*: No  
 *Type*: List of [InputSourceRequest](aws-properties-medialive-input-inputsourcerequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -108,7 +108,7 @@ The type for this input\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Vpc`  <a name="cfn-medialive-input-vpc"></a>
-Settings that apply only if the input is an Amazon VPC input\.   
+Settings that apply only if the input is an push input where the source is on Amazon VPC\.   
 *Required*: No  
 *Type*: [InputVpcRequest](aws-properties-medialive-input-inputvpcrequest.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -117,7 +117,7 @@ Settings that apply only if the input is an Amazon VPC input\.
 
 ### Ref<a name="aws-resource-medialive-input-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the input\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the MediaLive id of the input\.
 
 For example: `{ "Ref": "myInput" }`
 
@@ -135,7 +135,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The ARN of the MediaLive input\. For example: arn:aws:medialive:us\-west\-1:111122223333:medialive:input:1234567\. MediaLive creates this ARN when it creates the input\. 
 
 `Destinations`  <a name="Destinations-fn::getatt"></a>
-For a push input, the destination or destinations for the input\. The destinations are the IP addresses on MediaLive where the upstream system pushes the content to for this input\. MediaLive creates these IP addresses when it creates the input\. 
+For a push input, the the destination or destinations for the input\. The destinations are the URLs of locations on MediaLive where the upstream system pushes the content to, for this input\. MediaLive creates these addresses when it creates the input\. 
 
 `Sources`  <a name="Sources-fn::getatt"></a>
-For a pull input, the source or sources for the input\. The sources are the IP addresses on the upstream system where MediaLive pulls the content from for this input\. You included these IP addresses in the create request\.
+For a pull input, the source or sources for the input\. The sources are the URLs of locations on the upstream system where MediaLive pulls the content from, for this input\. You included these URLs in the create request\.

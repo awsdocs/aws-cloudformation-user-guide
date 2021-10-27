@@ -1,6 +1,15 @@
 # AWS::CloudWatch::MetricStream<a name="aws-resource-cloudwatch-metricstream"></a>
 
-Reserved for future use\.
+Creates or updates a metric stream\. Metrics streams can automatically stream CloudWatch metrics to AWS destinations including Amazon S3 and to many third\-party solutions\. For more information, see [ Metric streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Metric-Streams.html)\. 
+
+To create a metric stream, you must be logged on to an account that has the `iam:PassRole` permission and either the **CloudWatchFullAccess** policy or the `cloudwatch:PutMetricStream` permission\. 
+
+When you create or update a metric stream, you choose one of the following:
++ Stream metrics from all metric namespaces in the account\.
++ Stream metrics from all metric namespaces in the account, except for the namespaces that you list in `ExcludeFilters`\.
++ Stream metrics from only the metric namespaces that you list in `IncludeFilters`\. 
+
+When you create a metric stream, the stream is created in the `running` state\. If you update an existing metric stream, the state does not change\.
 
 ## Syntax<a name="aws-resource-cloudwatch-metricstream-syntax"></a>
 
@@ -16,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[FirehoseArn](#cfn-cloudwatch-metricstream-firehosearn)" : String,
       "[IncludeFilters](#cfn-cloudwatch-metricstream-includefilters)" : [ MetricStreamFilter, ... ],
       "[Name](#cfn-cloudwatch-metricstream-name)" : String,
+      "[OutputFormat](#cfn-cloudwatch-metricstream-outputformat)" : String,
       "[RoleArn](#cfn-cloudwatch-metricstream-rolearn)" : String,
       "[Tags](#cfn-cloudwatch-metricstream-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -33,6 +43,7 @@ Properties:
   [IncludeFilters](#cfn-cloudwatch-metricstream-includefilters): 
     - MetricStreamFilter
   [Name](#cfn-cloudwatch-metricstream-name): String
+  [OutputFormat](#cfn-cloudwatch-metricstream-outputformat): String
   [RoleArn](#cfn-cloudwatch-metricstream-rolearn): String
   [Tags](#cfn-cloudwatch-metricstream-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -41,37 +52,48 @@ Properties:
 ## Properties<a name="aws-resource-cloudwatch-metricstream-properties"></a>
 
 `ExcludeFilters`  <a name="cfn-cloudwatch-metricstream-excludefilters"></a>
-Not currently supported by AWS CloudFormation\.  
+If you specify this parameter, the stream sends metrics from all metric namespaces except for the namespaces that you specify here\. You cannot specify both `IncludeFilters` and `ExcludeFilters` in the same metric stream\.  
+When you modify the `IncludeFilters` or `ExcludeFilters` of an existing metric stream in any way, the metric stream is effectively restarted, so after such a change you will get only the datapoints that have a timestamp after the time of the update\.  
 *Required*: No  
 *Type*: List of [MetricStreamFilter](aws-properties-cloudwatch-metricstream-metricstreamfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FirehoseArn`  <a name="cfn-cloudwatch-metricstream-firehosearn"></a>
-Not currently supported by AWS CloudFormation\.  
+The ARN of the Amazon Kinesis Firehose delivery stream to use for this metric stream\. This Amazon Kinesis Firehose delivery stream must already exist and must be in the same account as the metric stream\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeFilters`  <a name="cfn-cloudwatch-metricstream-includefilters"></a>
-Not currently supported by AWS CloudFormation\.  
+If you specify this parameter, the stream sends only the metrics from the metric namespaces that you specify here\. You cannot specify both `IncludeFilters` and `ExcludeFilters` in the same metric stream\.  
+When you modify the `IncludeFilters` or `ExcludeFilters` of an existing metric stream in any way, the metric stream is effectively restarted, so after such a change you will get only the datapoints that have a timestamp after the time of the update\.  
 *Required*: No  
 *Type*: List of [MetricStreamFilter](aws-properties-cloudwatch-metricstream-metricstreamfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-cloudwatch-metricstream-name"></a>
-Not currently supported by AWS CloudFormation\.  
+If you are creating a new metric stream, this is the name for the new stream\. The name must be different than the names of other metric streams in this account and Region\.  
+If you are updating a metric stream, specify the name of that stream here\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`OutputFormat`  <a name="cfn-cloudwatch-metricstream-outputformat"></a>
+The output format for the stream\. Valid values are `json` and `opentelemetry0.7` For more information about metric stream output formats, see [ Metric streams output formats](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html)\.  
+This parameter is required\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `RoleArn`  <a name="cfn-cloudwatch-metricstream-rolearn"></a>
-Not currently supported by AWS CloudFormation\.  
+The ARN of an IAM role that this metric stream will use to access Amazon Kinesis Firehose resources\. This IAM role must already exist and must be in the same account as the metric stream\. This IAM role must include the `firehose:PutRecord` and `firehose:PutRecordBatch` permissions\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-cloudwatch-metricstream-tags"></a>
-Not currently supported by AWS CloudFormation\.  
+An array of key\-value pairs to apply to the metric stream\.  
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -80,18 +102,69 @@ Not currently supported by AWS CloudFormation\.
 
 ### Ref<a name="aws-resource-cloudwatch-metricstream-return-values-ref"></a>
 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the metric stream\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 ### Fn::GetAtt<a name="aws-resource-cloudwatch-metricstream-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-cloudwatch-metricstream-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ARN of the metric stream\.
 
 `CreationDate`  <a name="CreationDate-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The date that the metric stream was originally created\.
 
 `LastUpdateDate`  <a name="LastUpdateDate-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The date that the metric stream was most recently updated\.
 
 `State`  <a name="State-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The state of the metric stream, either `running` or `stopped`\.
+
+## Examples<a name="aws-resource-cloudwatch-metricstream--examples"></a>
+
+### Metric stream example<a name="aws-resource-cloudwatch-metricstream--examples--Metric_stream_example"></a>
+
+The following example creates a metric stream that streams only the metrics in the `AWS/ELB` and `AWS/EC2` namespaces\.
+
+#### YAML<a name="aws-resource-cloudwatch-metricstream--examples--Metric_stream_example--yaml"></a>
+
+```
+Resources:
+  MyMetricStream:
+    Type: 'AWS::CloudWatch::MetricStream'
+    Properties:
+      OutputFormat: 'json'
+      FirehoseArn: 'arn:aws:firehose:us-east-1:123456789012:deliverystream/MyDeliveryStream'
+      RoleArn: 'arn:aws:iam::123456789012:role/service-role/MyRole'
+      IncludeFilters:
+        - Namespace: AWS/ELB
+        - Namespace: AWS/EC2
+```
+
+#### JSON<a name="aws-resource-cloudwatch-metricstream--examples--Metric_stream_example--json"></a>
+
+```
+{
+  "Type" : "AWS::CloudWatch::MetricStream",
+  "Properties" : {
+    "FirehoseArn" : "arn:aws:firehose:us-east-1:123456789012:deliverystream/MyDeliveryStream",
+    "IncludeFilters" : [
+      {
+        "Namespace": "AWS/ELB"
+      },
+      {
+        "Namespace": "AWS/EC2"
+      }
+    ],
+    "Name" : "MyMetricStream",
+    "OutputFormat" : "json",
+    "RoleArn" : "arn:aws:iam::123456789012:role/service-role/MyRole"
+  }
+}
+```

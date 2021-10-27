@@ -1,6 +1,6 @@
 # AWS::ElasticLoadBalancingV2::LoadBalancer<a name="aws-resource-elasticloadbalancingv2-loadbalancer"></a>
 
-Specifies an Application Load Balancer or a Network Load Balancer\.
+Specifies an Application Load Balancer, a Network Load Balancer, or a Gateway Load Balancer\.
 
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-loadbalancer-syntax"></a>
 
@@ -99,7 +99,7 @@ The IDs of the public subnets\. You can specify only one subnet per Availability
 `Subnets`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnets"></a>
 The IDs of the subnets\. You can specify only one subnet per Availability Zone\. You must specify either subnets or subnet mappings\.  
 \[Application Load Balancers\] You must specify subnets from at least two Availability Zones\. When you specify subnets for an existing Application Load Balancer, they replace the previously enabled subnets\.  
-\[Network Load Balancers\] You can specify subnets from one or more Availability Zones when you create the load balancer\. You can't change the subnets for an existing Network Load Balancer\.  
+\[Network Load Balancers\] You can specify subnets from one or more Availability Zones when you create the load balancer\.   
 *Required*: Conditional  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -152,4 +152,5 @@ The IDs of the security groups for the load balancer\.
 +  [CreateLoadBalancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateLoadBalancer.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
 +  [User Guide for Application Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/application) 
 +  [User Guide for Network Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/network) 
++  [User Guide for Gateway Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway) 
 

@@ -42,7 +42,7 @@ The S3 bucket subfolder\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutputS3Region`  <a name="cfn-ssm-association-s3outputlocation-outputs3region"></a>
-\(Deprecated\) You can no longer specify this parameter\. The system ignores it\. Instead, Systems Manager automatically determines the Region of the S3 bucket\.  
+The AWS Region of the S3 bucket\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `3`  

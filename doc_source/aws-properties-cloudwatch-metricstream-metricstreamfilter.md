@@ -1,6 +1,6 @@
 # AWS::CloudWatch::MetricStream MetricStreamFilter<a name="aws-properties-cloudwatch-metricstream-metricstreamfilter"></a>
 
-<a name="aws-properties-cloudwatch-metricstream-metricstreamfilter-description"></a>The `MetricStreamFilter` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::CloudWatch::MetricStream](aws-resource-cloudwatch-metricstream.md)\.
+This structure contains the name of one of the metric namespaces that is listed in a filter of a metric stream\. 
 
 ## Syntax<a name="aws-properties-cloudwatch-metricstream-metricstreamfilter-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudwatch-metricstream-metricstreamfilter-properties"></a>
 
 `Namespace`  <a name="cfn-cloudwatch-metricstream-metricstreamfilter-namespace"></a>
-Not currently supported by AWS CloudFormation\.  
+The name of the metric namespace in the filter\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

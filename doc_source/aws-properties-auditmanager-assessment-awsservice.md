@@ -10,19 +10,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[serviceName](#cfn-auditmanager-assessment-awsservice-servicename)" : String
+  "[ServiceName](#cfn-auditmanager-assessment-awsservice-servicename)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-auditmanager-assessment-awsservice-syntax.yaml"></a>
 
 ```
-  [serviceName](#cfn-auditmanager-assessment-awsservice-servicename): String
+  [ServiceName](#cfn-auditmanager-assessment-awsservice-servicename): String
 ```
 
 ## Properties<a name="aws-properties-auditmanager-assessment-awsservice-properties"></a>
 
-`serviceName`  <a name="cfn-auditmanager-assessment-awsservice-servicename"></a>
+`ServiceName`  <a name="cfn-auditmanager-assessment-awsservice-servicename"></a>
  The name of the AWS service\.   
 *Required*: No  
 *Type*: String  

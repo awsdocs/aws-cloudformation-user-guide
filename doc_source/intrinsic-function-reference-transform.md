@@ -116,4 +116,4 @@ The following example calls the `AWS::Include` transform, specifying that the lo
 
 ## Supported functions<a name="intrinsic-function-reference-transform-supported-functions"></a>
 
-None\. AWS CloudFormation passes any intrinsic function calls included in `Fn::Transform` to the specified macro as literal strings\. For more information, see [AWS CloudFormation macro function interface](template-macros.md#template-macros-lambda-interface)\.
+None\. CloudFormation passes any intrinsic function calls included in `Fn::Transform` to the specified macro as literal strings\. For more information, see [AWS CloudFormation macro function interface](template-macros.md#template-macros-lambda-interface)\.

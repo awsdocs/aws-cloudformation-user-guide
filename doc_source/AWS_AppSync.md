@@ -1,4 +1,4 @@
-# AppSync resource type reference<a name="AWS_AppSync"></a>
+# AWS AppSync resource type reference<a name="AWS_AppSync"></a>
 
 **Resource types**
 + [AWS::AppSync::ApiCache](aws-resource-appsync-apicache.md)

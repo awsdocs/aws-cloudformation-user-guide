@@ -1,8 +1,5 @@
 # AWS::WAFv2::RuleGroup GeoMatchStatement<a name="aws-properties-wafv2-rulegroup-geomatchstatement"></a>
 
-**Note**  
-This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
-
 A rule statement used to identify web requests based on country of origin\. 
 
 ## Syntax<a name="aws-properties-wafv2-rulegroup-geomatchstatement-syntax"></a>

@@ -1,4 +1,4 @@
-# Kendra resource type reference<a name="AWS_Kendra"></a>
+# Amazon Kendra resource type reference<a name="AWS_Kendra"></a>
 
 **Resource types**
 + [AWS::Kendra::DataSource](aws-resource-kendra-datasource.md)

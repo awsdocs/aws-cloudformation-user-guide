@@ -12,6 +12,8 @@
 + [AWS::ServiceCatalog::PortfolioProductAssociation](aws-resource-servicecatalog-portfolioproductassociation.md)
 + [AWS::ServiceCatalog::PortfolioShare](aws-resource-servicecatalog-portfolioshare.md)
 + [AWS::ServiceCatalog::ResourceUpdateConstraint](aws-resource-servicecatalog-resourceupdateconstraint.md)
++ [AWS::ServiceCatalog::ServiceAction](aws-resource-servicecatalog-serviceaction.md)
++ [AWS::ServiceCatalog::ServiceActionAssociation](aws-resource-servicecatalog-serviceactionassociation.md)
 + [AWS::ServiceCatalog::StackSetConstraint](aws-resource-servicecatalog-stacksetconstraint.md)
 + [AWS::ServiceCatalog::TagOption](aws-resource-servicecatalog-tagoption.md)
 + [AWS::ServiceCatalog::TagOptionAssociation](aws-resource-servicecatalog-tagoptionassociation.md)

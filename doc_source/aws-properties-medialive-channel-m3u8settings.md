@@ -1,6 +1,6 @@
 # AWS::MediaLive::Channel M3u8Settings<a name="aws-properties-medialive-channel-m3u8settings"></a>
 
-The settings information for the M3U8 container\.
+Settings for the M3U8 container\.
 
 The parent of this entity is StandardHlsSettings\.
 

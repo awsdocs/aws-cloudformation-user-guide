@@ -2,7 +2,7 @@
 
 Defines the mapping between a field in the Confluence data source to a Amazon Kendra index field\.
 
-You must first create the index field using the API\_UpdateIndex operation\. 
+You must first create the index field using the `UpdateIndex` operation\. 
 
 ## Syntax<a name="aws-properties-kendra-datasource-confluencespacetoindexfieldmapping-syntax"></a>
 

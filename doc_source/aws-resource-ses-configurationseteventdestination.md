@@ -1,6 +1,6 @@
 # AWS::SES::ConfigurationSetEventDestination<a name="aws-resource-ses-configurationseteventdestination"></a>
 
-Specifies a configuration set event destination\. An event destination is an AWS service that Amazon SES publishes email sending events to\. When you specify an event destination, you provide one, and only one, destination\. You can send event data to Amazon CloudWatch or Amazon Kinesis Data Firehose\. For information about using configuration sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html)\.
+Specifies a configuration set event destination\. An event destination is an AWS service that Amazon SES publishes email sending events to\. When you specify an event destination, you provide one, and only one, destination\. You can send event data to Amazon CloudWatch or Amazon Kinesis Data Firehose\.
 
 **Note**  
 You can't specify Amazon SNS event destinations in CloudFormation templates\.
@@ -34,13 +34,13 @@ Properties:
 ## Properties<a name="aws-resource-ses-configurationseteventdestination-properties"></a>
 
 `ConfigurationSetName`  <a name="cfn-ses-configurationseteventdestination-configurationsetname"></a>
-The name of the configuration set that contains the event destination that you want to update\.  
+The name of the configuration set that contains the event destination\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EventDestination`  <a name="cfn-ses-configurationseteventdestination-eventdestination"></a>
-The event destination object that you want to apply to the specified configuration set\.  
+The event destination object\.  
 *Required*: Yes  
 *Type*: [EventDestination](aws-properties-ses-configurationseteventdestination-eventdestination.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -58,7 +58,7 @@ Specifies an event destination for a configuration set\.
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS SES ConfigurationSetEventDestination Sample Template",
+    "Description": "Amazon SES ConfigurationSetEventDestination Sample Template",
     "Parameters": {
         "ConfigSetName": {
             "Type": "String"
@@ -162,7 +162,7 @@ Specifies an event destination for a configuration set\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: AWS SES ConfigurationSetEventDestination Sample Template
+Description: Amazon SES ConfigurationSetEventDestination Sample Template
 Parameters:
   ConfigSetName:
     Type: String

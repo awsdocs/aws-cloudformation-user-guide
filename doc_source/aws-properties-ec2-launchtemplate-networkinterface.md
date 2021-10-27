@@ -57,7 +57,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AssociateCarrierIpAddress`  <a name="cfn-ec2-launchtemplate-networkinterface-associatecarrieripaddress"></a>
 Indicates whether to associate a Carrier IP address with eth0 for a new network interface\.  
-Use this option when you launch an instance in a Wavelength Zone and want to associate a Carrier IP address with the network interface\. For more information about Carrier IP addresses, see [Carrier IP addresses](https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#provider-owned-ip) in the *AWS Wavelength Developer Guide*\.  
+Use this option when you launch an instance in a Wavelength Zone and want to associate a Carrier IP address with the network interface\. For more information about Carrier IP addresses, see [Carrier IP addresses](https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#provider-owned-ip) in the * AWS Wavelength Developer Guide*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -149,5 +149,5 @@ The ID of the subnet for the network interface\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-ec2-launchtemplate-networkinterface--seealso"></a>
-+  [ LaunchTemplateInstanceNetworkInterfaceSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateInstanceNetworkInterfaceSpecificationRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [ LaunchTemplateInstanceNetworkInterfaceSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateInstanceNetworkInterfaceSpecificationRequest.html) in the *Amazon EC2 API Reference* 
 

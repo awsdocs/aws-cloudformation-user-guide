@@ -57,7 +57,7 @@ The format of the file that contains the ThreatIntelSet\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Location`  <a name="cfn-guardduty-threatintelset-location"></a>
-The URI of the file that contains the ThreatIntelSet\. For example: https://s3\.us\-west\-2\.amazonaws\.com/my\-bucket/my\-object\-key\.  
+The URI of the file that contains the ThreatIntelSet\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

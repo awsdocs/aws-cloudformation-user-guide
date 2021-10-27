@@ -1,6 +1,6 @@
 # AWS::DataBrew::Project<a name="aws-resource-databrew-project"></a>
 
-Creates a new DataBrew project\.
+Specifies a new AWS Glue DataBrew project\.
 
 ## Syntax<a name="aws-resource-databrew-project-syntax"></a>
 
@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-databrew-project-name)" : String,
       "[RecipeName](#cfn-databrew-project-recipename)" : String,
       "[RoleArn](#cfn-databrew-project-rolearn)" : String,
-      "[Sample](#cfn-databrew-project-sample)" : Json,
+      "[Sample](#cfn-databrew-project-sample)" : Sample,
       "[Tags](#cfn-databrew-project-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -31,7 +31,8 @@ Properties:
   [Name](#cfn-databrew-project-name): String
   [RecipeName](#cfn-databrew-project-recipename): String
   [RoleArn](#cfn-databrew-project-rolearn): String
-  [Sample](#cfn-databrew-project-sample): Json
+  [Sample](#cfn-databrew-project-sample): 
+    Sample
   [Tags](#cfn-databrew-project-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -71,9 +72,9 @@ The Amazon Resource Name \(ARN\) of the role that will be assumed for this proje
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Sample`  <a name="cfn-databrew-project-sample"></a>
-The sample size and sampling type to apply to the data\. If this parameter isn't specified, then the sample will consiste of the first 500 rows from the dataset\.  
+The sample size and sampling type to apply to the data\. If this parameter isn't specified, then the sample consists of the first 500 rows from the dataset\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [Sample](aws-properties-databrew-project-sample.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-databrew-project-tags"></a>

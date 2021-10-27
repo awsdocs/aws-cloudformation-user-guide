@@ -1,6 +1,6 @@
 # AWS::ElastiCache::User<a name="aws-resource-elasticache-user"></a>
 
-For Redis engine version 6\.x onwards: Creates a Redis user\. [Using Role Based Access Control \(RBAC\)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html)\.
+For Redis engine version 6\.x onwards: Creates a Redis user\. For more information, see [Using Role Based Access Control \(RBAC\)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html)\.
 
 ## Syntax<a name="aws-resource-elasticache-user-syntax"></a>
 
@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AccessString](#cfn-elasticache-user-accessstring)" : String,
       "[Engine](#cfn-elasticache-user-engine)" : String,
       "[NoPasswordRequired](#cfn-elasticache-user-nopasswordrequired)" : Boolean,
-      "[Passwords](#cfn-elasticache-user-passwords)" : PasswordList,
+      "[Passwords](#cfn-elasticache-user-passwords)" : [ String, ... ],
       "[UserId](#cfn-elasticache-user-userid)" : String,
       "[UserName](#cfn-elasticache-user-username)" : String
     }
@@ -32,7 +32,7 @@ Properties:
   [Engine](#cfn-elasticache-user-engine): String
   [NoPasswordRequired](#cfn-elasticache-user-nopasswordrequired): Boolean
   [Passwords](#cfn-elasticache-user-passwords): 
-    PasswordList
+    - String
   [UserId](#cfn-elasticache-user-userid): String
   [UserName](#cfn-elasticache-user-username): String
 ```
@@ -47,7 +47,7 @@ Access permissions string used for this user\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Engine`  <a name="cfn-elasticache-user-engine"></a>
-The current supported value is Redis\.   
+The current supported value is redis\.   
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `[a-zA-Z]*`  
@@ -62,7 +62,7 @@ Indicates a password is not required for this user\.
 `Passwords`  <a name="cfn-elasticache-user-passwords"></a>
 Passwords used for this user\. You can create up to two passwords for each user\.  
 *Required*: No  
-*Type*: [PasswordList](aws-properties-elasticache-user-passwordlist.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserId`  <a name="cfn-elasticache-user-userid"></a>
@@ -99,11 +99,5 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the user\.
 
-`Authentication`  <a name="Authentication-fn::getatt"></a>
-Denotes whether the user requires a password to authenticate\.
-
 `Status`  <a name="Status-fn::getatt"></a>
 Indicates the user status\. Can be "active", "modifying" or "deleting"\.
-
-`UserGroupIds`  <a name="UserGroupIds-fn::getatt"></a>
-Returns a list of the user group IDs the user belongs to\.

@@ -11,7 +11,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AllowCheckIn](#cfn-licensemanager-license-entitlement-allowcheckin)" : Boolean,
-  "[CheckoutRules](#cfn-licensemanager-license-entitlement-checkoutrules)" : RuleList,
   "[MaxCount](#cfn-licensemanager-license-entitlement-maxcount)" : Integer,
   "[Name](#cfn-licensemanager-license-entitlement-name)" : String,
   "[Overage](#cfn-licensemanager-license-entitlement-overage)" : Boolean,
@@ -24,8 +23,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AllowCheckIn](#cfn-licensemanager-license-entitlement-allowcheckin): Boolean
-  [CheckoutRules](#cfn-licensemanager-license-entitlement-checkoutrules): 
-    RuleList
   [MaxCount](#cfn-licensemanager-license-entitlement-maxcount): Integer
   [Name](#cfn-licensemanager-license-entitlement-name): String
   [Overage](#cfn-licensemanager-license-entitlement-overage): Boolean
@@ -39,12 +36,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Indicates whether check\-ins are allowed\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`CheckoutRules`  <a name="cfn-licensemanager-license-entitlement-checkoutrules"></a>
-The license entitlement checkout rules\.   
-*Required*: No  
-*Type*: [RuleList](aws-properties-licensemanager-license-rulelist.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxCount`  <a name="cfn-licensemanager-license-entitlement-maxcount"></a>

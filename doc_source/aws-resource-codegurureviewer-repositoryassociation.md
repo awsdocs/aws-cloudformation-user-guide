@@ -4,6 +4,7 @@ This resource configures how Amazon CodeGuru Reviewer retrieves the source code 
 + AWS CodeCommit \- For more information, see [Create an AWS CodeCommit repository association](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/create-codecommit-association.html) in the *Amazon CodeGuru Reviewer User Guide*\. 
 + Bitbucket \- For more information, see [Create a Bitbucket repository association](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/create-bitbucket-association.html) in the *Amazon CodeGuru Reviewer User Guide*\. 
 + GitHub Enterprise Server \- For more information, see [Create a GitHub Enterprise Server repository association](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/create-github-enterprise-association.html) in the *Amazon CodeGuru Reviewer User Guide*\. 
++ S3Bucket \- For more information, see [Create code reviews with GitHub Actions](https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/working-with-cicd.html) in the *Amazon CodeGuru Reviewer User Guide*\. 
 
 **Note**  
  You cannot use a CloudFormation template to create an association with a GitHub repository\. 
@@ -18,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeGuruReviewer::RepositoryAssociation",
   "Properties" : {
+      "[BucketName](#cfn-codegurureviewer-repositoryassociation-bucketname)" : String,
       "[ConnectionArn](#cfn-codegurureviewer-repositoryassociation-connectionarn)" : String,
       "[Name](#cfn-codegurureviewer-repositoryassociation-name)" : String,
       "[Owner](#cfn-codegurureviewer-repositoryassociation-owner)" : String,
@@ -32,6 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::CodeGuruReviewer::RepositoryAssociation
 Properties: 
+  [BucketName](#cfn-codegurureviewer-repositoryassociation-bucketname): String
   [ConnectionArn](#cfn-codegurureviewer-repositoryassociation-connectionarn): String
   [Name](#cfn-codegurureviewer-repositoryassociation-name): String
   [Owner](#cfn-codegurureviewer-repositoryassociation-owner): String
@@ -41,6 +44,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-codegurureviewer-repositoryassociation-properties"></a>
+
+`BucketName`  <a name="cfn-codegurureviewer-repositoryassociation-bucketname"></a>
+The name of the bucket\. This is required for your S3Bucket repositoryThe name must start with the prefix, `codeguru-reviewer-*`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConnectionArn`  <a name="cfn-codegurureviewer-repositoryassociation-connectionarn"></a>
  The Amazon Resource Name \(ARN\) of an AWS CodeStar Connections connection\. Its format is `arn:aws:codestar-connections:region-id:aws-account_id:connection/connection-id`\. For more information, see [Connection](https://docs.aws.amazon.com/codestar-connections/latest/APIReference/API_Connection.html) in the *AWS CodeStar Connections API Reference*\.   
@@ -72,7 +81,9 @@ The name of the repository\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-codegurureviewer-repositoryassociation-tags"></a>
-Not currently supported by AWS CloudFormation\.  
+ An array of key\-value pairs used to tag an associated repository\. A tag is a custom attribute label with two parts:   
++ A *tag key* \(for example, `CostCenter`, `Environment`, `Project`, or `Secret`\)\. Tag keys are case sensitive\.
++ An optional field known as a *tag value* \(for example, `111122223333`, `Production`, or a team name\)\. Omitting the tag value is the same as using an empty string\. Like tag keys, tag values are case sensitive\.
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -82,6 +93,7 @@ Not currently supported by AWS CloudFormation\.
 + `CodeCommit`
 + `Bitbucket`
 + `GitHubEnterpriseServer`
++ `S3Bucket`
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -107,11 +119,11 @@ The Amazon Resource Name \(ARN\) of the [https://docs.aws.amazon.com/codeguru/la
 
 
 
-### Create an AWS CodeCommit repository association using an existing CodeCommit repository<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an_AWS_CodeCommit_repository_association_using_an_existing_CodeCommit_repository"></a>
+### Create an AWS CodeCommit repository association using an existing CodeCommit repository<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an__CodeCommit_repository_association_using_an_existing_CodeCommit_repository"></a>
 
 The following example creates an Amazon CodeGuru Reviewer repository association using an existing AWS CodeCommit repository named `MyRepository`\.
 
-#### YAML<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an_AWS_CodeCommit_repository_association_using_an_existing_CodeCommit_repository--yaml"></a>
+#### YAML<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an__CodeCommit_repository_association_using_an_existing_CodeCommit_repository--yaml"></a>
 
 ```
 Resources:
@@ -122,7 +134,7 @@ Resources:
       Type: CodeCommit
 ```
 
-#### JSON<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an_AWS_CodeCommit_repository_association_using_an_existing_CodeCommit_repository--json"></a>
+#### JSON<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an__CodeCommit_repository_association_using_an_existing_CodeCommit_repository--json"></a>
 
 ```
 {
@@ -138,11 +150,11 @@ Resources:
 }
 ```
 
-### Create an AWS CodeCommit repository association with a new CodeCommit repository<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an_AWS_CodeCommit_repository_association_with_a_new_CodeCommit_repository"></a>
+### Create an AWS CodeCommit repository association with a new CodeCommit repository<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an__CodeCommit_repository_association_with_a_new_CodeCommit_repository"></a>
 
 The following example creates an AWS CodeCommit repository named `MyRepositoryName`\. Next, it creates an Amazon CodeGuru Reviewer repository association using the CodeCommit repository\. The `DependsOn` property in the `RepositoryAssociation` specifies the CodeCommit repository\. This is because the repository association can be created only after the CodeCommit repository is created\.
 
-#### YAML<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an_AWS_CodeCommit_repository_association_with_a_new_CodeCommit_repository--yaml"></a>
+#### YAML<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an__CodeCommit_repository_association_with_a_new_CodeCommit_repository--yaml"></a>
 
 ```
 Resources:
@@ -155,10 +167,9 @@ Resources:
     Properties:
       Name: MyRepositoryName
       Type: CodeCommit
-    DependsOn: MyRepository
 ```
 
-#### JSON<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an_AWS_CodeCommit_repository_association_with_a_new_CodeCommit_repository--json"></a>
+#### JSON<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_an__CodeCommit_repository_association_with_a_new_CodeCommit_repository--json"></a>
 
 ```
 {
@@ -174,8 +185,7 @@ Resources:
       "Properties": {
         "Name": "MyRepositoryName",
         "Type": "CodeCommit"
-      },
-      "DependsOn": "MyRepository"
+      }
     }
   }
 }
@@ -206,8 +216,10 @@ Resources:
     "MyRepositoryAssociation": {
       "Type": "AWS::CodeGuruReviewer::RepositoryAssociation",
       "Properties": {
-        "Name": "MyRepository",
-        "Type": "CodeCommit"
+        "Name": "MyBitbucketRepoName",
+        "Type": "Bitbucket",
+        "ConnectionArn": "arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+        "Owner": "MyOwnerName"
       }
     }
   }
@@ -243,6 +255,52 @@ Resources:
         "Type": "GitHubEnterpriseServer",
         "ConnectionArn": "arn:aws:codestar-connections:us-west-2:123456789012:connection/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
         "Owner": "MyOwnerName"
+      }
+    }
+  }
+}
+```
+
+### Create a repository association with tags<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_a_repository_association_with_tags"></a>
+
+The following example creates an Amazon CodeGuru Reviewer repository association that has two tags\. The repository is an AWS CodeCommit repository\. Use the `Tags` property the same way to add tags when you create a BitBucket or GitHub Enterprise repository association\.
+
+#### YAML<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_a_repository_association_with_tags--yaml"></a>
+
+```
+Resources:
+  MyRepositoryAssociation:
+    Type: AWS::CodeGuruReviewer::RepositoryAssociation
+    Properties:
+      Name: MyRepository
+      Type: CodeCommit
+      Tags:
+        - Key: tag1-key
+          Value: tag1-value
+        - Key: tag2-key
+          Value: tag2-value
+```
+
+#### JSON<a name="aws-resource-codegurureviewer-repositoryassociation--examples--Create_a_repository_association_with_tags--json"></a>
+
+```
+{
+  "Resources": {
+    "MyRepositoryAssociation": {
+      "Type": "AWS::CodeGuruReviewer::RepositoryAssociation",
+      "Properties": {
+        "Name": "MyRepository",
+        "Type": "CodeCommit",
+        "Tags": [
+          {
+            "Key": "tag1-key",
+            "Value": "tag1-value"
+          },
+          {
+            "Key": "tag2-key",
+            "Value": "tag2-value"
+          }
+        ]
       }
     }
   }

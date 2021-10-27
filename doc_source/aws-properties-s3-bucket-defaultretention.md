@@ -1,6 +1,10 @@
 # AWS::S3::Bucket DefaultRetention<a name="aws-properties-s3-bucket-defaultretention"></a>
 
-The default retention period that you want to apply to new objects placed in the specified bucket\. Bucket default settings require both a mode and a period\. 
+The container element for specifying the default Object Lock retention settings for new objects placed in the specified bucket\.
+
+**Note**  
+The `DefaultRetention` settings require both a mode and a period\.
+The `DefaultRetention` period can be either `Days` or `Years` but you must select one\. You cannot specify `Days` and `Years` at the same time\.
 
 ## Syntax<a name="aws-properties-s3-bucket-defaultretention-syntax"></a>
 
@@ -27,21 +31,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-defaultretention-properties"></a>
 
 `Days`  <a name="cfn-s3-bucket-defaultretention-days"></a>
-The number of days that you want to specify for the default retention period\.  
-*Required*: No  
+The number of days that you want to specify for the default retention period\. If Object Lock is turned on, you must specify `Mode` and specify either `Days` or `Years`\.  
+*Required*: Conditional  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Mode`  <a name="cfn-s3-bucket-defaultretention-mode"></a>
-The default Object Lock retention mode you want to apply to new objects placed in the specified bucket\. Bucket default settings require both a mode and a period\. The period can be either `Days` or `Years`\. For more information, see [S3 Object Lock overview](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html) in the *Amazon Simple Storage Service Developer Guide*\.  
-*Required*: No  
+The default Object Lock retention mode you want to apply to new objects placed in the specified bucket\. If Object Lock is turned on, you must specify `Mode` and specify either `Days` or `Years`\.  
+*Required*: Conditional  
 *Type*: String  
 *Allowed values*: `COMPLIANCE | GOVERNANCE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Years`  <a name="cfn-s3-bucket-defaultretention-years"></a>
-The number of years that you want to specify for the default retention period\.  
-*Required*: No  
+The number of years that you want to specify for the default retention period\. If Object Lock is turned on, you must specify `Mode` and specify either `Days` or `Years`\.  
+*Required*: Conditional  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

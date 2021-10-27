@@ -57,6 +57,7 @@ The minimum capacity must be less than or equal to the maximum capacity\.
 
 `SecondsUntilAutoPause`  <a name="cfn-rds-dbcluster-scalingconfiguration-secondsuntilautopause"></a>
 The time, in seconds, before an Aurora DB cluster in `serverless` mode is paused\.  
+Specify a value between 300 and 86,400 seconds\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

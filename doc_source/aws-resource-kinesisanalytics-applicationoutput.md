@@ -2,7 +2,7 @@
 
 Adds an external destination to your Amazon Kinesis Analytics application\.
 
-If you want Amazon Kinesis Analytics to deliver data from an in\-application stream within your application to an external destination \(such as an Amazon Kinesis stream, an Amazon Kinesis Firehose delivery stream, or an AWS Lambda function\), you add the relevant configuration to your application using this operation\. You can configure one or more outputs for your application\. Each output configuration maps an in\-application stream and an external destination\.
+If you want Amazon Kinesis Analytics to deliver data from an in\-application stream within your application to an external destination \(such as an Amazon Kinesis stream, an Amazon Kinesis Firehose delivery stream, or an Amazon Lambda function\), you add the relevant configuration to your application using this operation\. You can configure one or more outputs for your application\. Each output configuration maps an in\-application stream and an external destination\.
 
  You can use one of the output configurations to deliver data from your in\-application error stream to an external destination so that you can analyze the errors\. For more information, see [Understanding Application Output \(Destination\)](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/how-it-works-output.html)\. 
 

@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DataType](#cfn-iotsitewise-assetmodel-assetmodelproperty-datatype)" : String,
+  "[DataTypeSpec](#cfn-iotsitewise-assetmodel-assetmodelproperty-datatypespec)" : String,
   "[LogicalId](#cfn-iotsitewise-assetmodel-assetmodelproperty-logicalid)" : String,
   "[Name](#cfn-iotsitewise-assetmodel-assetmodelproperty-name)" : String,
   "[Type](#cfn-iotsitewise-assetmodel-assetmodelproperty-type)" : PropertyType,
@@ -22,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DataType](#cfn-iotsitewise-assetmodel-assetmodelproperty-datatype): String
+  [DataTypeSpec](#cfn-iotsitewise-assetmodel-assetmodelproperty-datatypespec): String
   [LogicalId](#cfn-iotsitewise-assetmodel-assetmodelproperty-logicalid): String
   [Name](#cfn-iotsitewise-assetmodel-assetmodelproperty-name): String
   [Type](#cfn-iotsitewise-assetmodel-assetmodelproperty-type): 
@@ -32,8 +34,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotsitewise-assetmodel-assetmodelproperty-properties"></a>
 
 `DataType`  <a name="cfn-iotsitewise-assetmodel-assetmodelproperty-datatype"></a>
-The data type of the asset model property, which can be one of `BOOLEAN`, `INTEGER`, `DOUBLE`, or `STRING`\.  
+The data type of the asset model property\. The value can be `STRING`, `INTEGER`, `DOUBLE`, `BOOLEAN`, or `STRUCT`\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DataTypeSpec`  <a name="cfn-iotsitewise-assetmodel-assetmodelproperty-datatypespec"></a>
+The data type of the structure for this property\. This parameter exists on properties that have the `STRUCT` data type\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

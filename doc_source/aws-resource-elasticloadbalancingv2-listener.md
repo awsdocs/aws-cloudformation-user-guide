@@ -100,10 +100,14 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Fn::GetAtt<a name="aws-resource-elasticloadbalancingv2-listener-return-values-fn--getatt"></a>
 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
 #### <a name="aws-resource-elasticloadbalancingv2-listener-return-values-fn--getatt-fn--getatt"></a>
 
 `ListenerArn`  <a name="ListenerArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The Amazon Resource Name \(ARN\) of the listener\.
 
 ## Examples<a name="aws-resource-elasticloadbalancingv2-listener--examples"></a>
 
@@ -141,22 +145,22 @@ HTTPlistener:
             {
                 "Type": "redirect",
                 "RedirectConfig": {
-                    "Protocol": "HTTPS",
-                    "Port": "443",
-                    "Host": "#{host}",
-                    "Path": "/#{path}",
-                    "Query": "#{query}",
-                    "StatusCode": "HTTP_301"
-                }
-            }
-        ],
-        "LoadBalancerArn": {
-            "Ref": "myLoadBalancer"
-        },
-        "Port": 80,
-        "Protocol": "HTTP"
-    }
-}
+                       "Protocol": "HTTPS",
+                       "Port": 443,
+                       "Host": "#{host}",
+                       "Path": "/#{path}",
+                       "Query": "#{query}",
+                       "StatusCode": "HTTP_301"
+                   }
+               }
+           ],
+           "LoadBalancerArn": {
+               "Ref": "myLoadBalancer"
+           },
+           "Port": 80,
+           "Protocol": "HTTP"
+       }
+   }
 ```
 
 ## See also<a name="aws-resource-elasticloadbalancingv2-listener--seealso"></a>

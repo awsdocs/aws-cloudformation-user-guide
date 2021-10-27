@@ -10,21 +10,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[roleArn](#cfn-auditmanager-assessment-role-rolearn)" : String,
-  "[roleType](#cfn-auditmanager-assessment-role-roletype)" : String
+  "[RoleArn](#cfn-auditmanager-assessment-role-rolearn)" : String,
+  "[RoleType](#cfn-auditmanager-assessment-role-roletype)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-auditmanager-assessment-role-syntax.yaml"></a>
 
 ```
-  [roleArn](#cfn-auditmanager-assessment-role-rolearn): String
-  [roleType](#cfn-auditmanager-assessment-role-roletype): String
+  [RoleArn](#cfn-auditmanager-assessment-role-rolearn): String
+  [RoleType](#cfn-auditmanager-assessment-role-roletype): String
 ```
 
 ## Properties<a name="aws-properties-auditmanager-assessment-role-properties"></a>
 
-`roleArn`  <a name="cfn-auditmanager-assessment-role-rolearn"></a>
+`RoleArn`  <a name="cfn-auditmanager-assessment-role-rolearn"></a>
  The Amazon Resource Name \(ARN\) of the IAM role\.   
 *Required*: No  
 *Type*: String  
@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Pattern*: `^arn:.*:iam:.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`roleType`  <a name="cfn-auditmanager-assessment-role-roletype"></a>
+`RoleType`  <a name="cfn-auditmanager-assessment-role-roletype"></a>
  The type of customer persona\.   
 In `CreateAssessment`, `roleType` can only be `PROCESS_OWNER`\.   
 In `UpdateSettings`, `roleType` can only be `PROCESS_OWNER`\.  

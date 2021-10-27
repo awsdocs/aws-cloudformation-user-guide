@@ -52,13 +52,14 @@ The name of the project\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceCatalogProvisioningDetails`  <a name="cfn-sagemaker-project-servicecatalogprovisioningdetails"></a>
-Not currently supported by AWS CloudFormation\.  
+The product ID and provisioning artifact ID to provision a service catalog\. For information, see [What is AWS Service Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html)\.  
 *Required*: Yes  
 *Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-sagemaker-project-tags"></a>
-Not currently supported by AWS CloudFormation\.  
+A list of key\-value pairs to apply to this resource\.  
+For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) and [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what) in the * AWS Billing and Cost Management User Guide*\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -72,16 +73,58 @@ Not currently supported by AWS CloudFormation\.
 #### <a name="aws-resource-sagemaker-project-return-values-fn--getatt-fn--getatt"></a>
 
 `CreationTime`  <a name="CreationTime-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The time that the project was created\.
 
 `ProjectArn`  <a name="ProjectArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The Amazon Resource Name \(ARN\) of the project\.
 
 `ProjectId`  <a name="ProjectId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ID of the project\. This ID is prepended to all entities associated with this project\.
 
 `ProjectStatus`  <a name="ProjectStatus-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The status of the project\.
 
-`ServiceCatalogProvisionedProductDetails`  <a name="ServiceCatalogProvisionedProductDetails-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+## Examples<a name="aws-resource-sagemaker-project--examples"></a>
+
+### SageMaker Project Example<a name="aws-resource-sagemaker-project--examples--SageMaker_Project_Example"></a>
+
+The following example creates a SageMaker Project\.
+
+#### JSON<a name="aws-resource-sagemaker-project--examples--SageMaker_Project_Example--json"></a>
+
+```
+{
+   "Description": "AWS SageMaker Project basic template",
+   "Resources": {
+      "SampleProject": {
+         "Type": "AWS::SageMaker::Project",
+         "Properties": {
+            "ProjectName": "project1",
+            "ProjectDescription": "Project Description",
+            "ServiceCatalogProvisioningDetails": {
+               "ProductId": "prod-53ibyqbj2cgmo",
+               "ProvisioningArtifactId": "pa-sm4pjfuzictpe"
+            }
+         }
+      }
+   }
+}
+```
+
+#### YAML<a name="aws-resource-sagemaker-project--examples--SageMaker_Project_Example--yaml"></a>
+
+```
+---
+Description: AWS SageMaker Project basic template
+
+Resources:
+
+  SampleProject:
+    Type: AWS::SageMaker::Project
+    Properties:
+      ProjectName: "SampleProject"
+      ProjectDescription: "Project Description"
+      ServiceCatalogProvisioningDetails:
+        ProductId: "prod-53ibyqbj2cgmo"
+        ProvisioningArtifactId: "pa-sm4pjfuzictpe"
+```

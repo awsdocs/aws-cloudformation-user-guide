@@ -5,7 +5,7 @@ An object representing a launch template associated with a compute resource\. Yo
 If security groups are specified using both the `securityGroupIds` parameter of `CreateComputeEnvironment` and the launch template, the values in the `securityGroupIds` parameter of `CreateComputeEnvironment` will be used\.
 
 **Note**  
-This object isn't applicable to jobs running on Fargate resources\.
+This object isn't applicable to jobs that are running on Fargate resources\.
 
 ## Syntax<a name="aws-properties-batch-computeenvironment-launchtemplatespecification-syntax"></a>
 
@@ -46,6 +46,7 @@ The name of the launch template\.
 `Version`  <a name="cfn-batch-computeenvironment-launchtemplatespecification-version"></a>
 The version number of the launch template, `$Latest`, or `$Default`\.  
 If the value is `$Latest`, the latest version of the launch template is used\. If the value is `$Default`, the default version of the launch template is used\.  
+After the compute environment is created, the launch template version that's used isn't changed, even if the `$Default` or `$Latest` version for the launch template is updated\. To use a new launch template version, create a new compute environment, add the new compute environment to the existing job queue, remove the old compute environment from the job queue, and delete the old compute environment\.
 Default: `$Default`\.  
 *Required*: No  
 *Type*: String  

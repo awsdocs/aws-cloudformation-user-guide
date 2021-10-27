@@ -172,7 +172,7 @@ The following example creates a Model Quality monitoring job defintion\.
       "Endpoint": {
          "Type": "AWS::SageMaker::Endpoint",
          "Properties": {
-            "EndpointConfigName": null
+            "EndpointConfigName": { "Fn::GetAtt" : ["EndpointConfigWithDataCapture", "EndpointConfigName"] }
          }
       },
       "EndpointConfigWithDataCapture": {
@@ -183,8 +183,8 @@ The following example creates a Model Quality monitoring job defintion\.
                   "InitialInstanceCount": 1,
                   "InitialVariantWeight": 1,
                   "InstanceType": "ml.t2.large",
-                  "ModelName": null,
-                  "VariantName": null
+                  "ModelName": { "Fn::GetAtt" : ["Model", "ModelName"] },
+                  "VariantName": { "Fn::GetAtt" : ["Model", "ModelName"] }
                }
             ],
             "DataCaptureConfig": {
@@ -212,9 +212,14 @@ The following example creates a Model Quality monitoring job defintion\.
          "Type": "AWS::SageMaker::Model",
          "Properties": {
             "PrimaryContainer": {
-               "Image": null
+               "Image": { "Fn::FindInMap": [
+                  "RegionMap",
+                  {"Ref": "AWS::Region"},
+                  "MyModelImage"
+                 ]
+               }
             },
-            "ExecutionRoleArn": null
+            "ExecutionRoleArn": { "Fn::GetAtt" : ["ExecutionRole", "Arn"] }
          }
       },
       "ExecutionRole": {
@@ -297,7 +302,7 @@ The following example creates a Model Quality monitoring job defintion\.
             },
             "ModelQualityJobInput": {
                "EndpointInput": {
-                  "EndpointName": null,
+                  "EndpointName": { "Fn::GetAtt" : ["Endpoint", "EndpointName"] },
                   "LocalPath": "/opt/ml/processing/endpointdata",
                   "InferenceAttribute": "inference",
                   "ProbabilityAttribute": "probability",
@@ -330,7 +335,7 @@ The following example creates a Model Quality monitoring job defintion\.
                   "VolumeSizeInGB": 50
                }
             },
-            "RoleArn": null,
+            "RoleArn": { "Fn::GetAtt" : ["JobDefinitionExecutionRole", "Arn"] },
             "StoppingCondition": {
                "MaxRuntimeInSeconds": 2000
             }

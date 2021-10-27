@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[ContributorInsightsSpecification](#cfn-dynamodb-contributorinsightsspecification-enabled)" : ContributorInsightsSpecification,
   "[IndexName](#cfn-dynamodb-gsi-indexname)" : String,
   "[KeySchema](#cfn-dynamodb-gsi-keyschema)" : [ KeySchema, ... ],
   "[Projection](#cfn-dynamodb-gsi-projection)" : Projection,
@@ -20,6 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-dynamodb-gsi-syntax.yaml"></a>
 
 ```
+  [ContributorInsightsSpecification](#cfn-dynamodb-contributorinsightsspecification-enabled): 
+    ContributorInsightsSpecification
   [IndexName](#cfn-dynamodb-gsi-indexname): String
   [KeySchema](#cfn-dynamodb-gsi-keyschema): 
     - KeySchema
@@ -30,6 +33,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-dynamodb-gsi-properties"></a>
+
+`ContributorInsightsSpecification`  <a name="cfn-dynamodb-contributorinsightsspecification-enabled"></a>
+The settings used to enable or disable CloudWatch Contributor Insights for the specified global secondary index\.  
+*Required*: No  
+*Type*: [ContributorInsightsSpecification](aws-properties-dynamodb-contributorinsightsspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IndexName`  <a name="cfn-dynamodb-gsi-indexname"></a>
 The name of the global secondary index\. The name must be unique among all other indexes on this table\.  

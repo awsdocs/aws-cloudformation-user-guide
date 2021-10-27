@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-encryptionconfiguration-properties"></a>
 
 `ReplicaKmsKeyID`  <a name="cfn-s3-bucket-encryptionconfiguration-replicakmskeyid"></a>
-Specifies the ID \(Key ARN or Alias ARN\) of the customer managed customer master key \(CMK\) stored in AWS Key Management Service \(KMS\) for the destination bucket\. Amazon S3 uses this key to encrypt replica objects\. Amazon S3 only supports symmetric customer managed CMKs\. For more information, see [Using Symmetric and Asymmetric Keys](https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html) in the *AWS Key Management Service Developer Guide*\.  
+Specifies the ID \(Key ARN or Alias ARN\) of the customer managed AWS KMS key stored in AWS Key Management Service \(KMS\) for the destination bucket\. Amazon S3 uses this key to encrypt replica objects\. Amazon S3 only supports symmetric, customer managed KMS keys\. For more information, see [Using symmetric and asymmetric keys](https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html) in the * AWS Key Management Service Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::EMR::InstanceFleetConfig InstanceTypeConfig<a name="aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig"></a>
 
-`InstanceType` config is a subproperty of `InstanceFleetConfig`\. An instance type configuration specifies each instance type in an instance fleet\. The configuration determines the EC2 instances Amazon EMR attempts to provision to fulfill On\-Demand and Spot target capacities\. There can be a maximum of 5 instance type configurations in a fleet\.
+`InstanceType` config is a subproperty of `InstanceFleetConfig`\. An instance type configuration specifies each instance type in an instance fleet\. The configuration determines the EC2 instances Amazon EMR attempts to provision to fulfill On\-Demand and Spot target capacities\.
 
 **Note**  
 The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\.
@@ -60,7 +60,7 @@ An optional configuration specification to be used when provisioning cluster ins
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EbsConfiguration`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-ebsconfiguration"></a>
-The configuration of Amazon Elastic Block Storage \(Amazon EBS\) attached to each instance as defined by `InstanceType`\.   
+The configuration of Amazon Elastic Block Store \(Amazon EBS\) attached to each instance as defined by `InstanceType`\.   
 *Required*: No  
 *Type*: [EbsConfiguration](aws-properties-elasticmapreduce-instancefleetconfig-ebsconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

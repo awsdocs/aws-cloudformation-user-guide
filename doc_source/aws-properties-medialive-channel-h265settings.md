@@ -2,6 +2,8 @@
 
 H265 Settings
 
+The parent of this entity is VideoCodecSettings\.
+
 ## Syntax<a name="aws-properties-medialive-channel-h265settings-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

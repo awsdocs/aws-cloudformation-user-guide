@@ -14,8 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Flags](#cfn-networkfirewall-rulegroup-tcpflagfield-flags)" : Flags,
-  "[Masks](#cfn-networkfirewall-rulegroup-tcpflagfield-masks)" : Flags
+  "[Flags](#cfn-networkfirewall-rulegroup-tcpflagfield-flags)" : [ String, ... ],
+  "[Masks](#cfn-networkfirewall-rulegroup-tcpflagfield-masks)" : [ String, ... ]
 }
 ```
 
@@ -23,9 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Flags](#cfn-networkfirewall-rulegroup-tcpflagfield-flags): 
-    Flags
+    - String
   [Masks](#cfn-networkfirewall-rulegroup-tcpflagfield-masks): 
-    Flags
+    - String
 ```
 
 ## Properties<a name="aws-properties-networkfirewall-rulegroup-tcpflagfield-properties"></a>
@@ -36,11 +36,11 @@ For the flags that are specified in the masks setting, the following must be tru
 + The ones that are set in this flags setting must be set in the packet\. 
 + The ones that are not set in this flags setting must also not be set in the packet\. 
 *Required*: Yes  
-*Type*: [Flags](aws-properties-networkfirewall-rulegroup-flags.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Masks`  <a name="cfn-networkfirewall-rulegroup-tcpflagfield-masks"></a>
 The set of flags to consider in the inspection\. To inspect all flags in the valid values list, leave this with no setting\.  
 *Required*: No  
-*Type*: [Flags](aws-properties-networkfirewall-rulegroup-flags.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

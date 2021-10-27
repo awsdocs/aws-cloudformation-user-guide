@@ -1,4 +1,4 @@
-# Amplify Console resource type reference<a name="AWS_Amplify"></a>
+# AWS Amplify Console resource type reference<a name="AWS_Amplify"></a>
 
 **Resource types**
 + [AWS::Amplify::App](aws-resource-amplify-app.md)

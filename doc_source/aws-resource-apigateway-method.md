@@ -106,7 +106,7 @@ A friendly operation name for the method\. For example, you can assign the `Oper
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequestModels`  <a name="cfn-apigateway-method-requestmodels"></a>
-The resources that are used for the request's content type\. Specify request models as key\-value pairs \(string\-to\-string mapping\), with a content type as the key and a `Model` resource name as the value\.   
+The resources that are used for the request's content type\. Specify request models as key\-value pairs \(string\-to\-string mapping\), with a content type as the key and a `Model` resource name as the value\. To use the same model regardless of the content type, specify `$default` as the key\.  
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

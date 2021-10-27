@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[LogDestinationConfigs](#cfn-networkfirewall-loggingconfiguration-loggingconfiguration-logdestinationconfigs)" : LogDestinationConfigs
+  "[LogDestinationConfigs](#cfn-networkfirewall-loggingconfiguration-loggingconfiguration-logdestinationconfigs)" : [ LogDestinationConfig, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [LogDestinationConfigs](#cfn-networkfirewall-loggingconfiguration-loggingconfiguration-logdestinationconfigs): 
-    LogDestinationConfigs
+    - LogDestinationConfig
 ```
 
 ## Properties<a name="aws-properties-networkfirewall-loggingconfiguration-loggingconfiguration-properties"></a>
@@ -26,5 +26,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `LogDestinationConfigs`  <a name="cfn-networkfirewall-loggingconfiguration-loggingconfiguration-logdestinationconfigs"></a>
 Defines the logging destinations for the logs for a firewall\. Network Firewall generates logs for stateful rule groups\.   
 *Required*: Yes  
-*Type*: [LogDestinationConfigs](aws-properties-networkfirewall-loggingconfiguration-logdestinationconfigs.md)  
+*Type*: List of [LogDestinationConfig](aws-properties-networkfirewall-loggingconfiguration-logdestinationconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

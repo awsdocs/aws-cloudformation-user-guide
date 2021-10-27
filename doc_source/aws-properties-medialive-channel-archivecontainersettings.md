@@ -12,7 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[M2tsSettings](#cfn-medialive-channel-archivecontainersettings-m2tssettings)" : M2tsSettings
+  "[M2tsSettings](#cfn-medialive-channel-archivecontainersettings-m2tssettings)" : M2tsSettings,
+  "[RawSettings](#cfn-medialive-channel-archivecontainersettings-rawsettings)" : RawSettings
 }
 ```
 
@@ -21,6 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [M2tsSettings](#cfn-medialive-channel-archivecontainersettings-m2tssettings): 
     M2tsSettings
+  [RawSettings](#cfn-medialive-channel-archivecontainersettings-rawsettings): 
+    RawSettings
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-archivecontainersettings-properties"></a>
@@ -29,4 +32,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The settings for the M2TS in the archive output\.  
 *Required*: No  
 *Type*: [M2tsSettings](aws-properties-medialive-channel-m2tssettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RawSettings`  <a name="cfn-medialive-channel-archivecontainersettings-rawsettings"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [RawSettings](aws-properties-medialive-channel-rawsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

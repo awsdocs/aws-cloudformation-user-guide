@@ -2,7 +2,9 @@
 
 Specifies a route in a route table within a VPC\.
 
-You must specify one of the following targets: `EgressOnlyInternetGatewayId`, `GatewayId`, `InstanceId`, `NatGatewayId`, `NetworkInterfaceId`, `TransitGatewayId`, or `VpcPeeringConnectionId`\.
+You must specify either `DestinationCidrBlock` or `DestinationIpv6CidrBlock`, plus the ID of one of the target resources\.
+
+If you create a route that references a transit gateway in the same template where you create the transit gateway, you must declare a dependency on the transit gateway attachment\. The route table cannot use the transit gateway until it has successfully attached to the VPC\. Add a [ DependsOn Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) in the `AWS::EC2::Route` resource to explicitly declare a dependency on the `AWS::EC2::TransitGatewayAttachment` resource\.
 
 ## Syntax<a name="aws-resource-ec2-route-syntax"></a>
 
@@ -61,14 +63,12 @@ The ID of the carrier gateway\.
 
 `DestinationCidrBlock`  <a name="cfn-ec2-route-destinationcidrblock"></a>
 The IPv4 CIDR block used for the destination match\.  
-You must specify the `DestinationCidrBlock` or `DestinationIpv6CidrBlock` property\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DestinationIpv6CidrBlock`  <a name="cfn-ec2-route-destinationipv6cidrblock"></a>
 The IPv6 CIDR block used for the destination match\.  
-You must specify the `DestinationCidrBlock` or `DestinationIpv6CidrBlock` property\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -145,11 +145,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### Add a Route<a name="aws-resource-ec2-route--examples--Add_a_Route"></a>
+### Create a route to a gateway<a name="aws-resource-ec2-route--examples--Create_a_route_to_a_gateway"></a>
 
-The following example adds a route that is added to a gateway\.
+The following example adds a route that is added to an internet gateway\.
 
-#### JSON<a name="aws-resource-ec2-route--examples--Add_a_Route--json"></a>
+#### JSON<a name="aws-resource-ec2-route--examples--Create_a_route_to_a_gateway--json"></a>
 
 ```
 "myRoute" : {
@@ -163,7 +163,7 @@ The following example adds a route that is added to a gateway\.
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-route--examples--Add_a_Route--yaml"></a>
+#### YAML<a name="aws-resource-ec2-route--examples--Create_a_route_to_a_gateway--yaml"></a>
 
 ```
   myRoute:
@@ -211,5 +211,5 @@ The following example creates a route to a carrier gateway\.
 
 ## See also<a name="aws-resource-ec2-route--seealso"></a>
 +  [CreateRoute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateRoute.html) in the *Amazon EC2 API Reference*
-+  [Route Tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) in the *Amazon VPC User Guide*
++  [Route tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) in the *Amazon VPC User Guide*
 

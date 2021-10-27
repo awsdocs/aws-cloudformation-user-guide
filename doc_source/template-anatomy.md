@@ -84,10 +84,10 @@ Outputs:
 
 ## Template sections<a name="template-anatomy-sections"></a>
 
-Templates include several major sections\. The `Resources` section is the only required section\. Some sections in a template can be in any order\. However, as you build your template, it can be helpful to use the logical order shown in the following list because values in one section might refer to values from a previous section\. 
+Templates include several major sections\. The `Resources` section is the only required section\. Some sections in a template can be in any order\. However, as you build your template, it can be helpful to use the logical order shown in the following list because values in one section might refer to values from a previous section\.
 
 **[Format Version \(optional\)](format-version-structure.md)**  
-The AWS CloudFormation template version that the template conforms to\. The template format version is not the same as the API or WSDL version\. The template format version can change independently of the API and WSDL versions\.
+The AWS CloudFormation template version that the template conforms to\. The template format version isn't the same as the API or WSDL version\. The template format version can change independently of the API and WSDL versions\.
 
 **[Description \(optional\)](template-description-structure.md)**  
 A text string that describes the template\. This section must always follow the template format version section\.
@@ -108,7 +108,7 @@ A mapping of keys and associated values that you can use to specify conditional 
 Conditions that control whether certain resources are created or whether certain resource properties are assigned a value during stack creation or update\. For example, you could conditionally create a resource that depends on whether the stack is for a production or test environment\.
 
 **[Transform \(optional\)](transform-section-structure.md)**  
-For [serverless applications](https://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html) \(also referred to as Lambda\-based applications\), specifies the version of the [AWS Serverless Application Model \(AWS SAM\)](https://github.com/awslabs/serverless-application-specification) to use\. When you specify a transform, you can use AWS SAM syntax to declare resources in your template\. The model defines the syntax that you can use and how it is processed\.  
+For [serverless applications](https://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html) \(also referred to as Lambda\-based applications\), specifies the version of the [AWS Serverless Application Model \(AWS SAM\)](https://github.com/awslabs/serverless-application-specification) to use\. When you specify a transform, you can use AWS SAM syntax to declare resources in your template\. The model defines the syntax that you can use and how it's processed\.  
 You can also use `AWS::Include` transforms to work with template snippets that are stored separately from the main AWS CloudFormation template\. You can store your snippet files in an Amazon S3 bucket and then reuse the functions across multiple templates\.
 
 **[Resources \(required\)](resources-section-structure.md)**  

@@ -2,7 +2,7 @@
 
 Specifies an Amazon Redshift subnet group\. You must provide a list of one or more subnets in your existing Amazon Virtual Private Cloud \(Amazon VPC\) when creating Amazon Redshift subnet group\.
 
- For information about subnet groups, go to [Amazon Redshift Cluster Subnet Groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-cluster-subnet-groups.html) in the *Amazon Redshift Cluster Management Guide*\.
+For information about subnet groups, go to [Amazon Redshift Cluster Subnet Groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-cluster-subnet-groups.html) in the *Amazon Redshift Cluster Management Guide*\.
 
 ## Syntax<a name="aws-resource-redshift-clustersubnetgroup-syntax"></a>
 

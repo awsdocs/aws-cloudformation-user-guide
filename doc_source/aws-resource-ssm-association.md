@@ -1,6 +1,6 @@
 # AWS::SSM::Association<a name="aws-resource-ssm-association"></a>
 
-The `AWS::SSM::Association` resource creates a State Manager association for your managed instances\. A State Manager association defines the state that you want to maintain on your instances\. For example, an association can specify that anti\-virus software must be installed and running on your instances, or that certain ports must be closed\. For static targets, the association specifies a schedule for when the configuration is reapplied\. For dynamic targets, such as an AWS Resource Group or an AWS Autoscaling Group, State Manager applies the configuration when new instances are added to the group\. The association also specifies actions to take when applying the configuration\. For example, an association for anti\-virus software might run once a day\. If the software is not installed, then State Manager installs it\. If the software is installed, but the service is not running, then the association might instruct State Manager to start the service\. 
+The `AWS::SSM::Association` resource creates a State Manager association for your managed instances\. A State Manager association defines the state that you want to maintain on your instances\. For example, an association can specify that anti\-virus software must be installed and running on your instances, or that certain ports must be closed\. For static targets, the association specifies a schedule for when the configuration is reapplied\. For dynamic targets, such as an AWS Resource Groups or an AWS Auto Scaling Group, State Manager applies the configuration when new instances are added to the group\. The association also specifies actions to take when applying the configuration\. For example, an association for anti\-virus software might run once a day\. If the software is not installed, then State Manager installs it\. If the software is installed, but the service is not running, then the association might instruct State Manager to start the service\. 
 
 ## Syntax<a name="aws-resource-ssm-association-syntax"></a>
 
@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ApplyOnlyAtCronInterval](#cfn-ssm-association-applyonlyatcroninterval)" : Boolean,
       "[AssociationName](#cfn-ssm-association-associationname)" : String,
       "[AutomationTargetParameterName](#cfn-ssm-association-automationtargetparametername)" : String,
+      "[CalendarNames](#cfn-ssm-association-calendarnames)" : [ String, ... ],
       "[ComplianceSeverity](#cfn-ssm-association-complianceseverity)" : String,
       "[DocumentVersion](#cfn-ssm-association-documentversion)" : String,
       "[InstanceId](#cfn-ssm-association-instanceid)" : String,
@@ -39,6 +40,8 @@ Properties:
   [ApplyOnlyAtCronInterval](#cfn-ssm-association-applyonlyatcroninterval): Boolean
   [AssociationName](#cfn-ssm-association-associationname): String
   [AutomationTargetParameterName](#cfn-ssm-association-automationtargetparametername): String
+  [CalendarNames](#cfn-ssm-association-calendarnames): 
+    - String
   [ComplianceSeverity](#cfn-ssm-association-complianceseverity): String
   [DocumentVersion](#cfn-ssm-association-documentversion): String
   [InstanceId](#cfn-ssm-association-instanceid): String
@@ -59,7 +62,7 @@ Properties:
 ## Properties<a name="aws-resource-ssm-association-properties"></a>
 
 `ApplyOnlyAtCronInterval`  <a name="cfn-ssm-association-applyonlyatcroninterval"></a>
-By default, when you create a new associations, the system runs it immediately after it is created and then according to the schedule you specified\. Specify this option if you don't want an association to run immediately after you create it\.  
+By default, when you create a new association, the system runs it immediately after it is created and then according to the schedule you specified\. Specify this option if you don't want an association to run immediately after you create it\. This parameter is not supported for rate expressions\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -72,11 +75,17 @@ Specify a descriptive name for the association\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutomationTargetParameterName`  <a name="cfn-ssm-association-automationtargetparametername"></a>
-Specify the target for the association\. This target is required for associations that use an Automation document and target resources by using rate controls\.  
+Specify the target for the association\. This target is required for associations that use an Automation runbook and target resources by using rate controls\. Automation is a capability of AWS Systems Manager\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CalendarNames`  <a name="cfn-ssm-association-calendarnames"></a>
+The names or Amazon Resource Names \(ARNs\) of the Change Calendar type documents your associations are gated under\. The associations only run when that Change Calendar is open\. For more information, see [ AWS Systems Manager Change Calendar](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-change-calendar)\.  
+*Required*: No  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ComplianceSeverity`  <a name="cfn-ssm-association-complianceseverity"></a>
@@ -103,7 +112,7 @@ The ID of the instance that the SSM document is associated with\. You must speci
 
 `MaxConcurrency`  <a name="cfn-ssm-association-maxconcurrency"></a>
 The maximum number of targets allowed to run the association at the same time\. You can specify a number, for example 10, or a percentage of the target set, for example 10%\. The default value is 100%, which means all targets run the association at the same time\.  
-If a new instance starts and attempts to run an association while Systems Manager is running MaxConcurrency associations, the association is allowed to run\. During the next association interval, the new instance will process its association within the limit specified for MaxConcurrency\.  
+If a new instance starts and attempts to run an association while Systems Manager is running `MaxConcurrency` associations, the association is allowed to run\. During the next association interval, the new instance will process its association within the limit specified for `MaxConcurrency`\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -112,8 +121,8 @@ If a new instance starts and attempts to run an association while Systems Manage
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxErrors`  <a name="cfn-ssm-association-maxerrors"></a>
-The number of errors that are allowed before the system stops sending requests to run the association on additional targets\. You can specify either an absolute number of errors, for example 10, or a percentage of the target set, for example 10%\. If you specify 3, for example, the system stops sending requests when the fourth error is received\. If you specify 0, then the system stops sending requests after the first error is returned\. If you run an association on 50 instances and set MaxError to 10%, then the system stops sending the request when the sixth error is received\.  
-Executions that are already running an association when MaxErrors is reached are allowed to complete, but some of these executions may fail as well\. If you need to ensure that there won't be more than max\-errors failed executions, set MaxConcurrency to 1 so that executions proceed one at a time\.  
+The number of errors that are allowed before the system stops sending requests to run the association on additional targets\. You can specify either an absolute number of errors, for example 10, or a percentage of the target set, for example 10%\. If you specify 3, for example, the system stops sending requests when the fourth error is received\. If you specify 0, then the system stops sending requests after the first error is returned\. If you run an association on 50 instances and set `MaxError` to 10%, then the system stops sending the request when the sixth error is received\.  
+Executions that are already running an association when `MaxErrors` is reached are allowed to complete, but some of these executions may fail as well\. If you need to ensure that there won't be more than max\-errors failed executions, set `MaxConcurrency` to 1 so that executions proceed one at a time\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -132,7 +141,7 @@ For AWS\-predefined documents and SSM documents you created in your account, you
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutputLocation`  <a name="cfn-ssm-association-outputlocation"></a>
-An S3 bucket where you want to store the output details of the request\.  
+An Amazon Simple Storage Service \(Amazon S3\) bucket where you want to store the output details of the request\.  
 *Required*: No  
 *Type*: [InstanceAssociationOutputLocation](aws-properties-ssm-association-instanceassociationoutputlocation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -140,11 +149,11 @@ An S3 bucket where you want to store the output details of the request\.
 `Parameters`  <a name="cfn-ssm-association-parameters"></a>
 The parameters for the runtime configuration of the document\.  
 *Required*: No  
-*Type*: Map of [ParameterValues](aws-properties-ssm-association-parametervalues.md)  
+*Type*: Map of Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduleExpression`  <a name="cfn-ssm-association-scheduleexpression"></a>
-A cron expression that specifies a schedule when the association runs\.  
+A cron expression that specifies a schedule when the association runs\. The schedule runs in Coordinated Universal Time \(UTC\)\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -161,7 +170,7 @@ By default, all associations use `AUTO` mode\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-ssm-association-targets"></a>
-The targets for the association\. You must specify the `InstanceId` or `Targets` property\.  
+The targets for the association\. You must specify the `InstanceId` or `Targets` property\. You can target all instances in an AWS account by specifying the `InstanceIds` key with a value of `*`\. To view a JSON and a YAML example that targets all instances, see "Create an association for all managed instances in an AWS account" on the Examples page\.  
 *Required*: Conditional  
 *Type*: List of [Target](aws-properties-ssm-association-target.md)  
 *Maximum*: `5`  
@@ -241,11 +250,11 @@ Resources:
       WaitForSuccessTimeoutSeconds: 300
 ```
 
-### Create an association for all managed instances in an AWS account<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_an_AWS_account"></a>
+### Create an association for all managed instances in an AWS account<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_an_"></a>
 
 The following example creates an association that uses the AWS\-UpdateSSMAgent SSM document\. The association updates SSM Agent on all managed instances \(instances configured for Systems Manager\) in the user's AWS account according to the specified CRON schedule\.
 
-#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_an_AWS_account--json"></a>
+#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_an_--json"></a>
 
 ```
 {
@@ -271,7 +280,7 @@ The following example creates an association that uses the AWS\-UpdateSSMAgent S
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_an_AWS_account--yaml"></a>
+#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_for_all_managed_instances_in_an_--yaml"></a>
 
 ```
 ---
@@ -429,11 +438,11 @@ Resources:
       AutomationTargetParameterName: InstanceId
 ```
 
-### Create an association that uses rate controls and sends log output to Amazon S3<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_sends_log_output_to_Amazon_S3"></a>
+### Create an association that uses rate controls and sends log output to Amazon S3<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_sends_log_output_to_"></a>
 
-The following example creates an association that uses rate controls\. The association attempts to update SSM Agent on only 20% of instances at one time\. Systems Manager stops the association from running on any additional instances if the execution fails on 5% of the total number of instances\. System Manager also logs the association output to Amazon S3\.
+The following example creates an association that uses rate controls\. The association attempts to update SSM Agent on only 20% of instances at one time\. Systems Manager stops the association from running on any additional instances if the execution fails on 5% of the total number of instances\. Systems Manager also logs the association output to Amazon S3\.
 
-#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_sends_log_output_to_Amazon_S3--json"></a>
+#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_sends_log_output_to_--json"></a>
 
 ```
 {
@@ -465,7 +474,7 @@ The following example creates an association that uses rate controls\. The assoc
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_sends_log_output_to_Amazon_S3--yaml"></a>
+#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_that_uses_rate_controls_and_sends_log_output_to_--yaml"></a>
 
 ```
 ---
@@ -1021,11 +1030,11 @@ Outputs:
     Description: Public DNS for WebServer
 ```
 
-### Create an association that runs a bash script with Systems Manager Automation<a name="aws-resource-ssm-association--examples--Create_an_association_that_runs_a_bash_script_with_Systems_Manager_Automation"></a>
+### Create an association that runs a bash script with Systems Manager Automation<a name="aws-resource-ssm-association--examples--Create_an_association_that_runs_a_bash_script_with__Automation"></a>
 
 The following example creates an assocation that runs a bash script using State Manager and Automation with multiple steps\. Target is based on tags\.
 
-#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_that_runs_a_bash_script_with_Systems_Manager_Automation--json"></a>
+#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_that_runs_a_bash_script_with__Automation--json"></a>
 
 ```
 {
@@ -1294,7 +1303,7 @@ The following example creates an assocation that runs a bash script using State 
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_that_runs_a_bash_script_with_Systems_Manager_Automation--yaml"></a>
+#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_that_runs_a_bash_script_with__Automation--yaml"></a>
 
 ```
 ---
@@ -2109,11 +2118,11 @@ Resources:
           - "False"
 ```
 
-### Create an association that joins targets to a Windows Active Directory domain and uses Systems Manager Automation<a name="aws-resource-ssm-association--examples--Create_an_association_that_joins_targets_to_a_Windows_Active_Directory_domain_and_uses_Systems_Manager_Automation"></a>
+### Create an association that joins targets to a Windows Active Directory domain and uses Systems Manager Automation<a name="aws-resource-ssm-association--examples--Create_an_association_that_joins_targets_to_a_Windows_Active_Directory_domain_and_uses__Automation"></a>
 
 The following example creates an association that joins targets to a Windows Active Directory domain by using State Manager and Automation\. Target is based on tags\.
 
-#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_that_joins_targets_to_a_Windows_Active_Directory_domain_and_uses_Systems_Manager_Automation--json"></a>
+#### JSON<a name="aws-resource-ssm-association--examples--Create_an_association_that_joins_targets_to_a_Windows_Active_Directory_domain_and_uses__Automation--json"></a>
 
 ```
 {
@@ -2614,7 +2623,7 @@ The following example creates an association that joins targets to a Windows Act
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_that_joins_targets_to_a_Windows_Active_Directory_domain_and_uses_Systems_Manager_Automation--yaml"></a>
+#### YAML<a name="aws-resource-ssm-association--examples--Create_an_association_that_joins_targets_to_a_Windows_Active_Directory_domain_and_uses__Automation--yaml"></a>
 
 ```
 ---

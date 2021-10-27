@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel MultiplexProgramChannelDestinationSettings<a name="aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings"></a>
 
-Multiplex Program Input Destination Settings for outputting a Channel to a Multiplex
+Destination settings for a Multiplex output\.
+
+The parent of this entity is OutputDestination\.
 
 ## Syntax<a name="aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings-syntax"></a>
 

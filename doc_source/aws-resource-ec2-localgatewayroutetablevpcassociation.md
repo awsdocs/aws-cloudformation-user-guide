@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::LocalGatewayRouteTableVPCAssociation",
   "Properties" : {
       "[LocalGatewayRouteTableId](#cfn-ec2-localgatewayroutetablevpcassociation-localgatewayroutetableid)" : String,
-      "[Tags](#cfn-ec2-localgatewayroutetablevpcassociation-tags)" : Tags,
+      "[Tags](#cfn-ec2-localgatewayroutetablevpcassociation-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VpcId](#cfn-ec2-localgatewayroutetablevpcassociation-vpcid)" : String
     }
 }
@@ -26,7 +26,7 @@ Type: AWS::EC2::LocalGatewayRouteTableVPCAssociation
 Properties: 
   [LocalGatewayRouteTableId](#cfn-ec2-localgatewayroutetablevpcassociation-localgatewayroutetableid): String
   [Tags](#cfn-ec2-localgatewayroutetablevpcassociation-tags): 
-    Tags
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcId](#cfn-ec2-localgatewayroutetablevpcassociation-vpcid): String
 ```
 
@@ -41,7 +41,7 @@ The ID of the local gateway route table\.
 `Tags`  <a name="cfn-ec2-localgatewayroutetablevpcassociation-tags"></a>
 The tags assigned to the association\.  
 *Required*: No  
-*Type*: [Tags](aws-properties-ec2-localgatewayroutetablevpcassociation-tags.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcId`  <a name="cfn-ec2-localgatewayroutetablevpcassociation-vpcid"></a>

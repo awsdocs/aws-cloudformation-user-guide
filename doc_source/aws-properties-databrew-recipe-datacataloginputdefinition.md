@@ -54,7 +54,7 @@ The name of a database table in the Data Catalog\. This table corresponds to a D
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TempDirectory`  <a name="cfn-databrew-recipe-datacataloginputdefinition-tempdirectory"></a>
-An Amazon location that AWS Glue Data Catalog can use as a temporary directory\.  
+Represents an Amazon location where DataBrew can store intermediate results\.  
 *Required*: No  
 *Type*: [S3Location](aws-properties-databrew-recipe-s3location.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

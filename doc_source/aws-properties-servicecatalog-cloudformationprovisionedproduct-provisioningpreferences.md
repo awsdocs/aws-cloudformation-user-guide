@@ -54,7 +54,7 @@ If no values are specified, the default value is all acounts from the `STACKSET`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StackSetFailureToleranceCount`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences-stacksetfailuretolerancecount"></a>
-The number of accounts, per region, for which this operation can fail before AWS Service Catalog stops the operation in that region\. If the operation is stopped in a region, AWS Service Catalog doesn't attempt the operation in any subsequent regions\.  
+The number of accounts, per Region, for which this operation can fail before AWS Service Catalog stops the operation in that Region\. If the operation is stopped in a Region, AWS Service Catalog doesn't attempt the operation in any subsequent Regions\.  
 Applicable only to a `CFN_STACKSET` provisioned product type\.  
 Conditional: You must specify either `StackSetFailureToleranceCount` or `StackSetFailureTolerancePercentage`, but not both\.  
 The default value is `0` if no value is specified\.  
@@ -64,7 +64,7 @@ The default value is `0` if no value is specified\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StackSetFailureTolerancePercentage`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences-stacksetfailuretolerancepercentage"></a>
-The percentage of accounts, per region, for which this stack operation can fail before AWS Service Catalog stops the operation in that region\. If the operation is stopped in a region, AWS Service Catalog doesn't attempt the operation in any subsequent regions\.  
+The percentage of accounts, per Region, for which this stack operation can fail before AWS Service Catalog stops the operation in that Region\. If the operation is stopped in a Region, AWS Service Catalog doesn't attempt the operation in any subsequent Regions\.  
 When calculating the number of accounts based on the specified percentage, AWS Service Catalog rounds down to the next whole number\.  
 Applicable only to a `CFN_STACKSET` provisioned product type\.  
 Conditional: You must specify either `StackSetFailureToleranceCount` or `StackSetFailureTolerancePercentage`, but not both\.  
@@ -100,7 +100,7 @@ Conditional: You must specify either `StackSetMaxConcurrentCount` or `StackSetMa
 Determines what action AWS Service Catalog performs to a stack set or a stack instance represented by the provisioned product\. The default value is `UPDATE` if nothing is specified\.  
 Applicable only to a `CFN_STACKSET` provisioned product type\.    
 CREATE  
-Creates a new stack instance in the stack set represented by the provisioned product\. In this case, only new stack instances are created based on accounts and regions; if new ProductId or ProvisioningArtifactID are passed, they will be ignored\.  
+Creates a new stack instance in the stack set represented by the provisioned product\. In this case, only new stack instances are created based on accounts and Regions; if new ProductId or ProvisioningArtifactID are passed, they will be ignored\.  
 UPDATE  
 Updates the stack set represented by the provisioned product and also its stack instances\.  
 DELETE  
@@ -113,8 +113,8 @@ Deletes a stack instance in the stack set represented by the provisioned product
 `StackSetRegions`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences-stacksetregions"></a>
 One or more AWS Regions where the provisioned product will be available\.  
 Applicable only to a `CFN_STACKSET` provisioned product type\.  
-The specified regions should be within the list of regions from the `STACKSET` constraint\. To get the list of regions in the `STACKSET` constraint, use the `DescribeProvisioningParameters` operation\.  
-If no values are specified, the default value is all regions from the `STACKSET` constraint\.  
+The specified Regions should be within the list of Regions from the `STACKSET` constraint\. To get the list of Regions in the `STACKSET` constraint, use the `DescribeProvisioningParameters` operation\.  
+If no values are specified, the default value is all Regions from the `STACKSET` constraint\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

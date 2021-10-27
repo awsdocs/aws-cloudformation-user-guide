@@ -57,13 +57,13 @@ Properties:
 The setup to be used for brokers in the cluster\.  
 *Required*: Yes  
 *Type*: [BrokerNodeGroupInfo](aws-properties-msk-cluster-brokernodegroupinfo.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClientAuthentication`  <a name="cfn-msk-cluster-clientauthentication"></a>
 Includes information related to client authentication\.  
 *Required*: No  
 *Type*: [ClientAuthentication](aws-properties-msk-cluster-clientauthentication.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClusterName`  <a name="cfn-msk-cluster-clustername"></a>
 The name of the cluster\.  
@@ -81,7 +81,7 @@ The Amazon MSK configuration to use for the cluster\.
 Includes all encryption\-related information\.  
 *Required*: No  
 *Type*: [EncryptionInfo](aws-properties-msk-cluster-encryptioninfo.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnhancedMonitoring`  <a name="cfn-msk-cluster-enhancedmonitoring"></a>
 Specifies the level of monitoring for the MSK cluster\. The possible values are `DEFAULT`, `PER_BROKER`, and `PER_TOPIC_PER_BROKER`\.  
@@ -1165,7 +1165,7 @@ Outputs:
 
 ### Create Two MSK Clusters To Use With Apache MirrorMaker<a name="aws-resource-msk-cluster--examples--Create_Two_MSK_Clusters_To_Use_With_Apache_MirrorMaker"></a>
 
-This YAML shows how to set up two MSK clusters for MirrorMaker\. It also sets up the Amazon VPC, subnets, security groups, and IAM roles that are necessary for this example\. In addition, it creates an EC2 instance that has Apache Kafka, Java, and the AWS CLI\. You can use this EC2 instance to run Apache Kafka tools, including MirrorMaker\. You must manually create the MirrorMaker configuration files\.
+This YAML shows how to set up two MSK clusters for MirrorMaker\. It also sets up the Amazon VPC, subnets, security groups, and IAM roles that are necessary for this example\. In addition, it creates an EC2 instance that has Apache Kafka, Java, and the Amazon CLI\. You can use this EC2 instance to run Apache Kafka tools, including MirrorMaker\. You must manually create the MirrorMaker configuration files\.
 
 #### <a name="aws-resource-msk-cluster--examples--Create_Two_MSK_Clusters_To_Use_With_Apache_MirrorMaker--YAML"></a>
 

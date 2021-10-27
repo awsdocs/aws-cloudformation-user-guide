@@ -180,5 +180,5 @@ TestFunctionDefinitionVersion:
 ```
 
 ## See also<a name="aws-resource-greengrass-functiondefinitionversion--seealso"></a>
-+  [CreateFunctionDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createfunctiondefinitionversion-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [CreateFunctionDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createfunctiondefinitionversion-post.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

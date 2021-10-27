@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DomainName](#cfn-iot-domainconfiguration-domainname)" : String,
       "[ServerCertificateArns](#cfn-iot-domainconfiguration-servercertificatearns)" : [ String, ... ],
       "[ServiceType](#cfn-iot-domainconfiguration-servicetype)" : String,
-      "[Tags](#cfn-iot-domainconfiguration-tags)" : Tags,
+      "[Tags](#cfn-iot-domainconfiguration-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[ValidationCertificateArn](#cfn-iot-domainconfiguration-validationcertificatearn)" : String
     }
 }
@@ -38,7 +38,7 @@ Properties:
     - String
   [ServiceType](#cfn-iot-domainconfiguration-servicetype): String
   [Tags](#cfn-iot-domainconfiguration-tags): 
-    Tags
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [ValidationCertificateArn](#cfn-iot-domainconfiguration-validationcertificatearn): String
 ```
 
@@ -77,7 +77,7 @@ The ARNs of the certificates that AWS IoT passes to the device during the TLS ha
 
 `ServiceType`  <a name="cfn-iot-domainconfiguration-servicetype"></a>
 The type of service delivered by the endpoint\.  
-AWS IoT Core currently supports only the `DATA` service type\.
+ AWS IoT Core currently supports only the `DATA` service type\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -88,7 +88,7 @@ For URI Request parameters use format: \.\.\.key1=value1&key2=value2\.\.\.
 For the CLI command\-line parameter use format: &&tags "key1=value1&key2=value2\.\.\."  
 For the cli\-input\-json file use format: "tags": "key1=value1&key2=value2\.\.\."
 *Required*: No  
-*Type*: [Tags](aws-properties-iot-domainconfiguration-tags.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ValidationCertificateArn`  <a name="cfn-iot-domainconfiguration-validationcertificatearn"></a>

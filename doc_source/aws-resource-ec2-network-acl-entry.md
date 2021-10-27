@@ -206,5 +206,5 @@ Resources:
 
 ## See also<a name="aws-resource-ec2-network-acl-entry--seealso"></a>
 + [NetworkAclEntry](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateNetworkAclEntry.html) in the *Amazon EC2 API Reference*
-+ [Network ACLs](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html) in the *Amazon Virtual Private Cloud User Guide*
++ [Network ACLs](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html) in the *Amazon VPC User Guide*
 

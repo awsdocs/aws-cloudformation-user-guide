@@ -35,7 +35,7 @@ A string included in the request to help make sure that the request can’t be r
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Comment`  <a name="cfn-cloudfront-publickey-publickeyconfig-comment"></a>
-A comment to describe the public key\.  
+A comment to describe the public key\. The comment cannot be longer than 128 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -55,11 +55,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### VPN Connection Route<a name="aws-resource-ec2-vpn-connection-route--examples--VPN_Connection_Route"></a>
+### VPN connection route<a name="aws-resource-ec2-vpn-connection-route--examples--VPN_connection_route"></a>
 
 The following example specifies a VPN connection route\.
 
-#### JSON<a name="aws-resource-ec2-vpn-connection-route--examples--VPN_Connection_Route--json"></a>
+#### JSON<a name="aws-resource-ec2-vpn-connection-route--examples--VPN_connection_route--json"></a>
 
 ```
 "MyConnectionRoute0" : {
@@ -71,7 +71,7 @@ The following example specifies a VPN connection route\.
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-vpn-connection-route--examples--VPN_Connection_Route--yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpn-connection-route--examples--VPN_connection_route--yaml"></a>
 
 ```
 MyConnectionRoute0: 

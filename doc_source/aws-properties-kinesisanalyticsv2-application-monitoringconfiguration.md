@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application MonitoringConfiguration<a name="aws-properties-kinesisanalyticsv2-application-monitoringconfiguration"></a>
 
-Describes configuration parameters for Amazon CloudWatch logging for a Java\-based Kinesis Data Analytics application\. For more information about CloudWatch logging, see [Monitoring](https://docs.aws.amazon.com/kinesisanalytics/latest/java/monitoring-overview.html)\.
+Describes configuration parameters for Amazon CloudWatch logging for a Java\-based Kinesis Data Analytics application\. For more information about CloudWatch logging, see [Monitoring](https://docs.aws.amazon.com/kinesisanalytics/latest/java/monitoring-overview)\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-monitoringconfiguration-syntax"></a>
 

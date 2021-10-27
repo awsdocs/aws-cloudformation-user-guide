@@ -74,13 +74,13 @@ Specifies how to interpret the base path of the API during import\. Valid values
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Body`  <a name="cfn-apigatewayv2-api-body"></a>
-The OpenAPI definition\. Supported only for HTTP APIs\. To import an HTTP API, you must specify a `Body` or `BodyS3Location`\.  
+The OpenAPI definition\. Supported only for HTTP APIs\. To import an HTTP API, you must specify a `Body` or `BodyS3Location`\. If you specify a `Body` or `BodyS3Location`, don't specify CloudFormation resources such as `AWS::ApiGatewayV2::Authorizer` or `AWS::ApiGatewayV2::Route`\. API Gateway doesn't support the combination of OpenAPI and CloudFormation resources\.   
 *Required*: Conditional  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BodyS3Location`  <a name="cfn-apigatewayv2-api-bodys3location"></a>
-The S3 location of an OpenAPI definition\. Supported only for HTTP APIs\. To import an HTTP API, you must specify a `Body` or `BodyS3Location`\.  
+The S3 location of an OpenAPI definition\. Supported only for HTTP APIs\. To import an HTTP API, you must specify a `Body` or `BodyS3Location`\. If you specify a `Body` or `BodyS3Location`, don't specify CloudFormation resources such as `AWS::ApiGatewayV2::Authorizer` or `AWS::ApiGatewayV2::Route`\. API Gateway doesn't support the combination of OpenAPI and CloudFormation resources\.  
 *Required*: Conditional  
 *Type*: [BodyS3Location](aws-properties-apigatewayv2-api-bodys3location.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

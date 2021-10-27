@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CallbackURLs](#cfn-cognito-userpoolclient-callbackurls)" : [ String, ... ],
       "[ClientName](#cfn-cognito-userpoolclient-clientname)" : String,
       "[DefaultRedirectURI](#cfn-cognito-userpoolclient-defaultredirecturi)" : String,
+      "[EnableTokenRevocation](#cfn-cognito-userpoolclient-enabletokenrevocation)" : Boolean,
       "[ExplicitAuthFlows](#cfn-cognito-userpoolclient-explicitauthflows)" : [ String, ... ],
       "[GenerateSecret](#cfn-cognito-userpoolclient-generatesecret)" : Boolean,
       "[IdTokenValidity](#cfn-cognito-userpoolclient-idtokenvalidity)" : Integer,
@@ -52,6 +53,7 @@ Properties:
     - String
   [ClientName](#cfn-cognito-userpoolclient-clientname): String
   [DefaultRedirectURI](#cfn-cognito-userpoolclient-defaultredirecturi): String
+  [EnableTokenRevocation](#cfn-cognito-userpoolclient-enabletokenrevocation): Boolean
   [ExplicitAuthFlows](#cfn-cognito-userpoolclient-explicitauthflows): 
     - String
   [GenerateSecret](#cfn-cognito-userpoolclient-generatesecret): Boolean
@@ -146,6 +148,13 @@ App callback URLs such as myapp://example are also supported\.
 *Minimum*: `1`  
 *Maximum*: `1024`  
 *Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}]+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EnableTokenRevocation`  <a name="cfn-cognito-userpoolclient-enabletokenrevocation"></a>
+Enables or disables token revocation\. For more information about revoking tokens, see [RevokeToken](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_RevokeToken.html)\.  
+If you don't include this parameter, token revocation is automatically enabled for the new user pool client\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExplicitAuthFlows`  <a name="cfn-cognito-userpoolclient-explicitauthflows"></a>

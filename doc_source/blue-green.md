@@ -1,10 +1,10 @@
 # Perform ECS blue/green deployments through CodeDeploy using AWS CloudFormation<a name="blue-green"></a>
 
-You can use CloudFormation to perform ECS blue/green deployments through CodeDeploy\. Blue/green deployments are a safe deployment strategy provided by AWS CodeDeploy for minimizing interruptions caused by changing application versions\. This is accomplished by creating your new application environment, referred to as *green*, alongside your current application that is serving your live traffic, referred to as *blue*\. This allows for a period of time for monitoring and testing of the green environment before your live traffic is routed from blue to green and subsequently turning off the blue resources\.
+You can use CloudFormation to perform ECS blue/green deployments through AWS CodeDeploy\. Blue/green deployments are a safe deployment strategy provided by CodeDeploy for minimizing interruptions caused by changing application versions\. This is accomplished by creating your new application environment, referred to as *green*, alongside your current application that's serving your live traffic, referred to as *blue*\. This allows for a period of time for monitoring and testing of the green environment before your live traffic is routed from blue to green and subsequently turning off the blue resources\.
 
-When using CloudFormation to perform ECS blue/green deployments, you start by creating a stack template that defines the resources for both your blue and green application environments, including specifying the traffic routing and stabilization settings to use\. Next, you create a stack from that template; this generates your blue \(current\) application\. CloudFormation only creates the blue resources during stack creation\. Resources for a green deployment are not created until they are required\. 
+When using CloudFormation to perform ECS blue/green deployments, you start by creating a stack template that defines the resources for both your blue and green application environments, including specifying the traffic routing and stabilization settings to use\. Next, you create a stack from that template; this generates your blue \(current\) application\. CloudFormation only creates the blue resources during stack creation\. Resources for a green deployment aren't created until they're required\.
 
-Then, if in a future stack update you update the task definition or task set resources in your blue application, CloudFormation does the following: 
+Then, if in a future stack update you update the task definition or task set resources in your blue application, CloudFormation does the following:
 + Generates all the necessary green application environment resources
 + Shifts the traffic based on the specified traffic routing parameters
 + Deletes the blue resources
@@ -12,14 +12,14 @@ Then, if in a future stack update you update the task definition or task set res
 If an error occurs at any point before the green deployment is successful and finalized, CloudFormation rolls the stack back to its state before the entire green deployment was initiated\.
 
 To enable CloudFormation to perform blue/green deployments on a stack, include the following information in its stack template:
-+ A `Transform` section in your template that invokes the `AWS::CodeDeployBlueGreen` transform, as well as a `Hook` section that invokes the `AWS::CodeDeploy::BlueGreen` hook\.
++ A `Transform` section in your template that invokes the `AWS::CodeDeployBlueGreen` transform and a `Hook` section that invokes the `AWS::CodeDeploy::BlueGreen` hook\.
 + At least one of the ECS resources that will trigger a blue/green deployment if replaced during a stack update\. Currently, those resources are `[AWS::ECS::TaskDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html)` and `[AWS::ECS::TaskSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html)`\.
 
 Then, if you initiate a stack update that updates any properties of the above resources that requires CloudFormation to replace the resource, CloudFormation performs a blue/green deployment as described above\. For more information on resource update behavior, see [Update behaviors of stack resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html)\.
 
-In many cases, you'll want to set up your stack template to enable blue/green deployments *before* you create the stack\. However, you can also add the ability to have CloudFormation perform blue/green deployments to an existing stack\. To do so, add the necessary information to the stack's existing template\.
+In some cases, you'll want to set up your stack template to enable blue/green deployments *before* you create the stack\. However, you can also add the ability to have CloudFormation perform blue/green deployments to an existing stack\. To do so, add the necessary information to the stack's existing template\.
 
-In addition, we recommend you have CloudFormation generate a [change set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html) for the green deployment, prior to initiating the stack update\. This enables you to review the actual changes that will be made to the stack\.
+In addition, we recommend you have CloudFormation generate a [change set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html) for the green deployment, before initiating the stack update\. This enables you to review the actual changes that will be made to the stack\.
 
 ## Modeling your blue/green deployment using CloudFormation resources<a name="blue-green-required"></a>
 
@@ -46,32 +46,32 @@ If you perform a stack update that updates any property that requires [replaceme
 + `[AWS::ECS::TaskDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html)`
 + `[AWS::ECS::TaskSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html)` 
 
-Updating properties in these resources that do not require resource replacement does not trigger a green deployment\.
+Updating properties in these resources that don't require resource replacement doesn't trigger a green deployment\.
 
-You cannot include updates to the above resources with updates to other resources in the same stack update\. If you need to update resources in the list above as well as other resources in the same stack, do one of the following:
-+ Perform two seperate stack update operations: one that includes only the updates to the above resources, and a separate stack update that includes changes to any other resources\.
-+ Remove the `Transform` and `Hook` sections from your template and then perform the stack update\. In this case, CloudFormation will not perform a green deployment\.
+You can't include updates to the above resources with updates to other resources in the same stack update\. If you need to update resources in the list above in addition to other resources in the same stack, do one of the following:
++ Perform two separate stack update operations: one that includes only the updates to the above resources, and a separate stack update that includes changes to any other resources\.
++ Remove the `Transform` and `Hook` sections from your template and then perform the stack update\. In this case, CloudFormation won't perform a green deployment\.
 
 ## Considerations when managing ECS blue/green deployments using CloudFormation<a name="blue-green-considerations"></a>
 
 You should consider the following when defining your blue/green deployment using CloudFormation:
-+ Only updates to certain resources will trigger a green deployment, as discussed in [Resource updates that trigger ECS blue/green deployments](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html#blue-green-resources)\.
-+ You cannot include updates to resources that trigger green deployments and updates to other resources in the same stack update, as discussed in [Resource updates that trigger ECS blue/green deployments](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html#blue-green-resources)\.
++ Only updates to certain resources will initiate a green deployment, as discussed in [Resource updates that trigger ECS blue/green deployments](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html#blue-green-resources)\.
++ You can't include updates to resources that initiate green deployments and updates to other resources in the same stack update, as discussed in [Resource updates that trigger ECS blue/green deployments](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html#blue-green-resources)\.
 + You can only specify a single ECS service as the deployment target\.
-+ Parameters whose values are obfuscated by CloudFormation cannot be updated by the CodeDeploy service during a green deployment, and will lead to an error and stack update failure\. These include:
++ Parameters whose values are obfuscated by CloudFormation can't be updated by the CodeDeploy service during a green deployment, and will lead to an error and stack update failure\. These include:
   + Parameters defined with the `NoEcho` attribute\.
   + Parameters that use dynamic references to retrieve their values from external services\. For more information, see [Using dynamic references to specify template values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)\.
-+ To cancel a green deployment that is still in progress, cancel the stack update in CloudFormation, not CodeDeploy or ECS\. For more information, see [Canceling a stack update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn--stack-update-cancel.html)\. \(After an update has finished, you cannot cancel it\. You can, however, update a stack again with any previous settings\.\)
-+ Declaring [output values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html) or [importing values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html) from other stacks is not currently supported for templates defining blue/green ECS deployments\.
-+ [Importing existing resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html) is not currently supported for templates defining blue/green ECS deployments\.
-+ You cannot use the `AWS::CodeDeploy::BlueGreen` hook in a template that includes nested stack resources\.
-+ You cannot use the `AWS::CodeDeploy::BlueGreen` hook in a [nested stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html)\.
++ To cancel a green deployment that's still in progress, cancel the stack update in CloudFormation, not CodeDeploy or ECS\. For more information, see [Canceling a stack update](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn--stack-update-cancel.html)\. \(After an update has finished, you can't cancel it\. You can, however, update a stack again with any previous settings\.\)
++ Declaring [output values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html) or [importing values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-importvalue.html) from other stacks isn't currently supported for templates defining blue/green ECS deployments\.
++ [Importing existing resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import.html) isn't currently supported for templates defining blue/green ECS deployments\.
++ You can't use the `AWS::CodeDeploy::BlueGreen` hook in a template that includes nested stack resources\.
++ You can't use the `AWS::CodeDeploy::BlueGreen` hook in a [nested stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html)\.
 
-For information on how using CloudFormation to perform your ECS blue/green deployments through CodeDeploy differs from a standard Amazon ECS deployment using just CodeDeploy, see [Differences between Amazon ECS Blue/Green deployments through AWS CloudFormation and standard Amazon ECS deployments](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments-create-prerequisites.html) in the *AWS CodeDeploy User Guide*\.
+For information on how using CloudFormation to perform your ECS blue/green deployments through CodeDeploy differs from a standard Amazon ECS deployment using just CodeDeploy, see [Differences between Amazon ECS Blue/Green deployments through CloudFormation and standard Amazon ECS deployments](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments-create-prerequisites.html) in the *AWS CodeDeploy User Guide*\.
 
 ## Preparing your template to perform ECS blue/green deployments<a name="blue-green-setup"></a>
 
-To enable blue/green deployments on your stack, include the following sections in your stack template prior to performing a stack update\. 
+To enable blue/green deployments on your stack, include the following sections in your stack template before performing a stack update\.
 + Add a reference to the `AWS::CodeDeployBlueGreen` transform to your template:
 
   ```
@@ -82,11 +82,11 @@ To enable blue/green deployments on your stack, include the following sections i
 + Add a `Hook` section that invokes the `AWS::CodeDeploy::BlueGreen` hook and specifies the properties for your deployment\. Use the template reference below as a guide\.
 + In the `Resources` section, define the blue and green resources for your deployment\.
 
-You can add these sections when you first create the template \(that is, prior to creating the stack itself\), or you can add them to an existing template before performing a stack update\. If you specify the blue/green deployment for a new stack, CloudFormation only creates the blue resources during stack creation—resources for the green deployment are not created until they are required during a stack update\.
+You can add these sections when you first create the template \(that's, before creating the stack itself\), or you can add them to an existing template before performing a stack update\. If you specify the blue/green deployment for a new stack, CloudFormation only creates the blue resources during stack creation — resources for the green deployment aren't created until they're required during a stack update\.
 
 ## Reviewing the change sets for your blue/green deployment<a name="blue-green-changesets"></a>
 
-We strongly recommend that you create a change set prior to performing a stack update that will initiate a green deployment\. This enables you to see the actual changes that will be made to your stack prior to performing stack update\. Be aware that resource changes may not be listed in the order in which they will be performed during the stack update\. For more information, see [Updating stacks using change sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html)\.
+We strongly recommend that you create a change set before performing a stack update that will initiate a green deployment\. This allows to see the actual changes that will be made to your stack before performing stack update\. Be aware that resource changes may not be listed in the order in which they will be performed during the stack update\. For more information, see [Updating stacks using change sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html)\.
 
 ## Viewing stack events for your blue/green deployment<a name="blue-green-events"></a>
 
@@ -167,7 +167,7 @@ The type of traffic shifting used by the deployment configuration\.
 Valid values: AllAtOnce \| TimeBasedCanary \| TimeBasedLinear  
 *Required*: Yes    
 `TimeBasedCanary`  
-Specifies a configuration that shifts traffic from one version of the deployment to another in two increments\.   
+Specifies a configuration that shifts traffic from one version of the deployment to another in two increments\.  
 *Required*: Conditional: If you specify `TimeBasedCanary` as the traffic routing type, you must include the `TimeBasedCanary` parameter\.    
 `StepPercentage`  
 The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment\. The step percentage must be 14% or greater\.  
@@ -179,7 +179,7 @@ The number of minutes between the first and second traffic shifts of a `TimeBase
 Specifies a configuration that shifts traffic from one version of the deployment to another in equal increments, with an equal number of minutes between each increment\.  
 *Required*: Conditional: If you specify `TimeBasedLinear` as the traffic routing type, you must include the `TimeBasedLinear` parameter\.    
 `StepPercentage`  
-The percentage of traffic that is shifted at the start of each increment of a `TimeBasedLinear` deployment\. The step percentage must be 14% or greater\.  
+The percentage of traffic that's shifted at the start of each increment of a `TimeBasedLinear` deployment\. The step percentage must be 14% or greater\.  
 *Required*: No  
 `BakeTimeMins`  
 The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment\.  
@@ -198,16 +198,16 @@ For more information, see [AppSpec 'hooks' section](https://docs.aws.amazon.com/
 Function to use to run tasks before the replacement task set is created\.  
 *Required*: No  
 `AfterInstall`  
-Function to use to run tasks after the replacement task set is created and one of the target groups is associated with it\.   
+Function to use to run tasks after the replacement task set is created and one of the target groups is associated with it\.  
 *Required*: No  
 `AfterAllowTestTraffic`  
-Function to use to run tasks after the test listener serves traffic to the replacement task set\.   
+Function to use to run tasks after the test listener serves traffic to the replacement task set\.  
 *Required*: No  
 `BeforeAllowTraffic`  
-Function to use to run tasks after the second target group is associated with the replacement task set, but before traffic is shifted to the replacement task set\.   
+Function to use to run tasks after the second target group is associated with the replacement task set, but before traffic is shifted to the replacement task set\.  
 *Required*: No  
 `AfterAllowTraffic`  
-Function to use to run tasks after the second target group serves traffic to the replacement task set\.   
+Function to use to run tasks after the second target group serves traffic to the replacement task set\.  
 *Required*: No  
 `ServiceRole`  
 The execution role for CloudFormation to use to perform the blue\-green deployments\. For a list of the necessary permissions, see [IAM permissions necessary for blue\-green deployments](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html#blue-green-iam)  
@@ -228,7 +228,7 @@ The logical id of the resource\.
 The resources that represent the various requirements of your Amazon ECS application deployment\.  
 *Required*: Yes    
 `TaskDefinitions`  
-The logical ID of the `[AWS::ECS::TaskDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html)` resource to run the Docker container that contains your Amazon ECS application\.   
+The logical ID of the `[AWS::ECS::TaskDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html)` resource to run the Docker container that contains your Amazon ECS application\.  
 *Required*: Yes  
 `TaskSets`  
 The logical IDs of the `AWS::ECS::TaskSet` resources to use as task sets for the application\.  
@@ -240,7 +240,7 @@ Specifies resources used for traffic routing\.
 The listener to be used by your load balancer to direct traffic to your target groups\.  
 *Required*: Yes    
 `Type`  
-The type of the resource\. AWS::ElasticLoadBalancingV2::Listener  
+The type of the resource\. `AWS::ElasticLoadBalancingV2::Listener`  
 *Required*: Yes  
 `LogicalID`  
 The logical ID of the resource\.  
@@ -249,7 +249,7 @@ The logical ID of the resource\.
 The listener to be used by your load balancer to direct traffic to your target groups\.  
 *Required*: Yes    
 `Type`  
-The type of the resource\. AWS::ElasticLoadBalancingV2::Listener  
+The type of the resource\. `AWS::ElasticLoadBalancingV2::Listener`  
 *Required*: Yes  
 `LogicalID`  
 The logical ID of the resource\.  
@@ -259,7 +259,7 @@ Logical ID of resources to use as target groups to route traffic to the register
 *Required*: Yes
 
 `Type`  
-The type of hook\. AWS::CodeDeploy::BlueGreen  
+The type of hook\. `AWS::ElasticLoadBalancingV2::Listener`  
 *Required*: Yes
 
 ## IAM permissions necessary for blue/green deployments<a name="blue-green-iam"></a>
@@ -268,13 +268,13 @@ In order for CloudFormation to successfully perform the blue\-green deployments,
 + `codedeploy:Get*`
 + `codedeploy:CreateCloudFormationDeployment`
 
-For more information, see [Actions, resources, and condition keys for AWS CodeDeploy](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awscodedeploy.html) in the *AWS Identity and Access Management User Guide*\.
+For more information, see [Actions, resources, and condition keys for CodeDeploy](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_awscodedeploy.html) in the *AWS Identity and Access Management User Guide*\.
 
 ## Template example<a name="blue-green-template-example"></a>
 
 The following example sets up an ECS blue/green deployment through CodeDeploy, with a traffic routing progress of 15 percent per step, with a stabilization period of 5 minutes between each step\. Creating a stack with the template would provision the initial configuration of the deployment\.
 
-If you then made any changes to properties in the `"BlueTaskSet"` resource that require that resource be replaced, CloudFormation would then inititiate a green deployment as part of the stack update\.
+If you then made any changes to properties in the `"BlueTaskSet"` resource that require that resource be replaced, CloudFormation would then initiate a green deployment as part of the stack update\.
 
 ### JSON<a name="blue-green-template-example.json"></a>
 
@@ -601,10 +601,10 @@ If you then made any changes to properties in the `"BlueTaskSet"` resource that 
                         ]
                     }
                 },
-                "PlatformVersion": "1.3.0",
+                "PlatformVersion": "1.4.0",
                 "Scale": {
                     "Unit": "PERCENT",
-                    "Value": 1
+                    "Value": 100
                 },
                 "Service": {
                     "Ref": "ECSDemoService"
@@ -839,10 +839,10 @@ Resources:
           Subnets:
             - !Ref Subnet1
             - !Ref Subnet2
-      PlatformVersion: 1.3.0
+      PlatformVersion: 1.4.0
       Scale:
         Unit: PERCENT
-        Value: 1
+        Value: 100
       Service: !Ref ECSDemoService
       TaskDefinition: !Ref BlueTaskDefinition
       LoadBalancers:

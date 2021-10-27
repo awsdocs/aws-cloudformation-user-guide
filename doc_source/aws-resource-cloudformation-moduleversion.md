@@ -4,7 +4,7 @@ Registers the specified version of the module with the CloudFormation service\. 
 
 To specify a module version as the default version, use the `[AWS::CloudFormation::ModuleDefaultVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)` resource\.
 
-For more information using modules, see [Using modules to encapsulate and reuse resource configurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/modules.html) and [Registering extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-register) in the *CloudFormation User Guide*\. For information on developing modules, see [Developing modules](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules.html) in the *CloudFormation CLI User Guide*\. 
+For more information using modules, see [Using modules to encapsulate and reuse resource configurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/modules.html) and [Registering extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-register) in the *CloudFormation User Guide*\. For information on developing modules, see [Developing modules](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules.html) in the *CloudFormation CLI User Guide*\.
 
 ## Syntax<a name="aws-resource-cloudformation-moduleversion-syntax"></a>
 
@@ -40,12 +40,12 @@ The name of the module being registered\.
 *Minimum*: `10`  
 *Maximum*: `204`  
 *Pattern*: `[A-Za-z0-9]{2,64}::[A-Za-z0-9]{2,64}::[A-Za-z0-9]{2,64}(::MODULE){0,1}`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ModulePackage`  <a name="cfn-cloudformation-moduleversion-modulepackage"></a>
 A url to the S3 bucket containing the package that contains the template fragment and schema files for the module version to register\.  
 The user registering the module version must be able to access the the module package in the S3 bucket\. That is, the user needs to have [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for the package\. For more information, see [Actions, Resources, and Condition Keys for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity and Access Management User Guide*\.
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `4096`  
@@ -55,7 +55,7 @@ The user registering the module version must be able to access the the module pa
 
 ### Ref<a name="aws-resource-cloudformation-moduleversion-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the module version\. 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\) of the module version\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -105,25 +105,13 @@ Considerations when managing module versions:
   If you attempt to delete an `AWS::CloudFormation::ModuleVersion` resource that represent the default version, the operation will fail if there are other active versions\.
 
   For more information on deprecating module versions, see [DeregisterType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeregisterType.html) in the *AWS CloudFormation API Reference*\.
-+ You cannot edit a module version\. Updating an `AWS::CloudFormation::ModuleVersion` resource results in a new module version being registered in the CloudFormation registry\. 
++ You cannot edit a module version\. Updating an `AWS::CloudFormation::ModuleVersion` resource results in a new module version being registered in the CloudFormation registry\.
 
 ## Examples<a name="aws-resource-cloudformation-moduleversion--examples"></a>
 
 ### Registering a module version<a name="aws-resource-cloudformation-moduleversion--examples--Registering_a_module_version"></a>
 
 The following example registers a module version\. If this is the only version of the module registered in this account and region, CloudFormation sets this version as the default version\.
-
-#### YAML<a name="aws-resource-cloudformation-moduleversion--examples--Registering_a_module_version--yaml"></a>
-
-```
-AWSTemplateFormatVersion: 2010-09-09
-Resources:
-  ModuleVersion:
-    Type: AWS::CloudFormation::ModuleVersion
-    Properties:
-      ModuleName: My::Sample::Test::MODULE
-      ModulePackage: s3://my-sample-moduleversion-bucket/sample-module-package-v1.zip
-```
 
 #### JSON<a name="aws-resource-cloudformation-moduleversion--examples--Registering_a_module_version--json"></a>
 
@@ -142,29 +130,23 @@ Resources:
 }
 ```
 
-### Registering multiple module versions<a name="aws-resource-cloudformation-moduleversion--examples--Registering_multiple_module_versions"></a>
-
-The following example registers two versions of a module\. Note the following: 
-+ The example uses the `DependsOn` attribute to ensure that CloudFormation provisions version one before version two\.
-+ CloudFormation sets version one of the module as the default version, as it is registered first\. \(This assumes no other versions of the module are currently registered in this account and region\.\)
-
-#### YAML<a name="aws-resource-cloudformation-moduleversion--examples--Registering_multiple_module_versions--yaml"></a>
+#### YAML<a name="aws-resource-cloudformation-moduleversion--examples--Registering_a_module_version--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
-  ModuleVersion1:
+  ModuleVersion:
     Type: 'AWS::CloudFormation::ModuleVersion'
     Properties:
       ModuleName: 'My::Sample::Test::MODULE'
       ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v1.zip'
-  ModuleVersion2:
-    Type: 'AWS::CloudFormation::ModuleVersion'
-    Properties:
-      ModuleName: 'My::Sample::Test::MODULE'
-      ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v2.zip'
-    DependsOn: ModuleVersion1
 ```
+
+### Registering multiple module versions<a name="aws-resource-cloudformation-moduleversion--examples--Registering_multiple_module_versions"></a>
+
+The following example registers two versions of a module\. Note the following:
++ The example uses the `DependsOn` attribute to ensure that CloudFormation provisions version one before version two\.
++ CloudFormation sets version one of the module as the default version, as it is registered first\. \(This assumes no other versions of the module are currently registered in this account and Region\.\)
 
 #### JSON<a name="aws-resource-cloudformation-moduleversion--examples--Registering_multiple_module_versions--json"></a>
 
@@ -189,4 +171,22 @@ Resources:
         }
     }
 }
+```
+
+#### YAML<a name="aws-resource-cloudformation-moduleversion--examples--Registering_multiple_module_versions--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  ModuleVersion1:
+    Type: 'AWS::CloudFormation::ModuleVersion'
+    Properties:
+      ModuleName: 'My::Sample::Test::MODULE'
+      ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v1.zip'
+  ModuleVersion2:
+    Type: 'AWS::CloudFormation::ModuleVersion'
+    Properties:
+      ModuleName: 'My::Sample::Test::MODULE'
+      ModulePackage: 's3://my-sample-moduleversion-bucket/sample-module-package-v2.zip'
+    DependsOn: ModuleVersion1
 ```

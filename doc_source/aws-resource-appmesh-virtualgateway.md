@@ -67,7 +67,7 @@ Optional metadata that you can apply to the virtual gateway to assist with categ
 
 `VirtualGatewayName`  <a name="cfn-appmesh-virtualgateway-virtualgatewayname"></a>
 The name of the virtual gateway\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

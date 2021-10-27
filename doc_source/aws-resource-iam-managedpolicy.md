@@ -2,9 +2,11 @@
 
 Creates a new managed policy for your AWS account\.
 
-This operation creates a policy version with a version identifier of `v1` and sets v1 as the policy's default version\. For more information about policy versions, see [Versioning for Managed Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-versions.html) in the *IAM User Guide*\.
+This operation creates a policy version with a version identifier of `v1` and sets v1 as the policy's default version\. For more information about policy versions, see [Versioning for managed policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-versions.html) in the *IAM User Guide*\.
 
-For more information about managed policies in general, see [Managed Policies and Inline Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html) in the *IAM User Guide*\.
+As a best practice, you can validate your IAM policies\. To learn more, see [Validating IAM policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_policy-validator.html) in the *IAM User Guide*\.
+
+For more information about managed policies in general, see [Managed policies and inline policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html) in the *IAM User Guide*\.
 
 ## Syntax<a name="aws-resource-iam-managedpolicy-syntax"></a>
 
@@ -76,9 +78,10 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 
 `Path`  <a name="cfn-ec2-dhcpoptions-path"></a>
 The path for the policy\.  
-For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
+For more information about paths, see [IAM identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
 This parameter is optional\. If it is not included, it defaults to a slash \(/\)\.  
 This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of either a forward slash \(/\) by itself or a string that must begin and end with forward slashes\. In addition, it can contain any ASCII character from the \! \(`\u0021`\) through the DEL character \(`\u007F`\), including most punctuation characters, digits, and upper and lowercased letters\.  
+You cannot use an asterisk \(\*\) in the path name\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -89,6 +92,8 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 `PolicyDocument`  <a name="cfn-iam-managedpolicy-policydocument"></a>
 The JSON policy document that you want to use as the content for the new policy\.  
 You must provide policies in JSON format in IAM\. However, for AWS CloudFormation templates formatted in YAML, you can provide the policy in JSON or YAML format\. AWS CloudFormation always converts a YAML policy to JSON format before submitting it to IAM\.  
+The maximum length of the policy document that you can pass in this operation, including whitespace, is listed below\. To view the maximum character counts of a managed policy with no whitespaces, see [IAM and AWS STS character quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html#reference_iam-quotas-entity-length)\.  
+To learn more about JSON policy grammar, see [Grammar of the IAM JSON policy language](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_grammar.html) in the *IAM User Guide*\.   
 The [regex pattern](http://wikipedia.org/wiki/regex) used to validate this parameter is a string of characters consisting of the following:  
 + Any printable ASCII character ranging from the space character \(`\u0020`\) through the end of the ASCII character range
 + The printable characters in the Basic Latin and Latin\-1 Supplement character set \(through `\u00FF`\)
@@ -219,7 +224,7 @@ CreateTestDBPolicy:
     Description: Policy for creating a test database
     Path: /
     PolicyDocument:
-      Version: 2012-10-17
+      Version: "2012-10-17"
       Statement:
         - Effect: Allow
           Action: 'rds:CreateDBInstance'

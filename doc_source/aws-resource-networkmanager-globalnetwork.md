@@ -32,7 +32,7 @@ Properties:
 
 `Description`  <a name="cfn-networkmanager-globalnetwork-description"></a>
 A description of the global network\.  
-Length Constraints: Maximum length of 256 characters\.  
+Constraints: Maximum length of 256 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Dimensions](#cfn-networkfirewall-firewallpolicy-publishmetricaction-dimensions)" : Dimensions
+  "[Dimensions](#cfn-networkfirewall-firewallpolicy-publishmetricaction-dimensions)" : [ Dimension, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Dimensions](#cfn-networkfirewall-firewallpolicy-publishmetricaction-dimensions): 
-    Dimensions
+    - Dimension
 ```
 
 ## Properties<a name="aws-properties-networkfirewall-firewallpolicy-publishmetricaction-properties"></a>
@@ -26,6 +26,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Dimensions`  <a name="cfn-networkfirewall-firewallpolicy-publishmetricaction-dimensions"></a>
   
 *Required*: Yes  
-*Type*: [Dimensions](aws-properties-networkfirewall-firewallpolicy-dimensions.md)  
+*Type*: List of [Dimension](aws-properties-networkfirewall-firewallpolicy-dimension.md)  
 *Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

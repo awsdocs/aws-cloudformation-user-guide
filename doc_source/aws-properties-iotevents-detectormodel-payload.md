@@ -28,14 +28,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `ContentExpression`  <a name="cfn-iotevents-detectormodel-payload-contentexpression"></a>
 The content of the payload\. You can use a string expression that includes quoted strings \(`'<string>'`\), variables \(`$variable.<variable-name>`\), input values \(`$input.<input-name>.<path-to-datum>`\), string concatenations, and quoted strings that contain `${}` as the content\. The recommended maximum size of a content expression is 1 KB\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-iotevents-detectormodel-payload-type"></a>
 The value of the payload type can be either `STRING` or `JSON`\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Allowed values*: `JSON | STRING`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

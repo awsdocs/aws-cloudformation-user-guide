@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel AudioTrackSelection<a name="aws-properties-medialive-channel-audiotrackselection"></a>
 
-Audio Track Selection
+Information about the audio track to extract\.
+
+The parent of this entity is AudioSelectorSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-audiotrackselection-syntax"></a>
 

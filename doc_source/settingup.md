@@ -1,4 +1,4 @@
-# Setting up<a name="settingup"></a>
+# Setting up AWS CloudFormation<a name="settingup"></a>
 
 Before you start using AWS CloudFormation, you might need to know what IAM permissions you need, how to start logging AWS CloudFormation API calls, or what endpoints to use\. The following topics provide this information so that you can start using AWS CloudFormation\.
 

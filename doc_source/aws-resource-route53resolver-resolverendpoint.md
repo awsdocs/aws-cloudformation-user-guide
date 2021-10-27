@@ -71,7 +71,7 @@ The ID of one or more security groups that control access to this VPC\. The secu
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-route53resolver-resolverendpoint-tags"></a>
-A list of the tag keys and values that you want to associate with the endpoint\.  
+Route 53 Resolver doesn't support updating tags through CloudFormation\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `200`  
@@ -94,7 +94,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-route53resolver-resolverendpoint-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the resolver endpoint, such as `arn:aws:route53Resolver:us-east-1:123456789012:resolver-endpoint/resolver-endpoint-a1bzhi`\.
+The Amazon Resource Name \(ARN\) of the resolver endpoint, such as `arn:aws:route53resolver:us-east-1:123456789012:resolver-endpoint/resolver-endpoint-a1bzhi`\.
 
 `Direction`  <a name="Direction-fn::getatt"></a>
 Indicates whether the resolver endpoint allows inbound or outbound DNS queries\.

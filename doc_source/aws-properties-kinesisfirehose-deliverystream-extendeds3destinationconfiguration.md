@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CloudWatchLoggingOptions](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-cloudwatchloggingoptions)" : CloudWatchLoggingOptions,
   "[CompressionFormat](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-compressionformat)" : String,
   "[DataFormatConversionConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-dataformatconversionconfiguration)" : DataFormatConversionConfiguration,
+  "[DynamicPartitioningConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-dynamicpartitioningconfiguration)" : DynamicPartitioningConfiguration,
   "[EncryptionConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-encryptionconfiguration)" : EncryptionConfiguration,
   "[ErrorOutputPrefix](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-erroroutputprefix)" : String,
   "[Prefix](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-prefix)" : String,
@@ -36,6 +37,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CompressionFormat](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-compressionformat): String
   [DataFormatConversionConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-dataformatconversionconfiguration): 
     DataFormatConversionConfiguration
+  [DynamicPartitioningConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-dynamicpartitioningconfiguration): 
+    DynamicPartitioningConfiguration
   [EncryptionConfiguration](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-encryptionconfiguration): 
     EncryptionConfiguration
   [ErrorOutputPrefix](#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-erroroutputprefix): String
@@ -51,7 +54,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-properties"></a>
 
 `BucketARN`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-bucketarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon S3 bucket\. For constraints, see [ExtendedS3DestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Data Firehose API Reference*\.   
+The Amazon Resource Name \(ARN\) of the Amazon S3 bucket\. For constraints, see [ExtendedS3DestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Data Firehose API Reference*\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -84,8 +87,14 @@ The serializer, deserializer, and schema for converting data from the JSON forma
 *Type*: [DataFormatConversionConfiguration](aws-properties-kinesisfirehose-deliverystream-dataformatconversionconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`DynamicPartitioningConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-dynamicpartitioningconfiguration"></a>
+The configuration of the dynamic partitioning mechanism that creates targeted data sets from the streaming data by partitioning it based on partition keys\.  
+*Required*: No  
+*Type*: [DynamicPartitioningConfiguration](aws-properties-kinesisfirehose-deliverystream-dynamicpartitioningconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `EncryptionConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-encryptionconfiguration"></a>
-The encryption configuration for the Kinesis Data Firehose delivery stream\. The default value is `NoEncryption`\.   
+The encryption configuration for the Kinesis Data Firehose delivery stream\. The default value is `NoEncryption`\.  
 *Required*: No  
 *Type*: [EncryptionConfiguration](aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -100,7 +109,7 @@ A prefix that Kinesis Data Firehose evaluates and adds to failed records before 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Prefix`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-prefix"></a>
-The `YYYY/MM/DD/HH` time format prefix is automatically used for delivered Amazon S3 files\. For more information, see [ExtendedS3DestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Data Firehose API Reference*\.   
+The `YYYY/MM/DD/HH` time format prefix is automatically used for delivered Amazon S3 files\. For more information, see [ExtendedS3DestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Data Firehose API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -115,7 +124,7 @@ The data processing configuration for the Kinesis Data Firehose delivery stream\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleARN`  <a name="cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the AWS credentials\. For constraints, see [ExtendedS3DestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Data Firehose API Reference*\.   
+The Amazon Resource Name \(ARN\) of the AWS credentials\. For constraints, see [ExtendedS3DestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_ExtendedS3DestinationConfiguration.html) in the *Amazon Kinesis Data Firehose API Reference*\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

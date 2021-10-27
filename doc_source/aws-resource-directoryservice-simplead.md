@@ -129,9 +129,9 @@ The IP addresses of the DNS servers for the directory, such as `[ "172.31.3.154"
 
 The following example creates a Simple AD directory, where the directory DNS name is `corp.example.com`:
 
-### Create a Simple AD Directory<a name="aws-resource-directoryservice-simplead--examples--Create_a_Simple_AD_Directory"></a>
+### Create a Simple AD Directory<a name="aws-resource-directoryservice-simplead--examples--Create_a__Directory"></a>
 
-#### JSON<a name="aws-resource-directoryservice-simplead--examples--Create_a_Simple_AD_Directory--json"></a>
+#### JSON<a name="aws-resource-directoryservice-simplead--examples--Create_a__Directory--json"></a>
 
 ```
 "myDirectory" : {
@@ -148,7 +148,7 @@ The following example creates a Simple AD directory, where the directory DNS nam
 }
 ```
 
-#### YAML<a name="aws-resource-directoryservice-simplead--examples--Create_a_Simple_AD_Directory--yaml"></a>
+#### YAML<a name="aws-resource-directoryservice-simplead--examples--Create_a__Directory--yaml"></a>
 
 ```
 myDirectory: 

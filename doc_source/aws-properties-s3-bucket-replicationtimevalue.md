@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Minutes`  <a name="cfn-s3-bucket-replicationtimevalue-minutes"></a>
  Contains an integer specifying time in minutes\.   
- Valid values: 15 minutes\.   
+ Valid value: 15  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

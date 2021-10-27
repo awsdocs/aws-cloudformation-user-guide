@@ -63,7 +63,7 @@ If you update this property, you must also update the `CidrBlock` property\.
 
 `CidrBlock`  <a name="cfn-ec2-subnet-cidrblock"></a>
 The IPv4 CIDR block assigned to the subnet\.  
-If you update this property, you must also update the `AvailabilityZone` property\.  
+If you update this property, we create a new subnet, and then delete the existing one\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -139,7 +139,7 @@ The ID of the subnet's VPC, such as `vpc-11ad4878`\.
 
 ### Subnet<a name="aws-resource-ec2-subnet--examples--Subnet"></a>
 
-The following example uses the VPC ID from a VPC named myVPC that was declared elsewhere in the same template\.
+The following example uses the VPC ID from a VPC named myVPC that was declared elsewhere in the same template\. For an example with IPv6 enabled, see [Creating an IPv6 enabled VPC](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-cidr.html#intrinsic-function-reference-cidr-example2)\.
 
 #### JSON<a name="aws-resource-ec2-subnet--examples--Subnet--json"></a>
 
@@ -150,7 +150,7 @@ The following example uses the VPC ID from a VPC named myVPC that was declared e
       "VpcId" : { "Ref" : "myVPC" },
       "CidrBlock" : "10.0.0.0/24",
       "AvailabilityZone" : "us-east-1a",
-      "Tags" : [ { "Key" : "foo", "Value" : "bar" } ]
+      "Tags" : [ { "Key" : "stack", "Value" : "production" } ]
    }
 }
 ```
@@ -166,11 +166,11 @@ The following example uses the VPC ID from a VPC named myVPC that was declared e
       CidrBlock: 10.0.0.0/24
       AvailabilityZone: "us-east-1a"
       Tags:
-      - Key: foo
-        Value: bar
+      - Key: stack
+        Value: production
 ```
 
 ## See also<a name="aws-resource-ec2-subnet--seealso"></a>
 +  [CreateSubnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSubnet.html) in the *Amazon EC2 API Reference*
-+  [Your VPC and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon Virtual Private Cloud User Guide*
++  [VPC and subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon VPC User Guide*
 

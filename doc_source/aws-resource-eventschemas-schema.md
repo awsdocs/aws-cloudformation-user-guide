@@ -115,9 +115,9 @@ The version number of the schema\.
 Resources:
   ExecutionStatusChangeSchema:
     Type: AWS::EventSchemas::Schema
-    Properties:Ref
-      Registry: 'aws.events'
-      Name: ExecutionStatusChange
+    Properties
+      RegistryName: 'aws.events'
+      SchemaName: ExecutionStatusChange
       Description: 'event emitted when the status of a state machine execution change'
       Type: OpenApi3
       Content: >
@@ -127,6 +127,7 @@ Resources:
             "version": "1.0.0",
             "title": "StepFunctionsExecutionStatusChange"
           },
+          "paths":{}
           "components": {
             "schemas": {
               "StepFunctionsExecutionStatusChange": {

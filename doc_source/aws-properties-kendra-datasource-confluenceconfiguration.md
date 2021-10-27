@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[AttachmentConfiguration](#cfn-kendra-datasource-confluenceconfiguration-attachmentconfiguration)" : ConfluenceAttachmentConfiguration,
   "[BlogConfiguration](#cfn-kendra-datasource-confluenceconfiguration-blogconfiguration)" : ConfluenceBlogConfiguration,
-  "[ExclusionPatterns](#cfn-kendra-datasource-confluenceconfiguration-exclusionpatterns)" : DataSourceInclusionsExclusionsStrings,
-  "[InclusionPatterns](#cfn-kendra-datasource-confluenceconfiguration-inclusionpatterns)" : DataSourceInclusionsExclusionsStrings,
+  "[ExclusionPatterns](#cfn-kendra-datasource-confluenceconfiguration-exclusionpatterns)" : [ String, ... ],
+  "[InclusionPatterns](#cfn-kendra-datasource-confluenceconfiguration-inclusionpatterns)" : [ String, ... ],
   "[PageConfiguration](#cfn-kendra-datasource-confluenceconfiguration-pageconfiguration)" : ConfluencePageConfiguration,
   "[SecretArn](#cfn-kendra-datasource-confluenceconfiguration-secretarn)" : String,
   "[ServerUrl](#cfn-kendra-datasource-confluenceconfiguration-serverurl)" : String,
@@ -31,9 +31,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BlogConfiguration](#cfn-kendra-datasource-confluenceconfiguration-blogconfiguration): 
     ConfluenceBlogConfiguration
   [ExclusionPatterns](#cfn-kendra-datasource-confluenceconfiguration-exclusionpatterns): 
-    DataSourceInclusionsExclusionsStrings
+    - String
   [InclusionPatterns](#cfn-kendra-datasource-confluenceconfiguration-inclusionpatterns): 
-    DataSourceInclusionsExclusionsStrings
+    - String
   [PageConfiguration](#cfn-kendra-datasource-confluenceconfiguration-pageconfiguration): 
     ConfluencePageConfiguration
   [SecretArn](#cfn-kendra-datasource-confluenceconfiguration-secretarn): String
@@ -62,14 +62,14 @@ Specifies configuration information for indexing attachments to Confluence blogs
 `ExclusionPatterns`  <a name="cfn-kendra-datasource-confluenceconfiguration-exclusionpatterns"></a>
 A list of regular expression patterns that apply to a URL on the Confluence server\. An exclusion pattern can apply to a blog post, a page, a space, or an attachment\. Items that match the pattern are excluded from the index\. Items that don't match the pattern are included in the index\. If a item matches both an exclusion pattern and an inclusion pattern, the item isn't included in the index\.  
 *Required*: No  
-*Type*: [DataSourceInclusionsExclusionsStrings](aws-properties-kendra-datasource-datasourceinclusionsexclusionsstrings.md)  
+*Type*: List of String  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InclusionPatterns`  <a name="cfn-kendra-datasource-confluenceconfiguration-inclusionpatterns"></a>
 A list of regular expression patterns that apply to a URL on the Confluence server\. An inclusion pattern can apply to a blog post, a page, a space, or an attachment\. Items that match the patterns are included in the index\. Items that don't match the pattern are excluded from the index\. If an item matches both an inclusion pattern and an exclusion pattern, the item isn't included in the index\.  
 *Required*: No  
-*Type*: [DataSourceInclusionsExclusionsStrings](aws-properties-kendra-datasource-datasourceinclusionsexclusionsstrings.md)  
+*Type*: List of String  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -80,7 +80,7 @@ Specifies configuration information for indexing Confluence pages\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretArn`  <a name="cfn-kendra-datasource-confluenceconfiguration-secretarn"></a>
-The Amazon Resource Name \(ARN\) of an AWS Secrets Manager secret that contains the key/value pairs required to connect to your Confluence server\. The secret must contain a JSON structure with the following keys:  
+The Amazon Resource Name \(ARN\) of an AWS Secrets Managersecret that contains the key/value pairs required to connect to your Confluence server\. The secret must contain a JSON structure with the following keys:  
 + username \- The user name or email address of a user with administrative privileges for the Confluence server\.
 + password \- The password associated with the user logging in to the Confluence server\.
 *Required*: Yes  

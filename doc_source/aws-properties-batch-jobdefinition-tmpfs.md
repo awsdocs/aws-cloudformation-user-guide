@@ -3,7 +3,7 @@
 The container path, mount options, and size of the tmpfs mount\.
 
 **Note**  
-This object isn't applicable to jobs running on Fargate resources\.
+This object isn't applicable to jobs that are running on Fargate resources\.
 
 ## Syntax<a name="aws-properties-batch-jobdefinition-tmpfs-syntax"></a>
 

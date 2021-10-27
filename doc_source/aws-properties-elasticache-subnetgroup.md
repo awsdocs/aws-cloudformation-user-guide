@@ -14,7 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CacheSubnetGroupName](#cfn-elasticache-subnetgroup-cachesubnetgroupname)" : String,
       "[Description](#cfn-elasticache-subnetgroup-description)" : String,
-      "[SubnetIds](#cfn-elasticache-subnetgroup-subnetids)" : [ String, ... ]
+      "[SubnetIds](#cfn-elasticache-subnetgroup-subnetids)" : [ String, ... ],
+      "[Tags](#cfn-elasticache-subnetgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -28,6 +29,8 @@ Properties:
   [Description](#cfn-elasticache-subnetgroup-description): String
   [SubnetIds](#cfn-elasticache-subnetgroup-subnetids): 
     - String
+  [Tags](#cfn-elasticache-subnetgroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-properties-elasticache-subnetgroup-properties"></a>
@@ -50,6 +53,12 @@ The description for the cache subnet group\.
 The EC2 subnet IDs for the cache subnet group\.  
 *Required*: Yes  
 *Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-elasticache-subnetgroup-tags"></a>
+A tag that can be added to an ElastiCache subnet group\. Tags are composed of a Key/Value pair\. You can use tags to categorize and track all your subnet groups\. A tag with a null Value is permitted\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-properties-elasticache-subnetgroup-return-values"></a>

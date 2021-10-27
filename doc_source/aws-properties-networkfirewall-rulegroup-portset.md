@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Definition](#cfn-networkfirewall-rulegroup-portset-definition)" : VariableDefinitionList
+  "[Definition](#cfn-networkfirewall-rulegroup-portset-definition)" : [ String, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Definition](#cfn-networkfirewall-rulegroup-portset-definition): 
-    VariableDefinitionList
+    - String
 ```
 
 ## Properties<a name="aws-properties-networkfirewall-rulegroup-portset-properties"></a>
@@ -26,5 +26,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Definition`  <a name="cfn-networkfirewall-rulegroup-portset-definition"></a>
 The set of port ranges\.   
 *Required*: No  
-*Type*: [VariableDefinitionList](aws-properties-networkfirewall-rulegroup-variabledefinitionlist.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

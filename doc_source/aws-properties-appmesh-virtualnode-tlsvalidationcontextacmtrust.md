@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualNode TlsValidationContextAcmTrust<a name="aws-properties-appmesh-virtualnode-tlsvalidationcontextacmtrust"></a>
 
-An object that represents a TLS validation context trust for an AWS Certicate Manager \(ACM\) certificate\.
+An object that represents a Transport Layer Security \(TLS\) validation context trust for an AWS Certificate Manager certificate\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualnode-tlsvalidationcontextacmtrust-syntax"></a>
 

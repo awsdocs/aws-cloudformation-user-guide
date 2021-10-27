@@ -59,7 +59,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### ConfigurationAssociation<a name="aws-resource-amazonmq-configurationassociation--examples--ConfigurationAssociation"></a>
 
-The following example creates an Amazon MQ ActiveMQ ConfigurationAssociation\.
+The following example creates an Amazon MQ for ActiveMQ ConfigurationAssociation\.
 
 #### JSON<a name="aws-resource-amazonmq-configurationassociation--examples--ConfigurationAssociation--json"></a>
 

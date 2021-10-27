@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[DocumentDataFieldName](#cfn-kendra-datasource-salesforcestandardknowledgearticletypeconfiguration-documentdatafieldname)" : String,
   "[DocumentTitleFieldName](#cfn-kendra-datasource-salesforcestandardknowledgearticletypeconfiguration-documenttitlefieldname)" : String,
-  "[FieldMappings](#cfn-kendra-datasource-salesforcestandardknowledgearticletypeconfiguration-fieldmappings)" : DataSourceToIndexFieldMappingList
+  "[FieldMappings](#cfn-kendra-datasource-salesforcestandardknowledgearticletypeconfiguration-fieldmappings)" : [ DataSourceToIndexFieldMapping, ... ]
 }
 ```
 
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DocumentDataFieldName](#cfn-kendra-datasource-salesforcestandardknowledgearticletypeconfiguration-documentdatafieldname): String
   [DocumentTitleFieldName](#cfn-kendra-datasource-salesforcestandardknowledgearticletypeconfiguration-documenttitlefieldname): String
   [FieldMappings](#cfn-kendra-datasource-salesforcestandardknowledgearticletypeconfiguration-fieldmappings): 
-    DataSourceToIndexFieldMappingList
+    - DataSourceToIndexFieldMapping
 ```
 
 ## Properties<a name="aws-properties-kendra-datasource-salesforcestandardknowledgearticletypeconfiguration-properties"></a>
@@ -48,6 +48,6 @@ The name of the field that contains the document title\.
 `FieldMappings`  <a name="cfn-kendra-datasource-salesforcestandardknowledgearticletypeconfiguration-fieldmappings"></a>
 One or more objects that map fields in the knowledge article to Amazon Kendra index fields\. The index field must exist before you can map a Salesforce field to it\.  
 *Required*: No  
-*Type*: [DataSourceToIndexFieldMappingList](aws-properties-kendra-datasource-datasourcetoindexfieldmappinglist.md)  
+*Type*: List of [DataSourceToIndexFieldMapping](aws-properties-kendra-datasource-datasourcetoindexfieldmapping.md)  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

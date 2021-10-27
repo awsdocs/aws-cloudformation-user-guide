@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[ApplicationArn](#cfn-cognito-userpoolclient-analyticsconfiguration-applicationarn)" : String,
   "[ApplicationId](#cfn-cognito-userpoolclient-analyticsconfiguration-applicationid)" : String,
   "[ExternalId](#cfn-cognito-userpoolclient-analyticsconfiguration-externalid)" : String,
   "[RoleArn](#cfn-cognito-userpoolclient-analyticsconfiguration-rolearn)" : String,
@@ -23,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-userpoolclient-analyticsconfiguration-syntax.yaml"></a>
 
 ```
+  [ApplicationArn](#cfn-cognito-userpoolclient-analyticsconfiguration-applicationarn): String
   [ApplicationId](#cfn-cognito-userpoolclient-analyticsconfiguration-applicationid): String
   [ExternalId](#cfn-cognito-userpoolclient-analyticsconfiguration-externalid): String
   [RoleArn](#cfn-cognito-userpoolclient-analyticsconfiguration-rolearn): String
@@ -30,6 +32,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-cognito-userpoolclient-analyticsconfiguration-properties"></a>
+
+`ApplicationArn`  <a name="cfn-cognito-userpoolclient-analyticsconfiguration-applicationarn"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApplicationId`  <a name="cfn-cognito-userpoolclient-analyticsconfiguration-applicationid"></a>
 The application ID for an Amazon Pinpoint application\.  

@@ -1,6 +1,6 @@
 # AWS::ElastiCache::UserGroup<a name="aws-resource-elasticache-usergroup"></a>
 
-For Redis engine version 6\.x onwards: Creates a Redis user group\. For more information, see [Using Role Based Access Control \(RBAC\)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html)\. 
+For Redis engine version 6\.x onwards: Creates a Redis user group\. For more information, see [Using Role Based Access Control \(RBAC\)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html) 
 
 ## Syntax<a name="aws-resource-elasticache-usergroup-syntax"></a>
 
@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Engine](#cfn-elasticache-usergroup-engine)" : String,
       "[UserGroupId](#cfn-elasticache-usergroup-usergroupid)" : String,
-      "[UserIds](#cfn-elasticache-usergroup-userids)" : UserIdList
+      "[UserIds](#cfn-elasticache-usergroup-userids)" : [ String, ... ]
     }
 }
 ```
@@ -27,13 +27,13 @@ Properties:
   [Engine](#cfn-elasticache-usergroup-engine): String
   [UserGroupId](#cfn-elasticache-usergroup-usergroupid): String
   [UserIds](#cfn-elasticache-usergroup-userids): 
-    UserIdList
+    - String
 ```
 
 ## Properties<a name="aws-resource-elasticache-usergroup-properties"></a>
 
 `Engine`  <a name="cfn-elasticache-usergroup-engine"></a>
-The current supported value is Redis\.   
+The current supported value is redis\.   
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `[a-zA-Z]*`  
@@ -46,9 +46,9 @@ The ID of the user group\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UserIds`  <a name="cfn-elasticache-usergroup-userids"></a>
-The list of user IDs that belong to the user group\.  
+The list of user IDs that belong to the user group\. A user named `default` must be included\.  
 *Required*: No  
-*Type*: [UserIdList](aws-properties-elasticache-usergroup-useridlist.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-elasticache-usergroup-return-values"></a>
@@ -69,12 +69,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the user group\.
-
-`PendingChanges`  <a name="PendingChanges-fn::getatt"></a>
-A list of updates being applied to the user groups\.
-
-`ReplicationGroupIds`  <a name="ReplicationGroupIds-fn::getatt"></a>
-A list of replication groups that the user group can access\.
 
 `Status`  <a name="Status-fn::getatt"></a>
 Indicates user group status\. Can be "creating", "active", "modifying", "deleting"\.

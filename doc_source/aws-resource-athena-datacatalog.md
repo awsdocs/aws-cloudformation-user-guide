@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-athena-datacatalog-description)" : String,
       "[Name](#cfn-athena-datacatalog-name)" : String,
       "[Parameters](#cfn-athena-datacatalog-parameters)" : {Key : Value, ...},
-      "[Tags](#cfn-athena-datacatalog-tags)" : Tags,
+      "[Tags](#cfn-athena-datacatalog-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-athena-datacatalog-type)" : String
     }
 }
@@ -31,7 +31,7 @@ Properties:
   [Parameters](#cfn-athena-datacatalog-parameters): 
     Key : Value
   [Tags](#cfn-athena-datacatalog-tags): 
-    Tags
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Type](#cfn-athena-datacatalog-type): String
 ```
 
@@ -47,7 +47,7 @@ A description of the data catalog\.
 The name of the data catalog\. The catalog name must be unique for the AWS account and can use a maximum of 128 alphanumeric, underscore, at sign, or hyphen characters\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Parameters`  <a name="cfn-athena-datacatalog-parameters"></a>
 Specifies the Lambda function or functions to use for the data catalog\. The mapping used depends on the catalog type\.   
@@ -61,15 +61,20 @@ Specifies the Lambda function or functions to use for the data catalog\. The map
   + A composite Lambda function that processes both metadata and data uses the following syntax\.
 
     `function=lambda_arn`
-+ The `GLUE` type has no parameters\.
++ The `GLUE` type takes a catalog ID parameter and is required\. The `catalog_id` is the account ID of the AWS account to which the Glue catalog belongs\.
+
+  `catalog-id=catalog_id`
+  + The `GLUE` data catalog type also applies to the default `AwsDataCatalog` that already exists in your account, of which you can have only one and cannot modify\.
+  + Queries that specify a GLUE data catalog other than the default `AwsDataCatalog` must be run on Athena engine version 2\.
+  + In Regions where Athena engine version 2 is not available, creating new GLUE data catalogs results in an `INVALID_INPUT` error\.
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-athena-datacatalog-tags"></a>
-An optional list of comma separated tags \(key\-value pairs\) that are custom attributes for the data catalog\.  
+The tags \(key\-value pairs\) to associate with this resource\.  
 *Required*: No  
-*Type*: [Tags](aws-properties-athena-datacatalog-tags.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-athena-datacatalog-type"></a>

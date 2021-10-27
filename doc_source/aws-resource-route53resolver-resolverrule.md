@@ -74,7 +74,7 @@ Currently, only Resolver can create rules that have a value of `RECURSIVE` for `
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-route53resolver-resolverrule-tags"></a>
-A list of the tag keys and values that you want to associate with the endpoint\.  
+Route 53 Resolver doesn't support updating tags through CloudFormation\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `200`  
@@ -103,7 +103,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-route53resolver-resolverrule-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the resolver rule, such as `arn:aws:route53Resolver:us-east-1:123456789012:resolver-rule/resolver-rule-a1bzhi`\.
+The Amazon Resource Name \(ARN\) of the resolver rule, such as `arn:aws:route53resolver:us-east-1:123456789012:resolver-rule/resolver-rule-a1bzhi`\.
 
 `DomainName`  <a name="DomainName-fn::getatt"></a>
 DNS queries for this domain name are forwarded to the IP addresses that are specified in TargetIps\. If a query matches multiple resolver rules \(example\.com and www\.example\.com\), the query is routed using the resolver rule that contains the most specific domain name \(www\.example\.com\)\.
@@ -161,23 +161,23 @@ The following example creates an Amazon Route 53 outbound resolver rule\.
 #### YAML<a name="aws-resource-route53resolver-resolverrule--examples--Create_Resolver_rule--yaml"></a>
 
 ```
-Type : AWS::Route53Resolver::ResolverRule
-Properties : 
-  DomainName : example.com
-  Name : MyRule
-  ResolverEndpointId : rslvr-out-fdc049932dexample
-  RuleType : FORWARD 
-  Tags : 
+Type: AWS::Route53Resolver::ResolverRule
+Properties: 
+  DomainName: example.com
+  Name: MyRule
+  ResolverEndpointId: rslvr-out-fdc049932dexample
+  RuleType: FORWARD 
+  Tags: 
     - 
-      Key : LineOfBusiness
-      Value : Engineering
-  TargetIps :
+      Key: LineOfBusiness
+      Value: Engineering
+  TargetIps:
     - 
-      Ip : 192.0.2.6
-      Port : 53
+      Ip: 192.0.2.6
+      Port: 53
     -  
-      Ip : 192.0.2.99
-      Port : 53
+      Ip: 192.0.2.99
+      Port: 53
 ```
 
 ## See also<a name="aws-resource-route53resolver-resolverrule--seealso"></a>

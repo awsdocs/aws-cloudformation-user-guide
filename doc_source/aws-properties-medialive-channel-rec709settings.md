@@ -2,6 +2,8 @@
 
 Rec709 Settings
 
+The parents of this entity are H264ColorSpaceSettings and H265ColorSpaceSettings\.
+
 ## Syntax<a name="aws-properties-medialive-channel-rec709settings-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

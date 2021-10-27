@@ -10,7 +10,7 @@ Fargate profiles are immutable\. However, you can create a new updated profile t
 
 If any Fargate profiles in a cluster are in the `DELETING` status, you must wait for that Fargate profile to finish deleting before you can create any other profiles in that cluster\.
 
-For more information, see [AWS Fargate Profile](https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html) in the *Amazon EKS User Guide*\.
+For more information, see [ AWS Fargate Profile](https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html) in the *Amazon EKS User Guide*\.
 
 ## Syntax<a name="aws-resource-eks-fargateprofile-syntax"></a>
 
@@ -111,11 +111,11 @@ The ARN of the cluster, such as `arn:aws:eks:us-west-2:666666666666:fargateprofi
 
 ## Examples<a name="aws-resource-eks-fargateprofile--examples"></a>
 
-### Create a Fargate profile<a name="aws-resource-eks-fargateprofile--examples--Create_a_Fargate_profile"></a>
+### Create a Fargate profile<a name="aws-resource-eks-fargateprofile--examples--Create_a__profile"></a>
 
 The following example creates a Fargate profile for pods deployed to a namespace with the name `my-namespace` that have a label with a key value pair assigned to them\.
 
-#### JSON<a name="aws-resource-eks-fargateprofile--examples--Create_a_Fargate_profile--json"></a>
+#### JSON<a name="aws-resource-eks-fargateprofile--examples--Create_a__profile--json"></a>
 
 ```
 {
@@ -144,7 +144,7 @@ The following example creates a Fargate profile for pods deployed to a namespace
 }
 ```
 
-#### YAML<a name="aws-resource-eks-fargateprofile--examples--Create_a_Fargate_profile--yaml"></a>
+#### YAML<a name="aws-resource-eks-fargateprofile--examples--Create_a__profile--yaml"></a>
 
 ```
 Resources:
@@ -165,5 +165,5 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-eks-fargateprofile--seealso"></a>
-+  [AWS Fargate profile](https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html) in the *Amazon EKS User Guide *\.
-+  [CreateFargateProfile](https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateFargateProfile.html) in the *Amazon EKS API Reference *\.
++  [Fargate profile](https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html) in the *Amazon EKS User Guide *\.
++  [https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateFargateProfile.html](https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateFargateProfile.html) in the *Amazon EKS API Reference *\.

@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application InputProcessingConfiguration<a name="aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration"></a>
 
-For an SQL\-based Amazon Kinesis Data Analytics application, describes a processor that is used to preprocess the records in the stream before being processed by your application code\. Currently, the only input processor available is [AWS Lambda](https://docs.aws.amazon.com/lambda/)\.
+For an SQL\-based Amazon Kinesis Data Analytics application, describes a processor that is used to preprocess the records in the stream before being processed by your application code\. Currently, the only input processor available is [Amazon Lambda](https://docs.aws.amazon.com/lambda/)\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration-syntax"></a>
 

@@ -12,9 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::StepFunctions::StateMachine",
   "Properties" : {
+      "[Definition](#cfn-stepfunctions-statemachine-definition)" : Definition,
       "[DefinitionS3Location](#cfn-stepfunctions-statemachine-definitions3location)" : S3Location,
       "[DefinitionString](#cfn-stepfunctions-statemachine-definitionstring)" : String,
-      "[DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions)" : DefinitionSubstitutions,
+      "[DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions)" : {Key : Value, ...},
       "[LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration)" : LoggingConfiguration,
       "[RoleArn](#cfn-stepfunctions-statemachine-rolearn)" : String,
       "[StateMachineName](#cfn-stepfunctions-statemachine-statemachinename)" : String,
@@ -30,12 +31,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::StepFunctions::StateMachine
 Properties: 
+  [Definition](#cfn-stepfunctions-statemachine-definition): 
+    Definition
   [DefinitionS3Location](#cfn-stepfunctions-statemachine-definitions3location): 
     S3Location
   [DefinitionString](#cfn-stepfunctions-statemachine-definitionstring): 
     String
   [DefinitionSubstitutions](#cfn-stepfunctions-statemachine-definitionsubstitutions): 
-    DefinitionSubstitutions
+    Key : Value
   [LoggingConfiguration](#cfn-stepfunctions-statemachine-loggingconfiguration): 
     LoggingConfiguration
   [RoleArn](#cfn-stepfunctions-statemachine-rolearn): String
@@ -49,14 +52,20 @@ Properties:
 
 ## Properties<a name="aws-resource-stepfunctions-statemachine-properties"></a>
 
+`Definition`  <a name="cfn-stepfunctions-statemachine-definition"></a>
+The Amazon States Language definition of the state machine\. The state machine definition must be in JSON or YAML, and the format of the object must match the format of your AWS Step Functions template file\. See [Amazon States Language](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html)\.  
+*Required*: No  
+*Type*: [Definition](aws-properties-stepfunctions-statemachine-definition.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DefinitionS3Location`  <a name="cfn-stepfunctions-statemachine-definitions3location"></a>
-The name of the S3 bucket where the state machine definition is stored\. The state machine definition must be a JSON file\.  
+The name of the S3 bucket where the state machine definition is stored\. The state machine definition must be a JSON or YAML file\.  
 *Required*: No  
 *Type*: [S3Location](aws-properties-stepfunctions-statemachine-s3location.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefinitionString`  <a name="cfn-stepfunctions-statemachine-definitionstring"></a>
-The Amazon States Language definition of the state machine\. See [Amazon States Language](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html)\.  
+The Amazon States Language definition of the state machine\. The state machine definition must be in JSON\. See [Amazon States Language](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -64,7 +73,7 @@ The Amazon States Language definition of the state machine\. See [Amazon States 
 `DefinitionSubstitutions`  <a name="cfn-stepfunctions-statemachine-definitionsubstitutions"></a>
 A map \(string to string\) that specifies the mappings for placeholder variables in the state machine definition\. This enables the customer to inject values obtained at runtime, for example from intrinsic functions, in the state machine definition\. Variables can be template parameter names, resource logical IDs, resource attributes, or a variable in a key\-value map\.   
 *Required*: No  
-*Type*: [DefinitionSubstitutions](aws-properties-stepfunctions-statemachine-definitionsubstitutions.md)  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoggingConfiguration`  <a name="cfn-stepfunctions-statemachine-loggingconfiguration"></a>
@@ -262,17 +271,17 @@ In this example template, `HelloFunction:` is defined for the `DefinitionSubstit
 ```
 AWSTemplateFormatVersion: "2010-09-09"
 Description: An example template for a Step Functions state machine.
-  Resources:
-    MyStateMachine:
-      Type: AWS::StepFunctions::StateMachine
-      Properties:
-        StateMachineName: HelloWorld-StateMachine
-        DefinitionS3Location:
-          Bucket: example_bucket
-          Key: hello_world.json
-        DefinitionSubstitutions:
-          HelloFunction: arn:aws:lambda:us-east-1:111122223333:function:HelloFunction
-        RoleArn: arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1
+Resources:
+  MyStateMachine:
+    Type: AWS::StepFunctions::StateMachine
+    Properties:
+      StateMachineName: HelloWorld-StateMachine
+      DefinitionS3Location:
+        Bucket: example_bucket
+        Key: hello_world.json
+      DefinitionSubstitutions:
+        HelloFunction: arn:aws:lambda:us-east-1:111122223333:function:HelloFunction
+      RoleArn: arn:aws:iam::111122223333:role/service-role/StatesExecutionRole-us-east-1
 ```
 
 ### hello\_world\.json<a name="aws-resource-stepfunctions-statemachine--examples--hello_world.json"></a>

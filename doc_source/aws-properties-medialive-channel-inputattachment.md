@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-inputattachment-properties"></a>
 
 `AutomaticInputFailoverSettings`  <a name="cfn-medialive-channel-inputattachment-automaticinputfailoversettings"></a>
-User\-specified settings for defining what the conditions are for declaring the input unhealthy and failing over to a different input\.  
+Settings to implement automatic input failover in this input\.   
 *Required*: No  
 *Type*: [AutomaticInputFailoverSettings](aws-properties-medialive-channel-automaticinputfailoversettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

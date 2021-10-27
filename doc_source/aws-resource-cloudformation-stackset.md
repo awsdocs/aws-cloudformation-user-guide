@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AdministrationRoleARN](#cfn-cloudformation-stackset-administrationrolearn)" : String,
       "[AutoDeployment](#cfn-cloudformation-stackset-autodeployment)" : AutoDeployment,
+      "[CallAs](#cfn-cloudformation-stackset-callas)" : String,
       "[Capabilities](#cfn-cloudformation-stackset-capabilities)" : [ String, ... ],
       "[Description](#cfn-cloudformation-stackset-description)" : String,
       "[ExecutionRoleName](#cfn-cloudformation-stackset-executionrolename)" : String,
@@ -37,6 +38,7 @@ Properties:
   [AdministrationRoleARN](#cfn-cloudformation-stackset-administrationrolearn): String
   [AutoDeployment](#cfn-cloudformation-stackset-autodeployment): 
     AutoDeployment
+  [CallAs](#cfn-cloudformation-stackset-callas): String
   [Capabilities](#cfn-cloudformation-stackset-capabilities): 
     - String
   [Description](#cfn-cloudformation-stackset-description): String
@@ -67,9 +69,22 @@ Use customized administrator roles to control which users or groups can manage s
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutoDeployment`  <a name="cfn-cloudformation-stackset-autodeployment"></a>
-\[`Service-managed` permissions\] Describes whether StackSets automatically deploys to AWS Organizations accounts that are added to a target organization or organizational unit \(OU\)\.   
+\[`Service-managed` permissions\] Describes whether StackSets automatically deploys to AWS Organizations accounts that are added to a target organization or organizational unit \(OU\)\.  
 *Required*: No  
 *Type*: [AutoDeployment](aws-properties-cloudformation-stackset-autodeployment.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CallAs`  <a name="cfn-cloudformation-stackset-callas"></a>
+\[Service\-managed permissions\] Specifies whether you are acting as an account administrator in the organization's management account or as a delegated administrator in a member account\.  
+By default, `SELF` is specified\. Use `SELF` for stack sets with self\-managed permissions\.  
++ To create a stack set with service\-managed permissions while signed in to the management account, specify `SELF`\.
++ To create a stack set with service\-managed permissions while signed in to a delegated administrator account, specify `DELEGATED_ADMIN`\.
+
+  Your AWS account must be registered as a delegated admin in the management account\. For more information, see [Register a delegated administrator](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html) in the *AWS CloudFormation User Guide*\.
+Stack sets with service\-managed permissions are created in the management account, including stack sets that are created by delegated administrators\.  
+*Valid Values*: `SELF` \| `DELEGATED_ADMIN`  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Capabilities`  <a name="cfn-cloudformation-stackset-capabilities"></a>
@@ -87,7 +102,7 @@ A description of the stack set\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExecutionRoleName`  <a name="cfn-cloudformation-stackset-executionrolename"></a>
-The name of the IAM execution role to use to create the stack set\. If you do not specify an execution role, AWS CloudFormation uses the AWSCloudFormationStackSetExecutionRole role for the stack set operation\.  
+The name of the IAM execution role to use to create the stack set\. If you don't specify an execution role, AWS CloudFormation uses the `AWSCloudFormationStackSetExecutionRole` role for the stack set operation\.  
 *Minimum*: `1`  
 *Maximum*: `64`  
 *Pattern*: `[a-zA-Z_0-9+=,.@-]+`  
@@ -140,7 +155,7 @@ The key\-value pairs to associate with this stack set and the stacks created fro
 
 `TemplateBody`  <a name="cfn-cloudformation-stackset-templatebody"></a>
 The structure that contains the template body, with a minimum length of 1 byte and a maximum length of 51,200 bytes\.  
-You must include either `TemplateURL` or `TemplateBody` in a StackSet, but you cannot use both\.  
+You must include either `TemplateURL` or `TemplateBody` in a StackSet, but you can't use both\. Dynamic references in the `TemplateBody` may not work correctly in all cases\. It's recommended to pass templates containing dynamic references through `TemplateUrl` instead\.  
 *Minimum*: `1`  
 *Maximum*: `51200`  
 *Required*: Conditional  
@@ -148,8 +163,8 @@ You must include either `TemplateURL` or `TemplateBody` in a StackSet, but you c
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TemplateURL`  <a name="cfn-cloudformation-stackset-templateurl"></a>
-Location of file containing the template body\. The URL must point to a template \(max size: 460,800 bytes\) that is located in an Amazon S3 bucket\.  
-You must include either `TemplateURL` or `TemplateBody` in a StackSet, but you cannot use both\.  
+Location of file containing the template body\. The URL must point to a template \(max size: 460,800 bytes\) that's located in an Amazon S3 bucket\.  
+You must include either `TemplateURL` or `TemplateBody` in a StackSet, but you can't use both\.  
 *Minimum*: `1`  
 *Maximum*: `1024`  
 *Required*: Conditional  
@@ -172,3 +187,46 @@ For more information about using the `Fn::GetAtt` instrinsic function, see [http
 
 `StackSetId`  <a name="StackSetId-fn::getatt"></a>
 The ID of the stack that you're creating\.
+
+## Examples<a name="aws-resource-cloudformation-stackset--examples"></a>
+
+
+
+### Specifying Secrets Manager secrets in CloudFormation<a name="aws-resource-cloudformation-stackset--examples--Specifying__secrets_in_"></a>
+
+When using the `TemplateBody` property, if the template intends to resolve secrets from Secrets Manager secret's through an `ARN` and `!Join` is used to construct Secrets Manager's dynamic reference, secret's resolution needs to be avoided at stack level so that it will only be performed upon stack instance creation\.
+
+In the following example, secret's resolution are avoided at stack level by providing `{{` and `resolve:secretsmanager:` as separate strings to \!Join instead of `{{resolve:secretsmanager:` being provided as a single string:
+
+#### JSON<a name="aws-resource-cloudformation-stackset--examples--Specifying__secrets_in_--json"></a>
+
+```
+{
+    "Fn::Join": [
+        "",
+        [
+            "{{",
+            "resolve:secretsmanager:",
+            {
+                "Fn::Sub": "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:my-secret"
+            },
+            "::my-secret-key::}}"
+        ]
+    ]
+}
+```
+
+#### YAML<a name="aws-resource-cloudformation-stackset--examples--Specifying__secrets_in_--yaml"></a>
+
+```
+!Join 
+- ''
+- - '{{'
+  - 'resolve:secretsmanager:'
+  - !Sub 'arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:my-secret'
+  - '::my-secret-key::}}'
+```
+
+## See also<a name="aws-resource-cloudformation-stackset--seealso"></a>
++ [AWS CloudFormation StackSets sample templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-sampletemplates.html)
+

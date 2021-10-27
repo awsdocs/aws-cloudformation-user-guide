@@ -66,11 +66,11 @@ Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Pl
 `CostFilters`  <a name="cfn-budgets-budget-budgetdata-costfilters"></a>
 The cost filters, such as: [`Platform`, `TagKeyValue`, `AvailabilityZone`, `Region`, `Service`, `InstanceType`, `LinkedAccount`], that are applied to a budget\.  
 AWS Budgets supports the following services as a `Service` filter for RI budgets:  
-+ Amazon Elastic Compute Cloud \- Compute
++ Amazon EC2
 + Amazon Redshift
 + Amazon Relational Database Service
 + Amazon ElastiCache
-+ Amazon Elasticsearch Service
++  Amazon OpenSearch Service 
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

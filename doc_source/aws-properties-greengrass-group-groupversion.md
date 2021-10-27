@@ -80,5 +80,5 @@ The ARN of the subscription definition version that contains the subscriptions y
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See also<a name="aws-properties-greengrass-group-groupversion--seealso"></a>
-+  [GroupVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-groupversion.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [GroupVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-groupversion.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

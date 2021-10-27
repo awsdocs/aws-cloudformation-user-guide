@@ -6,7 +6,7 @@ The `AWS::Logs::SubscriptionFilter` resource specifies a subscription filter and
 + An Amazon Kinesis Firehose delivery stream that belongs to the same account as the subscription filter, for same\-account delivery\.
 + An AWS Lambda function that belongs to the same account as the subscription filter, for same\-account delivery\.
 
-There can only be one subscription filter associated with a log group\.
+There can as many as two subscription filters associated with a log group\.
 
 ## Syntax<a name="aws-resource-logs-subscriptionfilter-syntax"></a>
 

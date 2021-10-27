@@ -1,6 +1,6 @@
 # AWS::AutoScalingPlans::ScalingPlan TargetTrackingConfiguration<a name="aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration"></a>
 
- `TargetTrackingConfiguration` is a subproperty of [ScalingInstruction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html) that specifies a target tracking configuration to use with AWS Auto Scaling\. 
+ `TargetTrackingConfiguration` is a subproperty of [ScalingInstruction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html) that specifies a target tracking configuration to use with AWS Auto Scaling \(Auto Scaling Plans\)\. 
 
 ## Syntax<a name="aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration-syntax"></a>
 

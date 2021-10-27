@@ -2,7 +2,7 @@
 
 Adds an external destination to your SQL\-based Amazon Kinesis Data Analytics application\.
 
-If you want Kinesis Data Analytics to deliver data from an in\-application stream within your application to an external destination \(such as an Kinesis data stream, a Kinesis Data Firehose delivery stream, or an AWS Lambda function\), you add the relevant configuration to your application using this operation\. You can configure one or more outputs for your application\. Each output configuration maps an in\-application stream and an external destination\.
+If you want Kinesis Data Analytics to deliver data from an in\-application stream within your application to an external destination \(such as an Kinesis data stream, a Kinesis Data Firehose delivery stream, or an Amazon Lambda function\), you add the relevant configuration to your application using this operation\. You can configure one or more outputs for your application\. Each output configuration maps an in\-application stream and an external destination\.
 
  You can use one of the output configurations to deliver data from your in\-application error stream to an external destination so that you can analyze the errors\. 
 
@@ -61,44 +61,20 @@ The name of the application\.
 #### JSON<a name="aws-resource-kinesisanalyticsv2-applicationoutput--examples--Create_an_ApplicationOutput_object--json"></a>
 
 ```
-{
-    "Type": "AWS::KinesisAnalyticsV2::ApplicationOutput",
-    "Properties": {
-        "ApplicationName": {
-            "Ref": "BasicApplication"
-        },
-        "Output": {
-            "Name": "exampleOutput",
-            "DestinationSchema": {
-                "RecordFormatType": "CSV"
-            },
-            "KinesisStreamsOutput": {
-                "ResourceARN": {
-                    "Fn::GetAtt": [
-                        "OutputKinesisStream",
-                        "Arn"
-                    ]
-                }
-            }
-        }
-    }
-}
+{ "Type": "AWS::KinesisAnalyticsV2::ApplicationOutput",
+                "Properties": { "ApplicationName": { "Ref": "BasicApplication" }, "Output": {
+                "Name": "exampleOutput", "DestinationSchema": { "RecordFormatType": "CSV" },
+                "KinesisStreamsOutput": { "ResourceARN": { "Fn::GetAtt": [ "OutputKinesisStream",
+                "Arn" ] } } } } }
 ```
 
 #### YAML<a name="aws-resource-kinesisanalyticsv2-applicationoutput--examples--Create_an_ApplicationOutput_object--yaml"></a>
 
 ```
-Type: 'AWS::KinesisAnalyticsV2::ApplicationOutput'
-Properties:
-  ApplicationName: !Ref BasicApplication
-  Output:
-    Name: exampleOutput
-    DestinationSchema:
-      RecordFormatType: CSV
-    KinesisStreamsOutput:
-      ResourceARN: !GetAtt 
-        - OutputKinesisStream
-        - Arn
+Type: 'AWS::KinesisAnalyticsV2::ApplicationOutput' Properties:
+                ApplicationName: !Ref BasicApplication Output: Name: exampleOutput
+                DestinationSchema: RecordFormatType: CSV KinesisStreamsOutput: ResourceARN: !GetAtt
+                - OutputKinesisStream - Arn
 ```
 
 ## See also<a name="aws-resource-kinesisanalyticsv2-applicationoutput--seealso"></a>

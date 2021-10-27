@@ -1,6 +1,6 @@
 # AWS::Glue::Schema<a name="aws-resource-glue-schema"></a>
 
-The AWS::Glue::Schema is an AWS Glue resource type that manages schemas in the AWS Glue Schema Registry\.
+The `AWS::Glue::Schema` is an AWS Glue resource type that manages schemas in the AWS Glue Schema Registry\.
 
 ## Syntax<a name="aws-resource-glue-schema-syntax"></a>
 

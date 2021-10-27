@@ -59,7 +59,7 @@ Specifies the location of the LDAP server such as AWS Directory Service for Micr
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleName`  <a name="cfn-amazonmq-broker-ldapservermetadata-rolename"></a>
-Specifies the LDAP attribute that identifies the group name attribute in the object returned from the group membership query\.   
+The group name attribute in a role entry whose value is the name of that role\. For example, you can specify `cn` for a group entry's common name\. If authentication succeeds, then the user is assigned the the value of the `cn` attribute for each role entry that they are a member of\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -83,7 +83,7 @@ The LDAP search filter used to find roles within the roleBase\. The distinguishe
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceAccountUsername`  <a name="cfn-amazonmq-broker-ldapservermetadata-serviceaccountusername"></a>
-Service account username\. A service account is an account in your LDAP server that has access to initiate a connection\. For example, cn=admin,dc=corp, dc=example, dc=com\.   
+Service account username\. A service account is an account in your LDAP server that has access to initiate a connection\. For example, `cn=admin`, `ou=corp`, `dc=corp`, `dc=example`, `dc=com`\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -95,7 +95,7 @@ Select a particular subtree of the directory information tree \(DIT\) to search 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserRoleName`  <a name="cfn-amazonmq-broker-ldapservermetadata-userrolename"></a>
-Specifies the name of the LDAP attribute for the user group membership\.  
+The name of the LDAP attribute in the user's directory entry for the user's group membership\. In some cases, user roles may be identified by the value of an attribute in the user's directory entry\. The `UserRoleName` option allows you to provide the name of this attribute\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

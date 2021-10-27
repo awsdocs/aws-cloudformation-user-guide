@@ -29,6 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ScalingConfig](#cfn-eks-nodegroup-scalingconfig)" : ScalingConfig,
       "[Subnets](#cfn-eks-nodegroup-subnets)" : [ String, ... ],
       "[Tags](#cfn-eks-nodegroup-tags)" : Json,
+      "[Taints](#cfn-eks-nodegroup-taints)" : [ Taint, ... ],
+      "[UpdateConfig](#cfn-eks-nodegroup-updateconfig)" : UpdateConfig,
       "[Version](#cfn-eks-nodegroup-version)" : String
     }
 }
@@ -59,6 +61,10 @@ Properties:
   [Subnets](#cfn-eks-nodegroup-subnets): 
     - String
   [Tags](#cfn-eks-nodegroup-tags): Json
+  [Taints](#cfn-eks-nodegroup-taints): 
+    - Taint
+  [UpdateConfig](#cfn-eks-nodegroup-updateconfig): 
+    UpdateConfig
   [Version](#cfn-eks-nodegroup-version): String
 ```
 
@@ -68,7 +74,7 @@ Properties:
 The AMI type for your node group\. GPU instance types should use the `AL2_x86_64_GPU` AMI type\. Non\-GPU instances should use the `AL2_x86_64` AMI type\. Arm instances should use the `AL2_ARM_64` AMI type\. All types use the Amazon EKS optimized Amazon Linux 2 AMI\. If you specify `launchTemplate`, and your launch template uses a custom AMI, then don't specify `amiType`, or the node group deployment will fail\. For more information about using launch templates with Amazon EKS, see [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the Amazon EKS User Guide\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `AL2_ARM_64 | AL2_x86_64 | AL2_x86_64_GPU`  
+*Allowed values*: `AL2_ARM_64 | AL2_x86_64 | AL2_x86_64_GPU | CUSTOM`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CapacityType`  <a name="cfn-eks-nodegroup-capacitytype"></a>
@@ -127,7 +133,7 @@ The Amazon Resource Name \(ARN\) of the IAM role to associate with your node gro
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ReleaseVersion`  <a name="cfn-eks-nodegroup-releaseversion"></a>
-The AMI version of the Amazon EKS\-optimized AMI to use with your node group \(for example, `1.14.7-YYYYMMDD`\)\. By default, the latest available AMI version for the node group's current Kubernetes version is used\. For more information, see [Amazon EKS\-Optimized Linux AMI Versions](https://docs.aws.amazon.com/eks/latest/userguide/eks-linux-ami-versions.html) in the *Amazon EKS User Guide*\.  
+The AMI version of the Amazon EKS optimized AMI to use with your node group \(for example, `1.14.7-YYYYMMDD`\)\. By default, the latest available AMI version for the node group's current Kubernetes version is used\. For more information, see [Amazon EKS optimized Linux AMI Versions](https://docs.aws.amazon.com/eks/latest/userguide/eks-linux-ami-versions.html) in the *Amazon EKS User Guide*\.  
 Changing this value triggers an update of the node group if one is available\. However, only the latest available AMI release version is valid as an input\. You cannot roll back to a previous AMI release version\.
 *Required*: No  
 *Type*: String  
@@ -146,7 +152,7 @@ The scaling configuration details for the Auto Scaling group that is created for
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Subnets`  <a name="cfn-eks-nodegroup-subnets"></a>
-The subnets to use for the Auto Scaling group that is created for your node group\. These subnets must have the tag key `kubernetes.io/cluster/CLUSTER_NAME` with a value of `shared`, where `CLUSTER_NAME` is replaced with the name of your cluster\. If you specify `launchTemplate`, then don't specify [ `SubnetId` ](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html) in your launch template, or the node group deployment will fail\. For more information about using launch templates with Amazon EKS, see [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the Amazon EKS User Guide\.  
+The subnets to use for the Auto Scaling group that is created for your node group\. If you specify `launchTemplate`, then don't specify [ `SubnetId` ](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html) in your launch template, or the node group deployment will fail\. For more information about using launch templates with Amazon EKS, see [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the Amazon EKS User Guide\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -155,6 +161,18 @@ The subnets to use for the Auto Scaling group that is created for your node grou
 The metadata to apply to the node group to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Node group tags do not propagate to any other resources associated with the node group, such as the Amazon EC2 instances or subnets\.  
 *Required*: No  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Taints`  <a name="cfn-eks-nodegroup-taints"></a>
+The Kubernetes taints to be applied to the nodes in the node group when they are created\. Effect is one of `No_Schedule`, `Prefer_No_Schedule`, or `No_Execute`\. Kubernetes taints can be used together with tolerations to control how workloads are scheduled to your nodes\.  
+*Required*: No  
+*Type*: List of [Taint](aws-properties-eks-nodegroup-taint.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`UpdateConfig`  <a name="cfn-eks-nodegroup-updateconfig"></a>
+The node group update configuration\.  
+*Required*: No  
+*Type*: [UpdateConfig](aws-properties-eks-nodegroup-updateconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-eks-nodegroup-version"></a>
@@ -196,7 +214,7 @@ The name associated with an Amazon EKS managed node group\.
 
 ### Create a managed node group<a name="aws-resource-eks-nodegroup--examples--Create_a_managed_node_group"></a>
 
-The following example creates an Amazon EKS managed node group called `standard` in the `prod` cluster\.
+The following example creates an Amazon EKS managed node group named `standard` in the `prod` cluster\.
 
 #### JSON<a name="aws-resource-eks-nodegroup--examples--Create_a_managed_node_group--json"></a>
 

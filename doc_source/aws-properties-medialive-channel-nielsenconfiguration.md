@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel NielsenConfiguration<a name="aws-properties-medialive-channel-nielsenconfiguration"></a>
 
-Nielsen Configuration
+The settings to configure Nielsen watermarks\.
+
+The parent of this entity is EncoderSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-nielsenconfiguration-syntax"></a>
 

@@ -49,7 +49,7 @@ Describes the initial number of parallel tasks that a Java\-based Kinesis Data A
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParallelismPerKPU`  <a name="cfn-kinesisanalyticsv2-application-parallelismconfiguration-parallelismperkpu"></a>
-Describes the number of parallel tasks that a Java\-based Kinesis Data Analytics application can perform per Kinesis Processing Unit \(KPU\) used by the application\. For more information about KPUs, see [Amazon Kinesis Data Analytics Pricing](https://aws.amazon.com/kinesis/data-analytics/pricing/)\.  
+Describes the number of parallel tasks that a Java\-based Kinesis Data Analytics application can perform per Kinesis Processing Unit \(KPU\) used by the application\. For more information about KPUs, see [Amazon Kinesis Data Analytics Pricing](https://docs.aws.amazon.com/kinesis/data-analytics/pricing/)\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  

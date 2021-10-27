@@ -12,9 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[CrawlArchivedSpaces](#cfn-kendra-datasource-confluencespaceconfiguration-crawlarchivedspaces)" : Boolean,
   "[CrawlPersonalSpaces](#cfn-kendra-datasource-confluencespaceconfiguration-crawlpersonalspaces)" : Boolean,
-  "[ExcludeSpaces](#cfn-kendra-datasource-confluencespaceconfiguration-excludespaces)" : ConfluenceSpaceList,
-  "[IncludeSpaces](#cfn-kendra-datasource-confluencespaceconfiguration-includespaces)" : ConfluenceSpaceList,
-  "[SpaceFieldMappings](#cfn-kendra-datasource-confluencespaceconfiguration-spacefieldmappings)" : ConfluenceSpaceFieldMappingsList
+  "[ExcludeSpaces](#cfn-kendra-datasource-confluencespaceconfiguration-excludespaces)" : [ String, ... ],
+  "[IncludeSpaces](#cfn-kendra-datasource-confluencespaceconfiguration-includespaces)" : [ String, ... ],
+  "[SpaceFieldMappings](#cfn-kendra-datasource-confluencespaceconfiguration-spacefieldmappings)" : [ ConfluenceSpaceToIndexFieldMapping, ... ]
 }
 ```
 
@@ -24,11 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CrawlArchivedSpaces](#cfn-kendra-datasource-confluencespaceconfiguration-crawlarchivedspaces): Boolean
   [CrawlPersonalSpaces](#cfn-kendra-datasource-confluencespaceconfiguration-crawlpersonalspaces): Boolean
   [ExcludeSpaces](#cfn-kendra-datasource-confluencespaceconfiguration-excludespaces): 
-    ConfluenceSpaceList
+    - String
   [IncludeSpaces](#cfn-kendra-datasource-confluencespaceconfiguration-includespaces): 
-    ConfluenceSpaceList
+    - String
   [SpaceFieldMappings](#cfn-kendra-datasource-confluencespaceconfiguration-spacefieldmappings): 
-    ConfluenceSpaceFieldMappingsList
+    - ConfluenceSpaceToIndexFieldMapping
 ```
 
 ## Properties<a name="aws-properties-kendra-datasource-confluencespaceconfiguration-properties"></a>
@@ -48,19 +48,19 @@ Specifies whether Amazon Kendra should index personal spaces\. Users can add res
 `ExcludeSpaces`  <a name="cfn-kendra-datasource-confluencespaceconfiguration-excludespaces"></a>
 A list of space keys of Confluence spaces\. If you include a key, the blogs, documents, and attachments in the space are not indexed\. If a space is in both the `ExcludeSpaces` and the `IncludeSpaces` list, the space is excluded\.  
 *Required*: No  
-*Type*: [ConfluenceSpaceList](aws-properties-kendra-datasource-confluencespacelist.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeSpaces`  <a name="cfn-kendra-datasource-confluencespaceconfiguration-includespaces"></a>
 A list of space keys for Confluence spaces\. If you include a key, the blogs, documents, and attachments in the space are indexed\. Spaces that aren't in the list aren't indexed\. A space in the list must exist\. Otherwise, Amazon Kendra logs an error when the data source is synchronized\. If a space is in both the `IncludeSpaces` and the `ExcludeSpaces` list, the space is excluded\.  
 *Required*: No  
-*Type*: [ConfluenceSpaceList](aws-properties-kendra-datasource-confluencespacelist.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SpaceFieldMappings`  <a name="cfn-kendra-datasource-confluencespaceconfiguration-spacefieldmappings"></a>
 Defines how space metadata fields should be mapped to index fields\. Before you can map a field, you must first create an index field with a matching type using the console or the `UpdateIndex` operation\.  
 If you specify the `SpaceFieldMappings` parameter, you must specify at least one field mapping\.  
 *Required*: No  
-*Type*: [ConfluenceSpaceFieldMappingsList](aws-properties-kendra-datasource-confluencespacefieldmappingslist.md)  
+*Type*: List of [ConfluenceSpaceToIndexFieldMapping](aws-properties-kendra-datasource-confluencespacetoindexfieldmapping.md)  
 *Maximum*: `4`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

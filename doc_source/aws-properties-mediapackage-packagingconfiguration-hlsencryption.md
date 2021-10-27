@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ConstantInitializationVector](#cfn-mediapackage-packagingconfiguration-hlsencryption-constantinitializationvector)" : String,
   "[EncryptionMethod](#cfn-mediapackage-packagingconfiguration-hlsencryption-encryptionmethod)" : String,
-  "[SpekeKeyProvider](#cfn-mediapackage-packagingconfiguration-hlsencryption-spekekeyprovider)" : 
+  "[SpekeKeyProvider](#cfn-mediapackage-packagingconfiguration-hlsencryption-spekekeyprovider)" : SpekeKeyProvider
 }
 ```
 
@@ -21,7 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ConstantInitializationVector](#cfn-mediapackage-packagingconfiguration-hlsencryption-constantinitializationvector): String
   [EncryptionMethod](#cfn-mediapackage-packagingconfiguration-hlsencryption-encryptionmethod): String
-  [SpekeKeyProvider](#cfn-mediapackage-packagingconfiguration-hlsencryption-spekekeyprovider):
+  [SpekeKeyProvider](#cfn-mediapackage-packagingconfiguration-hlsencryption-spekekeyprovider): 
+    SpekeKeyProvider
 ```
 
 ## Properties<a name="aws-properties-mediapackage-packagingconfiguration-hlsencryption-properties"></a>
@@ -41,5 +42,5 @@ HLS encryption type\.
 `SpekeKeyProvider`  <a name="cfn-mediapackage-packagingconfiguration-hlsencryption-spekekeyprovider"></a>
 Parameters for the SPEKE key provider\.  
 *Required*: Yes  
-*Type*:   
+*Type*: [SpekeKeyProvider](aws-properties-mediapackage-packagingconfiguration-spekekeyprovider.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

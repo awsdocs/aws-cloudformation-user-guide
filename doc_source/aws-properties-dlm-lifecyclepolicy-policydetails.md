@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[EventSource](#cfn-dlm-lifecyclepolicy-policydetails-eventsource)" : EventSource,
   "[Parameters](#cfn-dlm-lifecyclepolicy-policydetails-parameters)" : Parameters,
   "[PolicyType](#cfn-dlm-lifecyclepolicy-policydetails-policytype)" : String,
+  "[ResourceLocations](#cfn-dlm-lifecyclepolicy-policydetails-resourcelocations)" : [ String, ... ],
   "[ResourceTypes](#cfn-dlm-lifecyclepolicy-policydetails-resourcetypes)" : [ String, ... ],
   "[Schedules](#cfn-dlm-lifecyclepolicy-policydetails-schedules)" : [ Schedule, ... ],
   "[TargetTags](#cfn-dlm-lifecyclepolicy-policydetails-targettags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -30,6 +31,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Parameters](#cfn-dlm-lifecyclepolicy-policydetails-parameters): 
     Parameters
   [PolicyType](#cfn-dlm-lifecyclepolicy-policydetails-policytype): String
+  [ResourceLocations](#cfn-dlm-lifecyclepolicy-policydetails-resourcelocations): 
+    - String
   [ResourceTypes](#cfn-dlm-lifecyclepolicy-policydetails-resourcetypes): 
     - String
   [Schedules](#cfn-dlm-lifecyclepolicy-policydetails-schedules): 
@@ -68,6 +71,14 @@ The default is `EBS_SNAPSHOT_MANAGEMENT`\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `EBS_SNAPSHOT_MANAGEMENT | EVENT_BASED_POLICY | IMAGE_MANAGEMENT`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ResourceLocations`  <a name="cfn-dlm-lifecyclepolicy-policydetails-resourcelocations"></a>
+The location of the resources to backup\. If the source resources are located in an AWS Region, specify `CLOUD`\. If the source resources are located on an Outpost in your account, specify `OUTPOST`\.   
+If you specify `OUTPOST`, Amazon Data Lifecycle Manager backs up all resources of the specified type with matching target tags across all of the Outposts in your account\.  
+*Required*: No  
+*Type*: List of String  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceTypes`  <a name="cfn-dlm-lifecyclepolicy-policydetails-resourcetypes"></a>

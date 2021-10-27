@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AmazonMQ::Configuration",
   "Properties" : {
+      "[AuthenticationStrategy](#cfn-amazonmq-configuration-authenticationstrategy)" : String,
       "[Data](#cfn-amazonmq-configuration-data)" : String,
       "[Description](#cfn-amazonmq-configuration-description)" : String,
       "[EngineType](#cfn-amazonmq-configuration-enginetype)" : String,
@@ -30,6 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::AmazonMQ::Configuration
 Properties: 
+  [AuthenticationStrategy](#cfn-amazonmq-configuration-authenticationstrategy): String
   [Data](#cfn-amazonmq-configuration-data): String
   [Description](#cfn-amazonmq-configuration-description): String
   [EngineType](#cfn-amazonmq-configuration-enginetype): String
@@ -40,6 +42,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-amazonmq-configuration-properties"></a>
+
+`AuthenticationStrategy`  <a name="cfn-amazonmq-configuration-authenticationstrategy"></a>
+Optional\. The authentication strategy associated with the configuration\. The default is `SIMPLE`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Data`  <a name="cfn-amazonmq-configuration-data"></a>
 The base64\-encoded XML configuration\.  
@@ -60,7 +68,7 @@ The type of broker engine\. Note: Currently, Amazon MQ only supports ACTIVEMQ fo
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineVersion`  <a name="cfn-amazonmq-configuration-engineversion"></a>
-The version of the broker engine\. For a list of supported engine versions, see https://docs\.aws\.amazon\.com/amazon\-mq/latest/developer\-guide/broker\-engine\.html  
+The version of the broker engine\. For a list of supported engine versions, see [https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html)  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -113,7 +121,7 @@ The revision number of the configuration\.
 
 ```
 {
-  "Description": "Create an Amazon MQ ActiveMQ configuration",
+  "Description": "Create an Amazon MQ for ActiveMQ configuration",
     "Configuration1": {
       "Type": "AWS::AmazonMQ::Configuration",
       "Properties": {
@@ -132,7 +140,7 @@ The revision number of the configuration\.
 
 ```
 --- 
-Description: "Create an Amazon MQ ActiveMQ configuration"
+Description: "Create an Amazon MQ for ActiveMQ configuration"
 Resources: 
   Configuration: 
     Type: "AWS::AmazonMQ::Configuration"

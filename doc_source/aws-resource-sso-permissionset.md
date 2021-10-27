@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SSO::PermissionSet",
   "Properties" : {
       "[Description](#cfn-sso-permissionset-description)" : String,
-      "[InlinePolicy](#cfn-sso-permissionset-inlinepolicy)" : String,
+      "[InlinePolicy](#cfn-sso-permissionset-inlinepolicy)" : Json,
       "[InstanceArn](#cfn-sso-permissionset-instancearn)" : String,
       "[ManagedPolicies](#cfn-sso-permissionset-managedpolicies)" : [ String, ... ],
       "[Name](#cfn-sso-permissionset-name)" : String,
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::SSO::PermissionSet
 Properties: 
   [Description](#cfn-sso-permissionset-description): String
-  [InlinePolicy](#cfn-sso-permissionset-inlinepolicy): String
+  [InlinePolicy](#cfn-sso-permissionset-inlinepolicy): Json
   [InstanceArn](#cfn-sso-permissionset-instancearn): String
   [ManagedPolicies](#cfn-sso-permissionset-managedpolicies): 
     - String
@@ -49,13 +49,13 @@ The description of the [AWS::SSO::PermissionSet](#aws-resource-sso-permissionset
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `700`  
-*Pattern*: `[\p{L}\p{M}\p{Z}\p{S}\p{N}\p{P}]*`  
+*Pattern*: `[\u0009\u000A\u000D\u0020-\u007E\u00A0-\u00FF]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InlinePolicy`  <a name="cfn-sso-permissionset-inlinepolicy"></a>
 The IAM inline policy that is attached to the permission set\.  
 *Required*: No  
-*Type*: String  
+*Type*: Json  
 *Minimum*: `1`  
 *Maximum*: `10240`  
 *Pattern*: `[\u0009\u000A\u000D\u0020-\u00FF]+`  
@@ -67,7 +67,7 @@ The ARN of the SSO instance under which the operation will be executed\. For mor
 *Type*: String  
 *Minimum*: `10`  
 *Maximum*: `1224`  
-*Pattern*: `arn:aws:sso:::instance/(sso)?ins-[a-zA-Z0-9-.]{16}`  
+*Pattern*: `arn:(aws|aws-us-gov|aws-cn|aws-iso|aws-iso-b):sso:::instance/(sso)?ins-[a-zA-Z0-9-.]{16}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ManagedPolicies`  <a name="cfn-sso-permissionset-managedpolicies"></a>
@@ -133,11 +133,11 @@ The permission set ARN of the permission set, such as `arn:aws:sso:::permissionS
 
 
 
-### Creating a new custom permission set for AWS SSO<a name="aws-resource-sso-permissionset--examples--Creating_a_new_custom_permission_set_for_AWS_SSO"></a>
+### Creating a new custom permission set for AWS SSO<a name="aws-resource-sso-permissionset--examples--Creating_a_new_custom_permission_set_for_"></a>
 
-The following example creates a custom permission set `“PermissionSet”` with a managed policies attachment and inline policy\.
+The following example creates a custom permission set `PermissionSet` with a managed policies attachment and inline policy\.
 
-#### JSON<a name="aws-resource-sso-permissionset--examples--Creating_a_new_custom_permission_set_for_AWS_SSO--json"></a>
+#### JSON<a name="aws-resource-sso-permissionset--examples--Creating_a_new_custom_permission_set_for_--json"></a>
 
 ```
 {
@@ -147,6 +147,7 @@ The following example creates a custom permission set `“PermissionSet”` with
          "InstanceArn": "arn:aws:sso:::instance/ssoins-instanceId",
          "Name": "PermissionSet",
          "Description": "This is a sample permission set.",
+         "SessionDuration": "PT8H",
          "ManagedPolicies": [
             "arn:aws:iam::aws:policy/AdministratorAccess"
          ],
@@ -162,7 +163,7 @@ The following example creates a custom permission set `“PermissionSet”` with
 }
 ```
 
-#### YAML<a name="aws-resource-sso-permissionset--examples--Creating_a_new_custom_permission_set_for_AWS_SSO--yaml"></a>
+#### YAML<a name="aws-resource-sso-permissionset--examples--Creating_a_new_custom_permission_set_for_--yaml"></a>
 
 ```
 PermissionSet:
@@ -171,6 +172,7 @@ PermissionSet:
       InstanceArn: 'arn:aws:sso:::instance/ssoins-instanceId'
       Name: 'PermissionSet'
       Description: 'This is a sample permission set.'
+      SessionDuration: 'PT8H'
       ManagedPolicies:
         - 'arn:aws:iam::aws:policy/AdministratorAccess'
       InlinePolicy: 'Inline policy json string'

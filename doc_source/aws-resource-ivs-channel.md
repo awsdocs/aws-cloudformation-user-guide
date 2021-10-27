@@ -1,6 +1,6 @@
 # AWS::IVS::Channel<a name="aws-resource-ivs-channel"></a>
 
-The `AWS::IVS::Channel` resource creates a new channel\. An Amazon IVS channel stores configuration information related to your live stream\. For more information see [CreateChannel](https://docs.aws.amazon.com/ivs/latest/APIReference/API_CreateChannel.html) in the *Amazon Interactive Video Service API Reference*\.
+The `AWS::IVS::Channel` resource specifies an Amazon IVS channel\. A channel stores configuration information related to your live stream\. For more information, see [CreateChannel](https://docs.aws.amazon.com/ivs/latest/APIReference/API_CreateChannel.html) in the *Amazon Interactive Video Service API Reference*\.
 
 **Note**  
  By default, the IVS API CreateChannel endpoint creates a stream key in addition to a channel\. The Amazon IVS Channel resource *does not* create a stream key; to create a stream key, use the StreamKey resource instead\.
@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Authorized](#cfn-ivs-channel-authorized)" : Boolean,
       "[LatencyMode](#cfn-ivs-channel-latencymode)" : String,
       "[Name](#cfn-ivs-channel-name)" : String,
+      "[RecordingConfigurationArn](#cfn-ivs-channel-recordingconfigurationarn)" : String,
       "[Tags](#cfn-ivs-channel-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-ivs-channel-type)" : String
     }
@@ -32,6 +33,7 @@ Properties:
   [Authorized](#cfn-ivs-channel-authorized): Boolean
   [LatencyMode](#cfn-ivs-channel-latencymode): String
   [Name](#cfn-ivs-channel-name): String
+  [RecordingConfigurationArn](#cfn-ivs-channel-recordingconfigurationarn): String
   [Tags](#cfn-ivs-channel-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Type](#cfn-ivs-channel-type): String
@@ -66,6 +68,16 @@ Channel name\.
 *Pattern*: `^[a-zA-Z0-9-_]*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`RecordingConfigurationArn`  <a name="cfn-ivs-channel-recordingconfigurationarn"></a>
+The ARN of a RecordingConfiguration resource\. An empty string indicates that recording is disabled for the channel\. A RecordingConfiguration ARN indicates that recording is enabled using the specified recording configuration\. See the [ RecordingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html) resource for more information and an example\.  
+*Default*: "" \(empty string, recording is disabled\)  
+*Required*: No  
+*Type*: String  
+*Minimum*: `0`  
+*Maximum*: `128`  
+*Pattern*: `^$|^arn:aws:ivs:[a-z0-9-]+:[0-9]+:recording-configuration/[a-zA-Z0-9-]+$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-ivs-channel-tags"></a>
 An array of key\-value pairs to apply to this resource\.  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
@@ -75,8 +87,8 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 `Type`  <a name="cfn-ivs-channel-type"></a>
 The channel type, which determines the allowable resolution and bitrate\. *If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately\.* Valid values:  
-+  `STANDARD`: Multiple qualities are generated from the original input, to automatically give viewers the best experience for their devices and network conditions\. Vertical resolution can be up to 1080 and bitrate can be up to 8\.5 Mbps\.
-+  `BASIC`: delivers the original input to viewers\. The viewer’s video\-quality choice is limited to the original input\. Vertical resolution can be up to 480 and bitrate can be up to 1\.5 Mbps\.
++  `STANDARD`: Multiple qualities are generated from the original input, to automatically give viewers the best experience for their devices and network conditions\. Resolution can be up to 1080p and bitrate can be up to 8\.5 Mbps\. Audio is transcoded only for renditions 360p and below; above that, audio is passed through\.
++  `BASIC`: delivers the original input to viewers\. The viewer’s video\-quality choice is limited to the original input\. Resolution can be up to 480p and bitrate can be up to 1\.5 Mbps\.
 *Default*: `STANDARD`  
 *Required*: No  
 *Type*: String  
@@ -91,7 +103,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  `{ "Ref": "myChannel" }` 
 
-For the Amazon IVS channel `myChannel`, Ref returns the channel ARN\.
+For the Amazon IVS channel `myChannel`, `Ref` returns the channel ARN\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -119,7 +131,7 @@ Channel playback URL\. For example: `https://a1b2c3d4e5f6.us-west-2.playback.liv
 
 ### Channel and Stream Key Template Examples<a name="aws-resource-ivs-channel--examples--Channel_and_Stream_Key_Template_Examples"></a>
 
-The following examples create an Amazon IVS channel and stream key\.
+The following examples specify an Amazon IVS channel and stream key\.
 
 #### JSON<a name="aws-resource-ivs-channel--examples--Channel_and_Stream_Key_Template_Examples--json"></a>
 

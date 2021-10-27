@@ -210,7 +210,7 @@ The following example creates a conditional trigger that starts a job based on t
 
 ```
 {
-  "Description": "AWS Glue Trigger Test",
+  "Description": "AWS Glue trigger test",
   "Resources": {
     "MyJobTriggerRole": {
       "Type": "AWS::IAM::Role",
@@ -304,7 +304,7 @@ The following example creates a conditional trigger that starts a job based on t
 
 ```
 ---
-Description: "AWS Glue Trigger Test"
+Description: "AWS Glue trigger test"
 Resources:
   MyJobTriggerRole:
     Type: AWS::IAM::Role

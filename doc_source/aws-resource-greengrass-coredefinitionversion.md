@@ -175,5 +175,5 @@ Outputs:
 ```
 
 ## See also<a name="aws-resource-greengrass-coredefinitionversion--seealso"></a>
-+  [CreateCoreDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createcoredefinitionversion-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [CreateCoreDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createcoredefinitionversion-post.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

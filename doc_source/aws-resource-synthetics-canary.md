@@ -27,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[StartCanaryAfterCreation](#cfn-synthetics-canary-startcanaryaftercreation)" : Boolean,
       "[SuccessRetentionPeriod](#cfn-synthetics-canary-successretentionperiod)" : Integer,
       "[Tags](#cfn-synthetics-canary-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[VisualReference](#cfn-synthetics-canary-visualreference)" : VisualReference,
       "[VPCConfig](#cfn-synthetics-canary-vpcconfig)" : VPCConfig
     }
 }
@@ -52,6 +53,8 @@ Properties:
   [SuccessRetentionPeriod](#cfn-synthetics-canary-successretentionperiod): Integer
   [Tags](#cfn-synthetics-canary-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [VisualReference](#cfn-synthetics-canary-visualreference): 
+    VisualReference
   [VPCConfig](#cfn-synthetics-canary-vpcconfig): 
     VPCConfig
 ```
@@ -147,6 +150,12 @@ The list of key\-value pairs that are associated with the canary\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`VisualReference`  <a name="cfn-synthetics-canary-visualreference"></a>
+If this canary performs visual monitoring by comparing screenshots, this structure contains the ID of the canary run to use as the baseline for screenshots, and the coordinates of any parts of the screen to ignore during the visual monitoring comparison\.  
+*Required*: No  
+*Type*: [VisualReference](aws-properties-synthetics-canary-visualreference.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `VPCConfig`  <a name="cfn-synthetics-canary-vpcconfig"></a>
 If this canary is to test an endpoint in a VPC, this structure contains information about the subnet and security groups of the VPC endpoint\. For more information, see [ Running a Canary in a VPC](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_VPC.html)\.  
 *Required*: No  
@@ -188,7 +197,7 @@ This example creates a canary that uses an existing script stored in an S3 bucke
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS CloudFormation Sample Template for AWS Synthetics: Create a Canary using this template",
+    "Description": "CloudFormation Sample Template for CloudWatch Synthetics: Create a Canary using this template",
     "Resources": {
         "SyntheticsCanary": {
             "Type": "AWS::Synthetics::Canary",
@@ -257,7 +266,7 @@ This example creates a canary and passes the script code directly into the canar
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS CloudFormation Sample Template for AWS Synthetics: Create a Canary using this template",
+    "Description": "CloudFormation Sample Template for CloudWatch Synthetics: Create a Canary using this template",
     "Resources": {
         "SyntheticsCanary": {
             "Type": "AWS::Synthetics::Canary",

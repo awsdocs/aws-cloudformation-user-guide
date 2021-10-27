@@ -56,14 +56,14 @@ Properties:
 ## Properties<a name="aws-resource-ec2-security-group-egress-properties"></a>
 
 `CidrIp`  <a name="cfn-ec2-securitygroupegress-cidrip"></a>
-The IPv4 ranges\.  
+The IPv4 address range, in CIDR format\.  
 You must specify a destination security group \(`DestinationPrefixListId` or `DestinationSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CidrIpv6`  <a name="cfn-ec2-securitygroupegress-cidripv6"></a>
-The IPv6 ranges\.  
+The IPv6 address range, in CIDR format\.  
 You must specify a destination security group \(`DestinationPrefixListId` or `DestinationSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
 *Required*: No  
 *Type*: String  
@@ -126,11 +126,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### VPC Security Groups Example<a name="aws-resource-ec2-security-group-egress--examples--VPC_Security_Groups_Example"></a>
+### VPC security groups<a name="aws-resource-ec2-security-group-egress--examples--VPC_security_groups"></a>
 
 In some cases, you might have an originating \(source\) security group to which you want to add an outbound rule that allows traffic to a destination \(target\) security group\. The target security group also needs an inbound rule that allows traffic from the source security group\. Note that you cannot use the `Ref` function to specify the outbound and inbound rules for each security group\. Doing so creates a circular dependency; you cannot have two resources that depend on each other\. Instead, use the egress and ingress resources to declare these outbound and inbound rules, as shown in the following template example\.
 
-#### JSON<a name="aws-resource-ec2-security-group-egress--examples--VPC_Security_Groups_Example--json"></a>
+#### JSON<a name="aws-resource-ec2-security-group-egress--examples--VPC_security_groups--json"></a>
 
 ```
 "SourceSG": {
@@ -189,7 +189,7 @@ In some cases, you might have an originating \(source\) security group to which 
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-security-group-egress--examples--VPC_Security_Groups_Example--yaml"></a>
+#### YAML<a name="aws-resource-ec2-security-group-egress--examples--VPC_security_groups--yaml"></a>
 
 ```
 SourceSG:

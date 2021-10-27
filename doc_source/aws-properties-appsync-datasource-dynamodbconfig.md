@@ -52,7 +52,7 @@ The table name\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UseCallerCredentials`  <a name="cfn-appsync-datasource-dynamodbconfig-usecallercredentials"></a>
-Set to `TRUE` to use AWS IAM with this data source\.  
+Set to `TRUE` to use AWS Identity and Access Management with this data source\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

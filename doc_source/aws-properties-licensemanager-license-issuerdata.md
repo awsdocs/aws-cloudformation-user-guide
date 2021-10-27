@@ -1,6 +1,6 @@
 # AWS::LicenseManager::License IssuerData<a name="aws-properties-licensemanager-license-issuerdata"></a>
 
-Details about the issuer of a license\.
+Details associated with the issuer of a license\.
 
 ## Syntax<a name="aws-properties-licensemanager-license-issuerdata-syntax"></a>
 
@@ -31,7 +31,7 @@ Issuer name\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SignKey`  <a name="cfn-licensemanager-license-issuerdata-signkey"></a>
-Asymmetric CMK from AWS Key Management Service\. The CMK must have a key usage of sign and verify, and support the RSASSA\-PSS SHA\-256 signing algorithm\.  
+Asymmetric KMS key from AWS Key Management Service\. The KMS key must have a key usage of sign and verify, and support the RSASSA\-PSS SHA\-256 signing algorithm\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

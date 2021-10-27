@@ -49,7 +49,7 @@ Properties:
 *Required*: No  
 *Type*: String  
 *Maximum*: `1000`  
-*Pattern*: `\P{C}+`  
+*Pattern*: `\P{C}*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainName`  <a name="cfn-codeartifact-repository-domainname"></a>
@@ -249,6 +249,67 @@ Resources:
               "MyCodeArtifactUpstreamRepository",
               "Name"
             ]
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+### Create a domain and repository with tags<a name="aws-resource-codeartifact-repository--examples--Create_a_domain_and_repository_with_tags"></a>
+
+The following example creates a CodeArtifact domain named *my\-domain* and a CodeArtifact repository named *my\-repo* inside it with two tags\. One tag consists of a key named `keyname1` and a value of `value1`\. The other consists of a key named `keyname2` and a value of `value2`\.
+
+#### YAML<a name="aws-resource-codeartifact-repository--examples--Create_a_domain_and_repository_with_tags--yaml"></a>
+
+```
+Resources:
+  MyCodeArtifactDomain:
+    Type: 'AWS::CodeArtifact::Domain'
+    Properties:
+      DomainName: "my-domain"
+  MyCodeArtifactRepository:
+    Type: 'AWS::CodeArtifact::Repository'
+    Properties:
+      RepositoryName: "my-repo"
+      DomainName: !GetAtt MyCodeArtifactDomain.Name
+      Tags:
+        - Key: "keyname1"
+          Value: "value1"
+        - Key: "keyname2"
+          Value: "value2"
+```
+
+#### JSON<a name="aws-resource-codeartifact-repository--examples--Create_a_domain_and_repository_with_tags--json"></a>
+
+```
+{
+  "Resources": {
+    "MyCodeArtifactDomain": {
+      "Type": "AWS::CodeArtifact::Domain",
+      "Properties": {
+        "DomainName": "my-domain"
+      }
+    },
+    "MyCodeArtifactRepository": {
+      "Type": "AWS::CodeArtifact::Repository",
+      "Properties": {
+        "RepositoryName": "my-repo",
+        "DomainName": {
+          "Fn::GetAtt": [
+            "MyCodeArtifactDomain",
+            "Name"
+          ]
+        },
+        "Tags" : [
+          {
+            "Key" : "keyname1",
+            "Value" : "value1"
+          },
+          {
+            "Key" : "keyname2",
+            "Value" : "value2"
           }
         ]
       }

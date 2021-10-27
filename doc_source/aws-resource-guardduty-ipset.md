@@ -57,7 +57,7 @@ The format of the file that contains the IPSet\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Location`  <a name="cfn-guardduty-ipset-location"></a>
-The URI of the file that contains the IPSet\. For example: https://s3\.us\-west\-2\.amazonaws\.com/my\-bucket/my\-object\-key\.  
+The URI of the file that contains the IPSet\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

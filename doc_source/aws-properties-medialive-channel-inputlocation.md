@@ -41,7 +41,7 @@ The URI should be a path to a file that is accessible to the Live system \(for e
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Username`  <a name="cfn-medialive-channel-inputlocation-username"></a>
-The user name for accessing the downstream system\. This applies only if the downstream system requires credentials\.  
+The user name to connect to the downstream system\. This applies only if the downstream system requires credentials\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

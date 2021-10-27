@@ -56,71 +56,26 @@ For a SQL\-based Kinesis Data Analytics application, describes the reference dat
 #### JSON<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--examples--Create_an_ApplicationReferenceDataSource_resource--json"></a>
 
 ```
-{
-    "ApplicationReferenceDataSource": {
-        "Type": "AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource",
-        "Properties": {
-            "ApplicationName": {
-                "Ref": "BasicApplication"
-            },
-            "ReferenceDataSource": {
-                "TableName": "exampleTable",
-                "ReferenceSchema": {
-                    "RecordColumns": [
-                        {
-                            "Name": "example",
-                            "SqlType": "VARCHAR(16)",
-                            "Mapping": "$.example"
-                        }
-                    ],
-                    "RecordFormat": {
-                        "RecordFormatType": "JSON",
-                        "MappingParameters": {
-                            "JSONMappingParameters": {
-                                "RecordRowPath": "$"
-                            }
-                        }
-                    }
-                },
-                "S3ReferenceDataSource": {
-                    "BucketARN": {
-                        "Fn::GetAtt": [
-                            "S3Bucket",
-                            "Arn"
-                        ]
-                    },
-                    "FileKey": "fakeKey"
-                }
-            }
-        }
-    }
-}
+{ "ApplicationReferenceDataSource": { "Type":
+                "AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource", "Properties": {
+                "ApplicationName": { "Ref": "BasicApplication" }, "ReferenceDataSource": {
+                "TableName": "exampleTable", "ReferenceSchema": { "RecordColumns": [ { "Name":
+                "example", "SqlType": "VARCHAR(16)", "Mapping": "$.example" } ], "RecordFormat": {
+                "RecordFormatType": "JSON", "MappingParameters": { "JSONMappingParameters": {
+                "RecordRowPath": "$" } } } }, "S3ReferenceDataSource": { "BucketARN": {
+                "Fn::GetAtt": [ "S3Bucket", "Arn" ] }, "FileKey": "fakeKey" } } } } }
 ```
 
 #### YAML<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--examples--Create_an_ApplicationReferenceDataSource_resource--yaml"></a>
 
 ```
-ApplicationReferenceDataSource:
-  Type: 'AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource'
-  Properties:
-    ApplicationName: !Ref BasicApplication
-    ReferenceDataSource:
-      TableName: exampleTable
-      ReferenceSchema:
-        RecordColumns:
-          - Name: example
-            SqlType: VARCHAR(16)
-            Mapping: $.example
-        RecordFormat:
-          RecordFormatType: JSON
-          MappingParameters:
-            JSONMappingParameters:
-              RecordRowPath: $
-      S3ReferenceDataSource:
-        BucketARN: !GetAtt 
-          - S3Bucket
-          - Arn
-        FileKey: fakeKey
+ApplicationReferenceDataSource: Type:
+                'AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource' Properties:
+                ApplicationName: !Ref BasicApplication ReferenceDataSource: TableName: exampleTable
+                ReferenceSchema: RecordColumns: - Name: example SqlType: VARCHAR(16) Mapping:
+                $.example RecordFormat: RecordFormatType: JSON MappingParameters:
+                JSONMappingParameters: RecordRowPath: $ S3ReferenceDataSource: BucketARN: !GetAtt -
+                S3Bucket - Arn FileKey: fakeKey
 ```
 
 ## See also<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--seealso"></a>

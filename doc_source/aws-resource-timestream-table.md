@@ -1,6 +1,6 @@
 # AWS::Timestream::Table<a name="aws-resource-timestream-table"></a>
 
-The CreateTable operation adds a new table to an existing database in your account\. In an AWS account, table names must be at least unique within each Region if they are in the same database\. You may have identical table names in the same Region if the tables are in seperate databases\. While creating the table, you must specify the table name, database name, and the retention properties\. [Service quotas apply](https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html)\. See [code sample](https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.create-table.html) for details\. 
+The CreateTable operation adds a new table to an existing database in your account\. In an AWS account, table names must be at least unique within each Region if they are in the same database\. You may have identical table names in the same Region if the tables are in separate databases\. While creating the table, you must specify the table name, database name, and the retention properties\. [Service quotas apply](https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html)\. See [code sample](https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.create-table.html) for details\. 
 
 ## Syntax<a name="aws-resource-timestream-table-syntax"></a>
 
@@ -44,38 +44,7 @@ The name of the Timestream database that contains this table\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RetentionProperties`  <a name="cfn-timestream-table-retentionproperties"></a>
-The retention duration for the memory store and magnetic store\. This object has the following attributes:  
-+ *MemoryStoreRetentionPeriodInHours*: Retention duration for memory store, in hours\.
-+ *MagneticStoreRetentionPeriodInDays*: Retention duration for magnetic store, in days\.
-Both attributes are of type `string`\. Both attributes are **required** when `RetentionProperties` is specified\.  
-See the following examples:  
-**JSON**  
-
-```
-{
-    "Type" : "AWS::Timestream::Table", 
-    "Properties" : {
-        "DatabaseName" : "TestDatabase", 
-        "TableName" : "TestTable", 
-        "RetentionProperties" : {
-            "MemoryStoreRetentionPeriodInHours": "24",
-            "MagneticStoreRetentionPeriodInDays": "7"
-        }
-    } 
-}
-```
-**YAML**  
-
-```
-Type: AWS::Timestream::Table
-DependsOn: TestDatabase
-Properties:
-    TableName: "TestTable"
-    DatabaseName: "TestDatabase"
-    RetentionProperties:
-        MemoryStoreRetentionPeriodInHours: "24"
-        MagneticStoreRetentionPeriodInDays: "7"
-```
+The retention duration for the memory store and magnetic store\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -90,7 +59,7 @@ The name of the Timestream table\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-timestream-table-tags"></a>
-The tags to add to the table  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -98,10 +67,6 @@ The tags to add to the table
 ## Return values<a name="aws-resource-timestream-table-return-values"></a>
 
 ### Ref<a name="aws-resource-timestream-table-return-values-ref"></a>
-
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the table name `TABLE_NAME` in the form `DATABASE_NAME|TABLE_NAME`\. `DATABASE_NAME` is the name of the Timestream database that the table is contained in\. 
-
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-timestream-table-return-values-fn--getatt"></a>
 
@@ -111,3 +76,6 @@ The `Fn::GetAtt` returns a value for the specified attribute of this type\. The 
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The `arn` of the table\.
+
+`Name`  <a name="Name-fn::getatt"></a>
+The name of the table\.

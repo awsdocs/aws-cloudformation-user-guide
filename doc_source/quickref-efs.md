@@ -2,7 +2,7 @@
 
 Amazon Elastic File System \(Amazon EFS\) is a file storage service for Amazon Elastic Compute Cloud \(Amazon EC2\) instances\. With Amazon EFS, your applications have storage when they need it because storage capacity grows and shrinks automatically as you add and remove files\.
 
-The following sample template deploys EC2 instances \(in an Auto Scaling group\) that are associated with an Amazon EFS file system\. To associate the instances with the file system, the instances run the cfn\-init helper script, which downloads and installs the `nfs-utils` yum package, creates a new directory, and then uses the file system's DNS name to mount the file system at that directory\. The file system's DNS name resolves to a mount target’s IP address in the Amazon EC2 instance's Availability Zone\. For more information about the DNS name structure, see [Mounting File Systems](https://docs.aws.amazon.com/efs/latest/ug/mounting-fs.html) in the *Amazon Elastic File System User Guide*\.
+The following sample template deploys EC2 instances \(in an Auto Scaling group\) that are associated with an Amazon EFS file system\. To associate the instances with the file system, the instances run the cfn\-init helper script, which downloads and installs the `nfs-utils` yum package, creates a new directory, and then uses the file system's DNS name to mount the file system at that directory\. The file system's DNS name resolves to a mount target's IP address in the Amazon EC2 instance's Availability Zone\. For more information about the DNS name structure, see [Mounting File Systems](https://docs.aws.amazon.com/efs/latest/ug/mounting-fs.html) in the *Amazon Elastic File System User Guide*\.
 
 To measure Network File System activity, the template includes custom Amazon CloudWatch metrics\. The template also creates a VPC, subnet, and security groups\. To allow the instances to communicate with the file system, the VPC must have DNS enabled, and the mount target and the EC2 instances must be in the same Availability Zone \(AZ\), which is specified by the subnet\.
 
@@ -289,8 +289,8 @@ If you make an update to the mount target that causes it to be replaced, instanc
         "VpcId": { "Ref": "VPC" },
         "GroupDescription": "Enable SSH access via port 22",
         "SecurityGroupIngress": [
-          { "IpProtocol": "tcp", "FromPort": "22", "ToPort": "22", "CidrIp": { "Ref": "SSHLocation" } },
-          { "IpProtocol": "tcp", "FromPort": "80", "ToPort": "80", "CidrIp": "0.0.0.0/0" }
+          { "IpProtocol": "tcp", "FromPort": 22, "ToPort": 22, "CidrIp": { "Ref": "SSHLocation" } },
+          { "IpProtocol": "tcp", "FromPort": 80, "ToPort": 80, "CidrIp": "0.0.0.0/0" }
          ]
       }
     },
@@ -302,8 +302,8 @@ If you make an update to the mount target that causes it to be replaced, instanc
         "SecurityGroupIngress": [
           {
             "IpProtocol": "tcp",
-            "FromPort": "2049",
-            "ToPort": "2049",
+            "FromPort": 2049,
+            "ToPort": 2049,
             "CidrIp": "0.0.0.0/0"
           }
         ]
@@ -857,13 +857,13 @@ Resources:
       GroupDescription: Enable SSH access via port 22
       SecurityGroupIngress:
       - IpProtocol: tcp
-        FromPort: '22'
-        ToPort: '22'
+        FromPort: 22
+        ToPort: 22
         CidrIp:
           Ref: SSHLocation
       - IpProtocol: tcp
-        FromPort: '80'
-        ToPort: '80'
+        FromPort: 80
+        ToPort: 80
         CidrIp: 0.0.0.0/0
   MountTargetSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -873,8 +873,8 @@ Resources:
       GroupDescription: Security group for mount target
       SecurityGroupIngress:
       - IpProtocol: tcp
-        FromPort: '2049'
-        ToPort: '2049'
+        FromPort: 2049
+        ToPort: 2049
         CidrIp: 0.0.0.0/0
   FileSystem:
     Type: AWS::EFS::FileSystem

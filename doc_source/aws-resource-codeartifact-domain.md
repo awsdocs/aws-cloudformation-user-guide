@@ -125,11 +125,11 @@ Resources:
 }
 ```
 
-### Create a domain with an attached AWS KMS encryption key and IAM permissions policy<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an_attached_AWS_KMS_encryption_key_and_IAM_permissions_policy"></a>
+### Create a domain with an AWS Key Management Service encryption key and IAM resource\-based policy<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an__encryption_key_and_IAM_resource-based_policy"></a>
 
-The following example creates a CodeArtifact domain named *my\-domain* and attaches an AWS KMS encryption key and IAM permissions policy\.
+The following example creates a CodeArtifact domain named *my\-domain* with an AWS Key Management Service encryption key and attaches an IAM resource\-based policy\.
 
-#### YAML<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an_attached_AWS_KMS_encryption_key_and_IAM_permissions_policy--yaml"></a>
+#### YAML<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an__encryption_key_and_IAM_resource-based_policy--yaml"></a>
 
 ```
 Resources:
@@ -158,7 +158,7 @@ Resources:
               Resource: "*"
 ```
 
-#### JSON<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an_attached_AWS_KMS_encryption_key_and_IAM_permissions_policy--json"></a>
+#### JSON<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an__encryption_key_and_IAM_resource-based_policy--json"></a>
 
 ```
 {
@@ -192,6 +192,50 @@ Resources:
             }
           ]
         }
+      }
+    }
+  }
+}
+```
+
+### Create a domain with tags<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_tags"></a>
+
+The following example creates a CodeArtifact domain named *my\-domain* with two tags\. One tag consists of a key named `keyname1` and a value of `value1`\. The other consists of a key named `keyname2` and a value of `value2`\.
+
+#### YAML<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_tags--yaml"></a>
+
+```
+Resources:
+  MyCodeArtifactDomain:
+    Type: 'AWS::CodeArtifact::Domain'
+    Properties:
+      DomainName: "my-domain"
+      Tags:
+        - Key: "keyname1"
+          Value: "value1"
+        - Key: "keyname2"
+          Value: "value2"
+```
+
+#### JSON<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_tags--json"></a>
+
+```
+{
+  "Resources": {
+    "MyCodeArtifactDomain": {
+      "Type": "AWS::CodeArtifact::Domain",
+      "Properties": {
+        "DomainName": "my-domain",
+        "Tags" : [
+          {
+            "Key" : "keyname1",
+            "Value" : "value1"
+          },
+          {
+            "Key" : "keyname2",
+            "Value" : "value2"
+          }
+        ]
       }
     }
   }

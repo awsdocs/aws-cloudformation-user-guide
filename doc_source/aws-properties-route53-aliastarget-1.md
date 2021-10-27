@@ -50,7 +50,7 @@ For environments that were created before early 2016, the domain name doesn't in
 For Elastic Beanstalk environments that have regionalized subdomains, specify the `CNAME` attribute for the environment\. You can use the following methods to get the value of the CNAME attribute:  
 + *AWS Management Console*: For information about how to get the value by using the console, see [Using Custom Domains with AWS Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customdomains.html) in the *AWS Elastic Beanstalk Developer Guide*\.
 + *Elastic Beanstalk API*: Use the `DescribeEnvironments` action to get the value of the `CNAME` attribute\. For more information, see [DescribeEnvironments](https://docs.aws.amazon.com/elasticbeanstalk/latest/api/API_DescribeEnvironments.html) in the *AWS Elastic Beanstalk API Reference*\.
-+ *AWS CLI*: Use the `describe-environments` command to get the value of the `CNAME` attribute\. For more information, see [describe\-environments](https://docs.aws.amazon.com/cli/latest/reference/elasticbeanstalk/describe-environments.html) in the *AWS Command Line Interface Reference*\.  
++ *AWS CLI*: Use the `describe-environments` command to get the value of the `CNAME` attribute\. For more information, see [describe\-environments](https://docs.aws.amazon.com/cli/latest/reference/elasticbeanstalk/describe-environments.html) in the *AWS CLI*\.  
 ELB load balancer  
 Specify the DNS name that is associated with the load balancer\. Get the DNS name by using the AWS Management Console, the ELB API, or the AWS CLI\.   
 + **AWS Management Console**: Go to the EC2 page, choose **Load Balancers** in the navigation pane, choose the load balancer, choose the **Description** tab, and get the value of the **DNS name** field\. 
@@ -65,7 +65,7 @@ Specify the DNS name that is associated with the load balancer\. Get the DNS nam
 + **AWS CLI**: Use `describe-load-balancers` to get the value of `DNSName`\. For more information, see the applicable guide:
   + Classic Load Balancers: [describe\-load\-balancers](https://docs.aws.amazon.com/cli/latest/reference/elb/describe-load-balancers.html) 
   + Application and Network Load Balancers: [describe\-load\-balancers](https://docs.aws.amazon.com/cli/latest/reference/elbv2/describe-load-balancers.html)   
-AWS Global Accelerator accelerator  
+Global Accelerator accelerator  
 Specify the DNS name for your accelerator:  
 + **Global Accelerator API**: To get the DNS name, use [DescribeAccelerator](https://docs.aws.amazon.com/global-accelerator/latest/api/API_DescribeAccelerator.html)\. 
 + **AWS CLI**: To get the DNS name, use [describe\-accelerator](https://docs.aws.amazon.com/cli/latest/reference/globalaccelerator/describe-accelerator.html)\.  
@@ -115,21 +115,21 @@ CloudFront distribution
 Specify `Z2FDTNDATAQYW2`\. This is always the hosted zone ID when you create an alias record that routes traffic to a CloudFront distribution\.  
 Alias records for CloudFront can't be created in a private zone\.  
 Elastic Beanstalk environment  
-Specify the hosted zone ID for the region that you created the environment in\. The environment must have a regionalized subdomain\. For a list of regions and the corresponding hosted zone IDs, see [AWS Elastic Beanstalk](https://docs.aws.amazon.com/general/latest/gr/rande.html#elasticbeanstalk_region) in the "AWS Regions and Endpoints" chapter of the *Amazon Web Services General Reference*\.  
+Specify the hosted zone ID for the region that you created the environment in\. The environment must have a regionalized subdomain\. For a list of regions and the corresponding hosted zone IDs, see [AWS Elastic Beanstalk endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/elasticbeanstalk.html) in the *Amazon Web Services General Reference*\.  
 ELB load balancer  
 Specify the value of the hosted zone ID for the load balancer\. Use the following methods to get the hosted zone ID:  
 + [Service Endpoints](https://docs.aws.amazon.com/general/latest/gr/elb.html) table in the "Elastic Load Balancing Endpoints and Quotas" topic in the *Amazon Web Services General Reference*: Use the value that corresponds with the region that you created your load balancer in\. Note that there are separate columns for Application and Classic Load Balancers and for Network Load Balancers\.
 + **AWS Management Console**: Go to the Amazon EC2 page, choose **Load Balancers** in the navigation pane, select the load balancer, and get the value of the **Hosted zone** field on the **Description** tab\.
 + **Elastic Load Balancing API**: Use `DescribeLoadBalancers` to get the applicable value\. For more information, see the applicable guide:
-  + Classic Load Balancers: Use [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_DescribeLoadBalancers.html) to get the value of `CanonicalHostedZoneNameId`\.
-  + Application and Network Load Balancers: Use [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html) to get the value of `CanonicalHostedZoneId`\.
+  + Classic Load Balancers: Use [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_DescribeLoadBalancers.html) to get the value of `CanonicalHostedZoneNameID`\.
+  + Application and Network Load Balancers: Use [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html) to get the value of `CanonicalHostedZoneID`\.
 + **CloudFormation Fn::GetAtt intrinsic function**: Use the [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html) intrinsic function to get the applicable value:
   + Classic Load Balancers: Get [CanonicalHostedZoneNameID](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#aws-properties-ec2-elb-return-values)\. 
   + Application and Network Load Balancers: Get [CanonicalHostedZoneID](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#aws-resource-elasticloadbalancingv2-loadbalancer-return-values)\. 
 + **AWS CLI**: Use `describe-load-balancers` to get the applicable value\. For more information, see the applicable guide:
-  + Classic Load Balancers: Use [describe\-load\-balancers](https://docs.aws.amazon.com/cli/latest/reference/elb/describe-load-balancers.html) to get the value of `CanonicalHostedZoneNameId`\.
-  + Application and Network Load Balancers: Use [describe\-load\-balancers](https://docs.aws.amazon.com/cli/latest/reference/elbv2/describe-load-balancers.html) to get the value of `CanonicalHostedZoneId`\.  
-AWS Global Accelerator accelerator  
+  + Classic Load Balancers: Use [describe\-load\-balancers](https://docs.aws.amazon.com/cli/latest/reference/elb/describe-load-balancers.html) to get the value of `CanonicalHostedZoneNameID`\.
+  + Application and Network Load Balancers: Use [describe\-load\-balancers](https://docs.aws.amazon.com/cli/latest/reference/elbv2/describe-load-balancers.html) to get the value of `CanonicalHostedZoneID`\.  
+Global Accelerator accelerator  
 Specify `Z2BJ6XQ5FK7U4H`\.  
 An Amazon S3 bucket configured as a static website  
 Specify the hosted zone ID for the region that you created the bucket in\. For more information about valid values, see the table [Amazon S3 Website Endpoints](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints) in the *Amazon Web Services General Reference*\.  

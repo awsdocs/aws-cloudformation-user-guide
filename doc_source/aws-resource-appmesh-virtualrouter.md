@@ -67,7 +67,7 @@ Optional metadata that you can apply to the virtual router to assist with catego
 
 `VirtualRouterName`  <a name="cfn-appmesh-virtualrouter-virtualroutername"></a>
 The name to use for the virtual router\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

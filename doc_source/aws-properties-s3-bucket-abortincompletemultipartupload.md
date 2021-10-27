@@ -1,6 +1,6 @@
 # AWS::S3::Bucket AbortIncompleteMultipartUpload<a name="aws-properties-s3-bucket-abortincompletemultipartupload"></a>
 
-Specifies the days since the initiation of an incomplete multipart upload that Amazon S3 will wait before permanently removing all parts of the upload\. For more information, see [ Stopping Incomplete Multipart Uploads Using a Bucket Lifecycle Policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config) in the *Amazon Simple Storage Service Developer Guide*\.
+Specifies the days since the initiation of an incomplete multipart upload that Amazon S3 will wait before permanently removing all parts of the upload\. For more information, see [ Stopping Incomplete Multipart Uploads Using a Bucket Lifecycle Policy](https://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html#mpu-abort-incomplete-mpu-lifecycle-config) in the *Amazon S3 User Guide*\.
 
 ## Syntax<a name="aws-properties-s3-bucket-abortincompletemultipartupload-syntax"></a>
 

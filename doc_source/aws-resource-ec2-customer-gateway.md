@@ -105,5 +105,5 @@ myCustomerGateway:
 ```
 
 ## See also<a name="aws-resource-ec2-customer-gateway--seealso"></a>
-+  [CreateCustomerGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateCustomerGateway.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [CreateCustomerGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateCustomerGateway.html) in the *Amazon EC2 API Reference* 
 
