@@ -127,7 +127,7 @@ The name of the parameter in the Systems Manager Parameter Store\. The parameter
 Required\.
 
 **version**  
-An integer that specifies the version of the parameter to use\. You must specify the exact version\. You can't currently specify that AWS CloudFormation use the latest version of a parameter\. For more information, see [Working with parameter versions](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-versions.html) in the *AWS Systems Manager User Guide*  
+An integer that specifies the version of the parameter to use\. If you do not specify the exact version, CloudFormation uses the latest version of the parameter whenever you create or update the stack\. For more information, see [Working with parameter versions](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-versions.html) in the *AWS Systems Manager User Guide*  
 Optional\.
 
 ### Example<a name="dynamic-references-ssm-secure-example"></a>
