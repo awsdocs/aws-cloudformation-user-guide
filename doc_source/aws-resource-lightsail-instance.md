@@ -18,10 +18,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BundleId](#cfn-lightsail-instance-bundleid)" : String,
       "[Hardware](#cfn-lightsail-instance-hardware)" : Hardware,
       "[InstanceName](#cfn-lightsail-instance-instancename)" : String,
+      "[KeyPairName](#cfn-lightsail-instance-keypairname)" : String,
       "[Location](#cfn-lightsail-instance-location)" : Location,
       "[Networking](#cfn-lightsail-instance-networking)" : Networking,
       "[State](#cfn-lightsail-instance-state)" : State,
-      "[Tags](#cfn-lightsail-instance-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+      "[Tags](#cfn-lightsail-instance-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[UserData](#cfn-lightsail-instance-userdata)" : String
     }
 }
 ```
@@ -39,6 +41,7 @@ Properties:
   [Hardware](#cfn-lightsail-instance-hardware): 
     Hardware
   [InstanceName](#cfn-lightsail-instance-instancename): String
+  [KeyPairName](#cfn-lightsail-instance-keypairname): String
   [Location](#cfn-lightsail-instance-location): 
     Location
   [Networking](#cfn-lightsail-instance-networking): 
@@ -47,6 +50,7 @@ Properties:
     State
   [Tags](#cfn-lightsail-instance-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [UserData](#cfn-lightsail-instance-userdata): String
 ```
 
 ## Properties<a name="aws-resource-lightsail-instance-properties"></a>
@@ -90,8 +94,16 @@ The name of the instance\.
 *Pattern*: `\w[\w\-]*\w`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`KeyPairName`  <a name="cfn-lightsail-instance-keypairname"></a>
+The name of the key pair to use for the instance\.  
+If no key pair name is specified, the Regional Lightsail default key pair is used\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Location`  <a name="cfn-lightsail-instance-location"></a>
 The location for the instance, such as the AWS Region and Availability Zone\.  
+The `Location` property is read\-only and should not be specified in a create instance or update instance request\.
 *Required*: No  
 *Type*: [Location](aws-properties-lightsail-instance-location.md)  
 *Update requires*: Updates are not supported\.
@@ -104,6 +116,7 @@ The public ports and the monthly amount of data transfer allocated for the insta
 
 `State`  <a name="cfn-lightsail-instance-state"></a>
 The status code and the state \(for example, `running`\) of the instance\.  
+The `State` property is read\-only and should not be specified in a create instance or update instance request\.
 *Required*: No  
 *Type*: [State](aws-properties-lightsail-instance-state.md)  
 *Update requires*: Updates are not supported\.
@@ -114,6 +127,14 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 The `Value` of `Tags` is optional for Lightsail resources\.
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`UserData`  <a name="cfn-lightsail-instance-userdata"></a>
+The optional launch script for the instance\.  
+Specify a launch script to configure an instance with additional user data\. For example, you might want to specify `apt-get -y update` as a launch script\.  
+Depending on the blueprint of your instance, the command to get software on your instance varies\. Amazon Linux and CentOS use `yum`, Debian and Ubuntu use `apt-get`, and FreeBSD uses `pkg`\.
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-lightsail-instance-return-values"></a>
@@ -133,19 +154,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Hardware.CpuCount`  <a name="Hardware.CpuCount-fn::getatt"></a>
 The number of vCPUs the instance has\.
 
-`Hardware.Disks.AttachedTo`  <a name="Hardware.Disks.AttachedTo-fn::getatt"></a>
-The instance to which the disk is attached\.
-
-`Hardware.Disks.AttachmentState`  <a name="Hardware.Disks.AttachmentState-fn::getatt"></a>
-\(Deprecated\) The attachment state of the disk\.  
-In releases prior to November 14, 2017, this parameter returned attached for system disks in the API response\. It is now deprecated, but still included in the response\. Use `isAttached` instead\.
-
-`Hardware.Disks.IOPS`  <a name="Hardware.Disks.IOPS-fn::getatt"></a>
-The input/output operations per second \(IOPS\) of the disk\.
-
-`Hardware.Disks.IsSystemDisk`  <a name="Hardware.Disks.IsSystemDisk-fn::getatt"></a>
-A Boolean value indicating whether the disk is a system disk \(has an operating system loaded on it\)\.
-
 `Hardware.RamSizeInGb`  <a name="Hardware.RamSizeInGb-fn::getatt"></a>
 The amount of RAM in GB on the instance \(for example, `1.0`\)\.
 
@@ -154,9 +162,6 @@ The Amazon Resource Name \(ARN\) of the instance \(for example, `arn:aws:lightsa
 
 `IsStaticIp`  <a name="IsStaticIp-fn::getatt"></a>
 A Boolean value indicating whether the instance has a static IP assigned to it\.
-
-`KeyPairName`  <a name="KeyPairName-fn::getatt"></a>
-The name of the SSH key pair used by the instance\.
 
 `Location.AvailabilityZone`  <a name="Location.AvailabilityZone-fn::getatt"></a>
 The AWS Region and Availability Zone where the instance is located\.
@@ -189,22 +194,14 @@ The state of the instance \(for example, `running` or `pending`\)\.
 The support code of the instance\.  
 Include this code in your email to support when you have questions about an instance or another resource in Lightsail\. This code helps our support team to look up your Lightsail information\.
 
-`UserData`  <a name="UserData-fn::getatt"></a>
-A launch script that installs software on an instance, or configures an instance\. For example, you might want to run `apt-get -y update`\.  
-Depending on the blueprint you choose, the command to install software on your instance varies\. Amazon Linux and CentOS use `yum`, Debian and Ubuntu use `apt-get`, and FreeBSD uses `pkg`\.
-
 `UserName`  <a name="UserName-fn::getatt"></a>
 The user name for connecting to the instance \(for example, `ec2-user`\)\.
 
 ## Remarks<a name="aws-resource-lightsail-instance--remarks"></a>
 
-*Key pair*
+*Attaching a static IP to an instance*
 
-Only the default Lightsail key pair for the AWS Region in which you create your instance can be used with the instance\. You cannot use a custom or uploaded key pair with your instance when you create it using AWS CloudFormation\.
-
-*Static IP*
-
-A static IP cannot be attached to an instance using AWS CloudFormation\.
+You cannot attach a static IP to an instance using the instance resource\. Instead, you must use the static IP resource to attach a static IP to an instance\. To attach a static IP to an instance, the instance must be in a `running` state\.
 
 *Network ports*
 
@@ -220,4 +217,4 @@ If you detach a disk \(for eample, `DiskA`\) and attach a different disk \(for e
 
 *Read\-only properties*
 
-The `CpuCount` and `RamSizeInGb` properties of the `Hardware` property are read\-only and should not be specified in a create instance or update instance request\.
+The `State`, `Location`, `CpuCount`, and `RamSizeInGb` properties are read\-only and should not be specified in a create instance or update instance request\.

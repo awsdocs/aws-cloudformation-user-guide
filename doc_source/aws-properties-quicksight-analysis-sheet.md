@@ -36,6 +36,6 @@ The unique identifier associated with a sheet\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `512`  
+*Maximum*: `2048`  
 *Pattern*: `[\w\-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

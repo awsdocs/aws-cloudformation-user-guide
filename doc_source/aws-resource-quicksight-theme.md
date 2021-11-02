@@ -60,7 +60,7 @@ The ID of the theme that a custom theme will inherit from\. All themes inherit f
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `512`  
+*Maximum*: `2048`  
 *Pattern*: `[\w\-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -97,7 +97,7 @@ An ID for the theme that you want to create\. The theme ID is unique per AWS Reg
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `512`  
+*Maximum*: `2048`  
 *Pattern*: `[\w\-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

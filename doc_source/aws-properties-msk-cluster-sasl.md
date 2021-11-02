@@ -1,6 +1,6 @@
 # AWS::MSK::Cluster Sasl<a name="aws-properties-msk-cluster-sasl"></a>
 
-Details for client authentication using SASL\.
+Details for client authentication using SASL\. To turn on SASL, you must also turn on `EncryptionInTransit` by setting `inCluster` to true\. You must set `clientBroker` to either `TLS` or `TLS_PLAINTEXT`\. If you choose `TLS_PLAINTEXT`, then you must also set `unauthenticated` to true\.
 
 ## Syntax<a name="aws-properties-msk-cluster-sasl-syntax"></a>
 

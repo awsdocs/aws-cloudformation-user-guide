@@ -26,7 +26,7 @@ Do not create a dynamic reference that has a backslash \(\\\) as the final value
 
 Dynamic references adhere to the following pattern:
 
-`'{{resolve:service-name:reference-key}}'`
+`'{{resolve:service-name:reference-key}}'` or `'{{resolve:ssm:[a-zA-Z0-9_.\-/]+(:\d+)?}}'`\.
 
 **service\-name**  
 Specifies the service in which the value is stored and managed\.  
@@ -63,7 +63,7 @@ The name of the parameter in the Systems Manager Parameter Store\. The parameter
 Required\.
 
 **version**  
-An integer that specifies the version of the parameter to use\. If you do not specify the exact version, CloudFormation uses the latest version of the parameter whenever you create or update the stack\. For more information, see [Working with parameter versions](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-versions.html) in the *AWS Systems Manager User Guide*  
+An integer that specifies the version of the parameter to use\. If you don't specify the exact version, CloudFormation uses the latest version of the parameter whenever you create or update the stack\. For more information, see [Working with parameter versions](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-versions.html) in the *AWS Systems Manager User Guide*  
 Optional\.
 
 ### Example<a name="dynamic-references-ssm-example"></a>
@@ -102,7 +102,7 @@ Additional considerations to note when using the `ssm` dynamic reference pattern
   A public parameter is a parameter provided by an AWS service for use with that service, and stored in AWS Systems Manager Parameter Store\. For an example of public parameters, see [Retrieving the Amazon ECS\-optimized AMI metadata](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/retrieve-ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.
 + CloudFormation doesn't currently support drift detection on dynamic references\. For `ssm` dynamic references where you haven't specified the parameter version, we recommend that, if you update the parameter version in SSM, you also perform a stack update operation on any stacks that include the `ssm` dynamic reference, in order to fetch the latest parameter version\.
 + To verify which version of an the `ssm` dynamic reference will be used in a stack operation, [create a change set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-create.html) for the stack operation\. Then [review the processed template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-view.html) on the **Template** tab\.
-+ SSM parameters without a version is not supported in the [Parameters block](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html), you should use [SSM parameter types instead](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html#aws-ssm-parameter-types)\. If you do use SSM parameters, you must specify a version of the Systems Manager parameter for AWS CloudFormation to use.
++ SSM parameters without a version isn't supported in the [Parameters block](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html), use [SSM parameter types](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html#aws-ssm-parameter-types) instead\. If you do use SSM parameters, you must specify a version of the Systems Manager parameter for AWS CloudFormation to use\.
 
 ## SSM secure string parameters<a name="dynamic-references-ssm-secure-strings"></a>
 
@@ -127,7 +127,7 @@ The name of the parameter in the Systems Manager Parameter Store\. The parameter
 Required\.
 
 **version**  
-An integer that specifies the version of the parameter to use\. If you do not specify the exact version, CloudFormation uses the latest version of the parameter whenever you create or update the stack\. For more information, see [Working with parameter versions](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-versions.html) in the *AWS Systems Manager User Guide*  
+An integer that specifies the version of the parameter to use\. If you don't specify the exact version, AWS CloudFormation uses the latest version of the parameter whenever you create or update the stack\. For more information, see [Working with parameter versions](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-versions.html) in the *AWS Systems Manager User Guide*  
 Optional\.
 
 ### Example<a name="dynamic-references-ssm-secure-example"></a>
@@ -161,7 +161,7 @@ The following example uses an `ssm-secure` dynamic reference to set the password
 
 Additional considerations to note when using the `ssm-secure` dynamic reference pattern:
 + CloudFormation doesn't return the actual parameter value for secure strings in any API calls, but rather returns the literal dynamic reference\.
-+ CloudFormation does store the literal dynamic reference, which contains the plaintext parameter name of the secure string\.
++ CloudFormation does store the literal dynamic reference, which contains the plain text parameter name of the secure string\.
 + For change sets, CloudFormation compares the literal dynamic reference string\. It doesn't resolve and compare the actual values of `ssm-secure` references\.
 + Dynamic references for secure values, such as `ssm-secure` and `secretsmanager`, aren't currently supported in [custom resources](template-custom-resources.md)\.
 + In cases where CloudFormation must rollback a stack update, that update rollback operation will fail if the previously specified version of a secure string parameter is no longer available\. In such cases, do one of the following:

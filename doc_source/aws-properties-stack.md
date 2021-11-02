@@ -49,7 +49,7 @@ Properties:
 ## Properties<a name="aws-properties-stack-properties"></a>
 
 `NotificationARNs`  <a name="cfn-cloudformation-stack-notificationarns"></a>
-The Amazon Simple Notification Service \(Amazon SNS\) topic ARNs to publish stack related events\. You can find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line Interface \(CLI\)\.  
+The Simple Notification Service \(SNS\) topic ARNs to publish stack related events\. You can find your SNS topic ARNs using the SNS console or your Command Line Interface \(CLI\)\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `5`  

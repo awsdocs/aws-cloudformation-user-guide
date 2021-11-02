@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DefaultMessage](#cfn-pinpoint-campaign-messageconfiguration-defaultmessage)" : Message,
   "[EmailMessage](#cfn-pinpoint-campaign-messageconfiguration-emailmessage)" : CampaignEmailMessage,
   "[GCMMessage](#cfn-pinpoint-campaign-messageconfiguration-gcmmessage)" : Message,
+  "[InAppMessage](#cfn-pinpoint-campaign-messageconfiguration-inappmessage)" : CampaignInAppMessage,
   "[SMSMessage](#cfn-pinpoint-campaign-messageconfiguration-smsmessage)" : CampaignSmsMessage
 }
 ```
@@ -35,6 +36,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     CampaignEmailMessage
   [GCMMessage](#cfn-pinpoint-campaign-messageconfiguration-gcmmessage): 
     Message
+  [InAppMessage](#cfn-pinpoint-campaign-messageconfiguration-inappmessage): 
+    CampaignInAppMessage
   [SMSMessage](#cfn-pinpoint-campaign-messageconfiguration-smsmessage): 
     CampaignSmsMessage
 ```
@@ -75,6 +78,12 @@ The message that the campaign sends through the email channel\. If specified, th
 The message that the campaign sends through the GCM channel, which enables Amazon Pinpoint to send push notifications through the Firebase Cloud Messaging \(FCM\), formerly Google Cloud Messaging \(GCM\), service\. If specified, this message overrides the default message\.  
 *Required*: No  
 *Type*: [Message](aws-properties-pinpoint-campaign-message.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`InAppMessage`  <a name="cfn-pinpoint-campaign-messageconfiguration-inappmessage"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [CampaignInAppMessage](aws-properties-pinpoint-campaign-campaigninappmessage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SMSMessage`  <a name="cfn-pinpoint-campaign-messageconfiguration-smsmessage"></a>

@@ -29,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[SpotMaxTotalPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotmaxtotalprice)" : String,
   "[SpotPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice)" : String,
   "[TargetCapacity](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacity)" : Integer,
+  "[TargetCapacityUnitType](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacityunittype)" : String,
   "[TerminateInstancesWithExpiration](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-terminateinstanceswithexpiration)" : Boolean,
   "[Type](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-type)" : String,
   "[ValidFrom](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validfrom)" : String,
@@ -60,6 +61,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [SpotMaxTotalPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotmaxtotalprice): String
   [SpotPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice): String
   [TargetCapacity](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacity): Integer
+  [TargetCapacityUnitType](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacityunittype): String
   [TerminateInstancesWithExpiration](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-terminateinstanceswithexpiration): Boolean
   [Type](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-type): String
   [ValidFrom](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validfrom): String
@@ -177,6 +179,14 @@ The maximum price per unit hour that you are willing to pay for a Spot Instance\
 The number of units to request for the Spot Fleet\. You can choose to set the target capacity in terms of instances or a performance characteristic that is important to your application workload, such as vCPUs, memory, or I/O\. If the request type is `maintain`, you can specify a target capacity of 0 and add capacity later\.  
 *Required*: Yes  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TargetCapacityUnitType`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacityunittype"></a>
+The unit for the target capacity\.  
+Default: `units` \(translates to number of instances\)  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `memory-mib | units | vcpu`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TerminateInstancesWithExpiration`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-terminateinstanceswithexpiration"></a>

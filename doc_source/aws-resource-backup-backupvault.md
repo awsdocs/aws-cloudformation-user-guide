@@ -69,7 +69,7 @@ The server\-side encryption key that is used to protect your backups; for exampl
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LockConfiguration`  <a name="cfn-backup-backupvault-lockconfiguration"></a>
-Not currently supported by AWS CloudFormation\.  
+Configuration for [AWS Backup Vault Lock](https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html)\.  
 *Required*: No  
 *Type*: [LockConfigurationType](aws-properties-backup-backupvault-lockconfigurationtype.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

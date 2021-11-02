@@ -40,6 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The client request headers to match on\.  
 *Required*: No  
 *Type*: List of [HttpGatewayRouteHeader](aws-properties-appmesh-gatewayroute-httpgatewayrouteheader.md)  
+*Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Hostname`  <a name="cfn-appmesh-gatewayroute-httpgatewayroutematch-hostname"></a>
@@ -52,6 +53,7 @@ The host name to match on\.
 The method to match on\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `CONNECT | DELETE | GET | HEAD | OPTIONS | PATCH | POST | PUT | TRACE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Path`  <a name="cfn-appmesh-gatewayroute-httpgatewayroutematch-path"></a>
@@ -70,4 +72,5 @@ Specifies the path to match requests with\. This parameter must always start wit
 The query parameter to match on\.  
 *Required*: No  
 *Type*: List of [QueryParameter](aws-properties-appmesh-gatewayroute-queryparameter.md)  
+*Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

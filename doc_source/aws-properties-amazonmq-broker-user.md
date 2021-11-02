@@ -49,7 +49,7 @@ The password of the user\. This value must be at least 12 characters long, must 
 
 `Username`  <a name="cfn-amazonmq-broker-user-username"></a>
 The username of the broker user\. For Amazon MQ for ActiveMQ brokers, this value can contain only alphanumeric characters, dashes, periods, underscores, and tildes \(\- \. \_ \~\)\. For Amazon MQ for RabbitMQ brokers, this value can contain only alphanumeric characters, dashes, periods, underscores \(\- \. \_\)\. This value must not contain a tilde \(\~\) character\. Amazon MQ prohibts using guest as a valid usename\. This value must be 2\-100 characters long\.  
-We strongly recommend that you never use any personally identifiable information in your broker usernames
+ Do not add personally identifiable information \(PII\) or other confidential or sensitive information in broker usernames\. Broker usernames are accessible to other AWS services, including CloudWatch Logs\. Broker usernames are not intended to be used for private or sensitive data\. 
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

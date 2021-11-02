@@ -8,6 +8,7 @@
 + [AWS::IoT::Dimension](aws-resource-iot-dimension.md)
 + [AWS::IoT::DomainConfiguration](aws-resource-iot-domainconfiguration.md)
 + [AWS::IoT::FleetMetric](aws-resource-iot-fleetmetric.md)
++ [AWS::IoT::JobTemplate](aws-resource-iot-jobtemplate.md)
 + [AWS::IoT::MitigationAction](aws-resource-iot-mitigationaction.md)
 + [AWS::IoT::Policy](aws-resource-iot-policy.md)
 + [AWS::IoT::PolicyPrincipalAttachment](aws-resource-iot-policyprincipalattachment.md)

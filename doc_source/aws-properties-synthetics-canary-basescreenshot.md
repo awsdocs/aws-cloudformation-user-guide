@@ -29,13 +29,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Coordinates that define the part of a screen to ignore during screenshot comparisons\. To obtain the coordinates to use here, use the CloudWatch Logs console to draw the boundaries on the screen\. For more information, see \{LINK\}  
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `20`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScreenshotName`  <a name="cfn-synthetics-canary-basescreenshot-screenshotname"></a>
 The name of the screenshot\. This is generated the first time the canary is run after the `UpdateCanary` operation that specified for this canary to perform visual monitoring\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

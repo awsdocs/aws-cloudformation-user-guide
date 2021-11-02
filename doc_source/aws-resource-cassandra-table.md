@@ -14,13 +14,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[BillingMode](#cfn-cassandra-table-billingmode)" : BillingMode,
       "[ClusteringKeyColumns](#cfn-cassandra-table-clusteringkeycolumns)" : [ ClusteringKeyColumn, ... ],
+      "[DefaultTimeToLive](#cfn-cassandra-table-defaulttimetolive)" : Integer,
       "[EncryptionSpecification](#cfn-cassandra-table-encryptionspecification)" : EncryptionSpecification,
       "[KeyspaceName](#cfn-cassandra-table-keyspacename)" : String,
       "[PartitionKeyColumns](#cfn-cassandra-table-partitionkeycolumns)" : [ Column, ... ],
       "[PointInTimeRecoveryEnabled](#cfn-cassandra-table-pointintimerecoveryenabled)" : Boolean,
       "[RegularColumns](#cfn-cassandra-table-regularcolumns)" : [ Column, ... ],
       "[TableName](#cfn-cassandra-table-tablename)" : String,
-      "[Tags](#cfn-cassandra-table-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+      "[Tags](#cfn-cassandra-table-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[TimeToLiveEnabled](#cfn-cassandra-table-timetoliveenabled)" : Boolean
     }
 }
 ```
@@ -34,6 +36,7 @@ Properties:
     BillingMode
   [ClusteringKeyColumns](#cfn-cassandra-table-clusteringkeycolumns): 
     - ClusteringKeyColumn
+  [DefaultTimeToLive](#cfn-cassandra-table-defaulttimetolive): Integer
   [EncryptionSpecification](#cfn-cassandra-table-encryptionspecification): 
     EncryptionSpecification
   [KeyspaceName](#cfn-cassandra-table-keyspacename): String
@@ -45,6 +48,7 @@ Properties:
   [TableName](#cfn-cassandra-table-tablename): String
   [Tags](#cfn-cassandra-table-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [TimeToLiveEnabled](#cfn-cassandra-table-timetoliveenabled): Boolean
 ```
 
 ## Properties<a name="aws-resource-cassandra-table-properties"></a>
@@ -63,6 +67,13 @@ One or more columns that determine how the table data is sorted\.
 *Required*: No  
 *Type*: List of [ClusteringKeyColumn](aws-properties-cassandra-table-clusteringkeycolumn.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`DefaultTimeToLive`  <a name="cfn-cassandra-table-defaulttimetolive"></a>
+The default Time To Live \(TTL\) value for all rows in a table in seconds\. The maximum configurable value is 630,720,000 seconds, which is the equivalent of 20 years\. By default, the TTL value for a table is 0, which means data does not expire\.   
+For more information, see [Setting the default TTL value for a table](https://docs.aws.amazon.com/keyspaces/latest/devguide/TTL-how-it-works.html#ttl-howitworks_default_ttl) in the *Amazon Keyspaces Developer Guide*\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncryptionSpecification`  <a name="cfn-cassandra-table-encryptionspecification"></a>
 The encryption at rest options for the table\.  
@@ -115,6 +126,12 @@ A list of key\-value pair tags to be attached to the resource\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`TimeToLiveEnabled`  <a name="cfn-cassandra-table-timetoliveenabled"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Return values<a name="aws-resource-cassandra-table-return-values"></a>
 
 ### Ref<a name="aws-resource-cassandra-table-return-values-ref"></a>
@@ -139,10 +156,11 @@ The following example creates a new table\. The table will have a system\-genera
 {
   "AWSTemplateFormatVersion": "2010-09-09",
   "Resources": {
-    "MyNewTable": {
+    "myNewTable": {
       "Type": "AWS::Cassandra::Table",
       "Properties": {
-        "KeyspaceName": "MyNewKeyspace",
+        "KeyspaceName": "my_keyspace",
+        "TableName":"my_table",
         "PartitionKeyColumns": [
           {
             "ColumnName": "Message",
@@ -160,10 +178,11 @@ The following example creates a new table\. The table will have a system\-genera
 ```
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
-  MyNewTable:
+  myNewTable:
     Type: 'AWS::Cassandra::Table'
     Properties:
-      KeyspaceName: MyNewKeyspace
+      KeyspaceName: my_keyspace
+      TableName: my_table
       PartitionKeyColumns:
         - ColumnName: Message
           ColumnType: ASCII
@@ -171,87 +190,88 @@ Resources:
 
 ### Create a table using all options<a name="aws-resource-cassandra-table--examples--Create_a_table_using_all_options"></a>
 
-The following example creates a table with specific read and write capacity, PITR, tags, and encryption settings\. To run this sample, you must replace the key ARN in the example with your own\.
+The following example creates a table `my_table` with all available properties\. For example, provisioned read and write capacity, default TTL, encryption settings, PITR, and tags\. To use this sample, you must replace the key ARN in the example with your own\.
 
 #### JSON<a name="aws-resource-cassandra-table--examples--Create_a_table_using_all_options--json"></a>
 
 ```
 {
-   "AWSTemplateFormatVersion": "2010-09-09",
-   "Resources": {
-      "mySecondTable": {
-         "Type": "AWS::Cassandra::Table",
-         "Properties": {
-            "KeyspaceName": "MyNewKeyspace",
-            "TableName": "Employees",
-            "PartitionKeyColumns": [
+   "AWSTemplateFormatVersion":"2010-09-09",
+   "Resources":{
+      "myNewTable":{
+         "Type":"AWS::Cassandra::Table",
+         "Properties":{
+            "KeyspaceName":"my_keyspace",
+            "TableName":"my_table",
+            "PartitionKeyColumns":[
                {
-                  "ColumnName": "id",
-                  "ColumnType": "ASCII"
+                  "ColumnName":"id",
+                  "ColumnType":"ASCII"
                }
             ],
-            "ClusteringKeyColumns": [
+            "ClusteringKeyColumns":[
                {
-                  "Column": {
-                     "ColumnName": "division",
-                     "ColumnType": "ASCII"
+                  "Column":{
+                     "ColumnName":"division",
+                     "ColumnType":"ASCII"
                   },
-                  "OrderBy": "ASC"
+                  "OrderBy":"ASC"
                }
             ],
-            "RegularColumns": [
+            "RegularColumns":[
                {
-                  "ColumnName": "name",
-                  "ColumnType": "TEXT"
+                  "ColumnName":"name",
+                  "ColumnType":"TEXT"
                },
                {
-                  "ColumnName": "region",
-                  "ColumnType": "TEXT"
+                  "ColumnName":"region",
+                  "ColumnType":"TEXT"
                },
                {
-                  "ColumnName": "project",
-                  "ColumnType": "TEXT"
+                  "ColumnName":"project",
+                  "ColumnType":"TEXT"
                },
                {
-                  "ColumnName": "role",
-                  "ColumnType": "TEXT"
+                  "ColumnName":"role",
+                  "ColumnType":"TEXT"
                },
                {
-                  "ColumnName": "pay_scale",
-                  "ColumnType": "TEXT"
+                  "ColumnName":"pay_scale",
+                  "ColumnType":"TEXT"
                },
                {
-                  "ColumnName": "vacation_hrs",
-                  "ColumnType": "FLOAT"
+                  "ColumnName":"vacation_hrs",
+                  "ColumnType":"FLOAT"
                },
                {
-                  "ColumnName": "manager_id",
-                  "ColumnType": "TEXT"
+                  "ColumnName":"manager_id",
+                  "ColumnType":"TEXT"
                }
             ],
-		"BillingMode":{
-          	"Mode":"PROVISIONED",
-          	"ProvisionedThroughput":{
-            	"ReadCapacityUnits":5,
-            	"WriteCapacityUnits":5
-          	}
-                },
-            "PointInTimeRecoveryEnabled": true,
-            "Tags": [
-               {
-                  "Key": "tag1",
-                  "Value": "val1"
-               },
-               {
-                  "Key": "tag2",
-                  "Value": "val2"
+            "BillingMode":{
+               "Mode":"PROVISIONED",
+               "ProvisionedThroughput":{
+                  "ReadCapacityUnits":5,
+                  "WriteCapacityUnits":5
                }
-            ],
-            "EncryptionSpecification": {
-                "EncryptionType": "CUSTOMER_MANAGED_KMS_KEY",
-                "KmsKeyIdentifier": "arn:aws:kms:eu-west-1:5555555555555:key/11111111-1111-111-1111-111111111111"
+            },
+            "DefaultTimeToLive":63072000,
+            "EncryptionSpecification":{
+               "EncryptionType":"CUSTOMER_MANAGED_KMS_KEY",
+               "KmsKeyIdentifier":"<emphasis>arn:aws:kms:eu-west-1:5555555555555:key/11111111-1111-111-1111-111111111111</emphasis>"
+              }
+            },
+            "PointInTimeRecoveryEnabled":true,
+            "Tags":[
+            {
+               "Key":"tag1",
+               "Value":"val1"
+            },
+            {
+               "Key":"tag2",
+               "Value":"val2"
             }
-         }
+         ]
       }
    }
 }
@@ -262,11 +282,11 @@ The following example creates a table with specific read and write capacity, PIT
 ```
 AWSTemplateFormatVersion: '2010-09-09'
 Resources:
-  mySecondTable:
+  myNewTable:
     Type: AWS::Cassandra::Table
     Properties:
-      KeyspaceName: MyNewKeyspace
-      TableName: Employees
+      KeyspaceName: my_keyspace
+      TableName: my_table
       PartitionKeyColumns:
       - ColumnName: id
         ColumnType: ASCII
@@ -295,15 +315,16 @@ Resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 5
           WriteCapacityUnits: 5
+      DefaultTimeToLive: 63072000
+      EncryptionSpecification:
+        EncryptionType: CUSTOMER_MANAGED_KMS_KEY
+        KmsKeyIdentifier: arn:aws:kms:eu-west-1:5555555555555:key/11111111-1111-111-1111-111111111111
       PointInTimeRecoveryEnabled: true
       Tags:
         - Key: tag1
           Value: val1
         - Key: tag2
           Value: val2
-      EncryptionSpecification:
-        EncryptionType: CUSTOMER_MANAGED_KMS_KEY
-        KmsKeyIdentifier: arn:aws:kms:eu-west-1:5555555555555:key/11111111-1111-111-1111-111111111111
 ```
 
 ### Add new columns to an existing table<a name="aws-resource-cassandra-table--examples--Add_new_columns_to_an_existing_table"></a>
@@ -316,10 +337,11 @@ The following example shows how to add five new columns to the existing table `m
 {
   "AWSTemplateFormatVersion": "2010-09-09",
   "Resources": {
-    "MyNewTable": {
+    "myTable": {
       "Type": "AWS::Cassandra::Table",
       "Properties": {
-        "KeyspaceName": "MyNewKeyspace",
+        "KeyspaceName": "my_keyspace",
+        "TableName":"my_table",
         "PartitionKeyColumns": [
           {
             "ColumnName": "Message",
@@ -348,10 +370,11 @@ The following example shows how to add five new columns to the existing table `m
 {
   "AWSTemplateFormatVersion": "2010-09-09",
   "Resources": {
-    "MyNewTable": {
+    "myTable": {
       "Type": "AWS::Cassandra::Table",
       "Properties": {
-        "KeyspaceName": "MyNewKeyspace",
+        "KeyspaceName": "my_keyspace",
+        "TableName":"my_table",
         "PartitionKeyColumns": [
           {
             "ColumnName": "Message",
@@ -399,10 +422,11 @@ The following example shows how to add five new columns to the existing table `m
 ```
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
-  my_table:
+  myTable:
     Type: 'AWS::Cassandra::Table'
     Properties:
       KeyspaceName: my_keyspace
+      TableName: my_table
       PartitionKeyColumns:
         - ColumnName: Message
           ColumnType: ASCII
@@ -418,10 +442,11 @@ Resources:
 ```
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
-  my_table:
+  myTable:
     Type: 'AWS::Cassandra::Table'
     Properties:
       KeyspaceName: my_keyspace
+      TableName: my_table
       PartitionKeyColumns:
         - ColumnName: Message
           ColumnType: ASCII

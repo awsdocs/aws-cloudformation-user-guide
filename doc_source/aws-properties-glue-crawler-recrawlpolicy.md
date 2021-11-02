@@ -26,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Specifies whether to crawl the entire dataset again or to crawl only folders that were added since the last crawler run\.  
 A value of `CRAWL_EVERYTHING` specifies crawling the entire dataset again\.  
 A value of `CRAWL_NEW_FOLDERS_ONLY` specifies crawling only folders that were added since the last crawler run\.  
+A value of `CRAWL_EVENT_MODE` specifies crawling only the changes identified by Amazon S3 events\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

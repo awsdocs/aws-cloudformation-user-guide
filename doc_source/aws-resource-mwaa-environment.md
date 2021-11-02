@@ -10,7 +10,6 @@ The `AWS::MWAA::Environment` resource creates an Amazon Managed Workflows for Ap
 + [AWS::MWAA::Environment LoggingConfiguration](aws-properties-mwaa-environment-loggingconfiguration.md)
 + [AWS::MWAA::Environment ModuleLoggingConfiguration](aws-properties-mwaa-environment-moduleloggingconfiguration.md)
 + [AWS::MWAA::Environment NetworkConfiguration](aws-properties-mwaa-environment-networkconfiguration.md)
-+ [AWS::MWAA::Environment TagMap](aws-properties-mwaa-environment-tagmap.md)
 
 ## Syntax<a name="aws-resource-mwaa-environment-syntax"></a>
 
@@ -39,7 +38,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RequirementsS3Path](#cfn-mwaa-environment-requirementss3path)" : String,
       "[Schedulers](#cfn-mwaa-environment-schedulers)" : Integer,
       "[SourceBucketArn](#cfn-mwaa-environment-sourcebucketarn)" : String,
-      "[Tags](#cfn-mwaa-environment-tags)" : TagMap,
+      "[Tags](#cfn-mwaa-environment-tags)" : Json,
       "[WebserverAccessMode](#cfn-mwaa-environment-webserveraccessmode)" : String,
       "[WeeklyMaintenanceWindowStart](#cfn-mwaa-environment-weeklymaintenancewindowstart)" : String
     }
@@ -70,8 +69,7 @@ Properties:
   [RequirementsS3Path](#cfn-mwaa-environment-requirementss3path): String
   [Schedulers](#cfn-mwaa-environment-schedulers): Integer
   [SourceBucketArn](#cfn-mwaa-environment-sourcebucketarn): String
-  [Tags](#cfn-mwaa-environment-tags): 
-    TagMap
+  [Tags](#cfn-mwaa-environment-tags): Json
   [WebserverAccessMode](#cfn-mwaa-environment-webserveraccessmode): String
   [WeeklyMaintenanceWindowStart](#cfn-mwaa-environment-weeklymaintenancewindowstart): String
 ```
@@ -185,7 +183,7 @@ The Amazon Resource Name \(ARN\) of the Amazon S3 bucket where your DAG code and
 `Tags`  <a name="cfn-mwaa-environment-tags"></a>
 The key\-value tag pairs associated to your environment\. For example, `"Environment": "Staging"`\. To learn more, see [Tagging](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html)\.  
 *Required*: No  
-*Type*: [TagMap](aws-properties-mwaa-environment-tagmap.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WebserverAccessMode`  <a name="cfn-mwaa-environment-webserveraccessmode"></a>

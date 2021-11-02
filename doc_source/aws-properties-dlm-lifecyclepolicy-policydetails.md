@@ -61,6 +61,7 @@ This parameter is required for event\-based policies only\. If you are creating 
 `Parameters`  <a name="cfn-dlm-lifecyclepolicy-policydetails-parameters"></a>
 A set of optional parameters for snapshot and AMI lifecycle policies\.   
 This parameter is required for snapshot and AMI policies only\. If you are creating an event\-based policy, omit this parameter\.  
+If you are modifying a policy that was created or previously modified using the Amazon Data Lifecycle Manager console, then you must include this parameter and specify either the default values or the new values that you require\. You can't omit this parameter or set its values to null\.
 *Required*: No  
 *Type*: [Parameters](aws-properties-dlm-lifecyclepolicy-parameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

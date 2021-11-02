@@ -75,7 +75,7 @@ The default capacity provider strategy for the cluster\. When services or tasks 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ecs-cluster-tags"></a>
-The metadata that you apply to the cluster to help you categorize and organize them\. Each tag consists of a key and an optional value, both of which you define\.  
+The metadata that you apply to the cluster to help you categorize and organize them\. Each tag consists of a key and an optional value\. You define both\.  
 The following basic restrictions apply to tags:  
 + Maximum number of tags per resource \- 50
 + For each resource, each tag key must be unique, and each tag key can have only one value\.

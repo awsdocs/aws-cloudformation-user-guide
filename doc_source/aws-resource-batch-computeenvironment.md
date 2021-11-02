@@ -31,7 +31,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ServiceRole](#cfn-batch-computeenvironment-servicerole)" : String,
       "[State](#cfn-batch-computeenvironment-state)" : String,
       "[Tags](#cfn-batch-computeenvironment-tags)" : Json,
-      "[Type](#cfn-batch-computeenvironment-type)" : String
+      "[Type](#cfn-batch-computeenvironment-type)" : String,
+      "[UnmanagedvCpus](#cfn-batch-computeenvironment-unmanagedvcpus)" : Integer
     }
 }
 ```
@@ -48,6 +49,7 @@ Properties:
   [State](#cfn-batch-computeenvironment-state): String
   [Tags](#cfn-batch-computeenvironment-tags): Json
   [Type](#cfn-batch-computeenvironment-type): String
+  [UnmanagedvCpus](#cfn-batch-computeenvironment-unmanagedvcpus): Integer
 ```
 
 ## Properties<a name="aws-resource-batch-computeenvironment-properties"></a>
@@ -94,6 +96,12 @@ The type of the compute environment: `MANAGED` or `UNMANAGED`\. For more informa
 *Type*: String  
 *Allowed values*: `MANAGED | UNMANAGED`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`UnmanagedvCpus`  <a name="cfn-batch-computeenvironment-unmanagedvcpus"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-batch-computeenvironment-return-values"></a>
 

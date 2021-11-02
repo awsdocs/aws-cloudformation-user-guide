@@ -195,7 +195,7 @@ For more information, see [Security groups for your VPC](https://docs.aws.amazon
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SpotPrice`  <a name="cfn-as-launchconfig-spotprice"></a>
-The maximum hourly price you are willing to pay for any Spot Instances launched to fulfill the request\. Spot Instances are launched when the price you specify exceeds the current Spot price\. For more information, see [Requesting Spot Instances for fault\-tolerant and flexible applications ](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-launch-spot-instances.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
+The maximum hourly price you are willing to pay for any Spot Instances launched to fulfill the request\. Spot Instances are launched when the price you specify exceeds the current Spot price\. For more information, see [Requesting Spot Instances for fault\-tolerant and flexible applications ](https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-configuration-requesting-spot-instances.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 When you change your maximum price by creating a new launch configuration, running instances will continue to run as long as the maximum price for those running instances is higher than the current Spot price\.
 Valid Range: Minimum value of 0\.001  
 *Required*: No  

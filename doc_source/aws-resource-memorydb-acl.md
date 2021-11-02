@@ -1,6 +1,6 @@
 # AWS::MemoryDB::ACL<a name="aws-resource-memorydb-acl"></a>
 
-Specifies an Access Control List\. For more information, see [Authenticating users with Access Contol Lists \(ACLs\)](https://docs.aws.amazon.com/MemoryDB/latest/devguide/clusters.acls.html)\.
+Specifies an Access Control List\. For more information, see [Authenticating users with Access Contol Lists \(ACLs\)](https://docs.aws.amazon.com/memorydb/latest/devguide/clusters.acls.html)\.
 
 ## Syntax<a name="aws-resource-memorydb-acl-syntax"></a>
 

@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Limits](#cfn-pinpoint-campaign-limits)" : Limits,
       "[MessageConfiguration](#cfn-pinpoint-campaign-messageconfiguration)" : MessageConfiguration,
       "[Name](#cfn-pinpoint-campaign-name)" : String,
+      "[Priority](#cfn-pinpoint-campaign-priority)" : Integer,
       "[Schedule](#cfn-pinpoint-campaign-schedule)" : Schedule,
       "[SegmentId](#cfn-pinpoint-campaign-segmentid)" : String,
       "[SegmentVersion](#cfn-pinpoint-campaign-segmentversion)" : Integer,
@@ -49,6 +50,7 @@ Properties:
   [MessageConfiguration](#cfn-pinpoint-campaign-messageconfiguration): 
     MessageConfiguration
   [Name](#cfn-pinpoint-campaign-name): String
+  [Priority](#cfn-pinpoint-campaign-priority): Integer
   [Schedule](#cfn-pinpoint-campaign-schedule): 
     Schedule
   [SegmentId](#cfn-pinpoint-campaign-segmentid): String
@@ -112,6 +114,12 @@ The message configuration settings for the campaign\.
 The name of the campaign\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Priority`  <a name="cfn-pinpoint-campaign-priority"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Schedule`  <a name="cfn-pinpoint-campaign-schedule"></a>

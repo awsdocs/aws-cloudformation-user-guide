@@ -4,3 +4,5 @@
 + [AWS::Backup::BackupPlan](aws-resource-backup-backupplan.md)
 + [AWS::Backup::BackupSelection](aws-resource-backup-backupselection.md)
 + [AWS::Backup::BackupVault](aws-resource-backup-backupvault.md)
++ [AWS::Backup::Framework](aws-resource-backup-framework.md)
++ [AWS::Backup::ReportPlan](aws-resource-backup-reportplan.md)

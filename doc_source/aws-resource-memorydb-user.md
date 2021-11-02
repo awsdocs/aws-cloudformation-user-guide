@@ -1,6 +1,6 @@
 # AWS::MemoryDB::User<a name="aws-resource-memorydb-user"></a>
 
-Specifies a MemoryDB user\. For more information, see [Authenticating users with Access Contol Lists \(ACLs\)](https://docs.aws.amazon.com/MemoryDB/latest/devguide/clusters.acls.html)\.
+Specifies a MemoryDB user\. For more information, see [Authenticating users with Access Contol Lists \(ACLs\)](https://docs.aws.amazon.com/memorydb/latest/devguide/clusters.acls.html)\.
 
 ## Syntax<a name="aws-resource-memorydb-user-syntax"></a>
 

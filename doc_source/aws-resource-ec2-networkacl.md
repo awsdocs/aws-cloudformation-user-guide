@@ -1,12 +1,12 @@
-# AWS::EC2::NetworkAcl<a name="aws-resource-ec2-network-acl"></a>
+# AWS::EC2::NetworkAcl<a name="aws-resource-ec2-networkacl"></a>
 
 Specifies a network ACL for your VPC\.
 
-## Syntax<a name="aws-resource-ec2-network-acl-syntax"></a>
+## Syntax<a name="aws-resource-ec2-networkacl-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-resource-ec2-network-acl-syntax.json"></a>
+### JSON<a name="aws-resource-ec2-networkacl-syntax.json"></a>
 
 ```
 {
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 }
 ```
 
-### YAML<a name="aws-resource-ec2-network-acl-syntax.yaml"></a>
+### YAML<a name="aws-resource-ec2-networkacl-syntax.yaml"></a>
 
 ```
 Type: AWS::EC2::NetworkAcl
@@ -28,7 +28,7 @@ Properties:
   [VpcId](#cfn-ec2-networkacl-vpcid): String
 ```
 
-## Properties<a name="aws-resource-ec2-network-acl-properties"></a>
+## Properties<a name="aws-resource-ec2-networkacl-properties"></a>
 
 `Tags`  <a name="cfn-ec2-networkacl-tags"></a>
 An arbitrary set of tags \(key\-value pairs\) for this ACL\.  
@@ -42,23 +42,30 @@ The ID of the VPC for the network ACL\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return values<a name="aws-resource-ec2-network-acl-return-values"></a>
+## Return values<a name="aws-resource-ec2-networkacl-return-values"></a>
 
-### Ref<a name="aws-resource-ec2-network-acl-return-values-ref"></a>
+### Ref<a name="aws-resource-ec2-networkacl-return-values-ref"></a>
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Examples<a name="aws-resource-ec2-network-acl--examples"></a>
+### Fn::GetAtt<a name="aws-resource-ec2-networkacl-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-ec2-networkacl-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+## Examples<a name="aws-resource-ec2-networkacl--examples"></a>
 
 
 
-### Network ACL<a name="aws-resource-ec2-network-acl--examples--Network_ACL"></a>
+### Network ACL<a name="aws-resource-ec2-networkacl--examples--Network_ACL"></a>
 
 The following example creates a Network ACL in a VPC\.
 
-#### JSON<a name="aws-resource-ec2-network-acl--examples--Network_ACL--json"></a>
+#### JSON<a name="aws-resource-ec2-networkacl--examples--Network_ACL--json"></a>
 
 ```
 "myNetworkAcl" : {
@@ -70,7 +77,7 @@ The following example creates a Network ACL in a VPC\.
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-network-acl--examples--Network_ACL--yaml"></a>
+#### YAML<a name="aws-resource-ec2-networkacl--examples--Network_ACL--yaml"></a>
 
 ```
    myNetworkAcl:
@@ -83,7 +90,7 @@ The following example creates a Network ACL in a VPC\.
            Value: production
 ```
 
-## See also<a name="aws-resource-ec2-network-acl--seealso"></a>
+## See also<a name="aws-resource-ec2-networkacl--seealso"></a>
 + [CreateNetworkAcl](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateNetworkAcl.html) in the *Amazon EC2 API Reference*
 + [Network ACLs](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html) in the *Amazon VPC User Guide*
 

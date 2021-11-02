@@ -1,6 +1,6 @@
 # AWS::MemoryDB::ParameterGroup<a name="aws-resource-memorydb-parametergroup"></a>
 
-Specifies a new MemoryDB parameter group\. A parameter group is a collection of parameters and their values that are applied to all of the nodes in any cluster\. For more information, see [Configuring engine parameters using parameter groups](https://docs.aws.amazon.com/MemoryDB/latest/devguide/ParameterGroups.html)\. 
+Specifies a new MemoryDB parameter group\. A parameter group is a collection of parameters and their values that are applied to all of the nodes in any cluster\. For more information, see [Configuring engine parameters using parameter groups](https://docs.aws.amazon.com/memorydb/latest/devguide/parametergroups.html)\. 
 
 ## Syntax<a name="aws-resource-memorydb-parametergroup-syntax"></a>
 
@@ -44,7 +44,7 @@ A description of the parameter group\.
 
 `Family`  <a name="cfn-memorydb-parametergroup-family"></a>
 The name of the parameter group family that this parameter group is compatible with\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

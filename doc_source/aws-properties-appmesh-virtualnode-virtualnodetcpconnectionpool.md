@@ -26,4 +26,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster\.  
 *Required*: Yes  
 *Type*: Integer  
+*Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

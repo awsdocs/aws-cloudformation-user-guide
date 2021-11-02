@@ -22,11 +22,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[EncryptionConfig](#cfn-eks-cluster-encryptionconfig)" : [ EncryptionConfig, ... ],
       "[KubernetesNetworkConfig](#cfn-eks-cluster-kubernetesnetworkconfig)" : KubernetesNetworkConfig,
-      "[Logging](#cfn-eks-cluster-logging)" : Logging,
       "[Name](#cfn-eks-cluster-name)" : String,
       "[ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig)" : ResourcesVpcConfig,
       "[RoleArn](#cfn-eks-cluster-rolearn)" : String,
-      "[Tags](#cfn-eks-cluster-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Version](#cfn-eks-cluster-version)" : String
     }
 }
@@ -41,14 +39,10 @@ Properties:
     - EncryptionConfig
   [KubernetesNetworkConfig](#cfn-eks-cluster-kubernetesnetworkconfig): 
     KubernetesNetworkConfig
-  [Logging](#cfn-eks-cluster-logging): 
-    Logging
   [Name](#cfn-eks-cluster-name): String
   [ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig): 
     ResourcesVpcConfig
   [RoleArn](#cfn-eks-cluster-rolearn): String
-  [Tags](#cfn-eks-cluster-tags): 
-    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Version](#cfn-eks-cluster-version): String
 ```
 
@@ -67,12 +61,6 @@ The Kubernetes network configuration for the cluster\.
 *Type*: [KubernetesNetworkConfig](aws-properties-eks-cluster-kubernetesnetworkconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`Logging`  <a name="cfn-eks-cluster-logging"></a>
-The logging configuration for your cluster\.  
-*Required*: No  
-*Type*: [Logging](aws-properties-eks-cluster-logging.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `Name`  <a name="cfn-eks-cluster-name"></a>
 The unique name to give to your cluster\.  
 *Required*: No  
@@ -86,19 +74,13 @@ The unique name to give to your cluster\.
 The VPC configuration used by the cluster control plane\. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes\. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the *Amazon EKS User Guide*\. You must specify at least two subnets\. You can specify up to five security groups, but we recommend that you use a dedicated security group for your cluster control plane\.  
 *Required*: Yes  
 *Type*: [ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleArn`  <a name="cfn-eks-cluster-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf\. For more information, see [Amazon EKS Service IAM Role](https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html) in the * *Amazon EKS User Guide* *\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`Tags`  <a name="cfn-eks-cluster-tags"></a>
-The metadata that you apply to the cluster to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Cluster tags do not propagate to any other resources associated with the cluster\.  
-*Required*: No  
-*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-eks-cluster-version"></a>
 The desired Kubernetes version for your cluster\. If you don't specify a value here, the latest version available in Amazon EKS is used\.  

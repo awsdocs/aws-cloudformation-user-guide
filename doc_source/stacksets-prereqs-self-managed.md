@@ -3,12 +3,12 @@
 With self\-managed permissions, you create the AWS Identity and Access Management \(IAM\) roles required by StackSets to deploy across accounts and AWS Regions\. These roles are necessary to establish a trusted relationship between the account you're administering the stack set from and the account you're deploying stack instances to\. Using this permissions model, StackSets can deploy to any AWS account in which you have permissions to create an IAM role\.
 
 **Topics**
-+ [Self\-managed permissions](#w10116ab1c29c15c15b7)
++ [Self\-managed permissions](#w10335ab1c29c15c15b7)
 + [Set up basic permissions for stack set operations](#stacksets-prereqs-accountsetup)
 + [Set up advanced permissions options for stack set operations](#stacksets-prereqs-advanced-perms)
 + [Set up global keys to mitigate confused deputy problems](#confused-deputy-mitigation)
 
-## Self\-managed permissions<a name="w10116ab1c29c15c15b7"></a>
+## Self\-managed permissions<a name="w10335ab1c29c15c15b7"></a>
 
 To set up the required permissions for creating a **service\-managed** stack set, see [Enable trusted access with AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)\.
 
@@ -81,7 +81,7 @@ If you structure your permissions this way, users don't pass an administrator ro
 
    For more information on regional endpoints, including a list of endpoints, see [Regional endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints) in the *AWS General Reference Guide*\.
 
-   The following example includes the regional service principal \(`cloudformation.ap-east-1.amazonaws.com`\) for the Asia Pacific \(Hong Kong\) region, a region which is disabled by default\.
+   The following example includes the regional service principal \(`cloudformation.ap-east-1.amazonaws.com`\) for the Asia Pacific \(Hong Kong\) Region, a Region which is disabled by default\.
 
    ```
    {
@@ -245,7 +245,7 @@ In general, here's how it works once you have the necessary permissions in place
 
    For more information on regional endpoints, including a list of endpoints, see [Regional endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints) in the *AWS General Reference Guide*\.
 
-   The following example includes the regional service principal \(`cloudformation.ap-east-1.amazonaws.com`\) for the Asia Pacific \(Hong Kong\) region, a region which is disabled by default\.
+   The following example includes the regional service principal \(`cloudformation.ap-east-1.amazonaws.com`\) for the Asia Pacific \(Hong Kong\) Region, a Region which is disabled by default\.
 
    ```
    {
@@ -418,7 +418,13 @@ In addition, you can set up permissions for which user and groups can perform sp
 
 ## Set up global keys to mitigate confused deputy problems<a name="confused-deputy-mitigation"></a>
 
-When StackSets assumes the **Administration** role in your **administrator** account, StackSets populates your **administrator** account ID and StackSets Amazon Resource Name \(ARN\)\. Therefore, you can define conditions for [global keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourceaccount) `aws:SourceAccount` and `aws:SourceArn` in the trust relationships to prevent [confused deputy problems](https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html)\. See the following example\.
+The confused deputy problem is a security issue where an entity that doesn't have permission to perform an action can coerce a more\-privileged entity to perform the action\. In AWS, cross\-service impersonation can result in the confused deputy problem\. Cross\-service impersonation can occur when one service \(the *calling service*\) calls another service \(the *called service*\)\. The calling service can be manipulated to use its permissions to act on another customer's resources in a way it shouldn't otherwise have permission to access\. To prevent this, AWS provides tools that help you protect your data for all services with service principals that have been given access to resources in your account\.
+
+We recommend using the [https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourcearn](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourcearn) and [https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourceaccount](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourceaccount) global condition context keys in resource policies to limit the permissions that AWS CloudFormation StackSets gives another service to the resource\. If you use both global condition context keys, the `aws:SourceAccount` value and the account in the `aws:SourceArn` value must use the same account ID when used in the same policy statement\.
+
+The most effective way to protect against the confused deputy problem is to use the `aws:SourceArn` global condition context key with the full ARN of the resource\. If you don't know the full ARN of the resource or if you are specifying multiple resources, use the `aws:SourceArn` global context condition key with wildcards \(`*`\) for the unknown portions of the ARN\. For example, `arn:aws:cloudformation::123456789012:*`\. Whenever possible, use `aws:SourceArn`, because it's more specific\. Use `aws:SourceAccount` only when you can't determine the correct ARN or ARN pattern\.
+
+When StackSets assumes the **Administration** role in your **administrator** account, StackSets populates your **administrator** account ID and StackSets Amazon Resource Name \(ARN\)\. Therefore, you can define conditions for [global keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourceaccount) `aws:SourceAccount` and `aws:SourceArn` in the trust relationships to prevent [confused deputy problems](https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html)\. The following example shows how you can use the `aws:SourceArn` and `aws:SourceAccount` global condition context keys in StackSets to prevent the confused deputy problem\.
 
 **Example Global keys for `aws:SourceAccount` and `aws:SourceArn`**  
 When using StackSets, define the global keys `aws:SourceAccount` and `aws:SourceArn` in your `AWSCloudFormationStackSetAdministrationRole` trust policy to prevent confused deputy problems\.  

@@ -1,6 +1,6 @@
 # AWS::HealthLake::FHIRDatastore<a name="aws-resource-healthlake-fhirdatastore"></a>
 
-Specify a Data Store that can ingest and export FHIR formatted data\.
+Creates a Data Store that can ingest and export FHIR formatted data\.
 
 **Important**  
 Please note that when a user tries to do an Update operation via CloudFormation, changes to the Data Store name, Type Version, PreloadDataConfig, or SSEConfiguration will delete their existing Data Store for the stack and create a new one\. This will lead to potential loss of data\. 
@@ -91,8 +91,7 @@ The Data Store ARN is generated during the creation of the Data Store and can be
 The endpoint for the created Data Store\.
 
 `DatastoreId`  <a name="DatastoreId-fn::getatt"></a>
-The AWS\-generated Data Store id\. This id is in the output from the initial Data Store creation call\.
+The Amazon generated Data Store id\. This id is in the output from the initial Data Store creation call\.
 
 `DatastoreStatus`  <a name="DatastoreStatus-fn::getatt"></a>
-The status of the FHIR Data Store\.  
-*Valid values*: `CREATING` \| `ACTIVE` \| `DELETING` \| `DELETED`
+The status of the FHIR Data Store\. Possible statuses are ‘CREATING’, ‘ACTIVE’, ‘DELETING’, ‘DELETED’\.

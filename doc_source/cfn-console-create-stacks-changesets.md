@@ -34,4 +34,4 @@ To create a change set for a new stack, select your stack template and specify t
 
    If CloudFormation fails to create the change set, it sets the changes set status to `CREATE_FAILED`\. Fix the error displayed in the **Status reason** field, and then create a new change set\. At this stage, you can try various configurations and make corrections and changes to your stack before executing the next change set\.
 
-1. To complete creating a new stack based on the change set, choose **Execute**, and then choose **Execute** again\.
+1. To complete creating a new stack based on the change set, choose **Execute**, specify your rollback configuration, and then choose **Execute change set**\.

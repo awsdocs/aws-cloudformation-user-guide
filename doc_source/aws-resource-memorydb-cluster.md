@@ -79,7 +79,7 @@ Properties:
 
 `ACLName`  <a name="cfn-memorydb-cluster-aclname"></a>
 The name of the Access Control List to associate with the cluster\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Pattern*: `[a-zA-Z][a-zA-Z0-9\-]*`  
@@ -136,7 +136,7 @@ Specifies the weekly time range during which maintenance on the cluster is perfo
 
 `NodeType`  <a name="cfn-memorydb-cluster-nodetype"></a>
 The cluster's node type\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

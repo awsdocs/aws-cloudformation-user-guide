@@ -13,7 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Route53RecoveryControl::ControlPanel",
   "Properties" : {
       "[ClusterArn](#cfn-route53recoverycontrol-controlpanel-clusterarn)" : String,
-      "[Name](#cfn-route53recoverycontrol-controlpanel-name)" : String
+      "[Name](#cfn-route53recoverycontrol-controlpanel-name)" : String,
+      "[Tags](#cfn-route53recoverycontrol-controlpanel-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -25,6 +26,8 @@ Type: AWS::Route53RecoveryControl::ControlPanel
 Properties: 
   [ClusterArn](#cfn-route53recoverycontrol-controlpanel-clusterarn): String
   [Name](#cfn-route53recoverycontrol-controlpanel-name): String
+  [Tags](#cfn-route53recoverycontrol-controlpanel-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-route53recoverycontrol-controlpanel-properties"></a>
@@ -40,6 +43,12 @@ The name of the control panel\. You can use any non\-white space character in th
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-route53recoverycontrol-controlpanel-tags"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-route53recoverycontrol-controlpanel-return-values"></a>
 

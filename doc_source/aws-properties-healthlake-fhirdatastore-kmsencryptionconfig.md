@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-healthlake-fhirdatastore-kmsencryptionconfig-properties"></a>
 
 `CmkType`  <a name="cfn-healthlake-fhirdatastore-kmsencryptionconfig-cmktype"></a>
- The type of customer\-managed\-key\(CMK\) used for encyrption\. The two types of supported CMKs are customer owned CMKs and Amazon owned CMKs\.  
+ The type of customer\-managed\-key\(CMK\) used for encryption\. The two types of supported CMKs are customer owned CMKs and Amazon owned CMKs\. For more information on CMK types, see [KmsEncryptionConfig](https://docs.aws.amazon.com/healthlake/latest/APIReference/API_KmsEncryptionConfig.html#HealthLake-Type-KmsEncryptionConfig-CmkType)\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

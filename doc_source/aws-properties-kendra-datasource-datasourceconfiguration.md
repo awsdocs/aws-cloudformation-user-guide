@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource DataSourceConfiguration<a name="aws-properties-kendra-datasource-datasourceconfiguration"></a>
 
-Configuration information for a Amazon Kendra data source\.
+Configuration information for an Amazon Kendra data source\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-datasourceconfiguration-syntax"></a>
 

@@ -72,10 +72,10 @@ The name of the application\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RuntimeEnvironment`  <a name="cfn-kinesisanalyticsv2-application-runtimeenvironment"></a>
-The runtime environment for the application \(`SQL-1_0`, `FLINK-1_6`, `FLINK-1_8`, or `FLINK-1_11`\)\.  
+The runtime environment for the application\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `FLINK-1_11 | FLINK-1_6 | FLINK-1_8 | SQL-1_0 | ZEPPELIN-FLINK-1_0`  
+*Allowed values*: `FLINK-1_11 | FLINK-1_13 | FLINK-1_6 | FLINK-1_8 | SQL-1_0 | ZEPPELIN-FLINK-1_0 | ZEPPELIN-FLINK-2_0`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceExecutionRole`  <a name="cfn-kinesisanalyticsv2-application-serviceexecutionrole"></a>

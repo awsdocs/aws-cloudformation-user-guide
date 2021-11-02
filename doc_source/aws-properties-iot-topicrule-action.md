@@ -169,7 +169,7 @@ Invoke a Lambda function\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OpenSearch`  <a name="cfn-iot-topicrule-action-opensearch"></a>
-Not currently supported by AWS CloudFormation\.  
+Write data to an Amazon OpenSearch Service domain\.  
 *Required*: No  
 *Type*: [OpenSearchAction](aws-properties-iot-topicrule-opensearchaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

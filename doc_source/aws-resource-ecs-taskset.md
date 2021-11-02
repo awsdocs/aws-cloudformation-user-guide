@@ -62,7 +62,7 @@ An optional non\-unique tag that identifies this task set in external systems\. 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LaunchType`  <a name="cfn-ecs-taskset-launchtype"></a>
-The launch type that new tasks in the task set will use\. For more information, see [Amazon ECS Launch Types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The launch type that new tasks in the task set uses\. For more information, see [Amazon ECS Launch Types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 If a `launchType` is specified, the `capacityProviderStrategy` parameter must be omitted\.  
 *Required*: No  
 *Type*: String  
@@ -82,13 +82,13 @@ The network configuration for the task set\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PlatformVersion`  <a name="cfn-ecs-taskset-platformversion"></a>
-The platform version that the tasks in the task set should use\. A platform version is specified only for tasks using the Fargate launch type\. If one isn't specified, the `LATEST` platform version is used by default\.  
+The platform version that the tasks in the task set uses\. A platform version is specified only for tasks using the Fargate launch type\. If one isn't specified, the `LATEST` platform version is used\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Scale`  <a name="cfn-ecs-taskset-scale"></a>
-A floating\-point percentage of the desired number of tasks to place and keep running in the task set\.  
+A floating\-point percentage of your desired number of tasks to place and keep running in the task set\.  
 *Required*: No  
 *Type*: [Scale](aws-properties-ecs-taskset-scale.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

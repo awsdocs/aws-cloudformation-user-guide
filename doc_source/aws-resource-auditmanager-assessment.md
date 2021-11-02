@@ -49,13 +49,13 @@ Properties:
 ## Properties<a name="aws-resource-auditmanager-assessment-properties"></a>
 
 `AssessmentReportsDestination`  <a name="cfn-auditmanager-assessment-assessmentreportsdestination"></a>
- The destination in which evidence reports are stored for the specified assessment\.   
+ The destination that evidence reports are stored in for the assessment\.   
 *Required*: No  
 *Type*: [AssessmentReportsDestination](aws-properties-auditmanager-assessment-assessmentreportsdestination.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AwsAccount`  <a name="cfn-auditmanager-assessment-awsaccount"></a>
- The AWS account associated with the assessment\.   
+ The AWS account that's associated with the assessment\.   
 *Required*: No  
 *Type*: [AWSAccount](aws-properties-auditmanager-assessment-awsaccount.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -87,13 +87,13 @@ The unique identifier for the framework\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Roles`  <a name="cfn-auditmanager-assessment-roles"></a>
- The roles associated with the assessment\.   
+ The roles that are associated with the assessment\.   
 *Required*: No  
 *Type*: List of [Role](aws-properties-auditmanager-assessment-role.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-auditmanager-assessment-scope"></a>
- The wrapper of AWS accounts and services in scope for the assessment\.   
+ The wrapper of AWS accounts and services that are in scope for the assessment\.   
 *Required*: No  
 *Type*: [Scope](aws-properties-auditmanager-assessment-scope.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -106,7 +106,7 @@ The unique identifier for the framework\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-auditmanager-assessment-tags"></a>
- The tags associated with the assessment\.   
+ The tags that are associated with the assessment\.   
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

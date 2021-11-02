@@ -90,6 +90,7 @@ The rule statements used to identify the web requests that you want to allow, bl
 `Scope`  <a name="cfn-wafv2-webacl-scope"></a>
 Specifies whether this is for an Amazon CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
 For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virginia\) Region, `us-east-1`\.
+For information about how to define the association of the web ACL with your resource, see [AWS::WAFv2::WebACLAssociation](aws-resource-wafv2-webaclassociation.md)\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -144,9 +145,7 @@ The following shows an example web ACL specification\. This example includes cus
 #### YAML<a name="aws-resource-wafv2-webacl--examples--Create_a_web_ACL_with_custom_request_and_response_handling--yaml"></a>
 
 ```
-Description: Create WebACL example
-Resources:
-  ExampleWebACL:
+ ExampleWebACL:
     Type: 'AWS::WAFv2::WebACL'
     Properties:
       Name: ExampleWebACL1
@@ -216,9 +215,7 @@ Resources:
 #### JSON<a name="aws-resource-wafv2-webacl--examples--Create_a_web_ACL_with_custom_request_and_response_handling--json"></a>
 
 ```
-"Description": "Create WebACL example",
-"Resources": {
-    "ExampleWebACL": {
+ "ExampleWebACL": {
       "Type": "AWS::WAFv2::WebACL",
       "Properties": {
         "Name": "ExampleWebACL1",
@@ -322,7 +319,6 @@ Resources:
         ]
       }
     }
-  }
 ```
 
 ### Create a web ACL with JSON body parsing<a name="aws-resource-wafv2-webacl--examples--Create_a_web_ACL_with_JSON_body_parsing"></a>
@@ -332,7 +328,6 @@ The following shows an example web ACL specification\. This example includes ins
 #### YAML<a name="aws-resource-wafv2-webacl--examples--Create_a_web_ACL_with_JSON_body_parsing--yaml"></a>
 
 ```
-Resources:
   ExampleWebACL:
     Type: 'AWS::WAFv2::WebACL'
     Properties:
@@ -374,53 +369,58 @@ Resources:
 #### JSON<a name="aws-resource-wafv2-webacl--examples--Create_a_web_ACL_with_JSON_body_parsing--json"></a>
 
 ```
-{ "Name": "TestingJsonBody",
- "Scope": "REGIONAL",
- "DefaultAction": 
-  {
-   "Allow": 
-    {}
-  },
- "Description": "WebACL for JsonBody Testing",
- "Rules": 
-  [
-    {"Name": "TestJsonBodyRule",
-     "Priority": 1,
-     "Statement": 
-      {"ByteMatchStatement": 
-        {"SearchString": "BadBot",
-         "FieldToMatch": 
-          {
-           "JsonBody": 
-            {"MatchPattern": 
+  "ExampleWebACL": {
+    "Type": "AWS::WAFv2::WebACL",
+    "Properties": {
+      "Name": "TestingJsonBody",
+      "Scope": "REGIONAL",
+      "DefaultAction": 
+       {
+        "Allow": 
+         {}
+       },
+      "Description": "WebACL for JsonBody Testing",
+      "Rules": [
+      {
+        "Name": "TestJsonBodyRule",
+        "Priority": 1,
+        "Statement": {
+          "ByteMatchStatement": {
+            "SearchString": "BadBot",
+            "FieldToMatch": {
+              "JsonBody": {
+                "MatchPattern": {
+                  "IncludedPaths": [
+                    "/foo", "/bar"
+                  ]
+                },
+                "MatchScope": "VALUE",  
+                "InvalidFallbackBehavior": "MATCH"
+               }
+            },
+            "TextTransformations": [
               {
-               "IncludedPaths": 
-                ["/foo", "/bar"]
-              },
-             "MatchScope": "VALUE",  
-             "InvalidFallbackBehavior": "MATCH"
-             }
-          },
-         "TextTransformations": 
-          [
-            {"Priority": 1,
-             "Type": "NONE"}
-          ],
-         "PositionalConstraint": "EXACTLY"}
-      },
-     "Action": 
-      {"Block": 
-        {}
-      },
-     "VisibilityConfig": 
-      {"SampledRequestsEnabled": true,
-       "CloudWatchMetricsEnabled": true,
-       "MetricName": "JsonBodyMatchMetric"}
+                "Priority": 1,
+                "Type": "NONE"
+              }
+            ],
+            "PositionalConstraint": "EXACTLY"
+          }
+        },
+        "Action": {
+          "Block": {}
+        },
+        "VisibilityConfig": {
+             "SampledRequestsEnabled": true,
+             "CloudWatchMetricsEnabled": true,
+             "MetricName": "JsonBodyMatchMetric"
+         }
+      } ],
+      "VisibilityConfig": {
+         "SampledRequestsEnabled": true,
+         "CloudWatchMetricsEnabled": true,
+         "MetricName": "TestingJsonBodyMetric"
+      }
     }
-  ],
- "VisibilityConfig": 
-  {"SampledRequestsEnabled": true,
-   "CloudWatchMetricsEnabled": true,
-   "MetricName": "TestingJsonBodyMetric"}
-}
+  }
 ```

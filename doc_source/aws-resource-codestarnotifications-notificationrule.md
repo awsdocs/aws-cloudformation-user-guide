@@ -12,12 +12,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeStarNotifications::NotificationRule",
   "Properties" : {
+      "[CreatedBy](#cfn-codestarnotifications-notificationrule-createdby)" : String,
       "[DetailType](#cfn-codestarnotifications-notificationrule-detailtype)" : String,
+      "[EventTypeId](#cfn-codestarnotifications-notificationrule-eventtypeid)" : String,
       "[EventTypeIds](#cfn-codestarnotifications-notificationrule-eventtypeids)" : [ String, ... ],
       "[Name](#cfn-codestarnotifications-notificationrule-name)" : String,
       "[Resource](#cfn-codestarnotifications-notificationrule-resource)" : String,
       "[Status](#cfn-codestarnotifications-notificationrule-status)" : String,
       "[Tags](#cfn-codestarnotifications-notificationrule-tags)" : Json,
+      "[TargetAddress](#cfn-codestarnotifications-notificationrule-targetaddress)" : String,
       "[Targets](#cfn-codestarnotifications-notificationrule-targets)" : [ Target, ... ]
     }
 }
@@ -28,24 +31,39 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::CodeStarNotifications::NotificationRule
 Properties: 
+  [CreatedBy](#cfn-codestarnotifications-notificationrule-createdby): String
   [DetailType](#cfn-codestarnotifications-notificationrule-detailtype): String
+  [EventTypeId](#cfn-codestarnotifications-notificationrule-eventtypeid): String
   [EventTypeIds](#cfn-codestarnotifications-notificationrule-eventtypeids): 
     - String
   [Name](#cfn-codestarnotifications-notificationrule-name): String
   [Resource](#cfn-codestarnotifications-notificationrule-resource): String
   [Status](#cfn-codestarnotifications-notificationrule-status): String
   [Tags](#cfn-codestarnotifications-notificationrule-tags): Json
+  [TargetAddress](#cfn-codestarnotifications-notificationrule-targetaddress): String
   [Targets](#cfn-codestarnotifications-notificationrule-targets): 
     - Target
 ```
 
 ## Properties<a name="aws-resource-codestarnotifications-notificationrule-properties"></a>
 
+`CreatedBy`  <a name="cfn-codestarnotifications-notificationrule-createdby"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DetailType`  <a name="cfn-codestarnotifications-notificationrule-detailtype"></a>
 The level of detail to include in the notifications for this resource\. `BASIC` will include only the contents of the event as it would appear in Amazon CloudWatch\. `FULL` will include any supplemental information provided by AWS CodeStar Notifications and/or the service for the resource for which the notification is created\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `BASIC | FULL`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EventTypeId`  <a name="cfn-codestarnotifications-notificationrule-eventtypeid"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventTypeIds`  <a name="cfn-codestarnotifications-notificationrule-eventtypeids"></a>
@@ -82,6 +100,12 @@ A list of tags to apply to this notification rule\. Key names cannot start with 
 *Required*: No  
 *Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`TargetAddress`  <a name="cfn-codestarnotifications-notificationrule-targetaddress"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-codestarnotifications-notificationrule-targets"></a>
 A list of Amazon Resource Names \(ARNs\) of AWS Chatbot topics and AWS Chatbot clients to associate with the notification rule\.  

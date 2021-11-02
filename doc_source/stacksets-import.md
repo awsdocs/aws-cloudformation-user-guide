@@ -93,19 +93,32 @@ To import an existing stack into a stack set, identify a stack that contains the
 1. Create a stack set from a stack ID\.
 
    ```
-   create-stackset --stack-id "arn:123456789101:us-east-1:StackToImport" --stackSetName "SingleStackSetName" --permission-model "SELF_MANAGED" --administration-role-arn "AdminRole" --execution-role-name "ExecutionRole"
+   aws create-stack-set \
+     --stack-id "arn:123456789101:us-east-1:StackToImport" \
+     --stack-set-name "SingleStackSetName" \
+     --permission-model "SELF_MANAGED" \
+     --administration-role-arn "AdminRole" \
+     --execution-role-name "ExecutionRole"
    ```
 
 1. Import a specified stack to your stack set\.
 
    ```
-   import-stack-to-stackset --stack-ids "arn:123456789101:us-east-1:StackToImport" --stackSet "SingleStackSetName" --mutate --permission-model SELF_MANAGED --administration-role-arn "AdminRole" --execution-role-name "ExecutionRole"
+   aws import-stacks-to-stack-set \
+     --stack-ids "arn:123456789101:us-east-1:StackToImport" \
+     --stack-set-name "SingleStackSetName" \
+     --permission-model SELF_MANAGED \
+     --administration-role-arn "AdminRole" \
+     --execution-role-name "ExecutionRole"
    ```
 
 1. Clone the imported stack into other Regions and accounts\.
 
    ```
-   create-stack-instances --stack-set-name "StackSetToWhichStackimported" --accounts "123556789101" --regions "us-east-1"
+   aws create-stack-instances \
+     --stack-set-name "StackSetToWhichStackimported" \
+     --accounts "123556789101" \
+     --regions "us-east-1"
    ```
 
 ### Import stacks into a stack set<a name="import-stacks-to-stackset-cli"></a>
@@ -115,19 +128,32 @@ To import existing stacks into a stack set, identify the stacks that contains th
 1. Create a stack set from a stack ID\.
 
    ```
-   create-stackset --stack-id "arn:123456789101:us-east-1:StackToImport" --stackSetName "StackSetName" --permission-model "SELF_MANAGED" --administration-role-arn "AdminRole" --execution-role-name "ExecutionRole"
+   aws create-stack-set \
+     --stack-id "arn:123456789101:us-east-1:StackToImport" \
+     --stack-set-name "StackSetName" \
+     --permission-model "SELF_MANAGED" \
+     --administration-role-arn "AdminRole" \
+     --execution-role-name "ExecutionRole"
    ```
 
 1. Import specified stacks to your stack set\.
 
    ```
-    import-stacks-to-stackset --stack-ids "arn:123456789101:us-east-1:StackToImport1, arn:123456789101:us-east-1:StackToImport2" --stackSet "StackSetName" --permission-model SELF_MANAGED --administration-role-arn "AdminRole" --execution-role-name "ExecutionRole"
+   aws import-stacks-to-stack-set \
+     --stack-ids "arn:123456789101:us-east-1:StackToImport1, arn:123456789101:us-east-1:StackToImport2" \
+     --stack-set-name "StackSetName" \
+     --permission-model SELF_MANAGED \
+     --administration-role-arn "AdminRole" \
+     --execution-role-name "ExecutionRole"
    ```
 
 1. Clone the imported stack into other Regions and accounts\.
 
    ```
-   create-stack-instances --stack-set-name "StackSetName" --accounts "123456789012" --regions "us-east-1"
+   aws create-stack-instances \
+     --stack-set-name "StackSetName" \
+     --accounts "123456789012" \
+     --regions "us-east-1"
    ```
 
 ## Reverting a stack import operation<a name="reverting-stackset-import"></a>

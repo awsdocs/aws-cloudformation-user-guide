@@ -86,13 +86,13 @@ A validation expression for the incoming identity\. If you specify `TOKEN` for t
 
 `Name`  <a name="cfn-apigateway-authorizer-name"></a>
 The name of the authorizer\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProviderARNs`  <a name="cfn-apigateway-authorizer-providerarns"></a>
-A list of the Amazon Cognito user pool Amazon Resource Names \(ARNs\) to associate with this authorizer\. For more information, see [Use Amazon Cognito User Pools](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html#apigateway-enable-cognito-user-pool) in the *API Gateway Developer Guide*\.  
-*Required*: No  
+A list of the Amazon Cognito user pool Amazon Resource Names \(ARNs\) to associate with this authorizer\. Required if you specify `COGNITO_USER_POOLS` as the authorizer `Type`\. For more information, see [Use Amazon Cognito User Pools](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html#apigateway-enable-cognito-user-pool) in the *API Gateway Developer Guide*\.  
+*Required*: Conditional  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -118,6 +118,13 @@ The type of authorizer\. Valid values include:
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the authorizer's ID, such as `abcde1`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-apigateway-authorizer-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-apigateway-authorizer-return-values-fn--getatt-fn--getatt"></a>
+
+`AuthorizerId`  <a name="AuthorizerId-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-apigateway-authorizer--examples"></a>
 

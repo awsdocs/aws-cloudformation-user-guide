@@ -1,14 +1,14 @@
-# AWS::EC2::NetworkAclEntry<a name="aws-resource-ec2-network-acl-entry"></a>
+# AWS::EC2::NetworkAclEntry<a name="aws-resource-ec2-networkaclentry"></a>
 
 Specifies an entry, known as a rule, in a network ACL with a rule number you specify\. Each network ACL has a set of numbered ingress rules and a separate set of numbered egress rules\.
 
  For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority \(IANA\) website\.
 
-## Syntax<a name="aws-resource-ec2-network-acl-entry-syntax"></a>
+## Syntax<a name="aws-resource-ec2-networkaclentry-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-resource-ec2-network-acl-entry-syntax.json"></a>
+### JSON<a name="aws-resource-ec2-networkaclentry-syntax.json"></a>
 
 ```
 {
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 }
 ```
 
-### YAML<a name="aws-resource-ec2-network-acl-entry-syntax.yaml"></a>
+### YAML<a name="aws-resource-ec2-networkaclentry-syntax.yaml"></a>
 
 ```
 Type: AWS::EC2::NetworkAclEntry
@@ -45,7 +45,7 @@ Properties:
   [RuleNumber](#cfn-ec2-networkaclentry-rulenumber): Integer
 ```
 
-## Properties<a name="aws-resource-ec2-network-acl-entry-properties"></a>
+## Properties<a name="aws-resource-ec2-networkaclentry-properties"></a>
 
 `CidrBlock`  <a name="cfn-ec2-networkaclentry-cidrblock"></a>
 The IPv4 CIDR range to allow or deny, in CIDR notation \(for example, 172\.16\.0\.0/24\)\. Requirement is conditional: You must specify the `CidrBlock` or `Ipv6CidrBlock` property\.  
@@ -103,23 +103,30 @@ Rule number to assign to the entry, such as 100\. ACL entries are processed in a
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return values<a name="aws-resource-ec2-network-acl-entry-return-values"></a>
+## Return values<a name="aws-resource-ec2-networkaclentry-return-values"></a>
 
-### Ref<a name="aws-resource-ec2-network-acl-entry-return-values-ref"></a>
+### Ref<a name="aws-resource-ec2-networkaclentry-return-values-ref"></a>
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Examples<a name="aws-resource-ec2-network-acl-entry--examples"></a>
+### Fn::GetAtt<a name="aws-resource-ec2-networkaclentry-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-ec2-networkaclentry-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
+## Examples<a name="aws-resource-ec2-networkaclentry--examples"></a>
 
 
 
-### Network ACL entries for inbound and outbound traffic<a name="aws-resource-ec2-network-acl-entry--examples--Network_ACL_entries_for_inbound_and_outbound_traffic"></a>
+### Network ACL entries for inbound and outbound traffic<a name="aws-resource-ec2-networkaclentry--examples--Network_ACL_entries_for_inbound_and_outbound_traffic"></a>
 
 The following example creates a network ACL, and creates two entries in the NACL\. The first entry allows inbound SSH traffic from the specified network\. The second entry allows all outbound IPv4 traffic\.
 
-#### JSON<a name="aws-resource-ec2-network-acl-entry--examples--Network_ACL_entries_for_inbound_and_outbound_traffic--json"></a>
+#### JSON<a name="aws-resource-ec2-networkaclentry--examples--Network_ACL_entries_for_inbound_and_outbound_traffic--json"></a>
 
 ```
 {
@@ -169,7 +176,7 @@ The following example creates a network ACL, and creates two entries in the NACL
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-network-acl-entry--examples--Network_ACL_entries_for_inbound_and_outbound_traffic--yaml"></a>
+#### YAML<a name="aws-resource-ec2-networkaclentry--examples--Network_ACL_entries_for_inbound_and_outbound_traffic--yaml"></a>
 
 ```
 Resources:
@@ -204,7 +211,7 @@ Resources:
        CidrBlock: 0.0.0.0/0
 ```
 
-## See also<a name="aws-resource-ec2-network-acl-entry--seealso"></a>
+## See also<a name="aws-resource-ec2-networkaclentry--seealso"></a>
 + [NetworkAclEntry](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateNetworkAclEntry.html) in the *Amazon EC2 API Reference*
 + [Network ACLs](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_ACLs.html) in the *Amazon VPC User Guide*
 

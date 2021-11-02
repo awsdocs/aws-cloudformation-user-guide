@@ -38,6 +38,7 @@ The gateway route host name to be matched on\.
 The gateway route metadata to be matched on\.  
 *Required*: No  
 *Type*: List of [GrpcGatewayRouteMetadata](aws-properties-appmesh-gatewayroute-grpcgatewayroutemetadata.md)  
+*Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceName`  <a name="cfn-appmesh-gatewayroute-grpcgatewayroutematch-servicename"></a>

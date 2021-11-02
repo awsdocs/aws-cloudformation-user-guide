@@ -16,7 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ControlPanelArn](#cfn-route53recoverycontrol-safetyrule-controlpanelarn)" : String,
       "[GatingRule](#cfn-route53recoverycontrol-safetyrule-gatingrule)" : GatingRule,
       "[Name](#cfn-route53recoverycontrol-safetyrule-name)" : String,
-      "[RuleConfig](#cfn-route53recoverycontrol-safetyrule-ruleconfig)" : RuleConfig
+      "[RuleConfig](#cfn-route53recoverycontrol-safetyrule-ruleconfig)" : RuleConfig,
+      "[Tags](#cfn-route53recoverycontrol-safetyrule-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -34,6 +35,8 @@ Properties:
   [Name](#cfn-route53recoverycontrol-safetyrule-name): String
   [RuleConfig](#cfn-route53recoverycontrol-safetyrule-ruleconfig): 
     RuleConfig
+  [Tags](#cfn-route53recoverycontrol-safetyrule-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-route53recoverycontrol-safetyrule-properties"></a>
@@ -67,6 +70,12 @@ The name of the assertion rule\. You can use any non\-white space character in t
 The criteria that you set for specific assertion controls \(routing controls\) that designate how many control states must be `ON` as the result of a transaction\. For example, if you have three assertion controls, you might specify `ATLEAST 2`for your rule configuration\. This means that at least two assertion controls must be `ON`, so that at least two AWS Regions have traffic flowing to them\.   
 *Required*: Yes  
 *Type*: [RuleConfig](aws-properties-route53recoverycontrol-safetyrule-ruleconfig.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-route53recoverycontrol-safetyrule-tags"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-route53recoverycontrol-safetyrule-return-values"></a>
