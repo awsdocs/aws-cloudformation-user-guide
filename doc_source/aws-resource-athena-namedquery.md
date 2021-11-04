@@ -2,9 +2,6 @@
 
 The `AWS::Athena::NamedQuery` resource specifies an Amazon Athena saved query, where `QueryString` is the list of SQL query statements that comprise the query\.
 
-**Note**  
-The `AWS::Athena::NamedQuery` resource creates a named query in the primary workgroup\. To create a named query in a different workgroup, use the [CreateNamedQuery](https://docs.aws.amazon.com/athena/latest/APIReference/API_CreateNamedQuery.html) API operation and specify a workgroup in the `WorkGroup` parameter, or use the [create\-named\-query](https://docs.aws.amazon.com/cli/latest/reference/athena/create-named-query.html) AWS CLI command and specify a workgroup in the `--work-group` option\.
-
 ## Syntax<a name="aws-resource-athena-namedquery-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -18,7 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Database](#cfn-athena-namedquery-database)" : String,
       "[Description](#cfn-athena-namedquery-description)" : String,
       "[Name](#cfn-athena-namedquery-name)" : String,
-      "[QueryString](#cfn-athena-namedquery-querystring)" : String
+      "[QueryString](#cfn-athena-namedquery-querystring)" : String,
+      "[WorkGroup](#cfn-athena-namedquery-workgroup)" : String
     }
 }
 ```
@@ -33,6 +31,7 @@ Properties:
   [Name](#cfn-athena-namedquery-name): String
   [QueryString](#cfn-athena-namedquery-querystring): 
     String
+  [WorkGroup](#cfn-athena-namedquery-workgroup): String
 ```
 
 ## Properties<a name="aws-resource-athena-namedquery-properties"></a>
@@ -67,6 +66,13 @@ The SQL query statements that comprise the query\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `262144`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`WorkGroup`  <a name="cfn-athena-namedquery-workgroup"></a>
+The name of the workgroup that contains the named query\.  
+*Required*: No  
+*Type*: String  
+*Pattern*: `[a-zA-Z0-9._-]{1,128}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-athena-namedquery-return-values"></a>

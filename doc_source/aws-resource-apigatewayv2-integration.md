@@ -26,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PayloadFormatVersion](#cfn-apigatewayv2-integration-payloadformatversion)" : String,
       "[RequestParameters](#cfn-apigatewayv2-integration-requestparameters)" : Json,
       "[RequestTemplates](#cfn-apigatewayv2-integration-requesttemplates)" : Json,
+      "[ResponseParameters](#cfn-apigatewayv2-integration-responseparameters)" : Json,
       "[TemplateSelectionExpression](#cfn-apigatewayv2-integration-templateselectionexpression)" : String,
       "[TimeoutInMillis](#cfn-apigatewayv2-integration-timeoutinmillis)" : Integer,
       "[TlsConfig](#cfn-apigatewayv2-integration-tlsconfig)" : TlsConfig
@@ -52,6 +53,7 @@ Properties:
   [PayloadFormatVersion](#cfn-apigatewayv2-integration-payloadformatversion): String
   [RequestParameters](#cfn-apigatewayv2-integration-requestparameters): Json
   [RequestTemplates](#cfn-apigatewayv2-integration-requesttemplates): Json
+  [ResponseParameters](#cfn-apigatewayv2-integration-responseparameters): Json
   [TemplateSelectionExpression](#cfn-apigatewayv2-integration-templateselectionexpression): String
   [TimeoutInMillis](#cfn-apigatewayv2-integration-timeoutinmillis): Integer
   [TlsConfig](#cfn-apigatewayv2-integration-tlsconfig): 
@@ -88,7 +90,7 @@ If this property is not defined, the response payload will be passed through fro
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CredentialsArn`  <a name="cfn-apigatewayv2-integration-credentialsarn"></a>
-Specifies the credentials required for the integration, if any\. For AWS integrations, three options are available\. To specify an IAM Role for API Gateway to assume, use the role's Amazon Resource Name \(ARN\)\. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::*:user/*`\. To use resource\-based permissions on supported AWS services, specify null\.  
+Specifies the credentials required for the integration, if any\. For AWS integrations, three options are available\. To specify an IAM Role for API Gateway to assume, use the role's Amazon Resource Name \(ARN\)\. To require that the caller's identity be passed through from the request, specify the string `arn:aws:iam::*:user/*`\. To use resource\-based permissions on supported AWS services, don't specify this parameter\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -146,14 +148,21 @@ Specifies the format of the payload sent to an integration\. Required for HTTP A
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequestParameters`  <a name="cfn-apigatewayv2-integration-requestparameters"></a>
-For WebSocket APIs, a key\-value map specifying request parameters that are passed from the method request to the backend\. The key is an integration request parameter name and the associated value is a method request parameter value or static value that must be enclosed within single quotes and pre\-encoded as required by the backend\. The method request parameter value must match the pattern of `method.request.{location}.{name} `, where ` {location} ` is `querystring`, `path`, or `header`; and `{name}` must be a valid and unique method request parameter name\.  
-For HTTP APIs, request parameters are a key\-value map specifying parameters that are passed to `AWS_PROXY` integrations with a specified `integrationSubtype`\. You can provide static values, or map request data, stage variables, or context variables that are evaluated at runtime\. To learn more, see [Working with AWS service integrations for HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services.html)\.  
+For WebSocket APIs, a key\-value map specifying request parameters that are passed from the method request to the backend\. The key is an integration request parameter name and the associated value is a method request parameter value or static value that must be enclosed within single quotes and pre\-encoded as required by the backend\. The method request parameter value must match the pattern of `method.request.{location}.{name} `, where ` {location} ` is `querystring`, `path`, or `header`; and ` {name} ` must be a valid and unique method request parameter name\.  
+For HTTP API integrations with a specified `integrationSubtype`, request parameters are a key\-value map specifying parameters that are passed to `AWS_PROXY` integrations\. You can provide static values, or map request data, stage variables, or context variables that are evaluated at runtime\. To learn more, see [Working with AWS service integrations for HTTP APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services.html)\.  
+For HTTP API integrations without a specified `integrationSubtype` request parameters are a key\-value map specifying how to transform HTTP requests before sending them to the backend\. The key should follow the pattern <action>:<header\|querystring\|path>\.<location> where action can be `append`, `overwrite` or` remove`\. For values, you can provide static values, or map request data, stage variables, or context variables that are evaluated at runtime\. To learn more, see [Transforming API requests and responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequestTemplates`  <a name="cfn-apigatewayv2-integration-requesttemplates"></a>
 Represents a map of Velocity templates that are applied on the request payload based on the value of the Content\-Type header sent by the client\. The content type value is the key in this map, and the template \(as a String\) is the value\. Supported only for WebSocket APIs\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ResponseParameters`  <a name="cfn-apigatewayv2-integration-responseparameters"></a>
+Supported only for HTTP APIs\. You use response parameters to transform the HTTP response from a backend integration before returning the response to clients\. Specify a key\-value map from a selection key to response parameters\. The selection key must be a valid HTTP status code within the range of 200\-599\. The value is of type [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparameterlist.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparameterlist.html)\. To learn more, see [Transforming API requests and responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)\.   
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -186,22 +195,24 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigatewayv2-integration--examples"></a>
 
+
+
 ### Integration creation example<a name="aws-resource-apigatewayv2-integration--examples--Integration_creation_example"></a>
 
-The following example creates an `integration` resource named `MyIntegration` for the `MyApi` API, whose credentials are specified by `MyCredentialsArn`\.
+The following example creates a Lambda integration for an HTTP API\. For full examples, see [example CloudFormation templates](https://github.com/awsdocs/amazon-api-gateway-developer-guide/tree/main/cloudformation-templates) on GitHub\.
 
 #### JSON<a name="aws-resource-apigatewayv2-integration--examples--Integration_creation_example--json"></a>
 
 ```
 {
-    "MyIntegration": {
+    "Integration": {
         "Type": "AWS::ApiGatewayV2::Integration",
         "Properties": {
             "ApiId": {
-                "Ref": "MyApi"
+                "Ref": "HTTPApi"
             },
             "Description": "Lambda Integration",
-            "IntegrationType": "AWS",
+            "IntegrationType": "AWS_PROXY",
             "IntegrationUri": {
                 "Fn::Join": [
                     "",
@@ -216,15 +227,17 @@ The following example creates an `integration` resource named `MyIntegration` fo
                         },
                         ":lambda:path/2015-03-31/functions/",
                         {
-                            "Ref": "MyLambdaFunction"
+                            "Fn::GetAtt": [
+                                "MyLambdaFunction",
+                                "Arn"
+                            ]
                         },
                         "/invocations"
                     ]
                 ]
             },
-            "CredentialsArn": "MyCredentialsArn",
-            "IntegrationMethod": "GET",
-            "ConnectionType": "INTERNET"
+            "IntegrationMethod": "POST",
+            "PayloadFormatVersion": "2.0"
         }
     }
 }
@@ -233,25 +246,83 @@ The following example creates an `integration` resource named `MyIntegration` fo
 #### YAML<a name="aws-resource-apigatewayv2-integration--examples--Integration_creation_example--yaml"></a>
 
 ```
-MyIntegration:
+Integration:
   Type: 'AWS::ApiGatewayV2::Integration'
   Properties:
-    ApiId: !Ref MyApi
+    ApiId: !Ref HTTPApi
     Description: Lambda Integration
-    IntegrationType: AWS
-    IntegrationUri: !Join 
+    IntegrationType: AWS_PROXY
+    IntegrationUri: !Join
       - ''
       - - 'arn:'
         - !Ref 'AWS::Partition'
         - ':apigateway:'
         - !Ref 'AWS::Region'
         - ':lambda:path/2015-03-31/functions/'
-        - !Ref MyLambdaFunction
+        - !GetAtt MyLambdaFunction.Arn
         - /invocations
-    CredentialsArn: MyCredentialsArn
-    IntegrationMethod: GET
-    ConnectionType: INTERNET
+    IntegrationMethod: POST
+    PayloadFormatVersion: '2.0'
+```
+
+### Integration with parameter mapping for an HTTP API<a name="aws-resource-apigatewayv2-integration--examples--Integration_with_parameter_mapping_for_an_HTTP_API"></a>
+
+The following example creates an integration with parameter mapping\. The request parameters add a header named `header1` to the request before it reaches the backend integration\. The response parameters add a header to the integration's response named `header2`, with the static value `headervalue`, when the integration returns a 200 status code\.
+
+#### JSON<a name="aws-resource-apigatewayv2-integration--examples--Integration_with_parameter_mapping_for_an_HTTP_API--json"></a>
+
+```
+{
+  "MyIntegration": {
+    "Type": "AWS::ApiGatewayV2::Integration",
+    "Properties": {
+      "ApiId": {
+        "Ref": "MyApi"
+      },
+      "Description": "HTTP proxy integration",
+      "IntegrationType": "HTTP_PROXY",
+      "IntegrationMethod": "ANY",
+      "IntegrationUri": "https://api.example.com",
+      "PayloadFormatVersion": "1.0",
+      "RequestParameters": {
+        "append:header.header1": "$context.requestId"
+      },
+      "ResponseParameters": {
+        "200": {
+          "ResponseParameters": [
+            {
+              "Source": "headervalue",
+              "Destination": "append:header.header2"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-apigatewayv2-integration--examples--Integration_with_parameter_mapping_for_an_HTTP_API--yaml"></a>
+
+```
+MyIntegration:
+Type: AWS::ApiGatewayV2::Integration
+Properties:
+  ApiId: !Ref MyApi
+  Description: HTTP proxy integration
+  IntegrationType: HTTP_PROXY
+  IntegrationMethod: ANY
+  IntegrationUri: https://api.example.com
+  PayloadFormatVersion: 1.0
+  RequestParameters:
+    "append:header.header1": "$context.requestId"
+  ResponseParameters:
+    "200":
+      ResponseParameters:
+        - Source: "headerValue"
+          Destination: "append:header.header2"
 ```
 
 ## See also<a name="aws-resource-apigatewayv2-integration--seealso"></a>
 + [CreateIntegration](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-integrations.html#CreateIntegration) in the *Amazon API Gateway Version 2 API Reference*
+

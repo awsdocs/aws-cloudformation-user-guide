@@ -37,7 +37,7 @@ If `CheckpointConfiguration.ConfigurationType` is `DEFAULT`, the application wil
 
 `CheckpointInterval`  <a name="cfn-kinesisanalyticsv2-application-checkpointconfiguration-checkpointinterval"></a>
 Describes the interval in milliseconds between checkpoint operations\.   
-If `CheckpointConfiguration.ConfigurationType` is `DEFAULT`, the application will use a `CheckpointInterval` vaue of 60000, even if this value is set to another value using this API or in application code\.
+If `CheckpointConfiguration.ConfigurationType` is `DEFAULT`, the application will use a `CheckpointInterval` value of 60000, even if this value is set to another value using this API or in application code\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -62,3 +62,4 @@ If `CheckpointConfiguration.ConfigurationType` is `DEFAULT`, the application wil
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-checkpointconfiguration--seealso"></a>
 +  [CheckpointConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CheckpointConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

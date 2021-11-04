@@ -4,6 +4,9 @@ The `AWS::Route53::HealthCheck` resource is a Route 53 resource type that contai
 
 For information about associating health checks with records, see [HealthCheckId](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResourceRecordSet.html#Route53-Type-ResourceRecordSet-HealthCheckId) in [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html)\. 
 
+**Note**  
+You can't create a health check with simple routing\.
+
 **ELB Load Balancers**
 
 If you're registering EC2 instances with an Elastic Load Balancing \(ELB\) load balancer, do not create Amazon Route 53 health checks for the EC2 instances\. When you register an EC2 instance with a load balancer, you configure settings for an ELB health check, which performs a similar function to a Route 53 health check\.
@@ -45,6 +48,7 @@ Properties:
 
 `HealthCheckConfig`  <a name="cfn-route53-healthcheck-healthcheckconfig"></a>
 A complex type that contains detailed information about one health check\.  
+For the values to enter for `HealthCheckConfig`, see [HealthCheckConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html)  
 *Required*: Yes  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -65,12 +69,18 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Fn::GetAtt<a name="aws-resource-route53-healthcheck-return-values-fn--getatt"></a>
 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
 #### <a name="aws-resource-route53-healthcheck-return-values-fn--getatt-fn--getatt"></a>
 
 `HealthCheckId`  <a name="HealthCheckId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The identifier that Amazon Route 53 assigned to the health check when you created it\. When you add or update a resource record set, you use this value to specify which health check to use\. The value can be up to 64 characters long\.
 
 ## Examples<a name="aws-resource-route53-healthcheck--examples"></a>
+
+
 
 ### Create health check<a name="aws-resource-route53-healthcheck--examples--Create_health_check"></a>
 
@@ -132,3 +142,4 @@ myHealthCheck:
 
 ## See also<a name="aws-resource-route53-healthcheck--seealso"></a>
 +  [CreateHealthCheck](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html) in the *Amazon Route 53 API Reference*
+

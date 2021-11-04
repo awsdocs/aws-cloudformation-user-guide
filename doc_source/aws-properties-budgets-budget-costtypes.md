@@ -123,3 +123,4 @@ The default value is `false`\.
 
 ## See also<a name="aws-properties-budgets-budget-costtypes--seealso"></a>
 +  [CostTypes](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_CostTypes.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+

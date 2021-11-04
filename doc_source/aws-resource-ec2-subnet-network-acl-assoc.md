@@ -1,6 +1,6 @@
 # AWS::EC2::SubnetNetworkAclAssociation<a name="aws-resource-ec2-subnet-network-acl-assoc"></a>
 
-Associates a subnet with a network ACL\. For more information, see [ReplaceNetworkAclAssociation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-ReplaceNetworkAclAssociation.html) in the *Amazon Elastic Compute Cloud API Reference*\.
+Associates a subnet with a network ACL\. For more information, see [ReplaceNetworkAclAssociation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-ReplaceNetworkAclAssociation.html) in the *Amazon EC2 API Reference*\.
 
 When `AWS::EC2::SubnetNetworkAclAssociation` resources are created during create or update operations, AWS CloudFormation adopts existing resources that share the same key properties \(the properties that contribute to uniquely identify the resource\)\. However, if the operation fails and rolls back, AWS CloudFormation deletes the previously out\-of\-band resources\. You can protect against this behavior by using `Retain` deletion policies\. For more information, see [DeletionPolicy Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)\.
 
@@ -60,11 +60,13 @@ Returns the value of this object's [SubnetId](https://docs.aws.amazon.com/AWSClo
 
 ## Examples<a name="aws-resource-ec2-subnet-network-acl-assoc--examples"></a>
 
-### Subnet Network ACL Association<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_Network_ACL_Association"></a>
+
+
+### Subnet network ACL association<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_network_ACL_association"></a>
 
 The following example associates subnet mySubnet with the myNetworkAcl network ACL\.
 
-#### JSON<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_Network_ACL_Association--json"></a>
+#### JSON<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_network_ACL_association--json"></a>
 
 ```
 "mySubnetNetworkAclAssociation" : {
@@ -76,7 +78,7 @@ The following example associates subnet mySubnet with the myNetworkAcl network A
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_Network_ACL_Association--yaml"></a>
+#### YAML<a name="aws-resource-ec2-subnet-network-acl-assoc--examples--Subnet_network_ACL_association--yaml"></a>
 
 ```
    mySubnetNetworkAclAssociation:

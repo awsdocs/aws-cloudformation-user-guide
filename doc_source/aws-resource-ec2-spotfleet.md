@@ -44,7 +44,7 @@ Properties:
 Describes the configuration of a Spot Fleet request\.  
 *Required*: Yes  
 *Type*: [SpotFleetRequestConfigData](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata.md)  
-*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-ec2-spotfleet-return-values"></a>
 
@@ -54,13 +54,26 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-ec2-spotfleet-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-ec2-spotfleet-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+The ID of the Spot Fleet\.
+
 ## Examples<a name="aws-resource-ec2-spotfleet--examples"></a>
 
-### Spot Fleet<a name="aws-resource-ec2-spotfleet--examples--Spot_Fleet"></a>
+
+
+### Create a Spot Fleet<a name="aws-resource-ec2-spotfleet--examples--Create_a_Spot_Fleet"></a>
 
 The following example specifies a Spot Fleet with two launch specifications\. The weighted capacities are the same, so Amazon EC2 launches the same number of instances for each specification\. For more information, see [How Spot Fleet Works](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 
-#### JSON<a name="aws-resource-ec2-spotfleet--examples--Spot_Fleet--json"></a>
+#### JSON<a name="aws-resource-ec2-spotfleet--examples--Create_a_Spot_Fleet--json"></a>
 
 ```
 "SpotFleet": {
@@ -98,7 +111,7 @@ The following example specifies a Spot Fleet with two launch specifications\. Th
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-spotfleet--examples--Spot_Fleet--yaml"></a>
+#### YAML<a name="aws-resource-ec2-spotfleet--examples--Create_a_Spot_Fleet--yaml"></a>
 
 ```
 SpotFleet:
@@ -155,3 +168,4 @@ SpotFleet:
 ## See also<a name="aws-resource-ec2-spotfleet--seealso"></a>
 +  [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html)
 +  [AWS::ApplicationAutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html)
+

@@ -67,6 +67,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigatewayv2-apimapping--examples"></a>
 
+
+
 ### API mapping creation example<a name="aws-resource-apigatewayv2-apimapping--examples--API_mapping_creation_example"></a>
 
 The following example creates an `ApiMapping` resource called `MyApiMapping`\.

@@ -1,6 +1,6 @@
 # AWS::DynamoDB::Table LocalSecondaryIndex<a name="aws-properties-dynamodb-lsi"></a>
 
-Represents the properties of a local secondary index\.
+Represents the properties of a local secondary index\. A local secondary index can only be created when its parent table is created\.
 
 ## Syntax<a name="aws-properties-dynamodb-lsi-syntax"></a>
 
@@ -35,7 +35,7 @@ The name of the local secondary index\. The name must be unique among all other 
 *Minimum*: `3`  
 *Maximum*: `255`  
 *Pattern*: `[a-zA-Z0-9_.-]+`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: Updates are not supported\.
 
 `KeySchema`  <a name="cfn-dynamodb-lsi-keyschema"></a>
 The complete key schema for the local secondary index, consisting of one or more pairs of attribute names and key types:  
@@ -46,13 +46,13 @@ The sort key of an item is also known as its *range attribute*\. The term "range
 *Required*: Yes  
 *Type*: [List](aws-properties-dynamodb-keyschema.md) of [KeySchema](aws-properties-dynamodb-keyschema.md)  
 *Maximum*: `2`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: Updates are not supported\.
 
 `Projection`  <a name="cfn-dynamodb-lsi-projection"></a>
 Represents attributes that are copied \(projected\) from the table into the local secondary index\. These are in addition to the primary key attributes and index key attributes, which are automatically projected\.   
 *Required*: Yes  
 *Type*: [Projection](aws-properties-dynamodb-projectionobject.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: Updates are not supported\.
 
 ## See also<a name="aws-properties-dynamodb-lsi--seealso"></a>
 

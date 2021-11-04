@@ -1,6 +1,6 @@
 # AWS::Pinpoint::PushTemplate DefaultPushNotificationTemplate<a name="aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate"></a>
 
-The AWS::Pinpoint::PushTemplate DefaultPushNotificationTemplate resource defines the default settings and content for a message template that can be used in messages that are sent through a push notification channel\.
+Specifies the default settings and content for a message template that can be used in messages that are sent through a push notification channel\.
 
 ## Syntax<a name="aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate-syntax"></a>
 

@@ -30,7 +30,7 @@ Properties:
 ## Properties<a name="aws-resource-gamelift-matchmakingruleset-properties"></a>
 
 `Name`  <a name="cfn-gamelift-matchmakingruleset-name"></a>
-A unique identifier for a matchmaking rule set\. A matchmaking configuration identifies the rule set it uses by this name value\. Note that the rule set name is different from the optional `name` field in the rule set body\.  
+A unique identifier for the matchmaking rule set\. A matchmaking configuration identifies the rule set it uses by this name value\. Note that the rule set name is different from the optional `name` field in the rule set body\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `128`  
@@ -112,6 +112,6 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-gamelift-matchmakingruleset--seealso"></a>
-+ [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
-+ [ Build a FlexMatch Rule Set](https://docs.aws.amazon.com/gamelift/latest/developerguide/match-rulesets.html) in the *Amazon GameLift Developer Guide*
++ [ Create GameLift Resources Using Amazon CloudFront](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++ [ Build a FlexMatch Rule Set](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-rulesets.html) in the *Amazon GameLift Developer Guide*
 +  [ CreateMatchmakingRuleSet](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateMatchmakingRuleSet.html) in the *Amazon GameLift API Reference* 

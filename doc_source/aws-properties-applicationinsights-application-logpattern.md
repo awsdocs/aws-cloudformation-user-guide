@@ -32,6 +32,7 @@ A regular expression that defines the log pattern\. A log pattern can contain up
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `50`  
+*Pattern*: `[\S\s]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PatternName`  <a name="cfn-applicationinsights-application-logpattern-patternname"></a>

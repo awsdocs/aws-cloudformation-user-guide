@@ -1,6 +1,6 @@
 # AWS::AppSync::ApiCache<a name="aws-resource-appsync-apicache"></a>
 
-Represents the input of a `CreateApiCache` operation\.
+The `AWS::AppSync::ApiCache` resource represents the input of a `CreateApiCache` operation\.
 
 ## Syntax<a name="aws-resource-appsync-apicache-syntax"></a>
 
@@ -40,7 +40,7 @@ Properties:
 `ApiCachingBehavior`  <a name="cfn-appsync-apicache-apicachingbehavior"></a>
 Caching behavior\.  
 +  **FULL\_REQUEST\_CACHING**: All requests are fully cached\.
-+  **PER\_RESOLVER\_CACHING**: Individual resovlers that you specify are cached\.
++  **PER\_RESOLVER\_CACHING**: Individual resolvers that you specify are cached\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -81,7 +81,7 @@ The cache instance type\. Valid values are
 +  `LARGE_8X` \(not available in all regions\)
 +  `LARGE_12X` 
 Historically, instance types were identified by an EC2\-style value\. As of July 2020, this is deprecated, and the generic identifiers above should be used\.  
-The following legacy instance types are avaible, but their use is discouraged:  
+The following legacy instance types are available, but their use is discouraged:  
 +  **T2\_SMALL**: A t2\.small instance type\.
 +  **T2\_MEDIUM**: A t2\.medium instance type\.
 +  **R4\_LARGE**: A r4\.large instance type\.
@@ -95,6 +95,8 @@ The following legacy instance types are avaible, but their use is discouraged:
 
 ## Examples<a name="aws-resource-appsync-apicache--examples"></a>
 
+
+
 ### ApiCache Creation Example<a name="aws-resource-appsync-apicache--examples--ApiCache_Creation_Example"></a>
 
 The following example creates an ApiCache for your GraphQL API\.
@@ -102,42 +104,18 @@ The following example creates an ApiCache for your GraphQL API\.
 #### YAML<a name="aws-resource-appsync-apicache--examples--ApiCache_Creation_Example--yaml"></a>
 
 ```
-Parameters:
-  graphQlApiId:
-    Type: String
-Resources:
-  ApiCache:
-    Type: 'AWS::AppSync::ApiCache'
-    Properties:
-      ApiId: graphQlApiId
-      Type: T2_SMALL
-      ApiCachingBehavior: FULL_REQUEST_CACHING
-      Ttl: 1200
-      TransitEncryptionEnabled: true
-      AtRestEncryptionEnabled: true
+Parameters: graphQlApiId: Type: String Resources: ApiCache: Type:
+            AWS::AppSync::ApiCache Properties: ApiId: !Ref graphQlApiId Type: SMALL
+            ApiCachingBehavior: FULL_REQUEST_CACHING Ttl: 1200 TransitEncryptionEnabled: true
+            AtRestEncryptionEnabled: true
 ```
 
 #### JSON<a name="aws-resource-appsync-apicache--examples--ApiCache_Creation_Example--json"></a>
 
 ```
-{
-    "Parameters": {
-        "graphQlApiId": {
-            "Type": "String"
-        }
-    },
-    "Resources": {
-        "ApiCache": {
-            "Type": "AWS::AppSync::ApiCache",
-            "Properties": {
-                "ApiId": "graphQlApiId",
-                "Type": "T2_SMALL",
-                "ApiCachingBehavior": "FULL_REQUEST_CACHING",
-                "Ttl": 1200,
-                "TransitEncryptionEnabled": true,
-                "AtRestEncryptionEnabled": true
-            }
-        }
-    }
-}
+{ "Parameters": { "graphQlApiId": { "Type": "String" } },
+            "Resources": { "ApiCache": { "Type": "AWS::AppSync::ApiCache", "Properties": { "ApiId":
+            { "Ref": "graphQlApiId" }, "Type": "SMALL", "ApiCachingBehavior":
+            "FULL_REQUEST_CACHING", "Ttl": 1200, "TransitEncryptionEnabled": true,
+            "AtRestEncryptionEnabled": true } } } }
 ```

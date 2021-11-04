@@ -51,6 +51,7 @@ The backends that the virtual node is expected to send outbound traffic to\.
 The listener that the virtual node is expected to receive inbound traffic from\. You can specify one listener\.  
 *Required*: No  
 *Type*: List of [Listener](aws-properties-appmesh-virtualnode-listener.md)  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Logging`  <a name="cfn-appmesh-virtualnode-virtualnodespec-logging"></a>

@@ -40,6 +40,8 @@ The destination configuration for successful invocations\.
 
 ## Examples<a name="aws-properties-lambda-eventinvokeconfig-destinationconfig--examples"></a>
 
+
+
 ### On\-Failure Destination Configuration<a name="aws-properties-lambda-eventinvokeconfig-destinationconfig--examples--On-Failure_Destination_Configuration"></a>
 
 Configure a function to send a record of failed asynchronous invocations to an SQS queue\.
@@ -47,6 +49,7 @@ Configure a function to send a record of failed asynchronous invocations to an S
 #### YAML<a name="aws-properties-lambda-eventinvokeconfig-destinationconfig--examples--On-Failure_Destination_Configuration--yaml"></a>
 
 ```
- DestinationConfig: OnFailure: Destination:
-        arn:aws:sqs:us-east-2:123456789012:dlq
+      DestinationConfig:
+          OnFailure:
+            Destination: arn:aws:sqs:us-east-2:123456789012:dlq
 ```

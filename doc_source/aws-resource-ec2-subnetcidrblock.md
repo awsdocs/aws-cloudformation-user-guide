@@ -1,6 +1,6 @@
 # AWS::EC2::SubnetCidrBlock<a name="aws-resource-ec2-subnetcidrblock"></a>
 
-Associates a CIDR block with your subnet\. You can only associate a single IPv6 CIDR block with your subnet\. An IPv6 CIDR block must have a prefix length of /64\.
+Associates a CIDR block with your subnet\. You can associate a single IPv6 CIDR block with your subnet\. An IPv6 CIDR block must have a prefix length of /64\.
 
 ## Syntax<a name="aws-resource-ec2-subnetcidrblock-syntax"></a>
 
@@ -45,34 +45,6 @@ The ID of the subnet\.
 
 ### Ref<a name="aws-resource-ec2-subnetcidrblock-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the subnet CIDR block\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the association ID for the subnet’s IPv6 CIDR block\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
-
-## Examples<a name="aws-resource-ec2-subnetcidrblock--examples"></a>
-
-### Subnet CIDR Block Association<a name="aws-resource-ec2-subnetcidrblock--examples--Subnet_CIDR_Block_Association"></a>
-
-The following example associates an IPv6 CIDR block by using the Ref function to specify the IPv6 of the Ipv6SubnetCidrBlock resource \(with a prefix length of /64\) with the Ipv6TestSubnet subnet\.
-
-#### JSON<a name="aws-resource-ec2-subnetcidrblock--examples--Subnet_CIDR_Block_Association--json"></a>
-
-```
-"Ipv6TestSubnetCidrBlock": {
-   "Type": "AWS::EC2::SubnetCidrBlock",
-   "Properties": {
-      "Ipv6CidrBlock": { "Ref" : "Ipv6SubnetCidrBlock" },
-      "SubnetId": { "Ref" : "Ipv6TestSubnet" }
-   }
-}
-```
-
-#### YAML<a name="aws-resource-ec2-subnetcidrblock--examples--Subnet_CIDR_Block_Association--yaml"></a>
-
-```
-Ipv6TestSubnetCidrBlock:
-  Type: AWS::EC2::SubnetCidrBlock
-  Properties:
-    Ipv6CidrBlock: !Ref Ipv6SubnetCidrBlock
-    SubnetId: !Ref Ipv6TestSubnet
-```

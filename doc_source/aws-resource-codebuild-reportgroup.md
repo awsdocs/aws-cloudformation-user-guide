@@ -1,6 +1,6 @@
 # AWS::CodeBuild::ReportGroup<a name="aws-resource-codebuild-reportgroup"></a>
 
- Creates a report group\. A report group contains a collection of reports\. 
+Represents a report group\. A report group contains a collection of reports\. 
 
 ## Syntax<a name="aws-resource-codebuild-reportgroup-syntax"></a>
 
@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeBuild::ReportGroup",
   "Properties" : {
+      "[DeleteReports](#cfn-codebuild-reportgroup-deletereports)" : Boolean,
       "[ExportConfig](#cfn-codebuild-reportgroup-exportconfig)" : ReportExportConfig,
       "[Name](#cfn-codebuild-reportgroup-name)" : String,
       "[Tags](#cfn-codebuild-reportgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -25,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::CodeBuild::ReportGroup
 Properties: 
+  [DeleteReports](#cfn-codebuild-reportgroup-deletereports): Boolean
   [ExportConfig](#cfn-codebuild-reportgroup-exportconfig): 
     ReportExportConfig
   [Name](#cfn-codebuild-reportgroup-name): String
@@ -35,14 +37,24 @@ Properties:
 
 ## Properties<a name="aws-resource-codebuild-reportgroup-properties"></a>
 
+`DeleteReports`  <a name="cfn-codebuild-reportgroup-deletereports"></a>
+When deleting a report group, specifies if reports within the report group should be deleted\.    
+true  
+Deletes any reports that belong to the report group before deleting the report group\.   
+false  
+You must delete any reports in the report group\. This is the default value\. If you delete a report group that contains one or more reports, an exception is thrown\. 
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ExportConfig`  <a name="cfn-codebuild-reportgroup-exportconfig"></a>
- Information about the destination where the raw data of this `ReportGroup` is exported\.   
+Information about the destination where the raw data of this `ReportGroup` is exported\.   
 *Required*: Yes  
 *Type*: [ReportExportConfig](aws-properties-codebuild-reportgroup-reportexportconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-codebuild-reportgroup-name"></a>
- The name of a `ReportGroup`\.   
+The name of the `ReportGroup`\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `2`  
@@ -50,7 +62,7 @@ Properties:
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-codebuild-reportgroup-tags"></a>
- A list of tag key and value pairs associated with this report group\.   
+A list of tag key and value pairs associated with this report group\.   
 These tags are available for use by AWS services that support AWS CodeBuild report group tags\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
@@ -58,7 +70,11 @@ These tags are available for use by AWS services that support AWS CodeBuild repo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-codebuild-reportgroup-type"></a>
- The type of the `ReportGroup`\. The one valid value is `TEST`\.   
+The type of the `ReportGroup`\. This can be one of the following values:    
+CODE\_COVERAGE  
+The report group contains code coverage reports\.  
+TEST  
+The report group contains test reports\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `CODE_COVERAGE | TEST`  

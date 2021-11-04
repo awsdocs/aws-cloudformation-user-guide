@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::Component<a name="aws-resource-imagebuilder-component"></a>
 
-Components are orchestration documents that define a sequence of steps for downloading, installing, and configuring software packages or for defining tests to run on software packages\. They also define validation and security hardening steps\. A component is defined using a YAML document format\. For more information, see [Using Documents in EC2 Image Builder](https://docs.aws.amazon.com/imagebuilder/latest/userguide/image-builder-application-documents.html)\.
+Components are orchestration documents that define a sequence of steps for downloading, installing, and configuring software packages or for defining tests to run on software packages\. They also define validation and security hardening steps\. A component is defined using a YAML document format\. For more information, see [Using Documents in Image Builder](https://docs.aws.amazon.com/imagebuilder/latest/userguide/image-builder-application-documents.html)\.
 
 ## Syntax<a name="aws-resource-imagebuilder-component-syntax"></a>
 
@@ -92,7 +92,7 @@ The platform of the component\. For example, `Windows`\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SupportedOsVersions`  <a name="cfn-imagebuilder-component-supportedosversions"></a>
-The operating system \(OS\) version supported by the component\. If the OS information is available, a prefix match is performed against the parent image OS version during image recipe creation\.   
+The operating system \(OS\) version supported by the component\. If the OS information is available, a prefix match is performed against the base image OS version during image recipe creation\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `25`  
@@ -105,7 +105,7 @@ The tags associated with the component\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Uri`  <a name="cfn-imagebuilder-component-uri"></a>
-The URI of the component document\.  
+The uri of the component\. Must be an Amazon S3 URL and the requester must have permission to access the Amazon S3 bucket\. If you use Amazon S3, you can specify component content up to your service quota\. Either `data` or `uri` can be used to specify the data within the component\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -139,14 +139,45 @@ Returns the Amazon Resource Name \(ARN\) of the component\. The following patter
 `Encrypted`  <a name="Encrypted-fn::getatt"></a>
 Returns the encryption status of the component\. For example `true` or `false`\.
 
+`Name`  <a name="Name-fn::getatt"></a>
+Returns the name of the component\.
+
 `Type`  <a name="Type-fn::getatt"></a>
 Returns the component type\. For example, `BUILD` or `TEST`\.
 
 ## Examples<a name="aws-resource-imagebuilder-component--examples"></a>
 
+
+
 ### Create a component using Data<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_Data_"></a>
 
-The following example shows the schema for the Component resource document in both YAML and JSON format\. This example includes details for the `Data` field \. You can use either the `Data` or `Uri` fields to reference the component document\.
+The following example shows the schema for the Component resource document in both JSON and YAML format\. This example includes details for the `Data` field \. You can use either the `Data` or `Uri` fields to reference the component document\.
+
+#### JSON<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_Data_--json"></a>
+
+```
+{
+	"Resources": {
+		"ComponentAllParameters": {
+			"Type": "AWS::ImageBuilder::Component",
+			"Properties": {
+				"Name": "component-name",
+				"Platform": "Linux",
+				"Version": "1.0.0",
+				"Description": "description",
+				"ChangeDescription": "change-description",
+				"KmsKeyId": "customer-kms-key-id",
+				"SupportedOsVersions": ["Amazon Linux 2"],
+				"Tags": {
+					"CustomerComponentTagKey1": "CustomerComponentTagValue1",
+					"CustomerComponentTagKey2": "CustomerComponentTagValue2"
+				},
+				"Data": "name: HelloWorldTestingLinuxDoc - InlineData\n description: This is hello world testing doc\nschemaVersion: 1.0\n\nphases:\n  - name: build\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Build.\"\n  - name: validate\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Validate.\"\n  - name: test\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Test.\"\n"
+			}
+		}
+	}
+}
+```
 
 #### YAML<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_Data_--yaml"></a>
 
@@ -157,10 +188,12 @@ Resources:
     Properties:
       Name: 'component-name'
       Platform: 'Linux'
-      Version: "1.0.0"
+      Version: '1.0.0'
       Description: 'description'
       ChangeDescription: 'change-description'
       KmsKeyId: 'customer-kms-key-id'
+      SupportedOsVersions: 
+        - 'Amazon Linux 2'
       Tags:
         CustomerComponentTagKey1: 'CustomerComponentTagValue1'
         CustomerComponentTagKey2: 'CustomerComponentTagValue2'
@@ -194,31 +227,6 @@ Resources:
                     - echo "Hello World! Test."
 ```
 
-#### JSON<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_Data_--json"></a>
-
-```
-{
-    "Resources": {
-        "ComponentAllParameters": {
-            "Type": "AWS::ImageBuilder::Component",
-            "Properties": {
-                "Name": "component-name",
-                "Platform": "Linux",
-                "Version": "1.0.0",
-                "Description": "description",
-                "ChangeDescription": "change-description",
-                "KmsKeyId": "customer-kms-key-id",
-                "Tags": {
-                    "CustomerComponentTagKey1": "CustomerComponentTagValue1",
-                    "CustomerComponentTagKey2": "CustomerComponentTagValue2"
-                },
-                "Data": "name: HelloWorldTestingLinuxDoc - InlineData\ndescription: This is hello world testing doc\nschemaVersion: 1.0\n\nphases:\n  - name: build\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Build.\"\n  - name: validate\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Validate.\"\n  - name: test\n    steps:\n      - name: HelloWorldStep\n        action: ExecuteBash\n        inputs:\n          commands:\n            - echo \"Hello World! Test.\"\n"
-            }
-        }
-    }
-}
-```
-
 ### Create a component using a Uri<a name="aws-resource-imagebuilder-component--examples--Create_a_component_using_a_Uri"></a>
 
 The following example shows the schema for the Component resource document in both YAML and JSON format\. This example includes details for the `Uri` field \. You can use either the `Data` or `Uri` fields to reference the component document\.
@@ -232,12 +240,15 @@ Resources:
     Properties:
       Name: 'component-name'
       Platform: 'Linux'
-      Version: "1.0.0"
+      Version: '1.0.0'
       # Require one of 'Data' or 'Uri' for Component template
       Uri: 's3://imagebuilder/component_document.yml'
       Description: 'description'
       ChangeDescription: 'change-description'
       KmsKeyId: 'customer-kms-key-id'
+      SupportedOsVersions: 
+      - 'CentOS'
+      - 'Red Hat Enterprise Linux'
       Tags:
         CustomerComponentTagKey1: 'CustomerComponentTagValue1'
         CustomerComponentTagKey2: 'CustomerComponentTagValue2'
@@ -258,6 +269,7 @@ Resources:
                 "Description": "description",
                 "ChangeDescription": "change-description",
                 "KmsKeyId": "customer-kms-key-id",
+                "SupportedOsVersions": ["CentOS", "Red Hat Enterprise Linux"],
                 "Tags": {
                     "CustomerComponentTagKey1": "CustomerComponentTagValue1",
                     "CustomerComponentTagKey2": "CustomerComponentTagValue2"

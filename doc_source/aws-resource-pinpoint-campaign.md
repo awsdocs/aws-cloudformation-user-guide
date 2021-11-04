@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Campaign<a name="aws-resource-pinpoint-campaign"></a>
 
-A *campaign* is a messaging initiative that engages a specific segment of users for an Amazon Pinpoint application\. The AWS::Pinpoint::Campaign resource defines the configuration and other settings for a campaign\.
+Specifies the settings for a campaign\. A *campaign* is a messaging initiative that engages a specific segment of users for an Amazon Pinpoint application\.
 
 ## Syntax<a name="aws-resource-pinpoint-campaign-syntax"></a>
 
@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Limits](#cfn-pinpoint-campaign-limits)" : Limits,
       "[MessageConfiguration](#cfn-pinpoint-campaign-messageconfiguration)" : MessageConfiguration,
       "[Name](#cfn-pinpoint-campaign-name)" : String,
+      "[Priority](#cfn-pinpoint-campaign-priority)" : Integer,
       "[Schedule](#cfn-pinpoint-campaign-schedule)" : Schedule,
       "[SegmentId](#cfn-pinpoint-campaign-segmentid)" : String,
       "[SegmentVersion](#cfn-pinpoint-campaign-segmentversion)" : Integer,
@@ -49,6 +50,7 @@ Properties:
   [MessageConfiguration](#cfn-pinpoint-campaign-messageconfiguration): 
     MessageConfiguration
   [Name](#cfn-pinpoint-campaign-name): String
+  [Priority](#cfn-pinpoint-campaign-priority): Integer
   [Schedule](#cfn-pinpoint-campaign-schedule): 
     Schedule
   [SegmentId](#cfn-pinpoint-campaign-segmentid): String
@@ -73,7 +75,7 @@ The unique identifier for the Amazon Pinpoint application that the campaign is a
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CampaignHook`  <a name="cfn-pinpoint-campaign-campaignhook"></a>
-Specifies the AWS Lambda function to use as a code hook for a campaign\.  
+Specifies the Lambda function to use as a code hook for a campaign\.  
 *Required*: No  
 *Type*: [CampaignHook](aws-properties-pinpoint-campaign-campaignhook.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -91,7 +93,7 @@ The allocated percentage of users \(segment members\) who shouldn't receive mess
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsPaused`  <a name="cfn-pinpoint-campaign-ispaused"></a>
-Specifies whether to pause the campaign\. A paused campaign doesn't run unless you resume it by changing this value to `false`\.  
+Specifies whether to pause the campaign\. A paused campaign doesn't run unless you resume it by changing this value to `false`\. If you restart a campaign, the campaign restarts from the beginning and not at the point you paused it\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -112,6 +114,12 @@ The message configuration settings for the campaign\.
 The name of the campaign\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Priority`  <a name="cfn-pinpoint-campaign-priority"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Schedule`  <a name="cfn-pinpoint-campaign-schedule"></a>
@@ -154,7 +162,7 @@ A custom name of the default treatment for the campaign, if the campaign has mul
 
 ### Ref<a name="aws-resource-pinpoint-campaign-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a string that combines the unique identifier \(`ApplicationId`\) for the Amazon Pinpoint application with the unique identifier for the segment that the campaign targets\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns a string that combines the unique identifier for the Amazon Pinpoint application with the unique identifier for the segment that the campaign targets\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

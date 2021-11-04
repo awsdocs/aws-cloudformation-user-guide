@@ -1,6 +1,6 @@
 # AWS::Lambda::Version ProvisionedConcurrencyConfiguration<a name="aws-properties-lambda-version-provisionedconcurrencyconfiguration"></a>
 
-A provisioned concurrency configuration for a function's version\.
+A [provisioned concurrency](https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html) configuration for a function's version\.
 
 ## Syntax<a name="aws-properties-lambda-version-provisionedconcurrencyconfiguration-syntax"></a>
 
@@ -30,6 +30,8 @@ The amount of provisioned concurrency to allocate for the version\.
 
 ## Examples<a name="aws-properties-lambda-version-provisionedconcurrencyconfiguration--examples"></a>
 
+
+
 ### Provisioned Concurrency Configuration<a name="aws-properties-lambda-version-provisionedconcurrencyconfiguration--examples--Provisioned_Concurrency_Configuration"></a>
 
 Allocate 20 provisioned concurrency for a version\.
@@ -37,5 +39,6 @@ Allocate 20 provisioned concurrency for a version\.
 #### YAML<a name="aws-properties-lambda-version-provisionedconcurrencyconfiguration--examples--Provisioned_Concurrency_Configuration--yaml"></a>
 
 ```
- ProvisionedConcurrencyConfig: ProvisionedConcurrentExecutions: 20
+      ProvisionedConcurrencyConfig:
+        ProvisionedConcurrentExecutions: 20
 ```

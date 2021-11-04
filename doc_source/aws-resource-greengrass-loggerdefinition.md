@@ -52,7 +52,7 @@ The name of the logger definition\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-greengrass-loggerdefinition-tags"></a>
-Application\-specific metadata to attach to the logger definition\. You can use tags in IAM policies to control access to AWS IoT Greengrass resources\. You can also use tags to categorize your resources\. For more information, see [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html) in the *AWS IoT Greengrass Developer Guide*\.  
+Application\-specific metadata to attach to the logger definition\. You can use tags in IAM policies to control access to AWS IoT Greengrass resources\. You can also use tags to categorize your resources\. For more information, see [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.  
 This `Json` property type is processed as a map of key\-value pairs\. It uses the following format, which is different from most `Tags` implementations in AWS CloudFormation templates\.  
 
 ```
@@ -95,6 +95,8 @@ The ARN of the last `LoggerDefinitionVersion` that was added to the `LoggerDefin
 The name of the `LoggerDefinition`, such as `MyLoggerDefinition`\. 
 
 ## Examples<a name="aws-resource-greengrass-loggerdefinition--examples"></a>
+
+
 
 ### Logger Definition Snippet<a name="aws-resource-greengrass-loggerdefinition--examples--Logger_Definition_Snippet"></a>
 
@@ -141,5 +143,5 @@ TestLoggerDefinition:
 ```
 
 ## See also<a name="aws-resource-greengrass-loggerdefinition--seealso"></a>
-+  [CreateLoggerDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createloggerdefinition-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [CreateLoggerDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createloggerdefinition-post.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

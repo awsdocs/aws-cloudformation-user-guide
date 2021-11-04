@@ -1,6 +1,6 @@
 # AWS::Lambda::EventSourceMapping DestinationConfig<a name="aws-properties-lambda-eventsourcemapping-destinationconfig"></a>
 
-\(Streams\) An Amazon SQS queue or Amazon SNS topic destination for discarded records\.
+A configuration object that specifies the destination of an event after Lambda processes it\.
 
 ## Syntax<a name="aws-properties-lambda-eventsourcemapping-destinationconfig-syntax"></a>
 
@@ -31,6 +31,8 @@ The destination configuration for failed invocations\.
 
 ## Examples<a name="aws-properties-lambda-eventsourcemapping-destinationconfig--examples"></a>
 
+
+
 ### On\-Failure Destination Configuration<a name="aws-properties-lambda-eventsourcemapping-destinationconfig--examples--On-Failure_Destination_Configuration"></a>
 
 Configure a function to send a record of failed batches to an SQS queue\.
@@ -38,6 +40,7 @@ Configure a function to send a record of failed batches to an SQS queue\.
 #### YAML<a name="aws-properties-lambda-eventsourcemapping-destinationconfig--examples--On-Failure_Destination_Configuration--yaml"></a>
 
 ```
- DestinationConfig: OnFailure: Destination:
-        arn:aws:sqs:us-east-2:123456789012:dlq
+      DestinationConfig:
+          OnFailure:
+            Destination: arn:aws:sqs:us-east-2:123456789012:dlq
 ```

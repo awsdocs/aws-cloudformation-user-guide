@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-macie-findingsfilter-findingcriteria-properties"></a>
 
 `Criterion`  <a name="cfn-macie-findingsfilter-findingcriteria-criterion"></a>
-A condition that specifies the property, operator, and value to use to filter the results\.  
+Specifies a condition that defines the property, operator, and value to use to filter the results\.  
 *Required*: No  
 *Type*: [Criterion](aws-properties-macie-findingsfilter-criterion.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -103,11 +103,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-vpn-connection--examples"></a>
 
-### VPN Connection<a name="aws-resource-ec2-vpn-connection--examples--VPN_Connection"></a>
+
+
+### VPN connection<a name="aws-resource-ec2-vpn-connection--examples--VPN_connection"></a>
 
 The following example specifies a VPN connection between myVPNGateway and MyCustomerGateway\.
 
-#### JSON<a name="aws-resource-ec2-vpn-connection--examples--VPN_Connection--json"></a>
+#### JSON<a name="aws-resource-ec2-vpn-connection--examples--VPN_connection--json"></a>
 
 ```
 "myVPNConnection" : {
@@ -121,7 +123,7 @@ The following example specifies a VPN connection between myVPNGateway and MyCust
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-vpn-connection--examples--VPN_Connection--yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpn-connection--examples--VPN_connection--yaml"></a>
 
 ```
    myVPNConnection: 
@@ -137,3 +139,4 @@ The following example specifies a VPN connection between myVPNGateway and MyCust
 
 ## See also<a name="aws-resource-ec2-vpn-connection--seealso"></a>
 +  [VPNConnection](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnConnection.html) in the *Amazon EC2 API Reference*
+

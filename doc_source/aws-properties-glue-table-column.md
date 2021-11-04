@@ -46,3 +46,4 @@ The data type of the `Column`\.
 
 ## See also<a name="aws-properties-glue-table-column--seealso"></a>
 +  [Column Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-Column) in the *AWS Glue Developer Guide* 
+

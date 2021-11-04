@@ -3,7 +3,7 @@
 With the `DependsOn` attribute you can specify that the creation of a specific resource follows another\. When you add a `DependsOn` attribute to a resource, that resource is created only after the creation of the resource specified in the `DependsOn` attribute\.
 
 **Important**  
-Dependent stacks also have implicit dependencies in the form of target properties `!Ref` and `!GetAtt`\. For example, if the properties of resource A use a `!Ref` to resource B, the following rule apply:  
+Dependent stacks also have implicit dependencies in the form of target properties `!Ref` and `!GetAtt`\. For example, if the properties of resource A use a `!Ref` to resource B, the following rules apply:  
 Resource B is created before resource A\.
 Resource A is deleted before resource B\.
 Resource B is updated before resource A\.
@@ -14,9 +14,9 @@ You can use the `DependsOn` attribute with any resource\. Here are some typical 
 + Override default parallelism when creating, updating, or deleting resources\. AWS CloudFormation creates, updates, and deletes resources in parallel to the extent possible\. It automatically determines which resources in a template can be parallelized and which have dependencies that require other operations to finish first\. You can use `DependsOn` to explicitly specify dependencies, which overrides the default parallelism and directs CloudFormation to operate on those resources in a specified order\.
 
 **Note**  
-During a stack update, resources that depend on updated resources are updated automatically\. AWS CloudFormation makes no changes to the automatically\-updated resources, but, if a stack policy is associated with these resources, your account must have the permissions to update them\.
+During a stack update, resources that depend on updated resources are updated automatically\. CloudFormation makes no changes to the automatically updated resources, but, if a stack policy is associated with these resources, your account must have the permissions to update them\.
 
-## Syntax<a name="w6640ab1c25c23c15c13"></a>
+## Syntax<a name="w10335ab1c33c23c15c13"></a>
 
 The `DependsOn` attribute can take a single string or list of strings\.
 
@@ -24,9 +24,9 @@ The `DependsOn` attribute can take a single string or list of strings\.
 "DependsOn" : [ String, ... ]
 ```
 
-## Example<a name="w6640ab1c25c23c15c15"></a>
+## Example<a name="w10335ab1c33c23c15c15"></a>
 
-The following template contains an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource with a `DependsOn` attribute that specifies myDB, an [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)\. When AWS CloudFormation creates this stack, it first creates myDB, then creates Ec2Instance\.
+The following template contains an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource with a `DependsOn` attribute that specifies myDB, an [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)\. When CloudFormation creates this stack, it first creates myDB, then creates Ec2Instance\.
 
 ### JSON<a name="aws-attribute-dependson-example-1.json"></a>
 
@@ -124,9 +124,9 @@ The following template contains an [AWS::EC2::Instance](https://docs.aws.amazon.
 
 VPC\-gateway attachment
 
-Some resources in a VPC require a gateway \(either an Internet or VPN gateway\)\. If your AWS CloudFormation template defines a VPC, a gateway, and a gateway attachment, any resources that require the gateway are dependent on the gateway attachment\. For example, an Amazon EC2 instance with a public IP address is dependent on the VPC\-gateway attachment if the `VPC` and `InternetGateway` resources are also declared in the same template\.
+Some resources in a VPC require a gateway \(either an Internet or VPN gateway\)\. If your CloudFormation template defines a VPC, a gateway, and a gateway attachment, any resources that require the gateway are dependent on the gateway attachment\. For example, an Amazon EC2 instance with a public IP address is dependent on the VPC\-gateway attachment if the `VPC` and `InternetGateway` resources are also declared in the same template\.
 
-Currently, the following resources depend on a VPC\-gateway attachment when they have an associated public IP address and are in a VPC:
+Currently, the following resources depend on a VPC\-gateway attachment when they have an associated public IP address and are in a VPC\.
 + Auto Scaling groups
 + Amazon EC2 instances
 + Elastic Load Balancing load balancers
@@ -235,9 +235,9 @@ EC2Host:
         Ref: PublicSubnet
 ```
 
-### Amazon ECS service and Auto Scaling group<a name="w6640ab1c25c23c15c17c18"></a>
+### Amazon ECS service and Auto Scaling group<a name="w10335ab1c33c23c15c17c19"></a>
 
-When you use Auto Scaling or Amazon Elastic Compute Cloud \(Amazon EC2\) to create container instances for an Amazon ECS cluster, the Amazon ECS service resource must have a dependency on the Auto Scaling group or Amazon EC2 instances, as shown in the following snippet\. That way the container instances are available and associated with the Amazon ECS cluster before AWS CloudFormation creates the Amazon ECS service\.
+When you use Auto Scaling or Amazon Elastic Compute Cloud \(Amazon EC2\) to create container instances for an Amazon ECS cluster, the Amazon ECS service resource must have a dependency on the Auto Scaling group or Amazon EC2 instances, as shown in the following snippet\. That way the container instances are available and associated with the Amazon ECS cluster before CloudFormation creates the Amazon ECS service\.
 
 #### JSON<a name="aws-attribute-dependson-example-3.json"></a>
 
@@ -293,10 +293,10 @@ service:
       Ref: taskdefinition
 ```
 
-### IAM role policy<a name="w6640ab1c25c23c15c17c20"></a>
+### IAM role policy<a name="w10335ab1c33c23c15c17c21"></a>
 
 Resources that make additional calls to AWS require a service role, which permits a service to make calls to AWS on your behalf\. For example, the `AWS::CodeDeploy::DeploymentGroup` resource requires a service role so that CodeDeploy has permissions to deploy applications to your instances\. When you have a single template that defines a service role, the role's policy \(by using the `AWS::IAM::Policy` or `AWS::IAM::ManagedPolicy` resource\), and a resource that uses the role, add a dependency so that the resource depends on the role's policy\. This dependency ensures that the policy is available throughout the resource's lifecycle\.
 
-For example, imagine that you have a template with a deployment group resource, a service role, and the role's policy\. When you create a stack, AWS CloudFormation won't create the deployment group until it creates the role's policy\. Without the dependency, AWS CloudFormation can create the deployment group resource before it creates the role's policy\. If that happens, the deployment group will fail to create because of insufficient permissions\.
+For example, imagine that you have a template with a deployment group resource, a service role, and the role's policy\. When you create a stack, CloudFormation won't create the deployment group until it creates the role's policy\. Without the dependency, CloudFormation can create the deployment group resource before it creates the role's policy\. If that happens, the deployment group will fail to create because of insufficient permissions\.
 
-If the role has an embedded policy, don't specify a dependency\. AWS CloudFormation creates the role and its policy at the same time\.
+If the role has an embedded policy, don't specify a dependency\. CloudFormation creates the role and its policy at the same time\.

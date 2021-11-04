@@ -1,6 +1,6 @@
 # AWS::Greengrass::ResourceDefinition ResourceDownloadOwnerSetting<a name="aws-properties-greengrass-resourcedefinition-resourcedownloadownersetting"></a>
 
-The owner setting for a downloaded machine learning resource\. For more information, see [Access Machine Learning Resources from Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-ml-resources.html) in the *AWS IoT Greengrass Developer Guide*\.
+The owner setting for a downloaded machine learning resource\. For more information, see [Access Machine Learning Resources from Lambda Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-ml-resources.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.
 
 <a name="aws-properties-greengrass-resourcedefinition-resourcedownloadownersetting-inheritance"></a> In an AWS CloudFormation template, `ResourceDownloadOwnerSetting` is the property type of the `OwnerSetting` property for the [ `S3MachineLearningModelResourceData`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.html) and [ `SageMakerMachineLearningModelResourceData`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.html) property types\.
 

@@ -1,6 +1,6 @@
 # AWS::AutoScalingPlans::ScalingPlan TargetTrackingConfiguration<a name="aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration"></a>
 
- `TargetTrackingConfiguration` is a subproperty of [ScalingInstruction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html) that specifies a target tracking configuration to use with AWS Auto Scaling\. 
+ `TargetTrackingConfiguration` is a subproperty of [ScalingInstruction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html) that specifies a target tracking configuration to use with AWS Auto Scaling \(Auto Scaling Plans\)\. 
 
 ## Syntax<a name="aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration-syntax"></a>
 
@@ -74,7 +74,7 @@ The amount of time, in seconds, after a scale\-out activity completes before ano
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetValue`  <a name="cfn-autoscalingplans-scalingplan-targettrackingconfiguration-targetvalue"></a>
-The target value for the metric\. The range is 8\.515920e\-109 to 1\.174271e\+108 \(Base 10\) or 2e\-360 to 2e360 \(Base 2\)\.  
+The target value for the metric\. Although this property accepts numbers of type Double, it won't accept values that are either too small or too large\. Values must be in the range of \-2^360 to 2^360\.  
 *Required*: Yes  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -39,7 +39,7 @@ When you create a group or an IAM user in your AWS account, you can associate an
 
 The policy grants permissions to all `DescribeStack` API actions listed in the `Action` element\.
 
-**Note**  
+**Important**  
 If you don't specify a stack name or ID in your statement, you must also grant the permission to use all resources for the action using the `*` wildcard for the `Resource` element\.
 
 In addition to AWS CloudFormation actions, IAM users who create or delete stacks require additional permissions that depends on the stack templates\. For example, if you have a template that describes an Amazon SQS Queue, the user must have the corresponding permissions for Amazon SQS actions to successfully create the stack, as shown in the following sample policy:
@@ -67,7 +67,7 @@ In addition to AWS CloudFormation actions, IAM users who create or delete stacks
 
 For a list of all AWS CloudFormation actions that you can allow or deny, see the [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/)\.
 
-### AWS CloudFormation console\-specific actions<a name="w6640ab1b7c14c11c16"></a>
+### AWS CloudFormation console\-specific actions<a name="w10335ab1c17c21c11c16"></a>
 
 IAM users who use the AWS CloudFormation console require additional permissions that are not required for using the AWS Command Line Interface or AWS CloudFormation APIs\. Compared to the CLI and API, the console provides additional features that require additional permissions, such as template uploads to Amazon S3 buckets and drop\-down lists for [AWS\-specific parameter types](parameters-section-structure.md#aws-specific-parameter-types)\.
 
@@ -137,9 +137,9 @@ To allow `AWS::Serverless` transforms to create a change set, the policy should 
 
 ### Sample policy that grants service\-managed stack set permissions<a name="resource-level-permissions-service-managed-stack-set"></a>
 
-The following is a sample IAM policy that grants service\-managed stack set permissions to a principal entity \(user, role, or group\)\. A user with this policy can only perform operations on stack sets with templates containing Amazon S3 resource types \(AWS::S3::\*\) or the `AWS::SES::ConfigurationSet` resource type\. If signed in to the organization master account with ID `123456789012`, the user can also only perform operations on stack sets that target the OU with ID *ou\-1fsfsrsdsfrewr*, and can only perform operations on the stack set with ID `stack-set-id` that targets the AWS account with ID *987654321012*\.
+The following is a sample IAM policy that grants service\-managed stack set permissions to a principal entity \(user, role, or group\)\. A user with this policy can only perform operations on stack sets with templates containing Amazon S3 resource types \(`AWS::S3::*`\) or the `AWS::SES::ConfigurationSet` resource type\. If signed in to the organization management account with ID `123456789012`, the user can also only perform operations on stack sets that target the OU with ID *ou\-1fsfsrsdsfrewr*, and can only perform operations on the stack set with ID `stack-set-id` that targets the AWS account with ID *987654321012*\.
 
-Stack set operations fail if the stack set template contains resource types other than those specified in the policy, or if the deployment targets are OU or account IDs other than those specified in the policy for the corresponding master accounts and stack sets\.
+Stack set operations fail if the stack set template contains resource types other than those specified in the policy, or if the deployment targets are OU or account IDs other than those specified in the policy for the corresponding management accounts and stack sets\.
 
 These policy restrictions only apply when stack set operations target the `us-east-1`, `us-west-2`, or `eu-west-2` Regions\.
 
@@ -154,10 +154,10 @@ These policy restrictions only apply when stack set operations target the `us-ea
             ],
             "Resource": [
                 "arn:aws:cloudformation:*:*:stackset/*",
-                "arn:aws:cloudformation:*::type/resource/AWS-S3-*",
+                "arn:aws:cloudformation:*:*:type/resource/AWS-S3-*",,
                 "arn:aws:cloudformation:us-west-2::type/resource/AWS-SES-ConfigurationSet",
-                "arn:aws:cloudformation::123456789012:stackset-target/*/ou-1fsfsrsdsfrewr",
-                "arn:aws:cloudformation::123456789012:stackset-target/stack-set-id/987654321012"
+                "arn:aws:cloudformation:*:123456789012:stackset-target/*/ou-1fsfsrsdsfrewr",
+                "arn:aws:cloudformation:*:123456789012:stackset-target/stack-set-id/987654321012"
             ],
             "Condition": {
                 "ForAllValues:StringEqualsIgnoreCase": {
@@ -178,7 +178,7 @@ These policy restrictions only apply when stack set operations target the `us-ea
 In an IAM policy, you can optionally specify conditions that control when a policy is in effect\. For example, you can define a policy that allows IAM users to create a stack only when they specify a certain template URL\. You can define AWS CloudFormation\-specific conditions and AWS\-wide conditions, such as `DateLessThan`, which specifies when a policy stops taking effect\. For more information and a list of AWS\-wide conditions, see Condition in [IAM policy elements reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/AccessPolicyLanguage_ElementDescriptions.html#Condition) in *IAM User Guide*\.
 
 **Note**  
-Do not use the `aws:SourceIp` AWS\-wide condition\. AWS CloudFormation provisions resources by using its own IP address, not the IP address of the originating request\. For example, when you create a stack, AWS CloudFormation makes requests from its IP address to launch an EC2 instance or to create an S3 bucket, not from the IP address from the `CreateStack` call or the `aws cloudformation create-stack` command\.
+Don't use the `aws:SourceIp` AWS\-wide condition\. AWS CloudFormation provisions resources by using its own IP address, not the IP address of the originating request\. For example, when you create a stack, AWS CloudFormation makes requests from its IP address to launch an EC2 instance or to create an S3 bucket, not from the IP address from the `CreateStack` call or the `aws cloudformation create-stack` command\.
 
 The following list describes the AWS CloudFormation\-specific conditions\. These conditions are applied only when users create or update stacks:
 
@@ -186,7 +186,7 @@ The following list describes the AWS CloudFormation\-specific conditions\. These
 An AWS CloudFormation change set name that you want to associate with a policy\. Use this condition to control which change sets IAM users can execute or delete\.
 
 `cloudformation:ImportResourceTypes`  
-The template resource types that you want to associate with a policy, such as `AWS::EC2::Instance`\. Use this condition to control which resource types IAM users can work with when they import resources into a stack\. This condition is checked against the resource types that users declare in the `ResourcesToImport` parameter, which is currently supported only for CLI and API requests\. When using this parameter, you must specify all the resource types you want users to control during import operations\. For more information about the `ResourcesToImport` parameter, see the [CreateChangeSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateChangeSet.html) action in the *AWS CloudFormation API Reference*\.   
+The template resource types that you want to associate with a policy, such as `AWS::EC2::Instance`\. Use this condition to control which resource types IAM users can work with when they import resources into a stack\. This condition is checked against the resource types that users declare in the `ResourcesToImport` parameter, which is currently supported only for CLI and API requests\. When using this parameter, you must specify all the resource types you want users to control during import operations\. For more information about the `ResourcesToImport` parameter, see the [CreateChangeSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateChangeSet.html) action in the *AWS CloudFormation API Reference*\.  
 For a list of possible `ResourcesToImport`, see [Resources that support import operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import-supported-resources.html)\.  
 Use the three\-part resource naming convention to specify which resource types users can work with, from all resources across an organization, down to an individual resource type\.    
 `organization::*`  
@@ -241,8 +241,14 @@ To ensure that IAM users can only create or update stacks with the stack policie
 `cloudformation:TemplateUrl`  
 An Amazon S3 template URL that you want to associate with a policy\. Use this condition to control which templates IAM users can use when they create or update stacks\.  
 To ensure that IAM users can only create or update stacks with the templates that you uploaded, set the S3 bucket to `read only` for those users\.
+The following AWS CloudFormation\-specific conditions apply to the API parameters of the same name:  
++ `cloudformation:ChangeSetName`
++ `cloudformation:RoleARN`
++ `cloudformation:StackPolicyUrl`
++ `cloudformation:TemplateUrl`
+For example, `cloudformation:TemplateUrl` only applies to the `TemplateUrl` parameter for `CreateStack`, `UpdateStack`, and `CreateChangeSet` APIs\.
 
-### Examples<a name="w6640ab1b7c14c15c10"></a>
+### Examples<a name="w10335ab1c17c21c15c10"></a>
 
 The following example policy allows users to use only the `https://s3.amazonaws.com/testbucket/test.template` template URL to create or update a stack\.
 
@@ -257,7 +263,7 @@ The following example policy allows users to use only the `https://s3.amazonaws.
       "Action" : [ "cloudformation:CreateStack", "cloudformation:UpdateStack" ],
       "Resource" : "*",
       "Condition" : {
-        "ForAllValues:StringEquals" : {
+        "StringEquals" : {
           "cloudformation:TemplateUrl" : [ "https://s3.amazonaws.com/testbucket/test.template" ]
         }
       }
@@ -297,7 +303,7 @@ The following example policy allows users to complete all AWS CloudFormation ope
 }
 ```
 
-The following example policy allows all stack operations, as well as import operations only on specified resources \(in this example, `AWS::S3::Bucket`\.
+The following example policy allows all stack operations, in addition to import operations only on specified resources \(in this example, `AWS::S3::Bucket`\.
 
 **Example Import resource types condition**  
 

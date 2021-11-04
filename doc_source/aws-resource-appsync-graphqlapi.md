@@ -1,6 +1,6 @@
 # AWS::AppSync::GraphQLApi<a name="aws-resource-appsync-graphqlapi"></a>
 
-The `AWS::AppSync::GraphQLApi` resource creates a new AppSync GraphQL API\. This is the top\-level construct for your application\. For more information, see [Quick Start](https://docs.aws.amazon.com/appsync/latest/devguide/quickstart.html) in the *AWS AppSync Developer Guide*\.
+The `AWS::AppSync::GraphQLApi` resource creates a new AWS AppSync GraphQL API\. This is the top\-level construct for your application\. For more information, see [Quick Start](https://docs.aws.amazon.com/appsync/latest/devguide/quickstart.html) in the *AWS AppSync Developer Guide*\.
 
 ## Syntax<a name="aws-resource-appsync-graphqlapi-syntax"></a>
 
@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AdditionalAuthenticationProviders](#cfn-appsync-graphqlapi-additionalauthenticationproviders)" : AdditionalAuthenticationProviders,
       "[AuthenticationType](#cfn-appsync-graphqlapi-authenticationtype)" : String,
+      "[LambdaAuthorizerConfig](#cfn-appsync-graphqlapi-lambdaauthorizerconfig)" : LambdaAuthorizerConfig,
       "[LogConfig](#cfn-appsync-graphqlapi-logconfig)" : LogConfig,
       "[Name](#cfn-appsync-graphqlapi-name)" : String,
       "[OpenIDConnectConfig](#cfn-appsync-graphqlapi-openidconnectconfig)" : OpenIDConnectConfig,
@@ -32,6 +33,8 @@ Properties:
   [AdditionalAuthenticationProviders](#cfn-appsync-graphqlapi-additionalauthenticationproviders): 
     AdditionalAuthenticationProviders
   [AuthenticationType](#cfn-appsync-graphqlapi-authenticationtype): String
+  [LambdaAuthorizerConfig](#cfn-appsync-graphqlapi-lambdaauthorizerconfig): 
+    LambdaAuthorizerConfig
   [LogConfig](#cfn-appsync-graphqlapi-logconfig): 
     LogConfig
   [Name](#cfn-appsync-graphqlapi-name): String
@@ -53,9 +56,15 @@ A list of additional authentication providers for the `GraphqlApi` API\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthenticationType`  <a name="cfn-appsync-graphqlapi-authenticationtype"></a>
-Security configuration for your GraphQL API\. For allowed values \(such as `API_KEY`, `AWS_IAM`, or `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`\), see [Security](https://docs.aws.amazon.com/appsync/latest/devguide/security.html) in the *AWS AppSync Developer Guide*\.  
+Security configuration for your GraphQL API\. For allowed values \(such as `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`, or `AWS_LAMBDA`\), see [Security](https://docs.aws.amazon.com/appsync/latest/devguide/security.html) in the *AWS AppSync Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LambdaAuthorizerConfig`  <a name="cfn-appsync-graphqlapi-lambdaauthorizerconfig"></a>
+A `LambdaAuthorizerConfig` holds configuration on how to authorize AWS AppSync API access when using the `AWS_LAMBDA` authorizer mode\. Be aware that an AWS AppSync API may have only one Lambda authorizer configured at a time\.  
+*Required*: No  
+*Type*: [LambdaAuthorizerConfig](aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogConfig`  <a name="cfn-appsync-graphqlapi-logconfig"></a>
@@ -120,6 +129,8 @@ The Amazon Resource Name \(ARN\) of the API key, such as `arn:aws:appsync:us-eas
 The Endpoint URL of your GraphQL API\. 
 
 ## Examples<a name="aws-resource-appsync-graphqlapi--examples"></a>
+
+
 
 ### GraphQL API Creation Example<a name="aws-resource-appsync-graphqlapi--examples--GraphQL_API_Creation_Example"></a>
 
@@ -198,3 +209,4 @@ Resources:
 
 ## See also<a name="aws-resource-appsync-graphqlapi--seealso"></a>
 +  [CreateGraphqlApi](https://docs.aws.amazon.com/appsync/latest/APIReference/API_CreateGraphqlApi.html) operation in the *AWS AppSync API Reference*\.
+

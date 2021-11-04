@@ -4,7 +4,7 @@ Creates a virtual gateway\.
 
 A virtual gateway allows resources outside your mesh to communicate to resources that are inside your mesh\. The virtual gateway represents an Envoy proxy running in an Amazon ECS task, in a Kubernetes service, or on an Amazon EC2 instance\. Unlike a virtual node, which represents an Envoy running with an application, a virtual gateway represents Envoy deployed by itself\.
 
-For more information about virtual gateways, see [Virtual gateways](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_gateways.html)\.
+For more information about virtual gateways, see [Virtual gateways](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_gateways.html)\. 
 
 ## Syntax<a name="aws-resource-appmesh-virtualgateway-syntax"></a>
 
@@ -45,12 +45,16 @@ Properties:
 The name of the service mesh that the virtual gateway resides in\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MeshOwner`  <a name="cfn-appmesh-virtualgateway-meshowner"></a>
 The AWS IAM account ID of the service mesh owner\. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account\. For more information about mesh sharing, see [Working with shared meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `12`  
+*Maximum*: `12`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Spec`  <a name="cfn-appmesh-virtualgateway-spec"></a>
@@ -63,12 +67,15 @@ The specifications of the virtual gateway\.
 Optional metadata that you can apply to the virtual gateway to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VirtualGatewayName`  <a name="cfn-appmesh-virtualgateway-virtualgatewayname"></a>
 The name of the virtual gateway\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-appmesh-virtualgateway-return-values"></a>
@@ -112,3 +119,4 @@ The name of the virtual gateway\.
 ## See also<a name="aws-resource-appmesh-virtualgateway--seealso"></a>
 +  [Virtual gateways](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_gateways.html) in the * AWS App Mesh User Guide *\.
 +  [CreateVirtualGateway](https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateVirtualGateway.html) in the * AWS App Mesh API Reference *\.
+

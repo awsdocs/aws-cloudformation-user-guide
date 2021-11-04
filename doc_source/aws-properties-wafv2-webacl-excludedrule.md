@@ -1,8 +1,5 @@
 # AWS::WAFv2::WebACL ExcludedRule<a name="aws-properties-wafv2-webacl-excludedrule"></a>
 
-**Note**  
-This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
-
 Specifies a single rule to exclude from the rule group\. Excluding a rule overrides its action setting for the rule group in the web ACL, setting it to `COUNT`\. This effectively excludes the rule from acting on web requests\. 
 
 ## Syntax<a name="aws-properties-wafv2-webacl-excludedrule-syntax"></a>

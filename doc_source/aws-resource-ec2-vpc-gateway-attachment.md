@@ -61,11 +61,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-vpc-gateway-attachment--examples"></a>
 
-### VPN Gateway Attachment<a name="aws-resource-ec2-vpc-gateway-attachment--examples--VPN_Gateway_Attachment"></a>
+
+
+### VPN gateway attachment<a name="aws-resource-ec2-vpc-gateway-attachment--examples--VPN_gateway_attachment"></a>
 
 To attach both an Internet gateway and a VPN gateway to a VPC, you must specify two separate AWS::EC2::VPCGatewayAttachment resources: 
 
-#### JSON<a name="aws-resource-ec2-vpc-gateway-attachment--examples--VPN_Gateway_Attachment--json"></a>
+#### JSON<a name="aws-resource-ec2-vpc-gateway-attachment--examples--VPN_gateway_attachment--json"></a>
 
 ```
 "AttachGateway" : {
@@ -85,7 +87,7 @@ To attach both an Internet gateway and a VPN gateway to a VPC, you must specify 
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-vpc-gateway-attachment--examples--VPN_Gateway_Attachment--yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpc-gateway-attachment--examples--VPN_gateway_attachment--yaml"></a>
 
 ```
 AttachGateway:
@@ -106,4 +108,5 @@ AttachVpnGateway:
 
 ## See also<a name="aws-resource-ec2-vpc-gateway-attachment--seealso"></a>
 +  [AttachVpnGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AttachVpnGateway.html) in the *Amazon EC2 API Reference*
-+ [InternetGateways](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html) in the *Amazon Virtual Private Cloud User Guide*
++ [Internet gateways](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html) in the *Amazon VPC User Guide*
+

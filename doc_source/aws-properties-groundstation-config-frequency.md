@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Units`  <a name="cfn-groundstation-config-frequency-units"></a>
  The units of the frequency\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-groundstation-config-frequency-value"></a>
  The value of the frequency\. Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to 2120 MHz for uplink\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

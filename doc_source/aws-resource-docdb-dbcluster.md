@@ -83,16 +83,16 @@ Constraints:
 `DBClusterIdentifier`  <a name="cfn-docdb-dbcluster-dbclusteridentifier"></a>
 The cluster identifier\. This parameter is stored as a lowercase string\.  
 Constraints:  
-+ Must contain from 1 to 63 letters, numbers, or hyphens\.
++ Must contain from 1 to 63 letters, numbers, or hyphens\. 
 + The first character must be a letter\.
-+ Cannot end with a hyphen or contain two consecutive hyphens\.
++ Cannot end with a hyphen or contain two consecutive hyphens\. 
 Example: `my-cluster`   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DBClusterParameterGroupName`  <a name="cfn-docdb-dbcluster-dbclusterparametergroupname"></a>
- The name of the cluster parameter group to associate with this cluster\.  
+The name of the cluster parameter group to associate with this cluster\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -118,7 +118,7 @@ The list of log types that need to be enabled for exporting to Amazon CloudWatch
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineVersion`  <a name="cfn-docdb-dbcluster-engineversion"></a>
-The version number of the database engine to use\.  
+The version number of the database engine to use\. The `--engine-version` will default to the latest major engine version\. For production workloads, we recommend explicitly declaring this parameter with the intended major engine version\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -126,11 +126,9 @@ The version number of the database engine to use\.
 `KmsKeyId`  <a name="cfn-docdb-dbcluster-kmskeyid"></a>
 The AWS KMS key identifier for an encrypted cluster\.  
 The AWS KMS key identifier is the Amazon Resource Name \(ARN\) for the AWS KMS encryption key\. If you are creating a cluster using the same AWS account that owns the AWS KMS encryption key that is used to encrypt the new cluster, you can use the AWS KMS key alias instead of the ARN for the AWS KMS encryption key\.  
-If an encryption key is not specified in `KmsKeyId`:  
-+ If `ReplicationSourceIdentifier` identifies an encrypted source, then Amazon DocumentDB uses the encryption key that is used to encrypt the source\. Otherwise, Amazon DocumentDB uses your default encryption key\. 
-+ If the `StorageEncrypted` parameter is `true` and `ReplicationSourceIdentifier` is not specified, Amazon DocumentDB uses your default encryption key\.
-AWS KMS creates the default encryption key for your AWS account\. Your AWS account has a different default encryption key for each AWS Region\.  
-If you create a replica of an encrypted cluster in another AWS Region, you must set `KmsKeyId` to a KMS key ID that is valid in the destination AWS Region\. This key is used to encrypt the replica in that AWS Region\.  
+If an encryption key is not specified in `KmsKeyId`:   
++ If the `StorageEncrypted` parameter is `true`, Amazon DocumentDB uses your default encryption key\. 
+ AWS KMS creates the default encryption key for your AWS account\. Your AWS account has a different default encryption key for each AWS Regions\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -140,7 +138,7 @@ The name of the master user for the cluster\.
 Constraints:  
 + Must be from 1 to 63 letters or numbers\.
 + The first character must be a letter\.
-+ Cannot be a reserved word for the chosen database engine\.
++ Cannot be a reserved word for the chosen database engine\. 
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -164,7 +162,7 @@ The default is a 30\-minute window selected at random from an 8\-hour block of t
 Constraints:  
 + Must be in the format `hh24:mi-hh24:mi`\.
 + Must be in Universal Coordinated Time \(UTC\)\.
-+ Must not conflict with the preferred maintenance window\.
++ Must not conflict with the preferred maintenance window\. 
 + Must be at least 30 minutes\.
 *Required*: No  
 *Type*: String  
@@ -202,7 +200,7 @@ The tags to be assigned to the cluster\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcSecurityGroupIds`  <a name="cfn-docdb-dbcluster-vpcsecuritygroupids"></a>
-A list of EC2 VPC security groups to associate with this cluster\.  
+A list of EC2 VPC security groups to associate with this cluster\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -237,7 +235,11 @@ The reader endpoint for the cluster\. For example: `sample-cluster.cluster-ro-co
 
 ## Examples<a name="aws-resource-docdb-dbcluster--examples"></a>
 
+
+
 ### <a name="aws-resource-docdb-dbcluster--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-docdb-dbcluster--examples----json"></a>
 
@@ -299,3 +301,4 @@ Resources:
 +  [DeleteDBCluster](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DeleteDBCluster.html) 
 +  [DescribeDBClusters](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DescribeDBClusters.html) 
 +  [ModifyDBCluster](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_ModifyDBCluster.html) 
+

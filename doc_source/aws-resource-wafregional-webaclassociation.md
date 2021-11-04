@@ -1,5 +1,9 @@
 # AWS::WAFRegional::WebACLAssociation<a name="aws-resource-wafregional-webaclassociation"></a>
 
+**Note**  
+This is ** AWS WAF Classic** documentation\. For more information, see [ AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF **, use the AWS WAFV2 API and see the [ AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
+
 The AWS::WAFRegional::WebACLAssociation resource associates an AWS WAF Regional web access control group \(ACL\) with a resource\.
 
 ## Syntax<a name="aws-resource-wafregional-webaclassociation-syntax"></a>
@@ -42,6 +46,8 @@ A unique identifier \(ID\) for the web ACL\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-resource-wafregional-webaclassociation--examples"></a>
+
+
 
 ### Associate an Application Load Balancer resource with a web ACL<a name="aws-resource-wafregional-webaclassociation--examples--Associate_an_Application_Load_Balancer_resource_with_a_web_ACL"></a>
 

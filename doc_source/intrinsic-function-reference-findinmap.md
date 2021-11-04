@@ -1,8 +1,8 @@
 # `Fn::FindInMap`<a name="intrinsic-function-reference-findinmap"></a>
 
-The intrinsic function `Fn::FindInMap` returns the value corresponding to keys in a two\-level map that is declared in the `Mappings` section\.
+The intrinsic function `Fn::FindInMap` returns the value corresponding to keys in a two\-level map that's declared in the `Mappings` section\.
 
-## Declaration<a name="w6640ab1c25c28c26b5"></a>
+## Declaration<a name="w10335ab1c33c28c26b5"></a>
 
 ### JSON<a name="intrinsic-function-reference-findinmap-syntax.json"></a>
 
@@ -27,29 +27,29 @@ Syntax for the short form:
 **Note**  
 You can't nest two instances of two functions in short form\.
 
-## Parameters<a name="w6640ab1c25c28c26b7"></a>
+## Parameters<a name="w10335ab1c33c28c26b7"></a>
 
-MapName  
+MapName  <a name="MapName"></a>
 The logical name of a mapping declared in the Mappings section that contains the keys and values\.
 
-TopLevelKey  
+TopLevelKey  <a name="TopLevelKey"></a>
 The top\-level key name\. Its value is a list of key\-value pairs\.
 
-SecondLevelKey  
+SecondLevelKey  <a name="SecondLevelKey"></a>
 The second\-level key name, which is set to one of the keys from the list assigned to `TopLevelKey`\.
 
-## Return value:<a name="w6640ab1c25c28c26b9"></a>
+## Return value:<a name="w10335ab1c33c28c26b9"></a>
 
-The value that is assigned to `SecondLevelKey`\. 
+The value that's assigned to `SecondLevelKey`\.
 
-## Example<a name="w6640ab1c25c28c26c11"></a>
+## Example<a name="w10335ab1c33c28c26c11"></a>
 
-The following example shows how to use `Fn::FindInMap` for a template with a `Mappings` section that contains a single map, `RegionMap`, that associates AMIs with AWS regions\. 
-+ The map has 5 top\-level keys that correspond to various AWS regions\.
+The following example shows how to use `Fn::FindInMap` for a template with a `Mappings` section that contains a single map, `RegionMap`, that associates AMIs with AWS Regions\.
++ The map has 5 top\-level keys that correspond to various AWS Regions\.
 + Each top\-level key is assigned a list with two second level keys, `"HVM64"` and `"HVMG2"`, that correspond to the AMI's architecture\.
 + Each of the second\-level keys is assigned an appropriate AMI name\.
 
-The example template contains an `AWS::EC2::Instance` resource whose `ImageId` property is set by the `FindInMap` function\. 
+The example template contains an `AWS::EC2::Instance` resource whose `ImageId` property is set by the `FindInMap` function\.
 
 `MapName` is set to the map of interest, `"RegionMap"` in this example\. `TopLevelKey` is set to the region where the stack is created, which is determined by using the `"AWS::Region"` pseudo parameter\. `SecondLevelKey` is set to the desired architecture, `"HVM64"` for this example\.
 
@@ -131,7 +131,7 @@ Resources:
       InstanceType: m1.small
 ```
 
-## Supported functions<a name="w6640ab1c25c28c26c13"></a>
+## Supported functions<a name="w10335ab1c33c28c26c13"></a>
 
 You can use the following functions in a `Fn::FindInMap` function:
 + `Fn::FindInMap`

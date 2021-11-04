@@ -1,6 +1,8 @@
 # AWS::MediaLive::Input InputDestinationRequest<a name="aws-properties-medialive-input-inputdestinationrequest"></a>
 
-The settings for a push input, to set up the destination addresses on MediaLive\.
+Settings that apply only if the input is a push type of input\.
+
+The parent of this entity is Input\.
 
 ## Syntax<a name="aws-properties-medialive-input-inputdestinationrequest-syntax"></a>
 

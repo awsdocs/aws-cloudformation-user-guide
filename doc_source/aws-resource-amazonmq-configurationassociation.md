@@ -2,6 +2,9 @@
 
 Use the AWS CloudFormation `AWS::AmazonMQ::ConfigurationAssociation` resource to associate a configuration with a broker, or return information about the specified ConfigurationAssociation\. Only use one per broker, and don't use a configuration on the broker resource if you have associated a configuration with that broker\.
 
+**Note**  
+Does not apply to RabbitMQ brokers\.
+
 ## Syntax<a name="aws-resource-amazonmq-configurationassociation-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -56,7 +59,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### ConfigurationAssociation<a name="aws-resource-amazonmq-configurationassociation--examples--ConfigurationAssociation"></a>
 
-The following example creates an Amazon MQ ConfigurationAssociation\.
+The following example creates an Amazon MQ for ActiveMQ ConfigurationAssociation\.
 
 #### JSON<a name="aws-resource-amazonmq-configurationassociation--examples--ConfigurationAssociation--json"></a>
 

@@ -1,93 +1,68 @@
 # Using the AWS CloudFormation registry<a name="registry"></a>
 
-The CloudFormation registry lists the resources, both private and public \(AWS\), that are available for use in your CloudFormation account\.
+The CloudFormation registry lets you manage the extensions, both public and private, that are available for use in your CloudFormation account\.
 
-## Private and public resource providers<a name="registry-public-private"></a>
+## Public and private extensions<a name="registry-public-private"></a>
++ *Public* extensions are those publicly published in the registry for use by all CloudFormation users\. This includes all extensions published by Amazon, as well as third\-party extension publishers\. 
 
-*Private* resource providers are those resource providers that you have explicitly registered for use in your AWS account\. These may be resource providers you've created yourself, as well as ones shared with you\. You can use the [CloudFormation CLI](https://github.com/aws-cloudformation/aws-cloudformation-rpdk), an open\-source tool for resource management, to create private resource providers\. For more information, see the [CloudFormation Command Line Interface User Guide](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html)\.
+  There are two kinds of public extensions:
+  + *Amazon public extensions*
+
+    Extensions published by Amazon are always public, and activated by default, so you don't have to take any action before using them in your account\. In addition, Amazon controls the versioning of the extension, so you are always using the latest available version\.
+  + *Third\-party public extensions*
+
+    These are extensions made available for general use by publishers other than Amazon\. 
+
+    To use a public extension, you must first activate it in your account and region\. When you activate a public third\-party extension, CloudFormation creates an entry in your account's extension registry for the activated extension as a private extension\. This allows you to customize the extension *as it is activated in your account* in the following ways:
+    + You can specify an alias to use instead of the public third\-party extension name\. This can help avoid naming collisions between third\-party extensions\.
+    + You can specify whether the extension is automatically updated when a new minor or patch version becomes available\.
+
+    For more information, see [Using public extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-public)\.
+
+    You can publish your own third\-party extensions to make them available to general CloudFormation users\. For more information, see [Publishing extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html) in the *CloudFormation Command Line Interface User Guide*\.
++ *Private* extensions are those extensions from third parties that you have explicitly activated for use in your AWS account\. 
+
+  There are two kinds of private extensions:
+  + *Activated private extensions*
+
+    These are the local copies of third\-party extensions that you have activated for your account and region\. When you activate a third\-party public extension, CloudFormation creates a local copy of that extension in your account's registry\.
+  + *Registered private extensions*
+
+    You can also activate private extensions that are not listed in the public CloudFormation registry\. These may be extensions you've created yourself, or ones shared with you by your organization or other third party\. To use such a private extension in your account, you must first register it\. Registering the extension uploads a copy of it to the CloudFormation registry in your account and activates it\.
+
+    For more information, see [Using private extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-register)\.
+
+    For information on developing private extensions of your own, see [Creating resource types](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-types.html) in the *CloudFormation Command Line Interface User Guide*\.
 
 **Note**  
-Private resource providers implement custom logic that runs during resource create, read, update, list, and delete operations\. Because of this, using private resource providers in your CloudFormation stacks incurs charges to your account\. This is in addition to any charges incurred for the resources created\. For more information, see [AWS CloudFormation pricing](https://aws.amazon.com/cloudformation/pricing/)\.
+Private extensions, and activated public extensions from third\-party publishers, may implement event handlers that runs during create, read, update, list, and delete operations\. Because of this, using these extensions in your CloudFormation stacks incurs charges to your account\. This is in addition to any charges incurred for the resources created\. For more information, see [AWS CloudFormation pricing](https://aws.amazon.com/cloudformation/pricing/)\.
 
-*Public* resource providers are those provided by AWS to manage specific AWS service resources\. While the registry lists AWS resources implemented using the open\-source resource provider framework, all the resources included in the [Resource and property types reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html) are available for use in your CloudFormation account\.
+## Managing extensions through the CloudFormation registry<a name="registry-view"></a>
 
-## Registering resource providers in CloudFormation<a name="registry-register"></a>
+Use the CloudFormation registry to manage the extensions in your account, including:
++ View the available and activated extensions\.
++ Register private extensions\.
++ Activate public extensions\.<a name="registry-view-procedure"></a>
 
-To use private resource providers\-\-either ones you develop yourself, or providers shared with you\-\-you must first register them with CloudFormation, in the accounts and regions in which you want to use them\. Once you're registered a resource provider, it will appear in the CloudFormation registry for that account and region, and you can use it in your stack templates\.
+**To view extensions in the CloudFormation console**
 
-You can register a resource provider using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or using the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\. To register a resource provider using the CloudFormation CLI, see [Registering resource providers](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-register.html) in the *CloudFormation CLI User Guide*\. 
+1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), from the **CloudFormation** navigation pane, under **CloudFormation registry**, select what extension category you want to view:
+   + **Public extensions** displays the public extensions available in your account\.
 
-### IAM permissions for registering a resource provider<a name="registry-register-permissions"></a>
+     Use the **Filter** options to further select the extensions to view\.
+   + **Activated extensions** displays the public and private extensions activated in your account\.
 
-As part of registering a resource provider, you specify an S3 bucket which contains the schema handler package\. This package contains the schema, event handlers, and associated files for the resource provider you want to register\. The user registering the resource provider type must be able to access the the schema handler package in that S3 bucket\. That is, the user needs to have [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for the schema handler package\.
+     Use the **Filter** drop\-down menu to further select the extensions to view:
+     + **AWS** lists extensions published by Amazon\. Extensions published by Amazon are activated by default\.
+     + **Third\-party** lists any public extensions from publishers other than Amazon that you have activated in this account\.
+     + **Registered** lists any private extensions you have activated in this account\.
+   + **Publisher** displays any public extensions that you have published using this account\. For more information, see [Publishing extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html) in the *CFN\-CLI User Guide for Extension Development*\.
 
-This is true whether you're either using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\.
-
-For more information, see [Actions, Resources, and Condition Keys for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity and Access Management User Guide*\.
-
-**To register a resource provider using the AWS CLI**
-
-1. Locate the S3 bucket that contains the resource provider package for the resource provider you want to register in your account\.
-
-1. Use the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command to register the resource provider in your account:
-
-   `RegisterType` is an asynchronous action, and returns a registration token you can use to track the progress of your registration request\. 
-**Note**  
-If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account\. You can then specify this execution role using the `--execution-role-arn` parameter\. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials\.
-
-   For example\. the following command registers the `My::Resource::Example` resource type in the current AWS account:
-
-   ```
-   aws cloudformation register-type --type-name My::Resource::Example --schema-handler-package [s3 object path] --type RESOURCE
-                   
-   {
-       "RegistrationToken": "f5525280-104e-4d35-bef5-8f1fexample"
-   }
-   ```
-
-1. Optional: Use the registration token with the `[describe\-type\-registration](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-type-registration.html)` command to track the progress of your registration request\.
-
-   When CloudFormation completes the registration request, it sets the progress status of the request to `COMPLETE`\.
-
-   The following example uses the registration token returned by the RegisterType command above to return registration status information\.
-
-   ```
-   aws cloudformation describe-type-registration --registration-token f5525280-104e-4d35-bef5-8f1fexample
-   
-   {
-       "ProgressStatus": "COMPLETE", 
-       "TypeArn": "arn:aws:cloudformation:us-east-1:012345678910:type/resource/My-Resource-Example", 
-       "Description": "Deployment is currently in DEPLOY_STAGE of status COMPLETED; ", 
-       "TypeVersionArn": "arn:aws:cloudformation:us-east-1:012345678910:type/resource/My-Resource-Example/00000001"
-   }
-   ```
-
-### Specifying which version of a resource provider to use<a name="registry-set-version"></a>
-
-Over time, you may register multiple versions of the same resource provider\. You can specify which version of the resource provider you want to use for CloudFormation operations\.
-
-**To specify which version of a resource provider to use using the AWS CLI**
-+ Use the `[set\-type\-default\-version](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/set-type-default-version.html)` command to specify which version of the resource provider to use for CloudFormation operations in your account\.
-
-  For example, the following command sets the default version of the `My::Resource::Example` resource type to `00000003` for the current account\.
-
-  ```
-  aws cloudformation set-type-default-version --type RESOURCE --type-name My::Resource::Example --version-id 00000003
-  ```
-
-## Viewing registered resource providers in CloudFormation<a name="registry-view"></a>
-
-Once you've registered a resource provider in an account, you can view the details of that resource provider in the CloudFormation console\. Private resource providers are displayed in the **Private** section of the CloudFormation registry\.
-
-**To view registered resource providers in the CloudFormation console**
-
-1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), from the **CloudFormation** navigation pane, under **CloudFormation registry**, select **Resource types**\.
-
-1. On the **Resource types** page, under **Resource types**, select **Public** or **Private**\.
+1. Select the extension name to view extension details\.
 
 ## Record resource types in AWS Config<a name="registry-config-record"></a>
 
-You can specify that AWS Config automatically track your private resource types and record changes to those resources as *configuration items*\. This enables you to view configuration history for these private resource types, as well as write Config rules to verify configuration best practices\. 
+You can specify that AWS Config automatically track your private resource types and record changes to those resources as *configuration items*\. This enables you to view configuration history for these private resource types, as well as write AWS Config Rules rules to verify configuration best practices\.
 
 To have AWS Config automatically track your private resource types:
 + Manage the resources through CloudFormation\. This includes performing all resource create, updated, and delete operations through CloudFormation\.
@@ -97,8 +72,8 @@ If you use an IAM role to perform your stack operations, that IAM role must have
 [DeleteResourceConfig](https://docs.aws.amazon.com/config/latest/APIReference/API_DeleteResourceConfig.html)
 + Configure AWS Config to record all resource types\. For more information, see [Record configurations for third\-party resources](https://docs.aws.amazon.com/config/latest/developerguide/customresources.html) in the *AWS Config Developer Guide*\.
 **Note**  
-Config does not support recording of private resources containing properties defined as both required *and* write\-only\.   
-By design, resource properties defined as write\-only are not returned in the schema used to create the Config configuration item\. Because of this, including a property that is defined as both write\-only and required will cause the configuration item creation to fail, as a required property will not be not present\. To view the schema that will be used to create the configuration item, you can review the `schema` property of the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) action\. 
+AWS Config does not support recording of private resources containing properties defined as both required *and* write\-only\.  
+By design, resource properties defined as write\-only are not returned in the schema used to create AWS Config configuration item\. Because of this, including a property that is defined as both write\-only and required will cause the configuration item creation to fail, as a required property will not be not present\. To view the schema that will be used to create the configuration item, you can review the `schema` property of the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) action\. 
 
 For more information on configuration items, see [Configuration items](https://docs.aws.amazon.com/config/latest/developerguide/config-concepts.html#config-items) in the *AWS Config Developer Guide*\.
 

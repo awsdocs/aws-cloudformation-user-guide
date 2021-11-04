@@ -85,7 +85,16 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-apigateway-usageplan-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-apigateway-usageplan-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-apigateway-usageplan--examples"></a>
+
+
 
 ### Create usage plan<a name="aws-resource-apigateway-usageplan--examples--Create_usage_plan"></a>
 
@@ -144,3 +153,4 @@ usagePlan:
 
 ## See also<a name="aws-resource-apigateway-usageplan--seealso"></a>
 + [usageplan:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/usageplan-create/) in the *Amazon API Gateway REST API Reference*
+

@@ -15,7 +15,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ACMPCA::CertificateAuthority",
   "Properties" : {
+      "[CsrExtensions](#cfn-acmpca-certificateauthority-csrextensions)" : CsrExtensions,
       "[KeyAlgorithm](#cfn-acmpca-certificateauthority-keyalgorithm)" : String,
+      "[KeyStorageSecurityStandard](#cfn-acmpca-certificateauthority-keystoragesecuritystandard)" : String,
       "[RevocationConfiguration](#cfn-acmpca-certificateauthority-revocationconfiguration)" : RevocationConfiguration,
       "[SigningAlgorithm](#cfn-acmpca-certificateauthority-signingalgorithm)" : String,
       "[Subject](#cfn-acmpca-certificateauthority-subject)" : Subject,
@@ -30,7 +32,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ACMPCA::CertificateAuthority
 Properties: 
+  [CsrExtensions](#cfn-acmpca-certificateauthority-csrextensions): 
+    CsrExtensions
   [KeyAlgorithm](#cfn-acmpca-certificateauthority-keyalgorithm): String
+  [KeyStorageSecurityStandard](#cfn-acmpca-certificateauthority-keystoragesecuritystandard): String
   [RevocationConfiguration](#cfn-acmpca-certificateauthority-revocationconfiguration): 
     RevocationConfiguration
   [SigningAlgorithm](#cfn-acmpca-certificateauthority-signingalgorithm): String
@@ -43,11 +48,26 @@ Properties:
 
 ## Properties<a name="aws-resource-acmpca-certificateauthority-properties"></a>
 
+`CsrExtensions`  <a name="cfn-acmpca-certificateauthority-csrextensions"></a>
+Specifies information to be added to the extension section of the certificate signing request \(CSR\)\.  
+*Required*: No  
+*Type*: [CsrExtensions](aws-properties-acmpca-certificateauthority-csrextensions.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `KeyAlgorithm`  <a name="cfn-acmpca-certificateauthority-keyalgorithm"></a>
 Type of the public key algorithm and size, in bits, of the key pair that your CA creates when it issues a certificate\. When you create a subordinate CA, you must use a key algorithm supported by the parent CA\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `EC_prime256v1 | EC_secp384r1 | RSA_2048 | RSA_4096`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`KeyStorageSecurityStandard`  <a name="cfn-acmpca-certificateauthority-keystoragesecuritystandard"></a>
+Specifies a cryptographic key management compliance standard used for handling CA keys\.  
+Default: FIPS\_140\_2\_LEVEL\_3\_OR\_HIGHER  
+Note: `FIPS_140_2_LEVEL_3_OR_HIGHER` is not supported in Region ap\-northeast\-3\. When creating a CA in the ap\-northeast\-3, you must provide `FIPS_140_2_LEVEL_2_OR_HIGHER` as the argument for `KeyStorageSecurityStandard`\. Failure to do this results in an `InvalidArgsException` with the message, "A certificate authority cannot be created in this region with the specified security standard\."  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `FIPS_140_2_LEVEL_2_OR_HIGHER | FIPS_140_2_LEVEL_3_OR_HIGHER`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RevocationConfiguration`  <a name="cfn-acmpca-certificateauthority-revocationconfiguration"></a>
@@ -105,7 +125,7 @@ The Base64 PEM\-encoded certificate signing request \(CSR\) for your certificate
 
 ## Examples<a name="aws-resource-acmpca-certificateauthority--examples"></a>
 
-The following example of a CloudFormation template sets up a CA hierarchy\. The example illustrates the use of `AWS::ACMPCA::Certificate`, `AWS::ACMPCA::CertificateAuthority`, and `AWS::ACMPCA::CertificateAuthorityActivation` resources\. 
+The following example of a CloudFormation template sets up a CA hierarchy and permission\. The example illustrates the use of `AWS::ACMPCA::Certificate`, `AWS::ACMPCA::CertificateAuthority`, and `AWS::ACMPCA::CertificateAuthorityActivation`, and `AWS::ACMPCA::Permission` resources\. 
 
 ### Declaring a Private CA Hierarchy<a name="aws-resource-acmpca-certificateauthority--examples--Declaring_a_Private_CA_Hierarchy"></a>
 
@@ -180,6 +200,20 @@ The following example of a CloudFormation template sets up a CA hierarchy\. The 
             "Status":"ACTIVE"
          }
       },
+      "RootCAPermission":{
+         "Type":"AWS::ACMPCA::Permission",
+         "Properties":{
+            "Actions":[
+                "IssueCertificate",
+                "GetCertificate",
+                "ListPermissions"
+            ],
+            "CertificateAuthorityArn":{
+               "Ref":"RootCA"
+            },
+            "Principal":"acm.amazonaws.com"
+         }
+      },
       "SubordinateCAOne":{
          "Type":"AWS::ACMPCA::CertificateAuthority",
          "Properties":{
@@ -203,10 +237,10 @@ The following example of a CloudFormation template sets up a CA hierarchy\. The 
                "GenerationQualifier":"DBG"
             },
             "RevocationConfiguration":{
-
+               
             },
             "Tags":[
-
+               
             ]
          }
       },
@@ -250,6 +284,20 @@ The following example of a CloudFormation template sets up a CA hierarchy\. The 
                ]
             },
             "Status":"ACTIVE"
+         }
+      },
+      "SubordinateCAOnePermission":{
+         "Type":"AWS::ACMPCA::Permission",
+         "Properties":{
+            "Actions":[
+                "IssueCertificate",
+                "GetCertificate",
+                "ListPermissions"
+            ],
+            "CertificateAuthorityArn":{
+               "Ref":"SubordinateCAOne"
+            },
+            "Principal":"acm.amazonaws.com"
          }
       },
       "SubordinateCATwo":{
@@ -326,6 +374,20 @@ The following example of a CloudFormation template sets up a CA hierarchy\. The 
             }
          }
       },
+      "SubordinateCATwoPermission":{
+         "Type":"AWS::ACMPCA::Permission",
+         "Properties":{
+            "Actions":[
+                "IssueCertificate",
+                "GetCertificate",
+                "ListPermissions"
+            ],
+            "CertificateAuthorityArn":{
+               "Ref":"SubordinateCATwo"
+            },
+            "Principal":"acm.amazonaws.com"
+         }
+      },
       "EndEntityCertificate":{
          "DependsOn":"SubordinateCATwoActivation",
          "Type":"AWS::ACMPCA::Certificate",
@@ -389,11 +451,12 @@ The following example of a CloudFormation template sets up a CA hierarchy\. The 
 #### YAML<a name="aws-resource-acmpca-certificateauthority--examples--Declaring_a_Private_CA_Hierarchy--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
+---
+AWSTemplateFormatVersion: '2010-09-09'
 Description: Cloudformation template to setup CA.
 Resources:
   RootCA:
-    Type: 'AWS::ACMPCA::CertificateAuthority'
+    Type: AWS::ACMPCA::CertificateAuthority
     Properties:
       Type: ROOT
       KeyAlgorithm: RSA_2048
@@ -417,27 +480,40 @@ Resources:
         CrlConfiguration:
           Enabled: false
   RootCACertificate:
-    Type: 'AWS::ACMPCA::Certificate'
+    Type: AWS::ACMPCA::Certificate
     Properties:
-      CertificateAuthorityArn: !Ref RootCA
-      CertificateSigningRequest: !GetAtt 
+      CertificateAuthorityArn:
+        Ref: RootCA
+      CertificateSigningRequest:
+        Fn::GetAtt:
         - RootCA
         - CertificateSigningRequest
       SigningAlgorithm: SHA256WITHRSA
-      TemplateArn: 'arn:aws:acm-pca:::template/RootCACertificate/V1'
+      TemplateArn: arn:aws:acm-pca:::template/RootCACertificate/V1
       Validity:
         Type: DAYS
         Value: 100
   RootCAActivation:
-    Type: 'AWS::ACMPCA::CertificateAuthorityActivation'
+    Type: AWS::ACMPCA::CertificateAuthorityActivation
     Properties:
-      CertificateAuthorityArn: !Ref RootCA
-      Certificate: !GetAtt 
+      CertificateAuthorityArn:
+        Ref: RootCA
+      Certificate:
+        Fn::GetAtt:
         - RootCACertificate
         - Certificate
       Status: ACTIVE
+  RootCAPermission:
+    Type: AWS::ACMPCA::Permission
+    Properties:
+      Actions:
+        - IssueCertificate
+        - GetCertificate
+        - ListPermissions
+      CertificateAuthorityArn: !Ref: RootCA
+      Principal: acm.amazonaws.com
   SubordinateCAOne:
-    Type: 'AWS::ACMPCA::CertificateAuthority'
+    Type: AWS::ACMPCA::CertificateAuthority
     Properties:
       Type: SUBORDINATE
       KeyAlgorithm: RSA_2048
@@ -461,30 +537,44 @@ Resources:
       Tags: []
   SubordinateCAOneCACertificate:
     DependsOn: RootCAActivation
-    Type: 'AWS::ACMPCA::Certificate'
+    Type: AWS::ACMPCA::Certificate
     Properties:
-      CertificateAuthorityArn: !Ref RootCA
-      CertificateSigningRequest: !GetAtt 
+      CertificateAuthorityArn:
+        Ref: RootCA
+      CertificateSigningRequest:
+        Fn::GetAtt:
         - SubordinateCAOne
         - CertificateSigningRequest
       SigningAlgorithm: SHA256WITHRSA
-      TemplateArn: 'arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen3/V1'
+      TemplateArn: arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen3/V1
       Validity:
         Type: DAYS
         Value: 90
   SubordinateCAOneActivation:
-    Type: 'AWS::ACMPCA::CertificateAuthorityActivation'
+    Type: AWS::ACMPCA::CertificateAuthorityActivation
     Properties:
-      CertificateAuthorityArn: !Ref SubordinateCAOne
-      Certificate: !GetAtt 
+      CertificateAuthorityArn:
+        Ref: SubordinateCAOne
+      Certificate:
+        Fn::GetAtt:
         - SubordinateCAOneCACertificate
         - Certificate
-      CertificateChain: !GetAtt 
+      CertificateChain:
+        Fn::GetAtt:
         - RootCAActivation
         - CompleteCertificateChain
       Status: ACTIVE
+  SubordinateCAOnePermission:
+    Type: AWS::ACMPCA::Permission
+    Properties:
+      Actions:
+        - IssueCertificate
+        - GetCertificate
+        - ListPermissions
+      CertificateAuthorityArn: !Ref: SubordinateCAOne
+      Principal: acm.amazonaws.com
   SubordinateCATwo:
-    Type: 'AWS::ACMPCA::CertificateAuthority'
+    Type: AWS::ACMPCA::CertificateAuthority
     Properties:
       Type: SUBORDINATE
       KeyAlgorithm: RSA_2048
@@ -504,42 +594,57 @@ Resources:
         Pseudonym: string
         GenerationQualifier: DBG
       Tags:
-        - Key: Key1
-          Value: Value1
-        - Key: Key2
-          Value: Value2
+      - Key: Key1
+        Value: Value1
+      - Key: Key2
+        Value: Value2
   SubordinateCATwoCACertificate:
     DependsOn: SubordinateCAOneActivation
-    Type: 'AWS::ACMPCA::Certificate'
+    Type: AWS::ACMPCA::Certificate
     Properties:
-      CertificateAuthorityArn: !Ref SubordinateCAOne
-      CertificateSigningRequest: !GetAtt 
+      CertificateAuthorityArn:
+        Ref: SubordinateCAOne
+      CertificateSigningRequest:
+        Fn::GetAtt:
         - SubordinateCATwo
         - CertificateSigningRequest
       SigningAlgorithm: SHA256WITHRSA
-      TemplateArn: 'arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen2/V1'
+      TemplateArn: arn:aws:acm-pca:::template/SubordinateCACertificate_PathLen2/V1
       Validity:
         Type: DAYS
         Value: 80
   SubordinateCATwoActivation:
-    Type: 'AWS::ACMPCA::CertificateAuthorityActivation'
+    Type: AWS::ACMPCA::CertificateAuthorityActivation
     Properties:
-      CertificateAuthorityArn: !Ref SubordinateCATwo
-      Certificate: !GetAtt 
+      CertificateAuthorityArn:
+        Ref: SubordinateCATwo
+      Certificate:
+        Fn::GetAtt:
         - SubordinateCATwoCACertificate
         - Certificate
-      CertificateChain: !GetAtt 
+      CertificateChain:
+        Fn::GetAtt:
         - SubordinateCAOneActivation
         - CompleteCertificateChain
+  SubordinateCATwoPermission:
+    Type: AWS::ACMPCA::Permission
+    Properties:
+      Actions:
+        - IssueCertificate
+        - GetCertificate
+        - ListPermissions
+      CertificateAuthorityArn: !Ref: SubordinateCATwo
+      Principal: acm.amazonaws.com
   EndEntityCertificate:
     DependsOn: SubordinateCATwoActivation
-    Type: 'AWS::ACMPCA::Certificate'
+    Type: AWS::ACMPCA::Certificate
     Properties:
-      CertificateAuthorityArn: !Ref SubordinateCATwo
-      CertificateSigningRequest: !Join 
-        - |+
- 
-        - - '-----BEGIN CERTIFICATE REQUEST-----'
+      CertificateAuthorityArn:
+        Ref: SubordinateCATwo
+      CertificateSigningRequest:
+        Fn::Join:
+        - "\n"
+        - - "-----BEGIN CERTIFICATE REQUEST-----"
           - MIICvDCCAaQCAQAwdzELMAkGA1UEBhMCVVMxDTALBgNVBAgMBFV0YWgxDzANBgNV
           - BAcMBkxpbmRvbjEWMBQGA1UECgwNRGlnaUNlcnQgSW5jLjERMA8GA1UECwwIRGln
           - aUNlcnQxHTAbBgNVBAMMFGV4YW1wbGUuZGlnaWNlcnQuY29tMIIBIjANBgkqhkiG
@@ -555,18 +660,20 @@ Resources:
           - ZDGRs55xuoeLDJ/ZRFf9bI+IaCUd1YrfYcHIl3G87Av+r49YVwqRDT0VDV7uLgqn
           - 29XI1PpVUNCPQGn9p/eX6Qo7vpDaPybRtA2R7XLKjQaF9oXWeCUqy1hvJac9QFO2
           - 97Ob1alpHPoZ7mWiEuJwjBPii6a9M9G30nUo39lBi1w=
-          - '-----END CERTIFICATE REQUEST-----'
+          - "-----END CERTIFICATE REQUEST-----"
       SigningAlgorithm: SHA256WITHRSA
       Validity:
         Type: DAYS
         Value: 70
 Outputs:
   CompleteCertificateChain:
-    Value: !GetAtt 
+    Value:
+      Fn::GetAtt:
       - SubordinateCATwoActivation
       - CompleteCertificateChain
   CertificateArn:
-    Value: !GetAtt 
+    Value:
+      Fn::GetAtt:
       - EndEntityCertificate
       - Arn
 ```

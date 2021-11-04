@@ -11,7 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Certificate](#cfn-appmesh-virtualnode-listenertls-certificate)" : ListenerTlsCertificate,
-  "[Mode](#cfn-appmesh-virtualnode-listenertls-mode)" : String
+  "[Mode](#cfn-appmesh-virtualnode-listenertls-mode)" : String,
+  "[Validation](#cfn-appmesh-virtualnode-listenertls-validation)" : ListenerTlsValidationContext
 }
 ```
 
@@ -21,12 +22,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Certificate](#cfn-appmesh-virtualnode-listenertls-certificate): 
     ListenerTlsCertificate
   [Mode](#cfn-appmesh-virtualnode-listenertls-mode): String
+  [Validation](#cfn-appmesh-virtualnode-listenertls-validation): 
+    ListenerTlsValidationContext
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-listenertls-properties"></a>
 
 `Certificate`  <a name="cfn-appmesh-virtualnode-listenertls-certificate"></a>
-A reference to an object that represents a listener's TLS certificate\.  
+A reference to an object that represents a listener's Transport Layer Security \(TLS\) certificate\.  
 *Required*: Yes  
 *Type*: [ListenerTlsCertificate](aws-properties-appmesh-virtualnode-listenertlscertificate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -38,4 +41,11 @@ Specify one of the following modes\.
 + ****DISABLED – Listener only accepts connections without TLS\. 
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `DISABLED | PERMISSIVE | STRICT`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Validation`  <a name="cfn-appmesh-virtualnode-listenertls-validation"></a>
+A reference to an object that represents a listener's Transport Layer Security \(TLS\) validation context\.  
+*Required*: No  
+*Type*: [ListenerTlsValidationContext](aws-properties-appmesh-virtualnode-listenertlsvalidationcontext.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

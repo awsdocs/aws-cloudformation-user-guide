@@ -51,3 +51,4 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## See also<a name="aws-resource-servicecatalog-tagoptionassociation--seealso"></a>
 + [AssociateTagOptionWithResource](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_AssociateTagOptionWithResource.html) in the *AWS Service Catalog API Reference*
+

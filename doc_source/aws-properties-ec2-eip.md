@@ -2,13 +2,13 @@
 
 Specifies an Elastic IP \(EIP\) address and can, optionally, associate it with an Amazon EC2 instance\.
 
-You can allocate an Elastic IP address from an address pool owned by AWS or from an address pool created from a public IPv4 address range that you have brought to AWS for use with your AWS resources using bring your own IP addresses \(BYOIP\)\. For more information, see [Bring Your Own IP Addresses \(BYOIP\)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+You can allocate an Elastic IP address from an address pool owned by AWS or from an address pool created from a public IPv4 address range that you have brought to AWS for use with your AWS resources using bring your own IP addresses \(BYOIP\)\. For more information, see [Bring Your Own IP Addresses \(BYOIP\)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-byoip.html) in the *Amazon EC2 User Guide*\.
 
 \[EC2\-VPC\] If you release an Elastic IP address, you might be able to recover it\. You cannot recover an Elastic IP address that you released after it is allocated to another AWS account\. You cannot recover an Elastic IP address for EC2\-Classic\. To attempt to recover an Elastic IP address that you released, specify it in this operation\.
 
 An Elastic IP address is for use either in the EC2\-Classic platform or in a VPC\. By default, you can allocate 5 Elastic IP addresses for EC2\-Classic per Region and 5 Elastic IP addresses for EC2\-VPC per Region\.
 
-For more information, see [Elastic IP Addresses](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+For more information, see [Elastic IP Addresses](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) in the *Amazon EC2 User Guide*\.
 
 ## Syntax<a name="aws-properties-ec2-eip-syntax"></a>
 
@@ -94,11 +94,11 @@ The ID that AWS assigns to represent the allocation of the address for use with 
 
 ## Examples<a name="aws-properties-ec2-eip--examples"></a>
 
-### Allocating an Amazon EC2 Elastic IP Using AWS::EC2::EIP\.<a name="aws-properties-ec2-eip--examples--Allocating_an_Amazon_EC2_Elastic_IP_Using_AWS::EC2::EIP."></a>
+### Allocate an Amazon EC2 Elastic IP address<a name="aws-properties-ec2-eip--examples--Allocate_an_Amazon_EC2_Elastic_IP_address"></a>
 
 This example shows how to allocate an Amazon EC2 Elastic IP address and assign it to an Amazon EC2 instance using a [ AWS::EC2::EIP](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html) resource\.
 
-#### JSON<a name="aws-properties-ec2-eip--examples--Allocating_an_Amazon_EC2_Elastic_IP_Using_AWS::EC2::EIP.--json"></a>
+#### JSON<a name="aws-properties-ec2-eip--examples--Allocate_an_Amazon_EC2_Elastic_IP_address--json"></a>
 
 ```
 "MyEIP" : {
@@ -109,7 +109,7 @@ This example shows how to allocate an Amazon EC2 Elastic IP address and assign i
 }
 ```
 
-#### YAML<a name="aws-properties-ec2-eip--examples--Allocating_an_Amazon_EC2_Elastic_IP_Using_AWS::EC2::EIP.--yaml"></a>
+#### YAML<a name="aws-properties-ec2-eip--examples--Allocate_an_Amazon_EC2_Elastic_IP_address--yaml"></a>
 
 ```
 MyEIP:

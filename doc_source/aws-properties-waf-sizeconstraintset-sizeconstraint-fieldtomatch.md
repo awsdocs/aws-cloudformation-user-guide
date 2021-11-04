@@ -1,6 +1,6 @@
 # AWS::WAF::SizeConstraintSet FieldToMatch<a name="aws-properties-waf-sizeconstraintset-sizeconstraint-fieldtomatch"></a>
 
-Specifies the part of a web request that you want AWS WAF to check for a size constraint, such as a specific header or a query string\. 
+The part of a web request that you want to inspect, such as a specified header or a query string\.
 
 ## Syntax<a name="aws-properties-waf-sizeconstraintset-sizeconstraint-fieldtomatch-syntax"></a>
 

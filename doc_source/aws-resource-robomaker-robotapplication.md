@@ -94,11 +94,13 @@ The current revision id\.
 
 ## Examples<a name="aws-resource-robomaker-robotapplication--examples"></a>
 
-### Create an AWS RoboMaker Robot Application<a name="aws-resource-robomaker-robotapplication--examples--Create_an_AWS_RoboMaker_Robot_Application"></a>
+
+
+### Create an AWS RoboMaker Robot Application<a name="aws-resource-robomaker-robotapplication--examples--Create_an__RoboMaker_Robot_Application"></a>
 
 The following example creates a robot application\.
 
-#### JSON<a name="aws-resource-robomaker-robotapplication--examples--Create_an_AWS_RoboMaker_Robot_Application--json"></a>
+#### JSON<a name="aws-resource-robomaker-robotapplication--examples--Create_an__RoboMaker_Robot_Application--json"></a>
 
 ```
 {
@@ -134,7 +136,7 @@ The following example creates a robot application\.
 }
 ```
 
-#### YAML<a name="aws-resource-robomaker-robotapplication--examples--Create_an_AWS_RoboMaker_Robot_Application--yaml"></a>
+#### YAML<a name="aws-resource-robomaker-robotapplication--examples--Create_an__RoboMaker_Robot_Application--yaml"></a>
 
 ```
 ---

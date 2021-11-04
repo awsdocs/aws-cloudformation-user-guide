@@ -6,7 +6,7 @@ The `AWS::Logs::SubscriptionFilter` resource specifies a subscription filter and
 + An Amazon Kinesis Firehose delivery stream that belongs to the same account as the subscription filter, for same\-account delivery\.
 + An AWS Lambda function that belongs to the same account as the subscription filter, for same\-account delivery\.
 
-There can only be one subscription filter associated with a log group\.
+There can as many as two subscription filters associated with a log group\.
 
 ## Syntax<a name="aws-resource-logs-subscriptionfilter-syntax"></a>
 
@@ -77,6 +77,8 @@ The ARN of an IAM role that grants CloudWatch Logs permissions to deliver ingest
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-logs-subscriptionfilter--examples"></a>
+
+
 
 ### Create a Subscription Filter<a name="aws-resource-logs-subscriptionfilter--examples--Create_a_Subscription_Filter"></a>
 

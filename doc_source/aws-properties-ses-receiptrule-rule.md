@@ -51,16 +51,16 @@ If `true`, the receipt rule is active\. The default value is `false`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ses-receiptrule-rule-name"></a>
-The name of the receipt rule\. The name must:  
-+ This value can only contain ASCII letters \(a–z, A–Z\), numbers \(0–9\), underscores \(\_\), or dashes \(\-\)\.
+The name of the receipt rule\. The name must meet the following requirements:  
++ Contain only ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
 + Start and end with a letter or number\.
-+ Contain fewer than 64 characters\.
++ Contain 64 characters or fewer\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Recipients`  <a name="cfn-ses-receiptrule-rule-recipients"></a>
-Contains the recipient domains and email addresses that the receipt rule applies to\. If this field isn't specified, this rule matches all recipients on all verified domains\.  
+The recipient domains and email addresses that the receipt rule applies to\. If this field is not specified, this rule matches all recipients on all verified domains\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -75,4 +75,5 @@ If `true`, then messages that this receipt rule applies to are scanned for spam 
 Specifies whether Amazon SES should require that incoming email is delivered over a connection encrypted with Transport Layer Security \(TLS\)\. If this parameter is set to `Require`, Amazon SES bounces emails that are not received over TLS\. The default is `Optional`\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `Optional | Require`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

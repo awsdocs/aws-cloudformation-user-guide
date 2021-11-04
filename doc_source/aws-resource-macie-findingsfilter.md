@@ -1,6 +1,6 @@
 # AWS::Macie::FindingsFilter<a name="aws-resource-macie-findingsfilter"></a>
 
-The `AWS::Macie::FindingsFilter` resource represents an individual findings filter that you create and save to view, analyze, and manage findings\. A *findings filter* is a set of criteria that specifies which findings to include in the results of a query that retrieves findings\. A findings filter can also perform specific actions on findings that meet the filter's criteria\.
+The `AWS::Macie::FindingsFilter` resource represents an individual findings filter that you create and save to view, analyze, and manage findings\. A *findings filter* is a set of criteria that specifies which findings to include in the results of a query for findings\. A findings filter can also perform specific actions on findings that meet the filter's criteria\.
 
 A `Session` must exist for the account before you can create a `FindingsFilter`\. Use a [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to ensure that the `Session` is created before the other resources\. For example, `"DependsOn: Session"`\.
 
@@ -97,26 +97,46 @@ The unique identifier for the filter\.
 
 ## Examples<a name="aws-resource-macie-findingsfilter--examples"></a>
 
-The following examples demonstrate how to declare an `AWS::Macie::FindingsFilter` resource\.
+The following example demonstrates how to declare an `AWS::Macie::FindingsFilter` resource\.
 
-### Creating a Macie FindingsFilter that filters by account ID<a name="aws-resource-macie-findingsfilter--examples--Creating_a_Macie_FindingsFilter_that_filters_by_account_ID"></a>
+### Creating a findings filter that filters by account ID<a name="aws-resource-macie-findingsfilter--examples--Creating_a_findings_filter_that_filters_by_account_ID"></a>
 
-This example creates a findings filter that suppresses \(automatically archives\) findings that apply to the specified account\.
+This example creates a findings filter that suppresses \(automatically archives\) findings that apply to AWS resources that are owned by the specified AWS account\.
 
-#### JSON<a name="aws-resource-macie-findingsfilter--examples--Creating_a_Macie_FindingsFilter_that_filters_by_account_ID--json"></a>
-
-```
-{ "Type": "AWS::Macie::FindingsFilter", "DependsOn": "Session",
-                "Properties": { "Action": "ARCHIVE", "Description": "My custom findings filter",
-                "FindingCriteria": { "Criterion": { "AccountId": { "eq": "123456789012" }, "Name":
-                "MyFilterName", "Position": 1 } } } }
-```
-
-#### YAML<a name="aws-resource-macie-findingsfilter--examples--Creating_a_Macie_FindingsFilter_that_filters_by_account_ID--yaml"></a>
+#### JSON<a name="aws-resource-macie-findingsfilter--examples--Creating_a_findings_filter_that_filters_by_account_ID--json"></a>
 
 ```
-Type: AWS::Macie::FindingsFilter DependsOn: "Session"
-                Properties: Action: ARCHIVE Description: "My custom findings filter"
-                FindingCriteria: Criterion: "AccountID": eq: "123456789012" Name: MyFilterName
-                Position: 1
+{
+    "Type": "AWS::Macie::FindingsFilter",
+    "DependsOn": "Session",
+    "Properties": {
+        "Action": "ARCHIVE",
+        "Description": "My custom findings filter",
+        "FindingCriteria": {
+            "Criterion": {
+                "AccountId": {
+                    "eq": "123456789012"
+                }
+            }
+        },
+        "Name": "MyFilterName",
+        "Position": 1
+    }
+}
+```
+
+#### YAML<a name="aws-resource-macie-findingsfilter--examples--Creating_a_findings_filter_that_filters_by_account_ID--yaml"></a>
+
+```
+Type: AWS::Macie::FindingsFilter
+DependsOn: "Session"
+Properties: 
+    Action: ARCHIVE 
+    Description: "My custom findings filter"
+    FindingCriteria:
+        Criterion:
+            "AccountID": 
+                eq: "123456789012" 
+    Name: MyFilterName
+    Position: 1
 ```

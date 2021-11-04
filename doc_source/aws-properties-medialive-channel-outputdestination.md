@@ -46,7 +46,7 @@ The destination settings for a MediaPackage output\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MultiplexSettings`  <a name="cfn-medialive-channel-outputdestination-multiplexsettings"></a>
-Include this element if this destination information is for a Multiplex output group\. Create an array of one Create an array of two MultiplexProgramChannelDestinationSettings, because Multiplex output groups always require a standard channel\.   
+Destination settings for a Multiplex output; one destination for both encoders\.  
 *Required*: No  
 *Type*: [MultiplexProgramChannelDestinationSettings](aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

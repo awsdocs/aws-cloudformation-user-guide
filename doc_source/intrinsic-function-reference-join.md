@@ -2,7 +2,7 @@
 
 The intrinsic function `Fn::Join` appends a set of values into a single value, separated by the specified delimiter\. If a delimiter is the empty string, the set of values are concatenated with no delimiter\.
 
-## Declaration<a name="w6640ab1c25c28c46b5"></a>
+## Declaration<a name="w10335ab1c33c28c46b5"></a>
 
 ### JSON<a name="intrinsic-function-reference-join-syntax.json"></a>
 
@@ -27,7 +27,7 @@ Syntax for the short form:
 ## Parameters<a name="intrinsic-function-reference-join-parameters"></a>
 
 delimiter  
-The value you want to occur between fragments\. The delimiter will occur between fragments only\. It will not terminate the final value\.
+The value you want to occur between fragments\. The delimiter will occur between fragments only\. It won't terminate the final value\.
 
 ListOfValues  
 The list of values you want combined\.
@@ -85,7 +85,7 @@ The following example uses `Fn::Join` to construct a string value\. It uses the 
 3.   - - 'arn:'
 4.     - !Ref AWS::Partition
 5.     - ':s3:::elasticbeanstalk-*-'
-6.     - !Ref 'AWS::AccountId'
+6.     - !Ref AWS::AccountId
 ```
 
 **Note**  
@@ -93,7 +93,7 @@ Also see the [`Fn::Sub`](intrinsic-function-reference-sub.md) function for simil
 
 ## Supported functions<a name="intrinsic-function-reference-join-supportedfunctions"></a>
 
-For the `Fn::Join` delimiter, you cannot use any functions\. You must specify a string value\.
+For the `Fn::Join` delimiter, you can't use any functions\. You must specify a string value\.
 
 For the `Fn::Join` list of values, you can use the following functions:
 + `Fn::Base64`

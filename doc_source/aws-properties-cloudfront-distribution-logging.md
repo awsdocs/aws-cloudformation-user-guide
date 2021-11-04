@@ -46,3 +46,4 @@ An optional string that you want CloudFront to prefix to the access log `filenam
 
 ## See also<a name="aws-properties-cloudfront-distribution-logging--seealso"></a>
 +  [LoggingConfig](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_LoggingConfig.html) in the *Amazon CloudFront API Reference* 
+

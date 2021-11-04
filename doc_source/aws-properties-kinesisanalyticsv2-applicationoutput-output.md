@@ -2,6 +2,8 @@
 
  Describes a SQL\-based Kinesis Data Analytics application's output configuration, in which you identify an in\-application stream and a destination where you want the in\-application stream data to be written\. The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream\. 
 
+
+
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-applicationoutput-output-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -53,7 +55,7 @@ Identifies a Kinesis data stream as the destination\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LambdaOutput`  <a name="cfn-kinesisanalyticsv2-applicationoutput-output-lambdaoutput"></a>
-Identifies an AWS Lambda function as the destination\.  
+Identifies an Amazon Lambda function as the destination\.  
 *Required*: No  
 *Type*: [LambdaOutput](aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -64,7 +66,9 @@ The name of the in\-application stream\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `32`  
+*Pattern*: `[^-\s<>&]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-applicationoutput-output--seealso"></a>
 +  [Output](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Output.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

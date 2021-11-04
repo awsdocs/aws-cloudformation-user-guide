@@ -2,6 +2,8 @@
 
 An IPv4 CIDR range to include in this input security group\.
 
+The parent of this entity is InputSecurityGroup\.
+
 ## Syntax<a name="aws-properties-medialive-inputsecuritygroup-inputwhitelistrulecidr-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

@@ -13,7 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SageMaker::Model",
   "Properties" : {
       "[Containers](#cfn-sagemaker-model-containers)" : [ ContainerDefinition, ... ],
+      "[EnableNetworkIsolation](#cfn-sagemaker-model-enablenetworkisolation)" : Boolean,
       "[ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn)" : String,
+      "[InferenceExecutionConfig](#cfn-sagemaker-model-inferenceexecutionconfig)" : InferenceExecutionConfig,
       "[ModelName](#cfn-sagemaker-model-modelname)" : String,
       "[PrimaryContainer](#cfn-sagemaker-model-primarycontainer)" : ContainerDefinition,
       "[Tags](#cfn-sagemaker-model-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -29,7 +31,10 @@ Type: AWS::SageMaker::Model
 Properties: 
   [Containers](#cfn-sagemaker-model-containers): 
     - ContainerDefinition
+  [EnableNetworkIsolation](#cfn-sagemaker-model-enablenetworkisolation): Boolean
   [ExecutionRoleArn](#cfn-sagemaker-model-executionrolearn): String
+  [InferenceExecutionConfig](#cfn-sagemaker-model-inferenceexecutionconfig): 
+    InferenceExecutionConfig
   [ModelName](#cfn-sagemaker-model-modelname): String
   [PrimaryContainer](#cfn-sagemaker-model-primarycontainer): 
     ContainerDefinition
@@ -45,7 +50,13 @@ Properties:
 Specifies the containers in the inference pipeline\.  
 *Required*: No  
 *Type*: List of [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)  
-*Maximum*: `5`  
+*Maximum*: `15`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EnableNetworkIsolation`  <a name="cfn-sagemaker-model-enablenetworkisolation"></a>
+Isolates the model container\. No inbound or outbound network calls can be made to or from the model container\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExecutionRoleArn`  <a name="cfn-sagemaker-model-executionrolearn"></a>
@@ -56,6 +67,12 @@ To be able to pass this role to Amazon SageMaker, the caller of this API must ha
 *Minimum*: `20`  
 *Maximum*: `2048`  
 *Pattern*: `^arn:aws[a-z\-]*:iam::\d{12}:role/?[a-zA-Z_0-9+=,.@\-_/]+$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`InferenceExecutionConfig`  <a name="cfn-sagemaker-model-inferenceexecutionconfig"></a>
+Specifies details of how containers in a multi\-container endpoint are called\.  
+*Required*: No  
+*Type*: [InferenceExecutionConfig](aws-properties-sagemaker-model-inferenceexecutionconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ModelName`  <a name="cfn-sagemaker-model-modelname"></a>

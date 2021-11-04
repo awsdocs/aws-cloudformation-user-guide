@@ -1,6 +1,6 @@
 # AWS::MSK::Cluster EncryptionInfo<a name="aws-properties-msk-cluster-encryptioninfo"></a>
 
-Includes encryption\-related information, such as the AWS KMS key used for encrypting data at rest and whether you want MSK to encrypt your data in transit\.
+Includes encryption\-related information, such as the Amazon KMS key used for encrypting data at rest and whether you want MSK to encrypt your data in transit\.
 
 ## Syntax<a name="aws-properties-msk-cluster-encryptioninfo-syntax"></a>
 
@@ -36,4 +36,4 @@ The data\-volume encryption details\.
 The details for encryption in transit\.  
 *Required*: No  
 *Type*: [EncryptionInTransit](aws-properties-msk-cluster-encryptionintransit.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

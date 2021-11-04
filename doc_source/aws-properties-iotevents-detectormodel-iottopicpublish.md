@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `MqttTopic`  <a name="cfn-iotevents-detectormodel-iottopicpublish-mqtttopic"></a>
 The MQTT topic of the message\. You can use a string expression that includes variables \(`$variable.<variable-name>`\) and input values \(`$input.<input-name>.<path-to-datum>`\) as the topic string\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  

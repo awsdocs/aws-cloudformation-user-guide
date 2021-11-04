@@ -1,6 +1,6 @@
 # AWS::Greengrass::LoggerDefinition Logger<a name="aws-properties-greengrass-loggerdefinition-logger"></a>
 
-<a name="aws-properties-greengrass-loggerdefinition-logger-description"></a>A logger represents logging settings for the AWS IoT Greengrass group, which can be stored in CloudWatch and the local file system of your core device\. All log entries include a timestamp, log level, and information about the event\. For more information, see [Monitoring with AWS IoT Greengrass Logs](https://docs.aws.amazon.com/greengrass/latest/developerguide/greengrass-logs-overview.html) in the *AWS IoT Greengrass Developer Guide*\.
+<a name="aws-properties-greengrass-loggerdefinition-logger-description"></a>A logger represents logging settings for the AWS IoT Greengrass group, which can be stored in CloudWatch and the local file system of your core device\. All log entries include a timestamp, log level, and information about the event\. For more information, see [Monitoring with AWS IoT Greengrass Logs](https://docs.aws.amazon.com/greengrass/latest/developerguide/greengrass-logs-overview.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.
 
 <a name="aws-properties-greengrass-loggerdefinition-logger-inheritance"></a> In an AWS CloudFormation template, the `Loggers` property of the [ `LoggerDefinitionVersion` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-loggerdefinitionversion.html) property type contains a list of `Logger` property types\.
 
@@ -63,5 +63,5 @@ The storage mechanism for log events\. Valid values are `FileSystem` or `AWSClou
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See also<a name="aws-properties-greengrass-loggerdefinition-logger--seealso"></a>
-+  [Logger](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-logger.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [Logger](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-logger.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

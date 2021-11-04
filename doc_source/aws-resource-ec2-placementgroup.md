@@ -4,7 +4,7 @@ Specifies a placement group in which to launch instances\. The strategy of the p
 
 A `cluster` placement group is a logical grouping of instances within a single Availability Zone that benefit from low network latency, high network throughput\. A `spread` placement group places instances on distinct hardware\. A `partition` placement group places groups of instances in different partitions, where instances in one partition do not share the same hardware with instances in another partition\.
 
-For more information, see [Placement Groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+For more information, see [Placement Groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the *Amazon EC2 User Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-placementgroup-syntax"></a>
 
@@ -48,11 +48,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-placementgroup--examples"></a>
 
-### Create a Placement Group<a name="aws-resource-ec2-placementgroup--examples--Create_a_Placement_Group"></a>
+
+
+### Create a placement group<a name="aws-resource-ec2-placementgroup--examples--Create_a_placement_group"></a>
 
 The following example declares a placement group with a cluster placement strategy\. 
 
-#### JSON<a name="aws-resource-ec2-placementgroup--examples--Create_a_Placement_Group--json"></a>
+#### JSON<a name="aws-resource-ec2-placementgroup--examples--Create_a_placement_group--json"></a>
 
 ```
 "PlacementGroup" : {
@@ -63,7 +65,7 @@ The following example declares a placement group with a cluster placement strate
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-placementgroup--examples--Create_a_Placement_Group--yaml"></a>
+#### YAML<a name="aws-resource-ec2-placementgroup--examples--Create_a_placement_group--yaml"></a>
 
 ```
 PlacementGroup:

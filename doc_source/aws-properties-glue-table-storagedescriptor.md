@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[NumberOfBuckets](#cfn-glue-table-storagedescriptor-numberofbuckets)" : Integer,
   "[OutputFormat](#cfn-glue-table-storagedescriptor-outputformat)" : String,
   "[Parameters](#cfn-glue-table-storagedescriptor-parameters)" : Json,
+  "[SchemaReference](#cfn-glue-table-storagedescriptor-schemareference)" : SchemaReference,
   "[SerdeInfo](#cfn-glue-table-storagedescriptor-serdeinfo)" : SerdeInfo,
   "[SkewedInfo](#cfn-glue-table-storagedescriptor-skewedinfo)" : SkewedInfo,
   "[SortColumns](#cfn-glue-table-storagedescriptor-sortcolumns)" : [ Order, ... ],
@@ -38,6 +39,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [NumberOfBuckets](#cfn-glue-table-storagedescriptor-numberofbuckets): Integer
   [OutputFormat](#cfn-glue-table-storagedescriptor-outputformat): String
   [Parameters](#cfn-glue-table-storagedescriptor-parameters): Json
+  [SchemaReference](#cfn-glue-table-storagedescriptor-schemareference): 
+    SchemaReference
   [SerdeInfo](#cfn-glue-table-storagedescriptor-serdeinfo): 
     SerdeInfo
   [SkewedInfo](#cfn-glue-table-storagedescriptor-skewedinfo): 
@@ -97,6 +100,12 @@ The user\-supplied properties in key\-value form\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SchemaReference`  <a name="cfn-glue-table-storagedescriptor-schemareference"></a>
+An object that references a schema stored in the AWS Glue Schema Registry\.  
+*Required*: No  
+*Type*: [SchemaReference](aws-properties-glue-table-schemareference.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SerdeInfo`  <a name="cfn-glue-table-storagedescriptor-serdeinfo"></a>
 The serialization/deserialization \(SerDe\) information\.  
 *Required*: No  
@@ -123,3 +132,4 @@ A list specifying the sort order of each bucket in the table\.
 
 ## See also<a name="aws-properties-glue-table-storagedescriptor--seealso"></a>
 +  [StorageDescriptor Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) in the *AWS Glue Developer Guide* 
+

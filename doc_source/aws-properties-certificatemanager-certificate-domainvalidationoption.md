@@ -1,6 +1,6 @@
 # AWS::CertificateManager::Certificate DomainValidationOption<a name="aws-properties-certificatemanager-certificate-domainvalidationoption"></a>
 
- `DomainValidationOption` is a property of the [AWS::CertificateManager::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html) resource that specifies the AWS Certificate Manager \(ACM\) certificate domain to which ACM will send validation emails\.
+ `DomainValidationOption` is a property of the [AWS::CertificateManager::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html) resource that specifies the AWS Certificate Manager \(ACM\) certificate domain to validate\. Depending on the chosen validation method, ACM checks the domain's DNS record for a validation CNAME, or it attempts to send a validation email message to the domain owner\.
 
 ## Syntax<a name="aws-properties-certificatemanager-certificate-domainvalidationoption-syntax"></a>
 
@@ -37,7 +37,8 @@ A fully qualified domain name \(FQDN\) in the certificate request\.
 
 `HostedZoneId`  <a name="cfn-certificatemanager-certificate-domainvalidationoption-hostedzoneid"></a>
 The `HostedZoneId` option, which is available if you are using Route 53 as your domain registrar, causes ACM to add your CNAME to the domain record\. Your list of `DomainValidationOptions` must contain one and only one of the domain\-validation options, and the `HostedZoneId` can be used only when `DNS` is specified as your validation method\.  
-Use the Route 53 `ListHostedZones` API to discover IDs for available hosted zones\.  
+Use the Route 53 `ListHostedZones` API to discover IDs for available hosted zones\.   
+The `ListHostedZones` API returns IDs in the format "/hostedzone/Z111111QQQQQQQ", but CloudFormation requires the IDs to be in the format "Z111111QQQQQQQ"\.
 When you change your `DomainValidationOptions`, a new resource is created\.  
 *Required*: No  
 *Type*: String  

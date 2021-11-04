@@ -38,3 +38,4 @@ Indicates that the column is sorted in ascending order \(`== 1`\), or in descend
 
 ## See also<a name="aws-properties-glue-table-order--seealso"></a>
 +  [Order Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-Order) in the *AWS Glue Developer Guide* 
+

@@ -19,12 +19,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DomainJoinInfo](#cfn-appstream-fleet-domainjoininfo)" : DomainJoinInfo,
       "[EnableDefaultInternetAccess](#cfn-appstream-fleet-enabledefaultinternetaccess)" : Boolean,
       "[FleetType](#cfn-appstream-fleet-fleettype)" : String,
+      "[IamRoleArn](#cfn-appstream-fleet-iamrolearn)" : String,
       "[IdleDisconnectTimeoutInSeconds](#cfn-appstream-fleet-idledisconnecttimeoutinseconds)" : Integer,
       "[ImageArn](#cfn-appstream-fleet-imagearn)" : String,
       "[ImageName](#cfn-appstream-fleet-imagename)" : String,
       "[InstanceType](#cfn-appstream-fleet-instancetype)" : String,
       "[MaxUserDurationInSeconds](#cfn-appstream-fleet-maxuserdurationinseconds)" : Integer,
       "[Name](#cfn-appstream-fleet-name)" : String,
+      "[StreamView](#cfn-appstream-fleet-streamview)" : String,
       "[Tags](#cfn-appstream-fleet-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VpcConfig](#cfn-appstream-fleet-vpcconfig)" : VpcConfig
     }
@@ -45,12 +47,14 @@ Properties:
     DomainJoinInfo
   [EnableDefaultInternetAccess](#cfn-appstream-fleet-enabledefaultinternetaccess): Boolean
   [FleetType](#cfn-appstream-fleet-fleettype): String
+  [IamRoleArn](#cfn-appstream-fleet-iamrolearn): String
   [IdleDisconnectTimeoutInSeconds](#cfn-appstream-fleet-idledisconnecttimeoutinseconds): Integer
   [ImageArn](#cfn-appstream-fleet-imagearn): String
   [ImageName](#cfn-appstream-fleet-imagename): String
   [InstanceType](#cfn-appstream-fleet-instancetype): String
   [MaxUserDurationInSeconds](#cfn-appstream-fleet-maxuserdurationinseconds): Integer
   [Name](#cfn-appstream-fleet-name): String
+  [StreamView](#cfn-appstream-fleet-streamview): String
   [Tags](#cfn-appstream-fleet-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcConfig](#cfn-appstream-fleet-vpcconfig): 
@@ -109,10 +113,18 @@ Provide users with access to applications after they connect, which takes one to
 *Allowed values*: `ALWAYS_ON | ON_DEMAND`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`IamRoleArn`  <a name="cfn-appstream-fleet-iamrolearn"></a>
+The ARN of the IAM role that is applied to the fleet\. To assume a role, the fleet instance calls the AWS Security Token Service `AssumeRole` API operation and passes the ARN of the role to use\. The operation creates a new session with temporary credentials\. AppStream 2\.0 retrieves the temporary credentials and creates the **appstream\_machine\_role** credential profile on the instance\.  
+For more information, see [Using an IAM Role to Grant Permissions to Applications and Scripts Running on AppStream 2\.0 Streaming Instances](https://docs.aws.amazon.com/appstream2/latest/developerguide/using-iam-roles-to-grant-permissions-to-applications-scripts-streaming-instances.html) in the *Amazon AppStream 2\.0 Administration Guide*\.  
+*Required*: No  
+*Type*: String  
+*Pattern*: `^arn:aws(?:\-cn|\-iso\-b|\-iso|\-us\-gov)?:[A-Za-z0-9][A-Za-z0-9_/.-]{0,62}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9_/.-]{0,63}:[A-Za-z0-9][A-Za-z0-9:_/+=,@.\\-]{0,1023}$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `IdleDisconnectTimeoutInSeconds`  <a name="cfn-appstream-fleet-idledisconnecttimeoutinseconds"></a>
 The amount of time that users can be idle \(inactive\) before they are disconnected from their streaming session and the `DisconnectTimeoutInSeconds` time interval begins\. Users are notified before they are disconnected due to inactivity\. If they try to reconnect to the streaming session before the time interval specified in `DisconnectTimeoutInSeconds` elapses, they are connected to their previous session\. Users are considered idle when they stop providing keyboard or mouse input during their streaming session\. File uploads and downloads, audio in, audio out, and pixels changing do not qualify as user activity\. If users continue to be idle after the time interval in `IdleDisconnectTimeoutInSeconds` elapses, they are disconnected\.  
 To prevent users from being disconnected due to inactivity, specify a value of 0\. Otherwise, specify a value between 60 and 3600\.  
-If you enable this feature, we recommend that you specify a value that corresponds exactly to a whole number of minutes \(for example, 60, 120, and 180\)\. If you don't do this, the value is rounded to the nearest minute\. For example, if you specify a value of 70, users are disconnected after 1 minute of inactivity\. If you specify a value that is at the midpoint between two different minutes, the value is rounded up\. For example, if you specify a value of 90, users are disconnected after 2 minutes of inactivity\. 
+If you enable this feature, we recommend that you specify a value that corresponds exactly to a whole number of minutes \(for example, 60, 120, and 180\)\. If you don't do this, the value is rounded to the nearest minute\. For example, if you specify a value of 70, users are disconnected after 1 minute of inactivity\. If you specify a value that is at the midpoint between two different minutes, the value is rounded up\. For example, if you specify a value of 90, users are disconnected after 2 minutes of inactivity\.   
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -133,6 +145,7 @@ The name of the image used to create the fleet\.
 
 `InstanceType`  <a name="cfn-appstream-fleet-instancetype"></a>
 The instance type to use when launching fleet instances\. The following instance types are available:  
++ stream\.standard\.small
 + stream\.standard\.medium
 + stream\.standard\.large
 + stream\.compute\.large
@@ -184,8 +197,16 @@ A unique name for the fleet\.
 *Pattern*: `^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,100}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`StreamView`  <a name="cfn-appstream-fleet-streamview"></a>
+The AppStream 2\.0 view that is displayed to your users when they stream from the fleet\. When `APP` is specified, only the windows of applications opened by users display\. When `DESKTOP` is specified, the standard desktop that is provided by the operating system displays\.  
+The default value is `APP`\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `APP | DESKTOP`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-appstream-fleet-tags"></a>
-An array of key\-value pairs\. For more information, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
+An array of key\-value pairs\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -198,3 +219,4 @@ The VPC configuration for the fleet\.
 
 ## See also<a name="aws-resource-appstream-fleet--seealso"></a>
 +  [CreateFleet](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateFleet.html) in the *Amazon AppStream 2\.0 API Reference* 
+

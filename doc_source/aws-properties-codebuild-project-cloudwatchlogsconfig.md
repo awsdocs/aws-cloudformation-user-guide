@@ -27,22 +27,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codebuild-project-cloudwatchlogsconfig-properties"></a>
 
 `GroupName`  <a name="cfn-codebuild-project-cloudwatchlogsconfig-groupname"></a>
- The group name of the logs in Amazon CloudWatch Logs\. For more information, see [Working with Log Groups and Log Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)\.   
+ The group name of the logs in CloudWatch Logs\. For more information, see [Working with Log Groups and Log Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Status`  <a name="cfn-codebuild-project-cloudwatchlogsconfig-status"></a>
-The current status of the logs in Amazon CloudWatch Logs for a build project\. Valid values are:  
-+  `ENABLED`: Amazon CloudWatch Logs are enabled for this build project\.
-+  `DISABLED`: Amazon CloudWatch Logs are not enabled for this build project\.
+The current status of the logs in CloudWatch Logs for a build project\. Valid values are:  
++  `ENABLED`: CloudWatch Logs are enabled for this build project\.
++  `DISABLED`: CloudWatch Logs are not enabled for this build project\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamName`  <a name="cfn-codebuild-project-cloudwatchlogsconfig-streamname"></a>
- The prefix of the stream name of the Amazon CloudWatch Logs\. For more information, see [Working with Log Groups and Log Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)\.   
+ The prefix of the stream name of the CloudWatch Logs\. For more information, see [Working with Log Groups and Log Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

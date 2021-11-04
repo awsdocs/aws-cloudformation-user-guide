@@ -76,24 +76,28 @@ You can append a version number or alias to any of the formats\. The length cons
 The AWS service or account that invokes the function\. If you specify a service, use `SourceArn` or `SourceAccount` to limit who can invoke the function through that service\.  
 *Required*: Yes  
 *Type*: String  
-*Pattern*: `.*`  
+*Pattern*: `[^\s]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceAccount`  <a name="cfn-lambda-permission-sourceaccount"></a>
 For Amazon S3, the ID of the account that owns the resource\. Use this together with `SourceArn` to ensure that the resource is owned by the specified account\. It is possible for an Amazon S3 bucket to be deleted by its owner and recreated by another account\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `12`  
 *Pattern*: `\d{12}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceArn`  <a name="cfn-lambda-permission-sourcearn"></a>
 For AWS services, the ARN of the AWS resource that invokes the function\. For example, an Amazon S3 bucket or Amazon SNS topic\.  
+Note that Lambda configures the comparison using the `StringLike` operator\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `arn:(aws[a-zA-Z0-9-]*):([a-zA-Z0-9\-])+:([a-z]{2}(-gov)?-[a-z]+-\d{1})?:(\d{12})?:(.*)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-resource-lambda-permission--examples"></a>
+
+
 
 ### Cross Account Invoke<a name="aws-resource-lambda-permission--examples--Cross_Account_Invoke"></a>
 
@@ -102,8 +106,12 @@ Grant account 123456789012 permission to invoke a function resource named `funct
 #### YAML<a name="aws-resource-lambda-permission--examples--Cross_Account_Invoke--yaml"></a>
 
 ```
- permission: Type: AWS::Lambda::Permission Properties: FunctionName: !GetAtt function.Arn
-        Action: lambda:InvokeFunction Principal: 123456789012
+  permission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !GetAtt function.Arn
+      Action: lambda:InvokeFunction
+      Principal: 123456789012
 ```
 
 ### Amazon S3 Notifications<a name="aws-resource-lambda-permission--examples--Amazon_S3_Notifications"></a>
@@ -113,15 +121,39 @@ Grant Amazon S3 permission to invoke a function resource named `function` create
 #### JSON<a name="aws-resource-lambda-permission--examples--Amazon_S3_Notifications--json"></a>
 
 ```
-"s3Permission": { "Type": "AWS::Lambda::Permission", "Properties": { "FunctionName": {
-        "Fn::GetAtt": [ "function", "Arn" ] }, "Action": "lambda:InvokeFunction", "Principal": "s3.amazonaws.com",
-        "SourceAccount": { "Ref": "AWS::AccountId" }, "SourceArn": { "Fn::GetAtt": [ "bucket", "Arn" ] } } }
+"s3Permission": {
+    "Type": "AWS::Lambda::Permission",
+    "Properties": {
+        "FunctionName": {
+            "Fn::GetAtt": [
+                "function",
+                "Arn"
+            ]
+        },
+        "Action": "lambda:InvokeFunction",
+        "Principal": "s3.amazonaws.com",
+        "SourceAccount": {
+            "Ref": "AWS::AccountId"
+        },
+        "SourceArn": {
+            "Fn::GetAtt": [
+                "bucket",
+                "Arn"
+            ]
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-lambda-permission--examples--Amazon_S3_Notifications--yaml"></a>
 
 ```
-s3Permission: Type: AWS::Lambda::Permission Properties: FunctionName: !GetAtt
-        function.Arn Action: lambda:InvokeFunction Principal: s3.amazonaws.com SourceAccount: !Ref 'AWS::AccountId'
-        SourceArn: !GetAtt bucket.Arn
+s3Permission:
+  Type: AWS::Lambda::Permission
+  Properties:
+    FunctionName: !GetAtt function.Arn
+    Action: lambda:InvokeFunction
+    Principal: s3.amazonaws.com
+    SourceAccount: !Ref 'AWS::AccountId'
+    SourceArn: !GetAtt bucket.Arn
 ```

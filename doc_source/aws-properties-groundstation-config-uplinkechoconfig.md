@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AntennaUplinkConfigArn`  <a name="cfn-groundstation-config-uplinkechoconfig-antennauplinkconfigarn"></a>
  Defines the ARN of the uplink config to echo back to a dataflow endpoint\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-groundstation-config-uplinkechoconfig-enabled"></a>
  Whether or not uplink echo is enabled\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appmesh-virtualnode-listenertimeout-properties"></a>
 
 `GRPC`  <a name="cfn-appmesh-virtualnode-listenertimeout-grpc"></a>
-Not currently supported by AWS CloudFormation\.  
+An object that represents types of timeouts\.   
 *Required*: No  
 *Type*: [GrpcTimeout](aws-properties-appmesh-virtualnode-grpctimeout.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

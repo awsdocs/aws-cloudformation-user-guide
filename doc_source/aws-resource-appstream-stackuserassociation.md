@@ -37,6 +37,7 @@ Properties:
 The authentication type for the user who is associated with the stack\. You must specify USERPOOL\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `API | SAML | USERPOOL`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SendEmailNotification`  <a name="cfn-appstream-stackuserassociation-sendemailnotification"></a>
@@ -64,3 +65,4 @@ Users' email addresses are case\-sensitive\.
 
 ## See also<a name="aws-resource-appstream-stackuserassociation--seealso"></a>
 +  [BatchAssociateUserStack](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_BatchAssociateUserStack.html) in the *Amazon AppStream 2\.0 API Reference* 
+

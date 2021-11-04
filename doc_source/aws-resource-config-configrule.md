@@ -130,6 +130,8 @@ The ID of the AWS Config rule, such as `config-rule-a1bzhi`\.
 
 ## Examples<a name="aws-resource-config-configrule--examples"></a>
 
+
+
 ### Config Rule<a name="aws-resource-config-configrule--examples--Config_Rule"></a>
 
 The following example uses an AWS managed rule that checks whether EC2 volumes resource types have a CostCenter tag\. 
@@ -168,20 +170,23 @@ ConfigRuleForVolumeTags:
       SourceIdentifier: "REQUIRED_TAGS"
 ```
 
-### Rule Using Lambda Function<a name="aws-resource-config-configrule--examples--Rule_Using_Lambda_Function"></a>
+### Create Rule Using Lambda Function<a name="aws-resource-config-configrule--examples--Create_Rule_Using_Lambda_Function"></a>
 
-The following example creates a custom configuration rule that uses a Lambda function\. The function checks whether an EC2 volume has the AutoEnableIO property set to true\. Note that the configuration rule has a dependency on the Lambda policy so that the rule calls the function only after it's permitted to do so\. 
+The following example creates a custom configuration rule that uses a Lambda function\. The function checks whether an EC2 volume has the AutoEnableIO property set to true\. Note that the configuration rule has a dependency on the Lambda policy so that the rule calls the function only after it's permitted to do so\.
 
-#### JSON<a name="aws-resource-config-configrule--examples--Rule_Using_Lambda_Function--json"></a>
+After you create a rule using Lambda it is recommended you update the permissions based on the *Update Rule Using Lambda Function with SourceArn based permission* example which restricts only a specific rule ARN to invoke the Lambda function\. This helps make sure AWS Lambda is accessing your resources on behalf of expected users and scenarios only\.
+
+#### JSON<a name="aws-resource-config-configrule--examples--Create_Rule_Using_Lambda_Function--json"></a>
 
 ```
 "ConfigPermissionToCallLambda": {
-  "Type": "AWS::Lambda::Permission",
-  "Properties": {
-    "FunctionName": {"Fn::GetAtt": ["VolumeAutoEnableIOComplianceCheck", "Arn"]},
-    "Action": "lambda:InvokeFunction",
-    "Principal": "config.amazonaws.com"
-  }
+    "Type": "AWS::Lambda::Permission",
+    "Properties": {
+        "FunctionName": {"Fn::GetAtt": ["VolumeAutoEnableIOComplianceCheck", "Arn"]},
+        "Action": "lambda:InvokeFunction",
+        "Principal": "config.amazonaws.com",
+        "SourceAccount": {"Ref": "AWS::AccountId" }
+    }
 },
 "VolumeAutoEnableIOComplianceCheck": {
   "Type": "AWS::Lambda::Function",
@@ -253,18 +258,19 @@ The following example creates a custom configuration rule that uses a Lambda fun
 }
 ```
 
-#### YAML<a name="aws-resource-config-configrule--examples--Rule_Using_Lambda_Function--yaml"></a>
+#### YAML<a name="aws-resource-config-configrule--examples--Create_Rule_Using_Lambda_Function--yaml"></a>
 
 ```
 ConfigPermissionToCallLambda: 
   Type: AWS::Lambda::Permission
   Properties: 
     FunctionName: 
-      Fn::GetAtt: 
+       Fn::GetAtt: 
         - VolumeAutoEnableIOComplianceCheck
         - Arn
     Action: "lambda:InvokeFunction"
     Principal: "config.amazonaws.com"
+    SourceAccount: !Ref 'AWS::AccountId'
 VolumeAutoEnableIOComplianceCheck: 
   Type: AWS::Lambda::Function
   Properties: 
@@ -330,4 +336,175 @@ ConfigRuleForVolumeAutoEnableIO:
           - VolumeAutoEnableIOComplianceCheck
           - Arn
   DependsOn: ConfigPermissionToCallLambda
+```
+
+### Update Rule Using Lambda Function with SourceArn based permission<a name="aws-resource-config-configrule--examples--Update_Rule_Using_Lambda_Function_with_SourceArn_based_permission"></a>
+
+After an AWS Config rule has been created, there is a `sourceARN` which is the ARN of the AWS Config rule that is invoking the Lambda function\. The following example includes `sourceARN` based permission to restrict only a specific rule ARN to invoke the Lambda function\. It is recommended after you create a rule that you update with these more restrictive permissions to help make sure AWS Lambda is accessing your resources on behalf of expected users and scenarios only\.
+
+#### JSON<a name="aws-resource-config-configrule--examples--Update_Rule_Using_Lambda_Function_with_SourceArn_based_permission--json"></a>
+
+```
+"ConfigPermissionToCallLambda": {
+    "Type": "AWS::Lambda::Permission",
+    "Properties": {
+        "FunctionName": {"Fn::GetAtt": ["VolumeAutoEnableIOComplianceCheck", "Arn"]},
+        "Action": "lambda:InvokeFunction",
+        "Principal": "config.amazonaws.com",
+        "SourceAccount": {"Ref": "AWS::AccountId" },
+        "SourceArn": {"Fn::GetAtt": [ "ConfigRuleForVolumeAutoEnableIO", "Arn" ] }
+    }
+},
+"VolumeAutoEnableIOComplianceCheck": {
+    "Type": "AWS::Lambda::Function",
+    "Properties": {
+        "Code": {
+            "ZipFile":  {"Fn::Join": ["\n", [
+               "var aws  = require('aws-sdk');",
+               "var config = new aws.ConfigService();",
+               "var ec2 = new aws.EC2();",
+               
+               "exports.handler = function(event, context) {",
+               "    compliance = evaluateCompliance(event, function(compliance, event) {",
+               "        var configurationItem = JSON.parse(event.invokingEvent).configurationItem;",
+               
+               "        var putEvaluationsRequest = {",
+               "            Evaluations: [{",
+               "                ComplianceResourceType: configurationItem.resourceType,",
+               "                ComplianceResourceId: configurationItem.resourceId,",
+               "                ComplianceType: compliance,",
+               "                OrderingTimestamp: configurationItem.configurationItemCaptureTime",
+               "            }],",
+               "            ResultToken: event.resultToken",
+               "        };",
+               
+               "        config.putEvaluations(putEvaluationsRequest, function(err, data) {",
+               "            if (err) context.fail(err);",
+               "            else context.succeed(data);",
+               "        });",
+               "    });",
+               "};",
+               
+               "function evaluateCompliance(event, doReturn) {",
+               "    var configurationItem = JSON.parse(event.invokingEvent).configurationItem;",
+               "    var status = configurationItem.configurationItemStatus;",
+               "    if (configurationItem.resourceType !== 'AWS::EC2::Volume' || event.eventLeftScope || (status !== 'OK' && status !== 'ResourceDiscovered'))",
+               "        doReturn('NOT_APPLICABLE', event);",
+               "    else ec2.describeVolumeAttribute({VolumeId: configurationItem.resourceId, Attribute: 'autoEnableIO'}, function(err, data) {",
+               "        if (err) context.fail(err);",
+               "        else if (data.AutoEnableIO.Value) doReturn('COMPLIANT', event);",
+               "        else doReturn('NON_COMPLIANT', event);",
+               "    });",
+               "}"
+               ]]}
+               },
+            "Handler": "index.handler",
+            "Runtime": "nodejs12.x",
+            "Timeout": "30",
+            "Role": {"Fn::GetAtt": ["LambdaExecutionRole", "Arn"]}
+    }
+},
+"ConfigRuleForVolumeAutoEnableIO": {
+    "Type": "AWS::Config::ConfigRule",
+    "Properties": {
+        "ConfigRuleName": "ConfigRuleForVolumeAutoEnableIO",
+        "Scope": {
+            "ComplianceResourceId": {"Ref": "Ec2Volume"},
+            "ComplianceResourceTypes": ["AWS::EC2::Volume"]
+         },
+         "Source": {
+            "Owner": "CUSTOM_LAMBDA",
+             "SourceDetails": [{
+               "EventSource": "aws.config",
+               "MessageType": "ConfigurationItemChangeNotification"
+            }],
+            "SourceIdentifier": {"Fn::GetAtt": ["VolumeAutoEnableIOComplianceCheck", "Arn"]}
+          }
+     },
+     "DependsOn": "ConfigPermissionToCallLambda"
+}
+```
+
+#### YAML<a name="aws-resource-config-configrule--examples--Update_Rule_Using_Lambda_Function_with_SourceArn_based_permission--yaml"></a>
+
+```
+ConfigPermissionToCallLambda: 
+    Type: AWS::Lambda::Permission
+    Properties: 
+      FunctionName: 
+        Fn::GetAtt: 
+           - VolumeAutoEnableIOComplianceCheck
+           - Arn
+      Action: "lambda:InvokeFunction"
+      Principal: "config.amazonaws.com"
+      SourceAccount: !Ref 'AWS::AccountId'
+      SourceArn:
+        Fn::GetAtt: 
+           - VolumeAutoEnableIOComplianceCheck
+           - Arn
+VolumeAutoEnableIOComplianceCheck: 
+    Type: AWS::Lambda::Function
+    Properties: 
+      Code: 
+        ZipFile: 
+           !Sub |
+             var aws  = require('aws-sdk');
+             var config = new aws.ConfigService();
+             var ec2 = new aws.EC2();
+             exports.handler = function(event, context) {
+                compliance = evaluateCompliance(event, function(compliance, event) {
+                    var configurationItem = JSON.parse(event.invokingEvent).configurationItem;
+                    var putEvaluationsRequest = {
+                        Evaluations: [{
+                            ComplianceResourceType: configurationItem.resourceType,
+                            ComplianceResourceId: configurationItem.resourceId,
+                            ComplianceType: compliance,
+                            OrderingTimestamp: configurationItem.configurationItemCaptureTime
+                         }],
+                         ResultToken: event.resultToken
+                    };
+                    config.putEvaluations(putEvaluationsRequest, function(err, data) {
+                        if (err) context.fail(err);
+                        else context.succeed(data);
+                    });
+                 });
+               };
+               function evaluateCompliance(event, doReturn) {
+                  var configurationItem = JSON.parse(event.invokingEvent).configurationItem;
+                  var status = configurationItem.configurationItemStatus;
+               if (configurationItem.resourceType !== 'AWS::EC2::Volume' || event.eventLeftScope || (status !== 'OK' && status !== 'ResourceDiscovered'))
+                    doReturn('NOT_APPLICABLE', event);
+               else ec2.describeVolumeAttribute({VolumeId: configurationItem.resourceId, Attribute: 'autoEnableIO'}, function(err, data) {
+                    if (err) context.fail(err);
+                    else if (data.AutoEnableIO.Value) doReturn('COMPLIANT', event);
+                    else doReturn('NON_COMPLIANT', event);
+                  });
+               }
+      Handler: "index.handler"
+      Runtime: nodejs12.x
+      Timeout: 30
+      Role: 
+        Fn::GetAtt: 
+           - LambdaExecutionRole
+           - Arn
+ConfigRuleForVolumeAutoEnableIO: 
+    Type: AWS::Config::ConfigRule
+    Properties: 
+      ConfigRuleName: ConfigRuleForVolumeAutoEnableIO
+      Scope: 
+         ComplianceResourceId: 
+           Ref: Ec2Volume
+          ComplianceResourceTypes: 
+           - "AWS::EC2::Volume"
+      Source: 
+         Owner: "CUSTOM_LAMBDA"
+         SourceDetails: 
+           - 
+              EventSource: "aws.config"
+              MessageType: "ConfigurationItemChangeNotification"
+         SourceIdentifier: 
+           Fn::GetAtt: 
+               - VolumeAutoEnableIOComplianceCheck
+               - Arn
+     DependsOn: ConfigPermissionToCallLambda
 ```

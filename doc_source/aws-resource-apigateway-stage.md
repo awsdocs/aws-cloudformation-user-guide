@@ -153,6 +153,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigateway-stage--examples"></a>
 
+
+
 ### Create stage<a name="aws-resource-apigateway-stage--examples--Create_stage"></a>
 
 The following example creates a stage for the `TestDeployment` deployment\. The stage also specifies method settings for the `MyRestApi` API\.
@@ -244,3 +246,4 @@ Resources:
 
 ## See also<a name="aws-resource-apigateway-stage--seealso"></a>
 + [stage:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/stage-create/) in the *Amazon API Gateway REST API Reference*
+

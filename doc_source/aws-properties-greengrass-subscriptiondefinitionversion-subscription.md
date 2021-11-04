@@ -55,5 +55,5 @@ The destination of the message\. The value can be a thing ARN, the ARN of a Lamb
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See also<a name="aws-properties-greengrass-subscriptiondefinitionversion-subscription--seealso"></a>
-+  [Subscription](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-subscription.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [Subscription](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-subscription.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

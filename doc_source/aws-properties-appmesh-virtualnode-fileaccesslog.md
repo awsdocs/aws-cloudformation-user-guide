@@ -27,4 +27,6 @@ The file path to write access logs to\. You can use `/dev/stdout` to send access
 The Envoy process must have write permissions to the path that you specify here\. Otherwise, Envoy fails to bootstrap properly\.
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

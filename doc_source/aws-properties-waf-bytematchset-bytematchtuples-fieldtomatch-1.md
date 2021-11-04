@@ -1,6 +1,6 @@
 # AWS::WAF::SqlInjectionMatchSet FieldToMatch<a name="aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch-1"></a>
 
-Specifies the part of a web request that you want AWS WAF to search, such as a specific header or a query string\. 
+The part of a web request that you want to inspect, such as a specified header or a query string\.
 
 ## Syntax<a name="aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch-1-syntax"></a>
 

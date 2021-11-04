@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Destination`  <a name="cfn-groundstation-missionprofile-dataflowedge-destination"></a>
  The ARN of the destination for this dataflow edge\. For example, specify the ARN of a dataflow endpoint config for a downlink edge or an antenna uplink config for an uplink edge\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Source`  <a name="cfn-groundstation-missionprofile-dataflowedge-source"></a>
  The ARN of the source for this dataflow edge\. For example, specify the ARN of an antenna downlink config for a downlink edge or a dataflow endpoint config for an uplink edge\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

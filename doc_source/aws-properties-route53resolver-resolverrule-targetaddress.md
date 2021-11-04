@@ -43,3 +43,4 @@ The port at `Ip` that you want to forward DNS queries to\.
 ## See also<a name="aws-properties-route53resolver-resolverrule-targetaddress--seealso"></a>
 +  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#aws-resource-route53resolver-resolverrule-return-values) in the topic [AWS::Route53Resolver::ResolverRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html) 
 +  [TargetAddress](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_TargetAddress.html) in the *Amazon Route 53 API Reference* 
+

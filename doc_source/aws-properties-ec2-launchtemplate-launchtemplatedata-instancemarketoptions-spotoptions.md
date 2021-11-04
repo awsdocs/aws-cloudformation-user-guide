@@ -66,4 +66,5 @@ The end date of the request\. For a one\-time request, the request remains activ
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions--seealso"></a>
-+  [ LaunchTemplateSpotMarketOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateSpotMarketOptionsRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [ LaunchTemplateSpotMarketOptionsRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateSpotMarketOptionsRequest.html) in the *Amazon EC2 API Reference* 
+

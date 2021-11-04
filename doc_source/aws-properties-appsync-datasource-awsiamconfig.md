@@ -1,6 +1,6 @@
 # AWS::AppSync::DataSource AwsIamConfig<a name="aws-properties-appsync-datasource-awsiamconfig"></a>
 
-Use the `AwsIamConfig` property type to specify AwsIamConfig for a AWS AppSync authorizaton\.
+Use the `AwsIamConfig` property type to specify `AwsIamConfig` for a AWS AppSync authorizaton\.
 
  `AwsIamConfig` is a property of the [AWS AppSync DataSource AuthorizationConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig-authorizationconfig.html) resource\. 
 
@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appsync-datasource-awsiamconfig-properties"></a>
 
 `SigningRegion`  <a name="cfn-appsync-datasource-awsiamconfig-signingregion"></a>
-The signing region for AWS IAM authorization\.  
+The signing Region for AWS Identity and Access Management authorization\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SigningServiceName`  <a name="cfn-appsync-datasource-awsiamconfig-signingservicename"></a>
-The signing service name for AWS IAM authorization\.  
+The signing service name for AWS Identity and Access Management authorization\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

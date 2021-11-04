@@ -18,20 +18,20 @@ To create a change set for a new stack, select your stack template and specify t
 
 1. On the **Review** page, review the details of your stack\.
 
-   If you need to change any of the settings before you create the change set, click **Edit** on the appropriate section to go back to the page that has the setting that you want to change\.
+   If you need to change any of the settings before you create the change set, choose **Edit** on the appropriate section to go back to the page that has the setting that you want to change\.
 
-1. Click **Create change set**\.
+1. Choose **Create change set**\.
 
-1. Enter a name for the change set, and a description if desired\. Click **Create change set**\.
+1. Enter a name for the change set, and a description if desired\. Choose **Create change set**\.
 
    When you create a change set for a new stack, CloudFormation does the following:
-   + Launches a new stack with a status of **REVIEW\_IN\_PROGRESS**\. 
-   + Creates a change set for the new stack that reflects the stack configuration you specified in the steps above\. 
+   + Launches a new stack with a status of `REVIEW_IN_PROGRESS`\.
+   + Creates a change set for the new stack that reflects the stack configuration you specified in the previous steps\.
 
-   CloudFormation displays the **Change sets** page for the proposed stack\. While AWS CloudFormation creates the change set, its status is **CREATE\_IN\_PROGRESS**, and its execution status is **UNAVAILABLE**\. When AWS CloudFormation completes succesfully creating the change set, it sets the change set status to **CREATE\_COMPLETE**, and its execution status is **AVAILABLE**\. The stack status is updated to **REVIEW\_IN\_PROGRESS**\. At this point, you can execute the change set to complete creating the new stack\.
+   CloudFormation displays the **Change sets** page for the proposed stack\. While CloudFormation creates the change set, its status is `CREATE_IN_PROGRESS`, and its execution status is `UNAVAILABLE`\. When CloudFormation completes successfully creating the change set, it sets the change set status to `CREATE_COMPLETE`, and its execution status is `AVAILABLE`\. The stack status is updated to `REVIEW_IN_PROGRESS`\. At this point, you can execute the change set to complete creating the new stack\.
 
-   In the **Changes** pane, AWS CloudFormation displays the proposed configuration of your stack\.
+   In the **Changes** pane, CloudFormation displays the proposed configuration of your stack\.
 
-   If AWS CloudFormation fails to create the change set, it sets the changes set status to **CREATE\_FAILED**\. Fix the error displayed in the **Status reason** field, and then create a new change set\. At this stage, you can try various configurations and make corrections and changes to your stack before executing the next change set\.
+   If CloudFormation fails to create the change set, it sets the changes set status to `CREATE_FAILED`\. Fix the error displayed in the **Status reason** field, and then create a new change set\. At this stage, you can try various configurations and make corrections and changes to your stack before executing the next change set\.
 
-1. To complete creating a new stack based on the change set, choose **Execute**, and then choose **Execute** again\.
+1. To complete creating a new stack based on the change set, choose **Execute**, specify your rollback configuration, and then choose **Execute change set**\.

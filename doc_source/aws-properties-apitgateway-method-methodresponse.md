@@ -48,3 +48,4 @@ The method response's status code, which you map to an [IntegrationResponse](htt
 
 ## See also<a name="aws-properties-apitgateway-method-methodresponse--seealso"></a>
 + [Method](https://docs.aws.amazon.com/apigateway/api-reference/resource/method/) in the *Amazon API Gateway REST API Reference*
+

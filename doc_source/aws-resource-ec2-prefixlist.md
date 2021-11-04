@@ -50,7 +50,7 @@ Valid Values: `IPv4` \| `IPv6`
 One or more entries for the prefix list\.  
 *Required*: No  
 *Type*: List of [Entry](aws-properties-ec2-prefixlist-entry.md)  
-*Maximum*: `1000`  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxEntries`  <a name="cfn-ec2-prefixlist-maxentries"></a>
@@ -102,11 +102,11 @@ The version of the prefix list\. For example, `1`\.
 
 ## Examples<a name="aws-resource-ec2-prefixlist--examples"></a>
 
-### Creating a prefix list<a name="aws-resource-ec2-prefixlist--examples--Creating_a_prefix_list"></a>
+### Create a prefix list<a name="aws-resource-ec2-prefixlist--examples--Create_a_prefix_list"></a>
 
 The following example creates an IPv4 prefix list with a maximum of 10 entries, and creates 2 entries in the prefix list\.
 
-#### JSON<a name="aws-resource-ec2-prefixlist--examples--Creating_a_prefix_list--json"></a>
+#### JSON<a name="aws-resource-ec2-prefixlist--examples--Create_a_prefix_list--json"></a>
 
 ```
 {
@@ -139,7 +139,7 @@ The following example creates an IPv4 prefix list with a maximum of 10 entries, 
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-prefixlist--examples--Creating_a_prefix_list--yaml"></a>
+#### YAML<a name="aws-resource-ec2-prefixlist--examples--Create_a_prefix_list--yaml"></a>
 
 ```
 Resources:

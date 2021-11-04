@@ -32,14 +32,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `SecurityGroupIds`  <a name="cfn-lambda-function-vpcconfig-securitygroupids"></a>
 A list of VPC security groups IDs\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: List of String  
 *Maximum*: `5`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetIds`  <a name="cfn-lambda-function-vpcconfig-subnetids"></a>
 A list of VPC subnet IDs\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: List of String  
 *Maximum*: `16`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -53,6 +53,10 @@ Connect a function to a VPC\.
 #### YAML<a name="aws-properties-lambda-function-vpcconfig--examples--VPC_Configuration--yaml"></a>
 
 ```
- VpcConfig: SecurityGroupIds: - sg-085912345678492fb SubnetIds: -
-        subnet-071f712345678e7c8 - subnet-07fd123456788a036
+      VpcConfig:
+        SecurityGroupIds:
+          - sg-085912345678492fb
+        SubnetIds:
+          - subnet-071f712345678e7c8
+          - subnet-07fd123456788a036
 ```

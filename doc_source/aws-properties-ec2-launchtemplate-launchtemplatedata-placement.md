@@ -88,4 +88,5 @@ The tenancy of the instance \(if the instance is running in a VPC\)\. An instanc
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-placement--seealso"></a>
-+  [ LaunchTemplatePlacementRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplatePlacementRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [ LaunchTemplatePlacementRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplatePlacementRequest.html) in the *Amazon EC2 API Reference* 
+

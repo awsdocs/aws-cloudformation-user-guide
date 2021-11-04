@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `FunctionArn`  <a name="cfn-iotevents-detectormodel-lambda-functionarn"></a>
 The ARN of the Lambda function that is executed\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  

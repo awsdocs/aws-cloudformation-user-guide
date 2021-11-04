@@ -1,6 +1,6 @@
 # AWS::AppMesh::Route HttpRetryPolicy<a name="aws-properties-appmesh-route-httpretrypolicy"></a>
 
-An object that represents a retry policy\. Specify at least one value for at least one of the types of `RetryEvents`, a value for `maxRetries`, and a value for `perRetryTimeout`\.
+An object that represents a retry policy\. Specify at least one value for at least one of the types of `RetryEvents`, a value for `maxRetries`, and a value for `perRetryTimeout`\. Both `server-error` and `gateway-error` under `httpRetryEvents` include the Envoy `reset` policy\. For more information on the `reset` policy, see the [Envoy documentation](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_filters/router_filter#x-envoy-retry-on)\.
 
 ## Syntax<a name="aws-properties-appmesh-route-httpretrypolicy-syntax"></a>
 
@@ -39,6 +39,7 @@ Specify at least one of the following values\.
 + **stream\-error** – Retry on refused stream
 *Required*: No  
 *Type*: List of String  
+*Maximum*: `25`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxRetries`  <a name="cfn-appmesh-route-httpretrypolicy-maxretries"></a>
@@ -57,4 +58,5 @@ The timeout for each retry attempt\.
 Specify a valid value\. The event occurs before any processing of a request has started and is encountered when the upstream is temporarily or permanently unavailable\.  
 *Required*: No  
 *Type*: List of String  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

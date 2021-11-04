@@ -1,6 +1,6 @@
 # AWS::Pinpoint::PushTemplate AndroidPushNotificationTemplate<a name="aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate"></a>
 
-The AWS::Pinpoint::PushTemplate AndroidPushNotificationTemplate resource defines channel\-specific content and settings for a message template that can be used in push notifications that are sent through the following channels: ADM \(Amazon Device Messaging\), Baidu \(Baidu Cloud Push\), or GCM \(Firebase Cloud Messaging, formerly Google Cloud Messaging\)\.
+Specifies channel\-specific content and settings for a message template that can be used in push notifications that are sent through the ADM \(Amazon Device Messaging\), Baidu \(Baidu Cloud Push\), or GCM \(Firebase Cloud Messaging, formerly Google Cloud Messaging\) channel\.
 
 ## Syntax<a name="aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate-syntax"></a>
 

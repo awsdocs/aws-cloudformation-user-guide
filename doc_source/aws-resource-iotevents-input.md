@@ -37,7 +37,7 @@ Properties:
 
 `InputDefinition`  <a name="cfn-iotevents-input-inputdefinition"></a>
 The definition of the input\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [InputDefinition](aws-properties-iotevents-input-inputdefinition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -77,6 +77,8 @@ For the AWS IoT Events input `myInput`, `Ref` returns the name of the input\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-iotevents-input--examples"></a>
+
+
 
 ### Input<a name="aws-resource-iotevents-input--examples--Input"></a>
 

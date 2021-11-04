@@ -41,8 +41,8 @@ Properties:
 ## Properties<a name="aws-resource-docdb-dbinstance-properties"></a>
 
 `AutoMinorVersionUpgrade`  <a name="cfn-docdb-dbinstance-autominorversionupgrade"></a>
-Indicates that minor engine upgrades are applied automatically to the instance during the maintenance window\.  
-Default: `true`   
+This parameter does not apply to Amazon DocumentDB\. Amazon DocumentDB does not perform minor version upgrades regardless of the value set\.  
+Default: `false`   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -118,7 +118,11 @@ The port number on which the database accepts connections, such as `27017`\.
 
 ## Examples<a name="aws-resource-docdb-dbinstance--examples"></a>
 
+
+
 ### <a name="aws-resource-docdb-dbinstance--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-docdb-dbinstance--examples----json"></a>
 
@@ -160,3 +164,4 @@ Properties:
 +  [DeleteDBInstance](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DeleteDBInstance.html) 
 +  [DescribeDBInstances](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DescribeDBInstances.html) 
 +  [ModifyDBInstance](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_ModifyDBInstance.html) 
+

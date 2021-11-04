@@ -1,4 +1,4 @@
-# RoboMaker resource type reference<a name="AWS_RoboMaker"></a>
+# AWS RoboMaker resource type reference<a name="AWS_RoboMaker"></a>
 
 **Resource types**
 + [AWS::RoboMaker::Fleet](aws-resource-robomaker-fleet.md)

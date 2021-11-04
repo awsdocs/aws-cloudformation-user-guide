@@ -43,3 +43,4 @@ Valid values depend on the value of `BudgetType`:
 
 ## See also<a name="aws-properties-budgets-budget-timeperiod--seealso"></a>
 +  [TimePeriod](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_TimePeriod.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+
