@@ -117,7 +117,7 @@ The name of the campaign\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Priority`  <a name="cfn-pinpoint-campaign-priority"></a>
-Not currently supported by AWS CloudFormation\.  
+The priority of the in\-app message campaign\. If there are multiple messages scheduled to be displayed at the same time, the priority determines the order in which those messages are displayed\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

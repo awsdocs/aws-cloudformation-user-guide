@@ -32,5 +32,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 +  `NEW_AND_OLD_IMAGES` \- Both the new and the old item images of the item are written to the stream\.
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `KEYS_ONLY | NEW_AND_OLD_IMAGES | NEW_IMAGE | OLD_IMAGE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

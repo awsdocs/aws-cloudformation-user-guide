@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Campaign DefaultButtonConfiguration<a name="aws-properties-pinpoint-campaign-defaultbuttonconfiguration"></a>
 
-<a name="aws-properties-pinpoint-campaign-defaultbuttonconfiguration-description"></a>The `DefaultButtonConfiguration` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Pinpoint::Campaign](aws-resource-pinpoint-campaign.md)\.
+Information about the default behavior for a button that appears in an in\-app message\. You can optionally add button configurations that specifically apply to iOS, Android, or web browser users\. 
 
 ## Syntax<a name="aws-properties-pinpoint-campaign-defaultbuttonconfiguration-syntax"></a>
 
@@ -33,37 +33,40 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-campaign-defaultbuttonconfiguration-properties"></a>
 
 `BackgroundColor`  <a name="cfn-pinpoint-campaign-defaultbuttonconfiguration-backgroundcolor"></a>
-Not currently supported by AWS CloudFormation\.  
+The background color of a button\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BorderRadius`  <a name="cfn-pinpoint-campaign-defaultbuttonconfiguration-borderradius"></a>
-Not currently supported by AWS CloudFormation\.  
+The border radius of a button\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ButtonAction`  <a name="cfn-pinpoint-campaign-defaultbuttonconfiguration-buttonaction"></a>
-Not currently supported by AWS CloudFormation\.  
+The action that occurs when a recipient chooses a button in an in\-app message\. You can specify one of the following:  
++ `LINK` – A link to a web destination\.
++ `DEEP_LINK` – A link to a specific page in an application\.
++ `CLOSE` – Dismisses the message\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Link`  <a name="cfn-pinpoint-campaign-defaultbuttonconfiguration-link"></a>
-Not currently supported by AWS CloudFormation\.  
+The destination \(such as a URL\) for a button\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Text`  <a name="cfn-pinpoint-campaign-defaultbuttonconfiguration-text"></a>
-Not currently supported by AWS CloudFormation\.  
+The text that appears on a button in an in\-app message\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TextColor`  <a name="cfn-pinpoint-campaign-defaultbuttonconfiguration-textcolor"></a>
-Not currently supported by AWS CloudFormation\.  
+The color of the body text in a button\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

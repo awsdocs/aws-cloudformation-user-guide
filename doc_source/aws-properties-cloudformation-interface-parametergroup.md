@@ -2,7 +2,7 @@
 
 `ParameterGroup` is a property of the [`AWS::CloudFormation::Interface`](aws-resource-cloudformation-interface.md) resource that defines a parameter group and the parameters to include in the group\.
 
-## Syntax<a name="w10335ab1c27c15c15c27c23b5"></a>
+## Syntax<a name="w10334ab1c27c15c15c27c23b5"></a>
 
 ### JSON<a name="aws-properties-cloudformation-interface-parametergroup-syntax.json"></a>
 
@@ -21,7 +21,7 @@ Parameters:
   - String
 ```
 
-## Properties<a name="w10335ab1c27c15c15c27c23b7"></a>
+## Properties<a name="w10334ab1c27c15c15c27c23b7"></a>
 
 `Label`  <a name="cfn-cloudformation-interface-parametergroups-label"></a>
 A name for the parameter group\.  

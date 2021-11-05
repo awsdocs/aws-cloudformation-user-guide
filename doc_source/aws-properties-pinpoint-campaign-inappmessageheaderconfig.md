@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Campaign InAppMessageHeaderConfig<a name="aws-properties-pinpoint-campaign-inappmessageheaderconfig"></a>
 
-<a name="aws-properties-pinpoint-campaign-inappmessageheaderconfig-description"></a>The `InAppMessageHeaderConfig` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Pinpoint::Campaign](aws-resource-pinpoint-campaign.md)\.
+Configuration information related to the title of the in\-app message\.
 
 ## Syntax<a name="aws-properties-pinpoint-campaign-inappmessageheaderconfig-syntax"></a>
 
@@ -27,19 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-campaign-inappmessageheaderconfig-properties"></a>
 
 `Alignment`  <a name="cfn-pinpoint-campaign-inappmessageheaderconfig-alignment"></a>
-Not currently supported by AWS CloudFormation\.  
+The text alignment of the title of the message\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Header`  <a name="cfn-pinpoint-campaign-inappmessageheaderconfig-header"></a>
-Not currently supported by AWS CloudFormation\.  
+Configuration information related to the title of an in\-app message\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TextColor`  <a name="cfn-pinpoint-campaign-inappmessageheaderconfig-textcolor"></a>
-Not currently supported by AWS CloudFormation\.  
+The color of the body text, expressed as a hex color code \(such as \#000000 for black\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

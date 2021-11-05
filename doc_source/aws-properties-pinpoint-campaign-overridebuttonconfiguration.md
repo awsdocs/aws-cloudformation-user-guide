@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Campaign OverrideButtonConfiguration<a name="aws-properties-pinpoint-campaign-overridebuttonconfiguration"></a>
 
-<a name="aws-properties-pinpoint-campaign-overridebuttonconfiguration-description"></a>The `OverrideButtonConfiguration` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Pinpoint::Campaign](aws-resource-pinpoint-campaign.md)\.
+Configuration information related to the configuration of a button with settings that are specific to a certain device type\.
 
 ## Syntax<a name="aws-properties-pinpoint-campaign-overridebuttonconfiguration-syntax"></a>
 
@@ -25,13 +25,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-campaign-overridebuttonconfiguration-properties"></a>
 
 `ButtonAction`  <a name="cfn-pinpoint-campaign-overridebuttonconfiguration-buttonaction"></a>
-Not currently supported by AWS CloudFormation\.  
+The action that occurs when a recipient chooses a button in an in\-app message\. You can specify one of the following:  
++ `LINK` – A link to a web destination\.
++ `DEEP_LINK` – A link to a specific page in an application\.
++ `CLOSE` – Dismisses the message\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Link`  <a name="cfn-pinpoint-campaign-overridebuttonconfiguration-link"></a>
-Not currently supported by AWS CloudFormation\.  
+The destination \(such as a URL\) for a button\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -2,7 +2,7 @@
 
 The AWS CloudFormation console allows you to create, monitor, update, and delete stacks directly from your web browser\. This section contains guidance on using the CloudFormation console to perform common actions\.
 
-## In this section<a name="w10335ab1c23c13b5"></a>
+## In this section<a name="w10334ab1c23c13b5"></a>
 + [Logging in to the AWS Management Console](cfn-console-login.md)
 + [Creating a stack on the AWS CloudFormation console](cfn-console-create-stack.md)
 + [Creating an EC2 key pair](cfn-console-create-keypair.md)
@@ -14,5 +14,5 @@ The AWS CloudFormation console allows you to create, monitor, update, and delete
 + [Protecting a stack from being deleted](using-cfn-protect-stacks.md)
 + [Viewing deleted stacks on the AWS CloudFormation consoleViewing deleted stacks](cfn-console-view-deleted-stacks.md)
 
-## Related topics<a name="w10335ab1c23c13c29"></a>
+## Related topics<a name="w10334ab1c23c13c29"></a>
 + [Using the AWS Command Line Interface](cfn-using-cli.md)

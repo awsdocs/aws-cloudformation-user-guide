@@ -81,7 +81,7 @@ The message that the campaign sends through the GCM channel, which enables Amazo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InAppMessage`  <a name="cfn-pinpoint-campaign-messageconfiguration-inappmessage"></a>
-Not currently supported by AWS CloudFormation\.  
+The default message for the in\-app messaging channel\. This message overrides the default message \(`DefaultMessage`\)\.  
 *Required*: No  
 *Type*: [CampaignInAppMessage](aws-properties-pinpoint-campaign-campaigninappmessage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

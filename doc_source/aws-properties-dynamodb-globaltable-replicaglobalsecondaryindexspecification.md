@@ -38,9 +38,6 @@ Updates the status for contributor insights for a specific table or index\.
 The name of the global secondary index\. The name must be unique among all other indexes on this table\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `3`  
-*Maximum*: `255`  
-*Pattern*: `[a-zA-Z0-9_.-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ReadProvisionedThroughputSettings`  <a name="cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-readprovisionedthroughputsettings"></a>
