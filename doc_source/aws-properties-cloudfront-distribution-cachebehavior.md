@@ -36,6 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[OriginRequestPolicyId](#cfn-cloudfront-distribution-cachebehavior-originrequestpolicyid)" : String,
   "[PathPattern](#cfn-cloudfront-distribution-cachebehavior-pathpattern)" : String,
   "[RealtimeLogConfigArn](#cfn-cloudfront-distribution-cachebehavior-realtimelogconfigarn)" : String,
+  "[ResponseHeadersPolicyId](#cfn-cloudfront-distribution-cachebehavior-responseheaderspolicyid)" : String,
   "[SmoothStreaming](#cfn-cloudfront-distribution-cachebehavior-smoothstreaming)" : Boolean,
   "[TargetOriginId](#cfn-cloudfront-distribution-cachebehavior-targetoriginid)" : String,
   "[TrustedKeyGroups](#cfn-cloudfront-distribution-cachebehavior-trustedkeygroups)" : [ String, ... ],
@@ -66,6 +67,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [OriginRequestPolicyId](#cfn-cloudfront-distribution-cachebehavior-originrequestpolicyid): String
   [PathPattern](#cfn-cloudfront-distribution-cachebehavior-pathpattern): String
   [RealtimeLogConfigArn](#cfn-cloudfront-distribution-cachebehavior-realtimelogconfigarn): String
+  [ResponseHeadersPolicyId](#cfn-cloudfront-distribution-cachebehavior-responseheaderspolicyid): String
   [SmoothStreaming](#cfn-cloudfront-distribution-cachebehavior-smoothstreaming): Boolean
   [TargetOriginId](#cfn-cloudfront-distribution-cachebehavior-targetoriginid): String
   [TrustedKeyGroups](#cfn-cloudfront-distribution-cachebehavior-trustedkeygroups): 
@@ -176,6 +178,12 @@ For more information, see [Path Pattern](https://docs.aws.amazon.com/AmazonCloud
 
 `RealtimeLogConfigArn`  <a name="cfn-cloudfront-distribution-cachebehavior-realtimelogconfigarn"></a>
 The Amazon Resource Name \(ARN\) of the real\-time log configuration that is attached to this cache behavior\. For more information, see [Real\-time logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html) in the *Amazon CloudFront Developer Guide*\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ResponseHeadersPolicyId`  <a name="cfn-cloudfront-distribution-cachebehavior-responseheaderspolicyid"></a>
+The identifier for a response headers policy\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

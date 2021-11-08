@@ -15,7 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[RulesSource](#cfn-networkfirewall-rulegroup-rulegroup-rulessource)" : RulesSource,
-  "[RuleVariables](#cfn-networkfirewall-rulegroup-rulegroup-rulevariables)" : RuleVariables
+  "[RuleVariables](#cfn-networkfirewall-rulegroup-rulegroup-rulevariables)" : RuleVariables,
+  "[StatefulRuleOptions](#cfn-networkfirewall-rulegroup-rulegroup-statefulruleoptions)" : StatefulRuleOptions
 }
 ```
 
@@ -26,6 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     RulesSource
   [RuleVariables](#cfn-networkfirewall-rulegroup-rulegroup-rulevariables): 
     RuleVariables
+  [StatefulRuleOptions](#cfn-networkfirewall-rulegroup-rulegroup-statefulruleoptions): 
+    StatefulRuleOptions
 ```
 
 ## Properties<a name="aws-properties-networkfirewall-rulegroup-rulegroup-properties"></a>
@@ -40,4 +43,10 @@ The stateful rules or stateless rules for the rule group\.
 Settings that are available for use in the rules in the rule group\. You can only use these for stateful rule groups\.   
 *Required*: No  
 *Type*: [RuleVariables](aws-properties-networkfirewall-rulegroup-rulevariables.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`StatefulRuleOptions`  <a name="cfn-networkfirewall-rulegroup-rulegroup-statefulruleoptions"></a>
+Additional options governing how Network Firewall handles stateful rules\. The policies where you use your stateful rule group must have stateful rule options settings that are compatible with these settings\.  
+*Required*: No  
+*Type*: [StatefulRuleOptions](aws-properties-networkfirewall-rulegroup-statefulruleoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

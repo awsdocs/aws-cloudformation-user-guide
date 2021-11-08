@@ -16,6 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EndDate](#cfn-ec2-capacityreservationfleet-enddate)" : String,
       "[InstanceMatchCriteria](#cfn-ec2-capacityreservationfleet-instancematchcriteria)" : String,
       "[InstanceTypeSpecifications](#cfn-ec2-capacityreservationfleet-instancetypespecifications)" : [ InstanceTypeSpecification, ... ],
+      "[NoRemoveEndDate](#cfn-ec2-capacityreservationfleet-noremoveenddate)" : Boolean,
+      "[RemoveEndDate](#cfn-ec2-capacityreservationfleet-removeenddate)" : Boolean,
       "[TagSpecifications](#cfn-ec2-capacityreservationfleet-tagspecifications)" : [ TagSpecification, ... ],
       "[Tenancy](#cfn-ec2-capacityreservationfleet-tenancy)" : String,
       "[TotalTargetCapacity](#cfn-ec2-capacityreservationfleet-totaltargetcapacity)" : Integer
@@ -33,6 +35,8 @@ Properties:
   [InstanceMatchCriteria](#cfn-ec2-capacityreservationfleet-instancematchcriteria): String
   [InstanceTypeSpecifications](#cfn-ec2-capacityreservationfleet-instancetypespecifications): 
     - InstanceTypeSpecification
+  [NoRemoveEndDate](#cfn-ec2-capacityreservationfleet-noremoveenddate): Boolean
+  [RemoveEndDate](#cfn-ec2-capacityreservationfleet-removeenddate): Boolean
   [TagSpecifications](#cfn-ec2-capacityreservationfleet-tagspecifications): 
     - TagSpecification
   [Tenancy](#cfn-ec2-capacityreservationfleet-tenancy): String
@@ -65,9 +69,21 @@ Currently, Capacity Reservation Fleets support `open` instance matching criteria
 
 `InstanceTypeSpecifications`  <a name="cfn-ec2-capacityreservationfleet-instancetypespecifications"></a>
 Information about the instance types for which to reserve the capacity\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: List of [InstanceTypeSpecification](aws-properties-ec2-capacityreservationfleet-instancetypespecification.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`NoRemoveEndDate`  <a name="cfn-ec2-capacityreservationfleet-noremoveenddate"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RemoveEndDate`  <a name="cfn-ec2-capacityreservationfleet-removeenddate"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TagSpecifications`  <a name="cfn-ec2-capacityreservationfleet-tagspecifications"></a>
 The tags to assign to the Capacity Reservation Fleet\. The tags are automatically assigned to the Capacity Reservations in the Fleet\.  
@@ -86,9 +102,9 @@ Indicates the tenancy of the Capacity Reservation Fleet\. All Capacity Reservati
 
 `TotalTargetCapacity`  <a name="cfn-ec2-capacityreservationfleet-totaltargetcapacity"></a>
 The total number of capacity units to be reserved by the Capacity Reservation Fleet\. This value, together with the instance type weights that you assign to each instance type used by the Fleet determine the number of instances for which the Fleet reserves capacity\. Both values are based on units that make sense for your workload\. For more information, see [ Total target capacity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/crfleet-concepts.html#target-capacity) in the Amazon EC2 User Guide\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: Integer  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-ec2-capacityreservationfleet-return-values"></a>
 

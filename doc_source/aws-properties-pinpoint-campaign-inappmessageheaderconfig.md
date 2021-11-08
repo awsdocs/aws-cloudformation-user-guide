@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Campaign InAppMessageHeaderConfig<a name="aws-properties-pinpoint-campaign-inappmessageheaderconfig"></a>
 
-Configuration information related to the title of the in\-app message\.
+Specifies the configuration and content of the header or title text of the in\-app message\.
 
 ## Syntax<a name="aws-properties-pinpoint-campaign-inappmessageheaderconfig-syntax"></a>
 
@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-campaign-inappmessageheaderconfig-properties"></a>
 
 `Alignment`  <a name="cfn-pinpoint-campaign-inappmessageheaderconfig-alignment"></a>
-The text alignment of the title of the message\.  
+The text alignment of the title of the message\. Acceptable values: `LEFT`, `CENTER`, `RIGHT`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Header`  <a name="cfn-pinpoint-campaign-inappmessageheaderconfig-header"></a>
-Configuration information related to the title of an in\-app message\.  
+The header or title text of the in\-app message\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

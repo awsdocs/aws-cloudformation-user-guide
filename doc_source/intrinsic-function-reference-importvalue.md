@@ -101,7 +101,7 @@ Resources:
             'Fn::Sub': '${NetworkStackNameParameter}-SubnetID'
 ```
 
-## Declaration<a name="w10334ab1c33c28c41b9"></a>
+## Declaration<a name="w10378ab1c33c28c41b9"></a>
 
 ### JSON<a name="intrinsic-function-reference-importvalue-syntax.json"></a>
 
@@ -137,16 +137,16 @@ Fn::ImportValue:
   !Sub "${NetworkStack}-SubnetID"
 ```
 
-## Parameters<a name="w10334ab1c33c28c41c11"></a>
+## Parameters<a name="w10378ab1c33c28c41c11"></a>
 
 sharedValueToImport  
 The stack output value that you want to import\.
 
-## Return value<a name="w10334ab1c33c28c41c13"></a>
+## Return value<a name="w10378ab1c33c28c41c13"></a>
 
 The stack output value\.
 
-## Example<a name="w10334ab1c33c28c41c15"></a>
+## Example<a name="w10378ab1c33c28c41c15"></a>
 
 ### JSON<a name="intrinsic-function-reference-importvalue-example.json"></a>
 
@@ -161,7 +161,7 @@ Fn::ImportValue:
   !Sub "${NetworkStackName}-SecurityGroupID"
 ```
 
-## Supported functions<a name="w10334ab1c33c28c41c17"></a>
+## Supported functions<a name="w10378ab1c33c28c41c17"></a>
 
 You can use the following functions in the `Fn::ImportValue` function\. The value of these functions can't depend on a resource\.
 + `Fn::Base64`

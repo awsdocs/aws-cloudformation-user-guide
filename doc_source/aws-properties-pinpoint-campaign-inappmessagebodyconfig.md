@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Campaign InAppMessageBodyConfig<a name="aws-properties-pinpoint-campaign-inappmessagebodyconfig"></a>
 
-Configuration information related to the main body text of the in\-app message\.
+Specifies the configuration of main body text of the in\-app message\.
 
 ## Syntax<a name="aws-properties-pinpoint-campaign-inappmessagebodyconfig-syntax"></a>
 
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-campaign-inappmessagebodyconfig-properties"></a>
 
 `Alignment`  <a name="cfn-pinpoint-campaign-inappmessagebodyconfig-alignment"></a>
-The text alignment of the main body text of the message\.  
+The text alignment of the main body text of the message\. Acceptable values: `LEFT`, `CENTER`, `RIGHT`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

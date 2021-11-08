@@ -121,7 +121,7 @@ The key\-value pair that represents the tag that you want to add to the location
 
 ### Ref<a name="aws-resource-datasync-locationobjectstorage-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the location resource ARN\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the location resource Amazon Resource Name \(ARN\)\. For example:
 
 `arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3`
 
@@ -139,17 +139,17 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) of the specified object storage location\.
 
 `LocationUri`  <a name="LocationUri-fn::getatt"></a>
-The URL of the specified object storage location\.
+The URI of the specified object storage location\.
 
 ## Examples<a name="aws-resource-datasync-locationobjectstorage--examples"></a>
 
 
 
-### Object storage location for DataSync<a name="aws-resource-datasync-locationobjectstorage--examples--Object_storage_location_for_DataSync"></a>
+### Create an object storage location for DataSync<a name="aws-resource-datasync-locationobjectstorage--examples--Create_an_object_storage_location_for_DataSync"></a>
 
 The following example specifies an object storage location for DataSync\. In this example, the object storage location uses the bucket named `MyBucket`, on the server named `MyServer@example.com`\. This example also specifies the server protocol `HTTPS` and the subdirectory `/Subdirectory`\. 
 
-#### JSON<a name="aws-resource-datasync-locationobjectstorage--examples--Object_storage_location_for_DataSync--json"></a>
+#### JSON<a name="aws-resource-datasync-locationobjectstorage--examples--Create_an_object_storage_location_for_DataSync--json"></a>
 
 ```
 {
@@ -172,7 +172,7 @@ The following example specifies an object storage location for DataSync\. In thi
 }
 ```
 
-#### YAML<a name="aws-resource-datasync-locationobjectstorage--examples--Object_storage_location_for_DataSync--yaml"></a>
+#### YAML<a name="aws-resource-datasync-locationobjectstorage--examples--Create_an_object_storage_location_for_DataSync--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09

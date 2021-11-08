@@ -3,12 +3,12 @@
 With self\-managed permissions, you create the AWS Identity and Access Management \(IAM\) roles required by StackSets to deploy across accounts and AWS Regions\. These roles are necessary to establish a trusted relationship between the account you're administering the stack set from and the account you're deploying stack instances to\. Using this permissions model, StackSets can deploy to any AWS account in which you have permissions to create an IAM role\.
 
 **Topics**
-+ [Self\-managed permissions](#w10334ab1c29c15c15b7)
++ [Self\-managed permissions](#w10378ab1c29c15c15b7)
 + [Set up basic permissions for stack set operations](#stacksets-prereqs-accountsetup)
 + [Set up advanced permissions options for stack set operations](#stacksets-prereqs-advanced-perms)
 + [Set up global keys to mitigate confused deputy problems](#confused-deputy-mitigation)
 
-## Self\-managed permissions<a name="w10334ab1c29c15c15b7"></a>
+## Self\-managed permissions<a name="w10378ab1c29c15c15b7"></a>
 
 To set up the required permissions for creating a **service\-managed** stack set, see [Enable trusted access with AWS Organizations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)\.
 

@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Campaign InAppMessageButton<a name="aws-properties-pinpoint-campaign-inappmessagebutton"></a>
 
-Configuration information for a button that appears in an in\-app message\.
+Specifies the configuration of a button that appears in an in\-app message\.
 
 ## Syntax<a name="aws-properties-pinpoint-campaign-inappmessagebutton-syntax"></a>
 

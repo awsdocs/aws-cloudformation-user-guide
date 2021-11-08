@@ -14,6 +14,7 @@
 + [AWS::Pinpoint::EmailTemplate](aws-resource-pinpoint-emailtemplate.md)
 + [AWS::Pinpoint::EventStream](aws-resource-pinpoint-eventstream.md)
 + [AWS::Pinpoint::GCMChannel](aws-resource-pinpoint-gcmchannel.md)
++ [AWS::Pinpoint::InAppTemplate](aws-resource-pinpoint-inapptemplate.md)
 + [AWS::Pinpoint::PushTemplate](aws-resource-pinpoint-pushtemplate.md)
 + [AWS::Pinpoint::Segment](aws-resource-pinpoint-segment.md)
 + [AWS::Pinpoint::SMSChannel](aws-resource-pinpoint-smschannel.md)

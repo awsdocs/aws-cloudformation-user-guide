@@ -18,7 +18,7 @@ For information about developing private extensions of your own, see [Creating r
 
 To use private extensions that are not listed in the CloudFormation registry\-\-either ones you develop yourself, or ones that have been shared with you\-\-you must first *register* them with CloudFormation, in the accounts and regions in which you want to use them\. Registering the extension uploads a copy of it to the CloudFormation registry in your account, and activates it\. Once you're registered a private extension, it will appear in the CloudFormation registry for that account and region, and you can use it in your stack templates\.
 
-You can register an extension using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or using the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\. To register a private extension using the CloudFormation CLI, see [Registering extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-register.html) in the *CloudFormation CLI User Guide*\. 
+You can register an extension using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or using the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\. To register a private extension using the CloudFormation CLI, see [Registering extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-register.html) in the *CloudFormation CLI User Guide*\.
 
 ### IAM permissions for registering a private extension<a name="registry-register-permissions"></a>
 
@@ -34,7 +34,7 @@ For more information, see [Actions, Resources, and Condition Keys for Amazon S3]
 
 1. Use the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command to register the extension in your account:
 
-   `RegisterType` is an asynchronous action, and returns a registration token you can use to track the progress of your registration request\. 
+   `RegisterType` is an asynchronous action, and returns a registration token you can use to track the progress of your registration request\.
 **Note**  
 If your extension calls AWS APIs as part of its functionality, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account\. You can then specify this execution role using the `--execution-role-arn` parameter\. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials\.
 

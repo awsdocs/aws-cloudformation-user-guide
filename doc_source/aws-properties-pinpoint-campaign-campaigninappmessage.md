@@ -34,7 +34,7 @@ Specifies the content that's displayed in an in\-app message, including the titl
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomConfig`  <a name="cfn-pinpoint-campaign-campaigninappmessage-customconfig"></a>
-Information about the custom data that is included in an in\-app messaging payload\.  
+Custom data, in the form of key\-value pairs, that is included in an in\-app messaging payload\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

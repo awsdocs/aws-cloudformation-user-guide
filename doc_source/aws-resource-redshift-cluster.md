@@ -260,25 +260,25 @@ Constraints:
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DeferMaintenance`  <a name="cfn-redshift-cluster-defermaintenance"></a>
-A boolean indicating whether to enable the deferred maintenance window\.   
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeferMaintenanceDuration`  <a name="cfn-redshift-cluster-defermaintenanceduration"></a>
-An integer indicating the duration of the maintenance window in days\. If you specify a duration, you can't specify an end time\. The duration must be 45 days or less\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeferMaintenanceEndTime`  <a name="cfn-redshift-cluster-defermaintenanceendtime"></a>
-A timestamp indicating end time for the deferred maintenance window\. If you specify an end time, you can't specify a duration\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeferMaintenanceStartTime`  <a name="cfn-redshift-cluster-defermaintenancestarttime"></a>
-A timestamp indicating the start time for the deferred maintenance window\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -443,21 +443,19 @@ If `true`, the cluster can be accessed from a public network\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceAction`  <a name="cfn-redshift-cluster-resourceaction"></a>
-Specifies action to perform on cluster for AWS CloudFormation operations\.  
-Valid Values: pause\-cluster \| resume\-cluster  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RevisionTarget`  <a name="cfn-redshift-cluster-revisiontarget"></a>
-A string that describes the changes and features that will be applied to the cluster when it is updated to the corresponding [DescribeClusterDbRevisions](https://docs.aws.amazon.com/redshift/latest/APIReference/API_DescribeClusterDbRevisions.html) in the Amazon Redshift API Guide\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
-*Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RotateEncryptionKey`  <a name="cfn-redshift-cluster-rotateencryptionkey"></a>
-Rotates the encryption keys for a cluster\. If this parameter is set to `true`, encryption keys are rotated\. If this parameter isn't specified, encryption keys aren't rotated\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -477,13 +475,13 @@ The name of the snapshot copy grant\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnapshotCopyManual`  <a name="cfn-redshift-cluster-snapshotcopymanual"></a>
-Indicates whether to apply the snapshot retention period to newly copied manual snapshots instead of automated snapshots\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnapshotCopyRetentionPeriod`  <a name="cfn-redshift-cluster-snapshotcopyretentionperiod"></a>
-Modifies the number of days to retain snapshots in the destination AWS Region after they are copied from the source AWS Region\. By default, this operation only changes the retention period of copied automated snapshots\. The retention periods for both new and existing copied automated snapshots are updated with the new retention period\. You can set the manual option to change only the retention periods of copied manual snapshots\. If you set this option, only newly copied manual snapshots have the new retention period\.   
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -539,7 +537,8 @@ The connection endpoint for the Amazon Redshift cluster\. For example: `examplec
 The port number on which the Amazon Redshift cluster accepts connections\. For example: `5439`\.
 
 `Id`  <a name="Id-fn::getatt"></a>
-A unique identifier for the cluster\. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying\. For example: `myexamplecluster` 
+A unique identifier for the cluster\. You use this identifier to refer to the cluster for any subsequent cluster operations such as deleting or modifying\. The identifier also appears in the Amazon Redshift console\.  
+Example: `myexamplecluster` 
 
 ## Examples<a name="aws-resource-redshift-cluster--examples"></a>
 

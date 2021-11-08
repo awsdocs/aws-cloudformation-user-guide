@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Campaign OverrideButtonConfiguration<a name="aws-properties-pinpoint-campaign-overridebuttonconfiguration"></a>
 
-Configuration information related to the configuration of a button with settings that are specific to a certain device type\.
+Specifies the configuration of a button with settings that are specific to a certain device type\.
 
 ## Syntax<a name="aws-properties-pinpoint-campaign-overridebuttonconfiguration-syntax"></a>
 
