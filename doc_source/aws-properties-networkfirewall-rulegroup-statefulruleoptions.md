@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-networkfirewall-rulegroup-statefulruleoptions-properties"></a>
 
 `RuleOrder`  <a name="cfn-networkfirewall-rulegroup-statefulruleoptions-ruleorder"></a>
-Indicates how to manage the order of the rule evaluation for the rule group\. `DEFAULT_ACTION_ORDER` is the default behavior\. Stateful rules are provided to the rule engine as Suricata compatible strings, and Suricata evaluates them based on certain settings\. For more information, see [Evaluation order for stateful rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html) in the *AWS Network Firewall Developer Guide*\.   
+Indicates how to manage the order of the rule evaluation for the rule group\. `DEFAULT_ACTION_ORDER` is the default behavior\. Stateful rules are provided to the rule engine as Suricata compatible strings, and Suricata evaluates them based on certain settings\. For more information, see [Evaluation order for stateful rules](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-rule-evaluation-order.html) in the * AWS Network Firewall Developer Guide*\.   
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DEFAULT_ACTION_ORDER | STRICT_ORDER`  

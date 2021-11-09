@@ -25,16 +25,16 @@ Use the `StatefulRuleGroupReference` property to reference the stateful rule gro
 Use the `StatefulRuleOptions` property to govern how Network Firewall handles stateful rules\.   | November 4, 2021 | 
 | [Updated resources](AWS_Pinpoint.md) | The following resource was updated: AWS::Pinpoint::Campaign\. 
 
-[AWS::Pinpoint::Campaign InAppMessageBodyConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign-inappmessagebodyconfig.html)  
+[AWS::Pinpoint::Campaign InAppMessageBodyConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebodyconfig.html)  
 Specifies the configuration of main body text of the in\-app message\. 
 
-[AWS::Pinpoint::Campaign InAppMessageButton](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign-inappmessagebutton.html)  
+[AWS::Pinpoint::Campaign InAppMessageButton](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html)  
 Specifies the configuration of a button that appears in an in\-app message\. 
 
-[AWS::Pinpoint::Campaign InAppMessageContent](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign-inappmessagecontent.html)  
+[AWS::Pinpoint::Campaign InAppMessageContent](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagecontent.html)  
 Specifies the configuration and contents of an in\-app message\. 
 
-[AWS::Pinpoint::Campaign InAppMessageHeaderConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign-inappmessageheaderconfig.html)  
+[AWS::Pinpoint::Campaign InAppMessageHeaderConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html)  
 Specifies the configuration and content of the header or title text of the in\-app message\.  | November 4, 2021 | 
 | [Updated resource](AWS_CloudFront.md) | The following resource was updated: AWS::CloudFront::Distribution\. 
 

@@ -48,7 +48,7 @@ Valid values of the stateful default action:
 + aws:drop\_established
 + aws:alert\_strict
 + aws:alert\_established
-For more information, see [Strict evaluation order](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-strict-rule-evaluation-order.html) in the *AWS Network Firewall Developer Guide*\.   
+For more information, see [Strict evaluation order](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-strict-rule-evaluation-order.html) in the * AWS Network Firewall Developer Guide*\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

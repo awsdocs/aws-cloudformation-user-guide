@@ -83,8 +83,6 @@ The name of the in\-app message template\.
 
 ## Return values<a name="aws-resource-pinpoint-inapptemplate-return-values"></a>
 
-### Ref<a name="aws-resource-pinpoint-inapptemplate-return-values-ref"></a>
-
 ### Fn::GetAtt<a name="aws-resource-pinpoint-inapptemplate-return-values-fn--getatt"></a>
 
 #### <a name="aws-resource-pinpoint-inapptemplate-return-values-fn--getatt-fn--getatt"></a>
