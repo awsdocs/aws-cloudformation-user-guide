@@ -45,34 +45,40 @@ The description of the new resource\. Maximum length is 2048 characters\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Expression`  <a name="cfn-iotwireless-destination-expression"></a>
-The rule name to send messages to\. Maximum length is 2048\.  
+The rule name to send messages to\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `2048`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExpressionType`  <a name="cfn-iotwireless-destination-expressiontype"></a>
-The type of value in `Expression`\. Must be `RuleName` or `MqttTopic`\.  
+The type of value in `Expression`\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `MqttTopic | RuleName`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-iotwireless-destination-name"></a>
-The name of the new resource\. The maximum length is 128 characters\. It can have only have alphanumeric, \- \(hyphen\) and \_ \(underscore\) characters and it can't have any spaces\.  
+The name of the new resource\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `128`  
+*Pattern*: `[a-zA-Z0-9-_]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleArn`  <a name="cfn-iotwireless-destination-rolearn"></a>
-The ARN of the IAM Role that authorizes the destination\. Minimum length is 20 and maximum length is 2048\.  
+The ARN of the IAM Role that authorizes the destination\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `20`  
+*Maximum*: `2048`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-iotwireless-destination-tags"></a>
-An array of key\-value pairs to apply to this resource\. Tags can have a minimum of 0 and a maximum of 50 items\.  
-For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
+The tags are an array of key\-value pairs to attach to the specified resource\. Tags can have a minimum of 0 and a maximum of 50 items\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-iotwireless-destination-return-values"></a>

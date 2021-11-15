@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::DataSync::LocationHDFS",
   "Properties" : {
       "[AgentArns](#cfn-datasync-locationhdfs-agentarns)" : [ String, ... ],
-      "[AuthType](#cfn-datasync-locationhdfs-authtype)" : String,
+      "[AuthenticationType](#cfn-datasync-locationhdfs-authenticationtype)" : String,
       "[BlockSize](#cfn-datasync-locationhdfs-blocksize)" : Integer,
       "[KerberosKeytab](#cfn-datasync-locationhdfs-kerberoskeytab)" : String,
       "[KerberosKrb5Conf](#cfn-datasync-locationhdfs-kerberoskrb5conf)" : String,
@@ -36,7 +36,7 @@ Type: AWS::DataSync::LocationHDFS
 Properties: 
   [AgentArns](#cfn-datasync-locationhdfs-agentarns): 
     - String
-  [AuthType](#cfn-datasync-locationhdfs-authtype): String
+  [AuthenticationType](#cfn-datasync-locationhdfs-authenticationtype): String
   [BlockSize](#cfn-datasync-locationhdfs-blocksize): Integer
   [KerberosKeytab](#cfn-datasync-locationhdfs-kerberoskeytab): String
   [KerberosKrb5Conf](#cfn-datasync-locationhdfs-kerberoskrb5conf): String
@@ -62,7 +62,7 @@ The Amazon Resource Names \(ARNs\) of the agents that are used to connect to the
 *Maximum*: `4`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`AuthType`  <a name="cfn-datasync-locationhdfs-authtype"></a>
+`AuthenticationType`  <a name="cfn-datasync-locationhdfs-authenticationtype"></a>
 Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: String  

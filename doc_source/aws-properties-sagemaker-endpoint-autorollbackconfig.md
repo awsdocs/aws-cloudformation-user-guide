@@ -1,6 +1,6 @@
 # AWS::SageMaker::Endpoint AutoRollbackConfig<a name="aws-properties-sagemaker-endpoint-autorollbackconfig"></a>
 
-Currently, the `AutoRollbackConfig` API is not supported\.
+Automatic rollback configuration for handling endpoint deployment failures and recovery\.
 
 ## Syntax<a name="aws-properties-sagemaker-endpoint-autorollbackconfig-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-sagemaker-endpoint-autorollbackconfig-properties"></a>
 
 `Alarms`  <a name="cfn-sagemaker-endpoint-autorollbackconfig-alarms"></a>
-  
+List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint\. If any alarms are tripped during a deployment, SageMaker rolls back the deployment\.  
 *Required*: Yes  
 *Type*: List of [Alarm](aws-properties-sagemaker-endpoint-alarm.md)  
 *Maximum*: `10`  

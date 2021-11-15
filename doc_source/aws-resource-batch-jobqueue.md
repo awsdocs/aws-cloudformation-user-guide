@@ -46,7 +46,7 @@ All compute environments that are associated with a job queue must share the sam
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JobQueueName`  <a name="cfn-batch-jobqueue-jobqueuename"></a>
-The name of the job queue\. Up to 128 letters \(uppercase and lowercase\), numbers, and underscores are allowed\.  
+The name of the job queue\. It can be up to 128 letters long\. It can contain uppercase and lowercase letters, numbers, hyphens \(\-\), and underscores \(\_\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -58,7 +58,7 @@ The priority of the job queue\. Job queues with a higher priority \(or a higher 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SchedulingPolicyArn`  <a name="cfn-batch-jobqueue-schedulingpolicyarn"></a>
-Not currently supported by AWS CloudFormation\.  
+The Amazon Resource Name \(ARN\) of the scheduling policy\. The format is `aws:Partition:batch:Region:Account:scheduling-policy/Name `\. For example, `aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

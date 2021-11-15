@@ -23,7 +23,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AutoPublish](#cfn-cloudfront-function-autopublish)" : Boolean,
       "[FunctionCode](#cfn-cloudfront-function-functioncode)" : String,
       "[FunctionConfig](#cfn-cloudfront-function-functionconfig)" : FunctionConfig,
-      "[FunctionMetadata](#cfn-cloudfront-function-functionmetadata)" : FunctionMetadata,
       "[Name](#cfn-cloudfront-function-name)" : String
     }
 }
@@ -38,8 +37,6 @@ Properties:
   [FunctionCode](#cfn-cloudfront-function-functioncode): String
   [FunctionConfig](#cfn-cloudfront-function-functionconfig): 
     FunctionConfig
-  [FunctionMetadata](#cfn-cloudfront-function-functionmetadata): 
-    FunctionMetadata
   [Name](#cfn-cloudfront-function-name): String
 ```
 
@@ -61,12 +58,6 @@ The function code\. For more information about writing a CloudFront function, se
 Contains configuration information about a CloudFront function\.  
 *Required*: No  
 *Type*: [FunctionConfig](aws-properties-cloudfront-function-functionconfig.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`FunctionMetadata`  <a name="cfn-cloudfront-function-functionmetadata"></a>
-Contains metadata about a CloudFront function\.  
-*Required*: No  
-*Type*: [FunctionMetadata](aws-properties-cloudfront-function-functionmetadata.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-cloudfront-function-name"></a>

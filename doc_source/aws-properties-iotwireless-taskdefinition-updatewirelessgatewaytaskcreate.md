@@ -37,10 +37,14 @@ The properties that relate to the LoRaWAN wireless gateway\.
 The IAM role used to read data from the S3 bucket\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `4096`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UpdateDataSource`  <a name="cfn-iotwireless-taskdefinition-updatewirelessgatewaytaskcreate-updatedatasource"></a>
 The link to the S3 bucket\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `4096`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

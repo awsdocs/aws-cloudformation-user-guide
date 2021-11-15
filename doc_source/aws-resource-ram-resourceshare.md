@@ -67,7 +67,7 @@ You can include the following values:
 + An ARN of an organizational unit \(OU\) in AWS Organizations, for example: `arn:aws:organizations::123456789012:ou/o-exampleorgid/ou-examplerootid-exampleouid123` 
 + An ARN of an IAM role, for example: `arn:aws:iam::123456789012:role/rolename` 
 + An ARN of an IAM user, for example: `arn:aws:iam::123456789012user/username` 
-Not all resource types can be shared with IAM roles and users\. For more information, see [Sharing with IAM roles and users](https://docs.aws.amazon.com/ram/lastest/userguide/permissions.html#permissions-rbp-supported-resource-types) in the * AWS Resource Access Manager User Guide*\.
+Not all resource types can be shared with IAM roles and users\. For more information, see [Sharing with IAM roles and users](https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types) in the * AWS Resource Access Manager User Guide*\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

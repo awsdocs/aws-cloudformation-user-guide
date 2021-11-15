@@ -96,7 +96,7 @@ The retry strategy to use for failed jobs that are submitted with this job defin
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SchedulingPriority`  <a name="cfn-batch-jobdefinition-schedulingpriority"></a>
-Not currently supported by AWS CloudFormation\.  
+The scheduling priority of the job definition\. This only affects jobs in job queues with a fair share policy\. Jobs with a higher scheduling priority are scheduled before jobs with a lower scheduling priority\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

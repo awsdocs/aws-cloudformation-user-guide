@@ -72,9 +72,9 @@ An optional customer\-defined field that's used in OpenApi imports and exports w
 
 `IdentitySource`  <a name="cfn-apigateway-authorizer-identitysource"></a>
 The source of the identity in an incoming request\.  
-If you specify `TOKEN` or `COGNITO_USER_POOLS` for the `Type` property, specify a header mapping expression using the form `method.request.header.name`, where *name* is the name of a custom authorization header that clients submit as part of their requests\.  
-If you specify `REQUEST` for the `Type` property, specify a comma\-separated string of one or more mapping expressions of the specified request parameter using the form `method.request.parameter.name`\. For supported parameter types, see [Configure Lambda Authorizer Using the API Gateway Console](https://docs.aws.amazon.com/apigateway/latest/developerguide/configure-api-gateway-lambda-authorization-with-console.html) in the *API Gateway Developer Guide*\.  
-*Required*: No  
+If you specify `TOKEN` or `COGNITO_USER_POOLS` for the `Type` property, this property is required\. Specify a header mapping expression using the form `method.request.header.name`, where *name* is the name of a custom authorization header that clients submit as part of their requests\.  
+If you specify `REQUEST` for the `Type` property, this property is required when authorization caching is enabled\. Specify a comma\-separated string of one or more mapping expressions of the specified request parameter using the form `method.request.parameter.name`\. For supported parameter types, see [Configure Lambda Authorizer Using the API Gateway Console](https://docs.aws.amazon.com/apigateway/latest/developerguide/configure-api-gateway-lambda-authorization-with-console.html) in the *API Gateway Developer Guide*\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

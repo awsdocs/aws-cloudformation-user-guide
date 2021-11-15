@@ -1,6 +1,6 @@
 # AWS::IoTWireless::PartnerAccount<a name="aws-resource-iotwireless-partneraccount"></a>
 
-Gets information about a partner account\. If `PartnerAccountId` and `PartnerType` are `null`, returns all partner accounts\.
+A partner account\. If `PartnerAccountId` and `PartnerType` are `null`, returns all partner accounts\.
 
 ## Syntax<a name="aws-resource-iotwireless-partneraccount-syntax"></a>
 
@@ -37,6 +37,7 @@ Properties:
 The ID of the partner account to update\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `256`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Sidewalk`  <a name="cfn-iotwireless-partneraccount-sidewalk"></a>
@@ -46,9 +47,10 @@ The Sidewalk account credentials\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-iotwireless-partneraccount-tags"></a>
-The tags to attach to the specified resource\. Tags are metadata that you can use to manage a resource\.  
+The tags are an array of key\-value pairs to attach to the specified resource\. Tags can have a minimum of 0 and a maximum of 50 items\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-iotwireless-partneraccount-return-values"></a>
@@ -62,7 +64,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 #### <a name="aws-resource-iotwireless-partneraccount-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name of the resource\.
+The Amazon Resource Name \(ARN\) of the resource\.
 
 `SidewalkResponse`  <a name="SidewalkResponse-fn::getatt"></a>
 The Sidewalk account credentials\.

@@ -39,7 +39,7 @@ The main body text of the message\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TextColor`  <a name="cfn-pinpoint-campaign-inappmessagebodyconfig-textcolor"></a>
-The color of the body text, expressed as a hex color code \(such as \#000000 for black\)\.  
+The color of the body text, expressed as a string consisting of a hex color code \(such as "\#000000" for black\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

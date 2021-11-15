@@ -60,7 +60,7 @@ value = 17408, 18432, 19456, 20480, 21504, 22528, 23552, 24576, 25600, 26624, 27
  `VCPU` = 4  
 type="VCPU"  
 The number of vCPUs reserved for the container\. This parameter maps to `CpuShares` in the [Create a container](https://docs.docker.com/engine/api/v1.23/#create-a-container) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.23/) and the `--cpu-shares` option to [docker run](https://docs.docker.com/engine/reference/run/)\. Each vCPU is equivalent to 1,024 CPU shares\. For EC2 resources, you must specify at least one vCPU\. This is required but can be specified in several places; it must be specified for each node at least once\.  
-For jobs that are running on Fargate resources, then `value` must match one of the supported values and the `MEMORY` values must be one of the values supported for that VCPU value\. The supported values are 0\.25, 0\.5, 1, 2, and 4    
+For jobs that are running on Fargate resources, then `value` must match one of the supported values and the `MEMORY` values must be one of the values supported for that `VCPU` value\. The supported values are 0\.25, 0\.5, 1, 2, and 4    
 value = 0\.25  
  `MEMORY` = 512, 1024, or 2048  
 value = 0\.5  

@@ -33,25 +33,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-campaign-inappmessagebutton-properties"></a>
 
 `Android`  <a name="cfn-pinpoint-campaign-inappmessagebutton-android"></a>
-Optional configuration information that applies only to in\-app message recipients who use Android devices\.  
+An object that defines the default behavior for a button in in\-app messages sent to Android\.  
 *Required*: No  
 *Type*: [OverrideButtonConfiguration](aws-properties-pinpoint-campaign-overridebuttonconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultConfig`  <a name="cfn-pinpoint-campaign-inappmessagebutton-defaultconfig"></a>
-Information about the default behavior for a button that appears in an in\-app message\. You can optionally add button configurations that specifically apply to iOS, Android, or web browser users\.  
+An object that defines the default behavior for a button in an in\-app message\.  
 *Required*: No  
 *Type*: [DefaultButtonConfiguration](aws-properties-pinpoint-campaign-defaultbuttonconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IOS`  <a name="cfn-pinpoint-campaign-inappmessagebutton-ios"></a>
-Optional configuration information that applies only to in\-app message recipients who use iOS devices\.  
+An object that defines the default behavior for a button in in\-app messages sent to iOS devices\.  
 *Required*: No  
 *Type*: [OverrideButtonConfiguration](aws-properties-pinpoint-campaign-overridebuttonconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Web`  <a name="cfn-pinpoint-campaign-inappmessagebutton-web"></a>
-Optional configuration information that applies only to recipients who received in\-app messages in their web browsers\.  
+An object that defines the default behavior for a button in in\-app messages for web applications\.  
 *Required*: No  
 *Type*: [OverrideButtonConfiguration](aws-properties-pinpoint-campaign-overridebuttonconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

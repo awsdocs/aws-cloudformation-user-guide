@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-campaign-campaigninappmessage-properties"></a>
 
 `Content`  <a name="cfn-pinpoint-campaign-campaigninappmessage-content"></a>
-Specifies the content that's displayed in an in\-app message, including the title and body text, text and background colors, and the configurations of buttons that appear in the message\.  
+An array that contains configurtion information about the in\-app message for the campaign, including title and body text, text colors, background colors, image URLs, and button configurations\.  
 *Required*: No  
 *Type*: List of [InAppMessageContent](aws-properties-pinpoint-campaign-inappmessagecontent.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
