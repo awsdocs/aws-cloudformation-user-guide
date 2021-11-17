@@ -64,7 +64,7 @@ The APNs client certificate that you received from Apple\. Specify this value if
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultAuthenticationMethod`  <a name="cfn-pinpoint-apnschannel-defaultauthenticationmethod"></a>
-The default authentication method that you want Amazon Pinpoint to use when authenticating with APNs\. Valid options are `key` or `certificate`\.  
+The default authentication method that you want Amazon Pinpoint to use when authenticating with APNs\. Valid options are `token` or `certificate`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
