@@ -1,6 +1,6 @@
 # AWS::EC2::NetworkInterface<a name="aws-resource-ec2-network-interface"></a>
 
-Describes a network interface in an Elastic Compute Cloud \(EC2\) instance for AWS CloudFormation\.
+Describes a network interface in an Amazon EC2 instance for AWS CloudFormation\.
 
 ## Syntax<a name="aws-resource-ec2-network-interface-syntax"></a>
 
@@ -58,16 +58,16 @@ A description for the network interface\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GroupSet`  <a name="cfn-awsec2networkinterface-groupset"></a>
-A list of security group IDs associated with this network interface\.  
+The security group IDs associated with this network interface\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InterfaceType`  <a name="cfn-ec2-networkinterface-interfacetype"></a>
-Indicates the type of network interface\. To create an Elastic Fabric Adapter \(EFA\), specify `efa`\. For more information, see [ Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+Indicates the type of network interface\. To create an Elastic Fabric Adapter \(EFA\), specify `efa`\. For more information, see [ Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon Elastic Compute Cloud User Guide*\. To create a trunk network interface, specify `efa`\. For more information, see [ Network interface trunking](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/eni-trunking.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `efa`  
+*Allowed values*: `branch | efa | trunk`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ipv6AddressCount`  <a name="cfn-ec2-networkinterface-ipv6addresscount"></a>
@@ -89,7 +89,7 @@ Assigns a single private IP address to the network interface, which is used as t
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PrivateIpAddresses`  <a name="cfn-awsec2networkinterface-privateipaddresses"></a>
-Assigns a list of private IP addresses to the network interface\. You can specify a primary private IP address by setting the value of the `Primary` property to `true` in the `PrivateIpAddressSpecification` property\. If you want EC2 to automatically assign private IP addresses, use the `SecondaryPrivateIpAddressCount` property and do not specify this property\.  
+Assigns private IP addresses to the network interface\. You can specify a primary private IP address by setting the value of the `Primary` property to `true` in the `PrivateIpAddressSpecification` property\. If you want EC2 to automatically assign private IP addresses, use the `SecondaryPrivateIpAddressCount` property and do not specify this property\.  
 *Required*: No  
 *Type*: List of [PrivateIpAddressSpecification](aws-properties-ec2-network-interface-privateipspec.md)  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
@@ -136,10 +136,10 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-ec2-network-interface-return-values-fn--getatt-fn--getatt"></a>
 
 `PrimaryPrivateIpAddress`  <a name="PrimaryPrivateIpAddress-fn::getatt"></a>
-Returns the primary private IP address of the network interface\. For example, `10.0.0.192`\.
+The primary private IP address of the network interface\. For example, `10.0.0.192`\.
 
 `SecondaryPrivateIpAddresses`  <a name="SecondaryPrivateIpAddresses-fn::getatt"></a>
-Returns the secondary private IP addresses of the network interface\. For example, `["10.0.0.161", "10.0.0.162", "10.0.0.163"]`\.
+The secondary private IP addresses of the network interface\. For example, `["10.0.0.161", "10.0.0.162", "10.0.0.163"]`\.
 
 ## Examples<a name="aws-resource-ec2-network-interface--examples"></a>
 
@@ -234,5 +234,5 @@ Ec2Instance:
 ```
 
 ## See also<a name="aws-resource-ec2-network-interface--seealso"></a>
-+ [NetworkInterface](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_NetworkInterface.html) in the *Amazon Elastic Compute Cloud API Reference*
++ [NetworkInterface](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_NetworkInterface.html) in the *Amazon EC2 API Reference*
 

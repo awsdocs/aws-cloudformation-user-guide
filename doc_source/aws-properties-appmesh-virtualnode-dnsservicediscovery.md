@@ -34,4 +34,5 @@ Specifies the DNS service discovery hostname for the virtual node\.
 Specifies the DNS response type for the virtual node\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `ENDPOINTS | LOADBALANCER`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

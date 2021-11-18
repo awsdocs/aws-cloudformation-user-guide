@@ -1,6 +1,6 @@
 # AWS::AutoScaling::AutoScalingGroup LifecycleHookSpecification<a name="aws-properties-autoscaling-autoscalinggroup-lifecyclehookspecification"></a>
 
- `LifecycleHookSpecification` specifies a list of lifecycle hooks for the `LifecycleHookSpecificationList` property of [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)\. `LifecycleHookSpecification` defines lifecycle hooks for an Auto Scaling group that specify actions to perform when Amazon EC2 Auto Scaling launches or terminates instances\. 
+ `LifecycleHookSpecification` specifies a lifecycle hook for the `LifecycleHookSpecificationList` property of the [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\. A lifecycle hook specifies actions to perform when Amazon EC2 Auto Scaling launches or terminates instances\. 
 
 For more information, see [Amazon EC2 Auto Scaling lifecycle hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide*\. You can find a sample template snippet in the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-as-lifecyclehook.html#aws-resource-as-lifecyclehook--examples) section of the `AWS::AutoScaling::LifecycleHook` documentation\.
 
@@ -38,6 +38,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DefaultResult`  <a name="cfn-autoscaling-autoscalinggroup-lifecyclehookspecification-defaultresult"></a>
 The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs\. The valid values are `CONTINUE` and `ABANDON` \(default\)\.  
+For more information, see [Adding lifecycle hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/adding-lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

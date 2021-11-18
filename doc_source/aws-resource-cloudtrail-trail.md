@@ -17,8 +17,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EnableLogFileValidation](#cfn-cloudtrail-trail-enablelogfilevalidation)" : Boolean,
       "[EventSelectors](#cfn-cloudtrail-trail-eventselectors)" : [ EventSelector, ... ],
       "[IncludeGlobalServiceEvents](#cfn-cloudtrail-trail-includeglobalserviceevents)" : Boolean,
+      "[InsightSelectors](#cfn-cloudtrail-trail-insightselectors)" : [ InsightSelector, ... ],
       "[IsLogging](#cfn-cloudtrail-trail-islogging)" : Boolean,
       "[IsMultiRegionTrail](#cfn-cloudtrail-trail-ismultiregiontrail)" : Boolean,
+      "[IsOrganizationTrail](#cfn-cloudtrail-trail-isorganizationtrail)" : Boolean,
       "[KMSKeyId](#cfn-cloudtrail-trail-kmskeyid)" : String,
       "[S3BucketName](#cfn-cloudtrail-trail-s3bucketname)" : String,
       "[S3KeyPrefix](#cfn-cloudtrail-trail-s3keyprefix)" : String,
@@ -40,8 +42,11 @@ Properties:
   [EventSelectors](#cfn-cloudtrail-trail-eventselectors): 
     - EventSelector
   [IncludeGlobalServiceEvents](#cfn-cloudtrail-trail-includeglobalserviceevents): Boolean
+  [InsightSelectors](#cfn-cloudtrail-trail-insightselectors): 
+    - InsightSelector
   [IsLogging](#cfn-cloudtrail-trail-islogging): Boolean
   [IsMultiRegionTrail](#cfn-cloudtrail-trail-ismultiregiontrail): Boolean
+  [IsOrganizationTrail](#cfn-cloudtrail-trail-isorganizationtrail): Boolean
   [KMSKeyId](#cfn-cloudtrail-trail-kmskeyid): String
   [S3BucketName](#cfn-cloudtrail-trail-s3bucketname): String
   [S3KeyPrefix](#cfn-cloudtrail-trail-s3keyprefix): String
@@ -86,6 +91,12 @@ Specifies whether the trail is publishing events from global services such as IA
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`InsightSelectors`  <a name="cfn-cloudtrail-trail-insightselectors"></a>
+Specifies whether a trail has insight types specified in an `InsightSelector` list\.  
+*Required*: No  
+*Type*: List of [InsightSelector](aws-properties-cloudtrail-trail-insightselector.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `IsLogging`  <a name="cfn-cloudtrail-trail-islogging"></a>
 Whether the CloudTrail trail is currently logging AWS API calls\.  
 *Required*: Yes  
@@ -98,8 +109,15 @@ Specifies whether the trail applies only to the current region or to all regions
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`IsOrganizationTrail`  <a name="cfn-cloudtrail-trail-isorganizationtrail"></a>
+Specifies whether the trail is created for all accounts in an organization in AWS Organizations, or only for the current AWS account\. The default is false, and cannot be true unless the call is made on behalf of an AWS account that is the management account for an organization in AWS Organizations\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `KMSKeyId`  <a name="cfn-cloudtrail-trail-kmskeyid"></a>
 Specifies the AWS KMS key ID to use to encrypt the logs delivered by CloudTrail\. The value can be an alias name prefixed by "alias/", a fully specified ARN to an alias, a fully specified ARN to a key, or a globally unique identifier\.  
+CloudTrail also supports AWS KMS multi\-Region keys\. For more information about multi\-Region keys, see [Using multi\-Region keys](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html) in the * AWS Key Management Service Developer Guide*\.  
 Examples:  
 + alias/MyAliasName
 + arn:aws:kms:us\-east\-2:123456789012:alias/MyAliasName
@@ -128,7 +146,7 @@ Specifies the name of the Amazon SNS topic defined for notification of log file 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-cloudtrail-trail-tags"></a>
-An arbitrary set of tags \(key–value pairs\) for this trail\.  
+A custom set of tags \(key\-value pairs\) for this trail\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -180,135 +198,96 @@ The following example creates a trail that logs events in all regions, an Amazon
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Parameters": {
-        "OperatorEmail": {
-            "Description": "Email address to notify when new logs are published.",
+        "TrailName": {
+            "Type": "String"
+        },
+        "BucketName": {
             "Type": "String"
         }
     },
-    "Resources": {
-        "S3Bucket": {
-            "DeletionPolicy": "Retain",
-            "Type": "AWS::S3::Bucket",
-            "Properties": {
-                
-            }
-        },
-        "BucketPolicy": {
-            "Type": "AWS::S3::BucketPolicy",
-            "Properties": {
-                "Bucket": {
-                    "Ref": "S3Bucket"
+    "Conditions": {
+        "IsOrganizationsSupported": {
+            "Fn::Equals": [
+                {
+                    "Ref": "AWS::Partition"
                 },
-                "PolicyDocument": {
-                    "Version": "2012-10-17",
-                    "Statement": [
-                        {
-                            "Sid": "AWSCloudTrailAclCheck",
-                            "Effect": "Allow",
-                            "Principal": {
-                                "Service": "cloudtrail.amazonaws.com"
-                            },
-                            "Action": "s3:GetBucketAcl",
-                            "Resource": {
-                                "Fn::Join": [
-                                    "",
-                                    [
-                                        "arn:aws:s3:::",
-                                        {
-                                            "Ref": "S3Bucket"
-                                        }
-                                    ]
-                                ]
-                            }
-                        },
-                        {
-                            "Sid": "AWSCloudTrailWrite",
-                            "Effect": "Allow",
-                            "Principal": {
-                                "Service": "cloudtrail.amazonaws.com"
-                            },
-                            "Action": "s3:PutObject",
-                            "Resource": {
-                                "Fn::Join": [
-                                    "",
-                                    [
-                                        "arn:aws:s3:::",
-                                        {
-                                            "Ref": "S3Bucket"
-                                        },
-                                        "/AWSLogs/",
-                                        {
-                                            "Ref": "AWS::AccountId"
-                                        },
-                                        "/*"
-                                    ]
-                                ]
-                            },
-                            "Condition": {
-                                "StringEquals": {
-                                    "s3:x-amz-acl": "bucket-owner-full-control"
-                                }
-                            }
-                        }
-                    ]
-                }
-            }
-        },
-        "Topic": {
-            "Type": "AWS::SNS::Topic",
-            "Properties": {
-                "Subscription": [
-                    {
-                        "Endpoint": {
-                            "Ref": "OperatorEmail"
-                        },
-                        "Protocol": "email"
-                    }
-                ]
-            }
-        },
-        "TopicPolicy": {
-            "Type": "AWS::SNS::TopicPolicy",
-            "Properties": {
-                "Topics": [
-                    {
-                        "Ref": "Topic"
-                    }
-                ],
-                "PolicyDocument": {
-                    "Version": "2008-10-17",
-                    "Statement": [
-                        {
-                            "Sid": "AWSCloudTrailSNSPolicy",
-                            "Effect": "Allow",
-                            "Principal": {
-                                "Service": "cloudtrail.amazonaws.com"
-                            },
-                            "Resource": "*",
-                            "Action": "SNS:Publish"
-                        }
-                    ]
-                }
-            }
-        },
-        "myTrail": {
-            "DependsOn": [
-                "BucketPolicy",
-                "TopicPolicy"
-            ],
+                "aws"
+            ]
+        }
+    },
+    "Resources": {
+        "Trail": {
             "Type": "AWS::CloudTrail::Trail",
             "Properties": {
                 "S3BucketName": {
-                    "Ref": "S3Bucket"
+                    "Ref": "BucketName"
                 },
-                "SnsTopicName": {
-                    "Fn::GetAtt": [
-                        "Topic",
-                        "TopicName"
-                    ]
-                },
+                "S3KeyPrefix": "Uluru",
                 "IsLogging": true,
-                "IsMultiRegionTrail": true
+                "TrailName": {
+                    "Ref": "TrailName"
+                },
+                "EnableLogFileValidation": true,
+                "IncludeGlobalServiceEvents": true,
+                "IsMultiRegionTrail": true,
+                "CloudWatchLogsLogGroupArn": {
+                    "Fn::ImportValue": "TrailLogGroupTestArn"
+                },
+                "CloudWatchLogsRoleArn": {
+                    "Fn::ImportValue": "TrailLogGroupRoleTestArn"
+                },
+                "KMSKeyId": {
+                    "Fn::ImportValue": "TrailKeyTest"
+                },
+                "Tags": [
+                    {
+                        "Key": "TagKeyIntTest",
+                        "Value": "TagValueIntTest"
+                    },
+                    {
+                        "Key": "TagKeyIntTest2",
+                        "Value": "TagValueIntTest2"
+                    }
+                ],
+                "SnsTopicName": {
+                    "Fn::ImportValue": "TrailTopicTest"
+                },
+                "EventSelectors": [
+                    {
+                        "DataResources": [
+                            {
+                                "Type": "AWS::S3::Object",
+                                "Values": [
+                                    {
+                                        "Fn::Sub": "arn:${AWS::Partition}:s3:::"
+                                    }
+                                ]
+                            }
+                        ],
+                        "IncludeManagementEvents": true,
+                        "ReadWriteType": "All",
+                    }
+                ]
+            }
+        }
+    },
+    "Outputs": {
+        "ARN": {
+            "Description": "The trail ARN",
+            "Value": {
+                "Fn::GetAtt": [
+                    "Trail",
+                    "Arn"
+                ]
+            }
+        },
+        "TopicArn": {
+            "Description": "The SnS Topic ARN",
+            "Value": {
+                "Fn::GetAtt": [
+                    "Trail",
+                    "SnsTopicArn"
+                ]
             }
         }
     }
@@ -318,82 +297,47 @@ The following example creates a trail that logs events in all regions, an Amazon
 #### YAML<a name="aws-resource-cloudtrail-trail--examples--Example--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: "2010-09-09"
-Parameters: 
-    OperatorEmail: 
-      Description: "Email address to notify when new logs are published."
-      Type: String
-  Resources: 
-    S3Bucket: 
-      DeletionPolicy: Retain
-      Type: AWS::S3::Bucket
-      Properties: {}
-    BucketPolicy: 
-      Type: AWS::S3::BucketPolicy
-      Properties: 
-        Bucket: 
-          Ref: S3Bucket
-        PolicyDocument: 
-          Version: "2012-10-17"
-          Statement: 
-            - 
-              Sid: "AWSCloudTrailAclCheck"
-              Effect: "Allow"
-              Principal: 
-                Service: "cloudtrail.amazonaws.com"
-              Action: "s3:GetBucketAcl"
-              Resource: 
-                !Sub |-
-                  arn:aws:s3:::${S3Bucket}
-            - 
-              Sid: "AWSCloudTrailWrite"
-              Effect: "Allow"
-              Principal: 
-                Service: "cloudtrail.amazonaws.com"
-              Action: "s3:PutObject"
-              Resource:
-                !Sub |-
-                  arn:aws:s3:::${S3Bucket}/AWSLogs/${AWS::AccountId}/*
-              Condition: 
-                StringEquals:
-                  s3:x-amz-acl: "bucket-owner-full-control"
-    Topic: 
-      Type: AWS::SNS::Topic
-      Properties: 
-        Subscription: 
-          - 
-            Endpoint: 
-              Ref: OperatorEmail
-            Protocol: email
-    TopicPolicy: 
-      Type: AWS::SNS::TopicPolicy
-      Properties: 
-        Topics: 
-          - Ref: "Topic"
-        PolicyDocument: 
-          Version: "2008-10-17"
-          Statement: 
-            - 
-              Sid: "AWSCloudTrailSNSPolicy"
-              Effect: "Allow"
-              Principal: 
-                Service: "cloudtrail.amazonaws.com"
-              Resource: "*"
-              Action: "SNS:Publish"
-    myTrail: 
-      DependsOn: 
-        - BucketPolicy
-        - TopicPolicy
-      Type: AWS::CloudTrail::Trail
-      Properties: 
-        S3BucketName: 
-          Ref: S3Bucket
-        SnsTopicName: 
-          Fn::GetAtt: 
-            - Topic
-            - TopicName
-        IsLogging: true
-        IsMultiRegionTrail: true
+Parameters:
+  TrailName:
+    Type: String
+  BucketName:
+    Type: String
+Conditions:
+  IsOrganizationsSupported:
+    Fn::Equals:
+      - { Ref: "AWS::Partition" }
+      - "aws"
+Resources:
+  Trail:
+    Type: AWS::CloudTrail::Trail
+    Properties:
+      S3BucketName: !Ref BucketName
+      S3KeyPrefix: "Uluru"
+      IsLogging: true
+      TrailName: !Ref TrailName
+      EnableLogFileValidation: true
+      IncludeGlobalServiceEvents: true
+      IsMultiRegionTrail: true
+      CloudWatchLogsLogGroupArn:
+        Fn::ImportValue: "TrailLogGroupTestArn"
+      CloudWatchLogsRoleArn:
+        Fn::ImportValue: "TrailLogGroupRoleTestArn"
+      KMSKeyId:
+        Fn::ImportValue: TrailKeyTest
+      Tags:
+        - Key: "TagKeyIntTest"
+          Value: "TagValueIntTest"
+        - Key: "TagKeyIntTest2"
+          Value: "TagValueIntTest2"
+      SnsTopicName:
+        Fn::ImportValue: TrailTopicTest
+      EventSelectors:
+        - DataResources:
+            - Type: AWS::S3::Object
+              Values:
+                - !Sub "arn:${AWS::Partition}:s3:::"
+          IncludeManagementEvents: true
+          ReadWriteType: All
 Outputs:
   ARN:
     Description: The trail ARN

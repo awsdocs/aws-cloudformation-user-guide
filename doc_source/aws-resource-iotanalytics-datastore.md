@@ -48,11 +48,11 @@ The name of the data store\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9_]+$`  
+*Pattern*: `(^(?!_{2}))(^[a-zA-Z0-9_]+$)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DatastorePartitions`  <a name="cfn-iotanalytics-datastore-datastorepartitions"></a>
-Not currently supported by AWS CloudFormation\.  
+Information about the partition dimensions in a data store\.  
 *Required*: No  
 *Type*: [DatastorePartitions](aws-properties-iotanalytics-datastore-datastorepartitions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

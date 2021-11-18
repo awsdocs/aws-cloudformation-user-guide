@@ -91,7 +91,7 @@ Parameters for the studio component scripts\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StudioId`  <a name="cfn-nimblestudio-studiocomponent-studioid"></a>
-The unique identifier for a studio resource\. In Nimble Studio, all other resources are contained in a studio resource\.   
+The unique identifier for a studio resource\. In Nimble Studio, all other resources are contained in a studio resource\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

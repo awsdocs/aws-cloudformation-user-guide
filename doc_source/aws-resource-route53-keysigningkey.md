@@ -63,7 +63,7 @@ The KSK is not being used for signing\.
 DELETING  
 The KSK is in the process of being deleted\.  
 ACTION\_NEEDED  
-There is a problem with the KSK that requires you to take action to resolve\. For example, the customer managed customer master key \(CMK\) might have been deleted, or the permissions for the customer managed CMK might have been changed\.  
+There is a problem with the KSK that requires you to take action to resolve\. For example, the customer managed key might have been deleted, or the permissions for the customer managed key might have been changed\.  
 INTERNAL\_FAILURE  
 There was an error during a request\. Before you can continue to work with DNSSEC signing, including actions that involve this KSK, you must correct the problem\. For example, you may need to activate or deactivate the KSK\.
 *Required*: Yes  

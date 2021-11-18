@@ -132,7 +132,7 @@ The following example creates an API key and associates it with the `Test` stage
         "Properties": {
             "Name": "TestApiKey",
             "Description": "CloudFormation API Key V1",
-            "Enabled": "true",
+            "Enabled": true,
             "StageKeys": [
                 {
                     "RestApiId": {
@@ -157,7 +157,7 @@ ApiKey:
   Properties:
     Name: TestApiKey
     Description: CloudFormation API Key V1
-    Enabled: 'true'
+    Enabled: true
     StageKeys:
       - RestApiId: !Ref RestApi
         StageName: Test

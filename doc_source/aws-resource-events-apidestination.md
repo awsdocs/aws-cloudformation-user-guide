@@ -2,6 +2,17 @@
 
 Creates an API destination, which is an HTTP invocation endpoint configured as a target for events\.
 
+When using ApiDesinations with OAuth authentication we recommend these best practices:
++ Create a secret in Secrets Manager with your OAuth credentials\.
++ Reference that secret in your CloudFormation template for `AWS::Events::Connection` using CloudFormation dynamic reference syntax\. For more information, see [Secrets Manager secrets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)\.
+
+When the Connection resource is created the secret will be passed to EventBridge and stored in the customer account using “Service Linked Secrets,” effectively creating two secrets\. This will minimize the cost because the original secret is only accessed when a CloudFormation template is created or updated, not every time an event is sent to the ApiDestination\. The secret stored in the customer account by EventBridge is the one used for each event sent to the ApiDestination and AWS is responsible for the fees\.
+
+**Note**  
+The secret stored in the customer account by EventBridge can’t be updated directly, only when a CloudFormation template is updated\. 
+
+For examples of CloudFormation templates that use secrets, see [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#aws-resource-events-connection--examples)\.
+
 ## Syntax<a name="aws-resource-events-apidestination-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -102,3 +113,82 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The ARN of the API destination that was created by the request\.
+
+## Examples<a name="aws-resource-events-apidestination--examples"></a>
+
+
+
+### Create an ApiDestination for PagerDuty<a name="aws-resource-events-apidestination--examples--Create_an_ApiDestination_for_PagerDuty"></a>
+
+The following example creates an ApiDestination connection to PagerDuty\.
+
+#### JSON<a name="aws-resource-events-apidestination--examples--Create_an_ApiDestination_for_PagerDuty--json"></a>
+
+```
+"Parameters": {
+   "PagerDutyAPIKeyParam": {
+       "Type": "String",
+       "Description": "API Key for the PagerDuty Environment",
+       "NoEcho": true
+},
+"Resources": {
+   "MyConnection": {
+       "Type": "AWS::Events::Connection",
+       "Properties": {
+           "AuthorizationType": "API_KEY",
+           "Description": "Connection to PagerDuty API",
+           "AuthParameters": {
+               "ApiKeyAuthParameters": {
+                   "ApiKeyName": "PagerDuty Authorization",
+                   "ApiKeyValue": {
+                       "Ref": "PagerDutyAPIKeyParam"
+                   }
+               }
+           }
+       }
+   },
+   "MyApiDestination": {
+       "Type": "AWS::Events::ApiDestination",
+       "Properties": {
+           "ConnectionArn": {
+               "Fn::GetAtt": [
+                   "MyConnection",
+                   "Arn"
+               ]
+           },
+           "Description": "API Destination to send events to PagerDuty",
+           "HttpMethod": "POST",
+           "InvocationEndpoint": "https://events.pagerduty.com/v2/enqueue"
+      }
+   },
+}
+```
+
+#### YAML<a name="aws-resource-events-apidestination--examples--Create_an_ApiDestination_for_PagerDuty--yaml"></a>
+
+```
+Parameters:
+  PagerDutyAPIKeyParam: 
+    Type: String
+    Description: API Key for the PagerDuty Environment
+    NoEcho: True
+        
+Resources:
+  MyConnection:
+    Type: AWS::Events::Connection
+    Properties:
+      AuthorizationType: API_KEY
+      Description: Connection to PagerDuty API
+      AuthParameters:
+        ApiKeyAuthParameters:
+          ApiKeyName: PagerDuty Authorization
+          ApiKeyValue: !Ref PagerDutyAPIKeyParam
+        
+  MyApiDestination:
+    Type: AWS::Events::ApiDestination
+    Properties:
+      ConnectionArn: !GetAtt MyConnection.Arn
+      Description: API Destination to send events to PagerDuty
+      HttpMethod: POST
+      InvocationEndpoint: https://events.pagerduty.com/v2/enqueue
+```

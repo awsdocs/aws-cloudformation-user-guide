@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[KmsKeyId](#cfn-sagemaker-notebookinstance-kmskeyid)" : String,
       "[LifecycleConfigName](#cfn-sagemaker-notebookinstance-lifecycleconfigname)" : String,
       "[NotebookInstanceName](#cfn-sagemaker-notebookinstance-notebookinstancename)" : String,
+      "[PlatformIdentifier](#cfn-sagemaker-notebookinstance-platformidentifier)" : String,
       "[RoleArn](#cfn-sagemaker-notebookinstance-rolearn)" : String,
       "[RootAccess](#cfn-sagemaker-notebookinstance-rootaccess)" : String,
       "[SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids)" : [ String, ... ],
@@ -45,6 +46,7 @@ Properties:
   [KmsKeyId](#cfn-sagemaker-notebookinstance-kmskeyid): String
   [LifecycleConfigName](#cfn-sagemaker-notebookinstance-lifecycleconfigname): String
   [NotebookInstanceName](#cfn-sagemaker-notebookinstance-notebookinstancename): String
+  [PlatformIdentifier](#cfn-sagemaker-notebookinstance-platformidentifier): String
   [RoleArn](#cfn-sagemaker-notebookinstance-rolearn): String
   [RootAccess](#cfn-sagemaker-notebookinstance-rootaccess): String
   [SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids): 
@@ -93,7 +95,7 @@ The type of ML compute instance to launch for the notebook instance\.
 Expect some interruption of service if this parameter is changed as CloudFormation stops a notebook instance and starts it up again to update it\.
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `ml.c4.2xlarge | ml.c4.4xlarge | ml.c4.8xlarge | ml.c4.xlarge | ml.c5.18xlarge | ml.c5.2xlarge | ml.c5.4xlarge | ml.c5.9xlarge | ml.c5.xlarge | ml.c5d.18xlarge | ml.c5d.2xlarge | ml.c5d.4xlarge | ml.c5d.9xlarge | ml.c5d.xlarge | ml.m4.10xlarge | ml.m4.16xlarge | ml.m4.2xlarge | ml.m4.4xlarge | ml.m4.xlarge | ml.m5.12xlarge | ml.m5.24xlarge | ml.m5.2xlarge | ml.m5.4xlarge | ml.m5.xlarge | ml.p2.16xlarge | ml.p2.8xlarge | ml.p2.xlarge | ml.p3.16xlarge | ml.p3.2xlarge | ml.p3.8xlarge | ml.t2.2xlarge | ml.t2.large | ml.t2.medium | ml.t2.xlarge | ml.t3.2xlarge | ml.t3.large | ml.t3.medium | ml.t3.xlarge`  
+*Allowed values*: `ml.c4.2xlarge | ml.c4.4xlarge | ml.c4.8xlarge | ml.c4.xlarge | ml.c5.18xlarge | ml.c5.2xlarge | ml.c5.4xlarge | ml.c5.9xlarge | ml.c5.xlarge | ml.c5d.18xlarge | ml.c5d.2xlarge | ml.c5d.4xlarge | ml.c5d.9xlarge | ml.c5d.xlarge | ml.g4dn.12xlarge | ml.g4dn.16xlarge | ml.g4dn.2xlarge | ml.g4dn.4xlarge | ml.g4dn.8xlarge | ml.g4dn.xlarge | ml.m4.10xlarge | ml.m4.16xlarge | ml.m4.2xlarge | ml.m4.4xlarge | ml.m4.xlarge | ml.m5.12xlarge | ml.m5.24xlarge | ml.m5.2xlarge | ml.m5.4xlarge | ml.m5.xlarge | ml.m5d.12xlarge | ml.m5d.16xlarge | ml.m5d.24xlarge | ml.m5d.2xlarge | ml.m5d.4xlarge | ml.m5d.8xlarge | ml.m5d.large | ml.m5d.xlarge | ml.p2.16xlarge | ml.p2.8xlarge | ml.p2.xlarge | ml.p3.16xlarge | ml.p3.2xlarge | ml.p3.8xlarge | ml.p3dn.24xlarge | ml.r5.12xlarge | ml.r5.16xlarge | ml.r5.24xlarge | ml.r5.2xlarge | ml.r5.4xlarge | ml.r5.8xlarge | ml.r5.large | ml.r5.xlarge | ml.t2.2xlarge | ml.t2.large | ml.t2.medium | ml.t2.xlarge | ml.t3.2xlarge | ml.t3.large | ml.t3.medium | ml.t3.xlarge`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-sagemaker-notebookinstance-kmskeyid"></a>
@@ -118,6 +120,14 @@ The name of the new notebook instance\.
 *Type*: String  
 *Maximum*: `63`  
 *Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`PlatformIdentifier`  <a name="cfn-sagemaker-notebookinstance-platformidentifier"></a>
+The platform identifier of the notebook instance runtime environment\.  
+*Required*: No  
+*Type*: String  
+*Maximum*: `15`  
+*Pattern*: `^(notebook-al1-v1|notebook-al2-v1)$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleArn`  <a name="cfn-sagemaker-notebookinstance-rolearn"></a>
@@ -202,66 +212,62 @@ The following example creates a notebook instance\.
 
 ```
 {
-  "Description": "Basic NotebookInstance test update to a different instance type",
-  "Resources": {
-    "BasicNotebookInstance": {
-      "Type": "AWS::SageMaker::NotebookInstance",
-      "Properties": {
-        "InstanceType": "ml.t2.large",
-        "RoleArn": { "Fn::GetAtt" : [ "ExecutionRole", "Arn" ] }
-      }
-    },
-    "ExecutionRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "sagemaker.amazonaws.com"
-                ]
-              },
-              "Action": [
-                "sts:AssumeRole"
-              ]
-            }
-          ]
-        },
-        "Path": "/",
-        "Policies": [
-          {
-            "PolicyName": "root",
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Effect": "Allow",
-                  "Action": "*",
-                  "Resource": "*"
+    "Description": "Create Basic Notebook",
+    "Resources": {
+        "BasicNotebookInstance": {
+            "Type": "AWS::SageMaker::NotebookInstance",
+            "Properties": {
+                "InstanceType": "ml.t2.large",
+                "RoleArn": {
+                    "Fn::GetAtt": [
+                        "ExecutionRole",
+                        "Arn"
+                    ]
                 }
-              ]
             }
-          }
-        ]
-      }
+        },
+        "ExecutionRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "sagemaker.amazonaws.com"
+                                ]
+                            },
+                            "Action": [
+                                "sts:AssumeRole"
+                            ]
+                        }
+                    ]
+                },
+                "Path": "/",
+                "ManagedPolicyArns": [
+                    {
+                        "Fn::Sub": "arn:${AWS::Partition}:iam::aws:policy/AmazonSageMakerFullAccess"
+                    }
+                ]
+            }
+        }
+    },
+    "Outputs": {
+        "BasicNotebookInstanceId": {
+            "Value": {
+                "Ref": "BasicNotebookInstance"
+            }
+        }
     }
-  },
-  "Outputs": {
-    "BasicNotebookInstanceId": {
-       "Value": { "Ref" : "BasicNotebookInstance" }
-       }
-  },
-  
 }
 ```
 
 #### YAML<a name="aws-resource-sagemaker-notebookinstance--examples--SageMaker_Notebook_Instance_Example--yaml"></a>
 
 ```
-Description: "Basic NotebookInstance test update to a different instance type"
+Description: "Create basic notebook instance"
 Resources:
   BasicNotebookInstance:
     Type: "AWS::SageMaker::NotebookInstance"
@@ -282,16 +288,8 @@ Resources:
             Action: 
               - "sts:AssumeRole"
       Path: "/"
-      Policies: 
-        - 
-          PolicyName: "root"
-          PolicyDocument: 
-            Version: "2012-10-17"
-            Statement: 
-              - 
-                Effect: "Allow"
-                Action: "*"
-                Resource: "*"
+      ManagedPolicyArns:
+        - !Sub "arn:${AWS::Partition}:iam::aws:policy/AmazonSageMakerFullAccess"
 Outputs:
   BasicNotebookInstanceId:
     Value: !Ref BasicNotebookInstance

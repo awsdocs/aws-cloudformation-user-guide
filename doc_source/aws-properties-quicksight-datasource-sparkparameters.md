@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSource SparkParameters<a name="aws-properties-quicksight-datasource-sparkparameters"></a>
 
-Spark parameters\.
+The parameters for Spark\.
 
 ## Syntax<a name="aws-properties-quicksight-datasource-sparkparameters-syntax"></a>
 

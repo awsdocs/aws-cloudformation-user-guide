@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSource PostgreSqlParameters<a name="aws-properties-quicksight-datasource-postgresqlparameters"></a>
 
-PostgreSQL parameters\.
+The parameters for PostgreSQL\.
 
 ## Syntax<a name="aws-properties-quicksight-datasource-postgresqlparameters-syntax"></a>
 

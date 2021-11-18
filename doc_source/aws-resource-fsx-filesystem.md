@@ -14,8 +14,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[BackupId](#cfn-fsx-filesystem-backupid)" : String,
       "[FileSystemType](#cfn-fsx-filesystem-filesystemtype)" : String,
+      "[FileSystemTypeVersion](#cfn-fsx-filesystem-filesystemtypeversion)" : String,
       "[KmsKeyId](#cfn-fsx-filesystem-kmskeyid)" : String,
       "[LustreConfiguration](#cfn-fsx-filesystem-lustreconfiguration)" : LustreConfiguration,
+      "[OntapConfiguration](#cfn-fsx-filesystem-ontapconfiguration)" : OntapConfiguration,
       "[SecurityGroupIds](#cfn-fsx-filesystem-securitygroupids)" : [ String, ... ],
       "[StorageCapacity](#cfn-fsx-filesystem-storagecapacity)" : Integer,
       "[StorageType](#cfn-fsx-filesystem-storagetype)" : String,
@@ -33,9 +35,12 @@ Type: AWS::FSx::FileSystem
 Properties: 
   [BackupId](#cfn-fsx-filesystem-backupid): String
   [FileSystemType](#cfn-fsx-filesystem-filesystemtype): String
+  [FileSystemTypeVersion](#cfn-fsx-filesystem-filesystemtypeversion): String
   [KmsKeyId](#cfn-fsx-filesystem-kmskeyid): String
   [LustreConfiguration](#cfn-fsx-filesystem-lustreconfiguration): 
     LustreConfiguration
+  [OntapConfiguration](#cfn-fsx-filesystem-ontapconfiguration): 
+    OntapConfiguration
   [SecurityGroupIds](#cfn-fsx-filesystem-securitygroupids): 
     - String
   [StorageCapacity](#cfn-fsx-filesystem-storagecapacity): Integer
@@ -57,14 +62,23 @@ The ID of the source backup\. Specifies the backup you are copying\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FileSystemType`  <a name="cfn-fsx-filesystem-filesystemtype"></a>
-The type of Amazon FSx file system, either `LUSTRE` or `WINDOWS`\.  
+The type of Amazon FSx file system, which can be `LUSTRE` or `WINDOWS`\.  
+*Allowed Values*: `LUSTRE` \| `WINDOWS`  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `LUSTRE | WINDOWS`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`FileSystemTypeVersion`  <a name="cfn-fsx-filesystem-filesystemtypeversion"></a>
+The version of your Amazon FSx for Lustre file system, either `2.10` or `2.12`\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `20`  
+*Pattern*: `^[0-9](\.[0-9]*)*$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-fsx-filesystem-kmskeyid"></a>
-The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the file system's data for Amazon FSx for Windows File Server file systems and persistent Amazon FSx for Lustre file systems at rest\. In either case, if not specified, the Amazon FSx managed key is used\. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using Amazon FSx managed keys\. For more information, see [Encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) in the * AWS Key Management Service API Reference*\.  
+The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the file system's data for Amazon FSx for Windows File Server file systems and persistent Amazon FSx for Lustre file systems at rest\. If not specified, the Amazon FSx managed key is used\. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using Amazon FSx managed keys\. For more information, see [Encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) in the * AWS Key Management Service API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -73,6 +87,12 @@ The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the fil
 The Lustre configuration for the file system being created\.   
 *Required*: No  
 *Type*: [LustreConfiguration](aws-properties-fsx-filesystem-lustreconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`OntapConfiguration`  <a name="cfn-fsx-filesystem-ontapconfiguration"></a>
+The configuration for this FSx for NetApp ONTAP file system\.  
+*Required*: No  
+*Type*: [OntapConfiguration](aws-properties-fsx-filesystem-ontapconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-fsx-filesystem-securitygroupids"></a>
@@ -108,7 +128,7 @@ Sets the storage type for the file system you're creating\. Valid values are `SS
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-fsx-filesystem-subnetids"></a>
-Specifies the IDs of the subnets that the file system will be accessible from\. For Windows `MULTI_AZ_1` file system deployment types, provide exactly two subnet IDs, one for the preferred file server and one for the standby file server\. You specify one of these subnets as the preferred subnet using the `WindowsConfiguration > PreferredSubnetID` property\. For more information, see [ Availability and durability: Single\-AZ and Multi\-AZ file systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html)\.  
+Specifies the IDs of the subnets that the file system will be accessible from\. For the Windows `MULTI_AZ_1` file system deployment type, provide exactly two subnet IDs, one for the preferred file server and one for the standby file server\. You specify one of these subnets as the preferred subnet using the `WindowsConfiguration > PreferredSubnetID` property\. For more information, see [ Availability and durability: Single\-AZ and Multi\-AZ file systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html) in the *Amazon FSx for Windows User Guide*\.  
 For Windows `SINGLE_AZ_1` and `SINGLE_AZ_2` file system deployment types and Lustre file systems, provide exactly one subnet ID\. The file server is launched in that subnet's Availability Zone\.  
 *Required*: Yes  
 *Type*: List of String  
@@ -502,4 +522,114 @@ Resources:
 Outputs:
   FileSystemId:
     Value: !Ref WindowsMadFileSystemWithAllConfigs
+```
+
+### Create an Amazon FSx for Windows File Server File System with file access audit event logging enabled<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_with_file_access_audit_event_logging_enabled"></a>
+
+The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system with file access auditing enabled\. Audit event logs are emitted when end users make successful or failed attempts to access files, folders, and file shares on the file system\.
+
+#### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_with_file_access_audit_event_logging_enabled--json"></a>
+
+```
+{
+    "Resources": {
+        "WindowsMadFileSystemWithAllConfigs": {
+            "Type": "Dev::FSx::FileSystem",
+            "Properties": {
+                "FileSystemType": "WINDOWS",
+                "StorageCapacity": 100,
+                "SubnetIds": [
+                    {
+                        "Fn::ImportValue": "CfnFsxMadSubnet01"
+                    },
+                    {
+                        "Fn::ImportValue": "CfnFsxMadSubnet02"
+                    }
+                ],
+                "SecurityGroupIds": [
+                    {
+                        "Fn::ImportValue": "CfnWindowsIngressSecurityGroupId"
+                    }
+                ],
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "windows"
+                    }
+                ],
+                "WindowsConfiguration": {
+                    "ActiveDirectoryId": {
+                        "Fn::ImportValue": "CfnFsxMadDirectoryServiceId"
+                    },
+                    "ThroughputCapacity": 32,
+                    "DeploymentType": "MULTI_AZ_1",
+                    "PreferredSubnetId": {
+                        "Fn::ImportValue": "CfnFsxMadSubnet01"
+                    }
+                    "AuditLogConfiguration": {
+                        "FileAccessAuditLogLevel": "SUCCESS_AND_FAILURE",
+                        "FileShareAccessAuditLogLevel": "SUCCESS_AND_FAILURE",
+                        "AuditLogDestination": 
+                        {
+                          "Fn::Select": [
+                            0,
+                            {
+                              "Fn::Split": [
+                                ":*",
+                                {
+                                  "Fn::ImportValue": "CfnWindowsFileAccessAuditingLogGroupArn"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "FileSystemId": {
+             "Value": {
+                "Ref": "WindowsMadFileSystemWithAllConfigs"
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_with_file_access_audit_event_logging_enabled--yaml"></a>
+
+```
+Resources:
+  WindowsMadFileSystemWithAllConfigs:
+    Type: "AWS::FSx::FileSystem"
+    Properties:
+      FileSystemType: "WINDOWS"
+      StorageCapacity: 100
+      SubnetIds:
+        - !ImportValue CfnFsxMadSubnet01
+        - !ImportValue CfnFsxMadSubnet02
+      SecurityGroupIds:
+        - !ImportValue WindowsIngressSecurityGroupId
+      Tags:
+        - Key: Name
+          Value: windows
+      WindowsConfiguration:
+        ActiveDirectoryId: !ImportValue CfnFsxMadDirectoryServiceId
+        ThroughputCapacity: 32
+        DeploymentType: MULTI_AZ_1
+        PreferredSubnetId: !ImportValue CfnFsxMadSubnet01
+        AuditLogConfiguration:
+          FileAccessAuditLogLevel: "SUCCESS_AND_FAILURE"
+          FileShareAccessAuditLogLevel: "SUCCESS_AND_FAILURE"
+          AuditLogDestination: !Select
+            - 0
+            - !Split
+              - ':*'
+              - 'Fn::ImportValue': WindowsFileAccessAuditingLogGroupArn
+                
+Outputs:
+    FileSystemId:
+      Value: !Ref WindowsMadFileSystemWithAllConfigs
 ```

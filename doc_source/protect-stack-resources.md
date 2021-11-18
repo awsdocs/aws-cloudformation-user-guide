@@ -224,7 +224,7 @@ During a stack update, AWS CloudFormation automatically updates resources that d
    + For a template stored locally on your computer, select **Upload a template file**\. Choose **Choose File** to navigate to the file and select it, and then click **Next**\.
    + For a template stored in an Amazon S3 bucket, select **Amazon S3 URL**\. Enter or paste the URL for the template, and then click **Next**\.
 
-     If you have a template in a versioning\-enabled bucket, you can specify a specific version of the template, such as `https://s3.amazonaws.com/templates/myTemplate.template?versionId=123ab1cdeKdOW5IH4GAcYbEngcpTJTDW`\. For more information, see [Managing objects in a versioning\-enabled bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/managing-objects-versioned-bucket.html) in the *Amazon Simple Storage Service Console User Guide*\.
+     If you have a template in a versioning\-enabled bucket, you can specify a specific version of the template, such as `https://s3.amazonaws.com/templates/myTemplate.template?versionId=123ab1cdeKdOW5IH4GAcYbEngcpTJTDW`\. For more information, see [Managing objects in a versioning\-enabled bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/managing-objects-versioned-bucket.html) in the *Amazon Simple Storage Service User Guide*\.
 
 1. If your template contains parameters, on the **Specify stack details** page, enter or modify the parameter values, and then choose **Next**\.
 
@@ -306,7 +306,7 @@ You can't delete a stack policy\. To remove all protection from all resources, y
 
 The following example policies show how to prevent updates to all stack resources and to specific resources, and prevent specific types of updates\.
 
-### Prevent updates to all stack resources<a name="w9292ab1c23c17c29c21b4"></a>
+### Prevent updates to all stack resources<a name="w10432ab1c23c17c29c21b4"></a>
 
 To prevent updates to all stack resources, the following policy specifies a `Deny` statement for all update actions on all resources\.
 
@@ -323,7 +323,7 @@ To prevent updates to all stack resources, the following policy specifies a `Den
 }
 ```
 
-### Prevent updates to a single resource<a name="w9292ab1c23c17c29c21b6"></a>
+### Prevent updates to a single resource<a name="w10432ab1c23c17c29c21b6"></a>
 
 The following policy denies all update actions on the database with the `MyDatabase` logical ID\. It allows all update actions on all other stack resources with an `Allow` statement\. The `Allow` statement doesn't apply to the `MyDatabase` resource because the `Deny` statement always overrides allow actions\.
 
@@ -364,7 +364,7 @@ You can achieve the same result as the previous example by using a default denia
 **Important**  
 There is risk in using a default denial\. If you have an `Allow` statement elsewhere in the policy \(such as an `Allow` statement that uses a wildcard\), you might unknowingly grant update permission to resources that you don't intend to\. Because an explicit denial overrides any allow actions, you can ensure that a resource is protected by using a `Deny` statement\.
 
-### Prevent updates to all instances of a resource type<a name="w9292ab1c23c17c29c21b8"></a>
+### Prevent updates to all instances of a resource type<a name="w10432ab1c23c17c29c21b8"></a>
 
 The following policy denies all update actions on the RDS DB instance resource type\. It allows all update actions on all other stack resources with an `Allow` statement\. The `Allow` statement doesn't apply to the RDS DB instance resources because a `Deny` statement always overrides allow actions\.
 
@@ -392,7 +392,7 @@ The following policy denies all update actions on the RDS DB instance resource t
 }
 ```
 
-### Prevent replacement updates for an instance<a name="w9292ab1c23c17c29c21c10"></a>
+### Prevent replacement updates for an instance<a name="w10432ab1c23c17c29c21c10"></a>
 
 The following policy denies updates that would cause a replacement of the instance with the `MyInstance` logical ID\. It allows all update actions on all other stack resources with an `Allow` statement\. The `Allow` statement doesn't apply to the `MyInstance` resource because the `Deny` statement always overrides allow actions\.
 
@@ -415,7 +415,7 @@ The following policy denies updates that would cause a replacement of the instan
 }
 ```
 
-### Prevent updates to nested stacks<a name="w9292ab1c23c17c29c21c12"></a>
+### Prevent updates to nested stacks<a name="w10432ab1c23c17c29c21c12"></a>
 
 The following policy denies all update actions on the AWS CloudFormation stack resource type \(nested stacks\)\. It allows all update actions on all other stack resources with an `Allow` statement\. The `Allow` statement doesn't apply to the AWS CloudFormationstack resources because the `Deny` statement always overrides allow actions\.
 

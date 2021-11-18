@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ConfigUri](#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-configuri)" : String,
-  "[Environment](#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-environment)" : Environment,
+  "[Environment](#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-environment)" : {Key : Value, ...},
   "[ImageUri](#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-imageuri)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ConfigUri](#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-configuri): String
   [Environment](#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-environment): 
-    Environment
+    Key : Value
   [ImageUri](#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-imageuri): String
 ```
 
@@ -38,7 +38,7 @@ JSON formatted S3 file that defines bias parameters\. For more information on th
 `Environment`  <a name="cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-environment"></a>
 Sets the environment variables in the Docker container\.  
 *Required*: No  
-*Type*: [Environment](aws-properties-sagemaker-modelbiasjobdefinition-environment.md)  
+*Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ImageUri`  <a name="cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification-imageuri"></a>

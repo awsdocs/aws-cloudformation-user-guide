@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DefaultDimensionValue`  <a name="cfn-ses-configurationseteventdestination-dimensionconfiguration-defaultdimensionvalue"></a>
 The default value of the dimension that is published to Amazon CloudWatch if you do not provide the value of the dimension when you send an email\. The default value must meet the following requirements:  
-+ Contain only ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
++ Contain only ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), dashes \(\-\), at signs \(@\), or periods \(\.\)\.
 + Contain 256 characters or fewer\.
 *Required*: Yes  
 *Type*: String  

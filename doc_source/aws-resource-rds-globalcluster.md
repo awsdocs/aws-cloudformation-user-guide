@@ -149,7 +149,7 @@ The following example creates a global database cluster with an Aurora MySQL DB 
                 },
                 "DBClusterParameterGroupName": "default.aurora-mysql5.7",
                 "Engine": "aurora-mysql",
-                "EngineVersion": "5.7.mysql_aurora.2.08.0"
+                "EngineVersion": "5.7.mysql_aurora.2.10.0"
             }
         },
         "RDSDBInstance": {
@@ -206,7 +206,7 @@ Resources:
       MasterUserPassword: !Ref password
       DBClusterParameterGroupName: default.aurora-mysql5.7
       Engine: aurora-mysql
-      EngineVersion: 5.7.mysql_aurora.2.08.0
+      EngineVersion: 5.7.mysql_aurora.2.10.0
   RDSDBInstance:
     Type: 'AWS::RDS::DBInstance'
     Properties:
@@ -369,7 +369,7 @@ Specify the `GlobalClusterIdentifier` of a global database cluster with the prim
                 },
                 "DBClusterParameterGroupName": "default.aurora-mysql5.7",
                 "Engine": "aurora-mysql",
-                "EngineVersion": "5.7.mysql_aurora.2.08.0"
+                "EngineVersion": "5.7.mysql_aurora.2.10.0"
             }
         },
         "RDSDBInstance": {
@@ -404,7 +404,7 @@ Resources:
       GlobalClusterIdentifier: !Ref GlobalClusterIdentifier
       DBClusterParameterGroupName: default.aurora-mysql5.7
       Engine: aurora-mysql
-      EngineVersion: 5.7.mysql_aurora.2.08.0
+      EngineVersion: 5.7.mysql_aurora.2.10.0
   RDSDBInstance:
     Type: 'AWS::RDS::DBInstance'
     Properties:
@@ -459,7 +459,7 @@ The following template was used to create DB cluster that you want to add to the
                 },
                 "DBClusterParameterGroupName": "default.aurora-mysql5.7",
                 "Engine": "aurora-mysql",
-                "EngineVersion": "5.7.mysql_aurora.2.08.0"
+                "EngineVersion": "5.7.mysql_aurora.2.10.0"
             }
         },
         "RDSDBInstance": {
@@ -527,7 +527,7 @@ The following template adds the DB cluster created by the previous template to a
                 },
                 "DBClusterParameterGroupName": "default.aurora-mysql5.7",
                 "Engine": "aurora-mysql",
-                "EngineVersion": "5.7.mysql_aurora.2.08.0"
+                "EngineVersion": "5.7.mysql_aurora.2.10.0"
             }
         },
         "RDSDBInstance": {
@@ -576,7 +576,7 @@ Resources:
       MasterUserPassword: !Ref password
       DBClusterParameterGroupName: default.aurora-mysql5.7
       Engine: aurora-mysql
-      EngineVersion: 5.7.mysql_aurora.2.08.0
+      EngineVersion: 5.7.mysql_aurora.2.10.0
   RDSDBInstance:
     Type: 'AWS::RDS::DBInstance'
     Properties:
@@ -621,7 +621,7 @@ Resources:
       MasterUserPassword: !Ref password
       DBClusterParameterGroupName: default.aurora-mysql5.7
       Engine: aurora-mysql
-      EngineVersion: 5.7.mysql_aurora.2.08.0
+      EngineVersion: 5.7.mysql_aurora.2.10.0
   RDSDBInstance:
     Type: 'AWS::RDS::DBInstance'
     Properties:

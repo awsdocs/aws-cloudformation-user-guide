@@ -1,4 +1,4 @@
-# AppConfig resource type reference<a name="AWS_AppConfig"></a>
+# AWS AppConfig resource type reference<a name="AWS_AppConfig"></a>
 
 **Resource types**
 + [AWS::AppConfig::Application](aws-resource-appconfig-application.md)

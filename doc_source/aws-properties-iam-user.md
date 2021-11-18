@@ -49,7 +49,7 @@ Properties:
 ## Properties<a name="aws-properties-iam-user-properties"></a>
 
 `Groups`  <a name="cfn-iam-user-groups"></a>
-A list of groups to which you want to add the user\.  
+A list of group names to which you want to add the user\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -48,7 +48,7 @@ The name of the pipeline\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9_]+$`  
+*Pattern*: `(^(?!_{2}))(^[a-zA-Z0-9_]+$)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-iotanalytics-pipeline-tags"></a>

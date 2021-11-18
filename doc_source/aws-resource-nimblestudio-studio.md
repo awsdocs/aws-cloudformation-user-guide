@@ -50,7 +50,7 @@ The IAM role that studio admins assume when logging in to the Nimble Studio port
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisplayName`  <a name="cfn-nimblestudio-studio-displayname"></a>
-A friendly name for the studio\.   
+A friendly name for the studio\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -75,7 +75,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UserRoleArn`  <a name="cfn-nimblestudio-studio-userrolearn"></a>
-The IAM role that studio users assume when logging in to the Nimble Studio portal\.   
+The IAM role that studio users assume when logging in to the Nimble Studio portal\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

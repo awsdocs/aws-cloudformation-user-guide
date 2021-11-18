@@ -109,9 +109,7 @@ The following shows an example regex pattern set specification\.
 #### JSON<a name="aws-resource-wafv2-regexpatternset--examples--Create_a_regex_pattern_set--json"></a>
 
 ```
-"Description": "Create RegexPatternSet example",
-  "Resources": {
-    "ExampleRegexPatternSet": {
+ "ExampleRegexPatternSet": {
       "Type": "AWS::WAFv2::RegexPatternSet",
       "Properties": {
         "Name": "ExampleRegexPatternSet1",
@@ -123,15 +121,12 @@ The following shows an example regex pattern set specification\.
         ]
       }
     }
-  }
 ```
 
 #### YAML<a name="aws-resource-wafv2-regexpatternset--examples--Create_a_regex_pattern_set--yaml"></a>
 
 ```
-Description: Create RegexPatternSet example
-Resources:
-  ExampleRegexPatternSet:
+ ExampleRegexPatternSet:
     Type: AWS::WAFv2::RegexPatternSet
     Properties:
       Name: ExampleRegexPatternSet

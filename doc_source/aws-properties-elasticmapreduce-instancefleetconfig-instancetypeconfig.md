@@ -1,6 +1,6 @@
 # AWS::EMR::InstanceFleetConfig InstanceTypeConfig<a name="aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig"></a>
 
-`InstanceType` config is a subproperty of `InstanceFleetConfig`\. An instance type configuration specifies each instance type in an instance fleet\. The configuration determines the EC2 instances Amazon EMR attempts to provision to fulfill On\-Demand and Spot target capacities\. There can be a maximum of 5 instance type configurations in a fleet\.
+`InstanceType` config is a subproperty of `InstanceFleetConfig`\. An instance type configuration specifies each instance type in an instance fleet\. The configuration determines the EC2 instances Amazon EMR attempts to provision to fulfill On\-Demand and Spot target capacities\.
 
 **Note**  
 The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\.

@@ -44,7 +44,7 @@ For a list of status codes that you can use in your custom reqponses, see [Suppo
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `200`  
-*Maximum*: `600`  
+*Maximum*: `599`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseHeaders`  <a name="cfn-wafv2-webacl-customresponse-responseheaders"></a>

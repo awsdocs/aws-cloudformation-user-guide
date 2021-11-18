@@ -1,6 +1,6 @@
 # AWS::AppConfig::ConfigurationProfile Validators<a name="aws-properties-appconfig-configurationprofile-validators"></a>
 
-A validator provides a syntactic or semantic check to ensure the configuration you want to deploy functions as intended\. To validate your application configuration data, you provide a schema or a Lambda function that runs against the configuration\. The configuration deployment or update can only proceed when the configuration data is valid\.
+A validator provides a syntactic or semantic check to ensure the configuration that you want to deploy functions as intended\. To validate your application configuration data, you provide a schema or a Lambda function that runs against the configuration\. The configuration deployment or update can only proceed when the configuration data is valid\.
 
 ## Syntax<a name="aws-properties-appconfig-configurationprofile-validators-syntax"></a>
 

@@ -2,7 +2,7 @@
 
 ## Custom resource provider response fields<a name="crpg-ref-responses-fields"></a>
 
-The following are properties that the custom resource provider includes when it sends the JSON file to the presigned URL\. For more information about uploading objects by using presigned URLs, see the related [topic](https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html) in the *Amazon Simple Storage Service Developer Guide*\.
+The following are properties that the custom resource provider includes when it sends the JSON file to the presigned URL\. For more information about uploading objects by using presigned URLs, see the related [topic](https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html) in the *Amazon Simple Storage Service User Guide*\.
 
 **Note**  
 The total size of the response body cannot exceed 4096 bytes\.

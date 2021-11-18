@@ -76,7 +76,7 @@ Whether input data distributed in Amazon S3 is fully replicated or sharded by an
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `S3InputMode`  <a name="cfn-sagemaker-modelexplainabilityjobdefinition-endpointinput-s3inputmode"></a>
-Whether the `Pipe` or `File` is used as the input mode for transfering data for the monitoring job\. `Pipe` mode is recommended for large datasets\. `File` mode is useful for small files that fit in memory\. Defaults to `File`\.  
+Whether the `Pipe` or `File` is used as the input mode for transferring data for the monitoring job\. `Pipe` mode is recommended for large datasets\. `File` mode is useful for small files that fit in memory\. Defaults to `File`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `File | Pipe`  

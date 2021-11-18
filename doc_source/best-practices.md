@@ -46,7 +46,7 @@ For example, you might have a network stack that includes a VPC, a security grou
 
 ## Verify quotas for all resource types<a name="limits"></a>
 
-Before launching a stack, ensure that you can create all the resources that you want without hitting your AWS account limits\. If you hit a limit, CloudFormation won't create your stack successfully until you increase your quota or delete extra resources\. Each service can have various limits that you should be aware of before launching a stack\. For example, by default, you can only launch 200 CloudFormation stacks per region in your AWS account\. For more information about limits and how to increase the default limits, see [AWS service limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
+Before launching a stack, ensure that you can create all the resources that you want without hitting your AWS account limits\. If you hit a limit, CloudFormation won't create your stack successfully until you increase your quota or delete extra resources\. Each service can have various limits that you should be aware of before launching a stack\. For example, by default, you can only launch 2000 CloudFormation stacks per region in your AWS account\. For more information about limits and how to increase the default limits, see [AWS service limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
 
 ## Reuse templates to replicate stacks in multiple environments<a name="reuse"></a>
 

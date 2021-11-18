@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DatabaseName](#cfn-glue-crawler-databasename)" : String,
       "[Description](#cfn-glue-crawler-description)" : String,
       "[Name](#cfn-glue-crawler-name)" : String,
+      "[RecrawlPolicy](#cfn-glue-crawler-recrawlpolicy)" : RecrawlPolicy,
       "[Role](#cfn-glue-crawler-role)" : String,
       "[Schedule](#cfn-glue-crawler-schedule)" : Schedule,
       "[SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy)" : SchemaChangePolicy,
@@ -40,6 +41,8 @@ Properties:
   [DatabaseName](#cfn-glue-crawler-databasename): String
   [Description](#cfn-glue-crawler-description): String
   [Name](#cfn-glue-crawler-name): String
+  [RecrawlPolicy](#cfn-glue-crawler-recrawlpolicy): 
+    RecrawlPolicy
   [Role](#cfn-glue-crawler-role): String
   [Schedule](#cfn-glue-crawler-schedule): 
     Schedule
@@ -88,6 +91,12 @@ The name of the crawler\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`RecrawlPolicy`  <a name="cfn-glue-crawler-recrawlpolicy"></a>
+A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run\.  
+*Required*: No  
+*Type*: [RecrawlPolicy](aws-properties-glue-crawler-recrawlpolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Role`  <a name="cfn-glue-crawler-role"></a>
 The Amazon Resource Name \(ARN\) of an IAM role that's used to access customer resources, such as Amazon Simple Storage Service \(Amazon S3\) data\.  

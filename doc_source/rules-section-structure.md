@@ -2,7 +2,7 @@
 
 The optional `Rules` section validates a parameter or a combination of parameters passed to a template during a stack creation or stack update\. To use template rules, explicitly declare `Rules` in your template followed by an assertion\. Use the rules section to validate parameter values before creating or updating resources\.
 
-## Working with rules<a name="w9292ab1c27c15c19b5"></a>
+## Working with rules<a name="w10432ab1c27c15c19b5"></a>
 
 Each template rule consists of two properties:
 + *Rule condition* \(optional\) — determines when a rule takes effect\.
@@ -600,14 +600,14 @@ You will be billed for the AWS resources used if you create a stack from this te
                             "UseALBSSL",
                             {
                                 "IpProtocol": "tcp",
-                                "FromPort": "443",
-                                "ToPort": "443",
+                                "FromPort": 443,
+                                "ToPort": 443,
                                 "CidrIp": "0.0.0.0/0"
                             },
                             {
                                 "IpProtocol": "tcp",
-                                "FromPort": "80",
-                                "ToPort": "80",
+                                "FromPort": 80,
+                                "ToPort": 80,
                                 "CidrIp": "0.0.0.0/0"
                             }
                         ]
@@ -694,8 +694,8 @@ You will be billed for the AWS resources used if you create a stack from this te
                 "SecurityGroupIngress": [
                     {
                         "IpProtocol": "tcp",
-                        "FromPort": "80",
-                        "ToPort": "80",
+                        "FromPort": 80,
+                        "ToPort": 80,
                         "SourceSecurityGroupId": {
                             "Fn::Select": [
                                 0,
@@ -710,8 +710,8 @@ You will be billed for the AWS resources used if you create a stack from this te
                     },
                     {
                         "IpProtocol": "tcp",
-                        "FromPort": "22",
-                        "ToPort": "22",
+                        "FromPort": 22,
+                        "ToPort": 22,
                         "CidrIp": {
                             "Ref": "SSHLocation"
                         }
@@ -1135,12 +1135,12 @@ Resources:
         - !If 
           - UseALBSSL
           - IpProtocol: tcp
-            FromPort: '443'
-            ToPort: '443'
+            FromPort: 443
+            ToPort: 443
             CidrIp: 0.0.0.0/0
           - IpProtocol: tcp
-            FromPort: '80'
-            ToPort: '80'
+            FromPort: 80
+            ToPort: 80
             CidrIp: 0.0.0.0/0
   ApplicationLoadBalancer:
     Type: 'AWS::ElasticLoadBalancingV2::LoadBalancer'
@@ -1184,16 +1184,16 @@ Resources:
       GroupDescription: Enable SSH access and HTTP access on the inbound port
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '80'
-          ToPort: '80'
+          FromPort: 80
+          ToPort: 80
           SourceSecurityGroupId: !Select 
             - 0
             - !GetAtt 
               - ApplicationLoadBalancer
               - SecurityGroups
         - IpProtocol: tcp
-          FromPort: '22'
-          ToPort: '22'
+          FromPort: 22
+          ToPort: 22
           CidrIp: !Ref SSHLocation
       VpcId: !Ref VpcId
   RecordSet:

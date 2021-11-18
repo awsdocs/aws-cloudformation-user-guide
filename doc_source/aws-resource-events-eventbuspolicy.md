@@ -90,6 +90,7 @@ A JSON string that describes the permission policy statement\. You can include a
 
 `StatementId`  <a name="cfn-events-eventbuspolicy-statementid"></a>
 An identifier string for the external account that you are granting permissions to\. If you later want to revoke the permission for this external account, specify this `StatementId` when you run [RemovePermission](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_RemovePermission.html)\.  
+Each `StatementId` must be unique\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -122,7 +123,7 @@ The following example grants permission to one AWS account with an account ID of
         "StatementId": "MyStatement",
         "Statement": {
             "Effect": "Allow",
-            "Principal" : {"AWS" : "arn:aws:iam::123456789012:root"},
+            "Principal" : {"AWS" : "arn:aws:iam::111122223333:root"},
             "Action": "events:PutEvents",
             "Resource": "arn:aws:events:us-east-1:111122223333:event-bus/default"
         }
@@ -140,7 +141,7 @@ SampleEventBusPolicy:
         Statement: 
             Effect: "Allow"
             Principal: 
-                AWS: "arn:aws:iam::123456789012:root"
+                AWS: "arn:aws:iam::111122223333:root"
             Action: "events:PutEvents"
             Resource: "arn:aws:events:us-east-1:111122223333:event-bus/default"
 ```
@@ -158,7 +159,7 @@ The following example grants permission to all AWS accounts in the organization 
         "StatementId": "MyStatement",
         "Statement": {
             "Effect": "Allow",
-            "Principal" : {"AWS" : "arn:aws:iam::123456789012:root"},
+            "Principal" : "*",
             "Action": "events:PutEvents",
             "Resource": "arn:aws:events:us-east-1:111122223333:event-bus/default",
             "Condition": {
@@ -178,8 +179,7 @@ SampleEventBusPolicy:
         StatementId: "MyStatement"
         Statement: 
             Effect: "Allow"
-            Principal: 
-                 AWS: "arn:aws:iam::123456789012:root"
+            Principal: "*"
             Action: "events:PutEvents"
             Resource: "arn:aws:events:us-east-1:111122223333:event-bus/default"
             Condition:
@@ -201,15 +201,12 @@ The following example demonstrates a deny policy statement using multiple princi
         "Statement": {
             "Effect": "Deny",
             "Principal" : 
-                {"AWS" : ["arn:aws:iam::123456789012:root", "arn:aws:iam::999988887777:user/bob"]},
+                {"AWS" : ["arn:aws:iam::111122223333:user/alice", "arn:aws:iam::111122223333:user/bob"]},
             "Action": [
                 "events:PutEvents",
                 "events:PutRule"
             ],
-            "Resource": "arn:aws:events:us-east-1:111122223333:event-bus/default",
-            "Condition": {
-                "StringEquals": {"aws:PrincipalOrgID": "o-1234567890"}
-             }
+            "Resource": "arn:aws:events:us-east-1:111122223333:event-bus/default"
         }
     }
 }
@@ -218,7 +215,7 @@ The following example demonstrates a deny policy statement using multiple princi
 #### YAML<a name="aws-resource-events-eventbuspolicy--examples--Deny_policy_using_multiple_principals_and_actions--yaml"></a>
 
 ```
-SampleEventBusPolicy: 
+SampleDenyEventBusPolicy: 
     Type: AWS::Events::EventBusPolicy
     Properties: 
         StatementId: "MyDenyStatement"
@@ -226,20 +223,17 @@ SampleEventBusPolicy:
             Effect: "Deny"
             Principal: 
                 AWS: 
-                    - "arn:aws:iam::123456789012:root"
-                    - "arn:aws:iam::999988887777:user/bob"
+                    - "arn:aws:iam::111122223333:user/alice"
+                    - "arn:aws:iam::111122223333:user/bob"
             Action: 
                 - "events:PutEvents"
-                -  "events:PutRule"
+                - "events:PutRule"
             Resource: "arn:aws:events:us-east-1:111122223333:event-bus/default"
-            Condition:
-                StringEquals:
-                    "aws:PrincipalOrgID": "o-1234567890"
 ```
 
 ### Grant Permission to an Organization using a custom event bus<a name="aws-resource-events-eventbuspolicy--examples--Grant_Permission_to_an_Organization_using_a_custom_event_bus"></a>
 
-The following example grants permission to all AWS accounts in the organization with an organization ID of `o\-1234567890` using a custom event bus\.
+The following example grants permission to all AWS accounts in the organization with an organization ID of `o-1234567890` using a custom event bus\.
 
 #### JSON<a name="aws-resource-events-eventbuspolicy--examples--Grant_Permission_to_an_Organization_using_a_custom_event_bus--json"></a>
 
@@ -259,15 +253,16 @@ The following example grants permission to all AWS accounts in the organization 
         "StatementId": "MyCustomEventBusStatement",
         "Statement": {
             "Effect": "Allow",
-            "Principal": {
-                   "AWS": "*"
-            },
+            "Principal" : "*",
             "Action": "events:PutEvents",
             "Resource": {
                 "Fn::GetAtt": [
                     "SampleCustomEventBus",
                     "Arn"
                 ]
+            },
+            "Condition": {
+                "StringEquals": {"aws:PrincipalOrgID": "o-1234567890"}
             }
         }
     }
@@ -290,8 +285,10 @@ SampleCustomEventBusPolicy:
         StatementId: "MyCustomEventBusStatement"
         Statement:
             Effect: "Allow"
-            Principal: 
-                  AWS: "*"
+            Principal: "*"
             Action: "events:PutEvents"
             Resource: !GetAtt "SampleCustomEventBus.Arn"
+            Condition:
+                StringEquals:
+                    "aws:PrincipalOrgID": "o-1234567890"
 ```

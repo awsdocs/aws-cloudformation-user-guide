@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `HealthyThreshold`  <a name="cfn-apprunner-service-healthcheckconfiguration-healthythreshold"></a>
 The number of consecutive checks that must succeed before App Runner decides that the service is healthy\.  
-Default: `3`   
+Default: `1`   
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -79,7 +79,7 @@ Default: `2`
 
 `UnhealthyThreshold`  <a name="cfn-apprunner-service-healthcheckconfiguration-unhealthythreshold"></a>
 The number of consecutive checks that must fail before App Runner decides that the service is unhealthy\.  
-Default: `3`   
+Default: `5`   
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  

@@ -1,4 +1,4 @@
-# MediaPackage resource type reference<a name="AWS_MediaPackage"></a>
+# AWS Elemental MediaPackage resource type reference<a name="AWS_MediaPackage"></a>
 
 **Resource types**
 + [AWS::MediaPackage::Asset](aws-resource-mediapackage-asset.md)

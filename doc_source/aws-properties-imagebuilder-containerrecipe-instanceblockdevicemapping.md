@@ -44,7 +44,7 @@ Use to manage Amazon EBS\-specific configuration for this mapping\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NoDevice`  <a name="cfn-imagebuilder-containerrecipe-instanceblockdevicemapping-nodevice"></a>
-Use to remove a mapping from the parent image\.  
+Use to remove a mapping from the base image\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

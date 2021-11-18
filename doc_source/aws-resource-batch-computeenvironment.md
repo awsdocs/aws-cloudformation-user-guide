@@ -1,6 +1,6 @@
 # AWS::Batch::ComputeEnvironment<a name="aws-resource-batch-computeenvironment"></a>
 
-The `AWS::Batch::ComputeEnvironment` resource defines your AWS Batch compute environment\. You can define `MANAGED` or `UNMANAGED` compute environments\. `MANAGED` compute environments can use Amazon EC2 or resources\. `UNMANAGED` compute environments can only use EC2 resources\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.
+The `AWS::Batch::ComputeEnvironment` resource defines your AWS Batch compute environment\. You can define `MANAGED` or `UNMANAGED` compute environments\. `MANAGED` compute environments can use Amazon EC2 or AWS Fargate resources\. `UNMANAGED` compute environments can only use EC2 resources\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.
 
 In a managed compute environment, AWS Batch manages the capacity and instance types of the compute resources within the environment\. This is based on the compute resource specification that you define or the [launch template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html) that you specify when you create the compute environment\. You can choose either to use EC2 On\-Demand Instances and EC2 Spot Instances, or to use Fargate and Fargate Spot capacity in your managed compute environment\. You can optionally set a maximum price so that Spot Instances only launch when the Spot Instance price is below a specified percentage of the On\-Demand price\.
 
@@ -31,7 +31,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ServiceRole](#cfn-batch-computeenvironment-servicerole)" : String,
       "[State](#cfn-batch-computeenvironment-state)" : String,
       "[Tags](#cfn-batch-computeenvironment-tags)" : Json,
-      "[Type](#cfn-batch-computeenvironment-type)" : String
+      "[Type](#cfn-batch-computeenvironment-type)" : String,
+      "[UnmanagedvCpus](#cfn-batch-computeenvironment-unmanagedvcpus)" : Integer
     }
 }
 ```
@@ -48,12 +49,13 @@ Properties:
   [State](#cfn-batch-computeenvironment-state): String
   [Tags](#cfn-batch-computeenvironment-tags): Json
   [Type](#cfn-batch-computeenvironment-type): String
+  [UnmanagedvCpus](#cfn-batch-computeenvironment-unmanagedvcpus): Integer
 ```
 
 ## Properties<a name="aws-resource-batch-computeenvironment-properties"></a>
 
 `ComputeEnvironmentName`  <a name="cfn-batch-computeenvironment-computeenvironmentname"></a>
-The name for your compute environment\. Up to 128 letters \(uppercase and lowercase\), numbers, hyphens, and underscores are allowed\.  
+The name for your compute environment\. It can be up to 128 letters long\. It can contain uppercase and lowercase letters, numbers, hyphens \(\-\), and underscores \(\_\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -66,7 +68,7 @@ The ComputeResources property type specifies details of the compute resources ma
 
 `ServiceRole`  <a name="cfn-batch-computeenvironment-servicerole"></a>
 The full Amazon Resource Name \(ARN\) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf\. For more information, see [ AWS Batch service IAM role](https://docs.aws.amazon.com/batch/latest/userguide/service_IAM_role.html) in the * AWS Batch User Guide*\.  
-If your account has already created the AWS Batch service\-linked role, that role is used by default for your compute environment unless you specify a role here\. If the AWS Batch service\-linked role does not exist in your account, and no role is specified here, the service will try to create the AWS Batch service\-linked role in your account\.
+If your account already created the AWS Batch service\-linked role, that role is used by default for your compute environment unless you specify a different role here\. If the AWS Batch service\-linked role doesn't exist in your account, and no role is specified here, the service attempts to create the AWS Batch service\-linked role in your account\.
 If your specified role has a path other than `/`, then you must specify either the full role ARN \(recommended\) or prefix the role name with the path\. For example, if a role with the name `bar` has a path of `/foo/` then you would specify `/foo/bar` as the role name\. For more information, see [Friendly names and paths](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names) in the *IAM User Guide*\.  
 Depending on how you created your AWS Batch service role, its ARN might contain the `service-role` path prefix\. When you only specify the name of the service role, AWS Batch assumes that your ARN doesn't use the `service-role` path prefix\. Because of this, we recommend that you specify the full ARN of your service role when you create compute environments\.
 *Required*: No  
@@ -94,6 +96,13 @@ The type of the compute environment: `MANAGED` or `UNMANAGED`\. For more informa
 *Type*: String  
 *Allowed values*: `MANAGED | UNMANAGED`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`UnmanagedvCpus`  <a name="cfn-batch-computeenvironment-unmanagedvcpus"></a>
+The maximum number of vCPUs for an unmanaged compute environment\. This parameter is only used for fair share scheduling to reserve vCPU capacity for new share identifiers\. If this parameter isn't provided for a fair share job queue, no vCPU capacity is reserved\.  
+This parameter is only supported when the `type` parameter is set to `UNMANAGED`/
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-batch-computeenvironment-return-values"></a>
 

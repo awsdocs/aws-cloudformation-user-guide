@@ -1,6 +1,6 @@
 # AWS::IoTAnalytics::Channel ServiceManagedS3<a name="aws-properties-iotanalytics-channel-servicemanageds3"></a>
 
-Use this to store channel data in an S3 bucket managed by AWS IoT Analytics\. You cannot change the choice of service\-managed or customer\-managed S3 storage after the channel is created\.
+Used to store channel data in an S3 bucket managed by AWS IoT Analytics\. You can't change the choice of S3 storage after the data store is created\.
 
 ## Syntax<a name="aws-properties-iotanalytics-channel-servicemanageds3-syntax"></a>
 

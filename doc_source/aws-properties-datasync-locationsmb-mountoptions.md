@@ -27,4 +27,4 @@ The specific SMB version that you want DataSync to use to mount your SMB share\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `AUTOMATIC | SMB2 | SMB3`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -117,5 +117,5 @@ WebServerWaitHandle:
 4.   'Fn::Transform':
 5.     Name: 'AWS::Include'
 6.     Parameters:
-7.       Location : "s3://MyAmazonS3BucketName/single_wait_condition.yaml"
+7.       Location: "s3://MyAmazonS3BucketName/single_wait_condition.yaml"
 ```

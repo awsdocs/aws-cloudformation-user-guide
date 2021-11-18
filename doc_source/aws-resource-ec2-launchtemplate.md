@@ -1,6 +1,6 @@
 # AWS::EC2::LaunchTemplate<a name="aws-resource-ec2-launchtemplate"></a>
 
-Specifies a launch template for an Amazon EC2 instance\. A launch template contains the parameters to launch an instance\. For more information, see [Launching an instance from a launch template](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-launch-templates.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+Specifies a launch template for an Amazon EC2 instance\. A launch template contains the parameters to launch an instance\. For more information, see [Launch an instance from a launch template](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-launch-templates.html) in the *Amazon EC2 User Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-launchtemplate-syntax"></a>
 

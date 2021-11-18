@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder)" : [ ComputeEnvironmentOrder, ... ],
       "[JobQueueName](#cfn-batch-jobqueue-jobqueuename)" : String,
       "[Priority](#cfn-batch-jobqueue-priority)" : Integer,
+      "[SchedulingPolicyArn](#cfn-batch-jobqueue-schedulingpolicyarn)" : String,
       "[State](#cfn-batch-jobqueue-state)" : String,
       "[Tags](#cfn-batch-jobqueue-tags)" : Json
     }
@@ -30,6 +31,7 @@ Properties:
     - ComputeEnvironmentOrder
   [JobQueueName](#cfn-batch-jobqueue-jobqueuename): String
   [Priority](#cfn-batch-jobqueue-priority): Integer
+  [SchedulingPolicyArn](#cfn-batch-jobqueue-schedulingpolicyarn): String
   [State](#cfn-batch-jobqueue-state): String
   [Tags](#cfn-batch-jobqueue-tags): Json
 ```
@@ -44,7 +46,7 @@ All compute environments that are associated with a job queue must share the sam
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JobQueueName`  <a name="cfn-batch-jobqueue-jobqueuename"></a>
-The name of the job queue\. Up to 128 letters \(uppercase and lowercase\), numbers, and underscores are allowed\.  
+The name of the job queue\. It can be up to 128 letters long\. It can contain uppercase and lowercase letters, numbers, hyphens \(\-\), and underscores \(\_\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -53,6 +55,12 @@ The name of the job queue\. Up to 128 letters \(uppercase and lowercase\), numbe
 The priority of the job queue\. Job queues with a higher priority \(or a higher integer value for the `priority` parameter\) are evaluated first when associated with the same compute environment\. Priority is determined in descending order\. For example, a job queue with a priority value of `10` is given scheduling preference over a job queue with a priority value of `1`\. All of the compute environments must be either EC2 \(`EC2` or `SPOT`\) or Fargate \(`FARGATE` or `FARGATE_SPOT`\); EC2 and Fargate compute environments can't be mixed\.  
 *Required*: Yes  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SchedulingPolicyArn`  <a name="cfn-batch-jobqueue-schedulingpolicyarn"></a>
+The Amazon Resource Name \(ARN\) of the scheduling policy\. The format is `aws:Partition:batch:Region:Account:scheduling-policy/Name `\. For example, `aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy`\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `State`  <a name="cfn-batch-jobqueue-state"></a>

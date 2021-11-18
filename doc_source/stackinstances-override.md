@@ -56,7 +56,7 @@ To set any overridden parameters back to using the value specified in the stack 
 
 1. On the **Review** page, review your choices\. Note that the **Frequency** parameter displays a value in the **Override value** column, indicating that its value has been overridden at the stack level\.
 
-   Before you can override parameters for these stack instances, you must fill the check box in the **Capabilities** area to acknowledge that some of the resources that you are creating with the stack set might require new IAM resources and permissions\. For more information about potentially required permissions, see [Acknowledging IAM resources in AWS CloudFormation templates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-capabilities) in this guide\. When you are are ready, choose **Submit**\.
+   Before you can override parameters for these stack instances, you must fill the check box in the **Capabilities** area to acknowledge that some of the resources that you are creating with the stack set might require new IAM resources and permissions\. For more information about potentially required permissions, see [Acknowledging IAM resources in AWS CloudFormation templates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-capabilities) in this guide\. When you are ready, choose **Submit**\.
 
 1. AWS CloudFormation starts updating your stack instances\. View the progress and status of the stack instances in the stack set details page that opens when you choose **Submit**\.
 
@@ -92,7 +92,7 @@ The value of `MaxConcurrentCount` is dependent on the value of `FailureTolerance
    aws cloudformation update-stack-instances --stack-set-name my-awsconfig-stackset --parameter-overrides ParameterKey=MaximumExecutionFrequency,ParameterValue=TwentyFour_Hours\\,Twelve_Hours --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1 --deployment-targets OrganizationalUnitIds='["ou-rcuk-1x5j1lwo"]' --regions '["eu-west-1", "us-west-2"]'
    ```
 
-1. Verify that your parameter values were successfully overidden on stack instances by running the `describe-stack-set-operation` command to show the status and results of your update operation\. For `--operation-id`, use the operation ID that was returned by your `update-stack-instances` command\.
+1. Verify that your parameter values were successfully overridden on stack instances by running the `describe-stack-set-operation` command to show the status and results of your update operation\. For `--operation-id`, use the operation ID that was returned by your `update-stack-instances` command\.
 
    ```
    aws cloudformation describe-stack-set-operation --operation-id operation_ID

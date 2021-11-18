@@ -1,6 +1,6 @@
 # AWS::CloudFormation::PublicTypeVersion<a name="aws-resource-cloudformation-publictypeversion"></a>
 
-Tests and publishes a registered extension as a public, third\-party extension\. 
+Tests and publishes a registered extension as a public, third\-party extension\.
 
 CloudFormation first tests the extension to make sure it meets all necessary requirements for being published in the CloudFormation registry\. If it does, CloudFormation then publishes it to the registry as a public third\-party extension in this region\. Public extensions are available for use by all CloudFormation users\.
 + For resource types, testing includes passing all contracts tests defined for the type\.
@@ -8,7 +8,7 @@ CloudFormation first tests the extension to make sure it meets all necessary req
 
 For more information, see [Testing your public extension prior to publishing](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-testing) in the *CloudFormation CLI User Guide*\.
 
-If you do not specify a version, CloudFormation uses the default version of the extension in your account and region for testing\.
+If you don't specify a version, CloudFormation uses the default version of the extension in your account and region for testing\.
 
 To perform testing, CloudFormation assumes the execution role specified when the type was registered\.
 
@@ -76,7 +76,7 @@ Use the following format, and adhere to semantic versioning when assigning a ver
  `MAJOR.MINOR.PATCH`   
 For more information, see [Semantic Versioning 2\.0\.0](https://semver.org/)\.  
 If you do not specify a version number, CloudFormation increments the version number by one minor version release\.  
-The first time you publish a type, AWS CloudFormation sets the version number to `1.0.0`, regardless of the value you specify\.  
+You cannot specify a version number the first time you publish a type\. AWS CloudFormation automatically sets the first version number to be `1.0.0`\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `5`  

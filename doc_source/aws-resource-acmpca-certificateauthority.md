@@ -125,7 +125,7 @@ The Base64 PEM\-encoded certificate signing request \(CSR\) for your certificate
 
 ## Examples<a name="aws-resource-acmpca-certificateauthority--examples"></a>
 
-The following example of a CloudFormation template sets up a CA hierarchy\. The example illustrates the use of `AWS::ACMPCA::Certificate`, `AWS::ACMPCA::CertificateAuthority`, and `AWS::ACMPCA::CertificateAuthorityActivation` resources\. 
+The following example of a CloudFormation template sets up a CA hierarchy and permission\. The example illustrates the use of `AWS::ACMPCA::Certificate`, `AWS::ACMPCA::CertificateAuthority`, and `AWS::ACMPCA::CertificateAuthorityActivation`, and `AWS::ACMPCA::Permission` resources\. 
 
 ### Declaring a Private CA Hierarchy<a name="aws-resource-acmpca-certificateauthority--examples--Declaring_a_Private_CA_Hierarchy"></a>
 
@@ -200,6 +200,20 @@ The following example of a CloudFormation template sets up a CA hierarchy\. The 
             "Status":"ACTIVE"
          }
       },
+      "RootCAPermission":{
+         "Type":"AWS::ACMPCA::Permission",
+         "Properties":{
+            "Actions":[
+                "IssueCertificate",
+                "GetCertificate",
+                "ListPermissions"
+            ],
+            "CertificateAuthorityArn":{
+               "Ref":"RootCA"
+            },
+            "Principal":"acm.amazonaws.com"
+         }
+      },
       "SubordinateCAOne":{
          "Type":"AWS::ACMPCA::CertificateAuthority",
          "Properties":{
@@ -270,6 +284,20 @@ The following example of a CloudFormation template sets up a CA hierarchy\. The 
                ]
             },
             "Status":"ACTIVE"
+         }
+      },
+      "SubordinateCAOnePermission":{
+         "Type":"AWS::ACMPCA::Permission",
+         "Properties":{
+            "Actions":[
+                "IssueCertificate",
+                "GetCertificate",
+                "ListPermissions"
+            ],
+            "CertificateAuthorityArn":{
+               "Ref":"SubordinateCAOne"
+            },
+            "Principal":"acm.amazonaws.com"
          }
       },
       "SubordinateCATwo":{
@@ -344,6 +372,20 @@ The following example of a CloudFormation template sets up a CA hierarchy\. The 
                   "CompleteCertificateChain"
                ]
             }
+         }
+      },
+      "SubordinateCATwoPermission":{
+         "Type":"AWS::ACMPCA::Permission",
+         "Properties":{
+            "Actions":[
+                "IssueCertificate",
+                "GetCertificate",
+                "ListPermissions"
+            ],
+            "CertificateAuthorityArn":{
+               "Ref":"SubordinateCATwo"
+            },
+            "Principal":"acm.amazonaws.com"
          }
       },
       "EndEntityCertificate":{
@@ -461,6 +503,15 @@ Resources:
         - RootCACertificate
         - Certificate
       Status: ACTIVE
+  RootCAPermission:
+    Type: AWS::ACMPCA::Permission
+    Properties:
+      Actions:
+        - IssueCertificate
+        - GetCertificate
+        - ListPermissions
+      CertificateAuthorityArn: !Ref: RootCA
+      Principal: acm.amazonaws.com
   SubordinateCAOne:
     Type: AWS::ACMPCA::CertificateAuthority
     Properties:
@@ -513,6 +564,15 @@ Resources:
         - RootCAActivation
         - CompleteCertificateChain
       Status: ACTIVE
+  SubordinateCAOnePermission:
+    Type: AWS::ACMPCA::Permission
+    Properties:
+      Actions:
+        - IssueCertificate
+        - GetCertificate
+        - ListPermissions
+      CertificateAuthorityArn: !Ref: SubordinateCAOne
+      Principal: acm.amazonaws.com
   SubordinateCATwo:
     Type: AWS::ACMPCA::CertificateAuthority
     Properties:
@@ -566,6 +626,15 @@ Resources:
         Fn::GetAtt:
         - SubordinateCAOneActivation
         - CompleteCertificateChain
+  SubordinateCATwoPermission:
+    Type: AWS::ACMPCA::Permission
+    Properties:
+      Actions:
+        - IssueCertificate
+        - GetCertificate
+        - ListPermissions
+      CertificateAuthorityArn: !Ref: SubordinateCATwo
+      Principal: acm.amazonaws.com
   EndEntityCertificate:
     DependsOn: SubordinateCATwoActivation
     Type: AWS::ACMPCA::Certificate

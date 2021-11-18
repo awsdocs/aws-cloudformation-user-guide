@@ -150,306 +150,301 @@ The following shows an example rule group specification\.
 #### JSON<a name="aws-resource-wafv2-rulegroup--examples--Create_a_rule_group_--json"></a>
 
 ```
-"Description": "Create RuleGroups",
-  "Resources": {
-      "SampleRuleGroup": {
-          "Type": "AWS::WAFv2::RuleGroup",
-          "Properties": {
-              "Name": "SampleRuleGroup",
-              "Scope": "REGIONAL",
-              "Description": "SampleRuleGroup",
-              "VisibilityConfig": {
-                  "SampledRequestsEnabled": true,
-                  "CloudWatchMetricsEnabled": true,
-                  "MetricName": "SampleRuleGroupMetrics"
-              },
-              "CustomResponseBodies": {
-                  "CustomResponseBodyKey1": {
-                      "ContentType": "TEXT_PLAIN",
-                      "Content": "this is a plain text"
-                  },
-                  "CustomResponseBodyKey2": {
-                      "ContentType": "APPLICATION_JSON",
-                      "Content": "{\"jsonfieldname\": \"jsonfieldvalue\"}"
-                  },
-                  "CustomResponseBodyKey3": {
-                      "ContentType": "TEXT_HTML",
-                "Content": "<html>HTML text content</html>"
-                  }
-              },              
-              "Capacity": 1000,
-              "Rules": [
-                  {
-                      "Name": "RuleOne",
-                      "Priority": 1,
-                      "Action": {
-                          "Allow": {
-                              "CustomRequestHandling": {
-                                  "InsertHeaders": [
-                                      {
-                                          "Name": "AllowActionHeader1Name",
-                                          "Value": "AllowActionHeader1Value"
-                                      },
-                                      {
-                                          "Name": "AllowActionHeader2Name",
-                                          "Value": "AllowActionHeader2Value"
-                                      }
-                                  ]
-                              }
-                          }
-                      },
-                      "VisibilityConfig": {
-                          "SampledRequestsEnabled": true,
-                          "CloudWatchMetricsEnabled": true,
-                          "MetricName": "RuleOneMetric"
-                      },
-                      "Statement": {
-                          "ByteMatchStatement": {
-                              "FieldToMatch": {
-                                  "AllQueryArguments": {}
-                              },
-                              "PositionalConstraint": "CONTAINS",
-                              "SearchString": "testagent",
-                              "TextTransformations": [
-                                  {
-                                      "Priority": 1,
-                                      "Type": "HTML_ENTITY_DECODE"
-                                  }
-                              ]
-                          }
-                      }
-                  },
-                  {
-                      "Name": "RuleTwo",
-                      "Priority": 2,
-                      "Action": {
-                          "Block": {
-                              "CustomResponse": {
-                                  "ResponseCode": 503,
-                                  "CustomResponseBodyKey": "CustomResponseBodyKey1",
-                                  "ResponseHeaders": [
-                                      {
-                                          "Name": "BlockActionHeader1Name",
-                                          "Value": "BlockActionHeader1Value"
-                                      },
-                                      {
-                                          "Name": "BlockActionHeader2Name",
-                                          "Value": "BlockActionHeader2Value"
-                                      }
-                                  ]
-                              }
-                          }
-                      },
-                      "VisibilityConfig": {
-                          "SampledRequestsEnabled": true,
-                          "CloudWatchMetricsEnabled": true,
-                          "MetricName": "RuleTwoMetric"
-                      },
-                      "Statement": {
-                          "ByteMatchStatement": {
-                              "FieldToMatch": {
-                                  "SingleHeader": {
-                                      "Name": "haystack"
-                                  }
-                              },
-                              "PositionalConstraint": "CONTAINS",
-                              "SearchString": "badbot",
-                              "TextTransformations": [
-                                  {
-                                      "Priority": 0,
-                                      "Type": "NONE"
-                                  }
-                              ]
-                          }
-                      }
-                  },
-                  {
-                      "Name": "RuleThree",
-                      "Priority": 3,
-                      "Action": {
-                          "Count": {
-                              "CustomRequestHandling": {
-                                  "InsertHeaders": [
-                                      {
-                                          "Name": "CountActionHeader1Name",
-                                          "Value": "CountActionHeader1Value"
-                                      },
-                                      {
-                                          "Name": "CountActionHeader2Name",
-                                          "Value": "CountActionHeader2Value"
-                                      }
-                                  ]
-                              }
-                          }
-                      },
-                      "VisibilityConfig": {
-                          "SampledRequestsEnabled": true,
-                          "CloudWatchMetricsEnabled": true,
-                          "MetricName": "RuleThreeMetric"
-                      },
-                      "Statement": {
-                          "ByteMatchStatement": {
-                              "FieldToMatch": {
-                                  "Body": {}
-                              },
-                              "PositionalConstraint": "CONTAINS",
-                              "SearchString": "RegionOne",
-                              "TextTransformations": [
-                                  {
-                                      "Priority": 0,
-                                      "Type": "HTML_ENTITY_DECODE"
-                                  }
-                              ]
-                          }
-                      }
-                  },
-                  {
-                      "Name": "RuleFour",
-                      "Priority": 4,
-                      "Action": {
-                          "Allow": {}
-                      },
-                      "VisibilityConfig": {
-                          "SampledRequestsEnabled": true,
-                          "CloudWatchMetricsEnabled": true,
-                          "MetricName": "RuleFourMetric"
-                      },
-                      "Statement": {
-                          "SizeConstraintStatement": {
-                              "ComparisonOperator": "GT",
-                              "Size": 1000,
-                              "FieldToMatch": {
-                                  "UriPath": {}
-                              },
-                              "TextTransformations": [
-                                  {
-                                      "Priority": 0,
-                                      "Type": "NONE"
-                                  }
-                              ]
-                          }
-                      }
-                  }
-              ]
-          }
-      }
-  }
+    "SampleRuleGroup": {
+        "Type": "AWS::WAFv2::RuleGroup",
+        "Properties": {
+            "Name": "SampleRuleGroup",
+            "Scope": "REGIONAL",
+            "Description": "SampleRuleGroup",
+            "VisibilityConfig": {
+                "SampledRequestsEnabled": true,
+                "CloudWatchMetricsEnabled": true,
+                "MetricName": "SampleRuleGroupMetrics"
+            },
+            "CustomResponseBodies": {
+                "CustomResponseBodyKey1": {
+                    "ContentType": "TEXT_PLAIN",
+                    "Content": "this is a plain text"
+                },
+                "CustomResponseBodyKey2": {
+                    "ContentType": "APPLICATION_JSON",
+                    "Content": "{\"jsonfieldname\": \"jsonfieldvalue\"}"
+                },
+                "CustomResponseBodyKey3": {
+                    "ContentType": "TEXT_HTML",
+              "Content": "<html>HTML text content</html>"
+                }
+            },              
+            "Capacity": 1000,
+            "Rules": [
+                {
+                    "Name": "RuleOne",
+                    "Priority": 1,
+                    "Action": {
+                        "Allow": {
+                            "CustomRequestHandling": {
+                                "InsertHeaders": [
+                                    {
+                                        "Name": "AllowActionHeader1Name",
+                                        "Value": "AllowActionHeader1Value"
+                                    },
+                                    {
+                                        "Name": "AllowActionHeader2Name",
+                                        "Value": "AllowActionHeader2Value"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "VisibilityConfig": {
+                        "SampledRequestsEnabled": true,
+                        "CloudWatchMetricsEnabled": true,
+                        "MetricName": "RuleOneMetric"
+                    },
+                    "Statement": {
+                        "ByteMatchStatement": {
+                            "FieldToMatch": {
+                                "AllQueryArguments": {}
+                            },
+                            "PositionalConstraint": "CONTAINS",
+                            "SearchString": "testagent",
+                            "TextTransformations": [
+                                {
+                                    "Priority": 1,
+                                    "Type": "HTML_ENTITY_DECODE"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "Name": "RuleTwo",
+                    "Priority": 2,
+                    "Action": {
+                        "Block": {
+                            "CustomResponse": {
+                                "ResponseCode": 503,
+                                "CustomResponseBodyKey": "CustomResponseBodyKey1",
+                                "ResponseHeaders": [
+                                    {
+                                        "Name": "BlockActionHeader1Name",
+                                        "Value": "BlockActionHeader1Value"
+                                    },
+                                    {
+                                        "Name": "BlockActionHeader2Name",
+                                        "Value": "BlockActionHeader2Value"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "VisibilityConfig": {
+                        "SampledRequestsEnabled": true,
+                        "CloudWatchMetricsEnabled": true,
+                        "MetricName": "RuleTwoMetric"
+                    },
+                    "Statement": {
+                        "ByteMatchStatement": {
+                            "FieldToMatch": {
+                                "SingleHeader": {
+                                    "Name": "haystack"
+                                }
+                            },
+                            "PositionalConstraint": "CONTAINS",
+                            "SearchString": "badbot",
+                            "TextTransformations": [
+                                {
+                                    "Priority": 0,
+                                    "Type": "NONE"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "Name": "RuleThree",
+                    "Priority": 3,
+                    "Action": {
+                        "Count": {
+                            "CustomRequestHandling": {
+                                "InsertHeaders": [
+                                    {
+                                        "Name": "CountActionHeader1Name",
+                                        "Value": "CountActionHeader1Value"
+                                    },
+                                    {
+                                        "Name": "CountActionHeader2Name",
+                                        "Value": "CountActionHeader2Value"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "VisibilityConfig": {
+                        "SampledRequestsEnabled": true,
+                        "CloudWatchMetricsEnabled": true,
+                        "MetricName": "RuleThreeMetric"
+                    },
+                    "Statement": {
+                        "ByteMatchStatement": {
+                            "FieldToMatch": {
+                                "Body": {}
+                            },
+                            "PositionalConstraint": "CONTAINS",
+                            "SearchString": "RegionOne",
+                            "TextTransformations": [
+                                {
+                                    "Priority": 0,
+                                    "Type": "HTML_ENTITY_DECODE"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "Name": "RuleFour",
+                    "Priority": 4,
+                    "Action": {
+                        "Allow": {}
+                    },
+                    "VisibilityConfig": {
+                        "SampledRequestsEnabled": true,
+                        "CloudWatchMetricsEnabled": true,
+                        "MetricName": "RuleFourMetric"
+                    },
+                    "Statement": {
+                        "SizeConstraintStatement": {
+                            "ComparisonOperator": "GT",
+                            "Size": 1000,
+                            "FieldToMatch": {
+                                "UriPath": {}
+                            },
+                            "TextTransformations": [
+                                {
+                                    "Priority": 0,
+                                    "Type": "NONE"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
 ```
 
 #### YAML<a name="aws-resource-wafv2-rulegroup--examples--Create_a_rule_group_--yaml"></a>
 
 ```
-Description: Create RuleGroups
-  Resources:
-  SampleRuleGroup:
-    Type: 'AWS::WAFv2::RuleGroup'
-    Properties:
-      Name: SampleRuleGroup
-      Scope: REGIONAL
-      Description: SampleRuleGroup
-      VisibilityConfig:
-        SampledRequestsEnabled: true
-        CloudWatchMetricsEnabled: true
-        MetricName: SampleRuleGroupMetrics
-      CustomResponseBodies:
-        CustomResponseBodyKey1:
-          ContentType: TEXT_PLAIN
-          Content: this is a plain text
-        CustomResponseBodyKey2:
-          ContentType: APPLICATION_JSON
-          Content: '{"jsonfieldname": "jsonfieldvalue"}'
-        CustomResponseBodyKey3:
-          ContentType: TEXT_HTML
-                Content: <html>HTML text content</html>
-      Capacity: 1000
-      Rules:
-        - Name: RuleOne
-          Priority: 1
-          Action:
-            Allow:
-              CustomRequestHandling:
-                InsertHeaders:
-                  - Name: AllowActionHeader1Name
-                    Value: AllowActionHeader1Value
-                  - Name: AllowActionHeader2Name
-                    Value: AllowActionHeader2Value
-          VisibilityConfig:
-            SampledRequestsEnabled: true
-            CloudWatchMetricsEnabled: true
-            MetricName: RuleOneMetric
-          Statement:
-            ByteMatchStatement:
-              FieldToMatch:
-                AllQueryArguments: {}
-              PositionalConstraint: CONTAINS
-              SearchString: testagent
-              TextTransformations:
-                - Priority: 1
-                  Type: HTML_ENTITY_DECODE
-        - Name: RuleTwo
-          Priority: 2
-          Action:
-            Block:
-              CustomResponse:
-                ResponseCode: 503
-                CustomResponseBodyKey: CustomResponseBodyKey1
-                ResponseHeaders:
-                  - Name: BlockActionHeader1Name
-                    Value: BlockActionHeader1Value
-                  - Name: BlockActionHeader2Name
-                    Value: BlockActionHeader2Value
-          VisibilityConfig:
-            SampledRequestsEnabled: true
-            CloudWatchMetricsEnabled: true
-            MetricName: RuleTwoMetric
-          Statement:
-            ByteMatchStatement:
-              FieldToMatch:
-                SingleHeader:
-                  Name: haystack
-              PositionalConstraint: CONTAINS
-              SearchString: badbot
-              TextTransformations:
-                - Priority: 0
-                  Type: NONE
-        - Name: RuleThree
-          Priority: 3
-          Action:
-            Count:
-              CustomRequestHandling:
-                InsertHeaders:
-                  - Name: CountActionHeader1Name
-                    Value: CountActionHeader1Value
-                  - Name: CountActionHeader2Name
-                    Value: CountActionHeader2Value
-          VisibilityConfig:
-            SampledRequestsEnabled: true
-            CloudWatchMetricsEnabled: true
-            MetricName: RuleThreeMetric
-          Statement:
-            ByteMatchStatement:
-              FieldToMatch:
-                Body: {}
-              PositionalConstraint: CONTAINS
-              SearchString: RegionOne
-              TextTransformations:
-                - Priority: 0
-                  Type: HTML_ENTITY_DECODE
-        - Name: RuleFour
-          Priority: 4
-          Action:
-            Allow: {}
-          VisibilityConfig:
-            SampledRequestsEnabled: true
-            CloudWatchMetricsEnabled: true
-            MetricName: RuleFourMetric
-          Statement:
-            SizeConstraintStatement:
-              ComparisonOperator: GT
-              Size: 1000
-              FieldToMatch:
-                UriPath: {}
-              TextTransformations:
-                - Priority: 0
-                  Type: NONE
+ SampleRuleGroup:
+      Type: 'AWS::WAFv2::RuleGroup'
+      Properties:
+        Name: SampleRuleGroup
+        Scope: REGIONAL
+        Description: SampleRuleGroup
+        VisibilityConfig:
+          SampledRequestsEnabled: true
+          CloudWatchMetricsEnabled: true
+          MetricName: SampleRuleGroupMetrics
+        CustomResponseBodies:
+          CustomResponseBodyKey1:
+            ContentType: TEXT_PLAIN
+            Content: this is a plain text
+          CustomResponseBodyKey2:
+            ContentType: APPLICATION_JSON
+            Content: '{"jsonfieldname": "jsonfieldvalue"}'
+          CustomResponseBodyKey3:
+            ContentType: TEXT_HTML
+                  Content: <html>HTML text content</html>
+        Capacity: 1000
+        Rules:
+          - Name: RuleOne
+            Priority: 1
+            Action:
+              Allow:
+                CustomRequestHandling:
+                  InsertHeaders:
+                    - Name: AllowActionHeader1Name
+                      Value: AllowActionHeader1Value
+                    - Name: AllowActionHeader2Name
+                      Value: AllowActionHeader2Value
+            VisibilityConfig:
+              SampledRequestsEnabled: true
+              CloudWatchMetricsEnabled: true
+              MetricName: RuleOneMetric
+            Statement:
+              ByteMatchStatement:
+                FieldToMatch:
+                  AllQueryArguments: {}
+                PositionalConstraint: CONTAINS
+                SearchString: testagent
+                TextTransformations:
+                  - Priority: 1
+                    Type: HTML_ENTITY_DECODE
+          - Name: RuleTwo
+            Priority: 2
+            Action:
+              Block:
+                CustomResponse:
+                  ResponseCode: 503
+                  CustomResponseBodyKey: CustomResponseBodyKey1
+                  ResponseHeaders:
+                    - Name: BlockActionHeader1Name
+                      Value: BlockActionHeader1Value
+                    - Name: BlockActionHeader2Name
+                      Value: BlockActionHeader2Value
+            VisibilityConfig:
+              SampledRequestsEnabled: true
+              CloudWatchMetricsEnabled: true
+              MetricName: RuleTwoMetric
+            Statement:
+              ByteMatchStatement:
+                FieldToMatch:
+                  SingleHeader:
+                    Name: haystack
+                PositionalConstraint: CONTAINS
+                SearchString: badbot
+                TextTransformations:
+                  - Priority: 0
+                    Type: NONE
+          - Name: RuleThree
+            Priority: 3
+            Action:
+              Count:
+                CustomRequestHandling:
+                  InsertHeaders:
+                    - Name: CountActionHeader1Name
+                      Value: CountActionHeader1Value
+                    - Name: CountActionHeader2Name
+                      Value: CountActionHeader2Value
+            VisibilityConfig:
+              SampledRequestsEnabled: true
+              CloudWatchMetricsEnabled: true
+              MetricName: RuleThreeMetric
+            Statement:
+              ByteMatchStatement:
+                FieldToMatch:
+                  Body: {}
+                PositionalConstraint: CONTAINS
+                SearchString: RegionOne
+                TextTransformations:
+                  - Priority: 0
+                    Type: HTML_ENTITY_DECODE
+          - Name: RuleFour
+            Priority: 4
+            Action:
+              Allow: {}
+            VisibilityConfig:
+              SampledRequestsEnabled: true
+              CloudWatchMetricsEnabled: true
+              MetricName: RuleFourMetric
+            Statement:
+              SizeConstraintStatement:
+                ComparisonOperator: GT
+                Size: 1000
+                FieldToMatch:
+                  UriPath: {}
+                TextTransformations:
+                  - Priority: 0
+                    Type: NONE
 ```

@@ -1,4 +1,4 @@
-# GlobalAccelerator resource type reference<a name="AWS_GlobalAccelerator"></a>
+# AWS Global Accelerator resource type reference<a name="AWS_GlobalAccelerator"></a>
 
 **Resource types**
 + [AWS::GlobalAccelerator::Accelerator](aws-resource-globalaccelerator-accelerator.md)

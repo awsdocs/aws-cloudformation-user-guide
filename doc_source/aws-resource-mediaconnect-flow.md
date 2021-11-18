@@ -2,8 +2,6 @@
 
 The AWS::MediaConnect::Flow resource defines a connection between one or more video sources and one or more outputs\. For each flow, you specify the transport protocol to use, encryption information, and details for any outputs or entitlements that you want\. AWS Elemental MediaConnect returns an ingest endpoint where you can send your live video as a single unicast stream\. The service replicates and distributes the video to every output that you specify, whether inside or outside the AWS Cloud\. You can also set up entitlements on a flow to allow other AWS accounts to access your content\. 
 
-Note: MediaConnect does not currently support using CloudFormation to create flows with sources that use the SRT\-listener protocol\.
-
 ## Syntax<a name="aws-resource-mediaconnect-flow-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -86,7 +84,10 @@ The Amazon Resource Name \(ARN\) of the flow\.
 The Availability Zone that the flow was created in\. These options are limited to the Availability Zones within the current AWS Region\.
 
 `Source.IngestIp`  <a name="Source.IngestIp-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The IP address that the flow listens on for incoming content\.
 
 `Source.SourceArn`  <a name="Source.SourceArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ARN of the source\.
+
+`Source.SourceIngestPort`  <a name="Source.SourceIngestPort-fn::getatt"></a>
+The port that the flow will be listening on for incoming content\.

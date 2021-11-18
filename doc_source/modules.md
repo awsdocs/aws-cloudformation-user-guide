@@ -152,7 +152,7 @@ Resources in a module can be referenced by logical name\. The fully\-qualified l
 + The logical name specified for the module in the containing template \(or containing module\)\.
 + The logical name for the resource, specified in the module\.
 
-The fully\-qualified logical name for the resource can be specified with or without using a period as a delimiter\. For example, both of the logical names below are valid, and functionaly equivalent:
+The fully\-qualified logical name for the resource can be specified with or without using a period as a delimiter\. For example, both of the logical names below are valid, and functionally equivalent:
 + `ModuleLogicalName.ResourceLogicalName`
 + `ModuleLogicalNameResourceLogicalName`
 

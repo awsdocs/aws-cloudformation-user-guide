@@ -26,4 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The Sidewalk application server private key\. The application server private key is a secret key, which you should handle in a similar way as you would an application password\. You can protect the application server private key by storing the value in the AWS Secrets Manager and use the [secretsmanager](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager) to reference this value\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `4096`  
+*Pattern*: `[a-fA-F0-9]{64}`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

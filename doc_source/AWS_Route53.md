@@ -1,4 +1,4 @@
-# Amazon Route 53 resource type reference<a name="AWS_Route53"></a>
+# Amazon Route 53 resource type reference<a name="AWS_Route53"></a>
 
 **Resource types**
 + [AWS::Route53::DNSSEC](aws-resource-route53-dnssec.md)

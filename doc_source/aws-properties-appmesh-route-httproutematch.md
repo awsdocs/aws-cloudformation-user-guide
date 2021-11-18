@@ -39,12 +39,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The client request headers to match on\.  
 *Required*: No  
 *Type*: List of [HttpRouteHeader](aws-properties-appmesh-route-httprouteheader.md)  
+*Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Method`  <a name="cfn-appmesh-route-httproutematch-method"></a>
 The client request method to match on\. Specify only one\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `CONNECT | DELETE | GET | HEAD | OPTIONS | PATCH | POST | PUT | TRACE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Path`  <a name="cfn-appmesh-route-httproutematch-path"></a>
@@ -63,10 +65,12 @@ Specifies the path to match requests with\. This parameter must always start wit
 The client request query parameters to match on\.  
 *Required*: No  
 *Type*: List of [QueryParameter](aws-properties-appmesh-route-queryparameter.md)  
+*Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scheme`  <a name="cfn-appmesh-route-httproutematch-scheme"></a>
 The client request scheme to match on\. Specify only one\. Applicable only for HTTP2 routes\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `http | https`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

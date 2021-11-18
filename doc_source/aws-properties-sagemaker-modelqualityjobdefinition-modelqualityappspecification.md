@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ContainerArguments](#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-containerarguments)" : [ String, ... ],
   "[ContainerEntrypoint](#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-containerentrypoint)" : [ String, ... ],
-  "[Environment](#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-environment)" : Environment,
+  "[Environment](#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-environment)" : {Key : Value, ...},
   "[ImageUri](#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-imageuri)" : String,
   "[PostAnalyticsProcessorSourceUri](#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-postanalyticsprocessorsourceuri)" : String,
   "[ProblemType](#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-problemtype)" : String,
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ContainerEntrypoint](#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-containerentrypoint): 
     - String
   [Environment](#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-environment): 
-    Environment
+    Key : Value
   [ImageUri](#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-imageuri): String
   [PostAnalyticsProcessorSourceUri](#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-postanalyticsprocessorsourceuri): String
   [ProblemType](#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-problemtype): String
@@ -54,7 +54,7 @@ Specifies the entrypoint for a container that the monitoring job runs\.
 `Environment`  <a name="cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-environment"></a>
 Sets the environment variables in the container that the monitoring job runs\.  
 *Required*: No  
-*Type*: [Environment](aws-properties-sagemaker-modelqualityjobdefinition-environment.md)  
+*Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ImageUri`  <a name="cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification-imageuri"></a>

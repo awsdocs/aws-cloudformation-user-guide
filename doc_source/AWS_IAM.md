@@ -1,4 +1,4 @@
-# IAM resource type reference<a name="AWS_IAM"></a>
+# AWS Identity and Access Management resource type reference<a name="AWS_IAM"></a>
 
 **Resource types**
 + [AWS::IAM::AccessKey](aws-properties-iam-accesskey.md)

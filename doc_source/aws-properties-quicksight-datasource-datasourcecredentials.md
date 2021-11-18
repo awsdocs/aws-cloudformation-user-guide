@@ -33,7 +33,7 @@ The Amazon Resource Name \(ARN\) of a data source that has the credential pair t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CredentialPair`  <a name="cfn-quicksight-datasource-datasourcecredentials-credentialpair"></a>
-Credential pair\. For more information, see [CredentialPair](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourcecredentials.html#cfn-quicksight-datasource-datasourcecredentials-credentialpair)\.  
+Credential pair\. For more information, see ` [CredentialPair](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CredentialPair.html) `\.  
 *Required*: No  
 *Type*: [CredentialPair](aws-properties-quicksight-datasource-credentialpair.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

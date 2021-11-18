@@ -1,6 +1,6 @@
 # AWS::IoTAnalytics::Datastore Partition<a name="aws-properties-iotanalytics-datastore-partition"></a>
 
-<a name="aws-properties-iotanalytics-datastore-partition-description"></a>The `Partition` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::IoTAnalytics::Datastore](aws-resource-iotanalytics-datastore.md)\.
+A single dimension to partition a data store\. The dimension must be an `AttributePartition` or a `TimestampPartition`\.
 
 ## Syntax<a name="aws-properties-iotanalytics-datastore-partition-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotanalytics-datastore-partition-properties"></a>
 
 `AttributeName`  <a name="cfn-iotanalytics-datastore-partition-attributename"></a>
-Not currently supported by AWS CloudFormation\.  
+The name of the attribute that defines a partition dimension\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

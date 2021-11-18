@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ImageBuilder::InfrastructureConfiguration",
   "Properties" : {
       "[Description](#cfn-imagebuilder-infrastructureconfiguration-description)" : String,
+      "[InstanceMetadataOptions](#cfn-imagebuilder-infrastructureconfiguration-instancemetadataoptions)" : InstanceMetadataOptions,
       "[InstanceProfileName](#cfn-imagebuilder-infrastructureconfiguration-instanceprofilename)" : String,
       "[InstanceTypes](#cfn-imagebuilder-infrastructureconfiguration-instancetypes)" : [ String, ... ],
       "[KeyPair](#cfn-imagebuilder-infrastructureconfiguration-keypair)" : String,
@@ -34,6 +35,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ImageBuilder::InfrastructureConfiguration
 Properties: 
   [Description](#cfn-imagebuilder-infrastructureconfiguration-description): String
+  [InstanceMetadataOptions](#cfn-imagebuilder-infrastructureconfiguration-instancemetadataoptions): 
+    InstanceMetadataOptions
   [InstanceProfileName](#cfn-imagebuilder-infrastructureconfiguration-instanceprofilename): String
   [InstanceTypes](#cfn-imagebuilder-infrastructureconfiguration-instancetypes): 
     - String
@@ -60,6 +63,12 @@ The description of the infrastructure configuration\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`InstanceMetadataOptions`  <a name="cfn-imagebuilder-infrastructureconfiguration-instancemetadataoptions"></a>
+The instance metadata option settings for the infrastructure configuration\.  
+*Required*: No  
+*Type*: [InstanceMetadataOptions](aws-properties-imagebuilder-infrastructureconfiguration-instancemetadataoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceProfileName`  <a name="cfn-imagebuilder-infrastructureconfiguration-instanceprofilename"></a>

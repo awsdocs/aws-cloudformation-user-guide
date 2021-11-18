@@ -30,7 +30,7 @@ The name of the data store where processed messages are stored\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9_]+$`  
+*Pattern*: `(^(?!_{2}))(^[a-zA-Z0-9_]+$)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-iotanalytics-pipeline-datastore-name"></a>

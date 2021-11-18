@@ -89,7 +89,7 @@ You can only use pure Python libraries with a `DevEndpoint`\. Libraries that rel
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlueVersion`  <a name="cfn-glue-devendpoint-glueversion"></a>
-Glue version determines the versions of Apache Spark and Python that AWS Glue supports\. The Python version indicates the version supported for running your ETL scripts on development endpoints\.   
+The AWS Glue version determines the versions of Apache Spark and Python that AWS Glue supports\. The Python version indicates the version supported for running your ETL scripts on development endpoints\.   
 For more information about the available AWS Glue versions and corresponding Spark and Python versions, see [Glue version](https://docs.aws.amazon.com/glue/latest/dg/add-job.html) in the developer guide\.  
 Development endpoints that are created without specifying a Glue version default to Glue 0\.9\.  
 You can specify a version of Python support for development endpoints by using the `Arguments` parameter in the `CreateDevEndpoint` or `UpdateDevEndpoint` APIs\. If no arguments are provided, the version defaults to Python 2\.  

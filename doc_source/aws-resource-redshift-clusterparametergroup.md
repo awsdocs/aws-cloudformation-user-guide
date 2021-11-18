@@ -81,7 +81,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Single Parameter<a name="aws-resource-redshift-clusterparametergroup--examples--Single_Parameter"></a>
 
-The following example describes a parameter group with one parameter that is specified:
+The following example describes a parameter group with one parameter that's specified:
 
 #### JSON<a name="aws-resource-redshift-clusterparametergroup--examples--Single_Parameter--json"></a>
 

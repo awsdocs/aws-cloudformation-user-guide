@@ -17,6 +17,8 @@ If you want to restore your DB cluster using a DB cluster snapshot, modify the u
 After you restore a DB cluster with a `SnapshotIdentifier` property, you must specify the same `SnapshotIdentifier` property for any future updates to the DB cluster\. When you specify this property for an update, the DB cluster is not restored from the DB cluster snapshot again, and the data in the database is not changed\. However, if you don't specify the `SnapshotIdentifier` property, an empty DB cluster is created, and the original DB cluster is deleted\. If you specify a property that is different from the previous snapshot restore property, a new DB cluster is restored from the specified `SnapshotIdentifier` property, and the original DB cluster is deleted\.
 Update the stack\.
 
+Currently, when you are updating the stack for an Aurora Serverless DB cluster, you can't include changes to any other properties when you specify one of the following properties: `PreferredBackupWindow`, `PreferredMaintenanceWindow`, and `Port`\. This limitation doesn't apply to provisioned DB clusters\.
+
 For more information about updating other properties of this resource, see ` [ModifyDBCluster](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBCluster.html)`\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)\.
 
 **Deleting DB clusters**
@@ -184,6 +186,7 @@ To list all of the available DB cluster parameter group names, use the following
 
 `DBSubnetGroupName`  <a name="cfn-rds-dbcluster-dbsubnetgroupname"></a>
 A DB subnet group that you want to associate with this DB cluster\.   
+If you are restoring a DB cluster to a point in time with `RestoreType` set to `copy-on-write`, and don't specify a DB subnet group name, then the DB cluster is restored with a default DB subnet group\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -197,9 +200,9 @@ A value that indicates whether the DB cluster has deletion protection enabled\. 
 `EnableCloudwatchLogsExports`  <a name="cfn-rds-dbcluster-enablecloudwatchlogsexports"></a>
 The list of log types that need to be enabled for exporting to CloudWatch Logs\. The values in the list depend on the DB engine being used\. For more information, see [Publishing Database Logs to Amazon CloudWatch Logs](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch) in the *Amazon Aurora User Guide*\.  
  **Aurora MySQL**   
-Possible values are `audit`, `error`, `general`, and `slowquery`\.   
+Valid values: `audit`, `error`, `general`, `slowquery`   
  **Aurora PostgreSQL**   
-Possible values are `postgresql` and `upgrade`\.   
+Valid values: `postgresql`   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -341,13 +344,8 @@ The identifier for the DB snapshot or DB cluster snapshot to restore from\.
 You can use either the name or the Amazon Resource Name \(ARN\) to specify a DB cluster snapshot\. However, you can use only the ARN to specify a DB snapshot\.  
 After you restore a DB cluster with a `SnapshotIdentifier` property, you must specify the same `SnapshotIdentifier` property for any future updates to the DB cluster\. When you specify this property for an update, the DB cluster is not restored from the snapshot again, and the data in the database is not changed\. However, if you don't specify the `SnapshotIdentifier` property, an empty DB cluster is created, and the original DB cluster is deleted\. If you specify a property that is different from the previous snapshot restore property, a new DB cluster is restored from the specified `SnapshotIdentifier` property, and the original DB cluster is deleted\.  
 If you specify the `SnapshotIdentifier` property to restore a DB cluster \(as opposed to specifying it for DB cluster updates\), then don't specify the following properties:  
-+ `BackupRetentionPeriod`
-+ `EnableHttpEndpoint`
 + `GlobalClusterIdentifier`
 + `MasterUsername`
-+ `MasterUserPassword`
-+ `PreferredBackupWindow`
-+ `PreferredMaintenanceWindow`
 + `ReplicationSourceIdentifier`
 + `RestoreType`
 + `SourceDBClusterIdentifier`

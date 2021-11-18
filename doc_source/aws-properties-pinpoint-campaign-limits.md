@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Daily](#cfn-pinpoint-campaign-limits-daily)" : Integer,
   "[MaximumDuration](#cfn-pinpoint-campaign-limits-maximumduration)" : Integer,
   "[MessagesPerSecond](#cfn-pinpoint-campaign-limits-messagespersecond)" : Integer,
+  "[Session](#cfn-pinpoint-campaign-limits-session)" : Integer,
   "[Total](#cfn-pinpoint-campaign-limits-total)" : Integer
 }
 ```
@@ -23,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Daily](#cfn-pinpoint-campaign-limits-daily): Integer
   [MaximumDuration](#cfn-pinpoint-campaign-limits-maximumduration): Integer
   [MessagesPerSecond](#cfn-pinpoint-campaign-limits-messagespersecond): Integer
+  [Session](#cfn-pinpoint-campaign-limits-session): Integer
   [Total](#cfn-pinpoint-campaign-limits-total): Integer
 ```
 
@@ -42,6 +44,12 @@ The maximum amount of time, in seconds, that a campaign can attempt to deliver a
 
 `MessagesPerSecond`  <a name="cfn-pinpoint-campaign-limits-messagespersecond"></a>
 The maximum number of messages that a campaign can send each second\. The minimum value is 50\. The maximum value is 20,000\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Session`  <a name="cfn-pinpoint-campaign-limits-session"></a>
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

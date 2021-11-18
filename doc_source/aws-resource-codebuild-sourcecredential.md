@@ -182,7 +182,7 @@ Resources:
       Environment:
         Type: LINUX_CONTAINER
         ComputeType: BUILD_GENERAL1_SMALL
-        Image: 'aws/codebuild/standard:2.0'
+        Image: 'aws/codebuild/standard:5.0'
       Source:
         Type: BITBUCKET
         Location: 'your-bitbucket-repo-url'
@@ -215,7 +215,7 @@ Resources:
                 "Environment": {
                     "Type": "LINUX_CONTAINER",
                     "ComputeType": "BUILD_GENERAL1_SMALL",
-                    "Image": "aws/codebuild/standard:2.0"
+                    "Image": "aws/codebuild/standard:5.0"
                 },
                 "Source": {
                     "Type": "BITBUCKET",
@@ -251,7 +251,7 @@ Resources:
       Environment:
         Type: LINUX_CONTAINER
         ComputeType: BUILD_GENERAL1_SMALL
-        Image: 'aws/codebuild/standard:2.0'
+        Image: 'aws/codebuild/standard:5.0'
       Source:
         Type: GITHUB
         Location: 'your-github-repo-url'
@@ -283,7 +283,7 @@ Resources:
                 "Environment": {
                     "Type": "LINUX_CONTAINER",
                     "ComputeType": "BUILD_GENERAL1_SMALL",
-                    "Image": "aws/codebuild/standard:2.0"
+                    "Image": "aws/codebuild/standard:5.0"
                 },
                 "Source": {
                     "Type": "GITHUB",

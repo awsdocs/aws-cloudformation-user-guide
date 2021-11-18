@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appsync-datasource-awsiamconfig-properties"></a>
 
 `SigningRegion`  <a name="cfn-appsync-datasource-awsiamconfig-signingregion"></a>
-The signing region for AWS Identity and Access Management authorization\.  
+The signing Region for AWS Identity and Access Management authorization\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

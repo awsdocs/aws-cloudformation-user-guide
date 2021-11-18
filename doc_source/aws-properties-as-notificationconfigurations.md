@@ -1,6 +1,6 @@
 # AWS::AutoScaling::AutoScalingGroup NotificationConfiguration<a name="aws-properties-as-notificationconfigurations"></a>
 
- `NotificationConfiguration` specifies a list of notification configurations for the `NotificationConfigurations` property of [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)\. `NotificationConfiguration` specifies the events that the Amazon EC2 Auto Scaling group sends notifications for\.
+ `NotificationConfiguration` specifies a notification configuration for the `NotificationConfigurations` property of [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)\. `NotificationConfiguration` specifies the events that the Amazon EC2 Auto Scaling group sends notifications for\.
 
 For example snippets, see [Declaring an Auto Scaling group with a launch template and notifications](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#scenario-as-notification)\.
 

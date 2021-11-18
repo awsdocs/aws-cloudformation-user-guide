@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Limits](#cfn-pinpoint-campaign-limits)" : Limits,
       "[MessageConfiguration](#cfn-pinpoint-campaign-messageconfiguration)" : MessageConfiguration,
       "[Name](#cfn-pinpoint-campaign-name)" : String,
+      "[Priority](#cfn-pinpoint-campaign-priority)" : Integer,
       "[Schedule](#cfn-pinpoint-campaign-schedule)" : Schedule,
       "[SegmentId](#cfn-pinpoint-campaign-segmentid)" : String,
       "[SegmentVersion](#cfn-pinpoint-campaign-segmentversion)" : Integer,
@@ -49,6 +50,7 @@ Properties:
   [MessageConfiguration](#cfn-pinpoint-campaign-messageconfiguration): 
     MessageConfiguration
   [Name](#cfn-pinpoint-campaign-name): String
+  [Priority](#cfn-pinpoint-campaign-priority): Integer
   [Schedule](#cfn-pinpoint-campaign-schedule): 
     Schedule
   [SegmentId](#cfn-pinpoint-campaign-segmentid): String
@@ -114,6 +116,12 @@ The name of the campaign\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Priority`  <a name="cfn-pinpoint-campaign-priority"></a>
+An integer between 1 and 5, inclusive, that represents the priority of the in\-app message campaign, where 1 is the highest priority and 5 is the lowest\. If there are multiple messages scheduled to be displayed at the same time, the priority determines the order in which those messages are displayed\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Schedule`  <a name="cfn-pinpoint-campaign-schedule"></a>
 The schedule settings for the campaign\.  
 *Required*: Yes  
@@ -133,7 +141,8 @@ The version of the segment to associate with the campaign\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-pinpoint-campaign-tags"></a>
-A string\-to\-string map of key\-value pairs that defines the tags to associate with the campaign\. Each tag consists of a required tag key and an associated tag value\.  
+An array of key\-value pairs to apply to this resource\.  
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

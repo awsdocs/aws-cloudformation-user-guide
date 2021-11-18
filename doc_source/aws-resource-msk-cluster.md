@@ -63,7 +63,7 @@ The setup to be used for brokers in the cluster\.
 Includes information related to client authentication\.  
 *Required*: No  
 *Type*: [ClientAuthentication](aws-properties-msk-cluster-clientauthentication.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClusterName`  <a name="cfn-msk-cluster-clustername"></a>
 The name of the cluster\.  
@@ -81,7 +81,7 @@ The Amazon MSK configuration to use for the cluster\.
 Includes all encryption\-related information\.  
 *Required*: No  
 *Type*: [EncryptionInfo](aws-properties-msk-cluster-encryptioninfo.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnhancedMonitoring`  <a name="cfn-msk-cluster-enhancedmonitoring"></a>
 Specifies the level of monitoring for the MSK cluster\. The possible values are `DEFAULT`, `PER_BROKER`, and `PER_TOPIC_PER_BROKER`\.  

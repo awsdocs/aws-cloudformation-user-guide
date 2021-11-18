@@ -1,6 +1,6 @@
 # AWS::ApplicationAutoScaling::ScalingPolicy StepAdjustment<a name="aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment"></a>
 
- `StepAdjustment` is a subproperty of [StepScalingPolicyConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration.html) that represents a step adjustment for a step scaling policy\. 
+ `StepAdjustment` specifies a step adjustment for the `StepAdjustments` property of the [AWS::ApplicationAutoScaling::ScalingPolicy StepScalingPolicyConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration.html) property type\. 
 
 For the following examples, suppose that you have an alarm with a breach threshold of 50: 
 + To trigger a step adjustment when the metric is greater than or equal to 50 and less than 60, specify a lower bound of 0 and an upper bound of 10\. 

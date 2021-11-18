@@ -51,19 +51,19 @@ The dimensions of the metric associated with the anomaly detection band\.
 
 `MetricName`  <a name="cfn-cloudwatch-anomalydetector-metricname"></a>
 The name of the metric associated with the anomaly detection band\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Namespace`  <a name="cfn-cloudwatch-anomalydetector-namespace"></a>
 The namespace of the metric associated with the anomaly detection band\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Stat`  <a name="cfn-cloudwatch-anomalydetector-stat"></a>
 The statistic of the metric associated with the anomaly detection band\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

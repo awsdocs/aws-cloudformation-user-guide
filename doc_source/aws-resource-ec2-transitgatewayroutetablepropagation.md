@@ -2,7 +2,7 @@
 
 Enables the specified attachment to propagate routes to the specified propagation route table\.
 
-For more information about enabling transit gateway route propagation, see [EnableVgwRoutePropagation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableTransitGatewayRouteTablePropagation.html) in the *Amazon Elastic Compute Cloud API Reference*\.
+For more information about enabling transit gateway route propagation, see [EnableTransitGatewayRouteTablePropagation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableTransitGatewayRouteTablePropagation.html) in the *Amazon EC2 API Reference*\.
 
 ## Syntax<a name="aws-resource-ec2-transitgatewayroutetablepropagation-syntax"></a>
 
@@ -52,5 +52,5 @@ The ID of the propagation route table\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## See also<a name="aws-resource-ec2-transitgatewayroutetablepropagation--seealso"></a>
-+  [EnableTransitGatewayRouteTablePropagation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableTransitGatewayRouteTablePropagation.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [EnableTransitGatewayRouteTablePropagation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableTransitGatewayRouteTablePropagation.html) in the *Amazon EC2 API Reference* 
 

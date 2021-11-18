@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Algorithm`  <a name="cfn-mediaconnect-flowoutput-encryption-algorithm"></a>
 The type of algorithm that is used for the encryption \(such as aes128, aes192, or aes256\)\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -49,7 +49,7 @@ The Amazon Resource Name \(ARN\) of the Amazon S3 bucket to send data to\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BufferingHints`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bufferinghints"></a>
-Configures how Kinesis Data Firehose buffers incoming data while delivering it to the Amazon S3 bucket\.   
+Configures how Kinesis Data Firehose buffers incoming data while delivering it to the Amazon S3 bucket\.  
 *Required*: No  
 *Type*: [BufferingHints](aws-properties-kinesisfirehose-deliverystream-bufferinghints.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -68,7 +68,7 @@ The type of compression that Kinesis Data Firehose uses to compress the data tha
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncryptionConfiguration`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-encryptionconfiguration"></a>
-Configures Amazon Simple Storage Service \(Amazon S3\) server\-side encryption\. Kinesis Data Firehose uses AWS Key Management Service \(AWS KMS\) to encrypt the data that it delivers to your Amazon S3 bucket\.   
+Configures Amazon Simple Storage Service \(Amazon S3\) server\-side encryption\. Kinesis Data Firehose uses AWS Key Management Service \(AWS KMS\) to encrypt the data that it delivers to your Amazon S3 bucket\.  
 *Required*: No  
 *Type*: [EncryptionConfiguration](aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -83,7 +83,7 @@ A prefix that Kinesis Data Firehose evaluates and adds to failed records before 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Prefix`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-prefix"></a>
-A prefix that Kinesis Data Firehose adds to the files that it delivers to the Amazon S3 bucket\. The prefix helps you identify the files that Kinesis Data Firehose delivered\.   
+A prefix that Kinesis Data Firehose adds to the files that it delivers to the Amazon S3 bucket\. The prefix helps you identify the files that Kinesis Data Firehose delivered\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -92,7 +92,7 @@ A prefix that Kinesis Data Firehose adds to the files that it delivers to the Am
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleARN`  <a name="cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-rolearn"></a>
-The ARN of an AWS Identity and Access Management \(IAM\) role that grants Kinesis Data Firehose access to your Amazon S3 bucket and AWS KMS \(if you enable data encryption\)\. For more information, see [Grant Kinesis Data Firehose Access to an Amazon S3 Destination](https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-s3) in the *Amazon Kinesis Data Firehose Developer Guide*\.   
+The ARN of an AWS Identity and Access Management \(IAM\) role that grants Kinesis Data Firehose access to your Amazon S3 bucket and AWS KMS \(if you enable data encryption\)\. For more information, see [Grant Kinesis Data Firehose Access to an Amazon S3 Destination](https://docs.aws.amazon.com/firehose/latest/dev/controlling-access.html#using-iam-s3) in the *Amazon Kinesis Data Firehose Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

@@ -74,7 +74,7 @@ Properties:
 The AMI type for your node group\. GPU instance types should use the `AL2_x86_64_GPU` AMI type\. Non\-GPU instances should use the `AL2_x86_64` AMI type\. Arm instances should use the `AL2_ARM_64` AMI type\. All types use the Amazon EKS optimized Amazon Linux 2 AMI\. If you specify `launchTemplate`, and your launch template uses a custom AMI, then don't specify `amiType`, or the node group deployment will fail\. For more information about using launch templates with Amazon EKS, see [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the Amazon EKS User Guide\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `AL2_ARM_64 | AL2_x86_64 | AL2_x86_64_GPU | CUSTOM`  
+*Allowed values*: `AL2_ARM_64 | AL2_x86_64 | AL2_x86_64_GPU | BOTTLEROCKET_ARM_64 | BOTTLEROCKET_x86_64 | CUSTOM`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CapacityType`  <a name="cfn-eks-nodegroup-capacitytype"></a>
@@ -170,8 +170,7 @@ The Kubernetes taints to be applied to the nodes in the node group when they are
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UpdateConfig`  <a name="cfn-eks-nodegroup-updateconfig"></a>
-The update configuration for the node group\.  
-This CloudFormation property is not currently supported\.
+The node group update configuration\.  
 *Required*: No  
 *Type*: [UpdateConfig](aws-properties-eks-nodegroup-updateconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

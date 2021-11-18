@@ -38,6 +38,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Specify at least one of the valid values\.  
 *Required*: No  
 *Type*: List of String  
+*Maximum*: `5`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HttpRetryEvents`  <a name="cfn-appmesh-route-grpcretrypolicy-httpretryevents"></a>
@@ -48,6 +49,7 @@ Specify at least one of the following values\.
 + **stream\-error** – Retry on refused stream
 *Required*: No  
 *Type*: List of String  
+*Maximum*: `25`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxRetries`  <a name="cfn-appmesh-route-grpcretrypolicy-maxretries"></a>
@@ -66,4 +68,5 @@ The timeout for each retry attempt\.
 Specify a valid value\. The event occurs before any processing of a request has started and is encountered when the upstream is temporarily or permanently unavailable\.  
 *Required*: No  
 *Type*: List of String  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

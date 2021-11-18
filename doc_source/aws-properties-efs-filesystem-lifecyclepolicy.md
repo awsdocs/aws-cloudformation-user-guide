@@ -10,7 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[TransitionToIA](#cfn-efs-filesystem-lifecyclepolicy-transitiontoia)" : String
+  "[TransitionToIA](#cfn-efs-filesystem-lifecyclepolicy-transitiontoia)" : String,
+  "[TransitionToPrimaryStorageClass](#cfn-efs-filesystem-lifecyclepolicy-transitiontoprimarystorageclass)" : String
 }
 ```
 
@@ -18,13 +19,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [TransitionToIA](#cfn-efs-filesystem-lifecyclepolicy-transitiontoia): String
+  [TransitionToPrimaryStorageClass](#cfn-efs-filesystem-lifecyclepolicy-transitiontoprimarystorageclass): String
 ```
 
 ## Properties<a name="aws-properties-efs-filesystem-lifecyclepolicy-properties"></a>
 
 `TransitionToIA`  <a name="cfn-efs-filesystem-lifecyclepolicy-transitiontoia"></a>
- A value that describes the period of time that a file is not accessed, after which it transitions to the IA storage class\. Metadata operations such as listing the contents of a directory don't count as file access events\.  
-*Required*: Yes  
+ Describes the period of time that a file is not accessed, after which it transitions to IA storage\. Metadata operations such as listing the contents of a directory don't count as file access events\.  
+*Required*: No  
 *Type*: String  
 *Allowed values*: `AFTER_14_DAYS | AFTER_30_DAYS | AFTER_60_DAYS | AFTER_7_DAYS | AFTER_90_DAYS`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TransitionToPrimaryStorageClass`  <a name="cfn-efs-filesystem-lifecyclepolicy-transitiontoprimarystorageclass"></a>
+Describes when to transition a file from IA storage to primary storage\. Metadata operations such as listing the contents of a directory don't count as file access events\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `AFTER_1_ACCESS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

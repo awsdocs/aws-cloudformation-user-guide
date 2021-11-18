@@ -36,7 +36,7 @@ The name of the S3 bucket in which channel data is stored\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeyPrefix`  <a name="cfn-iotanalytics-channel-customermanageds3-keyprefix"></a>
-Optional\. The prefix used to create the keys of the channel data objects\. Each object in an S3 bucket has a key that is its unique identifier within the bucket \(each object in a bucket has exactly one key\)\. The prefix must end with a forward slash \(/\)\.  
+\(Optional\) The prefix used to create the keys of the channel data objects\. Each object in an S3 bucket has a key that is its unique identifier within the bucket \(each object in a bucket has exactly one key\)\. The prefix must end with a forward slash \(/\)\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

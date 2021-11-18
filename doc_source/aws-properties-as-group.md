@@ -1,6 +1,6 @@
 # AWS::AutoScaling::AutoScalingGroup<a name="aws-properties-as-group"></a>
 
-The AWS::AutoScaling::AutoScalingGroup resource defines an Amazon EC2 Auto Scaling group, which is a collection of Amazon EC2 instances that are treated as a logical grouping for the purposes of automatic scaling and management\.
+The `AWS::AutoScaling::AutoScalingGroup` resource defines an Amazon EC2 Auto Scaling group, which is a collection of Amazon EC2 instances that are treated as a logical grouping for the purposes of automatic scaling and management\.
 
 **Note**  
 Amazon EC2 Auto Scaling configures instances launched as part of an Auto Scaling group using either a launch template or a launch configuration\. We recommend that you use a launch template to make sure that you can use the latest features of Amazon EC2, such as Dedicated Hosts and T2 Unlimited instances\. For more information, see [Creating a launch template for an Auto Scaling group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html)\. You can find sample launch templates in [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)\.
@@ -23,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Context](#cfn-as-group-context)" : String,
       "[Cooldown](#cfn-as-group-cooldown)" : String,
       "[DesiredCapacity](#cfn-as-group-desiredcapacity)" : String,
+      "[DesiredCapacityType](#cfn-as-group-desiredcapacitytype)" : String,
       "[HealthCheckGracePeriod](#cfn-as-group-healthcheckgraceperiod)" : Integer,
       "[HealthCheckType](#cfn-as-group-healthchecktype)" : String,
       "[InstanceId](#cfn-as-group-instanceid)" : String,
@@ -59,6 +60,7 @@ Properties:
   [Context](#cfn-as-group-context): String
   [Cooldown](#cfn-as-group-cooldown): String
   [DesiredCapacity](#cfn-as-group-desiredcapacity): String
+  [DesiredCapacityType](#cfn-as-group-desiredcapacitytype): String
   [HealthCheckGracePeriod](#cfn-as-group-healthcheckgraceperiod): Integer
   [HealthCheckType](#cfn-as-group-healthchecktype): String
   [InstanceId](#cfn-as-group-instanceid): String
@@ -109,7 +111,7 @@ A list of Availability Zones where instances in the Auto Scaling group can be cr
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CapacityRebalance`  <a name="cfn-as-group-capacityrebalance"></a>
-Indicates whether Capacity Rebalancing is enabled\. For more information, see [Amazon EC2 Auto Scaling Capacity Rebalancing](https://docs.aws.amazon.com/autoscaling/ec2/userguide/capacity-rebalance.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
+Indicates whether Capacity Rebalancing is enabled\. For more information, see [Amazon EC2 Auto Scaling Capacity Rebalancing](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-capacity-rebalancing.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -132,6 +134,17 @@ The number must be greater than or equal to the minimum size of the group and le
 CloudFormation marks the Auto Scaling group as successful \(by setting its status to CREATE\_COMPLETE\) when the desired capacity is reached\. However, if a maximum Spot price is set in the launch template or launch configuration that you specified, then desired capacity is not used as a criteria for success\. Whether your request is fulfilled depends on Spot Instance capacity and your maximum price\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DesiredCapacityType`  <a name="cfn-as-group-desiredcapacitytype"></a>
+The unit of measurement for the value specified for desired capacity\. Amazon EC2 Auto Scaling supports `DesiredCapacityType` for attribute\-based instance type selection only\. For more information, see [Creating an Auto Scaling group using attribute\-based instance type selection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
+By default, Amazon EC2 Auto Scaling specifies `units`, which translates into number of instances\.  
+Valid values: `units` \| `vcpu` \| `memory-mib`  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckGracePeriod`  <a name="cfn-as-group-healthcheckgraceperiod"></a>
@@ -209,7 +222,7 @@ The minimum size of the group\.
 `MixedInstancesPolicy`  <a name="cfn-as-group-mixedinstancespolicy"></a>
 An embedded object that specifies a mixed instances policy\.  
 The policy includes properties that not only define the distribution of On\-Demand Instances and Spot Instances, the maximum price to pay for Spot Instances \(optional\), and how the Auto Scaling group allocates instance types to fulfill On\-Demand and Spot capacities, but also the properties that specify the instance configuration information—the launch template and instance types\. The policy can also include a weight for each instance type and different launch templates for individual instance types\.  
-For more information, see [Auto Scaling groups with multiple instance types and purchase options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
+For more information, see [Auto Scaling groups with multiple instance types and purchase options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 If you specify `LaunchTemplate`, `InstanceId`, or `LaunchConfigurationName`, don't specify `MixedInstancesPolicy`\.  
 *Required*: Conditional  
 *Type*: [MixedInstancesPolicy](aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy.md)  
@@ -295,7 +308,7 @@ The following example creates an Auto Scaling group with a single instance and a
 
 The launch template provisions T2 instances in unlimited mode using the `CPUCredits` property\. The stack references a [parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) to specify the launch template version\. Parameters are variables that you can specify when you create or update the stack\.
 
-CloudFormation supports parameters from the AWS Systems Manager Parameter Store\. In this example, the `ImageId` property of the AWS::EC2::LaunchTemplate references the latest Amazon Linux 2 AMI from the Parameter Store\. For more information, see [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) in the *AWS Systems Manager User Guide* and the blog post [Query for the latest Amazon Linux AMI IDs using AWS Systems Manager Parameter Store](http://aws.amazon.com/blogs/compute/query-for-the-latest-amazon-linux-ami-ids-using-aws-systems-manager-parameter-store/) on the AWS Compute Blog\.
+CloudFormation supports parameters from the AWS Systems Manager Parameter Store\. In this example, the `ImageId` property of the `AWS::EC2::LaunchTemplate` references the latest Amazon Linux 2 AMI from the Parameter Store\. For more information, see [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) in the *AWS Systems Manager User Guide* and the blog post [Query for the latest Amazon Linux AMI IDs using AWS Systems Manager Parameter Store](http://aws.amazon.com/blogs/compute/query-for-the-latest-amazon-linux-ami-ids-using-aws-systems-manager-parameter-store/) on the AWS Compute Blog\.
 
 #### JSON<a name="aws-properties-as-group--examples--Single_instance_Auto_Scaling_group_with_a_parameters_section--json"></a>
 
@@ -524,7 +537,7 @@ Resources:
 ```
 
 ## See also<a name="aws-properties-as-group--seealso"></a>
-+ [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
-+ [AWS CloudFormation stack updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)
++  [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) 
++  [AWS CloudFormation stack updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 
 + [Suspending and resuming scaling processes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html) in the *Amazon EC2 Auto Scaling User Guide*
 

@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-taskdefinition-dockervolumeconfiguration-properties"></a>
 
 `Autoprovision`  <a name="cfn-ecs-taskdefinition-dockervolumeconfiguration-autoprovision"></a>
-If this value is `true`, the Docker volume is created if it does not already exist\.  
+If this value is `true`, the Docker volume is created if it doesn't already exist\.  
 This field is only used if the `scope` is `shared`\.
 *Required*: No  
 *Type*: Boolean  

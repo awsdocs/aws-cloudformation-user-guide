@@ -70,7 +70,7 @@ With `service-managed` permissions, you can deploy stack instances to accounts m
       Select **Next**\.  
 ![\[Set Deployment Options page\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-create-stackset-set-deploy-options.png)
 
-1. On the **Review** page, review your choices and your stack set's properties\. To make changes, choose **Edit** in the area in which you want to change properties\. Before you can create the stack set, you must fill the check box in the **Capabilities** area to acknowledge that some of the resources that you are creating with the stack set might require new IAM resources and permissions\. For more information about potentially required permissions, see [Acknowledging IAM resources in AWS CloudFormation templates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-capabilities) in this guide\. When you are are ready to create your stack set, choose **Submit**\.  
+1. On the **Review** page, review your choices and your stack set's properties\. To make changes, choose **Edit** in the area in which you want to change properties\. Before you can create the stack set, you must fill the check box in the **Capabilities** area to acknowledge that some of the resources that you are creating with the stack set might require new IAM resources and permissions\. For more information about potentially required permissions, see [Acknowledging IAM resources in AWS CloudFormation templates](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-capabilities) in this guide\. When you are ready to create your stack set, choose **Submit**\.  
 ![\[Acknowledge required capabilities\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-create-stackset-review-capabilities.png)
 
 1. AWS CloudFormation starts creating your stack set\. View the progress and status of the creation of the stacks in your stack set in the stack set details page that opens when you choose **Submit**\.  
@@ -85,7 +85,9 @@ When you create stack sets by using AWS CLI commands, you run two separate comma
 1. Run the following command\. For the `--template-url` parameter, provide the URL of the Amazon S3 bucket in which you are storing your template\. For this walkthrough, we use `my-awsconfig-stackset` as the value of the `--stack-set-name` parameter\.
 
    ```
-   aws cloudformation create-stack-set --stack-set-name my-awsconfig-stackset --template-url https://s3.amazonaws.com/cloudformation-stackset-sample-templates-us-east-1/EnableAWSConfig.yml
+   aws cloudformation create-stack-set \
+     --stack-set-name my-awsconfig-stackset \
+     --template-url https://s3.amazonaws.com/cloudformation-stackset-sample-templates-us-east-1/EnableAWSConfig.yml
    ```
 
 1. After your `create-stack-set` command is finished, run the `list-stack-sets` command to see that your stack set has been created\. You should see your new stack set in the results\.
@@ -101,7 +103,11 @@ When you create stack sets by using AWS CLI commands, you run two separate comma
 The value of `MaxConcurrentCount` is dependent on the value of `FailureToleranceCount`\. `MaxConcurrentCount` is at most one more than `FailureToleranceCount`\.
 
    ```
-   aws cloudformation create-stack-instances --stack-set-name my-awsconfig-stackset --accounts '["account_ID_1","account_ID_2"]' --regions '["region_1","region_2"]' --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1
+   aws cloudformation create-stack-instances \
+     --stack-set-name my-awsconfig-stackset \
+     --accounts '["account_ID_1","account_ID_2"]' \
+     --regions '["region_1","region_2"]' \
+     --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1
    ```
 **Note**  
 The concurrency of the StackSet instances deployments in the operation is dependent on the value of `FailureToleranceCount-MaxConcurrentCount` and is at most one more than the `FailureToleranceCount`\.
@@ -111,7 +117,9 @@ Wait until an operation is complete before starting another one\. You can run on
 1. Verify that the stack instances were created successfully\. Run `DescribeStackSetOperation` with the `operation-id` that is returned as part of the output of step 4\.
 
    ```
-   aws cloudformation describe-stack-set-operation --stack-set-name my-awsconfig-stackset --operation-id operation_ID
+   aws cloudformation describe-stack-set-operation \
+     --stack-set-name my-awsconfig-stackset \
+     --operation-id operation_ID
    ```
 
 ## Create a stack set with service\-managed permissions<a name="stacksets-orgs-associate-stackset-with-org"></a>
@@ -195,7 +203,11 @@ Stack sets created by a delegated administrator are created in the organization'
 1. Run the `create-stack-set` command\. In the following example, we enable automatic deployments to allow StackSets to automatically deploy to accounts that are added to the target organization or OUs in the future\. We also retain stack resources when an account is removed from a target organization or OU\.
 
    ```
-   aws cloudformation create-stack-set --stack-set-name StackSet_myApp --template-url https://s3.us-west-2.amazonaws.com/cloudformation-templates-us-west-2/MyApp.template --permission-model SERVICE_MANAGED --auto-deployment Enabled=true,RetainStacksOnAccountRemoval=true
+   aws cloudformation create-stack-set \
+     --stack-set-name StackSet_myApp \
+     --template-url https://s3.us-west-2.amazonaws.com/cloudformation-templates-us-west-2/MyApp.template \
+     --permission-model SERVICE_MANAGED \
+     --auto-deployment Enabled=true,RetainStacksOnAccountRemoval=true
    ```
 
 1. After your `create-stack-set` command is finished, run the `list-stack-sets` command to confirm that your stack set was created\. Your new stack set is listed in the results\.

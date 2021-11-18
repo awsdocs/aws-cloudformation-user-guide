@@ -26,4 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The new Sidewalk application server private key\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `4096`  
+*Pattern*: `[a-fA-F0-9]{64}`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,4 +1,4 @@
-# WAF resource type reference<a name="AWS_WAF"></a>
+# AWS WAF resource type reference<a name="AWS_WAF"></a>
 
 **Resource types**
 + [AWS::WAF::ByteMatchSet](aws-resource-waf-bytematchset.md)

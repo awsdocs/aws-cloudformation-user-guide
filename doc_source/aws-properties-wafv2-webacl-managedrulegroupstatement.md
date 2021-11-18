@@ -15,7 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ExcludedRules](#cfn-wafv2-webacl-managedrulegroupstatement-excludedrules)" : [ ExcludedRule, ... ],
   "[Name](#cfn-wafv2-webacl-managedrulegroupstatement-name)" : String,
   "[ScopeDownStatement](#cfn-wafv2-webacl-managedrulegroupstatement-scopedownstatement)" : Statement,
-  "[VendorName](#cfn-wafv2-webacl-managedrulegroupstatement-vendorname)" : String
+  "[VendorName](#cfn-wafv2-webacl-managedrulegroupstatement-vendorname)" : String,
+  "[Version](#cfn-wafv2-webacl-managedrulegroupstatement-version)" : String
 }
 ```
 
@@ -28,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ScopeDownStatement](#cfn-wafv2-webacl-managedrulegroupstatement-scopedownstatement): 
     Statement
   [VendorName](#cfn-wafv2-webacl-managedrulegroupstatement-vendorname): String
+  [Version](#cfn-wafv2-webacl-managedrulegroupstatement-version): String
 ```
 
 ## Properties<a name="aws-properties-wafv2-webacl-managedrulegroupstatement-properties"></a>
@@ -60,4 +62,13 @@ The name of the managed rule group vendor\. You use this, along with the rule gr
 *Minimum*: `1`  
 *Maximum*: `128`  
 *Pattern*: `.*\S.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Version`  <a name="cfn-wafv2-webacl-managedrulegroupstatement-version"></a>
+The version of the managed rule group to use\. Leave this empty to use the vendor's recommended version\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `64`  
+*Pattern*: `^[\w#:\.\-/]+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

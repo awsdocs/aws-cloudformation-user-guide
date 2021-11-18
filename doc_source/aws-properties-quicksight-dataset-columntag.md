@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSet ColumnTag<a name="aws-properties-quicksight-dataset-columntag"></a>
 
-A tag for a column in a [TagColumnOperation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-transformoperation.html#cfn-quicksight-dataset-transformoperation-tagcolumnoperation) structure\. This is a variant type structure\. For this structure to be valid, only one of the attributes can be non\-null\.
+A tag for a column in a ` [TagColumnOperation](https://docs.aws.amazon.com/quicksight/latest/APIReference/API_TagColumnOperation.html) ` structure\. This is a variant type structure\. For this structure to be valid, only one of the attributes can be non\-null\.
 
 ## Syntax<a name="aws-properties-quicksight-dataset-columntag-syntax"></a>
 

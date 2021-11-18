@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Lambda::LayerVersion",
   "Properties" : {
+      "[CompatibleArchitectures](#cfn-lambda-layerversion-compatiblearchitectures)" : [ String, ... ],
       "[CompatibleRuntimes](#cfn-lambda-layerversion-compatibleruntimes)" : [ String, ... ],
       "[Content](#cfn-lambda-layerversion-content)" : Content,
       "[Description](#cfn-lambda-layerversion-description)" : String,
@@ -26,6 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Lambda::LayerVersion
 Properties: 
+  [CompatibleArchitectures](#cfn-lambda-layerversion-compatiblearchitectures): 
+    - String
   [CompatibleRuntimes](#cfn-lambda-layerversion-compatibleruntimes): 
     - String
   [Content](#cfn-lambda-layerversion-content): 
@@ -36,6 +39,13 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-lambda-layerversion-properties"></a>
+
+`CompatibleArchitectures`  <a name="cfn-lambda-layerversion-compatiblearchitectures"></a>
+A list of compatible [instruction set architectures](https://docs.aws.amazon.com/lambda/latest/dg/foundation-arch.html)\.  
+*Required*: No  
+*Type*: List of String  
+*Maximum*: `2`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CompatibleRuntimes`  <a name="cfn-lambda-layerversion-compatibleruntimes"></a>
 A list of compatible [function runtimes](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html)\. Used for filtering with [ListLayers](https://docs.aws.amazon.com/lambda/latest/dg/API_ListLayers.html) and [ListLayerVersions](https://docs.aws.amazon.com/lambda/latest/dg/API_ListLayerVersions.html)\.  

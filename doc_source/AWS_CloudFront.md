@@ -1,4 +1,4 @@
-# CloudFront resource type reference<a name="AWS_CloudFront"></a>
+# Amazon CloudFront resource type reference<a name="AWS_CloudFront"></a>
 
 **Resource types**
 + [AWS::CloudFront::CachePolicy](aws-resource-cloudfront-cachepolicy.md)
@@ -9,4 +9,5 @@
 + [AWS::CloudFront::OriginRequestPolicy](aws-resource-cloudfront-originrequestpolicy.md)
 + [AWS::CloudFront::PublicKey](aws-resource-cloudfront-publickey.md)
 + [AWS::CloudFront::RealtimeLogConfig](aws-resource-cloudfront-realtimelogconfig.md)
++ [AWS::CloudFront::ResponseHeadersPolicy](aws-resource-cloudfront-responseheaderspolicy.md)
 + [AWS::CloudFront::StreamingDistribution](aws-resource-cloudfront-streamingdistribution.md)

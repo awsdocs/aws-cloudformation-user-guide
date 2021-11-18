@@ -8,7 +8,7 @@ Firewall Manager provides the following types of policies:
 + An AWS WAF Classic policy, which defines a rule group\. AWS WAF Classic doesn't support rule groups in Amazon CloudFront, so, to create AWS WAF Classic policies through CloudFront, you first need to create your rule groups outside of CloudFront\. 
 + A security group policy, which manages VPC security groups across your AWS organization\. 
 + An AWS Network Firewall policy, which provides firewall rules to filter network traffic in specified Amazon VPCs\.
-+ A DNS Firewall policy, which provides Amazon Route 53 Resolver DNS Firewall rules to filter DNS queries for specified Amazon VPCs\.
++ A DNS Firewall policy, which provides Amazon Route 53 Resolver DNS Firewall rules to filter DNS queries for specified Amazon VPCs\.
 
 Each policy is specific to one of the types\. If you want to enforce more than one policy type across accounts, create multiple policies\. You can create multiple policies for each type\.
 
@@ -30,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[IncludeMap](#cfn-fms-policy-includemap)" : IEMap,
       "[PolicyName](#cfn-fms-policy-policyname)" : String,
       "[RemediationEnabled](#cfn-fms-policy-remediationenabled)" : Boolean,
+      "[ResourcesCleanUp](#cfn-fms-policy-resourcescleanup)" : Boolean,
       "[ResourceTags](#cfn-fms-policy-resourcetags)" : [ ResourceTag, ... ],
       "[ResourceType](#cfn-fms-policy-resourcetype)" : String,
       "[ResourceTypeList](#cfn-fms-policy-resourcetypelist)" : [ String, ... ],
@@ -52,6 +53,7 @@ Properties:
     IEMap
   [PolicyName](#cfn-fms-policy-policyname): String
   [RemediationEnabled](#cfn-fms-policy-remediationenabled): Boolean
+  [ResourcesCleanUp](#cfn-fms-policy-resourcescleanup): Boolean
   [ResourceTags](#cfn-fms-policy-resourcetags): 
     - ResourceTag
   [ResourceType](#cfn-fms-policy-resourcetype): String
@@ -118,6 +120,14 @@ The name of the AWS Firewall Manager policy\.
 `RemediationEnabled`  <a name="cfn-fms-policy-remediationenabled"></a>
 Indicates if the policy should be automatically applied to new resources\.  
 *Required*: Yes  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ResourcesCleanUp`  <a name="cfn-fms-policy-resourcescleanup"></a>
+Indicates whether AWS Firewall Manager should automatically remove protections from resources that leave the policy scope and clean up resources that Firewall Manager is managing for accounts when those accounts leave policy scope\. For example, Firewall Manager will disassociate a Firewall Manager managed web ACL from a protected customer resource when the customer resource leaves policy scope\.   
+By default, Firewall Manager doesn't remove protections or delete Firewall Manager managed resources\.   
+This option is not available for Shield Advanced or AWS WAF Classic policies\.  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -609,8 +619,8 @@ Policy:
       SecurityServicePolicyData:
         Type: DNS_FIREWALL
         ManagedServiceData: !Sub '{"type":"DNS_FIREWALL",
-                                  "preProcessRuleGroups":[{\"ruleGroupId\": \"${PreRuleGroupId}\", \"priority\": 11}],
-                                  "postProcessRuleGroups":[{\"ruleGroupId\": \"${PostRuleGroupId}\", \"priority\": 9902}]}'
+                                  "preProcessRuleGroups":[{"ruleGroupId": "${PreRuleGroupId}", "priority": 11}],
+                                  "postProcessRuleGroups":[{"ruleGroupId": "${PostRuleGroupId}", "priority": 9902}]}'
 ```
 
 #### JSON<a name="aws-resource-fms-policy--examples--Create_a_Firewall_Manager_DNS_Firewall_policy--json"></a>

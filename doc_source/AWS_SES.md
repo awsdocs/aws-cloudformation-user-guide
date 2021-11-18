@@ -1,4 +1,4 @@
-# SES resource type reference<a name="AWS_SES"></a>
+# Amazon Simple Email Service resource type reference<a name="AWS_SES"></a>
 
 **Resource types**
 + [AWS::SES::ConfigurationSet](aws-resource-ses-configurationset.md)

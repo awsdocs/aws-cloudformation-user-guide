@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-nimblestudio-studiocomponent-studiocomponentinitializationscript-properties"></a>
 
 `LaunchProfileProtocolVersion`  <a name="cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-launchprofileprotocolversion"></a>
-The version number of the protocol that is used by the launch profile\. The only valid version is "2021\-03\-31"\.   
+The version number of the protocol that is used by the launch profile\. The only valid version is "2021\-03\-31"\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

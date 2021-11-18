@@ -31,9 +31,9 @@ The type of segment dimension to use\. Valid values are:
 +  `EXCLUSIVE` – endpoints that have attributes matching the values are excluded from the segment\.
 +  `CONTAINS` – endpoints that have attributes' substrings match the values are included in the segment\.
 +  `BEFORE` – endpoints with attributes read as ISO\_INSTANT datetimes before the value are included in the segment\.
-+  `AFTER` \- endpoints with attributes read as ISO\_INSTANT datetimes after the value are included in the segment\.
-+  `BETWEEN` \- endpoints with attributes read as ISO\_INSTANT datetimes between the values are included in the segment\.
-+  `ON` \- endpoints with attributes read as ISO\_INSTANT dates on the value are included in the segment\. Time is ignored in this comparison\.
++  `AFTER` – endpoints with attributes read as ISO\_INSTANT datetimes after the value are included in the segment\.
++  `BETWEEN` – endpoints with attributes read as ISO\_INSTANT datetimes between the values are included in the segment\.
++  `ON` – endpoints with attributes read as ISO\_INSTANT dates on the value are included in the segment\. Time is ignored in this comparison\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
