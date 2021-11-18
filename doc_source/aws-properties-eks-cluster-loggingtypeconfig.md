@@ -1,6 +1,6 @@
 # AWS::EKS::Cluster LoggingTypeConfig<a name="aws-properties-eks-cluster-loggingtypeconfig"></a>
 
-<a name="aws-properties-eks-cluster-loggingtypeconfig-description"></a>The `LoggingTypeConfig` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::EKS::Cluster](aws-resource-eks-cluster.md)\.
+The enabled logging type\.
 
 ## Syntax<a name="aws-properties-eks-cluster-loggingtypeconfig-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-eks-cluster-loggingtypeconfig-properties"></a>
 
 `Type`  <a name="cfn-eks-cluster-loggingtypeconfig-type"></a>
-Not currently supported by AWS CloudFormation\.  
+The name of the log type\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

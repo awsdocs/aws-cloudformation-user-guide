@@ -136,10 +136,10 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-ec2-network-interface-return-values-fn--getatt-fn--getatt"></a>
 
 `PrimaryPrivateIpAddress`  <a name="PrimaryPrivateIpAddress-fn::getatt"></a>
-Returns the primary private IP address of the network interface\. For example, `10.0.0.192`\.
+The primary private IP address of the network interface\. For example, `10.0.0.192`\.
 
 `SecondaryPrivateIpAddresses`  <a name="SecondaryPrivateIpAddresses-fn::getatt"></a>
-Returns the secondary private IP addresses of the network interface\. For example, `["10.0.0.161", "10.0.0.162", "10.0.0.163"]`\.
+The secondary private IP addresses of the network interface\. For example, `["10.0.0.161", "10.0.0.162", "10.0.0.163"]`\.
 
 ## Examples<a name="aws-resource-ec2-network-interface--examples"></a>
 

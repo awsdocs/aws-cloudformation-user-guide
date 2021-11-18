@@ -31,7 +31,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ServiceRole](#cfn-batch-computeenvironment-servicerole)" : String,
       "[State](#cfn-batch-computeenvironment-state)" : String,
       "[Tags](#cfn-batch-computeenvironment-tags)" : Json,
-      "[Type](#cfn-batch-computeenvironment-type)" : String
+      "[Type](#cfn-batch-computeenvironment-type)" : String,
+      "[UnmanagedvCpus](#cfn-batch-computeenvironment-unmanagedvcpus)" : Integer
     }
 }
 ```
@@ -48,12 +49,13 @@ Properties:
   [State](#cfn-batch-computeenvironment-state): String
   [Tags](#cfn-batch-computeenvironment-tags): Json
   [Type](#cfn-batch-computeenvironment-type): String
+  [UnmanagedvCpus](#cfn-batch-computeenvironment-unmanagedvcpus): Integer
 ```
 
 ## Properties<a name="aws-resource-batch-computeenvironment-properties"></a>
 
 `ComputeEnvironmentName`  <a name="cfn-batch-computeenvironment-computeenvironmentname"></a>
-The name for your compute environment\. Up to 128 letters \(uppercase and lowercase\), numbers, hyphens, and underscores are allowed\.  
+The name for your compute environment\. It can be up to 128 letters long\. It can contain uppercase and lowercase letters, numbers, hyphens \(\-\), and underscores \(\_\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -94,6 +96,13 @@ The type of the compute environment: `MANAGED` or `UNMANAGED`\. For more informa
 *Type*: String  
 *Allowed values*: `MANAGED | UNMANAGED`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`UnmanagedvCpus`  <a name="cfn-batch-computeenvironment-unmanagedvcpus"></a>
+The maximum number of vCPUs for an unmanaged compute environment\. This parameter is only used for fair share scheduling to reserve vCPU capacity for new share identifiers\. If this parameter isn't provided for a fair share job queue, no vCPU capacity is reserved\.  
+This parameter is only supported when the `type` parameter is set to `UNMANAGED`/
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-batch-computeenvironment-return-values"></a>
 

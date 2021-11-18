@@ -32,7 +32,7 @@ The Amazon Resource Name \(ARN\) of the contact flow\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `QueueArn`  <a name="cfn-connect-quickconnect-queuequickconnectconfig-queuearn"></a>
-The Amazon Resource Name \(ARN\) of the user\.  
+The Amazon Resource Name \(ARN\) of the queue\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -146,8 +146,7 @@ If the key ARN specified by the `PrimaryKeyArn` property doesn't identify a mult
 #### JSON<a name="aws-resource-kms-replicakey--examples--Create_a_multi-Region_replica_key--json"></a>
 
 ```
-"Resources": {
-    "myReplicaKey": {
+"myReplicaKey": {
         "Type": "AWS::KMS::ReplicaKey",
         "Properties": {
             "PrimaryKeyArn": "arn:aws:kms:us-west-2:111122223333:key/mrk-1234abcd12ab34cd56ef1234567890ab",
@@ -183,7 +182,7 @@ If the key ARN specified by the `PrimaryKeyArn` property doesn't identify a mult
                             "kms:List*",
                             "kms:Put*",
                             "kms:Revoke*",
-                            "kms:UpdateAlias",                       
+                            "kms:UpdateAlias",
                             "kms:ScheduleKeyDeletion",
                             "kms:CancelKeyDeletion"
                         ],
@@ -209,61 +208,59 @@ If the key ARN specified by the `PrimaryKeyArn` property doesn't identify a mult
             }
         }
     }
-}
 ```
 
 #### YAML<a name="aws-resource-kms-replicakey--examples--Create_a_multi-Region_replica_key--yaml"></a>
 
 ```
-Resources:
-  myReplicaKey:
-    Type: 'AWS::KMS::ReplicaKey'
-    Properties:
-      PrimaryKeyArn: &gt;-
-        arn:aws:kms:us-west-2:111122223333:key/mrk-1234abcd12ab34cd56ef1234567890ab
-      Description: Example replica key
-      PendingWindowInDays: 7
-      KeyPolicy:
-        Version: 2012-10-17
-        Id: key-default-1
-        Statement:
-          - Sid: Enable IAM User Permissions
-            Effect: Allow
-            Principal:
-              AWS: 'arn:aws:iam::111122223333:root'
-            Action: 'kms:*'
-            Resource: '*'
-          - Sid: Allow administration of the key
-            Effect: Allow
-            Principal:
-              AWS: 'arn:aws:iam::111122223333:role/admin'
-            Action:
-              - 'kms:Create*'
-              - 'kms:Delete*'
-              - 'kms:Describe*'
-              - 'kms:Disable*'
-              - 'kms:Enable*'
-              - 'kms:Get*'
-              - 'kms:List*'
-              - 'kms:Put*'
-              - 'kms:Revoke*'
-              - 'kms:UpdateAlias'
-              - 'kms:UpdateDescription'
-              - 'kms:ScheduleKeyDeletion'
-              - 'kms:CancelKeyDeletion'
-            Resource: '*'
-          - Sid: Allow use of the key
-            Effect: Allow
-            Principal:
-              AWS: 'arn:aws:iam::111122223333:role/developer'
-            Action:
-              - 'kms:DescribeKey'
-              - 'kms:Encrypt'
-              - 'kms:Decrypt'
-              - 'kms:ReEncrypt*'
-              - 'kms:GenerateDataKey'
-              - 'kms:GenerateDataKeyWithoutPlaintext'
-            Resource: '*'
+myReplicaKey:
+  Type: 'AWS::KMS::ReplicaKey'
+  Properties:
+    PrimaryKeyArn: >-
+      arn:aws:kms:us-west-2:111122223333:key/mrk-1234abcd12ab34cd56ef1234567890ab
+    Description: Example replica key
+    EnableKeyRotation: true
+    PendingWindowInDays: 7
+    KeyPolicy:
+      Version: 2012-10-17
+      Id: key-default-1
+      Statement:
+        - Sid: Enable IAM User Permissions
+          Effect: Allow
+          Principal:
+            AWS: 'arn:aws:iam::111122223333:root'
+          Action: 'kms:*'
+          Resource: '*'
+        - Sid: Allow administration of the key
+          Effect: Allow
+          Principal:
+            AWS: 'arn:aws:iam::111122223333:role/admin'
+          Action:
+            - 'kms:Create*'
+            - 'kms:Delete*'
+            - 'kms:Disable*'
+            - 'kms:Describe*'
+            - 'kms:Enable*'
+            - 'kms:Get*'
+            - 'kms:List*'
+            - 'kms:Put*'
+            - 'kms:Revoke*'
+            - 'kms:UpdateAlias'
+            - 'kms:ScheduleKeyDeletion'
+            - 'kms:CancelKeyDeletion'
+          Resource: '*'
+        - Sid: Allow use of the key
+          Effect: Allow
+          Principal:
+            AWS: 'arn:aws:iam::111122223333:role/developer'
+          Action:
+            - 'kms:DescribeKey'
+            - 'kms:Encrypt'
+            - 'kms:Decrypt'
+            - 'kms:ReEncrypt*'
+            - 'kms:GenerateDataKey'
+            - 'kms:GenerateDataKeyWithoutPlaintext'
+          Resource: '*'
 ```
 
 ## See also<a name="aws-resource-kms-replicakey--seealso"></a>

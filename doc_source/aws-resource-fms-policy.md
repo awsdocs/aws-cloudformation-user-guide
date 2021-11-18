@@ -30,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[IncludeMap](#cfn-fms-policy-includemap)" : IEMap,
       "[PolicyName](#cfn-fms-policy-policyname)" : String,
       "[RemediationEnabled](#cfn-fms-policy-remediationenabled)" : Boolean,
+      "[ResourcesCleanUp](#cfn-fms-policy-resourcescleanup)" : Boolean,
       "[ResourceTags](#cfn-fms-policy-resourcetags)" : [ ResourceTag, ... ],
       "[ResourceType](#cfn-fms-policy-resourcetype)" : String,
       "[ResourceTypeList](#cfn-fms-policy-resourcetypelist)" : [ String, ... ],
@@ -52,6 +53,7 @@ Properties:
     IEMap
   [PolicyName](#cfn-fms-policy-policyname): String
   [RemediationEnabled](#cfn-fms-policy-remediationenabled): Boolean
+  [ResourcesCleanUp](#cfn-fms-policy-resourcescleanup): Boolean
   [ResourceTags](#cfn-fms-policy-resourcetags): 
     - ResourceTag
   [ResourceType](#cfn-fms-policy-resourcetype): String
@@ -118,6 +120,14 @@ The name of the AWS Firewall Manager policy\.
 `RemediationEnabled`  <a name="cfn-fms-policy-remediationenabled"></a>
 Indicates if the policy should be automatically applied to new resources\.  
 *Required*: Yes  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ResourcesCleanUp`  <a name="cfn-fms-policy-resourcescleanup"></a>
+Indicates whether AWS Firewall Manager should automatically remove protections from resources that leave the policy scope and clean up resources that Firewall Manager is managing for accounts when those accounts leave policy scope\. For example, Firewall Manager will disassociate a Firewall Manager managed web ACL from a protected customer resource when the customer resource leaves policy scope\.   
+By default, Firewall Manager doesn't remove protections or delete Firewall Manager managed resources\.   
+This option is not available for Shield Advanced or AWS WAF Classic policies\.  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

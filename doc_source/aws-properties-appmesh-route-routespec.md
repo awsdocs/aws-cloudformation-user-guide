@@ -56,6 +56,8 @@ An object that represents the specification of an HTTP route\.
 The priority for the route\. Routes are matched based on the specified value, where 0 is the highest priority\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TcpRoute`  <a name="cfn-appmesh-route-routespec-tcproute"></a>

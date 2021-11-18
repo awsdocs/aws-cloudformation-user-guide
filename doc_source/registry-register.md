@@ -1,22 +1,24 @@
 # Using private extensions in CloudFormation<a name="registry-register"></a>
 
-*Private* extensions are those extensions from third parties that you have explicitly activated for use in your AWS account\. 
+*Private* extensions are extensions that you have explicitly allowed for use in your AWS account\.
 
 There are two kinds of private extensions:
 + *Activated private extensions*
 
-  These are the local copies of third\-party extensions that you have activated for your account and region\. When you activate a third\-party public extension, CloudFormation creates a local copy of that extension in your account's registry\.
+  These are the local copies of third\-party extensions that you have activated for your account and Region\. When you activate a third\-party public extension, CloudFormation creates a local copy of that extension in your account's registry\.
 + *Registered private extensions*
 
-  You can also activate private extensions that are not listed in the public CloudFormation registry\. These may be extensions you've created yourself, or ones shared with you by your organization or other third party\. To use such a private extension in your account, you must first register it\. 
+  You can also have private extensions that are not listed in the public CloudFormation registry\. These may be extensions you've created yourself, or ones shared with you by your organization or other third party\. To use such a private extension in your account, you must first register it\.
 
-  For information on developing private extensions of your own, see [Creating resource types](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-types.html) in the *CloudFormation Command Line Interface User Guide*\.
+Any use of private extensions in your account is analogous to using it in a sandbox environment\. This is because extensions are version\-controlled, and provisioning behavior is version\-specific, which means that private extensions behave the same as if they were made public\.
+
+For information about developing private extensions of your own, see [Creating resource types](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-types.html) in the *CloudFormation Command Line Interface User Guide*\.
 
 ## Registering private extensions<a name="registry-register-private"></a>
 
 To use private extensions that are not listed in the CloudFormation registry\-\-either ones you develop yourself, or ones that have been shared with you\-\-you must first *register* them with CloudFormation, in the accounts and regions in which you want to use them\. Registering the extension uploads a copy of it to the CloudFormation registry in your account, and activates it\. Once you're registered a private extension, it will appear in the CloudFormation registry for that account and region, and you can use it in your stack templates\.
 
-You can register an extension using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or using the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\. To register a private extension using the CloudFormation CLI, see [Registering extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-register.html) in the *CloudFormation CLI User Guide*\. 
+You can register an extension using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or using the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\. To register a private extension using the CloudFormation CLI, see [Registering extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-register.html) in the *CloudFormation CLI User Guide*\.
 
 ### IAM permissions for registering a private extension<a name="registry-register-permissions"></a>
 
@@ -32,7 +34,7 @@ For more information, see [Actions, Resources, and Condition Keys for Amazon S3]
 
 1. Use the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command to register the extension in your account:
 
-   `RegisterType` is an asynchronous action, and returns a registration token you can use to track the progress of your registration request\. 
+   `RegisterType` is an asynchronous action, and returns a registration token you can use to track the progress of your registration request\.
 **Note**  
 If your extension calls AWS APIs as part of its functionality, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account\. You can then specify this execution role using the `--execution-role-arn` parameter\. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials\.
 

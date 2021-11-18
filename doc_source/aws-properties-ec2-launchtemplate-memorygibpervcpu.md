@@ -1,6 +1,6 @@
 # AWS::EC2::LaunchTemplate MemoryGiBPerVCpu<a name="aws-properties-ec2-launchtemplate-memorygibpervcpu"></a>
 
-<a name="aws-properties-ec2-launchtemplate-memorygibpervcpu-description"></a>The `MemoryGiBPerVCpu` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::EC2::LaunchTemplate](aws-resource-ec2-launchtemplate.md)\.
+The minimum and maximum amount of memory per vCPU, in GiB\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-memorygibpervcpu-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-launchtemplate-memorygibpervcpu-properties"></a>
 
 `Max`  <a name="cfn-ec2-launchtemplate-memorygibpervcpu-max"></a>
-Not currently supported by AWS CloudFormation\.  
+The maximum amount of memory per vCPU, in GiB\. To specify no maximum limit, omit this parameter\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Min`  <a name="cfn-ec2-launchtemplate-memorygibpervcpu-min"></a>
-Not currently supported by AWS CloudFormation\.  
+The minimum amount of memory per vCPU, in GiB\. To specify no minimum limit, omit this parameter\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

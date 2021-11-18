@@ -1,6 +1,12 @@
 # AWS::EKS::Cluster Logging<a name="aws-properties-eks-cluster-logging"></a>
 
-An object representing the logging configuration for resources in your cluster\.
+Enable or disable exporting the Kubernetes control plane logs for your cluster to CloudWatch Logs\. By default, cluster control plane logs aren't exported to CloudWatch Logs\. For more information, see [Amazon EKS Cluster control plane logs](https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html) in the * *Amazon EKS User Guide* *\.
+
+**Important**  
+When updating a resource, you must include this `Logging` property if the previous CloudFormation template of the resource had it\.
+
+**Note**  
+CloudWatch Logs ingestion, archive storage, and data scanning rates apply to exported control plane logs\. For more information, see [CloudWatch Pricing](http://aws.amazon.com/cloudwatch/pricing/)\.
 
 ## Syntax<a name="aws-properties-eks-cluster-logging-syntax"></a>
 

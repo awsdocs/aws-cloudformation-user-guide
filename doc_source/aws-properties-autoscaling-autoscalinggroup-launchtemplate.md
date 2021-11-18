@@ -27,14 +27,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-autoscaling-autoscalinggroup-launchtemplate-properties"></a>
 
 `LaunchTemplateSpecification`  <a name="cfn-as-group-launchtemplate-launchtemplatespecification"></a>
-The EC2 launch template to use\.  
+The launch template to use\.  
 *Required*: Yes  
 *Type*: [LaunchTemplateSpecification](aws-properties-autoscaling-autoscalinggroup-launchtemplatespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Overrides`  <a name="cfn-as-group-launchtemplate-overrides"></a>
-Any properties that you specify override the same properties in the launch template\. The maximum number of instance types that can be associated with an Auto Scaling group is 40\. The maximum number of distinct launch templates you can define for an Auto Scaling group is 20\. For more information about configuring overrides, see [Configuring overrides](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-override-options.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
-If not provided, Amazon EC2 Auto Scaling will use the instance type specified in the launch template to launch instances\.   
+Any properties that you specify override the same properties in the launch template\. If not provided, Amazon EC2 Auto Scaling uses the instance type or instance requirements specified in the launch template when it launches an instance\.  
+The overrides can include either one or more instance types or a set of instance requirements, but not both\.  
 *Required*: No  
 *Type*: List of [LaunchTemplateOverrides](aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

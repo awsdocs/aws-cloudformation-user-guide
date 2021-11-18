@@ -71,7 +71,7 @@ A list of resource permissions to be set on the template\.
 `SourceEntity`  <a name="cfn-quicksight-template-sourceentity"></a>
 The entity that you are using as a source when you create the template\. In `SourceEntity`, you specify the type of object you're using as source: `SourceTemplate` for a template or `SourceAnalysis` for an analysis\. Both of these require an Amazon Resource Name \(ARN\)\. For `SourceTemplate`, specify the ARN of the source template\. For `SourceAnalysis`, specify the ARN of the source analysis\. The `SourceTemplate` ARN can contain any AWS account and any Amazon QuickSight\-supported AWS Region\.   
 Use the `DataSetReferences` entity within `SourceTemplate` or `SourceAnalysis` to list the replacement datasets for the placeholders listed in the original\. The schema in each dataset must match its placeholder\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: [TemplateSourceEntity](aws-properties-quicksight-template-templatesourceentity.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -87,7 +87,7 @@ An ID for the template that you want to create\. This template is unique per AWS
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `512`  
+*Maximum*: `2048`  
 *Pattern*: `[\w\-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

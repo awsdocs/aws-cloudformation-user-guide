@@ -35,6 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Password](#cfn-dms-endpoint-password)" : String,
       "[Port](#cfn-dms-endpoint-port)" : Integer,
       "[PostgreSqlSettings](#cfn-dms-endpoint-postgresqlsettings)" : PostgreSqlSettings,
+      "[RedisSettings](#cfn-dms-endpoint-redissettings)" : RedisSettings,
       "[RedshiftSettings](#cfn-dms-endpoint-redshiftsettings)" : RedshiftSettings,
       "[ResourceIdentifier](#cfn-dms-endpoint-resourceidentifier)" : String,
       "[S3Settings](#cfn-dms-endpoint-s3settings)" : S3Settings,
@@ -85,6 +86,8 @@ Properties:
   [Port](#cfn-dms-endpoint-port): Integer
   [PostgreSqlSettings](#cfn-dms-endpoint-postgresqlsettings): 
     PostgreSqlSettings
+  [RedisSettings](#cfn-dms-endpoint-redissettings): 
+    RedisSettings
   [RedshiftSettings](#cfn-dms-endpoint-redshiftsettings): 
     RedshiftSettings
   [ResourceIdentifier](#cfn-dms-endpoint-resourceidentifier): String
@@ -228,6 +231,12 @@ The port used by the endpoint database\.
 Not currently supported by AWS CloudFormation\.   
 *Required*: No  
 *Type*: [PostgreSqlSettings](aws-properties-dms-endpoint-postgresqlsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RedisSettings`  <a name="cfn-dms-endpoint-redissettings"></a>
+Settings in JSON format for the target Redis endpoint\.  
+*Required*: No  
+*Type*: [RedisSettings](aws-properties-dms-endpoint-redissettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RedshiftSettings`  <a name="cfn-dms-endpoint-redshiftsettings"></a>

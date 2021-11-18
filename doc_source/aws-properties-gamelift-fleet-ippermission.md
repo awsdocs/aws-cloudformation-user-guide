@@ -30,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `FromPort`  <a name="cfn-gamelift-fleet-ippermission-fromport"></a>
 A starting value for a range of allowed port numbers\.  
+For fleets using Linux builds, only port 22, 443, 1026\-60000 are valid\. For fleets using Windows builds, only port 443, 1026\-60000 are valid\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -52,6 +53,7 @@ The network communication protocol used by the fleet\.
 
 `ToPort`  <a name="cfn-gamelift-fleet-ippermission-toport"></a>
 An ending value for a range of allowed port numbers\. Port numbers are end\-inclusive\. This value must be higher than `FromPort`\.  
+For fleets using Linux builds, only port 22, 443, 1026\-60000 are valid\. For fleets using Windows builds, only port 443, 1026\-60000 are valid\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `1`  

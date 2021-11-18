@@ -50,10 +50,9 @@ Action:
 #### JSON<a name="aws-properties-wafv2-webacl-blockaction--examples--Set_an_block_action_--json"></a>
 
 ```
-"Action": 
-  {"Block": 
-    {}
-  }
+"Action": {
+  "Block": {}
+}
 ```
 
 ### Set a block action with a custom response setting<a name="aws-properties-wafv2-webacl-blockaction--examples--Set_a_block_action_with_a_custom_response_setting"></a>

@@ -10,6 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[StatefulDefaultActions](#cfn-networkfirewall-firewallpolicy-firewallpolicy-statefuldefaultactions)" : [ String, ... ],
+  "[StatefulEngineOptions](#cfn-networkfirewall-firewallpolicy-firewallpolicy-statefulengineoptions)" : StatefulEngineOptions,
   "[StatefulRuleGroupReferences](#cfn-networkfirewall-firewallpolicy-firewallpolicy-statefulrulegroupreferences)" : [ StatefulRuleGroupReference, ... ],
   "[StatelessCustomActions](#cfn-networkfirewall-firewallpolicy-firewallpolicy-statelesscustomactions)" : [ CustomAction, ... ],
   "[StatelessDefaultActions](#cfn-networkfirewall-firewallpolicy-firewallpolicy-statelessdefaultactions)" : [ String, ... ],
@@ -21,6 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-networkfirewall-firewallpolicy-firewallpolicy-syntax.yaml"></a>
 
 ```
+  [StatefulDefaultActions](#cfn-networkfirewall-firewallpolicy-firewallpolicy-statefuldefaultactions): 
+    - String
+  [StatefulEngineOptions](#cfn-networkfirewall-firewallpolicy-firewallpolicy-statefulengineoptions): 
+    StatefulEngineOptions
   [StatefulRuleGroupReferences](#cfn-networkfirewall-firewallpolicy-firewallpolicy-statefulrulegroupreferences): 
     - StatefulRuleGroupReference
   [StatelessCustomActions](#cfn-networkfirewall-firewallpolicy-firewallpolicy-statelesscustomactions): 
@@ -34,6 +40,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-networkfirewall-firewallpolicy-firewallpolicy-properties"></a>
+
+`StatefulDefaultActions`  <a name="cfn-networkfirewall-firewallpolicy-firewallpolicy-statefuldefaultactions"></a>
+The default actions to take on a packet that doesn't match any stateful rules\. The stateful default action is optional, and is only valid when using the strict rule order\.  
+Valid values of the stateful default action:  
++ aws:drop\_strict
++ aws:drop\_established
++ aws:alert\_strict
++ aws:alert\_established
+For more information, see [Strict evaluation order](https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-strict-rule-evaluation-order.html) in the * AWS Network Firewall Developer Guide*\.   
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`StatefulEngineOptions`  <a name="cfn-networkfirewall-firewallpolicy-firewallpolicy-statefulengineoptions"></a>
+Additional options governing how Network Firewall handles stateful rules\. The stateful rule groups that you use in your policy must have stateful rule options settings that are compatible with these settings\.  
+*Required*: No  
+*Type*: [StatefulEngineOptions](aws-properties-networkfirewall-firewallpolicy-statefulengineoptions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StatefulRuleGroupReferences`  <a name="cfn-networkfirewall-firewallpolicy-firewallpolicy-statefulrulegroupreferences"></a>
 References to the stateful rule groups that are used in the policy\. These define the inspection criteria in stateful rules\.   

@@ -95,7 +95,6 @@ The following shows an example logging configuration with redacted fields\.
 #### YAML<a name="aws-resource-wafv2-loggingconfiguration--examples--Create_a_logging_configuration_with_redacted_fields--yaml"></a>
 
 ```
-Resources:
   LoggingConfiguration:
     Type: AWS::WAFv2::LoggingConfiguration
     Properties:
@@ -120,7 +119,6 @@ Resources:
 #### JSON<a name="aws-resource-wafv2-loggingconfiguration--examples--Create_a_logging_configuration_with_redacted_fields--json"></a>
 
 ```
-"Resources": {
   "LoggingConfiguration": {
     "Type": "AWS::WAFv2::LoggingConfiguration",
     "Properties": {
@@ -129,36 +127,34 @@ Resources:
         "arn:aws:firehose:us-east-1:123456789000:deliverystream/aws-waf-logs-firehose"
       ],
       "RedactedFields": [
-        {
-          "JsonBody": {
-            "InvalidFallbackBehavior": "EVALUATE_AS_STRING",
-            "MatchPattern": {
-              "IncludedPaths": [
-                "/path/0/name",
-                "/path/1/name"
-              ]
-            },
-            "MatchScope": "ALL"
-          }
-        },
-        {
-          "Method": {}
-        },
-        {
-          "QueryString": {}
-        },
-        {
-          "SingleHeader": {
-            "Name": "password"
-          }
-        },
-        {
-          "UriPath": {}
+      {
+        "JsonBody": {
+          "InvalidFallbackBehavior": "EVALUATE_AS_STRING",
+          "MatchPattern": {
+            "IncludedPaths": [
+              "/path/0/name",
+              "/path/1/name"
+            ]
+          },
+          "MatchScope": "ALL"
         }
-      ]
+      },
+      {
+        "Method": {}
+      },
+      {
+        "QueryString": {}
+      },
+      {
+        "SingleHeader": {
+          "Name": "password"
+        }
+      },
+      {
+        "UriPath": {}
+      } ]
     }
   }
-}
 ```
 
 ### Create a logging configuration with a filter<a name="aws-resource-wafv2-loggingconfiguration--examples--Create_a_logging_configuration_with_a_filter"></a>
@@ -168,7 +164,6 @@ The following shows an example logging configuration with a logging filter\.
 #### YAML<a name="aws-resource-wafv2-loggingconfiguration--examples--Create_a_logging_configuration_with_a_filter--yaml"></a>
 
 ```
-Resources:
   LoggingConfiguration:
     Type: AWS::WAFv2::LoggingConfiguration
     Properties:
@@ -203,64 +198,62 @@ Resources:
 #### JSON<a name="aws-resource-wafv2-loggingconfiguration--examples--Create_a_logging_configuration_with_a_filter--json"></a>
 
 ```
-"Resources": {
   "LoggingConfiguration": {
-    "Type": "AWS::WAFv2::LoggingConfiguration",
-    "Properties": {
-      "ResourceArn": "arn:aws:wafv2:us-east-1:123456789000:regional/webacl/test-webaclv2/abcd1234-123b-1234-1234-123456789abc",
-      "LogDestinationConfigs": [
-        "arn:aws:firehose:us-east-1:123456789000:deliverystream/aws-waf-logs-firehose"
-      ],
-      "RedactedFields": [
-        {
-          "JsonBody": {
-            "InvalidFallbackBehavior": "EVALUATE_AS_STRING",
-            "MatchPattern": {
-              "IncludedPaths": [
-                "/path/0/name",
-                "/path/1/name"
-              ]
-            },
-            "MatchScope": "ALL"
-          }
-        },
-        {
-          "Method": {}
-        },
-        {
-          "QueryString": {}
-        },
-        {
-          "SingleHeader": {
-            "Name": "password"
-          }
-        },
-        {
-          "UriPath": {}
-        }
-      ],
-      "LoggingFilter": {
-        "DefaultBehavior": "KEEP",
-        "Filters": [
+      "Type": "AWS::WAFv2::LoggingConfiguration",
+      "Properties": {
+        "ResourceArn": "arn:aws:wafv2:us-east-1:123456789000:regional/webacl/test-webaclv2/abcd1234-123b-1234-1234-123456789abc",
+        "LogDestinationConfigs": [
+          "arn:aws:firehose:us-east-1:123456789000:deliverystream/aws-waf-logs-firehose"
+        ],
+        "RedactedFields": [
           {
-            "Behavior": "KEEP",
-            "Conditions": [
-              {
-                "ActionCondition": {
-                  "Action": "BLOCK"
-                }
+            "JsonBody": {
+              "InvalidFallbackBehavior": "EVALUATE_AS_STRING",
+              "MatchPattern": {
+                "IncludedPaths": [
+                  "/path/0/name",
+                  "/path/1/name"
+                ]
               },
-              {
-                "LabelNameCondition": {
-                  "LabelName": "fooLabel"
-                }
-              }
-            ],
-            "Requirement": "MEETS_ANY"
+              "MatchScope": "ALL"
+            }
+          },
+          {
+            "Method": {}
+          },
+          {
+            "QueryString": {}
+          },
+          {
+            "SingleHeader": {
+              "Name": "password"
+            }
+          },
+          {
+            "UriPath": {}
           }
-        ]
+        ],
+        "LoggingFilter": {
+          "DefaultBehavior": "KEEP",
+          "Filters": [
+            {
+              "Behavior": "KEEP",
+              "Conditions": [
+                {
+                  "ActionCondition": {
+                    "Action": "BLOCK"
+                  }
+                },
+                {
+                  "LabelNameCondition": {
+                    "LabelName": "fooLabel"
+                  }
+                }
+              ],
+              "Requirement": "MEETS_ANY"
+            }
+          ]
+        }
       }
     }
-  }
-}
 ```

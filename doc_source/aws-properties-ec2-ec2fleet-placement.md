@@ -72,7 +72,7 @@ This parameter is not supported by [CreateFleet](https://docs.aws.amazon.com/AWS
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PartitionNumber`  <a name="cfn-ec2-ec2fleet-placement-partitionnumber"></a>
-The number of the partition the instance is in\. Valid only if the placement group strategy is set to `partition`\.  
+The number of the partition that the instance is in\. Valid only if the placement group strategy is set to `partition`\.  
 This parameter is not supported by [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet)\.  
 *Required*: No  
 *Type*: Integer  

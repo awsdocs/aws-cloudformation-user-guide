@@ -17,6 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[MasterSecretKmsKeyArn](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-mastersecretkmskeyarn)" : String,
   "[RotationLambdaName](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-rotationlambdaname)" : String,
   "[RotationType](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-rotationtype)" : String,
+  "[SuperuserSecretArn](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-superusersecretarn)" : String,
+  "[SuperuserSecretKmsKeyArn](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-superusersecretkmskeyarn)" : String,
   "[VpcSecurityGroupIds](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-vpcsecuritygroupids)" : String,
   "[VpcSubnetIds](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-vpcsubnetids)" : String
 }
@@ -30,6 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [MasterSecretKmsKeyArn](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-mastersecretkmskeyarn): String
   [RotationLambdaName](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-rotationlambdaname): String
   [RotationType](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-rotationtype): String
+  [SuperuserSecretArn](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-superusersecretarn): String
+  [SuperuserSecretKmsKeyArn](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-superusersecretkmskeyarn): String
   [VpcSecurityGroupIds](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-vpcsecuritygroupids): String
   [VpcSubnetIds](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-vpcsubnetids): String
 ```
@@ -78,6 +82,18 @@ You can specify one of the following `RotationTypes`:
 + MongoDBSingleUser
 + MongoDBMultiUser
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SuperuserSecretArn`  <a name="cfn-secretsmanager-rotationschedule-hostedrotationlambda-superusersecretarn"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SuperuserSecretKmsKeyArn`  <a name="cfn-secretsmanager-rotationschedule-hostedrotationlambda-superusersecretkmskeyarn"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

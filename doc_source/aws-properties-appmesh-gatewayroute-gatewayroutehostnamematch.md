@@ -28,10 +28,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The exact host name to match on\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `253`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Suffix`  <a name="cfn-appmesh-gatewayroute-gatewayroutehostnamematch-suffix"></a>
 The specified ending characters of the host name to match on\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `253`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

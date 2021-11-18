@@ -124,9 +124,7 @@ The following shows an example IP set specification\.
 #### JSON<a name="aws-resource-wafv2-ipset--examples--Create_an_IP_set--json"></a>
 
 ```
-"Description": "Sample IPSet",
-  "Resources": {
-    "SampleIPSet": {
+ "SampleIPSet": {
       "Type": "AWS::WAFv2::IPSet",
       "Properties": {
         "Description": "SampleIPSet",
@@ -138,15 +136,12 @@ The following shows an example IP set specification\.
         ]
       }
     }
-  }
 ```
 
 #### YAML<a name="aws-resource-wafv2-ipset--examples--Create_an_IP_set--yaml"></a>
 
 ```
-Description: Sample IPSet
-  Resources:
-    SampleIPSet:
+ SampleIPSet:
       Type: 'AWS::WAFv2::IPSet'
       Properties:
         Description: SampleIPSet

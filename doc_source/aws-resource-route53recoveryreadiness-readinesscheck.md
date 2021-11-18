@@ -1,6 +1,6 @@
 # AWS::Route53RecoveryReadiness::ReadinessCheck<a name="aws-resource-route53recoveryreadiness-readinesscheck"></a>
 
-Creates a readiness check in an account\. A readiness check helps ensure that your applications are properly scaled to handle failover traffic and configured to route around failures\. Route 53 Application Recovery Controller uses readiness checks to determine the readiness of the resources in a resource set\.
+Creates a readiness check in an account\. A readiness check monitors a resource set in your application, such as a set of Amazon Aurora instances, that Application Recovery Controller is auditing recovery readiness for\. The audits run once every minute on every resource that's associated with a readiness check\.
 
 ## Syntax<a name="aws-resource-route53recoveryreadiness-readinesscheck-syntax"></a>
 

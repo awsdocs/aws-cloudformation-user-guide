@@ -115,7 +115,7 @@ Save the deployment strategy to a Systems Manager \(SSM\) document\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-appconfig-deploymentstrategy-tags"></a>
-Metadata to assign to an AWS AppConfig resource\. Tags help organize and categorize your AWS AppConfig resources\. Each tag consists of a key and an optional value, both of which you define\. You can specify a maximum of 50 tags for a resource\.  
+Assigns metadata to an AWS AppConfig resource\. Tags help organize and categorize your AWS AppConfig resources\. Each tag consists of a key and an optional value, both of which you define\. You can specify a maximum of 50 tags for a resource\.  
 *Required*: No  
 *Type*: [List](aws-properties-appconfig-deploymentstrategy-tags.md) of [Tags](aws-properties-appconfig-deploymentstrategy-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AmazonElasticsearchParameters](#cfn-quicksight-datasource-datasourceparameters-amazonelasticsearchparameters)" : AmazonElasticsearchParameters,
+  "[AmazonOpenSearchParameters](#cfn-quicksight-datasource-datasourceparameters-amazonopensearchparameters)" : AmazonOpenSearchParameters,
   "[AthenaParameters](#cfn-quicksight-datasource-datasourceparameters-athenaparameters)" : AthenaParameters,
   "[AuroraParameters](#cfn-quicksight-datasource-datasourceparameters-auroraparameters)" : AuroraParameters,
   "[AuroraPostgreSqlParameters](#cfn-quicksight-datasource-datasourceparameters-aurorapostgresqlparameters)" : AuroraPostgreSqlParameters,
@@ -34,6 +35,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AmazonElasticsearchParameters](#cfn-quicksight-datasource-datasourceparameters-amazonelasticsearchparameters): 
     AmazonElasticsearchParameters
+  [AmazonOpenSearchParameters](#cfn-quicksight-datasource-datasourceparameters-amazonopensearchparameters): 
+    AmazonOpenSearchParameters
   [AthenaParameters](#cfn-quicksight-datasource-datasourceparameters-athenaparameters): 
     AthenaParameters
   [AuroraParameters](#cfn-quicksight-datasource-datasourceparameters-auroraparameters): 
@@ -72,6 +75,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The parameters for OpenSearch\.  
 *Required*: No  
 *Type*: [AmazonElasticsearchParameters](aws-properties-quicksight-datasource-amazonelasticsearchparameters.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AmazonOpenSearchParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-amazonopensearchparameters"></a>
+The parameters for OpenSearch\.  
+*Required*: No  
+*Type*: [AmazonOpenSearchParameters](aws-properties-quicksight-datasource-amazonopensearchparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AthenaParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-athenaparameters"></a>

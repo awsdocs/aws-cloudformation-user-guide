@@ -29,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `CpuCount`  <a name="cfn-lightsail-instance-hardware-cpucount"></a>
 The number of vCPUs the instance has\.  
+The `CpuCount` property is read\-only and should not be specified in a create instance or update instance request\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: Updates are not supported\.
@@ -42,6 +43,7 @@ The instance restarts when performing an attach disk or detach disk request\. Th
 
 `RamSizeInGb`  <a name="cfn-lightsail-instance-hardware-ramsizeingb"></a>
 The amount of RAM in GB on the instance \(for example, `1.0`\)\.  
+The `RamSizeInGb` property is read\-only and should not be specified in a create instance or update instance request\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: Updates are not supported\.

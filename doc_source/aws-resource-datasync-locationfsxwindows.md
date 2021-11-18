@@ -1,6 +1,6 @@
 # AWS::DataSync::LocationFSxWindows<a name="aws-resource-datasync-locationfsxwindows"></a>
 
-The `AWS::DataSync::LocationFSxWindows` resource specifies an endpoint for an Amazon FSx for Windows file system\.
+The `AWS::DataSync::LocationFSxWindows` resource specifies an endpoint for an Amazon FSx for Windows Server file system\.
 
 ## Syntax<a name="aws-resource-datasync-locationfsxwindows-syntax"></a>
 
@@ -66,7 +66,7 @@ The password of the user who has the permissions to access files and folders in 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityGroupArns`  <a name="cfn-datasync-locationfsxwindows-securitygrouparns"></a>
-The Amazon Resource Names \(ARNs\) of the security groups that are to use to configure the FSx for Windows File Server file system\.  
+The Amazon Resource Names \(ARNs\) of the security groups that are used to configure the FSx for Windows File Server file system\.  
 *Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):ec2:[a-z\-0-9]*:[0-9]{12}:security-group/.*$`  
 *Length Constraints*: Maximum length of 128\.  
 *Required*: Yes  
@@ -90,7 +90,7 @@ The key\-value pair that represents a tag that you want to add to the resource\.
 
 `User`  <a name="cfn-datasync-locationfsxwindows-user"></a>
 The user who has the permissions to access files and folders in the FSx for Windows File Server file system\.  
-For information about choosing a user name that ensures sufficient permissions to files, folders, and metadata, see [user](create-fsx-location.html#FSxWuser)\.  
+For information about choosing a user name that ensures sufficient permissions to files, folders, and metadata, see [user](https://docs.aws.amazon.com/datasync/latest/userguide/create-fsx-location.html#FSxWuser)\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `104`  
@@ -116,25 +116,25 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-datasync-locationfsxwindows-return-values-fn--getatt-fn--getatt"></a>
 
 `LocationArn`  <a name="LocationArn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the Amazon FSx for Windows file system location that is specified\. 
+The Amazon Resource Name \(ARN\) of the specified Amazon FSx for Windows Server file system location\. 
 
 `LocationUri`  <a name="LocationUri-fn::getatt"></a>
-The URL of the Amazon FSx for Windows file system that is specified\.
+The URI of the specified Amazon FSx for Windows Server file system\.
 
 ## Examples<a name="aws-resource-datasync-locationfsxwindows--examples"></a>
 
 
 
-### Create an Amazon FSxWindows location for DataSync<a name="aws-resource-datasync-locationfsxwindows--examples--Create_an_Amazon_FSxWindows_location_for_DataSync"></a>
+### Create an Amazon FSx for Windows File Server location for DataSync<a name="aws-resource-datasync-locationfsxwindows--examples--Create_an_Amazon_FSx_for_Windows_File_Server_location_for_DataSync"></a>
 
-The following example specifies an FSxWindows location to be used by DataSync, with the subdirectory `/MySubdirectory`, user `Admin` and password\.
+The following example specifies an FSx for Windows File Server location to be used by DataSync, with the subdirectory `/MySubdirectory`, user `Admin` and password\.
 
-#### JSON<a name="aws-resource-datasync-locationfsxwindows--examples--Create_an_Amazon_FSxWindows_location_for_DataSync--json"></a>
+#### JSON<a name="aws-resource-datasync-locationfsxwindows--examples--Create_an_Amazon_FSx_for_Windows_File_Server_location_for_DataSync--json"></a>
 
 ```
 {
 "AWSTemplateFormatVersion": "2010-09-09",
-"Description": "Specifies an FSxWindows location for DataSync",
+"Description": "Specifies an FSx for Windows File Server location for DataSync",
 "Resources": 
 {
   "LocationFSxWindows": {
@@ -152,11 +152,11 @@ The following example specifies an FSxWindows location to be used by DataSync, w
 }
 ```
 
-#### YAML<a name="aws-resource-datasync-locationfsxwindows--examples--Create_an_Amazon_FSxWindows_location_for_DataSync--yaml"></a>
+#### YAML<a name="aws-resource-datasync-locationfsxwindows--examples--Create_an_Amazon_FSx_for_Windows_File_Server_location_for_DataSync--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: Specifies an FSxWindows location for DataSync
+Description: Specifies an FSx for Windows File Server location for DataSync
 Resources:
   LocationFSxWindows:
     Type: AWS::DataSync::LocationFSxWindows

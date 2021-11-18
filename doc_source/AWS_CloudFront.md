@@ -9,4 +9,5 @@
 + [AWS::CloudFront::OriginRequestPolicy](aws-resource-cloudfront-originrequestpolicy.md)
 + [AWS::CloudFront::PublicKey](aws-resource-cloudfront-publickey.md)
 + [AWS::CloudFront::RealtimeLogConfig](aws-resource-cloudfront-realtimelogconfig.md)
++ [AWS::CloudFront::ResponseHeadersPolicy](aws-resource-cloudfront-responseheaderspolicy.md)
 + [AWS::CloudFront::StreamingDistribution](aws-resource-cloudfront-streamingdistribution.md)

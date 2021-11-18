@@ -31,10 +31,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The name of an AWS Cloud Map service instance attribute key\. Any AWS Cloud Map service instance that contains the specified key and value is returned\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `^[a-zA-Z0-9!-~]+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-appmesh-virtualnode-awscloudmapinstanceattribute-value"></a>
 The value of an AWS Cloud Map service instance attribute key\. Any AWS Cloud Map service instance that contains the specified key and value is returned\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Pattern*: `^([a-zA-Z0-9!-~][ a-zA-Z0-9!-~]*){0,1}[a-zA-Z0-9!-~]{0,1}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

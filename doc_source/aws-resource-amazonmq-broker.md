@@ -102,6 +102,7 @@ Enables automatic upgrades to new minor versions for brokers, as new broker engi
 
 `BrokerName`  <a name="cfn-amazonmq-broker-brokername"></a>
 The name of the broker\. This value must be unique in your AWS account, 1\-50 characters long, must contain only letters, numbers, dashes, and underscores, and must not contain white spaces, brackets, wildcard characters, or special characters\.  
+ Do not add personally identifiable information \(PII\) or other confidential or sensitive information in broker names\. Broker names are accessible to other AWS services, including CCloudWatch Logs\. Broker names are not intended to be used for private or sensitive data\. 
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

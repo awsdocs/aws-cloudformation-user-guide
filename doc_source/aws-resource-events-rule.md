@@ -115,6 +115,7 @@ The state of the rule\.
 `Targets`  <a name="cfn-events-rule-targets"></a>
 Adds the specified targets to the specified rule, or updates the targets if they are already associated with the rule\.  
 Targets are the resources that are invoked when a rule is triggered\.  
+Each rule can have up to five \(5\) targets associated with it at one time\.
 You can configure the following as targets for Events:  
 +  [API destination](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-api-destinations.html) 
 + Amazon API Gateway REST API endpoints

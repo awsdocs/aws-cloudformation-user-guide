@@ -1,6 +1,6 @@
 # AWS::SageMaker::Endpoint Alarm<a name="aws-properties-sagemaker-endpoint-alarm"></a>
 
-This API is not supported\.
+An Amazon CloudWatch alarm configured to monitor metrics on an endpoint\.
 
 ## Syntax<a name="aws-properties-sagemaker-endpoint-alarm-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-sagemaker-endpoint-alarm-properties"></a>
 
 `AlarmName`  <a name="cfn-sagemaker-endpoint-alarm-alarmname"></a>
-  
+The name of a CloudWatch alarm in your account\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

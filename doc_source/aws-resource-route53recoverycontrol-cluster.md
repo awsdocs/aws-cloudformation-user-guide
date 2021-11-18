@@ -12,7 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Route53RecoveryControl::Cluster",
   "Properties" : {
-      "[Name](#cfn-route53recoverycontrol-cluster-name)" : String
+      "[Name](#cfn-route53recoverycontrol-cluster-name)" : String,
+      "[Tags](#cfn-route53recoverycontrol-cluster-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -23,6 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Route53RecoveryControl::Cluster
 Properties: 
   [Name](#cfn-route53recoverycontrol-cluster-name): String
+  [Tags](#cfn-route53recoverycontrol-cluster-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-route53recoverycontrol-cluster-properties"></a>
@@ -31,6 +34,12 @@ Properties:
 Name of the cluster\. You can use any non\-white space character in the name\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-route53recoverycontrol-cluster-tags"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-route53recoverycontrol-cluster-return-values"></a>

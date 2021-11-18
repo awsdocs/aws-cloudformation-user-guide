@@ -123,9 +123,10 @@ The number of consecutive health checks successes required before considering an
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IpAddressType`  <a name="cfn-elasticloadbalancingv2-targetgroup-ipaddresstype"></a>
-Not currently supported by AWS CloudFormation\.  
+The type of IP address used for this target group\. The possible values are `ipv4` and `ipv6`\. This is an optional parameter\. If not specified, the IP address type defaults to `ipv4`\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `ipv4 | ipv6`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Matcher`  <a name="cfn-elasticloadbalancingv2-targetgroup-matcher"></a>

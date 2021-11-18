@@ -83,7 +83,8 @@ The unique name to give to your cluster\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ResourcesVpcConfig`  <a name="cfn-eks-cluster-resourcesvpcconfig"></a>
-The VPC configuration used by the cluster control plane\. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes\. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the *Amazon EKS User Guide*\. You must specify at least two subnets\. You can specify up to five security groups, but we recommend that you use a dedicated security group for your cluster control plane\.  
+The VPC configuration that's used by the cluster control plane\. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes\. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the *Amazon EKS User Guide*\. You must specify at least two subnets\. You can specify up to five security groups, but we recommend that you use a dedicated security group for your cluster control plane\.  
+Updates require replacement of the `SecurityGroupIds` and `SubnetIds` sub\-properties\.
 *Required*: Yes  
 *Type*: [ResourcesVpcConfig](aws-properties-eks-cluster-resourcesvpcconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -95,7 +96,8 @@ The Amazon Resource Name \(ARN\) of the IAM role that provides permissions for t
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-eks-cluster-tags"></a>
-The metadata that you apply to the cluster to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Cluster tags do not propagate to any other resources associated with the cluster\.  
+The metadata that you apply to the cluster to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Cluster tags don't propagate to any other resources associated with the cluster\.  
+You must have the `eks:TagResource` and `eks:UntagResource` permissions in your IAM user or IAM role used to manage the CloudFormation stack\. If you don't have these permissions, there might be unexpected behavior with stack\-level tags propagating to the resource during resource creation and update\.
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -143,58 +145,88 @@ Amazon Resource Name \(ARN\) or alias of the customer master key \(CMK\)\.
 The endpoint for your Kubernetes API server, such as `https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com`\.
 
 `OpenIdConnectIssuerUrl`  <a name="OpenIdConnectIssuerUrl-fn::getatt"></a>
-The issuer URL for the cluster's OIDC identity provider, such as `https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E`\. If you need to remove `https://` from this output value, you can include the following code in your template\.  
+The issuer URL for the OIDC identity provider of the cluster, such as `https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E`\. If you need to remove `https://` from this output value, you can include the following code in your template\.  
  `!Select [1, !Split ["//", !GetAtt EKSCluster.OpenIdConnectIssuerUrl]]`
 
 ## Examples<a name="aws-resource-eks-cluster--examples"></a>
 
 ### Create a cluster<a name="aws-resource-eks-cluster--examples--Create_a_cluster"></a>
 
-The following example creates an Amazon EKS cluster named `prod`\.
+The following example creates an Amazon EKS cluster named `Prod`\.
 
 #### JSON<a name="aws-resource-eks-cluster--examples--Create_a_cluster--json"></a>
 
 ```
 {
-    "Resources": {
-        "myCluster": {
-            "Type": "AWS::EKS::Cluster",
-            "Properties": {
-                "Name": "prod",
-                "Version": "1.14",
-                "RoleArn": "arn:aws:iam::012345678910:role/eks-service-role-AWSServiceRoleForAmazonEKS-EXAMPLEBQ4PI",
-                "ResourcesVpcConfig": {
-                    "SecurityGroupIds": [
-                        "sg-6979fe18"
-                    ],
-                    "SubnetIds": [
-                        "subnet-6782e71e",
-                        "subnet-e7e761ac"
-                    ]
-                }
-            }
-        }
+    "EKSCluster": {
+       "Type": "AWS::EKS::Cluster",
+       "Properties": {
+          "Name": "Prod",
+          "Version": "1.20",
+          "RoleArn": "arn:aws:iam::012345678910:role/eks-service-role-AWSServiceRoleForAmazonEKS-EXAMPLEBQ4PI",
+          "ResourcesVpcConfig": {
+             "SecurityGroupIds": [
+                "sg-6979fe18"
+             ],
+             "SubnetIds": [
+                "subnet-6782e71e",
+                "subnet-e7e761ac"
+             ],
+             "EndpointPublicAccess": false,
+             "EndpointPrivateAccess": true,
+             "PublicAccessCidrs": [
+                "1.1.1.2/32"
+             ]
+          },
+          "Logging": {
+             "ClusterLogging": {
+                "EnabledTypes": [
+                   {
+                      "Type": "api"
+                   },
+                   {
+                      "Type": "audit"
+                   }
+                ]
+             }
+          },
+          "Tags": [
+             {
+                "Key": "key",
+                "Value": "val"
+             }
+          ]
+       }
     }
-}
+ }
 ```
 
 #### YAML<a name="aws-resource-eks-cluster--examples--Create_a_cluster--yaml"></a>
 
 ```
-Resources:
-  myCluster:
-    Type: 'AWS::EKS::Cluster'
+EKSCluster:
+    Type: AWS::EKS::Cluster
     Properties:
-      Name: prod
-      Version: '1.14'
-      RoleArn: >-
-        arn:aws:iam::012345678910:role/eks-service-role-AWSServiceRoleForAmazonEKS-EXAMPLEBQ4PI
+      Name: Prod
+      Version: "1.20"
+      RoleArn: "arn:aws:iam::012345678910:role/eks-service-role-AWSServiceRoleForAmazonEKS-EXAMPLEBQ4PI"
       ResourcesVpcConfig:
         SecurityGroupIds:
           - sg-6979fe18
         SubnetIds:
           - subnet-6782e71e
           - subnet-e7e761ac
+        EndpointPublicAccess: false
+        EndpointPrivateAccess: true
+        PublicAccessCidrs: [ "1.1.1.2/32" ]
+      Logging:
+        ClusterLogging:
+          EnabledTypes:
+            - Type: api
+            - Type: audit
+      Tags:
+        - Key: "key"
+          Value: "val"
 ```
 
 ## See also<a name="aws-resource-eks-cluster--seealso"></a>

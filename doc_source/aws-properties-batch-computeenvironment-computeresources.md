@@ -90,6 +90,7 @@ This parameter isn't applicable to jobs that are running on Fargate resources, a
 
 `Ec2Configuration`  <a name="cfn-batch-computeenvironment-computeresources-ec2configuration"></a>
 Provides information used to select Amazon Machine Images \(AMIs\) for EC2 instances in the compute environment\. If `Ec2Configuration` isn't specified, the default is `ECS_AL2`\.  
+One or two values can be provided\.  
 This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified\.
 *Required*: No  
 *Type*: List of [Ec2ConfigurationObject](aws-properties-batch-computeenvironment-ec2configurationobject.md)  

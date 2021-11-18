@@ -55,12 +55,13 @@ The name of the scaling policy\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PolicyType`  <a name="cfn-applicationautoscaling-scalingpolicy-policytype"></a>
-The Application Auto Scaling policy type\.   
+The scaling policy type\.  
 The following policy types are supported:   
-`TargetTrackingScaling`—Not supported for Amazon EMR  
-`StepScaling`—Not supported for DynamoDB, Amazon Comprehend, Lambda, Amazon Keyspaces \(for Apache Cassandra\), Amazon MSK, or Amazon ElastiCache for Redis\.  
+ `TargetTrackingScaling`—Not supported for Amazon EMR  
+ `StepScaling`—Not supported for DynamoDB, Amazon Comprehend, Lambda, Amazon Keyspaces, Amazon MSK, Amazon ElastiCache, or Neptune\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `StepScaling | TargetTrackingScaling`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceId`  <a name="cfn-applicationautoscaling-scalingpolicy-resourceid"></a>
@@ -99,7 +100,7 @@ The scalable dimension\. This string consists of the service namespace, resource
 +  `dynamodb:index:ReadCapacityUnits` \- The provisioned read capacity for a DynamoDB global secondary index\.
 +  `dynamodb:index:WriteCapacityUnits` \- The provisioned write capacity for a DynamoDB global secondary index\.
 +  `rds:cluster:ReadReplicaCount` \- The count of Aurora Replicas in an Aurora DB cluster\. Available for Aurora MySQL\-compatible edition and Aurora PostgreSQL\-compatible edition\.
-+  `sagemaker:variant:DesiredInstanceCount` \- The number of EC2 instances for an SageMaker model endpoint variant\.
++  `sagemaker:variant:DesiredInstanceCount` \- The number of EC2 instances for a SageMaker model endpoint variant\.
 +  `custom-resource:ResourceType:Property` \- The scalable dimension for a custom resource provided by your own application or service\.
 +  `comprehend:document-classifier-endpoint:DesiredInferenceUnits` \- The number of inference units for an Amazon Comprehend document classification endpoint\.
 +  `comprehend:entity-recognizer-endpoint:DesiredInferenceUnits` \- The number of inference units for an Amazon Comprehend entity recognizer endpoint\.
@@ -161,6 +162,8 @@ This example shows how to declare a new AWS::ApplicationAutoScaling::ScalingPoli
 
 In this snippet, the policy specifies the `ECSServiceAverageCPUUtilization` predefined metric\. The metrics used with a target tracking scaling policy are either custom or predefined\. For the list of predefined metrics, see [PredefinedMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-predefinedmetricspecification.html)\. When the metric is at or exceeds 75 percent, the scaling policy increases \(scales out\) the capacity of the scalable target, and when it falls below 75 percent, the scaling policy decreases \(scales in\) the capacity of the scalable target\. The scaling policy has a 60 second cooldown period after every scaling activity\.
 
+For more information, see [Target tracking scaling policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html) in the *Application Auto Scaling User Guide*\.
+
 #### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Target_tracking_scaling_policy_with_a_predefined_metric--json"></a>
 
 ```
@@ -215,6 +218,8 @@ The following example creates a scaling policy with the `StepScaling` policy typ
 + Increase capacity by 3 when the value of the metric is greater than or equal to 95 percent 
 
 In this snippet, the scaling policy has a 600 second cooldown period after every scaling activity\.
+
+For more information, see [Step scaling policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html) in the *Application Auto Scaling User Guide*\.
 
 #### JSON<a name="aws-resource-applicationautoscaling-scalingpolicy--examples--Step_scaling_policy--json"></a>
 

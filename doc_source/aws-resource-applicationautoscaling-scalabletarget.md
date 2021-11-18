@@ -103,7 +103,7 @@ The scalable dimension associated with the scalable target\. This string consist
 +  `dynamodb:index:ReadCapacityUnits` \- The provisioned read capacity for a DynamoDB global secondary index\.
 +  `dynamodb:index:WriteCapacityUnits` \- The provisioned write capacity for a DynamoDB global secondary index\.
 +  `rds:cluster:ReadReplicaCount` \- The count of Aurora Replicas in an Aurora DB cluster\. Available for Aurora MySQL\-compatible edition and Aurora PostgreSQL\-compatible edition\.
-+  `sagemaker:variant:DesiredInstanceCount` \- The number of EC2 instances for an SageMaker model endpoint variant\.
++  `sagemaker:variant:DesiredInstanceCount` \- The number of EC2 instances for a SageMaker model endpoint variant\.
 +  `custom-resource:ResourceType:Property` \- The scalable dimension for a custom resource provided by your own application or service\.
 +  `comprehend:document-classifier-endpoint:DesiredInferenceUnits` \- The number of inference units for an Amazon Comprehend document classification endpoint\.
 +  `comprehend:entity-recognizer-endpoint:DesiredInferenceUnits` \- The number of inference units for an Amazon Comprehend entity recognizer endpoint\.

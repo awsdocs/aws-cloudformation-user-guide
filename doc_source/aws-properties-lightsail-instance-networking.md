@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[MonthlyTransfer](#cfn-lightsail-instance-networking-monthlytransfer)" : ,
+  "[MonthlyTransfer](#cfn-lightsail-instance-networking-monthlytransfer)" : MonthlyTransfer,
   "[Ports](#cfn-lightsail-instance-networking-ports)" : [ Port, ... ]
 }
 ```
@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [MonthlyTransfer](#cfn-lightsail-instance-networking-monthlytransfer): 
+    MonthlyTransfer
   [Ports](#cfn-lightsail-instance-networking-ports): 
     - Port
 ```
@@ -28,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `MonthlyTransfer`  <a name="cfn-lightsail-instance-networking-monthlytransfer"></a>
 The monthly amount of data transfer, in GB, allocated for the instance  
 *Required*: No  
-*Type*:   
+*Type*: [MonthlyTransfer](aws-properties-lightsail-instance-monthlytransfer.md)  
 *Update requires*: Updates are not supported\.
 
 `Ports`  <a name="cfn-lightsail-instance-networking-ports"></a>

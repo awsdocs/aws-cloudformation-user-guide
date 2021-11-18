@@ -2,7 +2,7 @@
 
 Creates an Amazon EKS add\-on\.
 
-Amazon EKS add\-ons help to automate the provisioning and lifecycle management of common operational software for Amazon EKS clusters\. Amazon EKS add\-ons can only be used with Amazon EKS clusters running version 1\.18 with platform version `eks.3` or later because add\-ons rely on the Server\-side Apply Kubernetes feature, which is only available in Kubernetes 1\.18 and later\.
+Amazon EKS add\-ons help to automate the provisioning and lifecycle management of common operational software for Amazon EKS clusters\. Amazon EKS add\-ons require clusters running version 1\.18 or later because Amazon EKS add\-ons rely on the Server\-side Apply Kubernetes feature, which is only available in Kubernetes 1\.18 and later\. For more information, see [Amazon EKS add\-ons](https://docs.aws.amazon.com/eks/latest/userguide/eks-add-ons.html) in the *Amazon EKS User Guide*\.
 
 ## Syntax<a name="aws-resource-eks-addon-syntax"></a>
 

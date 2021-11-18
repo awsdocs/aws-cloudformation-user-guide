@@ -1,6 +1,9 @@
 # AWS::EKS::Cluster ClusterLogging<a name="aws-properties-eks-cluster-clusterlogging"></a>
 
-<a name="aws-properties-eks-cluster-clusterlogging-description"></a>The `ClusterLogging` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::EKS::Cluster](aws-resource-eks-cluster.md)\.
+The cluster control plane logging configuration for your cluster\.
+
+**Important**  
+When updating a resource, you must include this `ClusterLogging` property if the previous CloudFormation template of the resource had it\.
 
 ## Syntax<a name="aws-properties-eks-cluster-clusterlogging-syntax"></a>
 
@@ -24,7 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-eks-cluster-clusterlogging-properties"></a>
 
 `EnabledTypes`  <a name="cfn-eks-cluster-clusterlogging-enabledtypes"></a>
-Not currently supported by AWS CloudFormation\.  
+The enabled control plane logs for your cluster\. All log types are disabled if the array is empty\.  
+When updating a resource, you must include this `EnabledTypes` property if the previous CloudFormation template of the resource had it\.
 *Required*: No  
 *Type*: List of [LoggingTypeConfig](aws-properties-eks-cluster-loggingtypeconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

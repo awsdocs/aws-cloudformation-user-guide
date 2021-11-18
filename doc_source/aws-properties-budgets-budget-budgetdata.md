@@ -64,8 +64,8 @@ Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Pl
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CostFilters`  <a name="cfn-budgets-budget-budgetdata-costfilters"></a>
-The cost filters, such as service or tag, that are applied to a budget\.  
- AWS Budgets supports the following services as a filter for RI budgets:  
+The cost filters, such as `Region`, `Service`, `member account`, `Tag`, or `Cost Category`, that are applied to a budget\.  
+ AWS Budgets supports the following services as a `Service` filter for RI budgets:  
 + Amazon EC2
 + Amazon Redshift
 + Amazon Relational Database Service

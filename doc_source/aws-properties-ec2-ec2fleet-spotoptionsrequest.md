@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AllocationStrategy](#cfn-ec2-ec2fleet-spotoptionsrequest-allocationstrategy)" : String,
   "[InstanceInterruptionBehavior](#cfn-ec2-ec2fleet-spotoptionsrequest-instanceinterruptionbehavior)" : String,
   "[InstancePoolsToUseCount](#cfn-ec2-ec2fleet-spotoptionsrequest-instancepoolstousecount)" : Integer,
+  "[MaintenanceStrategies](#cfn-ec2-ec2fleet-spotoptionsrequest-maintenancestrategies)" : MaintenanceStrategies,
   "[MaxTotalPrice](#cfn-ec2-ec2fleet-spotoptionsrequest-maxtotalprice)" : String,
   "[MinTargetCapacity](#cfn-ec2-ec2fleet-spotoptionsrequest-mintargetcapacity)" : Integer,
   "[SingleAvailabilityZone](#cfn-ec2-ec2fleet-spotoptionsrequest-singleavailabilityzone)" : Boolean,
@@ -28,6 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [AllocationStrategy](#cfn-ec2-ec2fleet-spotoptionsrequest-allocationstrategy): String
   [InstanceInterruptionBehavior](#cfn-ec2-ec2fleet-spotoptionsrequest-instanceinterruptionbehavior): String
   [InstancePoolsToUseCount](#cfn-ec2-ec2fleet-spotoptionsrequest-instancepoolstousecount): Integer
+  [MaintenanceStrategies](#cfn-ec2-ec2fleet-spotoptionsrequest-maintenancestrategies): 
+    MaintenanceStrategies
   [MaxTotalPrice](#cfn-ec2-ec2fleet-spotoptionsrequest-maxtotalprice): String
   [MinTargetCapacity](#cfn-ec2-ec2fleet-spotoptionsrequest-mintargetcapacity): Integer
   [SingleAvailabilityZone](#cfn-ec2-ec2fleet-spotoptionsrequest-singleavailabilityzone): Boolean
@@ -58,6 +61,12 @@ The number of Spot pools across which to allocate your target Spot capacity\. Va
 Note that EC2 Fleet attempts to draw Spot Instances from the number of pools that you specify on a best effort basis\. If a pool runs out of Spot capacity before fulfilling your target capacity, EC2 Fleet will continue to fulfill your request by drawing from the next cheapest pool\. To ensure that your target capacity is met, you might receive Spot Instances from more than the number of pools that you specified\. Similarly, if most of the pools have no Spot capacity, you might receive your full target capacity from fewer than the number of pools that you specified\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MaintenanceStrategies`  <a name="cfn-ec2-ec2fleet-spotoptionsrequest-maintenancestrategies"></a>
+The strategies for managing your Spot Instances that are at an elevated risk of being interrupted\.  
+*Required*: No  
+*Type*: [MaintenanceStrategies](aws-properties-ec2-ec2fleet-maintenancestrategies.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MaxTotalPrice`  <a name="cfn-ec2-ec2fleet-spotoptionsrequest-maxtotalprice"></a>

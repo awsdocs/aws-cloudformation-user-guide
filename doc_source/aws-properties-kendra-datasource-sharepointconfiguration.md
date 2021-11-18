@@ -111,7 +111,7 @@ The version of Microsoft SharePoint that you are using as a data source\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SslCertificateS3Path`  <a name="cfn-kendra-datasource-sharepointconfiguration-sslcertificates3path"></a>
-Not currently supported by AWS CloudFormation\.  
+Information required to find a specific file in an Amazon S3 bucket\.  
 *Required*: No  
 *Type*: [S3Path](aws-properties-kendra-datasource-s3path.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

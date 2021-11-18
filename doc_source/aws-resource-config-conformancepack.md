@@ -64,7 +64,7 @@ The prefix for the Amazon S3 bucket\.
 
 `TemplateBody`  <a name="cfn-config-conformancepack-templatebody"></a>
 A string containing full conformance pack template body\. Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes\.  
-You can only use a YAML template with one resource type, that is, config rule and a remediation action\. 
+You can only use a YAML template with two resource types: config rule \(`AWS::Config::ConfigRule`\) and a remediation action \(`AWS::Config::RemediationConfiguration`\)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

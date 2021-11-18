@@ -190,112 +190,118 @@ The following example creates a symmetric KMS key\. The key policy for the KMS k
 #### JSON<a name="aws-resource-kms-key--examples--Create_a_symmetric_KMS_key--json"></a>
 
 ```
-"myKey" : {
-  "Type" : "AWS::KMS::Key",
-  "Properties" : {
-    "Description" : "An example symmetric KMS key",
-    "EnableKeyRotation": true,
-    "PendingWindowInDays": 20,
-    "KeyPolicy" : {
-      "Version": "2012-10-17",
-      "Id": "key-default-1",
-      "Statement": [
-        {
-          "Sid": "Enable IAM User Permissions",
-          "Effect": "Allow",
-          "Principal": {"AWS": "arn:aws:iam::111122223333:root"},
-          "Action": "kms:*",
-          "Resource": "*"
-        },
-        {
-          "Sid": "Allow administration of the key",
-          "Effect": "Allow",
-          "Principal": { "AWS": "arn:aws:iam::111122223333:user/Alice" },
-          "Action": [
-            "kms:Create*",
-            "kms:Describe*",
-            "kms:Enable*",
-            "kms:List*",
-            "kms:Put*",
-            "kms:Update*",
-            "kms:Revoke*",
-            "kms:Disable*",
-            "kms:Get*",
-            "kms:Delete*",
-            "kms:ScheduleKeyDeletion",
-            "kms:CancelKeyDeletion"
-          ],
-          "Resource": "*"
-        },
-        {
-          "Sid": "Allow use of the key",
-          "Effect": "Allow",
-          "Principal": { "AWS": "arn:aws:iam::111122223333:user/Bob" },
-          "Action": [
-            "kms:DescribeKey",
-            "kms:Encrypt",
-            "kms:Decrypt",
-            "kms:ReEncrypt*",
-            "kms:GenerateDataKey",
-            "kms:GenerateDataKeyWithoutPlaintext"
-          ], 
-          "Resource": "*"
-        }    
-      ]
+"myKey": {
+        "Type": "AWS::KMS::Key",
+        "Properties": {
+            "Description": "An example symmetric KMS key",
+            "EnableKeyRotation": true,
+            "PendingWindowInDays": 20,
+            "KeyPolicy": {
+                "Version": "2012-10-17",
+                "Id": "key-default-1",
+                "Statement": [
+                    {
+                        "Sid": "Enable IAM User Permissions",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::111122223333:root"
+                        },
+                        "Action": "kms:*",
+                        "Resource": "*"
+                    },
+                    {
+                        "Sid": "Allow administration of the key",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::111122223333:user/Alice"
+                        },
+                        "Action": [
+                            "kms:Create*",
+                            "kms:Describe*",
+                            "kms:Enable*",
+                            "kms:List*",
+                            "kms:Put*",
+                            "kms:Update*",
+                            "kms:Revoke*",
+                            "kms:Disable*",
+                            "kms:Get*",
+                            "kms:Delete*",
+                            "kms:ScheduleKeyDeletion",
+                            "kms:CancelKeyDeletion"
+                        ],
+                        "Resource": "*"
+                    },
+                    {
+                        "Sid": "Allow use of the key",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::111122223333:user/Bob"
+                        },
+                        "Action": [
+                            "kms:DescribeKey",
+                            "kms:Encrypt",
+                            "kms:Decrypt",
+                            "kms:ReEncrypt*",
+                            "kms:GenerateDataKey",
+                            "kms:GenerateDataKeyWithoutPlaintext"
+                        ],
+                        "Resource": "*"
+                    }
+                ]
+            }
+        }
     }
-  }
-}
 ```
 
 #### YAML<a name="aws-resource-kms-key--examples--Create_a_symmetric_KMS_key--yaml"></a>
 
 ```
 myKey:
-  Type: AWS::KMS::Key
+  Type: 'AWS::KMS::Key'
   Properties:
     Description: An example symmetric KMS key
     EnableKeyRotation: true
     PendingWindowInDays: 20
     KeyPolicy:
-      Version: '2012-10-17'
+      Version: 2012-10-17
       Id: key-default-1
       Statement:
-      - Sid: Enable IAM User Permissions
-        Effect: Allow
-        Principal:
-          AWS: arn:aws:iam::111122223333:root
-        Action: kms:*
-        Resource: '*'
-      - Sid: Allow administration of the key
-        Effect: Allow
-        Principal:
-          AWS: arn:aws:iam::111122223333:user/Alice
-        Action:
-        - kms:Create*
-        - kms:Describe*
-        - kms:Enable*
-        - kms:List*
-        - kms:Put*
-        - kms:Update*
-        - kms:Revoke*
-        - kms:Disable*
-        - kms:Get*
-        - kms:Delete*
-        - kms:ScheduleKeyDeletion
-        - kms:CancelKeyDeletion
-        Resource: '*'
-      - Sid: Allow use of the key
-        Effect: Allow
-        Principal:
-          AWS: arn:aws:iam::111122223333:user/Bob
-        Action:
-        - kms:DescribeKey
-        - kms:Encrypt
-        - kms:Decrypt
-        - kms:ReEncrypt*
-        - kms:GenerateDataKey
-        - kms:GenerateDataKeyWithoutPlaintext
-        Resource: '*'
+        - Sid: Enable IAM User Permissions
+          Effect: Allow
+          Principal:
+            AWS: 'arn:aws:iam::111122223333:root'
+          Action: 'kms:*'
+          Resource: '*'
+        - Sid: Allow administration of the key
+          Effect: Allow
+          Principal:
+            AWS: 'arn:aws:iam::111122223333:user/Alice'
+          Action:
+            - 'kms:Create*'
+            - 'kms:Describe*'
+            - 'kms:Enable*'
+            - 'kms:List*'
+            - 'kms:Put*'
+            - 'kms:Update*'
+            - 'kms:Revoke*'
+            - 'kms:Disable*'
+            - 'kms:Get*'
+            - 'kms:Delete*'
+            - 'kms:ScheduleKeyDeletion'
+            - 'kms:CancelKeyDeletion'
+          Resource: '*'
+        - Sid: Allow use of the key
+          Effect: Allow
+          Principal:
+            AWS: 'arn:aws:iam::111122223333:user/Bob'
+          Action:
+            - 'kms:DescribeKey'
+            - 'kms:Encrypt'
+            - 'kms:Decrypt'
+            - 'kms:ReEncrypt*'
+            - 'kms:GenerateDataKey'
+            - 'kms:GenerateDataKeyWithoutPlaintext'
+          Resource: '*'
 ```
 
 ### Create a symmetric KMS key with a resource tag<a name="aws-resource-kms-key--examples--Create_a_symmetric_KMS_key_with_a_resource_tag"></a>
@@ -309,54 +315,54 @@ Tagging or untagging a KMS key can allow or deny permission to the KMS key\. For
 
 ```
 "myKeyWithTag": {
-    "Type": "AWS::KMS::Key",
-    "Properties": {
-        "KeyPolicy": {
-            "Version": "2012-10-17",
-            "Id": "key-default-1",
-            "Statement": [
-                {
-                    "Sid": "Enable IAM User Permissions",
-                    "Effect": "Allow",
-                    "Principal": {
-                        "AWS": {
-                            "Fn::Join": [
-                                "",
-                                [
-                                    "arn:aws:iam::",
-                                    {
-                                        "Ref": "AWS::AccountId"
-                                    },
-                                    ":root"
+        "Type": "AWS::KMS::Key",
+        "Properties": {
+            "KeyPolicy": {
+                "Version": "2012-10-17",
+                "Id": "key-default-1",
+                "Statement": [
+                    {
+                        "Sid": "Enable IAM User Permissions",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": {
+                                "Fn::Join": [
+                                    "",
+                                    [
+                                        "arn:aws:iam::",
+                                        {
+                                            "Ref": "AWS::AccountId"
+                                        },
+                                        ":root"
+                                    ]
                                 ]
-                            ]
-                        }
+                            }
+                        },
+                        "Action": "kms:*",
+                        "Resource": "*"
+                    }
+                ]
+            },
+            "Tags": [
+                {
+                    "Key": {
+                        "Ref": "Key"
                     },
-                    "Action": "kms:*",
-                    "Resource": "*"
+                    "Value": {
+                        "Ref": "Value"
+                    }
                 }
             ]
         },
-        "Tags": [
-            {
-                "Key": {
-                    "Ref": "Key"
-                },
-                "Value": {
-                    "Ref": "Value"
-                }
+        "Parameters": {
+            "Key": {
+                "Type": "String"
+            },
+            "Value": {
+                "Type": "String"
             }
-        ]
-    },
-    "Parameters": {
-        "Key": {
-            "Type": "String"
-        },
-        "Value": {
-            "Type": "String"
         }
     }
-}
 ```
 
 #### YAML<a name="aws-resource-kms-key--examples--Create_a_symmetric_KMS_key_with_a_resource_tag--yaml"></a>
@@ -396,106 +402,112 @@ The following example creates an RSA asymmetric KMS key for signing and verifica
 #### JSON<a name="aws-resource-kms-key--examples--Create_an_asymmetric_KMS_key--json"></a>
 
 ```
-"RSASigningKey" : {
-  "Type" : "AWS::KMS::Key",
-  "Properties" : {
-    "Description" : "RSA-3047 asymmetric KMS key for signing and verification",
-    "KeySpec" : "RSA_3072",
-    "KeyUsage" : "SIGN_VERIFY",
-    "KeyPolicy" : {
-      "Version": "2012-10-17",
-      "Id": "key-default-1",
-      "Statement": [
-        {
-          "Sid": "Enable IAM User Permissions",
-          "Effect": "Allow",
-          "Principal": {"AWS": "arn:aws:iam::111122223333:root"},
-          "Action": "kms:*",
-          "Resource": "*"
-        },
-        {
-          "Sid": "Allow administration of the key",
-          "Effect": "Allow",
-          "Principal": { "AWS": "arn:aws:iam::111122223333:role/Admin" },
-          "Action": [
-            "kms:Create*",
-            "kms:Describe*",
-            "kms:Enable*",
-            "kms:List*",
-            "kms:Put*",
-            "kms:Update*",
-            "kms:Revoke*",
-            "kms:Disable*",
-            "kms:Get*",
-            "kms:Delete*",
-            "kms:ScheduleKeyDeletion",
-            "kms:CancelKeyDeletion"
-          ],
-          "Resource": "*"
-        },
-        {
-          "Sid": "Allow use of the key",
-          "Effect": "Allow",
-          "Principal": { "AWS": "arn:aws:iam::111122223333:role/Developer" },
-          "Action": [
-            "kms:Sign",
-            "kms:Verify",
-            "kms:DescribeKey"
-          ], 
-          "Resource": "*"
-        }    
-      ]
+"RSASigningKey": {
+        "Type": "AWS::KMS::Key",
+        "Properties": {
+            "Description": "RSA-3072 asymmetric KMS key for signing and verification",
+            "KeySpec": "RSA_3072",
+            "KeyUsage": "SIGN_VERIFY",
+            "KeyPolicy": {
+                "Version": "2012-10-17",
+                "Id": "key-default-1",
+                "Statement": [
+                    {
+                        "Sid": "Enable IAM User Permissions",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::111122223333:root"
+                        },
+                        "Action": "kms:*",
+                        "Resource": "*"
+                    },
+                    {
+                        "Sid": "Allow administration of the key",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::111122223333:role/Admin"
+                        },
+                        "Action": [
+                            "kms:Create*",
+                            "kms:Describe*",
+                            "kms:Enable*",
+                            "kms:List*",
+                            "kms:Put*",
+                            "kms:Update*",
+                            "kms:Revoke*",
+                            "kms:Disable*",
+                            "kms:Get*",
+                            "kms:Delete*",
+                            "kms:ScheduleKeyDeletion",
+                            "kms:CancelKeyDeletion"
+                        ],
+                        "Resource": "*"
+                    },
+                    {
+                        "Sid": "Allow use of the key",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::111122223333:role/Developer"
+                        },
+                        "Action": [
+                            "kms:Sign",
+                            "kms:Verify",
+                            "kms:DescribeKey"
+                        ],
+                        "Resource": "*"
+                    }
+                ]
+            }
+        }
     }
-  }
-}
 ```
 
 #### YAML<a name="aws-resource-kms-key--examples--Create_an_asymmetric_KMS_key--yaml"></a>
 
 ```
 RSASigningKey:
-  Type: AWS::KMS::Key
+  Type: 'AWS::KMS::Key'
   Properties:
-    Description: RSA-3047 asymmetric KMS key for signing and verification
+    Description: RSA-3072 asymmetric KMS key for signing and verification
     KeySpec: RSA_3072
     KeyUsage: SIGN_VERIFY
     KeyPolicy:
-      Version: '2012-10-17'
+      Version: 2012-10-17
       Id: key-default-1
       Statement:
-      - Sid: Enable IAM User Permissions
-        Effect: Allow
-        Principal:
-          AWS: arn:aws:iam::111122223333:root
-        Action: kms:*
-        Resource: '*'
-      - Sid: Allow administration of the key
-        Effect: Allow
-        Principal:
-          AWS: arn:aws:iam::111122223333:role/Admin
-        Action:
-        - kms:Create*
-        - kms:Describe*
-        - kms:Enable*
-        - kms:List*
-        - kms:Put*
-        - kms:Update*
-        - kms:Revoke*
-        - kms:Disable*
-        - kms:Get*
-        - kms:Delete*
-        - kms:ScheduleKeyDeletion
-        - kms:CancelKeyDeletion
-        Resource: '*'
-      - Sid: Allow use of the key
-        Effect: Allow
-        Principal:
-          AWS: arn:aws:iam::111122223333:role/Developer
-        Action:        
-        - kms:Sign
-        - kms:Verify
-        - kms:DescribeKey
-        Resource: '*'
+        - Sid: Enable IAM User Permissions
+          Effect: Allow
+          Principal:
+            AWS: 'arn:aws:iam::111122223333:root'
+          Action: 'kms:*'
+          Resource: '*'
+        - Sid: Allow administration of the key
+          Effect: Allow
+          Principal:
+            AWS: 'arn:aws:iam::111122223333:role/Admin'
+          Action:
+            - 'kms:Create*'
+            - 'kms:Describe*'
+            - 'kms:Enable*'
+            - 'kms:List*'
+            - 'kms:Put*'
+            - 'kms:Update*'
+            - 'kms:Revoke*'
+            - 'kms:Disable*'
+            - 'kms:Get*'
+            - 'kms:Delete*'
+            - 'kms:ScheduleKeyDeletion'
+            - 'kms:CancelKeyDeletion'
+          Resource: '*'
+        - Sid: Allow use of the key
+          Effect: Allow
+          Principal:
+            AWS: 'arn:aws:iam::111122223333:role/Developer'
+          Action:
+            - 'kms:Sign'
+            - 'kms:Verify'
+            - 'kms:DescribeKey'
+          Resource: '*'
 ```
 
 ### Create a multi\-Region primary key<a name="aws-resource-kms-key--examples--Create_a_multi-Region_primary_key"></a>
@@ -509,116 +521,122 @@ To replicate this primary key into a different AWS Region, use the [AWS::KMS::Re
 #### JSON<a name="aws-resource-kms-key--examples--Create_a_multi-Region_primary_key--json"></a>
 
 ```
-"myPrimaryKey" : {
-  "Type" : "AWS::KMS::Key",
-  "Properties" : {
-    "Description" : "An example multi-Region primary key",
-    "MultiRegion": true,
-    "EnableKeyRotation": true,
-    "PendingWindowInDays": 10,
-    "KeyPolicy" : {
-      "Version": "2012-10-17",
-      "Id": "key-default-1",
-      "Statement": [
-        {
-          "Sid": "Enable IAM User Permissions",
-          "Effect": "Allow",
-          "Principal": {"AWS": "arn:aws:iam::111122223333:root"},
-          "Action": "kms:*",
-          "Resource": "*"
-        },
-        {
-          "Sid": "Allow administration of the key",
-          "Effect": "Allow",
-          "Principal": { "AWS": "arn:aws:iam::111122223333:user/Alice" },
-          "Action": [
-            "kms:ReplicateKey",
-            "kms:Create*",
-            "kms:Describe*",
-            "kms:Enable*",
-            "kms:List*",
-            "kms:Put*",
-            "kms:Update*",
-            "kms:Revoke*",
-            "kms:Disable*",
-            "kms:Get*",
-            "kms:Delete*",
-            "kms:ScheduleKeyDeletion",
-            "kms:CancelKeyDeletion"
-          ],
-          "Resource": "*"
-        },
-        {
-          "Sid": "Allow use of the key",
-          "Effect": "Allow",
-          "Principal": { "AWS": "arn:aws:iam::111122223333:user/Bob" },
-          "Action": [
-            "kms:DescribeKey",
-            "kms:Encrypt",
-            "kms:Decrypt",
-            "kms:ReEncrypt*",
-            "kms:GenerateDataKey",
-            "kms:GenerateDataKeyWithoutPlaintext"
-          ], 
-          "Resource": "*"
-        }    
-      ]
+"myPrimaryKey": {
+        "Type": "AWS::KMS::Key",
+        "Properties": {
+            "Description": "An example multi-Region primary key",
+            "MultiRegion": true,
+            "EnableKeyRotation": true,
+            "PendingWindowInDays": 10,
+            "KeyPolicy": {
+                "Version": "2012-10-17",
+                "Id": "key-default-1",
+                "Statement": [
+                    {
+                        "Sid": "Enable IAM User Permissions",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::111122223333:root"
+                        },
+                        "Action": "kms:*",
+                        "Resource": "*"
+                    },
+                    {
+                        "Sid": "Allow administration of the key",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::111122223333:user/Alice"
+                        },
+                        "Action": [
+                            "kms:ReplicateKey",
+                            "kms:Create*",
+                            "kms:Describe*",
+                            "kms:Enable*",
+                            "kms:List*",
+                            "kms:Put*",
+                            "kms:Update*",
+                            "kms:Revoke*",
+                            "kms:Disable*",
+                            "kms:Get*",
+                            "kms:Delete*",
+                            "kms:ScheduleKeyDeletion",
+                            "kms:CancelKeyDeletion"
+                        ],
+                        "Resource": "*"
+                    },
+                    {
+                        "Sid": "Allow use of the key",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::111122223333:user/Bob"
+                        },
+                        "Action": [
+                            "kms:DescribeKey",
+                            "kms:Encrypt",
+                            "kms:Decrypt",
+                            "kms:ReEncrypt*",
+                            "kms:GenerateDataKey",
+                            "kms:GenerateDataKeyWithoutPlaintext"
+                        ],
+                        "Resource": "*"
+                    }
+                ]
+            }
+        }
     }
-  }
-}
 ```
 
 #### YAML<a name="aws-resource-kms-key--examples--Create_a_multi-Region_primary_key--yaml"></a>
 
 ```
 myPrimaryKey:
-  Type: AWS::KMS::Key
+  Type: 'AWS::KMS::Key'
   Properties:
     Description: An example multi-Region primary key
     MultiRegion: true
     EnableKeyRotation: true
-    PendingWindowInDays 10
+    PendingWindowInDays: 10
     KeyPolicy:
-      Version: '2012-10-17'
+      Version: 2012-10-17
       Id: key-default-1
       Statement:
-      - Sid: Enable IAM User Permissions
-        Effect: Allow
-        Principal:
-          AWS: arn:aws:iam::111122223333:root
-        Action: kms:*
-        Resource: '*'
-      - Sid: Allow administration of the key
-        Effect: Allow
-        Principal:
-          AWS: arn:aws:iam::111122223333:user/Alice
-        Action:
-        - kms:ReplicateKey
-        - kms:Create*
-        - kms:Describe*
-        - kms:Enable*
-        - kms:List*
-        - kms:Put*
-        - kms:Update*
-        - kms:Revoke*
-        - kms:Disable*
-        - kms:Get*
-        - kms:Delete*
-        - kms:ScheduleKeyDeletion
-        - kms:CancelKeyDeletion
-        Resource: '*'
-      - Sid: Allow use of the key
-        Effect: Allow
-        Principal:
-          AWS: arn:aws:iam::111122223333:user/Bob
-        Action:
-        - kms:DescribeKey
-        - kms:Encrypt
-        - kms:Decrypt
-        - kms:ReEncrypt*
-        - kms:GenerateDataKey
-        - kms:GenerateDataKeyWithoutPlaintext
-        Resource: '*'
+        - Sid: Enable IAM User Permissions
+          Effect: Allow
+          Principal:
+            AWS: 'arn:aws:iam::111122223333:root'
+          Action: 'kms:*'
+          Resource: '*'
+        - Sid: Allow administration of the key
+          Effect: Allow
+          Principal:
+            AWS: 'arn:aws:iam::111122223333:user/Alice'
+          Action:
+            - 'kms:ReplicateKey'
+            - 'kms:Create*'
+            - 'kms:Describe*'
+            - 'kms:Enable*'
+            - 'kms:List*'
+            - 'kms:Put*'
+            - 'kms:Update*'
+            - 'kms:Revoke*'
+            - 'kms:Disable*'
+            - 'kms:Get*'
+            - 'kms:Delete*'
+            - 'kms:ScheduleKeyDeletion'
+            - 'kms:CancelKeyDeletion'
+          Resource: '*'
+        - Sid: Allow use of the key
+          Effect: Allow
+          Principal:
+            AWS: 'arn:aws:iam::111122223333:user/Bob'
+          Action:
+            - 'kms:DescribeKey'
+            - 'kms:Encrypt'
+            - 'kms:Decrypt'
+            - 'kms:ReEncrypt*'
+            - 'kms:GenerateDataKey'
+            - 'kms:GenerateDataKeyWithoutPlaintext'
+          Resource: '*'
 ```
 
 ## See also<a name="aws-resource-kms-key--seealso"></a>

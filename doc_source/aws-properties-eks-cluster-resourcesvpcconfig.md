@@ -2,6 +2,12 @@
 
 An object representing the VPC configuration to use for an Amazon EKS cluster\.
 
+**Important**  
+When updating a resource, you must include these properties if the previous CloudFormation template of the resource had them:  
+`EndpointPublicAccess`
+`EndpointPrivateAccess`
+`PublicAccessCidrs`
+
 ## Syntax<a name="aws-properties-eks-cluster-resourcesvpcconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -34,19 +40,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-eks-cluster-resourcesvpcconfig-properties"></a>
 
 `EndpointPrivateAccess`  <a name="cfn-eks-cluster-resourcesvpcconfig-endpointprivateaccess"></a>
-Not currently supported by AWS CloudFormation\.  
+Set this value to `true` to enable private access for your cluster's Kubernetes API server endpoint\. If you enable private access, Kubernetes API requests from within your cluster's VPC use the private VPC endpoint\. The default value for this parameter is `false`, which disables private access for your Kubernetes API server\. If you disable private access and you have nodes or AWS Fargate pods in the cluster, then ensure that `publicAccessCidrs` includes the necessary CIDR blocks for communication with the nodes or Fargate pods\. For more information, see [Amazon EKS cluster endpoint access control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the * *Amazon EKS User Guide* *\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointPublicAccess`  <a name="cfn-eks-cluster-resourcesvpcconfig-endpointpublicaccess"></a>
-Not currently supported by AWS CloudFormation\.  
+Set this value to `false` to disable public access to your cluster's Kubernetes API server endpoint\. If you disable public access, your cluster's Kubernetes API server can only receive requests from within the cluster VPC\. The default value for this parameter is `true`, which enables public access for your Kubernetes API server\. For more information, see [Amazon EKS cluster endpoint access control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the * *Amazon EKS User Guide* *\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PublicAccessCidrs`  <a name="cfn-eks-cluster-resourcesvpcconfig-publicaccesscidrs"></a>
-Not currently supported by AWS CloudFormation\.  
+The CIDR blocks that are allowed access to your cluster's public Kubernetes API server endpoint\. Communication to the endpoint from addresses outside of the CIDR blocks that you specify is denied\. The default value is `0.0.0.0/0`\. If you've disabled private endpoint access and you have nodes or AWS Fargate pods in the cluster, then ensure that you specify the necessary CIDR blocks\. For more information, see [Amazon EKS cluster endpoint access control](https://docs.aws.amazon.com/eks/latest/userguide/cluster-endpoint.html) in the * *Amazon EKS User Guide* *\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

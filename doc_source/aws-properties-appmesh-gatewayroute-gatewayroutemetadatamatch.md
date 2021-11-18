@@ -35,12 +35,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The exact method header to be matched on\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Prefix`  <a name="cfn-appmesh-gatewayroute-gatewayroutemetadatamatch-prefix"></a>
 The specified beginning characters of the method header to be matched on\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Range`  <a name="cfn-appmesh-gatewayroute-gatewayroutemetadatamatch-range"></a>
@@ -53,10 +57,14 @@ Not currently supported by AWS CloudFormation\.
 The regex used to match the method header\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Suffix`  <a name="cfn-appmesh-gatewayroute-gatewayroutemetadatamatch-suffix"></a>
 The specified ending characters of the method header to match on\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

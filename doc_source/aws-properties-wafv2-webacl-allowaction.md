@@ -50,10 +50,9 @@ Action:
 #### JSON<a name="aws-properties-wafv2-webacl-allowaction--examples--Set_an_allow_action_--json"></a>
 
 ```
-"Action": 
-  {"Allow": 
-    {}
-  }
+"Action": {
+  "Allow": {}
+}
 ```
 
 ### Set an allow action with a custom request setting<a name="aws-properties-wafv2-webacl-allowaction--examples--Set_an_allow_action_with_a_custom_request_setting"></a>

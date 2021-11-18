@@ -137,7 +137,7 @@ If all goes well, an Elastic IP is used to provide access to the SharePoint inst
 
 Once stack creation is complete, the IP address supplied by EIP will be displayed in the **Outputs** tab of the AWS CloudFormation console\. However, before you can access the instance you will need to retrieve the generated temporary Administrator password for the instance\. For more information, see [Connecting to your Windows instance using RDP](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/connecting_to_windows_instance.html) in the *Amazon EC2 User Guide for Windows Instances*\.
 
-## How to manage Windows services<a name="w10116ab1c23c36c15c11"></a>
+## How to manage Windows services<a name="w10432ab1c23c36c15c11"></a>
 
 You manage Windows services in the same way as Linux services, except that you use a `windows` key instead of `sysvinit`\. The following example starts the `cfn-hup` service, sets it to Automatic, and restarts the service if cfn\-init modifies the `c:\cfn\cfn-hup.conf` or `c:\cfn\hooks.d\cfn-auto-reloader.conf` configuration files\.
 

@@ -1,6 +1,6 @@
 # AWS::DataSync::Task<a name="aws-resource-datasync-task"></a>
 
-The `AWS::DataSync::Task` resource specifies a task\. A task is a set of two locations \(source and destination\) and a set of Options that you use to control the behavior of a task\. If you don't specify Options when you create a task, AWS DataSync populates them with service defaults\.
+The `AWS::DataSync::Task` resource specifies a task\. A task is a set of two locations \(source and destination\) and a set of `Options` that you use to control the behavior of a task\. If you don't specify `Options` when you create a task, AWS DataSync populates them with service defaults\.
 
 ## Syntax<a name="aws-resource-datasync-task-syntax"></a>
 

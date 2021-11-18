@@ -3,7 +3,7 @@
 The CloudFormation registry lets you manage the extensions, both public and private, that are available for use in your CloudFormation account\.
 
 ## Public and private extensions<a name="registry-public-private"></a>
-+ *Public* extensions are those publicly published in the registry for use by all CloudFormation users\. This includes all extensions published by Amazon, as well as third\-party extension publishers\. 
++ *Public* extensions are those publicly published in the registry for use by all CloudFormation users\. This includes all extensions published by Amazon, as well as third\-party extension publishers\.
 
   There are two kinds of public extensions:
   + *Amazon public extensions*
@@ -11,7 +11,7 @@ The CloudFormation registry lets you manage the extensions, both public and priv
     Extensions published by Amazon are always public, and activated by default, so you don't have to take any action before using them in your account\. In addition, Amazon controls the versioning of the extension, so you are always using the latest available version\.
   + *Third\-party public extensions*
 
-    These are extensions made available for general use by publishers other than Amazon\. 
+    These are extensions made available for general use by publishers other than Amazon\.
 
     To use a public extension, you must first activate it in your account and region\. When you activate a public third\-party extension, CloudFormation creates an entry in your account's extension registry for the activated extension as a private extension\. This allows you to customize the extension *as it is activated in your account* in the following ways:
     + You can specify an alias to use instead of the public third\-party extension name\. This can help avoid naming collisions between third\-party extensions\.
@@ -20,7 +20,7 @@ The CloudFormation registry lets you manage the extensions, both public and priv
     For more information, see [Using public extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-public)\.
 
     You can publish your own third\-party extensions to make them available to general CloudFormation users\. For more information, see [Publishing extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html) in the *CloudFormation Command Line Interface User Guide*\.
-+ *Private* extensions are those extensions from third parties that you have explicitly activated for use in your AWS account\. 
++ *Private* extensions are those extensions from third parties that you have explicitly activated for use in your AWS account\.
 
   There are two kinds of private extensions:
   + *Activated private extensions*
@@ -82,3 +82,43 @@ For more information on configuration items, see [Configuration items](https://d
 Your resource type may contain properties that you consider sensitive information, such as passwords, secrets, or other sensitive data, that you don't want recorded as part of the configuration item\. To prevent a property from being recorded in the configuration item, you can include that property in the `writeOnlyproperties` list in your resource type schema\. Resource properties listed as `writeOnlyproperties` can be specified by the user, but will not be returned by a `read` or `list` request\.
 
 For more information, see [Resource Provider Schema](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-writeonlyproperties) in the *CloudFormation Command Line Interface User Guide*\.
+
+## Confused deputy prevention<a name="cross-service-confused-deputy-prevention"></a>
+
+The confused deputy problem is a security issue where an entity that doesn't have permission to perform an action can coerce a more\-privileged entity to perform the action\. In AWS, cross\-service impersonation can result in the confused deputy problem\. Cross\-service impersonation can occur when one service \(the *calling service*\) calls another service \(the *called service*\)\. The calling service can be manipulated to use its permissions to act on another customer's resources in a way it shouldn't otherwise have permission to access\. To prevent this, AWS provides tools that help you protect your data for all services with service principals that have been given access to resources in your account\.
+
+We recommend using the [https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourcearn](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourcearn) and [https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourceaccount](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourceaccount) global condition context keys in resource policies to limit the permissions that AWS CloudFormation gives another service to the extension\. If the `aws:SourceArn` value doesn't contain the account ID, such as an Amazon S3 bucket Amazon Resource Name \(ARN\), you must use both global condition context keys to limit permissions\. If you use both global condition context keys and the `aws:SourceArn` value contains the account ID, the `aws:SourceAccount` value and the account in the `aws:SourceArn` value must use the same account ID when used in the same policy statement\. Use `aws:SourceArn` if you want only one resource to be associated with the cross\-service access\. Use `aws:SourceAccount` if you want to allow any resource in that account to be associated with the cross\-service use\.
+
+The value of `aws:SourceArn` must use the extension's ARN\.
+
+The most effective way to protect against the confused deputy problem is to use the `aws:SourceArn` global condition context key with the full ARN of the resource\. If you don't know the full ARN of the extension or if you are specifying multiple extensions, use the `aws:SourceArn` global context condition key with wildcards \(`*`\) for the unknown portions of the ARN\. For example, `arn:aws:cloudformation:*:123456789012:*`\.
+
+**Note**  
+For registry services, CloudFormation makes calls to AWS Security Token Service \(AWS STS\) to assume a role in your account\. This role is configured for `ExecutionRoleArn` in the [RegisterType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html) operation and `LogRoleArn` set in the [LoggingConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_LoggingConfig.html) operation\.
+
+The following example shows how you can use the `aws:SourceArn` and `aws:SourceAccount` global condition context keys in AWS CloudFormation to prevent the confused deputy problem\.
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": [
+          "resources.cloudformation.amazonaws.com"
+        ]
+      },
+      "Action": "sts:AssumeRole",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceAccount": "123456789012"
+        },
+        "StringLike": {
+          "aws:SourceArn": "arn:aws:cloudformation:us-east-1:123456789012:type/resource/Organization-Service-Resource/*"
+        }
+      }
+    }
+  ]
+}
+```

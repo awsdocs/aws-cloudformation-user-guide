@@ -1,6 +1,6 @@
 # AWS::IoT::TopicRule OpenSearchAction<a name="aws-properties-iot-topicrule-opensearchaction"></a>
 
-<a name="aws-properties-iot-topicrule-opensearchaction-description"></a>The `OpenSearchAction` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::IoT::TopicRule](aws-resource-iot-topicrule.md)\.
+Describes an action that writes data to an Amazon OpenSearch Service domain\.
 
 ## Syntax<a name="aws-properties-iot-topicrule-opensearchaction-syntax"></a>
 
@@ -31,31 +31,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-opensearchaction-properties"></a>
 
 `Endpoint`  <a name="cfn-iot-topicrule-opensearchaction-endpoint"></a>
-Not currently supported by AWS CloudFormation\.  
+The endpoint of your OpenSearch domain\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-iot-topicrule-opensearchaction-id"></a>
-Not currently supported by AWS CloudFormation\.  
+The unique identifier for the document you are storing\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Index`  <a name="cfn-iot-topicrule-opensearchaction-index"></a>
-Not currently supported by AWS CloudFormation\.  
+The OpenSearch index where you want to store your data\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iot-topicrule-opensearchaction-rolearn"></a>
-Not currently supported by AWS CloudFormation\.  
+The IAM role ARN that has access to OpenSearch\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-iot-topicrule-opensearchaction-type"></a>
-Not currently supported by AWS CloudFormation\.  
+The type of document you are storing\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

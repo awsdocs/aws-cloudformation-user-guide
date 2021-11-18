@@ -49,3 +49,30 @@ The weight value designates the relative percentage of the total number of tasks
 *Minimum*: `0`  
 *Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-events-rule-capacityproviderstrategyitem--examples"></a>
+
+
+
+### Set the CapacityProviderStrategyItem property<a name="aws-properties-events-rule-capacityproviderstrategyitem--examples--Set_the_CapacityProviderStrategyItem_property"></a>
+
+The following example sets the `CapacityProviderStrategyItem` property to run a minimum of 10 tasks on CapacityProvider1\.
+
+#### JSON<a name="aws-properties-events-rule-capacityproviderstrategyitem--examples--Set_the_CapacityProviderStrategyItem_property--json"></a>
+
+```
+"CapacityProviderStrategy": {
+  "Base": 10,
+  "CapacityProvider": "CapacityProvider1",
+  "Weight": 0
+}
+```
+
+#### YAML<a name="aws-properties-events-rule-capacityproviderstrategyitem--examples--Set_the_CapacityProviderStrategyItem_property--yaml"></a>
+
+```
+CapacityProviderStrategy
+  Base: 10
+  CapacityProvider: CapacityProvider1
+  Weight: 0
+```

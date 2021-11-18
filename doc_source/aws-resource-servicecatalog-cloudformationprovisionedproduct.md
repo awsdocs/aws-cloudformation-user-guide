@@ -135,7 +135,7 @@ You must specify either the ID or the name of the provisioning artifact, but not
 
 `ProvisioningArtifactName`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactname"></a>
 The name of the provisioning artifact \(also known as a version\) for the product\. This name must be unique for the product\.  
-You must specify either the name or the ID of the provisioning artifact, but not both\.
+ You must specify either the name or the ID of the provisioning artifact, but not both\. You must also specify either the name or the ID of the product, but not both\.
 *Required*: Conditional  
 *Type*: String  
 *Maximum*: `8192`  

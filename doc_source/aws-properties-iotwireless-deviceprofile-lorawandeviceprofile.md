@@ -49,61 +49,77 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotwireless-deviceprofile-lorawandeviceprofile-properties"></a>
 
 `ClassBTimeout`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-classbtimeout"></a>
-The ClassBTimeout value\. This has a minimum of 0 and maximum of 1000\.  
+The ClassBTimeout value\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClassCTimeout`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-classctimeout"></a>
-The ClassCTimeout value\. This has a minimum of 0 and maximum of 1000\.  
+The ClassCTimeout value\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MacVersion`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-macversion"></a>
-The MAC version \(such as OTAA 1\.1 or OTAA 1\.0\.3\) to use with this device profile\. This has a maximum length of 64 characters\.  
+The MAC version \(such as OTAA 1\.1 or OTAA 1\.0\.3\) to use with this device profile\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `64`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxDutyCycle`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-maxdutycycle"></a>
-The MaxDutyCycle value\. This has a minimum of 0 and a maximum of 100\.  
+The MaxDutyCycle value\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxEirp`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-maxeirp"></a>
-The MaxEIRP value\. This has a minimum of 0 and a maximum of 15\.  
+The MaxEIRP value\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `15`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PingSlotDr`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-pingslotdr"></a>
-The PingSlotDR value\. This has a minimum of 0 and maximum of 15\.  
+The PingSlotDR value\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `15`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PingSlotFreq`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-pingslotfreq"></a>
-The PingSlotFreq value\. This has a minimum of 1000000 and a maximum of 16700000\.  
+The PingSlotFreq value\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `1000000`  
+*Maximum*: `16700000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PingSlotPeriod`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-pingslotperiod"></a>
-The PingSlotPeriod value\. This has a minimum of 128 and maximum of 4096\.  
+The PingSlotPeriod value\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `128`  
+*Maximum*: `4096`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegParamsRevision`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-regparamsrevision"></a>
-The version of regional parameters\. This has a maximum of 64 characters\.  
+The version of regional parameters\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `64`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RfRegion`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-rfregion"></a>
-The frequency band \(RFRegion\) value\. The maximum length is 64\.  
+The frequency band \(RFRegion\) value\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

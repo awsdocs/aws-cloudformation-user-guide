@@ -85,7 +85,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 #### <a name="aws-resource-lightsail-disk-return-values-fn--getatt-fn--getatt"></a>
 
-`attachedTo`  <a name="attachedTo-fn::getatt"></a>
+`AttachedTo`  <a name="AttachedTo-fn::getatt"></a>
 The instance to which the disk is attached\.
 
 `AttachmentState`  <a name="AttachmentState-fn::getatt"></a>
@@ -98,10 +98,10 @@ The Amazon Resource Name \(ARN\) of the disk\.
 `Iops`  <a name="Iops-fn::getatt"></a>
 The input/output operations per second \(IOPS\) of the disk\.
 
-`isAttached`  <a name="isAttached-fn::getatt"></a>
+`IsAttached`  <a name="IsAttached-fn::getatt"></a>
 A Boolean value indicating whether the disk is attached to an instance\.
 
-`path`  <a name="path-fn::getatt"></a>
+`Path`  <a name="Path-fn::getatt"></a>
 The path of the disk\.
 
 `ResourceType`  <a name="ResourceType-fn::getatt"></a>

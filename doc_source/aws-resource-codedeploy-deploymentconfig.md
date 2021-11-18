@@ -88,14 +88,24 @@ The following example requires at least 75% of the fleet to be healthy\. For exa
 #### JSON<a name="aws-resource-codedeploy-deploymentconfig--examples--Specifying_minimum_healthy_hosts--json"></a>
 
 ```
-"TwentyFivePercentAtATime" : { "Type" :
-        "AWS::CodeDeploy::DeploymentConfig", "Properties" : { "MinimumHealthyHosts" : { "Type" :
-        "FLEET_PERCENT", "Value" : 75 } } }
+"TwentyFivePercentAtATime" : {
+    "Type" : "AWS::CodeDeploy::DeploymentConfig",
+    "Properties" : {
+        "MinimumHealthyHosts" : {
+            "Type" : "FLEET_PERCENT",
+            "Value" : "75"
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-codedeploy-deploymentconfig--examples--Specifying_minimum_healthy_hosts--yaml"></a>
 
 ```
-TwentyFivePercentAtATime: Type: AWS::CodeDeploy::DeploymentConfig
-        Properties: MinimumHealthyHosts: Type: "FLEET_PERCENT" Value: 75
+TwentyFivePercentAtATime: 
+  Type: AWS::CodeDeploy::DeploymentConfig
+  Properties: 
+    MinimumHealthyHosts: 
+      Type: "FLEET_PERCENT"
+      Value: 75
 ```

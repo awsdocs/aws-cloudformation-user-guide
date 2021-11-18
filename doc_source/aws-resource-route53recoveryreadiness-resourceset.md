@@ -1,6 +1,6 @@
 # AWS::Route53RecoveryReadiness::ResourceSet<a name="aws-resource-route53recoveryreadiness-resourceset"></a>
 
-Creates a resource set\. A resource set is a group of resources that you can associate with a readiness check\.
+Creates a resource set\. A resource set is a set of resources of one type that span multiple cells\. You can associate a resource set with a readiness check to monitor the resources for failover readiness\.
 
 ## Syntax<a name="aws-resource-route53recoveryreadiness-resourceset-syntax"></a>
 

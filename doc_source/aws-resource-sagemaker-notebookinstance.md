@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[KmsKeyId](#cfn-sagemaker-notebookinstance-kmskeyid)" : String,
       "[LifecycleConfigName](#cfn-sagemaker-notebookinstance-lifecycleconfigname)" : String,
       "[NotebookInstanceName](#cfn-sagemaker-notebookinstance-notebookinstancename)" : String,
+      "[PlatformIdentifier](#cfn-sagemaker-notebookinstance-platformidentifier)" : String,
       "[RoleArn](#cfn-sagemaker-notebookinstance-rolearn)" : String,
       "[RootAccess](#cfn-sagemaker-notebookinstance-rootaccess)" : String,
       "[SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids)" : [ String, ... ],
@@ -45,6 +46,7 @@ Properties:
   [KmsKeyId](#cfn-sagemaker-notebookinstance-kmskeyid): String
   [LifecycleConfigName](#cfn-sagemaker-notebookinstance-lifecycleconfigname): String
   [NotebookInstanceName](#cfn-sagemaker-notebookinstance-notebookinstancename): String
+  [PlatformIdentifier](#cfn-sagemaker-notebookinstance-platformidentifier): String
   [RoleArn](#cfn-sagemaker-notebookinstance-rolearn): String
   [RootAccess](#cfn-sagemaker-notebookinstance-rootaccess): String
   [SecurityGroupIds](#cfn-sagemaker-notebookinstance-securitygroupids): 
@@ -118,6 +120,14 @@ The name of the new notebook instance\.
 *Type*: String  
 *Maximum*: `63`  
 *Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`PlatformIdentifier`  <a name="cfn-sagemaker-notebookinstance-platformidentifier"></a>
+The platform identifier of the notebook instance runtime environment\.  
+*Required*: No  
+*Type*: String  
+*Maximum*: `15`  
+*Pattern*: `^(notebook-al1-v1|notebook-al2-v1)$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleArn`  <a name="cfn-sagemaker-notebookinstance-rolearn"></a>

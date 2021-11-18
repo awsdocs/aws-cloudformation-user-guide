@@ -130,6 +130,6 @@ In the following template snippet, CloudFormation triggers the `cfn-auto-reloade
 ...
 ```
 
-### Additional example<a name="w10116ab1c33c42c35c15b9"></a>
+### Additional example<a name="w10432ab1c33c42c35c15b9"></a>
 
 For a sample template, see [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.

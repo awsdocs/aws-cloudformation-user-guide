@@ -1,6 +1,6 @@
 # AWS::MemoryDB::SubnetGroup<a name="aws-resource-memorydb-subnetgroup"></a>
 
-Specifies a subnet group\. A subnet group is a collection of subnets \(typically private\) that you can designate for your clusters running in an Amazon Virtual Private Cloud \(VPC\) environment\. When you create a cluster in an Amazon VPC, you must specify a subnet group\. MemoryDB uses that subnet group to choose a subnet and IP addresses within that subnet to associate with your nodes\. For more information, see [Subnets and subnet groups](https://docs.aws.amazon.com/MemoryDB/latest/devguide/subnetgroups.html)\.
+Specifies a subnet group\. A subnet group is a collection of subnets \(typically private\) that you can designate for your clusters running in an Amazon Virtual Private Cloud \(VPC\) environment\. When you create a cluster in an Amazon VPC, you must specify a subnet group\. MemoryDB uses that subnet group to choose a subnet and IP addresses within that subnet to associate with your nodes\. For more information, see [Subnets and subnet groups](https://docs.aws.amazon.com/memorydb/latest/devguide/subnetgroups.html)\.
 
 ## Syntax<a name="aws-resource-memorydb-subnetgroup-syntax"></a>
 
@@ -49,7 +49,7 @@ The name of the subnet group to be used for the cluster\.
 
 `SubnetIds`  <a name="cfn-memorydb-subnetgroup-subnetids"></a>
 A list of Amazon VPC subnet IDs for the subnet group\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

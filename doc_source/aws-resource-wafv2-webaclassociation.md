@@ -39,7 +39,8 @@ The Amazon Resource Name \(ARN\) of the resource to associate with the web ACL\.
 The ARN must be in one of the following formats:  
 + For an Application Load Balancer: `arn:aws:elasticloadbalancing:region:account-id:loadbalancer/app/load-balancer-name/load-balancer-id ` 
 + For an Amazon API Gateway REST API: `arn:aws:apigateway:region::/restapis/api-id/stages/stage-name ` 
-+ For an AWS AppSync GraphQL API: `arn:aws:appsync:region:account-id:apis/ GraphQLApiId`
++ For an AWS AppSync GraphQL API: `arn:aws:appsync:region:account-id:apis/GraphQLApiId`
+For Amazon CloudFront, define the association in your CloudFront distribution configuration\. To associate a web ACL, provide the Amazon Resource Name \(ARN\) of the [AWS::WAFv2::WebACL](aws-resource-wafv2-webacl.md) to your CloudFront distribution configuration\. To disassociate a web ACL, provide an empty ARN\. For information, see [AWS::CloudFront::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
@@ -75,7 +76,6 @@ The following shows an example web ACL association specification\.
 #### YAML<a name="aws-resource-wafv2-webaclassociation--examples--Create_a_web_ACL_association--yaml"></a>
 
 ```
-Resources:
   SampleWebACLAssociation:
     Type: 'AWS::WAFv2::WebACLAssociation'
     Properties:
@@ -86,13 +86,11 @@ Resources:
 #### JSON<a name="aws-resource-wafv2-webaclassociation--examples--Create_a_web_ACL_association--json"></a>
 
 ```
-"Resources": {
-        "SampleWebACLAssociation": {
-            "Type": "AWS::WAFv2::WebACLAssociation",
-            "Properties": {
-                "WebACLArn": "WebACLArn",
-                "ResourceArn": "APIGatewayOrALBArn"
-            }
-        }
+  "SampleWebACLAssociation": {
+    "Type": "AWS::WAFv2::WebACLAssociation",
+    "Properties": {
+      "WebACLArn": "WebACLArn",
+      "ResourceArn": "APIGatewayOrALBArn"
     }
+  }
 ```

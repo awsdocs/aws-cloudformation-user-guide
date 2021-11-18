@@ -50,8 +50,7 @@ Action:
 #### JSON<a name="aws-properties-wafv2-webacl-countaction--examples--Set_an_count_action_--json"></a>
 
 ```
-"Action": 
-  {"Count": 
-    {}
-  }
+"Action": {
+  "Count": {}
+}
 ```
