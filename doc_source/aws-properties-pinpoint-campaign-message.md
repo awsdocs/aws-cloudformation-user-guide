@@ -60,13 +60,13 @@ The body of the notification message\. The maximum number of characters is 200\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageIconUrl`  <a name="cfn-pinpoint-campaign-message-imageiconurl"></a>
-The URL of the image to display as the push\-notification icon, such as the icon for the app\.  
+The URL of the image to display as the push notification icon, such as the icon for the app\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageSmallIconUrl`  <a name="cfn-pinpoint-campaign-message-imagesmalliconurl"></a>
-The URL of the image to display as the small, push\-notification icon, such as a small version of the icon for the app\.  
+The URL of the image to display as the small, push notification icon, such as a small version of the icon for the app\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -102,7 +102,7 @@ Specifies whether the notification is a silent push notification, which is a pus
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeToLive`  <a name="cfn-pinpoint-campaign-message-timetolive"></a>
-The number of seconds that the push\-notification service should keep the message, if the service is unable to deliver the notification the first time\. This value is converted to an expiration value when it's sent to a push\-notification service\. If this value is `0`, the service treats the notification as if it expires immediately and the service doesn't store or try to deliver the notification again\.  
+The number of seconds that the push notification service should keep the message, if the service is unable to deliver the notification the first time\. This value is converted to an expiration value when it's sent to a push notification service\. If this value is `0`, the service treats the notification as if it expires immediately and the service doesn't store or try to deliver the notification again\.  
 This value doesn't apply to messages that are sent through the Amazon Device Messaging \(ADM\) service\.  
 *Required*: No  
 *Type*: Integer  

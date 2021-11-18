@@ -35,7 +35,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DestinationRegion](#cfn-redshift-cluster-destinationregion)" : String,
       "[ElasticIp](#cfn-redshift-cluster-elasticip)" : String,
       "[Encrypted](#cfn-redshift-cluster-encrypted)" : Boolean,
-      "[Endpoint](#cfn-redshift-cluster-endpoint)" : Endpoint,
       "[EnhancedVpcRouting](#cfn-redshift-cluster-enhancedvpcrouting)" : Boolean,
       "[HsmClientCertificateIdentifier](#cfn-redshift-cluster-hsmclientcertificateidentifier)" : String,
       "[HsmConfigurationIdentifier](#cfn-redshift-cluster-hsmconfigurationidentifier)" : String,
@@ -93,8 +92,6 @@ Properties:
   [DestinationRegion](#cfn-redshift-cluster-destinationregion): String
   [ElasticIp](#cfn-redshift-cluster-elasticip): String
   [Encrypted](#cfn-redshift-cluster-encrypted): Boolean
-  [Endpoint](#cfn-redshift-cluster-endpoint): 
-    Endpoint
   [EnhancedVpcRouting](#cfn-redshift-cluster-enhancedvpcrouting): Boolean
   [HsmClientCertificateIdentifier](#cfn-redshift-cluster-hsmclientcertificateidentifier): String
   [HsmConfigurationIdentifier](#cfn-redshift-cluster-hsmconfigurationidentifier): String
@@ -303,12 +300,6 @@ If `true`, the data in the cluster is encrypted at rest\.
 Default: false  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`Endpoint`  <a name="cfn-redshift-cluster-endpoint"></a>
-The connection endpoint\.  
-*Required*: No  
-*Type*: [Endpoint](aws-properties-redshift-cluster-endpoint.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnhancedVpcRouting`  <a name="cfn-redshift-cluster-enhancedvpcrouting"></a>

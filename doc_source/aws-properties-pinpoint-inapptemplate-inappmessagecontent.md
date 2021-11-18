@@ -43,13 +43,13 @@ The background color for an in\-app message banner, expressed as a hex color cod
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BodyConfig`  <a name="cfn-pinpoint-inapptemplate-inappmessagecontent-bodyconfig"></a>
-Configuration information related to the message body of an in\-app message\.  
+An object that contains configuration information about the header or title text of the in\-app message\.  
 *Required*: No  
 *Type*: [BodyConfig](aws-properties-pinpoint-inapptemplate-bodyconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HeaderConfig`  <a name="cfn-pinpoint-inapptemplate-inappmessagecontent-headerconfig"></a>
-Configuration information related to the title of an in\-app message\.  
+An object that contains configuration information about the header or title text of the in\-app message\.  
 *Required*: No  
 *Type*: [HeaderConfig](aws-properties-pinpoint-inapptemplate-headerconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -61,13 +61,13 @@ The URL of the image that appears on an in\-app message banner\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrimaryBtn`  <a name="cfn-pinpoint-inapptemplate-inappmessagecontent-primarybtn"></a>
-The primary button inside an in\-app message\.  
+An object that contains configuration information about the primary button in an in\-app message\.  
 *Required*: No  
 *Type*: [ButtonConfig](aws-properties-pinpoint-inapptemplate-buttonconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecondaryBtn`  <a name="cfn-pinpoint-inapptemplate-inappmessagecontent-secondarybtn"></a>
-The secondary button in an in\-app message\.  
+An object that contains configuration information about the secondary button in an in\-app message\.  
 *Required*: No  
 *Type*: [ButtonConfig](aws-properties-pinpoint-inapptemplate-buttonconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

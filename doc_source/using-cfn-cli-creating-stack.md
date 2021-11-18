@@ -24,16 +24,16 @@ The following example creates the `myteststack` stack in an Amazon S3 bucket:
 
 ```
 1. PROMPT> aws cloudformation create-stack \
-2. --stack-name myteststack \
-3. --template-body file://home/testuser/mytemplate.json \
-4. --parameters ParameterKey=Parm1,ParameterValue=test1 ParameterKey=Parm2,ParameterValue=test2
+2.   --stack-name myteststack \
+3.   --template-body file://home/testuser/mytemplate.json \
+4.   --parameters ParameterKey=Parm1,ParameterValue=test1 ParameterKey=Parm2,ParameterValue=test2
 ```
 
 CloudFormation returns the following output:
 
 ```
 {
-  "StackId" : "arn:aws:cloudformation:us-west-2:123456789012:stack/myteststack/330b0120-1771-11e4-af37-50ba1b98bea6"
+  "StackId" : "arn:aws:cloudformation:us-east-1:123456789012:stack/myteststack/330b0120-1771-11e4-af37-50ba1b98bea6"
 }
 ```
 
@@ -42,5 +42,5 @@ The following example creates the `myteststack` stack in an AWS Systems Manager 
 ```
 1. PROMPT> aws cloudformation create-stack \
 2.  --stack-name myteststack \
-3.  --template-url "ssm-doc://arn:aws:ssm:us-east-1:12345678912:document/documentName"
+3.  --template-url "ssm-doc://arn:aws:ssm:us-east-1:123456789012:document/documentName"
 ```

@@ -40,7 +40,7 @@ Whether you want to allow or deny access to the domains in your target list\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-networkfirewall-rulegroup-rulessourcelist-targets"></a>
-The domains that you want to inspect for in your traffic flows\. To provide multiple domains, separate them with commas\. Valid domain specifications are the following:  
+The domains that you want to inspect for in your traffic flows\. Valid domain specifications are the following:  
 + Explicit names\. For example, `abc.example.com` matches only the domain `abc.example.com`\.
 + Names that use a domain wildcard, which you indicate with an initial '`.`'\. For example,`.example.com` matches `example.com` and matches all subdomains of `example.com`, such as `abc.example.com` and `www.example.com`\. 
 *Required*: Yes  

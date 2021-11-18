@@ -4,6 +4,61 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](AWS_Batch.md) | The following resources were updated: [AWS::Batch::ComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html), [AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html), and [AWS::Batch::JobQueue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html) 
+
+ [AWS::Batch::ComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html)   
+Use the `UnmanagedvCpus` property to specify the maximum number of vCPUs for an unmanaged compute environment\. 
+
+ [AWS::Batch::JobDefinition](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html)   
+Use the `SchedulingPriority` property to specify the scheduling priority for job definition\. 
+
+ [AWS::Batch::JobQueue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html)   
+Use the `SchedulingPolicyArn` property to specify the scheduling policy for a job queue\.  | November 11, 2021 | 
+| [Updated resources](AWS_SageMaker.md) | The following resource was updated: AWS::SageMaker::Endpoint 
+
+ [AWS::SageMaker::Endpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html)   
+Use the `DeploymentConfig` property to specify the deployment configuration for an endpoint, which contains the desired deployment strategy and rollback configurations\.  
+Use the `AutoRollbackConfig` property to specify the the automatic rollback configuration for handling endpoint deployment failures and recovery\.  
+Use the `Alarm` property to specify a list of CloudWatch alarms that are configured to monitor metrics on an endpoint\.  
+Use the `AlarmName` property to specify the name of a CloudWatch alarm in your account\.  
+Use the `BlueGreenUpdatePolicy` property to specify the update policy for a blue/green deployment\.  
+Use the `MaximumExecutionTimeoutInSeconds` property to specify the maximum execution timeout for a blue/green deployment\.  
+Use the `TerminationWaitInSeconds` property to specify additional waiting time in seconds after the completion of an endpoint deployment before terminating the old endpoint fleet  
+Use the `TrafficRoutingConfig` property to specify the traffic routing strategy during a blue/green endpoint deployment\.  
+Use the `CanarySize` property to specify the batch size for the first step to turn on traffic on the new endpoint fleet\.  
+Use the `LinearStepSize` property to specify the batch size for each step to turn on traffic on the new endpoint fleet  
+Use the `Type` property to specify the traffic routing strategy type \(all at once, canary, or linear\)\.  
+Use the `WaitIntervalInSeconds` property to specify the waiting time \(in seconds\) between incremental steps to turn on traffic on the new endpoint fleet\.  
+Use the `CapacitySize` property to specify the endpoint capacity to activate for production\.  
+Use the `Type` property to specify the endpoint capacity type to use \(instance count or capacity percent\)\.  
+Use the `Value` property to specify the capacity size, either as a number of instances or a capacity percentage\.  
+Use the `RetainDeploymentConfig` property to specify whether to reuse the last deployment configuration\. The default value is false \(the configuration is not reused\)  | November 11, 2021 | 
+| [New resources](AWS_Batch.md) | The following resource was added: [AWS::Batch::SchedulingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html) 
+
+ [AWS::Batch::SchedulingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html)   
+Use the `AWS::Batch::SchedulingPriority` resource to specify a scheduling policy\.  | November 11, 2021 | 
+| [New resources](AWS_IoTWireless.md) | The following resources were added: AWS::IoTWireless::FuotaTask, AWS::IoTWireless::MulticastGroup 
+
+ [AWS::IoTWireless::FuotaTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-fuotatask.html)   
+ Gets information about a FUOTA task\.  
+
+ [AWS::IoTWireless::MulticastGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html)   
+ Gets information about a multicast group\.   | November 11, 2021 | 
+| [Updated resource](AWS_EKS.md) | The following resource was updated: `AWS::EKS::Cluster` 
+
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-clusterlogging.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-clusterlogging.html)   
+Use the `ClusterLogging` property to specify the cluster control plane configuration for your cluster\. 
+
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-logging.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-logging.html)   
+Use the `Logging` property to enable or disable exporting the Kubernetes control plane logs for your cluster to CloudWatch Log\. 
+
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-loggingtypeconfig.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-loggingtypeconfig.html)   
+Use the `LoggingTypeConfig` property to specify the enabled logging type\. 
+
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html)   
+Use the `EndpointPrivateAccess` property to enable or disable private access for your cluster's Kubernetes API server endpoint\.  
+Use the `EndpointPublicAccess` property to enable or disable public access to your cluster's Kubernetes API server endpoint\.  
+Use the `PublicAccessCidrs` property to specify the CIDR blocks that are allowed access to your cluster's public Kubernetes API server endpoint\.  | November 10, 2021 | 
 | [Updated resources](AWS_EC2.md) | The following resources were updated: AWS::EC2::SpotFleet and AWS::EC2::EC2Fleet\. 
 
  [AWS::EC2::SpotFleet\.SpotCapacityRebalance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotcapacityrebalance.html)   
@@ -25,22 +80,26 @@ Use the `StatefulRuleGroupReference` property to reference the stateful rule gro
 Use the `StatefulRuleOptions` property to govern how Network Firewall handles stateful rules\.   | November 4, 2021 | 
 | [Updated resources](AWS_Pinpoint.md) | The following resource was updated: AWS::Pinpoint::Campaign\. 
 
-[AWS::Pinpoint::Campaign InAppMessageBodyConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign-inappmessagebodyconfig.html)  
+[AWS::Pinpoint::Campaign InAppMessageBodyConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebodyconfig.html)  
 Specifies the configuration of main body text of the in\-app message\. 
 
-[AWS::Pinpoint::Campaign InAppMessageButton](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign-inappmessagebutton.html)  
+[AWS::Pinpoint::Campaign InAppMessageButton](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagebutton.html)  
 Specifies the configuration of a button that appears in an in\-app message\. 
 
-[AWS::Pinpoint::Campaign InAppMessageContent](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign-inappmessagecontent.html)  
+[AWS::Pinpoint::Campaign InAppMessageContent](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessagecontent.html)  
 Specifies the configuration and contents of an in\-app message\. 
 
-[AWS::Pinpoint::Campaign InAppMessageHeaderConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-campaign-inappmessageheaderconfig.html)  
+[AWS::Pinpoint::Campaign InAppMessageHeaderConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html)  
 Specifies the configuration and content of the header or title text of the in\-app message\.  | November 4, 2021 | 
 | [Updated resource](AWS_CloudFront.md) | The following resource was updated: AWS::CloudFront::Distribution\. 
 
  [AWS::CloudFront::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)   
 In the [CacheBehavior](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html) and [DefaultCacheBehavior](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html) property types, use the `ResponseHeadersPolicyId` property to specify a response headers policy to associate with the cache behavior\.  
 For more information, see [Adding HTTP headers to CloudFront responses](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/adding-response-headers.html) in the *Amazon CloudFront Developer Guide*\.  | November 4, 2021 | 
+| [Updated resource](AWS_MWAA.md) | The following resource was updated: AWS::MWAA::Environment 
+
+ TagMap   
+The `TagMap` property has been removed the service resource specification\.  | November 4, 2021 | 
 | [Updated resource](AWS_Redshift.md) | The following resource was updated: AWS::Redshift\. 
 
  [Amazon Redshift resource type reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_Redshift.html)   
@@ -2931,7 +2990,7 @@ Use the `AWS::AppSync::ApiCache` resource to enable resolver caching with AWS Ap
 
  [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html)   
 Use the `AWS::EKS::Cluster` resource to create a new Amazon EKS cluster\.  | November 18, 2019 | 
-| [New resource](AWS_EKS.md) | The following resource was added: AWS::EKS::Nodegroup 
+| [New resource](AWS_EKS.md) | The following resource was added: `AWS::EKS::Nodegroup` 
 
  [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)   
 Use the `AWS::EKS::Nodegroup` resource to create a new Amazon EKS managed node group\.  | November 18, 2019 | 

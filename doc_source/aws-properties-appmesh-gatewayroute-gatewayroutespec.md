@@ -12,7 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[GrpcRoute](#cfn-appmesh-gatewayroute-gatewayroutespec-grpcroute)" : GrpcGatewayRoute,
   "[Http2Route](#cfn-appmesh-gatewayroute-gatewayroutespec-http2route)" : HttpGatewayRoute,
-  "[HttpRoute](#cfn-appmesh-gatewayroute-gatewayroutespec-httproute)" : HttpGatewayRoute
+  "[HttpRoute](#cfn-appmesh-gatewayroute-gatewayroutespec-httproute)" : HttpGatewayRoute,
+  "[Priority](#cfn-appmesh-gatewayroute-gatewayroutespec-priority)" : Integer
 }
 ```
 
@@ -25,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     HttpGatewayRoute
   [HttpRoute](#cfn-appmesh-gatewayroute-gatewayroutespec-httproute): 
     HttpGatewayRoute
+  [Priority](#cfn-appmesh-gatewayroute-gatewayroutespec-priority): Integer
 ```
 
 ## Properties<a name="aws-properties-appmesh-gatewayroute-gatewayroutespec-properties"></a>
@@ -45,4 +47,12 @@ An object that represents the specification of an HTTP/2 gateway route\.
 An object that represents the specification of an HTTP gateway route\.  
 *Required*: No  
 *Type*: [HttpGatewayRoute](aws-properties-appmesh-gatewayroute-httpgatewayroute.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Priority`  <a name="cfn-appmesh-gatewayroute-gatewayroutespec-priority"></a>
+The ordering of the gateway routes spec\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

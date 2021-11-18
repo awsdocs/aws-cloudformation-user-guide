@@ -1,14 +1,14 @@
-# AWS::ApiGateway::Stage MethodSetting<a name="aws-properties-apitgateway-stage-methodsetting"></a>
+# AWS::ApiGateway::Stage MethodSetting<a name="aws-properties-apigateway-stage-methodsetting"></a>
 
 The `MethodSetting` property type configures settings for all methods in a stage\.
 
 The `MethodSettings` property of the `AWS::ApiGateway::Stage` resource contains a list of `MethodSetting` property types\.
 
-## Syntax<a name="aws-properties-apitgateway-stage-methodsetting-syntax"></a>
+## Syntax<a name="aws-properties-apigateway-stage-methodsetting-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-properties-apitgateway-stage-methodsetting-syntax.json"></a>
+### JSON<a name="aws-properties-apigateway-stage-methodsetting-syntax.json"></a>
 
 ```
 {
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 }
 ```
 
-### YAML<a name="aws-properties-apitgateway-stage-methodsetting-syntax.yaml"></a>
+### YAML<a name="aws-properties-apigateway-stage-methodsetting-syntax.yaml"></a>
 
 ```
   [CacheDataEncrypted](#cfn-apigateway-stage-methodsetting-cachedataencrypted): Boolean
@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ThrottlingRateLimit](#cfn-apigateway-stage-methodsetting-throttlingratelimit): Double
 ```
 
-## Properties<a name="aws-properties-apitgateway-stage-methodsetting-properties"></a>
+## Properties<a name="aws-properties-apigateway-stage-methodsetting-properties"></a>
 
 `CacheDataEncrypted`  <a name="cfn-apigateway-stage-methodsetting-cachedataencrypted"></a>
 Indicates whether the cached responses are encrypted\.  
@@ -102,6 +102,6 @@ The number of steady\-state requests per second that API Gateway permits across 
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See also<a name="aws-properties-apitgateway-stage-methodsetting--seealso"></a>
+## See also<a name="aws-properties-apigateway-stage-methodsetting--seealso"></a>
 + [Stage](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/) in the *Amazon API Gateway REST API Reference*
 

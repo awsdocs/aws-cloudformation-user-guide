@@ -1,6 +1,8 @@
 # AWS::Kendra::DataSource WebCrawlerSiteMapsConfiguration<a name="aws-properties-kendra-datasource-webcrawlersitemapsconfiguration"></a>
 
-<a name="aws-properties-kendra-datasource-webcrawlersitemapsconfiguration-description"></a>The `WebCrawlerSiteMapsConfiguration` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Kendra::DataSource](aws-resource-kendra-datasource.md)\.
+Provides the configuration information of the sitemap URLs to crawl\.
+
+ *When selecting websites to index, you must adhere to the [Amazon Acceptable Use Policy](http://aws.amazon.com/aup/) and all other Amazon terms\. Remember that you must only use the Amazon Kendra web crawler to index your own webpages, or webpages that you have authorization to index\.* 
 
 ## Syntax<a name="aws-properties-kendra-datasource-webcrawlersitemapsconfiguration-syntax"></a>
 

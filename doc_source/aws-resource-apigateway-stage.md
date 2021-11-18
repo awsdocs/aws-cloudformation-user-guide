@@ -109,7 +109,7 @@ The version ID of the API documentation snapshot\.
 `MethodSettings`  <a name="cfn-apigateway-stage-methodsettings"></a>
 Settings for all methods in the stage\.  
 *Required*: No  
-*Type*: List of [MethodSetting](aws-properties-apitgateway-stage-methodsetting.md)  
+*Type*: List of [MethodSetting](aws-properties-apigateway-stage-methodsetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RestApiId`  <a name="cfn-apigateway-stage-restapiid"></a>

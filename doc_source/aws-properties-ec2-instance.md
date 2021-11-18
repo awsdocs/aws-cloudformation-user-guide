@@ -366,7 +366,7 @@ The tenancy of the instance \(if the instance is running in a VPC\)\. An instanc
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `UserData`  <a name="cfn-ec2-instance-userdata"></a>
-The user data to make available to the instance\. For more information, see [Running commands on your Linux instance at launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) \(Linux\) and [Adding User Data](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-instance-metadata.html#instancedata-add-user-data) \(Windows\)\. If you are using a command line tool, base64\-encoding is performed for you, and you can load the text from a file\. Otherwise, you must provide base64\-encoded text\. User data is limited to 16 KB\.  
+The user data to make available to the instance\. For more information, see [Run commands on your Linux instance at launch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html) \(Linux\) and [Run commands on your Windows instance at launch](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-user-data.html) \(Windows\)\. If you are using a command line tool, base64\-encoding is performed for you, and you can load the text from a file\. Otherwise, you must provide base64\-encoded text\. User data is limited to 16 KB\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

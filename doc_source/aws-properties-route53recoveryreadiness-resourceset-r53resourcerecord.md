@@ -31,7 +31,7 @@ The DNS target domain name\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RecordSetId`  <a name="cfn-route53recoveryreadiness-resourceset-r53resourcerecord-recordsetid"></a>
-The Resource Record set id\.  
+The Route 53 Resource Record Set ID\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

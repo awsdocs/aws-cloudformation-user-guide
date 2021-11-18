@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EndpointName](#cfn-sagemaker-endpoint-endpointname)" : String,
       "[ExcludeRetainedVariantProperties](#cfn-sagemaker-endpoint-excluderetainedvariantproperties)" : [ VariantProperty, ... ],
       "[RetainAllVariantProperties](#cfn-sagemaker-endpoint-retainallvariantproperties)" : Boolean,
+      "[RetainDeploymentConfig](#cfn-sagemaker-endpoint-retaindeploymentconfig)" : Boolean,
       "[Tags](#cfn-sagemaker-endpoint-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -34,6 +35,7 @@ Properties:
   [ExcludeRetainedVariantProperties](#cfn-sagemaker-endpoint-excluderetainedvariantproperties): 
     - VariantProperty
   [RetainAllVariantProperties](#cfn-sagemaker-endpoint-retainallvariantproperties): Boolean
+  [RetainDeploymentConfig](#cfn-sagemaker-endpoint-retaindeploymentconfig): Boolean
   [Tags](#cfn-sagemaker-endpoint-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -41,7 +43,7 @@ Properties:
 ## Properties<a name="aws-resource-sagemaker-endpoint-properties"></a>
 
 `DeploymentConfig`  <a name="cfn-sagemaker-endpoint-deploymentconfig"></a>
-Not currently supported by AWS CloudFormation\.  
+The deployment configuration for an endpoint, which contains the desired deployment strategy and rollback configurations\.  
 *Required*: No  
 *Type*: [DeploymentConfig](aws-properties-sagemaker-endpoint-deploymentconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -71,6 +73,12 @@ When you are updating endpoint resources with [RetainAllVariantProperties](https
 
 `RetainAllVariantProperties`  <a name="cfn-sagemaker-endpoint-retainallvariantproperties"></a>
 When updating endpoint resources, enables or disables the retention of variant properties, such as the instance count or the variant weight\. To retain the variant properties of an endpoint when updating it, set `RetainAllVariantProperties` to `true`\. To use the variant properties specified in a new `EndpointConfig` call when updating an endpoint, set `RetainAllVariantProperties` to `false`\. Use this property only when updating endpoint resources, not when creating new endpoint resources\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RetainDeploymentConfig`  <a name="cfn-sagemaker-endpoint-retaindeploymentconfig"></a>
+Specifies whether to reuse the last deployment configuration\. The default value is false \(the configuration is not reused\)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

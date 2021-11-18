@@ -14,7 +14,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ACLName](#cfn-memorydb-cluster-aclname)" : String,
       "[AutoMinorVersionUpgrade](#cfn-memorydb-cluster-autominorversionupgrade)" : Boolean,
-      "[ClusterEndpoint](#cfn-memorydb-cluster-clusterendpoint)" : Endpoint,
       "[ClusterName](#cfn-memorydb-cluster-clustername)" : String,
       "[Description](#cfn-memorydb-cluster-description)" : String,
       "[EngineVersion](#cfn-memorydb-cluster-engineversion)" : String,
@@ -47,8 +46,6 @@ Type: AWS::MemoryDB::Cluster
 Properties: 
   [ACLName](#cfn-memorydb-cluster-aclname): String
   [AutoMinorVersionUpgrade](#cfn-memorydb-cluster-autominorversionupgrade): Boolean
-  [ClusterEndpoint](#cfn-memorydb-cluster-clusterendpoint): 
-    Endpoint
   [ClusterName](#cfn-memorydb-cluster-clustername): String
   [Description](#cfn-memorydb-cluster-description): String
   [EngineVersion](#cfn-memorydb-cluster-engineversion): String
@@ -89,12 +86,6 @@ The name of the Access Control List to associate with the cluster\.
 When set to true, the cluster will automatically receive minor engine version upgrades after launch\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`ClusterEndpoint`  <a name="cfn-memorydb-cluster-clusterendpoint"></a>
-The cluster's configuration endpoint\.  
-*Required*: No  
-*Type*: [Endpoint](aws-properties-memorydb-cluster-endpoint.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClusterName`  <a name="cfn-memorydb-cluster-clustername"></a>

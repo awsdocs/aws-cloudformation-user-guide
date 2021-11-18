@@ -61,13 +61,13 @@ The URL of the image that appears on an in\-app message banner\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrimaryBtn`  <a name="cfn-pinpoint-campaign-inappmessagecontent-primarybtn"></a>
-The primary button inside an in\-app message\.  
+An object that contains configuration information about the primary button in an in\-app message\.  
 *Required*: No  
 *Type*: [InAppMessageButton](aws-properties-pinpoint-campaign-inappmessagebutton.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecondaryBtn`  <a name="cfn-pinpoint-campaign-inappmessagecontent-secondarybtn"></a>
-The secondary button in an in\-app message\.  
+An object that contains configuration information about the secondary button in an in\-app message\.  
 *Required*: No  
 *Type*: [InAppMessageButton](aws-properties-pinpoint-campaign-inappmessagebutton.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

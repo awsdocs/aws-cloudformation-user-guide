@@ -35,6 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-appconfig-configurationprofile-name)" : String,
       "[RetrievalRoleArn](#cfn-appconfig-configurationprofile-retrievalrolearn)" : String,
       "[Tags](#cfn-appconfig-configurationprofile-tags)" : [ Tags, ... ],
+      "[Type](#cfn-appconfig-configurationprofile-type)" : String,
       "[Validators](#cfn-appconfig-configurationprofile-validators)" : [ Validators, ... ]
     }
 }
@@ -52,6 +53,7 @@ Properties:
   [RetrievalRoleArn](#cfn-appconfig-configurationprofile-retrievalrolearn): String
   [Tags](#cfn-appconfig-configurationprofile-tags): 
     - Tags
+  [Type](#cfn-appconfig-configurationprofile-type): String
   [Validators](#cfn-appconfig-configurationprofile-validators): 
     - Validators
 ```
@@ -104,6 +106,12 @@ Metadata to assign to the configuration profile\. Tags help organize and categor
 *Required*: No  
 *Type*: [List](aws-properties-appconfig-configurationprofile-tags.md) of [Tags](aws-properties-appconfig-configurationprofile-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Type`  <a name="cfn-appconfig-configurationprofile-type"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Validators`  <a name="cfn-appconfig-configurationprofile-validators"></a>
 A list of methods for validating the configuration\.  

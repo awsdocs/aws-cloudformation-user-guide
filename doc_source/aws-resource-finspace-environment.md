@@ -12,11 +12,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::FinSpace::Environment",
   "Properties" : {
+      "[DataBundles](#cfn-finspace-environment-databundles)" : [ String, ... ],
       "[Description](#cfn-finspace-environment-description)" : String,
       "[FederationMode](#cfn-finspace-environment-federationmode)" : String,
       "[FederationParameters](#cfn-finspace-environment-federationparameters)" : FederationParameters,
       "[KmsKeyId](#cfn-finspace-environment-kmskeyid)" : String,
-      "[Name](#cfn-finspace-environment-name)" : String
+      "[Name](#cfn-finspace-environment-name)" : String,
+      "[SuperuserParameters](#cfn-finspace-environment-superuserparameters)" : SuperuserParameters
     }
 }
 ```
@@ -26,15 +28,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::FinSpace::Environment
 Properties: 
+  [DataBundles](#cfn-finspace-environment-databundles): 
+    - String
   [Description](#cfn-finspace-environment-description): String
   [FederationMode](#cfn-finspace-environment-federationmode): String
   [FederationParameters](#cfn-finspace-environment-federationparameters): 
     FederationParameters
   [KmsKeyId](#cfn-finspace-environment-kmskeyid): String
   [Name](#cfn-finspace-environment-name): String
+  [SuperuserParameters](#cfn-finspace-environment-superuserparameters): 
+    SuperuserParameters
 ```
 
 ## Properties<a name="aws-resource-finspace-environment-properties"></a>
+
+`DataBundles`  <a name="cfn-finspace-environment-databundles"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-finspace-environment-description"></a>
 The description of the FinSpace environment\.  
@@ -75,6 +87,12 @@ The name of the FinSpace environment\.
 *Maximum*: `255`  
 *Pattern*: `^[a-zA-Z0-9]+[a-zA-Z0-9-]*[a-zA-Z0-9]$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SuperuserParameters`  <a name="cfn-finspace-environment-superuserparameters"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [SuperuserParameters](aws-properties-finspace-environment-superuserparameters.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-finspace-environment-return-values"></a>
 

@@ -14,8 +14,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[BackupId](#cfn-fsx-filesystem-backupid)" : String,
       "[FileSystemType](#cfn-fsx-filesystem-filesystemtype)" : String,
+      "[FileSystemTypeVersion](#cfn-fsx-filesystem-filesystemtypeversion)" : String,
       "[KmsKeyId](#cfn-fsx-filesystem-kmskeyid)" : String,
       "[LustreConfiguration](#cfn-fsx-filesystem-lustreconfiguration)" : LustreConfiguration,
+      "[OntapConfiguration](#cfn-fsx-filesystem-ontapconfiguration)" : OntapConfiguration,
       "[SecurityGroupIds](#cfn-fsx-filesystem-securitygroupids)" : [ String, ... ],
       "[StorageCapacity](#cfn-fsx-filesystem-storagecapacity)" : Integer,
       "[StorageType](#cfn-fsx-filesystem-storagetype)" : String,
@@ -33,9 +35,12 @@ Type: AWS::FSx::FileSystem
 Properties: 
   [BackupId](#cfn-fsx-filesystem-backupid): String
   [FileSystemType](#cfn-fsx-filesystem-filesystemtype): String
+  [FileSystemTypeVersion](#cfn-fsx-filesystem-filesystemtypeversion): String
   [KmsKeyId](#cfn-fsx-filesystem-kmskeyid): String
   [LustreConfiguration](#cfn-fsx-filesystem-lustreconfiguration): 
     LustreConfiguration
+  [OntapConfiguration](#cfn-fsx-filesystem-ontapconfiguration): 
+    OntapConfiguration
   [SecurityGroupIds](#cfn-fsx-filesystem-securitygroupids): 
     - String
   [StorageCapacity](#cfn-fsx-filesystem-storagecapacity): Integer
@@ -63,6 +68,15 @@ The type of Amazon FSx file system, which can be `LUSTRE` or `WINDOWS`\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`FileSystemTypeVersion`  <a name="cfn-fsx-filesystem-filesystemtypeversion"></a>
+The version of your Amazon FSx for Lustre file system, either `2.10` or `2.12`\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `20`  
+*Pattern*: `^[0-9](\.[0-9]*)*$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `KmsKeyId`  <a name="cfn-fsx-filesystem-kmskeyid"></a>
 The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the file system's data for Amazon FSx for Windows File Server file systems and persistent Amazon FSx for Lustre file systems at rest\. If not specified, the Amazon FSx managed key is used\. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using Amazon FSx managed keys\. For more information, see [Encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) in the * AWS Key Management Service API Reference*\.  
 *Required*: No  
@@ -73,6 +87,12 @@ The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the fil
 The Lustre configuration for the file system being created\.   
 *Required*: No  
 *Type*: [LustreConfiguration](aws-properties-fsx-filesystem-lustreconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`OntapConfiguration`  <a name="cfn-fsx-filesystem-ontapconfiguration"></a>
+The configuration for this FSx for NetApp ONTAP file system\.  
+*Required*: No  
+*Type*: [OntapConfiguration](aws-properties-fsx-filesystem-ontapconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-fsx-filesystem-securitygroupids"></a>

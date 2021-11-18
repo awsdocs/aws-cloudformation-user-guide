@@ -30,4 +30,4 @@ The CIDR block to assign Kubernetes service IP addresses from\. If you don't spe
 You can only specify a custom CIDR block when you create a cluster and can't change this value once the cluster is created\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

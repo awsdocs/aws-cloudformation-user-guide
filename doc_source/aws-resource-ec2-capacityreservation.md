@@ -21,6 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[InstanceMatchCriteria](#cfn-ec2-capacityreservation-instancematchcriteria)" : String,
       "[InstancePlatform](#cfn-ec2-capacityreservation-instanceplatform)" : String,
       "[InstanceType](#cfn-ec2-capacityreservation-instancetype)" : String,
+      "[OutPostArn](#cfn-ec2-capacityreservation-outpostarn)" : String,
+      "[PlacementGroupArn](#cfn-ec2-capacityreservation-placementgrouparn)" : String,
       "[TagSpecifications](#cfn-ec2-capacityreservation-tagspecifications)" : [ TagSpecification, ... ],
       "[Tenancy](#cfn-ec2-capacityreservation-tenancy)" : String
     }
@@ -41,6 +43,8 @@ Properties:
   [InstanceMatchCriteria](#cfn-ec2-capacityreservation-instancematchcriteria): String
   [InstancePlatform](#cfn-ec2-capacityreservation-instanceplatform): String
   [InstanceType](#cfn-ec2-capacityreservation-instancetype): String
+  [OutPostArn](#cfn-ec2-capacityreservation-outpostarn): String
+  [PlacementGroupArn](#cfn-ec2-capacityreservation-placementgrouparn): String
   [TagSpecifications](#cfn-ec2-capacityreservation-tagspecifications): 
     - TagSpecification
   [Tenancy](#cfn-ec2-capacityreservation-tenancy): String
@@ -110,6 +114,19 @@ The type of operating system for which to reserve capacity\.
 `InstanceType`  <a name="cfn-ec2-capacityreservation-instancetype"></a>
 The instance type for which to reserve capacity\. For more information, see [Instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon EC2 User Guide*\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`OutPostArn`  <a name="cfn-ec2-capacityreservation-outpostarn"></a>
+The Amazon Resource Name \(ARN\) of the Outpost on which the Capacity Reservation was created\.  
+*Required*: No  
+*Type*: String  
+*Pattern*: `^arn:aws([a-z-]+)?:outposts:[a-z\d-]+:\d{12}:outpost/op-[a-f0-9]{17}$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`PlacementGroupArn`  <a name="cfn-ec2-capacityreservation-placementgrouparn"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
