@@ -20,7 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AcceptanceRequired](#cfn-ec2-vpcendpointservice-acceptancerequired)" : Boolean,
       "[GatewayLoadBalancerArns](#cfn-ec2-vpcendpointservice-gatewayloadbalancerarns)" : [ String, ... ],
-      "[NetworkLoadBalancerArns](#cfn-ec2-vpcendpointservice-networkloadbalancerarns)" : [ String, ... ]
+      "[NetworkLoadBalancerArns](#cfn-ec2-vpcendpointservice-networkloadbalancerarns)" : [ String, ... ],
+      "[PayerResponsibility](#cfn-ec2-vpcendpointservice-payerresponsibility)" : String
     }
 }
 ```
@@ -35,6 +36,7 @@ Properties:
     - String
   [NetworkLoadBalancerArns](#cfn-ec2-vpcendpointservice-networkloadbalancerarns): 
     - String
+  [PayerResponsibility](#cfn-ec2-vpcendpointservice-payerresponsibility): String
 ```
 
 ## Properties<a name="aws-resource-ec2-vpcendpointservice-properties"></a>
@@ -57,6 +59,12 @@ The Amazon Resource Names \(ARNs\) of one or more Network Load Balancers for you
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`PayerResponsibility`  <a name="cfn-ec2-vpcendpointservice-payerresponsibility"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Return values<a name="aws-resource-ec2-vpcendpointservice-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpcendpointservice-return-values-ref"></a>
@@ -67,5 +75,5 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## See also<a name="aws-resource-ec2-vpcendpointservice--seealso"></a>
 + [CreateVpcEndpointServiceConfiguration](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpcEndpointServiceConfiguration.html) in the *Amazon EC2 API Reference*
-+ [VPC Endpoint Services](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/endpoint-service.html) in the *Amazon Virtual Private Cloud User Guide*
++ [VPC endpoint services](https://docs.aws.amazon.com/vpc/latest/privatelink/endpoint-service.html) in *AWS PrivateLink*
 

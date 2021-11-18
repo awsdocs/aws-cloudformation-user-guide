@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-auditmanager-assessment-scope-properties"></a>
 
 `AwsAccounts`  <a name="cfn-auditmanager-assessment-scope-awsaccounts"></a>
- The AWS accounts included in the scope of the assessment\.   
+ The AWS accounts that are included in the scope of the assessment\.   
 *Required*: No  
 *Type*: List of [AWSAccount](aws-properties-auditmanager-assessment-awsaccount.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AwsServices`  <a name="cfn-auditmanager-assessment-scope-awsservices"></a>
- The AWS services included in the scope of the assessment\.   
+ The AWS services that are included in the scope of the assessment\.   
 *Required*: No  
 *Type*: List of [AWSService](aws-properties-auditmanager-assessment-awsservice.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

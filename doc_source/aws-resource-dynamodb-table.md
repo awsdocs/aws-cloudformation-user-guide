@@ -84,6 +84,7 @@ Valid values include:
 If not specified, the default is `PROVISIONED`\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `PAY_PER_REQUEST | PROVISIONED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ContributorInsightsSpecification`  <a name="cfn-dynamodb-contributorinsightsspecification-enabled"></a>
@@ -97,7 +98,7 @@ Global secondary indexes to be created on the table\. You can create up to 20 gl
 If you update a table to include a new global secondary index, AWS CloudFormation initiates the index creation and then proceeds with the stack update\. AWS CloudFormation doesn't wait for the index to complete creation because the backfilling phase can take a long time, depending on the size of the table\. You can't use the index or update the table until the index's status is `ACTIVE`\. You can track its status by using the DynamoDB [DescribeTable](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/describe-table.html) command\.  
 If you add or delete an index during an update, we recommend that you don't update any other resources\. If your stack fails to update and is rolled back while adding a new index, you must manually delete the index\.   
 Updates are not supported\. The following are exceptions:  
-+ If you update only the provisioned throughput values of global secondary indexes, you can update the table without interruption\.
++ If you update either the contributor insights specification or the provisioned throughput values of global secondary indexes, you can update the table without interruption\.
 + You can delete or add one global secondary index without interruption\. If you do both in the same update \(for example, by changing the index's logical ID\), the update fails\.
 *Required*: No  
 *Type*: List of [GlobalSecondaryIndex](aws-properties-dynamodb-gsi.md)  

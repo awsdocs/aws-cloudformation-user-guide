@@ -6,7 +6,7 @@ Creates a `Domain` used by Amazon SageMaker Studio\. A domain consists of an ass
 
 When a domain is created, an EFS volume is created for use by all of the users within the domain\. Each user receives a private home directory within the EFS volume for notebooks, Git repositories, and data files\.
 
-SageMaker uses the AWS Key Management Service \(AWS KMS\) to encrypt the EFS volume attached to the domain with an AWS managed customer master key \(CMK\) by default\. For more control, you can specify a customer managed CMK\. For more information, see [Protect Data at Rest Using Encryption](https://docs.aws.amazon.com/sagemaker/latest/dg/encryption-at-rest.html)\.
+SageMaker uses the AWS Key Management Service \(AWS KMS\) to encrypt the EFS volume attached to the domain with an AWS managed key by default\. For more control, you can specify a customer managed key\. For more information, see [Protect Data at Rest Using Encryption](https://docs.aws.amazon.com/sagemaker/latest/dg/encryption-at-rest.html)\.
 
  **VPC configuration** 
 

@@ -31,24 +31,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DestinationDetails`  <a name="cfn-elasticache-replicationgroup-logdeliveryconfigurationrequest-destinationdetails"></a>
 Configuration details of either a CloudWatch Logs destination or Kinesis Data Firehose destination\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [DestinationDetails](aws-properties-elasticache-replicationgroup-destinationdetails.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DestinationType`  <a name="cfn-elasticache-replicationgroup-logdeliveryconfigurationrequest-destinationtype"></a>
 Specify either CloudWatch Logs or Kinesis Data Firehose as the destination type\. Valid values are either `cloudwatch-logs` or `kinesis-firehose`\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogFormat`  <a name="cfn-elasticache-replicationgroup-logdeliveryconfigurationrequest-logformat"></a>
 Valid values are either `json` or `text`\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogType`  <a name="cfn-elasticache-replicationgroup-logdeliveryconfigurationrequest-logtype"></a>
 Valid value is `slow-log`\. Refers to [slow\-log](https://redis.io/commands/slowlog)\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

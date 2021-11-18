@@ -1,6 +1,6 @@
 # AWS::SecretsManager::Secret ReplicaRegion<a name="aws-properties-secretsmanager-secret-replicaregion"></a>
 
-\(Optional\) Custom type consisting of a `Region` \(required\) and the `KmsKeyId` which can be an `ARN`, `Key ID`, or `Alias`\.
+A custom type that specifies a `Region` and the `KmsKeyId` for a replica secret\.
 
 ## Syntax<a name="aws-properties-secretsmanager-secret-replicaregion-syntax"></a>
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-secretsmanager-secret-replicaregion-properties"></a>
 
 `KmsKeyId`  <a name="cfn-secretsmanager-secret-replicaregion-kmskeyid"></a>
-Can be an `ARN`, `Key ID`, or `Alias`\.   
+The ARN, key ID, or alias of the KMS key to encrypt the secret\. If you don't include this field, Secrets Manager uses `aws/secretsmanager`\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -33,7 +33,7 @@ Can be an `ARN`, `Key ID`, or `Alias`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Region`  <a name="cfn-secretsmanager-secret-replicaregion-region"></a>
-\(Optional\) Custom type consisting of a `Region` \(required\) and the `KmsKeyId` which can be an `ARN`, `Key ID`, or `Alias`\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

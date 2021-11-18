@@ -58,7 +58,7 @@ The node type that the instance fleet hosts\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceTypeConfigs`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancetypeconfigs"></a>
-`InstanceTypeConfigs` determine the EC2 instances that Amazon EMR attempts to provision to fulfill On\-Demand and Spot target capacities\. There can be a maximum of 5 instance type configurations in a fleet, each one specified using an `InstanceTypeConfig`\.  
+`InstanceTypeConfigs` determine the EC2 instances that Amazon EMR attempts to provision to fulfill On\-Demand and Spot target capacities\.  
 The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\.
 *Required*: No  
 *Type*: List of [InstanceTypeConfig](aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.md)  

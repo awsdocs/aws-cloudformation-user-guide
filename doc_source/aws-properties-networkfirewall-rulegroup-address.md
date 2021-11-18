@@ -32,5 +32,5 @@ For more information about CIDR notation, see the Wikipedia entry [Classless Int
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `255`  
-*Pattern*: `^([a-fA-F\d:\.]+/\d{1,3})$`  
+*Pattern*: `^([a-fA-F\d:\.]+($|/\d{1,3}))$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

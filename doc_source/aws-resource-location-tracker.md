@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-location-tracker-description)" : String,
       "[KmsKeyId](#cfn-location-tracker-kmskeyid)" : String,
+      "[PositionFiltering](#cfn-location-tracker-positionfiltering)" : String,
       "[PricingPlan](#cfn-location-tracker-pricingplan)" : String,
       "[PricingPlanDataSource](#cfn-location-tracker-pricingplandatasource)" : String,
       "[TrackerName](#cfn-location-tracker-trackername)" : String
@@ -28,6 +29,7 @@ Type: AWS::Location::Tracker
 Properties: 
   [Description](#cfn-location-tracker-description): String
   [KmsKeyId](#cfn-location-tracker-kmskeyid): String
+  [PositionFiltering](#cfn-location-tracker-positionfiltering): String
   [PricingPlan](#cfn-location-tracker-pricingplan): String
   [PricingPlanDataSource](#cfn-location-tracker-pricingplandatasource): String
   [TrackerName](#cfn-location-tracker-trackername): String
@@ -49,6 +51,12 @@ A key identifier for an [AWS KMS customer managed key](https://docs.aws.amazon.c
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`PositionFiltering`  <a name="cfn-location-tracker-positionfiltering"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PricingPlan`  <a name="cfn-location-tracker-pricingplan"></a>

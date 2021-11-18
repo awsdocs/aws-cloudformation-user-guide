@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSource MySqlParameters<a name="aws-properties-quicksight-datasource-mysqlparameters"></a>
 
-MySQL parameters\.
+The parameters for MySQL\.
 
 ## Syntax<a name="aws-properties-quicksight-datasource-mysqlparameters-syntax"></a>
 

@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-auditmanager-assessment-awsaccount-properties"></a>
 
 `EmailAddress`  <a name="cfn-auditmanager-assessment-awsaccount-emailaddress"></a>
- The email address associated with the specified AWS account\.   
+ The email address that's associated with the AWS account\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Id`  <a name="cfn-auditmanager-assessment-awsaccount-id"></a>
- The identifier for the specified AWS account\.   
+ The identifier for the AWS account\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `12`  
@@ -45,7 +45,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-auditmanager-assessment-awsaccount-name"></a>
- The name of the specified AWS account\.   
+ The name of the AWS account\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

@@ -28,10 +28,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The certificate chain for the certificate\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivateKey`  <a name="cfn-appmesh-virtualnode-listenertlsfilecertificate-privatekey"></a>
 The private key for a certificate stored on the file system of the virtual node that the proxy is running on\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

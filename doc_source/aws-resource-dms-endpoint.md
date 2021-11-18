@@ -35,7 +35,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Password](#cfn-dms-endpoint-password)" : String,
       "[Port](#cfn-dms-endpoint-port)" : Integer,
       "[PostgreSqlSettings](#cfn-dms-endpoint-postgresqlsettings)" : PostgreSqlSettings,
+      "[RedisSettings](#cfn-dms-endpoint-redissettings)" : RedisSettings,
       "[RedshiftSettings](#cfn-dms-endpoint-redshiftsettings)" : RedshiftSettings,
+      "[ResourceIdentifier](#cfn-dms-endpoint-resourceidentifier)" : String,
       "[S3Settings](#cfn-dms-endpoint-s3settings)" : S3Settings,
       "[ServerName](#cfn-dms-endpoint-servername)" : String,
       "[SslMode](#cfn-dms-endpoint-sslmode)" : String,
@@ -84,8 +86,11 @@ Properties:
   [Port](#cfn-dms-endpoint-port): Integer
   [PostgreSqlSettings](#cfn-dms-endpoint-postgresqlsettings): 
     PostgreSqlSettings
+  [RedisSettings](#cfn-dms-endpoint-redissettings): 
+    RedisSettings
   [RedshiftSettings](#cfn-dms-endpoint-redshiftsettings): 
     RedshiftSettings
+  [ResourceIdentifier](#cfn-dms-endpoint-resourceidentifier): String
   [S3Settings](#cfn-dms-endpoint-s3settings): 
     S3Settings
   [ServerName](#cfn-dms-endpoint-servername): String
@@ -124,7 +129,7 @@ Settings in JSON format for the target Amazon DynamoDB endpoint\. For informatio
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ElasticsearchSettings`  <a name="cfn-dms-endpoint-elasticsearchsettings"></a>
-Settings in JSON format for the target Elasticsearch endpoint\. For more information about the available settings, see [Extra Connection Attributes When Using Elasticsearch as a Target for AWS DMS ](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html#CHAP_Target.Elasticsearch.Configuration) in the * AWS Database Migration Service User Guide*\.  
+Settings in JSON format for the target OpenSearch endpoint\. For more information about the available settings, see [Extra Connection Attributes When Using OpenSearch as a Target for AWS DMS ](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html#CHAP_Target.Elasticsearch.Configuration) in the * AWS Database Migration Service User Guide*\.  
 *Required*: No  
 *Type*: [ElasticsearchSettings](aws-properties-dms-endpoint-elasticsearchsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -143,7 +148,7 @@ The type of endpoint\. Valid values are `source` and `target`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineName`  <a name="cfn-dms-endpoint-enginename"></a>
-The type of engine for the endpoint\. Valid values, depending on the `EndpointType` value, include `"mysql"`, `"oracle"`, `"postgres"`, `"mariadb"`, `"aurora"`, `"aurora-postgresql"`, `"redshift"`, `"s3"`, `"db2"`, `"azuredb"`, `"sybase"`, `"dynamodb"`, `"mongodb"`, `"kinesis"`, `"kafka"`, `"elasticsearch"`, `"docdb"`, `"sqlserver"`, and `"neptune"`\.  
+The type of engine for the endpoint\. Valid values, depending on the `EndpointType` value, include `"mysql"`, `"oracle"`, `"postgres"`, `"mariadb"`, `"aurora"`, `"aurora-postgresql"`, `"opensearch"`, `"redshift"`, `"s3"`, `"db2"`, `"azuredb"`, `"sybase"`, `"dynamodb"`, `"mongodb"`, `"kinesis"`, `"kafka"`, `"elasticsearch"`, `"docdb"`, `"sqlserver"`, and `"neptune"`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -228,11 +233,23 @@ Not currently supported by AWS CloudFormation\.
 *Type*: [PostgreSqlSettings](aws-properties-dms-endpoint-postgresqlsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`RedisSettings`  <a name="cfn-dms-endpoint-redissettings"></a>
+Settings in JSON format for the target Redis endpoint\.  
+*Required*: No  
+*Type*: [RedisSettings](aws-properties-dms-endpoint-redissettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `RedshiftSettings`  <a name="cfn-dms-endpoint-redshiftsettings"></a>
 Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [RedshiftSettings](aws-properties-dms-endpoint-redshiftsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ResourceIdentifier`  <a name="cfn-dms-endpoint-resourceidentifier"></a>
+A friendly name for the resource identifier at the end of the `EndpointArn` response parameter that is returned in the created `Endpoint` object\. The value for this parameter can have up to 31 characters\. It can contain only ASCII letters, digits, and hyphen \('\-'\)\. Also, it can't end with a hyphen or contain two consecutive hyphens, and can only begin with a letter, such as `Example-App-ARN1`\. For example, this value might result in the `EndpointArn` value `arn:aws:dms:eu-west-1:012345678901:rep:Example-App-ARN1`\. If you don't specify a `ResourceIdentifier` value, AWS DMS generates a default identifier value for the end of `EndpointArn`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `S3Settings`  <a name="cfn-dms-endpoint-s3settings"></a>
 Settings in JSON format for the target Amazon S3 endpoint\. For more information about the available settings, see [Extra Connection Attributes When Using Amazon S3 as a Target for AWS DMS ](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html#CHAP_Target.S3.Configuring) in the * AWS Database Migration Service User Guide\.*   

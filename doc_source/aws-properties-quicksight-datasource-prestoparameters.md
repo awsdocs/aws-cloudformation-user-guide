@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSource PrestoParameters<a name="aws-properties-quicksight-datasource-prestoparameters"></a>
 
-Presto parameters\.
+The parameters for Presto\.
 
 ## Syntax<a name="aws-properties-quicksight-datasource-prestoparameters-syntax"></a>
 

@@ -107,6 +107,6 @@ SampleTrafficMirrorFilter:
 ```
 
 ## See also<a name="aws-resource-ec2-trafficmirrorfilter--seealso"></a>
-+ [Traffic Mirror Filters and Filter Rules](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-how-it-works.html#traffic-mirroring-filters) in *Traffic Mirroring*
++ [Traffic mirror filters and filter rules](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-filters.html) in *Traffic Mirroring*
 + [CreateTrafficMirrorFilter](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTrafficMirrorFilter.html) in the *Amazon EC2 API Reference*
 

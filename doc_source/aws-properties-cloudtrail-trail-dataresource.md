@@ -48,8 +48,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudtrail-trail-dataresource-properties"></a>
 
 `Type`  <a name="cfn-cloudtrail-trail-dataresource-type"></a>
-The resource type in which you want to log data events\. You can specify `AWS::S3::Object`, `AWS::Lambda::Function`, or `AWS::DynamoDB::Table` resources\.  
-The `AWS::S3Outposts::Object`, `AWS::ManagedBlockchain::Node`, and `AWS::S3ObjectLambda::AccessPoint` resource types are not valid in basic event selectors\. To log data events on these resource types, use advanced event selectors\.  
+The resource type in which you want to log data events\. You can specify the following *basic* event selector resource types:  
++  `AWS::S3::Object` 
++  `AWS::Lambda::Function` 
++  `AWS::DynamoDB::Table` 
+The following resource types are also availble through *advanced* event selectors\. Basic event selector resource types are valid in advanced event selectors, but advanced event selector resource types are not valid in basic event selectors\. For more information, see [AdvancedFieldSelector:Field](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedFieldSelector.html#awscloudtrail-Type-AdvancedFieldSelector-Field)\.  
++  `AWS::S3Outposts::Object` 
++  `AWS::ManagedBlockchain::Node` 
++  `AWS::S3ObjectLambda::AccessPoint` 
++  `AWS::EC2::Snapshot` 
++  `AWS::S3::AccessPoint` 
++  `AWS::DynamoDB::Stream` 
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

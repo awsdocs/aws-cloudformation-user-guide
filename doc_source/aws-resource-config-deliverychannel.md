@@ -81,7 +81,7 @@ The prefix for the specified Amazon S3 bucket\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3KmsKeyArn`  <a name="cfn-config-deliverychannel-s3kmskeyarn"></a>
-The Amazon Resource Name \(ARN\) of the AWS Key Management Service \(KMS\) customer managed key \(CMK\) used to encrypt objects delivered by AWS Config\. Must belong to the same Region as the destination S3 bucket\.  
+The Amazon Resource Name \(ARN\) of the AWS Key Management Service \(AWS KMS \) AWS KMS key \(KMS key\) used to encrypt objects delivered by AWS Config\. Must belong to the same Region as the destination S3 bucket\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -148,7 +148,7 @@ Parameters:
 
 ### Nested stack<a name="aws-properties-stack--examples--Nested_stack"></a>
 
-You could use the following template to embed a stack \(myStackWithParams\) using the EC2ChooseAMI\.template and use the Parameters property in the AWS::CloudFormation::Stack resource to specify an InstanceType and KeyName\.
+You could use the following template to embed a stack \(myStackWithParams\) using the EC2ChooseAMI\.template and use the Parameters property in the `AWS::CloudFormation::Stack` resource to specify an `InstanceType` and `KeyName`\.
 
 #### JSON<a name="aws-properties-stack--examples--Nested_stack--json"></a>
 

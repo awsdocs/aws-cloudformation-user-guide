@@ -75,7 +75,7 @@ Specify a descriptive name for the association\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutomationTargetParameterName`  <a name="cfn-ssm-association-automationtargetparametername"></a>
-Specify the target for the association\. This target is required for associations that use an Automation runbook and target resources by using rate controls\. Automation is a capability of AWS Systems Manager\.  
+Choose the parameter that will define how your automation will branch out\. This target is required for associations that use an Automation runbook and target resources by using rate controls\. Automation is a capability of AWS Systems Manager\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -170,7 +170,7 @@ By default, all associations use `AUTO` mode\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-ssm-association-targets"></a>
-The targets for the association\. You must specify the `InstanceId` or `Targets` property\.  
+The targets for the association\. You must specify the `InstanceId` or `Targets` property\. You can target all instances in an AWS account by specifying the `InstanceIds` key with a value of `*`\. To view a JSON and a YAML example that targets all instances, see "Create an association for all managed instances in an AWS account" on the Examples page\.  
 *Required*: Conditional  
 *Type*: List of [Target](aws-properties-ssm-association-target.md)  
 *Maximum*: `5`  
@@ -201,31 +201,31 @@ The following example creates an association that uses the AWS\-RunShellScript S
 
 ```
 {
-  "Resources": {
-    "SpecificInstanceIdAssociation": {
-      "Type": "AWS::SSM::Association",
-      "Properties": {
-        "Name": "AWS-RunShellScript",
-        "Targets": [
-          {
-            "Key": "InstanceIds",
-            "Values": [
-              "i-1234567890abcdef0"
-            ]
-          }
-        ],
-        "Parameters": {
-          "commands": [
-            "ls"
-          ],
-          "workingDirectory": [
-            "/"
-          ]
-        },
-        "WaitForSuccessTimeoutSeconds": 300
-      }
+    "Resources": {
+        "SpecificInstanceIdAssociation": {
+            "Type": "AWS::SSM::Association",
+            "Properties": {
+                "Name": "AWS-RunShellScript",
+                "Targets": [
+                    {
+                        "Key": "InstanceIds",
+                        "Values": [
+                            "i-1234567890abcdef0"
+                        ]
+                    }
+                ],
+                "Parameters": {
+                    "commands": [
+                        "ls"
+                    ],
+                    "workingDirectory": [
+                        "/"
+                    ]
+                },
+                "WaitForSuccessTimeoutSeconds": 300
+            }
+        }
     }
-  }
 }
 ```
 
@@ -258,25 +258,25 @@ The following example creates an association that uses the AWS\-UpdateSSMAgent S
 
 ```
 {
-  "Resources": {
-    "AllInstanceIdsAssociation": {
-      "Type": "AWS::SSM::Association",
-      "Properties": {
-        "AssociationName": "UpdateSSMAgent",
-        "Name": "AWS-UpdateSSMAgent",
-        "ScheduleExpression": "cron(0 2 ? * SUN *)",
-        "Targets": [
-          {
-            "Key": "InstanceIds",
-            "Values": [
-              "*"
-            ]
-          }
-        ],
-        "WaitForSuccessTimeoutSeconds": 300
-      }
+    "Resources": {
+        "AllInstanceIdsAssociation": {
+            "Type": "AWS::SSM::Association",
+            "Properties": {
+                "AssociationName": "UpdateSSMAgent",
+                "Name": "AWS-UpdateSSMAgent",
+                "ScheduleExpression": "cron(0 2 ? * SUN *)",
+                "Targets": [
+                    {
+                        "Key": "InstanceIds",
+                        "Values": [
+                            "*"
+                        ]
+                    }
+                ],
+                "WaitForSuccessTimeoutSeconds": 300
+            }
+        }
     }
-  }
 }
 ```
 
@@ -306,25 +306,25 @@ The following example creates an association that uses the AWS\-UpdateSSMAgent S
 
 ```
 {
-  "Resources": {
-    "TaggedInstancesAssociation": {
-      "Type": "AWS::SSM::Association",
-      "Properties": {
-        "AssociationName": "UpdateSSMAgent",
-        "Name": "AWS-UpdateSSMAgent",
-        "ScheduleExpression": "rate(7 days)",
-        "Targets": [
-          {
-            "Key": "tag:Environment",
-            "Values": [
-              "Production"
-            ]
-          }
-        ],
-        "WaitForSuccessTimeoutSeconds": 300
-      }
+    "Resources": {
+        "TaggedInstancesAssociation": {
+            "Type": "AWS::SSM::Association",
+            "Properties": {
+                "AssociationName": "UpdateSSMAgent",
+                "Name": "AWS-UpdateSSMAgent",
+                "ScheduleExpression": "rate(7 days)",
+                "Targets": [
+                    {
+                        "Key": "tag:Environment",
+                        "Values": [
+                            "Production"
+                        ]
+                    }
+                ],
+                "WaitForSuccessTimeoutSeconds": 300
+            }
+        }
     }
-  }
 }
 ```
 
@@ -357,51 +357,51 @@ This example specifies the following Amazon Resource Name \(ARN\): `arn:${AWS::P
 
 ```
 {
-  "Resources": {
-    "AutomationExecutionRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Service": "ssm.amazonaws.com"
-              },
-              "Action": [
-                "sts:AssumeRole"
-              ]
+    "Resources": {
+        "AutomationExecutionRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": "ssm.amazonaws.com"
+                            },
+                            "Action": [
+                                "sts:AssumeRole"
+                            ]
+                        }
+                    ]
+                },
+                "Path": "/",
+                "ManagedPolicyArns": [
+                    "arn:${AWS::Partition}:iam::aws:policy/AmazonEC2FullAccess"
+                ]
             }
-          ]
         },
-        "Path": "/",
-        "ManagedPolicyArns": [
-          "arn:${AWS::Partition}:iam::aws:policy/AmazonEC2FullAccess"
-        ]
-      }
-    },
-    "AutomationAssociation": {
-      "Type": "AWS::SSM::Association",
-      "Properties": {
-        "Name": "AWS-StopEC2Instance",
-        "Parameters": {
-          "AutomationAssumeRole": [
-            "AutomationExecutionRole.Arn"
-          ]
-        },
-        "Targets": [
-          {
-            "Key": "ParameterValues",
-            "Values": [
-              "i-1234567890abcdef0"
-            ]
-          }
-        ],
-        "AutomationTargetParameterName": "InstanceId"
-      }
+        "AutomationAssociation": {
+            "Type": "AWS::SSM::Association",
+            "Properties": {
+                "Name": "AWS-StopEC2Instance",
+                "Parameters": {
+                    "AutomationAssumeRole": [
+                        "AutomationExecutionRole.Arn"
+                    ]
+                },
+                "Targets": [
+                    {
+                        "Key": "ParameterValues",
+                        "Values": [
+                            "i-1234567890abcdef0"
+                        ]
+                    }
+                ],
+                "AutomationTargetParameterName": "InstanceId"
+            }
+        }
     }
-  }
 }
 ```
 
@@ -446,31 +446,31 @@ The following example creates an association that uses rate controls\. The assoc
 
 ```
 {
-  "Resources": {
-    "RateControlAssociation": {
-      "Type": "AWS::SSM::Association",
-      "Properties": {
-        "Name": "AWS-UpdateSSMAgent",
-        "Targets": [
-          {
-            "Key": "InstanceIds",
-            "Values": [
-              "*"
-            ]
-          }
-        ],
-        "MaxConcurrency": "20%",
-        "MaxErrors": "5%"
-      },
-      "OutputLocation": {
-        "S3Location": {
-          "OutputS3BucketName": "MyAssociationOutputBucket",
-          "OutputS3KeyPrefix": "my-agent-update-output"
+    "Resources": {
+        "RateControlAssociation": {
+            "Type": "AWS::SSM::Association",
+            "Properties": {
+                "Name": "AWS-UpdateSSMAgent",
+                "Targets": [
+                    {
+                        "Key": "InstanceIds",
+                        "Values": [
+                            "*"
+                        ]
+                    }
+                ],
+                "MaxConcurrency": "20%",
+                "MaxErrors": "5%"
+            },
+            "OutputLocation": {
+                "S3Location": {
+                    "OutputS3BucketName": "MyAssociationOutputBucket",
+                    "OutputS3KeyPrefix": "my-agent-update-output"
+                }
+            },
+            "WaitForSuccessTimeoutSeconds": 300
         }
-      },
-      "WaitForSuccessTimeoutSeconds": 300
     }
-  }
 }
 ```
 
@@ -480,20 +480,20 @@ The following example creates an association that uses rate controls\. The assoc
 ---
 Resources:
   RateControlAssociation:
-    Type: AWS::SSM::Association
+    Type: 'AWS::SSM::Association'
     Properties:
       Name: AWS-UpdateSSMAgent
       Targets:
         - Key: InstanceIds
           Values:
-            - "*"
+            - '*'
       MaxConcurrency: 20%
       MaxErrors: 5%
-	  OutputLocation:
-        S3Location:
-          OutputS3BucketName: MyAssociationOutputBucket
-          OutputS3KeyPrefix: my-agent-update-output
-		WaitForSuccessTimeoutSeconds: 300
+OutputLocation:
+  S3Location:
+    OutputS3BucketName: MyAssociationOutputBucket
+    OutputS3KeyPrefix: my-agent-update-output
+WaitForSuccessTimeoutSeconds: 300
 ```
 
 ### Create an association that works with Ansible<a name="aws-resource-ssm-association--examples--Create_an_association_that_works_with_Ansible"></a>
@@ -504,162 +504,162 @@ The following example creates an association that uses Ansible and Systems Manag
 
 ```
 {
-  "Description": "Deploy Single EC2 Linux Instance",
-  "Parameters": {
-    "LatestAmiId": {
-      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
-      "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
-    },
-    "GitHubOwner": {
-      "Type": "String"
-    },
-    "GitHubRepo": {
-      "Type": "String"
-    },
-    "GitHubBranch": {
-      "Type": "String"
-    }
-  },
-  "Resources": {
-    "SSMAssocLogs": {
-      "Type": "AWS::S3::Bucket"
-    },
-    "SSMInstanceRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "Policies": [
-          {
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Action": [
-                    "s3:GetObject"
-                  ],
-                  "Resource": [
-                    "arn:aws:s3:::aws-ssm-${AWS::Region}/*",
-                    "arn:aws:s3:::aws-windows-downloads-${AWS::Region}/*",
-                    "arn:aws:s3:::amazon-ssm-${AWS::Region}/*",
-                    "arn:aws:s3:::amazon-ssm-packages-${AWS::Region}/*",
-                    "arn:aws:s3:::${AWS::Region}-birdwatcher-prod/*",
-                    "arn:aws:s3:::patch-baseline-snapshot-${AWS::Region}/*"
-                  ],
-                  "Effect": "Allow"
-                }
-              ]
-            },
-            "PolicyName": "ssm-custom-s3-policy"
-          },
-          {
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Action": [
-                    "s3:GetObject",
-                    "s3:PutObject",
-                    "s3:PutObjectAcl",
-                    "s3:ListBucket"
-                  ],
-                  "Resource": [
-                    "arn:${AWS::Partition}:s3:::${SSMAssocLogs}/*",
-                    "arn:${AWS::Partition}:s3:::${SSMAssocLogs}"
-                  ],
-                  "Effect": "Allow"
-                }
-              ]
-            },
-            "PolicyName": "s3-instance-bucket-policy"
-          }
-        ],
-        "Path": "/",
-        "ManagedPolicyArns": [
-          "arn:${AWS::Partition}:iam::aws:policy/AmazonSSMManagedInstanceCore"
-        ],
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "ec2.amazonaws.com",
-                  "ssm.amazonaws.com"
-                ]
-              },
-              "Action": "sts:AssumeRole"
-            }
-          ]
-        }
-      }
-    },
-    "SSMInstanceProfile": {
-      "Type": "AWS::IAM::InstanceProfile",
-      "Properties": {
-        "Roles": [
-          "SSMInstanceRole"
-        ]
-      }
-    },
-    "EC2Instance": {
-      "Type": "AWS::EC2::Instance",
-      "Properties": {
-        "ImageId": "LatestAmiId",
-        "InstanceType": "t3.small",
-        "IamInstanceProfile": "SSMInstanceProfile"
-      }
-    },
-    "AnsibleAssociation": {
-      "Type": "AWS::SSM::Association",
-      "Properties": {
-        "Name": "AWS-ApplyAnsiblePlaybooks",
-        "WaitForSuccessTimeoutSeconds": 300,
-        "Targets": [
-          {
-            "Key": "InstanceIds",
-            "Values": [
-              "EC2Instance"
-            ]
-          }
-        ],
-        "OutputLocation": {
-          "S3Location": {
-            "OutputS3BucketName": "SSMAssocLogs",
-            "OutputS3KeyPrefix": "logs/"
-          }
+    "Description": "Deploy Single EC2 Linux Instance",
+    "Parameters": {
+        "LatestAmiId": {
+            "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+            "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
         },
-        "Parameters": {
-          "SourceType": [
-            "GitHub"
-          ],
-          "SourceInfo": [
-            "{\"owner\":\"${GitHubOwner}\",\n\"repository\":\"${GitHubRepo}\",\n\"path\":\"\",\n\"getOptions\":\"branch:${GitHubBranch}\"}\n"
-          ],
-          "InstallDependencies": [
-            "True"
-          ],
-          "PlaybookFile": [
-            "playbook.yml"
-          ],
-          "ExtraVariables": [
-            "SSM=True"
-          ],
-          "Check": [
-            "False"
-          ],
-          "Verbose": [
-            "-v"
-          ]
+        "GitHubOwner": {
+            "Type": "String"
+        },
+        "GitHubRepo": {
+            "Type": "String"
+        },
+        "GitHubBranch": {
+            "Type": "String"
         }
-      }
+    },
+    "Resources": {
+        "SSMAssocLogs": {
+            "Type": "AWS::S3::Bucket"
+        },
+        "SSMInstanceRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "Policies": [
+                    {
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Action": [
+                                        "s3:GetObject"
+                                    ],
+                                    "Resource": [
+                                        "arn:aws:s3:::aws-ssm-${AWS::Region}/*",
+                                        "arn:aws:s3:::aws-windows-downloads-${AWS::Region}/*",
+                                        "arn:aws:s3:::amazon-ssm-${AWS::Region}/*",
+                                        "arn:aws:s3:::amazon-ssm-packages-${AWS::Region}/*",
+                                        "arn:aws:s3:::${AWS::Region}-birdwatcher-prod/*",
+                                        "arn:aws:s3:::patch-baseline-snapshot-${AWS::Region}/*"
+                                    ],
+                                    "Effect": "Allow"
+                                }
+                            ]
+                        },
+                        "PolicyName": "ssm-custom-s3-policy"
+                    },
+                    {
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Action": [
+                                        "s3:GetObject",
+                                        "s3:PutObject",
+                                        "s3:PutObjectAcl",
+                                        "s3:ListBucket"
+                                    ],
+                                    "Resource": [
+                                        "arn:${AWS::Partition}:s3:::${SSMAssocLogs}/*",
+                                        "arn:${AWS::Partition}:s3:::${SSMAssocLogs}"
+                                    ],
+                                    "Effect": "Allow"
+                                }
+                            ]
+                        },
+                        "PolicyName": "s3-instance-bucket-policy"
+                    }
+                ],
+                "Path": "/",
+                "ManagedPolicyArns": [
+                    "arn:${AWS::Partition}:iam::aws:policy/AmazonSSMManagedInstanceCore"
+                ],
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "ec2.amazonaws.com",
+                                    "ssm.amazonaws.com"
+                                ]
+                            },
+                            "Action": "sts:AssumeRole"
+                        }
+                    ]
+                }
+            }
+        },
+        "SSMInstanceProfile": {
+            "Type": "AWS::IAM::InstanceProfile",
+            "Properties": {
+                "Roles": [
+                    "SSMInstanceRole"
+                ]
+            }
+        },
+        "EC2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId": "LatestAmiId",
+                "InstanceType": "t3.small",
+                "IamInstanceProfile": "SSMInstanceProfile"
+            }
+        },
+        "AnsibleAssociation": {
+            "Type": "AWS::SSM::Association",
+            "Properties": {
+                "Name": "AWS-ApplyAnsiblePlaybooks",
+                "WaitForSuccessTimeoutSeconds": 300,
+                "Targets": [
+                    {
+                        "Key": "InstanceIds",
+                        "Values": [
+                            "EC2Instance"
+                        ]
+                    }
+                ],
+                "OutputLocation": {
+                    "S3Location": {
+                        "OutputS3BucketName": "SSMAssocLogs",
+                        "OutputS3KeyPrefix": "logs/"
+                    }
+                },
+                "Parameters": {
+                    "SourceType": [
+                        "GitHub"
+                    ],
+                    "SourceInfo": [
+                        "{\"owner\":\"${GitHubOwner}\",\n\"repository\":\"${GitHubRepo}\",\n\"path\":\"\",\n\"getOptions\":\"branch:${GitHubBranch}\"}\n"
+                    ],
+                    "InstallDependencies": [
+                        "True"
+                    ],
+                    "PlaybookFile": [
+                        "playbook.yml"
+                    ],
+                    "ExtraVariables": [
+                        "SSM=True"
+                    ],
+                    "Check": [
+                        "False"
+                    ],
+                    "Verbose": [
+                        "-v"
+                    ]
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "WebServerPublic": {
+            "Value": "EC2Instance.PublicDnsName",
+            "Description": "Public DNS for WebServer"
+        }
     }
-  },
-  "Outputs": {
-    "WebServerPublic": {
-      "Value": "EC2Instance.PublicDnsName",
-      "Description": "Public DNS for WebServer"
-    }
-  }
 }
 ```
 
@@ -789,143 +789,143 @@ The following example creates an association that runs a bash script\. Target is
 
 ```
 {
-  "Description": "Deploy Single EC2 Linux Instance Install and Install Nginx by a State Manager Association",
-  "Parameters": {
-    "LatestAmiId": {
-      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
-      "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
-    }
-  },
-  "Resources": {
-    "SSMAssocLogs": {
-      "Type": "AWS::S3::Bucket"
-    },
-    "SSMInstanceRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "Policies": [
-          {
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Action": [
-                    "s3:GetObject"
-                  ],
-                  "Resource": [
-                    "arn:aws:s3:::aws-ssm-${AWS::Region}/*",
-                    "arn:aws:s3:::aws-windows-downloads-${AWS::Region}/*",
-                    "arn:aws:s3:::amazon-ssm-${AWS::Region}/*",
-                    "arn:aws:s3:::amazon-ssm-packages-${AWS::Region}/*",
-                    "arn:aws:s3:::${AWS::Region}-birdwatcher-prod/*",
-                    "arn:aws:s3:::patch-baseline-snapshot-${AWS::Region}/*"
-                  ],
-                  "Effect": "Allow"
-                }
-              ]
-            },
-            "PolicyName": "ssm-custom-s3-policy"
-          },
-          {
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Action": [
-                    "s3:GetObject",
-                    "s3:PutObject",
-                    "s3:PutObjectAcl",
-                    "s3:ListBucket"
-                  ],
-                  "Resource": [
-                    "arn:${AWS::Partition}:s3:::${SSMAssocLogs}/*",
-                    "arn:${AWS::Partition}:s3:::${SSMAssocLogs}"
-                  ],
-                  "Effect": "Allow"
-                }
-              ]
-            },
-            "PolicyName": "s3-instance-bucket-policy"
-          }
-        ],
-        "Path": "/",
-        "ManagedPolicyArns": [
-          "arn:${AWS::Partition}:iam::aws:policy/AmazonSSMManagedInstanceCore",
-          "arn:${AWS::Partition}:iam::aws:policy/CloudWatchAgentServerPolicy"
-        ],
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "ec2.amazonaws.com",
-                  "ssm.amazonaws.com"
-                ]
-              },
-              "Action": "sts:AssumeRole"
-            }
-          ]
+    "Description": "Deploy Single EC2 Linux Instance Install and Install Nginx by a State Manager Association",
+    "Parameters": {
+        "LatestAmiId": {
+            "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+            "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
         }
-      }
     },
-    "SSMInstanceProfile": {
-      "Type": "AWS::IAM::InstanceProfile",
-      "Properties": {
-        "Roles": [
-          "SSMInstanceRole"
-        ]
-      }
-    },
-    "EC2Instance": {
-      "Type": "AWS::EC2::Instance",
-      "Properties": {
-        "ImageId": "LatestAmiId",
-        "InstanceType": "t3.medium",
-        "IamInstanceProfile": "SSMInstanceProfile",
-        "Tags": [
-          {
-            "Key": "nginx",
-            "Value": "yes"
-          }
-        ]
-      }
-    },
-    "NginxAssociation": {
-      "DependsOn": "EC2Instance",
-      "Type": "AWS::SSM::Association",
-      "Properties": {
-        "Name": "AWS-RunShellScript",
-        "WaitForSuccessTimeoutSeconds": 300,
-        "Targets": [
-          {
-            "Key": "tag:nginx",
-            "Values": [
-              "yes"
-            ]
-          }
-        ],
-        "OutputLocation": {
-          "S3Location": {
-            "OutputS3BucketName": "SSMAssocLogs",
-            "OutputS3KeyPrefix": "logs/"
-          }
+    "Resources": {
+        "SSMAssocLogs": {
+            "Type": "AWS::S3::Bucket"
         },
-        "Parameters": {
-          "commands": [
-            "sudo amazon-linux-extras install nginx1 -y\nsudo service nginx start\n"
-          ]
+        "SSMInstanceRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "Policies": [
+                    {
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Action": [
+                                        "s3:GetObject"
+                                    ],
+                                    "Resource": [
+                                        "arn:aws:s3:::aws-ssm-${AWS::Region}/*",
+                                        "arn:aws:s3:::aws-windows-downloads-${AWS::Region}/*",
+                                        "arn:aws:s3:::amazon-ssm-${AWS::Region}/*",
+                                        "arn:aws:s3:::amazon-ssm-packages-${AWS::Region}/*",
+                                        "arn:aws:s3:::${AWS::Region}-birdwatcher-prod/*",
+                                        "arn:aws:s3:::patch-baseline-snapshot-${AWS::Region}/*"
+                                    ],
+                                    "Effect": "Allow"
+                                }
+                            ]
+                        },
+                        "PolicyName": "ssm-custom-s3-policy"
+                    },
+                    {
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Action": [
+                                        "s3:GetObject",
+                                        "s3:PutObject",
+                                        "s3:PutObjectAcl",
+                                        "s3:ListBucket"
+                                    ],
+                                    "Resource": [
+                                        "arn:${AWS::Partition}:s3:::${SSMAssocLogs}/*",
+                                        "arn:${AWS::Partition}:s3:::${SSMAssocLogs}"
+                                    ],
+                                    "Effect": "Allow"
+                                }
+                            ]
+                        },
+                        "PolicyName": "s3-instance-bucket-policy"
+                    }
+                ],
+                "Path": "/",
+                "ManagedPolicyArns": [
+                    "arn:${AWS::Partition}:iam::aws:policy/AmazonSSMManagedInstanceCore",
+                    "arn:${AWS::Partition}:iam::aws:policy/CloudWatchAgentServerPolicy"
+                ],
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "ec2.amazonaws.com",
+                                    "ssm.amazonaws.com"
+                                ]
+                            },
+                            "Action": "sts:AssumeRole"
+                        }
+                    ]
+                }
+            }
+        },
+        "SSMInstanceProfile": {
+            "Type": "AWS::IAM::InstanceProfile",
+            "Properties": {
+                "Roles": [
+                    "SSMInstanceRole"
+                ]
+            }
+        },
+        "EC2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId": "LatestAmiId",
+                "InstanceType": "t3.medium",
+                "IamInstanceProfile": "SSMInstanceProfile",
+                "Tags": [
+                    {
+                        "Key": "nginx",
+                        "Value": "yes"
+                    }
+                ]
+            }
+        },
+        "NginxAssociation": {
+            "DependsOn": "EC2Instance",
+            "Type": "AWS::SSM::Association",
+            "Properties": {
+                "Name": "AWS-RunShellScript",
+                "WaitForSuccessTimeoutSeconds": 300,
+                "Targets": [
+                    {
+                        "Key": "tag:nginx",
+                        "Values": [
+                            "yes"
+                        ]
+                    }
+                ],
+                "OutputLocation": {
+                    "S3Location": {
+                        "OutputS3BucketName": "SSMAssocLogs",
+                        "OutputS3KeyPrefix": "logs/"
+                    }
+                },
+                "Parameters": {
+                    "commands": [
+                        "sudo amazon-linux-extras install nginx1 -y\nsudo service nginx start\n"
+                    ]
+                }
+            }
         }
-      }
+    },
+    "Outputs": {
+        "WebServerPublic": {
+            "Value": "EC2Instance.PublicDnsName",
+            "Description": "Public DNS for WebServer"
+        }
     }
-  },
-  "Outputs": {
-    "WebServerPublic": {
-      "Value": "EC2Instance.PublicDnsName",
-      "Description": "Public DNS for WebServer"
-    }
-  }
 }
 ```
 
@@ -1038,268 +1038,268 @@ The following example creates an assocation that runs a bash script using State 
 
 ```
 {
-  "Description": "Deploy Single EC2 Linux Instance",
-  "Parameters": {
-    "LatestAmiId": {
-      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
-      "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
-    }
-  },
-  "Resources": {
-    "SSMAssocLogs": {
-      "Type": "AWS::S3::Bucket"
-    },
-    "nginxInstallAutomation": {
-      "Type": "AWS::SSM::Document",
-      "Properties": {
-        "DocumentType": "Automation",
-        "Content": {
-          "schemaVersion": "0.3",
-          "description": "Updates AMI with Linux distribution packages and installs Nginx software",
-          "assumeRole": "{{AutomationAssumeRole}}",
-          "parameters": {
-            "InstanceId": {
-              "description": "ID of the Instance.",
-              "type": "String"
-            },
-            "AutomationAssumeRole": {
-              "default": "",
-              "description": "(Optional) The ARN of the role that allows Automation to perform the actions on your behalf.",
-              "type": "String"
-            }
-          },
-          "mainSteps": [
-            {
-              "name": "updateOSSoftware",
-              "action": "aws:runCommand",
-              "maxAttempts": 3,
-              "timeoutSeconds": 3600,
-              "inputs": {
-                "DocumentName": "AWS-RunShellScript",
-                "InstanceIds": [
-                  "{{InstanceId}}"
-                ],
-                "CloudWatchOutputConfig": {
-                  "CloudWatchOutputEnabled": "true"
-                },
-                "Parameters": {
-                  "commands": [
-                    "#!/bin/bash\nsudo yum update -y\nneeds-restarting -r\nif [ $? -eq 1 ]\nthen\n        exit 194\nelse\n        exit 0\nfi\n"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "InstallNginx",
-              "action": "aws:runCommand",
-              "inputs": {
-                "DocumentName": "AWS-RunShellScript",
-                "InstanceIds": [
-                  "{{InstanceId}}"
-                ],
-                "CloudWatchOutputConfig": {
-                  "CloudWatchOutputEnabled": "true"
-                },
-                "Parameters": {
-                  "commands": [
-                    "sudo amazon-linux-extras install nginx1 -y\nsudo service nginx start\n"
-                  ]
-                }
-              }
-            },
-            {
-              "name": "TestInstall",
-              "action": "aws:runCommand",
-              "maxAttempts": 3,
-              "timeoutSeconds": 3600,
-              "onFailure": "Abort",
-              "inputs": {
-                "DocumentName": "AWS-RunShellScript",
-                "InstanceIds": [
-                  "{{InstanceId}}"
-                ],
-                "Parameters": {
-                  "commands": [
-                    "curl localhost\n"
-                  ]
-                }
-              }
-            }
-          ]
+    "Description": "Deploy Single EC2 Linux Instance",
+    "Parameters": {
+        "LatestAmiId": {
+            "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+            "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
         }
-      }
     },
-    "SSMExecutionRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "Policies": [
-          {
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Action": [
-                    "ssm:StartAssociationsOnce",
-                    "ssm:CreateAssociation",
-                    "ssm:CreateAssociationBatch",
-                    "ssm:UpdateAssociation"
-                  ],
-                  "Resource": "*",
-                  "Effect": "Allow"
-                }
-              ]
-            },
-            "PolicyName": "ssm-association"
-          }
-        ],
-        "Path": "/",
-        "ManagedPolicyArns": [
-          "arn:${AWS::Partition}:iam::aws:policy/service-role/AmazonSSMAutomationRole"
-        ],
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "ec2.amazonaws.com",
-                  "ssm.amazonaws.com"
-                ]
-              },
-              "Action": "sts:AssumeRole"
-            }
-          ]
-        }
-      }
-    },
-    "SSMInstanceRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "Policies": [
-          {
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Action": [
-                    "s3:GetObject"
-                  ],
-                  "Resource": [
-                    "arn:aws:s3:::aws-ssm-${AWS::Region}/*",
-                    "arn:aws:s3:::aws-windows-downloads-${AWS::Region}/*",
-                    "arn:aws:s3:::amazon-ssm-${AWS::Region}/*",
-                    "arn:aws:s3:::amazon-ssm-packages-${AWS::Region}/*",
-                    "arn:aws:s3:::${AWS::Region}-birdwatcher-prod/*",
-                    "arn:aws:s3:::patch-baseline-snapshot-${AWS::Region}/*"
-                  ],
-                  "Effect": "Allow"
-                }
-              ]
-            },
-            "PolicyName": "ssm-custom-s3-policy"
-          },
-          {
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Action": [
-                    "s3:GetObject",
-                    "s3:PutObject",
-                    "s3:PutObjectAcl",
-                    "s3:ListBucket"
-                  ],
-                  "Resource": [
-                    "arn:${AWS::Partition}:s3:::${SSMAssocLogs}/*",
-                    "arn:${AWS::Partition}:s3:::${SSMAssocLogs}"
-                  ],
-                  "Effect": "Allow"
-                }
-              ]
-            },
-            "PolicyName": "s3-instance-bucket-policy"
-          }
-        ],
-        "Path": "/",
-        "ManagedPolicyArns": [
-          "arn:${AWS::Partition}:iam::aws:policy/AmazonSSMManagedInstanceCore",
-          "arn:${AWS::Partition}:iam::aws:policy/CloudWatchAgentServerPolicy"
-        ],
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "ec2.amazonaws.com",
-                  "ssm.amazonaws.com"
-                ]
-              },
-              "Action": "sts:AssumeRole"
-            }
-          ]
-        }
-      }
-    },
-    "SSMInstanceProfile": {
-      "Type": "AWS::IAM::InstanceProfile",
-      "Properties": {
-        "Roles": [
-          "SSMInstanceRole"
-        ]
-      }
-    },
-    "EC2Instance": {
-      "Type": "AWS::EC2::Instance",
-      "Properties": {
-        "ImageId": "LatestAmiId",
-        "InstanceType": "t3.medium",
-        "IamInstanceProfile": "SSMInstanceProfile",
-        "Tags": [
-          {
-            "Key": "nginx",
-            "Value": true
-          }
-        ]
-      }
-    },
-    "NginxAssociation": {
-      "DependsOn": "EC2Instance",
-      "Type": "AWS::SSM::Association",
-      "Properties": {
-        "Name": "nginxInstallAutomation",
-        "WaitForSuccessTimeoutSeconds": 300,
-        "OutputLocation": {
-          "S3Location": {
-            "OutputS3BucketName": "SSMAssocLogs",
-            "OutputS3KeyPrefix": "logs/"
-          }
+    "Resources": {
+        "SSMAssocLogs": {
+            "Type": "AWS::S3::Bucket"
         },
-        "AutomationTargetParameterName": "InstanceId",
-        "Parameters": {
-          "AutomationAssumeRole": [
-            "SSMExecutionRole.Arn"
-          ]
+        "nginxInstallAutomation": {
+            "Type": "AWS::SSM::Document",
+            "Properties": {
+                "DocumentType": "Automation",
+                "Content": {
+                    "schemaVersion": "0.3",
+                    "description": "Updates AMI with Linux distribution packages and installs Nginx software",
+                    "assumeRole": "{{AutomationAssumeRole}}",
+                    "parameters": {
+                        "InstanceId": {
+                            "description": "ID of the Instance.",
+                            "type": "String"
+                        },
+                        "AutomationAssumeRole": {
+                            "default": "",
+                            "description": "(Optional) The ARN of the role that allows Automation to perform the actions on your behalf.",
+                            "type": "String"
+                        }
+                    },
+                    "mainSteps": [
+                        {
+                            "name": "updateOSSoftware",
+                            "action": "aws:runCommand",
+                            "maxAttempts": 3,
+                            "timeoutSeconds": 3600,
+                            "inputs": {
+                                "DocumentName": "AWS-RunShellScript",
+                                "InstanceIds": [
+                                    "{{InstanceId}}"
+                                ],
+                                "CloudWatchOutputConfig": {
+                                    "CloudWatchOutputEnabled": "true"
+                                },
+                                "Parameters": {
+                                    "commands": [
+                                        "#!/bin/bash\nsudo yum update -y\nneeds-restarting -r\nif [ $? -eq 1 ]\nthen\n        exit 194\nelse\n        exit 0\nfi\n"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "InstallNginx",
+                            "action": "aws:runCommand",
+                            "inputs": {
+                                "DocumentName": "AWS-RunShellScript",
+                                "InstanceIds": [
+                                    "{{InstanceId}}"
+                                ],
+                                "CloudWatchOutputConfig": {
+                                    "CloudWatchOutputEnabled": "true"
+                                },
+                                "Parameters": {
+                                    "commands": [
+                                        "sudo amazon-linux-extras install nginx1 -y\nsudo service nginx start\n"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "name": "TestInstall",
+                            "action": "aws:runCommand",
+                            "maxAttempts": 3,
+                            "timeoutSeconds": 3600,
+                            "onFailure": "Abort",
+                            "inputs": {
+                                "DocumentName": "AWS-RunShellScript",
+                                "InstanceIds": [
+                                    "{{InstanceId}}"
+                                ],
+                                "Parameters": {
+                                    "commands": [
+                                        "curl localhost\n"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
         },
-        "Targets": [
-          {
-            "Key": "tag:nginx",
-            "Values": [
-              true
-            ]
-          }
-        ]
-      }
+        "SSMExecutionRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "Policies": [
+                    {
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Action": [
+                                        "ssm:StartAssociationsOnce",
+                                        "ssm:CreateAssociation",
+                                        "ssm:CreateAssociationBatch",
+                                        "ssm:UpdateAssociation"
+                                    ],
+                                    "Resource": "*",
+                                    "Effect": "Allow"
+                                }
+                            ]
+                        },
+                        "PolicyName": "ssm-association"
+                    }
+                ],
+                "Path": "/",
+                "ManagedPolicyArns": [
+                    "arn:${AWS::Partition}:iam::aws:policy/service-role/AmazonSSMAutomationRole"
+                ],
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "ec2.amazonaws.com",
+                                    "ssm.amazonaws.com"
+                                ]
+                            },
+                            "Action": "sts:AssumeRole"
+                        }
+                    ]
+                }
+            }
+        },
+        "SSMInstanceRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "Policies": [
+                    {
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Action": [
+                                        "s3:GetObject"
+                                    ],
+                                    "Resource": [
+                                        "arn:aws:s3:::aws-ssm-${AWS::Region}/*",
+                                        "arn:aws:s3:::aws-windows-downloads-${AWS::Region}/*",
+                                        "arn:aws:s3:::amazon-ssm-${AWS::Region}/*",
+                                        "arn:aws:s3:::amazon-ssm-packages-${AWS::Region}/*",
+                                        "arn:aws:s3:::${AWS::Region}-birdwatcher-prod/*",
+                                        "arn:aws:s3:::patch-baseline-snapshot-${AWS::Region}/*"
+                                    ],
+                                    "Effect": "Allow"
+                                }
+                            ]
+                        },
+                        "PolicyName": "ssm-custom-s3-policy"
+                    },
+                    {
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Action": [
+                                        "s3:GetObject",
+                                        "s3:PutObject",
+                                        "s3:PutObjectAcl",
+                                        "s3:ListBucket"
+                                    ],
+                                    "Resource": [
+                                        "arn:${AWS::Partition}:s3:::${SSMAssocLogs}/*",
+                                        "arn:${AWS::Partition}:s3:::${SSMAssocLogs}"
+                                    ],
+                                    "Effect": "Allow"
+                                }
+                            ]
+                        },
+                        "PolicyName": "s3-instance-bucket-policy"
+                    }
+                ],
+                "Path": "/",
+                "ManagedPolicyArns": [
+                    "arn:${AWS::Partition}:iam::aws:policy/AmazonSSMManagedInstanceCore",
+                    "arn:${AWS::Partition}:iam::aws:policy/CloudWatchAgentServerPolicy"
+                ],
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "ec2.amazonaws.com",
+                                    "ssm.amazonaws.com"
+                                ]
+                            },
+                            "Action": "sts:AssumeRole"
+                        }
+                    ]
+                }
+            }
+        },
+        "SSMInstanceProfile": {
+            "Type": "AWS::IAM::InstanceProfile",
+            "Properties": {
+                "Roles": [
+                    "SSMInstanceRole"
+                ]
+            }
+        },
+        "EC2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId": "LatestAmiId",
+                "InstanceType": "t3.medium",
+                "IamInstanceProfile": "SSMInstanceProfile",
+                "Tags": [
+                    {
+                        "Key": "nginx",
+                        "Value": true
+                    }
+                ]
+            }
+        },
+        "NginxAssociation": {
+            "DependsOn": "EC2Instance",
+            "Type": "AWS::SSM::Association",
+            "Properties": {
+                "Name": "nginxInstallAutomation",
+                "WaitForSuccessTimeoutSeconds": 300,
+                "OutputLocation": {
+                    "S3Location": {
+                        "OutputS3BucketName": "SSMAssocLogs",
+                        "OutputS3KeyPrefix": "logs/"
+                    }
+                },
+                "AutomationTargetParameterName": "InstanceId",
+                "Parameters": {
+                    "AutomationAssumeRole": [
+                        "SSMExecutionRole.Arn"
+                    ]
+                },
+                "Targets": [
+                    {
+                        "Key": "tag:nginx",
+                        "Values": [
+                            true
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "Outputs": {
+        "WebServerPublic": {
+            "Value": "EC2Instance.PublicDnsName",
+            "Description": "Public DNS for WebServer"
+        }
     }
-  },
-  "Outputs": {
-    "WebServerPublic": {
-      "Value": "EC2Instance.PublicDnsName",
-      "Description": "Public DNS for WebServer"
-    }
-  }
 }
 ```
 
@@ -1497,343 +1497,343 @@ The following example creates an association that joins targets to a Windows Act
 
 ```
 {
-  "Description": "Deploy single windows EC2 Instance and join domain with SSM Association",
-  "Parameters": {
-    "DomainAdminPassword": {
-      "AllowedPattern": "(?=^.{6,255}$)((?=.*\\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\\d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])|(?=.*\\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9]))^.*",
-      "Description": "Password for the domain admin user. Must be at least 8 characters, containing letters, numbers, and symbols.",
-      "MaxLength": "32",
-      "MinLength": "8",
-      "NoEcho": "true",
-      "Type": "String"
-    },
-    "DomainAdminUser": {
-      "AllowedPattern": "[a-zA-Z0-9]*",
-      "Default": "Admin",
-      "Description": "User name for the account that will be used as domain administrator. This is separate from the default \"Administrator\" account.",
-      "MaxLength": "25",
-      "MinLength": "5",
-      "Type": "String"
-    },
-    "DomainDNSName": {
-      "AllowedPattern": "[a-zA-Z0-9\\-]+\\..+",
-      "Default": "example.com",
-      "Description": "Fully qualified domain name (FQDN).",
-      "MaxLength": "255",
-      "MinLength": "2",
-      "Type": "String"
-    },
-    "DomainMemberSGID": {
-      "Description": "ID of the domain member security group (e.g., sg-7f16e910).",
-      "Type": "AWS::EC2::SecurityGroup::Id"
-    },
-    "DomainNetBIOSName": {
-      "AllowedPattern": "[a-zA-Z0-9\\-]+",
-      "Default": "EXAMPLE",
-      "Description": "NetBIOS name of the domain (up to 15 characters) for users of earlier versions of Windows.",
-      "MaxLength": "15",
-      "MinLength": "1",
-      "Type": "String"
-    },
-    "EC2InstanceType": {
-      "AllowedValues": [
-        "t3.nano",
-        "t3.micro",
-        "t3.small",
-        "t3.medium",
-        "t3.large",
-        "t3.xlarge",
-        "t3.2xlarge",
-        "m5.large",
-        "m5.xlarge",
-        "m5.2xlarge"
-      ],
-      "Default": "m5.large",
-      "Description": "Amazon EC2 instance type",
-      "Type": "String"
-    },
-    "LatestAmiId": {
-      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
-      "Default": "/aws/service/ami-windows-latest/Windows_Server-2019-English-Full-Base"
-    },
-    "SubnetID": {
-      "Description": "ID of a Subnet.",
-      "Type": "AWS::EC2::Subnet::Id"
-    }
-  },
-  "Resources": {
-    "DSCBucket": {
-      "Type": "AWS::S3::Bucket",
-      "Properties": {
-        "LifecycleConfiguration": {
-          "Rules": [
-            {
-              "Id": "DeleteAfter30Days",
-              "ExpirationInDays": 30,
-              "Status": "Enabled",
-              "Prefix": "logs/"
-            }
-          ]
+    "Description": "Deploy single windows EC2 Instance and join domain with SSM Association",
+    "Parameters": {
+        "DomainAdminPassword": {
+            "AllowedPattern": "(?=^.{6,255}$)((?=.*\\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\\d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])|(?=.*\\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9]))^.*",
+            "Description": "Password for the domain admin user. Must be at least 8 characters, containing letters, numbers, and symbols.",
+            "MaxLength": "32",
+            "MinLength": "8",
+            "NoEcho": "true",
+            "Type": "String"
+        },
+        "DomainAdminUser": {
+            "AllowedPattern": "[a-zA-Z0-9]*",
+            "Default": "Admin",
+            "Description": "User name for the account that will be used as domain administrator. This is separate from the default \"Administrator\" account.",
+            "MaxLength": "25",
+            "MinLength": "5",
+            "Type": "String"
+        },
+        "DomainDNSName": {
+            "AllowedPattern": "[a-zA-Z0-9\\-]+\\..+",
+            "Default": "example.com",
+            "Description": "Fully qualified domain name (FQDN).",
+            "MaxLength": "255",
+            "MinLength": "2",
+            "Type": "String"
+        },
+        "DomainMemberSGID": {
+            "Description": "ID of the domain member security group (e.g., sg-7f16e910).",
+            "Type": "AWS::EC2::SecurityGroup::Id"
+        },
+        "DomainNetBIOSName": {
+            "AllowedPattern": "[a-zA-Z0-9\\-]+",
+            "Default": "EXAMPLE",
+            "Description": "NetBIOS name of the domain (up to 15 characters) for users of earlier versions of Windows.",
+            "MaxLength": "15",
+            "MinLength": "1",
+            "Type": "String"
+        },
+        "EC2InstanceType": {
+            "AllowedValues": [
+                "t3.nano",
+                "t3.micro",
+                "t3.small",
+                "t3.medium",
+                "t3.large",
+                "t3.xlarge",
+                "t3.2xlarge",
+                "m5.large",
+                "m5.xlarge",
+                "m5.2xlarge"
+            ],
+            "Default": "m5.large",
+            "Description": "Amazon EC2 instance type",
+            "Type": "String"
+        },
+        "LatestAmiId": {
+            "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+            "Default": "/aws/service/ami-windows-latest/Windows_Server-2019-English-Full-Base"
+        },
+        "SubnetID": {
+            "Description": "ID of a Subnet.",
+            "Type": "AWS::EC2::Subnet::Id"
         }
-      }
     },
-    "DomainJoinSecrets": {
-      "Type": "AWS::SecretsManager::Secret",
-      "Properties": {
-        "Name": "DomainJoinSecrets-${AWS::StackName}",
-        "Description": "Secrets to join AD domain",
-        "SecretString": "{\"username\":\"${DomainNetBIOSName}\\\\${DomainAdminUser}\",\"password\":\"${DomainAdminPassword}\"}"
-      }
-    },
-    "LambdaSSMRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "Policies": [
-          {
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Effect": "Allow",
-                  "Action": [
-                    "s3:PutObject"
-                  ],
-                  "Resource": [
-                    "${DSCBucket.Arn}",
-                    "${DSCBucket.Arn}/*"
-                  ]
+    "Resources": {
+        "DSCBucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "LifecycleConfiguration": {
+                    "Rules": [
+                        {
+                            "Id": "DeleteAfter30Days",
+                            "ExpirationInDays": 30,
+                            "Status": "Enabled",
+                            "Prefix": "logs/"
+                        }
+                    ]
                 }
-              ]
-            },
-            "PolicyName": "write-mof-s3"
-          }
-        ],
-        "Path": "/",
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "lambda.amazonaws.com"
+            }
+        },
+        "DomainJoinSecrets": {
+            "Type": "AWS::SecretsManager::Secret",
+            "Properties": {
+                "Name": "DomainJoinSecrets-${AWS::StackName}",
+                "Description": "Secrets to join AD domain",
+                "SecretString": "{\"username\":\"${DomainNetBIOSName}\\\\${DomainAdminUser}\",\"password\":\"${DomainAdminPassword}\"}"
+            }
+        },
+        "LambdaSSMRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "Policies": [
+                    {
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Effect": "Allow",
+                                    "Action": [
+                                        "s3:PutObject"
+                                    ],
+                                    "Resource": [
+                                        "${DSCBucket.Arn}",
+                                        "${DSCBucket.Arn}/*"
+                                    ]
+                                }
+                            ]
+                        },
+                        "PolicyName": "write-mof-s3"
+                    }
+                ],
+                "Path": "/",
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "lambda.amazonaws.com"
+                                ]
+                            },
+                            "Action": "sts:AssumeRole"
+                        }
+                    ]
+                },
+                "ManagedPolicyArns": [
+                    "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
                 ]
-              },
-              "Action": "sts:AssumeRole"
             }
-          ]
         },
-        "ManagedPolicyArns": [
-          "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-        ]
-      }
-    },
-    "WriteMOFFunction": {
-      "Type": "AWS::Lambda::Function",
-      "Properties": {
-        "Code": {
-          "ZipFile": "var AWS = require('aws-sdk'), s3 = new AWS.S3(); const response = require(\"cfn-response\"); exports.handler = async (event, context) => {\n  console.log(JSON.stringify(event));\n  if (event.RequestType === 'Delete') {\n      await postResponse(event, context, response.SUCCESS, {})\n      return;\n  }\n  function postResponse(event, context, status, data){\n      return new Promise((resolve, reject) => {\n          setTimeout(() => response.send(event, context, status, data), 5000)\n      });\n  }\n  await s3.putObject({\n    Body: event.ResourceProperties.Body,\n    Bucket: event.ResourceProperties.Bucket,\n    Key: event.ResourceProperties.Key\n  }).promise();\n  await postResponse(event, context, response.SUCCESS, {});\n};\n"
+        "WriteMOFFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+                "Code": {
+                    "ZipFile": "var AWS = require('aws-sdk'), s3 = new AWS.S3(); const response = require(\"cfn-response\"); exports.handler = async (event, context) => {\n  console.log(JSON.stringify(event));\n  if (event.RequestType === 'Delete') {\n      await postResponse(event, context, response.SUCCESS, {})\n      return;\n  }\n  function postResponse(event, context, status, data){\n      return new Promise((resolve, reject) => {\n          setTimeout(() => response.send(event, context, status, data), 5000)\n      });\n  }\n  await s3.putObject({\n    Body: event.ResourceProperties.Body,\n    Bucket: event.ResourceProperties.Bucket,\n    Key: event.ResourceProperties.Key\n  }).promise();\n  await postResponse(event, context, response.SUCCESS, {});\n};\n"
+                },
+                "Handler": "index.handler",
+                "Role": "LambdaSSMRole.Arn",
+                "Runtime": "nodejs10.x",
+                "Timeout": 10
+            }
         },
-        "Handler": "index.handler",
-        "Role": "LambdaSSMRole.Arn",
-        "Runtime": "nodejs10.x",
-        "Timeout": 10
-      }
-    },
-    "WriteDomainJoinMOF": {
-      "Type": "Custom::WriteMOFFile",
-      "Properties": {
-        "ServiceToken": "WriteMOFFunction.Arn",
-        "Bucket": "DSCBucket",
-        "Key": "DomainJoin-${AWS::StackName}.mof",
-        "Body": "/*\n@TargetNode='localhost'\n*/\ninstance of MSFT_Credential as $MSFT_Credential1ref\n{\nPassword = \"managementgovernancesample\";\n UserName = \"${DomainJoinSecrets}\";\n\n};\ninstance of DSC_Computer as $DSC_Computer1ref\n{\nResourceID = \"[Computer]JoinDomain\";\n Credential = $MSFT_Credential1ref;\n DomainName = \"{tag:DomainToJoin}\";\n Name = \"{tag:Name}\";\n ModuleName = \"ComputerManagementDsc\";\n ModuleVersion = \"8.0.0\";\n ConfigurationName = \"DomainJoin\";\n};\ninstance of OMI_ConfigurationDocument\n                    {\n Version=\"2.0.0\";\n                        MinimumCompatibleVersion = \"1.0.0\";\n                        CompatibleVersionAdditionalProperties= {\"Omi_BaseResource:ConfigurationName\"};\n                        Name=\"DomainJoin\";\n                    };      \n"
-      }
-    },
-    "SSMInstanceRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "Policies": [
-          {
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Action": [
-                    "s3:GetObject"
-                  ],
-                  "Resource": [
-                    "arn:aws:s3:::aws-ssm-${AWS::Region}/*",
-                    "arn:aws:s3:::aws-windows-downloads-${AWS::Region}/*",
-                    "arn:aws:s3:::amazon-ssm-${AWS::Region}/*",
-                    "arn:aws:s3:::amazon-ssm-packages-${AWS::Region}/*",
-                    "arn:aws:s3:::${AWS::Region}-birdwatcher-prod/*",
-                    "arn:aws:s3:::patch-baseline-snapshot-${AWS::Region}/*"
-                  ],
-                  "Effect": "Allow"
+        "WriteDomainJoinMOF": {
+            "Type": "Custom::WriteMOFFile",
+            "Properties": {
+                "ServiceToken": "WriteMOFFunction.Arn",
+                "Bucket": "DSCBucket",
+                "Key": "DomainJoin-${AWS::StackName}.mof",
+                "Body": "/*\n@TargetNode='localhost'\n*/\ninstance of MSFT_Credential as $MSFT_Credential1ref\n{\nPassword = \"managementgovernancesample\";\n UserName = \"${DomainJoinSecrets}\";\n\n};\ninstance of DSC_Computer as $DSC_Computer1ref\n{\nResourceID = \"[Computer]JoinDomain\";\n Credential = $MSFT_Credential1ref;\n DomainName = \"{tag:DomainToJoin}\";\n Name = \"{tag:Name}\";\n ModuleName = \"ComputerManagementDsc\";\n ModuleVersion = \"8.0.0\";\n ConfigurationName = \"DomainJoin\";\n};\ninstance of OMI_ConfigurationDocument\n                    {\n Version=\"2.0.0\";\n                        MinimumCompatibleVersion = \"1.0.0\";\n                        CompatibleVersionAdditionalProperties= {\"Omi_BaseResource:ConfigurationName\"};\n                        Name=\"DomainJoin\";\n                    };      \n"
+            }
+        },
+        "SSMInstanceRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "Policies": [
+                    {
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Action": [
+                                        "s3:GetObject"
+                                    ],
+                                    "Resource": [
+                                        "arn:aws:s3:::aws-ssm-${AWS::Region}/*",
+                                        "arn:aws:s3:::aws-windows-downloads-${AWS::Region}/*",
+                                        "arn:aws:s3:::amazon-ssm-${AWS::Region}/*",
+                                        "arn:aws:s3:::amazon-ssm-packages-${AWS::Region}/*",
+                                        "arn:aws:s3:::${AWS::Region}-birdwatcher-prod/*",
+                                        "arn:aws:s3:::patch-baseline-snapshot-${AWS::Region}/*"
+                                    ],
+                                    "Effect": "Allow"
+                                }
+                            ]
+                        },
+                        "PolicyName": "ssm-custom-s3-policy"
+                    },
+                    {
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Effect": "Allow",
+                                    "Action": [
+                                        "secretsmanager:GetSecretValue",
+                                        "secretsmanager:DescribeSecret"
+                                    ],
+                                    "Resource": [
+                                        "DomainJoinSecrets"
+                                    ]
+                                }
+                            ]
+                        },
+                        "PolicyName": "ssm-secrets-policy"
+                    },
+                    {
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Action": [
+                                        "s3:GetObject",
+                                        "s3:PutObject",
+                                        "s3:PutObjectAcl",
+                                        "s3:ListBucket"
+                                    ],
+                                    "Resource": [
+                                        "arn:${AWS::Partition}:s3:::${DSCBucket}/*",
+                                        "arn:${AWS::Partition}:s3:::${DSCBucket}"
+                                    ],
+                                    "Effect": "Allow"
+                                }
+                            ]
+                        },
+                        "PolicyName": "s3-instance-bucket-policy"
+                    }
+                ],
+                "Path": "/",
+                "ManagedPolicyArns": [
+                    "arn:${AWS::Partition}:iam::aws:policy/AmazonSSMManagedInstanceCore",
+                    "arn:${AWS::Partition}:iam::aws:policy/AmazonEC2ReadOnlyAccess"
+                ],
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "ec2.amazonaws.com",
+                                    "ssm.amazonaws.com"
+                                ]
+                            },
+                            "Action": "sts:AssumeRole"
+                        }
+                    ]
                 }
-              ]
-            },
-            "PolicyName": "ssm-custom-s3-policy"
-          },
-          {
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Effect": "Allow",
-                  "Action": [
-                    "secretsmanager:GetSecretValue",
-                    "secretsmanager:DescribeSecret"
-                  ],
-                  "Resource": [
-                    "DomainJoinSecrets"
-                  ]
-                }
-              ]
-            },
-            "PolicyName": "ssm-secrets-policy"
-          },
-          {
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Action": [
-                    "s3:GetObject",
-                    "s3:PutObject",
-                    "s3:PutObjectAcl",
-                    "s3:ListBucket"
-                  ],
-                  "Resource": [
-                    "arn:${AWS::Partition}:s3:::${DSCBucket}/*",
-                    "arn:${AWS::Partition}:s3:::${DSCBucket}"
-                  ],
-                  "Effect": "Allow"
-                }
-              ]
-            },
-            "PolicyName": "s3-instance-bucket-policy"
-          }
-        ],
-        "Path": "/",
-        "ManagedPolicyArns": [
-          "arn:${AWS::Partition}:iam::aws:policy/AmazonSSMManagedInstanceCore",
-          "arn:${AWS::Partition}:iam::aws:policy/AmazonEC2ReadOnlyAccess"
-        ],
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "ec2.amazonaws.com",
-                  "ssm.amazonaws.com"
+            }
+        },
+        "SSMInstanceProfile": {
+            "Type": "AWS::IAM::InstanceProfile",
+            "Properties": {
+                "Roles": [
+                    "SSMInstanceRole"
                 ]
-              },
-              "Action": "sts:AssumeRole"
             }
-          ]
-        }
-      }
-    },
-    "SSMInstanceProfile": {
-      "Type": "AWS::IAM::InstanceProfile",
-      "Properties": {
-        "Roles": [
-          "SSMInstanceRole"
-        ]
-      }
-    },
-    "WINEC2Instance": {
-      "Type": "AWS::EC2::Instance",
-      "Properties": {
-        "ImageId": "LatestAmiId",
-        "InstanceType": "EC2InstanceType",
-        "IamInstanceProfile": "SSMInstanceProfile",
-        "NetworkInterfaces": [
-          {
-            "DeleteOnTermination": true,
-            "DeviceIndex": "0",
-            "SubnetId": "SubnetID",
-            "GroupSet": [
-              "DomainMemberSGID"
-            ]
-          }
-        ],
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": "WindowsBox0"
-          },
-          {
-            "Key": "DomainToJoin",
-            "Value": "DomainDNSName"
-          }
-        ]
-      }
-    },
-    "JoinDomainAssociation": {
-      "DependsOn": [
-        "WINEC2Instance",
-        "WriteDomainJoinMOF"
-      ],
-      "Type": "AWS::SSM::Association",
-      "Properties": {
-        "WaitForSuccessTimeoutSeconds": 300,
-        "Name": "AWS-ApplyDSCMofs",
-        "Targets": [
-          {
-            "Key": "tag:DomainToJoin",
-            "Values": [
-              "DomainDNSName"
-            ]
-          }
-        ],
-        "OutputLocation": {
-          "S3Location": {
-            "OutputS3BucketName": "DSCBucket",
-            "OutputS3KeyPrefix": "logs/"
-          }
         },
-        "ScheduleExpression": "cron(30 23 * * ? *)",
-        "MaxErrors": 1,
-        "MaxConcurrency": 1,
-        "Parameters": {
-          "MofsToApply": [
-            "s3:${DSCBucket}:DomainJoin-${AWS::StackName}.mof"
-          ],
-          "ServicePath": [
-            "default"
-          ],
-          "MofOperationMode": [
-            "Apply"
-          ],
-          "ComplianceType": [
-            "Custom:DomainJoinSample"
-          ],
-          "ModuleSourceBucketName": [
-            "NONE"
-          ],
-          "AllowPSGalleryModuleSource": [
-            "True"
-          ],
-          "RebootBehavior": [
-            "AfterMof"
-          ],
-          "UseComputerNameForReporting": [
-            "False"
-          ],
-          "EnableVerboseLogging": [
-            "False"
-          ],
-          "EnableDebugLogging": [
-            "False"
-          ]
+        "WINEC2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId": "LatestAmiId",
+                "InstanceType": "EC2InstanceType",
+                "IamInstanceProfile": "SSMInstanceProfile",
+                "NetworkInterfaces": [
+                    {
+                        "DeleteOnTermination": true,
+                        "DeviceIndex": "0",
+                        "SubnetId": "SubnetID",
+                        "GroupSet": [
+                            "DomainMemberSGID"
+                        ]
+                    }
+                ],
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "WindowsBox0"
+                    },
+                    {
+                        "Key": "DomainToJoin",
+                        "Value": "DomainDNSName"
+                    }
+                ]
+            }
+        },
+        "JoinDomainAssociation": {
+            "DependsOn": [
+                "WINEC2Instance",
+                "WriteDomainJoinMOF"
+            ],
+            "Type": "AWS::SSM::Association",
+            "Properties": {
+                "WaitForSuccessTimeoutSeconds": 300,
+                "Name": "AWS-ApplyDSCMofs",
+                "Targets": [
+                    {
+                        "Key": "tag:DomainToJoin",
+                        "Values": [
+                            "DomainDNSName"
+                        ]
+                    }
+                ],
+                "OutputLocation": {
+                    "S3Location": {
+                        "OutputS3BucketName": "DSCBucket",
+                        "OutputS3KeyPrefix": "logs/"
+                    }
+                },
+                "ScheduleExpression": "cron(30 23 * * ? *)",
+                "MaxErrors": 1,
+                "MaxConcurrency": 1,
+                "Parameters": {
+                    "MofsToApply": [
+                        "s3:${DSCBucket}:DomainJoin-${AWS::StackName}.mof"
+                    ],
+                    "ServicePath": [
+                        "default"
+                    ],
+                    "MofOperationMode": [
+                        "Apply"
+                    ],
+                    "ComplianceType": [
+                        "Custom:DomainJoinSample"
+                    ],
+                    "ModuleSourceBucketName": [
+                        "NONE"
+                    ],
+                    "AllowPSGalleryModuleSource": [
+                        "True"
+                    ],
+                    "RebootBehavior": [
+                        "AfterMof"
+                    ],
+                    "UseComputerNameForReporting": [
+                        "False"
+                    ],
+                    "EnableVerboseLogging": [
+                        "False"
+                    ],
+                    "EnableDebugLogging": [
+                        "False"
+                    ]
+                }
+            }
         }
-      }
     }
-  }
 }
 ```
 
@@ -2126,500 +2126,500 @@ The following example creates an association that joins targets to a Windows Act
 
 ```
 {
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Deploy single windows EC2 Instance and join domain with SSM Association",
-  "Parameters": {
-    "DomainAdminPassword": {
-      "AllowedPattern": "(?=^.{6,255}$)((?=.*\\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\\d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])|(?=.*\\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9]))^.*",
-      "Description": "Password for the domain admin user. Must be at least 8 characters, containing letters, numbers, and symbols.",
-      "MaxLength": "32",
-      "MinLength": "8",
-      "NoEcho": "true",
-      "Type": "String"
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Deploy single windows EC2 Instance and join domain with SSM Association",
+    "Parameters": {
+        "DomainAdminPassword": {
+            "AllowedPattern": "(?=^.{6,255}$)((?=.*\\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\\d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z])|(?=.*\\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9]))^.*",
+            "Description": "Password for the domain admin user. Must be at least 8 characters, containing letters, numbers, and symbols.",
+            "MaxLength": "32",
+            "MinLength": "8",
+            "NoEcho": "true",
+            "Type": "String"
+        },
+        "DomainAdminUser": {
+            "AllowedPattern": "[a-zA-Z0-9]*",
+            "Default": "Admin",
+            "Description": "User name for the account that will be used as domain administrator. This is separate from the default \"Administrator\" account.",
+            "MaxLength": "25",
+            "MinLength": "5",
+            "Type": "String"
+        },
+        "DomainDNSName": {
+            "AllowedPattern": "[a-zA-Z0-9\\-]+\\..+",
+            "Default": "example.com",
+            "Description": "Fully qualified domain name (FQDN).",
+            "MaxLength": "255",
+            "MinLength": "2",
+            "Type": "String"
+        },
+        "DomainMemberSGID": {
+            "Description": "ID of the domain member security group (e.g., sg-7f16e910).",
+            "Type": "AWS::EC2::SecurityGroup::Id"
+        },
+        "DomainNetBIOSName": {
+            "AllowedPattern": "[a-zA-Z0-9\\-]+",
+            "Default": "EXAMPLE",
+            "Description": "NetBIOS name of the domain (up to 15 characters) for users of earlier versions of Windows.",
+            "MaxLength": "15",
+            "MinLength": "1",
+            "Type": "String"
+        },
+        "EC2InstanceType": {
+            "AllowedValues": [
+                "t3.nano",
+                "t3.micro",
+                "t3.small",
+                "t3.medium",
+                "t3.large",
+                "t3.xlarge",
+                "t3.2xlarge",
+                "m5.large",
+                "m5.xlarge",
+                "m5.2xlarge"
+            ],
+            "Default": "m5.large",
+            "Description": "Amazon EC2 instance type",
+            "Type": "String"
+        },
+        "LatestAmiId": {
+            "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+            "Default": "/aws/service/ami-windows-latest/Windows_Server-2019-English-Full-Base"
+        },
+        "SubnetID": {
+            "Description": "ID of a Subnet.",
+            "Type": "AWS::EC2::Subnet::Id"
+        }
     },
-    "DomainAdminUser": {
-      "AllowedPattern": "[a-zA-Z0-9]*",
-      "Default": "Admin",
-      "Description": "User name for the account that will be used as domain administrator. This is separate from the default \"Administrator\" account.",
-      "MaxLength": "25",
-      "MinLength": "5",
-      "Type": "String"
-    },
-    "DomainDNSName": {
-      "AllowedPattern": "[a-zA-Z0-9\\-]+\\..+",
-      "Default": "example.com",
-      "Description": "Fully qualified domain name (FQDN).",
-      "MaxLength": "255",
-      "MinLength": "2",
-      "Type": "String"
-    },
-    "DomainMemberSGID": {
-      "Description": "ID of the domain member security group (e.g., sg-7f16e910).",
-      "Type": "AWS::EC2::SecurityGroup::Id"
-    },
-    "DomainNetBIOSName": {
-      "AllowedPattern": "[a-zA-Z0-9\\-]+",
-      "Default": "EXAMPLE",
-      "Description": "NetBIOS name of the domain (up to 15 characters) for users of earlier versions of Windows.",
-      "MaxLength": "15",
-      "MinLength": "1",
-      "Type": "String"
-    },
-    "EC2InstanceType": {
-      "AllowedValues": [
-        "t3.nano",
-        "t3.micro",
-        "t3.small",
-        "t3.medium",
-        "t3.large",
-        "t3.xlarge",
-        "t3.2xlarge",
-        "m5.large",
-        "m5.xlarge",
-        "m5.2xlarge"
-      ],
-      "Default": "m5.large",
-      "Description": "Amazon EC2 instance type",
-      "Type": "String"
-    },
-    "LatestAmiId": {
-      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
-      "Default": "/aws/service/ami-windows-latest/Windows_Server-2019-English-Full-Base"
-    },
-    "SubnetID": {
-      "Description": "ID of a Subnet.",
-      "Type": "AWS::EC2::Subnet::Id"
+    "Resources": {
+        "DSCBucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "LifecycleConfiguration": {
+                    "Rules": [
+                        {
+                            "Id": "DeleteAfter30Days",
+                            "ExpirationInDays": 30,
+                            "Status": "Enabled",
+                            "Prefix": "logs/"
+                        }
+                    ]
+                }
+            }
+        },
+        "DomainJoinSecrets": {
+            "Type": "AWS::SecretsManager::Secret",
+            "Properties": {
+                "Name": "DomainJoinSecrets-${AWS::StackName}",
+                "Description": "Secrets to join AD domain",
+                "SecretString": "{\"username\":\"${DomainAdminUser}\",\"password\":\"${DomainAdminPassword}\"}"
+            }
+        },
+        "LambdaSSMRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "Policies": [
+                    {
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Effect": "Allow",
+                                    "Action": [
+                                        "s3:PutObject"
+                                    ],
+                                    "Resource": [
+                                        "${DSCBucket.Arn}",
+                                        "${DSCBucket.Arn}/*"
+                                    ]
+                                }
+                            ]
+                        },
+                        "PolicyName": "write-mof-s3"
+                    }
+                ],
+                "Path": "/",
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "lambda.amazonaws.com"
+                                ]
+                            },
+                            "Action": "sts:AssumeRole"
+                        }
+                    ]
+                },
+                "ManagedPolicyArns": [
+                    "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                ]
+            }
+        },
+        "WriteScriptFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+                "Code": {
+                    "ZipFile": "var AWS = require('aws-sdk'), s3 = new AWS.S3(); const response = require(\"cfn-response\"); exports.handler = async (event, context) => {\n  console.log(JSON.stringify(event));\n  if (event.RequestType === 'Delete') {\n      await postResponse(event, context, response.SUCCESS, {})\n      return;\n  }\n  function postResponse(event, context, status, data){\n      return new Promise((resolve, reject) => {\n          setTimeout(() => response.send(event, context, status, data), 5000)\n      });\n  }\n  await s3.putObject({\n    Body: event.ResourceProperties.Body,\n    Bucket: event.ResourceProperties.Bucket,\n    Key: event.ResourceProperties.Key\n  }).promise();\n  await postResponse(event, context, response.SUCCESS, {});\n};\n"
+                },
+                "Handler": "index.handler",
+                "Role": "LambdaSSMRole.Arn",
+                "Runtime": "nodejs10.x",
+                "Timeout": 10
+            }
+        },
+        "WriteDomainJoinScript": {
+            "Type": "Custom::WriteScript",
+            "Properties": {
+                "ServiceToken": "WriteScriptFunction.Arn",
+                "Bucket": "DSCBucket",
+                "Key": "DomainJoin.ps1",
+                "Body": "[CmdletBinding()]\n# Incoming Parameters for Script, CloudFormation\\SSM Parameters being passed in\nparam(\n    [Parameter(Mandatory=$true)]\n    [string]$DomainNetBIOSName,\n\n    [Parameter(Mandatory=$true)]\n    [string]$DomainDNSName,\n\n    [Parameter(Mandatory=$true)]\n    [string]$AdminSecret\n)\n\n# Formatting AD Admin User to proper format for JoinDomain DSC Resources in this Script\n$DomainAdmin = 'Domain\\User' -replace 'Domain',$DomainNetBIOSName -replace 'User',$UserName\n$Admin = ConvertFrom-Json -InputObject (Get-SECSecretValue -SecretId $AdminSecret).SecretString\n$AdminUser = $DomainNetBIOSName + '\\' + $Admin.UserName\n# Creating Credential Object for Administrator\n$Credentials = (New-Object PSCredential($AdminUser,(ConvertTo-SecureString $Admin.Password -AsPlainText -Force)))\n# Getting the DSC Cert Encryption Thumbprint to Secure the MOF File\n$DscCertThumbprint = (get-childitem -path cert:\\LocalMachine\\My | where { $_.subject -eq \"CN=SampleDscEncryptCert\" }).Thumbprint\n# Getting the Name Tag of the Instance\n$NameTag = (Get-EC2Tag -Filter @{ Name=\"resource-id\";Values=(Invoke-RestMethod -Method Get -Uri http://169.254.169.254/latest/meta-data/instance-id)}| Where-Object { $_.Key -eq \"Name\" })\n$NewName = $NameTag.Value\n\n# Creating Configuration Data Block that has the Certificate Information for DSC Configuration Processing\n$ConfigurationData = @{\n    AllNodes = @(\n        @{\n            NodeName=\"*\"\n            CertificateFile = \"C:\\awssample\\publickeys\\SamplePublicKey.cer\"\n            Thumbprint = $DscCertThumbprint\n            PSDscAllowDomainUser = $true\n        },\n        @{\n            NodeName = 'localhost'\n        }\n    )\n}\n\nConfiguration DomainJoin {\n    param(\n        [PSCredential] $Credentials\n    )\n\n    Import-Module -Name PSDesiredStateConfiguration\n    Import-Module -Name ComputerManagementDsc\n    \n    Import-DscResource -Module PSDesiredStateConfiguration\n    Import-DscResource -Module ComputerManagementDsc\n\n    Node 'localhost' {\n\n        Computer JoinDomain {\n            Name = $NewName\n            DomainName = $DomainDNSName\n            Credential = $Credentials\n        }\n    }\n}\n\nDomainJoin -OutputPath 'C:\\awssample\\DomainJoin' -ConfigurationData $ConfigurationData -Credentials $Credentials\n"
+            }
+        },
+        "WriteInstallModuleScript": {
+            "Type": "Custom::WriteScript",
+            "Properties": {
+                "ServiceToken": "WriteScriptFunction.Arn",
+                "Bucket": "DSCBucket",
+                "Key": "install-modules.ps1",
+                "Body": "[CmdletBinding()]\nparam()\n\n\"Setting up Powershell Gallery to Install DSC Modules\"\nInstall-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force\nSet-PSRepository -Name PSGallery -InstallationPolicy Trusted\n\n\"Installing the needed Powershell DSC modules for this Quick Start\"\nInstall-Module -Name ComputerManagementDsc\nInstall-Module -Name PSDscResources\n\n\"Creating Directory for DSC Public Cert\"\nNew-Item -Path C:\\awssample\\publickeys -ItemType directory -Force\n\n\"Setting up DSC Certificate to Encrypt Credentials in MOF File\"\n$cert = New-SelfSignedCertificate -Type DocumentEncryptionCertLegacyCsp -DnsName 'SampleDscEncryptCert' -HashAlgorithm SHA256\n# Exporting the public key certificate\n$cert | Export-Certificate -FilePath \"C:\\awssample\\publickeys\\SamplePublicKey.cer\" -Force\n"
+            }
+        },
+        "WriteLCMConfigScript": {
+            "Type": "Custom::WriteScript",
+            "Properties": {
+                "ServiceToken": "WriteScriptFunction.Arn",
+                "Bucket": "DSCBucket",
+                "Key": "LCM-Config.ps1",
+                "Body": "# This block sets the LCM configuration to what we need for QS\n[DSCLocalConfigurationManager()]\nconfiguration LCMConfig\n{\n    Node 'localhost' {\n        Settings {\n            RefreshMode = 'Push'\n            ActionAfterReboot = 'StopConfiguration'                      \n            RebootNodeIfNeeded = $false\n            CertificateId = $DscCertThumbprint  \n        }\n    }\n}\n\n$DscCertThumbprint = [string](get-childitem -path cert:\\LocalMachine\\My | where { $_.subject -eq \"CN=SampleDscEncryptCert\" }).Thumbprint\n    \n#Generates MOF File for LCM\nLCMConfig -OutputPath 'C:\\awssample\\LCMConfig'\n    \n# Sets LCM Configuration to MOF generated in previous command\nSet-DscLocalConfigurationManager -Path 'C:\\awssample\\LCMConfig' \n"
+            }
+        },
+        "DomainJoinAutomation": {
+            "Type": "AWS::SSM::Document",
+            "Properties": {
+                "DocumentType": "Automation",
+                "Content": {
+                    "schemaVersion": "0.3",
+                    "description": "Join a Windows Domain",
+                    "assumeRole": "{{AutomationAssumeRole}}",
+                    "parameters": {
+                        "InstanceId": {
+                            "description": "ID of the Instance.",
+                            "type": "StringList"
+                        },
+                        "DomainDNSName": {
+                            "default": "example.com",
+                            "description": "Fully qualified domain name (FQDN) of the forest root domain e.g. example.com",
+                            "type": "String"
+                        },
+                        "DomainNetBIOSName": {
+                            "default": "example",
+                            "description": "NetBIOS name of the domain (up to 15 characters) for users of earlier versions of Windows e.g. EXAMPLE",
+                            "type": "String"
+                        },
+                        "AdminSecrets": {
+                            "description": "AWS Secrets Parameter Name that has Password and User name for a domain administrator.",
+                            "type": "String"
+                        },
+                        "S3BucketName": {
+                            "description": "S3 bucket name for the Quick Start assets. Quick Start bucket name can include numbers, lowercase letters, uppercase letters, and hyphens (-). It cannot start or end with a hyphen (-).",
+                            "type": "String"
+                        },
+                        "AutomationAssumeRole": {
+                            "default": "",
+                            "description": "(Optional) The ARN of the role that allows Automation to perform the actions on your behalf.",
+                            "type": "String"
+                        }
+                    },
+                    "mainSteps": [
+                        {
+                            "name": "InstallDSCModules",
+                            "action": "aws:runCommand",
+                            "inputs": {
+                                "DocumentName": "AWS-RunRemoteScript",
+                                "InstanceIds": [
+                                    "{{InstanceId}}"
+                                ],
+                                "CloudWatchOutputConfig": {
+                                    "CloudWatchOutputEnabled": "true",
+                                    "CloudWatchLogGroupName": "/ssm/${AWS::StackName}"
+                                },
+                                "Parameters": {
+                                    "sourceType": "S3",
+                                    "sourceInfo": "{\"path\": \"https://{{S3BucketName}}.s3.amazonaws.com/install-modules.ps1\"}",
+                                    "commandLine": "./install-modules.ps1"
+                                }
+                            }
+                        },
+                        {
+                            "name": "ConfigureLCM",
+                            "action": "aws:runCommand",
+                            "inputs": {
+                                "DocumentName": "AWS-RunRemoteScript",
+                                "InstanceIds": [
+                                    "{{InstanceId}}"
+                                ],
+                                "CloudWatchOutputConfig": {
+                                    "CloudWatchOutputEnabled": "true",
+                                    "CloudWatchLogGroupName": "/ssm/${AWS::StackName}"
+                                },
+                                "Parameters": {
+                                    "sourceType": "S3",
+                                    "sourceInfo": "{\"path\": \"https://{{S3BucketName}}.s3.amazonaws.com/LCM-Config.ps1\"}",
+                                    "commandLine": "./LCM-Config.ps1"
+                                }
+                            }
+                        },
+                        {
+                            "name": "GenerateDomainJoinMof",
+                            "action": "aws:runCommand",
+                            "inputs": {
+                                "DocumentName": "AWS-RunRemoteScript",
+                                "InstanceIds": [
+                                    "{{InstanceId}}"
+                                ],
+                                "CloudWatchOutputConfig": {
+                                    "CloudWatchOutputEnabled": "true",
+                                    "CloudWatchLogGroupName": "/ssm/${AWS::StackName}"
+                                },
+                                "Parameters": {
+                                    "sourceType": "S3",
+                                    "sourceInfo": "{\"path\": \"https://{{S3BucketName}}.s3.amazonaws.com/DomainJoin.ps1\"}",
+                                    "commandLine": "./DomainJoin.ps1 -DomainNetBIOSName {{DomainNetBIOSName}} -DomainDNSName {{DomainDNSName}} -AdminSecret {{AdminSecrets}}"
+                                }
+                            }
+                        },
+                        {
+                            "name": "DomainJoin",
+                            "action": "aws:runCommand",
+                            "inputs": {
+                                "DocumentName": "AWS-RunPowerShellScript",
+                                "InstanceIds": [
+                                    "{{InstanceId}}"
+                                ],
+                                "CloudWatchOutputConfig": {
+                                    "CloudWatchOutputEnabled": "true",
+                                    "CloudWatchLogGroupName": "/ssm/${AWS::StackName}"
+                                },
+                                "Parameters": {
+                                    "commands": [
+                                        "function DscStatusCheck () {\n    $LCMState = (Get-DscLocalConfigurationManager).LCMState\n    if ($LCMState -eq 'PendingConfiguration' -Or $LCMState -eq 'PendingReboot') {\n        'returning 3010, should continue after reboot'\n        exit 3010\n    } else {\n      'Completed'\n    }\n}\n\nStart-DscConfiguration 'C:\\awssample\\DomainJoin' -Wait -Verbose -Force\n\nDscStatusCheck\n"
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "SSMExecutionRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "Policies": [
+                    {
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Action": [
+                                        "ssm:StartAssociationsOnce",
+                                        "ssm:CreateAssociation",
+                                        "ssm:CreateAssociationBatch",
+                                        "ssm:UpdateAssociation"
+                                    ],
+                                    "Resource": "*",
+                                    "Effect": "Allow"
+                                }
+                            ]
+                        },
+                        "PolicyName": "ssm-association"
+                    }
+                ],
+                "Path": "/",
+                "ManagedPolicyArns": [
+                    "arn:${AWS::Partition}:iam::aws:policy/service-role/AmazonSSMAutomationRole"
+                ],
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "ec2.amazonaws.com",
+                                    "ssm.amazonaws.com"
+                                ]
+                            },
+                            "Action": "sts:AssumeRole"
+                        }
+                    ]
+                }
+            }
+        },
+        "SSMInstanceRole": {
+            "Type": "AWS::IAM::Role",
+            "Properties": {
+                "Policies": [
+                    {
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Action": [
+                                        "s3:GetObject"
+                                    ],
+                                    "Resource": [
+                                        "arn:aws:s3:::aws-ssm-${AWS::Region}/*",
+                                        "arn:aws:s3:::aws-windows-downloads-${AWS::Region}/*",
+                                        "arn:aws:s3:::amazon-ssm-${AWS::Region}/*",
+                                        "arn:aws:s3:::amazon-ssm-packages-${AWS::Region}/*",
+                                        "arn:aws:s3:::${AWS::Region}-birdwatcher-prod/*",
+                                        "arn:aws:s3:::patch-baseline-snapshot-${AWS::Region}/*"
+                                    ],
+                                    "Effect": "Allow"
+                                }
+                            ]
+                        },
+                        "PolicyName": "ssm-custom-s3-policy"
+                    },
+                    {
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Effect": "Allow",
+                                    "Action": [
+                                        "secretsmanager:GetSecretValue",
+                                        "secretsmanager:DescribeSecret"
+                                    ],
+                                    "Resource": [
+                                        "DomainJoinSecrets"
+                                    ]
+                                }
+                            ]
+                        },
+                        "PolicyName": "ssm-secrets-policy"
+                    },
+                    {
+                        "PolicyDocument": {
+                            "Version": "2012-10-17",
+                            "Statement": [
+                                {
+                                    "Action": [
+                                        "s3:GetObject",
+                                        "s3:PutObject",
+                                        "s3:PutObjectAcl",
+                                        "s3:ListBucket"
+                                    ],
+                                    "Resource": [
+                                        "arn:${AWS::Partition}:s3:::${DSCBucket}/*",
+                                        "arn:${AWS::Partition}:s3:::${DSCBucket}"
+                                    ],
+                                    "Effect": "Allow"
+                                }
+                            ]
+                        },
+                        "PolicyName": "s3-instance-bucket-policy"
+                    }
+                ],
+                "Path": "/",
+                "ManagedPolicyArns": [
+                    "arn:${AWS::Partition}:iam::aws:policy/AmazonSSMManagedInstanceCore",
+                    "arn:${AWS::Partition}:iam::aws:policy/CloudWatchAgentServerPolicy"
+                ],
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": [
+                                    "ec2.amazonaws.com",
+                                    "ssm.amazonaws.com"
+                                ]
+                            },
+                            "Action": "sts:AssumeRole"
+                        }
+                    ]
+                }
+            }
+        },
+        "SSMInstanceProfile": {
+            "Type": "AWS::IAM::InstanceProfile",
+            "Properties": {
+                "Roles": [
+                    "SSMInstanceRole"
+                ]
+            }
+        },
+        "WINEC2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId": "LatestAmiId",
+                "InstanceType": "EC2InstanceType",
+                "IamInstanceProfile": "SSMInstanceProfile",
+                "NetworkInterfaces": [
+                    {
+                        "DeleteOnTermination": true,
+                        "DeviceIndex": "0",
+                        "SubnetId": "SubnetID",
+                        "GroupSet": [
+                            "DomainMemberSGID"
+                        ]
+                    }
+                ],
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "WindowsBox1"
+                    }
+                ]
+            }
+        },
+        "DomainAssociation": {
+            "Type": "AWS::SSM::Association",
+            "Properties": {
+                "AssociationName": "DomainJoin",
+                "Name": "DomainJoinAutomation",
+                "WaitForSuccessTimeoutSeconds": 600,
+                "AutomationTargetParameterName": "InstanceId",
+                "Targets": [
+                    {
+                        "Key": "ParameterValues",
+                        "Values": [
+                            "WINEC2Instance"
+                        ]
+                    }
+                ],
+                "OutputLocation": {
+                    "S3Location": {
+                        "OutputS3BucketName": "DSCBucket",
+                        "OutputS3KeyPrefix": "logs/"
+                    }
+                },
+                "Parameters": {
+                    "DomainDNSName": [
+                        "DomainDNSName"
+                    ],
+                    "DomainNetBIOSName": [
+                        "DomainNetBIOSName"
+                    ],
+                    "AdminSecrets": [
+                        "DomainJoinSecrets"
+                    ],
+                    "S3BucketName": [
+                        "DSCBucket"
+                    ],
+                    "AutomationAssumeRole": [
+                        "SSMExecutionRole.Arn"
+                    ]
+                }
+            }
+        }
     }
-  },
-  "Resources": {
-    "DSCBucket": {
-      "Type": "AWS::S3::Bucket",
-      "Properties": {
-        "LifecycleConfiguration": {
-          "Rules": [
-            {
-              "Id": "DeleteAfter30Days",
-              "ExpirationInDays": 30,
-              "Status": "Enabled",
-              "Prefix": "logs/"
-            }
-          ]
-        }
-      }
-    },
-    "DomainJoinSecrets": {
-      "Type": "AWS::SecretsManager::Secret",
-      "Properties": {
-        "Name": "DomainJoinSecrets-${AWS::StackName}",
-        "Description": "Secrets to join AD domain",
-        "SecretString": "{\"username\":\"${DomainAdminUser}\",\"password\":\"${DomainAdminPassword}\"}"
-      }
-    },
-    "LambdaSSMRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "Policies": [
-          {
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Effect": "Allow",
-                  "Action": [
-                    "s3:PutObject"
-                  ],
-                  "Resource": [
-                    "${DSCBucket.Arn}",
-                    "${DSCBucket.Arn}/*"
-                  ]
-                }
-              ]
-            },
-            "PolicyName": "write-mof-s3"
-          }
-        ],
-        "Path": "/",
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "lambda.amazonaws.com"
-                ]
-              },
-              "Action": "sts:AssumeRole"
-            }
-          ]
-        },
-        "ManagedPolicyArns": [
-          "arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-        ]
-      }
-    },
-    "WriteScriptFunction": {
-      "Type": "AWS::Lambda::Function",
-      "Properties": {
-        "Code": {
-          "ZipFile": "var AWS = require('aws-sdk'), s3 = new AWS.S3(); const response = require(\"cfn-response\"); exports.handler = async (event, context) => {\n  console.log(JSON.stringify(event));\n  if (event.RequestType === 'Delete') {\n      await postResponse(event, context, response.SUCCESS, {})\n      return;\n  }\n  function postResponse(event, context, status, data){\n      return new Promise((resolve, reject) => {\n          setTimeout(() => response.send(event, context, status, data), 5000)\n      });\n  }\n  await s3.putObject({\n    Body: event.ResourceProperties.Body,\n    Bucket: event.ResourceProperties.Bucket,\n    Key: event.ResourceProperties.Key\n  }).promise();\n  await postResponse(event, context, response.SUCCESS, {});\n};\n"
-        },
-        "Handler": "index.handler",
-        "Role": "LambdaSSMRole.Arn",
-        "Runtime": "nodejs10.x",
-        "Timeout": 10
-      }
-    },
-    "WriteDomainJoinScript": {
-      "Type": "Custom::WriteScript",
-      "Properties": {
-        "ServiceToken": "WriteScriptFunction.Arn",
-        "Bucket": "DSCBucket",
-        "Key": "DomainJoin.ps1",
-        "Body": "[CmdletBinding()]\n# Incoming Parameters for Script, CloudFormation\\SSM Parameters being passed in\nparam(\n    [Parameter(Mandatory=$true)]\n    [string]$DomainNetBIOSName,\n\n    [Parameter(Mandatory=$true)]\n    [string]$DomainDNSName,\n\n    [Parameter(Mandatory=$true)]\n    [string]$AdminSecret\n)\n\n# Formatting AD Admin User to proper format for JoinDomain DSC Resources in this Script\n$DomainAdmin = 'Domain\\User' -replace 'Domain',$DomainNetBIOSName -replace 'User',$UserName\n$Admin = ConvertFrom-Json -InputObject (Get-SECSecretValue -SecretId $AdminSecret).SecretString\n$AdminUser = $DomainNetBIOSName + '\\' + $Admin.UserName\n# Creating Credential Object for Administrator\n$Credentials = (New-Object PSCredential($AdminUser,(ConvertTo-SecureString $Admin.Password -AsPlainText -Force)))\n# Getting the DSC Cert Encryption Thumbprint to Secure the MOF File\n$DscCertThumbprint = (get-childitem -path cert:\\LocalMachine\\My | where { $_.subject -eq \"CN=SampleDscEncryptCert\" }).Thumbprint\n# Getting the Name Tag of the Instance\n$NameTag = (Get-EC2Tag -Filter @{ Name=\"resource-id\";Values=(Invoke-RestMethod -Method Get -Uri http://169.254.169.254/latest/meta-data/instance-id)}| Where-Object { $_.Key -eq \"Name\" })\n$NewName = $NameTag.Value\n\n# Creating Configuration Data Block that has the Certificate Information for DSC Configuration Processing\n$ConfigurationData = @{\n    AllNodes = @(\n        @{\n            NodeName=\"*\"\n            CertificateFile = \"C:\\awssample\\publickeys\\SamplePublicKey.cer\"\n            Thumbprint = $DscCertThumbprint\n            PSDscAllowDomainUser = $true\n        },\n        @{\n            NodeName = 'localhost'\n        }\n    )\n}\n\nConfiguration DomainJoin {\n    param(\n        [PSCredential] $Credentials\n    )\n\n    Import-Module -Name PSDesiredStateConfiguration\n    Import-Module -Name ComputerManagementDsc\n    \n    Import-DscResource -Module PSDesiredStateConfiguration\n    Import-DscResource -Module ComputerManagementDsc\n\n    Node 'localhost' {\n\n        Computer JoinDomain {\n            Name = $NewName\n            DomainName = $DomainDNSName\n            Credential = $Credentials\n        }\n    }\n}\n\nDomainJoin -OutputPath 'C:\\awssample\\DomainJoin' -ConfigurationData $ConfigurationData -Credentials $Credentials\n"
-      }
-    },
-    "WriteInstallModuleScript": {
-      "Type": "Custom::WriteScript",
-      "Properties": {
-        "ServiceToken": "WriteScriptFunction.Arn",
-        "Bucket": "DSCBucket",
-        "Key": "install-modules.ps1",
-        "Body": "[CmdletBinding()]\nparam()\n\n\"Setting up Powershell Gallery to Install DSC Modules\"\nInstall-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force\nSet-PSRepository -Name PSGallery -InstallationPolicy Trusted\n\n\"Installing the needed Powershell DSC modules for this Quick Start\"\nInstall-Module -Name ComputerManagementDsc\nInstall-Module -Name PSDscResources\n\n\"Creating Directory for DSC Public Cert\"\nNew-Item -Path C:\\awssample\\publickeys -ItemType directory -Force\n\n\"Setting up DSC Certificate to Encrypt Credentials in MOF File\"\n$cert = New-SelfSignedCertificate -Type DocumentEncryptionCertLegacyCsp -DnsName 'SampleDscEncryptCert' -HashAlgorithm SHA256\n# Exporting the public key certificate\n$cert | Export-Certificate -FilePath \"C:\\awssample\\publickeys\\SamplePublicKey.cer\" -Force\n"
-      }
-    },
-    "WriteLCMConfigScript": {
-      "Type": "Custom::WriteScript",
-      "Properties": {
-        "ServiceToken": "WriteScriptFunction.Arn",
-        "Bucket": "DSCBucket",
-        "Key": "LCM-Config.ps1",
-        "Body": "# This block sets the LCM configuration to what we need for QS\n[DSCLocalConfigurationManager()]\nconfiguration LCMConfig\n{\n    Node 'localhost' {\n        Settings {\n            RefreshMode = 'Push'\n            ActionAfterReboot = 'StopConfiguration'                      \n            RebootNodeIfNeeded = $false\n            CertificateId = $DscCertThumbprint  \n        }\n    }\n}\n\n$DscCertThumbprint = [string](get-childitem -path cert:\\LocalMachine\\My | where { $_.subject -eq \"CN=SampleDscEncryptCert\" }).Thumbprint\n    \n#Generates MOF File for LCM\nLCMConfig -OutputPath 'C:\\awssample\\LCMConfig'\n    \n# Sets LCM Configuration to MOF generated in previous command\nSet-DscLocalConfigurationManager -Path 'C:\\awssample\\LCMConfig' \n"
-      }
-    },
-    "DomainJoinAutomation": {
-      "Type": "AWS::SSM::Document",
-      "Properties": {
-        "DocumentType": "Automation",
-        "Content": {
-          "schemaVersion": "0.3",
-          "description": "Join a Windows Domain",
-          "assumeRole": "{{AutomationAssumeRole}}",
-          "parameters": {
-            "InstanceId": {
-              "description": "ID of the Instance.",
-              "type": "StringList"
-            },
-            "DomainDNSName": {
-              "default": "example.com",
-              "description": "Fully qualified domain name (FQDN) of the forest root domain e.g. example.com",
-              "type": "String"
-            },
-            "DomainNetBIOSName": {
-              "default": "example",
-              "description": "NetBIOS name of the domain (up to 15 characters) for users of earlier versions of Windows e.g. EXAMPLE",
-              "type": "String"
-            },
-            "AdminSecrets": {
-              "description": "AWS Secrets Parameter Name that has Password and User name for a domain administrator.",
-              "type": "String"
-            },
-            "S3BucketName": {
-              "description": "S3 bucket name for the Quick Start assets. Quick Start bucket name can include numbers, lowercase letters, uppercase letters, and hyphens (-). It cannot start or end with a hyphen (-).",
-              "type": "String"
-            },
-            "AutomationAssumeRole": {
-              "default": "",
-              "description": "(Optional) The ARN of the role that allows Automation to perform the actions on your behalf.",
-              "type": "String"
-            }
-          },
-          "mainSteps": [
-            {
-              "name": "InstallDSCModules",
-              "action": "aws:runCommand",
-              "inputs": {
-                "DocumentName": "AWS-RunRemoteScript",
-                "InstanceIds": [
-                  "{{InstanceId}}"
-                ],
-                "CloudWatchOutputConfig": {
-                  "CloudWatchOutputEnabled": "true",
-                  "CloudWatchLogGroupName": "/ssm/${AWS::StackName}"
-                },
-                "Parameters": {
-                  "sourceType": "S3",
-                  "sourceInfo": "{\"path\": \"https://{{S3BucketName}}.s3.amazonaws.com/install-modules.ps1\"}",
-                  "commandLine": "./install-modules.ps1"
-                }
-              }
-            },
-            {
-              "name": "ConfigureLCM",
-              "action": "aws:runCommand",
-              "inputs": {
-                "DocumentName": "AWS-RunRemoteScript",
-                "InstanceIds": [
-                  "{{InstanceId}}"
-                ],
-                "CloudWatchOutputConfig": {
-                  "CloudWatchOutputEnabled": "true",
-                  "CloudWatchLogGroupName": "/ssm/${AWS::StackName}"
-                },
-                "Parameters": {
-                  "sourceType": "S3",
-                  "sourceInfo": "{\"path\": \"https://{{S3BucketName}}.s3.amazonaws.com/LCM-Config.ps1\"}",
-                  "commandLine": "./LCM-Config.ps1"
-                }
-              }
-            },
-            {
-              "name": "GenerateDomainJoinMof",
-              "action": "aws:runCommand",
-              "inputs": {
-                "DocumentName": "AWS-RunRemoteScript",
-                "InstanceIds": [
-                  "{{InstanceId}}"
-                ],
-                "CloudWatchOutputConfig": {
-                  "CloudWatchOutputEnabled": "true",
-                  "CloudWatchLogGroupName": "/ssm/${AWS::StackName}"
-                },
-                "Parameters": {
-                  "sourceType": "S3",
-                  "sourceInfo": "{\"path\": \"https://{{S3BucketName}}.s3.amazonaws.com/DomainJoin.ps1\"}",
-                  "commandLine": "./DomainJoin.ps1 -DomainNetBIOSName {{DomainNetBIOSName}} -DomainDNSName {{DomainDNSName}} -AdminSecret {{AdminSecrets}}"
-                }
-              }
-            },
-            {
-              "name": "DomainJoin",
-              "action": "aws:runCommand",
-              "inputs": {
-                "DocumentName": "AWS-RunPowerShellScript",
-                "InstanceIds": [
-                  "{{InstanceId}}"
-                ],
-                "CloudWatchOutputConfig": {
-                  "CloudWatchOutputEnabled": "true",
-                  "CloudWatchLogGroupName": "/ssm/${AWS::StackName}"
-                },
-                "Parameters": {
-                  "commands": [
-                    "function DscStatusCheck () {\n    $LCMState = (Get-DscLocalConfigurationManager).LCMState\n    if ($LCMState -eq 'PendingConfiguration' -Or $LCMState -eq 'PendingReboot') {\n        'returning 3010, should continue after reboot'\n        exit 3010\n    } else {\n      'Completed'\n    }\n}\n\nStart-DscConfiguration 'C:\\awssample\\DomainJoin' -Wait -Verbose -Force\n\nDscStatusCheck\n"
-                  ]
-                }
-              }
-            }
-          ]
-        }
-      }
-    },
-    "SSMExecutionRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "Policies": [
-          {
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Action": [
-                    "ssm:StartAssociationsOnce",
-                    "ssm:CreateAssociation",
-                    "ssm:CreateAssociationBatch",
-                    "ssm:UpdateAssociation"
-                  ],
-                  "Resource": "*",
-                  "Effect": "Allow"
-                }
-              ]
-            },
-            "PolicyName": "ssm-association"
-          }
-        ],
-        "Path": "/",
-        "ManagedPolicyArns": [
-          "arn:${AWS::Partition}:iam::aws:policy/service-role/AmazonSSMAutomationRole"
-        ],
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "ec2.amazonaws.com",
-                  "ssm.amazonaws.com"
-                ]
-              },
-              "Action": "sts:AssumeRole"
-            }
-          ]
-        }
-      }
-    },
-    "SSMInstanceRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "Policies": [
-          {
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Action": [
-                    "s3:GetObject"
-                  ],
-                  "Resource": [
-                    "arn:aws:s3:::aws-ssm-${AWS::Region}/*",
-                    "arn:aws:s3:::aws-windows-downloads-${AWS::Region}/*",
-                    "arn:aws:s3:::amazon-ssm-${AWS::Region}/*",
-                    "arn:aws:s3:::amazon-ssm-packages-${AWS::Region}/*",
-                    "arn:aws:s3:::${AWS::Region}-birdwatcher-prod/*",
-                    "arn:aws:s3:::patch-baseline-snapshot-${AWS::Region}/*"
-                  ],
-                  "Effect": "Allow"
-                }
-              ]
-            },
-            "PolicyName": "ssm-custom-s3-policy"
-          },
-          {
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Effect": "Allow",
-                  "Action": [
-                    "secretsmanager:GetSecretValue",
-                    "secretsmanager:DescribeSecret"
-                  ],
-                  "Resource": [
-                    "DomainJoinSecrets"
-                  ]
-                }
-              ]
-            },
-            "PolicyName": "ssm-secrets-policy"
-          },
-          {
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Action": [
-                    "s3:GetObject",
-                    "s3:PutObject",
-                    "s3:PutObjectAcl",
-                    "s3:ListBucket"
-                  ],
-                  "Resource": [
-                    "arn:${AWS::Partition}:s3:::${DSCBucket}/*",
-                    "arn:${AWS::Partition}:s3:::${DSCBucket}"
-                  ],
-                  "Effect": "Allow"
-                }
-              ]
-            },
-            "PolicyName": "s3-instance-bucket-policy"
-          }
-        ],
-        "Path": "/",
-        "ManagedPolicyArns": [
-          "arn:${AWS::Partition}:iam::aws:policy/AmazonSSMManagedInstanceCore",
-          "arn:${AWS::Partition}:iam::aws:policy/CloudWatchAgentServerPolicy"
-        ],
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "ec2.amazonaws.com",
-                  "ssm.amazonaws.com"
-                ]
-              },
-              "Action": "sts:AssumeRole"
-            }
-          ]
-        }
-      }
-    },
-    "SSMInstanceProfile": {
-      "Type": "AWS::IAM::InstanceProfile",
-      "Properties": {
-        "Roles": [
-          "SSMInstanceRole"
-        ]
-      }
-    },
-    "WINEC2Instance": {
-      "Type": "AWS::EC2::Instance",
-      "Properties": {
-        "ImageId": "LatestAmiId",
-        "InstanceType": "EC2InstanceType",
-        "IamInstanceProfile": "SSMInstanceProfile",
-        "NetworkInterfaces": [
-          {
-            "DeleteOnTermination": true,
-            "DeviceIndex": "0",
-            "SubnetId": "SubnetID",
-            "GroupSet": [
-              "DomainMemberSGID"
-            ]
-          }
-        ],
-        "Tags": [
-          {
-            "Key": "Name",
-            "Value": "WindowsBox1"
-          }
-        ]
-      }
-    },
-    "DomainAssociation": {
-      "Type": "AWS::SSM::Association",
-      "Properties": {
-        "AssociationName": "DomainJoin",
-        "Name": "DomainJoinAutomation",
-        "WaitForSuccessTimeoutSeconds": 600,
-        "AutomationTargetParameterName": "InstanceId",
-        "Targets": [
-          {
-            "Key": "ParameterValues",
-            "Values": [
-              "WINEC2Instance"
-            ]
-          }
-        ],
-        "OutputLocation": {
-          "S3Location": {
-            "OutputS3BucketName": "DSCBucket",
-            "OutputS3KeyPrefix": "logs/"
-          }
-        },
-        "Parameters": {
-          "DomainDNSName": [
-            "DomainDNSName"
-          ],
-          "DomainNetBIOSName": [
-            "DomainNetBIOSName"
-          ],
-          "AdminSecrets": [
-            "DomainJoinSecrets"
-          ],
-          "S3BucketName": [
-            "DSCBucket"
-          ],
-          "AutomationAssumeRole": [
-            "SSMExecutionRole.Arn"
-          ]
-        }
-      }
-    }
-  }
 }
 ```
 

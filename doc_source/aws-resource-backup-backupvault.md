@@ -3,7 +3,7 @@
 Creates a logical container where backups are stored\. A `CreateBackupVault` request includes a name, optionally one or more resource tags, an encryption key, and a request ID\.
 
 **Note**  
-Sensitive data, such as passport numbers, should not be included the name of a backup vault\.
+Do not include sensitive data, such as passport numbers, in the name of a backup vault\.
 
 ## Syntax<a name="aws-resource-backup-backupvault-syntax"></a>
 
@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BackupVaultName](#cfn-backup-backupvault-backupvaultname)" : String,
       "[BackupVaultTags](#cfn-backup-backupvault-backupvaulttags)" : {Key : Value, ...},
       "[EncryptionKeyArn](#cfn-backup-backupvault-encryptionkeyarn)" : String,
+      "[LockConfiguration](#cfn-backup-backupvault-lockconfiguration)" : LockConfigurationType,
       "[Notifications](#cfn-backup-backupvault-notifications)" : NotificationObjectType
     }
 }
@@ -34,6 +35,8 @@ Properties:
   [BackupVaultTags](#cfn-backup-backupvault-backupvaulttags): 
     Key : Value
   [EncryptionKeyArn](#cfn-backup-backupvault-encryptionkeyarn): String
+  [LockConfiguration](#cfn-backup-backupvault-lockconfiguration): 
+    LockConfigurationType
   [Notifications](#cfn-backup-backupvault-notifications): 
     NotificationObjectType
 ```
@@ -64,6 +67,12 @@ The server\-side encryption key that is used to protect your backups; for exampl
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`LockConfiguration`  <a name="cfn-backup-backupvault-lockconfiguration"></a>
+Configuration for [AWS Backup Vault Lock](https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html)\.  
+*Required*: No  
+*Type*: [LockConfigurationType](aws-properties-backup-backupvault-lockconfigurationtype.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Notifications`  <a name="cfn-backup-backupvault-notifications"></a>
 The SNS event notifications for the specified backup vault\.  

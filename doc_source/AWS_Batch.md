@@ -4,3 +4,4 @@
 + [AWS::Batch::ComputeEnvironment](aws-resource-batch-computeenvironment.md)
 + [AWS::Batch::JobDefinition](aws-resource-batch-jobdefinition.md)
 + [AWS::Batch::JobQueue](aws-resource-batch-jobqueue.md)
++ [AWS::Batch::SchedulingPolicy](aws-resource-batch-schedulingpolicy.md)

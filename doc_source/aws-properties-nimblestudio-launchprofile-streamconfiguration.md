@@ -43,7 +43,7 @@ The EC2 instance types that users can select from when launching a streaming ses
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxSessionLengthInMinutes`  <a name="cfn-nimblestudio-launchprofile-streamconfiguration-maxsessionlengthinminutes"></a>
-The length of time, in minutes, that a streaming session can run\. After this point, Nimble Studio automatically terminates the session\.  
+The length of time, in minutes, that a streaming session can be active before it is stopped or terminated\. After this point, Nimble Studio automatically terminates or stops the session\. The default length of time is 690 minutes, and the maximum length of time is 30 days\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

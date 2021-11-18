@@ -28,8 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-deletemarkerreplication-properties"></a>
 
 `Status`  <a name="cfn-s3-bucket-deletemarkerreplication-status"></a>
-Indicates whether to replicate delete markers\.  
-Indicates whether to replicate delete markers\.
+Indicates whether to replicate delete markers\. Disabled by default\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `Disabled | Enabled`  

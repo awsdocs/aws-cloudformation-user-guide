@@ -1,10 +1,10 @@
 # AWS::DataSync::Agent<a name="aws-resource-datasync-agent"></a>
 
-The `AWS::DataSync::Agent` resource specifies an AWS DataSync agent to be deployed and activated on your host\. The activation process associates your agent with your account\. In the activation process, you specify information such as the AWS Region that you want to activate the agent in\. You activate the agent in the AWS Region where your target locations \(in Amazon S3, Amazon EFS, or Amazon FSx for Windows\) reside\. Your tasks are created in this AWS Region\.
+The `AWS::DataSync::Agent` resource specifies an AWS DataSync agent to be deployed and activated on your host\. The activation process associates your agent with your account\. In the activation process, you specify information such as the AWS Region that you want to activate the agent in\. You activate the agent in the AWS Region where your target locations \(in Amazon S3, Amazon EFS, or Amazon FSx for Windows File Server\) reside\. Your tasks are created in this AWS Region\.
 
-You can activate the agent in a VPC \(virtual private cloud\) or provide the agent access to a VPC endpoint so you can run tasks without going over the public internet\.
+You can activate the agent in a virtual private cloud \(VPC\) or provide the agent access to a VPC endpoint so that you can run tasks without sending them over the public internet\.
 
-You can specify an agent to be used for more than one location\. If a task uses multiple agents, all of them need to have status AVAILABLE for the task to run\. If you use multiple agents for a source location, the status of all the agents must be AVAILABLE for the task to run\. 
+You can specify an agent to be used for more than one location\. If a task uses multiple agents, all of them must have a status of AVAILABLE for the task to run\. If you use multiple agents for a source location, the status of all the agents must be AVAILABLE for the task to run\. 
 
 For more information, see [Activating an Agent](https://docs.aws.amazon.com/datasync/latest/userguide/activating-agent.html) in the *AWS DataSync User Guide*\.
 
@@ -70,7 +70,8 @@ The name you configured for your agent\. This value is a text reference that is 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupArns`  <a name="cfn-datasync-agent-securitygrouparns"></a>
-The ARNs of the security groups used to protect your data transfer task subnets\. See [SecurityGroupArns](https://docs.aws.amazon.com/datasync/latest/userguide/API_Ec2Config.html#DataSync-Type-Ec2Config-SecurityGroupArns)\.  
+The Amazon Resource Names \(ARNs\) of the security groups used to protect your data transfer task subnets\. See [SecurityGroupArns](https://docs.aws.amazon.com/datasync/latest/userguide/API_Ec2Config.html#DataSync-Type-Ec2Config-SecurityGroupArns)\.  
+*Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):ec2:[a-z\-0-9]*:[0-9]{12}:security-group/.*$`  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `1`  
@@ -92,9 +93,9 @@ Valid characters for key and value are letters, spaces, and numbers representabl
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcEndpointId`  <a name="cfn-datasync-agent-vpcendpointid"></a>
-The ID of the VPC \(virtual private cloud\) endpoint that the agent has access to\. This is the client\-side VPC endpoint, also called a PrivateLink\. If you don't have a PrivateLink VPC endpoint, see [Creating a VPC Endpoint Service Configuration](https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-service.html#create-endpoint-service) in the *Amazon VPC User Guide*\.  
-For more information about activating your agent in a private network based on Amazon VPC, see [Using AWS DataSync in a Virtual Private Cloud](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-in-vpc.html) in the *AWS DataSync User Guide\.*  
-VPC endpoint ID looks like this: `vpce-01234d5aff67890e1`\.  
+The ID of the virtual private cloud \(VPC\) endpoint that the agent has access to\. This is the client\-side VPC endpoint, powered by AWS PrivateLink\. If you don't have an AWS PrivateLink VPC endpoint, see [AWS PrivateLink and VPC endpoints](https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-services-overview.html) in the *Amazon VPC User Guide*\.  
+For more information about activating your agent in a private network based on a VPC, see [Using AWS DataSync in a Virtual Private Cloud](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-in-vpc.html) in the *AWS DataSync User Guide\.*  
+A VPC endpoint ID looks like this: `vpce-01234d5aff67890e1`\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `^vpce-[0-9a-f]{17}$`  
@@ -104,7 +105,7 @@ VPC endpoint ID looks like this: `vpce-01234d5aff67890e1`\.
 
 ### Ref<a name="aws-resource-datasync-agent-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the agent ARN\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the agent Amazon Resource Name \(ARN\)\. For example:
 
 `arn:aws:datasync:us-east-2:111222333444:agent/agent-0b0addbeef44baca3`
 
@@ -130,7 +131,7 @@ The type of endpoint that your agent is connected to\. If the endpoint is a VPC 
 
 ### DataSync Agent<a name="aws-resource-datasync-agent--examples--DataSync_Agent"></a>
 
-The following example specifies a DataSync agent, named `MyAgent`\. The agent activation key is included in the template\.
+The following example specifies a DataSync agent named `MyAgent`\. The agent activation key is included in the template\.
 
 #### JSON<a name="aws-resource-datasync-agent--examples--DataSync_Agent--json"></a>
 

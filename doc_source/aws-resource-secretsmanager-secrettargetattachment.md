@@ -2,9 +2,9 @@
 
 The `AWS::SecretsManager::SecretTargetAttachment` resource completes the final link between a Secrets Manager secret and the associated database\. This is required because each has a dependency on the other\. No matter which one you create first, the other doesn't exist yet\. To resolve this, you must create the resources in the following order:
 
-1. Define the secret without referencing the service or database\. You can't reference the service or database because it doesn't exist yet\.
+1. Define the secret without referencing the service or database\. You can't reference the service or database because it doesn't exist yet\. The secret must contain a user name and password\.
 
-1. Next, define the service or database\. Include the reference to the secret to use stored credentials to define the database master user and password\.
+1. Next, define the service or database\. Include the reference to the secret to use stored credentials to define the database admin user and password\.
 
 1. Finally, define a `SecretTargetAttachment` resource type to finish configuring the secret with the required database engine type and the connection details of the service or database\. The rotation function requires the details, if you attach one later by defining a [AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html) resource type\.
 
@@ -38,13 +38,13 @@ Properties:
 ## Properties<a name="aws-resource-secretsmanager-secrettargetattachment-properties"></a>
 
 `SecretId`  <a name="cfn-secretsmanager-secrettargetattachment-secretid"></a>
-The Amazon Resource Name \(ARN\) or the friendly name of the secret that contains the credentials that you want to use with the specified service or database\. To reference a secret also created in this template, use the see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function with the secret's logical ID\.  
+The ARN or name of the secret\. To reference a secret also created in this template, use the see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function with the secret's logical ID\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetId`  <a name="cfn-secretsmanager-secrettargetattachment-targetid"></a>
-The ARN of the secret\.  
+The ARN of the database or cluster\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
@@ -52,7 +52,7 @@ The ARN of the secret\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetType`  <a name="cfn-secretsmanager-secrettargetattachment-targettype"></a>
-A string that defines the type of service or database associated with the secret\. This value instructs AWS Secrets Manager how to update the secret with the details of the service or database\. This value must be one of the following:   
+A string that defines the type of service or database associated with the secret\. This value instructs Secrets Manager how to update the secret with the details of the service or database\. This value must be one of the following:   
 + AWS::RDS::DBInstance
 + AWS::RDS::DBCluster
 + AWS::Redshift::Cluster
@@ -70,30 +70,15 @@ When you pass the logical ID of an `AWS::SecretsManager::SecretTargetAttachment`
 
 `arn:aws:secretsmanager:us-west-2:123456789012:secret:my-path/my-secret-name-1a2b3c`
 
-This enables you to reference a secret you created in one part of the stack template from within the definition of another resource from a different part of the same template\.
+You can use the ARN to reference a secret you created in one part of the stack template from within the definition of another resource from a different part of the same template\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
 ## Examples<a name="aws-resource-secretsmanager-secrettargetattachment--examples"></a>
 
-The following examples create a secret, and then creates an AWS resource as defined by the TargetType using the credentials found in the secret for the new AWS resource master user and password\. Finally, the code updates the secret with the connection details of the AWS resource by defining the `SecretTargetAttachment` object\.
-
-**Supported resources**
-+ Amazon Aurora on Amazon RDS
-+ MySQL on Amazon RDS
-+ PostgresSQL on Amazon RDS
-+ Oracle on Amazon RDS
-+ MariaDB on Amazon RDS
-+ Microsoft SQL Server on Amazon RDS
-+ Amazon DocumentDB
-+ Amazon Redshift
-
-**Note**  
-The JSON specification doesn't allow any kind of comments\. See the YAML examples for comments\.
+The following examples create a secret, and then creates an AWS resource as defined by the TargetType using the credentials found in the secret for the new AWS resource user and password\. Finally, the code updates the secret with the connection details of the AWS resource by defining the `SecretTargetAttachment` object\.
 
 ### Creating a secret for a RDS database instance<a name="aws-resource-secretsmanager-secrettargetattachment--examples--Creating_a_secret_for_a_RDS_database_instance"></a>
-
-This example template creates a RDS database and secret\.
 
 #### JSON<a name="aws-resource-secretsmanager-secrettargetattachment--examples--Creating_a_secret_for_a_RDS_database_instance--json"></a>
 
@@ -174,8 +159,6 @@ This example template creates a RDS database and secret\.
 ```
 
 ### Creating a secret for a Redshift cluster<a name="aws-resource-secretsmanager-secrettargetattachment--examples--Creating_a_secret_for_a_Redshift_cluster"></a>
-
-This example template creates a Redshift Cluster database and secret\.
 
 #### JSON<a name="aws-resource-secretsmanager-secrettargetattachment--examples--Creating_a_secret_for_a_Redshift_cluster--json"></a>
 

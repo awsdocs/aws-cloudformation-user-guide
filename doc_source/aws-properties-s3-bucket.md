@@ -150,7 +150,7 @@ Settings that define where logs are stored\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricsConfigurations`  <a name="cfn-s3-bucket-metricsconfigurations"></a>
-Specifies a metrics configuration for the CloudWatch request metrics \(specified by the metrics configuration ID\) from an Amazon S3 bucket\. If you're updating an existing metrics configuration, note that this is a full replacement of the existing metrics configuration\. If you don't include the elements you want to keep, they are erased\. For more information, see [ PUT Bucket metrics](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTMetricConfiguration.html) in the *Amazon S3 API Reference*\.  
+Specifies a metrics configuration for the CloudWatch request metrics \(specified by the metrics configuration ID\) from an Amazon S3 bucket\. If you're updating an existing metrics configuration, note that this is a full replacement of the existing metrics configuration\. If you don't include the elements you want to keep, they are erased\. For more information, see [PutBucketMetricsConfiguration](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTMetricConfiguration.html)\.  
 *Required*: No  
 *Type*: List of [MetricsConfiguration](aws-properties-s3-bucket-metricsconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -174,7 +174,6 @@ Places an Object Lock configuration on the specified bucket\. The rule specified
 Indicates whether this bucket has an Object Lock configuration enabled\. Enable `ObjectLockEnabled` when you apply `ObjectLockConfiguration` to a bucket\.   
 *Required*: No  
 *Type*: Boolean  
-*Allowed values*: `Enabled`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OwnershipControls`  <a name="cfn-s3-bucket-ownershipcontrols"></a>

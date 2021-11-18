@@ -25,7 +25,7 @@ After all macros in the template have been called, AWS CloudFormation generates 
 **Important**  
 If your stack set template references one or more macros, you must create the stack set directly from the processed template, without first reviewing the resulting changes in a change set\. To create or update the stack set directly, you must use the [CreateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStackSet.html.html) or [UpdateStackSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStackSet.html.html) action and specify the `CAPABILITY_AUTO_EXPAND` capability\. Before you create or update a stack set from a template that references macros directly, be sure that you know what processing the macros performs\.
 
-![\[Use the Fn::Transform intrinsic function or the Transform section of the template, to pass the template contents and associated parameters to the macro's underlying Lamdba function, which returns the processed template contents.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/template-macro-use.png)
+![\[Use the Fn::Transform intrinsic function or the Transform section of the template, to pass the template contents and associated parameters to the macro's underlying Lambda function, which returns the processed template contents.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/template-macro-use.png)
 
 **Note**  
 If you are comfortable creating or updating a stack directly from a processed template, without first reviewing the proposed changes in a change set, you can do so by specifying the `CAPABILITY_AUTO_EXPAND` capability during a `CreateStack` or `UpdateStack` request\. You should only create stacks directly from a template that references macros if you know what processing the macros performs\.   
@@ -111,7 +111,7 @@ For information about additional considerations when creating macros, see [Consi
 
 You can use macros only in the account in which they were created as a resource\. The name of the macro must be unique within a given account\. However, you can make the same functionality available in multiple accounts by enabling cross\-account access on the underlying Lambda function, and then creating macro definitions referencing that function in multiple accounts\. In the example below, three accounts contain macro definitions that each point to the same Lambda function\.
 
-![\[By allowing cross-account access on the Lamdba function, AWS enables you to create macros in multiple accounts that reference that function.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/template-macro-accounts.png)
+![\[By allowing cross-account access on the Lambda function, AWS enables you to create macros in multiple accounts that reference that function.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/template-macro-accounts.png)
 
 For more information, see [Overview of managing access permissions to your AWS Lambda resources](https://docs.aws.amazon.com/lambda/latest/dg/access-control-overview.html) in the *AWS Lambda Developer Guide*\.
 

@@ -25,9 +25,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[IngestPort](#cfn-mediaconnect-flow-source-ingestport)" : Integer,
   "[MaxBitrate](#cfn-mediaconnect-flow-source-maxbitrate)" : Integer,
   "[MaxLatency](#cfn-mediaconnect-flow-source-maxlatency)" : Integer,
+  "[MinLatency](#cfn-mediaconnect-flow-source-minlatency)" : Integer,
   "[Name](#cfn-mediaconnect-flow-source-name)" : String,
   "[Protocol](#cfn-mediaconnect-flow-source-protocol)" : String,
   "[SourceArn](#cfn-mediaconnect-flow-source-sourcearn)" : String,
+  "[SourceIngestPort](#cfn-mediaconnect-flow-source-sourceingestport)" : String,
   "[StreamId](#cfn-mediaconnect-flow-source-streamid)" : String,
   "[VpcInterfaceName](#cfn-mediaconnect-flow-source-vpcinterfacename)" : String,
   "[WhitelistCidr](#cfn-mediaconnect-flow-source-whitelistcidr)" : String
@@ -45,9 +47,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [IngestPort](#cfn-mediaconnect-flow-source-ingestport): Integer
   [MaxBitrate](#cfn-mediaconnect-flow-source-maxbitrate): Integer
   [MaxLatency](#cfn-mediaconnect-flow-source-maxlatency): Integer
+  [MinLatency](#cfn-mediaconnect-flow-source-minlatency): Integer
   [Name](#cfn-mediaconnect-flow-source-name): String
   [Protocol](#cfn-mediaconnect-flow-source-protocol): String
   [SourceArn](#cfn-mediaconnect-flow-source-sourcearn): String
+  [SourceIngestPort](#cfn-mediaconnect-flow-source-sourceingestport): String
   [StreamId](#cfn-mediaconnect-flow-source-streamid): String
   [VpcInterfaceName](#cfn-mediaconnect-flow-source-vpcinterfacename): String
   [WhitelistCidr](#cfn-mediaconnect-flow-source-whitelistcidr): String
@@ -97,6 +101,12 @@ The maximum latency in milliseconds for a RIST or Zixi\-based source\.
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`MinLatency`  <a name="cfn-mediaconnect-flow-source-minlatency"></a>
+The minimum latency in milliseconds for SRT\-based streams\. In streams that use the SRT protocol, this value that you set on your MediaConnect source or output represents the minimal potential latency of that connection\. The latency of the stream is set to the highest number between the sender’s minimum latency and the receiver’s minimum latency\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Name`  <a name="cfn-mediaconnect-flow-source-name"></a>
 The name of the source\.  
 *Required*: No  
@@ -111,6 +121,12 @@ The protocol that is used by the source\. For a full list of available protocols
 
 `SourceArn`  <a name="cfn-mediaconnect-flow-source-sourcearn"></a>
 The ARN of the source\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SourceIngestPort`  <a name="cfn-mediaconnect-flow-source-sourceingestport"></a>
+The port that the flow will be listening on for incoming content\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -62,6 +62,13 @@ An array of tag object\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-config-aggregationauthorization-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-config-aggregationauthorization-return-values-fn--getatt-fn--getatt"></a>
+
+`AggregationAuthorizationArn`  <a name="AggregationAuthorizationArn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-config-aggregationauthorization--examples"></a>
 
 

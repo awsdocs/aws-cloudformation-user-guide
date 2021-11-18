@@ -156,6 +156,6 @@ SampleTrafficMirrorSession:
 ```
 
 ## See also<a name="aws-resource-ec2-trafficmirrorsession--seealso"></a>
-+ [Traffic Mirror Sessions](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-how-it-works.html#traffic-mirroring-sessions) in *Traffic Mirroring*
++ [Traffic mirror sessions](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-sessions.html) in *Traffic Mirroring*
 + [CreateTrafficMirrorSession](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTrafficMirrorSession.html) in the *Amazon EC2 API Reference*
 

@@ -1,4 +1,4 @@
-# ECS resource type reference<a name="AWS_ECS"></a>
+# Amazon ECS resource type reference<a name="AWS_ECS"></a>
 
 **Resource types**
 + [AWS::ECS::CapacityProvider](aws-resource-ecs-capacityprovider.md)

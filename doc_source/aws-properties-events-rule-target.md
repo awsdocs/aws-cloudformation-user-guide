@@ -96,7 +96,7 @@ If you specify an API Gateway REST API or EventBridge ApiDestination as a target
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-events-rule-target-id"></a>
-The ID of the target\. We recommend using a memorable and unique string\.  
+The ID of the target within the specified rule\. Use this ID to reference the target when updating the rule\. We recommend using a memorable and unique string\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -163,3 +163,165 @@ If you specify an SQS FIFO queue as a target, the queue must have content\-based
 *Required*: No  
 *Type*: [SqsParameters](aws-properties-events-rule-sqsparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-events-rule-target--examples"></a>
+
+
+
+### Target with KinesisParameters<a name="aws-properties-events-rule-target--examples--Target_with_KinesisParameters"></a>
+
+The following snippet creates a Kinesis data stream target\.
+
+#### JSON<a name="aws-properties-events-rule-target--examples--Target_with_KinesisParameters--json"></a>
+
+```
+"MyEventsRule": {
+    "Type": "AWS::Events::Rule",
+    "Properties": {
+        "Description": "Events Rule with KinesisParameters",
+        "EventPattern": {
+            "source": [
+                "aws.ec2"
+            ]
+        },
+        "RoleArn": {
+            "Fn::GetAtt": [
+                "EventsInvokeKinesisTargetRole",
+                "Arn"
+            ]
+        },
+        "ScheduleExpression": "rate(5 minutes)",
+        "State": "ENABLED",
+        "Targets": [
+            {
+                "Arn": {
+                    "Fn::GetAtt": [
+                        "MyFirstStream",
+                        "Arn"
+                    ]
+                },
+                "Id": "Id123",
+                "RoleArn": {
+                    "Fn::GetAtt": [
+                        "EventsInvokeKinesisTargetRole",
+                        "Arn"
+                    ]
+                },
+                "KinesisParameters": {
+                    "PartitionKeyPath": "$"
+                }
+            }
+        ]
+    }
+}
+```
+
+#### YAML<a name="aws-properties-events-rule-target--examples--Target_with_KinesisParameters--yaml"></a>
+
+```
+MyEventsRule:
+  Type: AWS::Events::Rule
+  Properties:
+    Description: Events Rule with KinesisParameters
+    EventPattern:
+      source:
+        - aws.ec2
+    RoleArn: !GetAtt 
+      - EventsInvokeKinesisTargetRole
+      - Arn
+    ScheduleExpression: rate(5 minutes)
+    State: ENABLED
+    Targets:
+      - Arn: !GetAtt 
+          - MyFirstStream
+          - Arn
+        Id: Id123
+        RoleArn: !GetAtt 
+          - EventsInvokeKinesisTargetRole
+          - Arn
+        KinesisParameters:
+          PartitionKeyPath: $
+```
+
+### Target with EcsParameters<a name="aws-properties-events-rule-target--examples--Target_with_EcsParameters"></a>
+
+The following snippet creates an Amazon ECS task target\.
+
+#### JSON<a name="aws-properties-events-rule-target--examples--Target_with_EcsParameters--json"></a>
+
+```
+"MyEventsRule": {
+  "Type": "AWS::Events::Rule",
+  "Properties": {
+      "Description": "Events Rule with EcsParameters",
+      "EventPattern": {
+          "source": [
+              "aws.ec2"
+          ],
+          "detail-type": [
+              "EC2 Instance State-change Notification"
+          ],
+          "detail": {
+              "state": [
+                  "stopping"
+              ]
+          }
+      },
+      "ScheduleExpression": "rate(15 minutes)",
+      "State": "DISABLED",
+      "Targets": [
+          {
+              "Arn": {
+                  "Fn::GetAtt": [
+                      "MyCluster",
+                      "Arn"
+                  ]
+              },
+              "RoleArn": {
+                  "Fn::GetAtt": [
+                      "ECSTaskRole",
+                      "Arn"
+                  ]
+              },
+              "Id": "Id345",
+              "EcsParameters": {
+                  "TaskCount": 1,
+                  "TaskDefinitionArn": {
+                      "Ref": "MyECSTask"
+                  }
+              }
+          }
+      ]
+  }
+}
+```
+
+#### YAML<a name="aws-properties-events-rule-target--examples--Target_with_EcsParameters--yaml"></a>
+
+```
+MyEventsRule:
+  Type: AWS::Events::Rule
+  Properties:
+    Description: Events Rule with EcsParameters
+    EventPattern:
+      source:
+        - aws.ec2
+      detail-type:
+        - EC2 Instance State-change Notification
+      detail:
+        state:
+          - stopping
+    ScheduleExpression: rate(15 minutes)
+    State: DISABLED
+    Targets:
+      - Arn: !GetAtt 
+          - MyCluster
+          - Arn
+        RoleArn: !GetAtt 
+          - ECSTaskRole
+          - Arn
+        Id: Id345
+        EcsParameters:
+          TaskCount: 1
+          TaskDefinitionArn: !Ref MyECSTask
+```

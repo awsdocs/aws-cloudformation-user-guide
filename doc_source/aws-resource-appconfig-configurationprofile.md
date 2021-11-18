@@ -35,6 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-appconfig-configurationprofile-name)" : String,
       "[RetrievalRoleArn](#cfn-appconfig-configurationprofile-retrievalrolearn)" : String,
       "[Tags](#cfn-appconfig-configurationprofile-tags)" : [ Tags, ... ],
+      "[Type](#cfn-appconfig-configurationprofile-type)" : String,
       "[Validators](#cfn-appconfig-configurationprofile-validators)" : [ Validators, ... ]
     }
 }
@@ -52,6 +53,7 @@ Properties:
   [RetrievalRoleArn](#cfn-appconfig-configurationprofile-retrievalrolearn): String
   [Tags](#cfn-appconfig-configurationprofile-tags): 
     - Tags
+  [Type](#cfn-appconfig-configurationprofile-type): String
   [Validators](#cfn-appconfig-configurationprofile-validators): 
     - Validators
 ```
@@ -74,7 +76,7 @@ A description of the configuration profile\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LocationUri`  <a name="cfn-appconfig-configurationprofile-locationuri"></a>
-A URI to locate the configuration\. You can specify the AWS AppConfig hosted configuration store, Systems Manager \(SSM\) document, an SSM Parameter Store parameter, or an Amazon S3 object\. For the hosted configuration store, specify `hosted`\. For an SSM document, specify either the document name in the format `ssm-document://<Document_name>` or the Amazon Resource Name \(ARN\)\. For a parameter, specify either the parameter name in the format `ssm-parameter://<Parameter_name>` or the ARN\. For an Amazon S3 object, specify the URI in the following format: `s3://<bucket>/<objectKey> `\. Here is an example: s3://my\-bucket/my\-app/us\-east\-1/my\-config\.json  
+A URI to locate the configuration\. You can specify the AWS AppConfig hosted configuration store, Systems Manager \(SSM\) document, an SSM Parameter Store parameter, or an Amazon S3 object\. For the hosted configuration store, specify `hosted`\. For an SSM document, specify either the document name in the format `ssm-document://<Document_name>` or the Amazon Resource Name \(ARN\)\. For a parameter, specify either the parameter name in the format `ssm-parameter://<Parameter_name>` or the ARN\. For an Amazon S3 object, specify the URI in the following format: `s3://<bucket>/<objectKey> `\. Here is an example: `s3://my-bucket/my-app/us-east-1/my-config.json`   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -90,7 +92,7 @@ A name for the configuration profile\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetrievalRoleArn`  <a name="cfn-appconfig-configurationprofile-retrievalrolearn"></a>
-The ARN of an IAM role with permission to access the configuration at the specified LocationUri\.  
+The ARN of an IAM role with permission to access the configuration at the specified `LocationUri`\.  
 A retrieval role ARN is not required for configurations stored in the AWS AppConfig hosted configuration store\. It is required for all other sources that store your configuration\. 
 *Required*: No  
 *Type*: String  
@@ -104,6 +106,12 @@ Metadata to assign to the configuration profile\. Tags help organize and categor
 *Required*: No  
 *Type*: [List](aws-properties-appconfig-configurationprofile-tags.md) of [Tags](aws-properties-appconfig-configurationprofile-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Type`  <a name="cfn-appconfig-configurationprofile-type"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Validators`  <a name="cfn-appconfig-configurationprofile-validators"></a>
 A list of methods for validating the configuration\.  

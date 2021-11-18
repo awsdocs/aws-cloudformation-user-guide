@@ -73,15 +73,21 @@ The following example specifies a CodeDeploy application with a Lambda compute p
 #### JSON<a name="aws-resource-codedeploy-application--examples--Specify_an_application_with_a__compute_platform--json"></a>
 
 ```
-"CodeDeployApplication": { "Type": "AWS::CodeDeploy::Application",
-        "Properties": { "ComputePlatform": "Lambda" } }
+"CodeDeployApplication": { 
+    "Type": "AWS::CodeDeploy::Application",
+    "Properties": { 
+        "ComputePlatform": "Lambda" 
+    } 
+}
 ```
 
 #### YAML<a name="aws-resource-codedeploy-application--examples--Specify_an_application_with_a__compute_platform--yaml"></a>
 
 ```
-CodeDeployApplication: Type: AWS::CodeDeploy::Application Properties:
-        ComputePlatform: Lambda
+CodeDeployApplication: 
+  Type: AWS::CodeDeploy::Application 
+  Properties:
+    ComputePlatform: Lambda
 ```
 
 ### Specify an application with a Server compute platform<a name="aws-resource-codedeploy-application--examples--Specify_an_application_with_a_Server_compute_platform"></a>
@@ -91,15 +97,21 @@ The following example creates a CodeDeploy application with a `Server` compute p
 #### JSON<a name="aws-resource-codedeploy-application--examples--Specify_an_application_with_a_Server_compute_platform--json"></a>
 
 ```
-"CodeDeployApplication": { "Type": "AWS::CodeDeploy::Application",
-        "Properties": { "ComputePlatform": "Server" } }
+"CodeDeployApplication": { 
+    "Type": "AWS::CodeDeploy::Application",
+    "Properties": { 
+        "ComputePlatform": "Server"
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-codedeploy-application--examples--Specify_an_application_with_a_Server_compute_platform--yaml"></a>
 
 ```
-CodeDeployApplication: Type: AWS::CodeDeploy::Application Properties:
-        ComputePlatform: Server
+CodeDeployApplication: 
+  Type: AWS::CodeDeploy::Application 
+  Properties:
+    ComputePlatform: Server
 ```
 
 ## See also<a name="aws-resource-codedeploy-application--seealso"></a>

@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSource RedshiftParameters<a name="aws-properties-quicksight-datasource-redshiftparameters"></a>
 
-Amazon Redshift parameters\. The `ClusterId` field can be blank if `Host` and `Port` are both set\. The `Host` and `Port` fields can be blank if the `ClusterId` field is set\.
+The parameters for Amazon Redshift\. The `ClusterId` field can be blank if `Host` and `Port` are both set\. The `Host` and `Port` fields can be blank if the `ClusterId` field is set\.
 
 ## Syntax<a name="aws-properties-quicksight-datasource-redshiftparameters-syntax"></a>
 

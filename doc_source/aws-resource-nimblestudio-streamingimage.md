@@ -37,7 +37,7 @@ Properties:
 ## Properties<a name="aws-resource-nimblestudio-streamingimage-properties"></a>
 
 `Description`  <a name="cfn-nimblestudio-streamingimage-description"></a>
- A human\-readable description of the streaming image\.  
+A human\-readable description of the streaming image\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -55,7 +55,7 @@ A friendly name for a streaming image resource\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StudioId`  <a name="cfn-nimblestudio-streamingimage-studioid"></a>
-The unique identifier for a studio resource\. In Nimble Studio, all other resources are contained in a studio resource\.   
+The unique identifier for a studio resource\. In Nimble Studio, all other resources are contained in a studio resource\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -89,7 +89,8 @@ This parameter isn't applicable to jobs that are running on Fargate resources, a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Ec2Configuration`  <a name="cfn-batch-computeenvironment-computeresources-ec2configuration"></a>
-Provides information used to select Amazon Machine Images \(AMIs\) for EC2 instances in the compute environment\. If `Ec2Configuration` isn't specified, the default is `ECS_AL1`\.  
+Provides information used to select Amazon Machine Images \(AMIs\) for EC2 instances in the compute environment\. If `Ec2Configuration` isn't specified, the default is `ECS_AL2`\.  
+One or two values can be provided\.  
 This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified\.
 *Required*: No  
 *Type*: List of [Ec2ConfigurationObject](aws-properties-batch-computeenvironment-ec2configurationobject.md)  
@@ -175,7 +176,7 @@ The VPC subnets where the compute resources are launched\. These subnets must be
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-batch-computeenvironment-computeresources-tags"></a>
-Key\-value pair tags to be applied to EC2 resources that are launched in the compute environment\. For AWS Batch, these take the form of "String1": "String2", where String1 is the tag key and String2 is the tag value−for example, `{ "Name": "Batch Instance - C4OnDemand" }`\. This is helpful for recognizing your AWS Batch instances in the Amazon EC2 console\. These tags can't be updated or removed after the compute environment is created\.Aany changes to these tags require that you create a new compute environment and remove the old compute environment\. These tags aren't seen when using the AWS Batch `ListTagsForResource` API operation\.  
+Key\-value pair tags to be applied to EC2 resources that are launched in the compute environment\. For AWS Batch, these take the form of "String1": "String2", where String1 is the tag key and String2 is the tag value−for example, `{ "Name": "Batch Instance - C4OnDemand" }`\. This is helpful for recognizing your AWS Batch instances in the Amazon EC2 console\. These tags can't be updated or removed after the compute environment is created\. Any changes to these tags require that you create a new compute environment and remove the old compute environment\. These tags aren't seen when using the AWS Batch `ListTagsForResource` API operation\.  
 This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified\.
 *Required*: No  
 *Type*: Json  

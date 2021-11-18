@@ -22,7 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ProtocolDetails](#cfn-transfer-server-protocoldetails)" : ProtocolDetails,
       "[Protocols](#cfn-transfer-server-protocols)" : [ Protocol, ... ],
       "[SecurityPolicyName](#cfn-transfer-server-securitypolicyname)" : String,
-      "[Tags](#cfn-transfer-server-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+      "[Tags](#cfn-transfer-server-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[WorkflowDetails](#cfn-transfer-server-workflowdetails)" : WorkflowDetails
     }
 }
 ```
@@ -48,6 +49,8 @@ Properties:
   [SecurityPolicyName](#cfn-transfer-server-securitypolicyname): String
   [Tags](#cfn-transfer-server-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [WorkflowDetails](#cfn-transfer-server-workflowdetails): 
+    WorkflowDetails
 ```
 
 ## Properties<a name="aws-resource-transfer-server-properties"></a>
@@ -141,6 +144,12 @@ Key\-value pairs that can be used to group and search for servers\.
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`WorkflowDetails`  <a name="cfn-transfer-server-workflowdetails"></a>
+Specifies the workflow ID for the workflow to assign and the execution role used for executing the workflow\.  
+*Required*: No  
+*Type*: [WorkflowDetails](aws-properties-transfer-server-workflowdetails.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-transfer-server-return-values"></a>

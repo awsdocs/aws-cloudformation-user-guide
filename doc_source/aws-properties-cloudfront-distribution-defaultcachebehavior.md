@@ -23,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[MinTTL](#cfn-cloudfront-distribution-defaultcachebehavior-minttl)" : Double,
   "[OriginRequestPolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-originrequestpolicyid)" : String,
   "[RealtimeLogConfigArn](#cfn-cloudfront-distribution-defaultcachebehavior-realtimelogconfigarn)" : String,
+  "[ResponseHeadersPolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-responseheaderspolicyid)" : String,
   "[SmoothStreaming](#cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming)" : Boolean,
   "[TargetOriginId](#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid)" : String,
   "[TrustedKeyGroups](#cfn-cloudfront-distribution-defaultcachebehavior-trustedkeygroups)" : [ String, ... ],
@@ -52,6 +53,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [MinTTL](#cfn-cloudfront-distribution-defaultcachebehavior-minttl): Double
   [OriginRequestPolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-originrequestpolicyid): String
   [RealtimeLogConfigArn](#cfn-cloudfront-distribution-defaultcachebehavior-realtimelogconfigarn): String
+  [ResponseHeadersPolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-responseheaderspolicyid): String
   [SmoothStreaming](#cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming): Boolean
   [TargetOriginId](#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid): String
   [TrustedKeyGroups](#cfn-cloudfront-distribution-defaultcachebehavior-trustedkeygroups): 
@@ -153,6 +155,12 @@ The unique identifier of the origin request policy that is attached to the defau
 
 `RealtimeLogConfigArn`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-realtimelogconfigarn"></a>
 The Amazon Resource Name \(ARN\) of the real\-time log configuration that is attached to this cache behavior\. For more information, see [Real\-time logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html) in the *Amazon CloudFront Developer Guide*\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ResponseHeadersPolicyId`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-responseheaderspolicyid"></a>
+The identifier for a response headers policy\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

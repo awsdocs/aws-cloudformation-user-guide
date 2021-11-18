@@ -342,8 +342,8 @@ For the cache cluster, the `VpcSecurityGroupIds` property is used to associate t
             "SecurityGroupIngress": [
                 {
                     "IpProtocol": "tcp",
-                    "FromPort": "11211",
-                    "ToPort": "11211",
+                    "FromPort": 11211,
+                    "ToPort": 11211,
                     "SourceSecurityGroupName": {
                         "Ref": "InstanceSecurityGroup"
                     }
@@ -379,8 +379,8 @@ ElasticacheSecurityGroup:
     GroupDescription: Elasticache Security Group
     SecurityGroupIngress:
       - IpProtocol: tcp
-        FromPort: '11211'
-        ToPort: '11211'
+        FromPort: 11211
+        ToPort: 11211
         SourceSecurityGroupName: !Ref InstanceSecurityGroup
 ElasticacheCluster:
   Type: 'AWS::ElastiCache::CacheCluster'

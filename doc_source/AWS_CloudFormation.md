@@ -1,4 +1,4 @@
-# CloudFormation resource type reference<a name="AWS_CloudFormation"></a>
+# AWS CloudFormation resource type reference<a name="AWS_CloudFormation"></a>
 
 **Resource types**
 + [AWS::CloudFormation::CustomResource](aws-resource-cfn-customresource.md)

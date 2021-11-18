@@ -47,7 +47,7 @@ The type of comparison you want AWS WAF to perform\. AWS WAF uses this in combin
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldToMatch`  <a name="cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch"></a>
-Not currently supported by AWS CloudFormation\.  
+The part of a web request that you want AWS WAF to inspect, such as a specific header or a query string\.   
 *Required*: Yes  
 *Type*: [FieldToMatch](aws-properties-wafregional-sizeconstraintset-fieldtomatch.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

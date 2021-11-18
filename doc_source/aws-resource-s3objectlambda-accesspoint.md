@@ -32,7 +32,7 @@ Properties:
 
 `Name`  <a name="cfn-s3objectlambda-accesspoint-name"></a>
 The name of this access point\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

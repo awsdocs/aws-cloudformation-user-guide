@@ -43,4 +43,6 @@ An object that represents the method and value to match with the header value se
 A name for the HTTP header in the gateway route that will be matched on\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

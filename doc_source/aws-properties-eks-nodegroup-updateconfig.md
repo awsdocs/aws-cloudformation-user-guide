@@ -2,9 +2,6 @@
 
 The update configuration for the node group\.
 
-**Note**  
-This CloudFormation property is not currently supported\.
-
 ## Syntax<a name="aws-properties-eks-nodegroup-updateconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSource AmazonElasticsearchParameters<a name="aws-properties-quicksight-datasource-amazonelasticsearchparameters"></a>
 
-Amazon Elasticsearch Service parameters\.
+The parameters for OpenSearch\.
 
 ## Syntax<a name="aws-properties-quicksight-datasource-amazonelasticsearchparameters-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-datasource-amazonelasticsearchparameters-properties"></a>
 
 `Domain`  <a name="cfn-quicksight-datasource-amazonelasticsearchparameters-domain"></a>
-The Amazon Elasticsearch Service domain\.  
+The OpenSearch domain\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

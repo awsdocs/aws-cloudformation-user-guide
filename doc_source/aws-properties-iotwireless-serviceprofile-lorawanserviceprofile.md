@@ -65,10 +65,11 @@ The AddGWMetaData value\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ChannelMask`  <a name="cfn-iotwireless-serviceprofile-lorawanserviceprofile-channelmask"></a>
-The ChannelMask value\. It has a maximum length of 2048 characters\.  
+The ChannelMask value\.  
 This property is `ReadOnly` and can't be inputted for create\. It's returned with `Fn::GetAtt`  
 *Required*: No  
 *Type*: String  
+*Maximum*: `2048`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DevStatusReqFreq`  <a name="cfn-iotwireless-serviceprofile-lorawanserviceprofile-devstatusreqfreq"></a>
@@ -76,41 +77,52 @@ The DevStatusReqFreq value\.
 This property is `ReadOnly` and can't be inputted for create\. It's returned with `Fn::GetAtt`  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DlBucketSize`  <a name="cfn-iotwireless-serviceprofile-lorawanserviceprofile-dlbucketsize"></a>
-The DLBucketSize value\. The minimum value is 0 and maximum value is 2147483647\.  
+The DLBucketSize value\.  
 This property is `ReadOnly` and can't be inputted for create\. It's returned with `Fn::GetAtt`  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DlRate`  <a name="cfn-iotwireless-serviceprofile-lorawanserviceprofile-dlrate"></a>
-The DLRate value\. The minimum value is 0 and maximum value is 2147483647\.  
+The DLRate value\.  
 This property is `ReadOnly` and can't be inputted for create\. It's returned with `Fn::GetAtt`  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DlRatePolicy`  <a name="cfn-iotwireless-serviceprofile-lorawanserviceprofile-dlratepolicy"></a>
-The DLRatePolicy value\. Maximum length is 256 characters\.  
+The DLRatePolicy value\.  
 This property is `ReadOnly` and can't be inputted for create\. It's returned with `Fn::GetAtt`  
 *Required*: No  
 *Type*: String  
+*Maximum*: `256`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DrMax`  <a name="cfn-iotwireless-serviceprofile-lorawanserviceprofile-drmax"></a>
-The DRMax value\. The minimum value is 0 and maximum value is 15\.  
+The DRMax value\.  
 This property is `ReadOnly` and can't be inputted for create\. It's returned with `Fn::GetAtt`  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `15`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DrMin`  <a name="cfn-iotwireless-serviceprofile-lorawanserviceprofile-drmin"></a>
-The DRMin value\. The minimum value is 0 and maximum value is 15\.  
+The DRMin value\.  
 This property is `ReadOnly` and can't be inputted for create\. It's returned with `Fn::GetAtt`  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `15`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HrAllowed`  <a name="cfn-iotwireless-serviceprofile-lorawanserviceprofile-hrallowed"></a>
@@ -121,10 +133,12 @@ This property is `ReadOnly` and can't be inputted for create\. It's returned wit
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinGwDiversity`  <a name="cfn-iotwireless-serviceprofile-lorawanserviceprofile-mingwdiversity"></a>
-The MinGwDiversity value\. The minimum value is 1 and maximum value is 100\.  
+The MinGwDiversity value\.  
 This property is `ReadOnly` and can't be inputted for create\. It's returned with `Fn::GetAtt`  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NwkGeoLoc`  <a name="cfn-iotwireless-serviceprofile-lorawanserviceprofile-nwkgeoloc"></a>
@@ -162,29 +176,36 @@ This property is `ReadOnly` and can't be inputted for create\. It's returned wit
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetPer`  <a name="cfn-iotwireless-serviceprofile-lorawanserviceprofile-targetper"></a>
-The TargetPer value\. Minimum value is 0 and maximum value is 100\.  
+The TargetPer value\.  
 This property is `ReadOnly` and can't be inputted for create\. It's returned with `Fn::GetAtt`  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UlBucketSize`  <a name="cfn-iotwireless-serviceprofile-lorawanserviceprofile-ulbucketsize"></a>
-The UlBucketSize value\. The minimum value is 0 and maximum value is 2147483647\.  
+The UlBucketSize value\.  
 This property is `ReadOnly` and can't be inputted for create\. It's returned with `Fn::GetAtt`  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UlRate`  <a name="cfn-iotwireless-serviceprofile-lorawanserviceprofile-ulrate"></a>
-The ULRate value\. The minimum value is 0 and maximum value is 2147483647\.  
+The ULRate value\.  
 This property is `ReadOnly` and can't be inputted for create\. It's returned with `Fn::GetAtt`  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UlRatePolicy`  <a name="cfn-iotwireless-serviceprofile-lorawanserviceprofile-ulratepolicy"></a>
-The ULRatePolicy value\. The maximum length is 256 characters\.  
+The ULRatePolicy value\.  
 This property is `ReadOnly` and can't be inputted for create\. It's returned with `Fn::GetAtt`  
 *Required*: No  
 *Type*: String  
+*Maximum*: `256`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

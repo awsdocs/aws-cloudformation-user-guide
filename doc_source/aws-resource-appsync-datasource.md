@@ -1,6 +1,6 @@
 # AWS::AppSync::DataSource<a name="aws-resource-appsync-datasource"></a>
 
-The `AWS::AppSync::DataSource` resource creates data sources for resolvers in AWS AppSync to connect to, such as Amazon DynamoDB, AWS Lambda, and Amazon Elasticsearch Service\. Resolvers use these data sources to fetch data when clients make GraphQL calls\. 
+The `AWS::AppSync::DataSource` resource creates data sources for resolvers in AWS AppSync to connect to, such as Amazon DynamoDB, AWS Lambda, and Amazon OpenSearch Service\. Resolvers use these data sources to fetch data when clients make GraphQL calls\. 
 
 ## Syntax<a name="aws-resource-appsync-datasource-syntax"></a>
 
@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[HttpConfig](#cfn-appsync-datasource-httpconfig)" : HttpConfig,
       "[LambdaConfig](#cfn-appsync-datasource-lambdaconfig)" : LambdaConfig,
       "[Name](#cfn-appsync-datasource-name)" : String,
+      "[OpenSearchServiceConfig](#cfn-appsync-datasource-opensearchserviceconfig)" : OpenSearchServiceConfig,
       "[RelationalDatabaseConfig](#cfn-appsync-datasource-relationaldatabaseconfig)" : RelationalDatabaseConfig,
       "[ServiceRoleArn](#cfn-appsync-datasource-servicerolearn)" : String,
       "[Type](#cfn-appsync-datasource-type)" : String
@@ -42,6 +43,8 @@ Properties:
   [LambdaConfig](#cfn-appsync-datasource-lambdaconfig): 
     LambdaConfig
   [Name](#cfn-appsync-datasource-name): String
+  [OpenSearchServiceConfig](#cfn-appsync-datasource-opensearchserviceconfig): 
+    OpenSearchServiceConfig
   [RelationalDatabaseConfig](#cfn-appsync-datasource-relationaldatabaseconfig): 
     RelationalDatabaseConfig
   [ServiceRoleArn](#cfn-appsync-datasource-servicerolearn): String
@@ -69,7 +72,8 @@ AWS Region and TableName for an Amazon DynamoDB table in your account\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ElasticsearchConfig`  <a name="cfn-appsync-datasource-elasticsearchconfig"></a>
-AWS Region and Endpoints for an Amazon Elasticsearch Service domain in your account\.  
+AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account\.  
+As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service\. This property is deprecated\. For new data sources, use *OpenSearchServiceConfig* to specify an OpenSearch Service data source\.  
 *Required*: No  
 *Type*: [ElasticsearchConfig](aws-properties-appsync-datasource-elasticsearchconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -92,6 +96,12 @@ Friendly name for you to identify your AppSync data source after creation\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`OpenSearchServiceConfig`  <a name="cfn-appsync-datasource-opensearchserviceconfig"></a>
+AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account\.  
+*Required*: No  
+*Type*: [OpenSearchServiceConfig](aws-properties-appsync-datasource-opensearchserviceconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `RelationalDatabaseConfig`  <a name="cfn-appsync-datasource-relationaldatabaseconfig"></a>
 Relational Database configuration of the relational database data source\.  
 *Required*: No  
@@ -100,16 +110,17 @@ Relational Database configuration of the relational database data source\.
 
 `ServiceRoleArn`  <a name="cfn-appsync-datasource-servicerolearn"></a>
 The AWS Identity and Access Management service role ARN for the data source\. The system assumes this role when accessing the data source\.  
-Required if `Type` is specified as `AWS_LAMBDA`, `AMAZON_DYNAMODB`, or `AMAZON_ELASTICSEARCH`\.   
+Required if `Type` is specified as `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, or `AMAZON_OPENSEARCH_SERVICE`\.   
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-appsync-datasource-type"></a>
 The type of the data source\.  
-+  **AMAZON\_DYNAMODB**: The data source is an Amazon DynamoDB table\.
-+  **AMAZON\_ELASTICSEARCH**: The data source is an Amazon Elasticsearch Service domain\.
 +  **AWS\_LAMBDA**: The data source is an AWS Lambda function\.
++  **AMAZON\_DYNAMODB**: The data source is an Amazon DynamoDB table\.
++  **AMAZON\_ELASTICSEARCH**: The data source is an Amazon OpenSearch Service domain\.
++  **AMAZON\_OPENSEARCH\_SERVICE**: The data source is an Amazon OpenSearch Service domain\.
 +  **NONE**: There is no data source\. This type is used when you wish to invoke a GraphQL operation without connecting to a data source, such as performing data transformation with resolvers or triggering a subscription to be invoked from a mutation\.
 +  **HTTP**: The data source is an HTTP endpoint\.
 +  **RELATIONAL\_DATABASE**: The data source is a relational database\.

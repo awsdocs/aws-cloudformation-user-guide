@@ -46,6 +46,8 @@ The CRC of the signature private key to check\.
 The signature used to verify the update firmware\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `4096`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UpdateVersion`  <a name="cfn-iotwireless-taskdefinition-lorawanupdategatewaytaskcreate-updateversion"></a>

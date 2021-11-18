@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSource SqlServerParameters<a name="aws-properties-quicksight-datasource-sqlserverparameters"></a>
 
-SQL Server parameters\.
+The parameters for SQL Server\.
 
 ## Syntax<a name="aws-properties-quicksight-datasource-sqlserverparameters-syntax"></a>
 

@@ -28,10 +28,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The default prefix used to replace the incoming route prefix when rewritten\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-appmesh-gatewayroute-httpgatewayrouteprefixrewrite-value"></a>
 The value used to replace the incoming route prefix when rewritten\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

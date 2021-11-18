@@ -147,3 +147,6 @@ The IP address that the flow listens on for incoming content\.
 
 `SourceArn`  <a name="SourceArn-fn::getatt"></a>
 The ARN of the source\.
+
+`SourceIngestPort`  <a name="SourceIngestPort-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.

@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appconfig-environment-monitors-properties"></a>
 
 `AlarmArn`  <a name="cfn-appconfig-environment-monitors-alarmarn"></a>
-ARN of the Amazon CloudWatch alarm\.  
+Amazon Resource Name \(ARN\) of the Amazon CloudWatch alarm\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -33,7 +33,7 @@ ARN of the Amazon CloudWatch alarm\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AlarmRoleArn`  <a name="cfn-appconfig-environment-monitors-alarmrolearn"></a>
-ARN of an IAM role for AWS AppConfig to monitor `AlarmArn`\.  
+ARN of an AWS Identity and Access Management \(IAM\) role for AWS AppConfig to monitor `AlarmArn`\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  

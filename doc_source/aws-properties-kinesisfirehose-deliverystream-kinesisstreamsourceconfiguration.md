@@ -1,6 +1,6 @@
 # AWS::KinesisFirehose::DeliveryStream KinesisStreamSourceConfiguration<a name="aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration"></a>
 
-The `KinesisStreamSourceConfiguration` property type specifies the stream and role Amazon Resource Names \(ARNs\) for a Kinesis stream used as the source for a delivery stream\. 
+The `KinesisStreamSourceConfiguration` property type specifies the stream and role Amazon Resource Names \(ARNs\) for a Kinesis stream used as the source for a delivery stream\.
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-syntax"></a>
 

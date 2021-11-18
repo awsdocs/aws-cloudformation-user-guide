@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-service-networkconfiguration-properties"></a>
 
 `AwsvpcConfiguration`  <a name="cfn-ecs-service-networkconfiguration-awsvpcconfiguration"></a>
-The VPC subnets and security groups associated with a task\.  
+The VPC subnets and security groups that are associated with a task\.  
 All specified subnets and security groups must be from the same VPC\.
 *Required*: No  
 *Type*: [AwsVpcConfiguration](aws-properties-ecs-service-awsvpcconfiguration.md)  

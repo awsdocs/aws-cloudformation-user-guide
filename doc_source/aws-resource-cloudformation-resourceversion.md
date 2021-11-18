@@ -1,9 +1,9 @@
 # AWS::CloudFormation::ResourceVersion<a name="aws-resource-cloudformation-resourceversion"></a>
 
 Registers a resource version with the CloudFormation service\. Registering a resource version makes it available for use in CloudFormation templates in your AWS account, and includes:
-+ Validating the resource schema
-+ Determining which handlers, if any, have been specified for the resource
-+ Making the resource available for use in your account
++ Validating the resource schema\.
++ Determining which handlers, if any, have been specified for the resource\.
++ Making the resource available for use in your account\.
 
 For more information on how to develop resources and ready them for registration, see [Creating Resource Providers](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-types.html) in the *CloudFormation CLI User Guide*\.
 
@@ -69,7 +69,7 @@ The user registering the resource must be able to access the package in the S3 b
 `TypeName`  <a name="cfn-cloudformation-resourceversion-typename"></a>
 The name of the resource being registered\.  
 We recommend that resource names adhere to the following pattern: *company\_or\_organization*::*service*::*type*\.  
-The following organization namespaces are reserved and cannot be used in your resource names:  
+The following organization namespaces are reserved and can't be used in your resource names:  
 + `Alexa`
 + `AMZN`
 + `Amazon`
@@ -126,7 +126,7 @@ The ID of a specific version of the resource\. The version ID is the value at th
 `Visibility`  <a name="Visibility-fn::getatt"></a>
 The scope at which the resource is visible and usable in CloudFormation operations\.  
 Valid values include:  
-+ `PRIVATE`: The resource is only visible and usable within the account in which it is registered\. CloudFormation marks any resources you register as `PRIVATE`\.
++ `PRIVATE`: The resource is only visible and usable within the account in which it's registered\. CloudFormation marks any resources you register as `PRIVATE`\.
 + `PUBLIC`: The resource is publically visible and usable within any Amazon account\.
 
 ## Examples<a name="aws-resource-cloudformation-resourceversion--examples"></a>

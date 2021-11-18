@@ -1,6 +1,6 @@
 # AWS::ECR::ReplicationConfiguration ReplicationDestination<a name="aws-properties-ecr-replicationconfiguration-replicationdestination"></a>
 
-An array of objects representing the details of a replication destination\.
+An array of objects representing the destination for a replication rule\.
 
 ## Syntax<a name="aws-properties-ecr-replicationconfiguration-replicationdestination-syntax"></a>
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecr-replicationconfiguration-replicationdestination-properties"></a>
 
 `Region`  <a name="cfn-ecr-replicationconfiguration-replicationdestination-region"></a>
-A Region to replicate to\.  
+The Region to replicate to\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `2`  
@@ -34,7 +34,7 @@ A Region to replicate to\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegistryId`  <a name="cfn-ecr-replicationconfiguration-replicationdestination-registryid"></a>
-The account ID of the destination registry to replicate to\.  
+The AWS account ID of the Amazon ECR private registry to replicate to\. When configuring cross\-Region replication within your own registry, specify your own account ID\.  
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `[0-9]{12}`  

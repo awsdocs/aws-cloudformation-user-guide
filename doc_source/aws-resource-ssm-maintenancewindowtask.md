@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SSM::MaintenanceWindowTask",
   "Properties" : {
+      "[CutoffBehavior](#cfn-ssm-maintenancewindowtask-cutoffbehavior)" : String,
       "[Description](#cfn-ssm-maintenancewindowtask-description)" : String,
       "[LoggingInfo](#cfn-ssm-maintenancewindowtask-logginginfo)" : LoggingInfo,
       "[MaxConcurrency](#cfn-ssm-maintenancewindowtask-maxconcurrency)" : String,
@@ -34,6 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SSM::MaintenanceWindowTask
 Properties: 
+  [CutoffBehavior](#cfn-ssm-maintenancewindowtask-cutoffbehavior): String
   [Description](#cfn-ssm-maintenancewindowtask-description): String
   [LoggingInfo](#cfn-ssm-maintenancewindowtask-logginginfo): 
     LoggingInfo
@@ -53,6 +55,13 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-ssm-maintenancewindowtask-properties"></a>
+
+`CutoffBehavior`  <a name="cfn-ssm-maintenancewindowtask-cutoffbehavior"></a>
+The specification for whether tasks should continue to run after the cutoff time specified in the maintenance windows is reached\.   
+*Required*: No  
+*Type*: String  
+*Allowed values*: `CANCEL_TASK | CONTINUE_TASK`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-ssm-maintenancewindowtask-description"></a>
 A description of the task\.  
@@ -610,7 +619,7 @@ The following example creates a Systems Manager maintenance window task that run
 ---
 Resources:
   StepFunctionsTask:
-    Type: AWS::SSM::MaintenanceWindowTask
+    Type: 'AWS::SSM::MaintenanceWindowTask'
     Properties:
       WindowId: MaintenanceWindow
       Targets:
@@ -635,41 +644,33 @@ Resources:
 
 The following example runs an AWS Lambda function to restart instances\.
 
+**Note**  
+The value for `Payload` in `MaintenanceWindowLambdaParameters` must be formatted as a Base64\-encoded binary data object\.
+
 #### JSON<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_task_that_runs_an__function--json"></a>
 
 ```
 {
-    "Resources": {
-        "MaintenanceWindowStepFunctionsTask": {
-            "Type": "AWS::SSM::MaintenanceWindowTask",
-            "Properties": {
-                "WindowId": "MaintenanceWindow",
-                "Targets": [
-                    {
-                        "Key": "WindowTargetIds",
-                        "Values": [
-                            "MaintenanceWindowTarget"
-                        ]
-                    }
-                ],
-                "TaskArn": "SSM_RestartMyInstances",
-                "ServiceRoleArn": "Lambda.Arn",
-                "TaskType": "LAMBDA",
-                "TaskInvocationParameters": {
-                    "MaintenanceWindowLambdaParameters": {
-                        "ClientContext": "ew0KICAi--truncated--0KIEXAMPLE",
-                        "Qualifier": "$LATEST",
-                        "Payload": "{ \"instanceId\": \"{{RESOURCE_ID}}\", \"targetType\": \"{{TARGET_TYPE}}\" }"
-                    }
-                }
+   "Resources": {
+      "LambdaTask": {
+         "Type": "AWS::SSM::MaintenanceWindowTask",
+         "Properties": {
+            "WindowId": "mw-04fd6f19dfEXAMPLE",
+            "TaskArn": "arn:aws:lambda:us-east-2:111222333444:function:MyLambdaTaskArn",
+            "ServiceRoleArn": "arn:aws:iam::111222333444:role/aws-service-role/ssm.amazonaws.com/AWSServiceRoleForAmazonSSM",
+            "TaskType": "LAMBDA",
+            "TaskInvocationParameters": {
+               "MaintenanceWindowLambdaParameters": {
+                  "ClientContext": "eyJ0ZXN0Q29udGV4dCI6Ik5vdGhp==trucated==EXAMPLE",
+                  "Qualifier": "$LATEST",
+                  "Payload": "eyJJbnN0YW5jZUlkIjoie3tSRVNPVVJDRV9JRH19IiwidGFyZ2V0VHlwZSI6Int7VEFSR0VUX1RZUEV9fSJ9"
+               }
             },
             "Priority": 1,
-            "MaxConcurrency": 5,
-            "MaxErrors": 5,
-            "Name": "LambdaTask"
-        },
-        "DependsOn": "MaintenanceWindowTarget"
-    }
+            "Name": "UpdateLambdaTaskEXAMPLE"
+         }
+      }
+   }
 }
 ```
 
@@ -678,27 +679,23 @@ The following example runs an AWS Lambda function to restart instances\.
 ```
 ---
 Resources:
-  MaintenanceWindowAutomationTask:
-    Type: AWS::SSM::MaintenanceWindowTask
+  LambdaTask:
+    Type: 'AWS::SSM::MaintenanceWindowTask'
     Properties:
-      WindowId: MaintenanceWindow
-      Targets:
-      - Key: WindowTargetIds
-        Values:
-        - MaintenanceWindowTarget
-      TaskArn: SSM_RestartMyInstances
-      ServiceRoleArn: Lambda.Arn
+      WindowId: mw-04fd6f19dfEXAMPLE
+      TaskArn: >-
+        arn:aws:lambda:us-east-2:111222333444:function:MyLambdaTaskArn
+      ServiceRoleArn: >-
+        arn:aws:iam::111222333444:role/aws-service-role/ssm.amazonaws.com/AWSServiceRoleForAmazonSSM
       TaskType: LAMBDA
       TaskInvocationParameters:
         MaintenanceWindowLambdaParameters:
-			ClientContext": "ew0KICAi--truncated--0KIEXAMPLE"
-			Qualifier: '$LATEST'
-			Payload: '{ \"instanceId\": \"{{RESOURCE_ID}}\", \"targetType\": \"{{TARGET_TYPE}}\" }'
+          ClientContext: eyJ0ZXN0Q29udGV4dCI6Ik5vdGhp==trucated==EXAMPLE
+          Qualifier: $LATEST
+          Payload: >-
+            eyJJbnN0YW5jZUlkIjoie3tSRVNPVVJDRV9JRH19IiwidGFyZ2V0VHlwZSI6Int7VEFSR0VUX1RZUEV9fSJ9
       Priority: 1
-      MaxConcurrency: 5
-      MaxErrors: 5
-      Name: LambdaTask
-    DependsOn: MaintenanceWindowTarget
+      Name: UpdateLambdaTaskEXAMPLE
 ```
 
 ## See also<a name="aws-resource-ssm-maintenancewindowtask--seealso"></a>

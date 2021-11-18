@@ -24,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Kafka](#cfn-iot-topicrule-action-kafka)" : KafkaAction,
   "[Kinesis](#cfn-iot-topicrule-action-kinesis)" : KinesisAction,
   "[Lambda](#cfn-iot-topicrule-action-lambda)" : LambdaAction,
+  "[OpenSearch](#cfn-iot-topicrule-action-opensearch)" : OpenSearchAction,
   "[Republish](#cfn-iot-topicrule-action-republish)" : RepublishAction,
   "[S3](#cfn-iot-topicrule-action-s3)" : S3Action,
   "[Sns](#cfn-iot-topicrule-action-sns)" : SnsAction,
@@ -64,6 +65,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     KinesisAction
   [Lambda](#cfn-iot-topicrule-action-lambda): 
     LambdaAction
+  [OpenSearch](#cfn-iot-topicrule-action-opensearch): 
+    OpenSearchAction
   [Republish](#cfn-iot-topicrule-action-republish): 
     RepublishAction
   [S3](#cfn-iot-topicrule-action-s3): 
@@ -111,7 +114,8 @@ Write to a DynamoDB table\. This is a new version of the DynamoDB action\. It al
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Elasticsearch`  <a name="cfn-iot-topicrule-action-elasticsearch"></a>
-Write data to an Amazon Elasticsearch Service domain\.  
+Write data to an Amazon OpenSearch Service domain\.  
+The `Elasticsearch` action can only be used by existing rule actions\. To create a new rule action or to update an existing rule action, use the `OpenSearch` rule action instead\. For more information, see [OpenSearchAction](https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html)\.
 *Required*: No  
 *Type*: [ElasticsearchAction](aws-properties-iot-topicrule-elasticsearchaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -162,6 +166,12 @@ Write data to an Amazon Kinesis stream\.
 Invoke a Lambda function\.  
 *Required*: No  
 *Type*: [LambdaAction](aws-properties-iot-topicrule-lambdaaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`OpenSearch`  <a name="cfn-iot-topicrule-action-opensearch"></a>
+Write data to an Amazon OpenSearch Service domain\.  
+*Required*: No  
+*Type*: [OpenSearchAction](aws-properties-iot-topicrule-opensearchaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Republish`  <a name="cfn-iot-topicrule-action-republish"></a>

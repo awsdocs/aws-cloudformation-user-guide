@@ -47,7 +47,7 @@ A description of the data catalog\.
 The name of the data catalog\. The catalog name must be unique for the AWS account and can use a maximum of 128 alphanumeric, underscore, at sign, or hyphen characters\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Parameters`  <a name="cfn-athena-datacatalog-parameters"></a>
 Specifies the Lambda function or functions to use for the data catalog\. The mapping used depends on the catalog type\.   

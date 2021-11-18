@@ -40,10 +40,14 @@ A string map that contains attributes with values that you can use to filter ins
 The name of the AWS Cloud Map namespace to use\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceName`  <a name="cfn-appmesh-virtualnode-awscloudmapservicediscovery-servicename"></a>
 The name of the AWS Cloud Map service to use\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

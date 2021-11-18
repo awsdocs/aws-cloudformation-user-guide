@@ -31,7 +31,7 @@ The name for the LDAP attribute\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-nimblestudio-studiocomponent-activedirectorycomputerattribute-value"></a>
-The value for the LDAP attribute\.   
+The value for the LDAP attribute\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

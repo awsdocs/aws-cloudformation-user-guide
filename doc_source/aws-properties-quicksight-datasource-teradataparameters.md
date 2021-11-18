@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSource TeradataParameters<a name="aws-properties-quicksight-datasource-teradataparameters"></a>
 
-Teradata parameters\.
+The parameters for Teradata\.
 
 ## Syntax<a name="aws-properties-quicksight-datasource-teradataparameters-syntax"></a>
 

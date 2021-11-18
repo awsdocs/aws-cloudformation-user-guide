@@ -28,5 +28,5 @@ The name of the dataset whose latest contents are used as input to the notebook 
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9_]+$`  
+*Pattern*: `(^(?!_{2}))(^[a-zA-Z0-9_]+$)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

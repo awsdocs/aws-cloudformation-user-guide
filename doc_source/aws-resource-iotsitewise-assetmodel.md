@@ -43,7 +43,6 @@ Properties:
 
 `AssetModelCompositeModels`  <a name="cfn-iotsitewise-assetmodel-assetmodelcompositemodels"></a>
 The composite asset models that are part of this asset model\. Composite asset models are asset models that contain specific properties\. Each composite model has a type that defines the properties that the composite model supports\. You can use composite asset models to define alarms on this asset model\.  
-The alarms feature is in preview release for AWS IoT SiteWise, AWS IoT Events, and SiteWise Monitor, and is subject to change\. We recommend that you use this feature only with test data, and not in production environments\. For more information, see [Monitoring data with alarms](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/industrial-alarms.html) in the *AWS IoT SiteWise User Guide*\.
 *Required*: No  
 *Type*: List of [AssetModelCompositeModel](aws-properties-iotsitewise-assetmodel-assetmodelcompositemodel.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

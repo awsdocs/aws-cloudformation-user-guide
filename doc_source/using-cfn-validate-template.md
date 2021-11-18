@@ -21,7 +21,7 @@ You will be billed for the AWS resources used if you create a stack from this te
 
 The expected result is no error message, with information about all parameters listed\.
 
-The following example shows an error with a local template file:
+The following example shows an error with a local template file\.
 
 ```
 PROMPT> aws cloudformation validate-template --template-body file:///home/local/test/sampletemplate.json

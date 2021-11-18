@@ -92,17 +92,17 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) of the Amazon EFS file system\.
 
 `LocationUri`  <a name="LocationUri-fn::getatt"></a>
-The URL of the Amazon EFS file system\.
+The URI of the Amazon EFS file system\.
 
 ## Examples<a name="aws-resource-datasync-locationefs--examples"></a>
 
 
 
-### Create an EFS location for DataSync<a name="aws-resource-datasync-locationefs--examples--Create_an_EFS_location_for_DataSync"></a>
+### Create an Amazon EFS location for DataSync<a name="aws-resource-datasync-locationefs--examples--Create_an_Amazon_EFS_location_for_DataSync"></a>
 
 The following example specifies an EFS location to be used by DataSync, with the subdirectory `MySubdirectory`\.
 
-#### JSON<a name="aws-resource-datasync-locationefs--examples--Create_an_EFS_location_for_DataSync--json"></a>
+#### JSON<a name="aws-resource-datasync-locationefs--examples--Create_an_Amazon_EFS_location_for_DataSync--json"></a>
 
 ```
 {
@@ -126,7 +126,7 @@ The following example specifies an EFS location to be used by DataSync, with the
 }
 ```
 
-#### YAML<a name="aws-resource-datasync-locationefs--examples--Create_an_EFS_location_for_DataSync--yaml"></a>
+#### YAML<a name="aws-resource-datasync-locationefs--examples--Create_an_Amazon_EFS_location_for_DataSync--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09

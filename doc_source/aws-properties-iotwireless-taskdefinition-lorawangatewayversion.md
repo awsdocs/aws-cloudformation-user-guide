@@ -30,16 +30,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The model number of the wireless gateway\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `4096`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PackageVersion`  <a name="cfn-iotwireless-taskdefinition-lorawangatewayversion-packageversion"></a>
 The version of the wireless gateway firmware\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `32`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Station`  <a name="cfn-iotwireless-taskdefinition-lorawangatewayversion-station"></a>
 The basic station version of the wireless gateway\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `4096`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Synthetics::Canary",
   "Properties" : {
+      "[ArtifactConfig](#cfn-synthetics-canary-artifactconfig)" : ArtifactConfig,
       "[ArtifactS3Location](#cfn-synthetics-canary-artifacts3location)" : String,
       "[Code](#cfn-synthetics-canary-code)" : Code,
       "[ExecutionRoleArn](#cfn-synthetics-canary-executionrolearn)" : String,
@@ -27,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[StartCanaryAfterCreation](#cfn-synthetics-canary-startcanaryaftercreation)" : Boolean,
       "[SuccessRetentionPeriod](#cfn-synthetics-canary-successretentionperiod)" : Integer,
       "[Tags](#cfn-synthetics-canary-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[VisualReference](#cfn-synthetics-canary-visualreference)" : VisualReference,
       "[VPCConfig](#cfn-synthetics-canary-vpcconfig)" : VPCConfig
     }
 }
@@ -37,6 +39,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Synthetics::Canary
 Properties: 
+  [ArtifactConfig](#cfn-synthetics-canary-artifactconfig): 
+    ArtifactConfig
   [ArtifactS3Location](#cfn-synthetics-canary-artifacts3location): String
   [Code](#cfn-synthetics-canary-code): 
     Code
@@ -52,11 +56,19 @@ Properties:
   [SuccessRetentionPeriod](#cfn-synthetics-canary-successretentionperiod): Integer
   [Tags](#cfn-synthetics-canary-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [VisualReference](#cfn-synthetics-canary-visualreference): 
+    VisualReference
   [VPCConfig](#cfn-synthetics-canary-vpcconfig): 
     VPCConfig
 ```
 
 ## Properties<a name="aws-resource-synthetics-canary-properties"></a>
+
+`ArtifactConfig`  <a name="cfn-synthetics-canary-artifactconfig"></a>
+A structure that contains the configuration for canary artifacts, including the encryption\-at\-rest settings for artifacts that the canary uploads to Amazon S3\.  
+*Required*: No  
+*Type*: [ArtifactConfig](aws-properties-synthetics-canary-artifactconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ArtifactS3Location`  <a name="cfn-synthetics-canary-artifacts3location"></a>
 The location in Amazon S3 where Synthetics stores artifacts from the runs of this canary\. Artifacts include the log file, screenshots, and HAR files\. Specify the full location path, including `s3://` at the beginning of the path\.  
@@ -145,6 +157,12 @@ The number of days to retain data about successful runs of this canary\. If you 
 The list of key\-value pairs that are associated with the canary\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`VisualReference`  <a name="cfn-synthetics-canary-visualreference"></a>
+If this canary performs visual monitoring by comparing screenshots, this structure contains the ID of the canary run to use as the baseline for screenshots, and the coordinates of any parts of the screen to ignore during the visual monitoring comparison\.  
+*Required*: No  
+*Type*: [VisualReference](aws-properties-synthetics-canary-visualreference.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VPCConfig`  <a name="cfn-synthetics-canary-vpcconfig"></a>

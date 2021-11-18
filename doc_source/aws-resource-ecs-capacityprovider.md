@@ -48,7 +48,7 @@ The name of the capacity provider\. If a name is specified, it cannot start with
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ecs-capacityprovider-tags"></a>
-The metadata that you apply to the capacity provider to help you categorize and organize it\. Each tag consists of a key and an optional value, both of which you define\.  
+The metadata that you apply to the capacity provider to help you categorize and organize it\. Each tag consists of a key and an optional value\. You define both\.  
 The following basic restrictions apply to tags:  
 + Maximum number of tags per resource \- 50
 + For each resource, each tag key must be unique, and each tag key can have only one value\.

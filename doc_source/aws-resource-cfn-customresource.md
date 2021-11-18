@@ -52,7 +52,7 @@ Using your own resource type names helps you quickly differentiate the types of 
 
  *Replacing a custom resource during an update* 
 
-You can update custom resources that require a replacement of the underlying physical resource\. When you update a custom resource in a CloudFormation template, CloudFormation sends an update request to that custom resource\. If the custom resource requires a replacement, the new custom resource must send a response with the new physical ID\. When CloudFormation receives the response, it compares the `PhysicalResourceId` between the old and new custom resources\. If they are different, CloudFormation recognizes the update as a replacement and sends a delete request to the old resource\. For a step\-by\-step walkthrough of this process, see [Stack updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources-sns.html#crpg-walkthrough-stack-updates)\.
+You can update custom resources that require a replacement of the underlying physical resource\. When you update a custom resource in a CloudFormation template, CloudFormation sends an update request to that custom resource\. If the custom resource requires a replacement, the new custom resource must send a response with the new physical ID\. When CloudFormation receives the response, it compares the `PhysicalResourceId` between the old and new custom resources\. If they're different, CloudFormation recognizes the update as a replacement and sends a delete request to the old resource\. For a step\-by\-step walkthrough of this process, see [Stack updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources-sns.html#crpg-walkthrough-stack-updates)\.
 
 Note the following:
 + You can monitor the progress of the update in the Events tab\. For more information, see [Viewing stack data and resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-view-stack-data-resources.html)\.
@@ -140,11 +140,11 @@ Outputs:
       - responseKey2
 ```
 
-### Using a Lambda function in a custom resource<a name="aws-resource-cfn-customresource--examples--Using_a_Lambda_function_in_a_custom_resource"></a>
+### Using a Lambda function in a custom resource<a name="aws-resource-cfn-customresource--examples--Using_a__function_in_a_custom_resource"></a>
 
 With AWS Lambda functions and custom resources, you can run custom code in response to stack events \(create, update, and delete\)\. The following custom resource invokes a Lambda function and sends it the StackName property as input\. The function uses this property to get outputs from the appropriate stack\.
 
-#### JSON<a name="aws-resource-cfn-customresource--examples--Using_a_Lambda_function_in_a_custom_resource--json"></a>
+#### JSON<a name="aws-resource-cfn-customresource--examples--Using_a__function_in_a_custom_resource--json"></a>
 
 ```
 {
@@ -178,7 +178,7 @@ With AWS Lambda functions and custom resources, you can run custom code in respo
 }
 ```
 
-#### YAML<a name="aws-resource-cfn-customresource--examples--Using_a_Lambda_function_in_a_custom_resource--yaml"></a>
+#### YAML<a name="aws-resource-cfn-customresource--examples--Using_a__function_in_a_custom_resource--yaml"></a>
 
 ```
 MyCustomResource:

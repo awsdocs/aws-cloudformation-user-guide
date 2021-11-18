@@ -46,6 +46,8 @@ The time interval between ejection sweep analysis\.
 Maximum percentage of hosts in load balancing pool for upstream service that can be ejected\. Will eject at least one host regardless of the value\.  
 *Required*: Yes  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxServerErrors`  <a name="cfn-appmesh-virtualnode-outlierdetection-maxservererrors"></a>

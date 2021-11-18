@@ -1,6 +1,6 @@
 # AWS::FSx::FileSystem SelfManagedActiveDirectoryConfiguration<a name="aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration"></a>
 
-The configuration that Amazon FSx uses to join the Windows File Server instance to your self\-managed \(including on\-premises\) Microsoft Active Directory \(AD\) directory\. For more information, see [ Using Amazon FSx with your self\-managed Microsoft Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html)\.
+The configuration that Amazon FSx uses to join a FSx for Windows File Server file system to a self\-managed \(including on\-premises\) Microsoft Active Directory \(AD\) directory\. For more information, see [ Using Amazon FSx with your self\-managed Microsoft Active Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html)\.
 
 ## Syntax<a name="aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-syntax"></a>
 
@@ -34,10 +34,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-properties"></a>
 
 `DnsIps`  <a name="cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-dnsips"></a>
-A list of up to two IP addresses of DNS servers or domain controllers in the self\-managed AD directory\.   
+A list of up to three IP addresses of DNS servers or domain controllers in the self\-managed AD directory\.   
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `2`  
+*Maximum*: `3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainName`  <a name="cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-domainname"></a>
@@ -59,7 +59,7 @@ The fully qualified domain name of the self\-managed AD directory, such as `corp
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OrganizationalUnitDistinguishedName`  <a name="cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-organizationalunitdistinguishedname"></a>
-\(Optional\) The fully qualified distinguished name of the organizational unit within your self\-managed AD directory that the Windows File Server instance will join\. Amazon FSx only accepts OU as the direct parent of the file system\. An example is `OU=FSx,DC=yourdomain,DC=corp,DC=com`\. To learn more, see [RFC 2253](https://tools.ietf.org/html/rfc2253)\. If none is provided, the FSx file system is created in the default location of your self\-managed AD directory\.   
+\(Optional\) The fully qualified distinguished name of the organizational unit within your self\-managed AD directory\. Amazon FSx only accepts OU as the direct parent of the file system\. An example is `OU=FSx,DC=yourdomain,DC=corp,DC=com`\. To learn more, see [RFC 2253](https://tools.ietf.org/html/rfc2253)\. If none is provided, the FSx file system is created in the default location of your self\-managed AD directory\.   
 Only Organizational Unit \(OU\) objects can be the direct parent of the file system that you're creating\.
 *Required*: No  
 *Type*: String  

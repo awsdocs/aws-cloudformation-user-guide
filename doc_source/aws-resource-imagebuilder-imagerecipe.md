@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ImageBuilder::ImageRecipe",
   "Properties" : {
+      "[AdditionalInstanceConfiguration](#cfn-imagebuilder-imagerecipe-additionalinstanceconfiguration)" : AdditionalInstanceConfiguration,
       "[BlockDeviceMappings](#cfn-imagebuilder-imagerecipe-blockdevicemappings)" : [ InstanceBlockDeviceMapping, ... ],
       "[Components](#cfn-imagebuilder-imagerecipe-components)" : [ ComponentConfiguration, ... ],
       "[Description](#cfn-imagebuilder-imagerecipe-description)" : String,
@@ -29,6 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ImageBuilder::ImageRecipe
 Properties: 
+  [AdditionalInstanceConfiguration](#cfn-imagebuilder-imagerecipe-additionalinstanceconfiguration): 
+    AdditionalInstanceConfiguration
   [BlockDeviceMappings](#cfn-imagebuilder-imagerecipe-blockdevicemappings): 
     - InstanceBlockDeviceMapping
   [Components](#cfn-imagebuilder-imagerecipe-components): 
@@ -43,6 +46,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-imagebuilder-imagerecipe-properties"></a>
+
+`AdditionalInstanceConfiguration`  <a name="cfn-imagebuilder-imagerecipe-additionalinstanceconfiguration"></a>
+Before you create a new AMI, Image Builder launches temporary Amazon EC2 instances to build and test your image configuration\. Instance configuration adds a layer of control over those instances\. You can define settings and add scripts to run when an instance is launched from your AMI\.  
+*Required*: No  
+*Type*: [AdditionalInstanceConfiguration](aws-properties-imagebuilder-imagerecipe-additionalinstanceconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BlockDeviceMappings`  <a name="cfn-imagebuilder-imagerecipe-blockdevicemappings"></a>
 The block device mappings to apply when creating images from this recipe\.  

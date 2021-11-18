@@ -55,7 +55,7 @@ Valid IPv4 address within the address range of the specified subnet\.
 Up to five VPC security group IDs, of the form `sg-xxxxxxxx`\. These must be for the same VPC as subnet specified\.  
 *Required*: Yes  
 *Type*: List of String  
-*Maximum*: `5`  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-efs-mounttarget-subnetid"></a>
@@ -86,6 +86,9 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-efs-mounttarget-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 `IpAddress`  <a name="IpAddress-fn::getatt"></a>
 The IPv4 address of the mount target\.

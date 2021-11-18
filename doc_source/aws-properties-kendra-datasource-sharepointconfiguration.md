@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[InclusionPatterns](#cfn-kendra-datasource-sharepointconfiguration-inclusionpatterns)" : [ String, ... ],
   "[SecretArn](#cfn-kendra-datasource-sharepointconfiguration-secretarn)" : String,
   "[SharePointVersion](#cfn-kendra-datasource-sharepointconfiguration-sharepointversion)" : String,
+  "[SslCertificateS3Path](#cfn-kendra-datasource-sharepointconfiguration-sslcertificates3path)" : S3Path,
   "[Urls](#cfn-kendra-datasource-sharepointconfiguration-urls)" : [ String, ... ],
   "[UseChangeLog](#cfn-kendra-datasource-sharepointconfiguration-usechangelog)" : Boolean,
   "[VpcConfiguration](#cfn-kendra-datasource-sharepointconfiguration-vpcconfiguration)" : DataSourceVpcConfiguration
@@ -38,6 +39,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
   [SecretArn](#cfn-kendra-datasource-sharepointconfiguration-secretarn): String
   [SharePointVersion](#cfn-kendra-datasource-sharepointconfiguration-sharepointversion): String
+  [SslCertificateS3Path](#cfn-kendra-datasource-sharepointconfiguration-sslcertificates3path): 
+    S3Path
   [Urls](#cfn-kendra-datasource-sharepointconfiguration-urls): 
     - String
   [UseChangeLog](#cfn-kendra-datasource-sharepointconfiguration-usechangelog): Boolean
@@ -92,7 +95,7 @@ The regex is applied to the display URL of the SharePoint document\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretArn`  <a name="cfn-kendra-datasource-sharepointconfiguration-secretarn"></a>
-The Amazon Resource Name \(ARN\) of credentials stored in AWS Secrets Manager\. The credentials should be a user/password pair\. If you use SharePoint Server, you also need to provide the sever domain name as part of the credentials\. For more information, see [Using a Microsoft SharePoint Data Source](https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html)\. For more information about AWS Secrets Manager, see [ What Is AWS Secrets Manager ](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) in the * AWS Secrets Manager * user guide\.  
+The Amazon Resource Name \(ARN\) of credentials stored in AWS Secrets Manager\. The credentials should be a user/password pair\. If you use SharePoint Server, you also need to provide the sever domain name as part of the credentials\. For more information, see [Using a Microsoft SharePoint Data Source](https://docs.aws.amazon.com/kendra/latest/dg/data-source-sharepoint.html)\. For more information about AWS Secrets Manager see [ What Is AWS Secrets Manager ](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) in the * AWS Secrets Manager * user guide\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -105,6 +108,12 @@ The version of Microsoft SharePoint that you are using as a data source\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `SHAREPOINT_2013 | SHAREPOINT_2016 | SHAREPOINT_ONLINE`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SslCertificateS3Path`  <a name="cfn-kendra-datasource-sharepointconfiguration-sslcertificates3path"></a>
+Information required to find a specific file in an Amazon S3 bucket\.  
+*Required*: No  
+*Type*: [S3Path](aws-properties-kendra-datasource-s3path.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Urls`  <a name="cfn-kendra-datasource-sharepointconfiguration-urls"></a>

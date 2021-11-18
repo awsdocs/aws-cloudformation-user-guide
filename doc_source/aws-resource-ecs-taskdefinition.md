@@ -25,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PlacementConstraints](#cfn-ecs-taskdefinition-placementconstraints)" : [ TaskDefinitionPlacementConstraint, ... ],
       "[ProxyConfiguration](#cfn-ecs-taskdefinition-proxyconfiguration)" : ProxyConfiguration,
       "[RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities)" : [ String, ... ],
+      "[RuntimePlatform](#cfn-ecs-taskdefinition-runtimeplatform)" : RuntimePlatform,
       "[Tags](#cfn-ecs-taskdefinition-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn)" : String,
       "[Volumes](#cfn-ecs-taskdefinition-volumes)" : [ Volume, ... ]
@@ -56,6 +57,8 @@ Properties:
     ProxyConfiguration
   [RequiresCompatibilities](#cfn-ecs-taskdefinition-requirescompatibilities): 
     - String
+  [RuntimePlatform](#cfn-ecs-taskdefinition-runtimeplatform): 
+    RuntimePlatform
   [Tags](#cfn-ecs-taskdefinition-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TaskRoleArn](#cfn-ecs-taskdefinition-taskrolearn): String
@@ -72,7 +75,8 @@ A list of container definitions in JSON format that describe the different conta
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Cpu`  <a name="cfn-ecs-taskdefinition-cpu"></a>
-The number of `cpu` units used by the task\. If you are using the EC2 launch type, this field is optional and any value can be used\. If you are using the Fargate launch type, this field is required and you must use one of the following values, which determines your range of valid values for the `memory` parameter:  
+The number of `cpu` units used by the task\. If you use the EC2 launch type, this field is optional\. Any value can be used\. If you use the Fargate launch type, this field is required\. You must use one of the following values\. The value that you choose determines your range of valid values for the `memory` parameter\.  
+The CPU units cannot be less than 1 vCPU when you use Windows containers on Fargate\.  
 + 256 \(\.25 vCPU\) \- Available `memory` values: 512 \(0\.5 GB\), 1024 \(1 GB\), 2048 \(2 GB\)
 + 512 \(\.5 vCPU\) \- Available `memory` values: 1024 \(1 GB\), 2048 \(2 GB\), 3072 \(3 GB\), 4096 \(4 GB\)
 + 1024 \(1 vCPU\) \- Available `memory` values: 2048 \(2 GB\), 3072 \(3 GB\), 4096 \(4 GB\), 5120 \(5 GB\), 6144 \(6 GB\), 7168 \(7 GB\), 8192 \(8 GB\)
@@ -122,8 +126,8 @@ This parameter is not supported for Windows containers or tasks run on AWS Farga
 
 `Memory`  <a name="cfn-ecs-taskdefinition-memory"></a>
 The amount \(in MiB\) of memory used by the task\.  
-If your tasks will be run on Amazon EC2 instances, you must specify either a task\-level memory value or a container\-level memory value\. This field is optional and any value can be used\. If a task\-level memory value is specified then the container\-level memory value is optional\. For more information regarding container\-level memory and memory reservation, see [ContainerDefinition](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)\.  
-If your tasks will be run on AWS Fargate, this field is required and you must use one of the following values, which determines your range of valid values for the `cpu` parameter:  
+If your tasks runs on Amazon EC2 instances, you must specify either a task\-level memory value or a container\-level memory value\. This field is optional and any value can be used\. If a task\-level memory value is specified, the container\-level memory value is optional\. For more information regarding container\-level memory and memory reservation, see [ContainerDefinition](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html)\.  
+If your tasks runs on AWS Fargate, this field is required\. You must use one of the following values\. The value you choose determines your range of valid values for the `cpu` parameter\.  
 + 512 \(0\.5 GB\), 1024 \(1 GB\), 2048 \(2 GB\) \- Available `cpu` values: 256 \(\.25 vCPU\)
 + 1024 \(1 GB\), 2048 \(2 GB\), 3072 \(3 GB\), 4096 \(4 GB\) \- Available `cpu` values: 512 \(\.5 vCPU\)
 + 2048 \(2 GB\), 3072 \(3 GB\), 4096 \(4 GB\), 5120 \(5 GB\), 6144 \(6 GB\), 7168 \(7 GB\), 8192 \(8 GB\) \- Available `cpu` values: 1024 \(1 vCPU\)
@@ -157,7 +161,7 @@ This parameter is not supported for Windows containers or tasks run on AWS Farga
 
 `PlacementConstraints`  <a name="cfn-ecs-taskdefinition-placementconstraints"></a>
 An array of placement constraint objects to use for tasks\.  
-This parameter is not supported for tasks run on AWS Fargate\.
+This parameter isn't supported for tasks run on AWS Fargate\.
 *Required*: No  
 *Type*: List of [TaskDefinitionPlacementConstraint](aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -175,8 +179,15 @@ The task launch types the task definition was validated against\. To determine w
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`RuntimePlatform`  <a name="cfn-ecs-taskdefinition-runtimeplatform"></a>
+The operating system that your task definitions are running on\. A platform family is specified only for tasks using the Fargate launch type\.   
+When you specify a task in a service, this value must match the `runtimePlatform` value of the service\.  
+*Required*: No  
+*Type*: [RuntimePlatform](aws-properties-ecs-taskdefinition-runtimeplatform.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Tags`  <a name="cfn-ecs-taskdefinition-tags"></a>
-The metadata that you apply to the task definition to help you categorize and organize them\. Each tag consists of a key and an optional value, both of which you define\.  
+The metadata that you apply to the task definition to help you categorize and organize them\. Each tag consists of a key and an optional value\. You define both of them\.  
 The following basic restrictions apply to tags:  
 + Maximum number of tags per resource \- 50
 + For each resource, each tag key must be unique, and each tag key can have only one value\.
@@ -192,14 +203,14 @@ The following basic restrictions apply to tags:
 
 `TaskRoleArn`  <a name="cfn-ecs-taskdefinition-taskrolearn"></a>
 The short name or full Amazon Resource Name \(ARN\) of the AWS Identity and Access Management role that grants containers in the task permission to call AWS APIs on your behalf\. For more information, see [Amazon ECS Task Role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
-IAM roles for tasks on Windows require that the `-EnableTaskIAMRole` option is set when you launch the Amazon ECS\-optimized Windows AMI\. Your containers must also run some configuration code in order to take advantage of the feature\. For more information, see [Windows IAM roles for tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows_task_IAM_roles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+IAM roles for tasks on Windows require that the `-EnableTaskIAMRole` option is set when you launch the Amazon ECS\-optimized Windows AMI\. Your containers must also run some configuration code to use the feature\. For more information, see [Windows IAM roles for tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/windows_task_IAM_roles.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Volumes`  <a name="cfn-ecs-taskdefinition-volumes"></a>
 The list of data volume definitions for the task\. For more information, see [Using data volumes in tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html) in the *Amazon Elastic Container Service Developer Guide*\.  
-The `host` and `sourcePath` parameters are not supported for tasks run on AWS Fargate\.
+The `host` and `sourcePath` parameters aren't supported for tasks run on AWS Fargate\.
 *Required*: No  
 *Type*: List of [Volume](aws-properties-ecs-taskdefinition-volumes.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -337,7 +348,7 @@ taskdefinition:
 
 ### Create an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition"></a>
 
-The following example defines an Amazon ECS task definition that specifies EC2 and FARGATE as required compatibilities\.
+The following example defines an Amazon ECS task definition that specifies EC2 as required compatibilities\.
 
 #### JSON<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition--json"></a>
 
@@ -349,8 +360,7 @@ The following example defines an Amazon ECS task definition that specifies EC2 a
             "Type": "AWS::ECS::TaskDefinition",
             "Properties": {
                 "RequiresCompatibilities": [
-                    "EC2",
-                    "FARGATE"
+                    "EC2"
                 ],
                 "ContainerDefinitions": [
                     {
@@ -421,7 +431,6 @@ Resources:
     Properties: 
       RequiresCompatibilities:
         - "EC2"
-        - "FARGATE"
       ContainerDefinitions: 
         - 
           Name: "my-app"

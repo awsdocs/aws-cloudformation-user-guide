@@ -209,24 +209,54 @@ The following example creates a deployment group that is associated with Auto Sc
 #### JSON<a name="aws-resource-codedeploy-deploymentgroup--examples--Revision_in_GitHub--json"></a>
 
 ```
-"DeploymentGroup" : { "Type" : "AWS::CodeDeploy::DeploymentGroup",
-        "Properties" : { "ApplicationName" : {"Ref" : "ApplicationName"}, "AutoScalingGroups" : [
-        {"Ref" : "CodeDeployAutoScalingGroups" } ], "Deployment" : { "Description" : "A sample
-        deployment", "IgnoreApplicationStopFailures" : "true", "Revision" : { "RevisionType" :
-        "GitHub", "GitHubLocation" : { "CommitId" : {"Ref" : "CommitId"}, "Repository" : {"Ref" :
-        "Repository"} } } }, "ServiceRoleArn" : { "Fn::GetAtt" : [ "RoleArn", "Arn" ] } }
-        }
+"DeploymentGroup" : { 
+    "Type" : "AWS::CodeDeploy::DeploymentGroup",
+    "Properties" : { 
+        "ApplicationName" : {"Ref" : "ApplicationName"}, 
+        "AutoScalingGroups" : [{"Ref" : "CodeDeployAutoScalingGroups" } ], 
+        "Deployment" : { 
+            "Description" : "A sample deployment", 
+            "IgnoreApplicationStopFailures" : "true", 
+            "Revision" : { 
+                "RevisionType" : "GitHub", 
+                "GitHubLocation" : { 
+                    "CommitId" : {"Ref" : "CommitId"}, 
+                    "Repository" : {"Ref" : "Repository"} 
+                } 
+            } 
+        }, 
+        "ServiceRoleArn" : { 
+            "Fn::GetAtt" : [ 
+                "RoleArn", 
+                "Arn" 
+            ] 
+        } 
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-codedeploy-deploymentgroup--examples--Revision_in_GitHub--yaml"></a>
 
 ```
-DeploymentGroup: Type: AWS::CodeDeploy::DeploymentGroup Properties:
-        ApplicationName: Ref: "ApplicationName" AutoScalingGroups: - Ref:
-        CodeDeployAutoScalingGroups Deployment: Description: "A sample deployment"
-        IgnoreApplicationStopFailures: true Revision: RevisionType: GitHub GitHubLocation: CommitId:
-        Ref: CommitId Repository: Ref: Repository ServiceRoleArn: Fn::GetAtt: [ RoleArn, Arn
-        ]
+DeploymentGroup: 
+  Type: AWS::CodeDeploy::DeploymentGroup 
+  Properties:
+    ApplicationName: 
+      Ref: "ApplicationName" 
+    AutoScalingGroups: 
+      Ref: CodeDeployAutoScalingGroups 
+    Deployment: 
+      Description: "A sample deployment"
+      IgnoreApplicationStopFailures: true 
+      Revision: 
+        RevisionType: GitHub 
+        GitHubLocation: 
+          CommitId:
+            Ref: CommitId 
+          Repository: 
+            Ref: Repository 
+    ServiceRoleArn: 
+      Fn::GetAtt: [ RoleArn, Arn ]
 ```
 
 ### Associate Amazon EC2 Instances<a name="aws-resource-codedeploy-deploymentgroup--examples--Associate__Instances"></a>
@@ -236,24 +266,87 @@ The following example creates a deployment group that uses instance tags to asso
 #### JSON<a name="aws-resource-codedeploy-deploymentgroup--examples--Associate__Instances--json"></a>
 
 ```
-"DeploymentGroup" : { "Type" : "AWS::CodeDeploy::DeploymentGroup",
-        "Properties" : { "ApplicationName" : {"Ref" : "Application"}, "Deployment" : { "Description"
-        : "First time", "IgnoreApplicationStopFailures" : "true", "Revision" : { "RevisionType" :
-        "S3", "S3Location" : { "Bucket" : {"Ref" : "Bucket"}, "Key" : {"Ref" : "Key"}, "BundleType"
-        : "Zip", "ETag" : {"Ref" : "ETag"}, "Version" : {"Ref" : "Version"} } } }, "Ec2TagFilters" :
-        [{ "Key" : {"Ref" : "TagKey"}, "Value" : {"Ref" : "TagValue"}, "Type" : "KEY_AND_VALUE" }],
-        "ServiceRoleArn" : { "Fn::GetAtt" : [ "RoleArn", "Arn" ] } } }
+"DeploymentGroup": {
+    "Type": "AWS::CodeDeploy::DeploymentGroup",
+    "Properties": {
+        "ApplicationName": {
+            "Ref": "Application"
+        },
+        "Deployment": {
+            "Description": "First time",
+            "IgnoreApplicationStopFailures": "true",
+            "Revision": {
+                "RevisionType": "S3",
+                "S3Location": {
+                    "Bucket": {
+                        "Ref": "Bucket"
+                    },
+                    "Key": {
+                        "Ref": "Key"
+                    },
+                    "BundleType": "Zip",
+                    "ETag": {
+                        "Ref": "ETag"
+                    },
+                    "Version": {
+                        "Ref": "Version"
+                    }
+                }
+            }
+        },
+        "Ec2TagFilters": [
+            {
+                "Key": {
+                    "Ref": "TagKey"
+                },
+                "Value": {
+                    "Ref": "TagValue"
+                },
+                "Type": "KEY_AND_VALUE"
+            }
+        ],
+        "ServiceRoleArn": {
+            "Fn::GetAtt": [
+                "RoleArn",
+                "Arn"
+            ]
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-codedeploy-deploymentgroup--examples--Associate__Instances--yaml"></a>
 
 ```
-DeploymentGroup: Type: AWS::CodeDeploy::DeploymentGroup Properties:
-        ApplicationName: Ref: "Application" Deployment: Description: "First time"
-        IgnoreApplicationStopFailures: true Revision: RevisionType: S3 S3Location: Bucket: Ref:
-        Bucket Key: Ref: Key BundleType: Zip ETag: Ref: ETag Version: Ref: Version Ec2TagFilters: -
-        Key: Ref: TagKey Value: Ref: TagValue Type: "KEY_AND_VALUE" ServiceRoleArn: Fn::GetAtt: [
-        RoleArn, Arn ]
+DeploymentGroup: 
+  Type: AWS::CodeDeploy::DeploymentGroup 
+  Properties:
+    ApplicationName: 
+      Ref: "Application" 
+    Deployment: 
+      Description: "First time"
+      IgnoreApplicationStopFailures: true 
+      Revision: 
+        RevisionType: S3 
+        S3Location: 
+          Bucket: 
+            Ref: Bucket 
+          Key: 
+            Ref: Key 
+          BundleType: Zip 
+          ETag: 
+            Ref: ETag 
+          Version: 
+            Ref: Version 
+      Ec2TagFilters: 
+        -
+        Key: 
+          Ref: TagKey 
+        Value: 
+          Ref: TagValue 
+        Type: "KEY_AND_VALUE" 
+      ServiceRoleArn: 
+        Fn::GetAtt: [ RoleArn, Arn ]
 ```
 
 ### Deployment Style<a name="aws-resource-codedeploy-deploymentgroup--examples--Deployment_Style"></a>
@@ -263,22 +356,41 @@ The following example creates deployment group with a `BLUE_GREEN` deployment ty
 #### JSON<a name="aws-resource-codedeploy-deploymentgroup--examples--Deployment_Style--json"></a>
 
 ```
-"CodeDeployDeploymentGroup": { "Type":
-        "AWS::CodeDeploy::DeploymentGroup", "Properties": { "ApplicationName": { "Ref":
-        "CodeDeployApplication" }, "DeploymentConfigName":
-        "CodeDeployDefault.LambdaCanary10Percent5Minutes", "DeploymentStyle": { "DeploymentType":
-        "BLUE_GREEN", "DeploymentOption": "WITH_TRAFFIC_CONTROL" }, "ServiceRoleArn": {
-        "Fn::GetAtt": [ "CodeDeployServiceRole", "Arn" ] } } }
+"CodeDeployDeploymentGroup": {
+    "Type": "AWS::CodeDeploy::DeploymentGroup",
+    "Properties": {
+        "ApplicationName": {
+            "Ref": "CodeDeployApplication"
+        },
+        "DeploymentConfigName": "CodeDeployDefault.LambdaCanary10Percent5Minutes",
+        "DeploymentStyle": {
+            "DeploymentType": "BLUE_GREEN",
+            "DeploymentOption": "WITH_TRAFFIC_CONTROL"
+        },
+        "ServiceRoleArn": {
+            "Fn::GetAtt": [
+                "CodeDeployServiceRole",
+                "Arn"
+            ]
+        }
+    }
+}
 ```
 
 #### YAML<a name="aws-resource-codedeploy-deploymentgroup--examples--Deployment_Style--yaml"></a>
 
 ```
-CodeDeployDeploymentGroup: Type: 'AWS::CodeDeploy::DeploymentGroup'
-        Properties: ApplicationName: !Ref CodeDeployApplication DeploymentConfigName:
-        CodeDeployDefault.LambdaCanary10Percent5Minutes DeploymentStyle: DeploymentType: BLUE_GREEN
-        DeploymentOption: WITH_TRAFFIC_CONTROL ServiceRoleArn: !GetAtt
-        CodeDeployServiceRole.Arn
+CodeDeployDeploymentGroup:
+  Type: 'AWS::CodeDeploy::DeploymentGroup'
+  Properties: 
+    ApplicationName:
+      Ref: CodeDeployApplication 
+    DeploymentConfigName: CodeDeployDefault.LambdaCanary10Percent5Minutes 
+    DeploymentStyle: 
+      DeploymentType: BLUE_GREEN
+      DeploymentOption: WITH_TRAFFIC_CONTROL 
+    ServiceRoleArn: 
+      Fn::GetAtt: [ CodeDeployServiceRole, Arn ]
 ```
 
 ### Alarm and Trigger<a name="aws-resource-codedeploy-deploymentgroup--examples--Alarm_and_Trigger"></a>
@@ -288,49 +400,127 @@ The following example configures a billing alarm and a notification trigger for 
 #### JSON<a name="aws-resource-codedeploy-deploymentgroup--examples--Alarm_and_Trigger--json"></a>
 
 ```
-{ "AWSTemplateFormatVersion": "2010-09-09", "Parameters": {
-        "EC2TagKey0": { "Type": "String", "Default": "ec2TagKey0" }, "EC2TagValue0": { "Type":
-        "String", "Default": "ec2TagValue0" }, "EC2TagKey1": { "Type": "String", "Default":
-        "ec2TagKey1" }, "EC2TagValue1": { "Type": "String", "Default": "ec2TagValue1" },
-        "CodeDeployServiceRole": { "Type": "String" }, "DeploymentGroupName": { "Type": "String" }
-        }, "Resources": { "myAlarm": { "Type": "AWS::CloudWatch::Alarm", "Properties": {
-        "Namespace": "AWS/Billing", "MetricName": "EstimatedCharges", "Statistic": "Maximum",
-        "Period": "21600", "EvaluationPeriods": "1", "Threshold": 1000, "ComparisonOperator":
-        "GreaterThanThreshold" } }, "mySNSTopic": { "Type": "AWS::SNS::Topic", "Properties": {} },
-        "Application": { "Type": "AWS::CodeDeploy::Application" }, "DeploymentConfig": { "Type":
-        "AWS::CodeDeploy::DeploymentConfig", "Properties": { "MinimumHealthyHosts": { "Type":
-        "FLEET_PERCENT", "Value": "25" } } }, "DeploymentGroup": { "Type":
-        "AWS::CodeDeploy::DeploymentGroup", "Properties": { "AlarmConfiguration": { "Alarms": [ {
-        "Name": { "Ref": "myAlarm" } } ] }, "ApplicationName": { "Ref": "Application" },
-        "DeploymentConfigName": { "Ref": "DeploymentConfig" }, "DeploymentGroupName": { "Ref":
-        "DeploymentGroupName" }, "Ec2TagFilters": [ { "Key": { "Ref": "EC2TagKey0" }, "Value": {
-        "Ref": "EC2TagValue0" }, "Type": "KEY_AND_VALUE" }, { "Key": { "Ref": "EC2TagKey1" },
-        "Type": "KEY_ONLY" }, { "Value": { "Ref": "EC2TagValue1" }, "Type": "VALUE_ONLY" } ],
-        "ServiceRoleArn": { "Fn::GetAtt": [ "CodeDeployServiceRole", "Arn" ] },
-        "TriggerConfigurations": [ { "TriggerEvents": [ "DeploymentSuccess", "DeploymentRollback" ],
-        "TriggerName": "MyTarget", "TriggerTargetArn": { "Ref": "mySNSTopic" } } ] } } } }
-```
-
-#### YAML<a name="aws-resource-codedeploy-deploymentgroup--examples--Alarm_and_Trigger--yaml"></a>
-
-```
-AWSTemplateFormatVersion: 2010-09-09 Parameters: EC2TagKey0: Type:
-        String Default: ec2TagKey0 EC2TagValue0: Type: String Default: ec2TagValue0 EC2TagKey1:
-        Type: String Default: ec2TagKey1 EC2TagValue1: Type: String Default: ec2TagValue1
-        CodeDeployServiceRole: Type: String DeploymentGroupName: Type: String Resources: myAlarm:
-        Type: AWS::CloudWatch::Alarm Properties: Namespace: AWS/Billing MetricName: EstimatedCharges
-        Statistic: Maximum Period: '21600' EvaluationPeriods: '1' Threshold: 1000
-        ComparisonOperator: GreaterThanThreshold mySNSTopic: Type: AWS::SNS::Topic Properties: {}
-        Application: Type: AWS::CodeDeploy::Application DeploymentConfig: Type:
-        AWS::CodeDeploy::DeploymentConfig Properties: MinimumHealthyHosts: Type: FLEET_PERCENT
-        Value: '25' DeploymentGroup: Type: AWS::CodeDeploy::DeploymentGroup Properties:
-        AlarmConfiguration: Alarms: - Name: !Ref myAlarm ApplicationName: !Ref Application
-        DeploymentConfigName: !Ref DeploymentConfig DeploymentGroupName: !Ref DeploymentGroupName
-        Ec2TagFilters: - Key: !Ref EC2TagKey0 Value: !Ref EC2TagValue0 Type: KEY_AND_VALUE - Key:
-        !Ref EC2TagKey1 Type: KEY_ONLY - Value: !Ref EC2TagValue1 Type: VALUE_ONLY ServiceRoleArn:
-        !GetAtt CodeDeployServiceRole.Arn TriggerConfigurations: - TriggerEvents: -
-        DeploymentSuccess - DeploymentRollback TriggerName: MyTarget TriggerTargetArn: !Ref
-        mySNSTopic
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Parameters": {
+        "EC2TagKey0": {
+            "Type": "String",
+            "Default": "ec2TagKey0"
+        },
+        "EC2TagValue0": {
+            "Type": "String",
+            "Default": "ec2TagValue0"
+        },
+        "EC2TagKey1": {
+            "Type": "String",
+            "Default": "ec2TagKey1"
+        },
+        "EC2TagValue1": {
+            "Type": "String",
+            "Default": "ec2TagValue1"
+        },
+        "CodeDeployServiceRole": {
+            "Type": "String"
+        },
+        "DeploymentGroupName": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "myAlarm": {
+            "Type": "AWS::CloudWatch::Alarm",
+            "Properties": {
+                "Namespace": "AWS/Billing",
+                "MetricName": "EstimatedCharges",
+                "Statistic": "Maximum",
+                "Period": "21600",
+                "EvaluationPeriods": "1",
+                "Threshold": 1000,
+                "ComparisonOperator": "GreaterThanThreshold"
+            }
+        },
+        "mySNSTopic": {
+            "Type": "AWS::SNS::Topic",
+            "Properties": {}
+        },
+        "Application": {
+            "Type": "AWS::CodeDeploy::Application"
+        },
+        "DeploymentConfig": {
+            "Type": "AWS::CodeDeploy::DeploymentConfig",
+            "Properties": {
+                "MinimumHealthyHosts": {
+                    "Type": "FLEET_PERCENT",
+                    "Value": "25"
+                }
+            }
+        },
+        "DeploymentGroup": {
+            "Type": "AWS::CodeDeploy::DeploymentGroup",
+            "Properties": {
+                "AlarmConfiguration": {
+                    "Alarms": [
+                        {
+                            "Name": {
+                                "Ref": "myAlarm"
+                            }
+                        }
+                    ]
+                },
+                "ApplicationName": {
+                    "Ref": "Application"
+                },
+                "DeploymentConfigName": {
+                    "Ref": "DeploymentConfig"
+                },
+                "DeploymentGroupName": {
+                    "Ref": "DeploymentGroupName"
+                },
+                "Ec2TagFilters": [
+                    {
+                        "Key": {
+                            "Ref": "EC2TagKey0"
+                        },
+                        "Value": {
+                            "Ref": "EC2TagValue0"
+                        },
+                        "Type": "KEY_AND_VALUE"
+                    },
+                    {
+                        "Key": {
+                            "Ref": "EC2TagKey1"
+                        },
+                        "Type": "KEY_ONLY"
+                    },
+                    {
+                        "Value": {
+                            "Ref": "EC2TagValue1"
+                        },
+                        "Type": "VALUE_ONLY"
+                    }
+                ],
+                "ServiceRoleArn": {
+                    "Fn::GetAtt": [
+                        "CodeDeployServiceRole",
+                        "Arn"
+                    ]
+                },
+                "TriggerConfigurations": [
+                    {
+                        "TriggerEvents": [
+                            "DeploymentSuccess",
+                            "DeploymentRollback"
+                        ],
+                        "TriggerName": "MyTarget",
+                        "TriggerTargetArn": {
+                            "Ref": "mySNSTopic"
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
 ```
 
 ### Automatic Rollback Configuration<a name="aws-resource-codedeploy-deploymentgroup--examples--Automatic_Rollback_Configuration"></a>

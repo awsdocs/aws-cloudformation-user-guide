@@ -1,6 +1,6 @@
 # AWS::IoTWireless::WirelessDevice AbpV10x<a name="aws-properties-iotwireless-wirelessdevice-abpv10x"></a>
 
-ABP device object for LoRaWAN specification v1\.0\.x
+ABP device object for LoRaWAN specification v1\.0\.x\.
 
 ## Syntax<a name="aws-properties-iotwireless-wirelessdevice-abpv10x-syntax"></a>
 
@@ -29,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The DevAddr value\.  
 *Required*: Yes  
 *Type*: String  
+*Pattern*: `[a-fA-F0-9]{8}`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SessionKeys`  <a name="cfn-iotwireless-wirelessdevice-abpv10x-sessionkeys"></a>

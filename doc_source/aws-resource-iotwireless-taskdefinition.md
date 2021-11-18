@@ -45,12 +45,15 @@ Whether to automatically create tasks using this task definition for all gateway
 The name of the new resource\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `2048`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-iotwireless-taskdefinition-tags"></a>
-The tags to attach to the specified resource\. Tags are metadata that you can use to manage a resource\.  
+The tags are an array of key\-value pairs to attach to the specified resource\. Tags can have a minimum of 0 and a maximum of 50 items\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Update`  <a name="cfn-iotwireless-taskdefinition-update"></a>

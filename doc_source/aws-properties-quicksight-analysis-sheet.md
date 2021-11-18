@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-analysis-sheet-properties"></a>
 
 `Name`  <a name="cfn-quicksight-analysis-sheet-name"></a>
-The name of a sheet\. This name is displayed on the sheet's tab in the QuickSight console\.  
+The name of a sheet\. This name is displayed on the sheet's tab in the Amazon QuickSight console\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `.*\S.*`  
