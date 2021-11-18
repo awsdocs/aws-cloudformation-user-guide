@@ -141,9 +141,9 @@ The following example shows how to declare an `AWS::CertificateManager::Certific
 
 ```
 Resources:
-  MyCertificate:
-    Type: AWS::CertificateManager::Certificate
-    Properties:
-      DomainName: example.com
-      ValidationMethod: DNS
+    MyCertificate:
+        Type: AWS::CertificateManager::Certificate
+        Properties:
+            DomainName: example.com
+            ValidationMethod: DNS
 ```
