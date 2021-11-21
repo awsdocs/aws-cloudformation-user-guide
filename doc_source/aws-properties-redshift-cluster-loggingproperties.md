@@ -35,7 +35,8 @@ Constraints:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3KeyPrefix`  <a name="cfn-redshift-cluster-loggingproperties-s3keyprefix"></a>
-The prefix applied to the log file names\.  
+The prefix applied to the log file names\.
+If you specify an S3 Bucket bucket for logging, you must specify an S3 key prefix\.
 Constraints:  
 + Cannot exceed 512 characters
 + Cannot contain spaces\( \), double quotes \("\), single quotes \('\), a backslash \(\\\), or control characters\. The hexadecimal codes for invalid characters are: 
@@ -44,7 +45,7 @@ Constraints:
   + x27
   + x5c
   + x7f or larger
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
