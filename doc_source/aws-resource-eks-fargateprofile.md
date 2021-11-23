@@ -81,7 +81,7 @@ The IDs of subnets to launch your pods into\. At this time, pods running on Farg
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-eks-fargateprofile-tags"></a>
-The metadata to apply to the Fargate profile to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Fargate profile tags do not propagate to any other resources associated with the Fargate profile, such as the pods that are scheduled with it\.  
+The metadata to apply to the Fargate profile to assist with categorization and organization\. Each tag consists of a key and an optional value\. You define both\. Fargate profile tags do not propagate to any other resources associated with the Fargate profile, such as the pods that are scheduled with it\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

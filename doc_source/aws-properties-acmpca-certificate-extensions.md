@@ -48,7 +48,7 @@ Specifies additional purposes for which the certified public key may be used oth
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KeyUsage`  <a name="cfn-acmpca-certificate-extensions-keyusage"></a>
-Defines one or more purposes for which the key contained in the certificate can be used\. Default value for each option is false\.   
+Defines one or more purposes for which the key contained in the certificate can be used\. Default value for each option is false\.  
 *Required*: No  
 *Type*: [KeyUsage](aws-properties-acmpca-certificate-keyusage.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

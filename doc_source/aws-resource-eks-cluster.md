@@ -2,13 +2,13 @@
 
 Creates an Amazon EKS control plane\. 
 
-The Amazon EKS control plane consists of control plane instances that run the Kubernetes software, such as `etcd` and the API server\. The control plane runs in an account managed by AWS, and the Kubernetes API is exposed via the Amazon EKS API server endpoint\. Each Amazon EKS cluster control plane is single\-tenant and unique and runs on its own set of Amazon EC2 instances\.
+The Amazon EKS control plane consists of control plane instances that run the Kubernetes software, such as `etcd` and the API server\. The control plane runs in an account managed by AWS, and the Kubernetes API is exposed by the Amazon EKS API server endpoint\. Each Amazon EKS cluster control plane is single tenant and unique\. It runs on its own set of Amazon EC2 instances\.
 
 The cluster control plane is provisioned across multiple Availability Zones and fronted by an Elastic Load Balancing Network Load Balancer\. Amazon EKS also provisions elastic network interfaces in your VPC subnets to provide connectivity from the control plane instances to the nodes \(for example, to support `kubectl exec`, `logs`, and `proxy` data flows\)\.
 
-Amazon EKS nodes run in your AWS account and connect to your cluster's control plane via the Kubernetes API server endpoint and a certificate file that is created for your cluster\.
+Amazon EKS nodes run in your AWS account and connect to your cluster's control plane over the Kubernetes API server endpoint and a certificate file that is created for your cluster\.
 
-Cluster creation typically takes several minutes\. After you create an Amazon EKS cluster, you must configure your Kubernetes tooling to communicate with the API server and launch nodes into your cluster\. For more information, see [Managing Cluster Authentication](https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html) and [Launching Amazon EKS nodes](https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html) in the *Amazon EKS User Guide*\.
+In most cases, it takes several minutes to create a cluster\. After you create an Amazon EKS cluster, you must configure your Kubernetes tooling to communicate with the API server and launch nodes into your cluster\. For more information, see [Managing Cluster Authentication](https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html) and [Launching Amazon EKS nodes](https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html) in the *Amazon EKS User Guide*\.
 
 ## Syntax<a name="aws-resource-eks-cluster-syntax"></a>
 

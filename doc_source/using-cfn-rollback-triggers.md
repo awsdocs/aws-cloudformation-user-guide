@@ -8,7 +8,7 @@ By default, CloudFormation only rolls back stack operations if an alarm goes to 
 
 CloudFormation doesn't monitor rollback triggers when it rolls back a stack during an update operation\.
 
-You can add a maximum of 5 rollback triggers\. To add a rollback trigger, specify the Amazon Resource Name \(ARN\) of the CloudWatch alarm\. Currently, `AWS::CloudWatch::Alarm` and `AWS::CloudWatch::CompositeAlarm` types can be used as rollback triggers\. For more information about CloudWatch alarms, see [Using Amazon CloudWatch alarms](https://docs.aws.amazon.com/https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/latest/monitoring/AlarmThatSendsEmail.html) in Amazon CloudWatch User Guide\.
+You can add a maximum of 5 rollback triggers\. To add a rollback trigger, specify the Amazon Resource Name \(ARN\) of the CloudWatch alarm\. Currently, `AWS::CloudWatch::Alarm` and `AWS::CloudWatch::CompositeAlarm` types can be used as rollback triggers\. For more information about CloudWatch alarms, see [Using Amazon CloudWatch alarms](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html) in Amazon CloudWatch User Guide\.
 
 If a given CloudWatch alarm is missing, the entire stack operation fails and rolls back\.
 

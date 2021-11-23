@@ -26,5 +26,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The type of Insights events to log on a trail\. The valid Insights type in this release is `ApiCallRateInsight`\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `ApiCallRateInsight`  
+*Allowed values*: `ApiCallRateInsight | ApiErrorRateInsight`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

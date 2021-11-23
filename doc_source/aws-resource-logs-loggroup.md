@@ -19,7 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[KmsKeyId](#cfn-logs-loggroup-kmskeyid)" : String,
       "[LogGroupName](#cfn-logs-loggroup-loggroupname)" : String,
-      "[RetentionInDays](#cfn-logs-loggroup-retentionindays)" : Integer
+      "[RetentionInDays](#cfn-logs-loggroup-retentionindays)" : Integer,
+      "[Tags](#cfn-logs-loggroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -32,6 +33,8 @@ Properties:
   [KmsKeyId](#cfn-logs-loggroup-kmskeyid): String
   [LogGroupName](#cfn-logs-loggroup-loggroupname): String
   [RetentionInDays](#cfn-logs-loggroup-retentionindays): Integer
+  [Tags](#cfn-logs-loggroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-logs-loggroup-properties"></a>
@@ -57,6 +60,12 @@ The number of days to retain the log events in the specified log group\. Possibl
 To set a log group to never have log events expire, use [DeleteRetentionPolicy](https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DeleteRetentionPolicy.html)\.   
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-logs-loggroup-tags"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-logs-loggroup-return-values"></a>

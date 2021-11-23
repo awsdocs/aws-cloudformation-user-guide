@@ -50,14 +50,15 @@ If the allocation strategy is `capacityOptimized`, EC2 Fleet launches instances 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceInterruptionBehavior`  <a name="cfn-ec2-ec2fleet-spotoptionsrequest-instanceinterruptionbehavior"></a>
-The behavior when a Spot Instance is interrupted\. The default is `terminate`\.  
+The behavior when a Spot Instance is interrupted\.  
+Default: `terminate`   
 *Required*: No  
 *Type*: String  
 *Allowed values*: `hibernate | stop | terminate`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstancePoolsToUseCount`  <a name="cfn-ec2-ec2fleet-spotoptionsrequest-instancepoolstousecount"></a>
-The number of Spot pools across which to allocate your target Spot capacity\. Valid only when Spot **AllocationStrategy** is set to `lowest-price`\. EC2 Fleet selects the cheapest Spot pools and evenly allocates your target Spot capacity across the number of Spot pools that you specify\.  
+The number of Spot pools across which to allocate your target Spot capacity\. Supported only when Spot `AllocationStrategy` is set to `lowest-price`\. EC2 Fleet selects the cheapest Spot pools and evenly allocates your target Spot capacity across the number of Spot pools that you specify\.  
 Note that EC2 Fleet attempts to draw Spot Instances from the number of pools that you specify on a best effort basis\. If a pool runs out of Spot capacity before fulfilling your target capacity, EC2 Fleet will continue to fulfill your request by drawing from the next cheapest pool\. To ensure that your target capacity is met, you might receive Spot Instances from more than the number of pools that you specified\. Similarly, if most of the pools have no Spot capacity, you might receive your full target capacity from fewer than the number of pools that you specified\.  
 *Required*: No  
 *Type*: Integer  
@@ -77,18 +78,22 @@ The maximum amount per hour for Spot Instances that you're willing to pay\.
 
 `MinTargetCapacity`  <a name="cfn-ec2-ec2fleet-spotoptionsrequest-mintargetcapacity"></a>
 The minimum target capacity for Spot Instances in the fleet\. If the minimum target capacity is not reached, the fleet launches no instances\.  
+Supported only for fleets of type `instant`\.  
+At least one of the following must be specified: `SingleAvailabilityZone` \| `SingleInstanceType`   
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SingleAvailabilityZone`  <a name="cfn-ec2-ec2fleet-spotoptionsrequest-singleavailabilityzone"></a>
-Indicates that the fleet launches all Spot Instances into a single Availability Zone\. Supported only for fleets of type `instant`\.  
+Indicates that the fleet launches all Spot Instances into a single Availability Zone\.  
+Supported only for fleets of type `instant`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SingleInstanceType`  <a name="cfn-ec2-ec2fleet-spotoptionsrequest-singleinstancetype"></a>
-Indicates that the fleet uses a single instance type to launch all Spot Instances in the fleet\. Supported only for fleets of type `instant`\.  
+Indicates that the fleet uses a single instance type to launch all Spot Instances in the fleet\.  
+Supported only for fleets of type `instant`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

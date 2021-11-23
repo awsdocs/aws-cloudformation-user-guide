@@ -30,7 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RoleArn](#cfn-databrew-job-rolearn)" : String,
       "[Tags](#cfn-databrew-job-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Timeout](#cfn-databrew-job-timeout)" : Integer,
-      "[Type](#cfn-databrew-job-type)" : String
+      "[Type](#cfn-databrew-job-type)" : String,
+      "[ValidationConfigurations](#cfn-databrew-job-validationconfigurations)" : [ ValidationConfiguration, ... ]
     }
 }
 ```
@@ -67,6 +68,8 @@ Properties:
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Timeout](#cfn-databrew-job-timeout): Integer
   [Type](#cfn-databrew-job-type): String
+  [ValidationConfigurations](#cfn-databrew-job-validationconfigurations): 
+    - ValidationConfiguration
 ```
 
 ## Properties<a name="aws-resource-databrew-job-properties"></a>
@@ -155,7 +158,7 @@ One or more artifacts that represent output from running the job\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProfileConfiguration`  <a name="cfn-databrew-job-profileconfiguration"></a>
-Not currently supported by AWS CloudFormation\.  
+Configuration for profile jobs\. Configuration can be used to select columns, do evaluations, and override default parameters of evaluations\. When configuration is undefined, the profile job will apply default settings to all supported columns\.   
 *Required*: No  
 *Type*: [ProfileConfiguration](aws-properties-databrew-job-profileconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -204,6 +207,12 @@ The job type of the job, which must be one of the following:
 *Allowed values*: `PROFILE | RECIPE`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ValidationConfigurations`  <a name="cfn-databrew-job-validationconfigurations"></a>
+List of validation configurations that are applied to the profile job\.  
+*Required*: No  
+*Type*: List of [ValidationConfiguration](aws-properties-databrew-job-validationconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Return values<a name="aws-resource-databrew-job-return-values"></a>
 
 ### Ref<a name="aws-resource-databrew-job-return-values-ref"></a>
@@ -212,7 +221,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  `{ "Ref": "myJob" }` 
 
-For an AWS Glue DataBrew job named `myJob`, `Ref` returns the name of the job\. 
+For an AWS Glue DataBrew job named `myJob`, `Ref` returns the name of the job\. 
 
 ## Examples<a name="aws-resource-databrew-job--examples"></a>
 
@@ -233,9 +242,9 @@ Resources:
       Name: job-name
       DatasetName: dataset-name
       RoleArn: arn:aws:iam::12345678910:role/PassRoleAdmin
-      JobSample: 
+      JobSample:
         Mode: 'CUSTOM_ROWS'
-        Size: 50000 
+        Size: 50000
       OutputLocation:
         Bucket: !Join [ '', ['databrew-cfn-integration-tests-', !Ref 'AWS::Region', '-', !Ref 'AWS::AccountId' ] ]
       Tags: [{Key: key00AtCreate, Value: value001AtCreate}]
@@ -246,7 +255,7 @@ Resources:
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "This CloudFormation template creates a DataBrew Profile Job",
+    "Description": "This CloudFormation template specifies a DataBrew Profile Job",
     "Resources": {
         "MyDataBrewProfileJob": {
             "Type": "AWS::DataBrew::Job",

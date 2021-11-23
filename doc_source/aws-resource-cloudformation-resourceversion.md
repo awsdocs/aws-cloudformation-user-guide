@@ -57,7 +57,7 @@ Logging configuration information for a resource\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SchemaHandlerPackage`  <a name="cfn-cloudformation-resourceversion-schemahandlerpackage"></a>
-A url to the S3 bucket containing the resource project package that contains the neccessary files for the resource you want to register\.  
+A URL to the S3 bucket containing the resource project package that contains the necessary files for the resource you want to register\.  
 For information on generating a schema handler package for the resource you want to register, see [submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html) in the *CloudFormation CLI User Guide*\.  
 The user registering the resource must be able to access the package in the S3 bucket\. That is, the user needs to have [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for the schema handler package\. For more information, see [Actions, Resources, and Condition Keys for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity and Access Management User Guide*\.
 *Required*: Yes  
@@ -127,7 +127,7 @@ The ID of a specific version of the resource\. The version ID is the value at th
 The scope at which the resource is visible and usable in CloudFormation operations\.  
 Valid values include:  
 + `PRIVATE`: The resource is only visible and usable within the account in which it's registered\. CloudFormation marks any resources you register as `PRIVATE`\.
-+ `PUBLIC`: The resource is publically visible and usable within any Amazon account\.
++ `PUBLIC`: The resource is publicly visible and usable within any Amazon account\.
 
 ## Examples<a name="aws-resource-cloudformation-resourceversion--examples"></a>
 

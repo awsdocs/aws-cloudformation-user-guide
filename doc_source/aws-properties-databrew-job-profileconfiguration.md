@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ColumnStatisticsConfigurations](#cfn-databrew-job-profileconfiguration-columnstatisticsconfigurations)" : [ ColumnStatisticsConfiguration, ... ],
   "[DatasetStatisticsConfiguration](#cfn-databrew-job-profileconfiguration-datasetstatisticsconfiguration)" : StatisticsConfiguration,
+  "[EntityDetectorConfiguration](#cfn-databrew-job-profileconfiguration-entitydetectorconfiguration)" : EntityDetectorConfiguration,
   "[ProfileColumns](#cfn-databrew-job-profileconfiguration-profilecolumns)" : [ ColumnSelector, ... ]
 }
 ```
@@ -23,6 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - ColumnStatisticsConfiguration
   [DatasetStatisticsConfiguration](#cfn-databrew-job-profileconfiguration-datasetstatisticsconfiguration): 
     StatisticsConfiguration
+  [EntityDetectorConfiguration](#cfn-databrew-job-profileconfiguration-entitydetectorconfiguration): 
+    EntityDetectorConfiguration
   [ProfileColumns](#cfn-databrew-job-profileconfiguration-profilecolumns): 
     - ColumnSelector
 ```
@@ -39,6 +42,12 @@ List of configurations for column evaluations\. ColumnStatisticsConfigurations a
 Configuration for inter\-column evaluations\. Configuration can be used to select evaluations and override parameters of evaluations\. When configuration is undefined, the profile job will run all supported inter\-column evaluations\.   
 *Required*: No  
 *Type*: [StatisticsConfiguration](aws-properties-databrew-job-statisticsconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EntityDetectorConfiguration`  <a name="cfn-databrew-job-profileconfiguration-entitydetectorconfiguration"></a>
+Configuration of entity detection for a profile job\. When undefined, entity detection is disabled\.  
+*Required*: No  
+*Type*: [EntityDetectorConfiguration](aws-properties-databrew-job-entitydetectorconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProfileColumns`  <a name="cfn-databrew-job-profileconfiguration-profilecolumns"></a>

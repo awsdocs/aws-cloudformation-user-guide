@@ -139,11 +139,11 @@ The following example creates a connection named auth0\-connection using OAuth a
 
 ```
 {
-  "Auth0Conection":
+  "Auth0Connection":
     "Type" : "AWS::Events::Connection",
     "Properties": {
         "Name" : "auth0-connection",
-        "AuthorizationType" : "OAUTH",
+        "AuthorizationType" : "OAUTH_CLIENT_CREDENTIALS",
         "AuthParameters" : {
             "OAuthParameters: {
                 "ClientParameters" : {
@@ -166,11 +166,11 @@ The following example creates a connection named auth0\-connection using OAuth a
 #### YAML<a name="aws-resource-events-connection--examples--Create_a_connection_with_OAuth_authorization_parameters--yaml"></a>
 
 ```
-Auth0Conection:
+Auth0Connection:
   Type: AWS::Events::Connection
   Properties:
     Name: 'auth0-connection'
-    AuthorizationType: OAUTH
+    AuthorizationType: OAUTH_CLIENT_CREDENTIALS
     AuthParameters:
       OAuthParameters:
         ClientParameters:

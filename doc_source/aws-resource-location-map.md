@@ -82,7 +82,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### <a name="aws-resource-location-map-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The Amazon Resource Name \(ARN\) for the map resource\. Used to specify a resource across all AWS\.  
++ Format example: `arn:aws:geo:region:account-id:maps/ExampleMap`
 
 `DataSource`  <a name="DataSource-fn::getatt"></a>
 Not currently supported by AWS CloudFormation\.

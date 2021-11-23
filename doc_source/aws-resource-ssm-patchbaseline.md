@@ -114,7 +114,7 @@ The name of the patch baseline\.
 Defines the operating system the patch baseline applies to\. The default value is `WINDOWS`\.   
 *Required*: No  
 *Type*: String  
-*Allowed values*: `AMAZON_LINUX | AMAZON_LINUX_2 | CENTOS | DEBIAN | MACOS | ORACLE_LINUX | REDHAT_ENTERPRISE_LINUX | SUSE | UBUNTU | WINDOWS`  
+*Allowed values*: `AMAZON_LINUX | AMAZON_LINUX_2 | CENTOS | DEBIAN | MACOS | ORACLE_LINUX | RASPBIAN | REDHAT_ENTERPRISE_LINUX | SUSE | UBUNTU | WINDOWS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PatchGroups`  <a name="cfn-ssm-patchbaseline-patchgroups"></a>

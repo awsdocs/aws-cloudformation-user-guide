@@ -76,7 +76,7 @@ Properties:
 ## Properties<a name="aws-properties-elasticache-cache-cluster-properties"></a>
 
 `AutoMinorVersionUpgrade`  <a name="cfn-elasticache-cachecluster-autominorversionupgrade"></a>
-This parameter is currently disabled\.  
+If you are running Redis engine version 6\.0 or later, set this parameter to yes if you want to opt\-in to the next minor version upgrade campaign\. This parameter is disabled for previous versions\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -102,6 +102,8 @@ The following node types are supported by ElastiCache\. Generally speaking, the 
 
     **M4 node types:** `cache.m4.large`, `cache.m4.xlarge`, `cache.m4.2xlarge`, `cache.m4.4xlarge`, `cache.m4.10xlarge`
 
+    **T4g node types:** `cache.t4g.micro`, `cache.t4g.small`, `cache.t4g.medium` 
+
     **T3 node types:** `cache.t3.micro`, `cache.t3.small`, `cache.t3.medium`
 
     **T2 node types:** `cache.t2.micro`, `cache.t2.small`, `cache.t2.medium`
@@ -118,6 +120,10 @@ The following node types are supported by ElastiCache\. Generally speaking, the 
     **C1 node types:** `cache.c1.xlarge`
 + Memory optimized:
   + Current generation: 
+
+    **R6gd node types:** `cache.r6gd.xlarge`, `cache.r6gd.2xlarge`, `cache.r6gd.4xlarge`, `cache.r6gd.8xlarge`, `cache.r6gd.12xlarge`, `cache.r6gd.16xlarge`
+**Note**  
+The `r6gd` family is available in the following regions: `us-east-2`, `us-east-1`, `us-west-2`, `us-west-1`, `eu-west-1`, `eu-central-1`, `ap-northeast-1`, `ap-southeast-1`, `ap-southeast-2`\.
 
     **R6g node types:** `cache.r6g.large`, `cache.r6g.xlarge`, `cache.r6g.2xlarge`, `cache.r6g.4xlarge`, `cache.r6g.12xlarge`, `cache.r6g.24xlarge`
 

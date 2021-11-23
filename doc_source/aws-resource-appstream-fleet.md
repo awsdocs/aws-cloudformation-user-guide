@@ -1,6 +1,6 @@
 # AWS::AppStream::Fleet<a name="aws-resource-appstream-fleet"></a>
 
-The `AWS::AppStream::Fleet` resource creates a fleet for Amazon AppStream 2\.0\. A fleet consists of streaming instances that run a specified image\.
+The `AWS::AppStream::Fleet` resource creates a fleet for Amazon AppStream 2\.0\. A fleet consists of streaming instances that run a specified image when using Always\-On or On\-Demand\.
 
 ## Syntax<a name="aws-resource-appstream-fleet-syntax"></a>
 
@@ -24,10 +24,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ImageArn](#cfn-appstream-fleet-imagearn)" : String,
       "[ImageName](#cfn-appstream-fleet-imagename)" : String,
       "[InstanceType](#cfn-appstream-fleet-instancetype)" : String,
+      "[MaxConcurrentSessions](#cfn-appstream-fleet-maxconcurrentsessions)" : Integer,
       "[MaxUserDurationInSeconds](#cfn-appstream-fleet-maxuserdurationinseconds)" : Integer,
       "[Name](#cfn-appstream-fleet-name)" : String,
+      "[Platform](#cfn-appstream-fleet-platform)" : String,
       "[StreamView](#cfn-appstream-fleet-streamview)" : String,
       "[Tags](#cfn-appstream-fleet-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[UsbDeviceFilterStrings](#cfn-appstream-fleet-usbdevicefilterstrings)" : [ String, ... ],
       "[VpcConfig](#cfn-appstream-fleet-vpcconfig)" : VpcConfig
     }
 }
@@ -52,11 +55,15 @@ Properties:
   [ImageArn](#cfn-appstream-fleet-imagearn): String
   [ImageName](#cfn-appstream-fleet-imagename): String
   [InstanceType](#cfn-appstream-fleet-instancetype): String
+  [MaxConcurrentSessions](#cfn-appstream-fleet-maxconcurrentsessions): Integer
   [MaxUserDurationInSeconds](#cfn-appstream-fleet-maxuserdurationinseconds): Integer
   [Name](#cfn-appstream-fleet-name): String
+  [Platform](#cfn-appstream-fleet-platform): String
   [StreamView](#cfn-appstream-fleet-streamview): String
   [Tags](#cfn-appstream-fleet-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [UsbDeviceFilterStrings](#cfn-appstream-fleet-usbdevicefilterstrings): 
+    - String
   [VpcConfig](#cfn-appstream-fleet-vpcconfig): 
     VpcConfig
 ```
@@ -64,8 +71,8 @@ Properties:
 ## Properties<a name="aws-resource-appstream-fleet-properties"></a>
 
 `ComputeCapacity`  <a name="cfn-appstream-fleet-computecapacity"></a>
-The desired capacity for the fleet\.  
-*Required*: Yes  
+The desired capacity for the fleet\. This is not allowed for Elastic fleets\.  
+*Required*: No  
 *Type*: [ComputeCapacity](aws-properties-appstream-fleet-computecapacity.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -91,7 +98,7 @@ The fleet name to display\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainJoinInfo`  <a name="cfn-appstream-fleet-domainjoininfo"></a>
-The name of the directory and organizational unit \(OU\) to use to join the fleet to a Microsoft Active Directory domain\.   
+The name of the directory and organizational unit \(OU\) to use to join the fleet to a Microsoft Active Directory domain\. This is not allowed for Elastic fleets\.  
 *Required*: No  
 *Type*: [DomainJoinInfo](aws-properties-appstream-fleet-domainjoininfo.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -107,10 +114,12 @@ The fleet type\.
 ALWAYS\_ON  
 Provides users with instant\-on access to their apps\. You are charged for all running instances in your fleet, even if no users are streaming apps\.  
 ON\_DEMAND  
-Provide users with access to applications after they connect, which takes one to two minutes\. You are charged for instance streaming when users are connected and a small hourly fee for instances that are not streaming apps\.
+Provide users with access to applications after they connect, which takes one to two minutes\. You are charged for instance streaming when users are connected and a small hourly fee for instances that are not streaming apps\.  
+ELASTIC  
+The pool of streaming instances is managed by Amazon AppStream 2\.0\. When a user selects their application or desktop to launch, they will start streaming after the app block has been downloaded and mounted to a streaming instance\.
+*Allowed Values*: `ALWAYS_ON` \| `ELASTIC` \| `ON_DEMAND`  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `ALWAYS_ON | ON_DEMAND`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IamRoleArn`  <a name="cfn-appstream-fleet-iamrolearn"></a>
@@ -144,7 +153,7 @@ The name of the image used to create the fleet\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceType`  <a name="cfn-appstream-fleet-instancetype"></a>
-The instance type to use when launching fleet instances\. The following instance types are available:  
+The instance type to use when launching fleet instances\. The following instance types are available for non\-Elastic fleets:  
 + stream\.standard\.small
 + stream\.standard\.medium
 + stream\.standard\.large
@@ -178,9 +187,18 @@ The instance type to use when launching fleet instances\. The following instance
 + stream\.graphics\-pro\.4xlarge
 + stream\.graphics\-pro\.8xlarge
 + stream\.graphics\-pro\.16xlarge
+The following instance types are available for Elastic fleets:  
++ stream\.standard\.small
++ stream\.standard\.medium
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MaxConcurrentSessions`  <a name="cfn-appstream-fleet-maxconcurrentsessions"></a>
+The maximum number of concurrent sessions that can be run on an Elastic fleet\. This setting is required for Elastic fleets, but is not used for other fleet types\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxUserDurationInSeconds`  <a name="cfn-appstream-fleet-maxuserdurationinseconds"></a>
@@ -197,6 +215,14 @@ A unique name for the fleet\.
 *Pattern*: `^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,100}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Platform`  <a name="cfn-appstream-fleet-platform"></a>
+The platform of the fleet\. Platform is a required setting for Elastic fleets, and is not used for other fleet types\.  
+*Allowed Values*: `WINDOWS_SERVER_2019` \| `AMAZON_LINUX2`  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `AMAZON_LINUX2 | WINDOWS | WINDOWS_SERVER_2016 | WINDOWS_SERVER_2019`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `StreamView`  <a name="cfn-appstream-fleet-streamview"></a>
 The AppStream 2\.0 view that is displayed to your users when they stream from the fleet\. When `APP` is specified, only the windows of applications opened by users display\. When `DESKTOP` is specified, the standard desktop that is provided by the operating system displays\.  
 The default value is `APP`\.  
@@ -211,8 +237,14 @@ An array of key\-value pairs\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`UsbDeviceFilterStrings`  <a name="cfn-appstream-fleet-usbdevicefilterstrings"></a>
+The USB device filter strings that specify which USB devices a user can redirect to the fleet streaming session, when using the Windows native client\. This is allowed but not required for Elastic fleets\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `VpcConfig`  <a name="cfn-appstream-fleet-vpcconfig"></a>
-The VPC configuration for the fleet\.  
+The VPC configuration for the fleet\. This is required for Elastic fleets, but not required for other fleet types\.  
 *Required*: No  
 *Type*: [VpcConfig](aws-properties-appstream-fleet-vpcconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

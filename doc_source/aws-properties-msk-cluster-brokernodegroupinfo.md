@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[BrokerAZDistribution](#cfn-msk-cluster-brokernodegroupinfo-brokerazdistribution)" : String,
   "[ClientSubnets](#cfn-msk-cluster-brokernodegroupinfo-clientsubnets)" : [ String, ... ],
+  "[ConnectivityInfo](#cfn-msk-cluster-brokernodegroupinfo-connectivityinfo)" : ConnectivityInfo,
   "[InstanceType](#cfn-msk-cluster-brokernodegroupinfo-instancetype)" : String,
   "[SecurityGroups](#cfn-msk-cluster-brokernodegroupinfo-securitygroups)" : [ String, ... ],
   "[StorageInfo](#cfn-msk-cluster-brokernodegroupinfo-storageinfo)" : StorageInfo
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BrokerAZDistribution](#cfn-msk-cluster-brokernodegroupinfo-brokerazdistribution): String
   [ClientSubnets](#cfn-msk-cluster-brokernodegroupinfo-clientsubnets): 
     - String
+  [ConnectivityInfo](#cfn-msk-cluster-brokernodegroupinfo-connectivityinfo): 
+    ConnectivityInfo
   [InstanceType](#cfn-msk-cluster-brokernodegroupinfo-instancetype): String
   [SecurityGroups](#cfn-msk-cluster-brokernodegroupinfo-securitygroups): 
     - String
@@ -46,6 +49,12 @@ Client subnets can't be in Availability Zone us\-east\-1e\.
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ConnectivityInfo`  <a name="cfn-msk-cluster-brokernodegroupinfo-connectivityinfo"></a>
+Information about the cluster's connectivity setting\.  
+*Required*: No  
+*Type*: [ConnectivityInfo](aws-properties-msk-cluster-connectivityinfo.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceType`  <a name="cfn-msk-cluster-brokernodegroupinfo-instancetype"></a>
 The type of Amazon EC2 instances to use for brokers\. The following instance types are allowed: kafka\.m5\.large, kafka\.m5\.xlarge, kafka\.m5\.2xlarge, kafka\.m5\.4xlarge, kafka\.m5\.8xlarge, kafka\.m5\.12xlarge, kafka\.m5\.16xlarge, and kafka\.m5\.24xlarge\.  

@@ -3,11 +3,12 @@
 This topic contains some common AWS CloudFormation StackSets issues, and suggested solutions for those issues\.
 
 **Topics**
-+ [Common reasons for stack operation failure](#w10432ab1c29c29b6)
-+ [Retrying failed stack creation or update operations](#w10432ab1c29c29b8)
++ [Common reasons for stack operation failure](#common-reasons-for-stack-operation-failure)
++ [Retrying failed stack creation or update operations](#retrying-failed-stack-creation-or-update-operations)
 + [Stack instance deletion fails](#stack-instance-delete-fails)
++ [Stack import operation fails](#stack-import-fails)
 
-## Common reasons for stack operation failure<a name="w10432ab1c29c29b6"></a>
+## Common reasons for stack operation failure<a name="common-reasons-for-stack-operation-failure"></a>
 
 **Problem:** A stack operation failed, and the stack instance status is `OUTDATED`\.
 
@@ -22,7 +23,7 @@ This topic contains some common AWS CloudFormation StackSets issues, and suggest
 
 **Solution:** For more information about the permissions required of target and administrator accounts before you can create stack sets, see [Set up basic permissions for stack set operations](stacksets-prereqs-self-managed.md#stacksets-prereqs-accountsetup)\.
 
-## Retrying failed stack creation or update operations<a name="w10432ab1c29c29b8"></a>
+## Retrying failed stack creation or update operations<a name="retrying-failed-stack-creation-or-update-operations"></a>
 
 **Problem:** A stack creation or update failed, and the stack instance status is `OUTDATED`\. To troubleshoot why a stack creation or update failed, open the AWS CloudFormation console, and view the events for the stack, which will have a status of `DELETED` \(for failed create operations\) or `FAILED` \(for failed update operations\)\. Browse the stack events, and find the **Status reason** column\. The value of **Status reason** explains why the stack operation failed\.
 
@@ -51,3 +52,17 @@ After you have fixed the underlying cause of the stack creation failure, and you
 **Cause:** Stack deletion will fail for any stacks on which termination protection has been enabled\.
 
 **Solution:** Determine if termination protection has been enabled for the stack\. If it has, disable termination protection and then perform the stack instance deletion again\.
+
+## Stack import operation fails<a name="stack-import-fails"></a>
+
+**Problem:** A stack import operation fails to import existing stacks into new or existing stack sets\. The stack instance is in an `INOPERABLE` status\.
+
+**Solution:** Revert the stack import operation, by completing the following tasks\.
+
+1. Specify a `DeletionPolicy` attribute of `Retain` for each resource that you want to keep after the stack instance is deleted\. For more information, see [Reverting an import operation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import-revert.html)\.
+
+1. Delete stack instances from your stack set\. For more information, see [Delete stack instances from your stack set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stackinstances-delete.html)\.
+
+1. Delete your stack set\. For more information, see [Delete a stack set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-delete.html)\.
+
+1. Retry the stack import operation\.

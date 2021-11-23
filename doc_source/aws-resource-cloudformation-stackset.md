@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Capabilities](#cfn-cloudformation-stackset-capabilities)" : [ String, ... ],
       "[Description](#cfn-cloudformation-stackset-description)" : String,
       "[ExecutionRoleName](#cfn-cloudformation-stackset-executionrolename)" : String,
+      "[ManagedExecution](#cfn-cloudformation-stackset-managedexecution)" : Json,
       "[OperationPreferences](#cfn-cloudformation-stackset-operationpreferences)" : OperationPreferences,
       "[Parameters](#cfn-cloudformation-stackset-parameters)" : [ Parameter, ... ],
       "[PermissionModel](#cfn-cloudformation-stackset-permissionmodel)" : String,
@@ -43,6 +44,7 @@ Properties:
     - String
   [Description](#cfn-cloudformation-stackset-description): String
   [ExecutionRoleName](#cfn-cloudformation-stackset-executionrolename): String
+  [ManagedExecution](#cfn-cloudformation-stackset-managedexecution): Json
   [OperationPreferences](#cfn-cloudformation-stackset-operationpreferences): 
     OperationPreferences
   [Parameters](#cfn-cloudformation-stackset-parameters): 
@@ -108,6 +110,16 @@ The name of the IAM execution role to use to create the stack set\. If you don't
 *Pattern*: `[a-zA-Z_0-9+=,.@-]+`  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ManagedExecution`  <a name="cfn-cloudformation-stackset-managedexecution"></a>
+Describes whether StackSets performs non\-conflicting operations concurrently and queues conflicting operations\.  
+When active, StackSets performs non\-conflicting operations concurrently and queues conflicting operations\. After conflicting operations finish, StackSets starts queued operations in request order\.  
+If there are already running or queued operations, StackSets queues all incoming operations even if they are non\-conflicting\.  
+You can't modify your stack set's execution configuration while there are running or queued operations for that stack set\.
+When inactive \(default\), StackSets performs one operation at a time in request order\.  
+*Required*: No  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OperationPreferences`  <a name="cfn-cloudformation-stackset-operationpreferences"></a>
@@ -181,7 +193,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\.
 
-For more information about using the `Fn::GetAtt` instrinsic function, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt` intrinsic function, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-cloudformation-stackset-return-values-fn--getatt-fn--getatt"></a>
 
@@ -191,6 +203,62 @@ The ID of the stack that you're creating\.
 ## Examples<a name="aws-resource-cloudformation-stackset--examples"></a>
 
 
+
+### Activate managed execution for your stack set<a name="aws-resource-cloudformation-stackset--examples--Activate_managed_execution_for_your_stack_set"></a>
+
+The following example creates a stack set and specifies `ManagedExecution`\. With managed execution activated, StackSets performs non\-conflicting operations concurrently and queues conflicting operations\.
+
+#### JSON<a name="aws-resource-cloudformation-stackset--examples--Activate_managed_execution_for_your_stack_set--json"></a>
+
+```
+{
+    "TestStackSet1": {
+        "Type": "AWS::CloudFormation::StackSet",
+        "DeletionPolicy": "Retain",
+        "Properties": {
+            "StackSetName": "TestStackSet12345",
+            "Description": "Updatedescription1",
+            "PermissionModel": "SELF_MANAGED",
+            "ManagedExecution": {
+                "Active": true
+            },
+            "Tags": [
+                {
+                    "Key": "tag1",
+                    "Value": "value1"
+                }
+            ],
+            "TemplateBody": "{\n  \"AWSTemplateFormatVersion\": \"2010-09-09\",\n  \"Resources\": {\n    \"testWaitHandle\": {\n      \"Type\": \"AWS::CloudFormation::WaitConditionHandle\"\n    }\n  }\n}\n"
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-cloudformation-stackset--examples--Activate_managed_execution_for_your_stack_set--yaml"></a>
+
+```
+TestStackSet1:
+  Type: 'AWS::CloudFormation::StackSet'
+  DeletionPolicy: Retain
+  Properties:
+    StackSetName: TestStackSet12345
+    Description: Updatedescription1
+    PermissionModel: SELF_MANAGED
+    ManagedExecution:
+      Active: true
+    Tags:
+      - Key: tag1
+        Value: value1
+    TemplateBody: |
+      {
+        "AWSTemplateFormatVersion": "2010-09-09",
+        "Resources": {
+          "testWaitHandle": {
+            "Type": "AWS::CloudFormation::WaitConditionHandle"
+          }
+        }
+      }
+```
 
 ### Specifying Secrets Manager secrets in CloudFormation<a name="aws-resource-cloudformation-stackset--examples--Specifying__secrets_in_"></a>
 

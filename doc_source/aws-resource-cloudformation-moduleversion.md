@@ -43,8 +43,8 @@ The name of the module being registered\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ModulePackage`  <a name="cfn-cloudformation-moduleversion-modulepackage"></a>
-A url to the S3 bucket containing the package that contains the template fragment and schema files for the module version to register\.  
-The user registering the module version must be able to access the the module package in the S3 bucket\. That is, the user needs to have [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for the package\. For more information, see [Actions, Resources, and Condition Keys for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity and Access Management User Guide*\.
+A URL to the S3 bucket containing the package that contains the template fragment and schema files for the module version to register\.  
+The user registering the module version must be able to access the module package in the S3 bucket\. That is, the user needs to have [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for the package\. For more information, see [Actions, Resources, and Condition Keys for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity and Access Management User Guide*\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -92,14 +92,14 @@ The ID of this version of the module\.
 The scope at which the module is visible and usable in CloudFormation operations\.  
 Valid values include:  
 + `PRIVATE`: The module is only visible and usable within the account in which it is registered\.
-+ `PUBLIC`: The module is publically visible and usable within any Amazon account\.
++ `PUBLIC`: The module is publicly visible and usable within any Amazon account\.
 
 ## Remarks<a name="aws-resource-cloudformation-moduleversion--remarks"></a>
 
 Considerations when managing module versions:
 + The account in which you register the module version must have permission to access the S3 bucket in which the module package resides\.
 + The first module version to be registered in an account and region remains the default version CloudFormation uses, unless and until you explicitly sets another version as the default\. To specify a module version as the default version, use the `[AWS::CloudFormation::ModuleDefaultVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)` resource\.
-+ If your template contains multiple versions of the same module, we strongly recommend using the `DependsOn` attribute to explictly set the order in which the versions are registered\.
++ If your template contains multiple versions of the same module, we strongly recommend using the `DependsOn` attribute to explicitly set the order in which the versions are registered\.
 + If you delete an `AWS::CloudFormation::ModuleVersion` resource, either by deleting it from a stack or deleting the entire stack, CloudFormation marks the corresponding module version as `DEPRECATED`\.
 
   If you attempt to delete an `AWS::CloudFormation::ModuleVersion` resource that represent the default version, the operation will fail if there are other active versions\.

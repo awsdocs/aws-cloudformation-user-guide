@@ -25,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DestinationConfig](#cfn-lambda-eventsourcemapping-destinationconfig)" : DestinationConfig,
       "[Enabled](#cfn-lambda-eventsourcemapping-enabled)" : Boolean,
       "[EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn)" : String,
+      "[FilterCriteria](#cfn-lambda-eventsourcemapping-filtercriteria)" : Json,
       "[FunctionName](#cfn-lambda-eventsourcemapping-functionname)" : String,
       "[FunctionResponseTypes](#cfn-lambda-eventsourcemapping-functionresponsetypes)" : [ String, ... ],
       "[MaximumBatchingWindowInSeconds](#cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds)" : Integer,
@@ -53,6 +54,7 @@ Properties:
     DestinationConfig
   [Enabled](#cfn-lambda-eventsourcemapping-enabled): Boolean
   [EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn): String
+  [FilterCriteria](#cfn-lambda-eventsourcemapping-filtercriteria): Json
   [FunctionName](#cfn-lambda-eventsourcemapping-functionname): String
   [FunctionResponseTypes](#cfn-lambda-eventsourcemapping-functionresponsetypes): 
     - String
@@ -118,6 +120,12 @@ The Amazon Resource Name \(ARN\) of the event source\.
 *Type*: String  
 *Pattern*: `arn:(aws[a-zA-Z0-9-]*):([a-zA-Z0-9\-])+:([a-z]{2}(-gov)?-[a-z]+-\d{1})?:(\d{12})?:(.*)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`FilterCriteria`  <a name="cfn-lambda-eventsourcemapping-filtercriteria"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FunctionName`  <a name="cfn-lambda-eventsourcemapping-functionname"></a>
 The name of the Lambda function\.  

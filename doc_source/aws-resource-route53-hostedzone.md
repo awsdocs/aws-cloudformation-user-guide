@@ -72,7 +72,7 @@ For information about using tags for cost allocation, see [Using Cost Allocation
 `Name`  <a name="cfn-route53-hostedzone-name"></a>
 The name of the domain\. Specify a fully qualified domain name, for example, *www\.example\.com*\. The trailing dot is optional; Amazon Route 53 assumes that the domain name is fully qualified\. This means that Route 53 treats *www\.example\.com* \(without a trailing dot\) and *www\.example\.com\.* \(with a trailing dot\) as identical\.  
 If you're creating a public hosted zone, this is the name you have registered with your DNS registrar\. If your domain name is registered with a registrar other than Route 53, change the name servers for your domain to the set of `NameServers` that are returned by the `Fn::GetAtt` intrinsic function\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Maximum*: `1024`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

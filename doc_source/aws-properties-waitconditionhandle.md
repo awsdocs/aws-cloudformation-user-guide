@@ -1,7 +1,7 @@
 # AWS::CloudFormation::WaitConditionHandle<a name="aws-properties-waitconditionhandle"></a>
 
 **Important**  
-For Amazon EC2 and Auto Scaling resources, we recommend that you use a CreationPolicy attribute instead of wait conditions\. Add a CreationPolicy attribute to those resources, and use the cfn\-signal helper script to signal when an instance creation process has completed successfully\.  
+For Amazon EC2 and Auto Scaling resources, we recommend that you use a `CreationPolicy` attribute instead of wait conditions\. Add a `CreationPolicy` attribute to those resources, and use the cfn\-signal helper script to signal when an instance creation process has completed successfully\.  
 For more information, see [Deploying applications on Amazon EC2 with AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/deploying.applications.html)\.
 
 The `AWS::CloudFormation::WaitConditionHandle` type has no properties\. When you reference the `WaitConditionHandle` resource by using the Ref function, AWS CloudFormation returns a presigned URL\. You pass this URL to applications or scripts that are running on your Amazon EC2 instances to send signals to that URL\. An associated `AWS::CloudFormation::WaitCondition` resource checks the URL for the required number of success signals or for a failure signal\.

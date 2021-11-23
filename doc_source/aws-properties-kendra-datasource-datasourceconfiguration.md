@@ -99,7 +99,7 @@ Provides information necessary to create a data source connector for a Microsoft
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WebCrawlerConfiguration`  <a name="cfn-kendra-datasource-datasourceconfiguration-webcrawlerconfiguration"></a>
-Provides the configuration information required for Amazon Kendra web crawler\.  
+Provides the configuration information required for Amazon Kendra Web Crawler\.  
 *Required*: No  
 *Type*: [WebCrawlerConfiguration](aws-properties-kendra-datasource-webcrawlerconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

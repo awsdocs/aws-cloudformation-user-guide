@@ -43,7 +43,9 @@ Properties:
 ## Properties<a name="aws-resource-finspace-environment-properties"></a>
 
 `DataBundles`  <a name="cfn-finspace-environment-databundles"></a>
-Not currently supported by AWS CloudFormation\.  
+The list of Amazon Resource Names \(ARN\) of the data bundles to install\. Currently supported data bundle ARNs:  
++  `arn:aws:finspace:${Region}::data-bundle/capital-markets-sample` \- Contains sample Capital Markets datasets, categories and controlled vocabularies\.
++  `arn:aws:finspace:${Region}::data-bundle/taq` \(default\) \- Contains trades and quotes data in addition to sample Capital Markets data\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -89,7 +91,7 @@ The name of the FinSpace environment\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SuperuserParameters`  <a name="cfn-finspace-environment-superuserparameters"></a>
-Not currently supported by AWS CloudFormation\.  
+Configuration information for the superuser\.  
 *Required*: No  
 *Type*: [SuperuserParameters](aws-properties-finspace-environment-superuserparameters.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -130,7 +132,7 @@ The identifier of the FinSpace environment\.
 The sign\-in url for the web application of your FinSpace environment\. 
 
 `SageMakerStudioDomainUrl`  <a name="SageMakerStudioDomainUrl-fn::getatt"></a>
-The url of the integrated Habanero notebook environment in your web application\. 
+The url of the integrated FinSpace notebook environment in your web application\. 
 
 `Status`  <a name="Status-fn::getatt"></a>
 The current status of creation of the FinSpace environment\. 

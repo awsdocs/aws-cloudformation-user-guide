@@ -20,8 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AcceptanceRequired](#cfn-ec2-vpcendpointservice-acceptancerequired)" : Boolean,
       "[GatewayLoadBalancerArns](#cfn-ec2-vpcendpointservice-gatewayloadbalancerarns)" : [ String, ... ],
-      "[NetworkLoadBalancerArns](#cfn-ec2-vpcendpointservice-networkloadbalancerarns)" : [ String, ... ],
-      "[PayerResponsibility](#cfn-ec2-vpcendpointservice-payerresponsibility)" : String
+      "[NetworkLoadBalancerArns](#cfn-ec2-vpcendpointservice-networkloadbalancerarns)" : [ String, ... ]
     }
 }
 ```
@@ -36,7 +35,6 @@ Properties:
     - String
   [NetworkLoadBalancerArns](#cfn-ec2-vpcendpointservice-networkloadbalancerarns): 
     - String
-  [PayerResponsibility](#cfn-ec2-vpcendpointservice-payerresponsibility): String
 ```
 
 ## Properties<a name="aws-resource-ec2-vpcendpointservice-properties"></a>
@@ -57,12 +55,6 @@ The Amazon Resource Names \(ARNs\) of one or more Gateway Load Balancers\.
 The Amazon Resource Names \(ARNs\) of one or more Network Load Balancers for your service\.  
 *Required*: No  
 *Type*: List of String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`PayerResponsibility`  <a name="cfn-ec2-vpcendpointservice-payerresponsibility"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-ec2-vpcendpointservice-return-values"></a>

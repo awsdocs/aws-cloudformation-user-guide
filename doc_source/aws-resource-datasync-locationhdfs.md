@@ -63,9 +63,10 @@ The Amazon Resource Names \(ARNs\) of the agents that are used to connect to the
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthenticationType`  <a name="cfn-datasync-locationhdfs-authenticationtype"></a>
-Not currently supported by AWS CloudFormation\.  
+The type of authentication used to determine the identity of the user\.   
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `KERBEROS | SIMPLE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BlockSize`  <a name="cfn-datasync-locationhdfs-blocksize"></a>

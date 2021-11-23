@@ -80,7 +80,7 @@ Specifies configuration information for indexing Confluence pages\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretArn`  <a name="cfn-kendra-datasource-confluenceconfiguration-secretarn"></a>
-The Amazon Resource Name \(ARN\) of an AWS Secrets Managersecret that contains the key/value pairs required to connect to your Confluence server\. The secret must contain a JSON structure with the following keys:  
+The Amazon Resource Name \(ARN\) of an AWS Secrets Manager secret that contains the key/value pairs required to connect to your Confluence server\. The secret must contain a JSON structure with the following keys:  
 + username \- The user name or email address of a user with administrative privileges for the Confluence server\.
 + password \- The password associated with the user logging in to the Confluence server\.
 *Required*: Yes  

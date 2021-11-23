@@ -76,7 +76,7 @@ A description of the configuration profile\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LocationUri`  <a name="cfn-appconfig-configurationprofile-locationuri"></a>
-A URI to locate the configuration\. You can specify the AWS AppConfig hosted configuration store, Systems Manager \(SSM\) document, an SSM Parameter Store parameter, or an Amazon S3 object\. For the hosted configuration store, specify `hosted`\. For an SSM document, specify either the document name in the format `ssm-document://<Document_name>` or the Amazon Resource Name \(ARN\)\. For a parameter, specify either the parameter name in the format `ssm-parameter://<Parameter_name>` or the ARN\. For an Amazon S3 object, specify the URI in the following format: `s3://<bucket>/<objectKey> `\. Here is an example: `s3://my-bucket/my-app/us-east-1/my-config.json`   
+A URI to locate the configuration\. You can specify the AWS AppConfig hosted configuration store, Systems Manager \(SSM\) document, an SSM Parameter Store parameter, or an Amazon S3 object\. For the hosted configuration store and for feature flags, specify `hosted`\. For an SSM document, specify either the document name in the format `ssm-document://<Document_name>` or the Amazon Resource Name \(ARN\)\. For a parameter, specify either the parameter name in the format `ssm-parameter://<Parameter_name>` or the ARN\. For an Amazon S3 object, specify the URI in the following format: `s3://<bucket>/<objectKey> `\. Here is an example: `s3://my-bucket/my-app/us-east-1/my-config.json`   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -108,9 +108,10 @@ Metadata to assign to the configuration profile\. Tags help organize and categor
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-appconfig-configurationprofile-type"></a>
-Not currently supported by AWS CloudFormation\.  
+The type of configurations that the configuration profile contains\. A configuration can be a feature flag used for enabling or disabling new features or a freeform configuration used to introduce changes to your application\.  
 *Required*: No  
 *Type*: String  
+*Pattern*: `^[a-zA-Z\.]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Validators`  <a name="cfn-appconfig-configurationprofile-validators"></a>

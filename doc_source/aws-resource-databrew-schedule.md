@@ -72,7 +72,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  `{ "Ref": "mySchedule" }` 
 
-For an AWS Glue DataBrew schedule named `mySchedule`,  `Ref` returns the name of the schedule\. 
+For an AWS Glue DataBrew schedule named `mySchedule`, `Ref` returns the name of the schedule\. 
 
 ## Examples<a name="aws-resource-databrew-schedule--examples"></a>
 
@@ -100,7 +100,7 @@ Resources:
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "This CloudFormation template creates a DataBrew Schedule",
+    "Description": "This CloudFormation template specifies a DataBrew Schedule",
     "Resources": {
         "MyDataBrewSchedule": {
             "Type": "AWS::DataBrew::Schedule",

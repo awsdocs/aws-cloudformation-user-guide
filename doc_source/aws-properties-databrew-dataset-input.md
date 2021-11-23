@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[DatabaseInputDefinition](#cfn-databrew-dataset-input-databaseinputdefinition)" : DatabaseInputDefinition,
   "[DataCatalogInputDefinition](#cfn-databrew-dataset-input-datacataloginputdefinition)" : DataCatalogInputDefinition,
+  "[Metadata](#cfn-databrew-dataset-input-metadata)" : Metadata,
   "[S3InputDefinition](#cfn-databrew-dataset-input-s3inputdefinition)" : S3Location
 }
 ```
@@ -23,6 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     DatabaseInputDefinition
   [DataCatalogInputDefinition](#cfn-databrew-dataset-input-datacataloginputdefinition): 
     DataCatalogInputDefinition
+  [Metadata](#cfn-databrew-dataset-input-metadata): 
+    Metadata
   [S3InputDefinition](#cfn-databrew-dataset-input-s3inputdefinition): 
     S3Location
 ```
@@ -39,6 +42,12 @@ Connection information for dataset input files stored in a database\.
 The AWS Glue Data Catalog parameters for the data\.  
 *Required*: No  
 *Type*: [DataCatalogInputDefinition](aws-properties-databrew-dataset-datacataloginputdefinition.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Metadata`  <a name="cfn-databrew-dataset-input-metadata"></a>
+Contains additional resource information needed for specific datasets\.  
+*Required*: No  
+*Type*: [Metadata](aws-properties-databrew-dataset-metadata.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3InputDefinition`  <a name="cfn-databrew-dataset-input-s3inputdefinition"></a>

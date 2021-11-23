@@ -5,4 +5,5 @@
 + [AWS::DataBrew::Job](aws-resource-databrew-job.md)
 + [AWS::DataBrew::Project](aws-resource-databrew-project.md)
 + [AWS::DataBrew::Recipe](aws-resource-databrew-recipe.md)
++ [AWS::DataBrew::Ruleset](aws-resource-databrew-ruleset.md)
 + [AWS::DataBrew::Schedule](aws-resource-databrew-schedule.md)

@@ -1,6 +1,6 @@
 # AWS::DataBrew::Job OutputLocation<a name="aws-properties-databrew-job-outputlocation"></a>
 
-The location in Amazon S3 where the job writes its output\.
+The location in Amazon S3 or AWS Glue Data Catalog where the job writes its output\.
 
 ## Syntax<a name="aws-properties-databrew-job-outputlocation-syntax"></a>
 

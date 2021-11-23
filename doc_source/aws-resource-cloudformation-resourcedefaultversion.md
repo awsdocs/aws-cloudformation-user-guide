@@ -1,6 +1,6 @@
 # AWS::CloudFormation::ResourceDefaultVersion<a name="aws-resource-cloudformation-resourcedefaultversion"></a>
 
-Specifes the default version of a resource\. The default version of a resource will be used in CloudFormation operations\.
+Specifies the default version of a resource\. The default version of a resource will be used in CloudFormation operations\.
 
 ## Syntax<a name="aws-resource-cloudformation-resourcedefaultversion-syntax"></a>
 

@@ -170,7 +170,7 @@ The following template snippet shows a predictive scaling policy configuration t
         "AutoScalingGroupName":{
           "Ref":"myASG"
         },
-        "PolicyType":"PredictiveScalingConfiguration",
+        "PolicyType":"PredictiveScaling",
         "PredictiveScalingConfiguration":{
           "MetricSpecifications":[
             {
@@ -197,7 +197,7 @@ Resources:
     Type: 'AWS::AutoScaling::ScalingPolicy'
     Properties:
       AutoScalingGroupName: !Ref myASG
-      PolicyType: PredictiveScalingConfiguration
+      PolicyType: PredictiveScaling
       PredictiveScalingConfiguration:
         MetricSpecifications:
           - TargetValue: 70

@@ -267,6 +267,7 @@ For information about Aurora global databases, see [ Working with Amazon Aurora 
 
 `KmsKeyId`  <a name="cfn-rds-dbcluster-kmskeyid"></a>
 The Amazon Resource Name \(ARN\) of the AWS Key Management Service master key that is used to encrypt the database instances in the DB cluster, such as `arn:aws:kms:us-east-1:012345678910:key/abcd1234-a123-456a-a12b-a123b4cd56ef`\. If you enable the `StorageEncrypted` property but don't specify this property, the default master key is used\. If you specify this property, you must set the `StorageEncrypted` property to `true`\.  
+If you specify the `SnapshotIdentifier` property, the `StorageEncrypted` property value is inherited from the snapshot, and if the DB cluster is encrypted, the specified `KmsKeyId` property is used\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -374,8 +375,8 @@ The AWS Region which contains the source DB cluster when replicating a DB cluste
 
 `StorageEncrypted`  <a name="cfn-rds-dbcluster-storageencrypted"></a>
 Indicates whether the DB cluster is encrypted\.  
-If you specify the `SnapshotIdentifier` or `SourceDBClusterIdentifier` property, don't specify this property\. The value is inherited from the snapshot or source DB instance\.   
-If you specify the `KmsKeyId` property, then you must enable encryption\.
+If you specify the `KmsKeyId` property, then you must enable encryption\.  
+If you specify the `SnapshotIdentifier` or `SourceDBClusterIdentifier` property, don't specify this property\. The value is inherited from the snapshot or source DB cluster, and if the DB cluster is encrypted, the specified `KmsKeyId` property is used\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

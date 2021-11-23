@@ -192,3 +192,295 @@ Resources:
       HttpMethod: POST
       InvocationEndpoint: https://events.pagerduty.com/v2/enqueue
 ```
+
+### Create an ApiDestination for Slack<a name="aws-resource-events-apidestination--examples--Create_an_ApiDestination_for_Slack"></a>
+
+The following example creates an ApiDestination connection to Slack\.
+
+#### JSON<a name="aws-resource-events-apidestination--examples--Create_an_ApiDestination_for_Slack--json"></a>
+
+```
+"Parameters": {
+   "pName": {
+       "Type": "String"
+    },
+   "pEndpoint": {
+       "Type": "String"
+    },
+   "pSecretId": {
+       "Type": "String"
+    }
+ },
+"Resources": {
+   "SlackRole": {
+       "Type": "AWS::IAM::Role",
+       "Properties": {
+           "AssumeRolePolicyDocument": {
+               "Version": "2012-10-17",
+               "Statement": [
+                {
+                   "Effect": "Allow",
+                   "Principal": {
+                       "Service": [
+                           "events.amazonaws.com"
+                        ]
+                    },
+                   "Action": [
+                       "sts:AssumeRole"
+                    ]
+               }
+               ]
+           },
+          "Path": "/service-role/",
+          "Policies": [
+           {
+              "PolicyName": "eventbridge-api-destinations",
+              "PolicyDocument": {
+                  "Version": "2012-10-17",
+                  "Statement": [
+                   {
+                      "Effect": "Allow",
+                      "Action": [
+                          "events:InvokeApiDestination"
+                       ],
+                      "Resource": {
+                          "Fn::GetAtt": [
+                              "SlackDestination",
+                              "Arn"
+                           ]
+                      }
+                  }
+                  ]
+              }
+         }
+        ]
+      }
+    },
+   "SlackBus": {
+       "Type": "AWS::Events::EventBus",
+       "Properties": {
+           "Name": {
+               "Ref": "pName"
+            }
+        }
+    },
+   "SlackConnection": {
+       "Type": "AWS::Events::Connection",
+       "Properties": {
+           "AuthorizationType": "API_KEY",
+           "AuthParameters": {
+               "ApiKeyAuthParameters": {
+                   "ApiKeyName": "Authorization",
+                   "ApiKeyValue": {
+                       "Fn::Sub": "{{resolve:secretsmanager:arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:${pSecretId}}}"
+                    }
+                } 
+            }
+        }
+    },
+   "SlackDestination": {
+       "Type": "AWS::Events::ApiDestination",
+       "Properties": {
+           "ConnectionArn": {
+               "Fn::GetAtt": [
+                   "SlackConnection",
+                   "Arn"
+                ]
+            },
+           "HttpMethod": "POST",
+           "InvocationEndpoint": {
+               "Ref": "pEndpoint"
+            },
+           "InvocationRateLimitPerSecond": 10
+        }
+    },
+   "SlackRule": {
+       "Type": "AWS::Events::Rule",
+       "Properties": {
+           "State": "ENABLED",
+           "EventBusName": {
+               "Ref": "SlackBus"
+            },
+           "EventPattern": {
+               "detail": {
+                   "channel": [
+                       "aws-integration-testing"
+                    ]
+                }
+           },
+         "Targets": [
+          {
+              "Id": "slack-destination",
+              "Arn": {
+                  "Fn::GetAtt": [
+                      "SlackDestination",
+                      "Arn"
+                   ]
+              },
+             "RoleArn": {
+                 "Fn::GetAtt": [
+                     "SlackRole",
+                     "Arn"
+                  ]
+              },
+            "HttpParameters": {
+                "HeaderParameters": {
+                    "Content-type": "application/json;charset=utf-8"
+                 }
+             },
+            "InputTransformer": {
+                "InputPathsMap": {
+                    "channel": "$.detail.channel",
+                    "text": "$.detail.text"
+                 },
+                "InputTemplate": "{\n  \"channel\": <channel>,\n  \"text\": <text>\n}\n"
+            }
+          }
+          ]
+        }
+    }
+ },
+"Outputs": {
+    "outRole": {
+        "Value": {
+            "Fn::GetAtt": [
+                "SlackRole",
+                "Arn"
+             ]
+         }
+     },
+    "outBus": {
+        "Value": {
+            "Fn::GetAtt": [
+                "SlackBus",
+                "Arn"
+             ]
+         }
+     },
+    "outConnection": {
+        "Value": {
+            "Fn::GetAtt": [
+                "SlackConnection",
+                "Arn"
+             ]
+         }
+     },
+    "outConnectionSecret": {
+        "Value": {
+            "Fn::GetAtt": [
+                "SlackConnection",
+                "SecretArn"
+             ]
+         }
+     },
+    "outDestination": {
+        "Value": {
+            "Fn::GetAtt": [
+                "SlackDestination",
+                "Arn"
+             ]
+         }
+     },
+    "outRule": {
+        "Value": {
+            "Fn::GetAtt": [
+                "SlackRule",
+                "Arn"
+             ]
+         }
+     }
+ }
+}
+```
+
+#### YAML<a name="aws-resource-events-apidestination--examples--Create_an_ApiDestination_for_Slack--yaml"></a>
+
+```
+Parameters:
+  pName:
+    Type: String
+  pEndpoint:
+    Type: String
+  pSecretId:
+    Type: String
+    
+Resources:
+  SlackRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - events.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: '/service-role/'
+      Policies:
+        - PolicyName: eventbridge-api-destinations
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - events:InvokeApiDestination
+                Resource: !GetAtt SlackDestination.Arn
+  SlackBus:
+    Type: AWS::Events::EventBus
+      Properties:
+        Name: !Ref pName
+  SlackConnection:
+    Type: AWS::Events::Connection
+    Properties:
+      AuthorizationType: API_KEY
+      AuthParameters:
+        ApiKeyAuthParameters:
+          ApiKeyName: Authorization
+          ApiKeyValue: !Sub '{{resolve:secretsmanager:arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:${pSecretId}}}'
+  SlackDestination:
+    Type: AWS::Events::ApiDestination
+    Properties:
+      ConnectionArn: !GetAtt SlackConnection.Arn
+      HttpMethod: POST
+      InvocationEndpoint: !Ref pEndpoint
+      InvocationRateLimitPerSecond: 10
+  SlackRule:
+    Type: AWS::Events::Rule
+    Properties:
+      State: ENABLED
+      EventBusName: !Ref SlackBus
+      EventPattern:
+        detail:
+          channel: ["aws-integration-testing"]
+      Targets:
+        - Id: slack-destination
+          Arn: !GetAtt SlackDestination.Arn
+          RoleArn: !GetAtt SlackRole.Arn
+          HttpParameters:
+            HeaderParameters:
+              Content-type: application/json;charset=utf-8
+          InputTransformer:
+            InputPathsMap:
+              "channel": "$.detail.channel"
+              "text": "$.detail.text"
+          InputTemplate: |
+            {
+              "channel": <channel>,
+              "text": <text>
+            }
+Outputs:
+  outRole:
+    Value: !GetAtt SlackRole.Arn
+  outBus:
+    Value: !GetAtt SlackBus.Arn
+  outConnection:
+    Value: !GetAtt SlackConnection.Arn
+  outConnectionSecret:
+    Value: !GetAtt SlackConnection.SecretArn
+  outDestination:
+    Value: !GetAtt SlackDestination.Arn
+  outRule:
+    Value: !GetAtt SlackRule.Arn
+```

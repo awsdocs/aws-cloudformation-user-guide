@@ -83,7 +83,7 @@ The period of time during which the certificate will be valid\.
 
 `ValidityNotBefore`  <a name="cfn-acmpca-certificate-validitynotbefore"></a>
 Information describing the start of the validity period of the certificate\. This parameter sets the “Not Before" date for the certificate\.  
-By default, when issuing a certificate, ACM Private CA sets the "Not Before" date to the issuance time minus 60 minutes\. This compensates for clock inconsistencies across computer systems\. The `ValidityNotBefore` parameter can be used to customize the “Not Before” value\.   
+By default, when issuing a certificate, ACM Private CA sets the "Not Before" date to the issuance time minus 60 minutes\. This compensates for clock inconsistencies across computer systems\. The `ValidityNotBefore` parameter can be used to customize the “Not Before” value\.  
 Unlike the `Validity` parameter, the `ValidityNotBefore` parameter is optional\.  
 The `ValidityNotBefore` value is expressed as an explicit date and time, using the `Validity` type value `ABSOLUTE`\.  
 *Required*: No  
@@ -100,7 +100,7 @@ This reference should not be used in CloudFormation templates\. Instead, use `AW
 
 The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-acmpca-certificate-return-values-fn--getatt-fn--getatt"></a>
 

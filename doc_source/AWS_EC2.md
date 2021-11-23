@@ -64,7 +64,7 @@
 + [AWS::EC2::VolumeAttachment](aws-properties-ec2-ebs-volumeattachment.md)
 + [AWS::EC2::VPC](aws-resource-ec2-vpc.md)
 + [AWS::EC2::VPCCidrBlock](aws-resource-ec2-vpccidrblock.md)
-+ [AWS::EC2::VPCDHCPOptionsAssociation](aws-resource-ec2-vpc-dhcp-options-assoc.md)
++ [AWS::EC2::VPCDHCPOptionsAssociation](aws-resource-ec2-vpcdhcpoptionsassociation.md)
 + [AWS::EC2::VPCEndpoint](aws-resource-ec2-vpcendpoint.md)
 + [AWS::EC2::VPCEndpointConnectionNotification](aws-resource-ec2-vpcendpointconnectionnotification.md)
 + [AWS::EC2::VPCEndpointService](aws-resource-ec2-vpcendpointservice.md)

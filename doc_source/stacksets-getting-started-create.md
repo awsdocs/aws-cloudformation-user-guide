@@ -4,7 +4,7 @@ You can create a stack set using the AWS Management Console or using AWS CloudFo
 
 With `self-managed` permissions, you can deploy stack instances to specific AWS accounts in specific Regions\. To do this, you must first create the necessary IAM roles to establish a trusted relationship between the account you're administering the stack set from and the account you're deploying stack instances to\.
 
-With `service-managed` permissions, you can deploy stack instances to accounts managed by AWS Organizations in specific Regions\. With this model, you don't need to create the necessary IAM roles; StackSets creates the IAM roles on your behalf\. You can also enable automatic deployments to accounts that are added to a target organization or organizational unit \(OU\) in the future\. With automatic deployments enabled, StackSets automatically deletes stack instances from an account if it is removed from a target organization or OU\.
+With `service-managed` permissions, you can deploy stack instances to accounts managed by AWS Organizations in specific Regions\. With this model, you don't need to create the necessary IAM roles; StackSets creates the IAM roles on your behalf\. You can also enable automatic deployments to accounts that are added to a target organization or organizational unit \(OU\) in the future\. With automatic deployments enabled, StackSets automatically deletes stack instances from an account if it's removed from a target organization or OU\.
 
 **Topics**
 + [Create a stack set with self\-managed permissions](#stacksets-getting-started-create-self-managed)
@@ -43,8 +43,14 @@ With `service-managed` permissions, you can deploy stack instances to accounts m
 
 1. On the **Configure StackSet options** page, add a tag by specifying a key and value pair\. In this walkthrough, we create a tag called **Stage**, with a value of **Test**\. Tags that you apply to stack sets are applied to all resources that are created by your stacks\. For more information about how tags are used in AWS, see [Using cost allocation tags](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.
 
-   Leave **Permissions** unspecified, and choose **Next**\.  
-![\[Tags page\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-create-stackset-configure-options.png)
+   Leave **Permissions** unspecified\.
+
+1. For **Execution configuration**, choose **Active** so that StackSets performs non\-conflicting operations concurrently and queues conflicting operations\. After conflicting operations finish, StackSets starts queued operations in request order\.
+**Note**  
+If there are already running or queued operations, StackSets queues all incoming operations even if they are non\-conflicting\.  
+You can't modify your stack set's execution configuration while there are running or queued operations for that stack set\.
+
+1. Choose **Next**\.
 
 1. On the **Set deployment options** page, provide the accounts and Regions into which you want stacks in your stack set deployed\.
 
@@ -55,7 +61,7 @@ With `service-managed` permissions, you can deploy stack instances to accounts m
    1. For **Specify regions**, choose US East \(N\. Virginia\) Region\. Repeat for the US West \(Oregon\) Region\. Select the up arrow next to US West \(Oregon\) Region to move it to be the first entry in the list\. The order of the Regions under **Specify regions** determines their deployment order\.
 
    1. For **Deployment options**:
-      + For **Maximum concurrent accounts**, keep the default values of **Number** and **1**\.
+      + For **Maximum concurrent accounts**, keep the defaults of **Number** and **1**\.
 
         This means that AWS CloudFormation deploys your stack in only one account at one time\.
       + For **Failure tolerance**, keep the defaults of **Number** and **0**\.
@@ -82,7 +88,12 @@ When you create stack sets by using AWS CLI commands, you run two separate comma
 
 1. Open the AWS CLI\.
 
-1. Run the following command\. For the `--template-url` parameter, provide the URL of the Amazon S3 bucket in which you are storing your template\. For this walkthrough, we use `my-awsconfig-stackset` as the value of the `--stack-set-name` parameter\.
+1. Run the following command\.
+
+   For the `--template-url` parameter, provide the URL of the Amazon S3 bucket in which you are storing your template\. For this walkthrough, we use `my-awsconfig-stackset` as the value of the `--stack-set-name` parameter\. We also activate `--managed-execution` so that StackSets performs non\-conflicting operations concurrently and queues conflicting operations\. After conflicting operations finish, StackSets starts queued operations in request order\.
+**Note**  
+If there are already running or queued operations, StackSets queues all incoming operations even if they are non\-conflicting\.  
+You can't modify your stack set's execution configuration while there are running or queued operations for that stack set\.
 
    ```
    aws cloudformation create-stack-set \
@@ -110,7 +121,7 @@ The value of `MaxConcurrentCount` is dependent on the value of `FailureTolerance
      --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1
    ```
 **Note**  
-The concurrency of the StackSet instances deployments in the operation is dependent on the value of `FailureToleranceCount-MaxConcurrentCount` and is at most one more than the `FailureToleranceCount`\.
+The concurrency of the StackSet instance deployments in the operation is dependent on the value of `FailureToleranceCount-MaxConcurrentCount` and is at most one more than the `FailureToleranceCount`\.
 **Important**  
 Wait until an operation is complete before starting another one\. You can run only one operation at a time\.
 
@@ -164,6 +175,11 @@ Before you create a stack set with service\-managed permissions, consider the fo
    If trusted access with AWS Organizations is disabled, a banner displays\. Trusted access is required to create or update a stack set with service\-managed permissions\. Only the administrator in the organization's management account has permissions to [manage trusted access](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-enable-trusted-access.html)\.  
 ![\[Enable trusted access banner.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-service-managed-permissions.png)
 
+1. For **Execution configuration**, choose **Active** so that StackSets performs non\-conflicting operations concurrently and queues conflicting operations\. After conflicting operations finish, StackSets starts queued operations in request order\.
+**Note**  
+If there are already running or queued operations, StackSets queues all incoming operations even if they are non\-conflicting\.  
+You can't modify your stack set's execution configuration while there are running or queued operations for that stack set\.
+
 1. Choose **Next** to proceed and to enable trusted access if not already enabled\.
 
 1. On the **Set deployment options** page, under **Deployment targets**, choose the accounts in your organization to deploy to\.
@@ -200,7 +216,12 @@ Stack sets created by a delegated administrator are created in the organization'
 
 1. Open the AWS CLI\.
 
-1. Run the `create-stack-set` command\. In the following example, we enable automatic deployments to allow StackSets to automatically deploy to accounts that are added to the target organization or OUs in the future\. We also retain stack resources when an account is removed from a target organization or OU\.
+1. Run the `create-stack-set` command\.
+
+   In the following example, we enable automatic deployments to allow StackSets to automatically deploy to accounts that are added to the target organization or OUs in the future\. We retain stack resources when an account is removed from a target organization or OU\. We also activate `--managed-execution` so that StackSets performs non\-conflicting operations concurrently and queues conflicting operations\. After conflicting operations finish, StackSets starts queued operations in request order\.
+**Note**  
+If there are already running or queued operations, StackSets queues all incoming operations even if they are non\-conflicting\.  
+You can't modify your stack set's execution configuration while there are running or queued operations for that stack set\.
 
    ```
    aws cloudformation create-stack-set \

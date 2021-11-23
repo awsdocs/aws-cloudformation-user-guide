@@ -17,7 +17,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[FileSystemTypeVersion](#cfn-fsx-filesystem-filesystemtypeversion)" : String,
       "[KmsKeyId](#cfn-fsx-filesystem-kmskeyid)" : String,
       "[LustreConfiguration](#cfn-fsx-filesystem-lustreconfiguration)" : LustreConfiguration,
-      "[OntapConfiguration](#cfn-fsx-filesystem-ontapconfiguration)" : OntapConfiguration,
       "[SecurityGroupIds](#cfn-fsx-filesystem-securitygroupids)" : [ String, ... ],
       "[StorageCapacity](#cfn-fsx-filesystem-storagecapacity)" : Integer,
       "[StorageType](#cfn-fsx-filesystem-storagetype)" : String,
@@ -39,8 +38,6 @@ Properties:
   [KmsKeyId](#cfn-fsx-filesystem-kmskeyid): String
   [LustreConfiguration](#cfn-fsx-filesystem-lustreconfiguration): 
     LustreConfiguration
-  [OntapConfiguration](#cfn-fsx-filesystem-ontapconfiguration): 
-    OntapConfiguration
   [SecurityGroupIds](#cfn-fsx-filesystem-securitygroupids): 
     - String
   [StorageCapacity](#cfn-fsx-filesystem-storagecapacity): Integer
@@ -62,23 +59,19 @@ The ID of the source backup\. Specifies the backup you are copying\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FileSystemType`  <a name="cfn-fsx-filesystem-filesystemtype"></a>
-The type of Amazon FSx file system, which can be `LUSTRE` or `WINDOWS`\.  
-*Allowed Values*: `LUSTRE` \| `WINDOWS`  
+The type of Amazon FSx file system, which can be `LUSTRE`, `WINDOWS`, or `ONTAP`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FileSystemTypeVersion`  <a name="cfn-fsx-filesystem-filesystemtypeversion"></a>
-The version of your Amazon FSx for Lustre file system, either `2.10` or `2.12`\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `20`  
-*Pattern*: `^[0-9](\.[0-9]*)*$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-fsx-filesystem-kmskeyid"></a>
-The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the file system's data for Amazon FSx for Windows File Server file systems and persistent Amazon FSx for Lustre file systems at rest\. If not specified, the Amazon FSx managed key is used\. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using Amazon FSx managed keys\. For more information, see [Encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) in the * AWS Key Management Service API Reference*\.  
+The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the file system's data for Amazon FSx for Windows File Server file systems, Amazon FSx for NetApp ONTAP file systems, and persistent Amazon FSx for Lustre file systems at rest\. If not specified, the Amazon FSx managed key is used\. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using Amazon FSx managed keys\. For more information, see [Encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) in the * AWS Key Management Service API Reference*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -87,12 +80,6 @@ The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the fil
 The Lustre configuration for the file system being created\.   
 *Required*: No  
 *Type*: [LustreConfiguration](aws-properties-fsx-filesystem-lustreconfiguration.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`OntapConfiguration`  <a name="cfn-fsx-filesystem-ontapconfiguration"></a>
-The configuration for this FSx for NetApp ONTAP file system\.  
-*Required*: No  
-*Type*: [OntapConfiguration](aws-properties-fsx-filesystem-ontapconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-fsx-filesystem-securitygroupids"></a>
@@ -111,6 +98,7 @@ For Lustre file systems:
 For Windows file systems:  
 + If `StorageType=SSD`, valid values are 32 GiB \- 65,536 GiB \(64 TiB\)\.
 + If `StorageType=HDD`, valid values are 2000 GiB \- 65,536 GiB \(64 TiB\)\.
+For ONTAP file systems, valid values are 1024 GiB \- 196,608 GiB \(192 TiB\)\.  
 *Required*: Conditional  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -119,7 +107,7 @@ For Windows file systems:
 
 `StorageType`  <a name="cfn-fsx-filesystem-storagetype"></a>
 Sets the storage type for the file system you're creating\. Valid values are `SSD` and `HDD`\.  
-+ Set to `SSD` to use solid state drive storage\. SSD is supported on all Windows and Lustre deployment types\.
++ Set to `SSD` to use solid state drive storage\. SSD is supported on all Windows, Lustre, and ONTAP deployment types\.
 + Set to `HDD` to use hard disk drive storage\. HDD is supported on `SINGLE_AZ_2` and `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT` Lustre file system deployment types\. 
  Default value is `SSD`\. For more information, see [ Storage Type Options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options) in the *Amazon FSx for Windows User Guide* and [Multiple Storage Options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options) in the *Amazon FSx for Lustre User Guide*\.   
 *Required*: No  
@@ -128,7 +116,7 @@ Sets the storage type for the file system you're creating\. Valid values are `SS
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-fsx-filesystem-subnetids"></a>
-Specifies the IDs of the subnets that the file system will be accessible from\. For the Windows `MULTI_AZ_1` file system deployment type, provide exactly two subnet IDs, one for the preferred file server and one for the standby file server\. You specify one of these subnets as the preferred subnet using the `WindowsConfiguration > PreferredSubnetID` property\. For more information, see [ Availability and durability: Single\-AZ and Multi\-AZ file systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html) in the *Amazon FSx for Windows User Guide*\.  
+Specifies the IDs of the subnets that the file system will be accessible from\. For Windows and ONTAP `MULTI_AZ_1` file system deployment types, provide exactly two subnet IDs, one for the preferred file server and one for the standby file server\. You specify one of these subnets as the preferred subnet using the `WindowsConfiguration > PreferredSubnetID` or `OntapConfiguration > PreferredSubnetID` properties\. For more information, see [ Availability and durability: Single\-AZ and Multi\-AZ file systems](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/high-availability-multiAZ.html) in the *Amazon FSx for Windows User Guide* and [ Availability and durability](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/high-availability-multiAZ.html) in the *Amazon FSx for ONTAP User Guide*\.  
 For Windows `SINGLE_AZ_1` and `SINGLE_AZ_2` file system deployment types and Lustre file systems, provide exactly one subnet ID\. The file server is launched in that subnet's Availability Zone\.  
 *Required*: Yes  
 *Type*: List of String  
@@ -192,6 +180,7 @@ The following examples create a 1\.2 TiB persistent Amazon FSx for Lustre file s
             "Type": "AWS::FSx::FileSystem",
             "Properties": {
                 "FileSystemType": "LUSTRE",
+                "FileSystemTypeVersion": "2.12",
                 "StorageCapacity": 1200,
                 "SubnetIds": [
                     {
@@ -260,6 +249,7 @@ Resources:
     Type: AWS::FSx::FileSystem
     Properties:
       FileSystemType: "LUSTRE"
+      FileSystemTypeVersion: "2.12"
       StorageCapacity: 1200
       SubnetIds: [!ImportValue MySubnet01]
       SecurityGroupIds: [!ImportValue LustreIngressSecurityGroupId]

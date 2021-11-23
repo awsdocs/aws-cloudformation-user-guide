@@ -36,9 +36,12 @@ To override parameter values for specific stack *instances*, see [Override param
 
       When done, choose **Next**\.
 
-1. On the **Configure StackSet options** page, no changes are needed, but you can update, delete, or add new tags here if desired\. For more information about how tags are used in AWS, see [Using cost allocation tags](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.
+1. On the **Configure StackSet options** page, no changes are needed, but you can update, delete, or add new tags here if desired\. For more information about how tags are used in AWS, see [Using cost allocation tags](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\. You can also manage the execution configuration to specify whether StackSets performs non\-conflicting operations concurrently and queues conflicting operations\. After conflicting operations finish, StackSets starts queued operations in request order\.
+**Note**  
+If there are already running or queued operations, StackSets queues all incoming operations even if they are non\-conflicting\.  
+You can't modify your stack set's execution configuration while there are running or queued operations for that stack set\.
 
-   Leave the **Permissions** unchanged, and choose **Next**\.
+   Leave the **Permissions** unchanged, then choose **Next**\.
 
 1. On the **Set deployment options** page, keep the default value of **1** and **By number** for **Maximum concurrent accounts**\. Keep the default **Failure tolerance** of **0**, and keep the **By number** default option\. Choose **Next**\.
 **Note**  
@@ -71,13 +74,13 @@ The value of `MaxConcurrentCount` is dependent on the value of `FailureTolerance
    \[Self\-managed permissions\] Provide the account IDs you want your update to target\.
 
    ```
-   aws cloudformation update-stack-set --stack-set-name my-awsconfig-stackset --use-previous-template --parameters ParameterKey=MaximumExecutionFrequency,ParameterValue=TwentyFour_Hours\\,Twelve_Hours --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1 --accounts 
+   aws cloudformation update-stack-set --stack-set-name my-awsconfig-stackset --use-previous-template --parameters ParameterKey=MaximumExecutionFrequency,ParameterValue=TwentyFour_Hours\\,Twelve_Hours --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1 --accounts '["account_ID_1","account_ID_2"]'
    ```
 
    \[Service\-managed permissions\] Provide the organization \(root\) ID, OU IDs, or AWS Organizations account IDs you want your update to target\.
 
    ```
-   aws cloudformation update-stack-set --stack-set-name my-awsconfig-stackset --use-previous-template --parameters ParameterKey=MaximumExecutionFrequency,ParameterValue=TwentyFour_Hours\\,Twelve_Hours --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1 --deployment-targets OrganizationalUnitIds='["ou-rcuk-1x5j1lwo", "ou-rcuk-slr5lh0a"]' --regions '["eu-west-1"]' 
+   aws cloudformation update-stack-set --stack-set-name my-awsconfig-stackset --use-previous-template --parameters ParameterKey=MaximumExecutionFrequency,ParameterValue=TwentyFour_Hours\\,Twelve_Hours --operation-preferences FailureToleranceCount=0,MaxConcurrentCount=1 --deployment-targets OrganizationalUnitIds='["ou-rcuk-1x5j1lwo", "ou-rcuk-slr5lh0a"]' --regions '["eu-west-1"]'
    ```
 
 1. Verify that your stack set was updated successfully by running the `describe-stack-set-operation` command to show the status and results of your update operation\. For `--operation-id`, use the operation ID that was returned by your `update-stack-set` command\.

@@ -42,13 +42,16 @@ You can register and deregister delegated administrators using the [AWS CloudFor
 1. Run the `register-delegated-administrator` command\.
 
    ```
-   aws organizations register-delegated-administrator --service-principal=member.org.stacksets.cloudformation.amazonaws.com --account-id="memberAccountId"
+   aws organizations register-delegated-administrator \
+     --service-principal=member.org.stacksets.cloudformation.amazonaws.com \
+     --account-id="memberAccountId"
    ```
 
 1. Run the `list-delegated-administrators` command to verify that the specified member account is successfully registered as a delegated administrator\.
 
    ```
-   aws organizations list-delegated-administrators  --service-principal=member.org.stacksets.cloudformation.amazonaws.com
+   aws organizations list-delegated-administrators \
+     --service-principal=member.org.stacksets.cloudformation.amazonaws.com
    ```
 
 **To deregister a delegated administrator \(AWS CLI\)**
@@ -58,13 +61,16 @@ You can register and deregister delegated administrators using the [AWS CloudFor
 1. Run the `deregister-delegated-administrator` command\.
 
    ```
-   aws organizations deregister-delegated-administrator --service-principal=member.org.stacksets.cloudformation.amazonaws.com --account-id="memberAccountId"
+   aws organizations deregister-delegated-administrator \
+     --service-principal=member.org.stacksets.cloudformation.amazonaws.com \
+     --account-id="memberAccountId"
    ```
 
 1. Run the `list-delegated-administrators` command to verify that the specified member account is successfully deregistered as a delegated administrator\.
 
    ```
-   aws organizations list-delegated-administrators  --service-principal=member.org.stacksets.cloudformation.amazonaws.com
+   aws organizations list-delegated-administrators \
+     --service-principal=member.org.stacksets.cloudformation.amazonaws.com
    ```
 
    You can register this account again at any time\.

@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Data](#cfn-aps-rulegroupsnamespace-data)" : String,
       "[Name](#cfn-aps-rulegroupsnamespace-name)" : String,
+      "[Tags](#cfn-aps-rulegroupsnamespace-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Workspace](#cfn-aps-rulegroupsnamespace-workspace)" : String
     }
 }
@@ -26,6 +27,8 @@ Type: AWS::APS::RuleGroupsNamespace
 Properties: 
   [Data](#cfn-aps-rulegroupsnamespace-data): String
   [Name](#cfn-aps-rulegroupsnamespace-name): String
+  [Tags](#cfn-aps-rulegroupsnamespace-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Workspace](#cfn-aps-rulegroupsnamespace-workspace): String
 ```
 
@@ -38,10 +41,16 @@ The rules definition file for this namespace\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-aps-rulegroupsnamespace-name"></a>
-The name of the rule groups namespace\.  
-*Required*: No  
+The name of the rule groups namespace\. This property is required\.  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-aps-rulegroupsnamespace-tags"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Workspace`  <a name="cfn-aps-rulegroupsnamespace-workspace"></a>
 The ARN of the workspace that contains this rule groups namespace\.  
