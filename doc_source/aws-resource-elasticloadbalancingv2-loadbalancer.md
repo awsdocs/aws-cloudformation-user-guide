@@ -49,7 +49,7 @@ Properties:
 ## Properties<a name="aws-resource-elasticloadbalancingv2-loadbalancer-properties"></a>
 
 `IpAddressType`  <a name="cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype"></a>
-The IP address type\. The possible values are `ipv4` \(for IPv4 addresses\) and `dualstack` \(for IPv4 and IPv6 addresses\)\. Internal load balancers must use `ipv4`\. You can’t specify `dualstack` for a load balancer with a UDP or TCP\_UDP listener\.  
+The IP address type\. The possible values are `ipv4` \(for IPv4 addresses\) and `dualstack` \(for IPv4 and IPv6 addresses\)\. You can’t specify `dualstack` for a load balancer with a UDP or TCP\_UDP listener\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `dualstack | ipv4`  

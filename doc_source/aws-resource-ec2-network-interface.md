@@ -224,7 +224,7 @@ Ec2Instance:
       NetworkInterfaces:
       - NetworkInterfaceId:
          Ref: myENI
-        DeviceIndex: '0'
+        DeviceIndex: '1'
       Tags:
       - Key: Role
         Value: Test Instance

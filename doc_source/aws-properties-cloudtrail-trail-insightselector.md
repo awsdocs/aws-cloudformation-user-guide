@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudtrail-trail-insightselector-properties"></a>
 
 `InsightType`  <a name="cfn-cloudtrail-trail-insightselector-insighttype"></a>
-The type of Insights events to log on a trail\. The valid Insights type in this release is `ApiCallRateInsight`\.  
+The type of insights to log on a trail\. `ApiCallRateInsight` and `ApiErrorRateInsight` are valid insight types\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ApiCallRateInsight | ApiErrorRateInsight`  

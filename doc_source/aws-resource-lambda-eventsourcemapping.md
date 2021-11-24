@@ -122,7 +122,7 @@ The Amazon Resource Name \(ARN\) of the event source\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FilterCriteria`  <a name="cfn-lambda-eventsourcemapping-filtercriteria"></a>
-Not currently supported by AWS CloudFormation\.  
+\(Streams and Amazon SQS\) An object that defines the filter criteria that determine whether Lambda should process an event\. For more information, see [Lambda event filtering](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html)\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -144,7 +144,7 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FunctionResponseTypes`  <a name="cfn-lambda-eventsourcemapping-functionresponsetypes"></a>
-\(Streams\) A list of current response type enums applied to the event source mapping\.  
+\(Streams and SQS\) A list of current response type enums applied to the event source mapping\.  
 Valid Values: `ReportBatchItemFailures`  
 *Required*: No  
 *Type*: List of String  

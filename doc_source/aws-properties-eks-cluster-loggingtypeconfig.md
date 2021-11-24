@@ -1,6 +1,6 @@
 # AWS::EKS::Cluster LoggingTypeConfig<a name="aws-properties-eks-cluster-loggingtypeconfig"></a>
 
-The enabled logging type\.
+The enabled logging type\. For a list of the valid logging types, see the [`types` property of `LogSetup`](https://docs.aws.amazon.com/eks/latest/APIReference/API_LogSetup.html#AmazonEKS-Type-LogSetup-types) in the *Amazon EKS API Reference*\.
 
 ## Syntax<a name="aws-properties-eks-cluster-loggingtypeconfig-syntax"></a>
 

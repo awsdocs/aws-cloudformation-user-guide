@@ -4,10 +4,10 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| [Updated resources](AWS_ElastiCache.md) | AWS::ElastiCache::ReplicationGroup\. 
+| [Updated resource](AWS_Logs.md) | The following resource was updated: AWS::Logs::LogGroup\. 
 
- [AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html)   
-The `data-tiering-enabled` parameter enables data tiering\. Data tiering is only supported for replication groups using the r6gd node type\. If you elect not to use data\-tiering, set the parameter to `no-data-tiering-enabled.` For more information, see [Data tiering](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html)\.  | November 23, 2021 | 
+ [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)   
+The AWS::Logs::LogGroup resource now supports tags\.  | November 22, 2021 | 
 | [Import stacks to stack set](#ReleaseHistory) | The AWS CloudFormation *stack import* operation can import existing stacks into new or existing stack sets, so that you can migrate existing stacks to a stack set in one operation for service\-managed stacks\.For more information, see [Importing stacks into a stack set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/service-managed-import.html) for service\-managed stacks\. | November 22, 2021 | 
 | [Updated resources](AWS_AppStream.md) | The following resources were updated: `AWS::AppStream::Fleet` 
 
@@ -1641,10 +1641,10 @@ Use the `DeploymentCircuitBreaker` property to enable the deployment circuit bre
 | [Updated resources](AWS_ElastiCache.md) | The following resources were updated: AWS::ElastiCache::User AWS::ElastiCache::UserGroup and AWS::ElastiCache::ReplicationGroup\. 
 
  [AWS::ElastiCache::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html)   
-For Redis engine version 6\.0 onwards: Creates a Redis user\. For more information, see [Using Role Based Access Control \(RBAC\)](AmazonElastiCache/latest/red-ug/Clusters.RBAC.html)  
+For Redis engine version 6\.x onwards: Creates a Redis user\. For more information, see [Using Role Based Access Control \(RBAC\)](AmazonElastiCache/latest/red-ug/Clusters.RBAC.html)  
 
  [AWS::ElastiCache::UserGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html)   
-For Redis engine version 6\.0 onwards: Creates a Redis user group\. For more information, see [Using Role Based Access Control \(RBAC\)](AmazonElastiCache/latest/red-ug/Clusters.RBAC.html) 
+For Redis engine version 6\.x onwards: Creates a Redis user group\. For more information, see [Using Role Based Access Control \(RBAC\)](AmazonElastiCache/latest/red-ug/Clusters.RBAC.html) 
 
  [AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-usergroupids)   
 Use the `UserGroupIds` property to associate a list of user groups with the replication group\.  | December 18, 2020 | 
