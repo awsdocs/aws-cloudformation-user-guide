@@ -7,7 +7,7 @@ Before you can create a delivery channel, you must create a configuration record
 You can have only one delivery channel per region per AWS account, and the delivery channel is required to use AWS Config\.
 
 **Note**  
-AWS Config does not support the delivery channel to an Amazon S3 bucket bucket where object lock is enabled\. For more information, see [How S3 Object Lock works](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html)\.
+AWS Config does not support the delivery channel to an Amazon S3 bucket where object lock is enabled\. For more information, see [How S3 Object Lock works](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-overview.html)\.
 
 When you create the delivery channel, you can specify; how often AWS Config delivers configuration snapshots to your Amazon S3 bucket \(for example, 24 hours\), the S3 bucket to which AWS Config sends configuration snapshots and configuration history files, and the Amazon SNS topic to which AWS Config sends notifications about configuration changes, such as updated resources, AWS Config rule evaluations, and when AWS Config delivers the configuration snapshot to your S3 bucket\. For more information, see [Deliver Configuration Items](https://docs.aws.amazon.com/config/latest/developerguide/how-does-config-work.html#delivery-channel) in the AWS Config Developer Guide\. 
 
