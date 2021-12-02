@@ -112,10 +112,13 @@ The following example creates a `Stream` resource that uses three shards, sets a
             "EncryptionType": "KMS", 
             "KeyId": "!Ref myKey" 
             }, 
-        "Tags": [ {
-            "Key": "Environment", 
-            "Value": "Production" } ] 
-        } 
+        "Tags": [
+          {
+            "Key": "Environment",
+            "Value": "Production"
+          }
+        ]
+    }
 }
 ```
 
@@ -132,7 +135,6 @@ MyStream:
             EncryptionType: KMS 
             KeyId: !Ref myKey 
         Tags: 
-            -
-                Key: Environment Value:
-                Production
+            - Key: Environment
+              Value: Production
 ```
