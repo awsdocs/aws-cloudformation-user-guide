@@ -56,7 +56,7 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Roles`  <a name="cfn-iam-instanceprofile-roles"></a>
-The name of the role to associate with the instance profile\. Only one role can be assigned to an EC2 instance at a time, and all applications on the instance share the same role and permissions\.  
+The name of the role (NOT the ARN) to associate with the instance profile\. Only one role can be assigned to an EC2 instance at a time, and all applications on the instance share the same role and permissions\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
