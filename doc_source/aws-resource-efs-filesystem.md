@@ -166,7 +166,7 @@ The ID of the EFS file system\. For example: `fs-12345678`
 
 ### Create an encrypted EFS file system using EFS Standard storage classes<a name="aws-resource-efs-filesystem--examples--Create_an_encrypted_EFS_file_system_using_EFS_Standard_storage_classes"></a>
 
-The following example declares an Amazon EFS file system with the followiing attributes:
+The following example declares an Amazon EFS file system with the following attributes:
 + Uses EFS Standard storage classes\.
 + maxIO performance mode\.
 + Lifecycle management enabled\.
