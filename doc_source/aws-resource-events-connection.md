@@ -145,7 +145,7 @@ The following example creates a connection named auth0\-connection using OAuth a
         "Name" : "auth0-connection",
         "AuthorizationType" : "OAUTH_CLIENT_CREDENTIALS",
         "AuthParameters" : {
-            "OAuthParameters: {
+            "OAuthParameters": {
                 "ClientParameters" : {
                     "ClientId": "{{resolve:secretsmanager:arn:aws:secretsmanager:us-west-2:123456789012:secret:auth0ClientId}}",
                     "ClientSecret": "{{resolve:secretsmanager:arn:aws:secretsmanager:us-west-2:123456789012:secret:auth0ClientSecret}}",
@@ -153,7 +153,7 @@ The following example creates a connection named auth0\-connection using OAuth a
                 "AuthorizationEndpoint" : "https://yourUserName.us.auth0.com/oauth/token",
                 "HttpMethod" : "POST",
                 "AdditionalParameters" : {
-                    "BodyParameters: {
+                    "BodyParameters": {
                         "audience" : "my-auth0-identifier",
                     },
                 },    
