@@ -18,7 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[LambdaConfigurations](#cfn-s3-bucket-notificationconfig-lambdaconfig)" : [ LambdaConfiguration, ... ],
   "[QueueConfigurations](#cfn-s3-bucket-notificationconfig-queueconfig)" : [ QueueConfiguration, ... ],
-  "[TopicConfigurations](#cfn-s3-bucket-notificationconfig-topicconfig)" : [ TopicConfiguration, ... ]
+  "[TopicConfigurations](#cfn-s3-bucket-notificationconfig-topicconfig)" : [ TopicConfiguration, ... ],
+  "[EventBridgeConfiguration](#cfn-s3-bucket-notificationconfig-eventbridgeconfig)" : [ EventBridgeConfiguration, ... ]
 }
 ```
 
@@ -31,6 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - QueueConfiguration
   [TopicConfigurations](#cfn-s3-bucket-notificationconfig-topicconfig): 
     - TopicConfiguration
+  [EventBridgeConfiguration](#cfn-s3-bucket-notificationconfig-eventbridgeconfig):
+    - EventBridgeConfiguration
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-notificationconfig-properties"></a>
@@ -53,9 +56,13 @@ The topic to which notifications are sent and the events for which notifications
 *Type*: List of [TopicConfiguration](aws-properties-s3-bucket-notificationconfig-topicconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`EventBridgeConfiguration` <a name="cfn-s3-bucket-notificationconfig-eventbridgeconfig"></a>
+Enables delivery of events to Amazon EventBridge.
+*Required*: No
+*Type*: [EventBridgeConfiguration](aws-properties-s3-bucket-notificationconfig-eventbridgeconfig.md)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Examples<a name="aws-properties-s3-bucket-notificationconfig--examples"></a>
-
-
 
 ### Receive S3 bucket notifications to an SNS topic<a name="aws-properties-s3-bucket-notificationconfig--examples--Receive_S3_bucket_notifications_to_an_SNS_topic"></a>
 
