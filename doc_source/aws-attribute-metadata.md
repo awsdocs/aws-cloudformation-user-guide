@@ -10,7 +10,7 @@ CloudFormation doesn't redact or obfuscate any information you include in the me
 
 You can retrieve this data using the AWS Command Line Interface command [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-resource.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-resource.html) or the [DescribeStackResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStackResource.html) operation\.
 
-## Example<a name="w10494ab1c31c23c19c11"></a>
+## Example<a name="aws-attribute-metadata-example"></a>
 
 The following template contains an Amazon S3 bucket resource with a metadata attribute\.
 

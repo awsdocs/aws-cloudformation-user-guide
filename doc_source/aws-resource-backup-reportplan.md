@@ -4,6 +4,8 @@ Creates a report plan\. A report plan is a document that contains information ab
 
 If you call `CreateReportPlan` with a plan that already exists, you receive an `AlreadyExistsException` exception\.
 
+For a sample AWS CloudFormation template, see the [ AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/assigning-resources.html#assigning-resources-cfn)\.
+
 ## Syntax<a name="aws-resource-backup-reportplan-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

@@ -2,6 +2,9 @@
 
 Use `InstanceGroupConfig` to define instance groups for an EMR cluster\. A cluster can not use both instance groups and instance fleets\. For more information, see [Create a Cluster with Instance Fleets or Uniform Instance Groups](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html) in the *Amazon EMR Management Guide*\.
 
+**Important**  
+You can currently only add task instance groups to a cluster with this resource\. If you use this resource, CloudFormation waits for the cluster launch to complete before adding the task instance group to the cluster\. In order to add task instance groups to the cluster as part of the cluster launch and minimize delays in provisioning task nodes, use the `TaskInstanceGroups` subproperty for the [AWS::EMR::Cluster JobFlowInstancesConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html) property instead\. To use this subproperty, see [AWS::EMR::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html) for examples\.
+
 ## Syntax<a name="aws-resource-emr-instancegroupconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -15,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy)" : AutoScalingPolicy,
       "[BidPrice](#cfn-emr-instancegroupconfig-bidprice)" : String,
       "[Configurations](#cfn-emr-instancegroupconfig-configurations)" : [ Configuration, ... ],
+      "[CustomAmiId](#cfn-emr-instancegroupconfig-customamiid)" : String,
       "[EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration)" : EbsConfiguration,
       "[InstanceCount](#cfn-emr-instancegroupconfiginstancecount-)" : Integer,
       "[InstanceRole](#cfn-emr-instancegroupconfig-instancerole)" : String,
@@ -36,6 +40,7 @@ Properties:
   [BidPrice](#cfn-emr-instancegroupconfig-bidprice): String
   [Configurations](#cfn-emr-instancegroupconfig-configurations): 
     - Configuration
+  [CustomAmiId](#cfn-emr-instancegroupconfig-customamiid): String
   [EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration): 
     EbsConfiguration
   [InstanceCount](#cfn-emr-instancegroupconfiginstancecount-): Integer
@@ -68,6 +73,15 @@ Amazon EMR releases 4\.x or later\.
 The list of configurations supplied for an EMR cluster instance group\. You can specify a separate configuration for each instance group \(master, core, and task\)\.  
 *Required*: No  
 *Type*: List of [Configuration](aws-properties-emr-cluster-configuration.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`CustomAmiId`  <a name="cfn-emr-instancegroupconfig-customamiid"></a>
+The custom AMI ID to use for the provisioned instance group\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `0`  
+*Maximum*: `256`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EbsConfiguration`  <a name="cfn-emr-instancegroupconfig-ebsconfiguration"></a>

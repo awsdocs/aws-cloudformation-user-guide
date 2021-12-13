@@ -2,6 +2,8 @@
 
 `JobFlowInstancesConfig` is a property of the `AWS::EMR::Cluster` resource\. `JobFlowInstancesConfig` defines the instance groups or instance fleets that comprise the cluster\. `JobFlowInstancesConfig` must contain either `InstanceFleetConfig` or `InstanceGroupConfig`\. They cannot be used together\.
 
+You can now define task instance groups or task instance fleets using the `TaskInstanceGroups` and `TaskInstanceFleets` subproperties\. Using these subproperties reduces delays in provisioning task nodes compared to specifying task nodes with the `InstanceFleetConfig` and `InstanceGroupConfig` resources\.
+
 ## Syntax<a name="aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -25,6 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[MasterInstanceGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancegroup)" : InstanceGroupConfig,
   "[Placement](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-placement)" : PlacementType,
   "[ServiceAccessSecurityGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-serviceaccesssecuritygroup)" : String,
+  "[TaskInstanceFleets](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-taskinstancefleets)" : [ InstanceFleetConfig, ... ],
+  "[TaskInstanceGroups](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-taskinstancegroups)" : [ InstanceGroupConfig, ... ],
   "[TerminationProtected](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-terminationprotected)" : Boolean
 }
 ```
@@ -55,6 +59,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Placement](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-placement): 
     PlacementType
   [ServiceAccessSecurityGroup](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-serviceaccesssecuritygroup): String
+  [TaskInstanceFleets](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-taskinstancefleets): 
+    - InstanceFleetConfig
+  [TaskInstanceGroups](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-taskinstancegroups): 
+    - InstanceGroupConfig
   [TerminationProtected](#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-terminationprotected): Boolean
 ```
 
@@ -168,6 +176,20 @@ The identifier of the Amazon EC2 security group for the Amazon EMR service to ac
 *Maximum*: `256`  
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`TaskInstanceFleets`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-taskinstancefleets"></a>
+Describes the EC2 instances and instance configurations for the task instance fleets when using clusters with the instance fleet configuration\. These task instance fleets are added to the cluster as part of the cluster launch\. Each task instance fleet must have a unique name specified so that CloudFormation can differentiate between the task instance fleets\.  
+You can currently specify only one task instance fleet for a cluster\. After creating the cluster, you can only modify the mutable properties of `InstanceFleetConfig`, which are `TargetOnDemandCapacity` and `TargetSpotCapacity`\. Modifying any other property results in cluster replacement\.
+*Required*: No  
+*Type*: List of [InstanceFleetConfig](aws-properties-elasticmapreduce-cluster-instancefleetconfig.md)  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+
+`TaskInstanceGroups`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-taskinstancegroups"></a>
+Describes the EC2 instances and instance configurations for task instance groups when using clusters with the uniform instance group configuration\. These task instance groups are added to the cluster as part of the cluster launch\. Each task instance group must have a unique name specified so that CloudFormation can differentiate between the task instance groups\.  
+After creating the cluster, you can only modify the mutable properties of `InstanceGroupConfig`, which are `AutoScalingPolicy` and `InstanceCount`\. Modifying any other property results in cluster replacement\.
+*Required*: No  
+*Type*: List of [InstanceGroupConfig](aws-properties-elasticmapreduce-cluster-instancegroupconfig.md)  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `TerminationProtected`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-terminationprotected"></a>
 Specifies whether to lock the cluster to prevent the Amazon EC2 instances from being terminated by API call, user intervention, or in the event of a job\-flow error\.  

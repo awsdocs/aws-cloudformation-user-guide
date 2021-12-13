@@ -13,9 +13,12 @@ The scripts aren't executed by default\. You must include calls in your template
 
 ## Amazon Linux AMI images<a name="cfn-helper-scripts-reference-amazon-amis"></a>
 
-The CloudFormation helper scripts are preinstalled on Amazon Linux AMI images\.
+The CloudFormation helper scripts are preinstalled on Amazon Linux AMI images that have bootstrap scripts installed\.
 + On the latest Amazon Linux AMI version, the scripts are installed in `/opt/aws/bin`\.
 + On previous Amazon Linux AMI versions, the aws\-cfn\-bootstrap package that contains the scripts is located in the Yum repository\.
+
+**Note**  
+The helper scripts are pre\-installed on the latest versions of the Amazon Linux AMI and not on Optimized AMIs, such as ECS Optimized Image that uses Amazon Linux as base\.
 
 ## Downloading packages for other platforms<a name="cfn-helper-scripts-reference-downloads"></a>
 

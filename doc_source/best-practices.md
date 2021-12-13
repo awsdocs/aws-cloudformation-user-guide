@@ -24,7 +24,7 @@ Best practices are recommendations that can help you use AWS CloudFormation more
 + [Use stack policies](#stackpolicy)
 + [Use AWS CloudTrail to log AWS CloudFormation calls](security-best-practices.md#cloudtrail)
 + [Use code reviews and revision controls to manage your templates](#code)
-+ [Update your Amazon EC2 Linux instances regularly](#update-ec2-linux)
++ [Update your Amazon EC2 instances regularly](#update-ec2-linux)
 
 ## Organize your stacks by lifecycle and ownership<a name="organizingstacks"></a>
 
@@ -40,13 +40,13 @@ With a service\-oriented architecture, you can organize big business problems in
 
 ## Use cross\-stack references to export shared resources<a name="cross-stack"></a>
 
-When you organize your AWS resources based on lifecycle and ownership, you might want to build a stack that uses resources that are in another stack\. You can hard\-code values or use input parameters to pass resource names and IDs\. However, these methods can make templates difficult to reuse or can increase the overhead to get a stack running\. Instead, use cross\-stack references to export resources from a stack so that other stacks can use them\. Stacks can use the exported resources by calling them using the `Fn::ImportValue` function\.
+When you organize your AWS resources based on lifecycle and ownership, you might want to build a stack that uses resources that are in another stack\. You can hardcode values or use input parameters to pass resource names and IDs\. However, these methods can make templates difficult to reuse or can increase the overhead to get a stack running\. Instead, use cross\-stack references to export resources from a stack so that other stacks can use them\. Stacks can use the exported resources by calling them using the `Fn::ImportValue` function\.
 
 For example, you might have a network stack that includes a VPC, a security group, and a subnet\. You want all public web applications to use these resources\. By exporting the resources, you allow all stacks with public web applications to use them\. For more information, see [Walkthrough: Refer to resource outputs in another AWS CloudFormation stack](walkthrough-crossstackref.md)\.
 
 ## Verify quotas for all resource types<a name="limits"></a>
 
-Before launching a stack, ensure that you can create all the resources that you want without hitting your AWS account limits\. If you hit a limit, CloudFormation won't create your stack successfully until you increase your quota or delete extra resources\. Each service can have various limits that you should be aware of before launching a stack\. For example, by default, you can only launch 2000 CloudFormation stacks per region in your AWS account\. For more information about limits and how to increase the default limits, see [AWS service limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
+Before launching a stack, ensure that you can create all the resources that you want without hitting your AWS account limits\. If you hit a limit, CloudFormation won't create your stack successfully until you increase your quota or delete extra resources\. Each service can have various limits that you should be aware of before launching a stack\. For example, by default, you can only launch 2000 CloudFormation stacks per region in your AWS account\. For more information about limits and how to increase the default limits, see [AWS service quotas](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
 
 ## Reuse templates to replicate stacks in multiple environments<a name="reuse"></a>
 
@@ -60,7 +60,7 @@ These building blocks can be for a single resource, like best practices for defi
 
 ## Use AWS\-specific parameter types<a name="parmtypes"></a>
 
-If your template requires inputs for existing AWS\-specific values, such as existing Amazon Virtual Private Cloud IDs or an Amazon EC2 key pair name, use AWS\-specific parameter types\. For example, you can specify a parameter as type `AWS::EC2::KeyPair::KeyName`, which takes an existing key pair name that is in your AWS account and in the region where you are creating the stack\. AWS CloudFormation can quickly validate values for AWS\-specific parameter types before creating your stack\. Also, if you use the CloudFormation console, CloudFormation shows a drop\-down list of valid values, so you don't have to look up or memorize the correct VPC IDs or key pair names\. For more information, see [Parameters](parameters-section-structure.md)\.
+If your template requires inputs for existing AWS\-specific values, such as existing Amazon Virtual Private Cloud IDs or an Amazon EC2 key pair name, use AWS\-specific parameter types\. For example, you can specify a parameter as type `AWS::EC2::KeyPair::KeyName`, which takes an existing key pair name that's in your AWS account and in the region where you are creating the stack\. AWS CloudFormation can quickly validate values for AWS\-specific parameter types before creating your stack\. Also, if you use the CloudFormation console, CloudFormation shows a drop down list of valid values, so you don't have to look up or memorize the correct VPC IDs or key pair names\. For more information, see [Parameters](parameters-section-structure.md)\.
 
 ## Use parameter constraints<a name="parmconstraints"></a>
 
@@ -84,13 +84,13 @@ For more information about getting the latest helper scripts, see the [CloudForm
 
 ## Validate templates before using them<a name="validate"></a>
 
-Before you use a template to create or update a stack, you can use CloudFormation to validate it\. Validating a template can help you catch syntax and some semantic errors, such as circular dependencies, before CloudFormation creates any resources\. If you use the CloudFormation console, the console automatically validates the template after you specify input parameters\. For the AWS CLI or CloudFormation API, use the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html) command or [ValidateTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ValidateTemplate.html) action\.
+Before you use a template to create or update a stack, you can use CloudFormation to validate it\. Validating a template can help you catch syntax and some semantic errors, such as circular dependencies, before CloudFormation creates any resources\. If you use the CloudFormation console, the console automatically validates the template after you specify input parameters\. For the AWS CLI or CloudFormation API, use the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/validate-template.html) command or [ValidateTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ValidateTemplate.html) operation\.
 
 During validation, CloudFormation first checks if the template is valid JSON\. If it isn't, CloudFormation checks if the template is valid YAML\. If both checks fail, CloudFormation returns a template validation error\.
 
 ### Validate templates for organization policy compliance<a name="validate-compliance"></a>
 
-You can also validate your template for compliance to organization policy guidelines\. AWS CloudFormation Guard \(`cfn-guard`\) is an open\-source command\-line\-interface \(CLI\) tool that provides a policy\-as\-code language to define rules that can check for both required and prohibited resource configurations\. It then enables you to validate your templates against those rules\. For example, administrators can create rules to ensure that users always create encrypted Amazon S3 buckets\.
+You can also validate your template for compliance to organization policy guidelines\. AWS CloudFormation Guard \(`cfn-guard`\) is an open\-source command line interface \(CLI\) tool that provides a policy\-as\-code language to define rules that can check for both required and prohibited resource configurations\. It then enables you to validate your templates against those rules\. For example, administrators can create rules to ensure that users always create encrypted Amazon S3 buckets\.
 
 You can use `cfn-guard` either locally, while editing templates, or automatically as part of a CI/CD pipeline to stop deployment of non\-compliant resources\.
 
@@ -118,6 +118,6 @@ During a stack update, you must explicitly specify the protected resources that 
 
 Your stack templates describe the configuration of your AWS resources, such as their property values\. To review changes and to keep an exact history of your resources, use code reviews and revision controls\. These methods can help you track changes between different versions of your templates, which can help you track changes to your stack resources\. Also, by maintaining a history, you can always revert your stack to a certain version of your template\.
 
-## Update your Amazon EC2 Linux instances regularly<a name="update-ec2-linux"></a>
+## Update your Amazon EC2 instances regularly<a name="update-ec2-linux"></a>
 
-On all your Amazon EC2 Linux instances and Amazon EC2 Linux instances created with CloudFormation, regularly run the `yum update` command to update the RPM package\. This ensures that you get the latest fixes and security updates\.
+On all your Amazon EC2 Windows instances and Amazon EC2 Linux instances created with CloudFormation, regularly run the `yum update` command to update the RPM package\. This ensures that you get the latest fixes and security updates\.

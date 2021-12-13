@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-mpeg2filtersettings-properties"></a>
 
 `TemporalFilterSettings`  <a name="cfn-medialive-channel-mpeg2filtersettings-temporalfiltersettings"></a>
-Not currently supported by AWS CloudFormation\.  
+Settings for applying the temporal filter to the video\.   
 *Required*: No  
 *Type*: [TemporalFilterSettings](aws-properties-medialive-channel-temporalfiltersettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

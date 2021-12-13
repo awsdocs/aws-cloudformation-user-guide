@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Action](#cfn-wafv2-rulegroup-rule-action)" : RuleAction,
+  "[CaptchaConfig](#cfn-wafv2-rulegroup-rule-captchaconfig)" : CaptchaConfig,
   "[Name](#cfn-wafv2-rulegroup-rule-name)" : String,
   "[Priority](#cfn-wafv2-rulegroup-rule-priority)" : Integer,
   "[RuleLabels](#cfn-wafv2-rulegroup-rule-rulelabels)" : [ Label, ... ],
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Action](#cfn-wafv2-rulegroup-rule-action): 
     RuleAction
+  [CaptchaConfig](#cfn-wafv2-rulegroup-rule-captchaconfig): 
+    CaptchaConfig
   [Name](#cfn-wafv2-rulegroup-rule-name): String
   [Priority](#cfn-wafv2-rulegroup-rule-priority): Integer
   [RuleLabels](#cfn-wafv2-rulegroup-rule-rulelabels): 
@@ -40,6 +43,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The action that AWS WAF should take on a web request when it matches the rule's statement\. Settings at the web ACL level can override the rule action setting\.   
 *Required*: No  
 *Type*: [RuleAction](aws-properties-wafv2-rulegroup-ruleaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CaptchaConfig`  <a name="cfn-wafv2-rulegroup-rule-captchaconfig"></a>
+Specifies how AWS WAF should handle `CAPTCHA` evaluations\. If you don't specify this, AWS WAF uses the `CAPTCHA` configuration that's defined for the web ACL\.   
+*Required*: No  
+*Type*: [CaptchaConfig](aws-properties-wafv2-rulegroup-captchaconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-rulegroup-rule-name"></a>

@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appsync-graphqlapi-openidconnectconfig-properties"></a>
 
 `AuthTTL`  <a name="cfn-appsync-graphqlapi-openidconnectconfig-authttl"></a>
-The number of milliseconds a token is valid after being authenticated\.  
+The number of milliseconds that a token is valid after being authenticated\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -43,13 +43,13 @@ The client identifier of the Relying party at the OpenID identity provider\. Thi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IatTTL`  <a name="cfn-appsync-graphqlapi-openidconnectconfig-iatttl"></a>
-The number of milliseconds a token is valid after being issued to a user\.  
+The number of milliseconds that a token is valid after it's issued to a user\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Issuer`  <a name="cfn-appsync-graphqlapi-openidconnectconfig-issuer"></a>
-The issuer for the OpenID Connect configuration\. The issuer returned by discovery must exactly match the value of `iss` in the ID token\.  
+The issuer for the OIDC configuration\. The issuer returned by discovery must exactly match the value of `iss` in the ID token\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

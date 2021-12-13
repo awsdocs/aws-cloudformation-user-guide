@@ -40,12 +40,16 @@ A description of your site\.
 Constraints: Maximum length of 256 characters\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `256`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalNetworkId`  <a name="cfn-networkmanager-site-globalnetworkid"></a>
 The ID of the global network\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `50`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Location`  <a name="cfn-networkmanager-site-location"></a>

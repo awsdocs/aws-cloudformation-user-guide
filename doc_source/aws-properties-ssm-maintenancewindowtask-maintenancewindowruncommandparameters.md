@@ -65,7 +65,7 @@ The SHA\-256 or SHA\-1 hash type\. SHA\-1 hashes are deprecated\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotificationConfig`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-notificationconfig"></a>
-Configurations for sending notifications about command status changes on a per\-instance basis\.  
+Configurations for sending notifications about command status changes on a per\-managed node basis\.  
 *Required*: No  
 *Type*: [NotificationConfig](aws-properties-ssm-maintenancewindowtask-notificationconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

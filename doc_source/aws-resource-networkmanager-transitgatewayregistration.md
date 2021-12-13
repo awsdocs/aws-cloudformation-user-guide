@@ -33,12 +33,16 @@ Properties:
 The ID of the global network\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `50`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TransitGatewayArn`  <a name="cfn-networkmanager-transitgatewayregistration-transitgatewayarn"></a>
 The Amazon Resource Name \(ARN\) of the transit gateway\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `500`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-networkmanager-transitgatewayregistration-return-values"></a>

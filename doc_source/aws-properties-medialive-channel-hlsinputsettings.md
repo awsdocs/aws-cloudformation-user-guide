@@ -15,7 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Bandwidth](#cfn-medialive-channel-hlsinputsettings-bandwidth)" : Integer,
   "[BufferSegments](#cfn-medialive-channel-hlsinputsettings-buffersegments)" : Integer,
   "[Retries](#cfn-medialive-channel-hlsinputsettings-retries)" : Integer,
-  "[RetryInterval](#cfn-medialive-channel-hlsinputsettings-retryinterval)" : Integer
+  "[RetryInterval](#cfn-medialive-channel-hlsinputsettings-retryinterval)" : Integer,
+  "[Scte35Source](#cfn-medialive-channel-hlsinputsettings-scte35source)" : String
 }
 ```
 
@@ -26,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BufferSegments](#cfn-medialive-channel-hlsinputsettings-buffersegments): Integer
   [Retries](#cfn-medialive-channel-hlsinputsettings-retries): Integer
   [RetryInterval](#cfn-medialive-channel-hlsinputsettings-retryinterval): Integer
+  [Scte35Source](#cfn-medialive-channel-hlsinputsettings-scte35source): String
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-hlsinputsettings-properties"></a>
@@ -52,4 +54,10 @@ The number of consecutive times that attempts to read a manifest or segment must
 The number of seconds between retries when an attempt to read a manifest or segment fails\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Scte35Source`  <a name="cfn-medialive-channel-hlsinputsettings-scte35source"></a>
+Identifies the source for the SCTE\-35 messages that MediaLive will ingest\. Messages can be ingested from the content segments \(in the stream\) or from tags in the playlist \(the HLS manifest\)\. MediaLive ignores SCTE\-35 information in the source that is not selected\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

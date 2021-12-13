@@ -86,7 +86,7 @@ You cannot specify a scheme for a Gateway Load Balancer\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetMappings`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnetmappings"></a>
-The IDs of the public subnets\. You can specify only one subnet per Availability Zone\. You must specify either subnets or subnet mappings\.  
+The IDs of the public subnets\. You can specify only one subnet per Availability Zone\. You must specify either subnets or subnet mappings, but not both\.  
 \[Application Load Balancers\] You must specify subnets from at least two Availability Zones\. You cannot specify Elastic IP addresses for your subnets\.  
 \[Application Load Balancers on Outposts\] You must specify one Outpost subnet\.  
 \[Application Load Balancers on Local Zones\] You can specify subnets from one or more Local Zones\.  
@@ -97,9 +97,12 @@ The IDs of the public subnets\. You can specify only one subnet per Availability
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Subnets`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnets"></a>
-The IDs of the subnets\. You can specify only one subnet per Availability Zone\. You must specify either subnets or subnet mappings\.  
-\[Application Load Balancers\] You must specify subnets from at least two Availability Zones\. When you specify subnets for an existing Application Load Balancer, they replace the previously enabled subnets\.  
-\[Network Load Balancers\] You can specify subnets from one or more Availability Zones when you create the load balancer\.   
+The IDs of the public subnets\. You can specify only one subnet per Availability Zone\. You must specify either subnets or subnet mappings, but not both\. To specify an Elastic IP address, specify subnet mappings instead of subnets\.  
+\[Application Load Balancers\] You must specify subnets from at least two Availability Zones\.  
+\[Application Load Balancers on Outposts\] You must specify one Outpost subnet\.  
+\[Application Load Balancers on Local Zones\] You can specify subnets from one or more Local Zones\.  
+\[Network Load Balancers\] You can specify subnets from one or more Availability Zones\.  
+\[Gateway Load Balancers\] You can specify subnets from one or more Availability Zones\.  
 *Required*: Conditional  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

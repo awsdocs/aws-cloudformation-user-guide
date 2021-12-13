@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Environment](#cfn-sagemaker-model-containerdefinition-environment)" : Json,
   "[Image](#cfn-sagemaker-model-containerdefinition-image)" : String,
   "[ImageConfig](#cfn-sagemaker-model-containerdefinition-imageconfig)" : ImageConfig,
+  "[InferenceSpecificationName](#cfn-sagemaker-model-containerdefinition-inferencespecificationname)" : String,
   "[Mode](#cfn-sagemaker-model-containerdefinition-mode)" : String,
   "[ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl)" : String,
   "[ModelPackageName](#cfn-sagemaker-model-containerdefinition-modelpackagename)" : String,
@@ -29,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Image](#cfn-sagemaker-model-containerdefinition-image): String
   [ImageConfig](#cfn-sagemaker-model-containerdefinition-imageconfig): 
     ImageConfig
+  [InferenceSpecificationName](#cfn-sagemaker-model-containerdefinition-inferencespecificationname): String
   [Mode](#cfn-sagemaker-model-containerdefinition-mode): String
   [ModelDataUrl](#cfn-sagemaker-model-containerdefinition-modeldataurl): String
   [ModelPackageName](#cfn-sagemaker-model-containerdefinition-modelpackagename): String
@@ -65,6 +67,15 @@ The path where inference code is stored\. This can be either in Amazon EC2 Conta
 Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud \(VPC\)\. For information about storing containers in a private Docker registry, see [Use a Private Docker Registry for Real\-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html)   
 *Required*: No  
 *Type*: [ImageConfig](aws-properties-sagemaker-model-containerdefinition-imageconfig.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`InferenceSpecificationName`  <a name="cfn-sagemaker-model-containerdefinition-inferencespecificationname"></a>
+The inference specification name in the model package version\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `63`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Mode`  <a name="cfn-sagemaker-model-containerdefinition-mode"></a>

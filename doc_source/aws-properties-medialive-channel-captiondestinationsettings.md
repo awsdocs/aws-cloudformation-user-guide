@@ -80,7 +80,7 @@ The configuration of one DVB Sub captions encode in the output\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EbuTtDDestinationSettings`  <a name="cfn-medialive-channel-captiondestinationsettings-ebuttddestinationsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+Settings for EBU\-TT captions in the output\.  
 *Required*: No  
 *Type*: [EbuTtDDestinationSettings](aws-properties-medialive-channel-ebuttddestinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

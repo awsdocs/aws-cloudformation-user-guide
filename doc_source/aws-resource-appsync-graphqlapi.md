@@ -98,7 +98,7 @@ Optional authorization configuration for using Amazon Cognito user pools with yo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `XrayEnabled`  <a name="cfn-appsync-graphqlapi-xrayenabled"></a>
-A flag representing whether X\-Ray tracing is enabled for this `GraphqlApi`\.  
+A flag indicating whether to use AWS X\-Ray tracing for this `GraphqlApi`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

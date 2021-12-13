@@ -35,6 +35,8 @@ A description of the global network\.
 Constraints: Maximum length of 256 characters\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `256`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-networkmanager-globalnetwork-tags"></a>

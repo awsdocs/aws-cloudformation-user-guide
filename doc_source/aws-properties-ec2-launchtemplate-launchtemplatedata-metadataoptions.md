@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-metadataoptions-properties"></a>
 
 `HttpEndpoint`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-httpendpoint"></a>
-This parameter enables or disables the HTTP metadata endpoint on your instances\. If the parameter is not specified, the default state is `enabled`\.  
+Enables or disables the HTTP metadata endpoint on your instances\. If the parameter is not specified, the default state is `enabled`\.  
 If you specify a value of `disabled`, you will not be able to access your instance metadata\. 
 *Required*: No  
 *Type*: String  

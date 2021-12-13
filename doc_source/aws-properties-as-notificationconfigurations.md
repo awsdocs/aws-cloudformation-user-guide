@@ -42,7 +42,7 @@ A list of event types that trigger a notification\. Event types can include any 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TopicARN`  <a name="cfn-autoscaling-autoscalinggroup-notificationconfigurations-topicarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service \(Amazon SNS\) topic\.  
+The Amazon Resource Name \(ARN\) of the Amazon SNS topic\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[NotStatement](#cfn-wafv2-rulegroup-statement-notstatement)" : NotStatement,
   "[OrStatement](#cfn-wafv2-rulegroup-statement-orstatement)" : OrStatement,
   "[RateBasedStatement](#cfn-wafv2-rulegroup-statement-ratebasedstatement)" : RateBasedStatement,
+  "[RegexMatchStatement](#cfn-wafv2-rulegroup-statement-regexmatchstatement)" : RegexMatchStatement,
   "[RegexPatternSetReferenceStatement](#cfn-wafv2-rulegroup-statement-regexpatternsetreferencestatement)" : RegexPatternSetReferenceStatement,
   "[SizeConstraintStatement](#cfn-wafv2-rulegroup-statement-sizeconstraintstatement)" : SizeConstraintStatement,
   "[SqliMatchStatement](#cfn-wafv2-rulegroup-statement-sqlimatchstatement)" : SqliMatchStatement,
@@ -44,6 +45,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     OrStatement
   [RateBasedStatement](#cfn-wafv2-rulegroup-statement-ratebasedstatement): 
     RateBasedStatement
+  [RegexMatchStatement](#cfn-wafv2-rulegroup-statement-regexmatchstatement): 
+    RegexMatchStatement
   [RegexPatternSetReferenceStatement](#cfn-wafv2-rulegroup-statement-regexpatternsetreferencestatement): 
     RegexPatternSetReferenceStatement
   [SizeConstraintStatement](#cfn-wafv2-rulegroup-statement-sizeconstraintstatement): 
@@ -110,6 +113,12 @@ In this rate\-based rule, you also define a rate limit\. For this example, the r
 You cannot nest a `RateBasedStatement`, for example for use inside a `NotStatement` or `OrStatement`\. It can only be referenced as a top\-level statement within a rule\.  
 *Required*: No  
 *Type*: [RateBasedStatement](aws-properties-wafv2-rulegroup-ratebasedstatement.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RegexMatchStatement`  <a name="cfn-wafv2-rulegroup-statement-regexmatchstatement"></a>
+A rule statement used to search web request components for a match against a single regular expression\.   
+*Required*: No  
+*Type*: [RegexMatchStatement](aws-properties-wafv2-rulegroup-regexmatchstatement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegexPatternSetReferenceStatement`  <a name="cfn-wafv2-rulegroup-statement-regexpatternsetreferencestatement"></a>

@@ -1,6 +1,6 @@
 # AWS::Transfer::Server<a name="aws-resource-transfer-server"></a>
 
-The `AWS::Transfer::Server` resource instantiates an autoscaling virtual server based on a file transfer protocol in AWS\. When you make updates to your server or when you work with users, use the service\-generated `ServerId` property that is assigned to the newly created server\.
+Instantiates an auto\-scaling virtual server based on the selected file transfer protocol in AWS\. When you make updates to your file transfer protocol\-enabled server or when you work with users, use the service\-generated `ServerId` property that is assigned to the newly created server\.
 
 ## Syntax<a name="aws-resource-transfer-server-syntax"></a>
 
@@ -59,7 +59,7 @@ Properties:
 The Amazon Resource Name \(ARN\) of the AWS Certificate Manager \(ACM\) certificate\. Required when `Protocols` is set to `FTPS`\.  
 To request a new public certificate, see [Request a public certificate](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html) in the * AWS Certificate Manager User Guide*\.  
 To import an existing certificate into ACM, see [Importing certificates into ACM](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) in the * AWS Certificate Manager User Guide*\.  
-To request a private certificate to use FTPS through private IP addresses, see [Creating and managing a Private CA](https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html) in the * AWS Certificate Manager User Guide*\.  
+To request a private certificate to use FTPS through private IP addresses, see [Request a private certificate](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-private.html) in the * AWS Certificate Manager User Guide*\.  
 Certificates with the following cryptographic algorithms and key sizes are supported:  
 + 2048\-bit RSA \(RSA\_2048\)
 + 4096\-bit RSA \(RSA\_4096\)

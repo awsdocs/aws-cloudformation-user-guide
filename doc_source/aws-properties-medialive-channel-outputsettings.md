@@ -80,7 +80,7 @@ The settings for a Microsoft Smooth output\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MultiplexOutputSettings`  <a name="cfn-medialive-channel-outputsettings-multiplexoutputsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+Configuration of a Multiplex output\.   
 *Required*: No  
 *Type*: [MultiplexOutputSettings](aws-properties-medialive-channel-multiplexoutputsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -146,7 +146,7 @@ The following example specifies a user resource for an Amazon Connect instance\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: Specifies an user for an Amazon Connect instance
+Description: Specifies a user for an Amazon Connect instance
 Resources:
     User:
       Type: 'AWS::Connect::User'
@@ -161,9 +161,9 @@ Resources:
           DeskPhoneNumber: '+12345678902'
           AfterContactWorkTimeLimit: 10
         Username: 'exampleuser'
-        InstanceArn: 'arn:aws:connect:us-west-2:111222333444:instance/instance-wwww-xxxx-yyyy-zzzzzzzzzzzzz'
-        RoutingProfileArn: 'arn:aws:connect:us-west-2:111222333444:instance/instance-wwww-xxxx-yyyy-zzzzzzzzzzzzz/routing-profile/routing-5d8c-4497-8913-5555555555555'
-        SecurityProfileArns: [arn:aws:connect:us-west-2:111222333444:instance/instance-wwww-xxxx-yyyy-zzzzzzzzzzzzz/security-profile/security-6023-4206-b881-5555555555555]
+        InstanceArn: 'arn:aws:connect:region-name:aws-account-id:instance/instance-arn'
+        RoutingProfileArn: 'arn:aws:connect:region-name:aws-account-id:instance/instance-arn/routing-profile/routing-arn'
+        SecurityProfileArns: [arn:aws:connect:region-name:aws-account-id:instance/instance-arn/security-profile/security-arn]
         Password: !Ref password
         Tags:
           - Key: 'tagKey'

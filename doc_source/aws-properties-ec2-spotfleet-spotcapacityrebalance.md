@@ -1,6 +1,6 @@
 # AWS::EC2::SpotFleet SpotCapacityRebalance<a name="aws-properties-ec2-spotfleet-spotcapacityrebalance"></a>
 
-The Spot Instance replacement strategy to use when Amazon EC2 emits a signal that your Spot Instance is at an elevated risk of being interrupted\. For more information, see [Capacity rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-configuration-strategies.html#spot-fleet-capacity-rebalance) in the *Amazon EC2 User Guide for Linux Instances*\.
+The Spot Instance replacement strategy to use when Amazon EC2 emits a signal that your Spot Instance is at an elevated risk of being interrupted\. For more information, see [Capacity rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 
 ## Syntax<a name="aws-properties-ec2-spotfleet-spotcapacityrebalance-syntax"></a>
 
@@ -35,7 +35,8 @@ The replacement strategy to use\. Only available for fleets of type `maintain`\.
 
 `TerminationDelay`  <a name="cfn-ec2-spotfleet-spotcapacityrebalance-terminationdelay"></a>
 The amount of time \(in seconds\) that Amazon EC2 waits before terminating the old Spot Instance after launching a new replacement Spot Instance\.  
-Valid only when `ReplacementStrategy` is set to `launch-before-terminate`\.  
+Required when `ReplacementStrategy` is set to `launch-before-terminate`\.  
+Not valid when `ReplacementStrategy` is set to `launch`\.  
 Valid values: Minimum value of `120` seconds\. Maximum value of `7200` seconds\.  
 *Required*: No  
 *Type*: Integer  

@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification-properties"></a>
 
 `ContributorInsightsSpecification`  <a name="cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-contributorinsightsspecification"></a>
-Updates the status for contributor insights for a specific table or index\.  
+Updates the status for contributor insights for a specific table or index\. CloudWatch Contributor Insights for DynamoDB graphs display the partition key and \(if applicable\) sort key of frequently accessed items and frequently throttled items in plaintext\. If you require the use of AWS Key Management Service \(KMS\) to encrypt this table’s partition key and sort key data with an AWS managed key or customer managed key, you should not enable CloudWatch Contributor Insights for DynamoDB for this table\.  
 *Required*: No  
 *Type*: [ContributorInsightsSpecification](aws-properties-dynamodb-globaltable-contributorinsightsspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

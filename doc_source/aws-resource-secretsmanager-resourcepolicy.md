@@ -34,7 +34,7 @@ Properties:
 ## Properties<a name="aws-resource-secretsmanager-resourcepolicy-properties"></a>
 
 `BlockPublicPolicy`  <a name="cfn-secretsmanager-resourcepolicy-blockpublicpolicy"></a>
-Specifies whether to block resource\-based policies that allow broad access to the secret\. By default, Secrets Manager blocks policies that allow broad access\.  
+Specifies whether to block resource\-based policies that allow broad access to the secret\. By default, Secrets Manager blocks policies that allow broad access, for example those that use a wildcard for the principal\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

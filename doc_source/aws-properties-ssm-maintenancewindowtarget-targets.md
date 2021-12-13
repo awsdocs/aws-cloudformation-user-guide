@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ssm-maintenancewindowtarget-targets-properties"></a>
 
 `Key`  <a name="cfn-ssm-maintenancewindowtarget-targets-key"></a>
-User\-defined criteria for sending commands that target instances that meet the criteria\.  
+User\-defined criteria for sending commands that target managed nodes that meet the criteria\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

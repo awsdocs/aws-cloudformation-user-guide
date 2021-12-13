@@ -65,10 +65,7 @@ The name of the managed rule group vendor\. You use this, along with the rule gr
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-wafv2-webacl-managedrulegroupstatement-version"></a>
-The version of the managed rule group to use\. Leave this empty to use the vendor's recommended version\.  
+The version of the managed rule group to use\. If you specify this, the version setting is fixed until you change it\. If you don't specify this, AWS WAF uses the vendor's default version, and then keeps the version at the vendor's default when the vendor updates the managed rule group settings\.   
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
-*Pattern*: `^[\w#:\.\-/]+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

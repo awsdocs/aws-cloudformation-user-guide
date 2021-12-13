@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFv2::WebACL",
   "Properties" : {
+      "[CaptchaConfig](#cfn-wafv2-webacl-captchaconfig)" : CaptchaConfig,
       "[CustomResponseBodies](#cfn-wafv2-webacl-customresponsebodies)" : {Key : Value, ...},
       "[DefaultAction](#cfn-wafv2-webacl-defaultaction)" : DefaultAction,
       "[Description](#cfn-wafv2-webacl-description)" : String,
@@ -32,6 +33,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::WAFv2::WebACL
 Properties: 
+  [CaptchaConfig](#cfn-wafv2-webacl-captchaconfig): 
+    CaptchaConfig
   [CustomResponseBodies](#cfn-wafv2-webacl-customresponsebodies): 
     Key : Value
   [DefaultAction](#cfn-wafv2-webacl-defaultaction): 
@@ -48,6 +51,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-wafv2-webacl-properties"></a>
+
+`CaptchaConfig`  <a name="cfn-wafv2-webacl-captchaconfig"></a>
+Specifies how AWS WAF should handle `CAPTCHA` evaluations for rules that don't have their own `CaptchaConfig` settings\. If you don't specify this, AWS WAF uses its default settings for `CaptchaConfig`\.   
+*Required*: No  
+*Type*: [CaptchaConfig](aws-properties-wafv2-webacl-captchaconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomResponseBodies`  <a name="cfn-wafv2-webacl-customresponsebodies"></a>
 A map of custom response keys and content bodies\. When you create a rule with a block action, you can send a custom response to the web request\. You define these for the web ACL, and then use them in the rules and default actions that you define in the web ACL\.   

@@ -171,7 +171,8 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TimeToLiveSpecification`  <a name="cfn-dynamodb-globaltable-timetolivespecification"></a>
-Specifies the time to live \(TTL\) settings for the table\. This setting will be applied to all replicas\.  
+Specifies the Time to Live \(TTL\) settings for the table\. This setting will be applied to all replicas\.  
+For detailed information about the TTL feature of DynamoDB, see [Expiring Items with Time to Live](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html) in the Amazon DynamoDB Developer Guide\. 
 *Required*: No  
 *Type*: [TimeToLiveSpecification](aws-properties-dynamodb-globaltable-timetolivespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

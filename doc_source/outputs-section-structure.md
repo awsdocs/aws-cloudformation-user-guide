@@ -22,7 +22,7 @@ Use braces to enclose all output declarations\. Delimit multiple outputs with co
     "Description" : "Information about the value",
     "Value" : "Value to return",
     "Export" : {
-      "Name" : "Value to export"
+      "Name" : "Name of resource to export"
     }
   }
 }
@@ -36,7 +36,7 @@ Outputs:
     Description: Information about the value
     Value: Value to return
     Export:
-      Name: Value to export
+      Name: Name of resource to export
 ```
 
 ### Output fields<a name="outputs-section-structure-output-fields"></a>

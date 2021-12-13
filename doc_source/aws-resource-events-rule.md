@@ -182,6 +182,130 @@ The ARN of the rule, such as `arn:aws:events:us-east-2:123456789012:rule/example
 
 
 
+### Create a cross\-Region rule<a name="aws-resource-events-rule--examples--Create_a_cross-Region_rule"></a>
+
+The following example demonstrates how to create a rule that routes events across Regions\.
+
+#### JSON<a name="aws-resource-events-rule--examples--Create_a_cross-Region_rule--json"></a>
+
+```
+{
+   "Resources": {
+      "EventRuleRegion1": {
+         "Type": "AWS::Events::Rule",
+         "Properties": {
+            "Description": "Routes to us-east-1 event bus",
+            "EventBusName": "MyBusName",
+            "State": "ENABLED",
+            "EventPattern": {
+               "source": [
+                   "MyTestApp"
+               ],
+               "detail": [
+                   "MyTestAppDetail"
+               ]
+            },
+            "Targets": [
+               {
+                   "Arn": "arn:aws:events:us-east-1:123456789012:event-bus/CrossRegionDestinationBus",
+                   "Id": " CrossRegionDestinationBus",
+                   "RoleArn": {
+                      "Fn::GetAtt": [
+                         "EventBridgeIAMrole",
+                         "Arn"
+                      ]
+                   }
+               }
+           ]
+      }
+   },
+   "EventBridgeIAMrole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+         "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+               {
+                  "Effect": "Allow",
+                  "Principal": {
+                     "Service": {
+                        "Fn::Sub": "events.amazonaws.com"
+                     }
+                  },
+                  "Action": "sts:AssumeRole"
+               }
+            ]
+      },
+      "Path": "/",
+      "Policies": [
+         {
+            "PolicyName": "PutEventsDestinationBus",
+            "PolicyDocument": {
+               "Version": "2012-10-17",
+               "Statement": [
+                  {
+                     "Effect": "Allow",
+                     "Action": [
+                        "events:PutEvents"
+                     ],
+                     "Resource": [
+                        "arn:aws:events:us-east-1:123456789012:event-bus/CrossRegionDestinationBus"
+                     ]
+                  }
+               ]
+            }
+         }
+      ]
+   }
+}
+```
+
+#### YAML<a name="aws-resource-events-rule--examples--Create_a_cross-Region_rule--yaml"></a>
+
+```
+Resources:
+  EventRuleRegion1:
+    Type: 'AWS::Events::Rule'
+    Properties:
+      Description: Routes to us-east-1 event bus
+      EventBusName: MyBusName
+      State: ENABLED
+      EventPattern:
+        source:
+          - MyTestApp
+        detail:
+          - MyTestAppDetail
+      Targets:
+        - Arn: >-
+            arn:aws:events:us-east-1:123456789012:event-bus/CrossRegionDestinationBus
+          Id: ' CrossRegionDestinationBus'
+          RoleArn: !GetAtt 
+            - EventBridgeIAMrole
+            - Arn
+  EventBridgeIAMrole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: !Sub events.amazonaws.com
+            Action: 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyName: PutEventsDestinationBus
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'events:PutEvents'
+                Resource:
+                  - >-
+                    arn:aws:events:us-east-1:123456789012:event-bus/CrossRegionDestinationBus
+```
+
 ### Create a rule that includes a dead\-letter queue for a target<a name="aws-resource-events-rule--examples--Create_a_rule_that_includes_a_dead-letter_queue_for_a_target"></a>
 
 The following example demonstrates how to send all EC2 events to an SQS queue, and include a dead\-letter queue and retry policy settings for the target of the rule\.

@@ -41,9 +41,15 @@ The unique identifier of the member to which the node belongs\. Applies only to 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkId`  <a name="cfn-managedblockchain-node-networkid"></a>
-The unique identifier of the network that the node is in\.  
+The unique identifier of the network for the node\.  
+Ethereum public networks have the following `NetworkId`s:  
++  `n-ethereum-mainnet` 
++  `n-ethereum-rinkeby` 
++  `n-ethereum-ropsten` 
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `32`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NodeConfiguration`  <a name="cfn-managedblockchain-node-nodeconfiguration"></a>

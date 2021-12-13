@@ -34,7 +34,7 @@ The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM
 `Rules`  <a name="cfn-s3-bucket-replicationconfiguration-rules"></a>
 A container for one or more replication rules\. A replication configuration must have at least one rule and can contain a maximum of 1,000 rules\.   
 *Required*: Yes  
-*Type*: List of [ReplicationRule](aws-properties-s3-bucket-replicationconfiguration-rules.md)  
+*Type*: List of [ReplicationRule](aws-properties-s3-bucket-replicationrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-s3-bucket-replicationconfiguration--examples"></a>

@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AutoScalingPolicy](#cfn-elasticmapreduce-cluster-instancegroupconfig-autoscalingpolicy)" : AutoScalingPolicy,
   "[BidPrice](#cfn-elasticmapreduce-cluster-instancegroupconfig-bidprice)" : String,
   "[Configurations](#cfn-elasticmapreduce-cluster-instancegroupconfig-configurations)" : [ Configuration, ... ],
+  "[CustomAmiId](#cfn-elasticmapreduce-cluster-instancegroupconfig-customamiid)" : String,
   "[EbsConfiguration](#cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration)" : EbsConfiguration,
   "[InstanceCount](#cfn-elasticmapreduce-cluster-instancegroupconfig-instancecount)" : Integer,
   "[InstanceType](#cfn-elasticmapreduce-cluster-instancegroupconfig-instancetype)" : String,
@@ -29,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BidPrice](#cfn-elasticmapreduce-cluster-instancegroupconfig-bidprice): String
   [Configurations](#cfn-elasticmapreduce-cluster-instancegroupconfig-configurations): 
     - Configuration
+  [CustomAmiId](#cfn-elasticmapreduce-cluster-instancegroupconfig-customamiid): String
   [EbsConfiguration](#cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration): 
     EbsConfiguration
   [InstanceCount](#cfn-elasticmapreduce-cluster-instancegroupconfig-instancecount): Integer
@@ -59,6 +61,15 @@ Amazon EMR releases 4\.x or later\.
 The list of configurations supplied for an EMR cluster instance group\. You can specify a separate configuration for each instance group \(master, core, and task\)\.  
 *Required*: No  
 *Type*: List of [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`CustomAmiId`  <a name="cfn-elasticmapreduce-cluster-instancegroupconfig-customamiid"></a>
+The custom AMI ID to use for the provisioned instance group\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `0`  
+*Maximum*: `256`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EbsConfiguration`  <a name="cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration"></a>

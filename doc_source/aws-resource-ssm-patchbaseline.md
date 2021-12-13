@@ -82,7 +82,7 @@ Defines the compliance level for approved patches\. When an approved patch is re
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApprovedPatchesEnableNonSecurity`  <a name="cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity"></a>
-Indicates whether the list of approved patches includes non\-security updates that should be applied to the instances\. The default value is `false`\. Applies to Linux instances only\.  
+Indicates whether the list of approved patches includes non\-security updates that should be applied to the managed nodes\. The default value is `false`\. Applies to Linux managed nodes only\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -144,7 +144,7 @@ The action for Patch Manager to take on patches included in the `RejectedPackage
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Sources`  <a name="cfn-ssm-patchbaseline-sources"></a>
-Information about the patches to use to update the instances, including target operating systems and source repositories\. Applies to Linux instances only\.  
+Information about the patches to use to update the managed nodes, including target operating systems and source repositories\. Applies to Linux managed nodes only\.  
 *Required*: No  
 *Type*: List of [PatchSource](aws-properties-ssm-patchbaseline-patchsource.md)  
 *Maximum*: `20`  

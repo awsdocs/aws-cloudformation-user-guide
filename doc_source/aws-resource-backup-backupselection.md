@@ -2,6 +2,8 @@
 
 Specifies a set of resources to assign to a backup plan\.
 
+For a sample AWS CloudFormation template, see the [ AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/assigning-resources.html#assigning-resources-cfn)\.
+
 ## Syntax<a name="aws-resource-backup-backupselection-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

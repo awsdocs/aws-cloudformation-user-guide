@@ -2,8 +2,9 @@
 
 Creates a logical container where backups are stored\. A `CreateBackupVault` request includes a name, optionally one or more resource tags, an encryption key, and a request ID\.
 
-**Note**  
 Do not include sensitive data, such as passport numbers, in the name of a backup vault\.
+
+For a sample AWS CloudFormation template, see the [ AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/assigning-resources.html#assigning-resources-cfn)\.
 
 ## Syntax<a name="aws-resource-backup-backupvault-syntax"></a>
 

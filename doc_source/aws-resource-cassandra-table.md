@@ -21,8 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PointInTimeRecoveryEnabled](#cfn-cassandra-table-pointintimerecoveryenabled)" : Boolean,
       "[RegularColumns](#cfn-cassandra-table-regularcolumns)" : [ Column, ... ],
       "[TableName](#cfn-cassandra-table-tablename)" : String,
-      "[Tags](#cfn-cassandra-table-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[TimeToLiveEnabled](#cfn-cassandra-table-timetoliveenabled)" : Boolean
+      "[Tags](#cfn-cassandra-table-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -48,7 +47,6 @@ Properties:
   [TableName](#cfn-cassandra-table-tablename): String
   [Tags](#cfn-cassandra-table-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-  [TimeToLiveEnabled](#cfn-cassandra-table-timetoliveenabled): Boolean
 ```
 
 ## Properties<a name="aws-resource-cassandra-table-properties"></a>
@@ -124,12 +122,6 @@ If you specify a name, you cannot perform updates that require replacement of th
 A list of key\-value pair tags to be attached to the resource\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`TimeToLiveEnabled`  <a name="cfn-cassandra-table-timetoliveenabled"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-cassandra-table-return-values"></a>

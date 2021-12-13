@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Allow](#cfn-wafv2-webacl-ruleaction-allow)" : AllowAction,
   "[Block](#cfn-wafv2-webacl-ruleaction-block)" : BlockAction,
+  "[Captcha](#cfn-wafv2-webacl-ruleaction-captcha)" : CaptchaAction,
   "[Count](#cfn-wafv2-webacl-ruleaction-count)" : CountAction
 }
 ```
@@ -23,6 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     AllowAction
   [Block](#cfn-wafv2-webacl-ruleaction-block): 
     BlockAction
+  [Captcha](#cfn-wafv2-webacl-ruleaction-captcha): 
+    CaptchaAction
   [Count](#cfn-wafv2-webacl-ruleaction-count): 
     CountAction
 ```
@@ -39,6 +42,22 @@ Instructs AWS WAF to allow the web request\.
 Instructs AWS WAF to block the web request\.  
 *Required*: No  
 *Type*: [BlockAction](aws-properties-wafv2-webacl-blockaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Captcha`  <a name="cfn-wafv2-webacl-ruleaction-captcha"></a>
+Specifies that AWS WAF should run a `CAPTCHA` check against the request:   
++ If the request includes a valid, unexpired `CAPTCHA` token, AWS WAF allows the web request inspection to proceed to the next rule, similar to a `CountAction`\. 
++ If the request doesn't include a valid, unexpired `CAPTCHA` token, AWS WAF discontinues the web ACL evaluation of the request and blocks it from going to its intended destination\.
+
+   AWS WAF generates a response that it sends back to the client, which includes the following: 
+  + The header `x-amzn-waf-action` with a value of `captcha`\. 
+  + The HTTP status code `405 Method Not Allowed`\. 
+  + If the request contains an `Accept` header with a value of `text/html`, the response includes a `CAPTCHA` challenge\. 
+You can configure the expiration time in the `CaptchaConfig` `ImmunityTimeProperty` setting at the rule and web ACL level\. The rule setting overrides the web ACL setting\.   
+This action option is available for rules\. It isn't available for web ACL default actions\.   
+This is used in the context of other settings, for example to specify values for `RuleAction` and web ACL `DefaultAction`\.   
+*Required*: No  
+*Type*: [CaptchaAction](aws-properties-wafv2-webacl-captchaaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Count`  <a name="cfn-wafv2-webacl-ruleaction-count"></a>

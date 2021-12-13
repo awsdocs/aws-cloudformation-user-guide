@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoTSiteWise::Project",
   "Properties" : {
+      "[AssetIds](#cfn-iotsitewise-project-assetids)" : [ String, ... ],
       "[PortalId](#cfn-iotsitewise-project-portalid)" : String,
       "[ProjectDescription](#cfn-iotsitewise-project-projectdescription)" : String,
       "[ProjectName](#cfn-iotsitewise-project-projectname)" : String,
@@ -28,6 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::IoTSiteWise::Project
 Properties: 
+  [AssetIds](#cfn-iotsitewise-project-assetids): 
+    - String
   [PortalId](#cfn-iotsitewise-project-portalid): String
   [ProjectDescription](#cfn-iotsitewise-project-projectdescription): String
   [ProjectName](#cfn-iotsitewise-project-projectname): String
@@ -36,6 +39,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-iotsitewise-project-properties"></a>
+
+`AssetIds`  <a name="cfn-iotsitewise-project-assetids"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PortalId`  <a name="cfn-iotsitewise-project-portalid"></a>
 The ID of the portal in which to create the project\.  

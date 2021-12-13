@@ -48,7 +48,7 @@ The specified beginning characters of the method header to be matched on\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Range`  <a name="cfn-appmesh-gatewayroute-gatewayroutemetadatamatch-range"></a>
-Not currently supported by AWS CloudFormation\.  
+An object that represents the range of values to match on\.  
 *Required*: No  
 *Type*: [GatewayRouteRangeMatch](aws-properties-appmesh-gatewayroute-gatewayrouterangematch.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

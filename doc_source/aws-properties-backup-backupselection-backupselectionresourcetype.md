@@ -36,7 +36,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-backup-backupselection-backupselectionresourcetype-properties"></a>
 
 `Conditions`  <a name="cfn-backup-backupselection-backupselectionresourcetype-conditions"></a>
-Not currently supported by AWS CloudFormation\.  
+A list of conditions that you define to assign resources to your backup plans using tags\. For example, `"StringEquals": {"Department": "accounting"`\. Condition operators are case sensitive\.  
+`Conditions` differs from `ListOfTags` as follows:  
++ When you specify more than one condition, you only assign the resources that match ALL conditions \(using AND logic\)\.
++ `Conditions` supports `StringEquals`, `StringLike`, `StringNotEquals`, and `StringNotLike`\. `ListOfTags` only supports `StringEquals`\.
 *Required*: No  
 *Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -54,7 +57,8 @@ An array of conditions used to specify a set of resources to assign to a backup 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NotResources`  <a name="cfn-backup-backupselection-backupselectionresourcetype-notresources"></a>
-Not currently supported by AWS CloudFormation\.  
+A list of Amazon Resource Names \(ARNs\) to exclude from a backup plan\. The maximum number of ARNs is 500 without wildcards, or 30 ARNs with wildcards\.  
+If you need to exclude many resources from a backup plan, consider a different resource selection strategy, such as assigning only one or a few resource types or refining your resource selection using tags\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

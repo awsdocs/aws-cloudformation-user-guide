@@ -31,6 +31,7 @@ Properties:
 
 `Ipv6CidrBlock`  <a name="cfn-ec2-subnetcidrblock-ipv6cidrblock"></a>
 The IPv6 network range for the subnet, in CIDR notation\. The subnet size must use a /64 prefix length\.  
+This parameter is required for an IPv6 only subnet\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

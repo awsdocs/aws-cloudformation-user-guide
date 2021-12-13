@@ -81,7 +81,7 @@ The JSON key name for the key/value pair, where the value is the generated passw
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeSpace`  <a name="cfn-secretsmanager-secret-generatesecretstring-includespace"></a>
-Specifies whether to exclude the space character\. If you don't include this switch, the password can contain space characters\.  
+Specifies whether to include the space character\. If you include this switch, the password can contain space characters\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -93,7 +93,7 @@ The length of the password\. If you don't include this parameter, the default le
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RequireEachIncludedType`  <a name="cfn-secretsmanager-secret-generatesecretstring-requireeachincludedtype"></a>
-Specifies whether to include at least one of every allowed character type\. If you don't include this switch, the password contains at least one of every character type\.  
+Specifies whether to include at least one upper and lowercase letter, one number, and one punctuation\. If you don't include this switch, the password contains at least one of every character type\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

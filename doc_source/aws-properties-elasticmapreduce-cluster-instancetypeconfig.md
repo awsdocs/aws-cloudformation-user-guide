@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[BidPrice](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidprice)" : String,
   "[BidPriceAsPercentageOfOnDemandPrice](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice)" : Double,
   "[Configurations](#cfn-elasticmapreduce-cluster-instancetypeconfig-configurations)" : [ Configuration, ... ],
+  "[CustomAmiId](#cfn-elasticmapreduce-cluster-instancetypeconfig-customamiid)" : String,
   "[EbsConfiguration](#cfn-elasticmapreduce-cluster-instancetypeconfig-ebsconfiguration)" : EbsConfiguration,
   "[InstanceType](#cfn-elasticmapreduce-cluster-instancetypeconfig-instancetype)" : String,
   "[WeightedCapacity](#cfn-elasticmapreduce-cluster-instancetypeconfig-weightedcapacity)" : Integer
@@ -29,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BidPriceAsPercentageOfOnDemandPrice](#cfn-elasticmapreduce-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice): Double
   [Configurations](#cfn-elasticmapreduce-cluster-instancetypeconfig-configurations): 
     - Configuration
+  [CustomAmiId](#cfn-elasticmapreduce-cluster-instancetypeconfig-customamiid): String
   [EbsConfiguration](#cfn-elasticmapreduce-cluster-instancetypeconfig-ebsconfiguration): 
     EbsConfiguration
   [InstanceType](#cfn-elasticmapreduce-cluster-instancetypeconfig-instancetype): String
@@ -56,6 +58,15 @@ The bid price, as a percentage of On\-Demand price, for each EC2 Spot Instance a
 A configuration classification that applies when provisioning cluster instances, which can include configurations for applications and software that run on the cluster\.  
 *Required*: No  
 *Type*: List of [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`CustomAmiId`  <a name="cfn-elasticmapreduce-cluster-instancetypeconfig-customamiid"></a>
+The custom AMI ID to use for the instance type\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `0`  
+*Maximum*: `256`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EbsConfiguration`  <a name="cfn-elasticmapreduce-cluster-instancetypeconfig-ebsconfiguration"></a>

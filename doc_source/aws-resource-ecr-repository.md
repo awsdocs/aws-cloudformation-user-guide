@@ -196,7 +196,7 @@ The following example creates a repository named `test-repository` with image sc
   "Properties": {
     "RepositoryName" : "test-repository",
     "ImageScanningConfiguration" : {
-      "ScanOnPush": "true"
+      "ScanOnPush": true
     }
   }
 }
@@ -210,7 +210,7 @@ MyRepository:
   Properties: 
     RepositoryName: "test-repository"
     ImageScanningConfiguration: 
-      ScanOnPush: "true"
+      ScanOnPush: true
 ```
 
 ### Specify a repository with a lifecycle policy<a name="aws-resource-ecr-repository--examples--Specify_a_repository_with_a_lifecycle_policy"></a>

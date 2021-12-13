@@ -1,6 +1,6 @@
 # AWS::FSx::FileSystem WindowsConfiguration<a name="aws-properties-fsx-filesystem-windowsconfiguration"></a>
 
-The Microsoft Windows configuration for the file system being created\. 
+The Microsoft Windows configuration for the file system that's being created\. 
 
 ## Syntax<a name="aws-properties-fsx-filesystem-windowsconfiguration-syntax"></a>
 
@@ -62,14 +62,14 @@ An alias name has to meet the following requirements:
 + Can contain alphanumeric characters, the underscore \(\_\), and the hyphen \(\-\)\.
 + Cannot start or end with a hyphen\.
 + Can start with a numeric\.
-For DNS alias names, Amazon FSx stores alphabetic characters as lowercase letters \(a\-z\), regardless of how you specify them: as uppercase letters, lowercase letters, or the corresponding letters in escape codes\.  
+For DNS alias names, Amazon FSx stores alphabetical characters as lowercase letters \(a\-z\), regardless of how you specify them: as uppercase letters, lowercase letters, or the corresponding letters in escape codes\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuditLogConfiguration`  <a name="cfn-fsx-filesystem-windowsconfiguration-auditlogconfiguration"></a>
-The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [AuditLogConfiguration](aws-properties-fsx-filesystem-windowsconfiguration-auditlogconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -83,7 +83,7 @@ The number of days to retain automatic backups\. The default is to retain backup
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CopyTagsToBackups`  <a name="cfn-fsx-filesystem-windowsconfiguration-copytagstobackups"></a>
-A boolean flag indicating whether tags for the file system should be copied to backups\. This value defaults to false\. If it's set to true, all tags for the file system are copied to all automatic and user\-initiated backups where the user doesn't specify tags\. If this value is true, and you specify one or more tags, only the specified tags are copied to backups\. If you specify one or more tags when creating a user\-initiated backup, no tags are copied from the file system, regardless of this value\.  
+A Boolean flag indicating whether tags for the file system should be copied to backups\. This value defaults to false\. If it's set to true, all tags for the file system are copied to all automatic and user\-initiated backups where the user doesn't specify tags\. If this value is true, and you specify one or more tags, only the specified tags are copied to backups\. If you specify one or more tags when creating a user\-initiated backup, no tags are copied from the file system, regardless of this value\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -118,11 +118,11 @@ The configuration that Amazon FSx uses to join a FSx for Windows File Server fil
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThroughputCapacity`  <a name="cfn-fsx-filesystem-windowsconfiguration-throughputcapacity"></a>
-The throughput of an Amazon FSx file system, measured in megabytes per second, in 2 to the *n*th increments, between 2^3 \(8\) and 2^11 \(2048\)\.  
+Sets the throughput capacity of an Amazon FSx file system, measured in megabytes per second \(MB/s\), in 2 to the *n*th increments, between 2^3 \(8\) and 2^11 \(2048\)\.  
 *Required*: Conditional  
 *Type*: Integer  
 *Minimum*: `8`  
-*Maximum*: `2048`  
+*Maximum*: `4096`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WeeklyMaintenanceStartTime`  <a name="cfn-fsx-filesystem-windowsconfiguration-weeklymaintenancestarttime"></a>

@@ -35,7 +35,7 @@ The settings for the M2TS in the archive output\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RawSettings`  <a name="cfn-medialive-channel-archivecontainersettings-rawsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+The settings for Raw archive output type\.  
 *Required*: No  
 *Type*: [RawSettings](aws-properties-medialive-channel-rawsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

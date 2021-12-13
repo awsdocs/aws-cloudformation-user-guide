@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Action](#cfn-wafv2-webacl-rule-action)" : RuleAction,
+  "[CaptchaConfig](#cfn-wafv2-webacl-rule-captchaconfig)" : CaptchaConfig,
   "[Name](#cfn-wafv2-webacl-rule-name)" : String,
   "[OverrideAction](#cfn-wafv2-webacl-rule-overrideaction)" : OverrideAction,
   "[Priority](#cfn-wafv2-webacl-rule-priority)" : Integer,
@@ -25,6 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Action](#cfn-wafv2-webacl-rule-action): 
     RuleAction
+  [CaptchaConfig](#cfn-wafv2-webacl-rule-captchaconfig): 
+    CaptchaConfig
   [Name](#cfn-wafv2-webacl-rule-name): String
   [OverrideAction](#cfn-wafv2-webacl-rule-overrideaction): 
     OverrideAction
@@ -47,6 +50,12 @@ You must set either this `Action` setting or the rule's `OverrideAction`, but no
 + If the rule statement references a rule group, you must not set this action setting, because the actions are already set on the rules inside the rule group\. You must set the rule's override action setting to indicate specifically whether to override the actions that are set on the rules in the rule group\. 
 *Required*: Conditional  
 *Type*: [RuleAction](aws-properties-wafv2-webacl-ruleaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CaptchaConfig`  <a name="cfn-wafv2-webacl-rule-captchaconfig"></a>
+Specifies how AWS WAF should handle `CAPTCHA` evaluations\. If you don't specify this, AWS WAF uses the `CAPTCHA` configuration that's defined for the web ACL\.   
+*Required*: No  
+*Type*: [CaptchaConfig](aws-properties-wafv2-webacl-captchaconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-webacl-rule-name"></a>

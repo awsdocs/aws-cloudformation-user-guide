@@ -51,7 +51,7 @@ Logical database name\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DbClusterIdentifier`  <a name="cfn-appsync-datasource-rdshttpendpointconfig-dbclusteridentifier"></a>
-Amazon RDS cluster ARN\.  
+Amazon RDS cluster Amazon Resource Name \(ARN\)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

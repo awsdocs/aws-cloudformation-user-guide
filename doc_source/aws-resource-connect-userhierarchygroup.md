@@ -76,17 +76,17 @@ The Amazon Resource Name \(ARN\) for the user hierarchy group\.
 
 ### Specify a user hierarchy group<a name="aws-resource-connect-userhierarchygroup--examples--Specify_a_user_hierarchy_group"></a>
 
-The following example specifies an user hierarchy group for an Amazon Connect instance\. This example specifies a user hierachy group for the instance on top of existing HierarchyStructure
+The following example specifies a user hierarchy group for an Amazon Connect instance\. This example specifies a user hierachy group for the instance on top of existing HierarchyStructure
 
 #### YAML<a name="aws-resource-connect-userhierarchygroup--examples--Specify_a_user_hierarchy_group--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: Specifies an user hierarchy group for Connect Instance
+Description: Specifies a user hierarchy group for an Amazon Connect instance
 Resources:
     HierarchyGroup:
     Type: 'AWS::Connect::UserHierarchyGroup'
     Properties:
       Name: 'exampleUserHierarchyGroup'
-      InstanceArn: 'arn:aws:connect:us-west-2:111222333444:instance/instance-ed42-41ec-8b6a-555555555555'
+      InstanceArn: 'arn:aws:connect:region-name:aws-account-id:instance/instance-arn'
 ```

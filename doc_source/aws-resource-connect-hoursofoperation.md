@@ -113,14 +113,14 @@ The following example specifies an hours of operation resource for an Amazon Con
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: Specifies an hours of operation for Connect Instance
+Description: Specifies an hours of operation for an Amazon Connect instance
 Resources:
   HoursOfOperation:
     Type: 'AWS::Connect::HoursOfOperation'
     Properties:
       Name: 'ExampleHoursOfOperation'
       Description: 'hours of operation created using cfn'
-      InstanceArn: 'arn:aws:connect:us-west-2:111222333444:instance/instance-ed42-41ec-8b6a-489f6a87b923'
+      InstanceArn: 'arn:aws:connect:region-name:aws-account-id:instance/instance-arn'
       TimeZone: 'Pacific/Midway'
       Config:
         - Day: 'SUNDAY'

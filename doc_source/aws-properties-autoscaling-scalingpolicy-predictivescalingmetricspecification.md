@@ -56,6 +56,7 @@ If you specify `PredefinedMetricPairSpecification`, don't specify this property\
 
 `TargetValue`  <a name="cfn-autoscaling-scalingpolicy-predictivescalingmetricspecification-targetvalue"></a>
 Specifies the target utilization\.  
+Some metrics are based on a count instead of a percentage, such as the request count for an Application Load Balancer or the number of messages in an SQS queue\. If the scaling policy specifies one of these metrics, specify the target utilization as the optimal average request or message count per instance during any one\-minute interval\. 
 *Required*: Yes  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -72,7 +72,7 @@ The location of the key\.
 The Amazon Resource Name \(arn\) of the secret\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
+*Minimum*: `0`  
 *Maximum*: `1284`  
 *Pattern*: `arn:[a-z0-9-\.]{1,63}:[a-z0-9-\.]{0,63}:[a-z0-9-\.]{0,63}:[a-z0-9-\.]{0,63}:[^/].{0,1023}`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

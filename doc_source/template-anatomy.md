@@ -109,7 +109,7 @@ Conditions that control whether certain resources are created or whether certain
 
 **[Transform \(optional\)](transform-section-structure.md)**  
 For [serverless applications](https://docs.aws.amazon.com/lambda/latest/dg/deploying-lambda-apps.html) \(also referred to as Lambda\-based applications\), specifies the version of the [AWS Serverless Application Model \(AWS SAM\)](https://github.com/awslabs/serverless-application-specification) to use\. When you specify a transform, you can use AWS SAM syntax to declare resources in your template\. The model defines the syntax that you can use and how it's processed\.  
-You can also use `AWS::Include` transforms to work with template snippets that are stored separately from the main AWS CloudFormation template\. You can store your snippet files in an Amazon S3 bucket and then reuse the functions across multiple templates\.
+You can also use [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html) transforms to work with template snippets that are stored separately from the main AWS CloudFormation template\. You can store your snippet files in an Amazon S3 bucket and then reuse the functions across multiple templates\.
 
 **[Resources \(required\)](resources-section-structure.md)**  
 Specifies the stack resources and their properties, such as an Amazon Elastic Compute Cloud instance or an Amazon Simple Storage Service bucket\. You can refer to resources in the `Resources` and `Outputs` sections of the template\.

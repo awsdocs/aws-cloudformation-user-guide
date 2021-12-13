@@ -2,6 +2,8 @@
 
 Creates a framework with one or more controls\. A framework is a collection of controls that you can use to evaluate your backup practices\. By using pre\-built customizable controls to define your policies, you can evaluate whether your backup practices comply with your policies and which resources are not yet in compliance\.
 
+For a sample AWS CloudFormation template, see the [ AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/bam-cfn-integration.html#bam-cfn-frameworks-template)\.
+
 ## Syntax<a name="aws-resource-backup-framework-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

@@ -61,7 +61,7 @@ A compliance severity level for all approved patches in a patch baseline\. Valid
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableNonSecurity`  <a name="cfn-ssm-patchbaseline-rule-enablenonsecurity"></a>
-For instances identified by the approval rule filters, enables a patch baseline to apply non\-security updates available in the specified repository\. The default value is `false`\. Applies to Linux instances only\.  
+For managed nodes identified by the approval rule filters, enables a patch baseline to apply non\-security updates available in the specified repository\. The default value is `false`\. Applies to Linux managed nodes only\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

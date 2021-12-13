@@ -130,6 +130,9 @@ The following is an example\. In the first entry, the hosted zone ID is Z1HUB23U
 \["Z1HUB23UULQXV:vpce\-01abc23456de78f9g\-12abccd3\.ec2\.us\-east\-1\.vpce\.amazonaws\.com", "Z1HUB23UULQXV:vpce\-01abc23456de78f9g\-12abccd3\-us\-east\-1a\.ec2\.us\-east\-1\.vpce\.amazonaws\.com", "Z1C12344VYDITB0:ec2\.us\-east\-1\.amazonaws\.com"\]  
 If you update the `PrivateDnsEnabled` or `SubnetIds` properties, the DNS entries in the list will change\.
 
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 `NetworkInterfaceIds`  <a name="NetworkInterfaceIds-fn::getatt"></a>
 \(Interface endpoint\) One or more network interface IDs\. If you update the `PrivateDnsEnabled` or `SubnetIds` properties, the items in this list might change\.
 

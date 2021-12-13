@@ -2,7 +2,7 @@
 
 This structure is used in both `GetMetricData` and `PutMetricAlarm`\. The supported use of this structure is different for those two operations\.
 
-When used in `GetMetricData`, it indicates the metric data to return, and whether this call is just retrieving a batch set of data for one metric, or is performing a math expression on metric data\. A single `GetMetricData` call can include up to 500 `MetricDataQuery` structures\.
+When used in `GetMetricData`, it indicates the metric data to return, and whether this call is just retrieving a batch set of data for one metric, or is performing a Metrics Insights query or a math expression\. A single `GetMetricData` call can include up to 500 `MetricDataQuery` structures\.
 
 When used in `PutMetricAlarm`, it enables you to create an alarm based on a metric math expression\. Each `MetricDataQuery` in the array specifies either a metric to retrieve, or a math expression to be performed on retrieved metrics\. A single `PutMetricAlarm` call can include up to 20 `MetricDataQuery` structures in the array\. The 20 structures can include as many as 10 structures that contain a `MetricStat` parameter to retrieve a metric, and as many as 10 structures that contain the `Expression` parameter to perform a math expression\. Of those `Expression` structures, one must have `True` as the value for `ReturnData`\. The result of this expression is the value the alarm watches\.
 
@@ -53,7 +53,8 @@ Use this field only for `PutMetricAlarm` operations\. It is not used in `GetMetr
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Expression`  <a name="cfn-cloudwatch-anomalydetector-metricdataquery-expression"></a>
-The math expression to be performed on the returned data, if this object is performing a math expression\. This expression can use the `Id` of the other metrics to refer to those metrics, and can also use the `Id` of other expressions to use the result of those expressions\. For more information about metric math expressions, see [Metric Math Syntax and Functions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax) in the *Amazon CloudWatch User Guide*\.  
+This field can contain either a Metrics Insights query, or a metric math expression to be performed on the returned data\. For more information about Metrics Insights queries, see [Metrics Insights query components and syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch-metrics-insights-querylanguage) in the *Amazon CloudWatch User Guide*\.  
+A math expression can use the `Id` of the other metrics or queries to refer to those metrics, and can also use the `Id` of other expressions to use the result of those expressions\. For more information about metric math expressions, see [Metric Math Syntax and Functions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax) in the *Amazon CloudWatch User Guide*\.  
 Within each MetricDataQuery object, you must specify either `Expression` or `MetricStat` but not both\.  
 *Required*: No  
 *Type*: String  

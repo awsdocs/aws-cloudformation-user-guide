@@ -16,6 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EnableDnsHostnames](#cfn-aws-ec2-vpc-EnableDnsHostnames)" : Boolean,
       "[EnableDnsSupport](#cfn-aws-ec2-vpc-EnableDnsSupport)" : Boolean,
       "[InstanceTenancy](#cfn-aws-ec2-vpc-instancetenancy)" : String,
+      "[Ipv4IpamPoolId](#cfn-ec2-vpc-ipv4ipampoolid)" : String,
+      "[Ipv4NetmaskLength](#cfn-ec2-vpc-ipv4netmasklength)" : Integer,
       "[Tags](#cfn-aws-ec2-vpc-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -30,6 +32,8 @@ Properties:
   [EnableDnsHostnames](#cfn-aws-ec2-vpc-EnableDnsHostnames): Boolean
   [EnableDnsSupport](#cfn-aws-ec2-vpc-EnableDnsSupport): Boolean
   [InstanceTenancy](#cfn-aws-ec2-vpc-instancetenancy): String
+  [Ipv4IpamPoolId](#cfn-ec2-vpc-ipv4ipampoolid): String
+  [Ipv4NetmaskLength](#cfn-ec2-vpc-ipv4netmasklength): Integer
   [Tags](#cfn-aws-ec2-vpc-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -64,6 +68,18 @@ Updating `InstanceTenancy` requires no replacement only if you are updating its 
 *Type*: String  
 *Allowed values*: `dedicated | default | host`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Ipv4IpamPoolId`  <a name="cfn-ec2-vpc-ipv4ipampoolid"></a>
+The ID of an IPv4 IPAM pool you want to use for allocating this VPC's CIDR\. For more information, see [What is IPAM?](/vpc/latest/ipam/what-is-it-ipam.html) in the *Amazon VPC IPAM User Guide*\.   
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Ipv4NetmaskLength`  <a name="cfn-ec2-vpc-ipv4netmasklength"></a>
+The netmask length of the IPv4 CIDR you want to allocate to this VPC from an Amazon VPC IP Address Manager \(IPAM\) pool\. For more information about IPAM, see [What is IPAM?](/vpc/latest/ipam/what-is-it-ipam.html) in the *Amazon VPC IPAM User Guide*\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-aws-ec2-vpc-tags"></a>
 The tags for the VPC\.  
