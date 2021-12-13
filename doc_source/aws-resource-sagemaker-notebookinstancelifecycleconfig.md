@@ -86,73 +86,88 @@ The following example creates a notebook instance with an associated lifecycle c
 
 ```
 {
-  "Description": "Basic NotebookInstance test",
-  "Resources": {
-    "BasicNotebookInstance": {
-      "Type": "AWS::SageMaker::NotebookInstance",
-      "Properties": {
-        "InstanceType": "ml.t2.medium",
-        "RoleArn": { "Fn::GetAtt" : [ "ExecutionRole", "Arn" ] },
-        "LifecycleConfigName": { "Fn::GetAtt" : [ "BasicNotebookInstanceLifecycleConfig", "NotebookInstanceLifecycleConfigName" ] }
-    },
-    "BasicNotebookInstanceLifecycleConfig": {
-      "Type": "AWS::SageMaker::NotebookInstanceLifecycleConfig",
-      "Properties": {
-        "OnStart": [
-          {
-            "Content": {
-              "Fn::Base64": "echo 'hello'"
-            }
-          }
-        ]
-      }
-    },
-    "ExecutionRole": {
-      "Type": "AWS::IAM::Role",
-      "Properties": {
-        "AssumeRolePolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Principal": {
-                "Service": [
-                  "sagemaker.amazonaws.com"
-                ]
-              },
-              "Action": [
-                "sts:AssumeRole"
-              ]
-            }
-          ]
-        },
-        "Path": "/",
-        "Policies": [
-          {
-            "PolicyName": "root",
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Effect": "Allow",
-                  "Action": "*",
-                  "Resource": "*"
+    "Description": "Basic NotebookInstance test",
+    "Resources": {
+        "BasicNotebookInstance": {
+            "Type": "AWS::SageMaker::NotebookInstance",
+            "Properties": {
+                "InstanceType": "ml.t2.medium",
+                "RoleArn": {
+                    "Fn::GetAtt": [
+                        "ExecutionRole",
+                        "Arn"
+                    ]
+                },
+                "LifecycleConfigName": {
+                    "Fn::GetAtt": [
+                        "BasicNotebookInstanceLifecycleConfig",
+                        "NotebookInstanceLifecycleConfigName"
+                    ]
                 }
-              ]
+            },
+            "BasicNotebookInstanceLifecycleConfig": {
+                "Type": "AWS::SageMaker::NotebookInstanceLifecycleConfig",
+                "Properties": {
+                    "OnStart": [
+                        {
+                            "Content": {
+                                "Fn::Base64": "echo 'hello'"
+                            }
+                        }
+                    ]
+                }
+            },
+            "ExecutionRole": {
+                "Type": "AWS::IAM::Role",
+                "Properties": {
+                    "AssumeRolePolicyDocument": {
+                        "Version": "2012-10-17",
+                        "Statement": [
+                            {
+                                "Effect": "Allow",
+                                "Principal": {
+                                    "Service": [
+                                        "sagemaker.amazonaws.com"
+                                    ]
+                                },
+                                "Action": [
+                                    "sts:AssumeRole"
+                                ]
+                            }
+                        ]
+                    },
+                    "Path": "/",
+                    "Policies": [
+                        {
+                            "PolicyName": "root",
+                            "PolicyDocument": {
+                                "Version": "2012-10-17",
+                                "Statement": [
+                                    {
+                                        "Effect": "Allow",
+                                        "Action": "*",
+                                        "Resource": "*"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
             }
-          }
-        ]
-      }
+        },
+        "Outputs": {
+            "BasicNotebookInstanceId": {
+                "Value": {
+                    "Ref": "BasicNotebookInstance"
+                }
+            },
+            "BasicNotebookInstanceLifecycleConfigId": {
+                "Value": {
+                    "Ref": "BasicNotebookInstanceLifecycleConfig"
+                }
+            }
+        }
     }
-  },
-  "Outputs": {
-    "BasicNotebookInstanceId": {
-      "Value": { "Ref" : "BasicNotebookInstance" }
-    },
-    "BasicNotebookInstanceLifecycleConfigId": {
-      "Value": { "Ref" : "BasicNotebookInstanceLifecycleConfig" }
-    }
-  },
 }
 ```
 
