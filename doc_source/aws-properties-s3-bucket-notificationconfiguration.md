@@ -18,7 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[LambdaConfigurations](#cfn-s3-bucket-notificationconfiguration-lambdaconfigurations)" : [ LambdaConfiguration, ... ],
   "[QueueConfigurations](#cfn-s3-bucket-notificationconfiguration-queueconfigurations)" : [ QueueConfiguration, ... ],
-  "[TopicConfigurations](#cfn-s3-bucket-notificationconfiguration-topicconfigurations)" : [ TopicConfiguration, ... ]
+  "[TopicConfigurations](#cfn-s3-bucket-notificationconfiguration-topicconfigurations)" : [ TopicConfiguration, ... ],
+  "[EventBridgeConfiguration](#cfn-s3-bucket-notificationconfiguration-eventbridgeconfigurations)" : [ EventBridgeConfiguration, ... ]
 }
 ```
 
@@ -31,6 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - QueueConfiguration
   [TopicConfigurations](#cfn-s3-bucket-notificationconfiguration-topicconfigurations): 
     - TopicConfiguration
+  [EventBridgeConfiguration](#cfn-s3-bucket-notificationconfiguration-eventbridgeconfigurations): 
+    - EventBridgeConfiguration
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-notificationconfiguration-properties"></a>
@@ -51,6 +54,12 @@ The Amazon Simple Queue Service queues to publish messages to and the events for
 The topic to which notifications are sent and the events for which notifications are generated\.  
 *Required*: No  
 *Type*: List of [TopicConfiguration](aws-properties-s3-bucket-topicconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EventBridgeConfiguration`  <a name="cfn-s3-bucket-notificationconfiguration-eventbridgeconfigurations"></a>
+The configuration where the events publication to EventBridge can be enabled\.  
+*Required*: No  
+*Type*: List of [EventBridgeConfiguration](aws-properties-s3-bucket-notificationconfig-eventbridgeconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-s3-bucket-notificationconfiguration--examples"></a>
@@ -110,4 +119,40 @@ Outputs:
   BucketName:
     Value: !Ref S3Bucket
     Description: Name of the sample Amazon S3 bucket with a notification configuration.
+```
+
+
+### Enable S3 bucket notifications to an EventBridge<a name="aws-properties-s3-bucket-notificationconfiguration--examples--enable_S3_bucket_notifications_to_an_eventbridge"></a>
+
+The following example template shows an Amazon S3 bucket with a notification configuration that sends an event to the EventBridge\.
+
+#### JSON<a name="aws-properties-s3-bucket-notificationconfiguration--examples--enable_S3_bucket_notifications_to_an_eventbridge--json"></a>
+
+```
+{
+    "Resources": {
+        "S3Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "NotificationConfiguration": {
+                    "EventBridgeConfiguration": {
+                            "EventBridgeEnabled": true
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-properties-s3-bucket-notificationconfiguration--examples--enable_S3_bucket_notifications_to_an_eventbridge--yaml"></a>
+
+```
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      NotificationConfiguration:
+        EventBridgeConfiguration:
+          EventBridgeEnabled: true
 ```
