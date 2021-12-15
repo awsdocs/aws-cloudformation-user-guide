@@ -2178,7 +2178,7 @@ Amazon's trademarks and trade dress may not be used in
             + [AWS::SSMContacts::Contact Stage](aws-properties-ssmcontacts-contact-stage.md)
             + [AWS::SSMContacts::Contact Targets](aws-properties-ssmcontacts-contact-targets.md)
          + [AWS::SSMContacts::ContactChannel](aws-resource-ssmcontacts-contactchannel.md)
-      + [Amazon Inspector resource type reference](AWS_Inspector.md)
+      + [Amazon Inspector classic resource type reference](AWS_Inspector.md)
          + [AWS::Inspector::AssessmentTarget](aws-resource-inspector-assessmenttarget.md)
          + [AWS::Inspector::AssessmentTemplate](aws-resource-inspector-assessmenttemplate.md)
          + [AWS::Inspector::ResourceGroup](aws-resource-inspector-resourcegroup.md)

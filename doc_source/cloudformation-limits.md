@@ -37,6 +37,10 @@ Your AWS account has AWS CloudFormation quotas that you might need to know when 
 ## Feature availability<a name="stacksets-availability"></a>
 
 Not all features of CloudFormation may be available in every Region\. For more information on AWS Regions, see [Global infrastructure Region table](https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/)\.
++ [StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html) is currently not available in the following Region:
+  + Asia Pacific \(Jakarta\)
++ [Macros](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html) are currently not available in the following Region:
+  + Asia Pacific \(Jakarta\)
 + [Drift detection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html) is currently not available in the following Region:
   + Asia Pacific \(Osaka\)
 + [Performing ECS blue/green deployments through CodeDeploy using AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html) is currently not available in the following Regions:
