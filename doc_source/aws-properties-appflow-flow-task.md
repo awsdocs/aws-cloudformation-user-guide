@@ -64,7 +64,6 @@ Specifies the particular task implementation that Amazon AppFlow performs\.
 *Allowed values*: `Arithmetic` \| `Filter` \| `Map` \| `Map_all` \| `Mask` \| `Merge` \| `Truncate` \| `Validate`  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `Arithmetic | Filter | Map | Mask | Merge | Truncate | Validate`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-appflow-flow-task--seealso"></a>
