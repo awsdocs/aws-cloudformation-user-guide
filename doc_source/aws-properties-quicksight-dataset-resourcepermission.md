@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-dataset-resourcepermission-properties"></a>
 
 `Actions`  <a name="cfn-quicksight-dataset-resourcepermission-actions"></a>
-The IAM action to grand or revoke permisions on  
+The IAM action to grant or revoke permisions on  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
