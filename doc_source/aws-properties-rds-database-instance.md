@@ -535,7 +535,15 @@ Not applicable\. The KMS key identifier is managed by the DB cluster\.
 
 `LicenseModel`  <a name="cfn-rds-dbinstance-licensemodel"></a>
 License model information for this DB instance\.  
- Valid values: `license-included` \| `bring-your-own-license` \| `general-public-license`   
+
+Valid values for MariaDB and MySQL engines: `general-public-license`   
+
+Valid values for MS SQL Server engines: `license-included`
+   
+Valid values for Oracle engines: `license-included` \| `bring-your-own-license`   
+
+Valid values for PostgreSQL engine: `postgresql-license`   
+
 If you've specified `DBSecurityGroups` and then you update the license model, AWS CloudFormation replaces the underlying DB instance\. This will incur some interruptions to database availability\. 
 *Required*: No  
 *Type*: String  
