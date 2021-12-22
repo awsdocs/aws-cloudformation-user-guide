@@ -111,7 +111,7 @@ Not currently supported by AWS CloudFormation\.
 
 `DefaultCacheBehavior`  <a name="cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior"></a>
 A complex type that describes the default cache behavior if you don't specify a `CacheBehavior` element or if files don't match any of the values of `PathPattern` in `CacheBehavior` elements\. You must create exactly one default cache behavior\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [DefaultCacheBehavior](aws-properties-cloudfront-distribution-defaultcachebehavior.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
