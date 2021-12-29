@@ -74,7 +74,7 @@ The Amazon Resource Names \(ARNs\) of the security groups that are used to confi
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Subdirectory`  <a name="cfn-datasync-locationfsxwindows-subdirectory"></a>
-A subdirectory in the location’s path\. This subdirectory in the Amazon FSx for Windows File Server file system is used to read data from the Amazon FSx for Windows File Server source location or write data to the FSx for Windows File Server destination\.  
+A subdirectory in the location's path\. This subdirectory in the Amazon FSx for Windows File Server file system is used to read data from the Amazon FSx for Windows File Server source location or write data to the FSx for Windows File Server destination\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `4096`  

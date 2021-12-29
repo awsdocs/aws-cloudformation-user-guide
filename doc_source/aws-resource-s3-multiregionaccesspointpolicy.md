@@ -64,23 +64,68 @@ It is very important to note where you need to use the name versus the alias for
 #### JSON<a name="aws-resource-s3-multiregionaccesspointpolicy--examples--Simple_Multi-Region_Access_Point_Policy--json"></a>
 
 ```
-{ "SampleMultiRegionAccessPointPolicy": { "Type":
-        "AWS::S3::MultiRegionAccessPointPolicy", "DeletionPolicy" : "Retain", "UpdateReplacePolicy"
-        : "Retain", "Properties": { "MrapName": { "Ref": "DOC-EXAMPLE-MULTI-REGION-ACCESS-POINT" },
-        "PolicyDocument": { "Statement": [ { "Action": [ "s3:GetObject" ], "Effect": "Allow",
-        "Resource": { "Fn::Sub": [
-        "arn:aws:s3::123456789012:accesspoint/mfzwi23gnjvgw.mrap/object/*", { "mrapalias": {
-        "Fn::GetAtt": [ "mfzwi23gnjvgw.mrap", "Alias" ] } } ] }, "Principal": { "Service":
-        "cloudwatch.amazonaws.com" } } ] } } } }
+{
+   "SampleMultiRegionAccessPointPolicy":{
+      "Type":"AWS::S3::MultiRegionAccessPointPolicy",
+      "DeletionPolicy":"Retain",
+      "UpdateReplacePolicy":"Retain",
+      "Properties":{
+         "MrapName":{
+            "Ref":"DOC-EXAMPLE-MULTI-REGION-ACCESS-POINT"
+         },
+         "Policy":{
+            "Statement":[
+               {
+                  "Action":[
+                     "s3:GetObject"
+                  ],
+                  "Effect":"Allow",
+                  "Resource":{
+                     "Fn::Sub":[
+                        "arn:aws:s3::123456789012:accesspoint/mfzwi23gnjvgw.mrap/object/*",
+                        {
+                           "mrapalias":{
+                              "Fn::GetAtt":[
+                                 "mfzwi23gnjvgw.mrap",
+                                 "Alias"
+                              ]
+                           }
+                        }
+                     ]
+                  },
+                  "Principal":{
+                     "Service":"cloudwatch.amazonaws.com"
+                  }
+               }
+            ]
+         }
+      }
+   }
+}
 ```
 
 #### YAML<a name="aws-resource-s3-multiregionaccesspointpolicy--examples--Simple_Multi-Region_Access_Point_Policy--yaml"></a>
 
 ```
-SampleMultiRegionAccessPointPolicy: Type:
-        AWS::S3::MultiRegionAccessPointPolicy DeletionPolicy: Retain UpdateReplacePolicy: Retain
-        Properties: MrapName: Ref: DOC-EXAMPLE-MULTI-REGION-ACCESS-POINT PolicyDocument: Statement:
-        - Action: - s3:GetObject Effect: Allow Resource: Fn::Sub: -
-        arn:aws:s3::123456789012:accesspoint/mfzwi23gnjvgw.mrap/object/* - mrapalias: Fn::GetAtt: -
-        mfzwi23gnjvgw.mrap - Alias Principal: Service: cloudwatch.amazonaws.com
+SampleMultiRegionAccessPointPolicy:
+  Type: 'AWS::S3::MultiRegionAccessPointPolicy'
+  DeletionPolicy: Retain
+  UpdateReplacePolicy: Retain
+  Properties:
+    MrapName:
+      Ref: DOC-EXAMPLE-MULTI-REGION-ACCESS-POINT
+    Policy:
+      Statement:
+        - Action:
+            - 's3:GetObject'
+          Effect: Allow
+          Resource:
+            'Fn::Sub':
+              - 'arn:aws:s3::123456789012:accesspoint/mfzwi23gnjvgw.mrap/object/*'
+              - mrapalias:
+                  'Fn::GetAtt':
+                    - mfzwi23gnjvgw.mrap
+                    - Alias
+          Principal:
+            Service: cloudwatch.amazonaws.com
 ```

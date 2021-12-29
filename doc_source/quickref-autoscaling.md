@@ -340,16 +340,16 @@ myASG:
 This section provides AWS CloudFormation template examples for Application Auto Scaling scaling policies and scheduled actions for different AWS resources\.
 
 **Topics**
-+ [Declaring a scaling policy for an Aurora DB cluster](#w10800ab1c23c21c15c23c11)
-+ [Declaring a scaling policy for a DynamoDB table](#w10800ab1c23c21c15c23c13)
-+ [Declaring a scaling policy for an Amazon ECS service](#w10800ab1c23c21c15c23c15)
-+ [Declaring a scheduled action for a Lambda function](#w10800ab1c23c21c15c23c17)
-+ [Declaring a scheduled action for a Spot Fleet](#w10800ab1c23c21c15c23c19)
++ [Declaring a scaling policy for an Aurora DB cluster](#w10805ab1c23c21c15c23c11)
++ [Declaring a scaling policy for a DynamoDB table](#w10805ab1c23c21c15c23c13)
++ [Declaring a scaling policy for an Amazon ECS service](#w10805ab1c23c21c15c23c15)
++ [Declaring a scheduled action for a Lambda function](#w10805ab1c23c21c15c23c17)
++ [Declaring a scheduled action for a Spot Fleet](#w10805ab1c23c21c15c23c19)
 
 **Important**  
 When an Application Auto Scaling snippet is included in the template, you should declare a dependency on the specific scalable resource that's created through the template using the [DependsOn](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) attribute\. This overrides the default parallelism and directs AWS CloudFormation to operate on resources in a specified order\. Otherwise, the scaling configuration might be applied before the resource has been set up completely\.
 
-### Declaring a scaling policy for an Aurora DB cluster<a name="w10800ab1c23c21c15c23c11"></a>
+### Declaring a scaling policy for an Aurora DB cluster<a name="w10805ab1c23c21c15c23c11"></a>
 
 In this snippet, you register an existing [AWS::RDS::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html) resource named `my-db-cluster`\. The [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html) resource indicates that the DB cluster should be dynamically scaled to have from one to eight Aurora Replicas\. You also apply a target tracking scaling policy to the cluster using the [AWS::ApplicationAutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html) resource\.
 
@@ -424,7 +424,7 @@ Resources:
         ScaleOutCooldown: 300
 ```
 
-### Declaring a scaling policy for a DynamoDB table<a name="w10800ab1c23c21c15c23c13"></a>
+### Declaring a scaling policy for a DynamoDB table<a name="w10805ab1c23c21c15c23c13"></a>
 
 This snippet shows how to create a policy with the `TargetTrackingScaling` policy type and apply it to an [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html) resource using the [AWS::ApplicationAutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html) resource\. The [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html) resource declares a scalable target to which this policy is applied, with a minimum of five write capacity units and a maximum of 15\. The scaling policy scales the table's write capacity throughput to maintain the target utilization at 50 percent based on the `DynamoDBWriteCapacityUtilization` predefined metric\.
 
@@ -511,7 +511,7 @@ Resources:
           PredefinedMetricType: DynamoDBWriteCapacityUtilization
 ```
 
-### Declaring a scaling policy for an Amazon ECS service<a name="w10800ab1c23c21c15c23c15"></a>
+### Declaring a scaling policy for an Amazon ECS service<a name="w10805ab1c23c21c15c23c15"></a>
 
 This snippet shows how to create a policy and apply it to an [AWS::ECS::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html) resource using the [AWS::ApplicationAutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html) resource\. The [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html) resource declares a scalable target to which this policy is applied\. Application Auto Scaling can scale the number of tasks at a minimum of 1 task and a maximum of 2\.
 
@@ -746,7 +746,7 @@ Resources:
               - !GetAtt myTargetGroup.TargetGroupFullName
 ```
 
-### Declaring a scheduled action for a Lambda function<a name="w10800ab1c23c21c15c23c17"></a>
+### Declaring a scheduled action for a Lambda function<a name="w10805ab1c23c21c15c23c17"></a>
 
 This snippet registers the provisioned concurrency for a function alias \([AWS::Lambda::Alias](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html)\) named `BLUE` using the [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html) resource\. It also creates a scheduled action with a recurring schedule using a cron expression\.
 
@@ -822,7 +822,7 @@ ScalableTarget:
         Schedule: 'cron(0 18 * * ? *)'
 ```
 
-### Declaring a scheduled action for a Spot Fleet<a name="w10800ab1c23c21c15c23c19"></a>
+### Declaring a scheduled action for a Spot Fleet<a name="w10805ab1c23c21c15c23c19"></a>
 
 This snippet shows how to create a scheduled action and apply it to an [AWS::EC2::SpotFleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html) resource using the [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html) resource\. It uses the [Fn::Join](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-join.html) and [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) intrinsic functions to construct the `ResourceId` property with the logical name of the `AWS::EC2::SpotFleet` resource that is specified in the same template\.
 

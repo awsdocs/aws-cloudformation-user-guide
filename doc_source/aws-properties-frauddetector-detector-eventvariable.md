@@ -71,7 +71,7 @@ Valid values: `STRING | INTEGER | BOOLEAN | FLOAT`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultValue`  <a name="cfn-frauddetector-detector-eventvariable-defaultvalue"></a>
-The default value of the event variable\. This is required if you are providing the details of your variables instead of the Arn\.  
+The default value of the event variable\. This is required if you are providing the details of your variables instead of the ARN\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

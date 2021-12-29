@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Endpoint`  <a name="cfn-route53recoverycontrol-cluster-clusterendpoint-endpoint"></a>
 A cluster endpoint\. Specify an endpoint and AWS Region when you want to set or retrieve a routing control state in the cluster\.  
-To get or update the routing control state, see the Amazon Route 53 Application Recovery Controller Cluster \(Data Plane\) Actions\.  
+To get or update the routing control state, see the Amazon Route 53 Application Recovery Controller Routing Control Actions\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

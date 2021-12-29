@@ -87,9 +87,9 @@ You can't include both `ExcludedPages` and `IncludedPages` in the same app monit
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SessionSampleRate`  <a name="cfn-rum-appmonitor-appmonitorconfiguration-sessionsamplerate"></a>
-Specifies the percentage of user sessions to use for CloudWatch RUM data collection\. Choosing a higher percentage gives you more data but also incurs more costs\.  
-The number you specify is the percentage of user sessions that will be used\.  
-If you omit this parameter, the default of 1.0 is used\.  
+Specifies the portion of user sessions to use for CloudWatch RUM data collection\. Choosing a higher portion gives you more data but also incurs more costs\.  
+The range for this value is 0 to 1 inclusive\. Setting this to 1 means that 100% of user sessions are sampled, and setting it to 0\.1 means that 10% of user sessions are sampled\.  
+If you omit this parameter, the default of 0\.1 is used, and 10% of sessions will be sampled\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

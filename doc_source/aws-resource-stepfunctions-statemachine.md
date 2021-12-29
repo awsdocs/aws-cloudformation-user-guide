@@ -127,7 +127,7 @@ Selects whether or not the state machine's AWS X\-Ray tracing is enabled\.
 
 When you provide the logical ID of this resource to the Ref intrinsic function, Ref returns the ARN of the created state machine\. For example:
 
- `{ "Ref": "MyStateMachine" }`Guide 
+ `{ "Ref": "MyStateMachine" }`
 
 Returns a value similar to the following:
 

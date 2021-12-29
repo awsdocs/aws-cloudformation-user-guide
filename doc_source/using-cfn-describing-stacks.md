@@ -69,7 +69,7 @@ If you don't use the `--stack-name` option to limit the output to one stack, inf
 
 You can specify one or more stack status codes to list only stacks with the specified status codes\. The following table describes each stack status code:
 
-### <a name="w10800ab1c25c15c17c11b5"></a>
+### <a name="w10805ab1c25c15c17c11b5"></a>
 
 
 | Stack Status | Description | 
