@@ -58,7 +58,6 @@ Creates an authentication challenge\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomEmailSender`  <a name="cfn-cognito-userpool-lambdaconfig-customemailsender"></a>
-Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [CustomEmailSender](aws-properties-cognito-userpool-customemailsender.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -72,8 +71,7 @@ A custom Message AWS Lambda trigger\.
 *Pattern*: `arn:[\w+=/,.@-]+:[\w+=/,.@-]+:([\w+=/,.@-]*)?:[0-9]+:[\w+=/,.@-]+(:[\w+=/,.@-]+)?(:[\w+=/,.@-]+)?`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`CustomSMSSender`  <a name="cfn-cognito-userpool-lambdaconfig-customsmssender"></a>
-Not currently supported by AWS CloudFormation\.  
+`CustomSMSSender`  <a name="cfn-cognito-userpool-lambdaconfig-customsmssender"></a> 
 *Required*: No  
 *Type*: [CustomSMSSender](aws-properties-cognito-userpool-customsmssender.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -88,7 +86,6 @@ Defines the authentication challenge\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KMSKeyID`  <a name="cfn-cognito-userpool-lambdaconfig-kmskeyid"></a>
-Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
