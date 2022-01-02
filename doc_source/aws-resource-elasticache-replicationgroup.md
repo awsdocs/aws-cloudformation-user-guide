@@ -237,7 +237,7 @@ The version number of the cache engine to be used for the clusters in this repli
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalReplicationGroupId`  <a name="cfn-elasticache-replicationgroup-globalreplicationgroupid"></a>
-The name of the Global datastore  
+The name of the Global datastore.  If this property is specified, the Engine, EngineVersion, and AtRestEncryptionEnabled properties cannot be specified.  For more information, \(see [Using global datastores](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Redis-Global-Datastores-Console.htm)\)
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
