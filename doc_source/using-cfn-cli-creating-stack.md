@@ -25,7 +25,7 @@ The following example creates the `myteststack` stack in an Amazon S3 bucket:
 ```
 1. PROMPT> aws cloudformation create-stack \
 2.   --stack-name myteststack \
-3.   --template-body file://home/testuser/mytemplate.json \
+3.   --template-body file:///home/testuser/mytemplate.json \
 4.   --parameters ParameterKey=Parm1,ParameterValue=test1 ParameterKey=Parm2,ParameterValue=test2
 ```
 

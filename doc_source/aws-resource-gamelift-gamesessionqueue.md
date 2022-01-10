@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[NotificationTarget](#cfn-gamelift-gamesessionqueue-notificationtarget)" : String,
       "[PlayerLatencyPolicies](#cfn-gamelift-gamesessionqueue-playerlatencypolicies)" : [ PlayerLatencyPolicy, ... ],
       "[PriorityConfiguration](#cfn-gamelift-gamesessionqueue-priorityconfiguration)" : PriorityConfiguration,
+      "[Tags](#cfn-gamelift-gamesessionqueue-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TimeoutInSeconds](#cfn-gamelift-gamesessionqueue-timeoutinseconds)" : Integer
     }
 }
@@ -40,6 +41,8 @@ Properties:
     - PlayerLatencyPolicy
   [PriorityConfiguration](#cfn-gamelift-gamesessionqueue-priorityconfiguration): 
     PriorityConfiguration
+  [Tags](#cfn-gamelift-gamesessionqueue-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TimeoutInSeconds](#cfn-gamelift-gamesessionqueue-timeoutinseconds): Integer
 ```
 
@@ -94,6 +97,13 @@ A set of policies that act as a sliding cap on player latency\. FleetIQ works to
 Custom settings to use when prioritizing destinations and locations for game session placements\. This configuration replaces the FleetIQ default prioritization process\. Priority types that are not explicitly named will be automatically applied at the end of the prioritization process\.   
 *Required*: No  
 *Type*: [PriorityConfiguration](aws-properties-gamelift-gamesessionqueue-priorityconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-gamelift-gamesessionqueue-tags"></a>
+A list of labels to assign to the new game session queue resource\. Tags are developer\-defined key\-value pairs\. Tagging AWS resources are useful for resource management, access management and cost allocation\. For more information, see [ Tagging AWS Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the * AWS General Reference*\. Once the resource is created, you can use TagResource, UntagResource, and ListTagsForResource to add, remove, and view tags\. The maximum tag limit may be lower than stated\. See the AWS General Reference for actual tagging limits\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeoutInSeconds`  <a name="cfn-gamelift-gamesessionqueue-timeoutinseconds"></a>

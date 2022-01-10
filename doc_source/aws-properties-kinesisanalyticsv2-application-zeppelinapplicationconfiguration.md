@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CatalogConfiguration](#cfn-kinesisanalyticsv2-application-zeppelinapplicationconfiguration-catalogconfiguration)" : CatalogConfiguration,
-  "[CustomArtifactsConfiguration](#cfn-kinesisanalyticsv2-application-zeppelinapplicationconfiguration-customartifactsconfiguration)" : CustomArtifactsConfiguration,
+  "[CustomArtifactsConfiguration](#cfn-kinesisanalyticsv2-application-zeppelinapplicationconfiguration-customartifactsconfiguration)" : [ CustomArtifactConfiguration, ... ],
   "[DeployAsApplicationConfiguration](#cfn-kinesisanalyticsv2-application-zeppelinapplicationconfiguration-deployasapplicationconfiguration)" : DeployAsApplicationConfiguration,
   "[MonitoringConfiguration](#cfn-kinesisanalyticsv2-application-zeppelinapplicationconfiguration-monitoringconfiguration)" : ZeppelinMonitoringConfiguration
 }
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CatalogConfiguration](#cfn-kinesisanalyticsv2-application-zeppelinapplicationconfiguration-catalogconfiguration): 
     CatalogConfiguration
   [CustomArtifactsConfiguration](#cfn-kinesisanalyticsv2-application-zeppelinapplicationconfiguration-customartifactsconfiguration): 
-    CustomArtifactsConfiguration
+    - CustomArtifactConfiguration
   [DeployAsApplicationConfiguration](#cfn-kinesisanalyticsv2-application-zeppelinapplicationconfiguration-deployasapplicationconfiguration): 
     DeployAsApplicationConfiguration
   [MonitoringConfiguration](#cfn-kinesisanalyticsv2-application-zeppelinapplicationconfiguration-monitoringconfiguration): 
@@ -41,7 +41,7 @@ The Amazon Glue Data Catalog that you use in queries in a Kinesis Data Analytics
 `CustomArtifactsConfiguration`  <a name="cfn-kinesisanalyticsv2-application-zeppelinapplicationconfiguration-customartifactsconfiguration"></a>
 A list of `CustomArtifactConfiguration` objects\.  
 *Required*: No  
-*Type*: [CustomArtifactsConfiguration](aws-properties-kinesisanalyticsv2-application-customartifactsconfiguration.md)  
+*Type*: List of [CustomArtifactConfiguration](aws-properties-kinesisanalyticsv2-application-customartifactconfiguration.md)  
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

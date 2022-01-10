@@ -1,6 +1,6 @@
 # Updating stacks directly<a name="using-cfn-updating-stacks-direct"></a>
 
-When you want to quickly deploy updates to your stack, perform a direct update\. With a direct update, you submit a template or input parameters that specify updates to the resources in the stack, and AWS CloudFormation immediately deploys them\. If you want to use a template to make your updates, you can modify the current template and store it locally or in an S3 bucket\.
+When you want to quickly deploy updates to your stack, perform a direct update\. With a direct update, you submit a template or input parameters that specify updates to the resources in the stack, and AWS CloudFormation immediately deploys them\. If you want to use a template to make your updates, you can modify the current template and store it locally or in an Amazon S3 bucket\.
 
 For resource properties that don't support updates, you must keep the current values\. To preview the changes that AWS CloudFormation will make to your stack before you update it, use change sets\. For more information, see [Updating stacks using change sets](using-cfn-updating-stacks-changesets.md)\.
 
@@ -8,6 +8,8 @@ For resource properties that don't support updates, you must keep the current va
 When updating a stack, AWS CloudFormation might interrupt resources or replace updated resources, depending on which properties you update\. For more information about resource update behaviors, see [Update behaviors of stack resources](using-cfn-updating-stacks-update-behaviors.md)\.
 
 **To update a AWS CloudFormation stack \(console\)**
+
+1. Sign in to the AWS Management Console and open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
 1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), from the list of stacks, select the running stack that you want to update\.
 
@@ -39,7 +41,7 @@ You can use your own bucket and manage its permissions by manually uploading tem
 
    For more information about these options, see [Setting AWS CloudFormation stack options](cfn-console-add-tags.md)\.
 
-   Click **Next**\.
+   Select **Next**\.
 
 1. Review the stack information and the changes that you submitted\.
 
@@ -63,27 +65,27 @@ You can cancel an update while it's in the **UPDATE\_IN\_PROGRESS** state\. For 
   The following example updates the template and input parameters for the `mystack` stack:
 
   ```
-  PROMPT> aws cloudformation update-stack --stack-name mystack --template-url https://s3.amazonaws.com/sample/updated.template
+  > aws cloudformation update-stack --stack-name mystack --template-url https://s3.amazonaws.com/sample/updated.template
   --parameters ParameterKey=VPCID,ParameterValue=SampleVPCID ParameterKey=SubnetIDs,ParameterValue=SampleSubnetID1\\,SampleSubnetID2
   ```
 
   The following example updates just the `SubnetIDs` parameter values for the `mystack` stack:
 
   ```
-  PROMPT> aws cloudformation update-stack --stack-name mystack --use-previous-template
+  > aws cloudformation update-stack --stack-name mystack --use-previous-template
   --parameters ParameterKey=VPCID,UsePreviousValue=true ParameterKey=SubnetIDs,ParameterValue=SampleSubnetID1\\,UpdatedSampleSubnetID2
   ```
 
   The following example adds two stack notification topics to the `mystack` stack:
 
   ```
-  PROMPT> aws cloudformation update-stack --stack-name mystack --use-previous-template
+  > aws cloudformation update-stack --stack-name mystack --use-previous-template
   --notification-arns "arn:aws:sns:us-east-1:12345678912:mytopic" "arn:aws:sns:us-east-1:12345678912:mytopic2"
   ```
 
   The following example removes all stack notification topics from the `mystack` stack:
 
   ```
-  PROMPT> aws cloudformation update-stack --stack-name mystack --use-previous-template
+  > aws cloudformation update-stack --stack-name mystack --use-previous-template
   --notification-arns []
   ```

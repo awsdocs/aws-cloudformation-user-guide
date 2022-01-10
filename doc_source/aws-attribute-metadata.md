@@ -1,4 +1,4 @@
-# Metadata attribute<a name="aws-attribute-metadata"></a>
+# `Metadata` attribute<a name="aws-attribute-metadata"></a>
 
 The metadata attribute enables you to associate structured data with a resource\. By adding a metadata attribute to a resource, you can add data in JSON or YAML to the resource declaration\. In addition, you can use intrinsic functions \(such as [GetAtt](intrinsic-function-reference-getatt.md) and [Ref](intrinsic-function-reference-ref.md)\), parameters, and pseudo parameters within the metadata attribute to add those interpreted values\.
 

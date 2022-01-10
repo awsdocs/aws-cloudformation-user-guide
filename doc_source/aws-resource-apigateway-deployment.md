@@ -75,6 +75,13 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-apigateway-deployment-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-apigateway-deployment-return-values-fn--getatt-fn--getatt"></a>
+
+`DeploymentId`  <a name="DeploymentId-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-apigateway-deployment--examples"></a>
 
 The following sections provide examples for declaring API Gateway deployments\.

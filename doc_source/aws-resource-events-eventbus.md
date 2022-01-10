@@ -13,7 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Events::EventBus",
   "Properties" : {
       "[EventSourceName](#cfn-events-eventbus-eventsourcename)" : String,
-      "[Name](#cfn-events-eventbus-name)" : String
+      "[Name](#cfn-events-eventbus-name)" : String,
+      "[Tags](#cfn-events-eventbus-tags)" : [ TagEntry, ... ]
     }
 }
 ```
@@ -25,6 +26,8 @@ Type: AWS::Events::EventBus
 Properties: 
   [EventSourceName](#cfn-events-eventbus-eventsourcename): String
   [Name](#cfn-events-eventbus-name): String
+  [Tags](#cfn-events-eventbus-tags): 
+    - TagEntry
 ```
 
 ## Properties<a name="aws-resource-events-eventbus-properties"></a>
@@ -47,6 +50,12 @@ If this is a partner event bus, the name must exactly match the name of the part
 *Minimum*: `1`  
 *Maximum*: `256`  
 *Pattern*: `[/\.\-_A-Za-z0-9]+`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-events-eventbus-tags"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [TagEntry](aws-properties-events-eventbus-tagentry.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-events-eventbus-return-values"></a>

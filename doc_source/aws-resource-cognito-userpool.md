@@ -150,19 +150,19 @@ Allowed values: `SMS_MFA` \| `SOFTWARE_TOKEN_MFA`
 
 `LambdaConfig`  <a name="cfn-cognito-userpool-lambdaconfig"></a>
 The Lambda trigger configuration information for the new user pool\.  
-In a push model, event sources \(such as Amazon S3 and custom applications\) need permission to invoke a function\. So you will need to make an extra call to add permission for these event sources to invoke your Lambda function\.  
+In a push model, event sources \(such as Amazon S3 and custom applications\) need permission to invoke a function\. So you must make an extra call to add permission for these event sources to invoke your Lambda function\.  
   
-For more information on using the Lambda API to add permission, see [ AddPermission ](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html)\.   
-For adding permission using the AWS CLI, see [ add\-permission ](https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html)\.
+For more information on using the Lambda API to add permission, see[ AddPermission ](https://docs.aws.amazon.com/lambda/latest/dg/API_AddPermission.html)\.   
+For adding permission using the AWS CLI, see[ add\-permission ](https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html)\.
 *Required*: No  
 *Type*: [LambdaConfig](aws-properties-cognito-userpool-lambdaconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MfaConfiguration`  <a name="cfn-cognito-userpool-mfaconfiguration"></a>
 The multi\-factor \(MFA\) configuration\. Valid values include:  
-+  `OFF` MFA will not be used for any users\.
++  `OFF` MFA won't be used for any users\.
 +  `ON` MFA is required for all users to sign in\.
-+  `OPTIONAL` MFA will be required only for individual users who have an MFA factor enabled\.
++  `OPTIONAL` MFA will be required only for individual users who have an MFA factor activated\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `OFF | ON | OPTIONAL`  
@@ -220,7 +220,7 @@ You can choose to set case sensitivity on the username input for the selected si
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserPoolAddOns`  <a name="cfn-cognito-userpool-userpooladdons"></a>
-Used to enable advanced security risk detection\. Set the key `AdvancedSecurityMode` to the value "AUDIT"\.  
+Enables advanced security risk detection\. Set the key `AdvancedSecurityMode` to the value "AUDIT"\.  
 *Required*: No  
 *Type*: [UserPoolAddOns](aws-properties-cognito-userpool-userpooladdons.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

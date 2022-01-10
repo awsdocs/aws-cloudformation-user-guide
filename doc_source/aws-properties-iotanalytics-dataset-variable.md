@@ -37,7 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `DatasetContentVersionValue`  <a name="cfn-iotanalytics-dataset-variable-datasetcontentversionvalue"></a>
 The value of the variable as a structure that specifies a dataset content version\.  
 *Required*: No  
-*Type*: [DatasetContentVersionValue](aws-properties-iotanalytics-dataset-variable-datasetcontentversionvalue.md)  
+*Type*: [DatasetContentVersionValue](aws-properties-iotanalytics-dataset-datasetcontentversionvalue.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DoubleValue`  <a name="cfn-iotanalytics-dataset-variable-doublevalue"></a>
@@ -49,7 +49,7 @@ The value of the variable as a double \(numeric\)\.
 `OutputFileUriValue`  <a name="cfn-iotanalytics-dataset-variable-outputfileurivalue"></a>
 The value of the variable as a structure that specifies an output file URI\.  
 *Required*: No  
-*Type*: [OutputFileUriValue](aws-properties-iotanalytics-dataset-variable-outputfileurivalue.md)  
+*Type*: [OutputFileUriValue](aws-properties-iotanalytics-dataset-outputfileurivalue.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StringValue`  <a name="cfn-iotanalytics-dataset-variable-stringvalue"></a>

@@ -1,4 +1,4 @@
-# DependsOn attribute<a name="aws-attribute-dependson"></a>
+# `DependsOn` attribute<a name="aws-attribute-dependson"></a>
 
 With the `DependsOn` attribute you can specify that the creation of a specific resource follows another\. When you add a `DependsOn` attribute to a resource, that resource is created only after the creation of the resource specified in the `DependsOn` attribute\.
 
@@ -10,7 +10,7 @@ Resource B is updated before resource A\.
 
 You can use the `DependsOn` attribute with any resource\. Here are some typical uses:
 + Determine when a wait condition goes into effect\. For more information, see [Creating wait conditions in a template](using-cfn-waitcondition.md)\.
-+ Declare dependencies for resources that must be created or deleted in a specific order\. For example, you must explicitly declare dependencies on gateway attachments for some resources in a VPC\. For more information, see [When a DependsOn attribute is required](#gatewayattachment)\.
++ Declare dependencies for resources that must be created or deleted in a specific order\. For example, you must explicitly declare dependencies on gateway attachments for some resources in a VPC\. For more information, see [When a `DependsOn` attribute is required](#gatewayattachment)\.
 + Override default parallelism when creating, updating, or deleting resources\. AWS CloudFormation creates, updates, and deletes resources in parallel to the extent possible\. It automatically determines which resources in a template can be parallelized and which have dependencies that require other operations to finish first\. You can use `DependsOn` to explicitly specify dependencies, which overrides the default parallelism and directs CloudFormation to operate on those resources in a specified order\.
 
 **Note**  
@@ -120,7 +120,7 @@ The following template contains an [AWS::EC2::Instance](https://docs.aws.amazon.
 32.       MasterUserPassword: MyPassword
 ```
 
-## When a DependsOn attribute is required<a name="gatewayattachment"></a>
+## When a `DependsOn` attribute is required<a name="gatewayattachment"></a>
 
 VPC\-gateway attachment
 
@@ -235,7 +235,7 @@ EC2Host:
         Ref: PublicSubnet
 ```
 
-### Amazon ECS service and Auto Scaling group<a name="w10805ab1c31c23c15c17c19"></a>
+### Amazon ECS service and Auto Scaling group<a name="w10874ab1c31c23c15c17c19"></a>
 
 When you use Auto Scaling or Amazon Elastic Compute Cloud \(Amazon EC2\) to create container instances for an Amazon ECS cluster, the Amazon ECS service resource must have a dependency on the Auto Scaling group or Amazon EC2 instances, as shown in the following snippet\. That way the container instances are available and associated with the Amazon ECS cluster before CloudFormation creates the Amazon ECS service\.
 
@@ -293,7 +293,7 @@ service:
       Ref: taskdefinition
 ```
 
-### IAM role policy<a name="w10805ab1c31c23c15c17c21"></a>
+### IAM role policy<a name="w10874ab1c31c23c15c17c21"></a>
 
 Resources that make additional calls to AWS require a service role, which permits a service to make calls to AWS on your behalf\. For example, the `AWS::CodeDeploy::DeploymentGroup` resource requires a service role so that CodeDeploy has permissions to deploy applications to your instances\. When you have a single template that defines a service role, the role's policy \(by using the `AWS::IAM::Policy` or `AWS::IAM::ManagedPolicy` resource\), and a resource that uses the role, add a dependency so that the resource depends on the role's policy\. This dependency ensures that the policy is available throughout the resource's lifecycle\.
 

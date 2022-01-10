@@ -25,7 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-gamelift-matchmakingconfiguration-name)" : String,
       "[NotificationTarget](#cfn-gamelift-matchmakingconfiguration-notificationtarget)" : String,
       "[RequestTimeoutSeconds](#cfn-gamelift-matchmakingconfiguration-requesttimeoutseconds)" : Integer,
-      "[RuleSetName](#cfn-gamelift-matchmakingconfiguration-rulesetname)" : String
+      "[RuleSetName](#cfn-gamelift-matchmakingconfiguration-rulesetname)" : String,
+      "[Tags](#cfn-gamelift-matchmakingconfiguration-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -51,6 +52,8 @@ Properties:
   [NotificationTarget](#cfn-gamelift-matchmakingconfiguration-notificationtarget): String
   [RequestTimeoutSeconds](#cfn-gamelift-matchmakingconfiguration-requesttimeoutseconds): Integer
   [RuleSetName](#cfn-gamelift-matchmakingconfiguration-rulesetname): String
+  [Tags](#cfn-gamelift-matchmakingconfiguration-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-gamelift-matchmakingconfiguration-properties"></a>
@@ -161,6 +164,13 @@ A unique identifier for the matchmaking rule set to use with this configuration\
 *Minimum*: `1`  
 *Maximum*: `256`  
 *Pattern*: `[a-zA-Z0-9-\.]*|^arn:.*:matchmakingruleset\/[a-zA-Z0-9-\.]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-gamelift-matchmakingconfiguration-tags"></a>
+A list of labels to assign to the new matchmaking configuration resource\. Tags are developer\-defined key\-value pairs\. Tagging AWS resources are useful for resource management, access management and cost allocation\. For more information, see [ Tagging AWS Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the * AWS General Reference*\. Once the resource is created, you can use TagResource, UntagResource, and ListTagsForResource to add, remove, and view tags\. The maximum tag limit may be lower than stated\. See the AWS General Reference for actual tagging limits\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-gamelift-matchmakingconfiguration-return-values"></a>

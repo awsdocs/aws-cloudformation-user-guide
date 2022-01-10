@@ -145,7 +145,7 @@ Amazon Resource Name \(ARN\) or alias of the customer master key \(CMK\)\.
 The endpoint for your Kubernetes API server, such as `https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com`\.
 
 `KubernetesNetworkConfig.ServiceIpv6Cidr`  <a name="KubernetesNetworkConfig.ServiceIpv6Cidr-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The CIDR block that Kubernetes Service IP addresses are assigned from if you created a 1\.21 or later cluster with version 1\.10\.1 or later of the Amazon VPC CNI add\-on and specified `ipv6` for **ipFamily** when you created the cluster\. Kubernetes assigns Service addresses from the unique local address range \(`fc00::/7`\) because you can't specify a custom IPv6 CIDR block when you create the cluster\.
 
 `OpenIdConnectIssuerUrl`  <a name="OpenIdConnectIssuerUrl-fn::getatt"></a>
 The issuer URL for the OIDC identity provider of the cluster, such as `https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E`\. If you need to remove `https://` from this output value, you can include the following code in your template\.  

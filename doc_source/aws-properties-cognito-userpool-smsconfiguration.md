@@ -31,7 +31,7 @@ The external ID is a value\. We recommend you use `ExternalId`to add security to
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnsCallerArn`  <a name="cfn-cognito-userpool-smsconfiguration-snscallerarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service \(SNS\) caller\. This is the ARN of the IAM role in your AWS account which Cognito will use to send SMS messages\. SMS messages are subject to a [spending limit](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html)\.   
+The Amazon Resource Name \(ARN\) of the Amazon SNS caller\. This is the ARN of the IAM role in your AWS account that Amazon Cognito will use to send SMS messages\. SMS messages are subject to a [spending limit](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html)\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  

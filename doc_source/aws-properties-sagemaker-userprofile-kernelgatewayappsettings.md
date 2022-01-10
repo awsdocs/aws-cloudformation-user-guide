@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A list of custom SageMaker images that are configured to run as a KernelGateway app\.  
 *Required*: No  
 *Type*: List of [CustomImage](aws-properties-sagemaker-userprofile-customimage.md)  
-*Maximum*: `30`  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultResourceSpec`  <a name="cfn-sagemaker-userprofile-kernelgatewayappsettings-defaultresourcespec"></a>

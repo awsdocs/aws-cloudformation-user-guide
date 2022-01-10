@@ -27,7 +27,7 @@ The Amazon Resource Name \(ARN\) that identifies the stack that contains the cus
 ResourceProperties  
 This field contains the contents of the `Properties` object sent by the template developer\. Its contents are defined by the custom resource provider\.
 
-### Example<a name="w10805ab1c23c23c19c19c11b5b6"></a>
+### Example<a name="w10874ab1c23c23c19c19c11b5b6"></a>
 
 ```
 {
@@ -49,7 +49,7 @@ This field contains the contents of the `Properties` object sent by the template
 
 ### Success<a name="crpg-ref-requesttypes-create-responses-success"></a>
 
-When the create request is successful, a response must be sent to the S3 bucket with the following fields:
+When the create request is successful, a response must be sent to the Amazon S3 bucket with the following fields:
 
 Status  
 Must be `SUCCESS`\.
@@ -74,7 +74,7 @@ Data
 Optional\. The custom resource provider\-defined name\-value pairs to send with the response\. You can access the values provided here by name in the template with `Fn::GetAtt`\.  
 If the name\-value pairs contain sensitive information, you should use the `NoEcho` field to mask the output of the custom resource\. Otherwise, the values are visible through APIs that surface property values \(such as `DescribeStackEvents`\)\.
 
-#### Example<a name="w10805ab1c23c23c19c19c11b7b2b6"></a>
+#### Example<a name="w10874ab1c23c23c19c19c11b7b2b6"></a>
 
 ```
 {
@@ -112,7 +112,7 @@ The Amazon Resource Name \(ARN\) that identifies the stack that contains the cus
 PhysicalResourceId  
 This value should be an identifier unique to the custom resource vendor, and can be up to 1 KB in size\. The value must be a non\-empty string and must be identical for all responses for the same resource\.
 
-#### Example<a name="w10805ab1c23c23c19c19c11b7b4b6"></a>
+#### Example<a name="w10874ab1c23c23c19c19c11b7b4b6"></a>
 
 ```
 {

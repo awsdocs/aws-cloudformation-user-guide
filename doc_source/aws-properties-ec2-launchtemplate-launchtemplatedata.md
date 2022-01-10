@@ -24,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ImageId](#cfn-ec2-launchtemplate-launchtemplatedata-imageid)" : String,
   "[InstanceInitiatedShutdownBehavior](#cfn-ec2-launchtemplate-launchtemplatedata-instanceinitiatedshutdownbehavior)" : String,
   "[InstanceMarketOptions](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions)" : InstanceMarketOptions,
+  "[InstanceRequirements](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements)" : InstanceRequirements,
   "[InstanceType](#cfn-ec2-launchtemplate-launchtemplatedata-instancetype)" : String,
   "[KernelId](#cfn-ec2-launchtemplate-launchtemplatedata-kernelid)" : String,
   "[KeyName](#cfn-ec2-launchtemplate-launchtemplatedata-keyname)" : String,
@@ -67,6 +68,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [InstanceInitiatedShutdownBehavior](#cfn-ec2-launchtemplate-launchtemplatedata-instanceinitiatedshutdownbehavior): String
   [InstanceMarketOptions](#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions): 
     InstanceMarketOptions
+  [InstanceRequirements](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements): 
+    InstanceRequirements
   [InstanceType](#cfn-ec2-launchtemplate-launchtemplatedata-instancetype): String
   [KernelId](#cfn-ec2-launchtemplate-launchtemplatedata-kernelid): String
   [KeyName](#cfn-ec2-launchtemplate-launchtemplatedata-keyname): String
@@ -177,6 +180,12 @@ Default: `stop`
 The market \(purchasing\) option for the instances\.  
 *Required*: No  
 *Type*: [InstanceMarketOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`InstanceRequirements`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [InstanceRequirements](aws-properties-ec2-launchtemplate-launchtemplatedata-instancerequirements.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceType`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancetype"></a>

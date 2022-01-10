@@ -1,6 +1,6 @@
 # AWS::IoT::Logging<a name="aws-resource-iot-logging"></a>
 
-Sets the logging options in the V2 logging service\.
+<a name="aws-resource-iot-logging-description"></a>The `AWS::IoT::Logging` resource Not currently supported by AWS CloudFormation\. for IoT\.
 
 ## Syntax<a name="aws-resource-iot-logging-syntax"></a>
 
@@ -32,19 +32,19 @@ Properties:
 ## Properties<a name="aws-resource-iot-logging-properties"></a>
 
 `AccountId`  <a name="cfn-iot-logging-accountid"></a>
-The unique identifier of the account to use when writing to CloudWatch logs\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DefaultLogLevel`  <a name="cfn-iot-logging-defaultloglevel"></a>
-The logging level\. Valid values are `DEBUG`, `INFO`, `ERROR`, `WARN`, and `DISABLED`\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iot-logging-rolearn"></a>
-The ARN of the role that allows IoT to write to Cloudwatch logs\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -52,9 +52,3 @@ The ARN of the role that allows IoT to write to Cloudwatch logs\.
 ## Return values<a name="aws-resource-iot-logging-return-values"></a>
 
 ### Ref<a name="aws-resource-iot-logging-return-values-ref"></a>
-
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns
-
- `{ "Ref": "AccountId" }` 
-
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

@@ -57,13 +57,13 @@ Take the following limitations into consideration when you use the ClientMetadat
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DesiredDeliveryMediums`  <a name="cfn-cognito-userpooluser-desireddeliverymediums"></a>
-Specify `"EMAIL"` if email will be used to send the welcome message\. Specify `"SMS"` if the phone number will be used\. The default value is `"SMS"`\. More than one value can be specified\.  
+Specify `"EMAIL"` if email will be used to send the welcome message\. Specify `"SMS"` if the phone number will be used\. The default value is `"SMS"`\. You can specify more than one value\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ForceAliasCreation`  <a name="cfn-cognito-userpooluser-forcealiascreation"></a>
-This parameter is only used if the `phone_number_verified` or `email_verified` attribute is set to `True`\. Otherwise, it is ignored\.  
+This parameter is used only if the `phone_number_verified` or `email_verified` attribute is set to `True`\. Otherwise, it is ignored\.  
 If this parameter is set to `True` and the phone number or email address specified in the UserAttributes parameter already exists as an alias with a different user, the API call will migrate the alias from the previous user to the newly created user\. The previous user will no longer be able to log in using that alias\.  
 If this parameter is set to `False`, the API throws an `AliasExistsException` error if the alias already exists\. The default value is `False`\.  
 *Required*: No  
@@ -71,7 +71,7 @@ If this parameter is set to `False`, the API throws an `AliasExistsException` er
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MessageAction`  <a name="cfn-cognito-userpooluser-messageaction"></a>
-Set to `"RESEND"` to resend the invitation message to a user that already exists and reset the expiration limit on the user's account\. Set to `"SUPPRESS"` to suppress sending the message\. Only one value can be specified\.  
+Set to `RESEND` to resend the invitation message to a user that already exists and reset the expiration limit on the user's account\. Set to `SUPPRESS` to suppress sending the message\. You can specify only one value\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `RESEND | SUPPRESS`  
@@ -89,7 +89,7 @@ In your call to `AdminCreateUser`, you can set the `email_verified` attribute to
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Username`  <a name="cfn-cognito-userpooluser-username"></a>
-The username for the user\. Must be unique within the user pool\. Must be a UTF\-8 string between 1 and 128 characters\. After the user is created, the username cannot be changed\.  
+The username for the user\. Must be unique within the user pool\. Must be a UTF\-8 string between 1 and 128 characters\. After the user is created, the username can't be changed\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -108,8 +108,8 @@ The user pool ID for the user pool where the user will be created\.
 
 `ValidationData`  <a name="cfn-cognito-userpooluser-validationdata"></a>
 The user's validation data\. This is an array of name\-value pairs that contain user attributes and attribute values that you can use for custom validation, such as restricting the types of user accounts that can be registered\. For example, you might choose to allow or disallow user sign\-up based on the user's domain\.  
-To configure custom validation, you must create a Pre Sign\-up Lambda trigger for the user pool as described in the Amazon Cognito Developer Guide\. The Lambda trigger receives the validation data and uses it in the validation process\.  
-The user's validation data is not persisted\.  
+To configure custom validation, you must create a Pre Sign\-up AWS Lambda trigger for the user pool as described in the Amazon Cognito Developer Guide\. The Lambda trigger receives the validation data and uses it in the validation process\.  
+The user's validation data isn't persisted\.  
 *Required*: No  
 *Type*: List of [AttributeType](aws-properties-cognito-userpooluser-attributetype.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

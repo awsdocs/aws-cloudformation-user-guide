@@ -34,7 +34,7 @@ For more information, see [CreateStack](https://docs.aws.amazon.com/AWSCloudForm
 
 ## Creating an AWS CloudFormation macro definition<a name="template-macros-author"></a>
 
-When you create a macro definition, the macro definition makes the underlying Lambda function available in the specified account so that AWS CloudFormation can invokes it to process the templates\.
+When you create a macro definition, the macro definition makes the underlying Lambda function available in the specified account so that AWS CloudFormation invokes it to process the templates\.
 
 ### AWS CloudFormation macro function interface<a name="template-macros-lambda-interface"></a>
 

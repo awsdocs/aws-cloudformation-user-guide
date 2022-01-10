@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `ChannelName`  <a name="cfn-iotanalytics-pipeline-channel-channelname"></a>
 The name of the channel from which the messages are processed\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
@@ -37,7 +37,7 @@ The name of the channel from which the messages are processed\.
 
 `Name`  <a name="cfn-iotanalytics-pipeline-channel-name"></a>
 The name of the 'channel' activity\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  

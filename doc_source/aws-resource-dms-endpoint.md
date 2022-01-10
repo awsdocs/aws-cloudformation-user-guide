@@ -111,7 +111,7 @@ The Amazon Resource Name \(ARN\) for the certificate\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatabaseName`  <a name="cfn-dms-endpoint-databasename"></a>
-The name of the endpoint database\. For a MySQL source or target endpoint, do not specify DatabaseName\.  
+The name of the endpoint database\. For a MySQL source or target endpoint, do not specify DatabaseName\. To migrate to a specific database, use this setting and `targetDbType`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

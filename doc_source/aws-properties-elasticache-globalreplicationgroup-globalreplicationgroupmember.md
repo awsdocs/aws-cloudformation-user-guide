@@ -39,7 +39,7 @@ The Amazon region of the Global datastore member\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Role`  <a name="cfn-elasticache-globalreplicationgroup-globalreplicationgroupmember-role"></a>
-Indicates the role of the replication group, primary or secondary\.  
+Indicates the role of the replication group, `PRIMARY` or `SECONDARY`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

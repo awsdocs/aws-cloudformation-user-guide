@@ -1,4 +1,4 @@
-# UpdateReplacePolicy attribute<a name="aws-attribute-updatereplacepolicy"></a>
+# `UpdateReplacePolicy` attribute<a name="aws-attribute-updatereplacepolicy"></a>
 
 Use the `UpdateReplacePolicy` attribute to retain or, in some cases, backup the existing physical instance of a resource when it's replaced during a stack update operation\.
 
@@ -13,7 +13,7 @@ The `UpdateReplacePolicy` attribute applies to [stack updates you perform direct
 **Note**  
 Resources that are retained continue to exist and continue to incur applicable charges until you delete those resources\. Snapshots that are created with this policy continue to exist and continue to incur applicable charges until you delete those snapshots\. `UpdateReplacePolicy` retains the old physical resource or snapshot, but removes it from CloudFormation's scope\.
 
-`UpdateReplacePolicy` differs from the [DeletionPolicy](aws-attribute-deletionpolicy.md) attribute in that it only applies to resources replaced during stack updates\. Use DeletionPolicy for resources deleted when a stack is deleted, or when the resource definition itself is deleted from the template as part of a stack update\.
+`UpdateReplacePolicy` differs from the [`DeletionPolicy`](aws-attribute-deletionpolicy.md) attribute in that it only applies to resources replaced during stack updates\. Use DeletionPolicy for resources deleted when a stack is deleted, or when the resource definition itself is deleted from the template as part of a stack update\.
 
 The following snippet contains an Amazon RDS database instance resource with a `Retain` policy for replacement\. When this resource is replaced with a new resource with a new physical ID, CloudFormation leaves the old database instance without deleting it\.
 
@@ -45,7 +45,7 @@ Resources:
     Properties: {}
 ```
 
-## UpdateReplacePolicy options<a name="aws-attribute-updatereplacepolicy-options"></a>
+## `UpdateReplacePolicy` options<a name="aws-attribute-updatereplacepolicy-options"></a>
 
 Delete  
 CloudFormation deletes the resource and all its content if applicable during resource replacement\. You can add this policy to any resource type\. By default, if you don't specify an `UpdateReplacePolicy`, CloudFormation deletes your resources\. However, be aware of the following consideration:  

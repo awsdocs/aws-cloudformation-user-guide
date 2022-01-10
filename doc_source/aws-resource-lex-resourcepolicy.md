@@ -32,7 +32,7 @@ Properties:
 `Policy`  <a name="cfn-lex-resourcepolicy-policy"></a>
 A resource policy to add to the resource\. The policy is a JSON structure that contains one or more statements that define the policy\. The policy must follow IAM syntax\. If the policy isn't valid, Amazon Lex returns a validation exception\.  
 *Required*: Yes  
-*Type*: String  
+*Type*: [String](aws-properties-lex-resourcepolicy-policy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceArn`  <a name="cfn-lex-resourcepolicy-resourcearn"></a>

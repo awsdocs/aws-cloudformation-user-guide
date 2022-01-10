@@ -42,7 +42,7 @@ For more information, see [Data Events](https://docs.aws.amazon.com/awscloudtrai
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcludeManagementEventSources`  <a name="cfn-cloudtrail-trail-eventselector-excludemanagementeventsources"></a>
-An optional list of service event sources from which you do not want management events to be logged on your trail\. In this release, the list can be empty \(disables the filter\), or it can filter out AWS Key Management Service or Amazon RDS Data API events by containing `kms.amazonaws.com` or `rdsdata.amazonaws.com`\. By default, `ExcludeManagementEventSources` is empty, and AWS KMS and Amazon RDS Data API events are logged to your trail\. You can exclude management event sources only in regions that support the event source\.  
+An optional list of service event sources from which you do not want management events to be logged on your trail\. In this release, the list can be empty \(disables the filter\), or it can filter out AWS Key Management Service or Amazon RDS Data API events by containing `kms.amazonaws.com` or `rdsdata.amazonaws.com`\. By default, `ExcludeManagementEventSources` is empty, and AWS KMS and Amazon RDS Data API events are logged to your trail\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

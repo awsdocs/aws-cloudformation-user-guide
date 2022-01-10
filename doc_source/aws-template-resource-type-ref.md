@@ -101,6 +101,7 @@ service-provider::service-name::data-type-name
 + [Incident Manager](AWS_SSMIncidents.md)
 + [Incident Manager Contacts](AWS_SSMContacts.md)
 + [Amazon Inspector classic](AWS_Inspector.md)
++ [Amazon Inspector](AWS_InspectorV2.md)
 + [AWS IoT](AWS_IoT.md)
 + [AWS IoT 1\-Click](AWS_IoT1Click.md)
 + [AWS IoT Analytics](AWS_IoTAnalytics.md)

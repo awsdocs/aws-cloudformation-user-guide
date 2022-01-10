@@ -41,7 +41,7 @@ aws cloudformation package \
   --use-json
 ```
 
-The command saves the template that it generates to the path specified by the `--output` option\. The command replaces the artifact with the S3 location, as shown in the following example:
+The command saves the template that it generates to the path specified by the `--output` option\. The command replaces the artifact with the Amazon S3 location, as shown in the following example:
 
 **Resulting template**
 

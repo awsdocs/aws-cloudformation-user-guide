@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Attribute`  <a name="cfn-iotanalytics-pipeline-deviceshadowenrich-attribute"></a>
 The name of the attribute that is added to the message\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  
@@ -40,7 +40,7 @@ The name of the attribute that is added to the message\.
 
 `Name`  <a name="cfn-iotanalytics-pipeline-deviceshadowenrich-name"></a>
 The name of the 'deviceShadowEnrich' activity\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
@@ -56,7 +56,7 @@ The next activity in the pipeline\.
 
 `RoleArn`  <a name="cfn-iotanalytics-pipeline-deviceshadowenrich-rolearn"></a>
 The ARN of the role that allows access to the device's shadow\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `2048`  
@@ -64,7 +64,7 @@ The ARN of the role that allows access to the device's shadow\.
 
 `ThingName`  <a name="cfn-iotanalytics-pipeline-deviceshadowenrich-thingname"></a>
 The name of the IoT device whose shadow information is added to the message\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  

@@ -30,7 +30,7 @@ A required custom resource provider\-defined physical ID that is unique for that
 ResourceProperties  
 This field contains the contents of the `Properties` object sent by the template developer\. Its contents are defined by the custom resource provider\.
 
-### Example<a name="w10805ab1c23c23c19c19c13b5b6"></a>
+### Example<a name="w10874ab1c23c23c19c19c13b5b6"></a>
 
 ```
 {
@@ -70,7 +70,7 @@ The Amazon Resource Name \(ARN\) that identifies the stack that contains the cus
 PhysicalResourceId  
 This value should be an identifier unique to the custom resource vendor, and can be up to 1 KB in size\. The value must be a non\-empty string and must be identical for all responses for the same resource\.
 
-#### Example<a name="w10805ab1c23c23c19c19c13b7b2b6"></a>
+#### Example<a name="w10874ab1c23c23c19c19c13b7b2b6"></a>
 
 ```
 {
@@ -102,9 +102,9 @@ StackId
 The `StackId` value copied from the [delete request](#crpg-ref-requesttypes-delete-request)\.
 
 PhysicalResourceId  
-A required custom resource provider\-defined physical ID that is unique for that provider\.
+A required custom resource provider\-defined physical ID that's unique for that provider\.
 
-#### Example<a name="w10805ab1c23c23c19c19c13b7b4b6"></a>
+#### Example<a name="w10874ab1c23c23c19c19c13b7b4b6"></a>
 
 ```
 {

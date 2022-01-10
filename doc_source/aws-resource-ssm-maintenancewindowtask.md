@@ -80,6 +80,8 @@ Information about an Amazon S3 bucket to write task\-level logs to\.
 
 `MaxConcurrency`  <a name="cfn-ssm-maintenancewindowtask-maxconcurrency"></a>
 The maximum number of targets this task can be run for, in parallel\.  
+Although this element is listed as "Required: No", a value can be omitted only when you are registering or updating a [targetless task](https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html) You must provide a value in all other cases\.  
+For maintenance window tasks without a target specified, you can't supply a value for this option\. Instead, the system inserts a placeholder value of `1`\. This value doesn't affect the running of your task\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -89,6 +91,8 @@ The maximum number of targets this task can be run for, in parallel\.
 
 `MaxErrors`  <a name="cfn-ssm-maintenancewindowtask-maxerrors"></a>
 The maximum number of errors allowed before this task stops being scheduled\.  
+Although this element is listed as "Required: No", a value can be omitted only when you are registering or updating a [targetless task](https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html) You must provide a value in all other cases\.  
+For maintenance window tasks without a target specified, you can't supply a value for this option\. Instead, the system inserts a placeholder value of `1`\. This value doesn't affect the running of your task\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

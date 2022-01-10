@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DatastoreName`  <a name="cfn-iotanalytics-pipeline-datastore-datastorename"></a>
 The name of the data store where processed messages are stored\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
@@ -35,7 +35,7 @@ The name of the data store where processed messages are stored\.
 
 `Name`  <a name="cfn-iotanalytics-pipeline-datastore-name"></a>
 The name of the datastore activity\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  

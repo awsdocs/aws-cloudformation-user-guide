@@ -1,6 +1,6 @@
 # AWS::EKS::Nodegroup<a name="aws-resource-eks-nodegroup"></a>
 
-Creates a managed node group for an Amazon EKS cluster\. You can only create a node group for your cluster that is equal to the current Kubernetes version for the cluster\.
+Creates a managed node group for an Amazon EKS cluster\. You can only create a node group for your cluster that is equal to the current Kubernetes version for the cluster\. All node groups are created with the latest AMI release version for the respective minor Kubernetes version of the cluster, unless you deploy a custom AMI using a launch template\. For more information about using launch templates, see [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)\.
 
 An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2 instances that are managed by AWS for an Amazon EKS cluster\. Each node group uses a version of the Amazon EKS optimized Amazon Linux 2 AMI\. For more information, see [Managed Node Groups](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html) in the *Amazon EKS User Guide*\. 
 
@@ -71,14 +71,7 @@ Properties:
 ## Properties<a name="aws-resource-eks-nodegroup-properties"></a>
 
 `AmiType`  <a name="cfn-eks-nodegroup-amitype"></a>
-The AMI type for your node group\. The following values are examples:  
-+  `AL2_x86_64` – Use for Amazon Linux 2 non\-GPU instances\.
-+  `AL2_x86_64_GPU` – Use for Amazon Linux 2 GPU instances\.
-+  `AL2_ARM_64` – Use for Amazon Linux 2 Arm instances\.
-+  `CUSTOM` – Use when specifying a custom AMI ID with a launch template\. For more information, see [Specifying an AMI](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html#launch-template-custom-ami) in the *Amazon EKS User Guide*\.
-+  `BOTTLEROCKET_ARM_64` – Use for Bottlerocket Arm instances\.
-+  `BOTTLEROCKET_x86_64` – Use for Bottlerocket x86\_64 instances\.
-If you specify `launchTemplate`, and your launch template uses a custom AMI, then don't specify `amiType`, or the node group deployment will fail\. For more information about using launch templates with Amazon EKS, see [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon EKS User Guide*\.  
+The AMI type for your node group\. GPU instance types should use the `AL2_x86_64_GPU` AMI type\. Non\-GPU instances should use the `AL2_x86_64` AMI type\. Arm instances should use the `AL2_ARM_64` AMI type\. All types use the Amazon EKS optimized Amazon Linux 2 AMI\. If you specify `launchTemplate`, and your launch template uses a custom AMI, then don't specify `amiType`, or the node group deployment will fail\. For more information about using launch templates with Amazon EKS, see [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon EKS User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `AL2_ARM_64 | AL2_x86_64 | AL2_x86_64_GPU | BOTTLEROCKET_ARM_64 | BOTTLEROCKET_x86_64 | CUSTOM`  

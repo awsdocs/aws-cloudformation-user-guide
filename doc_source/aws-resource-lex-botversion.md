@@ -43,7 +43,7 @@ The unique identifier of the bot\.
 `BotVersionLocaleSpecification`  <a name="cfn-lex-botversion-botversionlocalespecification"></a>
 Specifies the locales that Amazon Lex adds to this version\. You can choose the Draft version or any other previously published version for each locale\. When you specify a source version, the locale data is copied from the source version to the new version\.  
 *Required*: Yes  
-*Type*: List of [BotVersionLocaleSpecificationItem](aws-properties-lex-botversion-botversionlocalespecificationitem.md)  
+*Type*: [List](aws-properties-lex-botversion-botversionlocalespecification.md) of [BotVersionLocaleSpecificationItem](aws-properties-lex-botversion-botversionlocalespecificationitem.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-lex-botversion-description"></a>

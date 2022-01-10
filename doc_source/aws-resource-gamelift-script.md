@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Name](#cfn-gamelift-script-name)" : String,
       "[StorageLocation](#cfn-gamelift-script-storagelocation)" : S3Location,
+      "[Tags](#cfn-gamelift-script-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Version](#cfn-gamelift-script-version)" : String
     }
 }
@@ -27,6 +28,8 @@ Properties:
   [Name](#cfn-gamelift-script-name): String
   [StorageLocation](#cfn-gamelift-script-storagelocation): 
     S3Location
+  [Tags](#cfn-gamelift-script-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Version](#cfn-gamelift-script-version): String
 ```
 
@@ -44,6 +47,12 @@ A descriptive label that is associated with a script\. Script names do not need 
 The location in Amazon S3 where build or script files are stored for access by Amazon GameLift\.  
 *Required*: Yes  
 *Type*: [S3Location](aws-properties-gamelift-script-s3location.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-gamelift-script-tags"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-gamelift-script-version"></a>

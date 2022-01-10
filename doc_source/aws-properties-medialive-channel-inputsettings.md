@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[FilterStrength](#cfn-medialive-channel-inputsettings-filterstrength)" : Integer,
   "[InputFilter](#cfn-medialive-channel-inputsettings-inputfilter)" : String,
   "[NetworkInputSettings](#cfn-medialive-channel-inputsettings-networkinputsettings)" : NetworkInputSettings,
+  "[Scte35Pid](#cfn-medialive-channel-inputsettings-scte35pid)" : Integer,
   "[Smpte2038DataPreference](#cfn-medialive-channel-inputsettings-smpte2038datapreference)" : String,
   "[SourceEndBehavior](#cfn-medialive-channel-inputsettings-sourceendbehavior)" : String,
   "[VideoSelector](#cfn-medialive-channel-inputsettings-videoselector)" : VideoSelector
@@ -38,6 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [InputFilter](#cfn-medialive-channel-inputsettings-inputfilter): String
   [NetworkInputSettings](#cfn-medialive-channel-inputsettings-networkinputsettings): 
     NetworkInputSettings
+  [Scte35Pid](#cfn-medialive-channel-inputsettings-scte35pid): Integer
   [Smpte2038DataPreference](#cfn-medialive-channel-inputsettings-smpte2038datapreference): String
   [SourceEndBehavior](#cfn-medialive-channel-inputsettings-sourceendbehavior): String
   [VideoSelector](#cfn-medialive-channel-inputsettings-videoselector): 
@@ -87,6 +89,12 @@ Turns on the filter for this input\. MPEG\-2 inputs have the deblocking filter e
 Information about how to connect to the upstream system\.  
 *Required*: No  
 *Type*: [NetworkInputSettings](aws-properties-medialive-channel-networkinputsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Scte35Pid`  <a name="cfn-medialive-channel-inputsettings-scte35pid"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Smpte2038DataPreference`  <a name="cfn-medialive-channel-inputsettings-smpte2038datapreference"></a>

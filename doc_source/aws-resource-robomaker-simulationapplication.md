@@ -53,7 +53,7 @@ The current revision id\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Environment`  <a name="cfn-robomaker-simulationapplication-environment"></a>
-Not currently supported by AWS CloudFormation\.  
+The environment of the simulation application\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

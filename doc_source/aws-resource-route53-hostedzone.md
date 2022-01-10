@@ -100,6 +100,12 @@ If you create a query logging configuration using the Route 53 console, Route 53
 1. Create a CloudWatch Logs resource policy, and give it the permissions that Route 53 needs to create log streams and to send query logs to log streams\. For the value of `Resource`, specify the ARN for the log group that you created in the previous step\. To use the same resource policy for all the CloudWatch Logs log groups that you created for query logging configurations, replace the hosted zone name with `*`, for example:
 
     `arn:aws:logs:us-east-1:123412341234:log-group:/aws/route53/*` 
+
+   To avoid the confused deputy problem, a security issue where an entity without a permission for an action can coerce a more\-privileged entity to perform it, you can optionally limit the permissions that a service has to a resource in a resource\-based policy by supplying the following values:
+   + For `aws:SourceArn`, supply the hosted zone ARN used in creating the query logging configuration\. For example, `aws:SourceArn: arn:aws:route53:::hostedzone/hosted zone ID`\.
+   + For `aws:SourceAccount`, supply the account ID for the account that creates the query logging configuration\. For example, `aws:SourceAccount:111111111111`\.
+
+   For more information, see [The confused deputy problem](https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html) in the * AWS IAM User Guide*\.
 **Note**  
 You can't use the CloudWatch console to create or edit a resource policy\. You must use the CloudWatch API, one of the AWS SDKs, or the AWS CLI\.  
 Log Streams and Edge Locations  

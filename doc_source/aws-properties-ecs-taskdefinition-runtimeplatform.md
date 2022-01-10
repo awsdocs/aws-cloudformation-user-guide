@@ -2,6 +2,8 @@
 
 Information about the platform for the Amazon ECS service or task\.
 
+For more informataion about `RuntimePlatform`, see [RuntimePlatform](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#runtime-platform) in the *Amazon Elastic Container Service Developer Guide*\.
+
 ## Syntax<a name="aws-properties-ecs-taskdefinition-runtimeplatform-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -26,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `CpuArchitecture`  <a name="cfn-ecs-taskdefinition-runtimeplatform-cpuarchitecture"></a>
 The CPU architecture\.  
+You can run your Linux tasks on an ARM\-based platform by setting the value to `ARM64`\. This option is avaiable for tasks that run on Linuc Amazon EC2 instance or Linux containers on Fargate\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ARM64 | X86_64`  

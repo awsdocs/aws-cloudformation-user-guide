@@ -405,6 +405,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Availability Zone where the specified instance is launched\. For example: `us-east-1b`\.  
 You can retrieve a list of all Availability Zones for a Region by using the [Fn::GetAZs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getavailabilityzones.html) intrinsic function\.
 
+`PrivateDnsName`  <a name="PrivateDnsName-fn::getatt"></a>
+The private DNS name of the specified instance\. For example: `ip-10-24-34-0.ec2.internal`\.
+
 `PrivateIp`  <a name="PrivateIp-fn::getatt"></a>
 The private IP address of the specified instance\. For example: `10.24.34.0`\.
 

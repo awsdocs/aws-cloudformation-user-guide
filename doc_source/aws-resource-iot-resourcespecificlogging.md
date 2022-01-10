@@ -1,6 +1,6 @@
 # AWS::IoT::ResourceSpecificLogging<a name="aws-resource-iot-resourcespecificlogging"></a>
 
-Sets the logging options for a specific resource in the V2 logging service\.
+<a name="aws-resource-iot-resourcespecificlogging-description"></a>The `AWS::IoT::ResourceSpecificLogging` resource Not currently supported by AWS CloudFormation\. for IoT\.
 
 ## Syntax<a name="aws-resource-iot-resourcespecificlogging-syntax"></a>
 
@@ -32,19 +32,19 @@ Properties:
 ## Properties<a name="aws-resource-iot-resourcespecificlogging-properties"></a>
 
 `LogLevel`  <a name="cfn-iot-resourcespecificlogging-loglevel"></a>
-The logging level\. Valid values are `DEBUG`, `INFO`, `ERROR`, `WARN`, and `DISABLED`\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetName`  <a name="cfn-iot-resourcespecificlogging-targetname"></a>
-The log target name\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TargetType`  <a name="cfn-iot-resourcespecificlogging-targettype"></a>
-The log target type\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -53,19 +53,9 @@ The log target type\.
 
 ### Ref<a name="aws-resource-iot-resourcespecificlogging-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns
-
- `{ "Ref": "TargetType:TargetName" }` 
-
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
-
 ### Fn::GetAtt<a name="aws-resource-iot-resourcespecificlogging-return-values-fn--getatt"></a>
-
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
-
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-iot-resourcespecificlogging-return-values-fn--getatt-fn--getatt"></a>
 
 `TargetId`  <a name="TargetId-fn::getatt"></a>
-The unique identifier of the log target\.
+Not currently supported by AWS CloudFormation\.

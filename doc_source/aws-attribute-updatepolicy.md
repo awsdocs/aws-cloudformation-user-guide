@@ -1,4 +1,4 @@
-# UpdatePolicy attribute<a name="aws-attribute-updatepolicy"></a>
+# `UpdatePolicy` attribute<a name="aws-attribute-updatepolicy"></a>
 
 Use the `UpdatePolicy` attribute to specify how AWS CloudFormation handles updates to the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html), [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html), or [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html) resources\.
 + For `AWS::AppStream::Fleet` resource, CloudFormation can update your Image Builder with newer AppStream 2\.0 agent software\. For more information see, [Manage AppStream 2\.0 Versions](https://docs.aws.amazon.com/appstream2/latest/developerguide/base-images-agent.html)\.
@@ -110,10 +110,13 @@ Specifies the minimum number of instances that must be in service within the Aut
 Specifies the percentage of instances in an Auto Scaling rolling update that must signal success for an update to succeed\. You can specify a value from `0` to `100`\. CloudFormation rounds to the nearest tenth of a percent\. For example, if you update five instances with a minimum successful percentage of `50`, three instances must signal success\.  
 If an instance doesn't send a signal within the time specified in the `PauseTime` property, CloudFormation assumes that the instance wasn't updated\.  
 If you specify this property, you must also enable the `WaitOnResourceSignals` and `PauseTime` properties\.  
-The `MinSuccessfulInstancesPercent` parameter applies only to instances only for signaling purpose\. To specify the number of instances in your autoscaling group, see the `MinSize`, `MaxSize`, and `DesiredCapacity` properties fo the [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.  
+The `MinSuccessfulInstancesPercent` parameter applies only to instances only for signaling purpose\. To specify the number of instances in your autoscaling group, see the `MinSize`, `MaxSize`, and `DesiredCapacity` properties for the [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.  
 *Default*: `100`  
 *Type*: Integer  
-*Required*: No
+*Required*: No  
+When the `MinSuccessfulInstancesPercent` property is set to `0`, CloudFormation waits for 0% of the capacity instances to be in an `InService` state\. `MinSuccessfulInstancesPercent` returns immediately and before considering the Auto Scaling group status as `Update Complete` to move on to the subsequent resources defined in the stack template\.  
+If other Auto Scaling groups are defined in your CloudFormation template, they will update simultaneously\. When all Auto Scaling groups are deployed at once with 0% of the capacity instances in an `InService` state, then you will experience availability issues, due to 0 instances serving customer traffic\.  
+CloudFormation recommends that `MinSuccessfulInstancesPercent` is set to a value greater than 0, allowing reasonable minimum instances to verify before considering an Auto Scaling groups update to be completed\.
 
 `PauseTime`  <a name="cfn-attributes-updatepolicy-rollingupdate-pausetime"></a>
 The amount of time that CloudFormation pauses after making a change to a batch of instances to give those instances time to start software applications\. For example, you might need to specify `PauseTime` when scaling up the number of instances in an Auto Scaling group\.  
@@ -124,7 +127,7 @@ Specify `PauseTime` in the [ISO8601 duration format](http://en.wikipedia.org/wik
 *Required*: No
 
 `SuspendProcesses`  <a name="cfn-attributes-updatepolicy-rollingupdate-suspendprocesses"></a>
-Specifies the Auto Scaling processes to suspend during a stack update\. Suspending processes prevents Auto Scaling from interfering with a stack update\. For example, you can suspend alarming so that Amazon EC2 Auto Scaling doesn't execute scaling policies associated with an alarm\. For valid values, see the `ScalingProcesses.member.N` parameter for the [SuspendProcesses](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_SuspendProcesses.html) action in the *Amazon EC2 Auto Scaling API Reference*\.  
+Specifies the Auto Scaling processes to suspend during a stack update\. Suspending processes prevents Auto Scaling from interfering with a stack update\. For example, you can suspend alarming so that Amazon EC2 Auto Scaling doesn't initiate scaling policies associated with an alarm\. For valid values, see the `ScalingProcesses.member.N` parameter for the [SuspendProcesses](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_SuspendProcesses.html) action in the *Amazon EC2 Auto Scaling API Reference*\.  
 *Default*: Not specified  
 *Type*: List of Auto Scaling processes  
 *Required*: No
@@ -303,7 +306,7 @@ For an example that specifies the `UpdatePolicy` attribute for an `AWS::Lambda::
 
 The following examples show how to add an update policy to an Auto Scaling group and how to maintain availability when updating metadata\.
 
-### Add an UpdatePolicy to an Auto Scaling group<a name="w10805ab1c31c23c23c19b5"></a>
+### Add an `UpdatePolicy` to an Auto Scaling group<a name="w10874ab1c31c23c23c19b5"></a>
 
 The following example shows how to add an update policy\. During an update, the Auto Scaling group updates instances in batches of two and keeps a minimum of one instance in service\. Because the `WaitOnResourceSignals` flag is set, the Auto Scaling group waits for new instances that are added to the group\. The new instances must signal the Auto Scaling group before it updates the next batch of instances\.
 
@@ -379,7 +382,7 @@ ScheduledAction:
     StartTime: '2017-06-02T20 : 00 : 00Z'
 ```
 
-### AutoScalingReplacingUpdate policy<a name="w10805ab1c31c23c23c19b7"></a>
+### AutoScalingReplacingUpdate policy<a name="w10874ab1c31c23c23c19b7"></a>
 
 The following example declares a policy that forces an associated Auto Scaling group to be replaced during an update\. For the update to succeed, a percentage of instances \(specified by the `MinSuccessfulPercentParameter` parameter\) must signal success within the `Timeout` period\.
 
@@ -416,7 +419,7 @@ CreationPolicy:
     MinSuccessfulInstancesPercent: !Ref 'MinSuccessfulPercentParameter'
 ```
 
-### Maintain availability when updating the metadata for the cfn\-init helper script<a name="w10805ab1c31c23c23c19b9"></a>
+### Maintain availability when updating the metadata for the cfn\-init helper script<a name="w10874ab1c31c23c23c19b9"></a>
 
 When you install software applications on your instances, you might use the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-init.html) metadata key and the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-init.html) helper script to bootstrap the instances in your Auto Scaling group\. CloudFormation installs the packages, runs the commands, and performs other bootstrapping actions described in the metadata\.
 
@@ -427,7 +430,7 @@ Forcing a rolling update requires CloudFormation to create a new instance and th
 
 To force a rolling update, change the logical ID of the launch configuration resource, and then update the stack and any references pointing to the original logic ID \(such as the associated Auto Scaling group\)\. CloudFormation triggers a rolling update on the Auto Scaling group, replacing all instances\.
 
-### Original template<a name="w10805ab1c31c23c23c19c11"></a>
+### Original template<a name="w10874ab1c31c23c23c19c11"></a>
 
 ```
 "LaunchConfig": {
@@ -441,7 +444,7 @@ To force a rolling update, change the logical ID of the launch configuration res
 }
 ```
 
-### Updated logical ID<a name="w10805ab1c31c23c23c19c13"></a>
+### Updated logical ID<a name="w10874ab1c31c23c23c19c13"></a>
 
 ```
 "LaunchConfigUpdateRubygemsPkg": {

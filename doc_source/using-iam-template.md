@@ -42,7 +42,7 @@ The policy grants permissions to all `DescribeStack` API actions listed in the `
 **Important**  
 If you don't specify a stack name or ID in your statement, you must also grant the permission to use all resources for the action using the `*` wildcard for the `Resource` element\.
 
-In addition to AWS CloudFormation actions, IAM users who create or delete stacks require additional permissions that depends on the stack templates\. For example, if you have a template that describes an Amazon SQS Queue, the user must have the corresponding permissions for Amazon SQS actions to successfully create the stack, as shown in the following sample policy:
+In addition to AWS CloudFormation actions, IAM users who create or delete stacks require additional permissions that depend on the stack templates\. For example, if you have a template that describes an Amazon SQS Queue, the user must have the corresponding permissions for Amazon SQS actions to successfully create the stack, as shown in the following sample policy:
 
 **Example A sample policy that grants create and view stack actions and all Amazon SQS actions**  
 
@@ -67,7 +67,7 @@ In addition to AWS CloudFormation actions, IAM users who create or delete stacks
 
 For a list of all AWS CloudFormation actions that you can allow or deny, see the [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/)\.
 
-### AWS CloudFormation console\-specific actions<a name="w10805ab1c17c21c11c16"></a>
+### AWS CloudFormation console\-specific actions<a name="w10874ab1c17c21c11c16"></a>
 
 IAM users who use the AWS CloudFormation console require additional permissions that are not required for using the AWS Command Line Interface or AWS CloudFormation APIs\. Compared to the CLI and API, the console provides additional features that require additional permissions, such as template uploads to Amazon S3 buckets and drop\-down lists for [AWS\-specific parameter types](parameters-section-structure.md#aws-specific-parameter-types)\.
 
@@ -248,7 +248,7 @@ The following AWS CloudFormation\-specific conditions apply to the API parameter
 + `cloudformation:TemplateUrl`
 For example, `cloudformation:TemplateUrl` only applies to the `TemplateUrl` parameter for `CreateStack`, `UpdateStack`, and `CreateChangeSet` APIs\.
 
-### Examples<a name="w10805ab1c17c21c15c10"></a>
+### Examples<a name="w10874ab1c17c21c15c10"></a>
 
 The following example policy allows users to use only the `https://s3.amazonaws.com/testbucket/test.template` template URL to create or update a stack\.
 

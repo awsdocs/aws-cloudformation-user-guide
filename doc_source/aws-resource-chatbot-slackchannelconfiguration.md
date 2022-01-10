@@ -52,7 +52,7 @@ The name of the configuration\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GuardrailPolicies`  <a name="cfn-chatbot-slackchannelconfiguration-guardrailpolicies"></a>
-The list of IAM policy ARNs that are applied as channel guardrails\. The AWS managed 'AdministratorAccess' policy is applied as a default if this is not set\.  
+The list of IAM policy ARNs that are applied as channel guardrails\. The AWS managed 'AdministratorAccess' policy is applied as a default if this is not set\. Currently, only 1 IAM policy is supported\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

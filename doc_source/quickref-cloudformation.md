@@ -1,10 +1,10 @@
 # AWS CloudFormation template snippets<a name="quickref-cloudformation"></a>
 
 **Topics**
-+ [Nested stacks](#w10805ab1c23c21c19b5)
-+ [Wait condition](#w10805ab1c23c21c19b7)
++ [Nested stacks](#w10874ab1c23c21c19b5)
++ [Wait condition](#w10874ab1c23c21c19b7)
 
-## Nested stacks<a name="w10805ab1c23c21c19b5"></a>
+## Nested stacks<a name="w10874ab1c23c21c19b5"></a>
 
 ### Nesting a stack in a template<a name="scenario-stack"></a>
 
@@ -92,7 +92,7 @@ For more information, see [AWS::CloudFormation::Stack](https://docs.aws.amazon.c
 9.         KeyName: mykey
 ```
 
-## Wait condition<a name="w10805ab1c23c21c19b7"></a>
+## Wait condition<a name="w10874ab1c23c21c19b7"></a>
 
 ### Using a wait condition with an Amazon EC2 instance<a name="scenario-waitcondition"></a>
 
@@ -204,7 +204,7 @@ For more information, see [Creating wait conditions in a template](using-cfn-wai
 
 This example shows a cfn\-signal command line that signals success to a wait condition\. You need to define the command line in the `UserData` property of the EC2 instance\.
 
-#### JSON<a name="w10805ab1c23c21c19b7b4b4"></a>
+#### JSON<a name="w10874ab1c23c21c19b7b4b4"></a>
 
 ```
 "UserData": {
@@ -224,7 +224,7 @@ This example shows a cfn\-signal command line that signals success to a wait con
 }
 ```
 
-#### YAML<a name="w10805ab1c23c21c19b7b4b6"></a>
+#### YAML<a name="w10874ab1c23c21c19b7b4b6"></a>
 
 ```
 UserData:

@@ -55,13 +55,13 @@ If you omit this parameter, the default is `false`\.
 
 `Domain`  <a name="cfn-rum-appmonitor-domain"></a>
 The top\-level internet domain name for which your application has administrative authority\. This parameter is required\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-rum-appmonitor-name"></a>
 A name for the app monitor\. This parameter is required\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

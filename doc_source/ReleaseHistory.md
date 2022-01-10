@@ -4,6 +4,44 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_EKS.md) | The following property was updated: `AWS::EKS::Cluster KubernetesNetworkConfig` 
+
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html)   
+Use the `IpFamily` property to specify whether you want your version 1\.21 or later cluster to assign IPv4 or IPv6 addresses to Pods and Services\.  | January 6, 2022 | 
+| [Updated resource](AWS_Lex.md) | The following property type was updated: AWS::Lex::Bot\. 
+
+[AWS::Lex::Bot](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-bot.html)  
+In the [ExternalSourceSetting](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-externalsourcesetting.html) property type, use the `GrammarSlotTypeSetting` property to specify that the slot type is defined by an external grammar\.  
+In the [GrammarSlotTypeSetting](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-grammarslottypesetting.html) property type, use the `Source` property to specify the location of a file that contains a grammar defining the slot type\.  
+In the [GrammarSlotTypeSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-grammarslottypesource.html) property type, use the `KmsKeyArn`, `S3BucketName`, and `S3ObjectKey` properties to specify the S3 bucket location of a file that contains a grammar defining the slot type\.  | January 6, 2022 | 
+| [New resources](AWS_Lightsail.md) | The following resources were added: AWS::Lightsail::Alarm, AWS::Lightsail::Bucket, AWS::Lightsail::LoadBalancer, and AWS::Lightsail::LoadBalancerTlsCertificate 
+
+ [AWS::Lightsail::Alarm](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-alarm.html)   
+Use the `AWS::Lightsail::Alarm` resource to specify an Amazon Lightsail alarm\. 
+
+ [AWS::Lightsail::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-bucket.html)   
+Use the `AWS::Lightsail::Bucket` resource to specify an Amazon Lightsail bucket\. 
+
+ [AWS::Lightsail::LoadBalancer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-loadbalancer.html)   
+Use the `AWS::Lightsail::LoadBalancer` resource to specify an Amazon Lightsail load balancer\. 
+
+ [AWS::Lightsail::LoadBalancerTlsCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-loadbalancertlscertificate.html)   
+Use the `AWS::Lightsail::LoadBalancerTlsCertificate` resource to specify a certificate that you can use with an Amazon Lightsail load balancer that is in the same AWS Region and Availability Zone\.  | January 6, 2022 | 
+| [New resource](AWS_InspectorV2.md) | The following resource was added: AWS::InspectorV2::Filter\. 
+
+ [AWS::InspectorV2::Filter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ResourceName.html)   
+Use the `AWS::InspectorV2::Filter` resource to specify a filter\.  | January 6, 2022 | 
+| [New resource](AWS_IoT.md) | The following resource is new: AWS::IoT::JobTemplate 
+
+ [AWS::IoT::JobTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html)   
+Use the `AWS::IoT::JobTemplate` resource to specify a job template\.  | January 6, 2022 | 
+| [New resources](AWS_AppStream.md) | The following resources were added: `AWS::AppStream::ApplicationEntitlementAssociation` and `AWS::AppStream::Entitlement` 
+
+ [AWS::AppStream::ApplicationEntitlementAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationentitlementassociation.html)   
+Use the `AWS::AppStream::ApplicationEntitlementAssociation` resource to specify an association between an application and entitlement\. 
+
+ [AWS::AppStream::Entitlement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-entitlement.html)   
+Use the `AWS::AppStream::Entitlement` resource to specify an entitlement\.  | January 5, 2022 | 
 | [Updated resources](AWS_WAFv2.md) | The following resources were updated: AWS::WAFv2::WebACL and AWS::WAFv2::RuleGroup\. 
 
  [AWS::WAFv2::WebACL](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html)   
@@ -286,13 +324,6 @@ For more information, see [Adding HTTP headers to CloudFront responses](https://
 
  [AWS::DataSync::LocationHDFS](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html)   
 Use the `AWS::DataSync::LocationHDFS` resource to specify an endpoint for a Hadoop Distributed File System \(HDFS\)\.  | November 4, 2021 | 
-| [New resource](AWS_IoT.md) | The following resources were added: AWS::IoT::Logging and AWS::IoT::ResourceSpecificLogging\. 
-
- [AWS::IoT::Logging](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-logging.html)   
-Use the `AWS::IoT::Logging` resource to specify logging options in AWS IoT Core\. 
-
- [AWS::IoT::ResourceSpecificLogging](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-resourcespecificlogging.html)   
-Use the `AWS::IoT::ResourceSpecificLogging` resource to specify logging options for a specific resource in AWS IoT Core\.  | November 4, 2021 | 
 | [Updated resource](AWS_EC2.md) | The following resource was updated: AWS::EC2::EC2Fleet\. 
 
  [InstanceRequirementsRequest](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-instancerequirementsrequest.html)   
@@ -415,7 +446,7 @@ Use the `AWS::Lightsail::Disk` resource to specify a disk that can be attached t
 | [New resource](AWS_IoT.md) | The following resource was added: AWS::IoT::JobTemplate\. 
 
  [AWS::IoT::JobTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html)   
-Use the `AWS::IoT::JobTemplate` resource to specify a job template in AWS IoT Core\.  | October 7, 2021 | 
+Use the `AWS::IoT::DomainConfJobTemplateiguration` resource to specify a job template in AWS IoT Core\.  | October 7, 2021 | 
 | [Updated resources](AWS_ECR.md) | The following resources were updated: AWS::ECR::ReplicationConfiguration 
 
  [AWS::ECR::ReplicationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replicationconfiguration.html)   

@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Description](#cfn-lex-bot-slottype-description)" : String,
+  "[ExternalSourceSetting](#cfn-lex-bot-slottype-externalsourcesetting)" : ExternalSourceSetting,
   "[Name](#cfn-lex-bot-slottype-name)" : String,
   "[ParentSlotTypeSignature](#cfn-lex-bot-slottype-parentslottypesignature)" : String,
   "[SlotTypeValues](#cfn-lex-bot-slottype-slottypevalues)" : [ SlotTypeValue, ... ],
@@ -22,6 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Description](#cfn-lex-bot-slottype-description): String
+  [ExternalSourceSetting](#cfn-lex-bot-slottype-externalsourcesetting): 
+    ExternalSourceSetting
   [Name](#cfn-lex-bot-slottype-name): String
   [ParentSlotTypeSignature](#cfn-lex-bot-slottype-parentslottypesignature): String
   [SlotTypeValues](#cfn-lex-bot-slottype-slottypevalues): 
@@ -36,6 +39,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A description of the slot type\. Use the description to help identify the slot type in lists\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ExternalSourceSetting`  <a name="cfn-lex-bot-slottype-externalsourcesetting"></a>
+Sets the type of external information used to create the slot type\.  
+*Required*: No  
+*Type*: [ExternalSourceSetting](aws-properties-lex-bot-externalsourcesetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-lex-bot-slottype-name"></a>
@@ -62,6 +71,6 @@ Determines the slot resolution strategy that Amazon Lex uses to return slot type
 + OriginalValue \- Returns the value entered by the user, if the user value is similar to a slot value\.
 + TopResolution \- If there is a resolution list for the slot, return the first value in the resolution list as the slot type value\. If there is no resolution list, null is returned\.
 If you don't specify the valueSelectionStrategy, the default is OriginalValue\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [SlotValueSelectionSetting](aws-properties-lex-bot-slotvalueselectionsetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

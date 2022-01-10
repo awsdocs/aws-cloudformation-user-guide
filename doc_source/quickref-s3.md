@@ -115,7 +115,7 @@ This example creates a bucket as a website\. The AccessControl property is set t
  1. AWSTemplateFormatVersion: 2010-09-09
  2. Resources:
  3.   S3Bucket:
- 4.     Type: AWS::S3::Bucket
+ 4.     Type: 'AWS::S3::Bucket'
  5.     Properties:
  6.       AccessControl: PublicRead
  7.       WebsiteConfiguration:
@@ -123,7 +123,7 @@ This example creates a bucket as a website\. The AccessControl property is set t
  9.         ErrorDocument: error.html
 10.     DeletionPolicy: Retain
 11.   BucketPolicy:
-12.     Type: AWS::S3::BucketPolicy
+12.     Type: 'AWS::S3::BucketPolicy'
 13.     Properties:
 14.       PolicyDocument:
 15.         Id: MyPolicy

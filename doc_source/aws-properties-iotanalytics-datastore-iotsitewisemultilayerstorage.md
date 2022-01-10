@@ -25,6 +25,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `CustomerManagedS3Storage`  <a name="cfn-iotanalytics-datastore-iotsitewisemultilayerstorage-customermanageds3storage"></a>
 Stores data used by AWS IoT SiteWise in an Amazon S3 bucket that you manage\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [CustomerManagedS3Storage](aws-properties-iotanalytics-datastore-customermanageds3storage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

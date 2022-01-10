@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::FlowLog",
   "Properties" : {
       "[DeliverLogsPermissionArn](#cfn-ec2-flowlog-deliverlogspermissionarn)" : String,
+      "[DestinationOptions](#cfn-ec2-flowlog-destinationoptions)" : Json,
       "[LogDestination](#cfn-ec2-flowlog-logdestination)" : String,
       "[LogDestinationType](#cfn-ec2-flowlog-logdestinationtype)" : String,
       "[LogFormat](#cfn-ec2-flowlog-logformat)" : String,
@@ -32,6 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::FlowLog
 Properties: 
   [DeliverLogsPermissionArn](#cfn-ec2-flowlog-deliverlogspermissionarn): String
+  [DestinationOptions](#cfn-ec2-flowlog-destinationoptions): Json
   [LogDestination](#cfn-ec2-flowlog-logdestination): String
   [LogDestinationType](#cfn-ec2-flowlog-logdestinationtype): String
   [LogFormat](#cfn-ec2-flowlog-logformat): String
@@ -51,6 +53,12 @@ The ARN for the IAM role that permits Amazon EC2 to publish flow logs to a Cloud
 If you specify `LogDestinationType` as `s3`, do not specify `DeliverLogsPermissionArn` or `LogGroupName`\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`DestinationOptions`  <a name="cfn-ec2-flowlog-destinationoptions"></a>
+The destination options\.  
+*Required*: No  
+*Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LogDestination`  <a name="cfn-ec2-flowlog-logdestination"></a>

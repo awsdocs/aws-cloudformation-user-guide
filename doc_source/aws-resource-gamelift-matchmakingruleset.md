@@ -13,7 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::GameLift::MatchmakingRuleSet",
   "Properties" : {
       "[Name](#cfn-gamelift-matchmakingruleset-name)" : String,
-      "[RuleSetBody](#cfn-gamelift-matchmakingruleset-rulesetbody)" : String
+      "[RuleSetBody](#cfn-gamelift-matchmakingruleset-rulesetbody)" : String,
+      "[Tags](#cfn-gamelift-matchmakingruleset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -25,6 +26,8 @@ Type: AWS::GameLift::MatchmakingRuleSet
 Properties: 
   [Name](#cfn-gamelift-matchmakingruleset-name): String
   [RuleSetBody](#cfn-gamelift-matchmakingruleset-rulesetbody): String
+  [Tags](#cfn-gamelift-matchmakingruleset-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-gamelift-matchmakingruleset-properties"></a>
@@ -44,6 +47,13 @@ A collection of matchmaking rules, formatted as a JSON string\. Comments are not
 *Minimum*: `1`  
 *Maximum*: `65535`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-gamelift-matchmakingruleset-tags"></a>
+A list of labels to assign to the new matchmaking rule set resource\. Tags are developer\-defined key\-value pairs\. Tagging AWS resources are useful for resource management, access management and cost allocation\. For more information, see [ Tagging AWS Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the * AWS General Reference*\. Once the resource is created, you can use TagResource, UntagResource, and ListTagsForResource to add, remove, and view tags\. The maximum tag limit may be lower than stated\. See the AWS General Reference for actual tagging limits\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-gamelift-matchmakingruleset-return-values"></a>
 

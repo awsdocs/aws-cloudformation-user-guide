@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ExcludedAccounts](#cfn-config-organizationconfigrule-excludedaccounts)" : [ String, ... ],
       "[OrganizationConfigRuleName](#cfn-config-organizationconfigrule-organizationconfigrulename)" : String,
+      "[OrganizationCustomCodeRuleMetadata](#cfn-config-organizationconfigrule-organizationcustomcoderulemetadata)" : OrganizationCustomCodeRuleMetadata,
       "[OrganizationCustomRuleMetadata](#cfn-config-organizationconfigrule-organizationcustomrulemetadata)" : OrganizationCustomRuleMetadata,
       "[OrganizationManagedRuleMetadata](#cfn-config-organizationconfigrule-organizationmanagedrulemetadata)" : OrganizationManagedRuleMetadata
     }
@@ -32,6 +33,8 @@ Properties:
   [ExcludedAccounts](#cfn-config-organizationconfigrule-excludedaccounts): 
     - String
   [OrganizationConfigRuleName](#cfn-config-organizationconfigrule-organizationconfigrulename): String
+  [OrganizationCustomCodeRuleMetadata](#cfn-config-organizationconfigrule-organizationcustomcoderulemetadata): 
+    OrganizationCustomCodeRuleMetadata
   [OrganizationCustomRuleMetadata](#cfn-config-organizationconfigrule-organizationcustomrulemetadata): 
     OrganizationCustomRuleMetadata
   [OrganizationManagedRuleMetadata](#cfn-config-organizationconfigrule-organizationmanagedrulemetadata): 
@@ -55,6 +58,12 @@ The name that you assign to organization config rule\.
 *Maximum*: `64`  
 *Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`OrganizationCustomCodeRuleMetadata`  <a name="cfn-config-organizationconfigrule-organizationcustomcoderulemetadata"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [OrganizationCustomCodeRuleMetadata](aws-properties-config-organizationconfigrule-organizationcustomcoderulemetadata.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OrganizationCustomRuleMetadata`  <a name="cfn-config-organizationconfigrule-organizationcustomrulemetadata"></a>
 An `OrganizationCustomRuleMetadata` object\.  

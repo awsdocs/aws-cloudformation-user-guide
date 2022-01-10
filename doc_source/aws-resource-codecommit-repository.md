@@ -144,8 +144,8 @@ MyRepo:
     Code:
       BranchName: development
       S3: 
-        Bucket: MySourceCodeBucket,
-        Key: MyKey,
+        Bucket: MySourceCodeBucket
+        Key: MyKey
         ObjectVersion: 1
 ```
 

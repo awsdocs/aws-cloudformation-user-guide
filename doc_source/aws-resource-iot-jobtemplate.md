@@ -17,9 +17,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Document](#cfn-iot-jobtemplate-document)" : String,
       "[DocumentSource](#cfn-iot-jobtemplate-documentsource)" : String,
       "[JobArn](#cfn-iot-jobtemplate-jobarn)" : String,
+      "[JobExecutionsRetryConfig](#cfn-iot-jobtemplate-jobexecutionsretryconfig)" : Json,
       "[JobExecutionsRolloutConfig](#cfn-iot-jobtemplate-jobexecutionsrolloutconfig)" : Json,
       "[JobTemplateId](#cfn-iot-jobtemplate-jobtemplateid)" : String,
-      "[PresignedUrlConfig](#cfn-iot-jobtemplate-presignedurlconfig)" : ,
+      "[PresignedUrlConfig](#cfn-iot-jobtemplate-presignedurlconfig)" : Json,
       "[Tags](#cfn-iot-jobtemplate-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TimeoutConfig](#cfn-iot-jobtemplate-timeoutconfig)" : Json
     }
@@ -36,9 +37,10 @@ Properties:
   [Document](#cfn-iot-jobtemplate-document): String
   [DocumentSource](#cfn-iot-jobtemplate-documentsource): String
   [JobArn](#cfn-iot-jobtemplate-jobarn): String
+  [JobExecutionsRetryConfig](#cfn-iot-jobtemplate-jobexecutionsretryconfig): Json
   [JobExecutionsRolloutConfig](#cfn-iot-jobtemplate-jobexecutionsrolloutconfig): Json
   [JobTemplateId](#cfn-iot-jobtemplate-jobtemplateid): String
-  [PresignedUrlConfig](#cfn-iot-jobtemplate-presignedurlconfig): 
+  [PresignedUrlConfig](#cfn-iot-jobtemplate-presignedurlconfig): Json
   [Tags](#cfn-iot-jobtemplate-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TimeoutConfig](#cfn-iot-jobtemplate-timeoutconfig): Json
@@ -81,6 +83,12 @@ The ARN of the job to use as the basis for the job template\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`JobExecutionsRetryConfig`  <a name="cfn-iot-jobtemplate-jobexecutionsretryconfig"></a>
+Allows you to create the criteria to retry a job\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `JobExecutionsRolloutConfig`  <a name="cfn-iot-jobtemplate-jobexecutionsrolloutconfig"></a>
 Allows you to create a staged rollout of a job\.  
 *Required*: No  
@@ -96,7 +104,7 @@ A unique identifier for the job template\. We recommend using a UUID\. Alpha\-nu
 `PresignedUrlConfig`  <a name="cfn-iot-jobtemplate-presignedurlconfig"></a>
 Configuration for pre\-signed S3 URLs\.  
 *Required*: No  
-*Type*:   
+*Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-iot-jobtemplate-tags"></a>

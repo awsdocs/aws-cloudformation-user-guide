@@ -205,7 +205,7 @@ The following is a simple bot for the English \(US\) language\. It includes the 
 
 The example creates a bot to order flowers\. It is the same as the example bot that you can create using the console\. 
 
-#### JSON<a name="aws-resource-lex-bot--examples--Order_flowers_example_bot--json"></a>
+#### YAML<a name="aws-resource-lex-bot--examples--Order_flowers_example_bot--yaml"></a>
 
 ```
 # OrderFlower bot consists of the following
@@ -362,7 +362,7 @@ Resources:
 
 The example creates a bot to book hotel rooms and rental cars\. It is the same as the example bot that you can create using the console\. 
 
-#### JSON<a name="aws-resource-lex-bot--examples--Book_trip_example_bot--json"></a>
+#### YAML<a name="aws-resource-lex-bot--examples--Book_trip_example_bot--yaml"></a>
 
 ```
 # BookTrip bot consists of the following

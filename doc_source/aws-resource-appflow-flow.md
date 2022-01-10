@@ -264,9 +264,9 @@ Resources:
             S3:
               BucketName: TestOutputBucket
               S3OutputFormatConfig:
-                 FileType: JSON
+                FileType: JSON
                 AggregationConfig:
-                AggregationType: None
+                  AggregationType: None
       Tasks:
         - TaskType: Filter
           ConnectorOperator:

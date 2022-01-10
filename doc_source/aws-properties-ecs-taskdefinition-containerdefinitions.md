@@ -289,7 +289,8 @@ The Amazon ECS container agent running on a container instance must register the
 The amount \(in MiB\) of memory to present to the container\. If your container attempts to exceed the memory specified here, the container is killed\. The total amount of memory reserved for all containers within a task must be lower than the task `memory` value, if one is specified\. This parameter maps to `Memory` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/) and the `--memory` option to [docker run](https://docs.docker.com/engine/reference/run/#security-configuration)\.  
 If using the Fargate launch type, this parameter is optional\.  
 If using the EC2 launch type, you must specify either a task\-level memory value or a container\-level memory value\. If you specify both a container\-level `memory` and `memoryReservation` value, `memory` must be greater than `memoryReservation`\. If you specify `memoryReservation`, then that value is subtracted from the available memory resources for the container instance where the container is placed\. Otherwise, the value of `memory` is used\.  
-The Docker daemon reserves a minimum of 4 MiB of memory for a container\. Therefore, we recommend that you specify fewer than 4 MiB of memory for your containers\.  
+The Docker 20\.10\.0 or later daemon reserves a minimum of 6 MiB of memory for a container, so you should not specify fewer than 6 MiB of memory for your containers\.  
+The Docker 19\.03\.13\-ce or earlier daemon reserves a minimum of 4 MiB of memory for a container, so you should not specify fewer than 4 MiB of memory for your containers\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -68,7 +68,7 @@ The identity provider details\. The following list describes the provider detail
   + key\_id
   + private\_key
   + authorize\_scopes
-+ For OIDC providers:
++ For OpenID Connect \(OIDC\) providers:
   + client\_id
   + client\_secret
   + attributes\_request\_method
@@ -78,9 +78,10 @@ The identity provider details\. The following list describes the provider detail
   + token\_url *if not available from discovery URL specified by oidc\_issuer key* 
   + attributes\_url *if not available from discovery URL specified by oidc\_issuer key* 
   + jwks\_uri *if not available from discovery URL specified by oidc\_issuer key* 
+  + attributes\_url\_add\_attributes *a read\-only property that is set automatically* 
 + For SAML providers:
   + MetadataFile OR MetadataURL
-  + IDPSignout *optional* 
+  + IDPSignout \(optional\)
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -53,7 +53,7 @@ To resolve this situation, try the following:
 
 ### Dependency error<a name="troubleshooting-errors-dependency-error"></a>
 
-To resolve a dependency error, add a `DependsOn` attribute to resources that depend on other resources in your template\. In some cases, you must explicitly declare dependencies so that AWS CloudFormation can create or delete resources in the correct order\. For example, if you create an Elastic IP and a VPC with an Internet gateway in the same stack, the Elastic IP must depend on the Internet gateway attachment\. For additional information, see [DependsOn attribute](aws-attribute-dependson.md)\.
+To resolve a dependency error, add a `DependsOn` attribute to resources that depend on other resources in your template\. In some cases, you must explicitly declare dependencies so that AWS CloudFormation can create or delete resources in the correct order\. For example, if you create an Elastic IP and a VPC with an Internet gateway in the same stack, the Elastic IP must depend on the Internet gateway attachment\. For additional information, see [`DependsOn` attribute](aws-attribute-dependson.md)\.
 
 ### Error parsing parameter when passing a list<a name="troubleshooting-errors-error-parsing-parameter-when-passing-a-list"></a>
 
