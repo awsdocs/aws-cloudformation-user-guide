@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BotVersion](#cfn-lex-botalias-botversion)" : String,
       "[ConversationLogSettings](#cfn-lex-botalias-conversationlogsettings)" : ConversationLogSettings,
       "[Description](#cfn-lex-botalias-description)" : String,
-      "[SentimentAnalysisSettings](#cfn-lex-botalias-sentimentanalysissettings)" : Json
+      "[SentimentAnalysisSettings](#cfn-lex-botalias-sentimentanalysissettings)" : SentimentAnalysisSettings
     }
 }
 ```
@@ -41,7 +41,7 @@ Properties:
   [ConversationLogSettings](#cfn-lex-botalias-conversationlogsettings): 
     ConversationLogSettings
   [Description](#cfn-lex-botalias-description): String
-  [SentimentAnalysisSettings](#cfn-lex-botalias-sentimentanalysissettings): Json
+  [SentimentAnalysisSettings](#cfn-lex-botalias-sentimentanalysissettings): SentimentAnalysisSettings
 ```
 
 ## Properties<a name="aws-resource-lex-botalias-properties"></a>
@@ -101,7 +101,7 @@ The description of the bot alias\.
 `SentimentAnalysisSettings`  <a name="cfn-lex-botalias-sentimentanalysissettings"></a>
 Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [SentimentAnalysisSettings]()  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-lex-botalias-return-values"></a>
