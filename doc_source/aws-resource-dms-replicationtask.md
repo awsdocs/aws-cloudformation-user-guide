@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::DMS::ReplicationTask",
   "Properties" : {
       "[CdcStartPosition](#cfn-dms-replicationtask-cdcstartposition)" : String,
-      "[CdcStartTime](#cfn-dms-replicationtask-cdcstarttime)" : Double,
+      "[CdcStartTime](#cfn-dms-replicationtask-cdcstarttime)" : Number,
       "[CdcStopPosition](#cfn-dms-replicationtask-cdcstopposition)" : String,
       "[MigrationType](#cfn-dms-replicationtask-migrationtype)" : String,
       "[ReplicationInstanceArn](#cfn-dms-replicationtask-replicationinstancearn)" : String,
@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::DMS::ReplicationTask
 Properties: 
   [CdcStartPosition](#cfn-dms-replicationtask-cdcstartposition): String
-  [CdcStartTime](#cfn-dms-replicationtask-cdcstarttime): Double
+  [CdcStartTime](#cfn-dms-replicationtask-cdcstarttime): Number
   [CdcStopPosition](#cfn-dms-replicationtask-cdcstopposition): String
   [MigrationType](#cfn-dms-replicationtask-migrationtype): String
   [ReplicationInstanceArn](#cfn-dms-replicationtask-replicationinstancearn): String
@@ -54,7 +54,7 @@ Properties:
 
 `CdcStartPosition`  <a name="cfn-dms-replicationtask-cdcstartposition"></a>
 Indicates when you want a change data capture \(CDC\) operation to start\. Use either CdcStartPosition or CdcStartTime to specify when you want a CDC operation to start\. Specifying both values results in an error\.  
- The value can be in date, checkpoint, or LSN/SCN format\.  
+The value can be in date, checkpoint, or LSN/SCN format\.  
 Date Example: \-\-cdc\-start\-position “2018\-03\-08T12:12:12”  
 Checkpoint Example: \-\-cdc\-start\-position "checkpoint:V1\#27\#mysql\-bin\-changelog\.157832:1975:\-1:2002:677883278264080:mysql\-bin\-changelog\.157832:1876\#0\#0\#\*\#0\#93"  
 LSN Example: \-\-cdc\-start\-position “mysql\-bin\-changelog\.000024:373”  
@@ -65,8 +65,10 @@ When you use this task setting with a source PostgreSQL database, a logical repl
 
 `CdcStartTime`  <a name="cfn-dms-replicationtask-cdcstarttime"></a>
 Indicates the start time for a change data capture \(CDC\) operation\.  
+The value need to be in epoch timestamp in milliseconds format\.  
+Date Example: \-\-cdc\-start\-time 1641556979000  
 *Required*: No  
-*Type*: Double  
+*Type*: Number  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CdcStopPosition`  <a name="cfn-dms-replicationtask-cdcstopposition"></a>
