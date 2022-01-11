@@ -101,7 +101,7 @@ The description of the bot alias\.
 `SentimentAnalysisSettings`  <a name="cfn-lex-botalias-sentimentanalysissettings"></a>
 Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances\.  
 *Required*: No  
-*Type*: [SentimentAnalysisSettings]()  
+*Type*: [SentimentAnalysisSettings](aws-properties-lex-botalias-sentimentanalysissettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-lex-botalias-return-values"></a>
