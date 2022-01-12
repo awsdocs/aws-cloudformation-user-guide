@@ -71,7 +71,14 @@ Properties:
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExternalConnections`  <a name="cfn-codeartifact-repository-externalconnections"></a>
- An array of external connections associated with the repository\.   
+ An array of external connections associated with the repository\. CloudFormation only supports a single external connection\. The following values are supported:
+ * `public:npmjs` - for the npm public repository\.
+ * `public:pypi` - for the Python Package Index\.
+ * `public:maven-central` - for Maven Central\.
+ * `public:maven-googleandroid` - for the Google Android repository\.
+ * `public:maven-gradleplugins` - for the Gradle plugins repository\.
+ * `public:maven-commonsware` - for the CommonsWare Android repository\.
+
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -83,7 +90,7 @@ The document that defines the resource policy that is set on a repository\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RepositoryName`  <a name="cfn-codeartifact-repository-repositoryname"></a>
- The name of an upstream repository\.   
+ The name of the repository to create\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `2`  
