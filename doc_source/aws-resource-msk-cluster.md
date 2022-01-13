@@ -90,9 +90,9 @@ Specifies the level of monitoring for the MSK cluster\. The possible values are 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KafkaVersion`  <a name="cfn-msk-cluster-kafkaversion"></a>
-The version of Apache Kafka\. You can use Amazon MSK to create clusters that use Apache Kafka versions 1\.1\.1 and 2\.2\.1\.  
+The version of Apache Kafka\. For more information, see [Supported Apache Kafka versions](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) in the *Amazon MSK Developer Guide*\. 
 *Required*: Yes  
-*Type*: String  
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoggingInfo`  <a name="cfn-msk-cluster-logginginfo"></a>
