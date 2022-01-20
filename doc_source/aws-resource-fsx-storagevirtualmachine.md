@@ -87,6 +87,14 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 ### Ref<a name="aws-resource-fsx-storagevirtualmachine-return-values-ref"></a>
 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ID, such as `svm-01234567890123456`\. For example:
+
+`{"Ref": "svm_logical_id"}` returns 
+
+`svm-01234567890123456`
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 ### Fn::GetAtt<a name="aws-resource-fsx-storagevirtualmachine-return-values-fn--getatt"></a>
 
 The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
@@ -96,16 +104,16 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-fsx-storagevirtualmachine-return-values-fn--getatt-fn--getatt"></a>
 
 `ResourceARN`  <a name="ResourceARN-fn::getatt"></a>
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\)\.  
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+Returns the storage virtual machine's Amazon Resource Name \(ARN\)\.  
+Example: `arn:aws:fsx:us-east-2:111111111111:storage-virtual-machine/fs-0123456789abcdef1/svm-01234567890123456`
 
 `StorageVirtualMachineId`  <a name="StorageVirtualMachineId-fn::getatt"></a>
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the SVM's system generated unique ID\.  
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+Returns the storgage virtual machine's system generated ID\.  
+Example: `svm-0123456789abcedf1`
 
 `UUID`  <a name="UUID-fn::getatt"></a>
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the volume's universally unique identifier \(UUID\)\.  
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+Returns the storage virtual machine's system generated unique identifier \(UUID\)\.  
+Example: `abcd0123-cd45-ef67-11aa-1111aaaa23bc`
 
 ## Examples<a name="aws-resource-fsx-storagevirtualmachine--examples"></a>
 

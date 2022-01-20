@@ -48,28 +48,32 @@ The tags\.
 
 ### Fn::GetAtt<a name="aws-resource-ec2-networkinsightsaccessscopeanalysis-return-values-fn--getatt"></a>
 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
 #### <a name="aws-resource-ec2-networkinsightsaccessscopeanalysis-return-values-fn--getatt-fn--getatt"></a>
 
 `AnalyzedEniCount`  <a name="AnalyzedEniCount-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The number of network interfaces analyzed\.
 
 `EndDate`  <a name="EndDate-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The end date of the analysis\.
 
 `FindingsFound`  <a name="FindingsFound-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Indicates whether there are findings \(true \| false \| unknown\)\.
 
 `NetworkInsightsAccessScopeAnalysisArn`  <a name="NetworkInsightsAccessScopeAnalysisArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ARN of the Network Access Scope analysis\.
 
 `NetworkInsightsAccessScopeAnalysisId`  <a name="NetworkInsightsAccessScopeAnalysisId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ID of the Network Access Scope analysis\.
 
 `StartDate`  <a name="StartDate-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The start date of the analysis\.
 
 `Status`  <a name="Status-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The status of the analysis \(running \| succeeded \| failed\)\.
 
 `StatusMessage`  <a name="StatusMessage-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The status message\.

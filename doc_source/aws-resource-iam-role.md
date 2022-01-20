@@ -105,7 +105,7 @@ If an external policy \(such as `AWS::IAM::Policy` or `AWS::IAM::ManagedPolicy`\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleName`  <a name="cfn-iam-role-rolename"></a>
-A name for the IAM role, up to 64 characters in length\. For valid values, see the `RoleName` parameter for the [ `CreateRole` ](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html) action in the *IAM User Guide*\.  
+A name for the IAM role, up to 64 characters in length\. For valid values, see the `RoleName` parameter for the [https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html) action in the *IAM User Guide*\.  
 This parameter allows \(per its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces\. You can also include any of the following characters: \_\+=,\.@\-\. The role name must be unique within the account\. Role names are not distinguished by case\. For example, you cannot create roles named both "Role1" and "role1"\.  
 If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the role name\.  
 If you specify a name, you must specify the `CAPABILITY_NAMED_IAM` value to acknowledge your template's capabilities\. For more information, see [Acknowledging IAM Resources in AWS CloudFormation Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-capabilities)\.  

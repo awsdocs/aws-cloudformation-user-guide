@@ -54,6 +54,7 @@ Constraints: Maximum length of 256 characters\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `256`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalNetworkId`  <a name="cfn-networkmanager-link-globalnetworkid"></a>
@@ -62,6 +63,7 @@ The ID of the global network\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `50`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Provider`  <a name="cfn-networkmanager-link-provider"></a>
@@ -71,6 +73,7 @@ Constraints: Maximum length of 128 characters\. Cannot include the following cha
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `256`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SiteId`  <a name="cfn-networkmanager-link-siteid"></a>
@@ -79,6 +82,7 @@ The ID of the site\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `50`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-networkmanager-link-tags"></a>
@@ -94,6 +98,7 @@ Constraints: Maximum length of 128 characters\. Cannot include the following cha
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `256`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-networkmanager-link-return-values"></a>

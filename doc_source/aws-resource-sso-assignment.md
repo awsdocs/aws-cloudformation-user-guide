@@ -59,7 +59,7 @@ The ARN of the permission set\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PrincipalId`  <a name="cfn-sso-assignment-principalid"></a>
-An identifier for an object in AWS SSO, such as a user or group\. PrincipalIds are GUIDs \(For example, f81d4fae\-7dec\-11d0\-a765\-00a0c91e6bf6\)\. For more information about PrincipalIds in AWS SSO, see the [ AWS SSO Identity Store API Reference](/singlesignon/latest/IdentityStoreAPIReference/welcome.html)\.  
+An identifier for an object in AWS SSO, such as a user or group\. PrincipalIds are GUIDs \(For example, f81d4fae\-7dec\-11d0\-a765\-00a0c91e6bf6\)\. For more information about PrincipalIds in AWS SSO, see the [AWS SSO Identity Store API Reference](/singlesignon/latest/IdentityStoreAPIReference/welcome.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

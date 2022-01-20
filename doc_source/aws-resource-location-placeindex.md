@@ -43,7 +43,7 @@ Valid values include:
 + `Esri`
 + `Here`
 **Important**  
-Place index resources using HERE as a data provider can't be used to [store](https://docs.aws.amazon.com/location-places/latest/APIReference/API_DataSourceConfiguration.html) results for locations in Japan\. For more information, see the [AWS Service Terms](https://docs.aws.amazon.com/service-terms/) for Amazon Location Service\.
+Place index resources using HERE as a data provider can't be used to [store](https://docs.aws.amazon.com/location-places/latest/APIReference/API_DataSourceConfiguration.html) results for locations in Japan\. For more information, see the [AWS Service Terms](http://aws.amazon.com/service-terms/) for Amazon Location Service\.
 For additional details on data providers, see the [Amazon Location Service data providers page](https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html)\.  
 *Required*: Yes  
 *Type*: String  
@@ -78,8 +78,38 @@ Requirements:
 
 `PricingPlan`  <a name="cfn-location-placeindex-pricingplan"></a>
 Specifies the pricing plan for your place index resource\.  
-For additional details and restrictions on each pricing plan option, see the [Amazon Location Service pricing page](https://docs.aws.amazon.com/location/pricing/)\.  
+For additional details and restrictions on each pricing plan option, see the [Amazon Location Service pricing page](http://aws.amazon.com/location/pricing/)\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `MobileAssetManagement | MobileAssetTracking | RequestBasedUsage`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Return values<a name="aws-resource-location-placeindex-return-values"></a>
+
+### Ref<a name="aws-resource-location-placeindex-return-values-ref"></a>
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `PlaceIndex` ARN\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-location-placeindex-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-location-placeindex-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) for the place index resource\. Used to specify a resource across AWS\.   
++ Format example: `arn:aws:geo:region:account-id:place-index/ExamplePlaceIndex`
+
+`CreateTime`  <a name="CreateTime-fn::getatt"></a>
+The timestamp for when the place index resource was created in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format: `YYYY-MM-DDThh:mm:ss.sssZ`\.
+
+`IndexArn`  <a name="IndexArn-fn::getatt"></a>
+Synonym for `Arn`\. The Amazon Resource Name \(ARN\) for the place index resource\. Used to specify a resource across AWS\.   
++ Format example: `arn:aws:geo:region:account-id:place-index/ExamplePlaceIndex`
+
+`UpdateTime`  <a name="UpdateTime-fn::getatt"></a>
+The timestamp for when the place index resource was last updated in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format: `YYYY-MM-DDThh:mm:ss.sssZ`\.

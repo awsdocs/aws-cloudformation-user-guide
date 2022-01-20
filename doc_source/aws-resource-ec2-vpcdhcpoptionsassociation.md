@@ -53,10 +53,12 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Fn::GetAtt<a name="aws-resource-ec2-vpcdhcpoptionsassociation-return-values-fn--getatt"></a>
 
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 #### <a name="aws-resource-ec2-vpcdhcpoptionsassociation-return-values-fn--getatt-fn--getatt"></a>
 
 `Id`  <a name="Id-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ID of the DHCP options set\.
 
 ## Examples<a name="aws-resource-ec2-vpcdhcpoptionsassociation--examples"></a>
 

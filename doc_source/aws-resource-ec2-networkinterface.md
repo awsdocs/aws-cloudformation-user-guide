@@ -187,7 +187,7 @@ This example creates a standalone elastic network interface \(ENI\)\. To learn h
 
 ### Attach a network interface to an EC2 instance at launch<a name="aws-resource-ec2-networkinterface--examples--Attach_a_network_interface_to_an_EC2_instance_at_launch"></a>
 
-This example attaches a network interface an EC2 instance\. You can use the NetworkInterface property to add more than one network interface\. However, you can specify multiple network interfaces if they all have only private IP addresses \(no associated public IP address\)\. If you have a network interface with a public IP address, specify when you launch the instance and then use `AWS::EC2::NetworkInterfaceAttachment` to attach the additional network interfaces\.
+This example attaches a network interface to an EC2 instance\. You can use the NetworkInterface property to add more than one network interface\. However, you can specify multiple network interfaces if they all have only private IP addresses \(no associated public IP address\)\. If you have a network interface with a public IP address, specify when you launch the instance and then use `AWS::EC2::NetworkInterfaceAttachment` to attach the additional network interfaces\.
 
 #### JSON<a name="aws-resource-ec2-networkinterface--examples--Attach_a_network_interface_to_an_EC2_instance_at_launch--json"></a>
 
@@ -227,7 +227,7 @@ Ec2Instance:
       NetworkInterfaces:
       - NetworkInterfaceId:
          Ref: myENI
-        DeviceIndex: '0'
+        DeviceIndex: '1'
       Tags:
       - Key: Role
         Value: Test Instance

@@ -4,7 +4,7 @@ AWS OpsWorks is an application management service that simplifies a wide range o
 
 ## AWS OpsWorks sample PHP app<a name="quickref-opsworks-sample-php-app"></a>
 
-The following sample template deploys a sample AWS OpsWorks PHP web application that's stored in public Git repository\. The AWS OpsWorks stack includes two application servers with a load balancer that distributes incoming traffic evenly across the servers\. The AWS OpsWorks stack also includes a back\-end MySQL database server to store data\. For more information about the sample AWS OpsWorks application, see [Walkthrough: Learn AWS AWS OpsWorks basics by creating an application server stack](https://docs.aws.amazon.com/opsworks/latest/userguide/gettingstarted.html) in the *AWS OpsWorks User Guide*\.
+The following sample template deploys a sample AWS OpsWorks PHP web application that's stored in public Git repository\. The AWS OpsWorks stack includes two application servers with a load balancer that distributes incoming traffic evenly across the servers\. The AWS OpsWorks stack also includes a back\-end MySQL database server to store data\. For more information about the sample AWS OpsWorks application, see [Walkthrough: Learn AWSAWS OpsWorks basics by creating an application server stack](https://docs.aws.amazon.com/opsworks/latest/userguide/gettingstarted.html) in the *AWS OpsWorks User Guide*\.
 
 **Note**  
 The `ServiceRoleArn` and `DefaultInstanceProfileArn` properties reference IAM roles that are created after you use AWS OpsWorks for the first time\.

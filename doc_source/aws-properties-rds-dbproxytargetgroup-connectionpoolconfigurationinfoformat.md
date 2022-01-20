@@ -47,7 +47,7 @@ Default: no initialization query
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxConnectionsPercent`  <a name="cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-maxconnectionspercent"></a>
-The maximum size of the connection pool for each target in a target group\. For Aurora MySQL, it is expressed as a percentage of the `max_connections` setting for the RDS DB instance or Aurora DB cluster used by the target group\.  
+The maximum size of the connection pool for each target in a target group\. The value is expressed as a percentage of the `max_connections` setting for the RDS DB instance or Aurora DB cluster used by the target group\.  
 Default: 100  
 Constraints: between 1 and 100  
 *Required*: No  
@@ -55,7 +55,7 @@ Constraints: between 1 and 100
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxIdleConnectionsPercent`  <a name="cfn-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat-maxidleconnectionspercent"></a>
- Controls how actively the proxy closes idle database connections in the connection pool\. A high value enables the proxy to leave a high percentage of idle connections open\. A low value causes the proxy to close idle client connections and return the underlying database connections to the connection pool\. For Aurora MySQL, it is expressed as a percentage of the `max_connections` setting for the RDS DB instance or Aurora DB cluster used by the target group\.   
+ Controls how actively the proxy closes idle database connections in the connection pool\. The value is expressed as a percentage of the `max_connections` setting for the RDS DB instance or Aurora DB cluster used by the target group\. With a high value, the proxy leaves a high percentage of idle database connections open\. A low value causes the proxy to close more idle connections and return them to the database\.   
 Default: 50  
 Constraints: between 0 and `MaxConnectionsPercent`   
 *Required*: No  

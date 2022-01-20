@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticache-replicationgroup-destinationdetails-properties"></a>
 
 `CloudWatchLogsDetails`  <a name="cfn-elasticache-replicationgroup-destinationdetails-cloudwatchlogsdetails"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration details of the CloudWatch Logs destination\. Note that this field is marked as required but only if CloudWatch Logs was chosen as the destination\.  
 *Required*: No  
 *Type*: [CloudWatchLogsDestinationDetails](aws-properties-elasticache-replicationgroup-cloudwatchlogsdestinationdetails.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

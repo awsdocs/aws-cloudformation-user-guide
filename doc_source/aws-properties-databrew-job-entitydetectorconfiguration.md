@@ -1,6 +1,6 @@
 # AWS::DataBrew::Job EntityDetectorConfiguration<a name="aws-properties-databrew-job-entitydetectorconfiguration"></a>
 
-<a name="aws-properties-databrew-job-entitydetectorconfiguration-description"></a>The `EntityDetectorConfiguration` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::DataBrew::Job](aws-resource-databrew-job.md)\.
+Configuration of entity detection for a profile job\. When undefined, entity detection is disabled\.
 
 ## Syntax<a name="aws-properties-databrew-job-entitydetectorconfiguration-syntax"></a>
 

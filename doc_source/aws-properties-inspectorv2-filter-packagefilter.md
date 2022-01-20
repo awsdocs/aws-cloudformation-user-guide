@@ -39,13 +39,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-inspectorv2-filter-packagefilter-properties"></a>
 
 `Architecture`  <a name="cfn-inspectorv2-filter-packagefilter-architecture"></a>
-The package architecture type to filter on\.  
+An object that contains details on the package architecture type to filter on\.  
 *Required*: No  
 *Type*: [StringFilter](aws-properties-inspectorv2-filter-stringfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Epoch`  <a name="cfn-inspectorv2-filter-packagefilter-epoch"></a>
-The package epoch to filter on\.  
+An object that contains details on the package epoch to filter on\.  
 *Required*: No  
 *Type*: [NumberFilter](aws-properties-inspectorv2-filter-numberfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

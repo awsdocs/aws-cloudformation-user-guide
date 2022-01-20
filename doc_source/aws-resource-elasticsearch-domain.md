@@ -3,7 +3,7 @@
 The AWS::Elasticsearch::Domain resource creates an Amazon OpenSearch Service \(successor to Amazon Elasticsearch Service\) domain\.
 
 **Important**  
-The `AWS::Elasticsearch::Domain` resource is being replaced by the [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html) resource\. While the legacy Elasticsearch resource and options are still supported, we recommend modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which supports both OpenSearch and Elasticsearch\. For more information about the service rename, see [New resource types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource) in the *Amazon OpenSearch Service Developer Guide*\.
+The `AWS::Elasticsearch::Domain` resource is being replaced by the [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html) resource\. While the legacy Elasticsearch resource and options are still supported, we recommend modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which supports both OpenSearch and legacy Elasticsearch\. For instructions to upgrade domains defined within CloudFormation from Elasticsearch to OpenSearch, see [Remarks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#aws-resource-opensearchservice-domain--remarks)\.
 
 ## Syntax<a name="aws-resource-elasticsearch-domain-syntax"></a>
 
@@ -182,6 +182,60 @@ The Amazon Resource Name \(ARN\) of the domain, such as `arn:aws:es:us-west-2:12
 
 `DomainEndpoint`  <a name="DomainEndpoint-fn::getatt"></a>
 The domain\-specific endpoint that's used for requests to the OpenSearch APIs, such as `search-mystack-elasti-1ab2cdefghij-ab1c2deckoyb3hofw7wpqa3cm.us-west-1.es.amazonaws.com`\.
+
+## Remarks<a name="aws-resource-elasticsearch-domain--remarks"></a>
+
+ *Migrating stacks from Elasticsearch to OpenSearch* 
+
+**Important**  
+You can't directly update a CloudFormation templates to use the `AWS::OpenSearchService::Domain` resource in place of `AWS::Elasticsearch::Domain`, otherwise the corresponding domain will be deleted along with all of its data\.
+
+Perform the following steps to migrate an Elasticsearch domain to an OpenSearch domain if the domain is defined within CloudFormation\.
+
+ **Step 1: Prepare your existing stack for deprecation** 
+
+Make a copy of your original CloudFormation template, which contains the Elasticsearch domain resource, for use in step 3\. Then add the following attributes to the Elasticsearch domain resource at the same level as `Type` and `Properties`\. 
+
+`DeletionPolicy: Retain`
+
+`UpdateReplacePolicy: Retain`
+
+These settings ensure that CloudFormation doesn't delete or modify the corresponding domain when you delete this resource from your stack\. If you have other custom resources defined in the stack that aren't critically important during the short migration period, you can delete them from the template and they'll be recreated when you create the new stack\.
+
+ **Step 2: Upgrade your domain to OpenSearch** 
+
+After you add the two policy attributes to your template, upgrade your domain to an OpenSearch version using the normal upgrade process\. For instructions, see [Starting an upgrade](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/version-migration.html#starting-upgrades)\. Make sure to take a snapshot of your domain before upgrading it to prevent accidental loss of data\.
+
+ **Step 3: Create a new CloudFormation template** 
+
+While you wait for the upgrade to complete, prepare your new OpenSearch template\. Using the copy of your original template that you made in step 1, make the following changes:
++ Change the domain resource type from `AWS::Elasticsearch::Domain` to `AWS::OpenSearchService::Domain`\.
++ Add the `DeletionPolicy` and `UpdateReplacePolicy` attributes to the resource, as you did in step 1\.
++ Change `ElasticsearchVersion` to `EngineVersion` and set its value to `OpenSearch_1.0` \(or whichever version of OpenSearch you want to upgrade to\)\.
++ If your resource contains `ElasticsearchClusterConfig`, change it to `ClusterConfig`\.
++ Change the suffixes of all instance types from `.elasticsearch` to `.search`\.
++ If your template includes `ColdStorageOptions`, remove it, as it's not currently supported for OpenSearch resources\.
++ If there are any `Fn::GetAtt` or `!GetAtt` references to your domain ARN, change them to `!GetAtt MyDomain.Arn`\.
++ Comment out any resources not currently within the stack \(most likely everything except `AWS::OpenSearchService::Domain`\)\.
+
+See the next section for examples that demonstrate the new format\.
+
+ **Step 4: Import the OpenSearch stack** 
+
+Once your domain upgrade finishes, you can import the new stack\. Within CloudFormation, choose **Create stack** and **With existing resources \(import resources\)**, then upload the template you created in the previous step\.
+
+CloudFormation prompts you for the name \(identifier value\) of the existing domain\. Copy the domain name directly from the OpenSearch console\. Give the stack a name that's different from the current one, then choose **Import resources**\.
+
+After the stack is created, uncomment any related resources from the stack and update it to ensure they're recreated\. You can remove the `DeletionPolicy` and `UpdateReplacePolicy` attributes if you want, but they can help prevent accidental deletions in the future\.
+
+ **Step 5: Delete the Elasticsearch stack** 
+
+Now that your new stack is created, delete the old stack which contains the legacy Elasticsearch resource\.
+
+**Important**  
+Before deleting the old stack, make absolutely sure that the template contains the `DeletionPolicy: Retain` attribute\.
+
+\*The above steps were partially derived from this [blog post](https://onecloudplease.com/blog/migrating-to-opensearch-with-cloudformation)\.
 
 ## Examples<a name="aws-resource-elasticsearch-domain--examples"></a>
 

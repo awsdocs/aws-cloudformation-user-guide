@@ -401,7 +401,7 @@ A list of tags to be added to this resource\. Tags are comma\-separated key,valu
 `TransitEncryptionEnabled`  <a name="cfn-elasticache-replicationgroup-transitencryptionenabled"></a>
 A flag that enables in\-transit encryption when set to `true`\.  
 You cannot modify the value of `TransitEncryptionEnabled` after the cluster is created\. To enable in\-transit encryption on a cluster you must set `TransitEncryptionEnabled` to `true` when you create a cluster\.  
-This parameter is valid only if the `Engine` parameter is `redis`, the `EngineVersion` parameter is `3.2.6` or `4.x` or `5.x`, and the cluster is being created in an Amazon VPC\.  
+This parameter is valid only if the `Engine` parameter is `redis`, the `EngineVersion` parameter is `3.2.6` or `4.x` onward, and the cluster is being created in an Amazon VPC\.  
 If you enable in\-transit encryption, you must also specify a value for `CacheSubnetGroup`\.  
  **Required:** Only available when creating a replication group in an Amazon VPC using redis version `3.2.6` or `4.x` onward\.  
 Default: `false`   

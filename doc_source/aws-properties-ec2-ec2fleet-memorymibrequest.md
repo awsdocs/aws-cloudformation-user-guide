@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-ec2fleet-memorymibrequest-properties"></a>
 
 `Max`  <a name="cfn-ec2-ec2fleet-memorymibrequest-max"></a>
-Not currently supported by AWS CloudFormation\.  
+The maximum amount of memory, in MiB\. To specify no maximum limit, omit this parameter\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Min`  <a name="cfn-ec2-ec2fleet-memorymibrequest-min"></a>
-Not currently supported by AWS CloudFormation\.  
+The minimum amount of memory, in MiB\. To specify no minimum limit, specify `0`\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

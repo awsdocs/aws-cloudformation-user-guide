@@ -1,6 +1,6 @@
 # AWS::Glue::Database PrincipalPrivileges<a name="aws-properties-glue-database-principalprivileges"></a>
 
-<a name="aws-properties-glue-database-principalprivileges-description"></a>The `PrincipalPrivileges` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Glue::Database](aws-resource-glue-database.md)\.
+the permissions granted to a principal
 
 ## Syntax<a name="aws-properties-glue-database-principalprivileges-syntax"></a>
 
@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-glue-database-principalprivileges-properties"></a>
 
 `Permissions`  <a name="cfn-glue-database-principalprivileges-permissions"></a>
-Not currently supported by AWS CloudFormation\.  
+The permissions that are granted to the principal\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Principal`  <a name="cfn-glue-database-principalprivileges-principal"></a>
-Not currently supported by AWS CloudFormation\.  
+The principal who is granted permissions\.  
 *Required*: No  
 *Type*: [DataLakePrincipal](aws-properties-glue-database-datalakeprincipal.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

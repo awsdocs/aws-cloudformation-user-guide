@@ -63,7 +63,7 @@ Requirements:
 
 `PricingPlan`  <a name="cfn-location-map-pricingplan"></a>
 Specifies the pricing plan for your map resource\.  
-For additional details and restrictions on each pricing plan option, see the [Amazon Location Service pricing page](https://docs.aws.amazon.com/location/pricing/)\.  
+For additional details and restrictions on each pricing plan option, see the [Amazon Location Service pricing page](http://aws.amazon.com/location/pricing/)\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `MobileAssetManagement | MobileAssetTracking | RequestBasedUsage`  
@@ -73,11 +73,15 @@ For additional details and restrictions on each pricing plan option, see the [Am
 
 ### Ref<a name="aws-resource-location-map-return-values-ref"></a>
 
-### Fn::GetAtt<a name="aws-resource-location-map-return-values-fn--getatt"></a>
-
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `MapName`\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `Map` ARN\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-location-map-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-location-map-return-values-fn--getatt-fn--getatt"></a>
 
@@ -85,8 +89,15 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 The Amazon Resource Name \(ARN\) for the map resource\. Used to specify a resource across all AWS\.  
 + Format example: `arn:aws:geo:region:account-id:maps/ExampleMap`
 
+`CreateTime`  <a name="CreateTime-fn::getatt"></a>
+The timestamp for when the map resource was created in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format: `YYYY-MM-DDThh:mm:ss.sssZ`\.
+
 `DataSource`  <a name="DataSource-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The data provider for the associated map tiles\.
+
+`MapArn`  <a name="MapArn-fn::getatt"></a>
+Synonym for `Arn`\. The Amazon Resource Name \(ARN\) for the map resource\. Used to specify a resource across all AWS\.  
++ Format example: `arn:aws:geo:region:account-id:maps/ExampleMap`
 
 `UpdateTime`  <a name="UpdateTime-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The timestamp for when the map resource was last updated in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format: `YYYY-MM-DDThh:mm:ss.sssZ`\.

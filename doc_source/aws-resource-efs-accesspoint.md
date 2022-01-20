@@ -80,11 +80,11 @@ The directory on the Amazon EFS file system that the access point exposes as the
 
 ### Ref<a name="aws-resource-efs-accesspoint-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ID\. For example: 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the AccessPoint ID\. For example: 
 
- `{"Ref":"fsap-0123456789abcdef0"}`\.
+`{"Ref":"access_point-logical_id"}` returns
 
- Ref returns the access point ID\.
+`fsap-0123456789abcdef0`
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

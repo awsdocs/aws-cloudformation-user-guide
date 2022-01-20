@@ -9,7 +9,7 @@ If the distribution uses `Aliases` \(alternate domain names or CNAMEs\), use the
   + To accept HTTPS connections from only viewers that support SNI, set `SSLSupportMethod` to `sni-only`\. This is recommended\. Most browsers and clients support SNI\. \(In CloudFormation, the field name is `SslSupportMethod`\. Note the different capitalization\.\)
   + To accept HTTPS connections from all viewers, including those that don’t support SNI, set `SSLSupportMethod` to `vip`\. This is not recommended, and results in additional monthly charges from CloudFront\. \(In CloudFormation, the field name is `SslSupportMethod`\. Note the different capitalization\.\)
 + The minimum SSL/TLS protocol version that the distribution can use to communicate with viewers\. To specify a minimum version, choose a value for `MinimumProtocolVersion`\. For more information, see [Security Policy](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValues-security-policy) in the *Amazon CloudFront Developer Guide*\.
-+ The location of the SSL/TLS certificate, [ AWS Certificate Manager \(ACM\)](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html) \(recommended\) or [ AWS Identity and Access Management \(IAM\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html)\. You specify the location by setting a value in one of the following fields \(not both\):
++ The location of the SSL/TLS certificate, [AWS Certificate Manager \(ACM\)](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html) \(recommended\) or [AWS Identity and Access Management \(IAM\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html)\. You specify the location by setting a value in one of the following fields \(not both\):
   +  `ACMCertificateArn` \(In CloudFormation, this field name is `AcmCertificateArn`\. Note the different capitalization\.\)
   +  `IAMCertificateId` \(In CloudFormation, this field name is `IamCertificateId`\. Note the different capitalization\.\)
 
@@ -47,7 +47,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AcmCertificateArn`  <a name="cfn-cloudfront-distribution-viewercertificate-acmcertificatearn"></a>
 In CloudFormation, this field name is `AcmCertificateArn`\. Note the different capitalization\.
-If the distribution uses `Aliases` \(alternate domain names or CNAMEs\) and the SSL/TLS certificate is stored in [ AWS Certificate Manager \(ACM\)](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html), provide the Amazon Resource Name \(ARN\) of the ACM certificate\. CloudFront only supports ACM certificates in the US East \(N\. Virginia\) Region \(`us-east-1`\)\.  
+If the distribution uses `Aliases` \(alternate domain names or CNAMEs\) and the SSL/TLS certificate is stored in [AWS Certificate Manager \(ACM\)](https://docs.aws.amazon.com/acm/latest/userguide/acm-overview.html), provide the Amazon Resource Name \(ARN\) of the ACM certificate\. CloudFront only supports ACM certificates in the US East \(N\. Virginia\) Region \(`us-east-1`\)\.  
 If you specify an ACM certificate ARN, you must also specify values for `MinimumProtocolVersion` and `SSLSupportMethod`\. \(In CloudFormation, the field name is `SslSupportMethod`\. Note the different capitalization\.\)  
 *Required*: Conditional  
 *Type*: String  
@@ -67,7 +67,7 @@ If the distribution uses `Aliases` \(alternate domain names or CNAMEs\), set thi
 
 `IamCertificateId`  <a name="cfn-cloudfront-distribution-viewercertificate-iamcertificateid"></a>
 In CloudFormation, this field name is `IamCertificateId`\. Note the different capitalization\.
-If the distribution uses `Aliases` \(alternate domain names or CNAMEs\) and the SSL/TLS certificate is stored in [ AWS Identity and Access Management \(IAM\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html), provide the ID of the IAM certificate\.  
+If the distribution uses `Aliases` \(alternate domain names or CNAMEs\) and the SSL/TLS certificate is stored in [AWS Identity and Access Management \(IAM\)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs.html), provide the ID of the IAM certificate\.  
 If you specify an IAM certificate ID, you must also specify values for `MinimumProtocolVersion` and `SSLSupportMethod`\. \(In CloudFormation, the field name is `SslSupportMethod`\. Note the different capitalization\.\)  
 *Required*: Conditional  
 *Type*: String  
@@ -91,7 +91,7 @@ In CloudFormation, this field name is `SslSupportMethod`\. Note the different ca
 If the distribution uses `Aliases` \(alternate domain names or CNAMEs\), specify which viewers the distribution accepts HTTPS connections from\.  
 +  `sni-only` – The distribution accepts HTTPS connections from only viewers that support [server name indication \(SNI\)](https://en.wikipedia.org/wiki/Server_Name_Indication)\. This is recommended\. Most browsers and clients support SNI\.
 +  `vip` – The distribution accepts HTTPS connections from all viewers including those that don’t support SNI\. This is not recommended, and results in additional monthly charges from CloudFront\.
-+  `static-ip` \- Do not specify this value unless your distribution has been enabled for this feature by the CloudFront team\. If you have a use case that requires static IP addresses for a distribution, contact CloudFront through the [ AWS Support Center](https://console.aws.amazon.com/support/home)\.
++  `static-ip` \- Do not specify this value unless your distribution has been enabled for this feature by the CloudFront team\. If you have a use case that requires static IP addresses for a distribution, contact CloudFront through the [AWS Support Center](https://console.aws.amazon.com/support/home)\.
 If the distribution uses the CloudFront domain name such as `d111111abcdef8.cloudfront.net`, don’t set a value for this field\.  
 *Required*: Conditional  
 *Type*: String  

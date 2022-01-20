@@ -180,7 +180,7 @@ If you specify the `Metrics` parameter, you cannot specify `MetricName`, `Dimens
 
 `Namespace`  <a name="cfn-cloudwatch-alarms-namespace"></a>
 The namespace of the metric associated with the alarm\. This is required for an alarm based on a metric\. For an alarm based on a math expression, you can't specify `Namespace` and you use `Metrics` instead\.  
-For a list of namespaces for metrics from AWS services, see [ AWS Services That Publish CloudWatchMetrics\. ](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)  
+For a list of namespaces for metrics from AWS services, see [AWS Services That Publish CloudWatchMetrics\. ](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

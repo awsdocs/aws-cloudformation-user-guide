@@ -69,8 +69,38 @@ The optional description for the route calculator resource\.
 
 `PricingPlan`  <a name="cfn-location-routecalculator-pricingplan"></a>
 Specifies the pricing plan for your route calculator resource\.  
-For additional details and restrictions on each pricing plan option, see the [Amazon Location Service pricing page](https://docs.aws.amazon.com/location/pricing/)\.  
+For additional details and restrictions on each pricing plan option, see the [Amazon Location Service pricing page](http://aws.amazon.com/location/pricing/)\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `MobileAssetManagement | MobileAssetTracking | RequestBasedUsage`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Return values<a name="aws-resource-location-routecalculator-return-values"></a>
+
+### Ref<a name="aws-resource-location-routecalculator-return-values-ref"></a>
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `RouteCalculator` ARN\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-location-routecalculator-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-location-routecalculator-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) for the route calculator resource\. Use the ARN when you specify a resource across all AWS\.  
++ Format example: `arn:aws:geo:region:account-id:route-calculator/ExampleCalculator`
+
+`CalculatorArn`  <a name="CalculatorArn-fn::getatt"></a>
+Synonym for `Arn`\. The Amazon Resource Name \(ARN\) for the route calculator resource\. Use the ARN when you specify a resource across all AWS\.  
++ Format example: `arn:aws:geo:region:account-id:route-calculator/ExampleCalculator`
+
+`CreateTime`  <a name="CreateTime-fn::getatt"></a>
+The timestamp for when the route calculator resource was created in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format: `YYYY-MM-DDThh:mm:ss.sssZ`\.
+
+`UpdateTime`  <a name="UpdateTime-fn::getatt"></a>
+The timestamp for when the route calculator resource was last updated in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format: `YYYY-MM-DDThh:mm:ss.sssZ`\.

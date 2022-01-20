@@ -70,7 +70,7 @@ An array of key\-value pairs to apply to this resource\.
 #### <a name="aws-resource-config-storedquery-return-values-fn--getatt-fn--getatt"></a>
 
 `QueryArn`  <a name="QueryArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Amazon Resource Name \(ARN\) of the query\. For example, arn:partition:service:region:account\-id:resource\-type/resource\-name/resource\-id\.
 
 `QueryId`  <a name="QueryId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ID of the query\.

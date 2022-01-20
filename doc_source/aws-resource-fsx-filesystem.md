@@ -1,6 +1,10 @@
 # AWS::FSx::FileSystem<a name="aws-resource-fsx-filesystem"></a>
 
-The `AWS::FSx::FileSystem` resource is an Amazon FSx resource type that creates either an Amazon FSx for Windows File Server file system or an Amazon FSx for Lustre file system\.
+The `AWS::FSx::FileSystem` resource is an Amazon FSx resource type that creates an Amazon FSx file system\. You can create any of the following supported file system types:
++ Amazon FSx for Lustre
++ Amazon FSx for NetApp ONTAP
++ Amazon FSx for OpenZFS
++ Amazon FSx for Windows File Server
 
 ## Syntax<a name="aws-resource-fsx-filesystem-syntax"></a>
 
@@ -163,11 +167,11 @@ The configuration object for the Microsoft Windows file system you are creating\
 
 ### Ref<a name="aws-resource-fsx-filesystem-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the function returns the file system resource ID\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the file system resource ID\. For example:
 
-`{"Ref":"fs-01234567890123456"}`
+`{"Ref":"file_system_logical_id"}`
 
-For the Amazon FSx file system `fs-01234567890123456`, Ref returns the file system ID\.
+Returns `fs-0123456789abcdef6`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -180,13 +184,17 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-fsx-filesystem-return-values-fn--getatt-fn--getatt"></a>
 
 `DNSName`  <a name="DNSName-fn::getatt"></a>
-Use the DNSName value to access the DNS name of your Amazon FSx file system\. The DNS name identifies the file system\.
+Returns the FSx for Windows file system's DNSName\.  
+Example: `amznfsxp1honlek.corp.example.com`
 
 `LustreMountName`  <a name="LustreMountName-fn::getatt"></a>
-Use the LustreMountName value when mounting an Amazon FSx for Lustre file system\. For SCRATCH\_1 deployment types, this value is always "fsx"\. For SCRATCH\_2 and PERSISTENT\_1 deployment types, this value is a string that is unique within an AWS Region\. For more information, see [Mounting from an Amazon EC2 Instance](https://docs.aws.amazon.com/fsx/latest/LustreGuide/mounting-ec2-instance.html)\.
+Returns the file system's LustreMountName\.  
+Example for SCRATCH\_1 deployment types: This value is always `fsx`\.  
+Example for SCRATCH\_2 and PERSISTENT deployment types: `2p3fhbmv`
 
 `RootVolumeId`  <a name="RootVolumeId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Returns the root volume ID of the FSx for OpenZFS file system\.  
+Example: `fsvol-0123456789abcdefa`
 
 ## Examples<a name="aws-resource-fsx-filesystem--examples"></a>
 

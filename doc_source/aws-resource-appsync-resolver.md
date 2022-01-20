@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DataSourceName](#cfn-appsync-resolver-datasourcename)" : String,
       "[FieldName](#cfn-appsync-resolver-fieldname)" : String,
       "[Kind](#cfn-appsync-resolver-kind)" : String,
+      "[MaxBatchSize](#cfn-appsync-resolver-maxbatchsize)" : Integer,
       "[PipelineConfig](#cfn-appsync-resolver-pipelineconfig)" : PipelineConfig,
       "[RequestMappingTemplate](#cfn-appsync-resolver-requestmappingtemplate)" : String,
       "[RequestMappingTemplateS3Location](#cfn-appsync-resolver-requestmappingtemplates3location)" : String,
@@ -43,6 +44,7 @@ Properties:
   [DataSourceName](#cfn-appsync-resolver-datasourcename): String
   [FieldName](#cfn-appsync-resolver-fieldname): String
   [Kind](#cfn-appsync-resolver-kind): String
+  [MaxBatchSize](#cfn-appsync-resolver-maxbatchsize): Integer
   [PipelineConfig](#cfn-appsync-resolver-pipelineconfig): 
     PipelineConfig
   [RequestMappingTemplate](#cfn-appsync-resolver-requestmappingtemplate): String
@@ -86,6 +88,12 @@ The resolver type\.
 +  **PIPELINE**: A PIPELINE resolver type\. You can use a PIPELINE resolver to invoke a series of `Function` objects in a serial manner\. You can use a pipeline resolver to run a GraphQL query against multiple data sources\.
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MaxBatchSize`  <a name="cfn-appsync-resolver-maxbatchsize"></a>
+The maximum number of resolver request inputs that will be sent to a single AWS Lambda function in a `BatchInvoke` operation\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PipelineConfig`  <a name="cfn-appsync-resolver-pipelineconfig"></a>

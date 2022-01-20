@@ -2,7 +2,7 @@
 
 The optional `Rules` section validates a parameter or a combination of parameters passed to a template during a stack creation or stack update\. To use template rules, explicitly declare `Rules` in your template followed by an assertion\. Use the rules section to validate parameter values before creating or updating resources\.
 
-## Working with rules<a name="w10874ab1c23c15c19b5"></a>
+## Working with rules<a name="w10966ab1c23c15c19b5"></a>
 
 Each template rule consists of two properties:
 + *Rule condition* \(optional\) — determines when a rule takes effect\.

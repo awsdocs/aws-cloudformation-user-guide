@@ -71,11 +71,11 @@ The ID of the subnet to add the mount target in\. For file systems that use One 
 
 ### Ref<a name="aws-resource-efs-mounttarget-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ID\. For example: 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the MountTarget ID\. For example: 
 
- `{"Ref":"fsmt-12345678"}`\.
+ `{"Ref":"logical_mount_target_id"}` returns
 
-For the Amazon EFS file system mount target `fsmt-12345678`, Ref returns the mount target ID\.
+`fsmt-0123456789abcdef8`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -88,10 +88,12 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-efs-mounttarget-return-values-fn--getatt-fn--getatt"></a>
 
 `Id`  <a name="Id-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ID of the Amazon EFS file system that the mount target provides access to\.  
+Example: `fs-0123456789111222a`
 
 `IpAddress`  <a name="IpAddress-fn::getatt"></a>
-The IPv4 address of the mount target\.
+The IPv4 address of the mount target\.  
+Example: 192\.0\.2\.0
 
 ## Examples<a name="aws-resource-efs-mounttarget--examples"></a>
 

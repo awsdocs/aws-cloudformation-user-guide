@@ -1,6 +1,6 @@
 # AWS::DataBrew::Dataset S3Location<a name="aws-properties-databrew-dataset-s3location"></a>
 
-Represents an Amazon S3 location \(bucket name and object key\) where DataBrew can read input data, or write output from a job\.
+Represents an Amazon S3 location \(bucket name, bucket owner, and object key\) where DataBrew can read input data, or write output from a job\.
 
 ## Syntax<a name="aws-properties-databrew-dataset-s3location-syntax"></a>
 

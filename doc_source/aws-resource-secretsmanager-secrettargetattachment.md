@@ -44,7 +44,7 @@ The ARN or name of the secret\. To reference a secret also created in this templ
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetId`  <a name="cfn-secretsmanager-secrettargetattachment-targetid"></a>
-The ARN of the database or cluster\.  
+The ID of the database or cluster\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  

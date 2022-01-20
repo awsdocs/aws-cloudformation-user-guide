@@ -103,6 +103,14 @@ The type of the volume\.
 
 ### Ref<a name="aws-resource-fsx-volume-return-values-ref"></a>
 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID for the volume\. For example:
+
+`{"Ref":"vol_logical_id"}`
+
+Returns `fsvol-0123456789abcdef6`\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 ### Fn::GetAtt<a name="aws-resource-fsx-volume-return-values-fn--getatt"></a>
 
 The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
@@ -112,16 +120,16 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-fsx-volume-return-values-fn--getatt-fn--getatt"></a>
 
 `ResourceARN`  <a name="ResourceARN-fn::getatt"></a>
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\)\.  
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+Returns the volume's Amazon Resource Name \(ARN\)\.  
+Example: `arn:aws:fsx:us-east-2:111122223333:volume/fs-0123456789abcdef9/fsvol-01234567891112223`
 
 `UUID`  <a name="UUID-fn::getatt"></a>
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the volume's universally unique identifier \(UUID\)\.  
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+Returns the volume's universally unique identifier \(UUID\)\.  
+Example: `abcd0123-cd45-ef67-11aa-1111aaaa23bc`
 
 `VolumeId`  <a name="VolumeId-fn::getatt"></a>
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the system\-generated, unique ID of the volume\.  
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+Returns the volume's ID\.  
+Example: `fsvol-0123456789abcdefa`
 
 ## Examples<a name="aws-resource-fsx-volume--examples"></a>
 

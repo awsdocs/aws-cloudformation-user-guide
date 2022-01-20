@@ -28,5 +28,5 @@ The overrides document\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `51200`  
-*Pattern*: `^.*$`  
+*Pattern*: `.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

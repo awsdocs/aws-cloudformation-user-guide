@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DataSourceName](#cfn-appsync-functionconfiguration-datasourcename)" : String,
       "[Description](#cfn-appsync-functionconfiguration-description)" : String,
       "[FunctionVersion](#cfn-appsync-functionconfiguration-functionversion)" : String,
+      "[MaxBatchSize](#cfn-appsync-functionconfiguration-maxbatchsize)" : Integer,
       "[Name](#cfn-appsync-functionconfiguration-name)" : String,
       "[RequestMappingTemplate](#cfn-appsync-functionconfiguration-requestmappingtemplate)" : String,
       "[RequestMappingTemplateS3Location](#cfn-appsync-functionconfiguration-requestmappingtemplates3location)" : String,
@@ -39,6 +40,7 @@ Properties:
   [DataSourceName](#cfn-appsync-functionconfiguration-datasourcename): String
   [Description](#cfn-appsync-functionconfiguration-description): String
   [FunctionVersion](#cfn-appsync-functionconfiguration-functionversion): String
+  [MaxBatchSize](#cfn-appsync-functionconfiguration-maxbatchsize): Integer
   [Name](#cfn-appsync-functionconfiguration-name): String
   [RequestMappingTemplate](#cfn-appsync-functionconfiguration-requestmappingtemplate): String
   [RequestMappingTemplateS3Location](#cfn-appsync-functionconfiguration-requestmappingtemplates3location): String
@@ -72,6 +74,12 @@ The `Function` description\.
 The version of the request mapping template\. Currently, only the 2018\-05\-29 version of the template is supported\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MaxBatchSize`  <a name="cfn-appsync-functionconfiguration-maxbatchsize"></a>
+The maximum number of resolver request inputs that will be sent to a single AWS Lambda function in a `BatchInvoke` operation\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-appsync-functionconfiguration-name"></a>

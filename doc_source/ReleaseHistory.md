@@ -4,6 +4,17 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_AppSync.md) | The following resources were updated: AWS::AppSync::Resolver and AWS::AppSync::FunctionConfiguration 
+
+ [AWS::AppSync::Resolver](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-maxbatchsize)   
+Use the `MaxBatchSize` property to specify the maximum number of resolver request inputs that will be sent to a single AWS Lambda function in a `BatchInvoke` operation\.  
+
+ [AWS::AppSync::FunctionConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html#cfn-appsync-functionconfiguration-maxbatchsize)   
+Use the `MaxBatchSize` property to specify the maximum number of resolver request inputs that will be sent to a single AWS Lambda function in a `BatchInvoke` operation\.   | January 13, 2022 | 
+| [Updated resource](AWS_FMS.md) | The following resource was updated: AWS::FMS::Policy\. 
+
+ [AWS::FMS::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html)   
+The `AWS::FMS::Policy` resource now allows you to manage Shield Advanced automatic application layer DDoS mitigation for Shield Advanced policies that you use for Amazon CloudFront distributions\.   | January 7, 2022 | 
 | [Updated resource](AWS_EKS.md) | The following property was updated: `AWS::EKS::Cluster KubernetesNetworkConfig` 
 
  [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html)   
@@ -29,7 +40,7 @@ Use the `AWS::Lightsail::LoadBalancer` resource to specify an Amazon Lightsail l
 Use the `AWS::Lightsail::LoadBalancerTlsCertificate` resource to specify a certificate that you can use with an Amazon Lightsail load balancer that is in the same AWS Region and Availability Zone\.  | January 6, 2022 | 
 | [New resource](AWS_InspectorV2.md) | The following resource was added: AWS::InspectorV2::Filter\. 
 
- [AWS::InspectorV2::Filter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ResourceName.html)   
+ [AWS::InspectorV2::Filter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspectorv2-filter.html)   
 Use the `AWS::InspectorV2::Filter` resource to specify a filter\.  | January 6, 2022 | 
 | [New resource](AWS_IoT.md) | The following resource is new: AWS::IoT::JobTemplate 
 
@@ -2773,7 +2784,7 @@ Use the `MeshOwner` property to specify the account ID that owns a shared mesh\.
 | [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster 
 
  [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
-Use `LoggingInfo` to stream broker logs to one or more of the following destination types: Amazon CloudWatch Logs, Amazon S3, Amazon Kinesis Data Firehose\.  | March 12, 2020 | 
+Use `LoggingInfo` to stream broker logs to one or more of the following destination types: Amazon CloudWatch Logs, Amazon S3, Kinesis Data Firehose\.  | March 12, 2020 | 
 | [New and updated resources](AWS_ApiGatewayV2.md) | The following resources were added or updated: `AWS::ApiGatewayV2::ApiGatewayManagedOverrides`, `AWS::ApiGatewayV2::Integration`, and `AWS::ApiGatewayV2::VpcLink`\. 
 
  [AWS::ApiGatewayV2::ApiGatewayManagedOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apigatewaymanagedoverrides.html)   
@@ -2943,6 +2954,14 @@ The `AWS::AppConfig::Environment` resource creates an environment, which is a lo
 
  [AWS::AppConfig::DeploymentStrategy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html)   
 The `AWS::AppConfig::DeploymentStrategy` resource creates an AWS AppConfig deployment strategy\.   | January 23, 2020 | 
+| [Updated resource](AWS_Glue.md) | The following resource was updated: AWS::Glue::Crawler 
+
+ [AWS::Glue::Crawler](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html)   
+Use the `MongoDBTarget` property to specify an Amazon DocumentDB or MongoDB data store to crawl\.  
+Use the `RecrawlPolicy.RecrawlBehavior` property to specify a new `CRAWL_EVENT_MODE` that specifies crawling only the changes identified by Amazon S3 events\.  
+Use the `S3Target.SampleSize` property to specify the number of files in each leaf folder to be crawled when crawling sample files in a dataset\.  
+Use the `S3Target.EventQueueArn` property to specify a valid Amazon SQS ARN\.  
+Use the `S3Target.DlqEventQueueArn` property to specify a valid Amazon dead\-letter SQS ARN\.  | January 20, 2020 | 
 | [Updated resources](AWS_Lambda.md) | The following resource was updated: AWS::Lambda::Function\. 
 
  [AWS::Lambda::Function](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html)   

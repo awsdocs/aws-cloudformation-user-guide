@@ -154,7 +154,6 @@ Valid Values: `ReportBatchItemFailures`
 `MaximumBatchingWindowInSeconds`  <a name="cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds"></a>
 \(Streams and Amazon SQS standard queues\) The maximum amount of time, in seconds, that Lambda spends gathering records before invoking the function\.  
 Default: 0  
-Related setting: When you set `BatchSize` to a value greater than 10, you must set `MaximumBatchingWindowInSeconds` to at least 1\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  

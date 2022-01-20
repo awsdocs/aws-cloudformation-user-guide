@@ -83,7 +83,7 @@ Choose the parameter that will define how your automation will branch out\. This
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CalendarNames`  <a name="cfn-ssm-association-calendarnames"></a>
-The names or Amazon Resource Names \(ARNs\) of the Change Calendar type documents your associations are gated under\. The associations only run when that Change Calendar is open\. For more information, see [ AWS Systems Manager Change Calendar](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-change-calendar)\.  
+The names or Amazon Resource Names \(ARNs\) of the Change Calendar type documents your associations are gated under\. The associations only run when that Change Calendar is open\. For more information, see [AWS Systems Manager Change Calendar](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-change-calendar)\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -189,7 +189,7 @@ The number of seconds the service should wait for the association status to show
 #### <a name="aws-resource-ssm-association-return-values-fn--getatt-fn--getatt"></a>
 
 `AssociationId`  <a name="AssociationId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The association ID\.
 
 ## Examples<a name="aws-resource-ssm-association--examples"></a>
 

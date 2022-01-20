@@ -26,7 +26,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-datasource-webcrawlersitemapsconfiguration-properties"></a>
 
 `SiteMaps`  <a name="cfn-kendra-datasource-webcrawlersitemapsconfiguration-sitemaps"></a>
-Not currently supported by AWS CloudFormation\.  
+The list of sitemap URLs of the websites you want to crawl\.  
+The list can include a maximum of three sitemap URLs\.  
 *Required*: Yes  
 *Type*: List of String  
+*Maximum*: `3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

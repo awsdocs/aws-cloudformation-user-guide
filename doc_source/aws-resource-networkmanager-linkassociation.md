@@ -37,6 +37,7 @@ The device ID for the link association\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `50`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GlobalNetworkId`  <a name="cfn-networkmanager-linkassociation-globalnetworkid"></a>
@@ -45,6 +46,7 @@ The ID of the global network\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `50`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LinkId`  <a name="cfn-networkmanager-linkassociation-linkid"></a>
@@ -53,6 +55,7 @@ The ID of the link\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `50`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-networkmanager-linkassociation-return-values"></a>

@@ -1,6 +1,6 @@
 # AWS::InspectorV2::Filter NumberFilter<a name="aws-properties-inspectorv2-filter-numberfilter"></a>
 
-Describes the details of a number filter\.
+An object that describes the details of a number filter\.
 
 ## Syntax<a name="aws-properties-inspectorv2-filter-numberfilter-syntax"></a>
 

@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CachingKeys](#cfn-appsync-resolver-cachingconfig-cachingkeys)" : [ String, ... ],
-  "[Ttl](#cfn-appsync-resolver-cachingconfig-ttl)" : Double
+  "[Ttl](#cfn-appsync-resolver-cachingconfig-ttl)" : Integer
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CachingKeys](#cfn-appsync-resolver-cachingconfig-cachingkeys): 
     - String
-  [Ttl](#cfn-appsync-resolver-cachingconfig-ttl): Double
+  [Ttl](#cfn-appsync-resolver-cachingconfig-ttl): Integer
 ```
 
 ## Properties<a name="aws-properties-appsync-resolver-cachingconfig-properties"></a>
@@ -35,6 +35,6 @@ Valid values are entries from the `$context.arguments`, `$context.source`, and `
 `Ttl`  <a name="cfn-appsync-resolver-cachingconfig-ttl"></a>
 The TTL in seconds for a resolver that has caching activated\.  
 Valid values are 1–3,600 seconds\.  
-*Required*: No  
-*Type*: Double  
+*Required*: Yes  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

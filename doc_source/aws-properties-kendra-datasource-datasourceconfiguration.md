@@ -105,7 +105,7 @@ Provides the configuration information required for Amazon Kendra Web Crawler\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WorkDocsConfiguration`  <a name="cfn-kendra-datasource-datasourceconfiguration-workdocsconfiguration"></a>
-Not currently supported by AWS CloudFormation\.  
+Provides the configuration information to connect to WorkDocs as your data source\.  
 *Required*: No  
 *Type*: [WorkDocsConfiguration](aws-properties-kendra-datasource-workdocsconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

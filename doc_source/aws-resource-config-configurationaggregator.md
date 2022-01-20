@@ -78,7 +78,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### <a name="aws-resource-config-configurationaggregator-return-values-fn--getatt-fn--getatt"></a>
 
 `ConfigurationAggregatorArn`  <a name="ConfigurationAggregatorArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The Amazon Resource Name \(ARN\) of the aggregator\.
 
 ## Examples<a name="aws-resource-config-configurationaggregator--examples"></a>
 

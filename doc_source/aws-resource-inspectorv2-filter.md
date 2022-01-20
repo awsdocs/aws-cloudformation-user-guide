@@ -1,6 +1,6 @@
 # AWS::InspectorV2::Filter<a name="aws-resource-inspectorv2-filter"></a>
 
-The details of a filter\.
+Details about a filter\.
 
 ## Syntax<a name="aws-resource-inspectorv2-filter-syntax"></a>
 
@@ -47,7 +47,7 @@ The action that is to be applied to the findings that match the filter\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FilterCriteria`  <a name="cfn-inspectorv2-filter-filtercriteria"></a>
-Details on the criteria used to define the filter\.  
+Details on the filter criteria associated with this filter\.  
 *Required*: Yes  
 *Type*: [FilterCriteria](aws-properties-inspectorv2-filter-filtercriteria.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

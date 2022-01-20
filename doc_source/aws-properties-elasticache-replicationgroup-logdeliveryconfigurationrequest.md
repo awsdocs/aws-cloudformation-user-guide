@@ -48,7 +48,7 @@ Valid values are either `json` or `text`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogType`  <a name="cfn-elasticache-replicationgroup-logdeliveryconfigurationrequest-logtype"></a>
-Valid value is `slow-log`\. Refers to [slow\-log](https://redis.io/commands/slowlog)\.  
+Valid value is either `slow-log`, which refers to [slow\-log](https://redis.io/commands/slowlog) or `engine-log`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

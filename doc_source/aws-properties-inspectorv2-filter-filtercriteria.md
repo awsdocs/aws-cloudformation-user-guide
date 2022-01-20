@@ -150,7 +150,7 @@ Details of the Amazon EC2 instance VPC IDs used to filter findings\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EcrImageArchitecture`  <a name="cfn-inspectorv2-filter-filtercriteria-ecrimagearchitecture"></a>
-Not currently supported by AWS CloudFormation\.  
+Details of the Amazon ECR image architecture types used to filter findings\.  
 *Required*: No  
 *Type*: List of [StringFilter](aws-properties-inspectorv2-filter-stringfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -168,7 +168,7 @@ Details on the Amazon ECR image push date and time used to filter findings\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EcrImageRegistry`  <a name="cfn-inspectorv2-filter-filtercriteria-ecrimageregistry"></a>
-Details on the name of the Amazon ECR repository used to filter findings\.  
+Details on the Amazon ECR registry used to filter findings\.  
 *Required*: No  
 *Type*: List of [StringFilter](aws-properties-inspectorv2-filter-stringfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -234,7 +234,7 @@ Details on the port ranges used to filter findings\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RelatedVulnerabilities`  <a name="cfn-inspectorv2-filter-filtercriteria-relatedvulnerabilities"></a>
-Details of the Amazon ECR image architecture types used to filter findings\.  
+Details on the related vulnerabilities used to filter findings\.  
 *Required*: No  
 *Type*: List of [StringFilter](aws-properties-inspectorv2-filter-stringfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -276,7 +276,7 @@ Details on the date and time a finding was last updated at used to filter findin
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VendorSeverity`  <a name="cfn-inspectorv2-filter-filtercriteria-vendorseverity"></a>
-Details on the severity used to filter findings\.  
+Details on the vendor severity used to filter findings\.  
 *Required*: No  
 *Type*: List of [StringFilter](aws-properties-inspectorv2-filter-stringfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -288,7 +288,7 @@ Details on the vulnerability ID used to filter findings\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VulnerabilitySource`  <a name="cfn-inspectorv2-filter-filtercriteria-vulnerabilitysource"></a>
-Details on the vulnerability score to filter findings by\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: List of [StringFilter](aws-properties-inspectorv2-filter-stringfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -49,7 +49,7 @@ An owner account\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `12`  
-*Pattern*: `^[0-9a-z\_]+$`  
+*Pattern*: `[0-9a-z\_]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PackageId`  <a name="cfn-panorama-packageversion-packageid"></a>
@@ -58,7 +58,7 @@ A package ID\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `255`  
-*Pattern*: `^[a-zA-Z0-9\-\_\/]+$`  
+*Pattern*: `[a-zA-Z0-9\-\_\/]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PackageVersion`  <a name="cfn-panorama-packageversion-packageversion"></a>
@@ -67,7 +67,7 @@ A package version\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `255`  
-*Pattern*: `^([0-9]+)\.([0-9]+)$`  
+*Pattern*: `([0-9]+)\.([0-9]+)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PatchVersion`  <a name="cfn-panorama-packageversion-patchversion"></a>
@@ -76,7 +76,7 @@ A patch version\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `255`  
-*Pattern*: `^[a-z0-9]+$`  
+*Pattern*: `[a-z0-9]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UpdatedLatestPatchVersion`  <a name="cfn-panorama-packageversion-updatedlatestpatchversion"></a>
@@ -85,7 +85,7 @@ If the version was marked latest, the new version to maker as latest\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `255`  
-*Pattern*: `^[a-z0-9]+$`  
+*Pattern*: `[a-z0-9]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-panorama-packageversion-return-values"></a>

@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cognito-userpoolclient-analyticsconfiguration-properties"></a>
 
 `ApplicationArn`  <a name="cfn-cognito-userpoolclient-analyticsconfiguration-applicationarn"></a>
-Not currently supported by AWS CloudFormation\.  
+The Amazon Resource Name \(ARN\) of an Amazon Pinpoint project\. You can use the Amazon Pinpoint project for integration with the chosen user pool client\. Amazon Cognito publishes events to the Amazon Pinpoint project that the app ARN declares\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

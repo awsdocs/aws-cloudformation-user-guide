@@ -90,13 +90,13 @@ Specifies the level of monitoring for the MSK cluster\. The possible values are 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KafkaVersion`  <a name="cfn-msk-cluster-kafkaversion"></a>
-The version of Apache Kafka\. For more information, see [Supported Apache Kafka versions](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) in the *Amazon MSK Developer Guide*\. 
+The version of Apache Kafka\. For more information, see [Supported Apache Kafka versions](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) in the Amazon MSK Developer Guide\.  
 *Required*: Yes  
-*Type*: String
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoggingInfo`  <a name="cfn-msk-cluster-logginginfo"></a>
-You can configure your MSK cluster to send broker logs to different destination types\. This is a container for the configuration details related to broker logs\.  
+You can configure your Amazon MSK cluster to send broker logs to different destination types\. This is a container for the configuration details related to broker logs\.  
 *Required*: No  
 *Type*: [LoggingInfo](aws-properties-msk-cluster-logginginfo.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -160,7 +160,7 @@ The stack's default operating system, which is installed on every instance unles
 +  `Red Hat Enterprise Linux 7` 
 + A supported Windows operating system, such as `Microsoft Windows Server 2012 R2 Base`, `Microsoft Windows Server 2012 R2 with SQL Server Express`, `Microsoft Windows Server 2012 R2 with SQL Server Standard`, or `Microsoft Windows Server 2012 R2 with SQL Server Web`\.
 + A custom AMI: `Custom`\. You specify the custom AMI you want to use when you create instances\. For more information, see [ Using Custom AMIs](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-custom-ami.html)\.
-The default option is the current Amazon Linux version\. Not all operating systems are supported with all versions of Chef\. For more information about supported operating systems, see [ AWS OpsWorks Stacks Operating Systems](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-os.html)\.  
+The default option is the current Amazon Linux version\. Not all operating systems are supported with all versions of Chef\. For more information about supported operating systems, see [AWS OpsWorks Stacks Operating Systems](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-os.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

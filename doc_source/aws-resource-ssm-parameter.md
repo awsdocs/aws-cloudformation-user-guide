@@ -113,6 +113,7 @@ AWS CloudFormation doesn't support creating a `SecureString` parameter type\.
 
 `Value`  <a name="cfn-ssm-parameter-value"></a>
 The parameter value\.  
+If type is `StringList`, the system returns a comma\-separated string with no spaces between commas in the `Value` field\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

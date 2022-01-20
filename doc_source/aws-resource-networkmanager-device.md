@@ -52,6 +52,7 @@ Constraints: Maximum length of 256 characters\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `256`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalNetworkId`  <a name="cfn-networkmanager-device-globalnetworkid"></a>
@@ -60,6 +61,7 @@ The ID of the global network\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `50`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Location`  <a name="cfn-networkmanager-device-location"></a>
@@ -75,6 +77,7 @@ Constraints: Maximum length of 128 characters\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `256`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SerialNumber`  <a name="cfn-networkmanager-device-serialnumber"></a>
@@ -84,6 +87,7 @@ Constraints: Maximum length of 128 characters\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `256`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SiteId`  <a name="cfn-networkmanager-device-siteid"></a>
@@ -92,6 +96,7 @@ The site ID\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `50`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-networkmanager-device-tags"></a>
@@ -106,6 +111,7 @@ The device type\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `256`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Vendor`  <a name="cfn-networkmanager-device-vendor"></a>
@@ -115,6 +121,7 @@ Constraints: Maximum length of 128 characters\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `256`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-networkmanager-device-return-values"></a>

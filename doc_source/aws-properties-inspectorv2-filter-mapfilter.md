@@ -1,6 +1,6 @@
 # AWS::InspectorV2::Filter MapFilter<a name="aws-properties-inspectorv2-filter-mapfilter"></a>
 
-The details of a map filter\.
+An object that describes details of a map filter\.
 
 ## Syntax<a name="aws-properties-inspectorv2-filter-mapfilter-syntax"></a>
 

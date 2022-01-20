@@ -86,7 +86,7 @@ Environment variables must not start with `AWS_BATCH`; this naming convention is
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExecutionRoleArn`  <a name="cfn-batch-jobdefinition-containerproperties-executionrolearn"></a>
-The Amazon Resource Name \(ARN\) of the execution role that AWS Batch can assume\. For jobs that run on Fargate resources, you must provide an execution role\. For more information, see [ AWS Batch execution IAM role](https://docs.aws.amazon.com/batch/latest/userguide/execution-IAM-role.html) in the * AWS Batch User Guide*\.  
+The Amazon Resource Name \(ARN\) of the execution role that AWS Batch can assume\. For jobs that run on Fargate resources, you must provide an execution role\. For more information, see [AWS Batch execution IAM role](https://docs.aws.amazon.com/batch/latest/userguide/execution-IAM-role.html) in the * AWS Batch User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

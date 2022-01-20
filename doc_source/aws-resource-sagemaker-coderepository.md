@@ -2,7 +2,7 @@
 
 Creates a Git repository as a resource in your Amazon SageMaker account\. You can associate the repository with notebook instances so that you can use Git source control for the notebooks you create\. The Git repository is a resource in your Amazon SageMaker account, so it can be associated with more than one notebook instance, and it persists independently from the lifecycle of any notebook instances it is associated with\.
 
-The repository can be hosted either in [ AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository\.
+The repository can be hosted either in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository\.
 
 ## Syntax<a name="aws-resource-sagemaker-coderepository-syntax"></a>
 

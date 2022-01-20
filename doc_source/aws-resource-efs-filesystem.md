@@ -67,7 +67,7 @@ Use the `BackupPolicy` to turn automatic backups on or off for the file system\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BypassPolicyLockoutSafetyCheck`  <a name="cfn-efs-filesystem-bypasspolicylockoutsafetycheck"></a>
-Not currently supported by AWS CloudFormation\.  
+\(Optional\) Use this boolean to use or bypass the `FileSystemPolicy` lockout safety check\. The policy lockout safety check determines if the `FileSystemPolicy` in the request will lock out the IAM principal making the request, preventing them from making future `PutFileSystemPolicy` requests on the file system\. Set `BypassPolicyLockoutSafetyCheck` to `True` only when you intend to prevent the IAM principal that is making the request from making a subsequent `PutFileSystemPolicy` request on the file system\. The default value is `False`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -138,11 +138,11 @@ Default is `bursting`\.
 
 ### Ref<a name="aws-resource-efs-filesystem-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ID\. For example: 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the FileSystem ID\. For example: 
 
- `{"Ref":"fs-12345678"}`\.
+ `{"Ref":"file_system-logical_id"}` returns
 
-For the Amazon EFS file system `fs-12345678`, Ref returns the file system ID\.
+`fs-0123456789abcdef2`
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -155,7 +155,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-efs-filesystem-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the EFS file system\. For example: `arn:aws:elasticfilesystem:us-west-2:1111333322228888:file-system/fs-12345678`
+The Amazon Resource Name \(ARN\) of the EFS file system\.  
+Example: `arn:aws:elasticfilesystem:us-west-2:1111333322228888:file-system/fs-0123456789abcdef8`
 
 `FileSystemId`  <a name="FileSystemId-fn::getatt"></a>
 The ID of the EFS file system\. For example: `fs-12345678`

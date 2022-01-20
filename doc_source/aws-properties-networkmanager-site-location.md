@@ -32,6 +32,7 @@ The physical address\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `256`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Latitude`  <a name="cfn-networkmanager-site-location-latitude"></a>
@@ -40,6 +41,7 @@ The latitude\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `256`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Longitude`  <a name="cfn-networkmanager-site-location-longitude"></a>
@@ -48,4 +50,5 @@ The longitude\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `256`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

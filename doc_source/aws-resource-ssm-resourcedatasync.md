@@ -138,7 +138,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### <a name="aws-resource-ssm-resourcedatasync-return-values-fn--getatt-fn--getatt"></a>
 
 `SyncName`  <a name="SyncName-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The name of the resource data sync\.
 
 ## Examples<a name="aws-resource-ssm-resourcedatasync--examples"></a>
 

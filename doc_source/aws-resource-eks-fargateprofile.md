@@ -10,7 +10,7 @@ Fargate profiles are immutable\. However, you can create a new updated profile t
 
 If any Fargate profiles in a cluster are in the `DELETING` status, you must wait for that Fargate profile to finish deleting before you can create any other profiles in that cluster\.
 
-For more information, see [ AWS Fargate Profile](https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html) in the *Amazon EKS User Guide*\.
+For more information, see [AWS Fargate Profile](https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html) in the *Amazon EKS User Guide*\.
 
 ## Syntax<a name="aws-resource-eks-fargateprofile-syntax"></a>
 

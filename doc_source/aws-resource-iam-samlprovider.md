@@ -9,7 +9,7 @@ When you create the SAML provider resource, you upload a SAML metadata document 
 **Note**  
  This operation requires [Signature Version 4](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html)\.
 
- For more information, see [Enabling SAML 2\.0 federated users to access the AWS Management Console ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-saml.html) and [About SAML 2\.0\-based federation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_saml.html) in the *IAM User Guide*\.
+ For more information, see [Enabling SAML 2\.0 federated users to access the AWS Management Console](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_enable-console-saml.html) and [About SAML 2\.0\-based federation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_saml.html) in the *IAM User Guide*\.
 
 ## Syntax<a name="aws-resource-iam-samlprovider-syntax"></a>
 

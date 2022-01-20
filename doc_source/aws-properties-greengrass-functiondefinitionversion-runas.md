@@ -5,7 +5,7 @@
 **Important**  
 Running as the root user increases risks to your data and device\. Do not run as root \(UID/GID=0\) unless your business case requires it\. For more information and requirements, see [Running a Lambda Function as Root](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-group-config.html#lambda-running-as-root)\. 
 
-<a name="aws-properties-greengrass-functiondefinitionversion-runas-inheritance"></a> In an AWS CloudFormation template, `RunAs` is a property of the [ `Execution` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-execution.html) property type\.
+<a name="aws-properties-greengrass-functiondefinitionversion-runas-inheritance"></a> In an AWS CloudFormation template, `RunAs` is a property of the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-execution.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-execution.html) property type\.
 
 ## Syntax<a name="aws-properties-greengrass-functiondefinitionversion-runas-syntax"></a>
 

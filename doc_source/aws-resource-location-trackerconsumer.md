@@ -1,6 +1,6 @@
 # AWS::Location::TrackerConsumer<a name="aws-resource-location-trackerconsumer"></a>
 
-The `AWS::Location::TrackerConsumer` resource specifies an association between a geofence collection and a tracker resource\. This allows the tracker resource to communicate location data to the linked geofence collection\.
+The `AWS::Location::TrackerConsumer` resource specifies an association between a geofence collection and a tracker resource\. The geofence collection is referred to as the *consumer* of the tracker\. This allows the tracker resource to communicate location data to the linked geofence collection\.
 
 **Note**  
 Currently not supported — Cross\-account configurations, such as creating associations between a tracker resource in one account and a geofence collection in another account\.
@@ -33,7 +33,7 @@ Properties:
 ## Properties<a name="aws-resource-location-trackerconsumer-properties"></a>
 
 `ConsumerArn`  <a name="cfn-location-trackerconsumer-consumerarn"></a>
-The Amazon Resource Name \(ARN\) for the geofence collection to be disassociated from the tracker resource\. Used when you need to specify a resource across all AWS\.  
+The Amazon Resource Name \(ARN\) for the geofence collection that consumes the tracker resource updates\.  
 + Format example: `arn:aws:geo:region:account-id:geofence-collection/ExampleGeofenceCollectionConsumer`
 *Required*: Yes  
 *Type*: String  
@@ -54,3 +54,11 @@ Requirements:
 *Maximum*: `100`  
 *Pattern*: `^[-._\w]+$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Return values<a name="aws-resource-location-trackerconsumer-return-values"></a>
+
+### Ref<a name="aws-resource-location-trackerconsumer-return-values-ref"></a>
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `GeofenceCollection` ARN\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

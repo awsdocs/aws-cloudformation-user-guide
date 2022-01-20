@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-msk-cluster-publicaccess-properties"></a>
 
 `Type`  <a name="cfn-msk-cluster-publicaccess-type"></a>
-Set to DISABLED to turn off public access or to SERVICE\_PROVIDED\_EIPS to turn it on\. Public access if off by default\.  
+Set to `DISABLED` to turn off public access or to `SERVICE_PROVIDED_EIPS` to turn it on\. Public access if off by default\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

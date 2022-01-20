@@ -163,7 +163,7 @@ The instance's operating system, which must be set to one of the following\.
 +  `Red Hat Enterprise Linux 7` 
 + A supported Windows operating system, such as `Microsoft Windows Server 2012 R2 Base`, `Microsoft Windows Server 2012 R2 with SQL Server Express`, `Microsoft Windows Server 2012 R2 with SQL Server Standard`, or `Microsoft Windows Server 2012 R2 with SQL Server Web`\.
 + A custom AMI: `Custom`\.
-Not all operating systems are supported with all versions of Chef\. For more information about the supported operating systems, see [ AWS OpsWorks Stacks Operating Systems](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-os.html)\.  
+Not all operating systems are supported with all versions of Chef\. For more information about the supported operating systems, see [AWS OpsWorks Stacks Operating Systems](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-os.html)\.  
 The default option is the current Amazon Linux version\. If you set this parameter to `Custom`, you must use the [CreateInstance](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/CreateInstance) action's AmiId parameter to specify the custom AMI that you want to use\. Block device mappings are not supported if the value is `Custom`\. For more information about how to use custom AMIs with AWS OpsWorks Stacks, see [Using Custom AMIs](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-custom-ami.html)\.  
 *Required*: No  
 *Type*: String  

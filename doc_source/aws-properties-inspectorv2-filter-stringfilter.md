@@ -1,6 +1,6 @@
 # AWS::InspectorV2::Filter StringFilter<a name="aws-properties-inspectorv2-filter-stringfilter"></a>
 
-Describes the details of a string filter\.
+An object that describes the details of a string filter\.
 
 ## Syntax<a name="aws-properties-inspectorv2-filter-stringfilter-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-inspectorv2-filter-stringfilter-properties"></a>
 
 `Comparison`  <a name="cfn-inspectorv2-filter-stringfilter-comparison"></a>
-The operator to compare strings on\.  
+The operator to use when comparing values in the filter  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-inspectorv2-filter-stringfilter-value"></a>
-The value to compare strings on\.  
+The value to filter on\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

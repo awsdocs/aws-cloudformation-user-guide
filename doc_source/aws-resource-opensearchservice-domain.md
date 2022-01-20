@@ -2,7 +2,8 @@
 
 The AWS::OpenSearchService::Domain resource creates an Amazon OpenSearch Service \(successor to Amazon Elasticsearch Service\) domain\.
 
-**Important**: For instructions to upgrade domains defined within CloudFormation from Elasticsearch to OpenSearch, see [Remarks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#aws-resource-opensearchservice-domain--remarks)\.
+**Important**  
+The `AWS::OpenSearchService::Domain` resource replaces the legacy [AWS::Elasticsearch::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html) resource\. While the Elasticsearch resource and options are still supported, we recommend modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which supports both OpenSearch and legacy Elasticsearch engines\. For instructions to upgrade domains defined within CloudFormation from Elasticsearch to OpenSearch, see [Remarks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#aws-resource-opensearchservice-domain--remarks)\.
 
 ## Syntax<a name="aws-resource-opensearchservice-domain-syntax"></a>
 
@@ -169,12 +170,12 @@ When the logical ID of this resource is provided to the Ref intrinsic function, 
 
 ### Fn::GetAtt<a name="aws-resource-opensearchservice-domain-return-values-fn--getatt"></a>
 
-Fn::GetAtt returns a value for a specified attribute of this type\. For more information, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\. The following are the available attributes and sample return values\.
+GetAtt returns a value for a specified attribute of this type\. For more information, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\. The following are the available attributes and sample return values\.
 
 #### <a name="aws-resource-opensearchservice-domain-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the domain, such as `arn:aws:es:us-west-2:123456789012:domain/mystack-1ab2cdefghij`\. This returned value is the same as the one returned by `AWS::OpenSearchService::Domain.Arn`\.
+The Amazon Resource Name \(ARN\) of the domain, such as `arn:aws:es:us-west-2:123456789012:domain/mystack-1ab2cdefghij`\.
 
 `DomainArn`  <a name="DomainArn-fn::getatt"></a>
 Not currently supported by AWS CloudFormation\.
@@ -183,14 +184,14 @@ Not currently supported by AWS CloudFormation\.
 The domain\-specific endpoint used for requests to the OpenSearch APIs, such as `search-mystack-1ab2cdefghij-ab1c2deckoyb3hofw7wpqa3cm.us-west-1.es.amazonaws.com`\.
 
 `Id`  <a name="Id-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The resource ID\. For example, `123456789012/my-domain`\.
 
 ## Remarks<a name="aws-resource-opensearchservice-domain--remarks"></a>
 
  *Migrating stacks from Elasticsearch to OpenSearch* 
 
 **Important**  
-You can't directly update a CloudFormation templates to use the `AWS::OpenSearchService::Domain` resource in place of `AWS::Elasticsearch::Domain`, otherwise the corresponding domain will be deleted along with all of its data\.
+You can't directly update CloudFormation templates to use the `AWS::OpenSearchService::Domain` resource in place of `AWS::Elasticsearch::Domain`, otherwise the corresponding domain will be deleted along with all of its data\.
 
 Perform the following steps to migrate an Elasticsearch domain to an OpenSearch domain if the domain is defined within CloudFormation\.
 

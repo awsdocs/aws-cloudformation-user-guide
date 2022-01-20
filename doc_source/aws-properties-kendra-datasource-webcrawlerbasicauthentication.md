@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-datasource-webcrawlerbasicauthentication-properties"></a>
 
 `Credentials`  <a name="cfn-kendra-datasource-webcrawlerbasicauthentication-credentials"></a>
-Your secret ARN, which you can create in [ AWS Secrets Manager ](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)   
+Your secret ARN, which you can create in [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)   
 You use a secret if basic authentication credentials are required to connect to a website\. The secret stores your credentials of user name and password\.  
 *Required*: Yes  
 *Type*: String  

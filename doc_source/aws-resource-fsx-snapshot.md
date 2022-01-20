@@ -61,6 +61,14 @@ The ID of the volume that the snapshot is of\.
 
 ### Ref<a name="aws-resource-fsx-snapshot-return-values-ref"></a>
 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the snapshot\. For example:
+
+`{"Ref":"logical_snapshot_id"}`
+
+Returns `fsvolsnap-0123456789abcedf5`\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 ### Fn::GetAtt<a name="aws-resource-fsx-snapshot-return-values-fn--getatt"></a>
 
 The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
@@ -70,5 +78,5 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-fsx-snapshot-return-values-fn--getatt-fn--getatt"></a>
 
 `ResourceARN`  <a name="ResourceARN-fn::getatt"></a>
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Resource Name \(ARN\)\.  
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+Returns the snapshot's Amazon Resource Name \(ARN\)\.  
+Example: `arn:aws:fsx:us-east-2:111133334444:snapshot/fsvol-01234567890123456/fsvolsnap-0123456789abcedf5`

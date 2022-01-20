@@ -58,7 +58,7 @@ Creates an authentication challenge\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomEmailSender`  <a name="cfn-cognito-userpool-lambdaconfig-customemailsender"></a>
-Not currently supported by AWS CloudFormation\.  
+A custom email sender AWS Lambda trigger\.  
 *Required*: No  
 *Type*: [CustomEmailSender](aws-properties-cognito-userpool-customemailsender.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -73,7 +73,7 @@ A custom Message AWS Lambda trigger\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomSMSSender`  <a name="cfn-cognito-userpool-lambdaconfig-customsmssender"></a>
-Not currently supported by AWS CloudFormation\.  
+A custom SMS sender AWS Lambda trigger\.  
 *Required*: No  
 *Type*: [CustomSMSSender](aws-properties-cognito-userpool-customsmssender.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -88,7 +88,7 @@ Defines the authentication challenge\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KMSKeyID`  <a name="cfn-cognito-userpool-lambdaconfig-kmskeyid"></a>
-Not currently supported by AWS CloudFormation\.  
+The Amazon Resource Name of a AWS Key Management Service \(AWS KMS\) key\. Amazon Cognito uses the key to encrypt codes and temporary passwords sent to `CustomEmailSender` and `CustomSMSSender`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

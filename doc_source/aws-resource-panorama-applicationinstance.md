@@ -54,7 +54,7 @@ The ID of an application instance to replace with the new instance\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `255`  
-*Pattern*: `^[a-zA-Z0-9\-\_]+$`  
+*Pattern*: `[a-zA-Z0-9\-\_]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DefaultRuntimeContextDevice`  <a name="cfn-panorama-applicationinstance-defaultruntimecontextdevice"></a>
@@ -63,7 +63,7 @@ The device's ID\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `255`  
-*Pattern*: `^[a-zA-Z0-9\-\_]+$`  
+*Pattern*: `[a-zA-Z0-9\-\_]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-panorama-applicationinstance-description"></a>
@@ -72,7 +72,7 @@ A description for the application instance\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `255`  
-*Pattern*: `^.*$`  
+*Pattern*: `.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DeviceId`  <a name="cfn-panorama-applicationinstance-deviceid"></a>
@@ -81,7 +81,7 @@ A device's ID\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `255`  
-*Pattern*: `^[a-zA-Z0-9\-\_]+$`  
+*Pattern*: `[a-zA-Z0-9\-\_]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ManifestOverridesPayload`  <a name="cfn-panorama-applicationinstance-manifestoverridespayload"></a>
@@ -102,7 +102,7 @@ A name for the application instance\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `255`  
-*Pattern*: `^[a-zA-Z0-9\-\_]+$`  
+*Pattern*: `[a-zA-Z0-9\-\_]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RuntimeRoleArn`  <a name="cfn-panorama-applicationinstance-runtimerolearn"></a>
@@ -111,7 +111,7 @@ The ARN of a runtime role for the application instance\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `255`  
-*Pattern*: `^arn:[a-z0-9][-.a-z0-9]{0,62}:iam::[0-9]{12}:role/.+$`  
+*Pattern*: `arn:[a-z0-9][-.a-z0-9]{0,62}:iam::[0-9]{12}:role/.+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StatusFilter`  <a name="cfn-panorama-applicationinstance-statusfilter"></a>

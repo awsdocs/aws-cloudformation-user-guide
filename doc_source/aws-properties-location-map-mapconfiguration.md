@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Style`  <a name="cfn-location-map-mapconfiguration-style"></a>
 Specifies the map style selected from an available data provider\.  
 Valid styles: `VectorEsriStreets`, `VectorEsriTopographic`, `VectorEsriNavigation`, `VectorEsriDarkGrayCanvas`, `VectorEsriLightGrayCanvas`, `VectorHereBerlin`\.  
-When using HERE as your data provider, and selecting the Style `VectorHereBerlin`, you may not use HERE Maps for Asset Management\. See the [AWS Service Terms](https://docs.aws.amazon.com/service-terms/) for Amazon Location Service\.
+When using HERE as your data provider, and selecting the Style `VectorHereBerlin`, you may not use HERE Technologies maps for Asset Management\. See the [AWS Service Terms](http://aws.amazon.com/service-terms/) for Amazon Location Service\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

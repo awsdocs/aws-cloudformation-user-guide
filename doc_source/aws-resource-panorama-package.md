@@ -36,7 +36,7 @@ A name for the package\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9\-\_]+$`  
+*Pattern*: `[a-zA-Z0-9\-\_]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-panorama-package-tags"></a>
