@@ -66,7 +66,7 @@ The Amazon S3 location to back up EMR Studio Workspaces and notebook files\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `10280`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+*Pattern*: `^s3://[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]+$`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-emr-studio-description"></a>
