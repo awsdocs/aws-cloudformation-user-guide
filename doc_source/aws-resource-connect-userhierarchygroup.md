@@ -32,7 +32,7 @@ Properties:
 ## Properties<a name="aws-resource-connect-userhierarchygroup-properties"></a>
 
 `InstanceArn`  <a name="cfn-connect-userhierarchygroup-instancearn"></a>
-The Amazon Resource Name \(ARN\) of the user hierarchy group\.  
+The Amazon Resource Name \(ARN\) of the instance\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
