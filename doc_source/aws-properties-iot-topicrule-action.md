@@ -90,7 +90,7 @@ Change the state of a CloudWatch alarm\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CloudwatchLogs`  <a name="cfn-iot-topicrule-action-cloudwatchlogs"></a>
-Not currently supported by AWS CloudFormation\.  
+Sends data to CloudWatch\.  
 *Required*: No  
 *Type*: [CloudwatchLogsAction](aws-properties-iot-topicrule-cloudwatchlogsaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

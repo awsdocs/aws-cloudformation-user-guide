@@ -29,6 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-firehoseaction-properties"></a>
 
 `BatchMode`  <a name="cfn-iot-topicrule-firehoseaction-batchmode"></a>
+Whether to deliver the Kinesis Data Firehose stream as a batch by using [https://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html](https://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html)\. The default value is `false`\.  
+When `batchMode` is `true` and the rule's SQL statement evaluates to an Array, each Array element forms one record in the [https://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html](https://docs.aws.amazon.com/firehose/latest/APIReference/API_PutRecordBatch.html) request\. The resulting array can't have more than 500 records\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

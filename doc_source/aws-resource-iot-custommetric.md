@@ -47,7 +47,7 @@ Properties:
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MetricType`  <a name="cfn-iot-custommetric-metrictype"></a>
- The type of the custom metric\. Types include `string-list`, `ip-address-list`, `number-list`, and `number`\.   
+ The type of the custom metric\. Types include `string-list`, `ip-address-list`, and `number-list`\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

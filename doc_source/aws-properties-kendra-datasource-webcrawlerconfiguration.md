@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource WebCrawlerConfiguration<a name="aws-properties-kendra-datasource-webcrawlerconfiguration"></a>
 
-<a name="aws-properties-kendra-datasource-webcrawlerconfiguration-description"></a>The `WebCrawlerConfiguration` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Kendra::DataSource](aws-resource-kendra-datasource.md)\.
+Provides the configuration information required for Amazon Kendra Web Crawler\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-webcrawlerconfiguration-syntax"></a>
 
@@ -44,7 +44,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-datasource-webcrawlerconfiguration-properties"></a>
 
 `AuthenticationConfiguration`  <a name="cfn-kendra-datasource-webcrawlerconfiguration-authenticationconfiguration"></a>
-Not currently supported by AWS CloudFormation\.  
+Provides configuration information required to connect to websites using authentication\.  
+You can connect to websites using basic authentication of user name and password\.  
+You must provide the website host name and port number\. For example, the host name of https://a\.example\.com/page1\.html is "a\.example\.com" and the port is 443, the standard port for HTTPS\. You use a secret in [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) to store your authentication credentials\.  
 *Required*: No  
 *Type*: [WebCrawlerAuthenticationConfiguration](aws-properties-kendra-datasource-webcrawlerauthenticationconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

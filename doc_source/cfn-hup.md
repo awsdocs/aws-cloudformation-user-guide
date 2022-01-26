@@ -57,7 +57,7 @@ runas=<runas user>
 
 When the operation is run, it is run in a copy of the current environment \(that cfn\-hup is in\), with CFN\_OLD\_METADATA set to the previous value of path, and CFN\_NEW\_METADATA set to the current value\.
 
-The hooks configuration file is loaded at cfn\-hup daemon startup only, so new hooks will require the daemon to be restarted\. A cache of previous metadata values is stored at /var/lib/cfn\-hup/data/metadata\_db— you can delete this cache to force cfn\-hup to run all post\.add actions again\.
+The hooks configuration file is loaded at cfn\-hup daemon start up only, so new hooks will require the daemon to be restarted\. A cache of previous metadata values is stored at /var/lib/cfn\-hup/data/metadata\_db— you can delete this cache to force cfn\-hup to run all post\.add actions again\.
 
 
 | Name | Description | Required | 
@@ -130,6 +130,6 @@ In the following template snippet, CloudFormation triggers the `cfn-auto-reloade
 ...
 ```
 
-### Additional example<a name="w10966ab1c31c42c35c15b9"></a>
+### Additional example<a name="w11005ab1c31c42c35c15b9"></a>
 
 For a sample template, see [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.

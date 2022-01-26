@@ -130,7 +130,7 @@ Set to `TRUE` to use the Microsoft SharePoint change log to determine the docume
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcConfiguration`  <a name="cfn-kendra-datasource-sharepointconfiguration-vpcconfiguration"></a>
-Not currently supported by AWS CloudFormation\.  
+Provides information for connecting to an Amazon VPC\.  
 *Required*: No  
 *Type*: [DataSourceVpcConfiguration](aws-properties-kendra-datasource-datasourcevpcconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

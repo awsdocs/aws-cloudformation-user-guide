@@ -4,6 +4,20 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](AWS_DataBrew.md) | The following resources were updated: AWS::DataBrew::Job 
+
+ [AWS::DataBrew::Job](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-datacatalogoutput.html)   
+Add BucketOwner parameter to the S3Location data type to define the owner of the specified S3 bucket\.  | January 20, 2022 | 
+| [New resources](AWS_Lightsail.md) | The following resources were added: AWS::Lightsail::Certificate, AWS::Lightsail::Container, and AWS::Lightsail::Distribution 
+
+ [AWS::Lightsail::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html)   
+Use the `AWS::Lightsail::Certificate` resource to specify an Amazon Lightsail certificate that you can use with a Lightsail content delivery network \(CDN\) distribution and a container service\. 
+
+ [AWS::Lightsail::Container](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html)   
+Use the `AWS::Lightsail::Container` resource to specify an Amazon Lightsail container service\. 
+
+ [AWS::Lightsail::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-distribution.html)   
+Use the `AWS::Lightsail::Distribution` resource to specify an Amazon Lightsail CDN distribution\.  | January 20, 2022 | 
 | [Updated resource](AWS_AppSync.md) | The following resources were updated: AWS::AppSync::Resolver and AWS::AppSync::FunctionConfiguration 
 
  [AWS::AppSync::Resolver](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-maxbatchsize)   

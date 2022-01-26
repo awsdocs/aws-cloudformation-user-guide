@@ -57,7 +57,7 @@ The opaque string specified in the request to ensure idempotent creation\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FileSystemId`  <a name="cfn-efs-accesspoint-filesystemid"></a>
-The ID of the EFS file system that the access point applies to\.  
+The ID of the EFS file system that the access point applies to\. Accepts only the ID format for input when specifying a file system, for example `fs-0123456789abcedf2`\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `128`  

@@ -69,6 +69,17 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-ec2-host-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-ec2-host-return-values-fn--getatt-fn--getatt"></a>
+
+`HostId`  <a name="HostId-fn::getatt"></a>
+The ID of the host\.
+
 ## Examples<a name="aws-resource-ec2-host--examples"></a>
 
 ### Allocate a Dedicated Host<a name="aws-resource-ec2-host--examples--Allocate_a_Dedicated_Host"></a>

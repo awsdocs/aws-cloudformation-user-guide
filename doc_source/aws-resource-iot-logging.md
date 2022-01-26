@@ -1,6 +1,6 @@
 # AWS::IoT::Logging<a name="aws-resource-iot-logging"></a>
 
-<a name="aws-resource-iot-logging-description"></a>The `AWS::IoT::Logging` resource Not currently supported by AWS CloudFormation\. for IoT\.
+Configure logging\.
 
 ## Syntax<a name="aws-resource-iot-logging-syntax"></a>
 
@@ -32,19 +32,19 @@ Properties:
 ## Properties<a name="aws-resource-iot-logging-properties"></a>
 
 `AccountId`  <a name="cfn-iot-logging-accountid"></a>
-Not currently supported by AWS CloudFormation\.  
+The account ID\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DefaultLogLevel`  <a name="cfn-iot-logging-defaultloglevel"></a>
-Not currently supported by AWS CloudFormation\.  
+The default log level\.Valid Values: `DEBUG | INFO | ERROR | WARN | DISABLED`  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iot-logging-rolearn"></a>
-Not currently supported by AWS CloudFormation\.  
+The role ARN used for the log\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -52,3 +52,7 @@ Not currently supported by AWS CloudFormation\.
 ## Return values<a name="aws-resource-iot-logging-return-values"></a>
 
 ### Ref<a name="aws-resource-iot-logging-return-values-ref"></a>
+
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the log ID\. For example:
+
+ `{"Ref": "Log-12345"}` 

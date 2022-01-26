@@ -10,9 +10,9 @@ To make broad changes to your template, use the **Template** view\. In the **Tem
 
 **AWS CloudFormation Designer integrated JSON and YAML editor**
 
-![\[Screenshot of the integrated JSON and YAML editor with raw JSON.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/designer-jsoneditor.png)
+![\[Screen shot of the integrated JSON and YAML editor with raw JSON.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/designer-jsoneditor.png)
 
-## Converting templates into YAML or JSON<a name="w10966ab1c23c17c13c17c15"></a>
+## Converting templates into YAML or JSON<a name="w11005ab1c23c17c13c17c15"></a>
 
 You can convert a valid template back and forth between JSON and YAML by selecting the appropriate radio button in **Choose template language**\. Designer can only convert valid YAML or valid JSON templates\. If the conversion succeeds, the **Messages** pane displays a message like: *Successfully converted the template to YAML*\.
 
@@ -24,17 +24,17 @@ Once you choose a template language, any new resources you drag onto the canvas 
 **Note**  
 When you convert a template to YAML, Designer uses short form notation for functions\. For example, `- !GetAtt`\. In addition, any visual links that you draw will use short form notation in YAML mode\. For more information about intrinsic functions, see [`Ref`](intrinsic-function-reference-ref.md)\.
 
-## Autocomplete<a name="w10966ab1c23c17c13c17c17"></a>
+## Auto\-complete<a name="w11005ab1c23c17c13c17c17"></a>
 
 The integrated JSON and YAML editor includes an auto\-complete feature that helps you specify resource properties, so you don't have to remember property names\. To see a list of valid properties in a JSON template, press **Ctrl\+Space** within the `Properties` curly braces \(`{}`\), as shown in the following example:
 
-![\[Autocomplete options in a JSON example.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/designer-jsoneditor-autocomplete.png)
+![\[Auto-complete options in a JSON example.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/designer-jsoneditor-autocomplete.png)
 
 For a YAML template, you can first delete the opening and closing curly braces and press **Enter** to go to a new line\. To see a list of valid properties, press **Ctrl\+Space** on the new line after `Properties`, as shown in the following example:
 
-![\[Autocomplete options in a YAML example.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/designer-yamleditor-autocomplete.png)
+![\[Auto-complete options in a YAML example.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/designer-yamleditor-autocomplete.png)
 
-## Keyboard shortcuts<a name="w10966ab1c23c17c13c17c19"></a>
+## Keyboard shortcuts<a name="w11005ab1c23c17c13c17c19"></a>
 
 Designer's integrated JSON and YAML editor provides the following keyboard shortcuts:
 

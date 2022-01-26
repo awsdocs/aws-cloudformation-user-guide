@@ -5,6 +5,8 @@ The `AWS::RDS::DBCluster` resource creates an Amazon Aurora DB cluster\. For mor
 **Note**  
 You can only create this resource in AWS Regions where Amazon Aurora is supported\.
 
+This topic covers the resource for Amazon Aurora DB clusters\. For the documentation on the resource for Amazon RDS DB instances, see [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)\.
+
 **Updating DB clusters**
 
 When properties labeled "*Update requires:* [ Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)" are updated, AWS CloudFormation first creates a replacement DB cluster, then changes references from other dependent resources to point to the replacement DB cluster, and finally deletes the old DB cluster\.
@@ -293,6 +295,7 @@ Default:
 + When `EngineMode` is `serverless`:
   + `3306` when `Engine` is `aurora` or `aurora-mysql`
   + `5432` when `Engine` is `aurora-postgresql`
+The `No interruption` on update behavior only applies to DB clusters\. If you are updating a DB instance, see [Port](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-port) for the AWS::RDS::DBInstance resource\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

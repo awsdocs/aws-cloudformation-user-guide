@@ -82,4 +82,4 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 The topic rule destination URL\.
 
 `StatusReason`  <a name="StatusReason-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Additional details or reason why the topic rule destination is in the current status\.

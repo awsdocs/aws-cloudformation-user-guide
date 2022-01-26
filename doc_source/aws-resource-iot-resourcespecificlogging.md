@@ -1,6 +1,6 @@
 # AWS::IoT::ResourceSpecificLogging<a name="aws-resource-iot-resourcespecificlogging"></a>
 
-<a name="aws-resource-iot-resourcespecificlogging-description"></a>The `AWS::IoT::ResourceSpecificLogging` resource Not currently supported by AWS CloudFormation\. for IoT\.
+Configure resource\-specific logging\.
 
 ## Syntax<a name="aws-resource-iot-resourcespecificlogging-syntax"></a>
 
@@ -32,19 +32,19 @@ Properties:
 ## Properties<a name="aws-resource-iot-resourcespecificlogging-properties"></a>
 
 `LogLevel`  <a name="cfn-iot-resourcespecificlogging-loglevel"></a>
-Not currently supported by AWS CloudFormation\.  
+The default log level\.Valid Values: `DEBUG | INFO | ERROR | WARN | DISABLED`  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetName`  <a name="cfn-iot-resourcespecificlogging-targetname"></a>
-Not currently supported by AWS CloudFormation\.  
+The target name\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TargetType`  <a name="cfn-iot-resourcespecificlogging-targettype"></a>
-Not currently supported by AWS CloudFormation\.  
+The target type\. Valid Values: `DEFAULT | THING_GROUP`  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -53,9 +53,13 @@ Not currently supported by AWS CloudFormation\.
 
 ### Ref<a name="aws-resource-iot-resourcespecificlogging-return-values-ref"></a>
 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource\-specific log ID\. For example:
+
+ `{"Ref": "MyResourceLog-12345" }` 
+
 ### Fn::GetAtt<a name="aws-resource-iot-resourcespecificlogging-return-values-fn--getatt"></a>
 
 #### <a name="aws-resource-iot-resourcespecificlogging-return-values-fn--getatt-fn--getatt"></a>
 
 `TargetId`  <a name="TargetId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The target Id\.

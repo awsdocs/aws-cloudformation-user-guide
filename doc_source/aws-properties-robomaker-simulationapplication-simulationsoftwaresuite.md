@@ -33,7 +33,7 @@ The name of the simulation software suite\.
 
 `Version`  <a name="cfn-robomaker-simulationapplication-simulationsoftwaresuite-version"></a>
 The version of the simulation software suite\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `1024`  

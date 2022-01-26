@@ -80,4 +80,4 @@
 + [AWS::EC2::VPNConnection](aws-resource-ec2-vpn-connection.md)
 + [AWS::EC2::VPNConnectionRoute](aws-resource-ec2-vpn-connection-route.md)
 + [AWS::EC2::VPNGateway](aws-resource-ec2-vpn-gateway.md)
-+ [AWS::EC2::VPNGatewayRoutePropagation](aws-resource-ec2-vpn-gatewayrouteprop.md)
++ [AWS::EC2::VPNGatewayRoutePropagation](aws-resource-ec2-vpngatewayroutepropagation.md)

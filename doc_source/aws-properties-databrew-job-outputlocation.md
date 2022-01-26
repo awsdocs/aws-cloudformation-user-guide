@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Bucket](#cfn-databrew-job-outputlocation-bucket)" : String,
+  "[BucketOwner](#cfn-databrew-job-outputlocation-bucketowner)" : String,
   "[Key](#cfn-databrew-job-outputlocation-key)" : String
 }
 ```
@@ -19,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Bucket](#cfn-databrew-job-outputlocation-bucket): String
+  [BucketOwner](#cfn-databrew-job-outputlocation-bucketowner): String
   [Key](#cfn-databrew-job-outputlocation-key): String
 ```
 
@@ -27,6 +29,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Bucket`  <a name="cfn-databrew-job-outputlocation-bucket"></a>
 The Amazon S3 bucket name\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`BucketOwner`  <a name="cfn-databrew-job-outputlocation-bucketowner"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

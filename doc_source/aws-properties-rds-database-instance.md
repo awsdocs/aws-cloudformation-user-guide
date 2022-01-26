@@ -7,6 +7,8 @@ If you import an existing DB instance, and the template configuration doesn't ma
 **Important**  
 If a DB instance is deleted or replaced during an update, AWS CloudFormation deletes all automated snapshots\. However, it retains manual DB snapshots\. During an update that requires replacement, you can apply a stack policy to prevent DB instances from being replaced\. For more information, see [Prevent Updates to Stack Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/protect-stack-resources.html)\.
 
+This topic covers the resource for Amazon RDS DB instances\. For the documentation on the resource for Amazon Aurora DB clusters, see [AWS::RDS::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html)\.
+
 **Updating DB instances**
 
 When properties labeled "*Update requires:* [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)" are updated, AWS CloudFormation first creates a replacement DB instance, then changes references from other dependent resources to point to the replacement DB instance, and finally deletes the old DB instance\.
@@ -224,14 +226,10 @@ A value that indicates whether minor engine upgrades are applied automatically t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailabilityZone`  <a name="cfn-rds-dbinstance-availabilityzone"></a>
- The Availability Zone \(AZ\) where the database will be created\. For information on AWS Regions and Availability Zones, see [Regions and Availability Zones](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html)\.   
- **Amazon Aurora**   
-Not applicable\. Availability Zones are managed by the DB cluster\.   
-Default: A random, system\-chosen Availability Zone in the endpoint's AWS Region\.  
+The Availability Zone that the database instance will be created in\.  
+Default: A random, system\-chosen Availability Zone in the endpoint's region\.  
  Example: `us-east-1d`   
- Constraint: The `AvailabilityZone` parameter can't be specified if the DB instance is a Multi\-AZ deployment\. The specified Availability Zone must be in the same AWS Region as the current endpoint\.   
-If you're creating a DB instance in an RDS on VMware environment, specify the identifier of the custom Availability Zone to create the DB instance in\.  
-For more information about RDS on VMware, see the [ RDS on VMware User Guide\.](https://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/rds-on-vmware.html) 
+ Constraint: The AvailabilityZone parameter cannot be specified if the MultiAZ parameter is set to `true`\. The specified Availability Zone must be in the same region as the current endpoint\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -536,7 +534,14 @@ Not applicable\. The KMS key identifier is managed by the DB cluster\.
 
 `LicenseModel`  <a name="cfn-rds-dbinstance-licensemodel"></a>
 License model information for this DB instance\.  
- Valid values: `license-included` \| `bring-your-own-license` \| `general-public-license`   
+ Valid values:  
++ Aurora MySQL \- `general-public-license`
++ Aurora PostgreSQL \- `postgresql-license`
++ MariaDB \- `general-public-license`
++ Microsoft SQL Server \- `license-included`
++ MySQL \- `general-public-license`
++ Oracle \- `bring-your-own-license` or `license-included`
++ PostgreSQL \- `postgresql-license`
 If you've specified `DBSecurityGroups` and then you update the license model, AWS CloudFormation replaces the underlying DB instance\. This will incur some interruptions to database availability\. 
 *Required*: No  
 *Type*: String  

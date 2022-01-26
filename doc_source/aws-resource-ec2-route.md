@@ -63,13 +63,13 @@ The ID of the carrier gateway\.
 
 `DestinationCidrBlock`  <a name="cfn-ec2-route-destinationcidrblock"></a>
 The IPv4 CIDR block used for the destination match\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DestinationIpv6CidrBlock`  <a name="cfn-ec2-route-destinationipv6cidrblock"></a>
 The IPv6 CIDR block used for the destination match\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -36,7 +36,7 @@ Properties:
 ## Properties<a name="aws-resource-ce-costcategory-properties"></a>
 
 `DefaultValue`  <a name="cfn-ce-costcategory-defaultvalue"></a>
-Not currently supported by AWS CloudFormation\.  
+The default value for the cost category\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

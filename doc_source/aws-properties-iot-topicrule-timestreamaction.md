@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-timestreamaction-properties"></a>
 
 `BatchMode`  <a name="cfn-iot-topicrule-timestreamaction-batchmode"></a>
-Not currently supported by AWS CloudFormation\.  
+Whether to process the action as a batch\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -7,7 +7,7 @@ To export a stack's output value, use the `Export` field in the [Output](outputs
 **Note**  
 After another stack imports an output value, you can't delete the stack that is exporting the output value or modify the exported output value\. All the imports must be removed before you can delete the exporting stack or modify the output value\.
 
-## Exporting stack output values vs\. using nested stacks<a name="output-vs-nested"></a>
+## Exporting stack output values versus using nested stacks<a name="output-vs-nested"></a>
 
 A nested stack is a stack that you create within another stack by using the [AWS::CloudFormation::Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stack.html) resource\. With nested stacks, you deploy and manage all resources from a single stack\. You can use outputs from one stack in the nested stack group as inputs to another stack in the group\. This differs from exporting values\.
 

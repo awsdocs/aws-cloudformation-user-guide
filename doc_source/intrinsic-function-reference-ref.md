@@ -38,7 +38,7 @@ Syntax for the short form:
 ## Parameters<a name="ref-parameters"></a>
 
 logicalName  
-The logical name of the resource or parameter you want to dereference\.
+The logical name of the resource or parameter you want to reference\.
 
 ## Return value<a name="ref-return-value"></a>
 

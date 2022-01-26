@@ -296,8 +296,8 @@ AWSTemplateFormatVersion: 2010-09-09
 Parameters:
   LatestAmiId:
     Description: Region specific image from the Parameter Store
-    Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
-    Default: '/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2'
+    Type: "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>"
+    Default: "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
   InstanceType:
     Description: Amazon EC2 instance type for the instances
     Type: String
@@ -373,8 +373,8 @@ AWSTemplateFormatVersion: 2010-09-09
 Parameters:
   LatestAmiId:
     Description: Region specific image from the Parameter Store
-    Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
-    Default: '/aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-s3'
+    Type: "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>"
+    Default: "/aws/service/ami-amazon-linux-latest/amzn-ami-hvm-x86_64-s3"
 Resources:
   myLaunchConfig: 
     Type: AWS::AutoScaling::LaunchConfiguration

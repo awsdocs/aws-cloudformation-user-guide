@@ -74,7 +74,7 @@ The HTTP status code for the response\.
 #### <a name="aws-resource-apigateway-gatewayresponse-return-values-fn--getatt-fn--getatt"></a>
 
 `Id`  <a name="Id-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ID for the gateway response\. For example: `abc123`\.
 
 ## Examples<a name="aws-resource-apigateway-gatewayresponse--examples"></a>
 

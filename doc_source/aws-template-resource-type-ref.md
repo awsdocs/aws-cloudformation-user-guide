@@ -120,6 +120,7 @@ service-provider::service-name::data-type-name
 + [Kinesis Data Analytics](AWS_KinesisAnalytics.md)
 + [Kinesis Data Analytics V2](AWS_KinesisAnalyticsV2.md)
 + [Kinesis Data Firehose](AWS_KinesisFirehose.md)
++ [KinesisVideo](AWS_KinesisVideo.md)
 + [AWS KMS](AWS_KMS.md)
 + [Lake Formation](AWS_LakeFormation.md)
 + [Lambda](AWS_Lambda.md)

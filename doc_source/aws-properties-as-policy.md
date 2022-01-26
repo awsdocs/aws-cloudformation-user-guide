@@ -148,6 +148,10 @@ When you specify an `AWS::AutoScaling::ScalingPolicy` type as an argument to the
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
+## Remarks<a name="aws-properties-as-policy--remarks"></a>
+
+When you create the [AWS::CloudWatch::Alarm](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html) resource for a step or simple scaling policy, specify the name of the scaling policy in the `AlarmActions` property\. For an example snippet, see [Declaring a scaling policy with a CloudWatch alarm](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#scenario-as-policy)\.
+
 ## Examples<a name="aws-properties-as-policy--examples"></a>
 
 The following examples specify scaling policies for an Auto Scaling group\.

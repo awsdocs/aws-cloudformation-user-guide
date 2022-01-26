@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AutoScaling::WarmPool",
   "Properties" : {
       "[AutoScalingGroupName](#cfn-autoscaling-warmpool-autoscalinggroupname)" : String,
+      "[InstanceReusePolicy](#cfn-autoscaling-warmpool-instancereusepolicy)" : InstanceReusePolicy,
       "[MaxGroupPreparedCapacity](#cfn-autoscaling-warmpool-maxgrouppreparedcapacity)" : Integer,
       "[MinSize](#cfn-autoscaling-warmpool-minsize)" : Integer,
       "[PoolState](#cfn-autoscaling-warmpool-poolstate)" : String
@@ -33,6 +34,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AutoScaling::WarmPool
 Properties: 
   [AutoScalingGroupName](#cfn-autoscaling-warmpool-autoscalinggroupname): String
+  [InstanceReusePolicy](#cfn-autoscaling-warmpool-instancereusepolicy): 
+    InstanceReusePolicy
   [MaxGroupPreparedCapacity](#cfn-autoscaling-warmpool-maxgrouppreparedcapacity): Integer
   [MinSize](#cfn-autoscaling-warmpool-minsize): Integer
   [PoolState](#cfn-autoscaling-warmpool-poolstate): String
@@ -48,6 +51,12 @@ The name of the Auto Scaling group\.
 *Maximum*: `255`  
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`InstanceReusePolicy`  <a name="cfn-autoscaling-warmpool-instancereusepolicy"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [InstanceReusePolicy](aws-properties-autoscaling-warmpool-instancereusepolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxGroupPreparedCapacity`  <a name="cfn-autoscaling-warmpool-maxgrouppreparedcapacity"></a>
 Specifies the maximum number of instances that are allowed to be in the warm pool or in any state except `Terminated` for the Auto Scaling group\. This is an optional property\. Specify it only if you do not want the warm pool size to be determined by the difference between the group's maximum capacity and its desired capacity\.   
@@ -81,7 +90,7 @@ CloudFormation won't mark the warm pool as successful \(by setting its status to
 
 The following example defines a warm pool for an Auto Scaling group\.
 
-For examples of CloudFormation stack templates with warm pools, see our [GitHub repository](https://github.com/aws-samples/amazon-ec2-auto-scaling-group-examples)\. 
+For other examples, see our [GitHub repository](https://github.com/aws-samples/amazon-ec2-auto-scaling-group-examples)\. Included are examples of lifecycle hooks that work with warm pools\.
 
 ### Auto Scaling group with warm pool<a name="aws-resource-autoscaling-warmpool--examples--Auto_Scaling_group_with_warm_pool"></a>
 

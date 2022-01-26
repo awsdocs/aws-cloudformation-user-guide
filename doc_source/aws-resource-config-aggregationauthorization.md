@@ -67,7 +67,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### <a name="aws-resource-config-aggregationauthorization-return-values-fn--getatt-fn--getatt"></a>
 
 `AggregationAuthorizationArn`  <a name="AggregationAuthorizationArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The Amazon Resource Name \(ARN\) of the aggregation object\.
 
 ## Examples<a name="aws-resource-config-aggregationauthorization--examples"></a>
 
