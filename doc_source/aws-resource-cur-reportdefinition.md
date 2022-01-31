@@ -73,6 +73,7 @@ The Amazon Resource Name \(ARN\) of the billing view\. You can get this value by
 The compression format that Amazon Web Services uses for the report\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `ZIP | GZIP | Parquet`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Format`  <a name="cfn-cur-reportdefinition-format"></a>
