@@ -124,6 +124,7 @@ The Region of the S3 bucket that Amazon Web Services delivers the report into\.
 The granularity of the line items in the report\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `HOURLY | DAILY | MONTHLY`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-cur-reportdefinition-return-values"></a>
