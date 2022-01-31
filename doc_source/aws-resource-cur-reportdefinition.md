@@ -80,6 +80,7 @@ The compression format that Amazon Web Services uses for the report\.
 The format that Amazon Web Services saves the report in\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `textORcsv | Parquet`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RefreshClosedReports`  <a name="cfn-cur-reportdefinition-refreshclosedreports"></a>
