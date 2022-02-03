@@ -82,9 +82,9 @@ The following example creates a query definition\.
 "myQueryDefinition": {
   "Type": "AWS::Logs:: QueryDefinition",
   "Properties": {
-    "name": “myQueryName”
-    “QueryString”: “fields @timestamp, @message | sort @timestamp desc | limit 20”
-    }
+    "Name": "myQueryName",
+    "QueryString": "fields @timestamp, @message | sort @timestamp desc | limit 20"
+  }
 }
 ```
 
