@@ -16,7 +16,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-ec2-ipamscope-description)" : String,
       "[IpamId](#cfn-ec2-ipamscope-ipamid)" : String,
-      "[IpamScopeType](#cfn-ec2-ipamscope-ipamscopetype)" : String,
       "[Tags](#cfn-ec2-ipamscope-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -29,7 +28,6 @@ Type: AWS::EC2::IPAMScope
 Properties: 
   [Description](#cfn-ec2-ipamscope-description): String
   [IpamId](#cfn-ec2-ipamscope-ipamid): String
-  [IpamScopeType](#cfn-ec2-ipamscope-ipamscopetype): String
   [Tags](#cfn-ec2-ipamscope-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -46,13 +44,6 @@ The description of the scope\.
 The ID of the IPAM for which you're creating this scope\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`IpamScopeType`  <a name="cfn-ec2-ipamscope-ipamscopetype"></a>
-The type of the scope\.  
-*Required*: No  
-*Type*: String  
-*Allowed values*: `private | public`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-ipamscope-tags"></a>
@@ -85,6 +76,9 @@ The ARN of an IPAM\.
 
 `IpamScopeId`  <a name="IpamScopeId-fn::getatt"></a>
 The ID of an IPAM scope\.
+
+`IpamScopeType`  <a name="IpamScopeType-fn::getatt"></a>
+The type of the scope\.
 
 `IsDefault`  <a name="IsDefault-fn::getatt"></a>
 Defines if the scope is the default scope or not\.

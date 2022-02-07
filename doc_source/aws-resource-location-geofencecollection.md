@@ -61,19 +61,14 @@ A key identifier for an [AWS KMS customer managed key](https://docs.aws.amazon.c
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PricingPlan`  <a name="cfn-location-geofencecollection-pricingplan"></a>
-Specifies the pricing plan for the geofence collection\.  
-For additional details and restrictions on each pricing plan option, see the [Amazon Location Service pricing page](http://aws.amazon.com/location/pricing/)\.  
-*Required*: Yes  
+No longer used\. If included, the only allowed value is `RequestBasedUsage`\.  
+*Allowed Values*: `RequestBasedUsage`  
+*Required*: No  
 *Type*: String  
-*Allowed values*: `MobileAssetManagement | MobileAssetTracking | RequestBasedUsage`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PricingPlanDataSource`  <a name="cfn-location-geofencecollection-pricingplandatasource"></a>
-Specifies the data provider for the geofence collection\.  
-+ Required value for the following pricing plans: `MobileAssetTracking` \| `MobileAssetManagement`
-For more information about [Data Providers](http://aws.amazon.com/location/data-providers/), and [Pricing plans](http://aws.amazon.com/location/pricing/), see the Amazon Location Service product page\.  
-Amazon Location Service only uses `PricingPlanDataSource` to calculate billing for your geofence collection\. Your data will not be shared with the data provider, and will remain in your AWS account or region unless you move it\.
-Valid Values: `Esri` \| `Here`  
+This parameter is no longer used\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

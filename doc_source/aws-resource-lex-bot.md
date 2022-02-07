@@ -284,7 +284,7 @@ Resources:
                   MessageGroupsList:
                     - Message:
                         PlainTextMessage:
-                          Value: "Okay, your {FlowerType} will be ready for pickup by {PickUpTime} on {PickUpDate}.  Does this sound okay?"
+                          Value: "Okay, your {FlowerType} will be ready for pickup by {PickupTime} on {PickupDate}.  Does this sound okay?"
                   MaxRetries: 3
                   AllowInterrupt: false
                 DeclinationResponse:
@@ -330,13 +330,6 @@ Resources:
                               Value: "At what time do you want the {FlowerType} to be picked up?"
                       MaxRetries: 3
                       AllowInterrupt: false
-              SlotPriorities:
-                - Priority: 1
-                  SlotName: FlowerType
-                - Priority: 2
-                  SlotName: PickUpDate
-                - Priority: 3
-                  SlotName: PickUpTime
             - Name: "FallbackIntent"
               Description: "Default intent when no other intent matches"
               ParentIntentSignature: "AMAZON.FallbackIntent"
@@ -536,17 +529,6 @@ Resources:
                               Value: "What type of car would you like to rent?  Our most popular options are economy, midsize, and luxury"
                       MaxRetries: 3
                       AllowInterrupt: false
-              SlotPriorities:
-                - Priority: 1
-                  SlotName: PickUpCity
-                - Priority: 2
-                  SlotName: PickUpDate
-                - Priority: 3
-                  SlotName: ReturnDate  
-                - Priority: 4
-                  SlotName: DriverAge  
-                - Priority: 5
-                  SlotName: CarType  
             # We expect developers to provide the FallbackIntent when generating their bot.
             # The service will throw an exception when it is not provided.
             - Name: "BookHotel"

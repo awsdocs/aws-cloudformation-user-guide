@@ -1,6 +1,6 @@
 # AWS::SageMaker::ModelQualityJobDefinition<a name="aws-resource-sagemaker-modelqualityjobdefinition"></a>
 
-<a name="aws-resource-sagemaker-modelqualityjobdefinition-description"></a>The `AWS::SageMaker::ModelQualityJobDefinition` resource Not currently supported by AWS CloudFormation\. for SageMaker\.
+Creates a definition for a job that monitors model quality and drift\. For information about model monitor, see [Amazon SageMaker Model Monitor](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor.html)\.
 
 ## Syntax<a name="aws-resource-sagemaker-modelqualityjobdefinition-syntax"></a>
 
@@ -66,7 +66,7 @@ Identifies the resources to deploy for a monitoring job\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ModelQualityAppSpecification`  <a name="cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification"></a>
-Not currently supported by AWS CloudFormation\.  
+Container image configuration object for the monitoring job\.  
 *Required*: Yes  
 *Type*: [ModelQualityAppSpecification](aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

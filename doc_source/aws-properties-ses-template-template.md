@@ -1,6 +1,6 @@
 # AWS::SES::Template Template<a name="aws-properties-ses-template-template"></a>
 
-The content of the email, composed of a subject line, an HTML part, and a text\-only part\.
+The content of the email, composed of a subject line and either an HTML part or a text\-only part\.
 
 ## Syntax<a name="aws-properties-ses-template-template-syntax"></a>
 

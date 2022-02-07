@@ -68,7 +68,7 @@ Customized overwrite monitoring settings\. Required if CUSTOM mode is configured
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tier`  <a name="cfn-applicationinsights-application-componentmonitoringsetting-tier"></a>
-The tier of the application component\. Supported tiers include `DOT_NET_WORKER`, `DOT_NET_WEB`, `DOT_NET_CORE`, `SQL_SERVER`, and `DEFAULT`\.  
+The tier of the application component\. Supported tiers include `DOT_NET_CORE`, `DOT_NET_WORKER`, `DOT_NET_WEB`, `SQL_SERVER`, `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP`, `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE`, `MYSQL`, `POSTGRESQL`, `JAVA_JMX`, `ORACLE`, `SAP_HANA_MULTI_NODE`, `SAP_HANA_SINGLE_NODE`, `SAP_HANA_HIGH_AVAILABILITY`, `SHAREPOINT`\. `ACTIVE_DIRECTORY`, and `DEFAULT`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

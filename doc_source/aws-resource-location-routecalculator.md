@@ -68,11 +68,10 @@ The optional description for the route calculator resource\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PricingPlan`  <a name="cfn-location-routecalculator-pricingplan"></a>
-Specifies the pricing plan for your route calculator resource\.  
-For additional details and restrictions on each pricing plan option, see the [Amazon Location Service pricing page](http://aws.amazon.com/location/pricing/)\.  
-*Required*: Yes  
+No longer used\. If included, the only allowed value is `RequestBasedUsage`\.  
+*Allowed Values*: `RequestBasedUsage`  
+*Required*: No  
 *Type*: String  
-*Allowed values*: `MobileAssetManagement | MobileAssetTracking | RequestBasedUsage`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-location-routecalculator-return-values"></a>

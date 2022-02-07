@@ -2,7 +2,7 @@
 
 An action that Amazon SES can take when it receives an email on behalf of one or more email addresses or domains that you own\. An instance of this data type can represent only one action\.
 
-For information about setting up receipt rules, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rules.html)\.
+For information about setting up receipt rules, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-receipt-rules-console-walkthrough.html)\.
 
 ## Syntax<a name="aws-properties-ses-receiptrule-action-syntax"></a>
 

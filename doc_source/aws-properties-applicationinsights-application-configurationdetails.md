@@ -54,13 +54,13 @@ A list of alarms to monitor for the component\. All component types can use `Ala
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HAClusterPrometheusExporter`  <a name="cfn-applicationinsights-application-configurationdetails-haclusterprometheusexporter"></a>
-Not currently supported by AWS CloudFormation\.  
+The HA cluster Prometheus Exporter settings\.  
 *Required*: No  
 *Type*: [HAClusterPrometheusExporter](aws-properties-applicationinsights-application-haclusterprometheusexporter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HANAPrometheusExporter`  <a name="cfn-applicationinsights-application-configurationdetails-hanaprometheusexporter"></a>
-Not currently supported by AWS CloudFormation\.  
+The HANA DB Prometheus Exporter settings\.  
 *Required*: No  
 *Type*: [HANAPrometheusExporter](aws-properties-applicationinsights-application-hanaprometheusexporter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

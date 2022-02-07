@@ -47,6 +47,7 @@ Properties:
 
 `PolicyName`  <a name="cfn-applicationautoscaling-scalingpolicy-policyname"></a>
 The name of the scaling policy\.  
+Updates to the name of a target tracking scaling policy are not supported, unless you also update the metric used for scaling\. To change only a target tracking scaling policy's name, first delete the policy by removing the existing `AWS::ApplicationAutoScaling::ScalingPolicy` resource from the template and updating the stack\. Then, recreate the resource with the same settings and a different name\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -149,6 +150,10 @@ A target tracking scaling policy\.
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the Application Auto Scaling scaling policy Amazon Resource Name \(ARN\)\. For example: `arn:aws:autoscaling:us-east-2:123456789012:scalingPolicy:12ab3c4d-56789-0ef1-2345-6ghi7jk8lm90:resource/ecs/service/ecsStack-MyECSCluster-AB12CDE3F4GH/ecsStack-MyECSService-AB12CDE3F4GH:policyName/MyStepPolicy`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
+
+## Remarks<a name="aws-resource-applicationautoscaling-scalingpolicy--remarks"></a>
+
+When you create the [AWS::CloudWatch::Alarm](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html) resource for a step scaling policy, specify the name of the scaling policy in the `AlarmActions` property\. For an example snippet, see [Amazon Elastic Container Service template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ecs.html)\.
 
 ## Examples<a name="aws-resource-applicationautoscaling-scalingpolicy--examples"></a>
 

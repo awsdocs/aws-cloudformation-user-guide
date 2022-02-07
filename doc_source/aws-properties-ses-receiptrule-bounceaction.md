@@ -2,7 +2,7 @@
 
 When included in a receipt rule, this action rejects the received email by returning a bounce response to the sender and, optionally, publishes a notification to Amazon Simple Notification Service \(Amazon SNS\)\.
 
-For information about sending a bounce message in response to a received email, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-action-bounce.html)\.
+For information about sending a bounce message in response to a received email, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-action-bounce.html)\.
 
 ## Syntax<a name="aws-properties-ses-receiptrule-bounceaction-syntax"></a>
 

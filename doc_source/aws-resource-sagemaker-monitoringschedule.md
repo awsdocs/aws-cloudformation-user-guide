@@ -110,7 +110,7 @@ The time when the monitoring schedule was created\.
 The last time that the monitoring schedule was modified\.
 
 `MonitoringScheduleArn`  <a name="MonitoringScheduleArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The Amazon Resource Name \(ARN\) of the monitoring schedule\.
 
 ## Examples<a name="aws-resource-sagemaker-monitoringschedule--examples"></a>
 

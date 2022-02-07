@@ -1,6 +1,6 @@
 # AWS::ApplicationInsights::Application HAClusterPrometheusExporter<a name="aws-properties-applicationinsights-application-haclusterprometheusexporter"></a>
 
-<a name="aws-properties-applicationinsights-application-haclusterprometheusexporter-description"></a>The `HAClusterPrometheusExporter` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::ApplicationInsights::Application](aws-resource-applicationinsights-application.md)\.
+The `AWS::ApplicationInsights::Application HAClusterPrometheusExporter` property type defines the HA cluster Prometheus Exporter settings\. For more information, see the [component configuration](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/component-config-sections.html#component-configuration-prometheus) in the CloudWatch Application Insights documentation\.
 
 ## Syntax<a name="aws-properties-applicationinsights-application-haclusterprometheusexporter-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-applicationinsights-application-haclusterprometheusexporter-properties"></a>
 
 `PrometheusPort`  <a name="cfn-applicationinsights-application-haclusterprometheusexporter-prometheusport"></a>
-Not currently supported by AWS CloudFormation\.  
+The target port to which Prometheus sends metrics\. If not specified, the default port 9668 is used\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

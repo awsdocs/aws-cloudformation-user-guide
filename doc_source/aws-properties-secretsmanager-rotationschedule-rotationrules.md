@@ -10,7 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AutomaticallyAfterDays](#cfn-secretsmanager-rotationschedule-rotationrules-automaticallyafterdays)" : Integer
+  "[AutomaticallyAfterDays](#cfn-secretsmanager-rotationschedule-rotationrules-automaticallyafterdays)" : Integer,
+  "[Duration](#cfn-secretsmanager-rotationschedule-rotationrules-duration)" : String,
+  "[ScheduleExpression](#cfn-secretsmanager-rotationschedule-rotationrules-scheduleexpression)" : String
 }
 ```
 
@@ -18,15 +20,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AutomaticallyAfterDays](#cfn-secretsmanager-rotationschedule-rotationrules-automaticallyafterdays): Integer
+  [Duration](#cfn-secretsmanager-rotationschedule-rotationrules-duration): String
+  [ScheduleExpression](#cfn-secretsmanager-rotationschedule-rotationrules-scheduleexpression): String
 ```
 
 ## Properties<a name="aws-properties-secretsmanager-rotationschedule-rotationrules-properties"></a>
 
 `AutomaticallyAfterDays`  <a name="cfn-secretsmanager-rotationschedule-rotationrules-automaticallyafterdays"></a>
-Specifies the number of days between automatic scheduled rotations of the secret\.  
-Secrets Manager schedules the next rotation when the previous one is complete\. Secrets Manager schedules the date by adding the rotation interval \(number of days\) to the actual date of the last rotation\. The service chooses the hour within that 24\-hour date window randomly\. The minute is also chosen somewhat randomly, but weighted towards the top of the hour and influenced by a variety of factors that help distribute load\.  
+The number of days between automatic scheduled rotations of the secret\. You can use this value to check that your secret meets your compliance guidelines for how often secrets must be rotated\.  
+In `DescribeSecret` and `ListSecrets`, this value is calculated from the rotation schedule after every successful rotation\. In `RotateSecret`, you can set the rotation schedule in `RotationRules` with `AutomaticallyAfterDays` or `ScheduleExpression`, but not both\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Duration`  <a name="cfn-secretsmanager-rotationschedule-rotationrules-duration"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ScheduleExpression`  <a name="cfn-secretsmanager-rotationschedule-rotationrules-scheduleexpression"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-secretsmanager-rotationschedule-rotationrules--seealso"></a>

@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSet<a name="aws-resource-quicksight-dataset"></a>
 
-Creates a dataset\.
+Creates a dataset\. This operation doesn't support datasets that include uploaded files as a source\.
 
 ## Syntax<a name="aws-resource-quicksight-dataset-syntax"></a>
 

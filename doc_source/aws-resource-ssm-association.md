@@ -97,6 +97,9 @@ The severity level that is assigned to the association\.
 
 `DocumentVersion`  <a name="cfn-ssm-association-documentversion"></a>
 The version of the SSM document to associate with the target\.  
+Note the following important information\.  
++ State Manager doesn't support running associations that use a new version of a document if that document is shared from another account\. State Manager always runs the `default` version of a document if shared from another account, even though the Systems Manager console shows that a new version was processed\. If you want to run an association using a new version of a document shared form another account, you must set the document version to `default`\.
++ `DocumentVersion` is not valid for documents owned by AWS, such as `AWS-RunPatchBaseline` or `AWS-UpdateSSMAgent`\. If you specify `DocumentVersion` for an AWS document, the system returns the following error: "Error occurred during operation 'CreateAssociation'\." \(RequestToken: <token>, HandlerErrorCode: GeneralServiceException\)\.
 *Required*: No  
 *Type*: String  
 *Pattern*: `([$]LATEST|[$]DEFAULT|^[1-9][0-9]*$)`  

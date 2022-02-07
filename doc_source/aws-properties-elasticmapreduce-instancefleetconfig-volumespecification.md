@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-instancefleetconfig-volumespecification-properties"></a>
 
 `Iops`  <a name="cfn-elasticmapreduce-instancefleetconfig-volumespecification-iops"></a>
-The number of I/O operations per second \(IOPS\) that the volume supports\. IOPS parameters are supported for volumes: io1 and gp3\. Among them, IOPS parameters are required for volumes io1 but optional for volumes gp3 which default to 3000 IOPS\. IOPS parameters are not supported for volumes: gp2, standard, st1 and sc1\.  
+The number of I/O operations per second \(IOPS\) that the volume supports\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -39,7 +39,7 @@ The volume size, in gibibytes \(GiB\)\. This can be a number from 1 \- 1024\. If
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VolumeType`  <a name="cfn-elasticmapreduce-instancefleetconfig-volumespecification-volumetype"></a>
-The volume type\. Volume types supported are gp2, io1, standard sc1, st1 and gp3\. For gp3, customer will be able to configure IOPs but not throughput\. Throughput will default to 125 MiB/s\.  
+The volume type\. Volume types supported are gp2, io1, and standard\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

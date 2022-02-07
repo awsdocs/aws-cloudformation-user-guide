@@ -86,7 +86,6 @@ Valid values include:
 If not specified, the default is `PROVISIONED`\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `PAY_PER_REQUEST | PROVISIONED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ContributorInsightsSpecification`  <a name="cfn-dynamodb-contributorinsightsspecification-enabled"></a>
@@ -153,7 +152,6 @@ The settings for the DynamoDB table stream, which capture changes to items store
 The table class of the new table\. Valid values are `STANDARD` and `STANDARD_INFREQUENT_ACCESS`\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `STANDARD | STANDARD_INFREQUENT_ACCESS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableName`  <a name="cfn-dynamodb-table-tablename"></a>
@@ -175,7 +173,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 `TimeToLiveSpecification`  <a name="cfn-dynamodb-table-timetolivespecification"></a>
 Specifies the Time to Live \(TTL\) settings for the table\.  
-For detailed information about the TTL feature of DynamoDB, see [Expiring Items with Time to Live](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html) in the Amazon DynamoDB Developer Guide\. 
+For detailed information about the limits in DynamoDB, see [Limits in Amazon DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html) in the Amazon DynamoDB Developer Guide\. 
 *Required*: No  
 *Type*: [TimeToLiveSpecification](aws-properties-dynamodb-timetolivespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

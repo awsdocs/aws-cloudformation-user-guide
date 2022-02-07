@@ -203,6 +203,21 @@ The following example creates a maintenance window Run Command task that install
                     "Ref": "MaintenanceWindow"
                 },
                 "TaskArn": "AWS-RunPatchBaseline",
+                "TaskInvocationParameters": {
+                    "MaintenanceWindowRunCommandParameters": {
+                        "Parameters": {
+                            "Operation": [
+                                "Install"
+                            ],
+                            "RebootOption": [
+                                "NoReboot"
+                            ]
+                        }
+                    },
+                    "MaxConcurrency": 7,
+                    "MaxErrors": 7,
+                    "Priority": 5
+                },
                 "Targets": [
                     {
                         "Key": "WindowTargetIds",
@@ -263,6 +278,16 @@ Resources:
       WindowId:
         Ref: MaintenanceWindow
       TaskArn: AWS-RunPatchBaseline
+      TaskInvocationParameters:
+        MaintenanceWindowRunCommandParameters:
+          Parameters:
+            Operation:
+            - Install
+            RebootOption:
+            - NoReboot
+      MaxConcurrency: 7
+      MaxErrors: 7
+      Priority: 5
       Targets:
       - Key: WindowTargetIds
         Values:

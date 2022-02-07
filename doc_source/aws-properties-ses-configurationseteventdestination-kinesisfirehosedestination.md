@@ -2,7 +2,7 @@
 
 Contains the delivery stream ARN and the IAM role ARN associated with an Amazon Kinesis Firehose event destination\.
 
-Event destinations, such as Amazon Kinesis Firehose, are associated with configuration sets, which enable you to publish email sending events\. For information about using configuration sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html)\.
+Event destinations, such as Amazon Kinesis Firehose, are associated with configuration sets, which enable you to publish email sending events\. For information about using configuration sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html)\.
 
 ## Syntax<a name="aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination-syntax"></a>
 

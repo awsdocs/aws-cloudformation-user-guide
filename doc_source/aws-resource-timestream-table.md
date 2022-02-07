@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Timestream::Table",
   "Properties" : {
       "[DatabaseName](#cfn-timestream-table-databasename)" : String,
+      "[MagneticStoreWriteProperties](#cfn-timestream-table-magneticstorewriteproperties)" : Json,
       "[RetentionProperties](#cfn-timestream-table-retentionproperties)" : Json,
       "[TableName](#cfn-timestream-table-tablename)" : String,
       "[Tags](#cfn-timestream-table-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -26,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Timestream::Table
 Properties: 
   [DatabaseName](#cfn-timestream-table-databasename): String
+  [MagneticStoreWriteProperties](#cfn-timestream-table-magneticstorewriteproperties): Json
   [RetentionProperties](#cfn-timestream-table-retentionproperties): Json
   [TableName](#cfn-timestream-table-tablename): String
   [Tags](#cfn-timestream-table-tags): 
@@ -40,6 +42,62 @@ The name of the Timestream database that contains this table\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MagneticStoreWriteProperties`  <a name="cfn-timestream-table-magneticstorewriteproperties"></a>
+Contains properties to set on the table when enabling magnetic store writes\.  
+This object has the following attributes:  
++ *EnableMagneticStoreWrites*: A `boolean` flag to enable magnetic store writes\.
++ *MagneticStoreRejectedDataLocation*: The location to write error reports for records rejected, asynchronously, during magnetic store writes\. Only `S3Configuration` objects are allowed\. The `S3Configuration` object has the following attributes: 
+  + *BucketName*: The name of the S3 bucket\.
+  + *EncryptionOption*: The encryption option for the S3 location\. Valid values are S3 server\-side encryption with an S3 managed key \(`SSE_S3`\) or AWS managed key \(` SSE_KMS`\)\.
+  + *KmsKeyId*: The AWS KMS key ID to use when encrypting with an AWS managed key\.
+  + *ObjectKeyPrefix*: The prefix to use option for the objects stored in S3\.
+
+  Both `BucketName` and `EncryptionOption` are **required** when `S3Configuration` is specified\. If you specify ` SSE_KMS` as your `EncryptionOption` then `KmsKeyId` is **required**\.
+ `EnableMagneticStoreWrites` attribute is **required** when `MagneticStoreWriteProperties` is specified\. `MagneticStoreRejectedDataLocation` attribute is **required** when `EnableMagneticStoreWrites` is set to `true`\.  
+See the following examples:  
+**JSON**  
+
+```
+{
+   "Type" : AWS::Timestream::Table", 
+   "Properties":{
+      "DatabaseName":"TestDatabase",
+      "TableName":"TestTable",
+      "MagneticStoreWriteProperties":{
+         "EnableMagneticStoreWrites":true,
+         "MagneticStoreRejectedDataLocation":{
+            "S3Configuration":{
+               "BucketName":"testbucket",
+               "EncryptionOption":"SSE_KMS",
+               "KmsKeyId":"1234abcd-12ab-34cd-56ef-1234567890ab",
+               "ObjectKeyPrefix":"prefix"
+            }
+         }
+      }
+   }
+}
+```
+**YAML**  
+
+```
+Type: AWS::Timestream::Table
+DependsOn: TestDatabase
+Properties:
+  TableName: "TestTable"
+  DatabaseName: "TestDatabase"
+  MagneticStoreWriteProperties:
+    EnableMagneticStoreWrites: true
+    MagneticStoreRejectedDataLocation:
+      S3Configuration:
+        BucketName: "testbucket"
+        EncryptionOption: "SSE_KMS"
+        BucketName: "1234abcd-12ab-34cd-56ef-1234567890ab"
+        EncryptionOption: "prefix"
+```
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetentionProperties`  <a name="cfn-timestream-table-retentionproperties"></a>
 The retention duration for the memory store and magnetic store\. This object has the following attributes:  

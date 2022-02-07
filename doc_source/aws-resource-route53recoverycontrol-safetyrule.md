@@ -98,4 +98,4 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) of the safety rule\.
 
 `Status`  <a name="Status-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The deployment status of the safety rule\. Status can be one of the following: PENDING, DEPLOYED, PENDING\_DELETION\.

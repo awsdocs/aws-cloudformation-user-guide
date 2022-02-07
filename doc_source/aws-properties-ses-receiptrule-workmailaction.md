@@ -2,7 +2,7 @@
 
 When included in a receipt rule, this action calls Amazon WorkMail and, optionally, publishes a notification to Amazon Simple Notification Service \(Amazon SNS\)\. It usually isn't necessary to set this up manually, because Amazon WorkMail adds the rule automatically during its setup procedure\.
 
-For information using a receipt rule to call Amazon WorkMail, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-action-workmail.html)\.
+For information using a receipt rule to call Amazon WorkMail, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-action-workmail.html)\.
 
 ## Syntax<a name="aws-properties-ses-receiptrule-workmailaction-syntax"></a>
 

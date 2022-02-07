@@ -53,7 +53,8 @@ Properties:
 ## Properties<a name="aws-resource-amplifyuibuilder-component-properties"></a>
 
 `BindingProperties`  <a name="cfn-amplifyuibuilder-component-bindingproperties"></a>
-The information to connect a component's properties to data at runtime\.  
+The information to connect a component's properties to data at runtime\. You can't specify `tags` as a valid property for `bindingProperties`\.  
+  
 *Required*: No  
 *Type*: Map of [ComponentBindingPropertiesValue](aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalue.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -65,7 +66,7 @@ A list of the component's `ComponentChild` instances\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CollectionProperties`  <a name="cfn-amplifyuibuilder-component-collectionproperties"></a>
-The data binding configuration for the component's properties\. Use this for a collection component\.  
+The data binding configuration for the component's properties\. Use this for a collection component\. You can't specify `tags` as a valid property for `collectionProperties`\.  
 *Required*: No  
 *Type*: Map of [ComponentDataConfiguration](aws-properties-amplifyuibuilder-component-componentdataconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -83,13 +84,13 @@ The name of the component\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Overrides`  <a name="cfn-amplifyuibuilder-component-overrides"></a>
-Describes the component's properties that can be overriden in a customized instance of the component\.  
+Describes the component's properties that can be overriden in a customized instance of the component\. You can't specify `tags` as a valid property for `overrides`\.  
 *Required*: No  
 *Type*: Map of [ComponentOverridesValue](aws-properties-amplifyuibuilder-component-componentoverridesvalue.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Properties`  <a name="cfn-amplifyuibuilder-component-properties"></a>
-Describes the component's properties\.  
+Describes the component's properties\. You can't specify `tags` as a valid property for `properties`\.  
 *Required*: No  
 *Type*: Map of [ComponentProperty](aws-properties-amplifyuibuilder-component-componentproperty.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

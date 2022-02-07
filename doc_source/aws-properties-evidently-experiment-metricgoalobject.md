@@ -65,7 +65,7 @@ A label for the units that the metric is measuring\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ValueKey`  <a name="cfn-evidently-experiment-metricgoalobject-valuekey"></a>
-A label for the units that the metric is measuring\.  
+ The JSON path to reference the numerical metric value in the event\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

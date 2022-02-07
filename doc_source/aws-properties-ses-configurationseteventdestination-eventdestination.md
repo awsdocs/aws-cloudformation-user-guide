@@ -5,7 +5,7 @@ Contains information about an event destination\.
 **Note**  
 When you create or update an event destination, you must provide one, and only one, destination\. The destination can be Amazon CloudWatch, Amazon Kinesis Firehose or Amazon Simple Notification Service \(Amazon SNS\)\.
 
-Event destinations are associated with configuration sets, which enable you to publish email sending events to Amazon CloudWatch, Amazon Kinesis Firehose, or Amazon Simple Notification Service \(Amazon SNS\)\. For information about using configuration sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html)\.
+Event destinations are associated with configuration sets, which enable you to publish email sending events to Amazon CloudWatch, Amazon Kinesis Firehose, or Amazon Simple Notification Service \(Amazon SNS\)\. For information about using configuration sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html)\.
 
 ## Syntax<a name="aws-properties-ses-configurationseteventdestination-eventdestination-syntax"></a>
 

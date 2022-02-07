@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-amplifyuibuilder-component-componentvariant-properties"></a>
 
 `Overrides`  <a name="cfn-amplifyuibuilder-component-componentvariant-overrides"></a>
-The properties of the component variant that can be overriden when customizing an instance of the component\.  
+The properties of the component variant that can be overriden when customizing an instance of the component\. You can't specify `tags` as a valid property for `overrides`\.  
 *Required*: No  
 *Type*: [ComponentOverrides](aws-properties-amplifyuibuilder-component-componentoverrides.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

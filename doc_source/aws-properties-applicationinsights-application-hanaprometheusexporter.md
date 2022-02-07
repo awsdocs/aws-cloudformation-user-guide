@@ -1,6 +1,6 @@
 # AWS::ApplicationInsights::Application HANAPrometheusExporter<a name="aws-properties-applicationinsights-application-hanaprometheusexporter"></a>
 
-<a name="aws-properties-applicationinsights-application-hanaprometheusexporter-description"></a>The `HANAPrometheusExporter` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::ApplicationInsights::Application](aws-resource-applicationinsights-application.md)\.
+The `AWS::ApplicationInsights::Application HANAPrometheusExporter` property type defines the HANA DB Prometheus Exporter settings\. For more information, see the [component configuration](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/component-config-sections.html#component-configuration-prometheus) in the CloudWatch Application Insights documentation\.
 
 ## Syntax<a name="aws-properties-applicationinsights-application-hanaprometheusexporter-syntax"></a>
 
@@ -31,31 +31,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-applicationinsights-application-hanaprometheusexporter-properties"></a>
 
 `AgreeToInstallHANADBClient`  <a name="cfn-applicationinsights-application-hanaprometheusexporter-agreetoinstallhanadbclient"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
+Designates whether you agree to install the HANA DB client\.  
+*Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HANAPort`  <a name="cfn-applicationinsights-application-hanaprometheusexporter-hanaport"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
+The HANA database port by which the exporter will query HANA metrics\.  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HANASecretName`  <a name="cfn-applicationinsights-application-hanaprometheusexporter-hanasecretname"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
+The AWS Secrets Manager secret that stores HANA monitoring user credentials\. The HANA Prometheus exporter uses these credentials to connect to the database and query HANA metrics\.  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HANASID`  <a name="cfn-applicationinsights-application-hanaprometheusexporter-hanasid"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
+The three\-character SAP system ID \(SID\) of the SAP HANA system\.  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrometheusPort`  <a name="cfn-applicationinsights-application-hanaprometheusexporter-prometheusport"></a>
-Not currently supported by AWS CloudFormation\.  
+The target port to which Prometheus sends metrics\. If not specified, the default port 9668 is used\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

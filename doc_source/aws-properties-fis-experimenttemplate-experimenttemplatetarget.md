@@ -55,10 +55,10 @@ The tags for the target resources\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceType`  <a name="cfn-fis-experimenttemplate-experimenttemplatetarget-resourcetype"></a>
-The AWS resource type\. The resource type must be supported for the specified action\.  
+The resource type\. The resource type must be supported for the specified action\.  
 *Required*: Yes  
 *Type*: String  
-*Maximum*: `64`  
+*Maximum*: `128`  
 *Pattern*: `[\S]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

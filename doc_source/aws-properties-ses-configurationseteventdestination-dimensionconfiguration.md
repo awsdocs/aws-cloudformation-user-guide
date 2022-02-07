@@ -2,7 +2,7 @@
 
 Contains the dimension configuration to use when you publish email sending events to Amazon CloudWatch\.
 
-For information about publishing email sending events to Amazon CloudWatch, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html)\.
+For information about publishing email sending events to Amazon CloudWatch, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html)\.
 
 ## Syntax<a name="aws-properties-ses-configurationseteventdestination-dimensionconfiguration-syntax"></a>
 

@@ -1,6 +1,6 @@
 # AWS::SageMaker::Model InferenceExecutionConfig<a name="aws-properties-sagemaker-model-inferenceexecutionconfig"></a>
 
-<a name="aws-properties-sagemaker-model-inferenceexecutionconfig-description"></a>The `InferenceExecutionConfig` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::SageMaker::Model](aws-resource-sagemaker-model.md)\.
+Specifies details about how containers in a multi\-container endpoint are run\.
 
 ## Syntax<a name="aws-properties-sagemaker-model-inferenceexecutionconfig-syntax"></a>
 

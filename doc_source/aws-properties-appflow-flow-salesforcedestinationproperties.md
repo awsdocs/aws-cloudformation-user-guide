@@ -40,7 +40,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The name of the field that Amazon AppFlow uses as an ID when performing a write operation such as update or delete\.   
 *Required*: No  
 *Type*: List of String  
-*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Object`  <a name="cfn-appflow-flow-salesforcedestinationproperties-object"></a>
@@ -55,7 +54,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  This specifies the type of write operation to be performed in Salesforce\. When the value is `UPSERT`, then `idFieldNames` is required\.   
 *Required*: No  
 *Type*: String  
-*Allowed values*: `INSERT | UPDATE | UPSERT`  
+*Allowed values*: `DELETE | INSERT | UPDATE | UPSERT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-appflow-flow-salesforcedestinationproperties--seealso"></a>

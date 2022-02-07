@@ -58,6 +58,7 @@ Specifies the position filtering for the tracker resource\.
 Valid values:  
 +  `TimeBased` \- Location updates are evaluated against linked geofence collections, but not every location update is stored\. If your update frequency is more often than 30 seconds, only one update per 30 seconds is stored for each unique device ID\. 
 +  `DistanceBased` \- If the device has moved less than 30 m \(98\.4 ft\), location updates are ignored\. Location updates within this area are neither evaluated against linked geofence collections, nor stored\. This helps control costs by reducing the number of geofence evaluations and historical device positions to paginate through\. Distance\-based filtering can also reduce the effects of GPS noise when displaying device trajectories on a map\. 
++  `AccuracyBased` \- If the device has moved less than the measured accuracy, location updates are ignored\. For example, if two consecutive updates from a device have a horizontal accuracy of 5 m and 10 m, the second update is ignored if the device has moved less than 15 m\. Ignored location updates are neither evaluated against linked geofence collections, nor stored\. This can reduce the effects of GPS noise when displaying device trajectories on a map, and can help control your costs by reducing the number of geofence evaluations\. 
 This field is optional\. If not specified, the default value is `TimeBased`\.  
 *Required*: No  
 *Type*: String  
@@ -65,19 +66,14 @@ This field is optional\. If not specified, the default value is `TimeBased`\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PricingPlan`  <a name="cfn-location-tracker-pricingplan"></a>
-Specifies the pricing plan for the tracker resource\.  
-For additional details and restrictions on each pricing plan option, see the [Amazon Location Service pricing page](http://aws.amazon.com/location/pricing/)\.  
-*Required*: Yes  
+No longer used\. If included, the only allowed value is `RequestBasedUsage`\.  
+*Required*: No  
 *Type*: String  
 *Allowed values*: `MobileAssetManagement | MobileAssetTracking | RequestBasedUsage`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PricingPlanDataSource`  <a name="cfn-location-tracker-pricingplandatasource"></a>
-Specifies the data provider for the tracker resource\.  
-+ Required value for the following pricing plans: `MobileAssetTracking `\| `MobileAssetManagement`
-For more information about [Data Providers](http://aws.amazon.com/location/data-providers/), and [Pricing plans](http://aws.amazon.com/location/pricing/), see the Amazon Location Service product page\.  
-Amazon Location Service only uses `PricingPlanDataSource` to calculate billing for your tracker resource\. Your data will not be shared with the data provider, and will remain in your AWS account or region unless you move it\.
-Valid Values: `Esri` \| `Here`  
+This parameter is no longer used\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

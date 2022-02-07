@@ -4,7 +4,7 @@ Receipt rules enable you to specify which actions Amazon SES should take when it
 
 Each receipt rule defines a set of email addresses or domains that it applies to\. If the email addresses or domains match at least one recipient address of the message, Amazon SES executes all of the receipt rule's actions on the message\.
 
-For information about setting up receipt rules, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rules.html)\.
+For information about setting up receipt rules, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-receipt-rules-console-walkthrough.html)\.
 
 ## Syntax<a name="aws-properties-ses-receiptrule-rule-syntax"></a>
 

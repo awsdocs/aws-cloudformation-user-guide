@@ -88,7 +88,7 @@ The following example creates a capacity provider that uses the Auto Scaling gro
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Resources": {
-        "ECSCapacityProvider": {
+    "MyCapacityProvider": {
             "Type": "AWS::ECS::CapacityProvider",
             "Properties": {
                 "AutoScalingGroupProvider": {
@@ -118,7 +118,7 @@ The following example creates a capacity provider that uses the Auto Scaling gro
 ```
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
-  ECSCapacityProvider:
+ MyCapacityProvider:
     Type: AWS::ECS::CapacityProvider
     Properties:
         AutoScalingGroupProvider:

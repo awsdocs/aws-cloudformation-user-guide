@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SecretsManager::RotationSchedule",
   "Properties" : {
       "[HostedRotationLambda](#cfn-secretsmanager-rotationschedule-hostedrotationlambda)" : HostedRotationLambda,
+      "[RotateImmediatelyOnUpdate](#cfn-secretsmanager-rotationschedule-rotateimmediatelyonupdate)" : Boolean,
       "[RotationLambdaARN](#cfn-secretsmanager-rotationschedule-rotationlambdaarn)" : String,
       "[RotationRules](#cfn-secretsmanager-rotationschedule-rotationrules)" : RotationRules,
       "[SecretId](#cfn-secretsmanager-rotationschedule-secretid)" : String
@@ -30,6 +31,7 @@ Type: AWS::SecretsManager::RotationSchedule
 Properties: 
   [HostedRotationLambda](#cfn-secretsmanager-rotationschedule-hostedrotationlambda): 
     HostedRotationLambda
+  [RotateImmediatelyOnUpdate](#cfn-secretsmanager-rotationschedule-rotateimmediatelyonupdate): Boolean
   [RotationLambdaARN](#cfn-secretsmanager-rotationschedule-rotationlambdaarn): String
   [RotationRules](#cfn-secretsmanager-rotationschedule-rotationrules): 
     RotationRules
@@ -43,6 +45,12 @@ To use these values, you must specify `Transform: AWS::SecretsManager-2020-07-23
 When you enter valid values for `RotationSchedule.HostedRotationLambda`, Secrets Manager launches a Lambda that performs rotation on the secret specified in the `secret-id` property\. The template creates a Lambda as part of a nested stack within the current stack\.   
 *Required*: No  
 *Type*: [HostedRotationLambda](aws-properties-secretsmanager-rotationschedule-hostedrotationlambda.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RotateImmediatelyOnUpdate`  <a name="cfn-secretsmanager-rotationschedule-rotateimmediatelyonupdate"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RotationLambdaARN`  <a name="cfn-secretsmanager-rotationschedule-rotationlambdaarn"></a>

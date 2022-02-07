@@ -2,6 +2,8 @@
 
 Contains an optional backup plan display name and an array of `BackupRule` objects, each of which specifies a backup rule\. Each rule in a backup plan is a separate scheduled task and can back up a different selection of AWS resources\.
 
+For a sample AWS CloudFormation template, see the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/assigning-resources.html#assigning-resources-cfn)\.
+
 ## Syntax<a name="aws-resource-backup-backupplan-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

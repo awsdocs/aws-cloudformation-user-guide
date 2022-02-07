@@ -4,10 +4,62 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_Events.md) | The following resource was updated: [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)\. 
+
+ [AWS::Events::Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)   
+The [Rule\.SageMakerPipelineParameter\.PipelineParameterList](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameter.html#cfn-events-rule-sagemakerpipelineparameters-pipelineparameterlist) is a list of parameter names and values for SageMaker Model Building Pipeline execution\.  
+The [Rule\.SageMakerPipelineParameter\.Name](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameters.html#cfn-events-rule-sagemakerpipelineparameter-name) is the name of parameter to start execution of a SageMaker Model Building Pipeline\.  
+The [Rule\.SageMakerPipelineParameter\.Value](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-sagemakerpipelineparameters.html#cfn-events-rule-sagemakerpipelineparameter-value) is the value of parameter to start execution of a SageMaker Model Building Pipeline\.  | February 3, 2022 | 
+| [New properties](AWS_ApplicationInsights.md) | The following properties were added under [AWS::ApplicationInsights::Application\.ConfigurationDetails](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-configurationdetails.html):  
+
+ [HANAPrometheusExporter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-configurationdetails.html#aws-properties-applicationinsights-application-configurationdetails-properties)   
+Use the `HANAPrometheusExporter` property of the `AWS::ApplicationInsights::Application` resource to define the HANA DB Prometheus Exporter settings\. 
+
+[HAClusterPrometheusExporter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-configurationdetails.html#aws-properties-applicationinsights-application-configurationdetails-properties)  
+Use the `HAClusterPrometheusExporter` property of the `AWS::ApplicationInsights::Application` resource to define the HA Cluster Prometheus Exporter settings\.  | February 3, 2022 | 
+| [Updated resources](AWS_Location.md) | The following resources were updated: `AWS::Location::GeofenceCollection`, `AWS::Location::Map`, `AWS::Location::PlaceIndex`, `AWS::Location::RouteCalculator`, and `AWS::Location::Tracker`\. 
+
+ [AWS::Location::GeofenceCollection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html)   
+Updated the `AWS::Location::GeofenceCollection` resource to no longer use `PricingPlan` or `PricingPlanDataSource`\. 
+
+ [AWS::Location::Map](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-map.html)   
+Updated the `AWS::Location::Map` resource to no longer use `PricingPlan`\. 
+
+ [AWS::Location::PlaceIndex](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-placeindex.html)   
+Updated the `AWS::Location::PlaceIndex` resource to no longer use `PricingPlan`\. 
+
+ [AWS::Location::RouteCalculator](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-routecalculator.html)   
+Update the `AWS::Location::RouteCalculator` resource to no longer use `PricingPlan`\. 
+
+ [AWS::Location::Tracker](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html)   
+Update the `AWS::Location::Tracker` resource to no longer use `PricingPlan` or `PricingPlanDataSource`\.  | January 27, 2022 | 
+| [Updated resource](AWS_GuardDuty.md) | The following resource was updated: AWS::GuardDuty::Detector\. 
+
+ [AWS::GuardDuty::Detector](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-detector,html)   
+Use the `CFNDataSourceConfigurations` property to specify which optional data sources are enabled for a detector\.  | January 27, 2022 | 
+| [Updated resource](AWS_IVS.md) | The following resource was updated: AWS::IVS::RecordingConfiguration 
+
+ [AWS::IVS::RecordingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html)   
+Use the `ThumbnailConfiguration` property to specify an Amazon IVS ThumbnailConfiguration, which stores configuration information related to generating thumbnail images for your live stream\.  | January 27, 2022 | 
+| [New resource](AWS_AppIntegrations.md) | The following resource was added: AWS::AppIntegrations::DataIntegration 
+
+ [AWS::AppIntegrations::DataIntegration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appintegrations-dataintegration.html)   
+Use the `AWS::AppIntegrations::DataIntegration` resource to create a DataIntegration\.  | January 27, 2022 | 
+| [New resources](AWS_Forecast.md) | The following resources were added: AWS::Forecast::Dataset and AWS::Forecast::DatasetGroup\. 
+
+ [AWS::Forecast::Dataset](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-dataset.html)   
+Use the `AWS::Forecast::Dataset` resource to import a new or updated dataset in Amazon Forecast\. 
+
+ [AWS::Forecast::DatasetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-datasetgroup.html)   
+Use the `AWS::Forecast::DatasetGroup` resource to create a Dataset Group in Amazon Forecast\.  | January 23, 2022 | 
 | [Updated resources](AWS_DataBrew.md) | The following resources were updated: AWS::DataBrew::Job 
 
  [AWS::DataBrew::Job](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-datacatalogoutput.html)   
 Add BucketOwner parameter to the S3Location data type to define the owner of the specified S3 bucket\.  | January 20, 2022 | 
+| [Updated resource](AWS_Location.md) | The following resources were updated: `AWS::Location::Tracker`, 
+
+ [AWS::Location::Tracker](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html)   
+Added `AccuracyBased` as a new value for `PositionFiltering` for trackers\.  | January 20, 2022 | 
 | [New resources](AWS_Lightsail.md) | The following resources were added: AWS::Lightsail::Certificate, AWS::Lightsail::Container, and AWS::Lightsail::Distribution 
 
  [AWS::Lightsail::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html)   
@@ -18,6 +70,10 @@ Use the `AWS::Lightsail::Container` resource to specify an Amazon Lightsail cont
 
  [AWS::Lightsail::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-distribution.html)   
 Use the `AWS::Lightsail::Distribution` resource to specify an Amazon Lightsail CDN distribution\.  | January 20, 2022 | 
+| [New resource](AWS_KafkaConnect.md) | The following resource was added: AWS::KafkaConnect::Connector 
+
+ [AWS::KafkaConnect::Connector](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html)   
+Creates an MSK Connect connector\.  | January 20, 2022 | 
 | [Updated resource](AWS_AppSync.md) | The following resources were updated: AWS::AppSync::Resolver and AWS::AppSync::FunctionConfiguration 
 
  [AWS::AppSync::Resolver](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html#cfn-appsync-resolver-maxbatchsize)   
@@ -371,10 +427,6 @@ Use the `AWS::Lightsail::Database` resource to specify an Amazon Lightsail datab
 
  [AWS::Lightsail::StaticIp](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-staticip.html)   
 Use the `AWS::Lightsail::StaticIp` resource to specify a static IP that can be attached to an Amazon Lightsail instance that is in the same AWS Region and Availability Zone\.  | October 28, 2021 | 
-| [New resource](AWS_Route53Resolver.md) | The following resource was added: AWS::Route53Resolver::ResolverConfig 
-
-[AWS::Route53Resolver::ResolverConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverconfig.html)  
-Use the `AWS::Route53Resolver::ResolverConfig` resource to specify information about a Route 53 Resolver configuration for a VPC\.\.  | October 28, 2021 | 
 | [Updated resource](AWS_MediaConnect.md) | The following resources were updated: `AWS::MediaConnect::Flow.Source`, `AWS::MediaConnect::FlowOutput` 
 
  [AWS::MediaConnect::Flow Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html)   
@@ -472,6 +524,10 @@ Use the `AWS::Lightsail::Disk` resource to specify a disk that can be attached t
 
  [AWS::IoT::JobTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html)   
 Use the `AWS::IoT::DomainConfJobTemplateiguration` resource to specify a job template in AWS IoT Core\.  | October 7, 2021 | 
+| [New resource](AWS_Route53Resolver.md) | The following resource was added: AWS::Route53Resolver::ResolverConfig 
+
+[AWS::Route53Resolver::ResolverConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverconfig.html)  
+Use the `AWS::Route53Resolver::ResolverConfig` resource to specify information about a Route 53 Resolver configuration for a VPC\.\.  | October 7, 2021 | 
 | [Updated resources](AWS_ECR.md) | The following resources were updated: AWS::ECR::ReplicationConfiguration 
 
  [AWS::ECR::ReplicationConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-replicationconfiguration.html)   
@@ -661,7 +717,7 @@ Use the `AWS::Route53RecoveryControl::ControlPanel` to define a group of routing
 Use the `AWS::Route53RecoveryControl::RoutingControl` to fail over traffic to an application replica, to recover your application across Availability Zones or Regions\. 
 
  [AWS::Route53RecoveryControl::SafetyRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-safetyrule.html)   
-Use the `AWS::Route53RecoveryControl::SafetyRule` to configure safeguards for routing controls, to avoid things like turning off routing controls at once and stopping all traffic flow\.   | July 29, 2021 | 
+Use the `AWS::Route53RecoveryControl::SafetyRule` to configure safeguards for routing controls, to avoid things like turning off all routing controls at once and stopping all traffic flow\.   | July 29, 2021 | 
 | [New resource](AWS_Route53RecoveryReadiness.md) | The following resources were released: AWS::Route53RecoveryReadiness::Cell, AWS::Route53RecoveryReadiness::ReadinessCheck, AWS::Route53RecoveryReadiness::RecoveryGroup, AWS::Route53RecoveryReadiness::ResourceSet 
 
  [AWS::Route53RecoveryReadiness::Cell](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-cell.html)   
@@ -1596,6 +1652,10 @@ Added the attribute `AccessPolicyId` for internal use only\.  | January 28, 2021
 
  [AWS::LookoutVision:Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_LookoutVision.html)   
 Use the `Project` resource to create an Amazon Lookout for Vision project\.  | January 28, 2021 | 
+| [New collection resource](AWS_Rekognition.md) | The following resource was added: AWS::Rekognition::Collection\. 
+
+ [AWS::Rekognition::Collection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/AWS_Rekognition.html)   
+The `AWS::Rekognition::Collection` type creates a server\-side container called a collection\. You can use a collection to store information about detected faces and search for known faces in images, stored videos, and streaming videos\.  | January 27, 2021 | 
 | [Updated resource](AWS_ACMPCA.md) | The following resource was updated: AWS::ACMPCA::Certificate\. 
 
  [AWS::ACMPCA::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html)   

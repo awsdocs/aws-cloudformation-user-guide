@@ -1,6 +1,10 @@
 # AWS::KMS::Key<a name="aws-resource-kms-key"></a>
 
-The `AWS::KMS::Key` resource specifies a [symmetric or asymmetric](https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html) [KMS key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys) in AWS Key Management Service \(AWS KMS\)\.
+The `AWS::KMS::Key` resource specifies a [symmetric or asymmetric](https://docs.aws.amazon.com/kms/latest/developerguide/symmetric-asymmetric.html) [KMS key](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys) in AWS Key Management Service \(AWS KMS\)\. 
+
+You can use the `AWS::KMS::Key` resource to specify a symmetric or asymmetric multi\-Region primary key\. To specify a replica key, use the [AWS::KMS::ReplicaKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html) resource\. For information about multi\-Region keys, see [Multi\-Region keys](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html) in the *AWS Key Management Service Developer Guide*\.
+
+You cannot use the `AWS::KMS::Key` resource to specify a KMS key with [imported key material](https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html) or a KMS key in a [custom key store](https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html)\.
 
 **Note**  
 AWS KMS is replacing the term *customer master key \(CMK\)* with *AWS KMS key* and *KMS key*\. The concept has not changed\. To prevent breaking changes, AWS KMS is keeping some variations of this term\.
@@ -10,8 +14,12 @@ You can use symmetric KMS keys to encrypt and decrypt small amounts of data, but
 You can use asymmetric KMS keys to encrypt and decrypt data or sign messages and verify signatures\. To create an asymmetric key, you must specify an asymmetric `KeySpec` value and a `KeyUsage` value\.
 
 **Important**  
-If you change the value of a `Replacement` property, such as `KeyUsage` or `KeySpec`, on an existing KMS key, the existing KMS key is [scheduled for deletion](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html) and a new KMS key is created with the specified value\.  
+If you change the value of the `KeyUsage`, `KeySpec`, or `MultiRegion` property on an existing KMS key, the existing KMS key is [scheduled for deletion](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html) and a new KMS key is created with the specified value\.  
 While scheduled for deletion, the existing KMS key becomes unusable\. If you don't [cancel the scheduled deletion](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html#deleting-keys-scheduling-key-deletion) of the existing KMS key outside of CloudFormation, all data encrypted under the existing KMS key becomes unrecoverable when the KMS key is deleted\.
+
+**Regions**
+
+AWS KMS CloudFormation resources are supported in all Regions in which AWS CloudFormation is supported\. However, in the Asia Pacific \(Jakarta\) Region \(ap\-southeast\-3\), you cannot use a CloudFormation template to create or manage asymmetric KMS keys or multi\-Region KMS keys \(primary or replica\)\.
 
 ## Syntax<a name="aws-resource-kms-key-syntax"></a>
 
@@ -112,7 +120,7 @@ AWS KMS supports the following key specs for KMS keys:
   + `ECC_SECG_P256K1` \(secp256k1\), commonly used for cryptocurrencies\.
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KeyUsage`  <a name="cfn-kms-key-keyusage"></a>
 Determines the [cryptographic operations](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations) for which you can use the KMS key\. The default value is `ENCRYPT_DECRYPT`\. This property is required only for asymmetric KMS keys\. You can't change the `KeyUsage` value after the KMS key is created\.  
@@ -124,18 +132,18 @@ Select only one valid value\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ENCRYPT_DECRYPT | SIGN_VERIFY`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MultiRegion`  <a name="cfn-kms-key-multiregion"></a>
 Creates a multi\-Region primary key that you can replicate in other AWS Regions\.  
 If you change the `MultiRegion` property of an existing KMS key, the existing KMS key is scheduled for deletion and a new KMS key is created with the specified `Multi-Region` value\. While the scheduled deletion is pending, you can't use the existing KMS key\. Unless you [cancel the scheduled deletion](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html#deleting-keys-scheduling-key-deletion) of the KMS key outside of CloudFormation, all data encrypted under the existing KMS key becomes unrecoverable when the KMS key is deleted\.
 For a multi\-Region key, set to this property to `true`\. For a single\-Region key, omit this property or set it to `false`\. The default value is `false`\.  
-*Multi\-Region keys* are an AWS KMS feature that lets you create multiple interoperable KMS keys in different AWS Regions\. Because these KMS keys have the same key ID, key material, and other metadata, you can use them to encrypt data in one AWS Region and decrypt it in a different AWS Region without making a cross\-Region call or exposing the plaintext data\. For more information, see [Using multi\-Region keys](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html) in the *AWS Key Management Service Developer Guide*\.  
+*Multi\-Region keys* are an AWS KMS feature that lets you create multiple interoperable KMS keys in different AWS Regions\. Because these KMS keys have the same key ID, key material, and other metadata, you can use them to encrypt data in one AWS Region and decrypt it in a different AWS Region without making a cross\-Region call or exposing the plaintext data\. For more information, see [Multi\-Region keys](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html) in the *AWS Key Management Service Developer Guide*\.  
 You can create a symmetric or asymmetric multi\-Region key, and you can create a multi\-Region key with imported key material\. However, you cannot create a multi\-Region key in a custom key store\.  
 To create a replica of this primary key in a different AWS Region , create an [AWS::KMS::ReplicaKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html) resource in a CloudFormation stack in the replica Region\. Specify the key ARN of this primary key\.  
 *Required*: No  
 *Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PendingWindowInDays`  <a name="cfn-kms-key-pendingwindowindays"></a>
 Specifies the number of days in the waiting period before AWS KMS deletes a KMS key that has been removed from a CloudFormation stack\. Enter a value between 7 and 30 days\. The default value is 30 days\.  
@@ -151,7 +159,7 @@ For information about the `Pending Deletion` and `Pending Replica Deletion` key 
 
 `Tags`  <a name="cfn-kms-key-tags"></a>
 Assigns one or more tags to the replica key\.  
-Tagging or untagging a KMS key can allow or deny permission to the KMS key\. For details, see [Using ABAC in AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/abac.html) in the *AWS Key Management Service Developer Guide*\.
+Tagging or untagging a KMS key can allow or deny permission to the KMS key\. For details, see [ABAC for AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/abac.html) in the *AWS Key Management Service Developer Guide*\.
 For information about tags in AWS KMS, see [Tagging keys](https://docs.aws.amazon.com/kms/latest/developerguide/tagging-keys.html) in the *AWS Key Management Service Developer Guide*\. For information about tags in CloudFormation, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
@@ -309,7 +317,7 @@ myKey:
 The following example creates a symmetric KMS key with one resource tag\.
 
 **Note**  
-Tagging or untagging a KMS key can allow or deny permission to the KMS key\. For details, see [Using ABAC in AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/abac.html) in the *AWS Key Management Service Developer Guide*\.
+Tagging or untagging a KMS key can allow or deny permission to the KMS key\. For details, see [ABAC for AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/abac.html) in the *AWS Key Management Service Developer Guide*\.
 
 #### JSON<a name="aws-resource-kms-key--examples--Create_a_symmetric_KMS_key_with_a_resource_tag--json"></a>
 
@@ -514,7 +522,7 @@ RSASigningKey:
 
 The following example creates a multi\-Region primary key\.
 
-*Multi\-Region keys* are an AWS KMS feature that lets you create multiple interoperable KMS keys in different AWS Regions\. Because these KMS keys have the same key ID, key material, and other metadata, you can use them to encrypt data in one AWS Region and decrypt it in a different AWS Region without making a cross\-Region call or exposing the plaintext data\. For more information, see [Using multi\-Region keys](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html) in the *AWS Key Management Service Developer Guide*\.
+*Multi\-Region keys* are an AWS KMS feature that lets you create multiple interoperable KMS keys in different AWS Regions\. Because these KMS keys have the same key ID, key material, and other metadata, you can use them to encrypt data in one AWS Region and decrypt it in a different AWS Region without making a cross\-Region call or exposing the plaintext data\. For more information, see [Multi\-Region keys](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html) in the *AWS Key Management Service Developer Guide*\.
 
 To replicate this primary key into a different AWS Region, use the [AWS::KMS::ReplicaKey](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replica-key.html) CloudFormation resource\.
 

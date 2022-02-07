@@ -49,7 +49,7 @@ The name of the child component\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Properties`  <a name="cfn-amplifyuibuilder-component-componentchild-properties"></a>
-Describes the properties of the child component\.  
+Describes the properties of the child component\. You can't specify `tags` as a valid property for `properties`\.  
 *Required*: Yes  
 *Type*: [ComponentProperties](aws-properties-amplifyuibuilder-component-componentproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

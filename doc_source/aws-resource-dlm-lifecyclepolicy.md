@@ -150,6 +150,41 @@ The following example demonstrates how to create a basic snapshot lifecycle poli
 }
 ```
 
+#### YAML<a name="aws-resource-dlm-lifecyclepolicy--examples--Creating_a_Lifecycle_Policy--yaml"></a>
+
+```
+Description: Basic LifecyclePolicy
+Resources:
+  BasicLifecyclePolicy:
+    Type: AWS::DLM::LifecyclePolicy
+    Properties:
+      Description: Lifecycle Policy using CloudFormation
+      State: ENABLED
+      ExecutionRoleArn: arn:aws:iam::123456789012:role/service-role/AWSDataLifecycleManagerDefaultRole
+      PolicyDetails:
+        ResourceTypes:
+        - VOLUME
+        TargetTags:
+        - Key: costcenter
+          Value: '115'
+        Schedules:
+        - Name: Daily Snapshots
+          TagsToAdd:
+          - Key: type
+            Value: DailySnapshot
+          CreateRule:
+            Interval: 12
+            IntervalUnit: HOURS
+            Times:
+            - '13:00'
+          RetainRule:
+            Count: 1
+          CopyTags: true
+          CrossRegionCopyRules:
+          - Encrypted: false
+            Target: us-east-1
+```
+
 ## See also<a name="aws-resource-dlm-lifecyclepolicy--seealso"></a>
 +  [CreateLifecyclePolicy](https://docs.aws.amazon.com/dlm/latest/APIReference/API_CreateLifecyclePolicy.html) in the *Amazon Data Lifecycle Manager API Reference* 
 +  [Automating the Amazon EBS Snapshot Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html) in the *Amazon Elastic Compute Cloud User Guide* 

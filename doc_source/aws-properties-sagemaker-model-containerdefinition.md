@@ -106,7 +106,7 @@ The name or Amazon Resource Name \(ARN\) of the model package to use to create t
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MultiModelConfig`  <a name="cfn-sagemaker-model-containerdefinition-multimodelconfig"></a>
-Not currently supported by AWS CloudFormation\.  
+Specifies additional configuration for multi\-model endpoints\.  
 *Required*: No  
 *Type*: [MultiModelConfig](aws-properties-sagemaker-model-containerdefinition-multimodelconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

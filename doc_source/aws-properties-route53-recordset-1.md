@@ -11,7 +11,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AliasTarget](#cfn-route53-recordset-aliastarget)" : AliasTarget,
-  "[Comment](#cfn-route53-recordset-comment)" : String,
   "[Failover](#cfn-route53-recordset-failover)" : String,
   "[GeoLocation](#cfn-route53-recordset-geolocation)" : GeoLocation,
   "[HealthCheckId](#cfn-route53-recordset-healthcheckid)" : String,
@@ -33,7 +32,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AliasTarget](#cfn-route53-recordset-aliastarget): 
     AliasTarget
-  [Comment](#cfn-route53-recordset-comment): String
   [Failover](#cfn-route53-recordset-failover): String
   [GeoLocation](#cfn-route53-recordset-geolocation): 
     GeoLocation
@@ -61,13 +59,6 @@ If you're creating resource records sets for a private hosted zone, note the fol
 + For information about creating failover resource record sets in a private hosted zone, see [Configuring Failover in a Private Hosted Zone](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-private-hosted-zones.html) in the *Amazon Route 53 Developer Guide*\.
 *Required*: No  
 *Type*: [AliasTarget](aws-properties-route53-aliastarget.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`Comment`  <a name="cfn-route53-recordset-comment"></a>
- *Optional:* Any comments you want to include about a change batch request\.  
-*Required*: No  
-*Type*: String  
-*Maximum*: `256`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Failover`  <a name="cfn-route53-recordset-failover"></a>

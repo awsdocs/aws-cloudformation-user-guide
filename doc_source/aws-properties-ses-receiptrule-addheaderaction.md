@@ -2,7 +2,7 @@
 
 When included in a receipt rule, this action adds a header to the received email\.
 
-For information about adding a header using a receipt rule, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-action-add-header.html)\.
+For information about adding a header using a receipt rule, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-action-add-header.html)\.
 
 ## Syntax<a name="aws-properties-ses-receiptrule-addheaderaction-syntax"></a>
 

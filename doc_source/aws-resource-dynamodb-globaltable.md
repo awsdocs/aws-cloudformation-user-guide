@@ -3,7 +3,8 @@
 The `AWS::DynamoDB::GlobalTable` resource enables you to create and manage a Version 2019\.11\.21 global table\. This resource cannot be used to create or manage a Version 2017\.11\.29 global table\.
 
 **Important**  
-You cannot convert a resource of type `AWS::DynamoDB::Table` into a resource of type `AWS::DynamoDB::GlobalTable` by changing its type in your template\. **Doing so might result in the deletion of your DynamoDB table\.**
+You cannot convert a resource of type `AWS::DynamoDB::Table` into a resource of type `AWS::DynamoDB::GlobalTable` by changing its type in your template\. **Doing so might result in the deletion of your DynamoDB table\.**  
+You can instead use the GlobalTable resource to create a new table in a single Region\. This will be billed the same as a single Region table\. If you later update the stack to add other Regions then Global Tables pricing will apply\.
 
 You should be aware of the following behaviors when working with DynamoDB global tables\.
 + The IAM Principal executing the stack operation must have the permissions listed below in all regions where you plan to have a global table replica\. The IAM Principal's permissions should not have restrictions based on IP source address\. Some global tables operations \(for example, adding a replica\) are asynchronous, and require that the IAM Principal is valid until they complete\. You should not delete the Principal \(user or IAM role\) until CloudFormation has finished updating your stack\.
@@ -117,7 +118,6 @@ Specifies how you are charged for read and write throughput and how you manage c
 All replicas in your global table will have the same billing mode\. If you use `PROVISIONED` billing mode, you must provide an auto scaling configuration via the `WriteProvisionedThroughputSettings` property\. The default value of this property is `PROVISIONED`\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `PAY_PER_REQUEST | PROVISIONED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalSecondaryIndexes`  <a name="cfn-dynamodb-globaltable-globalsecondaryindexes"></a>
@@ -165,14 +165,10 @@ A name for the global table\. If you don't specify a name, AWS CloudFormation ge
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required*: No  
 *Type*: String  
-*Minimum*: `3`  
-*Maximum*: `255`  
-*Pattern*: `[a-zA-Z0-9_.-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TimeToLiveSpecification`  <a name="cfn-dynamodb-globaltable-timetolivespecification"></a>
-Specifies the Time to Live \(TTL\) settings for the table\. This setting will be applied to all replicas\.  
-For detailed information about the TTL feature of DynamoDB, see [Expiring Items with Time to Live](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TTL.html) in the Amazon DynamoDB Developer Guide\. 
+Specifies the time to live \(TTL\) settings for the table\. This setting will be applied to all replicas\.  
 *Required*: No  
 *Type*: [TimeToLiveSpecification](aws-properties-dynamodb-globaltable-timetolivespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -72,4 +72,4 @@ The security groups to associate with the elastic network interfaces in order to
 Contains information about storage volumes attached to MSK broker nodes\.  
 *Required*: No  
 *Type*: [StorageInfo](aws-properties-msk-cluster-storageinfo.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
