@@ -1,6 +1,6 @@
 # AWS::SNS::Subscription<a name="aws-resource-sns-subscription"></a>
 
-The `AWS::SNS::Subscription` resource subscribes an endpoint to an Amazon SNS topic\. For a subscription to be created, the owner of the endpoint must confirm the subscription\.
+The `AWS::SNS::Subscription` resource subscribes an endpoint to an Amazon SNS topic\. If the endpoint type is HTTP/S or email, or if the endpoint and the topic are not in the same Amazon Web Services account, the owner of the endpoint must confirm the subscription\.
 
 ## Syntax<a name="aws-resource-sns-subscription-syntax"></a>
 
