@@ -85,3 +85,131 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the detector\. For example, `arn:aws:lookoutmetrics:us-east-2:123456789012:AnomalyDetector:my-detector`
+
+## Examples<a name="aws-resource-lookoutmetrics-anomalydetector--examples"></a>
+
+
+### Create a continuous Anomaly Detector<a name="aws-resource-lookoutmetrics-anomalydetector--examples--Create_a_continuous_Anomaly_Detector"></a>
+
+The following example creates a continuous `AnomalyDetector` using historical back-test data and with new continuous data. Data is files of newline-delimited JSON, one object per line, uploaded to the continuous bucket where each new file appears in the prefix `/dataprefix/`. For example, data for `Jan 2, 2022 13:35:56` would appear as `/dataprefix/2022/01/02/13/35/NN.json` where `NN` is a distinct arbitrary label.
+
+#### JSON<a name="aws-resource-lookoutmetrics-anomalydetector--examples--Create_a_continuous_Anomaly_Detector--json"></a>
+
+```
+{
+    "ContinuousAnomalyDetector": {
+        "Type": "AWS::LookoutMetrics::AnomalyDetector",
+        "Properties": {
+            "AnomalyDetectorDescription": "ContinuousAnomalyDetector",
+            "AnomalyDetectorName": "ContinuousAnomalyDetector",
+            "AnomalyDetectorConfig": {
+                "AnomalyDetectorFrequency": "PT5M"
+            },
+            "MetricSetList": [
+                {
+                    "MetricSetDescription": "Simple metric set",
+                    "MetricSetFrequency": "PT5M",
+                    "MetricSetName": "ContinuousAnomalyDetectorSimpleMetricSet",
+                    "MetricList": [
+                        {
+                            "MetricName": "value",
+                            "AggregationFunction": "AVG"
+                        }
+                    ],
+                    "TimestampColumn": {
+                        "ColumnName": "timestamp",
+                        "ColumnFormat": "yyyy-MM-dd HH:mm:SS"
+                    },
+                    "DimensionList": [
+                        "label"
+                    ],
+                    "Timezone": "America/Los_Angeles",
+                    "MetricSource": {
+                        "S3SourceConfig": {
+                            "TemplatedPathList": [
+                                {
+                                    "Fn::Join": [
+                                        "",
+                                        [
+                                            "s3://",
+                                            {
+                                                "Ref": "ContinuousMetricsBucket"
+                                            },
+                                            "/dataprefix/{{yyyy}}/{{MM}}/{{dd}}/{{HH}}/{{mm}}"
+                                        ]
+                                    ]
+                                }
+                            ],
+                            "FileFormatDescriptor": {
+                                "JsonFormatDescriptor": {
+                                    "Charset": "UTF-8",
+                                    "FileCompression": "NONE"
+                                }
+                            },
+                            "HistoricalDataPathList": [
+                                {
+                                    "Fn::Join": [
+                                        "",
+                                        [
+                                            "s3://",
+                                            {
+                                                "Ref": "HistoricalMetricsBucket"
+                                            },
+                                            "/dataprefix/"
+                                        ]
+                                    ]
+                                }
+                            ],
+                            "RoleArn": "arn:aws:iam::${AWS::AccountId}:role/service-role/${LookoutMetricsExecutionRole}"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-lookoutmetrics-anomalydetector--examples--Create_a_continuous_Anomaly_Detector--yaml"></a>
+
+```
+ContinuousAnomalyDetector:
+    Type: AWS::LookoutMetrics::AnomalyDetector
+    Properties:
+      AnomalyDetectorDescription: ContinuousAnomalyDetector
+      AnomalyDetectorName: ContinuousAnomalyDetector
+      AnomalyDetectorConfig:
+        AnomalyDetectorFrequency: PT5M
+      MetricSetList:
+        - MetricSetDescription: "Simple metric set"
+          MetricSetFrequency: PT5M
+          MetricSetName: ContinuousAnomalyDetectorSimpleMetricSet
+          MetricList:
+            - MetricName: value
+              AggregationFunction: AVG
+          TimestampColumn:
+            ColumnName: timestamp
+            ColumnFormat: "yyyy-MM-dd HH:mm:SS"
+          DimensionList:
+            - label
+          Timezone: "America/Los_Angeles"
+          MetricSource:
+            S3SourceConfig:
+              TemplatedPathList:
+                - Fn::Join:
+                  - ""
+                  - - "s3://"
+                    - Ref: ContinuousMetricsBucket
+                    - "/dataprefix/{{yyyy}}/{{MM}}/{{dd}}/{{HH}}/{{mm}}"
+              FileFormatDescriptor:
+                JsonFormatDescriptor:
+                  Charset: "UTF-8"
+                  FileCompression: NONE 
+              HistoricalDataPathList:
+                - Fn::Join:
+                  - ""
+                  - - "s3://"
+                    - Ref: HistoricalMetricsBucket
+                    - "/dataprefix/"
+              RoleArn: arn:aws:iam::${AWS::AccountId}:role/service-role/${LookoutMetricsExecutionRole}
+```
