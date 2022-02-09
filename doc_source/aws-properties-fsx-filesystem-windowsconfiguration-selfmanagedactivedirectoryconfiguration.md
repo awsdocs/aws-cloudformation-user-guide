@@ -59,7 +59,7 @@ The fully qualified domain name of the self\-managed AD directory, such as `corp
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OrganizationalUnitDistinguishedName`  <a name="cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-organizationalunitdistinguishedname"></a>
-\(Optional\) The fully qualified distinguished name of the organizational unit within your self\-managed AD directory\. Amazon FSx only accepts OU as the direct parent of the file system\. An example is `OU=FSx,DC=yourdomain,DC=corp,DC=com`\. To learn more, see [RFC 2253](https://tools.ietf.org/html/rfc2253)\. If none is provided, the FSx file system is created in the default location of your self\-managed AD directory\.   
+\(Optional\) The fully qualified distinguished name of the organizational unit within your self\-managed AD directory\. Amazon FSx only accepts OU as the direct parent of the file system\. An example is `OU=FSx,DC=yourdomain,DC=corp,DC=com`\. To learn more, see [RFC 2253](https://datatracker.ietf.org/doc/html/rfc2253)\. If none is provided, the FSx file system is created in the default location of your self\-managed AD directory\.   
 Only Organizational Unit \(OU\) objects can be the direct parent of the file system that you're creating\.
 *Required*: No  
 *Type*: String  

@@ -34,7 +34,7 @@ You must specify either this setting or the `IncludedPaths` setting, but not bot
 
 `IncludedPaths`  <a name="cfn-wafv2-rulegroup-jsonmatchpattern-includedpaths"></a>
 Match only the specified include paths\. See also `MatchScope` in `JsonBody`\.   
-Provide the include paths using JSON Pointer syntax\. For example, `"IncludedPaths": ["/dogs/0/name", "/dogs/1/name"]`\. For information about this syntax, see the Internet Engineering Task Force \(IETF\) documentation [JavaScript Object Notation \(JSON\) Pointer](https://tools.ietf.org/html/rfc6901)\.   
+Provide the include paths using JSON Pointer syntax\. For example, `"IncludedPaths": ["/dogs/0/name", "/dogs/1/name"]`\. For information about this syntax, see the Internet Engineering Task Force \(IETF\) documentation [JavaScript Object Notation \(JSON\) Pointer](https://datatracker.ietf.org/doc/html/rfc6901)\.   
 You must specify either this setting or the `All` setting, but not both\.  
 Don't use this option to include all paths\. Instead, use the `All` setting\. 
 *Required*: No  

@@ -34,7 +34,7 @@ Specifies a custom `ExtendedKeyUsage` with an object identifier \(OID\)\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExtendedKeyUsageType`  <a name="cfn-acmpca-certificate-extendedkeyusage-extendedkeyusagetype"></a>
-Specifies a standard `ExtendedKeyUsage` as defined as in [RFC 5280](https://tools.ietf.org/html/rfc5280#section-4.2.1.12)\.  
+Specifies a standard `ExtendedKeyUsage` as defined as in [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12)\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `CERTIFICATE_TRANSPARENCY | CLIENT_AUTH | CODE_SIGNING | DOCUMENT_SIGNING | EMAIL_PROTECTION | OCSP_SIGNING | SERVER_AUTH | SMART_CARD_LOGIN | TIME_STAMPING`  

@@ -93,7 +93,7 @@ The ID of the Traffic Mirror target\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VirtualNetworkId`  <a name="cfn-ec2-trafficmirrorsession-virtualnetworkid"></a>
-The VXLAN ID for the Traffic Mirror session\. For more information about the VXLAN protocol, see [RFC 7348](https://tools.ietf.org/html/rfc7348)\. If you do not specify a `VirtualNetworkId`, an account\-wide unique id is chosen at random\.  
+The VXLAN ID for the Traffic Mirror session\. For more information about the VXLAN protocol, see [RFC 7348](https://datatracker.ietf.org/doc/html/rfc7348)\. If you do not specify a `VirtualNetworkId`, an account\-wide unique id is chosen at random\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

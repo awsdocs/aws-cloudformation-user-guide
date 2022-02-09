@@ -45,13 +45,13 @@ The email address of the sender of the bounced email\. This is the address from 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SmtpReplyCode`  <a name="cfn-ses-receiptrule-bounceaction-smtpreplycode"></a>
-The SMTP reply code, as defined by [RFC 5321](https://tools.ietf.org/html/rfc5321)\.  
+The SMTP reply code, as defined by [RFC 5321](https://datatracker.ietf.org/doc/html/rfc5321)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StatusCode`  <a name="cfn-ses-receiptrule-bounceaction-statuscode"></a>
-The SMTP enhanced status code, as defined by [RFC 3463](https://tools.ietf.org/html/rfc3463)\.  
+The SMTP enhanced status code, as defined by [RFC 3463](https://datatracker.ietf.org/doc/html/rfc3463)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
