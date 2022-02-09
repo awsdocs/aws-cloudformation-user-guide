@@ -155,7 +155,7 @@ An array of `ResourceType` objects\. Use this only to specify multiple resource 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityServicePolicyData`  <a name="cfn-fms-policy-securityservicepolicydata"></a>
-Details about the security service that is being used to protect the resources\.  
+Details about the security service that is being used to protect the resources\. Refer to [API Reference](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_SecurityServicePolicyData.html) for details on the syntax. 
 This contains the following settings:   
 + Type \- Indicates the service type that the policy uses to protect the resource\. For security group policies, Firewall Manager supports one security group for each common policy and for each content audit policy\. This is an adjustable limit that you can increase by contacting AWS Support\. 
 
