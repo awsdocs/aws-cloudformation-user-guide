@@ -209,7 +209,7 @@ Resources:
     Type: AWS::CloudWatch::CompositeAlarm
     Properties:
       AlarmName: DeploymentInProgress
-      AlarmRule: 
+      AlarmRule: "FALSE"
       AlarmDescription: Manually updated to TRUE/FALSE to disable other alarms
   HighCPUUsage: 
     Type: AWS::CloudWatch::Alarm
