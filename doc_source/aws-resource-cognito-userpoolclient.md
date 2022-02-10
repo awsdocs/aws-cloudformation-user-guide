@@ -244,3 +244,14 @@ If your app client allows users to sign in through an identity provider, this ar
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Amazon Cognito user pool client ID, such as `1h57kf5cpq17m0eml12EXAMPLE`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-cognito-userpoolclient-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-cognito-userpoolclient-return-values-fn--getatt-fn--getatt"></a>
+
+`ClientSecret`  <a name="ClientSecret-fn::getatt"></a>
+The Client Secret of the Amazon Cognito user pool client, specified as a `String`\.
