@@ -82,7 +82,7 @@ The name for the notification rule\. Notification rule names must be unique in y
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Resource`  <a name="cfn-codestarnotifications-notificationrule-resource"></a>
-The Amazon Resource Name \(ARN\) of the resource to associate with the notification rule\. Supported resources include pipelines in AWS CodePipeline, repositories in AWS CodeCommit, and build projects in AWS CodeBuild\.  
+The Amazon Resource Name \(ARN\) of the resource to associate with the notification rule\. Supported resources include pipelines in AWS CodePipeline, repositories in AWS CodeCommit, build projects in AWS CodeBuild, and applications in AWS CodeDeploy\.  
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `^arn:aws[^:\s]*:[^:\s]*:[^:\s]*:[0-9]{12}:[^\s]+$`  
