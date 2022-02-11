@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The event type of the function, either `viewer-request` or `viewer-response`\. You cannot use origin\-facing event types \(`origin-request` and `origin-response`\) with a CloudFront function\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `origin-request | origin-response | viewer-request | viewer-response`  
+*Allowed values*: `viewer-request | viewer-response`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FunctionARN`  <a name="cfn-cloudfront-distribution-functionassociation-functionarn"></a>
