@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-backup-framework-frameworkcontrol-syntax.yaml"></a>
 
 ```
-  [ControlInputParameters](#cfn-backup-framework-frameworkcontrol-controlinputparameters): 
+  [ControlInputParameters](#cfn-backup-framework-frameworkcontrol-controlinputparameters):
     - ControlInputParameter
   [ControlName](#cfn-backup-framework-frameworkcontrol-controlname): String
   [ControlScope](#cfn-backup-framework-frameworkcontrol-controlscope): Json
@@ -28,15 +28,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-backup-framework-frameworkcontrol-properties"></a>
 
 `ControlInputParameters`  <a name="cfn-backup-framework-frameworkcontrol-controlinputparameters"></a>
-A list of `ParameterName` and `ParameterValue` pairs\.  
-*Required*: No  
-*Type*: List of [ControlInputParameter](aws-properties-backup-framework-controlinputparameter.md)  
+A list of `ParameterName` and `ParameterValue` pairs\.
+*Required*: No
+*Type*: List of [ControlInputParameter](aws-properties-backup-framework-controlinputparameter.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ControlName`  <a name="cfn-backup-framework-frameworkcontrol-controlname"></a>
-The name of a control\. This name is between 1 and 256 characters\.  
-*Required*: Yes  
-*Type*: String  
+The name of a control\. This name is between 1 and 256 characters\.
+*Required*: Yes
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ControlScope`  <a name="cfn-backup-framework-frameworkcontrol-controlscope"></a>
