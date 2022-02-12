@@ -40,7 +40,7 @@ The name of a control\. This name is between 1 and 256 characters\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ControlScope`  <a name="cfn-backup-framework-frameworkcontrol-controlscope"></a>
-The scope of a control\. The control scope defines what the control will evaluate\. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans\. For more information, see `ControlScope`\.  
-*Required*: No  
-*Type*: Json  
+The scope of a control\. The control scope defines what the control will evaluate\. Three examples of control scopes are: a specific backup plan, all backup plans with a specific tag, or all backup plans\. For more information, see [ControlScope](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)\.
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
