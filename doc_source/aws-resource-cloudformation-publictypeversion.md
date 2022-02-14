@@ -2,13 +2,13 @@
 
 Tests and publishes a registered extension as a public, third\-party extension\.
 
-CloudFormation first tests the extension to make sure it meets all necessary requirements for being published in the CloudFormation registry\. If it does, CloudFormation then publishes it to the registry as a public third\-party extension in this region\. Public extensions are available for use by all CloudFormation users\.
+CloudFormation first tests the extension to make sure it meets all necessary requirements for being published in the CloudFormation registry\. If it does, CloudFormation then publishes it to the registry as a public third\-party extension in this Region\. Public extensions are available for use by all CloudFormation users\.
 + For resource types, testing includes passing all contracts tests defined for the type\.
 + For modules, testing includes determining if the module's model meets all necessary requirements\.
 
 For more information, see [Testing your public extension prior to publishing](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-testing) in the *CloudFormation CLI User Guide*\.
 
-If you don't specify a version, CloudFormation uses the default version of the extension in your account and region for testing\.
+If you don't specify a version, CloudFormation uses the default version of the extension in your account and Region for testing\.
 
 To perform testing, CloudFormation assumes the execution role specified when the type was registered\.
 
@@ -72,10 +72,10 @@ For more information, see [Actions, Resources, and Condition Keys for Amazon S3]
 
 `PublicVersionNumber`  <a name="cfn-cloudformation-publictypeversion-publicversionnumber"></a>
 The version number to assign to this version of the extension\.  
-Use the following format, and adhere to semantic versioning when assigning a version number to your extension:   
+Use the following format, and adhere to semantic versioning when assigning a version number to your extension:  
  `MAJOR.MINOR.PATCH`   
 For more information, see [Semantic Versioning 2\.0\.0](https://semver.org/)\.  
-If you do not specify a version number, CloudFormation increments the version number by one minor version release\.  
+If you don't specify a version number, CloudFormation increments the version number by one minor version release\.  
 You cannot specify a version number the first time you publish a type\. AWS CloudFormation automatically sets the first version number to be `1.0.0`\.  
 *Required*: No  
 *Type*: String  
@@ -88,7 +88,7 @@ The type of the extension to test\.
 Conditional: You must specify `Arn`, or `TypeName` and `Type`\.  
 *Required*: Conditional  
 *Type*: String  
-*Allowed values*: `MODULE | RESOURCE`  
+*Allowed values*: `HOOK | MODULE | RESOURCE`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TypeName`  <a name="cfn-cloudformation-publictypeversion-typename"></a>

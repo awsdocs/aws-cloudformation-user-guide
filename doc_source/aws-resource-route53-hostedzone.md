@@ -18,6 +18,14 @@ When you submit a `CreateHostedZone` request, the initial status of the hosted z
 
 The `CreateHostedZone` request requires the caller to have an `ec2:DescribeVpcs` permission\.
 
+**Note**  
+When creating private hosted zones, the Amazon VPC must belong to the same partition where the hosted zone is created\. A partition is a group of AWS Regions\. Each AWS account is scoped to one partition\.  
+The following are the supported partitions:  
+ `aws` \- AWS Regions 
+ `aws-cn` \- China Regions
+ `aws-us-gov` \- AWS GovCloud \(US\) Region 
+For more information, see [Access Management](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the * AWS General Reference*\.
+
 ## Syntax<a name="aws-resource-route53-hostedzone-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

@@ -1,6 +1,6 @@
 # AWS::Kendra::Index JwtTokenTypeConfiguration<a name="aws-properties-kendra-index-jwttokentypeconfiguration"></a>
 
-Configuration information for the JWT token type\.
+Provides the configuration information for the JWT token type\.
 
 ## Syntax<a name="aws-properties-kendra-index-jwttokentypeconfiguration-syntax"></a>
 

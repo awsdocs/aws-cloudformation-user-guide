@@ -26,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[RetryPolicy](#cfn-events-rule-target-retrypolicy)" : RetryPolicy,
   "[RoleArn](#cfn-events-rule-target-rolearn)" : String,
   "[RunCommandParameters](#cfn-events-rule-target-runcommandparameters)" : RunCommandParameters,
+  "[SageMakerPipelineParameters](#cfn-events-rule-target-sagemakerpipelineparameters)" : SageMakerPipelineParameters,
   "[SqsParameters](#cfn-events-rule-target-sqsparameters)" : SqsParameters
 }
 ```
@@ -56,6 +57,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [RoleArn](#cfn-events-rule-target-rolearn): String
   [RunCommandParameters](#cfn-events-rule-target-runcommandparameters): 
     RunCommandParameters
+  [SageMakerPipelineParameters](#cfn-events-rule-target-sagemakerpipelineparameters): 
+    SageMakerPipelineParameters
   [SqsParameters](#cfn-events-rule-target-sqsparameters): 
     SqsParameters
 ```
@@ -155,6 +158,13 @@ The Amazon Resource Name \(ARN\) of the IAM role to be used for this target when
 Parameters used when you are using the rule to invoke Amazon EC2 Run Command\.  
 *Required*: No  
 *Type*: [RunCommandParameters](aws-properties-events-rule-runcommandparameters.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SageMakerPipelineParameters`  <a name="cfn-events-rule-target-sagemakerpipelineparameters"></a>
+Contains the SageMaker Model Building Pipeline parameters to start execution of a SageMaker Model Building Pipeline\.  
+If you specify a SageMaker Model Building Pipeline as a target, you can use this to specify parameters to start a pipeline execution based on EventBridge events\.  
+*Required*: No  
+*Type*: [SageMakerPipelineParameters](aws-properties-events-rule-sagemakerpipelineparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SqsParameters`  <a name="cfn-events-rule-target-sqsparameters"></a>

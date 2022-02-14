@@ -279,7 +279,7 @@ This example creates an alarm that is based on an anomaly detector\.
        "Properties": {
           "MetricName": "Invocations",
           "Namespace": "AWS/Lambda",
-          "Statistic": "Sum"
+          "Stat": "Sum"
        }
     },
     "LambdaInvocationsAlarm": {

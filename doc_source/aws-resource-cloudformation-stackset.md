@@ -1,6 +1,6 @@
 # AWS::CloudFormation::StackSet<a name="aws-resource-cloudformation-stackset"></a>
 
-The `AWS::CloudFormation::StackSet` enables you to provision stacks into AWS accounts and across Regions by using a single CloudFormation template\. In the stack set, you specify the template to use, as well as any parameters and capabilities that the template requires\.
+The `AWS::CloudFormation::StackSet` enables you to provision stacks into AWS accounts and across Regions by using a single CloudFormation template\. In the stack set, you specify the template to use, in addition to any parameters and capabilities that the template requires\.
 
 ## Syntax<a name="aws-resource-cloudformation-stackset-syntax"></a>
 

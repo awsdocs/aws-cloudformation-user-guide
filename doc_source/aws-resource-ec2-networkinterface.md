@@ -64,7 +64,7 @@ The security group IDs associated with this network interface\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InterfaceType`  <a name="cfn-ec2-networkinterface-interfacetype"></a>
-Indicates the type of network interface\. To create an Elastic Fabric Adapter \(EFA\), specify `efa`\. For more information, see [ Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon Elastic Compute Cloud User Guide*\. To create a trunk network interface, specify `trunk`\.  
+The type of network interface\. The default is `interface`\. The supported values are `efa` and `trunk`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `branch | efa | trunk`  

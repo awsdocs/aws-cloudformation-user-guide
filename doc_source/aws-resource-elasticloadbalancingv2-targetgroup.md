@@ -76,7 +76,7 @@ Indicates whether health checks are enabled\. If the target type is `lambda`, he
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckIntervalSeconds`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthcheckintervalseconds"></a>
-The approximate amount of time, in seconds, between health checks of an individual target\. If the target group protocol is TCP, TLS, UDP, or TCP\_UDP, the supported values are 10 and 30 seconds\. If the target group protocol is HTTP or HTTPS, the default is 30 seconds\. If the target group protocol is GENEVE, the default is 10 seconds\. If the target type is `lambda`, the default is 35 seconds\.  
+The approximate amount of time, in seconds, between health checks of an individual target\. If the target group protocol is HTTP or HTTPS, the default is 30 seconds\. If the target group protocol is TCP, TLS, UDP, or TCP\_UDP, the supported values are 10 and 30 seconds and the default is 30 seconds\. If the target group protocol is GENEVE, the default is 10 seconds\. If the target type is `lambda`, the default is 35 seconds\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `5`  

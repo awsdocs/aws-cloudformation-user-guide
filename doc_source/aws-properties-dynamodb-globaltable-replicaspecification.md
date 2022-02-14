@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ReadProvisionedThroughputSettings](#cfn-dynamodb-globaltable-replicaspecification-readprovisionedthroughputsettings)" : ReadProvisionedThroughputSettings,
   "[Region](#cfn-dynamodb-globaltable-replicaspecification-region)" : String,
   "[SSESpecification](#cfn-dynamodb-globaltable-replicaspecification-ssespecification)" : ReplicaSSESpecification,
+  "[TableClass](#cfn-dynamodb-globaltable-replicaspecification-tableclass)" : String,
   "[Tags](#cfn-dynamodb-globaltable-replicaspecification-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
 }
 ```
@@ -34,6 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Region](#cfn-dynamodb-globaltable-replicaspecification-region): String
   [SSESpecification](#cfn-dynamodb-globaltable-replicaspecification-ssespecification): 
     ReplicaSSESpecification
+  [TableClass](#cfn-dynamodb-globaltable-replicaspecification-tableclass): String
   [Tags](#cfn-dynamodb-globaltable-replicaspecification-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -74,6 +76,12 @@ The region in which this replica exists\.
 Allows you to specify a customer\-managed key for the replica\. When using customer\-managed keys for server\-side encryption, this property must have a value in all replicas\.  
 *Required*: No  
 *Type*: [ReplicaSSESpecification](aws-properties-dynamodb-globaltable-replicassespecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TableClass`  <a name="cfn-dynamodb-globaltable-replicaspecification-tableclass"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-dynamodb-globaltable-replicaspecification-tags"></a>

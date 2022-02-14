@@ -17,7 +17,7 @@ When you create a stack set, you can create the stacks for that stack set\. AWS 
 
 1. On the **Set deployment options** page, provide the accounts and Regions into which you want to add stacks for your stack set\.
 
-   AWS CloudFormation will deploy stacks in the specified accounts within the first Region, then moves on to the next, and so on, as long as a Region's deployment failures do not exceed a specified failure tolerance\.
+   AWS CloudFormation will deploy stacks in the specified accounts within the first Region, then moves on to the next, and so on, as long as a Region's deployment failures don't exceed a specified failure tolerance\.
 
    1. \[Self\-managed permissions\] For **Deployment targets**, choose **Deploy stacks in accounts**\. Paste your target account numbers in the text box, separating multiple numbers with commas\.
 

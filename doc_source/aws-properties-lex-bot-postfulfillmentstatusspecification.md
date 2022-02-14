@@ -1,6 +1,6 @@
 # AWS::Lex::Bot PostFulfillmentStatusSpecification<a name="aws-properties-lex-bot-postfulfillmentstatusspecification"></a>
 
-Provides a setting that determines whether the post\-fulfillment response is sent to the user\. For more information, see [ Post\-fulfillment response ](https://docs.aws.amazon.com/latest/dg/streaming-progress.html#progress-complete) in the *Amazon Lex developer guide*\.
+Provides a setting that determines whether the post\-fulfillment response is sent to the user\. For more information, see [ Post\-fulfillment response ](https://docs.aws.amazon.com/lex/latest/dg/streaming-progress.html#progress-complete) in the *Amazon Lex developer guide*\.
 
 ## Syntax<a name="aws-properties-lex-bot-postfulfillmentstatusspecification-syntax"></a>
 

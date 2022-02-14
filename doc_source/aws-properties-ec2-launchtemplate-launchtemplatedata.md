@@ -33,6 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Monitoring](#cfn-ec2-launchtemplate-launchtemplatedata-monitoring)" : Monitoring,
   "[NetworkInterfaces](#cfn-ec2-launchtemplate-launchtemplatedata-networkinterfaces)" : [ NetworkInterface, ... ],
   "[Placement](#cfn-ec2-launchtemplate-launchtemplatedata-placement)" : Placement,
+  "[PrivateDnsNameOptions](#cfn-ec2-launchtemplate-launchtemplatedata-privatednsnameoptions)" : PrivateDnsNameOptions,
   "[RamDiskId](#cfn-ec2-launchtemplate-launchtemplatedata-ramdiskid)" : String,
   "[SecurityGroupIds](#cfn-ec2-launchtemplate-launchtemplatedata-securitygroupids)" : [ String, ... ],
   "[SecurityGroups](#cfn-ec2-launchtemplate-launchtemplatedata-securitygroups)" : [ String, ... ],
@@ -83,6 +84,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - NetworkInterface
   [Placement](#cfn-ec2-launchtemplate-launchtemplatedata-placement): 
     Placement
+  [PrivateDnsNameOptions](#cfn-ec2-launchtemplate-launchtemplatedata-privatednsnameoptions): 
+    PrivateDnsNameOptions
   [RamDiskId](#cfn-ec2-launchtemplate-launchtemplatedata-ramdiskid): String
   [SecurityGroupIds](#cfn-ec2-launchtemplate-launchtemplatedata-securitygroupids): 
     - String
@@ -238,6 +241,12 @@ One or more network interfaces\. If you specify a network interface, you must sp
 The placement for the instance\.  
 *Required*: No  
 *Type*: [Placement](aws-properties-ec2-launchtemplate-launchtemplatedata-placement.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PrivateDnsNameOptions`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-privatednsnameoptions"></a>
+The options for the instance hostname\. The default values are inherited from the subnet\.  
+*Required*: No  
+*Type*: [PrivateDnsNameOptions](aws-properties-ec2-launchtemplate-launchtemplatedata-privatednsnameoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RamDiskId`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-ramdiskid"></a>

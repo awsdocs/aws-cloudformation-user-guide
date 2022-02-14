@@ -52,7 +52,7 @@ A list of regular expression patterns to exclude certain files in your Amazon Wo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldMappings`  <a name="cfn-kendra-datasource-workdocsconfiguration-fieldmappings"></a>
-A list of `DataSourceToIndexFieldMapping` objects that map Amazon WorkDocs field names to custom index field names in Amazon Kendra\. You must first create the custom index fields using the `UpdateIndex` operation before you map to Amazon WorkDocs fields\. For more information, see [Mapping Data Source Fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html)\. The Amazon WorkDocs data source field names need to exist in your Amazon WorkDocs custom metadata\.  
+A list of `DataSourceToIndexFieldMapping` objects that map Amazon WorkDocs field names to custom index field names in Amazon Kendra\. You must first create the custom index fields using the `UpdateIndex` API before you map to Amazon WorkDocs fields\. For more information, see [Mapping Data Source Fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html)\. The Amazon WorkDocs data source field names need to exist in your Amazon WorkDocs custom metadata\.  
 *Required*: No  
 *Type*: List of [DataSourceToIndexFieldMapping](aws-properties-kendra-datasource-datasourcetoindexfieldmapping.md)  
 *Maximum*: `100`  

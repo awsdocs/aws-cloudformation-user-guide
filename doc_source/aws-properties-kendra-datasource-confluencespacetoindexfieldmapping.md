@@ -1,8 +1,8 @@
 # AWS::Kendra::DataSource ConfluenceSpaceToIndexFieldMapping<a name="aws-properties-kendra-datasource-confluencespacetoindexfieldmapping"></a>
 
-Defines the mapping between a field in the Confluence data source to a Amazon Kendra index field\.
+Defines the mapping between a field in the Confluence data source to an Amazon Kendra index field\.
 
-You must first create the index field using the `UpdateIndex` operation\. 
+You must first create the index field using the `UpdateIndex` API\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-confluencespacetoindexfieldmapping-syntax"></a>
 

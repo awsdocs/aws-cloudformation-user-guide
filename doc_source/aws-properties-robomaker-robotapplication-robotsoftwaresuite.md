@@ -33,7 +33,7 @@ The name of the robot software suite \(ROS distribution\)\.
 
 `Version`  <a name="cfn-robomaker-robotapplication-robotsoftwaresuite-version"></a>
 The version of the robot software suite \(ROS distribution\)\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Allowed values*: `Dashing | Foxy | Kinetic | Melodic`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -48,13 +48,13 @@ The Amazon Resource Name \(ARN\) of the underlying AWS Lambda function that you 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogGroupName`  <a name="cfn-cloudformation-macro-loggroupname"></a>
-The Amazon CloudWatch log group to which AWS CloudFormation sends error logging information when invoking the macro's underlying AWS Lambda function\.  
+The CloudWatch Logs group to which AWS CloudFormation sends error logging information when invoking the macro's underlying AWS Lambda function\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogRoleARN`  <a name="cfn-cloudformation-macro-logrolearn"></a>
-The ARN of the role AWS CloudFormation should assume when sending log entries to CloudWatch logs\.  
+The ARN of the role AWS CloudFormation should assume when sending log entries to CloudWatch Logs\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

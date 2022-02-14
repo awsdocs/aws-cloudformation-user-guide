@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DomainName](#cfn-customerprofiles-integration-domainname)" : String,
       "[FlowDefinition](#cfn-customerprofiles-integration-flowdefinition)" : FlowDefinition,
       "[ObjectTypeName](#cfn-customerprofiles-integration-objecttypename)" : String,
+      "[ObjectTypeNames](#cfn-customerprofiles-integration-objecttypenames)" : [ ObjectTypeMapping, ... ],
       "[Tags](#cfn-customerprofiles-integration-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Uri](#cfn-customerprofiles-integration-uri)" : String
     }
@@ -30,6 +31,8 @@ Properties:
   [FlowDefinition](#cfn-customerprofiles-integration-flowdefinition): 
     FlowDefinition
   [ObjectTypeName](#cfn-customerprofiles-integration-objecttypename): String
+  [ObjectTypeNames](#cfn-customerprofiles-integration-objecttypenames): 
+    - ObjectTypeMapping
   [Tags](#cfn-customerprofiles-integration-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Uri](#cfn-customerprofiles-integration-uri): String
@@ -51,8 +54,14 @@ Not currently supported by AWS CloudFormation\.
 
 `ObjectTypeName`  <a name="cfn-customerprofiles-integration-objecttypename"></a>
 The name of the profile object type mapping to use\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ObjectTypeNames`  <a name="cfn-customerprofiles-integration-objecttypenames"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [ObjectTypeMapping](aws-properties-customerprofiles-integration-objecttypemapping.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-customerprofiles-integration-tags"></a>

@@ -2,11 +2,11 @@
 
 The optional `Rules` section validates a parameter or a combination of parameters passed to a template during a stack creation or stack update\. To use template rules, explicitly declare `Rules` in your template followed by an assertion\. Use the rules section to validate parameter values before creating or updating resources\.
 
-## Working with rules<a name="w11088ab1c23c15c19b5"></a>
+## Working with rules<a name="w11155ab1c23c15c19b5"></a>
 
 Each template rule consists of two properties:
-+ *Rule condition* \(optional\) — determines when a rule takes effect\.
-+ *Assertions* \(required\) — describes what values users can specify for a particular parameter\.
++ *Rule condition* \(optional\) – determines when a rule takes effect\.
++ *Assertions* \(required\) – describes what values users can specify for a particular parameter\.
 
 A rule can include a `RuleCondition` property and must include an `Assertions` property\. For each rule, you can define only one rule condition\. You can define one or more asserts within the `Assertions` property\. If you don't define a rule condition, the rule's assertions always take effect\.
 
@@ -195,7 +195,7 @@ You will be billed for the AWS resources used if you create a stack from this te
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS CloudFormation Sample Template for using Assertions: Create a load balanced, Auto Scaled sample website where the instances are locked down to only accept traffic from the load balancer. This example creates an Auto Scaling group behind a load balancer with a health check. The web site is available on port 80 or 443 based on the input."
+    "Description": "AWS CloudFormation Sample Template for using Assertions: Create a load balanced, Auto Scaled sample website where the instances are locked down to only accept traffic from the load balancer. This example creates an Auto Scaling group behind a load balancer with a health check. The web site is available on port 80 or 443 based on the input.",
     "Parameters": {
         "VpcId": {
             "Type": "AWS::EC2::VPC::Id",

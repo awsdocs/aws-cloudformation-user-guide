@@ -66,7 +66,7 @@ Conditional: You must specify either `MaxConcurrentCount` or `MaxConcurrentPerce
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegionConcurrencyType`  <a name="cfn-cloudformation-stackset-operationpreferences-regionconcurrencytype"></a>
-The concurrency type of deploying StackSets operations in regions, could be in parallel or one region at a time\.  
+The concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a time\.  
 *Allowed values*: `SEQUENTIAL` \| `PARALLEL`  
 *Required*: No  
 *Type*: String  

@@ -2,3 +2,4 @@
 
 **Resource types**
 + [AWS::AppRunner::Service](aws-resource-apprunner-service.md)
++ [AWS::AppRunner::VpcConnector](aws-resource-apprunner-vpcconnector.md)

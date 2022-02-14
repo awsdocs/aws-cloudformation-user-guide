@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource ServiceNowKnowledgeArticleConfiguration<a name="aws-properties-kendra-datasource-servicenowknowledgearticleconfiguration"></a>
 
-Provides configuration information for crawling knowledge articles in the ServiceNow site\.
+Provides the configuration information for crawling knowledge articles in the ServiceNow site\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-servicenowknowledgearticleconfiguration-syntax"></a>
 

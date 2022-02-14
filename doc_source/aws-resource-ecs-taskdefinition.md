@@ -180,7 +180,8 @@ The task launch types the task definition was validated against\. To determine w
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RuntimePlatform`  <a name="cfn-ecs-taskdefinition-runtimeplatform"></a>
-Not currently supported by AWS CloudFormation\.  
+The operating system that your tasks definitions run on\. A platform family is specified only for tasks using the Fargate launch type\.   
+When you specify a task definition in a service, this value must match the `runtimePlatform` value of the service\.  
 *Required*: No  
 *Type*: [RuntimePlatform](aws-properties-ecs-taskdefinition-runtimeplatform.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

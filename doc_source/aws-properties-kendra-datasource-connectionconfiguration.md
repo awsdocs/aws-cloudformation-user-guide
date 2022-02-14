@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource ConnectionConfiguration<a name="aws-properties-kendra-datasource-connectionconfiguration"></a>
 
-Provides the information necessary to connect to a database\.
+Provides the configuration information that's required to connect to a database\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-connectionconfiguration-syntax"></a>
 

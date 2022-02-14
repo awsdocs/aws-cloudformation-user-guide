@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource ServiceNowServiceCatalogConfiguration<a name="aws-properties-kendra-datasource-servicenowservicecatalogconfiguration"></a>
 
-Provides configuration information for crawling service catalog items in the ServiceNow site
+Provides the configuration information for crawling service catalog items in the ServiceNow site
 
 ## Syntax<a name="aws-properties-kendra-datasource-servicenowservicecatalogconfiguration-syntax"></a>
 

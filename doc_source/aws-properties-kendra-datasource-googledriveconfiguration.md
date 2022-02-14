@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource GoogleDriveConfiguration<a name="aws-properties-kendra-datasource-googledriveconfiguration"></a>
 
-Provides configuration information for data sources that connect to Google Drive\.
+Provides the configuration information to connect to Google Drive as your data source\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-googledriveconfiguration-syntax"></a>
 
@@ -71,7 +71,7 @@ A list of regular expression patterns that apply to the path on Google Drive\. I
 
 `FieldMappings`  <a name="cfn-kendra-datasource-googledriveconfiguration-fieldmappings"></a>
 Defines mapping between a field in the Google Drive and a Amazon Kendra index field\.  
-If you are using the console, you can define index fields when creating the mapping\. If you are using the API, you must first create the field using the `UpdateIndex` operation\.  
+If you are using the console, you can define index fields when creating the mapping\. If you are using the API, you must first create the field using the `UpdateIndex` API\.  
 *Required*: No  
 *Type*: List of [DataSourceToIndexFieldMapping](aws-properties-kendra-datasource-datasourcetoindexfieldmapping.md)  
 *Maximum*: `100`  

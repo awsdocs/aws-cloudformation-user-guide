@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-datasource-confluenceattachmentconfiguration-properties"></a>
 
 `AttachmentFieldMappings`  <a name="cfn-kendra-datasource-confluenceattachmentconfiguration-attachmentfieldmappings"></a>
-Defines how attachment metadata fields should be mapped to index fields\. Before you can map a field, you must first create an index field with a matching type using the console or the `UpdateIndex` operation\.  
+Defines how attachment metadata fields should be mapped to index fields\. Before you can map a field, you must first create an index field with a matching type using the console or the `UpdateIndex` API\.  
 If you specify the `AttachentFieldMappings` parameter, you must specify at least one field mapping\.  
 *Required*: No  
 *Type*: List of [ConfluenceAttachmentToIndexFieldMapping](aws-properties-kendra-datasource-confluenceattachmenttoindexfieldmapping.md)  

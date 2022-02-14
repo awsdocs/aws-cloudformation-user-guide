@@ -2,7 +2,7 @@
 
 Defines the mapping between a blog field in the Confluence data source to a Amazon Kendra index field\.
 
-You must first create the index field using the `UpdateIndex` operation\. 
+You must first create the index field using the `UpdateIndex` API\. 
 
 ## Syntax<a name="aws-properties-kendra-datasource-confluenceblogtoindexfieldmapping-syntax"></a>
 

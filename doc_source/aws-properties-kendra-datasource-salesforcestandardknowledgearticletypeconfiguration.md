@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource SalesforceStandardKnowledgeArticleTypeConfiguration<a name="aws-properties-kendra-datasource-salesforcestandardknowledgearticletypeconfiguration"></a>
 
-Provides configuration information for standard Salesforce knowledge articles\.
+Configuration information for standard Salesforce knowledge articles\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-salesforcestandardknowledgearticletypeconfiguration-syntax"></a>
 

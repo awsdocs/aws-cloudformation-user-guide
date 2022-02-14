@@ -44,7 +44,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-datasource-webcrawlerconfiguration-properties"></a>
 
 `AuthenticationConfiguration`  <a name="cfn-kendra-datasource-webcrawlerconfiguration-authenticationconfiguration"></a>
-Provides configuration information required to connect to websites using authentication\.  
+Configuration information required to connect to websites using authentication\.  
 You can connect to websites using basic authentication of user name and password\.  
 You must provide the website host name and port number\. For example, the host name of https://a\.example\.com/page1\.html is "a\.example\.com" and the port is 443, the standard port for HTTPS\. You use a secret in [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) to store your authentication credentials\.  
 *Required*: No  
@@ -90,7 +90,7 @@ The default maximum number of URLs crawled per website host per minute is 300\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProxyConfiguration`  <a name="cfn-kendra-datasource-webcrawlerconfiguration-proxyconfiguration"></a>
-Provides configuration information required to connect to your internal websites via a web proxy\.  
+Configuration information required to connect to your internal websites via a web proxy\.  
 You must provide the website host name and port number\. For example, the host name of https://a\.example\.com/page1\.html is "a\.example\.com" and the port is 443, the standard port for HTTPS\.  
 Web proxy credentials are optional and you can use them to connect to a web proxy server that requires basic authentication\. To store web proxy credentials, you use a secret in [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)\.  
 *Required*: No  

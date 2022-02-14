@@ -40,7 +40,10 @@ Properties:
 ## Properties<a name="aws-resource-logs-loggroup-properties"></a>
 
 `KmsKeyId`  <a name="cfn-logs-loggroup-kmskeyid"></a>
-The Amazon Resource Name \(ARN\) of the CMK to use when encrypting log data\.  
+The Amazon Resource Name \(ARN\) of the AWS KMS key to use when encrypting log data\.  
+To associate an AWS KMS key with the log group, specify the ARN of that KMS key here\. If you do so, ingested data is encrypted using this key\. This association is stored as long as the data encrypted with the KMS key is still within CloudWatch Logs\. This enables CloudWatch Logs to decrypt this data whenever it is requested\.  
+If you attempt to associate a KMS key with the log group but the KMS key doesn't exist or is deactivated, you will receive an `InvalidParameterException` error\.  
+Log group data is always encrypted in CloudWatch Logs\. If you omit this key, the encryption does not use AWS KMS\. For more information, see [ Encrypt log data in CloudWatch Logs using AWS Key Management Service](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/encrypt-log-data-kms.html)   
 *Required*: No  
 *Type*: String  
 *Maximum*: `256`  

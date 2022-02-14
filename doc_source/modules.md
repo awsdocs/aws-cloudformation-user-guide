@@ -164,7 +164,7 @@ Suppose that the `My::S3::SampleBucket::MODULE` module contains an `AWS::S3::Buc
 
 The logical names of resources contained in a module are specified in the module's schema\. You can access that schema in the following ways:
 + Finding the module in the CloudFormation registry\. The **Schema** tab displays the module schema\.
-+ Using the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) API to return the module details, which includes the schema\.
++ Using the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) operation to return the module details, which includes the schema\.
 
 ```
 // Template that uses My::S3::SampleBucket::MODULE
@@ -263,6 +263,6 @@ In order to successfully activate a public module in your account and region, th
 + The extension must already be activated in your account and region\.
 
   If the extension in the module uses a type name alias, the extension must be registered in your account and region using the same type name alias\. For more information, see [Specifying aliases to refer to extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable-alias)\.
-+ The extension version currently activated must be one of the supported major versions of that extension specified in the module\. For more information, see [Model requirements for publishing a public module](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules-structure.html#modules-structure-publishing-prereqs) in the *CloudFormation CLI User Guide*\.
++ The extension version currently activated must be one of the supported major versions of that extension specified in the module\. For more information, see [Module requirements for publishing a public module](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules-structure.html#modules-structure-publishing-prereqs) in the *CloudFormation CLI User Guide*\.
 
 If you do not have the correct third\-party public extensions and extension versions activated, CloudFormation will fail the operation with an error listing the extensions and/or versions that need to be activated before the module can be successfully activated\.

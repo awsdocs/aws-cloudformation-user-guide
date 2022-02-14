@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AmiType](#cfn-eks-nodegroup-amitype)" : String,
       "[CapacityType](#cfn-eks-nodegroup-capacitytype)" : String,
       "[ClusterName](#cfn-eks-nodegroup-clustername)" : String,
-      "[DiskSize](#cfn-eks-nodegroup-disksize)" : Double,
+      "[DiskSize](#cfn-eks-nodegroup-disksize)" : Integer,
       "[ForceUpdateEnabled](#cfn-eks-nodegroup-forceupdateenabled)" : Boolean,
       "[InstanceTypes](#cfn-eks-nodegroup-instancetypes)" : [ String, ... ],
       "[Labels](#cfn-eks-nodegroup-labels)" : Json,
@@ -44,7 +44,7 @@ Properties:
   [AmiType](#cfn-eks-nodegroup-amitype): String
   [CapacityType](#cfn-eks-nodegroup-capacitytype): String
   [ClusterName](#cfn-eks-nodegroup-clustername): String
-  [DiskSize](#cfn-eks-nodegroup-disksize): Double
+  [DiskSize](#cfn-eks-nodegroup-disksize): Integer
   [ForceUpdateEnabled](#cfn-eks-nodegroup-forceupdateenabled): Boolean
   [InstanceTypes](#cfn-eks-nodegroup-instancetypes): 
     - String
@@ -93,7 +93,7 @@ The name of the cluster to create the node group in\.
 `DiskSize`  <a name="cfn-eks-nodegroup-disksize"></a>
 The root device disk size \(in GiB\) for your node group instances\. The default disk size is 20 GiB\. If you specify `launchTemplate`, then don't specify `diskSize`, or the node group deployment will fail\. For more information about using launch templates with Amazon EKS, see [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon EKS User Guide*\.  
 *Required*: No  
-*Type*: Double  
+*Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ForceUpdateEnabled`  <a name="cfn-eks-nodegroup-forceupdateenabled"></a>
@@ -127,7 +127,7 @@ The unique name to give your node group\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NodeRole`  <a name="cfn-eks-nodegroup-noderole"></a>
-The Amazon Resource Name \(ARN\) of the IAM role to associate with your node group\. The Amazon EKS worker node `kubelet` daemon makes calls to AWS APIs on your behalf\. Nodes receive permissions for these API calls through an IAM instance profile and associated policies\. Before you can launch nodes and register them into a cluster, you must create an IAM role for those nodes to use when they are launched\. For more information, see [Amazon EKS node IAM role](https://docs.aws.amazon.com/eks/latest/userguide/worker_node_IAM_role.html) in the * *Amazon EKS User Guide* *\. If you specify `launchTemplate`, then don't specify [https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html) in your launch template, or the node group deployment will fail\. For more information about using launch templates with Amazon EKS, see [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon EKS User Guide*\.  
+The Amazon Resource Name \(ARN\) of the IAM role to associate with your node group\. The Amazon EKS worker node `kubelet` daemon makes calls to AWS APIs on your behalf\. Nodes receive permissions for these API calls through an IAM instance profile and associated policies\. Before you can launch nodes and register them into a cluster, you must create an IAM role for those nodes to use when they are launched\. For more information, see [Amazon EKS node IAM role](https://docs.aws.amazon.com/eks/latest/userguide/create-node-role.html) in the * *Amazon EKS User Guide* *\. If you specify `launchTemplate`, then don't specify [https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html) in your launch template, or the node group deployment will fail\. For more information about using launch templates with Amazon EKS, see [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon EKS User Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -164,7 +164,7 @@ The metadata to apply to the node group to assist with categorization and organi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Taints`  <a name="cfn-eks-nodegroup-taints"></a>
-The Kubernetes taints to be applied to the nodes in the node group when they are created\. Effect is one of `No_Schedule`, `Prefer_No_Schedule`, or `No_Execute`\. Kubernetes taints can be used together with tolerations to control how workloads are scheduled to your nodes\.  
+The Kubernetes taints to be applied to the nodes in the node group when they are created\. Effect is one of `No_Schedule`, `Prefer_No_Schedule`, or `No_Execute`\. Kubernetes taints can be used together with tolerations to control how workloads are scheduled to your nodes\. For more information, see [Node taints on managed node groups](https://docs.aws.amazon.com/eks/latest/userguide/node-taints-managed-node-groups.html)\.  
 *Required*: No  
 *Type*: List of [Taint](aws-properties-eks-nodegroup-taint.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -206,6 +206,9 @@ The Amazon Resource Name \(ARN\) associated with the managed node group\.
 
 `ClusterName`  <a name="ClusterName-fn::getatt"></a>
 The name of the cluster that the managed node group resides in\.
+
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 `NodegroupName`  <a name="NodegroupName-fn::getatt"></a>
 The name associated with an Amazon EKS managed node group\.

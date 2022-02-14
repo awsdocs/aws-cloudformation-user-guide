@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource SharePointConfiguration<a name="aws-properties-kendra-datasource-sharepointconfiguration"></a>
 
-Provides configuration information for connecting to a Microsoft SharePoint data source\.
+Provides the configuration information to connect to Microsoft SharePoint as your data source\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-sharepointconfiguration-syntax"></a>
 

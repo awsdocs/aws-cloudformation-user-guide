@@ -1,4 +1,4 @@
-# AWS::AutoScaling::LaunchConfiguration<a name="aws-properties-as-launchconfig"></a>
+# AWS::AutoScaling::LaunchConfiguration<a name="aws-resource-autoscaling-launchconfiguration"></a>
 
 The `AWS::AutoScaling::LaunchConfiguration` resource specifies the launch configuration that can be used by an Auto Scaling group to configure Amazon EC2 instances\. 
 
@@ -9,72 +9,72 @@ For more information, see [CreateLaunchConfiguration](https://docs.aws.amazon.co
 **Note**  
 To configure Amazon EC2 instances launched as part of the Auto Scaling group, you can specify a launch template or a launch configuration\. We recommend that you use a [launch template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) to make sure that you can use the latest features of Amazon EC2, such as Dedicated Hosts and T2 Unlimited instances\. For more information, see [Creating a launch template for an Auto Scaling group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html)\.
 
-## Syntax<a name="aws-properties-as-launchconfig-syntax"></a>
+## Syntax<a name="aws-resource-autoscaling-launchconfiguration-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-properties-as-launchconfig-syntax.json"></a>
+### JSON<a name="aws-resource-autoscaling-launchconfiguration-syntax.json"></a>
 
 ```
 {
   "Type" : "AWS::AutoScaling::LaunchConfiguration",
   "Properties" : {
-      "[AssociatePublicIpAddress](#cf-as-launchconfig-associatepubip)" : Boolean,
-      "[BlockDeviceMappings](#cfn-as-launchconfig-blockdevicemappings)" : [ BlockDeviceMapping, ... ],
-      "[ClassicLinkVPCId](#cfn-as-launchconfig-classiclinkvpcid)" : String,
-      "[ClassicLinkVPCSecurityGroups](#cfn-as-launchconfig-classiclinkvpcsecuritygroups)" : [ String, ... ],
-      "[EbsOptimized](#cfn-as-launchconfig-ebsoptimized)" : Boolean,
-      "[IamInstanceProfile](#cfn-as-launchconfig-iaminstanceprofile)" : String,
-      "[ImageId](#cfn-as-launchconfig-imageid)" : String,
-      "[InstanceId](#cfn-as-launchconfig-instanceid)" : String,
-      "[InstanceMonitoring](#cfn-as-launchconfig-instancemonitoring)" : Boolean,
-      "[InstanceType](#cfn-as-launchconfig-instancetype)" : String,
-      "[KernelId](#cfn-as-launchconfig-kernelid)" : String,
-      "[KeyName](#cfn-as-launchconfig-keyname)" : String,
-      "[LaunchConfigurationName](#cfn-autoscaling-launchconfig-launchconfigurationname)" : String,
-      "[MetadataOptions](#cfn-autoscaling-launchconfig-metadataoptions)" : MetadataOptions,
-      "[PlacementTenancy](#cfn-as-launchconfig-placementtenancy)" : String,
-      "[RamDiskId](#cfn-as-launchconfig-ramdiskid)" : String,
-      "[SecurityGroups](#cfn-as-launchconfig-securitygroups)" : [ String, ... ],
-      "[SpotPrice](#cfn-as-launchconfig-spotprice)" : String,
-      "[UserData](#cfn-as-launchconfig-userdata)" : String
+      "[AssociatePublicIpAddress](#cfn-autoscaling-launchconfiguration-associatepublicipaddress)" : Boolean,
+      "[BlockDeviceMappings](#cfn-autoscaling-launchconfiguration-blockdevicemappings)" : [ BlockDeviceMapping, ... ],
+      "[ClassicLinkVPCId](#cfn-autoscaling-launchconfiguration-classiclinkvpcid)" : String,
+      "[ClassicLinkVPCSecurityGroups](#cfn-autoscaling-launchconfiguration-classiclinkvpcsecuritygroups)" : [ String, ... ],
+      "[EbsOptimized](#cfn-autoscaling-launchconfiguration-ebsoptimized)" : Boolean,
+      "[IamInstanceProfile](#cfn-autoscaling-launchconfiguration-iaminstanceprofile)" : String,
+      "[ImageId](#cfn-autoscaling-launchconfiguration-imageid)" : String,
+      "[InstanceId](#cfn-autoscaling-launchconfiguration-instanceid)" : String,
+      "[InstanceMonitoring](#cfn-autoscaling-launchconfiguration-instancemonitoring)" : Boolean,
+      "[InstanceType](#cfn-autoscaling-launchconfiguration-instancetype)" : String,
+      "[KernelId](#cfn-autoscaling-launchconfiguration-kernelid)" : String,
+      "[KeyName](#cfn-autoscaling-launchconfiguration-keyname)" : String,
+      "[LaunchConfigurationName](#cfn-autoscaling-launchconfiguration-launchconfigurationname)" : String,
+      "[MetadataOptions](#cfn-autoscaling-launchconfiguration-metadataoptions)" : MetadataOptions,
+      "[PlacementTenancy](#cfn-autoscaling-launchconfiguration-placementtenancy)" : String,
+      "[RamDiskId](#cfn-autoscaling-launchconfiguration-ramdiskid)" : String,
+      "[SecurityGroups](#cfn-autoscaling-launchconfiguration-securitygroups)" : [ String, ... ],
+      "[SpotPrice](#cfn-autoscaling-launchconfiguration-spotprice)" : String,
+      "[UserData](#cfn-autoscaling-launchconfiguration-userdata)" : String
     }
 }
 ```
 
-### YAML<a name="aws-properties-as-launchconfig-syntax.yaml"></a>
+### YAML<a name="aws-resource-autoscaling-launchconfiguration-syntax.yaml"></a>
 
 ```
 Type: AWS::AutoScaling::LaunchConfiguration
 Properties: 
-  [AssociatePublicIpAddress](#cf-as-launchconfig-associatepubip): Boolean
-  [BlockDeviceMappings](#cfn-as-launchconfig-blockdevicemappings): 
+  [AssociatePublicIpAddress](#cfn-autoscaling-launchconfiguration-associatepublicipaddress): Boolean
+  [BlockDeviceMappings](#cfn-autoscaling-launchconfiguration-blockdevicemappings): 
     - BlockDeviceMapping
-  [ClassicLinkVPCId](#cfn-as-launchconfig-classiclinkvpcid): String
-  [ClassicLinkVPCSecurityGroups](#cfn-as-launchconfig-classiclinkvpcsecuritygroups): 
+  [ClassicLinkVPCId](#cfn-autoscaling-launchconfiguration-classiclinkvpcid): String
+  [ClassicLinkVPCSecurityGroups](#cfn-autoscaling-launchconfiguration-classiclinkvpcsecuritygroups): 
     - String
-  [EbsOptimized](#cfn-as-launchconfig-ebsoptimized): Boolean
-  [IamInstanceProfile](#cfn-as-launchconfig-iaminstanceprofile): String
-  [ImageId](#cfn-as-launchconfig-imageid): String
-  [InstanceId](#cfn-as-launchconfig-instanceid): String
-  [InstanceMonitoring](#cfn-as-launchconfig-instancemonitoring): Boolean
-  [InstanceType](#cfn-as-launchconfig-instancetype): String
-  [KernelId](#cfn-as-launchconfig-kernelid): String
-  [KeyName](#cfn-as-launchconfig-keyname): String
-  [LaunchConfigurationName](#cfn-autoscaling-launchconfig-launchconfigurationname): String
-  [MetadataOptions](#cfn-autoscaling-launchconfig-metadataoptions): 
+  [EbsOptimized](#cfn-autoscaling-launchconfiguration-ebsoptimized): Boolean
+  [IamInstanceProfile](#cfn-autoscaling-launchconfiguration-iaminstanceprofile): String
+  [ImageId](#cfn-autoscaling-launchconfiguration-imageid): String
+  [InstanceId](#cfn-autoscaling-launchconfiguration-instanceid): String
+  [InstanceMonitoring](#cfn-autoscaling-launchconfiguration-instancemonitoring): Boolean
+  [InstanceType](#cfn-autoscaling-launchconfiguration-instancetype): String
+  [KernelId](#cfn-autoscaling-launchconfiguration-kernelid): String
+  [KeyName](#cfn-autoscaling-launchconfiguration-keyname): String
+  [LaunchConfigurationName](#cfn-autoscaling-launchconfiguration-launchconfigurationname): String
+  [MetadataOptions](#cfn-autoscaling-launchconfiguration-metadataoptions): 
     MetadataOptions
-  [PlacementTenancy](#cfn-as-launchconfig-placementtenancy): String
-  [RamDiskId](#cfn-as-launchconfig-ramdiskid): String
-  [SecurityGroups](#cfn-as-launchconfig-securitygroups): 
+  [PlacementTenancy](#cfn-autoscaling-launchconfiguration-placementtenancy): String
+  [RamDiskId](#cfn-autoscaling-launchconfiguration-ramdiskid): String
+  [SecurityGroups](#cfn-autoscaling-launchconfiguration-securitygroups): 
     - String
-  [SpotPrice](#cfn-as-launchconfig-spotprice): String
-  [UserData](#cfn-as-launchconfig-userdata): String
+  [SpotPrice](#cfn-autoscaling-launchconfiguration-spotprice): String
+  [UserData](#cfn-autoscaling-launchconfiguration-userdata): String
 ```
 
-## Properties<a name="aws-properties-as-launchconfig-properties"></a>
+## Properties<a name="aws-resource-autoscaling-launchconfiguration-properties"></a>
 
-`AssociatePublicIpAddress`  <a name="cf-as-launchconfig-associatepubip"></a>
+`AssociatePublicIpAddress`  <a name="cfn-autoscaling-launchconfiguration-associatepublicipaddress"></a>
 For Auto Scaling groups that are running in a virtual private cloud \(VPC\), specifies whether to assign a public IP address to the group's instances\. If you specify `true`, each instance in the Auto Scaling group receives a unique public IP address\. For more information, see [Launching Auto Scaling instances in a VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
 If an instance receives a public IP address and is also in a VPC that is defined in the same stack template, you must use the [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to declare a dependency on the [VPC\-gateway attachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html)\.   
 If the instance is launched into a default subnet, the default is to assign a public IP address, unless you disabled the option to assign a public IP address on the subnet\. If the instance is launched into a nondefault subnet, the default is not to assign a public IP address, unless you enabled the option to assign a public IP address on the subnet\. 
@@ -82,13 +82,13 @@ If the instance is launched into a default subnet, the default is to assign a pu
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`BlockDeviceMappings`  <a name="cfn-as-launchconfig-blockdevicemappings"></a>
+`BlockDeviceMappings`  <a name="cfn-autoscaling-launchconfiguration-blockdevicemappings"></a>
 Specifies how block devices are exposed to the instance\. You can specify virtual devices and EBS volumes\.   
 *Required*: No  
-*Type*: List of [BlockDeviceMapping](aws-properties-as-launchconfig-blockdev-mapping.md)  
+*Type*: List of [BlockDeviceMapping](aws-properties-autoscaling-launchconfiguration-blockdevicemapping.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`ClassicLinkVPCId`  <a name="cfn-as-launchconfig-classiclinkvpcid"></a>
+`ClassicLinkVPCId`  <a name="cfn-autoscaling-launchconfiguration-classiclinkvpcid"></a>
 The ID of a ClassicLink\-enabled VPC to link your EC2\-Classic instances to\.   
 For more information, see [ClassicLink](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) in the *Amazon EC2 User Guide for Linux Instances* and [Linking EC2\-Classic instances to a VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink) in the *Amazon EC2 Auto Scaling User Guide*\.  
 This property can only be used if you are launching EC2\-Classic instances\.   
@@ -96,68 +96,68 @@ This property can only be used if you are launching EC2\-Classic instances\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`ClassicLinkVPCSecurityGroups`  <a name="cfn-as-launchconfig-classiclinkvpcsecuritygroups"></a>
+`ClassicLinkVPCSecurityGroups`  <a name="cfn-autoscaling-launchconfiguration-classiclinkvpcsecuritygroups"></a>
 The IDs of one or more security groups for the VPC that you specified in the `ClassicLinkVPCId` property\.   
 If you specify the `ClassicLinkVPCId` property, you must specify this property\.   
 *Required*: Conditional  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`EbsOptimized`  <a name="cfn-as-launchconfig-ebsoptimized"></a>
+`EbsOptimized`  <a name="cfn-autoscaling-launchconfiguration-ebsoptimized"></a>
 Specifies whether the launch configuration is optimized for EBS I/O \(`true`\) or not \(`false`\)\. This optimization provides dedicated throughput to Amazon EBS and an optimized configuration stack to provide optimal EBS I/O performance\. Additional fees are incurred when you enable EBS optimization for an instance type that is not EBS\-optimized by default\. For more information, see [Amazon EBS–optimized instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon EC2 User Guide for Linux Instances*\.   
 The default value is `false`\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`IamInstanceProfile`  <a name="cfn-as-launchconfig-iaminstanceprofile"></a>
+`IamInstanceProfile`  <a name="cfn-autoscaling-launchconfiguration-iaminstanceprofile"></a>
 Provides the name or the Amazon Resource Name \(ARN\) of the instance profile associated with the IAM role for the instance\. The instance profile contains the IAM role\.   
 For more information, see [IAM role for applications that run on Amazon EC2 instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/us-iam-role.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`ImageId`  <a name="cfn-as-launchconfig-imageid"></a>
+`ImageId`  <a name="cfn-autoscaling-launchconfiguration-imageid"></a>
 Provides the unique ID of the Amazon Machine Image \(AMI\) that was assigned during registration\. For more information, see [Finding a Linux AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html) in the *Amazon EC2 User Guide for Linux Instances*\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`InstanceId`  <a name="cfn-as-launchconfig-instanceid"></a>
+`InstanceId`  <a name="cfn-autoscaling-launchconfiguration-instanceid"></a>
 The ID of the Amazon EC2 instance you want to use to create the launch configuration\. Use this property if you want the launch configuration to use settings from an existing Amazon EC2 instance\. When you use an instance to create a launch configuration, all properties are derived from the instance with the exception of `BlockDeviceMapping` and `AssociatePublicIpAddress`\. You can override any properties from the instance by specifying them in the launch configuration\.   
   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`InstanceMonitoring`  <a name="cfn-as-launchconfig-instancemonitoring"></a>
+`InstanceMonitoring`  <a name="cfn-autoscaling-launchconfiguration-instancemonitoring"></a>
 Controls whether instances in this group are launched with detailed \(`true`\) or basic \(`false`\) monitoring\. The default value is `true` \(enabled\)\.   
 When detailed monitoring is enabled, Amazon CloudWatch generates metrics every minute and your account is charged a fee\. When you disable detailed monitoring, CloudWatch generates metrics every 5 minutes\. For more information, see [Configure monitoring for Auto Scaling instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/as-instance-monitoring.html#enable-as-instance-metrics) in the *Amazon EC2 Auto Scaling User Guide*\. 
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`InstanceType`  <a name="cfn-as-launchconfig-instancetype"></a>
+`InstanceType`  <a name="cfn-autoscaling-launchconfiguration-instancetype"></a>
 Specifies the instance type of the EC2 instance\. For information about available instance types, see [Available instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes) in the *Amazon EC2 User Guide for Linux Instances*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`KernelId`  <a name="cfn-as-launchconfig-kernelid"></a>
+`KernelId`  <a name="cfn-autoscaling-launchconfiguration-kernelid"></a>
 Provides the ID of the kernel associated with the EC2 AMI\.   
 We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more information, see [User provided kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`KeyName`  <a name="cfn-as-launchconfig-keyname"></a>
+`KeyName`  <a name="cfn-autoscaling-launchconfiguration-keyname"></a>
 Provides the name of the EC2 key pair\.   
 If you do not specify a key pair, you can't connect to the instance unless you choose an AMI that is configured to allow users another way to log in\. For information on creating a key pair, see [Amazon EC2 key pairs and Linux instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the *Amazon EC2 User Guide for Linux Instances*\. 
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`LaunchConfigurationName`  <a name="cfn-autoscaling-launchconfig-launchconfigurationname"></a>
+`LaunchConfigurationName`  <a name="cfn-autoscaling-launchconfiguration-launchconfigurationname"></a>
 The name of the launch configuration\. This name must be unique per Region per account\.  
 *Required*: No  
 *Type*: String  
@@ -166,13 +166,13 @@ The name of the launch configuration\. This name must be unique per Region per a
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`MetadataOptions`  <a name="cfn-autoscaling-launchconfig-metadataoptions"></a>
+`MetadataOptions`  <a name="cfn-autoscaling-launchconfiguration-metadataoptions"></a>
 The metadata options for the instances\. For more information, see [Configuring the Instance Metadata Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
-*Type*: [MetadataOptions](aws-properties-autoscaling-launchconfig-metadataoptions.md)  
+*Type*: [MetadataOptions](aws-properties-autoscaling-launchconfiguration-metadataoptions.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`PlacementTenancy`  <a name="cfn-as-launchconfig-placementtenancy"></a>
+`PlacementTenancy`  <a name="cfn-autoscaling-launchconfiguration-placementtenancy"></a>
 The tenancy of the instance, either `default` or `dedicated`\. An instance with `dedicated` tenancy runs on isolated, single\-tenant hardware and can only be launched into a VPC\. You must set the value of this property to `dedicated` if want to launch dedicated instances in a shared tenancy VPC \(a VPC with the instance placement tenancy attribute set to default\)\.   
 If you specify this property, you must specify at least one subnet in the `VPCZoneIdentifier` property of the [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.  
 For more information, see [Configuring instance tenancy with Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-dedicated-instances.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
@@ -180,21 +180,21 @@ For more information, see [Configuring instance tenancy with Amazon EC2 Auto Sca
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`RamDiskId`  <a name="cfn-as-launchconfig-ramdiskid"></a>
+`RamDiskId`  <a name="cfn-autoscaling-launchconfiguration-ramdiskid"></a>
 The ID of the RAM disk to select\.   
 We recommend that you use PV\-GRUB instead of kernels and RAM disks\. For more information, see [User provided kernels](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UserProvidedKernels.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`SecurityGroups`  <a name="cfn-as-launchconfig-securitygroups"></a>
+`SecurityGroups`  <a name="cfn-autoscaling-launchconfiguration-securitygroups"></a>
 A list that contains the security groups to assign to the instances in the Auto Scaling group\. The list can contain both the IDs of existing security groups and references to [SecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html) resources created in the template\.  
 For more information, see [Security groups for your VPC](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html) in the *Amazon Virtual Private Cloud User Guide*\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`SpotPrice`  <a name="cfn-as-launchconfig-spotprice"></a>
+`SpotPrice`  <a name="cfn-autoscaling-launchconfiguration-spotprice"></a>
 The maximum hourly price you are willing to pay for any Spot Instances launched to fulfill the request\. Spot Instances are launched when the price you specify exceeds the current Spot price\. For more information, see [Requesting Spot Instances for fault\-tolerant and flexible applications ](https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-configuration-requesting-spot-instances.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 When you change your maximum price by creating a new launch configuration, running instances will continue to run as long as the maximum price for those running instances is higher than the current Spot price\.
 Valid Range: Minimum value of 0\.001  
@@ -202,7 +202,7 @@ Valid Range: Minimum value of 0\.001
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`UserData`  <a name="cfn-as-launchconfig-userdata"></a>
+`UserData`  <a name="cfn-autoscaling-launchconfiguration-userdata"></a>
 The Base64\-encoded user data to make available to the launched EC2 instances\.  
 For more information, see [Instance metadata and user data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
 *Required*: No  
@@ -211,33 +211,33 @@ For more information, see [Instance metadata and user data](https://docs.aws.ama
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return values<a name="aws-properties-as-launchconfig-return-values"></a>
+## Return values<a name="aws-resource-autoscaling-launchconfiguration-return-values"></a>
 
-### Ref<a name="aws-properties-as-launchconfig-return-values-ref"></a>
+### Ref<a name="aws-resource-autoscaling-launchconfiguration-return-values-ref"></a>
 
 When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\. For example: `mystack-mylaunchconfig-1DDYF1E3B3I`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
 
-## Remarks<a name="aws-properties-as-launchconfig--remarks"></a>
+## Remarks<a name="aws-resource-autoscaling-launchconfiguration--remarks"></a>
 
 CloudFormation marks the Auto Scaling group as successful \(by setting its status to CREATE\_COMPLETE\) when its desired capacity is reached\. However, if `SpotPrice` is set in the launch configuration, then desired capacity is not used as a criteria for success\. Whether your request is fulfilled depends on Spot Instance capacity and your maximum price\. If the current Spot price is less than your specified maximum price, Amazon EC2 Auto Scaling uses the desired capacity as the target capacity for the group\. If the request for Spot Instances is unsuccessful, it keeps trying\. 
 
 You cannot define a duration for the Spot Instances as you can with a [Spot Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html#fixed-duration-spot-instances)\.
 
-## Examples<a name="aws-properties-as-launchconfig--examples"></a>
+## Examples<a name="aws-resource-autoscaling-launchconfiguration--examples"></a>
 
 The following examples create launch configurations that can be used by an Auto Scaling group to configure Amazon EC2 instances\. 
 
 For more template snippets, see [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)\.
 
-### Amazon EBS\-backed AMI and defined block device mappings<a name="aws-properties-as-launchconfig--examples--Amazon_EBS-backed_AMI_and_defined_block_device_mappings"></a>
+### Amazon EBS\-backed AMI and defined block device mappings<a name="aws-resource-autoscaling-launchconfiguration--examples--Amazon_EBS-backed_AMI_and_defined_block_device_mappings"></a>
 
 This example shows a launch configuration with a `BlockDeviceMappings` property that lists two devices: a 30 gigabyte EBS root volume mapped to /dev/sda1 and a 100 gigabyte EBS volume mapped to /dev/sdm\. The /dev/sdm volume uses the default EBS volume type based on the region and is not deleted when terminating the instance it is attached to\. 
 
 CloudFormation supports parameters from the AWS Systems Manager Parameter Store\. In this example, the `ImageId` property references the latest Amazon Linux 2 AMI \(EBS\-backed image\) from the Parameter Store\. For more information, see [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) in the *AWS Systems Manager User Guide* and the blog post [Query for the latest Amazon Linux AMI IDs using AWS Systems Manager Parameter Store](http://aws.amazon.com/blogs/compute/query-for-the-latest-amazon-linux-ami-ids-using-aws-systems-manager-parameter-store/) on the AWS Compute Blog\.
 
-#### JSON<a name="aws-properties-as-launchconfig--examples--Amazon_EBS-backed_AMI_and_defined_block_device_mappings--json"></a>
+#### JSON<a name="aws-resource-autoscaling-launchconfiguration--examples--Amazon_EBS-backed_AMI_and_defined_block_device_mappings--json"></a>
 
 ```
 {
@@ -288,7 +288,7 @@ CloudFormation supports parameters from the AWS Systems Manager Parameter Store\
 }
 ```
 
-#### YAML<a name="aws-properties-as-launchconfig--examples--Amazon_EBS-backed_AMI_and_defined_block_device_mappings--yaml"></a>
+#### YAML<a name="aws-resource-autoscaling-launchconfiguration--examples--Amazon_EBS-backed_AMI_and_defined_block_device_mappings--yaml"></a>
 
 ```
 ---
@@ -326,13 +326,13 @@ Resources:
             DeleteOnTermination: "false"
 ```
 
-### Instance store\-backed AMI with Spot price and IAM role<a name="aws-properties-as-launchconfig--examples--Instance_store-backed_AMI_with_Spot_price_and_IAM_role"></a>
+### Instance store\-backed AMI with Spot price and IAM role<a name="aws-resource-autoscaling-launchconfiguration--examples--Instance_store-backed_AMI_with_Spot_price_and_IAM_role"></a>
 
 This example shows a launch configuration that launches Spot Instances in the Auto Scaling group\. This launch configuration will only be active if the current Spot price is less than the price in the template specification \(0\.045\)\. It also demonstrates a launch configuration that uses the `IamInstanceProfile` property\. For an example of a full template, including the definition of, and further references from the [InstanceProfile](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html) object referenced here as `RootInstanceProfile`, see [auto\_scaling\_with\_instance\_profile\.template](https://s3.amazonaws.com/cloudformation-templates-us-east-1/auto_scaling_with_instance_profile.template)\.
 
 In this example, the `ImageId` property references the latest Amazon Linux AMI \(instance store/S3\-backed image\) from the Parameter Store\. The BlockDeviceMappings property lists a virtual device `ephemeral0` mapped to /dev/sdc\.
 
-#### JSON<a name="aws-properties-as-launchconfig--examples--Instance_store-backed_AMI_with_Spot_price_and_IAM_role--json"></a>
+#### JSON<a name="aws-resource-autoscaling-launchconfiguration--examples--Instance_store-backed_AMI_with_Spot_price_and_IAM_role--json"></a>
 
 ```
 {
@@ -365,7 +365,7 @@ In this example, the `ImageId` property references the latest Amazon Linux AMI \
 }
 ```
 
-#### YAML<a name="aws-properties-as-launchconfig--examples--Instance_store-backed_AMI_with_Spot_price_and_IAM_role--yaml"></a>
+#### YAML<a name="aws-resource-autoscaling-launchconfiguration--examples--Instance_store-backed_AMI_with_Spot_price_and_IAM_role--yaml"></a>
 
 ```
 ---
@@ -390,7 +390,7 @@ Resources:
         VirtualName: ephemeral0
 ```
 
-### Provisioned IOPS EBS\-optimized volume with key\-pair name and user data<a name="aws-properties-as-launchconfig--examples--Provisioned_IOPS_EBS-optimized_volume_with_key-pair_name_and_user_data"></a>
+### Provisioned IOPS EBS\-optimized volume with key\-pair name and user data<a name="aws-resource-autoscaling-launchconfiguration--examples--Provisioned_IOPS_EBS-optimized_volume_with_key-pair_name_and_user_data"></a>
 
 This example demonstrates a launch configuration that configures the `EbsOptmized` property to launch instances with a provisioned IOPS EBS\-optimized volume\. This can increase the performance of your EBS\-backed instances\.
 
@@ -408,7 +408,7 @@ For more performance tips, see [Amazon EBS volume performance on Linux instances
 
 
 
-#### JSON<a name="aws-properties-as-launchconfig--examples--Provisioned_IOPS_EBS-optimized_volume_with_key-pair_name_and_user_data--json"></a>
+#### JSON<a name="aws-resource-autoscaling-launchconfiguration--examples--Provisioned_IOPS_EBS-optimized_volume_with_key-pair_name_and_user_data--json"></a>
 
 ```
 {
@@ -434,7 +434,7 @@ For more performance tips, see [Amazon EBS volume performance on Linux instances
 }
 ```
 
-#### YAML<a name="aws-properties-as-launchconfig--examples--Provisioned_IOPS_EBS-optimized_volume_with_key-pair_name_and_user_data--yaml"></a>
+#### YAML<a name="aws-resource-autoscaling-launchconfiguration--examples--Provisioned_IOPS_EBS-optimized_volume_with_key-pair_name_and_user_data--yaml"></a>
 
 ```
 ---

@@ -103,7 +103,7 @@ The instance URL for the Salesforce site that you want to index\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StandardObjectAttachmentConfiguration`  <a name="cfn-kendra-datasource-salesforceconfiguration-standardobjectattachmentconfiguration"></a>
-Provides configuration information for processing attachments to Salesforce standard objects\.   
+Configuration information for processing attachments to Salesforce standard objects\.   
 *Required*: No  
 *Type*: [SalesforceStandardObjectAttachmentConfiguration](aws-properties-kendra-datasource-salesforcestandardobjectattachmentconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

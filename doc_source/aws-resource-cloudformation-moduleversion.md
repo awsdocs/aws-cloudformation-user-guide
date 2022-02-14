@@ -1,6 +1,6 @@
 # AWS::CloudFormation::ModuleVersion<a name="aws-resource-cloudformation-moduleversion"></a>
 
-Registers the specified version of the module with the CloudFormation service\. Registering a module makes it available for use in CloudFormation templates in your AWS account and region\.
+Registers the specified version of the module with the CloudFormation service\. Registering a module makes it available for use in CloudFormation templates in your AWS account and Region\.
 
 To specify a module version as the default version, use the `[AWS::CloudFormation::ModuleDefaultVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)` resource\.
 
@@ -44,7 +44,7 @@ The name of the module being registered\.
 
 `ModulePackage`  <a name="cfn-cloudformation-moduleversion-modulepackage"></a>
 A URL to the S3 bucket containing the package that contains the template fragment and schema files for the module version to register\.  
-The user registering the module version must be able to access the module package in the S3 bucket\. That is, the user needs to have [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for the package\. For more information, see [Actions, Resources, and Condition Keys for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity and Access Management User Guide*\.
+The user registering the module version must be able to access the module package in the S3 bucket\. That's, the user needs to have [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for the package\. For more information, see [Actions, Resources, and Condition Keys for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity and Access Management User Guide*\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -91,7 +91,7 @@ The ID of this version of the module\.
 `Visibility`  <a name="Visibility-fn::getatt"></a>
 The scope at which the module is visible and usable in CloudFormation operations\.  
 Valid values include:  
-+ `PRIVATE`: The module is only visible and usable within the account in which it is registered\.
++ `PRIVATE`: The module is only visible and usable within the account in which it's registered\.
 + `PUBLIC`: The module is publicly visible and usable within any Amazon account\.
 
 ## Remarks<a name="aws-resource-cloudformation-moduleversion--remarks"></a>
@@ -105,13 +105,13 @@ Considerations when managing module versions:
   If you attempt to delete an `AWS::CloudFormation::ModuleVersion` resource that represent the default version, the operation will fail if there are other active versions\.
 
   For more information on deprecating module versions, see [DeregisterType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DeregisterType.html) in the *AWS CloudFormation API Reference*\.
-+ You cannot edit a module version\. Updating an `AWS::CloudFormation::ModuleVersion` resource results in a new module version being registered in the CloudFormation registry\.
++ You can't edit a module version\. Updating an `AWS::CloudFormation::ModuleVersion` resource results in a new module version being registered in the CloudFormation registry\.
 
 ## Examples<a name="aws-resource-cloudformation-moduleversion--examples"></a>
 
 ### Registering a module version<a name="aws-resource-cloudformation-moduleversion--examples--Registering_a_module_version"></a>
 
-The following example registers a module version\. If this is the only version of the module registered in this account and region, CloudFormation sets this version as the default version\.
+The following example registers a module version\. If this is the only version of the module registered in this account and Region, CloudFormation sets this version as the default version\.
 
 #### JSON<a name="aws-resource-cloudformation-moduleversion--examples--Registering_a_module_version--json"></a>
 
@@ -146,7 +146,7 @@ Resources:
 
 The following example registers two versions of a module\. Note the following:
 + The example uses the `DependsOn` attribute to ensure that CloudFormation provisions version one before version two\.
-+ CloudFormation sets version one of the module as the default version, as it is registered first\. \(This assumes no other versions of the module are currently registered in this account and Region\.\)
++ CloudFormation sets version one of the module as the default version, as it's registered first\. \(This assumes no other versions of the module are currently registered in this account and Region\.\)
 
 #### JSON<a name="aws-resource-cloudformation-moduleversion--examples--Registering_multiple_module_versions--json"></a>
 

@@ -7,7 +7,7 @@ Registers a resource version with the CloudFormation service\. Registering a res
 
 For more information on how to develop resources and ready them for registration, see [Creating Resource Providers](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-types.html) in the *CloudFormation CLI User Guide*\.
 
-You can have a maximum of 50 resource versions registered at a time\. This maximum is per account and per region\.
+You can have a maximum of 50 resource versions registered at a time\. This maximum is per account and per Region\.
 
 ## Syntax<a name="aws-resource-cloudformation-resourceversion-syntax"></a>
 
@@ -111,8 +111,8 @@ Whether the resource version is set as the default version\.
 The provisioning behavior of the resource type\. CloudFormation determines the provisioning type during registration, based on the types of handlers in the schema handler package submitted\.  
 Valid values include:  
 + `FULLY_MUTABLE`: The resource type includes an update handler to process updates to the type during stack update operations\.
-+ `IMMUTABLE`: The resource type does not include an update handler, so the type cannot be updated and must instead be replaced during stack update operations\.
-+ `NON_PROVISIONABLE`: The resource type does not include all of the following handlers, and therefore cannot actually be provisioned\.
++ `IMMUTABLE`: The resource type doesn't include an update handler, so the type can't be updated and must instead be replaced during stack update operations\.
++ `NON_PROVISIONABLE`: The resource type doesn't include all the following handlers, and therefore can't actually be provisioned\.
   + create
   + read
   + delete

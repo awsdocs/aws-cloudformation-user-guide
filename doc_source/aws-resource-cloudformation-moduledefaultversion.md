@@ -1,6 +1,6 @@
 # AWS::CloudFormation::ModuleDefaultVersion<a name="aws-resource-cloudformation-moduledefaultversion"></a>
 
-Specifies the default version of a module\. The default version of the module will be used in CloudFormation operations for this account and region\.
+Specifies the default version of a module\. The default version of the module will be used in CloudFormation operations for this account and Region\.
 
 To register a module version, use the `[AWS::CloudFormation::ModuleVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)` resource\.
 
@@ -75,7 +75,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 ## Remarks<a name="aws-resource-cloudformation-moduledefaultversion--remarks"></a>
 
 Considerations when managing the default module version:
-+ The first module version to be registered in an account and region remains the default version CloudFormation uses, unless and until you explicitly sets another version as the default\.
++ The first module version to be registered in an account and Region remains the default version CloudFormation uses, unless and until you explicitly sets another version as the default\.
 + For ease of determining which module version is the default version, we recommend that you only include a single `AWS::CloudFormation::ModuleDefaultVersion` resource for a given module in a template\.
 + If you delete an `AWS::CloudFormation::ModuleVersion` resource, either by deleting it from a stack or deleting the entire stack, CloudFormation marks the corresponding module version as `DEPRECATED`\.
 

@@ -1,6 +1,6 @@
 # AWS::CloudFormation::TypeActivation<a name="aws-resource-cloudformation-typeactivation"></a>
 
-Activates a public third\-party extension, making it available for use in stack templates\. For more information, see [Using public extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html) in the *CloudFormation User Guide*\.
+Activates a public third\-party extension, making it available for use in stack templates\. For more information, see [Using public extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html) in the * AWS CloudFormation User Guide*\.
 
 Once you have activated a public third\-party extension in your account and region, use [SetTypeConfiguration](AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html) to specify configuration properties for the extension\. For more information, see [Configuring extensions at the account level](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration) in the *CloudFormation User Guide*\.
 
@@ -101,7 +101,7 @@ The extension type\.
 Conditional: You must specify `PublicTypeArn`, or `TypeName`, `Type`, and `PublisherId`\.  
 *Required*: Conditional  
 *Type*: String  
-*Allowed values*: `MODULE | RESOURCE`  
+*Allowed values*: `HOOK | MODULE | RESOURCE`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TypeName`  <a name="cfn-cloudformation-typeactivation-typename"></a>

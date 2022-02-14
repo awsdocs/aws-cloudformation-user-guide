@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AvailabilityZones](#cfn-docdb-dbcluster-availabilityzones)" : [ String, ... ],
       "[BackupRetentionPeriod](#cfn-docdb-dbcluster-backupretentionperiod)" : Integer,
+      "[CopyTagsToSnapshot](#cfn-docdb-dbcluster-copytagstosnapshot)" : Boolean,
       "[DBClusterIdentifier](#cfn-docdb-dbcluster-dbclusteridentifier)" : String,
       "[DBClusterParameterGroupName](#cfn-docdb-dbcluster-dbclusterparametergroupname)" : String,
       "[DBSubnetGroupName](#cfn-docdb-dbcluster-dbsubnetgroupname)" : String,
@@ -42,6 +43,7 @@ Properties:
   [AvailabilityZones](#cfn-docdb-dbcluster-availabilityzones): 
     - String
   [BackupRetentionPeriod](#cfn-docdb-dbcluster-backupretentionperiod): Integer
+  [CopyTagsToSnapshot](#cfn-docdb-dbcluster-copytagstosnapshot): Boolean
   [DBClusterIdentifier](#cfn-docdb-dbcluster-dbclusteridentifier): String
   [DBClusterParameterGroupName](#cfn-docdb-dbcluster-dbclusterparametergroupname): String
   [DBSubnetGroupName](#cfn-docdb-dbcluster-dbsubnetgroupname): String
@@ -78,6 +80,12 @@ Constraints:
 + Must be a value from 1 to 35\.
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CopyTagsToSnapshot`  <a name="cfn-docdb-dbcluster-copytagstosnapshot"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBClusterIdentifier`  <a name="cfn-docdb-dbcluster-dbclusteridentifier"></a>

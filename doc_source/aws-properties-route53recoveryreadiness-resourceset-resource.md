@@ -43,7 +43,7 @@ A component for DNS/routing control readiness checks\. This is a required settin
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReadinessScopes`  <a name="cfn-route53recoveryreadiness-resourceset-resource-readinessscopes"></a>
-A list of recovery group Amazon Resource Names \(ARNs\) and cell ARNs that this resource is contained within\.  
+The recovery group Amazon Resource Name \(ARN\) or the cell ARN that the readiness checks for this resource set are scoped to\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

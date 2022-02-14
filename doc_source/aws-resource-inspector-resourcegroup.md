@@ -83,9 +83,9 @@ The following example shows how to declare an `AWS::Inspector::ResourceGroup` re
 
 ```
 myresourcegroup: 
-  Type: "AWS::Inspector::ResourceGroup"
-  Properties: 
-    ResourceGroupTags: 
-      - Key: "Name"
-      Value: "example"
+            Type: "AWS::Inspector::ResourceGroup"
+            Properties: 
+            ResourceGroupTags: 
+            - Key: "Name"
+            Value: "example"
 ```

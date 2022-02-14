@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource S3DataSourceConfiguration<a name="aws-properties-kendra-datasource-s3datasourceconfiguration"></a>
 
-Provides configuration information for a data source to index documents in an Amazon S3 bucket\.
+Provides the configuration information to connect to an Amazon S3 bucket\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-s3datasourceconfiguration-syntax"></a>
 

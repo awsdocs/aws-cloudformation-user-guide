@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource ConfluenceConfiguration<a name="aws-properties-kendra-datasource-confluenceconfiguration"></a>
 
-Provides configuration information for data sources that connect to Confluence\.
+Provides the configuration information to connect to Confluence as your data source\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-confluenceconfiguration-syntax"></a>
 

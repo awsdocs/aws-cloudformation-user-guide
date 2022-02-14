@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource ServiceNowConfiguration<a name="aws-properties-kendra-datasource-servicenowconfiguration"></a>
 
-Provides configuration information required to connect to a ServiceNow data source\.
+Provides the configuration information to connect to ServiceNow as your data source\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-servicenowconfiguration-syntax"></a>
 
@@ -52,7 +52,7 @@ The ServiceNow instance that the data source connects to\. The host endpoint sho
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KnowledgeArticleConfiguration`  <a name="cfn-kendra-datasource-servicenowconfiguration-knowledgearticleconfiguration"></a>
-Provides configuration information for crawling knowledge articles in the ServiceNow site\.  
+Configuration information for crawling knowledge articles in the ServiceNow site\.  
 *Required*: No  
 *Type*: [ServiceNowKnowledgeArticleConfiguration](aws-properties-kendra-datasource-servicenowknowledgearticleconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -67,7 +67,7 @@ The Amazon Resource Name \(ARN\) of the AWS Secrets Manager secret that contains
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceCatalogConfiguration`  <a name="cfn-kendra-datasource-servicenowconfiguration-servicecatalogconfiguration"></a>
-Provides configuration information for crawling service catalogs in the ServiceNow site\.  
+Configuration information for crawling service catalogs in the ServiceNow site\.  
 *Required*: No  
 *Type*: [ServiceNowServiceCatalogConfiguration](aws-properties-kendra-datasource-servicenowservicecatalogconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

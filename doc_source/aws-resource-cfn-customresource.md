@@ -35,7 +35,7 @@ Properties:
 `ServiceToken`  <a name="cfn-customresource-servicetoken"></a>
 Only one property is defined by AWS for a custom resource: `ServiceToken`\. All other properties are defined by the service provider\.
 The service token that was given to the template developer by the service provider to access the service, such as an Amazon SNS topic ARN or Lambda function ARN\. The service token must be from the same Region in which you are creating the stack\.  
-Updates are not supported\.  
+Updates aren't supported\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -46,7 +46,7 @@ Updates are not supported\.
 
 For custom resources, you can specify `AWS::CloudFormation::CustomResource` as the resource type, or you can specify your own resource type name\. For example, instead of using `AWS::CloudFormation::CustomResource`, you can use `Custom::MyCustomResourceTypeName`\.
 
-Custom resource type names can include alphanumeric characters and the following characters: `_@-`\. You can specify a custom resource type name up to a maximum length of 60 characters\. You cannot change the type during an update\.
+Custom resource type names can include alphanumeric characters and the following characters: `_@-`\. You can specify a custom resource type name up to a maximum length of 60 characters\. You can't change the type during an update\.
 
 Using your own resource type names helps you quickly differentiate the types of custom resources in your stack\. For example, if you had two custom resources that conduct two different ping tests, you could name their type as `Custom::PingTester` to make them easily identifiable as ping testers \(instead of using `AWS::CloudFormation::CustomResource`\)\.
 
@@ -60,7 +60,7 @@ Note the following:
 
  *Retrieving return values* 
 
-For a custom resource, return values are defined by the custom resource provider, and are retrieved by calling Fn::GetAtt on the provider\-defined attributes\.
+For a custom resource, return values are defined by the custom resource provider, and are retrieved by calling `Fn::GetAtt` on the provider\-defined attributes\.
 
 ## Examples<a name="aws-resource-cfn-customresource--examples"></a>
 
@@ -142,7 +142,7 @@ Outputs:
 
 ### Using a Lambda function in a custom resource<a name="aws-resource-cfn-customresource--examples--Using_a__function_in_a_custom_resource"></a>
 
-With AWS Lambda functions and custom resources, you can run custom code in response to stack events \(create, update, and delete\)\. The following custom resource invokes a Lambda function and sends it the StackName property as input\. The function uses this property to get outputs from the appropriate stack\.
+With AWS Lambda functions and custom resources, you can run custom code in response to stack events \(create, update, and delete\)\. The following custom resource invokes a Lambda function and sends it the `StackName` property as input\. The function uses this property to get outputs from the appropriate stack\.
 
 #### JSON<a name="aws-resource-cfn-customresource--examples--Using_a__function_in_a_custom_resource--json"></a>
 
@@ -182,15 +182,15 @@ With AWS Lambda functions and custom resources, you can run custom code in respo
 
 ```
 MyCustomResource:
-      Type: 'Custom::TestLambdaCrossStackRef'
-      Properties:
-      ServiceToken: !Join 
+  Type: 'Custom::TestLambdaCrossStackRef'
+  Properties:
+    ServiceToken: !Join 
       - ''
       - - 'arn:aws:lambda:'
-      - !Ref 'AWS::Region'
-      - ':'
-      - !Ref 'AWS::AccountId'
-      - ':function:'
-      - !Ref LambdaFunctionName
-      StackName: !Ref NetworkStackName
+        - !Ref 'AWS::Region'
+        - ':'
+        - !Ref 'AWS::AccountId'
+        - ':function:'
+        - !Ref LambdaFunctionName
+    StackName: !Ref NetworkStackName
 ```

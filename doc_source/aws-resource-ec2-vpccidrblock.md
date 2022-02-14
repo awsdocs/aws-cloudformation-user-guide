@@ -16,7 +16,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AmazonProvidedIpv6CidrBlock](#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock)" : Boolean,
       "[CidrBlock](#cfn-ec2-vpccidrblock-cidrblock)" : String,
+      "[Ipv4IpamPoolId](#cfn-ec2-vpccidrblock-ipv4ipampoolid)" : String,
+      "[Ipv4NetmaskLength](#cfn-ec2-vpccidrblock-ipv4netmasklength)" : Integer,
       "[Ipv6CidrBlock](#cfn-ec2-vpccidrblock-ipv6cidrblock)" : String,
+      "[Ipv6IpamPoolId](#cfn-ec2-vpccidrblock-ipv6ipampoolid)" : String,
+      "[Ipv6NetmaskLength](#cfn-ec2-vpccidrblock-ipv6netmasklength)" : Integer,
       "[Ipv6Pool](#cfn-ec2-vpccidrblock-ipv6pool)" : String,
       "[VpcId](#cfn-ec2-vpccidrblock-vpcid)" : String
     }
@@ -30,7 +34,11 @@ Type: AWS::EC2::VPCCidrBlock
 Properties: 
   [AmazonProvidedIpv6CidrBlock](#cfn-ec2-vpccidrblock-amazonprovidedipv6cidrblock): Boolean
   [CidrBlock](#cfn-ec2-vpccidrblock-cidrblock): String
+  [Ipv4IpamPoolId](#cfn-ec2-vpccidrblock-ipv4ipampoolid): String
+  [Ipv4NetmaskLength](#cfn-ec2-vpccidrblock-ipv4netmasklength): Integer
   [Ipv6CidrBlock](#cfn-ec2-vpccidrblock-ipv6cidrblock): String
+  [Ipv6IpamPoolId](#cfn-ec2-vpccidrblock-ipv6ipampoolid): String
+  [Ipv6NetmaskLength](#cfn-ec2-vpccidrblock-ipv6netmasklength): Integer
   [Ipv6Pool](#cfn-ec2-vpccidrblock-ipv6pool): String
   [VpcId](#cfn-ec2-vpccidrblock-vpcid): String
 ```
@@ -49,11 +57,35 @@ An IPv4 CIDR block to associate with the VPC\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Ipv4IpamPoolId`  <a name="cfn-ec2-vpccidrblock-ipv4ipampoolid"></a>
+Associate a CIDR allocated from an IPv4 IPAM pool to a VPC\. For more information about Amazon VPC IP Address Manager \(IPAM\), see [What is IPAM?](/vpc/latest/ipam/what-is-it-ipam.html) in the *Amazon VPC IPAM User Guide*\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Ipv4NetmaskLength`  <a name="cfn-ec2-vpccidrblock-ipv4netmasklength"></a>
+The netmask length of the IPv4 CIDR you would like to associate from an Amazon VPC IP Address Manager \(IPAM\) pool\. For more information about IPAM, see [What is IPAM?](/vpc/latest/ipam/what-is-it-ipam.html) in the *Amazon VPC IPAM User Guide*\.   
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Ipv6CidrBlock`  <a name="cfn-ec2-vpccidrblock-ipv6cidrblock"></a>
 An IPv6 CIDR block from the IPv6 address pool\. You must also specify `Ipv6Pool` in the request\.  
 To let Amazon choose the IPv6 CIDR block for you, omit this parameter\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Ipv6IpamPoolId`  <a name="cfn-ec2-vpccidrblock-ipv6ipampoolid"></a>
+Associates a CIDR allocated from an IPv6 IPAM pool to a VPC\. For more information about Amazon VPC IP Address Manager \(IPAM\), see [What is IPAM?](/vpc/latest/ipam/what-is-it-ipam.html) in the *Amazon VPC IPAM User Guide*\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Ipv6NetmaskLength`  <a name="cfn-ec2-vpccidrblock-ipv6netmasklength"></a>
+The netmask length of the IPv6 CIDR you would like to associate from an Amazon VPC IP Address Manager \(IPAM\) pool\. For more information about IPAM, see [What is IPAM?](/vpc/latest/ipam/what-is-it-ipam.html) in the *Amazon VPC IPAM User Guide*\.   
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ipv6Pool`  <a name="cfn-ec2-vpccidrblock-ipv6pool"></a>

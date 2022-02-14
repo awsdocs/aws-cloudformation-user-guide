@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource OneDriveConfiguration<a name="aws-properties-kendra-datasource-onedriveconfiguration"></a>
 
-Provides configuration information for data sources that connect to OneDrive\.
+Provides the configuration information to connect to OneDrive as your data source\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-onedriveconfiguration-syntax"></a>
 
