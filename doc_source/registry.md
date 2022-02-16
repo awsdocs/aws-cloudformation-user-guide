@@ -4,7 +4,7 @@ The CloudFormation registry lets you manage extensions, both public and private,
 
 ## Public and private extensions<a name="registry-public-private"></a>
 
-Extension types are registered as either public are private\. Currently, the registry offers the following extension types:
+Extension types are registered as either public or private\. Currently, the registry offers the following extension types:
 + *[Resource types](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-types.html)* – model and provision custom logic as a resource, using stacks in CloudFormation\.
 + *[Modules](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules.html)* – package resource configurations for inclusion across stack templates, in a transparent, manageable, and repeatable way\.
 + *[Hooks](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/hooks.html)* – proactively inspect the configuration of your AWS resources before provisioning\.
