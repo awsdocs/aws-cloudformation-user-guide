@@ -181,7 +181,7 @@ The following shows an example web ACL specification\. This example includes cus
           Content: '{"jsonfieldname": "jsonfieldvalue"}'
         CustomResponseBodyKey3:
           ContentType: TEXT_HTML
-                Content: <html>HTML text content</html>
+          Content: <html>HTML text content</html>
       Rules:
         - Name: RuleWithAWSManagedRules
           Priority: 0
@@ -262,7 +262,7 @@ The following shows an example web ACL specification\. This example includes cus
           },
           "CustomResponseBodyKey3": {
             "ContentType": "TEXT_HTML",
-                "Content": "<html>HTML text content</html>"
+            "Content": "<html>HTML text content</html>"
           }
         },
         "Rules": [

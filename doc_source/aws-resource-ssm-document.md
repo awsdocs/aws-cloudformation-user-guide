@@ -65,8 +65,7 @@ This parameter also supports `String` data types\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DocumentFormat`  <a name="cfn-ssm-document-documentformat"></a>
-Specify the document format for the request\. The document format can be JSON or YAML\. JSON is the default format\.  
-`TEXT` is not supported, even though it is listed in the `Allowed values`\.
+Specify the document format for the request\. JSON is the default format\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `JSON | TEXT | YAML`  

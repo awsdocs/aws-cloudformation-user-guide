@@ -172,7 +172,7 @@ The following shows an example rule group specification\.
                 },
                 "CustomResponseBodyKey3": {
                     "ContentType": "TEXT_HTML",
-              "Content": "<html>HTML text content</html>"
+                    "Content": "<html>HTML text content</html>"
                 }
             },              
             "Capacity": 1000,
@@ -355,7 +355,7 @@ The following shows an example rule group specification\.
             Content: '{"jsonfieldname": "jsonfieldvalue"}'
           CustomResponseBodyKey3:
             ContentType: TEXT_HTML
-                  Content: <html>HTML text content</html>
+            Content: <html>HTML text content</html>
         Capacity: 1000
         Rules:
           - Name: RuleOne

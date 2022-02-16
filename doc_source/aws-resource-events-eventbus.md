@@ -85,7 +85,7 @@ The policy for the event bus in JSON form\.
 
 ### Create a partner event bus<a name="aws-resource-events-eventbus--examples--Create_a_partner_event_bus"></a>
 
-The following example creates a partner event bus named `aws.partner/PartnerName/acct1/repo1`\. 
+The following example creates a partner event bus named `aws.partner.repo1`\. 
 
 #### JSON<a name="aws-resource-events-eventbus--examples--Create_a_partner_event_bus--json"></a>
 
@@ -94,7 +94,7 @@ The following example creates a partner event bus named `aws.partner/PartnerName
     "Type": "AWS::Events::EventBus",
     "Properties": {
         "EventSourceName": "aws.partner/PartnerName/acct1/repo1",
-        "Name": "aws.partner/PartnerName/acct1/repo1"
+        "Name": "aws.partner.repo1"
     }
 }
 ```
@@ -106,7 +106,7 @@ SamplePartnerEventBus:
     Type: AWS::Events::EventBus
     Properties: 
         EventSourceName: "aws.partner/PartnerName/acct1/repo1"
-        Name: "aws.partner/PartnerName/acct1/repo1"
+        Name: "aws.partner.repo1"
 ```
 
 ### Create a custom event bus<a name="aws-resource-events-eventbus--examples--Create_a_custom_event_bus"></a>

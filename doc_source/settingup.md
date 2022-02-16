@@ -7,3 +7,4 @@ Before you start using AWS CloudFormation, you might need to know what IAM permi
 + [AWS CloudFormation quotas](cloudformation-limits.md)
 + [AWS CloudFormation endpoints](using-cfn-endpoints.md)
 + [Setting up VPC endpoints for AWS CloudFormation](cfn-vpce-bucketnames.md)
++ [Using AWS CloudFormation with an AWS SDK](sdk-general-information-section.md)
