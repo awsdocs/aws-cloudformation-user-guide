@@ -184,7 +184,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
  For example\: 
    
      "https://abcdef.execute-api.us-west-2.amazonaws.com" for HTTP type API.
-     "wss://abcdef.execute-api.us-west-2.amazonaws.com" for WEBSOCKET type API\.
+     "wss://abcdef.execute-api.us-west-2.amazonaws.com" for WEBSOCKET type API.
 
 ## Examples<a name="aws-resource-apigatewayv2-api--examples"></a>
 
