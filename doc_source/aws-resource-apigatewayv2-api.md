@@ -180,13 +180,11 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-apigatewayv2-api-return-values-fn--getatt-fn--getatt"></a>
 
 `ApiEndpoint`  <a name="ApiEndpoint-fn::getatt"></a>
-
-   The default endpoint for an API\.
-
-   For example\: 
+ The default endpoint for an API\.
+ For example\: 
    
-     `https://abcdef.execute-api.us-west-2.amazonaws.com` for HTTP type API\.
-     `wss://abcdef.execute-api.us-west-2.amazonaws.com` for WEBSOCKET type API\.
+     "https://abcdef.execute-api.us-west-2.amazonaws.com" for HTTP type API.
+     "wss://abcdef.execute-api.us-west-2.amazonaws.com" for WEBSOCKET type API\.
 
 ## Examples<a name="aws-resource-apigatewayv2-api--examples"></a>
 
