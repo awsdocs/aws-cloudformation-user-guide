@@ -181,9 +181,10 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `ApiEndpoint`  <a name="ApiEndpoint-fn::getatt"></a>
 
-  The default endpoint for an API\.
+   The default endpoint for an API\.
 
    For example\: 
+   
      `https://abcdef.execute-api.us-west-2.amazonaws.com` for HTTP type API\.
      `wss://abcdef.execute-api.us-west-2.amazonaws.com` for WEBSOCKET type API\.
 
