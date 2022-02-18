@@ -133,12 +133,12 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: Specifies an EFS location for DataSync
 Resources:
   LocationEFS:
-    Type: AWS::DataSync::LocationEFS
-      Properties: 
-        Ec2Config: 
-          SecurityGroupArns: 
-            - arn:aws:ec2:us-east-2:11122233344:security-group/sg-0117195988293d62f
-          SubnetArn: arn:aws:ec2:us-east-2:11122233344:subnet/subnet-f45a0e678
-        EfsFilesystemArn: arn:aws:elasticfilesystem:us-east-2:111222333444:file-system/fs-12345efs
-        Subdirectory: /MySubdirectory
+  Type: AWS::DataSync::LocationEFS
+    Properties: 
+      Ec2Config: 
+        SecurityGroupArns: 
+          - arn:aws:ec2:us-east-2:11122233344:security-group/sg-0117195988293d62f
+        SubnetArn: arn:aws:ec2:us-east-2:11122233344:subnet/subnet-f45a0e678
+      EfsFilesystemArn: arn:aws:elasticfilesystem:us-east-2:111222333444:file-system/fs-12345efs
+      Subdirectory: /MySubdirectory
 ```
