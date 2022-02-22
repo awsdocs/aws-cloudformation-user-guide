@@ -9,17 +9,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### JSON<a name="aws-properties-efs-filesystem-lifecyclepolicy-syntax.json"></a>
 
 ```
-{
-  "[TransitionToIA](#cfn-efs-filesystem-lifecyclepolicy-transitiontoia)" : String,
-  "[TransitionToPrimaryStorageClass](#cfn-efs-filesystem-lifecyclepolicy-transitiontoprimarystorageclass)" : String
+[
+  {
+    "[TransitionToIA](#cfn-efs-filesystem-lifecyclepolicy-transitiontoia)" : String
+  },
+  {
+    "[TransitionToPrimaryStorageClass](#cfn-efs-filesystem-lifecyclepolicy-transitiontoprimarystorageclass)" : String
+  }
 }
 ```
 
 ### YAML<a name="aws-properties-efs-filesystem-lifecyclepolicy-syntax.yaml"></a>
 
 ```
-  [TransitionToIA](#cfn-efs-filesystem-lifecyclepolicy-transitiontoia): String
-  [TransitionToPrimaryStorageClass](#cfn-efs-filesystem-lifecyclepolicy-transitiontoprimarystorageclass): String
+  - [TransitionToIA](#cfn-efs-filesystem-lifecyclepolicy-transitiontoia): String
+  - [TransitionToPrimaryStorageClass](#cfn-efs-filesystem-lifecyclepolicy-transitiontoprimarystorageclass): String
 ```
 
 ## Properties<a name="aws-properties-efs-filesystem-lifecyclepolicy-properties"></a>
