@@ -125,7 +125,7 @@ For HIPAA compliance, you must specify `TransitEncryptionEnabled` as `true`, an 
 Password constraints:  
 + Must be only printable ASCII characters\.
 + Must be at least 16 characters and no more than 128 characters in length\.
-+ Cannot contain any of the following characters: '/', '"', or '@'\. 
++ Nonalphanumeric characters are restricted to (!, &, #, $, ^, <, >, -)\.
 For more information, see [AUTH password](http://redis.io/commands/AUTH) at http://redis\.io/commands/AUTH\.  
 *Required*: No  
 *Type*: String  
