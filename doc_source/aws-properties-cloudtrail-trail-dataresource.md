@@ -52,7 +52,7 @@ The resource type in which you want to log data events\. You can specify the fol
 +  `AWS::S3::Object` 
 +  `AWS::Lambda::Function` 
 +  `AWS::DynamoDB::Table` 
-The following resource types are also availble through *advanced* event selectors\. Basic event selector resource types are valid in advanced event selectors, but advanced event selector resource types are not valid in basic event selectors\. For more information, see [AdvancedFieldSelector:Field](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedFieldSelector.html#awscloudtrail-Type-AdvancedFieldSelector-Field)\.  
+The following resource types are also available through *advanced* event selectors\. Basic event selector resource types are valid in advanced event selectors, but advanced event selector resource types are not valid in basic event selectors\. For more information, see [AdvancedFieldSelector:Field](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_AdvancedFieldSelector.html#awscloudtrail-Type-AdvancedFieldSelector-Field)\.  
 +  `AWS::S3Outposts::Object` 
 +  `AWS::ManagedBlockchain::Node` 
 +  `AWS::S3ObjectLambda::AccessPoint` 
