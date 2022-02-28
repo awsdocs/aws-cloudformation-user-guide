@@ -41,6 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Monitoring](#cfn-ec2-instance-monitoring)" : Boolean,
       "[NetworkInterfaces](#cfn-ec2-instance-networkinterfaces)" : [ NetworkInterface, ... ],
       "[PlacementGroupName](#cfn-ec2-instance-placementgroupname)" : String,
+      "[PrivateDnsNameOptions](#cfn-ec2-instance-privatednsnameoptions)" : PrivateDnsNameOptions,
       "[PrivateIpAddress](#cfn-ec2-instance-privateipaddress)" : String,
       "[PropagateTagsToVolumeOnCreation](#cfn-ec2-instance-propagatetagstovolumeoncreation)" : Boolean,
       "[RamdiskId](#cfn-ec2-instance-ramdiskid)" : String,
@@ -100,6 +101,8 @@ Properties:
   [NetworkInterfaces](#cfn-ec2-instance-networkinterfaces): 
     - NetworkInterface
   [PlacementGroupName](#cfn-ec2-instance-placementgroupname): String
+  [PrivateDnsNameOptions](#cfn-ec2-instance-privatednsnameoptions): 
+    PrivateDnsNameOptions
   [PrivateIpAddress](#cfn-ec2-instance-privateipaddress): String
   [PropagateTagsToVolumeOnCreation](#cfn-ec2-instance-propagatetagstovolumeoncreation): Boolean
   [RamdiskId](#cfn-ec2-instance-ramdiskid): String
@@ -303,6 +306,12 @@ The name of an existing placement group that you want to launch the instance int
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`PrivateDnsNameOptions`  <a name="cfn-ec2-instance-privatednsnameoptions"></a>
+The options for the instance hostname\.  
+*Required*: No  
+*Type*: [PrivateDnsNameOptions](aws-properties-ec2-instance-privatednsnameoptions.md)  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+
 `PrivateIpAddress`  <a name="cfn-ec2-instance-privateipaddress"></a>
 \[EC2\-VPC\] The primary IPv4 address\. You must specify a value from the IPv4 address range of the subnet\.  
 Only one private IP address can be designated as primary\. You can't specify this option if you've specified the option to designate a private IP address as the primary IP address in a network interface specification\. You cannot specify this option if you're launching more than one instance in the request\.  
@@ -313,7 +322,7 @@ If you make an update to an instance that requires replacement, you must assign 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PropagateTagsToVolumeOnCreation`  <a name="cfn-ec2-instance-propagatetagstovolumeoncreation"></a>
-Not currently supported by AWS CloudFormation\.  
+Indicates whether to assign the tags from the instance to all of the volumes attached to the instance at launch\. If you specify `true` and you assign tags to the instance, those tags are automatically assigned to all of the volumes that you attach to the instance at launch\. If you specify `false`, those tags are not assigned to the attached volumes\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Priority](#cfn-batch-jobqueue-priority)" : Integer,
       "[SchedulingPolicyArn](#cfn-batch-jobqueue-schedulingpolicyarn)" : String,
       "[State](#cfn-batch-jobqueue-state)" : String,
-      "[Tags](#cfn-batch-jobqueue-tags)" : Json
+      "[Tags](#cfn-batch-jobqueue-tags)" : {Key : Value, ...}
     }
 }
 ```
@@ -33,7 +33,8 @@ Properties:
   [Priority](#cfn-batch-jobqueue-priority): Integer
   [SchedulingPolicyArn](#cfn-batch-jobqueue-schedulingpolicyarn): String
   [State](#cfn-batch-jobqueue-state): String
-  [Tags](#cfn-batch-jobqueue-tags): Json
+  [Tags](#cfn-batch-jobqueue-tags): 
+    Key : Value
 ```
 
 ## Properties<a name="aws-resource-batch-jobqueue-properties"></a>
@@ -73,7 +74,7 @@ The state of the job queue\. If the job queue state is `ENABLED`, it is able to 
 `Tags`  <a name="cfn-batch-jobqueue-tags"></a>
 The tags applied to the job queue\. For more information, see [Tagging your AWS Batch resources](https://docs.aws.amazon.com/batch/latest/userguide/using-tags.html) in * AWS Batch User Guide*\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-batch-jobqueue-return-values"></a>
@@ -83,6 +84,17 @@ The tags applied to the job queue\. For more information, see [Tagging your AWS 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the job queue ARN, such as `arn:aws:batch:us-east-1:111122223333:job-queue/HighPriority`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-batch-jobqueue-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-batch-jobqueue-return-values-fn--getatt-fn--getatt"></a>
+
+`JobQueueArn`  <a name="JobQueueArn-fn::getatt"></a>
+Returns the job queue ARN, such as `arn:aws:batch:us-east-1:111122223333:job-queue/JobQueueName`\.
 
 ## Examples<a name="aws-resource-batch-jobqueue--examples"></a>
 

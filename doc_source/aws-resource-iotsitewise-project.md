@@ -41,7 +41,7 @@ Properties:
 ## Properties<a name="aws-resource-iotsitewise-project-properties"></a>
 
 `AssetIds`  <a name="cfn-iotsitewise-project-assetids"></a>
-Not currently supported by AWS CloudFormation\.  
+A list that contains the IDs of each asset associated with the project\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

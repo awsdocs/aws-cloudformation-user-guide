@@ -30,7 +30,9 @@ Properties:
 ## Properties<a name="aws-resource-ses-configurationset-properties"></a>
 
 `Name`  <a name="cfn-ses-configurationset-name"></a>
-Not currently supported by AWS CloudFormation\.  
+The name of the configuration set\. The name must meet the following requirements:  
++ Contain only letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
++ Contain 64 characters or fewer\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

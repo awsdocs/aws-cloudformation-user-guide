@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Else](#cfn-amplifyuibuilder-component-componentconditionproperty-else)" : ComponentProperty,
   "[Field](#cfn-amplifyuibuilder-component-componentconditionproperty-field)" : String,
   "[Operand](#cfn-amplifyuibuilder-component-componentconditionproperty-operand)" : String,
+  "[OperandType](#cfn-amplifyuibuilder-component-componentconditionproperty-operandtype)" : String,
   "[Operator](#cfn-amplifyuibuilder-component-componentconditionproperty-operator)" : String,
   "[Property](#cfn-amplifyuibuilder-component-componentconditionproperty-property)" : String,
   "[Then](#cfn-amplifyuibuilder-component-componentconditionproperty-then)" : ComponentProperty
@@ -26,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     ComponentProperty
   [Field](#cfn-amplifyuibuilder-component-componentconditionproperty-field): String
   [Operand](#cfn-amplifyuibuilder-component-componentconditionproperty-operand): String
+  [OperandType](#cfn-amplifyuibuilder-component-componentconditionproperty-operandtype): String
   [Operator](#cfn-amplifyuibuilder-component-componentconditionproperty-operator): String
   [Property](#cfn-amplifyuibuilder-component-componentconditionproperty-property): String
   [Then](#cfn-amplifyuibuilder-component-componentconditionproperty-then): 
@@ -48,6 +50,12 @@ The name of a field\. Specify this when the property is a data model\.
 
 `Operand`  <a name="cfn-amplifyuibuilder-component-componentconditionproperty-operand"></a>
 The value of the property to evaluate\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`OperandType`  <a name="cfn-amplifyuibuilder-component-componentconditionproperty-operandtype"></a>
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

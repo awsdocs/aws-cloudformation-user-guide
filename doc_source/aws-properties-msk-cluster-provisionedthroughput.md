@@ -1,6 +1,6 @@
 # AWS::MSK::Cluster ProvisionedThroughput<a name="aws-properties-msk-cluster-provisionedthroughput"></a>
 
-<a name="aws-properties-msk-cluster-provisionedthroughput-description"></a>The `ProvisionedThroughput` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::MSK::Cluster](aws-resource-msk-cluster.md)\.
+Specifies whether provisioned throughput is turned on and the volume throughput target\.
 
 ## Syntax<a name="aws-properties-msk-cluster-provisionedthroughput-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-msk-cluster-provisionedthroughput-properties"></a>
 
 `Enabled`  <a name="cfn-msk-cluster-provisionedthroughput-enabled"></a>
-Not currently supported by AWS CloudFormation\.  
+Specifies whether provisioned throughput is turned on for the cluster\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeThroughput`  <a name="cfn-msk-cluster-provisionedthroughput-volumethroughput"></a>
-Not currently supported by AWS CloudFormation\.  
+The provisioned throughput rate in MiB per second\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

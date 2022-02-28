@@ -2,9 +2,6 @@
 
 Configures rotation for a secret\. You must already configure the secret with the details of the database or service\. If you define both the secret and the database or service in an AWS CloudFormation template, then define the [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) resource to populate the secret with the connection details of the database or service before you attempt to configure rotation\.
 
-**Important**  
-When you configure rotation for a secret, AWS CloudFormation automatically rotates the secret one time\.
-
 ## Syntax<a name="aws-resource-secretsmanager-rotationschedule-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -48,7 +45,9 @@ When you enter valid values for `RotationSchedule.HostedRotationLambda`, Secrets
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RotateImmediatelyOnUpdate`  <a name="cfn-secretsmanager-rotationschedule-rotateimmediatelyonupdate"></a>
-Not currently supported by AWS CloudFormation\.  
+Specifies whether to rotate the secret immediately or wait until the next scheduled rotation window\. The rotation schedule is defined in `RotationRules`\.  
+If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration by running the [`testSecret` step](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) of the Lambda rotation function\. The test creates an `AWSPENDING` version of the secret and then removes it\.  
+If you don't specify this value, then by default, Secrets Manager rotates the secret immediately\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -91,11 +90,79 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-secretsmanager-rotationschedule--examples"></a>
 
-The following examples display complete examples of creating a secret, creating an RDS database instance associated with the secret and configuring rotation\. The example shows how to define a Lambda rotation function, attach the required trust and permissions policies, and associate the function with the secret on a defined schedule\.
+### Automatic rotation with a cron expression<a name="aws-resource-secretsmanager-rotationschedule--examples--Automatic_rotation_with_a_cron_expression"></a>
 
-RDS Secret Rotation
+The following example rotates a secret between 4:00 AM and 6:00 AM UTC on the first Sunday of every month\.
+
+#### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--Automatic_rotation_with_a_cron_expression--json"></a>
+
+```
+"MySecretRotationSchedule": {
+  "Type": "Dev::SecretsManager::RotationSchedule",
+  "DependsOn": "MyRotationLambda",
+  "Properties": {
+    "SecretId": {"Ref": "MySecret"},
+    "RotationLambdaARN": {"Fn::GetAtt": "MyRotationLambda.Arn"},
+    "RotationRules": {
+      "Duration": "2h",
+      "ScheduleExpression": "cron(0 1 * * ? *)"
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-secretsmanager-rotationschedule--examples--Automatic_rotation_with_a_cron_expression--yaml"></a>
+
+```
+MySecretRotationSchedule:
+  Type: Dev::SecretsManager::RotationSchedule
+  DependsOn: MyRotationLambda 
+  Properties:
+    SecretId: !Ref MySecret
+    RotationLambdaARN: !GetAtt MyRotationLambda.Arn
+    RotationRules:
+      Duration: 2h
+      ScheduleExpression: 'cron(4 0 ? * SUN#1 *)'
+```
+
+### Automatic rotation with a rate expression<a name="aws-resource-secretsmanager-rotationschedule--examples--Automatic_rotation_with_a_rate_expression"></a>
+
+The following example rotates a secret between midnight and 6:00 AM UTC every 10 days\.
+
+#### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--Automatic_rotation_with_a_rate_expression--json"></a>
+
+```
+"MySecretRotationSchedule": {
+  "Type": "Dev::SecretsManager::RotationSchedule",
+  "DependsOn": "MyRotationLambda",
+  "Properties": {
+  "SecretId": {"Ref": "MySecret"},
+    "RotationLambdaARN": {"Fn::GetAtt": "MyRotationLambda.Arn"},
+    "RotationRules": {
+      "Duration": "6h",
+      "ScheduleExpression": "rate(10 days)"
+      }
+    }
+  }
+```
+
+#### YAML<a name="aws-resource-secretsmanager-rotationschedule--examples--Automatic_rotation_with_a_rate_expression--yaml"></a>
+
+```
+MySecretRotationSchedule:
+  Type: Dev::SecretsManager::RotationSchedule
+  DependsOn: MyRotationLambda 
+  Properties:
+    SecretId: !Ref MySecret
+    RotationLambdaARN: !GetAtt MyRotationLambda.Arn
+    RotationRules:
+      Duration: 6h
+      ScheduleExpression: 'rate(10 days)'
+```
 
 ### Configuring RDS database secret rotation<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_RDS_database_secret_rotation"></a>
+
+The following example creates an RDS database instance and a secret with credentials\. The secret is configured to rotate on the first Sunday of every month between 4:00 AM and 6:00 AM UTC\.
 
 #### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_RDS_database_secret_rotation--json"></a>
 
@@ -279,7 +346,8 @@ RDS Secret Rotation
                }
             },
             "RotationRules":{
-               "AutomaticallyAfterDays":30
+              "Duration": "2h",
+              "ScheduleExpression": "cron(4 0 ? * SUN#1 *)"
             }
          }
       }
@@ -400,10 +468,13 @@ Resources:
           - - Ref: TestSubnet01
             - Ref: TestSubnet02
       RotationRules:
-        AutomaticallyAfterDays: 30
+        Duration: 2h
+        ScheduleExpression: 'cron(4 0 ? * SUN#1 *)'
 ```
 
 ### Redshift cluster secret rotation example<a name="aws-resource-secretsmanager-rotationschedule--examples--Redshift_cluster_secret_rotation_example"></a>
+
+The following example creates a Redshift cluster and a secret with credentials\. The secret is configured to rotate on the first Sunday of every month between 4:00 AM and 6:00 AM UTC\.
 
 #### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--Redshift_cluster_secret_rotation_example--json"></a>
 
@@ -588,7 +659,8 @@ Resources:
                }
             },
             "RotationRules":{
-               "AutomaticallyAfterDays":30
+               "Duration": "2h",
+               "ScheduleExpression": "cron(4 0 ? * SUN#1 *)"
             }
          }
       }
@@ -709,10 +781,13 @@ Resources:
           - - Ref: TestSubnet01
             - Ref: TestSubnet02
       RotationRules:
-        AutomaticallyAfterDays: 30
+        Duration: 2h
+        ScheduleExpression: 'cron(0 1 * * ? *)'
 ```
 
 ### DocumentDB secret rotation example<a name="aws-resource-secretsmanager-rotationschedule--examples--DocumentDB_secret_rotation_example"></a>
+
+The following example creates a DocumentDB database instance and a secret with credentials\. The secret is configured to rotate on the first Sunday of every month between 4:00 AM and 6:00 AM UTC\.
 
 #### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--DocumentDB_secret_rotation_example--json"></a>
 
@@ -901,7 +976,8 @@ Resources:
                }
             },
             "RotationRules":{
-               "AutomaticallyAfterDays":30
+              "Duration": "2h",
+              "ScheduleExpression": "cron(4 0 ? * SUN#1 *)"
             }
          }
       }
@@ -1023,7 +1099,8 @@ Resources:
           - - Ref: TestSubnet01
             - Ref: TestSubnet02
       RotationRules:
-        AutomaticallyAfterDays: 30
+        Duration: 2h
+        ScheduleExpression: 'cron(4 0 ? * SUN#1 *)'
 ```
 
 ## See also<a name="aws-resource-secretsmanager-rotationschedule--seealso"></a>

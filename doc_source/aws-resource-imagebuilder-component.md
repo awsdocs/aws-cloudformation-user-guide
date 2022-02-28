@@ -105,7 +105,8 @@ The tags associated with the component\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Uri`  <a name="cfn-imagebuilder-component-uri"></a>
-The uri of the component\. Must be an Amazon S3 URL and the requester must have permission to access the Amazon S3 bucket\. If you use Amazon S3, you can specify component content up to your service quota\. Either `data` or `uri` can be used to specify the data within the component\.  
+The `uri` of a YAML component document file\. This must be an S3 URL \(`s3://bucket/key`\), and the requester must have permission to access the S3 bucket it points to\. If you use Amazon S3, you can specify component content up to your service quota\.  
+Alternatively, you can specify the YAML document inline, using the component `data` property\. You cannot specify both properties\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

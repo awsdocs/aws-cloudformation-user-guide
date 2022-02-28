@@ -4,6 +4,33 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](AWS_Batch.md) | The following resources were updated: [AWS::Batch::ComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html), and [AWS::Batch::JobQueue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html) 
+
+ [AWS::Batch::ComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html)   
+Added a `ComputeEnvironmentArn` attribute to the [return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#aws-resource-batch-computeenvironment-return-values)\. 
+
+ [AWS::Batch::JobQueue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html)   
+Added a `JobQueueArn` attribute to the [return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#aws-resource-batch-jobqueue-return-values)\.  | February 24, 2022 | 
+| [Updated resource](AWS_AutoScaling.md) | The following resource was updated: AWS::AutoScaling::WarmPool\. 
+
+ [AWS::AutoScaling::WarmPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-warmpool.html)   
+Use the `PoolState` property to specify `Hibernated` to stop instances in a warm pool without deleting their RAM contents\. Use the `InstanceReusePolicy` property to return instances to the warm pool on scale in, instead of always terminating instance capacity that you will need later\.  | February 24, 2022 | 
+| [New resource](AWS_DataSync.md) | The following resource was added: AWS::DataSync::LocationFSxLustre\. 
+
+[AWS::DataSync::LocationFSxLustre](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxlustre.html)  
+Use the `AWS::DataSync::LocationFSxLustre` property to specify an Amazon FSx for Lustre file system\.  | February 24, 2022 | 
+| [New resource](AWS_MSK.md) | The following resource was added: AWS::MSK::BatchScramSecret 
+
+ [AWS::MSK::BatchScramSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html)   
+This resource represents a secret stored in the Amazon Secrets Manager that can be used to authenticate with a cluster using a user name and a password\.  | February 24, 2022 | 
+| [New resource](AWS_MSK.md) | The following resource was added: AWS::MSK::Configuration 
+
+ [AWS::MSK::Configuration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html)   
+Represents an MSK configuration\.  | February 24, 2022 | 
+| [Updated resource](AWS_WAFv2.md) | The following resource was updated: AWS::WAFv2::WebACL\. 
+
+ [AWS::WAFv2::WebACL](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html)   
+You can now define `ManagedRuleGroupConfigs` for a `ManagedRuleGroupStatement`, to provide configuration specific to the managed rule group\. This is required to use the managed rule group, `AWSManagedRulesATPRuleSet`\.  | February 17, 2022 | 
 | [Updated resources](AWS_EC2.md) | The following resource was updated: AWS::EC2::LaunchTemplate\. 
 
  [AWS::EC2::LaunchTemplate PrivateDnsNameOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-privatednsnameoptions.html)   
@@ -21,6 +48,10 @@ Use the `AWS::CloudFormation::HookTypeConfig` resource to specify the configurat
 
  [AWS::CloudFormation::HookVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookversion.html)   
 Use the `AWS::CloudFormation::HookVersion` resource to publish the hook version in the AWS CloudFormation registry\.  | February 10, 2022 | 
+| [New resources](AWS_ECR.md) | The following resources were added: AWS::ECR::PullThroughCacheRule 
+
+ [AWS::ECR::PullThroughCacheRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-pullthroughcacherule.html)   
+Use the `AWS::ECR::PullThroughCacheRule` property to create a pull through cache rule for your private registry\. Pull through cache rules provide a way to cache images from an external public registry in your private registry  | February 10, 2022 | 
 | [CloudFormation registry](#ReleaseHistory) | AWS CloudFormation announces the general availability of *hooks*, a feature that allows customers to invoke custom logic to automate actions or inspect resource configurations prior to a create, update or delete stack operation\.For more information, see [Developing hooks](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/hooks.html) in the *User Guide for Extension Development*\. | February 10, 2022 | 
 | [Updated resource](AWS_AppRunner.md) | The following resource was updated: AWS::AppRunner::Service 
 
@@ -43,6 +74,10 @@ Use the `HANAPrometheusExporter` property of the `AWS::ApplicationInsights::Appl
 
 [HAClusterPrometheusExporter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-configurationdetails.html#aws-properties-applicationinsights-application-configurationdetails-properties)  
 Use the `HAClusterPrometheusExporter` property of the `AWS::ApplicationInsights::Application` resource to define the HA Cluster Prometheus Exporter settings\.  | February 3, 2022 | 
+| [Updated resource](AWS_SecretsManager.md) | The following resource was updated: `RotationRules` 
+
+[AWS::SecretsManager::RotationSchedule RotationRules](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-rotationschedule-rotationrules.html)  
+Use `RotationRules` to set a detailed schedule to rotate your secret\.   | January 31, 2022 | 
 | [Updated resources](AWS_Location.md) | The following resources were updated: `AWS::Location::GeofenceCollection`, `AWS::Location::Map`, `AWS::Location::PlaceIndex`, `AWS::Location::RouteCalculator`, and `AWS::Location::Tracker`\. 
 
  [AWS::Location::GeofenceCollection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html)   

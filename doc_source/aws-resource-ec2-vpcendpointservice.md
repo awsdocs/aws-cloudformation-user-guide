@@ -6,7 +6,7 @@ To create an endpoint service configuration, you must first create one of the fo
 + A [Network Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html)\. Service consumers connect to your service using an interface endpoint\.
 + A [Gateway Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/introduction.html)\. Service consumers connect to your service using a Gateway Load Balancer endpoint\.
 
-For more information, see [VPC Endpoint Services](https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-service.html) in the *Amazon Virtual Private Cloud User Guide*\. 
+For more information, see the [AWS PrivateLink User Guide](https://docs.aws.amazon.com/vpc/latest/privatelink/)\.
 
 ## Syntax<a name="aws-resource-ec2-vpcendpointservice-syntax"></a>
 

@@ -77,7 +77,7 @@ An AWS Identity and Access Management \(IAM\) policy document that specifies who
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AdvancedOptions`  <a name="cfn-opensearchservice-domain-advancedoptions"></a>
-Additional options to specify for the OpenSearch Service domain\. For more information, see [Advanced cluster parameters](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html#createdomain-configure-advanced-options) in the *Amazon OpenSearch Service Developer Guide*\.  
+Additional options to specify for the OpenSearch Service domain\. For more information, see [AdvancedOptions](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/configuration-api.html#configuration-api-datatypes-advancedoptions) in the OpenSearch Service configuration API reference\.  
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

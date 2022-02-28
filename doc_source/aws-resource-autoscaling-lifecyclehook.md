@@ -315,7 +315,7 @@ myTerminationLifecycleHook:
 
 The following example creates an Auto Scaling group with a lifecycle hook that supports a custom action at instance launch\. This example snippet uses the `NotificationTargetARN` and `RoleARN` properties to specify the Amazon SQS queue and IAM role to use to receive notification when a lifecycle action occurs\.
 
-This snippet does not include the Amazon SQS queue and IAM role resources that would need to exist or be created to complete the configuration\. For information about creating these resources, see [Configuring a notification target for a lifecycle hook](https://docs.aws.amazon.com/autoscaling/ec2/userguide/configuring-lifecycle-hook-notifications.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+This snippet does not include the Amazon SQS queue and IAM role resources that would need to exist or be created to complete the configuration\. For information about creating these resources, see [Configuring a notification target for lifecycle notifications](https://docs.aws.amazon.com/autoscaling/ec2/userguide/prepare-for-lifecycle-notifications.html#lifecycle-hook-notification-target) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 #### JSON<a name="aws-resource-autoscaling-lifecyclehook--examples--Lifecycle_hook_that_specifies_a_notification_target_ARN_and_role_ARN--json"></a>
 

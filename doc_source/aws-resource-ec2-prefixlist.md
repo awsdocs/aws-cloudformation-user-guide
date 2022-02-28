@@ -57,7 +57,7 @@ One or more entries for the prefix list\.
 The maximum number of entries for the prefix list\.  
 *Required*: Yes  
 *Type*: Integer  
-*Update requires*: Updates are not supported\.
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrefixListName`  <a name="cfn-ec2-prefixlist-prefixlistname"></a>
 A name for the prefix list\.  

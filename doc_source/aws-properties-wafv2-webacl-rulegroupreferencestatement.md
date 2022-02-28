@@ -40,4 +40,5 @@ The Amazon Resource Name \(ARN\) of the entity\.
 The names of rules that are in the referenced rule group, but that you want AWS WAF to exclude from processing for this rule statement\.   
 *Required*: No  
 *Type*: List of [ExcludedRule](aws-properties-wafv2-webacl-excludedrule.md)  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

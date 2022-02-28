@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AssociateCarrierIpAddress](#cfn-ec2-instance-networkinterface-associatecarrieripaddress)" : Boolean,
   "[AssociatePublicIpAddress](#aws-properties-ec2-network-iface-embedded-associatepubip)" : Boolean,
   "[DeleteOnTermination](#aws-properties-ec2-network-iface-embedded-delete)" : Boolean,
   "[Description](#aws-properties-ec2-network-iface-embedded-description)" : String,
@@ -32,6 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-network-iface-embedded-syntax.yaml"></a>
 
 ```
+  [AssociateCarrierIpAddress](#cfn-ec2-instance-networkinterface-associatecarrieripaddress): Boolean
   [AssociatePublicIpAddress](#aws-properties-ec2-network-iface-embedded-associatepubip): Boolean
   [DeleteOnTermination](#aws-properties-ec2-network-iface-embedded-delete): Boolean
   [Description](#aws-properties-ec2-network-iface-embedded-description): String
@@ -50,6 +52,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-ec2-network-iface-embedded-properties"></a>
+
+`AssociateCarrierIpAddress`  <a name="cfn-ec2-instance-networkinterface-associatecarrieripaddress"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AssociatePublicIpAddress`  <a name="aws-properties-ec2-network-iface-embedded-associatepubip"></a>
 Indicates whether to assign a public IPv4 address to an instance\. Applies only if creating a network interface when launching an instance\. The network interface must be the primary network interface\. If launching into a default subnet, the default value is `true`\.  

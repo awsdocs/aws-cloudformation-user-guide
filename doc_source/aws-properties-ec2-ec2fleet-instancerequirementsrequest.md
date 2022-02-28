@@ -237,6 +237,7 @@ The price protection threshold for On\-Demand Instances\. This is the maximum yo
 The parameter accepts an integer, which Amazon EC2 interprets as a percentage\.  
 To turn off price protection, specify a high value, such as `999999`\.  
 This parameter is not supported for [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html) and [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)\.  
+If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib`, the price protection threshold is applied based on the per\-vCPU or per\-memory price instead of the per\-instance price\.
 Default: `20`   
 *Required*: No  
 *Type*: Integer  
@@ -255,6 +256,7 @@ The price protection threshold for Spot Instance\. This is the maximum you’ll 
 The parameter accepts an integer, which Amazon EC2 interprets as a percentage\.  
 To turn off price protection, specify a high value, such as `999999`\.  
 This parameter is not supported for [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html) and [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)\.  
+If you set `TargetCapacityUnitType` to `vcpu` or `memory-mib`, the price protection threshold is applied based on the per\-vCPU or per\-memory price instead of the per\-instance price\.
 Default: `100`   
 *Required*: No  
 *Type*: Integer  

@@ -19,6 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[IdentityProviderDetails](#cfn-transfer-server-identityproviderdetails)" : IdentityProviderDetails,
       "[IdentityProviderType](#cfn-transfer-server-identityprovidertype)" : String,
       "[LoggingRole](#cfn-transfer-server-loggingrole)" : String,
+      "[PostAuthenticationLoginBanner](#cfn-transfer-server-postauthenticationloginbanner)" : String,
+      "[PreAuthenticationLoginBanner](#cfn-transfer-server-preauthenticationloginbanner)" : String,
       "[ProtocolDetails](#cfn-transfer-server-protocoldetails)" : ProtocolDetails,
       "[Protocols](#cfn-transfer-server-protocols)" : [ Protocol, ... ],
       "[SecurityPolicyName](#cfn-transfer-server-securitypolicyname)" : String,
@@ -42,6 +44,8 @@ Properties:
     IdentityProviderDetails
   [IdentityProviderType](#cfn-transfer-server-identityprovidertype): String
   [LoggingRole](#cfn-transfer-server-loggingrole): String
+  [PostAuthenticationLoginBanner](#cfn-transfer-server-postauthenticationloginbanner): String
+  [PreAuthenticationLoginBanner](#cfn-transfer-server-preauthenticationloginbanner): String
   [ProtocolDetails](#cfn-transfer-server-protocoldetails): 
     ProtocolDetails
   [Protocols](#cfn-transfer-server-protocols): 
@@ -116,6 +120,24 @@ Specifies the Amazon Resource Name \(ARN\) of the AWS Identity and Access Manage
 *Minimum*: `20`  
 *Maximum*: `2048`  
 *Pattern*: `arn:.*role/.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PostAuthenticationLoginBanner`  <a name="cfn-transfer-server-postauthenticationloginbanner"></a>
+Specify a string to display when users connect to a server\. This string is displayed after the user authenticates\.  
+The SFTP protocol does not support post\-authentication display banners\.
+*Required*: No  
+*Type*: String  
+*Maximum*: `512`  
+*Pattern*: `[\x09-\x0D\x20-\x7E]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PreAuthenticationLoginBanner`  <a name="cfn-transfer-server-preauthenticationloginbanner"></a>
+Specify a string to display when users connect to a server\. This string is displayed before the user authenticates\. For example, the following banner displays details about using the system\.  
+ `This system is for the use of authorized users only. Individuals using this computer system without authority, or in excess of their authority, are subject to having all of their activities on this system monitored and recorded by system personnel.`   
+*Required*: No  
+*Type*: String  
+*Maximum*: `512`  
+*Pattern*: `[\x09-\x0D\x20-\x7E]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProtocolDetails`  <a name="cfn-transfer-server-protocoldetails"></a>

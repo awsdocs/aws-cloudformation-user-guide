@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Children](#cfn-amplifyuibuilder-component-componentchild-children)" : [ ComponentChild, ... ],
   "[ComponentType](#cfn-amplifyuibuilder-component-componentchild-componenttype)" : String,
+  "[Events](#cfn-amplifyuibuilder-component-componentchild-events)" : ComponentEvents,
   "[Name](#cfn-amplifyuibuilder-component-componentchild-name)" : String,
   "[Properties](#cfn-amplifyuibuilder-component-componentchild-properties)" : ComponentProperties
 }
@@ -23,6 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Children](#cfn-amplifyuibuilder-component-componentchild-children): 
     - ComponentChild
   [ComponentType](#cfn-amplifyuibuilder-component-componentchild-componenttype): String
+  [Events](#cfn-amplifyuibuilder-component-componentchild-events): 
+    ComponentEvents
   [Name](#cfn-amplifyuibuilder-component-componentchild-name): String
   [Properties](#cfn-amplifyuibuilder-component-componentchild-properties): 
     ComponentProperties
@@ -40,6 +43,12 @@ The list of `ComponentChild` instances for this component\.
 The type of the child component\.   
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Events`  <a name="cfn-amplifyuibuilder-component-componentchild-events"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [ComponentEvents](aws-properties-amplifyuibuilder-component-componentevents.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-amplifyuibuilder-component-componentchild-name"></a>

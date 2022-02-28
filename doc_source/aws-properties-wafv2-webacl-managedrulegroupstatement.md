@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ExcludedRules](#cfn-wafv2-webacl-managedrulegroupstatement-excludedrules)" : [ ExcludedRule, ... ],
+  "[ManagedRuleGroupConfigs](#cfn-wafv2-webacl-managedrulegroupstatement-managedrulegroupconfigs)" : [ ManagedRuleGroupConfig, ... ],
   "[Name](#cfn-wafv2-webacl-managedrulegroupstatement-name)" : String,
   "[ScopeDownStatement](#cfn-wafv2-webacl-managedrulegroupstatement-scopedownstatement)" : Statement,
   "[VendorName](#cfn-wafv2-webacl-managedrulegroupstatement-vendorname)" : String,
@@ -25,6 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ExcludedRules](#cfn-wafv2-webacl-managedrulegroupstatement-excludedrules): 
     - ExcludedRule
+  [ManagedRuleGroupConfigs](#cfn-wafv2-webacl-managedrulegroupstatement-managedrulegroupconfigs): 
+    - ManagedRuleGroupConfig
   [Name](#cfn-wafv2-webacl-managedrulegroupstatement-name): String
   [ScopeDownStatement](#cfn-wafv2-webacl-managedrulegroupstatement-scopedownstatement): 
     Statement
@@ -38,6 +41,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The rules whose actions are set to `COUNT` by the web ACL, regardless of the action that is configured in the rule\. This effectively excludes the rule from acting on web requests\.   
 *Required*: No  
 *Type*: List of [ExcludedRule](aws-properties-wafv2-webacl-excludedrule.md)  
+*Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ManagedRuleGroupConfigs`  <a name="cfn-wafv2-webacl-managedrulegroupstatement-managedrulegroupconfigs"></a>
+Additional information that's used by a managed rule group\. Most managed rule groups don't require this\.  
+Use this for the account takeover prevention managed rule group `AWSManagedRulesATPRuleSet`, to provide information about the sign\-in page of your application\.   
+*Required*: No  
+*Type*: List of [ManagedRuleGroupConfig](aws-properties-wafv2-webacl-managedrulegroupconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-webacl-managedrulegroupstatement-name"></a>
