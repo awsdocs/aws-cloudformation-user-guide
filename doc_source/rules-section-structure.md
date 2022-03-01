@@ -953,8 +953,8 @@ Rules:
   SubnetsInVPC:
     Assertions:
       - Assert:
-          Fn::EachMemberEquals:
-            - Fn::ValueOf:
+          'Fn::EachMemberEquals':
+            - 'Fn::ValueOf':
                 - Subnets
                 - VpcId
             - Ref: VpcId
