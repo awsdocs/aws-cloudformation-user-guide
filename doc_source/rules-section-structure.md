@@ -296,16 +296,16 @@ You will be billed for the AWS resources used if you create a stack from this te
             "Assertions": [
                 {
                     "Assert": {
-                        "Fn::EachMemberIn": [
-                            {
-                                "Fn::ValueOfAll": [
-                                    "AWS::EC2::Subnet::Id",
-                                    "VpcId"
-                                ]
-                            },
-                            {
-                                "Fn::RefAll": "AWS::EC2::VPC::Id"
-                            }
+                        "Fn::EachMemberEquals": [
+                          {
+                            "Fn::ValueOf": [
+                              "Subnets",
+                              "VpcId"
+                            ]
+                          },
+                          {
+                            "Ref": "VpcId"
+                          }
                         ]
                     },
                     "AssertDescription": "All subnets must in the VPC"
@@ -953,11 +953,11 @@ Rules:
   SubnetsInVPC:
     Assertions:
       - Assert:
-          'Fn::EachMemberIn':
-            - 'Fn::ValueOfAll':
-                - 'AWS::EC2::Subnet::Id'
+          Fn::EachMemberEquals:
+            - Fn::ValueOf:
+                - Subnets
                 - VpcId
-            - 'Fn::RefAll': 'AWS::EC2::VPC::Id'
+            - Ref: VpcId
         AssertDescription: All subnets must in the VPC
   ValidateHostedZone:
     RuleCondition: !Equals 
