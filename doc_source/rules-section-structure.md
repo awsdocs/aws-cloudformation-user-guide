@@ -297,15 +297,15 @@ You will be billed for the AWS resources used if you create a stack from this te
                 {
                     "Assert": {
                         "Fn::EachMemberEquals": [
-                          {
-                            "Fn::ValueOf": [
-                              "Subnets",
-                              "VpcId"
-                            ]
-                          },
-                          {
-                            "Ref": "VpcId"
-                          }
+                            {
+                                "Fn::ValueOf": [
+                                    "Subnets",
+                                    "VpcId"
+                                ]
+                            },
+                            {
+                                "Ref": "VpcId"
+                            }
                         ]
                     },
                     "AssertDescription": "All subnets must in the VPC"
