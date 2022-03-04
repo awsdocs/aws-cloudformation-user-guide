@@ -15,6 +15,11 @@ Added a `JobQueueArn` attribute to the [return values](https://docs.aws.amazon.c
 
  [AWS::AutoScaling::WarmPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-warmpool.html)   
 Use the `PoolState` property to specify `Hibernated` to stop instances in a warm pool without deleting their RAM contents\. Use the `InstanceReusePolicy` property to return instances to the warm pool on scale in, instead of always terminating instance capacity that you will need later\.  | February 24, 2022 | 
+| [Updated resource](AWS_Transfer.md) | The following resource was updated: 
+
+ [AWS::Transfer::Server](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)   
+Use the `PreAuthenticationLoginBanner` property to specify a string to display when users connect to a server, before they authenticate\.  
+Use the `PostAuthenticationLoginBanner` property to specify a string to display when users connect to a server, after they authenticate\.  | February 24, 2022 | 
 | [New resource](AWS_DataSync.md) | The following resource was added: AWS::DataSync::LocationFSxLustre\. 
 
 [AWS::DataSync::LocationFSxLustre](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxlustre.html)  
@@ -215,6 +220,19 @@ Use the `AWS::Lex::BotVersion` resource to specify a version of an Amazon Lex ch
 
  [AWS::Lex::ResourcePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-resourcepolicy.html)   
 Use the `AWS::Lex::ResourcePolicy` resource to specify a new resource policy for an Amazon Lex chatbot\.  | December 9, 2021 | 
+| [Updated resource](AWS_GameLift.md) | The following resources were updated: AWS::GameLift::GameSessionQueue, AWS::GameLift::MatchmakingConfiguration, AWS::GameLift::MatchmakingRuleSet, AWS::GameLift::Script 
+
+ [AWS::GameLift::GameSessionQueue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html)   
+Use the `Tags` property to add a list of labels to new game session queue resources\. 
+
+ [AWS::GameLift::MatchmakingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingconfiguration.html)   
+Use the `Tags` property to add a list of labels to new matchmaking configurations\. 
+
+ [AWS::GameLift::MatchmakingRuleSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingruleset.html)   
+Use the `Tags` property to add a list of labels to new matchmaking rule sets\. 
+
+ [AWS::GameLift::Script](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html)   
+Use the `Tags` property to add a list of labels to new scripts\.  | December 8, 2021 | 
 | [New resources](AWS_AppSync.md) | The following resources were added: AWS::AppSync::DomainName and AWS::AppSync::DomainNameApiAssociation 
 
  [AWS::AppSync::DomainName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-domainname.html)   
@@ -336,6 +354,10 @@ Use the `AWS::AppStream::ApplicationFleetAssociation` resource to specify an ass
 
 [AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
 Use the `FileSystemTypeVersion` attribute to specify the file system version of an Amazon FSx for Lustre file system\.  | November 18, 2021 | 
+| [New resource](AWS_Transfer.md) | The following resource was added: 
+
+ [AWS::Transfer::Workflow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html)   
+Use the `Workflow` resource to specify a managed workflow for file processing using AWS Transfer Family\.  | November 18, 2021 | 
 | [Updated resource](AWS_Location.md) | The following resource was updated: AWS::Location::Tracker 
 
  [AWS::Location::Tracker](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html)   

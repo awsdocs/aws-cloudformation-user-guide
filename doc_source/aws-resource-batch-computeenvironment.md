@@ -100,7 +100,7 @@ The type of the compute environment: `MANAGED` or `UNMANAGED`\. For more informa
 
 `UnmanagedvCpus`  <a name="cfn-batch-computeenvironment-unmanagedvcpus"></a>
 The maximum number of vCPUs for an unmanaged compute environment\. This parameter is only used for fair share scheduling to reserve vCPU capacity for new share identifiers\. If this parameter isn't provided for a fair share job queue, no vCPU capacity is reserved\.  
-This parameter is only supported when the `type` parameter is set to `UNMANAGED`/
+This parameter is only supported when the `type` parameter is set to `UNMANAGED`\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

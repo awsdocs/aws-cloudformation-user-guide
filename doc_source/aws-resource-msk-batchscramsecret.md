@@ -13,8 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::MSK::BatchScramSecret",
   "Properties" : {
       "[ClusterArn](#cfn-msk-batchscramsecret-clusterarn)" : String,
-      "[SecretArnList](#cfn-msk-batchscramsecret-secretarnlist)" : [ String, ... ],
-      "[UnprocessedScramSecrets](#cfn-msk-batchscramsecret-unprocessedscramsecrets)" : [ UnprocessedScramSecret, ... ]
+      "[SecretArnList](#cfn-msk-batchscramsecret-secretarnlist)" : [ String, ... ]
     }
 }
 ```
@@ -27,8 +26,6 @@ Properties:
   [ClusterArn](#cfn-msk-batchscramsecret-clusterarn): String
   [SecretArnList](#cfn-msk-batchscramsecret-secretarnlist): 
     - String
-  [UnprocessedScramSecrets](#cfn-msk-batchscramsecret-unprocessedscramsecrets): 
-    - UnprocessedScramSecret
 ```
 
 ## Properties<a name="aws-resource-msk-batchscramsecret-properties"></a>
@@ -41,14 +38,8 @@ The Amazon Resource Name \(ARN\) of the MSK cluster\.
 
 `SecretArnList`  <a name="cfn-msk-batchscramsecret-secretarnlist"></a>
 A list of Amazon Secrets Manager secret ARNs\.  
-*Required*: Yes  
-*Type*: List of String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`UnprocessedScramSecrets`  <a name="cfn-msk-batchscramsecret-unprocessedscramsecrets"></a>
-A list of the errors returned when disassociating SCRAM secrets from the cluster\.  
 *Required*: No  
-*Type*: List of [UnprocessedScramSecret](aws-properties-msk-batchscramsecret-unprocessedscramsecret.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-msk-batchscramsecret-return-values"></a>

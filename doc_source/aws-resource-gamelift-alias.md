@@ -50,7 +50,7 @@ A descriptive label that is associated with an alias\. Alias names do not need t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoutingStrategy`  <a name="cfn-gamelift-alias-routingstrategy"></a>
-A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message\.  
+The routing configuration, including routing type and fleet target, for the alias\.   
 *Required*: Yes  
 *Type*: [RoutingStrategy](aws-properties-gamelift-alias-routingstrategy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -68,7 +68,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### <a name="aws-resource-gamelift-alias-return-values-fn--getatt-fn--getatt"></a>
 
 `AliasId`  <a name="AliasId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+A unique identifier for the alias\. For example, `arn:aws:gamelift:us-west-1::alias/alias-a1234567-b8c9-0d1e-2fa3-b45c6d7e8912`  
+Alias IDs are unique within a Region\. 
 
 ## Examples<a name="aws-resource-gamelift-alias--examples"></a>
 

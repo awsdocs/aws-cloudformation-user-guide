@@ -55,7 +55,7 @@ The value of the property to evaluate\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OperandType`  <a name="cfn-amplifyuibuilder-component-componentconditionproperty-operandtype"></a>
-Not currently supported by AWS CloudFormation\.  
+The type of the property to evaluate\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

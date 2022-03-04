@@ -1,6 +1,15 @@
 # AWS::GameLift::MatchmakingRuleSet<a name="aws-resource-gamelift-matchmakingruleset"></a>
 
-The `AWS::GameLift::MatchmakingRuleSet` resource creates a new rule set for FlexMatch matchmaking\. A rule set describes the type of match to create, such as the number and size of teams\. It also sets the parameters for acceptable player matches, such as minimum skill level or character type\. A rule set is used by a matchmaking configuration\.
+Creates a new rule set for FlexMatch matchmaking\. A rule set describes the type of match to create, such as the number and size of teams\. It also sets the parameters for acceptable player matches, such as minimum skill level or character type\. 
+
+To create a matchmaking rule set, provide unique rule set name and the rule set body in JSON format\. Rule sets must be defined in the same Region as the matchmaking configuration they are used with\.
+
+Since matchmaking rule sets cannot be edited, it is a good idea to check the rule set syntax\.
+
+ **Learn more** 
++  [Build a rule set](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-rulesets.html) 
++  [Design a matchmaker](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-configuration.html) 
++  [Matchmaking with FlexMatch](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-intro.html) 
 
 ## Syntax<a name="aws-resource-gamelift-matchmakingruleset-syntax"></a>
 

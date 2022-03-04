@@ -16,13 +16,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ClientAuthentication](#cfn-msk-cluster-clientauthentication)" : ClientAuthentication,
       "[ClusterName](#cfn-msk-cluster-clustername)" : String,
       "[ConfigurationInfo](#cfn-msk-cluster-configurationinfo)" : ConfigurationInfo,
+      "[CurrentVersion](#cfn-msk-cluster-currentversion)" : String,
       "[EncryptionInfo](#cfn-msk-cluster-encryptioninfo)" : EncryptionInfo,
       "[EnhancedMonitoring](#cfn-msk-cluster-enhancedmonitoring)" : String,
       "[KafkaVersion](#cfn-msk-cluster-kafkaversion)" : String,
       "[LoggingInfo](#cfn-msk-cluster-logginginfo)" : LoggingInfo,
       "[NumberOfBrokerNodes](#cfn-msk-cluster-numberofbrokernodes)" : Integer,
       "[OpenMonitoring](#cfn-msk-cluster-openmonitoring)" : OpenMonitoring,
-      "[Tags](#cfn-msk-cluster-tags)" : Json
+      "[Tags](#cfn-msk-cluster-tags)" : {Key : Value, ...}
     }
 }
 ```
@@ -39,6 +40,7 @@ Properties:
   [ClusterName](#cfn-msk-cluster-clustername): String
   [ConfigurationInfo](#cfn-msk-cluster-configurationinfo): 
     ConfigurationInfo
+  [CurrentVersion](#cfn-msk-cluster-currentversion): String
   [EncryptionInfo](#cfn-msk-cluster-encryptioninfo): 
     EncryptionInfo
   [EnhancedMonitoring](#cfn-msk-cluster-enhancedmonitoring): String
@@ -48,7 +50,8 @@ Properties:
   [NumberOfBrokerNodes](#cfn-msk-cluster-numberofbrokernodes): Integer
   [OpenMonitoring](#cfn-msk-cluster-openmonitoring): 
     OpenMonitoring
-  [Tags](#cfn-msk-cluster-tags): Json
+  [Tags](#cfn-msk-cluster-tags): 
+    Key : Value
 ```
 
 ## Properties<a name="aws-resource-msk-cluster-properties"></a>
@@ -75,6 +78,12 @@ The name of the cluster\.
 The Amazon MSK configuration to use for the cluster\.  
 *Required*: No  
 *Type*: [ConfigurationInfo](aws-properties-msk-cluster-configurationinfo.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CurrentVersion`  <a name="cfn-msk-cluster-currentversion"></a>
+The version of the cluster that you want to update\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncryptionInfo`  <a name="cfn-msk-cluster-encryptioninfo"></a>
@@ -116,7 +125,7 @@ The settings for open monitoring\.
 `Tags`  <a name="cfn-msk-cluster-tags"></a>
 A map of key:value pairs to apply to this resource\. Both key and value are of type String\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-msk-cluster-return-values"></a>
@@ -130,6 +139,13 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For the Amazon MSK cluster `MyTestCluster`, Ref returns the ARN of the cluster\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-msk-cluster-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-msk-cluster-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-msk-cluster--examples"></a>
 

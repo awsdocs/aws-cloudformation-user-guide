@@ -1,6 +1,6 @@
 # AWS::AmplifyUIBuilder::Component ComponentEvent<a name="aws-properties-amplifyuibuilder-component-componentevent"></a>
 
-<a name="aws-properties-amplifyuibuilder-component-componentevent-description"></a>The `ComponentEvent` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::AmplifyUIBuilder::Component](aws-resource-amplifyuibuilder-component.md)\.
+The `ComponentEvent` property specifies the configuration of an event\. You can bind an event and a corresponding action to a `Component` or a `ComponentChild`\. A button click is an example of an event\. 
 
 ## Syntax<a name="aws-properties-amplifyuibuilder-component-componentevent-syntax"></a>
 
@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-amplifyuibuilder-component-componentevent-properties"></a>
 
 `Action`  <a name="cfn-amplifyuibuilder-component-componentevent-action"></a>
-Not currently supported by AWS CloudFormation\.  
+The action to perform when a specific event is raised\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-amplifyuibuilder-component-componentevent-parameters"></a>
-Not currently supported by AWS CloudFormation\.  
+Describes information about the action\.  
 *Required*: No  
 *Type*: [ActionParameters](aws-properties-amplifyuibuilder-component-actionparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

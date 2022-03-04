@@ -92,7 +92,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Automatic rotation with a cron expression<a name="aws-resource-secretsmanager-rotationschedule--examples--Automatic_rotation_with_a_cron_expression"></a>
 
-The following example rotates a secret between 4:00 AM and 6:00 AM UTC on the first Sunday of every month\.
+The following example rotates a secret every day between 1:00 AM and 3:00 AM UTC\.
 
 #### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--Automatic_rotation_with_a_cron_expression--json"></a>
 
@@ -122,7 +122,7 @@ MySecretRotationSchedule:
     RotationLambdaARN: !GetAtt MyRotationLambda.Arn
     RotationRules:
       Duration: 2h
-      ScheduleExpression: 'cron(4 0 ? * SUN#1 *)'
+      ScheduleExpression: 'cron(0 1 * * ? *)'
 ```
 
 ### Automatic rotation with a rate expression<a name="aws-resource-secretsmanager-rotationschedule--examples--Automatic_rotation_with_a_rate_expression"></a>
@@ -347,7 +347,7 @@ The following example creates an RDS database instance and a secret with credent
             },
             "RotationRules":{
               "Duration": "2h",
-              "ScheduleExpression": "cron(4 0 ? * SUN#1 *)"
+              "ScheduleExpression": "cron(0 4 ? * SUN#1 *)"
             }
          }
       }
@@ -469,7 +469,7 @@ Resources:
             - Ref: TestSubnet02
       RotationRules:
         Duration: 2h
-        ScheduleExpression: 'cron(4 0 ? * SUN#1 *)'
+        ScheduleExpression: 'cron(0 4 ? * SUN#1 *)'
 ```
 
 ### Redshift cluster secret rotation example<a name="aws-resource-secretsmanager-rotationschedule--examples--Redshift_cluster_secret_rotation_example"></a>
@@ -660,7 +660,7 @@ The following example creates a Redshift cluster and a secret with credentials\.
             },
             "RotationRules":{
                "Duration": "2h",
-               "ScheduleExpression": "cron(4 0 ? * SUN#1 *)"
+               "ScheduleExpression": "cron(0 4 ? * SUN#1 *)"
             }
          }
       }
@@ -782,7 +782,7 @@ Resources:
             - Ref: TestSubnet02
       RotationRules:
         Duration: 2h
-        ScheduleExpression: 'cron(0 1 * * ? *)'
+        ScheduleExpression: 'cron(0 4 ? * SUN#1 *)'
 ```
 
 ### DocumentDB secret rotation example<a name="aws-resource-secretsmanager-rotationschedule--examples--DocumentDB_secret_rotation_example"></a>
@@ -977,7 +977,7 @@ The following example creates a DocumentDB database instance and a secret with c
             },
             "RotationRules":{
               "Duration": "2h",
-              "ScheduleExpression": "cron(4 0 ? * SUN#1 *)"
+              "ScheduleExpression": "cron(0 4 ? * SUN#1 *)"
             }
          }
       }
@@ -1100,7 +1100,7 @@ Resources:
             - Ref: TestSubnet02
       RotationRules:
         Duration: 2h
-        ScheduleExpression: 'cron(4 0 ? * SUN#1 *)'
+        ScheduleExpression: 'cron(0 4 ? * SUN#1 *)'
 ```
 
 ## See also<a name="aws-resource-secretsmanager-rotationschedule--seealso"></a>

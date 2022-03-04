@@ -1,10 +1,8 @@
 # AWS::GameLift::Fleet RuntimeConfiguration<a name="aws-properties-gamelift-fleet-runtimeconfiguration"></a>
 
-A collection of server process configurations that describe the processes to run on each instance in a fleet\. All fleets must have a runtime configuration\. Each instance in the fleet maintains server processes as specified in the runtime configuration, launching new ones as existing processes end\. Each instance regularly checks for an updated runtime configuration makes adjustments as called for\. 
+A collection of server process configurations that describe the set of processes to run on each instance in a fleet\. Server processes run either an executable in a custom game build or a Realtime Servers script\. GameLift launches the configured processes, manages their life cycle, and replaces them as needed\. Each instance checks regularly for an updated runtime configuration\. 
 
-The runtime configuration enables the instances in a fleet to run multiple processes simultaneously\. Potential scenarios are as follows: \(1\) Run multiple processes of a single game server executable to maximize usage of your hosting resources\. \(2\) Run one or more processes of different executables, such as your game server and a metrics tracking program\. \(3\) Run multiple processes of a single game server but with different launch parameters, for example to run one process on each instance in debug mode\.
-
-An Amazon GameLift instance is limited to 50 processes running simultaneously\. A runtime configuration must specify fewer than this limit\. To calculate the total number of processes specified in a runtime configuration, add the values of the `ConcurrentExecutions` parameter for each `ServerProcess` object in the runtime configuration\.
+A GameLift instance is limited to 50 processes running concurrently\. To calculate the total number of processes in a runtime configuration, add the values of the `ConcurrentExecutions` parameter for each ServerProcess\. Learn more about [ Running Multiple Processes on a Fleet](https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-multiprocess.html)\.
 
 ## Syntax<a name="aws-properties-gamelift-fleet-runtimeconfiguration-syntax"></a>
 

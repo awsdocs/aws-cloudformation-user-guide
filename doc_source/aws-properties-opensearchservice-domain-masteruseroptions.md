@@ -2,6 +2,8 @@
 
 Specifies information about the master user\.
 
+Required if if `InternalUserDatabaseEnabled` is true in `AdvancedSecurityOptions`\.
+
 ## Syntax<a name="aws-properties-opensearchservice-domain-masteruseroptions-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

@@ -81,7 +81,7 @@ The type of the component\. This can be an Amplify custom UI component or anothe
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Events`  <a name="cfn-amplifyuibuilder-component-events"></a>
-Not currently supported by AWS CloudFormation\.  
+Describes the events that can be raised on the component\. Use for the workflow feature in Amplify Studio that allows you to bind events and actions to components\.  
 *Required*: No  
 *Type*: Map of [ComponentEvent](aws-properties-amplifyuibuilder-component-componentevent.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

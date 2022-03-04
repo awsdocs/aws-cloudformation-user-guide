@@ -74,7 +74,7 @@ The information to bind the component property to data at runtime\. Use this for
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ComponentName`  <a name="cfn-amplifyuibuilder-component-componentproperty-componentname"></a>
-Not currently supported by AWS CloudFormation\.  
+The name of the component that is affected by an event\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -122,7 +122,7 @@ The data model to use to assign a value to the component property\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Property`  <a name="cfn-amplifyuibuilder-component-componentproperty-property"></a>
-Not currently supported by AWS CloudFormation\.  
+The name of the component's property that is affected by an event\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

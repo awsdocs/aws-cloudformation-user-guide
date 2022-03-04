@@ -3,23 +3,23 @@
 The service sample templates show you how you can use AWS CloudFormation with other AWS services\.
 
 **Topics**
-+ [Auto Scaling](#w11226ab1c33c56c13b7)
-+ [AWS Config](#w11226ab1c33c56c13b9)
-+ [Amazon DynamoDB](#w11226ab1c33c56c13c11)
-+ [Amazon EC2](#w11226ab1c33c56c13c13)
-+ [Amazon ElastiCache](#w11226ab1c33c56c13c15)
-+ [AWS Elastic Beanstalk](#w11226ab1c33c56c13c17)
-+ [Elastic Load Balancing](#w11226ab1c33c56c13c19)
-+ [AWS Identity and Access Management](#w11226ab1c33c56c13c21)
-+ [AWS OpsWorks](#w11226ab1c33c56c13c23)
-+ [Amazon Relational Database Service](#w11226ab1c33c56c13c25)
-+ [Amazon Redshift](#w11226ab1c33c56c13c27)
-+ [Amazon Route 53](#w11226ab1c33c56c13c29)
-+ [Amazon Simple Storage Service](#w11226ab1c33c56c13c31)
-+ [Amazon Simple Queue Service](#w11226ab1c33c56c13c35)
-+ [Amazon Virtual Private Cloud](#w11226ab1c33c56c13c37)
++ [Auto Scaling](#w11262ab1c33c56c13b7)
++ [AWS Config](#w11262ab1c33c56c13b9)
++ [Amazon DynamoDB](#w11262ab1c33c56c13c11)
++ [Amazon EC2](#w11262ab1c33c56c13c13)
++ [Amazon ElastiCache](#w11262ab1c33c56c13c15)
++ [AWS Elastic Beanstalk](#w11262ab1c33c56c13c17)
++ [Elastic Load Balancing](#w11262ab1c33c56c13c19)
++ [AWS Identity and Access Management](#w11262ab1c33c56c13c21)
++ [AWS OpsWorks](#w11262ab1c33c56c13c23)
++ [Amazon Relational Database Service](#w11262ab1c33c56c13c25)
++ [Amazon Redshift](#w11262ab1c33c56c13c27)
++ [Amazon Route 53](#w11262ab1c33c56c13c29)
++ [Amazon Simple Storage Service](#w11262ab1c33c56c13c31)
++ [Amazon Simple Queue Service](#w11262ab1c33c56c13c35)
++ [Amazon Virtual Private Cloud](#w11262ab1c33c56c13c37)
 
-## Auto Scaling<a name="w11226ab1c33c56c13b7"></a>
+## Auto Scaling<a name="w11262ab1c33c56c13b7"></a>
 
 
 | Template name | Description | View | View in Designer | Launch | 
@@ -28,14 +28,14 @@ The service sample templates show you how you can use AWS CloudFormation with ot
 | Time\-based auto scaling \(scheduled actions\) | Creates an Auto Scaling group with recurring schedules that change the minimum and maximum number of Amazon EC2 instances in the group\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/AutoScalingScheduledAction.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/AutoScalingScheduledAction.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=ScheduledActionSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/AutoScalingScheduledAction.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=ScheduledActionSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/AutoScalingScheduledAction.template) | 
 | Auto Scaling group with an update policy | Creates an Auto Scaling group with an update policy that keeps 2 instances running during a rolling update\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/AutoScalingRollingUpdates.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/AutoScalingRollingUpdates.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=ASRollingUpdatesSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/AutoScalingRollingUpdates.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=ASRollingUpdatesSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/AutoScalingRollingUpdates.template) | 
 
-## AWS Config<a name="w11226ab1c33c56c13b9"></a>
+## AWS Config<a name="w11262ab1c33c56c13b9"></a>
 
 
 | Template name | Description | View | View in Designer | Launch | 
 | --- | --- | --- | --- | --- | 
 | AWS Config delivery channel and rules | Creates an Amazon EC2 volume and an AWS Config rules that check if all Amazon EC2 volumes have the required tag and enable auto I/O\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/Config.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/Config.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=AddCFNLogsToCloudWatch&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/Config.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=AddCFNLogsToCloudWatch&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/Config.template) | 
 
-## Amazon DynamoDB<a name="w11226ab1c33c56c13c11"></a>
+## Amazon DynamoDB<a name="w11262ab1c33c56c13c11"></a>
 
 
 | Template name | Description | View | View in Designer | Launch | 
@@ -43,7 +43,7 @@ The service sample templates show you how you can use AWS CloudFormation with ot
 | DynamoDB table | Creates a simple DynamoDB table\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/DynamoDB_Table.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/DynamoDB_Table.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=DynamoDBSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/DynamoDB_Table.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=DynamoDBSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/DynamoDB_Table.template) | 
 | DynamoDB with secondary indexes | Creates a DynamoDB table with a global and local secondary index\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/DynamoDB_Secondary_Indexes.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/DynamoDB_Secondary_Indexes.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=DDBSecondaryIndexesSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/DynamoDB_Secondary_Indexes.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=DDBSecondaryIndexesSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/DynamoDB_Secondary_Indexes.template) | 
 
-## Amazon EC2<a name="w11226ab1c33c56c13c13"></a>
+## Amazon EC2<a name="w11262ab1c33c56c13c13"></a>
 
 
 | Template name | Description | View | View in Designer | Launch | 
@@ -52,7 +52,7 @@ The service sample templates show you how you can use AWS CloudFormation with ot
 | Amazon EC2 instance with an Elastic IP address | Creates an Amazon EC2 instance and associates an Elastic IP address with the instance\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/EIP_With_Association.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/EIP_With_Association.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=EC2ElasticIPSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/EIP_With_Association.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=EC2ElasticIPSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/EIP_With_Association.template) | 
 | Amazon EC2 instance with an ephemeral drive | Creates an Amazon EC2 instance with an ephemeral drive by using a block device mapping\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/EC2_Instance_With_Ephemeral_Drives.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/EC2_Instance_With_Ephemeral_Drives.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=EC2EphemeralDriveSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/EC2_Instance_With_Ephemeral_Drives.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=EC2EphemeralDriveSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/EC2_Instance_With_Ephemeral_Drives.template) | 
 
-## Amazon ElastiCache<a name="w11226ab1c33c56c13c15"></a>
+## Amazon ElastiCache<a name="w11262ab1c33c56c13c15"></a>
 
 
 | Template name | Description | View | View in Designer | Launch | 
@@ -60,7 +60,7 @@ The service sample templates show you how you can use AWS CloudFormation with ot
 | ElastiCache Memcached | Creates an ElastiCache cache cluster with the Memcached engine and deploys a sample PHP application that connects to the cache cluster\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ElastiCache.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ElastiCache.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=ElastiCacheMemcacheSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ElastiCache.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=ElastiCacheMemcacheSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ElastiCache.template) | 
 | ElastiCache Redis | Creates an ElastiCache cache cluster with the Redis engine and deploys a sample PHP application that connects to the cache cluster\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ElastiCache_Redis.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ElastiCache_Redis.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=ElastiCacheRedisSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ElastiCache_Redis.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=ElastiCacheRedisSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ElastiCache_Redis.template) | 
 
-## AWS Elastic Beanstalk<a name="w11226ab1c33c56c13c17"></a>
+## AWS Elastic Beanstalk<a name="w11262ab1c33c56c13c17"></a>
 
 
 | Template name | Description | View | View in Designer | Launch | 
@@ -69,7 +69,7 @@ The service sample templates show you how you can use AWS CloudFormation with ot
 | Elastic Beanstalk Node\.js sample application | Creates a sample Elastic Beanstalk Node\.js application\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ElasticBeanstalk_Nodejs_Sample.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ElasticBeanstalk_Nodejs_Sample.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=ElasticBeanstalkBasicSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ElasticBeanstalk_Nodejs_Sample.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=ElasticBeanstalkBasicSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ElasticBeanstalk_Nodejs_Sample.template) | 
 | Elastic Beanstalk application in a Amazon Virtual Private Cloud | Creates an Elastic Beanstalk environment in a VPC\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ElasticBeanstalk_in_VPC.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ElasticBeanstalk_in_VPC.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=ElasticBeanstalkVPCSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ElasticBeanstalk_in_VPC.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=ElasticBeanstalkVPCSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ElasticBeanstalk_in_VPC.template) | 
 
-## Elastic Load Balancing<a name="w11226ab1c33c56c13c19"></a>
+## Elastic Load Balancing<a name="w11262ab1c33c56c13c19"></a>
 
 
 | Template name | Description | View | View in Designer | Launch | 
@@ -79,14 +79,14 @@ The service sample templates show you how you can use AWS CloudFormation with ot
 | Load balancer with connection draining and saved access logs | Creates an Elastic Load Balancing load balancer that completes all in\-flight requests to deregistered or unhealthy instances\. The load balancer also sends access logs to an Amazon S3 bucket\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ELB_Access_Logs_And_Connection_Draining.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ELB_Access_Logs_And_Connection_Draining.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=ElasticLoadBalancerAccessLogsAndConnectionDrainingSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ELB_Access_Logs_And_Connection_Draining.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=ElasticLoadBalancerAccessLogsAndConnectionDrainingSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ELB_Access_Logs_And_Connection_Draining.template) | 
 | Load\-balanced Auto Scaling group with an update policy and Elastic Load Balancing health check | Creates a cross\-zone Elastic Load Balancing load balancer and an Auto Scaling group with an update policy that keeps at least two instances running while performing a rolling update\. The update proceeds only when the Elastic Load Balancing health check detects that the updated instances are in service\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ELBGuidedAutoScalingRollingUpgrade.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ELBGuidedAutoScalingRollingUpgrade.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=ElasticLoadBalancerASRollingUpgradeSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ELBGuidedAutoScalingRollingUpgrade.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=ElasticLoadBalancerASRollingUpgradeSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/ELBGuidedAutoScalingRollingUpgrade.template) | 
 
-## AWS Identity and Access Management<a name="w11226ab1c33c56c13c21"></a>
+## AWS Identity and Access Management<a name="w11262ab1c33c56c13c21"></a>
 
 
 | Template name | Description | View | View in Designer | Launch | 
 | --- | --- | --- | --- | --- | 
 | IAM users and groups | Creates multiple IAM users and groups with different policies\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/IAM_Users_Groups_and_Policies.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/IAM_Users_Groups_and_Policies.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=IAMUserGroupAndPoliciesSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/IAM_Users_Groups_and_Policies.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=IAMUserGroupAndPoliciesSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/IAM_Users_Groups_and_Policies.template) | 
 
-## AWS OpsWorks<a name="w11226ab1c33c56c13c23"></a>
+## AWS OpsWorks<a name="w11262ab1c33c56c13c23"></a>
 
 
 | Template name | Description | View | View in Designer | Launch | 
@@ -94,7 +94,7 @@ The service sample templates show you how you can use AWS CloudFormation with ot
 | Basic AWS OpsWorks stack | Creates an AWS OpsWorks stack, layer, instances and associated resources to run a PHP application\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/OpsWorks.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/OpsWorks.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=OpsWorksBasicPHPAppSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/OpsWorks.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=OpsWorksBasicPHPAppSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/OpsWorks.template) | 
 | Load\-balanced AWS OpsWorks stack in a Amazon VPC | Creates an AWS OpsWorks stack with a load\-balanced application that runs inside a VPC\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/OpsWorksVPCELB.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/OpsWorksVPCELB.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=OpsWorksLoadBalancedSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/OpsWorksVPCELB.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=OpsWorksLoadBalancedSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/OpsWorksVPCELB.template) | 
 
-## Amazon Relational Database Service<a name="w11226ab1c33c56c13c25"></a>
+## Amazon Relational Database Service<a name="w11262ab1c33c56c13c25"></a>
 
 
 | Template name | Description | View | View in Designer | Launch | 
@@ -104,7 +104,7 @@ The service sample templates show you how you can use AWS CloudFormation with ot
 | Amazon RDS DB instance with a deletion policy | Creates an Amazon RDS database instance with a deletion policy that specifies Amazon RDS to take a snapshot of the database before deleting it\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/RDS_Snapshot_On_Delete.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/RDS_Snapshot_On_Delete.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=RDSSnapShotSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/RDS_Snapshot_On_Delete.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=RDSSnapShotSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/RDS_Snapshot_On_Delete.template) | 
 | Amazon RDS DB instance with a database parameter group | Creates an Amazon RDS database instance with a database parameter group\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/RDS_with_DBParameterGroup.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/RDS_with_DBParameterGroup.template) | [https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/RDS_with_DBParameterGroup.template](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/RDS_with_DBParameterGroup.template) | 
 
-## Amazon Redshift<a name="w11226ab1c33c56c13c27"></a>
+## Amazon Redshift<a name="w11262ab1c33c56c13c27"></a>
 
 
 | Template name | Description | View | View in Designer | Launch | 
@@ -112,7 +112,7 @@ The service sample templates show you how you can use AWS CloudFormation with ot
 | Basic Amazon Redshift cluster | Creates an Amazon Redshift cluster\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/Redshift.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/Redshift.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=RedshiftBasicClusterSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/Redshift.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=RedshiftBasicClusterSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/Redshift.template) | 
 | Amazon Redshift cluster in an Amazon VPC | Creates an Amazon Redshift cluster in a VPC\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/RedshiftClusterInVpc.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/RedshiftClusterInVpc.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=RedshiftVPCClusterSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/RedshiftClusterInVpc.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=RedshiftVPCClusterSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/RedshiftClusterInVpc.template) | 
 
-## Amazon Route 53<a name="w11226ab1c33c56c13c29"></a>
+## Amazon Route 53<a name="w11262ab1c33c56c13c29"></a>
 
 
 | Template name | Description | View | View in Designer | Launch | 
@@ -121,7 +121,7 @@ The service sample templates show you how you can use AWS CloudFormation with ot
 | Route 53 CNAME record | Creates an Route 53 CNAME record\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/Route53_CNAME.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/Route53_CNAME.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=Route53CnameSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/Route53_CNAME.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=Route53CnameSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/Route53_CNAME.template) | 
 | Route 53 weighted records | Creates Route 53 weighted CNAME records\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/Route53_RoundRobin.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/Route53_RoundRobin.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=Route53RoundRobinSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/Route53_RoundRobin.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=Route53RoundRobinSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/Route53_RoundRobin.template) | 
 
-## Amazon Simple Storage Service<a name="w11226ab1c33c56c13c31"></a>
+## Amazon Simple Storage Service<a name="w11262ab1c33c56c13c31"></a>
 
 
 | Template name | Description | View | View in Designer | Launch | 
@@ -129,7 +129,7 @@ The service sample templates show you how you can use AWS CloudFormation with ot
 | Amazon S3 bucket with a deletion policy | Creates a publicly accessible Amazon S3 bucket that is configured for website access\. The bucket is retained even if the stack is deleted\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/S3_Website_Bucket_With_Retain_On_Delete.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/S3_Website_Bucket_With_Retain_On_Delete.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=S3RetentionSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/S3_Website_Bucket_With_Retain_On_Delete.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=S3RetentionSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/S3_Website_Bucket_With_Retain_On_Delete.template) | 
 | Amazon S3 website | Creates a website hosted on Amazon S3 with a custom DNS name\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/S3_Website_With_CloudFront_Distribution.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/S3_Website_With_CloudFront_Distribution.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=S3WebsiteWithCFDistributionSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/S3_Website_With_CloudFront_Distribution.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=S3WebsiteWithCFDistributionSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/S3_Website_With_CloudFront_Distribution.template) | 
 
-## Amazon Simple Queue Service<a name="w11226ab1c33c56c13c35"></a>
+## Amazon Simple Queue Service<a name="w11262ab1c33c56c13c35"></a>
 
 
 | Template name | Description | View | View in Designer | Launch | 
@@ -137,7 +137,7 @@ The service sample templates show you how you can use AWS CloudFormation with ot
 | Amazon SQS queue with Amazon CloudWatch alarms | Creates an Amazon SQS queue with CloudWatch alarms that monitor the queue depth\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/SQS_With_CloudWatch_Alarms.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/SQS_With_CloudWatch_Alarms.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=SQSWithCloudWatchAlarmsSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/SQS_With_CloudWatch_Alarms.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=SQSWithCloudWatchAlarmsSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/SQS_With_CloudWatch_Alarms.template) | 
 | Amazon Simple Notification Service topic that sends messages to Amazon SQS queues | Creates an Amazon SNS topic that can send messages to two Amazon SQS queues and two IAM users: one that has permission to publish to the topic and another that has permission to read messages from the queues\. | [View](https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/SNSToSQS.template) | [View in Designer](https://console.aws.amazon.com/cloudformation/designer/home?region=us-west-1&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/SNSToSQS.template) | [https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=SQSWithSNSSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/SNSToSQS.template](https://console.aws.amazon.com/cloudformation/home?region=us-west-1#/stacks/new?stackName=SQSWithSNSSample&templateURL=https://s3.us-west-1.amazonaws.com/cloudformation-templates-us-west-1/SNSToSQS.template) | 
 
-## Amazon Virtual Private Cloud<a name="w11226ab1c33c56c13c37"></a>
+## Amazon Virtual Private Cloud<a name="w11262ab1c33c56c13c37"></a>
 
 
 | Template name | Description | View | View in Designer | Launch | 

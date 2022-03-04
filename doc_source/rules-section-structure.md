@@ -2,7 +2,7 @@
 
 The optional `Rules` section validates a parameter or a combination of parameters passed to a template during a stack creation or stack update\. To use template rules, explicitly declare `Rules` in your template followed by an assertion\. Use the rules section to validate parameter values before creating or updating resources\.
 
-## Working with rules<a name="w11226ab1c23c15c19b5"></a>
+## Working with rules<a name="w11262ab1c23c15c19b5"></a>
 
 Each template rule consists of two properties:
 + *Rule condition* \(optional\) – determines when a rule takes effect\.
@@ -296,7 +296,7 @@ You will be billed for the AWS resources used if you create a stack from this te
             "Assertions": [
                 {
                     "Assert": {
-                        "Fn::EachMemberEquals": [
+                        ""Fn::EachMemberEquals": [
                             {
                                 "Fn::ValueOf": [
                                     "Subnets",

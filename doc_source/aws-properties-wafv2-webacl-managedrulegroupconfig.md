@@ -4,6 +4,8 @@ Additional information that's used by a managed rule group\. Most managed rule g
 
 Use this for the account takeover prevention managed rule group `AWSManagedRulesATPRuleSet`, to provide information about the sign\-in page of your application\. 
 
+You can provide multiple individual `ManagedRuleGroupConfig` objects for any rule group configuration, for example `UsernameField` and `PasswordField`\. The configuration that you provide depends on the needs of the managed rule group\. For the ATP managed rule group, you provide the following individual configuration objects: `LoginPath`, `PasswordField`, `PayloadType` and `UsernameField`\.
+
 ## Syntax<a name="aws-properties-wafv2-webacl-managedrulegroupconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
