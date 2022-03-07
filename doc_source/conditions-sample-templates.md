@@ -1,6 +1,6 @@
 # Sample templates<a name="conditions-sample-templates"></a>
 
-## Conditionally create resources for a production, development, or test stack<a name="w11262ab1c31c28c21c31b3"></a>
+## Conditionally create resources for a production, development, or test stack<a name="w11259ab1c31c28c21c31b3"></a>
 
 In some cases, you might want to create stacks that are similar but with minor tweaks\. For example, you might have a template that you use for production applications\. You want to create the same production stack so that you can use it for development or testing\. However, for development and testing, you might not require all the extra capacity that's included in a production\-level stack\. Instead, you can use an environment type input parameter to conditionally create stack resources that are specific to production, development, or testing, as shown in the following sample:
 
@@ -140,7 +140,7 @@ In the `InstanceType` property, the template nests two `Fn::If` intrinsic functi
 
 In addition to the instance type, the production environment creates and attaches an Amazon EC2 volume to the instance\. The `MountPoint` and `NewVolume` resources are associated with the `CreateProdResources` condition so that the resources are created only if the condition evaluates to true\.
 
-## Conditionally assign a resource property<a name="w11262ab1c31c28c21c31b5"></a>
+## Conditionally assign a resource property<a name="w11259ab1c31c28c21c31b5"></a>
 
 In this example, you can create an Amazon RDS DB instance from a snapshot\. If you specify the `DBSnapshotName` parameter, CloudFormation uses the parameter value as the snapshot name when creating the DB instance\. If you keep the default value \(empty string\), CloudFormation removes the `DBSnapshotIdentifier` property and creates a DB instance from scratch\.
 
@@ -282,7 +282,7 @@ Resources:
 
 The `UseDBSnapshot` condition evaluates to true only if the `DBSnapshotName` isn't an empty string\. If the `UseDBSnapshot` condition evaluates to true, CloudFormation uses the `DBSnapshotName` parameter value for the `DBSnapshotIdentifier` property\. If the condition evaluates to false, CloudFormation removes the `DBSnapshotIdentifier` property\. The `AWS::NoValue` pseudo parameter removes the corresponding resource property when it's used as a return value\.
 
-## Conditionally use an existing resource<a name="w11262ab1c31c28c21c31b7"></a>
+## Conditionally use an existing resource<a name="w11259ab1c31c28c21c31b7"></a>
 
 In this example, you can use an Amazon EC2 security group that has already been created or you can create a new security group, which is specified in the template\. For the `ExistingSecurityGroup` parameter, you can specify the `default` security group name or `NONE`\. If you specify `default`, CloudFormation uses a security group that has already been created and is named `default`\. If you specify `NONE`, CloudFormation creates the security group that's defined in the template\.
 

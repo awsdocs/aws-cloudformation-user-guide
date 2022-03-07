@@ -12,6 +12,6 @@ Before you can use AWS CloudFormation or any Amazon Web Services, you must first
 
 After signing up for an AWS account, you can use AWS CloudFormation through the [AWS Management Console](https://console.aws.amazon.com/cloudformation/), [AWS CloudFormation API](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/), or [AWS CLI](https://docs.aws.amazon.com/cli/latest/reference/cloudformation)\.
 
-## Pricing<a name="w11262ab1b7b9b9"></a>
+## Pricing<a name="w11259ab1b7b9b9"></a>
 
 AWS CloudFormation is a free service; however, you are charged for the AWS resources you include in your stacks at the current rates for each\. For more information about AWS pricing, go to the detail page for each product on [http://aws\.amazon\.com](http://aws.amazon.com)\.

@@ -241,7 +241,8 @@ Configures an Auto Scaling group to send notifications when specified events tak
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PlacementGroup`  <a name="cfn-as-group-placementgroup"></a>
-The name of the placement group into which you want to launch your instances\. A placement group is a logical grouping of instances within a single Availability Zone\. For more information, see [Placement Groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+The name of the placement group into which you want to launch your instances\. For more information, see [Placement groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+A *cluster* placement group is a logical grouping of instances within a single Availability Zone\. You cannot specify multiple Availability Zones and a cluster placement group\. 
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
