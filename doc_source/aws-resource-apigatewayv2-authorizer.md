@@ -159,6 +159,9 @@ The following example creates a Lambda `authorizer` resource for the `MyApi` API
                             "Ref": "AWS::Region"
                         },
                         ":lambda:path/2015-03-31/functions/",
+                        {
+                            "Fn::GetAtt", ["MyCustomAuthorizer", "Arn"]
+                        },
                         "/invocations"
                     ]
                 ]
@@ -189,6 +192,7 @@ Authorizer:
         - ':apigateway:'
         - !Ref 'AWS::Region'
         - ':lambda:path/2015-03-31/functions/'
+        - !GetAtt MyCustomAuthorizer.Arn
         - /invocations
     AuthorizerResultTtlInSeconds: 500
     IdentitySource:
