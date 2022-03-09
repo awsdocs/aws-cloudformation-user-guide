@@ -162,7 +162,7 @@ Resources:
       Policies:
         - PolicyName: LexRuntimeRolePolicy
           PolicyDocument:
-            Version: 2012-10-17
+            Version: "2012-10-17"
             Statement:
               - Effect: Allow
                 Action:
