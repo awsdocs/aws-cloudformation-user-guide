@@ -156,11 +156,20 @@ In the following examples you can find the YAML for each template, followed by t
 #### YAML<a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Only_Specify_Values_for_the_Required_Properties--yaml"></a>
 
 ```
-Description: MSK Cluster with required properties. Resources:
-                TestCluster: Type: 'AWS::MSK::Cluster' Properties: ClusterName:
-                ClusterWithRequiredProperties KafkaVersion: 2.2.1 NumberOfBrokerNodes: 3
-                BrokerNodeGroupInfo: InstanceType: kafka.m5.large ClientSubnets: -
-                ReplaceWithSubnetId1 - ReplaceWithSubnetId2 - ReplaceWithSubnetId3
+Description: MSK Cluster with required properties.
+Resources:
+  TestCluster:
+    Type: 'AWS::MSK::Cluster'
+    Properties:
+      ClusterName: ClusterWithRequiredProperties
+      KafkaVersion: 2.2.1
+      NumberOfBrokerNodes: 3
+      BrokerNodeGroupInfo:
+        InstanceType: kafka.m5.large
+        ClientSubnets:
+          - ReplaceWithSubnetId1
+          - ReplaceWithSubnetId2
+          - ReplaceWithSubnetId3
 ```
 
 #### <a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Only_Specify_Values_for_the_Required_Properties--JSON"></a>
