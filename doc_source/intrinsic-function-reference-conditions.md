@@ -203,7 +203,7 @@ Syntax for the short form:
 ### Parameters<a name="w11259ab1c31c28c21c19b7"></a>
 
 `value`  
-A value of any type that you want to compare\.
+A value of `String` type that you want to compare\.
 
 ### Example<a name="w11259ab1c31c28c21c19b9"></a>
 
