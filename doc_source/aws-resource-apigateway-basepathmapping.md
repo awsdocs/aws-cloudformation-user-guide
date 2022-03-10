@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[BasePath](#cfn-apigateway-basepathmapping-basepath)" : String,
       "[DomainName](#cfn-apigateway-basepathmapping-domainname)" : String,
+      "[Id](#cfn-apigateway-basepathmapping-id)" : String,
       "[RestApiId](#cfn-apigateway-basepathmapping-restapiid)" : String,
       "[Stage](#cfn-apigateway-basepathmapping-stage)" : String
     }
@@ -27,6 +28,7 @@ Type: AWS::ApiGateway::BasePathMapping
 Properties: 
   [BasePath](#cfn-apigateway-basepathmapping-basepath): String
   [DomainName](#cfn-apigateway-basepathmapping-domainname): String
+  [Id](#cfn-apigateway-basepathmapping-id): String
   [RestApiId](#cfn-apigateway-basepathmapping-restapiid): String
   [Stage](#cfn-apigateway-basepathmapping-stage): String
 ```
@@ -44,6 +46,12 @@ The `DomainName` of an [AWS::ApiGateway::DomainName](https://docs.aws.amazon.com
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Id`  <a name="cfn-apigateway-basepathmapping-id"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RestApiId`  <a name="cfn-apigateway-basepathmapping-restapiid"></a>
 The ID of the API\.  

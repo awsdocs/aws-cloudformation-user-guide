@@ -111,7 +111,7 @@ To create an access point, you must already have an S3 on Outposts bucket ARN\. 
                 },
                 "Name": "ExampleAccessPoint",
                 "VpcConfiguration": {
-                    "VpcId": "vpc-12345"
+                    "VpcID": "vpc-12345"
                 },
                 "Policy": {
                     "Version":"2012-10-17",
@@ -164,7 +164,7 @@ Resources:
         Ref: ExampleS3OutpostsBucket
       Name: ExampleAccessPoint
       VpcConfiguration:
-        VpcId: vpc-12345
+        VpcID: vpc-12345
       Policy:
         Version: '2012-10-17'
         ID: AccessPointPolicy

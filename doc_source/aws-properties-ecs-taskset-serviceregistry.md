@@ -2,6 +2,10 @@
 
 The details for the service registry\.
 
+Each service may be associated with one service registry\. Multiple service registries for each service are not supported\.
+
+When you add, update, or remove the service registries configuration, Amazon ECS starts a new deployment\. New tasks are registered and deregistered to the updated service registry configuration\.
+
 ## Syntax<a name="aws-properties-ecs-taskset-serviceregistry-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

@@ -44,7 +44,7 @@ Properties:
 ## Properties<a name="aws-resource-rds-globalcluster-properties"></a>
 
 `DeletionProtection`  <a name="cfn-rds-globalcluster-deletionprotection"></a>
- The deletion protection setting for the new global database\. The global database can't be deleted when deletion protection is enabled\.   
+The deletion protection setting for the new global database\. The global database can't be deleted when deletion protection is enabled\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

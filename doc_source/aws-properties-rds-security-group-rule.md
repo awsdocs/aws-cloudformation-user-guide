@@ -35,19 +35,19 @@ The IP range to authorize\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EC2SecurityGroupId`  <a name="cfn-rds-securitygroup-ec2securitygroupid"></a>
- Id of the EC2 Security Group to authorize\. For VPC DB Security Groups, `EC2SecurityGroupId` must be provided\. Otherwise, EC2SecurityGroupOwnerId and either `EC2SecurityGroupName` or `EC2SecurityGroupId` must be provided\.   
+Id of the EC2 security group to authorize\. For VPC DB security groups, `EC2SecurityGroupId` must be provided\. Otherwise, `EC2SecurityGroupOwnerId` and either `EC2SecurityGroupName` or `EC2SecurityGroupId` must be provided\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EC2SecurityGroupName`  <a name="cfn-rds-securitygroup-ec2securitygroupname"></a>
- Name of the EC2 Security Group to authorize\. For VPC DB Security Groups, `EC2SecurityGroupId` must be provided\. Otherwise, EC2SecurityGroupOwnerId and either `EC2SecurityGroupName` or `EC2SecurityGroupId` must be provided\.   
+Name of the EC2 security group to authorize\. For VPC DB security groups, `EC2SecurityGroupId` must be provided\. Otherwise, `EC2SecurityGroupOwnerId` and either `EC2SecurityGroupName` or `EC2SecurityGroupId` must be provided\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EC2SecurityGroupOwnerId`  <a name="cfn-rds-securitygroup-ec2securitygroupownerid"></a>
- AWS Account Number of the owner of the EC2 Security Group specified in the EC2SecurityGroupName parameter\. The AWS Access Key ID is not an acceptable value\. For VPC DB Security Groups, `EC2SecurityGroupId` must be provided\. Otherwise, EC2SecurityGroupOwnerId and either `EC2SecurityGroupName` or `EC2SecurityGroupId` must be provided\.   
+ AWS account number of the owner of the EC2 security group specified in the `EC2SecurityGroupName` parameter\. The AWS access key ID isn't an acceptable value\. For VPC DB security groups, `EC2SecurityGroupId` must be provided\. Otherwise, `EC2SecurityGroupOwnerId` and either `EC2SecurityGroupName` or `EC2SecurityGroupId` must be provided\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
