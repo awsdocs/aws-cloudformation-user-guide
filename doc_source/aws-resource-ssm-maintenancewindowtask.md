@@ -34,20 +34,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::SSM::MaintenanceWindowTask
-Properties: 
+Properties:
   [CutoffBehavior](#cfn-ssm-maintenancewindowtask-cutoffbehavior): String
   [Description](#cfn-ssm-maintenancewindowtask-description): String
-  [LoggingInfo](#cfn-ssm-maintenancewindowtask-logginginfo): 
+  [LoggingInfo](#cfn-ssm-maintenancewindowtask-logginginfo):
     LoggingInfo
   [MaxConcurrency](#cfn-ssm-maintenancewindowtask-maxconcurrency): String
   [MaxErrors](#cfn-ssm-maintenancewindowtask-maxerrors): String
   [Name](#cfn-ssm-maintenancewindowtask-name): String
   [Priority](#cfn-ssm-maintenancewindowtask-priority): Integer
   [ServiceRoleArn](#cfn-ssm-maintenancewindowtask-servicerolearn): String
-  [Targets](#cfn-ssm-maintenancewindowtask-targets): 
+  [Targets](#cfn-ssm-maintenancewindowtask-targets):
     - Target
   [TaskArn](#cfn-ssm-maintenancewindowtask-taskarn): String
-  [TaskInvocationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters): 
+  [TaskInvocationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters):
     TaskInvocationParameters
   [TaskParameters](#cfn-ssm-maintenancewindowtask-taskparameters): Json
   [TaskType](#cfn-ssm-maintenancewindowtask-tasktype): String
@@ -57,119 +57,119 @@ Properties:
 ## Properties<a name="aws-resource-ssm-maintenancewindowtask-properties"></a>
 
 `CutoffBehavior`  <a name="cfn-ssm-maintenancewindowtask-cutoffbehavior"></a>
-The specification for whether tasks should continue to run after the cutoff time specified in the maintenance windows is reached\.   
-*Required*: No  
-*Type*: String  
-*Allowed values*: `CANCEL_TASK | CONTINUE_TASK`  
+The specification for whether tasks should continue to run after the cutoff time specified in the maintenance windows is reached\.
+*Required*: No
+*Type*: String
+*Allowed values*: `CANCEL_TASK | CONTINUE_TASK`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-ssm-maintenancewindowtask-description"></a>
-A description of the task\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
+A description of the task\.
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `128`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoggingInfo`  <a name="cfn-ssm-maintenancewindowtask-logginginfo"></a>
-Information about an Amazon S3 bucket to write task\-level logs to\.  
+Information about an Amazon S3 bucket to write task\-level logs to\.
  `LoggingInfo` has been deprecated\. To specify an Amazon S3 bucket to contain logs, instead use the `OutputS3BucketName` and `OutputS3KeyPrefix` options in the `TaskInvocationParameters` structure\. For information about how Systems Manager handles these options for the supported maintenance window task types, see [AWS Systems Manager MaintenanceWindowTask TaskInvocationParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html)\.
-*Required*: No  
-*Type*: [LoggingInfo](aws-properties-ssm-maintenancewindowtask-logginginfo.md)  
+*Required*: No
+*Type*: [LoggingInfo](aws-properties-ssm-maintenancewindowtask-logginginfo.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxConcurrency`  <a name="cfn-ssm-maintenancewindowtask-maxconcurrency"></a>
-The maximum number of targets this task can be run for, in parallel\.  
-Although this element is listed as "Required: No", a value can be omitted only when you are registering or updating a [targetless task](https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html) You must provide a value in all other cases\.  
+The maximum number of targets this task can be run for, in parallel\.
+Although this element is listed as "Required: No", a value can be omitted only when you are registering or updating a [targetless task](https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html) You must provide a value in all other cases\.
 For maintenance window tasks without a target specified, you can't supply a value for this option\. Instead, the system inserts a placeholder value of `1`\. This value doesn't affect the running of your task\.
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `7`  
-*Pattern*: `^([1-9][0-9]*|[1-9][0-9]%|[1-9]%|100%)$`  
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `7`
+*Pattern*: `^([1-9][0-9]*|[1-9][0-9]%|[1-9]%|100%)$`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxErrors`  <a name="cfn-ssm-maintenancewindowtask-maxerrors"></a>
-The maximum number of errors allowed before this task stops being scheduled\.  
-Although this element is listed as "Required: No", a value can be omitted only when you are registering or updating a [targetless task](https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html) You must provide a value in all other cases\.  
+The maximum number of errors allowed before this task stops being scheduled\.
+Although this element is listed as "Required: No", a value can be omitted only when you are registering or updating a [targetless task](https://docs.aws.amazon.com/systems-manager/latest/userguide/maintenance-windows-targetless-tasks.html) You must provide a value in all other cases\.
 For maintenance window tasks without a target specified, you can't supply a value for this option\. Instead, the system inserts a placeholder value of `1`\. This value doesn't affect the running of your task\.
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `7`  
-*Pattern*: `^([1-9][0-9]*|[0]|[1-9][0-9]%|[0-9]%|100%)$`  
+*Required*: No
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `7`
+*Pattern*: `^([1-9][0-9]*|[0]|[1-9][0-9]%|[0-9]%|100%)$`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ssm-maintenancewindowtask-name"></a>
-The task name\.  
-*Required*: No  
-*Type*: String  
-*Minimum*: `3`  
-*Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9_\-.]{3,128}$`  
+The task name\.
+*Required*: No
+*Type*: String
+*Minimum*: `3`
+*Maximum*: `128`
+*Pattern*: `^[a-zA-Z0-9_\-.]{3,128}$`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Priority`  <a name="cfn-ssm-maintenancewindowtask-priority"></a>
-The priority of the task in the maintenance window\. The lower the number, the higher the priority\. Tasks that have the same priority are scheduled in parallel\.  
-*Required*: Yes  
-*Type*: Integer  
-*Minimum*: `0`  
+The priority of the task in the maintenance window\. The lower the number, the higher the priority\. Tasks that have the same priority are scheduled in parallel\.
+*Required*: Yes
+*Type*: Integer
+*Minimum*: `0`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceRoleArn`  <a name="cfn-ssm-maintenancewindowtask-servicerolearn"></a>
-The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) service role to use to publish Amazon Simple Notification Service \(Amazon SNS\) notifications for maintenance window Run Command tasks\.  
-*Required*: No  
-*Type*: String  
+The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) service role to use to publish Amazon Simple Notification Service \(Amazon SNS\) notifications for maintenance window Run Command tasks\.
+*Required*: No
+*Type*: String
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-ssm-maintenancewindowtask-targets"></a>
-The targets, either instances or window target IDs\.  
+The targets, either instances or window target IDs\.
 + Specify instances using `Key=InstanceIds,Values=instanceid1,instanceid2 `\.
 + Specify window target IDs using `Key=WindowTargetIds,Values=window-target-id-1,window-target-id-2`\.
-*Required*: No  
-*Type*: List of [Target](aws-properties-ssm-maintenancewindowtask-target.md)  
-*Maximum*: `5`  
+*Required*: No
+*Type*: List of [Target](aws-properties-ssm-maintenancewindowtask-target.md)
+*Maximum*: `5`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TaskArn`  <a name="cfn-ssm-maintenancewindowtask-taskarn"></a>
-The resource that the task uses during execution\.  
-For `RUN_COMMAND` and `AUTOMATION` task types, `TaskArn` is the SSM document name or Amazon Resource Name \(ARN\)\.  
-For `LAMBDA` tasks, `TaskArn` is the function name or ARN\.  
-For `STEP_FUNCTIONS` tasks, `TaskArn` is the state machine ARN\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1600`  
+The resource that the task uses during execution\.
+For `RUN_COMMAND` and `AUTOMATION` task types, `TaskArn` is the SSM document name or Amazon Resource Name \(ARN\)\.
+For `LAMBDA` tasks, `TaskArn` is the function name or ARN\.
+For `STEP_FUNCTIONS` tasks, `TaskArn` is the state machine ARN\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `1`
+*Maximum*: `1600`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TaskInvocationParameters`  <a name="cfn-ssm-maintenancewindowtask-taskinvocationparameters"></a>
-The parameters to pass to the task when it runs\. Populate only the fields that match the task type\. All other fields should be empty\.   
+The parameters to pass to the task when it runs\. Populate only the fields that match the task type\. All other fields should be empty\.
 When you update a maintenance window task that has options specified in `TaskInvocationParameters`, you must provide again all the `TaskInvocationParameters` values that you want to retain\. The values you do not specify again are removed\. For example, suppose that when you registered a Run Command task, you specified `TaskInvocationParameters` values for `Comment`, `NotificationConfig`, and `OutputS3BucketName`\. If you update the maintenance window task and specify only a different `OutputS3BucketName` value, the values for `Comment` and `NotificationConfig` are removed\.
-*Required*: No  
-*Type*: [TaskInvocationParameters](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md)  
+*Required*: No
+*Type*: [TaskInvocationParameters](aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.md)
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TaskParameters`  <a name="cfn-ssm-maintenancewindowtask-taskparameters"></a>
-The parameters to pass to the task when it runs\.  
+The parameters to pass to the task when it runs\.
  `TaskParameters` has been deprecated\. To specify parameters to pass to a task when it runs, instead use the `Parameters` option in the `TaskInvocationParameters` structure\. For information about how Systems Manager handles these options for the supported maintenance window task types, see [MaintenanceWindowTaskInvocationParameters](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_MaintenanceWindowTaskInvocationParameters.html)\.
-*Required*: No  
-*Type*: Json  
+*Required*: No
+*Type*: Json
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TaskType`  <a name="cfn-ssm-maintenancewindowtask-tasktype"></a>
-The type of task\. Valid values: `RUN_COMMAND`, `AUTOMATION`, `LAMBDA`, `STEP_FUNCTIONS`\.  
-*Required*: Yes  
-*Type*: String  
-*Allowed values*: `AUTOMATION | LAMBDA | RUN_COMMAND | STEP_FUNCTIONS`  
+The type of task\. Valid values: `RUN_COMMAND`, `AUTOMATION`, `LAMBDA`, `STEP_FUNCTIONS`\.
+*Required*: Yes
+*Type*: String
+*Allowed values*: `AUTOMATION | LAMBDA | RUN_COMMAND | STEP_FUNCTIONS`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WindowId`  <a name="cfn-ssm-maintenancewindowtask-windowid"></a>
-The ID of the maintenance window where the task is registered\.  
-*Required*: Yes  
-*Type*: String  
-*Minimum*: `20`  
-*Maximum*: `20`  
-*Pattern*: `^mw-[0-9a-f]{17}$`  
+The ID of the maintenance window where the task is registered\.
+*Required*: Yes
+*Type*: String
+*Minimum*: `20`
+*Maximum*: `20`
+*Pattern*: `^mw-[0-9a-f]{17}$`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-ssm-maintenancewindowtask-return-values"></a>
@@ -667,7 +667,7 @@ Resources:
 
 The following example runs an AWS Lambda function to restart instances\.
 
-**Note**  
+**Note**
 The value for `Payload` in `MaintenanceWindowLambdaParameters` must be formatted as a Base64\-encoded binary data object\.
 
 #### JSON<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_task_that_runs_an__function--json"></a>
@@ -722,6 +722,6 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-ssm-maintenancewindowtask--seealso"></a>
-+  [AWS::SSM::MaintenanceWindow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html) 
-+  [AWS::SSM::MaintenanceWindowTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html) 
++  [AWS::SSM::MaintenanceWindow](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html)
++  [AWS::SSM::MaintenanceWindowTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html)
 +  [RegisterTaskWithMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTaskWithMaintenanceWindow.html) in the *AWS Systems Manager API Reference*\.
