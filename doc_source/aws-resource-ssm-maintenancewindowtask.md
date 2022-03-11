@@ -518,8 +518,8 @@ Resources:
       TaskType: AUTOMATION
       TaskInvocationParameters:
         MaintenanceWindowAutomationParameters:
-    DocumentVersion: 1
-    Parameters: '{ \"instanceId\": \"{{RESOURCE_ID}}\" }'
+          DocumentVersion: 1
+          Parameters: '{ \"instanceId\": \"{{RESOURCE_ID}}\" }'
       Priority: 1
       MaxConcurrency: 5
       MaxErrors: 5
