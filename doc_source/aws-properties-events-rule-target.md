@@ -148,7 +148,7 @@ The `RetryPolicy` object that contains the retry policy configuration to use for
 
 `RoleArn`  <a name="cfn-events-rule-target-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role to be used for this target when the rule is triggered\. If one rule triggers multiple targets, you can use a different IAM role for each target\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1600`  
