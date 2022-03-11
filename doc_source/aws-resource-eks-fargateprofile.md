@@ -94,7 +94,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  `{ "Ref": "myFargateProfile" }` 
 
-For the Fargate profile`myFargateProfile`, Ref returns the physical resource ID of the Fargate profile\. For example, `<cluster_name>/<Fargate_profile_name>`\.
+For the Fargate profile`myFargateProfile`, Ref returns the physical resource ID of the Fargate profile\. For example, `<cluster-name>/<Fargate_profile_name>`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -107,13 +107,19 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-eks-fargateprofile-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The ARN of the Fargate profile, such as `arn:aws:eks:us-west-2:111122223333:fargateprofile/myCluster/myFargateProfile/1cb1a11a-1dc1-1d11-cf11-1111f11fa111`\.
+The ARN of the cluster, such as `arn:aws:eks:us-west-2:666666666666:fargateprofile/myCluster/myFargateProfile/1cb1a11a-1dc1-1d11-cf11-1111f11fa111`\.
+
+## Remarks<a name="aws-resource-eks-fargateprofile--remarks"></a>
+
+ *Creating a Fargate profile and identity provider config resources in the same template\.* 
+
+If AWS CloudFormation attempts to create both resources at the same time, resource creation fails\. If you want to create both resources in the same template, then add the `DependsOn` property in your template, as shown in the examples\.
 
 ## Examples<a name="aws-resource-eks-fargateprofile--examples"></a>
 
 ### Create a Fargate profile<a name="aws-resource-eks-fargateprofile--examples--Create_a__profile"></a>
 
-The following example creates a Fargate profile for pods deployed to a namespace with the name `my-namespace` that have a label with a key value pair assigned to them\.
+The following example creates a Fargate profile for pods deployed to a namespace with the name `my-namespace` that have a label with a key value pair assigned to them\. If you're not creating an `EKSIdpConfig` in the same template, remove the `"DependsOn"` line in the following example\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html)\.
 
 #### JSON<a name="aws-resource-eks-fargateprofile--examples--Create_a__profile--json"></a>
 
@@ -121,6 +127,7 @@ The following example creates a Fargate profile for pods deployed to a namespace
 {
    "Resources" : {
       "EKSFargateProfile" : {
+         "DependsOn" : "EKSIdpConfig",
          "Type" : "AWS::EKS::FargateProfile",
          "Properties" : {
             "FargateProfileName" : "my-fargate-profile",
@@ -149,6 +156,7 @@ The following example creates a Fargate profile for pods deployed to a namespace
 ```
 Resources:
   EKSFargateProfile:
+    DependsOn: EKSIdpConfig
     Type: 'AWS::EKS::FargateProfile'
     Properties:
       FargateProfileName: my-fargate-profile

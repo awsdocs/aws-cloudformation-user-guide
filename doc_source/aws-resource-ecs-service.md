@@ -115,7 +115,7 @@ For existing services, if a desired count is not specified, it is omitted from t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableECSManagedTags`  <a name="cfn-ecs-service-enableecsmanagedtags"></a>
-Specifies whether to enable Amazon ECS managed tags for the tasks within the service\. For more information, see [Tagging Your Amazon ECS Resources](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+Specifies whether to turn on Amazon ECS managed tags for the tasks within the service\. For more information, see [Tagging Your Amazon ECS Resources](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-using-tags.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -175,7 +175,7 @@ The platform version that your tasks in the service are running on\. A platform 
 Specifies whether to propagate the tags from the task definition or the service to the tasks in the service\. If no value is specified, the tags are not propagated\. Tags can only be propagated to the tasks within the service during service creation\. To add tags to a task after service creation, use the [TagResource](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html) API action\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `SERVICE | TASK_DEFINITION`  
+*Allowed values*: `NONE | SERVICE | TASK_DEFINITION`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Role`  <a name="cfn-ecs-service-role"></a>

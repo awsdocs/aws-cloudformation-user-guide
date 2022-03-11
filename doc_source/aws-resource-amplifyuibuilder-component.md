@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-amplifyuibuilder-component-name)" : String,
       "[Overrides](#cfn-amplifyuibuilder-component-overrides)" : {Key : Value, ...},
       "[Properties](#cfn-amplifyuibuilder-component-properties)" : {Key : Value, ...},
+      "[SchemaVersion](#cfn-amplifyuibuilder-component-schemaversion)" : String,
       "[SourceId](#cfn-amplifyuibuilder-component-sourceid)" : String,
       "[Tags](#cfn-amplifyuibuilder-component-tags)" : {Key : Value, ...},
       "[Variants](#cfn-amplifyuibuilder-component-variants)" : [ ComponentVariant, ... ]
@@ -46,6 +47,7 @@ Properties:
     Key : Value
   [Properties](#cfn-amplifyuibuilder-component-properties): 
     Key : Value
+  [SchemaVersion](#cfn-amplifyuibuilder-component-schemaversion): String
   [SourceId](#cfn-amplifyuibuilder-component-sourceid): String
   [Tags](#cfn-amplifyuibuilder-component-tags): 
     Key : Value
@@ -102,6 +104,12 @@ Describes the component's properties that can be overriden in a customized insta
 Describes the component's properties\. You can't specify `tags` as a valid property for `properties`\.  
 *Required*: Yes  
 *Type*: Map of [ComponentProperty](aws-properties-amplifyuibuilder-component-componentproperty.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SchemaVersion`  <a name="cfn-amplifyuibuilder-component-schemaversion"></a>
+The schema version of the component when it was imported\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceId`  <a name="cfn-amplifyuibuilder-component-sourceid"></a>
