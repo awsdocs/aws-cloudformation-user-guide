@@ -109,7 +109,8 @@ For more information, see [Target tracking scaling policies](https://docs.aws.am
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PredictiveScalingConfiguration`  <a name="cfn-autoscaling-scalingpolicy-predictivescalingconfiguration"></a>
-A predictive scaling policy\. Includes support for predefined metrics only\.  
+A predictive scaling policy\. Provides support for predefined and custom metrics\.  
+Predefined metrics include CPU utilization, network in/out, and the Application Load Balancer request count\.  
 *Required*: Conditional  
 *Type*: [PredictiveScalingConfiguration](aws-properties-autoscaling-scalingpolicy-predictivescalingconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

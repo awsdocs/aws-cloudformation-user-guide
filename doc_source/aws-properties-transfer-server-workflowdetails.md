@@ -25,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `OnUpload`  <a name="cfn-transfer-server-workflowdetails-onupload"></a>
 A trigger that starts a workflow: the workflow begins to execute after a file is uploaded\.  
+To remove an associated workflow from a server, you can provide an empty `OnUpload` object, as in the following example\.  
+ `aws transfer update-server --server-id s-01234567890abcdef --workflow-details '{"OnUpload":[]}'`   
 *Required*: Yes  
 *Type*: List of [WorkflowDetail](aws-properties-transfer-server-workflowdetail.md)  
 *Maximum*: `1`  

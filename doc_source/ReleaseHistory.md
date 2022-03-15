@@ -4,6 +4,29 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_AutoScaling.md) | The following resource was updated: AWS::AutoScaling::ScalingPolicy\. 
+
+ [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html)   
+Use the `AWS::AutoScaling::ScalingPolicy` property to specify custom metrics when you create predictive scaling policies\. You can also use metric math to further customize the metrics that you include in your policy\.  | March 10, 2022 | 
+| [New resources](AWS_Personalize.md) | The following resources were added: `AWS::Personalize::Dataset`, `AWS::Personalize::Dataset DatasetImportJob`, `AWS::Personalize::DatasetGroup`, `AWS::Personalize::Schema`, `AWS::Personalize::Solution`, and `AWS::Personalize::Solution SolutionConfig`\. 
+
+ [AWS::Personalize::Dataset](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-dataset.html)   
+Use the `AWS::Personalize::Dataset` resource to specify a dataset in Amazon Personalize\. 
+
+ [AWS::Personalize::Dataset DatasetImportJob](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-dataset-datasetimportjob.html)   
+Use the `AWS::Personalize::Dataset DatasetImportJob` resource to specify a dataset import job in Amazon Personalize\. 
+
+ [AWS::Personalize::DatasetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-datasetgroup.html)   
+Use the `AWS::Personalize::DatasetGroup` resource to specify a dataset group in Amazon Personalize\. 
+
+ [AWS::Personalize::Schema](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-schema.html)   
+Use the `AWS::Personalize::Schema` resource to specify a schema in Amazon Personalize\. 
+
+ [AWS::Personalize::Solution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-solution.html)   
+Use the `AWS::Personalize::Solution` resource to specify a solution in Amazon Personalize\. 
+
+ [AWS::Personalize::Solution SolutionConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html)   
+Use the `AWS::Personalize::Solution SolutionConfig` resource to specify a solution configuration in Amazon Personalize\.  | March 10, 2022 | 
 | [New resource](AWS_EKS.md) | The following resource was added: `AWS::EKS::IdentityProviderConfig` 
 
  [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html)   

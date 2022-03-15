@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource ConfluenceSpaceConfiguration<a name="aws-properties-kendra-datasource-confluencespaceconfiguration"></a>
 
-Specifies the configuration for indexing Confluence spaces\.
+Configuration information for indexing Confluence spaces\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-confluencespaceconfiguration-syntax"></a>
 
@@ -58,7 +58,7 @@ A list of space keys for Confluence spaces\. If you include a key, the blogs, do
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SpaceFieldMappings`  <a name="cfn-kendra-datasource-confluencespaceconfiguration-spacefieldmappings"></a>
-Defines how space metadata fields should be mapped to index fields\. Before you can map a field, you must first create an index field with a matching type using the console or the `UpdateIndex` API\.  
+Maps attributes or field names of Confluence spaces to Amazon Kendra index field names\. To create custom fields, use the `UpdateIndex` API before you map to Confluence fields\. For more information, see [Mapping data source fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html)\. The Confluence data source field names must exist in your Confluence custom metadata\.  
 If you specify the `SpaceFieldMappings` parameter, you must specify at least one field mapping\.  
 *Required*: No  
 *Type*: List of [ConfluenceSpaceToIndexFieldMapping](aws-properties-kendra-datasource-confluencespacetoindexfieldmapping.md)  

@@ -89,14 +89,14 @@ Specifies how block devices are exposed to the instance\. You can specify virtua
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClassicLinkVPCId`  <a name="cfn-autoscaling-launchconfiguration-classiclinkvpcid"></a>
+*EC2\-Classic retires on August 15, 2022\. This parameter is not supported after that date\.*  
 The ID of a ClassicLink\-enabled VPC to link your EC2\-Classic instances to\.   
-For more information, see [ClassicLink](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) in the *Amazon EC2 User Guide for Linux Instances* and [Linking EC2\-Classic instances to a VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html#as-ClassicLink) in the *Amazon EC2 Auto Scaling User Guide*\.  
-This property can only be used if you are launching EC2\-Classic instances\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClassicLinkVPCSecurityGroups`  <a name="cfn-autoscaling-launchconfiguration-classiclinkvpcsecuritygroups"></a>
+*EC2\-Classic retires on August 15, 2022\. This parameter is not supported after that date\.*  
 The IDs of one or more security groups for the VPC that you specified in the `ClassicLinkVPCId` property\.   
 If you specify the `ClassicLinkVPCId` property, you must specify this property\.   
 *Required*: Conditional  

@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Actions](#cfn-fis-experimenttemplate-actions)" : {Key : Value, ...},
       "[Description](#cfn-fis-experimenttemplate-description)" : String,
+      "[LogConfiguration](#cfn-fis-experimenttemplate-logconfiguration)" : ExperimentTemplateLogConfiguration,
       "[RoleArn](#cfn-fis-experimenttemplate-rolearn)" : String,
       "[StopConditions](#cfn-fis-experimenttemplate-stopconditions)" : [ ExperimentTemplateStopCondition, ... ],
       "[Tags](#cfn-fis-experimenttemplate-tags)" : {Key : Value, ...},
@@ -37,6 +38,8 @@ Properties:
   [Actions](#cfn-fis-experimenttemplate-actions): 
     Key : Value
   [Description](#cfn-fis-experimenttemplate-description): String
+  [LogConfiguration](#cfn-fis-experimenttemplate-logconfiguration): 
+    ExperimentTemplateLogConfiguration
   [RoleArn](#cfn-fis-experimenttemplate-rolearn): String
   [StopConditions](#cfn-fis-experimenttemplate-stopconditions): 
     - ExperimentTemplateStopCondition
@@ -60,6 +63,12 @@ A description for the experiment template\.
 *Type*: String  
 *Maximum*: `512`  
 *Pattern*: `[\s\S]+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LogConfiguration`  <a name="cfn-fis-experimenttemplate-logconfiguration"></a>
+The configuration for experiment logging\.  
+*Required*: No  
+*Type*: [ExperimentTemplateLogConfiguration](aws-properties-fis-experimenttemplate-experimenttemplatelogconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-fis-experimenttemplate-rolearn"></a>

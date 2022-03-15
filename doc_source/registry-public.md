@@ -65,10 +65,10 @@ The following is an example for resource type and hook extension\.
     "Statement":[
         {
             "Effect":"Allow",
-            "Principal":{
+            "Principal": [
                 "Service":"resources.cloudformation.amazonaws.com",
                 "Service":"hooks.cloudformation.amazonaws.com"
-            },
+            ],
             "Action":"sts:AssumeRole",
             "Condition":{
                 "StringEquals":{
