@@ -67,14 +67,14 @@ A list of Amazon Elastic Inference \(EI\) instance types to associate with the n
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AdditionalCodeRepositories`  <a name="cfn-sagemaker-notebookinstance-additionalcoderepositories"></a>
-An array of up to three Git repositories associated with the notebook instance\. These can be either the names of Git repositories stored as resources in your account, or the URL of Git repositories in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository\. These repositories are cloned at the same level as the default repository of your notebook instance\. For more information, see [Associating Git Repositories with Amazon SageMaker Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html)\.  
+An array of up to three Git repositories associated with the notebook instance\. These can be either the names of Git repositories stored as resources in your account, or the URL of Git repositories in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository\. These repositories are cloned at the same level as the default repository of your notebook instance\. For more information, see [Associating Git Repositories with SageMaker Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html)\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultCodeRepository`  <a name="cfn-sagemaker-notebookinstance-defaultcoderepository"></a>
-The Git repository associated with the notebook instance as its default code repository\. This can be either the name of a Git repository stored as a resource in your account, or the URL of a Git repository in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository\. When you open a notebook instance, it opens in the directory that contains this repository\. For more information, see [Associating Git Repositories with Amazon SageMaker Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html)\.  
+The Git repository associated with the notebook instance as its default code repository\. This can be either the name of a Git repository stored as a resource in your account, or the URL of a Git repository in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository\. When you open a notebook instance, it opens in the directory that contains this repository\. For more information, see [Associating Git Repositories with SageMaker Notebook Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-git-repo.html)\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -83,7 +83,7 @@ The Git repository associated with the notebook instance as its default code rep
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DirectInternetAccess`  <a name="cfn-sagemaker-notebookinstance-directinternetaccess"></a>
-Sets whether Amazon SageMaker provides internet access to the notebook instance\. If you set this to `Disabled` this notebook instance is able to access resources only in your VPC, and is not be able to connect to Amazon SageMaker training and endpoint services unless you configure a NAT Gateway in your VPC\.  
+Sets whether SageMaker provides internet access to the notebook instance\. If you set this to `Disabled` this notebook instance is able to access resources only in your VPC, and is not be able to connect to SageMaker training and endpoint services unless you configure a NAT Gateway in your VPC\.  
 For more information, see [Notebook Instances Are Internet\-Enabled by Default](https://docs.aws.amazon.com/sagemaker/latest/dg/appendix-additional-considerations.html#appendix-notebook-and-internet-access)\. You can set the value of this parameter to `Disabled` only if you set a value for the `SubnetId` parameter\.  
 *Required*: No  
 *Type*: String  
@@ -99,7 +99,7 @@ Expect some interruption of service if this parameter is changed as CloudFormati
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-sagemaker-notebookinstance-kmskeyid"></a>
-The Amazon Resource Name \(ARN\) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to your notebook instance\. The KMS key you provide must be enabled\. For information, see [Enabling and Disabling Keys](https://docs.aws.amazon.com/kms/latest/developerguide/enabling-keys.html) in the * AWS Key Management Service Developer Guide*\.  
+The Amazon Resource Name \(ARN\) of a AWS Key Management Service key that SageMaker uses to encrypt data on the storage volume attached to your notebook instance\. The KMS key you provide must be enabled\. For information, see [Enabling and Disabling Keys](https://docs.aws.amazon.com/kms/latest/developerguide/enabling-keys.html) in the * AWS Key Management Service Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `2048`  
@@ -131,8 +131,8 @@ The platform identifier of the notebook instance runtime environment\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleArn`  <a name="cfn-sagemaker-notebookinstance-rolearn"></a>
- When you send any requests to AWS resources from the notebook instance, Amazon SageMaker assumes this role to perform tasks on your behalf\. You must grant this role necessary permissions so Amazon SageMaker can perform these tasks\. The policy must allow the Amazon SageMaker service principal \(sagemaker\.amazonaws\.com\) permissions to assume this role\. For more information, see [Amazon SageMaker Roles](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html)\.   
-To be able to pass this role to Amazon SageMaker, the caller of this API must have the `iam:PassRole` permission\.
+ When you send any requests to AWS resources from the notebook instance, SageMaker assumes this role to perform tasks on your behalf\. You must grant this role necessary permissions so SageMaker can perform these tasks\. The policy must allow the SageMaker service principal \(sagemaker\.amazonaws\.com\) permissions to assume this role\. For more information, see [SageMaker Roles](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html)\.   
+To be able to pass this role to SageMaker, the caller of this API must have the `iam:PassRole` permission\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  

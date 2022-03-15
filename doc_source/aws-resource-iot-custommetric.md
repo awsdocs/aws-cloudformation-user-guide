@@ -35,19 +35,20 @@ Properties:
 ## Properties<a name="aws-resource-iot-custommetric-properties"></a>
 
 `DisplayName`  <a name="cfn-iot-custommetric-displayname"></a>
- Field that represents a friendly name in the console for the custom metric; it doesn't have to be unique\. Don't use this name as the metric identifier in the device metric report\. Can be updated\.   
+ The friendly name in the console for the custom metric\. This name doesn't have to be unique\. Don't use this name as the metric identifier in the device metric report\. You can update the friendly name after you define it\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricName`  <a name="cfn-iot-custommetric-metricname"></a>
- The name of the custom metric\. This will be used in the metric report submitted from the device/thing\. It shouldn't begin with `aws:`\. Cannot be updated once it's defined\.  
+ The name of the custom metric\. This will be used in the metric report submitted from the device/thing\. The name can't begin with `aws:`\. You can’t change the name after you define it\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MetricType`  <a name="cfn-iot-custommetric-metrictype"></a>
- The type of the custom metric\. Types include `string-list`, `ip-address-list`, and `number-list`\.   
+ The type of the custom metric\. Types include `string-list`, `ip-address-list`, `number-list`, and `number`\.   
+The type `number` only takes a single metric value as an input, but when you submit the metrics value in the DeviceMetrics report, you must pass it as an array with a single value\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -1,6 +1,6 @@
 # AWS::FSx::Volume OpenZFSConfiguration<a name="aws-properties-fsx-volume-openzfsconfiguration"></a>
 
-Specifies the configuration of the OpenZFS volume that you are creating\.
+Specifies the configuration of the Amazon FSx for OpenZFS volume that you are creating\.
 
 ## Syntax<a name="aws-properties-fsx-volume-openzfsconfiguration-syntax"></a>
 
@@ -42,22 +42,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-fsx-volume-openzfsconfiguration-properties"></a>
 
 `CopyTagsToSnapshots`  <a name="cfn-fsx-volume-openzfsconfiguration-copytagstosnapshots"></a>
-A Boolean value indicating whether tags for the volume should be copied to snapshots\. This value defaults to `false`\. If it's set to `true`, all tags for the volume are copied to snapshots where the user doesn't specify tags\. If this value is `true`, and you specify one or more tags, only the specified tags are copied to snapshots\. If you specify one or more tags when creating the snapshot, no tags are copied from the volume, regardless of this value\.   
+A Boolean value indicating whether tags for the volume should be copied to snapshots\. This value defaults to `false`\. If it's set to `true`, all tags for the volume are copied to snapshots where the user doesn't specify tags\. If this value is `true`, and you specify one or more tags, only the specified tags are copied to snapshots\. If you specify one or more tags when creating the snapshot, no tags are copied from the volume, regardless of this value\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataCompressionType`  <a name="cfn-fsx-volume-openzfsconfiguration-datacompressiontype"></a>
-The method used to compress the data on the volume\. Unless a compression type is specified, volumes inherit the `DataCompressionType` value of their parent volume\.  
-+  `NONE` \- Doesn't compress the data on the volume\.
-+  `ZSTD` \- Compresses the data in the volume using the Zstandard \(ZSTD\) compression algorithm\. This algorithm reduces the amount of space used on your volume and has very little impact on compute resources\.
+Specifies the method used to compress the data on the volume\. The compression type is `NONE` by default\.  
++  `NONE` \- Doesn't compress the data on the volume\. `NONE` is the default\.
++  `ZSTD` \- Compresses the data in the volume using the Zstandard \(ZSTD\) compression algorithm\. Compared to LZ4, Z\-Standard provides a better compression ratio to minimize on\-disk storage utilization\.
++  `LZ4` \- Compresses the data in the volume using the LZ4 compression algorithm\. Compared to Z\-Standard, LZ4 is less compute\-intensive and delivers higher write throughput speeds\.
 *Required*: No  
 *Type*: String  
-*Allowed values*: `NONE | ZSTD`  
+*Allowed values*: `LZ4 | NONE | ZSTD`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NfsExports`  <a name="cfn-fsx-volume-openzfsconfiguration-nfsexports"></a>
-The configuration object for mounting a Network File System \(NFS\) file system\.   
+The configuration object for mounting a Network File System \(NFS\) file system\.  
 *Required*: No  
 *Type*: [List](aws-properties-fsx-volume-openzfsconfiguration-nfsexports.md) of [NfsExports](aws-properties-fsx-volume-openzfsconfiguration-nfsexports.md)  
 *Maximum*: `1`  
@@ -70,7 +71,7 @@ The configuration object that specifies the snapshot to use as the origin of the
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ParentVolumeId`  <a name="cfn-fsx-volume-openzfsconfiguration-parentvolumeid"></a>
-The ID of the volume to use as the parent volume\.   
+The ID of the volume to use as the parent volume of the volume that you are creating\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `23`  
@@ -85,23 +86,24 @@ A Boolean value indicating whether the volume is read\-only\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StorageCapacityQuotaGiB`  <a name="cfn-fsx-volume-openzfsconfiguration-storagecapacityquotagib"></a>
-The maximum amount of storage in gibibytes \(GiB\) that the volume can use from its parent\. You can specify a quota larger than the storage on the parent volume\.  
+Sets the maximum storage size in gibibytes \(GiB\) for the volume\. You can specify a quota that is larger than the storage on the parent volume\. A volume quota limits the amount of storage that the volume can consume to the configured amount, but does not guarantee the space will be available on the parent volume\. To guarantee quota space, you must also set `StorageCapacityReservationGiB`\. To *not* specify a storage capacity quota, set this to `-1`\.   
+For more information, see [Volume properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties) in the *Amazon FSx for OpenZFS User Guide*\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `0`  
+*Minimum*: `-1`  
 *Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StorageCapacityReservationGiB`  <a name="cfn-fsx-volume-openzfsconfiguration-storagecapacityreservationgib"></a>
-The amount of storage in gibibytes \(GiB\) to reserve from the parent volume\. You can't reserve more storage than the parent volume has reserved\.  
+Specifies the amount of storage in gibibytes \(GiB\) to reserve from the parent volume\. Setting `StorageCapacityReservationGiB` guarantees that the specified amount of storage space on the parent volume will always be available for the volume\. You can't reserve more storage than the parent volume has\. To *not* specify a storage capacity reservation, set this to `0` or `-1`\. For more information, see [Volume properties](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-volumes.html#volume-properties) in the *Amazon FSx for OpenZFS User Guide*\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `0`  
+*Minimum*: `-1`  
 *Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserAndGroupQuotas`  <a name="cfn-fsx-volume-openzfsconfiguration-userandgroupquotas"></a>
-An object specifying how much storage users or groups can use on the volume\.   
+An object specifying how much storage users or groups can use on the volume\.  
 *Required*: No  
 *Type*: [List](aws-properties-fsx-volume-openzfsconfiguration-userandgroupquotas.md) of [UserAndGroupQuotas](aws-properties-fsx-volume-openzfsconfiguration-userandgroupquotas.md)  
 *Maximum*: `100`  

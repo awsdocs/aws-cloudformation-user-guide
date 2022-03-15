@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Redshift](#cfn-appflow-flow-destinationconnectorproperties-redshift)" : RedshiftDestinationProperties,
   "[S3](#cfn-appflow-flow-destinationconnectorproperties-s3)" : S3DestinationProperties,
   "[Salesforce](#cfn-appflow-flow-destinationconnectorproperties-salesforce)" : SalesforceDestinationProperties,
+  "[SAPOData](#cfn-appflow-flow-destinationconnectorproperties-sapodata)" : SAPODataDestinationProperties,
   "[Snowflake](#cfn-appflow-flow-destinationconnectorproperties-snowflake)" : SnowflakeDestinationProperties,
   "[Upsolver](#cfn-appflow-flow-destinationconnectorproperties-upsolver)" : UpsolverDestinationProperties,
   "[Zendesk](#cfn-appflow-flow-destinationconnectorproperties-zendesk)" : ZendeskDestinationProperties
@@ -34,6 +35,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     S3DestinationProperties
   [Salesforce](#cfn-appflow-flow-destinationconnectorproperties-salesforce): 
     SalesforceDestinationProperties
+  [SAPOData](#cfn-appflow-flow-destinationconnectorproperties-sapodata): 
+    SAPODataDestinationProperties
   [Snowflake](#cfn-appflow-flow-destinationconnectorproperties-snowflake): 
     SnowflakeDestinationProperties
   [Upsolver](#cfn-appflow-flow-destinationconnectorproperties-upsolver): 
@@ -72,6 +75,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The properties required to query Salesforce\.   
 *Required*: No  
 *Type*: [SalesforceDestinationProperties](aws-properties-appflow-flow-salesforcedestinationproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SAPOData`  <a name="cfn-appflow-flow-destinationconnectorproperties-sapodata"></a>
+The properties required to query SAPOData\.  
+*Required*: No  
+*Type*: [SAPODataDestinationProperties](aws-properties-appflow-flow-sapodatadestinationproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Snowflake`  <a name="cfn-appflow-flow-destinationconnectorproperties-snowflake"></a>

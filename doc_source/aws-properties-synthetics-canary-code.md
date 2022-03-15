@@ -31,11 +31,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-synthetics-canary-code-properties"></a>
 
 `Handler`  <a name="cfn-synthetics-canary-code-handler"></a>
-The entry point to use for the source code when running the canary\. This value must end with the string `.handler`\. The string is limited to 29 characters or fewer\.  
+The entry point to use for the source code when running the canary\. For canaries that use the `syn-python-selenium-1.0` runtime or a `syn-nodejs.puppeteer` runtime earlier than `syn-nodejs.puppeteer-3.4`, the handler must be specified as ` fileName.handler`\. For `syn-python-selenium-1.1`, `syn-nodejs.puppeteer-3.4`, and later runtimes, the handler can be specified as ` fileName.functionName `, or you can specify a folder where canary scripts reside as ` folder/fileName.functionName `\.  
 *Required*: Conditional  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `1024`  
+*Maximum*: `128`  
+*Pattern*: `^([0-9a-zA-Z_-]+\/)*[0-9A-Za-z_\\-]+\.[A-Za-z_][A-Za-z0-9_]*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Bucket`  <a name="cfn-synthetics-canary-code-s3bucket"></a>

@@ -33,7 +33,7 @@ A gateway that runs on AWS IoT Greengrass\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GreengrassV2`  <a name="cfn-iotsitewise-gateway-gatewayplatform-greengrassv2"></a>
-Not currently supported by AWS CloudFormation\.  
+A gateway that runs on AWS IoT Greengrass V2\.  
 *Required*: No  
 *Type*: [GreengrassV2](aws-properties-iotsitewise-gateway-greengrassv2.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

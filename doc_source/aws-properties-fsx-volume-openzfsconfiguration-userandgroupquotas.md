@@ -1,6 +1,6 @@
 # AWS::FSx::Volume UserAndGroupQuotas<a name="aws-properties-fsx-volume-openzfsconfiguration-userandgroupquotas"></a>
 
-An object specifying how much storage users or groups can use on the volume\. 
+An object specifying how much storage users or groups can use on the volume\.
 
 ## Syntax<a name="aws-properties-fsx-volume-openzfsconfiguration-userandgroupquotas-syntax"></a>
 

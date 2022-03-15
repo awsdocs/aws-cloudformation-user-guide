@@ -124,7 +124,7 @@ The Amazon Resource Name \(ARN\) of the event source\.
 `FilterCriteria`  <a name="cfn-lambda-eventsourcemapping-filtercriteria"></a>
 \(Streams and Amazon SQS\) An object that defines the filter criteria that determine whether Lambda should process an event\. For more information, see [Lambda event filtering](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html)\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [Json](aws-properties-lambda-eventsourcemapping-filtercriteria.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FunctionName`  <a name="cfn-lambda-eventsourcemapping-functionname"></a>

@@ -51,7 +51,7 @@ Default: `8080`
 A runtime environment type for building and running an App Runner service\. It represents a programming language runtime\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `NODEJS_12 | PYTHON_3`  
+*Allowed values*: `CORRETTO_11 | CORRETTO_8 | NODEJS_12 | NODEJS_14 | PYTHON_3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuntimeEnvironmentVariables`  <a name="cfn-apprunner-service-codeconfigurationvalues-runtimeenvironmentvariables"></a>

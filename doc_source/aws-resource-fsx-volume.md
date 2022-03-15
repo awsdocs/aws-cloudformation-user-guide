@@ -1,6 +1,6 @@
 # AWS::FSx::Volume<a name="aws-resource-fsx-volume"></a>
 
-Creates an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS storage volume\.
+Creates an FSx for ONTAP or Amazon FSx for OpenZFS storage volume\.
 
 ## Syntax<a name="aws-resource-fsx-volume-syntax"></a>
 
@@ -67,7 +67,7 @@ The configuration of an Amazon FSx for NetApp ONTAP volume\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OpenZFSConfiguration`  <a name="cfn-fsx-volume-openzfsconfiguration"></a>
-Specifies the configuration of the OpenZFS volume that you are creating\.  
+Specifies the configuration of the Amazon FSx for OpenZFS volume that you are creating\.  
 *Required*: No  
 *Type*: [OpenZFSConfiguration](aws-properties-fsx-volume-openzfsconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

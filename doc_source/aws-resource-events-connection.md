@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Events::Connection",
   "Properties" : {
       "[AuthorizationType](#cfn-events-connection-authorizationtype)" : String,
-      "[AuthParameters](#cfn-events-connection-authparameters)" : Json,
+      "[AuthParameters](#cfn-events-connection-authparameters)" : AuthParameters,
       "[Description](#cfn-events-connection-description)" : String,
       "[Name](#cfn-events-connection-name)" : String
     }
@@ -26,7 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Events::Connection
 Properties: 
   [AuthorizationType](#cfn-events-connection-authorizationtype): String
-  [AuthParameters](#cfn-events-connection-authparameters): Json
+  [AuthParameters](#cfn-events-connection-authparameters): 
+    AuthParameters
   [Description](#cfn-events-connection-description): String
   [Name](#cfn-events-connection-name): String
 ```
@@ -43,7 +44,7 @@ The type of authorization to use for the connection\.
 `AuthParameters`  <a name="cfn-events-connection-authparameters"></a>
 A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters to use to authorize with the endpoint\.   
 *Required*: Yes  
-*Type*: Json  
+*Type*: [AuthParameters](aws-properties-events-connection-authparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-events-connection-description"></a>

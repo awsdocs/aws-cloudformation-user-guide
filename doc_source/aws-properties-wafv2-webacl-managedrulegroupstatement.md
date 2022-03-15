@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ExcludedRules](#cfn-wafv2-webacl-managedrulegroupstatement-excludedrules)" : [ ExcludedRule, ... ],
+  "[ManagedRuleGroupConfigs](#cfn-wafv2-webacl-managedrulegroupstatement-managedrulegroupconfigs)" : [ ManagedRuleGroupConfig, ... ],
   "[Name](#cfn-wafv2-webacl-managedrulegroupstatement-name)" : String,
   "[ScopeDownStatement](#cfn-wafv2-webacl-managedrulegroupstatement-scopedownstatement)" : Statement,
   "[VendorName](#cfn-wafv2-webacl-managedrulegroupstatement-vendorname)" : String,
@@ -25,6 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ExcludedRules](#cfn-wafv2-webacl-managedrulegroupstatement-excludedrules): 
     - ExcludedRule
+  [ManagedRuleGroupConfigs](#cfn-wafv2-webacl-managedrulegroupstatement-managedrulegroupconfigs): 
+    - ManagedRuleGroupConfig
   [Name](#cfn-wafv2-webacl-managedrulegroupstatement-name): String
   [ScopeDownStatement](#cfn-wafv2-webacl-managedrulegroupstatement-scopedownstatement): 
     Statement
@@ -38,6 +41,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The rules whose actions are set to `COUNT` by the web ACL, regardless of the action that is configured in the rule\. This effectively excludes the rule from acting on web requests\.   
 *Required*: No  
 *Type*: List of [ExcludedRule](aws-properties-wafv2-webacl-excludedrule.md)  
+*Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ManagedRuleGroupConfigs`  <a name="cfn-wafv2-webacl-managedrulegroupstatement-managedrulegroupconfigs"></a>
+Additional information that's used by a managed rule group\. Most managed rule groups don't require this\.  
+Use this for the account takeover prevention managed rule group `AWSManagedRulesATPRuleSet`, to provide information about the sign\-in page of your application\.   
+You can provide multiple individual `ManagedRuleGroupConfig` objects for any rule group configuration, for example `UsernameField` and `PasswordField`\. The configuration that you provide depends on the needs of the managed rule group\. For the ATP managed rule group, you provide the following individual configuration objects: `LoginPath`, `PasswordField`, `PayloadType` and `UsernameField`\.  
+*Required*: No  
+*Type*: List of [ManagedRuleGroupConfig](aws-properties-wafv2-webacl-managedrulegroupconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-webacl-managedrulegroupstatement-name"></a>
@@ -69,3 +81,78 @@ The version of the managed rule group to use\. If you specify this, the version 
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-wafv2-webacl-managedrulegroupstatement--examples"></a>
+
+
+
+### Configure the managed rule group statement for `AWSManagedRulesATPRuleSet`<a name="aws-properties-wafv2-webacl-managedrulegroupstatement--examples--Configure_the_managed_rule_group_statement_for_AWSManagedRulesATPRuleSet_"></a>
+
+The following shows an example `ManagedRuleGroupStatement` for the AWS WAF ATP managed rule group\. The `ManagedRuleGroupConfigs` settings are provided as a number of individual `ManagedRuleGroupConfig` settings\.
+
+#### YAML<a name="aws-properties-wafv2-webacl-managedrulegroupstatement--examples--Configure_the_managed_rule_group_statement_for_AWSManagedRulesATPRuleSet_--yaml"></a>
+
+```
+ManagedRuleGroupStatement:
+  VendorName: AWS
+  Name: AWSManagedRulesATPRuleSet
+  ManagedRuleGroupConfigs:
+    - LoginPath: /api/accounts/login
+    - PayloadType: JSON
+    - PasswordField:
+        Identifier: /form/password
+    - UsernameField:
+        Identifier: /form/username
+```
+
+#### JSON<a name="aws-properties-wafv2-webacl-managedrulegroupstatement--examples--Configure_the_managed_rule_group_statement_for_AWSManagedRulesATPRuleSet_--json"></a>
+
+```
+{
+  "ManagedRuleGroupStatement": {
+    "VendorName": "AWS",
+    "Name": "AWSManagedRulesATPRuleSet",
+    "ManagedRuleGroupConfigs": [
+      {
+        "LoginPath": "/api/accounts/login"
+      },
+      {
+        "PayloadType": "JSON"
+      },
+      {
+        "PasswordField": {
+          "Identifier": "/form/password"
+        }
+      },
+      {
+        "UsernameField": {
+          "Identifier": "/form/username"
+        }
+      }
+    ]
+  }
+}
+```
+
+### Configure a standard managed rule group statement<a name="aws-properties-wafv2-webacl-managedrulegroupstatement--examples--Configure_a_standard_managed_rule_group_statement_"></a>
+
+The following shows an example `ManagedRuleGroupStatement` for a managed rule group that doesn't require additional configuration\. 
+
+#### YAML<a name="aws-properties-wafv2-webacl-managedrulegroupstatement--examples--Configure_a_standard_managed_rule_group_statement_--yaml"></a>
+
+```
+ManagedRuleGroupStatement:
+  VendorName: AWS
+  Name: AWSManagedRulesCommonRuleSet
+```
+
+#### JSON<a name="aws-properties-wafv2-webacl-managedrulegroupstatement--examples--Configure_a_standard_managed_rule_group_statement_--json"></a>
+
+```
+{
+  "ManagedRuleGroupStatement": {
+    "VendorName": "AWS",
+    "Name": "AWSManagedRulesCommonRuleSet"
+  }
+}
+```

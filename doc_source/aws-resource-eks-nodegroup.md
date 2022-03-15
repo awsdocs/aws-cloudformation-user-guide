@@ -189,7 +189,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  `{ "Ref": "myNodegroup" }` 
 
-For the Amazon EKS node group `myNodegroup`, Ref returns the physical resource ID of the node group\. For example, `<cluster_name>/<nodegroup_name>`\.
+For the Amazon EKS node group `myNodegroup`, Ref returns the physical resource ID of the node group\. For example, `cluster-name/nodegroup_name`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

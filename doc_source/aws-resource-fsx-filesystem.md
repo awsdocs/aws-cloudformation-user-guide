@@ -111,7 +111,7 @@ The ONTAP configuration properties of the FSx for ONTAP file system that you are
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OpenZFSConfiguration`  <a name="cfn-fsx-filesystem-openzfsconfiguration"></a>
-The OpenZFS configuration properties for the file system that you are creating\.  
+The Amazon FSx for OpenZFS configuration properties for the file system that you are creating\.  
 *Required*: No  
 *Type*: [OpenZFSConfiguration](aws-properties-fsx-filesystem-openzfsconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

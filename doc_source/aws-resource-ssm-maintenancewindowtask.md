@@ -285,9 +285,6 @@ Resources:
             - Install
             RebootOption:
             - NoReboot
-      MaxConcurrency: 7
-      MaxErrors: 7
-      Priority: 5
       Targets:
       - Key: WindowTargetIds
         Values:

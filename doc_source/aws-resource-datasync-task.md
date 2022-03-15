@@ -59,7 +59,7 @@ For more information about these groups, see [Working with Log Groups and Log St
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DestinationLocationArn`  <a name="cfn-datasync-task-destinationlocationarn"></a>
-The Amazon Resource Name \(ARN\) of an AWS storage resource's location\.   
+The Amazon Resource Name \(ARN\) of an AWS storage resource's location\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -122,7 +122,7 @@ The key\-value pair that represents the tag that you want to add to the resource
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the location resource ARN\. For example:
 
-`arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3`
+`arn:aws:datasync:us-east-2:111222333444:task/task-07db7abfc326c50s3`
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -135,19 +135,22 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-datasync-task-return-values-fn--getatt-fn--getatt"></a>
 
 `DestinationNetworkInterfaceArns`  <a name="DestinationNetworkInterfaceArns-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ARNs of the destination elastic network interfaces \(ENIs\) that were created for your subnet\.
 
 `ErrorCode`  <a name="ErrorCode-fn::getatt"></a>
-Errors that AWS DataSync encountered during execution of the task\. You can use this error code to help troubleshoot issues\.
+Errors encountered during task execution\. Troubleshoot issues with this error code\.
 
 `ErrorDetail`  <a name="ErrorDetail-fn::getatt"></a>
 Detailed description of an error that was encountered during the task execution\. You can use this information to help troubleshoot issues\.
+
+`SourceNetworkInterfaceArns`  <a name="SourceNetworkInterfaceArns-fn::getatt"></a>
+The ARNs of the source ENIs that were created for your subnet\.
 
 `Status`  <a name="Status-fn::getatt"></a>
 The status of the task that was described\.
 
 `TaskArn`  <a name="TaskArn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the task\.
+The ARN of the task\.
 
 ## Examples<a name="aws-resource-datasync-task--examples"></a>
 

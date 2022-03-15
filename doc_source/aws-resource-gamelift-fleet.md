@@ -77,8 +77,8 @@ A unique identifier for a build to be deployed on the new fleet\. If you are dep
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificateConfiguration`  <a name="cfn-gamelift-fleet-certificateconfiguration"></a>
-Indicates whether to generate a TLS/SSL certificate for the new fleet\. TLS certificates are used for encrypting traffic between game clients and game servers running on GameLift\. If this parameter is not set, certificate generation is disabled\. This fleet setting cannot be changed once the fleet is created\. Learn more at [Securing Client/Server Communication](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-howitworks.html#gamelift-howitworks-security)\.  
-Note: This feature requires the AWS Certificate Manager service, which is available in the AWS global partition but not in all other partitions\. When working in a partition that does not support this feature, a request for a new fleet with certificate generation results fails with a 4xx unsupported region error\.  
+Prompts GameLift to generate a TLS/SSL certificate for the fleet\. TLS certificates are used for encrypting traffic between game clients and the game servers that are running on GameLift\. By default, the `CertificateConfiguration` is set to `DISABLED`\. This property cannot be changed after the fleet is created\.   
+Note: This feature requires the AWS Certificate Manager \(ACM\) service, which is not available in all AWS regions\. When working in a region that does not support this feature, a fleet creation request with certificate generation fails with a 4xx error\.  
 *Required*: No  
 *Type*: [CertificateConfiguration](aws-properties-gamelift-fleet-certificateconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -99,7 +99,7 @@ The number of EC2 instances that you want this fleet to host\. When creating a n
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EC2InboundPermissions`  <a name="cfn-gamelift-fleet-ec2inboundpermissions"></a>
-A range of IP addresses and port settings that allow inbound traffic to connect to server processes on an Amazon GameLift server\.  
+The allowed IP address ranges and port settings that allow inbound traffic to access game sessions on this fleet\. If the fleet is hosting a custom game build, this property must be set before players can connect to game sessions\. For Realtime Servers fleets, GameLift automatically sets TCP and UDP ranges\.   
 *Required*: No  
 *Type*: List of [IpPermission](aws-properties-gamelift-fleet-ippermission.md)  
 *Maximum*: `50`  
@@ -134,21 +134,21 @@ A set of remote locations to deploy additional instances to and manage as part o
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxSize`  <a name="cfn-gamelift-fleet-maxsize"></a>
-The maximum value that is allowed for the fleet's instance count\. When creating a new fleet, GameLift automatically sets this value to "1"\. Once the fleet is active, you can change this value\.  
+The maximum number of instances that are allowed in the specified fleet location\. If this parameter is not set, the default is 1\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricGroups`  <a name="cfn-gamelift-fleet-metricgroups"></a>
-The name of an Amazon CloudWatch metric group\. A metric group aggregates the metrics for all fleets in the group\. Specify a string containing the metric group name\. You can use an existing name or use a new name to create a new metric group\. Currently, this parameter can have only one string\.   
+The name of an AWS CloudWatch metric group to add this fleet to\. A metric group is used to aggregate the metrics for multiple fleets\. You can specify an existing metric group name or set a new name to create a new metric group\. A fleet can be included in only one metric group at a time\.   
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinSize`  <a name="cfn-gamelift-fleet-minsize"></a>
-The minimum value allowed for the fleet's instance count\. When creating a new fleet, GameLift automatically sets this value to "0"\. After the fleet is active, you can change this value\.  
+The minimum number of instances that are allowed in the specified fleet location\. If this parameter is not set, the default is 0\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -163,7 +163,9 @@ A descriptive label that is associated with a fleet\. Fleet names do not need to
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NewGameSessionProtectionPolicy`  <a name="cfn-gamelift-fleet-newgamesessionprotectionpolicy"></a>
-A game session protection policy to apply to all game sessions hosted on instances in this fleet\. When protected, active game sessions cannot be terminated during a scale\-down event\. If this parameter is not set, instances in this fleet default to no protection\. You can change a fleet's protection policy to affect future game sessions on the fleet\. You can also set protection for individual game sessions\.  
+The status of termination protection for active game sessions on the fleet\. By default, this property is set to `NoProtection`\.  
++  **NoProtection** \- Game sessions can be terminated during active gameplay as a result of a scale\-down event\. 
++  **FullProtection** \- Game sessions in `ACTIVE` status cannot be terminated during a scale\-down event\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `FullProtection | NoProtection`  
@@ -192,15 +194,15 @@ A policy that limits the number of game sessions that an individual player can c
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuntimeConfiguration`  <a name="cfn-gamelift-fleet-runtimeconfiguration"></a>
-Instructions for launching server processes on each instance in the fleet\. Server processes run either a custom game build executable or a Realtime script\. The runtime configuration defines the server executables or launch script file, launch parameters, and the number of processes to run concurrently on each instance\. When creating a fleet, the runtime configuration must have at least one server process configuration; otherwise the request fails with an invalid request exception\.  
-This parameter is required unless the parameters `ServerLaunchPath` and `ServerLaunchParameters` are defined\. Runtime configuration has replaced these parameters, but fleets that use them will continue to work\.   
+Instructions for how to launch and maintain server processes on instances in the fleet\. The runtime configuration defines one or more server process configurations, each identifying a build executable or Realtime script file and the number of processes of that type to run concurrently\.   
+The `RuntimeConfiguration` parameter is required unless the fleet is being configured using the older parameters `ServerLaunchPath` and `ServerLaunchParameters`, which are still supported for backward compatibility\.
 *Required*: Conditional  
 *Type*: [RuntimeConfiguration](aws-properties-gamelift-fleet-runtimeconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScriptId`  <a name="cfn-gamelift-fleet-scriptid"></a>
-A unique identifier for a Realtime script to be deployed on a new Realtime Servers fleet\. The script must have been successfully uploaded to Amazon GameLift\. This fleet setting cannot be changed once the fleet is created\.  
-Note: It is not currently possible to use the `!Ref` command to reference a script created with a CloudFormation template for the fleet property `ScriptId`\. Instead, use `Fn::GetAtt Script.Arn` or `Fn::GetAtt Script.Id` to retrieve either of these properties as input for `ScriptId`\. Alternatively, enter a `ScriptId` string manually\.  
+The unique identifier for a Realtime configuration script to be deployed on fleet instances\. You can use either the script ID or ARN\. Scripts must be uploaded to GameLift prior to creating the fleet\. This fleet property cannot be changed later\.  
+You can't use the `!Ref` command to reference a script created with a CloudFormation template for the fleet property `ScriptId`\. Instead, use `Fn::GetAtt Script.Arn` or `Fn::GetAtt Script.Id` to retrieve either of these properties as input for `ScriptId`\. Alternatively, enter a `ScriptId` string manually\.
 *Required*: Conditional  
 *Type*: String  
 *Pattern*: `^script-\S+|^arn:.*:script\/script-\S+`  
@@ -216,10 +218,14 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Fn::GetAtt<a name="aws-resource-gamelift-fleet-return-values-fn--getatt"></a>
 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
 #### <a name="aws-resource-gamelift-fleet-return-values-fn--getatt-fn--getatt"></a>
 
 `FleetId`  <a name="FleetId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+A unique identifier for the fleet\. 
 
 ## Examples<a name="aws-resource-gamelift-fleet--examples"></a>
 
@@ -246,7 +252,7 @@ Note: the JSON example shows how to escape the slashes \(`\\`\)\.
                     "CertificateType": "DISABLED"
                 },
                 "Description": "Description of my Fleet",
-                "DesiredEc2Instances": 1,
+                "DesiredEC2Instances": 1,
                 "EC2InboundPermissions": [
                     {
                         "FromPort": 1234,
@@ -285,7 +291,12 @@ Note: the JSON example shows how to escape the slashes \(`\\`\)\.
                             "LaunchPath": "c:\\game\\TestApplicationServer.exe"
                         }
                     ]
-                }
+                },
+                "Locations": [
+                  "us-west-2",
+                  "us-east-1",
+                  "eu-west-1"
+                ]
             }
         }
     }
@@ -303,7 +314,7 @@ Resources:
       CertificateConfiguration:
         CertificateType: DISABLED
       Description: Description of my Game Fleet
-      DesiredEc2Instances: 1
+      DesiredEC2Instances: 1
       EC2InboundPermissions:
         - FromPort: 1234
           ToPort: 1324
@@ -331,6 +342,10 @@ Resources:
         ServerProcesses:
           - ConcurrentExecutions: 1
             LaunchPath: c:\game\TestApplicationServer.exe
+        Locations:
+          - Location: 'us-west-2'
+          - Location: 'us-east-1'
+          - Location: 'eu-west-1'
 ```
 
 ### Create GameLift fleet with a Script<a name="aws-resource-gamelift-fleet--examples--Create_GameLift_fleet_with_a_Script"></a>
@@ -394,7 +409,12 @@ The following example creates and configures a GameLift fleet to run Realtime Se
                         "ScriptResource",
                         "Id"
                     ]
-                }
+                },
+                "Locations": [
+                  "us-west-2",
+                  "us-east-1",
+                  "eu-west-1"
+                ]
             }
         }
     }
@@ -439,7 +459,11 @@ Resources:
         ServerProcesses:
           - ConcurrentExecutions: 1
             LaunchPath: '/local/game/myscript.js'
-      ScriptId: !GetAtt ScriptResource.Id
+      ScriptId: !GetAtt ScriptResource.Id      
+      Locations:
+          - Location: 'us-west-2'
+          - Location: 'us-east-1'
+          - Location: 'eu-west-1'
 ```
 
 ## See also<a name="aws-resource-gamelift-fleet--seealso"></a>

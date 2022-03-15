@@ -68,7 +68,7 @@ The password of the user who has the permissions to access files and folders in 
 `SecurityGroupArns`  <a name="cfn-datasync-locationfsxwindows-securitygrouparns"></a>
 The Amazon Resource Names \(ARNs\) of the security groups that are used to configure the FSx for Windows File Server file system\.  
 *Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):ec2:[a-z\-0-9]*:[0-9]{12}:security-group/.*$`  
-*Length Constraints*: Maximum length of 128\.  
+*Length constraints*: Maximum length of 128\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -116,43 +116,45 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-datasync-locationfsxwindows-return-values-fn--getatt-fn--getatt"></a>
 
 `LocationArn`  <a name="LocationArn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the specified Amazon FSx for Windows Server file system location\. 
+The ARN of the specified FSx for Windows Server file system location\.
 
 `LocationUri`  <a name="LocationUri-fn::getatt"></a>
-The URI of the specified Amazon FSx for Windows Server file system\.
+The URI of the specified FSx for Windows Server file system location\.
 
 ## Examples<a name="aws-resource-datasync-locationfsxwindows--examples"></a>
 
 
 
-### Create an Amazon FSx for Windows File Server location for DataSync<a name="aws-resource-datasync-locationfsxwindows--examples--Create_an_Amazon_FSx_for_Windows_File_Server_location_for_DataSync"></a>
+### Specify an Amazon FSx for Windows File Server location for DataSync<a name="aws-resource-datasync-locationfsxwindows--examples--Specify_an_Amazon_FSx_for_Windows_File_Server_location_for_DataSync"></a>
 
-The following example specifies an FSx for Windows File Server location to be used by DataSync, with the subdirectory `/MySubdirectory`, user `Admin` and password\.
+The following examples specify an FSx for Windows File Server location for DataSync, including the subdirectory `/MySubdirectory`, user `Admin`, and password\.
 
-#### JSON<a name="aws-resource-datasync-locationfsxwindows--examples--Create_an_Amazon_FSx_for_Windows_File_Server_location_for_DataSync--json"></a>
+#### JSON<a name="aws-resource-datasync-locationfsxwindows--examples--Specify_an_Amazon_FSx_for_Windows_File_Server_location_for_DataSync--json"></a>
 
 ```
 {
-"AWSTemplateFormatVersion": "2010-09-09",
-"Description": "Specifies an FSx for Windows File Server location for DataSync",
-"Resources": 
-{
-  "LocationFSxWindows": {
-    "Type": "AWS::DataSync::LocationFSxWindows",
-    "Properties": {
-      "FsxFilesystemArn": "arn:aws:fsx:us-east-2:111222333444:file-system/fs-12345fsx",
-      "SecurityGroupArns": [
-        "arn:aws:ec2:us-east-2:11122233344:security-group/sg-0117195988293d62f"
-      ],
-      "Subdirectory": "/MySubdirectory",
-      "User": "Admin",
-      "Password": {"Ref": "Password"},
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Specifies an FSx for Windows File Server location for DataSync",
+    "Resources": {
+        "LocationFSxWindows": {
+            "Type": "AWS::DataSync::LocationFSxWindows",
+            "Properties": {
+                "FsxFilesystemArn": "arn:aws:fsx:us-east-2:111222333444:file-system/fs-12345fsx",
+                "SecurityGroupArns": [
+                    "arn:aws:ec2:us-east-2:11122233344:security-group/sg-12345678901212345"
+                ],
+                "Subdirectory": "/MySubdirectory",
+                "User": "Admin",
+                "Password": {
+                    "Ref": "Password"
+                }
+            }
+        }
     }
-  }
 }
 ```
 
-#### YAML<a name="aws-resource-datasync-locationfsxwindows--examples--Create_an_Amazon_FSx_for_Windows_File_Server_location_for_DataSync--yaml"></a>
+#### YAML<a name="aws-resource-datasync-locationfsxwindows--examples--Specify_an_Amazon_FSx_for_Windows_File_Server_location_for_DataSync--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -163,7 +165,7 @@ Resources:
     Properties: 
       FsxFilesystemArn: arn:aws:fsx:us-east-2:111222333444:file-system/fs-12345fsx
       SecurityGroupArns: 
-        - arn:aws:ec2:us-east-2:11122233344:security-group/sg-0117195988293d62f
+        - arn:aws:ec2:us-east-2:11122233344:security-group/sg-12345678901212345
       Subdirectory: /MySubdirectory
       User: Admin
       Password: !Ref Password

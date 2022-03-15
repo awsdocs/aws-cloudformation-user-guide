@@ -1,6 +1,6 @@
 # AWS::FSx::Volume NfsExports<a name="aws-properties-fsx-volume-openzfsconfiguration-nfsexports"></a>
 
-The configuration object for mounting a Network File System \(NFS\) file system\. 
+The configuration object for mounting a Network File System \(NFS\) file system\.
 
 ## Syntax<a name="aws-properties-fsx-volume-openzfsconfiguration-nfsexports-syntax"></a>
 

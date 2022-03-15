@@ -2,7 +2,7 @@
 
 The subscriber to a budget notification\. The subscriber consists of a subscription type and either an Amazon SNS topic or an email address\.
 
-For example, an email subscriber would have the following parameters:
+For example, an email subscriber has the following parameters:
 + A `subscriptionType` of `EMAIL` 
 + An `address` of `example@example.com` 
 

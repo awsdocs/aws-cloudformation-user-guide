@@ -17,3 +17,4 @@ This documentation helps you understand how to apply the shared responsibility m
 + [Compliance validation for AWS CloudFormation](cloudformation-compliance.md)
 + [Configuration and vulnerability analysis in AWS CloudFormation](vulnerability-analysis-and-management.md)
 + [Security best practices for AWS CloudFormation](security-best-practices.md)
++ [AWS CloudFormation and interface VPC endpoints \(AWS PrivateLink\)](vpc-interface-endpoints.md)

@@ -27,7 +27,7 @@ There are two kinds of private extensions:
 + *Activated private extensions* – Are the local copies of third\-party extensions that you have activated for your account and region\. When you activate a third\-party public extension, CloudFormation creates a local copy of that extension in your account's registry\.
 + *Registered private extensions* – Can also activate private extensions that aren't listed in the public CloudFormation registry\. These may be extensions you've created yourself, or ones shared with you by your organization or other third party\. To use such a private extension in your account, you must first register it\. Registering the extension uploads a copy of it to the CloudFormation registry in your account and activates it\.
 
-For more information, see [Using private extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html)\.
+For more information, see [Using private extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html)\.
 
 ## Managing extensions through the CloudFormation registry<a name="registry-view"></a>
 

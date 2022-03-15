@@ -47,7 +47,7 @@ The ARN of the KMS key that Secrets Manager uses to encrypt the secret\. If you 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MasterSecretArn`  <a name="cfn-secretsmanager-rotationschedule-hostedrotationlambda-mastersecretarn"></a>
-The ARN of the secret that contains elevated credentials\. The Lambda rotation function uses this secret for the [ Alternating users rotation strategy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users)\.  
+The ARN of the secret that contains elevated credentials\. You must create the elevated secret before you can set this property\. The Lambda rotation function uses this secret for the [ Alternating users rotation strategy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -86,7 +86,7 @@ You can specify one of the following `RotationTypes`:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SuperuserSecretArn`  <a name="cfn-secretsmanager-rotationschedule-hostedrotationlambda-superusersecretarn"></a>
-The ARN of the secret that contains elevated credentials\. The Lambda rotation function uses this secret for the [ Alternating users rotation strategy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users)\.  
+The ARN of the secret that contains elevated credentials\. You must create the superuser secret before you can set this property\. The Lambda rotation function uses this secret for the [ Alternating users rotation strategy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

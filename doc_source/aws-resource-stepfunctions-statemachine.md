@@ -106,7 +106,7 @@ If you specify a name, you cannot perform updates that require replacement of th
 Determines whether a `STANDARD` or `EXPRESS` state machine is created\. The default is `STANDARD`\. You cannot update the `type` of a state machine once it has been created\. For more information on `STANDARD` and `EXPRESS` workflows, see [Standard Versus Express Workflows](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-standard-vs-express.html) in the AWS Step Functions Developer Guide\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-stepfunctions-statemachine-tags"></a>
 The list of tags to add to a resource\.  

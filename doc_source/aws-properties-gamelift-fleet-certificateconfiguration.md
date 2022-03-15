@@ -1,6 +1,6 @@
 # AWS::GameLift::Fleet CertificateConfiguration<a name="aws-properties-gamelift-fleet-certificateconfiguration"></a>
 
-Information about the use of a TLS/SSL certificate for a fleet\. TLS certificate generation is enabled at the fleet level, with one certificate generated for the fleet\. When this feature is enabled, the certificate can be retrieved using the GameLift Server SDK call `GetInstanceCertificate`\. All instances in a fleet share the same certificate\. 
+Determines whether a TLS/SSL certificate is generated for a fleet\. This feature must be enabled when creating the fleet\. All instances in a fleet share the same certificate\. The certificate can be retrieved by calling the [GameLift Server SDK](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk.html) operation `GetInstanceCertificate`\. 
 
 ## Syntax<a name="aws-properties-gamelift-fleet-certificateconfiguration-syntax"></a>
 
@@ -23,7 +23,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-gamelift-fleet-certificateconfiguration-properties"></a>
 
 `CertificateType`  <a name="cfn-gamelift-fleet-certificateconfiguration-certificatetype"></a>
-Indicates whether a TLS/SSL certificate is generated for the fleet\.   
+Indicates whether a TLS/SSL certificate is generated for a fleet\.   
+Valid values include:   
++  **GENERATED** \- Generate a TLS/SSL certificate for this fleet\.
++  **DISABLED** \- \(default\) Do not generate a TLS/SSL certificate for this fleet\. 
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `DISABLED | GENERATED`  

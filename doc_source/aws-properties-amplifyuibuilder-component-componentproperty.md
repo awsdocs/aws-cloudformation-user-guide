@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[BindingProperties](#cfn-amplifyuibuilder-component-componentproperty-bindingproperties)" : ComponentPropertyBindingProperties,
   "[Bindings](#cfn-amplifyuibuilder-component-componentproperty-bindings)" : FormBindings,
   "[CollectionBindingProperties](#cfn-amplifyuibuilder-component-componentproperty-collectionbindingproperties)" : ComponentPropertyBindingProperties,
+  "[ComponentName](#cfn-amplifyuibuilder-component-componentproperty-componentname)" : String,
   "[Concat](#cfn-amplifyuibuilder-component-componentproperty-concat)" : [ ComponentProperty, ... ],
   "[Condition](#cfn-amplifyuibuilder-component-componentproperty-condition)" : ComponentConditionProperty,
   "[Configured](#cfn-amplifyuibuilder-component-componentproperty-configured)" : Boolean,
@@ -20,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Event](#cfn-amplifyuibuilder-component-componentproperty-event)" : String,
   "[ImportedValue](#cfn-amplifyuibuilder-component-componentproperty-importedvalue)" : String,
   "[Model](#cfn-amplifyuibuilder-component-componentproperty-model)" : String,
+  "[Property](#cfn-amplifyuibuilder-component-componentproperty-property)" : String,
   "[Type](#cfn-amplifyuibuilder-component-componentproperty-type)" : String,
   "[UserAttribute](#cfn-amplifyuibuilder-component-componentproperty-userattribute)" : String,
   "[Value](#cfn-amplifyuibuilder-component-componentproperty-value)" : String
@@ -35,6 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     FormBindings
   [CollectionBindingProperties](#cfn-amplifyuibuilder-component-componentproperty-collectionbindingproperties): 
     ComponentPropertyBindingProperties
+  [ComponentName](#cfn-amplifyuibuilder-component-componentproperty-componentname): String
   [Concat](#cfn-amplifyuibuilder-component-componentproperty-concat): 
     - ComponentProperty
   [Condition](#cfn-amplifyuibuilder-component-componentproperty-condition): 
@@ -44,6 +47,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Event](#cfn-amplifyuibuilder-component-componentproperty-event): String
   [ImportedValue](#cfn-amplifyuibuilder-component-componentproperty-importedvalue): String
   [Model](#cfn-amplifyuibuilder-component-componentproperty-model): String
+  [Property](#cfn-amplifyuibuilder-component-componentproperty-property): String
   [Type](#cfn-amplifyuibuilder-component-componentproperty-type): String
   [UserAttribute](#cfn-amplifyuibuilder-component-componentproperty-userattribute): String
   [Value](#cfn-amplifyuibuilder-component-componentproperty-value): String
@@ -67,6 +71,12 @@ The information to bind the component property to form data\.
 The information to bind the component property to data at runtime\. Use this for collection components\.  
 *Required*: No  
 *Type*: [ComponentPropertyBindingProperties](aws-properties-amplifyuibuilder-component-componentpropertybindingproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ComponentName`  <a name="cfn-amplifyuibuilder-component-componentproperty-componentname"></a>
+The name of the component that is affected by an event\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Concat`  <a name="cfn-amplifyuibuilder-component-componentproperty-concat"></a>
@@ -107,6 +117,12 @@ The default value assigned to the property when the component is imported into a
 
 `Model`  <a name="cfn-amplifyuibuilder-component-componentproperty-model"></a>
 The data model to use to assign a value to the component property\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Property`  <a name="cfn-amplifyuibuilder-component-componentproperty-property"></a>
+The name of the component's property that is affected by an event\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

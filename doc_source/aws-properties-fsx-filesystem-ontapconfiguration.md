@@ -69,6 +69,7 @@ The SSD IOPS configuration for the FSx for ONTAP file system\.
 
 `EndpointIpAddressRange`  <a name="cfn-fsx-filesystem-ontapconfiguration-endpointipaddressrange"></a>
 Specifies the IP address range in which the endpoints to access your file system will be created\. By default, Amazon FSx selects an unused IP address range for you from the 198\.19\.\* range\.  
+The Endpoint IP address range you select for your file system must exist outside the VPC's CIDR range and must be at least /30 or larger\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `9`  

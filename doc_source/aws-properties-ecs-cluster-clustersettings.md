@@ -1,6 +1,6 @@
 # AWS::ECS::Cluster ClusterSettings<a name="aws-properties-ecs-cluster-clustersettings"></a>
 
-The settings to use when creating a cluster\. This parameter is used to enable CloudWatch Container Insights for a cluster\.
+The settings to use when creating a cluster\. This parameter is used to turn on CloudWatch Container Insights for a cluster\.
 
 ## Syntax<a name="aws-properties-ecs-cluster-clustersettings-syntax"></a>
 

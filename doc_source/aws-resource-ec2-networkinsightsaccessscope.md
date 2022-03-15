@@ -1,6 +1,8 @@
 # AWS::EC2::NetworkInsightsAccessScope<a name="aws-resource-ec2-networkinsightsaccessscope"></a>
 
-Describes a Network Access Scope\.
+Describes a Network Access Scope\. A Network Access Scope defines outbound \(egress\) and inbound \(ingress\) traffic patterns, including sources, destinations, paths, and traffic types\.
+
+Network Access Analyzer identifies unintended network access to your resources on AWS\. When you start an analysis on a Network Access Scope, Network Access Analyzer produces findings\. For more information, see the [Network Access Analyzer User Guide](https://docs.aws.amazon.com/vpc/latest/network-access-analyzer/)\.
 
 ## Syntax<a name="aws-resource-ec2-networkinsightsaccessscope-syntax"></a>
 

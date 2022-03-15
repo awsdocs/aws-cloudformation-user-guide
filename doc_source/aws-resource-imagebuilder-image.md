@@ -45,7 +45,7 @@ Properties:
 The Amazon Resource Name \(ARN\) of the container recipe that is used for this pipeline\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DistributionConfigurationArn`  <a name="cfn-imagebuilder-image-distributionconfigurationarn"></a>
 The Amazon Resource Name \(ARN\) of the distribution configuration\.  
@@ -106,6 +106,9 @@ Returns the Amazon Resource Name \(ARN\) of the image\. For example, `arn:aws:im
 
 `ImageId`  <a name="ImageId-fn::getatt"></a>
 Returns the AMI ID of the Amazon EC2 AMI in the Region in which you are using Image Builder\.
+
+`ImageUri`  <a name="ImageUri-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 `Name`  <a name="Name-fn::getatt"></a>
 Returns the name of the image\.

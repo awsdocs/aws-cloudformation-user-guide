@@ -56,7 +56,10 @@ If you specify `LogDestinationType` as `s3`, do not specify `DeliverLogsPermissi
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DestinationOptions`  <a name="cfn-ec2-flowlog-destinationoptions"></a>
-The destination options\.  
+The destination options\. The following options are supported:  
++ `FileFormat` \- The format for the flow log \(`plain-text` \| `parquet`\)\. The default is `plain-text`\.
++ `HiveCompatiblePartitions` \- Indicates whether to use Hive\-compatible prefixes for flow logs stored in Amazon S3 \(`true` \| `false`\)\. The default is `false`\.
++ `PerHourPartition` \- Indicates whether to partition the flow log per hour \(`true` \| `false`\)\. The default is `false`\.
 *Required*: No  
 *Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -252,7 +255,7 @@ MyDetailedFlowLogDeliveringToCloudWatchLogs:
 
 ### Publish a custom format flow log to Amazon S3 for ACCEPT traffic<a name="aws-resource-ec2-flowlog--examples--Publish_a_custom_format_flow_log_to_Amazon_S3_for_ACCEPT_traffic"></a>
 
-The following example creates a flow log for the specified subnet and captures ACCEPT traffic\. The flow log uses a custom log format \(the `LogFormat` property uses the `${field-id}` format, separated by spaces\)\. Amazon EC2 aggregates the logs over 60 second intervals, and publishes the logs to an Amazon S3 bucket that's referenced by its ARN, `MyS3Bucket.Arn`\. The flow log is created with two tags\.
+The following example creates a flow log for the specified subnet and captures ACCEPT traffic\. The flow log uses a custom log format \(the `LogFormat` property uses the `${field-id}` format, separated by spaces\)\. Amazon EC2 aggregates the logs over 60 second intervals, and publishes the logs to an Amazon S3 bucket that's referenced by its ARN, `MyS3Bucket.Arn`\. The logs are published in parquet format in Hive\-compatible prefixes partitioned on an hourly basis\. The flow log is created with two tags\.
 
 #### JSON<a name="aws-resource-ec2-flowlog--examples--Publish_a_custom_format_flow_log_to_Amazon_S3_for_ACCEPT_traffic--json"></a>
 
@@ -275,6 +278,11 @@ The following example creates a flow log for the specified subnet and captures A
       "LogDestinationType": "s3",
       "LogFormat": "${version} ${vpc-id} ${subnet-id} ${instance-id} ${srcaddr} ${dstaddr} ${srcport} ${dstport} ${protocol} ${tcp-flags} ${type} ${pkt-srcaddr} ${pkt-dstaddr}",
       "MaxAggregationInterval": 60,
+      "DestinationOptions": {
+        "FileFormat": "parquet",
+        "HiveCompatiblePartitions": true,
+        "PerHourPartition": true
+      },
       "Tags": [
         {
           "Key": "Name",
@@ -303,11 +311,13 @@ MyFlowLogDeliveringToS3:
     LogDestinationType: s3
     LogFormat: '${version} ${vpc-id} ${subnet-id} ${instance-id} ${srcaddr} ${dstaddr} ${srcport} ${dstport} ${protocol} ${tcp-flags} ${type} ${pkt-srcaddr} ${pkt-dstaddr}'
     MaxAggregationInterval: 60
+    DestinationOptions:
+      - FileFormat: "parquet"
+        HiveCompatiblePartitions: true
+        PerHousePartition: true
     Tags:
-      -
-        Key: Name
+      - Key: Name
         Value: FlowLogForSubnetB
-      -
-        Key: Purpose
+      - Key: Purpose
         Value: AcceptTraffic
 ```

@@ -79,7 +79,7 @@ Allows you to specify a customer\-managed key for the replica\. When using custo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableClass`  <a name="cfn-dynamodb-globaltable-replicaspecification-tableclass"></a>
-Not currently supported by AWS CloudFormation\.  
+The table class of the specified table\. Valid values are `STANDARD` and `STANDARD_INFREQUENT_ACCESS`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

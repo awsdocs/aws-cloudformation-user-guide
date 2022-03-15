@@ -66,7 +66,7 @@ The IDs of one or more subnets to remove\.
 
 `SubnetIds`  <a name="cfn-ec2-transitgatewayvpcattachment-subnetids"></a>
 The IDs of the subnets\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -78,13 +78,13 @@ The tags for the VPC attachment\.
 
 `TransitGatewayId`  <a name="cfn-ec2-transitgatewayvpcattachment-transitgatewayid"></a>
 The ID of the transit gateway\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcId`  <a name="cfn-ec2-transitgatewayvpcattachment-vpcid"></a>
 The ID of the VPC\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
