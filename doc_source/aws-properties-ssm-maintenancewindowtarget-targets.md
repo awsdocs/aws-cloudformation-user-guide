@@ -39,7 +39,7 @@ User\-defined criteria for sending commands that target managed nodes that meet 
 `Values`  <a name="cfn-ssm-maintenancewindowtarget-targets-values"></a>
 User\-defined criteria that maps to `Key`\. For example, if you specified `tag:ServerRole`, you could specify `value:WebServer` to run a command on instances that include EC2 tags of `ServerRole,WebServer`\.
 Depending on the type of target, the maximum number of values for a key might be lower than the global maximum of 50\.
-You can target all values of a particular key by specifying a `*` for `Values`\.
+You can target all values of a particular key by specifying `Key=tag-key` and `Values=Name,Instance-Type,CostCenter`, where `Name`, `Instance-Type`, and `CostCenter` could be the Tag Keys assigned to the EC2 instances,
 *Required*: Yes
 *Type*: List of String
 *Maximum*: `50`
