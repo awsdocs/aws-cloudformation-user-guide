@@ -2,8 +2,6 @@
 
 A key\-value pair that describes a required claim in the identity token\. If set, each claim is verified to be present in the token with a matching value\.
 
-This resource isn't available in all AWS Regions\.
-
 ## Syntax<a name="aws-properties-eks-identityproviderconfig-requiredclaim-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

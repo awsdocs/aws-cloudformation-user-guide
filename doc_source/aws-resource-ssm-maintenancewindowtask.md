@@ -213,7 +213,7 @@ The following example creates a maintenance window Run Command task that install
                                 "NoReboot"
                             ]
                         }
-                    },
+                    }
                 },
                 "Targets": [
                     {

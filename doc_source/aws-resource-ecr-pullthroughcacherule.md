@@ -31,7 +31,7 @@ Properties:
 
 `EcrRepositoryPrefix`  <a name="cfn-ecr-pullthroughcacherule-ecrrepositoryprefix"></a>
 The Amazon ECR repository prefix associated with the pull through cache rule\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `2`  
 *Maximum*: `20`  
@@ -40,18 +40,9 @@ The Amazon ECR repository prefix associated with the pull through cache rule\.
 
 `UpstreamRegistryUrl`  <a name="cfn-ecr-pullthroughcacherule-upstreamregistryurl"></a>
 The upstream registry URL associated with the pull through cache rule\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-## Return values<a name="aws-resource-ecr-pullthroughcacherule-return-values"></a>
-
-### Fn::GetAtt<a name="aws-resource-ecr-pullthroughcacherule-return-values-fn--getatt"></a>
-
-#### <a name="aws-resource-ecr-pullthroughcacherule-return-values-fn--getatt-fn--getatt"></a>
-
-`RegistryId`  <a name="RegistryId-fn::getatt"></a>
-The account ID of the private registry\.
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-resource-ecr-pullthroughcacherule--examples"></a>
 

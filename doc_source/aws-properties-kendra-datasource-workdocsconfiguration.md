@@ -45,21 +45,21 @@ The default is set to `FALSE`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExclusionPatterns`  <a name="cfn-kendra-datasource-workdocsconfiguration-exclusionpatterns"></a>
-A list of regular expression patterns to exclude certain files in your Amazon WorkDocs site repository\. Files that match the patterns are excluded from the index\. Files that don’t match the patterns are included in the index\. If a file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes precedence and the file isn’t included in the index\.  
+A list of regular expression patterns to exclude certain files in your Amazon WorkDocs site repository\. Files that match the patterns are excluded from the index\. Files that don’t match the patterns are included in the index\. If a file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the file isn't included in the index\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldMappings`  <a name="cfn-kendra-datasource-workdocsconfiguration-fieldmappings"></a>
-A list of `DataSourceToIndexFieldMapping` objects that map Amazon WorkDocs field names to custom index field names in Amazon Kendra\. You must first create the custom index fields using the `UpdateIndex` API before you map to Amazon WorkDocs fields\. For more information, see [Mapping Data Source Fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html)\. The Amazon WorkDocs data source field names need to exist in your Amazon WorkDocs custom metadata\.  
+A list of `DataSourceToIndexFieldMapping` objects that map Amazon WorkDocs data source attributes or field names to Amazon Kendra index field names\. To create custom fields, use the `UpdateIndex` API before you map to Amazon WorkDocs fields\. For more information, see [Mapping data source fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html)\. The Amazon WorkDocs data source field names must exist in your Amazon WorkDocs custom metadata\.  
 *Required*: No  
 *Type*: List of [DataSourceToIndexFieldMapping](aws-properties-kendra-datasource-datasourcetoindexfieldmapping.md)  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InclusionPatterns`  <a name="cfn-kendra-datasource-workdocsconfiguration-inclusionpatterns"></a>
-A list of regular expression patterns to include certain files in your Amazon WorkDocs site repository\. Files that match the patterns are included in the index\. Files that don't match the patterns are excluded from the index\. If a file matches both an inclusion pattern and an exclusion pattern, the exclusion pattern takes precedence and the file isn’t included in the index\.  
+A list of regular expression patterns to include certain files in your Amazon WorkDocs site repository\. Files that match the patterns are included in the index\. Files that don't match the patterns are excluded from the index\. If a file matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the file isn't included in the index\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `100`  
@@ -76,9 +76,7 @@ You can find the organization ID in the [AWS Directory Service](https://console.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UseChangeLog`  <a name="cfn-kendra-datasource-workdocsconfiguration-usechangelog"></a>
- `TRUE` to use the change logs to update documents in your index instead of scanning all documents\.  
-If you are syncing your Amazon WorkDocs data source with your index for the first time, all documents are scanned\. After your first sync, you can use the change logs to update your documents in your index for future syncs\.  
-The default is set to `FALSE`\.  
+ `TRUE` to use the Amazon WorkDocs change log to determine which documents require updating in the index\. Depending on the change log's size, it may take longer for Amazon Kendra to use the change log than to scan all of your documents in Amazon WorkDocs\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

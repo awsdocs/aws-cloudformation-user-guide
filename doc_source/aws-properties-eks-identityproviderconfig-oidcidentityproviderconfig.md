@@ -1,8 +1,6 @@
 # AWS::EKS::IdentityProviderConfig OidcIdentityProviderConfig<a name="aws-properties-eks-identityproviderconfig-oidcidentityproviderconfig"></a>
 
-An object that represents the configuration for an OpenID Connect \(OIDC\) identity provider\.
-
-This resource isn't available in all AWS Regions\.
+An object that represents the configuration for an OpenID Connect \(OIDC\) identity provider\. 
 
 ## Syntax<a name="aws-properties-eks-identityproviderconfig-oidcidentityproviderconfig-syntax"></a>
 

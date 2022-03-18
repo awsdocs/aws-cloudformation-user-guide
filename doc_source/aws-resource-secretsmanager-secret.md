@@ -1,10 +1,10 @@
 # AWS::SecretsManager::Secret<a name="aws-resource-secretsmanager-secret"></a>
 
-Creates a new secret\. A *secret* is a set of credentials, such as a user name and password, that you store in an encrypted form in Secrets Manager\. The secret also includes the connection information to access a database or other service, which Secrets Manager doesn't encrypt\. A secret in Secrets Manager consists of both the protected secret data and the important information needed to manage the secret\.
+Creates a new secret\. A *secret* can be a password, a set of credentials such as a user name and password, an OAuth token, or other secet information that you store in an encrypted form in Secrets Manager\.
 
-For information about creating a secret in the console, see [Create a secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_create-basic-secret.html)\.
+For information about creating a secret in the console, see [Create a secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_create-basic-secret.html)\. For information about creating a secret using the CLI or SDK, see [CreateSecret](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html)\.
 
-For information about creating a secret using the CLI or SDK, see [CreateSecret](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html)\.
+For information about retrieving a secret from Secrets Manager, see [Retrieve secrets from Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/retrieving-secrets.html)\.
 
 To specify the encrypted value for the secret, you must include either the `GenerateSecretString` or the `SecretString` property, but not both\. We recommend that you use the `GenerateSecretString` property to generate a random password as shown in the examples\. You can't generate a secret with a `SecretBinary` secret value using AWS CloudFormation\.
 

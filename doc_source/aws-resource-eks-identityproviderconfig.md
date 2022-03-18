@@ -4,8 +4,6 @@ Associate an identity provider configuration to a cluster\.
 
 If you want to authenticate identities using an identity provider, you can create an identity provider configuration and associate it to your cluster\. After configuring authentication to your cluster you can create Kubernetes `roles` and `clusterroles` to assign permissions to the roles, and then bind the roles to the identities using Kubernetes `rolebindings` and `clusterrolebindings`\. For more information see [Using RBAC Authorization](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) in the Kubernetes documentation\.
 
-This resource isn't available in all AWS Regions\.
-
 ## Syntax<a name="aws-resource-eks-identityproviderconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -111,7 +109,7 @@ The following example creates a an identity provider config\. If you're not crea
 ```
 {
   "EKSIdpConfig": {
-    "DependsOn": "EKSFargateProfile"
+    "DependsOn": "EKSFargateProfile",
     "Type": "AWS::EKS::IdentityProviderConfig",
     "Properties": {
       "ClusterName": "my-cluster",

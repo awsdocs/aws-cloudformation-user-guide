@@ -27,12 +27,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `BotAliasLocaleSetting`  <a name="cfn-lex-botalias-botaliaslocalesettingsitem-botaliaslocalesetting"></a>
 Specifies settings that are unique to a locale\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [BotAliasLocaleSettings](aws-properties-lex-botalias-botaliaslocalesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LocaleId`  <a name="cfn-lex-botalias-botaliaslocalesettingsitem-localeid"></a>
 The unique identifier of the locale\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

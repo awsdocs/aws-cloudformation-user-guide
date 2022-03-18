@@ -12,6 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[CustomizedCapacityMetricSpecification](#cfn-autoscaling-scalingpolicy-predictivescalingmetricspecification-customizedcapacitymetricspecification)" : PredictiveScalingCustomizedCapacityMetric,
+  "[CustomizedLoadMetricSpecification](#cfn-autoscaling-scalingpolicy-predictivescalingmetricspecification-customizedloadmetricspecification)" : PredictiveScalingCustomizedLoadMetric,
+  "[CustomizedScalingMetricSpecification](#cfn-autoscaling-scalingpolicy-predictivescalingmetricspecification-customizedscalingmetricspecification)" : PredictiveScalingCustomizedScalingMetric,
   "[PredefinedLoadMetricSpecification](#cfn-autoscaling-scalingpolicy-predictivescalingmetricspecification-predefinedloadmetricspecification)" : PredictiveScalingPredefinedLoadMetric,
   "[PredefinedMetricPairSpecification](#cfn-autoscaling-scalingpolicy-predictivescalingmetricspecification-predefinedmetricpairspecification)" : PredictiveScalingPredefinedMetricPair,
   "[PredefinedScalingMetricSpecification](#cfn-autoscaling-scalingpolicy-predictivescalingmetricspecification-predefinedscalingmetricspecification)" : PredictiveScalingPredefinedScalingMetric,
@@ -22,6 +25,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-autoscaling-scalingpolicy-predictivescalingmetricspecification-syntax.yaml"></a>
 
 ```
+  [CustomizedCapacityMetricSpecification](#cfn-autoscaling-scalingpolicy-predictivescalingmetricspecification-customizedcapacitymetricspecification): 
+    PredictiveScalingCustomizedCapacityMetric
+  [CustomizedLoadMetricSpecification](#cfn-autoscaling-scalingpolicy-predictivescalingmetricspecification-customizedloadmetricspecification): 
+    PredictiveScalingCustomizedLoadMetric
+  [CustomizedScalingMetricSpecification](#cfn-autoscaling-scalingpolicy-predictivescalingmetricspecification-customizedscalingmetricspecification): 
+    PredictiveScalingCustomizedScalingMetric
   [PredefinedLoadMetricSpecification](#cfn-autoscaling-scalingpolicy-predictivescalingmetricspecification-predefinedloadmetricspecification): 
     PredictiveScalingPredefinedLoadMetric
   [PredefinedMetricPairSpecification](#cfn-autoscaling-scalingpolicy-predictivescalingmetricspecification-predefinedmetricpairspecification): 
@@ -32,6 +41,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-autoscaling-scalingpolicy-predictivescalingmetricspecification-properties"></a>
+
+`CustomizedCapacityMetricSpecification`  <a name="cfn-autoscaling-scalingpolicy-predictivescalingmetricspecification-customizedcapacitymetricspecification"></a>
+The customized capacity metric specification\.  
+*Required*: No  
+*Type*: [PredictiveScalingCustomizedCapacityMetric](aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedcapacitymetric.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomizedLoadMetricSpecification`  <a name="cfn-autoscaling-scalingpolicy-predictivescalingmetricspecification-customizedloadmetricspecification"></a>
+The customized load metric specification\.  
+*Required*: No  
+*Type*: [PredictiveScalingCustomizedLoadMetric](aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedloadmetric.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomizedScalingMetricSpecification`  <a name="cfn-autoscaling-scalingpolicy-predictivescalingmetricspecification-customizedscalingmetricspecification"></a>
+The customized scaling metric specification\.  
+*Required*: No  
+*Type*: [PredictiveScalingCustomizedScalingMetric](aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedscalingmetric.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PredefinedLoadMetricSpecification`  <a name="cfn-autoscaling-scalingpolicy-predictivescalingmetricspecification-predefinedloadmetricspecification"></a>
 The load metric specification\.  

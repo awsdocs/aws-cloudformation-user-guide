@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DestinationConfig](#cfn-lambda-eventsourcemapping-destinationconfig)" : DestinationConfig,
       "[Enabled](#cfn-lambda-eventsourcemapping-enabled)" : Boolean,
       "[EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn)" : String,
-      "[FilterCriteria](#cfn-lambda-eventsourcemapping-filtercriteria)" : Json,
+      "[FilterCriteria](#cfn-lambda-eventsourcemapping-filtercriteria)" : FilterCriteria,
       "[FunctionName](#cfn-lambda-eventsourcemapping-functionname)" : String,
       "[FunctionResponseTypes](#cfn-lambda-eventsourcemapping-functionresponsetypes)" : [ String, ... ],
       "[MaximumBatchingWindowInSeconds](#cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds)" : Integer,
@@ -54,7 +54,8 @@ Properties:
     DestinationConfig
   [Enabled](#cfn-lambda-eventsourcemapping-enabled): Boolean
   [EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn): String
-  [FilterCriteria](#cfn-lambda-eventsourcemapping-filtercriteria): Json
+  [FilterCriteria](#cfn-lambda-eventsourcemapping-filtercriteria): 
+    FilterCriteria
   [FunctionName](#cfn-lambda-eventsourcemapping-functionname): String
   [FunctionResponseTypes](#cfn-lambda-eventsourcemapping-functionresponsetypes): 
     - String
@@ -124,7 +125,7 @@ The Amazon Resource Name \(ARN\) of the event source\.
 `FilterCriteria`  <a name="cfn-lambda-eventsourcemapping-filtercriteria"></a>
 \(Streams and Amazon SQS\) An object that defines the filter criteria that determine whether Lambda should process an event\. For more information, see [Lambda event filtering](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html)\.  
 *Required*: No  
-*Type*: [Json](aws-properties-lambda-eventsourcemapping-filtercriteria.md)  
+*Type*: [FilterCriteria](aws-properties-lambda-eventsourcemapping-filtercriteria.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FunctionName`  <a name="cfn-lambda-eventsourcemapping-functionname"></a>
@@ -217,7 +218,7 @@ The position in a stream from which to start reading\. Required for Amazon Kines
 With `StartingPosition` set to `AT_TIMESTAMP`, the time from which to start reading, in Unix time seconds\.  
 *Required*: No  
 *Type*: Double  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Topics`  <a name="cfn-lambda-eventsourcemapping-topics"></a>
 The name of the Kafka topic\.  
