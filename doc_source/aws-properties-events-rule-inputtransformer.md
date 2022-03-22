@@ -179,5 +179,6 @@ InputTransformer:
          "instance" : <instance>,
          "state" : <state>,
          "instanceStatus": "instance \"<instance>\" is in <state>"
-      } - ( Domain: !Ref RootDomainName )
+      }
+    - Domain: !Ref RootDomainName
 ```
