@@ -145,4 +145,4 @@ Returns the name of the stack as specified with the `aws cloudformation create-s
 
 ## `AWS::URLSuffix`<a name="cfn-pseudo-param-urlsuffix"></a>
 
-Returns the suffix for a domain\. The suffix is typically `amazonaws.com`, but might differ by Region\. For example, the suffix for the China \(Beijing\) Region is `amazonaws.com.cn`\.
+Returns the suffix for a domain\. The suffix is typically `amazonaws.com`, but might differ by Region\. For example, the suffix for the China \(Beijing\) Region is `amazonaws.com.cn`\. The suffix for the US-GovCloud Region is `amazonaws.com` (same as standard AWS region)\.
