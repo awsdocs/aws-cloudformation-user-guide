@@ -53,7 +53,7 @@ The name of the Auto Scaling group\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceReusePolicy`  <a name="cfn-autoscaling-warmpool-instancereusepolicy"></a>
-Not currently supported by AWS CloudFormation\.  
+Indicates whether instances in the Auto Scaling group can be returned to the warm pool on scale in\. The default is to terminate instances in the Auto Scaling group when the group scales in\.  
 *Required*: No  
 *Type*: [InstanceReusePolicy](aws-properties-autoscaling-warmpool-instancereusepolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -79,12 +79,14 @@ Specifies the minimum number of instances to maintain in the warm pool\. This he
 Sets the instance state to transition to after the lifecycle actions are complete\. Default is `Stopped`\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `Running | Stopped`  
+*Allowed values*: `Hibernated | Running | Stopped`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Remarks<a name="aws-resource-autoscaling-warmpool--remarks"></a>
 
-CloudFormation won't mark the warm pool as successful \(by setting its status to CREATE\_COMPLETE\) if there are lifecycle hooks that haven't been completed\. If the state of an instance is `Warmed:Pending:Wait`, the lifeycle hook is not considered complete\. For more information, see [Warm pool instance lifecycle](https://docs.aws.amazon.com/autoscaling/ec2/userguide/warm-pool-instance-lifecycle.html) and [Amazon EC2 Auto Scaling lifecycle hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+CloudFormation won't mark the warm pool as successful \(by setting its status to CREATE\_COMPLETE\) if there are lifecycle hooks that haven't been completed\. If the state of an instance is `Warmed:Pending:Wait`, the lifeycle hook is not considered complete\. For more information, see [Using lifecycle hooks with a warm pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/warm-pool-instance-lifecycle.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+
+If you want to hibernate instances on scale in and there are existing instances in the Auto Scaling group, they must meet the requirements for instance hibernation\. If they don't, when instances return to the warm pool, they will fallback to being stopped instead of being hibernated\.
 
 ## Examples<a name="aws-resource-autoscaling-warmpool--examples"></a>
 

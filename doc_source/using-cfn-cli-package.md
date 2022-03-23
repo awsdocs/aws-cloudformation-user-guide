@@ -55,7 +55,7 @@ The command saves the template that it generates to the path specified by the `-
       "Properties": {
         "Handler": "index.handler",
         "Runtime": "nodejs8.10",
-        "CodeUri": "s3://mybucket/lambdafunction.zip"
+        "CodeUri": "s3://mybucket/<md5 checksum>"
       }
     }
   }

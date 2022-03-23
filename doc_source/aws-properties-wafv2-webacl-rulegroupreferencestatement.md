@@ -2,7 +2,7 @@
 
 A rule statement used to run the rules that are defined in a [AWS::WAFv2::RuleGroup](aws-resource-wafv2-rulegroup.md)\. To use this, create a rule group with your rules, then provide the ARN of the rule group in this statement\.
 
-You cannot nest a `RuleGroupReferenceStatement`, for example for use inside a `NotStatement` or `OrStatement`\. It can only be referenced as a top\-level statement within a rule\.
+You cannot nest a `RuleGroupReferenceStatement`, for example for use inside a `NotStatement` or `OrStatement`\. You can only use a rule group reference statement at the top level inside a web ACL\. 
 
 ## Syntax<a name="aws-properties-wafv2-webacl-rulegroupreferencestatement-syntax"></a>
 
@@ -37,7 +37,8 @@ The Amazon Resource Name \(ARN\) of the entity\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcludedRules`  <a name="cfn-wafv2-webacl-rulegroupreferencestatement-excludedrules"></a>
-The names of rules that are in the referenced rule group, but that you want AWS WAF to exclude from processing for this rule statement\.   
+The rules in the referenced rule group whose actions are set to `Count`\. When you exclude a rule, AWS WAF evaluates it exactly as it would if the rule action setting were `Count`\. This is a useful option for testing the rules in a rule group without modifying how they handle your web traffic\.  
 *Required*: No  
 *Type*: List of [ExcludedRule](aws-properties-wafv2-webacl-excludedrule.md)  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

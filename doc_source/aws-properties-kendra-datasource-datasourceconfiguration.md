@@ -51,7 +51,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-datasource-datasourceconfiguration-properties"></a>
 
 `ConfluenceConfiguration`  <a name="cfn-kendra-datasource-datasourceconfiguration-confluenceconfiguration"></a>
-Provides configuration information for connecting to a Confluence data source\.  
+Provides the configuration information to connect to Confluence as your data source\.  
 *Required*: No  
 *Type*: [ConfluenceConfiguration](aws-properties-kendra-datasource-confluenceconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -63,7 +63,7 @@ Provides the configuration information to connect to a database as your data sou
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GoogleDriveConfiguration`  <a name="cfn-kendra-datasource-datasourceconfiguration-googledriveconfiguration"></a>
-Provides the configuration information to connect to Google Drive as your data source\.   
+Provides the configuration information to connect to Google Drive as your data source\.  
 *Required*: No  
 *Type*: [GoogleDriveConfiguration](aws-properties-kendra-datasource-googledriveconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

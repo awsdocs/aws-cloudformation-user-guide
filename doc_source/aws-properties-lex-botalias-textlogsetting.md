@@ -27,12 +27,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Destination`  <a name="cfn-lex-botalias-textlogsetting-destination"></a>
 Defines the Amazon CloudWatch Logs destination log group for conversation text logs\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [TextLogDestination](aws-properties-lex-botalias-textlogdestination.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-lex-botalias-textlogsetting-enabled"></a>
 Determines whether conversation logs should be stored for an alias\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

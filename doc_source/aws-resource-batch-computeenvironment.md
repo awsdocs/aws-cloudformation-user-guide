@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ComputeResources](#cfn-batch-computeenvironment-computeresources)" : ComputeResources,
       "[ServiceRole](#cfn-batch-computeenvironment-servicerole)" : String,
       "[State](#cfn-batch-computeenvironment-state)" : String,
-      "[Tags](#cfn-batch-computeenvironment-tags)" : Json,
+      "[Tags](#cfn-batch-computeenvironment-tags)" : {Key : Value, ...},
       "[Type](#cfn-batch-computeenvironment-type)" : String,
       "[UnmanagedvCpus](#cfn-batch-computeenvironment-unmanagedvcpus)" : Integer
     }
@@ -47,7 +47,8 @@ Properties:
     ComputeResources
   [ServiceRole](#cfn-batch-computeenvironment-servicerole): String
   [State](#cfn-batch-computeenvironment-state): String
-  [Tags](#cfn-batch-computeenvironment-tags): Json
+  [Tags](#cfn-batch-computeenvironment-tags): 
+    Key : Value
   [Type](#cfn-batch-computeenvironment-type): String
   [UnmanagedvCpus](#cfn-batch-computeenvironment-unmanagedvcpus): Integer
 ```
@@ -87,7 +88,7 @@ If the state is `DISABLED`, then the AWS Batch scheduler doesn't attempt to plac
 `Tags`  <a name="cfn-batch-computeenvironment-tags"></a>
 The tags applied to the compute environment\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Type`  <a name="cfn-batch-computeenvironment-type"></a>
@@ -99,7 +100,7 @@ The type of the compute environment: `MANAGED` or `UNMANAGED`\. For more informa
 
 `UnmanagedvCpus`  <a name="cfn-batch-computeenvironment-unmanagedvcpus"></a>
 The maximum number of vCPUs for an unmanaged compute environment\. This parameter is only used for fair share scheduling to reserve vCPU capacity for new share identifiers\. If this parameter isn't provided for a fair share job queue, no vCPU capacity is reserved\.  
-This parameter is only supported when the `type` parameter is set to `UNMANAGED`/
+This parameter is only supported when the `type` parameter is set to `UNMANAGED`\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -111,6 +112,17 @@ This parameter is only supported when the `type` parameter is set to `UNMANAGED`
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the compute environment ARN, such as `arn:aws:batch:us-east-1:555555555555:compute-environment/M4OnDemand`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-batch-computeenvironment-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-batch-computeenvironment-return-values-fn--getatt-fn--getatt"></a>
+
+`ComputeEnvironmentArn`  <a name="ComputeEnvironmentArn-fn::getatt"></a>
+Returns the compute environment ARN, such as `arn:aws:batch:us-east-1:111122223333:compute-environment/ComputeEnvironmentName`\.
 
 ## Examples<a name="aws-resource-batch-computeenvironment--examples"></a>
 

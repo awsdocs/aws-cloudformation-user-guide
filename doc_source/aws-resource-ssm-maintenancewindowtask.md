@@ -213,10 +213,7 @@ The following example creates a maintenance window Run Command task that install
                                 "NoReboot"
                             ]
                         }
-                    },
-                    "MaxConcurrency": 7,
-                    "MaxErrors": 7,
-                    "Priority": 5
+                    }
                 },
                 "Targets": [
                     {
@@ -285,9 +282,6 @@ Resources:
             - Install
             RebootOption:
             - NoReboot
-      MaxConcurrency: 7
-      MaxErrors: 7
-      Priority: 5
       Targets:
       - Key: WindowTargetIds
         Values:

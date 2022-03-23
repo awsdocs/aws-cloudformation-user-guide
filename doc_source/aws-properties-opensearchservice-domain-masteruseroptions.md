@@ -2,6 +2,8 @@
 
 Specifies information about the master user\.
 
+Required if if `InternalUserDatabaseEnabled` is true in `AdvancedSecurityOptions`\.
+
 ## Syntax<a name="aws-properties-opensearchservice-domain-masteruseroptions-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -33,13 +35,13 @@ ARN for the master user\. Only specify if `InternalUserDatabaseEnabled` is false
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MasterUserName`  <a name="cfn-opensearchservice-domain-masteruseroptions-masterusername"></a>
-Username for the master user\. Only specify if `InternalUserDatabaseEnabled` is true in `AdvancedSecurityOptions`\.  
+Username for the master user\. Only specify if `InternalUserDatabaseEnabled` is true in `AdvancedSecurityOptions`\. If you don't want to specify this value directly within the template, you can use a [dynamic reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html) instead\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MasterUserPassword`  <a name="cfn-opensearchservice-domain-masteruseroptions-masteruserpassword"></a>
-Password for the master user\. Only specify if `InternalUserDatabaseEnabled` is true in `AdvancedSecurityOptions`\.  
+Password for the master user\. Only specify if `InternalUserDatabaseEnabled` is true in `AdvancedSecurityOptions`\. If you don't want to specify this value directly within the template, you can use a [dynamic reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html) instead\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

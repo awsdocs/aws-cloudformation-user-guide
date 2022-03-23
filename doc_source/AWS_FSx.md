@@ -2,6 +2,3 @@
 
 **Resource types**
 + [AWS::FSx::FileSystem](aws-resource-fsx-filesystem.md)
-+ [AWS::FSx::Snapshot](aws-resource-fsx-snapshot.md)
-+ [AWS::FSx::StorageVirtualMachine](aws-resource-fsx-storagevirtualmachine.md)
-+ [AWS::FSx::Volume](aws-resource-fsx-volume.md)

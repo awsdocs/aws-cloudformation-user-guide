@@ -1,11 +1,11 @@
 # Using dynamic references to specify template values<a name="dynamic-references"></a>
 
-*Dynamic references* provide a compact, powerful way for you to specify external values that are stored and managed in other services, such as the Systems Manager Parameter Store, in your stack templates\. When you use a dynamic reference, CloudFormation retrieves the value of the specified reference when necessary during stack and change set operations\.
+*Dynamic references* provide a compact, powerful way for you to specify external values that are stored and managed in other services, such as the Systems Manager Parameter Store and AWS Secrets Manager, in your stack templates\. When you use a dynamic reference, CloudFormation retrieves the value of the specified reference when necessary during stack and change set operations\.
 
 CloudFormation currently supports the following dynamic reference patterns:
 + [`ssm`](#dynamic-references-ssm), for plaintext values stored in AWS Systems Manager Parameter Store\.
 + [`ssm-secure`](#dynamic-references-ssm-secure-strings), for secure strings stored in AWS Systems Manager Parameter Store\.
-+ [`secretsmanager`](#dynamic-references-secretsmanager), for entire secrets or specific secret values that are stored in AWS Secrets Manager\.
++ [`secretsmanager`](#dynamic-references-secretsmanager), for entire secrets or secret values stored in AWS Secrets Manager\.
 
 ## Considerations when using dynamic references<a name="dynamic-references-considerations"></a>
 
@@ -38,7 +38,7 @@ Currently, valid values include:
 Currently, SecureString parameters aren't supported by Systems Manager in the `cn-north-1` and `cn-northwest-1` regions\.
 
   For more information, see [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html) in the *AWS Systems Manager User Guide*\.
-+ `secretsmanager`: AWS Secrets Manager secret\.
++ `secretsmanager`: Secrets Manager secret\.
 
 **reference\-key**  
 The reference key\. Depending on the type of dynamic reference, the reference key may be comprised of multiple segments\.  
@@ -195,30 +195,22 @@ Resources that support the `ssm-secure` dynamic reference pattern currently incl
 
 ## Secrets Manager secrets<a name="dynamic-references-secretsmanager"></a>
 
-Use the `secretsmanager` dynamic reference to retrieve entire secrets or secret values that are stored in AWS Secrets Manager for use in your templates\. *Secrets* can be database credentials, passwords, third\-party API keys, and even arbitrary text\. Using Secrets Manager, you can store and control access to these secrets centrally\. Secrets Manager enables you to replace hardcoded credentials in your code \(including passwords\), with an API call to Secrets Manager to retrieve the secret programmatically\. For more information, see [What is AWS Secrets Manager?](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) in the *AWS Secrets Manager User Guide*\.
+Use the `secretsmanager` dynamic reference to retrieve entire secrets or secret values that are stored in Secrets Manager for use in your templates\. *Secrets* can be database credentials, passwords, third\-party API keys, or arbitrary text\. Using Secrets Manager, you can store and control access to these secrets centrally, so that you can replace hardcoded credentials in your code \(including passwords\), with an API call to Secrets Manager to retrieve the secret programmatically\. For more information, see [What is AWS Secrets Manager?](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) in the *AWS Secrets Manager User Guide*\.
 
-### Important considerations when using dynamic parameters for Secrets Manager secrets<a name="dynamic-references-secretsmanager-considerations"></a>
+### Important considerations when using dynamic references for Secrets Manager secrets<a name="dynamic-references-secretsmanager-considerations"></a>
 
-You should take the following important security considerations into account when using dynamic parameters to specify Secrets Manager secrets in your stack templates:
+You should take the following important security considerations into account when using dynamic references to specify Secrets Manager secrets in your stack templates:
 + The `secretsmanager` dynamic reference can be used in all resource properties\. Using the `secretsmanager` dynamic reference indicates that neither Secrets Manager nor CloudFormation logs should persist any resolved secret value\. However, the secret value may show up in the service whose resource it's being used in\. Review your usage to avoid leaking secret data\.
 + Updating a secret in Secrets Manager doesn't automatically update the secret in CloudFormation\. In order for CloudFormation to update a `secretsmanager` dynamic reference, you must perform a stack update that updates the resource containing the dynamic reference, either by updating the resource property that contains the `secretsmanager` dynamic reference, or updating another of the resource's properties\.
 
-  For example, suppose in your template you specify the `MasterPassword` property of an `[AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)` resource to be a `secretsmanager` dynamic reference, and then create a stack from the template\. You later update that secret's value in Secret Manager, but don't update the `AWS::RDS::DBInstance` resource in your template\. In this case, even if you perform a stack update, the secret value in the `MasterPassword` property isn't updated, and remains the previous secret value\.
+  For example, suppose in your template you specify the `MasterPassword` property of an `[AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)` resource to be a `secretsmanager` dynamic reference, and then create a stack from the template\. You later update that secret's value in Secrets Manager, but don't update the `AWS::RDS::DBInstance` resource in your template\. In this case, even if you perform a stack update, the secret value in the `MasterPassword` property isn't updated, and remains the previous secret value\.
 
-  To manage updating the secret in your template, consider using `version-id` to specify the version of your secret\. Then, when you update to the next version, update the `version-id` in your template and perform a stack update\. For example, specifying the following segments would retrieve the `password` value for the version of the MySecret secret with the version ID of `EXAMPLE1-90ab-cdef-fedc-ba987EXAMPLE`:
-
-  ```
-    '{{resolve:secretsmanager:MySecret:SecretString:password:EXAMPLE1-90ab-cdef-fedc-ba987EXAMPLE}}'
-  ```
-
-  Then, when you update the `password` value, you would need to update this segment with the new `version-id` and perform a stack update\. For more examples of using version\-id, see [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager-example)\.
-
-  Also, consider using Secrets Manager to automatically rotate the secret for a secured service or database\. For more information, see [Rotating your Secrets Manager secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html)\.
+  Also, consider using Secrets Manager to automatically rotate the secret for a secured service or database\. For more information, see [Rotate AWS Secrets Manager secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html)\.
 + Dynamic references for secure values, such as `secretsmanager`, aren't currently supported in [custom resources](template-custom-resources.md)\.
 
 ### Permissions required<a name="dynamic-references-secretsmanager-permissions"></a>
 
-To specify a secret stored in Secrets Manager, you must have access to call `[GetSecretValue](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html)` for the specified secret\.
+To specify a secret stored in Secrets Manager, you must have access to call `[GetSecretValue](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html)` for the secret\.
 
 ### Reference pattern<a name="dynamic-references-secretsmanager-pattern"></a>
 
@@ -227,7 +219,7 @@ For Secrets Manager secrets, the `reference-key` segment is composed of several 
 `{{resolve:secretsmanager:secret-id:secret-string:json-key:version-stage:version-id}}`
 
 **secret\-id**  
-The name or Amazon Resource Name \(ARN\) that serves as a unique identifier for the secret\.  
+The name or ARN of the secret\.  
 To access a secret in your AWS account, you need only specify the secret name\. To access a secret in a different AWS account, specify the complete ARN of the secret\.  
 Required\.
 
@@ -235,15 +227,15 @@ Required\.
 Currently, the only supported value is `SecretString`\. The default is `SecretString`\.
 
 **json\-key**  
-Specifies the key name of the key\-value pair whose value you want to retrieve\. If you don't specify a `json-key`, CloudFormation retrieves the entire secret text\.  
+The key name of the key\-value pair whose value you want to retrieve\. If you don't specify a `json-key`, CloudFormation retrieves the entire secret text\.  
 This segment may not include the colon character \( `:`\)\.
 
 **version\-stage**  
-Specifies the secret version that you want to retrieve by the staging label attached to the version\. Staging labels are used to keep track of different versions during the rotation process\. If you use `version-stage` then don't specify `version-id`\. If you don't specify either a version stage or a version ID, then the default is to retrieve the version with the version stage value of `AWSCURRENT`\.  
+The staging label of the version of the secret to use\. Secrets Manager uses staging labels to keep track of different versions during the rotation process\. If you use `version-stage` then don't specify `version-id`\. If you don't specify either `version-stage` or `version-id`, then the default is the `AWSCURRENT` version\.  
 This segment may not include the colon character \( `:`\)\.
 
 **version\-id**  
-Specifies the unique identifier of the version of the secret that you want to use in stack operations\. If you specify `version-id`, then don't specify `version-stage`\. If you don't specify either a version stage or a version ID, then the default is to retrieve the version with the version stage value of `AWSCURRENT`\.  
+The unique identifier of the version of the secret to use\. If you specify `version-id`, then don't specify `version-stage`\. If you don't specify either `version-stage` or `version-id`, then the default is the `AWSCURRENT` version\.  
 This segment may not include the colon character \( `:`\)\.
 
 ### Examples<a name="dynamic-references-secretsmanager-example"></a>
@@ -282,38 +274,32 @@ The following example uses the `secret-name` and `json-key` segments to retrieve
       MasterUserPassword: '{{resolve:secretsmanager:MyRDSSecret:SecretString:password}}'
 ```
 
-Specifying the following segments would retrieve the entire SecretString field for the version of the MySecret secret with the version stage value of `AWSCURRENT`\.
+Specifying the following segments would retrieve the `SecretString` for MySecret\.
 
 ```
   '{{resolve:secretsmanager:MySecret}}' or '{{resolve:secretsmanager:MySecret::::}}'
 ```
 
-Specifying the following segments would retrieve the `password` value for the version of the MySecret SecretString with the version stage value of `AWSCURRENT`\.
+Specifying the following segments would retrieve the `password` value for MySecret\.
 
 ```
   '{{resolve:secretsmanager:MySecret:SecretString:password}}'
 ```
 
-Specifying the following segments would retrieve the `password` value for the version of the MySecret secret with the version ID of `EXAMPLE1-90ab-cdef-fedc-ba987EXAMPLE`\.
+Specifying the following segments would retrieve the `SecretString` for MySecret that is in another AWS account\. You must specify the complete secret ARN to access secrets in another AWS account\.
 
 ```
-  '{{resolve:secretsmanager:MySecret:SecretString:password::EXAMPLE1-90ab-cdef-fedc-ba987EXAMPLE}}'
+  '{{resolve:secretsmanager:arn:aws:secretsmanager:us-west-2:123456789012:secret:MySecret-a1b2c3}}'
 ```
 
-Specifying the following segments would retrieve the entire SecretString for the version of the MySecret secret with the version stage value of `AWSCURRENT` from another AWS account\. Note that you must specify the complete secret ARN to access secrets in another AWS account\.
+Specifying the following segments would retrieve the `password` value for MySecret that is in another AWS account\. You must specify the complete secret ARN to access secrets in another AWS account\.
 
 ```
-  '{{resolve:secretsmanager:arn:aws:secretsmanager:us-west-2:123456789012:secret:MySecret-asd123}}'
+  '{{resolve:secretsmanager:arn:aws:secretsmanager:us-west-2:123456789012:secret:MySecret-a1b2c3:SecretString:password}}'
 ```
 
-Specifying the following segments would retrieve the `password` value for the version of the MySecret secret with the version stage value of `AWSCURRENT` from another AWS account\. Note that you must specify the complete secret ARN to access secrets in another AWS account\.
+Specifying the following segments would retrieve the `password` value for the `AWSPREVIOUS` version of MySecret\.
 
 ```
-  '{{resolve:secretsmanager:arn:aws:secretsmanager:us-west-2:123456789012:secret:MySecret-asd123:SecretString:password}}'
-```
-
-Specifying the following segments would retrieve the `password` value for the version of the MySecret secret with the version stage value of `AWSPENDING` from another AWS account\. Note that you must specify the complete secret ARN to access secrets in another AWS account\.
-
-```
-  '{{resolve:secretsmanager:arn:aws:secretsmanager:us-west-2:123456789012:secret:MySecretName-asd123:SecretString:password:AWSPENDING}}'
+  '{{resolve:secretsmanager:MySecret:SecretString:password:AWSPREVIOUS}}'
 ```

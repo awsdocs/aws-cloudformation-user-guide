@@ -68,5 +68,8 @@ For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws
 `AppSyncDomainName`  <a name="AppSyncDomainName-fn::getatt"></a>
 The domain name provided by AWS AppSync\.
 
+`DomainName`  <a name="DomainName-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 `HostedZoneId`  <a name="HostedZoneId-fn::getatt"></a>
 The ID of your Amazon Route 53 hosted zone\.

@@ -325,8 +325,8 @@ Specifies the name of the HSM configuration that contains the information the Am
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IamRoles`  <a name="cfn-redshift-cluster-iamroles"></a>
-A list of AWS Identity and Access Management \(IAM\) roles that can be used by the cluster to access other AWS services\. You must supply the IAM roles in their Amazon Resource Name \(ARN\) format\. You can supply up to 10 IAM roles in a single request\.  
-A cluster can have up to 10 IAM roles associated with it at any time\.  
+A list of AWS Identity and Access Management \(IAM\) roles that can be used by the cluster to access other AWS services\. You must supply the IAM roles in their Amazon Resource Name \(ARN\) format\.   
+The maximum number of IAM roles that you can associate is subject to a quota\. For more information, go to [Quotas and limits](https://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html) in the *Amazon Redshift Cluster Management Guide*\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -376,7 +376,7 @@ Constraints:
 + Must contain at least one uppercase letter\.
 + Must contain at least one lowercase letter\.
 + Must contain one number\.
-+ Can be any printable ASCII character \(ASCII code 33 to 126\) except ' \(single quote\), " \(double quote\), \\, /, @, or space\.
++ Can be any printable ASCII character \(ASCII code 33\-126\) except ' \(single quote\), " \(double quote\), \\, /, or @\.
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `2147483647`  

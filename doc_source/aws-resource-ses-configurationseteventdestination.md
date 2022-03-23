@@ -45,6 +45,15 @@ The event destination object\.
 *Type*: [EventDestination](aws-properties-ses-configurationseteventdestination-eventdestination.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+## Return values<a name="aws-resource-ses-configurationseteventdestination-return-values"></a>
+
+### Fn::GetAtt<a name="aws-resource-ses-configurationseteventdestination-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-ses-configurationseteventdestination-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-ses-configurationseteventdestination--examples"></a>
 
 Specifies an event destination for a configuration set\.

@@ -153,6 +153,7 @@ service-provider::service-name::data-type-name
 + [OpsWorks](AWS_OpsWorks.md)
 + [OpsWorks\-CM](AWS_OpsWorksCM.md)
 + [Panorama](AWS_Panorama.md)
++ [Personalize](AWS_Personalize.md)
 + [Amazon Pinpoint](AWS_Pinpoint.md)
 + [Amazon Pinpoint Email](AWS_PinpointEmail.md)
 + [QLDB](AWS_QLDB.md)

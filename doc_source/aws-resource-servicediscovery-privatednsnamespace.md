@@ -92,7 +92,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) of the private namespace\.
 
 `HostedZoneId`  <a name="HostedZoneId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ID for the Route 53 hosted zone that AWS Cloud Map creates when you create a namespace\.
 
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the private namespace\.

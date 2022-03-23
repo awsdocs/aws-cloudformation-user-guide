@@ -59,7 +59,7 @@ The minimum number of container instances that Amazon ECS scales in or scales ou
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Status`  <a name="cfn-ecs-capacityprovider-managedscaling-status"></a>
-Determines whether to enable managed scaling for the capacity provider\.  
+Determines whether to use managed scaling for the capacity provider\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DISABLED | ENABLED`  

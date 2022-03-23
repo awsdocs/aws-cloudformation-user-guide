@@ -65,7 +65,7 @@ A recurring daily time, in the format `HH:MM`\. `HH` is the zero\-padded hour of
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentType`  <a name="cfn-fsx-filesystem-openzfsconfiguration-deploymenttype"></a>
-Specifies the file system deployment type\. Amazon FSx for OpenZFS supports `SINGLE_AZ_1`\. `SINGLE_AZ_1` is a file system configured for a single Availability Zone \(AZ\) of redundancy\.  
+Specifies the file system deployment type\. Amazon FSx for OpenZFS supports `SINGLE_AZ_1`\. `SINGLE_AZ_1` deployment type is configured for redundancy within a single Availability Zone\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `SINGLE_AZ_1`  

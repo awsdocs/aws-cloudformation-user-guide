@@ -118,6 +118,7 @@ Specifies how you are charged for read and write throughput and how you manage c
 All replicas in your global table will have the same billing mode\. If you use `PROVISIONED` billing mode, you must provide an auto scaling configuration via the `WriteProvisionedThroughputSettings` property\. The default value of this property is `PROVISIONED`\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `PAY_PER_REQUEST | PROVISIONED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalSecondaryIndexes`  <a name="cfn-dynamodb-globaltable-globalsecondaryindexes"></a>
@@ -143,7 +144,7 @@ Local secondary indexes to be created on the table\. You can create up to five l
 Specifies the list of replicas for your global table\. The list must contain at least one element, the region where the stack defining the global table is deployed\. For example, if you define your table in a stack deployed to us\-east\-1, you must have an entry in `Replicas` with the region us\-east\-1\. You cannot remove the replica in the stack region\.  
 Adding a replica might take a few minutes for an empty table, or up to several hours for large tables\. If you want to add or remove a replica, we recommend submitting an `UpdateStack` operation containing only that change\.  
 If you add or delete a replica during an update, we recommend that you don't update any other resources\. If your stack fails to update and is rolled back while adding a new replica, you might need to manually delete the replica\.
-You can create a new global table with up to two replicas\. You can add or remove replicas after table creation, but you can only add or remove a single replica in each update\.  
+You can create a new global table with as many replicas as needed\. You can add or remove replicas after table creation, but you can only add or remove a single replica in each update\.  
 *Required*: Yes  
 *Type*: List of [ReplicaSpecification](aws-properties-dynamodb-globaltable-replicaspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -165,6 +166,9 @@ A name for the global table\. If you don't specify a name, AWS CloudFormation ge
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required*: No  
 *Type*: String  
+*Minimum*: `3`  
+*Maximum*: `255`  
+*Pattern*: `[a-zA-Z0-9_.-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TimeToLiveSpecification`  <a name="cfn-dynamodb-globaltable-timetolivespecification"></a>

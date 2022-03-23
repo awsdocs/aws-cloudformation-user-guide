@@ -130,7 +130,7 @@ The following example specifies a repository named `test-repository`\. Its polic
   "Properties": {
     "RepositoryName" : "test-repository",
     "RepositoryPolicyText" : {
-      "Version": "2008-10-17",
+      "Version": "2012-10-17",
       "Statement": [
         {
           "Sid": "AllowPushPull",

@@ -34,7 +34,7 @@ With *self\-managed* permissions, you create the IAM roles required by StackSets
 
 With *service\-managed* permissions, you can deploy stack instances to accounts managed by AWS Organizations\. Using this permissions model, you don't have to create the necessary IAM roles; StackSets creates the IAM roles on your behalf\. With this model, you can also enable automatic deployments to accounts that are added to your organization in the future\.
 
-AWS Organizations in integrated with CloudFormation and helps you centrally manage and govern your environment as you grow and scale your AWS resources\.
+AWS Organizations integrates with CloudFormation and helps you centrally manage and govern your environment as you scale and grow your AWS resources\.
 + Management account – the account that you use to create the organization\. For more information, see [AWS Organizations terminology and concepts](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#account)\.
 + Delegated administrator – a compatible AWS service can register an AWS member account in the organization as an administrator for the organization's accounts in that service\. For more information, see [AWS services that you can use with AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services_list.html)\.
 

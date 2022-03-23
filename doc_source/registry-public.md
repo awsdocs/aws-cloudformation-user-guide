@@ -61,17 +61,25 @@ The following is an example for resource type and hook extension\.
 
 ```
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "resources.cloudformation.amazonaws.com",
-        "Service": "hooks.cloudformation.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
+    "Version":"2012-10-17",
+    "Statement":[
+        {
+            "Effect":"Allow",
+            "Principal": [
+                "Service":"resources.cloudformation.amazonaws.com",
+                "Service":"hooks.cloudformation.amazonaws.com"
+            ],
+            "Action":"sts:AssumeRole",
+            "Condition":{
+                "StringEquals":{
+                    "aws:SourceAccount":"123456789012"
+                },
+                "StringLike":{
+                    "aws:SourceArn":"arn:aws:cloudformation:us-east-1:123456789012:type/resource/Organization-Service-Resource/*"
+                }
+            }
+        }
+    ]
 }
 ```
 
@@ -101,7 +109,7 @@ If multiple versions of an extension are available, you can use the **Version** 
      1. Enter the extension type alias you want to use with this extension\. The alias must follow the recommended format for the extension type\.
 
      For more information, see [Specifying aliases to refer to extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable-alias)\.
-   + If you are enabling a private resource, you can specify the IAM role for CloudFormation to assume when invoking the extension\. For more information, see [Specifying an execution role when activating extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-public-enable-execution-role)\.
+   + If you are enabling a private resource, you can specify the IAM role for CloudFormation to assume when invoking the extension\. For more information, see [Specifying an execution role when activating extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html#registry-public-enable-execution-role)\.
    + Under **Logging config**, specify logging configuration information for an extension, if desired\. For example:
 
      ```
@@ -156,7 +164,7 @@ After you've activated an extension in your account and region, you can update t
 1. From the **CloudFormation** navigation pane, under **CloudFormation registry**, select **Public extensions**\.
 
 1. From the **Actions** menu, select **Edit**, and then the appropriate editing option:
-   + To update the configuration schema, see [To specify configuration properties for an extension in the CloudFormation console](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration-procedure)
+   + To update the configuration schema, see [To specify configuration properties for an extension in the CloudFormation console](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html#registry-set-configuration-procedure)
    + To activate or deactivate automatic updates:
 
      1. Select **Edit automatic updates**\.

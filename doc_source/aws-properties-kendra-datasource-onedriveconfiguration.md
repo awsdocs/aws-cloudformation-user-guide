@@ -45,23 +45,23 @@ A Boolean value that specifies whether local groups are disabled \(`True`\) or e
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExclusionPatterns`  <a name="cfn-kendra-datasource-onedriveconfiguration-exclusionpatterns"></a>
-List of regular expressions applied to documents\. Items that match the exclusion pattern are not indexed\. If you provide both an inclusion pattern and an exclusion pattern, any item that matches the exclusion pattern isn't indexed\.   
-The exclusion pattern is applied to the file name\.  
+A list of regular expression patterns to exclude certain documents in your OneDrive\. Documents that match the patterns are excluded from the index\. Documents that don't match the patterns are included in the index\. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document isn't included in the index\.  
+The pattern is applied to the file name\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldMappings`  <a name="cfn-kendra-datasource-onedriveconfiguration-fieldmappings"></a>
-A list of `DataSourceToIndexFieldMapping` objects that map Microsoft OneDrive fields to custom fields in the Amazon Kendra index\. You must first create the index fields before you map OneDrive fields\.  
+A list of `DataSourceToIndexFieldMapping` objects that map OneDrive data source attributes or field names to Amazon Kendra index field names\. To create custom fields, use the `UpdateIndex` API before you map to OneDrive fields\. For more information, see [Mapping data source fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html)\. The OneDrive data source field names must exist in your OneDrive custom metadata\.  
 *Required*: No  
 *Type*: List of [DataSourceToIndexFieldMapping](aws-properties-kendra-datasource-datasourcetoindexfieldmapping.md)  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InclusionPatterns`  <a name="cfn-kendra-datasource-onedriveconfiguration-inclusionpatterns"></a>
-A list of regular expression patterns\. Documents that match the pattern are included in the index\. Documents that don't match the pattern are excluded from the index\. If a document matches both an inclusion pattern and an exclusion pattern, the document is not included in the index\.   
-The exclusion pattern is applied to the file name\.  
+A list of regular expression patterns to include certain documents in your OneDrive\. Documents that match the patterns are included in the index\. Documents that don't match the patterns are excluded from the index\. If a document matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the document isn't included in the index\.  
+The pattern is applied to the file name\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `100`  

@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-msk-cluster-ebsstorageinfo-properties"></a>
 
 `ProvisionedThroughput`  <a name="cfn-msk-cluster-ebsstorageinfo-provisionedthroughput"></a>
-Not currently supported by AWS CloudFormation\.  
+Specifies whether provisioned throughput is turned on and the volume throughput target\.  
 *Required*: No  
 *Type*: [ProvisionedThroughput](aws-properties-msk-cluster-provisionedthroughput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
