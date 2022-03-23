@@ -312,12 +312,12 @@ MyFlowLogDeliveringToS3:
     LogFormat: '${version} ${vpc-id} ${subnet-id} ${instance-id} ${srcaddr} ${dstaddr} ${srcport} ${dstport} ${protocol} ${tcp-flags} ${type} ${pkt-srcaddr} ${pkt-dstaddr}'
     MaxAggregationInterval: 60
     DestinationOptions:
-      - FileFormat: "parquet"
-        HiveCompatiblePartitions: true
-        PerHousePartition: true
+      FileFormat: "parquet"
+      HiveCompatiblePartitions: true
+      PerHoursPartition: true
     Tags:
-      - Key: Name
-        Value: FlowLogForSubnetB
-      - Key: Purpose
-        Value: AcceptTraffic
+      Key: Name
+      Value: FlowLogForSubnetB
+      Key: Purpose
+      Value: AcceptTraffic
 ```
