@@ -22,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Principal](#cfn-lambda-permission-principal)" : String,
       "[SourceAccount](#cfn-lambda-permission-sourceaccount)" : String,
       "[SourceArn](#cfn-lambda-permission-sourcearn)" : String
+      "[PrincipalOrgID](#cfn-lambda-permission-principalorgid)" : String
     }
 }
 ```
@@ -37,6 +38,7 @@ Properties:
   [Principal](#cfn-lambda-permission-principal): String
   [SourceAccount](#cfn-lambda-permission-sourceaccount): String
   [SourceArn](#cfn-lambda-permission-sourcearn): String
+  [PrincipalOrgID](#cfn-lambda-permission-principalorgid) : String
 ```
 
 ## Properties<a name="aws-resource-lambda-permission-properties"></a>
@@ -93,6 +95,14 @@ Note that Lambda configures the comparison using the `StringLike` operator\.
 *Required*: No  
 *Type*: String  
 *Pattern*: `arn:(aws[a-zA-Z0-9-]*):([a-zA-Z0-9\-])+:([a-z]{2}(-gov)?-[a-z]+-\d{1})?:(\d{12})?:(.*)`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`PrincipalOrgID`  <a name="cfn-lambda-permission-principalorgid"></a>
+The [organization ID](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_details.html) that allows the function to be invoked by resources within that organization\.
+Note that Lambda configures the comparison using the `StringEquals` operator\.
+*Required*: No
+*Type*: String
+*Pattern*: `o-([a-z0-9]){10}`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-resource-lambda-permission--examples"></a>
@@ -156,4 +166,20 @@ s3Permission:
     Principal: s3.amazonaws.com
     SourceAccount: !Ref 'AWS::AccountId'
     SourceArn: !GetAtt bucket.Arn
+```
+
+### Principal Organization ID Invoke Permission<a name="aws-resource-lambda-permission--examples--Organization_Invoke"></a>
+
+Grant all the resources in organization id o-xxxxxxxxxx permission to invoke a function resource named `function` created in the same template\.
+
+#### YAML<a name="aws-resource-lambda-permission--examples--Organization_Invoke--yaml"></a>
+
+```
+  orgPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !GetAtt function.Arn
+      Action: lambda:InvokeFunction
+      Principal: '*'
+      PrincipalOrgID: o-xxxxxxxxxx
 ```
