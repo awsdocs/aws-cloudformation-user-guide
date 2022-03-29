@@ -65,7 +65,7 @@ The identifier of the cluster that the instance will belong to\.
 The compute and memory capacity of the instance; for example, `db.m4.large`\. If you change the class of an instance there can be some interruption in the cluster's service\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some Interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `DBInstanceIdentifier`  <a name="cfn-docdb-dbinstance-dbinstanceidentifier"></a>
 The instance identifier\. This parameter is stored as a lowercase string\.  
