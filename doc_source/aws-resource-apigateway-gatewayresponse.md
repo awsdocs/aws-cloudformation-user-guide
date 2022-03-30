@@ -50,7 +50,7 @@ The response templates for the response\. Duplicates not allowed\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseType`  <a name="cfn-apigateway-gatewayresponse-responsetype"></a>
-The response type\. For valid values, see [GatewayResponse](https://docs.aws.amazon.com/apigateway/api-reference/resource/gateway-response/) in the *API Gateway API Reference*\.  
+The response type\. For valid values, see [GatewayResponse](https://docs.aws.amazon.com/apigateway/latest/developerguide/supported-gateway-response-types.html) in the *API Gateway API Reference*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
