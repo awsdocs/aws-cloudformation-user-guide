@@ -50,12 +50,12 @@ For more information, see [Using AWS KMS keys to encrypt Amazon EBS volumes](htt
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Iops`  <a name="cfn-autoscaling-launchconfiguration-blockdevice-iops"></a>
-The number of input/output \(I/O\) operations per second \(IOPS\) to provision for the volume\. For `gp3` and `io1` volumes, this represents the number of IOPS that are provisioned for the volume\. For `gp2` volumes, this represents the baseline performance of the volume and the rate at which the volume accumulates I/O credits for bursting\.   
+The number of input/output \(I/O\) operations per second \(IOPS\) to provision for the volume\. For `gp3`, `io1`, and `io2` volumes, this represents the number of IOPS that are provisioned for the volume\. For `gp2` volumes, this represents the baseline performance of the volume and the rate at which the volume accumulates I/O credits for bursting\.   
 The following are the supported values for each volume type:   
 +  `gp3`: 3,000\-16,000 IOPS
-+  `io1`: 100\-64,000 IOPS
-For `io1` volumes, we guarantee 64,000 IOPS only for [Instances built on the Nitro System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)\. Other instance families guarantee performance up to 32,000 IOPS\.   
- `Iops` is supported when the volume type is `gp3` or `io1` and required only when the volume type is `io1`\. \(Not used with `standard`, `gp2`, `st1`, or `sc1` volumes\.\)   
++  `io1` and `io2`: 100\-64,000 IOPS
+For `io1` and `io2` volumes, we guarantee 64,000 IOPS only for [Instances built on the Nitro System](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances)\. Other instance families guarantee performance up to 32,000 IOPS\.   
+ `Iops` is supported when the volume type is `gp3`, `io1`, or `io2` and required only when the volume type is `io1` or `io2`\. \(Not used with `standard`, `gp2`, `st1`, or `sc1` volumes\.\)   
 *Required*: Conditional  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -78,7 +78,7 @@ The throughput \(MiBps\) to provision for a `gp3` volume\.
 `VolumeSize`  <a name="cfn-autoscaling-launchconfiguration-blockdevice-volumesize"></a>
 The volume size, in GiBs\. The following are the supported volumes sizes for each volume type:   
 +  `gp2` and `gp3`: 1\-16,384
-+  `io1`: 4\-16,384
++  `io1` and `io2`: 4\-16,384
 +  `st1` and `sc1`: 125\-16,384
 +  `standard`: 1\-1,024
 You must specify either a `SnapshotId` or a `VolumeSize`\. If you specify both `SnapshotId` and `VolumeSize`, the volume size must be equal or greater than the size of the snapshot\.  
@@ -90,7 +90,7 @@ You must specify either a `SnapshotId` or a `VolumeSize`\. If you specify both `
 
 `VolumeType`  <a name="cfn-autoscaling-launchconfiguration-blockdevice-volumetype"></a>
 The volume type\. For more information, see [Amazon EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
-Valid Values: `standard` \| `io1` \| `gp2` \| `st1` \| `sc1` \| `gp3`   
+Valid Values: `standard` \| `io1` \| `io2` \| `gp2` \| `gp3` \| `st1` \| `sc1`   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
