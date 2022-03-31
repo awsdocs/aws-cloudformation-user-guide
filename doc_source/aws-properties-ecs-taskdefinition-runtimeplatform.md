@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `CpuArchitecture`  <a name="cfn-ecs-taskdefinition-runtimeplatform-cpuarchitecture"></a>
 The CPU architecture\.  
-You can run your Linux tasks on an ARM\-based platform by setting the value to `ARM64`\. This option is avaiable for tasks that run on Linuc Amazon EC2 instance or Linux containers on Fargate\.  
+You can run your Linux tasks on an ARM\-based platform by setting the value to `ARM64`\. This option is avaiable for tasks that run on Linux Amazon EC2 instance or Linux containers on Fargate\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ARM64 | X86_64`  
