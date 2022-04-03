@@ -1,4 +1,4 @@
-# AWS::Batch::JobDefinition LogConfiguration<a name="aws-properties-batch-jobdefinition-containerproperties-logconfiguration"></a>
+# AWS::Batch::JobDefinition logConfiguration<a name="aws-properties-batch-jobdefinition-containerproperties-logconfiguration"></a>
 
 Log configuration options to send to a custom log driver for the container\.
 
@@ -10,24 +10,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[LogDriver](#cfn-batch-jobdefinition-containerproperties-logconfiguration-logdriver)" : String,
-  "[Options](#cfn-batch-jobdefinition-containerproperties-logconfiguration-options)" : Json,
-  "[SecretOptions](#cfn-batch-jobdefinition-containerproperties-logconfiguration-secretoptions)" : [ Secret, ... ]
+  "[logDriver](#cfn-batch-jobdefinition-containerproperties-logconfiguration-logdriver)" : String,
+  "[options](#cfn-batch-jobdefinition-containerproperties-logconfiguration-options)" : Json,
+  "[secretOptions](#cfn-batch-jobdefinition-containerproperties-logconfiguration-secretoptions)" : [ Secret, ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-batch-jobdefinition-containerproperties-logconfiguration-syntax.yaml"></a>
 
 ```
-  [LogDriver](#cfn-batch-jobdefinition-containerproperties-logconfiguration-logdriver): String
-  [Options](#cfn-batch-jobdefinition-containerproperties-logconfiguration-options): Json
-  [SecretOptions](#cfn-batch-jobdefinition-containerproperties-logconfiguration-secretoptions): 
+  [logDriver](#cfn-batch-jobdefinition-containerproperties-logconfiguration-logdriver): String
+  [options](#cfn-batch-jobdefinition-containerproperties-logconfiguration-options): Json
+  [secretOptions](#cfn-batch-jobdefinition-containerproperties-logconfiguration-secretoptions): 
     - Secret
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-containerproperties-logconfiguration-properties"></a>
 
-`LogDriver`  <a name="cfn-batch-jobdefinition-containerproperties-logconfiguration-logdriver"></a>
+`logDriver`  <a name="cfn-batch-jobdefinition-containerproperties-logconfiguration-logdriver"></a>
 The log driver to use for the container\. The valid values listed for this parameter are log drivers that the Amazon ECS container agent can communicate with by default\.  
 The supported log drivers are `awslogs`, `fluentd`, `gelf`, `json-file`, `journald`, `logentries`, `syslog`, and `splunk`\.  
 Jobs that are running on Fargate resources are restricted to the `awslogs` and `splunk` log drivers\.  
@@ -52,13 +52,13 @@ This parameter requires version 1\.18 of the Docker Remote API or greater on you
 *Allowed values*: `awslogs | fluentd | gelf | journald | json-file | splunk | syslog`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Options`  <a name="cfn-batch-jobdefinition-containerproperties-logconfiguration-options"></a>
+`options`  <a name="cfn-batch-jobdefinition-containerproperties-logconfiguration-options"></a>
 The configuration options to send to the log driver\. This parameter requires version 1\.19 of the Docker Remote API or greater on your container instance\. To check the Docker Remote API version on your container instance, log into your container instance and run the following command: `sudo docker version | grep "Server API version"`   
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`SecretOptions`  <a name="cfn-batch-jobdefinition-containerproperties-logconfiguration-secretoptions"></a>
+`secretOptions`  <a name="cfn-batch-jobdefinition-containerproperties-logconfiguration-secretoptions"></a>
 The secrets to pass to the log configuration\. For more information, see [Specifying Sensitive Data](https://docs.aws.amazon.com/batch/latest/userguide/specifying-sensitive-data.html) in the * AWS Batch User Guide*\.  
 *Required*: No  
 *Type*: List of [Secret](aws-properties-batch-jobdefinition-secret.md)  
