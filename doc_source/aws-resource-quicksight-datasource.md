@@ -81,7 +81,7 @@ The credentials Amazon QuickSight that uses to connect to your underlying source
 
 `DataSourceId`  <a name="cfn-quicksight-datasource-datasourceid"></a>
 An ID for the data source\. This ID is unique per AWS Region for each AWS account\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -99,7 +99,7 @@ Error information from the last update or the creation of the data source\.
 
 `Name`  <a name="cfn-quicksight-datasource-name"></a>
 A display name for the data source\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
@@ -128,7 +128,7 @@ Contains a map of the key\-value pairs for the resource tag or tags assigned to 
 `Type`  <a name="cfn-quicksight-datasource-type"></a>
 The type of the data source\. To return a list of all data sources, use `ListDataSources`\.  
 Use `AMAZON_ELASTICSEARCH` for Amazon OpenSearch Service\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Allowed values*: `ADOBE_ANALYTICS | AMAZON_ELASTICSEARCH | AMAZON_OPENSEARCH | ATHENA | AURORA | AURORA_POSTGRESQL | AWS_IOT_ANALYTICS | EXASOL | GITHUB | JIRA | MARIADB | MYSQL | ORACLE | POSTGRESQL | PRESTO | REDSHIFT | S3 | SALESFORCE | SERVICENOW | SNOWFLAKE | SPARK | SQLSERVER | TERADATA | TIMESTREAM | TWITTER`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
