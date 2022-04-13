@@ -396,8 +396,8 @@ The following example defines an Amazon ECS task definition that specifies EC2 a
                         "Essential": false,
                         "dependsOn": [
                             {
-                                "ContainerName": "my-app",
-                                "Condition": "START"
+                                "containerName": "my-app",
+                                "condition": "START"
                             }
                         ],
                         "VolumesFrom": [
@@ -458,8 +458,8 @@ Resources:
             - "/bin/sh -c \"while true; do /bin/date > /var/www/my-vol/date; sleep 1; done\""
           Essential: false
           dependsOn:
-            - ContainerName: my-app
-              Condition: START
+            - containerName: my-app
+              condition: START
           VolumesFrom: 
             - 
               SourceContainer: "my-app"
