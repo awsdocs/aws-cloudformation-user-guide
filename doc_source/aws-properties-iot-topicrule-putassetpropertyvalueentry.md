@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-putassetpropertyvalueentry-properties"></a>
 
 `AssetId`  <a name="cfn-iot-topicrule-putassetpropertyvalueentry-assetid"></a>
-The ID of the AWS IoT SiteWise asset\. You must specify either a `propertyAlias` or both an `aliasId` and a `propertyId`\. Accepts substitution templates\.  
+The ID of the AWS IoT SiteWise asset\. You must specify either a `propertyAlias` or both an `assetId` and a `propertyId`\. Accepts substitution templates\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -44,13 +44,13 @@ Optional\. A unique identifier for this entry that you can define to better trac
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PropertyAlias`  <a name="cfn-iot-topicrule-putassetpropertyvalueentry-propertyalias"></a>
-The name of the property alias associated with your asset property\. You must specify either a `propertyAlias` or both an `aliasId` and a `propertyId`\. Accepts substitution templates\.  
+The name of the property alias associated with your asset property\. You must specify either a `propertyAlias` or both an `assetId` and a `propertyId`\. Accepts substitution templates\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PropertyId`  <a name="cfn-iot-topicrule-putassetpropertyvalueentry-propertyid"></a>
-The ID of the asset's property\. You must specify either a `propertyAlias` or both an `aliasId` and a `propertyId`\. Accepts substitution templates\.  
+The ID of the asset's property\. You must specify either a `propertyAlias` or both an `assetId` and a `propertyId`\. Accepts substitution templates\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
