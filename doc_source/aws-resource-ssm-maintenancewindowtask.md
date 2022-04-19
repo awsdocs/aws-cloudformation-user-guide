@@ -95,9 +95,9 @@ Although this element is listed as "Required: No", a value can be omitted only w
 For maintenance window tasks without a target specified, you can't supply a value for this option\. Instead, the system inserts a placeholder value of `1`\. This value doesn't affect the running of your task\.
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `7`  
-*Pattern*: `^([1-9][0-9]*|[0]|[1-9][0-9]%|[0-9]%|100%)$`  
+*Minimum*: `0`
+*Maximum*: `7`
+*Pattern*: `^([0-7]|[1-9][0-9]%|[0-9]%|100%)$`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ssm-maintenancewindowtask-name"></a>
