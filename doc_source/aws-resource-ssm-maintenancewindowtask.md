@@ -86,7 +86,7 @@ For maintenance window tasks without a target specified, you can't supply a valu
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `7`  
-*Pattern*: `^([1-9][0-9]*|[1-9][0-9]%|[1-9]%|100%)$`  
+*Pattern*: `^([1-7]|[1-9][0-9]%|[1-9]%|100%)$`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxErrors`  <a name="cfn-ssm-maintenancewindowtask-maxerrors"></a>
