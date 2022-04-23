@@ -37,7 +37,7 @@ A 128\-bit, 16\-byte hex value represented by a 32\-character string, used with 
 HLS encryption type\.   
 *Required*: No  
 *Type*: String  
-*Allowed values*: `AES_128 | SAMPLE_AES`
+*Allowed values*: `AES_128 | SAMPLE_AES`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SpekeKeyProvider`  <a name="cfn-mediapackage-packagingconfiguration-hlsencryption-spekekeyprovider"></a>
