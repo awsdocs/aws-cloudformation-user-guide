@@ -9,7 +9,7 @@ You aren't required to configure PrivateLink, but it's recommended\. For more in
 Before you configure VPC endpoints for CloudFormation, be aware of the following considerations\.
 + When using the VPC endpoint feature, grant access to CloudFormation\-specific S3 buckets for resources in a VPC that must respond to a custom resource request or a wait condition\.
 
-  If you use CloudFormation to create resources in a VPC with a VPC endpoint, you might need to modify your IAM endpoint policy so that it permits access to certain S3 buckets\.
+  If you use CloudFormation to create resources in a VPC with a VPC endpoint, you might need to modify your VPC endpoint policy so that it permits access to certain S3 buckets\.
 
   CloudFormation has S3 buckets in each Region to monitor responses to a [custom resource](template-custom-resources.md) request or a [wait condition](using-cfn-waitcondition.md)\. If a template includes custom resources or wait conditions in a VPC, the VPC endpoint policy must allow users to send responses to the following buckets:
   + For custom resources, permit traffic to the `cloudformation-custom-resource-response-region` bucket\. When using custom resources, region names don't contain dashes\. For example, `uswest2`\.
