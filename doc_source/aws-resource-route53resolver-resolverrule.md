@@ -150,7 +150,7 @@ The following example creates an Amazon Route 53 outbound resolver rule\.
         "Port" : "53"
       },
       {
-        "Ip" : "192.0.2.99,
+        "Ip" : "192.0.2.99",
         "Port" : "53"
       }
     ]
