@@ -76,7 +76,6 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 #### JSON<a name="aws-resource-ec2-customer-gateway--examples----json"></a>
 
-
 ```
 {
     "myCustomerGateway" : {
