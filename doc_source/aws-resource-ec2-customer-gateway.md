@@ -74,22 +74,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-#### YAML<a name="aws-resource-ec2-customer-gateway--examples----yaml"></a>
-
-```
-myCustomerGateway: 
-    Type: AWS::EC2::CustomerGateway
-    Properties: 
-        Type: ipsec.1
-        BgpAsn: 65534
-        IpAddress: 12.1.2.3
-```
-
-### <a name="aws-resource-ec2-customer-gateway--examples--"></a>
-
-
-
 #### JSON<a name="aws-resource-ec2-customer-gateway--examples----json"></a>
+
 
 ```
 {
@@ -103,6 +89,22 @@ myCustomerGateway:
     }
 }
 ```
+
+### <a name="aws-resource-ec2-customer-gateway--examples--"></a>
+
+
+#### YAML<a name="aws-resource-ec2-customer-gateway--examples----yaml"></a>
+
+```
+myCustomerGateway: 
+    Type: AWS::EC2::CustomerGateway
+    Properties: 
+        Type: ipsec.1
+        BgpAsn: 65534
+        IpAddress: 12.1.2.3
+```
+
+
 
 ## See also<a name="aws-resource-ec2-customer-gateway--seealso"></a>
 +  [CreateCustomerGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateCustomerGateway.html) in the *Amazon EC2 API Reference* 
