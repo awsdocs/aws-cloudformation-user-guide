@@ -715,7 +715,7 @@ Outputs:
           - DNSName
 ```
 
-Each output value has a name, a Value attribute that contains declaration of the value returned as the output value, and optionally a description of the value\. In the previous example, InstallURL is the string returned by a Fn::Join function call that concatenates http://, the DNS name of the resource ElasticLoadBalancer, and /wp\-admin/install\.php\. The output value would be similar to the following:
+Each output value has a name, a Value attribute that contains a declaration of the value returned as the output value, and optionally a description of the value\. In the previous example, InstallURL is the string returned by a Fn::Join function call that concatenates http://, the DNS name of the resource ElasticLoadBalancer, and /wp\-admin/install\.php\. The output value would be similar to the following:
 
 ```
 http://mywptests-elasticl-1gb51l6sl8y5v-206169572.us-east-2.elb.amazonaws.com/wp-admin/install.php
