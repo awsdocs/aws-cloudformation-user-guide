@@ -160,7 +160,7 @@ The Amazon Resource Name \(ARN\) of the real\-time log configuration that is att
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseHeadersPolicyId`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-responseheaderspolicyid"></a>
-The identifier for a response headers policy\.  
+The identifier for a response headers policy\.  For more information, see [Creating response headers policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/creating-response-headers-policies.html) or [Using the managed response headers policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-response-headers-policies.html) in the *Amazon CloudFront Developer Guide*\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
