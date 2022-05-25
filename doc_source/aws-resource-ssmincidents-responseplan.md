@@ -66,7 +66,7 @@ The human readable name of the response plan\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Engagements`  <a name="cfn-ssmincidents-responseplan-engagements"></a>
-The contacts and escalation plans that the response plan engages during an incident\.  
+The contact and escalation plan arns that the response plan engages during an incident\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `5`  
