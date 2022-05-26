@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ### JSON<a name="aws-properties-s3-bucket-syntax.json"></a>
 
-```
+```json
 {
   "Type" : "AWS::S3::Bucket",
   "Properties" : {
@@ -43,7 +43,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ### YAML<a name="aws-properties-s3-bucket-syntax.yaml"></a>
 
-```
+```json
 Type: AWS::S3::Bucket
 Properties: 
   [AccelerateConfiguration](#cfn-s3-bucket-accelerateconfiguration): 
@@ -95,7 +95,7 @@ Configures the transfer acceleration state for an Amazon S3 bucket\. For more in
 
 `AccessControl`  <a name="cfn-s3-bucket-accesscontrol"></a>
 A canned access control list \(ACL\) that grants predefined permissions to the bucket\. For more information about canned ACLs, see [Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) in the *Amazon S3 User Guide*\.  
-Be aware that the syntax for this property differs from the information provided in the *Amazon S3 User Guide*\. The AccessControl property is case\-sensitive and must be one of the following values: Private, PublicRead, PublicReadWrite, AuthenticatedRead, LogDeliveryWrite, BucketOwnerRead, BucketOwnerFullControl, or AwsExecRead\.  
+Be aware that the syntax for this property differs from the information provided in the *Amazon S3 User Guide*\. The AccessControl property is case\-sensitive and must be one of the following values: `Private`, `PublicRead`, `PublicReadWrite`, `AuthenticatedRead`, `LogDeliveryWrite`, `BucketOwnerRead`, `BucketOwnerFullControl`, or `AwsExecRead`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -263,7 +263,7 @@ The following example creates an S3 bucket with a `Retain` deletion policy\.
 
 #### JSON<a name="aws-properties-s3-bucket--examples--Create_an_S3_bucket--json"></a>
 
-```
+```json
 {
     "Resources": {
         "S3Bucket": {
@@ -279,7 +279,7 @@ The following example creates an S3 bucket with a `Retain` deletion policy\.
 
 #### YAML<a name="aws-properties-s3-bucket--examples--Create_an_S3_bucket--yaml"></a>
 
-```
+```yaml
 Resources:
   S3Bucket:
     Type: 'AWS::S3::Bucket'
@@ -294,7 +294,7 @@ The following example creates an S3 bucket and grants it permission to write to 
 
 #### JSON<a name="aws-properties-s3-bucket--examples--Associate_a_replication_configuration_IAM_role_with_an_S3_bucket--json"></a>
 
-```
+```json
 {
     "Resources": {
         "RecordServiceS3Bucket": {
@@ -460,7 +460,7 @@ The following example creates an S3 bucket and grants it permission to write to 
 
 #### YAML<a name="aws-properties-s3-bucket--examples--Associate_a_replication_configuration_IAM_role_with_an_S3_bucket--yaml"></a>
 
-```
+```yaml
 Resources:
   RecordServiceS3Bucket:
     Type: 'AWS::S3::Bucket'
@@ -548,7 +548,7 @@ This example also specifies a metrics configuration called `EntireBucket` that e
 
 #### JSON<a name="aws-properties-s3-bucket--examples--Configure_a_static_website_with_a_routing_rule--json"></a>
 
-```
+```json
 {
     "Resources": {
         "S3Bucket": {
@@ -614,7 +614,7 @@ This example also specifies a metrics configuration called `EntireBucket` that e
 
 #### YAML<a name="aws-properties-s3-bucket--examples--Configure_a_static_website_with_a_routing_rule--yaml"></a>
 
-```
+```yaml
 Resources:
   S3Bucket:
     Type: 'AWS::S3::Bucket'
@@ -656,7 +656,7 @@ The following example template shows a public S3 bucket with two cross\-origin r
 
 #### JSON<a name="aws-properties-s3-bucket--examples--Enable_cross-origin_resource_sharing--json"></a>
 
-```
+```json
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Resources": {
@@ -719,7 +719,7 @@ The following example template shows a public S3 bucket with two cross\-origin r
 
 #### YAML<a name="aws-properties-s3-bucket--examples--Enable_cross-origin_resource_sharing--yaml"></a>
 
-```
+```yaml
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   S3Bucket:
@@ -763,7 +763,7 @@ The following example template shows an S3 bucket with a lifecycle configuration
 
 #### JSON<a name="aws-properties-s3-bucket--examples--Manage_the_lifecycle_for_S3_objects--json"></a>
 
-```
+```json
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Resources": {
@@ -803,7 +803,7 @@ The following example template shows an S3 bucket with a lifecycle configuration
 
 #### YAML<a name="aws-properties-s3-bucket--examples--Manage_the_lifecycle_for_S3_objects--yaml"></a>
 
-```
+```yaml
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   S3Bucket:
@@ -831,7 +831,7 @@ The following example template creates two S3 buckets\. The `LoggingBucket` buck
 
 #### JSON<a name="aws-properties-s3-bucket--examples--Log_access_requests_for_a_specific_S3_bucket--json"></a>
 
-```
+```json
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Resources": {
@@ -867,7 +867,7 @@ The following example template creates two S3 buckets\. The `LoggingBucket` buck
 
 #### YAML<a name="aws-properties-s3-bucket--examples--Log_access_requests_for_a_specific_S3_bucket--yaml"></a>
 
-```
+```yaml
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   S3Bucket:
@@ -893,7 +893,7 @@ The following example template shows an Amazon S3 bucket with a notification con
 
 #### JSON<a name="aws-properties-s3-bucket--examples--Receive_S3_bucket_notifications_to_an_SNS_topic--json"></a>
 
-```
+```json
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Resources": {
@@ -925,7 +925,7 @@ The following example template shows an Amazon S3 bucket with a notification con
 
 #### YAML<a name="aws-properties-s3-bucket--examples--Receive_S3_bucket_notifications_to_an_SNS_topic--yaml"></a>
 
-```
+```yaml
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   S3Bucket:
@@ -948,7 +948,7 @@ The following example enables versioning and two replication rules\. The rules c
 
 #### JSON<a name="aws-properties-s3-bucket--examples--Enable_versioning_and_replicate_objects--json"></a>
 
-```
+```json
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Resources": {
@@ -987,7 +987,7 @@ The following example enables versioning and two replication rules\. The rules c
 
 #### YAML<a name="aws-properties-s3-bucket--examples--Enable_versioning_and_replicate_objects--yaml"></a>
 
-```
+```yaml
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   S3Bucket:
@@ -1016,7 +1016,7 @@ The following example specifies analytics and inventory results to be generated 
 
 #### JSON<a name="aws-properties-s3-bucket--examples--Specify_analytics_and_inventory_configurations_for_an_S3_bucket--json"></a>
 
-```
+```json
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Description": "S3 Bucket with Inventory and Analytics Configurations",
@@ -1081,7 +1081,7 @@ The following example specifies analytics and inventory results to be generated 
 
 #### YAML<a name="aws-properties-s3-bucket--examples--Specify_analytics_and_inventory_configurations_for_an_S3_bucket--yaml"></a>
 
-```
+```yaml
 AWSTemplateFormatVersion: 2010-09-09
 Description: S3 Bucket with Inventory and Analytics Configurations
 Resources:
