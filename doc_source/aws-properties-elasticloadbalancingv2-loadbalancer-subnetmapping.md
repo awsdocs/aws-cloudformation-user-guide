@@ -1,6 +1,6 @@
 # AWS::ElasticLoadBalancingV2::LoadBalancer SubnetMapping<a name="aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping"></a>
 
-Specifies a subnet to attach to an Application Load Balancer or a Network Load Balancer\.
+Specifies a subnet for a load balancer\.
 
 ## Syntax<a name="aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping-syntax"></a>
 
@@ -11,6 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AllocationId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid)" : String,
+  "[IPv6Address](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-ipv6address)" : String,
+  "[PrivateIPv4Address](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-privateipv4address)" : String,
   "[SubnetId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid)" : String
 }
 ```
@@ -19,6 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AllocationId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid): String
+  [IPv6Address](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-ipv6address): String
+  [PrivateIPv4Address](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-privateipv4address): String
   [SubnetId](#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid): String
 ```
 
@@ -26,7 +30,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AllocationId`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-allocationid"></a>
 \[Network Load Balancers\] The allocation ID of the Elastic IP address for an internet\-facing load balancer\.  
-*Required*: Yes  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IPv6Address`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-ipv6address"></a>
+\[Network Load Balancers\] The IPv6 address\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PrivateIPv4Address`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-privateipv4address"></a>
+\[Network Load Balancers\] The private IPv4 address for an internal load balancer\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

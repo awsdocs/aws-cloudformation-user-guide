@@ -2,7 +2,7 @@
 
 Specifies a specification for an Elastic GPU for an Amazon EC2 launch template\.
 
- `ElasticGpuSpecification` is a property of the [ Amazon EC2 LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html) property type\.
+ `ElasticGpuSpecification` is a property of [ AWS::EC2::LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-elasticgpuspecification-syntax"></a>
 
@@ -30,5 +30,6 @@ The type of Elastic Graphics accelerator\. For more information about the values
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-launchtemplate-elasticgpuspecification--seealso"></a>
-+  [ ElasticGpuSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ElasticGpuSpecification.html) in the *Amazon Elastic Compute Cloud API Reference* 
+## See also<a name="aws-properties-ec2-launchtemplate-elasticgpuspecification--seealso"></a>
++  [ ElasticGpuSpecification](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ElasticGpuSpecification.html) in the *Amazon EC2 API Reference* 
+

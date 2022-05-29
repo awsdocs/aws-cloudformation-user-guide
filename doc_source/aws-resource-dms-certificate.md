@@ -44,12 +44,12 @@ The contents of a `.pem` file, which contains an X\.509 certificate\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificateWallet`  <a name="cfn-dms-certificate-certificatewallet"></a>
-The location of an imported Oracle Wallet certificate for use with SSL\.  
+The location of an imported Oracle Wallet certificate for use with SSL\. Example: `filebase64("${path.root}/rds-ca-2019-root.sso")`   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-dms-certificate-return-values"></a>
+## Return values<a name="aws-resource-dms-certificate-return-values"></a>
 
 ### Ref<a name="aws-resource-dms-certificate-return-values-ref"></a>
 
@@ -58,6 +58,8 @@ The location of an imported Oracle Wallet certificate for use with SSL\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-dms-certificate--examples"></a>
+
+
 
 ### <a name="aws-resource-dms-certificate--examples--"></a>
 
@@ -93,6 +95,7 @@ Resources:
     Type: "AWS::DMS::Certificate"
 ```
 
-## See Also<a name="aws-resource-dms-certificate--seealso"></a>
+## See also<a name="aws-resource-dms-certificate--seealso"></a>
 +  [ImportCertificate](https://docs.aws.amazon.com/dms/latest/APIReference/API_ImportCertificate.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 
+

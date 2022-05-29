@@ -1,6 +1,6 @@
 # AWS::Athena::WorkGroup WorkGroupConfiguration<a name="aws-properties-athena-workgroup-workgroupconfiguration"></a>
 
-The configuration of the workgroup, which includes the location in Amazon S3 where query results are stored, the encryption option, if any, used for query results, whether the Amazon CloudWatch Metrics are enabled for the workgroup and whether workgroup settings override query settings, and the data usage limits for the amount of data scanned per query or per workgroup\. The workgroup settings override is specified in EnforceWorkGroupConfiguration \(true/false\) in the WorkGroupConfiguration\. See WorkGroupConfiguration$EnforceWorkGroupConfiguration\. 
+The configuration of the workgroup, which includes the location in Amazon S3 where query results are stored, the encryption option, if any, used for query results, whether Amazon CloudWatch Metrics are enabled for the workgroup, and the limit for the amount of bytes scanned \(cutoff\) per query, if it is specified\. The [EnforceWorkGroupConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfiguration.html#cfn-athena-workgroup-workgroupconfiguration-enforceworkgroupconfiguration) option determines whether workgroup settings override client\-side query settings\.
 
 ## Syntax<a name="aws-properties-athena-workgroup-workgroupconfiguration-syntax"></a>
 
@@ -12,9 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[BytesScannedCutoffPerQuery](#cfn-athena-workgroup-workgroupconfiguration-bytesscannedcutoffperquery)" : Integer,
   "[EnforceWorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfiguration-enforceworkgroupconfiguration)" : Boolean,
+  "[EngineVersion](#cfn-athena-workgroup-workgroupconfiguration-engineversion)" : EngineVersion,
   "[PublishCloudWatchMetricsEnabled](#cfn-athena-workgroup-workgroupconfiguration-publishcloudwatchmetricsenabled)" : Boolean,
   "[RequesterPaysEnabled](#cfn-athena-workgroup-workgroupconfiguration-requesterpaysenabled)" : Boolean,
-  "[ResultConfiguration](#cfn-athena-workgroup-workgroupconfiguration-resultconfiguration)" : [ResultConfiguration](aws-properties-athena-workgroup-resultconfiguration.md)
+  "[ResultConfiguration](#cfn-athena-workgroup-workgroupconfiguration-resultconfiguration)" : ResultConfiguration
 }
 ```
 
@@ -23,16 +24,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [BytesScannedCutoffPerQuery](#cfn-athena-workgroup-workgroupconfiguration-bytesscannedcutoffperquery): Integer
   [EnforceWorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfiguration-enforceworkgroupconfiguration): Boolean
+  [EngineVersion](#cfn-athena-workgroup-workgroupconfiguration-engineversion): 
+    EngineVersion
   [PublishCloudWatchMetricsEnabled](#cfn-athena-workgroup-workgroupconfiguration-publishcloudwatchmetricsenabled): Boolean
   [RequesterPaysEnabled](#cfn-athena-workgroup-workgroupconfiguration-requesterpaysenabled): Boolean
   [ResultConfiguration](#cfn-athena-workgroup-workgroupconfiguration-resultconfiguration): 
-    [ResultConfiguration](aws-properties-athena-workgroup-resultconfiguration.md)
+    ResultConfiguration
 ```
 
 ## Properties<a name="aws-properties-athena-workgroup-workgroupconfiguration-properties"></a>
 
 `BytesScannedCutoffPerQuery`  <a name="cfn-athena-workgroup-workgroupconfiguration-bytesscannedcutoffperquery"></a>
-The upper data usage limit \(cutoff\) for the amount of bytes a single query in a workgroup is allowed to scan\.  
+The upper limit \(cutoff\) for the amount of bytes a single query in a workgroup is allowed to scan\. No default is defined\.  
+This property currently supports integer types\. Support for long values is planned\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -41,6 +45,12 @@ The upper data usage limit \(cutoff\) for the amount of bytes a single query in 
 If set to "true", the settings for the workgroup override client\-side settings\. If set to "false", client\-side settings are used\. For more information, see [Workgroup Settings Override Client\-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html)\.  
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EngineVersion`  <a name="cfn-athena-workgroup-workgroupconfiguration-engineversion"></a>
+The engine version that all queries running on the workgroup use\. Queries on the `AmazonAthenaPreviewFunctionality` workgroup run on the preview engine regardless of this setting\.  
+*Required*: No  
+*Type*: [EngineVersion](aws-properties-athena-workgroup-engineversion.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PublishCloudWatchMetricsEnabled`  <a name="cfn-athena-workgroup-workgroupconfiguration-publishcloudwatchmetricsenabled"></a>
@@ -56,7 +66,7 @@ If set to `true`, allows members assigned to a workgroup to reference Amazon S3 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResultConfiguration`  <a name="cfn-athena-workgroup-workgroupconfiguration-resultconfiguration"></a>
-The configuration for the workgroup, which includes the location in Amazon S3 where query results are stored and the encryption option, if any, used for query results\. To run the query, you must specify the query results location using one of the ways: either in the workgroup using this setting, or for individual queries \(client\-side\), using ResultConfiguration$OutputLocation\. If none of them is set, Athena issues an error that no output location is provided\. For more information, see [Query Results](https://docs.aws.amazon.com/athena/latest/ug/querying.html)\.  
+Specifies the location in Amazon S3 where query results are stored and the encryption option, if any, used for query results\. For more information, see [Working with Query Results, Output Files, and Query History](https://docs.aws.amazon.com/athena/latest/ug/querying.html)\.  
 *Required*: No  
 *Type*: [ResultConfiguration](aws-properties-athena-workgroup-resultconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

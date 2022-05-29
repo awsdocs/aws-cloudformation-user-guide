@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Password](#cfn-directoryservice-simplead-password)" : String,
       "[ShortName](#cfn-directoryservice-simplead-shortname)" : String,
       "[Size](#cfn-directoryservice-simplead-size)" : String,
-      "[VpcSettings](#cfn-directoryservice-simplead-vpcsettings)" : [VpcSettings](aws-properties-directoryservice-simplead-vpcsettings.md)
+      "[VpcSettings](#cfn-directoryservice-simplead-vpcsettings)" : VpcSettings
     }
 }
 ```
@@ -37,7 +37,7 @@ Properties:
   [ShortName](#cfn-directoryservice-simplead-shortname): String
   [Size](#cfn-directoryservice-simplead-size): String
   [VpcSettings](#cfn-directoryservice-simplead-vpcsettings): 
-    [VpcSettings](aws-properties-directoryservice-simplead-vpcsettings.md)
+    VpcSettings
 ```
 
 ## Properties<a name="aws-resource-directoryservice-simplead-properties"></a>
@@ -83,14 +83,14 @@ If you need to change the password for the administrator account, see the [Reset
 The NetBIOS name of the directory, such as `CORP`\.  
 *Required*: No  
 *Type*: String  
-*Pattern*: `^[^\\/:*?\"\<\>|.]+[^\\/:*?\"<>|]*$`  
+*Pattern*: `^[^\\/:*?"<>|.]+[^\\/:*?"<>|]*$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Size`  <a name="cfn-directoryservice-simplead-size"></a>
 The size of the directory\. For valid values, see [CreateDirectory](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_CreateDirectory.html) in the *AWS Directory Service API Reference*\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Large | Small`  
+*Allowed values*: `Large | Small`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcSettings`  <a name="cfn-directoryservice-simplead-vpcsettings"></a>
@@ -99,7 +99,7 @@ A [DirectoryVpcSettings](https://docs.aws.amazon.com/directoryservice/latest/dev
 *Type*: [VpcSettings](aws-properties-directoryservice-simplead-vpcsettings.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-directoryservice-simplead-return-values"></a>
+## Return values<a name="aws-resource-directoryservice-simplead-return-values"></a>
 
 ### Ref<a name="aws-resource-directoryservice-simplead-return-values-ref"></a>
 
@@ -129,9 +129,9 @@ The IP addresses of the DNS servers for the directory, such as `[ "172.31.3.154"
 
 The following example creates a Simple AD directory, where the directory DNS name is `corp.example.com`:
 
-### Create a Simple AD Directory<a name="aws-resource-directoryservice-simplead--examples--Create_a_Simple_AD_Directory"></a>
+### Create a Simple AD Directory<a name="aws-resource-directoryservice-simplead--examples--Create_a__Directory"></a>
 
-#### JSON<a name="aws-resource-directoryservice-simplead--examples--Create_a_Simple_AD_Directory--json"></a>
+#### JSON<a name="aws-resource-directoryservice-simplead--examples--Create_a__Directory--json"></a>
 
 ```
 "myDirectory" : {
@@ -148,7 +148,7 @@ The following example creates a Simple AD directory, where the directory DNS nam
 }
 ```
 
-#### YAML<a name="aws-resource-directoryservice-simplead--examples--Create_a_Simple_AD_Directory--yaml"></a>
+#### YAML<a name="aws-resource-directoryservice-simplead--examples--Create_a__Directory--yaml"></a>
 
 ```
 myDirectory: 
@@ -166,6 +166,7 @@ myDirectory:
         Ref: vpcID
 ```
 
-## See Also<a name="aws-resource-directoryservice-simplead--seealso"></a>
+## See also<a name="aws-resource-directoryservice-simplead--seealso"></a>
 + [Getting Started with Simple AD](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/simple_ad_getting_started.html) in the *AWS Directory Service Admin Guide*\.\.
 + [CreateDirectory](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_CreateDirectory.html) in the *AWS Directory Service API Reference*\.
+

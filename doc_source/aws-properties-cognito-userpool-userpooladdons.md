@@ -26,5 +26,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The advanced security mode\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `AUDIT | ENFORCED | OFF`  
+*Allowed values*: `AUDIT | ENFORCED | OFF`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

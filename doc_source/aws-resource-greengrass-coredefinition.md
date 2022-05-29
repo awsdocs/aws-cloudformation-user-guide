@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::CoreDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-coredefinition-initialversion)" : [CoreDefinitionVersion](aws-properties-greengrass-coredefinition-coredefinitionversion.md),
+      "[InitialVersion](#cfn-greengrass-coredefinition-initialversion)" : CoreDefinitionVersion,
       "[Name](#cfn-greengrass-coredefinition-name)" : String,
       "[Tags](#cfn-greengrass-coredefinition-tags)" : Json
     }
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::CoreDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-coredefinition-initialversion): 
-    [CoreDefinitionVersion](aws-properties-greengrass-coredefinition-coredefinitionversion.md)
+    CoreDefinitionVersion
   [Name](#cfn-greengrass-coredefinition-name): String
   [Tags](#cfn-greengrass-coredefinition-tags): Json
 ```
@@ -52,7 +52,7 @@ The name of the core definition\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-greengrass-coredefinition-tags"></a>
-Application\-specific metadata to attach to the core definition\. You can use tags in IAM policies to control access to AWS IoT Greengrass resources\. You can also use tags to categorize your resources\. For more information, see [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html) in the *AWS IoT Greengrass Developer Guide*\.  
+Application\-specific metadata to attach to the core definition\. You can use tags in IAM policies to control access to AWS IoT Greengrass resources\. You can also use tags to categorize your resources\. For more information, see [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.  
 This `Json` property type is processed as a map of key\-value pairs\. It uses the following format, which is different from most `Tags` implementations in AWS CloudFormation templates\.  
 
 ```
@@ -66,7 +66,7 @@ This `Json` property type is processed as a map of key\-value pairs\. It uses th
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-coredefinition-return-values"></a>
+## Return values<a name="aws-resource-greengrass-coredefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-coredefinition-return-values-ref"></a>
 
@@ -95,6 +95,8 @@ The ARN of the last `CoreDefinitionVersion` that was added to the `CoreDefinitio
 The name of the `CoreDefinition`, such as `MyCoreDefinition`\. 
 
 ## Examples<a name="aws-resource-greengrass-coredefinition--examples"></a>
+
+
 
 ### Create a Core Definition<a name="aws-resource-greengrass-coredefinition--examples--Create_a_Core_Definition"></a>
 
@@ -196,6 +198,6 @@ Outputs:
     Value: !Ref CoreDefinition
 ```
 
-## See Also<a name="aws-resource-greengrass-coredefinition--seealso"></a>
-+  [CreateCoreDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createcoredefinition-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+## See also<a name="aws-resource-greengrass-coredefinition--seealso"></a>
++  [CreateCoreDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createcoredefinition-post.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ResourceValue](#cfn-config-remediationconfiguration-remediationparametervalue-resourcevalue)" : [ResourceValue](aws-properties-config-remediationconfiguration-resourcevalue.md),
-  "[StaticValue](#cfn-config-remediationconfiguration-remediationparametervalue-staticvalue)" : [StaticValue](aws-properties-config-remediationconfiguration-staticvalue.md)
+  "[ResourceValue](#cfn-config-remediationconfiguration-remediationparametervalue-resourcevalue)" : ResourceValue,
+  "[StaticValue](#cfn-config-remediationconfiguration-remediationparametervalue-staticvalue)" : StaticValue
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ResourceValue](#cfn-config-remediationconfiguration-remediationparametervalue-resourcevalue): 
-    [ResourceValue](aws-properties-config-remediationconfiguration-resourcevalue.md)
+    ResourceValue
   [StaticValue](#cfn-config-remediationconfiguration-remediationparametervalue-staticvalue): 
-    [StaticValue](aws-properties-config-remediationconfiguration-staticvalue.md)
+    StaticValue
 ```
 
 ## Properties<a name="aws-properties-config-remediationconfiguration-remediationparametervalue-properties"></a>

@@ -44,7 +44,7 @@ The ID of the service\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-vpcendpointservicepermissions-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpcendpointservicepermissions-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-vpcendpointservicepermissions-return-values-ref"></a>
 

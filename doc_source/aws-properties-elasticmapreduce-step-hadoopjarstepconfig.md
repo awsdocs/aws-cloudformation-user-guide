@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Args](#cfn-elasticmapreduce-step-hadoopjarstepconfig-args)" : [ String, ... ],
   "[Jar](#cfn-elasticmapreduce-step-hadoopjarstepconfig-jar)" : String,
   "[MainClass](#cfn-elasticmapreduce-step-hadoopjarstepconfig-mainclass)" : String,
-  "[StepProperties](#cfn-elasticmapreduce-step-hadoopjarstepconfig-stepproperties)" : [ [KeyValue](aws-properties-elasticmapreduce-step-keyvalue.md), ... ]
+  "[StepProperties](#cfn-elasticmapreduce-step-hadoopjarstepconfig-stepproperties)" : [ KeyValue, ... ]
 }
 ```
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Jar](#cfn-elasticmapreduce-step-hadoopjarstepconfig-jar): String
   [MainClass](#cfn-elasticmapreduce-step-hadoopjarstepconfig-mainclass): String
   [StepProperties](#cfn-elasticmapreduce-step-hadoopjarstepconfig-stepproperties): 
-    - [KeyValue](aws-properties-elasticmapreduce-step-keyvalue.md)
+    - KeyValue
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-step-hadoopjarstepconfig-properties"></a>

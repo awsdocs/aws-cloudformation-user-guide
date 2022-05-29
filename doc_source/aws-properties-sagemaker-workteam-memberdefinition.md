@@ -1,6 +1,6 @@
 # AWS::SageMaker::Workteam MemberDefinition<a name="aws-properties-sagemaker-workteam-memberdefinition"></a>
 
-Defines the Amazon Cognito user group that is part of a work team\.
+Defines an Amazon Cognito or your own OIDC IdP user group that is part of a work team\.
 
 ## Syntax<a name="aws-properties-sagemaker-workteam-memberdefinition-syntax"></a>
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CognitoMemberDefinition](#cfn-sagemaker-workteam-memberdefinition-cognitomemberdefinition)" : [CognitoMemberDefinition](aws-properties-sagemaker-workteam-cognitomemberdefinition.md)
+  "[CognitoMemberDefinition](#cfn-sagemaker-workteam-memberdefinition-cognitomemberdefinition)" : CognitoMemberDefinition
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CognitoMemberDefinition](#cfn-sagemaker-workteam-memberdefinition-cognitomemberdefinition): 
-    [CognitoMemberDefinition](aws-properties-sagemaker-workteam-cognitomemberdefinition.md)
+    CognitoMemberDefinition
 ```
 
 ## Properties<a name="aws-properties-sagemaker-workteam-memberdefinition-properties"></a>

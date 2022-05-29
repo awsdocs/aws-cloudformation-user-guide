@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ContainerName](#cfn-ecs-taskdefinition-proxyconfiguration-containername)" : String,
-  "[ProxyConfigurationProperties](#cfn-ecs-taskdefinition-proxyconfiguration-proxyconfigurationproperties)" : [ [KeyValuePair](aws-properties-ecs-taskdefinition-containerdefinitions-environment.md), ... ],
+  "[ProxyConfigurationProperties](#cfn-ecs-taskdefinition-proxyconfiguration-proxyconfigurationproperties)" : [ KeyValuePair, ... ],
   "[Type](#cfn-ecs-taskdefinition-proxyconfiguration-type)" : String
 }
 ```
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ContainerName](#cfn-ecs-taskdefinition-proxyconfiguration-containername): String
   [ProxyConfigurationProperties](#cfn-ecs-taskdefinition-proxyconfiguration-proxyconfigurationproperties): 
-    - [KeyValuePair](aws-properties-ecs-taskdefinition-containerdefinitions-environment.md)
+    - KeyValuePair
   [Type](#cfn-ecs-taskdefinition-proxyconfiguration-type): String
 ```
 
@@ -54,5 +54,5 @@ The set of network configuration parameters to provide the Container Network Int
 The proxy type\. The only supported value is `APPMESH`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `APPMESH`  
+*Allowed values*: `APPMESH`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

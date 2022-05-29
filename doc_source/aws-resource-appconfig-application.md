@@ -1,8 +1,8 @@
 # AWS::AppConfig::Application<a name="aws-resource-appconfig-application"></a>
 
-The `AWS::AppConfig::Application` resource creates an application, which is a logical unit of code that provides capabilities for your customers\. For example, an application can be a microservice that runs on Amazon EC2 instances, a mobile application installed by your users, a serverless application using Amazon API Gateway and AWS Lambda, or any system you run on behalf of others\.
+The `AWS::AppConfig::Application` resource creates an application\. In AWS AppConfig, an application is simply an organizational construct like a folder\. This organizational construct has a relationship with some unit of executable code\. For example, you could create an application called MyMobileApp to organize and manage configuration data for a mobile application installed by your users\.
 
-AppConfig requires that you create resources and deploy a configuration in the following order:
+AWS AppConfig requires that you create resources and deploy a configuration in the following order:
 
 1. Create an application
 
@@ -14,7 +14,7 @@ AppConfig requires that you create resources and deploy a configuration in the f
 
 1. Deploy the configuration
 
-For more information, see [AWS AppConfig](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig.html) in the *AWS Systems Manager User Guide*\.
+For more information, see [AWS AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) in the *AWS AppConfig User Guide*\.
 
 ## Syntax<a name="aws-resource-appconfig-application-syntax"></a>
 
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-appconfig-application-description)" : String,
       "[Name](#cfn-appconfig-application-name)" : String,
-      "[Tags](#cfn-appconfig-application-tags)" : [ [Tags](aws-properties-appconfig-application-tags.md), ... ]
+      "[Tags](#cfn-appconfig-application-tags)" : [ Tags, ... ]
     }
 }
 ```
@@ -41,7 +41,7 @@ Properties:
   [Description](#cfn-appconfig-application-description): String
   [Name](#cfn-appconfig-application-name): String
   [Tags](#cfn-appconfig-application-tags): 
-    - [Tags](aws-properties-appconfig-application-tags.md)
+    - Tags
 ```
 
 ## Properties<a name="aws-resource-appconfig-application-properties"></a>
@@ -63,12 +63,12 @@ A name for the application\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-appconfig-application-tags"></a>
-Metadata to assign to the application\. Tags help organize and categorize your AppConfig resources\. Each tag consists of a key and an optional value, both of which you define\.  
+Metadata to assign to the application\. Tags help organize and categorize your AWS AppConfig resources\. Each tag consists of a key and an optional value, both of which you define\.  
 *Required*: No  
 *Type*: [List](aws-properties-appconfig-application-tags.md) of [Tags](aws-properties-appconfig-application-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-appconfig-application-return-values"></a>
+## Return values<a name="aws-resource-appconfig-application-return-values"></a>
 
 ### Ref<a name="aws-resource-appconfig-application-return-values-ref"></a>
 
@@ -76,11 +76,13 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 ## Examples<a name="aws-resource-appconfig-application--examples"></a>
 
-### AWS AppConfig Application Example<a name="aws-resource-appconfig-application--examples--AWS_AppConfig_Application_Example"></a>
+
+
+### AWS AppConfig Application Example<a name="aws-resource-appconfig-application--examples--_Application_Example"></a>
 
 The following example creates a simple AWS AppConfig application named MyTestApplication\. An application in AWS AppConfig is a logical unit of code that provides capabilities for your customers\. For example, an application can be a microservice that runs on Amazon EC2 instances, a mobile application installed by your users, a serverless application using Amazon API Gateway and AWS Lambda, or any system you run on behalf of others\. 
 
-#### JSON<a name="aws-resource-appconfig-application--examples--AWS_AppConfig_Application_Example--json"></a>
+#### JSON<a name="aws-resource-appconfig-application--examples--_Application_Example--json"></a>
 
 ```
 BasicApplication": {
@@ -99,7 +101,7 @@ BasicApplication": {
 }
 ```
 
-#### YAML<a name="aws-resource-appconfig-application--examples--AWS_AppConfig_Application_Example--yaml"></a>
+#### YAML<a name="aws-resource-appconfig-application--examples--_Application_Example--yaml"></a>
 
 ```
 BasicApplication:
@@ -111,3 +113,7 @@ BasicApplication:
         - Key: Env
           Value: test
 ```
+
+## See also<a name="aws-resource-appconfig-application--seealso"></a>
++  [AWS AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) 
++  [Creating an Application](https://docs.aws.amazon.com/systems-manager/latest/userguide/appconfig-creating-application.html)

@@ -1,15 +1,15 @@
-# Walkthrough: Building a Pipeline for Test and Production Stacks<a name="continuous-delivery-codepipeline-basic-walkthrough"></a>
+# Walkthrough: Building a pipeline for test and production stacks<a name="continuous-delivery-codepipeline-basic-walkthrough"></a>
 
 Imagine a release process where you submit an AWS CloudFormation template, which AWS CloudFormation then uses to automatically build a test stack\. After you review the test stack, you can preview how your changes will modify your production stack, and then choose whether to implement them\. To accomplish this workflow, you could use AWS CloudFormation to build your test stack, delete the test stack, create a change set, and then execute the change set\. However, with each action, you need to manually interact with AWS CloudFormation\. In this walkthrough, we'll build a CodePipeline pipeline that automates many of these actions, helping you achieve a continuous delivery workflow with your AWS CloudFormation stacks\.
 
-## Prerequisites<a name="w5792ab1c13c11b5"></a>
+## Prerequisites<a name="w11339ab1c21c11b5"></a>
 
-This walkthrough assumes that you have used CodePipeline and AWS CloudFormation, and know how pipelines and AWS CloudFormation templates and stacks work\. For more information about CodePipeline, see the [AWS CodePipeline User Guide](https://docs.aws.amazon.com/codepipeline/latest/userguide/)\. You also need to have an Amazon S3 [bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) in the same AWS region in which you will create your pipeline\.
+This walkthrough assumes that you have used CodePipeline and AWS CloudFormation, and know how pipelines and AWS CloudFormation templates and stacks work\. For more information about CodePipeline, see the [AWS CodePipeline User Guide](https://docs.aws.amazon.com/codepipeline/latest/userguide/)\. You also need to have an Amazon S3 [bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html) in the same AWS Region in which you will create your pipeline\.
 
 **Important**  
-The sample Word Press template creates an EC2 instance that requires a connection to the Internet\. Check that you have a default VPC and subnet that allow traffic to the Internet\.
+The sample WordPress template creates an EC2 instance that requires a connection to the Internet\. Check that you have a default VPC and subnet that allow traffic to the Internet\.
 
-## Walkthrough Overview<a name="w5792ab1c13c11b7"></a>
+## Walkthrough overview<a name="w11339ab1c21c11b7"></a>
 
 This walkthrough builds a pipeline for a sample WordPress site in a stack\. The pipeline is separated into three stages\. Each stage must contain at least one action, which is a task the pipeline performs on your artifacts \(your input\)\. A stage organizes actions in a pipeline\. CodePipeline must complete all actions in a stage before the stage processes new artifacts, for example, if you submitted new input to rerun the pipeline\.
 
@@ -30,11 +30,11 @@ By the end of this walkthrough, you'll have a pipeline that performs the followi
 **Note**  
 AWS CloudFormation is a free service\. However, you are charged for the AWS resources, such as the EC2 instance, that you include in your stack at the current rate for each\. For more information about AWS pricing, see the detail page for each product at [http://aws\.amazon\.com](http://aws.amazon.com)\.
 
-## Step 1: Edit the Artifact and Upload It to an S3 Bucket<a name="w5792ab1c13c11b9"></a>
+## Step 1: Edit the artifact and upload it to an S3 Bucket<a name="w11339ab1c21c11b9"></a>
 
 Before you build your pipeline, you must set up your source repository and files\. CodePipeline copies these source files into your pipeline's [artifact store](https://docs.aws.amazon.com/codepipeline/latest/userguide/concepts.html), and then uses them to perform actions in your pipeline, such as creating an AWS CloudFormation stack\.
 
-When you use Amazon Simple Storage Service \(Amazon S3\) as the source repository, CodePipeline requires you to zip your source files before uploading them to an S3 bucket\. The zipped file is a CodePipeline artifact that can contain an AWS CloudFormation template, a template configuration file, or both\. We provide an artifact that contains a sample WordPress template and two template configuration files\. The two configuration files specify parameter values for the WordPress template\. CodePipeline uses them when it creates the WordPress stacks\. One file contains parameter values for a test stack, and the other for a production stack\. You'll need to edit the configuration files, for example, to specify an existing EC2 key\-pair name that you own\. For more information about artifacts, see [AWS CloudFormation Artifacts](continuous-delivery-codepipeline-cfn-artifacts.md)\.
+When you use Amazon Simple Storage Service \(Amazon S3\) as the source repository, CodePipeline requires you to zip your source files before uploading them to an S3 bucket\. The zipped file is a CodePipeline artifact that can contain an AWS CloudFormation template, a template configuration file, or both\. We provide an artifact that contains a sample WordPress template and two template configuration files\. The two configuration files specify parameter values for the WordPress template\. CodePipeline uses them when it creates the WordPress stacks\. One file contains parameter values for a test stack, and the other for a production stack\. You'll need to edit the configuration files, for example, to specify an existing EC2 key\-pair name that you own\. For more information about artifacts, see [AWS CloudFormation artifacts](continuous-delivery-codepipeline-cfn-artifacts.md)\.
 
 After you build your artifact, you'll upload it to an S3 bucket\.
 
@@ -64,18 +64,18 @@ After you build your artifact, you'll upload it to an S3 bucket\.
    Note the file's location\. You'll specify the location of this file when you build your pipeline\.
 
    Notes about the artifact and S3 bucket:
-   + Use a bucket that is in the same AWS region in which you will create your pipeline\.
+   + Use a bucket that is in the same AWS Region in which you will create your pipeline\.
    + CodePipeline requires that the bucket is [versioning enabled](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/enable-bucket-versioning.html)\.
    + You can also use services that don't require you to zip your files before uploading them, like GitHub or CodeCommit, for your source repository\.
    + Artifacts can contain sensitive information such as passwords\. [Limit access](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/EditingPermissionsonanObject.html) so that only permitted users can view the file\. When you do, ensure that CodePipeline can still access the file\.
 
 You now have an artifact that CodePipeline can pull in to your pipeline\. In the next step, you'll specify the artifact's location and build the WordPress pipeline\.
 
-## Step 2: Create the Pipeline Stack<a name="w5792ab1c13c11c11"></a>
+## Step 2: Create the pipeline stack<a name="w11339ab1c21c11c11"></a>
 
 To create the WordPress pipeline, you'll use a sample AWS CloudFormation template\. In addition to building the pipeline, the template sets up AWS Identity and Access Management \(IAM\) service roles for CodePipeline and AWS CloudFormation, an S3 bucket for the CodePipeline artifact store, and an Amazon Simple Notification Service \(Amazon SNS\) topic to which the pipeline sends notifications, such as notifications about reviews\. The sample template makes it easy to provision and configure these resources in a single AWS CloudFormation stack\.
 
-For more details about the configuration of the pipeline, see [What the Pipeline Does](#codepipeline-basic-walkthrough-template-details)\.
+For more details about the configuration of the pipeline, see [What the pipeline does](#codepipeline-basic-walkthrough-template-details)\.
 
 **Important**  
 The sample WordPress template creates an EC2 instance that requires a connection to the Internet\. Check that your default VPC and subnet allow traffic to the Internet\.
@@ -86,9 +86,9 @@ The sample WordPress template creates an EC2 instance that requires a connection
 
 1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation/](https://console.aws.amazon.com/cloudformation/)\.
 
-1. Choose an AWS region that supports CodePipeline and AWS CloudFormation\.
+1. Choose an AWS Region that supports CodePipeline and AWS CloudFormation\.
 
-   For more information, see [AWS Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the *AWS General Reference*\.
+   For more information, see [AWS Regions and endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the *AWS General Reference*\.
 
 1. Choose **Create stack**\.
 
@@ -104,7 +104,7 @@ The name of your pipeline, such as `WordPress-test-pipeline`\.
 **S3Bucket**  
 The name of the S3 bucket where you saved your artifact \(`.zip` file\)\.  
 **SourceS3Key**  
-The filename of your artifact\. If you saved the artifact in a folder, include it as part of the filename, such as `folder/subfolder/wordpress-single-instance.zip`\.  
+The file name of your artifact\. If you saved the artifact in a folder, include it as part of the file name, such as `folder/subfolder/wordpress-single-instance.zip`\.  
 **Email**  
 The email address to which CodePipeline sends pipeline notification, such as `myemail@example.com`\.
 
@@ -112,21 +112,21 @@ The email address to which CodePipeline sends pipeline notification, such as `my
 
 1. Ensure that the stack name and template URL are correct, and then choose **Create stack**\.
 
-1. To acknowledge that you're aware that AWS CloudFormation might create IAM resources, choose the checkbox\.
+1. To acknowledge that you're aware that AWS CloudFormation might create IAM resources, choose the check box\.
 
-It might take several minutes for AWS CloudFormation to create your stack\. To monitor progress, view the stack events\. For more information, see [Viewing AWS CloudFormation Stack Data and Resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\.
+It might take several minutes for AWS CloudFormation to create your stack\. To monitor progress, view the stack events\. For more information, see [Viewing AWS CloudFormation stack data and resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\.
 
 After your stack has been created, CodePipeline starts your new pipeline\. To view its status, see the [CodePipeline console](https://console.aws.amazon.com/codepipeline/)\. From the list of pipelines, choose **WordPress\-test\-pipeline**\.
 
-### What the Pipeline Does<a name="codepipeline-basic-walkthrough-template-details"></a>
+### What the pipeline does<a name="codepipeline-basic-walkthrough-template-details"></a>
 
 This section explains the pipeline's three stages, using snippets from the sample WordPress pipeline template\.
 
-#### Stage 1: Source<a name="w5792ab1c13c11c11c15b5"></a>
+#### Stage 1: Source<a name="w11339ab1c21c11c11c15b5"></a>
 
 The first stage of the pipeline is a source stage in which you specify the location of your source code\. Every time you push a revision to this location, CodePipeline reruns your pipeline\.
 
-The source code is located in an S3 bucket and is identified by its filename\. You specified these values as input parameter values when you created the pipeline stack\. To allow using the source artifact in subsequent stages, the snippet specifies the `OutputArtifacts` property, with the name `TemplateSource`\. To use this artifact in later stages, you specify `TemplateSource` as an input artifact\.
+The source code is located in an S3 bucket and is identified by its file name\. You specified these values as input parameter values when you created the pipeline stack\. To allow using the source artifact in subsequent stages, the snippet specifies the `OutputArtifacts` property, with the name `TemplateSource`\. To use this artifact in later stages, you specify `TemplateSource` as an input artifact\.
 
 ```
 - Name: S3Source
@@ -144,7 +144,7 @@ The source code is located in an S3 bucket and is identified by its filename\. Y
         - Name: TemplateSource
 ```
 
-#### Stage 2: TestStage<a name="w5792ab1c13c11c11c15b7"></a>
+#### Stage 2: TestStage<a name="w11339ab1c21c11c11c15b7"></a>
 
 In the `TestStage` stage, the pipeline creates the test stack, waits for approval, and then deletes the test stack\.
 
@@ -195,7 +195,7 @@ After you approve this action, CodePipeline moves to the `DeleteTestStack` actio
       RunOrder: '3'
 ```
 
-#### Stage 3: ProdStage<a name="w5792ab1c13c11c11c15b9"></a>
+#### Stage 3: ProdStage<a name="w11339ab1c21c11c11c15b9"></a>
 
 The `ProdStage` stage of the pipeline creates a change set against the existing production stack, waits for approval, and then executes the change set\.
 
@@ -248,7 +248,7 @@ After you approve this action, the `ExecuteChangeSet` action executes the change
       RunOrder: '3'
 ```
 
-## Step 3: View the WordPress Stack<a name="w5792ab1c13c11c13"></a>
+## Step 3: View the WordPress stack<a name="w11339ab1c21c11c13"></a>
 
 As CodePipeline runs through the pipeline, it uses AWS CloudFormation to create test and production stacks\. To see the status of these stacks and their output, use the AWS CloudFormation console\.
 
@@ -264,7 +264,7 @@ If the stack is in a failed state, view the status reason to find the stack erro
 
 You've successfully used CodePipeline to build a continuous delivery workflow for a sample WordPress site\. If you submit changes to the S3 bucket, CodePipeline automatically detects a new version, and then reruns your pipeline\. This workflow makes it easier to submit and test changes before making changes to your production site\.
 
-## Step 4: Clean Up Resources<a name="w5792ab1c13c11c15"></a>
+## Step 4: Clean up resources<a name="w11339ab1c21c11c15"></a>
 
 To make sure that you are not charged for unwanted services, delete your resources\.
 
@@ -299,10 +299,10 @@ AWS CloudFormation deletes the stack all of the stack's resources, such as the E
 
 Now that you understand how to build a basic AWS CloudFormation workflow with CodePipeline, you can use the sample template and artifacts as a starting point for building your own\.
 
-## See Also<a name="w5792ab1c13c11c19"></a>
+## See also<a name="w11339ab1c21c11c19"></a>
 
 The following related resources can help you as you work with these parameters\.
 + For more information about the AWS CloudFormation action parameters in CodePipeline, see the [AWS CloudFormation](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference-CloudFormation.html) action configuration reference in the *AWS CodePipeline User Guide*\.
-+ For example template values by action provider, such as for the `Owner` field or the `configuration` fields, see the [Action Structure Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) in the *AWS CodePipeline User Guide*\.
-+ To download example pipeline stack templates in YAML or JSON format, see the tutorials under [Create a Pipeline with AWS CloudFormation](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-cloudformation.html) in the *AWS CodePipeline User Guide*\.
-+ For an example template configuration file, see [AWS CloudFormation Artifacts](https://docs.aws.amazon.com/codepipeline/latest/userguide/continuous-delivery-codepipeline-cfn-artifacts.html)\.
++ For example template values by action provider, such as for the `Owner` field or the `configuration` fields, see the [Action structure reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) in the *AWS CodePipeline User Guide*\.
++ To download example pipeline stack templates in YAML or JSON format, see the tutorials under [Create a pipeline with AWS CloudFormation](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-cloudformation.html) in the *AWS CodePipeline User Guide*\.
++ For an example template configuration file, see [AWS CloudFormation artifacts](https://docs.aws.amazon.com/codepipeline/latest/userguide/continuous-delivery-codepipeline-cfn-artifacts.html)\.

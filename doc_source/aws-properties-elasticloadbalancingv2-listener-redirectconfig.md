@@ -84,5 +84,59 @@ The query parameters, URL\-encoded when necessary, but not percent\-encoded\. Do
 The HTTP redirect code\. The redirect is either permanent \(HTTP 301\) or temporary \(HTTP 302\)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `HTTP_301 | HTTP_302`  
+*Allowed values*: `HTTP_301 | HTTP_302`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-elasticloadbalancingv2-listener-redirectconfig--examples"></a>
+
+The following example creates a listener with a default action that redirects HTTP requests on port 80 to HTTPS requests on port 443, retaining the original host name, path, and query string\.
+
+### <a name="aws-properties-elasticloadbalancingv2-listener-redirectconfig--examples--"></a>
+
+#### YAML<a name="aws-properties-elasticloadbalancingv2-listener-redirectconfig--examples----yaml"></a>
+
+```
+HTTPlistener:
+   Type: "AWS::ElasticLoadBalancingV2::Listener"
+   Properties:
+     DefaultActions:
+       - Type: "redirect"
+         RedirectConfig:
+           Protocol: "HTTPS"
+           Port: 443
+           Host: "#{host}"
+           Path: "/#{path}"
+           Query: "#{query}"
+           StatusCode: "HTTP_301"
+     LoadBalancerArn: !Ref myLoadBalancer
+     Port: 80
+     Protocol: "HTTP"
+```
+
+#### JSON<a name="aws-properties-elasticloadbalancingv2-listener-redirectconfig--examples----json"></a>
+
+```
+"HTTPlistener": {
+    "Type": "AWS::ElasticLoadBalancingV2::Listener",
+    "Properties": {
+        "DefaultActions": [
+            {
+               "Type": "redirect",
+               "RedirectConfig": {
+               "Protocol": "HTTPS",
+               "Port": 443,
+               "Host": "#{host}",
+               "Path": "/#{path}",
+               "Query": "#{query}",
+               "StatusCode": "HTTP_301"
+              }
+            }
+          ],
+          "LoadBalancerArn": {
+               "Ref": "myLoadBalancer"
+           },
+            "Port": 80,
+            "Protocol": "HTTP"
+       }
+  }
+```

@@ -12,9 +12,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Config::ConfigurationAggregator",
   "Properties" : {
-      "[AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources)" : [ [AccountAggregationSource](aws-properties-config-configurationaggregator-accountaggregationsource.md), ... ],
+      "[AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources)" : [ AccountAggregationSource, ... ],
       "[ConfigurationAggregatorName](#cfn-config-configurationaggregator-configurationaggregatorname)" : String,
-      "[OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource)" : [OrganizationAggregationSource](aws-properties-config-configurationaggregator-organizationaggregationsource.md),
+      "[OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource)" : OrganizationAggregationSource,
       "[Tags](#cfn-config-configurationaggregator-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -26,10 +26,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Config::ConfigurationAggregator
 Properties: 
   [AccountAggregationSources](#cfn-config-configurationaggregator-accountaggregationsources): 
-    - [AccountAggregationSource](aws-properties-config-configurationaggregator-accountaggregationsource.md)
+    - AccountAggregationSource
   [ConfigurationAggregatorName](#cfn-config-configurationaggregator-configurationaggregatorname): String
   [OrganizationAggregationSource](#cfn-config-configurationaggregator-organizationaggregationsource): 
-    [OrganizationAggregationSource](aws-properties-config-configurationaggregator-organizationaggregationsource.md)
+    OrganizationAggregationSource
   [Tags](#cfn-config-configurationaggregator-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -45,7 +45,7 @@ Provides a list of source accounts and regions to be aggregated\.
 
 `ConfigurationAggregatorName`  <a name="cfn-config-configurationaggregator-configurationaggregatorname"></a>
 The name of the aggregator\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  
@@ -65,7 +65,7 @@ An array of tag object\.
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-config-configurationaggregator-return-values"></a>
+## Return values<a name="aws-resource-config-configurationaggregator-return-values"></a>
 
 ### Ref<a name="aws-resource-config-configurationaggregator-return-values-ref"></a>
 
@@ -73,7 +73,16 @@ An array of tag object\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-config-configurationaggregator-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-config-configurationaggregator-return-values-fn--getatt-fn--getatt"></a>
+
+`ConfigurationAggregatorArn`  <a name="ConfigurationAggregatorArn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the aggregator\.
+
 ## Examples<a name="aws-resource-config-configurationaggregator--examples"></a>
+
+
 
 ### Configuration Aggregator With Multiple Accounts Multiple Regions<a name="aws-resource-config-configurationaggregator--examples--Configuration_Aggregator_With_Multiple_Accounts_Multiple_Regions"></a>
 

@@ -1,13 +1,13 @@
-# Amazon CloudWatch Template Snippets<a name="quickref-cloudwatch"></a>
+# Amazon CloudWatch template snippets<a name="quickref-cloudwatch"></a>
 
 **Topics**
-+ [Billing Alarm](#cloudwatch-sample-billing-alarm)
-+ [CPU Utilization Alarm](#cloudwatch-sample-cpu-utilization-alarm)
-+ [Recover an Amazon Elastic Compute Cloud Instance](#cloudwatch-sample-recover-instance)
-+ [Create a Basic Dashboard](#cloudwatch-sample-dashboard-basic)
-+ [Create a Dashboard with Side\-by\-Side Widgets](#cloudwatch-sample-dashboard-sidebyside)
++ [Billing alarm](#cloudwatch-sample-billing-alarm)
++ [CPU utilization alarm](#cloudwatch-sample-cpu-utilization-alarm)
++ [Recover an Amazon Elastic Compute Cloud instance](#cloudwatch-sample-recover-instance)
++ [Create a basic dashboard](#cloudwatch-sample-dashboard-basic)
++ [Create a dashboard with side\-by\-side widgets](#cloudwatch-sample-dashboard-sidebyside)
 
-## Billing Alarm<a name="cloudwatch-sample-billing-alarm"></a>
+## Billing alarm<a name="cloudwatch-sample-billing-alarm"></a>
 
 In the following sample, Amazon CloudWatch sends an email notification when charges to your AWS account exceed the alarm threshold\. To receive usage notifications, enable [billing alerts](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/monitor-charges.html)\.
 
@@ -70,7 +70,7 @@ SpendingAlarm:
     - Ref: "BillingAlarmNotification"
 ```
 
-## CPU Utilization Alarm<a name="cloudwatch-sample-cpu-utilization-alarm"></a>
+## CPU utilization alarm<a name="cloudwatch-sample-cpu-utilization-alarm"></a>
 
 The following sample snippet creates an alarm that sends a notification when the average CPU utilization of an Amazon EC2 instance exceeds 90 percent for more than 60 seconds over three evaluation periods\.
 
@@ -119,9 +119,9 @@ The following sample snippet creates an alarm that sends a notification when the
 17.         Ref: "logical name of an AWS::EC2::Instance resource"
 ```
 
-## Recover an Amazon Elastic Compute Cloud Instance<a name="cloudwatch-sample-recover-instance"></a>
+## Recover an Amazon Elastic Compute Cloud instance<a name="cloudwatch-sample-recover-instance"></a>
 
-The following CloudWatch alarm recovers an EC2 instance when it has status check failures for 15 consecutive minutes\. For more information about alarm actions, see [Create Alarms That Stop, Terminate, or Recover an Instance](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/UsingAlarmActions.html) in the *Amazon CloudWatch User Guide*\.
+The following CloudWatch alarm recovers an EC2 instance when it has status check failures for 15 consecutive minutes\. For more information about alarm actions, see [Create alarms that stop, terminate, or recover an instance](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/UsingAlarmActions.html) in the *Amazon CloudWatch User Guide*\.
 
 ### JSON<a name="quickref-cloudwatch-example-3.json"></a>
 
@@ -182,7 +182,7 @@ Resources:
           Ref: RecoveryInstance
 ```
 
-## Create a Basic Dashboard<a name="cloudwatch-sample-dashboard-basic"></a>
+## Create a basic dashboard<a name="cloudwatch-sample-dashboard-basic"></a>
 
 The following example creates a simple CloudWatch dashboard with one metric widget displaying CPU utilization, and one text widget displaying a message\.
 
@@ -210,7 +210,7 @@ BasicDashboard:
     DashboardBody: '{"widgets":[{"type":"metric","x":0,"y":0,"width":12,"height":6,"properties":{"metrics":[["AWS/EC2","CPUUtilization","InstanceId","i-012345"]],"period":300,"stat":"Average","region":"us-east-1","title":"EC2 Instance CPU"}},{"type":"text","x":0,"y":7,"width":3,"height":3,"properties":{"markdown":"Hello world"}}]}'
 ```
 
-## Create a Dashboard with Side\-by\-Side Widgets<a name="cloudwatch-sample-dashboard-sidebyside"></a>
+## Create a dashboard with side\-by\-side widgets<a name="cloudwatch-sample-dashboard-sidebyside"></a>
 
 The following example creates a dashboard with two metric widgets that appear side by side\.
 

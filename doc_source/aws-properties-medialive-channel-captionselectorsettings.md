@@ -12,33 +12,42 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AribSourceSettings](#cfn-medialive-channel-captionselectorsettings-aribsourcesettings)" : [AribSourceSettings](aws-properties-medialive-channel-aribsourcesettings.md),
-  "[DvbSubSourceSettings](#cfn-medialive-channel-captionselectorsettings-dvbsubsourcesettings)" : [DvbSubSourceSettings](aws-properties-medialive-channel-dvbsubsourcesettings.md),
-  "[EmbeddedSourceSettings](#cfn-medialive-channel-captionselectorsettings-embeddedsourcesettings)" : [EmbeddedSourceSettings](aws-properties-medialive-channel-embeddedsourcesettings.md),
-  "[Scte20SourceSettings](#cfn-medialive-channel-captionselectorsettings-scte20sourcesettings)" : [Scte20SourceSettings](aws-properties-medialive-channel-scte20sourcesettings.md),
-  "[Scte27SourceSettings](#cfn-medialive-channel-captionselectorsettings-scte27sourcesettings)" : [Scte27SourceSettings](aws-properties-medialive-channel-scte27sourcesettings.md),
-  "[TeletextSourceSettings](#cfn-medialive-channel-captionselectorsettings-teletextsourcesettings)" : [TeletextSourceSettings](aws-properties-medialive-channel-teletextsourcesettings.md)
+  "[AncillarySourceSettings](#cfn-medialive-channel-captionselectorsettings-ancillarysourcesettings)" : AncillarySourceSettings,
+  "[AribSourceSettings](#cfn-medialive-channel-captionselectorsettings-aribsourcesettings)" : AribSourceSettings,
+  "[DvbSubSourceSettings](#cfn-medialive-channel-captionselectorsettings-dvbsubsourcesettings)" : DvbSubSourceSettings,
+  "[EmbeddedSourceSettings](#cfn-medialive-channel-captionselectorsettings-embeddedsourcesettings)" : EmbeddedSourceSettings,
+  "[Scte20SourceSettings](#cfn-medialive-channel-captionselectorsettings-scte20sourcesettings)" : Scte20SourceSettings,
+  "[Scte27SourceSettings](#cfn-medialive-channel-captionselectorsettings-scte27sourcesettings)" : Scte27SourceSettings,
+  "[TeletextSourceSettings](#cfn-medialive-channel-captionselectorsettings-teletextsourcesettings)" : TeletextSourceSettings
 }
 ```
 
 ### YAML<a name="aws-properties-medialive-channel-captionselectorsettings-syntax.yaml"></a>
 
 ```
+  [AncillarySourceSettings](#cfn-medialive-channel-captionselectorsettings-ancillarysourcesettings): 
+    AncillarySourceSettings
   [AribSourceSettings](#cfn-medialive-channel-captionselectorsettings-aribsourcesettings): 
-    [AribSourceSettings](aws-properties-medialive-channel-aribsourcesettings.md)
+    AribSourceSettings
   [DvbSubSourceSettings](#cfn-medialive-channel-captionselectorsettings-dvbsubsourcesettings): 
-    [DvbSubSourceSettings](aws-properties-medialive-channel-dvbsubsourcesettings.md)
+    DvbSubSourceSettings
   [EmbeddedSourceSettings](#cfn-medialive-channel-captionselectorsettings-embeddedsourcesettings): 
-    [EmbeddedSourceSettings](aws-properties-medialive-channel-embeddedsourcesettings.md)
+    EmbeddedSourceSettings
   [Scte20SourceSettings](#cfn-medialive-channel-captionselectorsettings-scte20sourcesettings): 
-    [Scte20SourceSettings](aws-properties-medialive-channel-scte20sourcesettings.md)
+    Scte20SourceSettings
   [Scte27SourceSettings](#cfn-medialive-channel-captionselectorsettings-scte27sourcesettings): 
-    [Scte27SourceSettings](aws-properties-medialive-channel-scte27sourcesettings.md)
+    Scte27SourceSettings
   [TeletextSourceSettings](#cfn-medialive-channel-captionselectorsettings-teletextsourcesettings): 
-    [TeletextSourceSettings](aws-properties-medialive-channel-teletextsourcesettings.md)
+    TeletextSourceSettings
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-captionselectorsettings-properties"></a>
+
+`AncillarySourceSettings`  <a name="cfn-medialive-channel-captionselectorsettings-ancillarysourcesettings"></a>
+ Information about the ancillary captions to extract from the input\.   
+*Required*: No  
+*Type*: [AncillarySourceSettings](aws-properties-medialive-channel-ancillarysourcesettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AribSourceSettings`  <a name="cfn-medialive-channel-captionselectorsettings-aribsourcesettings"></a>
 Information about the ARIB captions to extract from the input\.  

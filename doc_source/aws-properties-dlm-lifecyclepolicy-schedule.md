@@ -1,6 +1,6 @@
 # AWS::DLM::LifecyclePolicy Schedule<a name="aws-properties-dlm-lifecyclepolicy-schedule"></a>
 
-Specifies a backup schedule\.
+Specifies a backup schedule for a snapshot or AMI lifecycle policy\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-schedule-syntax"></a>
 
@@ -11,11 +11,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CopyTags](#cfn-dlm-lifecyclepolicy-schedule-copytags)" : Boolean,
-  "[CreateRule](#cfn-dlm-lifecyclepolicy-schedule-createrule)" : [CreateRule](aws-properties-dlm-lifecyclepolicy-createrule.md),
-  "[CrossRegionCopyRules](#cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules)" : [ [CrossRegionCopyRule](aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.md), ... ],
-  "[FastRestoreRule](#cfn-dlm-lifecyclepolicy-schedule-fastrestorerule)" : [FastRestoreRule](aws-properties-dlm-lifecyclepolicy-fastrestorerule.md),
+  "[CreateRule](#cfn-dlm-lifecyclepolicy-schedule-createrule)" : CreateRule,
+  "[CrossRegionCopyRules](#cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules)" : [ CrossRegionCopyRule, ... ],
+  "[DeprecateRule](#cfn-dlm-lifecyclepolicy-schedule-deprecaterule)" : DeprecateRule,
+  "[FastRestoreRule](#cfn-dlm-lifecyclepolicy-schedule-fastrestorerule)" : FastRestoreRule,
   "[Name](#cfn-dlm-lifecyclepolicy-schedule-name)" : String,
-  "[RetainRule](#cfn-dlm-lifecyclepolicy-schedule-retainrule)" : [RetainRule](aws-properties-dlm-lifecyclepolicy-retainrule.md),
+  "[RetainRule](#cfn-dlm-lifecyclepolicy-schedule-retainrule)" : RetainRule,
+  "[ShareRules](#cfn-dlm-lifecyclepolicy-schedule-sharerules)" : [ ShareRule, ... ],
   "[TagsToAdd](#cfn-dlm-lifecyclepolicy-schedule-tagstoadd)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
   "[VariableTags](#cfn-dlm-lifecyclepolicy-schedule-variabletags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
 }
@@ -26,14 +28,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CopyTags](#cfn-dlm-lifecyclepolicy-schedule-copytags): Boolean
   [CreateRule](#cfn-dlm-lifecyclepolicy-schedule-createrule): 
-    [CreateRule](aws-properties-dlm-lifecyclepolicy-createrule.md)
+    CreateRule
   [CrossRegionCopyRules](#cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules): 
-    - [CrossRegionCopyRule](aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.md)
+    - CrossRegionCopyRule
+  [DeprecateRule](#cfn-dlm-lifecyclepolicy-schedule-deprecaterule): 
+    DeprecateRule
   [FastRestoreRule](#cfn-dlm-lifecyclepolicy-schedule-fastrestorerule): 
-    [FastRestoreRule](aws-properties-dlm-lifecyclepolicy-fastrestorerule.md)
+    FastRestoreRule
   [Name](#cfn-dlm-lifecyclepolicy-schedule-name): String
   [RetainRule](#cfn-dlm-lifecyclepolicy-schedule-retainrule): 
-    [RetainRule](aws-properties-dlm-lifecyclepolicy-retainrule.md)
+    RetainRule
+  [ShareRules](#cfn-dlm-lifecyclepolicy-schedule-sharerules): 
+    - ShareRule
   [TagsToAdd](#cfn-dlm-lifecyclepolicy-schedule-tagstoadd): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VariableTags](#cfn-dlm-lifecyclepolicy-schedule-variabletags): 
@@ -56,9 +62,16 @@ The creation rule\.
 
 `CrossRegionCopyRules`  <a name="cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules"></a>
 The rule for cross\-Region snapshot copies\.  
+You can only specify cross\-Region copy rules for policies that create snapshots in a Region\. If the policy creates snapshots on an Outpost, then you cannot copy the snapshots to a Region or to an Outpost\. If the policy creates snapshots in a Region, then snapshots can be copied to up to three Regions or Outposts\.  
 *Required*: No  
 *Type*: List of [CrossRegionCopyRule](aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.md)  
 *Maximum*: `3`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DeprecateRule`  <a name="cfn-dlm-lifecyclepolicy-schedule-deprecaterule"></a>
+The AMI deprecation rule for the schedule\.  
+*Required*: No  
+*Type*: [DeprecateRule](aws-properties-dlm-lifecyclepolicy-deprecaterule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FastRestoreRule`  <a name="cfn-dlm-lifecyclepolicy-schedule-fastrestorerule"></a>
@@ -72,8 +85,8 @@ The name of the schedule\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
-*Maximum*: `500`  
-*Pattern*: `[\p{all}]*`  
+*Maximum*: `120`  
+*Pattern*: `[0-9A-Za-z _-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetainRule`  <a name="cfn-dlm-lifecyclepolicy-schedule-retainrule"></a>
@@ -82,16 +95,23 @@ The retention rule\.
 *Type*: [RetainRule](aws-properties-dlm-lifecyclepolicy-retainrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ShareRules`  <a name="cfn-dlm-lifecyclepolicy-schedule-sharerules"></a>
+The rule for sharing snapshots with other AWS accounts\.  
+*Required*: No  
+*Type*: List of [ShareRule](aws-properties-dlm-lifecyclepolicy-sharerule.md)  
+*Maximum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `TagsToAdd`  <a name="cfn-dlm-lifecyclepolicy-schedule-tagstoadd"></a>
 The tags to apply to policy\-created resources\. These user\-defined tags are in addition to the AWS\-added lifecycle tags\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `50`  
+*Maximum*: `45`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VariableTags`  <a name="cfn-dlm-lifecyclepolicy-schedule-variabletags"></a>
 A collection of key/value pairs with values determined dynamically when the policy is executed\. Keys may be any valid Amazon EC2 tag key\. Values must be in one of the two following formats: `$(instance-id)` or `$(timestamp)`\. Variable tags are only valid for EBS Snapshot Management – Instance policies\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `50`  
+*Maximum*: `45`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

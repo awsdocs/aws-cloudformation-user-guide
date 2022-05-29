@@ -28,12 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The name of the robot software suite \(ROS distribution\)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ROS | ROS2`  
+*Allowed values*: `General | ROS | ROS2`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-robomaker-robotapplication-robotsoftwaresuite-version"></a>
 The version of the robot software suite \(ROS distribution\)\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
-*Allowed Values*: `Dashing | Kinetic | Melodic`  
+*Allowed values*: `Dashing | Foxy | Kinetic | Melodic`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

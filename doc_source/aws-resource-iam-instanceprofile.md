@@ -1,8 +1,8 @@
 # AWS::IAM::InstanceProfile<a name="aws-resource-iam-instanceprofile"></a>
 
- Creates a new instance profile\. For information about instance profiles, go to [About Instance Profiles](https://docs.aws.amazon.com/IAM/latest/UserGuide/AboutInstanceProfiles.html)\.
+ Creates a new instance profile\. For information about instance profiles, see [Using instance profiles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html)\.
 
- For information about the number of instance profiles you can create, see [Limitations on IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*\.
+ For information about the number of instance profiles you can create, see [IAM object quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
 
 ## Syntax<a name="aws-resource-iam-instanceprofile-syntax"></a>
 
@@ -61,7 +61,7 @@ The name of the role to associate with the instance profile\. Only one role can 
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iam-instanceprofile-return-values"></a>
+## Return values<a name="aws-resource-iam-instanceprofile-return-values"></a>
 
 ### Ref<a name="aws-resource-iam-instanceprofile-return-values-ref"></a>
 
@@ -88,11 +88,11 @@ This returns a value such as `arn:aws:iam::1234567890:instance-profile/MyProfile
 
 ## Examples<a name="aws-resource-iam-instanceprofile--examples"></a>
 
-### IAM Instance Profile<a name="aws-resource-iam-instanceprofile--examples--IAM_Instance_Profile"></a>
+### IAM Instance Profile<a name="aws-resource-iam-instanceprofile--examples--_Instance_Profile"></a>
 
 In this example, the InstanceProfile resource refers to the role by specifying its name, "MyRole"\.
 
-#### JSON<a name="aws-resource-iam-instanceprofile--examples--IAM_Instance_Profile--json"></a>
+#### JSON<a name="aws-resource-iam-instanceprofile--examples--_Instance_Profile--json"></a>
 
 ```
 {
@@ -111,7 +111,7 @@ In this example, the InstanceProfile resource refers to the role by specifying i
 }
 ```
 
-#### YAML<a name="aws-resource-iam-instanceprofile--examples--IAM_Instance_Profile--yaml"></a>
+#### YAML<a name="aws-resource-iam-instanceprofile--examples--_Instance_Profile--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
@@ -125,5 +125,6 @@ Resources:
           Ref: "MyRole"
 ```
 
-## See Also<a name="aws-resource-iam-instanceprofile--seealso"></a>
+## See also<a name="aws-resource-iam-instanceprofile--seealso"></a>
 +  [CreateInstanceProfile](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateInstanceProfile.html) in the *AWS Identity and Access Management API Reference* 
+

@@ -2,6 +2,9 @@
 
 A container for object key name prefix and suffix filtering rules\.
 
+**Note**  
+The same type of filter rule cannot be used more than once\. For example, you cannot specify two prefix rules\.
+
 ## Syntax<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -10,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Rules](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules)" : [ [FilterRule](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules.md), ... ]
+  "[Rules](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules)" : [ FilterRule, ... ]
 }
 ```
 
@@ -18,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Rules](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key-rules): 
-    - [FilterRule](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-rules.md)
+    - FilterRule
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key-properties"></a>

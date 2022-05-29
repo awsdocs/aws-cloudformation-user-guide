@@ -2,7 +2,7 @@
 
 The `RegexPatternSet` specifies the regular expression \(regex\) pattern that you want AWS WAF to search for, such as `B[a@]dB[o0]t`\. You can then configure AWS WAF to reject those requests\.
 
-Note that you can only create regex pattern sets using a CloudFormation template\. To add the regex pattern sets created through CloudFormation to a RegexMatchSet, use the AWS WAF console, API, or command line interface \(CLI\)\. For more information, see [UpdateRegexMatchSet](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_UpdateRegexMatchSet.html)\.
+Note that you can only create regex pattern sets using a AWS CloudFormation template\. To add the regex pattern sets created through AWS CloudFormation to a RegexMatchSet, use the AWS WAF console, API, or command line interface \(CLI\)\. For more information, see [UpdateRegexMatchSet](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_UpdateRegexMatchSet.html)\.
 
 ## Syntax<a name="aws-resource-wafregional-regexpatternset-syntax"></a>
 
@@ -38,6 +38,7 @@ A friendly name or description of the [AWS::WAFRegional::RegexPatternSet](#aws-r
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RegexPatternStrings`  <a name="cfn-wafregional-regexpatternset-regexpatternstrings"></a>
@@ -47,7 +48,7 @@ Specifies the regular expression \(regex\) patterns that you want AWS WAF to sea
 *Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-wafregional-regexpatternset-return-values"></a>
+## Return values<a name="aws-resource-wafregional-regexpatternset-return-values"></a>
 
 ### Ref<a name="aws-resource-wafregional-regexpatternset-return-values-ref"></a>
 
@@ -56,6 +57,8 @@ Specifies the regular expression \(regex\) patterns that you want AWS WAF to sea
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-wafregional-regexpatternset--examples"></a>
+
+
 
 ### Define Regular Expression Pattern<a name="aws-resource-wafregional-regexpatternset--examples--Define_Regular_Expression_Pattern"></a>
 

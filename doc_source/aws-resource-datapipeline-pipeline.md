@@ -25,10 +25,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Activate](#cfn-datapipeline-pipeline-activate)" : Boolean,
       "[Description](#cfn-datapipeline-pipeline-description)" : String,
       "[Name](#cfn-datapipeline-pipeline-name)" : String,
-      "[ParameterObjects](#cfn-datapipeline-pipeline-parameterobjects)" : [ [ParameterObject](aws-properties-datapipeline-pipeline-parameterobjects.md), ... ],
-      "[ParameterValues](#cfn-datapipeline-pipeline-parametervalues)" : [ [ParameterValue](aws-properties-datapipeline-pipeline-parametervalues.md), ... ],
-      "[PipelineObjects](#cfn-datapipeline-pipeline-pipelineobjects)" : [ [PipelineObject](aws-properties-datapipeline-pipeline-pipelineobjects.md), ... ],
-      "[PipelineTags](#cfn-datapipeline-pipeline-pipelinetags)" : [ [PipelineTag](aws-properties-datapipeline-pipeline-pipelinetags.md), ... ]
+      "[ParameterObjects](#cfn-datapipeline-pipeline-parameterobjects)" : [ ParameterObject, ... ],
+      "[ParameterValues](#cfn-datapipeline-pipeline-parametervalues)" : [ ParameterValue, ... ],
+      "[PipelineObjects](#cfn-datapipeline-pipeline-pipelineobjects)" : [ PipelineObject, ... ],
+      "[PipelineTags](#cfn-datapipeline-pipeline-pipelinetags)" : [ PipelineTag, ... ]
     }
 }
 ```
@@ -42,13 +42,13 @@ Properties:
   [Description](#cfn-datapipeline-pipeline-description): String
   [Name](#cfn-datapipeline-pipeline-name): String
   [ParameterObjects](#cfn-datapipeline-pipeline-parameterobjects): 
-    - [ParameterObject](aws-properties-datapipeline-pipeline-parameterobjects.md)
+    - ParameterObject
   [ParameterValues](#cfn-datapipeline-pipeline-parametervalues): 
-    - [ParameterValue](aws-properties-datapipeline-pipeline-parametervalues.md)
+    - ParameterValue
   [PipelineObjects](#cfn-datapipeline-pipeline-pipelineobjects): 
-    - [PipelineObject](aws-properties-datapipeline-pipeline-pipelineobjects.md)
+    - PipelineObject
   [PipelineTags](#cfn-datapipeline-pipeline-pipelinetags): 
-    - [PipelineTag](aws-properties-datapipeline-pipeline-pipelinetags.md)
+    - PipelineTag
 ```
 
 ## Properties<a name="aws-resource-datapipeline-pipeline-properties"></a>
@@ -101,7 +101,7 @@ A list of arbitrary tags \(key\-value pairs\) to associate with the pipeline, wh
 *Type*: List of [PipelineTag](aws-properties-datapipeline-pipeline-pipelinetags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-datapipeline-pipeline-return-values"></a>
+## Return values<a name="aws-resource-datapipeline-pipeline-return-values"></a>
 
 ### Ref<a name="aws-resource-datapipeline-pipeline-return-values-ref"></a>
 
@@ -517,6 +517,7 @@ DynamoDBInputS3OutputHive:
             StringValue: "EmrCluster"
 ```
 
-## See Also<a name="aws-resource-datapipeline-pipeline--seealso"></a>
+## See also<a name="aws-resource-datapipeline-pipeline--seealso"></a>
 +  [Pipeline Object Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html) in the *AWS Data Pipeline Developer Guide*\.
 +  [PutPipelineDefinition](https://docs.aws.amazon.com/datapipeline/latest/APIReference/API_PutPipelineDefinition.html) in the *AWS Data Pipeline API Reference*\.
+

@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CloudFront::CloudFrontOriginAccessIdentity",
   "Properties" : {
-      "[CloudFrontOriginAccessIdentityConfig](#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig)" : [CloudFrontOriginAccessIdentityConfig](aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.md)
+      "[CloudFrontOriginAccessIdentityConfig](#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig)" : CloudFrontOriginAccessIdentityConfig
     }
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
 Properties: 
   [CloudFrontOriginAccessIdentityConfig](#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig): 
-    [CloudFrontOriginAccessIdentityConfig](aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.md)
+    CloudFrontOriginAccessIdentityConfig
 ```
 
 ## Properties<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-properties"></a>
@@ -34,7 +34,7 @@ The current configuration information for the identity\.
 *Type*: [CloudFrontOriginAccessIdentityConfig](aws-properties-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-return-values"></a>
+## Return values<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-return-values"></a>
 
 ### Ref<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-return-values-ref"></a>
 
@@ -50,12 +50,19 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 #### <a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity-return-values-fn--getatt-fn--getatt"></a>
 
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 `S3CanonicalUserId`  <a name="S3CanonicalUserId-fn::getatt"></a>
 The Amazon S3 canonical user ID for the origin access identity, used when giving the origin access identity read permission to an object in Amazon S3\. For example: `b970b42360b81c8ddbd79d2f5df0069ba9033c8a79655752abe380cd6d63ba8bcf23384d568fcf89fc49700b5e11a0fd`\.
 
 ## Examples<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity--examples"></a>
 
+
+
 ### Specify the comment for an origin access identity<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity--examples--Specify_the_comment_for_an_origin_access_identity"></a>
+
+
 
 #### JSON<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity--examples--Specify_the_comment_for_an_origin_access_identity--json"></a>
 
@@ -87,5 +94,6 @@ Resources:
         Comment: string-value
 ```
 
-## See Also<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity--seealso"></a>
+## See also<a name="aws-resource-cloudfront-cloudfrontoriginaccessidentity--seealso"></a>
 +  [OriginAccessIdentity](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_S3OriginConfig.html#cloudfront-Type-S3OriginConfig-OriginAccessIdentity) in the *Amazon CloudFront API Reference* 
+

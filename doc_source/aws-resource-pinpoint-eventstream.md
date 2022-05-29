@@ -1,8 +1,6 @@
 # AWS::Pinpoint::EventStream<a name="aws-resource-pinpoint-eventstream"></a>
 
-You can configure Amazon Pinpoint to stream events to Amazon Kinesis Data Firehose or Amazon Kinesis Data Streams\. By streaming events, you enable more flexible options for analysis and storage\. The AWS::Pinpoint::EventStream resource defines the settings of an event stream for an Amazon Pinpoint application\.
-
-You can configure only one event stream for each Amazon Pinpoint application\. To combine data from multiple applications, configure each application to use the same stream\.
+Creates a new event stream for an application or updates the settings of an existing event stream for an application\.
 
 ## Syntax<a name="aws-resource-pinpoint-eventstream-syntax"></a>
 
@@ -34,7 +32,7 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-eventstream-properties"></a>
 
 `ApplicationId`  <a name="cfn-pinpoint-eventstream-applicationid"></a>
-The unique identifier for the Amazon Pinpoint application that you want to publish event data for\.  
+The unique identifier for the Amazon Pinpoint application that you want to export data from\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -48,12 +46,12 @@ For a Kinesis Data Firehose delivery stream, the ARN format is: `arn:aws:firehos
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-pinpoint-eventstream-rolearn"></a>
-The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role that authorizes Amazon Pinpoint to publish event data to the stream in your AWS account\.  
+The AWS Identity and Access Management \(IAM\) role that authorizes Amazon Pinpoint to publish event data to the stream in your AWS account\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-eventstream-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-eventstream-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-eventstream-return-values-ref"></a>
 

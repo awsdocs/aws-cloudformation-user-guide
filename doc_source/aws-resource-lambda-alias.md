@@ -1,6 +1,6 @@
 # AWS::Lambda::Alias<a name="aws-resource-lambda-alias"></a>
 
-The `AWS::Lambda::Alias` resource creates an [alias](https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html) for a Lambda function version\. Use aliases to provide clients with a function identifier that you can update to invoke a different version\.
+The `AWS::Lambda::Alias` resource creates an [alias](https://docs.aws.amazon.com/lambda/latest/dg/configuration-aliases.html) for a Lambda function version\. Use aliases to provide clients with a function identifier that you can update to invoke a different version\.
 
 You can also map an alias to split invocation requests between two versions\. Use the `RoutingConfig` parameter to specify a second version and the percentage of invocation requests that it receives\.
 
@@ -18,8 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[FunctionName](#cfn-lambda-alias-functionname)" : String,
       "[FunctionVersion](#cfn-lambda-alias-functionversion)" : String,
       "[Name](#cfn-lambda-alias-name)" : String,
-      "[ProvisionedConcurrencyConfig](#cfn-lambda-alias-provisionedconcurrencyconfig)" : [ProvisionedConcurrencyConfiguration](aws-properties-lambda-alias-provisionedconcurrencyconfiguration.md),
-      "[RoutingConfig](#cfn-lambda-alias-routingconfig)" : [AliasRoutingConfiguration](aws-properties-lambda-alias-aliasroutingconfiguration.md)
+      "[ProvisionedConcurrencyConfig](#cfn-lambda-alias-provisionedconcurrencyconfig)" : ProvisionedConcurrencyConfiguration,
+      "[RoutingConfig](#cfn-lambda-alias-routingconfig)" : AliasRoutingConfiguration
     }
 }
 ```
@@ -34,9 +34,9 @@ Properties:
   [FunctionVersion](#cfn-lambda-alias-functionversion): String
   [Name](#cfn-lambda-alias-name): String
   [ProvisionedConcurrencyConfig](#cfn-lambda-alias-provisionedconcurrencyconfig): 
-    [ProvisionedConcurrencyConfiguration](aws-properties-lambda-alias-provisionedconcurrencyconfiguration.md)
+    ProvisionedConcurrencyConfiguration
   [RoutingConfig](#cfn-lambda-alias-routingconfig): 
-    [AliasRoutingConfiguration](aws-properties-lambda-alias-aliasroutingconfiguration.md)
+    AliasRoutingConfiguration
 ```
 
 ## Properties<a name="aws-resource-lambda-alias-properties"></a>
@@ -83,7 +83,7 @@ The name of the alias\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProvisionedConcurrencyConfig`  <a name="cfn-lambda-alias-provisionedconcurrencyconfig"></a>
-Specifies a provisioned concurrency configuration for a function's alias\.  
+Specifies a [provisioned concurrency](https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html) configuration for a function's alias\.  
 *Required*: No  
 *Type*: [ProvisionedConcurrencyConfiguration](aws-properties-lambda-alias-provisionedconcurrencyconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -94,7 +94,7 @@ The [routing configuration](https://docs.aws.amazon.com/lambda/latest/dg/lambda-
 *Type*: [AliasRoutingConfiguration](aws-properties-lambda-alias-aliasroutingconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-lambda-alias-return-values"></a>
+## Return values<a name="aws-resource-lambda-alias-return-values"></a>
 
 ### Ref<a name="aws-resource-lambda-alias-return-values-ref"></a>
 
@@ -103,6 +103,8 @@ The [routing configuration](https://docs.aws.amazon.com/lambda/latest/dg/lambda-
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-lambda-alias--examples"></a>
+
+
 
 ### Alias<a name="aws-resource-lambda-alias--examples--Alias"></a>
 

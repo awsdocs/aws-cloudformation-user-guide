@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-eventschemas-schema-description)" : String,
       "[RegistryName](#cfn-eventschemas-schema-registryname)" : String,
       "[SchemaName](#cfn-eventschemas-schema-schemaname)" : String,
-      "[Tags](#cfn-eventschemas-schema-tags)" : [ [TagsEntry](aws-properties-eventschemas-schema-tagsentry.md), ... ],
+      "[Tags](#cfn-eventschemas-schema-tags)" : [ TagsEntry, ... ],
       "[Type](#cfn-eventschemas-schema-type)" : String
     }
 }
@@ -32,7 +32,7 @@ Properties:
   [RegistryName](#cfn-eventschemas-schema-registryname): String
   [SchemaName](#cfn-eventschemas-schema-schemaname): String
   [Tags](#cfn-eventschemas-schema-tags): 
-    - [TagsEntry](aws-properties-eventschemas-schema-tagsentry.md)
+    - TagsEntry
   [Type](#cfn-eventschemas-schema-type): String
 ```
 
@@ -70,11 +70,12 @@ Tags associated with the schema\.
 
 `Type`  <a name="cfn-eventschemas-schema-type"></a>
 The type of schema\.  
+Valid types include `OpenApi3` and `JSONSchemaDraft4`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-eventschemas-schema-return-values"></a>
+## Return values<a name="aws-resource-eventschemas-schema-return-values"></a>
 
 ### Ref<a name="aws-resource-eventschemas-schema-return-values-ref"></a>
 
@@ -116,8 +117,8 @@ Resources:
   ExecutionStatusChangeSchema:
     Type: AWS::EventSchemas::Schema
     Properties:
-      Registry: 'aws.events'
-      Name: ExecutionStatusChange
+      RegistryName: 'aws.events'
+      SchemaName: ExecutionStatusChange
       Description: 'event emitted when the status of a state machine execution change'
       Type: OpenApi3
       Content: >
@@ -127,6 +128,7 @@ Resources:
             "version": "1.0.0",
             "title": "StepFunctionsExecutionStatusChange"
           },
+          "paths":{},
           "components": {
             "schemas": {
               "StepFunctionsExecutionStatusChange": {

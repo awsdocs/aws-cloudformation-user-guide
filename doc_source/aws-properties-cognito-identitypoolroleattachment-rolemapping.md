@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[AmbiguousRoleResolution](#cfn-cognito-identitypoolroleattachment-rolemapping-ambiguousroleresolution)" : String,
   "[IdentityProvider](#cfn-cognito-identitypoolroleattachment-rolemapping-identityprovider)" : String,
-  "[RulesConfiguration](#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration)" : [RulesConfigurationType](aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.md),
+  "[RulesConfiguration](#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration)" : RulesConfigurationType,
   "[Type](#cfn-cognito-identitypoolroleattachment-rolemapping-type)" : String
 }
 ```
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [AmbiguousRoleResolution](#cfn-cognito-identitypoolroleattachment-rolemapping-ambiguousroleresolution): String
   [IdentityProvider](#cfn-cognito-identitypoolroleattachment-rolemapping-identityprovider): String
   [RulesConfiguration](#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration): 
-    [RulesConfigurationType](aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.md)
+    RulesConfigurationType
   [Type](#cfn-cognito-identitypoolroleattachment-rolemapping-type): String
 ```
 
@@ -37,7 +37,7 @@ Valid values are `AuthenticatedRole` or `Deny`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IdentityProvider`  <a name="cfn-cognito-identitypoolroleattachment-rolemapping-identityprovider"></a>
-Identifier for the identity provider for which the role is mapped\. For example: "graph\.facebook\.com" or "cognito\-idp\.us\-east\-1\.amazonaws\.com/us\-east\-1\_abcdefghi:app\_client\_id \(http://cognito\-idp\.us\-east\-1\.amazonaws\.com/us\-east\-1\_abcdefghi:app\_client\_id\)"\. This is the identity provider that is used by the user for authentication\.  
+Identifier for the identity provider for which the role is mapped\. For example: `graph.facebook.com` or `cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id (http://cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id)`\. This is the identity provider that is used by the user for authentication\.  
 If the identity provider property isn't provided, the key of the entry in the `RoleMappings` map is used as the identity provider\.  
 *Required*: No  
 *Type*: String  

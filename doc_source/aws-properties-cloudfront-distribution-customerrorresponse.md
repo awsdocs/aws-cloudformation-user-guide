@@ -65,5 +65,6 @@ We recommend that you store custom error pages in an Amazon S3 bucket\. If you s
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-cloudfront-distribution-customerrorresponse--seealso"></a>
+## See also<a name="aws-properties-cloudfront-distribution-customerrorresponse--seealso"></a>
 +  [CustomErrorResponse](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CustomErrorResponse.html) in the *Amazon CloudFront API Reference* 
+

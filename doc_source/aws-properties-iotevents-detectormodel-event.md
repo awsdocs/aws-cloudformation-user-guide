@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Actions](#cfn-iotevents-detectormodel-event-actions)" : [ [Action](aws-properties-iotevents-detectormodel-action.md), ... ],
+  "[Actions](#cfn-iotevents-detectormodel-event-actions)" : [ Action, ... ],
   "[Condition](#cfn-iotevents-detectormodel-event-condition)" : String,
   "[EventName](#cfn-iotevents-detectormodel-event-eventname)" : String
 }
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Actions](#cfn-iotevents-detectormodel-event-actions): 
-    - [Action](aws-properties-iotevents-detectormodel-action.md)
+    - Action
   [Condition](#cfn-iotevents-detectormodel-event-condition): String
   [EventName](#cfn-iotevents-detectormodel-event-eventname): String
 ```
@@ -42,7 +42,7 @@ Optional\. The Boolean expression that, when TRUE, causes the `actions` to be pe
 
 `EventName`  <a name="cfn-iotevents-detectormodel-event-eventname"></a>
 The name of the event\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Maximum*: `128`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

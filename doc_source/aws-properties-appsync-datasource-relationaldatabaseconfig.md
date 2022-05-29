@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[RdsHttpEndpointConfig](#cfn-appsync-datasource-relationaldatabaseconfig-rdshttpendpointconfig)" : [RdsHttpEndpointConfig](aws-properties-appsync-datasource-rdshttpendpointconfig.md),
+  "[RdsHttpEndpointConfig](#cfn-appsync-datasource-relationaldatabaseconfig-rdshttpendpointconfig)" : RdsHttpEndpointConfig,
   "[RelationalDatabaseSourceType](#cfn-appsync-datasource-relationaldatabaseconfig-relationaldatabasesourcetype)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [RdsHttpEndpointConfig](#cfn-appsync-datasource-relationaldatabaseconfig-rdshttpendpointconfig): 
-    [RdsHttpEndpointConfig](aws-properties-appsync-datasource-rdshttpendpointconfig.md)
+    RdsHttpEndpointConfig
   [RelationalDatabaseSourceType](#cfn-appsync-datasource-relationaldatabaseconfig-relationaldatabasesourcetype): String
 ```
 

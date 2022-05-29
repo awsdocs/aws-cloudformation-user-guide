@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EndDate](#cfn-ssm-maintenancewindow-enddate)" : String,
       "[Name](#cfn-ssm-maintenancewindow-name)" : String,
       "[Schedule](#cfn-ssm-maintenancewindow-schedule)" : String,
+      "[ScheduleOffset](#cfn-ssm-maintenancewindow-scheduleoffset)" : Integer,
       "[ScheduleTimezone](#cfn-ssm-maintenancewindow-scheduletimezone)" : String,
       "[StartDate](#cfn-ssm-maintenancewindow-startdate)" : String,
       "[Tags](#cfn-ssm-maintenancewindow-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -40,6 +41,7 @@ Properties:
   [EndDate](#cfn-ssm-maintenancewindow-enddate): String
   [Name](#cfn-ssm-maintenancewindow-name): String
   [Schedule](#cfn-ssm-maintenancewindow-schedule): String
+  [ScheduleOffset](#cfn-ssm-maintenancewindow-scheduleoffset): Integer
   [ScheduleTimezone](#cfn-ssm-maintenancewindow-scheduletimezone): String
   [StartDate](#cfn-ssm-maintenancewindow-startdate): String
   [Tags](#cfn-ssm-maintenancewindow-tags): 
@@ -55,7 +57,7 @@ Enables a maintenance window task to run on managed instances, even if you have 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Cutoff`  <a name="cfn-ssm-maintenancewindow-cutoff"></a>
-The number of hours before the end of the maintenance window that Systems Manager stops scheduling new tasks for execution\.  
+The number of hours before the end of the maintenance window that AWS Systems Manager stops scheduling new tasks for execution\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -101,6 +103,14 @@ The schedule of the maintenance window in the form of a cron or rate expression\
 *Maximum*: `256`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ScheduleOffset`  <a name="cfn-ssm-maintenancewindow-scheduleoffset"></a>
+The number of days to wait to run a maintenance window after the scheduled cron expression date and time\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `6`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ScheduleTimezone`  <a name="cfn-ssm-maintenancewindow-scheduletimezone"></a>
 The time zone that the scheduled maintenance window executions are based on, in Internet Assigned Numbers Authority \(IANA\) format\.  
 *Required*: No  
@@ -120,7 +130,7 @@ Optional metadata that you assign to a resource in the form of an arbitrary set 
 *Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ssm-maintenancewindow-return-values"></a>
+## Return values<a name="aws-resource-ssm-maintenancewindow-return-values"></a>
 
 ### Ref<a name="aws-resource-ssm-maintenancewindow-return-values-ref"></a>
 
@@ -130,11 +140,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ssm-maintenancewindow--examples"></a>
 
-### AWS Systems Manager Maintenance Window Example<a name="aws-resource-ssm-maintenancewindow--examples--AWS_Systems_Manager_Maintenance_Window_Example"></a>
+### Create a maintenance window that does not allow unregistered targets<a name="aws-resource-ssm-maintenancewindow--examples--Create_a_maintenance_window_that_does_not_allow_unregistered_targets"></a>
 
 The following example creates a Systems Manager maintenance window that runs for two hours with a one hour cutoff every Sunday at 04:00 AM US Eastern Time\. The maintenance window also doesn't allow unregistered targets\.
 
-#### JSON<a name="aws-resource-ssm-maintenancewindow--examples--AWS_Systems_Manager_Maintenance_Window_Example--json"></a>
+#### JSON<a name="aws-resource-ssm-maintenancewindow--examples--Create_a_maintenance_window_that_does_not_allow_unregistered_targets--json"></a>
 
 ```
 {
@@ -155,7 +165,7 @@ The following example creates a Systems Manager maintenance window that runs for
 }
 ```
 
-#### YAML<a name="aws-resource-ssm-maintenancewindow--examples--AWS_Systems_Manager_Maintenance_Window_Example--yaml"></a>
+#### YAML<a name="aws-resource-ssm-maintenancewindow--examples--Create_a_maintenance_window_that_does_not_allow_unregistered_targets--yaml"></a>
 
 ```
 ---
@@ -172,7 +182,7 @@ Resources:
       ScheduleTimezone: US/Eastern
 ```
 
-## See Also<a name="aws-resource-ssm-maintenancewindow--seealso"></a>
+## See also<a name="aws-resource-ssm-maintenancewindow--seealso"></a>
 +  [AWS::SSM::MaintenanceWindowTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html) 
 +  [AWS::SSM::MaintenanceWindowTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html) 
 +  [CreateMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateMaintenanceWindow.html) in the *AWS Systems Manager API Reference\.* 

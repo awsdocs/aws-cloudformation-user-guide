@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-eventschemas-registry-description)" : String,
       "[RegistryName](#cfn-eventschemas-registry-registryname)" : String,
-      "[Tags](#cfn-eventschemas-registry-tags)" : [ [TagsEntry](aws-properties-eventschemas-registry-tagsentry.md), ... ]
+      "[Tags](#cfn-eventschemas-registry-tags)" : [ TagsEntry, ... ]
     }
 }
 ```
@@ -27,7 +27,7 @@ Properties:
   [Description](#cfn-eventschemas-registry-description): String
   [RegistryName](#cfn-eventschemas-registry-registryname): String
   [Tags](#cfn-eventschemas-registry-tags): 
-    - [TagsEntry](aws-properties-eventschemas-registry-tagsentry.md)
+    - TagsEntry
 ```
 
 ## Properties<a name="aws-resource-eventschemas-registry-properties"></a>
@@ -50,7 +50,7 @@ Tags to associate with the registry\.
 *Type*: List of [TagsEntry](aws-properties-eventschemas-registry-tagsentry.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-eventschemas-registry-return-values"></a>
+## Return values<a name="aws-resource-eventschemas-registry-return-values"></a>
 
 ### Ref<a name="aws-resource-eventschemas-registry-return-values-ref"></a>
 
@@ -80,15 +80,15 @@ The name of the registry\.
 
 ## Examples<a name="aws-resource-eventschemas-registry--examples"></a>
 
-### Create a Schema Registry for Events Emitted by AWS Step Functions<a name="aws-resource-eventschemas-registry--examples--Create_a_Schema_Registry_for_Events_Emitted_by_AWS_Step_Functions"></a>
+### Create a Schema Registry for Events Emitted by AWS Step Functions<a name="aws-resource-eventschemas-registry--examples--Create_a_Schema_Registry_for_Events_Emitted_by__Step_Functions"></a>
 
-#### YAML<a name="aws-resource-eventschemas-registry--examples--Create_a_Schema_Registry_for_Events_Emitted_by_AWS_Step_Functions--yaml"></a>
+#### YAML<a name="aws-resource-eventschemas-registry--examples--Create_a_Schema_Registry_for_Events_Emitted_by__Step_Functions--yaml"></a>
 
 ```
 Resources:
   StatesSchemasRegistry:
     Type: AWS::EventSchemas::Registry
     Properties:
-      Name: 'aws.states'
+      RegistryName: 'aws.states'
       Description: 'Contains the schemas of events emitted by AWS Step Functions'
 ```

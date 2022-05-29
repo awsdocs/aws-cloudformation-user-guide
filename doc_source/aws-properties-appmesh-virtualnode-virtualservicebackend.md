@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ClientPolicy](#cfn-appmesh-virtualnode-virtualservicebackend-clientpolicy)" : [ClientPolicy](aws-properties-appmesh-virtualnode-clientpolicy.md),
+  "[ClientPolicy](#cfn-appmesh-virtualnode-virtualservicebackend-clientpolicy)" : ClientPolicy,
   "[VirtualServiceName](#cfn-appmesh-virtualnode-virtualservicebackend-virtualservicename)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ClientPolicy](#cfn-appmesh-virtualnode-virtualservicebackend-clientpolicy): 
-    [ClientPolicy](aws-properties-appmesh-virtualnode-clientpolicy.md)
+    ClientPolicy
   [VirtualServiceName](#cfn-appmesh-virtualnode-virtualservicebackend-virtualservicename): String
 ```
 

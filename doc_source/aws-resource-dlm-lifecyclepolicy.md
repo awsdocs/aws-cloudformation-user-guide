@@ -16,8 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-dlm-lifecyclepolicy-description)" : String,
       "[ExecutionRoleArn](#cfn-dlm-lifecyclepolicy-executionrolearn)" : String,
-      "[PolicyDetails](#cfn-dlm-lifecyclepolicy-policydetails)" : [PolicyDetails](aws-properties-dlm-lifecyclepolicy-policydetails.md),
-      "[State](#cfn-dlm-lifecyclepolicy-state)" : String
+      "[PolicyDetails](#cfn-dlm-lifecyclepolicy-policydetails)" : PolicyDetails,
+      "[State](#cfn-dlm-lifecyclepolicy-state)" : String,
+      "[Tags](#cfn-dlm-lifecyclepolicy-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -30,8 +31,10 @@ Properties:
   [Description](#cfn-dlm-lifecyclepolicy-description): String
   [ExecutionRoleArn](#cfn-dlm-lifecyclepolicy-executionrolearn): String
   [PolicyDetails](#cfn-dlm-lifecyclepolicy-policydetails): 
-    [PolicyDetails](aws-properties-dlm-lifecyclepolicy-policydetails.md)
+    PolicyDetails
   [State](#cfn-dlm-lifecyclepolicy-state): String
+  [Tags](#cfn-dlm-lifecyclepolicy-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-dlm-lifecyclepolicy-properties"></a>
@@ -51,7 +54,7 @@ The Amazon Resource Name \(ARN\) of the IAM role used to run the operations spec
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `2048`  
-*Pattern*: `arn:aws:iam::\d+:role/.*`  
+*Pattern*: `arn:aws(-[a-z]{1,3}){0,2}:iam::\d+:role/.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyDetails`  <a name="cfn-dlm-lifecyclepolicy-policydetails"></a>
@@ -64,10 +67,16 @@ The configuration details of the lifecycle policy\.
 The activation state of the lifecycle policy\.  
 *Required*: Conditional  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED | ERROR`  
+*Allowed values*: `DISABLED | ENABLED | ERROR`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-dlm-lifecyclepolicy-return-values"></a>
+`Tags`  <a name="cfn-dlm-lifecyclepolicy-tags"></a>
+The tags to apply to the lifecycle policy during creation\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-dlm-lifecyclepolicy-return-values"></a>
 
 ### Ref<a name="aws-resource-dlm-lifecyclepolicy-return-values-ref"></a>
 
@@ -90,44 +99,7 @@ The Amazon Resource Name \(ARN\) of the lifecycle policy\.
 
 ### Creating a Lifecycle Policy<a name="aws-resource-dlm-lifecyclepolicy--examples--Creating_a_Lifecycle_Policy"></a>
 
-The following example demonstrates how to create a basic lifecycle policy\.
-
-#### YAML<a name="aws-resource-dlm-lifecyclepolicy--examples--Creating_a_Lifecycle_Policy--yaml"></a>
-
-```
-Description: "Basic LifecyclePolicy"
-Resources:
-  BasicLifecyclePolicy:
-    Type: "AWS::DLM::LifecyclePolicy"
-    Properties:
-      Description: "Lifecycle Policy using CloudFormation"
-      State: "ENABLED"
-      ExecutionRoleArn: "arn:aws:iam::123456789012:role/AWSDataLifecycleManagerDefaultRole"
-      PolicyDetails:
-        ResourceTypes:
-          - "VOLUME"
-        TargetTags:
-          -
-            Key: "costcenter"
-            Value: "115"
-          
-        Schedules:
-          -
-            Name: "Daily Snapshots"
-            TagsToAdd:
-              -
-                Key: "type"
-                Value: "DailySnapshot"
-              
-            CreateRule:
-              Interval: 12
-              IntervalUnit: "HOURS"
-              Times:
-                - "13:00"
-            RetainRule:
-              Count: 1
-            CopyTags: true
-```
+The following example demonstrates how to create a basic snapshot lifecycle policy with a cross\-Region copy rule\.
 
 #### JSON<a name="aws-resource-dlm-lifecyclepolicy--examples--Creating_a_Lifecycle_Policy--json"></a>
 
@@ -140,45 +112,80 @@ Resources:
             "Properties": {
                 "Description": "Lifecycle Policy using CloudFormation",
                 "State": "ENABLED",
-                "ExecutionRoleArn": "arn:aws:iam::123456789012:role/AWSDataLifecycleManagerDefaultRole",
+                "ExecutionRoleArn": "arn:aws:iam::123456789012:role/service-role/AWSDataLifecycleManagerDefaultRole",
                 "PolicyDetails": {
                     "ResourceTypes": [
                         "VOLUME"
                     ],
-                    "TargetTags": [
-                        {
-                            "Key": "costcenter",
-                            "Value": "115"
-                        }
-                    ],
-                    "Schedules": [
-                        {
-                            "Name": "Daily Snapshots",
-                            "TagsToAdd": [
-                                {
-                                    "Key": "type",
-                                    "Value": "DailySnapshot"
-                                }
-                            ],
-                            "CreateRule": {
-                                "Interval": 12,
-                                "IntervalUnit": "HOURS",
-                                "Times": [
-                                    "13:00"
-                                ]
-                            },
-                            "RetainRule": {
-                                "Count": 1
-                            },
-                            "CopyTags": true
-                        }
-                    ]
-                }
-            }
+                    "TargetTags": [{
+                        "Key": "costcenter",
+                        "Value": "115"
+                    }],
+                    "Schedules": [{
+                        "Name": "Daily Snapshots",
+                        "TagsToAdd": [{
+                            "Key": "type",
+                            "Value": "DailySnapshot"
+                        }],
+                        "CreateRule": {
+                            "Interval": 12,
+                            "IntervalUnit": "HOURS",
+                            "Times": [
+                                "13:00"
+                            ]
+                        },
+                        "RetainRule": {
+                            "Count": 1
+                        },
+                        "CopyTags": true,
+                        "CrossRegionCopyRules": [{
+                            "Encrypted": false,
+                            "Target": "us-east-1"
+                        }]
+                   }]
+               }
+           }
         }
     }
+}
 ```
 
-## See Also<a name="aws-resource-dlm-lifecyclepolicy--seealso"></a>
+#### YAML<a name="aws-resource-dlm-lifecyclepolicy--examples--Creating_a_Lifecycle_Policy--yaml"></a>
+
+```
+Description: Basic LifecyclePolicy
+Resources:
+  BasicLifecyclePolicy:
+    Type: AWS::DLM::LifecyclePolicy
+    Properties:
+      Description: Lifecycle Policy using CloudFormation
+      State: ENABLED
+      ExecutionRoleArn: arn:aws:iam::123456789012:role/service-role/AWSDataLifecycleManagerDefaultRole
+      PolicyDetails:
+        ResourceTypes:
+        - VOLUME
+        TargetTags:
+        - Key: costcenter
+          Value: '115'
+        Schedules:
+        - Name: Daily Snapshots
+          TagsToAdd:
+          - Key: type
+            Value: DailySnapshot
+          CreateRule:
+            Interval: 12
+            IntervalUnit: HOURS
+            Times:
+            - '13:00'
+          RetainRule:
+            Count: 1
+          CopyTags: true
+          CrossRegionCopyRules:
+          - Encrypted: false
+            Target: us-east-1
+```
+
+## See also<a name="aws-resource-dlm-lifecyclepolicy--seealso"></a>
 +  [CreateLifecyclePolicy](https://docs.aws.amazon.com/dlm/latest/APIReference/API_CreateLifecyclePolicy.html) in the *Amazon Data Lifecycle Manager API Reference* 
 +  [Automating the Amazon EBS Snapshot Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html) in the *Amazon Elastic Compute Cloud User Guide* 
+

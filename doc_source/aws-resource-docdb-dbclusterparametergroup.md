@@ -76,7 +76,7 @@ The tags to be assigned to the cluster parameter group\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-docdb-dbclusterparametergroup-return-values"></a>
+## Return values<a name="aws-resource-docdb-dbclusterparametergroup-return-values"></a>
 
 ### Ref<a name="aws-resource-docdb-dbclusterparametergroup-return-values-ref"></a>
 
@@ -86,7 +86,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-docdb-dbclusterparametergroup--examples"></a>
 
+
+
 ### <a name="aws-resource-docdb-dbclusterparametergroup--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-docdb-dbclusterparametergroup--examples----json"></a>
 
@@ -125,9 +129,10 @@ Properties:
          Value: "String"
 ```
 
-## See Also<a name="aws-resource-docdb-dbclusterparametergroup--seealso"></a>
+## See also<a name="aws-resource-docdb-dbclusterparametergroup--seealso"></a>
 +  [DBClusterParameterGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBClusterParameterGroup.html) 
 +  [CreateDBClusterParameterGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBClusterParameterGroup.html) 
 +  [DeleteDBClusterParameterGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DeleteDBClusterParameterGroup.html) 
 +  [DescribeDBClusterParameterGroups](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DescribeDBClusterParameterGroups.html) 
 +  [ModifyDBClusterParameterGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_ModifyDBClusterParameterGroup.html) 
+

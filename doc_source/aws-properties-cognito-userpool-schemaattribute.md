@@ -14,9 +14,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DeveloperOnlyAttribute](#cfn-cognito-userpool-schemaattribute-developeronlyattribute)" : Boolean,
   "[Mutable](#cfn-cognito-userpool-schemaattribute-mutable)" : Boolean,
   "[Name](#cfn-cognito-userpool-schemaattribute-name)" : String,
-  "[NumberAttributeConstraints](#cfn-cognito-userpool-schemaattribute-numberattributeconstraints)" : [NumberAttributeConstraints](aws-properties-cognito-userpool-numberattributeconstraints.md),
+  "[NumberAttributeConstraints](#cfn-cognito-userpool-schemaattribute-numberattributeconstraints)" : NumberAttributeConstraints,
   "[Required](#cfn-cognito-userpool-schemaattribute-required)" : Boolean,
-  "[StringAttributeConstraints](#cfn-cognito-userpool-schemaattribute-stringattributeconstraints)" : [StringAttributeConstraints](aws-properties-cognito-userpool-stringattributeconstraints.md)
+  "[StringAttributeConstraints](#cfn-cognito-userpool-schemaattribute-stringattributeconstraints)" : StringAttributeConstraints
 }
 ```
 
@@ -28,10 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Mutable](#cfn-cognito-userpool-schemaattribute-mutable): Boolean
   [Name](#cfn-cognito-userpool-schemaattribute-name): String
   [NumberAttributeConstraints](#cfn-cognito-userpool-schemaattribute-numberattributeconstraints): 
-    [NumberAttributeConstraints](aws-properties-cognito-userpool-numberattributeconstraints.md)
+    NumberAttributeConstraints
   [Required](#cfn-cognito-userpool-schemaattribute-required): Boolean
   [StringAttributeConstraints](#cfn-cognito-userpool-schemaattribute-stringattributeconstraints): 
-    [StringAttributeConstraints](aws-properties-cognito-userpool-stringattributeconstraints.md)
+    StringAttributeConstraints
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-schemaattribute-properties"></a>
@@ -40,7 +40,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The attribute data type\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Boolean | DateTime | Number | String`  
+*Allowed values*: `Boolean | DateTime | Number | String`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeveloperOnlyAttribute`  <a name="cfn-cognito-userpool-schemaattribute-developeronlyattribute"></a>
@@ -52,7 +52,7 @@ Specifies whether the attribute type is developer only\. This attribute can only
 
 `Mutable`  <a name="cfn-cognito-userpool-schemaattribute-mutable"></a>
 Specifies whether the value of the attribute can be changed\.  
-For any user pool attribute that's mapped to an identity provider attribute, you must set this parameter to `true`\. Amazon Cognito updates mapped attributes when users sign in to your application through an identity provider\. If an attribute is immutable, Amazon Cognito throws an error when it attempts to update the attribute\. For more information, see [Specifying Identity Provider Attribute Mappings for Your User Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)\.  
+For any user pool attribute that is mapped to an identity provider attribute, you must set this parameter to `true`\. Amazon Cognito updates mapped attributes when users sign in to your application through an identity provider\. If an attribute is immutable, Amazon Cognito throws an error when it attempts to update the attribute\. For more information, see [Specifying Identity Provider Attribute Mappings for Your User Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -73,7 +73,7 @@ Specifies the constraints for an attribute of the number type\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Required`  <a name="cfn-cognito-userpool-schemaattribute-required"></a>
-Specifies whether a user pool attribute is required\. If the attribute is required and the user does not provide a value, registration or sign\-in will fail\.  
+Specifies whether a user pool attribute is required\. If the attribute is required and the user doesn't provide a value, registration or sign\-in will fail\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

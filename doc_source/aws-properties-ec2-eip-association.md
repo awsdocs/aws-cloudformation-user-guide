@@ -2,7 +2,7 @@
 
 Associates an Elastic IP address with an instance or a network interface\. Before you can use an Elastic IP address, you must allocate it to your account\.
 
-An Elastic IP address is for use in either the EC2\-Classic platform or in a VPC\. For more information, see [Elastic IP Addresses](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+An Elastic IP address is for use in either the EC2\-Classic platform or in a VPC\. For more information, see [Elastic IP Addresses](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) in the *Amazon EC2 User Guide*\.
 
 \[EC2\-Classic, VPC in an EC2\-VPC\-only account\] If the Elastic IP address is already associated with a different instance, it is disassociated from that instance and associated with the specified instance\. If you associate an Elastic IP address with an instance that has an existing Elastic IP address, the existing address is disassociated from the instance, but remains allocated to your account\.
 
@@ -48,13 +48,13 @@ Properties:
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `EIP`  <a name="cfn-ec2-eipassociation-eip"></a>
-The Elastic IP address to associate with the instance\. This is required for EC2\-Classic\.  
+\[EC2\-Classic\] The Elastic IP address to associate with the instance\. This is required for EC2\-Classic\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `InstanceId`  <a name="cfn-ec2-eipassociation-instanceid"></a>
-The ID of the instance\. This is required for EC2\-Classic\. For EC2\-VPC, you can specify either the instance ID or the network interface ID, but not both\. The operation fails if you specify an instance ID unless exactly one network interface is attached\.  
+The ID of the instance\. The instance must have exactly one attached network interface\. For EC2\-VPC, you can specify either the instance ID or the network interface ID, but not both\. For EC2\-Classic, you must specify an instance ID and the instance must be in the running state\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
@@ -72,7 +72,7 @@ For EC2\-VPC, you can specify either the instance ID or the network interface ID
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-ec2-eip-association-return-values"></a>
+## Return values<a name="aws-properties-ec2-eip-association-return-values"></a>
 
 ### Ref<a name="aws-properties-ec2-eip-association-return-values-ref"></a>
 
@@ -82,13 +82,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-properties-ec2-eip-association--examples"></a>
 
-### Associating an Elastic IP address to an instance<a name="aws-properties-ec2-eip-association--examples--Associating_an_Elastic_IP_address_to_an_instance"></a>
+### Associate an Elastic IP address to an instance<a name="aws-properties-ec2-eip-association--examples--Associate_an_Elastic_IP_address_to_an_instance"></a>
 
 The following example creates an instance with two elastic network interfaces \(ENI\)\. The example assumes that you have an existing VPC\.
 
 For additional examples, see [Assigning an Amazon EC2 Elastic IP Using AWS::EC2::EIP Snippet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-ec2.html#scenario-ec2-eip)\.
 
-#### JSON<a name="aws-properties-ec2-eip-association--examples--Associating_an_Elastic_IP_address_to_an_instance--json"></a>
+#### JSON<a name="aws-properties-ec2-eip-association--examples--Associate_an_Elastic_IP_address_to_an_instance--json"></a>
 
 ```
   "Resources" : {
@@ -123,7 +123,7 @@ For additional examples, see [Assigning an Amazon EC2 Elastic IP Using AWS::EC2:
         "Properties" : {
             "VpcId" : { "Ref" : "VpcId" },
             "GroupDescription" : "Enable SSH access via port 22",
-            "SecurityGroupIngress" : [ { "IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : "0.0.0.0/0" } ]
+            "SecurityGroupIngress" : [ { "IpProtocol" : "tcp", "FromPort" : 22, "ToPort" : 22, "CidrIp" : "0.0.0.0/0" } ]
         }
     },
     "WebSecurityGroup" : {

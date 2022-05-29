@@ -61,7 +61,7 @@ The tags to be assigned to the subnet group\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-docdb-dbsubnetgroup-return-values"></a>
+## Return values<a name="aws-resource-docdb-dbsubnetgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-docdb-dbsubnetgroup-return-values-ref"></a>
 
@@ -71,7 +71,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-docdb-dbsubnetgroup--examples"></a>
 
+
+
 ### <a name="aws-resource-docdb-dbsubnetgroup--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-docdb-dbsubnetgroup--examples----json"></a>
 
@@ -109,10 +113,11 @@ Resources:
                Value: "String"
 ```
 
-## See Also<a name="aws-resource-docdb-dbsubnetgroup--seealso"></a>
+## See also<a name="aws-resource-docdb-dbsubnetgroup--seealso"></a>
 +  [Subnet](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_Subnet.html) 
 +  [DBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBSubnetGroup.html) 
 +  [CreateDBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBSubnetGroup.html) 
 +  [DeleteDBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DeleteDBSubnetGroup.html) 
 +  [DescribeDBSubnetGroups](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DescribeDBSubnetGroups.html) 
 +  [ModifyDBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_ModifyDBSubnetGroup.html) 
+

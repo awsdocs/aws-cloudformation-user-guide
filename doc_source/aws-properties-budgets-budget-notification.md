@@ -1,6 +1,6 @@
 # AWS::Budgets::Budget Notification<a name="aws-properties-budgets-budget-notification"></a>
 
-A notification that is associated with a budget\. A budget can have up to five notifications\. 
+A notification that's associated with a budget\. A budget can have up to ten notifications\. 
 
 Each notification must have at least one subscriber\. A notification can have one SNS subscriber and up to 10 email subscribers, for a total of 11 subscribers\.
 
@@ -37,21 +37,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-budgets-budget-notification-properties"></a>
 
 `ComparisonOperator`  <a name="cfn-budgets-budget-notification-comparisonoperator"></a>
-The comparison that is used for this notification\.  
+The comparison that's used for this notification\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `EQUAL_TO | GREATER_THAN | LESS_THAN`  
+*Allowed values*: `EQUAL_TO | GREATER_THAN | LESS_THAN`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotificationType`  <a name="cfn-budgets-budget-notification-notificationtype"></a>
-Whether the notification is for how much you have spent \(`ACTUAL`\) or for how much you're forecasted to spend \(`FORECASTED`\)\.  
+Specifies whether the notification is for how much you have spent \(`ACTUAL`\) or for how much that you're forecasted to spend \(`FORECASTED`\)\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ACTUAL | FORECASTED`  
+*Allowed values*: `ACTUAL | FORECASTED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Threshold`  <a name="cfn-budgets-budget-notification-threshold"></a>
-The threshold that is associated with a notification\. Thresholds are always a percentage, and many customers find value being alerted between 50% \- 200% of the budgeted amount\. The maximum limit for your threshold is 1,000,000% above the budgeted amount\.  
+The threshold that's associated with a notification\. Thresholds are always a percentage, and many customers find value being alerted between 50% \- 200% of the budgeted amount\. The maximum limit for your threshold is 1,000,000% above the budgeted amount\.  
 *Required*: Yes  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -60,8 +60,9 @@ The threshold that is associated with a notification\. Thresholds are always a p
 The type of threshold for a notification\. For `ABSOLUTE_VALUE` thresholds, AWS notifies you when you go over or are forecasted to go over your total cost threshold\. For `PERCENTAGE` thresholds, AWS notifies you when you go over or are forecasted to go over a certain percentage of your forecasted spend\. For example, if you have a budget for 200 dollars and you have a `PERCENTAGE` threshold of 80%, AWS notifies you when you go over 160 dollars\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ABSOLUTE_VALUE | PERCENTAGE`  
+*Allowed values*: `ABSOLUTE_VALUE | PERCENTAGE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-budgets-budget-notification--seealso"></a>
+## See also<a name="aws-properties-budgets-budget-notification--seealso"></a>
 +  [Notification](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Notification.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+

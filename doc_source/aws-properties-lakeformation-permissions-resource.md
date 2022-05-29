@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DatabaseResource](#cfn-lakeformation-permissions-resource-databaseresource)" : [DatabaseResource](aws-properties-lakeformation-permissions-databaseresource.md),
-  "[DataLocationResource](#cfn-lakeformation-permissions-resource-datalocationresource)" : [DataLocationResource](aws-properties-lakeformation-permissions-datalocationresource.md),
-  "[TableResource](#cfn-lakeformation-permissions-resource-tableresource)" : [TableResource](aws-properties-lakeformation-permissions-tableresource.md),
-  "[TableWithColumnsResource](#cfn-lakeformation-permissions-resource-tablewithcolumnsresource)" : [TableWithColumnsResource](aws-properties-lakeformation-permissions-tablewithcolumnsresource.md)
+  "[DatabaseResource](#cfn-lakeformation-permissions-resource-databaseresource)" : DatabaseResource,
+  "[DataLocationResource](#cfn-lakeformation-permissions-resource-datalocationresource)" : DataLocationResource,
+  "[TableResource](#cfn-lakeformation-permissions-resource-tableresource)" : TableResource,
+  "[TableWithColumnsResource](#cfn-lakeformation-permissions-resource-tablewithcolumnsresource)" : TableWithColumnsResource
 }
 ```
 
@@ -21,13 +21,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DatabaseResource](#cfn-lakeformation-permissions-resource-databaseresource): 
-    [DatabaseResource](aws-properties-lakeformation-permissions-databaseresource.md)
+    DatabaseResource
   [DataLocationResource](#cfn-lakeformation-permissions-resource-datalocationresource): 
-    [DataLocationResource](aws-properties-lakeformation-permissions-datalocationresource.md)
+    DataLocationResource
   [TableResource](#cfn-lakeformation-permissions-resource-tableresource): 
-    [TableResource](aws-properties-lakeformation-permissions-tableresource.md)
+    TableResource
   [TableWithColumnsResource](#cfn-lakeformation-permissions-resource-tablewithcolumnsresource): 
-    [TableWithColumnsResource](aws-properties-lakeformation-permissions-tablewithcolumnsresource.md)
+    TableWithColumnsResource
 ```
 
 ## Properties<a name="aws-properties-lakeformation-permissions-resource-properties"></a>
@@ -39,7 +39,7 @@ A structure for the database object\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataLocationResource`  <a name="cfn-lakeformation-permissions-resource-datalocationresource"></a>
-Currently not supported by AWS CloudFormation\.  
+A structure for a data location object where permissions are granted or revoked\.   
 *Required*: No  
 *Type*: [DataLocationResource](aws-properties-lakeformation-permissions-datalocationresource.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::Transfer::Server IdentityProviderDetails<a name="aws-properties-transfer-server-identityproviderdetails"></a>
 
-This parameter is required when the `IdentityProviderType` is set to `API_GATEWAY`\. Accepts an array containing all of the information required to call a customer\-supplied authentication API, including the API Gateway URL\. This property is not required when the `IdentityProviderType` is set to `SERVICE_MANAGED`\.
+Required when `IdentityProviderType` is set to `AWS_DIRECTORY_SERVICE` or `API_GATEWAY`\. Accepts an array containing all of the information required to use a directory in `AWS_DIRECTORY_SERVICE` or invoke a customer\-supplied authentication API, including the API Gateway URL\. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED`\.
 
 ## Syntax<a name="aws-properties-transfer-server-identityproviderdetails-syntax"></a>
 
@@ -10,6 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[DirectoryId](#cfn-transfer-server-identityproviderdetails-directoryid)" : String,
+  "[Function](#cfn-transfer-server-identityproviderdetails-function)" : String,
   "[InvocationRole](#cfn-transfer-server-identityproviderdetails-invocationrole)" : String,
   "[Url](#cfn-transfer-server-identityproviderdetails-url)" : String
 }
@@ -18,15 +20,35 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-transfer-server-identityproviderdetails-syntax.yaml"></a>
 
 ```
+  [DirectoryId](#cfn-transfer-server-identityproviderdetails-directoryid): String
+  [Function](#cfn-transfer-server-identityproviderdetails-function): String
   [InvocationRole](#cfn-transfer-server-identityproviderdetails-invocationrole): String
   [Url](#cfn-transfer-server-identityproviderdetails-url): String
 ```
 
 ## Properties<a name="aws-properties-transfer-server-identityproviderdetails-properties"></a>
 
+`DirectoryId`  <a name="cfn-transfer-server-identityproviderdetails-directoryid"></a>
+The identifier of the AWS Directory Service directory that you want to stop sharing\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `12`  
+*Maximum*: `12`  
+*Pattern*: `^d-[0-9a-f]{10}$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Function`  <a name="cfn-transfer-server-identityproviderdetails-function"></a>
+The ARN for a lambda function to use for the Identity provider\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `170`  
+*Pattern*: `^arn:[a-z-]+:lambda:.*$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `InvocationRole`  <a name="cfn-transfer-server-identityproviderdetails-invocationrole"></a>
-The `InvocationRole` parameter provides the type of `InvocationRole` used to authenticate the user account\.  
-*Required*: Yes  
+Provides the type of `InvocationRole` used to authenticate the user account\.  
+*Required*: No  
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `2048`  
@@ -34,12 +56,12 @@ The `InvocationRole` parameter provides the type of `InvocationRole` used to aut
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Url`  <a name="cfn-transfer-server-identityproviderdetails-url"></a>
-The `Url` parameter provides contains the location of the service endpoint used to authenticate users\.  
-*Required*: Yes  
+Provides the location of the service endpoint used to authenticate users\.  
+*Required*: No  
 *Type*: String  
 *Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-transfer-server-identityproviderdetails--seealso"></a>
+## See also<a name="aws-properties-transfer-server-identityproviderdetails--seealso"></a>
 
-[IdentityProviderDetails](https://docs.aws.amazon.com/transfer/latest/userguide/API_IdentityProviderDetails.html) in the *AWS Transfer for SFTP User Guide*\.
+[IdentityProviderDetails](https://docs.aws.amazon.com/transfer/latest/userguide/API_IdentityProviderDetails.html) in the *AWS Transfer Family User Guide*\.

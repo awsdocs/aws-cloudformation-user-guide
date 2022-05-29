@@ -1,10 +1,10 @@
-# Creating a Stack From Existing Resources<a name="resource-import-new-stack"></a>
+# Creating a stack from existing resources<a name="resource-import-new-stack"></a>
 
 During this import operation, you need to provide the following\.
 + A template that describes the resources that will be in the new stack and the resource configurations\. Each resource in your template must have a [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html) attribute\.
 + A unique identifier for each target resource\. Visit the appropriate service console to obtain unique identifiers\.
 
-In this walkthrough, we provide the following example template, called `templateToImport.json`\. `ServiceTable` and `GamesTable` are the targets of the import\.
+In this walkthrough, we provide the following example template, called `TemplateToImport.json`\. `ServiceTable` and `GamesTable` are the targets of the import\.
 
 ```
 {
@@ -61,9 +61,9 @@ In this walkthrough, we provide the following example template, called `template
 }
 ```
 
-## Create a Stack from Existing Resources Using the AWS CloudFormation Console<a name="resource-import-new-stack-console"></a>
+## Create a stack from existing resources using the AWS Management Console<a name="resource-import-new-stack-console"></a>
 
-1. Open the AWS CloudFormation console\.
+1. Sign in to the AWS Management Console and open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
 1. On the **Stacks** page, choose **Create stack**, and then choose **With existing resources \(import resources\)**\.  
 ![\[The Create stack from existing resources option in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/create-stack-with-existing-resources.png)
@@ -85,14 +85,14 @@ In this walkthrough, we provide the following example template, called `template
 
 1. On the **Specify stack details** page, modify any parameters, and then choose **Next**\. This automatically creates a change set\.
 **Important**  
-The import operation fails if you modify existing parameters that trigger a create, update, or delete operation\.
+The import operation fails if you modify existing parameters that initiate a create, update, or delete operation\.
 
 1. On the **Review *stack\-name*** page, confirm that the correct resources are being imported, and then choose **Import resources**\. This automatically executes the change set created in the last step\.
 
    The **Events** pane of the **Stack details** page for your new stack displays\.  
 ![\[The Events tab in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/import-events.png)
 
-1. \(Optional\) Run drift detection on the stack to make sure the template and actual configuration of the imported resources match\. For more information about detecting drift, see [Detect Drift on an Entire CloudFormation Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\. 
+1. \(Optional\) Run drift detection on the stack to make sure the template and actual configuration of the imported resources match\. For more information about detecting drift, see [Detect drift on an entire CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\.
 
 1. \(Optional\) If your imported resources don't match their expected template configurations, either correct the template configurations or update the resources directly\. In this walkthrough, we correct the template configurations to match their actual configurations\.
 
@@ -100,9 +100,9 @@ The import operation fails if you modify existing parameters that trigger a crea
 
    1. Add the import targets to your template again, making sure that the template configurations match the actual configurations\.
 
-   1. Repeat steps 2\-8 using the modified template to import the resources again\.
+   1. Repeat steps 2 – 8 using the modified template to import the resources again\.
 
-## Create a Stack from Existing Resources Using the AWS CLI<a name="resource-import-new-stack-cli"></a>
+## Create a stack from existing resources using the AWS CLI<a name="resource-import-new-stack-cli"></a>
 
 1. Open the AWS CLI\.
 
@@ -110,47 +110,49 @@ The import operation fails if you modify existing parameters that trigger a crea
 
    ```
    > aws cloudformation get-template-summary
-       --template-body file://templateToImport.json
+       --template-url https://DOC-EXAMPLE-BUCKET.s3.us-west-2.amazonaws.com/TemplateToImport.json
    ```
 
 1. Compose a list of the target resources from your template and their unique identifiers in the following format\.
 
-   "\[\{\\"ResourceType\\":\\"*AWS::DynamoDB::Table*\\",\\"LogicalResourceId\\":\\"*GamesTable*\\",\\"ResourceIdentifier\\":\{\\"*TableName*\\":\\"*Games*\\"\}\}\]"
+   ```
+   [{\"ResourceType\":\"AWS::DynamoDB::Table\",\"LogicalResourceId\":\"GamesTable\",\"ResourceIdentifier\":{\"TableName\":\"Games\"}}]
+   ```
 
-1. Create a change set of type `IMPORT` with the following parameters\. `--resources-to-import` does not support inline YAML\.
+1. Create a change set of type `IMPORT` with the following parameters\. `--resources-to-import` doesn't support inline YAML\.
 
    ```
    > aws cloudformation create-change-set
        --stack-name TargetStack --change-set-name ImportChangeSet
        --change-set-type IMPORT
        --resources-to-import "[{\"ResourceType\":\"AWS::DynamoDB::Table\",\"LogicalResourceId\":\"GamesTable\",\"ResourceIdentifier\":{\"TableName\":\"Games\"}},{\"ResourceType\":\"AWS::DynamoDB::Table\",\"LogicalResourceId\":\"ServiceTable\",\"ResourceIdentifier\":{\"TableName\":\"Service\"}}]"
-       --template-body file://templateToImport.json
+       --template-url https://DOC-EXAMPLE-BUCKET.s3.us-west-2.amazonaws.com/TemplateToImport.json
    ```
 
    The AWS CLI also supports text files as input for the `--resources-to-import` parameter, as shown in the following example\.
 
    ```
-   --resources-to-import: file://resourcesToImport.txt
+   --resources-to-import file://ResourcesToImport.txt
    ```
 
-   In this walkthrough, *file://resourcesToImport\.txt* contains the following\.
+   In this walkthrough, *file://ResourcesToImport\.txt* contains the following\.
 
    ```
    [
-     {
+      {
          "ResourceType":"AWS::DynamoDB::Table",
          "LogicalResourceId":"GamesTable",
-         "ResourceIdentifier": {
-           "TableName":"Games"
+         "ResourceIdentifier":{
+            "TableName":"Games"
          }
-     },
-     {
+      },
+      {
          "ResourceType":"AWS::DynamoDB::Table",
          "LogicalResourceId":"ServiceTable",
-         "ResourceIdentifier": {
-           "TableName":"Service"
+         "ResourceIdentifier":{
+            "TableName":"Service"
          }
-     }
+      }
    ]
    ```
 
@@ -166,7 +168,7 @@ The import operation fails if you modify existing parameters that trigger a crea
    > aws cloudformation execute-change-set --change-set-name ImportChangeSet --stack-name TargetStack
    ```
 
-1. \(Optional\) Run drift detection on the `IMPORT_COMPLETE` stack to make sure the template and actual configuration of the imported resources match\. For more information on detecting drift, see [Detect Drift on an Entire CloudFormation Stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\.
+1. \(Optional\) Run drift detection on the `IMPORT_COMPLETE` stack to make sure the template and actual configuration of the imported resources match\. For more information on detecting drift, see [Detect drift on an entire CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\.
 
    ```
    > aws cloudformation detect-stack-drift --stack-name TargetStack
@@ -174,7 +176,7 @@ The import operation fails if you modify existing parameters that trigger a crea
    
    > aws cloudformation describe-stack-drift-detection-status --stack-drift-detection-id 624af370-311a-11e8-b6b7-500cexample
                
-   > aws cloudformation describe-stack-resource-drifts --stackname TargetStack
+   > aws cloudformation describe-stack-resource-drifts --stack-name TargetStack
    ```
 
 1. \(Optional\) If your imported resources don't match their expected template configurations, either correct the template configurations or update the resources directly\. In this walkthrough, we correct the template configurations to match their actual configurations\.
@@ -183,4 +185,4 @@ The import operation fails if you modify existing parameters that trigger a crea
 
    1. Add the import targets to your template again, making sure that the template configurations match the actual configurations\.
 
-   1. Repeat steps 4\-7 using the modified template to import the resources again\.
+   1. Repeat steps 4 – 7 using the modified template to import the resources again\.

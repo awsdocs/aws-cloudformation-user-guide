@@ -10,10 +10,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CatalogTargets](#cfn-glue-crawler-targets-catalogtargets)" : [ [CatalogTarget](aws-properties-glue-crawler-catalogtarget.md), ... ],
-  "[DynamoDBTargets](#cfn-glue-crawler-targets-dynamodbtargets)" : [ [DynamoDBTarget](aws-properties-glue-crawler-dynamodbtarget.md), ... ],
-  "[JdbcTargets](#cfn-glue-crawler-targets-jdbctargets)" : [ [JdbcTarget](aws-properties-glue-crawler-jdbctarget.md), ... ],
-  "[S3Targets](#cfn-glue-crawler-targets-s3targets)" : [ [S3Target](aws-properties-glue-crawler-s3target.md), ... ]
+  "[CatalogTargets](#cfn-glue-crawler-targets-catalogtargets)" : [ CatalogTarget, ... ],
+  "[DynamoDBTargets](#cfn-glue-crawler-targets-dynamodbtargets)" : [ DynamoDBTarget, ... ],
+  "[JdbcTargets](#cfn-glue-crawler-targets-jdbctargets)" : [ JdbcTarget, ... ],
+  "[MongoDBTargets](#cfn-glue-crawler-targets-mongodbtargets)" : [ MongoDBTarget, ... ],
+  "[S3Targets](#cfn-glue-crawler-targets-s3targets)" : [ S3Target, ... ]
 }
 ```
 
@@ -21,13 +22,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CatalogTargets](#cfn-glue-crawler-targets-catalogtargets): 
-    - [CatalogTarget](aws-properties-glue-crawler-catalogtarget.md)
+    - CatalogTarget
   [DynamoDBTargets](#cfn-glue-crawler-targets-dynamodbtargets): 
-    - [DynamoDBTarget](aws-properties-glue-crawler-dynamodbtarget.md)
+    - DynamoDBTarget
   [JdbcTargets](#cfn-glue-crawler-targets-jdbctargets): 
-    - [JdbcTarget](aws-properties-glue-crawler-jdbctarget.md)
+    - JdbcTarget
+  [MongoDBTargets](#cfn-glue-crawler-targets-mongodbtargets): 
+    - MongoDBTarget
   [S3Targets](#cfn-glue-crawler-targets-s3targets): 
-    - [S3Target](aws-properties-glue-crawler-s3target.md)
+    - S3Target
 ```
 
 ## Properties<a name="aws-properties-glue-crawler-targets-properties"></a>
@@ -48,6 +51,12 @@ Specifies Amazon DynamoDB targets\.
 Specifies JDBC targets\.  
 *Required*: No  
 *Type*: List of [JdbcTarget](aws-properties-glue-crawler-jdbctarget.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MongoDBTargets`  <a name="cfn-glue-crawler-targets-mongodbtargets"></a>
+A list of Mongo DB targets\.  
+*Required*: No  
+*Type*: List of [MongoDBTarget](aws-properties-glue-crawler-mongodbtarget.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Targets`  <a name="cfn-glue-crawler-targets-s3targets"></a>

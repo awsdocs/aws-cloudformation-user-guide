@@ -30,12 +30,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Category`  <a name="cfn-codepipeline-pipeline-stages-actions-actiontypeid-category"></a>
 A category defines what kind of action can be taken in the stage, and constrains the provider type for the action\. Valid categories are limited to one of the values below\.  
-+ Source
-+ Build
-+ Test
-+ Deploy
-+ Invoke
-+ Approval
++ `Source`
++ `Build`
++ `Test`
++ `Deploy`
++ `Invoke`
++ `Approval`
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -47,7 +47,7 @@ The creator of the action being called\. There are three valid values for the `O
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Provider`  <a name="cfn-codepipeline-pipeline-stages-actions-actiontypeid-provider"></a>
-The provider of the service being called by the action\. Valid providers are determined by the action category\. For example, an action in the Deploy category type might have a provider of AWS CodeDeploy, which would be specified as CodeDeploy\. For more information, see [Valid Action Types and Providers in CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)\.  
+The provider of the service being called by the action\. Valid providers are determined by the action category\. For example, an action in the Deploy category type might have a provider of CodeDeploy, which would be specified as `CodeDeploy`\. For more information, see [Valid Action Types and Providers in CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

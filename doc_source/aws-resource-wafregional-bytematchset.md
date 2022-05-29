@@ -1,5 +1,9 @@
 # AWS::WAFRegional::ByteMatchSet<a name="aws-resource-wafregional-bytematchset"></a>
 
+**Note**  
+This is ** AWS WAF Classic** documentation\. For more information, see [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF **, use the AWS WAFV2 API and see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
+
 The `AWS::WAFRegional::ByteMatchSet` resource creates an AWS WAF `ByteMatchSet` that identifies a part of a web request that you want to inspect\.
 
 ## Syntax<a name="aws-resource-wafregional-bytematchset-syntax"></a>
@@ -12,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFRegional::ByteMatchSet",
   "Properties" : {
-      "[ByteMatchTuples](#cfn-wafregional-bytematchset-bytematchtuples)" : [ [ByteMatchTuple](aws-properties-wafregional-bytematchset-bytematchtuple.md), ... ],
+      "[ByteMatchTuples](#cfn-wafregional-bytematchset-bytematchtuples)" : [ ByteMatchTuple, ... ],
       "[Name](#cfn-wafregional-bytematchset-name)" : String
     }
 }
@@ -24,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAFRegional::ByteMatchSet
 Properties: 
   [ByteMatchTuples](#cfn-wafregional-bytematchset-bytematchtuples): 
-    - [ByteMatchTuple](aws-properties-wafregional-bytematchset-bytematchtuple.md)
+    - ByteMatchTuple
   [Name](#cfn-wafregional-bytematchset-name): String
 ```
 
@@ -42,9 +46,10 @@ A friendly name or description of the `ByteMatchSet`\. You can't change `Name` a
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-wafregional-bytematchset-return-values"></a>
+## Return values<a name="aws-resource-wafregional-bytematchset-return-values"></a>
 
 ### Ref<a name="aws-resource-wafregional-bytematchset-return-values-ref"></a>
 
@@ -53,6 +58,8 @@ A friendly name or description of the `ByteMatchSet`\. You can't change `Name` a
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-wafregional-bytematchset--examples"></a>
+
+
 
 ### HTTP Referers<a name="aws-resource-wafregional-bytematchset--examples--HTTP_Referers"></a>
 

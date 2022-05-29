@@ -1,6 +1,6 @@
-# Walkthrough: Use AWS CloudFormation Designer to Create a Basic Web Server<a name="working-with-templates-cfn-designer-walkthrough-createbasicwebserver"></a>
+# Walkthrough: Use AWS CloudFormation Designer to create a basic web server<a name="working-with-templates-cfn-designer-walkthrough-createbasicwebserver"></a>
 
-AWS CloudFormation Designer graphically represents your templates to help you see the resources in the template and how they're connected\. The integrated JSON and YAML editor makes it easy to modify templates directly in the AWS CloudFormation console\. To demonstrate how to use both of these components, we'll use AWS CloudFormation Designer to build a basic web server in a VPC\. Then, we'll save the template and use it to create an AWS CloudFormation stack\. 
+AWS CloudFormation Designer graphically represents your templates to help you see the resources in the template and how they're connected\. The integrated JSON and YAML editor makes it easy to modify templates directly in the AWS CloudFormation console\. To demonstrate how to use both of these components, we'll use AWS CloudFormation Designer to build a basic web server in a VPC\. Then, we'll save the template and use it to create a CloudFormation stack\.
 
 By the end of the walkthrough, you'll have a template similar to the following sample: [https://console\.aws\.amazon\.com/cloudformation/designer/home?templateUrl=https://s3\.amazonaws\.com/cloudformation\-examples/sample\-ec2\-vpc\.template&region=us\-east\-1](https://console.aws.amazon.com/cloudformation/designer/home?templateUrl=https://s3.amazonaws.com/cloudformation-examples/sample-ec2-vpc.template&region=us-east-1)\.
 
@@ -20,17 +20,17 @@ In the walkthrough, you will complete the following steps:
 
 1. [Provision resources](#working-with-templates-cfn-designer-walkthrough-createbasicwebserver-provision)
 
-   None of your template resources are up and running until you create a stack\. We'll use the template that you just created to launch an AWS CloudFormation stack, which will provision all the resources that are defined in your template\.
+   None of your template resources are up and running until you create a stack\. We'll use the template that you just created to launch a CloudFormation stack, which will provision all the resources that are defined in your template\.
 **Note**  
-AWS CloudFormation is a free service; however, you are charged for the AWS resources you include in your stacks at the current rate for each\. For more information about AWS pricing, see the detail page for each product on [http://aws\.amazon\.com](http://aws.amazon.com)\.
+CloudFormation is a free service; however, you are charged for the AWS resources you include in your stacks at the current rate for each\. For more information about AWS pricing, see the detail page for each product on [http://aws\.amazon\.com](http://aws.amazon.com)\.
 
 Prerequisites
 
-This walkthrough assumes that you have a working knowledge of Amazon Virtual Private Cloud \(Amazon VPC\), Amazon Elastic Compute Cloud \(Amazon EC2\), and AWS CloudFormation\. For context, each procedure provides some basic information about each resource\.
+This walkthrough assumes that you have a working knowledge of Amazon Virtual Private Cloud \(Amazon VPC\), Amazon Elastic Compute Cloud \(Amazon EC2\), and CloudFormation\. For context, each procedure provides some basic information about each resource\.
 
-Also, before you begin, make sure you have an Amazon EC2 key pair in the region in which you're creating your stack\. For more information, see [Amazon EC2 Key Pairs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the *Amazon EC2 User Guide for Linux Instances*\.
+Also, before you begin, make sure you have an Amazon EC2 key pair in the region in which you're creating your stack\. For more information, see [Amazon EC2 key pairs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 
-## Step 1: Add and Connect Resources<a name="working-with-templates-cfn-designer-walkthrough-createbasicwebserver-addresources"></a>
+## Step 1: Add and connect resources<a name="working-with-templates-cfn-designer-walkthrough-createbasicwebserver-addresources"></a>
 
 We'll use the AWS CloudFormation Designer drag\-and\-drop interface to add an Amazon EC2 instance and network resources, such as a VPC, subnet, route table, and Internet gateway\. After adding all the resources, we'll create connections between them\. For example, we'll associate the Internet gateway with a VPC\.
 
@@ -80,7 +80,7 @@ We'll use the AWS CloudFormation Designer drag\-and\-drop interface to add an Am
 
 1. Rename the VPC\.
 **Note**  
-When you rename a resource, you rename its logical ID, which is the name that is referenced in the template \(not the name assigned when AWS CloudFormation creates the resource\)\. For more information, see [Resources](resources-section-structure.md)\.
+When you rename a resource, you rename its logical ID, which is the name that is referenced in the template \(not the name assigned when CloudFormation creates the resource\)\. For more information, see [Resources](resources-section-structure.md)\.
 
    1. Choose the VPC resource\.
 
@@ -132,7 +132,7 @@ When you rename a resource, you rename its logical ID, which is the name that is
 
 1. For the public route, we want the Internet gateway to be the destination target\. Use `GatewayId` to create a connection from the `PublicRoute` resource to the Internet gateway, similar to the way you created a connection between the Internet gateway and the VPC\.
 
-   AWS CloudFormation can't associate a route with an Internet gateway until you associate the Internet gateway with the VPC\. This means we need to create an explicit dependency on the Internet gateway\-VPC attachment, as described in the next step\. For more information, see [DependsOn Attribute](aws-attribute-dependson.md)\.
+   CloudFormation can't associate a route with an Internet gateway until you associate the Internet gateway with the VPC\. This means we need to create an explicit dependency on the Internet gateway\-VPC attachment, as described in the next step\. For more information, see [`DependsOn` attribute](aws-attribute-dependson.md)\.
 
 1. Create an explicit dependency between the `PublicRoute` resource and the Internet gateway\-VPC attachment\.
 
@@ -144,7 +144,7 @@ When you rename a resource, you rename its logical ID, which is the name that is
 
 1. Create another dependency from the `WebServerInstance` resource to the `PublicRoute` resource\.
 
-   The `WebServerInstance` resource depends on the public route to route traffic to the Internet\. Without the public route, the instance cannot send a signal \(using the cfn\-signal helper script\) to notify AWS CloudFormation when the instance configuration and application deployments are complete\.
+   The `WebServerInstance` resource depends on the public route to route traffic to the Internet\. Without the public route, the instance cannot send a signal \(using the cfn\-signal helper script\) to notify CloudFormation when the instance configuration and application deployments are complete\.
 
 1. Drag a connection from the `PublicRouteTable` resource to the `PublicSubnet` resource to associate the route table and subnet\.
 
@@ -156,7 +156,7 @@ When you rename a resource, you rename its logical ID, which is the name that is
 
 In this step, we added seven resources to your template and renamed their logical IDs with friendly names\. We also established visual connections with most of the resources to create associations and a dependency\. However, before we can create a stack with this template, we need to create a few more connections \(such as associating the instance with the security group\) and to specify properties for each resource\. In the next step, we'll walk through modifying other components of your template, such as input parameters, by using the AWS CloudFormation Designer integrated editor\.
 
-## Step 2: Add Parameters, Mappings, and Outputs<a name="working-with-templates-cfn-designer-walkthrough-createbasicwebserver-addother"></a>
+## Step 2: Add parameters, mappings, and outputs<a name="working-with-templates-cfn-designer-walkthrough-createbasicwebserver-addother"></a>
 
 Before we specify resource properties, we need to add other template components to make reusing the template in multiple environments easier\. In this step, we'll use the AWS CloudFormation Designer integrated editor to add parameters, mappings, and outputs\. Then, we can refer to these parameters and mappings when we specify resource properties\. The walkthrough provides sample JSON and YAML that you can use to copy and paste in to the integrated editor\.
 
@@ -597,7 +597,7 @@ Mappings are a set of keys that are associated with a set of name\-value pairs\.
 
 **To add outputs**
 
-Outputs declare values that you want available to a `describe stacks` API call or through the AWS CloudFormation console stack **Outputs** tab\. For this walkthrough, we'll output the website URL so that you can easily view the website after we create it\. For more information, see [Outputs](outputs-section-structure.md)\.
+Outputs declare values that you want available to a `describe stacks` API call or through the CloudFormation console stack **Outputs** tab\. For this walkthrough, we'll output the website URL so that you can easily view the website after we create it\. For more information, see [Outputs](outputs-section-structure.md)\.
 
 1. In the integrated editor pane, select the **Outputs** tab\.
 
@@ -647,7 +647,7 @@ Outputs declare values that you want available to a `describe stacks` API call o
 
 Now that the template parameters, mappings, and outputs are in place, we can specify resource properties\.
 
-## Step 3: Specify Resource Properties<a name="working-with-templates-cfn-designer-walkthrough-createbasicwebserver-resourceproperties"></a>
+## Step 3: Specify resource properties<a name="working-with-templates-cfn-designer-walkthrough-createbasicwebserver-resourceproperties"></a>
 
 Many resources have required properties that define their configurations or settings, such as which instance type to use for the web server\. Similar to what we did in the previous step, we'll use the AWS CloudFormation Designer integrated editor to specify resource properties\. We provide sample JSON and YAML that you can copy and paste into the integrated editor\.
 
@@ -677,7 +677,7 @@ Many resources have required properties that define their configurations or sett
          CidrBlock: 10.0.0.0/16
    ```
 **Note**  
-For efficiency, we provide JSON and YAML snippets that you can copy and paste\. Note, however, that the editor has an auto\-complete feature that you can use to manually specify each property\. For more information, see [Integrated JSON and YAML Editor](working-with-templates-cfn-designer-json-editor.md)\.
+For efficiency, we provide JSON and YAML snippets that you can copy and paste\. Note, however, that the editor has an auto\-complete feature that you can use to manually specify each property\. For more information, see [Integrated JSON and YAML editor](working-with-templates-cfn-designer-json-editor.md)\.
 
 1. Repeat this process for the following resources:  
 `PublicSubnet`  
@@ -729,14 +729,14 @@ JSON
            "SecurityGroupIngress": [
              {
                "IpProtocol": "tcp",
-               "FromPort": "80",
-               "ToPort": "80",
+               "FromPort": 80,
+               "ToPort": 80,
                "CidrIp": "0.0.0.0/0"
              },
              {
                "IpProtocol": "tcp",
-               "FromPort": "22",
-               "ToPort": "22",
+               "FromPort": 22,
+               "ToPort": 22,
                "CidrIp": {
                  "Ref": "SSHLocation"
                }
@@ -750,12 +750,12 @@ YAML
          GroupDescription: Allow access from HTTP and SSH traffic
          SecurityGroupIngress:
            - IpProtocol: tcp
-             FromPort: '80'
-             ToPort: '80'
+             FromPort: 80
+             ToPort: 80
              CidrIp: 0.0.0.0/0
            - IpProtocol: tcp
-             FromPort: '22'
-             ToPort: '22'
+             FromPort: 22
+             ToPort: 22
              CidrIp: !Ref SSHLocation
    ```  
 `WebServerInstance`  
@@ -763,7 +763,7 @@ You need to specify a number of properties for the web server instance, so we'll
 The `NetworkInterfaces` property specifies network settings for the web server instance\. This property allows us to associate the security group and subnet with the instance\. Although AWS CloudFormation Designer used the `SubnetId` property to associate the instance with the subnet, we need to use the `NetworkInterfaces` property because that's the only way to give the web server a public IP\. And when you specify the `NetworkInterfaces` property, you are required to specify the subnet and security group within that property\.  
 In the `UserData` property, we specify configuration scripts that run after the instance is up and running\. All of the configuration information is defined in the instance's metadata, which we'll add in the next step\.  
 Replace all properties with the following snippet:  
-Do not append this snippet to existing properties\.
+Don't append this snippet to existing properties\.
 JSON  
 
    ```
@@ -965,19 +965,19 @@ YAML
 
 1. Save your completed template to keep all the changes you made\.
 
-You now have a complete AWS CloudFormation template that you can use to create a basic web server in a VPC\. To create the template, we first added and connected template resources by using the AWS CloudFormation Designer canvas pane\. Then, we used the integrated editor to add other template components and to specify resource properties\. In the next step, we'll use this template to create a stack\.
+You now have a complete CloudFormation template that you can use to create a basic web server in a VPC\. To create the template, we first added and connected template resources by using the AWS CloudFormation Designer canvas pane\. Then, we used the integrated editor to add other template components and to specify resource properties\. In the next step, we'll use this template to create a stack\.
 
-## Step 4: Provision Resources<a name="working-with-templates-cfn-designer-walkthrough-createbasicwebserver-provision"></a>
+## Step 4: Provision resources<a name="working-with-templates-cfn-designer-walkthrough-createbasicwebserver-provision"></a>
 
-To create a stack, you can launch the AWS CloudFormation Create Stack Wizard from AWS CloudFormation Designer\. We'll use the template that we created in the previous steps to create an AWS CloudFormation stack\. After AWS CloudFormation provisions all of your resources, you'll have a basic website up and running\.
+To create a stack, you can launch the CloudFormation **Create Stack Wizard** from AWS CloudFormation Designer\. We'll use the template that we created in the previous steps to create a CloudFormation stack\. After CloudFormation provisions all of your resources, you'll have a basic website up and running\.
 
 **To create the stack**
 
 1. On the AWS CloudFormation Designer toolbar, choose **Create Stack** \(the cloud icon\)\.
 
-   AWS CloudFormation Designer saves the open template in an S3 bucket, and then launches the AWS CloudFormation Create Stack Wizard\. AWS CloudFormation uses the same S3 bucket that it creates whenever you upload templates\.
+   AWS CloudFormation Designer saves the open template in an S3 bucket, and then launches the CloudFormation **Create Stack Wizard**\. CloudFormation uses the same S3 bucket that it creates whenever you upload templates\.
 
-1. AWS CloudFormation automatically populates the template URL; choose **Next**\.
+1. CloudFormation automatically populates the template URL; choose **Next**\.
 
 1. In the **Specify Details** section, enter a stack name in the **Stack name**  field\. For this example, use **BasicWebServerStack**\.
 
@@ -989,6 +989,6 @@ To create a stack, you can launch the AWS CloudFormation Create Stack Wizard fro
 
 1. Ensure that the stack name and Amazon EC2 key\-pair name are correct, and then choose **Create**\.
 
-It can take several minutes for AWS CloudFormation to create your stack\. To monitor progress, view the stack events\. For more information about viewing stack events, see [Viewing AWS CloudFormation Stack Data and Resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\. After the stack is created, view the stack outputs and go to the sample website URL to verify that the website is running\. For more information, see [Viewing AWS CloudFormation Stack Data and Resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\. 
+It can take several minutes for AWS CloudFormation to create your stack\. To monitor progress, view the stack events\. For more information about viewing stack events, see [Viewing AWS CloudFormation stack data and resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\. After the stack is created, view the stack outputs and go to the sample website URL to verify that the website is running\. For more information, see [Viewing AWS CloudFormation stack data and resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)\.
 
-Now that you've successfully created a template and launched a stack using AWS CloudFormation Designer, you can use the stack in the following walkthrough: [Walkthrough: Use AWS CloudFormation Designer to Modify a Stack's Template](working-with-templates-cfn-designer-walkthrough-updatebasicwebserver.md), which modifies the template to create a scalable web server\.
+Now that you've successfully created a template and launched a stack using AWS CloudFormation Designer, you can use the stack in the following walkthrough: [Walkthrough: Use AWS CloudFormation Designer to modify a stack's template](working-with-templates-cfn-designer-walkthrough-updatebasicwebserver.md), which modifies the template to create a scalable web server\.

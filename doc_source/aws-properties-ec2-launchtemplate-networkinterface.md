@@ -2,7 +2,7 @@
 
 Specifies the parameters for a network interface\.
 
- `NetworkInterface` is a property of the [Amazon EC2 LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html) property type\.
+`NetworkInterface` is a property of [AWS::EC2::LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-networkinterface-syntax"></a>
 
@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AssociateCarrierIpAddress](#cfn-ec2-launchtemplate-networkinterface-associatecarrieripaddress)" : Boolean,
   "[AssociatePublicIpAddress](#cfn-ec2-launchtemplate-networkinterface-associatepublicipaddress)" : Boolean,
   "[DeleteOnTermination](#cfn-ec2-launchtemplate-networkinterface-deleteontermination)" : Boolean,
   "[Description](#cfn-ec2-launchtemplate-networkinterface-description)" : String,
@@ -19,10 +20,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Groups](#cfn-ec2-launchtemplate-networkinterface-groups)" : [ String, ... ],
   "[InterfaceType](#cfn-ec2-launchtemplate-networkinterface-interfacetype)" : String,
   "[Ipv6AddressCount](#cfn-ec2-launchtemplate-networkinterface-ipv6addresscount)" : Integer,
-  "[Ipv6Addresses](#cfn-ec2-launchtemplate-networkinterface-ipv6addresses)" : [ [Ipv6Add](aws-properties-ec2-launchtemplate-ipv6add.md), ... ],
+  "[Ipv6Addresses](#cfn-ec2-launchtemplate-networkinterface-ipv6addresses)" : [ Ipv6Add, ... ],
+  "[NetworkCardIndex](#cfn-ec2-launchtemplate-networkinterface-networkcardindex)" : Integer,
   "[NetworkInterfaceId](#cfn-ec2-launchtemplate-networkinterface-networkinterfaceid)" : String,
   "[PrivateIpAddress](#cfn-ec2-launchtemplate-networkinterface-privateipaddress)" : String,
-  "[PrivateIpAddresses](#cfn-ec2-launchtemplate-networkinterface-privateipaddresses)" : [ [PrivateIpAdd](aws-properties-ec2-launchtemplate-privateipadd.md), ... ],
+  "[PrivateIpAddresses](#cfn-ec2-launchtemplate-networkinterface-privateipaddresses)" : [ PrivateIpAdd, ... ],
   "[SecondaryPrivateIpAddressCount](#cfn-ec2-launchtemplate-networkinterface-secondaryprivateipaddresscount)" : Integer,
   "[SubnetId](#cfn-ec2-launchtemplate-networkinterface-subnetid)" : String
 }
@@ -31,6 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-networkinterface-syntax.yaml"></a>
 
 ```
+  [AssociateCarrierIpAddress](#cfn-ec2-launchtemplate-networkinterface-associatecarrieripaddress): Boolean
   [AssociatePublicIpAddress](#cfn-ec2-launchtemplate-networkinterface-associatepublicipaddress): Boolean
   [DeleteOnTermination](#cfn-ec2-launchtemplate-networkinterface-deleteontermination): Boolean
   [Description](#cfn-ec2-launchtemplate-networkinterface-description): String
@@ -40,16 +43,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [InterfaceType](#cfn-ec2-launchtemplate-networkinterface-interfacetype): String
   [Ipv6AddressCount](#cfn-ec2-launchtemplate-networkinterface-ipv6addresscount): Integer
   [Ipv6Addresses](#cfn-ec2-launchtemplate-networkinterface-ipv6addresses): 
-    - [Ipv6Add](aws-properties-ec2-launchtemplate-ipv6add.md)
+    - Ipv6Add
+  [NetworkCardIndex](#cfn-ec2-launchtemplate-networkinterface-networkcardindex): Integer
   [NetworkInterfaceId](#cfn-ec2-launchtemplate-networkinterface-networkinterfaceid): String
   [PrivateIpAddress](#cfn-ec2-launchtemplate-networkinterface-privateipaddress): String
   [PrivateIpAddresses](#cfn-ec2-launchtemplate-networkinterface-privateipaddresses): 
-    - [PrivateIpAdd](aws-properties-ec2-launchtemplate-privateipadd.md)
+    - PrivateIpAdd
   [SecondaryPrivateIpAddressCount](#cfn-ec2-launchtemplate-networkinterface-secondaryprivateipaddresscount): Integer
   [SubnetId](#cfn-ec2-launchtemplate-networkinterface-subnetid): String
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-networkinterface-properties"></a>
+
+`AssociateCarrierIpAddress`  <a name="cfn-ec2-launchtemplate-networkinterface-associatecarrieripaddress"></a>
+Indicates whether to associate a Carrier IP address with eth0 for a new network interface\.  
+Use this option when you launch an instance in a Wavelength Zone and want to associate a Carrier IP address with the network interface\. For more information about Carrier IP addresses, see [Carrier IP addresses](https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#provider-owned-ip) in the * AWS Wavelength Developer Guide*\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AssociatePublicIpAddress`  <a name="cfn-ec2-launchtemplate-networkinterface-associatepublicipaddress"></a>
 Associates a public IPv4 address with eth0 for a new network interface\.  
@@ -71,7 +82,7 @@ A description for the network interface\.
 
 `DeviceIndex`  <a name="cfn-ec2-launchtemplate-networkinterface-deviceindex"></a>
 The device index for the network interface attachment\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -99,6 +110,12 @@ The number of IPv6 addresses to assign to a network interface\. Amazon EC2 autom
 One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet\. You can't use this option if you're specifying a number of IPv6 addresses\.  
 *Required*: No  
 *Type*: List of [Ipv6Add](aws-properties-ec2-launchtemplate-ipv6add.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`NetworkCardIndex`  <a name="cfn-ec2-launchtemplate-networkinterface-networkcardindex"></a>
+The index of the network card\. Some instance types support multiple network cards\. The primary network interface must be assigned to network card index 0\. The default is network card index 0\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkInterfaceId`  <a name="cfn-ec2-launchtemplate-networkinterface-networkinterfaceid"></a>
@@ -131,5 +148,6 @@ The ID of the subnet for the network interface\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-launchtemplate-networkinterface--seealso"></a>
-+  [ LaunchTemplateInstanceNetworkInterfaceSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateInstanceNetworkInterfaceSpecificationRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
+## See also<a name="aws-properties-ec2-launchtemplate-networkinterface--seealso"></a>
++  [ LaunchTemplateInstanceNetworkInterfaceSpecificationRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateInstanceNetworkInterfaceSpecificationRequest.html) in the *Amazon EC2 API Reference* 
+

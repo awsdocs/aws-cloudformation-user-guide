@@ -1,6 +1,6 @@
 # AWS::EC2::TrafficMirrorFilterRule<a name="aws-resource-ec2-trafficmirrorfilterrule"></a>
 
-Creates a Traffic Mirror filter rule\. 
+Creates a Traffic Mirror filter rule\.
 
 A Traffic Mirror rule defines the Traffic Mirror source traffic to mirror\.
 
@@ -18,12 +18,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-ec2-trafficmirrorfilterrule-description)" : String,
       "[DestinationCidrBlock](#cfn-ec2-trafficmirrorfilterrule-destinationcidrblock)" : String,
-      "[DestinationPortRange](#cfn-ec2-trafficmirrorfilterrule-destinationportrange)" : [TrafficMirrorPortRange](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrange.md),
+      "[DestinationPortRange](#cfn-ec2-trafficmirrorfilterrule-destinationportrange)" : TrafficMirrorPortRange,
       "[Protocol](#cfn-ec2-trafficmirrorfilterrule-protocol)" : Integer,
       "[RuleAction](#cfn-ec2-trafficmirrorfilterrule-ruleaction)" : String,
       "[RuleNumber](#cfn-ec2-trafficmirrorfilterrule-rulenumber)" : Integer,
       "[SourceCidrBlock](#cfn-ec2-trafficmirrorfilterrule-sourcecidrblock)" : String,
-      "[SourcePortRange](#cfn-ec2-trafficmirrorfilterrule-sourceportrange)" : [TrafficMirrorPortRange](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrange.md),
+      "[SourcePortRange](#cfn-ec2-trafficmirrorfilterrule-sourceportrange)" : TrafficMirrorPortRange,
       "[TrafficDirection](#cfn-ec2-trafficmirrorfilterrule-trafficdirection)" : String,
       "[TrafficMirrorFilterId](#cfn-ec2-trafficmirrorfilterrule-trafficmirrorfilterid)" : String
     }
@@ -38,13 +38,13 @@ Properties:
   [Description](#cfn-ec2-trafficmirrorfilterrule-description): String
   [DestinationCidrBlock](#cfn-ec2-trafficmirrorfilterrule-destinationcidrblock): String
   [DestinationPortRange](#cfn-ec2-trafficmirrorfilterrule-destinationportrange): 
-    [TrafficMirrorPortRange](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrange.md)
+    TrafficMirrorPortRange
   [Protocol](#cfn-ec2-trafficmirrorfilterrule-protocol): Integer
   [RuleAction](#cfn-ec2-trafficmirrorfilterrule-ruleaction): String
   [RuleNumber](#cfn-ec2-trafficmirrorfilterrule-rulenumber): Integer
   [SourceCidrBlock](#cfn-ec2-trafficmirrorfilterrule-sourcecidrblock): String
   [SourcePortRange](#cfn-ec2-trafficmirrorfilterrule-sourceportrange): 
-    [TrafficMirrorPortRange](aws-properties-ec2-trafficmirrorfilterrule-trafficmirrorportrange.md)
+    TrafficMirrorPortRange
   [TrafficDirection](#cfn-ec2-trafficmirrorfilterrule-trafficdirection): String
   [TrafficMirrorFilterId](#cfn-ec2-trafficmirrorfilterrule-trafficmirrorfilterid): String
 ```
@@ -77,10 +77,10 @@ For information about the protocol value, see [Protocol Numbers](https://www.ian
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleAction`  <a name="cfn-ec2-trafficmirrorfilterrule-ruleaction"></a>
-The action to take \(`accept` \| `reject`\) on the filtered traffic\.  
+The action to take on the filtered traffic\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `accept | reject`  
+*Allowed values*: `accept | reject`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleNumber`  <a name="cfn-ec2-trafficmirrorfilterrule-rulenumber"></a>
@@ -102,10 +102,10 @@ The source port range\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrafficDirection`  <a name="cfn-ec2-trafficmirrorfilterrule-trafficdirection"></a>
-The type of traffic \(`ingress` \| `egress`\)\.  
+The type of traffic\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `egress | ingress`  
+*Allowed values*: `egress | ingress`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrafficMirrorFilterId`  <a name="cfn-ec2-trafficmirrorfilterrule-trafficmirrorfilterid"></a>
@@ -114,7 +114,7 @@ The ID of the filter that this rule is associated with\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-trafficmirrorfilterrule-return-values"></a>
+## Return values<a name="aws-resource-ec2-trafficmirrorfilterrule-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-trafficmirrorfilterrule-return-values-ref"></a>
 
@@ -124,11 +124,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-trafficmirrorfilterrule--examples"></a>
 
-### Create a Traffic Mirror Filter Rule for inbound UDP Traffic<a name="aws-resource-ec2-trafficmirrorfilterrule--examples--Create_a_Traffic_Mirror_Filter_Rule_for_inbound_UDP_Traffic"></a>
+### Create a traffic mirror filter rule for inbound UDP traffic<a name="aws-resource-ec2-trafficmirrorfilterrule--examples--Create_a_traffic_mirror_filter_rule_for_inbound_UDP_traffic"></a>
 
 This is a filter rule for UDP traffic\.
 
-#### JSON<a name="aws-resource-ec2-trafficmirrorfilterrule--examples--Create_a_Traffic_Mirror_Filter_Rule_for_inbound_UDP_Traffic--json"></a>
+#### JSON<a name="aws-resource-ec2-trafficmirrorfilterrule--examples--Create_a_traffic_mirror_filter_rule_for_inbound_UDP_traffic--json"></a>
 
 ```
 {
@@ -156,7 +156,7 @@ This is a filter rule for UDP traffic\.
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-trafficmirrorfilterrule--examples--Create_a_Traffic_Mirror_Filter_Rule_for_inbound_UDP_Traffic--yaml"></a>
+#### YAML<a name="aws-resource-ec2-trafficmirrorfilterrule--examples--Create_a_traffic_mirror_filter_rule_for_inbound_UDP_traffic--yaml"></a>
 
 ```
 SampleTrafficMirrorFilterRule:
@@ -178,6 +178,7 @@ SampleTrafficMirrorFilterRule:
       ToPort: 100
 ```
 
-## See Also<a name="aws-resource-ec2-trafficmirrorfilterrule--seealso"></a>
-+ [Traffic Mirror Filters and Filter Rules](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-how-it-works.html#traffic-mirroring-filters) in *Traffic Mirroring*
+## See also<a name="aws-resource-ec2-trafficmirrorfilterrule--seealso"></a>
++ [Traffic mirror filters and filter rules](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-filters.html) in *Traffic Mirroring*
 + [CreateTrafficMirrorFilterRule](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTrafficMirrorFilterRule.html) in the *Amazon EC2 API Reference*
+

@@ -18,12 +18,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DatabaseName](#cfn-glue-crawler-databasename)" : String,
       "[Description](#cfn-glue-crawler-description)" : String,
       "[Name](#cfn-glue-crawler-name)" : String,
+      "[RecrawlPolicy](#cfn-glue-crawler-recrawlpolicy)" : RecrawlPolicy,
       "[Role](#cfn-glue-crawler-role)" : String,
-      "[Schedule](#cfn-glue-crawler-schedule)" : [Schedule](aws-properties-glue-crawler-schedule.md),
-      "[SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy)" : [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md),
+      "[Schedule](#cfn-glue-crawler-schedule)" : Schedule,
+      "[SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy)" : SchemaChangePolicy,
       "[TablePrefix](#cfn-glue-crawler-tableprefix)" : String,
       "[Tags](#cfn-glue-crawler-tags)" : Json,
-      "[Targets](#cfn-glue-crawler-targets)" : [Targets](aws-properties-glue-crawler-targets.md)
+      "[Targets](#cfn-glue-crawler-targets)" : Targets
     }
 }
 ```
@@ -40,15 +41,17 @@ Properties:
   [DatabaseName](#cfn-glue-crawler-databasename): String
   [Description](#cfn-glue-crawler-description): String
   [Name](#cfn-glue-crawler-name): String
+  [RecrawlPolicy](#cfn-glue-crawler-recrawlpolicy): 
+    RecrawlPolicy
   [Role](#cfn-glue-crawler-role): String
   [Schedule](#cfn-glue-crawler-schedule): 
-    [Schedule](aws-properties-glue-crawler-schedule.md)
+    Schedule
   [SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy): 
-    [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md)
+    SchemaChangePolicy
   [TablePrefix](#cfn-glue-crawler-tableprefix): String
   [Tags](#cfn-glue-crawler-tags): Json
   [Targets](#cfn-glue-crawler-targets): 
-    [Targets](aws-properties-glue-crawler-targets.md)
+    Targets
 ```
 
 ## Properties<a name="aws-resource-glue-crawler-properties"></a>
@@ -89,6 +92,12 @@ The name of the crawler\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`RecrawlPolicy`  <a name="cfn-glue-crawler-recrawlpolicy"></a>
+A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run\.  
+*Required*: No  
+*Type*: [RecrawlPolicy](aws-properties-glue-crawler-recrawlpolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Role`  <a name="cfn-glue-crawler-role"></a>
 The Amazon Resource Name \(ARN\) of an IAM role that's used to access customer resources, such as Amazon Simple Storage Service \(Amazon S3\) data\.  
 *Required*: Yes  
@@ -125,7 +134,7 @@ A collection of targets to crawl\.
 *Type*: [Targets](aws-properties-glue-crawler-targets.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-crawler-return-values"></a>
+## Return values<a name="aws-resource-glue-crawler-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-crawler-return-values-ref"></a>
 
@@ -135,6 +144,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-glue-crawler--examples"></a>
 
+
+
 ### <a name="aws-resource-glue-crawler--examples--"></a>
 
 The following example creates a crawler for an Amazon S3 target\. 
@@ -143,7 +154,7 @@ The following example creates a crawler for an Amazon S3 target\.
 
 ```
 {
-    "Description": "AWS Glue Crawler Test",
+    "Description": "AWS Glue crawler test",
     "Resources": {
         "MyRole": {
             "Type": "AWS::IAM::Role",

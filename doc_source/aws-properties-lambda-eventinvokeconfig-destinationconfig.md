@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[OnFailure](#cfn-lambda-eventinvokeconfig-destinationconfig-onfailure)" : [OnFailure](aws-properties-lambda-eventinvokeconfig-destinationconfig-onfailure.md),
-  "[OnSuccess](#cfn-lambda-eventinvokeconfig-destinationconfig-onsuccess)" : [OnSuccess](aws-properties-lambda-eventinvokeconfig-destinationconfig-onsuccess.md)
+  "[OnFailure](#cfn-lambda-eventinvokeconfig-destinationconfig-onfailure)" : OnFailure,
+  "[OnSuccess](#cfn-lambda-eventinvokeconfig-destinationconfig-onsuccess)" : OnSuccess
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [OnFailure](#cfn-lambda-eventinvokeconfig-destinationconfig-onfailure): 
-    [OnFailure](aws-properties-lambda-eventinvokeconfig-destinationconfig-onfailure.md)
+    OnFailure
   [OnSuccess](#cfn-lambda-eventinvokeconfig-destinationconfig-onsuccess): 
-    [OnSuccess](aws-properties-lambda-eventinvokeconfig-destinationconfig-onsuccess.md)
+    OnSuccess
 ```
 
 ## Properties<a name="aws-properties-lambda-eventinvokeconfig-destinationconfig-properties"></a>
@@ -39,6 +39,8 @@ The destination configuration for successful invocations\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-lambda-eventinvokeconfig-destinationconfig--examples"></a>
+
+
 
 ### On\-Failure Destination Configuration<a name="aws-properties-lambda-eventinvokeconfig-destinationconfig--examples--On-Failure_Destination_Configuration"></a>
 

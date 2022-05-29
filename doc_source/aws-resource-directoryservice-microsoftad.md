@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-directoryservice-microsoftad-name)" : String,
       "[Password](#cfn-directoryservice-microsoftad-password)" : String,
       "[ShortName](#cfn-directoryservice-microsoftad-shortname)" : String,
-      "[VpcSettings](#cfn-directoryservice-microsoftad-vpcsettings)" : [VpcSettings](aws-properties-directoryservice-microsoftad-vpcsettings.md)
+      "[VpcSettings](#cfn-directoryservice-microsoftad-vpcsettings)" : VpcSettings
     }
 }
 ```
@@ -35,7 +35,7 @@ Properties:
   [Password](#cfn-directoryservice-microsoftad-password): String
   [ShortName](#cfn-directoryservice-microsoftad-shortname): String
   [VpcSettings](#cfn-directoryservice-microsoftad-vpcsettings): 
-    [VpcSettings](aws-properties-directoryservice-microsoftad-vpcsettings.md)
+    VpcSettings
 ```
 
 ## Properties<a name="aws-resource-directoryservice-microsoftad-properties"></a>
@@ -48,10 +48,10 @@ After an alias has been created, it cannot be deleted or reused, so this operati
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Edition`  <a name="cfn-directoryservice-microsoftad-edition"></a>
-AWS Managed Microsoft AD is available in two editions: `Standard` and `Enterprise`\. `Enterprise` is the default\.  
+ AWS Managed Microsoft AD is available in two editions: `Standard` and `Enterprise`\. `Enterprise` is the default\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Enterprise | Standard`  
+*Allowed values*: `Enterprise | Standard`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EnableSso`  <a name="cfn-directoryservice-microsoftad-enablesso"></a>
@@ -79,7 +79,7 @@ If you need to change the password for the administrator account, see the [Reset
 The NetBIOS name for your domain, such as `CORP`\. If you don't specify a NetBIOS name, it will default to the first part of your directory DNS\. For example, `CORP` for the directory DNS `corp.example.com`\.   
 *Required*: No  
 *Type*: String  
-*Pattern*: `^[^\\/:*?\"\<\>|.]+[^\\/:*?\"<>|]*$`  
+*Pattern*: `^[^\\/:*?"<>|.]+[^\\/:*?"<>|]*$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcSettings`  <a name="cfn-directoryservice-microsoftad-vpcsettings"></a>
@@ -88,7 +88,7 @@ Specifies the VPC settings of the Microsoft AD directory server in AWS\.
 *Type*: [VpcSettings](aws-properties-directoryservice-microsoftad-vpcsettings.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-directoryservice-microsoftad-return-values"></a>
+## Return values<a name="aws-resource-directoryservice-microsoftad-return-values"></a>
 
 ### Ref<a name="aws-resource-directoryservice-microsoftad-return-values-ref"></a>
 
@@ -118,9 +118,9 @@ The IP addresses of the DNS servers for the directory, such as `[ "192.0.2.1", "
 
 The following example creates a Microsoft Active Directory in AWS, where the directory DNS name is `corp.example.com`:
 
-### Create an AWS Managed Microsoft Directory<a name="aws-resource-directoryservice-microsoftad--examples--Create_an_AWS_Managed_Microsoft_Directory"></a>
+### Create an AWS Managed Microsoft AD<a name="aws-resource-directoryservice-microsoftad--examples--Create_an_"></a>
 
-#### JSON<a name="aws-resource-directoryservice-microsoftad--examples--Create_an_AWS_Managed_Microsoft_Directory--json"></a>
+#### JSON<a name="aws-resource-directoryservice-microsoftad--examples--Create_an_--json"></a>
 
 ```
 "myDirectory" : {
@@ -137,7 +137,7 @@ The following example creates a Microsoft Active Directory in AWS, where the dir
 }
 ```
 
-#### YAML<a name="aws-resource-directoryservice-microsoftad--examples--Create_an_AWS_Managed_Microsoft_Directory--yaml"></a>
+#### YAML<a name="aws-resource-directoryservice-microsoftad--examples--Create_an_--yaml"></a>
 
 ```
 myDirectory: 
@@ -156,6 +156,7 @@ myDirectory:
         Ref: vpcID
 ```
 
-## See Also<a name="aws-resource-directoryservice-microsoftad--seealso"></a>
+## See also<a name="aws-resource-directoryservice-microsoftad--seealso"></a>
 + [Getting Started with AWS Managed Microsoft AD](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/ms_ad_getting_started.html) in the *AWS Directory Service Admin Guide*\.\.
 + [CreateMicrosoftAD](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_CreateMicrosoftAD.html) in the *AWS Directory Service API Reference*\.
+

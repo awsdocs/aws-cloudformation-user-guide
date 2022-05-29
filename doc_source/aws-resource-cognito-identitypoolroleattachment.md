@@ -38,7 +38,7 @@ An identity pool ID in the format `REGION:GUID`\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleMappings`  <a name="cfn-cognito-identitypoolroleattachment-rolemappings"></a>
-How users for a specific identity provider are mapped to roles\. This is a string to the `RoleMapping` object map\. The string identifies the identity provider\. For example: "graph\.facebook\.com" or "cognito\-idp\.us\-east\-1\.amazonaws\.com/us\-east\-1\_abcdefghi:app\_client\_id"\.  
+How users for a specific identity provider are mapped to roles\. This is a string to the `RoleMapping` object map\. The string identifies the identity provider\. For example: `graph.facebook.com` or `cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id`\.  
 If the `IdentityProvider` field isn't provided in this object, the string is used as the identity provider name\.  
 For more information, see the [RoleMapping property](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html)\.  
 *Required*: No  
@@ -51,7 +51,7 @@ The map of the roles associated with this pool\. For a given role, the key is ei
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-cognito-identitypoolroleattachment-return-values"></a>
+## Return values<a name="aws-resource-cognito-identitypoolroleattachment-return-values"></a>
 
 ### Ref<a name="aws-resource-cognito-identitypoolroleattachment-return-values-ref"></a>
 
@@ -60,6 +60,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-cognito-identitypoolroleattachment--examples"></a>
+
+
 
 ### Setting the roles for an identity pool<a name="aws-resource-cognito-identitypoolroleattachment--examples--Setting_the_roles_for_an_identity_pool"></a>
 

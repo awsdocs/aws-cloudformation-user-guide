@@ -26,7 +26,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-pinpoint-segment-attributedimension-properties"></a>
 
 `AttributeType`  <a name="cfn-pinpoint-segment-attributedimension-attributetype"></a>
-The type of segment dimension to use\. Valid values are: `INCLUSIVE`, endpoints that match the criteria are included in the segment; and, `EXCLUSIVE`, endpoints that match the criteria are excluded from the segment\.  
+The type of segment dimension to use\. Valid values are:  
++  `INCLUSIVE` – endpoints that have attributes matching the values are included in the segment\.
++  `EXCLUSIVE` – endpoints that have attributes matching the values are excluded from the segment\.
++  `CONTAINS` – endpoints that have attributes' substrings match the values are included in the segment\.
++  `BEFORE` – endpoints with attributes read as ISO\_INSTANT datetimes before the value are included in the segment\.
++  `AFTER` – endpoints with attributes read as ISO\_INSTANT datetimes after the value are included in the segment\.
++  `BETWEEN` – endpoints with attributes read as ISO\_INSTANT datetimes between the values are included in the segment\.
++  `ON` – endpoints with attributes read as ISO\_INSTANT dates on the value are included in the segment\. Time is ignored in this comparison\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

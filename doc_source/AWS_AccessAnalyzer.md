@@ -1,4 +1,4 @@
-# AccessAnalyzer Resource Type Reference<a name="AWS_AccessAnalyzer"></a>
+# AWS Identity and Access Management Access Analyzer resource type reference<a name="AWS_AccessAnalyzer"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::AccessAnalyzer::Analyzer](aws-resource-accessanalyzer-analyzer.md)

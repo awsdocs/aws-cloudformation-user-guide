@@ -16,9 +16,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::MediaConvert::JobTemplate",
   "Properties" : {
-      "[AccelerationSettings](#cfn-mediaconvert-jobtemplate-accelerationsettings)" : [AccelerationSettings](aws-properties-mediaconvert-jobtemplate-accelerationsettings.md),
+      "[AccelerationSettings](#cfn-mediaconvert-jobtemplate-accelerationsettings)" : AccelerationSettings,
       "[Category](#cfn-mediaconvert-jobtemplate-category)" : String,
       "[Description](#cfn-mediaconvert-jobtemplate-description)" : String,
+      "[HopDestinations](#cfn-mediaconvert-jobtemplate-hopdestinations)" : [ HopDestination, ... ],
       "[Name](#cfn-mediaconvert-jobtemplate-name)" : String,
       "[Priority](#cfn-mediaconvert-jobtemplate-priority)" : Integer,
       "[Queue](#cfn-mediaconvert-jobtemplate-queue)" : String,
@@ -35,9 +36,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::MediaConvert::JobTemplate
 Properties: 
   [AccelerationSettings](#cfn-mediaconvert-jobtemplate-accelerationsettings): 
-    [AccelerationSettings](aws-properties-mediaconvert-jobtemplate-accelerationsettings.md)
+    AccelerationSettings
   [Category](#cfn-mediaconvert-jobtemplate-category): String
   [Description](#cfn-mediaconvert-jobtemplate-description): String
+  [HopDestinations](#cfn-mediaconvert-jobtemplate-hopdestinations): 
+    - HopDestination
   [Name](#cfn-mediaconvert-jobtemplate-name): String
   [Priority](#cfn-mediaconvert-jobtemplate-priority): Integer
   [Queue](#cfn-mediaconvert-jobtemplate-queue): String
@@ -50,7 +53,7 @@ Properties:
 ## Properties<a name="aws-resource-mediaconvert-jobtemplate-properties"></a>
 
 `AccelerationSettings`  <a name="cfn-mediaconvert-jobtemplate-accelerationsettings"></a>
-Accelerated transcoding can significantly speed up jobs with long, visually complex content\. Outputs that use this feature incur pro\-tier pricing\. For information about feature limitations, see the AWS Elemental MediaConvert User Guide\.  
+Accelerated transcoding can significantly speed up jobs with long, visually complex content\. Outputs that use this feature incur pro\-tier pricing\. For information about feature limitations, For more information, see [Job Limitations for Accelerated Transcoding in AWS Elemental MediaConvert](https://docs.aws.amazon.com/mediaconvert/latest/ug/job-requirements.html) in the *AWS Elemental MediaConvert User Guide*\.  
 *Required*: No  
 *Type*: [AccelerationSettings](aws-properties-mediaconvert-jobtemplate-accelerationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -65,6 +68,12 @@ Optional\. A category for the job template you are creating
 Optional\. A description of the job template you are creating\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HopDestinations`  <a name="cfn-mediaconvert-jobtemplate-hopdestinations"></a>
+Optional\. Configuration for a destination queue to which the job can hop once a customer\-defined minimum wait time has passed\. For more information, see [Setting Up Queue Hopping to Avoid Long Waits](https://docs.aws.amazon.com/mediaconvert/latest/ug/setting-up-queue-hopping-to-avoid-long-waits.html) in the *AWS Elemental MediaConvert User Guide*\.  
+*Required*: No  
+*Type*: List of [HopDestination](aws-properties-mediaconvert-jobtemplate-hopdestination.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-mediaconvert-jobtemplate-name"></a>
@@ -121,7 +130,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-mediaconvert-jobtemplate-return-values"></a>
+## Return values<a name="aws-resource-mediaconvert-jobtemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-mediaconvert-jobtemplate-return-values-ref"></a>
 
@@ -164,6 +173,8 @@ The following procedure is for generating the specification in JSON\. If you nee
 For an example job template model in JSON and YAML, see the Examples section of this topic\.
 
 ## Examples<a name="aws-resource-mediaconvert-jobtemplate--examples"></a>
+
+
 
 ### Job Template Model for SettingsJson<a name="aws-resource-mediaconvert-jobtemplate--examples--Job_Template_Model_for_SettingsJson"></a>
 

@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::PinpointEmail::DedicatedIpPool",
   "Properties" : {
       "[PoolName](#cfn-pinpointemail-dedicatedippool-poolname)" : String,
-      "[Tags](#cfn-pinpointemail-dedicatedippool-tags)" : [ [Tags](aws-properties-pinpointemail-dedicatedippool-tags.md), ... ]
+      "[Tags](#cfn-pinpointemail-dedicatedippool-tags)" : [ Tags, ... ]
     }
 }
 ```
@@ -25,7 +25,7 @@ Type: AWS::PinpointEmail::DedicatedIpPool
 Properties: 
   [PoolName](#cfn-pinpointemail-dedicatedippool-poolname): String
   [Tags](#cfn-pinpointemail-dedicatedippool-tags): 
-    - [Tags](aws-properties-pinpointemail-dedicatedippool-tags.md)
+    - Tags
 ```
 
 ## Properties<a name="aws-resource-pinpointemail-dedicatedippool-properties"></a>
@@ -42,7 +42,7 @@ An object that defines the tags \(keys and values\) that you want to associate w
 *Type*: [List](aws-properties-pinpointemail-dedicatedippool-tags.md) of [Tags](aws-properties-pinpointemail-dedicatedippool-tags.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpointemail-dedicatedippool-return-values"></a>
+## Return values<a name="aws-resource-pinpointemail-dedicatedippool-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpointemail-dedicatedippool-return-values-ref"></a>
 

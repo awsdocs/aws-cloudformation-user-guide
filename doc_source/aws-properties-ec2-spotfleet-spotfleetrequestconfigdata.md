@@ -13,15 +13,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AllocationStrategy](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-allocationstrategy)" : String,
+  "[Context](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-context)" : String,
   "[ExcessCapacityTerminationPolicy](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-excesscapacityterminationpolicy)" : String,
   "[IamFleetRole](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-iamfleetrole)" : String,
   "[InstanceInterruptionBehavior](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-instanceinterruptionbehavior)" : String,
-  "[LaunchSpecifications](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications)" : [ [SpotFleetLaunchSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md), ... ],
-  "[LaunchTemplateConfigs](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs)" : [ [LaunchTemplateConfig](aws-properties-ec2-spotfleet-launchtemplateconfig.md), ... ],
-  "[LoadBalancersConfig](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-loadbalancersconfig)" : [LoadBalancersConfig](aws-properties-ec2-spotfleet-loadbalancersconfig.md),
+  "[InstancePoolsToUseCount](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-instancepoolstousecount)" : Integer,
+  "[LaunchSpecifications](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications)" : [ SpotFleetLaunchSpecification, ... ],
+  "[LaunchTemplateConfigs](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs)" : [ LaunchTemplateConfig, ... ],
+  "[LoadBalancersConfig](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-loadbalancersconfig)" : LoadBalancersConfig,
+  "[OnDemandAllocationStrategy](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-ondemandallocationstrategy)" : String,
+  "[OnDemandMaxTotalPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-ondemandmaxtotalprice)" : String,
+  "[OnDemandTargetCapacity](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-ondemandtargetcapacity)" : Integer,
   "[ReplaceUnhealthyInstances](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances)" : Boolean,
+  "[SpotMaintenanceStrategies](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotmaintenancestrategies)" : SpotMaintenanceStrategies,
+  "[SpotMaxTotalPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotmaxtotalprice)" : String,
   "[SpotPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice)" : String,
   "[TargetCapacity](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacity)" : Integer,
+  "[TargetCapacityUnitType](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacityunittype)" : String,
   "[TerminateInstancesWithExpiration](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-terminateinstanceswithexpiration)" : Boolean,
   "[Type](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-type)" : String,
   "[ValidFrom](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validfrom)" : String,
@@ -33,18 +41,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AllocationStrategy](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-allocationstrategy): String
+  [Context](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-context): String
   [ExcessCapacityTerminationPolicy](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-excesscapacityterminationpolicy): String
   [IamFleetRole](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-iamfleetrole): String
   [InstanceInterruptionBehavior](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-instanceinterruptionbehavior): String
+  [InstancePoolsToUseCount](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-instancepoolstousecount): Integer
   [LaunchSpecifications](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications): 
-    - [SpotFleetLaunchSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md)
+    - SpotFleetLaunchSpecification
   [LaunchTemplateConfigs](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs): 
-    - [LaunchTemplateConfig](aws-properties-ec2-spotfleet-launchtemplateconfig.md)
+    - LaunchTemplateConfig
   [LoadBalancersConfig](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-loadbalancersconfig): 
-    [LoadBalancersConfig](aws-properties-ec2-spotfleet-loadbalancersconfig.md)
+    LoadBalancersConfig
+  [OnDemandAllocationStrategy](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-ondemandallocationstrategy): String
+  [OnDemandMaxTotalPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-ondemandmaxtotalprice): String
+  [OnDemandTargetCapacity](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-ondemandtargetcapacity): Integer
   [ReplaceUnhealthyInstances](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances): Boolean
+  [SpotMaintenanceStrategies](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotmaintenancestrategies): 
+    SpotMaintenanceStrategies
+  [SpotMaxTotalPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotmaxtotalprice): String
   [SpotPrice](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice): String
   [TargetCapacity](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacity): Integer
+  [TargetCapacityUnitType](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacityunittype): String
   [TerminateInstancesWithExpiration](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-terminateinstanceswithexpiration): Boolean
   [Type](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-type): String
   [ValidFrom](#cfn-ec2-spotfleet-spotfleetrequestconfigdata-validfrom): String
@@ -57,17 +74,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Indicates how to allocate the target Spot Instance capacity across the Spot Instance pools specified by the Spot Fleet request\.  
 If the allocation strategy is `lowestPrice`, Spot Fleet launches instances from the Spot Instance pools with the lowest price\. This is the default allocation strategy\.  
 If the allocation strategy is `diversified`, Spot Fleet launches instances from all the Spot Instance pools that you specify\.  
-If the allocation strategy is `capacityOptimized`, Spot Fleet launches instances from Spot Instance pools with optimal capacity for the number of instances that are launching\.  
+If the allocation strategy is `capacityOptimized` \(recommended\), Spot Fleet launches instances from Spot Instance pools with optimal capacity for the number of instances that are launching\. To give certain instance types a higher chance of launching first, use `capacityOptimizedPrioritized`\. Set a priority for each instance type by using the `Priority` parameter for `LaunchTemplateOverrides`\. You can assign the same priority to different `LaunchTemplateOverrides`\. EC2 implements the priorities on a best\-effort basis, but optimizes for capacity first\. `capacityOptimizedPrioritized` is supported only if your Spot Fleet uses a launch template\. Note that if the `OnDemandAllocationStrategy` is set to `prioritized`, the same priority is applied when fulfilling On\-Demand capacity\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `capacityOptimized | diversified | lowestPrice`  
+*Allowed values*: `capacityOptimized | capacityOptimizedPrioritized | diversified | lowestPrice`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Context`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-context"></a>
+Reserved\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcessCapacityTerminationPolicy`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-excesscapacityterminationpolicy"></a>
 Indicates whether running Spot Instances should be terminated if you decrease the target capacity of the Spot Fleet request below the current size of the Spot Fleet\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `default | noTermination`  
+*Allowed values*: `default | noTermination`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IamFleetRole`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-iamfleetrole"></a>
@@ -80,13 +103,20 @@ The Amazon Resource Name \(ARN\) of an AWS Identity and Access Management \(IAM\
 The behavior when a Spot Instance is interrupted\. The default is `terminate`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `hibernate | stop | terminate`  
+*Allowed values*: `hibernate | stop | terminate`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`InstancePoolsToUseCount`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-instancepoolstousecount"></a>
+The number of Spot pools across which to allocate your target Spot capacity\. Valid only when Spot **AllocationStrategy** is set to `lowest-price`\. Spot Fleet selects the cheapest Spot pools and evenly allocates your target Spot capacity across the number of Spot pools that you specify\.  
+Note that Spot Fleet attempts to draw Spot Instances from the number of pools that you specify on a best effort basis\. If a pool runs out of Spot capacity before fulfilling your target capacity, Spot Fleet will continue to fulfill your request by drawing from the next cheapest pool\. To ensure that your target capacity is met, you might receive Spot Instances from more than the number of pools that you specified\. Similarly, if most of the pools have no Spot capacity, you might receive your full target capacity from fewer than the number of pools that you specified\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LaunchSpecifications`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications"></a>
 The launch specifications for the Spot Fleet request\. If you specify `LaunchSpecifications`, you can't specify `LaunchTemplateConfigs`\.  
 *Required*: Conditional  
-*Type*: List of [SpotFleetLaunchSpecification](aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications.md)  
+*Type*: List of [SpotFleetLaunchSpecification](aws-properties-ec2-spotfleet-spotfleetlaunchspecification.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LaunchTemplateConfigs`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-launchtemplateconfigs"></a>
@@ -102,10 +132,41 @@ With Network Load Balancers, Spot Fleet cannot register instances that have the 
 *Type*: [LoadBalancersConfig](aws-properties-ec2-spotfleet-loadbalancersconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`OnDemandAllocationStrategy`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-ondemandallocationstrategy"></a>
+The order of the launch template overrides to use in fulfilling On\-Demand capacity\. If you specify `lowestPrice`, Spot Fleet uses price to determine the order, launching the lowest price first\. If you specify `prioritized`, Spot Fleet uses the priority that you assign to each Spot Fleet launch template override, launching the highest priority first\. If you do not specify a value, Spot Fleet defaults to `lowestPrice`\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `lowestPrice | prioritized`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`OnDemandMaxTotalPrice`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-ondemandmaxtotalprice"></a>
+The maximum amount per hour for On\-Demand Instances that you're willing to pay\. You can use the `onDemandMaxTotalPrice` parameter, the `spotMaxTotalPrice` parameter, or both parameters to ensure that your fleet cost does not exceed your budget\. If you set a maximum price per hour for the On\-Demand Instances and Spot Instances in your request, Spot Fleet will launch instances until it reaches the maximum amount you're willing to pay\. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`OnDemandTargetCapacity`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-ondemandtargetcapacity"></a>
+The number of On\-Demand units to request\. You can choose to set the target capacity in terms of instances or a performance characteristic that is important to your application workload, such as vCPUs, memory, or I/O\. If the request type is `maintain`, you can specify a target capacity of 0 and add capacity later\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `ReplaceUnhealthyInstances`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-replaceunhealthyinstances"></a>
 Indicates whether Spot Fleet should replace unhealthy instances\.  
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`SpotMaintenanceStrategies`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotmaintenancestrategies"></a>
+The strategies for managing your Spot Instances that are at an elevated risk of being interrupted\.  
+*Required*: No  
+*Type*: [SpotMaintenanceStrategies](aws-properties-ec2-spotfleet-spotmaintenancestrategies.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`SpotMaxTotalPrice`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotmaxtotalprice"></a>
+The maximum amount per hour for Spot Instances that you're willing to pay\. You can use the `spotdMaxTotalPrice` parameter, the `onDemandMaxTotalPrice` parameter, or both parameters to ensure that your fleet cost does not exceed your budget\. If you set a maximum price per hour for the On\-Demand Instances and Spot Instances in your request, Spot Fleet will launch instances until it reaches the maximum amount you're willing to pay\. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SpotPrice`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-spotprice"></a>
@@ -120,6 +181,14 @@ The number of units to request for the Spot Fleet\. You can choose to set the ta
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`TargetCapacityUnitType`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-targetcapacityunittype"></a>
+The unit for the target capacity\.  
+Default: `units` \(translates to number of instances\)  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `memory-mib | units | vcpu`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `TerminateInstancesWithExpiration`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-terminateinstanceswithexpiration"></a>
 Indicates whether running Spot Instances are terminated when the Spot Fleet request expires\.  
 *Required*: No  
@@ -130,7 +199,7 @@ Indicates whether running Spot Instances are terminated when the Spot Fleet requ
 The type of request\. Indicates whether the Spot Fleet only requests the target capacity or also attempts to maintain it\. When this value is `request`, the Spot Fleet only places the required requests\. It does not attempt to replenish Spot Instances if capacity is diminished, nor does it submit requests in alternative Spot pools if capacity is not available\. When this value is `maintain`, the Spot Fleet maintains the target capacity\. The Spot Fleet places the required requests to meet capacity and automatically replenishes any interrupted instances\. Default: `maintain`\. `instant` is listed but is not used by Spot Fleet\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `instant | maintain | request`  
+*Allowed values*: `instant | maintain | request`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ValidFrom`  <a name="cfn-ec2-spotfleet-spotfleetrequestconfigdata-validfrom"></a>

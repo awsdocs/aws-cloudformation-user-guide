@@ -24,11 +24,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Destination`  <a name="cfn-lambda-eventsourcemapping-onfailure-destination"></a>
 The Amazon Resource Name \(ARN\) of the destination resource\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `350`  
+*Pattern*: `^$|arn:(aws[a-zA-Z0-9-]*):([a-zA-Z0-9\-])+:([a-z]{2}(-gov)?-[a-z]+-\d{1})?:(\d{12})?:(.*)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-lambda-eventsourcemapping-onfailure--examples"></a>
+
+
 
 ### On\-Failure Destination Configuration<a name="aws-properties-lambda-eventsourcemapping-onfailure--examples--On-Failure_Destination_Configuration"></a>
 

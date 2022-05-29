@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AwsOrganizationsSource](#cfn-ssm-resourcedatasync-syncsource-awsorganizationssource)" : [AwsOrganizationsSource](aws-properties-ssm-resourcedatasync-awsorganizationssource.md),
+  "[AwsOrganizationsSource](#cfn-ssm-resourcedatasync-syncsource-awsorganizationssource)" : AwsOrganizationsSource,
   "[IncludeFutureRegions](#cfn-ssm-resourcedatasync-syncsource-includefutureregions)" : Boolean,
   "[SourceRegions](#cfn-ssm-resourcedatasync-syncsource-sourceregions)" : [ String, ... ],
   "[SourceType](#cfn-ssm-resourcedatasync-syncsource-sourcetype)" : String
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AwsOrganizationsSource](#cfn-ssm-resourcedatasync-syncsource-awsorganizationssource): 
-    [AwsOrganizationsSource](aws-properties-ssm-resourcedatasync-awsorganizationssource.md)
+    AwsOrganizationsSource
   [IncludeFutureRegions](#cfn-ssm-resourcedatasync-syncsource-includefutureregions): Boolean
   [SourceRegions](#cfn-ssm-resourcedatasync-syncsource-sourceregions): 
     - String
@@ -49,9 +49,9 @@ The `SyncSource` AWS Regions included in the resource data sync\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceType`  <a name="cfn-ssm-resourcedatasync-syncsource-sourcetype"></a>
-The type of data source for the resource data sync\. `SourceType` is either `AwsOrganizations` \(if an organization is present in AWS Organizations\) or `singleAccountMultiRegions`\.  
+The type of data source for the resource data sync\. `SourceType` is either `AwsOrganizations` \(if an organization is present in AWS Organizations\) or `SingleAccountMultiRegions`\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `64`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

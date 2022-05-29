@@ -10,11 +10,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[GrpcRoute](#cfn-appmesh-route-routespec-grpcroute)" : [GrpcRoute](aws-properties-appmesh-route-grpcroute.md),
-  "[Http2Route](#cfn-appmesh-route-routespec-http2route)" : [HttpRoute](aws-properties-appmesh-route-httproute.md),
-  "[HttpRoute](#cfn-appmesh-route-routespec-httproute)" : [HttpRoute](aws-properties-appmesh-route-httproute.md),
+  "[GrpcRoute](#cfn-appmesh-route-routespec-grpcroute)" : GrpcRoute,
+  "[Http2Route](#cfn-appmesh-route-routespec-http2route)" : HttpRoute,
+  "[HttpRoute](#cfn-appmesh-route-routespec-httproute)" : HttpRoute,
   "[Priority](#cfn-appmesh-route-routespec-priority)" : Integer,
-  "[TcpRoute](#cfn-appmesh-route-routespec-tcproute)" : [TcpRoute](aws-properties-appmesh-route-tcproute.md)
+  "[TcpRoute](#cfn-appmesh-route-routespec-tcproute)" : TcpRoute
 }
 ```
 
@@ -22,14 +22,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [GrpcRoute](#cfn-appmesh-route-routespec-grpcroute): 
-    [GrpcRoute](aws-properties-appmesh-route-grpcroute.md)
+    GrpcRoute
   [Http2Route](#cfn-appmesh-route-routespec-http2route): 
-    [HttpRoute](aws-properties-appmesh-route-httproute.md)
+    HttpRoute
   [HttpRoute](#cfn-appmesh-route-routespec-httproute): 
-    [HttpRoute](aws-properties-appmesh-route-httproute.md)
+    HttpRoute
   [Priority](#cfn-appmesh-route-routespec-priority): Integer
   [TcpRoute](#cfn-appmesh-route-routespec-tcproute): 
-    [TcpRoute](aws-properties-appmesh-route-tcproute.md)
+    TcpRoute
 ```
 
 ## Properties<a name="aws-properties-appmesh-route-routespec-properties"></a>
@@ -56,6 +56,8 @@ An object that represents the specification of an HTTP route\.
 The priority for the route\. Routes are matched based on the specified value, where 0 is the highest priority\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TcpRoute`  <a name="cfn-appmesh-route-routespec-tcproute"></a>

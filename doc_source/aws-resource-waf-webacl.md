@@ -1,6 +1,10 @@
 # AWS::WAF::WebACL<a name="aws-resource-waf-webacl"></a>
 
-Contains the `Rules` that identify the requests that you want to allow, block, or count\. In a `WebACL`, you also specify a default action \(`ALLOW` or `BLOCK`\), and the action for each `Rule` that you add to a `WebACL`, for example, block requests from specified IP addresses or block requests from specified referrers\. You also associate the `WebACL` with a CloudFront distribution to identify the requests that you want AWS WAF to filter\. If you add more than one `Rule` to a `WebACL`, a request needs to match only one of the specifications to be allowed, blocked, or counted\.
+**Note**  
+This is ** AWS WAF Classic** documentation\. For more information, see [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF **, use the AWS WAFV2 API and see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
+
+Contains the `Rules` that identify the requests that you want to allow, block, or count\. In a `WebACL`, you also specify a default action \(`ALLOW` or `BLOCK`\), and the action for each `Rule` that you add to a `WebACL`, for example, block requests from specified IP addresses or block requests from specified referrers\. You also associate the `WebACL` with a Amazon CloudFront distribution to identify the requests that you want AWS WAF to filter\. If you add more than one `Rule` to a `WebACL`, a request needs to match only one of the specifications to be allowed, blocked, or counted\.
 
 ## Syntax<a name="aws-resource-waf-webacl-syntax"></a>
 
@@ -12,10 +16,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAF::WebACL",
   "Properties" : {
-      "[DefaultAction](#cfn-waf-webacl-defaultaction)" : [WafAction](aws-properties-waf-webacl-action.md),
+      "[DefaultAction](#cfn-waf-webacl-defaultaction)" : WafAction,
       "[MetricName](#cfn-waf-webacl-metricname)" : String,
       "[Name](#cfn-waf-webacl-name)" : String,
-      "[Rules](#cfn-waf-webacl-rules)" : [ [ActivatedRule](aws-properties-waf-webacl-rules.md), ... ]
+      "[Rules](#cfn-waf-webacl-rules)" : [ ActivatedRule, ... ]
     }
 }
 ```
@@ -26,11 +30,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::WAF::WebACL
 Properties: 
   [DefaultAction](#cfn-waf-webacl-defaultaction): 
-    [WafAction](aws-properties-waf-webacl-action.md)
+    WafAction
   [MetricName](#cfn-waf-webacl-metricname): String
   [Name](#cfn-waf-webacl-name): String
   [Rules](#cfn-waf-webacl-rules): 
-    - [ActivatedRule](aws-properties-waf-webacl-rules.md)
+    - ActivatedRule
 ```
 
 ## Properties<a name="aws-resource-waf-webacl-properties"></a>
@@ -42,9 +46,12 @@ The action to perform if none of the `Rules` contained in the `WebACL` match\. T
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricName`  <a name="cfn-waf-webacl-metricname"></a>
-A friendly name or description for the metrics for this `WebACL`\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with maximum length 128 and minimum length one\. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default\_Action\." You can't change `MetricName` after you create the `WebACL`\.  
+The name of the metrics for this `WebACL`\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with maximum length 128 and minimum length one\. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default\_Action\." You can't change `MetricName` after you create the `WebACL`\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-waf-webacl-name"></a>
@@ -53,6 +60,7 @@ A friendly name or description of the `WebACL`\. You can't change the name of a 
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Rules`  <a name="cfn-waf-webacl-rules"></a>
@@ -61,7 +69,7 @@ An array that contains the action for each `Rule` in a `WebACL`, the priority of
 *Type*: List of [ActivatedRule](aws-properties-waf-webacl-rules.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-waf-webacl-return-values"></a>
+## Return values<a name="aws-resource-waf-webacl-return-values"></a>
 
 ### Ref<a name="aws-resource-waf-webacl-return-values-ref"></a>
 
@@ -70,6 +78,8 @@ An array that contains the action for each `Rule` in a `WebACL`, the priority of
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-waf-webacl--examples"></a>
+
+
 
 ### Create a Web ACL<a name="aws-resource-waf-webacl--examples--Create_a_Web_ACL"></a>
 
@@ -144,11 +154,11 @@ MyWebACL:
           Ref: "SqlInjRule"
 ```
 
-### Associate a Web ACL with a CloudFront Distribution<a name="aws-resource-waf-webacl--examples--Associate_a_Web_ACL_with_a_CloudFront_Distribution"></a>
+### Associate a Web ACL with a Amazon CloudFront Distribution<a name="aws-resource-waf-webacl--examples--Associate_a_Web_ACL_with_a__Distribution"></a>
 
-The follow example associates the `MyWebACL` web ACL with a CloudFront distribution\. The web ACL restricts which requests can access content served by CloudFront\.
+The follow example associates the `MyWebACL` web ACL with a Amazon CloudFront distribution\. The web ACL restricts which requests can access content served by Amazon CloudFront\.
 
-#### JSON<a name="aws-resource-waf-webacl--examples--Associate_a_Web_ACL_with_a_CloudFront_Distribution--json"></a>
+#### JSON<a name="aws-resource-waf-webacl--examples--Associate_a_Web_ACL_with_a__Distribution--json"></a>
 
 ```
 "myDistribution": {
@@ -200,7 +210,7 @@ The follow example associates the `MyWebACL` web ACL with a CloudFront distribut
 }
 ```
 
-#### YAML<a name="aws-resource-waf-webacl--examples--Associate_a_Web_ACL_with_a_CloudFront_Distribution--yaml"></a>
+#### YAML<a name="aws-resource-waf-webacl--examples--Associate_a_Web_ACL_with_a__Distribution--yaml"></a>
 
 ```
 myDistribution: 

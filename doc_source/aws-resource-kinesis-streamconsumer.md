@@ -51,7 +51,7 @@ The ARN of the stream with which you registered the consumer\.
 *Pattern*: `arn:aws.*:kinesis:.*:\d{12}:stream/.+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-kinesis-streamconsumer-return-values"></a>
+## Return values<a name="aws-resource-kinesis-streamconsumer-return-values"></a>
 
 ### Ref<a name="aws-resource-kinesis-streamconsumer-return-values-ref"></a>
 
@@ -85,7 +85,11 @@ The ARN of the data stream with which the consumer is registered\.
 
 ## Examples<a name="aws-resource-kinesis-streamconsumer--examples"></a>
 
+
+
 ### Register a Consumer with a Kinesis Data Stream<a name="aws-resource-kinesis-streamconsumer--examples--Register_a_Consumer_with_a_Kinesis_Data_Stream"></a>
+
+
 
 #### JSON<a name="aws-resource-kinesis-streamconsumer--examples--Register_a_Consumer_with_a_Kinesis_Data_Stream--json"></a>
 

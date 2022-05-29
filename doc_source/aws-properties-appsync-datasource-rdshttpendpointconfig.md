@@ -1,6 +1,6 @@
 # AWS::AppSync::DataSource RdsHttpEndpointConfig<a name="aws-properties-appsync-datasource-rdshttpendpointconfig"></a>
 
-Use the `RdsHttpEndpointConfig` property type to specify `RdsHttpEndpoint` for an AWS AppSync relational database\.
+Use the `RdsHttpEndpointConfig` property type to specify the `RdsHttpEndpoint` for an AWS AppSync relational database\.
 
  `RdsHttpEndpointConfig` is a property of the [AWS AppSync DataSource RelationalDatabaseConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-relationaldatabaseconfig.html) resource\.
 
@@ -33,13 +33,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appsync-datasource-rdshttpendpointconfig-properties"></a>
 
 `AwsRegion`  <a name="cfn-appsync-datasource-rdshttpendpointconfig-awsregion"></a>
-AWS Region for RDS HTTP endpoint\.  
+ AWS Region for RDS HTTP endpoint\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AwsSecretStoreArn`  <a name="cfn-appsync-datasource-rdshttpendpointconfig-awssecretstorearn"></a>
-AWS secret store ARN for database credentials\.  
+The ARN for database credentials stored in AWS Secrets Manager\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -51,7 +51,7 @@ Logical database name\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DbClusterIdentifier`  <a name="cfn-appsync-datasource-rdshttpendpointconfig-dbclusteridentifier"></a>
-Amazon RDS cluster ARN\.  
+Amazon RDS cluster Amazon Resource Name \(ARN\)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

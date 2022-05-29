@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Cognito::UserPoolDomain",
   "Properties" : {
-      "[CustomDomainConfig](#cfn-cognito-userpooldomain-customdomainconfig)" : [CustomDomainConfigType](aws-properties-cognito-userpooldomain-customdomainconfigtype.md),
+      "[CustomDomainConfig](#cfn-cognito-userpooldomain-customdomainconfig)" : CustomDomainConfigType,
       "[Domain](#cfn-cognito-userpooldomain-domain)" : String,
       "[UserPoolId](#cfn-cognito-userpooldomain-userpoolid)" : String
     }
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Cognito::UserPoolDomain
 Properties: 
   [CustomDomainConfig](#cfn-cognito-userpooldomain-customdomainconfig): 
-    [CustomDomainConfigType](aws-properties-cognito-userpooldomain-customdomainconfigtype.md)
+    CustomDomainConfigType
   [Domain](#cfn-cognito-userpooldomain-domain): String
   [UserPoolId](#cfn-cognito-userpooldomain-userpoolid): String
 ```
@@ -57,7 +57,7 @@ The user pool ID for the user pool where you want to associate a user pool domai
 *Pattern*: `[\w-]+_[0-9a-zA-Z]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cognito-userpooldomain-return-values"></a>
+## Return values<a name="aws-resource-cognito-userpooldomain-return-values"></a>
 
 ### Ref<a name="aws-resource-cognito-userpooldomain-return-values-ref"></a>
 
@@ -70,6 +70,8 @@ For the Amazon Cognito user pool domain `your-test-domain`, Ref returns the name
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-cognito-userpooldomain--examples"></a>
+
+
 
 ### Creating a new custom domain for a user pool<a name="aws-resource-cognito-userpooldomain--examples--Creating_a_new_custom_domain_for_a_user_pool"></a>
 

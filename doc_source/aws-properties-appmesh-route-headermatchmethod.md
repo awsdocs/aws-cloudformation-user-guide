@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Exact](#cfn-appmesh-route-headermatchmethod-exact)" : String,
   "[Prefix](#cfn-appmesh-route-headermatchmethod-prefix)" : String,
-  "[Range](#cfn-appmesh-route-headermatchmethod-range)" : [MatchRange](aws-properties-appmesh-route-matchrange.md),
+  "[Range](#cfn-appmesh-route-headermatchmethod-range)" : MatchRange,
   "[Regex](#cfn-appmesh-route-headermatchmethod-regex)" : String,
   "[Suffix](#cfn-appmesh-route-headermatchmethod-suffix)" : String
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Exact](#cfn-appmesh-route-headermatchmethod-exact): String
   [Prefix](#cfn-appmesh-route-headermatchmethod-prefix): String
   [Range](#cfn-appmesh-route-headermatchmethod-range): 
-    [MatchRange](aws-properties-appmesh-route-matchrange.md)
+    MatchRange
   [Regex](#cfn-appmesh-route-headermatchmethod-regex): String
   [Suffix](#cfn-appmesh-route-headermatchmethod-suffix): String
 ```
@@ -35,12 +35,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The value sent by the client must match the specified value exactly\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Prefix`  <a name="cfn-appmesh-route-headermatchmethod-prefix"></a>
 The value sent by the client must begin with the specified characters\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Range`  <a name="cfn-appmesh-route-headermatchmethod-range"></a>
@@ -53,10 +57,14 @@ An object that represents the range of values to match on\.
 The value sent by the client must include the specified characters\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Suffix`  <a name="cfn-appmesh-route-headermatchmethod-suffix"></a>
 The value sent by the client must end with the specified characters\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

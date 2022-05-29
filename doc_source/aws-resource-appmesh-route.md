@@ -2,9 +2,7 @@
 
 Creates a route that is associated with a virtual router\.
 
-You can use the `prefix` parameter in your route specification for path\-based routing of requests\. For example, if your virtual service name is `my-service.local` and you want the route to match requests to `my-service.local/metrics`, your prefix should be `/metrics`\.
-
-If your route matches a request, you can distribute traffic to one or more target virtual nodes with relative weighting\.
+ You can route several different protocols and define a retry policy for a route\. Traffic can be routed to one or more virtual nodes\.
 
 For more information about routes, see [Routes](https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html)\.
 
@@ -19,8 +17,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AppMesh::Route",
   "Properties" : {
       "[MeshName](#cfn-appmesh-route-meshname)" : String,
+      "[MeshOwner](#cfn-appmesh-route-meshowner)" : String,
       "[RouteName](#cfn-appmesh-route-routename)" : String,
-      "[Spec](#cfn-appmesh-route-spec)" : [RouteSpec](aws-properties-appmesh-route-routespec.md),
+      "[Spec](#cfn-appmesh-route-spec)" : RouteSpec,
       "[Tags](#cfn-appmesh-route-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VirtualRouterName](#cfn-appmesh-route-virtualroutername)" : String
     }
@@ -33,9 +32,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AppMesh::Route
 Properties: 
   [MeshName](#cfn-appmesh-route-meshname): String
+  [MeshOwner](#cfn-appmesh-route-meshowner): String
   [RouteName](#cfn-appmesh-route-routename): String
   [Spec](#cfn-appmesh-route-spec): 
-    [RouteSpec](aws-properties-appmesh-route-routespec.md)
+    RouteSpec
   [Tags](#cfn-appmesh-route-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VirtualRouterName](#cfn-appmesh-route-virtualroutername): String
@@ -47,12 +47,24 @@ Properties:
 The name of the service mesh to create the route in\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MeshOwner`  <a name="cfn-appmesh-route-meshowner"></a>
+The AWS IAM account ID of the service mesh owner\. If the account ID is not your own, then the account that you specify must share the mesh with your account before you can create the resource in the service mesh\. For more information about mesh sharing, see [Working with shared meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `12`  
+*Maximum*: `12`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RouteName`  <a name="cfn-appmesh-route-routename"></a>
 The name to use for the route\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Spec`  <a name="cfn-appmesh-route-spec"></a>
@@ -65,15 +77,18 @@ The route specification to apply\.
 Optional metadata that you can apply to the route to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VirtualRouterName`  <a name="cfn-appmesh-route-virtualroutername"></a>
-The name of the virtual router in which to create the route\.  
+The name of the virtual router in which to create the route\. If the virtual router is in a shared mesh, then you must be the owner of the virtual router resource\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-appmesh-route-return-values"></a>
+## Return values<a name="aws-resource-appmesh-route-return-values"></a>
 
 ### Ref<a name="aws-resource-appmesh-route-return-values-ref"></a>
 
@@ -100,10 +115,10 @@ The full Amazon Resource Name \(ARN\) for the route\.
 The name of the service mesh that the route resides in\.
 
 `MeshOwner`  <a name="MeshOwner-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The AWS IAM account ID of the service mesh owner\. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.
 
 `ResourceOwner`  <a name="ResourceOwner-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The AWS IAM account ID of the resource owner\. If the account ID is not your own, then it's the ID of the mesh owner or of another account that the mesh is shared with\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.
 
 `RouteName`  <a name="RouteName-fn::getatt"></a>
 The name of the route\.
@@ -274,6 +289,7 @@ Outputs:
       - Uid
 ```
 
-## See Also<a name="aws-resource-appmesh-route--seealso"></a>
+## See also<a name="aws-resource-appmesh-route--seealso"></a>
 +  [Routes](https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html) in the * AWS App Mesh User Guide *\.
 +  [CreateRoute](https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateRoute.html) in the * AWS App Mesh API Reference *\.
+

@@ -47,7 +47,7 @@ The current revision id for the robot application\. If you provide a value and i
 *Pattern*: `[a-zA-Z0-9_.\-]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-robomaker-robotapplicationversion-return-values"></a>
+## Return values<a name="aws-resource-robomaker-robotapplicationversion-return-values"></a>
 
 ### Ref<a name="aws-resource-robomaker-robotapplicationversion-return-values-ref"></a>
 
@@ -55,13 +55,29 @@ When you pass the logical ID of an `AWS::RoboMaker::RobotApplicationVersion` res
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-robomaker-robotapplicationversion-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-robomaker-robotapplicationversion-return-values-fn--getatt-fn--getatt"></a>
+
+`ApplicationVersion`  <a name="ApplicationVersion-fn::getatt"></a>
+The robot application version\.
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the robot application version\.
+
 ## Examples<a name="aws-resource-robomaker-robotapplicationversion--examples"></a>
 
-### Create an AWS RoboMaker Robot Application Version<a name="aws-resource-robomaker-robotapplicationversion--examples--Create_an_AWS_RoboMaker_Robot_Application_Version"></a>
+
+
+### Create an AWS RoboMaker Robot Application Version<a name="aws-resource-robomaker-robotapplicationversion--examples--Create_an__RoboMaker_Robot_Application_Version"></a>
 
 The following example creates a robot application\.
 
-#### JSON<a name="aws-resource-robomaker-robotapplicationversion--examples--Create_an_AWS_RoboMaker_Robot_Application_Version--json"></a>
+#### JSON<a name="aws-resource-robomaker-robotapplicationversion--examples--Create_an__RoboMaker_Robot_Application_Version--json"></a>
 
 ```
 {
@@ -104,7 +120,7 @@ The following example creates a robot application\.
 }
 ```
 
-#### YAML<a name="aws-resource-robomaker-robotapplicationversion--examples--Create_an_AWS_RoboMaker_Robot_Application_Version--yaml"></a>
+#### YAML<a name="aws-resource-robomaker-robotapplicationversion--examples--Create_an__RoboMaker_Robot_Application_Version--yaml"></a>
 
 ```
 ---

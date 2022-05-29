@@ -62,7 +62,7 @@ One or more tags to be assigned to the subnet group\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-dms-replicationsubnetgroup-return-values"></a>
+## Return values<a name="aws-resource-dms-replicationsubnetgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-dms-replicationsubnetgroup-return-values-ref"></a>
 
@@ -71,6 +71,8 @@ One or more tags to be assigned to the subnet group\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-dms-replicationsubnetgroup--examples"></a>
+
+
 
 ### <a name="aws-resource-dms-replicationsubnetgroup--examples--"></a>
 
@@ -120,6 +122,7 @@ Resources:
     Type: "AWS::DMS::ReplicationSubnetGroup"
 ```
 
-## See Also<a name="aws-resource-dms-replicationsubnetgroup--seealso"></a>
+## See also<a name="aws-resource-dms-replicationsubnetgroup--seealso"></a>
 +  [CreateReplicationSubnetGroup](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationSubnetGroup.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 
+

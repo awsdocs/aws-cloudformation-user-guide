@@ -2,7 +2,7 @@
 
 A *channel* is a type of platform that you can deliver messages to\. You can use the APNs VoIP sandbox channel to send VoIP notification messages to the sandbox environment of the Apple Push Notification service \(APNs\)\. Before you can use Amazon Pinpoint to send VoIP notifications to the APNs sandbox environment, you have to enable the APNs VoIP sandbox channel for an Amazon Pinpoint application\.
 
-The AWS::Pinpoint::APNSVoipSandboxChannel resource defines the status and authentication settings of the APNs VoIP sandbox channel for an application\.
+The APNSVoipSandboxChannel resource represents the status and authentication settings of the APNs VoIP sandbox channel for an application\.
 
 ## Syntax<a name="aws-resource-pinpoint-apnsvoipsandboxchannel-syntax"></a>
 
@@ -58,13 +58,13 @@ The bundle identifier that's assigned to your iOS app\. This identifier is used 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Certificate`  <a name="cfn-pinpoint-apnsvoipsandboxchannel-certificate"></a>
-The APNs client certificate that you received from Apple, if you want Amazon Pinpoint to communicate with the APNs sandbox environment by using an APNs certificate\.  
+The APNs client certificate that you received from Apple\. Specify this value if you want Amazon Pinpoint to communicate with the APNs sandbox environment by using an APNs certificate\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultAuthenticationMethod`  <a name="cfn-pinpoint-apnsvoipsandboxchannel-defaultauthenticationmethod"></a>
-The default authentication method that you want Amazon Pinpoint to use when authenticating with the APNs sandbox environment for this channel, key or certificate\.  
+The default authentication method that you want Amazon Pinpoint to use when authenticating with APNs\. Valid options are `key` or `certificate`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -94,12 +94,12 @@ The authentication key to use for APNs tokens\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TokenKeyId`  <a name="cfn-pinpoint-apnsvoipsandboxchannel-tokenkeyid"></a>
-The key identifier that's assigned to your APNs signing key, if you want Amazon Pinpoint to communicate with the APNs sandbox environment by using APNs tokens\.  
+The key identifier that's assigned to your APNs signing key\. Specify this value if you want Amazon Pinpoint to communicate with the APNs sandbox environment by using APNs tokens\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-pinpoint-apnsvoipsandboxchannel-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-apnsvoipsandboxchannel-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-apnsvoipsandboxchannel-return-values-ref"></a>
 

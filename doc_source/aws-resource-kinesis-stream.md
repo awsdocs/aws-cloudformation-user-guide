@@ -15,7 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-kinesis-stream-name)" : String,
       "[RetentionPeriodHours](#cfn-kinesis-stream-retentionperiodhours)" : Integer,
       "[ShardCount](#cfn-kinesis-stream-shardcount)" : Integer,
-      "[StreamEncryption](#cfn-kinesis-stream-streamencryption)" : [StreamEncryption](aws-properties-kinesis-stream-streamencryption.md),
+      "[StreamEncryption](#cfn-kinesis-stream-streamencryption)" : StreamEncryption,
+      "[StreamModeDetails](#cfn-kinesis-stream-streammodedetails)" : StreamModeDetails,
       "[Tags](#cfn-kinesis-stream-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -30,7 +31,9 @@ Properties:
   [RetentionPeriodHours](#cfn-kinesis-stream-retentionperiodhours): Integer
   [ShardCount](#cfn-kinesis-stream-shardcount): Integer
   [StreamEncryption](#cfn-kinesis-stream-streamencryption): 
-    [StreamEncryption](aws-properties-kinesis-stream-streamencryption.md)
+    StreamEncryption
+  [StreamModeDetails](#cfn-kinesis-stream-streammodedetails): 
+    StreamModeDetails
   [Tags](#cfn-kinesis-stream-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -55,7 +58,7 @@ The number of hours for the data records that are stored in shards to remain acc
 
 `ShardCount`  <a name="cfn-kinesis-stream-shardcount"></a>
 The number of shards that the stream uses\. For greater provisioned throughput, increase the number of shards\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -66,13 +69,19 @@ When specified, enables or updates server\-side encryption using an AWS KMS key 
 *Type*: [StreamEncryption](aws-properties-kinesis-stream-streamencryption.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`StreamModeDetails`  <a name="cfn-kinesis-stream-streammodedetails"></a>
+ Specifies the capacity mode to which you want to set your data stream\. Currently, in Kinesis Data Streams, you can choose between an **on\-demand** capacity mode and a **provisioned** capacity mode for your data streams\.   
+*Required*: No  
+*Type*: [StreamModeDetails](aws-properties-kinesis-stream-streammodedetails.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-kinesis-stream-tags"></a>
 An arbitrary set of tags \(key–value pairs\) to associate with the Kinesis stream\. For information about constraints for this property, see [Tag Restrictions](https://docs.aws.amazon.com/streams/latest/dev/tagging.html#tagging-restrictions) in the *Amazon Kinesis Developer Guide*\.   
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-kinesis-stream-return-values"></a>
+## Return values<a name="aws-resource-kinesis-stream-return-values"></a>
 
 ### Ref<a name="aws-resource-kinesis-stream-return-values-ref"></a>
 
@@ -92,6 +101,8 @@ For more information about using Fn::GetAtt, see [Fn::GetAtt](https://docs.aws.a
 The Amazon resource name \(ARN\) of the Kinesis stream, such as `arn:aws:kinesis:us-east-2:123456789012:stream/mystream`\.
 
 ## Examples<a name="aws-resource-kinesis-stream--examples"></a>
+
+
 
 ### Create a Stream<a name="aws-resource-kinesis-stream--examples--Create_a_Stream"></a>
 

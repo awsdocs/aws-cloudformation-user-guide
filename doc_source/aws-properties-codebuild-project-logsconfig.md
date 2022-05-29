@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CloudWatchLogs](#cfn-codebuild-project-logsconfig-cloudwatchlogs)" : [CloudWatchLogsConfig](aws-properties-codebuild-project-cloudwatchlogsconfig.md),
-  "[S3Logs](#cfn-codebuild-project-logsconfig-s3logs)" : [S3LogsConfig](aws-properties-codebuild-project-s3logsconfig.md)
+  "[CloudWatchLogs](#cfn-codebuild-project-logsconfig-cloudwatchlogs)" : CloudWatchLogsConfig,
+  "[S3Logs](#cfn-codebuild-project-logsconfig-s3logs)" : S3LogsConfig
 }
 ```
 
@@ -19,15 +19,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CloudWatchLogs](#cfn-codebuild-project-logsconfig-cloudwatchlogs): 
-    [CloudWatchLogsConfig](aws-properties-codebuild-project-cloudwatchlogsconfig.md)
+    CloudWatchLogsConfig
   [S3Logs](#cfn-codebuild-project-logsconfig-s3logs): 
-    [S3LogsConfig](aws-properties-codebuild-project-s3logsconfig.md)
+    S3LogsConfig
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-logsconfig-properties"></a>
 
 `CloudWatchLogs`  <a name="cfn-codebuild-project-logsconfig-cloudwatchlogs"></a>
- Information about Amazon CloudWatch Logs for a build project\. Amazon CloudWatch Logs are enabled by default\.   
+ Information about CloudWatch Logs for a build project\. CloudWatch Logs are enabled by default\.   
 *Required*: No  
 *Type*: [CloudWatchLogsConfig](aws-properties-codebuild-project-cloudwatchlogsconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -38,5 +38,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: [S3LogsConfig](aws-properties-codebuild-project-s3logsconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-codebuild-project-logsconfig--seealso"></a>
+## See also<a name="aws-properties-codebuild-project-logsconfig--seealso"></a>
 +  [ LogsConfig](https://docs.aws.amazon.com/codebuild/latest/APIReference/API_LogsConfig.html) in the *AWS CodeBuild API Reference* 

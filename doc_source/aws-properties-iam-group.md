@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[GroupName](#cfn-iam-group-groupname)" : String,
       "[ManagedPolicyArns](#cfn-iam-group-managepolicyarns)" : [ String, ... ],
       "[Path](#cfn-iam-group-path)" : String,
-      "[Policies](#cfn-iam-group-policies)" : [ [Policy](aws-properties-iam-policy-1.md), ... ]
+      "[Policies](#cfn-iam-group-policies)" : [ Policy, ... ]
     }
 }
 ```
@@ -32,7 +32,7 @@ Properties:
     - String
   [Path](#cfn-iam-group-path): String
   [Policies](#cfn-iam-group-policies): 
-    - [Policy](aws-properties-iam-policy-1.md)
+    - Policy
 ```
 
 ## Properties<a name="aws-properties-iam-group-properties"></a>
@@ -49,13 +49,13 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 
 `ManagedPolicyArns`  <a name="cfn-iam-group-managepolicyarns"></a>
 The Amazon Resource Name \(ARN\) of the IAM policy you want to attach\.  
-For more information about ARNs, see [Amazon Resource Names \(ARNs\) and AWS Service Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *AWS General Reference*\.  
+For more information about ARNs, see [Amazon Resource Names \(ARNs\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the * AWS General Reference*\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Path`  <a name="cfn-iam-group-path"></a>
- The path to the group\. For more information about paths, see [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
+ The path to the group\. For more information about paths, see [IAM identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) in the *IAM User Guide*\.  
 This parameter is optional\. If it is not included, it defaults to a slash \(/\)\.  
 This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of either a forward slash \(/\) by itself or a string that must begin and end with forward slashes\. In addition, it can contain any ASCII character from the \! \(`\u0021`\) through the DEL character \(`\u007F`\), including most punctuation characters, digits, and upper and lowercased letters\.  
 *Required*: No  
@@ -70,10 +70,10 @@ Adds or updates an inline policy document that is embedded in the specified IAM 
 The name of each inline policy for a role, user, or group must be unique\. If you don't choose unique names, updates to the IAM identity will fail\. 
 For information about limits on the number of inline policies that you can embed in a group, see [Limitations on IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*\.  
 *Required*: No  
-*Type*: List of [Policy](aws-properties-iam-policy-1.md)  
+*Type*: List of [Policy](aws-properties-iam-policy-2.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-iam-group-return-values"></a>
+## Return values<a name="aws-properties-iam-group-return-values"></a>
 
 ### Ref<a name="aws-properties-iam-group-return-values-ref"></a>
 
@@ -92,34 +92,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) for the specified `AWS::IAM::Group` resource\. For example: `arn:aws:iam::123456789012:group/mystack-mygroup-1DZETITOWEKVO`\.
 
-## Examples<a name="aws-properties-iam-group--examples"></a>
-
-### Group<a name="aws-properties-iam-group--examples--Group"></a>
-
-In this example, create a group named "MyGroup"\.
-
-#### JSON<a name="aws-properties-iam-group--examples--Group--json"></a>
-
-```
-{
-   "AWSTemplateFormatVersion": "2010-09-09",
-   "Resources": {
-      "MyGroup" : {
-         "Type" : "AWS::IAM::Group"
-      }      
-   }            
-}
-```
-
-#### YAML<a name="aws-properties-iam-group--examples--Group--yaml"></a>
-
-```
-AWSTemplateFormatVersion: '2010-09-09'
-Resources:
-  MyGroup:
-    Type: AWS::IAM::Group
-```
-
-## See Also<a name="aws-properties-iam-group--seealso"></a>
+## See also<a name="aws-properties-iam-group--seealso"></a>
 + To view `AWS::IAM::Group` template example snippets, see [Declaring an IAM Group Resource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-iam-group)\. 
 +  [CreateGroup](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateGroup.html) in the *AWS Identity and Access Management API Reference* 
+

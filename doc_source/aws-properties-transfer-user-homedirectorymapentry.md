@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-transfer-user-homedirectorymapentry-properties"></a>
 
 `Entry`  <a name="cfn-transfer-user-homedirectorymapentry-entry"></a>
-Represents an entry and a target for `HomeDirectoryMappings`\.  
+Represents an entry for `HomeDirectoryMappings`\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `1024`  
@@ -40,6 +40,6 @@ Represents the map target that is used in a `HomeDirectorymapEntry`\.
 *Pattern*: `^/.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-transfer-user-homedirectorymapentry--seealso"></a>
+## See also<a name="aws-properties-transfer-user-homedirectorymapentry--seealso"></a>
 
-[HomeDirectoryMapEntry](https://docs.aws.amazon.com/transfer/latest/userguide/API_HomeDirectoryMapEntry.html) in the *AWS Transfer for SFTP User Guide*\.
+[HomeDirectoryMapEntry](https://docs.aws.amazon.com/transfer/latest/userguide/API_HomeDirectoryMapEntry.html) in the *AWS Transfer Family User Guide*\.

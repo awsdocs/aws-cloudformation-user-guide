@@ -1,6 +1,6 @@
 # AWS::AppMesh::Route HttpRetryPolicy<a name="aws-properties-appmesh-route-httpretrypolicy"></a>
 
-An object that represents a retry policy\. Specify at least one value for at least one of the types of `RetryEvents`, a value for `maxRetries`, and a value for `perRetryTimeout`\.
+An object that represents a retry policy\. Specify at least one value for at least one of the types of `RetryEvents`, a value for `maxRetries`, and a value for `perRetryTimeout`\. Both `server-error` and `gateway-error` under `httpRetryEvents` include the Envoy `reset` policy\. For more information on the `reset` policy, see the [Envoy documentation](https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_filters/router_filter#x-envoy-retry-on)\.
 
 ## Syntax<a name="aws-properties-appmesh-route-httpretrypolicy-syntax"></a>
 
@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[HttpRetryEvents](#cfn-appmesh-route-httpretrypolicy-httpretryevents)" : [ String, ... ],
   "[MaxRetries](#cfn-appmesh-route-httpretrypolicy-maxretries)" : Integer,
-  "[PerRetryTimeout](#cfn-appmesh-route-httpretrypolicy-perretrytimeout)" : [Duration](aws-properties-appmesh-route-duration.md),
+  "[PerRetryTimeout](#cfn-appmesh-route-httpretrypolicy-perretrytimeout)" : Duration,
   "[TcpRetryEvents](#cfn-appmesh-route-httpretrypolicy-tcpretryevents)" : [ String, ... ]
 }
 ```
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
   [MaxRetries](#cfn-appmesh-route-httpretrypolicy-maxretries): Integer
   [PerRetryTimeout](#cfn-appmesh-route-httpretrypolicy-perretrytimeout): 
-    [Duration](aws-properties-appmesh-route-duration.md)
+    Duration
   [TcpRetryEvents](#cfn-appmesh-route-httpretrypolicy-tcpretryevents): 
     - String
 ```
@@ -39,6 +39,7 @@ Specify at least one of the following values\.
 + **stream\-error** – Retry on refused stream
 *Required*: No  
 *Type*: List of String  
+*Maximum*: `25`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxRetries`  <a name="cfn-appmesh-route-httpretrypolicy-maxretries"></a>
@@ -48,13 +49,14 @@ The maximum number of retry attempts\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PerRetryTimeout`  <a name="cfn-appmesh-route-httpretrypolicy-perretrytimeout"></a>
-An object that represents a duration of time\.  
+The timeout for each retry attempt\.  
 *Required*: Yes  
 *Type*: [Duration](aws-properties-appmesh-route-duration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TcpRetryEvents`  <a name="cfn-appmesh-route-httpretrypolicy-tcpretryevents"></a>
-Specify a valid value\.  
+Specify a valid value\. The event occurs before any processing of a request has started and is encountered when the upstream is temporarily or permanently unavailable\.  
 *Required*: No  
 *Type*: List of String  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

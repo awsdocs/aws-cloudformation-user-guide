@@ -54,7 +54,7 @@ An array of tag object\.
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-config-aggregationauthorization-return-values"></a>
+## Return values<a name="aws-resource-config-aggregationauthorization-return-values"></a>
 
 ### Ref<a name="aws-resource-config-aggregationauthorization-return-values-ref"></a>
 
@@ -62,7 +62,16 @@ An array of tag object\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-config-aggregationauthorization-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-config-aggregationauthorization-return-values-fn--getatt-fn--getatt"></a>
+
+`AggregationAuthorizationArn`  <a name="AggregationAuthorizationArn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the aggregation object\.
+
 ## Examples<a name="aws-resource-config-aggregationauthorization--examples"></a>
+
+
 
 ### Authorize Another Account<a name="aws-resource-config-aggregationauthorization--examples--Authorize_Another_Account"></a>
 
@@ -99,7 +108,7 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "Enable AWS Config",
+    "Description": "Enable Config",
     "Metadata": {
         "AWS::CloudFormation::Interface": {
             "ParameterGroups": [
@@ -131,7 +140,7 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
                     "default": "Aggregator account"
                 },
                 "AggregatorRegion": {
-                    "default": "Aggregator account"
+                    "default": "Aggregator region"
                 },
                 "SourceAccounts": {
                     "default": "Source accounts"
@@ -349,7 +358,7 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
             "Type": "AWS::Config::ConfigurationAggregator",
             "Condition": "CreateAggregator",
             "Properties": {
-                "Name": "default",
+                "Name": "name",
                 "AccountAggregationSources": [
                     {
                         "AccountIds": {
@@ -382,7 +391,7 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: Enable AWS Config
+Description: Enable Config
 
 Metadata:
   AWS::CloudFormation::Interface:
@@ -531,7 +540,7 @@ Resources:
     Type: AWS::Config::ConfigurationAggregator
     Condition: CreateAggregator
     Properties:
-    ConfigurationAggregatorName: default
+    ConfigurationAggregatorName: name
       AccountAggregationSources:
         - AccountIds: !Ref SourceAccounts
           AwsRegions: !Ref SourceRegions

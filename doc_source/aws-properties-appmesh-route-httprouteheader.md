@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Invert](#cfn-appmesh-route-httprouteheader-invert)" : Boolean,
-  "[Match](#cfn-appmesh-route-httprouteheader-match)" : [HeaderMatchMethod](aws-properties-appmesh-route-headermatchmethod.md),
+  "[Match](#cfn-appmesh-route-httprouteheader-match)" : HeaderMatchMethod,
   "[Name](#cfn-appmesh-route-httprouteheader-name)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Invert](#cfn-appmesh-route-httprouteheader-invert): Boolean
   [Match](#cfn-appmesh-route-httprouteheader-match): 
-    [HeaderMatchMethod](aws-properties-appmesh-route-headermatchmethod.md)
+    HeaderMatchMethod
   [Name](#cfn-appmesh-route-httprouteheader-name): String
 ```
 
@@ -43,4 +43,6 @@ The `HeaderMatchMethod` object\.
 A name for the HTTP header in the client request that will be matched on\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

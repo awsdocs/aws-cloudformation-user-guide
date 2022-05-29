@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool NumberAttributeConstraints<a name="aws-properties-cognito-userpool-numberattributeconstraints"></a>
 
-The minimum and maximum value of an attribute that is of the number data type\.
+The minimum and maximum values of an attribute that is of the number data type\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-numberattributeconstraints-syntax"></a>
 

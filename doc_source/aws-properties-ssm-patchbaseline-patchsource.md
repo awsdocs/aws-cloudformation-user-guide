@@ -32,9 +32,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Configuration`  <a name="cfn-ssm-patchbaseline-patchsource-configuration"></a>
 The value of the yum repo configuration\. For example:  
  `[main]`   
- `cachedir=/var/cache/yum/$basesearch$releasever`   
- `keepcache=0`   
- `debuglevel=2`   
+ `name=MyCustomRepository`   
+ `baseurl=https://my-custom-repository`   
+ `enabled=1`   
+For information about other options available for your yum repository configuration, see [dnf\.conf\(5\)](https://man7.org/linux/man-pages/man5/dnf.conf.5.html)\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

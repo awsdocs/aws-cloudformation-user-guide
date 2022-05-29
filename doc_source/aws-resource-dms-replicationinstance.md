@@ -24,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ReplicationInstanceClass](#cfn-dms-replicationinstance-replicationinstanceclass)" : String,
       "[ReplicationInstanceIdentifier](#cfn-dms-replicationinstance-replicationinstanceidentifier)" : String,
       "[ReplicationSubnetGroupIdentifier](#cfn-dms-replicationinstance-replicationsubnetgroupidentifier)" : String,
+      "[ResourceIdentifier](#cfn-dms-replicationinstance-resourceidentifier)" : String,
       "[Tags](#cfn-dms-replicationinstance-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VpcSecurityGroupIds](#cfn-dms-replicationinstance-vpcsecuritygroupids)" : [ String, ... ]
     }
@@ -47,6 +48,7 @@ Properties:
   [ReplicationInstanceClass](#cfn-dms-replicationinstance-replicationinstanceclass): String
   [ReplicationInstanceIdentifier](#cfn-dms-replicationinstance-replicationinstanceidentifier): String
   [ReplicationSubnetGroupIdentifier](#cfn-dms-replicationinstance-replicationsubnetgroupidentifier): String
+  [ResourceIdentifier](#cfn-dms-replicationinstance-resourceidentifier): String
   [Tags](#cfn-dms-replicationinstance-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VpcSecurityGroupIds](#cfn-dms-replicationinstance-vpcsecuritygroupids): 
@@ -77,13 +79,14 @@ Default: `true`
 
 `AvailabilityZone`  <a name="cfn-dms-replicationinstance-availabilityzone"></a>
 The Availability Zone that the replication instance will be created in\.  
-The default value is a random, system\-chosen Availability Zone in the endpoint's AWS Region, for example: `us-east-1d`   
+The default value is a random, system\-chosen Availability Zone in the endpoint's , for example: `us-east-1d`   
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineVersion`  <a name="cfn-dms-replicationinstance-engineversion"></a>
 The engine version number of the replication instance\.  
+If an engine version number is not specified when a replication instance is created, the default is the latest engine version available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -91,7 +94,7 @@ The engine version number of the replication instance\.
 `KmsKeyId`  <a name="cfn-dms-replicationinstance-kmskeyid"></a>
 An AWS KMS key identifier that is used to encrypt the data on the replication instance\.  
 If you don't specify a value for the `KmsKeyId` parameter, then AWS DMS uses your default encryption key\.  
-AWS KMS creates the default encryption key for your AWS account\. Your AWS account has a different default encryption key for each AWS Region\.  
+ AWS KMS creates the default encryption key for your AWS account\. Your AWS account has a different default encryption key for each AWS Region\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -119,8 +122,8 @@ Constraints: Minimum 30\-minute window\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ReplicationInstanceClass`  <a name="cfn-dms-replicationinstance-replicationinstanceclass"></a>
-The compute and memory capacity of the replication instance as specified by the replication instance class\.  
- Valid Values: `dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge `   
+The compute and memory capacity of the replication instance as defined for the specified replication instance class\. For example to specify the instance class dms\.c4\.large, set this parameter to `"dms.c4.large"`\.  
+For more information on the settings and capacities for the available replication instance classes, see [ Selecting the right AWS DMS replication instance for your migration](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_ReplicationInstance.html#CHAP_ReplicationInstance.InDepth)\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -128,7 +131,7 @@ The compute and memory capacity of the replication instance as specified by the 
 `ReplicationInstanceIdentifier`  <a name="cfn-dms-replicationinstance-replicationinstanceidentifier"></a>
 The replication instance identifier\. This parameter is stored as a lowercase string\.  
 Constraints:  
-+ Must contain from 1 to 63 alphanumeric characters or hyphens\.
++ Must contain 1\-63 alphanumeric characters or hyphens\.
 + First character must be a letter\.
 + Can't end with a hyphen or contain two consecutive hyphens\.
 Example: `myrepinstance`   
@@ -138,6 +141,12 @@ Example: `myrepinstance`
 
 `ReplicationSubnetGroupIdentifier`  <a name="cfn-dms-replicationinstance-replicationsubnetgroupidentifier"></a>
 A subnet group to associate with the replication instance\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ResourceIdentifier`  <a name="cfn-dms-replicationinstance-resourceidentifier"></a>
+A friendly name for the resource identifier at the end of the `EndpointArn` response parameter that is returned in the created `Endpoint` object\. The value for this parameter can have up to 31 characters\. It can contain only ASCII letters, digits, and hyphen \('\-'\)\. Also, it can't end with a hyphen or contain two consecutive hyphens, and can only begin with a letter, such as `Example-App-ARN1`\. For example, this value might result in the `EndpointArn` value `arn:aws:dms:eu-west-1:012345678901:rep:Example-App-ARN1`\. If you don't specify a `ResourceIdentifier` value, AWS DMS generates a default identifier value for the end of `EndpointArn`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -154,7 +163,7 @@ One or more tags to be assigned to the replication instance\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-dms-replicationinstance-return-values"></a>
+## Return values<a name="aws-resource-dms-replicationinstance-return-values"></a>
 
 ### Ref<a name="aws-resource-dms-replicationinstance-return-values-ref"></a>
 
@@ -177,6 +186,8 @@ One or more private IP addresses for the replication instance\.
 One or more public IP addresses for the replication instance\.
 
 ## Examples<a name="aws-resource-dms-replicationinstance--examples"></a>
+
+
 
 ### <a name="aws-resource-dms-replicationinstance--examples--"></a>
 
@@ -207,6 +218,7 @@ Resources:
     Type: "AWS::DMS::ReplicationInstance"
 ```
 
-## See Also<a name="aws-resource-dms-replicationinstance--seealso"></a>
+## See also<a name="aws-resource-dms-replicationinstance--seealso"></a>
 +  [CreateReplicationInstance](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationInstance.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 
+

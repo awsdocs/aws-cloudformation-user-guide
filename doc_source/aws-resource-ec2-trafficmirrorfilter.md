@@ -56,7 +56,7 @@ The tags to assign to a Traffic Mirror filter\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-trafficmirrorfilter-return-values"></a>
+## Return values<a name="aws-resource-ec2-trafficmirrorfilter-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-trafficmirrorfilter-return-values-ref"></a>
 
@@ -66,11 +66,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-trafficmirrorfilter--examples"></a>
 
-### Create a Traffic Mirror Filter<a name="aws-resource-ec2-trafficmirrorfilter--examples--Create_a_Traffic_Mirror_Filter"></a>
+### Create a traffic mirror filter<a name="aws-resource-ec2-trafficmirrorfilter--examples--Create_a_traffic_mirror_filter"></a>
 
 This is a filter that you can use when you create a traffic mirror session\. This filter also configures mirroring of Amazon DNS network services\.
 
-#### JSON<a name="aws-resource-ec2-trafficmirrorfilter--examples--Create_a_Traffic_Mirror_Filter--json"></a>
+#### JSON<a name="aws-resource-ec2-trafficmirrorfilter--examples--Create_a_traffic_mirror_filter--json"></a>
 
 ```
 {
@@ -92,7 +92,7 @@ This is a filter that you can use when you create a traffic mirror session\. Thi
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-trafficmirrorfilter--examples--Create_a_Traffic_Mirror_Filter--yaml"></a>
+#### YAML<a name="aws-resource-ec2-trafficmirrorfilter--examples--Create_a_traffic_mirror_filter--yaml"></a>
 
 ```
 SampleTrafficMirrorFilter:
@@ -106,6 +106,7 @@ SampleTrafficMirrorFilter:
       Value: "SampleFilter"
 ```
 
-## See Also<a name="aws-resource-ec2-trafficmirrorfilter--seealso"></a>
-+ [Traffic Mirror Filters and Filter Rules](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-how-it-works.html#traffic-mirroring-filters) in *Traffic Mirroring*
+## See also<a name="aws-resource-ec2-trafficmirrorfilter--seealso"></a>
++ [Traffic mirror filters and filter rules](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-filters.html) in *Traffic Mirroring*
 + [CreateTrafficMirrorFilter](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTrafficMirrorFilter.html) in the *Amazon EC2 API Reference*
+

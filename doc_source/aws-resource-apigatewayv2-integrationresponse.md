@@ -84,7 +84,7 @@ The template selection expression for the integration response\. Supported only 
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigatewayv2-integrationresponse-return-values"></a>
+## Return values<a name="aws-resource-apigatewayv2-integrationresponse-return-values"></a>
 
 ### Ref<a name="aws-resource-apigatewayv2-integrationresponse-return-values-ref"></a>
 
@@ -93,6 +93,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-apigatewayv2-integrationresponse--examples"></a>
+
+
 
 ### Integration response creation example<a name="aws-resource-apigatewayv2-integrationresponse--examples--Integration_response_creation_example"></a>
 
@@ -128,5 +130,6 @@ IntegrationResponse:
     ApiId: !Ref MyApi
 ```
 
-## See Also<a name="aws-resource-apigatewayv2-integrationresponse--seealso"></a>
+## See also<a name="aws-resource-apigatewayv2-integrationresponse--seealso"></a>
 + [CreateIntegrationResponse](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-integrations-integrationid-integrationresponses.html#CreateIntegrationResponse) in the *Amazon API Gateway Version 2 API Reference*
+

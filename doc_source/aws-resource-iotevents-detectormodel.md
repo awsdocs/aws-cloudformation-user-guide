@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoTEvents::DetectorModel",
   "Properties" : {
-      "[DetectorModelDefinition](#cfn-iotevents-detectormodel-detectormodeldefinition)" : [DetectorModelDefinition](aws-properties-iotevents-detectormodel-detectormodeldefinition.md),
+      "[DetectorModelDefinition](#cfn-iotevents-detectormodel-detectormodeldefinition)" : DetectorModelDefinition,
       "[DetectorModelDescription](#cfn-iotevents-detectormodel-detectormodeldescription)" : String,
       "[DetectorModelName](#cfn-iotevents-detectormodel-detectormodelname)" : String,
       "[EvaluationMethod](#cfn-iotevents-detectormodel-evaluationmethod)" : String,
@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IoTEvents::DetectorModel
 Properties: 
   [DetectorModelDefinition](#cfn-iotevents-detectormodel-detectormodeldefinition): 
-    [DetectorModelDefinition](aws-properties-iotevents-detectormodel-detectormodeldefinition.md)
+    DetectorModelDefinition
   [DetectorModelDescription](#cfn-iotevents-detectormodel-detectormodeldescription): String
   [DetectorModelName](#cfn-iotevents-detectormodel-detectormodelname): String
   [EvaluationMethod](#cfn-iotevents-detectormodel-evaluationmethod): String
@@ -49,7 +49,7 @@ Properties:
 
 `DetectorModelDefinition`  <a name="cfn-iotevents-detectormodel-detectormodeldefinition"></a>
 Information that defines how a detector operates\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [DetectorModelDefinition](aws-properties-iotevents-detectormodel-detectormodeldefinition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -73,11 +73,12 @@ The name of the detector model\.
 Information about the order in which events are evaluated and how actions are executed\.   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `BATCH | SERIAL`  
+*Allowed values*: `BATCH | SERIAL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Key`  <a name="cfn-iotevents-detectormodel-key"></a>
-The input attribute key used to identify a device or system to create a detector \(an instance of the detector model\) and then to route each input received to the appropriate detector \(instance\)\. This parameter uses a JSON\-path expression in the message payload of each input to specify the attribute\-value pair that is used to identify the device associated with the input\.  
+The value used to identify a detector instance\. When a device or system sends input, a new detector instance with a unique key value is created\. AWS IoT Events can continue to route input to its corresponding detector instance based on this identifying information\.   
+This parameter uses a JSON\-path expression to select the attribute\-value pair in the message payload that is used for identification\. To route the message to the correct detector instance, the device must send a message payload that contains the same attribute\-value\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -87,7 +88,7 @@ The input attribute key used to identify a device or system to create a detector
 
 `RoleArn`  <a name="cfn-iotevents-detectormodel-rolearn"></a>
 The ARN of the role that grants permission to AWS IoT Events to perform its operations\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
@@ -100,7 +101,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iotevents-detectormodel-return-values"></a>
+## Return values<a name="aws-resource-iotevents-detectormodel-return-values"></a>
 
 ### Ref<a name="aws-resource-iotevents-detectormodel-return-values-ref"></a>
 
@@ -113,6 +114,8 @@ For the AWS IoT Events detector model `myDetectorModel`, `Ref` returns the name 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-iotevents-detectormodel--examples"></a>
+
+
 
 ### Simple Detector Model<a name="aws-resource-iotevents-detectormodel--examples--Simple_Detector_Model"></a>
 
@@ -446,6 +449,6 @@ Resources:
                         TimerName: "myTimer"
 ```
 
-## See Also<a name="aws-resource-iotevents-detectormodel--seealso"></a>
+## See also<a name="aws-resource-iotevents-detectormodel--seealso"></a>
 +  [ How to Use AWS IoT Events](https://docs.aws.amazon.com/iotevents/latest/developerguide/how-to-use-iotevents.html) in the *AWS IoT Events Developer Guide*
 +  [ CreateDetectorModel](https://docs.aws.amazon.com/iotevents/latest/apireference/API_CreateDetectorModel.html) in the *AWS IoT Events API Reference*

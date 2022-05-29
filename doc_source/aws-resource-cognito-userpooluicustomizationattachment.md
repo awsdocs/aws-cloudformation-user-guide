@@ -62,7 +62,7 @@ The user pool ID for the user pool\.
 *Pattern*: `[\w-]+_[0-9a-zA-Z]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-cognito-userpooluicustomizationattachment-return-values"></a>
+## Return values<a name="aws-resource-cognito-userpooluicustomizationattachment-return-values"></a>
 
 ### Ref<a name="aws-resource-cognito-userpooluicustomizationattachment-return-values-ref"></a>
 
@@ -75,6 +75,8 @@ For the Amazon Cognito user pool domain `UserPoolUICustomizationAttachment-us-ea
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-cognito-userpooluicustomizationattachment--examples"></a>
+
+
 
 ### Creating a new UI customization attachment for a user pool<a name="aws-resource-cognito-userpooluicustomizationattachment--examples--Creating_a_new_UI_customization_attachment_for_a_user_pool"></a>
 

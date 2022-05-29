@@ -59,7 +59,7 @@ The repository's SSH key\. For more information, see [Using Git Repository SSH K
 The repository type\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `archive | git | s3 | svn`  
+*Allowed values*: `archive | git | s3 | svn`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Url`  <a name="cfn-opsworks-custcookbooksource-url"></a>

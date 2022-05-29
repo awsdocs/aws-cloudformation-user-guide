@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cognito-userpool-invitemessagetemplate-properties"></a>
 
 `EmailMessage`  <a name="cfn-cognito-userpool-invitemessagetemplate-emailmessage"></a>
-The message template for email messages\.  
+The message template for email messages\. EmailMessage is allowed only if [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is DEVELOPER\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `6`  
@@ -38,7 +38,7 @@ The message template for email messages\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailSubject`  <a name="cfn-cognito-userpool-invitemessagetemplate-emailsubject"></a>
-The subject line for email messages\.  
+The subject line for email messages\. EmailSubject is allowed only if [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is DEVELOPER\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

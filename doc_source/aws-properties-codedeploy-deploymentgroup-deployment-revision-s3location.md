@@ -1,6 +1,6 @@
 # AWS::CodeDeploy::DeploymentGroup S3Location<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location"></a>
 
- `S3Location` is a property of the [ CodeDeploy DeploymentGroup Revision ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html) property that specifies the location of an application revision that is stored in Amazon Simple Storage Service \(S3\)\. 
+ `S3Location` is a property of the [ CodeDeploy DeploymentGroup Revision ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html) property that specifies the location of an application revision that is stored in Amazon Simple Storage Service \(Amazon S3\)\. 
 
 ## Syntax<a name="aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location-syntax"></a>
 
@@ -45,7 +45,7 @@ The file type of the application revision\. Must be one of the following:
 + zip: A zip archive file\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `JSON | tar | tgz | YAML | zip`  
+*Allowed values*: `JSON | tar | tgz | YAML | zip`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ETag`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-etag"></a>

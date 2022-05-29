@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Listeners](#cfn-appmesh-virtualrouter-virtualrouterspec-listeners)" : [ [VirtualRouterListener](aws-properties-appmesh-virtualrouter-virtualrouterlistener.md), ... ]
+  "[Listeners](#cfn-appmesh-virtualrouter-virtualrouterspec-listeners)" : [ VirtualRouterListener, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Listeners](#cfn-appmesh-virtualrouter-virtualrouterspec-listeners): 
-    - [VirtualRouterListener](aws-properties-appmesh-virtualrouter-virtualrouterlistener.md)
+    - VirtualRouterListener
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualrouter-virtualrouterspec-properties"></a>
@@ -27,4 +27,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The listeners that the virtual router is expected to receive inbound traffic from\. You can specify one listener\.  
 *Required*: Yes  
 *Type*: List of [VirtualRouterListener](aws-properties-appmesh-virtualrouter-virtualrouterlistener.md)  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -46,5 +46,6 @@ Whether the canary deployment uses the stage cache\.
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-apigateway-deployment-deploymentcanarysettings--seealso"></a>
+## See also<a name="aws-properties-apigateway-deployment-deploymentcanarysettings--seealso"></a>
 + [Deployment](https://docs.aws.amazon.com/apigateway/api-reference/resource/deployment/) in the *Amazon API Gateway REST API Reference*
+

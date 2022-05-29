@@ -34,11 +34,11 @@ Properties:
 ## Properties<a name="aws-resource-ec2-host-properties"></a>
 
 `AutoPlacement`  <a name="cfn-ec2-host-autoplacement"></a>
-Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID\. For more information, see [ Understanding Instance Placement and Host Affinity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding) in the *Amazon EC2 User Guide for Linux Instances*\.  
+Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID\. For more information, see [ Understanding auto\-placement and affinity](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/how-dedicated-hosts-work.html#dedicated-hosts-understanding) in the *Amazon EC2 User Guide*\.  
 Default: `on`   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `off | on`  
+*Allowed values*: `off | on`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailabilityZone`  <a name="cfn-ec2-host-availabilityzone"></a>
@@ -48,21 +48,20 @@ The Availability Zone in which to allocate the Dedicated Host\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HostRecovery`  <a name="cfn-ec2-host-hostrecovery"></a>
-Indicates whether to enable or disable host recovery for the Dedicated Host\. Host recovery is disabled by default\. For more information, see [ Host Recovery](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-recovery.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+Indicates whether to enable or disable host recovery for the Dedicated Host\. Host recovery is disabled by default\. For more information, see [ Host recovery](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-recovery.html) in the *Amazon EC2 User Guide*\.  
 Default: `off`   
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `off | on`  
+*Allowed values*: `off | on`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceType`  <a name="cfn-ec2-host-instancetype"></a>
 Specifies the instance type to be supported by the Dedicated Hosts\. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only\.  
-If you want the Dedicated Hosts to support multiple instance types in a specific instance family, omit this parameter and specify **InstanceFamily** instead\. You cannot specify **InstanceType** and **InstanceFamily** in the same request\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-host-return-values"></a>
+## Return values<a name="aws-resource-ec2-host-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-host-return-values-ref"></a>
 
@@ -70,13 +69,24 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-ec2-host-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-ec2-host-return-values-fn--getatt-fn--getatt"></a>
+
+`HostId`  <a name="HostId-fn::getatt"></a>
+The ID of the host\.
+
 ## Examples<a name="aws-resource-ec2-host--examples"></a>
 
-### Allocating a Dedicated Host<a name="aws-resource-ec2-host--examples--Allocating_a_Dedicated_Host"></a>
+### Allocate a Dedicated Host<a name="aws-resource-ec2-host--examples--Allocate_a_Dedicated_Host"></a>
 
 The following example allocates a dedicated host for `c3.large` instances in the `us-east-1a` Availability Zone\.
 
-#### JSON<a name="aws-resource-ec2-host--examples--Allocating_a_Dedicated_Host--json"></a>
+#### JSON<a name="aws-resource-ec2-host--examples--Allocate_a_Dedicated_Host--json"></a>
 
 ```
 "Host" : {
@@ -89,7 +99,7 @@ The following example allocates a dedicated host for `c3.large` instances in the
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-host--examples--Allocating_a_Dedicated_Host--yaml"></a>
+#### YAML<a name="aws-resource-ec2-host--examples--Allocate_a_Dedicated_Host--yaml"></a>
 
 ```
 Host:

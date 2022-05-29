@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Bucket](#cfn-codebuild-reportgroup-s3reportexportconfig-bucket)" : String,
+  "[BucketOwner](#cfn-codebuild-reportgroup-s3reportexportconfig-bucketowner)" : String,
   "[EncryptionDisabled](#cfn-codebuild-reportgroup-s3reportexportconfig-encryptiondisabled)" : Boolean,
   "[EncryptionKey](#cfn-codebuild-reportgroup-s3reportexportconfig-encryptionkey)" : String,
   "[Packaging](#cfn-codebuild-reportgroup-s3reportexportconfig-packaging)" : String,
@@ -22,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Bucket](#cfn-codebuild-reportgroup-s3reportexportconfig-bucket): String
+  [BucketOwner](#cfn-codebuild-reportgroup-s3reportexportconfig-bucketowner): String
   [EncryptionDisabled](#cfn-codebuild-reportgroup-s3reportexportconfig-encryptiondisabled): Boolean
   [EncryptionKey](#cfn-codebuild-reportgroup-s3reportexportconfig-encryptionkey): String
   [Packaging](#cfn-codebuild-reportgroup-s3reportexportconfig-packaging): String
@@ -35,6 +37,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`BucketOwner`  <a name="cfn-codebuild-reportgroup-s3reportexportconfig-bucketowner"></a>
+The AWS account identifier of the owner of the Amazon S3 bucket\. This allows report data to be exported to an Amazon S3 bucket that is owned by an account other than the account running the build\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncryptionDisabled`  <a name="cfn-codebuild-reportgroup-s3reportexportconfig-encryptiondisabled"></a>
@@ -52,11 +60,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Packaging`  <a name="cfn-codebuild-reportgroup-s3reportexportconfig-packaging"></a>
  The type of build output artifact to create\. Valid values include:   
-+  `NONE`: AWS CodeBuild creates the raw data in the output bucket\. This is the default if packaging is not specified\. 
-+  `ZIP`: AWS CodeBuild creates a ZIP file with the raw data in the output bucket\. 
++  `NONE`: CodeBuild creates the raw data in the output bucket\. This is the default if packaging is not specified\. 
++  `ZIP`: CodeBuild creates a ZIP file with the raw data in the output bucket\. 
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `NONE | ZIP`  
+*Allowed values*: `NONE | ZIP`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Path`  <a name="cfn-codebuild-reportgroup-s3reportexportconfig-path"></a>

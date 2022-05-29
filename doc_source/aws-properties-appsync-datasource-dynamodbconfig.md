@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AwsRegion](#cfn-appsync-datasource-dynamodbconfig-awsregion)" : String,
-  "[DeltaSyncConfig](#cfn-appsync-datasource-dynamodbconfig-deltasyncconfig)" : [DeltaSyncConfig](aws-properties-appsync-datasource-deltasyncconfig.md),
+  "[DeltaSyncConfig](#cfn-appsync-datasource-dynamodbconfig-deltasyncconfig)" : DeltaSyncConfig,
   "[TableName](#cfn-appsync-datasource-dynamodbconfig-tablename)" : String,
   "[UseCallerCredentials](#cfn-appsync-datasource-dynamodbconfig-usecallercredentials)" : Boolean,
   "[Versioned](#cfn-appsync-datasource-dynamodbconfig-versioned)" : Boolean
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AwsRegion](#cfn-appsync-datasource-dynamodbconfig-awsregion): String
   [DeltaSyncConfig](#cfn-appsync-datasource-dynamodbconfig-deltasyncconfig): 
-    [DeltaSyncConfig](aws-properties-appsync-datasource-deltasyncconfig.md)
+    DeltaSyncConfig
   [TableName](#cfn-appsync-datasource-dynamodbconfig-tablename): String
   [UseCallerCredentials](#cfn-appsync-datasource-dynamodbconfig-usecallercredentials): Boolean
   [Versioned](#cfn-appsync-datasource-dynamodbconfig-versioned): Boolean
@@ -52,7 +52,7 @@ The table name\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UseCallerCredentials`  <a name="cfn-appsync-datasource-dynamodbconfig-usecallercredentials"></a>
-Set to `TRUE` to use AWS IAM with this data source\.  
+Set to `TRUE` to use AWS Identity and Access Management with this data source\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
