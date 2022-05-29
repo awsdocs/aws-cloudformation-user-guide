@@ -3,19 +3,23 @@
 The `AWS::RDS::DBInstance` resource creates an Amazon RDS DB instance\.
 
 **Important**  
-If a DB instance is deleted or replaced during an update, AWS CloudFormation deletes all automated snapshots\. However, it retains manual DB snapshots\. During an update that requires replacement, you can apply a stack policy to prevent DB instances from being replaced\. For more information, see [Prevent Updates to Stack Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/protect-stack-resources.html)\.
+If a DB instance is deleted or replaced during an update, AWS CloudFormation deletes all automated snapshots by default and it retains manual DB snapshots\. You can use [DeleteAutomatedBackups](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-deleteautomatedbackups) property to determine whether the automated backups would be deleted along with the DB instance deletion\. On the other hand, during an update that requires replacement, you can apply a stack policy to prevent DB instances from being replaced\. For more information, see [Prevent Updates to Stack Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/protect-stack-resources.html)\.
 
 **Updating DB Instances**
 
 When properties labeled "*Update requires:* [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)" are updated, AWS CloudFormation first creates a replacement DB instance, then changes references from other dependent resources to point to the replacement DB instance, and finally deletes the old DB instance\.
 
 **Important**  
-We highly recommend that you take a snapshot of the database before updating the stack\. If you don't, you lose the data when AWS CloudFormation replaces your DB instance\. To preserve your data, perform the following procedure:  
+1. We highly recommend that you take a snapshot of the database before updating the stack\. If you don't, you lose the data when AWS CloudFormation replaces your DB instance\. To preserve your data, perform the following procedure:  
 Deactivate any applications that are using the DB instance so that there's no activity on the DB instance\.
 Create a snapshot of the DB instance\. For more information about creating DB snapshots, see [Creating a DB snapshot](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CreateSnapshot.html)\.
 If you want to restore your instance using a DB snapshot, modify the updated template with your DB instance changes and add the `DBSnapshotIdentifier` property with the ID of the DB snapshot that you want to use\.  
 After you restore a DB instance with a `DBSnapshotIdentifier` property, you must specify the same `DBSnapshotIdentifier` property for any future updates to the DB instance\. When you specify this property for an update, the DB instance is not restored from the DB snapshot again, and the data in the database is not changed\. However, if you don't specify the `DBSnapshotIdentifier` property, an empty DB instance is created, and the original DB instance is deleted\. If you specify a property that is different from the previous snapshot restore property, the DB instance is restored from the specified `DBSnapshotIdentifier` property, and the original DB instance is deleted\.
 Update the stack\.
+
+1. To define whether the automated backups of the deleting DB instance being retained, please apply [DeleteAutomatedBackups](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-deleteautomatedbackups) property\.
+
+1. Please do not forget to apply [UpdateReplacePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatereplacepolicy.html) to AWS::RDS::DBInstance for explicityly defining "delete", "snapshot" or "retain" behavior when the old DB instances being deleted\.
 
 For more information about updating other properties of this resource, see ` [ModifyDBInstance](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBInstance.html)`\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)\.
 
@@ -27,7 +31,7 @@ You can set a deletion policy for your DB instance to control how AWS CloudForma
 
 1.  For `AWS::RDS::DBInstance` resources that do specify the `DBClusterIdentifier` property, AWS CloudFormation deletes the DB instance\.
 
- For more information, see [DeletionPolicy Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)\.
+For more information, see [DeletionPolicy Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)\. When applying DeletionPolicy, we strongly recommend that you also apply [UpdateReplacePolicy Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatereplacepolicy.html) to ensure that your expected behavior are met when resources are "deleted" or old resources are deleted due to replacement update.
 
 ## Syntax<a name="aws-properties-rds-database-instance-syntax"></a>
 
