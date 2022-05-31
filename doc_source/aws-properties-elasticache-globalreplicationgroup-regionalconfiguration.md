@@ -34,7 +34,7 @@ The name of the secondary cluster
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplicationGroupRegion`  <a name="cfn-elasticache-globalreplicationgroup-regionalconfiguration-replicationgroupregion"></a>
-The AWS region where the cluster is stored  
+The Amazon region where the cluster is stored  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

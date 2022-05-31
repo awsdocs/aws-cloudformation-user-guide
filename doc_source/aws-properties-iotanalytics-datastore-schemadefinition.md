@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Columns`  <a name="cfn-iotanalytics-datastore-schemadefinition-columns"></a>
 Specifies one or more columns that store your data\.  
-Each schema can have up to 100 columns\. Each column can have up to 100 nested types  
+Each schema can have up to 100 columns\. Each column can have up to 100 nested types\.  
 *Required*: No  
 *Type*: List of [Column](aws-properties-iotanalytics-datastore-column.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

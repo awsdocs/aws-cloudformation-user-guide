@@ -1,6 +1,6 @@
 # AWS::GameLift::MatchmakingConfiguration GameProperty<a name="aws-properties-gamelift-matchmakingconfiguration-gameproperty"></a>
 
-A set of key\-value pairs that contain information about a game session\. When included in a game session request, these properties communicate details to be used when setting up the new game session\. For example, a property might specify a game mode, level, or map\. Game properties are passed to the game server process when initiating a new game session\. 
+Set of key\-value pairs that contain information about a game session\. When included in a game session request, these properties communicate details to be used when setting up the new game session\. For example, a game property might specify a game mode, level, or map\. Game properties are passed to the game server process when initiating a new game session\. For more information, see the [ GameLift Developer Guide](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-client-api.html#gamelift-sdk-client-api-create)\.
 
 ## Syntax<a name="aws-properties-gamelift-matchmakingconfiguration-gameproperty-syntax"></a>
 
@@ -39,7 +39,7 @@ The game property value\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-gamelift-matchmakingconfiguration-gameproperty--seealso"></a>
-+ [ Create GameLift resources using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++ [ Create GameLift resources using Amazon CloudFront](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 +  [Design a FlexMatch matchmaker](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-configuration.html) in the *Amazon GameLift Developer Guide* 
 +  [GameProperty](https://docs.aws.amazon.com/gamelift/latest/apireference/API_GameProperty.html) in the *Amazon GameLift API Reference* 
 

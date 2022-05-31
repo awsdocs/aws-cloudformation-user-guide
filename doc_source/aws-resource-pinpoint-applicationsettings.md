@@ -45,7 +45,7 @@ The unique identifier for the Amazon Pinpoint application\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CampaignHook`  <a name="cfn-pinpoint-applicationsettings-campaignhook"></a>
-The settings for the AWS Lambda function to use by default as a code hook for campaigns in the application\. To override these settings for a specific campaign, use the Campaign resource to define custom Lambda function settings for the campaign\.  
+The settings for the Lambda function to use by default as a code hook for campaigns in the application\. To override these settings for a specific campaign, use the Campaign resource to define custom Lambda function settings for the campaign\.  
 *Required*: No  
 *Type*: [CampaignHook](aws-properties-pinpoint-applicationsettings-campaignhook.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

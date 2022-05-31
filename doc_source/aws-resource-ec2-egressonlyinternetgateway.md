@@ -37,9 +37,20 @@ The ID of the VPC for which to create the egress\-only internet gateway\.
 
 ### Ref<a name="aws-resource-ec2-egressonlyinternetgateway-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the egress\-only Internet gateway \(the physical resource ID\)\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the egress\-only internet gateway \(the physical resource ID\)\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-ec2-egressonlyinternetgateway-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-ec2-egressonlyinternetgateway-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+The ID of the egress\-only internet gateway\.
 
 ## Examples<a name="aws-resource-ec2-egressonlyinternetgateway--examples"></a>
 
@@ -74,5 +85,5 @@ myEgressOnlyInternetGateway:
 ```
 
 ## See also<a name="aws-resource-ec2-egressonlyinternetgateway--seealso"></a>
-+  [CreateEgressOnlyInternetGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateEgressOnlyInternetGateway.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [CreateEgressOnlyInternetGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateEgressOnlyInternetGateway.html) in the *Amazon EC2 API Reference* 
 

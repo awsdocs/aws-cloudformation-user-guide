@@ -89,7 +89,7 @@ The Amazon Resource Name \(ARN\) of the dimension\.
 ```
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "AWS IoT Dimension Sample Template",
+  "Description": "Amazon Web Services IoT Dimension Sample Template",
   "Resources": {
     "TopicFilterForAuthMessagesDimension": {
       "Type": "AWS::IoT::Dimension",
@@ -115,7 +115,7 @@ The Amazon Resource Name \(ARN\) of the dimension\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: AWS IoT Dimension Sample Template
+Description: Amazon Web Services IoT Dimension Sample Template
 Resources:
   TopicFilterForAuthMessagesDimension:
     Type: 'AWS::IoT::Dimension'

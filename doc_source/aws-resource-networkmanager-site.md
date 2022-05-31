@@ -37,15 +37,21 @@ Properties:
 
 `Description`  <a name="cfn-networkmanager-site-description"></a>
 A description of your site\.  
-Length Constraints: Maximum length of 256 characters\.  
+Constraints: Maximum length of 256 characters\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `256`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalNetworkId`  <a name="cfn-networkmanager-site-globalnetworkid"></a>
 The ID of the global network\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `50`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Location`  <a name="cfn-networkmanager-site-location"></a>

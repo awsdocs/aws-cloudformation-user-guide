@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters-properties"></a>
 
 `DocumentVersion`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion"></a>
-The version of an Automation document to use during task execution\.  
+The version of an Automation runbook to use during task execution\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `([$]LATEST|[$]DEFAULT|^[1-9][0-9]*$)`  

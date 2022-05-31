@@ -5,7 +5,7 @@
 **Note**  
 After you create a core definition version that contains the core you want to deploy, you must add it to your group version\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)\.
 
-<a name="aws-properties-greengrass-coredefinition-coredefinitionversion-inheritance"></a> In an AWS CloudFormation template, `CoreDefinitionVersion` is the property type of the `InitialVersion` property in the [ `AWS::Greengrass::CoreDefinition` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html) resource\.
+<a name="aws-properties-greengrass-coredefinition-coredefinitionversion-inheritance"></a> In an AWS CloudFormation template, `CoreDefinitionVersion` is the property type of the `InitialVersion` property in the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html) resource\.
 
 ## Syntax<a name="aws-properties-greengrass-coredefinition-coredefinitionversion-syntax"></a>
 

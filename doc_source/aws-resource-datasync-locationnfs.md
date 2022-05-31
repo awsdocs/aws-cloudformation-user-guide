@@ -42,14 +42,14 @@ Properties:
 The NFS mount options that DataSync can use to mount your NFS share\.  
 *Required*: No  
 *Type*: [MountOptions](aws-properties-datasync-locationnfs-mountoptions.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OnPremConfig`  <a name="cfn-datasync-locationnfs-onpremconfig"></a>
 Contains a list of Amazon Resource Names \(ARNs\) of agents that are used to connect to an NFS server\.   
 If you are copying data to or from your AWS Snowcone device, see [NFS Server on AWS Snowcone](https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone) for more information\.  
 *Required*: Yes  
 *Type*: [OnPremConfig](aws-properties-datasync-locationnfs-onpremconfig.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerHostname`  <a name="cfn-datasync-locationnfs-serverhostname"></a>
 The name of the NFS server\. This value is the IP address or Domain Name Service \(DNS\) name of the NFS server\. An agent that is installed on\-premises uses this host name to mount the NFS server in a network\.   
@@ -71,7 +71,7 @@ For information about NFS export configuration, see [18\.7\. The /etc/exports Co
 *Type*: String  
 *Maximum*: `4096`  
 *Pattern*: `^[a-zA-Z0-9_\-\+\./\(\)\p{Zs}]+$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-datasync-locationnfs-tags"></a>
 The key\-value pair that represents the tag that you want to add to the location\. The value can be an empty string\. We recommend using tags to name your resources\.  
@@ -99,25 +99,25 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-datasync-locationnfs-return-values-fn--getatt-fn--getatt"></a>
 
 `LocationArn`  <a name="LocationArn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the source NFS file system location that is specified\.
+The Amazon Resource Name \(ARN\) of the specified source NFS file system location\.
 
 `LocationUri`  <a name="LocationUri-fn::getatt"></a>
-The URL of the source NFS location that is specified\.
+The URI of the specified source NFS location\.
 
 ## Examples<a name="aws-resource-datasync-locationnfs--examples"></a>
 
 
 
-### NFS location for DataSync<a name="aws-resource-datasync-locationnfs--examples--NFS_location_for_DataSync"></a>
+### Create a NFS location for DataSync<a name="aws-resource-datasync-locationnfs--examples--Create_a_NFS_location_for_DataSync"></a>
 
 The following example specifies an NFS location for DataSync, using a source and destination location\. In this example, the server hostname is `MyServer@example.com`, using NFS version 4\.0, in the subdirectory `/MySubdirectory`\. 
 
-#### JSON<a name="aws-resource-datasync-locationnfs--examples--NFS_location_for_DataSync--json"></a>
+#### JSON<a name="aws-resource-datasync-locationnfs--examples--Create_a_NFS_location_for_DataSync--json"></a>
 
 ```
 {
 "AWSTemplateFormatVersion": "2010-09-09",
-"Description": "Specifies an FSxWindows location for DataSync",
+"Description": "Specifies an NFS location for DataSync",
 "Resources": 
   "LocationNFS": {
     "Type": "AWS::DataSync::LocationNFS",
@@ -137,7 +137,7 @@ The following example specifies an NFS location for DataSync, using a source and
 }
 ```
 
-#### YAML<a name="aws-resource-datasync-locationnfs--examples--NFS_location_for_DataSync--yaml"></a>
+#### YAML<a name="aws-resource-datasync-locationnfs--examples--Create_a_NFS_location_for_DataSync--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09

@@ -28,4 +28,4 @@ One or more target groups\.
 *Required*: Yes  
 *Type*: List of [TargetGroup](aws-properties-ec2-spotfleet-targetgroup.md)  
 *Maximum*: `5`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

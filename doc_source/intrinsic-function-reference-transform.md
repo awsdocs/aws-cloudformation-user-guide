@@ -42,7 +42,7 @@ Syntax for the full function name:
 Fn::Transform:
   Name : macro name
   Parameters :
-          Key : value
+    Key : value
 ```
 
 Syntax for the short form:
@@ -73,22 +73,25 @@ The following example calls the `AWS::Include` transform, specifying that the lo
 ### JSON<a name="intrinsic-function-reference-transform-example-1.json"></a>
 
 ```
-1. {
-2.    "Fn::Transform" : {
-3.        "Name" : "AWS::Include",
-4.        "Parameters" : {
-5.            "Location" : { "Ref" : "InputValue" }
-6.         }
-7.     }
-8. }
+ 1. {
+ 2.     "Fn::Transform": {
+ 3.         "Name": "AWS::Include",
+ 4.         "Parameters": {
+ 5.             "Location": {
+ 6.                 "Ref": "InputValue"
+ 7.             }
+ 8.         }
+ 9.     }
+10. }
 ```
 
 ### YAML<a name="intrinsic-function-reference-transform-example-1.yaml"></a>
 
 ```
 1. 'Fn::Transform':
-2.     Name: 'AWS::Include'
-3.     Parameters: {Location: {Ref: InputValue}}
+2.   Name: 'AWS::Include'
+3.   Parameters:
+4.     Location: !Ref InputValue
 ```
 
 The following example calls the `AWS::Include` transform, specifying that the location to retrieve a template snippet from is located in the `RegionMap` mapping, under the key `us-east-1` and nested key `s3Location`\.
@@ -96,24 +99,36 @@ The following example calls the `AWS::Include` transform, specifying that the lo
 ### JSON<a name="intrinsic-function-reference-transform-example-2.json"></a>
 
 ```
-1. {
-2.    "Fn::Transform" : {
-3.        "Name" : "AWS::Include",
-4.        "Parameters" : {
-5.            "Location" : {"Fn::FindInMap" : ["RegionMap", "us-east-1", "s3Location"] }
-6.         }
-7.     }
-8. }
+ 1. {
+ 2.     "Fn::Transform": {
+ 3.         "Name": "AWS::Include",
+ 4.         "Parameters": {
+ 5.             "Location": {
+ 6.                 "Fn::FindInMap": [
+ 7.                     "RegionMap",
+ 8.                     "us-east-1",
+ 9.                     "s3Location"
+10.                 ]
+11.             }
+12.         }
+13.     }
+14. }
 ```
 
 ### YAML<a name="intrinsic-function-reference-transform-example-2.yaml"></a>
 
 ```
-1. 'Fn::Transform':
-2.     Name: 'AWS::Include'
-3.     Parameters: {Location: {'Fn::FindInMap': [RegionMap, us-east-1, s3Location]}}
+1. !Transform
+2. Name: AWS::Include
+3. Parameters:
+4.   Location: !FindInMap
+5.     - RegionMap
+6.     - us-east-1
+7.     - s3Location
 ```
 
 ## Supported functions<a name="intrinsic-function-reference-transform-supported-functions"></a>
 
-None\. CloudFormation passes any intrinsic function calls included in `Fn::Transform` to the specified macro as literal strings\. For more information, see [AWS CloudFormation macro function interface](template-macros.md#template-macros-lambda-interface)\.
+None\.
+
+CloudFormation passes any intrinsic function calls included in `Fn::Transform` to the specified macro as literal strings\. For more information, see [AWS CloudFormation macro function interface](template-macros.md#template-macros-lambda-interface)\.

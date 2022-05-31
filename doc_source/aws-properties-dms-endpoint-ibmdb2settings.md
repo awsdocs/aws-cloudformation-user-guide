@@ -1,6 +1,6 @@
 # AWS::DMS::Endpoint IbmDb2Settings<a name="aws-properties-dms-endpoint-ibmdb2settings"></a>
 
-<a name="aws-properties-dms-endpoint-ibmdb2settings-description"></a>The `IbmDb2Settings` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::DMS::Endpoint](aws-resource-dms-endpoint.md)\.
+Not currently supported by AWS CloudFormation\.
 
 ## Syntax<a name="aws-properties-dms-endpoint-ibmdb2settings-syntax"></a>
 

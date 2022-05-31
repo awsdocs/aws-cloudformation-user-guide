@@ -13,8 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[HttpEndpoint](#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-httpendpoint)" : String,
+  "[HttpProtocolIpv6](#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-httpprotocolipv6)" : String,
   "[HttpPutResponseHopLimit](#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-httpputresponsehoplimit)" : Integer,
-  "[HttpTokens](#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-httptokens)" : String
+  "[HttpTokens](#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-httptokens)" : String,
+  "[InstanceMetadataTags](#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-instancemetadatatags)" : String
 }
 ```
 
@@ -22,15 +24,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [HttpEndpoint](#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-httpendpoint): String
+  [HttpProtocolIpv6](#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-httpprotocolipv6): String
   [HttpPutResponseHopLimit](#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-httpputresponsehoplimit): Integer
   [HttpTokens](#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-httptokens): String
+  [InstanceMetadataTags](#cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-instancemetadatatags): String
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-metadataoptions-properties"></a>
 
 `HttpEndpoint`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-httpendpoint"></a>
-This parameter enables or disables the HTTP metadata endpoint on your instances\. If the parameter is not specified, the default state is `enabled`\.  
+Enables or disables the HTTP metadata endpoint on your instances\. If the parameter is not specified, the default state is `enabled`\.  
 If you specify a value of `disabled`, you will not be able to access your instance metadata\. 
+*Required*: No  
+*Type*: String  
+*Allowed values*: `disabled | enabled`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HttpProtocolIpv6`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-httpprotocolipv6"></a>
+Enables or disables the IPv6 endpoint for the instance metadata service\.  
+Default: `disabled`   
 *Required*: No  
 *Type*: String  
 *Allowed values*: `disabled | enabled`  
@@ -51,4 +63,12 @@ If the state is `required`, you must send a signed token header with any instanc
 *Required*: No  
 *Type*: String  
 *Allowed values*: `optional | required`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`InstanceMetadataTags`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-metadataoptions-instancemetadatatags"></a>
+Set to `enabled` to allow access to instance tags from the instance metadata\. Set to `disabled` to turn off access to instance tags from the instance metadata\. For more information, see [Work with instance tags using the instance metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS)\.  
+Default: `disabled`   
+*Required*: No  
+*Type*: String  
+*Allowed values*: `disabled | enabled`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -17,11 +17,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DefaultTTL](#cfn-cloudfront-distribution-defaultcachebehavior-defaultttl)" : Double,
   "[FieldLevelEncryptionId](#cfn-cloudfront-distribution-defaultcachebehavior-fieldlevelencryptionid)" : String,
   "[ForwardedValues](#cfn-cloudfront-distribution-defaultcachebehavior-forwardedvalues)" : ForwardedValues,
+  "[FunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-functionassociations)" : [ FunctionAssociation, ... ],
   "[LambdaFunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations)" : [ LambdaFunctionAssociation, ... ],
   "[MaxTTL](#cfn-cloudfront-distribution-defaultcachebehavior-maxttl)" : Double,
   "[MinTTL](#cfn-cloudfront-distribution-defaultcachebehavior-minttl)" : Double,
   "[OriginRequestPolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-originrequestpolicyid)" : String,
   "[RealtimeLogConfigArn](#cfn-cloudfront-distribution-defaultcachebehavior-realtimelogconfigarn)" : String,
+  "[ResponseHeadersPolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-responseheaderspolicyid)" : String,
   "[SmoothStreaming](#cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming)" : Boolean,
   "[TargetOriginId](#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid)" : String,
   "[TrustedKeyGroups](#cfn-cloudfront-distribution-defaultcachebehavior-trustedkeygroups)" : [ String, ... ],
@@ -43,12 +45,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [FieldLevelEncryptionId](#cfn-cloudfront-distribution-defaultcachebehavior-fieldlevelencryptionid): String
   [ForwardedValues](#cfn-cloudfront-distribution-defaultcachebehavior-forwardedvalues): 
     ForwardedValues
+  [FunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-functionassociations): 
+    - FunctionAssociation
   [LambdaFunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations): 
     - LambdaFunctionAssociation
   [MaxTTL](#cfn-cloudfront-distribution-defaultcachebehavior-maxttl): Double
   [MinTTL](#cfn-cloudfront-distribution-defaultcachebehavior-minttl): Double
   [OriginRequestPolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-originrequestpolicyid): String
   [RealtimeLogConfigArn](#cfn-cloudfront-distribution-defaultcachebehavior-realtimelogconfigarn): String
+  [ResponseHeadersPolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-responseheaderspolicyid): String
   [SmoothStreaming](#cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming): Boolean
   [TargetOriginId](#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid): String
   [TrustedKeyGroups](#cfn-cloudfront-distribution-defaultcachebehavior-trustedkeygroups): 
@@ -115,8 +120,14 @@ A complex type that specifies how CloudFront handles query strings, cookies, and
 *Type*: [ForwardedValues](aws-properties-cloudfront-distribution-forwardedvalues.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`FunctionAssociations`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-functionassociations"></a>
+A list of CloudFront functions that are associated with this cache behavior\. CloudFront functions must be published to the `LIVE` stage to associate them with a cache behavior\.  
+*Required*: No  
+*Type*: List of [FunctionAssociation](aws-properties-cloudfront-distribution-functionassociation.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `LambdaFunctionAssociations`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations"></a>
-A complex type that contains zero or more Lambda function associations for a cache behavior\.  
+A complex type that contains zero or more Lambda@Edge function associations for a cache behavior\.  
 *Required*: No  
 *Type*: List of [LambdaFunctionAssociation](aws-properties-cloudfront-distribution-lambdafunctionassociation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -144,6 +155,12 @@ The unique identifier of the origin request policy that is attached to the defau
 
 `RealtimeLogConfigArn`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-realtimelogconfigarn"></a>
 The Amazon Resource Name \(ARN\) of the real\-time log configuration that is attached to this cache behavior\. For more information, see [Real\-time logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html) in the *Amazon CloudFront Developer Guide*\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ResponseHeadersPolicyId`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-responseheaderspolicyid"></a>
+The identifier for a response headers policy\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

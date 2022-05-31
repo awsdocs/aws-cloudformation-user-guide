@@ -4,6 +4,8 @@ Specifies a route in a route table within a VPC\.
 
 You must specify either `DestinationCidrBlock` or `DestinationIpv6CidrBlock`, plus the ID of one of the target resources\.
 
+If you create a route that references a transit gateway in the same template where you create the transit gateway, you must declare a dependency on the transit gateway attachment\. The route table cannot use the transit gateway until it has successfully attached to the VPC\. Add a [ DependsOn Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) in the `AWS::EC2::Route` resource to explicitly declare a dependency on the `AWS::EC2::TransitGatewayAttachment` resource\.
+
 ## Syntax<a name="aws-resource-ec2-route-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -61,13 +63,13 @@ The ID of the carrier gateway\.
 
 `DestinationCidrBlock`  <a name="cfn-ec2-route-destinationcidrblock"></a>
 The IPv4 CIDR block used for the destination match\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DestinationIpv6CidrBlock`  <a name="cfn-ec2-route-destinationipv6cidrblock"></a>
 The IPv6 CIDR block used for the destination match\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -209,5 +211,5 @@ The following example creates a route to a carrier gateway\.
 
 ## See also<a name="aws-resource-ec2-route--seealso"></a>
 +  [CreateRoute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateRoute.html) in the *Amazon EC2 API Reference*
-+  [Route Tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) in the *Amazon VPC User Guide*
++  [Route tables](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Route_Tables.html) in the *Amazon VPC User Guide*
 

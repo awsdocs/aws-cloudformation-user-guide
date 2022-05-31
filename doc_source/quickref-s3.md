@@ -115,7 +115,7 @@ This example creates a bucket as a website\. The AccessControl property is set t
  1. AWSTemplateFormatVersion: 2010-09-09
  2. Resources:
  3.   S3Bucket:
- 4.     Type: AWS::S3::Bucket
+ 4.     Type: 'AWS::S3::Bucket'
  5.     Properties:
  6.       AccessControl: PublicRead
  7.       WebsiteConfiguration:
@@ -123,7 +123,7 @@ This example creates a bucket as a website\. The AccessControl property is set t
  9.         ErrorDocument: error.html
 10.     DeletionPolicy: Retain
 11.   BucketPolicy:
-12.     Type: AWS::S3::BucketPolicy
+12.     Type: 'AWS::S3::BucketPolicy'
 13.     Properties:
 14.       PolicyDocument:
 15.         Id: MyPolicy
@@ -159,7 +159,7 @@ This example creates a bucket as a website\. The AccessControl property is set t
 
 You can use Route 53 with a registered domain\. The following sample assumes that you have already created a hosted zone in Route 53 for your domain\. The example creates two buckets for website hosting\. The root bucket hosts the content, and the other bucket redirects `www.domainname.com` requests to the root bucket\. The record sets map your domain name to Amazon S3 endpoints\. You will also need to add a bucket policy, as shown in the examples above\.
 
-For more information about using a custom domain, see [Setting up a static website using a custom domain](https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html) in the *Amazon Simple Storage Service Developer Guide*\.
+For more information about using a custom domain, see [Setting up a static website using a custom domain](https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html) in the *Amazon Simple Storage Service User Guide*\.
 
 ### JSON<a name="quickref-s3-example-3.json"></a>
 

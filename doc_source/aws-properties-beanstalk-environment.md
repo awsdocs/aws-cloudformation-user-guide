@@ -103,14 +103,14 @@ Key\-value pairs defining configuration options for this environment, such as th
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PlatformArn`  <a name="cfn-beanstalk-environment-platformarn"></a>
-The Amazon Resource Name \(ARN\) of the custom platform to use with the environment\. For more information, see [Custom Platforms](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html) in the *AWS Elastic Beanstalk Developer Guide*\.  
+The Amazon Resource Name \(ARN\) of the custom platform to use with the environment\. For more information, see [Custom Platforms](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/custom-platforms.html) in the * AWS Elastic Beanstalk Developer Guide*\.  
 If you specify `PlatformArn`, don't specify `SolutionStackName`\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SolutionStackName`  <a name="cfn-beanstalk-environment-solutionstackname"></a>
-The name of an Elastic Beanstalk solution stack \(platform version\) to use with the environment\. If specified, Elastic Beanstalk sets the configuration values to the default values associated with the specified solution stack\. For a list of current solution stacks, see [Elastic Beanstalk Supported Platforms](https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platforms-supported.html) in the *AWS Elastic Beanstalk Platforms* guide\.  
+The name of an Elastic Beanstalk solution stack \(platform version\) to use with the environment\. If specified, Elastic Beanstalk sets the configuration values to the default values associated with the specified solution stack\. For a list of current solution stacks, see [Elastic Beanstalk Supported Platforms](https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platforms-supported.html) in the * AWS Elastic Beanstalk Platforms* guide\.  
 If you specify `SolutionStackName`, don't specify `PlatformArn` or `TemplateName`\.
 *Required*: No  
 *Type*: String  
@@ -195,7 +195,7 @@ Type: AWS::ElasticBeanstalk::Environment
 Properties: 
   ApplicationName: 
     Ref: sampleApplication
-  Description: "AWS Elastic Beanstalk Environment running PHP Sample Application"
+    Description: "AWS Elastic Beanstalk Environment running PHP Sample Application"
   EnvironmentName: SamplePHPEnvironment
   TemplateName: DefaultConfiguration
   VersionLabel: "Initial Version"
@@ -230,7 +230,7 @@ Type: AWS::ElasticBeanstalk::Environment
 Properties: 
   ApplicationName: 
     Ref: sampleApplication
-  Description: "AWS Elastic Beanstalk Environment running Python Sample Application"
+    Description: "AWS Elastic Beanstalk Environment running Python Sample Application"
   EnvironmentName: SamplePythonEnvironment
   SolutionStackName: "64bit Amazon Linux 2017.03 v2.5.0 running Python 2.7"
   OptionSettings: 

@@ -1,6 +1,6 @@
 # AWS::EMR::StudioSessionMapping<a name="aws-resource-emr-studiosessionmapping"></a>
 
-The AWS::EMR::StudioSessionMapping resource is an Amazon EMR resource type that maps a user or group to the Amazon EMR Studio specified by `StudioId`, and applies a session policy that defines Studio permissions for that user or group\.
+The `AWS::EMR::StudioSessionMapping` resource is an Amazon EMR resource type that maps a user or group to the Amazon EMR Studio specified by `StudioId`, and applies a session policy that defines Studio permissions for that user or group\.
 
 ## Syntax<a name="aws-resource-emr-studiosessionmapping-syntax"></a>
 

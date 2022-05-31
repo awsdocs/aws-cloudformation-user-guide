@@ -3,7 +3,7 @@
 The `AWS::SNS::Topic` resource creates a topic to which notifications can be published\.
 
 **Note**  
-One account can create a maximum of 100,000 standard topics and 1,000 FIFO topics\. For more information, see [Amazon Simple Notification Service endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/sns.html) in the *AWS General Reference*\.
+One account can create a maximum of 100,000 standard topics and 1,000 FIFO topics\. For more information, see [Amazon SNS endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/sns.html) in the *AWS General Reference*\.
 
 ## Syntax<a name="aws-properties-sns-topic-syntax"></a>
 
@@ -67,14 +67,14 @@ Set to true to create a FIFO topic\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsMasterKeyId`  <a name="cfn-sns-topic-kmsmasterkeyid"></a>
-The ID of an AWS\-managed customer master key \(CMK\) for Amazon SNS or a custom CMK\. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)\. For more examples, see ` [KeyId](https://docs.aws.amazon.com/kms/latest/APIReference/API_DescribeKey.html#API_DescribeKey_RequestParameters) ` in the *AWS Key Management Service API Reference*\.  
+The ID of an AWS managed customer master key \(CMK\) for Amazon SNS or a custom CMK\. For more information, see [Key terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)\. For more examples, see ` [KeyId](https://docs.aws.amazon.com/kms/latest/APIReference/API_DescribeKey.html#API_DescribeKey_RequestParameters) ` in the *AWS Key Management Service API Reference*\.  
 This property applies only to [server\-side\-encryption](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Subscription`  <a name="cfn-sns-topic-subscription"></a>
-The SNS subscriptions \(endpoints\) for this topic\.  
+The Amazon SNS subscriptions \(endpoints\) for this topic\.  
 *Required*: No  
 *Type*: [List](aws-properties-sns-subscription.md) of [Subscription](aws-properties-sns-subscription.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -88,7 +88,7 @@ To be able to tag a topic on creation, you must have the `sns:CreateTopic` and `
 
 `TopicName`  <a name="cfn-sns-topic-topicname"></a>
 The name of the topic you want to create\. Topic names must include only uppercase and lowercase ASCII letters, numbers, underscores, and hyphens, and must be between 1 and 256 characters long\. FIFO topic names must end with `.fifo`\.  
-If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the topic name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
+If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the topic name\. For more information, see [Name type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
 If you specify a name, you can't perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
 *Required*: No  
 *Type*: String  
@@ -158,5 +158,5 @@ MySNSTopic:
 ```
 
 ## See also<a name="aws-properties-sns-topic--seealso"></a>
-+  [Using an AWS CloudFormation Template to Create a Topic that Sends Messages to Amazon SQS Queues](https://docs.aws.amazon.com/sns/latest/dg/SendMessageToSQS.cloudformation.html) in the *Amazon Simple Notification Service Developer Guide* 
-+ The [Using AWS CloudFormation](https://docs.aws.amazon.com/sns/latest/dg/fifo-topic-code-examples.html#fifo-topic-cfn) code example for FIFO topics in the *Amazon Simple Notification Service Developer Guide*
++  [Using an AWS CloudFormation template to create a topic that sends messages to Amazon SQS queues](https://docs.aws.amazon.com/sns/latest/dg/SendMessageToSQS.cloudformation.html) in the *Amazon SNS Developer Guide* 
++ The [Using AWS CloudFormation](https://docs.aws.amazon.com/sns/latest/dg/fifo-topic-code-examples.html#fifo-topic-cfn) code example for FIFO topics in the *Amazon SNS Developer Guide*

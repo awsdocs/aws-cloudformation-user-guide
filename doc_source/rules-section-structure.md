@@ -2,11 +2,11 @@
 
 The optional `Rules` section validates a parameter or a combination of parameters passed to a template during a stack creation or stack update\. To use template rules, explicitly declare `Rules` in your template followed by an assertion\. Use the rules section to validate parameter values before creating or updating resources\.
 
-## Working with rules<a name="w8676ab1c27c15c19b5"></a>
+## Working with rules<a name="w11339ab1c23c15c19b5"></a>
 
 Each template rule consists of two properties:
-+ *Rule condition* \(optional\) — determines when a rule takes effect\.
-+ *Assertions* \(required\) — describes what values users can specify for a particular parameter\.
++ *Rule condition* \(optional\) – determines when a rule takes effect\.
++ *Assertions* \(required\) – describes what values users can specify for a particular parameter\.
 
 A rule can include a `RuleCondition` property and must include an `Assertions` property\. For each rule, you can define only one rule condition\. You can define one or more asserts within the `Assertions` property\. If you don't define a rule condition, the rule's assertions always take effect\.
 
@@ -195,7 +195,7 @@ You will be billed for the AWS resources used if you create a stack from this te
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS CloudFormation Sample Template for using Assertions: Create a load balanced, Auto Scaled sample website where the instances are locked down to only accept traffic from the load balancer. This example creates an Auto Scaling group behind a load balancer with a health check. The web site is available on port 80 or 443 based on the input."
+    "Description": "AWS CloudFormation Sample Template for using Assertions: Create a load balanced, Auto Scaled sample website where the instances are locked down to only accept traffic from the load balancer. This example creates an Auto Scaling group behind a load balancer with a health check. The web site is available on port 80 or 443 based on the input.",
     "Parameters": {
         "VpcId": {
             "Type": "AWS::EC2::VPC::Id",
@@ -296,15 +296,15 @@ You will be billed for the AWS resources used if you create a stack from this te
             "Assertions": [
                 {
                     "Assert": {
-                        "Fn::EachMemberIn": [
+                        ""Fn::EachMemberEquals": [
                             {
-                                "Fn::ValueOfAll": [
-                                    "AWS::EC2::Subnet::Id",
+                                "Fn::ValueOf": [
+                                    "Subnets",
                                     "VpcId"
                                 ]
                             },
                             {
-                                "Fn::RefAll": "AWS::EC2::VPC::Id"
+                                "Ref": "VpcId"
                             }
                         ]
                     },
@@ -600,14 +600,14 @@ You will be billed for the AWS resources used if you create a stack from this te
                             "UseALBSSL",
                             {
                                 "IpProtocol": "tcp",
-                                "FromPort": "443",
-                                "ToPort": "443",
+                                "FromPort": 443,
+                                "ToPort": 443,
                                 "CidrIp": "0.0.0.0/0"
                             },
                             {
                                 "IpProtocol": "tcp",
-                                "FromPort": "80",
-                                "ToPort": "80",
+                                "FromPort": 80,
+                                "ToPort": 80,
                                 "CidrIp": "0.0.0.0/0"
                             }
                         ]
@@ -694,8 +694,8 @@ You will be billed for the AWS resources used if you create a stack from this te
                 "SecurityGroupIngress": [
                     {
                         "IpProtocol": "tcp",
-                        "FromPort": "80",
-                        "ToPort": "80",
+                        "FromPort": 80,
+                        "ToPort": 80,
                         "SourceSecurityGroupId": {
                             "Fn::Select": [
                                 0,
@@ -710,8 +710,8 @@ You will be billed for the AWS resources used if you create a stack from this te
                     },
                     {
                         "IpProtocol": "tcp",
-                        "FromPort": "22",
-                        "ToPort": "22",
+                        "FromPort": 22,
+                        "ToPort": 22,
                         "CidrIp": {
                             "Ref": "SSHLocation"
                         }
@@ -953,11 +953,11 @@ Rules:
   SubnetsInVPC:
     Assertions:
       - Assert:
-          'Fn::EachMemberIn':
-            - 'Fn::ValueOfAll':
-                - 'AWS::EC2::Subnet::Id'
+          'Fn::EachMemberEquals':
+            - 'Fn::ValueOf':
+                - Subnets
                 - VpcId
-            - 'Fn::RefAll': 'AWS::EC2::VPC::Id'
+            - Ref: VpcId
         AssertDescription: All subnets must in the VPC
   ValidateHostedZone:
     RuleCondition: !Equals 
@@ -1135,12 +1135,12 @@ Resources:
         - !If 
           - UseALBSSL
           - IpProtocol: tcp
-            FromPort: '443'
-            ToPort: '443'
+            FromPort: 443
+            ToPort: 443
             CidrIp: 0.0.0.0/0
           - IpProtocol: tcp
-            FromPort: '80'
-            ToPort: '80'
+            FromPort: 80
+            ToPort: 80
             CidrIp: 0.0.0.0/0
   ApplicationLoadBalancer:
     Type: 'AWS::ElasticLoadBalancingV2::LoadBalancer'
@@ -1184,16 +1184,16 @@ Resources:
       GroupDescription: Enable SSH access and HTTP access on the inbound port
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '80'
-          ToPort: '80'
+          FromPort: 80
+          ToPort: 80
           SourceSecurityGroupId: !Select 
             - 0
             - !GetAtt 
               - ApplicationLoadBalancer
               - SecurityGroups
         - IpProtocol: tcp
-          FromPort: '22'
-          ToPort: '22'
+          FromPort: 22
+          ToPort: 22
           CidrIp: !Ref SSHLocation
       VpcId: !Ref VpcId
   RecordSet:

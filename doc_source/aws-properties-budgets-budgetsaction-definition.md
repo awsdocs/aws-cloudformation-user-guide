@@ -42,7 +42,7 @@ The service control policies \(SCP\) action definition details\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SsmActionDefinition`  <a name="cfn-budgets-budgetsaction-definition-ssmactiondefinition"></a>
-The AWS Systems Manager \(SSM\) action definition details\.  
+The Amazon EC2 Systems Manager \(SSM\) action definition details\.  
 *Required*: No  
 *Type*: [SsmActionDefinition](aws-properties-budgets-budgetsaction-ssmactiondefinition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

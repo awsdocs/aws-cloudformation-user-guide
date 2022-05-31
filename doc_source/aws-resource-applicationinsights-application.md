@@ -89,7 +89,7 @@ The log pattern sets\.
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `300`  
-*Pattern*: `^arn:aws(-\w+)?:[\w\d-]+:([\w\d-]*)?:[\w\d_-]*([:/].+)*$`  
+*Pattern*: `^arn:aws(-\w+)*:[\w\d-]+:([\w\d-]*)?:[\w\d_-]*([:/].+)*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceGroupName`  <a name="cfn-applicationinsights-application-resourcegroupname"></a>

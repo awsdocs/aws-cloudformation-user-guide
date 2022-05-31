@@ -59,7 +59,8 @@ Properties:
 ## Properties<a name="aws-resource-amplify-app-properties"></a>
 
 `AccessToken`  <a name="cfn-amplify-app-accesstoken"></a>
- Personal Access token for 3rd party source control system for an Amplify App, used to create webhook and read\-only deploy key\. Token is not stored\.   
+ Personal Access token for 3rd party source control system for an Amplify app, used to create webhook and read\-only deploy key\. Token is not stored\.   
+*Length Constraints:* Minimum length of 1\. Maximum length of 255\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -71,19 +72,23 @@ Properties:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BasicAuthConfig`  <a name="cfn-amplify-app-basicauthconfig"></a>
- The credentials for basic authorization for an Amplify app\.   
+ The credentials for basic authorization for an Amplify app\. You must base64\-encode the authorization credentials and provide them in the format `user:password`\.  
 *Required*: No  
 *Type*: [BasicAuthConfig](aws-properties-amplify-app-basicauthconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BuildSpec`  <a name="cfn-amplify-app-buildspec"></a>
  The build specification \(build spec\) for an Amplify app\.   
+*Length Constraints:* Minimum length of 1\. Maximum length of 25000\.  
+*Pattern:* \(?s\)\.\+  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomHeaders`  <a name="cfn-amplify-app-customheaders"></a>
 The custom HTTP headers for an Amplify app\.  
+*Length Constraints:* Minimum length of 0\. Maximum length of 25000\.  
+*Pattern:* \(?s\)\.\*  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -96,6 +101,8 @@ The custom HTTP headers for an Amplify app\.
 
 `Description`  <a name="cfn-amplify-app-description"></a>
  The description for an Amplify app\.   
+*Length Constraints:* Maximum length of 1000\.  
+*Pattern:* \(?s\)\.\*  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -114,24 +121,31 @@ Automatically disconnect a branch in the Amplify Console when you delete a branc
 
 `IAMServiceRole`  <a name="cfn-amplify-app-iamservicerole"></a>
  The AWS Identity and Access Management \(IAM\) service role for the Amazon Resource Name \(ARN\) of the Amplify app\.   
+*Length Constraints:* Minimum length of 0\. Maximum length of 1000\.  
+*Pattern:* \(?s\)\.\*  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-amplify-app-name"></a>
  The name for an Amplify app\.   
+*Length Constraints:* Minimum length of 1\. Maximum length of 255\.  
+*Pattern:* \(?s\)\.\+  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OauthToken`  <a name="cfn-amplify-app-oauthtoken"></a>
  The OAuth token for a third\-party source control system for an Amplify app\. The OAuth token is used to create a webhook and a read\-only deploy key\. The OAuth token is not stored\.   
+*Length Constraints:* Maximum length of 1000\.  
+*Pattern:* \(?s\)\.\*  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Repository`  <a name="cfn-amplify-app-repository"></a>
  The repository for an Amplify app\.   
+*Pattern:* \(?s\)\.\*  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

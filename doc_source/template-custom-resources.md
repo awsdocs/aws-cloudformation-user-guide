@@ -56,7 +56,7 @@ The template developer and custom resource provider can be the same person or en
 **Note**  
 In this example, `ResourceProperties` allows AWS CloudFormation to create a custom payload to send to the Lambda function\.
 
-1. The custom resource provider processes the AWS CloudFormation request and returns a response of `SUCCESS` or `FAILED` to the pre\-signed URL\. The custom resource provider provides the response in a JSON\-formatted file and uploads it to the pre\-signed S3 URL\. For more information, see [Uploading objects using pre\-signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html) in the *Amazon Simple Storage Service Developer Guide*\.
+1. The custom resource provider processes the AWS CloudFormation request and returns a response of `SUCCESS` or `FAILED` to the pre\-signed URL\. The custom resource provider provides the response in a JSON\-formatted file and uploads it to the pre\-signed S3 URL\. For more information, see [Uploading objects using pre\-signed URLs](https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html) in the *Amazon Simple Storage Service User Guide*\.
 
    In the response, the custom resource provider can also include name\-value pairs that the template developer can access\. For example, the response can include output data if the request succeeded or an error message if the request failed\. For more information about responses, see [Custom resource response objects](crpg-ref-responses.md)\.
 **Important**  

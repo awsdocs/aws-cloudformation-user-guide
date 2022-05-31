@@ -1,6 +1,6 @@
 # AWS::Events::Connection ApiKeyAuthParameters<a name="aws-properties-events-connection-apikeyauthparameters"></a>
 
-Contains the API key authorization parameters to use for the connection\.
+<a name="aws-properties-events-connection-apikeyauthparameters-description"></a>The `ApiKeyAuthParameters` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Events::Connection](aws-resource-events-connection.md)\.
 
 ## Syntax<a name="aws-properties-events-connection-apikeyauthparameters-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-events-connection-apikeyauthparameters-properties"></a>
 
 `ApiKeyName`  <a name="cfn-events-connection-apikeyauthparameters-apikeyname"></a>
-The name of the API key to use for authorization\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApiKeyValue`  <a name="cfn-events-connection-apikeyauthparameters-apikeyvalue"></a>
-The value for the API key to use for authorization\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

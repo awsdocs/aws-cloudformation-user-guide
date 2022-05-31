@@ -55,8 +55,8 @@ For detailed information about using such a role, see [Creating a Location for A
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `S3StorageClass`  <a name="cfn-datasync-locations3-s3storageclass"></a>
- The Amazon S3 storage class that you want to store your files in when this location is used as a task destination\. For buckets in AWS Regions, the storage class defaults to Standard\.   
-For more information about S3 storage classes, see [Amazon S3 Storage Classes](http://aws.amazon.com/s3/storage-classes/)\. Some storage classes have behaviors that can affect your S3 storage cost\. For detailed information, see [Considerations When Working with Amazon S3 Storage Classes in DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes)\.  
+The Amazon S3 storage class that you want to store your files in when this location is used as a task destination\. For buckets in AWS Regions, the storage class defaults to S3 Standard\.   
+For more information about S3 storage classes, see [Amazon S3 Storage Classes](http://aws.amazon.com/s3/storage-classes/)\. Some storage classes have behaviors that can affect your S3 storage costs\. For detailed information, see [Considerations When Working with Amazon S3 Storage Classes in DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes)\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DEEP_ARCHIVE | GLACIER | INTELLIGENT_TIERING | ONEZONE_IA | OUTPOSTS | STANDARD | STANDARD_IA`  
@@ -81,7 +81,7 @@ The key\-value pair that represents the tag that you want to add to the location
 
 ### Ref<a name="aws-resource-datasync-locations3-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the location resource ARN\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the location resource Amazon Resource Name \(ARN\)\. For example:
 
 `arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3`
 
@@ -99,17 +99,19 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) of the specified Amazon S3 location\.
 
 `LocationUri`  <a name="LocationUri-fn::getatt"></a>
-The URL of the specified Amazon S3 location\.
+The URI of the specified Amazon S3 location\.
 
 ## Examples<a name="aws-resource-datasync-locations3--examples"></a>
 
 
 
-### S3 location for DataSync<a name="aws-resource-datasync-locations3--examples--S3_location_for_DataSync"></a>
+### Create an Amazon S3 location for DataSync<a name="aws-resource-datasync-locations3--examples--Create_an_Amazon_S3_location_for_DataSync"></a>
 
-The following example specifies an S3 location for DataSync\. In this example, the S3 location uses the bucket specified by the Amazon Resource Name \(ARN\) `arn:aws:s3:::MyBucket`\. The access role is specified by the ARN `arn:aws:iam::111222333444:role/MyBucketAccessRole`\. The example uses the `STANDARD` S3 storage class and refers to the subdirectory `/MyFolder`\. 
+The following example specifies an S3 location for DataSync\. In this example, the S3 location uses the bucket specified by the Amazon Resource Name \(ARN\) `arn:aws:s3:::MyBucket`\. The access role is specified by the ARN `arn:aws:iam::111222333444:role/MyBucketAccessRole`\. The example uses the S3 Standard storage class and refers to the subdirectory `/MyFolder`\. 
 
-#### JSON<a name="aws-resource-datasync-locations3--examples--S3_location_for_DataSync--json"></a>
+AWS Security Token Service \(AWS STS\) must be activated in your account and Region for DataSync to assume the IAM role\. For more information about temporary security credentials, see [Temporary security credentials in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp.html) in the *IAM User Guide*\. 
+
+#### JSON<a name="aws-resource-datasync-locations3--examples--Create_an_Amazon_S3_location_for_DataSync--json"></a>
 
 ```
 {
@@ -132,7 +134,7 @@ The following example specifies an S3 location for DataSync\. In this example, t
 }
 ```
 
-#### YAML<a name="aws-resource-datasync-locations3--examples--S3_location_for_DataSync--yaml"></a>
+#### YAML<a name="aws-resource-datasync-locations3--examples--Create_an_Amazon_S3_location_for_DataSync--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09

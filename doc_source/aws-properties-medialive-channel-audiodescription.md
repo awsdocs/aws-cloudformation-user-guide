@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AudioSelectorName](#cfn-medialive-channel-audiodescription-audioselectorname)" : String,
   "[AudioType](#cfn-medialive-channel-audiodescription-audiotype)" : String,
   "[AudioTypeControl](#cfn-medialive-channel-audiodescription-audiotypecontrol)" : String,
+  "[AudioWatermarkingSettings](#cfn-medialive-channel-audiodescription-audiowatermarkingsettings)" : AudioWatermarkSettings,
   "[CodecSettings](#cfn-medialive-channel-audiodescription-codecsettings)" : AudioCodecSettings,
   "[LanguageCode](#cfn-medialive-channel-audiodescription-languagecode)" : String,
   "[LanguageCodeControl](#cfn-medialive-channel-audiodescription-languagecodecontrol)" : String,
@@ -33,6 +34,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [AudioSelectorName](#cfn-medialive-channel-audiodescription-audioselectorname): String
   [AudioType](#cfn-medialive-channel-audiodescription-audiotype): String
   [AudioTypeControl](#cfn-medialive-channel-audiodescription-audiotypecontrol): String
+  [AudioWatermarkingSettings](#cfn-medialive-channel-audiodescription-audiowatermarkingsettings): 
+    AudioWatermarkSettings
   [CodecSettings](#cfn-medialive-channel-audiodescription-codecsettings): 
     AudioCodecSettings
   [LanguageCode](#cfn-medialive-channel-audiodescription-languagecode): String
@@ -67,6 +70,12 @@ Applies only if audioTypeControl is useConfigured\. The values for audioType are
 Determines how audio type is determined\. followInput: If the input contains an ISO 639 audioType, then that value is passed through to the output\. If the input contains no ISO 639 audioType, the value in Audio Type is included in the output\. useConfigured: The value in Audio Type is included in the output\. Note that this field and audioType are both ignored if inputType is broadcasterMixedAd\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AudioWatermarkingSettings`  <a name="cfn-medialive-channel-audiodescription-audiowatermarkingsettings"></a>
+Settings to configure one or more solutions that insert audio watermarks in the audio encode  
+*Required*: No  
+*Type*: [AudioWatermarkSettings](aws-properties-medialive-channel-audiowatermarksettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CodecSettings`  <a name="cfn-medialive-channel-audiodescription-codecsettings"></a>

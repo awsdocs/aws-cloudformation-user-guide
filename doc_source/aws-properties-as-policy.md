@@ -1,8 +1,8 @@
 # AWS::AutoScaling::ScalingPolicy<a name="aws-properties-as-policy"></a>
 
-The AWS::AutoScaling::ScalingPolicy resource specifies an Amazon EC2 Auto Scaling scaling policy so that the Auto Scaling group can change the number of instances available for your application in response to changing demand\.
+The `AWS::AutoScaling::ScalingPolicy` resource specifies an Amazon EC2 Auto Scaling scaling policy so that the Auto Scaling group can scale the number of instances available for your application\.
 
-For more information about using scaling policies to scale your Auto Scaling group automatically, see [Dynamic scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html) in the *Amazon EC2 Auto Scaling User Guide*\. 
+For more information about using scaling policies to scale your Auto Scaling group automatically, see [Dynamic scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html) and [Predictive scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-predictive-scaling.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 ## Syntax<a name="aws-properties-as-policy-syntax"></a>
 
@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MetricAggregationType](#cfn-as-scalingpolicy-metricaggregationtype)" : String,
       "[MinAdjustmentMagnitude](#cfn-as-scalingpolicy-minadjustmentmagnitude)" : Integer,
       "[PolicyType](#cfn-as-scalingpolicy-policytype)" : String,
+      "[PredictiveScalingConfiguration](#cfn-autoscaling-scalingpolicy-predictivescalingconfiguration)" : PredictiveScalingConfiguration,
       "[ScalingAdjustment](#cfn-as-scalingpolicy-scalingadjustment)" : Integer,
       "[StepAdjustments](#cfn-as-scalingpolicy-stepadjustments)" : [ StepAdjustment, ... ],
       "[TargetTrackingConfiguration](#cfn-autoscaling-scalingpolicy-targettrackingconfiguration)" : TargetTrackingConfiguration
@@ -40,6 +41,8 @@ Properties:
   [MetricAggregationType](#cfn-as-scalingpolicy-metricaggregationtype): String
   [MinAdjustmentMagnitude](#cfn-as-scalingpolicy-minadjustmentmagnitude): Integer
   [PolicyType](#cfn-as-scalingpolicy-policytype): String
+  [PredictiveScalingConfiguration](#cfn-autoscaling-scalingpolicy-predictivescalingconfiguration): 
+    PredictiveScalingConfiguration
   [ScalingAdjustment](#cfn-as-scalingpolicy-scalingadjustment): Integer
   [StepAdjustments](#cfn-as-scalingpolicy-stepadjustments): 
     - StepAdjustment
@@ -57,7 +60,7 @@ Required if the policy type is `StepScaling` or `SimpleScaling`\. For more infor
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutoScalingGroupName`  <a name="cfn-as-scalingpolicy-autoscalinggroupname"></a>
-The name or Amazon Resource Name \(ARN\) of the Auto Scaling group that you want to attach the policy to\.   
+The name of the Auto Scaling group\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -96,9 +99,20 @@ One of the following policy types:
 +  `TargetTrackingScaling` 
 +  `StepScaling` 
 +  `SimpleScaling` \(default\)
++  `PredictiveScaling` 
 For more information, see [Target tracking scaling policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-target-tracking.html) and [Step and simple scaling policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
-*Required*: Conditional  
+*Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `64`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PredictiveScalingConfiguration`  <a name="cfn-autoscaling-scalingpolicy-predictivescalingconfiguration"></a>
+A predictive scaling policy\. Provides support for predefined and custom metrics\.  
+Predefined metrics include CPU utilization, network in/out, and the Application Load Balancer request count\.  
+*Required*: Conditional  
+*Type*: [PredictiveScalingConfiguration](aws-properties-autoscaling-scalingpolicy-predictivescalingconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScalingAdjustment`  <a name="cfn-as-scalingpolicy-scalingadjustment"></a>
@@ -118,10 +132,10 @@ Required if the policy type is `StepScaling`\. \(Not used with any other policy 
 `TargetTrackingConfiguration`  <a name="cfn-autoscaling-scalingpolicy-targettrackingconfiguration"></a>
 A target tracking scaling policy\. Includes support for predefined or customized metrics\.  
 The following predefined metrics are available:  
-+ `ASGAverageCPUUtilization`
-+ `ASGAverageNetworkIn`
-+ `ASGAverageNetworkOut`
-+ `ALBRequestCountPerTarget` 
++  `ASGAverageCPUUtilization` 
++  `ASGAverageNetworkIn` 
++  `ASGAverageNetworkOut` 
++  `ALBRequestCountPerTarget` 
 If you specify `ALBRequestCountPerTarget` for the metric, you must specify the `ResourceLabel` property with the `PredefinedMetricSpecification`\.  
 *Required*: Conditional  
 *Type*: [TargetTrackingConfiguration](aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.md)  
@@ -131,15 +145,71 @@ If you specify `ALBRequestCountPerTarget` for the metric, you must specify the `
 
 ### Ref<a name="aws-properties-as-policy-return-values-ref"></a>
 
-When you specify an `AWS::AutoScaling::ScalingPolicy` type as an argument to the `Ref` function, AWS CloudFormation returns the policy Amazon Resource Name \(ARN\)\. For example: `arn:aws:autoscaling:us-east-2:123456789012:scalingPolicy:ab12c4d5-a1b2-a1b2-a1b2-ab12c4d56789:autoScalingGroupName/myStack-AutoScalingGroup-AB12C4D5E6:policyName/myStack-myScalingPolicy-AB12C4D5E6`\.
+When you specify an `AWS::AutoScaling::ScalingPolicy` type as an argument to the `Ref` function, CloudFormation returns the policy Amazon Resource Name \(ARN\)\. For example: `arn:aws:autoscaling:us-east-2:123456789012:scalingPolicy:ab12c4d5-a1b2-a1b2-a1b2-ab12c4d56789:autoScalingGroupName/myStack-AutoScalingGroup-AB12C4D5E6:policyName/myStack-myScalingPolicy-AB12C4D5E6`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\. 
+
+## Remarks<a name="aws-properties-as-policy--remarks"></a>
+
+When you create the [AWS::CloudWatch::Alarm](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html) resource for a step or simple scaling policy, specify the name of the scaling policy in the `AlarmActions` property\. For an example snippet, see [Declaring a scaling policy with a CloudWatch alarm](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#scenario-as-policy)\.
 
 ## Examples<a name="aws-properties-as-policy--examples"></a>
 
 The following examples specify scaling policies for an Auto Scaling group\.
 
 For more template snippets, see [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)\.
+
+### Predictive scaling policy<a name="aws-properties-as-policy--examples--Predictive_scaling_policy"></a>
+
+The following template snippet shows a predictive scaling policy configuration that uses CPU utilization metrics with a target utilization of 70\. Because `ForecastOnly` mode is specified, Amazon EC2 Auto Scaling generates forecasts with traffic predictions for the two days ahead, but does not actively scale the group\. 
+
+#### JSON<a name="aws-properties-as-policy--examples--Predictive_scaling_policy--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion":"2010-09-09",
+  "Resources":{
+    "myPredictiveScalingPolicy":{
+      "Type":"AWS::AutoScaling::ScalingPolicy",
+      "Properties":{
+        "AutoScalingGroupName":{
+          "Ref":"myASG"
+        },
+        "PolicyType":"PredictiveScaling",
+        "PredictiveScalingConfiguration":{
+          "MetricSpecifications":[
+            {
+              "TargetValue":70,
+              "PredefinedMetricPairSpecification":{
+                "PredefinedMetricType":"ASGCPUUtilization"
+              }
+            }
+          ],
+          "Mode":"ForecastOnly"
+        }
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-properties-as-policy--examples--Predictive_scaling_policy--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  myPredictiveScalingPolicy:
+    Type: 'AWS::AutoScaling::ScalingPolicy'
+    Properties:
+      AutoScalingGroupName: !Ref myASG
+      PolicyType: PredictiveScaling
+      PredictiveScalingConfiguration:
+        MetricSpecifications:
+          - TargetValue: 70
+            PredefinedMetricPairSpecification:
+              PredefinedMetricType: ASGCPUUtilization
+        Mode: ForecastOnly
+```
 
 ### Target tracking scaling policy<a name="aws-properties-as-policy--examples--Target_tracking_scaling_policy"></a>
 

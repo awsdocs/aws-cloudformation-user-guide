@@ -5,9 +5,9 @@ In addition to your organization's management account, member accounts with dele
 Your organization can have up to five registered delegated administrators at one time\. Delegated administrators can choose to deploy to all accounts in your organization or specific OUs\. Trusted access with AWS Organizations must be enabled before delegated administrators can deploy to accounts managed by Organizations\. For more information, see [Enable trusted access with AWS Organizations](stacksets-orgs-enable-trusted-access.md)\.
 
 **Important**  
-Delegated administrators have full permissions to deploy to accounts in your organization\. The management account cannot limit delegated administrator permissions to deploy to specific OUs or to perform specific stack set operations\.
+Delegated administrators have full permissions to deploy to accounts in your organization\. The management account can't limit delegated administrator permissions to deploy to specific OUs or to perform specific stack set operations\.
 
-You can register delegated administrators for your organization in the following Regions: US East \(Ohio\), US West \(N\. California\), US West \(Oregon\), Asia Pacific \(Mumbai\), Asia Pacific \(Seoul\), Asia Pacific \(Singapore\), Asia Pacific \(Sydney\), Asia Pacific \(Tokyo\), Canada \(Central\), Europe \(Frankfurt\), Europe \(Ireland\), Europe \(London\), Europe \(Paris\), Europe \(Stockholm\), South America \(São Paulo\), AWS GovCloud \(US\-East\), and AWS GovCloud \(US\-West\)\.
+You can register delegated administrators for your organization in the following Regions: US East \(Ohio\), US East \(N\. Virginia\), US West \(N\. California\), US West \(Oregon\), Asia Pacific \(Mumbai\), Asia Pacific \(Seoul\), Asia Pacific \(Singapore\), Asia Pacific \(Sydney\), Asia Pacific \(Tokyo\), Canada \(Central\), Europe \(Frankfurt\), Europe \(Ireland\), Europe \(London\), Europe \(Paris\), Europe \(Stockholm\), South America \(São Paulo\), AWS GovCloud \(US\-East\), and AWS GovCloud \(US\-West\)\.
 
 You can register and deregister delegated administrators using the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation/), [AWS CLI](https://aws.amazon.com/cli/), or [AWS SDKs](https://aws.amazon.com/tools/)\.
 
@@ -42,13 +42,16 @@ You can register and deregister delegated administrators using the [AWS CloudFor
 1. Run the `register-delegated-administrator` command\.
 
    ```
-   aws organizations register-delegated-administrator --service-principal=member.org.stacksets.cloudformation.amazonaws.com --account-id="memberAccountId"
+   aws organizations register-delegated-administrator \
+     --service-principal=member.org.stacksets.cloudformation.amazonaws.com \
+     --account-id="memberAccountId"
    ```
 
 1. Run the `list-delegated-administrators` command to verify that the specified member account is successfully registered as a delegated administrator\.
 
    ```
-   aws organizations list-delegated-administrators  --service-principal=member.org.stacksets.cloudformation.amazonaws.com
+   aws organizations list-delegated-administrators \
+     --service-principal=member.org.stacksets.cloudformation.amazonaws.com
    ```
 
 **To deregister a delegated administrator \(AWS CLI\)**
@@ -58,13 +61,16 @@ You can register and deregister delegated administrators using the [AWS CloudFor
 1. Run the `deregister-delegated-administrator` command\.
 
    ```
-   aws organizations deregister-delegated-administrator --service-principal=member.org.stacksets.cloudformation.amazonaws.com --account-id="memberAccountId"
+   aws organizations deregister-delegated-administrator \
+     --service-principal=member.org.stacksets.cloudformation.amazonaws.com \
+     --account-id="memberAccountId"
    ```
 
 1. Run the `list-delegated-administrators` command to verify that the specified member account is successfully deregistered as a delegated administrator\.
 
    ```
-   aws organizations list-delegated-administrators  --service-principal=member.org.stacksets.cloudformation.amazonaws.com
+   aws organizations list-delegated-administrators \
+     --service-principal=member.org.stacksets.cloudformation.amazonaws.com
    ```
 
    You can register this account again at any time\.

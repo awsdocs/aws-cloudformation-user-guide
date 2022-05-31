@@ -138,9 +138,6 @@ The Amazon Resource Name \(ARN\) representing the target group\.
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
 The writer endpoint for the RDS DB instance or Aurora DB cluster\.
 
-`VpcId`  <a name="VpcId-fn::getatt"></a>
-The VPC ID to associate with the DB proxy\.
-
 ## Examples<a name="aws-resource-rds-dbproxy--examples"></a>
 
 ### Creating a DB proxy and registering a DB instance<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_proxy_and_registering_a_DB_instance"></a>

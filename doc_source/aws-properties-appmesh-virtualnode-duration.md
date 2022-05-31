@@ -28,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A unit of time\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `ms | s`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-appmesh-virtualnode-duration-value"></a>

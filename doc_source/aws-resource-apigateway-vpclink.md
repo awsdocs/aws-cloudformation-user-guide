@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-apigateway-vpclink-description)" : String,
       "[Name](#cfn-apigateway-vpclink-name)" : String,
+      "[Tags](#cfn-apigateway-vpclink-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TargetArns](#cfn-apigateway-vpclink-targetarns)" : [ String, ... ]
     }
 }
@@ -26,6 +27,8 @@ Type: AWS::ApiGateway::VpcLink
 Properties: 
   [Description](#cfn-apigateway-vpclink-description): String
   [Name](#cfn-apigateway-vpclink-name): String
+  [Tags](#cfn-apigateway-vpclink-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TargetArns](#cfn-apigateway-vpclink-targetarns): 
     - String
 ```
@@ -42,6 +45,12 @@ A description of the VPC link\.
 A name for the VPC link\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-apigateway-vpclink-tags"></a>
+An array of arbitrary tags \(key\-value pairs\) to associate with the VPC link\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetArns`  <a name="cfn-apigateway-vpclink-targetarns"></a>

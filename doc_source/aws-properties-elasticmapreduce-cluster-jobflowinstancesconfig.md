@@ -2,6 +2,8 @@
 
 `JobFlowInstancesConfig` is a property of the `AWS::EMR::Cluster` resource\. `JobFlowInstancesConfig` defines the instance groups or instance fleets that comprise the cluster\. `JobFlowInstancesConfig` must contain either `InstanceFleetConfig` or `InstanceGroupConfig`\. They cannot be used together\.
 
+You can now define task instance groups or task instance fleets using the `TaskInstanceGroups` and `TaskInstanceFleets` subproperties\. Using these subproperties reduces delays in provisioning task nodes compared to specifying task nodes with the `InstanceFleetConfig` and `InstanceGroupConfig` resources\.
+
 ## Syntax<a name="aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

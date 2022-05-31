@@ -14,7 +14,7 @@ For more information about exporting and importing output values, see [Exporting
 1. To see which stacks import a given export value, choose the **Export Name** for that export value\. CloudFormation displays the export details page, which lists all the stacks that are importing the value\.
 
 **To list stacks that import an exported output value \(AWS CLI\)**
-+ Run the [aws cloudformation list\-imports](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-imports.html) command, providing the name of the exported output value\.
++ Run the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-imports.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-imports.html) command, providing the name of the exported output value\.
 
   CloudFormation returns a list of stacks that are importing the value\.
 

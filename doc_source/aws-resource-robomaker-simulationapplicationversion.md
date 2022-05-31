@@ -55,15 +55,29 @@ When you pass the logical ID of an `AWS::RoboMaker::SimulationApplicationVersion
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-robomaker-simulationapplicationversion-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-robomaker-simulationapplicationversion-return-values-fn--getatt-fn--getatt"></a>
+
+`ApplicationVersion`  <a name="ApplicationVersion-fn::getatt"></a>
+The simulation application version\.
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the simulation application version\.
+
 ## Examples<a name="aws-resource-robomaker-simulationapplicationversion--examples"></a>
 
 
 
-### Create an AWS RoboMaker Simulation Application Version<a name="aws-resource-robomaker-simulationapplicationversion--examples--Create_an_AWS_RoboMaker_Simulation_Application_Version"></a>
+### Create an AWS RoboMaker Simulation Application Version<a name="aws-resource-robomaker-simulationapplicationversion--examples--Create_an__RoboMaker_Simulation_Application_Version"></a>
 
 The following example creates a simulation application version\.
 
-#### JSON<a name="aws-resource-robomaker-simulationapplicationversion--examples--Create_an_AWS_RoboMaker_Simulation_Application_Version--json"></a>
+#### JSON<a name="aws-resource-robomaker-simulationapplicationversion--examples--Create_an__RoboMaker_Simulation_Application_Version--json"></a>
 
 ```
 {
@@ -114,7 +128,7 @@ The following example creates a simulation application version\.
 }
 ```
 
-#### YAML<a name="aws-resource-robomaker-simulationapplicationversion--examples--Create_an_AWS_RoboMaker_Simulation_Application_Version--yaml"></a>
+#### YAML<a name="aws-resource-robomaker-simulationapplicationversion--examples--Create_an__RoboMaker_Simulation_Application_Version--yaml"></a>
 
 ```
 ---

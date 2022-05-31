@@ -58,7 +58,7 @@ A modification can cause the resource to be interrupted or replaced \(recreated\
 
 **To view a change set \(AWS CLI\)**
 
-1. To get the ID of the change set, run the [aws cloudformation list\-change\-sets](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-change-sets.html) command\.
+1. To get the ID of the change set, run the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-change-sets.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/list-change-sets.html) command\.
 
    Specify the stack ID of the stack that has the change set that you want to view, as shown in the following example:
 
@@ -99,7 +99,7 @@ A modification can cause the resource to be interrupted or replaced \(recreated\
    }
    ```
 
-1. Run the [aws cloudformation describe\-change\-set](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-change-set.html) command, specifying the ID of the change set that you want to view\. For example:
+1. Run the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-change-set.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-change-set.html) command, specifying the ID of the change set that you want to view\. For example:
 
    ```
    aws cloudformation describe-change-set --change-set-name arn:aws:cloudformation:us-east-1:123456789012:changeSet/SampleChangeSet/1a2345b6-0000-00a0-a123-00abc0abc000

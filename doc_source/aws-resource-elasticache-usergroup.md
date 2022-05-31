@@ -1,6 +1,6 @@
 # AWS::ElastiCache::UserGroup<a name="aws-resource-elasticache-usergroup"></a>
 
-For Redis engine version 6\.x onwards: Creates a Redis user group\. For more information, see [Using Role Based Access Control \(RBAC\)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html) 
+For Redis engine version 6\.0 onwards: Creates a Redis user group\. For more information, see [Using Role Based Access Control \(RBAC\)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html) 
 
 ## Syntax<a name="aws-resource-elasticache-usergroup-syntax"></a>
 
@@ -33,7 +33,7 @@ Properties:
 ## Properties<a name="aws-resource-elasticache-usergroup-properties"></a>
 
 `Engine`  <a name="cfn-elasticache-usergroup-engine"></a>
-The current supported value is Redis\.   
+The current supported value is redis\.   
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `[a-zA-Z]*`  
@@ -46,7 +46,7 @@ The ID of the user group\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UserIds`  <a name="cfn-elasticache-usergroup-userids"></a>
-The list of user IDs that belong to the user group\.  
+The list of user IDs that belong to the user group\. A user named `default` must be included\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

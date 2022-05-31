@@ -1,6 +1,6 @@
 # AWS::Events::Archive<a name="aws-resource-events-archive"></a>
 
-The `AWS::Events::Archive` resource create an EventBridge archive to send events to\. When you create an archive, incoming events might not immediately start being sent to the archive\. Allow a short period of time for changes to take effect\. 
+Creates an archive of events with the specified settings\. When you create an archive, incoming events might not immediately start being sent to the archive\. Allow a short period of time for changes to take effect\. If you do not specify a pattern to filter events sent to the archive, all events are sent to the archive except replayed events\. Replayed events are not sent to an archive\.
 
 ## Syntax<a name="aws-resource-events-archive-syntax"></a>
 
@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Events::Archive",
   "Properties" : {
-      "[ArchiveName](#cfn-events-archive-name)" : String,
+      "[ArchiveName](#cfn-events-archive-archivename)" : String,
       "[Description](#cfn-events-archive-description)" : String,
       "[EventPattern](#cfn-events-archive-eventpattern)" : Json,
       "[RetentionDays](#cfn-events-archive-retentiondays)" : Integer,
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Events::Archive
 Properties: 
-  [ArchiveName](#cfn-events-archive-name): String
+  [ArchiveName](#cfn-events-archive-archivename): String
   [Description](#cfn-events-archive-description): String
   [EventPattern](#cfn-events-archive-eventpattern): Json
   [RetentionDays](#cfn-events-archive-retentiondays): Integer
@@ -35,16 +35,21 @@ Properties:
 
 ## Properties<a name="aws-resource-events-archive-properties"></a>
 
-`ArchiveName`  <a name="cfn-events-archive-name"></a>
-The name of the archive\.  
+`ArchiveName`  <a name="cfn-events-archive-archivename"></a>
+The name for the archive to create\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `48`  
+*Pattern*: `[\.\-_A-Za-z0-9]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-events-archive-description"></a>
 A description for the archive\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `512`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventPattern`  <a name="cfn-events-archive-eventpattern"></a>
@@ -54,15 +59,18 @@ An event pattern to use to filter events sent to the archive\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetentionDays`  <a name="cfn-events-archive-retentiondays"></a>
-The number of days to retain events for\. Default value is 0\. If set to 0, events are retained indefinitely\.  
+The number of days to retain events for\. Default value is 0\. If set to 0, events are retained indefinitely  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceArn`  <a name="cfn-events-archive-sourcearn"></a>
-The ARN of the event source associated with the archive\.  
+The ARN of the event bus that sends events to the archive\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1600`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-events-archive-return-values"></a>

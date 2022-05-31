@@ -1,6 +1,6 @@
 # AWS::CloudFormation::Stack<a name="aws-properties-stack"></a>
 
-The `AWS::CloudFormation::Stack` type nests a stack as a resource in a top\-level template\.
+The `AWS::CloudFormation::Stack` resource nests a stack as a resource in a top\-level template\.
 
 You can add output values from a nested stack within the containing template\. You use the [GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html) function with the nested stack's logical name and the name of the output value in the nested stack in the format `Outputs.NestedStackOutputName`\.
 
@@ -49,7 +49,7 @@ Properties:
 ## Properties<a name="aws-properties-stack-properties"></a>
 
 `NotificationARNs`  <a name="cfn-cloudformation-stack-notificationarns"></a>
-The Simple Notification Service \(SNS\) topic ARNs to publish stack related events\. You can find your SNS topic ARNs using the SNS console or your Command Line Interface \(CLI\)\.  
+The Amazon Simple Notification Service \(Amazon SNS\) topic ARNs to publish stack related events\. You can find your Amazon SNS topic ARNs using the Amazon SNS console or your Command Line Interface \(CLI\)\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `5`  
@@ -82,7 +82,7 @@ Whether an update causes interruptions depends on the resources that are being u
 
 `TimeoutInMinutes`  <a name="cfn-cloudformation-stack-timeoutinminutes"></a>
 The length of time, in minutes, that CloudFormation waits for the nested stack to reach the `CREATE_COMPLETE` state\. The default is no timeout\. When CloudFormation detects that the nested stack has reached the `CREATE_COMPLETE` state, it marks the nested stack resource as `CREATE_COMPLETE` in the parent stack and resumes creating the parent stack\. If the timeout period expires before the nested stack reaches `CREATE_COMPLETE`, CloudFormation marks the nested stack as failed and rolls back both the nested stack and parent stack\.  
-Updates are not supported\.  
+Updates aren't supported\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -114,16 +114,16 @@ The sample template EC2ChooseAMI\.template contains the following Parameters sec
         "InstanceType": {
             "Type": "String",
             "Default": "m1.small",
-            "Description": "EC2 instance type, e.g. m1.small, m1.large, etc.",
-            "WebServerPort": {
-                "Type": "String",
-                "Default": "80",
-                "Description": "TCP/IP port of the web server"
-            },
-            "KeyName": {
-                "Type": "String",
-                "Description": "Name of an existing EC2 KeyPair to enable SSH access to the web server"
-            }
+            "Description": "EC2 instance type, e.g. m1.small, m1.large, etc."
+        },
+        "WebServerPort": {
+            "Type": "String",
+            "Default": "80",
+            "Description": "TCP/IP port of the web server"
+        },
+        "KeyName": {
+            "Type": "String",
+            "Description": "Name of an existing EC2 KeyPair to enable SSH access to the web server"
         }
     }
 }
@@ -137,18 +137,18 @@ Parameters:
     Type: String
     Default: m1.small
     Description: 'EC2 instance type, e.g. m1.small, m1.large, etc.'
-    WebServerPort:
-      Type: String
-      Default: '80'
-      Description: TCP/IP port of the web server
-    KeyName:
-      Type: String
-      Description: Name of an existing EC2 KeyPair to enable SSH access to the web server
+  WebServerPort:
+    Type: String
+    Default: '80'
+    Description: TCP/IP port of the web server
+  KeyName:
+    Type: String
+    Description: Name of an existing EC2 KeyPair to enable SSH access to the web server
 ```
 
 ### Nested stack<a name="aws-properties-stack--examples--Nested_stack"></a>
 
-You could use the following template to embed a stack \(myStackWithParams\) using the EC2ChooseAMI\.template and use the Parameters property in the AWS::CloudFormation::Stack resource to specify an InstanceType and KeyName\.
+You could use the following template to embed a stack \(myStackWithParams\) using the EC2ChooseAMI\.template and use the Parameters property in the `AWS::CloudFormation::Stack` resource to specify an `InstanceType` and `KeyName`\.
 
 #### JSON<a name="aws-properties-stack--examples--Nested_stack--json"></a>
 

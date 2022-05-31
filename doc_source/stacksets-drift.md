@@ -311,7 +311,7 @@ Because drift detection on a stack set can be a long\-running operation, there m
 
 1. Select **Stop operation**\.
 
-**To stop drift detection on a stack set using the the AWS CLI**
+**To stop drift detection on a stack set using the AWS CLI**
 + Use the `[stop\-stack\-set\-operation](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/stop-stack-set-operation.html)` command\. You must supply both the stack set name and the operation ID of the drift detection stack set operation\.
 
   ```

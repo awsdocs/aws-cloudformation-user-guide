@@ -15,12 +15,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AuthenticationOptions](#cfn-ec2-clientvpnendpoint-authenticationoptions)" : [ ClientAuthenticationRequest, ... ],
       "[ClientCidrBlock](#cfn-ec2-clientvpnendpoint-clientcidrblock)" : String,
       "[ClientConnectOptions](#cfn-ec2-clientvpnendpoint-clientconnectoptions)" : ClientConnectOptions,
+      "[ClientLoginBannerOptions](#cfn-ec2-clientvpnendpoint-clientloginbanneroptions)" : ClientLoginBannerOptions,
       "[ConnectionLogOptions](#cfn-ec2-clientvpnendpoint-connectionlogoptions)" : ConnectionLogOptions,
       "[Description](#cfn-ec2-clientvpnendpoint-description)" : String,
       "[DnsServers](#cfn-ec2-clientvpnendpoint-dnsservers)" : [ String, ... ],
       "[SecurityGroupIds](#cfn-ec2-clientvpnendpoint-securitygroupids)" : [ String, ... ],
       "[SelfServicePortal](#cfn-ec2-clientvpnendpoint-selfserviceportal)" : String,
       "[ServerCertificateArn](#cfn-ec2-clientvpnendpoint-servercertificatearn)" : String,
+      "[SessionTimeoutHours](#cfn-ec2-clientvpnendpoint-sessiontimeouthours)" : Integer,
       "[SplitTunnel](#cfn-ec2-clientvpnendpoint-splittunnel)" : Boolean,
       "[TagSpecifications](#cfn-ec2-clientvpnendpoint-tagspecifications)" : [ TagSpecification, ... ],
       "[TransportProtocol](#cfn-ec2-clientvpnendpoint-transportprotocol)" : String,
@@ -40,6 +42,8 @@ Properties:
   [ClientCidrBlock](#cfn-ec2-clientvpnendpoint-clientcidrblock): String
   [ClientConnectOptions](#cfn-ec2-clientvpnendpoint-clientconnectoptions): 
     ClientConnectOptions
+  [ClientLoginBannerOptions](#cfn-ec2-clientvpnendpoint-clientloginbanneroptions): 
+    ClientLoginBannerOptions
   [ConnectionLogOptions](#cfn-ec2-clientvpnendpoint-connectionlogoptions): 
     ConnectionLogOptions
   [Description](#cfn-ec2-clientvpnendpoint-description): String
@@ -49,6 +53,7 @@ Properties:
     - String
   [SelfServicePortal](#cfn-ec2-clientvpnendpoint-selfserviceportal): String
   [ServerCertificateArn](#cfn-ec2-clientvpnendpoint-servercertificatearn): String
+  [SessionTimeoutHours](#cfn-ec2-clientvpnendpoint-sessiontimeouthours): Integer
   [SplitTunnel](#cfn-ec2-clientvpnendpoint-splittunnel): Boolean
   [TagSpecifications](#cfn-ec2-clientvpnendpoint-tagspecifications): 
     - TagSpecification
@@ -75,6 +80,12 @@ The IPv4 address range, in CIDR notation, from which to assign client IP address
 The options for managing connection authorization for new client connections\.  
 *Required*: No  
 *Type*: [ClientConnectOptions](aws-properties-ec2-clientvpnendpoint-clientconnectoptions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ClientLoginBannerOptions`  <a name="cfn-ec2-clientvpnendpoint-clientloginbanneroptions"></a>
+Options for enabling a customizable text banner that will be displayed on AWS provided clients when a VPN session is established\.  
+*Required*: No  
+*Type*: [ClientLoginBannerOptions](aws-properties-ec2-clientvpnendpoint-clientloginbanneroptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectionLogOptions`  <a name="cfn-ec2-clientvpnendpoint-connectionlogoptions"></a>
@@ -120,10 +131,18 @@ The ARN of the server certificate\. For more information, see the [AWS Certifica
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SessionTimeoutHours`  <a name="cfn-ec2-clientvpnendpoint-sessiontimeouthours"></a>
+The maximum VPN session duration time in hours\.  
+Valid values: `8 | 10 | 12 | 24`   
+Default value: `24`   
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SplitTunnel`  <a name="cfn-ec2-clientvpnendpoint-splittunnel"></a>
 Indicates whether split\-tunnel is enabled on the AWS Client VPN endpoint\.  
 By default, split\-tunnel on a VPN endpoint is disabled\.  
-For information about split\-tunnel VPN endpoints, see [Split\-Tunnel AWS Client VPN Endpoint](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html) in the *AWS Client VPN Administrator Guide*\.  
+For information about split\-tunnel VPN endpoints, see [Split\-tunnel AWS Client VPN endpoint](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/split-tunnel-vpn.html) in the * AWS Client VPN Administrator Guide*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

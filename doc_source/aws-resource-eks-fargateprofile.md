@@ -81,7 +81,7 @@ The IDs of subnets to launch your pods into\. At this time, pods running on Farg
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-eks-fargateprofile-tags"></a>
-The metadata to apply to the Fargate profile to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Fargate profile tags do not propagate to any other resources associated with the Fargate profile, such as the pods that are scheduled with it\.  
+The metadata to apply to the Fargate profile to assist with categorization and organization\. Each tag consists of a key and an optional value\. You define both\. Fargate profile tags do not propagate to any other resources associated with the Fargate profile, such as the pods that are scheduled with it\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -94,7 +94,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  `{ "Ref": "myFargateProfile" }` 
 
-For the Fargate profile`myFargateProfile`, Ref returns the physical resource ID of the Fargate profile\. For example, `<cluster_name>/<Fargate_profile_name>`\.
+For the Fargate profile`myFargateProfile`, Ref returns the physical resource ID of the Fargate profile\. For example, `<cluster-name>/<Fargate_profile_name>`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -109,18 +109,25 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 The ARN of the cluster, such as `arn:aws:eks:us-west-2:666666666666:fargateprofile/myCluster/myFargateProfile/1cb1a11a-1dc1-1d11-cf11-1111f11fa111`\.
 
+## Remarks<a name="aws-resource-eks-fargateprofile--remarks"></a>
+
+ *Creating a Fargate profile and identity provider config resources in the same template\.* 
+
+If AWS CloudFormation attempts to create both resources at the same time, resource creation fails\. If you want to create both resources in the same template, then add the `DependsOn` property in your template, as shown in the examples\.
+
 ## Examples<a name="aws-resource-eks-fargateprofile--examples"></a>
 
-### Create a Fargate profile<a name="aws-resource-eks-fargateprofile--examples--Create_a_Fargate_profile"></a>
+### Create a Fargate profile<a name="aws-resource-eks-fargateprofile--examples--Create_a__profile"></a>
 
-The following example creates a Fargate profile for pods deployed to a namespace with the name `my-namespace` that have a label with a key value pair assigned to them\.
+The following example creates a Fargate profile for pods deployed to a namespace with the name `my-namespace` that have a label with a key value pair assigned to them\. If you're not creating an `EKSIdpConfig` in the same template, remove the `"DependsOn"` line in the following example\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html)\.
 
-#### JSON<a name="aws-resource-eks-fargateprofile--examples--Create_a_Fargate_profile--json"></a>
+#### JSON<a name="aws-resource-eks-fargateprofile--examples--Create_a__profile--json"></a>
 
 ```
 {
    "Resources" : {
       "EKSFargateProfile" : {
+         "DependsOn" : "EKSIdpConfig",
          "Type" : "AWS::EKS::FargateProfile",
          "Properties" : {
             "FargateProfileName" : "my-fargate-profile",
@@ -144,11 +151,12 @@ The following example creates a Fargate profile for pods deployed to a namespace
 }
 ```
 
-#### YAML<a name="aws-resource-eks-fargateprofile--examples--Create_a_Fargate_profile--yaml"></a>
+#### YAML<a name="aws-resource-eks-fargateprofile--examples--Create_a__profile--yaml"></a>
 
 ```
 Resources:
   EKSFargateProfile:
+    DependsOn: EKSIdpConfig
     Type: 'AWS::EKS::FargateProfile'
     Properties:
       FargateProfileName: my-fargate-profile
@@ -165,5 +173,5 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-eks-fargateprofile--seealso"></a>
-+  [AWS Fargate profile](https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html) in the *Amazon EKS User Guide *\.
-+  [CreateFargateProfile](https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateFargateProfile.html) in the *Amazon EKS API Reference *\.
++  [Fargate profile](https://docs.aws.amazon.com/eks/latest/userguide/fargate-profile.html) in the *Amazon EKS User Guide *\.
++  [https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateFargateProfile.html](https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateFargateProfile.html) in the *Amazon EKS API Reference *\.

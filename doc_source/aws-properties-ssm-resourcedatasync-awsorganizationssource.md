@@ -1,6 +1,6 @@
 # AWS::SSM::ResourceDataSync AwsOrganizationsSource<a name="aws-properties-ssm-resourcedatasync-awsorganizationssource"></a>
 
-Information about the AwsOrganizationsSource resource data sync source\. A sync source of this type can synchronize data from AWS Organizations or, if an AWS Organization is not present, from multiple AWS Regions\.
+Information about the `AwsOrganizationsSource` resource data sync source\. A sync source of this type can synchronize data from AWS Organizations or, if an AWS organization isn't present, from multiple AWS Regions\.
 
 ## Syntax<a name="aws-properties-ssm-resourcedatasync-awsorganizationssource-syntax"></a>
 
@@ -33,7 +33,7 @@ The AWS Organizations organization units included in the sync\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OrganizationSourceType`  <a name="cfn-ssm-resourcedatasync-awsorganizationssource-organizationsourcetype"></a>
-If an AWS Organization is present, this is either `OrganizationalUnits` or `EntireOrganization`\. For `OrganizationalUnits`, the data is aggregated from a set of organization units\. For `EntireOrganization`, the data is aggregated from the entire AWS Organization\.   
+If an AWS organization is present, this is either `OrganizationalUnits` or `EntireOrganization`\. For `OrganizationalUnits`, the data is aggregated from a set of organization units\. For `EntireOrganization`, the data is aggregated from the entire AWS organization\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

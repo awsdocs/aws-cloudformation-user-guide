@@ -1,8 +1,8 @@
 # AWS::WAFRegional::SizeConstraintSet SizeConstraint<a name="aws-properties-wafregional-sizeconstraintset-sizeconstraint"></a>
 
 **Note**  
-This is **AWS WAF Classic** documentation\. For more information, see [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
- **For the latest version of AWS WAF**, use the AWS WAFV2 API and see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
+This is ** AWS WAF Classic** documentation\. For more information, see [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF **, use the AWS WAFV2 API and see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
 
 Specifies a constraint on the size of a part of the web request\. AWS WAF uses the `Size`, `ComparisonOperator`, and `FieldToMatch` to build an expression in the form of "`Size` `ComparisonOperator` size in bytes of `FieldToMatch`"\. If that expression is true, the `SizeConstraint` is considered to match\.
 
@@ -47,7 +47,7 @@ The type of comparison you want AWS WAF to perform\. AWS WAF uses this in combin
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldToMatch`  <a name="cfn-wafregional-sizeconstraintset-sizeconstraint-fieldtomatch"></a>
-Specifies where in a web request to look for the size constraint\.  
+The part of a web request that you want AWS WAF to inspect, such as a specific header or a query string\.   
 *Required*: Yes  
 *Type*: [FieldToMatch](aws-properties-wafregional-sizeconstraintset-fieldtomatch.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

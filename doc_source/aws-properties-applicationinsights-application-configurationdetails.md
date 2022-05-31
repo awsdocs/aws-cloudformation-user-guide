@@ -12,6 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[AlarmMetrics](#cfn-applicationinsights-application-configurationdetails-alarmmetrics)" : [ AlarmMetric, ... ],
   "[Alarms](#cfn-applicationinsights-application-configurationdetails-alarms)" : [ Alarm, ... ],
+  "[HAClusterPrometheusExporter](#cfn-applicationinsights-application-configurationdetails-haclusterprometheusexporter)" : HAClusterPrometheusExporter,
+  "[HANAPrometheusExporter](#cfn-applicationinsights-application-configurationdetails-hanaprometheusexporter)" : HANAPrometheusExporter,
   "[JMXPrometheusExporter](#cfn-applicationinsights-application-configurationdetails-jmxprometheusexporter)" : JMXPrometheusExporter,
   "[Logs](#cfn-applicationinsights-application-configurationdetails-logs)" : [ Log, ... ],
   "[WindowsEvents](#cfn-applicationinsights-application-configurationdetails-windowsevents)" : [ WindowsEvent, ... ]
@@ -25,6 +27,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - AlarmMetric
   [Alarms](#cfn-applicationinsights-application-configurationdetails-alarms): 
     - Alarm
+  [HAClusterPrometheusExporter](#cfn-applicationinsights-application-configurationdetails-haclusterprometheusexporter): 
+    HAClusterPrometheusExporter
+  [HANAPrometheusExporter](#cfn-applicationinsights-application-configurationdetails-hanaprometheusexporter): 
+    HANAPrometheusExporter
   [JMXPrometheusExporter](#cfn-applicationinsights-application-configurationdetails-jmxprometheusexporter): 
     JMXPrometheusExporter
   [Logs](#cfn-applicationinsights-application-configurationdetails-logs): 
@@ -45,6 +51,18 @@ A list of metrics to monitor for the component\. All component types can use `Al
 A list of alarms to monitor for the component\. All component types can use `Alarm`\.  
 *Required*: No  
 *Type*: List of [Alarm](aws-properties-applicationinsights-application-alarm.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HAClusterPrometheusExporter`  <a name="cfn-applicationinsights-application-configurationdetails-haclusterprometheusexporter"></a>
+The HA cluster Prometheus Exporter settings\.  
+*Required*: No  
+*Type*: [HAClusterPrometheusExporter](aws-properties-applicationinsights-application-haclusterprometheusexporter.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HANAPrometheusExporter`  <a name="cfn-applicationinsights-application-configurationdetails-hanaprometheusexporter"></a>
+The HANA DB Prometheus Exporter settings\.  
+*Required*: No  
+*Type*: [HANAPrometheusExporter](aws-properties-applicationinsights-application-hanaprometheusexporter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JMXPrometheusExporter`  <a name="cfn-applicationinsights-application-configurationdetails-jmxprometheusexporter"></a>

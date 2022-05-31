@@ -2,7 +2,7 @@
 
 Creates a new IAM user for your AWS account\.
 
- For information about quotas for the number of IAM users you can create, see [IAM and STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
+ For information about quotas for the number of IAM users you can create, see [IAM and AWS STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
 
 ## Syntax<a name="aws-properties-iam-user-syntax"></a>
 
@@ -49,7 +49,7 @@ Properties:
 ## Properties<a name="aws-properties-iam-user-properties"></a>
 
 `Groups`  <a name="cfn-iam-user-groups"></a>
-A list of groups to which you want to add the user\.  
+A list of group names to which you want to add the user\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::EC2::TrafficMirrorFilterRule<a name="aws-resource-ec2-trafficmirrorfilterrule"></a>
 
-Creates a Traffic Mirror filter rule\. 
+Creates a Traffic Mirror filter rule\.
 
 A Traffic Mirror rule defines the Traffic Mirror source traffic to mirror\.
 
@@ -77,7 +77,7 @@ For information about the protocol value, see [Protocol Numbers](https://www.ian
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleAction`  <a name="cfn-ec2-trafficmirrorfilterrule-ruleaction"></a>
-The action to take \(`accept` \| `reject`\) on the filtered traffic\.  
+The action to take on the filtered traffic\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `accept | reject`  
@@ -102,7 +102,7 @@ The source port range\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrafficDirection`  <a name="cfn-ec2-trafficmirrorfilterrule-trafficdirection"></a>
-The type of traffic \(`ingress` \| `egress`\)\.  
+The type of traffic\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `egress | ingress`  
@@ -179,6 +179,6 @@ SampleTrafficMirrorFilterRule:
 ```
 
 ## See also<a name="aws-resource-ec2-trafficmirrorfilterrule--seealso"></a>
-+ [Traffic Mirror Filters and Filter Rules](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-how-it-works.html#traffic-mirroring-filters) in *Traffic Mirroring*
++ [Traffic mirror filters and filter rules](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-filters.html) in *Traffic Mirroring*
 + [CreateTrafficMirrorFilterRule](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTrafficMirrorFilterRule.html) in the *Amazon EC2 API Reference*
 

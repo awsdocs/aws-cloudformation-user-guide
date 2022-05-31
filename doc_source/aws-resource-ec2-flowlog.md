@@ -1,6 +1,6 @@
 # AWS::EC2::FlowLog<a name="aws-resource-ec2-flowlog"></a>
 
-Specifies an Amazon Elastic Compute Cloud \(Amazon EC2\) flow log that captures IP traffic for a specified network interface, subnet, or VPC\. To view the log data, use Amazon CloudWatch Logs \(CloudWatch Logs\) to help troubleshoot connection issues\. For example, you can use a flow log to investigate why certain traffic isn't reaching an instance, which can help you diagnose overly restrictive security group rules\. For more information, see [VPC Flow Logs](https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html) in the *Amazon VPC User Guide*\.
+Specifies a VPC flow log that captures IP traffic for a specified network interface, subnet, or VPC\. To view the log data, use Amazon CloudWatch Logs \(CloudWatch Logs\) to help troubleshoot connection issues\. For example, you can use a flow log to investigate why certain traffic isn't reaching an instance, which can help you diagnose overly restrictive security group rules\. For more information, see [VPC Flow Logs](https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html) in the *Amazon VPC User Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-flowlog-syntax"></a>
 
@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::FlowLog",
   "Properties" : {
       "[DeliverLogsPermissionArn](#cfn-ec2-flowlog-deliverlogspermissionarn)" : String,
+      "[DestinationOptions](#cfn-ec2-flowlog-destinationoptions)" : Json,
       "[LogDestination](#cfn-ec2-flowlog-logdestination)" : String,
       "[LogDestinationType](#cfn-ec2-flowlog-logdestinationtype)" : String,
       "[LogFormat](#cfn-ec2-flowlog-logformat)" : String,
@@ -32,6 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::FlowLog
 Properties: 
   [DeliverLogsPermissionArn](#cfn-ec2-flowlog-deliverlogspermissionarn): String
+  [DestinationOptions](#cfn-ec2-flowlog-destinationoptions): Json
   [LogDestination](#cfn-ec2-flowlog-logdestination): String
   [LogDestinationType](#cfn-ec2-flowlog-logdestinationtype): String
   [LogFormat](#cfn-ec2-flowlog-logformat): String
@@ -53,8 +55,17 @@ If you specify `LogDestinationType` as `s3`, do not specify `DeliverLogsPermissi
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`DestinationOptions`  <a name="cfn-ec2-flowlog-destinationoptions"></a>
+The destination options\. The following options are supported:  
++ `FileFormat` \- The format for the flow log \(`plain-text` \| `parquet`\)\. The default is `plain-text`\.
++ `HiveCompatiblePartitions` \- Indicates whether to use Hive\-compatible prefixes for flow logs stored in Amazon S3 \(`true` \| `false`\)\. The default is `false`\.
++ `PerHourPartition` \- Indicates whether to partition the flow log per hour \(`true` \| `false`\)\. The default is `false`\.
+*Required*: No  
+*Type*: Json  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `LogDestination`  <a name="cfn-ec2-flowlog-logdestination"></a>
-Specifies the destination to which the flow log data is to be published\. Flow log data can be published to a CloudWatch Logs log group or an Amazon S3 bucket\. The value specified for this parameter depends on the value specified for `LogDestinationType`\.  
+The destination to which the flow log data is to be published\. Flow log data can be published to a CloudWatch Logs log group or an Amazon S3 bucket\. The value specified for this parameter depends on the value specified for `LogDestinationType`\.  
 If `LogDestinationType` is not specified or `cloud-watch-logs`, specify the Amazon Resource Name \(ARN\) of the CloudWatch Logs log group\. For example, to publish to a log group called `my-logs`, specify `arn:aws:logs:us-east-1:123456789012:log-group:my-logs`\. Alternatively, use `LogGroupName` instead\.  
 If LogDestinationType is `s3`, specify the ARN of the Amazon S3 bucket\. You can also specify a subfolder in the bucket\. To specify a subfolder in the bucket, use the following ARN format: `bucket_ARN/subfolder_name/`\. For example, to specify a subfolder named `my-logs` in a bucket named `my-bucket`, use the following ARN: `arn:aws:s3:::my-bucket/my-logs/`\. You cannot use `AWSLogs` as a subfolder name\. This is a reserved term\.  
 *Required*: No  
@@ -62,7 +73,7 @@ If LogDestinationType is `s3`, specify the ARN of the Amazon S3 bucket\. You can
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LogDestinationType`  <a name="cfn-ec2-flowlog-logdestinationtype"></a>
-Specifies the type of destination to which the flow log data is to be published\. Flow log data can be published to CloudWatch Logs or Amazon S3\. To publish flow log data to CloudWatch Logs, specify `cloud-watch-logs`\. To publish flow log data to Amazon S3, specify `s3`\.  
+The type of destination to which the flow log data is to be published\. Flow log data can be published to CloudWatch Logs or Amazon S3\. To publish flow log data to CloudWatch Logs, specify `cloud-watch-logs`\. To publish flow log data to Amazon S3, specify `s3`\.  
 If you specify `LogDestinationType` as `s3`, do not specify `DeliverLogsPermissionArn` or `LogGroupName`\.  
 Default: `cloud-watch-logs`   
 *Required*: No  
@@ -106,7 +117,7 @@ The type of resource for which to create the flow log\. For example, if you spec
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-flowlog-tags"></a>
-The tags for the flow log\.  
+The tags to apply to the flow logs\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -244,7 +255,7 @@ MyDetailedFlowLogDeliveringToCloudWatchLogs:
 
 ### Publish a custom format flow log to Amazon S3 for ACCEPT traffic<a name="aws-resource-ec2-flowlog--examples--Publish_a_custom_format_flow_log_to_Amazon_S3_for_ACCEPT_traffic"></a>
 
-The following example creates a flow log for the specified subnet and captures ACCEPT traffic\. The flow log uses a custom log format \(the `LogFormat` property uses the `${field-id}` format, separated by spaces\)\. Amazon EC2 aggregates the logs over 60 second intervals, and publishes the logs to an Amazon S3 bucket that's referenced by its ARN, `MyS3Bucket.Arn`\. The flow log is created with two tags\.
+The following example creates a flow log for the specified subnet and captures ACCEPT traffic\. The flow log uses a custom log format \(the `LogFormat` property uses the `${field-id}` format, separated by spaces\)\. Amazon EC2 aggregates the logs over 60 second intervals, and publishes the logs to an Amazon S3 bucket that's referenced by its ARN, `MyS3Bucket.Arn`\. The logs are published in parquet format in Hive\-compatible prefixes partitioned on an hourly basis\. The flow log is created with two tags\.
 
 #### JSON<a name="aws-resource-ec2-flowlog--examples--Publish_a_custom_format_flow_log_to_Amazon_S3_for_ACCEPT_traffic--json"></a>
 
@@ -267,6 +278,11 @@ The following example creates a flow log for the specified subnet and captures A
       "LogDestinationType": "s3",
       "LogFormat": "${version} ${vpc-id} ${subnet-id} ${instance-id} ${srcaddr} ${dstaddr} ${srcport} ${dstport} ${protocol} ${tcp-flags} ${type} ${pkt-srcaddr} ${pkt-dstaddr}",
       "MaxAggregationInterval": 60,
+      "DestinationOptions": {
+        "FileFormat": "parquet",
+        "HiveCompatiblePartitions": true,
+        "PerHourPartition": true
+      },
       "Tags": [
         {
           "Key": "Name",
@@ -295,11 +311,13 @@ MyFlowLogDeliveringToS3:
     LogDestinationType: s3
     LogFormat: '${version} ${vpc-id} ${subnet-id} ${instance-id} ${srcaddr} ${dstaddr} ${srcport} ${dstport} ${protocol} ${tcp-flags} ${type} ${pkt-srcaddr} ${pkt-dstaddr}'
     MaxAggregationInterval: 60
+    DestinationOptions:
+      FileFormat: "parquet"
+      HiveCompatiblePartitions: true
+      PerHoursPartition: true
     Tags:
-      -
-        Key: Name
-        Value: FlowLogForSubnetB
-      -
-        Key: Purpose
-        Value: AcceptTraffic
+      Key: Name
+      Value: FlowLogForSubnetB
+      Key: Purpose
+      Value: AcceptTraffic
 ```

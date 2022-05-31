@@ -62,6 +62,13 @@ An array of tag object\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-config-aggregationauthorization-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-config-aggregationauthorization-return-values-fn--getatt-fn--getatt"></a>
+
+`AggregationAuthorizationArn`  <a name="AggregationAuthorizationArn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the aggregation object\.
+
 ## Examples<a name="aws-resource-config-aggregationauthorization--examples"></a>
 
 
@@ -101,7 +108,7 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "Enable AWS Config",
+    "Description": "Enable Config",
     "Metadata": {
         "AWS::CloudFormation::Interface": {
             "ParameterGroups": [
@@ -384,7 +391,7 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: Enable AWS Config
+Description: Enable Config
 
 Metadata:
   AWS::CloudFormation::Interface:

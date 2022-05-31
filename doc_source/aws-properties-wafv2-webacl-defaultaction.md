@@ -1,8 +1,5 @@
 # AWS::WAFv2::WebACL DefaultAction<a name="aws-properties-wafv2-webacl-defaultaction"></a>
 
-**Note**  
-This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
-
 In a `WebACL`, this is the action that you want AWS WAF to perform when a web request doesn't match any of the rules in the `WebACL`\. The default action must be a terminating action, so count is not allowed\.
 
 ## Syntax<a name="aws-properties-wafv2-webacl-defaultaction-syntax"></a>
@@ -52,16 +49,16 @@ The following shows an example web ACL default action specification that sets th
 #### YAML<a name="aws-properties-wafv2-webacl-defaultaction--examples--Set_a_web_ACL_default_action--yaml"></a>
 
 ```
-      DefaultAction:
-        Block: {}
+DefaultAction:
+    Block: {}
 ```
 
 #### JSON<a name="aws-properties-wafv2-webacl-defaultaction--examples--Set_a_web_ACL_default_action--json"></a>
 
 ```
-      "DefaultAction": {
-          "Block": {}
-        }
+"DefaultAction": {
+    "Block": {}
+}
 ```
 
 ### Set a customized web ACL default action<a name="aws-properties-wafv2-webacl-defaultaction--examples--Set_a_customized_web_ACL_default_action_"></a>
@@ -71,33 +68,33 @@ The following shows an example web ACL default action specification with customi
 #### YAML<a name="aws-properties-wafv2-webacl-defaultaction--examples--Set_a_customized_web_ACL_default_action_--yaml"></a>
 
 ```
-      DefaultAction:
-        Allow:
-          CustomRequestHandling:
-            InsertHeaders:
-              - Name: AllowActionHeader1Name
-                Value: AllowActionHeader1Value
-              - Name: AllowActionHeader2Name
-                Value: AllowActionHeader2Value
+DefaultAction:
+  Allow:
+    CustomRequestHandling:
+      InsertHeaders:
+        - Name: AllowActionHeader1Name
+          Value: AllowActionHeader1Value
+        - Name: AllowActionHeader2Name
+          Value: AllowActionHeader2Value
 ```
 
 #### JSON<a name="aws-properties-wafv2-webacl-defaultaction--examples--Set_a_customized_web_ACL_default_action_--json"></a>
 
 ```
-        "DefaultAction": {
-          "Allow": {
-            "CustomRequestHandling": {
-              "InsertHeaders": [
-                {
-                  "Name": "AllowActionHeader1Name",
-                  "Value": "AllowActionHeader1Value"
-                },
-                {
-                  "Name": "AllowActionHeader2Name",
-                  "Value": "AllowActionHeader2Value"
-                }
-              ]
-            }
-          }
+"DefaultAction": {
+  "Allow": {
+    "CustomRequestHandling": {
+      "InsertHeaders": [
+        {
+          "Name": "AllowActionHeader1Name",
+          "Value": "AllowActionHeader1Value"
+        },
+        {
+          "Name": "AllowActionHeader2Name",
+          "Value": "AllowActionHeader2Value"
         }
+      ]
+    }
+  }
+}
 ```

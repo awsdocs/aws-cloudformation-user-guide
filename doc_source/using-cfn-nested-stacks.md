@@ -13,13 +13,10 @@ Nested stacks can themselves contain other nested stacks, resulting in a hierarc
 
 ![\[Nested stacks, which are created as part of another stack, have an immediate parent stack, and the top-level root stack.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/cfn-console-nested-stacks.png)
 
-Using nested stacks to declare common components is considered a [best practice](best-practices.md#nested)\.
-
 Certain stack operations, such as stack updates, should be initiated from the root stack rather than performed directly on nested stacks themselves\. Also, in some cases, nested stacks affect how stack operations are performed\. For more information, refer to the following topics:
-+ [Use nested stacks to reuse common template patterns](best-practices.md#nested)
 + [Protecting a stack from being deleted](using-cfn-protect-stacks.md)
 + [Update behaviors of stack resources](using-cfn-updating-stacks-update-behaviors.md)
-+ [Exporting stack output values vs\. using nested stacks](using-cfn-stack-exports.md#output-vs-nested)
++ [Exporting stack output values versus using nested stacks](using-cfn-stack-exports.md#output-vs-nested)
 + [Using `ResourcesToSkip` to recover a nested stacks hierarchy](using-cfn-updating-stacks-continueupdaterollback.md#nested-stacks)
 + [Nested stacks are stuck in `UPDATE_COMPLETE_CLEANUP_IN_PROGRESS`, `UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS`, or `UPDATE_ROLLBACK_IN_PROGRESS`](troubleshooting.md#troubleshooting-errors-nested-stacks-are-stuck)
 

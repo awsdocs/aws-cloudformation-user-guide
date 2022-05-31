@@ -57,7 +57,7 @@ For more information about CIDR notation, see the Wikipedia entry [Classless Int
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-wafv2-ipset-description"></a>
-A friendly description of the IP set\. You cannot change the description of an IP set after you create it\.  
+A description of the IP set that helps with identification\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -73,7 +73,7 @@ Specify IPV4 or IPV6\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-ipset-name"></a>
-A friendly name of the IP set\. You cannot change the name of an `IPSet` after you create it\.  
+The descriptive name of the IP set\. You cannot change the name of an `IPSet` after you create it\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -82,7 +82,7 @@ A friendly name of the IP set\. You cannot change the name of an `IPSet` after y
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Scope`  <a name="cfn-wafv2-ipset-scope"></a>
-Specifies whether this is for an AWS CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.   
+Specifies whether this is for an Amazon CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.   
 For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virginia\) Region, `us-east-1`\.
 *Required*: Yes  
 *Type*: String  
@@ -101,7 +101,7 @@ To modify tags on existing resources, use the AWS WAF APIs or command line inter
 
 The `Ref` for the resource, containing the resource name, physical ID, and scope, formatted as follows: `name|id|scope`\.
 
-For example: `my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL`
+For example: `my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL`\.
 
 ### Fn::GetAtt<a name="aws-resource-wafv2-ipset-return-values-fn--getatt"></a>
 
@@ -124,9 +124,7 @@ The following shows an example IP set specification\.
 #### JSON<a name="aws-resource-wafv2-ipset--examples--Create_an_IP_set--json"></a>
 
 ```
-"Description": "Sample IPSet",
-  "Resources": {
-    "SampleIPSet": {
+ "SampleIPSet": {
       "Type": "AWS::WAFv2::IPSet",
       "Properties": {
         "Description": "SampleIPSet",
@@ -138,15 +136,12 @@ The following shows an example IP set specification\.
         ]
       }
     }
-  }
 ```
 
 #### YAML<a name="aws-resource-wafv2-ipset--examples--Create_an_IP_set--yaml"></a>
 
 ```
-Description: Sample IPSet
-  Resources:
-    SampleIPSet:
+ SampleIPSet:
       Type: 'AWS::WAFv2::IPSet'
       Properties:
         Description: SampleIPSet

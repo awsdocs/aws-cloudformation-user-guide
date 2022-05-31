@@ -14,9 +14,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[CustomEventData](#cfn-gamelift-gamesessionqueue-customeventdata)" : String,
       "[Destinations](#cfn-gamelift-gamesessionqueue-destinations)" : [ Destination, ... ],
+      "[FilterConfiguration](#cfn-gamelift-gamesessionqueue-filterconfiguration)" : FilterConfiguration,
       "[Name](#cfn-gamelift-gamesessionqueue-name)" : String,
       "[NotificationTarget](#cfn-gamelift-gamesessionqueue-notificationtarget)" : String,
       "[PlayerLatencyPolicies](#cfn-gamelift-gamesessionqueue-playerlatencypolicies)" : [ PlayerLatencyPolicy, ... ],
+      "[PriorityConfiguration](#cfn-gamelift-gamesessionqueue-priorityconfiguration)" : PriorityConfiguration,
+      "[Tags](#cfn-gamelift-gamesessionqueue-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TimeoutInSeconds](#cfn-gamelift-gamesessionqueue-timeoutinseconds)" : Integer
     }
 }
@@ -30,10 +33,16 @@ Properties:
   [CustomEventData](#cfn-gamelift-gamesessionqueue-customeventdata): String
   [Destinations](#cfn-gamelift-gamesessionqueue-destinations): 
     - Destination
+  [FilterConfiguration](#cfn-gamelift-gamesessionqueue-filterconfiguration): 
+    FilterConfiguration
   [Name](#cfn-gamelift-gamesessionqueue-name): String
   [NotificationTarget](#cfn-gamelift-gamesessionqueue-notificationtarget): String
   [PlayerLatencyPolicies](#cfn-gamelift-gamesessionqueue-playerlatencypolicies): 
     - PlayerLatencyPolicy
+  [PriorityConfiguration](#cfn-gamelift-gamesessionqueue-priorityconfiguration): 
+    PriorityConfiguration
+  [Tags](#cfn-gamelift-gamesessionqueue-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TimeoutInSeconds](#cfn-gamelift-gamesessionqueue-timeoutinseconds): Integer
 ```
 
@@ -52,6 +61,12 @@ Properties:
 A list of fleets and/or fleet aliases that can be used to fulfill game session placement requests in the queue\. Destinations are identified by either a fleet ARN or a fleet alias ARN, and are listed in order of placement preference\.  
 *Required*: No  
 *Type*: List of [Destination](aws-properties-gamelift-gamesessionqueue-destination.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`FilterConfiguration`  <a name="cfn-gamelift-gamesessionqueue-filterconfiguration"></a>
+A list of locations where a queue is allowed to place new game sessions\. Locations are specified in the form of AWS Region codes, such as `us-west-2`\. If this parameter is not set, game sessions can be placed in any queue location\.   
+*Required*: No  
+*Type*: [FilterConfiguration](aws-properties-gamelift-gamesessionqueue-filterconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-gamelift-gamesessionqueue-name"></a>
@@ -76,6 +91,19 @@ An SNS topic ARN that is set up to receive game session placement notifications\
 A set of policies that act as a sliding cap on player latency\. FleetIQ works to deliver low latency for most players in a game session\. These policies ensure that no individual player can be placed into a game with unreasonably high latency\. Use multiple policies to gradually relax latency requirements a step at a time\. Multiple policies are applied based on their maximum allowed latency, starting with the lowest value\.  
 *Required*: No  
 *Type*: List of [PlayerLatencyPolicy](aws-properties-gamelift-gamesessionqueue-playerlatencypolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PriorityConfiguration`  <a name="cfn-gamelift-gamesessionqueue-priorityconfiguration"></a>
+Custom settings to use when prioritizing destinations and locations for game session placements\. This configuration replaces the FleetIQ default prioritization process\. Priority types that are not explicitly named will be automatically applied at the end of the prioritization process\.   
+*Required*: No  
+*Type*: [PriorityConfiguration](aws-properties-gamelift-gamesessionqueue-priorityconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-gamelift-gamesessionqueue-tags"></a>
+A list of labels to assign to the new game session queue resource\. Tags are developer\-defined key\-value pairs\. Tagging AWS resources are useful for resource management, access management and cost allocation\. For more information, see [ Tagging AWS Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the * AWS General Reference*\. Once the resource is created, you can use TagResource, UntagResource, and ListTagsForResource to add, remove, and view tags\. The maximum tag limit may be lower than stated\. See the AWS General Reference for actual tagging limits\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeoutInSeconds`  <a name="cfn-gamelift-gamesessionqueue-timeoutinseconds"></a>
@@ -137,7 +165,25 @@ The following example creates a GameLift game session queue named `MyGameSession
                         "MaximumIndividualPlayerLatencyMilliseconds": 1000,
                         "PolicyDurationSeconds": 60
                     }
-                ]
+                ],
+                "PriorityConfiguration": {
+                    "LocationOrder": [
+                        "us-west-2",
+                        "us-east-1"
+                    ],
+                    "PriorityOrder": [
+                        "COST",
+                        "LATENCY",
+                        "LOCATION",
+                        "DESTINATION"
+                    ]
+                },
+                "FilterConfiguration": {
+                    "AllowedLocations": [
+                        "us-east-1",
+                        "us-west-2"
+                    ]
+                }
             }
         }
     }
@@ -161,9 +207,22 @@ Resources:
       PlayerLatencyPolicies:
         - MaximumIndividualPlayerLatencyMilliseconds: 1000
           PolicyDurationSeconds: 60
+          PriorityConfiguration:
+          LocationOrder: 
+          - 'us-west-2'
+          - 'us-east-1'
+          PriorityOrder: 
+          - 'COST'
+          - 'LATENCY'
+          - 'LOCATION'
+          - 'DESTINATION'
+      FilterConfiguration:
+        AllowedLocations:
+          - 'us-east-1'
+          - 'us-west-2'
 ```
 
 ## See also<a name="aws-resource-gamelift-gamesessionqueue--seealso"></a>
-+ [ Create GameLift resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++ [ Create GameLift resources Using Amazon CloudFront](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 + [ Setting up GameLift queues for game session placement](https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-intro.html) in the *Amazon GameLift Developer Guide*
 +  [CreateGameSessionQueue](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateGameSessionQueue.html) in the *Amazon GameLift API Reference* 

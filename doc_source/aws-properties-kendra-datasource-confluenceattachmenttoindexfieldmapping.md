@@ -1,8 +1,6 @@
 # AWS::Kendra::DataSource ConfluenceAttachmentToIndexFieldMapping<a name="aws-properties-kendra-datasource-confluenceattachmenttoindexfieldmapping"></a>
 
-Defines the mapping between a field in the Confluence data source to a Amazon Kendra index field\.
-
-You must first create the index field using the `UpdateIndex` operation\. 
+Maps attributes or field names of Confluence attachments to Amazon Kendra index field names\. To create custom fields, use the `UpdateIndex` API before you map to Confluence fields\. For more information, see [Mapping data source fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html)\. The Confuence data source field names must exist in your Confluence custom metadata\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-confluenceattachmenttoindexfieldmapping-syntax"></a>
 
@@ -30,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DataSourceFieldName`  <a name="cfn-kendra-datasource-confluenceattachmenttoindexfieldmapping-datasourcefieldname"></a>
 The name of the field in the data source\.   
-You must first create the index field using the `UpdateIndex` operation\.   
+You must first create the index field using the `UpdateIndex` API\.   
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `AUTHOR | CONTENT_TYPE | CREATED_DATE | DISPLAY_URL | FILE_SIZE | ITEM_TYPE | PARENT_ID | SPACE_KEY | SPACE_NAME | URL | VERSION`  

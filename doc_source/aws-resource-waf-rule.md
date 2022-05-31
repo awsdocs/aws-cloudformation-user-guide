@@ -1,5 +1,9 @@
 # AWS::WAF::Rule<a name="aws-resource-waf-rule"></a>
 
+**Note**  
+This is ** AWS WAF Classic** documentation\. For more information, see [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF **, use the AWS WAFV2 API and see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
+
 A combination of `ByteMatchSet`, `IPSet`, and/or `SqlInjectionMatchSet` objects that identify the web requests that you want to allow, block, or count\. For example, you might create a `Rule` that includes the following predicates:
 + An `IPSet` that causes AWS WAF to search for web requests that originate from the IP address `192.0.2.44` 
 + A `ByteMatchSet` that causes AWS WAF to search for web requests for which the value of the `User-Agent` header is `BadBot`\.
@@ -37,7 +41,7 @@ Properties:
 ## Properties<a name="aws-resource-waf-rule-properties"></a>
 
 `MetricName`  <a name="cfn-waf-rule-metricname"></a>
-A friendly name or description for the metrics for this `Rule`\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with maximum length 128 and minimum length one\. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default\_Action\." You can't change `MetricName` after you create the `Rule`\.  
+The name of the metrics for this `Rule`\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with maximum length 128 and minimum length one\. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default\_Action\." You can't change `MetricName` after you create the `Rule`\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -74,7 +78,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Associate an IPSet with a Web ACL Rule<a name="aws-resource-waf-rule--examples--Associate_an_IPSet_with_a_Web_ACL_Rule"></a>
 
-The following example associates the `MyIPSetBlacklist` `IPSet` object with a web ACL rule\.
+The following example associates the `MyIPSetDenylist` `IPSet` object with a web ACL rule\.
 
 #### JSON<a name="aws-resource-waf-rule--examples--Associate_an_IPSet_with_a_Web_ACL_Rule--json"></a>
 
@@ -86,7 +90,7 @@ The following example associates the `MyIPSetBlacklist` `IPSet` object with a we
     "MetricName" : "MyIPSetRule",
     "Predicates": [
       {
-        "DataId" : {  "Ref" : "MyIPSetBlacklist" },
+        "DataId" : {  "Ref" : "MyIPSetDenylist" },
         "Negated" : false,
         "Type" : "IPMatch"
       }
@@ -106,7 +110,7 @@ MyIPSetRule:
     Predicates: 
       - 
         DataId: 
-          Ref: "MyIPSetBlacklist"
+          Ref: "MyIPSetDenylist"
         Negated: false
         Type: "IPMatch"
 ```

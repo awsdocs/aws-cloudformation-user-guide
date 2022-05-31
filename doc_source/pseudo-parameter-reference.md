@@ -2,7 +2,7 @@
 
 Pseudo parameters are parameters that are predefined by AWS CloudFormation\. You don't declare them in your template\. Use them the same way as you would a parameter, as the argument for the `Ref` function\.
 
-## Example<a name="w8676ab1c33c33b5"></a>
+## Example<a name="w11339ab1c31c33b5"></a>
 
 The following snippet assigns the value of the `AWS::Region` pseudo parameter to an output value:
 
@@ -22,11 +22,11 @@ Outputs:
     Value: !Ref "AWS::Region"
 ```
 
-## AWS::AccountId<a name="cfn-pseudo-param-accountid"></a>
+## `AWS::AccountId`<a name="cfn-pseudo-param-accountid"></a>
 
 Returns the AWS account ID of the account in which the stack is being created, such as `123456789012`\.
 
-## AWS::NotificationARNs<a name="cfn-pseudo-param-notificationarns"></a>
+## `AWS::NotificationARNs`<a name="cfn-pseudo-param-notificationarns"></a>
 
 Returns the list of notification Amazon Resource Names \(ARNs\) for the current stack\.
 
@@ -74,7 +74,7 @@ myASGrpOne:
       - autoscaling:EC2_INSTANCE_LAUNCH_ERROR
 ```
 
-## AWS::NoValue<a name="cfn-pseudo-param-novalue"></a>
+## `AWS::NoValue`<a name="cfn-pseudo-param-novalue"></a>
 
 Removes the corresponding resource property when specified as a return value in the `Fn::If` intrinsic function\.
 
@@ -127,22 +127,22 @@ MyDB:
       - Ref: AWS::NoValue
 ```
 
-## AWS::Partition<a name="cfn-pseudo-param-partition"></a>
+## `AWS::Partition`<a name="cfn-pseudo-param-partition"></a>
 
 Returns the partition that the resource is in\. For standard AWS Regions, the partition is `aws`\. For resources in other partitions, the partition is `aws-`*partitionname*\. For example, the partition for resources in the China \(Beijing and Ningxia\) Region is `aws-cn` and the partition for resources in the AWS GovCloud \(US\-West\) region is `aws-us-gov`\.
 
-## AWS::Region<a name="cfn-pseudo-param-region"></a>
+## `AWS::Region`<a name="cfn-pseudo-param-region"></a>
 
 Returns a string representing the Region in which the encompassing resource is being created, such as `us-west-2`\.
 
-## AWS::StackId<a name="cfn-pseudo-param-stackid"></a>
+## `AWS::StackId`<a name="cfn-pseudo-param-stackid"></a>
 
 Returns the ID of the stack as specified with the `aws cloudformation create-stack` command, such as `arn:aws:cloudformation:us-west-2:123456789012:stack/teststack/51af3dc0-da77-11e4-872e-1234567db123`\.
 
-## AWS::StackName<a name="cfn-pseudo-param-stackname"></a>
+## `AWS::StackName`<a name="cfn-pseudo-param-stackname"></a>
 
 Returns the name of the stack as specified with the `aws cloudformation create-stack` command, such as `teststack`\.
 
-## AWS::URLSuffix<a name="cfn-pseudo-param-urlsuffix"></a>
+## `AWS::URLSuffix`<a name="cfn-pseudo-param-urlsuffix"></a>
 
 Returns the suffix for a domain\. The suffix is typically `amazonaws.com`, but might differ by Region\. For example, the suffix for the China \(Beijing\) Region is `amazonaws.com.cn`\.

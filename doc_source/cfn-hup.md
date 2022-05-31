@@ -2,7 +2,7 @@
 
 ## Description<a name="cfn-hup-Description"></a>
 
-The cfn\-hup helper is a daemon that detects changes in resource metadata and runs user\-specified actions when a change is detected\. This allows you to make configuration updates on your running Amazon EC2 instances through the UpdateStack API action\.
+The cfn\-hup helper is a daemon that detects changes in resource metadata and runs user\-specified actions when a change is detected\. This allows you to make configuration updates on your running Amazon EC2 instances through the `UpdateStack` API action\.
 
 ## Syntax<a name="cfn-hup-Syntax"></a>
 
@@ -37,10 +37,10 @@ stack=<stack-name-or-id>
 | --- | --- | --- | 
 |   `stack`   |  A stack name or ID\. *Type*: String  |  Yes  | 
 |   `credential-file`   |  An owner\-only credential file, in the same format used for the command line tools\. *Type*: String *Condition*: The `role` parameter supersedes this parameter\.  |  No  | 
-|   `role`   |  The name of an IAM role that is associated with the instance\. *Type*: String  |  No  | 
+|   `role`   |  The name of an IAM role that's associated with the instance\. *Type*: String  |  No  | 
 |   `region`   |  The name of the AWS region containing the stack\. *Example*: `us-east-2`  |  No  | 
-|   `umask`   |  The umask used by the cfn\-hup daemon\. This value can be specified with or without a leading 0\. In both cases, it is interpreted as an octal number \(very similar to the Linux `umask` command\)\. This parameter has no effect on Windows\. *Type*: Octal integer between `0` and `0777` *Default*: `022`, version 1\.4–22 and higher\. The default value of `022` masks group and world write permissions, so files created by the cfn\-hup daemon are not group or world writable by default\. The default value for versions 1\.4–21 and earlier is `0`, which masks nothing\.  |  No  | 
-|   `interval`   |  The interval used to check for changes to the resource metadata in minutes *Type*: Number *Default*: `15`  |  No  | 
+|   `umask`   |  The umask used by the cfn\-hup daemon\. This value can be specified with or without a leading 0\. In both cases, it's interpreted as an octal number \(similar to the Linux `umask` command\)\. This parameter has no effect on Windows\. *Type*: Octal integer between `0` and `0777` *Default*: `022`, version 1\.4–22 and higher\. The default value of `022` masks group and world write permissions, so files created by the cfn\-hup daemon aren't group or world writable by default\. The default value for versions 1\.4 –21 and earlier is `0`, which masks nothing\.  |  No  | 
+|   `interval`   |  The interval used to check for changes to the resource metadata in minutes\. *Type*: Integer *Default*: `15`  |  No  | 
 |   `verbose`   |  Specifies whether to use verbose logging\. *Type*: Boolean *Default*: `false`  |  No  | 
 
 ## hooks\.conf configuration file<a name="cfn-hup-hook-file"></a>
@@ -55,14 +55,14 @@ action=<arbitrary shell command>
 runas=<runas user>
 ```
 
-When the action is run, it is run in a copy of the current environment \(that cfn\-hup is in\), with CFN\_OLD\_METADATA set to the previous value of path, and CFN\_NEW\_METADATA set to the current value\.
+When the operation is run, it is run in a copy of the current environment \(that cfn\-hup is in\), with CFN\_OLD\_METADATA set to the previous value of path, and CFN\_NEW\_METADATA set to the current value\.
 
-The hooks configuration file is loaded at cfn\-hup daemon startup only, so new hooks will require the daemon to be restarted\. A cache of previous metadata values is stored at /var/lib/cfn\-hup/data/metadata\_db— you can delete this cache to force cfn\-hup to run all post\.add actions again\.
+The hooks configuration file is loaded at cfn\-hup daemon start up only, so new hooks will require the daemon to be restarted\. A cache of previous metadata values is stored at /var/lib/cfn\-hup/data/metadata\_db— you can delete this cache to force cfn\-hup to run all post\.add actions again\.
 
 
 | Name | Description | Required | 
 | --- | --- | --- | 
-|   `hookname`   |  A unique name for this hook *Type*: String  |  Yes  | 
+|   `hookname`   |  A unique name for this hook\. *Type*: String  |  Yes  | 
 |   `triggers`   |  A comma\-delimited list of conditions to detect\. *Valid values*: `post.add`, `post.update`, or `post.remove` *Example*: `post.add, post.update`  |  Yes  | 
 |   `path`   |  The path to the metadata object\. Supports an arbitrarily deep path within the Metadata block\.  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-hup.html)  |  Yes  | 
 |   `action`   |  An arbitrary shell command that is run as given\.  |  Yes  | 
@@ -130,6 +130,6 @@ In the following template snippet, CloudFormation triggers the `cfn-auto-reloade
 ...
 ```
 
-### Additional example<a name="w8676ab1c33c42c35c15b8"></a>
+### Additional example<a name="w11339ab1c31c42c35c15b9"></a>
 
 For a sample template, see [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.

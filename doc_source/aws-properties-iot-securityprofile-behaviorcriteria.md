@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ConsecutiveDatapointsToAlarm](#cfn-iot-securityprofile-behaviorcriteria-consecutivedatapointstoalarm)" : Integer,
   "[ConsecutiveDatapointsToClear](#cfn-iot-securityprofile-behaviorcriteria-consecutivedatapointstoclear)" : Integer,
   "[DurationSeconds](#cfn-iot-securityprofile-behaviorcriteria-durationseconds)" : Integer,
+  "[MlDetectionConfig](#cfn-iot-securityprofile-behaviorcriteria-mldetectionconfig)" : MachineLearningDetectionConfig,
   "[StatisticalThreshold](#cfn-iot-securityprofile-behaviorcriteria-statisticalthreshold)" : StatisticalThreshold,
   "[Value](#cfn-iot-securityprofile-behaviorcriteria-value)" : MetricValue
 }
@@ -26,6 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ConsecutiveDatapointsToAlarm](#cfn-iot-securityprofile-behaviorcriteria-consecutivedatapointstoalarm): Integer
   [ConsecutiveDatapointsToClear](#cfn-iot-securityprofile-behaviorcriteria-consecutivedatapointstoclear): Integer
   [DurationSeconds](#cfn-iot-securityprofile-behaviorcriteria-durationseconds): Integer
+  [MlDetectionConfig](#cfn-iot-securityprofile-behaviorcriteria-mldetectionconfig): 
+    MachineLearningDetectionConfig
   [StatisticalThreshold](#cfn-iot-securityprofile-behaviorcriteria-statisticalthreshold): 
     StatisticalThreshold
   [Value](#cfn-iot-securityprofile-behaviorcriteria-value): 
@@ -60,6 +63,12 @@ If an alarm has occurred and the offending device is no longer in violation of t
 Use this to specify the time duration over which the behavior is evaluated, for those criteria that have a time dimension \(for example, `NUM_MESSAGES_SENT`\)\. For a `statisticalThreshhold` metric comparison, measurements from all devices are accumulated over this time duration before being used to calculate percentiles, and later, measurements from an individual device are also accumulated over this time duration before being given a percentile rank\. Cannot be used with list\-based metric datatypes\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MlDetectionConfig`  <a name="cfn-iot-securityprofile-behaviorcriteria-mldetectionconfig"></a>
+The confidence level of the detection model\.  
+*Required*: No  
+*Type*: [MachineLearningDetectionConfig](aws-properties-iot-securityprofile-machinelearningdetectionconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StatisticalThreshold`  <a name="cfn-iot-securityprofile-behaviorcriteria-statisticalthreshold"></a>

@@ -2,7 +2,7 @@
 
 <a name="aws-properties-greengrass-subscriptiondefinitionversion-subscription-description"></a>Subscriptions define how MQTT messages can be exchanged between devices, functions, and connectors in the group, and with AWS IoT or the local shadow service\. A subscription defines a message source, message target, and a topic \(or subject\) that's used to route messages from the source to the target\. A subscription defines the message flow in one direction, from the source to the target\. For two\-way communication, you must set up two subscriptions, one for each direction\.
 
-<a name="aws-properties-greengrass-subscriptiondefinitionversion-subscription-inheritance"></a> In an AWS CloudFormation template, the `Subscriptions` property of the [ `AWS::Greengrass::SubscriptionDefinitionVersion` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinitionversion.html) resource contains a list of `Subscription` property types\.
+<a name="aws-properties-greengrass-subscriptiondefinitionversion-subscription-inheritance"></a> In an AWS CloudFormation template, the `Subscriptions` property of the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinitionversion.html) resource contains a list of `Subscription` property types\.
 
 ## Syntax<a name="aws-properties-greengrass-subscriptiondefinitionversion-subscription-syntax"></a>
 

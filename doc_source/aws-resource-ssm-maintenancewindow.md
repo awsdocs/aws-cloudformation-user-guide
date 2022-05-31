@@ -57,7 +57,7 @@ Enables a maintenance window task to run on managed instances, even if you have 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Cutoff`  <a name="cfn-ssm-maintenancewindow-cutoff"></a>
-The number of hours before the end of the maintenance window that Systems Manager stops scheduling new tasks for execution\.  
+The number of hours before the end of the maintenance window that AWS Systems Manager stops scheduling new tasks for execution\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -104,7 +104,7 @@ The schedule of the maintenance window in the form of a cron or rate expression\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduleOffset`  <a name="cfn-ssm-maintenancewindow-scheduleoffset"></a>
-The number of days to wait to run a maintenance window after the scheduled CRON expression date and time\.  
+The number of days to wait to run a maintenance window after the scheduled cron expression date and time\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  

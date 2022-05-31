@@ -29,9 +29,9 @@ For more information, see the [CloudTrail userIdentity element](https://docs.aws
 
 ## Understanding CloudFormation log file entries<a name="understanding_cloudformation_entries"></a>
 
-A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source and includes information about the requested action, the date and time of the action, request parameters, and so on\. CloudTrail log files are not an ordered stack trace of the public API calls, so they don't appear in any specific order\.
+A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source and includes information about the requested operation, the date and time of the operation, request parameters, and so on\. CloudTrail log files aren't an ordered stack trace of the public API calls, so they don't appear in any specific order\.
 
-The following example shows a CloudTrail log entry that demonstrates the `CreateStack` action\. The action was made by an IAM user named Alice\.
+The following example shows a CloudTrail log entry that demonstrates the `CreateStack` operation\. The operation was made by an IAM user named Alice\.
 
 **Note**  
 Only the input parameter key names are logged; no parameter values are logged\.
@@ -80,7 +80,7 @@ Only the input parameter key names are logged; no parameter values are logged\.
 }
 ```
 
-The following example shows that Alice called the `UpdateStack` action on the `my-test-stack` stack:
+The following example shows that Alice called the `UpdateStack` operation on the `my-test-stack` stack:
 
 ```
 {
@@ -119,7 +119,7 @@ The following example shows that Alice called the `UpdateStack` action on the `m
 }
 ```
 
-The following example shows that Alice called the `ListStacks` action\.
+The following example shows that Alice called the `ListStacks` operation\.
 
 ```
 {
@@ -145,7 +145,7 @@ The following example shows that Alice called the `ListStacks` action\.
 }
 ```
 
-The following example shows that Alice called the `DescribeStacks` action on the `my-test-stack` stack\.
+The following example shows that Alice called the `DescribeStacks` operation on the `my-test-stack` stack\.
 
 ```
 {
@@ -173,7 +173,7 @@ The following example shows that Alice called the `DescribeStacks` action on the
 }
 ```
 
-The following example shows that Alice called the `DeleteStack` action on the `my-test-stack` stack\.
+The following example shows that Alice called the `DeleteStack` operation on the `my-test-stack` stack\.
 
 ```
 {

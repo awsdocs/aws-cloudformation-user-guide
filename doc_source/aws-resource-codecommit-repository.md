@@ -40,7 +40,7 @@ Properties:
 
 `Code`  <a name="cfn-codecommit-repository-code"></a>
 Information about code to be committed to a repository after it is created in an AWS CloudFormation stack\. Information about code is only used in resource creation\. Updates to a stack will not reflect changes made to code properties after initial resource creation\.   
-You can only use this property to add code when creating a repository with a CloudFormation template at creation time\. This property cannot be used for updating code to an existing repository\.
+You can only use this property to add code when creating a repository with a AWS CloudFormation template at creation time\. This property cannot be used for updating code to an existing repository\.
 *Required*: No  
 *Type*: [Code](aws-properties-codecommit-repository-code.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -55,7 +55,7 @@ The description field for a repository accepts all HTML characters and all valid
 
 `RepositoryName`  <a name="cfn-codecommit-repository-repositoryname"></a>
 The name of the new repository to be created\.  
-The repository name must be unique across the calling AWS account\. Repository names are limited to 100 alphanumeric, dash, and underscore characters, and cannot include certain characters\. For more information about the limits on repository names, see [Limits](https://docs.aws.amazon.com/codecommit/latest/userguide/limits.html) in the *AWS CodeCommit User Guide*\. The suffix \.git is prohibited\.
+The repository name must be unique across the calling AWS account\. Repository names are limited to 100 alphanumeric, dash, and underscore characters, and cannot include certain characters\. For more information about the limits on repository names, see [Quotas](https://docs.aws.amazon.com/codecommit/latest/userguide/limits.html) in the * AWS CodeCommit User Guide*\. The suffix \.git is prohibited\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -105,7 +105,7 @@ When you pass the logical ID of this resource, the function returns the reposito
 
 ## Examples<a name="aws-resource-codecommit-repository--examples"></a>
 
-The following examples can help you create CodeCommit repositories using CloudFormation\.
+The following examples can help you create CodeCommit repositories using AWS CloudFormation\.
 
 ### Example<a name="aws-resource-codecommit-repository--examples--Example"></a>
 
@@ -144,8 +144,8 @@ MyRepo:
     Code:
       BranchName: development
       S3: 
-        Bucket: MySourceCodeBucket,
-        Key: MyKey,
+        Bucket: MySourceCodeBucket
+        Key: MyKey
         ObjectVersion: 1
 ```
 

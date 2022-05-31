@@ -1,6 +1,6 @@
 # AWS::DataBrew::Recipe S3Location<a name="aws-properties-databrew-recipe-s3location"></a>
 
-Represents an Amazon S3 location \(bucket name and object key\) where DataBrew can read input data, or write output from a job\.
+Represents an Amazon S3 location \(bucket name, bucket owner, and object key\) where DataBrew can read input data, or write output from a job\.
 
 ## Syntax<a name="aws-properties-databrew-recipe-s3location-syntax"></a>
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-databrew-recipe-s3location-properties"></a>
 
 `Bucket`  <a name="cfn-databrew-recipe-s3location-bucket"></a>
-The S3 bucket name\.  
+The Amazon S3 bucket name\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `3`  

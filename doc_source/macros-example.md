@@ -6,7 +6,7 @@ In this example, we create a simple macro that inserts the specified string in p
 
 ## Macro example: Macro definition template<a name="macros-example-definiton"></a>
 
-Before using a macro, we first have to do two things: create the Lambda function that performs the desired template processing, and then make that Lambda function available to CloudFormation by creating a macro definition\.
+Before using a macro, we first have to complete two things: create the Lambda function that performs the desired template processing, and then make that Lambda function available to CloudFormation by creating a macro definition\.
 
 **Note**  
 We'll examine the actual code for the Lambda function later in this topic\.
@@ -60,23 +60,23 @@ Resources:
 When CloudFormation processes our example template during stack creation, it passes the following event mapping to the Lambda function referenced in the **JavaMacroFunc** macro definition\.
 
 `fragment` contains JSON representing the template fragment that the macro can process\. This fragment consists of the siblings of the `Fn::Transform` function call, but not the function call itself\. Also, `params` contains JSON representing the macro parameters\. In this case, replacement and target\. Similarly, `templateParameterValues` contains JSON representing the parameters specified for the template as a whole\.
-+ region
++ `region`
 
   `us-east-1`
-+ accountId
++ `accountId`
 
   `012345678910`
-+ fragment
++ `fragment`
 
   ```
   {
     "Type": "$$REPLACEMENT$$"
   }
   ```
-+ transformId
++ `transformId`
 
   `012345678910::JavaMacroFunc`
-+ params
++ `params`
 
   ```
   {
@@ -84,10 +84,10 @@ When CloudFormation processes our example template during stack creation, it pas
       "target": "$$REPLACEMENT$$"
   }
   ```
-+ requestId
++ `requestId`
 
   `5dba79b5-f117-4de0-9ce4-d40363bfb6ab`
-+ templateParameterValues
++ `templateParameterValues`
 
   ```
   {
@@ -204,13 +204,13 @@ public class LambdaFunctionHandler implements RequestHandler<Map<String, Object>
 ## Macro example: Lambda function response<a name="macros-example-response"></a>
 
 Following is the mapping that the Lambda function returns to AWS CloudFormation for processing\. The `requestId` matches that sent from CloudFormation, and a `status` value of `SUCCESS` denotes that the Lambda function successfully processed the template fragment included in the request\. In this response, `fragment` contains JSON representing the content to insert into the processed template in place of the original template snippet\.
-+ requestId
++ `requestId`
 
   `5dba79b5-f117-4de0-9ce4-d40363bfb6ab`
-+ status
++ `status`
 
   `SUCCESS`
-+ fragment
++ `fragment`
 
   ```
   {

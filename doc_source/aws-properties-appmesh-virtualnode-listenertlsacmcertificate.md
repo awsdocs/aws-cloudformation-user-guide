@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualNode ListenerTlsAcmCertificate<a name="aws-properties-appmesh-virtualnode-listenertlsacmcertificate"></a>
 
-An object that represents an AWS Certicate Manager \(ACM\) certificate\.
+An object that represents an AWS Certificate Manager certificate\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualnode-listenertlsacmcertificate-syntax"></a>
 

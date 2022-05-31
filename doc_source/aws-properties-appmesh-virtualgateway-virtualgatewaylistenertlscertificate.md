@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlscertificate-properties"></a>
 
 `ACM`  <a name="cfn-appmesh-virtualgateway-virtualgatewaylistenertlscertificate-acm"></a>
-A reference to an object that represents an AWS Certicate Manager \(ACM\) certificate\.  
+A reference to an object that represents an AWS Certificate Manager certificate\.  
 *Required*: No  
 *Type*: [VirtualGatewayListenerTlsAcmCertificate](aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsacmcertificate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

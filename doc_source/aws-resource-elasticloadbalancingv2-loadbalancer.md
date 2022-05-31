@@ -49,7 +49,7 @@ Properties:
 ## Properties<a name="aws-resource-elasticloadbalancingv2-loadbalancer-properties"></a>
 
 `IpAddressType`  <a name="cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype"></a>
-The IP address type\. The possible values are `ipv4` \(for IPv4 addresses\) and `dualstack` \(for IPv4 and IPv6 addresses\)\. Internal load balancers must use `ipv4`\. You can’t specify `dualstack` for a load balancer with a UDP or TCP\_UDP listener\.  
+The IP address type\. The possible values are `ipv4` \(for IPv4 addresses\) and `dualstack` \(for IPv4 and IPv6 addresses\)\. You can’t specify `dualstack` for a load balancer with a UDP or TCP\_UDP listener\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `dualstack | ipv4`  
@@ -86,7 +86,7 @@ You cannot specify a scheme for a Gateway Load Balancer\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetMappings`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnetmappings"></a>
-The IDs of the public subnets\. You can specify only one subnet per Availability Zone\. You must specify either subnets or subnet mappings\.  
+The IDs of the public subnets\. You can specify only one subnet per Availability Zone\. You must specify either subnets or subnet mappings, but not both\.  
 \[Application Load Balancers\] You must specify subnets from at least two Availability Zones\. You cannot specify Elastic IP addresses for your subnets\.  
 \[Application Load Balancers on Outposts\] You must specify one Outpost subnet\.  
 \[Application Load Balancers on Local Zones\] You can specify subnets from one or more Local Zones\.  
@@ -97,9 +97,12 @@ The IDs of the public subnets\. You can specify only one subnet per Availability
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Subnets`  <a name="cfn-elasticloadbalancingv2-loadbalancer-subnets"></a>
-The IDs of the subnets\. You can specify only one subnet per Availability Zone\. You must specify either subnets or subnet mappings\.  
-\[Application Load Balancers\] You must specify subnets from at least two Availability Zones\. When you specify subnets for an existing Application Load Balancer, they replace the previously enabled subnets\.  
-\[Network Load Balancers\] You can specify subnets from one or more Availability Zones when you create the load balancer\.   
+The IDs of the public subnets\. You can specify only one subnet per Availability Zone\. You must specify either subnets or subnet mappings, but not both\. To specify an Elastic IP address, specify subnet mappings instead of subnets\.  
+\[Application Load Balancers\] You must specify subnets from at least two Availability Zones\.  
+\[Application Load Balancers on Outposts\] You must specify one Outpost subnet\.  
+\[Application Load Balancers on Local Zones\] You can specify subnets from one or more Local Zones\.  
+\[Network Load Balancers\] You can specify subnets from one or more Availability Zones\.  
+\[Gateway Load Balancers\] You can specify subnets from one or more Availability Zones\.  
 *Required*: Conditional  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

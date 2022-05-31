@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-cluster-executecommandlogconfiguration-properties"></a>
 
 `CloudWatchEncryptionEnabled`  <a name="cfn-ecs-cluster-executecommandlogconfiguration-cloudwatchencryptionenabled"></a>
-Whether or not to enable encryption on the CloudWatch logs\. If not specified, encryption will be disabled\.  
+Determines whether to use encryption on the CloudWatch logs\. If not specified, encryption will be disabled\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -51,7 +51,7 @@ The S3 bucket must already be created\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3EncryptionEnabled`  <a name="cfn-ecs-cluster-executecommandlogconfiguration-s3encryptionenabled"></a>
-Whether or not to enable encryption on the CloudWatch logs\. If not specified, encryption will be disabled\.  
+Determines whether to use encryption on the S3 logs\. If not specified, encryption is not used\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

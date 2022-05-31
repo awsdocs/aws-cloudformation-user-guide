@@ -1,6 +1,6 @@
 # AWS::Lambda::LayerVersionPermission<a name="aws-resource-lambda-layerversionpermission"></a>
 
-The `AWS::Lambda::LayerVersionPermission` resource adds permissions to the resource\-based policy of a version of an [AWS Lambda layer](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)\. Use this action to grant layer usage permission to other accounts\. You can grant permission to a single account, all AWS accounts, or all accounts in an organization\.
+The `AWS::Lambda::LayerVersionPermission` resource adds permissions to the resource\-based policy of a version of an [Lambda layer](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)\. Use this action to grant layer usage permission to other accounts\. You can grant permission to a single account, all AWS accounts, or all accounts in an organization\.
 
 **Important**  
 Since the release of the [UpdateReplacePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatereplacepolicy.html) both `UpdateReplacePolicy` and `DeletionPolicy` are required to protect your Resources/LayerPermissions from deletion\.

@@ -1,6 +1,6 @@
 # AWS::Glue::SchemaVersion<a name="aws-resource-glue-schemaversion"></a>
 
-The AWS::Glue::SchemaVersion is an AWS Glue resource type that manages schema versions of schemas in the AWS Glue Schema Registry\.
+The `AWS::Glue::SchemaVersion` is an AWS Glue resource type that manages schema versions of schemas in the AWS Glue Schema Registry\.
 
 ## Syntax<a name="aws-resource-glue-schemaversion-syntax"></a>
 

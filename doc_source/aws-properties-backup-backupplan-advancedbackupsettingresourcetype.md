@@ -1,6 +1,6 @@
 # AWS::Backup::BackupPlan AdvancedBackupSettingResourceType<a name="aws-properties-backup-backupplan-advancedbackupsettingresourcetype"></a>
 
-Specifies an object containing resource type and backup options\. This is only Supported for Windows VSS Backups\.
+Specifies an object containing resource type and backup options\. This is only supported for Windows VSS backups\.
 
 ## Syntax<a name="aws-properties-backup-backupplan-advancedbackupsettingresourcetype-syntax"></a>
 

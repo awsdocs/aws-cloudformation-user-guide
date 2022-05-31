@@ -1,6 +1,6 @@
 # AWS::Budgets::BudgetsAction SsmActionDefinition<a name="aws-properties-budgets-budgetsaction-ssmactiondefinition"></a>
 
-The AWS Systems Manager \(SSM\) action definition details\.
+The Amazon EC2 Systems Manager \(SSM\) action definition details\.
 
 ## Syntax<a name="aws-properties-budgets-budgetsaction-ssmactiondefinition-syntax"></a>
 
@@ -35,7 +35,7 @@ The EC2 and RDS instance IDs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Region`  <a name="cfn-budgets-budgetsaction-ssmactiondefinition-region"></a>
-The Region to run the SSM document\.  
+The Region to run the \(SSM\) document\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `9`  

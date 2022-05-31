@@ -5,6 +5,9 @@ Use `InstanceFleetConfig` to define instance fleets for an EMR cluster\. A clust
 **Note**  
 The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\.
 
+**Important**  
+You can currently only add a task instance fleet to a cluster with this resource\. If you use this resource, CloudFormation waits for the cluster launch to complete before adding the task instance fleet to the cluster\. In order to add a task instance fleet to the cluster as part of the cluster launch and minimize delays in provisioning task nodes, use the `TaskInstanceFleets` subproperty for the [AWS::EMR::Cluster JobFlowInstancesConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html) property instead\. To use this subproperty, see [AWS::EMR::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html) for examples\.
+
 ## Syntax<a name="aws-resource-elasticmapreduce-instancefleetconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -58,7 +61,7 @@ The node type that the instance fleet hosts\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceTypeConfigs`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancetypeconfigs"></a>
-`InstanceTypeConfigs` determine the EC2 instances that Amazon EMR attempts to provision to fulfill On\-Demand and Spot target capacities\. There can be a maximum of 5 instance type configurations in a fleet, each one specified using an `InstanceTypeConfig`\.  
+`InstanceTypeConfigs` determine the EC2 instances that Amazon EMR attempts to provision to fulfill On\-Demand and Spot target capacities\.  
 The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\.
 *Required*: No  
 *Type*: List of [InstanceTypeConfig](aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.md)  

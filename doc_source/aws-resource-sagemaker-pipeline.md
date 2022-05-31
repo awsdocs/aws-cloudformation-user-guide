@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::Pipeline",
   "Properties" : {
+      "[ParallelismConfiguration](#cfn-sagemaker-pipeline-parallelismconfiguration)" : Json,
       "[PipelineDefinition](#cfn-sagemaker-pipeline-pipelinedefinition)" : Json,
       "[PipelineDescription](#cfn-sagemaker-pipeline-pipelinedescription)" : String,
       "[PipelineDisplayName](#cfn-sagemaker-pipeline-pipelinedisplayname)" : String,
@@ -27,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SageMaker::Pipeline
 Properties: 
+  [ParallelismConfiguration](#cfn-sagemaker-pipeline-parallelismconfiguration): Json
   [PipelineDefinition](#cfn-sagemaker-pipeline-pipelinedefinition): Json
   [PipelineDescription](#cfn-sagemaker-pipeline-pipelinedescription): String
   [PipelineDisplayName](#cfn-sagemaker-pipeline-pipelinedisplayname): String
@@ -37,6 +39,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-sagemaker-pipeline-properties"></a>
+
+`ParallelismConfiguration`  <a name="cfn-sagemaker-pipeline-parallelismconfiguration"></a>
+The parallelism configuration applied to the pipeline\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PipelineDefinition`  <a name="cfn-sagemaker-pipeline-pipelinedefinition"></a>
 The definition of the pipeline\. This can be either a JSON string or an Amazon S3 location\.  

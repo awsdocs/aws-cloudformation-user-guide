@@ -1,18 +1,18 @@
-# Metadata attribute<a name="aws-attribute-metadata"></a>
+# `Metadata` attribute<a name="aws-attribute-metadata"></a>
 
-The Metadata attribute enables you to associate structured data with a resource\. By adding a Metadata attribute to a resource, you can add data in JSON or YAML to the resource declaration\. In addition, you can use intrinsic functions \(such as [GetAtt](intrinsic-function-reference-getatt.md) and [Ref](intrinsic-function-reference-ref.md)\), parameters, and pseudo parameters within the Metadata attribute to add those interpreted values\.
+The metadata attribute enables you to associate structured data with a resource\. By adding a metadata attribute to a resource, you can add data in JSON or YAML to the resource declaration\. In addition, you can use intrinsic functions \(such as [GetAtt](intrinsic-function-reference-getatt.md) and [Ref](intrinsic-function-reference-ref.md)\), parameters, and pseudo parameters within the metadata attribute to add those interpreted values\.
 
 **Note**  
-AWS CloudFormation doesn't validate the syntax within the Metadata attribute\.
+AWS CloudFormation doesn't validate the syntax within the metadata attribute\.
 
 **Important**  
-CloudFormation doesn't redact or obfuscate any information you include in the Metadata attribute\. We strongly recommend you don't use this section to store sensitive information, such as passwords or secrets\.
+CloudFormation doesn't redact or obfuscate any information you include in the metadata attribute\. We strongly recommend you don't use this section to store sensitive information, such as passwords or secrets\.
 
-You can retrieve this data using the AWS command [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-resource.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-resource.html) or the [DescribeStackResource action](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStackResource.html)\.
+You can retrieve this data using the AWS Command Line Interface command [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-resource.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-resource.html) or the [DescribeStackResource](http://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeStackResource.html) operation\.
 
-## Example<a name="w8676ab1c33c23c19c11"></a>
+## Example<a name="aws-attribute-metadata-example"></a>
 
-The following template contains an Amazon S3 bucket resource with a Metadata attribute\.
+The following template contains an Amazon S3 bucket resource with a metadata attribute\.
 
 ### JSON<a name="aws-attribute-metadata-example.json"></a>
 

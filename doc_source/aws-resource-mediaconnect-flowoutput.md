@@ -2,8 +2,6 @@
 
 The AWS::MediaConnect::FlowOutput resource defines the destination address, protocol, and port that AWS Elemental MediaConnect sends the ingested video to\. Each flow can have up to 50 outputs\. An output can have the same protocol or a different protocol from the source\.
 
-Note: MediaConnect does not currently support using CloudFormation to add outputs that use the SRT\-listener protocol\.
-
 ## Syntax<a name="aws-resource-mediaconnect-flowoutput-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -20,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Encryption](#cfn-mediaconnect-flowoutput-encryption)" : Encryption,
       "[FlowArn](#cfn-mediaconnect-flowoutput-flowarn)" : String,
       "[MaxLatency](#cfn-mediaconnect-flowoutput-maxlatency)" : Integer,
+      "[MinLatency](#cfn-mediaconnect-flowoutput-minlatency)" : Integer,
       "[Name](#cfn-mediaconnect-flowoutput-name)" : String,
       "[Port](#cfn-mediaconnect-flowoutput-port)" : Integer,
       "[Protocol](#cfn-mediaconnect-flowoutput-protocol)" : String,
@@ -44,6 +43,7 @@ Properties:
     Encryption
   [FlowArn](#cfn-mediaconnect-flowoutput-flowarn): String
   [MaxLatency](#cfn-mediaconnect-flowoutput-maxlatency): Integer
+  [MinLatency](#cfn-mediaconnect-flowoutput-minlatency): Integer
   [Name](#cfn-mediaconnect-flowoutput-name): String
   [Port](#cfn-mediaconnect-flowoutput-port): Integer
   [Protocol](#cfn-mediaconnect-flowoutput-protocol): String
@@ -92,8 +92,14 @@ The maximum latency in milliseconds for Zixi\-based streams\.
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`MinLatency`  <a name="cfn-mediaconnect-flowoutput-minlatency"></a>
+The minimum latency in milliseconds for SRT\-based streams\. In streams that use the SRT protocol, this value that you set on your MediaConnect source or output represents the minimal potential latency of that connection\. The latency of the stream is set to the highest number between the sender’s minimum latency and the receiver’s minimum latency\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Name`  <a name="cfn-mediaconnect-flowoutput-name"></a>
-The name of the output\. This value must be unique within the current flow\.  
+The name of the VPC interface\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -2,7 +2,7 @@
 
 Creates an Amazon EKS add\-on\.
 
-Amazon EKS add\-ons help to automate the provisioning and lifecycle management of common operational software for Amazon EKS clusters\. Amazon EKS add\-ons can only be used with Amazon EKS clusters running version 1\.18 with platform version `eks.3` or later because add\-ons rely on the Server\-side Apply Kubernetes feature, which is only available in Kubernetes 1\.18 and later\.
+Amazon EKS add\-ons help to automate the provisioning and lifecycle management of common operational software for Amazon EKS clusters\. Amazon EKS add\-ons require clusters running version 1\.18 or later because Amazon EKS add\-ons rely on the Server\-side Apply Kubernetes feature, which is only available in Kubernetes 1\.18 and later\. For more information, see [Amazon EKS add\-ons](https://docs.aws.amazon.com/eks/latest/userguide/eks-add-ons.html) in the *Amazon EKS User Guide*\.
 
 ## Syntax<a name="aws-resource-eks-addon-syntax"></a>
 
@@ -91,7 +91,7 @@ The metadata that you apply to the add\-on to assist with categorization and org
 
  `{ "Ref": "vpc-cni" }` 
 
-For the add\-on `vpc-cni`, `Ref` returns the name of the add\-on\. For example, `<cluster_name>|<vpc-cni>`\.
+For the add\-on `vpc-cni`, `Ref` returns the name of the add\-on\. For example, `cluster-name|vpc-cni`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -105,3 +105,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The ARN of the add\-on, such as `arn:aws:eks:us-west-2:111122223333:addon/1-19/vpc-cni/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`\.
+
+## See also<a name="aws-resource-eks-addon--seealso"></a>
++  [Amazon EKS add\-ons](https://docs.aws.amazon.com/eks/latest/userguide/eks-add-ons.html) in the *Amazon EKS User Guide*\.
++  [https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateAddon.html](https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateAddon.html) in the *Amazon EKS API Reference*\.

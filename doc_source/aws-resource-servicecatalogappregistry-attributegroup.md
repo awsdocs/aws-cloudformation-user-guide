@@ -53,7 +53,7 @@ The name of the attribute group\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  
-*Pattern*: `\w+`  
+*Pattern*: `[-.\w]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-servicecatalogappregistry-attributegroup-tags"></a>

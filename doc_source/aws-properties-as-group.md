@@ -1,6 +1,6 @@
 # AWS::AutoScaling::AutoScalingGroup<a name="aws-properties-as-group"></a>
 
-The AWS::AutoScaling::AutoScalingGroup resource defines an Amazon EC2 Auto Scaling group, which is a collection of Amazon EC2 instances that are treated as a logical grouping for the purposes of automatic scaling and management\.
+The `AWS::AutoScaling::AutoScalingGroup` resource defines an Amazon EC2 Auto Scaling group, which is a collection of Amazon EC2 instances that are treated as a logical grouping for the purposes of automatic scaling and management\.
 
 **Note**  
 Amazon EC2 Auto Scaling configures instances launched as part of an Auto Scaling group using either a launch template or a launch configuration\. We recommend that you use a launch template to make sure that you can use the latest features of Amazon EC2, such as Dedicated Hosts and T2 Unlimited instances\. For more information, see [Creating a launch template for an Auto Scaling group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html)\. You can find sample launch templates in [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)\.
@@ -20,8 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AutoScalingGroupName](#cfn-autoscaling-autoscalinggroup-autoscalinggroupname)" : String,
       "[AvailabilityZones](#cfn-as-group-availabilityzones)" : [ String, ... ],
       "[CapacityRebalance](#cfn-as-group-capacityrebalance)" : Boolean,
+      "[Context](#cfn-as-group-context)" : String,
       "[Cooldown](#cfn-as-group-cooldown)" : String,
       "[DesiredCapacity](#cfn-as-group-desiredcapacity)" : String,
+      "[DesiredCapacityType](#cfn-as-group-desiredcapacitytype)" : String,
       "[HealthCheckGracePeriod](#cfn-as-group-healthcheckgraceperiod)" : Integer,
       "[HealthCheckType](#cfn-as-group-healthchecktype)" : String,
       "[InstanceId](#cfn-as-group-instanceid)" : String,
@@ -55,8 +57,10 @@ Properties:
   [AvailabilityZones](#cfn-as-group-availabilityzones): 
     - String
   [CapacityRebalance](#cfn-as-group-capacityrebalance): Boolean
+  [Context](#cfn-as-group-context): String
   [Cooldown](#cfn-as-group-cooldown): String
   [DesiredCapacity](#cfn-as-group-desiredcapacity): String
+  [DesiredCapacityType](#cfn-as-group-desiredcapacitytype): String
   [HealthCheckGracePeriod](#cfn-as-group-healthcheckgraceperiod): Integer
   [HealthCheckType](#cfn-as-group-healthchecktype): String
   [InstanceId](#cfn-as-group-instanceid): String
@@ -107,9 +111,15 @@ A list of Availability Zones where instances in the Auto Scaling group can be cr
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CapacityRebalance`  <a name="cfn-as-group-capacityrebalance"></a>
-Indicates whether Capacity Rebalancing is enabled\. For more information, see [Amazon EC2 Auto Scaling Capacity Rebalancing](https://docs.aws.amazon.com/autoscaling/ec2/userguide/capacity-rebalance.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
+Indicates whether Capacity Rebalancing is enabled\. For more information, see [Amazon EC2 Auto Scaling Capacity Rebalancing](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-capacity-rebalancing.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Context`  <a name="cfn-as-group-context"></a>
+Reserved\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Cooldown`  <a name="cfn-as-group-cooldown"></a>
@@ -126,8 +136,19 @@ CloudFormation marks the Auto Scaling group as successful \(by setting its statu
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`DesiredCapacityType`  <a name="cfn-as-group-desiredcapacitytype"></a>
+The unit of measurement for the value specified for desired capacity\. Amazon EC2 Auto Scaling supports `DesiredCapacityType` for attribute\-based instance type selection only\. For more information, see [Creating an Auto Scaling group using attribute\-based instance type selection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
+By default, Amazon EC2 Auto Scaling specifies `units`, which translates into number of instances\.  
+Valid values: `units` \| `vcpu` \| `memory-mib`  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `HealthCheckGracePeriod`  <a name="cfn-as-group-healthcheckgraceperiod"></a>
-The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service\. The default value is `0`\. For more information, see [Health checks for Auto Scaling instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
+The amount of time, in seconds, that Amazon EC2 Auto Scaling waits before checking the health status of an EC2 instance that has come into service and marking it unhealthy due to a failed health check\. The default value is `0`\. For more information, see [Health checks for Auto Scaling instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html) in the *Amazon EC2 Auto Scaling User Guide*\.   
 If you are adding an `ELB` health check, you must specify this property\.  
 *Required*: Conditional  
 *Type*: Integer  
@@ -201,7 +222,7 @@ The minimum size of the group\.
 `MixedInstancesPolicy`  <a name="cfn-as-group-mixedinstancespolicy"></a>
 An embedded object that specifies a mixed instances policy\.  
 The policy includes properties that not only define the distribution of On\-Demand Instances and Spot Instances, the maximum price to pay for Spot Instances \(optional\), and how the Auto Scaling group allocates instance types to fulfill On\-Demand and Spot capacities, but also the properties that specify the instance configuration information—the launch template and instance types\. The policy can also include a weight for each instance type and different launch templates for individual instance types\.  
-For more information, see [Auto Scaling groups with multiple instance types and purchase options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
+For more information, see [Auto Scaling groups with multiple instance types and purchase options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 If you specify `LaunchTemplate`, `InstanceId`, or `LaunchConfigurationName`, don't specify `MixedInstancesPolicy`\.  
 *Required*: Conditional  
 *Type*: [MixedInstancesPolicy](aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy.md)  
@@ -220,13 +241,14 @@ Configures an Auto Scaling group to send notifications when specified events tak
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PlacementGroup`  <a name="cfn-as-group-placementgroup"></a>
-The name of the placement group into which you want to launch your instances\. A placement group is a logical grouping of instances within a single Availability Zone\. For more information, see [Placement Groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+The name of the placement group into which you want to launch your instances\. For more information, see [Placement groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+A *cluster* placement group is a logical grouping of instances within a single Availability Zone\. You cannot specify multiple Availability Zones and a cluster placement group\. 
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceLinkedRoleARN`  <a name="cfn-autoscaling-autoscalinggroup-servicelinkedrolearn"></a>
-The Amazon Resource Name \(ARN\) of the service\-linked role that the Auto Scaling group uses to call other AWS services on your behalf\. By default, Amazon EC2 Auto Scaling uses a service\-linked role named AWSServiceRoleForAutoScaling, which it creates if it does not exist\. For more information, see [Service\-linked roles for Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-service-linked-role.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
+The Amazon Resource Name \(ARN\) of the service\-linked role that the Auto Scaling group uses to call other AWS services on your behalf\. By default, Amazon EC2 Auto Scaling uses a service\-linked role named `AWSServiceRoleForAutoScaling`, which it creates if it does not exist\. For more information, see [Service\-linked roles for Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-service-linked-role.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -252,7 +274,7 @@ A policy or a list of policies that are used to select the instances to terminat
 `VPCZoneIdentifier`  <a name="cfn-as-group-vpczoneidentifier"></a>
 A list of subnet IDs for a virtual private cloud \(VPC\) where instances in the Auto Scaling group can be created\. If you specify `VPCZoneIdentifier` with `AvailabilityZones`, the subnets that you specify for this property must reside in those Availability Zones\.   
 If this resource specifies public subnets and is also in a VPC that is defined in the same stack template, you must use the [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to declare a dependency on the [VPC\-gateway attachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html)\.  
-When you update `VPCZoneIdentifier`, this retains the same Auto Scaling group and replaces old instances with new ones, according to the specified subnets\. You can optionally specify how AWS CloudFormation handles these updates by using an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html)\.
+When you update `VPCZoneIdentifier`, this retains the same Auto Scaling group and replaces old instances with new ones, according to the specified subnets\. You can optionally specify how CloudFormation handles these updates by using an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html)\.
 *Required*: Conditional  
 *Type*: List of String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
@@ -271,6 +293,8 @@ When you update the launch template or launch configuration for an Auto Scaling 
 
 You can add an [UpdatePolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html) to your stack to perform rolling updates \(or replace the group\) when a change has been made to the group\. You can find sample update policies for rolling updates in [Auto scaling template snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)\. Alternatively, you can force a rolling update on your instances at any time after updating the stack by starting an instance refresh\. For more information, see [Replacing Auto Scaling instances based on an instance refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
+You can use a [CreationPolicy attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-creationpolicy.html) with an Auto Scaling group to prevent its status from reaching create complete until CloudFormation receives a specified number of success signals\. For more information, see [Use a CreationPolicy to Wait for On\-Instance Configurations](http://aws.amazon.com/blogs/devops/use-a-creationpolicy-to-wait-for-on-instance-configurations/) on the AWS DevOps Blog\.
+
 Note that Amazon EC2 Auto Scaling provides scaling activities to help you monitor the progress of your Auto Scaling group and to assist in troubleshooting any configuration issues when launching Amazon EC2 instances\. For more information, see [Verifying a scaling activity for an Auto Scaling group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-verify-scaling-activity.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 ## Examples<a name="aws-properties-as-group--examples"></a>
@@ -285,7 +309,7 @@ The following example creates an Auto Scaling group with a single instance and a
 
 The launch template provisions T2 instances in unlimited mode using the `CPUCredits` property\. The stack references a [parameter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html) to specify the launch template version\. Parameters are variables that you can specify when you create or update the stack\.
 
-CloudFormation supports parameters from the AWS Systems Manager Parameter Store\. In this example, the `ImageId` property of the AWS::EC2::LaunchTemplate references the latest Amazon Linux 2 AMI from the Parameter Store\. For more information, see [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) in the *AWS Systems Manager User Guide* and the blog post [Query for the latest Amazon Linux AMI IDs using AWS Systems Manager Parameter Store](http://aws.amazon.com/blogs/compute/query-for-the-latest-amazon-linux-ami-ids-using-aws-systems-manager-parameter-store/) on the AWS Compute Blog\.
+CloudFormation supports parameters from the AWS Systems Manager Parameter Store\. In this example, the `ImageId` property of the `AWS::EC2::LaunchTemplate` references the latest Amazon Linux 2 AMI from the Parameter Store\. For more information, see [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) in the *AWS Systems Manager User Guide* and the blog post [Query for the latest Amazon Linux AMI IDs using AWS Systems Manager Parameter Store](http://aws.amazon.com/blogs/compute/query-for-the-latest-amazon-linux-ami-ids-using-aws-systems-manager-parameter-store/) on the AWS Compute Blog\.
 
 #### JSON<a name="aws-properties-as-group--examples--Single_instance_Auto_Scaling_group_with_a_parameters_section--json"></a>
 
@@ -350,8 +374,8 @@ AWSTemplateFormatVersion: '2010-09-09'
 Parameters:
   LatestAmiId:
     Description: Region specific image from the Parameter Store
-    Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
-    Default: '/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2'
+    Type: "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>"
+    Default: "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
   myLaunchTemplateVersionNumber:
     Type: String
   Subnets:
@@ -514,7 +538,7 @@ Resources:
 ```
 
 ## See also<a name="aws-properties-as-group--seealso"></a>
-+ [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
-+ [AWS CloudFormation stack updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)
++  [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) 
++  [AWS CloudFormation stack updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 
 + [Suspending and resuming scaling processes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html) in the *Amazon EC2 Auto Scaling User Guide*
 

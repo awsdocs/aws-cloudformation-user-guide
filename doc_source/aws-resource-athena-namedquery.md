@@ -1,9 +1,6 @@
 # AWS::Athena::NamedQuery<a name="aws-resource-athena-namedquery"></a>
 
-The `AWS::Athena::NamedQuery` resource specifies an Amazon Athena saved query, where `QueryString` is the list of SQL query statements that comprise the query\.
-
-**Note**  
-The `AWS::Athena::NamedQuery` resource creates a named query in the primary workgroup\. To create a named query in a different workgroup, use the [CreateNamedQuery](https://docs.aws.amazon.com/athena/latest/APIReference/API_CreateNamedQuery.html) API operation and specify a workgroup in the `WorkGroup` parameter, or use the [create\-named\-query](https://docs.aws.amazon.com/cli/latest/reference/athena/create-named-query.html) AWS CLI command and specify a workgroup in the `--work-group` option\.
+The `AWS::Athena::NamedQuery` resource specifies an Amazon Athena saved query, where `QueryString` contains the SQL query statements that make up the query\.
 
 ## Syntax<a name="aws-resource-athena-namedquery-syntax"></a>
 
@@ -64,7 +61,7 @@ The query name\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `QueryString`  <a name="cfn-athena-namedquery-querystring"></a>
-The SQL query statements that comprise the query\.  
+The SQL statements that make up the query\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

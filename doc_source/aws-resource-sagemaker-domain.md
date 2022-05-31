@@ -6,7 +6,7 @@ Creates a `Domain` used by Amazon SageMaker Studio\. A domain consists of an ass
 
 When a domain is created, an EFS volume is created for use by all of the users within the domain\. Each user receives a private home directory within the EFS volume for notebooks, Git repositories, and data files\.
 
-SageMaker uses the AWS Key Management Service \(AWS KMS\) to encrypt the EFS volume attached to the domain with an AWS managed customer master key \(CMK\) by default\. For more control, you can specify a customer managed CMK\. For more information, see [Protect Data at Rest Using Encryption](https://docs.aws.amazon.com/sagemaker/latest/dg/encryption-at-rest.html)\.
+SageMaker uses the AWS Key Management Service \(AWS KMS\) to encrypt the EFS volume attached to the domain with an AWS managed key by default\. For more control, you can specify a customer managed key\. For more information, see [Protect Data at Rest Using Encryption](https://docs.aws.amazon.com/sagemaker/latest/dg/encryption-at-rest.html)\.
 
  **VPC configuration** 
 
@@ -15,6 +15,9 @@ All SageMaker Studio traffic between the domain and the EFS volume is through th
 +  `VpcOnly` \- All Studio traffic is through the specified VPC and subnets\. Internet access is disabled by default\. To allow internet access, you must specify a NAT gateway\.
 
   When internet access is disabled, you won't be able to run a Studio notebook or to train or host models unless your VPC has an interface endpoint to the SageMaker API and runtime or a NAT gateway and your security groups allow outbound connections\.
+
+**Important**  
+NFS traffic over TCP on port 2049 needs to be allowed in both inbound and outbound rules in order to launch a SageMaker Studio app successfully\.
 
 For more information, see [Connect SageMaker Studio Notebooks to Resources in a VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-notebooks-and-internet-access.html)\.
 
@@ -109,6 +112,7 @@ The VPC subnets that Studio uses for communication\.
 
 `Tags`  <a name="cfn-sagemaker-domain-tags"></a>
 Tags to associated with the Domain\. Each tag consists of a key and an optional value\. Tag keys must be unique per resource\. Tags are searchable using the Search API\.   
+Tags that you specify for the Domain are also added to all Apps that are launched in the Domain\.  
 *Array members*: Minimum number of 0 items\. Maximum number of 50 items\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  

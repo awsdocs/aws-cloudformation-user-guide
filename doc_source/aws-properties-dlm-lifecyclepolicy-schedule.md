@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CopyTags](#cfn-dlm-lifecyclepolicy-schedule-copytags)" : Boolean,
   "[CreateRule](#cfn-dlm-lifecyclepolicy-schedule-createrule)" : CreateRule,
   "[CrossRegionCopyRules](#cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules)" : [ CrossRegionCopyRule, ... ],
+  "[DeprecateRule](#cfn-dlm-lifecyclepolicy-schedule-deprecaterule)" : DeprecateRule,
   "[FastRestoreRule](#cfn-dlm-lifecyclepolicy-schedule-fastrestorerule)" : FastRestoreRule,
   "[Name](#cfn-dlm-lifecyclepolicy-schedule-name)" : String,
   "[RetainRule](#cfn-dlm-lifecyclepolicy-schedule-retainrule)" : RetainRule,
@@ -30,6 +31,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     CreateRule
   [CrossRegionCopyRules](#cfn-dlm-lifecyclepolicy-schedule-crossregioncopyrules): 
     - CrossRegionCopyRule
+  [DeprecateRule](#cfn-dlm-lifecyclepolicy-schedule-deprecaterule): 
+    DeprecateRule
   [FastRestoreRule](#cfn-dlm-lifecyclepolicy-schedule-fastrestorerule): 
     FastRestoreRule
   [Name](#cfn-dlm-lifecyclepolicy-schedule-name): String
@@ -63,6 +66,12 @@ You can only specify cross\-Region copy rules for policies that create snapshots
 *Required*: No  
 *Type*: List of [CrossRegionCopyRule](aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.md)  
 *Maximum*: `3`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DeprecateRule`  <a name="cfn-dlm-lifecyclepolicy-schedule-deprecaterule"></a>
+The AMI deprecation rule for the schedule\.  
+*Required*: No  
+*Type*: [DeprecateRule](aws-properties-dlm-lifecyclepolicy-deprecaterule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FastRestoreRule`  <a name="cfn-dlm-lifecyclepolicy-schedule-fastrestorerule"></a>

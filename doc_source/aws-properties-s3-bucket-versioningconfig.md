@@ -29,6 +29,74 @@ The versioning state of the bucket\.
 *Allowed values*: `Enabled | Suspended`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See also<a name="aws-properties-s3-bucket-versioningconfig--seealso"></a>
-+ AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+## Examples<a name="aws-properties-s3-bucket-versioningconfig--examples"></a>
 
+
+
+### Enable versioning and replicate objects<a name="aws-properties-s3-bucket-versioningconfig--examples--Enable_versioning_and_replicate_objects"></a>
+
+The following example enables versioning and two replication rules\. The rules copy objects prefixed with either `MyPrefix` and `MyOtherPrefix` and stores the copied objects in a bucket named `my-replication-bucket`\.
+
+#### JSON<a name="aws-properties-s3-bucket-versioningconfig--examples--Enable_versioning_and_replicate_objects--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "S3Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "VersioningConfiguration": {
+                    "Status": "Enabled"
+                },
+                "ReplicationConfiguration": {
+                    "Role": "arn:aws:iam::123456789012:role/replication_role",
+                    "Rules": [
+                        {
+                            "Id": "MyRule1",
+                            "Status": "Enabled",
+                            "Prefix": "MyPrefix",
+                            "Destination": {
+                                "Bucket": "arn:aws:s3:::my-replication-bucket",
+                                "StorageClass": "STANDARD"
+                            }
+                        },
+                        {
+                            "Status": "Enabled",
+                            "Prefix": "MyOtherPrefix",
+                            "Destination": {
+                                "Bucket": "arn:aws:s3:::my-replication-bucket"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-properties-s3-bucket-versioningconfig--examples--Enable_versioning_and_replicate_objects--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      VersioningConfiguration:
+        Status: Enabled
+      ReplicationConfiguration:
+        Role: 'arn:aws:iam::123456789012:role/replication_role'
+        Rules:
+          - Id: MyRule1
+            Status: Enabled
+            Prefix: MyPrefix
+            Destination:
+              Bucket: 'arn:aws:s3:::my-replication-bucket'
+              StorageClass: STANDARD
+          - Status: Enabled
+            Prefix: MyOtherPrefix
+            Destination:
+              Bucket: 'arn:aws:s3:::my-replication-bucket'
+```

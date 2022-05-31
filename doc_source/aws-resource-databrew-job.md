@@ -1,6 +1,6 @@
 # AWS::DataBrew::Job<a name="aws-resource-databrew-job"></a>
 
-Creates a new DataBrew job\.
+Specifies a new DataBrew job\.
 
 ## Syntax<a name="aws-resource-databrew-job-syntax"></a>
 
@@ -12,6 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::DataBrew::Job",
   "Properties" : {
+      "[DatabaseOutputs](#cfn-databrew-job-databaseoutputs)" : [ DatabaseOutput, ... ],
+      "[DataCatalogOutputs](#cfn-databrew-job-datacatalogoutputs)" : [ DataCatalogOutput, ... ],
       "[DatasetName](#cfn-databrew-job-datasetname)" : String,
       "[EncryptionKeyArn](#cfn-databrew-job-encryptionkeyarn)" : String,
       "[EncryptionMode](#cfn-databrew-job-encryptionmode)" : String,
@@ -22,12 +24,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-databrew-job-name)" : String,
       "[OutputLocation](#cfn-databrew-job-outputlocation)" : OutputLocation,
       "[Outputs](#cfn-databrew-job-outputs)" : [ Output, ... ],
+      "[ProfileConfiguration](#cfn-databrew-job-profileconfiguration)" : ProfileConfiguration,
       "[ProjectName](#cfn-databrew-job-projectname)" : String,
       "[Recipe](#cfn-databrew-job-recipe)" : Recipe,
       "[RoleArn](#cfn-databrew-job-rolearn)" : String,
       "[Tags](#cfn-databrew-job-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Timeout](#cfn-databrew-job-timeout)" : Integer,
-      "[Type](#cfn-databrew-job-type)" : String
+      "[Type](#cfn-databrew-job-type)" : String,
+      "[ValidationConfigurations](#cfn-databrew-job-validationconfigurations)" : [ ValidationConfiguration, ... ]
     }
 }
 ```
@@ -37,6 +41,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::DataBrew::Job
 Properties: 
+  [DatabaseOutputs](#cfn-databrew-job-databaseoutputs): 
+    - DatabaseOutput
+  [DataCatalogOutputs](#cfn-databrew-job-datacatalogoutputs): 
+    - DataCatalogOutput
   [DatasetName](#cfn-databrew-job-datasetname): String
   [EncryptionKeyArn](#cfn-databrew-job-encryptionkeyarn): String
   [EncryptionMode](#cfn-databrew-job-encryptionmode): String
@@ -50,6 +58,8 @@ Properties:
     OutputLocation
   [Outputs](#cfn-databrew-job-outputs): 
     - Output
+  [ProfileConfiguration](#cfn-databrew-job-profileconfiguration): 
+    ProfileConfiguration
   [ProjectName](#cfn-databrew-job-projectname): String
   [Recipe](#cfn-databrew-job-recipe): 
     Recipe
@@ -58,9 +68,23 @@ Properties:
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Timeout](#cfn-databrew-job-timeout): Integer
   [Type](#cfn-databrew-job-type): String
+  [ValidationConfigurations](#cfn-databrew-job-validationconfigurations): 
+    - ValidationConfiguration
 ```
 
 ## Properties<a name="aws-resource-databrew-job-properties"></a>
+
+`DatabaseOutputs`  <a name="cfn-databrew-job-databaseoutputs"></a>
+Represents a list of JDBC database output objects which defines the output destination for a DataBrew recipe job to write into\.  
+*Required*: No  
+*Type*: List of [DatabaseOutput](aws-properties-databrew-job-databaseoutput.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DataCatalogOutputs`  <a name="cfn-databrew-job-datacatalogoutputs"></a>
+One or more artifacts that represent the AWS Glue Data Catalog output from running the job\.  
+*Required*: No  
+*Type*: List of [DataCatalogOutput](aws-properties-databrew-job-datacatalogoutput.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatasetName`  <a name="cfn-databrew-job-datasetname"></a>
 A dataset that the job is to process\.  
@@ -122,7 +146,7 @@ The unique name of the job\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OutputLocation`  <a name="cfn-databrew-job-outputlocation"></a>
-The location in Amazon S3 where the job writes its output\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: [OutputLocation](aws-properties-databrew-job-outputlocation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -131,6 +155,12 @@ The location in Amazon S3 where the job writes its output\.
 One or more artifacts that represent output from running the job\.  
 *Required*: No  
 *Type*: List of [Output](aws-properties-databrew-job-output.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ProfileConfiguration`  <a name="cfn-databrew-job-profileconfiguration"></a>
+Configuration for profile jobs\. Configuration can be used to select columns, do evaluations, and override default parameters of evaluations\. When configuration is undefined, the profile job will apply default settings to all supported columns\.   
+*Required*: No  
+*Type*: [ProfileConfiguration](aws-properties-databrew-job-profileconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProjectName`  <a name="cfn-databrew-job-projectname"></a>
@@ -177,6 +207,12 @@ The job type of the job, which must be one of the following:
 *Allowed values*: `PROFILE | RECIPE`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ValidationConfigurations`  <a name="cfn-databrew-job-validationconfigurations"></a>
+List of validation configurations that are applied to the profile job\.  
+*Required*: No  
+*Type*: List of [ValidationConfiguration](aws-properties-databrew-job-validationconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Return values<a name="aws-resource-databrew-job-return-values"></a>
 
 ### Ref<a name="aws-resource-databrew-job-return-values-ref"></a>
@@ -185,7 +221,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  `{ "Ref": "myJob" }` 
 
-For an AWS Glue DataBrew job named `myJob`, `Ref` returns the name of the job\. 
+For an AWS Glue DataBrew job named `myJob`, `Ref` returns the name of the job\. 
 
 ## Examples<a name="aws-resource-databrew-job--examples"></a>
 
@@ -206,9 +242,9 @@ Resources:
       Name: job-name
       DatasetName: dataset-name
       RoleArn: arn:aws:iam::12345678910:role/PassRoleAdmin
-      JobSample: 
+      JobSample:
         Mode: 'CUSTOM_ROWS'
-        Size: 50000 
+        Size: 50000
       OutputLocation:
         Bucket: !Join [ '', ['databrew-cfn-integration-tests-', !Ref 'AWS::Region', '-', !Ref 'AWS::AccountId' ] ]
       Tags: [{Key: key00AtCreate, Value: value001AtCreate}]
@@ -219,7 +255,7 @@ Resources:
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "This CloudFormation template creates a DataBrew Profile Job",
+    "Description": "This CloudFormation template specifies a DataBrew Profile Job",
     "Resources": {
         "MyDataBrewProfileJob": {
             "Type": "AWS::DataBrew::Job",

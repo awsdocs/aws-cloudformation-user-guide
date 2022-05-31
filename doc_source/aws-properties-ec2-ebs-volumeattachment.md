@@ -6,7 +6,7 @@ Before this resource can be deleted \(and therefore the volume detached\), you m
 
 If an Amazon EBS volume is the root device of an instance, it cannot be detached while the instance is in the "running" state\. To detach the root volume, stop the instance first\.
 
-If the root volume is detached from an instance with an AWS Marketplace product code, then the AWS Marketplace product codes from that volume are no longer associated with the instance\.
+If the root volume is detached from an instance with an AWS Marketplace product code, then the product codes from that volume are no longer associated with the instance\.
 
 ## Syntax<a name="aws-properties-ec2-ebs-volumeattachment-syntax"></a>
 
@@ -110,8 +110,8 @@ MountPoint:
 ```
 
 ## See also<a name="aws-properties-ec2-ebs-volumeattachment--seealso"></a>
-+  [Amazon Elastic Block Store \(Amazon EBS\)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html) in the *Amazon Elastic Compute Cloud User Guide*
-+  [Attaching a Volume to an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html) in the *Amazon Elastic Compute Cloud User Guide* 
-+  [Detaching an Amazon EBS Volume from an Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) in the *Amazon Elastic Compute Cloud User Guide* 
-+  [AttachVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-AttachVolume.html) in the *Amazon Elastic Compute Cloud API Reference* 
-+  [DetachVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-DetachVolume.html) in the *Amazon Elastic Compute Cloud API Reference* 
++  [Amazon Elastic Block Store \(Amazon EBS\)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html) in the *Amazon EC2 User Guide*
++  [Attach an EBS volume to an instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html) in the *Amazon EC2 User Guide* 
++  [Detach an EBS volume from an instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html) in the *Amazon EC2 User Guide* 
++  [AttachVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-AttachVolume.html) in the *Amazon EC2 API Reference* 
++  [DetachVolume](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-DetachVolume.html) in the *Amazon EC2 API Reference* 

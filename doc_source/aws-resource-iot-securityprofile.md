@@ -116,7 +116,7 @@ The Amazon Resource Name \(ARN\) of the security profile\.
 ```
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "AWS IoT SecurityProfile Sample Template",
+  "Description": "Amazon Web Services IoT SecurityProfile Sample Template",
   "Resources": {
     "MySecurityProfile": {
       "Type": "AWS::IoT::SecurityProfile",
@@ -192,7 +192,7 @@ The Amazon Resource Name \(ARN\) of the security profile\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: AWS IoT SecurityProfile Sample Template
+Description: Amazon Web Services IoT SecurityProfile Sample Template
 Resources:
   MySecurityProfile:
     Type: 'AWS::IoT::SecurityProfile'

@@ -1,6 +1,6 @@
 # AWS::DataBrew::Project<a name="aws-resource-databrew-project"></a>
 
-Creates a new DataBrew project\.
+Specifies a new AWS Glue DataBrew project\.
 
 ## Syntax<a name="aws-resource-databrew-project-syntax"></a>
 
@@ -91,7 +91,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  `{ "Ref": "myProject" }` 
 
-For an AWS Glue DataBrew project named `myProject`,  `Ref` returns the name of the project\. 
+For an AWS Glue DataBrew project named `myProject`, `Ref` returns the name of the project\. 
 
 ## Examples<a name="aws-resource-databrew-project--examples"></a>
 
@@ -122,7 +122,7 @@ Resources:
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "This CloudFormation template creates a DataBrew Project",
+    "Description": "This CloudFormation template specifies a DataBrew Project",
     "Resources": {
         "MyDataBrewProject": {
             "Type": "AWS::DataBrew::Project",

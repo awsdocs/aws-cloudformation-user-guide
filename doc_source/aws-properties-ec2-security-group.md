@@ -5,7 +5,7 @@ Specifies a security group\. To create a security group, use the [VpcId](https:/
 This type supports updates\. For more information about updating stacks, see [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)\.
 
 **Important**  
-If you want to cross\-reference two security groups in the ingress and egress rules of those security groups, use the [AWS::EC2::SecurityGroupEgress](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html) and [AWS::EC2::SecurityGroupIngress](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-ingress.html) resources to define your rules\. Do not use the embedded ingress and egress rules in the `AWS::EC2::SecurityGroup`\. Doing so creates a circular dependency, which CloudFormation doesn't allow\.
+To cross\-reference two security groups in the ingress and egress rules of those security groups, use the [AWS::EC2::SecurityGroupEgress](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html) and [AWS::EC2::SecurityGroupIngress](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-ingress.html) resources to define your rules\. Do not use the embedded ingress and egress rules in the `AWS::EC2::SecurityGroup`\. Doing so creates a circular dependency, which AWS CloudFormation doesn't allow\.
 
 ## Syntax<a name="aws-properties-ec2-security-group-syntax"></a>
 
@@ -199,7 +199,7 @@ sgwithoutegress:
 ```
 
 ## See also<a name="aws-properties-ec2-security-group--seealso"></a>
-+  [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) in the *Amazon VPC User Guide*
-+  [EC2\-Classic](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-classic-platform.html) in the *Amazon EC2 User Guide for Linux Instances* for information about accounts that support EC2\-Classic security groups
-+  [Amazon EC2 Security Groups for Linux Instances ](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html) in the *Amazon EC2 User Guide for Linux Instances*
++  [Security groups for your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) in the *Amazon VPC User Guide*
++  [Amazon EC2 security groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html) in the *Amazon EC2 User Guide for Linux Instances*
++  [Amazon EC2 security groups](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-security-groups.html) in the *Amazon EC2 User Guide for Windows Instances*
 

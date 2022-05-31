@@ -1,8 +1,5 @@
 # AWS::WAFv2::WebACL AllowAction<a name="aws-properties-wafv2-webacl-allowaction"></a>
 
-**Note**  
-This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
-
 Specifies that AWS WAF should allow requests\.
 
 This is used only in the context of other settings, for example to specify values for the web ACL and rule group `RuleAction` and for the web ACL `DefaultAction`\. 
@@ -46,17 +43,16 @@ The following shows an example allow action specification\.
 #### YAML<a name="aws-properties-wafv2-webacl-allowaction--examples--Set_an_allow_action_--yaml"></a>
 
 ```
-          Action:
-            Allow: {}
+Action:
+  Allow: {}
 ```
 
 #### JSON<a name="aws-properties-wafv2-webacl-allowaction--examples--Set_an_allow_action_--json"></a>
 
 ```
-     "Action": 
-      {"Allow": 
-        {}
-         }
+"Action": {
+  "Allow": {}
+}
 ```
 
 ### Set an allow action with a custom request setting<a name="aws-properties-wafv2-webacl-allowaction--examples--Set_an_allow_action_with_a_custom_request_setting"></a>
@@ -66,30 +62,30 @@ The following shows an example allow action specification with custom request ha
 #### YAML<a name="aws-properties-wafv2-webacl-allowaction--examples--Set_an_allow_action_with_a_custom_request_setting--yaml"></a>
 
 ```
-        Allow:
-          CustomRequestHandling:
-            InsertHeaders:
-              - Name: AllowActionHeader1Name
-                Value: AllowActionHeader1Value
-              - Name: AllowActionHeader2Name
-                Value: AllowActionHeader2Value
+Allow:
+  CustomRequestHandling:
+    InsertHeaders:
+      - Name: AllowActionHeader1Name
+        Value: AllowActionHeader1Value
+      - Name: AllowActionHeader2Name
+        Value: AllowActionHeader2Value
 ```
 
 #### JSON<a name="aws-properties-wafv2-webacl-allowaction--examples--Set_an_allow_action_with_a_custom_request_setting--json"></a>
 
 ```
-          "Allow": {
-            "CustomRequestHandling": {
-              "InsertHeaders": [
-                {
-                  "Name": "AllowActionHeader1Name",
-                  "Value": "AllowActionHeader1Value"
-                },
-                {
-                  "Name": "AllowActionHeader2Name",
-                  "Value": "AllowActionHeader2Value"
-                }
-              ]
-            }
-          }
+"Allow": {
+   "CustomRequestHandling": {
+     "InsertHeaders": [
+       {
+         "Name": "AllowActionHeader1Name",
+         "Value": "AllowActionHeader1Value"
+       },
+       {
+         "Name": "AllowActionHeader2Name",
+         "Value": "AllowActionHeader2Value"
+       }
+     ]
+   }
+}
 ```

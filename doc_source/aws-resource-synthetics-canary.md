@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Synthetics::Canary",
   "Properties" : {
+      "[ArtifactConfig](#cfn-synthetics-canary-artifactconfig)" : ArtifactConfig,
       "[ArtifactS3Location](#cfn-synthetics-canary-artifacts3location)" : String,
       "[Code](#cfn-synthetics-canary-code)" : Code,
       "[ExecutionRoleArn](#cfn-synthetics-canary-executionrolearn)" : String,
@@ -27,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[StartCanaryAfterCreation](#cfn-synthetics-canary-startcanaryaftercreation)" : Boolean,
       "[SuccessRetentionPeriod](#cfn-synthetics-canary-successretentionperiod)" : Integer,
       "[Tags](#cfn-synthetics-canary-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[VisualReference](#cfn-synthetics-canary-visualreference)" : VisualReference,
       "[VPCConfig](#cfn-synthetics-canary-vpcconfig)" : VPCConfig
     }
 }
@@ -37,6 +39,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Synthetics::Canary
 Properties: 
+  [ArtifactConfig](#cfn-synthetics-canary-artifactconfig): 
+    ArtifactConfig
   [ArtifactS3Location](#cfn-synthetics-canary-artifacts3location): String
   [Code](#cfn-synthetics-canary-code): 
     Code
@@ -52,11 +56,19 @@ Properties:
   [SuccessRetentionPeriod](#cfn-synthetics-canary-successretentionperiod): Integer
   [Tags](#cfn-synthetics-canary-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [VisualReference](#cfn-synthetics-canary-visualreference): 
+    VisualReference
   [VPCConfig](#cfn-synthetics-canary-vpcconfig): 
     VPCConfig
 ```
 
 ## Properties<a name="aws-resource-synthetics-canary-properties"></a>
+
+`ArtifactConfig`  <a name="cfn-synthetics-canary-artifactconfig"></a>
+A structure that contains the configuration for canary artifacts, including the encryption\-at\-rest settings for artifacts that the canary uploads to Amazon S3\.  
+*Required*: No  
+*Type*: [ArtifactConfig](aws-properties-synthetics-canary-artifactconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ArtifactS3Location`  <a name="cfn-synthetics-canary-artifacts3location"></a>
 The location in Amazon S3 where Synthetics stores artifacts from the runs of this canary\. Artifacts include the log file, screenshots, and HAR files\. Specify the full location path, including `s3://` at the beginning of the path\.  
@@ -147,6 +159,12 @@ The list of key\-value pairs that are associated with the canary\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`VisualReference`  <a name="cfn-synthetics-canary-visualreference"></a>
+If this canary performs visual monitoring by comparing screenshots, this structure contains the ID of the canary run to use as the baseline for screenshots, and the coordinates of any parts of the screen to ignore during the visual monitoring comparison\.  
+*Required*: No  
+*Type*: [VisualReference](aws-properties-synthetics-canary-visualreference.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `VPCConfig`  <a name="cfn-synthetics-canary-vpcconfig"></a>
 If this canary is to test an endpoint in a VPC, this structure contains information about the subnet and security groups of the VPC endpoint\. For more information, see [ Running a Canary in a VPC](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_VPC.html)\.  
 *Required*: No  
@@ -188,7 +206,7 @@ This example creates a canary that uses an existing script stored in an S3 bucke
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS CloudFormation Sample Template for AWS Synthetics: Create a Canary using this template",
+    "Description": "CloudFormation Sample Template for CloudWatch Synthetics: Create a Canary using this template",
     "Resources": {
         "SyntheticsCanary": {
             "Type": "AWS::Synthetics::Canary",
@@ -205,7 +223,7 @@ This example creates a canary that uses an existing script stored in an S3 bucke
                     "S3Key": "my-script-location"
                 },
                 "ArtifactS3Location": "s3://my-results-bucket",
-                "RuntimeVersion": "syn-1.0",
+                "RuntimeVersion": "syn-nodejs-puppeteer-3.3",
                 "Schedule": {
                     "Expression": "rate(1 minute)",
                     "DurationInSeconds": 3600
@@ -239,7 +257,7 @@ Resources:
             ExecutionRoleArn: 'arn:aws:iam::123456789012:role/my-lambda-execution-role-to-run-canary'
             Code: {Handler: pageLoadBlueprint.handler, S3Bucket: aws-synthetics-code-myaccount-canary1, S3Key: my-script-location}
             ArtifactS3Location: s3://my-results-bucket
-            RuntimeVersion: syn-1.0
+            RuntimeVersion: syn-nodejs-puppeteer-3.3
             Schedule: {Expression: 'rate(1 minute)', DurationInSeconds: 3600}
             RunConfig: {TimeoutInSeconds: 60}
             FailureRetentionPeriod: 30
@@ -257,7 +275,7 @@ This example creates a canary and passes the script code directly into the canar
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS CloudFormation Sample Template for AWS Synthetics: Create a Canary using this template",
+    "Description": "CloudFormation Sample Template for CloudWatch Synthetics: Create a Canary using this template",
     "Resources": {
         "SyntheticsCanary": {
             "Type": "AWS::Synthetics::Canary",
@@ -273,7 +291,7 @@ This example creates a canary and passes the script code directly into the canar
                     "Script": "var synthetics = require('Synthetics');\nconst log = require('SyntheticsLogger');\n\nconst pageLoadBlueprint = async function () {\n\n    // INSERT URL here\n    const URL = \"https://amazon.com\";\n\n    let page = await synthetics.getPage();\n    const response = await page.goto(URL, {waitUntil: 'domcontentloaded', timeout: 30000});\n    //Wait for page to render.\n    //Increase or decrease wait time based on endpoint being monitored.\n    await page.waitFor(15000);\n    await synthetics.takeScreenshot('loaded', 'loaded');\n    let pageTitle = await page.title();\n    log.info('Page title: ' + pageTitle);\n    if (response.status() !== 200) {\n        throw \"Failed to load page!\";\n    }\n};\n\nexports.handler = async () => {\n    return await pageLoadBlueprint();\n};\n"
                 },
                 "ArtifactS3Location": "s3://my-results-bucket",
-                "RuntimeVersion": "syn-1.0",
+                "RuntimeVersion": "syn-nodejs-puppeteer-3.3",
                 "Schedule": {
                     "Expression": "rate(1 minute)",
                     "DurationInSeconds": 3600
@@ -307,7 +325,7 @@ Resources:
             ExecutionRoleArn: 'arn:aws:iam::123456789012:role/my-lambda-execution-role-to-run-canary'
             Code: {Handler: pageLoadBlueprint.handler, Script: "var synthetics = require('Synthetics');\nconst log = require('SyntheticsLogger');\nconst pageLoadBlueprint = async function () {\n// INSERT URL here\nconst URL = \"https://amazon.com\";\n\nlet page = await synthetics.getPage();\nconst response = await page.goto(URL, {waitUntil: 'domcontentloaded', timeout: 30000});\n//Wait for page to render.\n//Increase or decrease wait time based on endpoint being monitored.\nawait page.waitFor(15000);\nawait synthetics.takeScreenshot('loaded', 'loaded');\nlet pageTitle = await page.title();\nlog.info('Page title: ' + pageTitle);\nif (response.status() !== 200) {\n     throw \"Failed to load page!\";\n}\n};\n\nexports.handler = async () => {\nreturn await pageLoadBlueprint();\n};\n"}
             ArtifactS3Location: s3://my-results-bucket
-            RuntimeVersion: syn-1.0
+            RuntimeVersion: syn-nodejs-puppeteer-3.3
             Schedule: {Expression: 'rate(1 minute)', DurationInSeconds: 3600}
             RunConfig: {TimeoutInSeconds: 60}
             FailureRetentionPeriod: 30

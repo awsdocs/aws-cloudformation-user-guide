@@ -1,4 +1,4 @@
-# EventSchemas resource type reference<a name="AWS_EventSchemas"></a>
+# Amazon EventBridge Schemas resource type reference<a name="AWS_EventSchemas"></a>
 
 **Resource types**
 + [AWS::EventSchemas::Discoverer](aws-resource-eventschemas-discoverer.md)

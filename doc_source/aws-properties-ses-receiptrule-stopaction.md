@@ -2,7 +2,7 @@
 
 When included in a receipt rule, this action terminates the evaluation of the receipt rule set and, optionally, publishes a notification to Amazon Simple Notification Service \(Amazon SNS\)\.
 
-For information about setting a stop action in a receipt rule, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-action-stop.html)\.
+For information about setting a stop action in a receipt rule, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-action-stop.html)\.
 
 ## Syntax<a name="aws-properties-ses-receiptrule-stopaction-syntax"></a>
 
@@ -34,7 +34,7 @@ The scope of the StopAction\. The only acceptable value is `RuleSet`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TopicArn`  <a name="cfn-ses-receiptrule-stopaction-topicarn"></a>
-The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify when the stop action is taken\. You can find the ARN of a topic by using the [ListTopics](https://docs.aws.amazon.com/sns/latest/api/API_ListTopics.html) operation in the Amazon SNS API\.  
+The Amazon Resource Name \(ARN\) of the Amazon SNS topic to notify when the stop action is taken\. You can find the ARN of a topic by using the [ListTopics](https://docs.aws.amazon.com/sns/latest/api/API_ListTopics.html) Amazon SNS operation\.  
 For more information about Amazon SNS topics, see the [Amazon SNS Developer Guide](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)\.  
 *Required*: No  
 *Type*: String  

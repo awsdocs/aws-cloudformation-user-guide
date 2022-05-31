@@ -99,3 +99,99 @@ The status of the domain list\.
 
 `StatusMessage`  <a name="StatusMessage-fn::getatt"></a>
 Additional information about the status of the rule group, if available\.
+
+## Examples<a name="aws-resource-route53resolver-firewallrulegroup--examples"></a>
+
+
+
+### Create Firewall rule group<a name="aws-resource-route53resolver-firewallrulegroup--examples--Create_Firewall_rule_group"></a>
+
+The following example creates a DNS Firewall rule group with associated rules for `ALLOW`, `ALERT`, and `BLOCK`\.
+
+#### JSON<a name="aws-resource-route53resolver-firewallrulegroup--examples--Create_Firewall_rule_group--json"></a>
+
+```
+{"Type": "AWS::Route53Resolver::FirewallRuleGroup",
+"Properties": {
+     "FirewallRules": [
+         {
+            "Action": "ALERT",
+            "FirewallDomainListId": "rslvr-fdl-sampleID1",
+            "Priority": 1
+         },
+         {
+            "Action": "BLOCK",
+            "BlockResponse": "NODATA",
+            "FirewallDomainListId": "rslvr-fdl-sampleID2",
+            "Priority": 2
+          },
+          {
+            "Action": "BLOCK",
+            "BlockResponse": "NXDOMAIN",
+            "FirewallDomainListId": "rslvr-fdl-sampleID3",
+            "Priority": 3
+          },
+          {
+            "Action": "BLOCK",
+            "BlockResponse": "OVERRIDE",
+            "BlockOverrideDnsType": "CNAME",
+            "BlockOverrideDomain": "www.example.com",
+            "BlockOverrideTtl": 300,
+            "FirewallDomainListId": "rslvr-fdl-sampleID4",
+            "Priority": 4
+          },
+          {
+            "Action": "ALLOW",
+            "FirewallDomainListId": "rslvr-fdl-sampleID5",
+            "Priority": 5
+          }
+        ],
+        "Name": "SampleFirewallRuleGroup",
+        "Tags": [
+          {
+            "Key": "LineOfBusiness",
+            "Value": "Engineering"
+          }
+      ]
+   }
+}
+```
+
+#### YAML<a name="aws-resource-route53resolver-firewallrulegroup--examples--Create_Firewall_rule_group--yaml"></a>
+
+```
+Type: AWS::Route53Resolver::FirewallRuleGroup
+Properties:
+   FirewallRules:
+      -
+        Action: ALERT
+        FirewallDomainListId: rslvr-fdl-sampleID1
+        Priority: 1
+      -
+        Action: BLOCK
+        BlockResponse: NODATA
+        FirewallDomainListId: rslvr-fdl-sampleID2
+        Priority: 2
+      -
+        Action: BLOCK
+        BlockResponse: NXDOMAIN
+        FirewallDomainListId: rslvr-fdl-sampleID3
+        Priority: 3
+      -
+        Action: BLOCK
+        BlockResponse: OVERRIDE
+        BlockOverrideDnsType: CNAME
+        BlockOverrideDomain: "www.example.com"
+        BlockOverrideTtl: 300
+        FirewallDomainListId: rslvr-fdl-sampleID4
+        Priority: 4
+      -
+        Action: ALLOW
+        FirewallDomainListId: rslvr-fdl-sampleID5
+        Priority: 5
+        Name: SampleFirewallRuleGroup
+    Tags:
+      -
+         Key: LineOfBusiness
+         Value: Engineering
+```

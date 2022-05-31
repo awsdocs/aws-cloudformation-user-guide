@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::DAX::Cluster",
   "Properties" : {
       "[AvailabilityZones](#cfn-dax-cluster-availabilityzones)" : [ String, ... ],
+      "[ClusterEndpointEncryptionType](#cfn-dax-cluster-clusterendpointencryptiontype)" : String,
       "[ClusterName](#cfn-dax-cluster-clustername)" : String,
       "[Description](#cfn-dax-cluster-description)" : String,
       "[IAMRoleARN](#cfn-dax-cluster-iamrolearn)" : String,
@@ -36,6 +37,7 @@ Type: AWS::DAX::Cluster
 Properties: 
   [AvailabilityZones](#cfn-dax-cluster-availabilityzones): 
     - String
+  [ClusterEndpointEncryptionType](#cfn-dax-cluster-clusterendpointencryptiontype): String
   [ClusterName](#cfn-dax-cluster-clustername): String
   [Description](#cfn-dax-cluster-description): String
   [IAMRoleARN](#cfn-dax-cluster-iamrolearn): String
@@ -59,6 +61,16 @@ The Availability Zones \(AZs\) in which the cluster nodes will reside after the 
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ClusterEndpointEncryptionType`  <a name="cfn-dax-cluster-clusterendpointencryptiontype"></a>
+The encryption type of the cluster's endpoint\. Available values are:  
++ `NONE` \- The cluster's endpoint will be unencrypted\.
++ `TLS` \- The cluster's endpoint will be encrypted with Transport Layer Security, and will provide an x509 certificate for authentication\.
+The default value is `NONE`\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `NONE | TLS`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClusterName`  <a name="cfn-dax-cluster-clustername"></a>
 The name of the DAX cluster\.  
@@ -105,7 +117,7 @@ A range of time when maintenance of DAX cluster software will be performed\. For
 
 `ReplicationFactor`  <a name="cfn-dax-cluster-replicationfactor"></a>
 The number of nodes in the DAX cluster\. A replication factor of 1 will create a single\-node cluster, without any read replicas\. For additional fault tolerance, you can create a multiple node cluster with one or more read replicas\. To do this, set `ReplicationFactor` to a number between 3 \(one primary and two read replicas\) and 10 \(one primary and nine read replicas\)\. `If the AvailabilityZones` parameter is provided, its length must equal the `ReplicationFactor`\.  
-AWS recommends that you have at least two read replicas per cluster\.
+ AWS recommends that you have at least two read replicas per cluster\.
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -173,7 +185,7 @@ arn:aws:dax:us-east-1:111122223333:cache/MyDAXCluster
 ```
 
 `ClusterDiscoveryEndpoint`  <a name="ClusterDiscoveryEndpoint-fn::getatt"></a>
-Returns the configuration endpoint of the DAX cluster\. For example:  
+Returns the endpoint of the DAX cluster\. For example:  
 
 ```
 { "Fn::GetAtt": ["MyDAXCluster", "ClusterDiscoveryEndpoint"] }
@@ -183,6 +195,9 @@ Returns a value similar to the following:
 ```
 mydaxcluster.0h3d6x.clustercfg.dax.use1.cache.amazonaws.com:8111
 ```
+
+`ClusterDiscoveryEndpointURL`  <a name="ClusterDiscoveryEndpointURL-fn::getatt"></a>
+Returns the endpoint URL of the DAX cluster\.
 
 ## Examples<a name="aws-resource-dax-cluster--examples"></a>
 

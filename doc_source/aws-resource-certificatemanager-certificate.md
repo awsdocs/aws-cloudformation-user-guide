@@ -76,6 +76,7 @@ The fully qualified domain name \(FQDN\), such as www\.example\.com, with which 
 
 `DomainValidationOptions`  <a name="cfn-certificatemanager-certificate-domainvalidationoptions"></a>
 Domain information that domain name registrars use to verify your identity\.  
+In order for a AWS::CertificateManager::Certificate to be provisioned and validated in CloudFormation automatically, the `DomainName` property needs to be identical to one of the `DomainName` property supplied in DomainValidationOptions, if the ValidationMethod is \*\*DNS\*\*\. Failing to keep them like\-for\-like will result in failure to create the domain validation records in Route53\.
 *Required*: No  
 *Type*: List of [DomainValidationOption](aws-properties-certificatemanager-certificate-domainvalidationoption.md)  
 *Maximum*: `100`  
@@ -123,25 +124,25 @@ The following example shows how to declare an `AWS::CertificateManager::Certific
 
 ```
 {
-  "Resources":{
-    "MyCertificate":{
-      "Type":"AWS::CertificateManager::Certificate",
-      "Properties":{
-        "DomainName":"example.com",
-        "ValidationMethod":"DNS"
+   "Resources":{
+      "MyCertificate":{
+         "Type":"AWS::CertificateManager::Certificate",
+         "Properties":{
+            "DomainName":"example.com",
+            "ValidationMethod":"DNS"
+         }
       }
-    }
-  }
+   }
 }
 ```
 
 #### YAML<a name="aws-resource-certificatemanager-certificate--examples--Declaring_an_Amazon_Certificate_Manager_Certificate_Resource--yaml"></a>
 
 ```
-Resources:
-  MyCertificate:
-    Type: AWS::CertificateManager::Certificate
-    Properties:
+Resources: 
+  MyCertificate: 
+    Type: "AWS::CertificateManager::Certificate"
+    Properties: 
       DomainName: example.com
       ValidationMethod: DNS
 ```

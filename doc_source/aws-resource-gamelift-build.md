@@ -50,7 +50,8 @@ The operating system that the game server binaries are built to run on\. This va
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageLocation`  <a name="cfn-gamelift-build-storagelocation"></a>
-Information indicating where your game build files are stored\. Use this parameter only when creating a build with files stored in an Amazon S3 bucket that you own\. The storage location must specify an Amazon S3 bucket name and key\. The location must also specify a role ARN that you set up to allow Amazon GameLift to access your Amazon S3 bucket\. The S3 bucket and your new build must be in the same Region\.  
+Information indicating where your game build files are stored\. Use this parameter only when creating a build with files stored in an Amazon S3 bucket that you own\. The storage location must specify an Amazon S3 bucket name and key\. The location must also specify a role ARN that you set up to allow Amazon Web Services to access your Amazon S3 bucket\. The S3 bucket and your new build must be in the same Region\.  
+If a `StorageLocation` is specified, the size of your file can be found in your Amazon S3 bucket\. Amazon Web Services will report a `SizeOnDisk` of 0\.   
 *Required*: No  
 *Type*: [S3Location](aws-properties-gamelift-build-storagelocation.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -75,7 +76,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### Create a Custom Game Server Build<a name="aws-resource-gamelift-build--examples--Create_a_Custom_Game_Server_Build"></a>
 
-The following example creates a GameLift build named `MyGameServerBuild`\. The build package is located in an S3 bucket, specified by the `S3Bucket` and `S3Key` input parameters\. The example also creates the AWS Identity and Access Management \(IAM\) role that GameLift assumes so that it has permissions to download the build package files\.
+The following example creates a GameLift build named `MyGameServerBuild`\. The build package is located in an S3 bucket, specified by the `S3Bucket` and `S3Key` input parameters\. The example also creates the AWS Identity and Access Management role that GameLift assumes so that it has permissions to download the build package files\.
 
 #### JSON<a name="aws-resource-gamelift-build--examples--Create_a_Custom_Game_Server_Build--json"></a>
 
@@ -188,7 +189,7 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-gamelift-build--seealso"></a>
-+ [ Create GameLift resources using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++ [ Create GameLift resources using Amazon CloudFront](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 + [ Create a build with files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-build-cli-uploading.html#gamelift-build-cli-uploading-create-build) in the *Amazon GameLift Developer Guide*
 + [ Upload script files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-script-uploading.html#realtime-script-uploading-s3) in the *Amazon GameLift Developer Guide*
 +  [CreateBuild](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateBuild.html) in the *Amazon GameLift API Reference* 

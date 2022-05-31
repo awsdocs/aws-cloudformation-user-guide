@@ -14,9 +14,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[CloudWatchOutputConfig](#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-cloudwatchoutputconfig)" : CloudWatchOutputConfig,
   "[Comment](#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-comment)" : String,
   "[DocumentHash](#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthash)" : String,
   "[DocumentHashType](#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthashtype)" : String,
+  "[DocumentVersion](#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documentversion)" : String,
   "[NotificationConfig](#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-notificationconfig)" : NotificationConfig,
   "[OutputS3BucketName](#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3bucketname)" : String,
   "[OutputS3KeyPrefix](#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3keyprefix)" : String,
@@ -29,9 +31,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-syntax.yaml"></a>
 
 ```
+  [CloudWatchOutputConfig](#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-cloudwatchoutputconfig): 
+    CloudWatchOutputConfig
   [Comment](#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-comment): String
   [DocumentHash](#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthash): String
   [DocumentHashType](#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthashtype): String
+  [DocumentVersion](#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documentversion): String
   [NotificationConfig](#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-notificationconfig): 
     NotificationConfig
   [OutputS3BucketName](#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3bucketname): String
@@ -42,6 +47,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-properties"></a>
+
+`CloudWatchOutputConfig`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-cloudwatchoutputconfig"></a>
+Configuration options for sending command output to Amazon CloudWatch Logs\.  
+*Required*: No  
+*Type*: [CloudWatchOutputConfig](aws-properties-ssm-maintenancewindowtask-cloudwatchoutputconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Comment`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-comment"></a>
 Information about the command or commands to run\.  
@@ -64,14 +75,24 @@ The SHA\-256 or SHA\-1 hash type\. SHA\-1 hashes are deprecated\.
 *Allowed values*: `Sha1 | Sha256`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`DocumentVersion`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documentversion"></a>
+The AWS Systems Manager document \(SSM document\) version to use in the request\. You can specify `$DEFAULT`, `$LATEST`, or a specific version number\. If you run commands by using the AWS CLI, then you must escape the first two options by using a backslash\. If you specify a version number, then you don't need to use the backslash\. For example:  
+ `--document-version "\$DEFAULT"`   
+ `--document-version "\$LATEST"`   
+ `--document-version "3"`   
+*Required*: No  
+*Type*: String  
+*Pattern*: `([$]LATEST|[$]DEFAULT|^[1-9][0-9]*$)`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `NotificationConfig`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-notificationconfig"></a>
-Configurations for sending notifications about command status changes on a per\-instance basis\.  
+Configurations for sending notifications about command status changes on a per\-managed node basis\.  
 *Required*: No  
 *Type*: [NotificationConfig](aws-properties-ssm-maintenancewindowtask-notificationconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutputS3BucketName`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3bucketname"></a>
-The name of the S3 bucket\.  
+The name of the Amazon Simple Storage Service \(Amazon S3\) bucket\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `3`  
@@ -93,13 +114,13 @@ The supported parameters are the same as those for the `SendCommand` API call\. 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceRoleArn`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-servicerolearn"></a>
-The ARN of the IAM service role to use to publish Amazon Simple Notification Service \(Amazon SNS\) notifications for maintenance window Run Command tasks\.  
+The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) service role to use to publish Amazon Simple Notification Service \(Amazon SNS\) notifications for maintenance window Run Command tasks\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeoutSeconds`  <a name="cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-timeoutseconds"></a>
-If this time is reached and the command has not already started running, it doesn't run\.  
+If this time is reached and the command hasn't already started running, it doesn't run\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `30`  

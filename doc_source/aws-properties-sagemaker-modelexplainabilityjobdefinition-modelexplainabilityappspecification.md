@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ConfigUri](#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-configuri)" : String,
-  "[Environment](#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-environment)" : Environment,
+  "[Environment](#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-environment)" : {Key : Value, ...},
   "[ImageUri](#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-imageuri)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ConfigUri](#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-configuri): String
   [Environment](#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-environment): 
-    Environment
+    Key : Value
   [ImageUri](#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-imageuri): String
 ```
 
@@ -38,7 +38,7 @@ JSON formatted S3 file that defines explainability parameters\. For more informa
 `Environment`  <a name="cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-environment"></a>
 Sets the environment variables in the Docker container\.  
 *Required*: No  
-*Type*: [Environment](aws-properties-sagemaker-modelexplainabilityjobdefinition-environment.md)  
+*Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ImageUri`  <a name="cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-imageuri"></a>

@@ -1,6 +1,6 @@
 # AWS::DMS::Endpoint MicrosoftSqlServerSettings<a name="aws-properties-dms-endpoint-microsoftsqlserversettings"></a>
 
-<a name="aws-properties-dms-endpoint-microsoftsqlserversettings-description"></a>The `MicrosoftSqlServerSettings` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::DMS::Endpoint](aws-resource-dms-endpoint.md)\.
+Not currently supported by AWS CloudFormation\.
 
 ## Syntax<a name="aws-properties-dms-endpoint-microsoftsqlserversettings-syntax"></a>
 

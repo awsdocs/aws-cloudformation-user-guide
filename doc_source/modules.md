@@ -144,7 +144,7 @@ Next, the previous module is nested within a parent module, `My::S3::SampleBucke
 
 ### Specifying constraints for module parameters<a name="modules-using-parameters-constraints"></a>
 
-Module parameters don't support [Type or Constraint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html#parameters-section-structure-properties) enforcement\. To perform type or constraint checking on a module parameter, create a template parameter with the desired constraints, then reference that template parameter in your module parameter\.
+Module parameters don't support [Constraint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/parameters-section-structure.html#parameters-section-structure-properties) enforcement\. To perform constraint checking on a module parameter, create a template parameter with the desired constraints, then reference that template parameter in your module parameter\.
 
 ## Referencing resources in a module<a name="module-ref-resources"></a>
 
@@ -152,15 +152,19 @@ Resources in a module can be referenced by logical name\. The fully\-qualified l
 + The logical name specified for the module in the containing template \(or containing module\)\.
 + The logical name for the resource, specified in the module\.
 
+The fully\-qualified logical name for the resource can be specified with or without using a period as a delimiter\. For example, both of the logical names below are valid, and functionally equivalent:
++ `ModuleLogicalName.ResourceLogicalName`
++ `ModuleLogicalNameResourceLogicalName`
+
 In this way, you can use `GetAtt` and `Ref` intrinsic functions to access property values on module resources\.
 
 In the following example, the template references a property in a module to set a corresponding property on a resource in the template itself\.
 
-Suppose that the `My::S3::SampleBucket::MODULE` module contains an `AWS::S3::Bucket` resource with the logical name of `S3Bucket`\. To reference the bucket name of this resource using the `Ref` intrinsic function, combine the logical name given the module in the template, `MyBucket`, with the logical name of the resource in the module, `S3Bucket`, to get the fully qualified logical name of the resource: `MyBucketS3Bucket`\.
+Suppose that the `My::S3::SampleBucket::MODULE` module contains an `AWS::S3::Bucket` resource with the logical name of `S3Bucket`\. To reference the bucket name of this resource using the `Ref` intrinsic function, combine the logical name given the module in the template, `MyBucket`, with the logical name of the resource in the module, `S3Bucket`, to get the fully qualified logical name of the resource: either `MyBucket.S3Bucket` or `MyBucketS3Bucket`\.
 
 The logical names of resources contained in a module are specified in the module's schema\. You can access that schema in the following ways:
 + Finding the module in the CloudFormation registry\. The **Schema** tab displays the module schema\.
-+ Using the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) API to return the module details, which includes the schema\.
++ Using the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) operation to return the module details, which includes the schema\.
 
 ```
 // Template that uses My::S3::SampleBucket::MODULE
@@ -169,26 +173,56 @@ The logical names of resources contained in a module are specified in the module
     "BucketName": {
       "Description": "Name for your sample bucket",
       "Type": "String"
-    }
-  },
+   }
+ },
   "Resources": {
     "MyBucket": {
       "Type": "My::S3::SampleBucket::MODULE",
       "Properties": {
-        "BucketName": {
-          "Ref": "BucketName"
-        }
+          "BucketName": {
+            "Ref": "BucketName"
+         }
       }
     },
-    "someQueueToMakeItExciting" : {
-      "Type" : "AWS::SQS::Queue",
+    "exampleQueue": {
+      "Type": "AWS::SQS::Queue",
       "Properties": {
-        "QueueName": 
-          { "Fn::GetAtt" : [ "MyBucketS3Bucket", "BucketName" ] }
+          "QueueName": {
+            "Ref": "MyBucket.S3Bucket"
+          }
+      }
+    }
+},
+"Outputs": {
+  "BucketArn": {
+      "Value": {
+          "Fn::GetAtt": [
+             "MyBucket",
+             "S3Bucket.Arn"
+          ]
       }
     }
   }
 }
+```
+
+```
+Parameters:
+  BucketName:
+    Description: Name for your sample bucket
+    Type: String
+Resources:
+  MyBucket:
+    Type: My::S3::SampleBucket::MODULE
+    Properties:
+      BucketName: !Ref BucketName
+  exampleQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: !Ref MyBucket.S3Bucket
+Outputs:
+  BucketArn:
+    Value: !GetAtt MyBucket.S3Bucket.Arn
 ```
 
 ## Considerations when using modules<a name="module-considerations"></a>
@@ -222,3 +256,13 @@ You can register multiple versions of the same module in a given account and reg
 + To guarantee uniform results, if you are including modules in a stack template for use with stack sets, you should ensure that the same version of the module is set as the default version in all the accounts and regions in which you are planning to deploy your stack instances\. This includes for modules that are nested in other modules\. For more information on stack sets, see [Working with stack sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/what-is-cfnstacksets.html)\.
 
 For more information on registering new versions of a module, or changing the default version of a module, see [Using the AWS CloudFormation registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html)\.
+
+## Activating public modules for use in your account<a name="module-enabling"></a>
+
+In order to successfully activate a public module in your account and region, the following must be true for each third\-party public extension \(resource or module\) included in the module:
++ The extension must already be activated in your account and region\.
+
+  If the extension in the module uses a type name alias, the extension must be registered in your account and region using the same type name alias\. For more information, see [Specifying aliases to refer to extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable-alias)\.
++ The extension version currently activated must be one of the supported major versions of that extension specified in the module\. For more information, see [Module requirements for publishing a public module](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules-structure.html#modules-structure-publishing-prereqs) in the *CloudFormation CLI User Guide*\.
+
+If you do not have the correct third\-party public extensions and extension versions activated, CloudFormation will fail the operation with an error listing the extensions and/or versions that need to be activated before the module can be successfully activated\.

@@ -18,6 +18,14 @@ When you submit a `CreateHostedZone` request, the initial status of the hosted z
 
 The `CreateHostedZone` request requires the caller to have an `ec2:DescribeVpcs` permission\.
 
+**Note**  
+When creating private hosted zones, the Amazon VPC must belong to the same partition where the hosted zone is created\. A partition is a group of AWS Regions\. Each AWS account is scoped to one partition\.  
+The following are the supported partitions:  
+ `aws` \- AWS Regions 
+ `aws-cn` \- China Regions
+ `aws-us-gov` \- AWS GovCloud \(US\) Region 
+For more information, see [Access Management](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the * AWS General Reference*\.
+
 ## Syntax<a name="aws-resource-route53-hostedzone-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -64,7 +72,7 @@ If you don't want to specify a comment, omit the `HostedZoneConfig` and `Comment
 
 `HostedZoneTags`  <a name="cfn-route53-hostedzone-hostedzonetags"></a>
 Adds, edits, or deletes tags for a health check or a hosted zone\.  
-For information about using tags for cost allocation, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the *AWS Billing and Cost Management User Guide*\.  
+For information about using tags for cost allocation, see [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the * AWS Billing and Cost Management User Guide*\.  
 *Required*: No  
 *Type*: List of [HostedZoneTag](aws-properties-route53-hostedzone-hostedzonetag.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -72,7 +80,7 @@ For information about using tags for cost allocation, see [Using Cost Allocation
 `Name`  <a name="cfn-route53-hostedzone-name"></a>
 The name of the domain\. Specify a fully qualified domain name, for example, *www\.example\.com*\. The trailing dot is optional; Amazon Route 53 assumes that the domain name is fully qualified\. This means that Route 53 treats *www\.example\.com* \(without a trailing dot\) and *www\.example\.com\.* \(with a trailing dot\) as identical\.  
 If you're creating a public hosted zone, this is the name you have registered with your DNS registrar\. If your domain name is registered with a registrar other than Route 53, change the name servers for your domain to the set of `NameServers` that are returned by the `Fn::GetAtt` intrinsic function\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Maximum*: `1024`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -100,6 +108,12 @@ If you create a query logging configuration using the Route 53 console, Route 53
 1. Create a CloudWatch Logs resource policy, and give it the permissions that Route 53 needs to create log streams and to send query logs to log streams\. For the value of `Resource`, specify the ARN for the log group that you created in the previous step\. To use the same resource policy for all the CloudWatch Logs log groups that you created for query logging configurations, replace the hosted zone name with `*`, for example:
 
     `arn:aws:logs:us-east-1:123412341234:log-group:/aws/route53/*` 
+
+   To avoid the confused deputy problem, a security issue where an entity without a permission for an action can coerce a more\-privileged entity to perform it, you can optionally limit the permissions that a service has to a resource in a resource\-based policy by supplying the following values:
+   + For `aws:SourceArn`, supply the hosted zone ARN used in creating the query logging configuration\. For example, `aws:SourceArn: arn:aws:route53:::hostedzone/hosted zone ID`\.
+   + For `aws:SourceAccount`, supply the account ID for the account that creates the query logging configuration\. For example, `aws:SourceAccount:111111111111`\.
+
+   For more information, see [The confused deputy problem](https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html) in the * AWS IAM User Guide*\.
 **Note**  
 You can't use the CloudWatch console to create or edit a resource policy\. You must use the CloudWatch API, one of the AWS SDKs, or the AWS CLI\.  
 Log Streams and Edge Locations  

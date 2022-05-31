@@ -1,6 +1,6 @@
 # AWS::IoT::TopicRuleDestination VpcDestinationProperties<a name="aws-properties-iot-topicruledestination-vpcdestinationproperties"></a>
 
-<a name="aws-properties-iot-topicruledestination-vpcdestinationproperties-description"></a>The `VpcDestinationProperties` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::IoT::TopicRuleDestination](aws-resource-iot-topicruledestination.md)\.
+The properties of a virtual private cloud \(VPC\) destination\.
 
 ## Syntax<a name="aws-properties-iot-topicruledestination-vpcdestinationproperties-syntax"></a>
 
@@ -31,25 +31,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicruledestination-vpcdestinationproperties-properties"></a>
 
 `RoleArn`  <a name="cfn-iot-topicruledestination-vpcdestinationproperties-rolearn"></a>
-Not currently supported by AWS CloudFormation\.  
+The ARN of a role that has permission to create and attach to elastic network interfaces \(ENIs\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityGroups`  <a name="cfn-iot-topicruledestination-vpcdestinationproperties-securitygroups"></a>
-Not currently supported by AWS CloudFormation\.  
+The security groups of the VPC destination\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-iot-topicruledestination-vpcdestinationproperties-subnetids"></a>
-Not currently supported by AWS CloudFormation\.  
+The subnet IDs of the VPC destination\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcId`  <a name="cfn-iot-topicruledestination-vpcdestinationproperties-vpcid"></a>
-Not currently supported by AWS CloudFormation\.  
+The ID of the VPC\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

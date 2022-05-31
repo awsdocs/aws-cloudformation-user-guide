@@ -5,7 +5,7 @@ Amazon CloudWatch Logs can monitor your system, application, and custom log file
 **Topics**
 + [Send logs to CloudWatch Logs from a Linux instance](#quickref-cloudwatchlogs-example1)
 + [Send logs to CloudWatch Logs from a Windows instance](#quickref-cloudwatchlogs-example2)
-+ [See also](#w8676ab1c27c21c31c11)
++ [See also](#w11339ab1c23c21c31c11)
 
 ## Send logs to CloudWatch Logs from a Linux instance<a name="quickref-cloudwatchlogs-example1"></a>
 
@@ -135,8 +135,8 @@ The two metric filters describe how the log information is transformed into Clou
           "Properties": {
             "GroupDescription": "Enable HTTP access via port 80 and SSH access via port 22",
             "SecurityGroupIngress" : [
-              {"IpProtocol" : "tcp", "FromPort" : "80", "ToPort" : "80", "CidrIp" : "0.0.0.0/0"},
-              {"IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : { "Ref" : "SSHLocation"}}
+              {"IpProtocol" : "tcp", "FromPort" : 80, "ToPort" : 80, "CidrIp" : "0.0.0.0/0"},
+              {"IpProtocol" : "tcp", "FromPort" : 22, "ToPort" : 22, "CidrIp" : { "Ref" : "SSHLocation"}}
             ]
           }
         },
@@ -498,12 +498,12 @@ Resources:
       GroupDescription: Enable HTTP access via port 80 and SSH access via port 22
       SecurityGroupIngress:
       - IpProtocol: tcp
-        FromPort: '80'
-        ToPort: '80'
+        FromPort: 80
+        ToPort: 80
         CidrIp: 0.0.0.0/0
       - IpProtocol: tcp
-        FromPort: '22'
-        ToPort: '22'
+        FromPort: 22
+        ToPort: 22
         CidrIp:
           Ref: SSHLocation
   WebServerHost:
@@ -1583,6 +1583,6 @@ Outputs:
     Value: !Ref 'LogGroup'
 ```
 
-## See also<a name="w8676ab1c27c21c31c11"></a>
+## See also<a name="w11339ab1c23c21c31c11"></a>
 
-For more information about CloudWatch Logs resources, see [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html) or [AWs::Logs::MetricFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html)\.
+For more information about CloudWatch Logs resources, see [AWS::Logs::LogGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html) or [AWS::Logs::MetricFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html)\.

@@ -190,11 +190,11 @@ Resources:
           CapacityProvider: !Ref CapacityProvider2
 ```
 
-### Creating a cluster capacity provider association using an AWS Fargate capacity provider\.<a name="aws-resource-ecs-clustercapacityproviderassociations--examples--Creating_a_cluster_capacity_provider_association_using_an_AWS_Fargate_capacity_provider."></a>
+### Creating a cluster capacity provider association using an AWS Fargate capacity provider\.<a name="aws-resource-ecs-clustercapacityproviderassociations--examples--Creating_a_cluster_capacity_provider_association_using_an__capacity_provider."></a>
 
 The following example associates the `FARGATE` and `FARGATE_SPOT` capacity providers to an existing cluster\. The cluster name must be specified as a parameter\.
 
-#### JSON<a name="aws-resource-ecs-clustercapacityproviderassociations--examples--Creating_a_cluster_capacity_provider_association_using_an_AWS_Fargate_capacity_provider.--json"></a>
+#### JSON<a name="aws-resource-ecs-clustercapacityproviderassociations--examples--Creating_a_cluster_capacity_provider_association_using_an__capacity_provider.--json"></a>
 
 ```
 {
@@ -233,7 +233,7 @@ The following example associates the `FARGATE` and `FARGATE_SPOT` capacity provi
 }
 ```
 
-#### YAML<a name="aws-resource-ecs-clustercapacityproviderassociations--examples--Creating_a_cluster_capacity_provider_association_using_an_AWS_Fargate_capacity_provider.--yaml"></a>
+#### YAML<a name="aws-resource-ecs-clustercapacityproviderassociations--examples--Creating_a_cluster_capacity_provider_association_using_an__capacity_provider.--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09

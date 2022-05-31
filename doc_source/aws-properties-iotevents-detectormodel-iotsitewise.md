@@ -15,7 +15,7 @@ You must use expressions for all parameters in `IotSiteWiseAction`\. The express
 
 You must specify either `propertyAlias` or both `assetId` and `propertyId` to identify the target asset property in AWS IoT SiteWise\.
 
-For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the *AWS IoT Events Developer Guide*\.
+For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the * AWS IoT Events Developer Guide*\.
 
 ## Syntax<a name="aws-properties-iotevents-detectormodel-iotsitewise-syntax"></a>
 
@@ -72,6 +72,6 @@ The ID of the asset property\.
 
 `PropertyValue`  <a name="cfn-iotevents-detectormodel-iotsitewise-propertyvalue"></a>
 The value to send to the asset property\. This value contains timestamp, quality, and value \(TQV\) information\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: [AssetPropertyValue](aws-properties-iotevents-detectormodel-assetpropertyvalue.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

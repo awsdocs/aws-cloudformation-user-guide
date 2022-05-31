@@ -44,7 +44,7 @@ The number of seconds until the timer expires\. The minimum value is 60 seconds 
 
 `TimerName`  <a name="cfn-iotevents-detectormodel-settimer-timername"></a>
 The name of the timer\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  

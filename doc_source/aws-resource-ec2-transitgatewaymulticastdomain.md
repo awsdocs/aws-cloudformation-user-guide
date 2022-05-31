@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::TransitGatewayMulticastDomain",
   "Properties" : {
+      "[Options](#cfn-ec2-transitgatewaymulticastdomain-options)" : Json,
       "[Tags](#cfn-ec2-transitgatewaymulticastdomain-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TransitGatewayId](#cfn-ec2-transitgatewaymulticastdomain-transitgatewayid)" : String
     }
@@ -25,12 +26,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EC2::TransitGatewayMulticastDomain
 Properties: 
+  [Options](#cfn-ec2-transitgatewaymulticastdomain-options): Json
   [Tags](#cfn-ec2-transitgatewaymulticastdomain-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TransitGatewayId](#cfn-ec2-transitgatewaymulticastdomain-transitgatewayid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-transitgatewaymulticastdomain-properties"></a>
+
+`Options`  <a name="cfn-ec2-transitgatewaymulticastdomain-options"></a>
+The options for the transit gateway multicast domain\.  
++ AutoAcceptSharedAssociations \(enable \| disable\)
++ Igmpv2Support \(enable \| disable\)
++ StaticSourcesSupport \(enable \| disable\)
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ec2-transitgatewaymulticastdomain-tags"></a>
 The tags for the transit gateway multicast domain\.  
@@ -40,7 +51,7 @@ The tags for the transit gateway multicast domain\.
 
 `TransitGatewayId`  <a name="cfn-ec2-transitgatewaymulticastdomain-transitgatewayid"></a>
 The ID of the transit gateway\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -63,6 +74,9 @@ The time the multicast domain was created\.
 
 `State`  <a name="State-fn::getatt"></a>
 The state of the multicast domain\.
+
+`TransitGatewayMulticastDomainArn`  <a name="TransitGatewayMulticastDomainArn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the multicast domain\.
 
 `TransitGatewayMulticastDomainId`  <a name="TransitGatewayMulticastDomainId-fn::getatt"></a>
 The ID of the multicast domain\.

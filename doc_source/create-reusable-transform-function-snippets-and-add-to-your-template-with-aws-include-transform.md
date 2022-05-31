@@ -45,7 +45,7 @@ To include a transform that's embedded within a section, use the ``Fn::Transform
 2.    "Fn::Transform" : {
 3.        "Name" : "AWS::Include",
 4.        "Parameters" : {
-5.            "Location" : "s3://MyAmazonS3BucketName/MyFileName.json"
+5.            "Location": "s3://MyAmazonS3BucketName/MyFileName.json"
 6.         }
 7.     }
 8. }
@@ -117,5 +117,5 @@ WebServerWaitHandle:
 4.   'Fn::Transform':
 5.     Name: 'AWS::Include'
 6.     Parameters:
-7.       Location : "s3://MyAmazonS3BucketName/single_wait_condition.yaml"
+7.       Location: "s3://MyAmazonS3BucketName/single_wait_condition.yaml"
 ```

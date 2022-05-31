@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[DecodeConfig](#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-decodeconfig)" : DecodeConfig,
   "[DemodulationConfig](#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-demodulationconfig)" : DemodulationConfig,
-  "[SpectrumConfig](#cfn-groundstation-config-antennadownlinkconfig-spectrumconfig)" : SpectrumConfig
+  "[SpectrumConfig](#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-spectrumconfig)" : SpectrumConfig
 }
 ```
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     DecodeConfig
   [DemodulationConfig](#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-demodulationconfig): 
     DemodulationConfig
-  [SpectrumConfig](#cfn-groundstation-config-antennadownlinkconfig-spectrumconfig): 
+  [SpectrumConfig](#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-spectrumconfig): 
     SpectrumConfig
 ```
 
@@ -31,19 +31,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DecodeConfig`  <a name="cfn-groundstation-config-antennadownlinkdemoddecodeconfig-decodeconfig"></a>
  Defines how the RF signal will be decoded\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: [DecodeConfig](aws-properties-groundstation-config-decodeconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DemodulationConfig`  <a name="cfn-groundstation-config-antennadownlinkdemoddecodeconfig-demodulationconfig"></a>
  Defines how the RF signal will be demodulated\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: [DemodulationConfig](aws-properties-groundstation-config-demodulationconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`SpectrumConfig`  <a name="cfn-groundstation-config-antennadownlinkconfig-spectrumconfig"></a>
+`SpectrumConfig`  <a name="cfn-groundstation-config-antennadownlinkdemoddecodeconfig-spectrumconfig"></a>
  Defines the spectrum configuration\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: [SpectrumConfig](aws-properties-groundstation-config-spectrumconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

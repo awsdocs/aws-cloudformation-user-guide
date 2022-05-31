@@ -1,6 +1,6 @@
 # Uploading local artifacts to an S3 bucket<a name="using-cfn-cli-package"></a>
 
-For some resource properties that require an Amazon S3 location \(a bucket name and filename\), you can specify local references instead\. For example, you might specify the S3 location of your AWS Lambda function's source code or an Amazon API Gateway REST API's OpenAPI \(formerly Swagger\) file\. Instead of manually uploading the files to an S3 bucket and then adding the location to your template, you can specify local references, called local artifacts, in your template and then use the `package` command to quickly upload them\. A local artifact is a path to a file or folder that the `package` command uploads to Amazon S3\. For example, an artifact can be a local path to your AWS Lambda function's source code or an Amazon API Gateway REST API's OpenAPI file\.
+For some resource properties that require an Amazon S3 location \(a bucket name and file name\), you can specify local references instead\. For example, you might specify the S3 location of your AWS Lambda function's source code or an Amazon API Gateway REST API's OpenAPI \(formerly Swagger\) file\. Instead of manually uploading the files to an S3 bucket and then adding the location to your template, you can specify local references, called local artifacts, in your template and then use the `package` command to quickly upload them\. A local artifact is a path to a file or folder that the `package` command uploads to Amazon S3\. For example, an artifact can be a local path to your AWS Lambda function's source code or an Amazon API Gateway REST API's OpenAPI file\.
 
 If you specify a file, the command directly uploads it to the S3 bucket\. After uploading the artifacts, the command returns a copy of your template, replacing references to local artifacts with the S3 location where the command uploaded the artifacts\. Then, you can use the returned template to create or update a stack\.
 
@@ -13,15 +13,20 @@ The following template specifies the local artifact for a Lambda function's sour
 **Original template**
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
-Transform: 'AWS::Serverless-2016-10-31'
-Resources:
-  MyFunction:
-    Type: 'AWS::Serverless::Function'
-    Properties:
-      Handler: index.handler
-      Runtime: nodejs8.10
-      CodeUri: /home/user/code/lambdafunction
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Transform": "AWS::Serverless-2016-10-31",
+  "Resources": {
+    "MyFunction": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "index.handler",
+        "Runtime": "nodejs8.10",
+        "CodeUri": "/home/user/code/lambdafunction"
+      }
+    }
+  }
+}
 ```
 
 The following command creates a \.zip file containing the function's source code folder, and then uploads the \.zip file to the root folder of the `my-bucket` bucket\.
@@ -29,21 +34,30 @@ The following command creates a \.zip file containing the function's source code
 **Package command**
 
 ```
-aws cloudformation package --template /path_to_template/template.json --s3-bucket mybucket --output json > packaged-template.json
+aws cloudformation package \
+  --template /path_to_template/template.json \
+  --s3-bucket mybucket \
+  --output-template-file packaged-template.json \
+  --use-json
 ```
 
-The command saves the template that it generates to the path specified by the `--output` option\. The command replaces the artifact with the S3 location, as shown in the following example:
+The command saves the template that it generates to the path specified by the `--output` option\. The command replaces the artifact with the Amazon S3 location, as shown in the following example:
 
 **Resulting template**
 
 ```
-AWSTemplateFormatVersion: '2010-09-09'
-Transform: 'AWS::Serverless-2016-10-31'
-Resources:
-  MyFunction:
-    Type: 'AWS::Serverless::Function'
-    Properties:
-      Handler: index.handler
-      Runtime: nodejs8.10
-      CodeUri: s3://mybucket/lambdafunction.zip
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Transform": "AWS::Serverless-2016-10-31",
+  "Resources": {
+    "MyFunction": {
+      "Type": "AWS::Serverless::Function",
+      "Properties": {
+        "Handler": "index.handler",
+        "Runtime": "nodejs8.10",
+        "CodeUri": "s3://mybucket/<md5 checksum>"
+      }
+    }
+  }
+}
 ```

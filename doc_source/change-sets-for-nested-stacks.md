@@ -187,7 +187,7 @@ The following AWS CLI example is of a `describe-change-set` output for the neste
 The following AWS CLI example is of an `execute-change-set` input\.
 
 ```
-aws cloudformation execute-change-set 
+aws cloudformation execute-change-set \
     --stack-name my-root-stack \ 
     --change-set-name my-root-stack-change-set
 ```
@@ -200,7 +200,7 @@ aws cloudformation execute-change-set
 The following AWS CLI example is of a `delete-change-set` input on the root change set\.
 
 ```
-aws cloudformation delete-change-set 
+aws cloudformation delete-change-set \
     --stack-name my-root-stack \ 
     --change-set-name my-root-stack-change-set
 ```

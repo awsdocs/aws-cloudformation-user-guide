@@ -35,7 +35,7 @@ The name of the job that performs baselining for the monitoring job\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConstraintsResource`  <a name="cfn-sagemaker-modelqualityjobdefinition-modelqualitybaselineconfig-constraintsresource"></a>
-Not currently supported by AWS CloudFormation\.  
+The constraints resource for a monitoring job\.  
 *Required*: No  
 *Type*: [ConstraintsResource](aws-properties-sagemaker-modelqualityjobdefinition-constraintsresource.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

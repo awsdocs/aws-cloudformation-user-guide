@@ -55,7 +55,7 @@ The list of endpoint objects\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointGroupRegion`  <a name="cfn-globalaccelerator-endpointgroup-endpointgroupregion"></a>
-The AWS Region where the endpoint group is located\.  
+The AWS Regions where the endpoint group is located\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `255`  
@@ -116,7 +116,7 @@ The number of consecutive health checks required to set the state of a healthy e
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrafficDialPercentage`  <a name="cfn-globalaccelerator-endpointgroup-trafficdialpercentage"></a>
-The percentage of traffic to send to an AWS Region\. Additional traffic is distributed to other endpoint groups for this listener\.   
+The percentage of traffic to send to an AWS Regions\. Additional traffic is distributed to other endpoint groups for this listener\.   
 Use this action to increase \(dial up\) or decrease \(dial down\) traffic to a specific Region\. The percentage is applied to the traffic that would otherwise have been routed to the Region based on optimal routing\.  
 The default value is 100\.  
 *Required*: No  

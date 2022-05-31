@@ -41,12 +41,12 @@ Exception: Not supported on Debian Server or Ubuntu Server\.
 *Required*: Conditional  
 *Type*: Integer  
 *Minimum*: `0`  
-*Maximum*: `100`  
+*Maximum*: `360`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApproveUntilDate`  <a name="cfn-ssm-patchbaseline-rule-approveuntildate"></a>
 The cutoff date for auto approval of released patches\. Any patches released on or before this date are installed automatically\. Not supported on Debian Server or Ubuntu Server\.  
-Enter dates in the format `YYYY-MM-DD`\. For example, `2020-12-31`\.  
+Enter dates in the format `YYYY-MM-DD`\. For example, `2021-12-31`\.  
 *Required*: No  
 *Type*: [PatchStringDate](aws-properties-ssm-patchbaseline-patchstringdate.md)  
 *Minimum*: `1`  
@@ -61,7 +61,7 @@ A compliance severity level for all approved patches in a patch baseline\. Valid
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableNonSecurity`  <a name="cfn-ssm-patchbaseline-rule-enablenonsecurity"></a>
-For instances identified by the approval rule filters, enables a patch baseline to apply non\-security updates available in the specified repository\. The default value is 'false'\. Applies to Linux instances only\.  
+For managed nodes identified by the approval rule filters, enables a patch baseline to apply non\-security updates available in the specified repository\. The default value is `false`\. Applies to Linux managed nodes only\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

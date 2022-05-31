@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Source](#cfn-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattributevalue-source)" : AccessControlAttributeValueSourceList
+  "[Source](#cfn-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattributevalue-source)" : [ String, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Source](#cfn-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattributevalue-source): 
-    AccessControlAttributeValueSourceList
+    - String
 ```
 
 ## Properties<a name="aws-properties-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattributevalue-properties"></a>
@@ -26,6 +26,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Source`  <a name="cfn-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattributevalue-source"></a>
 The identity source to use when mapping a specified attribute to AWS SSO\.  
 *Required*: Yes  
-*Type*: [AccessControlAttributeValueSourceList](aws-properties-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattributevaluesourcelist.md)  
+*Type*: List of String  
 *Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

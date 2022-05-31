@@ -1,6 +1,6 @@
 # AWS::DataBrew::Dataset<a name="aws-resource-databrew-dataset"></a>
 
-Creates a new DataBrew dataset\.
+Specifies a new DataBrew dataset\.
 
 ## Syntax<a name="aws-resource-databrew-dataset-syntax"></a>
 
@@ -42,7 +42,7 @@ Properties:
 ## Properties<a name="aws-resource-databrew-dataset-properties"></a>
 
 `Format`  <a name="cfn-databrew-dataset-format"></a>
-The file format of a dataset that is created from an S3 file or folder\.  
+The file format of a dataset that is created from an Amazon S3 file or folder\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `CSV | EXCEL | JSON | PARQUET`  
@@ -69,7 +69,7 @@ The unique name of the dataset\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PathOptions`  <a name="cfn-databrew-dataset-pathoptions"></a>
-A set of options that defines how DataBrew interprets an S3 path of the dataset\.  
+A set of options that defines how DataBrew interprets an Amazon S3 path of the dataset\.  
 *Required*: No  
 *Type*: [PathOptions](aws-properties-databrew-dataset-pathoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -88,7 +88,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  `{ "Ref": "myDataset" }` 
 
-For an AWS Glue DataBrew dataset named `myDataset`, `Ref` returns the name of the dataset\. 
+For an AWS Glue DataBrew dataset named `myDataset`, `Ref` returns the name of the dataset\. 
 
 ## Examples<a name="aws-resource-databrew-dataset--examples"></a>
 
@@ -120,7 +120,7 @@ Resources:
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "This CloudFormation template creates a DataBrew Dataset",
+    "Description": "This CloudFormation template specifies a DataBrew Dataset",
     "Resources": {
     "TestDataBrewDataset": {
       "Type": "AWS::DataBrew::Dataset",

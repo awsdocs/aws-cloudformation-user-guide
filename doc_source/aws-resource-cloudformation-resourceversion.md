@@ -1,13 +1,13 @@
 # AWS::CloudFormation::ResourceVersion<a name="aws-resource-cloudformation-resourceversion"></a>
 
 Registers a resource version with the CloudFormation service\. Registering a resource version makes it available for use in CloudFormation templates in your AWS account, and includes:
-+ Validating the resource schema
-+ Determining which handlers, if any, have been specified for the resource
-+ Making the resource available for use in your account
++ Validating the resource schema\.
++ Determining which handlers, if any, have been specified for the resource\.
++ Making the resource available for use in your account\.
 
 For more information on how to develop resources and ready them for registration, see [Creating Resource Providers](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-types.html) in the *CloudFormation CLI User Guide*\.
 
-You can have a maximum of 50 resource versions registered at a time\. This maximum is per account and per region\.
+You can have a maximum of 50 resource versions registered at a time\. This maximum is per account and per Region\.
 
 ## Syntax<a name="aws-resource-cloudformation-resourceversion-syntax"></a>
 
@@ -48,28 +48,28 @@ The Amazon Resource Name \(ARN\) of the IAM role for CloudFormation to assume wh
 *Minimum*: `1`  
 *Maximum*: `256`  
 *Pattern*: `arn:.+:iam::[0-9]{12}:role/.+`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LoggingConfig`  <a name="cfn-cloudformation-resourceversion-loggingconfig"></a>
 Logging configuration information for a resource\.  
 *Required*: No  
 *Type*: [LoggingConfig](aws-properties-cloudformation-resourceversion-loggingconfig.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SchemaHandlerPackage`  <a name="cfn-cloudformation-resourceversion-schemahandlerpackage"></a>
-A url to the S3 bucket containing the resource project package that contains the neccessary files for the resource you want to register\.  
+A URL to the S3 bucket containing the resource project package that contains the necessary files for the resource you want to register\.  
 For information on generating a schema handler package for the resource you want to register, see [submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html) in the *CloudFormation CLI User Guide*\.  
 The user registering the resource must be able to access the package in the S3 bucket\. That is, the user needs to have [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for the schema handler package\. For more information, see [Actions, Resources, and Condition Keys for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity and Access Management User Guide*\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `4096`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TypeName`  <a name="cfn-cloudformation-resourceversion-typename"></a>
 The name of the resource being registered\.  
 We recommend that resource names adhere to the following pattern: *company\_or\_organization*::*service*::*type*\.  
-The following organization namespaces are reserved and cannot be used in your resource names:  
+The following organization namespaces are reserved and can't be used in your resource names:  
 + `Alexa`
 + `AMZN`
 + `Amazon`
@@ -81,13 +81,13 @@ The following organization namespaces are reserved and cannot be used in your re
 *Minimum*: `10`  
 *Maximum*: `204`  
 *Pattern*: `[A-Za-z0-9]{2,64}::[A-Za-z0-9]{2,64}::[A-Za-z0-9]{2,64}(::MODULE){0,1}`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-cloudformation-resourceversion-return-values"></a>
 
 ### Ref<a name="aws-resource-cloudformation-resourceversion-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the resource version\. For example: 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the resource version\. For example:
 
 `arn:aws:cloudformation:us-west-2:012345678901:type/resource/Sample-CloudFormation-Resource/00000001`
 
@@ -111,8 +111,8 @@ Whether the resource version is set as the default version\.
 The provisioning behavior of the resource type\. CloudFormation determines the provisioning type during registration, based on the types of handlers in the schema handler package submitted\.  
 Valid values include:  
 + `FULLY_MUTABLE`: The resource type includes an update handler to process updates to the type during stack update operations\.
-+ `IMMUTABLE`: The resource type does not include an update handler, so the type cannot be updated and must instead be replaced during stack update operations\.
-+ `NON_PROVISIONABLE`: The resource type does not include all of the following handlers, and therefore cannot actually be provisioned\.
++ `IMMUTABLE`: The resource type doesn't include an update handler, so the type can't be updated and must instead be replaced during stack update operations\.
++ `NON_PROVISIONABLE`: The resource type doesn't include all the following handlers, and therefore can't actually be provisioned\.
   + create
   + read
   + delete
@@ -126,8 +126,8 @@ The ID of a specific version of the resource\. The version ID is the value at th
 `Visibility`  <a name="Visibility-fn::getatt"></a>
 The scope at which the resource is visible and usable in CloudFormation operations\.  
 Valid values include:  
-+ `PRIVATE`: The resource is only visible and usable within the account in which it is registered\. CloudFormation marks any resources you register as `PRIVATE`\.
-+ `PUBLIC`: The resource is publically visible and usable within any Amazon account\.
++ `PRIVATE`: The resource is only visible and usable within the account in which it's registered\. CloudFormation marks any resources you register as `PRIVATE`\.
++ `PUBLIC`: The resource is publicly visible and usable within any Amazon account\.
 
 ## Examples<a name="aws-resource-cloudformation-resourceversion--examples"></a>
 

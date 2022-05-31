@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Attribute`  <a name="cfn-iotanalytics-pipeline-math-attribute"></a>
 The name of the attribute that contains the result of the math operation\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  
@@ -38,7 +38,7 @@ The name of the attribute that contains the result of the math operation\.
 
 `Math`  <a name="cfn-iotanalytics-pipeline-math-math"></a>
 An expression that uses one or more existing attributes and must return an integer value\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [String](#aws-properties-iotanalytics-pipeline-math)  
 *Minimum*: `1`  
 *Maximum*: `256`  
@@ -46,7 +46,7 @@ An expression that uses one or more existing attributes and must return an integ
 
 `Name`  <a name="cfn-iotanalytics-pipeline-math-name"></a>
 The name of the 'math' activity\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  

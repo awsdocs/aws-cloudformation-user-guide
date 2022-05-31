@@ -49,7 +49,7 @@ Naming an IAM resource can cause an unrecoverable error if you reuse the same te
 
 `ManagedPolicyArns`  <a name="cfn-iam-group-managepolicyarns"></a>
 The Amazon Resource Name \(ARN\) of the IAM policy you want to attach\.  
-For more information about ARNs, see [Amazon Resource Names \(ARNs\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *AWS General Reference*\.  
+For more information about ARNs, see [Amazon Resource Names \(ARNs\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the * AWS General Reference*\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

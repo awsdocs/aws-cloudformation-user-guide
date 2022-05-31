@@ -1,6 +1,6 @@
 # AWS::EFS::AccessPoint<a name="aws-resource-efs-accesspoint"></a>
 
-The `AWS::EFS::AccessPoint` resource creates an EFS access point\. An access point is an application\-specific view into an EFS file system that applies an operating system user and group, and a file system path, to any file system request made through the access point\. The operating system user and group override any identity information provided by the NFS client\. The file system path is exposed as the access point's root directory\. Applications using the access point can only access data in its own directory and below\. To learn more, see [Mounting a File System Using EFS Access Points](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html)\.
+The `AWS::EFS::AccessPoint` resource creates an EFS access point\. An access point is an application\-specific view into an EFS file system that applies an operating system user and group, and a file system path, to any file system request made through the access point\. The operating system user and group override any identity information provided by the NFS client\. The file system path is exposed as the access point's root directory\. Applications using the access point can only access data in its own directory and below\. To learn more, see [Mounting a file system using EFS access points](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html)\.
 
 This operation requires permissions for the `elasticfilesystem:CreateAccessPoint` action\.
 
@@ -57,7 +57,7 @@ The opaque string specified in the request to ensure idempotent creation\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FileSystemId`  <a name="cfn-efs-accesspoint-filesystemid"></a>
-The ID of the EFS file system that the access point applies to\.  
+The ID of the EFS file system that the access point applies to\. Accepts only the ID format for input when specifying a file system, for example `fs-0123456789abcedf2`\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `128`  
@@ -80,11 +80,11 @@ The directory on the Amazon EFS file system that the access point exposes as the
 
 ### Ref<a name="aws-resource-efs-accesspoint-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ID\. For example: 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the AccessPoint ID\. For example: 
 
- `{"Ref":"fsap-0123456789abcdef0"}`\.
+`{"Ref":"access_point-logical_id"}` returns
 
- Ref returns the access point ID\.
+`fsap-0123456789abcdef0`
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -162,6 +162,6 @@ AccessPointResource:
 ```
 
 ## See also<a name="aws-resource-efs-accesspoint--seealso"></a>
-+ [Amazon EFS: How It Works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html)\.
-+ [Working with Amazon EFS Access Points](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) in the *Amazon EFS User Guide*\.
++ [Amazon EFS: How it works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html)\.
++ [Working with Amazon EFS access points](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) in the *Amazon EFS User Guide*\.
 

@@ -1,6 +1,6 @@
 # AWS::AutoScalingPlans::ScalingPlan PredefinedScalingMetricSpecification<a name="aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification"></a>
 
- `PredefinedScalingMetricSpecification` is a subproperty of [TargetTrackingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html) that specifies a customized scaling metric for a target tracking configuration to use with AWS Auto Scaling\. 
+ `PredefinedScalingMetricSpecification` is a subproperty of [TargetTrackingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html) that specifies a customized scaling metric for a target tracking configuration to use with AWS Auto Scaling \(Auto Scaling Plans\)\. 
 
 
 

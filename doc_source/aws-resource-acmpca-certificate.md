@@ -49,7 +49,7 @@ Specifies X\.509 certificate information to be included in the issued certificat
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificateAuthorityArn`  <a name="cfn-acmpca-certificate-certificateauthorityarn"></a>
-The Amazon Resource Name \(ARN\) for the private CA used to issue the certificate\.  
+The Amazon Resource Name \(ARN\) for the private CA issues the certificate\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -63,6 +63,7 @@ The certificate signing request \(CSR\) for the certificate\.
 `SigningAlgorithm`  <a name="cfn-acmpca-certificate-signingalgorithm"></a>
 The name of the algorithm that will be used to sign the certificate to be issued\.   
 This parameter should not be confused with the `SigningAlgorithm` parameter used to sign a CSR in the `CreateCertificateAuthority` action\.  
+The specified signing algorithm family \(RSA or ECDSA\) must match the algorithm family of the CA's secret key\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `SHA256WITHECDSA | SHA256WITHRSA | SHA384WITHECDSA | SHA384WITHRSA | SHA512WITHECDSA | SHA512WITHRSA`  
@@ -82,7 +83,7 @@ The period of time during which the certificate will be valid\.
 
 `ValidityNotBefore`  <a name="cfn-acmpca-certificate-validitynotbefore"></a>
 Information describing the start of the validity period of the certificate\. This parameter sets the “Not Before" date for the certificate\.  
-By default, when issuing a certificate, ACM Private CA sets the "Not Before" date to the issuance time minus 60 minutes\. This compensates for clock inconsistencies across computer systems\. The `ValidityNotBefore` parameter can be used to customize the “Not Before” value\.   
+By default, when issuing a certificate, ACM Private CA sets the "Not Before" date to the issuance time minus 60 minutes\. This compensates for clock inconsistencies across computer systems\. The `ValidityNotBefore` parameter can be used to customize the “Not Before” value\.  
 Unlike the `Validity` parameter, the `ValidityNotBefore` parameter is optional\.  
 The `ValidityNotBefore` value is expressed as an explicit date and time, using the `Validity` type value `ABSOLUTE`\.  
 *Required*: No  

@@ -45,7 +45,7 @@ Provides a list of source accounts and regions to be aggregated\.
 
 `ConfigurationAggregatorName`  <a name="cfn-config-configurationaggregator-configurationaggregatorname"></a>
 The name of the aggregator\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  
@@ -72,6 +72,13 @@ An array of tag object\.
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ConfigurationAggregatorName, such as `myConfigurationAggregator`\. 
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-config-configurationaggregator-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-config-configurationaggregator-return-values-fn--getatt-fn--getatt"></a>
+
+`ConfigurationAggregatorArn`  <a name="ConfigurationAggregatorArn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the aggregator\.
 
 ## Examples<a name="aws-resource-config-configurationaggregator--examples"></a>
 

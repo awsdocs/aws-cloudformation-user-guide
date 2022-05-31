@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-retryoptions-properties"></a>
 
 `DurationInSeconds`  <a name="cfn-kinesisfirehose-deliverystream-retryoptions-durationinseconds"></a>
-The total amount of time that Kinesis Data Firehose spends on retries\. This duration starts after the initial attempt to send data to the custom destination via HTTPS endpoint fails\. It doesn't include the periods during which Kinesis Data Firehose waits for acknowledgment from the specified destination after each attempt\.   
+The total amount of time that Kinesis Data Firehose spends on retries\. This duration starts after the initial attempt to send data to the custom destination via HTTPS endpoint fails\. It doesn't include the periods during which Kinesis Data Firehose waits for acknowledgment from the specified destination after each attempt\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  

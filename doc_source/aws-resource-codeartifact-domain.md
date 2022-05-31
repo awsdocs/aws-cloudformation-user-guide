@@ -125,11 +125,11 @@ Resources:
 }
 ```
 
-### Create a domain with an AWS KMS encryption key and IAM resource\-based policy<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an_AWS_KMS_encryption_key_and_IAM_resource-based_policy"></a>
+### Create a domain with an AWS Key Management Service encryption key and IAM resource\-based policy<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an__encryption_key_and_IAM_resource-based_policy"></a>
 
-The following example creates a CodeArtifact domain named *my\-domain* with an AWS KMS encryption key and attaches an IAM resource\-based policy\.
+The following example creates a CodeArtifact domain named *my\-domain* with an AWS Key Management Service encryption key and attaches an IAM resource\-based policy\.
 
-#### YAML<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an_AWS_KMS_encryption_key_and_IAM_resource-based_policy--yaml"></a>
+#### YAML<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an__encryption_key_and_IAM_resource-based_policy--yaml"></a>
 
 ```
 Resources:
@@ -158,7 +158,7 @@ Resources:
               Resource: "*"
 ```
 
-#### JSON<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an_AWS_KMS_encryption_key_and_IAM_resource-based_policy--json"></a>
+#### JSON<a name="aws-resource-codeartifact-domain--examples--Create_a_domain_with_an__encryption_key_and_IAM_resource-based_policy--json"></a>
 
 ```
 {

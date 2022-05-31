@@ -2,7 +2,7 @@
 
 You can track the status of the resources AWS CloudFormation is creating and deleting with the `[aws cloudformation describe\-stack\-events](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stack-events.html)` command\. The amount of time to create or delete a stack depends on the complexity of your stack\.
 
-In the following example, a sample stack is created from a template file by using the `[aws cloudformation create\-stack](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html)` command\. After the stack is created, the events that were reported during stack creation are shown by using the aws cloudformation describe\-stack\-events command\.
+In the following example, a sample stack is created from a template file by using the `[aws cloudformation create\-stack](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html)` command\. After the stack is created, the events that were reported during stack creation are shown by using the `aws cloudformation describe-stack-events` command\.
 
 The following example creates a stack with the name `myteststack` using the `sampletemplate.json` template file:
 
@@ -104,13 +104,13 @@ The most recent events are reported first\. The following table describe the fie
 
 | Field | Description | 
 | --- | --- | 
-| EventId |  Event identifier  | 
-| StackName |  Name of the stack that the event corresponds to  | 
-| StackId |  Identifier of the stack that the event corresponds to  | 
-| LogicalResourceId |  Logical identifier of the resource  | 
-| PhysicalResourceId |  Physical identifier of the resource  | 
-| ResourceProperties |  Properties of the resource  | 
-| ResourceType |  Type of the resource  | 
-| Timestamp |  Time when the event occurred  | 
-| ResourceStatus |  The status of the resource, which can be one of the following status codes: `CREATE_COMPLETE` \| `CREATE_FAILED` \| `CREATE_IN_PROGRESS` \| `DELETE_COMPLETE` \| `DELETE_FAILED` \| `DELETE_IN_PROGRESS` \| `DELETE_SKIPPED` \| `UPDATE_COMPLETE` \| `UPDATE_FAILED` \| `UPDATE_IN_PROGRESS` The `DELETE_SKIPPED` status applies to resources with a deletion policy attribute of retain  | 
-| ResourceStatusReason |  More information on the status  | 
+| EventId |  Event identifier\.  | 
+| StackName |  Name of the stack that the event corresponds to\.  | 
+| StackId |  Identifier of the stack that the event corresponds to\.  | 
+| LogicalResourceId |  Logical identifier of the resource\.  | 
+| PhysicalResourceId |  Physical identifier of the resource\.  | 
+| ResourceProperties |  Properties of the resource\.  | 
+| ResourceType |  Type of the resource\.  | 
+| Timestamp |  Time when the event occurred\.  | 
+| ResourceStatus |  The status of the resource, which can be one of the following status codes: `CREATE_COMPLETE` \| `CREATE_FAILED` \| `CREATE_IN_PROGRESS` \| `DELETE_COMPLETE` \| `DELETE_FAILED` \| `DELETE_IN_PROGRESS` \| `DELETE_SKIPPED` \| `UPDATE_COMPLETE` \| `UPDATE_FAILED` \| `UPDATE_IN_PROGRESS` The `DELETE_SKIPPED` status applies to resources with a deletion policy attribute of retain\.  | 
+| ResourceStatusReason |  More information on the status\.  | 

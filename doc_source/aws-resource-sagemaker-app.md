@@ -51,7 +51,7 @@ The name of the app\.
 The type of app\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `JupyterServer | KernelGateway | TensorBoard`  
+*Allowed values*: `JupyterServer | KernelGateway | RSessionGateway | RStudioServerPro | TensorBoard`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DomainId`  <a name="cfn-sagemaker-app-domainid"></a>
@@ -72,7 +72,7 @@ An array of key\-value pairs to apply to this resource\.
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UserProfileName`  <a name="cfn-sagemaker-app-userprofilename"></a>
 The user profile name\.  
@@ -80,7 +80,7 @@ The user profile name\.
 *Type*: String  
 *Maximum*: `63`  
 *Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-sagemaker-app-return-values"></a>
 

@@ -1,10 +1,6 @@
 # AWS::Events::EventBus<a name="aws-resource-events-eventbus"></a>
 
-The `AWS::Events::EventBus` resource creates or updates a partner event bus or custom event bus\. Partner event buses can receive events from applications and services created by AWS SaaS partners\. You need to create a partner event bus for each partner event source that you want to receive events from\. 
-
-Custom event buses can receive events from your own custom applications\.
-
-To review the limit for how many rules each event bus may have, see [Service Limits](https://docs.aws.amazon.com/eventbridge/latest/userguide/cloudwatch-limits-eventbridge.html)\.
+Creates a new event bus within your account\. This can be a custom event bus which you can use to receive events from your custom applications and services, or it can be a partner event bus which can be matched to a partner event source\.
 
 ## Syntax<a name="aws-resource-events-eventbus-syntax"></a>
 
@@ -17,7 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Events::EventBus",
   "Properties" : {
       "[EventSourceName](#cfn-events-eventbus-eventsourcename)" : String,
-      "[Name](#cfn-events-eventbus-name)" : String
+      "[Name](#cfn-events-eventbus-name)" : String,
+      "[Tags](#cfn-events-eventbus-tags)" : [ TagEntry, ... ]
     }
 }
 ```
@@ -29,21 +26,36 @@ Type: AWS::Events::EventBus
 Properties: 
   [EventSourceName](#cfn-events-eventbus-eventsourcename): String
   [Name](#cfn-events-eventbus-name): String
+  [Tags](#cfn-events-eventbus-tags): 
+    - TagEntry
 ```
 
 ## Properties<a name="aws-resource-events-eventbus-properties"></a>
 
 `EventSourceName`  <a name="cfn-events-eventbus-eventsourcename"></a>
-The name of the partner event source to associate with this event bus, if you are creating a partner event bus\.  
-*Required*: Conditional  
+If you are creating a partner event bus, this specifies the partner event source that the new event bus will be matched with\.  
+*Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `256`  
+*Pattern*: `aws\.partner(/[\.\-_A-Za-z0-9]+){2,}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-events-eventbus-name"></a>
-The name of the event bus you are creating\. The names of custom event buses can't contain the `/` character\. You can't use the name `default` for a custom event bus\.  
-If you are creating a partner event bus, this name must exactly match the name of the partner event source that this bus is matched to\.  
+The name of the new event bus\.   
+Event bus names cannot contain the / character\. You can't use the name `default` for a custom event bus, as this name is already used for your account's default event bus\.  
+If this is a partner event bus, the name must exactly match the name of the partner event source that this event bus is matched to\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `256`  
+*Pattern*: `[/\.\-_A-Za-z0-9]+`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-events-eventbus-tags"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [TagEntry](aws-properties-events-eventbus-tagentry.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-events-eventbus-return-values"></a>
@@ -73,7 +85,7 @@ The policy for the event bus in JSON form\.
 
 ### Create a partner event bus<a name="aws-resource-events-eventbus--examples--Create_a_partner_event_bus"></a>
 
-The following example creates a partner event bus named `aws.partner/PartnerName/acct1/repo1`\. 
+The following example creates a partner event bus named `aws.partner.repo1`\. 
 
 #### JSON<a name="aws-resource-events-eventbus--examples--Create_a_partner_event_bus--json"></a>
 
@@ -82,7 +94,7 @@ The following example creates a partner event bus named `aws.partner/PartnerName
     "Type": "AWS::Events::EventBus",
     "Properties": {
         "EventSourceName": "aws.partner/PartnerName/acct1/repo1",
-        "Name": "aws.partner/PartnerName/acct1/repo1"
+        "Name": "aws.partner.repo1"
     }
 }
 ```
@@ -94,7 +106,7 @@ SamplePartnerEventBus:
     Type: AWS::Events::EventBus
     Properties: 
         EventSourceName: "aws.partner/PartnerName/acct1/repo1"
-        Name: "aws.partner/PartnerName/acct1/repo1"
+        Name: "aws.partner.repo1"
 ```
 
 ### Create a custom event bus<a name="aws-resource-events-eventbus--examples--Create_a_custom_event_bus"></a>

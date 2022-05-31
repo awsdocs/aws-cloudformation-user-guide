@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-synthetics-canary-runconfig-properties"></a>
 
 `ActiveTracing`  <a name="cfn-synthetics-canary-runconfig-activetracing"></a>
-Specifies whether this canary is to use active AWS X\-Ray tracing when it runs\. Active tracing enables this canary run to be displayed in the ServiceLens and X\-Ray service maps even if the canary does not hit an endpoint that has X\-ray tracing enabled\. Using X\-Ray tracing incurs charges\. For more information, see [Canaries and X\-Ray tracing](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_tracing.html)\.  
+Specifies whether this canary is to use active AWS X\-Ray tracing when it runs\. Active tracing enables this canary run to be displayed in the ServiceLens and X\-Ray service maps even if the canary does not hit an endpoint that has X\-Ray tracing enabled\. Using X\-Ray tracing incurs charges\. For more information, see [Canaries and X\-Ray tracing](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_tracing.html)\.  
  You can enable active tracing only for canaries that use version `syn-nodejs-2.0` or later for their canary runtime\.  
 *Required*: No  
 *Type*: Boolean  

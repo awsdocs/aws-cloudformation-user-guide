@@ -49,7 +49,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-acmpca-certificate-subject-properties"></a>
 
 `CommonName`  <a name="cfn-acmpca-certificate-subject-commonname"></a>
-For CA and end\-entity certificates in a private PKI, the common name \(CN\) can be any string within the length limit\.   
+For CA and end\-entity certificates in a private PKI, the common name \(CN\) can be any string within the length limit\.  
 Note: In publicly trusted certificates, the common name must be a fully qualified domain name \(FQDN\) associated with the certificate subject\.  
 *Required*: No  
 *Type*: String  
@@ -108,7 +108,7 @@ The locality \(such as a city or town\) in which the certificate subject is loca
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Organization`  <a name="cfn-acmpca-certificate-subject-organization"></a>
-Legal name of the organization with which the certificate subject is affiliated\.   
+Legal name of the organization with which the certificate subject is affiliated\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

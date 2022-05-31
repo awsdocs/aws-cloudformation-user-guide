@@ -78,7 +78,7 @@ The configuration of a Microsoft Smooth output group\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MultiplexGroupSettings`  <a name="cfn-medialive-channel-outputgroupsettings-multiplexgroupsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+The settings for a Multiplex output group\.   
 *Required*: No  
 *Type*: [MultiplexGroupSettings](aws-properties-medialive-channel-multiplexgroupsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

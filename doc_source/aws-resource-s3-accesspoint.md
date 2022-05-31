@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Bucket](#cfn-s3-accesspoint-bucket)" : String,
       "[Name](#cfn-s3-accesspoint-name)" : String,
       "[Policy](#cfn-s3-accesspoint-policy)" : Json,
+      "[PolicyStatus](#cfn-s3-accesspoint-policystatus)" : Json,
       "[PublicAccessBlockConfiguration](#cfn-s3-accesspoint-publicaccessblockconfiguration)" : PublicAccessBlockConfiguration,
       "[VpcConfiguration](#cfn-s3-accesspoint-vpcconfiguration)" : VpcConfiguration
     }
@@ -29,6 +30,7 @@ Properties:
   [Bucket](#cfn-s3-accesspoint-bucket): String
   [Name](#cfn-s3-accesspoint-name): String
   [Policy](#cfn-s3-accesspoint-policy): Json
+  [PolicyStatus](#cfn-s3-accesspoint-policystatus): Json
   [PublicAccessBlockConfiguration](#cfn-s3-accesspoint-publicaccessblockconfiguration): 
     PublicAccessBlockConfiguration
   [VpcConfiguration](#cfn-s3-accesspoint-vpcconfiguration): 
@@ -47,10 +49,16 @@ The name of the bucket associated with this access point\.
 The name of this access point\. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the access point name\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Policy`  <a name="cfn-s3-accesspoint-policy"></a>
 The access point policy associated with this access point\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PolicyStatus`  <a name="cfn-s3-accesspoint-policystatus"></a>
+The container element for a bucket's policy status\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -79,8 +87,18 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 #### <a name="aws-resource-s3-accesspoint-return-values-fn--getatt-fn--getatt"></a>
 
+`Alias`  <a name="Alias-fn::getatt"></a>
+The alias for this access point\.
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+This property contains the details of the ARN for the access point\.
+
+`Name`  <a name="Name-fn::getatt"></a>
+The name of this access point\.
+
 `NetworkOrigin`  <a name="NetworkOrigin-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Indicates whether this access point allows access from the internet\. If `VpcConfiguration` is specified for this access point, then `NetworkOrigin` is `VPC`, and the access point doesn't allow access from the internet\. Otherwise, `NetworkOrigin` is `Internet`, and the access point allows access from the internet, subject to the access point and bucket access policies\.  
+*Allowed values*: `VPC` \| `Internet` 
 
 ## Examples<a name="aws-resource-s3-accesspoint--examples"></a>
 
@@ -182,12 +200,24 @@ For more information, see [Configuring IAM policies for using access points](htt
             }
         }
     },
-    "Outputs": {
+   "Outputs": {
         "S3AccessPointArn": {
             "Value": {
-                "Ref": "S3AccessPoint"
+                "Fn::GetAtt": ["S3AccessPoint", "Arn"]
             },
             "Description": "ARN of the sample Amazon S3 access point."
+        },
+        "S3AccessPointName": {
+            "Value": {
+                "Fn::GetAtt": ["S3AccessPoint", "Name"]
+            },
+            "Description": "Name of the sample Amazon S3 access point."
+        },
+        "S3AccessPointAlias": {
+            "Value": {
+                "Fn::GetAtt": ["S3AccessPoint", "Alias"]
+            },
+            "Description": "Alias of the sample Amazon S3 access point."
         }
     }
 }
@@ -237,14 +267,29 @@ Resources:
               - 's3:PutObject'
             Effect: Allow
             Resource:
-              - !Sub >-
+              - !Sub &gt;-
                 arn:${AWS::Partition}:s3:${AWS::Region}:${AWS::AccountId}:accesspoint/my-access-point/object/janedoe/*
             Principal:
               AWS: !Sub 'arn:${AWS::Partition}:iam::${AWS::AccountId}:user/JaneDoe'
 Outputs:
   S3AccessPointArn:
-    Value: !Ref S3AccessPoint
+    Value:
+      Fn::GetAtt:
+      - S3AccessPoint
+      - Arn
     Description: ARN of the sample Amazon S3 access point.
+  S3AccessPointName:
+    Value:
+      Fn::GetAtt:
+      - S3AccessPoint
+      - Name
+    Description: Name of the sample Amazon S3 access point.
+  S3AccessPointAlias:
+    Value:
+      Fn::GetAtt:
+      - S3AccessPoint
+      - Alias
+    Description: Alias of the sample Amazon S3 access point.
 ```
 
 ### Create an S3 Access Point restricted to a VPC<a name="aws-resource-s3-accesspoint--examples--Create_an_S3_Access_Point_restricted_to_a_VPC"></a>
@@ -353,42 +398,46 @@ The following example creates an Amazon S3 access point restricted to a virtual 
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   S3Bucket:
-    Type: 'AWS::S3::Bucket'
+    Type: AWS::S3::Bucket
   S3BucketPolicy:
-    Type: 'AWS::S3::BucketPolicy'
+    Type: AWS::S3::BucketPolicy
     Properties:
-      Bucket: !Ref S3Bucket
+      Bucket:
+        Ref: S3Bucket
       PolicyDocument:
         Version: 2012-10-17
         Statement:
-          - Action: '*'
+          - Action: "*"
             Effect: Allow
             Resource:
-              - !GetAtt
-                - S3Bucket
-                - Arn
-              - !Join
-                - ''
-                - - !GetAtt
-                    - S3Bucket
-                    - Arn
-                  - /*
+              - Fn::GetAtt:
+                  - S3Bucket
+                  - Arn
+              - Fn::Join:
+                  - ""
+                  - - Fn::GetAtt:
+                        - S3Bucket
+                        - Arn
+                    - /*
             Principal:
-              AWS: '*'
+              AWS: "*"
             Condition:
               StringEquals:
-                's3:DataAccessPointAccount': !Ref 'AWS::AccountId'
+                s3:DataAccessPointAccount:
+                  Ref: AWS::AccountId
   VPC:
-    Type: 'AWS::EC2::VPC'
+    Type: AWS::EC2::VPC
     Properties:
       CidrBlock: 10.0.0.0/16
   S3AccessPoint:
-    Type: 'AWS::S3::AccessPoint'
+    Type: AWS::S3::AccessPoint
     Properties:
-      Bucket: !Ref S3Bucket
+      Bucket:
+        Ref: S3Bucket
       Name: my-access-point
       VpcConfiguration:
-        VpcId: !Ref VPC
+        VpcId:
+          Ref: VPC
       PublicAccessBlockConfiguration:
         BlockPublicAcls: true
         IgnorePublicAcls: true
@@ -396,6 +445,7 @@ Resources:
         RestrictPublicBuckets: true
 Outputs:
   S3AccessPointArn:
-    Value: !Ref S3AccessPoint
+    Value:
+      Ref: S3AccessPoint
     Description: ARN of the sample Amazon S3 access point.
 ```

@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Name](#cfn-customerprofiles-objecttype-fieldmap-name)" : String,
-  "[ObjectTypeField](#cfn-customerprofiles-objecttype-fieldmap-objecttypefield)" : Json
+  "[ObjectTypeField](#cfn-customerprofiles-objecttype-fieldmap-objecttypefield)" : ObjectTypeField
 }
 ```
 
@@ -19,7 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Name](#cfn-customerprofiles-objecttype-fieldmap-name): String
-  [ObjectTypeField](#cfn-customerprofiles-objecttype-fieldmap-objecttypefield): Json
+  [ObjectTypeField](#cfn-customerprofiles-objecttype-fieldmap-objecttypefield): 
+    ObjectTypeField
 ```
 
 ## Properties<a name="aws-properties-customerprofiles-objecttype-fieldmap-properties"></a>
@@ -33,5 +34,5 @@ Name of the field\.
 `ObjectTypeField`  <a name="cfn-customerprofiles-objecttype-fieldmap-objecttypefield"></a>
 Represents a field in a ProfileObjectType\.  
 *Required*: No  
-*Type*: [Json](aws-properties-customerprofiles-objecttype-objecttypefield.md)  
+*Type*: [ObjectTypeField](aws-properties-customerprofiles-objecttype-objecttypefield.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

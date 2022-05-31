@@ -99,44 +99,7 @@ The Amazon Resource Name \(ARN\) of the lifecycle policy\.
 
 ### Creating a Lifecycle Policy<a name="aws-resource-dlm-lifecyclepolicy--examples--Creating_a_Lifecycle_Policy"></a>
 
-The following example demonstrates how to create a basic lifecycle policy\.
-
-#### YAML<a name="aws-resource-dlm-lifecyclepolicy--examples--Creating_a_Lifecycle_Policy--yaml"></a>
-
-```
-Description: "Basic LifecyclePolicy"
-Resources:
-  BasicLifecyclePolicy:
-    Type: "AWS::DLM::LifecyclePolicy"
-    Properties:
-      Description: "Lifecycle Policy using CloudFormation"
-      State: "ENABLED"
-      ExecutionRoleArn: "arn:aws:iam::123456789012:role/AWSDataLifecycleManagerDefaultRole"
-      PolicyDetails:
-        ResourceTypes:
-          - "VOLUME"
-        TargetTags:
-          -
-            Key: "costcenter"
-            Value: "115"
-          
-        Schedules:
-          -
-            Name: "Daily Snapshots"
-            TagsToAdd:
-              -
-                Key: "type"
-                Value: "DailySnapshot"
-              
-            CreateRule:
-              Interval: 12
-              IntervalUnit: "HOURS"
-              Times:
-                - "13:00"
-            RetainRule:
-              Count: 1
-            CopyTags: true
-```
+The following example demonstrates how to create a basic snapshot lifecycle policy with a cross\-Region copy rule\.
 
 #### JSON<a name="aws-resource-dlm-lifecyclepolicy--examples--Creating_a_Lifecycle_Policy--json"></a>
 
@@ -149,43 +112,77 @@ Resources:
             "Properties": {
                 "Description": "Lifecycle Policy using CloudFormation",
                 "State": "ENABLED",
-                "ExecutionRoleArn": "arn:aws:iam::123456789012:role/AWSDataLifecycleManagerDefaultRole",
+                "ExecutionRoleArn": "arn:aws:iam::123456789012:role/service-role/AWSDataLifecycleManagerDefaultRole",
                 "PolicyDetails": {
                     "ResourceTypes": [
                         "VOLUME"
                     ],
-                    "TargetTags": [
-                        {
-                            "Key": "costcenter",
-                            "Value": "115"
-                        }
-                    ],
-                    "Schedules": [
-                        {
-                            "Name": "Daily Snapshots",
-                            "TagsToAdd": [
-                                {
-                                    "Key": "type",
-                                    "Value": "DailySnapshot"
-                                }
-                            ],
-                            "CreateRule": {
-                                "Interval": 12,
-                                "IntervalUnit": "HOURS",
-                                "Times": [
-                                    "13:00"
-                                ]
-                            },
-                            "RetainRule": {
-                                "Count": 1
-                            },
-                            "CopyTags": true
-                        }
-                    ]
-                }
-            }
+                    "TargetTags": [{
+                        "Key": "costcenter",
+                        "Value": "115"
+                    }],
+                    "Schedules": [{
+                        "Name": "Daily Snapshots",
+                        "TagsToAdd": [{
+                            "Key": "type",
+                            "Value": "DailySnapshot"
+                        }],
+                        "CreateRule": {
+                            "Interval": 12,
+                            "IntervalUnit": "HOURS",
+                            "Times": [
+                                "13:00"
+                            ]
+                        },
+                        "RetainRule": {
+                            "Count": 1
+                        },
+                        "CopyTags": true,
+                        "CrossRegionCopyRules": [{
+                            "Encrypted": false,
+                            "Target": "us-east-1"
+                        }]
+                   }]
+               }
+           }
         }
     }
+}
+```
+
+#### YAML<a name="aws-resource-dlm-lifecyclepolicy--examples--Creating_a_Lifecycle_Policy--yaml"></a>
+
+```
+Description: Basic LifecyclePolicy
+Resources:
+  BasicLifecyclePolicy:
+    Type: AWS::DLM::LifecyclePolicy
+    Properties:
+      Description: Lifecycle Policy using CloudFormation
+      State: ENABLED
+      ExecutionRoleArn: arn:aws:iam::123456789012:role/service-role/AWSDataLifecycleManagerDefaultRole
+      PolicyDetails:
+        ResourceTypes:
+        - VOLUME
+        TargetTags:
+        - Key: costcenter
+          Value: '115'
+        Schedules:
+        - Name: Daily Snapshots
+          TagsToAdd:
+          - Key: type
+            Value: DailySnapshot
+          CreateRule:
+            Interval: 12
+            IntervalUnit: HOURS
+            Times:
+            - '13:00'
+          RetainRule:
+            Count: 1
+          CopyTags: true
+          CrossRegionCopyRules:
+          - Encrypted: false
+            Target: us-east-1
 ```
 
 ## See also<a name="aws-resource-dlm-lifecyclepolicy--seealso"></a>

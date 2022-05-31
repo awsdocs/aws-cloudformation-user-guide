@@ -1,8 +1,6 @@
 # AWS::Events::Rule SageMakerPipelineParameters<a name="aws-properties-events-rule-sagemakerpipelineparameters"></a>
 
-Contains the SageMaker Model Building Pipeline parameters to start execution of a SageMaker Model Building Pipeline\.
-
-If you specify a SageMaker Model Building Pipeline as a target, you can use this to specify parameters to start a pipeline execution based on EventBridge events\.
+These are custom parameters to use when the target is a SageMaker Model Building Pipeline that starts based on EventBridge events\.
 
 ## Syntax<a name="aws-properties-events-rule-sagemakerpipelineparameters-syntax"></a>
 
@@ -29,4 +27,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 List of Parameter names and values for SageMaker Model Building Pipeline execution\.  
 *Required*: No  
 *Type*: List of [SageMakerPipelineParameter](aws-properties-events-rule-sagemakerpipelineparameter.md)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

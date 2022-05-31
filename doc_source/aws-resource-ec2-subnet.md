@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MapPublicIpOnLaunch](#cfn-ec2-subnet-mappubliciponlaunch)" : Boolean,
       "[OutpostArn](#cfn-ec2-subnet-outpostarn)" : String,
       "[Tags](#cfn-ec2-subnet-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[VpcId](#cfn-awsec2subnet-prop-vpcid)" : String
+      "[VpcId](#cfn-ec2-subnet-vpcid)" : String
     }
 }
 ```
@@ -41,7 +41,7 @@ Properties:
   [OutpostArn](#cfn-ec2-subnet-outpostarn): String
   [Tags](#cfn-ec2-subnet-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-  [VpcId](#cfn-awsec2subnet-prop-vpcid): String
+  [VpcId](#cfn-ec2-subnet-vpcid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-subnet-properties"></a>
@@ -94,7 +94,7 @@ Any tags assigned to the subnet\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`VpcId`  <a name="cfn-awsec2subnet-prop-vpcid"></a>
+`VpcId`  <a name="cfn-ec2-subnet-vpcid"></a>
 The ID of the VPC the subnet is in\.  
 If you update this property, you must also update the `CidrBlock` property\.  
 *Required*: Yes  
@@ -121,6 +121,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Availability Zone of this subnet\. For example:  
  `{ "Fn::GetAtt" : [ "mySubnet", "AvailabilityZone" ] } ` 
 
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 `Ipv6CidrBlocks`  <a name="Ipv6CidrBlocks-fn::getatt"></a>
 The IPv6 CIDR blocks that are associated with the subnet, such as `[ 2001:db8:1234:1a00::/64 ]`\.
 
@@ -139,7 +142,7 @@ The ID of the subnet's VPC, such as `vpc-11ad4878`\.
 
 ### Subnet<a name="aws-resource-ec2-subnet--examples--Subnet"></a>
 
-The following example uses the VPC ID from a VPC named myVPC that was declared elsewhere in the same template\.
+The following example uses the VPC ID from a VPC named myVPC that was declared elsewhere in the same template\. For an example with IPv6 enabled, see [Creating an IPv6 enabled VPC](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-cidr.html#intrinsic-function-reference-cidr-example2)\.
 
 #### JSON<a name="aws-resource-ec2-subnet--examples--Subnet--json"></a>
 
@@ -172,5 +175,5 @@ The following example uses the VPC ID from a VPC named myVPC that was declared e
 
 ## See also<a name="aws-resource-ec2-subnet--seealso"></a>
 +  [CreateSubnet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateSubnet.html) in the *Amazon EC2 API Reference*
-+  [Your VPC and Subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon Virtual Private Cloud User Guide*
++  [VPC and subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon VPC User Guide*
 

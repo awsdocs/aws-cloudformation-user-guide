@@ -15,8 +15,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ComputeEnvironmentOrder](#cfn-batch-jobqueue-computeenvironmentorder)" : [ ComputeEnvironmentOrder, ... ],
       "[JobQueueName](#cfn-batch-jobqueue-jobqueuename)" : String,
       "[Priority](#cfn-batch-jobqueue-priority)" : Integer,
+      "[SchedulingPolicyArn](#cfn-batch-jobqueue-schedulingpolicyarn)" : String,
       "[State](#cfn-batch-jobqueue-state)" : String,
-      "[Tags](#cfn-batch-jobqueue-tags)" : Json
+      "[Tags](#cfn-batch-jobqueue-tags)" : {Key : Value, ...}
     }
 }
 ```
@@ -30,8 +31,10 @@ Properties:
     - ComputeEnvironmentOrder
   [JobQueueName](#cfn-batch-jobqueue-jobqueuename): String
   [Priority](#cfn-batch-jobqueue-priority): Integer
+  [SchedulingPolicyArn](#cfn-batch-jobqueue-schedulingpolicyarn): String
   [State](#cfn-batch-jobqueue-state): String
-  [Tags](#cfn-batch-jobqueue-tags): Json
+  [Tags](#cfn-batch-jobqueue-tags): 
+    Key : Value
 ```
 
 ## Properties<a name="aws-resource-batch-jobqueue-properties"></a>
@@ -44,7 +47,7 @@ All compute environments that are associated with a job queue must share the sam
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JobQueueName`  <a name="cfn-batch-jobqueue-jobqueuename"></a>
-The name of the job queue\. Up to 128 letters \(uppercase and lowercase\), numbers, and underscores are allowed\.  
+The name of the job queue\. It can be up to 128 letters long\. It can contain uppercase and lowercase letters, numbers, hyphens \(\-\), and underscores \(\_\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -55,6 +58,12 @@ The priority of the job queue\. Job queues with a higher priority \(or a higher 
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SchedulingPolicyArn`  <a name="cfn-batch-jobqueue-schedulingpolicyarn"></a>
+The Amazon Resource Name \(ARN\) of the scheduling policy\. The format is `aws:Partition:batch:Region:Account:scheduling-policy/Name `\. For example, `aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `State`  <a name="cfn-batch-jobqueue-state"></a>
 The state of the job queue\. If the job queue state is `ENABLED`, it is able to accept jobs\. If the job queue state is `DISABLED`, new jobs can't be added to the queue, but jobs already in the queue can finish\.  
 *Required*: No  
@@ -63,9 +72,9 @@ The state of the job queue\. If the job queue state is `ENABLED`, it is able to 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-batch-jobqueue-tags"></a>
-The tags applied to the job queue\. For more information, see [Tagging your AWS Batch resources](https://docs.aws.amazon.com/batch/latest/userguide/using-tags.html) in *AWS Batch User Guide*\.  
+The tags applied to the job queue\. For more information, see [Tagging your AWS Batch resources](https://docs.aws.amazon.com/batch/latest/userguide/using-tags.html) in * AWS Batch User Guide*\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-batch-jobqueue-return-values"></a>
@@ -76,13 +85,24 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-batch-jobqueue-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-batch-jobqueue-return-values-fn--getatt-fn--getatt"></a>
+
+`JobQueueArn`  <a name="JobQueueArn-fn::getatt"></a>
+Returns the job queue ARN, such as `arn:aws:batch:us-east-1:111122223333:job-queue/JobQueueName`\.
+
 ## Examples<a name="aws-resource-batch-jobqueue--examples"></a>
 
 
 
 ### Job queue with two compute environments<a name="aws-resource-batch-jobqueue--examples--Job_queue_with_two_compute_environments"></a>
 
-The following example defines a job queue called HighPriority that has two compute environments mapped to it\.
+The following example defines a job queue called `HighPriority` that has two compute environments mapped to it\.
 
 #### JSON<a name="aws-resource-batch-jobqueue--examples--Job_queue_with_two_compute_environments--json"></a>
 

@@ -1,6 +1,6 @@
 # AWS::DataBrew::Recipe<a name="aws-resource-databrew-recipe"></a>
 
-Creates a new DataBrew transformation recipe\.
+Specifies a new AWS Glue DataBrew transformation recipe\.
 
 ## Syntax<a name="aws-resource-databrew-recipe-syntax"></a>
 
@@ -70,7 +70,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  `{ "Ref": "myRecipe" }` 
 
-For an AWS Glue DataBrew recipe named `myRecipe`, `Ref` returns the name of the recipe\. 
+For an AWS Glue DataBrew recipe named `myRecipe`, `Ref` returns the name of the recipe\. 
 
 ## Examples<a name="aws-resource-databrew-recipe--examples"></a>
 
@@ -108,7 +108,7 @@ Resources:
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "This CloudFormation template creates a DataBrew Recipe",
+    "Description": "This CloudFormation template specifies a DataBrew Recipe",
     "Resources": {
         "MyDataBrewRecipe": {
             "Type": "AWS::DataBrew::Recipe",

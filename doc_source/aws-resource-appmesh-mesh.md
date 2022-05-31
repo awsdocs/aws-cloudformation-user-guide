@@ -41,6 +41,8 @@ Properties:
 The name to use for the service mesh\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Spec`  <a name="cfn-appmesh-mesh-spec"></a>
@@ -53,6 +55,7 @@ The service mesh specification to apply\.
 Optional metadata that you can apply to the service mesh to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-appmesh-mesh-return-values"></a>
@@ -82,10 +85,10 @@ The full Amazon Resource Name \(ARN\) for the mesh\.
 The name of the service mesh\.
 
 `MeshOwner`  <a name="MeshOwner-fn::getatt"></a>
-The AWS IAM account ID of the service mesh owner\. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.
+The IAM account ID of the service mesh owner\. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.
 
 `ResourceOwner`  <a name="ResourceOwner-fn::getatt"></a>
-The AWS IAM account ID of the resource owner\. If the account ID is not your own, then it's the ID of the mesh owner or of another account that the mesh is shared with\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.
+The IAM account ID of the resource owner\. If the account ID is not your own, then it's the ID of the mesh owner or of another account that the mesh is shared with\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.
 
 `Uid`  <a name="Uid-fn::getatt"></a>
 The unique identifier for the mesh\.

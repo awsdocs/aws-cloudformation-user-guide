@@ -28,10 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster\.  
 *Required*: Yes  
 *Type*: Integer  
+*Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxPendingRequests`  <a name="cfn-appmesh-virtualgateway-virtualgatewayhttpconnectionpool-maxpendingrequests"></a>
 Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

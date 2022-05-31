@@ -1,8 +1,8 @@
 # AWS::WAF::SqlInjectionMatchSet SqlInjectionMatchTuple<a name="aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples"></a>
 
 **Note**  
-This is **AWS WAF Classic** documentation\. For more information, see [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
- **For the latest version of AWS WAF**, use the AWS WAFV2 API and see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
+This is ** AWS WAF Classic** documentation\. For more information, see [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF **, use the AWS WAFV2 API and see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
 
 Specifies the part of a web request that you want AWS WAF to inspect for snippets of malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header\.
 
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-properties"></a>
 
 `FieldToMatch`  <a name="cfn-waf-sqlinjectionmatchset-sqlinjectionmatchtuples-fieldtomatch"></a>
-Specifies where in a web request to look for snippets of malicious SQL code\.  
+The part of a web request that you want to inspect, such as a specified header or a query string\.  
 *Required*: Yes  
 *Type*: [FieldToMatch](aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch-1.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

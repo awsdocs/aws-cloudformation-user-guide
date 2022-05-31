@@ -1,8 +1,12 @@
 # AWS::EC2::NatGateway<a name="aws-resource-ec2-natgateway"></a>
 
-Specifies a network address translation \(NAT\) gateway in the specified public subnet\. Use a NAT gateway to allow instances in a private subnet to connect to the Internet or to other AWS services, but prevent the Internet from initiating a connection with those instances\. For more information and a sample architectural diagram, see [NAT Gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) in the *Amazon VPC User Guide*\.
+Specifies a network address translation \(NAT\) gateway in the specified subnet\. You can create either a public NAT gateway or a private NAT gateway\. The default is a public NAT gateway\. If you create a public NAT gateway, you must specify an elastic IP address\.
+
+With a NAT gateway, instances in a private subnet can connect to the internet, other AWS services, or an on\-premises network using the IP address of the NAT gateway\.
 
 If you add a default route \(`AWS::EC2::Route` resource\) that points to a NAT gateway, specify the NAT gateway ID for the route's `NatGatewayId` property\.
+
+For more information, see [NAT Gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) in the *Amazon VPC User Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-natgateway-syntax"></a>
 
@@ -15,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::NatGateway",
   "Properties" : {
       "[AllocationId](#cfn-ec2-natgateway-allocationid)" : String,
+      "[ConnectivityType](#cfn-ec2-natgateway-connectivitytype)" : String,
       "[SubnetId](#cfn-ec2-natgateway-subnetid)" : String,
       "[Tags](#cfn-ec2-natgateway-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -27,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::NatGateway
 Properties: 
   [AllocationId](#cfn-ec2-natgateway-allocationid): String
+  [ConnectivityType](#cfn-ec2-natgateway-connectivitytype): String
   [SubnetId](#cfn-ec2-natgateway-subnetid): String
   [Tags](#cfn-ec2-natgateway-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -35,19 +41,26 @@ Properties:
 ## Properties<a name="aws-resource-ec2-natgateway-properties"></a>
 
 `AllocationId`  <a name="cfn-ec2-natgateway-allocationid"></a>
-The allocation ID of an Elastic IP address to associate with the NAT gateway\. If the Elastic IP address is associated with another resource, you must first disassociate it\.  
-*Required*: Yes  
+\[Public NAT gateway only\] The allocation ID of the Elastic IP address that's associated with the NAT gateway\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ConnectivityType`  <a name="cfn-ec2-natgateway-connectivitytype"></a>
+Indicates whether the NAT gateway supports public or private connectivity\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `private | public`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `SubnetId`  <a name="cfn-ec2-natgateway-subnetid"></a>
-The public subnet in which to create the NAT gateway\.  
+The ID of the subnet in which the NAT gateway is located\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-natgateway-tags"></a>
-The tags \(key\-value pairs\) to associate with this resource\.  
+The tags for the NAT gateway\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

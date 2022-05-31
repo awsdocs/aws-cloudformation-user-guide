@@ -28,13 +28,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-service-deploymentcircuitbreaker-properties"></a>
 
 `Enable`  <a name="cfn-ecs-service-deploymentcircuitbreaker-enable"></a>
-Whether to enable the deployment circuit breaker logic for the service\.  
+Determines whether to use the deployment circuit breaker logic for the service\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Rollback`  <a name="cfn-ecs-service-deploymentcircuitbreaker-rollback"></a>
-Whether to enable Amazon ECS to roll back the service if a service deployment fails\. If rollback is enabled, when a service deployment fails, the service is rolled back to the last deployment that completed successfully\.  
+Determines whether to configure Amazon ECS to roll back the service if a service deployment fails\. If rollback is enabled, when a service deployment fails, the service is rolled back to the last deployment that completed successfully\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

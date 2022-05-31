@@ -158,9 +158,12 @@ The network ACL rule\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Address`  <a name="cfn-ec2-networkinsightsanalysis-explanation-address"></a>
-Not currently supported by AWS CloudFormation\.  
+The IPv4 address, in CIDR notation\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `15`  
+*Pattern*: `^([0-9]{1,3}.){3}[0-9]{1,3}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Addresses`  <a name="cfn-ec2-networkinsightsanalysis-explanation-addresses"></a>
@@ -414,7 +417,7 @@ The VPC peering connection\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpnConnection`  <a name="cfn-ec2-networkinsightsanalysis-explanation-vpnconnection"></a>
-Not currently supported by AWS CloudFormation\.  
+The VPN connection\.  
 *Required*: No  
 *Type*: [AnalysisComponent](aws-properties-ec2-networkinsightsanalysis-analysiscomponent.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

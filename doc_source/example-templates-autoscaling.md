@@ -448,14 +448,14 @@ You can get the latest version of this sample template at [https://s3\.amazonaws
         "GroupDescription" : "Enable SSH access and HTTP from the load balancer only",
         "SecurityGroupIngress" : [ {
           "IpProtocol" : "tcp",
-          "FromPort" : "22",
-          "ToPort" : "22",
+          "FromPort" : 22,
+          "ToPort" : 22,
           "CidrIp" : { "Ref" : "SSHLocation"}
         },
         {
           "IpProtocol" : "tcp",
-          "FromPort" : "80",
-          "ToPort" : "80",
+          "FromPort" : 80,
+          "ToPort" : 80,
           "SourceSecurityGroupOwnerId" : {"Fn::GetAtt" : ["ElasticLoadBalancer", "SourceSecurityGroup.OwnerAlias"]},
           "SourceSecurityGroupName" : {"Fn::GetAtt" : ["ElasticLoadBalancer", "SourceSecurityGroup.GroupName"]}
         } ]
@@ -505,7 +505,7 @@ The [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloud
   { "Fn::FindInMap" : [ "AWSInstanceType2Arch", "m1.small", "Arch" ] }
   ```
 
-  In the AWSInstanceType2Arch mapping, the Arch value for the m1\.small key maps to 32, which is used as the value for the outer map\. The key is the evaluated result of the AWS::Region pseudo parameter which is the region where the stack is being created\. For this example, AWS::Region is us\-east\-1; therefore, the outer map is evaluated as follows:
+  In the AWSInstanceType2Arch mapping, the Arch value for the m1\.small key maps to 32, which is used as the value for the outer map\. The key is the evaluated result of the `AWS::Region` pseudo parameter which is the region where the stack is being created\. For this example, `AWS::Region` is us\-east\-1; therefore, the outer map is evaluated as follows:
 
   ```
   Fn::FindInMap" : [ "AWSRegionArch2AMI", "us-east-1", "32"]

@@ -32,7 +32,7 @@ The log driver to use for the container\. The valid values listed for this param
 The supported log drivers are `awslogs`, `fluentd`, `gelf`, `json-file`, `journald`, `logentries`, `syslog`, and `splunk`\.  
 Jobs that are running on Fargate resources are restricted to the `awslogs` and `splunk` log drivers\.  
 awslogs  
-Specifies the Amazon CloudWatch Logs logging driver\. For more information, see [Using the awslogs Log Driver](https://docs.aws.amazon.com/batch/latest/userguide/using_awslogs.html) in the *AWS Batch User Guide* and [Amazon CloudWatch Logs logging driver](https://docs.docker.com/config/containers/logging/awslogs/) in the Docker documentation\.  
+Specifies the Amazon CloudWatch Logs logging driver\. For more information, see [Using the awslogs Log Driver](https://docs.aws.amazon.com/batch/latest/userguide/using_awslogs.html) in the * AWS Batch User Guide* and [Amazon CloudWatch Logs logging driver](https://docs.docker.com/config/containers/logging/awslogs/) in the Docker documentation\.  
 fluentd  
 Specifies the Fluentd logging driver\. For more information, including usage and options, see [Fluentd logging driver](https://docs.docker.com/config/containers/logging/fluentd/) in the Docker documentation\.  
 gelf  
@@ -59,7 +59,7 @@ The configuration options to send to the log driver\. This parameter requires ve
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretOptions`  <a name="cfn-batch-jobdefinition-containerproperties-logconfiguration-secretoptions"></a>
-The secrets to pass to the log configuration\. For more information, see [Specifying Sensitive Data](https://docs.aws.amazon.com/batch/latest/userguide/specifying-sensitive-data.html) in the *AWS Batch User Guide*\.  
+The secrets to pass to the log configuration\. For more information, see [Specifying Sensitive Data](https://docs.aws.amazon.com/batch/latest/userguide/specifying-sensitive-data.html) in the * AWS Batch User Guide*\.  
 *Required*: No  
 *Type*: List of [Secret](aws-properties-batch-jobdefinition-secret.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

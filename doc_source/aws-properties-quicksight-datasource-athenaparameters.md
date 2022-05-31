@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSource AthenaParameters<a name="aws-properties-quicksight-datasource-athenaparameters"></a>
 
-Amazon Athena parameters\.
+Parameters for Amazon Athena\.
 
 ## Syntax<a name="aws-properties-quicksight-datasource-athenaparameters-syntax"></a>
 

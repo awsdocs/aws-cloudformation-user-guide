@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-spotfleet-spotmaintenancestrategies-properties"></a>
 
 `CapacityRebalance`  <a name="cfn-ec2-spotfleet-spotmaintenancestrategies-capacityrebalance"></a>
-The strategy to use when Amazon EC2 emits a signal that your Spot Instance is at an elevated risk of being interrupted\.  
+The Spot Instance replacement strategy to use when Amazon EC2 emits a signal that your Spot Instance is at an elevated risk of being interrupted\. For more information, see [Capacity rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
 *Required*: No  
 *Type*: [SpotCapacityRebalance](aws-properties-ec2-spotfleet-spotcapacityrebalance.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

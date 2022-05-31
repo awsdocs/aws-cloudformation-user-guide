@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Detective::Graph",
   "Properties" : {
+      "[Tags](#cfn-detective-graph-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -20,8 +21,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 Type: AWS::Detective::Graph
-Properties:
+Properties: 
+  [Tags](#cfn-detective-graph-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
+
+## Properties<a name="aws-resource-detective-graph-properties"></a>
+
+`Tags`  <a name="cfn-detective-graph-tags"></a>
+The tag values to assign to the new behavior graph\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-detective-graph-return-values"></a>
 
@@ -53,6 +64,18 @@ This example shows how to declare a new `AWS:Detective:Graph` resource to create
 ```
 "NewGraph": {
     "Type": "AWS::Detective::Graph"
+    "Properties": {
+        "Tags": [
+            {
+                "Key": "Tag1Name",
+                "Value": "Tag1Value"
+            },
+            {
+                "Key": "Tag2Name".
+                "Value": "Tag2alue"
+            }
+        ]
+    }
 }
 ```
 
@@ -61,4 +84,10 @@ This example shows how to declare a new `AWS:Detective:Graph` resource to create
 ```
 NewGraph:
     Type: AWS::Detective::Graph
+    Properties:
+        Tags:
+            - Key: Tag1Name
+              Value: Tag1Value
+            - Key: Tag2Name
+              Value: Tag2Value
 ```

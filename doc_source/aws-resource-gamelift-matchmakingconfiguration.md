@@ -25,7 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-gamelift-matchmakingconfiguration-name)" : String,
       "[NotificationTarget](#cfn-gamelift-matchmakingconfiguration-notificationtarget)" : String,
       "[RequestTimeoutSeconds](#cfn-gamelift-matchmakingconfiguration-requesttimeoutseconds)" : Integer,
-      "[RuleSetName](#cfn-gamelift-matchmakingconfiguration-rulesetname)" : String
+      "[RuleSetName](#cfn-gamelift-matchmakingconfiguration-rulesetname)" : String,
+      "[Tags](#cfn-gamelift-matchmakingconfiguration-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -51,6 +52,8 @@ Properties:
   [NotificationTarget](#cfn-gamelift-matchmakingconfiguration-notificationtarget): String
   [RequestTimeoutSeconds](#cfn-gamelift-matchmakingconfiguration-requesttimeoutseconds): Integer
   [RuleSetName](#cfn-gamelift-matchmakingconfiguration-rulesetname): String
+  [Tags](#cfn-gamelift-matchmakingconfiguration-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-gamelift-matchmakingconfiguration-properties"></a>
@@ -84,7 +87,7 @@ The method used to backfill game sessions that are created with this matchmaking
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomEventData`  <a name="cfn-gamelift-matchmakingconfiguration-customeventdata"></a>
-Information that is attached to all events related to the matchmaking configuration\.   
+Information to add to all events related to the matchmaking configuration\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -100,7 +103,7 @@ A descriptive label that is associated with matchmaking configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FlexMatchMode`  <a name="cfn-gamelift-matchmakingconfiguration-flexmatchmode"></a>
-Indicates whether this matchmaking configuration is being used with GameLift managed hosting or as a standalone matchmaking solution\.   
+Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone matchmaking solution\.   
 +  **STANDALONE** \- FlexMatch forms matches and returns match information, including players and team assignments, in a [ MatchmakingSucceeded](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-events.html#match-events-matchmakingsucceeded) event\.
 +  **WITH\_QUEUE** \- FlexMatch forms matches and uses the specified GameLift queue to start a game session for the match\. 
 *Required*: No  
@@ -130,7 +133,7 @@ The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-gamelift-matchmakingconfiguration-name"></a>
-A unique identifier for a matchmaking configuration\. Matchmaking requests use this name to identify which matchmaking configuration to use\.  
+A unique identifier for the matchmaking configuration\. This name is used to identify the configuration associated with a matchmaking request or ticket\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `128`  
@@ -161,6 +164,13 @@ A unique identifier for the matchmaking rule set to use with this configuration\
 *Minimum*: `1`  
 *Maximum*: `256`  
 *Pattern*: `[a-zA-Z0-9-\.]*|^arn:.*:matchmakingruleset\/[a-zA-Z0-9-\.]*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-gamelift-matchmakingconfiguration-tags"></a>
+A list of labels to assign to the new matchmaking configuration resource\. Tags are developer\-defined key\-value pairs\. Tagging AWS resources are useful for resource management, access management and cost allocation\. For more information, see [ Tagging AWS Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the * AWS General Reference*\. Once the resource is created, you can use TagResource, UntagResource, and ListTagsForResource to add, remove, and view tags\. The maximum tag limit may be lower than stated\. See the AWS General Reference for actual tagging limits\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-gamelift-matchmakingconfiguration-return-values"></a>
@@ -381,7 +391,7 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-gamelift-matchmakingconfiguration--seealso"></a>
-+ [ Create GameLift resources using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++ [ Create GameLift resources using Amazon CloudFront](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 +  [Setting up GameLift FlexMatch matchmakers](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/matchmaker-build.html) in the *Amazon GameLift Developer Guide* 
 + [MatchmakingConfiguration](https://docs.aws.amazon.com/gamelift/latest/apireference/API_MatchmakingConfiguration.html) in the *Amazon GameLift API Reference* 
 

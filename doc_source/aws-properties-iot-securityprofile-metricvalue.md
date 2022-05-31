@@ -49,13 +49,13 @@ If the `comparisonOperator` calls for a numeric value, use this to specify that 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Number`  <a name="cfn-iot-securityprofile-metricvalue-number"></a>
-Not currently supported by AWS CloudFormation\.  
+The numeric values of a metric\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Numbers`  <a name="cfn-iot-securityprofile-metricvalue-numbers"></a>
-Not currently supported by AWS CloudFormation\.  
+The numeric value of a metric\.  
 *Required*: No  
 *Type*: List of Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -67,7 +67,7 @@ If the `comparisonOperator` calls for a set of ports, use this to specify that s
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Strings`  <a name="cfn-iot-securityprofile-metricvalue-strings"></a>
-Not currently supported by AWS CloudFormation\.  
+The string values of a metric\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

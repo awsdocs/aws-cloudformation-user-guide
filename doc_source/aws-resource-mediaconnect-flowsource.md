@@ -89,7 +89,7 @@ The maximum bitrate for RIST, RTP, and RTP\-FEC streams\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxLatency`  <a name="cfn-mediaconnect-flowsource-maxlatency"></a>
-The maximum latency in milliseconds for RIST and Zixi\-based streams\.  
+The maximum latency in milliseconds\. This parameter applies only to RIST\-based, Zixi\-based, and Fujitsu\-based streams\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -147,3 +147,6 @@ The IP address that the flow listens on for incoming content\.
 
 `SourceArn`  <a name="SourceArn-fn::getatt"></a>
 The ARN of the source\.
+
+`SourceIngestPort`  <a name="SourceIngestPort-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.

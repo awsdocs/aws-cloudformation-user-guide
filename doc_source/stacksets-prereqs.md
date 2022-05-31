@@ -11,12 +11,12 @@ To set up the required permissions for creating a stack set with **service\-mana
 AWS Regions introduced after March 20, 2019, such as Asia Pacific \(Hong Kong\), are disabled by default\. You must enable these Regions for your account\(s\) before you can use them\. Because of this, consider the following before performing stack set operations involving accounts in Regions that are disabled by default:
 + To create a stack set from a stack set's administrator account \(if using self\-managed permissions\) or organization's management account \(if using service\-managed permissions\) in a Region that is disabled by default, you must first enable that Region for the administrator or management account\.
 + For AWS CloudFormation to successfully create or update a stack instance:
-  + The target account must reside in a Region that is currently enabled for that target account\.
+  + The target account must reside in a Region that's currently enabled for that target account\.
   + The stack set's administrator account or organization's management account must have the same Region enabled as the target account\.
 
 **Important**  
 Be aware that during stack set operations, administrator and target accounts exchange metadata regarding the accounts themselves, in addition to the stack set and stack set instances involved\.  
-In addition, if you disable a Region that contains an account in which stack set instances reside, you are responsible for deleting any such instances or resources, if desired\. In addition, be aware that metadata regarding the target account in the disabled Region will be retained in the administrator account\.
+In addition, if you deactivate a Region that contains an account in which stack set instances reside, you are responsible for deleting any such instances or resources, if desired\. In addition, be aware that metadata regarding the target account in the disabled Region will be retained in the administrator account\.
 
 For more information about enabling and disabling regions, see [Managing AWS Regions](https://docs.aws.amazon.com/general/latest/gr/rande-manage.html) in the *AWS General Reference*\.
 

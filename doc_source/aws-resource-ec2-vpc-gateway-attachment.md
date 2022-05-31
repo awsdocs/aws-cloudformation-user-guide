@@ -108,5 +108,5 @@ AttachVpnGateway:
 
 ## See also<a name="aws-resource-ec2-vpc-gateway-attachment--seealso"></a>
 +  [AttachVpnGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AttachVpnGateway.html) in the *Amazon EC2 API Reference*
-+ [InternetGateways](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html) in the *Amazon Virtual Private Cloud User Guide*
++ [Internet gateways](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html) in the *Amazon VPC User Guide*
 

@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::MediaPackage::PackagingGroup",
   "Properties" : {
       "[Authorization](#cfn-mediapackage-packaginggroup-authorization)" : Authorization,
+      "[EgressAccessLogs](#cfn-mediapackage-packaginggroup-egressaccesslogs)" : LogConfiguration,
       "[Id](#cfn-mediapackage-packaginggroup-id)" : String,
       "[Tags](#cfn-mediapackage-packaginggroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -28,6 +29,8 @@ Type: AWS::MediaPackage::PackagingGroup
 Properties: 
   [Authorization](#cfn-mediapackage-packaginggroup-authorization): 
     Authorization
+  [EgressAccessLogs](#cfn-mediapackage-packaginggroup-egressaccesslogs): 
+    LogConfiguration
   [Id](#cfn-mediapackage-packaginggroup-id): String
   [Tags](#cfn-mediapackage-packaginggroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -39,6 +42,12 @@ Properties:
 Parameters for CDN authorization\.  
 *Required*: No  
 *Type*: [Authorization](aws-properties-mediapackage-packaginggroup-authorization.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EgressAccessLogs`  <a name="cfn-mediapackage-packaginggroup-egressaccesslogs"></a>
+The configuration parameters for egress access logging\.  
+*Required*: No  
+*Type*: [LogConfiguration](aws-properties-mediapackage-packaginggroup-logconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-mediapackage-packaginggroup-id"></a>

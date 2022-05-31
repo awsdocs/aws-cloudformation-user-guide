@@ -39,7 +39,7 @@ A description for the namespace\.
 *Required*: No  
 *Type*: String  
 *Maximum*: `1024`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-servicediscovery-httpnamespace-name"></a>
 The name that you want to assign to this namespace\.  

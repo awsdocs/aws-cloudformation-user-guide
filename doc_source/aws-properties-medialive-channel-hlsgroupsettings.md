@@ -44,6 +44,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Mode](#cfn-medialive-channel-hlsgroupsettings-mode)" : String,
   "[OutputSelection](#cfn-medialive-channel-hlsgroupsettings-outputselection)" : String,
   "[ProgramDateTime](#cfn-medialive-channel-hlsgroupsettings-programdatetime)" : String,
+  "[ProgramDateTimeClock](#cfn-medialive-channel-hlsgroupsettings-programdatetimeclock)" : String,
   "[ProgramDateTimePeriod](#cfn-medialive-channel-hlsgroupsettings-programdatetimeperiod)" : Integer,
   "[RedundantManifest](#cfn-medialive-channel-hlsgroupsettings-redundantmanifest)" : String,
   "[SegmentationMode](#cfn-medialive-channel-hlsgroupsettings-segmentationmode)" : String,
@@ -97,6 +98,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Mode](#cfn-medialive-channel-hlsgroupsettings-mode): String
   [OutputSelection](#cfn-medialive-channel-hlsgroupsettings-outputselection): String
   [ProgramDateTime](#cfn-medialive-channel-hlsgroupsettings-programdatetime): String
+  [ProgramDateTimeClock](#cfn-medialive-channel-hlsgroupsettings-programdatetimeclock): String
   [ProgramDateTimePeriod](#cfn-medialive-channel-hlsgroupsettings-programdatetimeperiod): Integer
   [RedundantManifest](#cfn-medialive-channel-hlsgroupsettings-redundantmanifest): String
   [SegmentationMode](#cfn-medialive-channel-hlsgroupsettings-segmentationmode): String
@@ -299,6 +301,12 @@ MANIFESTSANDSEGMENTS: Generates manifests \(the master manifest, if applicable, 
 
 `ProgramDateTime`  <a name="cfn-medialive-channel-hlsgroupsettings-programdatetime"></a>
 Includes or excludes the EXT\-X\-PROGRAM\-DATE\-TIME tag in \.m3u8 manifest files\. The value is calculated as follows: Either the program date and time are initialized using the input timecode source, or the time is initialized using the input timecode source and the date is initialized using the timestampOffset\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ProgramDateTimeClock`  <a name="cfn-medialive-channel-hlsgroupsettings-programdatetimeclock"></a>
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

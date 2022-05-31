@@ -16,7 +16,7 @@ Syntax for the full function name:
 
 ```
 Fn::Cidr: 
-  - ipBlock 
+  - ipBlock
   - count
   - cidrBits
 ```
@@ -29,13 +29,13 @@ Syntax for the short form:
 
 ## Parameters<a name="intrinsic-function-reference-cidr-parameters"></a>
 
-ipBlock  
+ipBlock  <a name="ipBlock"></a>
 The user\-specified CIDR address block to be split into smaller CIDR blocks\.
 
-count  
+count  <a name="count"></a>
 The number of CIDRs to generate\. Valid range is between 1 and 256\.
 
-cidrBits  
+cidrBits  <a name="cidrBits"></a>
 The number of subnet bits for the CIDR\. For example, specifying a value "8" for this parameter will create a CIDR with a mask of "/24"\.  
 Subnet bits is the inverse of subnet mask\. To calculate the required host bits for a given subnet bits, subtract the subnet bits from 32 for IPv4 or 128 for IPv6\.
 

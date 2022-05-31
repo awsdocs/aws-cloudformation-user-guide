@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontexttrust-properties"></a>
 
 `ACM`  <a name="cfn-appmesh-virtualgateway-virtualgatewaytlsvalidationcontexttrust-acm"></a>
-A reference to an object that represents a Transport Layer Security \(TLS\) validation context trust for an AWS Certicate Manager \(ACM\) certificate\.  
+A reference to an object that represents a Transport Layer Security \(TLS\) validation context trust for an AWS Certificate Manager certificate\.  
 *Required*: No  
 *Type*: [VirtualGatewayTlsValidationContextAcmTrust](aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

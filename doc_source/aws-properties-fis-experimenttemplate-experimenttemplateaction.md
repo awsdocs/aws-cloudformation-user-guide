@@ -1,6 +1,8 @@
 # AWS::FIS::ExperimentTemplate ExperimentTemplateAction<a name="aws-properties-fis-experimenttemplate-experimenttemplateaction"></a>
 
-Describes an action for an experiment template\.
+Specifies an action for an experiment template\.
+
+For more information, see [Actions](https://docs.aws.amazon.com/fis/latest/userguide/actions.html) in the *AWS Fault Injection Simulator User Guide*\.
 
 ## Syntax<a name="aws-properties-fis-experimenttemplate-experimenttemplateaction-syntax"></a>
 
@@ -12,9 +14,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ActionId](#cfn-fis-experimenttemplate-experimenttemplateaction-actionid)" : String,
   "[Description](#cfn-fis-experimenttemplate-experimenttemplateaction-description)" : String,
-  "[Parameters](#cfn-fis-experimenttemplate-experimenttemplateaction-parameters)" : ExperimentTemplateActionItemParameterMap,
-  "[StartAfter](#cfn-fis-experimenttemplate-experimenttemplateaction-startafter)" : ExperimentTemplateActionItemStartAfterList,
-  "[Targets](#cfn-fis-experimenttemplate-experimenttemplateaction-targets)" : ExperimentTemplateActionItemTargetMap
+  "[Parameters](#cfn-fis-experimenttemplate-experimenttemplateaction-parameters)" : {Key : Value, ...},
+  "[StartAfter](#cfn-fis-experimenttemplate-experimenttemplateaction-startafter)" : [ String, ... ],
+  "[Targets](#cfn-fis-experimenttemplate-experimenttemplateaction-targets)" : {Key : Value, ...}
 }
 ```
 
@@ -24,17 +26,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ActionId](#cfn-fis-experimenttemplate-experimenttemplateaction-actionid): String
   [Description](#cfn-fis-experimenttemplate-experimenttemplateaction-description): String
   [Parameters](#cfn-fis-experimenttemplate-experimenttemplateaction-parameters): 
-    ExperimentTemplateActionItemParameterMap
+    Key : Value
   [StartAfter](#cfn-fis-experimenttemplate-experimenttemplateaction-startafter): 
-    ExperimentTemplateActionItemStartAfterList
+    - String
   [Targets](#cfn-fis-experimenttemplate-experimenttemplateaction-targets): 
-    ExperimentTemplateActionItemTargetMap
+    Key : Value
 ```
 
 ## Properties<a name="aws-properties-fis-experimenttemplate-experimenttemplateaction-properties"></a>
 
 `ActionId`  <a name="cfn-fis-experimenttemplate-experimenttemplateaction-actionid"></a>
-The ID of the action\.  
+The ID of the action\. The format of the action ID is: aws:*service\-name*:*action\-type*\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `128`  
@@ -50,19 +52,19 @@ A description for the action\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-fis-experimenttemplate-experimenttemplateaction-parameters"></a>
-The parameters for the action\.  
+The parameters for the action, if applicable\.  
 *Required*: No  
-*Type*: [ExperimentTemplateActionItemParameterMap](aws-properties-fis-experimenttemplate-experimenttemplateactionitemparametermap.md)  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StartAfter`  <a name="cfn-fis-experimenttemplate-experimenttemplateaction-startafter"></a>
-The name of the action that must be completed before the current action starts\.  
+The name of the action that must be completed before the current action starts\. Omit this parameter to run the action at the start of the experiment\.  
 *Required*: No  
-*Type*: [ExperimentTemplateActionItemStartAfterList](aws-properties-fis-experimenttemplate-experimenttemplateactionitemstartafterlist.md)  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-fis-experimenttemplate-experimenttemplateaction-targets"></a>
 The targets for the action\.  
 *Required*: No  
-*Type*: [ExperimentTemplateActionItemTargetMap](aws-properties-fis-experimenttemplate-experimenttemplateactionitemtargetmap.md)  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

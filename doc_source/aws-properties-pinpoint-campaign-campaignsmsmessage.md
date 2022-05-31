@@ -57,7 +57,7 @@ The long code to send the SMS message from\. This value should be one of the ded
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SenderId`  <a name="cfn-pinpoint-campaign-campaignsmsmessage-senderid"></a>
-The sender ID to display on recipients' devices when they receive the SMS message\.  
+The alphabetic Sender ID to display as the sender of the message on a recipient's device\. Support for sender IDs varies by country or region\. To specify a phone number as the sender, omit this parameter and use `OriginationNumber` instead\. For more information about support for Sender ID by country, see the [Amazon Pinpoint User Guide](https://docs.aws.amazon.com/pinpoint/latest/userguide/channels-sms-countries.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

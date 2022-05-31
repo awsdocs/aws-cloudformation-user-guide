@@ -50,7 +50,7 @@ The `MacieStatus` of the `Session`\. Valid values include `ENABLED` and `PAUSED`
 
 ### Ref<a name="aws-resource-macie-session-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the AWS Account ID for the account in which the Macie session is created\. For example, `{ "Ref": "Session" }`\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the account ID for the AWS account in which the Amazon Macie session is created\. For example, `{ "Ref": "Session" }`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -72,11 +72,11 @@ The Amazon Resource Name \(ARN\) of the service\-linked role that allows Amazon 
 
 The following example demonstrates how to declare an `AWS::Macie::Session` resource\.
 
-### Creating a Macie Session<a name="aws-resource-macie-session--examples--Creating_a_Macie_Session"></a>
+### Creating a session<a name="aws-resource-macie-session--examples--Creating_a_session"></a>
 
 This example enables Amazon Macie for an account\. It also configures Macie to publish updated findings every hour for the account\.
 
-#### JSON<a name="aws-resource-macie-session--examples--Creating_a_Macie_Session--json"></a>
+#### JSON<a name="aws-resource-macie-session--examples--Creating_a_session--json"></a>
 
 ```
 {
@@ -88,7 +88,7 @@ This example enables Amazon Macie for an account\. It also configures Macie to p
 }
 ```
 
-#### YAML<a name="aws-resource-macie-session--examples--Creating_a_Macie_Session--yaml"></a>
+#### YAML<a name="aws-resource-macie-session--examples--Creating_a_session--yaml"></a>
 
 ```
 Type: AWS::Macie::Session

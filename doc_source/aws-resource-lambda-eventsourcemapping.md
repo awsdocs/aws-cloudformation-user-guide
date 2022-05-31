@@ -25,17 +25,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DestinationConfig](#cfn-lambda-eventsourcemapping-destinationconfig)" : DestinationConfig,
       "[Enabled](#cfn-lambda-eventsourcemapping-enabled)" : Boolean,
       "[EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn)" : String,
+      "[FilterCriteria](#cfn-lambda-eventsourcemapping-filtercriteria)" : FilterCriteria,
       "[FunctionName](#cfn-lambda-eventsourcemapping-functionname)" : String,
       "[FunctionResponseTypes](#cfn-lambda-eventsourcemapping-functionresponsetypes)" : [ String, ... ],
       "[MaximumBatchingWindowInSeconds](#cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds)" : Integer,
       "[MaximumRecordAgeInSeconds](#cfn-lambda-eventsourcemapping-maximumrecordageinseconds)" : Integer,
       "[MaximumRetryAttempts](#cfn-lambda-eventsourcemapping-maximumretryattempts)" : Integer,
       "[ParallelizationFactor](#cfn-lambda-eventsourcemapping-parallelizationfactor)" : Integer,
-      "[PartialBatchResponse](#cfn-lambda-eventsourcemapping-partialbatchresponse)" : Boolean,
       "[Queues](#cfn-lambda-eventsourcemapping-queues)" : [ String, ... ],
       "[SelfManagedEventSource](#cfn-lambda-eventsourcemapping-selfmanagedeventsource)" : SelfManagedEventSource,
       "[SourceAccessConfigurations](#cfn-lambda-eventsourcemapping-sourceaccessconfigurations)" : [ SourceAccessConfiguration, ... ],
       "[StartingPosition](#cfn-lambda-eventsourcemapping-startingposition)" : String,
+      "[StartingPositionTimestamp](#cfn-lambda-eventsourcemapping-startingpositiontimestamp)" : Double,
       "[Topics](#cfn-lambda-eventsourcemapping-topics)" : [ String, ... ],
       "[TumblingWindowInSeconds](#cfn-lambda-eventsourcemapping-tumblingwindowinseconds)" : Integer
     }
@@ -53,6 +54,8 @@ Properties:
     DestinationConfig
   [Enabled](#cfn-lambda-eventsourcemapping-enabled): Boolean
   [EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn): String
+  [FilterCriteria](#cfn-lambda-eventsourcemapping-filtercriteria): 
+    FilterCriteria
   [FunctionName](#cfn-lambda-eventsourcemapping-functionname): String
   [FunctionResponseTypes](#cfn-lambda-eventsourcemapping-functionresponsetypes): 
     - String
@@ -60,7 +63,6 @@ Properties:
   [MaximumRecordAgeInSeconds](#cfn-lambda-eventsourcemapping-maximumrecordageinseconds): Integer
   [MaximumRetryAttempts](#cfn-lambda-eventsourcemapping-maximumretryattempts): Integer
   [ParallelizationFactor](#cfn-lambda-eventsourcemapping-parallelizationfactor): Integer
-  [PartialBatchResponse](#cfn-lambda-eventsourcemapping-partialbatchresponse): Boolean
   [Queues](#cfn-lambda-eventsourcemapping-queues): 
     - String
   [SelfManagedEventSource](#cfn-lambda-eventsourcemapping-selfmanagedeventsource): 
@@ -68,6 +70,7 @@ Properties:
   [SourceAccessConfigurations](#cfn-lambda-eventsourcemapping-sourceaccessconfigurations): 
     - SourceAccessConfiguration
   [StartingPosition](#cfn-lambda-eventsourcemapping-startingposition): String
+  [StartingPositionTimestamp](#cfn-lambda-eventsourcemapping-startingpositiontimestamp): Double
   [Topics](#cfn-lambda-eventsourcemapping-topics): 
     - String
   [TumblingWindowInSeconds](#cfn-lambda-eventsourcemapping-tumblingwindowinseconds): Integer
@@ -76,12 +79,13 @@ Properties:
 ## Properties<a name="aws-resource-lambda-eventsourcemapping-properties"></a>
 
 `BatchSize`  <a name="cfn-lambda-eventsourcemapping-batchsize"></a>
-The maximum number of items to retrieve in a single batch\.  
+The maximum number of records in each batch that Lambda pulls from your stream or queue and sends to your function\. Lambda passes all of the records in the batch to the function in a single call, up to the payload limit for synchronous invocation \(6 MB\)\.  
 +  **Amazon Kinesis** \- Default 100\. Max 10,000\.
 +  **Amazon DynamoDB Streams** \- Default 100\. Max 1,000\.
 +  **Amazon Simple Queue Service** \- Default 10\. For standard queues the max is 10,000\. For FIFO queues the max is 10\.
 +  **Amazon Managed Streaming for Apache Kafka** \- Default 100\. Max 10,000\.
 +  **Self\-Managed Apache Kafka** \- Default 100\. Max 10,000\.
++  **Amazon MQ \(ActiveMQ and RabbitMQ\)** \- Default 100\. Max 10,000\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -101,7 +105,8 @@ The maximum number of items to retrieve in a single batch\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-lambda-eventsourcemapping-enabled"></a>
-If true, the event source mapping is active\. Set to false to pause polling and invocation\.  
+When true, the event source mapping is active\. When false, Lambda pauses polling and invocation\.  
+Default: True  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -116,6 +121,12 @@ The Amazon Resource Name \(ARN\) of the event source\.
 *Type*: String  
 *Pattern*: `arn:(aws[a-zA-Z0-9-]*):([a-zA-Z0-9\-])+:([a-z]{2}(-gov)?-[a-z]+-\d{1})?:(\d{12})?:(.*)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`FilterCriteria`  <a name="cfn-lambda-eventsourcemapping-filtercriteria"></a>
+\(Streams and Amazon SQS\) An object that defines the filter criteria that determine whether Lambda should process an event\. For more information, see [Lambda event filtering](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html)\.  
+*Required*: No  
+*Type*: [FilterCriteria](aws-properties-lambda-eventsourcemapping-filtercriteria.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FunctionName`  <a name="cfn-lambda-eventsourcemapping-functionname"></a>
 The name of the Lambda function\.  
@@ -134,7 +145,7 @@ The length constraint applies only to the full ARN\. If you specify only the fun
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FunctionResponseTypes`  <a name="cfn-lambda-eventsourcemapping-functionresponsetypes"></a>
-\(Streams\) A list of current response type enums applied to the event source mapping\.  
+\(Streams and SQS\) A list of current response type enums applied to the event source mapping\.  
 Valid Values: `ReportBatchItemFailures`  
 *Required*: No  
 *Type*: List of String  
@@ -142,7 +153,9 @@ Valid Values: `ReportBatchItemFailures`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumBatchingWindowInSeconds`  <a name="cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds"></a>
-\(Streams and SQS standard queues\) The maximum amount of time to gather records before invoking the function, in seconds\.  
+The maximum amount of time, in seconds, that Lambda spends gathering records before invoking the function\.  
+**Default \(Kinesis, DynamoDB, Amazon SQS event sources\)**: 0  
+**Default \(Amazon MSK, Kafka, Amazon MQ event sources\)**: 500 ms  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -150,7 +163,7 @@ Valid Values: `ReportBatchItemFailures`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumRecordAgeInSeconds`  <a name="cfn-lambda-eventsourcemapping-maximumrecordageinseconds"></a>
-\(Streams only\) Discard records older than the specified age\. The default value is infinite \(\-1\)\. When set to infinite \(\-1\), failed records are retried until the record expires\.  
+\(Streams only\) Discard records older than the specified age\. The default value is \-1, which sets the maximum age to infinite\. When the value is set to infinite, Lambda never discards old records\.   
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `-1`  
@@ -158,7 +171,7 @@ Valid Values: `ReportBatchItemFailures`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumRetryAttempts`  <a name="cfn-lambda-eventsourcemapping-maximumretryattempts"></a>
-\(Streams only\) Discard records after the specified number of retries\. The default value is infinite \(\-1\)\. When set to infinite \(\-1\), failed records are retried until the record expires\.  
+\(Streams only\) Discard records after the specified number of retries\. The default value is \-1, which sets the maximum number of retries to infinite\. When MaximumRetryAttempts is infinite, Lambda retries failed records until the record expires in the event source\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `-1`  
@@ -166,34 +179,28 @@ Valid Values: `ReportBatchItemFailures`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParallelizationFactor`  <a name="cfn-lambda-eventsourcemapping-parallelizationfactor"></a>
-\(Streams only\) The number of batches to process from each shard concurrently\. The default value is 1\.  
+\(Streams only\) The number of batches to process concurrently from each shard\. The default value is 1\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
 *Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`PartialBatchResponse`  <a name="cfn-lambda-eventsourcemapping-partialbatchresponse"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `Queues`  <a name="cfn-lambda-eventsourcemapping-queues"></a>
- \(MQ\) The name of the Amazon MQ broker destination queue to consume\.   
+ \(Amazon MQ\) The name of the Amazon MQ broker destination queue to consume\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SelfManagedEventSource`  <a name="cfn-lambda-eventsourcemapping-selfmanagedeventsource"></a>
-The Self\-Managed Apache Kafka cluster for your event source\.  
+The self\-managed Apache Kafka cluster for your event source\.  
 *Required*: No  
 *Type*: [SelfManagedEventSource](aws-properties-lambda-eventsourcemapping-selfmanagedeventsource.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceAccessConfigurations`  <a name="cfn-lambda-eventsourcemapping-sourceaccessconfigurations"></a>
-An array of the authentication protocol, or the VPC components to secure your event source\.  
+An array of the authentication protocol, VPC components, or virtual host to secure and define your event source\.  
 *Required*: No  
 *Type*: List of [SourceAccessConfiguration](aws-properties-lambda-eventsourcemapping-sourceaccessconfiguration.md)  
 *Maximum*: `22`  
@@ -207,6 +214,12 @@ The position in a stream from which to start reading\. Required for Amazon Kines
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`StartingPositionTimestamp`  <a name="cfn-lambda-eventsourcemapping-startingpositiontimestamp"></a>
+With `StartingPosition` set to `AT_TIMESTAMP`, the time from which to start reading, in Unix time seconds\.  
+*Required*: No  
+*Type*: Double  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Topics`  <a name="cfn-lambda-eventsourcemapping-topics"></a>
 The name of the Kafka topic\.  
 *Required*: No  
@@ -215,7 +228,7 @@ The name of the Kafka topic\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TumblingWindowInSeconds`  <a name="cfn-lambda-eventsourcemapping-tumblingwindowinseconds"></a>
-\(Streams\) The duration in seconds of a processing window\. The range is between 1 second up to 900 seconds\.  
+\(Streams only\) The duration in seconds of a processing window\. The range is between 1 second up to 900 seconds\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  

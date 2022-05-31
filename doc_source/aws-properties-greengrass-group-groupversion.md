@@ -2,7 +2,7 @@
 
 <a name="aws-properties-greengrass-group-groupversion-description"></a>A group version in AWS IoT Greengrass, which references of a core definition version, device definition version, subscription definition version, and other version types that contain the components you want to deploy to a Greengrass core device\. The group version must reference a core definition version that contains one core\. Other version types are optionally included, depending on your business need\.
 
-<a name="aws-properties-greengrass-group-groupversion-inheritance"></a> In an AWS CloudFormation template, `GroupVersion` is the property type of the `InitialVersion` property in the [ `AWS::Greengrass::Group` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html) resource\.
+<a name="aws-properties-greengrass-group-groupversion-inheritance"></a> In an AWS CloudFormation template, `GroupVersion` is the property type of the `InitialVersion` property in the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html) resource\.
 
 ## Syntax<a name="aws-properties-greengrass-group-groupversion-syntax"></a>
 

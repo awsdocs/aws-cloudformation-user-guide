@@ -1,6 +1,6 @@
 # AWS::IoTSiteWise::AccessPolicy IamRole<a name="aws-properties-iotsitewise-accesspolicy-iamrole"></a>
 
-Contains information about an AWS Identity and Access Management \(IAM\) role\. For more information, see [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) in the *IAM User Guide*\.
+Contains information about an AWS Identity and Access Management role\. For more information, see [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) in the *IAM User Guide*\.
 
 ## Syntax<a name="aws-properties-iotsitewise-accesspolicy-iamrole-syntax"></a>
 

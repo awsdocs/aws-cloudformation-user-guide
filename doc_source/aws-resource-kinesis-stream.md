@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RetentionPeriodHours](#cfn-kinesis-stream-retentionperiodhours)" : Integer,
       "[ShardCount](#cfn-kinesis-stream-shardcount)" : Integer,
       "[StreamEncryption](#cfn-kinesis-stream-streamencryption)" : StreamEncryption,
+      "[StreamModeDetails](#cfn-kinesis-stream-streammodedetails)" : StreamModeDetails,
       "[Tags](#cfn-kinesis-stream-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -31,6 +32,8 @@ Properties:
   [ShardCount](#cfn-kinesis-stream-shardcount): Integer
   [StreamEncryption](#cfn-kinesis-stream-streamencryption): 
     StreamEncryption
+  [StreamModeDetails](#cfn-kinesis-stream-streammodedetails): 
+    StreamModeDetails
   [Tags](#cfn-kinesis-stream-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -55,7 +58,7 @@ The number of hours for the data records that are stored in shards to remain acc
 
 `ShardCount`  <a name="cfn-kinesis-stream-shardcount"></a>
 The number of shards that the stream uses\. For greater provisioned throughput, increase the number of shards\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -64,6 +67,12 @@ The number of shards that the stream uses\. For greater provisioned throughput, 
 When specified, enables or updates server\-side encryption using an AWS KMS key for a specified stream\. Removing this property from your stack template and updating your stack disables encryption\.  
 *Required*: No  
 *Type*: [StreamEncryption](aws-properties-kinesis-stream-streamencryption.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`StreamModeDetails`  <a name="cfn-kinesis-stream-streammodedetails"></a>
+ Specifies the capacity mode to which you want to set your data stream\. Currently, in Kinesis Data Streams, you can choose between an **on\-demand** capacity mode and a **provisioned** capacity mode for your data streams\.   
+*Required*: No  
+*Type*: [StreamModeDetails](aws-properties-kinesis-stream-streammodedetails.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-kinesis-stream-tags"></a>

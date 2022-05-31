@@ -50,7 +50,7 @@ Properties:
 Specifies the containers in the inference pipeline\.  
 *Required*: No  
 *Type*: List of [ContainerDefinition](aws-properties-sagemaker-model-containerdefinition.md)  
-*Maximum*: `5`  
+*Maximum*: `15`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EnableNetworkIsolation`  <a name="cfn-sagemaker-model-enablenetworkisolation"></a>
@@ -60,8 +60,8 @@ Isolates the model container\. No inbound or outbound network calls can be made 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExecutionRoleArn`  <a name="cfn-sagemaker-model-executionrolearn"></a>
-The Amazon Resource Name \(ARN\) of the IAM role that Amazon SageMaker can assume to access model artifacts and docker image for deployment on ML compute instances or for batch transform jobs\. Deploying on ML compute instances is part of model hosting\. For more information, see [Amazon SageMaker Roles](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html)\.   
-To be able to pass this role to Amazon SageMaker, the caller of this API must have the `iam:PassRole` permission\.
+The Amazon Resource Name \(ARN\) of the IAM role that SageMaker can assume to access model artifacts and docker image for deployment on ML compute instances or for batch transform jobs\. Deploying on ML compute instances is part of model hosting\. For more information, see [SageMaker Roles](https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-roles.html)\.   
+To be able to pass this role to SageMaker, the caller of this API must have the `iam:PassRole` permission\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  

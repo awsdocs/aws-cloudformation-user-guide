@@ -46,7 +46,7 @@ The ARN of the SSO instance under which the operation will be executed\. For mor
 *Type*: String  
 *Minimum*: `10`  
 *Maximum*: `1224`  
-*Pattern*: `arn:aws:sso:::instance/(sso)?ins-[a-zA-Z0-9-.]{16}`  
+*Pattern*: `arn:(aws|aws-us-gov|aws-cn|aws-iso|aws-iso-b):sso:::instance/(sso)?ins-[a-zA-Z0-9-.]{16}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PermissionSetArn`  <a name="cfn-sso-assignment-permissionsetarn"></a>
@@ -55,7 +55,7 @@ The ARN of the permission set\.
 *Type*: String  
 *Minimum*: `10`  
 *Maximum*: `1224`  
-*Pattern*: `arn:aws:sso:::permissionSet/(sso)?ins-[a-zA-Z0-9-.]{16}/ps-[a-zA-Z0-9-./]{16}`  
+*Pattern*: `arn:(aws|aws-us-gov|aws-cn|aws-iso|aws-iso-b):sso:::permissionSet/(sso)?ins-[a-zA-Z0-9-.]{16}/ps-[a-zA-Z0-9-./]{16}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PrincipalId`  <a name="cfn-sso-assignment-principalid"></a>
@@ -78,6 +78,8 @@ The entity type for which the assignment will be created\.
 TargetID is an AWS account identifier, typically a 10\-12 digit string \(For example, 123456789012\)\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `12`  
+*Maximum*: `12`  
 *Pattern*: `\d{12}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -100,11 +102,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### Creating a new assignment for AWS SSO<a name="aws-resource-sso-assignment--examples--Creating_a_new_assignment_for_AWS_SSO"></a>
+### Creating a new assignment for AWS SSO<a name="aws-resource-sso-assignment--examples--Creating_a_new_assignment_for_"></a>
 
 The following example creates a custom assignment, assigning the user `"user_id"` access to account `"arn:aws:organizations::org_master_id:account/org_id/accountId"` with the permissions `"PermissionSet"`\. 
 
-#### JSON<a name="aws-resource-sso-assignment--examples--Creating_a_new_assignment_for_AWS_SSO--json"></a>
+#### JSON<a name="aws-resource-sso-assignment--examples--Creating_a_new_assignment_for_--json"></a>
 
 ```
 {
@@ -127,7 +129,7 @@ The following example creates a custom assignment, assigning the user `"user_id"
 }
 ```
 
-#### YAML<a name="aws-resource-sso-assignment--examples--Creating_a_new_assignment_for_AWS_SSO--yaml"></a>
+#### YAML<a name="aws-resource-sso-assignment--examples--Creating_a_new_assignment_for_--yaml"></a>
 
 ```
 Assignment:

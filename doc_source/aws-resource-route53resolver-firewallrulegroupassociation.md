@@ -63,6 +63,8 @@ The name of the association\.
 
 `Priority`  <a name="cfn-route53resolver-firewallrulegroupassociation-priority"></a>
 The setting that determines the processing order of the rule group among the rule groups that are associated with a single VPC\. DNS Firewall filters VPC traffic starting from rule group with the lowest numeric priority setting\.   
+You must specify a unique priority for each rule group that you associate with a single VPC\. To make it easier to insert rule groups later, leave space between the numbers, for example, use 101, 200, and so on\. You can change the priority setting for a rule group association after you create it\.  
+The allowed values for `Priority` are between 100 and 9900 \(excluding 100 and 9900\)\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -86,7 +88,7 @@ The unique identifier of the VPC that is associated with the rule group\.
 
 ### Ref<a name="aws-resource-route53resolver-firewallrulegroupassociation-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returnsthe `FirewallRuleGroupAssociationId`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `FirewallRuleGroupAssociation` ID\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

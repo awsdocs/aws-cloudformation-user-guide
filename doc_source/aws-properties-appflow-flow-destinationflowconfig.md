@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectorType`  <a name="cfn-appflow-flow-destinationflowconfig-connectortype"></a>
- The type of destination connector, such as Salesforce, Amazon S3, and so on\.  
+ The type of destination connector, such as Sales force, Amazon S3, and so on\.  
 *Allowed Values*: `EventBridge | Redshift | S3 | Salesforce | Snowflake`  
 *Required*: Yes  
 *Type*: String  

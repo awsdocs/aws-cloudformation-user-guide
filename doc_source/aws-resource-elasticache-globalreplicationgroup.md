@@ -1,6 +1,6 @@
 # AWS::ElastiCache::GlobalReplicationGroup<a name="aws-resource-elasticache-globalreplicationgroup"></a>
 
-Consists of a primary cluster that accepts writes and an associated secondary cluster that resides in a different AWS region\. The secondary cluster accepts only reads\. The primary cluster automatically replicates updates to the secondary cluster\.
+Consists of a primary cluster that accepts writes and an associated secondary cluster that resides in a different Amazon region\. The secondary cluster accepts only reads\. The primary cluster automatically replicates updates to the secondary cluster\.
 + The **GlobalReplicationGroupIdSuffix** represents the name of the Global datastore, which is what you use to associate a secondary cluster\.
 
 ## Syntax<a name="aws-resource-elasticache-globalreplicationgroup-syntax"></a>
@@ -96,7 +96,7 @@ The replication groups that comprise the Global datastore\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegionalConfigurations`  <a name="cfn-elasticache-globalreplicationgroup-regionalconfigurations"></a>
-The AWS Regions that comprise the Global Datastore\.  
+The Amazon Regions that comprise the Global Datastore\.  
 *Required*: No  
 *Type*: List of [RegionalConfiguration](aws-properties-elasticache-globalreplicationgroup-regionalconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

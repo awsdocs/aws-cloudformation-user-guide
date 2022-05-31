@@ -48,8 +48,8 @@ If you perform a stack update that updates any property that requires [replaceme
 
 Updating properties in these resources that don't require resource replacement doesn't trigger a green deployment\.
 
-You can't include updates to the above resources with updates to other resources in the same stack update\. If you need to update resources in the list above as well as other resources in the same stack, do one of the following:
-+ Perform two seperate stack update operations: one that includes only the updates to the above resources, and a separate stack update that includes changes to any other resources\.
+You can't include updates to the above resources with updates to other resources in the same stack update\. If you need to update resources in the list above in addition to other resources in the same stack, do one of the following:
++ Perform two separate stack update operations: one that includes only the updates to the above resources, and a separate stack update that includes changes to any other resources\.
 + Remove the `Transform` and `Hook` sections from your template and then perform the stack update\. In this case, CloudFormation won't perform a green deployment\.
 
 ## Considerations when managing ECS blue/green deployments using CloudFormation<a name="blue-green-considerations"></a>
@@ -82,11 +82,11 @@ To enable blue/green deployments on your stack, include the following sections i
 + Add a `Hook` section that invokes the `AWS::CodeDeploy::BlueGreen` hook and specifies the properties for your deployment\. Use the template reference below as a guide\.
 + In the `Resources` section, define the blue and green resources for your deployment\.
 
-You can add these sections when you first create the template \(that's, before creating the stack itself\), or you can add them to an existing template before performing a stack update\. If you specify the blue/green deployment for a new stack, CloudFormation only creates the blue resources during stack creation— resources for the green deployment aren't created until they're required during a stack update\.
+You can add these sections when you first create the template \(that's, before creating the stack itself\), or you can add them to an existing template before performing a stack update\. If you specify the blue/green deployment for a new stack, CloudFormation only creates the blue resources during stack creation — resources for the green deployment aren't created until they're required during a stack update\.
 
 ## Reviewing the change sets for your blue/green deployment<a name="blue-green-changesets"></a>
 
-We strongly recommend that you create a change set before performing a stack update that will initiate a green deployment\. This enables you to see the actual changes that will be made to your stack before performing stack update\. Be aware that resource changes may not be listed in the order in which they will be performed during the stack update\. For more information, see [Updating stacks using change sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html)\.
+We strongly recommend that you create a change set before performing a stack update that will initiate a green deployment\. This allows to see the actual changes that will be made to your stack before performing stack update\. Be aware that resource changes may not be listed in the order in which they will be performed during the stack update\. For more information, see [Updating stacks using change sets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html)\.
 
 ## Viewing stack events for your blue/green deployment<a name="blue-green-events"></a>
 
@@ -240,7 +240,7 @@ Specifies resources used for traffic routing\.
 The listener to be used by your load balancer to direct traffic to your target groups\.  
 *Required*: Yes    
 `Type`  
-The type of the resource\. AWS::ElasticLoadBalancingV2::Listener  
+The type of the resource\. `AWS::ElasticLoadBalancingV2::Listener`  
 *Required*: Yes  
 `LogicalID`  
 The logical ID of the resource\.  
@@ -249,7 +249,7 @@ The logical ID of the resource\.
 The listener to be used by your load balancer to direct traffic to your target groups\.  
 *Required*: Yes    
 `Type`  
-The type of the resource\. AWS::ElasticLoadBalancingV2::Listener  
+The type of the resource\. `AWS::ElasticLoadBalancingV2::Listener`  
 *Required*: Yes  
 `LogicalID`  
 The logical ID of the resource\.  
@@ -259,7 +259,7 @@ Logical ID of resources to use as target groups to route traffic to the register
 *Required*: Yes
 
 `Type`  
-The type of hook\. AWS::CodeDeploy::BlueGreen  
+The type of hook\. `AWS::ElasticLoadBalancingV2::Listener`  
 *Required*: Yes
 
 ## IAM permissions necessary for blue/green deployments<a name="blue-green-iam"></a>
@@ -274,7 +274,7 @@ For more information, see [Actions, resources, and condition keys for CodeDeploy
 
 The following example sets up an ECS blue/green deployment through CodeDeploy, with a traffic routing progress of 15 percent per step, with a stabilization period of 5 minutes between each step\. Creating a stack with the template would provision the initial configuration of the deployment\.
 
-If you then made any changes to properties in the `"BlueTaskSet"` resource that require that resource be replaced, CloudFormation would then inititiate a green deployment as part of the stack update\.
+If you then made any changes to properties in the `"BlueTaskSet"` resource that require that resource be replaced, CloudFormation would then initiate a green deployment as part of the stack update\.
 
 ### JSON<a name="blue-green-template-example.json"></a>
 
@@ -601,10 +601,10 @@ If you then made any changes to properties in the `"BlueTaskSet"` resource that 
                         ]
                     }
                 },
-                "PlatformVersion": "1.3.0",
+                "PlatformVersion": "1.4.0",
                 "Scale": {
                     "Unit": "PERCENT",
-                    "Value": 1
+                    "Value": 100
                 },
                 "Service": {
                     "Ref": "ECSDemoService"
@@ -839,10 +839,10 @@ Resources:
           Subnets:
             - !Ref Subnet1
             - !Ref Subnet2
-      PlatformVersion: 1.3.0
+      PlatformVersion: 1.4.0
       Scale:
         Unit: PERCENT
-        Value: 1
+        Value: 100
       Service: !Ref ECSDemoService
       TaskDefinition: !Ref BlueTaskDefinition
       LoadBalancers:

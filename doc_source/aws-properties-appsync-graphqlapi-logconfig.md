@@ -1,6 +1,6 @@
 # AWS::AppSync::GraphQLApi LogConfig<a name="aws-properties-appsync-graphqlapi-logconfig"></a>
 
-The `LogConfig` property type specifies the logging configuration when writing GraphQL operations and tracing to Amazon CloudWatch for a AWS AppSync GraphQL API\.
+The `LogConfig` property type specifies the logging configuration when writing GraphQL operations and tracing to Amazon CloudWatch for an AWS AppSync GraphQL API\.
 
  `LogConfig` is a property of the [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html) property type\. 
 
@@ -41,7 +41,7 @@ Set to TRUE to exclude sections that contain information such as headers, contex
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldLogLevel`  <a name="cfn-appsync-graphqlapi-logconfig-fieldloglevel"></a>
-The field logging level\. Values can be NONE, ERROR, or ALL\.   
+The field logging level\. Values can be NONE, ERROR, or ALL\.  
 +  **NONE**: No field\-level logs are captured\.
 +  **ERROR**: Logs the following information only for the fields that are in error:
   + The error section in the server response\.

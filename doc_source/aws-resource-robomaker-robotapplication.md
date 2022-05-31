@@ -13,10 +13,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::RoboMaker::RobotApplication",
   "Properties" : {
       "[CurrentRevisionId](#cfn-robomaker-robotapplication-currentrevisionid)" : String,
+      "[Environment](#cfn-robomaker-robotapplication-environment)" : String,
       "[Name](#cfn-robomaker-robotapplication-name)" : String,
       "[RobotSoftwareSuite](#cfn-robomaker-robotapplication-robotsoftwaresuite)" : RobotSoftwareSuite,
       "[Sources](#cfn-robomaker-robotapplication-sources)" : [ SourceConfig, ... ],
-      "[Tags](#cfn-robomaker-robotapplication-tags)" : Json
+      "[Tags](#cfn-robomaker-robotapplication-tags)" : {Key : Value, ...}
     }
 }
 ```
@@ -27,18 +28,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::RoboMaker::RobotApplication
 Properties: 
   [CurrentRevisionId](#cfn-robomaker-robotapplication-currentrevisionid): String
+  [Environment](#cfn-robomaker-robotapplication-environment): String
   [Name](#cfn-robomaker-robotapplication-name): String
   [RobotSoftwareSuite](#cfn-robomaker-robotapplication-robotsoftwaresuite): 
     RobotSoftwareSuite
   [Sources](#cfn-robomaker-robotapplication-sources): 
     - SourceConfig
-  [Tags](#cfn-robomaker-robotapplication-tags): Json
+  [Tags](#cfn-robomaker-robotapplication-tags): 
+    Key : Value
 ```
 
 ## Properties<a name="aws-resource-robomaker-robotapplication-properties"></a>
 
 `CurrentRevisionId`  <a name="cfn-robomaker-robotapplication-currentrevisionid"></a>
 The current revision id\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Environment`  <a name="cfn-robomaker-robotapplication-environment"></a>
+The environment of the robot application\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -56,18 +65,18 @@ The name of the robot application\.
 The robot software suite \(ROS distribuition\) used by the robot application\.  
 *Required*: Yes  
 *Type*: [RobotSoftwareSuite](aws-properties-robomaker-robotapplication-robotsoftwaresuite.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Sources`  <a name="cfn-robomaker-robotapplication-sources"></a>
 The sources of the robot application\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: List of [SourceConfig](aws-properties-robomaker-robotapplication-sourceconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-robomaker-robotapplication-tags"></a>
 A map that contains tag keys and tag values that are attached to the robot application\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-robomaker-robotapplication-return-values"></a>
@@ -96,11 +105,11 @@ The current revision id\.
 
 
 
-### Create an AWS RoboMaker Robot Application<a name="aws-resource-robomaker-robotapplication--examples--Create_an_AWS_RoboMaker_Robot_Application"></a>
+### Create an AWS RoboMaker Robot Application<a name="aws-resource-robomaker-robotapplication--examples--Create_an__RoboMaker_Robot_Application"></a>
 
 The following example creates a robot application\.
 
-#### JSON<a name="aws-resource-robomaker-robotapplication--examples--Create_an_AWS_RoboMaker_Robot_Application--json"></a>
+#### JSON<a name="aws-resource-robomaker-robotapplication--examples--Create_an__RoboMaker_Robot_Application--json"></a>
 
 ```
 {
@@ -136,7 +145,7 @@ The following example creates a robot application\.
 }
 ```
 
-#### YAML<a name="aws-resource-robomaker-robotapplication--examples--Create_an_AWS_RoboMaker_Robot_Application--yaml"></a>
+#### YAML<a name="aws-resource-robomaker-robotapplication--examples--Create_an__RoboMaker_Robot_Application--yaml"></a>
 
 ```
 ---

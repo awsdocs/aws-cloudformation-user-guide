@@ -4,17 +4,17 @@ With AWS CloudFormation, you can update the properties for resources in your exi
 
 This section walks through a simple progression of updates of a running stack\. It shows how the use of templates makes it possible to use a version control system for the configuration of your AWS infrastructure, just as you use version control for the software you are running\. We will walk through the following steps:
 
-1. [Create the initial stack](#updating.create.initial.stack)—create a stack using a base Amazon Linux AMI, installing the Apache Web Server and a simple PHP application using the AWS CloudFormation helper scripts\.
+1. [Create the initial stack](#updating.create.initial.stack) – create a stack using a base Amazon Linux AMI, installing the Apache Web Server and a simple PHP application using the AWS CloudFormation helper scripts\.
 
-1. [Update the application](#update.application)—update one of the files in the application and deploy the software using CloudFormation\.
+1. [Update the application](#update.application) – update one of the files in the application and deploy the software using CloudFormation\.
 
-1.  [Update the instance type](#update.walkthrough.instance.type)—change the instance type of the underlying Amazon EC2 instance\.
+1.  [Update the instance type](#update.walkthrough.instance.type) – change the instance type of the underlying Amazon EC2 instance\.
 
-1.  [Update the AMI on an Amazon EC2 instance](#update.walkthrough.ami)—change the Amazon Machine Image \(AMI\) for the Amazon EC2 instance in your stack\.
+1.  [Update the AMI on an Amazon EC2 instance](#update.walkthrough.ami) – change the Amazon Machine Image \(AMI\) for the Amazon EC2 instance in your stack\.
 
-1. [Add a key pair to an instance](#update.walkthrough.security.group)—add an Amazon EC2 key pair to the instance, and then update the security group to allow SSH access to the instance\.
+1. [Add a key pair to an instance](#update.walkthrough.security.group) – add an Amazon EC2 key pair to the instance, and then update the security group to allow SSH access to the instance\.
 
-1. [Change the stack's resources](#update.walkthrough.change.resources)—add and remove resources from the stack, converting it to an auto\-scaled, load\-balanced application by updating the template\.
+1. [Change the stack's resources](#update.walkthrough.change.resources) – add and remove resources from the stack, converting it to an auto\-scaled, load\-balanced application by updating the template\.
 
 ## A simple application<a name="updating.simple.application"></a>
 
@@ -80,7 +80,7 @@ The Apache Web Server, PHP, and the simple PHP application are all installed by 
   },
 ```
 
-The application itself is a two\-line "Hello, World" example that's entirely defined within the template\. For a real\-world application, the files may be stored on Amazon S3, GitHub, or another repository and referenced from the template\. CloudFormation can download packages \(such as RPMs or RubyGems\), and reference individual files and expand `.zip` and `.tar` files to create the application artifacts on the Amazon EC2 instance\.
+The application itself is a two\-line "Hello World" example that's entirely defined within the template\. For a real\-world application, the files may be stored on Amazon S3, GitHub, or another repository and referenced from the template\. CloudFormation can download packages \(such as RPMs or RubyGems\), and reference individual files and expand `.zip` and `.tar` files to create the application artifacts on the Amazon EC2 instance\.
 
 The template enables and configures the cfn\-hup daemon to listen for changes to the configuration defined in the metadata for the Amazon EC2 instance\. By using the cfn\-hup daemon, you can update application software, such as the version of Apache or PHP, or you can update the PHP application file itself from AWS CloudFormation\. The following snippet from the same Amazon EC2 resource in the template shows the pieces necessary to configure cfn\-hup to call cfn\-init to update the software if any changes to the metadata are detected:
 
@@ -407,7 +407,7 @@ To complete the stack, the template creates an Amazon EC2 security group\.
 }
 ```
 
-This example uses a single Amazon EC2 instance, but you can use the same mechanisms on more complex solutions that make use of Elastic Load Balancers and Auto Scaling groups to manage a collection of application servers\. There are, however, some special considerations for Auto Scaling groups\. For more information, see [Updating Auto Scaling groups](#updating.autoscaling)\.
+This example uses a single Amazon EC2 instance, but you can use the same mechanisms on more complex solutions that make use of Elastic Load Balancing and Amazon EC2 Auto Scaling groups to manage a collection of application servers\. There are, however, some special considerations for Auto Scaling groups\. For more information, see [Updating Auto Scaling groups](#updating.autoscaling)\.
 
 ## Create the initial stack<a name="updating.create.initial.stack"></a>
 
@@ -436,7 +436,7 @@ After the status of your stack is CREATE\_COMPLETE, the output tab will display 
 
 ## Update the application<a name="update.application"></a>
 
-Now that we have deployed the stack, let's update the application\. We'll make a simple change to the text that is printed out by the application\. To do so, we'll add an echo command to the index\.php file as shown in this template snippet:
+Now that we have deployed the stack, let's update the application\. We'll make a simple change to the text that's printed out by the application\. To do so, we'll add an echo command to the index\.php file as shown in this template snippet:
 
 ```
 "WebServerInstance": {
@@ -559,7 +559,7 @@ If you are using Auto Scaling groups in your template, as opposed to Amazon EC2 
 + If the cfn\-hup changes run on all Amazon EC2 instances in the Auto Scaling group at the same time, your service might be unavailable during the update\.
 + If the cfn\-hup changes run at different times, old and new versions of the software may be running at the same\.
 
-To avoid these issues, consider forcing a rolling update on your instances in the Auto Scaling group\. For more information, see [UpdatePolicy attribute](aws-attribute-updatepolicy.md)\.
+To avoid these issues, consider forcing a rolling update on your instances in the Auto Scaling group\. For more information, see [`UpdatePolicy` attribute](aws-attribute-updatepolicy.md)\.
 
 ## Changing resource properties<a name="update.walkthrough.changing.resource.properties"></a>
 
@@ -698,7 +698,7 @@ When you update the stack, CloudFormation detects that the AMI ID has changed, a
 
 If you are using Auto Scaling groups rather than Amazon EC2 instances, the process of updating the running instances is a little different\. With Auto Scaling resources, the configuration of the Amazon EC2 instances, such as the instance type or the AMI ID is encapsulated in the Auto Scaling launch configuration\. You can make changes to the launch configuration in the same way as we made changes to the Amazon EC2 instance resources in the previous sections\. However, changing the launch configuration doesn't impact any of the running Amazon EC2 instances in the Auto Scaling group\. An updated launch configuration applies only to new instances that are created after the update\.
 
-If you want to propagate the change to your launch configuration across all the instances in your Auto Scaling group, you can use an update attribute\. For more information, see [UpdatePolicy attribute](aws-attribute-updatepolicy.md)\.
+If you want to propagate the change to your launch configuration across all the instances in your Auto Scaling group, you can use an update attribute\. For more information, see [`UpdatePolicy` attribute](aws-attribute-updatepolicy.md)\.
 
 ## Adding resource properties<a name="update.walkthrough.adding.properties"></a>
 
@@ -820,7 +820,7 @@ This will create a simple, single instance PHP application using an Elastic IP a
                 "         --region ", { "Ref" : "AWS::Region" }, "\n"
    ```
 
-1. Add an Auto Scaling Group resource\.
+1. Add an Auto Scaling group resource\.
 
    ```
        "WebServerGroup" : {
@@ -885,7 +885,7 @@ This will create a simple, single instance PHP application using an Elastic IP a
    }
    ```
 
-For reference, the following sample shows the complete template\. If you use this template to update the stack, you will convert your simple, single instance application into a highly available, multi\-AZ, auto scaled and load balanced application\. Only the resources that need to be updated will be altered, so had there been any data stores for this application, the data would have remained intact\. Now, you can use AWS CloudFormation to grow or enhance your stacks as your requirements change\.
+For reference, the following sample shows the complete template\. If you use this template to update the stack, you will convert your simple, single instance application into a highly available, Multi\-AZ, auto scaled and load balanced application\. Only the resources that need to be updated will be altered, so had there been any data stores for this application, the data would have remained intact\. Now, you can use AWS CloudFormation to grow or enhance your stacks as your requirements change\.
 
 ```
 {
@@ -1231,4 +1231,4 @@ For more information about using CloudFormation to start applications and on int
 + [Integrating AWS CloudFormation with Opscode Chef](https://s3.amazonaws.com/cloudformation-examples/IntegratingAWSCloudFormationWithOpscodeChef.pdf)
 + [Integrating AWS CloudFormation with Puppet](https://s3.amazonaws.com/cloudformation-examples/IntegratingAWSCloudFormationWithPuppet.pdf)
 
-The template used throughout this section is a "Hello, World" PHP application\. The template library also has an Amazon ElastiCache sample template that shows how to integrate a PHP application with ElasticCache using cfn\-hup and cfn\-init to respond to changes in the Amazon ElastiCache Cache Cluster configuration, all of which can be performed by Update Stack\.
+The template used throughout this section is a "Hello World" PHP application\. The template library also has an Amazon ElastiCache sample template that shows how to integrate a PHP application with ElasticCache using cfn\-hup and cfn\-init to respond to changes in the Amazon ElastiCache Cache Cluster configuration, all of which can be performed by Update Stack\.

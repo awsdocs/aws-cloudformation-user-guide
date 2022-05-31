@@ -32,7 +32,7 @@ Information about the event\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-dlm-lifecyclepolicy-eventsource-type"></a>
-The source of the event\. Currently only managed AWS CloudWatch Events rules are supported\.  
+The source of the event\. Currently only managed CloudWatch Events rules are supported\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `MANAGED_CWE`  

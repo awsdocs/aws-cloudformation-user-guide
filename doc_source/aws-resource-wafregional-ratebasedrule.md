@@ -1,5 +1,9 @@
 # AWS::WAFRegional::RateBasedRule<a name="aws-resource-wafregional-ratebasedrule"></a>
 
+**Note**  
+This is ** AWS WAF Classic** documentation\. For more information, see [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF **, use the AWS WAFV2 API and see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
+
 A `RateBasedRule` is identical to a regular `Rule`, with one addition: a `RateBasedRule` counts the number of requests that arrive from a specified IP address every five minutes\. For example, based on recent requests that you've seen from an attacker, you might create a `RateBasedRule` that includes the following conditions: 
 + The requests come from 192\.0\.2\.44\.
 + They contain the value `BadBot` in the `User-Agent` header\.
@@ -8,7 +12,7 @@ In the rule, you also define the rate limit as 15,000\.
 
 Requests that meet both of these conditions and exceed 15,000 requests every five minutes trigger the rule's action \(block or count\), which is defined in the web ACL\.
 
-Note you can only create rate\-based rules using a CloudFormation template\. To add the rate\-based rules created through CloudFormation to a web ACL, use the AWS WAF console, API, or command line interface \(CLI\)\. For more information, see [UpdateWebACL](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_UpdateWebACL.html)\.
+Note you can only create rate\-based rules using an AWS CloudFormation template\. To add the rate\-based rules created through AWS CloudFormation to a web ACL, use the AWS WAF console, API, or command line interface \(CLI\)\. For more information, see [UpdateWebACL](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_UpdateWebACL.html)\.
 
 ## Syntax<a name="aws-resource-wafregional-ratebasedrule-syntax"></a>
 
@@ -51,7 +55,7 @@ The `Predicates` object contains one `Predicate` element for each `ByteMatchSet`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricName`  <a name="cfn-wafregional-ratebasedrule-metricname"></a>
-A friendly name or description for the metrics for a `RateBasedRule`\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with maximum length 128 and minimum length one\. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default\_Action\." You can't change the name of the metric after you create the `RateBasedRule`\.  
+A name for the metrics for a `RateBasedRule`\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with maximum length 128 and minimum length one\. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default\_Action\." You can't change the name of the metric after you create the `RateBasedRule`\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

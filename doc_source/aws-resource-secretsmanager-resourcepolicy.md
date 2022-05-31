@@ -1,6 +1,10 @@
 # AWS::SecretsManager::ResourcePolicy<a name="aws-resource-secretsmanager-resourcepolicy"></a>
 
-Attaches the contents of the specified resource\-based permission policy to a secret\. A resource\-based policy is optional\. Alternatively, you can use IAM identity\-based policies to specify the Amazon Resource Name \(ARN\) of the secret in the policy statement `Resources` element\. You can also use a combination of both identity\-based and resource\-based policies\. The affected users and roles receive the permissions permitted by all relevant policies\. 
+Attaches a resource\-based permission policy to a secret\. A resource\-based policy is optional\. For more information, see [Authentication and access control for Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html) 
+
+For information about attaching a policy in the console, see [Attach a permissions policy to a secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html)\.
+
+ **Required permissions: ** `secretsmanager:PutResourcePolicy`\. For more information, see [ IAM policy actions for Secrets Manager](https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions) and [Authentication and access control in Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html)\. 
 
 ## Syntax<a name="aws-resource-secretsmanager-resourcepolicy-syntax"></a>
 
@@ -32,23 +36,26 @@ Properties:
 ## Properties<a name="aws-resource-secretsmanager-resourcepolicy-properties"></a>
 
 `BlockPublicPolicy`  <a name="cfn-secretsmanager-resourcepolicy-blockpublicpolicy"></a>
-Specifies if you configured a check for a resource policy that exposes information publicly\.  
-For more information on using this parameter, see [Managing a resource\-based policy for a secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_secret-policy.html)\.  
+Specifies whether to block resource\-based policies that allow broad access to the secret\. By default, Secrets Manager blocks policies that allow broad access, for example those that use a wildcard for the principal\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourcePolicy`  <a name="cfn-secretsmanager-resourcepolicy-resourcepolicy"></a>
-Specifies a JSON object constructed according to the grammar and syntax for a resource\-based policy\. The policy identifies who can access or manage this secret and associated versions\. For information on how to format a JSON object as a parameter for this resource type, see [Using Resource\-based Policies for Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html) in the AWS Secrets Manager User Guide\. Those same rules apply here\.   
+A JSON\-formatted string for an AWS resource\-based policy\. For example policies, see [Permissions policy examples](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html)\.  
 *Required*: Yes  
 *Type*: Json  
+*Minimum*: `1`  
+*Maximum*: `20480`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretId`  <a name="cfn-secretsmanager-resourcepolicy-secretid"></a>
-Specifies the Amazon Resource Name \(ARN\) or the friendly name of the secret to attach a resource\-based permissions policy\.   
-If you use this property to change the `SecretId` for an existing resource\-based policy, Secrets Manager removes the policy from the original secret, and then attaches the policy to the secret with the specified `SecretId`\. This results in changing the permissions for two secrets\.
+The ARN or name of the secret to attach the resource\-based policy\.  
+For an ARN, we recommend that you specify a complete ARN rather than a partial ARN\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `2048`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-secretsmanager-resourcepolicy-return-values"></a>
@@ -65,67 +72,70 @@ For more information about using the Ref function, see [Ref](url-doc-domain/AWSC
 
 ## Examples<a name="aws-resource-secretsmanager-resourcepolicy--examples"></a>
 
-### Attaching a resource\-based policy to an RDS DB Instance secret<a name="aws-resource-secretsmanager-resourcepolicy--examples--Attaching_a_resource-based_policy_to_an_RDS_DB_Instance_secret_"></a>
+### Attaching a resource\-based policy to an RDS database instance secret<a name="aws-resource-secretsmanager-resourcepolicy--examples--Attaching_a_resource-based_policy_to_an_RDS_database_instance_secret_"></a>
 
-The following examples shows how to attach a resource\-based policy to the specified secret\. The JSON request string input and response output displays as formatted with white space and line breaks for better readability\. Submit your input as a single line JSON string\.
+The following example shows how to attach a resource\-based policy to a secret\. The JSON request string input and response output displays as formatted with white space and line breaks for better readability\. Submit your input as a single line JSON string\.
 
-#### JSON<a name="aws-resource-secretsmanager-resourcepolicy--examples--Attaching_a_resource-based_policy_to_an_RDS_DB_Instance_secret_--json"></a>
+#### JSON<a name="aws-resource-secretsmanager-resourcepolicy--examples--Attaching_a_resource-based_policy_to_an_RDS_database_instance_secret_--json"></a>
 
 ```
 {
-    "MySecret": {
-        "Type": "AWS::SecretsManager::Secret",
-        "Properties": {
-            "Description": "This is a secret that I want to attach a resource-based policy to"
-        }
-    },
-    "MySecretResourcePolicy": {
-        "Type": "AWS::SecretsManager::ResourcePolicy",
-        "Properties": {
-            "BlockPublicPolicy": {
-            "SecretId": {
-                "Ref": "MySecret"
-            },
-            "ResourcePolicy": {
-                "Version": "2012-10-17",
-                "Statement": [
-                    {
-                        "Resource": "*",
-                        "Action": "secretsmanager:DeleteSecret",
-                        "Effect": "Deny",
-                        "Principal": {
-                            "AWS": {
-                                "Fn::Sub": "arn:aws:iam::${AWS::AccountId}:root"
-                            }
-                        }
-                    }
-                ]
-            }
-        }
+  "MySecret": {
+    "Type": "AWS::SecretsManager::Secret",
+    "Properties": {
+      "Description": "This is a secret that I want to attach a resource-based policy to"
     }
-}
+  },
+  "MySecretResourcePolicy": {
+    "Type": "AWS::SecretsManager::ResourcePolicy",
+    "Properties": {
+      "BlockPublicPolicy": "True",
+      "SecretId": {
+        "Ref": "MySecret"
+      },
+      "ResourcePolicy": {
+        "Version": "2012-10-17",
+        "Statement": [
+        {
+          "Resource": "*",
+          "Action": "secretsmanager:DeleteSecret",
+          "Effect": "Deny",
+          "Principal": {
+            "AWS": {
+              "Fn::Sub": "arn:aws:iam::${AWS::AccountId}:root"
+            }
+          }
+        }
+        ]
+      }
+    }
+  }
 }
 ```
 
-#### YAML<a name="aws-resource-secretsmanager-resourcepolicy--examples--Attaching_a_resource-based_policy_to_an_RDS_DB_Instance_secret_--yaml"></a>
+#### YAML<a name="aws-resource-secretsmanager-resourcepolicy--examples--Attaching_a_resource-based_policy_to_an_RDS_database_instance_secret_--yaml"></a>
 
 ```
+---
 MySecret:
-    Type: 'AWS::SecretsManager::Secret'
-    Properties:
-        Description: This is a secret that I want to attach a resource-based policy to
+  Type: AWS::SecretsManager::Secret
+  Properties:
+    Description: This is a secret that I want to attach a resource-based policy to
 MySecretResourcePolicy:
-    Type: 'AWS::SecretsManager::ResourcePolicy'
-    Properties:
-        SecretId: !Ref MySecret
-        ResourcePolicy:
-          Version: 2012-10-17
-          Statement:
-            - Resource: '*'
-              Action: 'secretsmanager:DeleteSecret'
-              Effect: Deny
-              Principal:
-                AWS: !Sub 'arn:aws:iam::${AWS::AccountId}:root'
+  Type: AWS::SecretsManager::ResourcePolicy
+  Properties:
+    BlockPublicPolicy: True
+    SecretId:
+      Ref: MySecret
+    ResourcePolicy:
+      Version: '2012-10-17'
+      Statement:
+      - Resource: "*"
+        Action: secretsmanager:DeleteSecret
+        Effect: Deny
+        Principal:
+          AWS:
+            Fn::Sub: arn:aws:iam::${AWS::AccountId}:root
 ```
 
 ## See also<a name="aws-resource-secretsmanager-resourcepolicy--seealso"></a>

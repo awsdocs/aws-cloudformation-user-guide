@@ -46,7 +46,7 @@ The ARN of the AWS SSO instance under which the operation will be executed\.
 *Type*: String  
 *Minimum*: `10`  
 *Maximum*: `1224`  
-*Pattern*: `arn:aws:sso:::instance/(sso)?ins-[a-zA-Z0-9-.]{16}`  
+*Pattern*: `arn:(aws|aws-us-gov|aws-cn|aws-iso|aws-iso-b):sso:::instance/(sso)?ins-[a-zA-Z0-9-.]{16}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration-return-values"></a>
@@ -59,11 +59,11 @@ Specifies the AWS SSO identity store attributes to add to your ABAC configuratio
 
 
 
-### Enabling and configuring attributes used for access control in AWS SSO<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration--examples--Enabling_and_configuring_attributes_used_for_access_control_in_AWS_SSO"></a>
+### Enabling and configuring attributes used for access control in AWS SSO<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration--examples--Enabling_and_configuring_attributes_used_for_access_control_in_"></a>
 
 The following example enables ABAC in AWS SSO and creates a new attribute key `CostCenter` that is mapped to the Value `“${path:enterprise.costCenter}”` which is coming from your identity source\.
 
-#### JSON<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration--examples--Enabling_and_configuring_attributes_used_for_access_control_in_AWS_SSO--json"></a>
+#### JSON<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration--examples--Enabling_and_configuring_attributes_used_for_access_control_in_--json"></a>
 
 ```
 {
@@ -88,7 +88,7 @@ The following example enables ABAC in AWS SSO and creates a new attribute key `C
 }
 ```
 
-#### YAML<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration--examples--Enabling_and_configuring_attributes_used_for_access_control_in_AWS_SSO--yaml"></a>
+#### YAML<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration--examples--Enabling_and_configuring_attributes_used_for_access_control_in_--yaml"></a>
 
 ```
 Resources:

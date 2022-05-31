@@ -30,8 +30,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ComputeResources](#cfn-batch-computeenvironment-computeresources)" : ComputeResources,
       "[ServiceRole](#cfn-batch-computeenvironment-servicerole)" : String,
       "[State](#cfn-batch-computeenvironment-state)" : String,
-      "[Tags](#cfn-batch-computeenvironment-tags)" : Json,
-      "[Type](#cfn-batch-computeenvironment-type)" : String
+      "[Tags](#cfn-batch-computeenvironment-tags)" : {Key : Value, ...},
+      "[Type](#cfn-batch-computeenvironment-type)" : String,
+      "[UnmanagedvCpus](#cfn-batch-computeenvironment-unmanagedvcpus)" : Integer
     }
 }
 ```
@@ -46,14 +47,16 @@ Properties:
     ComputeResources
   [ServiceRole](#cfn-batch-computeenvironment-servicerole): String
   [State](#cfn-batch-computeenvironment-state): String
-  [Tags](#cfn-batch-computeenvironment-tags): Json
+  [Tags](#cfn-batch-computeenvironment-tags): 
+    Key : Value
   [Type](#cfn-batch-computeenvironment-type): String
+  [UnmanagedvCpus](#cfn-batch-computeenvironment-unmanagedvcpus): Integer
 ```
 
 ## Properties<a name="aws-resource-batch-computeenvironment-properties"></a>
 
 `ComputeEnvironmentName`  <a name="cfn-batch-computeenvironment-computeenvironmentname"></a>
-The name for your compute environment\. Up to 128 letters \(uppercase and lowercase\), numbers, hyphens, and underscores are allowed\.  
+The name for your compute environment\. It can be up to 128 letters long\. It can contain uppercase and lowercase letters, numbers, hyphens \(\-\), and underscores \(\_\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -65,8 +68,8 @@ The ComputeResources property type specifies details of the compute resources ma
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceRole`  <a name="cfn-batch-computeenvironment-servicerole"></a>
-The full Amazon Resource Name \(ARN\) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf\. For more information, see [AWS Batch service IAM role](https://docs.aws.amazon.com/batch/latest/userguide/service_IAM_role.html) in the *AWS Batch User Guide*\.  
-If your account has already created the AWS Batch service\-linked role, that role is used by default for your compute environment unless you specify a role here\. If the AWS Batch service\-linked role does not exist in your account, and no role is specified here, the service will try to create the AWS Batch service\-linked role in your account\.
+The full Amazon Resource Name \(ARN\) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf\. For more information, see [AWS Batch service IAM role](https://docs.aws.amazon.com/batch/latest/userguide/service_IAM_role.html) in the * AWS Batch User Guide*\.  
+If your account already created the AWS Batch service\-linked role, that role is used by default for your compute environment unless you specify a different role here\. If the AWS Batch service\-linked role doesn't exist in your account, and no role is specified here, the service attempts to create the AWS Batch service\-linked role in your account\.
 If your specified role has a path other than `/`, then you must specify either the full role ARN \(recommended\) or prefix the role name with the path\. For example, if a role with the name `bar` has a path of `/foo/` then you would specify `/foo/bar` as the role name\. For more information, see [Friendly names and paths](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html#identifiers-friendly-names) in the *IAM User Guide*\.  
 Depending on how you created your AWS Batch service role, its ARN might contain the `service-role` path prefix\. When you only specify the name of the service role, AWS Batch assumes that your ARN doesn't use the `service-role` path prefix\. Because of this, we recommend that you specify the full ARN of your service role when you create compute environments\.
 *Required*: No  
@@ -85,15 +88,22 @@ If the state is `DISABLED`, then the AWS Batch scheduler doesn't attempt to plac
 `Tags`  <a name="cfn-batch-computeenvironment-tags"></a>
 The tags applied to the compute environment\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Type`  <a name="cfn-batch-computeenvironment-type"></a>
-The type of the compute environment: `MANAGED` or `UNMANAGED`\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the *AWS Batch User Guide*\.  
+The type of the compute environment: `MANAGED` or `UNMANAGED`\. For more information, see [Compute Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the * AWS Batch User Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `MANAGED | UNMANAGED`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`UnmanagedvCpus`  <a name="cfn-batch-computeenvironment-unmanagedvcpus"></a>
+The maximum number of vCPUs for an unmanaged compute environment\. This parameter is only used for fair share scheduling to reserve vCPU capacity for new share identifiers\. If this parameter isn't provided for a fair share job queue, no vCPU capacity is reserved\.  
+This parameter is only supported when the `type` parameter is set to `UNMANAGED`\.
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-batch-computeenvironment-return-values"></a>
 
@@ -102,6 +112,17 @@ The type of the compute environment: `MANAGED` or `UNMANAGED`\. For more informa
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the compute environment ARN, such as `arn:aws:batch:us-east-1:555555555555:compute-environment/M4OnDemand`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-batch-computeenvironment-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-batch-computeenvironment-return-values-fn--getatt-fn--getatt"></a>
+
+`ComputeEnvironmentArn`  <a name="ComputeEnvironmentArn-fn::getatt"></a>
+Returns the compute environment ARN, such as `arn:aws:batch:us-east-1:111122223333:compute-environment/ComputeEnvironmentName`\.
 
 ## Examples<a name="aws-resource-batch-computeenvironment--examples"></a>
 

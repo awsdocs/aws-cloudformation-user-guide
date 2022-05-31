@@ -5,7 +5,7 @@
 **Note**  
 After you create a connector definition version that contains the connectors you want to deploy, you must add it to your group version\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)\.
 
-<a name="aws-properties-greengrass-connectordefinition-connectordefinitionversion-inheritance"></a> In an AWS CloudFormation template, `ConnectorDefinitionVersion` is the property type of the `InitialVersion` property in the [ `AWS::Greengrass::ConnectorDefinition` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html) resource\.
+<a name="aws-properties-greengrass-connectordefinition-connectordefinitionversion-inheritance"></a> In an AWS CloudFormation template, `ConnectorDefinitionVersion` is the property type of the `InitialVersion` property in the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html) resource\.
 
 ## Syntax<a name="aws-properties-greengrass-connectordefinition-connectordefinitionversion-syntax"></a>
 

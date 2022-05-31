@@ -53,8 +53,8 @@ The Resources section contains the definitions of the AWS resources you want to 
 32.     "Properties" : {
 33.       "GroupDescription" : "Enable HTTP access via port 80 locked down to the load balancer + SSH access",
 34.       "SecurityGroupIngress" : [
-35.         {"IpProtocol" : "tcp", "FromPort" : "80", "ToPort" : "80", "CidrIp" : "0.0.0.0/0"},
-36.         {"IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : { "Ref" : "SSHLocation"}}
+35.         {"IpProtocol" : "tcp", "FromPort" : 80, "ToPort" : 80, "CidrIp" : "0.0.0.0/0"},
+36.         {"IpProtocol" : "tcp", "FromPort" : 22, "ToPort" : 22, "CidrIp" : { "Ref" : "SSHLocation"}}
 37.       ]
 38.     }
 39.   },
@@ -92,15 +92,14 @@ The Resources section contains the definitions of the AWS resources you want to 
 25.       GroupDescription: "Enable HTTP access via port 80 locked down to the load balancer + SSH access"
 26.       SecurityGroupIngress:
 27.       - CidrIp: 0.0.0.0/0
-28.         FromPort: '80'
+28.         FromPort: 80
 29.         IpProtocol: tcp
-30.         ToPort: '80'
+30.         ToPort: 80
 31.       - CidrIp: !Ref SSHLocation
-32.         FromPort: '22'
+32.         FromPort: 22
 33.         IpProtocol: tcp
-34.         ToPort: '22'
-35. 
-36.   ...
+34.         ToPort: 22
+35.   ...
 ```
 
 If you have created EC2 instances before, you can recognize properties, such as `ImageId`, `InstanceType`, and `KeyName`, that determine the configuration of the instance\. Resource declarations are an efficient way to specify all these configuration settings at once\. When you put resource declarations in a template, you can create and configure all the declared resources by using the template to create a stack\. Create a new stack that uses the same template to launch the same configuration of resources\.
@@ -259,7 +258,7 @@ The Ref function can also set a resource's property to the value of another reso
 
 The `SecurityGroups` property takes a list of EC2 security groups\. The Ref function has an input of `WebServerSecurityGroup`, which is the logical name of a security group in the template, and adds the name of `WebServerSecurityGroup` to the `SecurityGroups` property\.
 
-In the template, you'll also find a *Mappings* section\. You use mappings to declare conditional values that are evaluated in a similar manner as a lookup table statement\. The template uses mappings to select the correct Amazon Machine Image \(AMI\) for the region and the architecture type for the instance type\. *Outputs* define custom values that are returned by the `aws cloudformation describe-stacks` command and in the CloudFormation console **Outputs** tab after the stack creation\. You can use output values to return information from the resources in the stack, such as the URL for a website that was created in the template\. We cover mappings, outputs, and other things about templates in more detail in [Learn template basics](gettingstarted.templatebasics.md)\.
+In the template, you'll also find a *Mappings* section\. You use mappings to declare conditional values that are evaluated in a similar manner as a look up table statement\. The template uses mappings to select the correct Amazon Machine Image \(AMI\) for the region and the architecture type for the instance type\. *Outputs* define custom values that are returned by the `aws cloudformation describe-stacks` command and in the CloudFormation console **Outputs** tab after the stack creation\. You can use output values to return information from the resources in the stack, such as the URL for a website that was created in the template\. We cover mappings, outputs, and other things about templates in more detail in [Learn template basics](gettingstarted.templatebasics.md)\.
 
 That's enough about templates for now\. Let's start creating a stack\.
 
@@ -304,7 +303,7 @@ AWS CloudFormation templates that are stored in an S3 bucket must be accessible 
 
 1. Review the information for the stack\. When you're satisfied with the settings, choose **Create**\.
 
-Your stack might take several minutes to create— but you probably don't want to just sit around waiting\. If you're like us, you'll want to know how the stack creation is going\.
+Your stack might take several minutes to create – but you probably don't want to just sit around waiting\. If you're like us, you'll want to know how the stack creation is going\.
 
 ## Step 4: Monitor the progress of stack creation<a name="GettingStarted.Walkthrough.monitor"></a>
 
@@ -370,4 +369,4 @@ The status for `MyWPTestStack` changes to `DELETE_IN_PROGRESS`\. In the same way
 
 Congratulations\! You successfully picked a template, created a stack, viewed, and used its resources, and deleted the stack and its resources\. Not only that, you were able to set up a WordPress blog using a CloudFormation template\. You can find other templates in the [AWS CloudFormation sample template library](http://aws.amazon.com/cloudformation/aws-cloudformation-templates/)\.
 
-Now it's time to learn more about templates so that you can easily modify existing templates or create your own: [Learn template basics](gettingstarted.templatebasics.md)\.
+Now it's time to learn more about templates so that you can modify existing templates or create your own: [Learn template basics](gettingstarted.templatebasics.md)\.

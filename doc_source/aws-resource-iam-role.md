@@ -1,6 +1,6 @@
 # AWS::IAM::Role<a name="aws-resource-iam-role"></a>
 
-Creates a new role for your AWS account\. For more information about roles, see [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html)\. For information about quotas for role names and the number of roles you can create, see [IAM and STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
+Creates a new role for your AWS account\. For more information about roles, see [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/WorkingWithRoles.html)\. For information about quotas for role names and the number of roles you can create, see [IAM and AWS STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
 
 ## Syntax<a name="aws-resource-iam-role-syntax"></a>
 
@@ -69,7 +69,7 @@ For more information about ARNs, see [Amazon Resource Names \(ARNs\) and AWS Ser
 
 `MaxSessionDuration`  <a name="cfn-iam-role-maxsessionduration"></a>
 The maximum session duration \(in seconds\) that you want to set for the specified role\. If you do not specify a value for this setting, the default maximum of one hour is applied\. This setting can have a value from 1 hour to 12 hours\.  
-Anyone who assumes the role from the AWS CLI or API can use the `DurationSeconds` API parameter or the `duration-seconds` CLI parameter to request a longer session\. The `MaxSessionDuration` setting determines the maximum duration that can be requested using the `DurationSeconds` parameter\. If users don't specify a value for the `DurationSeconds` parameter, their security credentials are valid for one hour by default\. This applies when you use the `AssumeRole*` API operations or the `assume-role*` CLI operations but does not apply when you use those operations to create a console URL\. For more information, see [Using IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html) in the *IAM User Guide*\.  
+Anyone who assumes the role from the or API can use the `DurationSeconds` API parameter or the `duration-seconds` CLI parameter to request a longer session\. The `MaxSessionDuration` setting determines the maximum duration that can be requested using the `DurationSeconds` parameter\. If users don't specify a value for the `DurationSeconds` parameter, their security credentials are valid for one hour by default\. This applies when you use the `AssumeRole*` API operations or the `assume-role*` CLI operations but does not apply when you use those operations to create a console URL\. For more information, see [Using IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html) in the *IAM User Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `3600`  
@@ -105,7 +105,7 @@ If an external policy \(such as `AWS::IAM::Policy` or `AWS::IAM::ManagedPolicy`\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleName`  <a name="cfn-iam-role-rolename"></a>
-A name for the IAM role, up to 64 characters in length\. For valid values, see the `RoleName` parameter for the [ `CreateRole` ](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html) action in the *IAM User Guide*\.  
+A name for the IAM role, up to 64 characters in length\. For valid values, see the `RoleName` parameter for the [https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html) action in the *IAM User Guide*\.  
 This parameter allows \(per its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces\. You can also include any of the following characters: \_\+=,\.@\-\. The role name must be unique within the account\. Role names are not distinguished by case\. For example, you cannot create roles named both "Role1" and "role1"\.  
 If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the role name\.  
 If you specify a name, you must specify the `CAPABILITY_NAMED_IAM` value to acknowledge your template's capabilities\. For more information, see [Acknowledging IAM Resources in AWS CloudFormation Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-capabilities)\.  
@@ -156,11 +156,11 @@ For more information about IDs, see [IAM Identifiers](https://docs.aws.amazon.co
 
 
 
-### IAM Role with Embedded Policy and Instance Profiles<a name="aws-resource-iam-role--examples--IAM_Role_with_Embedded_Policy_and_Instance_Profiles"></a>
+### IAM Role with Embedded Policy and Instance Profiles<a name="aws-resource-iam-role--examples--_Role_with_Embedded_Policy_and_Instance_Profiles"></a>
 
 This example shows an embedded policy in the `AWS::IAM::Role`\. The policy is specified inline in the `Policies` property of the `AWS::IAM::Role`\.
 
-#### <a name="aws-resource-iam-role--examples--IAM_Role_with_Embedded_Policy_and_Instance_Profiles--language_sc3_fgs_qjb"></a>
+#### <a name="aws-resource-iam-role--examples--_Role_with_Embedded_Policy_and_Instance_Profiles--language_sc3_fgs_qjb"></a>
 
 ```
 {
@@ -218,7 +218,7 @@ This example shows an embedded policy in the `AWS::IAM::Role`\. The policy is sp
 }
 ```
 
-#### YAML<a name="aws-resource-iam-role--examples--IAM_Role_with_Embedded_Policy_and_Instance_Profiles--yaml"></a>
+#### YAML<a name="aws-resource-iam-role--examples--_Role_with_Embedded_Policy_and_Instance_Profiles--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"
@@ -252,11 +252,11 @@ Resources:
         - !Ref RootRole
 ```
 
-### IAM Role with External Policy and Instance Profiles<a name="aws-resource-iam-role--examples--IAM_Role_with_External_Policy_and_Instance_Profiles"></a>
+### IAM Role with External Policy and Instance Profiles<a name="aws-resource-iam-role--examples--_Role_with_External_Policy_and_Instance_Profiles"></a>
 
 In this example, the Policy and InstanceProfile resources are specified externally to the IAM Role\. They refer to the role by specifying its name, "RootRole", in their respective `Roles` properties\.
 
-#### JSON<a name="aws-resource-iam-role--examples--IAM_Role_with_External_Policy_and_Instance_Profiles--json"></a>
+#### JSON<a name="aws-resource-iam-role--examples--_Role_with_External_Policy_and_Instance_Profiles--json"></a>
 
 ```
 {
@@ -308,7 +308,7 @@ In this example, the Policy and InstanceProfile resources are specified external
 }
 ```
 
-#### YAML<a name="aws-resource-iam-role--examples--IAM_Role_with_External_Policy_and_Instance_Profiles--yaml"></a>
+#### YAML<a name="aws-resource-iam-role--examples--_Role_with_External_Policy_and_Instance_Profiles--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: "2010-09-09"

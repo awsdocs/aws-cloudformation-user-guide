@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-rds-dbproxyendpoint-tagformat-properties"></a>
 
 `Key`  <a name="cfn-rds-dbproxyendpoint-tagformat-key"></a>
-A value is the optional value of the tag\. The string value can be 1\-256 Unicode characters in length and can't be prefixed with "aws:"\. The string can contain only the set of Unicode letters, digits, white\-space, '\_', '\.', '/', '=', '\+', '\-' \(Java regex: "^\(\[\\\\p\{L\}\\\\p\{Z\}\\\\p\{N\}\_\.:/=\+\\\\\-\]\*\)$"\)\.  
+A value is the optional value of the tag\. The string value can be 1\-256 Unicode characters in length and can't be prefixed with `aws:`\. The string can contain only the set of Unicode letters, digits, white\-space, '\_', '\.', '/', '=', '\+', '\-' \(Java regex: "^\(\[\\\\p\{L\}\\\\p\{Z\}\\\\p\{N\}\_\.:/=\+\\\\\-\]\*\)$"\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AutoPause`  <a name="cfn-rds-dbcluster-scalingconfiguration-autopause"></a>
 A value that indicates whether to allow or disallow automatic pause for an Aurora DB cluster in `serverless` DB engine mode\. A DB cluster can be paused only when it's idle \(it has no connections\)\.  
-If a DB cluster is paused for more than seven days, the DB cluster might be backed up with a snapshot\. In this case, the DB cluster is restored when there is a request to connect to it\. 
+If a DB cluster is paused for more than seven days, the DB cluster might be backed up with a snapshot\. In this case, the DB cluster is restored when there is a request to connect to it\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -57,6 +57,7 @@ The minimum capacity must be less than or equal to the maximum capacity\.
 
 `SecondsUntilAutoPause`  <a name="cfn-rds-dbcluster-scalingconfiguration-secondsuntilautopause"></a>
 The time, in seconds, before an Aurora DB cluster in `serverless` mode is paused\.  
+Specify a value between 300 and 86,400 seconds\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

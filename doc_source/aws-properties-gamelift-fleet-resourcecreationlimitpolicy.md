@@ -41,6 +41,6 @@ The time span used in evaluating the resource creation limit policy\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-gamelift-fleet-resourcecreationlimitpolicy--seealso"></a>
-+ [ Create GameLift resources using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++ [ Create GameLift resources using Amazon CloudFront](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 +  [ResourceCreationLimitPolicy](https://docs.aws.amazon.com/gamelift/latest/apireference/API_ResourceCreationLimitPolicy.html) in the *Amazon GameLift API Reference* 
 

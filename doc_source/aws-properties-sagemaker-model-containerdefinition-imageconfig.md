@@ -10,7 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[RepositoryAccessMode](#cfn-sagemaker-model-containerdefinition-imageconfig-repositoryaccessmode)" : String
+  "[RepositoryAccessMode](#cfn-sagemaker-model-containerdefinition-imageconfig-repositoryaccessmode)" : String,
+  "[RepositoryAuthConfig](#cfn-sagemaker-model-containerdefinition-imageconfig-repositoryauthconfig)" : RepositoryAuthConfig
 }
 ```
 
@@ -18,6 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [RepositoryAccessMode](#cfn-sagemaker-model-containerdefinition-imageconfig-repositoryaccessmode): String
+  [RepositoryAuthConfig](#cfn-sagemaker-model-containerdefinition-imageconfig-repositoryauthconfig): 
+    RepositoryAuthConfig
 ```
 
 ## Properties<a name="aws-properties-sagemaker-model-containerdefinition-imageconfig-properties"></a>
@@ -29,4 +32,10 @@ Set this to one of the following values:
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `Platform | Vpc`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`RepositoryAuthConfig`  <a name="cfn-sagemaker-model-containerdefinition-imageconfig-repositoryauthconfig"></a>
+\(Optional\) Specifies an authentication configuration for the private docker registry where your model image is hosted\. Specify a value for this property only if you specified `Vpc` as the value for the `RepositoryAccessMode` field, and the private Docker registry where the model image is hosted requires authentication\.  
+*Required*: No  
+*Type*: [RepositoryAuthConfig](aws-properties-sagemaker-model-containerdefinition-imageconfig-repositoryauthconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

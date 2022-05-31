@@ -66,11 +66,11 @@ The description of the role\.
 
 
 
-### Create an IAM Service\-Linked Role for Auto Scaling<a name="aws-resource-iam-servicelinkedrole--examples--Create_an_IAM_Service-Linked_Role_for_Auto_Scaling"></a>
+### IAM Service\-Linked Role for Auto Scaling<a name="aws-resource-iam-servicelinkedrole--examples--_Service-Linked_Role_for_Auto_Scaling"></a>
 
 The following example creates a service\-linked role that can be assumed by the Auto Scaling service\.
 
-#### JSON<a name="aws-resource-iam-servicelinkedrole--examples--Create_an_IAM_Service-Linked_Role_for_Auto_Scaling--json"></a>
+#### JSON<a name="aws-resource-iam-servicelinkedrole--examples--_Service-Linked_Role_for_Auto_Scaling--json"></a>
 
 ```
 {
@@ -95,7 +95,7 @@ The following example creates a service\-linked role that can be assumed by the 
 }
 ```
 
-#### YAML<a name="aws-resource-iam-servicelinkedrole--examples--Create_an_IAM_Service-Linked_Role_for_Auto_Scaling--yaml"></a>
+#### YAML<a name="aws-resource-iam-servicelinkedrole--examples--_Service-Linked_Role_for_Auto_Scaling--yaml"></a>
 
 ```
 Description: SLR resource create test - Auto Scaling

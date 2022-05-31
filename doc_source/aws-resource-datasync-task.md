@@ -1,6 +1,6 @@
 # AWS::DataSync::Task<a name="aws-resource-datasync-task"></a>
 
-The `AWS::DataSync::Task` resource specifies a task\. A task is a set of two locations \(source and destination\) and a set of Options that you use to control the behavior of a task\. If you don't specify Options when you create a task, AWS DataSync populates them with service defaults\.
+The `AWS::DataSync::Task` resource specifies a task\. A task is a set of two locations \(source and destination\) and a set of `Options` that you use to control the behavior of a task\. If you don't specify `Options` when you create a task, AWS DataSync populates them with service defaults\.
 
 ## Syntax<a name="aws-resource-datasync-task-syntax"></a>
 
@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CloudWatchLogGroupArn](#cfn-datasync-task-cloudwatchloggrouparn)" : String,
       "[DestinationLocationArn](#cfn-datasync-task-destinationlocationarn)" : String,
       "[Excludes](#cfn-datasync-task-excludes)" : [ FilterRule, ... ],
+      "[Includes](#cfn-datasync-task-includes)" : [ FilterRule, ... ],
       "[Name](#cfn-datasync-task-name)" : String,
       "[Options](#cfn-datasync-task-options)" : Options,
       "[Schedule](#cfn-datasync-task-schedule)" : TaskSchedule,
@@ -33,6 +34,8 @@ Properties:
   [DestinationLocationArn](#cfn-datasync-task-destinationlocationarn): String
   [Excludes](#cfn-datasync-task-excludes): 
     - FilterRule
+  [Includes](#cfn-datasync-task-includes): 
+    - FilterRule
   [Name](#cfn-datasync-task-name): String
   [Options](#cfn-datasync-task-options): 
     Options
@@ -47,7 +50,7 @@ Properties:
 
 `CloudWatchLogGroupArn`  <a name="cfn-datasync-task-cloudwatchloggrouparn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon CloudWatch log group that is used to monitor and log events in the task\.   
-For more information about how to use CloudWatch Logs with DataSync, see [Monitoring Your Task](https://docs.aws.amazon.com/datasync/latest/userguide/monitor-datasync.html#cloudwatchlogs) in the *AWS DataSync User Guide\.*   
+For more information about how to use CloudWatch Logs with DataSync, see [Monitoring Your Task](https://docs.aws.amazon.com/datasync/latest/userguide/monitor-datasync.html#cloudwatchlogs) in the * AWS DataSync User Guide\.*   
 For more information about these groups, see [Working with Log Groups and Log Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html) in the *Amazon CloudWatch Logs User Guide*\.  
 *Required*: No  
 *Type*: String  
@@ -56,7 +59,7 @@ For more information about these groups, see [Working with Log Groups and Log St
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DestinationLocationArn`  <a name="cfn-datasync-task-destinationlocationarn"></a>
-Not currently supported by AWS CloudFormation\.  
+The Amazon Resource Name \(ARN\) of an AWS storage resource's location\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -64,6 +67,13 @@ Not currently supported by AWS CloudFormation\.
 `Excludes`  <a name="cfn-datasync-task-excludes"></a>
 A list of filter rules that determines which files to exclude from a task\. The list should contain a single filter string that consists of the patterns to exclude\. The patterns are delimited by "\|" \(that is, a pipe\), for example, `"/folder1|/folder2"`\.   
    
+*Required*: No  
+*Type*: List of [FilterRule](aws-properties-datasync-task-filterrule.md)  
+*Maximum*: `1`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Includes`  <a name="cfn-datasync-task-includes"></a>
+A list of filter rules that determines which files to include when running a task\. The pattern contains a single filter string that consists of the patterns to include\. The patterns are delimited by "\|" \(that is, a pipe\), for example, `"/folder1|/folder2"`\.  
 *Required*: No  
 *Type*: List of [FilterRule](aws-properties-datasync-task-filterrule.md)  
 *Maximum*: `1`  
@@ -80,13 +90,13 @@ The name of a task\. This value is a text reference that is used to identify the
 
 `Options`  <a name="cfn-datasync-task-options"></a>
 The set of configuration options that control the behavior of a single execution of the task that occurs when you call `StartTaskExecution`\. You can configure these options to preserve metadata such as user ID \(UID\) and group ID \(GID\), file permissions, data integrity verification, and so on\.  
-For each individual task execution, you can override these options by specifying the `OverrideOptions` before starting the task execution\. For more information, see the API\_StartTaskExecution operation\.   
+For each individual task execution, you can override these options by specifying the `OverrideOptions` before starting the task execution\. For more information, see the [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html) operation\.   
 *Required*: No  
 *Type*: [Options](aws-properties-datasync-task-options.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Schedule`  <a name="cfn-datasync-task-schedule"></a>
-Specifies a schedule used to periodically transfer files from a source to a destination location\. The schedule should be specified in UTC time\. For more information, see task\-scheduling\.  
+Specifies a schedule used to periodically transfer files from a source to a destination location\. The schedule should be specified in UTC time\. For more information, see [Scheduling your task](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html)\.  
 *Required*: No  
 *Type*: [TaskSchedule](aws-properties-datasync-task-taskschedule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -112,7 +122,7 @@ The key\-value pair that represents the tag that you want to add to the resource
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the location resource ARN\. For example:
 
-`arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3`
+`arn:aws:datasync:us-east-2:111222333444:task/task-07db7abfc326c50s3`
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -125,19 +135,22 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-datasync-task-return-values-fn--getatt-fn--getatt"></a>
 
 `DestinationNetworkInterfaceArns`  <a name="DestinationNetworkInterfaceArns-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ARNs of the destination elastic network interfaces \(ENIs\) that were created for your subnet\.
 
 `ErrorCode`  <a name="ErrorCode-fn::getatt"></a>
-Errors that AWS DataSync encountered during execution of the task\. You can use this error code to help troubleshoot issues\.
+Errors encountered during task execution\. Troubleshoot issues with this error code\.
 
 `ErrorDetail`  <a name="ErrorDetail-fn::getatt"></a>
 Detailed description of an error that was encountered during the task execution\. You can use this information to help troubleshoot issues\.
+
+`SourceNetworkInterfaceArns`  <a name="SourceNetworkInterfaceArns-fn::getatt"></a>
+The ARNs of the source ENIs that were created for your subnet\.
 
 `Status`  <a name="Status-fn::getatt"></a>
 The status of the task that was described\.
 
 `TaskArn`  <a name="TaskArn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the task\.
+The ARN of the task\.
 
 ## Examples<a name="aws-resource-datasync-task--examples"></a>
 
@@ -173,7 +186,7 @@ Description: Specifies a DataSync task
 Resources:
   Task:
     Type: AWS::DataSync::Task
-      Properties:
-        SourceLocationArn: arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3
-        DestinationLocationArn: arn:aws:datasync:us-east-2:111222333444:location/loc-18ec8bcgd437d61t4
+    Properties:
+      SourceLocationArn: arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3
+      DestinationLocationArn: arn:aws:datasync:us-east-2:111222333444:location/loc-18ec8bcgd437d61t4
 ```

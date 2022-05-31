@@ -38,6 +38,7 @@ A fully qualified domain name \(FQDN\) in the certificate request\.
 `HostedZoneId`  <a name="cfn-certificatemanager-certificate-domainvalidationoption-hostedzoneid"></a>
 The `HostedZoneId` option, which is available if you are using Route 53 as your domain registrar, causes ACM to add your CNAME to the domain record\. Your list of `DomainValidationOptions` must contain one and only one of the domain\-validation options, and the `HostedZoneId` can be used only when `DNS` is specified as your validation method\.  
 Use the Route 53 `ListHostedZones` API to discover IDs for available hosted zones\.   
+This option is required for publicly trusted certificates\.  
 The `ListHostedZones` API returns IDs in the format "/hostedzone/Z111111QQQQQQQ", but CloudFormation requires the IDs to be in the format "Z111111QQQQQQQ"\.
 When you change your `DomainValidationOptions`, a new resource is created\.  
 *Required*: No  

@@ -35,7 +35,7 @@ You can configure the action payload when you send a message to an Amazon SQS qu
 
 `QueueUrl`  <a name="cfn-iotevents-detectormodel-sqs-queueurl"></a>
 The URL of the SQS queue where the data is written\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

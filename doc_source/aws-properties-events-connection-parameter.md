@@ -1,6 +1,6 @@
 # AWS::Events::Connection Parameter<a name="aws-properties-events-connection-parameter"></a>
 
-Additional parameters to include with the connection\.
+<a name="aws-properties-events-connection-parameter-description"></a>The `Parameter` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Events::Connection](aws-resource-events-connection.md)\.
 
 ## Syntax<a name="aws-properties-events-connection-parameter-syntax"></a>
 
@@ -27,19 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-events-connection-parameter-properties"></a>
 
 `IsValueSecret`  <a name="cfn-events-connection-parameter-isvaluesecret"></a>
-Specifies whether the value is a secret\. Default value is True\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Key`  <a name="cfn-events-connection-parameter-key"></a>
-The key for the parameter\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-events-connection-parameter-value"></a>
-The value associated with the key for the parameter\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

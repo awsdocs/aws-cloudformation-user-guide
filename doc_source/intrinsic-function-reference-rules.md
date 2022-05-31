@@ -247,7 +247,7 @@ The following example returns the value of the `Department` tag for the VPC that
 "Fn::ValueOf" : ["ElbVpc", "Tags.Department"]
 ```
 
-If you specify multiple values for a parameter, the Fn::ValueOf function can return a list\. For example, you can specify multiple subnets and get a list of Availability Zones where each member is the Avalibility Zone of a particular subnet:
+If you specify multiple values for a parameter, the Fn::ValueOf function can return a list\. For example, you can specify multiple subnets and get a list of Availability Zones where each member is the Availability Zone of a particular subnet:
 
 ```
 "Fn::ValueOf" : ["ListOfElbSubnets", "AvailabilityZone"]
@@ -289,15 +289,15 @@ You can't use another function within the `Fn::ValueOf` and `Fn::ValueOfAll` fun
 
 The following list describes the attribute values that you can retrieve for specific resources and parameter types:
 
-The `AWS::EC2::VPC::Id` parameter type or VPC IDs  
+The `AWS::EC2::VPC::Id` parameter type or VPC IDs\.  
 + DefaultNetworkAcl
 + DefaultSecurityGroup
 + Tags\.*tag\_key*
 
-The `AWS::EC2::Subnet::Id` parameter type or subnet IDs  
+The `AWS::EC2::Subnet::Id` parameter type or subnet IDs,  
 + AvailabilityZone
 + Tags\.*tag\_key*
 + VpcId
 
-The `AWS::EC2::SecurityGroup::Id` parameter type or security group IDs  
+The `AWS::EC2::SecurityGroup::Id` parameter type or security group IDs\.  
 + Tags\.*tag\_key*

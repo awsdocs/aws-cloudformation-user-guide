@@ -12,8 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeDeploy::DeploymentConfig",
   "Properties" : {
+      "[ComputePlatform](#cfn-codedeploy-deploymentconfig-computeplatform)" : String,
       "[DeploymentConfigName](#cfn-codedeploy-deploymentconfig-deploymentconfigname)" : String,
-      "[MinimumHealthyHosts](#cfn-codedeploy-deploymentconfig-minimumhealthyhosts)" : MinimumHealthyHosts
+      "[MinimumHealthyHosts](#cfn-codedeploy-deploymentconfig-minimumhealthyhosts)" : MinimumHealthyHosts,
+      "[TrafficRoutingConfig](#cfn-codedeploy-deploymentconfig-trafficroutingconfig)" : TrafficRoutingConfig
     }
 }
 ```
@@ -23,12 +25,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::CodeDeploy::DeploymentConfig
 Properties: 
+  [ComputePlatform](#cfn-codedeploy-deploymentconfig-computeplatform): String
   [DeploymentConfigName](#cfn-codedeploy-deploymentconfig-deploymentconfigname): String
   [MinimumHealthyHosts](#cfn-codedeploy-deploymentconfig-minimumhealthyhosts): 
     MinimumHealthyHosts
+  [TrafficRoutingConfig](#cfn-codedeploy-deploymentconfig-trafficroutingconfig): 
+    TrafficRoutingConfig
 ```
 
 ## Properties<a name="aws-resource-codedeploy-deploymentconfig-properties"></a>
+
+`ComputePlatform`  <a name="cfn-codedeploy-deploymentconfig-computeplatform"></a>
+The destination platform type for the deployment \(`Lambda`, `Server`, or `ECS`\)\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `ECS | Lambda | Server`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DeploymentConfigName`  <a name="cfn-codedeploy-deploymentconfig-deploymentconfigname"></a>
  A name for the deployment configuration\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the deployment configuration name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.   
@@ -51,6 +63,12 @@ For example, to set a minimum of 95% healthy instance, specify a type of FLEET\_
 *Type*: [MinimumHealthyHosts](aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`TrafficRoutingConfig`  <a name="cfn-codedeploy-deploymentconfig-trafficroutingconfig"></a>
+The configuration that specifies how the deployment traffic is routed\.  
+*Required*: No  
+*Type*: [TrafficRoutingConfig](aws-properties-codedeploy-deploymentconfig-trafficroutingconfig.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 ## Return values<a name="aws-resource-codedeploy-deploymentconfig-return-values"></a>
 
 ### Ref<a name="aws-resource-codedeploy-deploymentconfig-return-values-ref"></a>
@@ -71,13 +89,13 @@ The following example requires at least 75% of the fleet to be healthy\. For exa
 
 ```
 "TwentyFivePercentAtATime" : {
-  "Type" : "AWS::CodeDeploy::DeploymentConfig",
-  "Properties" : {
-    "MinimumHealthyHosts" : {
-      "Type" : "FLEET_PERCENT",
-      "Value" : 75
+    "Type" : "AWS::CodeDeploy::DeploymentConfig",
+    "Properties" : {
+        "MinimumHealthyHosts" : {
+            "Type" : "FLEET_PERCENT",
+            "Value" : "75"
+        }
     }
-  }
 }
 ```
 

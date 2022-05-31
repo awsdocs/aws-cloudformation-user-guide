@@ -1,6 +1,9 @@
 # AWS::ServiceDiscovery::PublicDnsNamespace<a name="aws-resource-servicediscovery-publicdnsnamespace"></a>
 
-Creates a public namespace based on DNS, which will be visible on the internet\. The namespace defines your service naming scheme\. For example, if you name your namespace `example.com` and name your service `backend`, the resulting DNS name for the service will be `backend.example.com`\. For the current quota on the number of namespaces that you can create using the same AWS account, see [AWS Cloud Map Limits](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html) in the *AWS Cloud Map Developer Guide*\.
+Creates a public namespace based on DNS, which is visible on the internet\. The namespace defines your service naming scheme\. For example, if you name your namespace `example.com` and name your service `backend`, the resulting DNS name for the service is `backend.example.com`\. You can discover instances that were registered with a public DNS namespace by using either a `DiscoverInstances` request or using DNS\. For the current quota on the number of namespaces that you can create using the same AWS account, see [AWS Cloud Map quotas](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html) in the * AWS Cloud Map Developer Guide*\.
+
+**Important**  
+The `CreatePublicDnsNamespace` API operation is not supported in the AWS GovCloud \(US\) Regions\.
 
 ## Syntax<a name="aws-resource-servicediscovery-publicdnsnamespace-syntax"></a>
 
@@ -14,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-servicediscovery-publicdnsnamespace-description)" : String,
       "[Name](#cfn-servicediscovery-publicdnsnamespace-name)" : String,
+      "[Properties](#cfn-servicediscovery-publicdnsnamespace-properties)" : Properties,
       "[Tags](#cfn-servicediscovery-publicdnsnamespace-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -26,6 +30,8 @@ Type: AWS::ServiceDiscovery::PublicDnsNamespace
 Properties: 
   [Description](#cfn-servicediscovery-publicdnsnamespace-description): String
   [Name](#cfn-servicediscovery-publicdnsnamespace-name): String
+  [Properties](#cfn-servicediscovery-publicdnsnamespace-properties): 
+    Properties
   [Tags](#cfn-servicediscovery-publicdnsnamespace-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -37,7 +43,7 @@ A description for the namespace\.
 *Required*: No  
 *Type*: String  
 *Maximum*: `1024`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-servicediscovery-publicdnsnamespace-name"></a>
 The name that you want to assign to this namespace\.  
@@ -46,6 +52,12 @@ The name that you want to assign to this namespace\.
 *Maximum*: `1024`  
 *Pattern*: `^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Properties`  <a name="cfn-servicediscovery-publicdnsnamespace-properties"></a>
+Properties for the public DNS namespace\.  
+*Required*: No  
+*Type*: [Properties](aws-properties-servicediscovery-publicdnsnamespace-properties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-servicediscovery-publicdnsnamespace-tags"></a>
 The tags for the namespace\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
@@ -73,6 +85,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the public namespace\.
 
+`HostedZoneId`  <a name="HostedZoneId-fn::getatt"></a>
+The ID for the Route 53 hosted zone that AWS Cloud Map creates when you create a namespace\.
+
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the public namespace\.
 
@@ -88,10 +103,17 @@ The following example creates a public DNS namespace named `example.com`\.
 
 ```
 {
-"Type" : "AWS::ServiceDiscovery::PublicDnsNamespace",
-"Properties" : {
-  "Description" : "AWS Cloud Map public DNS namespace for example.com website",
-  "Name" : "example.com"
+  "Type" : "AWS::ServiceDiscovery::PublicDnsNamespace",
+  "Properties" : {
+    "Description" : "AWS Cloud Map public DNS namespace for example.com website",
+    "Name" : "example.com",
+    "Properties": {
+      "DnsProperties": {
+        "SOA": {
+          "TTL": 100
+        }
+      }
+    }
   }
 }
 ```
@@ -103,6 +125,10 @@ Type: 'AWS::ServiceDiscovery::PublicDnsNamespace'
 Properties:
   Description: AWS Cloud Map public DNS namespace for example.com website
   Name: example.com
+  Properties:
+    DnsProperties:
+      SOA:
+        TTL: 100
 ```
 
 ## See also<a name="aws-resource-servicediscovery-publicdnsnamespace--seealso"></a>

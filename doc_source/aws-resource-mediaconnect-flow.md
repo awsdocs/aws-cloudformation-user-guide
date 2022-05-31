@@ -2,8 +2,6 @@
 
 The AWS::MediaConnect::Flow resource defines a connection between one or more video sources and one or more outputs\. For each flow, you specify the transport protocol to use, encryption information, and details for any outputs or entitlements that you want\. AWS Elemental MediaConnect returns an ingest endpoint where you can send your live video as a single unicast stream\. The service replicates and distributes the video to every output that you specify, whether inside or outside the AWS Cloud\. You can also set up entitlements on a flow to allow other AWS accounts to access your content\. 
 
-Note: MediaConnect does not currently support using CloudFormation to create flows with sources that use the SRT\-listener protocol\.
-
 ## Syntax<a name="aws-resource-mediaconnect-flow-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -44,7 +42,7 @@ The Availability Zone that you want to create the flow in\. These options are li
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-mediaconnect-flow-name"></a>
-The name of the entitlement\. This value must be unique within the current flow\.  
+The name of the flow\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -85,8 +83,11 @@ The Amazon Resource Name \(ARN\) of the flow\.
 `FlowAvailabilityZone`  <a name="FlowAvailabilityZone-fn::getatt"></a>
 The Availability Zone that the flow was created in\. These options are limited to the Availability Zones within the current AWS Region\.
 
-`IngestIp`  <a name="IngestIp-fn::getatt"></a>
+`Source.IngestIp`  <a name="Source.IngestIp-fn::getatt"></a>
 The IP address that the flow listens on for incoming content\.
 
-`SourceArn`  <a name="SourceArn-fn::getatt"></a>
+`Source.SourceArn`  <a name="Source.SourceArn-fn::getatt"></a>
 The ARN of the source\.
+
+`Source.SourceIngestPort`  <a name="Source.SourceIngestPort-fn::getatt"></a>
+The port that the flow will be listening on for incoming content\.

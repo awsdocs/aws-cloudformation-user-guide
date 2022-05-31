@@ -65,25 +65,28 @@ A set of alternate data source parameters that you want to share for the credent
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AwsAccountId`  <a name="cfn-quicksight-datasource-awsaccountid"></a>
-Not currently supported by AWS CloudFormation\.  
+The AWS account ID\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `12`  
+*Maximum*: `12`  
+*Pattern*: `^[0-9]{12}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Credentials`  <a name="cfn-quicksight-datasource-credentials"></a>
-Not currently supported by AWS CloudFormation\.  
+The credentials Amazon QuickSight that uses to connect to your underlying source\. Currently, only credentials based on user name and password are supported\.  
 *Required*: No  
 *Type*: [DataSourceCredentials](aws-properties-quicksight-datasource-datasourcecredentials.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataSourceId`  <a name="cfn-quicksight-datasource-datasourceid"></a>
-The ID of the data source\. This ID is unique per AWS Region for each AWS account\.  
+An ID for the data source\. This ID is unique per AWS Region for each AWS account\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DataSourceParameters`  <a name="cfn-quicksight-datasource-datasourceparameters"></a>
-The parameters that Amazon QuickSight uses to connect to your underlying source\. This is a variant type structure\. For this structure to be valid, only one of the attributes can be non\-null\.  
+The parameters that Amazon QuickSight uses to connect to your underlying source\.  
 *Required*: No  
 *Type*: [DataSourceParameters](aws-properties-quicksight-datasource-datasourceparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -103,52 +106,53 @@ A display name for the data source\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Permissions`  <a name="cfn-quicksight-datasource-permissions"></a>
-Not currently supported by AWS CloudFormation\.  
+A list of resource permissions on the data source\.  
 *Required*: No  
 *Type*: List of [ResourcePermission](aws-properties-quicksight-datasource-resourcepermission.md)  
+*Maximum*: `64`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SslProperties`  <a name="cfn-quicksight-datasource-sslproperties"></a>
-Secure Socket Layer \(SSL\) properties that apply when QuickSight connects to your underlying source\.  
+Secure Socket Layer \(SSL\) properties that apply when Amazon QuickSight connects to your underlying source\.  
 *Required*: No  
 *Type*: [SslProperties](aws-properties-quicksight-datasource-sslproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-quicksight-datasource-tags"></a>
-Not currently supported by AWS CloudFormation\.  
+Contains a map of the key\-value pairs for the resource tag or tags assigned to the data source\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-quicksight-datasource-type"></a>
-The type of the data source\. This type indicates which database engine the data source connects to\.  
+The type of the data source\. To return a list of all data sources, use `ListDataSources`\.  
+Use `AMAZON_ELASTICSEARCH` for Amazon OpenSearch Service\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `ADOBE_ANALYTICS | AMAZON_ELASTICSEARCH | ATHENA | AURORA | AURORA_POSTGRESQL | AWS_IOT_ANALYTICS | GITHUB | JIRA | MARIADB | MYSQL | ORACLE | POSTGRESQL | PRESTO | REDSHIFT | S3 | SALESFORCE | SERVICENOW | SNOWFLAKE | SPARK | SQLSERVER | TERADATA | TIMESTREAM | TWITTER`  
+*Allowed values*: `ADOBE_ANALYTICS | AMAZON_ELASTICSEARCH | AMAZON_OPENSEARCH | ATHENA | AURORA | AURORA_POSTGRESQL | AWS_IOT_ANALYTICS | EXASOL | GITHUB | JIRA | MARIADB | MYSQL | ORACLE | POSTGRESQL | PRESTO | REDSHIFT | S3 | SALESFORCE | SERVICENOW | SNOWFLAKE | SPARK | SQLSERVER | TERADATA | TIMESTREAM | TWITTER`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcConnectionProperties`  <a name="cfn-quicksight-datasource-vpcconnectionproperties"></a>
-The VPC connection information\. You need to use this parameter only when you want QuickSight to use a VPC connection when connecting to your underlying source\.  
+Use this parameter only when you want Amazon QuickSight to use a VPC connection when connecting to your underlying source\.  
 *Required*: No  
 *Type*: [VpcConnectionProperties](aws-properties-quicksight-datasource-vpcconnectionproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-quicksight-datasource-return-values"></a>
 
-### Ref<a name="aws-resource-quicksight-datasource-return-values-ref"></a>
-
 ### Fn::GetAtt<a name="aws-resource-quicksight-datasource-return-values-fn--getatt"></a>
 
 #### <a name="aws-resource-quicksight-datasource-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The Amazon Resource Name \(ARN\) of the dataset\.
 
 `CreatedTime`  <a name="CreatedTime-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The time that this data source was created\.
 
 `LastUpdatedTime`  <a name="LastUpdatedTime-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The last time that this data source was updated\.
 
 `Status`  <a name="Status-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The HTTP status of the request\.

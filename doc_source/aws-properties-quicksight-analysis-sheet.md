@@ -1,6 +1,6 @@
 # AWS::QuickSight::Analysis Sheet<a name="aws-properties-quicksight-analysis-sheet"></a>
 
-A *sheet*, which is an object that contains a set of visuals that are viewed together on one page in the Amazon QuickSight console\. Every analysis and dashboard contains at least one sheet\. Each sheet contains at least one visualization widget, for example a chart, pivot table, or narrative insight\. Sheets can be associated with other components, such as controls, filters, and so on\.
+A *sheet*, which is an object that contains a set of visuals that are viewed together on one page in Amazon QuickSight\. Every analysis and dashboard contains at least one sheet\. Each sheet contains at least one visualization widget, for example a chart, pivot table, or narrative insight\. Sheets can be associated with other components, such as controls, filters, and so on\.
 
 ## Syntax<a name="aws-properties-quicksight-analysis-sheet-syntax"></a>
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-quicksight-analysis-sheet-properties"></a>
 
 `Name`  <a name="cfn-quicksight-analysis-sheet-name"></a>
-The name of a sheet\. This name is displayed on the sheet's tab in the QuickSight console\.  
+The name of a sheet\. This name is displayed on the sheet's tab in the Amazon QuickSight console\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `.*\S.*`  

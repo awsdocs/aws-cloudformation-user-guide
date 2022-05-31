@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSet<a name="aws-resource-quicksight-dataset"></a>
 
-Creates a dataset\.
+Creates a dataset\. This operation doesn't support datasets that include uploaded files as a source\.
 
 ## Syntax<a name="aws-resource-quicksight-dataset-syntax"></a>
 
@@ -61,9 +61,12 @@ Properties:
 ## Properties<a name="aws-resource-quicksight-dataset-properties"></a>
 
 `AwsAccountId`  <a name="cfn-quicksight-dataset-awsaccountid"></a>
-Not currently supported by AWS CloudFormation\.  
+The AWS account ID\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `12`  
+*Maximum*: `12`  
+*Pattern*: `^[0-9]{12}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ColumnGroups`  <a name="cfn-quicksight-dataset-columngroups"></a>
@@ -80,7 +83,7 @@ A set of one or more definitions of a ` ColumnLevelPermissionRule `\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataSetId`  <a name="cfn-quicksight-dataset-datasetid"></a>
-The ID of the dataset\.  
+An ID for the dataset that you want to create\. This ID is unique per AWS Region for each AWS account\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -92,14 +95,14 @@ The folder that contains fields and nested subfolders for your dataset\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImportMode`  <a name="cfn-quicksight-dataset-importmode"></a>
-A value that indicates whether you want to import the data into SPICE\.  
+Indicates whether you want to import the data into SPICE\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DIRECT_QUERY | SPICE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IngestionWaitPolicy`  <a name="cfn-quicksight-dataset-ingestionwaitpolicy"></a>
-Not currently supported by AWS CloudFormation\.  
+The wait policy to use when creating or updating a Dataset\. The default is to wait for SPICE ingestion to finish with timeout of 36 hours\.  
 *Required*: No  
 *Type*: [IngestionWaitPolicy](aws-properties-quicksight-dataset-ingestionwaitpolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -111,7 +114,7 @@ Configures the combination and transformation of the data from the physical tabl
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-quicksight-dataset-name"></a>
-A display name for the dataset\.  
+The display name for the dataset\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -119,9 +122,10 @@ A display name for the dataset\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Permissions`  <a name="cfn-quicksight-dataset-permissions"></a>
-Not currently supported by AWS CloudFormation\.  
+A list of resource permissions on the dataset\.  
 *Required*: No  
 *Type*: List of [ResourcePermission](aws-properties-quicksight-dataset-resourcepermission.md)  
+*Maximum*: `64`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PhysicalTableMap`  <a name="cfn-quicksight-dataset-physicaltablemap"></a>
@@ -131,36 +135,34 @@ Declares the physical tables that are available in the underlying data sources\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RowLevelPermissionDataSet`  <a name="cfn-quicksight-dataset-rowlevelpermissiondataset"></a>
-The row\-level security configuration for the dataset\.  
+The row\-level security configuration for the data that you want to create\.  
 *Required*: No  
 *Type*: [RowLevelPermissionDataSet](aws-properties-quicksight-dataset-rowlevelpermissiondataset.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-quicksight-dataset-tags"></a>
-Not currently supported by AWS CloudFormation\.  
+Contains a map of the key\-value pairs for the resource tag or tags assigned to the dataset\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-quicksight-dataset-return-values"></a>
-
-### Ref<a name="aws-resource-quicksight-dataset-return-values-ref"></a>
 
 ### Fn::GetAtt<a name="aws-resource-quicksight-dataset-return-values-fn--getatt"></a>
 
 #### <a name="aws-resource-quicksight-dataset-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The Amazon Resource Name \(ARN\) of the dataset\.
 
 `ConsumedSpiceCapacityInBytes`  <a name="ConsumedSpiceCapacityInBytes-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+
 
 `CreatedTime`  <a name="CreatedTime-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The time this dataset version was created\.
 
 `LastUpdatedTime`  <a name="LastUpdatedTime-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The time this dataset version was last updated\.
 
 `OutputColumns`  <a name="OutputColumns-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.

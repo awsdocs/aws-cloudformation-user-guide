@@ -47,5 +47,48 @@ Specifies the subnets associated with the task\. These subnets must all be in th
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+## Examples<a name="aws-properties-events-rule-awsvpcconfiguration--examples"></a>
+
+
+
+### Set the AwsVpcConfiguration parameter<a name="aws-properties-events-rule-awsvpcconfiguration--examples--Set_the_AwsVpcConfiguration_parameter"></a>
+
+The following example sets the `AwsVpcConfiguration` parameter to not assign a public IP and set the security groups for Vpc01\.
+
+#### JSON<a name="aws-properties-events-rule-awsvpcconfiguration--examples--Set_the_AwsVpcConfiguration_parameter--json"></a>
+
+```
+"AwsVpcConfiguration": {
+  "AssignPublicIp": "DISABLED",
+  "SecurityGroups": [
+    {
+      "Fn: : GetAtt": [
+        "ScheduledFargateTaskScheduledTaskDefSecurityGroupE075BC19",
+        "GroupId"
+      ]
+    }
+  ],
+  "Subnets": [
+    {
+      "Ref": "Vpc01"
+    }
+  ]
+}
+```
+
+#### YAML<a name="aws-properties-events-rule-awsvpcconfiguration--examples--Set_the_AwsVpcConfiguration_parameter--yaml"></a>
+
+```
+AwsVpcConfiguration:
+  AssignPublicIp: "DISABLED"
+  SecurityGroups:
+    Fn: : GetAtt:
+      "ScheduledFargateTaskScheduledTaskDefSecurityGroupE075BC19",
+      "GroupId"
+  Subnets:
+    Ref: 
+      "Vpc01"
+```
+
 ## See also<a name="aws-properties-events-rule-awsvpcconfiguration--seealso"></a>
 + [AwsVpcConfiguration](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_AwsVpcConfiguration.html)

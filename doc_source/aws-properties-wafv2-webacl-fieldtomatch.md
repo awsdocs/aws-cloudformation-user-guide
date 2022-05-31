@@ -1,9 +1,6 @@
 # AWS::WAFv2::WebACL FieldToMatch<a name="aws-properties-wafv2-webacl-fieldtomatch"></a>
 
-**Note**  
-This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
-
-The part of a web request that you want AWS WAF to inspect\. Include the `FieldToMatch` types that you want to inspect, with additional specifications as needed, according to the type\. 
+The part of a web request that you want AWS WAF to inspect\. Include the single `FieldToMatch` type that you want to inspect, with additional specifications as needed, according to the type\. You specify a single request component in `FieldToMatch` for each rule statement that requires it\. To inspect more than one component of a web request, create a separate rule statement for each component\.
 
 ## Syntax<a name="aws-properties-wafv2-webacl-fieldtomatch-syntax"></a>
 
@@ -89,3 +86,51 @@ Inspect the request URI path\. This is the part of a web request that identifies
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-wafv2-webacl-fieldtomatch--examples"></a>
+
+
+
+### Set the field to match to `QueryString`<a name="aws-properties-wafv2-webacl-fieldtomatch--examples--Set_the_field_to_match_to_QueryString_"></a>
+
+The following shows an example field to match specification for a setting that doesn't requires additional configuration\. 
+
+#### YAML<a name="aws-properties-wafv2-webacl-fieldtomatch--examples--Set_the_field_to_match_to_QueryString_--yaml"></a>
+
+```
+FieldToMatch:
+  QueryString: {}
+```
+
+#### JSON<a name="aws-properties-wafv2-webacl-fieldtomatch--examples--Set_the_field_to_match_to_QueryString_--json"></a>
+
+```
+"FieldToMatch": 
+    { 
+         "QueryString": {} 
+    }
+```
+
+### Set the field to match to `Method`<a name="aws-properties-wafv2-webacl-fieldtomatch--examples--Set_the_field_to_match_to_Method_"></a>
+
+The following shows an example field to match specification for a setting that has additional configuration requirements\. 
+
+#### YAML<a name="aws-properties-wafv2-webacl-fieldtomatch--examples--Set_the_field_to_match_to_Method_--yaml"></a>
+
+```
+FieldToMatch:
+  Method:
+     Name: DELETE
+```
+
+#### JSON<a name="aws-properties-wafv2-webacl-fieldtomatch--examples--Set_the_field_to_match_to_Method_--json"></a>
+
+```
+"FieldToMatch": 
+{ 
+    "Method": 
+    { 
+         "Name": "DELETE" 
+    } 
+}
+```

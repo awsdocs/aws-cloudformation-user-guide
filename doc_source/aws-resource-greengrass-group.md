@@ -3,7 +3,7 @@
 AWS IoT Greengrass seamlessly extends AWS to edge devices so they can act locally on the data they generate, while still using the cloud for management, analytics, and durable storage\. With AWS IoT Greengrass, connected devices can run AWS Lambda functions, execute predictions based on machine learning models, keep device data in sync, and communicate with other devices securely – even when not connected to the internet\. For more information, see the [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/what-is-gg.html)\.
 
 **Note**  
-For AWS Region support, see [ AWS CloudFormation Support for AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/cloudformation-support.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.
+For AWS Region support, see [AWS CloudFormation Support for AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/cloudformation-support.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.
 
 The `AWS::Greengrass::Group` resource represents a group in AWS IoT Greengrass\. In the AWS IoT Greengrass API, groups are used to organize your group versions\.
 
@@ -130,7 +130,7 @@ The following template defines a core, device, function, logger, subscription, a
 The template includes parameters that let you specify the certificate ARNs for the core and device and the ARN of the source Lambda function \(which is an AWS Lambda resource\)\. It uses the `Ref` and `GetAtt` intrinsic functions to reference IDs, ARNs, and other attributes that are required to create Greengrass resources\.
 
 **Note**  
-After you create the group version in your AWS CloudFormation template, you can deploy it using the [https://docs.aws.amazon.com/greengrass/latest/apireference/createdeployment-post.html](https://docs.aws.amazon.com/greengrass/latest/apireference/createdeployment-post.html) command in the AWS CLI or from the group configuration page in the AWS IoT console\. To deploy a group version, you must have a Greengrass service role associated with your AWS account\. For more information, see [ AWS CloudFormation Support for AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/cloudformation-support.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.
+After you create the group version in your AWS CloudFormation template, you can deploy it using the [https://docs.aws.amazon.com/greengrass/latest/apireference/createdeployment-post.html](https://docs.aws.amazon.com/greengrass/latest/apireference/createdeployment-post.html) command in the AWS CLI or from the group configuration page in the AWS IoT console\. To deploy a group version, you must have a Greengrass service role associated with your AWS account\. For more information, see [AWS CloudFormation Support for AWS IoT Greengrass](https://docs.aws.amazon.com/greengrass/latest/developerguide/cloudformation-support.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.
 
 #### JSON<a name="aws-resource-greengrass-group--examples--Create_a_Group--json"></a>
 

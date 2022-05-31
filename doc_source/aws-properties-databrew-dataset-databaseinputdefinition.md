@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[DatabaseTableName](#cfn-databrew-dataset-databaseinputdefinition-databasetablename)" : String,
   "[GlueConnectionName](#cfn-databrew-dataset-databaseinputdefinition-glueconnectionname)" : String,
+  "[QueryString](#cfn-databrew-dataset-databaseinputdefinition-querystring)" : String,
   "[TempDirectory](#cfn-databrew-dataset-databaseinputdefinition-tempdirectory)" : S3Location
 }
 ```
@@ -21,6 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DatabaseTableName](#cfn-databrew-dataset-databaseinputdefinition-databasetablename): String
   [GlueConnectionName](#cfn-databrew-dataset-databaseinputdefinition-glueconnectionname): String
+  [QueryString](#cfn-databrew-dataset-databaseinputdefinition-querystring): 
+    String
   [TempDirectory](#cfn-databrew-dataset-databaseinputdefinition-tempdirectory): 
     S3Location
 ```
@@ -35,6 +38,12 @@ The table within the target database\.
 
 `GlueConnectionName`  <a name="cfn-databrew-dataset-databaseinputdefinition-glueconnectionname"></a>
 The AWS Glue Connection that stores the connection information for the target database\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`QueryString`  <a name="cfn-databrew-dataset-databaseinputdefinition-querystring"></a>
+Custom SQL to run against the provided AWS Glue connection\. This SQL will be used as the input for DataBrew projects and jobs\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

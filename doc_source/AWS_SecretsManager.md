@@ -1,4 +1,4 @@
-# AWS Secrets Manager<a name="AWS_SecretsManager"></a>
+# AWS Secrets Manager resource type reference<a name="AWS_SecretsManager"></a>
 
 **Resource types**
 + [AWS::SecretsManager::ResourcePolicy](aws-resource-secretsmanager-resourcepolicy.md)

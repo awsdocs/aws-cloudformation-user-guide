@@ -35,7 +35,7 @@ If your template includes an unsupported change, AWS CloudFormation returns a me
      + *Update requires*: [Replacement](using-cfn-updating-stacks-update-behaviors.md#update-replacement)
    + Add, modify, or delete attributes for resources \(`Metadata`, `DependsOn`, `CreationPolicy`, `UpdatePolicy`, and `DeletionPolicy`\)\.
 **Important**  
-You can't update the `CreationPolicy`, `DeletionPolicy`\. or `UpdatePolicy` attribute by itself\. You can update them only when you include changes that add, modify, or delete resources\. For example, you can add or modify a metadata attribute of a resource\.
+You can't update the `CreationPolicy`, `DeletionPolicy`, or `UpdatePolicy` attribute by itself\. You can update them only when you include changes that add, modify, or delete resources\. For example, you can add or modify a metadata attribute of a resource\.
    + Add, modify, or delete parameter declarations\. However, you can't add, modify, or delete a parameter that's used by a resource that doesn't support updates\.
    + Add, modify, or delete mapping declarations\.
 **Important**  

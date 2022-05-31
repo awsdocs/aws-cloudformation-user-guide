@@ -28,10 +28,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The port used for the port mapping\.  
 *Required*: Yes  
 *Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `65535`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-appmesh-virtualrouter-portmapping-protocol"></a>
 The protocol used for the port mapping\. Specify one protocol\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `grpc | http | http2 | tcp`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

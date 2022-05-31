@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DockerfileTemplateData](#cfn-imagebuilder-containerrecipe-dockerfiletemplatedata)" : String,
       "[DockerfileTemplateUri](#cfn-imagebuilder-containerrecipe-dockerfiletemplateuri)" : String,
       "[ImageOsVersionOverride](#cfn-imagebuilder-containerrecipe-imageosversionoverride)" : String,
+      "[InstanceConfiguration](#cfn-imagebuilder-containerrecipe-instanceconfiguration)" : InstanceConfiguration,
       "[KmsKeyId](#cfn-imagebuilder-containerrecipe-kmskeyid)" : String,
       "[Name](#cfn-imagebuilder-containerrecipe-name)" : String,
       "[ParentImage](#cfn-imagebuilder-containerrecipe-parentimage)" : String,
@@ -42,6 +43,8 @@ Properties:
   [DockerfileTemplateData](#cfn-imagebuilder-containerrecipe-dockerfiletemplatedata): String
   [DockerfileTemplateUri](#cfn-imagebuilder-containerrecipe-dockerfiletemplateuri): String
   [ImageOsVersionOverride](#cfn-imagebuilder-containerrecipe-imageosversionoverride): String
+  [InstanceConfiguration](#cfn-imagebuilder-containerrecipe-instanceconfiguration): 
+    InstanceConfiguration
   [KmsKeyId](#cfn-imagebuilder-containerrecipe-kmskeyid): String
   [Name](#cfn-imagebuilder-containerrecipe-name): String
   [ParentImage](#cfn-imagebuilder-containerrecipe-parentimage): String
@@ -81,19 +84,25 @@ The description of the container recipe\.
 Dockerfiles are text documents that are used to build Docker containers, and ensure that they contain all of the elements required by the application running inside\. The template data consists of contextual variables where Image Builder places build information or scripts, based on your container image recipe\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DockerfileTemplateUri`  <a name="cfn-imagebuilder-containerrecipe-dockerfiletemplateuri"></a>
 The S3 URI for the Dockerfile that will be used to build your container image\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ImageOsVersionOverride`  <a name="cfn-imagebuilder-containerrecipe-imageosversionoverride"></a>
 Specifies the operating system version for the source image\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`InstanceConfiguration`  <a name="cfn-imagebuilder-containerrecipe-instanceconfiguration"></a>
+A group of options that can be used to configure an instance for building and testing container images\.  
+*Required*: No  
+*Type*: [InstanceConfiguration](aws-properties-imagebuilder-containerrecipe-instanceconfiguration.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-imagebuilder-containerrecipe-kmskeyid"></a>
 Identifies which KMS key is used to encrypt the container image for distribution to the target Region\.  
@@ -111,7 +120,7 @@ The name of the container recipe\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ParentImage`  <a name="cfn-imagebuilder-containerrecipe-parentimage"></a>
-The source image for the container recipe\.  
+The base image for the container recipe\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -137,7 +146,11 @@ The destination repository for the container image\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Version`  <a name="cfn-imagebuilder-containerrecipe-version"></a>
-The semantic version of the container recipe \(<major>\.<minor>\.<patch>\)\.  
+The semantic version of the container recipe\.  
+The semantic version has four nodes: <major>\.<minor>\.<patch>/<build>\. You can assign values for the first three, and can filter on all of them\.  
+ **Assignment:** For the first three nodes you can assign any positive integer value, including zero, with an upper limit of 2^30\-1, or 1073741823 for each node\. Image Builder automatically assigns the build number to the fourth node\.  
+ **Patterns:** You can use any numeric pattern that adheres to the assignment requirements for the nodes that you can assign\. For example, you might choose a software version pattern, such as 1\.0\.0, or a date, such as 2021\.01\.01\.  
+ **Filtering:** With semantic versioning, you have the flexibility to use wildcards \(x\) to specify the most recent versions or nodes when selecting the base image or components for your recipe\. When you use a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards\.
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `^[0-9]+\.[0-9]+\.[0-9]+$`  
@@ -169,6 +182,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the container recipe\. For example, `arn:aws:imagebuilder:us-east-1:123456789012:container-recipe/mybasicrecipe/2020.12.17`\.
+
+`Name`  <a name="Name-fn::getatt"></a>
+Returns the name of the container recipe\.
 
 ## Examples<a name="aws-resource-imagebuilder-containerrecipe--examples"></a>
 

@@ -1,6 +1,6 @@
 # AWS::LakeFormation::Permissions TableWildcard<a name="aws-properties-lakeformation-permissions-tablewildcard"></a>
 
-<a name="aws-properties-lakeformation-permissions-tablewildcard-description"></a>The `TableWildcard` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::LakeFormation::Permissions](aws-resource-lakeformation-permissions.md)\.
+A wildcard object representing every table under a database\.
 
 ## Syntax<a name="aws-properties-lakeformation-permissions-tablewildcard-syntax"></a>
 

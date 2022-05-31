@@ -42,7 +42,7 @@ A list of stack set parameters whose values you want to override in the selected
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Regions`  <a name="cfn-cloudformation-stackset-stackinstances-regions"></a>
-The names of one or more Regions where you want to create stack instances using the specified AWS account\(s\)\.  
+The names of one or more Regions where you want to create stack instances using the specified AWS accounts\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

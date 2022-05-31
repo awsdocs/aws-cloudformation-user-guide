@@ -29,6 +29,74 @@ A lifecycle rule for individual objects in an Amazon S3 bucket\.
 *Type*: List of [Rule](aws-properties-s3-bucket-lifecycleconfig-rule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See also<a name="aws-properties-s3-bucket-lifecycleconfig--seealso"></a>
-+ AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+## Examples<a name="aws-properties-s3-bucket-lifecycleconfig--examples"></a>
 
+
+
+### Manage the lifecycle for S3 objects<a name="aws-properties-s3-bucket-lifecycleconfig--examples--Manage_the_lifecycle_for_S3_objects"></a>
+
+The following example template shows an S3 bucket with a lifecycle configuration rule\. The rule applies to all objects with the `glacier` key prefix\. The objects are transitioned to Glacier after one day, and deleted after one year\.
+
+#### JSON<a name="aws-properties-s3-bucket-lifecycleconfig--examples--Manage_the_lifecycle_for_S3_objects--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Resources": {
+        "S3Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "AccessControl": "Private",
+                "LifecycleConfiguration": {
+                    "Rules": [
+                        {
+                            "Id": "GlacierRule",
+                            "Prefix": "glacier",
+                            "Status": "Enabled",
+                            "ExpirationInDays": 365,
+                            "Transitions": [
+                                {
+                                    "TransitionInDays": 1,
+                                    "StorageClass": "GLACIER"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "BucketName": {
+            "Value": {
+                "Ref": "S3Bucket"
+            },
+            "Description": "Name of the sample Amazon S3 bucket with a lifecycle configuration."
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-properties-s3-bucket-lifecycleconfig--examples--Manage_the_lifecycle_for_S3_objects--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  S3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      AccessControl: Private
+      LifecycleConfiguration:
+        Rules:
+          - Id: GlacierRule
+            Prefix: glacier
+            Status: Enabled
+            ExpirationInDays: 365
+            Transitions:
+              - TransitionInDays: 1
+                StorageClass: GLACIER
+Outputs:
+  BucketName:
+    Value: !Ref S3Bucket
+    Description: Name of the sample Amazon S3 bucket with a lifecycle configuration.
+```

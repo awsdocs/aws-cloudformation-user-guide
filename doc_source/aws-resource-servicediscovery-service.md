@@ -102,7 +102,7 @@ The tags for the service\. Each tag consists of a key and an optional value, bot
 *Update requires*: Updates are not supported\.
 
 `Type`  <a name="cfn-servicediscovery-service-type"></a>
-If present, specifies that the service instances are only discoverable using the `DiscoverInstances` API operation\. No DNS records will be registered for the service instances\. The only valid value is `HTTP`\.  
+If present, specifies that the service instances are only discoverable using the `DiscoverInstances` API operation\. No DNS records is registered for the service instances\. The only valid value is `HTTP`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `HTTP`  

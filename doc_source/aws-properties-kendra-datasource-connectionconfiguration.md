@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource ConnectionConfiguration<a name="aws-properties-kendra-datasource-connectionconfiguration"></a>
 
-Provides the information necessary to connect to a database\.
+Provides the configuration information that's required to connect to a database\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-connectionconfiguration-syntax"></a>
 
@@ -56,7 +56,7 @@ The port that the database uses for connections\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretArn`  <a name="cfn-kendra-datasource-connectionconfiguration-secretarn"></a>
-The Amazon Resource Name \(ARN\) of credentials stored in AWS Secrets Manager\. The credentials should be a user/password pair\. For more information, see [Using a Database Data Source](https://docs.aws.amazon.com/kendra/latest/dg/data-source-database.html)\. For more information about AWS Secrets Manager, see [ What Is AWS Secrets Manager ](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) in the *AWS Secrets Manager* user guide\.  
+The Amazon Resource Name \(ARN\) of credentials stored in AWS Secrets Manager\. The credentials should be a user/password pair\. For more information, see [Using a Database Data Source](https://docs.aws.amazon.com/kendra/latest/dg/data-source-database.html)\. For more information about AWS Secrets Manager, see [ What Is AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) in the * AWS Secrets Manager * user guide\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

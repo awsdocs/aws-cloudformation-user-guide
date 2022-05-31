@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-h264colorspacesettings-properties"></a>
 
 `ColorSpacePassthroughSettings`  <a name="cfn-medialive-channel-h264colorspacesettings-colorspacepassthroughsettings"></a>
-Not currently supported by AWS CloudFormation\.  
+Passthrough applies no color space conversion to the output\.   
 *Required*: No  
 *Type*: [ColorSpacePassthroughSettings](aws-properties-medialive-channel-colorspacepassthroughsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

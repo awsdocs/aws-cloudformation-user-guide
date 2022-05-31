@@ -4,7 +4,7 @@ An object representing the secret to expose to your container\. Secrets can be e
 + To inject sensitive data into your containers as environment variables, use the `secrets` container definition parameter\.
 + To reference sensitive information in the log configuration of a container, use the `secretOptions` container definition parameter\.
 
-For more information, see [Specifying sensitive data](https://docs.aws.amazon.com/batch/latest/userguide/specifying-sensitive-data.html) in the *AWS Batch User Guide*\.
+For more information, see [Specifying sensitive data](https://docs.aws.amazon.com/batch/latest/userguide/specifying-sensitive-data.html) in the * AWS Batch User Guide*\.
 
 ## Syntax<a name="aws-properties-batch-jobdefinition-secret-syntax"></a>
 

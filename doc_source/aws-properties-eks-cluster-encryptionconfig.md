@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Provider](#cfn-eks-cluster-encryptionconfig-provider)" : Provider,
+  "[Provider](#cfn-eks-cluster-encryptionconfig-provider)" : Json,
   "[Resources](#cfn-eks-cluster-encryptionconfig-resources)" : [ String, ... ]
 }
 ```
@@ -18,8 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-eks-cluster-encryptionconfig-syntax.yaml"></a>
 
 ```
-  [Provider](#cfn-eks-cluster-encryptionconfig-provider): 
-    Provider
+  [Provider](#cfn-eks-cluster-encryptionconfig-provider): Json
   [Resources](#cfn-eks-cluster-encryptionconfig-resources): 
     - String
 ```
@@ -29,11 +28,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Provider`  <a name="cfn-eks-cluster-encryptionconfig-provider"></a>
 The encryption provider for the cluster\.  
 *Required*: No  
-*Type*: [Provider](aws-properties-eks-cluster-provider.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Type*: Json  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Resources`  <a name="cfn-eks-cluster-encryptionconfig-resources"></a>
 Specifies the resources to be encrypted\. The only supported value is "secrets"\.  
 *Required*: No  
 *Type*: List of String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

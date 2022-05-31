@@ -2,7 +2,7 @@
 
 <a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-description"></a>The default configuration that applies to all Lambda functions in the function definition version\. Individual Lambda functions can override these settings\.
 
-<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-inheritance"></a> In an AWS CloudFormation template, `DefaultConfig` is a property of the [ `AWS::Greengrass::FunctionDefinitionVersion` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html) resource\.
+<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-inheritance"></a> In an AWS CloudFormation template, `DefaultConfig` is a property of the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html) resource\.
 
 ## Syntax<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-syntax"></a>
 

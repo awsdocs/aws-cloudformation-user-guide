@@ -1,5 +1,9 @@
 # AWS::WAFRegional::WebACL<a name="aws-resource-wafregional-webacl"></a>
 
+**Note**  
+This is ** AWS WAF Classic** documentation\. For more information, see [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF **, use the AWS WAFV2 API and see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
+
 Contains the `Rules` that identify the requests that you want to allow, block, or count\. In a `WebACL`, you also specify a default action \(`ALLOW` or `BLOCK`\), and the action for each `Rule` that you add to a `WebACL`, for example, block requests from specified IP addresses or block requests from specified referrers\. If you add more than one `Rule` to a `WebACL`, a request needs to match only one of the specifications to be allowed, blocked, or counted\.
 
 To identify the requests that you want AWS WAF to filter, you associate the `WebACL` with an API Gateway API or an Application Load Balancer\. 
@@ -44,7 +48,7 @@ The action to perform if none of the `Rules` contained in the `WebACL` match\. T
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricName`  <a name="cfn-wafregional-webacl-metricname"></a>
-A friendly name or description for the metrics for this `WebACL`\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with maximum length 128 and minimum length one\. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default\_Action\." You can't change `MetricName` after you create the `WebACL`\.  
+A name for the metrics for this `WebACL`\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with maximum length 128 and minimum length one\. It can't contain whitespace or metric names reserved for AWS WAF, including "All" and "Default\_Action\." You can't change `MetricName` after you create the `WebACL`\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

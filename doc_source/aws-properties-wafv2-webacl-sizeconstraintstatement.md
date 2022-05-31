@@ -1,8 +1,5 @@
 # AWS::WAFv2::WebACL SizeConstraintStatement<a name="aws-properties-wafv2-webacl-sizeconstraintstatement"></a>
 
-**Note**  
-This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
-
 A rule statement that compares a number of bytes against the size of a request component, using a comparison operator, such as greater than \(>\) or less than \(<\)\. For example, you can use a size constraint statement to look for query strings that are longer than 100 bytes\. 
 
 If you configure AWS WAF to inspect the request body, AWS WAF inspects only the first 8192 bytes \(8 KB\)\. If the request body for your web requests never exceeds 8192 bytes, you can create a size constraint condition and block requests that have a request body greater than 8192 bytes\.
@@ -19,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ComparisonOperator](#cfn-wafv2-webacl-sizeconstraintstatement-comparisonoperator)" : String,
   "[FieldToMatch](#cfn-wafv2-webacl-sizeconstraintstatement-fieldtomatch)" : FieldToMatch,
-  "[Size](#cfn-wafv2-webacl-sizeconstraintstatement-size)" : Integer,
+  "[Size](#cfn-wafv2-webacl-sizeconstraintstatement-size)" : Double,
   "[TextTransformations](#cfn-wafv2-webacl-sizeconstraintstatement-texttransformations)" : [ TextTransformation, ... ]
 }
 ```
@@ -30,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ComparisonOperator](#cfn-wafv2-webacl-sizeconstraintstatement-comparisonoperator): String
   [FieldToMatch](#cfn-wafv2-webacl-sizeconstraintstatement-fieldtomatch): 
     FieldToMatch
-  [Size](#cfn-wafv2-webacl-sizeconstraintstatement-size): Integer
+  [Size](#cfn-wafv2-webacl-sizeconstraintstatement-size): Double
   [TextTransformations](#cfn-wafv2-webacl-sizeconstraintstatement-texttransformations): 
     - TextTransformation
 ```
@@ -45,7 +42,7 @@ The operator to use to compare the request part to the size setting\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldToMatch`  <a name="cfn-wafv2-webacl-sizeconstraintstatement-fieldtomatch"></a>
-The part of a web request that you want AWS WAF to inspect\. For more information, see FieldToMatch\.   
+The part of a web request that you want AWS WAF to inspect\.   
 *Required*: Yes  
 *Type*: [FieldToMatch](aws-properties-wafv2-webacl-fieldtomatch.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -53,7 +50,7 @@ The part of a web request that you want AWS WAF to inspect\. For more informatio
 `Size`  <a name="cfn-wafv2-webacl-sizeconstraintstatement-size"></a>
 The size, in byte, to compare to the request part, after any transformations\.  
 *Required*: Yes  
-*Type*: Integer  
+*Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TextTransformations`  <a name="cfn-wafv2-webacl-sizeconstraintstatement-texttransformations"></a>

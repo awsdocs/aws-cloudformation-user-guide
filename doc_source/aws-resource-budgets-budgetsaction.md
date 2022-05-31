@@ -94,9 +94,8 @@ The type of a notification\.
 
 `Subscribers`  <a name="cfn-budgets-budgetsaction-subscribers"></a>
 A list of subscribers\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of [Subscriber](aws-properties-budgets-budgetsaction-subscriber.md)  
-*Maximum*: `11`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-budgets-budgetsaction-return-values"></a>

@@ -119,7 +119,7 @@ Description: AWS SageMaker Project basic template
 
 Resources:
 
-  CicloTestProject:
+  SampleProject:
     Type: AWS::SageMaker::Project
     Properties:
       ProjectName: "SampleProject"

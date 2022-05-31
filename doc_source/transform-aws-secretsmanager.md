@@ -31,7 +31,7 @@ To include `AWS::SecretsManager` at the top level of a template, in the `Transfo
 
 ## Parameters<a name="aws-secretsmanager-transform-parameters"></a>
 
-The `AWS::SecretsManager` transform doesn't accept any parameters\. Instead, specify the properties of the secret rotation Lamdba function you want to create using the `[HostedRotationLambda](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-rotationschedule-hostedrotationlambda.html)` property type of the `[AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)` resources in the stack template\.
+The `AWS::SecretsManager` transform doesn't accept any parameters\. Instead, specify the properties of the secret rotation Lambda function you want to create using the `[HostedRotationLambda](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-rotationschedule-hostedrotationlambda.html)` property type of the `[AWS::SecretsManager::RotationSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)` resources in the stack template\.
 
 ## Remarks<a name="aws-secretsmanager-transform-remarks"></a>
 

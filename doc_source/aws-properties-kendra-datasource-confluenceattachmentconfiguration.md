@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource ConfluenceAttachmentConfiguration<a name="aws-properties-kendra-datasource-confluenceattachmentconfiguration"></a>
 
-Specifies the attachment settings for the Confluence data source\. Attachment settings are optional, if you don't specify settings attachments, Amazon Kendra won't index them\.
+Configuration of attachment settings for the Confluence data source\. Attachment settings are optional, if you don't specify settings attachments, Amazon Kendra won't index them\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-confluenceattachmentconfiguration-syntax"></a>
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AttachmentFieldMappings](#cfn-kendra-datasource-confluenceattachmentconfiguration-attachmentfieldmappings)" : ConfluenceAttachmentFieldMappingsList,
+  "[AttachmentFieldMappings](#cfn-kendra-datasource-confluenceattachmentconfiguration-attachmentfieldmappings)" : [ ConfluenceAttachmentToIndexFieldMapping, ... ],
   "[CrawlAttachments](#cfn-kendra-datasource-confluenceattachmentconfiguration-crawlattachments)" : Boolean
 }
 ```
@@ -19,17 +19,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AttachmentFieldMappings](#cfn-kendra-datasource-confluenceattachmentconfiguration-attachmentfieldmappings): 
-    ConfluenceAttachmentFieldMappingsList
+    - ConfluenceAttachmentToIndexFieldMapping
   [CrawlAttachments](#cfn-kendra-datasource-confluenceattachmentconfiguration-crawlattachments): Boolean
 ```
 
 ## Properties<a name="aws-properties-kendra-datasource-confluenceattachmentconfiguration-properties"></a>
 
 `AttachmentFieldMappings`  <a name="cfn-kendra-datasource-confluenceattachmentconfiguration-attachmentfieldmappings"></a>
-Defines how attachment metadata fields should be mapped to index fields\. Before you can map a field, you must first create an index field with a matching type using the console or the `UpdateIndex` operation\.  
+Maps attributes or field names of Confluence attachments to Amazon Kendra index field names\. To create custom fields, use the `UpdateIndex` API before you map to Confluence fields\. For more information, see [Mapping data source fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html)\. The Confluence data source field names must exist in your Confluence custom metadata\.  
 If you specify the `AttachentFieldMappings` parameter, you must specify at least one field mapping\.  
 *Required*: No  
-*Type*: [ConfluenceAttachmentFieldMappingsList](aws-properties-kendra-datasource-confluenceattachmentfieldmappingslist.md)  
+*Type*: List of [ConfluenceAttachmentToIndexFieldMapping](aws-properties-kendra-datasource-confluenceattachmenttoindexfieldmapping.md)  
 *Maximum*: `11`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

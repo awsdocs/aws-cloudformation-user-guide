@@ -1,6 +1,6 @@
 # AWS::DMS::Endpoint PostgreSqlSettings<a name="aws-properties-dms-endpoint-postgresqlsettings"></a>
 
-<a name="aws-properties-dms-endpoint-postgresqlsettings-description"></a>The `PostgreSqlSettings` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::DMS::Endpoint](aws-resource-dms-endpoint.md)\.
+Not currently supported by AWS CloudFormation\. 
 
 ## Syntax<a name="aws-properties-dms-endpoint-postgresqlsettings-syntax"></a>
 

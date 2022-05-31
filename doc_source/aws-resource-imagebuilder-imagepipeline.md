@@ -71,7 +71,7 @@ The Amazon Resource Name \(ARN\) of the distribution configuration associated wi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnhancedImageMetadataEnabled`  <a name="cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled"></a>
- Collects additional information about the image being created, including the operating system \(OS\) version and package list\. This information is used to enhance the overall experience of using EC2 Image Builder\. Enabled by default\.   
+ Collects additional information about the image being created, including the operating system \(OS\) version and package list\. This information is used to enhance the overall experience of using EC2 Image Builder\. Enabled by default\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -83,7 +83,7 @@ The Amazon Resource Name \(ARN\) of the image recipe associated with this image 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageTestsConfiguration`  <a name="cfn-imagebuilder-imagepipeline-imagetestsconfiguration"></a>
-The configuration of the image tests used when creating this image\.  
+The configuration of the image tests that run after image creation to ensure the quality of the image that was created\.  
 *Required*: No  
 *Type*: [ImageTestsConfiguration](aws-properties-imagebuilder-imagepipeline-imagetestsconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -102,7 +102,7 @@ The name of the image pipeline\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Schedule`  <a name="cfn-imagebuilder-imagepipeline-schedule"></a>
-The schedule of the image pipeline\. A schedule configures how often and when a pipeline will automatically create a new image\.  
+The schedule of the image pipeline\. A schedule configures how often and when a pipeline automatically creates a new image\.  
 *Required*: No  
 *Type*: [Schedule](aws-properties-imagebuilder-imagepipeline-schedule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -139,6 +139,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of the image pipeline\. For example, `arn:aws:imagebuilder:us-west-2:123456789012:image-pipeline/mywindows2016pipeline`\.
 
+`Name`  <a name="Name-fn::getatt"></a>
+Returns the name of the image pipeline\.
+
 ## Examples<a name="aws-resource-imagebuilder-imagepipeline--examples"></a>
 
 
@@ -163,7 +166,7 @@ Resources:
         ImageTestsEnabled: false
         TimeoutMinutes: 90
       Schedule:
-      ScheduleExpression: 'cron(0 0 * * ? *)'
+        ScheduleExpression: 'cron(0 0 * * ? *)'
         PipelineExecutionStartCondition: 'EXPRESSION_MATCH_ONLY'
       Status: 'DISABLED'
       Tags:

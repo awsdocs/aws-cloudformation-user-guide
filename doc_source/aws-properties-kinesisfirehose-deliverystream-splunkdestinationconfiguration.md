@@ -1,6 +1,6 @@
 # AWS::KinesisFirehose::DeliveryStream SplunkDestinationConfiguration<a name="aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration"></a>
 
-The `SplunkDestinationConfiguration` property type specifies the configuration of a destination in Splunk for a Kinesis Data Firehose delivery stream\. 
+The `SplunkDestinationConfiguration` property type specifies the configuration of a destination in Splunk for a Kinesis Data Firehose delivery stream\.
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration-syntax"></a>
 
@@ -108,5 +108,4 @@ The configuration for the backup Amazon S3 location\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration--seealso"></a>
-+  [SplunkDestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_SplunkDestinationConfiguration.html) in the *Amazon Kinesis Data Firehose API Reference *\. 
-
++  [SplunkDestinationConfiguration](https://docs.aws.amazon.com/firehose/latest/APIReference/API_SplunkDestinationConfiguration.html) in the *Amazon Kinesis Data Firehose API Reference *\.

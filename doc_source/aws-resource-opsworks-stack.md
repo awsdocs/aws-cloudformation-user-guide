@@ -89,7 +89,7 @@ Properties:
 `AgentVersion`  <a name="cfn-opsworks-stack-agentversion"></a>
 The default AWS OpsWorks Stacks agent version\. You have the following options:  
 + Auto\-update \- Set this parameter to `LATEST`\. AWS OpsWorks Stacks automatically installs new agent versions on the stack's instances as soon as they are available\.
-+ Fixed version \- Set this parameter to your preferred agent version\. To update the agent version, you must edit the stack configuration and specify a new version\. AWS OpsWorks Stacks then automatically installs that version on the stack's instances\.
++ Fixed version \- Set this parameter to your preferred agent version\. To update the agent version, you must edit the stack configuration and specify a new version\. AWS OpsWorks Stacks installs that version on the stack's instances\.
 The default setting is the most recent release of the agent\. To specify an agent version, you must use the complete version number, not the abbreviated number shown on the console\. For a list of available agent version numbers, call [DescribeAgentVersions](https://docs.aws.amazon.com/goto/WebAPI/opsworks-2013-02-18/DescribeAgentVersions)\. AgentVersion cannot be set to Chef 12\.2\.  
 You can also specify an agent version when you create or update an instance, which overrides the stack's default setting\.
 *Required*: No  
@@ -223,14 +223,14 @@ The stack name\. Stack names can be a maximum of 64 characters\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RdsDbInstances`  <a name="cfn-opsworks-stack-rdsdbinstances"></a>
-The Amazon Relational Database Service \(Amazon RDS\) DB instance to register with the AWS OpsWorks stack\.  
-If you specify a DB instance that's registered with another AWS OpsWorks stack, AWS CloudFormation deregisters the existing association before registering the DB instance\.
+The Amazon Relational Database Service \(Amazon RDS\) database instance to register with the AWS OpsWorks stack\.  
+If you specify a database instance that's registered with another AWS OpsWorks stack, AWS CloudFormation deregisters the existing association before registering the database instance\.
 *Required*: No  
 *Type*: List of [RdsDbInstance](aws-properties-opsworks-stack-rdsdbinstance.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceRoleArn`  <a name="cfn-opsworks-stack-servicerolearn"></a>
-The stack's AWS Identity and Access Management \(IAM\) role, which allows AWS OpsWorks Stacks to work with AWS resources on your behalf\. You must set this parameter to the Amazon Resource Name \(ARN\) for an existing IAM role\. For more information about IAM ARNs, see [Using Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html)\.  
+The stack's IAM role, which allows AWS OpsWorks Stacks to work with AWS resources on your behalf\. You must set this parameter to the Amazon Resource Name \(ARN\) for an existing IAM role\. For more information about IAM ARNs, see [Using Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -260,7 +260,7 @@ Whether the stack uses custom cookbooks\.
 
 `UseOpsworksSecurityGroups`  <a name="cfn-opsworks-stack-useopsworkssecuritygroups"></a>
 Whether to associate the AWS OpsWorks Stacks built\-in security groups with the stack's layers\.  
-AWS OpsWorks Stacks provides a standard set of built\-in security groups, one for each layer, which are associated with layers by default\. With `UseOpsworksSecurityGroups` you can instead provide your own custom security groups\. `UseOpsworksSecurityGroups` has the following settings:   
+ AWS OpsWorks Stacks provides a standard set of built\-in security groups, one for each layer, which are associated with layers by default\. With `UseOpsworksSecurityGroups` you can instead provide your own custom security groups\. `UseOpsworksSecurityGroups` has the following settings:   
 + True \- AWS OpsWorks Stacks automatically associates the appropriate built\-in security group with each layer \(default setting\)\. You can associate additional security groups with a layer after you create it, but you cannot delete the built\-in security group\.
 + False \- AWS OpsWorks Stacks does not associate built\-in security groups with layers\. You must create appropriate EC2 security groups and associate a security group with each layer that you create\. However, you can still manually associate a built\-in security group with a layer on creation; custom security groups are required only for those layers that need custom settings\.
 For more information, see [Create a New Stack](https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-creating.html)\.  

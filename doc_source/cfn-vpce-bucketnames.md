@@ -18,7 +18,7 @@ Before you configure VPC endpoints for CloudFormation, be aware of the following
   If the endpoint policy blocks traffic to these buckets, CloudFormation won't receive responses and the stack operation fails\. For example, if you have a resource in a VPC in the `us-west-2` Region that must respond to a wait condition, the resource must be able to send a response to the `cloudformation-waitcondition-us-west-2` bucket\.
 
   For a list of Regions that CloudFormation supports, see the [Regions and endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html#cfn_region) page in the *Amazon Web Services General Reference*\.
-+ VPC endpoints currently don't support cross\-Region requests— ensure that you create your endpoint in the same Region in which you plan to issue your API calls to CloudFormation\.
++ VPC endpoints currently don't support cross\-Region requests — ensure that you create your endpoint in the same Region in which you plan to issue your API calls to CloudFormation\.
 + VPC endpoints only support Amazon\-provided DNS through Route 53\. If you want to use your own DNS, you can use conditional DNS forwarding\. For more information, see [DHCP options sets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html) in the Amazon VPC User Guide\.
 + The security group attached to the VPC endpoint must allow incoming connections on port 443 from the private subnet of the VPC\.
 

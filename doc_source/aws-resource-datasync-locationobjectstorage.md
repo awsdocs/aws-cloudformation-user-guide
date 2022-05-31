@@ -52,14 +52,14 @@ Optional\. The access key is used if credentials are required to access the self
 *Minimum*: `8`  
 *Maximum*: `200`  
 *Pattern*: `^.+$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AgentArns`  <a name="cfn-datasync-locationobjectstorage-agentarns"></a>
 The Amazon Resource Name \(ARN\) of the agents associated with the self\-managed object storage server location\.  
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `4`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BucketName`  <a name="cfn-datasync-locationobjectstorage-bucketname"></a>
 The bucket on the self\-managed object storage server that is used to read data from\.  
@@ -77,7 +77,7 @@ Optional\. The secret key is used if credentials are required to access the self
 *Minimum*: `8`  
 *Maximum*: `200`  
 *Pattern*: `^.+$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerHostname`  <a name="cfn-datasync-locationobjectstorage-serverhostname"></a>
 The name of the self\-managed object storage server\. This value is the IP address or Domain Name Service \(DNS\) name of the object storage server\. An agent uses this host name to mount the object storage server in a network\.   
@@ -93,14 +93,14 @@ The port that your self\-managed object storage server accepts inbound network t
 *Type*: Integer  
 *Minimum*: `1`  
 *Maximum*: `65536`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerProtocol`  <a name="cfn-datasync-locationobjectstorage-serverprotocol"></a>
 The protocol that the object storage server uses to communicate\. Valid values are HTTP or HTTPS\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `HTTP | HTTPS`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Subdirectory`  <a name="cfn-datasync-locationobjectstorage-subdirectory"></a>
 The subdirectory in the self\-managed object storage server that is used to read data from\.  
@@ -108,7 +108,7 @@ The subdirectory in the self\-managed object storage server that is used to read
 *Type*: String  
 *Maximum*: `4096`  
 *Pattern*: `^[a-zA-Z0-9_\-\+\./\(\)\p{Zs}]*$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-datasync-locationobjectstorage-tags"></a>
 The key\-value pair that represents the tag that you want to add to the location\. The value can be an empty string\. We recommend using tags to name your resources\.  
@@ -121,7 +121,7 @@ The key\-value pair that represents the tag that you want to add to the location
 
 ### Ref<a name="aws-resource-datasync-locationobjectstorage-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the location resource ARN\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the location resource Amazon Resource Name \(ARN\)\. For example:
 
 `arn:aws:datasync:us-east-2:111222333444:location/loc-07db7abfc326c50s3`
 
@@ -139,17 +139,17 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) of the specified object storage location\.
 
 `LocationUri`  <a name="LocationUri-fn::getatt"></a>
-The URL of the specified object storage location\.
+The URI of the specified object storage location\.
 
 ## Examples<a name="aws-resource-datasync-locationobjectstorage--examples"></a>
 
 
 
-### Object storage location for DataSync<a name="aws-resource-datasync-locationobjectstorage--examples--Object_storage_location_for_DataSync"></a>
+### Create an object storage location for DataSync<a name="aws-resource-datasync-locationobjectstorage--examples--Create_an_object_storage_location_for_DataSync"></a>
 
 The following example specifies an object storage location for DataSync\. In this example, the object storage location uses the bucket named `MyBucket`, on the server named `MyServer@example.com`\. This example also specifies the server protocol `HTTPS` and the subdirectory `/Subdirectory`\. 
 
-#### JSON<a name="aws-resource-datasync-locationobjectstorage--examples--Object_storage_location_for_DataSync--json"></a>
+#### JSON<a name="aws-resource-datasync-locationobjectstorage--examples--Create_an_object_storage_location_for_DataSync--json"></a>
 
 ```
 {
@@ -172,7 +172,7 @@ The following example specifies an object storage location for DataSync\. In thi
 }
 ```
 
-#### YAML<a name="aws-resource-datasync-locationobjectstorage--examples--Object_storage_location_for_DataSync--yaml"></a>
+#### YAML<a name="aws-resource-datasync-locationobjectstorage--examples--Create_an_object_storage_location_for_DataSync--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09

@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Filter`  <a name="cfn-iotanalytics-pipeline-filter-filter"></a>
 An expression that looks like an SQL WHERE clause that must return a Boolean value\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [String](#aws-properties-iotanalytics-pipeline-filter)  
 *Minimum*: `1`  
 *Maximum*: `256`  
@@ -36,7 +36,7 @@ An expression that looks like an SQL WHERE clause that must return a Boolean val
 
 `Name`  <a name="cfn-iotanalytics-pipeline-filter-name"></a>
 The name of the 'filter' activity\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  

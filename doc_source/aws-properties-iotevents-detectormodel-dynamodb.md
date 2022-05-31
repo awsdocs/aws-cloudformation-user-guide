@@ -18,7 +18,7 @@ You must use expressions for all parameters in `DynamoDBAction`\. The expression
 
    `'GreenhouseTemperatureTable ' + $input.GreenhouseInput.date` 
 
-For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the *AWS IoT Events Developer Guide*\.
+For more information, see [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html) in the * AWS IoT Events Developer Guide*\.
 
 If the defined payload type is a string, `DynamoDBAction` writes non\-JSON data to the DynamoDB table as binary data\. The DynamoDB console displays the data as Base64\-encoded text\. The value for the `payloadField` parameter is `<payload-field>_raw`\.
 
@@ -63,7 +63,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `HashKeyField`  <a name="cfn-iotevents-detectormodel-dynamodb-hashkeyfield"></a>
 The name of the hash key \(also called the partition key\)\. The `hashKeyField` value must match the partition key of the target DynamoDB table\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -78,7 +78,7 @@ If you don't specify `hashKeyType`, the default value is `'STRING'`\.
 
 `HashKeyValue`  <a name="cfn-iotevents-detectormodel-dynamodb-hashkeyvalue"></a>
 The value of the hash key \(also called the partition key\)\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -129,6 +129,6 @@ The value of the range key \(also called the sort key\)\.
 
 `TableName`  <a name="cfn-iotevents-detectormodel-dynamodb-tablename"></a>
 The name of the DynamoDB table\. The `tableName` value must match the table name of the target DynamoDB table\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

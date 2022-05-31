@@ -1,4 +1,4 @@
-# RDS resource type reference<a name="AWS_RDS"></a>
+# Amazon Relational Database Service resource type reference<a name="AWS_RDS"></a>
 
 **Resource types**
 + [AWS::RDS::DBCluster](aws-resource-rds-dbcluster.md)

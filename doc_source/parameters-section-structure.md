@@ -136,14 +136,17 @@ A numeric value that determines the smallest numeric value you want to allow for
 
 `NoEcho`  
 Whether to mask the parameter value to prevent it from being displayed in the console, command line tools, or API\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events, except for information stored in the locations specified below\.  
+*Required*: No  
 Using the `NoEcho` attribute does not mask any information stored in the following:  
 + The `Metadata` template section\. CloudFormation does not transform, modify, or redact any information you include in the `Metadata` section\. For more information, see [Metadata](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/metadata-section-structure.html)\.
 + The `Outputs` template section\. For more information, see [Outputs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html)\.
 + The `Metadata` attribute of a resource definition\. For more information, [Metadata attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html)\.
 We strongly recommend you do not use these mechanisms to include sensitive information, such as passwords or secrets\.
-Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
+Rather than embedding sensitive information directly in your CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
 For more information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
-*Required*: No
+We strongly recommend against including `NoEcho` parameters, or any sensitive data, in resource properties that are part of a resource's primary identifier\.  
+When a `NoEcho` parameter is included in a property that forms a primary resource identifier, CloudFormation may use the *actual plaintext value* in the primary resource identifier\. This resource ID may appear in any derived outputs or destinations\.  
+To determine which resource properties comprise a resource type's primary identifier, refer to the [resource reference documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html) for that resource\. In the **Return values** section, the `Ref` function return value represents the resource properties that comprise the resource type's primary identifier\.
 
 `Type`  <a name="parameters-section-structure-properties-type"></a>
 The data type for the parameter \(`DataType`\)\.  
@@ -290,7 +293,7 @@ When you use the AWS CloudFormation console to create or update a stack, the con
 
 In the metadata key, you can specify the groups to create, the parameters to include in each group, and the order in which the console shows each parameter within its group\. You can also define friendly parameter names so that the console shows descriptive names instead of logical IDs\. All parameters that you reference in the metadata key must be declared in the `Parameters` section of the template\.
 
-For more information and an example of the `AWS::CloudFormation::Interface` metadata key, see [AWS::CloudFormation::Interface](aws-resource-cloudformation-interface.md)\.
+For more information and an example of the `AWS::CloudFormation::Interface` metadata key, see [`AWS::CloudFormation::Interface`](aws-resource-cloudformation-interface.md)\.
 
 ## Examples<a name="parameters-section-examples"></a>
 
@@ -376,7 +379,7 @@ Parameters:
 
 #### AWS CLI and API support<a name="parameters-section-cli-support"></a>
 
-Currently, users can't use the AWS CLI or AWS CloudFormation API to view a list of valid values for AWS\-specific parameters\. However, they can view information about each parameter, such as the parameter type, by using the [aws cloudformation get\-template\-summary](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template-summary.html) command or [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_GetTemplateSummary.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_GetTemplateSummary.html) API\.
+Currently, users can't use the AWS CLI or AWS CloudFormation API to view a list of valid values for AWS\-specific parameters\. However, they can view information about each parameter, such as the parameter type, by using the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template-summary.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template-summary.html) command or [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_GetTemplateSummary.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_GetTemplateSummary.html) API\.
 
 ### Comma\-delimited list parameter type<a name="parameters-section-structure-comma-list-type"></a>
 
@@ -470,7 +473,7 @@ DbSubnet3:
 
 
 
-#### AWS::SSM::Parameter::Value<String> type<a name="parameters-section-ssm-examples-example1"></a>
+#### `AWS::SSM::Parameter::Value`<String> type<a name="parameters-section-ssm-examples-example1"></a>
 
 The following template declares an `AWS::SSM::Parameter::Value<String>` parameter type\.
 
@@ -517,7 +520,7 @@ aws cloudformation create-stack --stack-name S1 --template-body example template
 
  
 
-#### AWS::SSM::Parameter::Value<AWS::EC2::Image::Id> type<a name="parameters-section-ssm-examples-example2"></a>
+#### `AWS::SSM::Parameter::Value`<`AWS::EC2::Image::Id`> type<a name="parameters-section-ssm-examples-example2"></a>
 
 The following template declares an `AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>` parameter type\.
 

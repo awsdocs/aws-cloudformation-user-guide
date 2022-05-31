@@ -289,8 +289,8 @@ If you make an update to the mount target that causes it to be replaced, instanc
         "VpcId": { "Ref": "VPC" },
         "GroupDescription": "Enable SSH access via port 22",
         "SecurityGroupIngress": [
-          { "IpProtocol": "tcp", "FromPort": "22", "ToPort": "22", "CidrIp": { "Ref": "SSHLocation" } },
-          { "IpProtocol": "tcp", "FromPort": "80", "ToPort": "80", "CidrIp": "0.0.0.0/0" }
+          { "IpProtocol": "tcp", "FromPort": 22, "ToPort": 22, "CidrIp": { "Ref": "SSHLocation" } },
+          { "IpProtocol": "tcp", "FromPort": 80, "ToPort": 80, "CidrIp": "0.0.0.0/0" }
          ]
       }
     },
@@ -302,8 +302,8 @@ If you make an update to the mount target that causes it to be replaced, instanc
         "SecurityGroupIngress": [
           {
             "IpProtocol": "tcp",
-            "FromPort": "2049",
-            "ToPort": "2049",
+            "FromPort": 2049,
+            "ToPort": 2049,
             "CidrIp": "0.0.0.0/0"
           }
         ]
@@ -857,13 +857,13 @@ Resources:
       GroupDescription: Enable SSH access via port 22
       SecurityGroupIngress:
       - IpProtocol: tcp
-        FromPort: '22'
-        ToPort: '22'
+        FromPort: 22
+        ToPort: 22
         CidrIp:
           Ref: SSHLocation
       - IpProtocol: tcp
-        FromPort: '80'
-        ToPort: '80'
+        FromPort: 80
+        ToPort: 80
         CidrIp: 0.0.0.0/0
   MountTargetSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -873,8 +873,8 @@ Resources:
       GroupDescription: Security group for mount target
       SecurityGroupIngress:
       - IpProtocol: tcp
-        FromPort: '2049'
-        ToPort: '2049'
+        FromPort: 2049
+        ToPort: 2049
         CidrIp: 0.0.0.0/0
   FileSystem:
     Type: AWS::EFS::FileSystem

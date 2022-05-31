@@ -14,7 +14,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::TransitGatewayMulticastDomainAssociation",
   "Properties" : {
-      "[State](#cfn-ec2-transitgatewaymulticastdomainassociation-state)" : String,
       "[SubnetId](#cfn-ec2-transitgatewaymulticastdomainassociation-subnetid)" : String,
       "[TransitGatewayAttachmentId](#cfn-ec2-transitgatewaymulticastdomainassociation-transitgatewayattachmentid)" : String,
       "[TransitGatewayMulticastDomainId](#cfn-ec2-transitgatewaymulticastdomainassociation-transitgatewaymulticastdomainid)" : String
@@ -27,7 +26,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EC2::TransitGatewayMulticastDomainAssociation
 Properties: 
-  [State](#cfn-ec2-transitgatewaymulticastdomainassociation-state): String
   [SubnetId](#cfn-ec2-transitgatewaymulticastdomainassociation-subnetid): String
   [TransitGatewayAttachmentId](#cfn-ec2-transitgatewaymulticastdomainassociation-transitgatewayattachmentid): String
   [TransitGatewayMulticastDomainId](#cfn-ec2-transitgatewaymulticastdomainassociation-transitgatewaymulticastdomainid): String
@@ -35,28 +33,21 @@ Properties:
 
 ## Properties<a name="aws-resource-ec2-transitgatewaymulticastdomainassociation-properties"></a>
 
-`State`  <a name="cfn-ec2-transitgatewaymulticastdomainassociation-state"></a>
-The state of the transit gateway multicast domain\.  
-*Required*: No  
-*Type*: String  
-*Allowed values*: `available | deleted | deleting | pending`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
 `SubnetId`  <a name="cfn-ec2-transitgatewaymulticastdomainassociation-subnetid"></a>
 The IDs of the subnets to associate with the transit gateway multicast domain\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TransitGatewayAttachmentId`  <a name="cfn-ec2-transitgatewaymulticastdomainassociation-transitgatewayattachmentid"></a>
 The ID of the transit gateway attachment\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TransitGatewayMulticastDomainId`  <a name="cfn-ec2-transitgatewaymulticastdomainassociation-transitgatewaymulticastdomainid"></a>
 The ID of the transit gateway multicast domain\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -79,6 +70,9 @@ The ID of the resource\.
 
 `ResourceType`  <a name="ResourceType-fn::getatt"></a>
 The type of resource, for example a VPC attachment\.
+
+`State`  <a name="State-fn::getatt"></a>
+The state of the resource\.
 
 ## See also<a name="aws-resource-ec2-transitgatewaymulticastdomainassociation--seealso"></a>
 + [AssociateTransitGatewayMulticastDomain](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AssociateTransitGatewayMulticastDomain.html) in the *Amazon EC2 API Reference*

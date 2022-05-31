@@ -31,7 +31,7 @@ The Amazon CloudWatch log group to which CloudFormation sends error logging info
 *Minimum*: `1`  
 *Maximum*: `512`  
 *Pattern*: `[\.\-_/#A-Za-z0-9]+`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LogRoleArn`  <a name="cfn-cloudformation-resourceversion-loggingconfig-logrolearn"></a>
 The ARN of the role that CloudFormation should assume when sending log entries to CloudWatch logs\.  
@@ -40,4 +40,4 @@ The ARN of the role that CloudFormation should assume when sending log entries t
 *Minimum*: `1`  
 *Maximum*: `256`  
 *Pattern*: `arn:.+:iam::[0-9]{12}:role/.+`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

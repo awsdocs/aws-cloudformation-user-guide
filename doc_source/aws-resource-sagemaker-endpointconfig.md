@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::EndpointConfig",
   "Properties" : {
+      "[AsyncInferenceConfig](#cfn-sagemaker-endpointconfig-asyncinferenceconfig)" : AsyncInferenceConfig,
       "[DataCaptureConfig](#cfn-sagemaker-endpointconfig-datacaptureconfig)" : DataCaptureConfig,
       "[EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname)" : String,
       "[KmsKeyId](#cfn-sagemaker-endpointconfig-kmskeyid)" : String,
@@ -26,6 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SageMaker::EndpointConfig
 Properties: 
+  [AsyncInferenceConfig](#cfn-sagemaker-endpointconfig-asyncinferenceconfig): 
+    AsyncInferenceConfig
   [DataCaptureConfig](#cfn-sagemaker-endpointconfig-datacaptureconfig): 
     DataCaptureConfig
   [EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname): String
@@ -37,6 +40,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-sagemaker-endpointconfig-properties"></a>
+
+`AsyncInferenceConfig`  <a name="cfn-sagemaker-endpointconfig-asyncinferenceconfig"></a>
+Specifies configuration for how an endpoint performs asynchronous inference\.  
+*Required*: No  
+*Type*: [AsyncInferenceConfig](aws-properties-sagemaker-endpointconfig-asyncinferenceconfig.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DataCaptureConfig`  <a name="cfn-sagemaker-endpointconfig-datacaptureconfig"></a>
 Specifies how to capture endpoint data for model monitor\. The data capture configuration applies to all production variants hosted at the endpoint\.  
@@ -53,12 +62,12 @@ The name of the endpoint configuration\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-sagemaker-endpointconfig-kmskeyid"></a>
-The Amazon Resource Name \(ARN\) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint\.  
+The Amazon Resource Name \(ARN\) of an AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint\.  
 + Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
 + Key ARN: `arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 + Alias name: `alias/ExampleAlias`
 + Alias name ARN: `arn:aws:kms:us-west-2:111122223333:alias/ExampleAlias`
-The KMS key policy must grant permission to the IAM role that you specify in your `CreateEndpoint`, `UpdateEndpoint` requests\. For more information, refer to the AWS Key Management Service section[ Using Key Policies in AWS KMS ](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html)  
+The KMS key policy must grant permission to the IAM role that you specify in your `CreateEndpoint`, `UpdateEndpoint` requests\. For more information, refer to the AWS Key Management Service section [Using Key Policies in AWS KMS ](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html)  
 Certain Nitro\-based instances include local storage, dependent on the instance type\. Local storage volumes are encrypted using a hardware module on the instance\. You can't request a `KmsKeyId` when using an instance type with local storage\. If any of the models that you specify in the `ProductionVariants` parameter use nitro\-based instances with local storage, do not specify a value for the `KmsKeyId` parameter\. If you specify a value for `KmsKeyId` when using any nitro\-based instances with local storage, the call to `CreateEndpointConfig` fails\.  
 For a list of instance types that support local instance storage, see [Instance Store Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-volumes)\.  
 For more information about local instance storage encryption, see [SSD Instance Store Volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ssd-instance-store.html)\.

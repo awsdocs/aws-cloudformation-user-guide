@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Kendra::DataSource",
   "Properties" : {
+      "[CustomDocumentEnrichmentConfiguration](#cfn-kendra-datasource-customdocumentenrichmentconfiguration)" : CustomDocumentEnrichmentConfiguration,
       "[DataSourceConfiguration](#cfn-kendra-datasource-datasourceconfiguration)" : DataSourceConfiguration,
       "[Description](#cfn-kendra-datasource-description)" : String,
       "[IndexId](#cfn-kendra-datasource-indexid)" : String,
@@ -31,6 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Kendra::DataSource
 Properties: 
+  [CustomDocumentEnrichmentConfiguration](#cfn-kendra-datasource-customdocumentenrichmentconfiguration): 
+    CustomDocumentEnrichmentConfiguration
   [DataSourceConfiguration](#cfn-kendra-datasource-datasourceconfiguration): 
     DataSourceConfiguration
   [Description](#cfn-kendra-datasource-description): String
@@ -44,6 +47,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-kendra-datasource-properties"></a>
+
+`CustomDocumentEnrichmentConfiguration`  <a name="cfn-kendra-datasource-customdocumentenrichmentconfiguration"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [CustomDocumentEnrichmentConfiguration](aws-properties-kendra-datasource-customdocumentenrichmentconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataSourceConfiguration`  <a name="cfn-kendra-datasource-datasourceconfiguration"></a>
 Configuration information for an Amazon Kendra data source\. The contents of the configuration depend on the type of data source\. You can only specify one type of data source in the configuration\. Choose from one of the following data sources\.  
@@ -107,7 +116,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 The type of the data source\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `CONFLUENCE | CUSTOM | DATABASE | GOOGLEDRIVE | ONEDRIVE | S3 | SALESFORCE | SERVICENOW | SHAREPOINT`  
+*Allowed values*: `CONFLUENCE | CUSTOM | DATABASE | FSX | GOOGLEDRIVE | ONEDRIVE | S3 | SALESFORCE | SERVICENOW | SHAREPOINT | SLACK | WEBCRAWLER | WORKDOCS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-kendra-datasource-return-values"></a>

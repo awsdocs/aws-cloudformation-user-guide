@@ -55,7 +55,7 @@ Valid IPv4 address within the address range of the specified subnet\.
 Up to five VPC security group IDs, of the form `sg-xxxxxxxx`\. These must be for the same VPC as subnet specified\.  
 *Required*: Yes  
 *Type*: List of String  
-*Maximum*: `5`  
+*Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-efs-mounttarget-subnetid"></a>
@@ -71,11 +71,11 @@ The ID of the subnet to add the mount target in\. For file systems that use One 
 
 ### Ref<a name="aws-resource-efs-mounttarget-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ID\. For example: 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the MountTarget ID\. For example: 
 
- `{"Ref":"fsmt-12345678"}`\.
+ `{"Ref":"logical_mount_target_id"}` returns
 
-For the Amazon EFS file system mount target `fsmt-12345678`, Ref returns the mount target ID\.
+`fsmt-0123456789abcdef8`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -87,8 +87,13 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 #### <a name="aws-resource-efs-mounttarget-return-values-fn--getatt-fn--getatt"></a>
 
+`Id`  <a name="Id-fn::getatt"></a>
+The ID of the Amazon EFS file system that the mount target provides access to\.  
+Example: `fs-0123456789111222a`
+
 `IpAddress`  <a name="IpAddress-fn::getatt"></a>
-The IPv4 address of the mount target\.
+The IPv4 address of the mount target\.  
+Example: 192\.0\.2\.0
 
 ## Examples<a name="aws-resource-efs-mounttarget--examples"></a>
 
@@ -126,7 +131,7 @@ MountTarget:
 ```
 
 ## See also<a name="aws-resource-efs-mounttarget--seealso"></a>
-+  [Amazon EFS: How It Works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html) 
-+  [Creating Mount Targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) 
-+  [Walkthrough: Mounting a File System On\-Premises](https://docs.aws.amazon.com/efs/latest/ug/efs-onpremises.html) 
++  [Amazon EFS: How it works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html) 
++  [Creating mount targets](https://docs.aws.amazon.com/efs/latest/ug/accessing-fs.html) 
++  [Walkthrough: Mounting a file system on\-premises](https://docs.aws.amazon.com/efs/latest/ug/efs-onpremises.html) 
 

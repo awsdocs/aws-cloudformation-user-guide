@@ -175,7 +175,7 @@ Not all resources support import operations\. See [Resources that support import
    }
    ```
 
-1. Repeat steps 2–3 to update the source stack again, this time to delete the target resource from the stack\.
+1. Repeat steps 2 – 3 to update the source stack again, this time to delete the target resource from the stack\.
 
 1. Perform an import operation to add `GamesTable` to the target stack\.
 
@@ -184,7 +184,7 @@ Not all resources support import operations\. See [Resources that support import
 
    1. Read the **Import overview** page for a list of things you're required to provide during this operation\. Then, choose **Next**\.
 
-   1. On the **Specify template** page, do one of the following, and then choose **Next**\.
+   1. On the **Specify template** page, complete one of the following, and then choose **Next**\.
       + Choose **Amazon S3 URL**, and then specify a URL in the text box\.
       + Choose **Upload a template file**, and then browse for a file to upload\.
 
@@ -201,7 +201,7 @@ Not all resources support import operations\. See [Resources that support import
 **Important**  
 The import operation fails if you modify existing parameters that initiate a create, update, or delete operation\.
 
-   1. On the **Review *stack\-name*** page, confirm that the correct resource is being imported, and then choose **Import resources**\. This automatically executes the change set created in the last step\. Any [stack\-level tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html) are applied to imported resources at this time\.
+   1. On the **Review *stack\-name*** page, confirm that the correct resource is being imported, and then choose **Import resources**\. This automatically initiates the change set created in the last step\. Any [stack\-level tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html) are applied to imported resources at this time\.
 
    1. The **Events** pane of the **Stack details** page for your parent stack displays\.  
 ![\[The Events tab in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/import-events.png)
@@ -272,7 +272,7 @@ It's not necessary to run drift detection on the parent stack after this import 
 1. Update the source stack to apply the deletion policy to the resource\.
 
    ```
-   update-stack --stack-name "source-stack-name"
+   aws cloudformation update-stack --stack-name "source-stack-name"
    ```
 
 1. Remove the resource, related parameters, and outputs from the source template, and then add them to the target template\.
@@ -374,7 +374,7 @@ It's not necessary to run drift detection on the parent stack after this import 
    aws cloudformation update-stack --stack-name "source-stack-name"
    ```
 
-1. Create a change set of type `IMPORT` with the following parameters\. `--resources-to-import` does not support inline YAML\.
+1. Create a change set of type `IMPORT` with the following parameters\. `--resources-to-import` doesn't support inline YAML\.
 
    ```
    > aws cloudformation create-change-set
@@ -384,7 +384,7 @@ It's not necessary to run drift detection on the parent stack after this import 
        --template-body file://templateToImport.json
    ```
 
-   The AWS CLI also supports text files as input for the `resources-to-import` parameter, as shown in the following example\.
+   The AWS CLI also supports text files as input for the `resources-to-import` parameter, as shown in the previous example\.
 
    ```
    --resources-to-import: file://resourcesToImport.txt
@@ -407,13 +407,13 @@ It's not necessary to run drift detection on the parent stack after this import 
 1. Review the change set to make sure the correct resource is being imported into the target stack\.
 
    ```
-   > aws cloudformation describe-change-set --change-set-name ImportChangeSet
+   aws cloudformation describe-change-set --change-set-name ImportChangeSet
    ```
 
-1. Execute the change set to import the resource into the target stack\. Any [stack\-level tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html) are applied to imported resources at this time\. On successful completion of the operation `(IMPORT_COMPLETE)`, the resource is successfully imported\.
+1. Initiate the change set to import the resource into the target stack\. Any [stack\-level tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html) are applied to imported resources at this time\. On successful completion of the operation `(IMPORT_COMPLETE)`, the resource is successfully imported\.
 
    ```
-   > aws cloudformation execute-change-set --change-set-name ImportChangeSet
+   aws cloudformation execute-change-set --change-set-name ImportChangeSet
    ```
 **Note**  
 It's not necessary to run drift detection on the target stack after this import operation because the resource is already managed by AWS CloudFormation\.

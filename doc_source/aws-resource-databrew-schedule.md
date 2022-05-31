@@ -1,6 +1,6 @@
 # AWS::DataBrew::Schedule<a name="aws-resource-databrew-schedule"></a>
 
-Creates a new schedule for one or more DataBrew jobs\. Jobs can be run at a specific date and time, or at regular intervals\.
+Specifies a new schedule for one or more AWS Glue DataBrew jobs\. Jobs can be run at a specific date and time, or at regular intervals\.
 
 ## Syntax<a name="aws-resource-databrew-schedule-syntax"></a>
 
@@ -36,7 +36,7 @@ Properties:
 ## Properties<a name="aws-resource-databrew-schedule-properties"></a>
 
 `CronExpression`  <a name="cfn-databrew-schedule-cronexpression"></a>
-The dates and times when the job is to run\. For more information, see [Cron expressions](https://docs.aws.amazon.com/databrew/latest/dg/jobs.cron.html) in the *AWS Glue DataBrew Developer Guide*\.  
+The dates and times when the job is to run\. For more information, see [Cron expressions](https://docs.aws.amazon.com/databrew/latest/dg/jobs.cron.html) in the * AWS Glue DataBrew Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -72,7 +72,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
  `{ "Ref": "mySchedule" }` 
 
-For an AWS Glue DataBrew schedule named `mySchedule`,  `Ref` returns the name of the schedule\. 
+For an AWS Glue DataBrew schedule named `mySchedule`, `Ref` returns the name of the schedule\. 
 
 ## Examples<a name="aws-resource-databrew-schedule--examples"></a>
 
@@ -100,7 +100,7 @@ Resources:
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "This CloudFormation template creates a DataBrew Schedule",
+    "Description": "This CloudFormation template specifies a DataBrew Schedule",
     "Resources": {
         "MyDataBrewSchedule": {
             "Type": "AWS::DataBrew::Schedule",

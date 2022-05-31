@@ -34,8 +34,8 @@ The column that this operation acts on\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-quicksight-dataset-tagcolumnoperation-tags"></a>
-The dataset column tag, currently only used for geospatial type tagging\. \.  
-This is not tags for the AWS tagging feature\. \.
+The dataset column tag, currently only used for geospatial type tagging\.  
+This is not tags for the AWS tagging feature\.
 *Required*: Yes  
 *Type*: List of [ColumnTag](aws-properties-quicksight-dataset-columntag.md)  
 *Maximum*: `16`  

@@ -53,7 +53,7 @@ Confirmation could not be completed; for example, if the confirmation timed out\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcProperties`  <a name="cfn-iot-topicruledestination-vpcproperties"></a>
-Not currently supported by AWS CloudFormation\.  
+Properties of the virtual private cloud \(VPC\) connection\.  
 *Required*: No  
 *Type*: [VpcDestinationProperties](aws-properties-iot-topicruledestination-vpcdestinationproperties.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -82,4 +82,4 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 The topic rule destination URL\.
 
 `StatusReason`  <a name="StatusReason-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Additional details or reason why the topic rule destination is in the current status\.

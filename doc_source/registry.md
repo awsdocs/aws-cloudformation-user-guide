@@ -1,102 +1,68 @@
 # Using the AWS CloudFormation registry<a name="registry"></a>
 
-The *CloudFormation registry* lists private and public extensions that are available for use in your CloudFormation account\. *Extensions* are artifacts registered in the CloudFormation registry that augments the functionality of CloudFormation resources and properties\. For example, `AWS::MyService::MyResource` can be registered in your account and used like any other CloudFormation resource\. Extensions can be written by Amazon, APN partners, Marketplace sellers, and the developer community\. Extensions include CloudFormation items such as resource types and modules\.
+The CloudFormation registry lets you manage extensions, both public and private, such as resources, modules, and hooks that are available for use in your AWS account\. Currently, you can use the following extension types in the AWS registry: [resources types](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-types.html), [modules](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules.html), and [hooks](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/hooks.html)\. The registry makes it easier to discover and provision extensions in your AWS CloudFormation templates in the same manner you use AWS\-provided resources\.
 
-## Getting started<a name="registry-getting-started"></a>
+## Public and private extensions<a name="registry-public-private"></a>
 
-Get started with the CloudFormation registry by:
-+ Modeling — Create and validate a schema that acts as the authoritative description of your resource\. For more information, see [Modeling resource types for use in AWS CloudFormation](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-model.html)\.
-+ Developing — Write a handler that defines your core operations, such as; `Create`, `Read`, `Update`, `Delete`, and `List`, and test it\. For more information, see [Developing resource types for use in AWS CloudFormation templates](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-develop.html)\.
-+ Register — Register your provider with CloudFormation so that it can be used in your templates\. For more information, see [Registering resource types for use in AWS CloudFormation templates](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-develop.html)\.
+Extension types are registered as either public or private\. Currently, the registry offers the following extension types:
++ *[Resource types](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-types.html)* – model and provision custom logic as a resource, using stacks in CloudFormation\.
++ *[Modules](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules.html)* – package resource configurations for inclusion across stack templates, in a transparent, manageable, and repeatable way\.
++ *[Hooks](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/hooks.html)* – proactively inspect the configuration of your AWS resources before provisioning\.
 
-The CloudFormation registry provides per\-account, per\-region storage for your resource providers\.
+### Public extensions types<a name="registry-public-extensions"></a>
 
-## Private and public extensions<a name="registry-public-private"></a>
+*Public* extensions are those publicly published in the registry for use by all CloudFormation users\. This includes extensions published by AWS and third\-party extension publishers\.
 
-*Private* extensions are those extensions that you have explicitly registered for use in your AWS account\. These may be extensions you've created yourself, in addition to ones shared with you\. You can use the [CloudFormation CLI](https://github.com/aws-cloudformation/aws-cloudformation-rpdk), an open\-source tool for resource management, to create private extensions\. For more information, see the [CloudFormation Command Line Interface User Guide](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/what-is-cloudformation-cli.html)\.
+There are two kinds of public extensions:
++ *AWS public extensions* – Extensions published by AWS are always public, and activated by default, so you don't have to take any action before using them in your account\. In addition, AWS controls the versioning of the extension, so you are always using the latest available version\.
++ *Third\-party public extensions* – These are extensions made available for general use by publishers other than AWS\.
 
-**Note**  
-Using private *resource* types, a specific kind of extension, in your CloudFormation stacks incurs charges to your account\. This is because private resource types implement custom logic that runs during resource create, read, update, list, and delete operations\. This is in addition to any charges incurred for the resources created\. For more information, see [AWS CloudFormation pricing](https://aws.amazon.com/cloudformation/pricing/)\.
+For more information, see [Using public extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html)\.
 
-*Public* extensions are those provided by AWS to manage specific AWS service resources\.
+### Private extensions types<a name="registry-private-extensions"></a>
 
-## Registering extensions in CloudFormation<a name="registry-register"></a>
+*Private* extensions are those extensions from third parties that you have explicitly activated for use in your AWS account\.
 
-To use private extensions, either ones you develop yourself, or types shared with you, you must first register them with CloudFormation, in the accounts and regions in which you want to use them\. Once you're registered an extension, it will appear in the CloudFormation registry for that account and region, and you can use it in your stack templates\.
+There are two kinds of private extensions:
++ *Activated private extensions* – Are the local copies of third\-party extensions that you have activated for your account and region\. When you activate a third\-party public extension, CloudFormation creates a local copy of that extension in your account's registry\.
++ *Registered private extensions* – Can also activate private extensions that aren't listed in the public CloudFormation registry\. These may be extensions you've created yourself, or ones shared with you by your organization or other third party\. To use such a private extension in your account, you must first register it\. Registering the extension uploads a copy of it to the CloudFormation registry in your account and activates it\.
 
-You can register an extension using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or using the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\. To register an extension using the CloudFormation CLI, see [Registering extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-register.html) in the *CloudFormation CLI User Guide*\.
+For more information, see [Using private extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html)\.
 
-### IAM permissions for registering a resource type<a name="registry-register-permissions"></a>
+## Managing extensions through the CloudFormation registry<a name="registry-view"></a>
 
-As part of registering a resource type, you specify an S3 bucket which contains the schema handler package\. This package contains the schema, event handlers, and associated files for the resource type you want to register\. The user registering the resource type must be able to access the the schema handler package in that S3 bucket\. That is, the user needs to have [GetObject](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html) permissions for the schema handler package\.
+Use the CloudFormation registry to manage the extensions in your account, including:
++ Viewing the available and activated extensions\.
++ Registering private extensions\.
++ Activating public extensions\.
 
-This is true whether you're either using the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command of the AWS CLI, or the `[submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)` command of the CloudFormation CLI\.
+### To view extensions in the CloudFormation console<a name="registry-view-procedure"></a>
 
-For more information, see [Actions, Resources, and Condition Keys for Amazon S3](https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html) in the *AWS Identity and Access Management User Guide*\.
+1. Sign in to the AWS Management Console and open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
-**To register a resource type using the AWS CLI**
+1. From the **CloudFormation** navigation pane, under **Registry**, select what extension category you want to view:
+   + **Public extensions** displays the public extensions available in your account\.
 
-1. Locate the S3 bucket that contains the resource type package for the resource provider you want to register in your account\.
+     1. Choose your extension type: **Resource types**, **Modules**, or **Hooks**\.
 
-1. Use the [register\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/register-type.html) command to register the resource provider in your account:
+     1. Choose your Publisher: **AWS** or **Third party**\.
 
-   `RegisterType` is an asynchronous action, and returns a registration token you can use to track the progress of your registration request\.
-**Note**  
-If your resource type calls AWS APIs in any of its handlers, you must create an IAM execution role that includes the necessary permissions to call those AWS APIs, and provision that execution role in your account\. You can then specify this execution role using the `--execution-role-arn` parameter\. CloudFormation then assumes that execution role to provide your resource type with the appropriate credentials\.
+     1. Use the **Filter** options to further select the extensions to view\.
+   + **Activated extensions** displays the public and private extensions activated in your account\.
 
-   For example\. the following command registers the `My::Resource::Example` resource type in the current AWS account:
+     1. Choose your extension type: **Resource types**, **Modules**, or **Hooks**\.
 
-   ```
-   aws cloudformation register-type --type-name My::Resource::Example --schema-handler-package [s3 object path] --type RESOURCE
-   
-   {
-       "RegistrationToken": "f5525280-104e-4d35-bef5-8f1fexample"
-   }
-   ```
+     1. Use the **Filter** drop\-down menu to further select the extensions to view:
+        + **AWS** – lists extensions published by AWS\. Extensions published by AWS are activated by default\.
+        + **Third\-party** – lists any public extensions from publishers other than AWS that you have activated in this account\.
+        + **Registered** – lists any private extensions you have activated in this account\.
+   + **Publisher** displays any public extensions that you have published using this account\. For more information, see [Publishing extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html) in the *User Guide for Extension Development*\.
 
-1. Optional: Use the registration token with the `[describe\-type\-registration](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-type-registration.html)` command to track the progress of your registration request\.
-
-   When CloudFormation completes the registration request, it sets the progress status of the request to `COMPLETE`\.
-
-   The following example uses the registration token returned by the RegisterType command above to return registration status information\.
-
-   ```
-   aws cloudformation describe-type-registration --registration-token f5525280-104e-4d35-bef5-8f1fexample
-   
-   {
-       "ProgressStatus": "COMPLETE",
-       "TypeArn": "arn:aws:cloudformation:us-east-1:012345678910:type/resource/My-Resource-Example",
-       "Description": "Deployment is currently in DEPLOY_STAGE of status COMPLETED; ",
-       "TypeVersionArn": "arn:aws:cloudformation:us-east-1:012345678910:type/resource/My-Resource-Example/00000001"
-   }
-   ```
-
-### Specifying which version of an extension to use<a name="registry-set-version"></a>
-
-Over time, you may register multiple versions of the same extension\. You can specify which version of the extension you want to use for CloudFormation operations\.
-
-**To specify which version of an extension to use using the AWS CLI**
-+ Use the `[set\-type\-default\-version](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/set-type-default-version.html)` command to specify which version of the extension to use for CloudFormation operations in your account\.
-
-  For example, the following command sets the default version of the `My::Resource::Example` resource type to `00000003` for the current account\.
-
-  ```
-  aws cloudformation set-type-default-version --type RESOURCE --type-name My::Resource::Example --version-id 00000003
-  ```
-
-## Viewing registered extensions in CloudFormation<a name="registry-view"></a>
-
-Once you've registered an extension in an account, you can view the details of that extension in the CloudFormation console\. Private extensions are displayed in the **Private** section of the CloudFormation registry\.
-
-**To view registered extensions in the CloudFormation console**
-
-1. In the [AWS CloudFormation console](https://console.aws.amazon.com/cloudformation), from the **CloudFormation** navigation pane, under **CloudFormation registry**, select the appropriate extension\. For example, select **Resource types** or **Modules**\.
-
-1. Select **Public** or **Private**\.
+1. Search or select the extension name to view extension details\.
 
 ## Record resource types in AWS Config<a name="registry-config-record"></a>
 
-You can specify that AWS Config automatically track your private resource types and record changes to those resources as *configuration items*\. This enables you to view configuration history for these private resource types, as well as write AWS Config Rules rules to verify configuration best practices\.
+You can specify that AWS Config automatically track your private resource types and record changes to those resources as *configuration items*\. This enables you to view configuration history for these private resource types, in addition to write AWS Config Rules rules to verify configuration best practices\. AWS Config is required for the hook extension\.
 
 To have AWS Config automatically track your private resource types:
 + Manage the resources through CloudFormation\. This includes performing all resource create, updated, and delete operations through CloudFormation\.
@@ -106,13 +72,53 @@ If you use an IAM role to perform your stack operations, that IAM role must have
 [DeleteResourceConfig](https://docs.aws.amazon.com/config/latest/APIReference/API_DeleteResourceConfig.html)
 + Configure AWS Config to record all resource types\. For more information, see [Record configurations for third\-party resources](https://docs.aws.amazon.com/config/latest/developerguide/customresources.html) in the *AWS Config Developer Guide*\.
 **Note**  
-AWS Config does not support recording of private resources containing properties defined as both required *and* write\-only\.  
-By design, resource properties defined as write\-only are not returned in the schema used to create AWS Config configuration item\. Because of this, including a property that is defined as both write\-only and required will cause the configuration item creation to fail, as a required property will not be not present\. To view the schema that will be used to create the configuration item, you can review the `schema` property of the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) action\.
+AWS Config doesn't support recording of private resources containing properties defined as both required *and* write\-only\.  
+By design, resource properties defined as write\-only aren't returned in the schema used to create AWS Config configuration item\. Because of this, including a property that's defined as both write\-only and required will cause the configuration item creation to fail, as a required property won't be not present\. To view the schema that will be used to create the configuration item, you can review the `schema` property of the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) action\.
 
-For more information on configuration items, see [Configuration items](https://docs.aws.amazon.com/config/latest/developerguide/config-concepts.html#config-items) in the *AWS Config Developer Guide*\.
+For more information about configuration items, see [Configuration items](https://docs.aws.amazon.com/config/latest/developerguide/config-concepts.html#config-items) in the *AWS Config Developer Guide*\.
 
 ### Preventing sensitive properties being recorded in a configuration item<a name="registry-config-record-sensitive"></a>
 
-Your resource type may contain properties that you consider sensitive information, such as passwords, secrets, or other sensitive data, that you don't want recorded as part of the configuration item\. To prevent a property from being recorded in the configuration item, you can include that property in the `writeOnlyproperties` list in your resource type schema\. Resource properties listed as `writeOnlyproperties` can be specified by the user, but will not be returned by a `read` or `list` request\.
+Your resource type may contain properties that you consider sensitive information, such as passwords, secrets, or other sensitive data, that you don't want recorded as part of the configuration item\. To prevent a property from being recorded in the configuration item, you can include that property in the `writeOnlyproperties` list in your resource type schema\. Resource properties listed as `writeOnlyproperties` can be specified by the user, but won't be returned by a `read` or `list` request\.
 
 For more information, see [Resource Provider Schema](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-schema.html#schema-properties-writeonlyproperties) in the *CloudFormation Command Line Interface User Guide*\.
+
+## Confused deputy prevention<a name="cross-service-confused-deputy-prevention"></a>
+
+The confused deputy problem is a security issue where an entity that doesn't have permission to perform an action can coerce a more\-privileged entity to perform the action\. In AWS, cross\-service impersonation can result in the confused deputy problem\. Cross\-service impersonation can occur when one service \(the *calling service*\) calls another service \(the *called service*\)\. The calling service can be manipulated to use its permissions to act on another customer's resources in a way it shouldn't otherwise have permission to access\. To prevent this, AWS provides tools that help you protect your data for all services with service principals that have been given access to resources in your account\.
+
+We recommend using the [https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourcearn](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourcearn) and [https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourceaccount](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-sourceaccount) global condition context keys in resource policies to limit the permissions that AWS CloudFormation gives another service to the extension\. If the `aws:SourceArn` value doesn't contain the account ID, such as an Amazon S3 bucket Amazon Resource Name \(ARN\), you must use both global condition context keys to limit permissions\. If you use both global condition context keys and the `aws:SourceArn` value contains the account ID, the `aws:SourceAccount` value and the account in the `aws:SourceArn` value must use the same account ID when used in the same policy statement\. Use `aws:SourceArn` if you want only one resource to be associated with the cross\-service access\. Use `aws:SourceAccount` if you want to allow any resource in that account to be associated with the cross\-service use\.
+
+The value of `aws:SourceArn` must use the extension's ARN\.
+
+The most effective way to protect against the confused deputy problem is to use the `aws:SourceArn` global condition context key with the full ARN of the resource\. If you don't know the full ARN of the extension or if you are specifying multiple extensions, use the `aws:SourceArn` global context condition key with wildcards \(`*`\) for the unknown portions of the ARN\. For example, `arn:aws:cloudformation:*:123456789012:*`\.
+
+**Note**  
+For registry services, CloudFormation makes calls to AWS Security Token Service \(AWS STS\) to assume a role in your account\. This role is configured for `ExecutionRoleArn` in the [RegisterType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html) operation and `LogRoleArn` set in the [LoggingConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_LoggingConfig.html) operation\.
+
+The following example shows how you can use the `aws:SourceArn` and `aws:SourceAccount` global condition context keys in AWS CloudFormation to prevent the confused deputy problem\.
+
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": [
+          "resources.cloudformation.amazonaws.com"
+        ]
+      },
+      "Action": "sts:AssumeRole",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceAccount": "123456789012"
+        },
+        "StringLike": {
+          "aws:SourceArn": "arn:aws:cloudformation:us-east-1:123456789012:type/resource/Organization-Service-Resource/*"
+        }
+      }
+    }
+  ]
+}
+```

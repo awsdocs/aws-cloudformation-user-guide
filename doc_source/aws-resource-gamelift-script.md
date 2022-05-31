@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Name](#cfn-gamelift-script-name)" : String,
       "[StorageLocation](#cfn-gamelift-script-storagelocation)" : S3Location,
+      "[Tags](#cfn-gamelift-script-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Version](#cfn-gamelift-script-version)" : String
     }
 }
@@ -27,6 +28,8 @@ Properties:
   [Name](#cfn-gamelift-script-name): String
   [StorageLocation](#cfn-gamelift-script-storagelocation): 
     S3Location
+  [Tags](#cfn-gamelift-script-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Version](#cfn-gamelift-script-version): String
 ```
 
@@ -41,9 +44,16 @@ A descriptive label that is associated with a script\. Script names do not need 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StorageLocation`  <a name="cfn-gamelift-script-storagelocation"></a>
-The location in Amazon S3 where build or script files are stored for access by Amazon GameLift\.  
+The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored\. The storage location must specify the Amazon S3 bucket name, the zip file name \(the "key"\), and a role ARN that allows Amazon Web Services to access the Amazon S3 storage location\. The S3 bucket must be in the same Region where you want to create a new script\. By default, Amazon Web Services uploads the latest version of the zip file; if you have S3 object versioning turned on, you can use the `ObjectVersion` parameter to specify an earlier version\.   
 *Required*: Yes  
 *Type*: [S3Location](aws-properties-gamelift-script-s3location.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-gamelift-script-tags"></a>
+A list of labels to assign to the new script resource\. Tags are developer\-defined key\-value pairs\. Tagging AWS resources are useful for resource management, access management and cost allocation\. For more information, see [ Tagging AWS Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the * AWS General Reference*\. Once the resource is created, you can use TagResource, UntagResource, and ListTagsForResource to add, remove, and view tags\. The maximum tag limit may be lower than stated\. See the AWS General Reference for actual tagging limits\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-gamelift-script-version"></a>
@@ -80,7 +90,7 @@ A unique identifier for a Realtime script\.
 
 ### Create a Realtime Servers Script<a name="aws-resource-gamelift-script--examples--Create_a_Realtime_Servers_Script"></a>
 
-The following example creates a GameLift script named `MyRealtimeScript`\. The zipped script files are located in an S3 bucket, specified by the `S3Bucket` and `S3Key` input parameters\. The example also creates the AWS Identity and Access Management \(IAM\) role that GameLift assumes so that it has permissions to download the script files\.
+The following example creates a GameLift script named `MyRealtimeScript`\. The zipped script files are located in an S3 bucket, specified by the `S3Bucket` and `S3Key` input parameters\. The example also creates the AWS Identity and Access Management role that GameLift assumes so that it has permissions to download the script files\.
 
 #### JSON<a name="aws-resource-gamelift-script--examples--Create_a_Realtime_Servers_Script--json"></a>
 
@@ -191,6 +201,6 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-gamelift-script--seealso"></a>
-+ [ Create GameLift resources using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++ [ Create GameLift resources using Amazon CloudFront](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 + [ Upload script files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-script-uploading.html#realtime-script-uploading-s3) in the *Amazon GameLift Developer Guide*
 +  [CreateScript](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateScript.html) in the *Amazon GameLift API Reference* 

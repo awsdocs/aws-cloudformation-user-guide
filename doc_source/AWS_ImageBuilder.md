@@ -1,4 +1,4 @@
-# ImageBuilder resource type reference<a name="AWS_ImageBuilder"></a>
+# EC2 Image Builder resource type reference<a name="AWS_ImageBuilder"></a>
 
 **Resource types**
 + [AWS::ImageBuilder::Component](aws-resource-imagebuilder-component.md)

@@ -1,6 +1,6 @@
 # AWS::QuickSight::DataSet S3Source<a name="aws-properties-quicksight-dataset-s3source"></a>
 
-A physical table type for as S3 data source\.
+A physical table type for an S3 data source\.
 
 ## Syntax<a name="aws-properties-quicksight-dataset-s3source-syntax"></a>
 
@@ -35,7 +35,8 @@ The Amazon Resource Name \(ARN\) for the data source\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputColumns`  <a name="cfn-quicksight-dataset-s3source-inputcolumns"></a>
-A physical table type for as S3 data source\.  
+A physical table type for an S3 data source\.  
+For files that aren't JSON, only `STRING` data types are supported in input columns\.
 *Required*: Yes  
 *Type*: List of [InputColumn](aws-properties-quicksight-dataset-inputcolumn.md)  
 *Maximum*: `2048`  

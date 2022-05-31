@@ -132,7 +132,7 @@ When you rename a resource, you rename its logical ID, which is the name that is
 
 1. For the public route, we want the Internet gateway to be the destination target\. Use `GatewayId` to create a connection from the `PublicRoute` resource to the Internet gateway, similar to the way you created a connection between the Internet gateway and the VPC\.
 
-   CloudFormation can't associate a route with an Internet gateway until you associate the Internet gateway with the VPC\. This means we need to create an explicit dependency on the Internet gateway\-VPC attachment, as described in the next step\. For more information, see [DependsOn attribute](aws-attribute-dependson.md)\.
+   CloudFormation can't associate a route with an Internet gateway until you associate the Internet gateway with the VPC\. This means we need to create an explicit dependency on the Internet gateway\-VPC attachment, as described in the next step\. For more information, see [`DependsOn` attribute](aws-attribute-dependson.md)\.
 
 1. Create an explicit dependency between the `PublicRoute` resource and the Internet gateway\-VPC attachment\.
 
@@ -729,14 +729,14 @@ JSON
            "SecurityGroupIngress": [
              {
                "IpProtocol": "tcp",
-               "FromPort": "80",
-               "ToPort": "80",
+               "FromPort": 80,
+               "ToPort": 80,
                "CidrIp": "0.0.0.0/0"
              },
              {
                "IpProtocol": "tcp",
-               "FromPort": "22",
-               "ToPort": "22",
+               "FromPort": 22,
+               "ToPort": 22,
                "CidrIp": {
                  "Ref": "SSHLocation"
                }
@@ -750,12 +750,12 @@ YAML
          GroupDescription: Allow access from HTTP and SSH traffic
          SecurityGroupIngress:
            - IpProtocol: tcp
-             FromPort: '80'
-             ToPort: '80'
+             FromPort: 80
+             ToPort: 80
              CidrIp: 0.0.0.0/0
            - IpProtocol: tcp
-             FromPort: '22'
-             ToPort: '22'
+             FromPort: 22
+             ToPort: 22
              CidrIp: !Ref SSHLocation
    ```  
 `WebServerInstance`  

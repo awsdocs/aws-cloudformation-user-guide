@@ -39,24 +39,36 @@ Properties:
 The Amazon Resource Name \(ARN\) of the customer gateway\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `500`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DeviceId`  <a name="cfn-networkmanager-customergatewayassociation-deviceid"></a>
 The ID of the device\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `50`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GlobalNetworkId`  <a name="cfn-networkmanager-customergatewayassociation-globalnetworkid"></a>
 The ID of the global network\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `50`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LinkId`  <a name="cfn-networkmanager-customergatewayassociation-linkid"></a>
 The ID of the link\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `50`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-networkmanager-customergatewayassociation-return-values"></a>

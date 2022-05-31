@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-athena-workgroup-workgroupconfiguration-properties"></a>
 
 `BytesScannedCutoffPerQuery`  <a name="cfn-athena-workgroup-workgroupconfiguration-bytesscannedcutoffperquery"></a>
-The upper limit \(cutoff\) for the amount of bytes a single query in a workgroup is allowed to scan\.  
+The upper limit \(cutoff\) for the amount of bytes a single query in a workgroup is allowed to scan\. No default is defined\.  
 This property currently supports integer types\. Support for long values is planned\.
 *Required*: No  
 *Type*: Integer  

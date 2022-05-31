@@ -41,6 +41,7 @@ Specify one of the following modes\.
 + ****DISABLED – Listener only accepts connections without TLS\. 
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `DISABLED | PERMISSIVE | STRICT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Validation`  <a name="cfn-appmesh-virtualgateway-virtualgatewaylistenertls-validation"></a>

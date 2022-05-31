@@ -37,18 +37,21 @@ Specifies the action to take if all of the specified conditions \(`onStatusReaso
 
 `OnExitCode`  <a name="cfn-batch-jobdefinition-evaluateonexit-onexitcode"></a>
 Contains a glob pattern to match against the decimal representation of the `ExitCode` returned for a job\. The pattern can be up to 512 characters in length\. It can contain only numbers, and can optionally end with an asterisk \(\*\) so that only the start of the string needs to be an exact match\.  
+The string can be between 1 and 512 characters in length\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OnReason`  <a name="cfn-batch-jobdefinition-evaluateonexit-onreason"></a>
 Contains a glob pattern to match against the `Reason` returned for a job\. The pattern can be up to 512 characters in length\. It can contain letters, numbers, periods \(\.\), colons \(:\), and white space \(including spaces and tabs\)\. It can optionally end with an asterisk \(\*\) so that only the start of the string needs to be an exact match\.  
+The string can be between 1 and 512 characters in length\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OnStatusReason`  <a name="cfn-batch-jobdefinition-evaluateonexit-onstatusreason"></a>
 Contains a glob pattern to match against the `StatusReason` returned for a job\. The pattern can be up to 512 characters in length\. It can contain letters, numbers, periods \(\.\), colons \(:\), and white space \(including spaces or tabs\)\. It can optionally end with an asterisk \(\*\) so that only the start of the string needs to be an exact match\.  
+The string can be between 1 and 512 characters in length\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

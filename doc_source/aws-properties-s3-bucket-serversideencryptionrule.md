@@ -42,7 +42,7 @@ Specifies the default server\-side encryption to apply to new objects in the buc
 
 ### Create a bucket with default encryption<a name="aws-properties-s3-bucket-serversideencryptionrule--examples--Create_a_bucket_with_default_encryption"></a>
 
-The following example creates a bucket with server\-side bucket encryption configured\. This example uses KMS\-managed keys\. You can use S3\-managed keys instead by modifying the [Amazon S3 Bucket ServerSideEncryptionByDefault](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html) property\.
+The following example creates a bucket with server\-side bucket encryption configured\. This example uses encryption with KMS keys \(SSE\-KMS\)\. You can use server\-side encryption with S3\-managed keys \(SSE\-S3\) by modifying the [Amazon S3 Bucket ServerSideEncryptionByDefault](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html) property to specify `AES256` for `SSEAlgorithm`\. For more information, see [Using SSE\-S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingServerSideEncryption.html) in the *Amazon S3 User Guide*\.
 
 #### JSON<a name="aws-properties-s3-bucket-serversideencryptionrule--examples--Create_a_bucket_with_default_encryption--json"></a>
 
@@ -92,11 +92,11 @@ Resources:
     DeletionPolicy: Delete
 ```
 
-### Create a bucket using AWS KMS server\-side encryption with an S3 Bucket Key<a name="aws-properties-s3-bucket-serversideencryptionrule--examples--Create_a_bucket_using_AWS_KMS_server-side_encryption_with_an_S3_Bucket_Key"></a>
+### Create a bucket using KMS server\-side encryption with an S3 Bucket Key<a name="aws-properties-s3-bucket-serversideencryptionrule--examples--Create_a_bucket_using_KMS_server-side_encryption_with_an_S3_Bucket_Key"></a>
 
-The following example creates a bucket that specifies default encryption using AWS KMS server\-side encryption with an S3 Bucket Key\. The example uses a customer managed AWS KMS customer master key \(CMK\)\.
+The following example creates a bucket that specifies default encryption using AWS KMS server\-side encryption with an S3 Bucket Key\. The example uses a customer managed AWS KMS key\.
 
-#### JSON<a name="aws-properties-s3-bucket-serversideencryptionrule--examples--Create_a_bucket_using_AWS_KMS_server-side_encryption_with_an_S3_Bucket_Key--json"></a>
+#### JSON<a name="aws-properties-s3-bucket-serversideencryptionrule--examples--Create_a_bucket_using_KMS_server-side_encryption_with_an_S3_Bucket_Key--json"></a>
 
 ```
 {
@@ -127,7 +127,7 @@ The following example creates a bucket that specifies default encryption using A
 }
 ```
 
-#### YAML<a name="aws-properties-s3-bucket-serversideencryptionrule--examples--Create_a_bucket_using_AWS_KMS_server-side_encryption_with_an_S3_Bucket_Key--yaml"></a>
+#### YAML<a name="aws-properties-s3-bucket-serversideencryptionrule--examples--Create_a_bucket_using_KMS_server-side_encryption_with_an_S3_Bucket_Key--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09

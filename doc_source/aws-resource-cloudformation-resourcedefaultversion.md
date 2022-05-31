@@ -1,6 +1,6 @@
 # AWS::CloudFormation::ResourceDefaultVersion<a name="aws-resource-cloudformation-resourcedefaultversion"></a>
 
-Specifes the default version of a resource\. The default version of a resource will be used in CloudFormation operations\.
+Specifies the default version of a resource\. The default version of a resource will be used in CloudFormation operations\.
 
 ## Syntax<a name="aws-resource-cloudformation-resourcedefaultversion-syntax"></a>
 
@@ -51,7 +51,7 @@ Conditional: You must specify either `TypeVersionArn`, or `TypeName` and `Versio
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VersionId`  <a name="cfn-cloudformation-resourcedefaultversion-versionid"></a>
-The ID of a specific version of the resource\. The version ID is the value at the end of the Amazon Resource Name \(ARN\) assigned to the resource version when it is registered\.  
+The ID of a specific version of the resource\. The version ID is the value at the end of the Amazon Resource Name \(ARN\) assigned to the resource version when it's registered\.  
 Conditional: You must specify either `TypeVersionArn`, or `TypeName` and `VersionId`\.  
 *Required*: Conditional  
 *Type*: String  

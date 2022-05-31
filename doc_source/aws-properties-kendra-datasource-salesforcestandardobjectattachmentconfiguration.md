@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource SalesforceStandardObjectAttachmentConfiguration<a name="aws-properties-kendra-datasource-salesforcestandardobjectattachmentconfiguration"></a>
 
-Provides configuration information for processing attachments to Salesforce standard objects\. 
+Provides the configuration information for processing attachments to Salesforce standard objects\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-salesforcestandardobjectattachmentconfiguration-syntax"></a>
 
@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DocumentTitleFieldName](#cfn-kendra-datasource-salesforcestandardobjectattachmentconfiguration-documenttitlefieldname)" : String,
-  "[FieldMappings](#cfn-kendra-datasource-salesforcestandardobjectattachmentconfiguration-fieldmappings)" : DataSourceToIndexFieldMappingList
+  "[FieldMappings](#cfn-kendra-datasource-salesforcestandardobjectattachmentconfiguration-fieldmappings)" : [ DataSourceToIndexFieldMapping, ... ]
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DocumentTitleFieldName](#cfn-kendra-datasource-salesforcestandardobjectattachmentconfiguration-documenttitlefieldname): String
   [FieldMappings](#cfn-kendra-datasource-salesforcestandardobjectattachmentconfiguration-fieldmappings): 
-    DataSourceToIndexFieldMappingList
+    - DataSourceToIndexFieldMapping
 ```
 
 ## Properties<a name="aws-properties-kendra-datasource-salesforcestandardobjectattachmentconfiguration-properties"></a>
@@ -37,6 +37,6 @@ The name of the field used for the document title\.
 `FieldMappings`  <a name="cfn-kendra-datasource-salesforcestandardobjectattachmentconfiguration-fieldmappings"></a>
 One or more objects that map fields in attachments to Amazon Kendra index fields\.  
 *Required*: No  
-*Type*: [DataSourceToIndexFieldMappingList](aws-properties-kendra-datasource-datasourcetoindexfieldmappinglist.md)  
+*Type*: List of [DataSourceToIndexFieldMapping](aws-properties-kendra-datasource-datasourcetoindexfieldmapping.md)  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

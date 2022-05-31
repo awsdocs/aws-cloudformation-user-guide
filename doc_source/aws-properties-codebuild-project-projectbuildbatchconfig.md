@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[BatchReportMode](#cfn-codebuild-project-projectbuildbatchconfig-batchreportmode)" : String,
   "[CombineArtifacts](#cfn-codebuild-project-projectbuildbatchconfig-combineartifacts)" : Boolean,
   "[Restrictions](#cfn-codebuild-project-projectbuildbatchconfig-restrictions)" : BatchRestrictions,
   "[ServiceRole](#cfn-codebuild-project-projectbuildbatchconfig-servicerole)" : String,
@@ -20,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-codebuild-project-projectbuildbatchconfig-syntax.yaml"></a>
 
 ```
+  [BatchReportMode](#cfn-codebuild-project-projectbuildbatchconfig-batchreportmode): String
   [CombineArtifacts](#cfn-codebuild-project-projectbuildbatchconfig-combineartifacts): Boolean
   [Restrictions](#cfn-codebuild-project-projectbuildbatchconfig-restrictions): 
     BatchRestrictions
@@ -28,6 +30,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-codebuild-project-projectbuildbatchconfig-properties"></a>
+
+`BatchReportMode`  <a name="cfn-codebuild-project-projectbuildbatchconfig-batchreportmode"></a>
+Specifies how build status reports are sent to the source provider for the batch build\. This property is only used when the source provider for your project is Bitbucket, GitHub, or GitHub Enterprise, and your project is configured to report build statuses to the source provider\.    
+REPORT\_AGGREGATED\_BATCH  
+\(Default\) Aggregate all of the build statuses into a single status report\.  
+REPORT\_INDIVIDUAL\_BUILDS  
+Send a separate status report for each individual build\.
+*Required*: No  
+*Type*: String  
+*Allowed values*: `REPORT_AGGREGATED_BATCH | REPORT_INDIVIDUAL_BUILDS`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CombineArtifacts`  <a name="cfn-codebuild-project-projectbuildbatchconfig-combineartifacts"></a>
 Specifies if the build artifacts for the batch build should be combined into a single artifact location\.  

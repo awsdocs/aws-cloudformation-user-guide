@@ -109,7 +109,7 @@ The private IPv4 address of the network interface\. Applies only if creating a n
 `PrivateIpAddresses`  <a name="aws-properties-ec2-network-iface-embedded-privateipaddresses"></a>
 One or more private IPv4 addresses to assign to the network interface\. Only one private IPv4 address can be designated as primary\.  
 *Required*: No  
-*Type*: List of [PrivateIpAddressSpecification](aws-properties-ec2-network-interface-privateipspec-1.md)  
+*Type*: List of [PrivateIpAddressSpecification](aws-properties-ec2-network-interface-privateipspec.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecondaryPrivateIpAddressCount`  <a name="aws-properties-ec2-network-iface-embedded-secondprivateip"></a>

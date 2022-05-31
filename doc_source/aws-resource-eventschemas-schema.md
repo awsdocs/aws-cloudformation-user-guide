@@ -70,6 +70,7 @@ Tags associated with the schema\.
 
 `Type`  <a name="cfn-eventschemas-schema-type"></a>
 The type of schema\.  
+Valid types include `OpenApi3` and `JSONSchemaDraft4`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -115,9 +116,9 @@ The version number of the schema\.
 Resources:
   ExecutionStatusChangeSchema:
     Type: AWS::EventSchemas::Schema
-    Properties:Ref
-      Registry: 'aws.events'
-      Name: ExecutionStatusChange
+    Properties:
+      RegistryName: 'aws.events'
+      SchemaName: ExecutionStatusChange
       Description: 'event emitted when the status of a state machine execution change'
       Type: OpenApi3
       Content: >
@@ -127,6 +128,7 @@ Resources:
             "version": "1.0.0",
             "title": "StepFunctionsExecutionStatusChange"
           },
+          "paths":{},
           "components": {
             "schemas": {
               "StepFunctionsExecutionStatusChange": {

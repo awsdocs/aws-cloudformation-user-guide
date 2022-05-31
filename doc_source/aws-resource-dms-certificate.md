@@ -44,7 +44,7 @@ The contents of a `.pem` file, which contains an X\.509 certificate\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificateWallet`  <a name="cfn-dms-certificate-certificatewallet"></a>
-The location of an imported Oracle Wallet certificate for use with SSL\.  
+The location of an imported Oracle Wallet certificate for use with SSL\. Example: `filebase64("${path.root}/rds-ca-2019-root.sso")`   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

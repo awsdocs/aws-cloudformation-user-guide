@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `InitialStateName`  <a name="cfn-iotevents-detectormodel-detectormodeldefinition-initialstatename"></a>
 The state that is entered at the creation of each detector \(instance\)\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
@@ -35,6 +35,6 @@ The state that is entered at the creation of each detector \(instance\)\.
 
 `States`  <a name="cfn-iotevents-detectormodel-detectormodeldefinition-states"></a>
 Information about the states of the detector\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of [State](aws-properties-iotevents-detectormodel-state.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

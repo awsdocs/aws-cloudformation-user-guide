@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ReplicationInstanceArn](#cfn-dms-replicationtask-replicationinstancearn)" : String,
       "[ReplicationTaskIdentifier](#cfn-dms-replicationtask-replicationtaskidentifier)" : String,
       "[ReplicationTaskSettings](#cfn-dms-replicationtask-replicationtasksettings)" : String,
+      "[ResourceIdentifier](#cfn-dms-replicationtask-resourceidentifier)" : String,
       "[SourceEndpointArn](#cfn-dms-replicationtask-sourceendpointarn)" : String,
       "[TableMappings](#cfn-dms-replicationtask-tablemappings)" : String,
       "[Tags](#cfn-dms-replicationtask-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -40,6 +41,7 @@ Properties:
   [ReplicationInstanceArn](#cfn-dms-replicationtask-replicationinstancearn): String
   [ReplicationTaskIdentifier](#cfn-dms-replicationtask-replicationtaskidentifier): String
   [ReplicationTaskSettings](#cfn-dms-replicationtask-replicationtasksettings): String
+  [ResourceIdentifier](#cfn-dms-replicationtask-resourceidentifier): String
   [SourceEndpointArn](#cfn-dms-replicationtask-sourceendpointarn): String
   [TableMappings](#cfn-dms-replicationtask-tablemappings): String
   [Tags](#cfn-dms-replicationtask-tags): 
@@ -99,10 +101,16 @@ Constraints:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplicationTaskSettings`  <a name="cfn-dms-replicationtask-replicationtasksettings"></a>
-Overall settings for the task, in JSON format\. For more information, see [Specifying Task Settings for AWS Database Migration Service Tasks](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html) in the *AWS Database Migration User Guide\.*   
+Overall settings for the task, in JSON format\. For more information, see [Specifying Task Settings for AWS Database Migration Service Tasks](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html) in the * AWS Database Migration Service User Guide\.*   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ResourceIdentifier`  <a name="cfn-dms-replicationtask-resourceidentifier"></a>
+A friendly name for the resource identifier at the end of the `EndpointArn` response parameter that is returned in the created `Endpoint` object\. The value for this parameter can have up to 31 characters\. It can contain only ASCII letters, digits, and hyphen \('\-'\)\. Also, it can't end with a hyphen or contain two consecutive hyphens, and can only begin with a letter, such as `Example-App-ARN1`\. For example, this value might result in the `EndpointArn` value `arn:aws:dms:eu-west-1:012345678901:rep:Example-App-ARN1`\. If you don't specify a `ResourceIdentifier` value, AWS DMS generates a default identifier value for the end of `EndpointArn`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceEndpointArn`  <a name="cfn-dms-replicationtask-sourceendpointarn"></a>
 An Amazon Resource Name \(ARN\) that uniquely identifies the source endpoint\.  
@@ -111,7 +119,7 @@ An Amazon Resource Name \(ARN\) that uniquely identifies the source endpoint\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TableMappings`  <a name="cfn-dms-replicationtask-tablemappings"></a>
-The table mappings for the task, in JSON format\. For more information, see [Using Table Mapping to Specify Task Settings](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html) in the *AWS Database Migration Service User Guide\.*   
+The table mappings for the task, in JSON format\. For more information, see [Using Table Mapping to Specify Task Settings](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html) in the * AWS Database Migration Service User Guide\.*   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

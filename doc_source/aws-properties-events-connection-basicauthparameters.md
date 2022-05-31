@@ -1,6 +1,6 @@
 # AWS::Events::Connection BasicAuthParameters<a name="aws-properties-events-connection-basicauthparameters"></a>
 
-Contains the Basic authorization parameters to use for the connection\. 
+<a name="aws-properties-events-connection-basicauthparameters-description"></a>The `BasicAuthParameters` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::Events::Connection](aws-resource-events-connection.md)\.
 
 ## Syntax<a name="aws-properties-events-connection-basicauthparameters-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-events-connection-basicauthparameters-properties"></a>
 
 `Password`  <a name="cfn-events-connection-basicauthparameters-password"></a>
-The password associated with the user name to use for Basic authorization\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Username`  <a name="cfn-events-connection-basicauthparameters-username"></a>
-The user name to use for Basic authorization\.  
+Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

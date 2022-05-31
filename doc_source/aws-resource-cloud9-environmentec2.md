@@ -69,7 +69,7 @@ The description of the environment to create\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageId`  <a name="cfn-cloud9-environmentec2-imageid"></a>
-The identifier for the Amazon Machine Image \(AMI\) that's used to create the EC2 instance\. To choose an AMI for the instance, you must specify a valid AMI alias or a valid AWS Systems Manager \(SSM\) path\.  
+The identifier for the Amazon Machine Image \(AMI\) that's used to create the EC2 instance\. To choose an AMI for the instance, you must specify a valid AMI alias or a valid AWS Systems Manager path\.  
 The default AMI is used if the parameter isn't explicitly assigned a value in the request\.   
 **AMI aliases **  
 + **Amazon Linux \(default\): `amazonlinux-1-x86_64`** 
@@ -100,7 +100,7 @@ The name of the environment\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OwnerArn`  <a name="cfn-cloud9-environmentec2-ownerarn"></a>
-The Amazon Resource Name \(ARN\) of the environment owner\. This ARN can be the ARN of any AWS Identity and Access Management \(IAM\) principal\. If this value is not specified, the ARN defaults to this environment's creator\.  
+The Amazon Resource Name \(ARN\) of the environment owner\. This ARN can be the ARN of any AWS Identity and Access Management principal\. If this value is not specified, the ARN defaults to this environment's creator\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):(iam|sts)::\d+:(root|(user\/[\w+=/:,.@-]{1,64}|federated-user\/[\w+=/:,.@-]{2,32}|assumed-role\/[\w+=:,.@-]{1,64}\/[\w+=,.@-]{1,64}))$`  

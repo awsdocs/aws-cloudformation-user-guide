@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[DashManifests](#cfn-mediapackage-packagingconfiguration-dashpackage-dashmanifests)" : [ DashManifest, ... ],
   "[Encryption](#cfn-mediapackage-packagingconfiguration-dashpackage-encryption)" : DashEncryption,
+  "[IncludeEncoderConfigurationInSegments](#cfn-mediapackage-packagingconfiguration-dashpackage-includeencoderconfigurationinsegments)" : Boolean,
   "[PeriodTriggers](#cfn-mediapackage-packagingconfiguration-dashpackage-periodtriggers)" : [ String, ... ],
   "[SegmentDurationSeconds](#cfn-mediapackage-packagingconfiguration-dashpackage-segmentdurationseconds)" : Integer,
   "[SegmentTemplateFormat](#cfn-mediapackage-packagingconfiguration-dashpackage-segmenttemplateformat)" : String
@@ -25,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - DashManifest
   [Encryption](#cfn-mediapackage-packagingconfiguration-dashpackage-encryption): 
     DashEncryption
+  [IncludeEncoderConfigurationInSegments](#cfn-mediapackage-packagingconfiguration-dashpackage-includeencoderconfigurationinsegments): Boolean
   [PeriodTriggers](#cfn-mediapackage-packagingconfiguration-dashpackage-periodtriggers): 
     - String
   [SegmentDurationSeconds](#cfn-mediapackage-packagingconfiguration-dashpackage-segmentdurationseconds): Integer
@@ -43,6 +45,12 @@ A list of DASH manifest configurations that are available from this endpoint\.
 Parameters for encrypting content\.  
 *Required*: No  
 *Type*: [DashEncryption](aws-properties-mediapackage-packagingconfiguration-dashencryption.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IncludeEncoderConfigurationInSegments`  <a name="cfn-mediapackage-packagingconfiguration-dashpackage-includeencoderconfigurationinsegments"></a>
+When includeEncoderConfigurationInSegments is set to true, MediaPackage places your encoder's Sequence Parameter Set \(SPS\), Picture Parameter Set \(PPS\), and Video Parameter Set \(VPS\) metadata in every video segment instead of in the init fragment\. This lets you use different SPS/PPS/VPS settings for your assets during content playback\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PeriodTriggers`  <a name="cfn-mediapackage-packagingconfiguration-dashpackage-periodtriggers"></a>
