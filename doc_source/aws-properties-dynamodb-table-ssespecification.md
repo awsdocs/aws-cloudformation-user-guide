@@ -41,6 +41,6 @@ Indicates whether server\-side encryption is done using an AWS managed key or an
 `SSEType`  <a name="cfn-dynamodb-table-ssespecification-ssetype"></a>
 Server\-side encryption type\. The only supported value is:  
 +  `KMS` \- Server\-side encryption that uses AWS Key Management Service\. The key is stored in your account and is managed by AWS KMS \(AWS KMS charges apply\)\.
-*Required*: No  
+*Required*: Yes (_SSEType KMS is required if KMSMasterKeyId is specified_)  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
