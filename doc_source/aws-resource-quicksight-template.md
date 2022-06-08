@@ -2,7 +2,7 @@
 
 Creates a template from an existing Amazon QuickSight analysis or template\. You can use the resulting template to create a dashboard\.
 
-A *template* is an entity in Amazon QuickSight that encapsulates the metadata required to create an analysis and that you can use to create s dashboard\. A template adds a layer of abstraction by using placeholders to replace the dataset associated with the analysis\. You can use templates to create dashboards by replacing dataset placeholders with datasets that follow the same schema that was used to create the source analysis and template\.
+A *template* is an entity in Amazon QuickSight that encapsulates the metadata required to create an analysis and that you can use to create a dashboard\. A template adds a layer of abstraction by using placeholders to replace the dataset associated with the analysis\. You can use templates to create dashboards by replacing dataset placeholders with datasets that follow the same schema that was used to create the source analysis and template\.
 
 ## Syntax<a name="aws-resource-quicksight-template-syntax"></a>
 
