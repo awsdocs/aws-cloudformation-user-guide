@@ -486,7 +486,11 @@ The following example creates a Systems Manager maintenance window task that use
                 "TaskInvocationParameters": {
                     "MaintenanceWindowAutomationParameters": {
                         "DocumentVersion": "1",
-                        "Parameters": '{ \"instanceId\": \"{{RESOURCE_ID}}\" }'
+                        "Parameters": {
+                            "instanceId": [
+                                "{{RESOURCE_ID}}"
+                            ]
+                        }
                     }
                 },
                 "Priority": 1,
@@ -518,8 +522,10 @@ Resources:
       TaskType: AUTOMATION
       TaskInvocationParameters:
         MaintenanceWindowAutomationParameters:
-    DocumentVersion: 1
-    Parameters: '{ \"instanceId\": \"{{RESOURCE_ID}}\" }'
+          DocumentVersion: 1
+          Parameters:
+            instanceId:
+              - '{{RESOURCE_ID}}'
       Priority: 1
       MaxConcurrency: 5
       MaxErrors: 5
