@@ -289,19 +289,21 @@ When you create alias resource record sets, you must specify `Z2FDTNDATAQYW2` fo
 12.                     },
 13.                     "Type": "A",
 14.                     "AliasTarget": {
-15.                         "HostedZoneId": "Z2FDTNDATAQYW2",
-16.                         "DNSName": {
-17.                             "Fn::GetAtt": [
-18.                                 "myCloudFrontDistribution",
-19.                                 "DomainName"
-20.                             ]
-21.                         }
-22.                     }
-23.                 }
-24.             ]
-25.         }
-26.     }
-27. }
+15.                         "HostedZoneId": {
+16.                             "Ref": "myHostedZoneID"
+17.                         },
+18.                         "DNSName": {
+19.                             "Fn::GetAtt": [
+20.                                 "myCloudFrontDistribution",
+21.                                 "DomainName"
+22.                             ]
+23.                         }
+24.                     }
+25.                 }
+26.             ]
+27.         }
+28.     }
+29. }
 ```
 
 ### YAML<a name="quickref-route53-example-5.yaml"></a>
@@ -315,7 +317,7 @@ When you create alias resource record sets, you must specify `Z2FDTNDATAQYW2` fo
  6.       - Name: !Ref myRecordSetDomainName
  7.         Type: A
  8.         AliasTarget:
- 9.           HostedZoneId: Z2FDTNDATAQYW2
+ 9.           HostedZoneId: !Ref myHostedZoneID
 10.           DNSName: !GetAtt 
 11.             - myCloudFrontDistribution
 12.             - DomainName
