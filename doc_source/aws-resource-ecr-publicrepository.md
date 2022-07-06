@@ -2,6 +2,9 @@
 
 The `AWS::ECR::PublicRepository` resource specifies an Amazon Elastic Container Registry Public \(Amazon ECR Public\) repository, where users can push and pull Docker images, Open Container Initiative \(OCI\) images, and OCI compatible artifacts\. For more information, see [Amazon ECR public repositories](https://docs.aws.amazon.com/AmazonECR/latest/public/public-repositories.html) in the *Amazon ECR Public User Guide*\.
 
+**Note**  
+`AWS::ECR::PublicRepository` currently works only in the _us-east-1_ region.
+
 ## Syntax<a name="aws-resource-ecr-publicrepository-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
