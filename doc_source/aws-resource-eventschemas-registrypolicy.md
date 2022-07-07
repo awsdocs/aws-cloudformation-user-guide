@@ -86,8 +86,8 @@ Resources:
           Principal:
             AWS: arn:aws:iam::012345678901:user/TestAccountForRegistryPolicy
           Action:
-            - schemas:DescribeRegistry
-            - schemas:CreateSchema
+            - schema:DescribeRegistry
+            - schema:CreateSchema
           Resource: registryArn
 ```
 
@@ -107,7 +107,7 @@ Resources:
           - Sid: 'Test'
             Effect: 'Allow'
             Action:
-              - 'schemas:*'
+              - 'schema:*'
             Principal:
               AWS:
                 - '109876543210'
@@ -134,7 +134,7 @@ Resources:
               "Sid": "Test",
               "Effect": "Allow",
               "Action": [
-                "schemas:*"
+                "schema:*"
               ],
               "Principal": {
                 "AWS": [
