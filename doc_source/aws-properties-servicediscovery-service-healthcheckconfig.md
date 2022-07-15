@@ -10,7 +10,7 @@ Health checks are basic Route 53 health checks that monitor an AWS endpoint\. F
 Note the following about configuring health checks\.
 
 A and AAAA records  
-If `DnsConfig` includes configurations for both `A` and `AAAA` records, AWS Cloud Map creates a health check that uses the IPv4 address to check the health of the resource\. If the endpoint tthat's specified by the IPv4 address is unhealthy, Route 53 considers both the `A` and `AAAA` records to be unhealthy\. 
+If `DnsConfig` includes configurations for both `A` and `AAAA` records, AWS Cloud Map creates a health check that uses the IPv4 address to check the health of the resource\. If the endpoint that's specified by the IPv4 address is unhealthy, Route 53 considers both the `A` and `AAAA` records to be unhealthy\. 
 
 CNAME records  
 You can't specify settings for `HealthCheckConfig` when the `DNSConfig` includes `CNAME` for the value of `Type`\. If you do, the `CreateService` request will fail with an `InvalidInput` error\.
