@@ -10,19 +10,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Attributes](#cfn-pinpoint-segment-segmentdimensions-attributes)" : Json,
+  "[Attributes](#cfn-pinpoint-segment-segmentdimensions-attributes)" : AttributeDimension,
   "[Behavior](#cfn-pinpoint-segment-segmentdimensions-behavior)" : Behavior,
   "[Demographic](#cfn-pinpoint-segment-segmentdimensions-demographic)" : Demographic,
   "[Location](#cfn-pinpoint-segment-segmentdimensions-location)" : Location,
   "[Metrics](#cfn-pinpoint-segment-segmentdimensions-metrics)" : Json,
-  "[UserAttributes](#cfn-pinpoint-segment-segmentdimensions-userattributes)" : Json
+  "[UserAttributes](#cfn-pinpoint-segment-segmentdimensions-userattributes)" : AttributeDimension
 }
 ```
 
 ### YAML<a name="aws-properties-pinpoint-segment-segmentdimensions-syntax.yaml"></a>
 
 ```
-  [Attributes](#cfn-pinpoint-segment-segmentdimensions-attributes): Json
+  [Attributes](#cfn-pinpoint-segment-segmentdimensions-attributes): AttributeDimension
   [Behavior](#cfn-pinpoint-segment-segmentdimensions-behavior): 
     Behavior
   [Demographic](#cfn-pinpoint-segment-segmentdimensions-demographic): 
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Location](#cfn-pinpoint-segment-segmentdimensions-location): 
     Location
   [Metrics](#cfn-pinpoint-segment-segmentdimensions-metrics): Json
-  [UserAttributes](#cfn-pinpoint-segment-segmentdimensions-userattributes): Json
+  [UserAttributes](#cfn-pinpoint-segment-segmentdimensions-userattributes): AttributeDimension
 ```
 
 ## Properties<a name="aws-properties-pinpoint-segment-segmentdimensions-properties"></a>
@@ -38,7 +38,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Attributes`  <a name="cfn-pinpoint-segment-segmentdimensions-attributes"></a>
 One or more custom attributes to use as criteria for the segment\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [AttributeDimension](aws-properties-pinpoint-segment-attributedimension.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Behavior`  <a name="cfn-pinpoint-segment-segmentdimensions-behavior"></a>
@@ -68,5 +68,5 @@ One or more custom metrics to use as criteria for the segment\.
 `UserAttributes`  <a name="cfn-pinpoint-segment-segmentdimensions-userattributes"></a>
 One or more custom user attributes to use as criteria for the segment\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [AttributeDimension](aws-properties-pinpoint-segment-attributedimension.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
