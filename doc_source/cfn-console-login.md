@@ -8,7 +8,7 @@ You can access the AWS CloudFormation console in a number of ways:
   + Selecting **CloudFormation** from under **Management Tools**\.
   + Searching for CloudFormation using the search bar\.
   + Selecting **CloudFormation** from **Recently visited services**, if you've used CloudFormation recently\.  
-![\[The options for selecting CloudFormation from the AWS Management Console home page.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/../images/console-aws-home.png)
+![\[The options for selecting CloudFormation from the AWS Management Console home page.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-aws-home.png)
 
 If you don't have any AWS CloudFormation stacks running, you are presented with the option to **Create a stack**\. Otherwise, you see a list of your currently running stacks\.
 
