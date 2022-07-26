@@ -4,7 +4,7 @@ By default, the AWS CloudFormation console doesn't display stacks with a status 
 
 **To view deleted stacks**
 + On the **Stacks** page of the CloudFormation console, select **Deleted** from the filter list\.  
-![\[The Deleted option in the Filter menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stacks-filter-deleted.png)
+![\[The Deleted option in the Filter menu.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stack-filter-deleted.png)
 
   CloudFormation lists all your deleted stacks \(stacks with a status of **DELETE\_COMPLETE**\)\.
 
