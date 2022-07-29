@@ -2,7 +2,7 @@
 
 Specifies a target group for a load balancer\.
 
-Before you register a Lambda function as a target, you must create a `AWS::Lambda::Permission` resource that grants the Elastic Load Balancing service principal permission to invoke the Lambda function\.
+Before you register a Lambda function as a target, you must create a `AWS::Lambda::Permission` resource that grants the Elastic Load Balancing service principal permission to invoke the Lambda function and most users should set the target group attribute `lambda.multi_value_headers.enabled` to `true` to ensure that web request inputs are handled properly.
 
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-targetgroup-syntax"></a>
 
