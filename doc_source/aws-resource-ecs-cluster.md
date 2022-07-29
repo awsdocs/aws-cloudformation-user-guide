@@ -46,6 +46,7 @@ Properties:
 The short name of one or more capacity providers to associate with the cluster\. A capacity provider must be associated with a cluster before it can be included as part of the default capacity provider strategy of the cluster or used in a capacity provider strategy\.  
 If specifying a capacity provider that uses an Auto Scaling group, the capacity provider must already be created and not already associated with another cluster\.  
 To use an AWS Fargate capacity provider, specify either the `FARGATE` or `FARGATE_SPOT` capacity providers\. The AWS Fargate capacity providers are available to all accounts and only need to be associated with a cluster to be used\.  
+To avoid creating a direct dependency between the cluster and the capacity providers, you can instead use a resource of type [AWS::ECS::ClusterCapacityProviderAssociations](aws-resource-ecs-clustercapacityproviderassociations.md)\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

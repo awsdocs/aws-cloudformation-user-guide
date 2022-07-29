@@ -2,6 +2,10 @@
 
 The `AWS::ECS::ClusterCapacityProviderAssociations` resource associates one or more capacity providers and a default capacity provider strategy with a cluster\.
 
+
+**Note**  
+It is recommended that you make sure your `AWS::ECS::Service` resources have an explicit dependency (using `DependsOn`) to the `AWS::ECS::ClusterCapacityProviderAssociations` resource. This is to ensure that the Capacity Provider(s) is/are attached to the Cluster and the Default Capacity Provider Strategy is defined before the service is created.
+
 ## Syntax<a name="aws-resource-ecs-clustercapacityproviderassociations-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

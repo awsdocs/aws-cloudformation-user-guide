@@ -133,3 +133,6 @@ Resources:
             - Key: environment
               Value: production
 ```
+
+## See also<a name="aws-resource-ecs-capacityprovider--seealso"></a>
++ [AWS::ECS::ClusterCapacityProviderAssociations](aws-resource-ecs-clustercapacityproviderassociations.md)
