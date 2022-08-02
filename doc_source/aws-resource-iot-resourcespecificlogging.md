@@ -44,7 +44,7 @@ The target name\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TargetType`  <a name="cfn-iot-resourcespecificlogging-targettype"></a>
-The target type\. Valid Values: `DEFAULT | THING_GROUP`  
+The target type\. Valid Values: `THING_GROUP | CLIENT_ID | SOURCE_IP | PRINCIPAL_ID`  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
