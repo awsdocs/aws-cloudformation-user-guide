@@ -74,3 +74,71 @@ A map of physical connection requirements, such as virtual private cloud \(VPC\)
 *Required*: No  
 *Type*: [PhysicalConnectionRequirements](aws-properties-glue-connection-physicalconnectionrequirements.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+
+## Example <a name="aws-properties-glue-connection-connectioninput-example"></a>
+
+### JSON<a name="aws-properties-glue-connection-connectioninput-jsonexample.json"></a>
+
+```
+{
+  "Resources": {
+    "Glueconnection": {
+      "Type": "AWS::Glue::Connection",
+      "Properties": {
+        "CatalogId": "123456789012",
+        "ConnectionInput": {
+          "Name": "connectionViaCFN",
+          "ConnectionType": "JDBC",
+          "ConnectionProperties": {
+            "USERNAME": "Admin",
+            "PASSWORD": "XXXXXXXX",
+            "JDBC_CONNECTION_URL": "jdbc:oracle:thin://@10.45.68.71:1522/abc.world",
+            "JDBC_ENFORCE_SSL": "true",
+            "JDBC_DRIVER_JAR_URI": "s3://abc/ojdbc8.jar",
+            "JDBC_DRIVER_CLASS_NAME": "oracle.jdbc.OracleDriver",
+            "CUSTOM_JDBC_CERT": "s3://abc/palm.pem",
+            "SKIP_CUSTOM_JDBC_CERT_VALIDATION": "false",
+            "CUSTOM_JDBC_CERT_STRING": "C=US,ST=Washington,L=Seattle,O=Amazon.com ,OU=RDS,CN=database-1.abcdefghi.us-east-1.rds.amazonaws.com "
+          },
+          "PhysicalConnectionRequirements": {
+            "SubnetId": "subnet-abcd123456ghabc12",
+            "SecurityGroupIdList": [
+              "sg-abcde12345ghabc12"
+            ],
+            "AvailabilityZone": "us-east-1a"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+### YAML<a name="aws-properties-glue-connection-connectioninput-yamlexample.yaml"></a>
+
+```
+Resources:
+  Glueconnection:
+    Type: 'AWS::Glue::Connection'
+    Properties:
+      CatalogId: '123456789012'
+      ConnectionInput:
+        Name: 'connectionViaCFN'
+        ConnectionType: 'JDBC'
+        ConnectionProperties:  {
+         "USERNAME": "Admin",
+         "PASSWORD": "XXXXXXXX",
+         "JDBC_CONNECTION_URL": "jdbc:oracle:thin://@10.45.68.71:1522/abc.world",
+         "JDBC_ENFORCE_SSL":"true",
+         "JDBC_DRIVER_JAR_URI":"s3://abc/ojdbc8.jar",
+         "JDBC_DRIVER_CLASS_NAME":"oracle.jdbc.OracleDriver",
+         "CUSTOM_JDBC_CERT":"s3://abc/palm.pem",
+         "SKIP_CUSTOM_JDBC_CERT_VALIDATION":"false",
+         "CUSTOM_JDBC_CERT_STRING":"C=US,ST=Washington,L=Seattle,O=Amazon.com ,OU=RDS,CN=database-1.abcdefghi.us-east-1.rds.amazonaws.com "}
+        PhysicalConnectionRequirements: 
+          SubnetId: subnet-abcd123456ghabc12
+          SecurityGroupIdList: 
+            - sg-abcde12345ghabc12
+          AvailabilityZone: us-east-1a
+```
