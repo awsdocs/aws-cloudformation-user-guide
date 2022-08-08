@@ -67,7 +67,9 @@ A name to identify the function\.
 *Minimum*: `1`  
 *Maximum*: `64`  
 *Pattern*: `^[a-zA-Z0-9-_]{1,64}$`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+**Important**
+You can't perform an update on an existing Function's Name\. If you must update the name, specify a new LogicalID for this resource\.
 
 ## Return values<a name="aws-resource-cloudfront-function-return-values"></a>
 
