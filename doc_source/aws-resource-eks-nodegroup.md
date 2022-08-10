@@ -134,7 +134,8 @@ The Amazon Resource Name \(ARN\) of the IAM role to associate with your node gro
 
 `ReleaseVersion`  <a name="cfn-eks-nodegroup-releaseversion"></a>
 The AMI version of the Amazon EKS optimized AMI to use with your node group \(for example, `1.14.7-YYYYMMDD`\)\. By default, the latest available AMI version for the node group's current Kubernetes version is used\. For more information, see [Amazon EKS optimized Linux AMI Versions](https://docs.aws.amazon.com/eks/latest/userguide/eks-linux-ami-versions.html) in the *Amazon EKS User Guide*\.  
-Changing this value triggers an update of the node group if one is available\. However, only the latest available AMI release version is valid as an input\. You cannot roll back to a previous AMI release version\.
+Changing this value triggers an update of the node group if one is available\. You can not update Labels, ScalingConfig, Taints and UpdateConfig along with Release Version or Version update\. Doing so would result in following error - Version and ReleaseVersion updates cannot be combined with other updates* \.
+
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
