@@ -158,7 +158,8 @@ The subnets to use for the Auto Scaling group that is created for your node grou
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-eks-nodegroup-tags"></a>
-The metadata to apply to the node group to assist with categorization and organization\. Each tag consists of a key and an optional value\. You define both\. Node group tags do not propagate to any other resources associated with the node group, such as the Amazon EC2 instances or subnets\.  
+The metadata to apply to the node group to assist with categorization and organization\. Each tag consists of a key and an optional value\. You define both\. Node group tags don't propagate to any other resources associated with the node group, such as the Amazon EC2 instances or subnets\.  
+Updates to `Tags` can't be combined with updates to `ReleaseVersion`, `Version`, or `LaunchTemplate`\.
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
