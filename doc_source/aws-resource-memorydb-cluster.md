@@ -126,7 +126,7 @@ Specifies the weekly time range during which maintenance on the cluster is perfo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NodeType`  <a name="cfn-memorydb-cluster-nodetype"></a>
-The cluster's node type\.  
+The cluster's [node type](https://docs.aws.amazon.com/memorydb/latest/devguide/nodes.supportedtypes.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
