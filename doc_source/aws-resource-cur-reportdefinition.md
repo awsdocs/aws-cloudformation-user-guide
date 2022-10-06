@@ -73,12 +73,14 @@ The Amazon Resource Name \(ARN\) of the billing view\. You can get this value by
 The compression format that Amazon Web Services uses for the report\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `ZIP | GZIP | Parquet`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Format`  <a name="cfn-cur-reportdefinition-format"></a>
 The format that Amazon Web Services saves the report in\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `textORcsv | Parquet`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RefreshClosedReports`  <a name="cfn-cur-reportdefinition-refreshclosedreports"></a>
@@ -122,6 +124,7 @@ The Region of the S3 bucket that Amazon Web Services delivers the report into\.
 The granularity of the line items in the report\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `HOURLY | DAILY | MONTHLY`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-cur-reportdefinition-return-values"></a>
