@@ -135,3 +135,7 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 The name of the report that you want to create\. The name must be unique, is case sensitive, and can't include spaces\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+## See also<a name="aws-resource-cur-reportdefinition--seealso"></a>
++  [ ReportDefinition](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_cur_ReportDefinition.html) in the *AWS Billing and Cost Management API Reference*
++  [ Creating Cost and Usage Reports](https://docs.aws.amazon.com/cur/latest/userguide/cur-create.html) in the *AWS Cost and Usage Reports User Guide* 
