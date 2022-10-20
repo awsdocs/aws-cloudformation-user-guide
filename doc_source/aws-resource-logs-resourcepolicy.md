@@ -2,6 +2,9 @@
 
 Creates or updates a resource policy that allows other AWS services to put log events to this account\. An account can have up to 10 resource policies per AWS Region\.
 
+**Important**
+This resource type is not supported in GovCloud Regions as of 2022-10-20.
+
 ## Syntax<a name="aws-resource-logs-resourcepolicy-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
