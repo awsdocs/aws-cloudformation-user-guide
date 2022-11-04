@@ -75,7 +75,7 @@ If you specify a bucket that belongs to another AWS account, that bucket must ha
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3KeyPrefix`  <a name="cfn-config-deliverychannel-s3keyprefix"></a>
-The prefix for the specified Amazon S3 bucket\.  
+The prefix for the specified Amazon S3 bucket\.  Do not include 'AWSLogs/' in your value as it is prepended automatically.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -132,8 +132,6 @@ DeliveryChannel:
   Properties: 
     ConfigSnapshotDeliveryProperties: 
       DeliveryFrequency: "Six_Hours"
-    S3BucketName: 
-      Ref: ConfigBucket
-    SnsTopicARN: 
-      Ref: ConfigTopic
+    S3BucketName: !Ref ConfigBucket
+    SnsTopicARN: !Ref ConfigTopic
 ```
