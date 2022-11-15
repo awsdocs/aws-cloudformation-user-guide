@@ -132,7 +132,7 @@ Specify the `disable-rollback` option or `on-failure DO_NOTHING` enumeration dur
 1. Provide a stack name and template to the `create-stack` command with the `disable-rollback` option\.
 
    ```
-   aws cloudformation create-stack --stack-name myteststack --template-body file://DOC-EXAMPLE-BUCKET.json -–disable-rollback
+   aws cloudformation create-stack --stack-name myteststack --template-body file://DOC-EXAMPLE-BUCKET.json --disable-rollback
    ```
 
    The command returns the following output\.
@@ -245,7 +245,7 @@ Specify the `disable-rollback` option or `on-failure DO_NOTHING` enumeration dur
 1. Initiate the change set with `disable-rollback` option\.
 
    ```
-   aws cloudformation execute-change-set --stack-name myteststack --change-set-name my-change-set -–disable-rollback
+   aws cloudformation execute-change-set --stack-name myteststack --change-set-name my-change-set --disable-rollback
    ```
 
 1. Determine the status of the stack using either the `describe-stacks` or `describe-stack-events` option\.
