@@ -406,9 +406,9 @@ Resources:
           CustomArtifactsConfiguration:
             - ArtifactType: DEPENDENCY_JAR
               MavenReference:
-                GroupId: software.amazon.kinesis
-                ArtifactId: amazon-kinesis-sql-connector-flink
-                Version: 2.0.3
+                GroupId: org.apache.flink
+                ArtifactId: flink-sql-connector-kinesis_2.12
+                Version: 1.13.2
             - ArtifactType: DEPENDENCY_JAR
               MavenReference:
                 GroupId: org.apache.flink
