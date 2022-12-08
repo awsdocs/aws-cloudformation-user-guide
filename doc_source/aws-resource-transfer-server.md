@@ -163,6 +163,7 @@ If `Protocol` is set only to `SFTP`, the `EndpointType` can be set to `PUBLIC` a
 
 `SecurityPolicyName`  <a name="cfn-transfer-server-securitypolicyname"></a>
 Specifies the name of the security policy that is attached to the server\.  
+For more information about security policies see [Working with security policies](https://docs.aws.amazon.com/transfer/latest/userguide/security-policies.html)\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `100`  
