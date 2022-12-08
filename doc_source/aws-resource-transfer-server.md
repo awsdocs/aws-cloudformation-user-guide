@@ -240,7 +240,7 @@ The following example creates a Secure Shell \(SSH\) File Transfer Protocol \(SF
                 "Protocols": [
                     "SFTP"
                 ],
-                "SecurityPolicyName": "Security-Policy-Name",
+                "SecurityPolicyName": "TransferSecurityPolicy-Name",
                 "IdentityProviderDetails": {
                     "InvocationRole": "Invocation-Role-ARN",
                     "Url": "API_GATEWAY-Invocation-URL"
@@ -279,7 +279,7 @@ Resources:
         LoggingRole: Logging-Role-ARN
         Protocols: 
             - SFTP
-        SecurityPolicyName: Security-Policy-Name
+        SecurityPolicyName: TransferSecurityPolicy-Name
         IdentityProviderDetails: 
             InvocationRole: Invocation-Role-ARN
             Url: API_GATEWAY-Invocation-URL
