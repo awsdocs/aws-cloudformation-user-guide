@@ -185,9 +185,6 @@ The following example creates a `route` resource called `MyRoute` for a WebSocke
 {
     "MyRoute": {
         "Type": "AWS::ApiGatewayV2::Route",
-        "DependsOn": [
-            "MyIntegration"
-        ],
         "Properties": {
             "ApiId": {
                 "Ref": "MyApi"
@@ -215,8 +212,6 @@ The following example creates a `route` resource called `MyRoute` for a WebSocke
 ```
 MyRoute:
   Type: 'AWS::ApiGatewayV2::Route'
-  DependsOn:
-    - MyIntegration
   Properties:
     ApiId: !Ref MyApi
     RouteKey: routekey1
