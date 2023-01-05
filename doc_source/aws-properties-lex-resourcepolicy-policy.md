@@ -1,3 +1,0 @@
-# AWS::Lex::ResourcePolicy Policy<a name="aws-properties-lex-resourcepolicy-policy"></a>
-
-The resource policy to add to the resource\. The policy is a JSON structure that contains one or more statements that define the policy\. The policy must follow the IAM policy syntax\. For more information about the contents of a JSON policy document, see the [IAM JSON policy reference](IAM/latest/UserGuide/reference_policies.html)\.
