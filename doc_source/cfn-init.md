@@ -74,8 +74,8 @@ To include the latest version, add `yum install -y aws-cfn-bootstrap` to the `Us
                 "",
                 [
                     "#!/bin/bash -xe\n",
-                    "",
-                    "yum install -y aws-cfn-bootstrap",
+                    "\n",
+                    "yum install -y aws-cfn-bootstrap\n",
                     "/opt/aws/bin/cfn-init -v ",
                     "         --stack ",
                     {
@@ -105,8 +105,8 @@ UserData: !Base64
     - ''
     - - |
         #!/bin/bash -xe
-      - ''
-      - yum install -y aws-cfn-bootstrap
+      - "\n"
+      - "yum install -y aws-cfn-bootstrap\n"
       - '/opt/aws/bin/cfn-init -v '
       - '         --stack '
       - !Ref 'AWS::StackName'
