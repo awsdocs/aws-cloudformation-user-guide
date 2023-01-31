@@ -1,6 +1,6 @@
 # AWS::EC2::IPAM<a name="aws-resource-ec2-ipam"></a>
 
-IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts throughout your AWS Organization\. For more information, see [What is IPAM?](/vpc/latest/ipam/what-is-it-ipam.html) in the *Amazon VPC IPAM User Guide*\.
+IPAM is a VPC feature that you can use to automate your IP address management workflows including assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts throughout your AWS Organization\. For more information, see [What is IPAM?](https://docs.aws.amazon.com/vpc/latest/ipam/what-is-it-ipam.html) in the *Amazon VPC IPAM User Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-ipam-syntax"></a>
 
@@ -41,7 +41,7 @@ The description for the IPAM\.
 
 `OperatingRegions`  <a name="cfn-ec2-ipam-operatingregions"></a>
 The operating Regions for an IPAM\. Operating Regions are AWS Regions where the IPAM is allowed to manage IP address CIDRs\. IPAM only discovers and monitors resources in the AWS Regions you select as operating Regions\.  
-For more information about operating Regions, see [Create an IPAM](/vpc/latest/ipam/create-ipam.html) in the *Amazon VPC IPAM User Guide*\.  
+For more information about operating Regions, see [Create an IPAM](https://docs.aws.amazon.com/vpc/latest/ipam/create-ipam.html) in the *Amazon VPC IPAM User Guide*\.  
 *Required*: No  
 *Type*: List of [IpamOperatingRegion](aws-properties-ec2-ipam-ipamoperatingregion.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

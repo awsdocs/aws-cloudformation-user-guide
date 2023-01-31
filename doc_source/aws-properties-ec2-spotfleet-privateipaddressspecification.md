@@ -31,7 +31,7 @@ Indicates whether the private IPv4 address is the primary private IPv4 address\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PrivateIpAddress`  <a name="cfn-ec2-spotfleet-privateipaddressspecification-privateipaddress"></a>
-The private IPv4 addresses\.  
+The private IPv4 address\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

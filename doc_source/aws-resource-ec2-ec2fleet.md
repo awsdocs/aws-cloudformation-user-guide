@@ -62,6 +62,7 @@ Reserved\.
 
 `ExcessCapacityTerminationPolicy`  <a name="cfn-ec2-ec2fleet-excesscapacityterminationpolicy"></a>
 Indicates whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2 Fleet\.  
+Supported only for fleets of type `maintain`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `no-termination | termination`  

@@ -1,6 +1,8 @@
 # AWS::EC2::LocalGatewayRoute<a name="aws-resource-ec2-localgatewayroute"></a>
 
-Creates a static route for the specified local gateway route table\.
+Creates a static route for the specified local gateway route table\. You must specify one of the following targets: 
++  `LocalGatewayVirtualInterfaceGroupId` 
++  `NetworkInterfaceId` 
 
 ## Syntax<a name="aws-resource-ec2-localgatewayroute-syntax"></a>
 
@@ -14,7 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DestinationCidrBlock](#cfn-ec2-localgatewayroute-destinationcidrblock)" : String,
       "[LocalGatewayRouteTableId](#cfn-ec2-localgatewayroute-localgatewayroutetableid)" : String,
-      "[LocalGatewayVirtualInterfaceGroupId](#cfn-ec2-localgatewayroute-localgatewayvirtualinterfacegroupid)" : String
+      "[LocalGatewayVirtualInterfaceGroupId](#cfn-ec2-localgatewayroute-localgatewayvirtualinterfacegroupid)" : String,
+      "[NetworkInterfaceId](#cfn-ec2-localgatewayroute-networkinterfaceid)" : String
     }
 }
 ```
@@ -27,6 +30,7 @@ Properties:
   [DestinationCidrBlock](#cfn-ec2-localgatewayroute-destinationcidrblock): String
   [LocalGatewayRouteTableId](#cfn-ec2-localgatewayroute-localgatewayroutetableid): String
   [LocalGatewayVirtualInterfaceGroupId](#cfn-ec2-localgatewayroute-localgatewayvirtualinterfacegroupid): String
+  [NetworkInterfaceId](#cfn-ec2-localgatewayroute-networkinterfaceid): String
 ```
 
 ## Properties<a name="aws-resource-ec2-localgatewayroute-properties"></a>
@@ -45,15 +49,25 @@ The ID of the local gateway route table\.
 
 `LocalGatewayVirtualInterfaceGroupId`  <a name="cfn-ec2-localgatewayroute-localgatewayvirtualinterfacegroupid"></a>
 The ID of the virtual interface group\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`NetworkInterfaceId`  <a name="cfn-ec2-localgatewayroute-networkinterfaceid"></a>
+The ID of the network interface\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-ec2-localgatewayroute-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-localgatewayroute-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the local gateway\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the local gateway route table and its destination address range\. For example: 
+
+ `{ "Ref": "lgw-rtb-12346789abcdef|10.0.0.0/24" }` 
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-ec2-localgatewayroute-return-values-fn--getatt"></a>
 
@@ -70,6 +84,6 @@ The state of the local gateway route table\.
 The type of local gateway route\.
 
 ## See also<a name="aws-resource-ec2-localgatewayroute--seealso"></a>
-+ [Local Gateways](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-local-gateways.html) in *AWS Outposts User Guide*
++ [Local gateway](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-local-gateways.html) in *AWS Outposts User Guide*
 + [CreateLocalGatewayRouteTable](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLocalGatewayRoute.html) in the *Amazon EC2 API Reference*
 

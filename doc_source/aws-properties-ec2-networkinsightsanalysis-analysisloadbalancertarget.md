@@ -54,6 +54,6 @@ Information about the instance\.
 The port on which the target is listening\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `1`  
+*Minimum*: `0`  
 *Maximum*: `65535`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

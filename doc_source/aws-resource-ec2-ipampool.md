@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AllocationMinNetmaskLength](#cfn-ec2-ipampool-allocationminnetmasklength)" : Integer,
       "[AllocationResourceTags](#cfn-ec2-ipampool-allocationresourcetags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[AutoImport](#cfn-ec2-ipampool-autoimport)" : Boolean,
+      "[AwsService](#cfn-ec2-ipampool-awsservice)" : String,
       "[Description](#cfn-ec2-ipampool-description)" : String,
       "[IpamScopeId](#cfn-ec2-ipampool-ipamscopeid)" : String,
       "[Locale](#cfn-ec2-ipampool-locale)" : String,
@@ -41,6 +42,7 @@ Properties:
   [AllocationResourceTags](#cfn-ec2-ipampool-allocationresourcetags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [AutoImport](#cfn-ec2-ipampool-autoimport): Boolean
+  [AwsService](#cfn-ec2-ipampool-awsservice): String
   [Description](#cfn-ec2-ipampool-description): String
   [IpamScopeId](#cfn-ec2-ipampool-ipamscopeid): String
   [Locale](#cfn-ec2-ipampool-locale): String
@@ -97,6 +99,13 @@ A locale must be set on the pool for this feature to work\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AwsService`  <a name="cfn-ec2-ipampool-awsservice"></a>
+Limits which service in AWS that the pool can be used in\. "ec2", for example, allows users to use space for Elastic IP addresses and VPCs\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `ec2`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-ec2-ipampool-description"></a>
 The description of the IPAM pool\.  

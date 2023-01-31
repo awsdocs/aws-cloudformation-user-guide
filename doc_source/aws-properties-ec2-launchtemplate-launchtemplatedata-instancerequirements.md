@@ -2,10 +2,14 @@
 
 The attributes for the instance types\. When you specify instance attributes, Amazon EC2 will identify instance types with these attributes\.
 
-When you specify multiple parameters, you get instance types that satisfy all of the specified parameters\. If you specify multiple values for a parameter, you get instance types that satisfy any of the specified values\.
+When you specify multiple attributes, you get instance types that satisfy all of the specified attributes\. If you specify multiple values for an attribute, you get instance types that satisfy any of the specified values\.
+
+To limit the list of instance types from which Amazon EC2 can identify matching instance types, you can use one of the following parameters, but not both in the same request:
++  `AllowedInstanceTypes` \- The instance types to include in the list\. All other instance types are ignored, even if they match your specified attributes\.
++  `ExcludedInstanceTypes` \- The instance types to exclude from the list, even if they match your specified attributes\.
 
 **Note**  
-You must specify `VCpuCount` and `MemoryMiB`\. All other parameters are optional\. Any unspecified optional parameter is set to its default\.
+You must specify `VCpuCount` and `MemoryMiB`\. All other attributes are optional\. Any unspecified optional attribute is set to its default\.
 
 For more information, see [Attribute\-based instance type selection for EC2 Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html), [Attribute\-based instance type selection for Spot Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html), and [Spot placement score](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html) in the *Amazon EC2 User Guide*\.
 
@@ -22,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AcceleratorNames](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-acceleratornames)" : [ String, ... ],
   "[AcceleratorTotalMemoryMiB](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-acceleratortotalmemorymib)" : AcceleratorTotalMemoryMiB,
   "[AcceleratorTypes](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-acceleratortypes)" : [ String, ... ],
+  "[AllowedInstanceTypes](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-allowedinstancetypes)" : [ String, ... ],
   "[BareMetal](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-baremetal)" : String,
   "[BaselineEbsBandwidthMbps](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-baselineebsbandwidthmbps)" : BaselineEbsBandwidthMbps,
   "[BurstablePerformance](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-burstableperformance)" : String,
@@ -32,6 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[LocalStorageTypes](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-localstoragetypes)" : [ String, ... ],
   "[MemoryGiBPerVCpu](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-memorygibpervcpu)" : MemoryGiBPerVCpu,
   "[MemoryMiB](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-memorymib)" : MemoryMiB,
+  "[NetworkBandwidthGbps](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-networkbandwidthgbps)" : NetworkBandwidthGbps,
   "[NetworkInterfaceCount](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-networkinterfacecount)" : NetworkInterfaceCount,
   "[OnDemandMaxPricePercentageOverLowestPrice](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-ondemandmaxpricepercentageoverlowestprice)" : Integer,
   "[RequireHibernateSupport](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-requirehibernatesupport)" : Boolean,
@@ -54,6 +60,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     AcceleratorTotalMemoryMiB
   [AcceleratorTypes](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-acceleratortypes): 
     - String
+  [AllowedInstanceTypes](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-allowedinstancetypes): 
+    - String
   [BareMetal](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-baremetal): String
   [BaselineEbsBandwidthMbps](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-baselineebsbandwidthmbps): 
     BaselineEbsBandwidthMbps
@@ -71,6 +79,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     MemoryGiBPerVCpu
   [MemoryMiB](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-memorymib): 
     MemoryMiB
+  [NetworkBandwidthGbps](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-networkbandwidthgbps): 
+    NetworkBandwidthGbps
   [NetworkInterfaceCount](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-networkinterfacecount): 
     NetworkInterfaceCount
   [OnDemandMaxPricePercentageOverLowestPrice](#cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-ondemandmaxpricepercentageoverlowestprice): Integer
@@ -112,6 +122,8 @@ The accelerators that must be on the instance type\.
 + For instance types with NVIDIA M60 GPUs, specify `m60`\.
 + For instance types with AMD Radeon Pro V520 GPUs, specify `radeon-pro-v520`\.
 + For instance types with Xilinx VU9P FPGAs, specify `vu9p`\.
++ For instance types with AWS Inferentia chips, specify `inferentia`\.
++ For instance types with NVIDIA GRID K520 GPUs, specify `k520`\.
 Default: Any accelerator  
 *Required*: No  
 *Type*: List of String  
@@ -132,6 +144,17 @@ The accelerator types that must be on the instance type\.
 Default: Any accelerator type  
 *Required*: No  
 *Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AllowedInstanceTypes`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-allowedinstancetypes"></a>
+The instance types to apply your specified attributes against\. All other instance types are ignored, even if they match your specified attributes\.  
+You can use strings with one or more wild cards, represented by an asterisk \(`*`\), to allow an instance type, size, or generation\. The following are examples: `m5.8xlarge`, `c5*.*`, `m5a.*`, `r*`, `*3*`\.  
+For example, if you specify `c5*`,Amazon EC2 will allow the entire C5 instance family, which includes all C5a and C5n instance types\. If you specify `m5a.*`, Amazon EC2 will allow all the M5a instance types, but not the M5n instance types\.  
+If you specify `AllowedInstanceTypes`, you can't specify `ExcludedInstanceTypes`\.
+Default: All instance types  
+*Required*: No  
+*Type*: List of String  
+*Maximum*: `400`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BareMetal`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-baremetal"></a>
@@ -175,8 +198,10 @@ Default: Any manufacturer
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcludedInstanceTypes`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-excludedinstancetypes"></a>
-The instance types to exclude\. You can use strings with one or more wild cards, represented by an asterisk \(`*`\), to exclude an instance type, size, or generation\. The following are examples: `m5.8xlarge`, `c5*.*`, `m5a.*`, `r*`, `*3*`\.  
+The instance types to exclude\.  
+You can use strings with one or more wild cards, represented by an asterisk \(`*`\), to exclude an instance type, size, or generation\. The following are examples: `m5.8xlarge`, `c5*.*`, `m5a.*`, `r*`, `*3*`\.  
 For example, if you specify `c5*`,Amazon EC2 will exclude the entire C5 instance family, which includes all C5a and C5n instance types\. If you specify `m5a.*`, Amazon EC2 will exclude all the M5a instance types, but not the M5n instance types\.  
+If you specify `ExcludedInstanceTypes`, you can't specify `AllowedInstanceTypes`\.
 Default: No excluded instance types  
 *Required*: No  
 *Type*: List of String  
@@ -206,8 +231,8 @@ Default: `included`
 `LocalStorageTypes`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-localstoragetypes"></a>
 The type of local storage that is required\.  
 + For instance types with hard disk drive \(HDD\) storage, specify `hdd`\.
-+ For instance types with solid state drive \(SDD\) storage, specify `sdd`\.
-Default: `hdd` and `sdd`   
++ For instance types with solid state drive \(SSD\) storage, specify `ssd`\.
+Default: `hdd` and `ssd`   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -225,6 +250,13 @@ The minimum and maximum amount of memory, in MiB\.
 *Type*: [MemoryMiB](aws-properties-ec2-launchtemplate-memorymib.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`NetworkBandwidthGbps`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-networkbandwidthgbps"></a>
+The minimum and maximum amount of network bandwidth, in gigabits per second \(Gbps\)\.  
+Default: No minimum or maximum limits  
+*Required*: No  
+*Type*: [NetworkBandwidthGbps](aws-properties-ec2-launchtemplate-networkbandwidthgbps.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `NetworkInterfaceCount`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-networkinterfacecount"></a>
 The minimum and maximum number of network interfaces\.  
 Default: No minimum or maximum limits  
@@ -233,7 +265,7 @@ Default: No minimum or maximum limits
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OnDemandMaxPricePercentageOverLowestPrice`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-ondemandmaxpricepercentageoverlowestprice"></a>
-The price protection threshold for On\-Demand Instances\. This is the maximum you’ll pay for an On\-Demand Instance, expressed as a percentage above the cheapest M, C, or R instance type with your specified attributes\. When Amazon EC2 selects instance types with your attributes, it excludes instance types priced above your threshold\.  
+The price protection threshold for On\-Demand Instances\. This is the maximum you’ll pay for an On\-Demand Instance, expressed as a percentage above the least expensive current generation M, C, or R instance type with your specified attributes\. When Amazon EC2 selects instance types with your attributes, it excludes instance types priced above your threshold\.  
 The parameter accepts an integer, which Amazon EC2 interprets as a percentage\.  
 To turn off price protection, specify a high value, such as `999999`\.  
 This parameter is not supported for [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html) and [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)\.  
@@ -252,7 +284,7 @@ Default: `false`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SpotMaxPricePercentageOverLowestPrice`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancerequirements-spotmaxpricepercentageoverlowestprice"></a>
-The price protection threshold for Spot Instances\. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage above the cheapest M, C, or R instance type with your specified attributes\. When Amazon EC2 selects instance types with your attributes, it excludes instance types priced above your threshold\.  
+The price protection threshold for Spot Instances\. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage above the least expensive current generation M, C, or R instance type with your specified attributes\. When Amazon EC2 selects instance types with your attributes, it excludes instance types priced above your threshold\.  
 The parameter accepts an integer, which Amazon EC2 interprets as a percentage\.  
 To turn off price protection, specify a high value, such as `999999`\.  
 This parameter is not supported for [GetSpotPlacementScores](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSpotPlacementScores.html) and [GetInstanceTypesFromInstanceRequirements](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetInstanceTypesFromInstanceRequirements.html)\.  

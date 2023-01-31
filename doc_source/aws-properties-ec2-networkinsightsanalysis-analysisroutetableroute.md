@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[NatGatewayId](#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-natgatewayid)" : String,
   "[NetworkInterfaceId](#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-networkinterfaceid)" : String,
   "[Origin](#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-origin)" : String,
+  "[State](#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-state)" : String,
   "[TransitGatewayId](#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-transitgatewayid)" : String,
   "[VpcPeeringConnectionId](#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-vpcpeeringconnectionid)" : String
 }
@@ -34,6 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [NatGatewayId](#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-natgatewayid): String
   [NetworkInterfaceId](#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-networkinterfaceid): String
   [Origin](#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-origin): String
+  [State](#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-state): String
   [TransitGatewayId](#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-transitgatewayid): String
   [VpcPeeringConnectionId](#cfn-ec2-networkinsightsanalysis-analysisroutetableroute-vpcpeeringconnectionid): String
 ```
@@ -83,10 +85,18 @@ The ID of a network interface\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Origin`  <a name="cfn-ec2-networkinsightsanalysis-analysisroutetableroute-origin"></a>
-Describes how the route was created\. The following are possible values:  
-+  `CreateRouteTable` \- The route was automatically created when the route table was created\.
-+  `CreateRoute` \- The route was manually added to the route table\.
-+  `EnableVgwRoutePropagation` \- The route was propagated by route propagation\.
+Describes how the route was created\. The following are the possible values:  
++ CreateRouteTable \- The route was automatically created when the route table was created\.
++ CreateRoute \- The route was manually added to the route table\.
++ EnableVgwRoutePropagation \- The route was propagated by route propagation\.
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`State`  <a name="cfn-ec2-networkinsightsanalysis-analysisroutetableroute-state"></a>
+The state\. The following are the possible values:  
++ active
++ blackhole
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

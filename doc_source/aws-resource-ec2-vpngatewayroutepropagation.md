@@ -86,7 +86,8 @@ The following example enables route propagation for the private route table name
 #### YAML<a name="aws-resource-ec2-vpngatewayroutepropagation--examples--VPN_gateway_route_propagation--yaml"></a>
 
 ```
-Type: AWS::EC2::VPNGatewayRoutePropagation
+myVPNGatewayRouteProp:
+   Type: AWS::EC2::VPNGatewayRoutePropagation
    Properties:
        RouteTableIds: 
         - !Ref PrivateRouteTable

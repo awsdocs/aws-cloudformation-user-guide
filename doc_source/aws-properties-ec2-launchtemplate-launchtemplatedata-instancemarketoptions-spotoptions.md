@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-properties"></a>
 
 `BlockDurationMinutes`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-blockdurationminutes"></a>
-The required duration for the Spot Instances \(also known as Spot blocks\), in minutes\. This value must be a multiple of 60 \(60, 120, 180, 240, 300, or 360\)\.  
+Deprecated\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -46,7 +46,8 @@ The behavior when a Spot Instance is interrupted\. The default is `terminate`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxPrice`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-maxprice"></a>
-The maximum hourly price you're willing to pay for the Spot Instances\.  
+The maximum hourly price you're willing to pay for the Spot Instances\. We do not recommend using this parameter because it can lead to increased interruptions\. If you do not specify this parameter, you will pay the current Spot price\.  
+If you specify a maximum price, your Spot Instances will be interrupted more frequently than if you do not specify this parameter\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -60,7 +61,10 @@ If you are using Spot Instances with an Auto Scaling group, use `one-time` reque
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ValidUntil`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-validuntil"></a>
-The end date of the request\. For a one\-time request, the request remains active until all instances launch, the request is canceled, or this date is reached\. If the request is persistent, it remains active until it is canceled or this date and time is reached\. The default end date is 7 days from the current date\.  
+The end date of the request, in UTC format \(*YYYY\-MM\-DD*T*HH:MM:SS*Z\)\. Supported only for persistent requests\.  
++ For a persistent request, the request remains active until the `ValidUntil` date and time is reached\. Otherwise, the request remains active until you cancel it\.
++ For a one\-time request, `ValidUntil` is not supported\. The request remains active until all instances launch or you cancel the request\.
+Default: 7 days from the current date  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

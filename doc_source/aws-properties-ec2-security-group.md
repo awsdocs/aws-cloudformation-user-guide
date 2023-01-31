@@ -67,13 +67,13 @@ Constraints for EC2\-VPC: a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=&
 \[VPC only\] The outbound rules associated with the security group\. There is a short interruption during which you cannot connect to the security group\.  
 *Required*: No  
 *Type*: List of [Egress](aws-properties-ec2-security-group-rule.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `SecurityGroupIngress`  <a name="cfn-ec2-securitygroup-securitygroupingress"></a>
 The inbound rules associated with the security group\. There is a short interruption during which you cannot connect to the security group\.  
 *Required*: No  
 *Type*: List of [Ingress](aws-properties-ec2-security-group-rule-1.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Tags`  <a name="cfn-ec2-securitygroup-tags"></a>
 Any tags assigned to the security group\.  
@@ -121,23 +121,23 @@ The following example specifies a security group with an ingress and egress rule
 
 ```
 "InstanceSecurityGroup" : {
-   "Type" : "AWS::EC2::SecurityGroup",
-   "Properties" : {
-      "GroupDescription" : "Allow http to client host",
-      "VpcId" : {"Ref" : "myVPC"},
-      "SecurityGroupIngress" : [{
-         "IpProtocol" : "tcp",
-         "FromPort" : 80,
-         "ToPort" : 80,
-         "CidrIp" : "0.0.0.0/0"
-      }],
-      "SecurityGroupEgress" : [{
-         "IpProtocol" : "tcp",
-         "FromPort" : 80,
-         "ToPort" : 80,
-         "CidrIp" : "0.0.0.0/0"
-      }]
-   }
+    "Type" : "AWS::EC2::SecurityGroup",
+    "Properties" : {
+        "GroupDescription" : "Allow http to client host",
+        "VpcId" : {"Ref" : "myVPC"},
+        "SecurityGroupIngress" : [{
+            "IpProtocol" : "tcp",
+            "FromPort" : 80,
+            "ToPort" : 80,
+            "CidrIp" : "0.0.0.0/0"
+        }],
+        "SecurityGroupEgress" : [{
+            "IpProtocol" : "tcp",
+            "FromPort" : 80,
+            "ToPort" : 80,
+            "CidrIp" : "0.0.0.0/0"
+        }]
+    }
 }
 ```
 
@@ -147,15 +147,14 @@ The following example specifies a security group with an ingress and egress rule
 InstanceSecurityGroup:
   Type: AWS::EC2::SecurityGroup
   Properties:
-      GroupDescription: Allow http to client host
-      VpcId:
-         Ref: myVPC
-      SecurityGroupIngress:
+    GroupDescription: Allow http to client host
+    VpcId: Ref: myVPC
+    SecurityGroupIngress:
       - IpProtocol: tcp
         FromPort: 80
         ToPort: 80
         CidrIp: 0.0.0.0/0
-      SecurityGroupEgress:
+    SecurityGroupEgress:
       - IpProtocol: tcp
         FromPort: 80
         ToPort: 80
@@ -170,17 +169,15 @@ When you specify a VPC security group, Amazon EC2 creates a default egress rule 
 
 ```
 "sgwithoutegress": {
-  "Type": "AWS::EC2::SecurityGroup",
-  "Properties": {
-    "GroupDescription": "Limits security group egress traffic",
-    "SecurityGroupEgress": [
-      {
-        "CidrIp": "127.0.0.1/32",
-        "IpProtocol": "-1"
-      }
-    ],
-    "VpcId": { "Ref": "myVPC"}
-   }
+    "Type": "AWS::EC2::SecurityGroup",
+    "Properties": {
+        "GroupDescription": "Limits security group egress traffic",
+        "SecurityGroupEgress": [{
+            "CidrIp": "127.0.0.1/32",
+            "IpProtocol": "-1"
+        }],
+        "VpcId": { "Ref": "myVPC"}
+    }
 }
 ```
 
@@ -192,10 +189,59 @@ sgwithoutegress:
   Properties:
     GroupDescription: Limits security group egress traffic
     SecurityGroupEgress:
-    - CidrIp: 127.0.0.1/32
-      IpProtocol: "-1"
-    VpcId:
-      Ref: myVPC
+      - CidrIp: 127.0.0.1/32
+        IpProtocol: "-1"
+    VpcId: Ref: myVPC
+```
+
+### Allow ping requests<a name="aws-properties-ec2-security-group--examples--Allow_ping_requests"></a>
+
+To allow ping requests, add the ICMP protocol type and specify 8 \(echo request\) for the ICMP type and either 0 or \-1 \(all\) for the ICMP code\. 
+
+#### JSON<a name="aws-properties-ec2-security-group--examples--Allow_ping_requests--json"></a>
+
+```
+"SGPing" : {
+    "Type" : "AWS::EC2::SecurityGroup",
+    "DependsOn": "VPC",
+    "Properties" : {
+        "GroupDescription" : "SG to test ping",
+        "VpcId" : {"Ref" : "VPC"},
+        "SecurityGroupIngress" : [ 
+        { 
+            "IpProtocol" : "tcp", 
+            "FromPort" : 22, 
+            "ToPort" : 22, 
+            "CidrIp" : "10.0.0.0/24" 
+        },
+        { 
+            "IpProtocol" : "icmp", 
+            "FromPort" : 8, 
+            "ToPort" : -1, 
+            "CidrIp" : "10.0.0.0/24" 
+        }]
+    }
+}
+```
+
+#### YAML<a name="aws-properties-ec2-security-group--examples--Allow_ping_requests--yaml"></a>
+
+```
+SGPing:
+  Type: AWS::EC2::SecurityGroup
+  DependsOn: VPC
+  Properties:
+    GroupDescription: SG to test ping
+    VpcId: Ref: VPC
+    SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: 22
+        ToPort: 22
+        CidrIp: 10.0.0.0/24
+      - IpProtocol: icmp
+        FromPort: 8
+        ToPort: -1
+        CidrIp: 10.0.0.0/24
 ```
 
 ## See also<a name="aws-properties-ec2-security-group--seealso"></a>

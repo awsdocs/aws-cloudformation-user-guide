@@ -1,4 +1,4 @@
-# AWS::EC2::VPNConnection<a name="aws-resource-ec2-vpn-connection"></a>
+# AWS::EC2::VPNConnection<a name="aws-resource-ec2-vpnconnection"></a>
 
 Specifies a VPN connection between a virtual private gateway and a VPN customer gateway or a transit gateway and a VPN customer gateway\.
 
@@ -8,18 +8,18 @@ To specify a VPN connection between a virtual private gateway and customer gatew
 
 For more information, see [AWS Site\-to\-Site VPN](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html) in the *AWS Site\-to\-Site VPN User Guide*\.
 
-## Syntax<a name="aws-resource-ec2-vpn-connection-syntax"></a>
+## Syntax<a name="aws-resource-ec2-vpnconnection-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
 
-### JSON<a name="aws-resource-ec2-vpn-connection-syntax.json"></a>
+### JSON<a name="aws-resource-ec2-vpnconnection-syntax.json"></a>
 
 ```
 {
   "Type" : "AWS::EC2::VPNConnection",
   "Properties" : {
       "[CustomerGatewayId](#cfn-ec2-vpnconnection-customergatewayid)" : String,
-      "[StaticRoutesOnly](#cfn-ec2-vpnconnection-StaticRoutesOnly)" : Boolean,
+      "[StaticRoutesOnly](#cfn-ec2-vpnconnection-staticroutesonly)" : Boolean,
       "[Tags](#cfn-ec2-vpnconnection-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TransitGatewayId](#cfn-ec2-vpnconnection-transitgatewayid)" : String,
       "[Type](#cfn-ec2-vpnconnection-type)" : String,
@@ -29,13 +29,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 }
 ```
 
-### YAML<a name="aws-resource-ec2-vpn-connection-syntax.yaml"></a>
+### YAML<a name="aws-resource-ec2-vpnconnection-syntax.yaml"></a>
 
 ```
 Type: AWS::EC2::VPNConnection
 Properties: 
   [CustomerGatewayId](#cfn-ec2-vpnconnection-customergatewayid): String
-  [StaticRoutesOnly](#cfn-ec2-vpnconnection-StaticRoutesOnly): Boolean
+  [StaticRoutesOnly](#cfn-ec2-vpnconnection-staticroutesonly): Boolean
   [Tags](#cfn-ec2-vpnconnection-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TransitGatewayId](#cfn-ec2-vpnconnection-transitgatewayid): String
@@ -45,7 +45,7 @@ Properties:
     - VpnTunnelOptionsSpecification
 ```
 
-## Properties<a name="aws-resource-ec2-vpn-connection-properties"></a>
+## Properties<a name="aws-resource-ec2-vpnconnection-properties"></a>
 
 `CustomerGatewayId`  <a name="cfn-ec2-vpnconnection-customergatewayid"></a>
 The ID of the customer gateway at your end of the VPN connection\.  
@@ -53,7 +53,7 @@ The ID of the customer gateway at your end of the VPN connection\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`StaticRoutesOnly`  <a name="cfn-ec2-vpnconnection-StaticRoutesOnly"></a>
+`StaticRoutesOnly`  <a name="cfn-ec2-vpnconnection-staticroutesonly"></a>
 Indicates whether the VPN connection uses static routes only\. Static routes must be used for devices that don't support BGP\.  
 If you are creating a VPN connection for a device that does not support Border Gateway Protocol \(BGP\), you must specify `true`\.  
 *Required*: No  
@@ -93,23 +93,34 @@ The tunnel options for the VPN connection\.
 *Type*: List of [VpnTunnelOptionsSpecification](aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return values<a name="aws-resource-ec2-vpn-connection-return-values"></a>
+## Return values<a name="aws-resource-ec2-vpnconnection-return-values"></a>
 
-### Ref<a name="aws-resource-ec2-vpn-connection-return-values-ref"></a>
+### Ref<a name="aws-resource-ec2-vpnconnection-return-values-ref"></a>
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the VPN connection\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## Examples<a name="aws-resource-ec2-vpn-connection--examples"></a>
+### Fn::GetAtt<a name="aws-resource-ec2-vpnconnection-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-ec2-vpnconnection-return-values-fn--getatt-fn--getatt"></a>
+
+`VpnConnectionId`  <a name="VpnConnectionId-fn::getatt"></a>
+The ID of the VPN connection\.
+
+## Examples<a name="aws-resource-ec2-vpnconnection--examples"></a>
 
 
 
-### VPN connection<a name="aws-resource-ec2-vpn-connection--examples--VPN_connection"></a>
+### VPN connection<a name="aws-resource-ec2-vpnconnection--examples--VPN_connection"></a>
 
 The following example specifies a VPN connection between myVPNGateway and MyCustomerGateway\.
 
-#### JSON<a name="aws-resource-ec2-vpn-connection--examples--VPN_connection--json"></a>
+#### JSON<a name="aws-resource-ec2-vpnconnection--examples--VPN_connection--json"></a>
 
 ```
 "myVPNConnection" : {
@@ -123,7 +134,7 @@ The following example specifies a VPN connection between myVPNGateway and MyCust
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-vpn-connection--examples--VPN_connection--yaml"></a>
+#### YAML<a name="aws-resource-ec2-vpnconnection--examples--VPN_connection--yaml"></a>
 
 ```
    myVPNConnection: 
@@ -137,6 +148,6 @@ The following example specifies a VPN connection between myVPNGateway and MyCust
           !Ref myVPNGateway
 ```
 
-## See also<a name="aws-resource-ec2-vpn-connection--seealso"></a>
+## See also<a name="aws-resource-ec2-vpnconnection--seealso"></a>
 +  [VPNConnection](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnConnection.html) in the *Amazon EC2 API Reference*
 

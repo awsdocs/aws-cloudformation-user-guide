@@ -6,6 +6,8 @@ An outbound rule permits instances to send traffic to the specified destination 
 
 You specify a protocol for each rule \(for example, TCP\)\. For the TCP and UDP protocols, you must also specify the destination port or port range\. For the ICMP protocol, you must also specify the ICMP type and code\. You can use \-1 for the type or code to mean all types or all codes\.
 
+You must specify only one of the following properties: `CidrIp`, `CidrIpv6`, `DestinationPrefixListId`, or `DestinationSecurityGroupId`\.
+
 You must specify a destination security group \(`DestinationPrefixListId` or `DestinationSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\. If you do not specify one of these parameters, the stack will launch successfully but the rule will not be added to the security group\.
 
 Rule changes are propagated to affected instances as quickly as possible\. However, a small delay might occur\.
@@ -58,6 +60,7 @@ Properties:
 `CidrIp`  <a name="cfn-ec2-securitygroupegress-cidrip"></a>
 The IPv4 address range, in CIDR format\.  
 You must specify a destination security group \(`DestinationPrefixListId` or `DestinationSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
+For examples of rules that you can add to security groups for specific access scenarios, see [Security group rules for different use cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html) in the *Amazon EC2 User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -65,12 +68,14 @@ You must specify a destination security group \(`DestinationPrefixListId` or `De
 `CidrIpv6`  <a name="cfn-ec2-securitygroupegress-cidripv6"></a>
 The IPv6 address range, in CIDR format\.  
 You must specify a destination security group \(`DestinationPrefixListId` or `DestinationSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
+For examples of rules that you can add to security groups for specific access scenarios, see [Security group rules for different use cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html) in the *Amazon EC2 User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-ec2-securitygroupegress-description"></a>
 The description of an egress \(outbound\) security group rule\.  
+Constraints: Up to 255 characters in length\. Allowed characters are a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=;\{\}\!$\*  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -90,7 +95,7 @@ You must specify a destination security group \(`DestinationPrefixListId` or `De
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FromPort`  <a name="cfn-ec2-securitygroupegress-fromport"></a>
-The start of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 type number\. A value of `-1` indicates all ICMP/ICMPv6 types\. If you specify all ICMP/ICMPv6 types, you must specify all codes\.  
+If the protocol is TCP or UDP, this is the start of the port range\. If the protocol is ICMP or ICMPv6, this is the type number\. A value of \-1 indicates all ICMP/ICMPv6 types\. If you specify all ICMP/ICMPv6 types, you must specify all ICMP/ICMPv6 codes\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -109,7 +114,7 @@ The IP protocol name \(`tcp`, `udp`, `icmp`, `icmpv6`\) or number \(see [Protoco
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ToPort`  <a name="cfn-ec2-securitygroupegress-toport"></a>
-The end of port range for the TCP and UDP protocols, or an ICMP/ICMPv6 code\. A value of `-1` indicates all ICMP/ICMPv6 codes\. If you specify all ICMP/ICMPv6 types, you must specify all codes\.  
+If the protocol is TCP or UDP, this is the end of the port range\. If the protocol is ICMP or ICMPv6, this is the code\. A value of \-1 indicates all ICMP/ICMPv6 codes\. If you specify all ICMP/ICMPv6 types, you must specify all ICMP/ICMPv6 codes\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -126,11 +131,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### VPC security groups<a name="aws-resource-ec2-security-group-egress--examples--VPC_security_groups"></a>
+### VPC security groups with egress and ingress rules<a name="aws-resource-ec2-security-group-egress--examples--VPC_security_groups_with_egress_and_ingress_rules"></a>
 
 In some cases, you might have an originating \(source\) security group to which you want to add an outbound rule that allows traffic to a destination \(target\) security group\. The target security group also needs an inbound rule that allows traffic from the source security group\. Note that you cannot use the `Ref` function to specify the outbound and inbound rules for each security group\. Doing so creates a circular dependency; you cannot have two resources that depend on each other\. Instead, use the egress and ingress resources to declare these outbound and inbound rules, as shown in the following template example\.
 
-#### JSON<a name="aws-resource-ec2-security-group-egress--examples--VPC_security_groups--json"></a>
+#### JSON<a name="aws-resource-ec2-security-group-egress--examples--VPC_security_groups_with_egress_and_ingress_rules--json"></a>
 
 ```
 "SourceSG": {
@@ -189,45 +194,45 @@ In some cases, you might have an originating \(source\) security group to which 
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-security-group-egress--examples--VPC_security_groups--yaml"></a>
+#### YAML<a name="aws-resource-ec2-security-group-egress--examples--VPC_security_groups_with_egress_and_ingress_rules--yaml"></a>
 
 ```
 SourceSG:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      VpcId: vpc-1a2b3c4d
-      GroupDescription: Sample source security group
+  Type: AWS::EC2::SecurityGroup
+  Properties:
+    VpcId: vpc-1a2b3c4d
+    GroupDescription: Sample source security group
 TargetSG:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      VpcId: vpc-1a2b3c4d
-      GroupDescription: Sample target security group
+  Type: AWS::EC2::SecurityGroup
+  Properties:
+    VpcId: vpc-1a2b3c4d
+    GroupDescription: Sample target security group
 OutboundRule:
-    Type: AWS::EC2::SecurityGroupEgress
-    Properties:
-      IpProtocol: tcp
-      FromPort: 0
-      ToPort: 65535
-      DestinationSecurityGroupId:
-        Fn::GetAtt:
+  Type: AWS::EC2::SecurityGroupEgress
+  Properties:
+    IpProtocol: tcp
+    FromPort: 0
+    ToPort: 65535
+    DestinationSecurityGroupId:
+      Fn::GetAtt:
         - TargetSG
         - GroupId
-      GroupId:
-        Fn::GetAtt:
+    GroupId:
+      Fn::GetAtt:
         - SourceSG
         - GroupId
 InboundRule:
-    Type: AWS::EC2::SecurityGroupIngress
-    Properties:
-      IpProtocol: tcp
-      FromPort: 0
-      ToPort: 65535
-      SourceSecurityGroupId:
-        Fn::GetAtt:
+  Type: AWS::EC2::SecurityGroupIngress
+  Properties:
+    IpProtocol: tcp
+    FromPort: 0
+    ToPort: 65535
+    SourceSecurityGroupId:
+      Fn::GetAtt:
         - SourceSG
         - GroupId
-      GroupId:
-        Fn::GetAtt:
+    GroupId:
+      Fn::GetAtt:
         - TargetSG
         - GroupId
 ```

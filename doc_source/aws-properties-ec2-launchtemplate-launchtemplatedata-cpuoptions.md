@@ -33,7 +33,7 @@ The number of CPU cores for the instance\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThreadsPerCore`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions-threadspercore"></a>
-The number of threads per CPU core\. To disable multithreading for the instance, specify a value of 1\. Otherwise, specify the default value of 2\.  
+The number of threads per CPU core\. To disable multithreading for the instance, specify a value of `1`\. Otherwise, specify the default value of `2`\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,8 +1,16 @@
 # AWS::EC2::EC2Fleet FleetLaunchTemplateSpecificationRequest<a name="aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest"></a>
 
-Specifies the launch template to use for an EC2 Fleet\. You must specify either the launch template ID or launch template name in the request\.
+Specifies the launch template to be used by the EC2 Fleet for configuring Amazon EC2 instances\.
 
- `FleetLaunchTemplateSpecificationRequest` is a property of the [ FleetLaunchTemplateConfigRequest](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html) property type\.
+You must specify the following:
++ The ID or the name of the launch template, but not both\.
++ The version of the launch template\.
+
+`FleetLaunchTemplateSpecificationRequest` is a property of the [ FleetLaunchTemplateConfigRequest](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html) property type\.
+
+For information about creating a launch template, see [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) and [Create a launch template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#create-launch-template) in the *Amazon EC2 User Guide*\.
+
+For examples of launch templates, see [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate--examples)\.
 
 ## Syntax<a name="aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest-syntax"></a>
 
@@ -29,14 +37,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest-properties"></a>
 
 `LaunchTemplateId`  <a name="cfn-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest-launchtemplateid"></a>
-The ID of the launch template\. If you specify the template ID, you can't specify the template name\.  
-*Required*: No  
+The ID of the launch template\.  
+You must specify the `LaunchTemplateId` or the `LaunchTemplateName`, but not both\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LaunchTemplateName`  <a name="cfn-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest-launchtemplatename"></a>
-The name of the launch template\. If you specify the template name, you can't specify the template ID\.  
-*Required*: No  
+The name of the launch template\.  
+You must specify the `LaunchTemplateName` or the `LaunchTemplateId`, but not both\.  
+*Required*: Conditional  
 *Type*: String  
 *Minimum*: `3`  
 *Maximum*: `128`  
@@ -47,7 +57,7 @@ The name of the launch template\. If you specify the template name, you can't sp
 The launch template version number, `$Latest`, or `$Default`\. You must specify a value, otherwise the request fails\.  
 If the value is `$Latest`, Amazon EC2 uses the latest version of the launch template\.  
 If the value is `$Default`, Amazon EC2 uses the default version of the launch template\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

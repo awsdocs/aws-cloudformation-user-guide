@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::NetworkInsightsAnalysis",
   "Properties" : {
+      "[AdditionalAccounts](#cfn-ec2-networkinsightsanalysis-additionalaccounts)" : [ String, ... ],
       "[FilterInArns](#cfn-ec2-networkinsightsanalysis-filterinarns)" : [ String, ... ],
       "[NetworkInsightsPathId](#cfn-ec2-networkinsightsanalysis-networkinsightspathid)" : String,
       "[Tags](#cfn-ec2-networkinsightsanalysis-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EC2::NetworkInsightsAnalysis
 Properties: 
+  [AdditionalAccounts](#cfn-ec2-networkinsightsanalysis-additionalaccounts): 
+    - String
   [FilterInArns](#cfn-ec2-networkinsightsanalysis-filterinarns): 
     - String
   [NetworkInsightsPathId](#cfn-ec2-networkinsightsanalysis-networkinsightspathid): String
@@ -32,6 +35,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-ec2-networkinsightsanalysis-properties"></a>
+
+`AdditionalAccounts`  <a name="cfn-ec2-networkinsightsanalysis-additionalaccounts"></a>
+The member accounts that contain resources that the path can traverse\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FilterInArns`  <a name="cfn-ec2-networkinsightsanalysis-filterinarns"></a>
 The Amazon Resource Names \(ARN\) of the resources that the path must traverse\.  
@@ -96,3 +105,6 @@ The status of the network insights analysis\.
 
 `StatusMessage`  <a name="StatusMessage-fn::getatt"></a>
 The status message, if the status is `failed`\.
+
+`SuggestedAccounts`  <a name="SuggestedAccounts-fn::getatt"></a>
+The IDs of potential intermediate accounts\.

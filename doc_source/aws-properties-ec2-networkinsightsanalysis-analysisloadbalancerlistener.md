@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 \[Classic Load Balancers\] The back\-end port for the listener\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `1`  
+*Minimum*: `0`  
 *Maximum*: `65535`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -36,6 +36,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The port on which the load balancer is listening\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `1`  
+*Minimum*: `0`  
 *Maximum*: `65535`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

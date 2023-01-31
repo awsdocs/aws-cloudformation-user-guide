@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Affinity](#cfn-ec2-launchtemplate-launchtemplatedata-placement-affinity)" : String,
   "[AvailabilityZone](#cfn-ec2-launchtemplate-launchtemplatedata-placement-availabilityzone)" : String,
+  "[GroupId](#cfn-ec2-launchtemplate-launchtemplatedata-placement-groupid)" : String,
   "[GroupName](#cfn-ec2-launchtemplate-launchtemplatedata-placement-groupname)" : String,
   "[HostId](#cfn-ec2-launchtemplate-launchtemplatedata-placement-hostid)" : String,
   "[HostResourceGroupArn](#cfn-ec2-launchtemplate-launchtemplatedata-placement-hostresourcegrouparn)" : String,
@@ -28,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Affinity](#cfn-ec2-launchtemplate-launchtemplatedata-placement-affinity): String
   [AvailabilityZone](#cfn-ec2-launchtemplate-launchtemplatedata-placement-availabilityzone): String
+  [GroupId](#cfn-ec2-launchtemplate-launchtemplatedata-placement-groupid): String
   [GroupName](#cfn-ec2-launchtemplate-launchtemplatedata-placement-groupname): String
   [HostId](#cfn-ec2-launchtemplate-launchtemplatedata-placement-hostid): String
   [HostResourceGroupArn](#cfn-ec2-launchtemplate-launchtemplatedata-placement-hostresourcegrouparn): String
@@ -46,6 +48,12 @@ The affinity setting for an instance on a Dedicated Host\.
 
 `AvailabilityZone`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-placement-availabilityzone"></a>
 The Availability Zone for the instance\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`GroupId`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-placement-groupid"></a>
+The Group Id of a placement group\. You must specify the Placement Group **Group Id** to launch an instance in a shared placement group\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

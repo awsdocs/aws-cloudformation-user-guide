@@ -67,25 +67,25 @@ Default: `false`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RouteTableIds`  <a name="cfn-ec2-vpcendpoint-routetableids"></a>
-The route table IDs\. Routing is supported only for gateway endpoints\.  
+The IDs of the route tables\. Routing is supported only for gateway endpoints\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-ec2-vpcendpoint-securitygroupids"></a>
-The IDs of the security groups to associate with the endpoint network interface\. Security groups are supported only for interface endpoints\.  
+The IDs of the security groups to associate with the endpoint network interfaces\. If this parameter is not specified, we use the default security group for the VPC\. Security groups are supported only for interface endpoints\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceName`  <a name="cfn-ec2-vpcendpoint-servicename"></a>
-The service name\. To list the available services, use [DescribeVpcEndpointServices](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcEndpointServices.html)\. Otherwise, get the name from the service provider\.  
+The service name\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetIds`  <a name="cfn-ec2-vpcendpoint-subnetids"></a>
-The ID of the subnets in which to create an endpoint network interface\. You must specify this property for an interface endpoints or a Gateway Load Balancer endpoint\. You can't specify this property for a gateway endpoint\. For a Gateway Load Balancer endpoint, you can specify only one subnet\.  
+The IDs of the subnets in which to create endpoint network interfaces\. You must specify this property for an interface endpoint or a Gateway Load Balancer endpoint\. You can't specify this property for a gateway endpoint\. For a Gateway Load Balancer endpoint, you can specify only one subnet\.  
 *Required*: Conditional  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -99,7 +99,7 @@ Default: Gateway
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcId`  <a name="cfn-ec2-vpcendpoint-vpcid"></a>
-The ID of the VPC in which the endpoint will be used\.  
+The ID of the VPC for the endpoint\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -130,7 +130,7 @@ The following is an example\. In the first entry, the hosted zone ID is Z1HUB23U
 If you update the `PrivateDnsEnabled` or `SubnetIds` properties, the DNS entries in the list will change\.
 
 `NetworkInterfaceIds`  <a name="NetworkInterfaceIds-fn::getatt"></a>
-\(Interface endpoints\) One or more network interface IDs\. If you update the `PrivateDnsEnabled` or `SubnetIds` properties, the items in this list might change\.
+\(Interface endpoints\) The network interface IDs\. If you update the `PrivateDnsEnabled` or `SubnetIds` properties, the items in this list might change\.
 
 ## Examples<a name="aws-resource-ec2-vpcendpoint--examples"></a>
 

@@ -16,7 +16,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::PlacementGroup",
   "Properties" : {
-      "[Strategy](#cfn-ec2-placementgroup-strategy)" : String
+      "[PartitionCount](#cfn-ec2-placementgroup-partitioncount)" : Integer,
+      "[SpreadLevel](#cfn-ec2-placementgroup-spreadlevel)" : String,
+      "[Strategy](#cfn-ec2-placementgroup-strategy)" : String,
+      "[Tags](#cfn-ec2-placementgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -26,10 +29,29 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EC2::PlacementGroup
 Properties: 
+  [PartitionCount](#cfn-ec2-placementgroup-partitioncount): Integer
+  [SpreadLevel](#cfn-ec2-placementgroup-spreadlevel): String
   [Strategy](#cfn-ec2-placementgroup-strategy): String
+  [Tags](#cfn-ec2-placementgroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-ec2-placementgroup-properties"></a>
+
+`PartitionCount`  <a name="cfn-ec2-placementgroup-partitioncount"></a>
+The number of partitions\. Valid only when **Strategy** is set to `partition`\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`SpreadLevel`  <a name="cfn-ec2-placementgroup-spreadlevel"></a>
+Determines how placement groups spread instances\.   
++ Host – You can use `host` only with Outpost placement groups\.
++ Rack – No usage restrictions\.
+*Required*: No  
+*Type*: String  
+*Allowed values*: `host | rack`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Strategy`  <a name="cfn-ec2-placementgroup-strategy"></a>
 The placement strategy\.  
@@ -38,6 +60,12 @@ The placement strategy\.
 *Allowed values*: `cluster | partition | spread`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Tags`  <a name="cfn-ec2-placementgroup-tags"></a>
+The tags to apply to the new placement group\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Return values<a name="aws-resource-ec2-placementgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-placementgroup-return-values-ref"></a>
@@ -45,6 +73,17 @@ The placement strategy\.
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the placement group\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-ec2-placementgroup-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-ec2-placementgroup-return-values-fn--getatt-fn--getatt"></a>
+
+`GroupName`  <a name="GroupName-fn::getatt"></a>
+The name of the placement group\.
 
 ## Examples<a name="aws-resource-ec2-placementgroup--examples"></a>
 
