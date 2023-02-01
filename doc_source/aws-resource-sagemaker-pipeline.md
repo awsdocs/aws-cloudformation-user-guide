@@ -107,10 +107,10 @@ The tags of the pipeline\.
 
 The following example creates a Pipeline with an associated lifecycle configuration\.
 
-#### JSON<a name="aws-resource-sagemaker-pipeline--examples--SageMaker_Pipeline_Example--json"></a>
+#### Pipeline definition given as a JSON string
 
+##### JSON<a name="aws-resource-sagemaker-pipeline--examples--SageMaker_Pipeline_Example--json"></a>
 ```
-# Pipeline definition given as a JSON string 
 {
    "Resources": {
       "MyPipeline": {
@@ -128,10 +128,24 @@ The following example creates a Pipeline with an associated lifecycle configurat
    }
 ```
 
-#### JSON<a name="aws-resource-sagemaker-pipeline--examples--SageMaker_Pipeline_Example--json"></a>
-
+##### YAML<a name="aws-resource-sagemaker-pipeline--examples--SageMaker_Pipeline_Example--yaml"></a>
 ```
-# Pipeline definition given as an S3 string 
+Resources:
+  MyAwesomePipeline:
+    Type: AWS::SageMaker::Pipeline
+    Properties:
+      PipelineName: "<pipeline-name>"
+      PipelineDisplayName: "<pipeline-display-name>"
+      PipelineDescription: "<pipeline-description>"
+      PipelineDefinition:
+        PipelineDefinitionBody: "{\"Version\":\"2020-12-01\",\"Parameters\":[{\"Name\":\"InputDataSource\",\"DefaultValue\":\"\"},{\"Name\":\"InstanceCount\",\"Type\":\"Integer\",\"DefaultValue\":1}],\"Steps\":[{\"Name\":\"Training1\",\"Type\":\"Training\",\"Arguments\":{\"InputDataConfig\":[{\"DataSource\":{\"S3DataSource\":{\"S3Uri\":{\"Get\":\"Parameters.InputDataSource\"}}}}],\"OutputDataConfig\":{\"S3OutputPath\":\"s3://my-s3-bucket/\"},\"ResourceConfig\":{\"InstanceType\":\"ml.m5.large\",\"InstanceCount\":{\"Get\":\"Parameters.InstanceCount\"},\"VolumeSizeInGB\":1024}}}]}"
+      RoleArn: "arn:aws:iam::<account-id>:root"
+```
+
+#### Pipeline definition given as a S3 location
+
+##### JSON<a name="aws-resource-sagemaker-pipeline--examples--SageMaker_Pipeline_Example--json"></a>
+```
 {
    "Resources": {
       "MyPipeline": {
@@ -153,26 +167,8 @@ The following example creates a Pipeline with an associated lifecycle configurat
 }
 ```
 
-#### YAML<a name="aws-resource-sagemaker-pipeline--examples--SageMaker_Pipeline_Example--yaml"></a>
-
+##### YAML<a name="aws-resource-sagemaker-pipeline--examples--SageMaker_Pipeline_Example--yaml"></a>
 ```
-# Pipeline definition given as a JSON string 
-Resources:
-  MyAwesomePipeline:
-    Type: AWS::SageMaker::Pipeline
-    Properties:
-      PipelineName: "<pipeline-name>"
-      PipelineDisplayName: "<pipeline-display-name>"
-      PipelineDescription: "<pipeline-description>"
-      PipelineDefinition:
-        PipelineDefinitionBody: "{\"Version\":\"2020-12-01\",\"Parameters\":[{\"Name\":\"InputDataSource\",\"DefaultValue\":\"\"},{\"Name\":\"InstanceCount\",\"Type\":\"Integer\",\"DefaultValue\":1}],\"Steps\":[{\"Name\":\"Training1\",\"Type\":\"Training\",\"Arguments\":{\"InputDataConfig\":[{\"DataSource\":{\"S3DataSource\":{\"S3Uri\":{\"Get\":\"Parameters.InputDataSource\"}}}}],\"OutputDataConfig\":{\"S3OutputPath\":\"s3://my-s3-bucket/\"},\"ResourceConfig\":{\"InstanceType\":\"ml.m5.large\",\"InstanceCount\":{\"Get\":\"Parameters.InstanceCount\"},\"VolumeSizeInGB\":1024}}}]}"
-      RoleArn: "arn:aws:iam::<account-id>:root"
-```
-
-#### YAML<a name="aws-resource-sagemaker-pipeline--examples--SageMaker_Pipeline_Example--yaml"></a>
-
-```
-# Pipeline definition given as an S3 location Resources:
 Resources:
   MyAwesomePipeline:
     Type: AWS::SageMaker::Pipeline
