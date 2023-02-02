@@ -36,6 +36,7 @@ Properties:
 
 `AuthorizationType`  <a name="cfn-events-connection-authorizationtype"></a>
 The type of authorization to use for the connection\.  
+OAUTH tokens are refreshed when a 401 or 407 response is returned\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `API_KEY | BASIC | OAUTH_CLIENT_CREDENTIALS`  

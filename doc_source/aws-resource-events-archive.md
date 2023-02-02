@@ -56,6 +56,7 @@ A description for the archive\.
 An event pattern to use to filter events sent to the archive\.  
 *Required*: No  
 *Type*: Json  
+*Maximum*: `4096`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetentionDays`  <a name="cfn-events-archive-retentiondays"></a>

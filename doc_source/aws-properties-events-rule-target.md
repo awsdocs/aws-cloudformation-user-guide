@@ -92,8 +92,8 @@ Contains the Amazon ECS task definition and task count to be used, if the event 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HttpParameters`  <a name="cfn-events-rule-target-httpparameters"></a>
-Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or EventBridge ApiDestination\.  
-If you specify an API Gateway REST API or EventBridge ApiDestination as a target, you can use this parameter to specify headers, path parameters, and query string keys/values as part of your target invoking request\. If you're using ApiDestinations, the corresponding Connection can also have these values configured\. In case of any conflicting keys, values from the Connection take precedence\.  
+Contains the HTTP parameters to use when the target is a API Gateway endpoint or EventBridge ApiDestination\.  
+If you specify an API Gateway API or EventBridge ApiDestination as a target, you can use this parameter to specify headers, path parameters, and query string keys/values as part of your target invoking request\. If you're using ApiDestinations, the corresponding Connection can also have these values configured\. In case of any conflicting keys, values from the Connection take precedence\.  
 *Required*: No  
 *Type*: [HttpParameters](aws-properties-events-rule-httpparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -115,7 +115,7 @@ Valid JSON text passed to the target\. In this case, nothing from the event itse
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputPath`  <a name="cfn-events-rule-target-inputpath"></a>
-The value of the JSONPath that is used for extracting part of the matched event when passing it to the target\. You must use JSON dot notation, not bracket notation\. For more information about JSON paths, see [JSONPath](http://goessner.net/articles/JsonPath/)\.  
+The value of the JSONPath that is used for extracting part of the matched event when passing it to the target\. You may use JSON dot notation or bracket notation\. For more information about JSON paths, see [JSONPath](http://goessner.net/articles/JsonPath/)\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `256`  
