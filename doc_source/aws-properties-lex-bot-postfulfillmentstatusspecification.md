@@ -10,8 +10,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[FailureConditional](#cfn-lex-bot-postfulfillmentstatusspecification-failureconditional)" : ConditionalSpecification,
+  "[FailureNextStep](#cfn-lex-bot-postfulfillmentstatusspecification-failurenextstep)" : DialogState,
   "[FailureResponse](#cfn-lex-bot-postfulfillmentstatusspecification-failureresponse)" : ResponseSpecification,
+  "[SuccessConditional](#cfn-lex-bot-postfulfillmentstatusspecification-successconditional)" : ConditionalSpecification,
+  "[SuccessNextStep](#cfn-lex-bot-postfulfillmentstatusspecification-successnextstep)" : DialogState,
   "[SuccessResponse](#cfn-lex-bot-postfulfillmentstatusspecification-successresponse)" : ResponseSpecification,
+  "[TimeoutConditional](#cfn-lex-bot-postfulfillmentstatusspecification-timeoutconditional)" : ConditionalSpecification,
+  "[TimeoutNextStep](#cfn-lex-bot-postfulfillmentstatusspecification-timeoutnextstep)" : DialogState,
   "[TimeoutResponse](#cfn-lex-bot-postfulfillmentstatusspecification-timeoutresponse)" : ResponseSpecification
 }
 ```
@@ -19,15 +25,39 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-lex-bot-postfulfillmentstatusspecification-syntax.yaml"></a>
 
 ```
+  [FailureConditional](#cfn-lex-bot-postfulfillmentstatusspecification-failureconditional): 
+    ConditionalSpecification
+  [FailureNextStep](#cfn-lex-bot-postfulfillmentstatusspecification-failurenextstep): 
+    DialogState
   [FailureResponse](#cfn-lex-bot-postfulfillmentstatusspecification-failureresponse): 
     ResponseSpecification
+  [SuccessConditional](#cfn-lex-bot-postfulfillmentstatusspecification-successconditional): 
+    ConditionalSpecification
+  [SuccessNextStep](#cfn-lex-bot-postfulfillmentstatusspecification-successnextstep): 
+    DialogState
   [SuccessResponse](#cfn-lex-bot-postfulfillmentstatusspecification-successresponse): 
     ResponseSpecification
+  [TimeoutConditional](#cfn-lex-bot-postfulfillmentstatusspecification-timeoutconditional): 
+    ConditionalSpecification
+  [TimeoutNextStep](#cfn-lex-bot-postfulfillmentstatusspecification-timeoutnextstep): 
+    DialogState
   [TimeoutResponse](#cfn-lex-bot-postfulfillmentstatusspecification-timeoutresponse): 
     ResponseSpecification
 ```
 
 ## Properties<a name="aws-properties-lex-bot-postfulfillmentstatusspecification-properties"></a>
+
+`FailureConditional`  <a name="cfn-lex-bot-postfulfillmentstatusspecification-failureconditional"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ConditionalSpecification](aws-properties-lex-bot-conditionalspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`FailureNextStep`  <a name="cfn-lex-bot-postfulfillmentstatusspecification-failurenextstep"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [DialogState](aws-properties-lex-bot-dialogstate.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FailureResponse`  <a name="cfn-lex-bot-postfulfillmentstatusspecification-failureresponse"></a>
 Specifies a list of message groups that Amazon Lex uses to respond when fulfillment isn't successful\.  
@@ -35,10 +65,34 @@ Specifies a list of message groups that Amazon Lex uses to respond when fulfillm
 *Type*: [ResponseSpecification](aws-properties-lex-bot-responsespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SuccessConditional`  <a name="cfn-lex-bot-postfulfillmentstatusspecification-successconditional"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ConditionalSpecification](aws-properties-lex-bot-conditionalspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SuccessNextStep`  <a name="cfn-lex-bot-postfulfillmentstatusspecification-successnextstep"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [DialogState](aws-properties-lex-bot-dialogstate.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SuccessResponse`  <a name="cfn-lex-bot-postfulfillmentstatusspecification-successresponse"></a>
 Specifies a list of message groups that Amazon Lex uses to respond when the fulfillment is successful\.  
 *Required*: No  
 *Type*: [ResponseSpecification](aws-properties-lex-bot-responsespecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TimeoutConditional`  <a name="cfn-lex-bot-postfulfillmentstatusspecification-timeoutconditional"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ConditionalSpecification](aws-properties-lex-bot-conditionalspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TimeoutNextStep`  <a name="cfn-lex-bot-postfulfillmentstatusspecification-timeoutnextstep"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [DialogState](aws-properties-lex-bot-dialogstate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeoutResponse`  <a name="cfn-lex-bot-postfulfillmentstatusspecification-timeoutresponse"></a>

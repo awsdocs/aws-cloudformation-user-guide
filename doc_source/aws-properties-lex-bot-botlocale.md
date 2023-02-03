@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[CustomVocabulary](#cfn-lex-bot-botlocale-customvocabulary)" : CustomVocabulary,
   "[Description](#cfn-lex-bot-botlocale-description)" : String,
   "[Intents](#cfn-lex-bot-botlocale-intents)" : [ Intent, ... ],
   "[LocaleId](#cfn-lex-bot-botlocale-localeid)" : String,
@@ -22,6 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-lex-bot-botlocale-syntax.yaml"></a>
 
 ```
+  [CustomVocabulary](#cfn-lex-bot-botlocale-customvocabulary): 
+    CustomVocabulary
   [Description](#cfn-lex-bot-botlocale-description): String
   [Intents](#cfn-lex-bot-botlocale-intents): 
     - Intent
@@ -34,6 +37,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-lex-bot-botlocale-properties"></a>
+
+`CustomVocabulary`  <a name="cfn-lex-bot-botlocale-customvocabulary"></a>
+Specifies a custom vocabulary to use with a specific locale\.  
+*Required*: No  
+*Type*: [CustomVocabulary](aws-properties-lex-bot-customvocabulary.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-lex-bot-botlocale-description"></a>
 A description of the bot locale\. Use this to help identify the bot locale in lists\.  

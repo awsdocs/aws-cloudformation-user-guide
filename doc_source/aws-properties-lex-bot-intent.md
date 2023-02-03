@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Description](#cfn-lex-bot-intent-description)" : String,
   "[DialogCodeHook](#cfn-lex-bot-intent-dialogcodehook)" : DialogCodeHookSetting,
   "[FulfillmentCodeHook](#cfn-lex-bot-intent-fulfillmentcodehook)" : FulfillmentCodeHookSetting,
+  "[InitialResponseSetting](#cfn-lex-bot-intent-initialresponsesetting)" : InitialResponseSetting,
   "[InputContexts](#cfn-lex-bot-intent-inputcontexts)" : [ InputContext, ... ],
   "[IntentClosingSetting](#cfn-lex-bot-intent-intentclosingsetting)" : IntentClosingSetting,
   "[IntentConfirmationSetting](#cfn-lex-bot-intent-intentconfirmationsetting)" : IntentConfirmationSetting,
@@ -34,6 +35,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     DialogCodeHookSetting
   [FulfillmentCodeHook](#cfn-lex-bot-intent-fulfillmentcodehook): 
     FulfillmentCodeHookSetting
+  [InitialResponseSetting](#cfn-lex-bot-intent-initialresponsesetting): 
+    InitialResponseSetting
   [InputContexts](#cfn-lex-bot-intent-inputcontexts): 
     - InputContext
   [IntentClosingSetting](#cfn-lex-bot-intent-intentclosingsetting): 
@@ -74,6 +77,12 @@ Specifies that Amazon Lex invokes the alias Lambda function when the intent is r
 *Type*: [FulfillmentCodeHookSetting](aws-properties-lex-bot-fulfillmentcodehooksetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`InitialResponseSetting`  <a name="cfn-lex-bot-intent-initialresponsesetting"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [InitialResponseSetting](aws-properties-lex-bot-initialresponsesetting.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `InputContexts`  <a name="cfn-lex-bot-intent-inputcontexts"></a>
 A list of contexts that must be active for this intent to be considered by Amazon Lex\.  
 *Required*: No  
@@ -93,7 +102,7 @@ Provides prompts that Amazon Lex sends to the user to confirm the completion of 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KendraConfiguration`  <a name="cfn-lex-bot-intent-kendraconfiguration"></a>
-Configuration information required to use the AMAZON\.KendraSearchIntent intent to connect to an Amazon Kendra index\. The AMAZON\.KendraSearchIntent intent is called with Amazon Lex can't determine another intent to invoke\.  
+Configuration information required to use the AMAZON\.KendraSearchIntent intent to connect to an Amazon Kendra index\. The AMAZON\.KendraSearchIntent intent is called when Amazon Lex can't determine another intent to invoke\.  
 *Required*: No  
 *Type*: [KendraConfiguration](aws-properties-lex-bot-kendraconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

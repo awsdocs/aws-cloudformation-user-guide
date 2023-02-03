@@ -1,5 +1,8 @@
 # AWS::Lex::BotAlias<a name="aws-resource-lex-botalias"></a>
 
+**Note**  
+Amazon Lex V2 is the only supported version in AWS CloudFormation\.
+
 Specifies an alias for the specified version of a bot\. Use an alias to enable you to change the version of a bot without updating applications that use the bot\.
 
 For example, you can specify an alias called "PROD" that your applications use to call the Amazon Lex bot\. 
@@ -21,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BotVersion](#cfn-lex-botalias-botversion)" : String,
       "[ConversationLogSettings](#cfn-lex-botalias-conversationlogsettings)" : ConversationLogSettings,
       "[Description](#cfn-lex-botalias-description)" : String,
-      "[SentimentAnalysisSettings](#cfn-lex-botalias-sentimentanalysissettings)" : Json
+      "[SentimentAnalysisSettings](#cfn-lex-botalias-sentimentanalysissettings)" : SentimentAnalysisSettings
     }
 }
 ```
@@ -41,7 +44,8 @@ Properties:
   [ConversationLogSettings](#cfn-lex-botalias-conversationlogsettings): 
     ConversationLogSettings
   [Description](#cfn-lex-botalias-description): String
-  [SentimentAnalysisSettings](#cfn-lex-botalias-sentimentanalysissettings): Json
+  [SentimentAnalysisSettings](#cfn-lex-botalias-sentimentanalysissettings): 
+    SentimentAnalysisSettings
 ```
 
 ## Properties<a name="aws-resource-lex-botalias-properties"></a>
@@ -101,7 +105,7 @@ The description of the bot alias\.
 `SentimentAnalysisSettings`  <a name="cfn-lex-botalias-sentimentanalysissettings"></a>
 Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [SentimentAnalysisSettings](aws-properties-lex-botalias-sentimentanalysissettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-lex-botalias-return-values"></a>

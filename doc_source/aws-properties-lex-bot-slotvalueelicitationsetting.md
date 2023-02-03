@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DefaultValueSpecification](#cfn-lex-bot-slotvalueelicitationsetting-defaultvaluespecification)" : SlotDefaultValueSpecification,
   "[PromptSpecification](#cfn-lex-bot-slotvalueelicitationsetting-promptspecification)" : PromptSpecification,
   "[SampleUtterances](#cfn-lex-bot-slotvalueelicitationsetting-sampleutterances)" : [ SampleUtterance, ... ],
+  "[SlotCaptureSetting](#cfn-lex-bot-slotvalueelicitationsetting-slotcapturesetting)" : SlotCaptureSetting,
   "[SlotConstraint](#cfn-lex-bot-slotvalueelicitationsetting-slotconstraint)" : String,
   "[WaitAndContinueSpecification](#cfn-lex-bot-slotvalueelicitationsetting-waitandcontinuespecification)" : WaitAndContinueSpecification
 }
@@ -27,6 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     PromptSpecification
   [SampleUtterances](#cfn-lex-bot-slotvalueelicitationsetting-sampleutterances): 
     - SampleUtterance
+  [SlotCaptureSetting](#cfn-lex-bot-slotvalueelicitationsetting-slotcapturesetting): 
+    SlotCaptureSetting
   [SlotConstraint](#cfn-lex-bot-slotvalueelicitationsetting-slotconstraint): String
   [WaitAndContinueSpecification](#cfn-lex-bot-slotvalueelicitationsetting-waitandcontinuespecification): 
     WaitAndContinueSpecification
@@ -50,6 +53,12 @@ The prompt that Amazon Lex uses to elicit the slot value from the user\.
 If you know a specific pattern that users might respond to an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy\. This is optional\. In most cases Amazon Lex is capable of understanding user utterances\.  
 *Required*: No  
 *Type*: List of [SampleUtterance](aws-properties-lex-bot-sampleutterance.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SlotCaptureSetting`  <a name="cfn-lex-bot-slotvalueelicitationsetting-slotcapturesetting"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [SlotCaptureSetting](aws-properties-lex-bot-slotcapturesetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SlotConstraint`  <a name="cfn-lex-bot-slotvalueelicitationsetting-slotconstraint"></a>
