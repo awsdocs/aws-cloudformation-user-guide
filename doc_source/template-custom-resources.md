@@ -27,7 +27,9 @@ Owns the custom resource and determines how to handle and respond to requests fr
 AWS CloudFormation  
 During a stack operation, sends a request to a service token that is specified in the template, and then waits for a response before proceeding with the stack operation\.
 
-The template developer and custom resource provider can be the same person or entity, but the process is the same\. The following steps describe the general process:
+The template developer and custom resource provider can be the same person or entity\. 
+
+The following steps describe the general process of creating a custom resource:
 
 1. The template developer defines a custom resource in their template, which includes a service token and any input data parameters\. Depending on the custom resource, the input data might be required; however, the service token is always required\.
 
