@@ -1,6 +1,6 @@
 # AWS::Lambda::Function ImageConfig<a name="aws-properties-lambda-function-imageconfig"></a>
 
-Configuration values that override the container image Dockerfile settings\. See [Container settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms)\. 
+Configuration values that override the container image Dockerfile settings\. For more information, see [Container image settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms)\.
 
 ## Syntax<a name="aws-properties-lambda-function-imageconfig-syntax"></a>
 
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lambda-function-imageconfig-properties"></a>
 
 `Command`  <a name="cfn-lambda-function-imageconfig-command"></a>
-Specifies parameters that you want to pass in with ENTRYPOINT\.   
+Specifies parameters that you want to pass in with ENTRYPOINT\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `1500`  
