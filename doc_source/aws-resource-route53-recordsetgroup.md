@@ -1,6 +1,6 @@
 # AWS::Route53::RecordSetGroup<a name="aws-resource-route53-recordsetgroup"></a>
 
-A complex type that contains an optional comment, the name and ID of the hosted zone that you want to make changes in, and values for the resource record sets that you want to add, update, or delete\.
+A complex type that contains an optional comment, the name and ID of the hosted zone that you want to make changes in, and values for the records that you want to create\.
 
 ## Syntax<a name="aws-resource-route53-recordsetgroup-syntax"></a>
 
@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Comment](#cfn-route53-recordsetgroup-comment)" : String,
       "[HostedZoneId](#cfn-route53-recordsetgroup-hostedzoneid)" : String,
       "[HostedZoneName](#cfn-route53-recordsetgroup-hostedzonename)" : String,
-      "[RecordSets](#cfn-route53-recordsetgroup-recordsets)" : [ [RecordSet](aws-properties-route53-recordset-1.md), ... ]
+      "[RecordSets](#cfn-route53-recordsetgroup-recordsets)" : [ RecordSet, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Properties:
   [HostedZoneId](#cfn-route53-recordsetgroup-hostedzoneid): String
   [HostedZoneName](#cfn-route53-recordsetgroup-hostedzonename): String
   [RecordSets](#cfn-route53-recordsetgroup-recordsets): 
-    - [RecordSet](aws-properties-route53-recordset-1.md)
+    - RecordSet
 ```
 
 ## Properties<a name="aws-resource-route53-recordsetgroup-properties"></a>
@@ -43,25 +43,25 @@ Properties:
 
 `HostedZoneId`  <a name="cfn-route53-recordsetgroup-hostedzoneid"></a>
 The ID of the hosted zone that contains the resource record sets that you want to change\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Maximum*: `32`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HostedZoneName`  <a name="cfn-route53-recordsetgroup-hostedzonename"></a>
 The name of the hosted zone that you want to create, update, or delete resource record sets in\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Maximum*: `1024`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RecordSets`  <a name="cfn-route53-recordsetgroup-recordsets"></a>
-A complex type that contains one `RecordSet` element for each resource record set that you want to add, update, or delete\.  
+A complex type that contains one `RecordSet` element for each record that you want to create\.  
 *Required*: No  
 *Type*: List of [RecordSet](aws-properties-route53-recordset-1.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-route53-recordsetgroup-return-values"></a>
+## Return values<a name="aws-resource-route53-recordsetgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-route53-recordsetgroup-return-values-ref"></a>
 
@@ -71,60 +71,79 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-route53-recordsetgroup--examples"></a>
 
-### Mapping a Route 53 A record to the public IP of an Amazon EC2 instance<a name="aws-resource-route53-recordsetgroup--examples--Mapping_a_Route_53_A_record_to_the_public_IP_of_an_Amazon_EC2_instance"></a>
+For more examples, see [Route 53 Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-route53.html)\.
 
-#### JSON<a name="aws-resource-route53-recordsetgroup--examples--Mapping_a_Route_53_A_record_to_the_public_IP_of_an_Amazon_EC2_instance--json"></a>
+### Creating records for a mail server<a name="aws-resource-route53-recordsetgroup--examples--Creating_records_for_a_mail_server"></a>
+
+The following example shows how to create three records for a mail server:
++ An A record that specifies the IP address for the mail server\.
++ An MX record that routes email to that server\.
++ A TXT record that contains an SPF string, which is used to identify the sender of email messages\. SPF records are no longer recommended\. For more information, see [SPF Record Type](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/ResourceRecordTypes.html#SPFFormat) in the *Amazon Route 53 Developer Guide*\.
+
+#### JSON<a name="aws-resource-route53-recordsetgroup--examples--Creating_records_for_a_mail_server--json"></a>
 
 ```
-"Resources" : {
-   "Ec2Instance" : {
-      "Type" : "AWS::EC2::Instance",
-      "Properties" : {
-         "ImageId" : { "Fn::FindInMap" : [
-            "RegionMap", { "Ref" : "AWS::Region" }, "AMI"
-         ] }
-      }
-   },
-   "myDNSRecord" : {
-      "Type" : "AWS::Route53::RecordSet",
-      "Properties" : {
-         "HostedZoneName" : { "Ref" : "HostedZoneResource" },
-         "Comment" : "DNS name for my instance.",  
-         "Name" : {
-            "Fn::Join" : [ "", [
-               {"Ref" : "Ec2Instance"}, ".",
-               {"Ref" : "AWS::Region"}, ".",
-               {"Ref" : "HostedZone"} ,"."
-            ] ]
-         },
-         "Type" : "A",
-         "TTL" : "900",
-         "ResourceRecords" : [
-            { "Fn::GetAtt" : [ "Ec2Instance", "PublicIp" ] }
+{
+   "myExampleDotComEmailServer": {
+      "Type": "AWS::Route53::RecordSetGroup",
+      "Properties": {
+         "Comment": "Creating records for mail server",
+         "HostedZoneId": "Z1PA6795UKMFR9",
+         "RecordSets": [
+            {
+               "Name": "mail.example.com.",
+               "Type": "A",
+               "TTL": "900",
+               "ResourceRecords": [
+                  "192.0.2.44"
+               ]
+            },
+            {
+               "Name": "mail.example.com.",
+               "Type": "MX",
+               "TTL": "900",
+               "ResourceRecords": [
+                  "10 mail.example.com"
+               ]
+            },
+            {
+               "Name": "mail.example.com.",
+               "Type": "TXT",
+               "TTL": "900",
+               "ResourceRecords": [
+                  "\"v=spf1 ip4:203.0.113.0/30 -all\""
+               ]
+            }
          ]
       }
    }
 }
 ```
 
-#### YAML<a name="aws-resource-route53-recordsetgroup--examples--Mapping_a_Route_53_A_record_to_the_public_IP_of_an_Amazon_EC2_instance--yaml"></a>
+#### YAML<a name="aws-resource-route53-recordsetgroup--examples--Creating_records_for_a_mail_server--yaml"></a>
 
 ```
-Resources:
-  Ec2Instance:
-    Type: AWS::EC2::Instance
-    Properties:
-      ImageId: !FindInMap [RegionMap, !Ref 'AWS::Region', AMI]
-  myDNSRecord:
-    Type: AWS::Route53::RecordSet
-    Properties:
-      HostedZoneName: !Ref 'HostedZoneResource'
-      Comment: DNS name for my instance.
-      Name: !Join ['', [!Ref 'Ec2Instance', ., !Ref 'AWS::Region', ., !Ref 'HostedZone', .]]
-      Type: A
+myExampleDotComEmailServer:
+  Type: AWS::Route53::RecordSetGroup
+  Properties:
+    Comment: Creating records for mail server
+    HostedZoneId: Z1PA6795UKMFR9
+    RecordSets:
+    - Name: mail.example.com.
+      ResourceRecords: 
+      - 192.0.2.44
       TTL: '900'
-      ResourceRecords:
-      - !GetAtt Ec2Instance.PublicIp
+      Type: A
+    - Name: mail.example.com.
+      ResourceRecords: 
+      - '10 mail.example.com'
+      TTL: '900'
+      Type: MX
+    - Name: mail.example.com.
+      ResourceRecords: 
+      - '"v=spf1 ip4:203.0.113.0/30 -all"'
+      TTL: '900'
+      Type: TXT
 ```
 
 ## See Also<a name="aws-resource-route53-recordsetgroup--seealso"></a>

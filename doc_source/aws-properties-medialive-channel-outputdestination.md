@@ -13,8 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Id](#cfn-medialive-channel-outputdestination-id)" : String,
-  "[MediaPackageSettings](#cfn-medialive-channel-outputdestination-mediapackagesettings)" : [ [MediaPackageOutputDestinationSettings](aws-properties-medialive-channel-mediapackageoutputdestinationsettings.md), ... ],
-  "[Settings](#cfn-medialive-channel-outputdestination-settings)" : [ [OutputDestinationSettings](aws-properties-medialive-channel-outputdestinationsettings.md), ... ]
+  "[MediaPackageSettings](#cfn-medialive-channel-outputdestination-mediapackagesettings)" : [ MediaPackageOutputDestinationSettings, ... ],
+  "[MultiplexSettings](#cfn-medialive-channel-outputdestination-multiplexsettings)" : MultiplexProgramChannelDestinationSettings,
+  "[Settings](#cfn-medialive-channel-outputdestination-settings)" : [ OutputDestinationSettings, ... ]
 }
 ```
 
@@ -23,9 +24,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Id](#cfn-medialive-channel-outputdestination-id): String
   [MediaPackageSettings](#cfn-medialive-channel-outputdestination-mediapackagesettings): 
-    - [MediaPackageOutputDestinationSettings](aws-properties-medialive-channel-mediapackageoutputdestinationsettings.md)
+    - MediaPackageOutputDestinationSettings
+  [MultiplexSettings](#cfn-medialive-channel-outputdestination-multiplexsettings): 
+    MultiplexProgramChannelDestinationSettings
   [Settings](#cfn-medialive-channel-outputdestination-settings): 
-    - [OutputDestinationSettings](aws-properties-medialive-channel-outputdestinationsettings.md)
+    - OutputDestinationSettings
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-outputdestination-properties"></a>
@@ -40,6 +43,12 @@ The ID for this destination\.
 The destination settings for a MediaPackage output\.  
 *Required*: No  
 *Type*: List of [MediaPackageOutputDestinationSettings](aws-properties-medialive-channel-mediapackageoutputdestinationsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MultiplexSettings`  <a name="cfn-medialive-channel-outputdestination-multiplexsettings"></a>
+Destination settings for a Multiplex output; one destination for both encoders\.  
+*Required*: No  
+*Type*: [MultiplexProgramChannelDestinationSettings](aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Settings`  <a name="cfn-medialive-channel-outputdestination-settings"></a>

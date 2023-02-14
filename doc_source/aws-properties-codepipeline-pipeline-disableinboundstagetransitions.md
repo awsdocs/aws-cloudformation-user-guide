@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codepipeline-pipeline-disableinboundstagetransitions-properties"></a>
 
 `Reason`  <a name="cfn-codepipeline-pipeline-disableinboundstagetransitions-reason"></a>
-The reason given to the user why a stage is disabled, such as waiting for manual approval or manual tests\. This message is displayed in the pipeline console UI\.  
+The reason given to the user that a stage is disabled, such as waiting for manual approval or manual tests\. This message is displayed in the pipeline console UI\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

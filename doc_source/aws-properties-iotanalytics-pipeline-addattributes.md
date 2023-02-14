@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Attributes](#cfn-iotanalytics-pipeline-addattributes-attributes)" : Json,
+  "[Attributes](#cfn-iotanalytics-pipeline-addattributes-attributes)" : {Key : Value, ...},
   "[Name](#cfn-iotanalytics-pipeline-addattributes-name)" : String,
   "[Next](#cfn-iotanalytics-pipeline-addattributes-next)" : String
 }
@@ -19,7 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iotanalytics-pipeline-addattributes-syntax.yaml"></a>
 
 ```
-  [Attributes](#cfn-iotanalytics-pipeline-addattributes-attributes): Json
+  [Attributes](#cfn-iotanalytics-pipeline-addattributes-attributes): 
+    Key : Value
   [Name](#cfn-iotanalytics-pipeline-addattributes-name): String
   [Next](#cfn-iotanalytics-pipeline-addattributes-next): String
 ```
@@ -29,13 +30,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Attributes`  <a name="cfn-iotanalytics-pipeline-addattributes-attributes"></a>
 A list of 1\-50 "AttributeNameMapping" objects that map an existing attribute to a new attribute\.  
 The existing attributes remain in the message, so if you want to remove the originals, use "RemoveAttributeActivity"\.
-*Required*: No  
-*Type*: Json  
+*Required*: Yes  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-iotanalytics-pipeline-addattributes-name"></a>
 The name of the 'addAttributes' activity\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  

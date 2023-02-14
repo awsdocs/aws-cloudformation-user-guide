@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Action](#cfn-waf-webacl-rules-action)" : [WafAction](aws-properties-waf-webacl-action.md),
+  "[Action](#cfn-waf-webacl-rules-action)" : WafAction,
   "[Priority](#cfn-waf-webacl-rules-priority)" : Integer,
   "[RuleId](#cfn-waf-webacl-rules-ruleid)" : String
 }
@@ -22,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Action](#cfn-waf-webacl-rules-action): 
-    [WafAction](aws-properties-waf-webacl-action.md)
+    WafAction
   [Priority](#cfn-waf-webacl-rules-priority): Integer
   [RuleId](#cfn-waf-webacl-rules-ruleid): String
 ```
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-waf-webacl-rules-properties"></a>
 
 `Action`  <a name="cfn-waf-webacl-rules-action"></a>
-Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the `Rule`\. Valid values for `Action` include the following:  
+Specifies the action that Amazon CloudFront or AWS WAF takes when a web request matches the conditions in the `Rule`\. Valid values for `Action` include the following:  
 +  `ALLOW`: CloudFront responds with the requested object\.
 +  `BLOCK`: CloudFront responds with an HTTP 403 \(Forbidden\) status code\.
 +  `COUNT`: AWS WAF increments a counter of requests that match the conditions in the rule and then continues to inspect the web request based on the remaining rules in the web ACL\. 
@@ -52,4 +52,5 @@ The `RuleId` for a `Rule`\. You use `RuleId` to get more information about a `Ru
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

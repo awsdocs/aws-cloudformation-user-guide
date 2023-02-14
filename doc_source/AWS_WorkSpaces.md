@@ -1,4 +1,5 @@
-# WorkSpaces Resource Type Reference<a name="AWS_WorkSpaces"></a>
+# Amazon WorkSpaces resource type reference<a name="AWS_WorkSpaces"></a>
 
-**Resource Types**
+**Resource types**
++ [AWS::WorkSpaces::ConnectionAlias](aws-resource-workspaces-connectionalias.md)
 + [AWS::WorkSpaces::Workspace](aws-resource-workspaces-workspace.md)

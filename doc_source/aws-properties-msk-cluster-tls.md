@@ -10,7 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CertificateAuthorityArnList](#cfn-msk-cluster-tls-certificateauthorityarnlist)" : [ String, ... ]
+  "[CertificateAuthorityArnList](#cfn-msk-cluster-tls-certificateauthorityarnlist)" : [ String, ... ],
+  "[Enabled](#cfn-msk-cluster-tls-enabled)" : Boolean
 }
 ```
 
@@ -19,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CertificateAuthorityArnList](#cfn-msk-cluster-tls-certificateauthorityarnlist): 
     - String
+  [Enabled](#cfn-msk-cluster-tls-enabled): Boolean
 ```
 
 ## Properties<a name="aws-properties-msk-cluster-tls-properties"></a>
@@ -27,4 +29,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 List of ACM Certificate Authority ARNs\.  
 *Required*: No  
 *Type*: List of String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Enabled`  <a name="cfn-msk-cluster-tls-enabled"></a>
+TLS authentication is enabled or not\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Dimensions](#cfn-pinpoint-segment-segmentgroups-groups-dimensions)" : [ [SegmentDimensions](aws-properties-pinpoint-segment-segmentdimensions.md), ... ],
-  "[SourceSegments](#cfn-pinpoint-segment-segmentgroups-groups-sourcesegments)" : [ [SourceSegments](aws-properties-pinpoint-segment-segmentgroups-groups-sourcesegments.md), ... ],
+  "[Dimensions](#cfn-pinpoint-segment-segmentgroups-groups-dimensions)" : [ SegmentDimensions, ... ],
+  "[SourceSegments](#cfn-pinpoint-segment-segmentgroups-groups-sourcesegments)" : [ SourceSegments, ... ],
   "[SourceType](#cfn-pinpoint-segment-segmentgroups-groups-sourcetype)" : String,
   "[Type](#cfn-pinpoint-segment-segmentgroups-groups-type)" : String
 }
@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Dimensions](#cfn-pinpoint-segment-segmentgroups-groups-dimensions): 
-    - [SegmentDimensions](aws-properties-pinpoint-segment-segmentdimensions.md)
+    - SegmentDimensions
   [SourceSegments](#cfn-pinpoint-segment-segmentgroups-groups-sourcesegments): 
-    - [SourceSegments](aws-properties-pinpoint-segment-segmentgroups-groups-sourcesegments.md)
+    - SourceSegments
   [SourceType](#cfn-pinpoint-segment-segmentgroups-groups-sourcetype): String
   [Type](#cfn-pinpoint-segment-segmentgroups-groups-type): String
 ```

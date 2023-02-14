@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Classification](#cfn-emr-cluster-configuration-classification)" : String,
   "[ConfigurationProperties](#cfn-emr-cluster-configuration-configurationproperties)" : {Key : Value, ...},
-  "[Configurations](#cfn-emr-cluster-configuration-configurations)" : [ [Configuration](#aws-properties-emr-cluster-configuration), ... ]
+  "[Configurations](#cfn-emr-cluster-configuration-configurations)" : [ Configuration, ... ]
 }
 ```
 
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ConfigurationProperties](#cfn-emr-cluster-configuration-configurationproperties): 
     Key : Value
   [Configurations](#cfn-emr-cluster-configuration-configurations): 
-    - [Configuration](#aws-properties-emr-cluster-configuration)
+    - Configuration
 ```
 
 ## Properties<a name="aws-properties-emr-cluster-configuration-properties"></a>

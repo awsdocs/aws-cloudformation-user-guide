@@ -1,6 +1,6 @@
 # AWS::Lambda::LayerVersion Content<a name="aws-properties-lambda-layerversion-content"></a>
 
-A ZIP archive that contains the contents of an [AWS Lambda layer](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)\.
+A ZIP archive that contains the contents of an [Lambda layer](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)\.
 
 ## Syntax<a name="aws-properties-lambda-layerversion-content-syntax"></a>
 
@@ -50,3 +50,28 @@ For versioned objects, the version of the layer archive object to use\.
 *Minimum*: `1`  
 *Maximum*: `1024`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Examples<a name="aws-properties-lambda-layerversion-content--examples"></a>
+
+
+
+### Layer Content<a name="aws-properties-lambda-layerversion-content--examples--Layer_Content"></a>
+
+The location of a layer archive in Amazon S3\.
+
+#### JSON<a name="aws-properties-lambda-layerversion-content--examples--Layer_Content--json"></a>
+
+```
+        "Content": {
+            "S3Bucket": "my-bucket-us-west-2-123456789012",
+            "S3Key": "layer.zip"
+        }
+```
+
+#### YAML<a name="aws-properties-lambda-layerversion-content--examples--Layer_Content--yaml"></a>
+
+```
+    Content:
+      S3Bucket: my-bucket-us-west-2-123456789012
+      S3Key: layer.zip
+```

@@ -1,6 +1,8 @@
 # AWS::ApiGateway::UsagePlan<a name="aws-resource-apigateway-usageplan"></a>
 
-The `AWS::ApiGateway::UsagePlan` resource creates a usage plan for deployed APIs\. A usage plan enforces throttling and quota limits on individual client API keys\. For more information, see [Creating and Using API Usage Plans in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html) in the *API Gateway Developer Guide*\.
+The `AWS::ApiGateway::UsagePlan` resource creates a usage plan for deployed APIs\. A usage plan sets a target for the throttling and quota limits on individual client API keys\. For more information, see [Creating and Using API Usage Plans in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html) in the *API Gateway Developer Guide*\.
+
+In some cases clients can exceed the targets that you set\. Don’t rely on usage plans to control costs\. Consider using [AWS Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html) to monitor costs and [AWS WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) to manage API requests\.
 
 ## Syntax<a name="aws-resource-apigateway-usageplan-syntax"></a>
 
@@ -12,10 +14,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::UsagePlan",
   "Properties" : {
-      "[ApiStages](#cfn-apigateway-usageplan-apistages)" : [ [ApiStage](aws-properties-apigateway-usageplan-apistage.md), ... ],
+      "[ApiStages](#cfn-apigateway-usageplan-apistages)" : [ ApiStage, ... ],
       "[Description](#cfn-apigateway-usageplan-description)" : String,
-      "[Quota](#cfn-apigateway-usageplan-quota)" : [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md),
-      "[Throttle](#cfn-apigateway-usageplan-throttle)" : [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md),
+      "[Quota](#cfn-apigateway-usageplan-quota)" : QuotaSettings,
+      "[Tags](#cfn-apigateway-usageplan-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[Throttle](#cfn-apigateway-usageplan-throttle)" : ThrottleSettings,
       "[UsagePlanName](#cfn-apigateway-usageplan-usageplanname)" : String
     }
 }
@@ -27,12 +30,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ApiGateway::UsagePlan
 Properties: 
   [ApiStages](#cfn-apigateway-usageplan-apistages): 
-    - [ApiStage](aws-properties-apigateway-usageplan-apistage.md)
+    - ApiStage
   [Description](#cfn-apigateway-usageplan-description): String
   [Quota](#cfn-apigateway-usageplan-quota): 
-    [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md)
+    QuotaSettings
+  [Tags](#cfn-apigateway-usageplan-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Throttle](#cfn-apigateway-usageplan-throttle): 
-    [ThrottleSettings](aws-properties-apigateway-usageplan-throttlesettings.md)
+    ThrottleSettings
   [UsagePlanName](#cfn-apigateway-usageplan-usageplanname): String
 ```
 
@@ -56,6 +61,12 @@ Configures the number of requests that users can make within a given interval\.
 *Type*: [QuotaSettings](aws-properties-apigateway-usageplan-quotasettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Tags`  <a name="cfn-apigateway-usageplan-tags"></a>
+An array of arbitrary tags \(key\-value pairs\) to associate with the usage plan\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Throttle`  <a name="cfn-apigateway-usageplan-throttle"></a>
 Configures the overall request rate \(average requests per second\) and burst capacity\.  
 *Required*: No  
@@ -68,15 +79,28 @@ A name for the usage plan\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-usageplan-return-values"></a>
+## Return values<a name="aws-resource-apigateway-usageplan-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-usageplan-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the usage plan ID, such as `MyUsagePlan`\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the usage plan ID, such as `abc123`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-apigateway-usageplan-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-apigateway-usageplan-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+The ID for the usage plan\. For example: `abc123`\.
+
 ## Examples<a name="aws-resource-apigateway-usageplan--examples"></a>
+
+
 
 ### Create usage plan<a name="aws-resource-apigateway-usageplan--examples--Create_usage_plan"></a>
 
@@ -133,5 +157,6 @@ usagePlan:
     UsagePlanName: Plan_ABC
 ```
 
-## See Also<a name="aws-resource-apigateway-usageplan--seealso"></a>
+## See also<a name="aws-resource-apigateway-usageplan--seealso"></a>
 + [usageplan:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/usageplan-create/) in the *Amazon API Gateway REST API Reference*
+

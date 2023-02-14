@@ -1,4 +1,4 @@
-# MediaStore Resource Type Reference<a name="AWS_MediaStore"></a>
+# AWS Elemental MediaStore resource type reference<a name="AWS_MediaStore"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::MediaStore::Container](aws-resource-mediastore-container.md)

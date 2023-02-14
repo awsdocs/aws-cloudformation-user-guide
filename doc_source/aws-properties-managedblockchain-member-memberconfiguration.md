@@ -2,6 +2,8 @@
 
 Configuration properties of the member\.
 
+Applies only to Hyperledger Fabric\.
+
 ## Syntax<a name="aws-properties-managedblockchain-member-memberconfiguration-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -11,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Description](#cfn-managedblockchain-member-memberconfiguration-description)" : String,
-  "[MemberFrameworkConfiguration](#cfn-managedblockchain-member-memberconfiguration-memberframeworkconfiguration)" : [MemberFrameworkConfiguration](aws-properties-managedblockchain-member-memberframeworkconfiguration.md),
+  "[MemberFrameworkConfiguration](#cfn-managedblockchain-member-memberconfiguration-memberframeworkconfiguration)" : MemberFrameworkConfiguration,
   "[Name](#cfn-managedblockchain-member-memberconfiguration-name)" : String
 }
 ```
@@ -21,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Description](#cfn-managedblockchain-member-memberconfiguration-description): String
   [MemberFrameworkConfiguration](#cfn-managedblockchain-member-memberconfiguration-memberframeworkconfiguration): 
-    [MemberFrameworkConfiguration](aws-properties-managedblockchain-member-memberframeworkconfiguration.md)
+    MemberFrameworkConfiguration
   [Name](#cfn-managedblockchain-member-memberconfiguration-name): String
 ```
 
@@ -46,5 +48,5 @@ The name of the member\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `64`  
-*Pattern*: `^(?!-)^[^0-9](?!.*--)[A-Za-z0-9-]+[^- ]$`  
+*Pattern*: `^(?!-|[0-9])(?!.*-$)(?!.*?--)[a-zA-Z0-9-]+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -10,10 +10,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AutoScalingPolicy](#cfn-elasticmapreduce-cluster-instancegroupconfig-autoscalingpolicy)" : [AutoScalingPolicy](aws-properties-elasticmapreduce-cluster-autoscalingpolicy.md),
+  "[AutoScalingPolicy](#cfn-elasticmapreduce-cluster-instancegroupconfig-autoscalingpolicy)" : AutoScalingPolicy,
   "[BidPrice](#cfn-elasticmapreduce-cluster-instancegroupconfig-bidprice)" : String,
-  "[Configurations](#cfn-elasticmapreduce-cluster-instancegroupconfig-configurations)" : [ [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md), ... ],
-  "[EbsConfiguration](#cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration)" : [EbsConfiguration](aws-properties-elasticmapreduce-cluster-ebsconfiguration.md),
+  "[Configurations](#cfn-elasticmapreduce-cluster-instancegroupconfig-configurations)" : [ Configuration, ... ],
+  "[CustomAmiId](#cfn-elasticmapreduce-cluster-instancegroupconfig-customamiid)" : String,
+  "[EbsConfiguration](#cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration)" : EbsConfiguration,
   "[InstanceCount](#cfn-elasticmapreduce-cluster-instancegroupconfig-instancecount)" : Integer,
   "[InstanceType](#cfn-elasticmapreduce-cluster-instancegroupconfig-instancetype)" : String,
   "[Market](#cfn-elasticmapreduce-cluster-instancegroupconfig-market)" : String,
@@ -25,12 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AutoScalingPolicy](#cfn-elasticmapreduce-cluster-instancegroupconfig-autoscalingpolicy): 
-    [AutoScalingPolicy](aws-properties-elasticmapreduce-cluster-autoscalingpolicy.md)
+    AutoScalingPolicy
   [BidPrice](#cfn-elasticmapreduce-cluster-instancegroupconfig-bidprice): String
   [Configurations](#cfn-elasticmapreduce-cluster-instancegroupconfig-configurations): 
-    - [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md)
+    - Configuration
+  [CustomAmiId](#cfn-elasticmapreduce-cluster-instancegroupconfig-customamiid): String
   [EbsConfiguration](#cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration): 
-    [EbsConfiguration](aws-properties-elasticmapreduce-cluster-ebsconfiguration.md)
+    EbsConfiguration
   [InstanceCount](#cfn-elasticmapreduce-cluster-instancegroupconfig-instancecount): Integer
   [InstanceType](#cfn-elasticmapreduce-cluster-instancegroupconfig-instancetype): String
   [Market](#cfn-elasticmapreduce-cluster-instancegroupconfig-market): String
@@ -46,8 +48,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BidPrice`  <a name="cfn-elasticmapreduce-cluster-instancegroupconfig-bidprice"></a>
-The maximum Spot price your are willing to pay for EC2 instances\.  
-If `BidPrice` is specified, Amazon EMR uses Spot Instances for the instance group\. Specified in USD\. Alternatively, a value of `OnDemandPrice` indicates that the maximum Spot price is set equal to the On\-Demand price\.  
+If specified, indicates that the instance group uses Spot Instances\. This is the maximum price you are willing to pay for Spot Instances\. Specify `OnDemandPrice` to set the amount equal to the On\-Demand price, or specify an amount in USD\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -60,6 +61,15 @@ Amazon EMR releases 4\.x or later\.
 The list of configurations supplied for an EMR cluster instance group\. You can specify a separate configuration for each instance group \(master, core, and task\)\.  
 *Required*: No  
 *Type*: List of [Configuration](aws-properties-elasticmapreduce-cluster-configuration.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`CustomAmiId`  <a name="cfn-elasticmapreduce-cluster-instancegroupconfig-customamiid"></a>
+The custom AMI ID to use for the provisioned instance group\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `0`  
+*Maximum*: `256`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EbsConfiguration`  <a name="cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration"></a>
@@ -87,7 +97,7 @@ The EC2 instance type for all instances in the instance group\.
 Market type of the EC2 instances used to create a cluster node\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ON_DEMAND | SPOT`  
+*Allowed values*: `ON_DEMAND | SPOT`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-elasticmapreduce-cluster-instancegroupconfig-name"></a>

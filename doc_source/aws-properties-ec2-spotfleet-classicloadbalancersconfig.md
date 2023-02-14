@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ClassicLoadBalancers](#cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers)" : [ [ClassicLoadBalancer](aws-properties-ec2-spotfleet-classicloadbalancer.md), ... ]
+  "[ClassicLoadBalancers](#cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers)" : [ ClassicLoadBalancer, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ClassicLoadBalancers](#cfn-ec2-spotfleet-classicloadbalancersconfig-classicloadbalancers): 
-    - [ClassicLoadBalancer](aws-properties-ec2-spotfleet-classicloadbalancer.md)
+    - ClassicLoadBalancer
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-classicloadbalancersconfig-properties"></a>
@@ -28,4 +28,4 @@ One or more Classic Load Balancers\.
 *Required*: Yes  
 *Type*: List of [ClassicLoadBalancer](aws-properties-ec2-spotfleet-classicloadbalancer.md)  
 *Maximum*: `5`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

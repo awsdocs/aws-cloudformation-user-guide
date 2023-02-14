@@ -2,6 +2,8 @@
 
 Specifies a set of resources to assign to a backup plan\.
 
+For a sample AWS CloudFormation template, see the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/assigning-resources.html#assigning-resources-cfn)\.
+
 ## Syntax<a name="aws-resource-backup-backupselection-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -13,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Backup::BackupSelection",
   "Properties" : {
       "[BackupPlanId](#cfn-backup-backupselection-backupplanid)" : String,
-      "[BackupSelection](#cfn-backup-backupselection-backupselection)" : [BackupSelectionResourceType](aws-properties-backup-backupselection-backupselectionresourcetype.md)
+      "[BackupSelection](#cfn-backup-backupselection-backupselection)" : BackupSelectionResourceType
     }
 }
 ```
@@ -25,7 +27,7 @@ Type: AWS::Backup::BackupSelection
 Properties: 
   [BackupPlanId](#cfn-backup-backupselection-backupplanid): String
   [BackupSelection](#cfn-backup-backupselection-backupselection): 
-    [BackupSelectionResourceType](aws-properties-backup-backupselection-backupselectionresourcetype.md)
+    BackupSelectionResourceType
 ```
 
 ## Properties<a name="aws-resource-backup-backupselection-properties"></a>
@@ -43,7 +45,7 @@ It includes an array of resources, an optional array of patterns to exclude reso
 *Type*: [BackupSelectionResourceType](aws-properties-backup-backupselection-backupselectionresourcetype.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-backup-backupselection-return-values"></a>
+## Return values<a name="aws-resource-backup-backupselection-return-values"></a>
 
 ### Ref<a name="aws-resource-backup-backupselection-return-values-ref"></a>
 
@@ -59,6 +61,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `BackupPlanId`  <a name="BackupPlanId-fn::getatt"></a>
 Uniquely identifies a backup plan\.
+
+`Id`  <a name="Id-fn::getatt"></a>
+Uniquely identifies the backup selection\.
 
 `SelectionId`  <a name="SelectionId-fn::getatt"></a>
 Uniquely identifies a request to assign a set of resources to a backup plan\.

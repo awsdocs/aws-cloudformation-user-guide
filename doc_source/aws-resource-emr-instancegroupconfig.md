@@ -2,6 +2,9 @@
 
 Use `InstanceGroupConfig` to define instance groups for an EMR cluster\. A cluster can not use both instance groups and instance fleets\. For more information, see [Create a Cluster with Instance Fleets or Uniform Instance Groups](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html) in the *Amazon EMR Management Guide*\.
 
+**Important**  
+You can currently only add task instance groups to a cluster with this resource\. If you use this resource, CloudFormation waits for the cluster launch to complete before adding the task instance group to the cluster\. In order to add task instance groups to the cluster as part of the cluster launch and minimize delays in provisioning task nodes, use the `TaskInstanceGroups` subproperty for the [AWS::EMR::Cluster JobFlowInstancesConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html) property instead\. To use this subproperty, see [AWS::EMR::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html) for examples\.
+
 ## Syntax<a name="aws-resource-emr-instancegroupconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -12,10 +15,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EMR::InstanceGroupConfig",
   "Properties" : {
-      "[AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy)" : [AutoScalingPolicy](aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.md),
+      "[AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy)" : AutoScalingPolicy,
       "[BidPrice](#cfn-emr-instancegroupconfig-bidprice)" : String,
-      "[Configurations](#cfn-emr-instancegroupconfig-configurations)" : [ [Configuration](aws-properties-emr-cluster-configuration.md), ... ],
-      "[EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration)" : [EbsConfiguration](aws-properties-emr-ebsconfiguration.md),
+      "[Configurations](#cfn-emr-instancegroupconfig-configurations)" : [ Configuration, ... ],
+      "[CustomAmiId](#cfn-emr-instancegroupconfig-customamiid)" : String,
+      "[EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration)" : EbsConfiguration,
       "[InstanceCount](#cfn-emr-instancegroupconfiginstancecount-)" : Integer,
       "[InstanceRole](#cfn-emr-instancegroupconfig-instancerole)" : String,
       "[InstanceType](#cfn-emr-instancegroupconfig-instancetype)" : String,
@@ -32,12 +36,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EMR::InstanceGroupConfig
 Properties: 
   [AutoScalingPolicy](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy): 
-    [AutoScalingPolicy](aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.md)
+    AutoScalingPolicy
   [BidPrice](#cfn-emr-instancegroupconfig-bidprice): String
   [Configurations](#cfn-emr-instancegroupconfig-configurations): 
-    - [Configuration](aws-properties-emr-cluster-configuration.md)
+    - Configuration
+  [CustomAmiId](#cfn-emr-instancegroupconfig-customamiid): String
   [EbsConfiguration](#cfn-emr-instancegroupconfig-ebsconfiguration): 
-    [EbsConfiguration](aws-properties-emr-ebsconfiguration.md)
+    EbsConfiguration
   [InstanceCount](#cfn-emr-instancegroupconfiginstancecount-): Integer
   [InstanceRole](#cfn-emr-instancegroupconfig-instancerole): String
   [InstanceType](#cfn-emr-instancegroupconfig-instancetype): String
@@ -55,8 +60,7 @@ Properties:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BidPrice`  <a name="cfn-emr-instancegroupconfig-bidprice"></a>
-The maximum Spot price your are willing to pay for EC2 instances\.  
-If `BidPrice` is specified, Amazon EMR uses Spot Instances for the instance group\. Specified in USD\. Alternatively, a value of `OnDemandPrice` indicates that the maximum Spot price is set equal to the On\-Demand price\.  
+If specified, indicates that the instance group uses Spot Instances\. This is the maximum price you are willing to pay for Spot Instances\. Specify `OnDemandPrice` to set the amount equal to the On\-Demand price, or specify an amount in USD\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -69,6 +73,15 @@ Amazon EMR releases 4\.x or later\.
 The list of configurations supplied for an EMR cluster instance group\. You can specify a separate configuration for each instance group \(master, core, and task\)\.  
 *Required*: No  
 *Type*: List of [Configuration](aws-properties-emr-cluster-configuration.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`CustomAmiId`  <a name="cfn-emr-instancegroupconfig-customamiid"></a>
+The custom AMI ID to use for the provisioned instance group\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `0`  
+*Maximum*: `256`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EbsConfiguration`  <a name="cfn-emr-instancegroupconfig-ebsconfiguration"></a>
@@ -85,9 +98,9 @@ Target number of instances for the instance group\.
 
 `InstanceRole`  <a name="cfn-emr-instancegroupconfig-instancerole"></a>
 The role of the instance group in the cluster\.  
+*Allowed Values*: TASK  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CORE | MASTER | TASK`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceType`  <a name="cfn-emr-instancegroupconfig-instancetype"></a>
@@ -109,7 +122,7 @@ The ID of an Amazon EMR cluster that you want to associate this instance group w
 Market type of the EC2 instances used to create a cluster node\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `ON_DEMAND | SPOT`  
+*Allowed values*: `ON_DEMAND | SPOT`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-emr-instancegroupconfig-name"></a>
@@ -121,7 +134,7 @@ Friendly name given to the instance group\.
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-emr-instancegroupconfig-return-values"></a>
+## Return values<a name="aws-resource-emr-instancegroupconfig-return-values"></a>
 
 ### Ref<a name="aws-resource-emr-instancegroupconfig-return-values-ref"></a>
 

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Attributes](#cfn-iotevents-input-inputdefinition-attributes)" : [ [Attribute](aws-properties-iotevents-input-attribute.md), ... ]
+  "[Attributes](#cfn-iotevents-input-inputdefinition-attributes)" : [ Attribute, ... ]
 }
 ```
 
@@ -18,14 +18,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Attributes](#cfn-iotevents-input-inputdefinition-attributes): 
-    - [Attribute](aws-properties-iotevents-input-attribute.md)
+    - Attribute
 ```
 
 ## Properties<a name="aws-properties-iotevents-input-inputdefinition-properties"></a>
 
 `Attributes`  <a name="cfn-iotevents-input-inputdefinition-attributes"></a>
-The attributes from the JSON payload that are made available by the input\. Inputs are derived from messages sent to the AWS IoT Events system using `BatchPutMessage`\. Each such message contains a JSON payload, and those attributes \(and their paired values\) specified here are available for use in the `"condition"` expressions used by detectors that monitor this input\.   
-*Required*: No  
+The attributes from the JSON payload that are made available by the input\. Inputs are derived from messages sent to the AWS IoT Events system using `BatchPutMessage`\. Each such message contains a JSON payload, and those attributes \(and their paired values\) specified here are available for use in the `condition` expressions used by detectors that monitor this input\.   
+*Required*: Yes  
 *Type*: List of [Attribute](aws-properties-iotevents-input-attribute.md)  
 *Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

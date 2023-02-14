@@ -12,13 +12,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Glue::Trigger",
   "Properties" : {
-      "[Actions](#cfn-glue-trigger-actions)" : [ [Action](aws-properties-glue-trigger-action.md), ... ],
+      "[Actions](#cfn-glue-trigger-actions)" : [ Action, ... ],
       "[Description](#cfn-glue-trigger-description)" : String,
       "[Name](#cfn-glue-trigger-name)" : String,
-      "[Predicate](#cfn-glue-trigger-predicate)" : [Predicate](aws-properties-glue-trigger-predicate.md),
+      "[Predicate](#cfn-glue-trigger-predicate)" : Predicate,
       "[Schedule](#cfn-glue-trigger-schedule)" : String,
+      "[StartOnCreation](#cfn-glue-trigger-startoncreation)" : Boolean,
       "[Tags](#cfn-glue-trigger-tags)" : Json,
-      "[Type](#cfn-glue-trigger-type)" : String
+      "[Type](#cfn-glue-trigger-type)" : String,
+      "[WorkflowName](#cfn-glue-trigger-workflowname)" : String
     }
 }
 ```
@@ -29,14 +31,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Glue::Trigger
 Properties: 
   [Actions](#cfn-glue-trigger-actions): 
-    - [Action](aws-properties-glue-trigger-action.md)
+    - Action
   [Description](#cfn-glue-trigger-description): String
   [Name](#cfn-glue-trigger-name): String
   [Predicate](#cfn-glue-trigger-predicate): 
-    [Predicate](aws-properties-glue-trigger-predicate.md)
+    Predicate
   [Schedule](#cfn-glue-trigger-schedule): String
+  [StartOnCreation](#cfn-glue-trigger-startoncreation): Boolean
   [Tags](#cfn-glue-trigger-tags): Json
   [Type](#cfn-glue-trigger-type): String
+  [WorkflowName](#cfn-glue-trigger-workflowname): String
 ```
 
 ## Properties<a name="aws-resource-glue-trigger-properties"></a>
@@ -71,8 +75,14 @@ A `cron` expression used to specify the schedule\. For more information, see [Ti
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`StartOnCreation`  <a name="cfn-glue-trigger-startoncreation"></a>
+Set to true to start `SCHEDULED` and `CONDITIONAL` triggers when created\. True is not supported for `ON_DEMAND` triggers\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-glue-trigger-tags"></a>
-The tags to use with this trigger\. You can use tags to limit access to the trigger\. For more information about tags in AWS Glue, see [AWS Tags in AWS Glue](https://docs.aws.amazon.com/glue/latest/dg/monitor-tags.html) in the developer guide\.\.  
+The tags to use with this trigger\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -83,7 +93,13 @@ The type of trigger that this is\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-trigger-return-values"></a>
+`WorkflowName`  <a name="cfn-glue-trigger-workflowname"></a>
+The name of the workflow associated with the trigger\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Return values<a name="aws-resource-glue-trigger-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-trigger-return-values-ref"></a>
 
@@ -92,6 +108,8 @@ The type of trigger that this is\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-glue-trigger--examples"></a>
+
+
 
 ### On\-Demand Trigger<a name="aws-resource-glue-trigger--examples--On-Demand_Trigger"></a>
 
@@ -192,7 +210,7 @@ The following example creates a conditional trigger that starts a job based on t
 
 ```
 {
-  "Description": "AWS Glue Trigger Test",
+  "Description": "AWS Glue trigger test",
   "Resources": {
     "MyJobTriggerRole": {
       "Type": "AWS::IAM::Role",
@@ -286,7 +304,7 @@ The following example creates a conditional trigger that starts a job based on t
 
 ```
 ---
-Description: "AWS Glue Trigger Test"
+Description: "AWS Glue trigger test"
 Resources:
   MyJobTriggerRole:
     Type: AWS::IAM::Role

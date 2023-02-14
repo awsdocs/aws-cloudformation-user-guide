@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-managedblockchain-member-memberfabricconfiguration-properties"></a>
 
 `AdminPassword`  <a name="cfn-managedblockchain-member-memberfabricconfiguration-adminpassword"></a>
-The password for the member's initial administrative user\. The `AdminPassword` must be at least eight characters long and no more than 32 characters\. It must contain at least one uppercase letter, one lowercase letter, and one digit\. It cannot have a single quote\(‘\), double quote\(“\), forward slash\(/\), backward slash\(\\\), @, or a space\.  
+The password for the member's initial administrative user\. The `AdminPassword` must be at least eight characters long and no more than 32 characters\. It must contain at least one uppercase letter, one lowercase letter, and one digit\. It cannot have a single quotation mark \(‘\), a double quotation marks \(“\), a forward slash\(/\), a backward slash\(\\\), @, or a space\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `8`  

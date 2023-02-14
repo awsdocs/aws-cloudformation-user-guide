@@ -31,7 +31,7 @@ Whether to enable Elastic Load Balancing connection draining\. For more informat
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExecutionTimeout`  <a name="cfn-opsworks-layer-lifecycleconfiguration-shutdowneventconfiguration-executiontimeout"></a>
-The time, in seconds, that AWS OpsWorks Stacks will wait after triggering a Shutdown event before shutting down an instance\.  
+The time, in seconds, that AWS OpsWorks Stacks waits after triggering a Shutdown event before shutting down an instance\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

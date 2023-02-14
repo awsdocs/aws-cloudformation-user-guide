@@ -29,14 +29,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Attributes`  <a name="cfn-iotanalytics-pipeline-removeattributes-attributes"></a>
 A list of 1\-50 attributes to remove from the message\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of String  
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-iotanalytics-pipeline-removeattributes-name"></a>
 The name of the 'removeAttributes' activity\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  

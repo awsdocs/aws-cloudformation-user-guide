@@ -1,6 +1,6 @@
 # AWS::WAF::SqlInjectionMatchSet FieldToMatch<a name="aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch-1"></a>
 
-Specifies the part of a web request that you want AWS WAF to search, such as a specific header or a query string\. 
+The part of a web request that you want to inspect, such as a specified header or a query string\.
 
 ## Syntax<a name="aws-properties-waf-bytematchset-bytematchtuples-fieldtomatch-1-syntax"></a>
 
@@ -30,6 +30,9 @@ When the value of `Type` is `SINGLE_QUERY_ARG`, enter the name of the parameter 
 If the value of `Type` is any other value, omit `Data`\.  
 *Required*: Conditional  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-waf-sizeconstraintset-sizeconstraint-fieldtomatch-type"></a>
@@ -43,5 +46,5 @@ The part of the web request that you want AWS WAF to search for a specified stri
 +  `ALL_QUERY_ARGS`: Similar to `SINGLE_QUERY_ARG`, but rather than inspecting a single parameter, AWS WAF will inspect all parameters within the query for the value or regex pattern that you specify in `TargetString`\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ALL_QUERY_ARGS | BODY | HEADER | METHOD | QUERY_STRING | SINGLE_QUERY_ARG | URI`  
+*Allowed values*: `ALL_QUERY_ARGS | BODY | HEADER | METHOD | QUERY_STRING | SINGLE_QUERY_ARG | URI`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

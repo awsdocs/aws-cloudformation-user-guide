@@ -2,7 +2,10 @@
 
 The `AWS::Route53::HealthCheck` resource is a Route 53 resource type that contains settings for a Route 53 health check\.
 
-For information about associating health checks with resource record sets, see [HealthCheckId](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResourceRecordSet.html#Route53-Type-ResourceRecordSet-HealthCheckId) in [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html)\. 
+For information about associating health checks with records, see [HealthCheckId](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ResourceRecordSet.html#Route53-Type-ResourceRecordSet-HealthCheckId) in [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html)\. 
+
+**Note**  
+You can't create a health check with simple routing\.
 
 **ELB Load Balancers**
 
@@ -10,7 +13,7 @@ If you're registering EC2 instances with an Elastic Load Balancing \(ELB\) load 
 
 **Private Hosted Zones**
 
-You can associate health checks with failover resource record sets in a private hosted zone\. Note the following:
+You can associate health checks with failover records in a private hosted zone\. Note the following:
 + Route 53 health checkers are outside the VPC\. To check the health of an endpoint within a VPC by IP address, you must assign a public IP address to the instance in the VPC\.
 + You can configure a health checker to check the health of an external resource that the instance relies on, such as a database server\.
 + You can create a CloudWatch metric, associate an alarm with the metric, and then create a health check that is based on the state of the alarm\. For example, you might create a CloudWatch metric that checks the status of the Amazon EC2 `StatusCheckFailed` metric, add an alarm to the metric, and then create a health check that is based on the state of the alarm\. For information about creating CloudWatch metrics and alarms by using the CloudWatch console, see the [Amazon CloudWatch User Guide](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/WhatIsCloudWatch.html)\.
@@ -25,8 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Route53::HealthCheck",
   "Properties" : {
-      "[HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig)" : [HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md),
-      "[HealthCheckTags](#cfn-route53-healthcheck-healthchecktags)" : [ [HealthCheckTag](aws-properties-route53-healthcheck-healthchecktag.md), ... ]
+      "[HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig)" : Json,
+      "[HealthCheckTags](#cfn-route53-healthcheck-healthchecktags)" : [ HealthCheckTag, ... ]
     }
 }
 ```
@@ -36,18 +39,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Route53::HealthCheck
 Properties: 
-  [HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig): 
-    [HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md)
+  [HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig): Json
   [HealthCheckTags](#cfn-route53-healthcheck-healthchecktags): 
-    - [HealthCheckTag](aws-properties-route53-healthcheck-healthchecktag.md)
+    - HealthCheckTag
 ```
 
 ## Properties<a name="aws-resource-route53-healthcheck-properties"></a>
 
 `HealthCheckConfig`  <a name="cfn-route53-healthcheck-healthcheckconfig"></a>
 A complex type that contains detailed information about one health check\.  
+For the values to enter for `HealthCheckConfig`, see [HealthCheckConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html)  
 *Required*: Yes  
-*Type*: [HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckTags`  <a name="cfn-route53-healthcheck-healthchecktags"></a>
@@ -56,7 +59,7 @@ The `HealthCheckTags` property describes key\-value pairs that are associated wi
 *Type*: List of [HealthCheckTag](aws-properties-route53-healthcheck-healthchecktag.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-route53-healthcheck-return-values"></a>
+## Return values<a name="aws-resource-route53-healthcheck-return-values"></a>
 
 ### Ref<a name="aws-resource-route53-healthcheck-return-values-ref"></a>
 
@@ -64,7 +67,20 @@ The `HealthCheckTags` property describes key\-value pairs that are associated wi
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-route53-healthcheck-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-route53-healthcheck-return-values-fn--getatt-fn--getatt"></a>
+
+`HealthCheckId`  <a name="HealthCheckId-fn::getatt"></a>
+The identifier that Amazon Route 53 assigned to the health check when you created it\. When you add or update a resource record set, you use this value to specify which health check to use\. The value can be up to 64 characters long\.
+
 ## Examples<a name="aws-resource-route53-healthcheck--examples"></a>
+
+
 
 ### Create health check<a name="aws-resource-route53-healthcheck--examples--Create_health_check"></a>
 
@@ -73,27 +89,31 @@ The following example creates an Amazon Route 53 health check that sends HTTP re
 #### JSON<a name="aws-resource-route53-healthcheck--examples--Create_health_check--json"></a>
 
 ```
-"myHealthCheck": {
-  "Type": "AWS::Route53::HealthCheck",
-  "Properties": {
-    "HealthCheckConfig": {
-      "IPAddress": "192.0.2.44",
-      "Port": "80",
-      "Type": "HTTP",
-      "ResourcePath": "/example/index.html",
-      "FullyQualifiedDomainName": "example.com",
-      "RequestInterval": "30",
-      "FailureThreshold": "3"
-    },
-    "HealthCheckTags" : [{
-      "Key": "SampleKey1",
-      "Value": "SampleValue1"
-    },
-    {
-      "Key": "SampleKey2",
-      "Value": "SampleValue2"
-    }]
-  }
+{
+   "myHealthCheck": {
+      "Type": "AWS::Route53::HealthCheck",
+      "Properties": {
+         "HealthCheckConfig": {
+            "IPAddress": "192.0.2.44",
+            "Port": "80",
+            "Type": "HTTP",
+            "ResourcePath": "/example/index.html",
+            "FullyQualifiedDomainName": "example.com",
+            "RequestInterval": "30",
+            "FailureThreshold": "3"
+         },
+         "HealthCheckTags": [
+            {
+               "Key": "SampleKey1",
+               "Value": "SampleValue1"
+            },
+            {
+               "Key": "SampleKey2",
+               "Value": "SampleValue2"
+            }
+         ]
+      }
+   }
 }
 ```
 
@@ -101,24 +121,25 @@ The following example creates an Amazon Route 53 health check that sends HTTP re
 
 ```
 myHealthCheck: 
-  Type: "AWS::Route53::HealthCheck"
+  Type: 'AWS::Route53::HealthCheck'
   Properties: 
     HealthCheckConfig: 
-      IPAddress: "192.0.2.44"
-      Port: "80"
-      Type: "HTTP"
-      ResourcePath: "/example/index.html"
-      FullyQualifiedDomainName: "example.com"
-      RequestInterval: "30"
-      FailureThreshold: "3"
+      IPAddress: 192.0.2.44
+      Port: 80
+      Type: HTTP
+      ResourcePath: '/example/index.html'
+      FullyQualifiedDomainName: example.com
+      RequestInterval: 30
+      FailureThreshold: 3
     HealthCheckTags: 
       - 
-        Key: "SampleKey1"
-        Value: "SampleValue1"
+        Key: SampleKey1
+        Value: SampleValue1
       - 
-        Key: "SampleKey2"
-        Value: "SampleValue2"
+        Key: SampleKey2
+        Value: SampleValue2
 ```
 
-## See Also<a name="aws-resource-route53-healthcheck--seealso"></a>
+## See also<a name="aws-resource-route53-healthcheck--seealso"></a>
 +  [CreateHealthCheck](https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHealthCheck.html) in the *Amazon Route 53 API Reference*
+

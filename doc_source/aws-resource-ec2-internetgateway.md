@@ -34,7 +34,7 @@ Any tags to assign to the internet gateway\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-internetgateway-return-values"></a>
+## Return values<a name="aws-resource-ec2-internetgateway-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-internetgateway-return-values-ref"></a>
 
@@ -42,37 +42,48 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-ec2-internetgateway-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-ec2-internetgateway-return-values-fn--getatt-fn--getatt"></a>
+
+`InternetGatewayId`  <a name="InternetGatewayId-fn::getatt"></a>
+The ID of the internet gateway\.
+
 ## Examples<a name="aws-resource-ec2-internetgateway--examples"></a>
 
-### Creating an Internet Gateway<a name="aws-resource-ec2-internetgateway--examples--Creating_an_Internet_Gateway"></a>
+### Create an internet gateway<a name="aws-resource-ec2-internetgateway--examples--Create_an_internet_gateway"></a>
 
-The following example creates an Internet gateway and assigns it a tag\.
+The following example creates an internet gateway and assigns it a tag\.
 
-#### JSON<a name="aws-resource-ec2-internetgateway--examples--Creating_an_Internet_Gateway--json"></a>
+#### JSON<a name="aws-resource-ec2-internetgateway--examples--Create_an_internet_gateway--json"></a>
 
 ```
 "Resources" : {
    "myInternetGateway" : {
       "Type" : "AWS::EC2::InternetGateway",
       "Properties" : {
-        "Tags" : [ {"Key" : "foo", "Value" : "bar"}]
+        "Tags" : [ {"Key" : "stack", "Value" : "production"}]
       }
    }
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-internetgateway--examples--Creating_an_Internet_Gateway--yaml"></a>
+#### YAML<a name="aws-resource-ec2-internetgateway--examples--Create_an_internet_gateway--yaml"></a>
 
 ```
   myInternetGateway:
     Type: AWS::EC2::InternetGateway
     Properties:
       Tags:
-      - Key: foo
-        Value: bar
+      - Key: stack
+        Value: production
 ```
 
-## See Also<a name="aws-resource-ec2-internetgateway--seealso"></a>
+## See also<a name="aws-resource-ec2-internetgateway--seealso"></a>
 +  [ CreateInternetGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateInternetGateway.html) in the *Amazon EC2 API Reference*
-+ [InternetGateways](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html) in the *Amazon Virtual Private Cloud User Guide*
-+ Use the [ AWS::EC2::VPCGatewayAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html) resource to associate an Internet gateway with a VPC
++ [Internet gateways](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html) in the *Amazon VPC User Guide*
++ Use the [ AWS::EC2::VPCGatewayAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html) resource to associate an internet gateway with a VPC
