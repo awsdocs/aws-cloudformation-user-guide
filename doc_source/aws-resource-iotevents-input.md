@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoTEvents::Input",
   "Properties" : {
-      "[InputDefinition](#cfn-iotevents-input-inputdefinition)" : [InputDefinition](aws-properties-iotevents-input-inputdefinition.md),
+      "[InputDefinition](#cfn-iotevents-input-inputdefinition)" : InputDefinition,
       "[InputDescription](#cfn-iotevents-input-inputdescription)" : String,
       "[InputName](#cfn-iotevents-input-inputname)" : String,
       "[Tags](#cfn-iotevents-input-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IoTEvents::Input
 Properties: 
   [InputDefinition](#cfn-iotevents-input-inputdefinition): 
-    [InputDefinition](aws-properties-iotevents-input-inputdefinition.md)
+    InputDefinition
   [InputDescription](#cfn-iotevents-input-inputdescription): String
   [InputName](#cfn-iotevents-input-inputname): String
   [Tags](#cfn-iotevents-input-tags): 
@@ -37,7 +37,7 @@ Properties:
 
 `InputDefinition`  <a name="cfn-iotevents-input-inputdefinition"></a>
 The definition of the input\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [InputDefinition](aws-properties-iotevents-input-inputdefinition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -64,7 +64,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iotevents-input-return-values"></a>
+## Return values<a name="aws-resource-iotevents-input-return-values"></a>
 
 ### Ref<a name="aws-resource-iotevents-input-return-values-ref"></a>
 
@@ -77,6 +77,8 @@ For the AWS IoT Events input `myInput`, `Ref` returns the name of the input\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-iotevents-input--examples"></a>
+
+
 
 ### Input<a name="aws-resource-iotevents-input--examples--Input"></a>
 
@@ -128,6 +130,6 @@ Resources:
             JsonPath: "bar"
 ```
 
-## See Also<a name="aws-resource-iotevents-input--seealso"></a>
+## See also<a name="aws-resource-iotevents-input--seealso"></a>
 +  [ How to Use AWS IoT Events](https://docs.aws.amazon.com/iotevents/latest/developerguide/how-to-use-iotevents.html) in the *AWS IoT Events Developer Guide*
 +  [CreateInput](https://docs.aws.amazon.com/iotevents/latest/apireference/API_CreateInput.html) in the *AWS IoT Events API Reference*

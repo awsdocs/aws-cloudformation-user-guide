@@ -1,4 +1,4 @@
-# Elastic Load Balancing Resource Type Reference<a name="AWS_ElasticLoadBalancing"></a>
+# Elastic Load Balancing resource type reference<a name="AWS_ElasticLoadBalancing"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::ElasticLoadBalancing::LoadBalancer](aws-properties-ec2-elb.md)

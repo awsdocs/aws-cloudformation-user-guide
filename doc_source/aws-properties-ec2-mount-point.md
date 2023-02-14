@@ -2,7 +2,7 @@
 
 Specifies a volume to attach to an instance\.
 
- `Volume` is property is an embedded property of the [ AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource\.
+ `Volume` is an embedded property of the [ AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource\.
 
 ## Syntax<a name="aws-properties-ec2-mount-point-syntax"></a>
 

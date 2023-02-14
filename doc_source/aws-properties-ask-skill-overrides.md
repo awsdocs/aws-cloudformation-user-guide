@@ -32,6 +32,8 @@ Overrides to apply to the skill manifest inside of the skill package\. The skill
 
 ## Examples<a name="aws-properties-ask-skill-overrides--examples"></a>
 
+
+
 ### Alexa Skill Overrides Resource Configuration<a name="aws-properties-ask-skill-overrides--examples--Alexa_Skill_Overrides_Resource_Configuration"></a>
 
 #### JSON<a name="aws-properties-ask-skill-overrides--examples--Alexa_Skill_Overrides_Resource_Configuration--json"></a>

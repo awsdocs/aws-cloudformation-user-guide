@@ -1,6 +1,6 @@
 # `Fn::GetAtt`<a name="intrinsic-function-reference-getatt"></a>
 
-The `Fn::GetAtt` intrinsic function returns the value of an attribute from a resource in the template\. For more information about `GetAtt` return values for a particular resource, refer to the documentation for that resource in the [Resource and Property Reference](aws-template-resource-type-ref.md)\.
+The `Fn::GetAtt` intrinsic function returns the value of an attribute from a resource in the template\. For more information about `GetAtt` return values for a particular resource, refer to the documentation for that resource in the [Resource and property reference](aws-template-resource-type-ref.md)\.
 
 ## Declaration<a name="getatt-declaration"></a>
 
@@ -32,13 +32,13 @@ The logical name \(also called *logical ID*\) of the resource that contains the 
 `attributeName`  
 The name of the resource\-specific attribute whose value you want\. See the resource's reference page for details about the attributes available for that resource type\.
 
-## Return Value<a name="intrinsic-function-reference-getatt-return"></a>
+## Return value<a name="intrinsic-function-reference-getatt-return"></a>
 
 The attribute value\.
 
 ## Examples<a name="intrinsic-function-reference-getatt-examples"></a>
 
-### Return a String<a name="intrinsic-function-reference-getatt-example"></a>
+### Return a string<a name="intrinsic-function-reference-getatt-example"></a>
 
 This example snippet returns a string containing the DNS name of the load balancer with the logical name `myELB`\.
 
@@ -54,7 +54,7 @@ This example snippet returns a string containing the DNS name of the load balanc
 1. !GetAtt myELB.DNSName
 ```
 
-#### Return Multiple Strings<a name="intrinsic-function-reference-getatt-example2"></a>
+#### Return multiple strings<a name="intrinsic-function-reference-getatt-example2"></a>
 
 The following example template returns the `SourceSecurityGroup.OwnerAlias` and `SourceSecurityGroup.GroupName` of the load balancer with the logical name `myELB`\.
 
@@ -86,8 +86,8 @@ The following example template returns the `SourceSecurityGroup.OwnerAlias` and 
                 "SecurityGroupIngress": [
                     {
                         "IpProtocol": "tcp",
-                        "FromPort": "80",
-                        "ToPort": "80",
+                        "FromPort": 80,
+                        "ToPort": 80,
                         "SourceSecurityGroupOwnerId": {
                             "Fn::GetAtt": [
                                 "myELB",
@@ -128,14 +128,14 @@ Resources:
       GroupDescription: ELB ingress group
       SecurityGroupIngress:
         - IpProtocol: tcp
-          FromPort: '80'
-          ToPort: '80'
+          FromPort: 80
+          ToPort: 80
           SourceSecurityGroupOwnerId: !GetAtt myELB.SourceSecurityGroup.OwnerAlias
           SourceSecurityGroupName: !GetAtt myELB.SourceSecurityGroup.GroupName
 ```
 
-## Supported Functions<a name="getatt-supported-functions"></a>
+## Supported functions<a name="getatt-supported-functions"></a>
 
-For the `Fn::GetAtt` logical resource name, you cannot use functions\. You must specify a string that is a resource's logical ID\.
+For the `Fn::GetAtt` logical resource name, you can't use functions\. You must specify a string that's a resource's logical ID\.
 
 For the `Fn::GetAtt` attribute name, you can use the `Ref` function\.

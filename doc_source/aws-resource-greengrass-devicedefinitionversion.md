@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Greengrass::DeviceDefinitionVersion",
   "Properties" : {
       "[DeviceDefinitionId](#cfn-greengrass-devicedefinitionversion-devicedefinitionid)" : String,
-      "[Devices](#cfn-greengrass-devicedefinitionversion-devices)" : [ [Device](aws-properties-greengrass-devicedefinitionversion-device.md), ... ]
+      "[Devices](#cfn-greengrass-devicedefinitionversion-devices)" : [ Device, ... ]
     }
 }
 ```
@@ -29,7 +29,7 @@ Type: AWS::Greengrass::DeviceDefinitionVersion
 Properties: 
   [DeviceDefinitionId](#cfn-greengrass-devicedefinitionversion-devicedefinitionid): String
   [Devices](#cfn-greengrass-devicedefinitionversion-devices): 
-    - [Device](aws-properties-greengrass-devicedefinitionversion-device.md)
+    - Device
 ```
 
 ## Properties<a name="aws-resource-greengrass-devicedefinitionversion-properties"></a>
@@ -46,7 +46,7 @@ The devices in this version\.
 *Type*: List of [Device](aws-properties-greengrass-devicedefinitionversion-device.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-greengrass-devicedefinitionversion-return-values"></a>
+## Return values<a name="aws-resource-greengrass-devicedefinitionversion-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-devicedefinitionversion-return-values-ref"></a>
 
@@ -55,6 +55,8 @@ The devices in this version\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-greengrass-devicedefinitionversion--examples"></a>
+
+
 
 ### Device Definition Version Snippet<a name="aws-resource-greengrass-devicedefinitionversion--examples--Device_Definition_Version_Snippet"></a>
 
@@ -151,6 +153,6 @@ TestDeviceDefinitionVersion:
             - thing/TestDevice1
 ```
 
-## See Also<a name="aws-resource-greengrass-devicedefinitionversion--seealso"></a>
-+  [CreateDeviceDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createdevicedefinitionversion-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+## See also<a name="aws-resource-greengrass-devicedefinitionversion--seealso"></a>
++  [CreateDeviceDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createdevicedefinitionversion-post.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

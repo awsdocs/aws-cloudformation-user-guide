@@ -6,12 +6,12 @@ The intrinsic function `Ref` returns the value of the specified *parameter* or *
 
 When you are declaring a resource in a template and you need to specify another template resource by name, you can use the `Ref` to refer to that other resource\. In general, `Ref` returns the name of the resource\. For example, a reference to an [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) returns the name of that Auto Scaling group resource\.
 
-For some resources, an identifier is returned that has another significant meaning in the context of the resource\. An [AWS::EC2::EIP](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html) resource, for instance, returns the IP address, and an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) returns the instance ID\. 
+For some resources, an identifier is returned that has another significant meaning in the context of the resource\. An [AWS::EC2::EIP](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip.html) resource, for instance, returns the IP address, and an [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) returns the instance ID\.
 
 **Tip**  
 You can also use `Ref` to add values to Output messages\.
 
-For more information about `Ref` return values for a particular resource or property, refer to the documentation for that resource or property in the [Resource and Property Reference](aws-template-resource-type-ref.md)\.
+For more information about `Ref` return values for a particular resource or property, refer to the documentation for that resource or property in the [Resource and property reference](aws-template-resource-type-ref.md)\.
 
 ## Declaration<a name="ref-declaration"></a>
 
@@ -38,9 +38,9 @@ Syntax for the short form:
 ## Parameters<a name="ref-parameters"></a>
 
 logicalName  
-The logical name of the resource or parameter you want to dereference\.
+The logical name of the resource or parameter you want to reference\.
 
-## Return Value<a name="ref-return-value"></a>
+## Return value<a name="ref-return-value"></a>
 
 The physical ID of the resource or the value of the parameter\.
 
@@ -68,6 +68,6 @@ MyEIP:
     InstanceId: !Ref MyEC2Instance
 ```
 
-## Supported Functions<a name="ref-supported-functions"></a>
+## Supported functions<a name="ref-supported-functions"></a>
 
-You cannot use any functions in the `Ref` function\. You must specify a string that is a resource logical ID\.
+You can't use any functions in the `Ref` function\. You must specify a string that's a resource logical ID\.

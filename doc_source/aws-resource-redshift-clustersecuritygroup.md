@@ -2,7 +2,7 @@
 
 Specifies a new Amazon Redshift security group\. You use security groups to control access to non\-VPC clusters\.
 
- For information about managing security groups, go to [Amazon Redshift Cluster Security Groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html) in the *Amazon Redshift Cluster Management Guide*\.
+For information about managing security groups, go to [Amazon Redshift Cluster Security Groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html) in the *Amazon Redshift Cluster Management Guide*\.
 
 ## Syntax<a name="aws-resource-redshift-clustersecuritygroup-syntax"></a>
 
@@ -36,6 +36,7 @@ Properties:
 A description for the security group\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-redshift-clustersecuritygroup-tags"></a>
@@ -44,7 +45,7 @@ Specifies an arbitrary set of tags \(key–value pairs\) to associate with this 
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-redshift-clustersecuritygroup-return-values"></a>
+## Return values<a name="aws-resource-redshift-clustersecuritygroup-return-values"></a>
 
 ### Ref<a name="aws-resource-redshift-clustersecuritygroup-return-values-ref"></a>
 
@@ -57,6 +58,8 @@ For the Amazon Redshift cluster security group `myClusterSecurityGroup`, Ref ret
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-redshift-clustersecuritygroup--examples"></a>
+
+
 
 ### Specify a Cluster Security Group<a name="aws-resource-redshift-clustersecuritygroup--examples--Specify_a_Cluster_Security_Group"></a>
 

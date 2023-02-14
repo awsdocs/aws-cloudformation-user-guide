@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[VideoSelectorPid](#cfn-medialive-channel-videoselectorsettings-videoselectorpid)" : [VideoSelectorPid](aws-properties-medialive-channel-videoselectorpid.md),
-  "[VideoSelectorProgramId](#cfn-medialive-channel-videoselectorsettings-videoselectorprogramid)" : [VideoSelectorProgramId](aws-properties-medialive-channel-videoselectorprogramid.md)
+  "[VideoSelectorPid](#cfn-medialive-channel-videoselectorsettings-videoselectorpid)" : VideoSelectorPid,
+  "[VideoSelectorProgramId](#cfn-medialive-channel-videoselectorsettings-videoselectorprogramid)" : VideoSelectorProgramId
 }
 ```
 
@@ -21,9 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [VideoSelectorPid](#cfn-medialive-channel-videoselectorsettings-videoselectorpid): 
-    [VideoSelectorPid](aws-properties-medialive-channel-videoselectorpid.md)
+    VideoSelectorPid
   [VideoSelectorProgramId](#cfn-medialive-channel-videoselectorsettings-videoselectorprogramid): 
-    [VideoSelectorProgramId](aws-properties-medialive-channel-videoselectorprogramid.md)
+    VideoSelectorProgramId
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-videoselectorsettings-properties"></a>

@@ -1,6 +1,6 @@
 # AWS::S3::Bucket NotificationFilter<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter"></a>
 
-Specifies object key name filtering rules\. For information about key name filtering, see [Configuring Event Notifications](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\.
+Specifies object key name filtering rules\. For information about key name filtering, see [Configuring Event Notifications](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon S3 User Guide*\.
 
 ## Syntax<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-syntax"></a>
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[S3Key](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key)" : [S3KeyFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key.md)
+  "[S3Key](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key)" : S3KeyFilter
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [S3Key](#cfn-s3-bucket-notificationconfiguraiton-config-filter-s3key): 
-    [S3KeyFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter-s3key.md)
+    S3KeyFilter
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-properties"></a>

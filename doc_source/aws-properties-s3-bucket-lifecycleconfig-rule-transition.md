@@ -1,6 +1,6 @@
 # AWS::S3::Bucket Transition<a name="aws-properties-s3-bucket-lifecycleconfig-rule-transition"></a>
 
-Specifies when an object transitions to a specified storage class\.
+Specifies when an object transitions to a specified storage class\. For more information about Amazon S3 lifecycle configuration rules, see [Transitioning Objects Using Amazon S3 Lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-considerations.html) in the *Amazon S3 User Guide*\.
 
 ## Syntax<a name="aws-properties-s3-bucket-lifecycleconfig-rule-transition-syntax"></a>
 
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The storage class to which you want the object to transition\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `DEEP_ARCHIVE | GLACIER | INTELLIGENT_TIERING | ONEZONE_IA | STANDARD_IA`  
+*Allowed values*: `DEEP_ARCHIVE | GLACIER | GLACIER_IR | INTELLIGENT_TIERING | ONEZONE_IA | STANDARD_IA`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TransitionDate`  <a name="cfn-s3-bucket-lifecycleconfig-rule-transition-transitiondate"></a>
@@ -44,3 +44,7 @@ Indicates the number of days after creation when objects are transitioned to the
 *Required*: Conditional  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-s3-bucket-lifecycleconfig-rule-transition--seealso"></a>
++ AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+

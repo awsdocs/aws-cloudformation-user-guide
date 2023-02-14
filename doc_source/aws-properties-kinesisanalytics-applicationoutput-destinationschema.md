@@ -26,5 +26,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Specifies the format of the records on the output stream\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `CSV | JSON`  
+*Allowed values*: `CSV | JSON`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

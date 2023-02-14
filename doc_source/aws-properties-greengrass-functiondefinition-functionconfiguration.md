@@ -1,8 +1,8 @@
 # AWS::Greengrass::FunctionDefinition FunctionConfiguration<a name="aws-properties-greengrass-functiondefinition-functionconfiguration"></a>
 
-<a name="aws-properties-greengrass-functiondefinition-functionconfiguration-description"></a>The group\-specific configuration settings for a Lambda function\. These settings configure the function's behavior in the Greengrass group\. For more information, see [Controlling Execution of Greengrass Lambda Functions by Using Group\-Specific Configuration](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-group-config.html) in the *AWS IoT Greengrass Developer Guide*\.
+<a name="aws-properties-greengrass-functiondefinition-functionconfiguration-description"></a>The group\-specific configuration settings for a Lambda function\. These settings configure the function's behavior in the Greengrass group\. For more information, see [Controlling Execution of Greengrass Lambda Functions by Using Group\-Specific Configuration](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-group-config.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.
 
-<a name="aws-properties-greengrass-functiondefinition-functionconfiguration-inheritance"></a> In an AWS CloudFormation template, `FunctionConfiguration` is a property of the [ `Function` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-function.html) property type\.
+<a name="aws-properties-greengrass-functiondefinition-functionconfiguration-inheritance"></a> In an AWS CloudFormation template, `FunctionConfiguration` is a property of the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-function.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-function.html) property type\.
 
 ## Syntax<a name="aws-properties-greengrass-functiondefinition-functionconfiguration-syntax"></a>
 
@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[EncodingType](#cfn-greengrass-functiondefinition-functionconfiguration-encodingtype)" : String,
-  "[Environment](#cfn-greengrass-functiondefinition-functionconfiguration-environment)" : [Environment](aws-properties-greengrass-functiondefinition-environment.md),
+  "[Environment](#cfn-greengrass-functiondefinition-functionconfiguration-environment)" : Environment,
   "[ExecArgs](#cfn-greengrass-functiondefinition-functionconfiguration-execargs)" : String,
   "[Executable](#cfn-greengrass-functiondefinition-functionconfiguration-executable)" : String,
   "[MemorySize](#cfn-greengrass-functiondefinition-functionconfiguration-memorysize)" : Integer,
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [EncodingType](#cfn-greengrass-functiondefinition-functionconfiguration-encodingtype): String
   [Environment](#cfn-greengrass-functiondefinition-functionconfiguration-environment): 
-    [Environment](aws-properties-greengrass-functiondefinition-environment.md)
+    Environment
   [ExecArgs](#cfn-greengrass-functiondefinition-functionconfiguration-execargs): String
   [Executable](#cfn-greengrass-functiondefinition-functionconfiguration-executable): String
   [MemorySize](#cfn-greengrass-functiondefinition-functionconfiguration-memorysize): Integer
@@ -80,6 +80,6 @@ The allowed execution time \(in seconds\) after which the function should termin
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-functiondefinition-functionconfiguration--seealso"></a>
-+  [FunctionConfiguration](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functionconfiguration.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+## See also<a name="aws-properties-greengrass-functiondefinition-functionconfiguration--seealso"></a>
++  [FunctionConfiguration](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functionconfiguration.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

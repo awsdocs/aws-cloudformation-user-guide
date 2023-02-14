@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Description](#cfn-glue-connection-connectioninput-description)" : String,
   "[MatchCriteria](#cfn-glue-connection-connectioninput-matchcriteria)" : [ String, ... ],
   "[Name](#cfn-glue-connection-connectioninput-name)" : String,
-  "[PhysicalConnectionRequirements](#cfn-glue-connection-connectioninput-physicalconnectionrequirements)" : [PhysicalConnectionRequirements](aws-properties-glue-connection-physicalconnectionrequirements.md)
+  "[PhysicalConnectionRequirements](#cfn-glue-connection-connectioninput-physicalconnectionrequirements)" : PhysicalConnectionRequirements
 }
 ```
 
@@ -29,19 +29,24 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
   [Name](#cfn-glue-connection-connectioninput-name): String
   [PhysicalConnectionRequirements](#cfn-glue-connection-connectioninput-physicalconnectionrequirements): 
-    [PhysicalConnectionRequirements](aws-properties-glue-connection-physicalconnectionrequirements.md)
+    PhysicalConnectionRequirements
 ```
 
 ## Properties<a name="aws-properties-glue-connection-connectioninput-properties"></a>
 
 `ConnectionProperties`  <a name="cfn-glue-connection-connectioninput-connectionproperties"></a>
 These key\-value pairs define parameters for the connection\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectionType`  <a name="cfn-glue-connection-connectioninput-connectiontype"></a>
-The type of the connection\. Currently, only JDBC is supported; SFTP is not supported\.  
+The type of the connection\. Currently, these types are supported:  
++ `JDBC` \- Designates a connection to a database through Java Database Connectivity \(JDBC\)\.
++ `KAFKA` \- Designates a connection to an Apache Kafka streaming platform\.
++ `MONGODB` \- Designates a connection to a MongoDB document database\.
++ `NETWORK` \- Designates a network connection to a data source within an Amazon Virtual Private Cloud environment \(Amazon VPC\)\.
+SFTP is not supported\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

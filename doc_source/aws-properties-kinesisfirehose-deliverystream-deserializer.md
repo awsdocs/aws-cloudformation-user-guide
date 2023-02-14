@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[HiveJsonSerDe](#cfn-kinesisfirehose-deliverystream-deserializer-hivejsonserde)" : [HiveJsonSerDe](aws-properties-kinesisfirehose-deliverystream-hivejsonserde.md),
-  "[OpenXJsonSerDe](#cfn-kinesisfirehose-deliverystream-deserializer-openxjsonserde)" : [OpenXJsonSerDe](aws-properties-kinesisfirehose-deliverystream-openxjsonserde.md)
+  "[HiveJsonSerDe](#cfn-kinesisfirehose-deliverystream-deserializer-hivejsonserde)" : HiveJsonSerDe,
+  "[OpenXJsonSerDe](#cfn-kinesisfirehose-deliverystream-deserializer-openxjsonserde)" : OpenXJsonSerDe
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [HiveJsonSerDe](#cfn-kinesisfirehose-deliverystream-deserializer-hivejsonserde): 
-    [HiveJsonSerDe](aws-properties-kinesisfirehose-deliverystream-hivejsonserde.md)
+    HiveJsonSerDe
   [OpenXJsonSerDe](#cfn-kinesisfirehose-deliverystream-deserializer-openxjsonserde): 
-    [OpenXJsonSerDe](aws-properties-kinesisfirehose-deliverystream-openxjsonserde.md)
+    OpenXJsonSerDe
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-deserializer-properties"></a>

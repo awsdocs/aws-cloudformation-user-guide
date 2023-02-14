@@ -2,7 +2,7 @@
 
 The types of cost that are included in a `COST` budget, such as tax and subscriptions\.
 
- `USAGE`, `RI_UTILIZATION`, and `RI_COVERAGE` budgets do not have `CostTypes`\.
+ `USAGE`, `RI_UTILIZATION`, `RI_COVERAGE`, `SAVINGS_PLANS_UTILIZATION`, and `SAVINGS_PLANS_COVERAGE` budgets don't have `CostTypes`\.
 
 ## Syntax<a name="aws-properties-budgets-budget-costtypes-syntax"></a>
 
@@ -121,5 +121,6 @@ The default value is `false`\.
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-budgets-budget-costtypes--seealso"></a>
+## See also<a name="aws-properties-budgets-budget-costtypes--seealso"></a>
 +  [CostTypes](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_CostTypes.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+

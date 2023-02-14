@@ -31,7 +31,7 @@ If this value is `true`, the container has read\-only access to the volume\. If 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceContainer`  <a name="cfn-ecs-taskdefinition-containerdefinition-volumesfrom-sourcecontainer"></a>
-The name of another container within the same task definition from which to mount volumes\.  
+The name of another container within the same task definition to mount volumes from\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

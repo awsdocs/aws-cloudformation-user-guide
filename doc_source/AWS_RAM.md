@@ -1,4 +1,4 @@
-# RAM Resource Type Reference<a name="AWS_RAM"></a>
+# AWS Resource Access Manager resource type reference<a name="AWS_RAM"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::RAM::ResourceShare](aws-resource-ram-resourceshare.md)

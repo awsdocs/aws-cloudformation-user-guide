@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "Alexa::ASK::Skill",
   "Properties" : {
-      "[AuthenticationConfiguration](#cfn-ask-skill-authenticationconfiguration)" : [AuthenticationConfiguration](aws-properties-ask-skill-authenticationconfiguration.md),
-      "[SkillPackage](#cfn-ask-skill-skillpackage)" : [SkillPackage](aws-properties-ask-skill-skillpackage.md),
+      "[AuthenticationConfiguration](#cfn-ask-skill-authenticationconfiguration)" : AuthenticationConfiguration,
+      "[SkillPackage](#cfn-ask-skill-skillpackage)" : SkillPackage,
       "[VendorId](#cfn-ask-skill-vendorid)" : String
     }
 }
@@ -25,9 +25,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: Alexa::ASK::Skill
 Properties: 
   [AuthenticationConfiguration](#cfn-ask-skill-authenticationconfiguration): 
-    [AuthenticationConfiguration](aws-properties-ask-skill-authenticationconfiguration.md)
+    AuthenticationConfiguration
   [SkillPackage](#cfn-ask-skill-skillpackage): 
-    [SkillPackage](aws-properties-ask-skill-skillpackage.md)
+    SkillPackage
   [VendorId](#cfn-ask-skill-vendorid): String
 ```
 
@@ -51,7 +51,7 @@ The vendor ID associated with the Amazon developer account that will host the sk
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ask-skill-return-values"></a>
+## Return values<a name="aws-resource-ask-skill-return-values"></a>
 
 ### Ref<a name="aws-resource-ask-skill-return-values-ref"></a>
 
@@ -60,6 +60,8 @@ The vendor ID associated with the Amazon developer account that will host the sk
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-ask-skill--examples"></a>
+
+
 
 ### Alexa Skill Resource Configuration<a name="aws-resource-ask-skill--examples--Alexa_Skill_Resource_Configuration"></a>
 

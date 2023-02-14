@@ -36,5 +36,5 @@ Reserved for future use\.
 Reserved for future use\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Schedule`  
+*Allowed values*: `Schedule`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

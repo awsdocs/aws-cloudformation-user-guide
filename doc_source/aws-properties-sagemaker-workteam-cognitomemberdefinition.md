@@ -30,25 +30,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 An identifier for an application client\. You must create the app client ID using Amazon Cognito\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
-*Pattern*: `[\w+]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CognitoUserGroup`  <a name="cfn-sagemaker-workteam-cognitomemberdefinition-cognitousergroup"></a>
 An identifier for a user group\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
-*Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CognitoUserPool`  <a name="cfn-sagemaker-workteam-cognitomemberdefinition-cognitouserpool"></a>
 An identifier for a user pool\. The user pool must be in the same region as the service that you are calling\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `55`  
-*Pattern*: `[\w-]+_[0-9a-zA-Z]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
