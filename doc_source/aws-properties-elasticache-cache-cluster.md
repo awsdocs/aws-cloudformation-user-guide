@@ -380,24 +380,28 @@ For the cache cluster, the `VpcSecurityGroupIds` property is used to associate t
 
 ```
 ElasticacheSecurityGroup:
-  Type: 'AWS::EC2::SecurityGroup'
+  Type: AWS::EC2::SecurityGroup
   Properties:
-    GroupDescription: Elasticache Security Group
+    GroupDescription: "Elasticache Security Group"
     SecurityGroupIngress:
-      - IpProtocol: tcp
-        FromPort: 11211
-        ToPort: 11211
-        SourceSecurityGroupName: !Ref InstanceSecurityGroup
+      -
+        IpProtocol: "tcp"
+        FromPort: "11211"
+        ToPort: "11211"
+        SourceSecurityGroupName:
+        Ref: "InstanceSecurityGroup"
 ElasticacheCluster:
-  Type: 'AWS::ElastiCache::CacheCluster'
-  Properties:    
-    Engine: memcached
-    CacheNodeType: cache.t2.micro
-    NumCacheNodes: '1'
+  Type: AWS::ElastiCache::CacheCluster
+  Properties:
+    AutoMinorVersionUpgrade: "true"
+    Engine: "memcached"
+    CacheNodeType: "cache.t2.micro"
+    NumCacheNodes: "1"
     VpcSecurityGroupIds:
-      - !GetAtt 
-        - ElasticacheSecurityGroup
-        - GroupId
+      -
+        Fn::GetAtt:
+          - "ElasticacheSecurityGroup"
+          - "GroupId"
 ```
 
 ### Memcached Nodes in Multiple Availability Zones<a name="aws-properties-elasticache-cache-cluster--examples--Memcached_Nodes_in_Multiple_Availability_Zones"></a>
@@ -429,16 +433,16 @@ The following example launches a cache cluster with three nodes, where two nodes
 
 ```
 myCacheCluster:
-  Type: 'AWS::ElastiCache::CacheCluster'
+  Type: AWS::ElastiCache::CacheCluster
   Properties:
-    AZMode: cross-az
-    CacheNodeType: cache.m3.medium
-    Engine: memcached
-    NumCacheNodes: '3'
+    AZMode: "cross-az"
+    CacheNodeType: "cache.m3.medium"
+    Engine: "memcached"
+    NumCacheNodes: "3"
     PreferredAvailabilityZones:
-      - us-west-2a
-      - us-west-2a
-      - us-west-2b
+      - "us-west-2a"
+      - "us-west-2a"
+      - "us-west-2b"
 ```
 
 ## See also<a name="aws-properties-elasticache-cache-cluster--seealso"></a>
