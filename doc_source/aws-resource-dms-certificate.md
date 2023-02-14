@@ -38,14 +38,14 @@ A customer\-assigned name for the certificate\. Identifiers must begin with a le
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificatePem`  <a name="cfn-dms-certificate-certificatepem"></a>
-The contents of a `.pem` file, which contains an X\.509 certificate\.  
-*Required*: No  
+The contents of the \.pem X\.509 certificate file for the certificate\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificateWallet`  <a name="cfn-dms-certificate-certificatewallet"></a>
-The location of an imported Oracle Wallet certificate for use with SSL\. Example: `filebase64("${path.root}/rds-ca-2019-root.sso")`   
-*Required*: No  
+The location of the imported Oracle Wallet certificate for use with SSL\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -98,4 +98,3 @@ Resources:
 ## See also<a name="aws-resource-dms-certificate--seealso"></a>
 +  [ImportCertificate](https://docs.aws.amazon.com/dms/latest/APIReference/API_ImportCertificate.html) in the *AWS Database Migration Service API Reference* 
 +  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 
-
