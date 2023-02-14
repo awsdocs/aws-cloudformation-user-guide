@@ -51,6 +51,7 @@ Properties:
 `LogDestinationConfigs`  <a name="cfn-wafv2-loggingconfiguration-logdestinationconfigs"></a>
 The logging destination configuration that you want to associate with the web ACL\.  
 You can associate one logging destination to a web ACL\.
+If logging destination target is a CloudWatch Log Group, it is required that the reference Log Group's name begin with the prefix 'aws-waf-logs-'\.
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `100`  
