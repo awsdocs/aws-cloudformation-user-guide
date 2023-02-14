@@ -2,9 +2,9 @@
 
 Creates a virtual router within a service mesh\.
 
-Any inbound traffic that your virtual router expects should be specified as a `listener`\. 
+Specify a `listener` for any inbound traffic that your virtual router receives\. Create a virtual router for each protocol and port that you need to route\. Virtual routers handle traffic for one or more virtual services within your mesh\. After you create your virtual router, create and associate routes for your virtual router that direct incoming requests to different virtual nodes\.
 
-Virtual routers handle traffic for one or more virtual services within your mesh\. After you create your virtual router, create and associate routes for your virtual router that direct incoming requests to different virtual nodes\.
+For more information about virtual routers, see [Virtual routers](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_routers.html)\.
 
 ## Syntax<a name="aws-resource-appmesh-virtualrouter-syntax"></a>
 
@@ -17,8 +17,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AppMesh::VirtualRouter",
   "Properties" : {
       "[MeshName](#cfn-appmesh-virtualrouter-meshname)" : String,
-      "[Spec](#cfn-appmesh-virtualrouter-spec)" : [VirtualRouterSpec](aws-properties-appmesh-virtualrouter-virtualrouterspec.md),
-      "[Tags](#cfn-appmesh-virtualrouter-tags)" : [ [TagRef](aws-properties-appmesh-virtualrouter-tagref.md), ... ],
+      "[MeshOwner](#cfn-appmesh-virtualrouter-meshowner)" : String,
+      "[Spec](#cfn-appmesh-virtualrouter-spec)" : VirtualRouterSpec,
+      "[Tags](#cfn-appmesh-virtualrouter-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VirtualRouterName](#cfn-appmesh-virtualrouter-virtualroutername)" : String
     }
 }
@@ -30,10 +31,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AppMesh::VirtualRouter
 Properties: 
   [MeshName](#cfn-appmesh-virtualrouter-meshname): String
+  [MeshOwner](#cfn-appmesh-virtualrouter-meshowner): String
   [Spec](#cfn-appmesh-virtualrouter-spec): 
-    [VirtualRouterSpec](aws-properties-appmesh-virtualrouter-virtualrouterspec.md)
+    VirtualRouterSpec
   [Tags](#cfn-appmesh-virtualrouter-tags): 
-    - [TagRef](aws-properties-appmesh-virtualrouter-tagref.md)
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VirtualRouterName](#cfn-appmesh-virtualrouter-virtualroutername): String
 ```
 
@@ -43,6 +45,16 @@ Properties:
 The name of the service mesh to create the virtual router in\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MeshOwner`  <a name="cfn-appmesh-virtualrouter-meshowner"></a>
+The AWS IAM account ID of the service mesh owner\. If the account ID is not your own, then the account that you specify must share the mesh with your account before you can create the resource in the service mesh\. For more information about mesh sharing, see [Working with shared meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `12`  
+*Maximum*: `12`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Spec`  <a name="cfn-appmesh-virtualrouter-spec"></a>
@@ -54,16 +66,19 @@ The virtual router specification to apply\.
 `Tags`  <a name="cfn-appmesh-virtualrouter-tags"></a>
 Optional metadata that you can apply to the virtual router to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Tag keys can have a maximum character length of 128 characters, and tag values can have a maximum length of 256 characters\.  
 *Required*: No  
-*Type*: List of [TagRef](aws-properties-appmesh-virtualrouter-tagref.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VirtualRouterName`  <a name="cfn-appmesh-virtualrouter-virtualroutername"></a>
 The name to use for the virtual router\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-appmesh-virtualrouter-return-values"></a>
+## Return values<a name="aws-resource-appmesh-virtualrouter-return-values"></a>
 
 ### Ref<a name="aws-resource-appmesh-virtualrouter-return-values-ref"></a>
 
@@ -89,6 +104,12 @@ The full Amazon Resource Name \(ARN\) for the virtual router\.
 `MeshName`  <a name="MeshName-fn::getatt"></a>
 The name of the service mesh that the virtual router resides in\.
 
+`MeshOwner`  <a name="MeshOwner-fn::getatt"></a>
+The AWS IAM account ID of the service mesh owner\. If the account ID is not your own, then it's the ID of the account that shared the mesh with your account\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.
+
+`ResourceOwner`  <a name="ResourceOwner-fn::getatt"></a>
+The AWS IAM account ID of the resource owner\. If the account ID is not your own, then it's the ID of the mesh owner or of another account that the mesh is shared with\. For more information about mesh sharing, see [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)\.
+
 `Uid`  <a name="Uid-fn::getatt"></a>
 The unique identifier for the virtual router\.
 
@@ -105,98 +126,97 @@ This example creates a basic virtual router with an HTTP port mapping and two ta
 
 ```
 {
-   "Description": "Basic Test Virtual Router",
-   "Resources": {
-      "BasicVirtualRouter": {
-         "Type": "AWS::AppMesh::VirtualRouter",
-         "Properties": {
-            "VirtualRouterName": "TestVirtualRouter",
-            "MeshName": null,
-            "Spec": {
-               "Listeners": [
-                  {
-                     "PortMapping": {
-                        "Port": 8080,
-                        "Protocol": "http"
-                     }
-                  }
-               ]
-            },
-            "Tags": [
-               {
-                  "Key": "Key1",
-                  "Value": "Value1"
-               },
-               {
-                  "Key": "Key2",
-                  "Value": "Value2"
-               }
-            ]
-         }
+  "Description": "Basic Test Virtual Router",
+  "Resources": {
+    "BasicVirtualRouter": {
+      "Type": "AWS::AppMesh::VirtualRouter",
+      "Properties": {
+        "VirtualRouterName": "TestVirtualRouter",
+        "MeshName": null,
+        "Spec": {
+          "Listeners": [
+            {
+              "PortMapping": {
+                "Port": 8080,
+                "Protocol": "http"
+              }
+            }
+          ]
+        },
+        "Tags": [
+          {
+            "Key": "Key1",
+            "Value": "Value1"
+          },
+          {
+            "Key": "Key2",
+            "Value": "Value2"
+          }
+        ]
       }
-   },
-   "Outputs": {
-      "VirtualRouterName": {
-         "Description": "Name of the VirtualRouter",
-         "Value": {
-            "Fn::GetAtt": [
-               "BasicVirtualRouter",
-               "VirtualRouterName"
-            ]
-         }
-      },
-      "MeshName": {
-         "Description": "Name of the Mesh",
-         "Value": {
-            "Fn::GetAtt": [
-               "BasicVirtualRouter",
-               "MeshName"
-            ]
-         }
-      },
-      "Arn": {
-         "Description": "Arn of the VirtualRouter created",
-         "Value": {
-            "Fn::GetAtt": [
-               "BasicVirtualRouter",
-               "Arn"
-            ]
-         }
-      },
-      "Uid": {
-         "Description": "Uid of the VirtualRouter created",
-         "Value": {
-            "Fn::GetAtt": [
-               "BasicVirtualRouter",
-               "Uid"
-            ]
-         }
+    }
+  },
+  "Outputs": {
+    "VirtualRouterName": {
+      "Description": "Name of the VirtualRouter",
+      "Value": {
+        "Fn::GetAtt": [
+          "BasicVirtualRouter",
+          "VirtualRouterName"
+        ]
       }
-   }
+    },
+    "MeshName": {
+      "Description": "Name of the Mesh",
+      "Value": {
+        "Fn::GetAtt": [
+          "BasicVirtualRouter",
+          "MeshName"
+        ]
+      }
+    },
+    "Arn": {
+      "Description": "Arn of the VirtualRouter created",
+      "Value": {
+        "Fn::GetAtt": [
+          "BasicVirtualRouter",
+          "Arn"
+        ]
+      }
+    },
+    "Uid": {
+      "Description": "Uid of the VirtualRouter created",
+      "Value": {
+        "Fn::GetAtt": [
+          "BasicVirtualRouter",
+          "Uid"
+        ]
+      }
+    }
+  }
 }
 ```
 
 #### YAML<a name="aws-resource-appmesh-virtualrouter--examples--Create_a_Virtual_Router--yaml"></a>
 
 ```
-Description: "Basic Test Virtual Router"
+Description: Basic Test Virtual Router
 Resources:
   BasicVirtualRouter:
-    Type: "AWS::AppMesh::VirtualRouter"
+    Type: AWS::AppMesh::VirtualRouter
     Properties:
-      VirtualRouterName: "TestVirtualRouter"
-      MeshName: !ImportValue TestMeshName
+      VirtualRouterName: TestVirtualRouter
+      MeshName: 
       Spec:
         Listeners:
         - PortMapping:
             Port: 8080
-            Protocol: "http"
+            Protocol: http
       Tags:
-      - Key: "Key1"
-        Value: "Value1"
-      - Key: "Key2"
-        Value: "Value2"
-
+      - Key: Key1
+        Value: Value1
+      - Key: Key2
+        Value: Value2
 Outputs:
   VirtualRouterName:
     Description: Name of the VirtualRouter
@@ -224,6 +244,7 @@ Outputs:
       - Uid
 ```
 
-## See Also<a name="aws-resource-appmesh-virtualrouter--seealso"></a>
+## See also<a name="aws-resource-appmesh-virtualrouter--seealso"></a>
 +  [Virtual Routers](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_routers.html) in the * AWS App Mesh User Guide *\.
 +  [CreateVirtualRouter](https://docs.aws.amazon.com/app-mesh/latest/APIReference/API_CreateVirtualRouter.html) in the * AWS App Mesh API Reference *\.
+

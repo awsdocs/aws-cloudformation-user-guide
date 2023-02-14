@@ -38,6 +38,6 @@ The name of the Linux group whose privileges you want to add to the Lambda proce
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-resourcedefinitionversion-groupownersetting--seealso"></a>
-+  [GroupOwnerSetting](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-groupownersetting.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+## See also<a name="aws-properties-greengrass-resourcedefinitionversion-groupownersetting--seealso"></a>
++  [GroupOwnerSetting](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-groupownersetting.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

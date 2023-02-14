@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Attribute`  <a name="cfn-iotanalytics-pipeline-deviceregistryenrich-attribute"></a>
 The name of the attribute that is added to the message\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  
@@ -40,7 +40,7 @@ The name of the attribute that is added to the message\.
 
 `Name`  <a name="cfn-iotanalytics-pipeline-deviceregistryenrich-name"></a>
 The name of the 'deviceRegistryEnrich' activity\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
@@ -56,7 +56,7 @@ The next activity in the pipeline\.
 
 `RoleArn`  <a name="cfn-iotanalytics-pipeline-deviceregistryenrich-rolearn"></a>
 The ARN of the role that allows access to the device's registry information\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `2048`  
@@ -64,7 +64,7 @@ The ARN of the role that allows access to the device's registry information\.
 
 `ThingName`  <a name="cfn-iotanalytics-pipeline-deviceregistryenrich-thingname"></a>
 The name of the IoT device whose registry information is added to the message\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  

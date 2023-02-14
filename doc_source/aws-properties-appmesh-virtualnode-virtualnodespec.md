@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualNode VirtualNodeSpec<a name="aws-properties-appmesh-virtualnode-virtualnodespec"></a>
 
-An object representing the specification of a virtual node\.
+An object that represents the specification of a virtual node\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualnode-virtualnodespec-syntax"></a>
 
@@ -10,27 +10,36 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Backends](#cfn-appmesh-virtualnode-virtualnodespec-backends)" : [ [Backend](aws-properties-appmesh-virtualnode-backend.md), ... ],
-  "[Listeners](#cfn-appmesh-virtualnode-virtualnodespec-listeners)" : [ [Listener](aws-properties-appmesh-virtualnode-listener.md), ... ],
-  "[Logging](#cfn-appmesh-virtualnode-virtualnodespec-logging)" : [Logging](aws-properties-appmesh-virtualnode-logging.md),
-  "[ServiceDiscovery](#cfn-appmesh-virtualnode-virtualnodespec-servicediscovery)" : [ServiceDiscovery](aws-properties-appmesh-virtualnode-servicediscovery.md)
+  "[BackendDefaults](#cfn-appmesh-virtualnode-virtualnodespec-backenddefaults)" : BackendDefaults,
+  "[Backends](#cfn-appmesh-virtualnode-virtualnodespec-backends)" : [ Backend, ... ],
+  "[Listeners](#cfn-appmesh-virtualnode-virtualnodespec-listeners)" : [ Listener, ... ],
+  "[Logging](#cfn-appmesh-virtualnode-virtualnodespec-logging)" : Logging,
+  "[ServiceDiscovery](#cfn-appmesh-virtualnode-virtualnodespec-servicediscovery)" : ServiceDiscovery
 }
 ```
 
 ### YAML<a name="aws-properties-appmesh-virtualnode-virtualnodespec-syntax.yaml"></a>
 
 ```
+  [BackendDefaults](#cfn-appmesh-virtualnode-virtualnodespec-backenddefaults): 
+    BackendDefaults
   [Backends](#cfn-appmesh-virtualnode-virtualnodespec-backends): 
-    - [Backend](aws-properties-appmesh-virtualnode-backend.md)
+    - Backend
   [Listeners](#cfn-appmesh-virtualnode-virtualnodespec-listeners): 
-    - [Listener](aws-properties-appmesh-virtualnode-listener.md)
+    - Listener
   [Logging](#cfn-appmesh-virtualnode-virtualnodespec-logging): 
-    [Logging](aws-properties-appmesh-virtualnode-logging.md)
+    Logging
   [ServiceDiscovery](#cfn-appmesh-virtualnode-virtualnodespec-servicediscovery): 
-    [ServiceDiscovery](aws-properties-appmesh-virtualnode-servicediscovery.md)
+    ServiceDiscovery
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualnode-virtualnodespec-properties"></a>
+
+`BackendDefaults`  <a name="cfn-appmesh-virtualnode-virtualnodespec-backenddefaults"></a>
+A reference to an object that represents the defaults for backends\.  
+*Required*: No  
+*Type*: [BackendDefaults](aws-properties-appmesh-virtualnode-backenddefaults.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Backends`  <a name="cfn-appmesh-virtualnode-virtualnodespec-backends"></a>
 The backends that the virtual node is expected to send outbound traffic to\.  
@@ -39,9 +48,10 @@ The backends that the virtual node is expected to send outbound traffic to\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Listeners`  <a name="cfn-appmesh-virtualnode-virtualnodespec-listeners"></a>
-The listeners that the virtual node is expected to receive inbound traffic from\. Currently only one listener is supported per virtual node\.  
+The listener that the virtual node is expected to receive inbound traffic from\. You can specify one listener\.  
 *Required*: No  
 *Type*: List of [Listener](aws-properties-appmesh-virtualnode-listener.md)  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Logging`  <a name="cfn-appmesh-virtualnode-virtualnodespec-logging"></a>
@@ -51,7 +61,7 @@ The inbound and outbound access logging information for the virtual node\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceDiscovery`  <a name="cfn-appmesh-virtualnode-virtualnodespec-servicediscovery"></a>
-The service discovery information for the virtual node\. If your virtual node does not expect ingress traffic, you can omit this parameter\.  
+The service discovery information for the virtual node\. If your virtual node does not expect ingress traffic, you can omit this parameter\. If you specify a `listener`, then you must specify service discovery information\.  
 *Required*: No  
 *Type*: [ServiceDiscovery](aws-properties-appmesh-virtualnode-servicediscovery.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

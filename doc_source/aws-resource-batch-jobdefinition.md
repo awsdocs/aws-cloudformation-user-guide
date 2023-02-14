@@ -12,12 +12,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Batch::JobDefinition",
   "Properties" : {
-      "[ContainerProperties](#cfn-batch-jobdefinition-containerproperties)" : [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md),
+      "[ContainerProperties](#cfn-batch-jobdefinition-containerproperties)" : ContainerProperties,
+      "[EksProperties](#cfn-batch-jobdefinition-eksproperties)" : EksProperties,
       "[JobDefinitionName](#cfn-batch-jobdefinition-jobdefinitionname)" : String,
-      "[NodeProperties](#cfn-batch-jobdefinition-nodeproperties)" : [NodeProperties](aws-properties-batch-jobdefinition-nodeproperties.md),
+      "[NodeProperties](#cfn-batch-jobdefinition-nodeproperties)" : NodeProperties,
       "[Parameters](#cfn-batch-jobdefinition-parameters)" : Json,
-      "[RetryStrategy](#cfn-batch-jobdefinition-retrystrategy)" : [RetryStrategy](aws-properties-batch-jobdefinition-retrystrategy.md),
-      "[Timeout](#cfn-batch-jobdefinition-timeout)" : [Timeout](aws-properties-batch-jobdefinition-timeout.md),
+      "[PlatformCapabilities](#cfn-batch-jobdefinition-platformcapabilities)" : [ String, ... ],
+      "[PropagateTags](#cfn-batch-jobdefinition-propagatetags)" : Boolean,
+      "[RetryStrategy](#cfn-batch-jobdefinition-retrystrategy)" : RetryStrategy,
+      "[SchedulingPriority](#cfn-batch-jobdefinition-schedulingpriority)" : Integer,
+      "[Tags](#cfn-batch-jobdefinition-tags)" : Json,
+      "[Timeout](#cfn-batch-jobdefinition-timeout)" : Timeout,
       "[Type](#cfn-batch-jobdefinition-type)" : String
     }
 }
@@ -29,42 +34,68 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Batch::JobDefinition
 Properties: 
   [ContainerProperties](#cfn-batch-jobdefinition-containerproperties): 
-    [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md)
+    ContainerProperties
+  [EksProperties](#cfn-batch-jobdefinition-eksproperties): 
+    EksProperties
   [JobDefinitionName](#cfn-batch-jobdefinition-jobdefinitionname): String
   [NodeProperties](#cfn-batch-jobdefinition-nodeproperties): 
-    [NodeProperties](aws-properties-batch-jobdefinition-nodeproperties.md)
+    NodeProperties
   [Parameters](#cfn-batch-jobdefinition-parameters): Json
+  [PlatformCapabilities](#cfn-batch-jobdefinition-platformcapabilities): 
+    - String
+  [PropagateTags](#cfn-batch-jobdefinition-propagatetags): Boolean
   [RetryStrategy](#cfn-batch-jobdefinition-retrystrategy): 
-    [RetryStrategy](aws-properties-batch-jobdefinition-retrystrategy.md)
+    RetryStrategy
+  [SchedulingPriority](#cfn-batch-jobdefinition-schedulingpriority): Integer
+  [Tags](#cfn-batch-jobdefinition-tags): Json
   [Timeout](#cfn-batch-jobdefinition-timeout): 
-    [Timeout](aws-properties-batch-jobdefinition-timeout.md)
+    Timeout
   [Type](#cfn-batch-jobdefinition-type): String
 ```
 
 ## Properties<a name="aws-resource-batch-jobdefinition-properties"></a>
 
 `ContainerProperties`  <a name="cfn-batch-jobdefinition-containerproperties"></a>
-An object with various properties specific to container\-based jobs\.   
+An object with various properties specific to Amazon ECS based jobs\. Valid values are `containerProperties`, `eksProperties`, and `nodeProperties`\. Only one can be specified\.  
 *Required*: No  
 *Type*: [ContainerProperties](aws-properties-batch-jobdefinition-containerproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`EksProperties`  <a name="cfn-batch-jobdefinition-eksproperties"></a>
+An object with various properties that are specific to Amazon EKS based jobs\. Valid values are `containerProperties`, `eksProperties`, and `nodeProperties`\. Only one can be specified\.  
+*Required*: No  
+*Type*: [EksProperties](aws-properties-batch-jobdefinition-eksproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `JobDefinitionName`  <a name="cfn-batch-jobdefinition-jobdefinitionname"></a>
-The name of the job definition\.   
+The name of the job definition\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NodeProperties`  <a name="cfn-batch-jobdefinition-nodeproperties"></a>
-An object with various properties specific to multi\-node parallel jobs\.  
+An object with various properties that are specific to multi\-node parallel jobs\. Valid values are `containerProperties`, `eksProperties`, and `nodeProperties`\. Only one can be specified\.  
+If the job runs on Fargate resources, don't specify `nodeProperties`\. Use `containerProperties` instead\.
 *Required*: No  
 *Type*: [NodeProperties](aws-properties-batch-jobdefinition-nodeproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-batch-jobdefinition-parameters"></a>
-Default parameters or parameter substitution placeholders that are set in the job definition\. Parameters are specified as a key\-value pair mapping\. Parameters in a `SubmitJob` request override any corresponding parameter defaults from the job definition\. For more information about specifying parameters, see [Job Definition Parameters](https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html) in the *AWS Batch User Guide*\.  
+Default parameters or parameter substitution placeholders that are set in the job definition\. Parameters are specified as a key\-value pair mapping\. Parameters in a `SubmitJob` request override any corresponding parameter defaults from the job definition\. For more information about specifying parameters, see [Job definition parameters](https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html) in the * AWS Batch User Guide*\.  
 *Required*: No  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PlatformCapabilities`  <a name="cfn-batch-jobdefinition-platformcapabilities"></a>
+The platform capabilities required by the job definition\. If no value is specified, it defaults to `EC2`\. Jobs run on Fargate resources specify `FARGATE`\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PropagateTags`  <a name="cfn-batch-jobdefinition-propagatetags"></a>
+Specifies whether to propagate the tags from the job or job definition to the corresponding Amazon ECS task\. If no value is specified, the tags aren't propagated\. Tags can only be propagated to the tasks when the tasks are created\. For tags with the same name, job tags are given priority over job definitions tags\. If the total number of combined tags from the job and job definition is over 50, the job is moved to the `FAILED` state\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetryStrategy`  <a name="cfn-batch-jobdefinition-retrystrategy"></a>
@@ -73,19 +104,33 @@ The retry strategy to use for failed jobs that are submitted with this job defin
 *Type*: [RetryStrategy](aws-properties-batch-jobdefinition-retrystrategy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SchedulingPriority`  <a name="cfn-batch-jobdefinition-schedulingpriority"></a>
+The scheduling priority of the job definition\. This only affects jobs in job queues with a fair share policy\. Jobs with a higher scheduling priority are scheduled before jobs with a lower scheduling priority\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-batch-jobdefinition-tags"></a>
+The tags that are applied to the job definition\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Timeout`  <a name="cfn-batch-jobdefinition-timeout"></a>
-The timeout configuration for jobs that are submitted with this job definition\. You can specify a timeout duration after which AWS Batch terminates your jobs if they have not finished\.  
+The timeout time for jobs that are submitted with this job definition\. After the amount of time you specify passes, AWS Batch terminates your jobs if they aren't finished\.  
 *Required*: No  
 *Type*: [Timeout](aws-properties-batch-jobdefinition-timeout.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-batch-jobdefinition-type"></a>
-The type of job definition\.  
+The type of job definition\. For more information about multi\-node parallel jobs, see [Creating a multi\-node parallel job definition](https://docs.aws.amazon.com/batch/latest/userguide/multi-node-job-def.html) in the * AWS Batch User Guide*\.  
+If the job is run on Fargate resources, then `multinode` isn't supported\.
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `container | multinode`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-batch-jobdefinition-return-values"></a>
+## Return values<a name="aws-resource-batch-jobdefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-batch-jobdefinition-return-values-ref"></a>
 
@@ -94,6 +139,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-batch-jobdefinition--examples"></a>
+
+
 
 ### Test nvidia\-smi<a name="aws-resource-batch-jobdefinition--examples--Test_nvidia-smi"></a>
 
@@ -127,11 +174,19 @@ The following example tests the `nvidia-smi` command on a GPU instance to verify
     "Command": [
       "nvidia-smi"
     ],
-    "Memory": 2000,
     "Privileged": true,
     "JobRoleArn": "String",
     "ReadonlyRootFilesystem": true,
-    "Vcpus": 2,
+    "ResourceRequirements": [
+        {
+            "Type": "MEMORY",
+            "Value": "2000"
+        },
+        {
+            "Type": "VCPU",
+            "Value": "2"
+        }
+    ],
     "Image": "nvidia/cuda"
    }
   }
@@ -158,13 +213,16 @@ JobDefinition:
           Name: nvidia
       Command:
         - nvidia-smi
-      Memory: 2000
       Privileged: true
       JobRoleArn: String
       ReadonlyRootFilesystem: true
-      Vcpus: 2
+      ResourceRequirements:
+        - Type: MEMORY
+          Value: '2000'
+        - Type: VCPU
+          Value: '2'
       Image: nvidia/cuda
 ```
 
-## See Also<a name="aws-resource-batch-jobdefinition--seealso"></a>
+## See also<a name="aws-resource-batch-jobdefinition--seealso"></a>
 +  [Job Definition Parameters](https://docs.aws.amazon.com/batch/latest/userguide/job_definition_parameters.html) in the *AWS Batch User Guide*\.

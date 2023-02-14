@@ -1,6 +1,9 @@
 # AWS::IoT::TopicRule ElasticsearchAction<a name="aws-properties-iot-topicrule-elasticsearchaction"></a>
 
-Describes an action that writes data to an Amazon Elasticsearch Service domain\.
+Describes an action that writes data to an Amazon OpenSearch Service domain\.
+
+**Note**  
+The `Elasticsearch` action can only be used by existing rule actions\. To create a new rule action or to update an existing rule action, use the `OpenSearch` rule action instead\. For more information, see [OpenSearchAction](https://docs.aws.amazon.com/iot/latest/apireference/API_OpenSearchAction.html)\.
 
 ## Syntax<a name="aws-properties-iot-topicrule-elasticsearchaction-syntax"></a>
 
@@ -31,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-elasticsearchaction-properties"></a>
 
 `Endpoint`  <a name="cfn-iot-topicrule-elasticsearchaction-endpoint"></a>
-The endpoint of your Elasticsearch domain\.  
+The endpoint of your OpenSearch domain\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -43,13 +46,13 @@ The unique identifier for the document you are storing\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Index`  <a name="cfn-iot-topicrule-elasticsearchaction-index"></a>
-The Elasticsearch index where you want to store your data\.  
+The index where you want to store your data\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-iot-topicrule-elasticsearchaction-rolearn"></a>
-The IAM role ARN that has access to Elasticsearch\.  
+The IAM role ARN that has access to OpenSearch\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

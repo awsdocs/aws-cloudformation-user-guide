@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualService VirtualServiceProvider<a name="aws-properties-appmesh-virtualservice-virtualserviceprovider"></a>
 
-An object representing the provider for a virtual service\.
+An object that represents the provider for a virtual service\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualservice-virtualserviceprovider-syntax"></a>
 
@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[VirtualNode](#cfn-appmesh-virtualservice-virtualserviceprovider-virtualnode)" : [VirtualNodeServiceProvider](aws-properties-appmesh-virtualservice-virtualnodeserviceprovider.md),
-  "[VirtualRouter](#cfn-appmesh-virtualservice-virtualserviceprovider-virtualrouter)" : [VirtualRouterServiceProvider](aws-properties-appmesh-virtualservice-virtualrouterserviceprovider.md)
+  "[VirtualNode](#cfn-appmesh-virtualservice-virtualserviceprovider-virtualnode)" : VirtualNodeServiceProvider,
+  "[VirtualRouter](#cfn-appmesh-virtualservice-virtualserviceprovider-virtualrouter)" : VirtualRouterServiceProvider
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [VirtualNode](#cfn-appmesh-virtualservice-virtualserviceprovider-virtualnode): 
-    [VirtualNodeServiceProvider](aws-properties-appmesh-virtualservice-virtualnodeserviceprovider.md)
+    VirtualNodeServiceProvider
   [VirtualRouter](#cfn-appmesh-virtualservice-virtualserviceprovider-virtualrouter): 
-    [VirtualRouterServiceProvider](aws-properties-appmesh-virtualservice-virtualrouterserviceprovider.md)
+    VirtualRouterServiceProvider
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualservice-virtualserviceprovider-properties"></a>

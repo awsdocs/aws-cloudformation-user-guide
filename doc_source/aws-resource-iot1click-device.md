@@ -41,7 +41,7 @@ A Boolean value indicating whether the device is enabled \(`true`\) or not \(`fa
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iot1click-device-return-values"></a>
+## Return values<a name="aws-resource-iot1click-device-return-values"></a>
 
 ### Ref<a name="aws-resource-iot1click-device-return-values-ref"></a>
 
@@ -68,9 +68,9 @@ A Boolean value indicating whether the device is enabled \(`true`\) or not \(`fa
 
 ## Examples<a name="aws-resource-iot1click-device--examples"></a>
 
-### Enable an AWS IoT Device<a name="aws-resource-iot1click-device--examples--Enable_an_AWS_IoT_Device"></a>
+### Enable a device<a name="aws-resource-iot1click-device--examples--Enable_a_device"></a>
 
-#### JSON<a name="aws-resource-iot1click-device--examples--Enable_an_AWS_IoT_Device--json"></a>
+#### JSON<a name="aws-resource-iot1click-device--examples--Enable_a_device--json"></a>
 
 ```
 {
@@ -84,7 +84,7 @@ A Boolean value indicating whether the device is enabled \(`true`\) or not \(`fa
 }
 ```
 
-#### YAML<a name="aws-resource-iot1click-device--examples--Enable_an_AWS_IoT_Device--yaml"></a>
+#### YAML<a name="aws-resource-iot1click-device--examples--Enable_a_device--yaml"></a>
 
 ```
 SampleDevice:
@@ -94,7 +94,7 @@ SampleDevice:
     Enabled: True
 ```
 
-## See Also<a name="aws-resource-iot1click-device--seealso"></a>
+## See also<a name="aws-resource-iot1click-device--seealso"></a>
 + [Device](https://docs.aws.amazon.com/iot-1-click/1.0/devices-apireference/devices-deviceid.html)
 + [Projects, Templates, and Placements](https://docs.aws.amazon.com/iot-1-click/latest/developerguide/1click-PTP.html)
 + [AWS IoT 1\-Click Programming Model](https://docs.aws.amazon.com/iot-1-click/latest/developerguide/1click-programming.html)

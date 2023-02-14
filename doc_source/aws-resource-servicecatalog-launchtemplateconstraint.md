@@ -74,9 +74,9 @@ The product identifier\.
 The constraint rules\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-servicecatalog-launchtemplateconstraint-return-values"></a>
+## Return values<a name="aws-resource-servicecatalog-launchtemplateconstraint-return-values"></a>
 
 ### Ref<a name="aws-resource-servicecatalog-launchtemplateconstraint-return-values-ref"></a>
 
@@ -84,5 +84,14 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-servicecatalog-launchtemplateconstraint--seealso"></a>
+## Remarks<a name="aws-resource-servicecatalog-launchtemplateconstraint--remarks"></a>
+
+ *Using AWS CloudFormation constraint rules* 
+
+Administrators can create and apply rules to create template contraints in an AWS Service Catalog portfolio\. The rules prevent end users from entering incorrect values in the AWS Service Catalog template the administrator used to create the product\. 
+
+For more information about template constraint rules and how to create them, see [Template Constraint Rules](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/reference-template_constraint_rules.html) in the *AWS Service Catalog Admin Guide*\. 
+
+## See also<a name="aws-resource-servicecatalog-launchtemplateconstraint--seealso"></a>
 + [CreateConstraint](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateConstraint.html) in the *AWS Service Catalog API Reference*
+

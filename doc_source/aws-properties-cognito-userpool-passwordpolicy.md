@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool PasswordPolicy<a name="aws-properties-cognito-userpool-passwordpolicy"></a>
 
-`PasswordPolicy` is a subproperty of the [Policies](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-policies.html) property that defines the password policy of an Amazon Cognito User Pool\.
+The password policy type\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-passwordpolicy-syntax"></a>
 
@@ -14,7 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[RequireLowercase](#cfn-cognito-userpool-passwordpolicy-requirelowercase)" : Boolean,
   "[RequireNumbers](#cfn-cognito-userpool-passwordpolicy-requirenumbers)" : Boolean,
   "[RequireSymbols](#cfn-cognito-userpool-passwordpolicy-requiresymbols)" : Boolean,
-  "[RequireUppercase](#cfn-cognito-userpool-passwordpolicy-requireuppercase)" : Boolean
+  "[RequireUppercase](#cfn-cognito-userpool-passwordpolicy-requireuppercase)" : Boolean,
+  "[TemporaryPasswordValidityDays](#cfn-cognito-userpool-passwordpolicy-temporarypasswordvaliditydays)" : Integer
 }
 ```
 
@@ -26,12 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [RequireNumbers](#cfn-cognito-userpool-passwordpolicy-requirenumbers): Boolean
   [RequireSymbols](#cfn-cognito-userpool-passwordpolicy-requiresymbols): Boolean
   [RequireUppercase](#cfn-cognito-userpool-passwordpolicy-requireuppercase): Boolean
+  [TemporaryPasswordValidityDays](#cfn-cognito-userpool-passwordpolicy-temporarypasswordvaliditydays): Integer
 ```
 
 ## Properties<a name="aws-properties-cognito-userpool-passwordpolicy-properties"></a>
 
 `MinimumLength`  <a name="cfn-cognito-userpool-passwordpolicy-minimumlength"></a>
-The minimum length of the password policy that you have set\. Cannot be less than 6\.  
+The minimum length of the password in the policy that you have set\. This value can't be less than 6\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `6`  
@@ -60,4 +62,13 @@ In the password policy that you have set, refers to whether you have required us
 In the password policy that you have set, refers to whether you have required users to use at least one uppercase letter in their password\.  
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TemporaryPasswordValidityDays`  <a name="cfn-cognito-userpool-passwordpolicy-temporarypasswordvaliditydays"></a>
+The number of days a temporary password is valid in the password policy\. If the user doesn't sign in during this time, an administrator must reset their password\.  
+When you set `TemporaryPasswordValidityDays` for a user pool, you can no longer set the deprecated `UnusedAccountValidityDays` value for that user pool\.
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `365`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

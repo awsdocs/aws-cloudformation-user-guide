@@ -1,6 +1,6 @@
-# AWS Service Catalog Resource Type Reference<a name="AWS_ServiceCatalog"></a>
+# AWS Service Catalog resource type reference<a name="AWS_ServiceCatalog"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::ServiceCatalog::AcceptedPortfolioShare](aws-resource-servicecatalog-acceptedportfolioshare.md)
 + [AWS::ServiceCatalog::CloudFormationProduct](aws-resource-servicecatalog-cloudformationproduct.md)
 + [AWS::ServiceCatalog::CloudFormationProvisionedProduct](aws-resource-servicecatalog-cloudformationprovisionedproduct.md)
@@ -12,5 +12,8 @@
 + [AWS::ServiceCatalog::PortfolioProductAssociation](aws-resource-servicecatalog-portfolioproductassociation.md)
 + [AWS::ServiceCatalog::PortfolioShare](aws-resource-servicecatalog-portfolioshare.md)
 + [AWS::ServiceCatalog::ResourceUpdateConstraint](aws-resource-servicecatalog-resourceupdateconstraint.md)
++ [AWS::ServiceCatalog::ServiceAction](aws-resource-servicecatalog-serviceaction.md)
++ [AWS::ServiceCatalog::ServiceActionAssociation](aws-resource-servicecatalog-serviceactionassociation.md)
++ [AWS::ServiceCatalog::StackSetConstraint](aws-resource-servicecatalog-stacksetconstraint.md)
 + [AWS::ServiceCatalog::TagOption](aws-resource-servicecatalog-tagoption.md)
 + [AWS::ServiceCatalog::TagOptionAssociation](aws-resource-servicecatalog-tagoptionassociation.md)

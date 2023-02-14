@@ -1,6 +1,6 @@
 # AWS::Glue::Connection<a name="aws-resource-glue-connection"></a>
 
-The `AWS::Glue::Connection` resource specifies an AWS Glue connection to a data source\. For more information, see [Adding a Connection to Your Data Store](https://docs.aws.amazon.com/dg/populate-add-connection.html) and [Connection Structure](https://docs.aws.amazon.com/dg/aws-glue-api-catalog-connections.html#aws-glue-api-catalog-connections-Connection) in the *AWS Glue Developer Guide*\.
+The `AWS::Glue::Connection` resource specifies an AWS Glue connection to a data source\. For more information, see [Adding a Connection to Your Data Store](https://docs.aws.amazon.com/glue/latest/dg/populate-add-connection.html) and [Connection Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-connections.html#aws-glue-api-catalog-connections-Connection) in the *AWS Glue Developer Guide*\.
 
 ## Syntax<a name="aws-resource-glue-connection-syntax"></a>
 
@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Glue::Connection",
   "Properties" : {
       "[CatalogId](#cfn-glue-connection-catalogid)" : String,
-      "[ConnectionInput](#cfn-glue-connection-connectioninput)" : [ConnectionInput](aws-properties-glue-connection-connectioninput.md)
+      "[ConnectionInput](#cfn-glue-connection-connectioninput)" : ConnectionInput
     }
 }
 ```
@@ -25,7 +25,7 @@ Type: AWS::Glue::Connection
 Properties: 
   [CatalogId](#cfn-glue-connection-catalogid): String
   [ConnectionInput](#cfn-glue-connection-connectioninput): 
-    [ConnectionInput](aws-properties-glue-connection-connectioninput.md)
+    ConnectionInput
 ```
 
 ## Properties<a name="aws-resource-glue-connection-properties"></a>
@@ -43,7 +43,7 @@ The connection that you want to create\.
 *Type*: [ConnectionInput](aws-properties-glue-connection-connectioninput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-connection-return-values"></a>
+## Return values<a name="aws-resource-glue-connection-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-connection-return-values-ref"></a>
 

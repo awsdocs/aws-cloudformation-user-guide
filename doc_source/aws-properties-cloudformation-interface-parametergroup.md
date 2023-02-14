@@ -1,32 +1,32 @@
-# AWS CloudFormation Interface ParameterGroup<a name="aws-properties-cloudformation-interface-parametergroup"></a>
+# AWS::CloudFormation::Interface ParameterGroup<a name="aws-properties-cloudformation-interface-parametergroup"></a>
 
-`ParameterGroup` is a property of the [AWS::CloudFormation::Interface](aws-resource-cloudformation-interface.md) resource that defines a parameter group and the parameters to include in the group\.
+`ParameterGroup` is a property of the [`AWS::CloudFormation::Interface`](aws-resource-cloudformation-interface.md) resource that defines a parameter group and the parameters to include in the group\.
 
-## Syntax<a name="w4669ab1c17c15c15c25c23b5"></a>
+## Syntax<a name="w11339ab1c23c15c15c27c23b5"></a>
 
 ### JSON<a name="aws-properties-cloudformation-interface-parametergroup-syntax.json"></a>
 
 ```
 {
-  "[Label](#cfn-cloudformation-interface-parametergroups-label)" : Label,
-  "[Parameters](#cfn-cloudformation-interface-parametergroups-parameters)" : [ String, ... ]
+  "Label" : Label,
+  "Parameters" : [ String, ... ]
 }
 ```
 
 ### YAML<a name="aws-properties-cloudformation-interface-parametergroup-syntax.yaml"></a>
 
 ```
-[Label](#cfn-cloudformation-interface-parametergroups-label): Label
-[Parameters](#cfn-cloudformation-interface-parametergroups-parameters):
+Label: Label
+Parameters:
   - String
 ```
 
-## Properties<a name="w4669ab1c17c15c15c25c23b7"></a>
+## Properties<a name="w11339ab1c23c15c15c27c23b7"></a>
 
 `Label`  <a name="cfn-cloudformation-interface-parametergroups-label"></a>
 A name for the parameter group\.  
 *Required*: No  
-*Type*: [AWS CloudFormation Interface Label](aws-properties-cloudformation-interface-label.md)
+*Type*: [`AWS::CloudFormation::Interface Label`](aws-properties-cloudformation-interface-label.md)
 
 `Parameters`  <a name="cfn-cloudformation-interface-parametergroups-parameters"></a>
 A list of case\-sensitive parameter logical IDs to include in the group\. Parameters must already be defined in the `Parameters` section of the template\. A parameter can be included in only one parameter group\.  

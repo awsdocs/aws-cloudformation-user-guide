@@ -1,6 +1,6 @@
 # AWS::SSM::Association Target<a name="aws-properties-ssm-association-target"></a>
 
- `Target` is a property of the [AWS::SSM::Association](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html) resource that specifies the targets for an SSM document in Systems Manager\. 
+ `Target` is a property of the [AWS::SSM::Association](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html) resource that specifies the targets for an SSM document in Systems Manager\. You can target all instances in an AWS account by specifying the `InstanceIds` key with a value of `*`\. To view a JSON and a YAML example that targets all instances, see "Create an association for all managed instances in an AWS account" on the Examples page\.
 
 ## Syntax<a name="aws-properties-ssm-association-target-syntax"></a>
 
@@ -26,17 +26,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ssm-association-target-properties"></a>
 
 `Key`  <a name="cfn-ssm-association-target-key"></a>
-User\-defined criteria for sending commands that target instances that meet the criteria\. `Key` can be `tag:<Amazon EC2 tag>` or `InstanceIds`\. For more information about how to send commands that target instances using `Key,Value` parameters, see [Using Targets and Rate Controls to Send Commands to a Fleet](https://docs.aws.amazon.com/systems-manager/latest/userguide/send-commands-multiple.html#send-commands-targeting) in the *AWS Systems Manager User Guide*\.  
+User\-defined criteria for sending commands that target managed nodes that meet the criteria\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `128`  
-*Pattern*: `^[\p{L}\p{Z}\p{N}_.:/=\-@]*$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Maximum*: `163`  
+*Pattern*: `^[\p{L}\p{Z}\p{N}_.:/=\-@]*$|resource-groups:ResourceTypeFilters|resource-groups:Name`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Values`  <a name="cfn-ssm-association-target-values"></a>
-User\-defined criteria that maps to `Key`\. For example, if you specified `tag:ServerRole`, you could specify `value:WebServer` to run a command on instances that include Amazon EC2 tags of `ServerRole,WebServer`\. For more information about how to send commands that target instances using `Key,Value` parameters, see [Using Targets and Rate Controls to Send Commands to a Fleet](https://docs.aws.amazon.com/systems-manager/latest/userguide/send-commands-multiple.html) in the *AWS Systems Manager User Guide*\.  
+User\-defined criteria that maps to `Key`\. For example, if you specified `tag:ServerRole`, you could specify `value:WebServer` to run a command on instances that include EC2 tags of `ServerRole,WebServer`\.   
+Depending on the type of target, the maximum number of values for a key might be lower than the global maximum of 50\.  
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `50`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

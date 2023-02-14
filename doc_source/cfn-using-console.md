@@ -1,18 +1,18 @@
-# Using the AWS CloudFormation Console<a name="cfn-using-console"></a>
+# Using the AWS CloudFormation console<a name="cfn-using-console"></a>
 
-The AWS CloudFormation console allows you to create, monitor, update and delete stacks directly from your web browser\. This section contains guidance on using the AWS CloudFormation console to perform common actions\.
+The AWS CloudFormation console allows you to create, monitor, update, and delete stacks directly from your web browser\. This section contains guidance on using the CloudFormation console to perform common actions\.
 
-## In This Section<a name="w4669ab1c15c13b5"></a>
-+ [Logging In to the Console](cfn-console-login.md)
-+ [Creating a Stack](cfn-console-create-stack.md)
-+ [Creating an EC2 Key Pair](cfn-console-create-keypair.md)
-+ [Estimating the Cost of Your AWS CloudFormation Stack](using-cfn-paying.md)
-+ [Viewing Stack Data and Resources](cfn-console-view-stack-data-resources.md)
-+ [Monitor and Roll Back Stack Operations](using-cfn-rollback-triggers.md)
-+ [Creating Quick\-Create Links for Stacks](cfn-console-create-stacks-quick-create-links.md)
-+ [Deleting a Stack](cfn-console-delete-stack.md)
-+ [Protecting a Stack From Being Deleted](using-cfn-protect-stacks.md)
-+ [Viewing Deleted Stacks](cfn-console-view-deleted-stacks.md)
+## In this section<a name="w11339ab1c25c13b5"></a>
++ [Logging in to the AWS Management Console](cfn-console-login.md)
++ [Creating a stack on the AWS CloudFormation console](cfn-console-create-stack.md)
++ [Creating an EC2 key pair](cfn-console-create-keypair.md)
++ [Estimating the cost of your AWS CloudFormation stack](using-cfn-paying.md)
++ [Viewing AWS CloudFormation stack data and resources on the AWS Management Console](cfn-console-view-stack-data-resources.md)
++ [Monitor and roll back stack operations](using-cfn-rollback-triggers.md)
++ [Creating quick\-create links for stacks](cfn-console-create-stacks-quick-create-links.md)
++ [Deleting a stack on the AWS CloudFormation console](cfn-console-delete-stack.md)
++ [Protecting a stack from being deleted](using-cfn-protect-stacks.md)
++ [Viewing deleted stacks on the AWS CloudFormation consoleViewing deleted stacks](cfn-console-view-deleted-stacks.md)
 
-## Related Topics<a name="w4669ab1c15c13c31"></a>
-+ [Using the AWS CLI](cfn-using-cli.md)
+## Related topics<a name="w11339ab1c25c13c29"></a>
++ [Using the AWS Command Line Interface](cfn-using-cli.md)

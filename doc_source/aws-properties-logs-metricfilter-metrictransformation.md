@@ -41,7 +41,7 @@ The name of the CloudWatch metric\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricNamespace`  <a name="cfn-cwl-metricfilter-metrictransformation-metricnamespace"></a>
-The namespace of the CloudWatch metric\.  
+A custom namespace to contain your metric in CloudWatch\. Use namespaces to group together metrics that are similar\. For more information, see [Namespaces](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html#Namespace)\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `255`  
@@ -49,7 +49,7 @@ The namespace of the CloudWatch metric\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricValue`  <a name="cfn-cwl-metricfilter-metrictransformation-metricvalue"></a>
-The value that is published to the CloudWatch metric\. For example, if you're counting the occurrences of a particular term like `Error`, specify 1 for the metric value\. If you're counting the number of bytes transferred, reference the value that is in the log event by using $ followed by the name of the field that you specified in the filter pattern, such as `$size`\.  
+The value that is published to the CloudWatch metric\. For example, if you're counting the occurrences of a particular term like `Error`, specify 1 for the metric value\. If you're counting the number of bytes transferred, reference the value that is in the log event by using $ followed by the name of the field that you specified in the filter pattern, such as `$.size`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

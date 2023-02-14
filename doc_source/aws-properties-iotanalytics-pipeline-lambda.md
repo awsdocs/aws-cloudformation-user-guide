@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `BatchSize`  <a name="cfn-iotanalytics-pipeline-lambda-batchsize"></a>
 The number of messages passed to the Lambda function for processing\.  
 The AWS Lambda function must be able to process all of these messages within five minutes, which is the maximum timeout duration for Lambda functions\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: Integer  
 *Minimum*: `1`  
 *Maximum*: `1000`  
@@ -39,7 +39,7 @@ The AWS Lambda function must be able to process all of these messages within fiv
 
 `LambdaName`  <a name="cfn-iotanalytics-pipeline-lambda-lambdaname"></a>
 The name of the Lambda function that is run on the message\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `64`  
@@ -48,7 +48,7 @@ The name of the Lambda function that is run on the message\.
 
 `Name`  <a name="cfn-iotanalytics-pipeline-lambda-name"></a>
 The name of the 'lambda' activity\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  

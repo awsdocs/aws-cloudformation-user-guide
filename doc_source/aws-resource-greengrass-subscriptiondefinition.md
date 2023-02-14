@@ -18,8 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::SubscriptionDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-subscriptiondefinition-initialversion)" : [SubscriptionDefinitionVersion](aws-properties-greengrass-subscriptiondefinition-subscriptiondefinitionversion.md),
-      "[Name](#cfn-greengrass-subscriptiondefinition-name)" : String
+      "[InitialVersion](#cfn-greengrass-subscriptiondefinition-initialversion)" : SubscriptionDefinitionVersion,
+      "[Name](#cfn-greengrass-subscriptiondefinition-name)" : String,
+      "[Tags](#cfn-greengrass-subscriptiondefinition-tags)" : Json
     }
 }
 ```
@@ -30,15 +31,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::SubscriptionDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-subscriptiondefinition-initialversion): 
-    [SubscriptionDefinitionVersion](aws-properties-greengrass-subscriptiondefinition-subscriptiondefinitionversion.md)
+    SubscriptionDefinitionVersion
   [Name](#cfn-greengrass-subscriptiondefinition-name): String
+  [Tags](#cfn-greengrass-subscriptiondefinition-tags): Json
 ```
 
 ## Properties<a name="aws-resource-greengrass-subscriptiondefinition-properties"></a>
 
 `InitialVersion`  <a name="cfn-greengrass-subscriptiondefinition-initialversion"></a>
-The subscription definition version to include when the subscription definition is created\. A subscription definition version contains a list of [ `subscription` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-subscriptiondefinition-subscription.html) property types\.  
-To associate a subscription definition version after the subscription definition is created, create an [ `AWS::Greengrass::SubscriptionDefinitionVersion` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinitionversion.html) resource and specify the ID of this subscription definition\.
+The subscription definition version to include when the subscription definition is created\. A subscription definition version contains a list of [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-subscriptiondefinition-subscription.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-subscriptiondefinition-subscription.html) property types\.  
+To associate a subscription definition version after the subscription definition is created, create an [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinitionversion.html) resource and specify the ID of this subscription definition\.
 *Required*: No  
 *Type*: [SubscriptionDefinitionVersion](aws-properties-greengrass-subscriptiondefinition-subscriptiondefinitionversion.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -49,7 +51,22 @@ The name of the subscription definition\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-subscriptiondefinition-return-values"></a>
+`Tags`  <a name="cfn-greengrass-subscriptiondefinition-tags"></a>
+Application\-specific metadata to attach to the subscription definition\. You can use tags in IAM policies to control access to AWS IoT Greengrass resources\. You can also use tags to categorize your resources\. For more information, see [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.  
+This `Json` property type is processed as a map of key\-value pairs\. It uses the following format, which is different from most `Tags` implementations in AWS CloudFormation templates\.  
+
+```
+"Tags": {
+    "KeyName0": "value",
+    "KeyName1": "value",
+    "KeyName2": "value"
+}
+```
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-greengrass-subscriptiondefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-subscriptiondefinition-return-values-ref"></a>
 
@@ -78,6 +95,8 @@ The ARN of the last `SubscriptionDefinitionVersion` that was added to the `Subsc
 The name of the `SubscriptionDefinition`, such as `MySubscriptionDefinition`\. 
 
 ## Examples<a name="aws-resource-greengrass-subscriptiondefinition--examples"></a>
+
+
 
 ### Subscription Definition Snippet<a name="aws-resource-greengrass-subscriptiondefinition--examples--Subscription_Definition_Snippet"></a>
 
@@ -142,6 +161,6 @@ TestSubscriptionDefinition:
           Target: !ImportValue TestCanaryLambdaVersionArn
 ```
 
-## See Also<a name="aws-resource-greengrass-subscriptiondefinition--seealso"></a>
-+  [CreateSubscriptionDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createsubscriptiondefinition-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+## See also<a name="aws-resource-greengrass-subscriptiondefinition--seealso"></a>
++  [CreateSubscriptionDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createsubscriptiondefinition-post.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

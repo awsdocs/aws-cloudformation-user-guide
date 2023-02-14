@@ -5,7 +5,7 @@
 **Note**  
 After you create a function definition version that contains the functions you want to deploy, you must add it to your group version\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)\.
 
-<a name="aws-properties-greengrass-functiondefinition-functiondefinitionversion-inheritance"></a> In an AWS CloudFormation template, `FunctionDefinitionVersion` is the property type of the `InitialVersion` property in the [ `AWS::Greengrass::FunctionDefinition` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html) resource\.
+<a name="aws-properties-greengrass-functiondefinition-functiondefinitionversion-inheritance"></a> In an AWS CloudFormation template, `FunctionDefinitionVersion` is the property type of the `InitialVersion` property in the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html) resource\.
 
 ## Syntax<a name="aws-properties-greengrass-functiondefinition-functiondefinitionversion-syntax"></a>
 
@@ -15,8 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DefaultConfig](#cfn-greengrass-functiondefinition-functiondefinitionversion-defaultconfig)" : [DefaultConfig](aws-properties-greengrass-functiondefinition-defaultconfig.md),
-  "[Functions](#cfn-greengrass-functiondefinition-functiondefinitionversion-functions)" : [ [Function](aws-properties-greengrass-functiondefinition-function.md), ... ]
+  "[DefaultConfig](#cfn-greengrass-functiondefinition-functiondefinitionversion-defaultconfig)" : DefaultConfig,
+  "[Functions](#cfn-greengrass-functiondefinition-functiondefinitionversion-functions)" : [ Function, ... ]
 }
 ```
 
@@ -24,9 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DefaultConfig](#cfn-greengrass-functiondefinition-functiondefinitionversion-defaultconfig): 
-    [DefaultConfig](aws-properties-greengrass-functiondefinition-defaultconfig.md)
+    DefaultConfig
   [Functions](#cfn-greengrass-functiondefinition-functiondefinitionversion-functions): 
-    - [Function](aws-properties-greengrass-functiondefinition-function.md)
+    - Function
 ```
 
 ## Properties<a name="aws-properties-greengrass-functiondefinition-functiondefinitionversion-properties"></a>
@@ -43,6 +43,6 @@ The functions in this version\.
 *Type*: List of [Function](aws-properties-greengrass-functiondefinition-function.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-functiondefinition-functiondefinitionversion--seealso"></a>
-+  [FunctionDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functiondefinitionversion.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+## See also<a name="aws-properties-greengrass-functiondefinition-functiondefinitionversion--seealso"></a>
++  [FunctionDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functiondefinitionversion.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

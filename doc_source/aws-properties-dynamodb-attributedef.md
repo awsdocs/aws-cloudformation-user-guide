@@ -39,5 +39,5 @@ The data type for the attribute, where:
 +  `B` \- the attribute is of type Binary
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `B | N | S`  
+*Allowed values*: `B | N | S`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

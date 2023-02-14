@@ -2,7 +2,7 @@
 
 An action that Amazon SES can take when it receives an email on behalf of one or more email addresses or domains that you own\. An instance of this data type can represent only one action\.
 
-For information about setting up receipt rules, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rules.html)\.
+For information about setting up receipt rules, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-receipt-rules-console-walkthrough.html)\.
 
 ## Syntax<a name="aws-properties-ses-receiptrule-action-syntax"></a>
 
@@ -12,13 +12,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AddHeaderAction](#cfn-ses-receiptrule-action-addheaderaction)" : [AddHeaderAction](aws-properties-ses-receiptrule-addheaderaction.md),
-  "[BounceAction](#cfn-ses-receiptrule-action-bounceaction)" : [BounceAction](aws-properties-ses-receiptrule-bounceaction.md),
-  "[LambdaAction](#cfn-ses-receiptrule-action-lambdaaction)" : [LambdaAction](aws-properties-ses-receiptrule-lambdaaction.md),
-  "[S3Action](#cfn-ses-receiptrule-action-s3action)" : [S3Action](aws-properties-ses-receiptrule-s3action.md),
-  "[SNSAction](#cfn-ses-receiptrule-action-snsaction)" : [SNSAction](aws-properties-ses-receiptrule-snsaction.md),
-  "[StopAction](#cfn-ses-receiptrule-action-stopaction)" : [StopAction](aws-properties-ses-receiptrule-stopaction.md),
-  "[WorkmailAction](#cfn-ses-receiptrule-action-workmailaction)" : [WorkmailAction](aws-properties-ses-receiptrule-workmailaction.md)
+  "[AddHeaderAction](#cfn-ses-receiptrule-action-addheaderaction)" : AddHeaderAction,
+  "[BounceAction](#cfn-ses-receiptrule-action-bounceaction)" : BounceAction,
+  "[LambdaAction](#cfn-ses-receiptrule-action-lambdaaction)" : LambdaAction,
+  "[S3Action](#cfn-ses-receiptrule-action-s3action)" : S3Action,
+  "[SNSAction](#cfn-ses-receiptrule-action-snsaction)" : SNSAction,
+  "[StopAction](#cfn-ses-receiptrule-action-stopaction)" : StopAction,
+  "[WorkmailAction](#cfn-ses-receiptrule-action-workmailaction)" : WorkmailAction
 }
 ```
 
@@ -26,19 +26,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AddHeaderAction](#cfn-ses-receiptrule-action-addheaderaction): 
-    [AddHeaderAction](aws-properties-ses-receiptrule-addheaderaction.md)
+    AddHeaderAction
   [BounceAction](#cfn-ses-receiptrule-action-bounceaction): 
-    [BounceAction](aws-properties-ses-receiptrule-bounceaction.md)
+    BounceAction
   [LambdaAction](#cfn-ses-receiptrule-action-lambdaaction): 
-    [LambdaAction](aws-properties-ses-receiptrule-lambdaaction.md)
+    LambdaAction
   [S3Action](#cfn-ses-receiptrule-action-s3action): 
-    [S3Action](aws-properties-ses-receiptrule-s3action.md)
+    S3Action
   [SNSAction](#cfn-ses-receiptrule-action-snsaction): 
-    [SNSAction](aws-properties-ses-receiptrule-snsaction.md)
+    SNSAction
   [StopAction](#cfn-ses-receiptrule-action-stopaction): 
-    [StopAction](aws-properties-ses-receiptrule-stopaction.md)
+    StopAction
   [WorkmailAction](#cfn-ses-receiptrule-action-workmailaction): 
-    [WorkmailAction](aws-properties-ses-receiptrule-workmailaction.md)
+    WorkmailAction
 ```
 
 ## Properties<a name="aws-properties-ses-receiptrule-action-properties"></a>
@@ -80,7 +80,7 @@ Terminates the evaluation of the receipt rule set and optionally publishes a not
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WorkmailAction`  <a name="cfn-ses-receiptrule-action-workmailaction"></a>
-Calls Amazon WorkMail and, optionally, publishes a notification to Amazon SNS\.  
+Calls Amazon WorkMail and, optionally, publishes a notification to Amazon Amazon SNS\.  
 *Required*: No  
 *Type*: [WorkmailAction](aws-properties-ses-receiptrule-workmailaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

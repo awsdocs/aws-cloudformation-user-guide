@@ -46,5 +46,6 @@ The method response's status code, which you map to an [IntegrationResponse](htt
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apitgateway-method-methodresponse--seealso"></a>
+## See also<a name="aws-properties-apitgateway-method-methodresponse--seealso"></a>
 + [Method](https://docs.aws.amazon.com/apigateway/api-reference/resource/method/) in the *Amazon API Gateway REST API Reference*
+

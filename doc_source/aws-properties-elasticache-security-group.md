@@ -4,9 +4,6 @@ The `AWS::ElastiCache::SecurityGroup` resource creates a cache security group\. 
 
 For more information, see [CreateCacheSubnetGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheSubnetGroup.html)\.
 
-**Note**  
-Updates are not supported\.
-
 ## Syntax<a name="aws-properties-elasticache-security-group-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -17,7 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ElastiCache::SecurityGroup",
   "Properties" : {
-      "[Description](#cfn-elasticache-securitygroup-description)" : String
+      "[Description](#cfn-elasticache-securitygroup-description)" : String,
+      "[Tags](#cfn-elasticache-securitygroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -28,6 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ElastiCache::SecurityGroup
 Properties: 
   [Description](#cfn-elasticache-securitygroup-description): String
+  [Tags](#cfn-elasticache-securitygroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-properties-elasticache-security-group-properties"></a>
@@ -38,7 +38,13 @@ A description for the cache security group\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-elasticache-security-group-return-values"></a>
+`Tags`  <a name="cfn-elasticache-securitygroup-tags"></a>
+A tag that can be added to an ElastiCache security group\. Tags are composed of a Key/Value pair\. You can use tags to categorize and track all your security groups\. A tag with a null Value is permitted\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-properties-elasticache-security-group-return-values"></a>
 
 ### Ref<a name="aws-properties-elasticache-security-group-return-values-ref"></a>
 

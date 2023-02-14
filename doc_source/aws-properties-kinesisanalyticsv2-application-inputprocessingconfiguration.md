@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application InputProcessingConfiguration<a name="aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration"></a>
 
-For an SQL\-based Amazon Kinesis Data Analytics application, describes a processor that is used to preprocess the records in the stream before being processed by your application code\. Currently, the only input processor available is [AWS Lambda](https://docs.aws.amazon.com/https://aws.amazon.com/documentation/lambda/)\.
+For an SQL\-based Amazon Kinesis Data Analytics application, describes a processor that is used to preprocess the records in the stream before being processed by your application code\. Currently, the only input processor available is [Amazon Lambda](https://docs.aws.amazon.com/lambda/)\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration-syntax"></a>
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[InputLambdaProcessor](#cfn-kinesisanalyticsv2-application-inputprocessingconfiguration-inputlambdaprocessor)" : [InputLambdaProcessor](aws-properties-kinesisanalyticsv2-application-inputlambdaprocessor.md)
+  "[InputLambdaProcessor](#cfn-kinesisanalyticsv2-application-inputprocessingconfiguration-inputlambdaprocessor)" : InputLambdaProcessor
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [InputLambdaProcessor](#cfn-kinesisanalyticsv2-application-inputprocessingconfiguration-inputlambdaprocessor): 
-    [InputLambdaProcessor](aws-properties-kinesisanalyticsv2-application-inputlambdaprocessor.md)
+    InputLambdaProcessor
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration-properties"></a>
@@ -29,5 +29,6 @@ The [InputLambdaProcessor](https://docs.aws.amazon.com/kinesisanalytics/latest/a
 *Type*: [InputLambdaProcessor](aws-properties-kinesisanalyticsv2-application-inputlambdaprocessor.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration--seealso"></a>
+## See also<a name="aws-properties-kinesisanalyticsv2-application-inputprocessingconfiguration--seealso"></a>
 +  [InputProcessingConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_InputProcessingConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

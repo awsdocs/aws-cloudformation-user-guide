@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Address`  <a name="cfn-budgets-budget-subscriber-address"></a>
 The address that AWS sends budget notifications to, either an SNS topic or an email\.  
-AWS validates the address for a `CreateSubscriber` request with the `.*` regex\.  
+When you create a subscriber, the value of `Address` can't contain line breaks\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -39,8 +39,9 @@ AWS validates the address for a `CreateSubscriber` request with the `.*` regex\.
 The type of notification that AWS sends to a subscriber\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `EMAIL | SNS`  
+*Allowed values*: `EMAIL | SNS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-budgets-budget-subscriber--seealso"></a>
+## See also<a name="aws-properties-budgets-budget-subscriber--seealso"></a>
 +  [Subscriber](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_Subscriber.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+

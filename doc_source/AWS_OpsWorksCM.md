@@ -1,4 +1,4 @@
-# AWS OpsWorks CM Resource Type Reference<a name="AWS_OpsWorksCM"></a>
+# AWS OpsWorks CM resource type reference<a name="AWS_OpsWorksCM"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::OpsWorksCM::Server](aws-resource-opsworkscm-server.md)

@@ -2,7 +2,7 @@
 
 <a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-description"></a>The default configuration that applies to all Lambda functions in the function definition version\. Individual Lambda functions can override these settings\.
 
-<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-inheritance"></a> In an AWS CloudFormation template, `DefaultConfig` is a property of the [ `AWS::Greengrass::FunctionDefinitionVersion` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html) resource\.
+<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-inheritance"></a> In an AWS CloudFormation template, `DefaultConfig` is a property of the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html) resource\.
 
 ## Syntax<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-syntax"></a>
 
@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Execution](#cfn-greengrass-functiondefinitionversion-defaultconfig-execution)" : [Execution](aws-properties-greengrass-functiondefinitionversion-execution.md)
+  "[Execution](#cfn-greengrass-functiondefinitionversion-defaultconfig-execution)" : Execution
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Execution](#cfn-greengrass-functiondefinitionversion-defaultconfig-execution): 
-    [Execution](aws-properties-greengrass-functiondefinitionversion-execution.md)
+    Execution
 ```
 
 ## Properties<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig-properties"></a>
@@ -31,6 +31,6 @@ Configuration settings for the Lambda execution environment on the AWS IoT Green
 *Type*: [Execution](aws-properties-greengrass-functiondefinitionversion-execution.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig--seealso"></a>
-+  [FunctionDefaultConfig](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functiondefaultconfig.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+## See also<a name="aws-properties-greengrass-functiondefinitionversion-defaultconfig--seealso"></a>
++  [FunctionDefaultConfig](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functiondefaultconfig.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
