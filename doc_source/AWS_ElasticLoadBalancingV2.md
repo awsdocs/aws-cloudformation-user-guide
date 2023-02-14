@@ -1,6 +1,6 @@
-# ElasticLoadBalancingV2 Resource Type Reference<a name="AWS_ElasticLoadBalancingV2"></a>
+# Elastic Load Balancing V2 resource type reference<a name="AWS_ElasticLoadBalancingV2"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::ElasticLoadBalancingV2::Listener](aws-resource-elasticloadbalancingv2-listener.md)
 + [AWS::ElasticLoadBalancingV2::ListenerCertificate](aws-resource-elasticloadbalancingv2-listenercertificate.md)
 + [AWS::ElasticLoadBalancingV2::ListenerRule](aws-resource-elasticloadbalancingv2-listenerrule.md)

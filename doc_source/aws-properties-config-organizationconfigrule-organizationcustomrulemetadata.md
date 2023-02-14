@@ -1,6 +1,6 @@
 # AWS::Config::OrganizationConfigRule OrganizationCustomRuleMetadata<a name="aws-properties-config-organizationconfigrule-organizationcustomrulemetadata"></a>
 
-An object that specifies organization custom rule metadata such as resource type, resource ID of AWS resource, Lamdba function ARN, and organization trigger types that trigger AWS Config to evaluate your AWS resources against a rule\. It also provides the frequency with which you want AWS Config to run evaluations for the rule if the trigger type is periodic\.
+An object that specifies organization custom rule metadata such as resource type, resource ID of AWS resource, Lambda function ARN, and organization trigger types that trigger AWS Config to evaluate your AWS resources against a rule\. It also provides the frequency with which you want AWS Config to run evaluations for the rule if the trigger type is periodic\.
 
 ## Syntax<a name="aws-properties-config-organizationconfigrule-organizationcustomrulemetadata-syntax"></a>
 
@@ -69,7 +69,7 @@ The maximum frequency with which AWS Config runs evaluations for a rule\. Your c
 By default, rules with a periodic trigger are evaluated every 24 hours\. To change the frequency, specify a valid value for the `MaximumExecutionFrequency` parameter\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
+*Allowed values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OrganizationConfigRuleTriggerTypes`  <a name="cfn-config-organizationconfigrule-organizationcustomrulemetadata-organizationconfigruletriggertypes"></a>

@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualRouter VirtualRouterListener<a name="aws-properties-appmesh-virtualrouter-virtualrouterlistener"></a>
 
-An object representing a virtual router listener\.
+An object that represents a virtual router listener\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualrouter-virtualrouterlistener-syntax"></a>
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[PortMapping](#cfn-appmesh-virtualrouter-virtualrouterlistener-portmapping)" : [PortMapping](aws-properties-appmesh-virtualrouter-portmapping.md)
+  "[PortMapping](#cfn-appmesh-virtualrouter-virtualrouterlistener-portmapping)" : PortMapping
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [PortMapping](#cfn-appmesh-virtualrouter-virtualrouterlistener-portmapping): 
-    [PortMapping](aws-properties-appmesh-virtualrouter-portmapping.md)
+    PortMapping
 ```
 
 ## Properties<a name="aws-properties-appmesh-virtualrouter-virtualrouterlistener-properties"></a>

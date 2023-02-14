@@ -44,5 +44,6 @@ Usually the class that implements the SerDe\. An example is `org.apache.hadoop.h
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-glue-table-serdeinfo--seealso"></a>
+## See also<a name="aws-properties-glue-table-serdeinfo--seealso"></a>
 +  [SerDeInfo Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-SerDeInfo) in the *AWS Glue Developer Guide* 
+

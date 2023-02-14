@@ -1,25 +1,25 @@
-# General Template Snippets<a name="quickref-general"></a>
+# General template snippets<a name="quickref-general"></a>
 
 The following examples show different AWS CloudFormation template features that aren't specific to an AWS service\.
 
 **Topics**
-+ [Base64 Encoded UserData Property](#scenario-userdata-base64)
-+ [Base64 Encoded UserData Property with AccessKey and SecretKey](#scenario-userdata-base64-with-keys)
-+ [Parameters Section with One Literal String Parameter](#scenario-one-string-parameter)
-+ [Parameters Section with String Parameter with Regular Expression Constraint](#scenario-constraint-string-parameter)
-+ [Parameters Section with Number Parameter with MinValue and MaxValue Constraints](#scenario-one-number-min-parameter)
-+ [Parameters Section with Number Parameter with AllowedValues Constraint](#scenario-one-number-parameter)
-+ [Parameters Section with One Literal CommaDelimitedList Parameter](#scenario-one-list-parameter)
-+ [Parameters Section with Parameter Value Based on Pseudo Parameter](#scenario-one-pseudo-parameter)
-+ [Mapping Section with Three Mappings](#scenario-mapping-with-four-maps)
-+ [Description Based on Literal String](#scenario-description-from-literal-string)
-+ [Outputs Section with One Literal String Output](#scenario-output-with-literal-string)
-+ [Outputs Section with One Resource Reference and One Pseudo Reference Output](#scenario-output-with-ref-and-pseudo-ref)
-+ [Outputs Section with an Output Based on a Function, a Literal String, a Reference, and a Pseudo Parameter](#scenario-output-with-complex-spec)
-+ [Template Format Version](#scenario-format-version)
-+ [AWS Tag Property](#scenario-format-aws-tag)
++ [Base64 encoded UserData property](#scenario-userdata-base64)
++ [Base64 encoded UserData property with AccessKey and SecretKey](#scenario-userdata-base64-with-keys)
++ [Parameters section with one literal string parameter](#scenario-one-string-parameter)
++ [Parameters section with string parameter with regular expression constraint](#scenario-constraint-string-parameter)
++ [Parameters section with number parameter with MinValue and MaxValue constraints](#scenario-one-number-min-parameter)
++ [Parameters section with number parameter with AllowedValues constraint](#scenario-one-number-parameter)
++ [Parameters section with one literal CommaDelimitedList parameter](#scenario-one-list-parameter)
++ [Parameters section with parameter value based on pseudo parameter](#scenario-one-pseudo-parameter)
++ [Mapping section with three mappings](#scenario-mapping-with-four-maps)
++ [Description based on literal string](#scenario-description-from-literal-string)
++ [Outputs section with one literal string output](#scenario-output-with-literal-string)
++ [Outputs section with one resource reference and one pseudo reference output](#scenario-output-with-ref-and-pseudo-ref)
++ [Outputs section with an output based on a function, a literal string, a reference, and a pseudo parameter](#scenario-output-with-complex-spec)
++ [Template format version](#scenario-format-version)
++ [AWS Tag property](#scenario-format-aws-tag)
 
-## Base64 Encoded UserData Property<a name="scenario-userdata-base64"></a>
+## Base64 encoded UserData property<a name="scenario-userdata-base64"></a>
 
 This example shows the assembly of a UserData property using the Fn::Base64 and Fn::Join functions\. The references `MyValue` and `MyName` are parameters that must be defined in the Parameters section of the template\. The literal string `Hello World` is just another value this example passes in as part of the `UserData`\.
 
@@ -46,7 +46,7 @@ This example shows the assembly of a UserData property using the Fn::Base64 and 
 5.      Hello World
 ```
 
-## Base64 Encoded UserData Property with AccessKey and SecretKey<a name="scenario-userdata-base64-with-keys"></a>
+## Base64 encoded UserData property with AccessKey and SecretKey<a name="scenario-userdata-base64-with-keys"></a>
 
 This example shows the assembly of a UserData property using the Fn::Base64 and Fn::Join functions\. It includes the `AccessKey` and `SecretKey` information\. The references `AccessKey` and `SecretKey` are parameters that must be defined in the Parameters section of the template\.
 
@@ -72,7 +72,7 @@ This example shows the assembly of a UserData property using the Fn::Base64 and 
 4.      SECRET_KEY=${SecretKey}
 ```
 
-## Parameters Section with One Literal String Parameter<a name="scenario-one-string-parameter"></a>
+## Parameters section with one literal string parameter<a name="scenario-one-string-parameter"></a>
 
 The following example depicts a valid Parameters section declaration in which a single `String` type parameter is declared\.
 
@@ -98,9 +98,9 @@ The following example depicts a valid Parameters section declaration in which a 
 5.     Description: Assume a vanilla user if no command-line spec provided
 ```
 
-## Parameters Section with String Parameter with Regular Expression Constraint<a name="scenario-constraint-string-parameter"></a>
+## Parameters section with string parameter with regular expression constraint<a name="scenario-constraint-string-parameter"></a>
 
-The following example depicts a valid Parameters section declaration in which a single `String` type parameter is declared\. The AdminUserAccount parameter has a default of admin\. The parameter value must have a minimum length of 1, a maximum length of 16, and contains alphabetic characters and numbers but must begin with an alphabetic character\.
+The following example depicts a valid Parameters section declaration in which a single `String` type parameter is declared\. The AdminUserAccount parameter has a default of admin\. The parameter value must have a minimum length of 1, a maximum length of 16, and contains alphabetical characters and numbers but must begin with an alphabetical character\.
 
 ### JSON<a name="quickref-general-example-4.json"></a>
 
@@ -132,7 +132,7 @@ The following example depicts a valid Parameters section declaration in which a 
 9.     AllowedPattern: '[a-zA-Z][a-zA-Z0-9]*'
 ```
 
-## Parameters Section with Number Parameter with MinValue and MaxValue Constraints<a name="scenario-one-number-min-parameter"></a>
+## Parameters section with number parameter with MinValue and MaxValue constraints<a name="scenario-one-number-min-parameter"></a>
 
 The following example depicts a valid Parameters section declaration in which a single `Number` type parameter is declared\. The WebServerPort parameter has a default of 80 and a minimum value 1 and maximum value 65535\.
 
@@ -162,7 +162,7 @@ The following example depicts a valid Parameters section declaration in which a 
 7.     MaxValue: 65535
 ```
 
-## Parameters Section with Number Parameter with AllowedValues Constraint<a name="scenario-one-number-parameter"></a>
+## Parameters section with number parameter with AllowedValues constraint<a name="scenario-one-number-parameter"></a>
 
 The following example depicts a valid Parameters section declaration in which a single `Number` type parameter is declared\. The WebServerPort parameter has a default of 80 and allows only values of 80 and 8888\.
 
@@ -192,9 +192,20 @@ The following example depicts a valid Parameters section declaration in which a 
 8.     - 8888
 ```
 
-## Parameters Section with One Literal CommaDelimitedList Parameter<a name="scenario-one-list-parameter"></a>
+## Parameters section with one literal CommaDelimitedList parameter<a name="scenario-one-list-parameter"></a>
 
-The following example depicts a valid Parameters section declaration in which a single `CommaDelimitedList` type parameter is declared\. The NoEcho property is set to `TRUE`, which will mask its value with asterisks \(\*\*\*\*\*\) in the `aws cloudformation describe-stacks` output\.
+The following example depicts a valid Parameters section declaration in which a single `CommaDelimitedList` type parameter is declared\. The NoEcho property is set to `TRUE`, which will mask its value with asterisks \(\*\*\*\*\*\) in the `aws cloudformation describe-stacks` output, except for information stored in the locations specified below\.
+
+**Important**  
+Using the `NoEcho` attribute does not mask any information stored in the following:  
+The `Metadata` template section\. CloudFormation does not transform, modify, or redact any information you include in the `Metadata` section\. For more information, see [Metadata](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/metadata-section-structure.html)\.
+The `Outputs` template section\. For more information, see [Outputs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html)\.
+The `Metadata` attribute of a resource definition\. For more information, [Metadata attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html)\.
+We strongly recommend you do not use these mechanisms to include sensitive information, such as passwords or secrets\.
+
+**Important**  
+Rather than embedding sensitive information directly in your CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
+For more information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
 
 ### JSON<a name="quickref-general-example-7.json"></a>
 
@@ -218,9 +229,9 @@ The following example depicts a valid Parameters section declaration in which a 
 5.     NoEcho: true
 ```
 
-## Parameters Section with Parameter Value Based on Pseudo Parameter<a name="scenario-one-pseudo-parameter"></a>
+## Parameters section with parameter value based on pseudo parameter<a name="scenario-one-pseudo-parameter"></a>
 
-The following example shows commands in the EC2 user data that use the pseudo parameters `AWS::StackName` and `AWS::Region`\. For more information about pseudo parameters, see [Pseudo Parameters Reference](pseudo-parameter-reference.md)\.
+The following example shows commands in the EC2 user data that use the pseudo parameters `AWS::StackName` and `AWS::Region`\. For more information about pseudo parameters, see [Pseudo parameters reference](pseudo-parameter-reference.md)\.
 
 ### JSON<a name="quickref-general-example-10.json"></a>
 
@@ -253,7 +264,7 @@ The following example shows commands in the EC2 user data that use the pseudo pa
 6.      /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource WebServerGroup --region ${AWS::Region}
 ```
 
-## Mapping Section with Three Mappings<a name="scenario-mapping-with-four-maps"></a>
+## Mapping section with three mappings<a name="scenario-mapping-with-four-maps"></a>
 
 The following example depicts a valid Mapping section declaration that contains three mappings\. The map, when matched with a mapping key of `Stop`, `SlowDown`, or `Go`, provides the RGB values assigned to the corresponding `RGBColor` attribute\.
 
@@ -294,7 +305,7 @@ The following example depicts a valid Mapping section declaration that contains 
 11.       RGBColor: "RED 0 GREEN 128 BLUE 0"
 ```
 
-## Description Based on Literal String<a name="scenario-description-from-literal-string"></a>
+## Description based on literal string<a name="scenario-description-from-literal-string"></a>
 
 The following example depicts a valid Description section declaration where the value is based on a literal string\. This snippet can be for templates, parameters, resources, properties, or outputs\.
 
@@ -310,7 +321,7 @@ The following example depicts a valid Description section declaration where the 
 1. Description: "Replace this value"
 ```
 
-## Outputs Section with One Literal String Output<a name="scenario-output-with-literal-string"></a>
+## Outputs section with one literal string output<a name="scenario-output-with-literal-string"></a>
 
 This example shows a output assignment based on a literal string\.
 
@@ -334,7 +345,7 @@ This example shows a output assignment based on a literal string\.
 4.     Description: A random message for aws cloudformation describe-stacks
 ```
 
-## Outputs Section with One Resource Reference and One Pseudo Reference Output<a name="scenario-output-with-ref-and-pseudo-ref"></a>
+## Outputs section with one resource reference and one pseudo reference output<a name="scenario-output-with-ref-and-pseudo-ref"></a>
 
 This example shows an Outputs section with two output assignments\. One is based on a resource, and the other is based on a pseudo reference\.
 
@@ -352,12 +363,12 @@ This example shows an Outputs section with two output assignments\. One is based
 ```
 1. Outputs:
 2.   SNSTopic:
-3.     Value: Ref: MyNotificationTopic
+3.     Value: !Ref MyNotificationTopic
 4.   StackName:
-5.     Value: Ref: AWS::StackName
+5.     Value: !Ref AWS::StackName
 ```
 
-## Outputs Section with an Output Based on a Function, a Literal String, a Reference, and a Pseudo Parameter<a name="scenario-output-with-complex-spec"></a>
+## Outputs section with an output based on a function, a literal string, a reference, and a pseudo parameter<a name="scenario-output-with-complex-spec"></a>
 
 This example shows an Outputs section with one output assignment\. The Join function is used to concatenate the value, using a percent sign as the delimiter\.
 
@@ -381,7 +392,7 @@ This example shows an Outputs section with one output assignment\. The Join func
 3.     Value: !Join [ %, [ 'A-string', !Ref 'AWS::StackName' ]]
 ```
 
-## Template Format Version<a name="scenario-format-version"></a>
+## Template format version<a name="scenario-format-version"></a>
 
 The following snippet depicts a valid Template Format Version section declaration\.
 
@@ -397,7 +408,7 @@ The following snippet depicts a valid Template Format Version section declaratio
 1. AWSTemplateFormatVersion: '2010-09-09'
 ```
 
-## AWS Tag Property<a name="scenario-format-aws-tag"></a>
+## AWS Tag property<a name="scenario-format-aws-tag"></a>
 
 This example shows an AWS Tag property\. You would specify this property within the Properties section of a resource\. When the resource is created, it will be tagged with the tags you declare\.
 

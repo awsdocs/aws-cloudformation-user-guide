@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::RoboMaker::Fleet",
   "Properties" : {
       "[Name](#cfn-robomaker-fleet-name)" : String,
-      "[Tags](#cfn-robomaker-fleet-tags)" : Json
+      "[Tags](#cfn-robomaker-fleet-tags)" : {Key : Value, ...}
     }
 }
 ```
@@ -24,7 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::RoboMaker::Fleet
 Properties: 
   [Name](#cfn-robomaker-fleet-name): String
-  [Tags](#cfn-robomaker-fleet-tags): Json
+  [Tags](#cfn-robomaker-fleet-tags): 
+    Key : Value
 ```
 
 ## Properties<a name="aws-resource-robomaker-fleet-properties"></a>
@@ -41,10 +42,10 @@ The name of the fleet\.
 `Tags`  <a name="cfn-robomaker-fleet-tags"></a>
 The list of all tags added to the fleet\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-robomaker-fleet-return-values"></a>
+## Return values<a name="aws-resource-robomaker-fleet-return-values"></a>
 
 ### Ref<a name="aws-resource-robomaker-fleet-return-values-ref"></a>
 
@@ -65,11 +66,13 @@ The Amazon Resource Name \(ARN\) of the fleet, such as `arn:aws:robomaker:us-wes
 
 ## Examples<a name="aws-resource-robomaker-fleet--examples"></a>
 
-### Specifies an AWS RoboMaker Fleet<a name="aws-resource-robomaker-fleet--examples--Specifies_an_AWS_RoboMaker_Fleet"></a>
+
+
+### Specifies an AWS RoboMaker Fleet<a name="aws-resource-robomaker-fleet--examples--Specifies_an__RoboMaker_Fleet"></a>
 
 The following example creates a fleet\.
 
-#### JSON<a name="aws-resource-robomaker-fleet--examples--Specifies_an_AWS_RoboMaker_Fleet--json"></a>
+#### JSON<a name="aws-resource-robomaker-fleet--examples--Specifies_an__RoboMaker_Fleet--json"></a>
 
 ```
 {
@@ -94,7 +97,7 @@ The following example creates a fleet\.
 }
 ```
 
-#### YAML<a name="aws-resource-robomaker-fleet--examples--Specifies_an_AWS_RoboMaker_Fleet--yaml"></a>
+#### YAML<a name="aws-resource-robomaker-fleet--examples--Specifies_an__RoboMaker_Fleet--yaml"></a>
 
 ```
 ---

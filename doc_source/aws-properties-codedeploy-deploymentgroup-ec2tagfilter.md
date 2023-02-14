@@ -1,6 +1,6 @@
 # AWS::CodeDeploy::DeploymentGroup EC2TagFilter<a name="aws-properties-codedeploy-deploymentgroup-ec2tagfilter"></a>
 
-Information about an EC2 tag filter\.
+Information about an Amazon EC2 tag filter\.
 
 For more information about using tags and tag groups to help manage your Amazon EC2 instances and on\-premises instances, see [ Tagging Instances for Deployment Groups in AWS CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-tagging.html) in the *AWS CodeDeploy User Guide*\.
 
@@ -36,12 +36,12 @@ The tag filter key\.
 
 `Type`  <a name="cfn-codedeploy-deploymentgroup-ec2tagfilter-type"></a>
 The tag filter type:  
-+ KEY\_ONLY: Key only\.
-+ VALUE\_ONLY: Value only\.
-+ KEY\_AND\_VALUE: Key and value\.
++  `KEY_ONLY`: Key only\.
++  `VALUE_ONLY`: Value only\.
++  `KEY_AND_VALUE`: Key and value\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `KEY_AND_VALUE | KEY_ONLY | VALUE_ONLY`  
+*Allowed values*: `KEY_AND_VALUE | KEY_ONLY | VALUE_ONLY`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-codedeploy-deploymentgroup-ec2tagfilter-value"></a>

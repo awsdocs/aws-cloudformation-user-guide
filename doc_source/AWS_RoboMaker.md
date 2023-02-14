@@ -1,6 +1,6 @@
-# RoboMaker Resource Type Reference<a name="AWS_RoboMaker"></a>
+# AWS RoboMaker resource type reference<a name="AWS_RoboMaker"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::RoboMaker::Fleet](aws-resource-robomaker-fleet.md)
 + [AWS::RoboMaker::Robot](aws-resource-robomaker-robot.md)
 + [AWS::RoboMaker::RobotApplication](aws-resource-robomaker-robotapplication.md)

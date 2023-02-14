@@ -15,8 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::SageMaker::Workteam",
   "Properties" : {
       "[Description](#cfn-sagemaker-workteam-description)" : String,
-      "[MemberDefinitions](#cfn-sagemaker-workteam-memberdefinitions)" : [ [MemberDefinition](aws-properties-sagemaker-workteam-memberdefinition.md), ... ],
-      "[NotificationConfiguration](#cfn-sagemaker-workteam-notificationconfiguration)" : [NotificationConfiguration](aws-properties-sagemaker-workteam-notificationconfiguration.md),
+      "[MemberDefinitions](#cfn-sagemaker-workteam-memberdefinitions)" : [ MemberDefinition, ... ],
+      "[NotificationConfiguration](#cfn-sagemaker-workteam-notificationconfiguration)" : NotificationConfiguration,
       "[Tags](#cfn-sagemaker-workteam-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[WorkteamName](#cfn-sagemaker-workteam-workteamname)" : String
     }
@@ -30,9 +30,9 @@ Type: AWS::SageMaker::Workteam
 Properties: 
   [Description](#cfn-sagemaker-workteam-description): String
   [MemberDefinitions](#cfn-sagemaker-workteam-memberdefinitions): 
-    - [MemberDefinition](aws-properties-sagemaker-workteam-memberdefinition.md)
+    - MemberDefinition
   [NotificationConfiguration](#cfn-sagemaker-workteam-notificationconfiguration): 
-    [NotificationConfiguration](aws-properties-sagemaker-workteam-notificationconfiguration.md)
+    NotificationConfiguration
   [Tags](#cfn-sagemaker-workteam-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [WorkteamName](#cfn-sagemaker-workteam-workteamname): String
@@ -50,7 +50,8 @@ A description of the work team\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MemberDefinitions`  <a name="cfn-sagemaker-workteam-memberdefinitions"></a>
-The Amazon Cognito user groups that make up the work team\.  
+A list of `MemberDefinition` objects that contains objects that identify the workers that make up the work team\.   
+Workforces can be created using Amazon Cognito or your own OIDC Identity Provider \(IdP\)\. For private workforces created using Amazon Cognito use `CognitoMemberDefinition`\. For workforces created using your own OIDC identity provider \(IdP\) use `OidcMemberDefinition`\.  
 *Required*: No  
 *Type*: List of [MemberDefinition](aws-properties-sagemaker-workteam-memberdefinition.md)  
 *Maximum*: `10`  
@@ -63,11 +64,9 @@ Configures SNS notifications of available or expiring work items for work teams\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-sagemaker-workteam-tags"></a>
-A list of key\-value pairs to apply to this resource\.  
-For more information, see [Resource Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) and [Using Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html#allocation-what) in the * AWS Billing and Cost Management User Guide*\.  
+An array of key\-value pairs\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WorkteamName`  <a name="cfn-sagemaker-workteam-workteamname"></a>
@@ -76,24 +75,14 @@ The name of the work team\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-sagemaker-workteam-return-values"></a>
+## Return values<a name="aws-resource-sagemaker-workteam-return-values"></a>
 
 ### Ref<a name="aws-resource-sagemaker-workteam-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns details about a labeling work team\.
-
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
-
 ### Fn::GetAtt<a name="aws-resource-sagemaker-workteam-return-values-fn--getatt"></a>
-
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
-
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
-
- `Fn::GetAtt` returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\. 
 
 #### <a name="aws-resource-sagemaker-workteam-return-values-fn--getatt-fn--getatt"></a>
 

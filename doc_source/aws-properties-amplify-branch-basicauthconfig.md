@@ -27,19 +27,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-amplify-branch-basicauthconfig-properties"></a>
 
 `EnableBasicAuth`  <a name="cfn-amplify-branch-basicauthconfig-enablebasicauth"></a>
- Enables Basic Auth for the branch\.   
+ Enables basic authorization for the branch\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Password`  <a name="cfn-amplify-branch-basicauthconfig-password"></a>
 The password for basic authorization\.  
+*Length Constraints:* Minimum length of 1\. Maximum length of 255\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Username`  <a name="cfn-amplify-branch-basicauthconfig-username"></a>
 The user name for basic authorization\.  
+*Length Constraints:* Minimum length of 1\. Maximum length of 255\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

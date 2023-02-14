@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Args](#cfn-elasticmapreduce-cluster-hadoopjarstepconfig-args)" : [ String, ... ],
   "[Jar](#cfn-elasticmapreduce-cluster-hadoopjarstepconfig-jar)" : String,
   "[MainClass](#cfn-elasticmapreduce-cluster-hadoopjarstepconfig-mainclass)" : String,
-  "[StepProperties](#cfn-elasticmapreduce-cluster-hadoopjarstepconfig-stepproperties)" : [ [KeyValue](aws-properties-elasticmapreduce-cluster-keyvalue.md), ... ]
+  "[StepProperties](#cfn-elasticmapreduce-cluster-hadoopjarstepconfig-stepproperties)" : [ KeyValue, ... ]
 }
 ```
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Jar](#cfn-elasticmapreduce-cluster-hadoopjarstepconfig-jar): String
   [MainClass](#cfn-elasticmapreduce-cluster-hadoopjarstepconfig-mainclass): String
   [StepProperties](#cfn-elasticmapreduce-cluster-hadoopjarstepconfig-stepproperties): 
-    - [KeyValue](aws-properties-elasticmapreduce-cluster-keyvalue.md)
+    - KeyValue
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig-properties"></a>
@@ -55,7 +55,7 @@ The name of the main class in the specified Java file\. If not specified, the JA
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StepProperties`  <a name="cfn-elasticmapreduce-cluster-hadoopjarstepconfig-stepproperties"></a>
-A list of Java properties that are set when the step runs\. You can use these properties to pass key value pairs to your main function\.  
+A list of Java properties that are set when the step runs\. You can use these properties to pass key\-value pairs to your main function\.  
 *Required*: No  
 *Type*: List of [KeyValue](aws-properties-elasticmapreduce-cluster-keyvalue.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

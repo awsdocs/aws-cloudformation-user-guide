@@ -16,7 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Fleet](#cfn-robomaker-robot-fleet)" : String,
       "[GreengrassGroupId](#cfn-robomaker-robot-greengrassgroupid)" : String,
       "[Name](#cfn-robomaker-robot-name)" : String,
-      "[Tags](#cfn-robomaker-robot-tags)" : Json
+      "[Tags](#cfn-robomaker-robot-tags)" : {Key : Value, ...}
     }
 }
 ```
@@ -30,7 +30,8 @@ Properties:
   [Fleet](#cfn-robomaker-robot-fleet): String
   [GreengrassGroupId](#cfn-robomaker-robot-greengrassgroupid): String
   [Name](#cfn-robomaker-robot-name): String
-  [Tags](#cfn-robomaker-robot-tags): Json
+  [Tags](#cfn-robomaker-robot-tags): 
+    Key : Value
 ```
 
 ## Properties<a name="aws-resource-robomaker-robot-properties"></a>
@@ -39,7 +40,7 @@ Properties:
 The architecture of the robot\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ARM64 | ARMHF | X86_64`  
+*Allowed values*: `ARM64 | ARMHF | X86_64`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Fleet`  <a name="cfn-robomaker-robot-fleet"></a>
@@ -54,6 +55,7 @@ The Greengrass group associated with the robot\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1224`  
+*Pattern*: `.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-robomaker-robot-name"></a>
@@ -68,10 +70,10 @@ The name of the robot\.
 `Tags`  <a name="cfn-robomaker-robot-tags"></a>
 A map that contains tag keys and tag values that are attached to the robot\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-robomaker-robot-return-values"></a>
+## Return values<a name="aws-resource-robomaker-robot-return-values"></a>
 
 ### Ref<a name="aws-resource-robomaker-robot-return-values-ref"></a>
 
@@ -79,13 +81,26 @@ When you pass the logical ID of an `AWS::RoboMaker::Robot` resource to the intri
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-robomaker-robot-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-robomaker-robot-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the robot\.
+
 ## Examples<a name="aws-resource-robomaker-robot--examples"></a>
 
-### Create an AWS RoboMaker Robot<a name="aws-resource-robomaker-robot--examples--Create_an_AWS_RoboMaker_Robot"></a>
+
+
+### Create an AWS RoboMaker Robot<a name="aws-resource-robomaker-robot--examples--Create_an__RoboMaker_Robot"></a>
 
 The following example creates a robot\.
 
-#### JSON<a name="aws-resource-robomaker-robot--examples--Create_an_AWS_RoboMaker_Robot--json"></a>
+#### JSON<a name="aws-resource-robomaker-robot--examples--Create_an__RoboMaker_Robot--json"></a>
 
 ```
 {
@@ -121,7 +136,7 @@ The following example creates a robot\.
 }
 ```
 
-#### YAML<a name="aws-resource-robomaker-robot--examples--Create_an_AWS_RoboMaker_Robot--yaml"></a>
+#### YAML<a name="aws-resource-robomaker-robot--examples--Create_an__RoboMaker_Robot--yaml"></a>
 
 ```
 ---

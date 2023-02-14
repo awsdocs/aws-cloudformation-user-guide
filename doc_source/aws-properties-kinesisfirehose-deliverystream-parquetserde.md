@@ -40,10 +40,10 @@ The Hadoop Distributed File System \(HDFS\) block size\. This is useful if you i
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Compression`  <a name="cfn-kinesisfirehose-deliverystream-parquetserde-compression"></a>
-The compression code to use over data blocks\. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`\. Use `SNAPPY` for higher decompression speed\. Use `GZIP` if the compression ration is more important than speed\.  
+The compression code to use over data blocks\. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`\. Use `SNAPPY` for higher decompression speed\. Use `GZIP` if the compression ratio is more important than speed\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `GZIP | SNAPPY | UNCOMPRESSED`  
+*Allowed values*: `GZIP | SNAPPY | UNCOMPRESSED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableDictionaryCompression`  <a name="cfn-kinesisfirehose-deliverystream-parquetserde-enabledictionarycompression"></a>
@@ -70,5 +70,5 @@ The Parquet page size\. Column chunks are divided into pages\. A page is concept
 Indicates the version of row format to output\. The possible values are `V1` and `V2`\. The default is `V1`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `V1 | V2`  
+*Allowed values*: `V1 | V2`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

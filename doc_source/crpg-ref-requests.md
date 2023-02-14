@@ -1,25 +1,25 @@
-# Custom Resource Request Objects<a name="crpg-ref-requests"></a>
+# Custom resource request objects<a name="crpg-ref-requests"></a>
 
-## Template Developer Request Properties<a name="crpg-ref-request-properties"></a>
+## Template developer request properties<a name="crpg-ref-request-properties"></a>
 
 The template developer uses the AWS CloudFormation resource, [AWS::CloudFormation::CustomResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html), to specify a custom resource in a template\.
 
 In `AWS::CloudFormation::CustomResource`, all properties are defined by the custom resource provider\. There is only one required property: `ServiceToken`\.
 
 ServiceToken  <a name="crpg-ref-request-servicetoken"></a>
-The service token \(an Amazon SNS topic or AWS Lambda function Amazon Resource Name\) that is obtained from the custom resource provider to access the service\. The service token must be in the same region in which you are creating the stack\.  
+The service token \(an Amazon SNS topic or AWS Lambda function Amazon Resource Name\) that's obtained from the custom resource provider to access the service\. The service token must be in the same region in which you are creating the stack\.  
 *Required*: Yes  
 *Type*: String
 
 All other fields in the resource properties are optional and are sent, verbatim, to the custom resource provider in the request's `ResourceProperties` field\. The provider defines both the names and the valid contents of these fields\.
 
-## Custom Resource Provider Request Fields<a name="crpg-ref-request-fields"></a>
+## Custom resource provider request fields<a name="crpg-ref-request-fields"></a>
 
 These fields are sent in JSON requests from AWS CloudFormation to the custom resource provider in the SNS topic that the provider has configured for this purpose\.
 
 RequestType  <a name="crpg-ref-request-requesttype"></a>
 The request type is set by the AWS CloudFormation stack operation \(create\-stack, update\-stack, or delete\-stack\) that was initiated by the template developer for the stack that contains the custom resource\.  
-Must be one of: `Create`, `Update`, or `Delete`\. For more information, see [Custom Resource Request Types](crpg-ref-requesttypes.md)\.  
+Must be one of: `Create`, `Update`, or `Delete`\. For more information, see [Custom resource request types](crpg-ref-requesttypes.md)\.  
 *Required*: Yes  
 *Type*: String
 

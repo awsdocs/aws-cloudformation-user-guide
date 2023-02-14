@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Overrides](#cfn-ask-skill-skillpackage-overrides)" : [Overrides](aws-properties-ask-skill-overrides.md),
+  "[Overrides](#cfn-ask-skill-skillpackage-overrides)" : Overrides,
   "[S3Bucket](#cfn-ask-skill-skillpackage-s3bucket)" : String,
   "[S3BucketRole](#cfn-ask-skill-skillpackage-s3bucketrole)" : String,
   "[S3Key](#cfn-ask-skill-skillpackage-s3key)" : String,
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Overrides](#cfn-ask-skill-skillpackage-overrides): 
-    [Overrides](aws-properties-ask-skill-overrides.md)
+    Overrides
   [S3Bucket](#cfn-ask-skill-skillpackage-s3bucket): String
   [S3BucketRole](#cfn-ask-skill-skillpackage-s3bucketrole): String
   [S3Key](#cfn-ask-skill-skillpackage-s3key): String
@@ -46,7 +46,7 @@ The name of the Amazon S3 bucket where the \.zip file that contains the skill pa
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3BucketRole`  <a name="cfn-ask-skill-skillpackage-s3bucketrole"></a>
-ARN of the role that grants the Alexa service permission to access the bucket and retrieve the skill package\. This role is optional\. If you do not provide it, the bucket must be publicly accessible or configured with a policy that allows this access\. Otherwise, AWS CloudFormation cannot create the skill\.  
+ARN of the IAM role that grants the Alexa service \(`alexa-appkit.amazon.com`\) permission to access the bucket and retrieve the skill package\. This property is optional\. If you do not provide it, the bucket must be publicly accessible or configured with a policy that allows this access\. Otherwise, AWS CloudFormation cannot create the skill\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

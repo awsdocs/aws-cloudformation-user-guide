@@ -10,10 +10,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Auth](#cfn-codebuild-project-source-auth)" : [SourceAuth](aws-properties-codebuild-project-sourceauth.md),
+  "[Auth](#cfn-codebuild-project-source-auth)" : SourceAuth,
   "[BuildSpec](#cfn-codebuild-project-source-buildspec)" : String,
+  "[BuildStatusConfig](#cfn-codebuild-project-source-buildstatusconfig)" : BuildStatusConfig,
   "[GitCloneDepth](#cfn-codebuild-project-source-gitclonedepth)" : Integer,
-  "[GitSubmodulesConfig](#cfn-codebuild-project-source-gitsubmodulesconfig)" : [GitSubmodulesConfig](aws-properties-codebuild-project-gitsubmodulesconfig.md),
+  "[GitSubmodulesConfig](#cfn-codebuild-project-source-gitsubmodulesconfig)" : GitSubmodulesConfig,
   "[InsecureSsl](#cfn-codebuild-project-source-insecuressl)" : Boolean,
   "[Location](#cfn-codebuild-project-source-location)" : String,
   "[ReportBuildStatus](#cfn-codebuild-project-source-reportbuildstatus)" : Boolean,
@@ -26,11 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Auth](#cfn-codebuild-project-source-auth): 
-    [SourceAuth](aws-properties-codebuild-project-sourceauth.md)
+    SourceAuth
   [BuildSpec](#cfn-codebuild-project-source-buildspec): String
+  [BuildStatusConfig](#cfn-codebuild-project-source-buildstatusconfig): 
+    BuildStatusConfig
   [GitCloneDepth](#cfn-codebuild-project-source-gitclonedepth): Integer
   [GitSubmodulesConfig](#cfn-codebuild-project-source-gitsubmodulesconfig): 
-    [GitSubmodulesConfig](aws-properties-codebuild-project-gitsubmodulesconfig.md)
+    GitSubmodulesConfig
   [InsecureSsl](#cfn-codebuild-project-source-insecuressl): Boolean
   [Location](#cfn-codebuild-project-source-location): String
   [ReportBuildStatus](#cfn-codebuild-project-source-reportbuildstatus): Boolean
@@ -51,6 +54,12 @@ This information is for the AWS CodeBuild console's use only\. Your code should 
 The build specification for the project\. If this value is not provided, then the source code must contain a buildspec file named `buildspec.yml` at the root level\. If this value is provided, it can be either a single string containing the entire build specification, or the path to an alternate buildspec file relative to the value of the built\-in environment variable `CODEBUILD_SRC_DIR`\. The alternate buildspec file can have a name other than `buildspec.yml`, for example `myspec.yml` or `build_spec_qa.yml` or similar\. For more information, see the [Build Spec Reference](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec-ref-example) in the *AWS CodeBuild User Guide*\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`BuildStatusConfig`  <a name="cfn-codebuild-project-source-buildstatusconfig"></a>
+Contains information that defines how the build project reports the build status to the source provider\. This option is only used when the source provider is `GITHUB`, `GITHUB_ENTERPRISE`, or `BITBUCKET`\.  
+*Required*: No  
+*Type*: [BuildStatusConfig](aws-properties-codebuild-project-buildstatusconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GitCloneDepth`  <a name="cfn-codebuild-project-source-gitclonedepth"></a>
@@ -74,13 +83,13 @@ The build specification for the project\. If this value is not provided, then th
 
 `Location`  <a name="cfn-codebuild-project-source-location"></a>
 Information about the location of the source code to be built\. Valid values include:  
-+ For source code settings that are specified in the source action of a pipeline in AWS CodePipeline, `location` should not be specified\. If it is specified, AWS CodePipeline ignores it\. This is because AWS CodePipeline uses the settings in a pipeline's source action instead of this value\.
-+ For source code in an AWS CodeCommit repository, the HTTPS clone URL to the repository that contains the source code and the build spec \(for example, `https://git-codecommit.region-ID.amazonaws.com/v1/repos/repo-name `\)\.
-+ For source code in an Amazon Simple Storage Service \(Amazon S3\) input bucket, one of the following\. 
-  +  The path to the ZIP file that contains the source code \(for example, ` bucket-name/path/to/object-name.zip`\)\. 
-  +  The path to the folder that contains the source code \(for example, ` bucket-name/path/to/source-code/folder/`\)\. 
-+ For source code in a GitHub repository, the HTTPS clone URL to the repository that contains the source and the build spec\. You must connect your AWS account to your GitHub account\. Use the AWS CodeBuild console to start creating a build project\. When you use the console to connect \(or reconnect\) with GitHub, on the GitHub **Authorize application** page, for **Organization access**, choose **Request access** next to each repository you want to allow AWS CodeBuild to have access to, and then choose **Authorize application**\. \(After you have connected to your GitHub account, you do not need to finish creating the build project\. You can leave the AWS CodeBuild console\.\) To instruct AWS CodeBuild to use this connection, in the `source` object, set the `auth` object's `type` value to `OAUTH`\.
-+ For source code in a Bitbucket repository, the HTTPS clone URL to the repository that contains the source and the build spec\. You must connect your AWS account to your Bitbucket account\. Use the AWS CodeBuild console to start creating a build project\. When you use the console to connect \(or reconnect\) with Bitbucket, on the Bitbucket **Confirm access to your account** page, choose **Grant access**\. \(After you have connected to your Bitbucket account, you do not need to finish creating the build project\. You can leave the AWS CodeBuild console\.\) To instruct AWS CodeBuild to use this connection, in the `source` object, set the `auth` object's `type` value to `OAUTH`\.
++ For source code settings that are specified in the source action of a pipeline in CodePipeline, `location` should not be specified\. If it is specified, CodePipeline ignores it\. This is because CodePipeline uses the settings in a pipeline's source action instead of this value\.
++ For source code in an CodeCommit repository, the HTTPS clone URL to the repository that contains the source code and the buildspec file \(for example, `https://git-codecommit.<region-ID>.amazonaws.com/v1/repos/<repo-name>`\)\.
++ For source code in an Amazon S3 input bucket, one of the following\. 
+  + The path to the ZIP file that contains the source code \(for example, `<bucket-name>/<path>/<object-name>.zip`\)\. 
+  + The path to the folder that contains the source code \(for example, `<bucket-name>/<path-to-source-code>/<folder>/`\)\. 
++ For source code in a GitHub repository, the HTTPS clone URL to the repository that contains the source and the buildspec file\. You must connect your AWS account to your GitHub account\. Use the AWS CodeBuild console to start creating a build project\. When you use the console to connect \(or reconnect\) with GitHub, on the GitHub **Authorize application** page, for **Organization access**, choose **Request access** next to each repository you want to allow AWS CodeBuild to have access to, and then choose **Authorize application**\. \(After you have connected to your GitHub account, you do not need to finish creating the build project\. You can leave the AWS CodeBuild console\.\) To instruct AWS CodeBuild to use this connection, in the `source` object, set the `auth` object's `type` value to `OAUTH`\.
++ For source code in a Bitbucket repository, the HTTPS clone URL to the repository that contains the source and the buildspec file\. You must connect your AWS account to your Bitbucket account\. Use the AWS CodeBuild console to start creating a build project\. When you use the console to connect \(or reconnect\) with Bitbucket, on the Bitbucket **Confirm access to your account** page, choose **Grant access**\. \(After you have connected to your Bitbucket account, you do not need to finish creating the build project\. You can leave the AWS CodeBuild console\.\) To instruct AWS CodeBuild to use this connection, in the `source` object, set the `auth` object's `type` value to `OAUTH`\.
  If you specify `CODEPIPELINE` for the `Type` property, don't specify this property\. For all of the other types, you must specify `Location`\.   
 *Required*: No  
 *Type*: String  
@@ -93,7 +102,7 @@ Information about the location of the source code to be built\. Valid values inc
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceIdentifier`  <a name="cfn-codebuild-project-source-sourceidentifier"></a>
- An identifier for this project source\.   
+An identifier for this project source\. The identifier can only contain alphanumeric characters and underscores, and must be less than 128 characters in length\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -101,12 +110,13 @@ Information about the location of the source code to be built\. Valid values inc
 `Type`  <a name="cfn-codebuild-project-source-type"></a>
 The type of repository that contains the source code to be built\. Valid values include:  
 +  `BITBUCKET`: The source code is in a Bitbucket repository\.
-+  `CODECOMMIT`: The source code is in an AWS CodeCommit repository\.
-+  `CODEPIPELINE`: The source code settings are specified in the source action of a pipeline in AWS CodePipeline\.
-+  `GITHUB`: The source code is in a GitHub repository\.
++  `CODECOMMIT`: The source code is in an CodeCommit repository\.
++  `CODEPIPELINE`: The source code settings are specified in the source action of a pipeline in CodePipeline\.
++  `GITHUB`: The source code is in a GitHub or GitHub Enterprise Cloud repository\.
++  `GITHUB_ENTERPRISE`: The source code is in a GitHub Enterprise Server repository\.
 +  `NO_SOURCE`: The project does not have input source code\.
-+  `S3`: The source code is in an Amazon Simple Storage Service \(Amazon S3\) input bucket\.
++  `S3`: The source code is in an Amazon S3 bucket\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `BITBUCKET | CODECOMMIT | CODEPIPELINE | GITHUB | GITHUB_ENTERPRISE | NO_SOURCE | S3`  
+*Allowed values*: `BITBUCKET | CODECOMMIT | CODEPIPELINE | GITHUB | GITHUB_ENTERPRISE | NO_SOURCE | S3`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -13,20 +13,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Glue::Job",
   "Properties" : {
       "[AllocatedCapacity](#cfn-glue-job-allocatedcapacity)" : Double,
-      "[Command](#cfn-glue-job-command)" : [JobCommand](aws-properties-glue-job-jobcommand.md),
-      "[Connections](#cfn-glue-job-connections)" : [ConnectionsList](aws-properties-glue-job-connectionslist.md),
+      "[Command](#cfn-glue-job-command)" : JobCommand,
+      "[Connections](#cfn-glue-job-connections)" : ConnectionsList,
       "[DefaultArguments](#cfn-glue-job-defaultarguments)" : Json,
       "[Description](#cfn-glue-job-description)" : String,
-      "[ExecutionProperty](#cfn-glue-job-executionproperty)" : [ExecutionProperty](aws-properties-glue-job-executionproperty.md),
+      "[ExecutionProperty](#cfn-glue-job-executionproperty)" : ExecutionProperty,
       "[GlueVersion](#cfn-glue-job-glueversion)" : String,
       "[LogUri](#cfn-glue-job-loguri)" : String,
       "[MaxCapacity](#cfn-glue-job-maxcapacity)" : Double,
       "[MaxRetries](#cfn-glue-job-maxretries)" : Double,
       "[Name](#cfn-glue-job-name)" : String,
+      "[NotificationProperty](#cfn-glue-job-notificationproperty)" : NotificationProperty,
       "[NumberOfWorkers](#cfn-glue-job-numberofworkers)" : Integer,
       "[Role](#cfn-glue-job-role)" : String,
       "[SecurityConfiguration](#cfn-glue-job-securityconfiguration)" : String,
       "[Tags](#cfn-glue-job-tags)" : Json,
+      "[Timeout](#cfn-glue-job-timeout)" : Integer,
       "[WorkerType](#cfn-glue-job-workertype)" : String
     }
 }
@@ -39,22 +41,25 @@ Type: AWS::Glue::Job
 Properties: 
   [AllocatedCapacity](#cfn-glue-job-allocatedcapacity): Double
   [Command](#cfn-glue-job-command): 
-    [JobCommand](aws-properties-glue-job-jobcommand.md)
+    JobCommand
   [Connections](#cfn-glue-job-connections): 
-    [ConnectionsList](aws-properties-glue-job-connectionslist.md)
+    ConnectionsList
   [DefaultArguments](#cfn-glue-job-defaultarguments): Json
   [Description](#cfn-glue-job-description): String
   [ExecutionProperty](#cfn-glue-job-executionproperty): 
-    [ExecutionProperty](aws-properties-glue-job-executionproperty.md)
+    ExecutionProperty
   [GlueVersion](#cfn-glue-job-glueversion): String
   [LogUri](#cfn-glue-job-loguri): String
   [MaxCapacity](#cfn-glue-job-maxcapacity): Double
   [MaxRetries](#cfn-glue-job-maxretries): Double
   [Name](#cfn-glue-job-name): String
+  [NotificationProperty](#cfn-glue-job-notificationproperty): 
+    NotificationProperty
   [NumberOfWorkers](#cfn-glue-job-numberofworkers): Integer
   [Role](#cfn-glue-job-role): String
   [SecurityConfiguration](#cfn-glue-job-securityconfiguration): String
   [Tags](#cfn-glue-job-tags): Json
+  [Timeout](#cfn-glue-job-timeout): Integer
   [WorkerType](#cfn-glue-job-workertype): String
 ```
 
@@ -135,6 +140,12 @@ The name you assign to this job definition\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`NotificationProperty`  <a name="cfn-glue-job-notificationproperty"></a>
+Specifies configuration properties of a notification\.  
+*Required*: No  
+*Type*: [NotificationProperty](aws-properties-glue-job-notificationproperty.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `NumberOfWorkers`  <a name="cfn-glue-job-numberofworkers"></a>
 The number of workers of a defined `workerType` that are allocated when a job runs\.  
 The maximum number of workers you can define are 299 for `G.1X`, and 149 for `G.2X`\.   
@@ -160,6 +171,12 @@ The tags to use with this job\.
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Timeout`  <a name="cfn-glue-job-timeout"></a>
+The job timeout in minutes\. This is the maximum time that a job run can consume resources before it is terminated and enters TIMEOUT status\. The default is 2,880 minutes \(48 hours\)\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `WorkerType`  <a name="cfn-glue-job-workertype"></a>
 The type of predefined worker that is allocated when a job runs\. Accepts a value of Standard, G\.1X, or G\.2X\.  
 + For the `Standard` worker type, each worker provides 4 vCPU, 16 GB of memory and a 50GB disk, and 2 executors per worker\.
@@ -169,7 +186,7 @@ The type of predefined worker that is allocated when a job runs\. Accepts a valu
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-job-return-values"></a>
+## Return values<a name="aws-resource-glue-job-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-job-return-values-ref"></a>
 
@@ -178,6 +195,8 @@ The type of predefined worker that is allocated when a job runs\. Accepts a valu
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-glue-job--examples"></a>
+
+
 
 ### <a name="aws-resource-glue-job--examples--"></a>
 

@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CloudWatchEncryption](#cfn-glue-securityconfiguration-encryptionconfiguration-cloudwatchencryption)" : [CloudWatchEncryption](aws-properties-glue-securityconfiguration-cloudwatchencryption.md),
-  "[JobBookmarksEncryption](#cfn-glue-securityconfiguration-encryptionconfiguration-jobbookmarksencryption)" : [JobBookmarksEncryption](aws-properties-glue-securityconfiguration-jobbookmarksencryption.md),
-  "[S3Encryptions](#cfn-glue-securityconfiguration-encryptionconfiguration-s3encryptions)" : [ [S3Encryption](aws-properties-glue-securityconfiguration-s3encryption.md), ... ]
+  "[CloudWatchEncryption](#cfn-glue-securityconfiguration-encryptionconfiguration-cloudwatchencryption)" : CloudWatchEncryption,
+  "[JobBookmarksEncryption](#cfn-glue-securityconfiguration-encryptionconfiguration-jobbookmarksencryption)" : JobBookmarksEncryption,
+  "[S3Encryptions](#cfn-glue-securityconfiguration-encryptionconfiguration-s3encryptions)" : S3Encryptions
 }
 ```
 
@@ -20,11 +20,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CloudWatchEncryption](#cfn-glue-securityconfiguration-encryptionconfiguration-cloudwatchencryption): 
-    [CloudWatchEncryption](aws-properties-glue-securityconfiguration-cloudwatchencryption.md)
+    CloudWatchEncryption
   [JobBookmarksEncryption](#cfn-glue-securityconfiguration-encryptionconfiguration-jobbookmarksencryption): 
-    [JobBookmarksEncryption](aws-properties-glue-securityconfiguration-jobbookmarksencryption.md)
+    JobBookmarksEncryption
   [S3Encryptions](#cfn-glue-securityconfiguration-encryptionconfiguration-s3encryptions): 
-    - [S3Encryption](aws-properties-glue-securityconfiguration-s3encryption.md)
+    S3Encryptions
 ```
 
 ## Properties<a name="aws-properties-glue-securityconfiguration-encryptionconfiguration-properties"></a>
@@ -44,5 +44,5 @@ The encryption configuration for job bookmarks\.
 `S3Encryptions`  <a name="cfn-glue-securityconfiguration-encryptionconfiguration-s3encryptions"></a>
 The encyption configuration for Amazon Simple Storage Service \(Amazon S3\) data\.  
 *Required*: No  
-*Type*: [List](aws-properties-glue-securityconfiguration-s3encryptions.md) of [S3Encryption](aws-properties-glue-securityconfiguration-s3encryption.md)  
+*Type*: [S3Encryptions](aws-properties-glue-securityconfiguration-s3encryptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -21,12 +21,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::TransitGateway",
   "Properties" : {
       "[AmazonSideAsn](#cfn-ec2-transitgateway-amazonsideasn)" : Integer,
+      "[AssociationDefaultRouteTableId](#cfn-ec2-transitgateway-associationdefaultroutetableid)" : String,
       "[AutoAcceptSharedAttachments](#cfn-ec2-transitgateway-autoacceptsharedattachments)" : String,
       "[DefaultRouteTableAssociation](#cfn-ec2-transitgateway-defaultroutetableassociation)" : String,
       "[DefaultRouteTablePropagation](#cfn-ec2-transitgateway-defaultroutetablepropagation)" : String,
       "[Description](#cfn-ec2-transitgateway-description)" : String,
       "[DnsSupport](#cfn-ec2-transitgateway-dnssupport)" : String,
+      "[MulticastSupport](#cfn-ec2-transitgateway-multicastsupport)" : String,
+      "[PropagationDefaultRouteTableId](#cfn-ec2-transitgateway-propagationdefaultroutetableid)" : String,
       "[Tags](#cfn-ec2-transitgateway-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[TransitGatewayCidrBlocks](#cfn-ec2-transitgateway-transitgatewaycidrblocks)" : [ String, ... ],
       "[VpnEcmpSupport](#cfn-ec2-transitgateway-vpnecmpsupport)" : String
     }
 }
@@ -38,86 +42,129 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::TransitGateway
 Properties: 
   [AmazonSideAsn](#cfn-ec2-transitgateway-amazonsideasn): Integer
+  [AssociationDefaultRouteTableId](#cfn-ec2-transitgateway-associationdefaultroutetableid): String
   [AutoAcceptSharedAttachments](#cfn-ec2-transitgateway-autoacceptsharedattachments): String
   [DefaultRouteTableAssociation](#cfn-ec2-transitgateway-defaultroutetableassociation): String
   [DefaultRouteTablePropagation](#cfn-ec2-transitgateway-defaultroutetablepropagation): String
   [Description](#cfn-ec2-transitgateway-description): String
   [DnsSupport](#cfn-ec2-transitgateway-dnssupport): String
+  [MulticastSupport](#cfn-ec2-transitgateway-multicastsupport): String
+  [PropagationDefaultRouteTableId](#cfn-ec2-transitgateway-propagationdefaultroutetableid): String
   [Tags](#cfn-ec2-transitgateway-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [TransitGatewayCidrBlocks](#cfn-ec2-transitgateway-transitgatewaycidrblocks): 
+    - String
   [VpnEcmpSupport](#cfn-ec2-transitgateway-vpnecmpsupport): String
 ```
 
 ## Properties<a name="aws-resource-ec2-transitgateway-properties"></a>
 
 `AmazonSideAsn`  <a name="cfn-ec2-transitgateway-amazonsideasn"></a>
-A private Autonomous System Number \(ASN\) for the Amazon side of a BGP session\. The range is 64512 to 65534 for 16\-bit ASNs and 4200000000 to 4294967294 for 32\-bit ASNs\.  
+A private Autonomous System Number \(ASN\) for the Amazon side of a BGP session\. The range is 64512 to 65534 for 16\-bit ASNs\. The default is 64512\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`AutoAcceptSharedAttachments`  <a name="cfn-ec2-transitgateway-autoacceptsharedattachments"></a>
-Indicates whether attachment requests are automatically accepted\.  
+`AssociationDefaultRouteTableId`  <a name="cfn-ec2-transitgateway-associationdefaultroutetableid"></a>
+The ID of the default association route table\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `disable | enable`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AutoAcceptSharedAttachments`  <a name="cfn-ec2-transitgateway-autoacceptsharedattachments"></a>
+Enable or disable automatic acceptance of attachment requests\. Disabled by default\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `disable | enable`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultRouteTableAssociation`  <a name="cfn-ec2-transitgateway-defaultroutetableassociation"></a>
-Indicates whether resource attachments are automatically associated with the default association route table\.  
+Enable or disable automatic association with the default association route table\. Enabled by default\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `disable | enable`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Allowed values*: `disable | enable`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultRouteTablePropagation`  <a name="cfn-ec2-transitgateway-defaultroutetablepropagation"></a>
-Indicates whether resource attachments automatically propagate routes to the default propagation route table\.  
+Enable or disable automatic propagation of routes to the default propagation route table\. Enabled by default\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `disable | enable`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Allowed values*: `disable | enable`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-ec2-transitgateway-description"></a>
 The description of the transit gateway\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DnsSupport`  <a name="cfn-ec2-transitgateway-dnssupport"></a>
-Indicates whether DNS support is enabled\.  
+Enable or disable DNS support\. Enabled by default\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `disable | enable`  
+*Allowed values*: `disable | enable`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MulticastSupport`  <a name="cfn-ec2-transitgateway-multicastsupport"></a>
+Indicates whether multicast is enabled on the transit gateway  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `disable | enable`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`PropagationDefaultRouteTableId`  <a name="cfn-ec2-transitgateway-propagationdefaultroutetableid"></a>
+The ID of the default propagation route table\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ec2-transitgateway-tags"></a>
 The tags for the transit gateway\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TransitGatewayCidrBlocks`  <a name="cfn-ec2-transitgateway-transitgatewaycidrblocks"></a>
+The transit gateway CIDR blocks\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpnEcmpSupport`  <a name="cfn-ec2-transitgateway-vpnecmpsupport"></a>
-Indicates whether Equal Cost Multipath Protocol support is enabled\.  
+Enable or disable Equal Cost Multipath Protocol support\. Enabled by default\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `disable | enable`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Allowed values*: `disable | enable`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-ec2-transitgateway-return-values"></a>
+## Return values<a name="aws-resource-ec2-transitgateway-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-transitgateway-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the transit gateway\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the transit gateway\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-ec2-transitgateway-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-ec2-transitgateway-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+The ID of the transit gateway\.
+
 ## Examples<a name="aws-resource-ec2-transitgateway--examples"></a>
 
-### Transit Gateway<a name="aws-resource-ec2-transitgateway--examples--Transit_Gateway"></a>
+
+
+### Create a transit gateway<a name="aws-resource-ec2-transitgateway--examples--Create_a_transit_gateway"></a>
 
 The following example declares a transit gateway\.
 
-#### JSON<a name="aws-resource-ec2-transitgateway--examples--Transit_Gateway--json"></a>
+#### JSON<a name="aws-resource-ec2-transitgateway--examples--Create_a_transit_gateway--json"></a>
 
 ```
 "myTransitGateway": {
@@ -141,7 +188,7 @@ The following example declares a transit gateway\.
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-transitgateway--examples--Transit_Gateway--yaml"></a>
+#### YAML<a name="aws-resource-ec2-transitgateway--examples--Create_a_transit_gateway--yaml"></a>
 
 ```
   myTransitGateway:
@@ -158,5 +205,7 @@ The following example declares a transit gateway\.
         Value: !Ref 'AWS::StackId'
 ```
 
-## See Also<a name="aws-resource-ec2-transitgateway--seealso"></a>
+## See also<a name="aws-resource-ec2-transitgateway--seealso"></a>
 +  [CreateTransitGateway](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTransitGateway.html) in the *Amazon EC2 API Reference*
++  [AWS::RAM::ResourceShare](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html)
+

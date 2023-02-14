@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Filters](#cfn-iotanalytics-dataset-queryaction-filters)" : [ [Filter](aws-properties-iotanalytics-dataset-filter.md), ... ],
+  "[Filters](#cfn-iotanalytics-dataset-queryaction-filters)" : [ Filter, ... ],
   "[SqlQuery](#cfn-iotanalytics-dataset-queryaction-sqlquery)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Filters](#cfn-iotanalytics-dataset-queryaction-filters): 
-    - [Filter](aws-properties-iotanalytics-dataset-filter.md)
+    - Filter
   [SqlQuery](#cfn-iotanalytics-dataset-queryaction-sqlquery): String
 ```
 

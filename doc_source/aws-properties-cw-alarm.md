@@ -6,6 +6,8 @@ When this operation creates an alarm, the alarm state is immediately set to `INS
 
 When you update an existing alarm, its state is left unchanged, but the update completely overwrites the previous configuration of the alarm\.
 
+
+
 ## Syntax<a name="aws-properties-cw-alarm-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -22,13 +24,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AlarmName](#cfn-cloudwatch-alarms-alarmname)" : String,
       "[ComparisonOperator](#cfn-cloudwatch-alarms-comparisonoperator)" : String,
       "[DatapointsToAlarm](#cfn-cloudwatch-alarm-datapointstoalarm)" : Integer,
-      "[Dimensions](#cfn-cloudwatch-alarms-dimension)" : [ [Dimension](aws-properties-cw-dimension.md), ... ],
+      "[Dimensions](#cfn-cloudwatch-alarms-dimension)" : [ Dimension, ... ],
       "[EvaluateLowSampleCountPercentile](#cfn-cloudwatch-alarms-evaluatelowsamplecountpercentile)" : String,
       "[EvaluationPeriods](#cfn-cloudwatch-alarms-evaluationperiods)" : Integer,
       "[ExtendedStatistic](#cfn-cloudwatch-alarms-extendedstatistic)" : String,
       "[InsufficientDataActions](#cfn-cloudwatch-alarms-insufficientdataactions)" : [ String, ... ],
       "[MetricName](#cfn-cloudwatch-alarms-metricname)" : String,
-      "[Metrics](#cfn-cloudwatch-alarm-metrics)" : [ [MetricDataQuery](aws-properties-cloudwatch-alarm-metricdataquery.md), ... ],
+      "[Metrics](#cfn-cloudwatch-alarm-metrics)" : [ MetricDataQuery, ... ],
       "[Namespace](#cfn-cloudwatch-alarms-namespace)" : String,
       "[OKActions](#cfn-cloudwatch-alarms-okactions)" : [ String, ... ],
       "[Period](#cfn-cloudwatch-alarms-period)" : Integer,
@@ -54,7 +56,7 @@ Properties:
   [ComparisonOperator](#cfn-cloudwatch-alarms-comparisonoperator): String
   [DatapointsToAlarm](#cfn-cloudwatch-alarm-datapointstoalarm): Integer
   [Dimensions](#cfn-cloudwatch-alarms-dimension): 
-    - [Dimension](aws-properties-cw-dimension.md)
+    - Dimension
   [EvaluateLowSampleCountPercentile](#cfn-cloudwatch-alarms-evaluatelowsamplecountpercentile): String
   [EvaluationPeriods](#cfn-cloudwatch-alarms-evaluationperiods): Integer
   [ExtendedStatistic](#cfn-cloudwatch-alarms-extendedstatistic): String
@@ -62,7 +64,7 @@ Properties:
     - String
   [MetricName](#cfn-cloudwatch-alarms-metricname): String
   [Metrics](#cfn-cloudwatch-alarm-metrics): 
-    - [MetricDataQuery](aws-properties-cloudwatch-alarm-metricdataquery.md)
+    - MetricDataQuery
   [Namespace](#cfn-cloudwatch-alarms-namespace): String
   [OKActions](#cfn-cloudwatch-alarms-okactions): 
     - String
@@ -77,7 +79,7 @@ Properties:
 ## Properties<a name="aws-properties-cw-alarm-properties"></a>
 
 `ActionsEnabled`  <a name="cfn-cloudwatch-alarms-actionsenabled"></a>
-Indicates whether actions should be executed during any changes to the alarm state\.  
+Indicates whether actions should be executed during any changes to the alarm state\. The default is TRUE\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -111,11 +113,12 @@ The arithmetic operation to use when comparing the specified statistic and thres
 You can specify the following values: `GreaterThanThreshold`, `GreaterThanOrEqualToThreshold`, `LessThanThreshold`, or `LessThanOrEqualToThreshold`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `GreaterThanOrEqualToThreshold | GreaterThanThreshold | GreaterThanUpperThreshold | LessThanLowerOrGreaterThanUpperThreshold | LessThanLowerThreshold | LessThanOrEqualToThreshold | LessThanThreshold`  
+*Allowed values*: `GreaterThanOrEqualToThreshold | GreaterThanThreshold | GreaterThanUpperThreshold | LessThanLowerOrGreaterThanUpperThreshold | LessThanLowerThreshold | LessThanOrEqualToThreshold | LessThanThreshold`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatapointsToAlarm`  <a name="cfn-cloudwatch-alarm-datapointstoalarm"></a>
-The number of datapoints that must be breaching to trigger the alarm\. This is used only if you are setting an "M out of N" alarm\. In that case, this value is the M\. For more information, see [Evaluating an Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarm-evaluation) in the *Amazon CloudWatch User Guide*\.  
+The number of datapoints that must be breaching to trigger the alarm\. This is used only if you are setting an "M out of N" alarm\. In that case, this value is the M, and the value that you set for `EvaluationPeriods` is the N value\. For more information, see [Evaluating an Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarm-evaluation) in the *Amazon CloudWatch User Guide*\.  
+If you omit this parameter, CloudWatch uses the same value here that you set for `EvaluationPeriods`, and the alarm goes to alarm state if that many consecutive periods are breaching\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -137,7 +140,8 @@ Used only for alarms based on percentiles\. If `ignore`, the alarm state does no
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EvaluationPeriods`  <a name="cfn-cloudwatch-alarms-evaluationperiods"></a>
-The number of periods over which data is compared to the specified threshold\.  
+The number of periods over which data is compared to the specified threshold\. If you are setting an alarm that requires that a number of consecutive data points be breaching to trigger the alarm, this value specifies that number\. If you are setting an "M out of N" alarm, this value is the N, and `DatapointsToAlarm` is the M\.  
+For more information, see [Evaluating an Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarm-evaluation) in the *Amazon CloudWatch User Guide*\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -145,6 +149,7 @@ The number of periods over which data is compared to the specified threshold\.
 
 `ExtendedStatistic`  <a name="cfn-cloudwatch-alarms-extendedstatistic"></a>
 The percentile statistic for the metric associated with the alarm\. Specify a value between p0\.0 and p100\.  
+For an alarm based on a metric, you must specify either `Statistic` or `ExtendedStatistic` but not both\.  
 For an alarm based on a math expression, you can't specify `ExtendedStatistic`\. Instead, you use `Metrics`\.  
 *Required*: No  
 *Type*: String  
@@ -168,13 +173,14 @@ The name of the metric associated with the alarm\. This is required for an alarm
 
 `Metrics`  <a name="cfn-cloudwatch-alarm-metrics"></a>
 An array that enables you to create an alarm based on the result of a metric math expression\. Each item in the array either retrieves a metric or performs a math expression\.  
-If you specify the `Metrics` parameter, you cannot specify `MetricName`, `Dimensions`, `Period`, `Namespace`, `Statistic`, or `ExtendedStatistic`\.   
+If you specify the `Metrics` parameter, you cannot specify `MetricName`, `Dimensions`, `Period`, `Namespace`, `Statistic`, `ExtendedStatistic`, or `Unit`\.   
 *Required*: No  
 *Type*: List of [MetricDataQuery](aws-properties-cloudwatch-alarm-metricdataquery.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Namespace`  <a name="cfn-cloudwatch-alarms-namespace"></a>
 The namespace of the metric associated with the alarm\. This is required for an alarm based on a metric\. For an alarm based on a math expression, you can't specify `Namespace` and you use `Metrics` instead\.  
+For a list of namespaces for metrics from AWS services, see [AWS Services That Publish CloudWatchMetrics\. ](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -190,18 +196,20 @@ The actions to execute when this alarm transitions to the `OK` state from any ot
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Period`  <a name="cfn-cloudwatch-alarms-period"></a>
-The period, in seconds, over which the statistic is applied\. This is required for an alarm based on a metric\. For an alarm based on a math expression, you can't specify `Period`, and instead you use the `Metrics` parameter\.  
+The period, in seconds, over which the statistic is applied\. This is required for an alarm based on a metric\. Valid values are 10, 30, 60, and any multiple of 60\.  
+For an alarm based on a math expression, you can't specify `Period`, and instead you use the `Metrics` parameter\.  
+*Minimum:* 10  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Statistic`  <a name="cfn-cloudwatch-alarms-statistic"></a>
 The statistic for the metric associated with the alarm, other than percentile\. For percentile statistics, use `ExtendedStatistic`\.  
+For an alarm based on a metric, you must specify either `Statistic` or `ExtendedStatistic` but not both\.  
 For an alarm based on a math expression, you can't specify `Statistic`\. Instead, you use `Metrics`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Average | Maximum | Minimum | SampleCount | Sum`  
+*Allowed values*: `Average | Maximum | Minimum | SampleCount | Sum`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Threshold`  <a name="cfn-cloudwatch-alarms-threshold"></a>
@@ -219,7 +227,7 @@ In an alarm based on an anomaly detection model, this is the ID of the `ANOMALY_
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatMissingData`  <a name="cfn-cloudwatch-alarms-treatmissingdata"></a>
-Sets how this alarm is to handle missing data points\. Valid values are `breaching`, `notBreaching`, `ignore`, and `missing`\. For more information, see [ Configuring How CloudWatch Alarms Treat Missing Data](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data) in the *Amazon CloudWatch User Guide*\.  
+Sets how this alarm is to handle missing data points\. Valid values are `breaching`, `notBreaching`, `ignore`, and `missing`\. For more information, see [ Configuring How CloudWatchAlarms Treat Missing Data](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data) in the *Amazon CloudWatchUser Guide*\.  
 If you omit this parameter, the default behavior of `missing` is used\.  
 *Required*: No  
 *Type*: String  
@@ -228,13 +236,14 @@ If you omit this parameter, the default behavior of `missing` is used\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Unit`  <a name="cfn-cloudwatch-alarms-unit"></a>
-The unit of the metric associated with the alarm\. You can specify the following values: Seconds, Microseconds, Milliseconds, Bytes, Kilobytes, Megabytes, Gigabytes, Terabytes, Bits, Kilobits, Megabits, Gigabits, Terabits, Percent, Count, Bytes/Second, Kilobytes/Second, Megabytes/Second, Gigabytes/Second, Terabytes/Second, Bits/Second, Kilobits/Second, Megabits/Second, Gigabits/Second, Terabits/Second, Count/Second, or None\.  
+The unit of the metric associated with the alarm\. Specify this only if you are creating an alarm based on a single metric\. Do not specify this if you are specifying a `Metrics` array\.  
+ You can specify the following values: Seconds, Microseconds, Milliseconds, Bytes, Kilobytes, Megabytes, Gigabytes, Terabytes, Bits, Kilobits, Megabits, Gigabits, Terabits, Percent, Count, Bytes/Second, Kilobytes/Second, Megabytes/Second, Gigabytes/Second, Terabytes/Second, Bits/Second, Kilobits/Second, Megabits/Second, Gigabits/Second, Terabits/Second, Count/Second, or None\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `Bits | Bits/Second | Bytes | Bytes/Second | Count | Count/Second | Gigabits | Gigabits/Second | Gigabytes | Gigabytes/Second | Kilobits | Kilobits/Second | Kilobytes | Kilobytes/Second | Megabits | Megabits/Second | Megabytes | Megabytes/Second | Microseconds | Milliseconds | None | Percent | Seconds | Terabits | Terabits/Second | Terabytes | Terabytes/Second`  
+*Allowed values*: `Bits | Bits/Second | Bytes | Bytes/Second | Count | Count/Second | Gigabits | Gigabits/Second | Gigabytes | Gigabytes/Second | Kilobits | Kilobits/Second | Kilobytes | Kilobytes/Second | Megabits | Megabits/Second | Megabytes | Megabytes/Second | Microseconds | Milliseconds | None | Percent | Seconds | Terabits | Terabits/Second | Terabytes | Terabytes/Second`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-properties-cw-alarm-return-values"></a>
+## Return values<a name="aws-properties-cw-alarm-return-values"></a>
 
 ### Ref<a name="aws-properties-cw-alarm-return-values-ref"></a>
 
@@ -251,7 +260,91 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-properties-cw-alarm-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The ARN of the CloudWatch alarm, such as `arn:aws:cloudwatch:us-west-2:123456789012:alarm:myCloudWatchAlarm-CPUAlarm-UXMMZK36R55Z`\.
+The ARN of the CloudWatchalarm, such as `arn:aws:cloudwatch:us-west-2:123456789012:alarm:myCloudWatchAlarm-CPUAlarm-UXMMZK36R55Z`\.
 
-## See Also<a name="aws-properties-cw-alarm--seealso"></a>
+## Examples<a name="aws-properties-cw-alarm--examples"></a>
+
+
+
+### Alarm Based on an Anomaly Detector<a name="aws-properties-cw-alarm--examples--Alarm_Based_on_an_Anomaly_Detector"></a>
+
+This example creates an alarm that is based on an anomaly detector\.
+
+#### JSON<a name="aws-properties-cw-alarm--examples--Alarm_Based_on_an_Anomaly_Detector--json"></a>
+
+```
+"Resources": {
+    "LambdaInvocationsAnomalyDetector": {
+       "Type": "AWS::CloudWatch::AnomalyDetector",
+       "Properties": {
+          "MetricName": "Invocations",
+          "Namespace": "AWS/Lambda",
+          "Stat": "Sum"
+       }
+    },
+    "LambdaInvocationsAlarm": {
+       "Type": "AWS::CloudWatch::Alarm",
+       "Properties": {
+          "AlarmDescription": "Lambda invocations",
+          "AlarmName": "LambdaInvocationsAlarm",
+          "ComparisonOperator": "LessThanLowerOrGreaterThanUpperThreshold",
+          "EvaluationPeriods": 1,
+          "Metrics": [
+             {
+                "Expression": "ANOMALY_DETECTION_BAND(m1, 2)",
+                "Id": "ad1"
+             },
+             {
+                "Id": "m1",
+                "MetricStat": {
+                   "Metric": {
+                      "MetricName": "Invocations",
+                      "Namespace": "AWS/Lambda"
+                   },
+                   "Period": 86400,
+                   "Stat": "Sum"
+                }
+             }
+          ],
+          "ThresholdMetricId": "ad1",
+          "TreatMissingData": "breaching"
+       }
+    }
+ }
+```
+
+#### YAML<a name="aws-properties-cw-alarm--examples--Alarm_Based_on_an_Anomaly_Detector--yaml"></a>
+
+```
+Resources:
+  LambdaInvocationsAnomalyDetector:
+    Type: AWS::CloudWatch::AnomalyDetector
+    Properties:
+      MetricName: Invocations
+      Namespace: AWS/Lambda
+      Stat: Sum
+
+  LambdaInvocationsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmDescription: Lambda invocations
+      AlarmName: LambdaInvocationsAlarm
+      ComparisonOperator: LessThanLowerOrGreaterThanUpperThreshold
+      EvaluationPeriods: 1
+      Metrics:
+      - Expression: ANOMALY_DETECTION_BAND(m1, 2)
+        Id: ad1
+      - Id: m1
+        MetricStat:
+          Metric:
+            MetricName: Invocations
+            Namespace: AWS/Lambda
+          Period: !!int 86400
+          Stat: Sum
+      ThresholdMetricId: ad1
+      TreatMissingData: breaching
+```
+
+## See also<a name="aws-properties-cw-alarm--seealso"></a>
 +  [Amazon CloudWatch Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-cloudwatch.html) 
+

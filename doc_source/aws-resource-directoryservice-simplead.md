@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Password](#cfn-directoryservice-simplead-password)" : String,
       "[ShortName](#cfn-directoryservice-simplead-shortname)" : String,
       "[Size](#cfn-directoryservice-simplead-size)" : String,
-      "[VpcSettings](#cfn-directoryservice-simplead-vpcsettings)" : [VpcSettings](aws-properties-directoryservice-simplead-vpcsettings.md)
+      "[VpcSettings](#cfn-directoryservice-simplead-vpcsettings)" : VpcSettings
     }
 }
 ```
@@ -37,7 +37,7 @@ Properties:
   [ShortName](#cfn-directoryservice-simplead-shortname): String
   [Size](#cfn-directoryservice-simplead-size): String
   [VpcSettings](#cfn-directoryservice-simplead-vpcsettings): 
-    [VpcSettings](aws-properties-directoryservice-simplead-vpcsettings.md)
+    VpcSettings
 ```
 
 ## Properties<a name="aws-resource-directoryservice-simplead-properties"></a>
@@ -50,7 +50,7 @@ After an alias has been created, it cannot be deleted or reused, so this operati
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-directoryservice-simplead-description"></a>
-A textual description for the directory\.  
+A description for the directory\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -73,23 +73,24 @@ The fully qualified name for the directory, such as `corp.example.com`\.
 
 `Password`  <a name="cfn-directoryservice-simplead-password"></a>
 The password for the directory administrator\. The directory creation process creates a directory administrator account with the user name `Administrator` and this password\.  
+If you need to change the password for the administrator account, see the [ResetUserPassword](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_ResetUserPassword.html) API call in the *AWS Directory Service API Reference*\.  
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `(?=^.{8,64}$)((?=.*\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[^A-Za-z0-9\s])(?=.*[a-z])|(?=.*[^A-Za-z0-9\s])(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9\s]))^.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ShortName`  <a name="cfn-directoryservice-simplead-shortname"></a>
-The short name of the directory, such as `CORP`\.  
+The NetBIOS name of the directory, such as `CORP`\.  
 *Required*: No  
 *Type*: String  
-*Pattern*: `^[^\\/:*?\"\<\>|.]+[^\\/:*?\"<>|]*$`  
+*Pattern*: `^[^\\/:*?"<>|.]+[^\\/:*?"<>|]*$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Size`  <a name="cfn-directoryservice-simplead-size"></a>
 The size of the directory\. For valid values, see [CreateDirectory](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_CreateDirectory.html) in the *AWS Directory Service API Reference*\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `Large | Small`  
+*Allowed values*: `Large | Small`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcSettings`  <a name="cfn-directoryservice-simplead-vpcsettings"></a>
@@ -98,7 +99,7 @@ A [DirectoryVpcSettings](https://docs.aws.amazon.com/directoryservice/latest/dev
 *Type*: [VpcSettings](aws-properties-directoryservice-simplead-vpcsettings.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-directoryservice-simplead-return-values"></a>
+## Return values<a name="aws-resource-directoryservice-simplead-return-values"></a>
 
 ### Ref<a name="aws-resource-directoryservice-simplead-return-values-ref"></a>
 
@@ -128,9 +129,9 @@ The IP addresses of the DNS servers for the directory, such as `[ "172.31.3.154"
 
 The following example creates a Simple AD directory, where the directory DNS name is `corp.example.com`:
 
-### Create a Simple AD Directory<a name="aws-resource-directoryservice-simplead--examples--Create_a_Simple_AD_Directory"></a>
+### Create a Simple AD Directory<a name="aws-resource-directoryservice-simplead--examples--Create_a__Directory"></a>
 
-#### JSON<a name="aws-resource-directoryservice-simplead--examples--Create_a_Simple_AD_Directory--json"></a>
+#### JSON<a name="aws-resource-directoryservice-simplead--examples--Create_a__Directory--json"></a>
 
 ```
 "myDirectory" : {
@@ -147,7 +148,7 @@ The following example creates a Simple AD directory, where the directory DNS nam
 }
 ```
 
-#### YAML<a name="aws-resource-directoryservice-simplead--examples--Create_a_Simple_AD_Directory--yaml"></a>
+#### YAML<a name="aws-resource-directoryservice-simplead--examples--Create_a__Directory--yaml"></a>
 
 ```
 myDirectory: 
@@ -165,6 +166,7 @@ myDirectory:
         Ref: vpcID
 ```
 
-## See Also<a name="aws-resource-directoryservice-simplead--seealso"></a>
+## See also<a name="aws-resource-directoryservice-simplead--seealso"></a>
 + [Getting Started with Simple AD](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/simple_ad_getting_started.html) in the *AWS Directory Service Admin Guide*\.\.
 + [CreateDirectory](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_CreateDirectory.html) in the *AWS Directory Service API Reference*\.
+
