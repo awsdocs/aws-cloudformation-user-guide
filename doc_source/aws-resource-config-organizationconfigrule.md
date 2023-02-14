@@ -4,7 +4,7 @@ An organization config rule that has information about config rules that AWS Con
 
 `OrganizationConfigRule` resource enables organization service access through `EnableAWSServiceAccess` action and creates a service linked role in the master account of your organization\. The service linked role is created only when the role does not exist in the master account\. AWS Config verifies the existence of role with `GetRole` action\. 
 
-When creating custom organization config rules using a centralized Lambda function, you will need to allow Lambda permissions to sub\-accounts and you will need to create an IAM role will to pass to the Lambda function\. For more information, see [How to Centrally Manage AWS Config Rules across Multiple AWS Accounts](http://aws.amazon.com/blogs/devops/how-to-centrally-manage-aws-config-rules-across-multiple-aws-accounts/)\.
+When creating custom organization config rules using a centralized Lambda function, you will need to allow Lambda permissions to sub\-accounts and you will need to create an IAM role to pass to the Lambda function\. For more information, see [How to Centrally Manage AWS Config Rules across Multiple AWS Accounts](http://aws.amazon.com/blogs/devops/how-to-centrally-manage-aws-config-rules-across-multiple-aws-accounts/)\.
 
 ## Syntax<a name="aws-resource-config-organizationconfigrule-syntax"></a>
 
