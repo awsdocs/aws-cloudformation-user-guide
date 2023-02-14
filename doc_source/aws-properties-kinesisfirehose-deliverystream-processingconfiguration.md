@@ -1,6 +1,6 @@
 # AWS::KinesisFirehose::DeliveryStream ProcessingConfiguration<a name="aws-properties-kinesisfirehose-deliverystream-processingconfiguration"></a>
 
-The `ProcessingConfiguration` property configures data processing for an Amazon Kinesis Data Firehose delivery stream\. 
+The `ProcessingConfiguration` property configures data processing for an Amazon Kinesis Data Firehose delivery stream\.
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-processingconfiguration-syntax"></a>
 
@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Enabled](#cfn-kinesisfirehose-deliverystream-processingconfiguration-enabled)" : Boolean,
-  "[Processors](#cfn-kinesisfirehose-deliverystream-processingconfiguration-processors)" : [ [Processor](aws-properties-kinesisfirehose-deliverystream-processor.md), ... ]
+  "[Processors](#cfn-kinesisfirehose-deliverystream-processingconfiguration-processors)" : [ Processor, ... ]
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Enabled](#cfn-kinesisfirehose-deliverystream-processingconfiguration-enabled): Boolean
   [Processors](#cfn-kinesisfirehose-deliverystream-processingconfiguration-processors): 
-    - [Processor](aws-properties-kinesisfirehose-deliverystream-processor.md)
+    - Processor
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-processingconfiguration-properties"></a>

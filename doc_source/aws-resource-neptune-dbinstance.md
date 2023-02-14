@@ -138,7 +138,7 @@ An arbitrary set of tags \(key\-value pairs\) for this DB instance\.
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-neptune-dbinstance-return-values"></a>
+## Return values<a name="aws-resource-neptune-dbinstance-return-values"></a>
 
 ### Ref<a name="aws-resource-neptune-dbinstance-return-values-ref"></a>
 

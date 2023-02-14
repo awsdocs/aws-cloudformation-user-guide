@@ -47,10 +47,10 @@ The ID of the network interface\.
 The type of permission to grant: `INSTANCE-ATTACH` or `EIP-ASSOCIATE`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `EIP-ASSOCIATE | INSTANCE-ATTACH`  
+*Allowed values*: `EIP-ASSOCIATE | INSTANCE-ATTACH`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-ec2-networkinterfacepermission-return-values"></a>
+## Return values<a name="aws-resource-ec2-networkinterfacepermission-return-values"></a>
 
 ### Ref<a name="aws-resource-ec2-networkinterfacepermission-return-values-ref"></a>
 
@@ -60,11 +60,13 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-networkinterfacepermission--examples"></a>
 
-### Grant INSTANCE\-ATTACH Permission<a name="aws-resource-ec2-networkinterfacepermission--examples--Grant_INSTANCE-ATTACH_Permission"></a>
+
+
+### Grant INSTANCE\-ATTACH permission<a name="aws-resource-ec2-networkinterfacepermission--examples--Grant_INSTANCE-ATTACH_permission"></a>
 
 The following example creates a permission \(`INSTANCE-ATTACH`\) for a specified network interface and AWS account\.
 
-#### JSON<a name="aws-resource-ec2-networkinterfacepermission--examples--Grant_INSTANCE-ATTACH_Permission--json"></a>
+#### JSON<a name="aws-resource-ec2-networkinterfacepermission--examples--Grant_INSTANCE-ATTACH_permission--json"></a>
 
 ```
 "MyNetworkInterfacePermission": {
@@ -77,7 +79,7 @@ The following example creates a permission \(`INSTANCE-ATTACH`\) for a specified
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-networkinterfacepermission--examples--Grant_INSTANCE-ATTACH_Permission--yaml"></a>
+#### YAML<a name="aws-resource-ec2-networkinterfacepermission--examples--Grant_INSTANCE-ATTACH_permission--yaml"></a>
 
 ```
    MyNetworkInterfacePermission:

@@ -16,9 +16,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AccessLoggingEnabled](#cfn-mediastore-container-accessloggingenabled)" : Boolean,
       "[ContainerName](#cfn-mediastore-container-containername)" : String,
-      "[CorsPolicy](#cfn-mediastore-container-corspolicy)" : [ [CorsRule](aws-properties-mediastore-container-corsrule.md), ... ],
+      "[CorsPolicy](#cfn-mediastore-container-corspolicy)" : [ CorsRule, ... ],
       "[LifecyclePolicy](#cfn-mediastore-container-lifecyclepolicy)" : String,
-      "[Policy](#cfn-mediastore-container-policy)" : String
+      "[MetricPolicy](#cfn-mediastore-container-metricpolicy)" : MetricPolicy,
+      "[Policy](#cfn-mediastore-container-policy)" : String,
+      "[Tags](#cfn-mediastore-container-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -31,9 +33,13 @@ Properties:
   [AccessLoggingEnabled](#cfn-mediastore-container-accessloggingenabled): Boolean
   [ContainerName](#cfn-mediastore-container-containername): String
   [CorsPolicy](#cfn-mediastore-container-corspolicy): 
-    - [CorsRule](aws-properties-mediastore-container-corsrule.md)
+    - CorsRule
   [LifecyclePolicy](#cfn-mediastore-container-lifecyclepolicy): String
+  [MetricPolicy](#cfn-mediastore-container-metricpolicy): 
+    MetricPolicy
   [Policy](#cfn-mediastore-container-policy): String
+  [Tags](#cfn-mediastore-container-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-mediastore-container-properties"></a>
@@ -68,14 +74,26 @@ For information about how to construct an object lifecycle policy, see [Componen
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`MetricPolicy`  <a name="cfn-mediastore-container-metricpolicy"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [MetricPolicy](aws-properties-mediastore-container-metricpolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Policy`  <a name="cfn-mediastore-container-policy"></a>
-Creates an access policy for the specified container to restrict the users and clients that can access it\. For information about the data that is included in an access policy, see the [AWS Identity and Access Management User Guide](https://aws.amazon.com/documentation/iam/)\.  
+Creates an access policy for the specified container to restrict the users and clients that can access it\. For information about the data that is included in an access policy, see the [AWS Identity and Access Management User Guide](https://docs.aws.amazon.com/iam/)\.  
 For this release of the REST API, you can create only one policy for a container\. If you enter `PutContainerPolicy` twice, the second command modifies the existing policy\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-mediastore-container-return-values"></a>
+`Tags`  <a name="cfn-mediastore-container-tags"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-mediastore-container-return-values"></a>
 
 ### Ref<a name="aws-resource-mediastore-container-return-values-ref"></a>
 

@@ -10,9 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DownScaling](#cfn-opsworks-layer-loadbasedautoscaling-downscaling)" : [AutoScalingThresholds](aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.md),
+  "[DownScaling](#cfn-opsworks-layer-loadbasedautoscaling-downscaling)" : AutoScalingThresholds,
   "[Enable](#cfn-opsworks-layer-loadbasedautoscaling-enable)" : Boolean,
-  "[UpScaling](#cfn-opsworks-layer-loadbasedautoscaling-upscaling)" : [AutoScalingThresholds](aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.md)
+  "[UpScaling](#cfn-opsworks-layer-loadbasedautoscaling-upscaling)" : AutoScalingThresholds
 }
 ```
 
@@ -20,10 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DownScaling](#cfn-opsworks-layer-loadbasedautoscaling-downscaling): 
-    [AutoScalingThresholds](aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.md)
+    AutoScalingThresholds
   [Enable](#cfn-opsworks-layer-loadbasedautoscaling-enable): Boolean
   [UpScaling](#cfn-opsworks-layer-loadbasedautoscaling-upscaling): 
-    [AutoScalingThresholds](aws-properties-opsworks-layer-loadbasedautoscaling-autoscalingthresholds.md)
+    AutoScalingThresholds
 ```
 
 ## Properties<a name="aws-properties-opsworks-layer-loadbasedautoscaling-properties"></a>

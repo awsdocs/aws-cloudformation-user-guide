@@ -1,6 +1,6 @@
 # AWS::AppMesh::Route HttpRouteAction<a name="aws-properties-appmesh-route-httprouteaction"></a>
 
-An object representing the traffic distribution requirements for matched HTTP requests\.
+An object that represents the action to take if a match is determined\.
 
 ## Syntax<a name="aws-properties-appmesh-route-httprouteaction-syntax"></a>
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[WeightedTargets](#cfn-appmesh-route-httprouteaction-weightedtargets)" : [ [WeightedTarget](aws-properties-appmesh-route-weightedtarget.md), ... ]
+  "[WeightedTargets](#cfn-appmesh-route-httprouteaction-weightedtargets)" : [ WeightedTarget, ... ]
 }
 ```
 
@@ -18,13 +18,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [WeightedTargets](#cfn-appmesh-route-httprouteaction-weightedtargets): 
-    - [WeightedTarget](aws-properties-appmesh-route-weightedtarget.md)
+    - WeightedTarget
 ```
 
 ## Properties<a name="aws-properties-appmesh-route-httprouteaction-properties"></a>
 
 `WeightedTargets`  <a name="cfn-appmesh-route-httprouteaction-weightedtargets"></a>
-The targets that traffic is routed to when a request matches the route\. You can specify one or more targets and their relative weights to distribute traffic with\.  
+An object that represents the targets that traffic is routed to when a request matches the route\.  
 *Required*: Yes  
 *Type*: List of [WeightedTarget](aws-properties-appmesh-route-weightedtarget.md)  
+*Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

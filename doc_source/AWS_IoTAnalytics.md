@@ -1,6 +1,6 @@
-# AWS IoT Analytics Resource Type Reference<a name="AWS_IoTAnalytics"></a>
+# AWS IoT Analytics resource type reference<a name="AWS_IoTAnalytics"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::IoTAnalytics::Channel](aws-resource-iotanalytics-channel.md)
 + [AWS::IoTAnalytics::Dataset](aws-resource-iotanalytics-dataset.md)
 + [AWS::IoTAnalytics::Datastore](aws-resource-iotanalytics-datastore.md)

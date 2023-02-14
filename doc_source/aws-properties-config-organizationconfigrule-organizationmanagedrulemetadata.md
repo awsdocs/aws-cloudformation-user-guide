@@ -54,11 +54,11 @@ A string, in JSON format, that is passed to organization config rule Lambda func
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumExecutionFrequency`  <a name="cfn-config-organizationconfigrule-organizationmanagedrulemetadata-maximumexecutionfrequency"></a>
-The maximum frequency with which AWS Config runs evaluations for a rule\. You are using an AWS managed rule that is triggered at a periodic frequency\.  
+The maximum frequency with which AWS Config runs evaluations for a rule\. You are using an AWS Config managed rule that is triggered at a periodic frequency\.  
 By default, rules with a periodic trigger are evaluated every 24 hours\. To change the frequency, specify a valid value for the `MaximumExecutionFrequency` parameter\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
+*Allowed values*: `One_Hour | Six_Hours | Three_Hours | Twelve_Hours | TwentyFour_Hours`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceIdScope`  <a name="cfn-config-organizationconfigrule-organizationmanagedrulemetadata-resourceidscope"></a>
@@ -77,7 +77,7 @@ The type of the AWS resource that was evaluated\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuleIdentifier`  <a name="cfn-config-organizationconfigrule-organizationmanagedrulemetadata-ruleidentifier"></a>
-For organization config managed rules, a predefined identifier from a list\. For example, `IAM_PASSWORD_POLICY` is a managed rule\. To reference a managed rule, see [Using AWS Managed Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html)\.  
+For organization config managed rules, a predefined identifier from a list\. For example, `IAM_PASSWORD_POLICY` is a managed rule\. To reference a managed rule, see [Using AWS Config managed rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

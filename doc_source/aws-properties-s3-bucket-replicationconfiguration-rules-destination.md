@@ -1,6 +1,6 @@
 # AWS::S3::Bucket ReplicationDestination<a name="aws-properties-s3-bucket-replicationconfiguration-rules-destination"></a>
 
-Specifies which Amazon S3 bucket to store replicated objects in and their storage class\.
+A container for information about the replication destination and its configurations including enabling the S3 Replication Time Control \(S3 RTC\)\.
 
 ## Syntax<a name="aws-properties-s3-bucket-replicationconfiguration-rules-destination-syntax"></a>
 
@@ -10,10 +10,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[AccessControlTranslation](#cfn-s3-bucket-replicationdestination-accesscontroltranslation)" : [AccessControlTranslation](aws-properties-s3-bucket-accesscontroltranslation.md),
+  "[AccessControlTranslation](#cfn-s3-bucket-replicationdestination-accesscontroltranslation)" : AccessControlTranslation,
   "[Account](#cfn-s3-bucket-replicationdestination-account)" : String,
   "[Bucket](#cfn-s3-bucket-replicationconfiguration-rules-destination-bucket)" : String,
-  "[EncryptionConfiguration](#cfn-s3-bucket-replicationdestination-encryptionconfiguration)" : [EncryptionConfiguration](aws-properties-s3-bucket-encryptionconfiguration.md),
+  "[EncryptionConfiguration](#cfn-s3-bucket-replicationdestination-encryptionconfiguration)" : EncryptionConfiguration,
+  "[Metrics](#cfn-s3-bucket-replicationdestination-metrics)" : Metrics,
+  "[ReplicationTime](#cfn-s3-bucket-replicationdestination-replicationtime)" : ReplicationTime,
   "[StorageClass](#cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass)" : String
 }
 ```
@@ -22,11 +24,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AccessControlTranslation](#cfn-s3-bucket-replicationdestination-accesscontroltranslation): 
-    [AccessControlTranslation](aws-properties-s3-bucket-accesscontroltranslation.md)
+    AccessControlTranslation
   [Account](#cfn-s3-bucket-replicationdestination-account): String
   [Bucket](#cfn-s3-bucket-replicationconfiguration-rules-destination-bucket): String
   [EncryptionConfiguration](#cfn-s3-bucket-replicationdestination-encryptionconfiguration): 
-    [EncryptionConfiguration](aws-properties-s3-bucket-encryptionconfiguration.md)
+    EncryptionConfiguration
+  [Metrics](#cfn-s3-bucket-replicationdestination-metrics): 
+    Metrics
+  [ReplicationTime](#cfn-s3-bucket-replicationdestination-replicationtime): 
+    ReplicationTime
   [StorageClass](#cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass): String
 ```
 
@@ -39,15 +45,14 @@ Specify this only in a cross\-account scenario \(where source and destination bu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Account`  <a name="cfn-s3-bucket-replicationdestination-account"></a>
-Destination bucket owner account ID\. In a cross\-account scenario, if you direct Amazon S3 to change replica ownership to the AWS account that owns the destination bucket by specifying the `AccessControlTranslation` property, this is the account ID of the destination bucket owner\. For more information, see [Cross\-Region Replication Additional Configuration: Change Replica Owner](https://docs.aws.amazon.com/AmazonS3/latest/dev/crr-change-owner.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+Destination bucket owner account ID\. In a cross\-account scenario, if you direct Amazon S3 to change replica ownership to the AWS account that owns the destination bucket by specifying the `AccessControlTranslation` property, this is the account ID of the destination bucket owner\. For more information, see [Cross\-Region Replication Additional Configuration: Change Replica Owner](https://docs.aws.amazon.com/AmazonS3/latest/dev/crr-change-owner.html) in the *Amazon S3 User Guide*\.  
 If you specify the `AccessControlTranslation` property, the `Account` property is required\.   
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Bucket`  <a name="cfn-s3-bucket-replicationconfiguration-rules-destination-bucket"></a>
- The Amazon Resource Name \(ARN\) of the bucket where you want Amazon S3 to store replicas of the object identified by the rule\.  
-A replication configuration can replicate objects to only one destination bucket\. If there are multiple rules in your replication configuration, all rules must specify the same destination bucket\.  
+ The Amazon Resource Name \(ARN\) of the bucket where you want Amazon S3 to store the results\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -58,10 +63,22 @@ Specifies encryption\-related information\.
 *Type*: [EncryptionConfiguration](aws-properties-s3-bucket-encryptionconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Metrics`  <a name="cfn-s3-bucket-replicationdestination-metrics"></a>
+ A container specifying replication metrics\-related settings enabling replication metrics and events\.   
+*Required*: No  
+*Type*: [Metrics](aws-properties-s3-bucket-metrics.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ReplicationTime`  <a name="cfn-s3-bucket-replicationdestination-replicationtime"></a>
+ A container specifying S3 Replication Time Control \(S3 RTC\), including whether S3 RTC is enabled and the time when all objects and operations on objects must be replicated\. Must be specified together with a `Metrics` block\.   
+*Required*: No  
+*Type*: [ReplicationTime](aws-properties-s3-bucket-replicationtime.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `StorageClass`  <a name="cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass"></a>
- The storage class to use when replicating objects, such as standard or reduced redundancy\. By default, Amazon S3 uses the storage class of the source object to create the object replica\.   
-For valid values, see the `StorageClass` element of the [PUT Bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) action in the *Amazon Simple Storage Service API Reference*\.  
+ The storage class to use when replicating objects, such as S3 Standard or reduced redundancy\. By default, Amazon S3 uses the storage class of the source object to create the object replica\.   
+For valid values, see the `StorageClass` element of the [PUT Bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) action in the *Amazon S3 API Reference*\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DEEP_ARCHIVE | GLACIER | INTELLIGENT_TIERING | ONEZONE_IA | REDUCED_REDUNDANCY | STANDARD | STANDARD_IA`  
+*Allowed values*: `DEEP_ARCHIVE | GLACIER | GLACIER_IR | INTELLIGENT_TIERING | ONEZONE_IA | OUTPOSTS | REDUCED_REDUNDANCY | STANDARD | STANDARD_IA`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

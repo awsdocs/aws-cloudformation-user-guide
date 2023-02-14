@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Greengrass::FunctionDefinition",
   "Properties" : {
-      "[InitialVersion](#cfn-greengrass-functiondefinition-initialversion)" : [FunctionDefinitionVersion](aws-properties-greengrass-functiondefinition-functiondefinitionversion.md),
+      "[InitialVersion](#cfn-greengrass-functiondefinition-initialversion)" : FunctionDefinitionVersion,
       "[Name](#cfn-greengrass-functiondefinition-name)" : String,
       "[Tags](#cfn-greengrass-functiondefinition-tags)" : Json
     }
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Greengrass::FunctionDefinition
 Properties: 
   [InitialVersion](#cfn-greengrass-functiondefinition-initialversion): 
-    [FunctionDefinitionVersion](aws-properties-greengrass-functiondefinition-functiondefinitionversion.md)
+    FunctionDefinitionVersion
   [Name](#cfn-greengrass-functiondefinition-name): String
   [Tags](#cfn-greengrass-functiondefinition-tags): Json
 ```
@@ -52,7 +52,7 @@ The name of the function definition\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-greengrass-functiondefinition-tags"></a>
-Application\-specific metadata to attach to the function definition\. You can use tags in IAM policies to control access to AWS IoT Greengrass resources\. You can also use tags to categorize your resources\. For more information, see [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html) in the *AWS IoT Greengrass Developer Guide*\.  
+Application\-specific metadata to attach to the function definition\. You can use tags in IAM policies to control access to AWS IoT Greengrass resources\. You can also use tags to categorize your resources\. For more information, see [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/latest/developerguide/tagging.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.  
 This `Json` property type is processed as a map of key\-value pairs\. It uses the following format, which is different from most `Tags` implementations in AWS CloudFormation templates\.  
 
 ```
@@ -66,7 +66,7 @@ This `Json` property type is processed as a map of key\-value pairs\. It uses th
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-greengrass-functiondefinition-return-values"></a>
+## Return values<a name="aws-resource-greengrass-functiondefinition-return-values"></a>
 
 ### Ref<a name="aws-resource-greengrass-functiondefinition-return-values-ref"></a>
 
@@ -95,6 +95,8 @@ The ARN of the last `FunctionDefinitionVersion` that was added to the `FunctionD
 The name of the `FunctionDefinition`, such as `MyFunctionDefinition`\. 
 
 ## Examples<a name="aws-resource-greengrass-functiondefinition--examples"></a>
+
+
 
 ### Function Definition Snippet<a name="aws-resource-greengrass-functiondefinition--examples--Function_Definition_Snippet"></a>
 
@@ -194,6 +196,6 @@ TestFunctionDefinition:
                   Gid: '10'
 ```
 
-## See Also<a name="aws-resource-greengrass-functiondefinition--seealso"></a>
-+  [CreateFunctionDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createfunctiondefinition-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+## See also<a name="aws-resource-greengrass-functiondefinition--seealso"></a>
++  [CreateFunctionDefinition](https://docs.aws.amazon.com/greengrass/latest/apireference/createfunctiondefinition-post.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

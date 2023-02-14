@@ -37,7 +37,8 @@ Either the ElastiCache for Redis supplied 4\-digit id or a user supplied id for 
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `4`  
-*Pattern*: `\d+`
+*Pattern*: `\d+`  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `PrimaryAvailabilityZone`  <a name="cfn-elasticache-replicationgroup-nodegroupconfiguration-primaryavailabilityzone"></a>
 The Availability Zone where the primary node of this node group \(shard\) is launched\.  

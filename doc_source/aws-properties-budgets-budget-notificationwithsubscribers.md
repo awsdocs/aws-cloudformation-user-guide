@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Notification](#cfn-budgets-budget-notificationwithsubscribers-notification)" : [Notification](aws-properties-budgets-budget-notification.md),
-  "[Subscribers](#cfn-budgets-budget-notificationwithsubscribers-subscribers)" : [ [Subscriber](aws-properties-budgets-budget-subscriber.md), ... ]
+  "[Notification](#cfn-budgets-budget-notificationwithsubscribers-notification)" : Notification,
+  "[Subscribers](#cfn-budgets-budget-notificationwithsubscribers-subscribers)" : [ Subscriber, ... ]
 }
 ```
 
@@ -19,15 +19,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Notification](#cfn-budgets-budget-notificationwithsubscribers-notification): 
-    [Notification](aws-properties-budgets-budget-notification.md)
+    Notification
   [Subscribers](#cfn-budgets-budget-notificationwithsubscribers-subscribers): 
-    - [Subscriber](aws-properties-budgets-budget-subscriber.md)
+    - Subscriber
 ```
 
 ## Properties<a name="aws-properties-budgets-budget-notificationwithsubscribers-properties"></a>
 
 `Notification`  <a name="cfn-budgets-budget-notificationwithsubscribers-notification"></a>
-The notification that is associated with a budget\.  
+The notification that's associated with a budget\.  
 *Required*: Yes  
 *Type*: [Notification](aws-properties-budgets-budget-notification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -39,5 +39,6 @@ A list of subscribers who are subscribed to this notification\.
 *Maximum*: `11`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-budgets-budget-notificationwithsubscribers--seealso"></a>
+## See also<a name="aws-properties-budgets-budget-notificationwithsubscribers--seealso"></a>
 +  [NotificationWithSubscribers](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_NotificationWithSubscribers.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+

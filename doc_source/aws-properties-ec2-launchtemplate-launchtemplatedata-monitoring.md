@@ -1,8 +1,8 @@
 # AWS::EC2::LaunchTemplate Monitoring<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-monitoring"></a>
 
-Specifies whether detailed monitoring is enabled for an instance\.
+Specifies whether detailed monitoring is enabled for an instance\. For more information about detailed monitoring, see [Enable or turn off detailed monitoring for your instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-cloudwatch-new.html) in the *Amazon EC2 User Guide*\.
 
- `Monitoring` is a property of the [Amazon EC2 LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html) property type\.
+`Monitoring` is a property of [AWS::EC2::LaunchTemplate LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-monitoring-syntax"></a>
 
@@ -30,5 +30,6 @@ Specify `true` to enable detailed monitoring\. Otherwise, basic monitoring is en
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-monitoring--seealso"></a>
-+  [ LaunchTemplatesMonitoringRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplatesMonitoringRequest.html) in the *Amazon Elastic Compute Cloud API Reference* 
+## See also<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-monitoring--seealso"></a>
++  [ LaunchTemplatesMonitoringRequest](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplatesMonitoringRequest.html) in the *Amazon EC2 API Reference* 
+

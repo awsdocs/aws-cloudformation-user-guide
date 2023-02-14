@@ -1,6 +1,8 @@
 # AWS::MediaLive::Input InputSourceRequest<a name="aws-properties-medialive-input-inputsourcerequest"></a>
 
-The settings for a pull input\.
+Settings that apply only if the input is a pull type of input\.
+
+The parent of this entity is Input\.
 
 ## Syntax<a name="aws-properties-medialive-input-inputsourcerequest-syntax"></a>
 
@@ -39,7 +41,7 @@ For a pull input, the URL where MediaLive pulls the source content from\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Username`  <a name="cfn-medialive-input-inputsourcerequest-username"></a>
-The user name for accessing the upstream system\. The user name applies only if the upstream system requires credentials\.  
+The user name to connect to the upstream system\. The user name applies only if the upstream system requires credentials\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
