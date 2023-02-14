@@ -511,9 +511,8 @@ Resources:
   MSKSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Enable SSH access via port 22
-      VpcId:
-        Ref: VPC
+      GroupDescription: Enable Zookeeper and Kafka access
+      VpcId: !Ref VPC
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 2181
@@ -995,7 +994,7 @@ Outputs:
         "MSKSecurityGroup": {
             "Type": "AWS::EC2::SecurityGroup",
             "Properties": {
-                "GroupDescription": "Enable SSH access via port 22",
+                "GroupDescription": "Enable Zookeeper and Kafka access",
                 "VpcId": {
                     "Ref": "VPC"
                 },
