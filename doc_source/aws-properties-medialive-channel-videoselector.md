@@ -13,8 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ColorSpace](#cfn-medialive-channel-videoselector-colorspace)" : String,
+  "[ColorSpaceSettings](#cfn-medialive-channel-videoselector-colorspacesettings)" : VideoSelectorColorSpaceSettings,
   "[ColorSpaceUsage](#cfn-medialive-channel-videoselector-colorspaceusage)" : String,
-  "[SelectorSettings](#cfn-medialive-channel-videoselector-selectorsettings)" : [VideoSelectorSettings](aws-properties-medialive-channel-videoselectorsettings.md)
+  "[SelectorSettings](#cfn-medialive-channel-videoselector-selectorsettings)" : VideoSelectorSettings
 }
 ```
 
@@ -22,9 +23,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ColorSpace](#cfn-medialive-channel-videoselector-colorspace): String
+  [ColorSpaceSettings](#cfn-medialive-channel-videoselector-colorspacesettings): 
+    VideoSelectorColorSpaceSettings
   [ColorSpaceUsage](#cfn-medialive-channel-videoselector-colorspaceusage): String
   [SelectorSettings](#cfn-medialive-channel-videoselector-selectorsettings): 
-    [VideoSelectorSettings](aws-properties-medialive-channel-videoselectorsettings.md)
+    VideoSelectorSettings
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-videoselector-properties"></a>
@@ -33,6 +36,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Specifies the color space of an input\. This setting works in tandem with colorSpaceConversion to determine if MediaLive will perform any conversion\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ColorSpaceSettings`  <a name="cfn-medialive-channel-videoselector-colorspacesettings"></a>
+Settings to configure color space settings in the incoming video\.  
+*Required*: No  
+*Type*: [VideoSelectorColorSpaceSettings](aws-properties-medialive-channel-videoselectorcolorspacesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ColorSpaceUsage`  <a name="cfn-medialive-channel-videoselector-colorspaceusage"></a>

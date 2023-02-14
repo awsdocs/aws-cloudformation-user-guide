@@ -10,13 +10,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ADMMessage](#cfn-pinpoint-campaign-messageconfiguration-admmessage)" : [Message](aws-properties-pinpoint-campaign-message.md),
-  "[APNSMessage](#cfn-pinpoint-campaign-messageconfiguration-apnsmessage)" : [Message](aws-properties-pinpoint-campaign-message.md),
-  "[BaiduMessage](#cfn-pinpoint-campaign-messageconfiguration-baidumessage)" : [Message](aws-properties-pinpoint-campaign-message.md),
-  "[DefaultMessage](#cfn-pinpoint-campaign-messageconfiguration-defaultmessage)" : [Message](aws-properties-pinpoint-campaign-message.md),
-  "[EmailMessage](#cfn-pinpoint-campaign-messageconfiguration-emailmessage)" : [CampaignEmailMessage](aws-properties-pinpoint-campaign-campaignemailmessage.md),
-  "[GCMMessage](#cfn-pinpoint-campaign-messageconfiguration-gcmmessage)" : [Message](aws-properties-pinpoint-campaign-message.md),
-  "[SMSMessage](#cfn-pinpoint-campaign-messageconfiguration-smsmessage)" : [CampaignSmsMessage](aws-properties-pinpoint-campaign-campaignsmsmessage.md)
+  "[ADMMessage](#cfn-pinpoint-campaign-messageconfiguration-admmessage)" : Message,
+  "[APNSMessage](#cfn-pinpoint-campaign-messageconfiguration-apnsmessage)" : Message,
+  "[BaiduMessage](#cfn-pinpoint-campaign-messageconfiguration-baidumessage)" : Message,
+  "[DefaultMessage](#cfn-pinpoint-campaign-messageconfiguration-defaultmessage)" : Message,
+  "[EmailMessage](#cfn-pinpoint-campaign-messageconfiguration-emailmessage)" : CampaignEmailMessage,
+  "[GCMMessage](#cfn-pinpoint-campaign-messageconfiguration-gcmmessage)" : Message,
+  "[InAppMessage](#cfn-pinpoint-campaign-messageconfiguration-inappmessage)" : CampaignInAppMessage,
+  "[SMSMessage](#cfn-pinpoint-campaign-messageconfiguration-smsmessage)" : CampaignSmsMessage
 }
 ```
 
@@ -24,37 +25,39 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ADMMessage](#cfn-pinpoint-campaign-messageconfiguration-admmessage): 
-    [Message](aws-properties-pinpoint-campaign-message.md)
+    Message
   [APNSMessage](#cfn-pinpoint-campaign-messageconfiguration-apnsmessage): 
-    [Message](aws-properties-pinpoint-campaign-message.md)
+    Message
   [BaiduMessage](#cfn-pinpoint-campaign-messageconfiguration-baidumessage): 
-    [Message](aws-properties-pinpoint-campaign-message.md)
+    Message
   [DefaultMessage](#cfn-pinpoint-campaign-messageconfiguration-defaultmessage): 
-    [Message](aws-properties-pinpoint-campaign-message.md)
+    Message
   [EmailMessage](#cfn-pinpoint-campaign-messageconfiguration-emailmessage): 
-    [CampaignEmailMessage](aws-properties-pinpoint-campaign-campaignemailmessage.md)
+    CampaignEmailMessage
   [GCMMessage](#cfn-pinpoint-campaign-messageconfiguration-gcmmessage): 
-    [Message](aws-properties-pinpoint-campaign-message.md)
+    Message
+  [InAppMessage](#cfn-pinpoint-campaign-messageconfiguration-inappmessage): 
+    CampaignInAppMessage
   [SMSMessage](#cfn-pinpoint-campaign-messageconfiguration-smsmessage): 
-    [CampaignSmsMessage](aws-properties-pinpoint-campaign-campaignsmsmessage.md)
+    CampaignSmsMessage
 ```
 
 ## Properties<a name="aws-properties-pinpoint-campaign-messageconfiguration-properties"></a>
 
 `ADMMessage`  <a name="cfn-pinpoint-campaign-messageconfiguration-admmessage"></a>
-The message that the campaign sends through the ADM \(Amazon Device Messaging\) channel\. This message overrides the default message\.  
+The message that the campaign sends through the ADM \(Amazon Device Messaging\) channel\. If specified, this message overrides the default message\.  
 *Required*: No  
 *Type*: [Message](aws-properties-pinpoint-campaign-message.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `APNSMessage`  <a name="cfn-pinpoint-campaign-messageconfiguration-apnsmessage"></a>
-The message that the campaign sends through the APNS \(Apple Push Notification service\) channel\. This message overrides the default message\.  
+The message that the campaign sends through the APNs \(Apple Push Notification service\) channel\. If specified, this message overrides the default message\.  
 *Required*: No  
 *Type*: [Message](aws-properties-pinpoint-campaign-message.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BaiduMessage`  <a name="cfn-pinpoint-campaign-messageconfiguration-baidumessage"></a>
-The message that the campaign sends through the Baidu \(Baidu Cloud Push\) channel\. This message overrides the default message\.  
+The message that the campaign sends through the Baidu \(Baidu Cloud Push\) channel\. If specified, this message overrides the default message\.  
 *Required*: No  
 *Type*: [Message](aws-properties-pinpoint-campaign-message.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -66,19 +69,25 @@ The default message that the campaign sends through all the channels that are co
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailMessage`  <a name="cfn-pinpoint-campaign-messageconfiguration-emailmessage"></a>
-The message that the campaign sends through the email channel\.  
+The message that the campaign sends through the email channel\. If specified, this message overrides the default message\.  
 *Required*: No  
 *Type*: [CampaignEmailMessage](aws-properties-pinpoint-campaign-campaignemailmessage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GCMMessage`  <a name="cfn-pinpoint-campaign-messageconfiguration-gcmmessage"></a>
-The message that the campaign sends through the GCM channel, which enables Amazon Pinpoint to send push notifications through the Firebase Cloud Messaging \(FCM\), formerly Google Cloud Messaging \(GCM\), service\. This message overrides the default message\.  
+The message that the campaign sends through the GCM channel, which enables Amazon Pinpoint to send push notifications through the Firebase Cloud Messaging \(FCM\), formerly Google Cloud Messaging \(GCM\), service\. If specified, this message overrides the default message\.  
 *Required*: No  
 *Type*: [Message](aws-properties-pinpoint-campaign-message.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`InAppMessage`  <a name="cfn-pinpoint-campaign-messageconfiguration-inappmessage"></a>
+The default message for the in\-app messaging channel\. This message overrides the default message \(`DefaultMessage`\)\.  
+*Required*: No  
+*Type*: [CampaignInAppMessage](aws-properties-pinpoint-campaign-campaigninappmessage.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SMSMessage`  <a name="cfn-pinpoint-campaign-messageconfiguration-smsmessage"></a>
-The message that the campaign sends through the SMS channel\.  
+The message that the campaign sends through the SMS channel\. If specified, this message overrides the default message\.  
 *Required*: No  
 *Type*: [CampaignSmsMessage](aws-properties-pinpoint-campaign-campaignsmsmessage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

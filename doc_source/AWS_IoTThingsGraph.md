@@ -1,4 +1,4 @@
-# AWS IoT Things Graph Resource Type Reference<a name="AWS_IoTThingsGraph"></a>
+# AWS IoT Things Graph resource type reference<a name="AWS_IoTThingsGraph"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::IoTThingsGraph::FlowTemplate](aws-resource-iotthingsgraph-flowtemplate.md)

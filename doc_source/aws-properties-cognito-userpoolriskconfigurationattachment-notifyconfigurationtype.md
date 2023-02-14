@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[BlockEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-blockemail)" : [NotifyEmailType](aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.md),
+  "[BlockEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-blockemail)" : NotifyEmailType,
   "[From](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-from)" : String,
-  "[MfaEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-mfaemail)" : [NotifyEmailType](aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.md),
-  "[NoActionEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-noactionemail)" : [NotifyEmailType](aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.md),
+  "[MfaEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-mfaemail)" : NotifyEmailType,
+  "[NoActionEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-noactionemail)" : NotifyEmailType,
   "[ReplyTo](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-replyto)" : String,
   "[SourceArn](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-sourcearn)" : String
 }
@@ -23,12 +23,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [BlockEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-blockemail): 
-    [NotifyEmailType](aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.md)
+    NotifyEmailType
   [From](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-from): String
   [MfaEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-mfaemail): 
-    [NotifyEmailType](aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.md)
+    NotifyEmailType
   [NoActionEmail](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-noactionemail): 
-    [NotifyEmailType](aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.md)
+    NotifyEmailType
   [ReplyTo](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-replyto): String
   [SourceArn](#cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-sourcearn): String
 ```
@@ -42,13 +42,13 @@ Email template used when a detected risk event is blocked\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `From`  <a name="cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-from"></a>
-The email address that is sending the email\. It must be either individually verified with Amazon SES, or from a domain that has been verified with Amazon SES\.  
+The email address that is sending the email\. The address must be either individually verified with Amazon Simple Email Service, or from a domain that has been verified with Amazon SES\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MfaEmail`  <a name="cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-mfaemail"></a>
-The MFA email template used when MFA is challenged as part of a detected risk\.  
+The multi\-factor authentication \(MFA\) email template used when MFA is challenged as part of a detected risk\.  
 *Required*: No  
 *Type*: [NotifyEmailType](aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -66,7 +66,7 @@ The destination to which the receiver of an email should reply to\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceArn`  <a name="cfn-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype-sourcearn"></a>
-The Amazon Resource Name \(ARN\) of the identity that is associated with the sending authorization policy\. It permits Amazon Cognito to send for the email address specified in the `From` parameter\.  
+The Amazon Resource Name \(ARN\) of the identity that is associated with the sending authorization policy\. This identity permits Amazon Cognito to send for the email address specified in the `From` parameter\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  

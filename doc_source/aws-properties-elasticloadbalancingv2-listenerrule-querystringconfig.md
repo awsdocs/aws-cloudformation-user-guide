@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Values](#cfn-elasticloadbalancingv2-listenerrule-querystringconfig-values)" : [ [QueryStringKeyValue](aws-properties-elasticloadbalancingv2-listenerrule-querystringkeyvalue.md), ... ]
+  "[Values](#cfn-elasticloadbalancingv2-listenerrule-querystringconfig-values)" : [ QueryStringKeyValue, ... ]
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Values](#cfn-elasticloadbalancingv2-listenerrule-querystringconfig-values): 
-    - [QueryStringKeyValue](aws-properties-elasticloadbalancingv2-listenerrule-querystringkeyvalue.md)
+    - QueryStringKeyValue
 ```
 
 ## Properties<a name="aws-properties-elasticloadbalancingv2-listenerrule-querystringconfig-properties"></a>

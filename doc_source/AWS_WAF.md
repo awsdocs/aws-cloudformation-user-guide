@@ -1,6 +1,6 @@
-# WAF Resource Type Reference<a name="AWS_WAF"></a>
+# AWS WAF resource type reference<a name="AWS_WAF"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::WAF::ByteMatchSet](aws-resource-waf-bytematchset.md)
 + [AWS::WAF::IPSet](aws-resource-waf-ipset.md)
 + [AWS::WAF::Rule](aws-resource-waf-rule.md)

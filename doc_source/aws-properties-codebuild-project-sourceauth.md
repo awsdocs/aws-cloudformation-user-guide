@@ -38,5 +38,5 @@ The authorization type to use\. The only valid value is `OAUTH`, which represent
  This data type is used by the AWS CodeBuild console only\. 
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `OAUTH`  
+*Allowed values*: `OAUTH`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

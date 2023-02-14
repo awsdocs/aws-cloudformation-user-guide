@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[OrcSerDe](#cfn-kinesisfirehose-deliverystream-serializer-orcserde)" : [OrcSerDe](aws-properties-kinesisfirehose-deliverystream-orcserde.md),
-  "[ParquetSerDe](#cfn-kinesisfirehose-deliverystream-serializer-parquetserde)" : [ParquetSerDe](aws-properties-kinesisfirehose-deliverystream-parquetserde.md)
+  "[OrcSerDe](#cfn-kinesisfirehose-deliverystream-serializer-orcserde)" : OrcSerDe,
+  "[ParquetSerDe](#cfn-kinesisfirehose-deliverystream-serializer-parquetserde)" : ParquetSerDe
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [OrcSerDe](#cfn-kinesisfirehose-deliverystream-serializer-orcserde): 
-    [OrcSerDe](aws-properties-kinesisfirehose-deliverystream-orcserde.md)
+    OrcSerDe
   [ParquetSerDe](#cfn-kinesisfirehose-deliverystream-serializer-parquetserde): 
-    [ParquetSerDe](aws-properties-kinesisfirehose-deliverystream-parquetserde.md)
+    ParquetSerDe
 ```
 
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-serializer-properties"></a>

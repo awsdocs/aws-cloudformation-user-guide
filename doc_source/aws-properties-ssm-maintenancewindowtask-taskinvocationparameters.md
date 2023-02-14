@@ -12,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[MaintenanceWindowAutomationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowautomationparameters)" : [MaintenanceWindowAutomationParameters](aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.md),
-  "[MaintenanceWindowLambdaParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowlambdaparameters)" : [MaintenanceWindowLambdaParameters](aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.md),
-  "[MaintenanceWindowRunCommandParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowruncommandparameters)" : [MaintenanceWindowRunCommandParameters](aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.md),
-  "[MaintenanceWindowStepFunctionsParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowstepfunctionsparameters)" : [MaintenanceWindowStepFunctionsParameters](aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.md)
+  "[MaintenanceWindowAutomationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowautomationparameters)" : MaintenanceWindowAutomationParameters,
+  "[MaintenanceWindowLambdaParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowlambdaparameters)" : MaintenanceWindowLambdaParameters,
+  "[MaintenanceWindowRunCommandParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowruncommandparameters)" : MaintenanceWindowRunCommandParameters,
+  "[MaintenanceWindowStepFunctionsParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowstepfunctionsparameters)" : MaintenanceWindowStepFunctionsParameters
 }
 ```
 
@@ -23,13 +23,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [MaintenanceWindowAutomationParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowautomationparameters): 
-    [MaintenanceWindowAutomationParameters](aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.md)
+    MaintenanceWindowAutomationParameters
   [MaintenanceWindowLambdaParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowlambdaparameters): 
-    [MaintenanceWindowLambdaParameters](aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.md)
+    MaintenanceWindowLambdaParameters
   [MaintenanceWindowRunCommandParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowruncommandparameters): 
-    [MaintenanceWindowRunCommandParameters](aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.md)
+    MaintenanceWindowRunCommandParameters
   [MaintenanceWindowStepFunctionsParameters](#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowstepfunctionsparameters): 
-    [MaintenanceWindowStepFunctionsParameters](aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.md)
+    MaintenanceWindowStepFunctionsParameters
 ```
 
 ## Properties<a name="aws-properties-ssm-maintenancewindowtask-taskinvocationparameters-properties"></a>
@@ -53,7 +53,7 @@ The parameters for a `RUN_COMMAND` task type\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaintenanceWindowStepFunctionsParameters`  <a name="cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowstepfunctionsparameters"></a>
-The parameters for a `STEP_FUNCTION` task type\.  
+The parameters for a `STEP_FUNCTIONS` task type\.  
 *Required*: No  
 *Type*: [MaintenanceWindowStepFunctionsParameters](aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

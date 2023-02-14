@@ -1,5 +1,9 @@
 # AWS::WAFRegional::XssMatchSet XssMatchTuple<a name="aws-properties-wafregional-xssmatchset-xssmatchtuple"></a>
 
+**Note**  
+This is ** AWS WAF Classic** documentation\. For more information, see [AWS WAF Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the developer guide\.  
+ **For the latest version of AWS WAF **, use the AWS WAFV2 API and see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. With the latest version, AWS WAF has a single set of endpoints for regional and global use\. 
+
 Specifies the part of a web request that you want AWS WAF to inspect for cross\-site scripting attacks and, if you want AWS WAF to inspect a header, the name of the header\.
 
 ## Syntax<a name="aws-properties-wafregional-xssmatchset-xssmatchtuple-syntax"></a>
@@ -10,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[FieldToMatch](#cfn-wafregional-xssmatchset-xssmatchtuple-fieldtomatch)" : [FieldToMatch](aws-properties-wafregional-xssmatchset-fieldtomatch.md),
+  "[FieldToMatch](#cfn-wafregional-xssmatchset-xssmatchtuple-fieldtomatch)" : FieldToMatch,
   "[TextTransformation](#cfn-wafregional-xssmatchset-xssmatchtuple-texttransformation)" : String
 }
 ```
@@ -19,20 +23,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [FieldToMatch](#cfn-wafregional-xssmatchset-xssmatchtuple-fieldtomatch): 
-    [FieldToMatch](aws-properties-wafregional-xssmatchset-fieldtomatch.md)
+    FieldToMatch
   [TextTransformation](#cfn-wafregional-xssmatchset-xssmatchtuple-texttransformation): String
 ```
 
 ## Properties<a name="aws-properties-wafregional-xssmatchset-xssmatchtuple-properties"></a>
 
 `FieldToMatch`  <a name="cfn-wafregional-xssmatchset-xssmatchtuple-fieldtomatch"></a>
-Specifies where in a web request to look for cross\-site scripting attacks\.  
+The part of a web request that you want AWS WAF to inspect, such as a specified header or a query string\.  
 *Required*: Yes  
 *Type*: [FieldToMatch](aws-properties-wafregional-xssmatchset-fieldtomatch.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TextTransformation`  <a name="cfn-wafregional-xssmatchset-xssmatchtuple-texttransformation"></a>
-Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF\. If you specify a transformation, AWS WAF performs the transformation on `FieldToMatch` before inspecting a request for a match\.  
+Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass AWS WAF\. If you specify a transformation, AWS WAF performs the transformation on `FieldToMatch` before inspecting it for a match\.  
 You can only specify a single type of TextTransformation\.  
  **CMD\_LINE**   
 When you're concerned that attackers are injecting an operating system command line command and using unusual formatting to disguise some or all of the command, use this option to perform the following transformations:  
@@ -66,5 +70,5 @@ Use this option to decode a URL\-encoded value\.
 Specify `NONE` if you don't want to perform any text transformations\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CMD_LINE | COMPRESS_WHITE_SPACE | HTML_ENTITY_DECODE | LOWERCASE | NONE | URL_DECODE`  
+*Allowed values*: `CMD_LINE | COMPRESS_WHITE_SPACE | HTML_ENTITY_DECODE | LOWERCASE | NONE | URL_DECODE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

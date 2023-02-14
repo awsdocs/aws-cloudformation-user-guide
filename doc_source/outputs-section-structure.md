@@ -2,15 +2,19 @@
 
 The optional `Outputs` section declares output values that you can [import into other stacks](intrinsic-function-reference-importvalue.md) \(to [create cross\-stack references](walkthrough-crossstackref.md)\), return in response \(to describe stack calls\), or [view on the AWS CloudFormation console](cfn-console-view-stack-data-resources.md)\. For example, you can output the S3 bucket name for a stack to make the bucket easier to find\.
 
+**Important**  
+CloudFormation doesn't redact or obfuscate any information you include in the Outputs section\. We strongly recommend you don't use this section to output sensitive information, such as passwords or secrets\.  
+Output values are available after the stack operation is complete\. Stack output values aren't available when a stack status is in any of the `IN_PROGRESS` [status](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#w2ab1c23c15c17c11)\. We don't recommend establishing dependencies between a service runtime and the stack output value because output values might not be available at all times\.
+
 ## Syntax<a name="outputs-section-syntax"></a>
 
-The `Outputs` section consists of the key name `Outputs`, followed by a space and a single colon\. You can declare a maximum of 60 outputs in a template\.
+The `Outputs` section consists of the key name `Outputs`, followed by a space and a single colon\. You can declare a maximum of 200 outputs in a template\.
 
 The following example demonstrates the structure of the `Outputs` section\.
 
 ### JSON<a name="outputs-section-structure-syntax.json"></a>
 
-Use braces to enclose all output declarations\. Delimit multiple outputs with commas\. 
+Use braces to enclose all output declarations\. Delimit multiple outputs with commas\.
 
 ```
 "Outputs" : {
@@ -18,7 +22,7 @@ Use braces to enclose all output declarations\. Delimit multiple outputs with co
     "Description" : "Information about the value",
     "Value" : "Value to return",
     "Export" : {
-      "Name" : "Value to export"
+      "Name" : "Name of resource to export"
     }
   }
 }
@@ -32,18 +36,18 @@ Outputs:
     Description: Information about the value
     Value: Value to return
     Export:
-      Name: Value to export
+      Name: Name of resource to export
 ```
 
-### Output Fields<a name="outputs-section-structure-output-fields"></a>
+### Output fields<a name="outputs-section-structure-output-fields"></a>
 
 The `Outputs` section can include the following fields\.
 
 **Logical ID**  
-An identifier for the current output\. The logical ID must be alphanumeric \(`a-z`, `A-Z`, `0-9`\) and unique within the template\.
+An identifier for the current output\. The logical ID must be alphanumeric \(`a–z`, `A–Z`, `0–9`\) and unique within the template\.
 
 **Description \(optional\)**  
-A `String` type that describes the output value\. The value for the description declaration must be a literal string that is between 0 and 1024 bytes in length\. You cannot use a parameter or function to specify the description\. The description can be a maximum of 4 K in length\.
+A `String` type that describes the output value\. The value for the description declaration must be a literal string that's between 0 and 1024 bytes in length\. You can't use a parameter or function to specify the description\. The description can be a maximum of 4 K in length\.
 
 **Value \(required\)**  
 The value of the property returned by the `aws cloudformation describe-stacks` command\. The value of an output can include literals, parameter references, pseudo\-parameters, a mapping value, or intrinsic functions\.
@@ -75,13 +79,13 @@ Export:
   Name: !Join [ ":", [ !Ref "AWS::StackName", AccountVPC ] ]
 ```
 
-To associate a condition with an output, define the condition in the `[Conditions](conditions-section-structure.md)` section of the template\.
+To associate a condition with an output, define the condition in the `Conditions` section of the template\.
 
 ## Examples<a name="outputs-section-structure-examples"></a>
 
 The following examples illustrate how stack output works\.
 
-### Stack Output<a name="outputs-section-structure-examples-stack-output"></a>
+### Stack output<a name="outputs-section-structure-examples-stack-output"></a>
 
 In the following example, the output named `BackupLoadBalancerDNSName` returns the DNS name for the resource with the logical ID `BackupLoadBalancer` only when the `CreateProdResources` condition is true\. \(The second output shows how to specify multiple outputs\.\)
 
@@ -114,7 +118,7 @@ Outputs:
     Value: !Ref EC2Instance
 ```
 
-### Cross\-Stack Output<a name="outputs-section-structure-examples-cross-stack"></a>
+### Cross\-stack output<a name="outputs-section-structure-examples-cross-stack"></a>
 
 In the following examples, the output named `StackVPC` returns the ID of a VPC, and then exports the value for cross\-stack referencing with the name `VPCID` appended to the stack's name\.
 

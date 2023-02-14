@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Action](#cfn-wafregional-webacl-rule-action)" : [Action](aws-properties-wafregional-webacl-action.md),
+  "[Action](#cfn-wafregional-webacl-rule-action)" : Action,
   "[Priority](#cfn-wafregional-webacl-rule-priority)" : Integer,
   "[RuleId](#cfn-wafregional-webacl-rule-ruleid)" : String
 }
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Action](#cfn-wafregional-webacl-rule-action): 
-    [Action](aws-properties-wafregional-webacl-action.md)
+    Action
   [Priority](#cfn-wafregional-webacl-rule-priority): Integer
   [RuleId](#cfn-wafregional-webacl-rule-ruleid): String
 ```
@@ -49,4 +49,5 @@ The ID of an AWS WAF Regional rule to associate with a web ACL\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
+*Pattern*: `.*\S.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

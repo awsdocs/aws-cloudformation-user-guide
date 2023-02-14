@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Fields](#cfn-datapipeline-pipeline-pipelineobjects-fields)" : [ [Field](aws-properties-datapipeline-pipeline-pipelineobjects-fields.md), ... ],
+  "[Fields](#cfn-datapipeline-pipeline-pipelineobjects-fields)" : [ Field, ... ],
   "[Id](#cfn-datapipeline-pipeline-pipelineobjects-id)" : String,
   "[Name](#cfn-datapipeline-pipeline-pipelineobjects-name)" : String
 }
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Fields](#cfn-datapipeline-pipeline-pipelineobjects-fields): 
-    - [Field](aws-properties-datapipeline-pipeline-pipelineobjects-fields.md)
+    - Field
   [Id](#cfn-datapipeline-pipeline-pipelineobjects-id): String
   [Name](#cfn-datapipeline-pipeline-pipelineobjects-name): String
 ```

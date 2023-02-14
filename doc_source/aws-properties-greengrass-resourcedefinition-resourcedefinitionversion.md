@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Resources](#cfn-greengrass-resourcedefinition-resourcedefinitionversion-resources)" : [ [ResourceInstance](aws-properties-greengrass-resourcedefinition-resourceinstance.md), ... ]
+  "[Resources](#cfn-greengrass-resourcedefinition-resourcedefinitionversion-resources)" : [ ResourceInstance, ... ]
 }
 ```
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Resources](#cfn-greengrass-resourcedefinition-resourcedefinitionversion-resources): 
-    - [ResourceInstance](aws-properties-greengrass-resourcedefinition-resourceinstance.md)
+    - ResourceInstance
 ```
 
 ## Properties<a name="aws-properties-greengrass-resourcedefinition-resourcedefinitionversion-properties"></a>
@@ -34,6 +34,6 @@ The resources in this version\.
 *Type*: List of [ResourceInstance](aws-properties-greengrass-resourcedefinition-resourceinstance.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-resourcedefinition-resourcedefinitionversion--seealso"></a>
-+  [ResourceDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-resourcedefinitionversion.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+## See also<a name="aws-properties-greengrass-resourcedefinition-resourcedefinitionversion--seealso"></a>
++  [ResourceDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-resourcedefinitionversion.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

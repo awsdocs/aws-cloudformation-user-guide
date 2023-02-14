@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[MappingParameters](#cfn-kinesisanalytics-application-recordformat-mappingparameters)" : [MappingParameters](aws-properties-kinesisanalytics-application-mappingparameters.md),
+  "[MappingParameters](#cfn-kinesisanalytics-application-recordformat-mappingparameters)" : MappingParameters,
   "[RecordFormatType](#cfn-kinesisanalytics-application-recordformat-recordformattype)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [MappingParameters](#cfn-kinesisanalytics-application-recordformat-mappingparameters): 
-    [MappingParameters](aws-properties-kinesisanalytics-application-mappingparameters.md)
+    MappingParameters
   [RecordFormatType](#cfn-kinesisanalytics-application-recordformat-recordformattype): String
 ```
 
@@ -35,5 +35,5 @@ When configuring application input at the time of creating or updating an applic
 The type of record format\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `CSV | JSON`  
+*Allowed values*: `CSV | JSON`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

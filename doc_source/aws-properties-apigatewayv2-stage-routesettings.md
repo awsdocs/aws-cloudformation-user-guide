@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-apigatewayv2-stage-routesettings-properties"></a>
 
 `DataTraceEnabled`  <a name="cfn-apigatewayv2-stage-routesettings-datatraceenabled"></a>
-Specifies whether \(`true`\) or not \(`false`\) data trace logging is enabled for this route\. This property affects the log entries pushed to Amazon CloudWatch Logs\.  
+Specifies whether \(`true`\) or not \(`false`\) data trace logging is enabled for this route\. This property affects the log entries pushed to Amazon CloudWatch Logs\. Supported only for WebSocket APIs\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -43,7 +43,7 @@ Specifies whether detailed metrics are enabled\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoggingLevel`  <a name="cfn-apigatewayv2-stage-routesettings-logginglevel"></a>
-Specifies the logging level for this route: `DEBUG`, `INFO`, or `WARN`\. This property affects the log entries pushed to Amazon CloudWatch Logs\.  
+Specifies the logging level for this route: `INFO`, `ERROR`, or `OFF`\. This property affects the log entries pushed to Amazon CloudWatch Logs\. Supported only for WebSocket APIs\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -60,5 +60,6 @@ Specifies the throttling rate limit\.
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-apigatewayv2-stage-routesettings--seealso"></a>
+## See also<a name="aws-properties-apigatewayv2-stage-routesettings--seealso"></a>
 + [Stages](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-stages.html) in the *Amazon API Gateway Version 2 API Reference*
+

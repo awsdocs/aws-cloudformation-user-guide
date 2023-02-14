@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ClassicLoadBalancersConfig](#cfn-ec2-spotfleet-loadbalancersconfig-classicloadbalancersconfig)" : [ClassicLoadBalancersConfig](aws-properties-ec2-spotfleet-classicloadbalancersconfig.md),
-  "[TargetGroupsConfig](#cfn-ec2-spotfleet-loadbalancersconfig-targetgroupsconfig)" : [TargetGroupsConfig](aws-properties-ec2-spotfleet-targetgroupsconfig.md)
+  "[ClassicLoadBalancersConfig](#cfn-ec2-spotfleet-loadbalancersconfig-classicloadbalancersconfig)" : ClassicLoadBalancersConfig,
+  "[TargetGroupsConfig](#cfn-ec2-spotfleet-loadbalancersconfig-targetgroupsconfig)" : TargetGroupsConfig
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ClassicLoadBalancersConfig](#cfn-ec2-spotfleet-loadbalancersconfig-classicloadbalancersconfig): 
-    [ClassicLoadBalancersConfig](aws-properties-ec2-spotfleet-classicloadbalancersconfig.md)
+    ClassicLoadBalancersConfig
   [TargetGroupsConfig](#cfn-ec2-spotfleet-loadbalancersconfig-targetgroupsconfig): 
-    [TargetGroupsConfig](aws-properties-ec2-spotfleet-targetgroupsconfig.md)
+    TargetGroupsConfig
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-loadbalancersconfig-properties"></a>
@@ -30,10 +30,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The Classic Load Balancers\.  
 *Required*: No  
 *Type*: [ClassicLoadBalancersConfig](aws-properties-ec2-spotfleet-classicloadbalancersconfig.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TargetGroupsConfig`  <a name="cfn-ec2-spotfleet-loadbalancersconfig-targetgroupsconfig"></a>
 The target groups\.  
 *Required*: No  
 *Type*: [TargetGroupsConfig](aws-properties-ec2-spotfleet-targetgroupsconfig.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

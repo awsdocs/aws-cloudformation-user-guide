@@ -1,6 +1,6 @@
 # AWS::AppMesh::Route HttpRouteHeader<a name="aws-properties-appmesh-route-httprouteheader"></a>
 
-An object representing the HTTP header in the request\.
+An object that represents the HTTP header in the request\.
 
 ## Syntax<a name="aws-properties-appmesh-route-httprouteheader-syntax"></a>
 
@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Invert](#cfn-appmesh-route-httprouteheader-invert)" : Boolean,
-  "[Match](#cfn-appmesh-route-httprouteheader-match)" : [HeaderMatchMethod](aws-properties-appmesh-route-headermatchmethod.md),
+  "[Match](#cfn-appmesh-route-httprouteheader-match)" : HeaderMatchMethod,
   "[Name](#cfn-appmesh-route-httprouteheader-name)" : String
 }
 ```
@@ -21,14 +21,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Invert](#cfn-appmesh-route-httprouteheader-invert): Boolean
   [Match](#cfn-appmesh-route-httprouteheader-match): 
-    [HeaderMatchMethod](aws-properties-appmesh-route-headermatchmethod.md)
+    HeaderMatchMethod
   [Name](#cfn-appmesh-route-httprouteheader-name): String
 ```
 
 ## Properties<a name="aws-properties-appmesh-route-httprouteheader-properties"></a>
 
 `Invert`  <a name="cfn-appmesh-route-httprouteheader-invert"></a>
-Specify `True` to match the opposite of the `HeaderMatchMethod` method and value\. The default value is `False`\.  
+Specify `True` to match anything except the match criteria\. The default value is `False`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -43,4 +43,6 @@ The `HeaderMatchMethod` object\.
 A name for the HTTP header in the client request that will be matched on\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
