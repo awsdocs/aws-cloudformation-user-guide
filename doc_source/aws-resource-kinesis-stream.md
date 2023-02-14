@@ -112,36 +112,36 @@ The following example creates a `Stream` resource that uses three shards, sets a
 
 ```
 "MyStream": { 
-    "Type": "AWS::Kinesis::Stream", 
-    "Properties": {
-        "Name": "MyKinesisStream", 
-        "RetentionPeriodHours" : 168, 
-        "ShardCount": 3,
-        "StreamEncryption": { 
-            "EncryptionType": "KMS", 
-            "KeyId": "!Ref myKey" 
-            }, 
-        "Tags": [ {
-            "Key": "Environment", 
-            "Value": "Production" } ] 
-        } 
+  "Type": "AWS::Kinesis::Stream", 
+  "Properties": {
+    "Name": "MyKinesisStream", 
+    "RetentionPeriodHours" : 168, 
+    "ShardCount": 3,
+    "StreamEncryption": { 
+      "EncryptionType": "KMS", 
+      "KeyId": "!Ref myKey" 
+    }, 
+    "Tags": [{
+      "Key": "Environment", 
+      "Value": "Production"
+    }]
+  } 
 }
 ```
 
 #### YAML<a name="aws-resource-kinesis-stream--examples--Create_a_Stream--yaml"></a>
 
 ```
-MyStream: 
-    Type: AWS::Kinesis::Stream 
-    Properties: 
-        Name: MyKinesisStream 
-        RetentionPeriodHours: 168 
-        ShardCount: 3 
-        StreamEncryption:
-            EncryptionType: KMS 
-            KeyId: !Ref myKey 
-        Tags: 
-            -
-                Key: Environment Value:
-                Production
+MyStream:
+  Type: AWS::Kinesis::Stream
+  Properties:
+    Name: MyKinesisStream
+    RetentionPeriodHours: 168
+    ShardCount: 3
+    StreamEncryption:
+    EncryptionType: KMS
+    KeyId: !Ref myKey
+    Tags:
+      - Key: Environment
+        Value: Production
 ```
