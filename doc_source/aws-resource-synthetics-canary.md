@@ -304,7 +304,7 @@ This example creates a canary and passes the script code directly into the canar
                 "StartCanaryAfterCreation": false,
                 "Tags": [
                     {
-                        "Id": "key00AtCreate",
+                        "Key": "key00AtCreate",
                         "Value": "value001AtCreate"
                     }
                 ]
