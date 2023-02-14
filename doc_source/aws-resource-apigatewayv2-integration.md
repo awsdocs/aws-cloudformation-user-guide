@@ -323,6 +323,58 @@ Properties:
           Destination: "append:header.header2"
 ```
 
+### HttpApi Integration With SQS<a name="aws-resource-apigatewayv2-integration--examples--HttpApi_Integration_ With_SQS"></a>
+
+The following example integrates HttpApi with SQS\. This takes the request parameter body as MessageBody which is then passed on to the Queue\.
+
+#### JSON<a name="aws-resource-apigatewayv2-integration--examples--HttpApi_Integration_ With_SQS--json"></a>
+
+```
+
+"MyIntegration": {
+  "Type": "AWS::ApiGatewayV2::Integration",
+  "Properties": {
+    "ApiId": {
+      "Ref": "HttpApi"
+    },
+    "ConnectionType": "INTERNET",
+    "CredentialsArn": {
+      "Fn::GetAtt": [
+        "MyHttpApiRole",
+        "Arn"
+      ]
+    },
+    "IntegrationType": "AWS_PROXY",
+    "RequestParameters": {
+      "MessageBody": "$request.body",
+      "QueueUrl": {
+        "Ref": "MySQS"
+      }
+    },
+    "IntegrationSubtype": "SQS-SendMessage",
+    "PayloadFormatVersion": "1.0"
+  }
+}
+```
+
+#### YAML<a name="aws-resource-apigatewayv2-integration--examples--HttpApi_Integration_ With_SQS--yaml"></a>
+
+```
+
+MyIntegration:
+  Type: AWS::ApiGatewayV2::Integration
+  Properties:
+    ApiId: !Ref HttpApi
+    ConnectionType: INTERNET
+    CredentialsArn: !GetAtt MyHttpApiRole.Arn
+    IntegrationType: AWS_PROXY
+    RequestParameters:
+      MessageBody: "$request.body"
+      QueueUrl: !Ref MySQS
+    IntegrationSubtype: "SQS-SendMessage"
+    PayloadFormatVersion: "1.0"
+```
+
 ## See also<a name="aws-resource-apigatewayv2-integration--seealso"></a>
 + [CreateIntegration](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-integrations.html#CreateIntegration) in the *Amazon API Gateway Version 2 API Reference*
 
