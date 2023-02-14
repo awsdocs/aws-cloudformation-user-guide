@@ -33,7 +33,7 @@ The JSON repository policy text to apply to the repository\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegistryId`  <a name="cfn-ecr-repository-lifecyclepolicy-registryid"></a>
-The AWS account ID associated with the registry that contains the repository\. If you do  not specify a registry, the default registry is assumed\.  
+The AWS account ID associated with the registry that contains the repository\. If you do not specify a registry, the default registry is assumed\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `[0-9]{12}`  
