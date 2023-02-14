@@ -1,6 +1,6 @@
 # AWS::Events::Rule AwsVpcConfiguration<a name="aws-properties-events-rule-awsvpcconfiguration"></a>
 
-This structure specifies the VPC subnets and security groups for the task and whether a public IP address is to be used\. This structure is relevant only for ECS tasks that use the `awsvpc` network mode\.
+This structure specifies the VPC subnets and security groups for the task, and whether a public IP address is to be used\. This structure is relevant only for ECS tasks that use the `awsvpc` network mode\.
 
 ## Syntax<a name="aws-properties-events-rule-awsvpcconfiguration-syntax"></a>
 
@@ -32,11 +32,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Specifies whether the task's elastic network interface receives a public IP address\. You can specify `ENABLED` only when `LaunchType` in `EcsParameters` is set to `FARGATE`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | ENABLED`  
+*Allowed values*: `DISABLED | ENABLED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroups`  <a name="cfn-events-rule-awsvpcconfiguration-securitygroups"></a>
-Specifies the security groups associated with the task\. These security groups must all be in the same VPC\. You can specify as many as five security groups\. If you don't specify a security group, the default security group for the VPC is used\.  
+Specifies the security groups associated with the task\. These security groups must all be in the same VPC\. You can specify as many as five security groups\. If you do not specify a security group, the default security group for the VPC is used\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -47,5 +47,48 @@ Specifies the subnets associated with the task\. These subnets must all be in th
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-events-rule-awsvpcconfiguration--seealso"></a>
+## Examples<a name="aws-properties-events-rule-awsvpcconfiguration--examples"></a>
+
+
+
+### Set the AwsVpcConfiguration parameter<a name="aws-properties-events-rule-awsvpcconfiguration--examples--Set_the_AwsVpcConfiguration_parameter"></a>
+
+The following example sets the `AwsVpcConfiguration` parameter to not assign a public IP and set the security groups for Vpc01\.
+
+#### JSON<a name="aws-properties-events-rule-awsvpcconfiguration--examples--Set_the_AwsVpcConfiguration_parameter--json"></a>
+
+```
+"AwsVpcConfiguration": {
+  "AssignPublicIp": "DISABLED",
+  "SecurityGroups": [
+    {
+      "Fn: : GetAtt": [
+        "ScheduledFargateTaskScheduledTaskDefSecurityGroupE075BC19",
+        "GroupId"
+      ]
+    }
+  ],
+  "Subnets": [
+    {
+      "Ref": "Vpc01"
+    }
+  ]
+}
+```
+
+#### YAML<a name="aws-properties-events-rule-awsvpcconfiguration--examples--Set_the_AwsVpcConfiguration_parameter--yaml"></a>
+
+```
+AwsVpcConfiguration:
+  AssignPublicIp: "DISABLED"
+  SecurityGroups:
+    Fn: : GetAtt:
+      "ScheduledFargateTaskScheduledTaskDefSecurityGroupE075BC19",
+      "GroupId"
+  Subnets:
+    Ref: 
+      "Vpc01"
+```
+
+## See also<a name="aws-properties-events-rule-awsvpcconfiguration--seealso"></a>
 + [AwsVpcConfiguration](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_AwsVpcConfiguration.html)

@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::KinesisAnalytics::ApplicationReferenceDataSource",
   "Properties" : {
       "[ApplicationName](#cfn-kinesisanalytics-applicationreferencedatasource-applicationname)" : String,
-      "[ReferenceDataSource](#cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource)" : [ReferenceDataSource](aws-properties-kinesisanalytics-applicationreferencedatasource-referencedatasource.md)
+      "[ReferenceDataSource](#cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource)" : ReferenceDataSource
     }
 }
 ```
@@ -31,7 +31,7 @@ Type: AWS::KinesisAnalytics::ApplicationReferenceDataSource
 Properties: 
   [ApplicationName](#cfn-kinesisanalytics-applicationreferencedatasource-applicationname): String
   [ReferenceDataSource](#cfn-kinesisanalytics-applicationreferencedatasource-referencedatasource): 
-    [ReferenceDataSource](aws-properties-kinesisanalytics-applicationreferencedatasource-referencedatasource.md)
+    ReferenceDataSource
 ```
 
 ## Properties<a name="aws-resource-kinesisanalytics-applicationreferencedatasource-properties"></a>
@@ -52,6 +52,8 @@ The reference data source can be an object in your Amazon S3 bucket\. Amazon Kin
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-kinesisanalytics-applicationreferencedatasource--examples"></a>
+
+
 
 ### Adding an ApplicationReferenceDataSource Resource<a name="aws-resource-kinesisanalytics-applicationreferencedatasource--examples--Adding_an_ApplicationReferenceDataSource_Resource"></a>
 

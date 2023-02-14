@@ -67,7 +67,18 @@ The HTTP status code for the response\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+## Return values<a name="aws-resource-apigateway-gatewayresponse-return-values"></a>
+
+### Fn::GetAtt<a name="aws-resource-apigateway-gatewayresponse-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-apigateway-gatewayresponse-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+The ID for the gateway response\. For example: `abc123`\.
+
 ## Examples<a name="aws-resource-apigateway-gatewayresponse--examples"></a>
+
+
 
 ### 404 Response<a name="aws-resource-apigateway-gatewayresponse--examples--404_Response"></a>
 
@@ -213,5 +224,6 @@ Resources :
             StatusCode: !Ref statusCode
 ```
 
-## See Also<a name="aws-resource-apigateway-gatewayresponse--seealso"></a>
+## See also<a name="aws-resource-apigateway-gatewayresponse--seealso"></a>
 + [gatewayresponse:put](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/gatewayresponse-put/) in the *Amazon API Gateway REST API Reference*
+

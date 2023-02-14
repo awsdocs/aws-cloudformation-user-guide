@@ -1,4 +1,6 @@
-# MSK Resource Type Reference<a name="AWS_MSK"></a>
+# Amazon Managed Streaming for Apache Kafka resource type reference<a name="AWS_MSK"></a>
 
-**Resource Types**
+**Resource types**
++ [AWS::MSK::BatchScramSecret](aws-resource-msk-batchscramsecret.md)
 + [AWS::MSK::Cluster](aws-resource-msk-cluster.md)
++ [AWS::MSK::Configuration](aws-resource-msk-configuration.md)

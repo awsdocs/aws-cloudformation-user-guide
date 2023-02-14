@@ -2,6 +2,8 @@
 
 A policy type that defines the voting rules for the network\. The rules decide if a proposal is approved\. Approval may be based on criteria such as the percentage of `YES` votes and the duration of the proposal\. The policy applies to all proposals and is specified when the network is created\.
 
+Applies only to Hyperledger Fabric\.
+
 ## Syntax<a name="aws-properties-managedblockchain-member-approvalthresholdpolicy-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -38,7 +40,7 @@ The duration from the time that a proposal is created until it expires\. If memb
 Determines whether the vote percentage must be greater than the `ThresholdPercentage` or must be greater than or equal to the `ThreholdPercentage` to be approved\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `GREATER_THAN | GREATER_THAN_OR_EQUAL_TO`  
+*Allowed values*: `GREATER_THAN | GREATER_THAN_OR_EQUAL_TO`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThresholdPercentage`  <a name="cfn-managedblockchain-member-approvalthresholdpolicy-thresholdpercentage"></a>

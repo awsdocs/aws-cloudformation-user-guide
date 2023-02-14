@@ -10,11 +10,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[InputParallelism](#cfn-kinesisanalytics-application-input-inputparallelism)" : [InputParallelism](aws-properties-kinesisanalytics-application-inputparallelism.md),
-  "[InputProcessingConfiguration](#cfn-kinesisanalytics-application-input-inputprocessingconfiguration)" : [InputProcessingConfiguration](aws-properties-kinesisanalytics-application-inputprocessingconfiguration.md),
-  "[InputSchema](#cfn-kinesisanalytics-application-input-inputschema)" : [InputSchema](aws-properties-kinesisanalytics-application-inputschema.md),
-  "[KinesisFirehoseInput](#cfn-kinesisanalytics-application-input-kinesisfirehoseinput)" : [KinesisFirehoseInput](aws-properties-kinesisanalytics-application-kinesisfirehoseinput.md),
-  "[KinesisStreamsInput](#cfn-kinesisanalytics-application-input-kinesisstreamsinput)" : [KinesisStreamsInput](aws-properties-kinesisanalytics-application-kinesisstreamsinput.md),
+  "[InputParallelism](#cfn-kinesisanalytics-application-input-inputparallelism)" : InputParallelism,
+  "[InputProcessingConfiguration](#cfn-kinesisanalytics-application-input-inputprocessingconfiguration)" : InputProcessingConfiguration,
+  "[InputSchema](#cfn-kinesisanalytics-application-input-inputschema)" : InputSchema,
+  "[KinesisFirehoseInput](#cfn-kinesisanalytics-application-input-kinesisfirehoseinput)" : KinesisFirehoseInput,
+  "[KinesisStreamsInput](#cfn-kinesisanalytics-application-input-kinesisstreamsinput)" : KinesisStreamsInput,
   "[NamePrefix](#cfn-kinesisanalytics-application-input-nameprefix)" : String
 }
 ```
@@ -23,15 +23,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [InputParallelism](#cfn-kinesisanalytics-application-input-inputparallelism): 
-    [InputParallelism](aws-properties-kinesisanalytics-application-inputparallelism.md)
+    InputParallelism
   [InputProcessingConfiguration](#cfn-kinesisanalytics-application-input-inputprocessingconfiguration): 
-    [InputProcessingConfiguration](aws-properties-kinesisanalytics-application-inputprocessingconfiguration.md)
+    InputProcessingConfiguration
   [InputSchema](#cfn-kinesisanalytics-application-input-inputschema): 
-    [InputSchema](aws-properties-kinesisanalytics-application-inputschema.md)
+    InputSchema
   [KinesisFirehoseInput](#cfn-kinesisanalytics-application-input-kinesisfirehoseinput): 
-    [KinesisFirehoseInput](aws-properties-kinesisanalytics-application-kinesisfirehoseinput.md)
+    KinesisFirehoseInput
   [KinesisStreamsInput](#cfn-kinesisanalytics-application-input-kinesisstreamsinput): 
-    [KinesisStreamsInput](aws-properties-kinesisanalytics-application-kinesisstreamsinput.md)
+    KinesisStreamsInput
   [NamePrefix](#cfn-kinesisanalytics-application-input-nameprefix): String
 ```
 

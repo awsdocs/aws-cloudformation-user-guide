@@ -44,7 +44,7 @@ The security configuration details in JSON format\.
 *Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-emr-securityconfiguration-return-values"></a>
+## Return values<a name="aws-resource-emr-securityconfiguration-return-values"></a>
 
 ### Ref<a name="aws-resource-emr-securityconfiguration-return-values-ref"></a>
 

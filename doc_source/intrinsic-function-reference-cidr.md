@@ -16,7 +16,7 @@ Syntax for the full function name:
 
 ```
 Fn::Cidr: 
-  - ipBlock 
+  - ipBlock
   - count
   - cidrBits
 ```
@@ -29,25 +29,25 @@ Syntax for the short form:
 
 ## Parameters<a name="intrinsic-function-reference-cidr-parameters"></a>
 
-ipBlock  
+ipBlock  <a name="ipBlock"></a>
 The user\-specified CIDR address block to be split into smaller CIDR blocks\.
 
-count  
+count  <a name="count"></a>
 The number of CIDRs to generate\. Valid range is between 1 and 256\.
 
-cidrBits  
+cidrBits  <a name="cidrBits"></a>
 The number of subnet bits for the CIDR\. For example, specifying a value "8" for this parameter will create a CIDR with a mask of "/24"\.  
 Subnet bits is the inverse of subnet mask\. To calculate the required host bits for a given subnet bits, subtract the subnet bits from 32 for IPv4 or 128 for IPv6\.
 
-## Return Value<a name="intrinsic-function-reference-cidr-return-values"></a>
+## Return value<a name="intrinsic-function-reference-cidr-return-values"></a>
 
 An array of CIDR address blocks\.
 
 ## Example<a name="intrinsic-function-reference-cidr-examples"></a>
 
-### Basic Usage<a name="intrinsic-function-reference-cidr-example1"></a>
+### Basic usage<a name="intrinsic-function-reference-cidr-example1"></a>
 
-This example create 6 CIDRs with a subnet mask "/27" inside from a CIDR with a mask of "/24"\.
+This example creates 6 CIDRs with a subnet mask "/27" inside from a CIDR with a mask of "/24"\.
 
 #### JSON<a name="intrinsic-function-reference-cidr-example1.json"></a>
 
@@ -120,8 +120,8 @@ Resources:
             VpcId: !Ref ExampleVpc
 ```
 
-## Supported Functions<a name="intrinsic-function-reference-cidr-functions"></a>
+## Supported functions<a name="intrinsic-function-reference-cidr-functions"></a>
 
 You can use the following functions in a `Fn::Cidr` function:
-+ `[`Fn::Select`](intrinsic-function-reference-select.md)` 
-+ `[`Ref`](intrinsic-function-reference-ref.md)` 
++ ``Fn::Select``
++ ``Ref``

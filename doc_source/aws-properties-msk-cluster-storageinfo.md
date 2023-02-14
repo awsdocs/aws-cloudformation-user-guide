@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[EBSStorageInfo](#cfn-msk-cluster-storageinfo-ebsstorageinfo)" : [EBSStorageInfo](aws-properties-msk-cluster-ebsstorageinfo.md)
+  "[EBSStorageInfo](#cfn-msk-cluster-storageinfo-ebsstorageinfo)" : EBSStorageInfo
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [EBSStorageInfo](#cfn-msk-cluster-storageinfo-ebsstorageinfo): 
-    [EBSStorageInfo](aws-properties-msk-cluster-ebsstorageinfo.md)
+    EBSStorageInfo
 ```
 
 ## Properties<a name="aws-properties-msk-cluster-storageinfo-properties"></a>
@@ -27,4 +27,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 EBS volume information\.  
 *Required*: No  
 *Type*: [EBSStorageInfo](aws-properties-msk-cluster-ebsstorageinfo.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

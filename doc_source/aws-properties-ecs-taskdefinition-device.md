@@ -35,7 +35,7 @@ The path inside the container at which to expose the host device\.
 
 `HostPath`  <a name="cfn-ecs-taskdefinition-device-hostpath"></a>
 The path for the device on the host container instance\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

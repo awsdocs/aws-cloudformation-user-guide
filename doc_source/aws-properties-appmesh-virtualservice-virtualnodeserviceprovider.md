@@ -1,6 +1,6 @@
 # AWS::AppMesh::VirtualService VirtualNodeServiceProvider<a name="aws-properties-appmesh-virtualservice-virtualnodeserviceprovider"></a>
 
-An object representing a virtual node service provider\.
+An object that represents a virtual node service provider\.
 
 ## Syntax<a name="aws-properties-appmesh-virtualservice-virtualnodeserviceprovider-syntax"></a>
 
@@ -26,4 +26,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The name of the virtual node that is acting as a service provider\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

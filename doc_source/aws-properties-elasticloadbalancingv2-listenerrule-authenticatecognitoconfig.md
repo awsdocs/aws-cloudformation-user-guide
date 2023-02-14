@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[OnUnauthenticatedRequest](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-onunauthenticatedrequest)" : String,
   "[Scope](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-scope)" : String,
   "[SessionCookieName](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessioncookiename)" : String,
-  "[SessionTimeout](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessiontimeout)" : Long,
+  "[SessionTimeout](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessiontimeout)" : Integer,
   "[UserPoolArn](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolarn)" : String,
   "[UserPoolClientId](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolclientid)" : String,
   "[UserPoolDomain](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpooldomain)" : String
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [OnUnauthenticatedRequest](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-onunauthenticatedrequest): String
   [Scope](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-scope): String
   [SessionCookieName](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessioncookiename): String
-  [SessionTimeout](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessiontimeout): Long
+  [SessionTimeout](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessiontimeout): Integer
   [UserPoolArn](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolarn): String
   [UserPoolClientId](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolclientid): String
   [UserPoolDomain](#cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpooldomain): String
@@ -50,7 +50,7 @@ The behavior if the user is not authenticated\. The following are possible value
 + authenticate`` \- Redirect the request to the IdP authorization endpoint\. This is the default value\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `allow | authenticate | deny`  
+*Allowed values*: `allow | authenticate | deny`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-scope"></a>
@@ -69,7 +69,7 @@ The name of the cookie used to maintain session information\. The default is AWS
 `SessionTimeout`  <a name="cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-sessiontimeout"></a>
 The maximum duration of the authentication session, in seconds\. The default is 604800 seconds \(7 days\)\.  
 *Required*: No  
-*Type*: Long  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserPoolArn`  <a name="cfn-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig-userpoolarn"></a>

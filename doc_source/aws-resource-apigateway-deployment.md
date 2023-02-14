@@ -12,10 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ApiGateway::Deployment",
   "Properties" : {
-      "[DeploymentCanarySettings](#cfn-apigateway-deployment-deploymentcanarysettings)" : [DeploymentCanarySettings](aws-properties-apigateway-deployment-deploymentcanarysettings.md),
+      "[DeploymentCanarySettings](#cfn-apigateway-deployment-deploymentcanarysettings)" : DeploymentCanarySettings,
       "[Description](#cfn-apigateway-deployment-description)" : String,
       "[RestApiId](#cfn-apigateway-deployment-restapiid)" : String,
-      "[StageDescription](#cfn-apigateway-deployment-stagedescription)" : [StageDescription](aws-properties-apigateway-deployment-stagedescription.md),
+      "[StageDescription](#cfn-apigateway-deployment-stagedescription)" : StageDescription,
       "[StageName](#cfn-apigateway-deployment-stagename)" : String
     }
 }
@@ -27,11 +27,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::ApiGateway::Deployment
 Properties: 
   [DeploymentCanarySettings](#cfn-apigateway-deployment-deploymentcanarysettings): 
-    [DeploymentCanarySettings](aws-properties-apigateway-deployment-deploymentcanarysettings.md)
+    DeploymentCanarySettings
   [Description](#cfn-apigateway-deployment-description): String
   [RestApiId](#cfn-apigateway-deployment-restapiid): String
   [StageDescription](#cfn-apigateway-deployment-stagedescription): 
-    [StageDescription](aws-properties-apigateway-deployment-stagedescription.md)
+    StageDescription
   [StageName](#cfn-apigateway-deployment-stagename): String
 ```
 
@@ -67,13 +67,24 @@ A name for the stage that API Gateway creates with this deployment\. Use only al
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigateway-deployment-return-values"></a>
+## Return values<a name="aws-resource-apigateway-deployment-return-values"></a>
 
 ### Ref<a name="aws-resource-apigateway-deployment-return-values-ref"></a>
 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the deployment ID, such as `123abc`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-apigateway-deployment-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-apigateway-deployment-return-values-fn--getatt-fn--getatt"></a>
+
+`DeploymentId`  <a name="DeploymentId-fn::getatt"></a>
+The ID for the deployment\. For example: `abc123`\.
 
 ## Examples<a name="aws-resource-apigateway-deployment--examples"></a>
 
@@ -145,5 +156,6 @@ Deployment:
     StageName: DummyStage
 ```
 
-## See Also<a name="aws-resource-apigateway-deployment--seealso"></a>
+## See also<a name="aws-resource-apigateway-deployment--seealso"></a>
 + [deployment:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/deployment-create/) in the *Amazon API Gateway REST API Reference*
+

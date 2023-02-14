@@ -10,8 +10,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CustomerManagedS3](#cfn-iotanalytics-datastore-datastorestorage-customermanageds3)" : [CustomerManagedS3](aws-properties-iotanalytics-datastore-customermanageds3.md),
-  "[ServiceManagedS3](#cfn-iotanalytics-datastore-datastorestorage-servicemanageds3)" : [ServiceManagedS3](aws-properties-iotanalytics-datastore-servicemanageds3.md)
+  "[CustomerManagedS3](#cfn-iotanalytics-datastore-datastorestorage-customermanageds3)" : CustomerManagedS3,
+  "[IotSiteWiseMultiLayerStorage](#cfn-iotanalytics-datastore-datastorestorage-iotsitewisemultilayerstorage)" : IotSiteWiseMultiLayerStorage,
+  "[ServiceManagedS3](#cfn-iotanalytics-datastore-datastorestorage-servicemanageds3)" : ServiceManagedS3
 }
 ```
 
@@ -19,9 +20,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CustomerManagedS3](#cfn-iotanalytics-datastore-datastorestorage-customermanageds3): 
-    [CustomerManagedS3](aws-properties-iotanalytics-datastore-customermanageds3.md)
+    CustomerManagedS3
+  [IotSiteWiseMultiLayerStorage](#cfn-iotanalytics-datastore-datastorestorage-iotsitewisemultilayerstorage): 
+    IotSiteWiseMultiLayerStorage
   [ServiceManagedS3](#cfn-iotanalytics-datastore-datastorestorage-servicemanageds3): 
-    [ServiceManagedS3](aws-properties-iotanalytics-datastore-servicemanageds3.md)
+    ServiceManagedS3
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-datastore-datastorestorage-properties"></a>
@@ -30,6 +33,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Use this to store data store data in an S3 bucket that you manage\. The choice of service\-managed or customer\-managed S3 storage cannot be changed after creation of the data store\.  
 *Required*: No  
 *Type*: [CustomerManagedS3](aws-properties-iotanalytics-datastore-customermanageds3.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IotSiteWiseMultiLayerStorage`  <a name="cfn-iotanalytics-datastore-datastorestorage-iotsitewisemultilayerstorage"></a>
+Use this to store data used by AWS IoT SiteWise in an Amazon S3 bucket that you manage\. You can't change the choice of Amazon S3 storage after your data store is created\.  
+*Required*: No  
+*Type*: [IotSiteWiseMultiLayerStorage](aws-properties-iotanalytics-datastore-iotsitewisemultilayerstorage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceManagedS3`  <a name="cfn-iotanalytics-datastore-datastorestorage-servicemanageds3"></a>

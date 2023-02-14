@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Owner](#cfn-config-configrule-source-owner)" : String,
-  "[SourceDetails](#cfn-config-configrule-source-sourcedetails)" : [ [SourceDetail](aws-properties-config-configrule-source-sourcedetails.md), ... ],
+  "[SourceDetails](#cfn-config-configrule-source-sourcedetails)" : [ SourceDetail, ... ],
   "[SourceIdentifier](#cfn-config-configrule-source-sourceidentifier)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Owner](#cfn-config-configrule-source-owner): String
   [SourceDetails](#cfn-config-configrule-source-sourcedetails): 
-    - [SourceDetail](aws-properties-config-configrule-source-sourcedetails.md)
+    - SourceDetail
   [SourceIdentifier](#cfn-config-configrule-source-sourceidentifier): String
 ```
 
@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Indicates whether AWS or the customer owns and manages the AWS Config rule\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `AWS | CUSTOM_LAMBDA`  
+*Allowed values*: `AWS | CUSTOM_LAMBDA`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceDetails`  <a name="cfn-config-configrule-source-sourcedetails"></a>
@@ -42,7 +42,7 @@ Provides the source and type of the event that causes AWS Config to evaluate you
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceIdentifier`  <a name="cfn-config-configrule-source-sourceidentifier"></a>
-For AWS Config managed rules, a predefined identifier from a list\. For example, `IAM_PASSWORD_POLICY` is a managed rule\. To reference a managed rule, see [Using AWS Managed Config Rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html)\.  
+For AWS Config managed rules, a predefined identifier from a list\. For example, `IAM_PASSWORD_POLICY` is a managed rule\. To reference a managed rule, see [Using AWS Config managed rules](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_use-managed-rules.html)\.  
 For custom rules, the identifier is the Amazon Resource Name \(ARN\) of the rule's AWS Lambda function, such as `arn:aws:lambda:us-east-2:123456789012:function:custom_rule_name`\.  
 *Required*: Yes  
 *Type*: String  

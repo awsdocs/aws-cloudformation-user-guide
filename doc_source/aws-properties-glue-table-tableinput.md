@@ -14,10 +14,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Name](#cfn-glue-table-tableinput-name)" : String,
   "[Owner](#cfn-glue-table-tableinput-owner)" : String,
   "[Parameters](#cfn-glue-table-tableinput-parameters)" : Json,
-  "[PartitionKeys](#cfn-glue-table-tableinput-partitionkeys)" : [ [Column](aws-properties-glue-table-column.md), ... ],
+  "[PartitionKeys](#cfn-glue-table-tableinput-partitionkeys)" : [ Column, ... ],
   "[Retention](#cfn-glue-table-tableinput-retention)" : Integer,
-  "[StorageDescriptor](#cfn-glue-table-tableinput-storagedescriptor)" : [StorageDescriptor](aws-properties-glue-table-storagedescriptor.md),
+  "[StorageDescriptor](#cfn-glue-table-tableinput-storagedescriptor)" : StorageDescriptor,
   "[TableType](#cfn-glue-table-tableinput-tabletype)" : String,
+  "[TargetTable](#cfn-glue-table-tableinput-targettable)" : TableIdentifier,
   "[ViewExpandedText](#cfn-glue-table-tableinput-viewexpandedtext)" : String,
   "[ViewOriginalText](#cfn-glue-table-tableinput-vieworiginaltext)" : String
 }
@@ -31,11 +32,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Owner](#cfn-glue-table-tableinput-owner): String
   [Parameters](#cfn-glue-table-tableinput-parameters): Json
   [PartitionKeys](#cfn-glue-table-tableinput-partitionkeys): 
-    - [Column](aws-properties-glue-table-column.md)
+    - Column
   [Retention](#cfn-glue-table-tableinput-retention): Integer
   [StorageDescriptor](#cfn-glue-table-tableinput-storagedescriptor): 
-    [StorageDescriptor](aws-properties-glue-table-storagedescriptor.md)
+    StorageDescriptor
   [TableType](#cfn-glue-table-tableinput-tabletype): String
+  [TargetTable](#cfn-glue-table-tableinput-targettable): 
+    TableIdentifier
   [ViewExpandedText](#cfn-glue-table-tableinput-viewexpandedtext): String
   [ViewOriginalText](#cfn-glue-table-tableinput-vieworiginaltext): String
 ```
@@ -90,6 +93,12 @@ A storage descriptor containing information about the physical storage of this t
 The type of this table \(`EXTERNAL_TABLE`, `VIRTUAL_VIEW`, etc\.\)\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TargetTable`  <a name="cfn-glue-table-tableinput-targettable"></a>
+A `TableIdentifier` structure that describes a target table for resource linking\.  
+*Required*: No  
+*Type*: [TableIdentifier](aws-properties-glue-table-tableidentifier.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ViewExpandedText`  <a name="cfn-glue-table-tableinput-viewexpandedtext"></a>

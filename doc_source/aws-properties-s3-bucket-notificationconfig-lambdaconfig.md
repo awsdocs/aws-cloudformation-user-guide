@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Event](#cfn-s3-bucket-notificationconfig-lambdaconfig-event)" : String,
-  "[Filter](#cfn-s3-bucket-notificationconfig-lambdaconfig-filter)" : [NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md),
+  "[Filter](#cfn-s3-bucket-notificationconfig-lambdaconfig-filter)" : NotificationFilter,
   "[Function](#cfn-s3-bucket-notificationconfig-lambdaconfig-function)" : String
 }
 ```
@@ -21,14 +21,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Event](#cfn-s3-bucket-notificationconfig-lambdaconfig-event): String
   [Filter](#cfn-s3-bucket-notificationconfig-lambdaconfig-filter): 
-    [NotificationFilter](aws-properties-s3-bucket-notificationconfiguration-config-filter.md)
+    NotificationFilter
   [Function](#cfn-s3-bucket-notificationconfig-lambdaconfig-function): String
 ```
 
 ## Properties<a name="aws-properties-s3-bucket-notificationconfig-lambdaconfig-properties"></a>
 
 `Event`  <a name="cfn-s3-bucket-notificationconfig-lambdaconfig-event"></a>
-The Amazon S3 bucket event for which to invoke the AWS Lambda function\. For more information, see [Supported Event Types](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+The Amazon S3 bucket event for which to invoke the AWS Lambda function\. For more information, see [Supported Event Types](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon S3 User Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

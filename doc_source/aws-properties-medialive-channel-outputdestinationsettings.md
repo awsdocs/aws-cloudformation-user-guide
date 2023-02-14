@@ -49,8 +49,7 @@ The URL for the destination\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Username`  <a name="cfn-medialive-channel-outputdestinationsettings-username"></a>
-The user name for the downstream system\. This applies only if the downstream system requires credentials\.  
-user name for destination  
+The user name to connect to the downstream system\. This applies only if the downstream system requires credentials\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

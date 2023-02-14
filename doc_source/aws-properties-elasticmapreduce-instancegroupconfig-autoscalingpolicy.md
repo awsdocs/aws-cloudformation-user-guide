@@ -10,8 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Constraints](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-constraints)" : [ScalingConstraints](aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints.md),
-  "[Rules](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-rules)" : [ [ScalingRule](aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.md), ... ]
+  "[Constraints](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-constraints)" : ScalingConstraints,
+  "[Rules](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-rules)" : [ ScalingRule, ... ]
 }
 ```
 
@@ -19,9 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Constraints](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-constraints): 
-    [ScalingConstraints](aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints.md)
+    ScalingConstraints
   [Rules](#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-rules): 
-    - [ScalingRule](aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.md)
+    - ScalingRule
 ```
 
 ## Properties<a name="aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy-properties"></a>

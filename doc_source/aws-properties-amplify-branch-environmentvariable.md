@@ -26,12 +26,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Name`  <a name="cfn-amplify-branch-environmentvariable-name"></a>
 The environment variable name\.  
+*Length Constraints:* Maximum length of 255\.  
+*Pattern:* \(?s\)\.\*  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-amplify-branch-environmentvariable-value"></a>
 The environment variable value\.  
+*Length Constraints:* Maximum length of 5500\.  
+*Pattern:* \(?s\)\.\*  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

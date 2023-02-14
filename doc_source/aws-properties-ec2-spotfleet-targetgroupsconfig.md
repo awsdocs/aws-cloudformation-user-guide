@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[TargetGroups](#cfn-ec2-spotfleet-targetgroupsconfig-targetgroups)" : [ [TargetGroup](aws-properties-ec2-spotfleet-targetgroup.md), ... ]
+  "[TargetGroups](#cfn-ec2-spotfleet-targetgroupsconfig-targetgroups)" : [ TargetGroup, ... ]
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [TargetGroups](#cfn-ec2-spotfleet-targetgroupsconfig-targetgroups): 
-    - [TargetGroup](aws-properties-ec2-spotfleet-targetgroup.md)
+    - TargetGroup
 ```
 
 ## Properties<a name="aws-properties-ec2-spotfleet-targetgroupsconfig-properties"></a>
@@ -28,4 +28,4 @@ One or more target groups\.
 *Required*: Yes  
 *Type*: List of [TargetGroup](aws-properties-ec2-spotfleet-targetgroup.md)  
 *Maximum*: `5`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

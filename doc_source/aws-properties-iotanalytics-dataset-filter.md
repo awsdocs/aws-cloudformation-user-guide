@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DeltaTime](#cfn-iotanalytics-dataset-filter-deltatime)" : [DeltaTime](aws-properties-iotanalytics-dataset-deltatime.md)
+  "[DeltaTime](#cfn-iotanalytics-dataset-filter-deltatime)" : DeltaTime
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DeltaTime](#cfn-iotanalytics-dataset-filter-deltatime): 
-    [DeltaTime](aws-properties-iotanalytics-dataset-deltatime.md)
+    DeltaTime
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-dataset-filter-properties"></a>

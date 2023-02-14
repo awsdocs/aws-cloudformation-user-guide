@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[GrpcCode](#cfn-elasticloadbalancingv2-targetgroup-matcher-grpccode)" : String,
   "[HttpCode](#cfn-elasticloadbalancingv2-targetgroup-matcher-httpcode)" : String
 }
 ```
@@ -17,15 +18,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-elasticloadbalancingv2-targetgroup-matcher-syntax.yaml"></a>
 
 ```
+  [GrpcCode](#cfn-elasticloadbalancingv2-targetgroup-matcher-grpccode): String
   [HttpCode](#cfn-elasticloadbalancingv2-targetgroup-matcher-httpcode): String
 ```
 
 ## Properties<a name="aws-properties-elasticloadbalancingv2-targetgroup-matcher-properties"></a>
 
+`GrpcCode`  <a name="cfn-elasticloadbalancingv2-targetgroup-matcher-grpccode"></a>
+You can specify values between 0 and 99\. You can specify multiple values \(for example, "0,1"\) or a range of values \(for example, "0\-5"\)\. The default value is 12\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `HttpCode`  <a name="cfn-elasticloadbalancingv2-targetgroup-matcher-httpcode"></a>
-The HTTP codes\.  
 For Application Load Balancers, you can specify values between 200 and 499, and the default value is 200\. You can specify multiple values \(for example, "200,202"\) or a range of values \(for example, "200\-299"\)\.  
-For Network Load Balancers, this is 200–399\.  
-*Required*: Yes  
+For Network Load Balancers and Gateway Load Balancers, this must be "200–399"\.  
+Note that when using shorthand syntax, some values such as commas need to be escaped\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

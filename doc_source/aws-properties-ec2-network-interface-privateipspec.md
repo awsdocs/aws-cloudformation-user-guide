@@ -1,6 +1,6 @@
-# AWS::EC2::NetworkInterface PrivateIpAddressSpecification<a name="aws-properties-ec2-network-interface-privateipspec"></a>
+# AWS::EC2::Instance PrivateIpAddressSpecification<a name="aws-properties-ec2-network-interface-privateipspec"></a>
 
-Describes a secondary private IPv4 address for a network interface\.
+Specifies a secondary private IPv4 address for a network interface\.
 
 ## Syntax<a name="aws-properties-ec2-network-interface-privateipspec-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-network-interface-privateipspec-properties"></a>
 
 `Primary`  <a name="cfn-ec2-networkinterface-privateipspecification-primary"></a>
-Sets the private IP address as the primary private address\. You can set only one primary private IP address\. If you don't specify a primary private IP address, Amazon EC2 automatically assigns a primary private IP address\.  
+Indicates whether the private IPv4 address is the primary private IPv4 address\. Only one IPv4 address can be designated as primary\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivateIpAddress`  <a name="cfn-ec2-networkinterface-privateipspecification-privateipaddress"></a>
-The private IP address of the network interface\.  
+The private IPv4 address\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool UserPoolAddOns<a name="aws-properties-cognito-userpool-userpooladdons"></a>
 
-`UserPoolAddOns` is a property of the [AWS::Cognito::UserPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html) resource that enables advanced security risk detection\.
+The user pool add\-ons type\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-userpooladdons-syntax"></a>
 
@@ -26,5 +26,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The advanced security mode\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `AUDIT | ENFORCED | OFF`  
+*Allowed values*: `AUDIT | ENFORCED | OFF`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

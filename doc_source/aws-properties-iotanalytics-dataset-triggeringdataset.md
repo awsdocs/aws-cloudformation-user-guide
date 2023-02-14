@@ -1,6 +1,6 @@
 # AWS::IoTAnalytics::Dataset TriggeringDataset<a name="aws-properties-iotanalytics-dataset-triggeringdataset"></a>
 
-Information about the data set whose content generation triggers the new data set content generation\.
+Information about the dataset whose content generation triggers the new dataset content generation\.
 
 ## Syntax<a name="aws-properties-iotanalytics-dataset-triggeringdataset-syntax"></a>
 
@@ -28,5 +28,5 @@ The name of the data set whose content generation triggers the new data set cont
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9_]+$`  
+*Pattern*: `(^(?!_{2}))(^[a-zA-Z0-9_]+$)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

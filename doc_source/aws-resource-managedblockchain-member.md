@@ -2,6 +2,8 @@
 
 Creates a member within a Managed Blockchain network\.
 
+Applies only to Hyperledger Fabric\.
+
 ## Syntax<a name="aws-resource-managedblockchain-member-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -13,8 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ManagedBlockchain::Member",
   "Properties" : {
       "[InvitationId](#cfn-managedblockchain-member-invitationid)" : String,
-      "[MemberConfiguration](#cfn-managedblockchain-member-memberconfiguration)" : [MemberConfiguration](aws-properties-managedblockchain-member-memberconfiguration.md),
-      "[NetworkConfiguration](#cfn-managedblockchain-member-networkconfiguration)" : [NetworkConfiguration](aws-properties-managedblockchain-member-networkconfiguration.md),
+      "[MemberConfiguration](#cfn-managedblockchain-member-memberconfiguration)" : MemberConfiguration,
+      "[NetworkConfiguration](#cfn-managedblockchain-member-networkconfiguration)" : NetworkConfiguration,
       "[NetworkId](#cfn-managedblockchain-member-networkid)" : String
     }
 }
@@ -27,9 +29,9 @@ Type: AWS::ManagedBlockchain::Member
 Properties: 
   [InvitationId](#cfn-managedblockchain-member-invitationid): String
   [MemberConfiguration](#cfn-managedblockchain-member-memberconfiguration): 
-    [MemberConfiguration](aws-properties-managedblockchain-member-memberconfiguration.md)
+    MemberConfiguration
   [NetworkConfiguration](#cfn-managedblockchain-member-networkconfiguration): 
-    [NetworkConfiguration](aws-properties-managedblockchain-member-networkconfiguration.md)
+    NetworkConfiguration
   [NetworkId](#cfn-managedblockchain-member-networkid): String
 ```
 
@@ -61,7 +63,7 @@ The unique identifier of the network to which the member belongs\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-managedblockchain-member-return-values"></a>
+## Return values<a name="aws-resource-managedblockchain-member-return-values"></a>
 
 ### Ref<a name="aws-resource-managedblockchain-member-return-values-ref"></a>
 
@@ -85,15 +87,69 @@ The unique identifier of the network to which the member belongs\.
 
 ## Examples<a name="aws-resource-managedblockchain-member--examples"></a>
 
-### Create a New Managed Blockchain Network and the First Member<a name="aws-resource-managedblockchain-member--examples--Create_a_New_Managed_Blockchain_Network_and_the_First_Member"></a>
+
+
+### Create a new Managed Blockchain network for Hyperledger Fabric and the first member<a name="aws-resource-managedblockchain-member--examples--Create_a_new_Managed_Blockchain_network_for_Hyperledger_Fabric_and_the_first_member"></a>
 
 When you create the first member in a Managed Blockchain network, you also specify parameters to create the network\.
 
-#### JSON<a name="aws-resource-managedblockchain-member--examples--Create_a_New_Managed_Blockchain_Network_and_the_First_Member--json"></a>
+#### YAML<a name="aws-resource-managedblockchain-member--examples--Create_a_new_Managed_Blockchain_network_for_Hyperledger_Fabric_and_the_first_member--yaml"></a>
+
+```
+Description: "Basic initial member template"
+Parameters:
+  MemberName:
+    Type: String
+  MemberDescription:
+    Type: String
+  MemberAdminUsername:
+    Type: String
+  MemberAdminPassword:
+    Type: String
+  NetworkName:
+    Type: String
+  NetworkDescription:
+    Type: String
+  Edition:
+    Type: String
+  ThresholdPercentage:
+    Type: Number
+  ThresholdComparator:
+    Type: String
+  ProposalDurationInHours:
+    Type: Number
+
+Resources:
+  Member:
+    Type: "AWS::ManagedBlockchain::Member"
+    Properties:
+      NetworkConfiguration:
+        Name: !Ref NetworkName
+        Description: !Ref NetworkDescription
+        Framework: "HYPERLEDGER_FABRIC"
+        FrameworkVersion: "1.2"
+        NetworkFrameworkConfiguration:
+          NetworkFabricConfiguration:
+            Edition: !Ref Edition
+        VotingPolicy:
+          ApprovalThresholdPolicy:
+            ThresholdPercentage: !Ref ThresholdPercentage
+            ProposalDurationInHours: !Ref ProposalDurationInHours
+            ThresholdComparator: !Ref ThresholdComparator
+      MemberConfiguration:
+        Name: !Ref MemberName
+        Description: !Ref MemberDescription
+        MemberFrameworkConfiguration:
+          MemberFabricConfiguration:
+            AdminUsername: !Ref MemberAdminUsername
+            AdminPassword: !Ref MemberAdminPassword
+```
+
+#### JSON<a name="aws-resource-managedblockchain-member--examples--Create_a_new_Managed_Blockchain_network_for_Hyperledger_Fabric_and_the_first_member--json"></a>
 
 ```
 {
-  "Description": "Basic Initial Member template",
+  "Description": "Basic initial member template",
   "Parameters": {
     "MemberName": {
       "Type": "String"
@@ -164,64 +220,14 @@ When you create the first member in a Managed Blockchain network, you also speci
 }
 ```
 
-#### YAML<a name="aws-resource-managedblockchain-member--examples--Create_a_New_Managed_Blockchain_Network_and_the_First_Member--yaml"></a>
+### Create an additional member in an existing Hyperledger Fabric network<a name="aws-resource-managedblockchain-member--examples--Create_an_additional_member_in_an_existing_Hyperledger_Fabric_network"></a>
+
+
+
+#### YAML<a name="aws-resource-managedblockchain-member--examples--Create_an_additional_member_in_an_existing_Hyperledger_Fabric_network--yaml"></a>
 
 ```
-Description: "Basic Initial Member template"
-Parameters:
-  MemberName:
-    Type: String
-  MemberDescription:
-    Type: String
-  MemberAdminUsername:
-    Type: String
-  MemberAdminPassword:
-    Type: String
-  NetworkName:
-    Type: String
-  NetworkDescription:
-    Type: String
-  Edition:
-    Type: String
-  ThresholdPercentage:
-    Type: Number
-  ThresholdComparator:
-    Type: String
-  ProposalDurationInHours:
-    Type: Number
-
-Resources:
-  Member:
-    Type: "AWS::ManagedBlockchain::Member"
-    Properties:
-      NetworkConfiguration:
-        Name: !Ref NetworkName
-        Description: !Ref NetworkDescription
-        Framework: "HYPERLEDGER_FABRIC"
-        FrameworkVersion: "1.2"
-        NetworkFrameworkConfiguration:
-          NetworkFabricConfiguration:
-            Edition: !Ref Edition
-        VotingPolicy:
-          ApprovalThresholdPolicy:
-            ThresholdPercentage: !Ref ThresholdPercentage
-            ProposalDurationInHours: !Ref ProposalDurationInHours
-            ThresholdComparator: !Ref ThresholdComparator
-      MemberConfiguration:
-        Name: !Ref MemberName
-        Description: !Ref MemberDescription
-        MemberFrameworkConfiguration:
-          MemberFabricConfiguration:
-            AdminUsername: !Ref MemberAdminUsername
-            AdminPassword: !Ref MemberAdminPassword
-```
-
-### Create an Additional Member in an Existing Network<a name="aws-resource-managedblockchain-member--examples--Create_an_Additional_Member_in_an_Existing_Network"></a>
-
-#### YAML<a name="aws-resource-managedblockchain-member--examples--Create_an_Additional_Member_in_an_Existing_Network--yaml"></a>
-
-```
-Description: "Basic Secondary Member template"
+Description: "Basic additional member template"
 Parameters:
   MemberName:
     Type: String
@@ -235,62 +241,73 @@ Parameters:
     Type: String
   InvitationId:
     Type: String
-
 Resources:
   Member:
-    Type: "AWS::ManagedBlockchain::Member"
+    Type: 'AWS::ManagedBlockchain::Member'
     Properties:
       MemberConfiguration:
         Name: !Ref MemberName
         Description: !Ref MemberDescription
-        FabricMemberConfiguration:
-          AdminUsername: !Ref MemberAdminUsername
-          AdminPassword: !Ref MemberAdminPassword
+        MemberFrameworkConfiguration:
+          MemberFabricConfiguration:
+            AdminUsername: !Ref MemberAdminUsername
+            AdminPassword: !Ref MemberAdminPassword
       NetworkId: !Ref NetworkId
       InvitationId: !Ref InvitationId
 ```
 
-#### JSON<a name="aws-resource-managedblockchain-member--examples--Create_an_Additional_Member_in_an_Existing_Network--json"></a>
+#### JSON<a name="aws-resource-managedblockchain-member--examples--Create_an_additional_member_in_an_existing_Hyperledger_Fabric_network--json"></a>
 
 ```
 {
-  "Description": "Basic Additional Member template",
+           "Description": "Basic additional member template",
   "Parameters": {
-    "MemberName": {
-      "Type": "String"
-    },
-    "MemberDescription": {
-      "Type": "String"
-    },
-    "MemberAdminUsername": {
-      "Type": "String"
-    },
-    "MemberAdminPassword": {
-      "Type": "String"
-    },
-    "NetworkId": {
-      "Type": "String"
-    },
-    "InvitationId": {
-      "Type": "String"
-    }
+      "MemberName": {
+          "Type": "String"
+      },
+      "MemberDescription": {
+          "Type": "String"
+      },
+      "MemberAdminUsername": {
+          "Type": "String"
+      },
+      "MemberAdminPassword": {
+          "Type": "String"
+      },
+      "NetworkId": {
+          "Type": "String"
+      },
+      "InvitationId": {
+          "Type": "String"
+      }
   },
   "Resources": {
-    "Member": {
-      "Type": "AWS::ManagedBlockchain::Member",
-      "Properties": {
-        "MemberConfiguration": {
-          "Name": "MemberName",
-          "Description": "MemberDescription",
-          "FabricMemberConfiguration": {
-            "AdminUsername": "MemberAdminUsername",
-            "AdminPassword": "MemberAdminPassword"
+      "Member": {
+          "Type": "AWS::ManagedBlockchain::Member",
+          "Properties": {
+              "MemberConfiguration": {
+                  "Name": {
+                      "Ref": "MemberName"
+                  },
+                  "MemberFrameworkConfiguration": {
+                      "MemberFabricConfiguration": {
+                          "AdminUsername": {
+                              "Ref": "MemberAdminUsername"
+                          },
+                          "AdminPassword": {
+                              "Ref": "MemberAdminPassword"
+                          }
+                      }
+                  }
+              },
+              "NetworkId": {
+                  "Ref": "NetworkId"
+              },
+              "InvitationId": {
+                  "Ref": "InvitationId"
+              }
           }
-        },
-        "NetworkId": "NetworkId",
-        "InvitationId": "InvitationId"
       }
-    }
   }
 }
 ```
