@@ -13,7 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Pinpoint::SmsTemplate",
   "Properties" : {
       "[Body](#cfn-pinpoint-smstemplate-body)" : String,
+      "[DefaultSubstitutions](#cfn-pinpoint-smstemplate-defaultsubstitutions)" : String,
       "[Tags](#cfn-pinpoint-smstemplate-tags)" : Json,
+      "[TemplateDescription](#cfn-pinpoint-smstemplate-templatedescription)" : String,
       "[TemplateName](#cfn-pinpoint-smstemplate-templatename)" : String
     }
 }
@@ -25,7 +27,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Pinpoint::SmsTemplate
 Properties: 
   [Body](#cfn-pinpoint-smstemplate-body): String
+  [DefaultSubstitutions](#cfn-pinpoint-smstemplate-defaultsubstitutions): String
   [Tags](#cfn-pinpoint-smstemplate-tags): Json
+  [TemplateDescription](#cfn-pinpoint-smstemplate-templatedescription): String
   [TemplateName](#cfn-pinpoint-smstemplate-templatename): String
 ```
 
@@ -37,10 +41,23 @@ The message body to use in text messages that are based on the message template\
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`DefaultSubstitutions`  <a name="cfn-pinpoint-smstemplate-defaultsubstitutions"></a>
+A JSON object that specifies the default values to use for message variables in the message template\. This object is a set of key\-value pairs\. Each key defines a message variable in the template\. The corresponding value defines the default value for that variable\. When you create a message that's based on the template, you can override these defaults with message\-specific and address\-specific variables and values\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-pinpoint-smstemplate-tags"></a>
-A string\-to\-string map of key\-value pairs that defines the tags to associate with the message template\. Each tag consists of a required tag key and an associated tag value\.  
+An array of key\-value pairs to apply to this resource\.  
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TemplateDescription`  <a name="cfn-pinpoint-smstemplate-templatedescription"></a>
+A custom description of the message template\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TemplateName`  <a name="cfn-pinpoint-smstemplate-templatename"></a>
@@ -49,7 +66,7 @@ The name of the message template\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-pinpoint-smstemplate-return-values"></a>
+## Return values<a name="aws-resource-pinpoint-smstemplate-return-values"></a>
 
 ### Ref<a name="aws-resource-pinpoint-smstemplate-return-values-ref"></a>
 

@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Invert](#cfn-appmesh-route-grpcroutemetadata-invert)" : Boolean,
-  "[Match](#cfn-appmesh-route-grpcroutemetadata-match)" : [GrpcRouteMetadataMatchMethod](aws-properties-appmesh-route-grpcroutemetadatamatchmethod.md),
+  "[Match](#cfn-appmesh-route-grpcroutemetadata-match)" : GrpcRouteMetadataMatchMethod,
   "[Name](#cfn-appmesh-route-grpcroutemetadata-name)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Invert](#cfn-appmesh-route-grpcroutemetadata-invert): Boolean
   [Match](#cfn-appmesh-route-grpcroutemetadata-match): 
-    [GrpcRouteMetadataMatchMethod](aws-properties-appmesh-route-grpcroutemetadatamatchmethod.md)
+    GrpcRouteMetadataMatchMethod
   [Name](#cfn-appmesh-route-grpcroutemetadata-name): String
 ```
 
@@ -43,4 +43,6 @@ An object that represents the data to match from the request\.
 The name of the route\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

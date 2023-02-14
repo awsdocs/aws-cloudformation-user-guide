@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[HlsInputSettings](#cfn-medialive-channel-networkinputsettings-hlsinputsettings)" : [HlsInputSettings](aws-properties-medialive-channel-hlsinputsettings.md),
+  "[HlsInputSettings](#cfn-medialive-channel-networkinputsettings-hlsinputsettings)" : HlsInputSettings,
   "[ServerValidation](#cfn-medialive-channel-networkinputsettings-servervalidation)" : String
 }
 ```
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [HlsInputSettings](#cfn-medialive-channel-networkinputsettings-hlsinputsettings): 
-    [HlsInputSettings](aws-properties-medialive-channel-hlsinputsettings.md)
+    HlsInputSettings
   [ServerValidation](#cfn-medialive-channel-networkinputsettings-servervalidation): String
 ```
 

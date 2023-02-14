@@ -38,6 +38,6 @@ An object specifying the [DeviceTemplate](https://docs.aws.amazon.com/iot-1-clic
 *Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-iot1click-project-placementtemplate--seealso"></a>
+## See also<a name="aws-properties-iot1click-project-placementtemplate--seealso"></a>
 + [Projects, Templates, and Placements](https://docs.aws.amazon.com/iot-1-click/latest/developerguide/1click-PTP.html)
 + [AWS IoT 1\-Click Programming Model](https://docs.aws.amazon.com/iot-1-click/latest/developerguide/1click-programming.html)

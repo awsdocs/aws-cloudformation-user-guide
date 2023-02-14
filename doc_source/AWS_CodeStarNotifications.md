@@ -1,4 +1,4 @@
-# CodeStarNotifications Resource Type Reference<a name="AWS_CodeStarNotifications"></a>
+# AWS CodeStar Notifications resource type reference<a name="AWS_CodeStarNotifications"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::CodeStarNotifications::NotificationRule](aws-resource-codestarnotifications-notificationrule.md)

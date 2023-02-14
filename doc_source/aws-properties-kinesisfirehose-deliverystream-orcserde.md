@@ -64,7 +64,7 @@ The Bloom filter false positive probability \(FPP\)\. The lower the FPP, the big
 The compression code to use over data blocks\. The default is `SNAPPY`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `NONE | SNAPPY | ZLIB`  
+*Allowed values*: `NONE | SNAPPY | ZLIB`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DictionaryKeyThreshold`  <a name="cfn-kinesisfirehose-deliverystream-orcserde-dictionarykeythreshold"></a>
@@ -83,7 +83,7 @@ Set this to `true` to indicate that you want stripes to be padded to the HDFS bl
 The version of the file to write\. The possible values are `V0_11` and `V0_12`\. The default is `V0_12`\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `V0_11 | V0_12`  
+*Allowed values*: `V0_11 | V0_12`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PaddingTolerance`  <a name="cfn-kinesisfirehose-deliverystream-orcserde-paddingtolerance"></a>

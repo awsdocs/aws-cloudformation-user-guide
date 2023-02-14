@@ -1,6 +1,6 @@
-# GuardDuty Resource Type Reference<a name="AWS_GuardDuty"></a>
+# Amazon GuardDuty resource type reference<a name="AWS_GuardDuty"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::GuardDuty::Detector](aws-resource-guardduty-detector.md)
 + [AWS::GuardDuty::Filter](aws-resource-guardduty-filter.md)
 + [AWS::GuardDuty::IPSet](aws-resource-guardduty-ipset.md)

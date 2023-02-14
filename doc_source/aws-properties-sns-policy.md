@@ -1,6 +1,6 @@
 # AWS::SNS::TopicPolicy<a name="aws-properties-sns-policy"></a>
 
-The `AWS::SNS::TopicPolicy` resource associates Amazon SNS topics with a policy\. For an example snippet, see [Declaring an Amazon SNS Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-sns-policy) in the *AWS CloudFormation User Guide*\.
+The `AWS::SNS::TopicPolicy` resource associates Amazon SNS topics with a policy\. For an example snippet, see [Declaring an Amazon SNS policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-sns-policy) in the *AWS CloudFormation User Guide*\.
 
 ## Syntax<a name="aws-properties-sns-policy-syntax"></a>
 

@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[NumberOfNodes](#cfn-glue-devendpoint-numberofnodes)" : Integer,
       "[NumberOfWorkers](#cfn-glue-devendpoint-numberofworkers)" : Integer,
       "[PublicKey](#cfn-glue-devendpoint-publickey)" : String,
+      "[PublicKeys](#cfn-glue-devendpoint-publickeys)" : [ String, ... ],
       "[RoleArn](#cfn-glue-devendpoint-rolearn)" : String,
       "[SecurityConfiguration](#cfn-glue-devendpoint-securityconfiguration)" : String,
       "[SecurityGroupIds](#cfn-glue-devendpoint-securitygroupids)" : [ String, ... ],
@@ -43,6 +44,8 @@ Properties:
   [NumberOfNodes](#cfn-glue-devendpoint-numberofnodes): Integer
   [NumberOfWorkers](#cfn-glue-devendpoint-numberofworkers): Integer
   [PublicKey](#cfn-glue-devendpoint-publickey): String
+  [PublicKeys](#cfn-glue-devendpoint-publickeys): 
+    - String
   [RoleArn](#cfn-glue-devendpoint-rolearn): String
   [SecurityConfiguration](#cfn-glue-devendpoint-securityconfiguration): String
   [SecurityGroupIds](#cfn-glue-devendpoint-securitygroupids): 
@@ -86,7 +89,7 @@ You can only use pure Python libraries with a `DevEndpoint`\. Libraries that rel
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlueVersion`  <a name="cfn-glue-devendpoint-glueversion"></a>
-Glue version determines the versions of Apache Spark and Python that AWS Glue supports\. The Python version indicates the version supported for running your ETL scripts on development endpoints\.   
+The AWS Glue version determines the versions of Apache Spark and Python that AWS Glue supports\. The Python version indicates the version supported for running your ETL scripts on development endpoints\.   
 For more information about the available AWS Glue versions and corresponding Spark and Python versions, see [Glue version](https://docs.aws.amazon.com/glue/latest/dg/add-job.html) in the developer guide\.  
 Development endpoints that are created without specifying a Glue version default to Glue 0\.9\.  
 You can specify a version of Python support for development endpoints by using the `Arguments` parameter in the `CreateDevEndpoint` or `UpdateDevEndpoint` APIs\. If no arguments are provided, the version defaults to Python 2\.  
@@ -111,6 +114,13 @@ The maximum number of workers you can define are 299 for `G.1X`, and 149 for `G.
 The public key to be used by this `DevEndpoint` for authentication\. This attribute is provided for backward compatibility because the recommended attribute to use is public keys\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PublicKeys`  <a name="cfn-glue-devendpoint-publickeys"></a>
+A list of public keys to be used by the `DevEndpoints` for authentication\. Using this attribute is preferred over a single public key because the public keys allow you to have a different private key per client\.  
+If you previously created an endpoint with a public key, you must remove that key to be able to set a list of public keys\. Call the `UpdateDevEndpoint` API operation with the public key content in the `deletePublicKeys` attribute, and the list of new keys in the `addPublicKeys` attribute\.
+*Required*: No  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-glue-devendpoint-rolearn"></a>
@@ -153,7 +163,7 @@ Known issue: when a development endpoint is created with the `G.2X` `WorkerType`
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-glue-devendpoint-return-values"></a>
+## Return values<a name="aws-resource-glue-devendpoint-return-values"></a>
 
 ### Ref<a name="aws-resource-glue-devendpoint-return-values-ref"></a>
 
@@ -161,5 +171,6 @@ Known issue: when a development endpoint is created with the `G.2X` `WorkerType`
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
-## See Also<a name="aws-resource-glue-devendpoint--seealso"></a>
+## See also<a name="aws-resource-glue-devendpoint--seealso"></a>
 +  [DevEndpoint Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-dev-endpoint.html#aws-glue-api-jobs-dev-endpoint-DevEndpoint) in the *AWS Glue Developer Guide* 
+

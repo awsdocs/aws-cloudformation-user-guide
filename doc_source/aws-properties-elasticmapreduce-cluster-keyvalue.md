@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-keyvalue-properties"></a>
 
 `Key`  <a name="cfn-elasticmapreduce-cluster-keyvalue-key"></a>
-The unique identifier of a key value pair\.  
+The unique identifier of a key\-value pair\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

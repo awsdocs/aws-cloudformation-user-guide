@@ -1,6 +1,6 @@
-# Amazon DocumentDB Resource Type Reference<a name="AWS_DocDB"></a>
+# Amazon DocumentDB resource type reference<a name="AWS_DocDB"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::DocDB::DBCluster](aws-resource-docdb-dbcluster.md)
 + [AWS::DocDB::DBClusterParameterGroup](aws-resource-docdb-dbclusterparametergroup.md)
 + [AWS::DocDB::DBInstance](aws-resource-docdb-dbinstance.md)

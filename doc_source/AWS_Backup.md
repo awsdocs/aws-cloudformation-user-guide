@@ -1,6 +1,8 @@
-# AWS Backup Resource Type Reference<a name="AWS_Backup"></a>
+# AWS Backup resource type reference<a name="AWS_Backup"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::Backup::BackupPlan](aws-resource-backup-backupplan.md)
 + [AWS::Backup::BackupSelection](aws-resource-backup-backupselection.md)
 + [AWS::Backup::BackupVault](aws-resource-backup-backupvault.md)
++ [AWS::Backup::Framework](aws-resource-backup-framework.md)
++ [AWS::Backup::ReportPlan](aws-resource-backup-reportplan.md)

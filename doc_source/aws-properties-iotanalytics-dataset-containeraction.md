@@ -12,8 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ExecutionRoleArn](#cfn-iotanalytics-dataset-containeraction-executionrolearn)" : String,
   "[Image](#cfn-iotanalytics-dataset-containeraction-image)" : String,
-  "[ResourceConfiguration](#cfn-iotanalytics-dataset-containeraction-resourceconfiguration)" : [ResourceConfiguration](aws-properties-iotanalytics-dataset-resourceconfiguration.md),
-  "[Variables](#cfn-iotanalytics-dataset-containeraction-variables)" : [ [Variable](aws-properties-iotanalytics-dataset-variable.md), ... ]
+  "[ResourceConfiguration](#cfn-iotanalytics-dataset-containeraction-resourceconfiguration)" : ResourceConfiguration,
+  "[Variables](#cfn-iotanalytics-dataset-containeraction-variables)" : [ Variable, ... ]
 }
 ```
 
@@ -23,9 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ExecutionRoleArn](#cfn-iotanalytics-dataset-containeraction-executionrolearn): String
   [Image](#cfn-iotanalytics-dataset-containeraction-image): String
   [ResourceConfiguration](#cfn-iotanalytics-dataset-containeraction-resourceconfiguration): 
-    [ResourceConfiguration](aws-properties-iotanalytics-dataset-resourceconfiguration.md)
+    ResourceConfiguration
   [Variables](#cfn-iotanalytics-dataset-containeraction-variables): 
-    - [Variable](aws-properties-iotanalytics-dataset-variable.md)
+    - Variable
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-dataset-containeraction-properties"></a>

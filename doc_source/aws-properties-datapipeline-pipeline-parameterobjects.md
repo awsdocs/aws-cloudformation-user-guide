@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Attributes](#cfn-datapipeline-pipeline-parameterobjects-attributes)" : [ [ParameterAttribute](aws-properties-datapipeline-pipeline-parameterobjects-attributes.md), ... ],
+  "[Attributes](#cfn-datapipeline-pipeline-parameterobjects-attributes)" : [ ParameterAttribute, ... ],
   "[Id](#cfn-datapipeline-pipeline-parameterobjects-id)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Attributes](#cfn-datapipeline-pipeline-parameterobjects-attributes): 
-    - [ParameterAttribute](aws-properties-datapipeline-pipeline-parameterobjects-attributes.md)
+    - ParameterAttribute
   [Id](#cfn-datapipeline-pipeline-parameterobjects-id): String
 ```
 

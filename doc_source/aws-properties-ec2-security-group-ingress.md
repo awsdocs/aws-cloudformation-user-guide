@@ -1,10 +1,14 @@
 # AWS::EC2::SecurityGroupIngress<a name="aws-properties-ec2-security-group-ingress"></a>
 
-Adds the specified ingress rules to a security group\.
+Adds an inbound rule to a security group\.
 
-An inbound rule permits instances to receive traffic from the specified destination IPv4 or IPv6 CIDR address ranges, or from the specified destination security groups\.
+An inbound rule permits instances to receive traffic from the specified IPv4 or IPv6 CIDR address range, or from the instances associated with the specified security group\.
 
-You specify a protocol for each rule \(for example, TCP\)\. For TCP and UDP, you must also specify the destination port or port range\. For ICMP/ICMPv6, you must also specify the ICMP/ICMPv6 type and code\. You can use \-1 to mean all types or all codes\.
+You must specify only one of the following properties: `CidrIp`, `CidrIpv6`, `SourcePrefixListId`, `SourceSecurityGroupId`, or `SourceSecurityGroupName`\.
+
+You specify a protocol for each rule \(for example, TCP\)\. For TCP and UDP, you must also specify a port or port range\. For ICMP/ICMPv6, you must also specify the ICMP/ICMPv6 type and code\. You can use \-1 to mean all types or all codes\.
+
+You must specify a source security group \(`SourcePrefixListId`, `SourceSecurityGroupId`, or `SourceSecurityGroupName`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\. If you do not specify one of these parameters, the stack will launch successfully but the rule will not be added to the security group\.
 
 Rule changes are propagated to instances within the security group as quickly as possible\. However, a small delay might occur\.
 
@@ -56,19 +60,24 @@ Properties:
 ## Properties<a name="aws-properties-ec2-security-group-ingress-properties"></a>
 
 `CidrIp`  <a name="cfn-ec2-security-group-ingress-cidrip"></a>
-The IPv4 ranges\.  
+The IPv4 address range, in CIDR format\.  
+You must specify a source security group \(`SourcePrefixListId` or `SourceSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
+For examples of rules that you can add to security groups for specific access scenarios, see [Security group rules for different use cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html) in the *Amazon EC2 User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CidrIpv6`  <a name="cfn-ec2-security-group-ingress-cidripv6"></a>
-\[VPC only\] The IPv6 ranges\.  
+The IPv6 address range, in CIDR format\.  
+You must specify a source security group \(`SourcePrefixListId` or `SourceSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
+For examples of rules that you can add to security groups for specific access scenarios, see [Security group rules for different use cases](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules-reference.html) in the *Amazon EC2 User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-ec2-security-group-ingress-description"></a>
 Updates the description of an ingress \(inbound\) security group rule\. You can replace an existing description, or add a description to a rule that did not have one previously\.  
+Constraints: Up to 255 characters in length\. Allowed characters are a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=;\{\}\!$\*  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -82,7 +91,7 @@ Use this for ICMP and any protocol that uses ports\.
 
 `GroupId`  <a name="cfn-ec2-security-group-ingress-groupid"></a>
 The ID of the security group\. You must specify either the security group ID or the security group name in the request\. For security groups in a nondefault VPC, you must specify the security group ID\.  
-You must specify the `GroupName` property or the `GroupId` property\. For security groups that are in a VPC, you must use the `GroupId` property\. For example, [EC2\-VPC](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-classic-platform.html) accounts must use the `GroupId` property\.  
+You must specify the `GroupName` property or the `GroupId` property\. For security groups that are in a VPC, you must use the `GroupId` property\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -104,30 +113,28 @@ The IP protocol name \(`tcp`, `udp`, `icmp`, `icmpv6`\) or number \(see [Protoco
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourcePrefixListId`  <a name="cfn-ec2-securitygroupingress-sourceprefixlistid"></a>
-\[EC2\-VPC only\] The prefix list IDs for an AWS service\. This is the AWS service that you want to access through a VPC endpoint from instances associated with the security group\.  
-You must specify a source security group \(`SourcePrefixListId`, `SourceSecurityGroupId`, or `SourceSecurityGroupName`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
+\[EC2\-VPC only\] The ID of a prefix list\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceSecurityGroupId`  <a name="cfn-ec2-security-group-ingress-sourcesecuritygroupid"></a>
-The ID of the security group\. You must specify either the security group ID or the security group name in the request\. For security groups in a nondefault VPC, you must specify the security group ID\.  
-If you specify `SourceSecurityGroupName` or `SourceSecurityGroupId` and that security group is owned by a different account than the account creating the stack, you must specify the `SourceSecurityGroupOwnerId`; otherwise, this property is optional\.  
+The ID of the security group\. You must specify either the security group ID or the security group name\. For security groups in a nondefault VPC, you must specify the security group ID\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceSecurityGroupName`  <a name="cfn-ec2-security-group-ingress-sourcesecuritygroupname"></a>
-\[EC2\-Classic, default VPC\] The name of the source security group\. You can't specify this parameter in combination with the following parameters: the CIDR IP address range, the start of the port range, the IP protocol, and the end of the port range\. Creates rules that grant full ICMP, UDP, and TCP access\. To create a rule with a specific IP protocol and port range, use a set of IP permissions instead\. For EC2\-VPC, the source security group must be in the same VPC\.  
- You must specify the `GroupName` property or the `GroupId` property\. For security groups that are in a VPC, you must use the `GroupId` property\. For example, [EC2\-VPC](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-classic-platform.html) accounts must use the `GroupId` property\.  
+\[EC2\-Classic, default VPC\] The name of the source security group\. You can't specify this parameter in combination with an IP address range\. Creates rules that grant full ICMP, UDP, and TCP access\.  
+You must specify the `GroupName` property or the `GroupId` property\. For security groups that are in a VPC, you must use the `GroupId` property\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceSecurityGroupOwnerId`  <a name="cfn-ec2-security-group-ingress-sourcesecuritygroupownerid"></a>
-\[nondefault VPC\] The AWS account ID for the source security group, if the source security group is in a different account\. You can't specify this parameter in combination with the following parameters: the CIDR IP address range, the IP protocol, the start of the port range, and the end of the port range\. Creates rules that grant full ICMP, UDP, and TCP access\. To create a rule with a specific IP protocol and port range, use a set of IP permissions instead\.  
- If you specify `SourceSecurityGroupName` or `SourceSecurityGroupId` and that security group is owned by a different account than the account creating the stack, you must specify the `SourceSecurityGroupOwnerId`; otherwise, this property is optional\.  
-*Required*: No  
+\[nondefault VPC\] The AWS account ID for the source security group, if the source security group is in a different account\. You can't specify this property with an IP address range\. Creates rules that grant full ICMP, UDP, and TCP access\.  
+If you specify `SourceSecurityGroupName` or `SourceSecurityGroupId` and that security group is owned by a different account than the account creating the stack, you must specify the `SourceSecurityGroupOwnerId`; otherwise, this property is optional\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -140,72 +147,124 @@ Use this for ICMP and any protocol that uses ports\.
 
 ## Examples<a name="aws-properties-ec2-security-group-ingress--examples"></a>
 
-### EC2 Security Group and Ingress Rule<a name="aws-properties-ec2-security-group-ingress--examples--EC2_Security_Group_and_Ingress_Rule"></a>
 
-To declare an Amazon EC2 \(non\-VPC\) security group and an ingress rule, use the `SourceSecurityGroupName ` property in the ingress rule\.
 
-The following template example defines an EC2 security group with an ingress rule that allows incoming traffic on port 80 from any other host in the security group\. 
+### VPC security groups with egress and ingress rules<a name="aws-properties-ec2-security-group-ingress--examples--VPC_security_groups_with_egress_and_ingress_rules"></a>
 
-#### JSON<a name="aws-properties-ec2-security-group-ingress--examples--EC2_Security_Group_and_Ingress_Rule--json"></a>
+In some cases, you might have an originating \(source\) security group to which you want to add an outbound rule that allows traffic to a destination \(target\) security group\. The target security group also needs an inbound rule that allows traffic from the source security group\. Note that you cannot use the Ref function to specify the outbound and inbound rules for each security group\. Doing so creates a circular dependency; you cannot have two resources that depend on each other\. Instead, use the egress and ingress resources to declare these outbound and inbound rules, as shown in the following template example\. 
+
+#### JSON<a name="aws-properties-ec2-security-group-ingress--examples--VPC_security_groups_with_egress_and_ingress_rules--json"></a>
 
 ```
-"SGBase": {
-   "Type": "AWS::EC2::SecurityGroup",
-   "Properties": {
-      "GroupDescription": "Base Security Group",
-      "SecurityGroupIngress": [
-         {
-            "IpProtocol": "tcp",
-            "CidrIp": "0.0.0.0/0",
-            "FromPort": 22,
-            "ToPort": 22
-         }
-      ]
-   }
-},
-"SGBaseIngress": {
-   "Type": "AWS::EC2::SecurityGroupIngress",
-   "Properties": {
-      "GroupName": {
-         "Ref": "SGBase"
-      },
-      "IpProtocol": "tcp",
-      "FromPort": 80,
-      "ToPort": 80,
-      "SourceSecurityGroupId": {
-         "Ref": "SGBase"
-      }
-   } 
+{
+    "Resources": {
+        "SourceSG": {
+            "Type": "AWS::EC2::SecurityGroup",
+            "Properties": {
+                "VpcId" : "vpc-1a2b3c4d",
+                "GroupDescription": "Sample source security group"
+            }
+        },
+        "TargetSG": {
+            "Type": "AWS::EC2::SecurityGroup",
+            "Properties": {
+                "VpcId" : "vpc-1a2b3c4d",
+                "GroupDescription": "Sample target security group"
+            }
+        },
+        "OutboundRule": {
+            "Type": "AWS::EC2::SecurityGroupEgress",
+            "Properties":{
+                "IpProtocol": "tcp",
+                "FromPort": 0,
+                "ToPort": 65535,
+                "DestinationSecurityGroupId": {
+                    "Fn::GetAtt": [
+                        "TargetSG",
+                        "GroupId"
+                    ]
+                },
+                "GroupId": {
+                    "Fn::GetAtt": [
+                        "SourceSG",
+                        "GroupId"
+                    ]
+                }
+            }
+        },
+        "InboundRule": {
+            "Type": "AWS::EC2::SecurityGroupIngress",
+            "Properties":{
+                "IpProtocol": "tcp",
+                "FromPort": 0,
+                "ToPort": 65535,
+                "SourceSecurityGroupId": {
+                    "Fn::GetAtt": [
+                        "SourceSG",
+                        "GroupId" 
+                    ]
+                },
+                "GroupId": {
+                    "Fn::GetAtt": [
+                        "TargetSG",
+                        "GroupId"
+                    ]
+                }
+            }
+        }
+    }
 }
 ```
 
-#### YAML<a name="aws-properties-ec2-security-group-ingress--examples--EC2_Security_Group_and_Ingress_Rule--yaml"></a>
+#### YAML<a name="aws-properties-ec2-security-group-ingress--examples--VPC_security_groups_with_egress_and_ingress_rules--yaml"></a>
 
 ```
-SGBase:
-   Type: 'AWS::EC2::SecurityGroup'
-   Properties:
-      GroupDescription: Base Security Group
-      SecurityGroupIngress:
-         - IpProtocol: tcp
-           CidrIp: 0.0.0.0/0
-           FromPort: 22
-           ToPort: 22
-SGBaseIngress:
-   Type: 'AWS::EC2::SecurityGroupIngress'
-   Properties:
-      GroupName: !Ref SGBase
+Resources:
+  SourceSG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      VpcId: vpc-1a2b3c4d
+      GroupDescription: Sample source security group
+  TargetSG:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      VpcId: vpc-1a2b3c4d
+      GroupDescription: Sample target security group
+  OutboundRule:
+    Type: AWS::EC2::SecurityGroupEgress
+    Properties:
       IpProtocol: tcp
-      FromPort: 80
-      ToPort: 80
-      SourceSecurityGroupId: !GetAtt SGBase.GroupId
+      FromPort: 0
+      ToPort: 65535
+      DestinationSecurityGroupId:
+        Fn::GetAtt:
+          - TargetSG
+          - GroupId
+      GroupId:
+        Fn::GetAtt:
+          - SourceSG
+          - GroupId
+  InboundRule:
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      IpProtocol: tcp
+      FromPort: 0
+      ToPort: 65535
+      SourceSecurityGroupId:
+        Fn::GetAtt:
+          - SourceSG
+          - GroupId
+      GroupId:
+        Fn::GetAtt:
+          - TargetSG
+          - GroupId
 ```
 
-### Allow Traffic from a Security Group in a Peered VPC<a name="aws-properties-ec2-security-group-ingress--examples--Allow_Traffic_from_a_Security_Group_in_a_Peered_VPC"></a>
+### Allow traffic from a security group in a peered VPC<a name="aws-properties-ec2-security-group-ingress--examples--Allow_traffic_from_a_security_group_in_a_peered_VPC"></a>
 
-Like the previous example, the following example allows one\-way traffic from an originating \(source\) security group to a destination \(target\) security group\. However, in this example the security groups are in peered VPCs across AWS accounts\. You might want to allow cross\-account traffic if, for example, you create a security scanning resource in one AWS account that you'll use to run diagnostics in another account\. This example adds an ingress rule to a target VPC security group that allows incoming traffic from a source security group in a different AWS account\. Note that the source security group also needs an egress rule that allows outgoing traffic to the target security group\. Because the source security group is in a different account, the following example doesn't use the Ref function to reference the source security group ID but instead directly specifies the security group ID `sg-12345678`\. 
+The following example allows one\-way traffic from an originating \(source\) security group to a destination \(target\) security group\. However, in this example the security groups are in peered VPCs across AWS accounts\. You might want to allow cross\-account traffic if, for example, you create a security scanning resource in one AWS account that you'll use to run diagnostics in another account\. This example adds an ingress rule to a target VPC security group that allows incoming traffic from a source security group in a different AWS account\. Note that the source security group also needs an egress rule that allows outgoing traffic to the target security group\. Because the source security group is in a different account, the following example doesn't use the Ref function to reference the source security group ID but instead directly specifies the security group ID `sg-12345678`\. 
 
-#### JSON<a name="aws-properties-ec2-security-group-ingress--examples--Allow_Traffic_from_a_Security_Group_in_a_Peered_VPC--json"></a>
+#### JSON<a name="aws-properties-ec2-security-group-ingress--examples--Allow_traffic_from_a_security_group_in_a_peered_VPC--json"></a>
 
 ```
 {
@@ -228,8 +287,8 @@ Like the previous example, the following example allows one\-way traffic from an
                     ]
                 },
                 "IpProtocol": "tcp",
-                "FromPort": "80",
-                "ToPort": "80",
+                "FromPort": 80,
+                "ToPort": 80,
                 "SourceSecurityGroupId": "sg-12345678",
                 "SourceSecurityGroupOwnerId": "123456789012"
             }
@@ -238,7 +297,7 @@ Like the previous example, the following example allows one\-way traffic from an
 }
 ```
 
-#### YAML<a name="aws-properties-ec2-security-group-ingress--examples--Allow_Traffic_from_a_Security_Group_in_a_Peered_VPC--yaml"></a>
+#### YAML<a name="aws-properties-ec2-security-group-ingress--examples--Allow_traffic_from_a_security_group_in_a_peered_VPC--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -253,158 +312,8 @@ Resources:
     Properties:
       GroupId: !GetAtt TargetSG.GroupId
       IpProtocol: tcp
-      FromPort: '80'
-      ToPort: '80'
+      FromPort: 80
+      ToPort: 80
       SourceSecurityGroupId: sg-12345678
       SourceSecurityGroupOwnerId: '123456789012'
-```
-
-### VPC Security Groups with Egress and Ingress Rules<a name="aws-properties-ec2-security-group-ingress--examples--VPC_Security_Groups_with_Egress_and_Ingress_Rules"></a>
-
-In some cases, you might have an originating \(source\) security group to which you want to add an outbound rule that allows traffic to a destination \(target\) security group\. The target security group also needs an inbound rule that allows traffic from the source security group\. Note that you cannot use the Ref function to specify the outbound and inbound rules for each security group\. Doing so creates a circular dependency; you cannot have two resources that depend on each other\. Instead, use the egress and ingress resources to declare these outbound and inbound rules, as shown in the following template example\. 
-
-#### JSON<a name="aws-properties-ec2-security-group-ingress--examples--VPC_Security_Groups_with_Egress_and_Ingress_Rules--json"></a>
-
-```
-"Resources": {
-   "SourceSG": {
-      "Type": "AWS::EC2::SecurityGroup",
-      "Properties": {
-         "VpcId" : "vpc-1a2b3c4d",
-         "GroupDescription": "Sample source security group"
-      }
-   },
-   "TargetSG": {
-      "Type": "AWS::EC2::SecurityGroup",
-      "Properties": {
-         "VpcId" : "vpc-1a2b3c4d",
-         "GroupDescription": "Sample target security group"
-      }
-   },
-   "OutboundRule": {
-      "Type": "AWS::EC2::SecurityGroupEgress",
-      "Properties":{
-         "IpProtocol": "tcp",
-         "FromPort": 0,
-         "ToPort": 65535,
-         "DestinationSecurityGroupId": {
-            "Fn::GetAtt": [
-               "TargetSG",
-               "GroupId"
-            ]
-         },
-         "GroupId": {
-            "Fn::GetAtt": [
-               "SourceSG",
-               "GroupId"
-            ]
-         }
-      }
-   },
-   "InboundRule": {
-      "Type": "AWS::EC2::SecurityGroupIngress",
-      "Properties":{
-         "IpProtocol": "tcp",
-         "FromPort": 0,
-         "ToPort": 65535,
-         "SourceSecurityGroupId": {
-           "Fn::GetAtt": [
-             "SourceSG",
-             "GroupId"
-            ]
-         },
-         "GroupId": {
-            "Fn::GetAtt": [
-              "TargetSG",
-              "GroupId"
-            ]
-         }
-      }
-   }
-}
-```
-
-#### YAML<a name="aws-properties-ec2-security-group-ingress--examples--VPC_Security_Groups_with_Egress_and_Ingress_Rules--yaml"></a>
-
-```
-SourceSG:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      VpcId: vpc-1a2b3c4d
-      GroupDescription: Sample source security group
-TargetSG:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      VpcId: vpc-1a2b3c4d
-      GroupDescription: Sample target security group
-OutboundRule:
-    Type: AWS::EC2::SecurityGroupEgress
-    Properties:
-      IpProtocol: tcp
-      FromPort: 0
-      ToPort: 65535
-      DestinationSecurityGroupId:
-        Fn::GetAtt:
-        - TargetSG
-        - GroupId
-      GroupId:
-        Fn::GetAtt:
-        - SourceSG
-        - GroupId
-InboundRule:
-    Type: AWS::EC2::SecurityGroupIngress
-    Properties:
-      IpProtocol: tcp
-      FromPort: 0
-      ToPort: 65535
-      SourceSecurityGroupId:
-        Fn::GetAtt:
-        - SourceSG
-        - GroupId
-      GroupId:
-        Fn::GetAtt:
-        - TargetSG
-        - GroupId
-```
-
-### Allow Ping Requests<a name="aws-properties-ec2-security-group-ingress--examples--Allow__Ping_Requests"></a>
-
-To allow ping requests, add the ICMP protocol type and specify 8 \(echo request\) for the ICMP type and either 0 or \-1 \(all\) for the ICMP code\. 
-
-#### JSON<a name="aws-properties-ec2-security-group-ingress--examples--Allow__Ping_Requests--json"></a>
-
-```
-"SGPing" : {
-  "Type" : "AWS::EC2::SecurityGroup",
-  "DependsOn": "VPC",
-  "Properties" : {
-     "GroupDescription" : "SG to test ping",
-     "VpcId" : {"Ref" : "VPC"},
-     "SecurityGroupIngress" : [ 
-        { "IpProtocol" : "tcp", "FromPort" : 22, "ToPort" : 22, "CidrIp" : "10.0.0.0/24" },
-        { "IpProtocol" : "icmp", "FromPort" : 8, "ToPort" : -1, "CidrIp" : "10.0.0.0/24" }
-      ]
-   }
-}
-```
-
-#### YAML<a name="aws-properties-ec2-security-group-ingress--examples--Allow__Ping_Requests--yaml"></a>
-
-```
-SGPing:
-   Type: AWS::EC2::SecurityGroup
-    DependsOn: VPC
-    Properties:
-      GroupDescription: SG to test ping
-      VpcId:
-         Ref: VPC
-      SecurityGroupIngress:
-      - IpProtocol: tcp
-        FromPort: 22
-        ToPort: 22
-        CidrIp: 10.0.0.0/24
-      - IpProtocol: icmp
-        FromPort: 8
-        ToPort: -1
-        CidrIp: 10.0.0.0/24
 ```

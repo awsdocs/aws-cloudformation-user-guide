@@ -1,4 +1,4 @@
-# Amazon SimpleDB Resource Type Reference<a name="AWS_SDB"></a>
+# Amazon SimpleDB resource type reference<a name="AWS_SDB"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::SDB::Domain](aws-properties-simpledb.md)

@@ -1,6 +1,6 @@
 # AWS::Pinpoint::Segment Coordinates<a name="aws-properties-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates"></a>
 
-The latitude and longitude of the location\.
+Specifies the GPS coordinates of a location\.
 
 ## Syntax<a name="aws-properties-pinpoint-segment-segmentdimensions-location-gpspoint-coordinates-syntax"></a>
 

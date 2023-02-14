@@ -1,6 +1,6 @@
-# AmazonMQ Resource Type Reference<a name="AWS_AmazonMQ"></a>
+# Amazon MQ resource type reference<a name="AWS_AmazonMQ"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::AmazonMQ::Broker](aws-resource-amazonmq-broker.md)
 + [AWS::AmazonMQ::Configuration](aws-resource-amazonmq-configuration.md)
 + [AWS::AmazonMQ::ConfigurationAssociation](aws-resource-amazonmq-configurationassociation.md)

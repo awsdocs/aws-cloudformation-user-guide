@@ -15,11 +15,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[LocalDeviceResourceData](#cfn-greengrass-resourcedefinition-resourcedatacontainer-localdeviceresourcedata)" : [LocalDeviceResourceData](aws-properties-greengrass-resourcedefinition-localdeviceresourcedata.md),
-  "[LocalVolumeResourceData](#cfn-greengrass-resourcedefinition-resourcedatacontainer-localvolumeresourcedata)" : [LocalVolumeResourceData](aws-properties-greengrass-resourcedefinition-localvolumeresourcedata.md),
-  "[S3MachineLearningModelResourceData](#cfn-greengrass-resourcedefinition-resourcedatacontainer-s3machinelearningmodelresourcedata)" : [S3MachineLearningModelResourceData](aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.md),
-  "[SageMakerMachineLearningModelResourceData](#cfn-greengrass-resourcedefinition-resourcedatacontainer-sagemakermachinelearningmodelresourcedata)" : [SageMakerMachineLearningModelResourceData](aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.md),
-  "[SecretsManagerSecretResourceData](#cfn-greengrass-resourcedefinition-resourcedatacontainer-secretsmanagersecretresourcedata)" : [SecretsManagerSecretResourceData](aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata.md)
+  "[LocalDeviceResourceData](#cfn-greengrass-resourcedefinition-resourcedatacontainer-localdeviceresourcedata)" : LocalDeviceResourceData,
+  "[LocalVolumeResourceData](#cfn-greengrass-resourcedefinition-resourcedatacontainer-localvolumeresourcedata)" : LocalVolumeResourceData,
+  "[S3MachineLearningModelResourceData](#cfn-greengrass-resourcedefinition-resourcedatacontainer-s3machinelearningmodelresourcedata)" : S3MachineLearningModelResourceData,
+  "[SageMakerMachineLearningModelResourceData](#cfn-greengrass-resourcedefinition-resourcedatacontainer-sagemakermachinelearningmodelresourcedata)" : SageMakerMachineLearningModelResourceData,
+  "[SecretsManagerSecretResourceData](#cfn-greengrass-resourcedefinition-resourcedatacontainer-secretsmanagersecretresourcedata)" : SecretsManagerSecretResourceData
 }
 ```
 
@@ -27,15 +27,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [LocalDeviceResourceData](#cfn-greengrass-resourcedefinition-resourcedatacontainer-localdeviceresourcedata): 
-    [LocalDeviceResourceData](aws-properties-greengrass-resourcedefinition-localdeviceresourcedata.md)
+    LocalDeviceResourceData
   [LocalVolumeResourceData](#cfn-greengrass-resourcedefinition-resourcedatacontainer-localvolumeresourcedata): 
-    [LocalVolumeResourceData](aws-properties-greengrass-resourcedefinition-localvolumeresourcedata.md)
+    LocalVolumeResourceData
   [S3MachineLearningModelResourceData](#cfn-greengrass-resourcedefinition-resourcedatacontainer-s3machinelearningmodelresourcedata): 
-    [S3MachineLearningModelResourceData](aws-properties-greengrass-resourcedefinition-s3machinelearningmodelresourcedata.md)
+    S3MachineLearningModelResourceData
   [SageMakerMachineLearningModelResourceData](#cfn-greengrass-resourcedefinition-resourcedatacontainer-sagemakermachinelearningmodelresourcedata): 
-    [SageMakerMachineLearningModelResourceData](aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.md)
+    SageMakerMachineLearningModelResourceData
   [SecretsManagerSecretResourceData](#cfn-greengrass-resourcedefinition-resourcedatacontainer-secretsmanagersecretresourcedata): 
-    [SecretsManagerSecretResourceData](aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata.md)
+    SecretsManagerSecretResourceData
 ```
 
 ## Properties<a name="aws-properties-greengrass-resourcedefinition-resourcedatacontainer-properties"></a>
@@ -59,7 +59,7 @@ Settings for a machine learning resource stored in Amazon S3\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SageMakerMachineLearningModelResourceData`  <a name="cfn-greengrass-resourcedefinition-resourcedatacontainer-sagemakermachinelearningmodelresourcedata"></a>
-Settings for a machine learning resource saved as an Amazon SageMaker training job\.  
+Settings for a machine learning resource saved as an SageMaker training job\.  
 *Required*: No  
 *Type*: [SageMakerMachineLearningModelResourceData](aws-properties-greengrass-resourcedefinition-sagemakermachinelearningmodelresourcedata.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -70,6 +70,6 @@ Settings for a secret resource\.
 *Type*: [SecretsManagerSecretResourceData](aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-resourcedefinition-resourcedatacontainer--seealso"></a>
-+  [ResourceDataContainer](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-resourcedatacontainer.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+## See also<a name="aws-properties-greengrass-resourcedefinition-resourcedatacontainer--seealso"></a>
++  [ResourceDataContainer](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-resourcedatacontainer.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

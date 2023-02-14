@@ -36,9 +36,13 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Maximum*: `10`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-inspector-resourcegroup-return-values"></a>
+## Return values<a name="aws-resource-inspector-resourcegroup-return-values"></a>
 
 ### Ref<a name="aws-resource-inspector-resourcegroup-return-values-ref"></a>
+
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the new resource group\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ### Fn::GetAtt<a name="aws-resource-inspector-resourcegroup-return-values-fn--getatt"></a>
 
@@ -53,11 +57,13 @@ The Amazon Resource Name \(ARN\) that specifies the resource group that is creat
 
 ## Examples<a name="aws-resource-inspector-resourcegroup--examples"></a>
 
-### Declaring an Amazon Inspector Reource Group Resource<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Reource_Group_Resource"></a>
+
+
+### Declaring an Amazon Inspector Resource Group Resource<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Resource_Group_Resource"></a>
 
 The following example shows how to declare an `AWS::Inspector::ResourceGroup` resource to create an Amazon Inspector resource group\.
 
-#### JSON<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Reource_Group_Resource--json"></a>
+#### JSON<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Resource_Group_Resource--json"></a>
 
 ```
 "myresourcegroup": {
@@ -73,13 +79,13 @@ The following example shows how to declare an `AWS::Inspector::ResourceGroup` re
 }
 ```
 
-#### YAML<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Reource_Group_Resource--yaml"></a>
+#### YAML<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Resource_Group_Resource--yaml"></a>
 
 ```
 myresourcegroup: 
-  Type: "AWS::Inspector::ResourceGroup"
-  Properties: 
-    ResourceGroupTags: 
-      - Key: "Name"
-      Value: "example"
+            Type: "AWS::Inspector::ResourceGroup"
+            Properties: 
+            ResourceGroupTags: 
+            - Key: "Name"
+            Value: "example"
 ```

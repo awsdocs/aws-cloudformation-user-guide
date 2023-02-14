@@ -1,8 +1,8 @@
 # AWS::Route53Resolver::ResolverEndpoint<a name="aws-resource-route53resolver-resolverendpoint"></a>
 
-Creates a resolver endpoint\. There are two types of resolver endpoints, inbound and outbound:
-+ An *inbound resolver endpoint* forwards DNS queries to the DNS service for a VPC from your network or another VPC\.
-+ An *outbound resolver endpoint* forwards DNS queries from the DNS service for a VPC to your network or another VPC\.
+Creates a Resolver endpoint\. There are two types of Resolver endpoints, inbound and outbound:
++ An *inbound Resolver endpoint* forwards DNS queries to the DNS service for a VPC from your network\.
++ An *outbound Resolver endpoint* forwards DNS queries from the DNS service for a VPC to your network\.
 
 ## Syntax<a name="aws-resource-route53resolver-resolverendpoint-syntax"></a>
 
@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Route53Resolver::ResolverEndpoint",
   "Properties" : {
       "[Direction](#cfn-route53resolver-resolverendpoint-direction)" : String,
-      "[IpAddresses](#cfn-route53resolver-resolverendpoint-ipaddresses)" : [ [IpAddressRequest](aws-properties-route53resolver-resolverendpoint-ipaddressrequest.md), ... ],
+      "[IpAddresses](#cfn-route53resolver-resolverendpoint-ipaddresses)" : [ IpAddressRequest, ... ],
       "[Name](#cfn-route53resolver-resolverendpoint-name)" : String,
       "[SecurityGroupIds](#cfn-route53resolver-resolverendpoint-securitygroupids)" : [ String, ... ],
       "[Tags](#cfn-route53resolver-resolverendpoint-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -30,7 +30,7 @@ Type: AWS::Route53Resolver::ResolverEndpoint
 Properties: 
   [Direction](#cfn-route53resolver-resolverendpoint-direction): String
   [IpAddresses](#cfn-route53resolver-resolverendpoint-ipaddresses): 
-    - [IpAddressRequest](aws-properties-route53resolver-resolverendpoint-ipaddressrequest.md)
+    - IpAddressRequest
   [Name](#cfn-route53resolver-resolverendpoint-name): String
   [SecurityGroupIds](#cfn-route53resolver-resolverendpoint-securitygroupids): 
     - String
@@ -41,12 +41,12 @@ Properties:
 ## Properties<a name="aws-resource-route53resolver-resolverendpoint-properties"></a>
 
 `Direction`  <a name="cfn-route53resolver-resolverendpoint-direction"></a>
-Indicates whether the resolver endpoint allows inbound or outbound DNS queries:  
-+  `INBOUND`: allows DNS queries to your VPC from your network or another VPC
-+  `OUTBOUND`: allows DNS queries from your VPC to your network or another VPC
+Indicates whether the Resolver endpoint allows inbound or outbound DNS queries:  
++  `INBOUND`: allows DNS queries to your VPC from your network
++  `OUTBOUND`: allows DNS queries from your VPC to your network
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `INBOUND | OUTBOUND`  
+*Allowed values*: `INBOUND | OUTBOUND`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IpAddresses`  <a name="cfn-route53resolver-resolverendpoint-ipaddresses"></a>
@@ -61,7 +61,7 @@ A friendly name that lets you easily find a configuration in the Resolver dashbo
 *Required*: No  
 *Type*: String  
 *Maximum*: `64`  
-*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9-_' ']+)`  
+*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9\-_' ']+)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-route53resolver-resolverendpoint-securitygroupids"></a>
@@ -71,12 +71,13 @@ The ID of one or more security groups that control access to this VPC\. The secu
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-route53resolver-resolverendpoint-tags"></a>
-A list of the tag keys and values that you want to associate with the endpoint\.  
+Route 53 Resolver doesn't support updating tags through CloudFormation\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-route53resolver-resolverendpoint-return-values"></a>
+## Return values<a name="aws-resource-route53resolver-resolverendpoint-return-values"></a>
 
 ### Ref<a name="aws-resource-route53resolver-resolverendpoint-return-values-ref"></a>
 
@@ -93,7 +94,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-route53resolver-resolverendpoint-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the resolver endpoint, such as `arn:aws:route53Resolver:us-east-1:123456789012:resolver-endpoint/resolver-endpoint-a1bzhi`\.
+The Amazon Resource Name \(ARN\) of the resolver endpoint, such as `arn:aws:route53resolver:us-east-1:123456789012:resolver-endpoint/resolver-endpoint-a1bzhi`\.
 
 `Direction`  <a name="Direction-fn::getatt"></a>
 Indicates whether the resolver endpoint allows inbound or outbound DNS queries\.
@@ -111,6 +112,8 @@ The name that you assigned to the resolver endpoint when you created the endpoin
 The ID of the resolver endpoint\.
 
 ## Examples<a name="aws-resource-route53resolver-resolverendpoint--examples"></a>
+
+
 
 ### Create Resolver endpoint<a name="aws-resource-route53resolver-resolverendpoint--examples--Create_Resolver_endpoint"></a>
 
@@ -161,5 +164,6 @@ Properties :
       Value: Engineering
 ```
 
-## See Also<a name="aws-resource-route53resolver-resolverendpoint--seealso"></a>
+## See also<a name="aws-resource-route53resolver-resolverendpoint--seealso"></a>
 +  [ResolverEndpoint](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ResolverEndpoint.html) in the *Amazon Route 53 API Reference* 
+

@@ -1,11 +1,11 @@
 # AWS::CodeDeploy::DeploymentGroup LoadBalancerInfo<a name="aws-properties-codedeploy-deploymentgroup-loadbalancerinfo"></a>
 
-The `LoadBalancerInfo` property type specifies information about the load balancer or target group used for an AWS CodeDeploy deployment group\. For more information, see [ Integrating CodeDeploy with Elastic Load Balancing ](https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-elastic-load-balancing.html) in the *AWS CodeDeploy User Guide*\.
+The `LoadBalancerInfo` property type specifies information about the load balancer or target group used for an AWS CodeDeploy deployment group\. For more information, see [ Integrating CodeDeploy with Elastic Load Balancing](https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-elastic-load-balancing.html) in the *AWS CodeDeploy User Guide*\.
 
 For AWS CloudFormation to use the properties specified in `LoadBalancerInfo`, the `DeploymentStyle.DeploymentOption` property must be set to `WITH_TRAFFIC_CONTROL`\. If `DeploymentStyle.DeploymentOption` is not set to `WITH_TRAFFIC_CONTROL`, AWS CloudFormation ignores any settings specified in `LoadBalancerInfo`\.
 
 **Note**  
-AWS CloudFormation supports blue/green deployments on EC2/On\-premises compute platforms only\.
+AWS CloudFormation supports blue/green deployments on the AWS Lambda compute platform only\.
 
  `LoadBalancerInfo` is a property of the [DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html) resource\. 
 
@@ -17,8 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[ElbInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist)" : [ [ELBInfo](aws-properties-codedeploy-deploymentgroup-elbinfo.md), ... ],
-  "[TargetGroupInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist)" : [ [TargetGroupInfo](aws-properties-codedeploy-deploymentgroup-targetgroupinfo.md), ... ]
+  "[ElbInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist)" : [ ELBInfo, ... ],
+  "[TargetGroupInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist)" : [ TargetGroupInfo, ... ]
 }
 ```
 
@@ -26,9 +26,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ElbInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist): 
-    - [ELBInfo](aws-properties-codedeploy-deploymentgroup-elbinfo.md)
+    - ELBInfo
   [TargetGroupInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist): 
-    - [TargetGroupInfo](aws-properties-codedeploy-deploymentgroup-targetgroupinfo.md)
+    - TargetGroupInfo
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-loadbalancerinfo-properties"></a>
@@ -43,6 +43,6 @@ An array that contains information about the load balancer to use for load balan
 `TargetGroupInfoList`  <a name="cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist"></a>
 An array that contains information about the target group to use for load balancing in a deployment\. In Elastic Load Balancing, target groups are used with Application Load Balancers\.  
  Adding more than one target group to the array is not supported\. 
-*Required*: No  
+*Required*: Conditional  
 *Type*: List of [TargetGroupInfo](aws-properties-codedeploy-deploymentgroup-targetgroupinfo.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

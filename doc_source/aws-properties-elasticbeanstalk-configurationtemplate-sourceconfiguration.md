@@ -30,7 +30,7 @@ The name of the application associated with the configuration\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `100`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TemplateName`  <a name="cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration-templatename"></a>
 The name of the configuration template\.  
@@ -38,4 +38,4 @@ The name of the configuration template\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `100`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

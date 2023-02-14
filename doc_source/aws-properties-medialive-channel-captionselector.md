@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[LanguageCode](#cfn-medialive-channel-captionselector-languagecode)" : String,
   "[Name](#cfn-medialive-channel-captionselector-name)" : String,
-  "[SelectorSettings](#cfn-medialive-channel-captionselector-selectorsettings)" : [CaptionSelectorSettings](aws-properties-medialive-channel-captionselectorsettings.md)
+  "[SelectorSettings](#cfn-medialive-channel-captionselector-selectorsettings)" : CaptionSelectorSettings
 }
 ```
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [LanguageCode](#cfn-medialive-channel-captionselector-languagecode): String
   [Name](#cfn-medialive-channel-captionselector-name): String
   [SelectorSettings](#cfn-medialive-channel-captionselector-selectorsettings): 
-    [CaptionSelectorSettings](aws-properties-medialive-channel-captionselectorsettings.md)
+    CaptionSelectorSettings
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-captionselector-properties"></a>

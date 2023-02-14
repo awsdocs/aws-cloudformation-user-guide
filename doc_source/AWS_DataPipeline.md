@@ -1,4 +1,4 @@
-# AWS Data Pipeline Resource Type Reference<a name="AWS_DataPipeline"></a>
+# AWS Data Pipeline resource type reference<a name="AWS_DataPipeline"></a>
 
-**Resource Types**
+**Resource types**
 + [AWS::DataPipeline::Pipeline](aws-resource-datapipeline-pipeline.md)

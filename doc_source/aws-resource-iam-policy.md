@@ -58,9 +58,9 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 The policy document\.  
 You must provide policies in JSON format in IAM\. However, for AWS CloudFormation templates formatted in YAML, you can provide the policy in JSON or YAML format\. AWS CloudFormation always converts a YAML policy to JSON format before submitting it to IAM\.  
 The [regex pattern](http://wikipedia.org/wiki/regex) used to validate this parameter is a string of characters consisting of the following:  
-+ Any printable ASCII character ranging from the space character \(\\u0020\) through the end of the ASCII character range
-+ The printable characters in the Basic Latin and Latin\-1 Supplement character set \(through \\u00FF\)
-+ The special characters tab \(\\u0009\), line feed \(\\u000A\), and carriage return \(\\u000D\)
++ Any printable ASCII character ranging from the space character \(`\u0020`\) through the end of the ASCII character range
++ The printable characters in the Basic Latin and Latin\-1 Supplement character set \(through `\u00FF`\)
++ The special characters tab \(`\u0009`\), line feed \(`\u000A`\), and carriage return \(`\u000D`\)
 *Required*: Yes  
 *Type*: Json  
 *Minimum*: `1`  
@@ -96,7 +96,7 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 *Pattern*: `[\w+=,.@-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-iam-policy-return-values"></a>
+## Return values<a name="aws-resource-iam-policy-return-values"></a>
 
 ### Ref<a name="aws-resource-iam-policy-return-values-ref"></a>
 
@@ -106,9 +106,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-iam-policy--examples"></a>
 
-### IAM Policy with policy group<a name="aws-resource-iam-policy--examples--IAM_Policy_with_policy_group"></a>
 
-#### JSON<a name="aws-resource-iam-policy--examples--IAM_Policy_with_policy_group--json"></a>
+
+### IAM Policy with policy group<a name="aws-resource-iam-policy--examples--_Policy_with_policy_group"></a>
+
+#### JSON<a name="aws-resource-iam-policy--examples--_Policy_with_policy_group--json"></a>
 
 ```
 {
@@ -138,14 +140,14 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 }
 ```
 
-#### YAML<a name="aws-resource-iam-policy--examples--IAM_Policy_with_policy_group--yaml"></a>
+#### YAML<a name="aws-resource-iam-policy--examples--_Policy_with_policy_group--yaml"></a>
 
 ```
 Type: 'AWS::IAM::Policy'
 Properties:
   PolicyName: CFNUsers
   PolicyDocument:
-    Version: 2012-10-17
+    Version: "2012-10-17"
     Statement:
       - Effect: Allow
         Action:
@@ -157,9 +159,9 @@ Properties:
     - !Ref CFNUserGroup
 ```
 
-### IAM Policy with specified role<a name="aws-resource-iam-policy--examples--IAM_Policy_with_specified_role"></a>
+### IAM Policy with specified role<a name="aws-resource-iam-policy--examples--_Policy_with_specified_role"></a>
 
-#### JSON<a name="aws-resource-iam-policy--examples--IAM_Policy_with_specified_role--json"></a>
+#### JSON<a name="aws-resource-iam-policy--examples--_Policy_with_specified_role--json"></a>
 
 ```
 {
@@ -185,14 +187,14 @@ Properties:
 }
 ```
 
-#### YAML<a name="aws-resource-iam-policy--examples--IAM_Policy_with_specified_role--yaml"></a>
+#### YAML<a name="aws-resource-iam-policy--examples--_Policy_with_specified_role--yaml"></a>
 
 ```
 Type: 'AWS::IAM::Policy'
 Properties:
   PolicyName: root
   PolicyDocument:
-    Version: 2012-10-17
+    Version: "2012-10-17"
     Statement:
       - Effect: Allow
         Action: '*'
@@ -201,5 +203,6 @@ Properties:
     - !Ref RootRole
 ```
 
-## See Also<a name="aws-resource-iam-policy--seealso"></a>
+## See also<a name="aws-resource-iam-policy--seealso"></a>
 +  [CreatePolicy](https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html) in the *AWS Identity and Access Management API Reference* 
+
