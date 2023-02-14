@@ -109,7 +109,7 @@ The following example is a billing group that takes a list of linked account IDs
 {
   "Parameters": {
       "LinkedAccountIds": {
-      "Type": "ListNumber"
+          "Type": "List<Number>"
       },
       "PrimaryAccountId": {
           "Type": "Number"
@@ -145,18 +145,18 @@ The following example is a billing group that takes a list of linked account IDs
 ```
 Parameters:
   LinkedAccountIds:
-  Type: ListNumber
+    Type: List<Number>
   PrimaryAccountId:
-      Type: Number
+    Type: Number
 Resources:
   TestBillingGroup:
-      Type: 'AWS::BillingConductor::BillingGroup'
-      Properties:
-        Name: 'TestBillingGroup'
-        Description: 'Test billing group created through CloudFormation with 1 linked account. The linked account is also the primary account.'
-        PrimaryAccountId: !Ref PrimaryAccountId
-        AccountGrouping:
-            LinkedAccountIds: !Ref LinkedAccountIds
-        ComputationPreference:
-            PricingPlanArn: !GetAtt TestPricingPlan.Arn
+    Type: 'AWS::BillingConductor::BillingGroup'
+    Properties:
+      Name: 'TestBillingGroup'
+      Description: 'Test billing group created through CloudFormation with 1 linked account. The linked account is also the primary account.'
+      PrimaryAccountId: !Ref PrimaryAccountId
+      AccountGrouping:
+        LinkedAccountIds: !Ref LinkedAccountIds
+      ComputationPreference:
+        PricingPlanArn: !GetAtt TestPricingPlan.Arn
 ```
