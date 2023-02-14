@@ -2,6 +2,8 @@
 
 Information about one audio to extract from the input\.
 
+The parent of this entity is InputSettings\.
+
 ## Syntax<a name="aws-properties-medialive-channel-audioselector-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -11,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Name](#cfn-medialive-channel-audioselector-name)" : String,
-  "[SelectorSettings](#cfn-medialive-channel-audioselector-selectorsettings)" : [AudioSelectorSettings](aws-properties-medialive-channel-audioselectorsettings.md)
+  "[SelectorSettings](#cfn-medialive-channel-audioselector-selectorsettings)" : AudioSelectorSettings
 }
 ```
 
@@ -20,7 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Name](#cfn-medialive-channel-audioselector-name): String
   [SelectorSettings](#cfn-medialive-channel-audioselector-selectorsettings): 
-    [AudioSelectorSettings](aws-properties-medialive-channel-audioselectorsettings.md)
+    AudioSelectorSettings
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-audioselector-properties"></a>

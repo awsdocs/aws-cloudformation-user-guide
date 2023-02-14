@@ -15,7 +15,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ApiGatewayV2::DomainName",
   "Properties" : {
       "[DomainName](#cfn-apigatewayv2-domainname-domainname)" : String,
-      "[DomainNameConfigurations](#cfn-apigatewayv2-domainname-domainnameconfigurations)" : [ [DomainNameConfiguration](aws-properties-apigatewayv2-domainname-domainnameconfiguration.md), ... ]
+      "[DomainNameConfigurations](#cfn-apigatewayv2-domainname-domainnameconfigurations)" : [ DomainNameConfiguration, ... ],
+      "[MutualTlsAuthentication](#cfn-apigatewayv2-domainname-mutualtlsauthentication)" : MutualTlsAuthentication,
+      "[Tags](#cfn-apigatewayv2-domainname-tags)" : Json
     }
 }
 ```
@@ -27,7 +29,10 @@ Type: AWS::ApiGatewayV2::DomainName
 Properties: 
   [DomainName](#cfn-apigatewayv2-domainname-domainname): String
   [DomainNameConfigurations](#cfn-apigatewayv2-domainname-domainnameconfigurations): 
-    - [DomainNameConfiguration](aws-properties-apigatewayv2-domainname-domainnameconfiguration.md)
+    - DomainNameConfiguration
+  [MutualTlsAuthentication](#cfn-apigatewayv2-domainname-mutualtlsauthentication): 
+    MutualTlsAuthentication
+  [Tags](#cfn-apigatewayv2-domainname-tags): Json
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-domainname-properties"></a>
@@ -44,7 +49,19 @@ The domain name configurations\.
 *Type*: List of [DomainNameConfiguration](aws-properties-apigatewayv2-domainname-domainnameconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-apigatewayv2-domainname-return-values"></a>
+`MutualTlsAuthentication`  <a name="cfn-apigatewayv2-domainname-mutualtlsauthentication"></a>
+The mutual TLS authentication configuration for a custom domain name\.  
+*Required*: No  
+*Type*: [MutualTlsAuthentication](aws-properties-apigatewayv2-domainname-mutualtlsauthentication.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-apigatewayv2-domainname-tags"></a>
+The collection of tags associated with a domain name\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-apigatewayv2-domainname-return-values"></a>
 
 ### Ref<a name="aws-resource-apigatewayv2-domainname-return-values-ref"></a>
 
@@ -67,6 +84,8 @@ The domain name associated with the regional endpoint for this custom domain nam
 The region\-specific Amazon Route 53 Hosted Zone ID of the regional endpoint\.
 
 ## Examples<a name="aws-resource-apigatewayv2-domainname--examples"></a>
+
+
 
 ### Domain name creation example<a name="aws-resource-apigatewayv2-domainname--examples--Domain_name_creation_example"></a>
 
@@ -106,5 +125,6 @@ MyDomainName:
         CertificateName: testCertificate
 ```
 
-## See Also<a name="aws-resource-apigatewayv2-domainname--seealso"></a>
+## See also<a name="aws-resource-apigatewayv2-domainname--seealso"></a>
 + [CreateDomainName](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/domainnames.html#CreateDomainName) in the *Amazon API Gateway Version 2 API Reference*
+

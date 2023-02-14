@@ -1,6 +1,6 @@
 # AWS::Route53Resolver::ResolverRuleAssociation<a name="aws-resource-route53resolver-resolverruleassociation"></a>
 
-In the response to an [AssociateResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverRule.html), [DisassociateResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DisassociateResolverRule.html), or [ListResolverRuleAssociations](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListResolverRuleAssociations.html) request, information about an association between a resolver rule and a VPC\.
+In the response to an [AssociateResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverRule.html), [DisassociateResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DisassociateResolverRule.html), or [ListResolverRuleAssociations](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListResolverRuleAssociations.html) request, provides information about an association between a resolver rule and a VPC\. The association determines which DNS queries that originate in the VPC are forwarded to your network\. 
 
 ## Syntax<a name="aws-resource-route53resolver-resolverruleassociation-syntax"></a>
 
@@ -32,15 +32,15 @@ Properties:
 ## Properties<a name="aws-resource-route53resolver-resolverruleassociation-properties"></a>
 
 `Name`  <a name="cfn-route53resolver-resolverruleassociation-name"></a>
-The name of an association between a resolver rule and a VPC\.  
+The name of an association between a Resolver rule and a VPC\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `64`  
-*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9-_' ']+)`  
+*Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9\-_' ']+)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ResolverRuleId`  <a name="cfn-route53resolver-resolverruleassociation-resolverruleid"></a>
-The ID of the resolver rule that you associated with the VPC that is specified by `VPCId`\.  
+The ID of the Resolver rule that you associated with the VPC that is specified by `VPCId`\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -48,14 +48,14 @@ The ID of the resolver rule that you associated with the VPC that is specified b
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VPCId`  <a name="cfn-route53resolver-resolverruleassociation-vpcid"></a>
-The ID of the VPC that you associated the resolver rule with\.  
+The ID of the VPC that you associated the Resolver rule with\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `64`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-route53resolver-resolverruleassociation-return-values"></a>
+## Return values<a name="aws-resource-route53resolver-resolverruleassociation-return-values"></a>
 
 ### Ref<a name="aws-resource-route53resolver-resolverruleassociation-return-values-ref"></a>
 
@@ -83,5 +83,6 @@ The ID of the resolver rule that you associated with the VPC that is specified b
 `VPCId`  <a name="VPCId-fn::getatt"></a>
 The ID of the VPC that you associated the resolver rule with, such as `vpc-03cf94c75cexample`\.
 
-## See Also<a name="aws-resource-route53resolver-resolverruleassociation--seealso"></a>
+## See also<a name="aws-resource-route53resolver-resolverruleassociation--seealso"></a>
 +  [ResolverRuleAssociation](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ResolverRuleAssociation.html) in the *Amazon Route 53 API Reference* 
+

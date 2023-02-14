@@ -2,7 +2,7 @@
 
 Contains information associated with an Amazon CloudWatch event destination to which email sending events are published\.
 
-Event destinations, such as Amazon CloudWatch, are associated with configuration sets, which enable you to publish email sending events\. For information about using configuration sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/monitor-sending-activity.html)\.
+Event destinations, such as Amazon CloudWatch, are associated with configuration sets, which enable you to publish email sending events\. For information about using configuration sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html)\.
 
 ## Syntax<a name="aws-properties-ses-configurationseteventdestination-cloudwatchdestination-syntax"></a>
 
@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[DimensionConfigurations](#cfn-ses-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations)" : [ [DimensionConfiguration](aws-properties-ses-configurationseteventdestination-dimensionconfiguration.md), ... ]
+  "[DimensionConfigurations](#cfn-ses-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations)" : [ DimensionConfiguration, ... ]
 }
 ```
 
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DimensionConfigurations](#cfn-ses-configurationseteventdestination-cloudwatchdestination-dimensionconfigurations): 
-    - [DimensionConfiguration](aws-properties-ses-configurationseteventdestination-dimensionconfiguration.md)
+    - DimensionConfiguration
 ```
 
 ## Properties<a name="aws-properties-ses-configurationseteventdestination-cloudwatchdestination-properties"></a>

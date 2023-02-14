@@ -1,6 +1,8 @@
 # AWS::AutoScaling::ScalingPolicy PredefinedMetricSpecification<a name="aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification"></a>
 
- `PredefinedMetricSpecification` is a subproperty of [TargetTrackingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html) that configures a predefined metric for a target tracking policy to use with Amazon EC2 Auto Scaling\. 
+Contains predefined metric specification information for a target tracking scaling policy for Amazon EC2 Auto Scaling\.
+
+ `PredefinedMetricSpecification` is a property of the [AWS::AutoScaling::ScalingPolicy TargetTrackingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html) property type\.
 
 ## Syntax<a name="aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification-syntax"></a>
 
@@ -32,7 +34,7 @@ The metric type\. The following predefined metrics are available\.
 +  `ALBRequestCountPerTarget` \- Number of requests completed per target in an Application Load Balancer target group\.
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `ALBRequestCountPerTarget | ASGAverageCPUUtilization | ASGAverageNetworkIn | ASGAverageNetworkOut`  
+*Allowed values*: `ALBRequestCountPerTarget | ASGAverageCPUUtilization | ASGAverageNetworkIn | ASGAverageNetworkOut`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceLabel`  <a name="cfn-autoscaling-scalingpolicy-predefinedmetricspecification-resourcelabel"></a>

@@ -36,7 +36,7 @@ The hard limit for the ulimit type\.
 The `type` of the `ulimit`\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `core | cpu | data | fsize | locks | memlock | msgqueue | nice | nofile | nproc | rss | rtprio | rttime | sigpending | stack`  
+*Allowed values*: `core | cpu | data | fsize | locks | memlock | msgqueue | nice | nofile | nproc | rss | rtprio | rttime | sigpending | stack`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SoftLimit`  <a name="cfn-ecs-taskdefinition-containerdefinition-ulimit-softlimit"></a>

@@ -1,4 +1,5 @@
-# AWS Certificate Manager Resource Type Reference<a name="AWS_CertificateManager"></a>
+# AWS Certificate Manager resource type reference<a name="AWS_CertificateManager"></a>
 
-**Resource Types**
+**Resource types**
++ [AWS::CertificateManager::Account](aws-resource-certificatemanager-account.md)
 + [AWS::CertificateManager::Certificate](aws-resource-certificatemanager-certificate.md)

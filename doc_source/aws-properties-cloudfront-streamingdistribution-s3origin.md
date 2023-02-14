@@ -40,5 +40,6 @@ For more information, see [Using an Origin Access Identity to Restrict Access to
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## See Also<a name="aws-properties-cloudfront-streamingdistribution-s3origin--seealso"></a>
+## See also<a name="aws-properties-cloudfront-streamingdistribution-s3origin--seealso"></a>
 +  [S3Origin](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_S3Origin.html) in the *Amazon CloudFront API Reference* 
+

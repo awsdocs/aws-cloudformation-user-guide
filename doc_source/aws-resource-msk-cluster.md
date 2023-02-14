@@ -12,14 +12,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::MSK::Cluster",
   "Properties" : {
-      "[BrokerNodeGroupInfo](#cfn-msk-cluster-brokernodegroupinfo)" : [BrokerNodeGroupInfo](aws-properties-msk-cluster-brokernodegroupinfo.md),
-      "[ClientAuthentication](#cfn-msk-cluster-clientauthentication)" : [ClientAuthentication](aws-properties-msk-cluster-clientauthentication.md),
+      "[BrokerNodeGroupInfo](#cfn-msk-cluster-brokernodegroupinfo)" : BrokerNodeGroupInfo,
+      "[ClientAuthentication](#cfn-msk-cluster-clientauthentication)" : ClientAuthentication,
       "[ClusterName](#cfn-msk-cluster-clustername)" : String,
-      "[ConfigurationInfo](#cfn-msk-cluster-configurationinfo)" : [ConfigurationInfo](aws-properties-msk-cluster-configurationinfo.md),
-      "[EncryptionInfo](#cfn-msk-cluster-encryptioninfo)" : [EncryptionInfo](aws-properties-msk-cluster-encryptioninfo.md),
+      "[ConfigurationInfo](#cfn-msk-cluster-configurationinfo)" : ConfigurationInfo,
+      "[CurrentVersion](#cfn-msk-cluster-currentversion)" : String,
+      "[EncryptionInfo](#cfn-msk-cluster-encryptioninfo)" : EncryptionInfo,
       "[EnhancedMonitoring](#cfn-msk-cluster-enhancedmonitoring)" : String,
       "[KafkaVersion](#cfn-msk-cluster-kafkaversion)" : String,
+      "[LoggingInfo](#cfn-msk-cluster-logginginfo)" : LoggingInfo,
       "[NumberOfBrokerNodes](#cfn-msk-cluster-numberofbrokernodes)" : Integer,
+      "[OpenMonitoring](#cfn-msk-cluster-openmonitoring)" : OpenMonitoring,
       "[Tags](#cfn-msk-cluster-tags)" : {Key : Value, ...}
     }
 }
@@ -31,17 +34,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::MSK::Cluster
 Properties: 
   [BrokerNodeGroupInfo](#cfn-msk-cluster-brokernodegroupinfo): 
-    [BrokerNodeGroupInfo](aws-properties-msk-cluster-brokernodegroupinfo.md)
+    BrokerNodeGroupInfo
   [ClientAuthentication](#cfn-msk-cluster-clientauthentication): 
-    [ClientAuthentication](aws-properties-msk-cluster-clientauthentication.md)
+    ClientAuthentication
   [ClusterName](#cfn-msk-cluster-clustername): String
   [ConfigurationInfo](#cfn-msk-cluster-configurationinfo): 
-    [ConfigurationInfo](aws-properties-msk-cluster-configurationinfo.md)
+    ConfigurationInfo
+  [CurrentVersion](#cfn-msk-cluster-currentversion): String
   [EncryptionInfo](#cfn-msk-cluster-encryptioninfo): 
-    [EncryptionInfo](aws-properties-msk-cluster-encryptioninfo.md)
+    EncryptionInfo
   [EnhancedMonitoring](#cfn-msk-cluster-enhancedmonitoring): String
   [KafkaVersion](#cfn-msk-cluster-kafkaversion): String
+  [LoggingInfo](#cfn-msk-cluster-logginginfo): 
+    LoggingInfo
   [NumberOfBrokerNodes](#cfn-msk-cluster-numberofbrokernodes): Integer
+  [OpenMonitoring](#cfn-msk-cluster-openmonitoring): 
+    OpenMonitoring
   [Tags](#cfn-msk-cluster-tags): 
     Key : Value
 ```
@@ -50,15 +58,16 @@ Properties:
 
 `BrokerNodeGroupInfo`  <a name="cfn-msk-cluster-brokernodegroupinfo"></a>
 The setup to be used for brokers in the cluster\.  
+AWS CloudFormation may replace the cluster when you update certain `BrokerNodeGroupInfo` properties\. To understand the update behavior for your use case, you should review the child properties for [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokernodegroupinfo.html#aws-properties-msk-cluster-brokernodegroupinfo-properties](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokernodegroupinfo.html#aws-properties-msk-cluster-brokernodegroupinfo-properties)\.
 *Required*: Yes  
 *Type*: [BrokerNodeGroupInfo](aws-properties-msk-cluster-brokernodegroupinfo.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClientAuthentication`  <a name="cfn-msk-cluster-clientauthentication"></a>
 Includes information related to client authentication\.  
 *Required*: No  
 *Type*: [ClientAuthentication](aws-properties-msk-cluster-clientauthentication.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClusterName`  <a name="cfn-msk-cluster-clustername"></a>
 The name of the cluster\.  
@@ -70,25 +79,37 @@ The name of the cluster\.
 The Amazon MSK configuration to use for the cluster\.  
 *Required*: No  
 *Type*: [ConfigurationInfo](aws-properties-msk-cluster-configurationinfo.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CurrentVersion`  <a name="cfn-msk-cluster-currentversion"></a>
+The version of the cluster that you want to update\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncryptionInfo`  <a name="cfn-msk-cluster-encryptioninfo"></a>
 Includes all encryption\-related information\.  
 *Required*: No  
 *Type*: [EncryptionInfo](aws-properties-msk-cluster-encryptioninfo.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnhancedMonitoring`  <a name="cfn-msk-cluster-enhancedmonitoring"></a>
 Specifies the level of monitoring for the MSK cluster\. The possible values are `DEFAULT`, `PER_BROKER`, and `PER_TOPIC_PER_BROKER`\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KafkaVersion`  <a name="cfn-msk-cluster-kafkaversion"></a>
-The version of Apache Kafka\.  
+The version of Apache Kafka\. For more information, see [Supported Apache Kafka versions](https://docs.aws.amazon.com/msk/latest/developerguide/supported-kafka-versions.html) in the Amazon MSK Developer Guide\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LoggingInfo`  <a name="cfn-msk-cluster-logginginfo"></a>
+You can configure your Amazon MSK cluster to send broker logs to different destination types\. This is a container for the configuration details related to broker logs\.  
+*Required*: No  
+*Type*: [LoggingInfo](aws-properties-msk-cluster-logginginfo.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NumberOfBrokerNodes`  <a name="cfn-msk-cluster-numberofbrokernodes"></a>
 The number of broker nodes you want in the Amazon MSK cluster\. You can submit an update to increase the number of broker nodes in a cluster\.  
@@ -96,13 +117,19 @@ The number of broker nodes you want in the Amazon MSK cluster\. You can submit a
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`OpenMonitoring`  <a name="cfn-msk-cluster-openmonitoring"></a>
+The settings for open monitoring\.  
+*Required*: No  
+*Type*: [OpenMonitoring](aws-properties-msk-cluster-openmonitoring.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-msk-cluster-tags"></a>
 A map of key:value pairs to apply to this resource\. Both key and value are of type String\.  
 *Required*: No  
-*Type*: Map  
+*Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## Return Values<a name="aws-resource-msk-cluster-return-values"></a>
+## Return values<a name="aws-resource-msk-cluster-return-values"></a>
 
 ### Ref<a name="aws-resource-msk-cluster-return-values-ref"></a>
 
@@ -114,22 +141,192 @@ For the Amazon MSK cluster `MyTestCluster`, Ref returns the ARN of the cluster\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-msk-cluster-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-msk-cluster-return-values-fn--getatt-fn--getatt"></a>
+
+`Arn`  <a name="Arn-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
+
 ## Examples<a name="aws-resource-msk-cluster--examples"></a>
 
 In the following examples you can find the YAML for each template, followed by the equivalent JSON\. You can use either language\.
 
-### Get Started With Amazon MSK<a name="aws-resource-msk-cluster--examples--Get_Started_With_Amazon_MSK"></a>
+### Create an MSK cluster where you only specify values for required properties<a name="aws-resource-msk-cluster--examples--Create_an_MSK_cluster_where_you_only_specify_values_for_required_properties"></a>
+
+#### YAML<a name="aws-resource-msk-cluster--examples--Create_an_MSK_cluster_where_you_only_specify_values_for_required_properties--yaml"></a>
+
+```
+Description: MSK Cluster with required properties.
+Resources:
+  TestCluster:
+    Type: 'AWS::MSK::Cluster'
+    Properties:
+      ClusterName: ClusterWithRequiredProperties
+      KafkaVersion: 2.2.1
+      NumberOfBrokerNodes: 3
+      BrokerNodeGroupInfo:
+        InstanceType: kafka.m5.large
+        ClientSubnets:
+          - ReplaceWithSubnetId1
+          - ReplaceWithSubnetId2
+          - ReplaceWithSubnetId3
+```
+
+#### JSON<a name="aws-resource-msk-cluster--examples--Create_an_MSK_cluster_where_you_only_specify_values_for_required_properties--json"></a>
+
+```
+{
+  "Description": "MSK Cluster with required properties.",
+  "Resources": {
+    "TestCluster": {
+      "Type": "AWS::MSK::Cluster",
+      "Properties": {
+        "ClusterName": "ClusterWithRequiredProperties",
+        "KafkaVersion": "2.2.1",
+        "NumberOfBrokerNodes": 3,
+        "BrokerNodeGroupInfo": {
+          "InstanceType": "kafka.m5.large",
+          "ClientSubnets": [
+            "ReplaceWithSubnetId1",
+            "ReplaceWithSubnetId2",
+            "ReplaceWithSubnetId3"
+          ]
+        }
+      }
+    }
+  }
+}
+```
+
+### Create an MSK cluster where you explicitly set all properties<a name="aws-resource-msk-cluster--examples--Create_an_MSK_cluster_where_you_explicitly_set_all_properties"></a>
+
+#### YAML<a name="aws-resource-msk-cluster--examples--Create_an_MSK_cluster_where_you_explicitly_set_all_properties--yaml"></a>
+
+```
+Description: MSK Cluster with all properties
+Resources:
+  TestCluster:
+    Type: 'AWS::MSK::Cluster'
+    Properties:
+      ClusterName: ClusterWithAllProperties
+      KafkaVersion: 2.2.1
+      NumberOfBrokerNodes: 3
+      EnhancedMonitoring: PER_BROKER
+      EncryptionInfo:
+        EncryptionAtRest:
+          DataVolumeKMSKeyId: ReplaceWithKmsKeyArn
+          EncryptionInTransit:
+            ClientBroker: TLS
+            InCluster: true
+      OpenMonitoring:
+        Prometheus:
+          JmxExporter:
+            EnabledInBroker: "true"
+          NodeExporter:
+            EnabledInBroker: "true"
+      ConfigurationInfo:
+        Arn: ReplaceWithConfigurationArn
+        Revision: 1
+      ClientAuthentication:
+        Tls:
+          CertificateAuthorityArnList:
+            - ReplaceWithCAArn
+      Tags:
+        Environment: Test
+        Owner: QATeam
+      BrokerNodeGroupInfo:
+        BrokerAZDistribution: DEFAULT
+        InstanceType: kafka.m5.large
+        SecurityGroups:
+          - ReplaceWithSecurityGroupId
+        StorageInfo:
+          EBSStorageInfo:
+            VolumeSize: 100
+        ClientSubnets:
+          - ReplaceWithSubnetId1
+          - ReplaceWithSubnetId2
+          - ReplaceWithSubnetId3
+```
+
+#### JSON<a name="aws-resource-msk-cluster--examples--Create_an_MSK_cluster_where_you_explicitly_set_all_properties--json"></a>
+
+```
+{
+  "Description": "MSK Cluster with all properties",
+  "Resources": {
+    "TestCluster": {
+      "Type": "AWS::MSK::Cluster",
+      "Properties": {
+        "ClusterName": "ClusterWithAllProperties",
+        "KafkaVersion": "2.2.1",
+        "NumberOfBrokerNodes": 3,
+        "EnhancedMonitoring": "PER_BROKER",
+        "EncryptionInfo": {
+          "EncryptionAtRest": {
+            "DataVolumeKMSKeyId": "ReplaceWithKmsKeyArn"
+          },
+          "EncryptionInTransit": {
+            "ClientBroker": "TLS",
+            "InCluster": true
+          }
+        },
+        "OpenMonitoring": {
+          "Prometheus": {
+            "JmxExporter": {
+              "EnabledInBroker": "true"
+            }
+            "NodeExporter": {
+              "EnabledInBroker": "true"
+            }
+          }
+        },
+        "ConfigurationInfo": {
+          "Arn": "ReplaceWithConfigurationArn",
+          "Revision": 1
+        },
+        "ClientAuthentication": {
+          "Tls": {
+            "CertificateAuthorityArnList": [ "ReplaceWithCAArn" ]
+          }
+        },
+        "Tags": {
+          "Environment": "Test",
+          "Owner": "QATeam"
+        },
+        "BrokerNodeGroupInfo": {
+          "BrokerAZDistribution": "DEFAULT",
+          "InstanceType": "kafka.m5.large",
+          "SecurityGroups": [ "ReplaceWithSecurityGroupId" ],
+          "StorageInfo": {
+            "EBSStorageInfo": {
+              "VolumeSize": 100
+            }
+          },
+          "ClientSubnets": [
+            "ReplaceWithSubnetId1",
+            "ReplaceWithSubnetId2",
+            "ReplaceWithSubnetId3"
+          ]
+        }
+      }
+    }
+  }
+}
+```
+
+### Get started with Amazon MSK<a name="aws-resource-msk-cluster--examples--Get_started_with_Amazon_MSK"></a>
 
 This example template creates an MSK cluster in a simple architecture to help you get started\.
 
-#### YAML<a name="aws-resource-msk-cluster--examples--Get_Started_With_Amazon_MSK--yaml"></a>
+#### YAML<a name="aws-resource-msk-cluster--examples--Get_started_with_Amazon_MSK--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
+AWSTemplateFormatVersion: '2010-09-09'
 Parameters:
   KeyName:
     Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
-    Type: 'AWS::EC2::KeyPair::KeyName'
+    Type: 'AWS: :EC2: :KeyPair: :KeyName'
     ConstraintDescription: Can contain only ASCII characters.
   SSHLocation:
     Description: The IP address range that can be used to SSH to the EC2 instances
@@ -137,7 +334,7 @@ Parameters:
     MinLength: '9'
     MaxLength: '18'
     Default: 0.0.0.0/0
-    AllowedPattern: '(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/(\d{1,2})'
+    AllowedPattern: (\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/(\d{1,2})
     ConstraintDescription: Must be a valid IP CIDR range of the form x.x.x.x/x
 Mappings:
   SubnetConfig:
@@ -158,311 +355,292 @@ Mappings:
       HVM64: ami-0cb72367e98845d43
 Resources:
   VPC:
-    Type: 'AWS::EC2::VPC'
+    Type: AWS::EC2::VPC
     Properties:
       EnableDnsSupport: true
       EnableDnsHostnames: true
-      CidrBlock: !FindInMap 
-        - SubnetConfig
-        - VPC
-        - CIDR
+      CidrBlock:
+        Fn::FindInMap:
+          - SubnetConfig
+          - VPC
+          - CIDR
       Tags:
         - Key: Name
           Value: MMVPC
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: e191108b-e241-404a-bed2-b2863bcd5235
   PublicSubnetOne:
-    Type: 'AWS::EC2::Subnet'
+    Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: !Select 
-        - 0
-        - !GetAZs 
-          Ref: 'AWS::Region'
-      VpcId: !Ref VPC
-      CidrBlock: !FindInMap 
-        - SubnetConfig
-        - PublicOne
-        - CIDR
+      AvailabilityZone:
+        Fn::Select:
+          - 0
+          - Fn::GetAZs:
+              Ref: AWS::Region
+      VpcId:
+        Ref: VPC
+      CidrBlock:
+        Fn::FindInMap:
+          - SubnetConfig
+          - PublicOne
+          - CIDR
       MapPublicIpOnLaunch: true
       Tags:
         - Key: Name
           Value: MMPublicSubnet
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 90cff42d-8429-4a50-b584-5a2ba16651ea
   PrivateSubnetOne:
-    Type: 'AWS::EC2::Subnet'
+    Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: !Select 
-        - 0
-        - !GetAZs 
-          Ref: 'AWS::Region'
-      VpcId: !Ref VPC
-      CidrBlock: !FindInMap 
-        - SubnetConfig
-        - PrivateOne
-        - CIDR
+      AvailabilityZone:
+        Fn::Select:
+          - 0
+          - Fn::GetAZs:
+              Ref: AWS::Region
+      VpcId:
+        Ref: VPC
+      CidrBlock:
+        Fn::FindInMap:
+          - SubnetConfig
+          - PrivateOne
+          - CIDR
       Tags:
         - Key: Name
           Value: MMPrivateSubnetOne
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: be121547-ef38-4d55-a9a9-f67eb35c9cd0
   PrivateSubnetTwo:
-    Type: 'AWS::EC2::Subnet'
+    Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: !Select 
-        - 1
-        - !GetAZs 
-          Ref: 'AWS::Region'
-      VpcId: !Ref VPC
-      CidrBlock: !FindInMap 
-        - SubnetConfig
-        - PrivateTwo
-        - CIDR
+      AvailabilityZone:
+        Fn::Select:
+          - 1
+          - Fn::GetAZs:
+              Ref: AWS::Region
+      VpcId:
+        Ref: VPC
+      CidrBlock:
+        Fn::FindInMap:
+          - SubnetConfig
+          - PrivateTwo
+          - CIDR
       Tags:
         - Key: Name
           Value: MMPrivateSubnetTwo
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 1a1c22e5-745b-443d-93d6-78c3572de3c4
   PrivateSubnetThree:
-    Type: 'AWS::EC2::Subnet'
+    Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: !Select 
-        - 2
-        - !GetAZs 
-          Ref: 'AWS::Region'
-      VpcId: !Ref VPC
-      CidrBlock: !FindInMap 
-        - SubnetConfig
-        - PrivateThree
-        - CIDR
+      AvailabilityZone:
+        Fn::Select:
+          - 2
+          - Fn::GetAZs:
+              Ref: AWS::Region
+      VpcId:
+        Ref: VPC
+      CidrBlock:
+        Fn::FindInMap:
+          - SubnetConfig
+          - PrivateThree
+          - CIDR
       Tags:
         - Key: Name
           Value: MMPrivateSubnetThree
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 69ad49b5-ffb5-4019-82dd-1b5433531511
   InternetGateway:
-    Type: 'AWS::EC2::InternetGateway'
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: d2a821e3-5c45-46a4-92fd-09268f72f679
+    Type: AWS::EC2::InternetGateway
   GatewayAttachement:
-    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Type: AWS::EC2::VPCGatewayAttachment
     Properties:
-      VpcId: !Ref VPC
-      InternetGatewayId: !Ref InternetGateway
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 988bff04-9cdd-4ce1-8b5d-59fc3291eae1
+      VpcId:
+        Ref: VPC
+      InternetGatewayId:
+        Ref: InternetGateway
   PublicRouteTable:
-    Type: 'AWS::EC2::RouteTable'
+    Type: AWS::EC2::RouteTable
     Properties:
-      VpcId: !Ref VPC
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 93747341-451f-4c6e-8265-6873b110ae9e
+      VpcId:
+        Ref: VPC
   PublicRoute:
-    Type: 'AWS::EC2::Route'
+    Type: AWS::EC2::Route
     DependsOn: GatewayAttachement
     Properties:
-      RouteTableId: !Ref PublicRouteTable
+      RouteTableId:
+        Ref: PublicRouteTable
       DestinationCidrBlock: 0.0.0.0/0
-      GatewayId: !Ref InternetGateway
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 412c8444-e8b8-43eb-8c07-3f822c921e34
+      GatewayId:
+        Ref: InternetGateway
   PublicSubnetOneRouteTableAssociation:
-    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      SubnetId: !Ref PublicSubnetOne
-      RouteTableId: !Ref PublicRouteTable
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: c2c64928-4fe4-4640-a449-08cdc9e50d84
+      SubnetId:
+        Ref: PublicSubnetOne
+      RouteTableId:
+        Ref: PublicRouteTable
   PrivateRouteTable:
-    Type: 'AWS::EC2::RouteTable'
+    Type: AWS::EC2::RouteTable
     Properties:
-      VpcId: !Ref VPC
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 7a45b627-d06a-4956-9f4b-a79b5e65bc7d
+      VpcId:
+        Ref: VPC
   PrivateSubnetOneRouteTableAssociation:
-    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      RouteTableId: !Ref PrivateRouteTable
-      SubnetId: !Ref PrivateSubnetOne
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 912ef118-eda5-437f-afd7-3f92d83fd70b
+      RouteTableId:
+        Ref: PrivateRouteTable
+      SubnetId:
+        Ref: PrivateSubnetOne
   PrivateSubnetTwoRouteTableAssociation:
-    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      RouteTableId: !Ref PrivateRouteTable
-      SubnetId: !Ref PrivateSubnetTwo
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: d345d815-288f-4446-add0-dd637cc6c57f
+      RouteTableId:
+        Ref: PrivateRouteTable
+      SubnetId:
+        Ref: PrivateSubnetTwo
   PrivateSubnetThreeRouteTableAssociation:
-    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      RouteTableId: !Ref PrivateRouteTable
-      SubnetId: !Ref PrivateSubnetThree
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 4f6ec5cd-f063-4163-8494-31bd55bcb27f
+      RouteTableId:
+        Ref: PrivateRouteTable
+      SubnetId:
+        Ref: PrivateSubnetThree
   KafkaClientInstanceSecurityGroup:
-    Type: 'AWS::EC2::SecurityGroup'
+    Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable SSH access via port 22
-      VpcId: !Ref VPC
+      VpcId:
+        Ref: VPC
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 22
           ToPort: 22
-          CidrIp: !Ref SSHLocation
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 758d2702-7bfd-470e-84a0-5101471dd251
+          CidrIp:
+            Ref: SSHLocation
   MSKSecurityGroup:
-    Type: 'AWS::EC2::SecurityGroup'
+    Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Enable SSH access via port 22
+      GroupDescription: Enable Zookeeper and Kafka access
       VpcId: !Ref VPC
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 2181
           ToPort: 2181
-          SourceSecurityGroupId: !GetAtt 
-            - KafkaClientInstanceSecurityGroup
-            - GroupId
+          SourceSecurityGroupId:
+            Fn::GetAtt:
+              - KafkaClientInstanceSecurityGroup
+              - GroupId
         - IpProtocol: tcp
           FromPort: 9094
           ToPort: 9094
-          SourceSecurityGroupId: !GetAtt 
-            - KafkaClientInstanceSecurityGroup
-            - GroupId
+          SourceSecurityGroupId:
+            Fn::GetAtt:
+              - KafkaClientInstanceSecurityGroup
+              - GroupId
         - IpProtocol: tcp
           FromPort: 9092
           ToPort: 9092
-          SourceSecurityGroupId: !GetAtt 
-            - KafkaClientInstanceSecurityGroup
-            - GroupId
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 20d8d324-9da6-49f9-9e37-4bd433625c47
+          SourceSecurityGroupId:
+            Fn::GetAtt:
+              - KafkaClientInstanceSecurityGroup
+              - GroupId
   KafkaClientEC2Instance:
-    Type: 'AWS::EC2::Instance'
+    Type: AWS::EC2::Instance
     Properties:
       InstanceType: m5.large
-      KeyName: !Ref KeyName
-      IamInstanceProfile: !Ref EC2InstanceProfile
-      AvailabilityZone: !Select 
-        - 0
-        - !GetAZs 
-          Ref: 'AWS::Region'
-      SubnetId: !Ref PublicSubnetOne
+      KeyName:
+        Ref: KeyName
+      IamInstanceProfile:
+        Ref: EC2InstanceProfile
+      AvailabilityZone:
+        Fn::Select:
+          - 0
+          - Fn::GetAZs:
+              Ref: AWS::Region
+      SubnetId:
+        Ref: PublicSubnetOne
       SecurityGroupIds:
-        - !GetAtt 
-          - KafkaClientInstanceSecurityGroup
-          - GroupId
-      ImageId: !FindInMap 
-        - RegionAMI
-        - !Ref 'AWS::Region'
-        - HVM64
+        - Fn::GetAtt:
+            - KafkaClientInstanceSecurityGroup
+            - GroupId
+      ImageId:
+        Fn::FindInMap:
+          - RegionAMI
+          - Ref: AWS::Region
+          - HVM64
       Tags:
         - Key: Name
           Value: KafkaClientInstance
-      UserData: !Base64 >
-        #!/bin/bash
+      UserData:
+        Fn::Base64: >
+          #!/bin/bash
 
-        yum update -y 
+          yum update -y 
 
-        yum install python3.7 -y
+          yum install python3.7 -y
 
-        yum install java-1.8.0-openjdk-devel -y
+          yum install java-1.8.0-openjdk-devel -y
 
-        yum erase awscli -y
+          yum erase awscli -y
 
-        cd /home/ec2-user
+          cd /home/ec2-user
 
-        echo "export PATH=.local/bin:$PATH" >> .bash_profile
+          echo "export PATH=.local/bin:$PATH" >> .bash_profile
 
-        mkdir kafka
+          mkdir kafka
 
-        mkdir mm
+          mkdir mm
 
-        cd kafka
+          cd kafka
 
-        wget https://archive.apache.org/dist/kafka/2.2.1/kafka_2.12-2.2.1.tgz
+          wget https: //archive.apache.org/dist/kafka/2.2.1/kafka_2.12-2.2.1.tgz
 
-        tar -xzf kafka_2.12-2.2.1.tgz
+          tar -xzf kafka_2.12-2.2.1.tgz
 
-        cd /home/ec2-user
+          cd /home/ec2-user
 
-        wget https://bootstrap.pypa.io/get-pip.py
+          wget https: //bootstrap.pypa.io/get-pip.py
 
-        su -c "python3.7 get-pip.py --user" -s /bin/sh ec2-user
+          su -c "python3.7 get-pip.py --user" -s /bin/sh ec2-user
 
-        su -c "/home/ec2-user/.local/bin/pip3 install boto3 --user" -s /bin/sh
-        ec2-user
+          su -c "/home/ec2-user/.local/bin/pip3 install boto3 --user" -s /bin/sh
+          ec2-user
 
-        su -c "/home/ec2-user/.local/bin/pip3 install awscli --user" -s /bin/sh
-        ec2-user
+          su -c "/home/ec2-user/.local/bin/pip3 install awscli --user" -s
+          /bin/sh ec2-user
 
-        chown -R ec2-user ./kafka
+          chown -R ec2-user ./kafka
 
-        chgrp -R ec2-user ./kafka
+          chgrp -R ec2-user ./kafka
 
-        chown -R ec2-user ./mm
+          chown -R ec2-user ./mm
 
-        chgrp -R ec2-user ./mm
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 25e7995f-31fc-45b0-b790-42bcb519905a
+          chgrp -R ec2-user ./mm
   EC2Role:
-    Type: 'AWS::IAM::Role'
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
-        Version: 2012-10-17
+        Version: '2012-10-17'
         Statement:
           - Sid: ''
             Effect: Allow
             Principal:
               Service: ec2.amazonaws.com
-            Action: 'sts:AssumeRole'
+            Action: sts:AssumeRole
       Path: /
       ManagedPolicyArns:
-        - 'arn:aws:iam::aws:policy/AmazonMSKFullAccess'
-        - 'arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess'
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 268a951d-285d-438a-a365-d135a51bd01c
+        - arn:aws:iam::aws:policy/AmazonMSKFullAccess
+        - arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess
   EC2InstanceProfile:
-    Type: 'AWS::IAM::InstanceProfile'
+    Type: AWS::IAM::InstanceProfile
     Properties:
       InstanceProfileName: EC2MSKCFProfile
       Roles:
-        - !Ref EC2Role
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 01de5e28-2175-45f1-a37f-65e5bd7d9356
+        - Ref: EC2Role
   MSKCluster:
-    Type: 'AWS::MSK::Cluster'
+    Type: AWS::MSK::Cluster
     Properties:
       BrokerNodeGroupInfo:
         ClientSubnets:
-          - !Ref PrivateSubnetOne
-          - !Ref PrivateSubnetTwo
-          - !Ref PrivateSubnetThree
+          - Ref: PrivateSubnetOne
+          - Ref: PrivateSubnetTwo
+          - Ref: PrivateSubnetThree
         InstanceType: kafka.m5.large
         SecurityGroups:
-          - !GetAtt 
-            - MSKSecurityGroup
-            - GroupId
+          - Fn::GetAtt:
+              - MSKSecurityGroup
+              - GroupId
         StorageInfo:
           EBSStorageInfo:
             VolumeSize: 2000
@@ -474,251 +652,46 @@ Resources:
       EnhancedMonitoring: PER_TOPIC_PER_BROKER
       KafkaVersion: 2.2.1
       NumberOfBrokerNodes: 3
-    Metadata:
-      'AWS::CloudFormation::Designer':
-        id: 56f5417a-ddff-49c4-9f30-8041824a0601
 Outputs:
   VPCId:
     Description: The ID of the VPC created
-    Value: !Ref VPC
+    Value:
+      Ref: VPC
   PublicSubnetOne:
     Description: The name of the public subnet created
-    Value: !Ref PublicSubnetOne
+    Value:
+      Ref: PublicSubnetOne
   PrivateSubnetOne:
     Description: The ID of private subnet one created
-    Value: !Ref PrivateSubnetOne
+    Value:
+      Ref: PrivateSubnetOne
   PrivateSubnetTwo:
     Description: The ID of private subnet two created
-    Value: !Ref PrivateSubnetTwo
+    Value:
+      Ref: PrivateSubnetTwo
   PrivateSubnetThree:
     Description: The ID of private subnet three created
-    Value: !Ref PrivateSubnetThree
+    Value:
+      Ref: PrivateSubnetThree
   MSKSecurityGroupID:
     Description: The ID of the security group created for the MSK clusters
-    Value: !GetAtt 
-      - MSKSecurityGroup
-      - GroupId
+    Value:
+      Fn::GetAtt:
+        - MSKSecurityGroup
+        - GroupId
   KafkaClientEC2InstancePublicDNS:
     Description: The Public DNS for the MirrorMaker EC2 instance
-    Value: !GetAtt 
-      - KafkaClientEC2Instance
-      - PublicDnsName
+    Value:
+      'Fn: :GetAtt':
+        - KafkaClientEC2Instance
+        - PublicDnsName
   MSKClusterArn:
     Description: The Arn for the MSKMMCluster1 MSK cluster
-    Value: !Ref MSKCluster
-Metadata:
-  'AWS::CloudFormation::Designer':
-    268a951d-285d-438a-a365-d135a51bd01c:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 60
-        'y': 930
-      z: 1
-      embeds: []
-    01de5e28-2175-45f1-a37f-65e5bd7d9356:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 180
-        'y': 930
-      z: 1
-      embeds: []
-      isassociatedwith:
-        - 268a951d-285d-438a-a365-d135a51bd01c
-    d2a821e3-5c45-46a4-92fd-09268f72f679:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 300
-        'y': 930
-      z: 1
-      embeds: []
-    e191108b-e241-404a-bed2-b2863bcd5235:
-      size:
-        width: 870
-        height: 780
-      position:
-        x: 320
-        'y': 40
-      z: 1
-      embeds:
-        - 758d2702-7bfd-470e-84a0-5101471dd251
-        - 20d8d324-9da6-49f9-9e37-4bd433625c47
-        - 7a45b627-d06a-4956-9f4b-a79b5e65bc7d
-        - 93747341-451f-4c6e-8265-6873b110ae9e
-        - 69ad49b5-ffb5-4019-82dd-1b5433531511
-        - 1a1c22e5-745b-443d-93d6-78c3572de3c4
-        - be121547-ef38-4d55-a9a9-f67eb35c9cd0
-        - 90cff42d-8429-4a50-b584-5a2ba16651ea
-    758d2702-7bfd-470e-84a0-5101471dd251:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 980
-        'y': 310
-      z: 2
-      parent: e191108b-e241-404a-bed2-b2863bcd5235
-      embeds: []
-      iscontainedinside:
-        - e191108b-e241-404a-bed2-b2863bcd5235
-    20d8d324-9da6-49f9-9e37-4bd433625c47:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 980
-        'y': 430
-      z: 2
-      parent: e191108b-e241-404a-bed2-b2863bcd5235
-      embeds: []
-      iscontainedinside:
-        - e191108b-e241-404a-bed2-b2863bcd5235
-    7a45b627-d06a-4956-9f4b-a79b5e65bc7d:
-      size:
-        width: 150
-        height: 150
-      position:
-        x: 950
-        'y': 100
-      z: 2
-      parent: e191108b-e241-404a-bed2-b2863bcd5235
-      embeds: []
-      iscontainedinside:
-        - e191108b-e241-404a-bed2-b2863bcd5235
-    93747341-451f-4c6e-8265-6873b110ae9e:
-      size:
-        width: 240
-        height: 240
-      position:
-        x: 650
-        'y': 100
-      z: 2
-      parent: e191108b-e241-404a-bed2-b2863bcd5235
-      embeds:
-        - 412c8444-e8b8-43eb-8c07-3f822c921e34
-      iscontainedinside:
-        - e191108b-e241-404a-bed2-b2863bcd5235
-    988bff04-9cdd-4ce1-8b5d-59fc3291eae1:
-      source:
-        id: e191108b-e241-404a-bed2-b2863bcd5235
-      target:
-        id: d2a821e3-5c45-46a4-92fd-09268f72f679
-    412c8444-e8b8-43eb-8c07-3f822c921e34:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 680
-        'y': 160
-      z: 3
-      parent: 93747341-451f-4c6e-8265-6873b110ae9e
-      embeds: []
-      isassociatedwith:
-        - d2a821e3-5c45-46a4-92fd-09268f72f679
-      iscontainedinside:
-        - 93747341-451f-4c6e-8265-6873b110ae9e
-      dependson:
-        - 988bff04-9cdd-4ce1-8b5d-59fc3291eae1
-    69ad49b5-ffb5-4019-82dd-1b5433531511:
-      size:
-        width: 150
-        height: 150
-      position:
-        x: 770
-        'y': 400
-      z: 2
-      parent: e191108b-e241-404a-bed2-b2863bcd5235
-      embeds: []
-      iscontainedinside:
-        - e191108b-e241-404a-bed2-b2863bcd5235
-    4f6ec5cd-f063-4163-8494-31bd55bcb27f:
-      source:
-        id: 7a45b627-d06a-4956-9f4b-a79b5e65bc7d
-      target:
-        id: 69ad49b5-ffb5-4019-82dd-1b5433531511
-    1a1c22e5-745b-443d-93d6-78c3572de3c4:
-      size:
-        width: 150
-        height: 150
-      position:
-        x: 560
-        'y': 400
-      z: 2
-      parent: e191108b-e241-404a-bed2-b2863bcd5235
-      embeds: []
-      iscontainedinside:
-        - e191108b-e241-404a-bed2-b2863bcd5235
-    d345d815-288f-4446-add0-dd637cc6c57f:
-      source:
-        id: 7a45b627-d06a-4956-9f4b-a79b5e65bc7d
-      target:
-        id: 1a1c22e5-745b-443d-93d6-78c3572de3c4
-    be121547-ef38-4d55-a9a9-f67eb35c9cd0:
-      size:
-        width: 150
-        height: 150
-      position:
-        x: 350
-        'y': 400
-      z: 2
-      parent: e191108b-e241-404a-bed2-b2863bcd5235
-      embeds: []
-      iscontainedinside:
-        - e191108b-e241-404a-bed2-b2863bcd5235
-    56f5417a-ddff-49c4-9f30-8041824a0601:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 420
-        'y': 930
-      z: 1
-      embeds: []
-    912ef118-eda5-437f-afd7-3f92d83fd70b:
-      source:
-        id: 7a45b627-d06a-4956-9f4b-a79b5e65bc7d
-      target:
-        id: be121547-ef38-4d55-a9a9-f67eb35c9cd0
-    90cff42d-8429-4a50-b584-5a2ba16651ea:
-      size:
-        width: 240
-        height: 240
-      position:
-        x: 350
-        'y': 100
-      z: 2
-      parent: e191108b-e241-404a-bed2-b2863bcd5235
-      embeds:
-        - 25e7995f-31fc-45b0-b790-42bcb519905a
-      iscontainedinside:
-        - e191108b-e241-404a-bed2-b2863bcd5235
-    25e7995f-31fc-45b0-b790-42bcb519905a:
-      size:
-        width: 60
-        height: 60
-      position:
-        x: 380
-        'y': 160
-      z: 3
-      parent: 90cff42d-8429-4a50-b584-5a2ba16651ea
-      embeds: []
-      isassociatedwith:
-        - 758d2702-7bfd-470e-84a0-5101471dd251
-      iscontainedinside:
-        - 90cff42d-8429-4a50-b584-5a2ba16651ea
-    c2c64928-4fe4-4640-a449-08cdc9e50d84:
-      source:
-        id: 93747341-451f-4c6e-8265-6873b110ae9e
-      target:
-        id: 90cff42d-8429-4a50-b584-5a2ba16651ea
+    Value:
+      Ref: MSKCluster
 ```
 
-#### <a name="aws-resource-msk-cluster--examples--Get_Started_With_Amazon_MSK--JSON"></a>
+#### JSON<a name="aws-resource-msk-cluster--examples--Get_started_with_Amazon_MSK--json"></a>
 
 ```
 {
@@ -726,7 +699,7 @@ Metadata:
     "Parameters": {
         "KeyName": {
             "Description": "Name of an existing EC2 KeyPair to enable SSH access to the instance",
-            "Type": "AWS::EC2::KeyPair::KeyName",
+            "Type": "AWS: :EC2: :KeyPair: :KeyName",
             "ConstraintDescription": "Can contain only ASCII characters."
         },
         "SSHLocation": {
@@ -785,11 +758,6 @@ Metadata:
                         "Value": "MMVPC"
                     }
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "e191108b-e241-404a-bed2-b2863bcd5235"
-                }
             }
         },
         "PublicSubnetOne": {
@@ -822,11 +790,6 @@ Metadata:
                         "Value": "MMPublicSubnet"
                     }
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "90cff42d-8429-4a50-b584-5a2ba16651ea"
-                }
             }
         },
         "PrivateSubnetOne": {
@@ -858,11 +821,6 @@ Metadata:
                         "Value": "MMPrivateSubnetOne"
                     }
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "be121547-ef38-4d55-a9a9-f67eb35c9cd0"
-                }
             }
         },
         "PrivateSubnetTwo": {
@@ -894,11 +852,6 @@ Metadata:
                         "Value": "MMPrivateSubnetTwo"
                     }
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "1a1c22e5-745b-443d-93d6-78c3572de3c4"
-                }
             }
         },
         "PrivateSubnetThree": {
@@ -930,20 +883,10 @@ Metadata:
                         "Value": "MMPrivateSubnetThree"
                     }
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "69ad49b5-ffb5-4019-82dd-1b5433531511"
-                }
             }
         },
         "InternetGateway": {
-            "Type": "AWS::EC2::InternetGateway",
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "d2a821e3-5c45-46a4-92fd-09268f72f679"
-                }
-            }
+            "Type": "AWS::EC2::InternetGateway"
         },
         "GatewayAttachement": {
             "Type": "AWS::EC2::VPCGatewayAttachment",
@@ -954,11 +897,6 @@ Metadata:
                 "InternetGatewayId": {
                     "Ref": "InternetGateway"
                 }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "988bff04-9cdd-4ce1-8b5d-59fc3291eae1"
-                }
             }
         },
         "PublicRouteTable": {
@@ -966,11 +904,6 @@ Metadata:
             "Properties": {
                 "VpcId": {
                     "Ref": "VPC"
-                }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "93747341-451f-4c6e-8265-6873b110ae9e"
                 }
             }
         },
@@ -985,11 +918,6 @@ Metadata:
                 "GatewayId": {
                     "Ref": "InternetGateway"
                 }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "412c8444-e8b8-43eb-8c07-3f822c921e34"
-                }
             }
         },
         "PublicSubnetOneRouteTableAssociation": {
@@ -1001,11 +929,6 @@ Metadata:
                 "RouteTableId": {
                     "Ref": "PublicRouteTable"
                 }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "c2c64928-4fe4-4640-a449-08cdc9e50d84"
-                }
             }
         },
         "PrivateRouteTable": {
@@ -1013,11 +936,6 @@ Metadata:
             "Properties": {
                 "VpcId": {
                     "Ref": "VPC"
-                }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "7a45b627-d06a-4956-9f4b-a79b5e65bc7d"
                 }
             }
         },
@@ -1030,11 +948,6 @@ Metadata:
                 "SubnetId": {
                     "Ref": "PrivateSubnetOne"
                 }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "912ef118-eda5-437f-afd7-3f92d83fd70b"
-                }
             }
         },
         "PrivateSubnetTwoRouteTableAssociation": {
@@ -1046,11 +959,6 @@ Metadata:
                 "SubnetId": {
                     "Ref": "PrivateSubnetTwo"
                 }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "d345d815-288f-4446-add0-dd637cc6c57f"
-                }
             }
         },
         "PrivateSubnetThreeRouteTableAssociation": {
@@ -1061,11 +969,6 @@ Metadata:
                 },
                 "SubnetId": {
                     "Ref": "PrivateSubnetThree"
-                }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "4f6ec5cd-f063-4163-8494-31bd55bcb27f"
                 }
             }
         },
@@ -1086,17 +989,12 @@ Metadata:
                         }
                     }
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "758d2702-7bfd-470e-84a0-5101471dd251"
-                }
             }
         },
         "MSKSecurityGroup": {
             "Type": "AWS::EC2::SecurityGroup",
             "Properties": {
-                "GroupDescription": "Enable SSH access via port 22",
+                "GroupDescription": "Enable Zookeeper and Kafka access",
                 "VpcId": {
                     "Ref": "VPC"
                 },
@@ -1135,11 +1033,6 @@ Metadata:
                         }
                     }
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "20d8d324-9da6-49f9-9e37-4bd433625c47"
-                }
             }
         },
         "KafkaClientEC2Instance": {
@@ -1189,12 +1082,7 @@ Metadata:
                     }
                 ],
                 "UserData": {
-                    "Fn::Base64": "#!/bin/bash\nyum update -y \nyum install python3.7 -y\nyum install java-1.8.0-openjdk-devel -y\nyum erase awscli -y\ncd /home/ec2-user\necho \"export PATH=.local/bin:$PATH\" >> .bash_profile\nmkdir kafka\nmkdir mm\ncd kafka\nwget https://archive.apache.org/dist/kafka/2.2.1/kafka_2.12-2.2.1.tgz\ntar -xzf kafka_2.12-2.2.1.tgz\ncd /home/ec2-user\nwget https://bootstrap.pypa.io/get-pip.py\nsu -c \"python3.7 get-pip.py --user\" -s /bin/sh ec2-user\nsu -c \"/home/ec2-user/.local/bin/pip3 install boto3 --user\" -s /bin/sh ec2-user\nsu -c \"/home/ec2-user/.local/bin/pip3 install awscli --user\" -s /bin/sh ec2-user\nchown -R ec2-user ./kafka\nchgrp -R ec2-user ./kafka\nchown -R ec2-user ./mm\nchgrp -R ec2-user ./mm\n"
-                }
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "25e7995f-31fc-45b0-b790-42bcb519905a"
+                    "Fn::Base64": "#!/bin/bash\nyum update -y \nyum install python3.7 -y\nyum install java-1.8.0-openjdk-devel -y\nyum erase awscli -y\ncd /home/ec2-user\necho \"export PATH=.local/bin:$PATH\" >> .bash_profile\nmkdir kafka\nmkdir mm\ncd kafka\nwget https: //archive.apache.org/dist/kafka/2.2.1/kafka_2.12-2.2.1.tgz\ntar -xzf kafka_2.12-2.2.1.tgz\ncd /home/ec2-user\nwget https: //bootstrap.pypa.io/get-pip.py\nsu -c \"python3.7 get-pip.py --user\" -s /bin/sh ec2-user\nsu -c \"/home/ec2-user/.local/bin/pip3 install boto3 --user\" -s /bin/sh ec2-user\nsu -c \"/home/ec2-user/.local/bin/pip3 install awscli --user\" -s /bin/sh ec2-user\nchown -R ec2-user ./kafka\nchgrp -R ec2-user ./kafka\nchown -R ec2-user ./mm\nchgrp -R ec2-user ./mm\n"
                 }
             }
         },
@@ -1219,11 +1107,6 @@ Metadata:
                     "arn:aws:iam::aws:policy/AmazonMSKFullAccess",
                     "arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess"
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "268a951d-285d-438a-a365-d135a51bd01c"
-                }
             }
         },
         "EC2InstanceProfile": {
@@ -1235,11 +1118,6 @@ Metadata:
                         "Ref": "EC2Role"
                     }
                 ]
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "01de5e28-2175-45f1-a37f-65e5bd7d9356"
-                }
             }
         },
         "MSKCluster": {
@@ -1282,11 +1160,6 @@ Metadata:
                 "EnhancedMonitoring": "PER_TOPIC_PER_BROKER",
                 "KafkaVersion": "2.2.1",
                 "NumberOfBrokerNodes": 3
-            },
-            "Metadata": {
-                "AWS::CloudFormation::Designer": {
-                    "id": "56f5417a-ddff-49c4-9f30-8041824a0601"
-                }
             }
         }
     },
@@ -1333,7 +1206,7 @@ Metadata:
         "KafkaClientEC2InstancePublicDNS": {
             "Description": "The Public DNS for the MirrorMaker EC2 instance",
             "Value": {
-                "Fn::GetAtt": [
+                "Fn: :GetAtt": [
                     "KafkaClientEC2Instance",
                     "PublicDnsName"
                 ]
@@ -1345,462 +1218,22 @@ Metadata:
                 "Ref": "MSKCluster"
             }
         }
-    },
-    "Metadata": {
-        "AWS::CloudFormation::Designer": {
-            "268a951d-285d-438a-a365-d135a51bd01c": {
-                "size": {
-                    "width": 60,
-                    "height": 60
-                },
-                "position": {
-                    "x": 60,
-                    "y": 930
-                },
-                "z": 1,
-                "embeds": []
-            },
-            "01de5e28-2175-45f1-a37f-65e5bd7d9356": {
-                "size": {
-                    "width": 60,
-                    "height": 60
-                },
-                "position": {
-                    "x": 180,
-                    "y": 930
-                },
-                "z": 1,
-                "embeds": [],
-                "isassociatedwith": [
-                    "268a951d-285d-438a-a365-d135a51bd01c"
-                ]
-            },
-            "d2a821e3-5c45-46a4-92fd-09268f72f679": {
-                "size": {
-                    "width": 60,
-                    "height": 60
-                },
-                "position": {
-                    "x": 300,
-                    "y": 930
-                },
-                "z": 1,
-                "embeds": []
-            },
-            "e191108b-e241-404a-bed2-b2863bcd5235": {
-                "size": {
-                    "width": 870,
-                    "height": 780
-                },
-                "position": {
-                    "x": 60,
-                    "y": -140
-                },
-                "z": 1,
-                "embeds": [
-                    "758d2702-7bfd-470e-84a0-5101471dd251",
-                    "20d8d324-9da6-49f9-9e37-4bd433625c47",
-                    "7a45b627-d06a-4956-9f4b-a79b5e65bc7d",
-                    "93747341-451f-4c6e-8265-6873b110ae9e",
-                    "69ad49b5-ffb5-4019-82dd-1b5433531511",
-                    "1a1c22e5-745b-443d-93d6-78c3572de3c4",
-                    "be121547-ef38-4d55-a9a9-f67eb35c9cd0",
-                    "90cff42d-8429-4a50-b584-5a2ba16651ea"
-                ]
-            },
-            "758d2702-7bfd-470e-84a0-5101471dd251": {
-                "size": {
-                    "width": 60,
-                    "height": 60
-                },
-                "position": {
-                    "x": 720,
-                    "y": 130
-                },
-                "z": 2,
-                "parent": "e191108b-e241-404a-bed2-b2863bcd5235",
-                "embeds": [],
-                "iscontainedinside": [
-                    "e191108b-e241-404a-bed2-b2863bcd5235"
-                ]
-            },
-            "20d8d324-9da6-49f9-9e37-4bd433625c47": {
-                "size": {
-                    "width": 60,
-                    "height": 60
-                },
-                "position": {
-                    "x": 720,
-                    "y": 250
-                },
-                "z": 2,
-                "parent": "e191108b-e241-404a-bed2-b2863bcd5235",
-                "embeds": [],
-                "iscontainedinside": [
-                    "e191108b-e241-404a-bed2-b2863bcd5235"
-                ]
-            },
-            "7a45b627-d06a-4956-9f4b-a79b5e65bc7d": {
-                "size": {
-                    "width": 150,
-                    "height": 150
-                },
-                "position": {
-                    "x": 690,
-                    "y": -80
-                },
-                "z": 2,
-                "parent": "e191108b-e241-404a-bed2-b2863bcd5235",
-                "embeds": [],
-                "iscontainedinside": [
-                    "e191108b-e241-404a-bed2-b2863bcd5235"
-                ]
-            },
-            "93747341-451f-4c6e-8265-6873b110ae9e": {
-                "size": {
-                    "width": 240,
-                    "height": 240
-                },
-                "position": {
-                    "x": 390,
-                    "y": -80
-                },
-                "z": 2,
-                "parent": "e191108b-e241-404a-bed2-b2863bcd5235",
-                "embeds": [
-                    "412c8444-e8b8-43eb-8c07-3f822c921e34"
-                ],
-                "iscontainedinside": [
-                    "e191108b-e241-404a-bed2-b2863bcd5235"
-                ]
-            },
-            "988bff04-9cdd-4ce1-8b5d-59fc3291eae1": {
-                "source": {
-                    "id": "e191108b-e241-404a-bed2-b2863bcd5235"
-                },
-                "target": {
-                    "id": "d2a821e3-5c45-46a4-92fd-09268f72f679"
-                }
-            },
-            "412c8444-e8b8-43eb-8c07-3f822c921e34": {
-                "size": {
-                    "width": 60,
-                    "height": 60
-                },
-                "position": {
-                    "x": 420,
-                    "y": -20
-                },
-                "z": 3,
-                "parent": "93747341-451f-4c6e-8265-6873b110ae9e",
-                "embeds": [],
-                "isassociatedwith": [
-                    "d2a821e3-5c45-46a4-92fd-09268f72f679"
-                ],
-                "iscontainedinside": [
-                    "93747341-451f-4c6e-8265-6873b110ae9e"
-                ],
-                "dependson": [
-                    "988bff04-9cdd-4ce1-8b5d-59fc3291eae1"
-                ]
-            },
-            "69ad49b5-ffb5-4019-82dd-1b5433531511": {
-                "size": {
-                    "width": 150,
-                    "height": 150
-                },
-                "position": {
-                    "x": 510,
-                    "y": 220
-                },
-                "z": 2,
-                "parent": "e191108b-e241-404a-bed2-b2863bcd5235",
-                "embeds": [],
-                "iscontainedinside": [
-                    "e191108b-e241-404a-bed2-b2863bcd5235"
-                ]
-            },
-            "4f6ec5cd-f063-4163-8494-31bd55bcb27f": {
-                "source": {
-                    "id": "7a45b627-d06a-4956-9f4b-a79b5e65bc7d"
-                },
-                "target": {
-                    "id": "69ad49b5-ffb5-4019-82dd-1b5433531511"
-                }
-            },
-            "1a1c22e5-745b-443d-93d6-78c3572de3c4": {
-                "size": {
-                    "width": 150,
-                    "height": 150
-                },
-                "position": {
-                    "x": 300,
-                    "y": 220
-                },
-                "z": 2,
-                "parent": "e191108b-e241-404a-bed2-b2863bcd5235",
-                "embeds": [],
-                "iscontainedinside": [
-                    "e191108b-e241-404a-bed2-b2863bcd5235"
-                ]
-            },
-            "d345d815-288f-4446-add0-dd637cc6c57f": {
-                "source": {
-                    "id": "7a45b627-d06a-4956-9f4b-a79b5e65bc7d"
-                },
-                "target": {
-                    "id": "1a1c22e5-745b-443d-93d6-78c3572de3c4"
-                }
-            },
-            "be121547-ef38-4d55-a9a9-f67eb35c9cd0": {
-                "size": {
-                    "width": 150,
-                    "height": 150
-                },
-                "position": {
-                    "x": 90,
-                    "y": 220
-                },
-                "z": 2,
-                "parent": "e191108b-e241-404a-bed2-b2863bcd5235",
-                "embeds": [],
-                "iscontainedinside": [
-                    "e191108b-e241-404a-bed2-b2863bcd5235"
-                ]
-            },
-            "56f5417a-ddff-49c4-9f30-8041824a0601": {
-                "size": {
-                    "width": 60,
-                    "height": 60
-                },
-                "position": {
-                    "x": 420,
-                    "y": 930
-                },
-                "z": 1,
-                "embeds": []
-            },
-            "912ef118-eda5-437f-afd7-3f92d83fd70b": {
-                "source": {
-                    "id": "7a45b627-d06a-4956-9f4b-a79b5e65bc7d"
-                },
-                "target": {
-                    "id": "be121547-ef38-4d55-a9a9-f67eb35c9cd0"
-                }
-            },
-            "90cff42d-8429-4a50-b584-5a2ba16651ea": {
-                "size": {
-                    "width": 240,
-                    "height": 240
-                },
-                "position": {
-                    "x": 90,
-                    "y": -80
-                },
-                "z": 2,
-                "parent": "e191108b-e241-404a-bed2-b2863bcd5235",
-                "embeds": [
-                    "25e7995f-31fc-45b0-b790-42bcb519905a"
-                ],
-                "iscontainedinside": [
-                    "e191108b-e241-404a-bed2-b2863bcd5235"
-                ]
-            },
-            "25e7995f-31fc-45b0-b790-42bcb519905a": {
-                "size": {
-                    "width": 60,
-                    "height": 60
-                },
-                "position": {
-                    "x": 120,
-                    "y": -20
-                },
-                "z": 3,
-                "parent": "90cff42d-8429-4a50-b584-5a2ba16651ea",
-                "embeds": [],
-                "isassociatedwith": [
-                    "758d2702-7bfd-470e-84a0-5101471dd251"
-                ],
-                "iscontainedinside": [
-                    "90cff42d-8429-4a50-b584-5a2ba16651ea"
-                ]
-            },
-            "c2c64928-4fe4-4640-a449-08cdc9e50d84": {
-                "source": {
-                    "id": "93747341-451f-4c6e-8265-6873b110ae9e"
-                },
-                "target": {
-                    "id": "90cff42d-8429-4a50-b584-5a2ba16651ea"
-                }
-            }
-        }
     }
 }
 ```
 
-### Create an MSK Cluster Where You Only Specify Values for the Required Properties<a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Only_Specify_Values_for_the_Required_Properties"></a>
-
-#### YAML<a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Only_Specify_Values_for_the_Required_Properties--yaml"></a>
-
-```
----
-Description: "MSK Cluster with required properties."
-Resources:
-  TestCluster:
-    Type: "AWS::MSK::Cluster"
-    Properties:
-      ClusterName: "ClusterWithRequiredProperties"
-      KafkaVersion: "2.2.1"
-      NumberOfBrokerNodes: 3
-      BrokerNodeGroupInfo:
-        InstanceType: "kafka.m5.large"
-        ClientSubnets:
-        - "ReplaceWithSubnetId1"
-        - "ReplaceWithSubnetId2"
-        - "ReplaceWithSubnetId3"
-```
-
-#### <a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Only_Specify_Values_for_the_Required_Properties--JSON"></a>
-
-```
-{
-    "Description": "MSK Cluster with required properties.",
-    "Resources": {
-        "TestCluster": {
-            "Type": "AWS::MSK::Cluster",
-            "Properties": {
-                "ClusterName": "ClusterWithRequiredProperties",
-                "KafkaVersion": "2.2.1",
-                "NumberOfBrokerNodes": 3,
-                "BrokerNodeGroupInfo": {
-                    "InstanceType": "kafka.m5.large",
-                    "ClientSubnets": [
-                        "ReplaceWithSubnetId1",
-                        "ReplaceWithSubnetId2",
-                        "ReplaceWithSubnetId3"
-                    ]
-                }
-            }
-        }
-    }
-}
-```
-
-### Create an MSK Cluster Where You Explicitly Set All Properties<a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Explicitly_Set_All_Properties"></a>
-
-#### YAML<a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Explicitly_Set_All_Properties--yaml"></a>
-
-```
----
-Description: "MSK Cluster with all properties"
-Resources:
-  TestCluster:
-    Type: "AWS::MSK::Cluster"
-    Properties:
-      ClusterName: "ClusterWithAllProperties"
-      KafkaVersion: "2.2.1"
-      NumberOfBrokerNodes: 3
-      EnhancedMonitoring: "PER_BROKER"
-      EncryptionInfo:
-        EncryptionAtRest:
-          DataVolumeKMSKeyId: "ReplaceWithKmsKeyArn"
-        EncryptionInTransit:
-          ClientBroker: "TLS"
-          InCluster: true
-      ConfigurationInfo:
-        Arn: "ReplaceWithConfigurationArn"
-        Revision: 1
-      ClientAuthentication:
-        Tls:
-          CertificateAuthorityArnList:
-          - "ReplaceWithCAArn"
-      Tags:
-        MyTagName: "MyTagValue"
-      BrokerNodeGroupInfo:
-        BrokerAZDistribution: "DEFAULT"
-        InstanceType: "kafka.m5.large"
-        SecurityGroups:
-        - "ReplaceWithSecurityGroupId"
-        StorageInfo:
-          EBSStorageInfo:
-            VolumeSize: 100
-        ClientSubnets:
-        - "ReplaceWithSubnetId1"
-        - "ReplaceWithSubnetId2"
-        - "ReplaceWithSubnetId3"
-```
-
-#### <a name="aws-resource-msk-cluster--examples--Create_an_MSK_Cluster_Where_You_Explicitly_Set_All_Properties--JSON"></a>
-
-```
-{
-    "Description": "MSK Cluster with all properties",
-    "Resources": {
-        "TestCluster": {
-            "Type": "AWS::MSK::Cluster",
-            "Properties": {
-                "ClusterName": "ClusterWithAllProperties",
-                "KafkaVersion": "2.2.1",
-                "NumberOfBrokerNodes": 3,
-                "EnhancedMonitoring": "PER_BROKER",
-                "EncryptionInfo": {
-                    "EncryptionAtRest": {
-                        "DataVolumeKMSKeyId": "ReplaceWithKmsKeyArn"
-                    },
-                    "EncryptionInTransit": {
-                        "ClientBroker": "TLS",
-                        "InCluster": true
-                    }
-                },
-                "ConfigurationInfo": {
-                    "Arn": "ReplaceWithConfigurationArn",
-                    "Revision": 1
-                },
-                "ClientAuthentication": {
-                    "Tls": {
-                        "CertificateAuthorityArnList": [
-                            "ReplaceWithCAArn"
-                        ]
-                    }
-                },
-                "Tags": {
-                    "MyTagName": "MyTagValue"
-                },
-                "BrokerNodeGroupInfo": {
-                    "BrokerAZDistribution": "DEFAULT",
-                    "InstanceType": "kafka.m5.large",
-                    "SecurityGroups": [
-                        "ReplaceWithSecurityGroupId"
-                    ],
-                    "StorageInfo": {
-                        "EBSStorageInfo": {
-                            "VolumeSize": 100
-                        }
-                    },
-                    "ClientSubnets": [
-                        "ReplaceWithSubnetId1",
-                        "ReplaceWithSubnetId2",
-                        "ReplaceWithSubnetId3"
-                    ]
-                }
-            }
-        }
-    }
-}
-```
-
-### Create Two MSK Clusters To Use With Apache MirrorMaker<a name="aws-resource-msk-cluster--examples--Create_Two_MSK_Clusters_To_Use_With_Apache_MirrorMaker"></a>
+### Create two MSK clusters to use with Apache MirrorMaker<a name="aws-resource-msk-cluster--examples--Create_two_MSK_clusters_to_use_with_Apache_MirrorMaker"></a>
 
 This YAML shows how to set up two MSK clusters for MirrorMaker\. It also sets up the Amazon VPC, subnets, security groups, and IAM roles that are necessary for this example\. In addition, it creates an EC2 instance that has Apache Kafka, Java, and the AWS CLI\. You can use this EC2 instance to run Apache Kafka tools, including MirrorMaker\. You must manually create the MirrorMaker configuration files\.
 
-#### <a name="aws-resource-msk-cluster--examples--Create_Two_MSK_Clusters_To_Use_With_Apache_MirrorMaker--YAML"></a>
+#### YAML<a name="aws-resource-msk-cluster--examples--Create_two_MSK_clusters_to_use_with_Apache_MirrorMaker--yaml"></a>
 
 ```
-AWSTemplateFormatVersion: 2010-09-09
+AWSTemplateFormatVersion: '2010-09-09'
 Parameters:
   KeyName:
     Description: The name of an existing EC2 KeyPair to enable SSH access to the instance.
-    Type: 'AWS::EC2::KeyPair::KeyName'
+    Type: 'AWS: :EC2: :KeyPair: :KeyName'
     ConstraintDescription: Can contain only ASCII characters.
   SSHLocation:
     Description: The IP address range that can be used to SSH to the EC2 instances.
@@ -1808,7 +1241,7 @@ Parameters:
     MinLength: '9'
     MaxLength: '18'
     Default: 0.0.0.0/0
-    AllowedPattern: '(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/(\d{1,2})'
+    AllowedPattern: (\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/(\d{1,2})
     ConstraintDescription: Must be a valid IP CIDR range of the form x.x.x.x/x
 Mappings:
   SubnetConfig:
@@ -1829,254 +1262,293 @@ Mappings:
       HVM64: ami-0cb72367e98845d43
 Resources:
   VPC:
-    Type: 'AWS::EC2::VPC'
+    Type: AWS::EC2::VPC
     Properties:
       EnableDnsSupport: true
       EnableDnsHostnames: true
-      CidrBlock: !FindInMap 
-        - SubnetConfig
-        - VPC
-        - CIDR
+      CidrBlock:
+        Fn::FindInMap:
+          - SubnetConfig
+          - VPC
+          - CIDR
       Tags:
         - Key: Name
           Value: MMVPC
   PublicSubnetOne:
-    Type: 'AWS::EC2::Subnet'
+    Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: !Select 
-        - 0
-        - !GetAZs 
-          Ref: 'AWS::Region'
-      VpcId: !Ref VPC
-      CidrBlock: !FindInMap 
-        - SubnetConfig
-        - PublicOne
-        - CIDR
+      AvailabilityZone:
+        Fn::Select:
+          - 0
+          - Fn::GetAZs:
+              Ref: AWS::Region
+      VpcId:
+        Ref: VPC
+      CidrBlock:
+        Fn::FindInMap:
+          - SubnetConfig
+          - PublicOne
+          - CIDR
       MapPublicIpOnLaunch: true
       Tags:
         - Key: Name
           Value: MMPublicSubnet
   PrivateSubnetOne:
-    Type: 'AWS::EC2::Subnet'
+    Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: !Select 
-        - 0
-        - !GetAZs 
-          Ref: 'AWS::Region'
-      VpcId: !Ref VPC
-      CidrBlock: !FindInMap 
-        - SubnetConfig
-        - PrivateOne
-        - CIDR
+      AvailabilityZone:
+        Fn::Select:
+          - 0
+          - Fn::GetAZs:
+              Ref: AWS::Region
+      VpcId:
+        Ref: VPC
+      CidrBlock:
+        Fn::FindInMap:
+          - SubnetConfig
+          - PrivateOne
+          - CIDR
       Tags:
         - Key: Name
           Value: MMPrivateSubnetOne
   PrivateSubnetTwo:
-    Type: 'AWS::EC2::Subnet'
+    Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: !Select 
-        - 1
-        - !GetAZs 
-          Ref: 'AWS::Region'
-      VpcId: !Ref VPC
-      CidrBlock: !FindInMap 
-        - SubnetConfig
-        - PrivateTwo
-        - CIDR
+      AvailabilityZone:
+        Fn::Select:
+          - 1
+          - Fn::GetAZs:
+              Ref: AWS::Region
+      VpcId:
+        Ref: VPC
+      CidrBlock:
+        Fn::FindInMap:
+          - SubnetConfig
+          - PrivateTwo
+          - CIDR
       Tags:
         - Key: Name
           Value: MMPrivateSubnetTwo
   PrivateSubnetThree:
-    Type: 'AWS::EC2::Subnet'
+    Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: !Select 
-        - 2
-        - !GetAZs 
-          Ref: 'AWS::Region'
-      VpcId: !Ref VPC
-      CidrBlock: !FindInMap 
-        - SubnetConfig
-        - PrivateThree
-        - CIDR
+      AvailabilityZone:
+        Fn::Select:
+          - 2
+          - Fn::GetAZs:
+              Ref: AWS::Region
+      VpcId:
+        Ref: VPC
+      CidrBlock:
+        Fn::FindInMap:
+          - SubnetConfig
+          - PrivateThree
+          - CIDR
       Tags:
         - Key: Name
           Value: MMPrivateSubnetThree
   InternetGateway:
-    Type: 'AWS::EC2::InternetGateway'
+    Type: AWS::EC2::InternetGateway
   GatewayAttachement:
-    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Type: AWS::EC2::VPCGatewayAttachment
     Properties:
-      VpcId: !Ref VPC
-      InternetGatewayId: !Ref InternetGateway
+      VpcId:
+        Ref: VPC
+      InternetGatewayId:
+        Ref: InternetGateway
   PublicRouteTable:
-    Type: 'AWS::EC2::RouteTable'
+    Type: AWS::EC2::RouteTable
     Properties:
-      VpcId: !Ref VPC
+      VpcId:
+        Ref: VPC
   PublicRoute:
-    Type: 'AWS::EC2::Route'
+    Type: AWS::EC2::Route
     DependsOn: GatewayAttachement
     Properties:
-      RouteTableId: !Ref PublicRouteTable
+      RouteTableId:
+        Ref: PublicRouteTable
       DestinationCidrBlock: 0.0.0.0/0
-      GatewayId: !Ref InternetGateway
+      GatewayId:
+        Ref: InternetGateway
   PublicSubnetOneRouteTableAssociation:
-    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      SubnetId: !Ref PublicSubnetOne
-      RouteTableId: !Ref PublicRouteTable
+      SubnetId:
+        Ref: PublicSubnetOne
+      RouteTableId:
+        Ref: PublicRouteTable
   PrivateRouteTable:
-    Type: 'AWS::EC2::RouteTable'
+    Type: AWS::EC2::RouteTable
     Properties:
-      VpcId: !Ref VPC
+      VpcId:
+        Ref: VPC
   PrivateSubnetOneRouteTableAssociation:
-    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      RouteTableId: !Ref PrivateRouteTable
-      SubnetId: !Ref PrivateSubnetOne
+      RouteTableId:
+        Ref: PrivateRouteTable
+      SubnetId:
+        Ref: PrivateSubnetOne
   PrivateSubnetTwoRouteTableAssociation:
-    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      RouteTableId: !Ref PrivateRouteTable
-      SubnetId: !Ref PrivateSubnetTwo
+      RouteTableId:
+        Ref: PrivateRouteTable
+      SubnetId:
+        Ref: PrivateSubnetTwo
   PrivateSubnetThreeRouteTableAssociation:
-    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      RouteTableId: !Ref PrivateRouteTable
-      SubnetId: !Ref PrivateSubnetThree
+      RouteTableId:
+        Ref: PrivateRouteTable
+      SubnetId:
+        Ref: PrivateSubnetThree
   MMInstanceSecurityGroup:
-    Type: 'AWS::EC2::SecurityGroup'
+    Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable SSH access via port 22
-      VpcId: !Ref VPC
+      VpcId:
+        Ref: VPC
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 22
           ToPort: 22
-          CidrIp: !Ref SSHLocation
+          CidrIp:
+            Ref: SSHLocation
   MSKSecurityGroup:
-    Type: 'AWS::EC2::SecurityGroup'
+    Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable SSH access via port 22
-      VpcId: !Ref VPC
+      VpcId:
+        Ref: VPC
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 2181
           ToPort: 2181
-          SourceSecurityGroupId: !GetAtt 
-            - MMInstanceSecurityGroup
-            - GroupId
+          SourceSecurityGroupId:
+            Fn::GetAtt:
+              - MMInstanceSecurityGroup
+              - GroupId
         - IpProtocol: tcp
           FromPort: 9094
           ToPort: 9094
-          SourceSecurityGroupId: !GetAtt 
-            - MMInstanceSecurityGroup
-            - GroupId
+          SourceSecurityGroupId:
+            Fn::GetAtt:
+              - MMInstanceSecurityGroup
+              - GroupId
         - IpProtocol: tcp
           FromPort: 9092
           ToPort: 9092
-          SourceSecurityGroupId: !GetAtt 
-            - MMInstanceSecurityGroup
-            - GroupId
+          SourceSecurityGroupId:
+            Fn::GetAtt:
+              - MMInstanceSecurityGroup
+              - GroupId
   MMEC2Instance:
-    Type: 'AWS::EC2::Instance'
+    Type: AWS::EC2::Instance
     Properties:
       InstanceType: m5.large
-      KeyName: !Ref KeyName
-      IamInstanceProfile: !Ref EC2InstanceProfile
-      AvailabilityZone: !Select 
-        - 0
-        - !GetAZs 
-          Ref: 'AWS::Region'
-      SubnetId: !Ref PublicSubnetOne
+      KeyName:
+        Ref: KeyName
+      IamInstanceProfile:
+        Ref: EC2InstanceProfile
+      AvailabilityZone:
+        Fn::Select:
+          - 0
+          - Fn::GetAZs:
+              Ref: AWS::Region
+      SubnetId:
+        Ref: PublicSubnetOne
       SecurityGroupIds:
-        - !GetAtt 
-          - MMInstanceSecurityGroup
-          - GroupId
-      ImageId: !FindInMap 
-        - RegionAMI
-        - !Ref 'AWS::Region'
-        - HVM64
+        - Fn::GetAtt:
+            - MMInstanceSecurityGroup
+            - GroupId
+      ImageId:
+        Fn::FindInMap:
+          - RegionAMI
+          - Ref: AWS::Region
+          - HVM64
       Tags:
         - Key: Name
           Value: MMInstance
-      UserData: !Base64 >
-        #!/bin/bash
+      UserData:
+        Fn::Base64: >
+          #!/bin/bash
 
-        yum update -y 
+          yum update -y 
 
-        yum install python3.7 -y
+          yum install python3.7 -y
 
-        yum install java-1.8.0-openjdk-devel -y
+          yum install java-1.8.0-openjdk-devel -y
 
-        yum erase awscli -y
+          yum erase awscli -y
 
-        cd /home/ec2-user
+          cd /home/ec2-user
 
-        echo "export PATH=.local/bin:$PATH" >> .bash_profile
+          echo "export PATH=.local/bin:$PATH" >> .bash_profile
 
-        mkdir kafka
+          mkdir kafka
 
-        mkdir mm
+          mkdir mm
 
-        cd kafka
+          cd kafka
 
-        wget https://archive.apache.org/dist/kafka/2.2.1/kafka_2.12-2.2.1.tgz
+          wget https: //archive.apache.org/dist/kafka/2.2.1/kafka_2.12-2.2.1.tgz
 
-        tar -xzf kafka_2.12-2.2.1.tgz
+          tar -xzf kafka_2.12-2.2.1.tgz
 
-        cd /home/ec2-user
+          cd /home/ec2-user
 
-        wget https://bootstrap.pypa.io/get-pip.py
+          wget https: //bootstrap.pypa.io/get-pip.py
 
-        su -c "python3.7 get-pip.py --user" -s /bin/sh ec2-user
+          su -c "python3.7 get-pip.py --user" -s /bin/sh ec2-user
 
-        su -c "/home/ec2-user/.local/bin/pip3 install boto3 --user" -s /bin/sh
-        ec2-user
+          su -c "/home/ec2-user/.local/bin/pip3 install boto3 --user" -s /bin/sh
+          ec2-user
 
-        su -c "/home/ec2-user/.local/bin/pip3 install awscli --user" -s /bin/sh
-        ec2-user
+          su -c "/home/ec2-user/.local/bin/pip3 install awscli --user" -s
+          /bin/sh ec2-user
 
-        chown -R ec2-user ./kafka
+          chown -R ec2-user ./kafka
 
-        chgrp -R ec2-user ./kafka
+          chgrp -R ec2-user ./kafka
 
-        chown -R ec2-user ./mm
+          chown -R ec2-user ./mm
 
-        chgrp -R ec2-user ./mm
+          chgrp -R ec2-user ./mm
   EC2Role:
-    Type: 'AWS::IAM::Role'
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
-        Version: 2012-10-17
+        Version: '2012-10-17'
         Statement:
           - Sid: ''
             Effect: Allow
             Principal:
               Service: ec2.amazonaws.com
-            Action: 'sts:AssumeRole'
+            Action: sts:AssumeRole
       Path: /
       ManagedPolicyArns:
-        - 'arn:aws:iam::aws:policy/AmazonMSKFullAccess'
-        - 'arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess'
+        - arn:aws:iam::aws:policy/AmazonMSKFullAccess
+        - arn:aws:iam::aws:policy/AWSCloudFormationReadOnlyAccess
   EC2InstanceProfile:
-    Type: 'AWS::IAM::InstanceProfile'
+    Type: AWS::IAM::InstanceProfile
     Properties:
       InstanceProfileName: EC2MSKCFProfile
       Roles:
-        - !Ref EC2Role
+        - Ref: EC2Role
   MSKMMCluster1:
-    Type: 'AWS::MSK::Cluster'
+    Type: AWS::MSK::Cluster
     Properties:
       BrokerNodeGroupInfo:
         ClientSubnets:
-          - !Ref PrivateSubnetOne
-          - !Ref PrivateSubnetTwo
-          - !Ref PrivateSubnetThree
+          - Ref: PrivateSubnetOne
+          - Ref: PrivateSubnetTwo
+          - Ref: PrivateSubnetThree
         InstanceType: kafka.m5.large
         SecurityGroups:
-          - !GetAtt 
-            - MSKSecurityGroup
-            - GroupId
+          - Fn::GetAtt:
+              - MSKSecurityGroup
+              - GroupId
         StorageInfo:
           EBSStorageInfo:
             VolumeSize: 2000
@@ -2089,18 +1561,18 @@ Resources:
       KafkaVersion: 2.2.1
       NumberOfBrokerNodes: 3
   MSKMMCluster2:
-    Type: 'AWS::MSK::Cluster'
+    Type: AWS::MSK::Cluster
     Properties:
       BrokerNodeGroupInfo:
         ClientSubnets:
-          - !Ref PrivateSubnetOne
-          - !Ref PrivateSubnetTwo
-          - !Ref PrivateSubnetThree
+          - Ref: PrivateSubnetOne
+          - Ref: PrivateSubnetTwo
+          - Ref: PrivateSubnetThree
         InstanceType: kafka.m5.large
         SecurityGroups:
-          - !GetAtt 
-            - MSKSecurityGroup
-            - GroupId
+          - Fn::GetAtt:
+              - MSKSecurityGroup
+              - GroupId
         StorageInfo:
           EBSStorageInfo:
             VolumeSize: 2000
@@ -2115,38 +1587,47 @@ Resources:
 Outputs:
   VPCId:
     Description: The ID of the VPC created
-    Value: !Ref VPC
+    Value:
+      Ref: VPC
   PublicSubnetOne:
     Description: The name of the public subnet created
-    Value: !Ref PublicSubnetOne
+    Value:
+      Ref: PublicSubnetOne
   PrivateSubnetOne:
     Description: The ID of private subnet one created
-    Value: !Ref PrivateSubnetOne
+    Value:
+      Ref: PrivateSubnetOne
   PrivateSubnetTwo:
     Description: The ID of private subnet two created
-    Value: !Ref PrivateSubnetTwo
+    Value:
+      Ref: PrivateSubnetTwo
   PrivateSubnetThree:
     Description: The ID of private subnet three created
-    Value: !Ref PrivateSubnetThree
+    Value:
+      Ref: PrivateSubnetThree
   MSKSecurityGroupID:
     Description: The ID of the security group created for the MSK clusters
-    Value: !GetAtt 
-      - MSKSecurityGroup
-      - GroupId
+    Value:
+      'Fn: :GetAtt':
+        - MSKSecurityGroup
+        - GroupId
   MMEC2InstancePublicDNS:
     Description: The Public DNS for the MirrorMaker EC2 instance
-    Value: !GetAtt 
-      - MMEC2Instance
-      - PublicDnsName
+    Value:
+      'Fn: :GetAtt':
+        - MMEC2Instance
+        - PublicDnsName
   MSKMMCluster1Arn:
     Description: The Arn for the MSKMMCluster1 MSK cluster
-    Value: !Ref MSKMMCluster1
+    Value:
+      Ref: MSKMMCluster1
   MSKMMCluster2Arn:
     Description: The Arn for the MSKMMCluster2 MSK cluster
-    Value: !Ref MSKMMCluster2
+    Value:
+      Ref: MSKMMCluster2
 ```
 
-#### <a name="aws-resource-msk-cluster--examples--Create_Two_MSK_Clusters_To_Use_With_Apache_MirrorMaker--JSON"></a>
+#### JSON<a name="aws-resource-msk-cluster--examples--Create_two_MSK_clusters_to_use_with_Apache_MirrorMaker--json"></a>
 
 ```
 {
@@ -2154,7 +1635,7 @@ Outputs:
     "Parameters": {
         "KeyName": {
             "Description": "The name of an existing EC2 KeyPair to enable SSH access to the instance.",
-            "Type": "AWS::EC2::KeyPair::KeyName",
+            "Type": "AWS: :EC2: :KeyPair: :KeyName",
             "ConstraintDescription": "Can contain only ASCII characters."
         },
         "SSHLocation": {
@@ -2537,7 +2018,7 @@ Outputs:
                     }
                 ],
                 "UserData": {
-                    "Fn::Base64": "#!/bin/bash\nyum update -y \nyum install python3.7 -y\nyum install java-1.8.0-openjdk-devel -y\nyum erase awscli -y\ncd /home/ec2-user\necho \"export PATH=.local/bin:$PATH\" >> .bash_profile\nmkdir kafka\nmkdir mm\ncd kafka\nwget https://archive.apache.org/dist/kafka/2.2.1/kafka_2.12-2.2.1.tgz\ntar -xzf kafka_2.12-2.2.1.tgz\ncd /home/ec2-user\nwget https://bootstrap.pypa.io/get-pip.py\nsu -c \"python3.7 get-pip.py --user\" -s /bin/sh ec2-user\nsu -c \"/home/ec2-user/.local/bin/pip3 install boto3 --user\" -s /bin/sh ec2-user\nsu -c \"/home/ec2-user/.local/bin/pip3 install awscli --user\" -s /bin/sh ec2-user\nchown -R ec2-user ./kafka\nchgrp -R ec2-user ./kafka\nchown -R ec2-user ./mm\nchgrp -R ec2-user ./mm\n"
+                    "Fn::Base64": "#!/bin/bash\nyum update -y \nyum install python3.7 -y\nyum install java-1.8.0-openjdk-devel -y\nyum erase awscli -y\ncd /home/ec2-user\necho \"export PATH=.local/bin:$PATH\" >> .bash_profile\nmkdir kafka\nmkdir mm\ncd kafka\nwget https: //archive.apache.org/dist/kafka/2.2.1/kafka_2.12-2.2.1.tgz\ntar -xzf kafka_2.12-2.2.1.tgz\ncd /home/ec2-user\nwget https: //bootstrap.pypa.io/get-pip.py\nsu -c \"python3.7 get-pip.py --user\" -s /bin/sh ec2-user\nsu -c \"/home/ec2-user/.local/bin/pip3 install boto3 --user\" -s /bin/sh ec2-user\nsu -c \"/home/ec2-user/.local/bin/pip3 install awscli --user\" -s /bin/sh ec2-user\nchown -R ec2-user ./kafka\nchgrp -R ec2-user ./kafka\nchown -R ec2-user ./mm\nchgrp -R ec2-user ./mm\n"
                 }
             }
         },
@@ -2694,7 +2175,7 @@ Outputs:
         "MSKSecurityGroupID": {
             "Description": "The ID of the security group created for the MSK clusters",
             "Value": {
-                "Fn::GetAtt": [
+                "Fn: :GetAtt": [
                     "MSKSecurityGroup",
                     "GroupId"
                 ]
@@ -2703,7 +2184,7 @@ Outputs:
         "MMEC2InstancePublicDNS": {
             "Description": "The Public DNS for the MirrorMaker EC2 instance",
             "Value": {
-                "Fn::GetAtt": [
+                "Fn: :GetAtt": [
                     "MMEC2Instance",
                     "PublicDnsName"
                 ]

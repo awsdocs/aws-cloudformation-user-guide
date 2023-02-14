@@ -5,7 +5,7 @@
 **Note**  
 After you create a core definition version that contains the core you want to deploy, you must add it to your group version\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)\.
 
-<a name="aws-properties-greengrass-coredefinition-coredefinitionversion-inheritance"></a> In an AWS CloudFormation template, `CoreDefinitionVersion` is the property type of the `InitialVersion` property in the [ `AWS::Greengrass::CoreDefinition` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html) resource\.
+<a name="aws-properties-greengrass-coredefinition-coredefinitionversion-inheritance"></a> In an AWS CloudFormation template, `CoreDefinitionVersion` is the property type of the `InitialVersion` property in the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html) resource\.
 
 ## Syntax<a name="aws-properties-greengrass-coredefinition-coredefinitionversion-syntax"></a>
 
@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Cores](#cfn-greengrass-coredefinition-coredefinitionversion-cores)" : [ [Core](aws-properties-greengrass-coredefinition-core.md), ... ]
+  "[Cores](#cfn-greengrass-coredefinition-coredefinitionversion-cores)" : [ Core, ... ]
 }
 ```
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Cores](#cfn-greengrass-coredefinition-coredefinitionversion-cores): 
-    - [Core](aws-properties-greengrass-coredefinition-core.md)
+    - Core
 ```
 
 ## Properties<a name="aws-properties-greengrass-coredefinition-coredefinitionversion-properties"></a>
@@ -34,6 +34,6 @@ The Greengrass core in this version\. Currently, the `Cores` property for a core
 *Type*: List of [Core](aws-properties-greengrass-coredefinition-core.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-properties-greengrass-coredefinition-coredefinitionversion--seealso"></a>
-+  [CoreDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-coredefinitionversion.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
+## See also<a name="aws-properties-greengrass-coredefinition-coredefinitionversion--seealso"></a>
++  [CoreDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-coredefinitionversion.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

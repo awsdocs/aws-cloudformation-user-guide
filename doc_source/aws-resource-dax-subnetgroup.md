@@ -50,11 +50,11 @@ A list of VPC subnet IDs for the subnet group\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-## Return Values<a name="aws-resource-dax-subnetgroup-return-values"></a>
+## Return values<a name="aws-resource-dax-subnetgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-dax-subnetgroup-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the created activity\. For example 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the created subnet group\. For example 
 
 ```
 { "Ref": "MyDAXSubnetGroup" }
@@ -77,7 +77,7 @@ The following example creates a DAX subnet group\.
 #### JSON<a name="aws-resource-dax-subnetgroup--examples--Create_Subnet_group--json"></a>
 
 ```
-  {
+{
   "AWSTemplateFormatVersion": "2010-09-09",
   "Description": "Create a DAX subnet group",
   "Resources": {

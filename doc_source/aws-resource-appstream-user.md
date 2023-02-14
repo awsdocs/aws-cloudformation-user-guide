@@ -39,7 +39,7 @@ Properties:
 The authentication type for the user\. You must specify USERPOOL\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed Values*: `USERPOOL`  
+*Allowed values*: `API | SAML | USERPOOL`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FirstName`  <a name="cfn-appstream-user-firstname"></a>
@@ -63,12 +63,12 @@ The action to take for the welcome email that is sent to a user after the user i
 The temporary password in the welcome email is valid for only 7 days\. If users don’t set their passwords within 7 days, you must send them a new welcome email\.
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `RESEND | SUPPRESS`  
+*Allowed values*: `RESEND | SUPPRESS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UserName`  <a name="cfn-appstream-user-username"></a>
 The email address of the user\.  
-Users' email addresses are case\-sensitive\. During login, if they specify an email address that doesn't use the same capitalization as the email address specified when their user pool account was created, a "user does not exist" error message displays\. 
+Users' email addresses are case\-sensitive\. During login, if they specify an email address that doesn't use the same capitalization as the email address specified when their user pool account was created, a "user does not exist" error message displays\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -76,5 +76,6 @@ Users' email addresses are case\-sensitive\. During login, if they specify an em
 *Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-## See Also<a name="aws-resource-appstream-user--seealso"></a>
+## See also<a name="aws-resource-appstream-user--seealso"></a>
 +  [CreateUser](https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateUser.html) in the *Amazon AppStream 2\.0 API Reference* 
+

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Groups](#cfn-pinpoint-segment-segmentgroups-groups)" : [ [Groups](aws-properties-pinpoint-segment-segmentgroups-groups.md), ... ],
+  "[Groups](#cfn-pinpoint-segment-segmentgroups-groups)" : [ Groups, ... ],
   "[Include](#cfn-pinpoint-segment-segmentgroups-include)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Groups](#cfn-pinpoint-segment-segmentgroups-groups): 
-    - [Groups](aws-properties-pinpoint-segment-segmentgroups-groups.md)
+    - Groups
   [Include](#cfn-pinpoint-segment-segmentgroups-include): String
 ```
 

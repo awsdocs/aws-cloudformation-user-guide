@@ -1,6 +1,6 @@
 # AWS::Events::Rule BatchRetryStrategy<a name="aws-properties-events-rule-batchretrystrategy"></a>
 
-The retry strategy to use for failed jobs if the target is an AWS Batch job\. If you specify a retry strategy here, it overrides the retry strategy defined in the job definition\.
+The retry strategy to use for failed jobs, if the target is an AWS Batch job\. If you specify a retry strategy here, it overrides the retry strategy defined in the job definition\.
 
 ## Syntax<a name="aws-properties-events-rule-batchretrystrategy-syntax"></a>
 
@@ -27,3 +27,26 @@ The number of times to attempt to retry, if the job fails\. Valid values are 1â€
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-events-rule-batchretrystrategy--examples"></a>
+
+
+
+### Set the BatchRetryStrategy property<a name="aws-properties-events-rule-batchretrystrategy--examples--Set_the_BatchRetryStrategy_property"></a>
+
+The following example sets the `BatchRetryStrategy` property to 8 retries\.
+
+#### JSON<a name="aws-properties-events-rule-batchretrystrategy--examples--Set_the_BatchRetryStrategy_property--json"></a>
+
+```
+"RetryStrategy": {
+  "Attempts": 8
+}
+```
+
+#### YAML<a name="aws-properties-events-rule-batchretrystrategy--examples--Set_the_BatchRetryStrategy_property--yaml"></a>
+
+```
+RetryStrategy
+  Attempts: 8
+```

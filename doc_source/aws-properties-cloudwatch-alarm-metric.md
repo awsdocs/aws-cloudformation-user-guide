@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Dimensions](#cfn-cloudwatch-alarm-metric-dimensions)" : [ [Dimension](aws-properties-cw-dimension.md), ... ],
+  "[Dimensions](#cfn-cloudwatch-alarm-metric-dimensions)" : [ Dimension, ... ],
   "[MetricName](#cfn-cloudwatch-alarm-metric-metricname)" : String,
   "[Namespace](#cfn-cloudwatch-alarm-metric-namespace)" : String
 }
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Dimensions](#cfn-cloudwatch-alarm-metric-dimensions): 
-    - [Dimension](aws-properties-cw-dimension.md)
+    - Dimension
   [MetricName](#cfn-cloudwatch-alarm-metric-metricname): String
   [Namespace](#cfn-cloudwatch-alarm-metric-namespace): String
 ```
@@ -28,14 +28,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudwatch-alarm-metric-properties"></a>
 
 `Dimensions`  <a name="cfn-cloudwatch-alarm-metric-dimensions"></a>
-The dimensions for the metric\.  
+The metric dimensions that you want to be used for the metric that the alarm will watch\.\.  
 *Required*: No  
 *Type*: List of [Dimension](aws-properties-cw-dimension.md)  
 *Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricName`  <a name="cfn-cloudwatch-alarm-metric-metricname"></a>
-The name of the metric\. This is a required field\.  
+The name of the metric that you want the alarm to watch\. This is a required field\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -43,7 +43,7 @@ The name of the metric\. This is a required field\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Namespace`  <a name="cfn-cloudwatch-alarm-metric-namespace"></a>
-The namespace of the metric\.  
+The namespace of the metric that the alarm will watch\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

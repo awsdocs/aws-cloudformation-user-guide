@@ -1,6 +1,6 @@
 # AWS::Config::RemediationConfiguration ExecutionControls<a name="aws-properties-config-remediationconfiguration-executioncontrols"></a>
 
-The controls that AWS Config uses for executing remediations\.
+An ExecutionControls object\.
 
 ## Syntax<a name="aws-properties-config-remediationconfiguration-executioncontrols-syntax"></a>
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[SsmControls](#cfn-config-remediationconfiguration-executioncontrols-ssmcontrols)" : [SsmControls](aws-properties-config-remediationconfiguration-ssmcontrols.md)
+  "[SsmControls](#cfn-config-remediationconfiguration-executioncontrols-ssmcontrols)" : SsmControls
 }
 ```
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [SsmControls](#cfn-config-remediationconfiguration-executioncontrols-ssmcontrols): 
-    [SsmControls](aws-properties-config-remediationconfiguration-ssmcontrols.md)
+    SsmControls
 ```
 
 ## Properties<a name="aws-properties-config-remediationconfiguration-executioncontrols-properties"></a>
