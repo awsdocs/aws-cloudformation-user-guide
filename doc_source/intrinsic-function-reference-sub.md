@@ -153,7 +153,8 @@ UserData:
 
 ## Supported functions<a name="w11339ab1c31c28c59c13"></a>
 
-For the `String` parameter, you can't use any functions\. You must specify a string value\.
+For the `String` parameter, you can use the following functions\. You must specify a string value\:
++ `Fn::Transform`
 
 For the `VarName` and `VarValue` parameters, you can use the following functions:
 + `Fn::Base64`
