@@ -105,10 +105,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) of the Amazon MQ configuration\.  
  `arn:aws:mq:us-east-2:123456789012:configuration:MyConfigurationDevelopment:c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9` 
 
-`Id`  <a name="Id-fn::getatt"></a>
-The ID of the Amazon MQ configuration\.  
- `c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9` 
-
 `Revision`  <a name="Revision-fn::getatt"></a>
 The revision number of the configuration\.  
  `1` 
