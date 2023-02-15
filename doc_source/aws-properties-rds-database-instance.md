@@ -824,7 +824,9 @@ The following example creates an Amazon RDS MySQL DB instance with Enhanced Moni
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS CloudFormation Sample Template for creating an Amazon RDS DB instance: Sample template showing how to create a DB instance with Enhanced Monitoring enabled. **WARNING** This template creates an RDS DB instance. You will be billed for the AWS resources used if you create a stack from this template.",
+    "Description": "AWS CloudFormation Sample Template for creating an Amazon RDS DB instance: Sample template showing
+how to create a DB instance with Enhanced Monitoring enabled. **WARNING** This template creates an RDS DB instance. You will
+be billed for the AWS resources used if you create a stack from this template.",
     "Parameters": {
         "DBInstanceID": {
             "Default": "mydbinstance",
@@ -854,8 +856,8 @@ The following example creates an Amazon RDS MySQL DB instance with Enhanced Moni
             "Default": "50",
             "Description": "The size of the database (GiB)",
             "Type": "Number",
-            "MinValue": "20",
-            "MaxValue": "65536",
+            "MinValue": "5",
+            "MaxValue": "1024",
             "ConstraintDescription": "must be between 20 and 65536 GiB."
         },
         "DBUsername": {
@@ -893,7 +895,7 @@ The following example creates an Amazon RDS MySQL DB instance with Enhanced Moni
                 "AllocatedStorage": {
                     "Ref": "DBAllocatedStorage"
                 },
-                "Engine": "MySQL",
+                "Engine": "mysql",
                 "EngineVersion": "8.0.16",
                 "MasterUsername": {
                     "Ref": "DBUsername"
@@ -914,9 +916,9 @@ The following example creates an Amazon RDS MySQL DB instance with Enhanced Moni
 ```
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  Description": "AWS CloudFormation Sample Template for creating an Amazon RDS DB instance: 
-  Sample template showing how to create a DB instance with Enhanced Monitoring enabled. 
-  **WARNING** This template creates an RDS DB instance. You will be billed for the AWS 
+  Description": "AWS CloudFormation Sample Template for creating an Amazon RDS DB instance:
+  Sample template showing how to create a DB instance with Enhanced Monitoring enabled.
+  **WARNING** This template creates an RDS DB instance. You will be billed for the AWS
   resources used if you create a stack from this template.
 Parameters:
   DBInstanceID:
@@ -946,8 +948,8 @@ Parameters:
     Default: '50'
     Description: The size of the database (GiB)
     Type: Number
-    MinValue: '20'
-    MaxValue: '65536'
+    MinValue: '5'
+    MaxValue: '1024'
     ConstraintDescription: must be between 20 and 65536 GiB.
   DBUsername:
     NoEcho: 'true'
@@ -973,7 +975,7 @@ Resources:
       DBName: !Ref DBName
       DBInstanceClass: !Ref DBInstanceClass
       AllocatedStorage: !Ref DBAllocatedStorage
-      Engine: MySQL
+      Engine: mysql
       EngineVersion: 8.0.16
       MasterUsername: !Ref DBUsername
       MasterUserPassword: !Ref DBPassword

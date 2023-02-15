@@ -94,7 +94,7 @@ The following example creates a single VPC security group, referred to by `EC2Se
                 ],
                 "AllocatedStorage": "5",
                 "DBInstanceClass": "db.t3.small",
-                "Engine": "MySQL",
+                "Engine": "mysql",
                 "MasterUsername": "YourName",
                 "MasterUserPassword": "YourPassword"
             },
@@ -132,7 +132,7 @@ Resources:
           Ref: "DbSecurityByEC2SecurityGroup"
       AllocatedStorage: "5"
       DBInstanceClass: "db.t3.small"
-      Engine: "MySQL"
+      Engine: "mysql"
       MasterUsername: "YourName"
       MasterUserPassword: "YourPassword"
     DeletionPolicy: "Snapshot"

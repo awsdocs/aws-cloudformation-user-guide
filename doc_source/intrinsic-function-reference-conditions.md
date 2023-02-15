@@ -333,7 +333,7 @@ The following snippet uses the `AWS::NoValue` pseudo parameter in an `Fn::If` fu
   "Properties" : {
     "AllocatedStorage" : "5",
     "DBInstanceClass" : "db.t2.small",
-    "Engine" : "MySQL",
+    "Engine" : "mysql",
     "EngineVersion" : "5.5",
     "MasterUsername" : { "Ref" : "DBUser" },
     "MasterUserPassword" : { "Ref" : "DBPassword" },
@@ -357,7 +357,7 @@ MyDB:
   Properties: 
     AllocatedStorage: 5
     DBInstanceClass: db.t2.small
-    Engine: MySQL
+    Engine: mysql
     EngineVersion: 5.5
     MasterUsername: !Ref DBUser
     MasterUserPassword: !Ref DBPassword
