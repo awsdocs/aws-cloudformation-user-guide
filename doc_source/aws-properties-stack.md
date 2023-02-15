@@ -98,9 +98,18 @@ Updates aren't supported\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-cloudfront-distribution-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-cloudfront-distribution-return-values-fn--getatt-fn--getatt"></a>
+
+`Outputs`  <a name="Outputs-fn::getatt"></a>
+The outputs of the nested stack, such as `Outputs.NestedStackOutputName`\.
+
 ## Examples<a name="aws-properties-stack--examples"></a>
-
-
 
 ### Specify stack parameters<a name="aws-properties-stack--examples--Specify_stack_parameters"></a>
 
