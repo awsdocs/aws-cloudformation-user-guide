@@ -28,28 +28,36 @@ StackSets also deletes stack instances from any child OUs of the specified targe
 
    1. For **Deployment regions**, choose the Regions from which you want to delete stack instances\. In this case, US East \(N\. Virginia\) Region and US West \(Oregon\) Region\.
 
-   1. For **Deployment options**: 
+   1. For **Deployment options**:
       + For **Maximum concurrent accounts**, keep the default values of **Number** and **1**\.
       + For **Failure tolerance**, keep the defaults of **Number** and **0**\.
 
       In the **Retain stacks** area, keep the default setting of disabled\.
 
-      When you are deleting stacks from a stack set, the **Retain stacks** option lets you choose to remove the stack instances from your stack set, but save the stacks and their associated resources\. When you save stacks from a stack set by choosing the **Retain stacks** option, the stack's resources stay in their current state, but the stack is no longer part of the stack set\. You cannot reassociate a retained stack, or add an existing, saved stack to a new stack set\. The stack is permanently independent of a stack set\. In this procedure, we are deleting all stacks in preparation for deleting the entire stack set, so we are not retaining stacks\.
+      When you are deleting stacks from a stack set, the **Retain stacks** option lets you choose to remove the stack instances from your stack set, but save the stacks and their associated resources\. When you save stacks from a stack set by choosing the **Retain stacks** option, the stack's resources stay in their current state, but the stack is no longer part of the stack set\. To reassociate a stack or add an existing stack to a stack set, see [Importing a stack into AWS CloudFormation StackSets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-import.html)\.
 
       Choose **Next**\.
 
 1. On the **Review** page, review your choices and choose **Submit**\.
 
 1. After stack deletion is finished, you can verify that stack instances were deleted from your stack set in the StackSet detail page, on the **Stack instances** tab\.  
-![\[Use the Stack instances tab of the stack set details page to view information on your stack instances.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-detail-stack-instances.png)
+![\[Use the Stack instances tab of the stack set details page to view information about your stack instances.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-detail-stack-instances.png)
 
 ## Delete stack instances using the AWS CLI<a name="stackinstances-delete-cli"></a>
+
+When acting as a delegated administrator, you must set the `--call-as` parameter to `DELEGATED_ADMIN` each time you run a StackSets command\.
+
+```
+--call-as DELEGATED_ADMIN
+```
 
 1. Run the `delete-stack-instances` command\. For `--stack-set-name`, specify the stack set name `my-awsconfig-stackset`\.
 
    Set the failure tolerance and maximum concurrent accounts by setting `FailureToleranceCount` to `0`, and `MaxConcurrentCount` to `1` in the `--operation-preferences` parameter, as shown in the following example\. To apply percentages instead, use `FailureTolerancePercentage` or `MaxConcurrentPercentage`\. For the purposes of this walkthrough, we are using count, not percentage\.
+**Note**  
+The value of `MaxConcurrentCount` is dependent on the value of `FailureToleranceCount`\. `MaxConcurrentCount` is at most one more than `FailureToleranceCount`\.
 
-   Because `--retain-stacks` is a required parameter of `delete-stack-instances`, if you do not want to retain \(save\) stacks, add `--no-retain-stacks`\. In this walkthrough, we add the `--no-retain-stacks` parameter, because we are not retaining any stacks\.
+   Because `--retain-stacks` is a required parameter of `delete-stack-instances`, if you don't want to retain \(save\) stacks, add `--no-retain-stacks`\. In this walkthrough, we add the `--no-retain-stacks` parameter, because we aren't retaining any stacks\.
 
    \[Self\-managed permissions\] Replace *account\_ID* with the accounts you used to create your stack set in [Create a stack set](stacksets-getting-started-create.md)\.
 

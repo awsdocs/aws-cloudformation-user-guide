@@ -36,7 +36,7 @@ The device name that is exposed to the instance, such as `/dev/sdh`\. For the ro
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Ebs`  <a name="cfn-opsworks-instance-blockdevicemapping-ebs"></a>
-An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the instance is launched\. You can specify either the `VirtualName` or Ebs, but not both\.  
+An `EBSBlockDevice` that defines how to configure an Amazon EBS volume when the instance is launched\. You can specify either the `VirtualName` or `Ebs`, but not both\.  
 *Required*: Conditional  
 *Type*: [EbsBlockDevice](aws-properties-opsworks-instance-ebsblockdevice.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -48,7 +48,7 @@ Suppresses the specified device included in the AMI's block device mapping\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VirtualName`  <a name="cfn-opsworks-instance-blockdevicemapping-virtualname"></a>
-The virtual device name\. For more information, see [BlockDeviceMapping](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_BlockDeviceMapping.html)\. You can specify either the `VirtualName` or Ebs, but not both\.  
+The virtual device name\. For more information, see [BlockDeviceMapping](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_BlockDeviceMapping.html)\. You can specify either the `VirtualName` or `Ebs`, but not both\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

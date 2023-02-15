@@ -42,3 +42,4 @@ For more information, see [Using an Origin Access Identity to Restrict Access to
 
 ## See also<a name="aws-properties-cloudfront-streamingdistribution-s3origin--seealso"></a>
 +  [S3Origin](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_S3Origin.html) in the *Amazon CloudFront API Reference* 
+

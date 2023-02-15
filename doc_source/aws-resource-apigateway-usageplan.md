@@ -1,6 +1,8 @@
 # AWS::ApiGateway::UsagePlan<a name="aws-resource-apigateway-usageplan"></a>
 
-The `AWS::ApiGateway::UsagePlan` resource creates a usage plan for deployed APIs\. A usage plan enforces throttling and quota limits on individual client API keys\. For more information, see [Creating and Using API Usage Plans in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html) in the *API Gateway Developer Guide*\.
+The `AWS::ApiGateway::UsagePlan` resource creates a usage plan for deployed APIs\. A usage plan sets a target for the throttling and quota limits on individual client API keys\. For more information, see [Creating and Using API Usage Plans in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html) in the *API Gateway Developer Guide*\.
+
+In some cases clients can exceed the targets that you set\. Don’t rely on usage plans to control costs\. Consider using [AWS Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html) to monitor costs and [AWS WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) to manage API requests\.
 
 ## Syntax<a name="aws-resource-apigateway-usageplan-syntax"></a>
 
@@ -85,7 +87,20 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-apigateway-usageplan-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-apigateway-usageplan-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+The ID for the usage plan\. For example: `abc123`\.
+
 ## Examples<a name="aws-resource-apigateway-usageplan--examples"></a>
+
+
 
 ### Create usage plan<a name="aws-resource-apigateway-usageplan--examples--Create_usage_plan"></a>
 
@@ -144,3 +159,4 @@ usagePlan:
 
 ## See also<a name="aws-resource-apigateway-usageplan--seealso"></a>
 + [usageplan:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/usageplan-create/) in the *Amazon API Gateway REST API Reference*
+

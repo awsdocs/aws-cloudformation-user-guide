@@ -45,7 +45,7 @@ Specify this only in a cross\-account scenario \(where source and destination bu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Account`  <a name="cfn-s3-bucket-replicationdestination-account"></a>
-Destination bucket owner account ID\. In a cross\-account scenario, if you direct Amazon S3 to change replica ownership to the AWS account that owns the destination bucket by specifying the `AccessControlTranslation` property, this is the account ID of the destination bucket owner\. For more information, see [Cross\-Region Replication Additional Configuration: Change Replica Owner](https://docs.aws.amazon.com/AmazonS3/latest/dev/crr-change-owner.html) in the *Amazon Simple Storage Service Developer Guide*\.  
+Destination bucket owner account ID\. In a cross\-account scenario, if you direct Amazon S3 to change replica ownership to the AWS account that owns the destination bucket by specifying the `AccessControlTranslation` property, this is the account ID of the destination bucket owner\. For more information, see [Cross\-Region Replication Additional Configuration: Change Replica Owner](https://docs.aws.amazon.com/AmazonS3/latest/dev/crr-change-owner.html) in the *Amazon S3 User Guide*\.  
 If you specify the `AccessControlTranslation` property, the `Account` property is required\.   
 *Required*: Conditional  
 *Type*: String  
@@ -64,7 +64,7 @@ Specifies encryption\-related information\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Metrics`  <a name="cfn-s3-bucket-replicationdestination-metrics"></a>
- A container specifying replication metrics\-related settings enabling metrics and Amazon S3 events for S3 Replication Time Control \(S3 RTC\)\. Must be specified together with a `ReplicationTime` block\.   
+ A container specifying replication metrics\-related settings enabling replication metrics and events\.   
 *Required*: No  
 *Type*: [Metrics](aws-properties-s3-bucket-metrics.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -77,8 +77,8 @@ Specifies encryption\-related information\.
 
 `StorageClass`  <a name="cfn-s3-bucket-replicationconfiguration-rules-destination-storageclass"></a>
  The storage class to use when replicating objects, such as S3 Standard or reduced redundancy\. By default, Amazon S3 uses the storage class of the source object to create the object replica\.   
-For valid values, see the `StorageClass` element of the [PUT Bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) action in the *Amazon Simple Storage Service API Reference*\.  
+For valid values, see the `StorageClass` element of the [PUT Bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) action in the *Amazon S3 API Reference*\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `DEEP_ARCHIVE | GLACIER | INTELLIGENT_TIERING | ONEZONE_IA | OUTPOSTS | REDUCED_REDUNDANCY | STANDARD | STANDARD_IA`  
+*Allowed values*: `DEEP_ARCHIVE | GLACIER | GLACIER_IR | INTELLIGENT_TIERING | ONEZONE_IA | OUTPOSTS | REDUCED_REDUNDANCY | STANDARD | STANDARD_IA`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel AribDestinationSettings<a name="aws-properties-medialive-channel-aribdestinationsettings"></a>
 
-Configures the output captions encode for the ARIB format\. This element belongs to CaptionDestinationSettings\.
+The configuration of ARIB captions in the output\.
+
+The parent of this entity is CaptionDestinationSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-aribdestinationsettings-syntax"></a>
 

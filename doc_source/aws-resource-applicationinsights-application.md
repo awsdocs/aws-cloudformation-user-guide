@@ -89,7 +89,7 @@ The log pattern sets\.
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `300`  
-*Pattern*: `^arn:aws(-\w+)?:[\w\d-]+:([\w\d-]*)?:[\w\d_-]*([:/].+)*$`  
+*Pattern*: `^arn:aws(-\w+)*:[\w\d-]+:([\w\d-]*)?:[\w\d_-]*([:/].+)*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceGroupName`  <a name="cfn-applicationinsights-application-resourcegroupname"></a>
@@ -127,6 +127,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 Returns the Amazon Resource Name \(ARN\) of the application, such as ` arn:aws:applicationinsights:us-east-1:123456789012:application/resource-group/my_resource_group`\.
 
 ## Examples<a name="aws-resource-applicationinsights-application--examples"></a>
+
+
 
 ### The following example template creates an Application Insights application with all components configured with recommended monitoring settings<a name="aws-resource-applicationinsights-application--examples--The_following_example_template_creates_an_Application_Insights_application_with_all_components_configured_with_recommended_monitoring_settings"></a>
 

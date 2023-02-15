@@ -2,6 +2,9 @@
 
 Creates a new configuration for the specified configuration name\. Amazon MQ uses the default configuration \(the engine type and version\)\.
 
+**Note**  
+Does not apply to RabbitMQ brokers\.
+
 ## Syntax<a name="aws-resource-amazonmq-configuration-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -12,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AmazonMQ::Configuration",
   "Properties" : {
+      "[AuthenticationStrategy](#cfn-amazonmq-configuration-authenticationstrategy)" : String,
       "[Data](#cfn-amazonmq-configuration-data)" : String,
       "[Description](#cfn-amazonmq-configuration-description)" : String,
       "[EngineType](#cfn-amazonmq-configuration-enginetype)" : String,
@@ -27,6 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::AmazonMQ::Configuration
 Properties: 
+  [AuthenticationStrategy](#cfn-amazonmq-configuration-authenticationstrategy): String
   [Data](#cfn-amazonmq-configuration-data): String
   [Description](#cfn-amazonmq-configuration-description): String
   [EngineType](#cfn-amazonmq-configuration-enginetype): String
@@ -37,6 +42,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-amazonmq-configuration-properties"></a>
+
+`AuthenticationStrategy`  <a name="cfn-amazonmq-configuration-authenticationstrategy"></a>
+Optional\. The authentication strategy associated with the configuration\. The default is `SIMPLE`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Data`  <a name="cfn-amazonmq-configuration-data"></a>
 The base64\-encoded XML configuration\.  
@@ -51,13 +62,13 @@ The description of the configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineType`  <a name="cfn-amazonmq-configuration-enginetype"></a>
-The type of broker engine\. Note: Currently, Amazon MQ supports only ACTIVEMQ\.  
+The type of broker engine\. Note: Currently, Amazon MQ only supports ACTIVEMQ for creating and editing broker configurations\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineVersion`  <a name="cfn-amazonmq-configuration-engineversion"></a>
-The version of the broker engine\. For a list of supported engine versions, see https://docs\.aws\.amazon\.com/amazon\-mq/latest/developer\-guide/broker\-engine\.html  
+The version of the broker engine\. For a list of supported engine versions, see [https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html)  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -94,10 +105,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) of the Amazon MQ configuration\.  
  `arn:aws:mq:us-east-2:123456789012:configuration:MyConfigurationDevelopment:c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9` 
 
-`Id`  <a name="Id-fn::getatt"></a>
-The ID of the Amazon MQ configuration\.  
- `c-1234a5b6-78cd-901e-2fgh-3i45j6k178l9` 
-
 `Revision`  <a name="Revision-fn::getatt"></a>
 The revision number of the configuration\.  
  `1` 
@@ -110,7 +117,7 @@ The revision number of the configuration\.
 
 ```
 {
-  "Description": "Create an Amazon MQ configuration",
+  "Description": "Create an Amazon MQ for ActiveMQ configuration",
     "Configuration1": {
       "Type": "AWS::AmazonMQ::Configuration",
       "Properties": {
@@ -129,7 +136,7 @@ The revision number of the configuration\.
 
 ```
 --- 
-Description: "Create an Amazon MQ configuration"
+Description: "Create an Amazon MQ for ActiveMQ configuration"
 Resources: 
   Configuration: 
     Type: "AWS::AmazonMQ::Configuration"

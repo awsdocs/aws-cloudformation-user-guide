@@ -2,9 +2,9 @@
 
 **Important**  
 For Amazon EC2 and Auto Scaling resources, we recommend that you use a CreationPolicy attribute instead of wait conditions\. Add a CreationPolicy attribute to those resources, and use the cfn\-signal helper script to signal when an instance creation process has completed successfully\.  
-For more information, see [CreationPolicy](aws-attribute-creationpolicy.md) or [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
+For more information, see [`CreationPolicy`](aws-attribute-creationpolicy.md) or [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
 
-Using the [AWS::CloudFormation::WaitConditionHandle](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html) resource and [CreationPolicy](aws-attribute-creationpolicy.md) attribute, you can do the following:
+Using the [AWS::CloudFormation::WaitConditionHandle](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waitconditionhandle.html) resource and [`CreationPolicy`](aws-attribute-creationpolicy.md) attribute, you can do the following:
 + Coordinate stack resource creation with other configuration actions that are external to the stack creation
 + Track the status of a configuration process
 
@@ -13,7 +13,7 @@ For example, you can start the creation of another resource after an application
 ## Using a wait condition handle<a name="using-cfn-waitconditionhandle"></a>
 
 **Note**  
-If you use the [VPC endpoint](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) feature, resources in the VPC that respond to wait conditions must have access to AWS CloudFormation\-specific Amazon Simple Storage Service \(Amazon S3\) buckets\. Resources must send wait condition responses to a pre\-signed Amazon S3 URL\. If they can't send responses to Amazon S3, AWS CloudFormation won't receive a response and the stack operation fails\. For more information, see [Setting up VPC endpoints for AWS CloudFormation](cfn-vpce-bucketnames.md) and [Example bucket policies for VPC endpoints for Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies-vpc-endpoint.html)\.
+If you use the [VPC endpoint](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) feature, resources in the VPC that respond to wait conditions must have access to AWS CloudFormation\-specific Amazon Simple Storage Service \(Amazon S3\) buckets\. Resources must send wait condition responses to a presigned Amazon S3 URL\. If they can't send responses to Amazon S3, AWS CloudFormation won't receive a response and the stack operation fails\. For more information, see [Setting up VPC endpoints for AWS CloudFormation](cfn-vpce-bucketnames.md) and [Example bucket policies for VPC endpoints for Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-bucket-policies-vpc-endpoint.html)\.
 
 You can use the wait condition and wait condition handle to make AWS CloudFormation pause the creation of a stack and wait for a signal before it continues to create the stack\. For example, you might want to download and configure applications on an Amazon EC2 instance before considering the creation of that Amazon EC2 instance complete\.
 
@@ -28,7 +28,7 @@ The following list provides a summary of how a wait condition with a wait condit
 
 **To use a wait condition in a stack:**
 
-1. Declare an AWS::CloudFormation::WaitConditionHandle resource in the stack's template\. A wait condition handle has no properties; however, a reference to a WaitConditionHandle resource resolves to a pre\-signed URL that you can use to signal success or failure to the WaitCondition\. For example:
+1. Declare an AWS::CloudFormation::WaitConditionHandle resource in the stack's template\. A wait condition handle has no properties; however, a reference to a WaitConditionHandle resource resolves to a presigned URL that you can use to signal success or failure to the WaitCondition\. For example:
 
    ```
    1. "myWaitHandle" : {

@@ -5,7 +5,7 @@
 **Note**  
 After you create a function definition version that contains the functions you want to deploy, you must add it to your group version\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)\.
 
-<a name="aws-properties-greengrass-functiondefinition-functiondefinitionversion-inheritance"></a> In an AWS CloudFormation template, `FunctionDefinitionVersion` is the property type of the `InitialVersion` property in the [ `AWS::Greengrass::FunctionDefinition` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html) resource\.
+<a name="aws-properties-greengrass-functiondefinition-functiondefinitionversion-inheritance"></a> In an AWS CloudFormation template, `FunctionDefinitionVersion` is the property type of the `InitialVersion` property in the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html) resource\.
 
 ## Syntax<a name="aws-properties-greengrass-functiondefinition-functiondefinitionversion-syntax"></a>
 
@@ -44,5 +44,5 @@ The functions in this version\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See also<a name="aws-properties-greengrass-functiondefinition-functiondefinitionversion--seealso"></a>
-+  [FunctionDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functiondefinitionversion.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [FunctionDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-functiondefinitionversion.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

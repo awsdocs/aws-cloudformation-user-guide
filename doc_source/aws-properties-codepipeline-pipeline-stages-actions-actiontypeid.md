@@ -47,7 +47,7 @@ The creator of the action being called\. There are three valid values for the `O
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Provider`  <a name="cfn-codepipeline-pipeline-stages-actions-actiontypeid-provider"></a>
-The provider of the service being called by the action\. Valid providers are determined by the action category\. For example, an action in the Deploy category type might have a provider of AWS CodeDeploy, which would be specified as CodeDeploy\. For more information, see [Valid Action Types and Providers in CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)\.  
+The provider of the service being called by the action\. Valid providers are determined by the action category\. For example, an action in the Deploy category type might have a provider of CodeDeploy, which would be specified as `CodeDeploy`\. For more information, see [Valid Action Types and Providers in CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#actions-valid-providers)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

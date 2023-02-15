@@ -69,7 +69,7 @@ The name of the accelerator\. The name must contain only alphanumeric characters
 
 `Tags`  <a name="cfn-globalaccelerator-accelerator-tags"></a>
 Create tags for an accelerator\.  
-For more information, see [Tagging in AWS Global Accelerator](https://docs.aws.amazon.com/global-accelerator/latest/dg/tagging-in-global-accelerator.html) in the *AWS Global Accelerator Developer Guide*\.  
+For more information, see [Tagging ](https://docs.aws.amazon.com/global-accelerator/latest/dg/tagging-in-global-accelerator.html) in the *AWS Global Accelerator Developer Guide*\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -97,6 +97,8 @@ The ARN of the accelerator, such as `arn:aws:globalaccelerator::012345678901:acc
 The Domain Name System \(DNS\) name that Global Accelerator creates that points to your accelerator's static IP addresses\.
 
 ## Examples<a name="aws-resource-globalaccelerator-accelerator--examples"></a>
+
+
 
 ### Add an accelerator<a name="aws-resource-globalaccelerator-accelerator--examples--Add_an_accelerator"></a>
 

@@ -1,8 +1,10 @@
 # AWS::AppSync::DataSource ElasticsearchConfig<a name="aws-properties-appsync-datasource-elasticsearchconfig"></a>
 
-The `ElasticsearchConfig` property type specifies the `AwsRegion` and `Endpoints` for an Amazon Elasticsearch Service domain in your account for an AWS AppSync data source\.
+The `ElasticsearchConfig` property type specifies the `AwsRegion` and `Endpoints` for an Amazon OpenSearch Service domain in your account for an AWS AppSync data source\.
 
-ElasticsearchConfig is a property of the [AWS::AppSync::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html) property type\. 
+ElasticsearchConfig is a property of the [AWS::AppSync::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html) property type\.
+
+As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service\. This property is deprecated\. For new data sources, use *OpenSearchServiceConfig* to specify an OpenSearch Service data source\.
 
 ## Syntax<a name="aws-properties-appsync-datasource-elasticsearchconfig-syntax"></a>
 

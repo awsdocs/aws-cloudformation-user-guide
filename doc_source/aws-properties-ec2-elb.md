@@ -4,6 +4,8 @@ Specifies a Classic Load Balancer\.
 
 You can specify the `AvailabilityZones` or `Subnets` property, but not both\.
 
+
+
 If this resource has a public IP address and is also in a VPC that is defined in the same template, you must use the [DependsOn attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) to declare a dependency on the VPC\-gateway attachment\.
 
 ## Syntax<a name="aws-properties-ec2-elb-syntax"></a>
@@ -211,9 +213,82 @@ The name of the security group that you can use as part of your inbound rules fo
 `SourceSecurityGroup.OwnerAlias`  <a name="SourceSecurityGroup.OwnerAlias-fn::getatt"></a>
 The owner of the source security group\.
 
+## Examples<a name="aws-properties-ec2-elb--examples"></a>
+
+### <a name="aws-properties-ec2-elb--examples--"></a>
+
+The following example specifies a Classic Load Balancer with a secure listener\.
+
+#### JSON<a name="aws-properties-ec2-elb--examples----json"></a>
+
+```
+"MyLoadBalancer" : {
+    "Type": "AWS::ElasticLoadBalancing::LoadBalancer",
+    "Properties": {
+        "AvailabilityZones": [ "us-east-2a" ],
+        "CrossZone": "true",
+        "Listeners": [{
+            "InstancePort": "80",
+            "InstanceProtocol": "HTTP",
+            "LoadBalancerPort": "443",
+            "Protocol": "HTTPS",
+            "PolicyNames": [ "My-SSLNegotiation-Policy" ],
+            "SSLCertificateId": "arn:aws:iam::123456789012:server-certificate/my-server-certificate"
+        }],
+        "HealthCheck": {
+            "Target": "HTTP:80/",
+            "HealthyThreshold": "2",
+            "UnhealthyThreshold": "3",
+            "Interval": "10",
+            "Timeout": "5"
+        },
+        "Policies": [{
+            "PolicyName": "My-SSLNegotiation-Policy",
+            "PolicyType": "SSLNegotiationPolicyType",
+            "Attributes": [{
+                "Name": "Reference-Security-Policy",
+                "Value": "ELBSecurityPolicy-TLS-1-2-2017-01"
+            }]
+        }]
+    }
+}
+```
+
+#### YAML<a name="aws-properties-ec2-elb--examples----yaml"></a>
+
+```
+MyLoadBalancer:
+    Type: AWS::ElasticLoadBalancing::LoadBalancer
+    Properties:
+      AvailabilityZones:
+      - "us-east-2a"
+      CrossZone: true
+      Listeners:
+      - InstancePort: '80'
+        InstanceProtocol: HTTP
+        LoadBalancerPort: '443'
+        Protocol: HTTPS
+        PolicyNames: 
+        - My-SSLNegotiation-Policy
+        SSLCertificateId: arn:aws:iam::123456789012:server-certificate/my-server-certificate
+      HealthCheck:
+        Target: HTTP:80/
+        HealthyThreshold: '2'
+        UnhealthyThreshold: '3'
+        Interval: '10'
+        Timeout: '5'
+      Policies:
+      - PolicyName: My-SSLNegotiation-Policy
+        PolicyType: SSLNegotiationPolicyType
+        Attributes:
+        - Name: Reference-Security-Policy
+          Value: ELBSecurityPolicy-TLS-1-2-2017-01
+```
+
 ## See also<a name="aws-properties-ec2-elb--seealso"></a>
 +  [Elastic Load Balancing Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-elb.html) 
 +  [CreateLoadBalancer](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_CreateLoadBalancer.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 
 +  [ModifyLoadBalancerAttributes](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_ModifyLoadBalancerAttributes.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 
 +  [ConfigureHealthCheck](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_ConfigureHealthCheck.html) in the *Elastic Load Balancing API Reference \(version 2012\-06\-01\)* 
 +  [User Guide for Classic Load Balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/classic) 
+

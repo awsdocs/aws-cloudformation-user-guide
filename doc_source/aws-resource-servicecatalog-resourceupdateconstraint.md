@@ -87,6 +87,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-servicecatalog-resourceupdateconstraint--examples"></a>
 
+
+
 ### Create a RESOURCE\_UPDATE constraint<a name="aws-resource-servicecatalog-resourceupdateconstraint--examples--Create_a_RESOURCE_UPDATE_constraint"></a>
 
 #### JSON<a name="aws-resource-servicecatalog-resourceupdateconstraint--examples--Create_a_RESOURCE_UPDATE_constraint--json"></a>
@@ -115,4 +117,5 @@ Properties:
 ```
 
 ## See also<a name="aws-resource-servicecatalog-resourceupdateconstraint--seealso"></a>
-+ [CreateConstraint](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateConstraint.html) in the *AWS Service Catalog API Reference*
++ [CreateConstraint](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateConstraint.html) in the *AWS Service Catalog Reference*
+

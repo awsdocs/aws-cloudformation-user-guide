@@ -75,6 +75,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigatewayv2-model--examples"></a>
 
+
+
 ### Model creation example<a name="aws-resource-apigatewayv2-model--examples--Model_creation_example"></a>
 
 The following example creates a `model` resource called `MyModel` for an API called `MyApi`\.
@@ -126,3 +128,4 @@ MyModel:
 
 ## See also<a name="aws-resource-apigatewayv2-model--seealso"></a>
 + [CreateModel](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-models.html#CreateModel) in the *Amazon API Gateway Version 2 API Reference*
+

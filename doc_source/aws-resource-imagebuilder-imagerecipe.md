@@ -12,9 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ImageBuilder::ImageRecipe",
   "Properties" : {
+      "[AdditionalInstanceConfiguration](#cfn-imagebuilder-imagerecipe-additionalinstanceconfiguration)" : AdditionalInstanceConfiguration,
       "[BlockDeviceMappings](#cfn-imagebuilder-imagerecipe-blockdevicemappings)" : [ InstanceBlockDeviceMapping, ... ],
       "[Components](#cfn-imagebuilder-imagerecipe-components)" : [ ComponentConfiguration, ... ],
       "[Description](#cfn-imagebuilder-imagerecipe-description)" : String,
+      "[Name](#cfn-imagebuilder-imagerecipe-name)" : String,
       "[ParentImage](#cfn-imagebuilder-imagerecipe-parentimage)" : String,
       "[Tags](#cfn-imagebuilder-imagerecipe-tags)" : {Key : Value, ...},
       "[Version](#cfn-imagebuilder-imagerecipe-version)" : String,
@@ -28,11 +30,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ImageBuilder::ImageRecipe
 Properties: 
+  [AdditionalInstanceConfiguration](#cfn-imagebuilder-imagerecipe-additionalinstanceconfiguration): 
+    AdditionalInstanceConfiguration
   [BlockDeviceMappings](#cfn-imagebuilder-imagerecipe-blockdevicemappings): 
     - InstanceBlockDeviceMapping
   [Components](#cfn-imagebuilder-imagerecipe-components): 
     - ComponentConfiguration
   [Description](#cfn-imagebuilder-imagerecipe-description): String
+  [Name](#cfn-imagebuilder-imagerecipe-name): String
   [ParentImage](#cfn-imagebuilder-imagerecipe-parentimage): String
   [Tags](#cfn-imagebuilder-imagerecipe-tags): 
     Key : Value
@@ -41,6 +46,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-imagebuilder-imagerecipe-properties"></a>
+
+`AdditionalInstanceConfiguration`  <a name="cfn-imagebuilder-imagerecipe-additionalinstanceconfiguration"></a>
+Before you create a new AMI, Image Builder launches temporary Amazon EC2 instances to build and test your image configuration\. Instance configuration adds a layer of control over those instances\. You can define settings and add scripts to run when an instance is launched from your AMI\.  
+*Required*: No  
+*Type*: [AdditionalInstanceConfiguration](aws-properties-imagebuilder-imagerecipe-additionalinstanceconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BlockDeviceMappings`  <a name="cfn-imagebuilder-imagerecipe-blockdevicemappings"></a>
 The block device mappings to apply when creating images from this recipe\.  
@@ -60,6 +71,13 @@ The description of the image recipe\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Name`  <a name="cfn-imagebuilder-imagerecipe-name"></a>
+The name of the image recipe\.  
+*Required*: Yes  
+*Type*: String  
+*Pattern*: `^[-_A-Za-z-0-9][-_A-Za-z0-9 ]{1,126}[-_A-Za-z-0-9]$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ParentImage`  <a name="cfn-imagebuilder-imagerecipe-parentimage"></a>
@@ -111,9 +129,11 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 Returns the Amazon Resource Name \(ARN\) of the image recipe\. For example, `arn:aws:imagebuilder:us-east-1:123456789012:image-recipe/mybasicrecipe/2019.12.03`\.
 
 `Name`  <a name="Name-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The name of the image recipe\.
 
 ## Examples<a name="aws-resource-imagebuilder-imagerecipe--examples"></a>
+
+
 
 ### Create an image recipe<a name="aws-resource-imagebuilder-imagerecipe--examples--Create_an_image_recipe"></a>
 
@@ -203,4 +223,5 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-imagebuilder-imagerecipe--seealso"></a>
-+ [Create a basic image recipe](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-recipe) in the *EC2 Image Builder User Guide*\.
++ [Create a basic image recipe](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-recipe) in the *Image Builder User Guide*\.
+

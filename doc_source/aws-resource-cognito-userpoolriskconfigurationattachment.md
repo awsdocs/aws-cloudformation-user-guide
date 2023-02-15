@@ -41,7 +41,7 @@ Properties:
 ## Properties<a name="aws-resource-cognito-userpoolriskconfigurationattachment-properties"></a>
 
 `AccountTakeoverRiskConfiguration`  <a name="cfn-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfiguration"></a>
-The account takeover risk configuration object including the `NotifyConfiguration` object and `Actions` to take in the case of an account takeover\.  
+The account takeover risk configuration object, including the `NotifyConfiguration` object and `Actions` to take if there is an account takeover\.  
 *Required*: No  
 *Type*: [AccountTakeoverRiskConfigurationType](aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoverriskconfigurationtype.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -56,7 +56,7 @@ The app client ID\. You can specify the risk configuration for a single client \
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CompromisedCredentialsRiskConfiguration`  <a name="cfn-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfiguration"></a>
-The compromised credentials risk configuration object including the `EventFilter` and the `EventAction`   
+The compromised credentials risk configuration object, including the `EventFilter` and the `EventAction`\.  
 *Required*: No  
 *Type*: [CompromisedCredentialsRiskConfigurationType](aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -89,6 +89,8 @@ For the Amazon Cognito risk configuration attachment `UserPoolRiskConfigurationA
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-cognito-userpoolriskconfigurationattachment--examples"></a>
+
+
 
 ### Creating a new risk configuration attachment for a user pool<a name="aws-resource-cognito-userpoolriskconfigurationattachment--examples--Creating_a_new_risk_configuration_attachment_for_a_user_pool"></a>
 

@@ -52,3 +52,4 @@ Specifies the format of the records on the streaming source\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-referenceschema--seealso"></a>
 +  [SourceSchema](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_SourceSchema.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

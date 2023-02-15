@@ -86,3 +86,40 @@ The HTTP redirect code\. The redirect is either permanent \(HTTP 301\) or tempor
 *Type*: String  
 *Allowed values*: `HTTP_301 | HTTP_302`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig--examples"></a>
+
+This example creates a listener rule with an action that redirects HTTPS requests on port 443\. At least one of the following components must be modified \(to avoid a redirect loop\): protocol, hostname, port, or path\. Components that are not modified retain their original values\.
+
+### <a name="aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig--examples--"></a>
+
+#### JSON<a name="aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig--examples----json"></a>
+
+```
+"HTTPSlistenerRule": {
+    "Type": "AWS::ElasticLoadBalancingV2::ListenerRule",
+    "Properties": {
+        "Actions": [
+            {
+               "Type": "redirect",
+               "RedirectConfig": {
+                   "Protocol": "HTTPS",
+                   "Port": 443,
+                   "Host": "#{host}",
+                   "Path": "/#{path}",
+                   "Query": "#{query}",
+                   "StatusCode": "HTTP_301"
+               }
+            }
+        ],        
+        "Conditions": [
+            "Field" : "path-pattern",
+            "Values" : ["/path"]
+        ],
+        "ListenerArn": {
+               "Ref": "myHTTPListener"
+        },
+        "Priority": "1"
+    }
+}
+```

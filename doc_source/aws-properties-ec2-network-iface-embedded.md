@@ -2,7 +2,9 @@
 
 Specifies a network interface that is to be attached to an instance\.
 
- `NetworkInterface` is a property of the [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource\.
+You can create a network interface when launching an instance\. For an example, see the [AWS::EC2::Instance examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#aws-properties-ec2-instance--examples--Automatically_assign_a_public_IP_address)\.
+
+Alternatively, you can attach an existing network interface when launching an instance\. For an example, see the [AWS::EC2:NetworkInterface examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#aws-resource-ec2-networkinterface--examples)\.
 
 ## Syntax<a name="aws-properties-ec2-network-iface-embedded-syntax"></a>
 
@@ -12,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AssociateCarrierIpAddress](#cfn-ec2-instance-networkinterface-associatecarrieripaddress)" : Boolean,
   "[AssociatePublicIpAddress](#aws-properties-ec2-network-iface-embedded-associatepubip)" : Boolean,
   "[DeleteOnTermination](#aws-properties-ec2-network-iface-embedded-delete)" : Boolean,
   "[Description](#aws-properties-ec2-network-iface-embedded-description)" : String,
@@ -30,6 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-network-iface-embedded-syntax.yaml"></a>
 
 ```
+  [AssociateCarrierIpAddress](#cfn-ec2-instance-networkinterface-associatecarrieripaddress): Boolean
   [AssociatePublicIpAddress](#aws-properties-ec2-network-iface-embedded-associatepubip): Boolean
   [DeleteOnTermination](#aws-properties-ec2-network-iface-embedded-delete): Boolean
   [Description](#aws-properties-ec2-network-iface-embedded-description): String
@@ -49,14 +53,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-ec2-network-iface-embedded-properties"></a>
 
+`AssociateCarrierIpAddress`  <a name="cfn-ec2-instance-networkinterface-associatecarrieripaddress"></a>
+Indicates whether to assign a carrier IP address to the network interface\.  
+You can only assign a carrier IP address to a network interface that is in a subnet in a Wavelength Zone\. For more information about carrier IP addresses, see [Carrier IP address](https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#provider-owned-ip) in the * AWS Wavelength Developer Guide*\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `AssociatePublicIpAddress`  <a name="aws-properties-ec2-network-iface-embedded-associatepubip"></a>
-Indicates whether to assign a public IPv4 address to an instance you launch in a VPC\. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one\. You cannot specify more than one network interface in the request\. If launching into a default subnet, the default value is `true`\.  
+Indicates whether to assign a public IPv4 address to an instance\. Applies only if creating a network interface when launching an instance\. The network interface must be the primary network interface\. If launching into a default subnet, the default value is `true`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeleteOnTermination`  <a name="aws-properties-ec2-network-iface-embedded-delete"></a>
-If set to `true`, the interface is deleted when the instance is terminated\. You can specify `true` only if creating a new network interface when launching an instance\.  
+Indicates whether the network interface is deleted when the instance is terminated\. Applies only if creating a network interface when launching an instance\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -69,7 +80,7 @@ The description of the network interface\. Applies only if creating a network in
 
 `DeviceIndex`  <a name="aws-properties-ec2-network-iface-embedded-deviceindex"></a>
 The position of the network interface in the attachment order\. A primary network interface has a device index of 0\.  
-If you specify a network interface when launching an instance, you must specify the device index\.  
+If you create a network interface when launching an instance, you must specify the device index\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -87,38 +98,37 @@ A number of IPv6 addresses to assign to the network interface\. Amazon EC2 choos
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Ipv6Addresses`  <a name="cfn-ec2-instance-networkinterface-ipv6addresses"></a>
-The IPv6 addresses associated with the network interface\.  
+The IPv6 addresses to assign to the network interface\. You cannot specify this option and the option to assign a number of IPv6 addresses in the same request\. You cannot specify this option if you've specified a minimum number of instances to launch\.  
 *Required*: No  
 *Type*: List of [InstanceIpv6Address](aws-properties-ec2-instance-instanceipv6address.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkInterfaceId`  <a name="aws-properties-ec2-network-iface-embedded-network-iface"></a>
-The ID of the network interface\.  
-If you are creating a Spot Fleet, omit this parameter because you can’t specify a network interface ID in a launch specification\.  
+The ID of the network interface, when attaching an existing network interface\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivateIpAddress`  <a name="aws-properties-ec2-network-iface-embedded-privateipaddress"></a>
-The private IPv4 address of the network interface\. Applies only if creating a network interface when launching an instance\. You cannot specify this option if you're launching more than one instance in a [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) request\.  
+The private IPv4 address of the network interface\. Applies only if creating a network interface when launching an instance\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivateIpAddresses`  <a name="aws-properties-ec2-network-iface-embedded-privateipaddresses"></a>
-One or more private IPv4 addresses to assign to the network interface\. Only one private IPv4 address can be designated as primary\. You cannot specify this option if you're launching more than one instance in a [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) request\.  
+One or more private IPv4 addresses to assign to the network interface\. Only one private IPv4 address can be designated as primary\.  
 *Required*: No  
-*Type*: List of [PrivateIpAddressSpecification](aws-properties-ec2-network-interface-privateipspec-1.md)  
+*Type*: List of [PrivateIpAddressSpecification](aws-properties-ec2-network-interface-privateipspec.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecondaryPrivateIpAddressCount`  <a name="aws-properties-ec2-network-iface-embedded-secondprivateip"></a>
-The number of secondary private IPv4 addresses\. You can't specify this option and specify more than one private IP address using the private IP addresses option\. You cannot specify this option if you're launching more than one instance in a [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) request\.  
+The number of secondary private IPv4 addresses\. You can't specify this option and specify more than one private IP address using the private IP addresses option\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="aws-properties-ec2-network-iface-embedded-subnetid"></a>
-The ID of the subnet\.  
+The ID of the subnet associated with the network interface\. Applies only if creating a network interface when launching an instance\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

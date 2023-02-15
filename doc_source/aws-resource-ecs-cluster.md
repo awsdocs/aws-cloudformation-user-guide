@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CapacityProviders](#cfn-ecs-cluster-capacityproviders)" : [ String, ... ],
       "[ClusterName](#cfn-ecs-cluster-clustername)" : String,
       "[ClusterSettings](#cfn-ecs-cluster-clustersettings)" : [ ClusterSettings, ... ],
+      "[Configuration](#cfn-ecs-cluster-configuration)" : ClusterConfiguration,
       "[DefaultCapacityProviderStrategy](#cfn-ecs-cluster-defaultcapacityproviderstrategy)" : [ CapacityProviderStrategyItem, ... ],
       "[Tags](#cfn-ecs-cluster-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -31,6 +32,8 @@ Properties:
   [ClusterName](#cfn-ecs-cluster-clustername): String
   [ClusterSettings](#cfn-ecs-cluster-clustersettings): 
     - ClusterSettings
+  [Configuration](#cfn-ecs-cluster-configuration): 
+    ClusterConfiguration
   [DefaultCapacityProviderStrategy](#cfn-ecs-cluster-defaultcapacityproviderstrategy): 
     - CapacityProviderStrategyItem
   [Tags](#cfn-ecs-cluster-tags): 
@@ -40,7 +43,9 @@ Properties:
 ## Properties<a name="aws-resource-ecs-cluster-properties"></a>
 
 `CapacityProviders`  <a name="cfn-ecs-cluster-capacityproviders"></a>
-The capacity providers associated with the cluster\.  
+The short name of one or more capacity providers to associate with the cluster\. A capacity provider must be associated with a cluster before it can be included as part of the default capacity provider strategy of the cluster or used in a capacity provider strategy\.  
+If specifying a capacity provider that uses an Auto Scaling group, the capacity provider must already be created and not already associated with another cluster\.  
+To use an AWS Fargate capacity provider, specify either the `FARGATE` or `FARGATE_SPOT` capacity providers\. The AWS Fargate capacity providers are available to all accounts and only need to be associated with a cluster to be used\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -57,6 +62,12 @@ The setting to use when creating a cluster\. This parameter is used to enable Cl
 *Type*: [List](aws-properties-ecs-cluster-clustersettings.md) of [ClusterSettings](aws-properties-ecs-cluster-clustersettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Configuration`  <a name="cfn-ecs-cluster-configuration"></a>
+The execute command configuration for the cluster\.  
+*Required*: No  
+*Type*: [ClusterConfiguration](aws-properties-ecs-cluster-clusterconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DefaultCapacityProviderStrategy`  <a name="cfn-ecs-cluster-defaultcapacityproviderstrategy"></a>
 The default capacity provider strategy for the cluster\. When services or tasks are run in the cluster with no launch type or capacity provider strategy specified, the default capacity provider strategy is used\.  
 *Required*: No  
@@ -64,7 +75,7 @@ The default capacity provider strategy for the cluster\. When services or tasks 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-ecs-cluster-tags"></a>
-The metadata that you apply to the cluster to help you categorize and organize them\. Each tag consists of a key and an optional value, both of which you define\.  
+The metadata that you apply to the cluster to help you categorize and organize them\. Each tag consists of a key and an optional value\. You define both\.  
 The following basic restrictions apply to tags:  
 + Maximum number of tags per resource \- 50
 + For each resource, each tag key must be unique, and each tag key can have only one value\.
@@ -103,11 +114,13 @@ The Amazon Resource Name \(ARN\) of the Amazon ECS cluster, such as `arn:aws:ecs
 
 ## Examples<a name="aws-resource-ecs-cluster--examples"></a>
 
-### Define a cluster with the AWS Fargate capacity providers and a default capacity provider strategy defined<a name="aws-resource-ecs-cluster--examples--Define_a_cluster_with_the_AWS_Fargate_capacity_providers_and_a_default_capacity_provider_strategy_defined"></a>
+
+
+### Define a cluster with the Fargate capacity providers and a default capacity provider strategy defined<a name="aws-resource-ecs-cluster--examples--Define_a_cluster_with_the__capacity_providers_and_a_default_capacity_provider_strategy_defined"></a>
 
 The following example defines a cluster named `MyFargateCluster` with the `FARGATE` and `FARGATE_SPOT` capacity providers\. A default capacity provider strategy is also defined where tasks launched will be split evenly between the `FARGATE` and `FARGATE_SPOT` capacity providers\.
 
-#### JSON<a name="aws-resource-ecs-cluster--examples--Define_a_cluster_with_the_AWS_Fargate_capacity_providers_and_a_default_capacity_provider_strategy_defined--json"></a>
+#### JSON<a name="aws-resource-ecs-cluster--examples--Define_a_cluster_with_the__capacity_providers_and_a_default_capacity_provider_strategy_defined--json"></a>
 
 ```
 "ECSCluster": {
@@ -132,7 +145,7 @@ The following example defines a cluster named `MyFargateCluster` with the `FARGA
 }
 ```
 
-#### YAML<a name="aws-resource-ecs-cluster--examples--Define_a_cluster_with_the_AWS_Fargate_capacity_providers_and_a_default_capacity_provider_strategy_defined--yaml"></a>
+#### YAML<a name="aws-resource-ecs-cluster--examples--Define_a_cluster_with_the__capacity_providers_and_a_default_capacity_provider_strategy_defined--yaml"></a>
 
 ```
 ECSCluster:
@@ -141,12 +154,46 @@ ECSCluster:
     ClusterName: MyFargateCluster
     CapacityProviders:
       - FARGATE
-        FARGATE_SPOT
+      - FARGATE_SPOT
     DefaultCapacityProviderStrategy:
       - CapacityProvider: FARGATE
         Weight: 1
       - CapacityProvider: FARGATE_SPOT
         Weight: 1
+```
+
+### Define a cluster with an ECS Exec configuration defined<a name="aws-resource-ecs-cluster--examples--Define_a_cluster_with_an_ECS_Exec_configuration_defined"></a>
+
+The following example defines a cluster named `MyCluster` with ECS Exec enabled using the default logging configuration\. For more information, see [Using ECS Exec for debugging](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html) in the *Amazon ECS Developer Guide*\.
+
+#### JSON<a name="aws-resource-ecs-cluster--examples--Define_a_cluster_with_an_ECS_Exec_configuration_defined--json"></a>
+
+```
+{
+    "ECSCluster": {
+        "Type": "AWS::ECS::Cluster",
+        "Properties": {
+            "ClusterName": "MyCluster",
+            "Configuration": {
+                "ExecuteCommandConfiguration": {
+                    "Logging": "DEFAULT"
+                }
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-ecs-cluster--examples--Define_a_cluster_with_an_ECS_Exec_configuration_defined--yaml"></a>
+
+```
+ECSCluster:
+  Type: 'AWS::ECS::Cluster'
+  Properties:
+    ClusterName: MyCluster
+    Configuration:
+       ExecuteCommandConfiguration:
+          Logging: DEFAULT
 ```
 
 ### Define an empty cluster<a name="aws-resource-ecs-cluster--examples--Define_an_empty_cluster"></a>

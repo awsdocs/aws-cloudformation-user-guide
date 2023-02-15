@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Marketo](#cfn-appflow-flow-connectoroperator-marketo)" : String,
   "[S3](#cfn-appflow-flow-connectoroperator-s3)" : String,
   "[Salesforce](#cfn-appflow-flow-connectoroperator-salesforce)" : String,
+  "[SAPOData](#cfn-appflow-flow-connectoroperator-sapodata)" : String,
   "[ServiceNow](#cfn-appflow-flow-connectoroperator-servicenow)" : String,
   "[Singular](#cfn-appflow-flow-connectoroperator-singular)" : String,
   "[Slack](#cfn-appflow-flow-connectoroperator-slack)" : String,
@@ -38,6 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Marketo](#cfn-appflow-flow-connectoroperator-marketo): String
   [S3](#cfn-appflow-flow-connectoroperator-s3): String
   [Salesforce](#cfn-appflow-flow-connectoroperator-salesforce): String
+  [SAPOData](#cfn-appflow-flow-connectoroperator-sapodata): String
   [ServiceNow](#cfn-appflow-flow-connectoroperator-servicenow): String
   [Singular](#cfn-appflow-flow-connectoroperator-singular): String
   [Slack](#cfn-appflow-flow-connectoroperator-slack): String
@@ -104,6 +106,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Allowed values*: `ADDITION | BETWEEN | CONTAINS | DIVISION | EQUAL_TO | GREATER_THAN | GREATER_THAN_OR_EQUAL_TO | LESS_THAN | LESS_THAN_OR_EQUAL_TO | MASK_ALL | MASK_FIRST_N | MASK_LAST_N | MULTIPLICATION | NO_OP | NOT_EQUAL_TO | PROJECTION | SUBTRACTION | VALIDATE_NON_NEGATIVE | VALIDATE_NON_NULL | VALIDATE_NON_ZERO | VALIDATE_NUMERIC`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SAPOData`  <a name="cfn-appflow-flow-connectoroperator-sapodata"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ServiceNow`  <a name="cfn-appflow-flow-connectoroperator-servicenow"></a>
  The operation to be performed on the provided ServiceNow source fields\.   
 *Required*: No  
@@ -148,3 +156,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-flow-connectoroperator--seealso"></a>
 + [ConnectorOperator](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ConnectorOperator.html) in the *Amazon AppFlow API Reference*\.
+

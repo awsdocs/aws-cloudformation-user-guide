@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel OutputGroupSettings<a name="aws-properties-medialive-channel-outputgroupsettings"></a>
 
-Configures this output group\. In this element, include only one of the 'group settings' child elements\. This element belongs to OutputGroup\.
+The configuration of the output group\.
+
+The parent of this entity is OutputGroup\.
 
 ## Syntax<a name="aws-properties-medialive-channel-outputgroupsettings-syntax"></a>
 
@@ -45,49 +47,50 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-outputgroupsettings-properties"></a>
 
 `ArchiveGroupSettings`  <a name="cfn-medialive-channel-outputgroupsettings-archivegroupsettings"></a>
-Include this 'group settings' element if you want to set up this output group as an Archive output group\.  
+The configuration of an archive output group\.  
+The parent of this entity is OutputGroupSettings\.  
 *Required*: No  
 *Type*: [ArchiveGroupSettings](aws-properties-medialive-channel-archivegroupsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FrameCaptureGroupSettings`  <a name="cfn-medialive-channel-outputgroupsettings-framecapturegroupsettings"></a>
-Include this 'group settings' element if you want to set up this output group as a FrameCapture output group\.  
+The configuration of a frame capture output group\.  
 *Required*: No  
 *Type*: [FrameCaptureGroupSettings](aws-properties-medialive-channel-framecapturegroupsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HlsGroupSettings`  <a name="cfn-medialive-channel-outputgroupsettings-hlsgroupsettings"></a>
-Include this 'group settings' element if you want to set up this output group as an HLS output group\.  
+The configuration of an HLS output group\.  
 *Required*: No  
 *Type*: [HlsGroupSettings](aws-properties-medialive-channel-hlsgroupsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MediaPackageGroupSettings`  <a name="cfn-medialive-channel-outputgroupsettings-mediapackagegroupsettings"></a>
-Include this 'group settings' element if you want to set up this output group as a MediaPackage output group\.  
+The configuration of a MediaPackage output group\.  
 *Required*: No  
 *Type*: [MediaPackageGroupSettings](aws-properties-medialive-channel-mediapackagegroupsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MsSmoothGroupSettings`  <a name="cfn-medialive-channel-outputgroupsettings-mssmoothgroupsettings"></a>
-Include this 'group settings' element if you want to set up this output group as a Microsoft Smooth output group\.  
+The configuration of a Microsoft Smooth output group\.  
 *Required*: No  
 *Type*: [MsSmoothGroupSettings](aws-properties-medialive-channel-mssmoothgroupsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MultiplexGroupSettings`  <a name="cfn-medialive-channel-outputgroupsettings-multiplexgroupsettings"></a>
-Include this 'group settings' element if you want to set up this output group as a Multiplex output group\.  
+The settings for a Multiplex output group\.   
 *Required*: No  
 *Type*: [MultiplexGroupSettings](aws-properties-medialive-channel-multiplexgroupsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RtmpGroupSettings`  <a name="cfn-medialive-channel-outputgroupsettings-rtmpgroupsettings"></a>
-Include this 'group settings' element if you want to set up this output group as an RTMP output group\.  
+The configuration of an RTMP output group\.  
 *Required*: No  
 *Type*: [RtmpGroupSettings](aws-properties-medialive-channel-rtmpgroupsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UdpGroupSettings`  <a name="cfn-medialive-channel-outputgroupsettings-udpgroupsettings"></a>
-Include this 'group settings' element if you want to set up this output group as a UDP output group\.  
+The configuration of a UDP output group\.  
 *Required*: No  
 *Type*: [UdpGroupSettings](aws-properties-medialive-channel-udpgroupsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

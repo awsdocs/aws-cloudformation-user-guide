@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype-properties"></a>
 
 `HtmlBody`  <a name="cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-htmlbody"></a>
-The HTML body\.  
+The email HTML body\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `6`  
@@ -36,7 +36,7 @@ The HTML body\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Subject`  <a name="cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-subject"></a>
-The subject\.  
+The email subject\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -45,7 +45,7 @@ The subject\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TextBody`  <a name="cfn-cognito-userpoolriskconfigurationattachment-notifyemailtype-textbody"></a>
-The text body\.  
+The email text body\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `6`  

@@ -25,16 +25,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-apigateway-usageplan-throttlesettings-properties"></a>
 
 `BurstLimit`  <a name="cfn-apigateway-usageplan-throttlesettings-burstlimit"></a>
-The maximum API request rate limit over a time ranging from one to a few seconds\. The maximum API request rate limit depends on whether the underlying token bucket is at its full capacity\. For more information about request throttling, see [Manage API Request Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
+The API target request burst rate limit\. This allows more requests through for a period of time than the target rate limit\. For more information about request throttling, see [Manage API Request Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RateLimit`  <a name="cfn-apigateway-usageplan-throttlesettings-ratelimit"></a>
-The API request steady\-state rate limit \(average requests per second over an extended period of time\)\. For more information about request throttling, see [Manage API Request Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
+The API target request steady\-state rate limit\. For more information about request throttling, see [Manage API Request Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-apigateway-usageplan-throttlesettings--seealso"></a>
 + [UsagePlan](https://docs.aws.amazon.com/apigateway/api-reference/resource/usage-plan/) in the *Amazon API Gateway REST API Reference*
+

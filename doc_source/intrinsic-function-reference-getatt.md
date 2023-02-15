@@ -136,6 +136,6 @@ Resources:
 
 ## Supported functions<a name="getatt-supported-functions"></a>
 
-For the `Fn::GetAtt` logical resource name, you cannot use functions\. You must specify a string that is a resource's logical ID\.
+For the `Fn::GetAtt` logical resource name, you can't use functions\. You must specify a string that's a resource's logical ID\.
 
 For the `Fn::GetAtt` attribute name, you can use the `Ref` function\.

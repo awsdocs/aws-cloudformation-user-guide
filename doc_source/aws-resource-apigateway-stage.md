@@ -109,7 +109,7 @@ The version ID of the API documentation snapshot\.
 `MethodSettings`  <a name="cfn-apigateway-stage-methodsettings"></a>
 Settings for all methods in the stage\.  
 *Required*: No  
-*Type*: List of [MethodSetting](aws-properties-apitgateway-stage-methodsetting.md)  
+*Type*: List of [MethodSetting](aws-properties-apigateway-stage-methodsetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RestApiId`  <a name="cfn-apigateway-stage-restapiid"></a>
@@ -152,6 +152,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-apigateway-stage--examples"></a>
+
+
 
 ### Create stage<a name="aws-resource-apigateway-stage--examples--Create_stage"></a>
 
@@ -244,3 +246,4 @@ Resources:
 
 ## See also<a name="aws-resource-apigateway-stage--seealso"></a>
 + [stage:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/stage-create/) in the *Amazon API Gateway REST API Reference*
+

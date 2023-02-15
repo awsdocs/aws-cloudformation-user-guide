@@ -1,6 +1,6 @@
 # AWS::AutoScalingPlans::ScalingPlan TagFilter<a name="aws-properties-autoscalingplans-scalingplan-tagfilter"></a>
 
- `TagFilter` is a subproperty of [ApplicationSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html) that specifies a tag for an application source to use with AWS Auto Scaling\. 
+ `TagFilter` is a subproperty of [ApplicationSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html) that specifies a tag for an application source to use with AWS Auto Scaling \(Auto Scaling Plans\)\. 
 
 ## Syntax<a name="aws-properties-autoscalingplans-scalingplan-tagfilter-syntax"></a>
 

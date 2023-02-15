@@ -51,7 +51,7 @@ Name of the conformance pack you want to create\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DeliveryS3Bucket`  <a name="cfn-config-conformancepack-deliverys3bucket"></a>
-AWS Config stores intermediate files while processing conformance pack template\.  
+The name of the Amazon S3 bucket where AWS Config stores conformance pack templates\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -64,7 +64,7 @@ The prefix for the Amazon S3 bucket\.
 
 `TemplateBody`  <a name="cfn-config-conformancepack-templatebody"></a>
 A string containing full conformance pack template body\. Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes\.  
-You can only use a YAML template with one resource type, that is, config rule and a remediation action\. 
+You can only use a YAML template with two resource types: config rule \(`AWS::Config::ConfigRule`\) and a remediation action \(`AWS::Config::RemediationConfiguration`\)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -85,6 +85,8 @@ You must have access to read Amazon S3 bucket\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-config-conformancepack--examples"></a>
+
+
 
 ### Conformance Pack<a name="aws-resource-config-conformancepack--examples--Conformance_Pack"></a>
 

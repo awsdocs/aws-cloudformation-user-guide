@@ -14,13 +14,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Kendra::DataSource",
   "Properties" : {
+      "[CustomDocumentEnrichmentConfiguration](#cfn-kendra-datasource-customdocumentenrichmentconfiguration)" : CustomDocumentEnrichmentConfiguration,
       "[DataSourceConfiguration](#cfn-kendra-datasource-datasourceconfiguration)" : DataSourceConfiguration,
       "[Description](#cfn-kendra-datasource-description)" : String,
       "[IndexId](#cfn-kendra-datasource-indexid)" : String,
       "[Name](#cfn-kendra-datasource-name)" : String,
       "[RoleArn](#cfn-kendra-datasource-rolearn)" : String,
       "[Schedule](#cfn-kendra-datasource-schedule)" : String,
-      "[Tags](#cfn-kendra-datasource-tags)" : TagList,
+      "[Tags](#cfn-kendra-datasource-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Type](#cfn-kendra-datasource-type)" : String
     }
 }
@@ -31,6 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Kendra::DataSource
 Properties: 
+  [CustomDocumentEnrichmentConfiguration](#cfn-kendra-datasource-customdocumentenrichmentconfiguration): 
+    CustomDocumentEnrichmentConfiguration
   [DataSourceConfiguration](#cfn-kendra-datasource-datasourceconfiguration): 
     DataSourceConfiguration
   [Description](#cfn-kendra-datasource-description): String
@@ -39,20 +42,31 @@ Properties:
   [RoleArn](#cfn-kendra-datasource-rolearn): String
   [Schedule](#cfn-kendra-datasource-schedule): String
   [Tags](#cfn-kendra-datasource-tags): 
-    TagList
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Type](#cfn-kendra-datasource-type): String
 ```
 
 ## Properties<a name="aws-resource-kendra-datasource-properties"></a>
 
+`CustomDocumentEnrichmentConfiguration`  <a name="cfn-kendra-datasource-customdocumentenrichmentconfiguration"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [CustomDocumentEnrichmentConfiguration](aws-properties-kendra-datasource-customdocumentenrichmentconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DataSourceConfiguration`  <a name="cfn-kendra-datasource-datasourceconfiguration"></a>
 Configuration information for an Amazon Kendra data source\. The contents of the configuration depend on the type of data source\. You can only specify one type of data source in the configuration\. Choose from one of the following data sources\.  
 + Amazon S3
++ Confluence
++ Custom
 + Database
 + Microsoft OneDrive
++ Microsoft SharePoint 
 + Salesforce
 + ServiceNow
-*Required*: Yes  
+You can't specify the `Configuration` parameter when the `Type` parameter is set to `CUSTOM`\.  
+The `Configuration` parameter is required for all other data sources\.  
+*Required*: No  
 *Type*: [DataSourceConfiguration](aws-properties-kendra-datasource-datasourceconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -79,7 +93,9 @@ The name of the data source\.
 
 `RoleArn`  <a name="cfn-kendra-datasource-rolearn"></a>
 The Amazon Resource Name \(ARN\) of a role with permission to access the data source\.  
-*Required*: Yes  
+You can't specify the `RoleArn` parameter when the `Type` parameter is set to `CUSTOM`\.  
+The `RoleArn` parameter is required for all other data sources\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -93,14 +109,14 @@ Sets the frequency that Amazon Kendra checks the documents in your data source a
 An array of key\-value pairs to apply to this resource  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
-*Type*: [TagList](aws-properties-kendra-datasource-taglist.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-kendra-datasource-type"></a>
 The type of the data source\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `DATABASE | ONEDRIVE | S3 | SALESFORCE | SERVICENOW | SHAREPOINT`  
+*Allowed values*: `CONFLUENCE | CUSTOM | DATABASE | FSX | GOOGLEDRIVE | ONEDRIVE | S3 | SALESFORCE | SERVICENOW | SHAREPOINT | SLACK | WEBCRAWLER | WORKDOCS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-kendra-datasource-return-values"></a>

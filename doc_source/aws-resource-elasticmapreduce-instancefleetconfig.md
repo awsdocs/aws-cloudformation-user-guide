@@ -5,6 +5,9 @@ Use `InstanceFleetConfig` to define instance fleets for an EMR cluster\. A clust
 **Note**  
 The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\.
 
+**Important**  
+You can currently only add a task instance fleet to a cluster with this resource\. If you use this resource, CloudFormation waits for the cluster launch to complete before adding the task instance fleet to the cluster\. In order to add a task instance fleet to the cluster as part of the cluster launch and minimize delays in provisioning task nodes, use the `TaskInstanceFleets` subproperty for the [AWS::EMR::Cluster JobFlowInstancesConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html) property instead\. To use this subproperty, see [AWS::EMR::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html) for examples\.
+
 ## Syntax<a name="aws-resource-elasticmapreduce-instancefleetconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -51,14 +54,14 @@ The unique identifier of the EMR cluster\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceFleetType`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancefleettype"></a>
-The node type that the instance fleet hosts\. Valid values are MASTER,CORE,and TASK\.  
+The node type that the instance fleet hosts\.  
+*Allowed Values*: TASK  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `CORE | MASTER | TASK`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceTypeConfigs`  <a name="cfn-elasticmapreduce-instancefleetconfig-instancetypeconfigs"></a>
-`InstanceTypeConfigs` determine the EC2 instances that Amazon EMR attempts to provision to fulfill On\-Demand and Spot target capacities\. There can be a maximum of 5 instance type configurations in a fleet, each one specified using an `InstanceTypeConfig`\.  
+`InstanceTypeConfigs` determine the EC2 instances that Amazon EMR attempts to provision to fulfill On\-Demand and Spot target capacities\.  
 The instance fleet configuration is available only in Amazon EMR versions 4\.8\.0 and later, excluding 5\.0\.x versions\.
 *Required*: No  
 *Type*: List of [InstanceTypeConfig](aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.md)  
@@ -99,6 +102,6 @@ If not specified or set to 0, only On\-Demand instances are provisioned for the 
 
 ### Ref<a name="aws-resource-elasticmapreduce-instancefleetconfig-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the instance fleet\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns returns the ID of the instance fleet\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

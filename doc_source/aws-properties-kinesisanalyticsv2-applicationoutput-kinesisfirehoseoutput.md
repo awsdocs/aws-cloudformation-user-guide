@@ -33,3 +33,4 @@ The ARN of the destination delivery stream to write to\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-applicationoutput-kinesisfirehoseoutput--seealso"></a>
 +  [KinesisFirehoseOutput](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_KinesisFirehoseOutput.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

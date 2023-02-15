@@ -174,6 +174,8 @@ For an example job template model in JSON and YAML, see the Examples section of 
 
 ## Examples<a name="aws-resource-mediaconvert-jobtemplate--examples"></a>
 
+
+
 ### Job Template Model for SettingsJson<a name="aws-resource-mediaconvert-jobtemplate--examples--Job_Template_Model_for_SettingsJson"></a>
 
 For more information about creating a job template model in JSON or YAML for the `SettingsJson` property, see the Remarks section of this topic\.

@@ -4,7 +4,7 @@ Specifies a target for your Traffic Mirror session\.
 
 A Traffic Mirror target is the destination for mirrored traffic\. The Traffic Mirror source and the Traffic Mirror target \(monitoring appliances\) can be in the same VPC, or in different VPCs connected via VPC peering or a transit gateway\.
 
-A Traffic Mirror target can be a network interface, or a Network Load Balancer\.
+A Traffic Mirror target can be a network interface, a Network Load Balancer, or a Gateway Load Balancer endpoint\.
 
 To use the target in a Traffic Mirror session, use [AWS::EC2::TrafficMirrorSession](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html)\.
 
@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::TrafficMirrorTarget",
   "Properties" : {
       "[Description](#cfn-ec2-trafficmirrortarget-description)" : String,
+      "[GatewayLoadBalancerEndpointId](#cfn-ec2-trafficmirrortarget-gatewayloadbalancerendpointid)" : String,
       "[NetworkInterfaceId](#cfn-ec2-trafficmirrortarget-networkinterfaceid)" : String,
       "[NetworkLoadBalancerArn](#cfn-ec2-trafficmirrortarget-networkloadbalancerarn)" : String,
       "[Tags](#cfn-ec2-trafficmirrortarget-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -32,6 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::EC2::TrafficMirrorTarget
 Properties: 
   [Description](#cfn-ec2-trafficmirrortarget-description): String
+  [GatewayLoadBalancerEndpointId](#cfn-ec2-trafficmirrortarget-gatewayloadbalancerendpointid): String
   [NetworkInterfaceId](#cfn-ec2-trafficmirrortarget-networkinterfaceid): String
   [NetworkLoadBalancerArn](#cfn-ec2-trafficmirrortarget-networkloadbalancerarn): String
   [Tags](#cfn-ec2-trafficmirrortarget-tags): 
@@ -42,6 +44,12 @@ Properties:
 
 `Description`  <a name="cfn-ec2-trafficmirrortarget-description"></a>
 The description of the Traffic Mirror target\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`GatewayLoadBalancerEndpointId`  <a name="cfn-ec2-trafficmirrortarget-gatewayloadbalancerendpointid"></a>
+The ID of the Gateway Load Balancer endpoint\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -74,11 +82,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ec2-trafficmirrortarget--examples"></a>
 
-### Create a Traffic Mirror Target Associated with a Network Load Balancer<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_Traffic_Mirror_Target_Associated_with_a_Network_Load_Balancer"></a>
+### Create a traffic mirror target associated with a Network Load Balancer<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_traffic_mirror_target_associated_with_a_Network_Load_Balancer"></a>
 
-This is a traffic mirror target associated with a network load balancer\.
+This is a traffic mirror target associated with a Network Load Balancer\.
 
-#### JSON<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_Traffic_Mirror_Target_Associated_with_a_Network_Load_Balancer--json"></a>
+#### JSON<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_traffic_mirror_target_associated_with_a_Network_Load_Balancer--json"></a>
 
 ```
 {
@@ -98,7 +106,7 @@ This is a traffic mirror target associated with a network load balancer\.
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_Traffic_Mirror_Target_Associated_with_a_Network_Load_Balancer--yaml"></a>
+#### YAML<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_traffic_mirror_target_associated_with_a_Network_Load_Balancer--yaml"></a>
 
 ```
 SampleNLBTrafficMirrorTarget:
@@ -111,11 +119,11 @@ SampleNLBTrafficMirrorTarget:
       Value: "SampleNLBTarget"
 ```
 
-### Create a Traffic Mirror Target Associated with a Network Interface<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_Traffic_Mirror_Target_Associated_with_a_Network_Interface"></a>
+### Create a traffic mirror target associated with a network interface<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_traffic_mirror_target_associated_with_a_network_interface"></a>
 
 This is a traffic mirror target associated with a network interface\.
 
-#### JSON<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_Traffic_Mirror_Target_Associated_with_a_Network_Interface--json"></a>
+#### JSON<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_traffic_mirror_target_associated_with_a_network_interface--json"></a>
 
 ```
 {
@@ -135,7 +143,7 @@ This is a traffic mirror target associated with a network interface\.
 }
 ```
 
-#### YAML<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_Traffic_Mirror_Target_Associated_with_a_Network_Interface--yaml"></a>
+#### YAML<a name="aws-resource-ec2-trafficmirrortarget--examples--Create_a_traffic_mirror_target_associated_with_a_network_interface--yaml"></a>
 
 ```
 SampleNetworkInterfaceTarget:
@@ -149,5 +157,6 @@ SampleNetworkInterfaceTarget:
 ```
 
 ## See also<a name="aws-resource-ec2-trafficmirrortarget--seealso"></a>
-+ [Traffic Mirror Targets](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-how-it-works.html#traffic-mirroring-targets) in *Traffic Mirroring*
++ [Traffic mirror targets](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-targets.html) in *Traffic Mirroring*
 + [CreateTrafficMirrorTarget](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateTrafficMirrorTarget.html) in the *Amazon EC2 API Reference*
+

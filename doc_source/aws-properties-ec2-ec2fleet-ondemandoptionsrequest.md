@@ -36,14 +36,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-ec2fleet-ondemandoptionsrequest-properties"></a>
 
 `AllocationStrategy`  <a name="cfn-ec2-ec2fleet-ondemandoptionsrequest-allocationstrategy"></a>
-The order of the launch template overrides to use in fulfilling On\-Demand capacity\. If you specify `lowest-price`, EC2 Fleet uses price to determine the order, launching the lowest price first\. If you specify `prioritized`, EC2 Fleet uses the priority that you assigned to each launch template override, launching the highest priority first\. If you do not specify a value, EC2 Fleet defaults to `lowest-price`\.  
+The strategy that determines the order of the launch template overrides to use in fulfilling On\-Demand capacity\.  
+ `lowest-price` \- EC2 Fleet uses price to determine the order, launching the lowest price first\.  
+ `prioritized` \- EC2 Fleet uses the priority that you assigned to each launch template override, launching the highest priority first\.  
+Default: `lowest-price`   
 *Required*: No  
 *Type*: String  
 *Allowed values*: `lowest-price | prioritized`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CapacityReservationOptions`  <a name="cfn-ec2-ec2fleet-ondemandoptionsrequest-capacityreservationoptions"></a>
-The strategy for using unused Capacity Reservations for fulfilling On\-Demand capacity\. Supported only for fleets of type `instant`\.  
+The strategy for using unused Capacity Reservations for fulfilling On\-Demand capacity\.  
+Supported only for fleets of type `instant`\.  
 *Required*: No  
 *Type*: [CapacityReservationOptionsRequest](aws-properties-ec2-ec2fleet-capacityreservationoptionsrequest.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -56,18 +60,22 @@ The maximum amount per hour for On\-Demand Instances that you're willing to pay\
 
 `MinTargetCapacity`  <a name="cfn-ec2-ec2fleet-ondemandoptionsrequest-mintargetcapacity"></a>
 The minimum target capacity for On\-Demand Instances in the fleet\. If the minimum target capacity is not reached, the fleet launches no instances\.  
+Supported only for fleets of type `instant`\.  
+At least one of the following must be specified: `SingleAvailabilityZone` \| `SingleInstanceType`   
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SingleAvailabilityZone`  <a name="cfn-ec2-ec2fleet-ondemandoptionsrequest-singleavailabilityzone"></a>
-Indicates that the fleet launches all On\-Demand Instances into a single Availability Zone\. Supported only for fleets of type `instant`\.  
+Indicates that the fleet launches all On\-Demand Instances into a single Availability Zone\.  
+Supported only for fleets of type `instant`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SingleInstanceType`  <a name="cfn-ec2-ec2fleet-ondemandoptionsrequest-singleinstancetype"></a>
-Indicates that the fleet uses a single instance type to launch all On\-Demand Instances in the fleet\. Supported only for fleets of type `instant`\.  
+Indicates that the fleet uses a single instance type to launch all On\-Demand Instances in the fleet\.  
+Supported only for fleets of type `instant`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -17,12 +17,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DefaultTTL](#cfn-cloudfront-distribution-defaultcachebehavior-defaultttl)" : Double,
   "[FieldLevelEncryptionId](#cfn-cloudfront-distribution-defaultcachebehavior-fieldlevelencryptionid)" : String,
   "[ForwardedValues](#cfn-cloudfront-distribution-defaultcachebehavior-forwardedvalues)" : ForwardedValues,
+  "[FunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-functionassociations)" : [ FunctionAssociation, ... ],
   "[LambdaFunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations)" : [ LambdaFunctionAssociation, ... ],
   "[MaxTTL](#cfn-cloudfront-distribution-defaultcachebehavior-maxttl)" : Double,
   "[MinTTL](#cfn-cloudfront-distribution-defaultcachebehavior-minttl)" : Double,
   "[OriginRequestPolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-originrequestpolicyid)" : String,
+  "[RealtimeLogConfigArn](#cfn-cloudfront-distribution-defaultcachebehavior-realtimelogconfigarn)" : String,
+  "[ResponseHeadersPolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-responseheaderspolicyid)" : String,
   "[SmoothStreaming](#cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming)" : Boolean,
   "[TargetOriginId](#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid)" : String,
+  "[TrustedKeyGroups](#cfn-cloudfront-distribution-defaultcachebehavior-trustedkeygroups)" : [ String, ... ],
   "[TrustedSigners](#cfn-cloudfront-distribution-defaultcachebehavior-trustedsigners)" : [ String, ... ],
   "[ViewerProtocolPolicy](#cfn-cloudfront-distribution-defaultcachebehavior-viewerprotocolpolicy)" : String
 }
@@ -41,13 +45,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [FieldLevelEncryptionId](#cfn-cloudfront-distribution-defaultcachebehavior-fieldlevelencryptionid): String
   [ForwardedValues](#cfn-cloudfront-distribution-defaultcachebehavior-forwardedvalues): 
     ForwardedValues
+  [FunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-functionassociations): 
+    - FunctionAssociation
   [LambdaFunctionAssociations](#cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations): 
     - LambdaFunctionAssociation
   [MaxTTL](#cfn-cloudfront-distribution-defaultcachebehavior-maxttl): Double
   [MinTTL](#cfn-cloudfront-distribution-defaultcachebehavior-minttl): Double
   [OriginRequestPolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-originrequestpolicyid): String
+  [RealtimeLogConfigArn](#cfn-cloudfront-distribution-defaultcachebehavior-realtimelogconfigarn): String
+  [ResponseHeadersPolicyId](#cfn-cloudfront-distribution-defaultcachebehavior-responseheaderspolicyid): String
   [SmoothStreaming](#cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming): Boolean
   [TargetOriginId](#cfn-cloudfront-distribution-defaultcachebehavior-targetoriginid): String
+  [TrustedKeyGroups](#cfn-cloudfront-distribution-defaultcachebehavior-trustedkeygroups): 
+    - String
   [TrustedSigners](#cfn-cloudfront-distribution-defaultcachebehavior-trustedsigners): 
     - String
   [ViewerProtocolPolicy](#cfn-cloudfront-distribution-defaultcachebehavior-viewerprotocolpolicy): String
@@ -76,7 +86,8 @@ If you pick the second choice for your Amazon S3 Origin, you may need to forward
 
 `CachePolicyId`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-cachepolicyid"></a>
 The unique identifier of the cache policy that is attached to the default cache behavior\. For more information, see [Creating cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy) or [Using the managed cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html) in the *Amazon CloudFront Developer Guide*\.  
-*Required*: No  
+A `DefaultCacheBehavior` must include either a `CachePolicyId` or `ForwardedValues`\. We recommend that you use a `CachePolicyId`\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -103,13 +114,20 @@ The value of `ID` for the field\-level encryption configuration that you want Cl
 This field is deprecated\. We recommend that you use a cache policy or an origin request policy instead of this field\. For more information, see [Working with policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/working-with-policies.html) in the *Amazon CloudFront Developer Guide*\.  
 If you want to include values in the cache key, use a cache policy\. For more information, see [Creating cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy) or [Using the managed cache policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html) in the *Amazon CloudFront Developer Guide*\.  
 If you want to send values to the origin but not include them in the cache key, use an origin request policy\. For more information, see [Creating origin request policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html#origin-request-create-origin-request-policy) or [Using the managed origin request policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html) in the *Amazon CloudFront Developer Guide*\.  
+A `DefaultCacheBehavior` must include either a `CachePolicyId` or `ForwardedValues`\. We recommend that you use a `CachePolicyId`\.  
 A complex type that specifies how CloudFront handles query strings, cookies, and HTTP headers\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [ForwardedValues](aws-properties-cloudfront-distribution-forwardedvalues.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`FunctionAssociations`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-functionassociations"></a>
+A list of CloudFront functions that are associated with this cache behavior\. CloudFront functions must be published to the `LIVE` stage to associate them with a cache behavior\.  
+*Required*: No  
+*Type*: List of [FunctionAssociation](aws-properties-cloudfront-distribution-functionassociation.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `LambdaFunctionAssociations`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-lambdafunctionassociations"></a>
-A complex type that contains zero or more Lambda function associations for a cache behavior\.  
+A complex type that contains zero or more Lambda@Edge function associations for a cache behavior\.  
 *Required*: No  
 *Type*: List of [LambdaFunctionAssociation](aws-properties-cloudfront-distribution-lambdafunctionassociation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -135,6 +153,18 @@ The unique identifier of the origin request policy that is attached to the defau
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`RealtimeLogConfigArn`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-realtimelogconfigarn"></a>
+The Amazon Resource Name \(ARN\) of the real\-time log configuration that is attached to this cache behavior\. For more information, see [Real\-time logs](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html) in the *Amazon CloudFront Developer Guide*\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ResponseHeadersPolicyId`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-responseheaderspolicyid"></a>
+The identifier for a response headers policy\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SmoothStreaming`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming"></a>
 Indicates whether you want to distribute media files in the Microsoft Smooth Streaming format using the origin that is associated with this cache behavior\. If so, specify `true`; if not, specify `false`\. If you specify `true` for `SmoothStreaming`, you can still distribute other content using this cache behavior if the content matches the value of `PathPattern`\.   
 *Required*: No  
@@ -147,9 +177,17 @@ The value of `ID` for the origin that you want CloudFront to route requests to w
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`TrustedKeyGroups`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-trustedkeygroups"></a>
+A list of key groups that CloudFront can use to validate signed URLs or signed cookies\.  
+When a cache behavior contains trusted key groups, CloudFront requires signed URLs or signed cookies for all requests that match the cache behavior\. The URLs or cookies must be signed with a private key whose corresponding public key is in the key group\. The signed URL or cookie contains information about which public key CloudFront should use to verify the signature\. For more information, see [Serving private content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the *Amazon CloudFront Developer Guide*\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `TrustedSigners`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-trustedsigners"></a>
-Specifies the AWS accounts, if any, that you want to allow to create signed URLs for private content\.  
-If you want to require signed URLs in requests for objects in the target origin, specify a list of AWS account IDs\. For more information, see [Serving Private Content through CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the * Amazon CloudFront Developer Guide*\.  
+We recommend using `TrustedKeyGroups` instead of `TrustedSigners`\.
+A list of AWS account IDs whose public keys CloudFront can use to validate signed URLs or signed cookies\.  
+When a cache behavior contains trusted signers, CloudFront requires signed URLs or signed cookies for all requests that match the cache behavior\. The URLs or cookies must be signed with the private key of a CloudFront key pair in a trusted signer’s AWS account\. The signed URL or cookie contains information about which public key CloudFront should use to verify the signature\. For more information, see [Serving private content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -168,3 +206,4 @@ The only way to guarantee that viewers retrieve an object that was fetched from 
 
 ## See also<a name="aws-properties-cloudfront-distribution-defaultcachebehavior--seealso"></a>
 +  [DefaultCacheBehavior](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_DefaultCacheBehavior.html) in the *Amazon CloudFront API Reference* 
+

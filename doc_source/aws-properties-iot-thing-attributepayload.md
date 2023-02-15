@@ -1,6 +1,6 @@
 # AWS::IoT::Thing AttributePayload<a name="aws-properties-iot-thing-attributepayload"></a>
 
-The AttributePayload property specifies up to three attributes for an AWS IoT as key value pairs\. AttributePayload is a property of the [AWS::IoT::Thing](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html) resource\.
+The AttributePayload property specifies up to three attributes for an AWS IoT as key\-value pairs\. AttributePayload is a property of the [AWS::IoT::Thing](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html) resource\.
 
 ## Syntax<a name="aws-properties-iot-thing-attributepayload-syntax"></a>
 
@@ -59,19 +59,12 @@ The following example declares an attribute payload with three attributes\.
 #### YAML<a name="aws-properties-iot-thing-attributepayload--examples----yaml"></a>
 
 ```
-            {
-   "AttributePayload":{
-      "Attributes":{
-         "myAttributeA":{
-            "Ref":"MyAttributeValueA"
-         },
-         "myAttributeB":{
-            "Ref":"MyAttributeValueB"
-         },
-         "myAttributeC":{
-            "Ref":"MyAttributeValueC"
-         }
-      }
-   }
-}
+AttributePayload:
+  Attributes:
+    myAttributeA:
+      Ref: MyAttributeValueA
+    myAttributeB:
+      Ref: MyAttributeValueB
+    myAttributeC:
+      Ref: MyAttributeValueC
 ```

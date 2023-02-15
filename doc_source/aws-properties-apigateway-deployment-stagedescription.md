@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[LoggingLevel](#cfn-apigateway-deployment-stagedescription-logginglevel)" : String,
   "[MethodSettings](#cfn-apigateway-deployment-stagedescription-methodsettings)" : [ MethodSetting, ... ],
   "[MetricsEnabled](#cfn-apigateway-deployment-stagedescription-metricsenabled)" : Boolean,
-  "[Tags](#cfn-apigateway-deployment-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+  "[Tags](#cfn-apigateway-deployment-stagedescription-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
   "[ThrottlingBurstLimit](#cfn-apigateway-deployment-stagedescription-throttlingburstlimit)" : Integer,
   "[ThrottlingRateLimit](#cfn-apigateway-deployment-stagedescription-throttlingratelimit)" : Double,
   "[TracingEnabled](#cfn-apigateway-deployment-stagedescription-tracingenabled)" : Boolean,
@@ -52,7 +52,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [MethodSettings](#cfn-apigateway-deployment-stagedescription-methodsettings): 
     - MethodSetting
   [MetricsEnabled](#cfn-apigateway-deployment-stagedescription-metricsenabled): Boolean
-  [Tags](#cfn-apigateway-deployment-tags): 
+  [Tags](#cfn-apigateway-deployment-stagedescription-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [ThrottlingBurstLimit](#cfn-apigateway-deployment-stagedescription-throttlingburstlimit): Integer
   [ThrottlingRateLimit](#cfn-apigateway-deployment-stagedescription-throttlingratelimit): Double
@@ -138,7 +138,7 @@ The logging level for this method\. For valid values, see the `loggingLevel` pro
 `MethodSettings`  <a name="cfn-apigateway-deployment-stagedescription-methodsettings"></a>
 Configures settings for all of the stage's methods\.  
 *Required*: No  
-*Type*: List of [MethodSetting](aws-properties-apigateway-deployment-stagedescription-methodsetting.md)  
+*Type*: List of [MethodSetting](aws-properties-apigateway-deployment-methodsetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricsEnabled`  <a name="cfn-apigateway-deployment-stagedescription-metricsenabled"></a>
@@ -147,20 +147,20 @@ Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`Tags`  <a name="cfn-apigateway-deployment-tags"></a>
+`Tags`  <a name="cfn-apigateway-deployment-stagedescription-tags"></a>
 An array of arbitrary tags \(key\-value pairs\) to associate with the stage\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThrottlingBurstLimit`  <a name="cfn-apigateway-deployment-stagedescription-throttlingburstlimit"></a>
-The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account\. For more information, see [Manage API Request Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
+The target request burst rate limit\. This allows more requests through for a period of time than the target rate limit\. For more information, see [Manage API Request Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThrottlingRateLimit`  <a name="cfn-apigateway-deployment-stagedescription-throttlingratelimit"></a>
-The number of steady\-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account\. For more information, see [Manage API Request Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
+The target request steady\-state rate limit\. For more information, see [Manage API Request Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -180,3 +180,4 @@ A map that defines the stage variables\. Variable names must consist of alphanum
 
 ## See also<a name="aws-properties-apigateway-deployment-stagedescription--seealso"></a>
 + [Stage](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/) in the *Amazon API Gateway REST API Reference*
+

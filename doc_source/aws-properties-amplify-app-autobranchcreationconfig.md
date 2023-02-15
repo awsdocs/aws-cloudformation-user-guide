@@ -56,7 +56,8 @@ Sets password protection for your auto created branch\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BuildSpec`  <a name="cfn-amplify-app-autobranchcreationconfig-buildspec"></a>
-Build spec for the auto created branch\.  
+ The build specification \(build spec\) for the autocreated branch\.   
+*Length Constraints:* Minimum length of 1\. Maximum length of 25000\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -74,7 +75,8 @@ Enables auto building for the auto created branch\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnablePerformanceMode`  <a name="cfn-amplify-app-autobranchcreationconfig-enableperformancemode"></a>
-Not currently supported by AWS CloudFormation\.  
+Enables performance mode for the branch\.  
+Performance mode optimizes for faster hosting performance by keeping content cached at the edge for a longer interval\. When performance mode is enabled, hosting configuration or code changes can take up to 10 minutes to roll out\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -98,6 +100,8 @@ If pull request previews are enabled, you can use this property to specify a ded
 To enable pull request previews, set the `EnablePullRequestPreview` property to `true`\.  
 If you don't specify an environment, the Amplify Console provides backend support for each preview by automatically provisioning a temporary backend environment\. Amplify Console deletes this environment when the pull request is closed\.  
 For more information about creating backend environments, see [Feature Branch Deployments and Team Workflows](https://docs.aws.amazon.com/amplify/latest/userguide/multi-environments.html) in the *AWS Amplify Console User Guide*\.  
+*Length Constraints:* Maximum length of 20\.  
+*Pattern:* \(?s\)\.\*  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

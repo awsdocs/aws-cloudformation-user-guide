@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel Eac3Settings<a name="aws-properties-medialive-channel-eac3settings"></a>
 
-Configures the output audio encode to use the EAC3 audio codec\. This element belongs to AudioCodecSettings\.
+The settings for an EAC3 audio encode in the output\.
+
+The parent of this entity is AudioCodecSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-eac3settings-syntax"></a>
 
@@ -61,25 +63,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-eac3settings-properties"></a>
 
 `AttenuationControl`  <a name="cfn-medialive-channel-eac3settings-attenuationcontrol"></a>
-When set to attenuate3Db, applies a 3 dB attenuation to the surround channels\. Only used for 3/2 coding mode\.  
+When set to attenuate3Db, applies a 3 dB attenuation to the surround channels\. Used only for the 3/2 coding mode\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Bitrate`  <a name="cfn-medialive-channel-eac3settings-bitrate"></a>
-Average bitrate in bits/second\. Valid bitrates depend on the coding mode\.  
+The average bitrate in bits/second\. Valid bitrates depend on the coding mode\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BitstreamMode`  <a name="cfn-medialive-channel-eac3settings-bitstreammode"></a>
-Specifies the bitstream mode \(bsmod\) for the emitted E\-AC\-3 stream\. See ATSC A/52\-2012 \(Annex E\) for background on these values\.  
+Specifies the bitstream mode \(bsmod\) for the emitted E\-AC\-3 stream\. For more information, see ATSC A/52\-2012 \(Annex E\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CodingMode`  <a name="cfn-medialive-channel-eac3settings-codingmode"></a>
-Dolby Digital Plus coding mode\. Determines number of channels\.  
+The Dolby Digital Plus coding mode\. This mode determines the number of channels\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -91,7 +93,7 @@ When set to enabled, activates a DC highpass filter for all input channels\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Dialnorm`  <a name="cfn-medialive-channel-eac3settings-dialnorm"></a>
-Sets the dialnorm for the output\. If blank and input audio is Dolby Digital Plus, dialnorm will be passed through\.  
+Sets the dialnorm for the output\. If blank and the input audio is Dolby Digital Plus, dialnorm will be passed through\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -103,7 +105,7 @@ Sets the Dolby dynamic range compression profile\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DrcRf`  <a name="cfn-medialive-channel-eac3settings-drcrf"></a>
-Sets the profile for heavy Dolby dynamic range compression, ensures that the instantaneous signal peaks do not exceed specified levels\.  
+Sets the profile for heavy Dolby dynamic range compression, ensuring that the instantaneous signal peaks do not exceed specified levels\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -115,37 +117,37 @@ When encoding 3/2 audio, setting to lfe enables the LFE channel\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LfeFilter`  <a name="cfn-medialive-channel-eac3settings-lfefilter"></a>
-When set to enabled, applies a 120Hz lowpass filter to the LFE channel prior to encoding\. Only valid with codingMode32 coding mode\.  
+When set to enabled, applies a 120Hz lowpass filter to the LFE channel prior to encoding\. Valid only with a codingMode32 coding mode\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoRoCenterMixLevel`  <a name="cfn-medialive-channel-eac3settings-lorocentermixlevel"></a>
-Left only/Right only center mix level\. Only used for 3/2 coding mode\.  
+The Left only/Right only center mix level\. Used only for the 3/2 coding mode\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoRoSurroundMixLevel`  <a name="cfn-medialive-channel-eac3settings-lorosurroundmixlevel"></a>
-Left only/Right only surround mix level\. Only used for 3/2 coding mode\.  
+The Left only/Right only surround mix level\. Used only for a 3/2 coding mode\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LtRtCenterMixLevel`  <a name="cfn-medialive-channel-eac3settings-ltrtcentermixlevel"></a>
-Left total/Right total center mix level\. Only used for 3/2 coding mode\.  
+The Left total/Right total center mix level\. Used only for a 3/2 coding mode\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LtRtSurroundMixLevel`  <a name="cfn-medialive-channel-eac3settings-ltrtsurroundmixlevel"></a>
-Left total/Right total surround mix level\. Only used for 3/2 coding mode\.  
+The Left total/Right total surround mix level\. Used only for the 3/2 coding mode\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetadataControl`  <a name="cfn-medialive-channel-eac3settings-metadatacontrol"></a>
-When set to followInput, encoder metadata will be sourced from the DD, DD\+, or DolbyE decoder that supplied this audio data\. If audio was not supplied from one of these streams, then the static metadata settings will be used\.  
+When set to followInput, encoder metadata is sourced from the DD, DD\+, or DolbyE decoder that supplies this audio data\. If the audio is not supplied from one of these streams, then the static metadata settings are used\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -157,13 +159,13 @@ When set to whenPossible, input DD\+ audio will be passed through if it is prese
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PhaseControl`  <a name="cfn-medialive-channel-eac3settings-phasecontrol"></a>
-When set to shift90Degrees, applies a 90\-degree phase shift to the surround channels\. Only used for 3/2 coding mode\.  
+When set to shift90Degrees, applies a 90\-degree phase shift to the surround channels\. Used only for a 3/2 coding mode\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StereoDownmix`  <a name="cfn-medialive-channel-eac3settings-stereodownmix"></a>
-Stereo downmix preference\. Only used for 3/2 coding mode\.  
+A stereo downmix preference\. Used only for the 3/2 coding mode\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -175,7 +177,7 @@ When encoding 3/2 audio, sets whether an extra center back surround channel is m
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SurroundMode`  <a name="cfn-medialive-channel-eac3settings-surroundmode"></a>
-When encoding 2/0 audio, sets whether Dolby Surround is matrix encoded into the two channels\.  
+When encoding 2/0 audio, sets whether Dolby Surround is matrix\-encoded into the two channels\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

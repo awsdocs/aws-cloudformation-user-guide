@@ -1,6 +1,9 @@
 # AWS::CodeCommit::Repository RepositoryTrigger<a name="aws-properties-codecommit-repository-repositorytrigger"></a>
 
-Information about a trigger for a repository\.
+Information about a trigger for a repository\. 
+
+**Note**  
+If you want to receive notifications about repository events, consider using notifications instead of triggers\. For more information, see [Configuring notifications for repository events](https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-repository-email.html)\.
 
 ## Syntax<a name="aws-properties-codecommit-repository-repositorytrigger-syntax"></a>
 

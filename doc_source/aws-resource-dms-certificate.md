@@ -38,14 +38,14 @@ A customer\-assigned name for the certificate\. Identifiers must begin with a le
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificatePem`  <a name="cfn-dms-certificate-certificatepem"></a>
-The contents of a `.pem` file, which contains an X\.509 certificate\.  
-*Required*: No  
+The contents of the \.pem X\.509 certificate file for the certificate\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificateWallet`  <a name="cfn-dms-certificate-certificatewallet"></a>
-The location of an imported Oracle Wallet certificate for use with SSL\.  
-*Required*: No  
+The location of the imported Oracle Wallet certificate for use with SSL\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -58,6 +58,8 @@ The location of an imported Oracle Wallet certificate for use with SSL\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-dms-certificate--examples"></a>
+
+
 
 ### <a name="aws-resource-dms-certificate--examples--"></a>
 

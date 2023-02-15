@@ -1,4 +1,4 @@
-# CodeDeploy resource type reference<a name="AWS_CodeDeploy"></a>
+# AWS CodeDeploy resource type reference<a name="AWS_CodeDeploy"></a>
 
 **Resource types**
 + [AWS::CodeDeploy::Application](aws-resource-codedeploy-application.md)

@@ -60,6 +60,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigateway-documentationpart--examples"></a>
 
+
+
 ### Associate documentation part with documentation version<a name="aws-resource-apigateway-documentationpart--examples--Associate_documentation_part_with_documentation_version"></a>
 
 The following example associates a documentation part for an API entity with a documentation version\.
@@ -166,3 +168,4 @@ Resources:
 
 ## See also<a name="aws-resource-apigateway-documentationpart--seealso"></a>
 + [documentationpart:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/documentationpart-create/) in the *Amazon API Gateway REST API Reference*
+

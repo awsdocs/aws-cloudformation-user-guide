@@ -30,3 +30,4 @@ Specifies whether the parameter is required\.
 
 ## See also<a name="aws-properties-apigatewayv2-routeresponse-parameterconstraints--seealso"></a>
 + [RouteResponses](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-routes-routeid-routeresponses.html) in the *Amazon API Gateway Version 2 API Reference*
+

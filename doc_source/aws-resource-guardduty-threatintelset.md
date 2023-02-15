@@ -57,7 +57,7 @@ The format of the file that contains the ThreatIntelSet\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Location`  <a name="cfn-guardduty-threatintelset-location"></a>
-The URI of the file that contains the ThreatIntelSet\. For example: https://s3\.us\-west\-2\.amazonaws\.com/my\-bucket/my\-object\-key\.  
+The URI of the file that contains the ThreatIntelSet\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -81,6 +81,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-guardduty-threatintelset--examples"></a>
+
+
 
 ### Declare a ThreatIntelSet Resource<a name="aws-resource-guardduty-threatintelset--examples--Declare_a_ThreatIntelSet_Resource"></a>
 

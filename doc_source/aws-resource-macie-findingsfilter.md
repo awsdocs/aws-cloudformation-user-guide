@@ -99,24 +99,44 @@ The unique identifier for the filter\.
 
 The following example demonstrates how to declare an `AWS::Macie::FindingsFilter` resource\.
 
-### Creating a Macie FindingsFilter that filters by account ID<a name="aws-resource-macie-findingsfilter--examples--Creating_a_Macie_FindingsFilter_that_filters_by_account_ID"></a>
+### Creating a findings filter that filters by account ID<a name="aws-resource-macie-findingsfilter--examples--Creating_a_findings_filter_that_filters_by_account_ID"></a>
 
-This example creates a findings filter that suppresses \(automatically archives\) findings that apply to the specified account\.
+This example creates a findings filter that suppresses \(automatically archives\) findings that apply to AWS resources that are owned by the specified AWS account\.
 
-#### JSON<a name="aws-resource-macie-findingsfilter--examples--Creating_a_Macie_FindingsFilter_that_filters_by_account_ID--json"></a>
-
-```
-{ "Type": "AWS::Macie::FindingsFilter", "DependsOn": "Session",
-                "Properties": { "Action": "ARCHIVE", "Description": "My custom findings filter",
-                "FindingCriteria": { "Criterion": { "AccountId": { "eq": "123456789012" }, "Name":
-                "MyFilterName", "Position": 1 } } } }
-```
-
-#### YAML<a name="aws-resource-macie-findingsfilter--examples--Creating_a_Macie_FindingsFilter_that_filters_by_account_ID--yaml"></a>
+#### JSON<a name="aws-resource-macie-findingsfilter--examples--Creating_a_findings_filter_that_filters_by_account_ID--json"></a>
 
 ```
-Type: AWS::Macie::FindingsFilter DependsOn: "Session"
-                Properties: Action: ARCHIVE Description: "My custom findings filter"
-                FindingCriteria: Criterion: "AccountID": eq: "123456789012" Name: MyFilterName
-                Position: 1
+{
+    "Type": "AWS::Macie::FindingsFilter",
+    "DependsOn": "Session",
+    "Properties": {
+        "Action": "ARCHIVE",
+        "Description": "My custom findings filter",
+        "FindingCriteria": {
+            "Criterion": {
+                "AccountId": {
+                    "eq": "123456789012"
+                }
+            }
+        },
+        "Name": "MyFilterName",
+        "Position": 1
+    }
+}
+```
+
+#### YAML<a name="aws-resource-macie-findingsfilter--examples--Creating_a_findings_filter_that_filters_by_account_ID--yaml"></a>
+
+```
+Type: AWS::Macie::FindingsFilter
+DependsOn: "Session"
+Properties: 
+    Action: ARCHIVE 
+    Description: "My custom findings filter"
+    FindingCriteria:
+        Criterion:
+            "AccountID": 
+                eq: "123456789012" 
+    Name: MyFilterName
+    Position: 1
 ```

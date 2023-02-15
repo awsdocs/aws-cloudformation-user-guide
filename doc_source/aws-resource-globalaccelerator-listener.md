@@ -86,6 +86,8 @@ The ARN of the listener, such as `arn:aws:globalaccelerator::012345678901:accele
 
 ## Examples<a name="aws-resource-globalaccelerator-listener--examples"></a>
 
+
+
 ### Add a listener<a name="aws-resource-globalaccelerator-listener--examples--Add_a_listener"></a>
 
 These are examples to specify a listener\.

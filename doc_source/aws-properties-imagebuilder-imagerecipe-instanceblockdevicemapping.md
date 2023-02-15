@@ -38,13 +38,13 @@ The device to which these mappings apply\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ebs`  <a name="cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-ebs"></a>
-Manages the Amazon EBS\-specific configuration for this mapping\.  
+Use to manage Amazon EBS\-specific configuration for this mapping\.  
 *Required*: No  
 *Type*: [EbsInstanceBlockDeviceSpecification](aws-properties-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NoDevice`  <a name="cfn-imagebuilder-imagerecipe-instanceblockdevicemapping-nodevice"></a>
-Removes a mapping from the parent image, formatted as an empty string\.  
+Enter an empty string to remove a mapping from the parent image\.  
 The following is an example of an empty string value in the `NoDevice` field\.   
 `NoDevice:""`  
 *Required*: No  

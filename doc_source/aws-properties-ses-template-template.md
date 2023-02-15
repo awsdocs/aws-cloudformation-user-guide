@@ -1,6 +1,6 @@
 # AWS::SES::Template Template<a name="aws-properties-ses-template-template"></a>
 
-The content of the email, composed of a subject line, an HTML part, and a text\-only part\.
+The content of the email, composed of a subject line and either an HTML part or a text\-only part\.
 
 ## Syntax<a name="aws-properties-ses-template-template-syntax"></a>
 
@@ -36,18 +36,18 @@ The HTML body of the email\.
 
 `SubjectPart`  <a name="cfn-ses-template-template-subjectpart"></a>
 The subject line of the email\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TemplateName`  <a name="cfn-ses-template-template-templatename"></a>
-The name of the template\. You specify this name when you send email using the `SendTemplatedEmail` or `SendBulkTemplatedEmail` operations\.  
+The name of the template\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TextPart`  <a name="cfn-ses-template-template-textpart"></a>
-The email body that is visible to recipients whose email clients don't display HTML content\.  
+The email body that is visible to recipients whose email clients do not display HTML content\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

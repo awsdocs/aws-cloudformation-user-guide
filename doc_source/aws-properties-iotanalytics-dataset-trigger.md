@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Schedule`  <a name="cfn-iotanalytics-dataset-trigger-schedule"></a>
 The "Schedule" when the trigger is initiated\.  
 *Required*: No  
-*Type*: [Schedule](aws-properties-iotanalytics-dataset-trigger-schedule.md)  
+*Type*: [Schedule](aws-properties-iotanalytics-dataset-schedule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TriggeringDataset`  <a name="cfn-iotanalytics-dataset-trigger-triggeringdataset"></a>

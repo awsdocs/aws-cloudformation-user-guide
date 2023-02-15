@@ -1,11 +1,11 @@
 # Retrieving a template<a name="using-cfn-get-template"></a>
 
-AWS CloudFormation stores the template you use to create your stack as part of the stack\. You can retrieve the template from AWS CloudFormation using the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template.html) command\.
+AWS CloudFormation stores the template you use to create your stack as part of the stack\. To retrieve the template from CloudFormation use the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template.html) command\.
 
 **Note**  
 The `aws cloudformation get-template` command returns the deleted stacks templates for up to 90 days after the stack has been deleted\.
 
-The following example shows the template for the `myteststack` stack:
+The following example shows the template for the `myteststack` stack\.
 
 ```
  1. PROMPT> aws cloudformation get-template --stack-name myteststack

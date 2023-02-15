@@ -1,8 +1,6 @@
 # AWS::SES::Template<a name="aws-resource-ses-template"></a>
 
-Specifies an email template\. Email templates enable you to send personalized email to one or more destinations in a single API operation\. For more information, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-personalized-email-api.html)\.
-
-You can execute this operation no more than once per second\.
+Specifies an email template\. Email templates enable you to send personalized email to one or more destinations in a single API operation\.
 
 ## Syntax<a name="aws-resource-ses-template-syntax"></a>
 
@@ -31,10 +29,19 @@ Properties:
 ## Properties<a name="aws-resource-ses-template-properties"></a>
 
 `Template`  <a name="cfn-ses-template-template"></a>
-The content of the email, composed of a subject line, an HTML part, and a text\-only part\.  
+The content of the email, composed of a subject line and either an HTML part or a text\-only part\.  
 *Required*: No  
 *Type*: [Template](aws-properties-ses-template-template.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-ses-template-return-values"></a>
+
+### Fn::GetAtt<a name="aws-resource-ses-template-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-ses-template-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Not currently supported by AWS CloudFormation\.
 
 ## Examples<a name="aws-resource-ses-template--examples"></a>
 
@@ -42,12 +49,14 @@ Specifies an email template, which is used when sending templated email messages
 
 ### <a name="aws-resource-ses-template--examples--"></a>
 
+
+
 #### JSON<a name="aws-resource-ses-template--examples----json"></a>
 
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "AWS SES Template Sample Template",
+    "Description": "Amazon SES Template Sample Template",
     "Parameters": {
         "TemplateName": {
             "Type": "String"
@@ -90,7 +99,7 @@ Specifies an email template, which is used when sending templated email messages
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES Template Sample Template'
+Description: Amazon SES Template Sample Template
 Parameters:
   TemplateName:
     Type: String
@@ -102,7 +111,7 @@ Parameters:
     Type: String
 Resources:
   Template:
-    Type: AWS::SES::Template
+    Type: 'AWS::SES::Template'
     Properties:
       Template:
         TemplateName: !Ref TemplateName

@@ -37,8 +37,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-ec2fleet-placement-properties"></a>
 
 `Affinity`  <a name="cfn-ec2-ec2fleet-placement-affinity"></a>
-The affinity setting for the instance on the Dedicated Host\. This parameter is not supported for the [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html) command\.  
-This parameter is not supported by [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet)\.  
+The affinity setting for the instance on the Dedicated Host\.  
+This parameter is not supported for [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -46,48 +46,48 @@ This parameter is not supported by [CreateFleet](https://docs.aws.amazon.com/AWS
 `AvailabilityZone`  <a name="cfn-ec2-ec2fleet-placement-availabilityzone"></a>
 The Availability Zone of the instance\.  
 If not specified, an Availability Zone will be automatically chosen for you based on the load balancing criteria for the Region\.  
-This parameter is not supported by [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet)\.  
+This parameter is not supported for [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GroupName`  <a name="cfn-ec2-ec2fleet-placement-groupname"></a>
-The name of the placement group the instance is in\.  
+The name of the placement group that the instance is in\. If you specify `GroupName`, you can't specify `GroupId`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HostId`  <a name="cfn-ec2-ec2fleet-placement-hostid"></a>
-The ID of the Dedicated Host on which the instance resides\. This parameter is not supported for the [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html) command\.  
-This parameter is not supported by [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet)\.  
+The ID of the Dedicated Host on which the instance resides\.  
+This parameter is not supported for [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet) or [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HostResourceGroupArn`  <a name="cfn-ec2-ec2fleet-placement-hostresourcegrouparn"></a>
-The ARN of the host resource group in which to launch the instances\. If you specify a host resource group ARN, omit the **Tenancy** parameter or set it to `host`\.  
-This parameter is not supported by [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet)\.  
+The ARN of the host resource group in which to launch the instances\.  
+If you specify this parameter, either omit the **Tenancy** parameter or set it to `host`\.  
+This parameter is not supported for [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PartitionNumber`  <a name="cfn-ec2-ec2fleet-placement-partitionnumber"></a>
-The number of the partition the instance is in\. Valid only if the placement group strategy is set to `partition`\.  
-This parameter is not supported by [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet)\.  
+The number of the partition that the instance is in\. Valid only if the placement group strategy is set to `partition`\.  
+This parameter is not supported for [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet)\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SpreadDomain`  <a name="cfn-ec2-ec2fleet-placement-spreaddomain"></a>
 Reserved for future use\.  
-This parameter is not supported by [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tenancy`  <a name="cfn-ec2-ec2fleet-placement-tenancy"></a>
-The tenancy of the instance \(if the instance is running in a VPC\)\. An instance with a tenancy of `dedicated` runs on single\-tenant hardware\. The `host` tenancy is not supported for the [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html) command\.  
-This parameter is not supported by [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet)\.  
+The tenancy of the instance \(if the instance is running in a VPC\)\. An instance with a tenancy of `dedicated` runs on single\-tenant hardware\.  
+This parameter is not supported for [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet)\. The `host` tenancy is not supported for [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html) or for T3 instances that are configured for the `unlimited` CPU credit option\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `dedicated | default | host`  

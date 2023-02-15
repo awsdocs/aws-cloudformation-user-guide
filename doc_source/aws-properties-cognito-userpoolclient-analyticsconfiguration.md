@@ -3,7 +3,7 @@
 The Amazon Pinpoint analytics configuration for collecting metrics for a user pool\.
 
 **Note**  
-In regions where Pinpoint is not available, Cognito User Pools only supports sending events to Amazon Pinpoint projects in us\-east\-1\. In regions where Pinpoint is available, Cognito User Pools will support sending events to Amazon Pinpoint projects within that same region\. 
+In Regions where Pinpoint isn't available, User Pools only supports sending events to Amazon Pinpoint projects in us\-east\-1\. In Regions where Pinpoint is available, User Pools will support sending events to Amazon Pinpoint projects within that same Region\. 
 
 ## Syntax<a name="aws-properties-cognito-userpoolclient-analyticsconfiguration-syntax"></a>
 
@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[ApplicationArn](#cfn-cognito-userpoolclient-analyticsconfiguration-applicationarn)" : String,
   "[ApplicationId](#cfn-cognito-userpoolclient-analyticsconfiguration-applicationid)" : String,
   "[ExternalId](#cfn-cognito-userpoolclient-analyticsconfiguration-externalid)" : String,
   "[RoleArn](#cfn-cognito-userpoolclient-analyticsconfiguration-rolearn)" : String,
@@ -23,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cognito-userpoolclient-analyticsconfiguration-syntax.yaml"></a>
 
 ```
+  [ApplicationArn](#cfn-cognito-userpoolclient-analyticsconfiguration-applicationarn): String
   [ApplicationId](#cfn-cognito-userpoolclient-analyticsconfiguration-applicationid): String
   [ExternalId](#cfn-cognito-userpoolclient-analyticsconfiguration-externalid): String
   [RoleArn](#cfn-cognito-userpoolclient-analyticsconfiguration-rolearn): String
@@ -30,6 +32,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-cognito-userpoolclient-analyticsconfiguration-properties"></a>
+
+`ApplicationArn`  <a name="cfn-cognito-userpoolclient-analyticsconfiguration-applicationarn"></a>
+The Amazon Resource Name \(ARN\) of an Amazon Pinpoint project\. You can use the Amazon Pinpoint project for integration with the chosen user pool client\. Amazon Cognito publishes events to the Amazon Pinpoint project that the app ARN declares\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApplicationId`  <a name="cfn-cognito-userpoolclient-analyticsconfiguration-applicationid"></a>
 The application ID for an Amazon Pinpoint application\.  
@@ -42,13 +50,10 @@ The application ID for an Amazon Pinpoint application\.
 The external ID\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `2`  
-*Maximum*: `1224`  
-*Pattern*: `[\w+=,.@:\/-]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-cognito-userpoolclient-analyticsconfiguration-rolearn"></a>
-The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics\.  
+The ARN of an AWS Identity and Access Management role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  

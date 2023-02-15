@@ -48,7 +48,7 @@ The name of the table\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableWildcard`  <a name="cfn-lakeformation-permissions-tableresource-tablewildcard"></a>
-Not currently supported by AWS CloudFormation\.  
+An empty object representing all tables under a database\. If this field is specified instead of the `Name` field, all tables under `DatabaseName` will have permission changes applied\.  
 *Required*: No  
 *Type*: [TableWildcard](aws-properties-lakeformation-permissions-tablewildcard.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

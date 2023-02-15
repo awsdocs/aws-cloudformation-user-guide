@@ -109,6 +109,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-glue-trigger--examples"></a>
 
+
+
 ### On\-Demand Trigger<a name="aws-resource-glue-trigger--examples--On-Demand_Trigger"></a>
 
 The following example creates an on\-demand trigger that triggers one job\.
@@ -208,7 +210,7 @@ The following example creates a conditional trigger that starts a job based on t
 
 ```
 {
-  "Description": "AWS Glue Trigger Test",
+  "Description": "AWS Glue trigger test",
   "Resources": {
     "MyJobTriggerRole": {
       "Type": "AWS::IAM::Role",
@@ -302,7 +304,7 @@ The following example creates a conditional trigger that starts a job based on t
 
 ```
 ---
-Description: "AWS Glue Trigger Test"
+Description: "AWS Glue trigger test"
 Resources:
   MyJobTriggerRole:
     Type: AWS::IAM::Role

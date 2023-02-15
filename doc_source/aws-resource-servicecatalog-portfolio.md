@@ -97,3 +97,4 @@ The name of the portfolio\.
 
 ## See also<a name="aws-resource-servicecatalog-portfolio--seealso"></a>
 + [CreatePortfolio](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreatePortfolio.html) in the *AWS Service Catalog API Reference*
+

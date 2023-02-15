@@ -1,6 +1,6 @@
 # AWS::IoT::TopicRule SigV4Authorization<a name="aws-properties-iot-topicrule-sigv4authorization"></a>
 
-Use Sig V4 authorization\.
+For more information, see [Signature Version 4 signing process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html)\.
 
 ## Syntax<a name="aws-properties-iot-topicrule-sigv4authorization-syntax"></a>
 

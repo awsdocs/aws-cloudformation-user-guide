@@ -57,6 +57,8 @@ The Amazon Resource Name \(ARN\) that specifies the resource group that is creat
 
 ## Examples<a name="aws-resource-inspector-resourcegroup--examples"></a>
 
+
+
 ### Declaring an Amazon Inspector Resource Group Resource<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Resource_Group_Resource"></a>
 
 The following example shows how to declare an `AWS::Inspector::ResourceGroup` resource to create an Amazon Inspector resource group\.
@@ -81,9 +83,9 @@ The following example shows how to declare an `AWS::Inspector::ResourceGroup` re
 
 ```
 myresourcegroup: 
-  Type: "AWS::Inspector::ResourceGroup"
-  Properties: 
-    ResourceGroupTags: 
-      - Key: "Name"
-      Value: "example"
+            Type: "AWS::Inspector::ResourceGroup"
+            Properties: 
+            ResourceGroupTags: 
+            - Key: "Name"
+            Value: "example"
 ```

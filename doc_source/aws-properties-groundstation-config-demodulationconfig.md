@@ -10,23 +10,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[UnvalidatedJSON](#cfn-groundstation-config-demodulationconfig-unvalidatedjson)" : JSON
+  "[UnvalidatedJSON](#cfn-groundstation-config-demodulationconfig-unvalidatedjson)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-groundstation-config-demodulationconfig-syntax.yaml"></a>
 
 ```
-  [UnvalidatedJSON](#cfn-groundstation-config-demodulationconfig-unvalidatedjson): 
-    JSON
+  [UnvalidatedJSON](#cfn-groundstation-config-demodulationconfig-unvalidatedjson): String
 ```
 
 ## Properties<a name="aws-properties-groundstation-config-demodulationconfig-properties"></a>
 
 `UnvalidatedJSON`  <a name="cfn-groundstation-config-demodulationconfig-unvalidatedjson"></a>
  The demodulation settings are in JSON format and define parameters for demodulation, for example which modulation scheme \(e\.g\. PSK, QPSK, etc\.\) and matched filter to use\.   
-*Required*: Yes  
-*Type*: JSON  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-groundstation-config-demodulationconfig--examples"></a>

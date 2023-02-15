@@ -45,7 +45,20 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-apigateway-account-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-apigateway-account-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+The ID for the account\. For example: `abc123`\.
+
 ## Examples<a name="aws-resource-apigateway-account--examples"></a>
+
+
 
 ### Associate account with IAM role<a name="aws-resource-apigateway-account--examples--Associate_account_with_IAM_role"></a>
 
@@ -120,3 +133,4 @@ Account:
 
 ## See also<a name="aws-resource-apigateway-account--seealso"></a>
 + [account:update](https://docs.aws.amazon.com/apigateway/api-reference/resource/account/) in the *Amazon API Gateway REST API Reference*
+

@@ -64,7 +64,7 @@ Configures SNS notifications of available or expiring work items for work teams\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-sagemaker-workteam-tags"></a>
-Not currently supported by AWS CloudFormation\.  
+An array of key\-value pairs\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -75,7 +75,7 @@ The name of the work team\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `63`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9])*`  
+*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-sagemaker-workteam-return-values"></a>
@@ -87,4 +87,4 @@ The name of the work team\.
 #### <a name="aws-resource-sagemaker-workteam-return-values-fn--getatt-fn--getatt"></a>
 
 `WorkteamName`  <a name="WorkteamName-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The name of the work team\.

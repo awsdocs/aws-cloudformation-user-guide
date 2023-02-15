@@ -11,7 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[BucketName](#cfn-appflow-flow-s3sourceproperties-bucketname)" : String,
-  "[BucketPrefix](#cfn-appflow-flow-s3sourceproperties-bucketprefix)" : String
+  "[BucketPrefix](#cfn-appflow-flow-s3sourceproperties-bucketprefix)" : String,
+  "[S3InputFormatConfig](#cfn-appflow-flow-s3sourceproperties-s3inputformatconfig)" : S3InputFormatConfig
 }
 ```
 
@@ -20,6 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [BucketName](#cfn-appflow-flow-s3sourceproperties-bucketname): String
   [BucketPrefix](#cfn-appflow-flow-s3sourceproperties-bucketprefix): String
+  [S3InputFormatConfig](#cfn-appflow-flow-s3sourceproperties-s3inputformatconfig): 
+    S3InputFormatConfig
 ```
 
 ## Properties<a name="aws-properties-appflow-flow-s3sourceproperties-properties"></a>
@@ -41,5 +44,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`S3InputFormatConfig`  <a name="cfn-appflow-flow-s3sourceproperties-s3inputformatconfig"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [S3InputFormatConfig](aws-properties-appflow-flow-s3inputformatconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## See also<a name="aws-properties-appflow-flow-s3sourceproperties--seealso"></a>
 + [S3SourceProperties](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_S3SourceProperties.html) in the *Amazon AppFlow API Reference*\.
+

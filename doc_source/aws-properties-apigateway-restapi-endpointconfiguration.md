@@ -45,3 +45,4 @@ A list of VPC endpoint IDs of an API \([AWS::ApiGateway::RestApi](https://docs.a
 
 ## See also<a name="aws-properties-apigateway-restapi-endpointconfiguration--seealso"></a>
 + [RestApi](https://docs.aws.amazon.com/apigateway/api-reference/resource/rest-api/) in the *Amazon API Gateway REST API Reference*
+

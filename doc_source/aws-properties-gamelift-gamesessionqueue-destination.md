@@ -1,6 +1,6 @@
 # AWS::GameLift::GameSessionQueue Destination<a name="aws-properties-gamelift-gamesessionqueue-destination"></a>
 
-The fleet designated in a game session queue\. Requests for new game sessions in the queue are fulfilled by starting a new game session on any destination that is configured for a queue\. 
+A fleet or alias designated in a game session queue\. Queues fulfill requests for new game sessions by placing a new game session on any of the queue's destinations\. 
 
 ## Syntax<a name="aws-properties-gamelift-gamesessionqueue-destination-syntax"></a>
 
@@ -32,6 +32,6 @@ The Amazon Resource Name \(ARN\) that is assigned to fleet or fleet alias\. ARNs
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-gamelift-gamesessionqueue-destination--seealso"></a>
-+ [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
-+ [ Create a Queue](https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-creating.html) in the *Amazon GameLift Developer Guide*
++ [ Create GameLift resources using Amazon CloudFront](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++ [ Create a queue](https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-creating.html) in the *Amazon GameLift Developer Guide*
 + [GameSessionQueueDestination](https://docs.aws.amazon.com/gamelift/latest/apireference/API_GameSessionQueueDestination.html) in the *Amazon GameLift API Reference*

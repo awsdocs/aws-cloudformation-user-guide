@@ -45,6 +45,9 @@ The type of application revision:
 *Allowed values*: `AppSpecContent | GitHub | S3 | String`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+**Note** 
+CloudFormation currently does not support `AppSpecContent` and `String` properties
+
 `S3Location`  <a name="cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location"></a>
 Information about the location of a revision stored in Amazon S3\.   
 *Required*: No  

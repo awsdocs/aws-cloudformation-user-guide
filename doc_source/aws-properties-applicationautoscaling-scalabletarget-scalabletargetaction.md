@@ -1,6 +1,6 @@
 # AWS::ApplicationAutoScaling::ScalableTarget ScalableTargetAction<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction"></a>
 
- `ScalableTargetAction` is a subproperty of [ScheduledAction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scheduledaction.html) that represents the minimum and maximum capacity for a scheduled action\. 
+ `ScalableTargetAction` specifies the minimum and maximum capacity for the `ScalableTargetAction` property of the [AWS::ApplicationAutoScaling::ScalableTarget ScheduledAction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scheduledaction.html) property type\.
 
 ## Syntax<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction-syntax"></a>
 
@@ -38,5 +38,6 @@ The minimum capacity\.
 
 ## See also<a name="aws-properties-applicationautoscaling-scalabletarget-scalabletargetaction--seealso"></a>
 + [Application Auto Scaling template examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html#scenario-app-as-template-examples)
-+ [Scheduled scaling](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-scheduled-scaling.html) in the *Application Auto Scaling User Guide* 
++ [Tutorial: Configuring auto scaling to handle a heavy workload](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-tutorial.html) in the *Application Auto Scaling User Guide*
 + [Scheduling AWS Lambda Provisioned Concurrency for recurring peak usage](http://aws.amazon.com/blogs/compute/scheduling-aws-lambda-provisioned-concurrency-for-recurring-peak-usage/)
+

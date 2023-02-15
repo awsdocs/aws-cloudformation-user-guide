@@ -1,6 +1,6 @@
 # AWS::KinesisFirehose::DeliveryStream KinesisStreamSourceConfiguration<a name="aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration"></a>
 
-The `KinesisStreamSourceConfiguration` property type specifies the stream and role Amazon Resource Names \(ARNs\) for a Kinesis stream used as the source for a delivery stream\. 
+The `KinesisStreamSourceConfiguration` property type specifies the stream and role Amazon Resource Names \(ARNs\) for a Kinesis stream used as the source for a delivery stream\.
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-syntax"></a>
 
@@ -31,7 +31,7 @@ The ARN of the source Kinesis data stream\.
 *Minimum*: `1`  
 *Maximum*: `512`  
 *Pattern*: `arn:.*`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleARN`  <a name="cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-rolearn"></a>
 The ARN of the role that provides access to the source Kinesis data stream\.  
@@ -40,4 +40,4 @@ The ARN of the role that provides access to the source Kinesis data stream\.
 *Minimum*: `1`  
 *Maximum*: `512`  
 *Pattern*: `arn:.*`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

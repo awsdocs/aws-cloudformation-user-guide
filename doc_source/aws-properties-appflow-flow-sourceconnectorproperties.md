@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Marketo](#cfn-appflow-flow-sourceconnectorproperties-marketo)" : MarketoSourceProperties,
   "[S3](#cfn-appflow-flow-sourceconnectorproperties-s3)" : S3SourceProperties,
   "[Salesforce](#cfn-appflow-flow-sourceconnectorproperties-salesforce)" : SalesforceSourceProperties,
+  "[SAPOData](#cfn-appflow-flow-sourceconnectorproperties-sapodata)" : SAPODataSourceProperties,
   "[ServiceNow](#cfn-appflow-flow-sourceconnectorproperties-servicenow)" : ServiceNowSourceProperties,
   "[Singular](#cfn-appflow-flow-sourceconnectorproperties-singular)" : SingularSourceProperties,
   "[Slack](#cfn-appflow-flow-sourceconnectorproperties-slack)" : SlackSourceProperties,
@@ -46,6 +47,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     S3SourceProperties
   [Salesforce](#cfn-appflow-flow-sourceconnectorproperties-salesforce): 
     SalesforceSourceProperties
+  [SAPOData](#cfn-appflow-flow-sourceconnectorproperties-sapodata): 
+    SAPODataSourceProperties
   [ServiceNow](#cfn-appflow-flow-sourceconnectorproperties-servicenow): 
     ServiceNowSourceProperties
   [Singular](#cfn-appflow-flow-sourceconnectorproperties-singular): 
@@ -110,6 +113,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: [SalesforceSourceProperties](aws-properties-appflow-flow-salesforcesourceproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SAPOData`  <a name="cfn-appflow-flow-sourceconnectorproperties-sapodata"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [SAPODataSourceProperties](aws-properties-appflow-flow-sapodatasourceproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ServiceNow`  <a name="cfn-appflow-flow-sourceconnectorproperties-servicenow"></a>
  Specifies the information that is required for querying ServiceNow\.   
 *Required*: No  
@@ -148,3 +157,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-flow-sourceconnectorproperties--seealso"></a>
 + [SourceConnectorProperties](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_SourceConnectorProperties.html) in the *Amazon AppFlow API Reference*\.
+

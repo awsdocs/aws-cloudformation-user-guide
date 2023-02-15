@@ -11,7 +11,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ErrorHandlingConfig](#cfn-appflow-flow-salesforcedestinationproperties-errorhandlingconfig)" : ErrorHandlingConfig,
-  "[Object](#cfn-appflow-flow-salesforcedestinationproperties-object)" : String
+  "[IdFieldNames](#cfn-appflow-flow-salesforcedestinationproperties-idfieldnames)" : [ String, ... ],
+  "[Object](#cfn-appflow-flow-salesforcedestinationproperties-object)" : String,
+  "[WriteOperationType](#cfn-appflow-flow-salesforcedestinationproperties-writeoperationtype)" : String
 }
 ```
 
@@ -20,7 +22,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ErrorHandlingConfig](#cfn-appflow-flow-salesforcedestinationproperties-errorhandlingconfig): 
     ErrorHandlingConfig
+  [IdFieldNames](#cfn-appflow-flow-salesforcedestinationproperties-idfieldnames): 
+    - String
   [Object](#cfn-appflow-flow-salesforcedestinationproperties-object): String
+  [WriteOperationType](#cfn-appflow-flow-salesforcedestinationproperties-writeoperationtype): String
 ```
 
 ## Properties<a name="aws-properties-appflow-flow-salesforcedestinationproperties-properties"></a>
@@ -31,6 +36,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: [ErrorHandlingConfig](aws-properties-appflow-flow-errorhandlingconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`IdFieldNames`  <a name="cfn-appflow-flow-salesforcedestinationproperties-idfieldnames"></a>
+ The name of the field that Amazon AppFlow uses as an ID when performing a write operation such as update or delete\.   
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Object`  <a name="cfn-appflow-flow-salesforcedestinationproperties-object"></a>
  The object specified in the Salesforce flow destination\.   
 *Required*: Yes  
@@ -39,5 +50,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`WriteOperationType`  <a name="cfn-appflow-flow-salesforcedestinationproperties-writeoperationtype"></a>
+ This specifies the type of write operation to be performed in Salesforce\. When the value is `UPSERT`, then `idFieldNames` is required\.   
+*Required*: No  
+*Type*: String  
+*Allowed values*: `DELETE | INSERT | UPDATE | UPSERT`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## See also<a name="aws-properties-appflow-flow-salesforcedestinationproperties--seealso"></a>
 + [SalesforceDestinationProperties](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_SalesforceDestinationProperties.html) in the *Amazon AppFlow API Reference*\.
+

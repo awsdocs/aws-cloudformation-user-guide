@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource DatabaseConfiguration<a name="aws-properties-kendra-datasource-databaseconfiguration"></a>
 
-Provides the information necessary to connect a database to an index\. 
+Provides the configuration information to connect to a index\. 
 
 ## Syntax<a name="aws-properties-kendra-datasource-databaseconfiguration-syntax"></a>
 
@@ -50,7 +50,7 @@ Information about where the index should get the document information from the d
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectionConfiguration`  <a name="cfn-kendra-datasource-databaseconfiguration-connectionconfiguration"></a>
-The information necessary to connect to a database\.  
+Configuration information that's required to connect to a database\.  
 *Required*: Yes  
 *Type*: [ConnectionConfiguration](aws-properties-kendra-datasource-connectionconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

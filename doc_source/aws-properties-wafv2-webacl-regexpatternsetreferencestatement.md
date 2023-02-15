@@ -1,9 +1,6 @@
 # AWS::WAFv2::WebACL RegexPatternSetReferenceStatement<a name="aws-properties-wafv2-webacl-regexpatternsetreferencestatement"></a>
 
-**Note**  
-This is the latest version of **AWS WAF**, named AWS WAFV2, released in November, 2019\. For information, including how to migrate your AWS WAF resources from the prior release, see the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\. 
-
-A rule statement used to search web request components for matches with regular expressions\. To use this, create a RegexPatternSet that specifies the expressions that you want to detect, then use the ARN of that set in this statement\. A web request matches the pattern set rule statement if the request component matches any of the patterns in the set\. To create a regex pattern set, see CreateRegexPatternSet\.
+A rule statement used to search web request components for matches with regular expressions\. To use this, create a [AWS::WAFv2::RegexPatternSet](aws-resource-wafv2-regexpatternset.md) that specifies the expressions that you want to detect, then use that set in this statement\. A web request matches the pattern set rule statement if the request component matches any of the patterns in the set\. 
 
 Each regex pattern set rule statement references a regex pattern set\. You create and maintain the set independent of your rules\. This allows you to use the single set in multiple rules\. When you update the referenced set, AWS WAF automatically updates all rules that reference it\.
 
@@ -34,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-webacl-regexpatternsetreferencestatement-properties"></a>
 
 `Arn`  <a name="cfn-wafv2-webacl-regexpatternsetreferencestatement-arn"></a>
-The Amazon Resource Name \(ARN\) of the RegexPatternSet that this statement references\.  
+The Amazon Resource Name \(ARN\) of the regular expression pattern set that this statement references\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
@@ -43,7 +40,7 @@ The Amazon Resource Name \(ARN\) of the RegexPatternSet that this statement refe
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldToMatch`  <a name="cfn-wafv2-webacl-regexpatternsetreferencestatement-fieldtomatch"></a>
-The part of a web request that you want AWS WAF to inspect\. For more information, see FieldToMatch\.   
+The part of a web request that you want AWS WAF to inspect\.   
 *Required*: Yes  
 *Type*: [FieldToMatch](aws-properties-wafv2-webacl-fieldtomatch.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

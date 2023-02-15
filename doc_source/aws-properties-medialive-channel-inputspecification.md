@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel InputSpecification<a name="aws-properties-medialive-channel-inputspecification"></a>
 
-Configures the input specification for the channel\. This element is a top\-level element in the channel\.
+The input specification for this channel\. It specifies the key characteristics of the inputs for this channel: the maximum bitrate, the resolution, and the codec\. 
+
+This entity is at the top level in the channel\.
 
 ## Syntax<a name="aws-properties-medialive-channel-inputspecification-syntax"></a>
 
@@ -27,19 +29,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-inputspecification-properties"></a>
 
 `Codec`  <a name="cfn-medialive-channel-inputspecification-codec"></a>
-Input codec\.  
+The codec to include in the input specification for this channel\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumBitrate`  <a name="cfn-medialive-channel-inputspecification-maximumbitrate"></a>
-Maximum input bitrate, categorized coarsely\.  
+The maximum input bitrate for any input attached to this channel\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Resolution`  <a name="cfn-medialive-channel-inputspecification-resolution"></a>
-Input resolution, categorized coarsely\.  
+The resolution for any input attached to this channel\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

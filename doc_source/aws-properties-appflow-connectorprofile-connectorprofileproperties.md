@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Marketo](#cfn-appflow-connectorprofile-connectorprofileproperties-marketo)" : MarketoConnectorProfileProperties,
   "[Redshift](#cfn-appflow-connectorprofile-connectorprofileproperties-redshift)" : RedshiftConnectorProfileProperties,
   "[Salesforce](#cfn-appflow-connectorprofile-connectorprofileproperties-salesforce)" : SalesforceConnectorProfileProperties,
+  "[SAPOData](#cfn-appflow-connectorprofile-connectorprofileproperties-sapodata)" : SAPODataConnectorProfileProperties,
   "[ServiceNow](#cfn-appflow-connectorprofile-connectorprofileproperties-servicenow)" : ServiceNowConnectorProfileProperties,
   "[Slack](#cfn-appflow-connectorprofile-connectorprofileproperties-slack)" : SlackConnectorProfileProperties,
   "[Snowflake](#cfn-appflow-connectorprofile-connectorprofileproperties-snowflake)" : SnowflakeConnectorProfileProperties,
@@ -39,6 +40,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     RedshiftConnectorProfileProperties
   [Salesforce](#cfn-appflow-connectorprofile-connectorprofileproperties-salesforce): 
     SalesforceConnectorProfileProperties
+  [SAPOData](#cfn-appflow-connectorprofile-connectorprofileproperties-sapodata): 
+    SAPODataConnectorProfileProperties
   [ServiceNow](#cfn-appflow-connectorprofile-connectorprofileproperties-servicenow): 
     ServiceNowConnectorProfileProperties
   [Slack](#cfn-appflow-connectorprofile-connectorprofileproperties-slack): 
@@ -89,6 +92,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: [SalesforceConnectorProfileProperties](aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SAPOData`  <a name="cfn-appflow-connectorprofile-connectorprofileproperties-sapodata"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [SAPODataConnectorProfileProperties](aws-properties-appflow-connectorprofile-sapodataconnectorprofileproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ServiceNow`  <a name="cfn-appflow-connectorprofile-connectorprofileproperties-servicenow"></a>
  The connector\-specific properties required by serviceNow\.   
 *Required*: No  
@@ -121,3 +130,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-connectorprofileproperties--seealso"></a>
 + [ConnectorProfileProperties](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ConnectorProfileProperties.html) in the *Amazon AppFlow API Reference*\.
+

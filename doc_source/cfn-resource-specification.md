@@ -4,7 +4,7 @@ The AWS CloudFormation resource specification is a JSON\-formatted text file tha
 
 The resource specification is organized as both a single file and as a series of files, where each file contains the definition of one resource type\. The single and separated files contain identical information\. Depending on the tool and your implementation, use the file or files that work for you\.
 
-To download the resource specification, see the following table\. 
+To download the resource specification, see the following table\.
 
 Resource availability may vary by region\. To check the availability of a resource in a given region, refer to the resource specification for that region\.
 
@@ -19,8 +19,9 @@ Resource availability may vary by region\. To check the availability of a resour
 |  US West \(Oregon\)  |  us\-west\-2  |  [\.json](https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d201a2mn26r7lk.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
 |  Africa \(Cape Town\)  |  af\-south\-1  |  [\.json](https://cfn-resource-specifications-af-south-1-prod.s3.af-south-1.amazonaws.com/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://cfn-resource-specifications-af-south-1-prod.s3.af-south-1.amazonaws.com/latest/CloudFormationResourceSpecification.zip)  | 
 |  Asia Pacific \(Hong Kong\)  |  ap\-east\-1  |  [\.json](https://cfn-resource-specifications-ap-east-1-prod.s3.ap-east-1.amazonaws.com/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://cfn-resource-specifications-ap-east-1-prod.s3.ap-east-1.amazonaws.com/latest/CloudFormationResourceSpecification.zip)  | 
+|  Asia Pacific \(Jakarta\)  |  ap\-southeast\-3  |  [\.json](https://cfn-resource-specifications-ap-southeast-3-prod.s3.ap-southeast-3.amazonaws.com/latest/CloudFormationResourceSpecification.json)  |  [\.zip](https://cfn-resource-specifications-ap-southeast-3-prod.s3.ap-southeast-3.amazonaws.com/latest/CloudFormationResourceSpecification.zip)  | 
 |  Asia Pacific \(Mumbai\)  |  ap\-south\-1  |  [\.json](https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d2senuesg1djtx.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
-|  Asia Pacific \(Osaka\-Local\)  |  ap\-northeast\-3  |  [\.json](https://d2zq80gdmjim8k.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d2zq80gdmjim8k.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
+|  Asia Pacific \(Osaka\)  |  ap\-northeast\-3  |  [\.json](https://d2zq80gdmjim8k.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d2zq80gdmjim8k.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
 |  Asia Pacific \(Seoul\)  |  ap\-northeast\-2  |  [\.json](https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d1ane3fvebulky.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
 |  Asia Pacific \(Singapore\)  |  ap\-southeast\-1  |  [\.json](https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://doigdx0kgq9el.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 
 |  Asia Pacific \(Sydney\)  |  ap\-southeast\-2  |  [\.json](https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json)  |  [\.zip](https://d2stg8d246z9di.cloudfront.net/latest/CloudFormationResourceSpecification.zip)  | 

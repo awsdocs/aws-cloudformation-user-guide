@@ -11,9 +11,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[BaselineConfig](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-baselineconfig)" : BaselineConfig,
-  "[Environment](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-environment)" : Environment,
+  "[Environment](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-environment)" : {Key : Value, ...},
   "[MonitoringAppSpecification](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringappspecification)" : MonitoringAppSpecification,
-  "[MonitoringInputs](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringinputs)" : MonitoringInputs,
+  "[MonitoringInputs](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringinputs)" : [ MonitoringInput, ... ],
   "[MonitoringOutputConfig](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringoutputconfig)" : MonitoringOutputConfig,
   "[MonitoringResources](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringresources)" : MonitoringResources,
   "[NetworkConfig](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-networkconfig)" : NetworkConfig,
@@ -28,11 +28,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [BaselineConfig](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-baselineconfig): 
     BaselineConfig
   [Environment](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-environment): 
-    Environment
+    Key : Value
   [MonitoringAppSpecification](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringappspecification): 
     MonitoringAppSpecification
   [MonitoringInputs](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringinputs): 
-    MonitoringInputs
+    - MonitoringInput
   [MonitoringOutputConfig](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringoutputconfig): 
     MonitoringOutputConfig
   [MonitoringResources](#cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringresources): 
@@ -55,7 +55,7 @@ Baseline configuration used to validate that the data conforms to the specified 
 `Environment`  <a name="cfn-sagemaker-monitoringschedule-monitoringjobdefinition-environment"></a>
 Sets the environment variables in the Docker container\.  
 *Required*: No  
-*Type*: [Environment](aws-properties-sagemaker-monitoringschedule-environment.md)  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MonitoringAppSpecification`  <a name="cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringappspecification"></a>
@@ -67,7 +67,7 @@ Configures the monitoring job to run a specified Docker container image\.
 `MonitoringInputs`  <a name="cfn-sagemaker-monitoringschedule-monitoringjobdefinition-monitoringinputs"></a>
 The array of inputs for the monitoring job\. Currently we support monitoring an Amazon SageMaker Endpoint\.  
 *Required*: Yes  
-*Type*: [MonitoringInputs](aws-properties-sagemaker-monitoringschedule-monitoringinputs.md)  
+*Type*: List of [MonitoringInput](aws-properties-sagemaker-monitoringschedule-monitoringinput.md)  
 *Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

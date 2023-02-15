@@ -1,6 +1,6 @@
 # AWS::KinesisFirehose::DeliveryStream HttpEndpointCommonAttribute<a name="aws-properties-kinesisfirehose-deliverystream-httpendpointcommonattribute"></a>
 
-Describes the metadata that's delivered to the specified HTTP endpoint destination\. Kinesis Firehose supports any custom HTTP endpoint or HTTP endpoints owned by supported third\-party service providers, including Datadog, MongoDB, and New Relic\. 
+Describes the metadata that's delivered to the specified HTTP endpoint destination\. Kinesis Firehose supports any custom HTTP endpoint or HTTP endpoints owned by supported third\-party service providers, including Datadog, MongoDB, and New Relic\.
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-httpendpointcommonattribute-syntax"></a>
 

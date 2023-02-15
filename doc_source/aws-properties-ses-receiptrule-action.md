@@ -2,7 +2,7 @@
 
 An action that Amazon SES can take when it receives an email on behalf of one or more email addresses or domains that you own\. An instance of this data type can represent only one action\.
 
-For information about setting up receipt rules, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rules.html)\.
+For information about setting up receipt rules, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-receipt-rules-console-walkthrough.html)\.
 
 ## Syntax<a name="aws-properties-ses-receiptrule-action-syntax"></a>
 
@@ -80,7 +80,7 @@ Terminates the evaluation of the receipt rule set and optionally publishes a not
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WorkmailAction`  <a name="cfn-ses-receiptrule-action-workmailaction"></a>
-Calls Amazon WorkMail and, optionally, publishes a notification to Amazon SNS\.  
+Calls Amazon WorkMail and, optionally, publishes a notification to Amazon Amazon SNS\.  
 *Required*: No  
 *Type*: [WorkmailAction](aws-properties-ses-receiptrule-workmailaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

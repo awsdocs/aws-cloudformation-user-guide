@@ -6,6 +6,8 @@ When this operation creates an alarm, the alarm state is immediately set to `INS
 
 When you update an existing alarm, its state is left unchanged, but the update completely overwrites the previous configuration of the alarm\.
 
+
+
 ## Syntax<a name="aws-properties-cw-alarm-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -178,7 +180,7 @@ If you specify the `Metrics` parameter, you cannot specify `MetricName`, `Dimens
 
 `Namespace`  <a name="cfn-cloudwatch-alarms-namespace"></a>
 The namespace of the metric associated with the alarm\. This is required for an alarm based on a metric\. For an alarm based on a math expression, you can't specify `Namespace` and you use `Metrics` instead\.  
-For a list of namespaces for metrics from AWS services, see [ AWS Services That Publish CloudWatch Metrics\. ](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)  
+For a list of namespaces for metrics from AWS services, see [AWS Services That Publish CloudWatchMetrics\. ](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/aws-services-cloudwatch-metrics.html)  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -225,7 +227,7 @@ In an alarm based on an anomaly detection model, this is the ID of the `ANOMALY_
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatMissingData`  <a name="cfn-cloudwatch-alarms-treatmissingdata"></a>
-Sets how this alarm is to handle missing data points\. Valid values are `breaching`, `notBreaching`, `ignore`, and `missing`\. For more information, see [ Configuring How CloudWatch Alarms Treat Missing Data](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data) in the *Amazon CloudWatch User Guide*\.  
+Sets how this alarm is to handle missing data points\. Valid values are `breaching`, `notBreaching`, `ignore`, and `missing`\. For more information, see [ Configuring How CloudWatchAlarms Treat Missing Data](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html#alarms-and-missing-data) in the *Amazon CloudWatchUser Guide*\.  
 If you omit this parameter, the default behavior of `missing` is used\.  
 *Required*: No  
 *Type*: String  
@@ -258,9 +260,11 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-properties-cw-alarm-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The ARN of the CloudWatch alarm, such as `arn:aws:cloudwatch:us-west-2:123456789012:alarm:myCloudWatchAlarm-CPUAlarm-UXMMZK36R55Z`\.
+The ARN of the CloudWatchalarm, such as `arn:aws:cloudwatch:us-west-2:123456789012:alarm:myCloudWatchAlarm-CPUAlarm-UXMMZK36R55Z`\.
 
 ## Examples<a name="aws-properties-cw-alarm--examples"></a>
+
+
 
 ### Alarm Based on an Anomaly Detector<a name="aws-properties-cw-alarm--examples--Alarm_Based_on_an_Anomaly_Detector"></a>
 
@@ -275,7 +279,7 @@ This example creates an alarm that is based on an anomaly detector\.
        "Properties": {
           "MetricName": "Invocations",
           "Namespace": "AWS/Lambda",
-          "Statistic": "Sum"
+          "Stat": "Sum"
        }
     },
     "LambdaInvocationsAlarm": {
@@ -343,3 +347,4 @@ Resources:
 
 ## See also<a name="aws-properties-cw-alarm--seealso"></a>
 +  [Amazon CloudWatch Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-cloudwatch.html) 
+

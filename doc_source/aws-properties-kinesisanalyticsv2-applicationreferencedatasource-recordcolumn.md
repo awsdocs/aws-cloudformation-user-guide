@@ -55,3 +55,4 @@ The type of column created in the in\-application input stream or reference tabl
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-applicationreferencedatasource-recordcolumn--seealso"></a>
 +  [RecordColumn](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_RecordColumn.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

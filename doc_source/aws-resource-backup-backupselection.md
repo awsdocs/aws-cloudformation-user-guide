@@ -2,6 +2,8 @@
 
 Specifies a set of resources to assign to a backup plan\.
 
+For a sample AWS CloudFormation template, see the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/assigning-resources.html#assigning-resources-cfn)\.
+
 ## Syntax<a name="aws-resource-backup-backupselection-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -59,6 +61,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `BackupPlanId`  <a name="BackupPlanId-fn::getatt"></a>
 Uniquely identifies a backup plan\.
+
+`Id`  <a name="Id-fn::getatt"></a>
+Uniquely identifies the backup selection\.
 
 `SelectionId`  <a name="SelectionId-fn::getatt"></a>
 Uniquely identifies a request to assign a set of resources to a backup plan\.

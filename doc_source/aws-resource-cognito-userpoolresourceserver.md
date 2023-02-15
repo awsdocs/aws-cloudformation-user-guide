@@ -53,7 +53,7 @@ A friendly name for the resource server\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scopes`  <a name="cfn-cognito-userpoolresourceserver-scopes"></a>
-The scopes\. Each scope is a map, where the keys are `name` and the values are `description` for the scope\.  
+A list of scopes\. Each scope is a map with keys `ScopeName` and `ScopeDescription`\.  
 *Required*: No  
 *Type*: List of [ResourceServerScopeType](aws-properties-cognito-userpoolresourceserver-resourceserverscopetype.md)  
 *Maximum*: `100`  
@@ -81,6 +81,8 @@ For the Amazon Cognito resource server `yourResourceServerIdentifier`, Ref retur
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-cognito-userpoolresourceserver--examples"></a>
+
+
 
 ### Creating a new resource server for a user pool<a name="aws-resource-cognito-userpoolresourceserver--examples--Creating_a_new_resource_server_for_a_user_pool"></a>
 

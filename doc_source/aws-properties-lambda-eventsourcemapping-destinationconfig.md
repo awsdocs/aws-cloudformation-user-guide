@@ -1,6 +1,6 @@
 # AWS::Lambda::EventSourceMapping DestinationConfig<a name="aws-properties-lambda-eventsourcemapping-destinationconfig"></a>
 
-\(Streams\) An Amazon SQS queue or Amazon SNS topic destination for discarded records\.
+A configuration object that specifies the destination of an event after Lambda processes it\.
 
 ## Syntax<a name="aws-properties-lambda-eventsourcemapping-destinationconfig-syntax"></a>
 
@@ -30,6 +30,8 @@ The destination configuration for failed invocations\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-lambda-eventsourcemapping-destinationconfig--examples"></a>
+
+
 
 ### On\-Failure Destination Configuration<a name="aws-properties-lambda-eventsourcemapping-destinationconfig--examples--On-Failure_Destination_Configuration"></a>
 

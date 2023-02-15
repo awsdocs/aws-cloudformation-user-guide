@@ -1,16 +1,16 @@
 # `Fn::GetAZs`<a name="intrinsic-function-reference-getavailabilityzones"></a>
 
-The intrinsic function `Fn::GetAZs` returns an array that lists Availability Zones for a specified region in alaphabetical order\. Because customers have access to different Availability Zones, the intrinsic function `Fn::GetAZs` enables template authors to write templates that adapt to the calling user's access\. That way you don't have to hard\-code a full list of Availability Zones for a specified region\.
+The intrinsic function `Fn::GetAZs` returns an array that lists Availability Zones for a specified region in alphabetical order\. Because customers have access to different Availability Zones, the intrinsic function `Fn::GetAZs` enables template authors to write templates that adapt to the calling user's access\. That way you don't have to hard\-code a full list of Availability Zones for a specified region\.
 
 **Important**  
 For the EC2\-Classic platform, the `Fn::GetAZs` function returns all Availability Zones for a region\. For the [EC2\-VPC](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-platforms.html) platform, the `Fn::GetAZs` function returns only Availability Zones that have a default subnet unless none of the Availability Zones has a default subnet; in that case, all Availability Zones are returned\.  
-Similarly to the response from the `describe-availability-zones` AWS CLI command, the order of the results from the `Fn::GetAZs` function is not guaranteed and can change when new Availability Zones are added\.
+Similarly to the response from the `describe-availability-zones` AWS CLI command, the order of the results from the `Fn::GetAZs` function isn't guaranteed and can change when new Availability Zones are added\.
 
 IAM permissions
 
 The permissions that you need in order to use the `Fn::GetAZs` function depend on the platform in which you're launching Amazon EC2 instances\. For both platforms, you need permissions to the Amazon EC2 `DescribeAvailabilityZones` and `DescribeAccountAttributes` actions\. For EC2\-VPC, you also need permissions to the Amazon EC2 `DescribeSubnets` action\.
 
-## Declaration<a name="w7002ab1c33c28c36c11"></a>
+## Declaration<a name="w11339ab1c31c28c36c11"></a>
 
 ### JSON<a name="intrinsic-function-reference-getazs-syntax.json"></a>
 
@@ -32,21 +32,21 @@ Syntax for the short form:
 !GetAZs region
 ```
 
-## Parameters<a name="w7002ab1c33c28c36c13"></a>
+## Parameters<a name="w11339ab1c31c28c36c13"></a>
 
-region  
+region  <a name="region"></a>
 The name of the region for which you want to get the Availability Zones\.  
 You can use the `AWS::Region` pseudo parameter to specify the region in which the stack is created\. Specifying an empty string is equivalent to specifying `AWS::Region`\.
 
-## Return value<a name="w7002ab1c33c28c36c15"></a>
+## Return value<a name="w11339ab1c31c28c36c15"></a>
 
 The list of Availability Zones for the region\.
 
-## Examples<a name="w7002ab1c33c28c36c17"></a>
+## Examples<a name="w11339ab1c31c28c36c17"></a>
 
-### Evaluate a Region<a name="w7002ab1c33c28c36c17b2"></a>
+### Evaluate a Region<a name="w11339ab1c31c28c36c17b2"></a>
 
-For these examples, AWS CloudFormation evaluates `Fn::GetAZs` to the following array—assuming that the user has created the stack in the `us-east-1` region:
+For these examples, CloudFormation evaluates `Fn::GetAZs` to the following array—assuming that the user has created the stack in the `us-east-1` region:
 
 `[ "us-east-1a", "us-east-1b", "us-east-1c", "us-east-1d" ]`
 
@@ -69,7 +69,7 @@ For these examples, AWS CloudFormation evaluates `Fn::GetAZs` to the following a
 
  
 
-### Specify a subnet's Availability Zone<a name="w7002ab1c33c28c36c17b4"></a>
+### Specify a subnet's Availability Zone<a name="w11339ab1c31c28c36c17b4"></a>
 
 The following example uses `Fn::GetAZs` to specify a subnet's Availability Zone:
 
@@ -112,9 +112,9 @@ mySubnet:
 
  
 
-### Nested functions with short form YAML<a name="w7002ab1c33c28c36c17b8"></a>
+### Nested functions with short form YAML<a name="w11339ab1c31c28c36c17b8"></a>
 
-The following examples show valid patterns for using nested intrinsic functions using short form YAML\. You can't nest short form functions consecutively, so a pattern like `!GetAZs !Ref` is invalid\.
+The following examples show valid patterns for using nested intrinsic functions using short form YAML\. You can't nest short form functions consecutively, so a pattern like `!GetAZs !Ref` isn't valid\.
 
 #### YAML<a name="intrinsic-function-reference-select-example3.yaml"></a>
 
@@ -133,6 +133,6 @@ The following examples show valid patterns for using nested intrinsic functions 
 3.   - Fn::GetAZs: !Ref 'AWS::Region'
 ```
 
-## Supported functions<a name="w7002ab1c33c28c36c19"></a>
+## Supported functions<a name="w11339ab1c31c28c36c19"></a>
 
 You can use the `Ref` function in the `Fn::GetAZs` function\.

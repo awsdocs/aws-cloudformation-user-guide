@@ -111,3 +111,4 @@ userProfile:
 ## See also<a name="aws-resource-opsworks-userprofile--seealso"></a>
 +  [CreateUserProfile](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateUserProfile.html) in the *AWS OpsWorks API Reference*\.
 +  [Managing AWS OpsWorks Stacks User Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html) in the *AWS OpsWorks User Guide*\.
+

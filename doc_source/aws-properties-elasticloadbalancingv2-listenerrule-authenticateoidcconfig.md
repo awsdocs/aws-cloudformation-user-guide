@@ -18,8 +18,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[OnUnauthenticatedRequest](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-onunauthenticatedrequest)" : String,
   "[Scope](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-scope)" : String,
   "[SessionCookieName](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-sessioncookiename)" : String,
-  "[SessionTimeout](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-sessiontimeout)" : Long,
+  "[SessionTimeout](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-sessiontimeout)" : Integer,
   "[TokenEndpoint](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-tokenendpoint)" : String,
+  "[UseExistingClientSecret](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-useexistingclientsecret)" : Boolean,
   "[UserInfoEndpoint](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-userinfoendpoint)" : String
 }
 ```
@@ -36,8 +37,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [OnUnauthenticatedRequest](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-onunauthenticatedrequest): String
   [Scope](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-scope): String
   [SessionCookieName](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-sessioncookiename): String
-  [SessionTimeout](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-sessiontimeout): Long
+  [SessionTimeout](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-sessiontimeout): Integer
   [TokenEndpoint](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-tokenendpoint): String
+  [UseExistingClientSecret](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-useexistingclientsecret): Boolean
   [UserInfoEndpoint](#cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-userinfoendpoint): String
 ```
 
@@ -99,13 +101,19 @@ The name of the cookie used to maintain session information\. The default is AWS
 `SessionTimeout`  <a name="cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-sessiontimeout"></a>
 The maximum duration of the authentication session, in seconds\. The default is 604800 seconds \(7 days\)\.  
 *Required*: No  
-*Type*: Long  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TokenEndpoint`  <a name="cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-tokenendpoint"></a>
 The token endpoint of the IdP\. This must be a full URL, including the HTTPS protocol, the domain, and the path\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`UseExistingClientSecret`  <a name="cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-useexistingclientsecret"></a>
+Indicates whether to use the existing client secret when modifying a rule\. If you are creating a rule, you can omit this parameter or set it to false\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserInfoEndpoint`  <a name="cfn-elasticloadbalancingv2-listenerrule-authenticateoidcconfig-userinfoendpoint"></a>

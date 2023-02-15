@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Marketo](#cfn-appflow-connectorprofile-connectorprofilecredentials-marketo)" : MarketoConnectorProfileCredentials,
   "[Redshift](#cfn-appflow-connectorprofile-connectorprofilecredentials-redshift)" : RedshiftConnectorProfileCredentials,
   "[Salesforce](#cfn-appflow-connectorprofile-connectorprofilecredentials-salesforce)" : SalesforceConnectorProfileCredentials,
+  "[SAPOData](#cfn-appflow-connectorprofile-connectorprofilecredentials-sapodata)" : SAPODataConnectorProfileCredentials,
   "[ServiceNow](#cfn-appflow-connectorprofile-connectorprofilecredentials-servicenow)" : ServiceNowConnectorProfileCredentials,
   "[Singular](#cfn-appflow-connectorprofile-connectorprofilecredentials-singular)" : SingularConnectorProfileCredentials,
   "[Slack](#cfn-appflow-connectorprofile-connectorprofilecredentials-slack)" : SlackConnectorProfileCredentials,
@@ -47,6 +48,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     RedshiftConnectorProfileCredentials
   [Salesforce](#cfn-appflow-connectorprofile-connectorprofilecredentials-salesforce): 
     SalesforceConnectorProfileCredentials
+  [SAPOData](#cfn-appflow-connectorprofile-connectorprofilecredentials-sapodata): 
+    SAPODataConnectorProfileCredentials
   [ServiceNow](#cfn-appflow-connectorprofile-connectorprofilecredentials-servicenow): 
     ServiceNowConnectorProfileCredentials
   [Singular](#cfn-appflow-connectorprofile-connectorprofilecredentials-singular): 
@@ -113,6 +116,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: [SalesforceConnectorProfileCredentials](aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SAPOData`  <a name="cfn-appflow-connectorprofile-connectorprofilecredentials-sapodata"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [SAPODataConnectorProfileCredentials](aws-properties-appflow-connectorprofile-sapodataconnectorprofilecredentials.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ServiceNow`  <a name="cfn-appflow-connectorprofile-connectorprofilecredentials-servicenow"></a>
  The connector\-specific credentials required when using ServiceNow\.   
 *Required*: No  
@@ -157,3 +166,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-connectorprofilecredentials--seealso"></a>
 + [ConnectorProfileCredentials](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ConnectorProfileCredentials.html) in the *Amazon AppFlow API Reference*\.
+

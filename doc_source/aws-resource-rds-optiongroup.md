@@ -1,6 +1,6 @@
 # AWS::RDS::OptionGroup<a name="aws-resource-rds-optiongroup"></a>
 
-The `AWS::RDS::OptionGroup` resource creates an option group, to enable and configure features that are specific to a particular DB engine\.
+The `AWS::RDS::OptionGroup` resource creates or updates an option group, to enable and configure features that are specific to a particular DB engine\.
 
 ## Syntax<a name="aws-resource-rds-optiongroup-syntax"></a>
 
@@ -39,6 +39,18 @@ Properties:
 
 `EngineName`  <a name="cfn-rds-optiongroup-enginename"></a>
 Specifies the name of the engine that this option group should be associated with\.  
+Valid Values:   
++ `mariadb`
++ `mysql`
++ `oracle-ee`
++ `oracle-se2`
++ `oracle-se1`
++ `oracle-se`
++ `postgres`
++ `sqlserver-ee`
++ `sqlserver-se`
++ `sqlserver-ex`
++ `sqlserver-web`
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -50,8 +62,8 @@ Specifies the major version of the engine that this option group should be assoc
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OptionConfigurations`  <a name="cfn-rds-optiongroup-optionconfigurations"></a>
-A list of all available options  
-*Required*: Yes  
+A list of options and the settings for each option\.  
+*Required*: Conditional  
 *Type*: List of [OptionConfiguration](aws-properties-rds-optiongroup-optionconfigurations.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -76,6 +88,8 @@ Tags to assign to the option group\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-rds-optiongroup--examples"></a>
+
+
 
 ### Creating an option group with multiple option configurations<a name="aws-resource-rds-optiongroup--examples--Creating_an_option_group_with_multiple_option_configurations"></a>
 

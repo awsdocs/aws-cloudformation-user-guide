@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appsync-datasource-deltasyncconfig-properties"></a>
 
 `BaseTableTTL`  <a name="cfn-appsync-datasource-deltasyncconfig-basetablettl"></a>
-The number of minutes an Item is stored in the datasource\.  
+The number of minutes that an Item is stored in the data source\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -39,7 +39,7 @@ The Delta Sync table name\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeltaSyncTableTTL`  <a name="cfn-appsync-datasource-deltasyncconfig-deltasynctablettl"></a>
-The number of minutes a Delta Sync log entry is stored in the Delta Sync table\.  
+The number of minutes that a Delta Sync log entry is stored in the Delta Sync table\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

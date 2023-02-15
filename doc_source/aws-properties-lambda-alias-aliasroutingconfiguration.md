@@ -31,6 +31,8 @@ The second version, and the percentage of traffic that's routed to it\.
 
 ## Examples<a name="aws-properties-lambda-alias-aliasroutingconfiguration--examples"></a>
 
+
+
 ### Routing Configuration<a name="aws-properties-lambda-alias-aliasroutingconfiguration--examples--Routing_Configuration"></a>
 
 An alias that routes half of incoming requests to a second version\.

@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Value`  <a name="cfn-iotevents-detectormodel-setvariable-value"></a>
 The new value of the variable\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
@@ -34,7 +34,7 @@ The new value of the variable\.
 
 `VariableName`  <a name="cfn-iotevents-detectormodel-setvariable-variablename"></a>
 The name of the variable\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  

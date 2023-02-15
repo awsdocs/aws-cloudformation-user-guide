@@ -2,7 +2,7 @@
 
 Specifies the Elastic Inference Accelerator for the instance\.
 
- `ElasticInferenceAccelerator` is a property of the [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource\.
+`ElasticInferenceAccelerator` is a property of the [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource\.
 
 ## Syntax<a name="aws-properties-ec2-instance-elasticinferenceaccelerator-syntax"></a>
 

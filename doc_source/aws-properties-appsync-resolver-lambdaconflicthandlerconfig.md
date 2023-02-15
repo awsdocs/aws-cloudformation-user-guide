@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appsync-resolver-lambdaconflicthandlerconfig-properties"></a>
 
 `LambdaConflictHandlerArn`  <a name="cfn-appsync-resolver-lambdaconflicthandlerconfig-lambdaconflicthandlerarn"></a>
-The Arn for the Lambda function to use as the Conflict Handler\.  
+The Amazon Resource Name \(ARN\) for the Lambda function to use as the Conflict Handler\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[BytesScannedCutoffPerQuery](#cfn-athena-workgroup-workgroupconfiguration-bytesscannedcutoffperquery)" : Integer,
   "[EnforceWorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfiguration-enforceworkgroupconfiguration)" : Boolean,
+  "[EngineVersion](#cfn-athena-workgroup-workgroupconfiguration-engineversion)" : EngineVersion,
   "[PublishCloudWatchMetricsEnabled](#cfn-athena-workgroup-workgroupconfiguration-publishcloudwatchmetricsenabled)" : Boolean,
   "[RequesterPaysEnabled](#cfn-athena-workgroup-workgroupconfiguration-requesterpaysenabled)" : Boolean,
   "[ResultConfiguration](#cfn-athena-workgroup-workgroupconfiguration-resultconfiguration)" : ResultConfiguration
@@ -23,6 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [BytesScannedCutoffPerQuery](#cfn-athena-workgroup-workgroupconfiguration-bytesscannedcutoffperquery): Integer
   [EnforceWorkGroupConfiguration](#cfn-athena-workgroup-workgroupconfiguration-enforceworkgroupconfiguration): Boolean
+  [EngineVersion](#cfn-athena-workgroup-workgroupconfiguration-engineversion): 
+    EngineVersion
   [PublishCloudWatchMetricsEnabled](#cfn-athena-workgroup-workgroupconfiguration-publishcloudwatchmetricsenabled): Boolean
   [RequesterPaysEnabled](#cfn-athena-workgroup-workgroupconfiguration-requesterpaysenabled): Boolean
   [ResultConfiguration](#cfn-athena-workgroup-workgroupconfiguration-resultconfiguration): 
@@ -32,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-athena-workgroup-workgroupconfiguration-properties"></a>
 
 `BytesScannedCutoffPerQuery`  <a name="cfn-athena-workgroup-workgroupconfiguration-bytesscannedcutoffperquery"></a>
-The upper limit \(cutoff\) for the amount of bytes a single query in a workgroup is allowed to scan\.  
+The upper limit \(cutoff\) for the amount of bytes a single query in a workgroup is allowed to scan\. No default is defined\.  
 This property currently supports integer types\. Support for long values is planned\.
 *Required*: No  
 *Type*: Integer  
@@ -42,6 +45,12 @@ This property currently supports integer types\. Support for long values is plan
 If set to "true", the settings for the workgroup override client\-side settings\. If set to "false", client\-side settings are used\. For more information, see [Workgroup Settings Override Client\-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html)\.  
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EngineVersion`  <a name="cfn-athena-workgroup-workgroupconfiguration-engineversion"></a>
+The engine version that all queries running on the workgroup use\. Queries on the `AmazonAthenaPreviewFunctionality` workgroup run on the preview engine regardless of this setting\.  
+*Required*: No  
+*Type*: [EngineVersion](aws-properties-athena-workgroup-engineversion.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PublishCloudWatchMetricsEnabled`  <a name="cfn-athena-workgroup-workgroupconfiguration-publishcloudwatchmetricsenabled"></a>

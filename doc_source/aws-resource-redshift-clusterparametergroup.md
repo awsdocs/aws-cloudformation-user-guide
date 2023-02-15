@@ -39,12 +39,14 @@ Properties:
 The description of the parameter group\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ParameterGroupFamily`  <a name="cfn-redshift-clusterparametergroup-parametergroupfamily"></a>
 The name of the cluster parameter group family that this cluster parameter group is compatible with\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Parameters`  <a name="cfn-redshift-clusterparametergroup-parameters"></a>
@@ -75,9 +77,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-redshift-clusterparametergroup--examples"></a>
 
+
+
 ### Single Parameter<a name="aws-resource-redshift-clusterparametergroup--examples--Single_Parameter"></a>
 
-The following example describes a parameter group with one parameter that is specified:
+The following example describes a parameter group with one parameter that's specified:
 
 #### JSON<a name="aws-resource-redshift-clusterparametergroup--examples--Single_Parameter--json"></a>
 

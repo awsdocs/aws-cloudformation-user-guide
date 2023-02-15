@@ -62,3 +62,4 @@ Specifies the throttling rate limit\.
 
 ## See also<a name="aws-properties-apigatewayv2-stage-routesettings--seealso"></a>
 + [Stages](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-stages.html) in the *Amazon API Gateway Version 2 API Reference*
+

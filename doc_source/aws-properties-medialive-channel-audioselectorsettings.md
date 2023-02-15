@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel AudioSelectorSettings<a name="aws-properties-medialive-channel-audioselectorsettings"></a>
 
-Specifies one audio asset to extract from the input\. In this element, include only one of the child elements\. This element belongs to AudioSelector\.
+Information about the audio to extract from the input\.
+
+The parent of this entity is AudioSelector\.
 
 ## Syntax<a name="aws-properties-medialive-channel-audioselectorsettings-syntax"></a>
 
@@ -10,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AudioHlsRenditionSelection](#cfn-medialive-channel-audioselectorsettings-audiohlsrenditionselection)" : AudioHlsRenditionSelection,
   "[AudioLanguageSelection](#cfn-medialive-channel-audioselectorsettings-audiolanguageselection)" : AudioLanguageSelection,
   "[AudioPidSelection](#cfn-medialive-channel-audioselectorsettings-audiopidselection)" : AudioPidSelection,
   "[AudioTrackSelection](#cfn-medialive-channel-audioselectorsettings-audiotrackselection)" : AudioTrackSelection
@@ -19,6 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-medialive-channel-audioselectorsettings-syntax.yaml"></a>
 
 ```
+  [AudioHlsRenditionSelection](#cfn-medialive-channel-audioselectorsettings-audiohlsrenditionselection): 
+    AudioHlsRenditionSelection
   [AudioLanguageSelection](#cfn-medialive-channel-audioselectorsettings-audiolanguageselection): 
     AudioLanguageSelection
   [AudioPidSelection](#cfn-medialive-channel-audioselectorsettings-audiopidselection): 
@@ -29,20 +34,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-medialive-channel-audioselectorsettings-properties"></a>
 
+`AudioHlsRenditionSelection`  <a name="cfn-medialive-channel-audioselectorsettings-audiohlsrenditionselection"></a>
+Selector for HLS audio rendition\.  
+*Required*: No  
+*Type*: [AudioHlsRenditionSelection](aws-properties-medialive-channel-audiohlsrenditionselection.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `AudioLanguageSelection`  <a name="cfn-medialive-channel-audioselectorsettings-audiolanguageselection"></a>
-Include this 'audio selection' element if you want to use the language ID to extract the audio from the input\.  
+The language code of the audio to select\.  
 *Required*: No  
 *Type*: [AudioLanguageSelection](aws-properties-medialive-channel-audiolanguageselection.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AudioPidSelection`  <a name="cfn-medialive-channel-audioselectorsettings-audiopidselection"></a>
-Include this 'audio selection' element if you want to use the PID to extract the audio from the input\.  
+The PID of the audio to select\.  
 *Required*: No  
 *Type*: [AudioPidSelection](aws-properties-medialive-channel-audiopidselection.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AudioTrackSelection`  <a name="cfn-medialive-channel-audioselectorsettings-audiotrackselection"></a>
-Include this 'audio selection' element if you want to use the track number to extract the audio from the input\.  
+Information about the audio track to extract\.   
 *Required*: No  
 *Type*: [AudioTrackSelection](aws-properties-medialive-channel-audiotrackselection.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

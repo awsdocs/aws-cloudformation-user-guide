@@ -1,6 +1,6 @@
 # AWS::ACMPCA::CertificateAuthorityActivation<a name="aws-resource-acmpca-certificateauthorityactivation"></a>
 
-The `AWS::ACMPCA::CertificateAuthorityActivation` resource creates and installs a CA certificate on a CA\. If no status is specified, the `AWS::ACMPCA::CertificateAuthorityActivation` resource status defaults to ACTIVE\. Once the CA has a CA certificate installed, you can use the resource to toggle the CA status field between ACTIVE and DISABLED\.
+The `AWS::ACMPCA::CertificateAuthorityActivation` resource creates and installs a CA certificate on a CA\. If no status is specified, the `AWS::ACMPCA::CertificateAuthorityActivation` resource status defaults to ACTIVE\. Once the CA has a CA certificate installed, you can use the resource to toggle the CA status field between `ACTIVE` and `DISABLED`\.
 
 ## Syntax<a name="aws-resource-acmpca-certificateauthorityactivation-syntax"></a>
 
@@ -46,7 +46,7 @@ The Amazon Resource Name \(ARN\) of your private CA\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificateChain`  <a name="cfn-acmpca-certificateauthorityactivation-certificatechain"></a>
-The Base64 PEM\-encoded certificate chain that chains up to the root CA certificate that you used to sign your private CA certificate\.   
+The Base64 PEM\-encoded certificate chain that chains up to the root CA certificate that you used to sign your private CA certificate\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -67,7 +67,7 @@ The Amazon Resource Name \(ARN\) of the certificate authority\.
 
 The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
 
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+For more information about `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-acmpca-certificateauthorityactivation-return-values-fn--getatt-fn--getatt"></a>
 

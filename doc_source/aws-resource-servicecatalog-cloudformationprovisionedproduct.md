@@ -2,7 +2,7 @@
 
 Provisions the specified product\.
 
-A provisioned product is a resourced instance of a product\. For example, provisioning a product based on a CloudFormation template launches a CloudFormation stack and its underlying resources\. You can check the status of this request using [DescribeRecord](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_DescribeRecord.html)\.
+A provisioned product is a resourced instance of a product\. For example, provisioning a product based on a AWS CloudFormation template launches a AWS CloudFormation stack and its underlying resources\. You can check the status of this request using [DescribeRecord](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_DescribeRecord.html)\.
 
 If the request contains a tag key with an empty list of values, there is a tag conflict for that key\. Do not include conflicted keys as tags, or this causes the error "Parameter validation failed: Missing required parameter in Tags\[*N*\]:*Value*"\.
 
@@ -68,7 +68,7 @@ The language code\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotificationArns`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-notificationarns"></a>
-Passed to CloudFormation\. The SNS topic ARNs to which to publish stack\-related events\.  
+Passed to AWS CloudFormation\. The SNS topic ARNs to which to publish stack\-related events\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `5`  
@@ -105,7 +105,7 @@ You must specify either the ID or the name of the product, but not both\.
 
 `ProductName`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-productname"></a>
 A user\-friendly name for the provisioned product\. This value must be unique for the AWS account and cannot be updated after the product is provisioned\.  
-Each time a stack is created or updated, if `ProductName` is provided it will successfully resolve to `ProductId` as long as only one product exists in the account/region with that `ProductName`\.  
+Each time a stack is created or updated, if `ProductName` is provided it will successfully resolve to `ProductId` as long as only one product exists in the account or Region with that `ProductName`\.  
 You must specify either the name or the ID of the product, but not both\.
 *Required*: Conditional  
 *Type*: String  
@@ -135,7 +135,7 @@ You must specify either the ID or the name of the provisioning artifact, but not
 
 `ProvisioningArtifactName`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-provisioningartifactname"></a>
 The name of the provisioning artifact \(also known as a version\) for the product\. This name must be unique for the product\.  
-You must specify either the name or the ID of the provisioning artifact, but not both\.
+ You must specify either the name or the ID of the provisioning artifact, but not both\. You must also specify either the name or the ID of the product, but not both\.
 *Required*: Conditional  
 *Type*: String  
 *Maximum*: `8192`  
@@ -180,9 +180,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `CloudformationStackArn`  <a name="CloudformationStackArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the CloudFormation stack, such as `arn:aws:cloudformation:eu-west-1:123456789012:stack/SC-499278721343-pp-hfyszaotincww/8f3df460-346a-11e8-9444-503abe701c29`\.
 
-`Outputs`  <a name="Outputs-fn::getatt"></a>
-The output of the product you are provisioning\. For example, the DNS of an EC2 instance\.
-
 `ProvisionedProductId`  <a name="ProvisionedProductId-fn::getatt"></a>
 The ID of the provisioned product\.
 
@@ -190,6 +187,8 @@ The ID of the provisioned product\.
 The ID of the record, such as `rec-rjeatvy434trk`\.
 
 ## Examples<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct--examples"></a>
+
+
 
 ### GetAtt Example<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct--examples--GetAtt_Example"></a>
 
@@ -218,3 +217,4 @@ The ID of the record, such as `rec-rjeatvy434trk`\.
 
 ## See also<a name="aws-resource-servicecatalog-cloudformationprovisionedproduct--seealso"></a>
 + [ProvisionProduct](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_ProvisionProduct.html) in the *AWS Service Catalog API Reference*
+

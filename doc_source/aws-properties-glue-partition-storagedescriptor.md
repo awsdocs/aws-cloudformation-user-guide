@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[NumberOfBuckets](#cfn-glue-partition-storagedescriptor-numberofbuckets)" : Integer,
   "[OutputFormat](#cfn-glue-partition-storagedescriptor-outputformat)" : String,
   "[Parameters](#cfn-glue-partition-storagedescriptor-parameters)" : Json,
+  "[SchemaReference](#cfn-glue-partition-storagedescriptor-schemareference)" : SchemaReference,
   "[SerdeInfo](#cfn-glue-partition-storagedescriptor-serdeinfo)" : SerdeInfo,
   "[SkewedInfo](#cfn-glue-partition-storagedescriptor-skewedinfo)" : SkewedInfo,
   "[SortColumns](#cfn-glue-partition-storagedescriptor-sortcolumns)" : [ Order, ... ],
@@ -38,6 +39,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [NumberOfBuckets](#cfn-glue-partition-storagedescriptor-numberofbuckets): Integer
   [OutputFormat](#cfn-glue-partition-storagedescriptor-outputformat): String
   [Parameters](#cfn-glue-partition-storagedescriptor-parameters): Json
+  [SchemaReference](#cfn-glue-partition-storagedescriptor-schemareference): 
+    SchemaReference
   [SerdeInfo](#cfn-glue-partition-storagedescriptor-serdeinfo): 
     SerdeInfo
   [SkewedInfo](#cfn-glue-partition-storagedescriptor-skewedinfo): 
@@ -96,6 +99,12 @@ The output format: `SequenceFileOutputFormat` \(binary\), or `IgnoreKeyTextOutpu
 The user\-supplied properties in key\-value form\.  
 *Required*: No  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SchemaReference`  <a name="cfn-glue-partition-storagedescriptor-schemareference"></a>
+An object that references a schema stored in the AWS Glue Schema Registry\.  
+*Required*: No  
+*Type*: [SchemaReference](aws-properties-glue-partition-schemareference.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SerdeInfo`  <a name="cfn-glue-partition-storagedescriptor-serdeinfo"></a>

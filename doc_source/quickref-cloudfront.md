@@ -3,7 +3,7 @@
 **Topics**
 + [Amazon CloudFront distribution resource with an Amazon S3 origin](#scenario-cloudfront-s3origin)
 + [Amazon CloudFront distribution resource with custom origin](#scenario-cloudfront-customorigin)
-+ [Amazon CloudFront distribution with multi\-origin support\.](#scenario-cloudfront-multiorigin)
++ [Amazon CloudFront distribution with multi\-origin support](#scenario-cloudfront-multiorigin)
 
 ## Amazon CloudFront distribution resource with an Amazon S3 origin<a name="scenario-cloudfront-s3origin"></a>
 
@@ -235,7 +235,7 @@ The following example template shows an Amazon CloudFront [Distribution](https:/
 48.           CloudFrontDefaultCertificate: 'true'
 ```
 
-## Amazon CloudFront distribution with multi\-origin support\.<a name="scenario-cloudfront-multiorigin"></a>
+## Amazon CloudFront distribution with multi\-origin support<a name="scenario-cloudfront-multiorigin"></a>
 
 The following example template shows how to declare a CloudFront [Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html) with multi\-origin support\. In the [DistributionConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html), a list of origins is provided and a [DefaultCacheBehavior](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html) is set\.
 

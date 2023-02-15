@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[FailureTolerancePercentage](#cfn-cloudformation-stackset-operationpreferences-failuretolerancepercentage)" : Integer,
   "[MaxConcurrentCount](#cfn-cloudformation-stackset-operationpreferences-maxconcurrentcount)" : Integer,
   "[MaxConcurrentPercentage](#cfn-cloudformation-stackset-operationpreferences-maxconcurrentpercentage)" : Integer,
+  "[RegionConcurrencyType](#cfn-cloudformation-stackset-operationpreferences-regionconcurrencytype)" : String,
   "[RegionOrder](#cfn-cloudformation-stackset-operationpreferences-regionorder)" : [ String, ... ]
 }
 ```
@@ -25,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [FailureTolerancePercentage](#cfn-cloudformation-stackset-operationpreferences-failuretolerancepercentage): Integer
   [MaxConcurrentCount](#cfn-cloudformation-stackset-operationpreferences-maxconcurrentcount): Integer
   [MaxConcurrentPercentage](#cfn-cloudformation-stackset-operationpreferences-maxconcurrentpercentage): Integer
+  [RegionConcurrencyType](#cfn-cloudformation-stackset-operationpreferences-regionconcurrencytype): String
   [RegionOrder](#cfn-cloudformation-stackset-operationpreferences-regionorder): 
     - String
 ```
@@ -61,6 +63,13 @@ Note that this setting lets you specify the *maximum* for operations\. For large
 Conditional: You must specify either `MaxConcurrentCount` or `MaxConcurrentPercentage`, but not both\.  
 *Required*: Conditional  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RegionConcurrencyType`  <a name="cfn-cloudformation-stackset-operationpreferences-regionconcurrencytype"></a>
+The concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a time\.  
+*Allowed values*: `SEQUENTIAL` \| `PARALLEL`  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RegionOrder`  <a name="cfn-cloudformation-stackset-operationpreferences-regionorder"></a>

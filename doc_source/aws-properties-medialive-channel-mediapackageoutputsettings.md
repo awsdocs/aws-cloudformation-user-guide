@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel MediaPackageOutputSettings<a name="aws-properties-medialive-channel-mediapackageoutputsettings"></a>
 
-Configures one output in a MediaPackage output group\. This element belongs to OutputSettings\.
+The settings for a MediaPackage output\.
+
+The parent of this entity is OutputSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-mediapackageoutputsettings-syntax"></a>
 

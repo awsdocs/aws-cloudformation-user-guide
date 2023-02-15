@@ -76,8 +76,7 @@ The name of the filter\. Minimum length of 3\. Maximum length of 64\. Valid char
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Rank`  <a name="cfn-guardduty-filter-rank"></a>
-Specifies the position of the filter in the list of current filters\. Also specifies the order in which this filter is applied to the findings\.  
-By default filters may not be created in the same order as they are ranked\. To ensure filters are created in the correct order you can use the optional `DependsOn` attribute with the following syntax: `"DependsOn":[ "ObjectName" ]`\. You can find more information on using this attribute [here](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)\.
+Not currently supported by AWS CloudFormation\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -91,6 +90,8 @@ By default filters may not be created in the same order as they are ranked\. To 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-guardduty-filter--examples"></a>
+
+
 
 ### Declare a Filter Resource<a name="aws-resource-guardduty-filter--examples--Declare_a_Filter_Resource"></a>
 

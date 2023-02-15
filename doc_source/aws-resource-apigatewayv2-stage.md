@@ -1,6 +1,6 @@
 # AWS::ApiGatewayV2::Stage<a name="aws-resource-apigatewayv2-stage"></a>
 
-The `AWS::ApiGatewayV2::Stage` resource updates a stage for an API\.
+The `AWS::ApiGatewayV2::Stage` resource specifies a stage for an API\. Each stage is a named reference to a deployment of the API and is made available for client applications to call\. To learn more, see [Working with stages for HTTP APIs ](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-stages.html) and [Deploy a WebSocket API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-set-up-websocket-deployment.html)\.
 
 ## Syntax<a name="aws-resource-apigatewayv2-stage-syntax"></a>
 
@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::ApiGatewayV2::Stage",
   "Properties" : {
       "[AccessLogSettings](#cfn-apigatewayv2-stage-accesslogsettings)" : AccessLogSettings,
+      "[AccessPolicyId](#cfn-apigatewayv2-stage-accesspolicyid)" : String,
       "[ApiId](#cfn-apigatewayv2-stage-apiid)" : String,
       "[AutoDeploy](#cfn-apigatewayv2-stage-autodeploy)" : Boolean,
       "[ClientCertificateId](#cfn-apigatewayv2-stage-clientcertificateid)" : String,
@@ -34,6 +35,7 @@ Type: AWS::ApiGatewayV2::Stage
 Properties: 
   [AccessLogSettings](#cfn-apigatewayv2-stage-accesslogsettings): 
     AccessLogSettings
+  [AccessPolicyId](#cfn-apigatewayv2-stage-accesspolicyid): String
   [ApiId](#cfn-apigatewayv2-stage-apiid): String
   [AutoDeploy](#cfn-apigatewayv2-stage-autodeploy): Boolean
   [ClientCertificateId](#cfn-apigatewayv2-stage-clientcertificateid): String
@@ -53,6 +55,12 @@ Properties:
 Settings for logging access in this stage\.  
 *Required*: No  
 *Type*: [AccessLogSettings](aws-properties-apigatewayv2-stage-accesslogsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`AccessPolicyId`  <a name="cfn-apigatewayv2-stage-accesspolicyid"></a>
+This parameter is not currently supported\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApiId`  <a name="cfn-apigatewayv2-stage-apiid"></a>
@@ -125,6 +133,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-apigatewayv2-stage--examples"></a>
 
+
+
 ### Stage creation example<a name="aws-resource-apigatewayv2-stage--examples--Stage_creation_example"></a>
 
 The following example creates a `stage` resource called `MyStage` and associates it with an existing `deployment` called `MyDeployment`\.
@@ -188,3 +198,4 @@ MyStage:
 
 ## See also<a name="aws-resource-apigatewayv2-stage--seealso"></a>
 + [CreateStage](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-stages.html#CreateStage) in the *Amazon API Gateway Version 2 API Reference*
+

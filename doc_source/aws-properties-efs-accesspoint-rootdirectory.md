@@ -38,4 +38,5 @@ Specifies the path on the EFS file system to expose as the root directory to NFS
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `100`  
+*Pattern*: `^(\/|(\/(?!\.)+[^$#<>;`|&?{}^*/\n]+){1,4})$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

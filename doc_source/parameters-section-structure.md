@@ -24,11 +24,11 @@ Note that `InstanceTypeParameter` has a default value of `t2.micro`\. This is th
 ### YAML<a name="parameters-section-structure-example.yaml"></a>
 
 ```
-Parameters: 
-  InstanceTypeParameter: 
+Parameters:
+  InstanceTypeParameter:
     Type: String
     Default: t2.micro
-    AllowedValues: 
+    AllowedValues:
       - t2.micro
       - m1.small
       - m1.large
@@ -67,7 +67,7 @@ Ec2Instance:
 ## General requirements for parameters<a name="parameters-section-structure-requirements"></a>
 
 The following requirements apply when using parameters:
-+ You can have a maximum of 60 parameters in an AWS CloudFormation template\.
++ You can have a maximum of 200 parameters in an AWS CloudFormation template\.
 + Each parameter must be given a logical name \(also called logical ID\), which must be alphanumeric and unique among all logical names within the template\.
 + Each parameter must be assigned a parameter type that is supported by AWS CloudFormation\. For more information, see [Type](#parameters-section-structure-properties-type)\.
 + Each parameter must be assigned a value at runtime for AWS CloudFormation to successfully provision the stack\. You can optionally specify a default value for AWS CloudFormation to use unless another value is provided\.
@@ -96,7 +96,7 @@ Parameters:
 ## Properties<a name="parameters-section-structure-properties"></a>
 
 `AllowedPattern`  
-A regular expression that represents the patterns to allow for `String` types\.  
+A regular expression that represents the patterns to allow for `String` types\. The pattern must match the entire parameter value provided\.  
 *Required*: No
 
 `AllowedValues`  
@@ -135,15 +135,18 @@ A numeric value that determines the smallest numeric value you want to allow for
 *Required*: No
 
 `NoEcho`  
-Whether to mask the parameter value to prevent it from being displayed in the console, command line tools, or API\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events, except for information stored in the locations specified below\.   
+Whether to mask the parameter value to prevent it from being displayed in the console, command line tools, or API\. If you set the `NoEcho` attribute to `true`, CloudFormation returns the parameter value masked as asterisks \(\*\*\*\*\*\) for any calls that describe the stack or stack events, except for information stored in the locations specified below\.  
+*Required*: No  
 Using the `NoEcho` attribute does not mask any information stored in the following:  
 + The `Metadata` template section\. CloudFormation does not transform, modify, or redact any information you include in the `Metadata` section\. For more information, see [Metadata](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/metadata-section-structure.html)\.
 + The `Outputs` template section\. For more information, see [Outputs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html)\.
 + The `Metadata` attribute of a resource definition\. For more information, [Metadata attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html)\.
 We strongly recommend you do not use these mechanisms to include sensitive information, such as passwords or secrets\.
-Rather than embedding sensitive information directly in your AWS CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
+Rather than embedding sensitive information directly in your CloudFormation templates, we recommend you use dynamic parameters in the stack template to reference sensitive information that is stored and managed outside of CloudFormation, such as in the AWS Systems Manager Parameter Store or AWS Secrets Manager\.  
 For more information, see the [Do not embed credentials in your templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) best practice\.
-*Required*: No
+We strongly recommend against including `NoEcho` parameters, or any sensitive data, in resource properties that are part of a resource's primary identifier\.  
+When a `NoEcho` parameter is included in a property that forms a primary resource identifier, CloudFormation may use the *actual plaintext value* in the primary resource identifier\. This resource ID may appear in any derived outputs or destinations\.  
+To determine which resource properties comprise a resource type's primary identifier, refer to the [resource reference documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html) for that resource\. In the **Return values** section, the `Ref` function return value represents the resource properties that comprise the resource type's primary identifier\.
 
 `Type`  <a name="parameters-section-structure-properties-type"></a>
 The data type for the parameter \(`DataType`\)\.  
@@ -168,7 +171,7 @@ Parameters that correspond to existing parameters in Systems Manager Parameter S
 
 ## AWS\-specific parameter types<a name="aws-specific-parameter-types"></a>
 
-AWS\-specific parameter types are helpful in catching invalid values at the start of creating or updating a stack\. To specify parameters with AWS\-specific types, a template user must enter existing AWS values that are in their AWS account\. AWS CloudFormation validates these input values against existing values in the account\. For example, with the `AWS::EC2::VPC::Id` parameter type, a user must [enter an existing VPC ID](cfn-using-console-create-stack-parameters.md) that is in the account and region in which they are creating the stack\. 
+AWS\-specific parameter types are helpful in catching invalid values at the start of creating or updating a stack\. To specify parameters with AWS\-specific types, a template user must enter existing AWS values that are in their AWS account\. AWS CloudFormation validates these input values against existing values in the account\. For example, with the `AWS::EC2::VPC::Id` parameter type, a user must [enter an existing VPC ID](cfn-using-console-create-stack-parameters.md) that is in the account and region in which they are creating the stack\.
 
 If you want to allow template users to enter input values from different AWS accounts, don't define parameters with AWS\-specific types; instead, define parameters of type `String` \(or `CommaDelimitedList`\)\.
 
@@ -245,7 +248,7 @@ When you execute a change set, AWS CloudFormation uses the values that are speci
 
 **Tip**  
 You can see the *resolved values* for `SSM` parameters on the stack's **Parameters** tab in the console, or by running [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stacks.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-stacks.html) or [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-change-set.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-change-set.html)\. These are the values that are currently used in the stack definition for the corresponding Systems Manager parameter keys\. Note that these values are set when the stack is created or updated, so they might differ from the latest values in Parameter Store\.  
-If you specify Secure Strings as parameter values using the `ssm-secure` pattern, AWS CloudFormation does not store the Secure String value or display it in the console or in the results of API calls\. 
+If you specify Secure Strings as parameter values using the `ssm-secure` pattern, AWS CloudFormation does not store the Secure String value or display it in the console or in the results of API calls\.
 
 Because the value of an `SSM` parameter is a Systems Manager parameter key, you should be aware of the following behavior:
 + For stack updates, the **Use existing value** option in the console and the `UsePreviousValue` attribute for [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html) tell AWS CloudFormation to use the existing Systems Manager parameter key—not its value\. AWS CloudFormation always fetches the latest values from Parameter Store when it updates stacks\.
@@ -290,13 +293,13 @@ When you use the AWS CloudFormation console to create or update a stack, the con
 
 In the metadata key, you can specify the groups to create, the parameters to include in each group, and the order in which the console shows each parameter within its group\. You can also define friendly parameter names so that the console shows descriptive names instead of logical IDs\. All parameters that you reference in the metadata key must be declared in the `Parameters` section of the template\.
 
-For more information and an example of the `AWS::CloudFormation::Interface` metadata key, see [AWS::CloudFormation::Interface](aws-resource-cloudformation-interface.md)\.
+For more information and an example of the `AWS::CloudFormation::Interface` metadata key, see [`AWS::CloudFormation::Interface`](aws-resource-cloudformation-interface.md)\.
 
 ## Examples<a name="parameters-section-examples"></a>
 
 ### Basic input parameters<a name="parameters-section-examples-basic"></a>
 
-The following example `Parameters` section declares two parameters\. The `DBPort` parameter is of type `Number` with a default of `3306`\. The minimum value that can be specified is `1150`, and the maximum value that can be specified is `65535`\. The `DBPwd` parameter is of type `String` with no default value\. The `NoEcho` property is set to `true` to prevent *describe stack* calls, such as the `aws cloudformation describe-stacks` AWS CLI command, from returning the parameter value\. The minimum length that can be specified is `1`, and the maximum length that can be specified is `41`\. The pattern allows lowercase and uppercase alphabetic characters and numerals\.
+The following example `Parameters` section declares two parameters\. The `DBPort` parameter is of type `Number` with a default of `3306`\. The minimum value that can be specified is `1150`, and the maximum value that can be specified is `65535`\. The `DBPwd` parameter is of type `String` with no default value\. The `NoEcho` property is set to `true` to prevent *describe stack* calls, such as the `aws cloudformation describe-stacks` AWS CLI command, from returning the parameter value\. The minimum length that can be specified is `1`, and the maximum length that can be specified is `41`\. The pattern allows lowercase and uppercase alphabetical characters and numerals\.
 
 #### JSON<a name="parameters-section-structure-examples-example.json"></a>
 
@@ -376,7 +379,7 @@ Parameters:
 
 #### AWS CLI and API support<a name="parameters-section-cli-support"></a>
 
-Currently, users can't use the AWS CLI or AWS CloudFormation API to view a list of valid values for AWS\-specific parameters\. However, they can view information about each parameter, such as the parameter type, by using the [aws cloudformation get\-template\-summary](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template-summary.html) command or [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_GetTemplateSummary.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_GetTemplateSummary.html) API\.
+Currently, users can't use the AWS CLI or AWS CloudFormation API to view a list of valid values for AWS\-specific parameters\. However, they can view information about each parameter, such as the parameter type, by using the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template-summary.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/get-template-summary.html) command or [https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_GetTemplateSummary.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_GetTemplateSummary.html) API\.
 
 ### Comma\-delimited list parameter type<a name="parameters-section-structure-comma-list-type"></a>
 
@@ -468,7 +471,9 @@ DbSubnet3:
 
 ### SSM parameter types<a name="parameters-section-ssm-examples"></a>
 
-#### AWS::SSM::Parameter::Value<String> type<a name="parameters-section-ssm-examples-example1"></a>
+
+
+#### `AWS::SSM::Parameter::Value`<String> type<a name="parameters-section-ssm-examples-example1"></a>
 
 The following template declares an `AWS::SSM::Parameter::Value<String>` parameter type\.
 
@@ -515,7 +520,7 @@ aws cloudformation create-stack --stack-name S1 --template-body example template
 
  
 
-#### AWS::SSM::Parameter::Value<AWS::EC2::Image::Id> type<a name="parameters-section-ssm-examples-example2"></a>
+#### `AWS::SSM::Parameter::Value`<`AWS::EC2::Image::Id`> type<a name="parameters-section-ssm-examples-example2"></a>
 
 The following template declares an `AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>` parameter type\.
 

@@ -85,6 +85,8 @@ The region\-specific Amazon Route 53 Hosted Zone ID of the regional endpoint\.
 
 ## Examples<a name="aws-resource-apigatewayv2-domainname--examples"></a>
 
+
+
 ### Domain name creation example<a name="aws-resource-apigatewayv2-domainname--examples--Domain_name_creation_example"></a>
 
 The following example creates a `DomainName` resource called `MyDomainName`\.
@@ -125,3 +127,4 @@ MyDomainName:
 
 ## See also<a name="aws-resource-apigatewayv2-domainname--seealso"></a>
 + [CreateDomainName](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/domainnames.html#CreateDomainName) in the *Amazon API Gateway Version 2 API Reference*
+

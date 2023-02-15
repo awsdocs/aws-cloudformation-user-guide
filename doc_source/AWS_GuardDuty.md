@@ -1,4 +1,4 @@
-# GuardDuty resource type reference<a name="AWS_GuardDuty"></a>
+# Amazon GuardDuty resource type reference<a name="AWS_GuardDuty"></a>
 
 **Resource types**
 + [AWS::GuardDuty::Detector](aws-resource-guardduty-detector.md)

@@ -2,6 +2,9 @@
 
 An object that represents the AWS Cloud Map service discovery information for your virtual node\.
 
+**Note**  
+AWS Cloud Map is not available in the eu\-south\-1 Region\.
+
 ## Syntax<a name="aws-properties-appmesh-virtualnode-awscloudmapservicediscovery-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -37,10 +40,14 @@ A string map that contains attributes with values that you can use to filter ins
 The name of the AWS Cloud Map namespace to use\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceName`  <a name="cfn-appmesh-virtualnode-awscloudmapservicediscovery-servicename"></a>
 The name of the AWS Cloud Map service to use\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -10,23 +10,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[UnvalidatedJSON](#cfn-groundstation-config-decodeconfig-unvalidatedjson)" : JSON
+  "[UnvalidatedJSON](#cfn-groundstation-config-decodeconfig-unvalidatedjson)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-groundstation-config-decodeconfig-syntax.yaml"></a>
 
 ```
-  [UnvalidatedJSON](#cfn-groundstation-config-decodeconfig-unvalidatedjson): 
-    JSON
+  [UnvalidatedJSON](#cfn-groundstation-config-decodeconfig-unvalidatedjson): String
 ```
 
 ## Properties<a name="aws-properties-groundstation-config-decodeconfig-properties"></a>
 
 `UnvalidatedJSON`  <a name="cfn-groundstation-config-decodeconfig-unvalidatedjson"></a>
  The decoding settings are in JSON format and define a set of steps to perform to decode the data\.   
-*Required*: Yes  
-*Type*: JSON  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-groundstation-config-decodeconfig--examples"></a>

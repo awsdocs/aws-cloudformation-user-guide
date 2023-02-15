@@ -72,9 +72,9 @@ An optional customer\-defined field that's used in OpenApi imports and exports w
 
 `IdentitySource`  <a name="cfn-apigateway-authorizer-identitysource"></a>
 The source of the identity in an incoming request\.  
-If you specify `TOKEN` or `COGNITO_USER_POOLS` for the `Type` property, specify a header mapping expression using the form `method.request.header.name`, where *name* is the name of a custom authorization header that clients submit as part of their requests\.  
-If you specify `REQUEST` for the `Type` property, specify a comma\-separated string of one or more mapping expressions of the specified request parameter using the form `method.request.parameter.name`\. For supported parameter types, see [Configure Lambda Authorizer Using the API Gateway Console](https://docs.aws.amazon.com/apigateway/latest/developerguide/configure-api-gateway-lambda-authorization-with-console.html) in the *API Gateway Developer Guide*\.  
-*Required*: No  
+If you specify `TOKEN` or `COGNITO_USER_POOLS` for the `Type` property, this property is required\. Specify a header mapping expression using the form `method.request.header.name`, where *name* is the name of a custom authorization header that clients submit as part of their requests\.  
+If you specify `REQUEST` for the `Type` property, this property is required when authorization caching is enabled\. Specify a comma\-separated string of one or more mapping expressions of the specified request parameter using the form `method.request.parameter.name`\. For supported parameter types, see [Configure Lambda Authorizer Using the API Gateway Console](https://docs.aws.amazon.com/apigateway/latest/developerguide/configure-api-gateway-lambda-authorization-with-console.html) in the *API Gateway Developer Guide*\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -86,13 +86,13 @@ A validation expression for the incoming identity\. If you specify `TOKEN` for t
 
 `Name`  <a name="cfn-apigateway-authorizer-name"></a>
 The name of the authorizer\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProviderARNs`  <a name="cfn-apigateway-authorizer-providerarns"></a>
-A list of the Amazon Cognito user pool Amazon Resource Names \(ARNs\) to associate with this authorizer\. For more information, see [Use Amazon Cognito User Pools](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html#apigateway-enable-cognito-user-pool) in the *API Gateway Developer Guide*\.  
-*Required*: No  
+A list of the Amazon Cognito user pool Amazon Resource Names \(ARNs\) to associate with this authorizer\. Required if you specify `COGNITO_USER_POOLS` as the authorizer `Type`\. For more information, see [Use Amazon Cognito User Pools](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-integrate-with-cognito.html#apigateway-enable-cognito-user-pool) in the *API Gateway Developer Guide*\.  
+*Required*: Conditional  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -119,7 +119,20 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-apigateway-authorizer-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-apigateway-authorizer-return-values-fn--getatt-fn--getatt"></a>
+
+`AuthorizerId`  <a name="AuthorizerId-fn::getatt"></a>
+The ID for the authorizer\. For example: `abc123`\.
+
 ## Examples<a name="aws-resource-apigateway-authorizer--examples"></a>
+
+
 
 ### Create authorizer<a name="aws-resource-apigateway-authorizer--examples--Create_authorizer"></a>
 
@@ -196,3 +209,4 @@ Authorizer:
 
 ## See also<a name="aws-resource-apigateway-authorizer--seealso"></a>
 + [authorizer:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/authorizer-create/) in the *Amazon API Gateway REST API Reference*
+

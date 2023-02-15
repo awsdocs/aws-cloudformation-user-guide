@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DataPullMode](#cfn-appflow-flow-scheduledtriggerproperties-datapullmode)" : String,
   "[ScheduleEndTime](#cfn-appflow-flow-scheduledtriggerproperties-scheduleendtime)" : Double,
   "[ScheduleExpression](#cfn-appflow-flow-scheduledtriggerproperties-scheduleexpression)" : String,
+  "[ScheduleOffset](#cfn-appflow-flow-scheduledtriggerproperties-scheduleoffset)" : Double,
   "[ScheduleStartTime](#cfn-appflow-flow-scheduledtriggerproperties-schedulestarttime)" : Double,
   "[TimeZone](#cfn-appflow-flow-scheduledtriggerproperties-timezone)" : String
 }
@@ -24,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DataPullMode](#cfn-appflow-flow-scheduledtriggerproperties-datapullmode): String
   [ScheduleEndTime](#cfn-appflow-flow-scheduledtriggerproperties-scheduleendtime): Double
   [ScheduleExpression](#cfn-appflow-flow-scheduledtriggerproperties-scheduleexpression): String
+  [ScheduleOffset](#cfn-appflow-flow-scheduledtriggerproperties-scheduleoffset): Double
   [ScheduleStartTime](#cfn-appflow-flow-scheduledtriggerproperties-schedulestarttime): Double
   [TimeZone](#cfn-appflow-flow-scheduledtriggerproperties-timezone): String
 ```
@@ -44,11 +46,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduleExpression`  <a name="cfn-appflow-flow-scheduledtriggerproperties-scheduleexpression"></a>
- The scheduling expression that determines when and how often the rule runs\.   
+ The scheduling expression that determines the rate at which the scheduled flow will run, for example: `rate(5minutes)`\.   
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `256`  
 *Pattern*: `.*`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ScheduleOffset`  <a name="cfn-appflow-flow-scheduledtriggerproperties-scheduleoffset"></a>
+ Specifies the optional offset that is added to the time interval for a schedule\-triggered flow\.   
+*Required*: No  
+*Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduleStartTime`  <a name="cfn-appflow-flow-scheduledtriggerproperties-schedulestarttime"></a>
@@ -58,11 +66,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeZone`  <a name="cfn-appflow-flow-scheduledtriggerproperties-timezone"></a>
- Specifies the time zone used when referring to the date and time of a scheduled\-triggered flow\.   
+ Specifies the time zone used when referring to the date and time of a scheduled\-triggered flow, such as `America/New_York`\.   
 *Required*: No  
 *Type*: String  
 *Maximum*: `256`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-appflow-flow-scheduledtriggerproperties--seealso"></a>
 + [ScheduledTriggerProperties](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ScheduledTriggerProperties.html) in the *Amazon AppFlow API Reference*\.
+

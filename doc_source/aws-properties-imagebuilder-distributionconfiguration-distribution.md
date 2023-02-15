@@ -1,6 +1,8 @@
 # AWS::ImageBuilder::DistributionConfiguration Distribution<a name="aws-properties-imagebuilder-distributionconfiguration-distribution"></a>
 
- The distribution configuration distribution defines the settings for a specific Region in the Distribution Configuration\. 
+ The distribution configuration distribution defines the settings for a specific Region in the Distribution Configuration\. You must specify whether the distribution is for an AMI or a container image\. To do so, include exactly one of the following data types for your distribution:
++ amiDistributionConfiguration
++ containerDistributionConfiguration
 
 ## Syntax<a name="aws-properties-imagebuilder-distributionconfiguration-distribution-syntax"></a>
 
@@ -11,6 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AmiDistributionConfiguration](#cfn-imagebuilder-distributionconfiguration-distribution-amidistributionconfiguration)" : Json,
+  "[ContainerDistributionConfiguration](#cfn-imagebuilder-distributionconfiguration-distribution-containerdistributionconfiguration)" : Json,
+  "[LaunchTemplateConfigurations](#cfn-imagebuilder-distributionconfiguration-distribution-launchtemplateconfigurations)" : [ LaunchTemplateConfiguration, ... ],
   "[LicenseConfigurationArns](#cfn-imagebuilder-distributionconfiguration-distribution-licenseconfigurationarns)" : [ String, ... ],
   "[Region](#cfn-imagebuilder-distributionconfiguration-distribution-region)" : String
 }
@@ -20,6 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [AmiDistributionConfiguration](#cfn-imagebuilder-distributionconfiguration-distribution-amidistributionconfiguration): Json
+  [ContainerDistributionConfiguration](#cfn-imagebuilder-distributionconfiguration-distribution-containerdistributionconfiguration): Json
+  [LaunchTemplateConfigurations](#cfn-imagebuilder-distributionconfiguration-distribution-launchtemplateconfigurations): 
+    - LaunchTemplateConfiguration
   [LicenseConfigurationArns](#cfn-imagebuilder-distributionconfiguration-distribution-licenseconfigurationarns): 
     - String
   [Region](#cfn-imagebuilder-distributionconfiguration-distribution-region): String
@@ -33,6 +40,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ContainerDistributionConfiguration`  <a name="cfn-imagebuilder-distributionconfiguration-distribution-containerdistributionconfiguration"></a>
+Container distribution settings for encryption, licensing, and sharing in a specific Region\. For details, see example schema below\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LaunchTemplateConfigurations`  <a name="cfn-imagebuilder-distributionconfiguration-distribution-launchtemplateconfigurations"></a>
+A group of launchTemplateConfiguration settings that apply to image distribution for specified accounts\.  
+*Required*: No  
+*Type*: List of [LaunchTemplateConfiguration](aws-properties-imagebuilder-distributionconfiguration-launchtemplateconfiguration.md)  
+*Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `LicenseConfigurationArns`  <a name="cfn-imagebuilder-distributionconfiguration-distribution-licenseconfigurationarns"></a>
  The License Manager Configuration to associate with the AMI in the specified Region\. For more information, see the [ LicenseConfiguration API](https://docs.aws.amazon.com/license-manager/latest/APIReference/API_LicenseConfiguration.html)\.  
 *Required*: No  
@@ -41,7 +61,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Region`  <a name="cfn-imagebuilder-distributionconfiguration-distribution-region"></a>
- The target Region for the Distribution Configuration\. For example, `eu-west-1`\.   
+ The target Region for the Distribution Configuration\. For example, `eu-west-1`\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -50,9 +70,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Examples<a name="aws-properties-imagebuilder-distributionconfiguration-distribution--examples"></a>
 
+
+
 ### Example AmiDistributionConfiguration schema<a name="aws-properties-imagebuilder-distributionconfiguration-distribution--examples--Example_AmiDistributionConfiguration_schema"></a>
 
-The following example shows the schema for the AmiDistributionConfiguration property in both YAML and JSON format\. To make an AMI public, set the launch permission authorized accounts to `all`\. See the examples for making an AMI public at [EC2 ModifyImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyImageAttribute.html)\. 
+The following example shows the schema for the AmiDistributionConfiguration property in both YAML and JSON format\. To make an AMI public, set the launch permission authorized accounts to `all`\. See the examples for making an AMI public at [EC2 ModifyImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyImageAttribute.html)\.
 
 #### YAML<a name="aws-properties-imagebuilder-distributionconfiguration-distribution--examples--Example_AmiDistributionConfiguration_schema--yaml"></a>
 

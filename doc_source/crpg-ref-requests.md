@@ -7,7 +7,7 @@ The template developer uses the AWS CloudFormation resource, [AWS::CloudFormatio
 In `AWS::CloudFormation::CustomResource`, all properties are defined by the custom resource provider\. There is only one required property: `ServiceToken`\.
 
 ServiceToken  <a name="crpg-ref-request-servicetoken"></a>
-The service token \(an Amazon SNS topic or AWS Lambda function Amazon Resource Name\) that is obtained from the custom resource provider to access the service\. The service token must be in the same region in which you are creating the stack\.  
+The service token \(an Amazon SNS topic or AWS Lambda function Amazon Resource Name\) that's obtained from the custom resource provider to access the service\. The service token must be in the same region in which you are creating the stack\.  
 *Required*: Yes  
 *Type*: String
 

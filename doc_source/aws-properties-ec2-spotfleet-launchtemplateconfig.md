@@ -30,10 +30,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The launch template\.  
 *Required*: No  
 *Type*: [FleetLaunchTemplateSpecification](aws-properties-ec2-spotfleet-fleetlaunchtemplatespecification.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Overrides`  <a name="cfn-ec2-spotfleet-launchtemplateconfig-overrides"></a>
 Any parameters that you specify override the same parameters in the launch template\.  
 *Required*: No  
 *Type*: List of [LaunchTemplateOverrides](aws-properties-ec2-spotfleet-launchtemplateoverrides.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

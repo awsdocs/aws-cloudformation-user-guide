@@ -21,9 +21,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BodyS3Location](#cfn-apigateway-restapi-bodys3location)" : S3Location,
       "[CloneFrom](#cfn-apigateway-restapi-clonefrom)" : String,
       "[Description](#cfn-apigateway-restapi-description)" : String,
+      "[DisableExecuteApiEndpoint](#cfn-apigateway-restapi-disableexecuteapiendpoint)" : Boolean,
       "[EndpointConfiguration](#cfn-apigateway-restapi-endpointconfiguration)" : EndpointConfiguration,
       "[FailOnWarnings](#cfn-apigateway-restapi-failonwarnings)" : Boolean,
       "[MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize)" : Integer,
+      "[Mode](#cfn-apigateway-restapi-mode)" : String,
       "[Name](#cfn-apigateway-restapi-name)" : String,
       "[Parameters](#cfn-apigateway-restapi-parameters)" : {Key : Value, ...},
       "[Policy](#cfn-apigateway-restapi-policy)" : Json,
@@ -45,10 +47,12 @@ Properties:
     S3Location
   [CloneFrom](#cfn-apigateway-restapi-clonefrom): String
   [Description](#cfn-apigateway-restapi-description): String
+  [DisableExecuteApiEndpoint](#cfn-apigateway-restapi-disableexecuteapiendpoint): Boolean
   [EndpointConfiguration](#cfn-apigateway-restapi-endpointconfiguration): 
     EndpointConfiguration
   [FailOnWarnings](#cfn-apigateway-restapi-failonwarnings): Boolean
   [MinimumCompressionSize](#cfn-apigateway-restapi-minimumcompressionsize): Integer
+  [Mode](#cfn-apigateway-restapi-mode): String
   [Name](#cfn-apigateway-restapi-name): String
   [Parameters](#cfn-apigateway-restapi-parameters): 
     Key : Value
@@ -68,7 +72,7 @@ The source of the API key for metering requests according to a usage plan\. Vali
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BinaryMediaTypes`  <a name="cfn-apigateway-restapi-binarymediatypes"></a>
-The list of binary media types that are supported by the `RestApi` resource, such as `image/png` or `application/octet-stream`\. By default, `RestApi` supports only UTF\-8\-encoded text payloads\. Duplicates are not allowed\. For more information, see [Enable Support for Binary Payloads in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-payload-encodings.html) in the *API Gateway Developer Guide*\.  
+The list of binary media types that are supported by the `RestApi` resource\. Use `~1` instead of `/` in the media types, for example `image~1png` or `application~1octet-stream`\. By default, `RestApi` supports only UTF\-8\-encoded text payloads\. Duplicates are not allowed\. For more information, see [Enable Support for Binary Payloads in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-payload-encodings.html) in the *API Gateway Developer Guide*\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -97,6 +101,12 @@ A description of the `RestApi` resource\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`DisableExecuteApiEndpoint`  <a name="cfn-apigateway-restapi-disableexecuteapiendpoint"></a>
+Specifies whether clients can invoke your API by using the default `execute-api` endpoint\. By default, clients can invoke your API with the default https://\{api\_id\}\.execute\-api\.\{region\}\.amazonaws\.com endpoint\. To require that clients use a custom domain name to invoke your API, disable the default endpoint\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `EndpointConfiguration`  <a name="cfn-apigateway-restapi-endpointconfiguration"></a>
 A list of the endpoint types of the API\. Use this property when creating an API\. When importing an existing API, specify the endpoint configuration types using the `Parameters` property\.  
 *Required*: No  
@@ -113,6 +123,16 @@ Indicates whether to roll back the resource if a warning occurs while API Gatewa
 A nullable integer that is used to enable compression \(with non\-negative between 0 and 10485760 \(10M\) bytes, inclusive\) or disable compression \(with a null value\) on an API\. When compression is enabled, compression or decompression is not applied on the payload if the payload size is smaller than this value\. Setting it to zero allows compression for any payload size\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Mode`  <a name="cfn-apigateway-restapi-mode"></a>
+This property applies only when you use OpenAPI to define your REST API\. The `Mode` determines how API Gateway handles resource updates\.  
+Valid values are `overwrite` or `merge`\.   
+For `overwrite`, the new API definition replaces the existing one\. The existing API identifier remains unchanged\.  
+ For `merge`, the new API definition takes precedence, but any container types such as endpoint configurations and binary media types are merged with the existing API\. Use `merge` to define top\-level `RestApi` properties in addition to using OpenAPI\. Generally, it's preferred to use API Gateway's OpenAPI extensions to model these properties\.  
+If you don't specify this property, a default value is chosen\. For REST APIs created before March 29, 2021, the default is `overwrite`\. Otherwise, the default value is `merge`\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-apigateway-restapi-name"></a>
@@ -159,6 +179,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The root resource ID for a `RestApi` resource, such as `a0bc123d4e`\.
 
 ## Examples<a name="aws-resource-apigateway-restapi--examples"></a>
+
+
 
 ### Based on OpenAPI specification<a name="aws-resource-apigateway-restapi--examples--Based_on_OpenAPI_specification"></a>
 
@@ -388,3 +410,4 @@ Resources:
 
 ## See also<a name="aws-resource-apigateway-restapi--seealso"></a>
 + [restapi:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/restapi-create/) in the *Amazon API Gateway REST API Reference*
+

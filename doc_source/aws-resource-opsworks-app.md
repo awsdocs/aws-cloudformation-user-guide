@@ -187,3 +187,4 @@ myApp:
 ## See also<a name="aws-resource-opsworks-app--seealso"></a>
 +  [CreateApp](https://docs.aws.amazon.com/opsworks/latest/APIReference/API_CreateApp.html) in the *AWS OpsWorks API Reference*\.
 +  [Adding Apps](https://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-creating.html) in the *AWS OpsWorks User Guide*\.
+

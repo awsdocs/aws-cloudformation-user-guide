@@ -5,7 +5,7 @@
 **Note**  
 After you create a connector definition version that contains the connectors you want to deploy, you must add it to your group version\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)\.
 
-<a name="aws-properties-greengrass-connectordefinition-connectordefinitionversion-inheritance"></a> In an AWS CloudFormation template, `ConnectorDefinitionVersion` is the property type of the `InitialVersion` property in the [ `AWS::Greengrass::ConnectorDefinition` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html) resource\.
+<a name="aws-properties-greengrass-connectordefinition-connectordefinitionversion-inheritance"></a> In an AWS CloudFormation template, `ConnectorDefinitionVersion` is the property type of the `InitialVersion` property in the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html) resource\.
 
 ## Syntax<a name="aws-properties-greengrass-connectordefinition-connectordefinitionversion-syntax"></a>
 
@@ -35,5 +35,5 @@ The connectors in this version\. Only one instance of a given connector can be a
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See also<a name="aws-properties-greengrass-connectordefinition-connectordefinitionversion--seealso"></a>
-+  [ConnectorDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-connectordefinitionversion.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [ConnectorDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-connectordefinitionversion.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

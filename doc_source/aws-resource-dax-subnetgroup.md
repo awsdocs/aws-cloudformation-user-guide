@@ -77,7 +77,7 @@ The following example creates a DAX subnet group\.
 #### JSON<a name="aws-resource-dax-subnetgroup--examples--Create_Subnet_group--json"></a>
 
 ```
-  {
+{
   "AWSTemplateFormatVersion": "2010-09-09",
   "Description": "Create a DAX subnet group",
   "Resources": {

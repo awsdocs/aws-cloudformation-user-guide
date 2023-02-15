@@ -1,6 +1,6 @@
 # AWS::S3::Bucket Metrics<a name="aws-properties-s3-bucket-metrics"></a>
 
- A container specifying replication metrics\-related settings enabling metrics and Amazon S3 events for S3 Replication Time Control \(S3 RTC\)\. Must be specified together with a `ReplicationTime` block\. 
+ A container specifying replication metrics\-related settings enabling replication metrics and events\.
 
 ## Syntax<a name="aws-properties-s3-bucket-metrics-syntax"></a>
 
@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `EventThreshold`  <a name="cfn-s3-bucket-metrics-eventthreshold"></a>
  A container specifying the time threshold for emitting the `s3:Replication:OperationMissedThreshold` event\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: [ReplicationTimeValue](aws-properties-s3-bucket-replicationtimevalue.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -40,3 +40,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-s3-bucket-metrics--seealso"></a>
 + AWS::S3::Bucket [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+

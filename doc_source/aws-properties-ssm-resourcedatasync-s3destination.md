@@ -1,6 +1,6 @@
 # AWS::SSM::ResourceDataSync S3Destination<a name="aws-properties-ssm-resourcedatasync-s3destination"></a>
 
-Information about the target S3 bucket for the Resource Data Sync\.
+Information about the target S3 bucket for the resource data sync\.
 
 ## Syntax<a name="aws-properties-ssm-resourcedatasync-s3destination-syntax"></a>
 
@@ -47,7 +47,7 @@ An Amazon S3 prefix for the bucket\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BucketRegion`  <a name="cfn-ssm-resourcedatasync-s3destination-bucketregion"></a>
-The AWS Region with the S3 bucket targeted by the Resource Data Sync\.  
+The AWS Region with the S3 bucket targeted by the resource data sync\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

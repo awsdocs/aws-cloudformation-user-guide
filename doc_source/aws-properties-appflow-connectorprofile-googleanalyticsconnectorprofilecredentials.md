@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The credentials used to access protected Google Analytics resources\.   
 *Required*: No  
 *Type*: String  
-*Maximum*: `512`  
+*Maximum*: `2048`  
 *Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -48,7 +48,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClientSecret`  <a name="cfn-appflow-connectorprofile-googleanalyticsconnectorprofilecredentials-clientsecret"></a>
- The client secret used by the oauth client to authenticate to the authorization server\.   
+ The client secret used by the OAuth client to authenticate to the authorization server\.   
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `512`  
@@ -65,9 +65,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The credentials used to acquire new access tokens\. This is required only for OAuth2 access tokens, and is not required for OAuth1 access tokens\.   
 *Required*: No  
 *Type*: String  
-*Maximum*: `512`  
+*Maximum*: `1024`  
 *Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-appflow-connectorprofile-googleanalyticsconnectorprofilecredentials--seealso"></a>
 + [GoogleAnalyticsConnectorProfileCredentials](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_GoogleAnalyticsConnectorProfileCredentials.html) in the *Amazon AppFlow API Reference*\.
+
