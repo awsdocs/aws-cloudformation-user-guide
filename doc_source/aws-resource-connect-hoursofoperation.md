@@ -1,6 +1,6 @@
 # AWS::Connect::HoursOfOperation<a name="aws-resource-connect-hoursofoperation"></a>
 
-Creates hours of operation\. 
+Specifies hours of operation\.
 
 ## Syntax<a name="aws-resource-connect-hoursofoperation-syntax"></a>
 
@@ -69,7 +69,7 @@ The name for the hours of operation\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-connect-hoursofoperation-tags"></a>
-The tags used to organize, track, or control access for this resource\.  
+The tags used to organize, track, or control access for this resource\. For example, \{ "tags": \{"key1":"value1", "key2":"value2"\} \}\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -84,7 +84,7 @@ The time zone for the hours of operation\.
 
 ### Ref<a name="aws-resource-connect-hoursofoperation-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the hours of opreration\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the hours of operation\. For example:
 
 `{ "Ref": "myHoursOfOperation" }`
 

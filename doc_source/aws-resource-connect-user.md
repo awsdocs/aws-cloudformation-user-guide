@@ -1,6 +1,6 @@
 # AWS::Connect::User<a name="aws-resource-connect-user"></a>
 
-Creates a user account for the specified Amazon Connect instance\.
+Specifies a user account for an Amazon Connect instance\.
 
 For information about how to create user accounts using the Amazon Connect console, see [Add Users](https://docs.aws.amazon.com/connect/latest/adminguide/user-management.html) in the *Amazon Connect Administrator Guide*\.
 

@@ -1,6 +1,6 @@
 # AWS::Connect::UserHierarchyGroup<a name="aws-resource-connect-userhierarchygroup"></a>
 
-Creates a new user hierarchy group\.
+Specifies a new user hierarchy group\.
 
 ## Syntax<a name="aws-resource-connect-userhierarchygroup-syntax"></a>
 
