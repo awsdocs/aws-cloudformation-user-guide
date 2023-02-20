@@ -56,7 +56,7 @@ A description of the purpose of the API key\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-apigateway-apikey-enabled"></a>
-Indicates whether the API key can be used by clients\.  
+Indicates whether the API key can be used by clients\. The default value is *false*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
