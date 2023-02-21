@@ -1,6 +1,6 @@
 # AWS::Elasticsearch::Domain<a name="aws-resource-elasticsearch-domain"></a>
 
-The AWS::Elasticsearch::Domain resource creates an Amazon OpenSearch Service \(successor to Amazon Elasticsearch Service\) domain\.
+The AWS::Elasticsearch::Domain resource creates an Amazon OpenSearch Service domain\.
 
 **Important**  
 The `AWS::Elasticsearch::Domain` resource is being replaced by the [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html) resource\. While the legacy Elasticsearch resource and options are still supported, we recommend modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which supports both OpenSearch and legacy Elasticsearch\. For instructions to upgrade domains defined within CloudFormation from Elasticsearch to OpenSearch, see [Remarks](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#aws-resource-opensearchservice-domain--remarks)\.
@@ -86,7 +86,7 @@ Additional options to specify for the OpenSearch Service domain\. For more infor
 Specifies options for fine\-grained access control\.   
 *Required*: No  
 *Type*: [AdvancedSecurityOptionsInput](aws-properties-elasticsearch-domain-advancedsecurityoptionsinput.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `CognitoOptions`  <a name="cfn-elasticsearch-domain-cognitooptions"></a>
 Configures OpenSearch Service to use Amazon Cognito authentication for OpenSearch Dashboards\.  
@@ -103,7 +103,7 @@ Specifies additional options for the domain endpoint, such as whether to require
 `DomainName`  <a name="cfn-elasticsearch-domain-domainname"></a>
 A name for the OpenSearch Service domain\. For valid values, see the [DomainName](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/configuration-api.html#configuration-api-datatypes-domainname) data type in the *Amazon OpenSearch Service Developer Guide*\. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the domain name\. For more information, see [Name Type](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-name.html)\.  
 If you specify a name, you cannot perform updates that require replacement of this resource\. You can perform updates that require no or some interruption\. If you must replace the resource, specify a new name\.
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

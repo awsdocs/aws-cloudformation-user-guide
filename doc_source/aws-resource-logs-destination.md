@@ -44,7 +44,7 @@ The name of the destination\.
 
 `DestinationPolicy`  <a name="cfn-logs-destination-destinationpolicy"></a>
 An IAM policy document that governs which AWS accounts can create subscription filters against this destination\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -88,7 +88,7 @@ The ARN of the CloudWatch Logs destination, such as `arn:aws:logs:us-west-1:1234
 
 ### Create a Destination<a name="aws-resource-logs-destination--examples--Create_a_Destination"></a>
 
-In the following example, the target stream \(`TestStream`\) can receive log events from the `logger` IAM user that is in the account `234567890123`\. The user can call only the `PutSubscriptionFilter` action against the `TestDestination` destination\.
+In the following example, the target stream \(`TestStream`\) can receive log events from CloudWatch Logs\. CloudWatch Logs can use only the `PutSubscriptionFilter` action against the `TestDestination` destination\.
 
 #### JSON<a name="aws-resource-logs-destination--examples--Create_a_Destination--json"></a>
 
@@ -99,8 +99,7 @@ In the following example, the target stream \(`TestStream`\) can receive log eve
     "DestinationName": "TestDestination",
     "RoleArn": "arn:aws:iam::123456789012:role/LogKinesisRole",
     "TargetArn": "arn:aws:kinesis:us-east-1:123456789012:stream/TestStream",
-    "DestinationPolicy": "{\"Version\" : \"2012-10-17\",\"Statement\" : [{\"Effect\" : \"Allow\", \"Principal\" : {\"AWS\" : \"arn:aws:iam::234567890123:user/logger\"},
-\"Action\" : \"logs:PutSubscriptionFilter\", \"Resource\" : \"arn:aws:logs:us-east-1:123456789012:destination:TestDestination\"}]}"
+    "DestinationPolicy": "{ \"Version\": \"2012-10-17\", \"Statement\": [{ \"Effect\": \"Allow\", \"Principal\": { \"AWS\": \"logs.amazonaws.com\"}, \"Action\": \"logs:PutSubscriptionFilter\",\"Resource\": \"arn:aws:logs:us-east-1:123456789012:destination:TestDestination\"}]}"
   }
 }
 ```
@@ -115,5 +114,5 @@ DestinationWithName:
     RoleArn: "arn:aws:iam::123456789012:role/LogKinesisRole"
     TargetArn: "arn:aws:kinesis:us-east-1:123456789012:stream/TestStream"
     DestinationPolicy: >
-      {"Version" : "2012-10-17","Statement" : [{"Effect" : "Allow", "Principal" : {"AWS" : "arn:aws:iam::234567890123:user/logger"},"Action" : "logs:PutSubscriptionFilter", "Resource" : "arn:aws:logs:us-east-1:123456789012:destination:TestDestination"}]}
+      {"Version" : "2012-10-17","Statement" : [{"Effect" : "Allow", "Principal" : {"AWS" : "logs.amazonaws.com"}, "Action" : "logs:PutSubscriptionFilter", "Resource" : "arn:aws:logs:us-east-1:123456789012:destination:TestDestination"}]}
 ```

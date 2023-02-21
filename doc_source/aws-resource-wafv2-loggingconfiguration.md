@@ -7,7 +7,11 @@ You can define one logging destination per web ACL\.
 
 You can access information about the traffic that AWS WAF inspects using the following steps:
 
-1. Create your logging destination\. You can use an Amazon CloudWatch Logs log group, an Amazon Simple Storage Service \(Amazon S3\) bucket, or an Amazon Kinesis Data Firehose\. For information about configuring logging destinations and the permissions that are required for each, see [Logging web ACL traffic information](https://docs.aws.amazon.com/waf/latest/developerguide/logging.html) in the * AWS WAF Developer Guide*\.
+1. Create your logging destination\. You can use an Amazon CloudWatch Logs log group, an Amazon Simple Storage Service \(Amazon S3\) bucket, or an Amazon Kinesis Data Firehose\. 
+
+   The name that you give the destination must start with `aws-waf-logs-`\. Depending on the type of destination, you might need to configure additional settings or permissions\. 
+
+   For configuration requirements and pricing information for each destination type, see [Logging web ACL traffic](https://docs.aws.amazon.com/waf/latest/developerguide/logging.html) in the * AWS WAF Developer Guide*\.
 
 1. Associate your logging destination to your web ACL using a `PutLoggingConfiguration` request\.
 
@@ -26,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::WAFv2::LoggingConfiguration",
   "Properties" : {
       "[LogDestinationConfigs](#cfn-wafv2-loggingconfiguration-logdestinationconfigs)" : [ String, ... ],
-      "[LoggingFilter](#cfn-wafv2-loggingconfiguration-loggingfilter)" : Json,
+      "[LoggingFilter](#cfn-wafv2-loggingconfiguration-loggingfilter)" : LoggingFilter,
       "[RedactedFields](#cfn-wafv2-loggingconfiguration-redactedfields)" : [ FieldToMatch, ... ],
       "[ResourceArn](#cfn-wafv2-loggingconfiguration-resourcearn)" : String
     }
@@ -40,7 +44,8 @@ Type: AWS::WAFv2::LoggingConfiguration
 Properties: 
   [LogDestinationConfigs](#cfn-wafv2-loggingconfiguration-logdestinationconfigs): 
     - String
-  [LoggingFilter](#cfn-wafv2-loggingconfiguration-loggingfilter): Json
+  [LoggingFilter](#cfn-wafv2-loggingconfiguration-loggingfilter): 
+    LoggingFilter
   [RedactedFields](#cfn-wafv2-loggingconfiguration-redactedfields): 
     - FieldToMatch
   [ResourceArn](#cfn-wafv2-loggingconfiguration-resourcearn): String
@@ -51,7 +56,6 @@ Properties:
 `LogDestinationConfigs`  <a name="cfn-wafv2-loggingconfiguration-logdestinationconfigs"></a>
 The logging destination configuration that you want to associate with the web ACL\.  
 You can associate one logging destination to a web ACL\.
-If logging destination target is a CloudWatch Log Group, it is required that the reference Log Group's name begin with the prefix 'aws-waf-logs-'\.
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `100`  
@@ -60,7 +64,7 @@ If logging destination target is a CloudWatch Log Group, it is required that the
 `LoggingFilter`  <a name="cfn-wafv2-loggingconfiguration-loggingfilter"></a>
 Filtering that specifies which web requests are kept in the logs and which are dropped\. You can filter on the rule action and on the web request labels that were applied by matching rules during web ACL evaluation\.   
 *Required*: No  
-*Type*: Json  
+*Type*: [LoggingFilter](aws-properties-wafv2-loggingconfiguration-loggingfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RedactedFields`  <a name="cfn-wafv2-loggingconfiguration-redactedfields"></a>

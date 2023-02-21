@@ -74,7 +74,7 @@ The fully qualified name for the directory, such as `corp.example.com`\.
 `Password`  <a name="cfn-directoryservice-simplead-password"></a>
 The password for the directory administrator\. The directory creation process creates a directory administrator account with the user name `Administrator` and this password\.  
 If you need to change the password for the administrator account, see the [ResetUserPassword](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_ResetUserPassword.html) API call in the *AWS Directory Service API Reference*\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Pattern*: `(?=^.{8,64}$)((?=.*\d)(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[^A-Za-z0-9\s])(?=.*[a-z])|(?=.*[^A-Za-z0-9\s])(?=.*[A-Z])(?=.*[a-z])|(?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9\s]))^.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -121,6 +121,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Alias`  <a name="Alias-fn::getatt"></a>
 The alias for a directory\. For example: `d-12373a053a` or `alias4-mydirectory-12345abcgmzsk` \(if you have the `CreateAlias` property set to true\)\.
+
+`DirectoryId`  <a name="DirectoryId-fn::getatt"></a>
+Property description not available\.
 
 `DnsIpAddresses`  <a name="DnsIpAddresses-fn::getatt"></a>
 The IP addresses of the DNS servers for the directory, such as `[ "172.31.3.154", "172.31.63.203" ]`\.

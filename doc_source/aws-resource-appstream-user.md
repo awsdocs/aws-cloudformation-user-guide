@@ -39,7 +39,7 @@ Properties:
 The authentication type for the user\. You must specify USERPOOL\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `API | SAML | USERPOOL`  
+*Allowed values*: `API | AWS_AD | SAML | USERPOOL`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FirstName`  <a name="cfn-appstream-user-firstname"></a>

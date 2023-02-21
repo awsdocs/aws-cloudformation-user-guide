@@ -112,7 +112,7 @@ The settings for delivering connector logs to Amazon CloudWatch Logs\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Plugins`  <a name="cfn-kafkaconnect-connector-plugins"></a>
-Specifies which plugins were used for this connector\.  
+Specifies which plugin to use for the connector\. You must specify a single\-element list\. Amazon MSK Connect does not currently support specifying multiple plugins\.  
 *Required*: Yes  
 *Type*: List of [Plugin](aws-properties-kafkaconnect-connector-plugin.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

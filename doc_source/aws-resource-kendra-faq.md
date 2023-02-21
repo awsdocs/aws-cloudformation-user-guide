@@ -1,6 +1,6 @@
 # AWS::Kendra::Faq<a name="aws-resource-kendra-faq"></a>
 
-Specifies an new set of frequently asked question \(FAQ\) questions and answers\.
+Creates an new set of frequently asked question \(FAQ\) questions and answers\.
 
 ## Syntax<a name="aws-resource-kendra-faq-syntax"></a>
 
@@ -42,7 +42,7 @@ Properties:
 ## Properties<a name="aws-resource-kendra-faq-properties"></a>
 
 `Description`  <a name="cfn-kendra-faq-description"></a>
-A description of the FAQ\.  
+A description for the FAQ\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -124,3 +124,79 @@ Resources:
           StackNames:
           - "*"
 ```
+
+### Monitor DevOps Guru resources using tags<a name="aws-resource-devopsguru-resourcecollection--examples--Monitor_DevOps_Guru_resources_using_tags"></a>
+
+#### JSON<a name="aws-resource-devopsguru-resourcecollection--examples--Monitor_DevOps_Guru_resources_using_tags--json"></a>
+
+```
+{
+"DevOpsGuruResourceCollection": {
+  "Type": "AWS::DevOpsGuru::ResourceCollection",
+  "Condition": "DevOpsGuruEnable",
+  "Properties": {
+    "ResourceCollectionFilter": {
+      "Tags": [{
+        "AppBoundaryKey": "devops-guru-workshop",
+        "TagValues": [
+          "devops-guru-serverless",
+          "devops-guru-aurora"
+          ]
+        }]
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-devopsguru-resourcecollection--examples--Monitor_DevOps_Guru_resources_using_tags--yaml"></a>
+
+```
+DevOpsGuruResourceCollection:
+    Type: AWS::DevOpsGuru::ResourceCollection
+    Condition: DevOpsGuruEnable
+    Properties:
+      ResourceCollectionFilter:
+        Tags:
+          - AppBoundaryKey: devops-guru-workshop
+            TagValues:
+              - devops-guru-serverless
+	      - devops-guru-aurora
+```
+
+#### JSON<a name="aws-resource-devopsguru-resourcecollection--examples--Monitor_DevOps_Guru_resources_using_tags--json"></a>
+
+```
+{
+ "DevOpsGuruResourceCollection": {
+    "Type": "AWS::DevOpsGuru::ResourceCollection",
+    "Condition": "DevOpsGuruEnable",
+    "Properties": {
+      "ResourceCollectionFilter": {
+        "Tags": [
+          {
+            "AppBoundaryKey": "devops-guru-workshop",
+            "TagValues": [
+              "*"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-devopsguru-resourcecollection--examples--Monitor_DevOps_Guru_resources_using_tags--yaml"></a>
+
+```
+DevOpsGuruResourceCollection:
+    Type: AWS::DevOpsGuru::ResourceCollection
+    Condition: DevOpsGuruEnable
+    Properties:
+      ResourceCollectionFilter:
+        Tags:
+          - AppBoundaryKey: devops-guru-workshop
+            TagValues:
+              - "*"
+```

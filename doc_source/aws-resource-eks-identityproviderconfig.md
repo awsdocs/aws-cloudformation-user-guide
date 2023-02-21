@@ -52,7 +52,7 @@ The name of the configuration\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Oidc`  <a name="cfn-eks-identityproviderconfig-oidc"></a>
-An object that represents an OpenID Connect \(OIDC\) identity provider configuration\.  
+An object representing an OpenID Connect \(OIDC\) identity provider configuration\.  
 *Required*: No  
 *Type*: [OidcIdentityProviderConfig](aws-properties-eks-identityproviderconfig-oidcidentityproviderconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -35,6 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DestinationRegion](#cfn-redshift-cluster-destinationregion)" : String,
       "[ElasticIp](#cfn-redshift-cluster-elasticip)" : String,
       "[Encrypted](#cfn-redshift-cluster-encrypted)" : Boolean,
+      "[Endpoint](#cfn-redshift-cluster-endpoint)" : Endpoint,
       "[EnhancedVpcRouting](#cfn-redshift-cluster-enhancedvpcrouting)" : Boolean,
       "[HsmClientCertificateIdentifier](#cfn-redshift-cluster-hsmclientcertificateidentifier)" : String,
       "[HsmConfigurationIdentifier](#cfn-redshift-cluster-hsmconfigurationidentifier)" : String,
@@ -92,6 +93,8 @@ Properties:
   [DestinationRegion](#cfn-redshift-cluster-destinationregion): String
   [ElasticIp](#cfn-redshift-cluster-elasticip): String
   [Encrypted](#cfn-redshift-cluster-encrypted): Boolean
+  [Endpoint](#cfn-redshift-cluster-endpoint): 
+    Endpoint
   [EnhancedVpcRouting](#cfn-redshift-cluster-enhancedvpcrouting): Boolean
   [HsmClientCertificateIdentifier](#cfn-redshift-cluster-hsmclientcertificateidentifier): String
   [HsmConfigurationIdentifier](#cfn-redshift-cluster-hsmconfigurationidentifier): String
@@ -135,10 +138,7 @@ Default: `true`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AquaConfigurationStatus`  <a name="cfn-redshift-cluster-aquaconfigurationstatus"></a>
-The value represents how the cluster is configured to use AQUA \(Advanced Query Accelerator\) when it is created\. Possible values include the following\.  
-+ enabled \- Use AQUA if it is available for the current AWS Region and Amazon Redshift node type\.
-+ disabled \- Don't use AQUA\. 
-+ auto \- Amazon Redshift determines whether to use AQUA\.
+This parameter is retired\. It does not set the AQUA configuration status\. Amazon Redshift automatically determines whether to use AQUA \(Advanced Query Accelerator\)\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `auto | disabled | enabled`  
@@ -257,25 +257,25 @@ Constraints:
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DeferMaintenance`  <a name="cfn-redshift-cluster-defermaintenance"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeferMaintenanceDuration`  <a name="cfn-redshift-cluster-defermaintenanceduration"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeferMaintenanceEndTime`  <a name="cfn-redshift-cluster-defermaintenanceendtime"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeferMaintenanceStartTime`  <a name="cfn-redshift-cluster-defermaintenancestarttime"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -289,7 +289,7 @@ The destination region that snapshots are automatically copied to when cross\-re
 
 `ElasticIp`  <a name="cfn-redshift-cluster-elasticip"></a>
 The Elastic IP \(EIP\) address for the cluster\.  
-Constraints: The cluster must be provisioned in EC2\-VPC and publicly\-accessible through an Internet gateway\. For more information about provisioning clusters in EC2\-VPC, go to [Supported Platforms to Launch Your Cluster](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#cluster-platforms) in the Amazon Redshift Cluster Management Guide\.  
+Constraints: The cluster must be provisioned in EC2\-VPC and publicly\-accessible through an Internet gateway\. Don't specify the Elastic IP address for a publicly accessible cluster with availability zone relocation turned on\. For more information about provisioning clusters in EC2\-VPC, go to [Supported Platforms to Launch Your Cluster](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#cluster-platforms) in the Amazon Redshift Cluster Management Guide\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `2147483647`  
@@ -300,6 +300,12 @@ If `true`, the data in the cluster is encrypted at rest\.
 Default: false  
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Endpoint`  <a name="cfn-redshift-cluster-endpoint"></a>
+The connection endpoint\.  
+*Required*: No  
+*Type*: [Endpoint](aws-properties-redshift-cluster-endpoint.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnhancedVpcRouting`  <a name="cfn-redshift-cluster-enhancedvpcrouting"></a>
@@ -361,8 +367,10 @@ The value must be either \-1 or an integer between 1 and 3,653\.
 `MasterUsername`  <a name="cfn-redshift-cluster-masterusername"></a>
 The user name associated with the admin user account for the cluster that is being created\.  
 Constraints:  
-+ Must be 1 \- 128 alphanumeric characters\. The user name can't be `PUBLIC`\.
-+ First character must be a letter\.
++ Must be 1 \- 128 alphanumeric characters or hyphens\. The user name can't be `PUBLIC`\.
++ Must contain only lowercase letters, numbers, underscore, plus sign, period \(dot\), at symbol \(@\), or hyphen\.
++ The first character must be a letter\.
++ Must not contain a colon \(:\) or a slash \(/\)\.
 + Cannot be a reserved word\. A list of reserved words can be found in [Reserved Words](https://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html) in the Amazon Redshift Database Developer Guide\. 
 *Required*: Yes  
 *Type*: String  
@@ -376,7 +384,7 @@ Constraints:
 + Must contain at least one uppercase letter\.
 + Must contain at least one lowercase letter\.
 + Must contain one number\.
-+ Can be any printable ASCII character \(ASCII code 33\-126\) except ' \(single quote\), " \(double quote\), \\, /, or @\.
++ Can be any printable ASCII character \(ASCII code 33\-126\) except `'` \(single quote\), `"` \(double quote\), `\`, `/`, or `@`\.
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `2147483647`  
@@ -434,19 +442,19 @@ If `true`, the cluster can be accessed from a public network\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceAction`  <a name="cfn-redshift-cluster-resourceaction"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RevisionTarget`  <a name="cfn-redshift-cluster-revisiontarget"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RotateEncryptionKey`  <a name="cfn-redshift-cluster-rotateencryptionkey"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -466,19 +474,25 @@ The name of the snapshot copy grant\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnapshotCopyManual`  <a name="cfn-redshift-cluster-snapshotcopymanual"></a>
-Not currently supported by AWS CloudFormation\.  
+Indicates whether to apply the snapshot retention period to newly copied manual snapshots instead of automated snapshots\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnapshotCopyRetentionPeriod`  <a name="cfn-redshift-cluster-snapshotcopyretentionperiod"></a>
-Not currently supported by AWS CloudFormation\.  
+The number of days to retain automated snapshots in the destination AWS Region after they are copied from the source AWS Region\.  
+By default, this only changes the retention period of copied automated snapshots\.   
+If you decrease the retention period for automated snapshots that are copied to a destination AWS Region, Amazon Redshift deletes any existing automated snapshots that were copied to the destination AWS Region and that fall outside of the new retention period\.  
+Constraints: Must be at least 1 and no more than 35 for automated snapshots\.   
+If you specify the `manual` option, only newly copied manual snapshots will have the new retention period\.   
+If you specify the value of \-1 newly copied manual snapshots are retained indefinitely\.  
+Constraints: The number of days must be either \-1 or an integer between 1 and 3,653 for manual snapshots\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnapshotIdentifier`  <a name="cfn-redshift-cluster-snapshotidentifier"></a>
-The name of the snapshot from which to create the new cluster\. This parameter isn't case sensitive\.  
+The name of the snapshot from which to create the new cluster\. This parameter isn't case sensitive\. You must specify this parameter or `snapshotArn`, but not both\.  
 Example: `my-snapshot-id`   
 *Required*: No  
 *Type*: String  
@@ -519,7 +533,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-redshift-cluster-return-values-fn--getatt-fn--getatt"></a>
 
 `DeferMaintenanceIdentifier`  <a name="DeferMaintenanceIdentifier-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.
 
 `Endpoint.Address`  <a name="Endpoint.Address-fn::getatt"></a>
 The connection endpoint for the Amazon Redshift cluster\. For example: `examplecluster.cg034hpkmmjt.us-east-1.redshift.amazonaws.com`\.
@@ -542,10 +556,11 @@ The following example describes a single\-node Redshift cluster\. The master use
 #### JSON<a name="aws-resource-redshift-cluster--examples--Single-Node_Cluster--json"></a>
 
 ```
+{
 "myCluster": {
   "Type": "AWS::Redshift::Cluster",
   "Properties": {
-    "DBName": "mydb", 
+    "DBName": "mydb",
     "MasterUsername": "master",
     "MasterUserPassword": { "Ref" : "MasterUserPassword" },
     "NodeType": "ds2.xlarge",
@@ -562,12 +577,12 @@ The following example describes a single\-node Redshift cluster\. The master use
 #### YAML<a name="aws-resource-redshift-cluster--examples--Single-Node_Cluster--yaml"></a>
 
 ```
-myCluster: 
+myCluster:
   Type: "AWS::Redshift::Cluster"
   Properties:
     DBName: "mydb"
     MasterUsername: "master"
-    MasterUserPassword: 
+    MasterUserPassword:
       Ref: "MasterUserPassword"
     NodeType: "ds2.xlarge"
     ClusterType: "single-node"

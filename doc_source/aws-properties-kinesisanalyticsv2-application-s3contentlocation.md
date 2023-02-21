@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `BucketARN`  <a name="cfn-kinesisanalyticsv2-application-s3contentlocation-bucketarn"></a>
 The Amazon Resource Name \(ARN\) for the S3 bucket containing the application code\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
@@ -37,7 +37,7 @@ The Amazon Resource Name \(ARN\) for the S3 bucket containing the application co
 
 `FileKey`  <a name="cfn-kinesisanalyticsv2-application-s3contentlocation-filekey"></a>
 The file key for the object containing the application code\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  

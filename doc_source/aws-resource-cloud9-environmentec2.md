@@ -51,6 +51,7 @@ Properties:
 The number of minutes until the running instance is shut down after the environment was last used\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
 *Maximum*: `20160`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

@@ -1,4 +1,4 @@
-# AWS::IAM::Role Policy<a name="aws-properties-iam-policy"></a>
+# AWS::IAM::User Policy<a name="aws-properties-iam-policy"></a>
 
 Contains information about an attached policy\.
 
@@ -29,12 +29,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iam-policy-properties"></a>
 
 `PolicyDocument`  <a name="cfn-iam-policies-policydocument"></a>
-The policy document\.  
+The entire contents of the policy that defines permissions\. For more information, see [Overview of JSON policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html#access_policies-json)\.  
 *Required*: Yes  
 *Type*: Json  
-*Minimum*: `1`  
-*Maximum*: `131072`  
-*Pattern*: `[\u0009\u000A\u000D\u0020-\u00FF]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyName`  <a name="cfn-iam-policies-policyname"></a>
@@ -45,6 +42,49 @@ The friendly name \(not ARN\) identifying the policy\.
 *Maximum*: `128`  
 *Pattern*: `[\w+=,.@-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-iam-policy--examples"></a>
+
+### IAM User Policy<a name="aws-properties-iam-policy--examples--IAM_User_Policy"></a>
+
+This example shows how the policy document is declared\.
+
+#### JSON<a name="aws-properties-iam-policy--examples--IAM_User_Policy--json"></a>
+
+```
+{
+    "PolicyName": "root",
+    "PolicyDocument": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "IamListAccess",
+                "Effect": "Allow",
+                "Action": [
+                    "iam:ListRoles",
+                    "iam:ListUsers"
+                ],
+                "Resource": "*"
+            }
+        ]
+    }
+}
+```
+
+#### YAML<a name="aws-properties-iam-policy--examples--IAM_User_Policy--yaml"></a>
+
+```
+PolicyName: root
+PolicyDocument:
+   Version: 2012-10-17
+   Statement:
+      - Sid: IamListAccess
+        Effect: Allow
+        Action:
+         - 'iam:ListRoles'
+         - 'iam:ListUsers'
+        Resource: '*'
+```
 
 ## See also<a name="aws-properties-iam-policy--seealso"></a>
 +  [PolicyDetail](https://docs.aws.amazon.com/IAM/latest/APIReference/API_PolicyDetail.html) in the *AWS Identity and Access Management API Reference* 

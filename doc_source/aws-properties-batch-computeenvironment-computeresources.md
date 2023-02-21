@@ -90,6 +90,8 @@ This parameter isn't applicable to jobs that are running on Fargate resources\. 
 The desired number of Amazon EC2 vCPUS in the compute environment\. AWS Batch modifies this value between the minimum and maximum values based on job queue demand\.  
 This parameter isn't applicable to jobs that are running on Fargate resources\. Don't specify it\.
  AWS Batch doesn't support changing the desired number of vCPUs of an existing compute environment\. Don't specify this parameter for compute environments using Amazon EKS clusters\.
+When you update the `desiredvCpus` setting, the value must be between the `minvCpus` and `maxvCpus` values\.   
+Additionally, the updated `desiredvCpus` value must be greater than or equal to the current `desiredvCpus` value\. For more information, see [test](https://docs.aws.amazon.com/batch/latest/userguide/error-desired-vcpus-update.html) in the * AWS Batch User Guide*\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

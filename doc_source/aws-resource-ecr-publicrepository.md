@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ECR::PublicRepository",
   "Properties" : {
-      "[RepositoryCatalogData](#cfn-ecr-publicrepository-repositorycatalogdata)" : Json,
+      "[RepositoryCatalogData](#cfn-ecr-publicrepository-repositorycatalogdata)" : RepositoryCatalogData,
       "[RepositoryName](#cfn-ecr-publicrepository-repositoryname)" : String,
       "[RepositoryPolicyText](#cfn-ecr-publicrepository-repositorypolicytext)" : Json,
       "[Tags](#cfn-ecr-publicrepository-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -25,7 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ECR::PublicRepository
 Properties: 
-  [RepositoryCatalogData](#cfn-ecr-publicrepository-repositorycatalogdata): Json
+  [RepositoryCatalogData](#cfn-ecr-publicrepository-repositorycatalogdata): 
+    RepositoryCatalogData
   [RepositoryName](#cfn-ecr-publicrepository-repositoryname): String
   [RepositoryPolicyText](#cfn-ecr-publicrepository-repositorypolicytext): Json
   [Tags](#cfn-ecr-publicrepository-tags): 
@@ -37,7 +38,7 @@ Properties:
 `RepositoryCatalogData`  <a name="cfn-ecr-publicrepository-repositorycatalogdata"></a>
 The details about the repository that are publicly visible in the Amazon ECR Public Gallery\. For more information, see [Amazon ECR Public repository catalog data](https://docs.aws.amazon.com/AmazonECR/latest/public/public-repository-catalog-data.html) in the *Amazon ECR Public User Guide*\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [RepositoryCatalogData](aws-properties-ecr-publicrepository-repositorycatalogdata.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RepositoryName`  <a name="cfn-ecr-publicrepository-repositoryname"></a>

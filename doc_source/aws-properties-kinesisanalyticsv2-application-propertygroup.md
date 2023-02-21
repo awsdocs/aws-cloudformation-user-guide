@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[PropertyGroupId](#cfn-kinesisanalyticsv2-application-propertygroup-propertygroupid)" : String,
-  "[PropertyMap](#cfn-kinesisanalyticsv2-application-propertygroup-propertymap)" : Json
+  "[PropertyMap](#cfn-kinesisanalyticsv2-application-propertygroup-propertymap)" : {Key : Value, ...}
 }
 ```
 
@@ -19,7 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [PropertyGroupId](#cfn-kinesisanalyticsv2-application-propertygroup-propertygroupid): String
-  [PropertyMap](#cfn-kinesisanalyticsv2-application-propertygroup-propertymap): Json
+  [PropertyMap](#cfn-kinesisanalyticsv2-application-propertygroup-propertymap): 
+    Key : Value
 ```
 
 ## Properties<a name="aws-properties-kinesisanalyticsv2-application-propertygroup-properties"></a>
@@ -36,7 +37,7 @@ Describes the key of an application execution property key\-value pair\.
 `PropertyMap`  <a name="cfn-kinesisanalyticsv2-application-propertygroup-propertymap"></a>
 Describes the value of an application execution property key\-value pair\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-propertygroup--seealso"></a>

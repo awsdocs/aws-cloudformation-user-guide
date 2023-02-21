@@ -33,11 +33,11 @@ The Amazon Resource Name \(ARN\) of the CloudWatch Logs log group or Kinesis Dat
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Format`  <a name="cfn-apigateway-deployment-accesslogsetting-format"></a>
-A single line format of the access logs of data, as specified by selected [$context variables](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html#context-variable-reference)\. The format must include at least `$context.requestId`\.  
+A single line format of the access logs of data, as specified by selected $context variables\. The format must include at least `$context.requestId`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-apigateway-deployment-accesslogsetting--seealso"></a>
-+ [accessLogSettings](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/#accessLogSettings) in the *Amazon API Gateway REST API Reference*
++ [accessLogSettings](https://docs.aws.amazon.com/apigateway/latest/api/API_Stage.html#accessLogSettings) in the *Amazon API Gateway REST API Reference*
 

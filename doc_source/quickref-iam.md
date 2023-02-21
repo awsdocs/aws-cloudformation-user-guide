@@ -140,7 +140,7 @@ This snippet shows an `[AWS::IAM::AccessKey](https://docs.aws.amazon.com/AWSClou
 
 ### <a name="quickref-iam-access-key-2"></a>
 
-You can get the secret key for an `AWS::IAM::AccessKey` resource using the `Fn::GetAtt` function\. The only time that you can get the secret key for an AWS access key is when it is created\. One way to retrieve the secret key is to put it into an `Output` value\. You can get the access key using the `Ref` function\. The following `Output` value declarations get the access key and secret key for `myaccesskey`\.
+You can get the secret key for an `AWS::IAM::AccessKey` resource using the `Fn::GetAtt` function\. One way to retrieve the secret key is to put it into an `Output` value\. You can get the access key using the `Ref` function\. The following `Output` value declarations get the access key and secret key for `myaccesskey`\.
 
 #### JSON<a name="quickref-iam-example-3.json"></a>
 

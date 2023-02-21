@@ -33,7 +33,7 @@ Indicates the purpose of the certificate and of the key contained in the certifi
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubjectInformationAccess`  <a name="cfn-acmpca-certificateauthority-csrextensions-subjectinformationaccess"></a>
-For CA certificates, provides a path to additional information pertaining to the CA, such as revocation and policy\. For more information, see [Subject Information Access](https://tools.ietf.org/html/rfc5280#section-4.2.2.2) in RFC 5280\.  
+For CA certificates, provides a path to additional information pertaining to the CA, such as revocation and policy\. For more information, see [Subject Information Access](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.2) in RFC 5280\.  
 *Required*: No  
 *Type*: List of [AccessDescription](aws-properties-acmpca-certificateauthority-accessdescription.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

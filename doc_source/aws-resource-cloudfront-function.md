@@ -23,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AutoPublish](#cfn-cloudfront-function-autopublish)" : Boolean,
       "[FunctionCode](#cfn-cloudfront-function-functioncode)" : String,
       "[FunctionConfig](#cfn-cloudfront-function-functionconfig)" : FunctionConfig,
+      "[FunctionMetadata](#cfn-cloudfront-function-functionmetadata)" : FunctionMetadata,
       "[Name](#cfn-cloudfront-function-name)" : String
     }
 }
@@ -37,6 +38,8 @@ Properties:
   [FunctionCode](#cfn-cloudfront-function-functioncode): String
   [FunctionConfig](#cfn-cloudfront-function-functionconfig): 
     FunctionConfig
+  [FunctionMetadata](#cfn-cloudfront-function-functionmetadata): 
+    FunctionMetadata
   [Name](#cfn-cloudfront-function-name): String
 ```
 
@@ -60,6 +63,12 @@ Contains configuration information about a CloudFront function\.
 *Type*: [FunctionConfig](aws-properties-cloudfront-function-functionconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`FunctionMetadata`  <a name="cfn-cloudfront-function-functionmetadata"></a>
+Contains metadata about a CloudFront function\.  
+*Required*: No  
+*Type*: [FunctionMetadata](aws-properties-cloudfront-function-functionmetadata.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Name`  <a name="cfn-cloudfront-function-name"></a>
 A name to identify the function\.  
 *Required*: Yes  
@@ -67,9 +76,7 @@ A name to identify the function\.
 *Minimum*: `1`  
 *Maximum*: `64`  
 *Pattern*: `^[a-zA-Z0-9-_]{1,64}$`  
-
-**Important**
-You can't perform an update on an existing Function's Name\. If you must update the name, specify a new LogicalID for this resource\.
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-cloudfront-function-return-values"></a>
 
@@ -84,4 +91,4 @@ To get the function ARN, use the following syntax:
 `!GetAtt Function_Logical_ID.FunctionMetadata.FunctionARN`
 
 `FunctionMetadata.FunctionARN`  <a name="FunctionMetadata.FunctionARN-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The Amazon Resource Name \(ARN\) of the function\. The ARN uniquely identifies the function\.

@@ -2,7 +2,7 @@
 
  `PredictiveScalingConfiguration` is a property of the [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html) resource that specifies a predictive scaling policy for Amazon EC2 Auto Scaling\. 
 
-For more information, see [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutScalingPolicy.html) in the *Amazon EC2 Auto Scaling API Reference* and [Predictive scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-predictive-scaling.html) in the *Amazon EC2 Auto Scaling User Guide*\. 
+For more information, see [Predictive scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-predictive-scaling.html) in the *Amazon EC2 Auto Scaling User Guide*\. 
 
 ## Syntax<a name="aws-properties-autoscaling-scalingpolicy-predictivescalingconfiguration-syntax"></a>
 
@@ -54,8 +54,8 @@ Required if the `MaxCapacityBreachBehavior` property is set to `IncreaseMaxCapac
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricSpecifications`  <a name="cfn-autoscaling-scalingpolicy-predictivescalingconfiguration-metricspecifications"></a>
-An array that contains information about the metrics and target utilization to use for predictive scaling\.   
-Adding more than one predictive scaling metric specification to the array is currently not supported\.
+This structure includes the metrics and target utilization to use for predictive scaling\.   
+This is an array, but we currently only support a single metric specification\. That is, you can specify a target value and a single metric pair, or a target value and one scaling metric and one load metric\.  
 *Required*: Yes  
 *Type*: List of [PredictiveScalingMetricSpecification](aws-properties-autoscaling-scalingpolicy-predictivescalingmetricspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

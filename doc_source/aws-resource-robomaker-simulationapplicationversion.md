@@ -87,24 +87,12 @@ The following example creates a simulation application version\.
       "Type": "AWS::RoboMaker::SimulationApplication",
       "Properties": {
         "Name": "MySimulationApplication",
-        "Sources": [
-          {
-            "S3Bucket": "my-bucket",
-            "S3Key": "my_simulation_bundle_x86.tar.gz",
-            "Architecture": "X86_64"
-          }
-        ],
+        "Environment": "111122223333.dkr.ecr.us-west-2.amazonaws.com/my-sim-app:latest",
         "RobotSoftwareSuite": {
-          "Name": "ROS",
-          "Version": "Kinetic"
+          "Name": "General"
         },
         "SimulationSoftwareSuite": {
-          "Name": "Gazebo",
-          "Version": "7"
-        },
-        "RenderingEngine": {
-          "Name": "OGRE",
-          "Version": "1.x"
+          "Name": "SimulationRuntime"
         }
       }
     },
@@ -138,19 +126,11 @@ Resources:
     Type: "AWS::RoboMaker::SimulationApplication"
     Properties:
       Name: "MySimulationApplication"
-      Sources:
-        - S3Bucket: "my-bucket"
-          S3Key: "my_simulation_bundle_x86.tar.gz"
-          Architecture: "X86_64"
+      Environment: "111122223333.dkr.ecr.us-west-2.amazonaws.com/my-sim-app:latest"
       RobotSoftwareSuite:
-        Name: "ROS"
-        Version: "Kinetic"
+        Name: "General"
       SimulationSoftwareSuite:
-        Name: "Gazebo"
-        Version: "7"
-      RenderingEngine:
-        Name: "OGRE"
-        Version: "1.x"
+        Name: "SimulationRuntime"
   BasicSimulationApplicationVersion:
     Type: "AWS::RoboMaker::SimulationApplicationVersion"
     Properties:

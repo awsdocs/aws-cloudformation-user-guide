@@ -54,7 +54,7 @@ Properties:
 Your agent activation key\. You can get the activation key either by sending an HTTP GET request with redirects that enable you to get the agent IP address \(port 80\)\. Alternatively, you can get it from the DataSync console\.  
 The redirect URL returned in the response provides you the activation key for your agent in the query string parameter `activationKey`\. It might also include other activation\-related parameters; however, these are merely defaults\. The arguments you pass to this API call determine the actual configuration of your agent\.  
 For more information, see [Creating and activating an agent](https://docs.aws.amazon.com/datasync/latest/userguide/activating-agent.html) in the * AWS DataSync User Guide\.*   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Maximum*: `29`  
 *Pattern*: `[A-Z0-9]{5}(-[A-Z0-9]{5}){4}`  

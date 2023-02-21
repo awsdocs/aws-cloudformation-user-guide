@@ -27,6 +27,8 @@ To override parameter values for specific stack *instances*, see [Override param
 
       \[Service\-managed permissions\] For **Deployment targets**, choose the accounts in your organization to deploy to\.
 
+   1. Select the **Region**\.
+
    1. Change the value of the **Frequency** parameter from **24hours** to **12hours**\.
 
       For more information about this and the other parameters, which specify values used by AWS Config, see [Setting up AWS Config with the console](http://docs.aws.amazon.com/config/latest/developerguide/gs-console.html) in the *AWS Config Developer Guide*\.

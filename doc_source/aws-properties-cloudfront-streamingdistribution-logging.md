@@ -1,6 +1,6 @@
 # AWS::CloudFront::StreamingDistribution Logging<a name="aws-properties-cloudfront-streamingdistribution-logging"></a>
 
-A complex type that controls whether access logs are written for the streaming distribution\. 
+A complex type that controls whether access logs are written for the streaming distribution\.
 
 ## Syntax<a name="aws-properties-cloudfront-streamingdistribution-logging-syntax"></a>
 
@@ -33,7 +33,7 @@ The Amazon S3 bucket to store the access logs in, for example, `myawslogbucket.s
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-cloudfront-streamingdistribution-logging-enabled"></a>
-Specifies whether you want CloudFront to save access logs to an Amazon S3 bucket\. If you don't want to enable logging when you create a streaming distribution or if you want to disable logging for an existing streaming distribution, specify `false` for `Enabled`, and specify `empty Bucket` and `Prefix` elements\. If you specify `false` for `Enabled` but you specify values for `Bucket` and `Prefix`, the values are automatically deleted\.   
+Specifies whether you want CloudFront to save access logs to an Amazon S3 bucket\. If you don't want to enable logging when you create a streaming distribution or if you want to disable logging for an existing streaming distribution, specify `false` for `Enabled`, and specify `empty Bucket` and `Prefix` elements\. If you specify `false` for `Enabled` but you specify values for `Bucket` and `Prefix`, the values are automatically deleted\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,4 +1,4 @@
-# AWS Certificate Manager Private Certificate Authority resource type reference<a name="AWS_ACMPCA"></a>
+# AWS Private Certificate Authority resource type reference<a name="AWS_ACMPCA"></a>
 
 ACM Private CA is not available in the China \(Beijing\) Region or China \(Ningxia\) Region\.
 

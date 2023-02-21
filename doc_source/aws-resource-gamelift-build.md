@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Name](#cfn-gamelift-build-name)" : String,
       "[OperatingSystem](#cfn-gamelift-build-operatingsystem)" : String,
-      "[StorageLocation](#cfn-gamelift-build-storagelocation)" : S3Location,
+      "[StorageLocation](#cfn-gamelift-build-storagelocation)" : StorageLocation,
       "[Version](#cfn-gamelift-build-version)" : String
     }
 }
@@ -28,7 +28,7 @@ Properties:
   [Name](#cfn-gamelift-build-name): String
   [OperatingSystem](#cfn-gamelift-build-operatingsystem): String
   [StorageLocation](#cfn-gamelift-build-storagelocation): 
-    S3Location
+    StorageLocation
   [Version](#cfn-gamelift-build-version): String
 ```
 
@@ -43,17 +43,17 @@ A descriptive label that is associated with a build\. Build names do not need to
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OperatingSystem`  <a name="cfn-gamelift-build-operatingsystem"></a>
-The operating system that the game server binaries are built to run on\. This value determines the type of fleet resources that you can use for this build\. If your game build contains multiple executables, they all must run on the same operating system\. If an operating system is not specified when creating a build, Amazon GameLift uses the default value \(WINDOWS\_2012\)\. This value cannot be changed later\.  
+The operating system that you built the game server binaries to run on\. This value determines the type of fleet resources that you can use for this build\. If your game build contains multiple executables, they all must run on the same operating system\. If an operating system is not specified when creating a build, GameLift uses the default value \(WINDOWS\_2012\)\. This value cannot be changed later\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `AMAZON_LINUX | AMAZON_LINUX_2 | WINDOWS_2012`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageLocation`  <a name="cfn-gamelift-build-storagelocation"></a>
-Information indicating where your game build files are stored\. Use this parameter only when creating a build with files stored in an Amazon S3 bucket that you own\. The storage location must specify an Amazon S3 bucket name and key\. The location must also specify a role ARN that you set up to allow Amazon Web Services to access your Amazon S3 bucket\. The S3 bucket and your new build must be in the same Region\.  
-If a `StorageLocation` is specified, the size of your file can be found in your Amazon S3 bucket\. Amazon Web Services will report a `SizeOnDisk` of 0\.   
+Information indicating where your game build files are stored\. Use this parameter only when creating a build with files stored in an Amazon S3 bucket that you own\. The storage location must specify an Amazon S3 bucket name and key\. The location must also specify a role ARN that you set up to allow Amazon GameLift to access your Amazon S3 bucket\. The S3 bucket and your new build must be in the same Region\.  
+If a `StorageLocation` is specified, the size of your file can be found in your Amazon S3 bucket\. Amazon GameLift will report a `SizeOnDisk` of 0\.   
 *Required*: No  
-*Type*: [S3Location](aws-properties-gamelift-build-storagelocation.md)  
+*Type*: [StorageLocation](aws-properties-gamelift-build-storagelocation.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Version`  <a name="cfn-gamelift-build-version"></a>
@@ -71,6 +71,13 @@ Version information that is associated with this build\. Version strings do not 
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the build ID, such as `build-1111aaaa-22bb-33cc-44dd-5555eeee66ff`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-gamelift-build-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-gamelift-build-return-values-fn--getatt-fn--getatt"></a>
+
+`BuildId`  <a name="BuildId-fn::getatt"></a>
+Property description not available\.
 
 ## Examples<a name="aws-resource-gamelift-build--examples"></a>
 

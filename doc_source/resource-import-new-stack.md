@@ -11,28 +11,28 @@ In this walkthrough, we provide the following example template, called `Template
     "AWSTemplateFormatVersion": "2010-09-09",
     "Description": "Import test",
     "Resources": {
-         "ServiceTable":{
-           "Type":"AWS::DynamoDB::Table",
-           "DeletionPolicy": "Retain",
-           "Properties":{
-              "TableName":"Service",
-              "AttributeDefinitions":[
-                 {
-                    "AttributeName":"key",
-                    "AttributeType":"S"
-                 }
-              ],
-              "KeySchema":[
-                 {
-                    "AttributeName":"key",
-                    "KeyType":"HASH"
-                 }
-              ],
-              "ProvisionedThroughput":{
-                 "ReadCapacityUnits":5,
-                 "WriteCapacityUnits":1
-              }
-           }
+        "ServiceTable": {
+            "Type": "AWS::DynamoDB::Table",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+                "TableName": "Service",
+                "AttributeDefinitions": [
+                    {
+                        "AttributeName": "key",
+                        "AttributeType": "S"
+                    }
+                ],
+                "KeySchema": [
+                    {
+                        "AttributeName": "key",
+                        "KeyType": "HASH"
+                    }
+                ],
+                "ProvisionedThroughput": {
+                    "ReadCapacityUnits": 5,
+                    "WriteCapacityUnits": 1
+                }
+            }
         },
         "GamesTable": {
             "Type": "AWS::DynamoDB::Table",
@@ -172,7 +172,7 @@ The import operation fails if you modify existing parameters that initiate a cre
 
    ```
    > aws cloudformation detect-stack-drift --stack-name TargetStack
-   { "Stack-Drift-Detection-Id" : "624af370-311a-11e8-b6b7-500cexample" }
+   { "StackDriftDetectionId" : "624af370-311a-11e8-b6b7-500cexample" }
    
    > aws cloudformation describe-stack-drift-detection-status --stack-drift-detection-id 624af370-311a-11e8-b6b7-500cexample
                

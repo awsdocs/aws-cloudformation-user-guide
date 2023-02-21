@@ -116,3 +116,145 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the experiment template\.
+
+## Examples<a name="aws-resource-fis-experimenttemplate--examples"></a>
+
+### <a name="aws-resource-fis-experimenttemplate--examples--"></a>
+
+The following example creates an experiment template that stops and starts one instance with the tag env=prod, chosen at random\.
+
+#### YAML<a name="aws-resource-fis-experimenttemplate--examples----yaml"></a>
+
+```
+Resources:
+  ExperimentTemplate:
+    Type: 'AWS::FIS::ExperimentTemplate'
+    Properties: 
+      Description: 'stop an instance based on a tag'
+      Actions: 
+        stopInstances:
+          ActionId: 'aws:ec2:stop-instances'
+          Parameters: 
+            startInstancesAfterDuration: 'PT2M'
+          Targets:
+            Instances: oneRandomInstance
+      Targets: 
+        oneRandomInstance:
+          ResourceTags:
+            'env': 'prod'
+          ResourceType: 'aws:ec2:instance'
+          SelectionMode: 'COUNT(1)'
+      StopConditions:
+        - Source: 'none'
+      Tags: 
+        Name: 'fisStopInstances'
+      RoleArn: !GetAtt FISRole.Arn
+  FISRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement: 
+          - Effect: Allow
+            Principal:
+              Service: 'fis.amazonaws.com'
+            Action: 'sts:AssumeRole'
+      Policies:
+        - PolicyName: 'FISRoleEC2Actions'
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'ec2:RebootInstances'
+                  - 'ec2:StopInstances'
+                  - 'ec2:StartInstances'
+                  - 'ec2:TerminateInstances'
+                Resource: 'arn:aws:ec2:*:*:instance/*'
+```
+
+### <a name="aws-resource-fis-experimenttemplate--examples--"></a>
+
+#### JSON<a name="aws-resource-fis-experimenttemplate--examples----json"></a>
+
+```
+{
+  "Resources": {
+    "ExperimentTemplate": {
+      "Type": "AWS::FIS::ExperimentTemplate", 
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "Description": "stop an instance based on a tag",
+        "Actions": {
+          "stopInstances": {
+            "ActionId": "aws:ec2:stop-instances",
+            "Parameters": {
+              "startInstancesAfterDuration": "PT2M"
+            },
+            "Targets": {
+              "Instances": "oneRandomInstance"
+            }
+          }
+        },
+        "Targets": {
+          "oneRandomInstance": {
+            "ResourceTags": { 
+              "env": "prod" 
+            },
+            "ResourceType": "aws:ec2:instance",
+            "SelectionMode": "COUNT(1)"
+          }
+        },
+        "StopConditions": [
+          {
+            "Source": "none"
+          }
+        ],
+        "Tags": {
+          "Name": "fisStopInstancesJson"
+        },
+        "RoleArn": {
+          "Fn::GetAtt": ["FISRole", "Arn"]
+        }
+      }
+    },
+    "FISRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+                "Effect": "Allow",
+                "Principal": {
+                  "Service": "fis.amazonaws.com"
+                },
+                "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Policies": [
+          {
+            "PolicyName": "FISRoleEC2Actions",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "ec2:RebootInstances",
+                    "ec2:StopInstances",
+                    "ec2:StartInstances",
+                    "ec2:TerminateInstances"
+                  ],
+                  "Resource": "arn:aws:ec2:*:*:instance/*"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+```

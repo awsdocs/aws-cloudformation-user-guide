@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-datasource-onedriveconfiguration-properties"></a>
 
 `DisableLocalGroups`  <a name="cfn-kendra-datasource-onedriveconfiguration-disablelocalgroups"></a>
-A Boolean value that specifies whether local groups are disabled \(`True`\) or enabled \(`False`\)\.   
+ `TRUE` to disable local groups information\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -74,7 +74,7 @@ A list of user accounts whose documents should be indexed\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretArn`  <a name="cfn-kendra-datasource-onedriveconfiguration-secretarn"></a>
-The Amazon Resource Name \(ARN\) of an AWS Secrets Manager secret that contains the user name and password to connect to OneDrive\. The user named should be the application ID for the OneDrive application, and the password is the application key for the OneDrive application\.  
+The Amazon Resource Name \(ARN\) of an AWS Secrets Manager secret that contains the user name and password to connect to OneDrive\. The user name should be the application ID for the OneDrive application, and the password is the application key for the OneDrive application\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

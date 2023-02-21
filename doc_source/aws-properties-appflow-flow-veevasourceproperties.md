@@ -31,25 +31,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appflow-flow-veevasourceproperties-properties"></a>
 
 `DocumentType`  <a name="cfn-appflow-flow-veevasourceproperties-documenttype"></a>
-Not currently supported by AWS CloudFormation\.  
+The document type specified in the Veeva document extract flow\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `512`  
+*Pattern*: `[\s\w_-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeAllVersions`  <a name="cfn-appflow-flow-veevasourceproperties-includeallversions"></a>
-Not currently supported by AWS CloudFormation\.  
+Boolean value to include All Versions of files in Veeva document extract flow\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeRenditions`  <a name="cfn-appflow-flow-veevasourceproperties-includerenditions"></a>
-Not currently supported by AWS CloudFormation\.  
+Boolean value to include file renditions in Veeva document extract flow\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeSourceFiles`  <a name="cfn-appflow-flow-veevasourceproperties-includesourcefiles"></a>
-Not currently supported by AWS CloudFormation\.  
+Boolean value to include source files in Veeva document extract flow\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

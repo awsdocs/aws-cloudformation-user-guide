@@ -28,13 +28,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ExcludeMap](#cfn-fms-policy-excludemap)" : IEMap,
       "[ExcludeResourceTags](#cfn-fms-policy-excluderesourcetags)" : Boolean,
       "[IncludeMap](#cfn-fms-policy-includemap)" : IEMap,
+      "[PolicyDescription](#cfn-fms-policy-policydescription)" : String,
       "[PolicyName](#cfn-fms-policy-policyname)" : String,
       "[RemediationEnabled](#cfn-fms-policy-remediationenabled)" : Boolean,
       "[ResourcesCleanUp](#cfn-fms-policy-resourcescleanup)" : Boolean,
+      "[ResourceSetIds](#cfn-fms-policy-resourcesetids)" : [ String, ... ],
       "[ResourceTags](#cfn-fms-policy-resourcetags)" : [ ResourceTag, ... ],
       "[ResourceType](#cfn-fms-policy-resourcetype)" : String,
       "[ResourceTypeList](#cfn-fms-policy-resourcetypelist)" : [ String, ... ],
-      "[SecurityServicePolicyData](#cfn-fms-policy-securityservicepolicydata)" : Json,
+      "[SecurityServicePolicyData](#cfn-fms-policy-securityservicepolicydata)" : SecurityServicePolicyData,
       "[Tags](#cfn-fms-policy-tags)" : [ PolicyTag, ... ]
     }
 }
@@ -51,15 +53,19 @@ Properties:
   [ExcludeResourceTags](#cfn-fms-policy-excluderesourcetags): Boolean
   [IncludeMap](#cfn-fms-policy-includemap): 
     IEMap
+  [PolicyDescription](#cfn-fms-policy-policydescription): String
   [PolicyName](#cfn-fms-policy-policyname): String
   [RemediationEnabled](#cfn-fms-policy-remediationenabled): Boolean
   [ResourcesCleanUp](#cfn-fms-policy-resourcescleanup): Boolean
+  [ResourceSetIds](#cfn-fms-policy-resourcesetids): 
+    - String
   [ResourceTags](#cfn-fms-policy-resourcetags): 
     - ResourceTag
   [ResourceType](#cfn-fms-policy-resourcetype): String
   [ResourceTypeList](#cfn-fms-policy-resourcetypelist): 
     - String
-  [SecurityServicePolicyData](#cfn-fms-policy-securityservicepolicydata): Json
+  [SecurityServicePolicyData](#cfn-fms-policy-securityservicepolicydata): 
+    SecurityServicePolicyData
   [Tags](#cfn-fms-policy-tags): 
     - PolicyTag
 ```
@@ -108,6 +114,14 @@ You can specify account IDs, OUs, or a combination:
 *Type*: [IEMap](aws-properties-fms-policy-iemap.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`PolicyDescription`  <a name="cfn-fms-policy-policydescription"></a>
+The definition of the AWS Network Firewall firewall policy\.  
+*Required*: No  
+*Type*: String  
+*Maximum*: `256`  
+*Pattern*: `^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `PolicyName`  <a name="cfn-fms-policy-policyname"></a>
 The name of the AWS Firewall Manager policy\.  
 *Required*: Yes  
@@ -131,6 +145,12 @@ This option is not available for Shield Advanced or AWS WAF Classic policies\.
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ResourceSetIds`  <a name="cfn-fms-policy-resourcesetids"></a>
+The unique identifiers of the resource sets used by the policy\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ResourceTags`  <a name="cfn-fms-policy-resourcetags"></a>
 An array of `ResourceTag` objects, used to explicitly include resources in the policy scope or explicitly exclude them\. If this isn't set, then tags aren't used to modify policy scope\. See also `ExcludeResourceTags`\.  
 *Required*: No  
@@ -141,7 +161,7 @@ An array of `ResourceTag` objects, used to explicitly include resources in the p
 `ResourceType`  <a name="cfn-fms-policy-resourcetype"></a>
 The type of resource protected by or in scope of the policy\. This is in the format shown in the [AWS Resource Types Reference](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)\. To apply this policy to multiple resource types, specify a resource type of `ResourceTypeList` and then specify the resource types in a `ResourceTypeList`\.  
 For AWS WAF and Shield Advanced, example resource types include `AWS::ElasticLoadBalancingV2::LoadBalancer` and `AWS::CloudFront::Distribution`\. For a security group common policy, valid values are `AWS::EC2::NetworkInterface` and `AWS::EC2::Instance`\. For a security group content audit policy, valid values are `AWS::EC2::SecurityGroup`, `AWS::EC2::NetworkInterface`, and `AWS::EC2::Instance`\. For a security group usage audit policy, the value is `AWS::EC2::SecurityGroup`\. For an AWS Network Firewall policy or DNS Firewall policy, the value is `AWS::EC2::VPC`\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
@@ -198,7 +218,7 @@ This contains the following settings:
 
     AWS WAF Classic doesn't support rule groups in CloudFront\. To create a WAF Classic policy through CloudFormation, create your rule groups outside of CloudFront, then provide the rule group IDs in the WAF managed service data specification\.
 *Required*: Yes  
-*Type*: Json  
+*Type*: [SecurityServicePolicyData](aws-properties-fms-policy-securityservicepolicydata.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-fms-policy-tags"></a>

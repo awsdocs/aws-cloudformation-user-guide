@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-billingconductor-customlineitem-billingperiodrange-properties"></a>
 
 `ExclusiveEndBillingPeriod`  <a name="cfn-billingconductor-customlineitem-billingperiodrange-exclusiveendbillingperiod"></a>
- The inclusive end billing period that defines a billing period range where a custom line is applied\.   
+ The exclusive end billing period that defines a billing period range where a custom line is applied\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

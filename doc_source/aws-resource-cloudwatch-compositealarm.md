@@ -23,6 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::CloudWatch::CompositeAlarm",
   "Properties" : {
       "[ActionsEnabled](#cfn-cloudwatch-compositealarm-actionsenabled)" : Boolean,
+      "[ActionsSuppressor](#cfn-cloudwatch-compositealarm-actionssuppressor)" : String,
+      "[ActionsSuppressorExtensionPeriod](#cfn-cloudwatch-compositealarm-actionssuppressorextensionperiod)" : Integer,
+      "[ActionsSuppressorWaitPeriod](#cfn-cloudwatch-compositealarm-actionssuppressorwaitperiod)" : Integer,
       "[AlarmActions](#cfn-cloudwatch-compositealarm-alarmactions)" : [ String, ... ],
       "[AlarmDescription](#cfn-cloudwatch-compositealarm-alarmdescription)" : String,
       "[AlarmName](#cfn-cloudwatch-compositealarm-alarmname)" : String,
@@ -39,6 +42,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::CloudWatch::CompositeAlarm
 Properties: 
   [ActionsEnabled](#cfn-cloudwatch-compositealarm-actionsenabled): Boolean
+  [ActionsSuppressor](#cfn-cloudwatch-compositealarm-actionssuppressor): String
+  [ActionsSuppressorExtensionPeriod](#cfn-cloudwatch-compositealarm-actionssuppressorextensionperiod): Integer
+  [ActionsSuppressorWaitPeriod](#cfn-cloudwatch-compositealarm-actionssuppressorwaitperiod): Integer
   [AlarmActions](#cfn-cloudwatch-compositealarm-alarmactions): 
     - String
   [AlarmDescription](#cfn-cloudwatch-compositealarm-alarmdescription): String
@@ -58,6 +64,26 @@ Indicates whether actions should be executed during any changes to the alarm sta
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ActionsSuppressor`  <a name="cfn-cloudwatch-compositealarm-actionssuppressor"></a>
+ Actions will be suppressed if the suppressor alarm is in the `ALARM` state\. `ActionsSuppressor` can be an AlarmName or an Amazon Resource Name \(ARN\) from an existing alarm\.   
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ActionsSuppressorExtensionPeriod`  <a name="cfn-cloudwatch-compositealarm-actionssuppressorextensionperiod"></a>
+ The maximum time in seconds that the composite alarm waits after suppressor alarm goes out of the `ALARM` state\. After this time, the composite alarm performs its actions\.   
+ `ExtensionPeriod` is required only when `ActionsSuppressor` is specified\. 
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ActionsSuppressorWaitPeriod`  <a name="cfn-cloudwatch-compositealarm-actionssuppressorwaitperiod"></a>
+The maximum time in seconds that the composite alarm waits for the suppressor alarm to go into the `ALARM` state\. After this time, the composite alarm performs its actions\.  
+ `WaitPeriod` is required only when `ActionsSuppressor` is specified\. 
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `AlarmActions`  <a name="cfn-cloudwatch-compositealarm-alarmactions"></a>
 The actions to execute when this alarm transitions to the ALARM state from any other state\. Each action is specified as an Amazon Resource Name \(ARN\)\. For more information about creating alarms and the actions that you can specify, see [PutCompositeAlarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutCompositeAlarm.html) in the *Amazon CloudWatch API Reference*\.  
 *Required*: No  
@@ -72,7 +98,7 @@ The description for the composite alarm\.
 
 `AlarmName`  <a name="cfn-cloudwatch-compositealarm-alarmname"></a>
 The name for the composite alarm\. This name must be unique within your AWS account\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

@@ -71,7 +71,7 @@ Unique identifier that you assign to the packaging configuration\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MssPackage`  <a name="cfn-mediapackage-packagingconfiguration-msspackage"></a>
-Parameters for Microsoft Smooth Streaming packaging\.   
+Parameters for Microsoft Smooth Streaming packaging\.  
 *Required*: No  
 *Type*: [MssPackage](aws-properties-mediapackage-packagingconfiguration-msspackage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

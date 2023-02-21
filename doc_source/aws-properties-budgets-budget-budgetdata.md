@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AutoAdjustData](#cfn-budgets-budget-budgetdata-autoadjustdata)" : AutoAdjustData,
   "[BudgetLimit](#cfn-budgets-budget-budgetdata-budgetlimit)" : Spend,
   "[BudgetName](#cfn-budgets-budget-budgetdata-budgetname)" : String,
   "[BudgetType](#cfn-budgets-budget-budgetdata-budgettype)" : String,
@@ -28,6 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-budgets-budget-budgetdata-syntax.yaml"></a>
 
 ```
+  [AutoAdjustData](#cfn-budgets-budget-budgetdata-autoadjustdata): 
+    AutoAdjustData
   [BudgetLimit](#cfn-budgets-budget-budgetdata-budgetlimit): 
     Spend
   [BudgetName](#cfn-budgets-budget-budgetdata-budgetname): String
@@ -42,6 +45,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-budgets-budget-budgetdata-properties"></a>
+
+`AutoAdjustData`  <a name="cfn-budgets-budget-budgetdata-autoadjustdata"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [AutoAdjustData](aws-properties-budgets-budget-autoadjustdata.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BudgetLimit`  <a name="cfn-budgets-budget-budgetdata-budgetlimit"></a>
 The total amount of cost, usage, RI utilization, RI coverage, Savings Plans utilization, or Savings Plans coverage that you want to track with your budget\.  
@@ -70,7 +79,7 @@ The cost filters, such as `Region`, `Service`, `member account`, `Tag`, or `Cost
 + Amazon Redshift
 + Amazon Relational Database Service
 + Amazon ElastiCache
-+  Amazon OpenSearch Service 
++ Amazon OpenSearch Service
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -110,6 +119,98 @@ The length of time until a budget resets the actual and forecasted spend\. `DAIL
 *Type*: String  
 *Allowed values*: `ANNUALLY | DAILY | MONTHLY | QUARTERLY`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-budgets-budget-budgetdata--examples"></a>
+
+
+
+### Create a budget<a name="aws-properties-budgets-budget-budgetdata--examples--Create_a_budget"></a>
+
+The following example creates a budget and shows the format for the CostFilters parameter\.
+
+#### JSON<a name="aws-properties-budgets-budget-budgetdata--examples--Create_a_budget--json"></a>
+
+```
+{
+    "Budget": {
+        "BudgetName": "Example S3 Usage Budget",
+        "BudgetLimit": {
+            "Amount": "100.0",
+            "Unit": "GB"
+        },
+        "CostFilters": {
+            "UsageType": [
+                "APS1-APN1-AWS-Out-Bytes"
+            ],
+            "UsageTypeGroup": [
+                "S3: Data Transfer - Region to Region (In)"
+            ]
+        },
+        "CostTypes": {
+            "IncludeTax": true,
+            "IncludeSubscription": true,
+            "UseBlended": false,
+            "IncludeRefund": true,
+            "IncludeCredit": true,
+            "IncludeUpfront": true,
+            "IncludeRecurring": true,
+            "IncludeOtherSubscription": true,
+            "IncludeSupport": true,
+            "IncludeDiscount": true,
+            "UseAmortized": false
+        },
+        "TimeUnit": "MONTHLY",
+        "TimePeriod": {
+            "Start": "2017-10-31T17:00:00-07:00",
+            "End": "2087-06-14T17:00:00-07:00"
+        },
+        "CalculatedSpend": {
+            "ActualSpend": {
+                "Amount": "0.0",
+                "Unit": "GB"
+            }
+        },
+        "BudgetType": "USAGE"
+    }
+}
+```
+
+#### YAML<a name="aws-properties-budgets-budget-budgetdata--examples--Create_a_budget--yaml"></a>
+
+```
+---
+Budget:
+  BudgetName: Example S3 Usage Budget
+  BudgetLimit:
+    Amount: '100.0'
+    Unit: GB
+  CostFilters:
+    UsageType:
+    - APS1-APN1-AWS-Out-Bytes
+    UsageTypeGroup:
+    - 'S3: Data Transfer - Region to Region (In)'
+  CostTypes:
+    IncludeTax: true
+    IncludeSubscription: true
+    UseBlended: false
+    IncludeRefund: true
+    IncludeCredit: true
+    IncludeUpfront: true
+    IncludeRecurring: true
+    IncludeOtherSubscription: true
+    IncludeSupport: true
+    IncludeDiscount: true
+    UseAmortized: false
+  TimeUnit: MONTHLY
+  TimePeriod:
+    Start: '2017-10-31T17:00:00-07:00'
+    End: '2087-06-14T17:00:00-07:00'
+  CalculatedSpend:
+    ActualSpend:
+      Amount: '0.0'
+      Unit: GB
+  BudgetType: USAGE
+```
 
 ## See also<a name="aws-properties-budgets-budget-budgetdata--seealso"></a>
 +  [Budget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_budget.html) in the *AWS Cost Explorer Service Cost Management APIs* 

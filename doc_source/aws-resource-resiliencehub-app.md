@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::ResilienceHub::App",
   "Properties" : {
+      "[AppAssessmentSchedule](#cfn-resiliencehub-app-appassessmentschedule)" : String,
       "[AppTemplateBody](#cfn-resiliencehub-app-apptemplatebody)" : String,
       "[Description](#cfn-resiliencehub-app-description)" : String,
       "[Name](#cfn-resiliencehub-app-name)" : String,
@@ -29,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::ResilienceHub::App
 Properties: 
+  [AppAssessmentSchedule](#cfn-resiliencehub-app-appassessmentschedule): String
   [AppTemplateBody](#cfn-resiliencehub-app-apptemplatebody): String
   [Description](#cfn-resiliencehub-app-description): String
   [Name](#cfn-resiliencehub-app-name): String
@@ -40,6 +42,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-resiliencehub-app-properties"></a>
+
+`AppAssessmentSchedule`  <a name="cfn-resiliencehub-app-appassessmentschedule"></a>
+ Assessment execution schedule with 'Daily' or 'Disabled' values\.   
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AppTemplateBody`  <a name="cfn-resiliencehub-app-apptemplatebody"></a>
 A string containing a full Resilience Hub app template body\.  

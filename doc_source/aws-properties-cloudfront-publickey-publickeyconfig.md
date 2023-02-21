@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudfront-publickey-publickeyconfig-properties"></a>
 
 `CallerReference`  <a name="cfn-cloudfront-publickey-publickeyconfig-callerreference"></a>
-A string included in the request to help make sure that the request can’t be replayed\.  
+A string included in the request to help make sure that the request can't be replayed\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

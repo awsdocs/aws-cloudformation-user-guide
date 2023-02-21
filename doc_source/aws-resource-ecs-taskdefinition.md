@@ -1,6 +1,6 @@
 # AWS::ECS::TaskDefinition<a name="aws-resource-ecs-taskdefinition"></a>
 
-The `AWS::ECS::TaskDefinition` resource describes the container and volume definitions of an Amazon Elastic Container Service \(Amazon ECS\) task\. You can specify which Docker images to use, the required resources, and other configurations related to launching the task definition through an Amazon ECS service or task\.
+The `AWS::ECS::TaskDefinition` resource describes the container and volume definitions of a task\. You can specify which Docker images to use, the required resources, and other configurations related to launching the task definition through an Amazon ECS service or task\.
 
 ## Syntax<a name="aws-resource-ecs-taskdefinition-syntax"></a>
 
@@ -71,7 +71,7 @@ Properties:
 `ContainerDefinitions`  <a name="cfn-ecs-taskdefinition-containerdefinitions"></a>
 A list of container definitions in JSON format that describe the different containers that make up your task\. For more information about container definition parameters and defaults, see [Amazon ECS Task Definitions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_defintions.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
-*Type*: List of [ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinitions.md)  
+*Type*: List of [ContainerDefinition](aws-properties-ecs-taskdefinition-containerdefinition.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Cpu`  <a name="cfn-ecs-taskdefinition-cpu"></a>
@@ -80,8 +80,14 @@ The CPU units cannot be less than 1 vCPU when you use Windows containers on Farg
 + 256 \(\.25 vCPU\) \- Available `memory` values: 512 \(0\.5 GB\), 1024 \(1 GB\), 2048 \(2 GB\)
 + 512 \(\.5 vCPU\) \- Available `memory` values: 1024 \(1 GB\), 2048 \(2 GB\), 3072 \(3 GB\), 4096 \(4 GB\)
 + 1024 \(1 vCPU\) \- Available `memory` values: 2048 \(2 GB\), 3072 \(3 GB\), 4096 \(4 GB\), 5120 \(5 GB\), 6144 \(6 GB\), 7168 \(7 GB\), 8192 \(8 GB\)
-+ 2048 \(2 vCPU\) \- Available `memory` values: Between 4096 \(4 GB\) and 16384 \(16 GB\) in increments of 1024 \(1 GB\)
-+ 4096 \(4 vCPU\) \- Available `memory` values: Between 8192 \(8 GB\) and 30720 \(30 GB\) in increments of 1024 \(1 GB\)
++ 2048 \(2 vCPU\) \- Available `memory` values: 4096 \(4 GB\) and 16384 \(16 GB\) in increments of 1024 \(1 GB\)
++ 4096 \(4 vCPU\) \- Available `memory` values: 8192 \(8 GB\) and 30720 \(30 GB\) in increments of 1024 \(1 GB\)
++ 8192 \(8 vCPU\) \- Available `memory` values: 16 GB and 60 GB in 4 GB increments
+
+  This option requires Linux platform `1.4.0` or later\.
++ 16384 \(16vCPU\) \- Available `memory` values: 32GB and 120 GB in 8 GB increments
+
+  This option requires Linux platform `1.4.0` or later\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -133,17 +139,23 @@ If your tasks runs on AWS Fargate, this field is required\. You must use one of 
 + 2048 \(2 GB\), 3072 \(3 GB\), 4096 \(4 GB\), 5120 \(5 GB\), 6144 \(6 GB\), 7168 \(7 GB\), 8192 \(8 GB\) \- Available `cpu` values: 1024 \(1 vCPU\)
 + Between 4096 \(4 GB\) and 16384 \(16 GB\) in increments of 1024 \(1 GB\) \- Available `cpu` values: 2048 \(2 vCPU\)
 + Between 8192 \(8 GB\) and 30720 \(30 GB\) in increments of 1024 \(1 GB\) \- Available `cpu` values: 4096 \(4 vCPU\)
++ Between 16 GB and 60 GB in 4 GB increments \- Available `cpu` values: 8192 \(8 vCPU\)
+
+  This option requires Linux platform `1.4.0` or later\.
++ Between 32GB and 120 GB in 8 GB increments \- Available `cpu` values: 16384 \(16 vCPU\)
+
+  This option requires Linux platform `1.4.0` or later\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NetworkMode`  <a name="cfn-ecs-taskdefinition-networkmode"></a>
-The Docker networking mode to use for the containers in the task\. The valid values are `none`, `bridge`, `awsvpc`, and `host`\. The default Docker network mode is `bridge`\. If you are using the Fargate launch type, the `awsvpc` network mode is required\. If you are using the EC2 launch type, any network mode can be used\. If the network mode is set to `none`, you cannot specify port mappings in your container definitions, and the tasks containers do not have external connectivity\. The `host` and `awsvpc` network modes offer the highest networking performance for containers because they use the EC2 network stack instead of the virtualized network stack provided by the `bridge` mode\.  
+The Docker networking mode to use for the containers in the task\. The valid values are `none`, `bridge`, `awsvpc`, and `host`\. If no network mode is specified, the default is `bridge`\.  
+For Amazon ECS tasks on Fargate, the `awsvpc` network mode is required\. For Amazon ECS tasks on Amazon EC2 Linux instances, any network mode can be used\. For Amazon ECS tasks on Amazon EC2 Windows instances, `<default>` or `awsvpc` can be used\. If the network mode is set to `none`, you cannot specify port mappings in your container definitions, and the tasks containers do not have external connectivity\. The `host` and `awsvpc` network modes offer the highest networking performance for containers because they use the EC2 network stack instead of the virtualized network stack provided by the `bridge` mode\.  
 With the `host` and `awsvpc` network modes, exposed container ports are mapped directly to the corresponding host port \(for the `host` network mode\) or the attached elastic network interface port \(for the `awsvpc` network mode\), so you cannot take advantage of dynamic host port mappings\.   
-If the network mode is `awsvpc`, the task is allocated an elastic network interface, and you must specify a [NetworkConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_NetworkConfiguration.html) value when you create a service or run a task with the task definition\. For more information, see [Task Networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html) in the *Amazon Elastic Container Service Developer Guide*\.  
-Currently, only Amazon ECS\-optimized AMIs, other Amazon Linux variants with the `ecs-init` package, or AWS Fargate infrastructure support the `awsvpc` network mode\. 
+When using the `host` network mode, you should not run containers using the root user \(UID 0\)\. It is considered best practice to use a non\-root user\.
+If the network mode is `awsvpc`, the task is allocated an elastic network interface, and you must specify a [NetworkConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-networkconfiguration) value when you create a service or run a task with the task definition\. For more information, see [Task Networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 If the network mode is `host`, you cannot run multiple instantiations of the same task on a single container instance when port mappings are used\.  
-Docker for Windows uses different network modes than Docker for Linux\. When you register a task definition with Windows containers, you must not specify a network mode\. If you use the console to register a task definition with Windows containers, you must choose the `<default>` network mode object\.   
 For more information, see [Network settings](https://docs.docker.com/engine/reference/run/#network-settings) in the *Docker run reference*\.  
 *Required*: No  
 *Type*: String  
@@ -167,14 +179,18 @@ This parameter isn't supported for tasks run on AWS Fargate\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProxyConfiguration`  <a name="cfn-ecs-taskdefinition-proxyconfiguration"></a>
-The `ProxyConfiguration` property specifies the configuration details for the App Mesh proxy\.  
-Your Amazon ECS container instances require at least version 1\.26\.0 of the container agent and at least version 1\.26\.0\-1 of the `ecs-init` package to enable a proxy configuration\. If your container instances are launched from the Amazon ECS\-optimized AMI version `20190301` or later, then they contain the required versions of the container agent and `ecs-init`\. For more information, see [Amazon ECS\-optimized Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The configuration details for the App Mesh proxy\.  
+Your Amazon ECS container instances require at least version 1\.26\.0 of the container agent and at least version 1\.26\.0\-1 of the `ecs-init` package to use a proxy configuration\. If your container instances are launched from the Amazon ECS optimized AMI version `20190301` or later, they contain the required versions of the container agent and `ecs-init`\. For more information, see [Amazon ECS\-optimized Linux AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: [ProxyConfiguration](aws-properties-ecs-taskdefinition-proxyconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RequiresCompatibilities`  <a name="cfn-ecs-taskdefinition-requirescompatibilities"></a>
 The task launch types the task definition was validated against\. To determine which task launch types the task definition is validated for, see the `TaskDefinition$compatibilities` parameter\.  
+The valid values are:  
++ `EC2` \- The EC2 launch type
++ `FARGATE` \- The Fargate launch type
++ `EXTERNAL` \- The external instance \(ECS Anywhere\) launch type
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -210,9 +226,9 @@ IAM roles for tasks on Windows require that the `-EnableTaskIAMRole` option is s
 
 `Volumes`  <a name="cfn-ecs-taskdefinition-volumes"></a>
 The list of data volume definitions for the task\. For more information, see [Using data volumes in tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html) in the *Amazon Elastic Container Service Developer Guide*\.  
-The `host` and `sourcePath` parameters aren't supported for tasks run on AWS Fargate\.
+The `host` and `sourcePath` parameters aren't supported for tasks run on AWS Fargate\. 
 *Required*: No  
-*Type*: List of [Volume](aws-properties-ecs-taskdefinition-volumes.md)  
+*Type*: List of [Volume](aws-properties-ecs-taskdefinition-volume.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-ecs-taskdefinition-return-values"></a>
@@ -231,11 +247,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### Create an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition"></a>
+### Create an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Create_an__task_definition"></a>
 
 The following example defines an Amazon ECS task definition, which includes two container definitions and one volume definition\.
 
-#### JSON<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition--json"></a>
+#### JSON<a name="aws-resource-ecs-taskdefinition--examples--Create_an__task_definition--json"></a>
 
 ```
 "taskdefinition": {
@@ -296,7 +312,7 @@ The following example defines an Amazon ECS task definition, which includes two 
 }
 ```
 
-#### YAML<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition--yaml"></a>
+#### YAML<a name="aws-resource-ecs-taskdefinition--examples--Create_an__task_definition--yaml"></a>
 
 ```
 taskdefinition: 
@@ -346,11 +362,11 @@ taskdefinition:
         Name: "my-vol"
 ```
 
-### Create an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition"></a>
+### Create an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Create_an__task_definition"></a>
 
 The following example defines an Amazon ECS task definition that specifies EC2 as required compatibilities\.
 
-#### JSON<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition--json"></a>
+#### JSON<a name="aws-resource-ecs-taskdefinition--examples--Create_an__task_definition--json"></a>
 
 ```
 {
@@ -421,7 +437,7 @@ The following example defines an Amazon ECS task definition that specifies EC2 a
 }
 ```
 
-#### YAML<a name="aws-resource-ecs-taskdefinition--examples--Create_an_Amazon_ECS_task_definition--yaml"></a>
+#### YAML<a name="aws-resource-ecs-taskdefinition--examples--Create_an__task_definition--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -468,4 +484,97 @@ Resources:
           Host: 
             SourcePath: "/var/lib/docker/vfs/dir/"
           Name: "my-vol"
+```
+
+### Create an Amazon ECS task definition<a name="aws-resource-ecs-taskdefinition--examples--Create_an__task_definition"></a>
+
+The following is an example task definition using the Linux containers on Fargate launch type that sets up a web server:
+
+#### JSON<a name="aws-resource-ecs-taskdefinition--examples--Create_an__task_definition--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Create a task definition for a web server.",
+  "Resources": {
+    "ECSTaskDefinition": {
+      "Type": "AWS::ECS::TaskDefinition",
+      "Properties": {
+        "ContainerDefinitions": [
+          {
+            "Name": "first-run-task",
+            "Image": "httpd:2.4",
+            "Essential": true,
+            "PortMappings": [
+              {
+                "ContainerPort": 80,
+                "Protocol": "tcp"
+              }
+            ],
+            "Environment": [
+              {
+                "Name": "entryPoint",
+                "Value": "sh, -c"
+              },
+              {
+                "Name": "command",
+                "Value": "/bin/sh -c \\\"echo '<html> <head> <title>Amazon ECS Sample App</title> <style>body {margin-top: 40px; background-color: #333;} </style> </head><body> <div style=color:white;text-align:center> <h1>Amazon ECS Sample App</h1> <h2>Congratulations!</h2> <p>Your application is now running on a container in Amazon ECS.</p> </div></body></html>' >  /usr/local/apache2/htdocs/index.html && httpd-foreground\\\""
+              }
+            ],
+            "EnvironmentFiles": []
+          }
+        ],
+        "Family": "first-run-task",
+        "Cpu": "1 vCPU",
+        "Memory": "3 GB"
+      }
+    }
+  },
+  "Outputs": {
+    "ECSTaskDefinition": {
+      "Description": "The created Taskdefinition.",
+      "Value": {
+        "Ref": "ECSTaskDefinition"
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-ecs-taskdefinition--examples--Create_an__task_definition--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: Create a task definition for a web server.
+Resources:
+  ECSTaskDefinition:
+    Type: 'AWS::ECS::TaskDefinition'
+    Properties:
+      ContainerDefinitions:
+        - Name: first-run-task
+          Image: 'httpd:2.4'
+          Essential: true
+          PortMappings:
+            - ContainerPort: 80
+              Protocol: tcp
+          Environment:
+            - Name: entryPoint
+              Value: 'sh, -c'
+            - Name: command
+              Value: >-
+                /bin/sh -c \"echo '<html> <head> <title>Amazon ECS Sample
+                App</title> <style>body {margin-top: 40px; background-color:
+                #333;} </style> </head><body> <div
+                style=color:white;text-align:center> <h1>Amazon ECS Sample
+                App</h1> <h2>Congratulations!</h2> <p>Your application is now
+                running on a container in Amazon ECS.</p> </div></body></html>'
+                >  /usr/local/apache2/htdocs/index.html && httpd-foreground\"
+          EnvironmentFiles: []
+      Family: first-run-task
+      Cpu: 1 vCPU
+      Memory: 3 GB
+Outputs:
+  ECSTaskDefinition:
+    Description: The created Taskdefinition.
+    Value: !Ref ECSTaskDefinition
 ```

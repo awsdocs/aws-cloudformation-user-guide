@@ -11,11 +11,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Amplitude](#cfn-appflow-flow-sourceconnectorproperties-amplitude)" : AmplitudeSourceProperties,
+  "[CustomConnector](#cfn-appflow-flow-sourceconnectorproperties-customconnector)" : CustomConnectorSourceProperties,
   "[Datadog](#cfn-appflow-flow-sourceconnectorproperties-datadog)" : DatadogSourceProperties,
   "[Dynatrace](#cfn-appflow-flow-sourceconnectorproperties-dynatrace)" : DynatraceSourceProperties,
   "[GoogleAnalytics](#cfn-appflow-flow-sourceconnectorproperties-googleanalytics)" : GoogleAnalyticsSourceProperties,
   "[InforNexus](#cfn-appflow-flow-sourceconnectorproperties-infornexus)" : InforNexusSourceProperties,
   "[Marketo](#cfn-appflow-flow-sourceconnectorproperties-marketo)" : MarketoSourceProperties,
+  "[Pardot](#cfn-appflow-flow-sourceconnectorproperties-pardot)" : PardotSourceProperties,
   "[S3](#cfn-appflow-flow-sourceconnectorproperties-s3)" : S3SourceProperties,
   "[Salesforce](#cfn-appflow-flow-sourceconnectorproperties-salesforce)" : SalesforceSourceProperties,
   "[SAPOData](#cfn-appflow-flow-sourceconnectorproperties-sapodata)" : SAPODataSourceProperties,
@@ -33,6 +35,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Amplitude](#cfn-appflow-flow-sourceconnectorproperties-amplitude): 
     AmplitudeSourceProperties
+  [CustomConnector](#cfn-appflow-flow-sourceconnectorproperties-customconnector): 
+    CustomConnectorSourceProperties
   [Datadog](#cfn-appflow-flow-sourceconnectorproperties-datadog): 
     DatadogSourceProperties
   [Dynatrace](#cfn-appflow-flow-sourceconnectorproperties-dynatrace): 
@@ -43,6 +47,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     InforNexusSourceProperties
   [Marketo](#cfn-appflow-flow-sourceconnectorproperties-marketo): 
     MarketoSourceProperties
+  [Pardot](#cfn-appflow-flow-sourceconnectorproperties-pardot): 
+    PardotSourceProperties
   [S3](#cfn-appflow-flow-sourceconnectorproperties-s3): 
     S3SourceProperties
   [Salesforce](#cfn-appflow-flow-sourceconnectorproperties-salesforce): 
@@ -69,6 +75,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  Specifies the information that is required for querying Amplitude\.   
 *Required*: No  
 *Type*: [AmplitudeSourceProperties](aws-properties-appflow-flow-amplitudesourceproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomConnector`  <a name="cfn-appflow-flow-sourceconnectorproperties-customconnector"></a>
+The properties that are applied when the custom connector is being used as a source\.  
+*Required*: No  
+*Type*: [CustomConnectorSourceProperties](aws-properties-appflow-flow-customconnectorsourceproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Datadog`  <a name="cfn-appflow-flow-sourceconnectorproperties-datadog"></a>
@@ -101,6 +113,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: [MarketoSourceProperties](aws-properties-appflow-flow-marketosourceproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Pardot`  <a name="cfn-appflow-flow-sourceconnectorproperties-pardot"></a>
+Specifies the information that is required for querying Salesforce Pardot\.  
+*Required*: No  
+*Type*: [PardotSourceProperties](aws-properties-appflow-flow-pardotsourceproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `S3`  <a name="cfn-appflow-flow-sourceconnectorproperties-s3"></a>
  Specifies the information that is required for querying Amazon S3\.   
 *Required*: No  
@@ -114,7 +132,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SAPOData`  <a name="cfn-appflow-flow-sourceconnectorproperties-sapodata"></a>
-Not currently supported by AWS CloudFormation\.  
+ The properties that are applied when using SAPOData as a flow source\.   
 *Required*: No  
 *Type*: [SAPODataSourceProperties](aws-properties-appflow-flow-sapodatasourceproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

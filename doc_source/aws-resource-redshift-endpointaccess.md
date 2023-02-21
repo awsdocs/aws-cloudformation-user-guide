@@ -38,7 +38,7 @@ Properties:
 
 `ClusterIdentifier`  <a name="cfn-redshift-endpointaccess-clusteridentifier"></a>
 The cluster identifier of the cluster associated with the endpoint\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -59,7 +59,7 @@ The AWS account ID of the owner of the cluster\.
 
 `SubnetGroupName`  <a name="cfn-redshift-endpointaccess-subnetgroupname"></a>
 The subnet group name where Amazon Redshift chooses to deploy the endpoint\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -97,3 +97,15 @@ The status of the endpoint\.
 
 `Port`  <a name="Port-fn::getatt"></a>
 The port number on which the cluster accepts incoming connections\.
+
+`VpcEndpoint`  <a name="VpcEndpoint-fn::getatt"></a>
+Property description not available\.
+
+`VpcEndpoint.NetworkInterfaces`  <a name="VpcEndpoint.NetworkInterfaces-fn::getatt"></a>
+Property description not available\.
+
+`VpcEndpoint.VpcEndpointId`  <a name="VpcEndpoint.VpcEndpointId-fn::getatt"></a>
+Property description not available\.
+
+`VpcEndpoint.VpcId`  <a name="VpcEndpoint.VpcId-fn::getatt"></a>
+Property description not available\.

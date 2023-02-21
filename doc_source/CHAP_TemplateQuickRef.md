@@ -5,6 +5,7 @@ This section provides a number of example scenarios that you can use to understa
 **Topics**
 + [General template snippets](quickref-general.md)
 + [Auto scaling template snippets](quickref-autoscaling.md)
++ [AWS Billing Console template snippets](quickref-billingconductor.md)
 + [AWS CloudFormation template snippets](quickref-cloudformation.md)
 + [Amazon CloudFront template snippets](quickref-cloudfront.md)
 + [Amazon CloudWatch template snippets](quickref-cloudwatch.md)

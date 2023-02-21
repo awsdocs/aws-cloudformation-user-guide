@@ -51,7 +51,7 @@ The endpoint type\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OwnershipVerificationCertificateArn`  <a name="cfn-apigatewayv2-domainname-domainnameconfiguration-ownershipverificationcertificatearn"></a>
-The ARN of the public certificate issued by ACM to validate ownership of your custom domain\. Only required when configuring mutual TLS and using an ACM imported or private CA certificate ARN as the RegionalCertificateArn\.  
+The Amazon resource name \(ARN\) for the public certificate issued by AWS Certificate Manager\. This ARN is used to validate custom domain ownership\. It's required only if you configure mutual TLS and use either an ACM\-imported or a private CA certificate ARN as the regionalCertificateArn\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

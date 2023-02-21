@@ -69,7 +69,7 @@ If the target of a logical directory entry does not exist in Amazon S3, the entr
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HomeDirectoryType`  <a name="cfn-transfer-user-homedirectorytype"></a>
-The type of landing directory \(folder\) you want your users' home directory to be when they log into the server\. If you set it to `PATH`, the user will see the absolute Amazon S3 bucket or EFS paths as is in their file transfer protocol clients\. If you set it `LOGICAL`, you need to provide mappings in the `HomeDirectoryMappings` for how you want to make Amazon S3 or EFS paths visible to your users\.  
+The type of landing directory \(folder\) that you want your users' home directory to be when they log in to the server\. If you set it to `PATH`, the user will see the absolute Amazon S3 bucket or EFS paths as is in their file transfer protocol clients\. If you set it `LOGICAL`, you need to provide mappings in the `HomeDirectoryMappings` for how you want to make Amazon S3 or Amazon EFS paths visible to your users\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `LOGICAL | PATH`  
@@ -92,7 +92,7 @@ Specifies the full POSIX identity, including user ID \(`Uid`\), group ID \(`Gid`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Role`  <a name="cfn-transfer-user-role"></a>
-Specifies the Amazon Resource Name \(ARN\) of the IAM role that controls your users' access to your Amazon S3 bucket or EFS file system\. The policies attached to this role determine the level of access that you want to provide your users when transferring files into and out of your Amazon S3 bucket or EFS file system\. The IAM role should also contain a trust relationship that allows the server to access your resources when servicing your users' transfer requests\.  
+The Amazon Resource Name \(ARN\) of the AWS Identity and Access Management \(IAM\) role that controls your users' access to your Amazon S3 bucket or Amazon EFS file system\. The policies attached to this role determine the level of access that you want to provide your users when transferring files into and out of your Amazon S3 bucket or Amazon EFS file system\. The IAM role should also contain a trust relationship that allows the server to access your resources when servicing your users' transfer requests\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
@@ -157,7 +157,7 @@ The ID of the server to which the user is attached\.
 An example `ServerId` is `s-01234567890abcdef`\.
 
 `UserName`  <a name="UserName-fn::getatt"></a>
-A unique string that identifies a user account associated with a server\.  
+A unique string that identifies a Transfer Family user account associated with a server\.  
 An example `UserName` is `transfer-user-1`\.
 
 ## Examples<a name="aws-resource-transfer-user--examples"></a>

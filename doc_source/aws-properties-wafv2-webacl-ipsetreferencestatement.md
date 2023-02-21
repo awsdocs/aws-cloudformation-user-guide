@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-webacl-ipsetreferencestatement-properties"></a>
 
 `Arn`  <a name="cfn-wafv2-webacl-ipsetreferencestatement-arn"></a>
-The Amazon Resource Name \(ARN\) of the IP set that this statement references\.  
+The Amazon Resource Name \(ARN\) of the [AWS::WAFv2::IPSet](aws-resource-wafv2-ipset.md) that this statement references\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  

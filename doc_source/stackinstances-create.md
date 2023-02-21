@@ -3,10 +3,10 @@
 When you create a stack set, you can create the stacks for that stack set\. AWS CloudFormation also enables you to add more stacks, for additional accounts and Regions, at any point after the stack set is created\. You can add stack instances using either the AWS CloudFormation console, or by using AWS CloudFormation commands in the AWS CLI\. In this procedure, we will add stack instances for an additional Region to the stack set we created in [Create a stack set](stacksets-getting-started-create.md)\.
 
 **Topics**
-+ [Add stack instances to your stack set using the AWS Management Console](#stackinstances-create-console)
-+ [Add stack instances to your stack set using the AWS CLI](#stackinstances-create-cli)
++ [Add stack instances to a stack set using the AWS Management Console](#stackinstances-create-console)
++ [Add stack instances to a stack set using the AWS CLI](#stackinstances-create-cli)
 
-## Add stack instances to your stack set using the AWS Management Console<a name="stackinstances-create-console"></a>
+## Add stack instances to a stack set using the AWS Management Console<a name="stackinstances-create-console"></a>
 
 1. Open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
@@ -51,7 +51,7 @@ If you add an OU that your stack set already targets, StackSets creates new stac
 1. AWS CloudFormation starts creating your stack instances\. View the progress and status of the creation of the stack instances in your stack set in the stack set details page that opens when you choose **Submit**\. When complete, your new stack instances should be listed on the **Stack instances** tab\.  
 ![\[Operations tab of the StackSets details page\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-detail-operations.png)
 
-## Add stack instances to your stack set using the AWS CLI<a name="stackinstances-create-cli"></a>
+## Add stack instances to a stack set using the AWS CLI<a name="stackinstances-create-cli"></a>
 
 When acting as a delegated administrator, you must set the `--call-as` parameter to `DELEGATED_ADMIN` each time you run a StackSets command\.
 

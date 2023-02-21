@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile InforNexusConnectorProfileProperties<a name="aws-properties-appflow-connectorprofile-infornexusconnectorprofileproperties"></a>
 
- The `InforNexusConnectorProfileProperties` property type specifies the connector\-specific profile properties required by Infor Nexus\. 
+ The connector\-specific profile properties required by Infor Nexus\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-infornexusconnectorprofileproperties-syntax"></a>
 

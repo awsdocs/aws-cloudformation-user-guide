@@ -41,7 +41,7 @@ The content of the email, composed of a subject line and either an HTML part or 
 #### <a name="aws-resource-ses-template-return-values-fn--getatt-fn--getatt"></a>
 
 `Id`  <a name="Id-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.
 
 ## Examples<a name="aws-resource-ses-template--examples"></a>
 
@@ -56,7 +56,7 @@ Specifies an email template, which is used when sending templated email messages
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "Amazon SES Template Sample Template",
+    "Description": "AWS SES Template Sample Template",
     "Parameters": {
         "TemplateName": {
             "Type": "String"
@@ -99,7 +99,7 @@ Specifies an email template, which is used when sending templated email messages
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: Amazon SES Template Sample Template
+Description: AWS SES Template Sample Template
 Parameters:
   TemplateName:
     Type: String

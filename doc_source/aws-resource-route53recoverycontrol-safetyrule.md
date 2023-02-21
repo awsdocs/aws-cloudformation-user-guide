@@ -61,7 +61,7 @@ For example, if you specify one gating routing control and you set the `Type` in
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-route53recoverycontrol-safetyrule-name"></a>
-The name of the assertion rule\. You can use any non\-white space character in the name\. The name must be unique within a control panel\.  
+The name of the assertion rule\. The name must be unique within a control panel\. You can use any non\-white space character in the name except the following: & > < ' \(single quote\) " \(double quote\) ; \(semicolon\)  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

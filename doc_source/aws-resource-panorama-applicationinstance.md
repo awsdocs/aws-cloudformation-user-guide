@@ -118,7 +118,7 @@ The ARN of a runtime role for the application instance\.
 Only include instances with a specific status\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `DEPLOYMENT_ERROR | DEPLOYMENT_SUCCEEDED | PROCESSING_DEPLOYMENT | PROCESSING_REMOVAL | REMOVAL_FAILED | REMOVAL_SUCCEEDED`  
+*Allowed values*: `DEPLOYMENT_ERROR | DEPLOYMENT_FAILED | DEPLOYMENT_SUCCEEDED | PROCESSING_DEPLOYMENT | PROCESSING_REMOVAL | REMOVAL_FAILED | REMOVAL_SUCCEEDED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-panorama-applicationinstance-tags"></a>

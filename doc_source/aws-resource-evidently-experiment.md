@@ -20,7 +20,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[OnlineAbConfig](#cfn-evidently-experiment-onlineabconfig)" : OnlineAbConfigObject,
       "[Project](#cfn-evidently-experiment-project)" : String,
       "[RandomizationSalt](#cfn-evidently-experiment-randomizationsalt)" : String,
+      "[RemoveSegment](#cfn-evidently-experiment-removesegment)" : Boolean,
+      "[RunningStatus](#cfn-evidently-experiment-runningstatus)" : RunningStatusObject,
       "[SamplingRate](#cfn-evidently-experiment-samplingrate)" : Integer,
+      "[Segment](#cfn-evidently-experiment-segment)" : String,
       "[Tags](#cfn-evidently-experiment-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Treatments](#cfn-evidently-experiment-treatments)" : [ TreatmentObject, ... ]
     }
@@ -40,7 +43,11 @@ Properties:
     OnlineAbConfigObject
   [Project](#cfn-evidently-experiment-project): String
   [RandomizationSalt](#cfn-evidently-experiment-randomizationsalt): String
+  [RemoveSegment](#cfn-evidently-experiment-removesegment): Boolean
+  [RunningStatus](#cfn-evidently-experiment-runningstatus): 
+    RunningStatusObject
   [SamplingRate](#cfn-evidently-experiment-samplingrate): Integer
+  [Segment](#cfn-evidently-experiment-segment): String
   [Tags](#cfn-evidently-experiment-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Treatments](#cfn-evidently-experiment-treatments): 
@@ -85,11 +92,30 @@ When Evidently assigns a particular user session to an experiment, it must use a
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`RemoveSegment`  <a name="cfn-evidently-experiment-removesegment"></a>
+Set this to `true` to remove the segment that is associated with this experiment\. You can't use this parameter if the experiment is currently running\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RunningStatus`  <a name="cfn-evidently-experiment-runningstatus"></a>
+A structure that you can use to start and stop the experiment\.  
+*Required*: No  
+*Type*: [RunningStatusObject](aws-properties-evidently-experiment-runningstatusobject.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SamplingRate`  <a name="cfn-evidently-experiment-samplingrate"></a>
 The portion of the available audience that you want to allocate to this experiment, in thousandths of a percent\. The available audience is the total audience minus the audience that you have allocated to overrides or current launches of this feature\.  
 This is represented in thousandths of a percent\. For example, specify 10,000 to allocate 10% of the available audience\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Segment`  <a name="cfn-evidently-experiment-segment"></a>
+Specifies an audience *segment* to use in the experiment\. When a segment is used in an experiment, only user sessions that match the segment pattern are used in the experiment\.  
+For more information, see [ Segment rule pattern syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html)\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-evidently-experiment-tags"></a>

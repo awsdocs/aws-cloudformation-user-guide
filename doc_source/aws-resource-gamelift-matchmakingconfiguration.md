@@ -95,7 +95,7 @@ Information to add to all events related to the matchmaking configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-gamelift-matchmakingconfiguration-description"></a>
-A descriptive label that is associated with matchmaking configuration\.  
+A description for the matchmaking configuration\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

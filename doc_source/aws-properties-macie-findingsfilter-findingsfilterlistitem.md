@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-macie-findingsfilter-findingsfilterlistitem-properties"></a>
 
 `Id`  <a name="cfn-macie-findingsfilter-findingsfilterlistitem-id"></a>
-The unique identifier for the filter\.  
+The unique identifier for the findings filter\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-macie-findingsfilter-findingsfilterlistitem-name"></a>
-The custom name of the filter\.  
+The custom name of the findings filter\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

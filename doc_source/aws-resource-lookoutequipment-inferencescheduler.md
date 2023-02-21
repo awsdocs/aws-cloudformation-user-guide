@@ -16,8 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::LookoutEquipment::InferenceScheduler",
   "Properties" : {
       "[DataDelayOffsetInMinutes](#cfn-lookoutequipment-inferencescheduler-datadelayoffsetinminutes)" : Integer,
-      "[DataInputConfiguration](#cfn-lookoutequipment-inferencescheduler-datainputconfiguration)" : Json,
-      "[DataOutputConfiguration](#cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration)" : Json,
+      "[DataInputConfiguration](#cfn-lookoutequipment-inferencescheduler-datainputconfiguration)" : DataInputConfiguration,
+      "[DataOutputConfiguration](#cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration)" : DataOutputConfiguration,
       "[DataUploadFrequency](#cfn-lookoutequipment-inferencescheduler-datauploadfrequency)" : String,
       "[InferenceSchedulerName](#cfn-lookoutequipment-inferencescheduler-inferenceschedulername)" : String,
       "[ModelName](#cfn-lookoutequipment-inferencescheduler-modelname)" : String,
@@ -34,8 +34,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::LookoutEquipment::InferenceScheduler
 Properties: 
   [DataDelayOffsetInMinutes](#cfn-lookoutequipment-inferencescheduler-datadelayoffsetinminutes): Integer
-  [DataInputConfiguration](#cfn-lookoutequipment-inferencescheduler-datainputconfiguration): Json
-  [DataOutputConfiguration](#cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration): Json
+  [DataInputConfiguration](#cfn-lookoutequipment-inferencescheduler-datainputconfiguration): 
+    DataInputConfiguration
+  [DataOutputConfiguration](#cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration): 
+    DataOutputConfiguration
   [DataUploadFrequency](#cfn-lookoutequipment-inferencescheduler-datauploadfrequency): String
   [InferenceSchedulerName](#cfn-lookoutequipment-inferencescheduler-inferenceschedulername): String
   [ModelName](#cfn-lookoutequipment-inferencescheduler-modelname): String
@@ -56,13 +58,13 @@ A period of time \(in minutes\) by which inference on the data is delayed after 
 `DataInputConfiguration`  <a name="cfn-lookoutequipment-inferencescheduler-datainputconfiguration"></a>
 Specifies configuration information for the input data for the inference scheduler, including delimiter, format, and dataset location\.  
 *Required*: Yes  
-*Type*: Json  
+*Type*: [DataInputConfiguration](aws-properties-lookoutequipment-inferencescheduler-datainputconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataOutputConfiguration`  <a name="cfn-lookoutequipment-inferencescheduler-dataoutputconfiguration"></a>
 Specifies configuration information for the output results for the inference scheduler, including the Amazon S3 location for the output\.  
 *Required*: Yes  
-*Type*: Json  
+*Type*: [DataOutputConfiguration](aws-properties-lookoutequipment-inferencescheduler-dataoutputconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataUploadFrequency`  <a name="cfn-lookoutequipment-inferencescheduler-datauploadfrequency"></a>

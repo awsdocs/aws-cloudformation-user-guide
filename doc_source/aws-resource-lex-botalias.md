@@ -51,7 +51,7 @@ Properties:
 ## Properties<a name="aws-resource-lex-botalias-properties"></a>
 
 `BotAliasLocaleSettings`  <a name="cfn-lex-botalias-botaliaslocalesettings"></a>
-Maps configuration information to a specific locale\. You can use this parameter to specify a specific Lambda function to run different functions in different locales\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [List](aws-properties-lex-botalias-botaliaslocalesettings.md) of [BotAliasLocaleSettingsItem](aws-properties-lex-botalias-botaliaslocalesettingsitem.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

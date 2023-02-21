@@ -52,7 +52,7 @@ The Amazon Resource Number \(ARN\) for the hook to set `Configuration` for\.
 You must specify either `TypeName` and `Configuration` or `TypeARN` and `Configuration`\.  
 *Required*: Conditional  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TypeName`  <a name="cfn-cloudformation-hooktypeconfig-typename"></a>
 The unique name for your hook\. Specifies a three\-part namespace for your hook, with a recommended pattern of `Organization::Service::Hook`\.  

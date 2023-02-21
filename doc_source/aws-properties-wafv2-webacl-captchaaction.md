@@ -13,8 +13,6 @@ You can configure the expiration time in the `CaptchaConfig` `ImmunityTimeProper
 
 This action option is available for rules\. It isn't available for web ACL default actions\. 
 
-This is used in the context of other settings, for example to specify values for `RuleAction` and web ACL `DefaultAction`\. 
-
 ## Syntax<a name="aws-properties-wafv2-webacl-captchaaction-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -37,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-webacl-captchaaction-properties"></a>
 
 `CustomRequestHandling`  <a name="cfn-wafv2-webacl-captchaaction-customrequesthandling"></a>
-Defines custom handling for the web request\.  
+Defines custom handling for the web request, used when the `CAPTCHA` inspection determines that the request's token is valid and unexpired\.  
 For information about customizing web requests and responses, see [Customizing web requests and responses in AWS WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html) in the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\.   
 *Required*: No  
 *Type*: [CustomRequestHandling](aws-properties-wafv2-webacl-customrequesthandling.md)  

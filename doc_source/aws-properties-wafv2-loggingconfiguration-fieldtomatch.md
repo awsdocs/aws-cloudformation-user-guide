@@ -1,8 +1,8 @@
 # AWS::WAFv2::LoggingConfiguration FieldToMatch<a name="aws-properties-wafv2-loggingconfiguration-fieldtomatch"></a>
 
-The part of a web request that you want AWS WAF to inspect\. Include the single `FieldToMatch` type that you want to inspect, with additional specifications as needed, according to the type\. You specify a single request component in `FieldToMatch` for each rule statement that requires it\. To inspect more than one component of a web request, create a separate rule statement for each component\.
+The parts of the request that you want to keep out of the logs\. This is used in the logging configuration `RedactedFields` specification\. 
 
-JSON specification for a `QueryString` field to match: 
+Example JSON for a `QueryString` field to match: 
 
  ` "FieldToMatch": { "QueryString": {} }` 
 
@@ -18,10 +18,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[JsonBody](#cfn-wafv2-loggingconfiguration-fieldtomatch-jsonbody)" : Json,
+  "[JsonBody](#cfn-wafv2-loggingconfiguration-fieldtomatch-jsonbody)" : JsonBody,
   "[Method](#cfn-wafv2-loggingconfiguration-fieldtomatch-method)" : Json,
   "[QueryString](#cfn-wafv2-loggingconfiguration-fieldtomatch-querystring)" : Json,
-  "[SingleHeader](#cfn-wafv2-loggingconfiguration-fieldtomatch-singleheader)" : Json,
+  "[SingleHeader](#cfn-wafv2-loggingconfiguration-fieldtomatch-singleheader)" : SingleHeader,
   "[UriPath](#cfn-wafv2-loggingconfiguration-fieldtomatch-uripath)" : Json
 }
 ```
@@ -30,43 +30,43 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [JsonBody](#cfn-wafv2-loggingconfiguration-fieldtomatch-jsonbody): 
-    Json
+    JsonBody
   [Method](#cfn-wafv2-loggingconfiguration-fieldtomatch-method): Json
   [QueryString](#cfn-wafv2-loggingconfiguration-fieldtomatch-querystring): Json
-  [SingleHeader](#cfn-wafv2-loggingconfiguration-fieldtomatch-singleheader): Json
+  [SingleHeader](#cfn-wafv2-loggingconfiguration-fieldtomatch-singleheader): 
+    SingleHeader
   [UriPath](#cfn-wafv2-loggingconfiguration-fieldtomatch-uripath): Json
 ```
 
 ## Properties<a name="aws-properties-wafv2-loggingconfiguration-fieldtomatch-properties"></a>
 
 `JsonBody`  <a name="cfn-wafv2-loggingconfiguration-fieldtomatch-jsonbody"></a>
-Inspect the request body as JSON\. The request body immediately follows the request headers\. This is the part of a request that contains any additional data that you want to send to your web server as the HTTP request body, such as data from a form\.   
-Note that only the first 8 KB \(8192 bytes\) of the request body are forwarded to AWS WAF for inspection by the underlying host service\. If you don't need to inspect more than 8 KB, you can guarantee that you don't allow additional bytes in by combining a statement that inspects the body of the web request, such as [ByteMatchStatement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-statement.html#cfn-wafv2-rulegroup-statement-bytematchstatement) or [RegexPatternSetReferenceStatement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-statement.html#cfn-wafv2-rulegroup-statement-regexpatternsetreferencestatement), with a [SizeConstraintStatement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-statement.html#cfn-wafv2-rulegroup-statement-sizeconstraintstatement) that enforces an 8 KB size limit on the body of the request\. AWS WAF doesn't support inspecting the entire contents of web requests whose bodies exceed the 8 KB limit\.  
+Redact the request body JSON\.   
 *Required*: No  
-*Type*: Json  
+*Type*: [JsonBody](aws-properties-wafv2-loggingconfiguration-jsonbody.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Method`  <a name="cfn-wafv2-loggingconfiguration-fieldtomatch-method"></a>
-Inspect the HTTP method\. The method indicates the type of operation that the request is asking the origin to perform\.   
+Redact the indicated HTTP method\. The method indicates the type of operation that the request is asking the origin to perform\.   
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `QueryString`  <a name="cfn-wafv2-loggingconfiguration-fieldtomatch-querystring"></a>
-Inspect the query string\. This is the part of a URL that appears after a `?` character, if any\.  
+Redact the query string\. This is the part of a URL that appears after a `?` character, if any\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SingleHeader`  <a name="cfn-wafv2-loggingconfiguration-fieldtomatch-singleheader"></a>
-Inspect a single header\. Provide the name of the header to inspect, for example, `User-Agent` or `Referer`\. This setting isn't case sensitive\.  
+Redact a single header\. Provide the name of the header to inspect, for example, `User-Agent` or `Referer`\. This setting isn't case sensitive\.  
 Example JSON: `"SingleHeader": { "Name": "haystack" }`   
 *Required*: No  
-*Type*: Json  
+*Type*: [SingleHeader](aws-properties-wafv2-loggingconfiguration-singleheader.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UriPath`  <a name="cfn-wafv2-loggingconfiguration-fieldtomatch-uripath"></a>
-Inspect the request URI path\. This is the part of a web request that identifies a resource, for example, `/images/daily-ad.jpg`\.  
+Redact the request URI path\. This is the part of the web request that identifies a resource, for example, `/images/daily-ad.jpg`\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

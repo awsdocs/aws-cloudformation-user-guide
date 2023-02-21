@@ -1,6 +1,6 @@
 # AWS::FSx::FileSystem<a name="aws-resource-fsx-filesystem"></a>
 
-The `AWS::FSx::FileSystem` resource is an Amazon FSx resource type that creates an Amazon FSx file system\. You can create any of the following supported file system types:
+The `AWS::FSx::FileSystem` resource is an Amazon FSx resource type that specifies an Amazon FSx file system\. You can create any of the following supported file system types:
 + Amazon FSx for Lustre
 + Amazon FSx for NetApp ONTAP
 + Amazon FSx for OpenZFS
@@ -63,7 +63,7 @@ Properties:
 ## Properties<a name="aws-resource-fsx-filesystem-properties"></a>
 
 `BackupId`  <a name="cfn-fsx-filesystem-backupid"></a>
-The ID of the source backup\. Specifies the backup that you are copying\.  
+The ID of the file system backup that you are using to create a file system\. For more information, see [CreateFileSystemFromBackup](https://docs.aws.amazon.com/fsx/latest/APIReference/API_CreateFileSystemFromBackup.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -88,19 +88,25 @@ If you set `FileSystemTypeVersion` to `2.10` for a `PERSISTENT_2` Lustre deploym
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-fsx-filesystem-kmskeyid"></a>
-The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt the file system's data for Amazon FSx for Windows File Server file systems, Amazon FSx for NetApp ONTAP file systems, and `PERSISTENT` Amazon FSx for Lustre file systems at rest\. If this ID isn't specified, the Amazon FSx\-managed key for your account is used\. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using the Amazon FSx\-managed key for your account\. For more information, see [Encrypt](https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html) in the * AWS Key Management Service API Reference*\.  
+The ID of the AWS Key Management Service \(AWS KMS\) key used to encrypt Amazon FSx file system data\. Used as follows with Amazon FSx file system types:  
++ Amazon FSx for Lustre `PERSISTENT_1` and `PERSISTENT_2` deployment types only\.
+
+   `SCRATCH_1` and `SCRATCH_2` types are encrypted using the Amazon FSx service AWS KMS key for your account\.
++ Amazon FSx for NetApp ONTAP
++ Amazon FSx for OpenZFS
++ Amazon FSx for Windows File Server
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LustreConfiguration`  <a name="cfn-fsx-filesystem-lustreconfiguration"></a>
 The Lustre configuration for the file system being created\.  
-The following parameters are not supported for file systems with the `Persistent_2` deployment type\. Instead, use `CreateDataRepositoryAssociation` to create a data repository association to link your Lustre file system to a data repository\.  
+The following parameters are not supported for file systems with the Lustre `Persistent_2` deployment type\.  
 +  `AutoImportPolicy` 
 +  `ExportPath` 
 +  `ImportedChunkSize` 
 +  `ImportPath` 
-*Required*: No  
+*Required*: Conditional  
 *Type*: [LustreConfiguration](aws-properties-fsx-filesystem-lustreconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -124,8 +130,16 @@ A list of IDs specifying the security groups to apply to all network interfaces 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageCapacity`  <a name="cfn-fsx-filesystem-storagecapacity"></a>
-Sets the storage capacity of the file system that you're creating\. `StorageCapacity` is required if you are creating a new file system\. Do not include `StorageCapacity` if you are creating a file system from a backup\.  
-For Lustre file systems:  
+Sets the storage capacity of the file system that you're creating\. `StorageCapacity` is required if you are creating a new file system\.  
+**FSx for Lustre file systems** \- The amount of storage capacity that you can configure depends on the value that you set for `StorageType` and the Lustre `DeploymentType`, as follows:  
++ For `SCRATCH_2`, `PERSISTENT_2` and `PERSISTENT_1` deployment types using SSD storage type, the valid values are 1200 GiB, 2400 GiB, and increments of 2400 GiB\.
++ For `PERSISTENT_1` HDD file systems, valid values are increments of 6000 GiB for 12 MB/s/TiB file systems and increments of 1800 GiB for 40 MB/s/TiB file systems\.
++ For `SCRATCH_1` deployment type, valid values are 1200 GiB, 2400 GiB, and increments of 3600 GiB\.
+**FSx for ONTAP file systems** \- The amount of storage capacity that you can configure is from 1024 GiB up to 196,608 GiB \(192 TiB\)\.  
+**FSx for OpenZFS file systems** \- The amount of storage capacity that you can configure is from 64 GiB up to 524,288 GiB \(512 TiB\)\. If you are creating a file system from a backup, you can specify a storage capacity equal to or greater than the original file system's storage capacity\.  
+**FSx for Windows File Server file systems** \- The amount of storage capacity that you can configure depends on the value that you set for `StorageType` as follows:  
++ For SSD storage, valid values are 32 GiB\-65,536 GiB \(64 TiB\)\.
++ For HDD storage, valid values are 2000 GiB\-65,536 GiB \(64 TiB\)\.
 *Required*: Conditional  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -135,7 +149,7 @@ For Lustre file systems:
 `StorageType`  <a name="cfn-fsx-filesystem-storagetype"></a>
 Sets the storage type for the file system that you're creating\. Valid values are `SSD` and `HDD`\.  
 + Set to `SSD` to use solid state drive storage\. SSD is supported on all Windows, Lustre, ONTAP, and OpenZFS deployment types\.
-+ Set to `HDD` to use hard disk drive storage\. HDD is supported on `SINGLE_AZ_2` and `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT` Lustre file system deployment types\. 
++ Set to `HDD` to use hard disk drive storage\. HDD is supported on `SINGLE_AZ_2` and `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT_1` Lustre file system deployment types\. 
 Default value is `SSD`\. For more information, see [ Storage type options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options) in the *FSx for Windows File Server User Guide* and [Multiple storage options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options) in the *FSx for Lustre User Guide*\.   
 *Required*: No  
 *Type*: String  
@@ -151,7 +165,8 @@ For Windows `SINGLE_AZ_1` and `SINGLE_AZ_2` and all Lustre deployment types, pro
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-fsx-filesystem-tags"></a>
-The tags to associate with the file system\. For more information, see [Tagging your Amazon EC2 resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html) in the *Amazon EC2 User Guide*\.  
+An array of key\-value pairs to apply to this resource\.  
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `50`  
@@ -188,9 +203,13 @@ Returns the FSx for Windows file system's DNSName\.
 Example: `amznfsxp1honlek.corp.example.com`
 
 `LustreMountName`  <a name="LustreMountName-fn::getatt"></a>
-Returns the file system's LustreMountName\.  
-Example for SCRATCH\_1 deployment types: This value is always `fsx`\.  
-Example for SCRATCH\_2 and PERSISTENT deployment types: `2p3fhbmv`
+Returns the Lustre file system's `LustreMountName`\.  
+Example for `SCRATCH_1` deployment types: This value is always `fsx`\.  
+Example for `SCRATCH_2` and `PERSISTENT` deployment types: `2p3fhbmv`
+
+`ResourceARN`  <a name="ResourceARN-fn::getatt"></a>
+Returns the Amazon Resource Name \(ARN\) for the Amazon FSx file system\.  
+Example: `arn:aws:fsx:us-east-2:111122223333:file-system/fs-0123abcd56789ef0a`
 
 `RootVolumeId`  <a name="RootVolumeId-fn::getatt"></a>
 Returns the root volume ID of the FSx for OpenZFS file system\.  
@@ -449,11 +468,11 @@ Outputs:
     Value: !Ref WindowsSelfManagedADFileSystemWithAllConfigs
 ```
 
-### Create an Amazon FSx for Windows File Server File System in an AWS Managed Active Directory<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an__Managed_Active_Directory"></a>
+### Create an Amazon FSx for Windows File Server File System in an Amazon Managed Active Directory<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an_Amazon_Managed_Active_Directory"></a>
 
 The following examples create a Multi\-AZ Amazon FSx for Windows File Server file system using HDD storage that is joined to an AWS Managed Active Directory\.
 
-#### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an__Managed_Active_Directory--json"></a>
+#### JSON<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an_Amazon_Managed_Active_Directory--json"></a>
 
 ```
 {
@@ -513,7 +532,7 @@ The following examples create a Multi\-AZ Amazon FSx for Windows File Server fil
 }
 ```
 
-#### YAML<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an__Managed_Active_Directory--yaml"></a>
+#### YAML<a name="aws-resource-fsx-filesystem--examples--Create_an_Amazon_FSx_for_Windows_File_Server_File_System_in_an_Amazon_Managed_Active_Directory--yaml"></a>
 
 ```
 Resources:
@@ -724,8 +743,8 @@ OntapMultiAzFileSystemWithAllConfigs:
          DiskIopsConfiguration:
             Iops: 10000
             Mode: "USER_PROVISIONED"
-            PreferredSubnetId: "subnet-abcdef01234567890"
-            RouteTableIds: ["rtb-abcdef01234567890"]
+         PreferredSubnetId: "subnet-abcdef01234567890"
+         RouteTableIds: ["rtb-abcdef01234567890"]
          ThroughputCapacity: 512
          WeeklyMaintenanceStartTime: "4:16:30"
       Tags:

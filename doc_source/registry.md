@@ -73,7 +73,7 @@ If you use an IAM role to perform your stack operations, that IAM role must have
 + Configure AWS Config to record all resource types\. For more information, see [Record configurations for third\-party resources](https://docs.aws.amazon.com/config/latest/developerguide/customresources.html) in the *AWS Config Developer Guide*\.
 **Note**  
 AWS Config doesn't support recording of private resources containing properties defined as both required *and* write\-only\.  
-By design, resource properties defined as write\-only aren't returned in the schema used to create AWS Config configuration item\. Because of this, including a property that's defined as both write\-only and required will cause the configuration item creation to fail, as a required property won't be not present\. To view the schema that will be used to create the configuration item, you can review the `schema` property of the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) action\.
+By design, resource properties defined as write\-only aren't returned in the schema used to create AWS Config configuration item\. Because of this, including a property that's defined as both write\-only and required will cause the configuration item creation to fail, as a required property will not be present\. To view the schema that will be used to create the configuration item, you can review the `schema` property of the [DescribeType](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_DescribeType.html) action\.
 
 For more information about configuration items, see [Configuration items](https://docs.aws.amazon.com/config/latest/developerguide/config-concepts.html#config-items) in the *AWS Config Developer Guide*\.
 

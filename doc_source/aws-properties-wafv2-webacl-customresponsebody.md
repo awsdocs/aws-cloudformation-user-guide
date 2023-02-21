@@ -1,6 +1,6 @@
 # AWS::WAFv2::WebACL CustomResponseBody<a name="aws-properties-wafv2-webacl-customresponsebody"></a>
 
-The response body to use in a custom response to a web request\. This is referenced by key from the `CustomResponse` `CustomResponseBodyKey`\.
+The response body to use in a custom response to a web request\. This is referenced by key from [CustomResponse](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-blockaction.html#cfn-wafv2-webacl-blockaction-customresponse) `CustomResponseBodyKey`\.
 
 ## Syntax<a name="aws-properties-wafv2-webacl-customresponsebody-syntax"></a>
 

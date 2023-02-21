@@ -1,6 +1,6 @@
 # AWS::Kendra::Index Relevance<a name="aws-properties-kendra-index-relevance"></a>
 
-Provides information for manually tuning the relevance of a field in a search\. When a query includes terms that match the field, the results are given a boost in the response based on these tuning parameters\.
+Provides information for tuning the relevance of a field in a search\. When a query includes terms that match the field, the results are given a boost in the response based on these tuning parameters\.
 
 ## Syntax<a name="aws-properties-kendra-index-relevance-syntax"></a>
 
@@ -66,7 +66,7 @@ Only applies to `LONG` and `DOUBLE` fields\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ValueImportanceItems`  <a name="cfn-kendra-index-relevance-valueimportanceitems"></a>
-An array of key\-value pairs that contains an array of values that should be given a different boost when they appear in the search result list\. For example, if you are boosting query terms that match the department field in the result, query terms that match the department field are boosted in the result\. You can add entries from the department field to boost documents with those values higher\.  
+An array of key\-value pairs for different boosts when they appear in the search result list\. For example, if you want to boost query terms that match the "department" field in the result, query terms that match this field are boosted in the result\. You can add entries from the department field to boost documents with those values higher\.  
 For example, you can add entries to the map with names of departments\. If you add "HR", 5 and "Legal",3 those departments are given special attention when they appear in the metadata of a document\.  
 *Required*: No  
 *Type*: List of [ValueImportanceItem](aws-properties-kendra-index-valueimportanceitem.md)  

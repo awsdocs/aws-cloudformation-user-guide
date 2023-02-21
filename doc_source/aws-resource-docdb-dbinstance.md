@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DBClusterIdentifier](#cfn-docdb-dbinstance-dbclusteridentifier)" : String,
       "[DBInstanceClass](#cfn-docdb-dbinstance-dbinstanceclass)" : String,
       "[DBInstanceIdentifier](#cfn-docdb-dbinstance-dbinstanceidentifier)" : String,
+      "[EnablePerformanceInsights](#cfn-docdb-dbinstance-enableperformanceinsights)" : Boolean,
       "[PreferredMaintenanceWindow](#cfn-docdb-dbinstance-preferredmaintenancewindow)" : String,
       "[Tags](#cfn-docdb-dbinstance-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -33,6 +34,7 @@ Properties:
   [DBClusterIdentifier](#cfn-docdb-dbinstance-dbclusteridentifier): String
   [DBInstanceClass](#cfn-docdb-dbinstance-dbinstanceclass): String
   [DBInstanceIdentifier](#cfn-docdb-dbinstance-dbinstanceidentifier): String
+  [EnablePerformanceInsights](#cfn-docdb-dbinstance-enableperformanceinsights): Boolean
   [PreferredMaintenanceWindow](#cfn-docdb-dbinstance-preferredmaintenancewindow): String
   [Tags](#cfn-docdb-dbinstance-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -77,6 +79,12 @@ Example: `mydbinstance`
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EnablePerformanceInsights`  <a name="cfn-docdb-dbinstance-enableperformanceinsights"></a>
+A value that indicates whether to enable Performance Insights for the DB Instance\. For more information, see [Using Amazon Performance Insights](https://docs.aws.amazon.com/documentdb/latest/developerguide/performance-insights.html)\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PreferredMaintenanceWindow`  <a name="cfn-docdb-dbinstance-preferredmaintenancewindow"></a>
 The time range each week during which system maintenance can occur, in Universal Coordinated Time \(UTC\)\.  

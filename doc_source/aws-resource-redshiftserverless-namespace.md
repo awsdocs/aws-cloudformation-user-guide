@@ -130,3 +130,36 @@ GetAtt returns a value for a specified attribute of this type\. For more informa
 
 `Namespace`  <a name="Namespace-fn::getatt"></a>
 Returns the `Namespace` value\.
+
+`Namespace.AdminUsername`  <a name="Namespace.AdminUsername-fn::getatt"></a>
+Property description not available\.
+
+`Namespace.CreationDate`  <a name="Namespace.CreationDate-fn::getatt"></a>
+Property description not available\.
+
+`Namespace.DbName`  <a name="Namespace.DbName-fn::getatt"></a>
+Property description not available\.
+
+`Namespace.DefaultIamRoleArn`  <a name="Namespace.DefaultIamRoleArn-fn::getatt"></a>
+Property description not available\.
+
+`Namespace.IamRoles`  <a name="Namespace.IamRoles-fn::getatt"></a>
+Property description not available\.
+
+`Namespace.KmsKeyId`  <a name="Namespace.KmsKeyId-fn::getatt"></a>
+Property description not available\.
+
+`Namespace.LogExports`  <a name="Namespace.LogExports-fn::getatt"></a>
+Property description not available\.
+
+`Namespace.NamespaceArn`  <a name="Namespace.NamespaceArn-fn::getatt"></a>
+Property description not available\.
+
+`Namespace.NamespaceId`  <a name="Namespace.NamespaceId-fn::getatt"></a>
+Property description not available\.
+
+`Namespace.NamespaceName`  <a name="Namespace.NamespaceName-fn::getatt"></a>
+Property description not available\.
+
+`Namespace.Status`  <a name="Namespace.Status-fn::getatt"></a>
+Property description not available\.

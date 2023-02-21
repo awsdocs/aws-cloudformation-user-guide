@@ -33,7 +33,7 @@ Properties:
 The JSON document that describes the policy\.  
 *Required*: Yes  
 *Type*: Json  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyName`  <a name="cfn-iot-policy-policyname"></a>
 The policy name\.  
@@ -61,6 +61,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the AWS IoT policy, such as `arn:aws:iot:us-east-2:123456789012:policy/MyPolicy`\.
+
+`Id`  <a name="Id-fn::getatt"></a>
+The name of this policy\.
 
 ## Examples<a name="aws-resource-iot-policy--examples"></a>
 

@@ -84,7 +84,7 @@ The Amazon Resource Name \(ARN\) of an AWS Secrets Managersecret that contains t
 + consumerKey \- The application public key generated when you created your Salesforce application\.
 + consumerSecret \- The application private key generated when you created your Salesforce application\.
 + password \- The password associated with the user logging in to the Salesforce instance\.
-+ securityToken \- The token associated with the user account logging in to the Salesforce instance\.
++ securityToken \- The token associated with the user logging in to the Salesforce instance\.
 + username \- The user name of the user logging in to the Salesforce instance\.
 *Required*: Yes  
 *Type*: String  

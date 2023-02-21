@@ -11,10 +11,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AlgorithmHyperParameters](#cfn-personalize-solution-solutionconfig-algorithmhyperparameters)" : {Key : Value, ...},
-  "[AutoMLConfig](#cfn-personalize-solution-solutionconfig-automlconfig)" : Json,
+  "[AutoMLConfig](#cfn-personalize-solution-solutionconfig-automlconfig)" : AutoMLConfig,
   "[EventValueThreshold](#cfn-personalize-solution-solutionconfig-eventvaluethreshold)" : String,
   "[FeatureTransformationParameters](#cfn-personalize-solution-solutionconfig-featuretransformationparameters)" : {Key : Value, ...},
-  "[HpoConfig](#cfn-personalize-solution-solutionconfig-hpoconfig)" : Json
+  "[HpoConfig](#cfn-personalize-solution-solutionconfig-hpoconfig)" : HpoConfig
 }
 ```
 
@@ -23,11 +23,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AlgorithmHyperParameters](#cfn-personalize-solution-solutionconfig-algorithmhyperparameters): 
     Key : Value
-  [AutoMLConfig](#cfn-personalize-solution-solutionconfig-automlconfig): Json
+  [AutoMLConfig](#cfn-personalize-solution-solutionconfig-automlconfig): 
+    AutoMLConfig
   [EventValueThreshold](#cfn-personalize-solution-solutionconfig-eventvaluethreshold): String
   [FeatureTransformationParameters](#cfn-personalize-solution-solutionconfig-featuretransformationparameters): 
     Key : Value
-  [HpoConfig](#cfn-personalize-solution-solutionconfig-hpoconfig): Json
+  [HpoConfig](#cfn-personalize-solution-solutionconfig-hpoconfig): 
+    HpoConfig
 ```
 
 ## Properties<a name="aws-properties-personalize-solution-solutionconfig-properties"></a>
@@ -41,7 +43,7 @@ Lists the hyperparameter names and ranges\.
 `AutoMLConfig`  <a name="cfn-personalize-solution-solutionconfig-automlconfig"></a>
 The [AutoMLConfig](https://docs.aws.amazon.com/personalize/latest/dg/API_AutoMLConfig.html) object containing a list of recipes to search when AutoML is performed\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [AutoMLConfig](aws-properties-personalize-solution-automlconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EventValueThreshold`  <a name="cfn-personalize-solution-solutionconfig-eventvaluethreshold"></a>
@@ -60,5 +62,5 @@ Lists the feature transformation parameters\.
 `HpoConfig`  <a name="cfn-personalize-solution-solutionconfig-hpoconfig"></a>
 Describes the properties for hyperparameter optimization \(HPO\)\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [HpoConfig](aws-properties-personalize-solution-hpoconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

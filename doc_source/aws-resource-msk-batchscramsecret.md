@@ -1,6 +1,6 @@
 # AWS::MSK::BatchScramSecret<a name="aws-resource-msk-batchscramsecret"></a>
 
-Represents a secret stored in the Amazon Secrets Manager that can be used to authenticate with a cluster using a user name and a password\.
+Represents a secret stored in the Amazon Secrets Manager that can be used to authenticate with a cluster using your sign\-in credentials\.
 
 ## Syntax<a name="aws-resource-msk-batchscramsecret-syntax"></a>
 

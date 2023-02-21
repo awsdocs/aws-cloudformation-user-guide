@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoTSiteWise::Asset",
   "Properties" : {
+      "[AssetDescription](#cfn-iotsitewise-asset-assetdescription)" : String,
       "[AssetHierarchies](#cfn-iotsitewise-asset-assethierarchies)" : [ AssetHierarchy, ... ],
       "[AssetModelId](#cfn-iotsitewise-asset-assetmodelid)" : String,
       "[AssetName](#cfn-iotsitewise-asset-assetname)" : String,
@@ -26,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::IoTSiteWise::Asset
 Properties: 
+  [AssetDescription](#cfn-iotsitewise-asset-assetdescription): String
   [AssetHierarchies](#cfn-iotsitewise-asset-assethierarchies): 
     - AssetHierarchy
   [AssetModelId](#cfn-iotsitewise-asset-assetmodelid): String
@@ -37,6 +39,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-iotsitewise-asset-properties"></a>
+
+`AssetDescription`  <a name="cfn-iotsitewise-asset-assetdescription"></a>
+A description for the asset\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AssetHierarchies`  <a name="cfn-iotsitewise-asset-assethierarchies"></a>
 A list of asset hierarchies that each contain a `hierarchyLogicalId`\. A hierarchy specifies allowed parent/child asset relationships\.  

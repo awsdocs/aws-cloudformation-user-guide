@@ -2,7 +2,7 @@
 
 Pseudo parameters are parameters that are predefined by AWS CloudFormation\. You don't declare them in your template\. Use them the same way as you would a parameter, as the argument for the `Ref` function\.
 
-## Example<a name="w11339ab1c31c33b5"></a>
+## Example<a name="w2ab1c33c33b5"></a>
 
 The following snippet assigns the value of the `AWS::Region` pseudo parameter to an output value:
 
@@ -88,7 +88,7 @@ For example, you can use the `AWS::NoValue` parameter when you want to use a sna
   "Properties" : {
     "AllocatedStorage" : "5",
     "DBInstanceClass" : "db.t2.small",
-    "Engine" : "mysql",
+    "Engine" : "MySQL",
     "EngineVersion" : "5.5",
     "MasterUsername" : { "Ref" : "DBUser" },
     "MasterUserPassword" : { "Ref" : "DBPassword" },
@@ -112,7 +112,7 @@ MyDB:
   Properties:
     AllocatedStorage: '5'
     DBInstanceClass: db.t2.small
-    Engine: mysql
+    Engine: MySQL
     EngineVersion: '5.5'
     MasterUsername:
       Ref: DBUser
@@ -122,9 +122,9 @@ MyDB:
       Ref: MyRDSParamGroup
     DBSnapshotIdentifier:
       Fn::If:
-      - UseDBSnapshot
-      - Ref: DBSnapshotName
-      - Ref: AWS::NoValue
+        - UseDBSnapshot
+        - Ref: DBSnapshotName
+        - Ref: AWS::NoValue
 ```
 
 ## `AWS::Partition`<a name="cfn-pseudo-param-partition"></a>

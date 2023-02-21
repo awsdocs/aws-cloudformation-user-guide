@@ -5,7 +5,7 @@ Amazon Lex V2 is the only supported version in AWS CloudFormation\.
 
 Specifies an Amazon Lex conversational bot\. 
 
-You must configure an intent based on the AMAZON\.FallbackIntent built\-in intent\. If you don't add one, creating the bot will fail\.
+You must configure an intent based on the `AMAZON.FallbackIntent` built\-in intent\. If you don't add one, creating the bot will fail\.
 
 ## Syntax<a name="aws-resource-lex-bot-syntax"></a>
 
@@ -83,7 +83,7 @@ A list of tags to add to the bot\. You can only add tags when you import a bot\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataPrivacy`  <a name="cfn-lex-bot-dataprivacy"></a>
-Provides information on additional privacy protections Amazon Lex should use with the bot's data\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: [DataPrivacy](aws-properties-lex-bot-dataprivacy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -105,10 +105,9 @@ You can specify between 60 \(1 minute\) and 86,400 \(24 hours\) seconds\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-lex-bot-name"></a>
-The name of the field to filter the list of bots\.  
+The name of the bot locale\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `BotLocaleName`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-lex-bot-rolearn"></a>

@@ -10,7 +10,7 @@ You can't change the queue type after you create it and you can't convert an exi
 + If you delete a queue, you must wait at least 60 seconds before creating a queue with the same name\.
 + To successfully create a new queue, you must provide a queue name that adheres to the [limits related to queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-queues.html) and is unique within the scope of your queues\.
 
-For more information about creating FIFO \(first\-in\-first\-out\) queues, see [Creating an Amazon SQS queue \(AWS CloudFormation\)](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/create-queue-cloudformation.html) in the *Amazon SQS Developer Guide*\.
+For more information about creating FIFO \(first\-in\-first\-out\) queues, see [Creating an Amazon SQS queue \(AWS CloudFormation\)](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/screate-queue-cloudformation.html) in the *Amazon SQS Developer Guide*\.
 
 ## Syntax<a name="aws-resource-sqs-queue-syntax"></a>
 
@@ -35,6 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ReceiveMessageWaitTimeSeconds](#cfn-sqs-queue-receivemessagewaittimeseconds)" : Integer,
       "[RedriveAllowPolicy](#cfn-sqs-queue-redriveallowpolicy)" : Json,
       "[RedrivePolicy](#cfn-sqs-queue-redrivepolicy)" : Json,
+      "[SqsManagedSseEnabled](#cfn-sqs-queue-sqsmanagedsseenabled)" : Boolean,
       "[Tags](#cfn-sqs-queue-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VisibilityTimeout](#cfn-sqs-queue-visibilitytimeout)" : Integer
     }
@@ -59,6 +60,7 @@ Properties:
   [ReceiveMessageWaitTimeSeconds](#cfn-sqs-queue-receivemessagewaittimeseconds): Integer
   [RedriveAllowPolicy](#cfn-sqs-queue-redriveallowpolicy): Json
   [RedrivePolicy](#cfn-sqs-queue-redrivepolicy): Json
+  [SqsManagedSseEnabled](#cfn-sqs-queue-sqsmanagedsseenabled): Boolean
   [Tags](#cfn-sqs-queue-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VisibilityTimeout](#cfn-sqs-queue-visibilitytimeout): Integer
@@ -106,10 +108,11 @@ A shorter time period provides better security, but results in more calls to AWS
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsMasterKeyId`  <a name="cfn-sqs-queue-kmsmasterkeyid"></a>
-The ID of an AWS managed customer master key \(CMK\) for Amazon SQS or a custom CMK\. To use the AWS managed CMK for Amazon SQS, specify the \(default\) alias `alias/aws/sqs`\. For more information, see the following:  
+The ID of an AWS Key Management Service \(KMS\) for Amazon SQS, or a custom KMS\. To use the AWS managed KMS for Amazon SQS, specify a \(default\) alias ARN, alias name \(e\.g\. `alias/aws/sqs`\), key ARN, or key ID\. For more information, see the following:  
 +  [Encryption at rest](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html) in the *Amazon SQS Developer Guide* 
 +  [CreateQueue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html) in the *Amazon SQS API Reference* 
-+  The Customer Master Keys section of the [AWS Key Management Service Best Practices](https://d0.awsstatic.com/whitepapers/aws-kms-best-practices.pdf) whitepaper 
++  [Request Parameters](https://docs.aws.amazon.com/kms/latest/APIReference/API_DescribeKey.html#API_DescribeKey_RequestParameters) in the *AWS Key Management Service API Reference* 
++  The Key Management Service \(KMS\) section of the [AWS Key Management Service Best Practices](https://d0.awsstatic.com/whitepapers/aws-kms-best-practices.pdf) whitepaper 
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -165,6 +168,12 @@ The dead\-letter queue of a FIFO queue must also be a FIFO queue\. Similarly, th
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SqsManagedSseEnabled`  <a name="cfn-sqs-queue-sqsmanagedsseenabled"></a>
+ Enables server\-side queue encryption using SQS owned encryption keys\. Only one server\-side encryption option is supported per queue \(for example, [SSE\-KMS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sse-existing-queue.html) or [SSE\-SQS](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-configure-sqs-sse-queue.html)\)\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-sqs-queue-tags"></a>
 The tags that you attach to this queue\. For more information, see [Resource tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html) in the *AWS CloudFormation User Guide*\.  
 *Required*: No  
@@ -204,7 +213,7 @@ Returns the Amazon Resource Name \(ARN\) of the queue\. For example: `arn:aws:sq
 Returns the queue name\. For example: `mystack-myqueue-1VF9BKQH5BJVI`\.
 
 `QueueUrl`  <a name="QueueUrl-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Returns the URLs of the queues from the policy\.
 
 ## Examples<a name="aws-resource-sqs-queue--examples"></a>
 

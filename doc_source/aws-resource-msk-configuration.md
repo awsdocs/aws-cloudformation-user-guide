@@ -48,7 +48,7 @@ A list of the versions of Apache Kafka with which you can use this MSK configura
 
 `Name`  <a name="cfn-msk-configuration-name"></a>
 The name of the configuration\. Configuration names are strings that match the regex "^\[0\-9A\-Za\-z\]\[0\-9A\-Za\-z\-\]\{0,\}$"\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

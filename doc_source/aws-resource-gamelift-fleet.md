@@ -12,8 +12,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GameLift::Fleet",
   "Properties" : {
+      "[AnywhereConfiguration](#cfn-gamelift-fleet-anywhereconfiguration)" : AnywhereConfiguration,
       "[BuildId](#cfn-gamelift-fleet-buildid)" : String,
       "[CertificateConfiguration](#cfn-gamelift-fleet-certificateconfiguration)" : CertificateConfiguration,
+      "[ComputeType](#cfn-gamelift-fleet-computetype)" : String,
       "[Description](#cfn-gamelift-fleet-description)" : String,
       "[DesiredEC2Instances](#cfn-gamelift-fleet-desiredec2instances)" : Integer,
       "[EC2InboundPermissions](#cfn-gamelift-fleet-ec2inboundpermissions)" : [ IpPermission, ... ],
@@ -40,9 +42,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::GameLift::Fleet
 Properties: 
+  [AnywhereConfiguration](#cfn-gamelift-fleet-anywhereconfiguration): 
+    AnywhereConfiguration
   [BuildId](#cfn-gamelift-fleet-buildid): String
   [CertificateConfiguration](#cfn-gamelift-fleet-certificateconfiguration): 
     CertificateConfiguration
+  [ComputeType](#cfn-gamelift-fleet-computetype): String
   [Description](#cfn-gamelift-fleet-description): String
   [DesiredEC2Instances](#cfn-gamelift-fleet-desiredec2instances): Integer
   [EC2InboundPermissions](#cfn-gamelift-fleet-ec2inboundpermissions): 
@@ -69,6 +74,12 @@ Properties:
 
 ## Properties<a name="aws-resource-gamelift-fleet-properties"></a>
 
+`AnywhereConfiguration`  <a name="cfn-gamelift-fleet-anywhereconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [AnywhereConfiguration](aws-properties-gamelift-fleet-anywhereconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `BuildId`  <a name="cfn-gamelift-fleet-buildid"></a>
 A unique identifier for a build to be deployed on the new fleet\. If you are deploying the fleet with a custom game build, you must specify this property\. The build must have been successfully uploaded to Amazon GameLift and be in a `READY` status\. This fleet setting cannot be changed once the fleet is created\.   
 *Required*: Conditional  
@@ -77,14 +88,22 @@ A unique identifier for a build to be deployed on the new fleet\. If you are dep
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificateConfiguration`  <a name="cfn-gamelift-fleet-certificateconfiguration"></a>
-Prompts GameLift to generate a TLS/SSL certificate for the fleet\. TLS certificates are used for encrypting traffic between game clients and the game servers that are running on GameLift\. By default, the `CertificateConfiguration` is set to `DISABLED`\. This property cannot be changed after the fleet is created\.   
-Note: This feature requires the AWS Certificate Manager \(ACM\) service, which is not available in all AWS regions\. When working in a region that does not support this feature, a fleet creation request with certificate generation fails with a 4xx error\.  
+Prompts GameLift to generate a TLS/SSL certificate for the fleet\. GameLift uses the certificates to encrypt traffic between game clients and the game servers running on GameLift\. By default, the `CertificateConfiguration` is `DISABLED`\. You can't change this property after you create the fleet\.   
+ AWS Certificate Manager \(ACM\) certificates expire after 13 months\. Certificate expiration can cause fleets to fail, preventing players from connecting to instances in the fleet\. We recommend you replace fleets before 13 months, consider using fleet aliases for a smooth transition\.  
+ACM isn't available in all AWS regions\. A fleet creation request with certificate generation enabled in an unsupported Region, fails with a 4xx error\. For more information about the supported Regions, see [Supported Regions](https://docs.aws.amazon.com/acm/latest/userguide/acm-regions.html) in the * AWS Certificate Manager User Guide*\.
 *Required*: No  
 *Type*: [CertificateConfiguration](aws-properties-gamelift-fleet-certificateconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ComputeType`  <a name="cfn-gamelift-fleet-computetype"></a>
+The type of compute resource used to host your game servers\. You can use your own compute resources with GameLift Anywhere or use Amazon EC2 instances with managed GameLift\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `ANYWHERE | EC2`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Description`  <a name="cfn-gamelift-fleet-description"></a>
-A human\-readable description of the fleet\.  
+A description for the fleet\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -109,7 +128,7 @@ The allowed IP address ranges and port settings that allow inbound traffic to ac
 The GameLift\-supported Amazon EC2 instance type to use for all fleet instances\. Instance type determines the computing resources that will be used to host your game servers, including CPU, memory, storage, and networking capacity\. See [Amazon Elastic Compute Cloud Instance Types](http://aws.amazon.com/ec2/instance-types/) for detailed descriptions of Amazon EC2 instance types\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `c3.2xlarge | c3.4xlarge | c3.8xlarge | c3.large | c3.xlarge | c4.2xlarge | c4.4xlarge | c4.8xlarge | c4.large | c4.xlarge | c5.12xlarge | c5.18xlarge | c5.24xlarge | c5.2xlarge | c5.4xlarge | c5.9xlarge | c5.large | c5.xlarge | c5a.12xlarge | c5a.16xlarge | c5a.24xlarge | c5a.2xlarge | c5a.4xlarge | c5a.8xlarge | c5a.large | c5a.xlarge | m3.2xlarge | m3.large | m3.medium | m3.xlarge | m4.10xlarge | m4.2xlarge | m4.4xlarge | m4.large | m4.xlarge | m5.12xlarge | m5.16xlarge | m5.24xlarge | m5.2xlarge | m5.4xlarge | m5.8xlarge | m5.large | m5.xlarge | m5a.12xlarge | m5a.16xlarge | m5a.24xlarge | m5a.2xlarge | m5a.4xlarge | m5a.8xlarge | m5a.large | m5a.xlarge | r3.2xlarge | r3.4xlarge | r3.8xlarge | r3.large | r3.xlarge | r4.16xlarge | r4.2xlarge | r4.4xlarge | r4.8xlarge | r4.large | r4.xlarge | r5.12xlarge | r5.16xlarge | r5.24xlarge | r5.2xlarge | r5.4xlarge | r5.8xlarge | r5.large | r5.xlarge | r5a.12xlarge | r5a.16xlarge | r5a.24xlarge | r5a.2xlarge | r5a.4xlarge | r5a.8xlarge | r5a.large | r5a.xlarge | t2.large | t2.medium | t2.micro | t2.small`  
+*Allowed values*: `c3.2xlarge | c3.4xlarge | c3.8xlarge | c3.large | c3.xlarge | c4.2xlarge | c4.4xlarge | c4.8xlarge | c4.large | c4.xlarge | c5.12xlarge | c5.18xlarge | c5.24xlarge | c5.2xlarge | c5.4xlarge | c5.9xlarge | c5.large | c5.xlarge | c5a.12xlarge | c5a.16xlarge | c5a.24xlarge | c5a.2xlarge | c5a.4xlarge | c5a.8xlarge | c5a.large | c5a.xlarge | c5d.12xlarge | c5d.18xlarge | c5d.24xlarge | c5d.2xlarge | c5d.4xlarge | c5d.9xlarge | c5d.large | c5d.xlarge | c6a.12xlarge | c6a.16xlarge | c6a.24xlarge | c6a.2xlarge | c6a.4xlarge | c6a.8xlarge | c6a.large | c6a.xlarge | c6i.12xlarge | c6i.16xlarge | c6i.24xlarge | c6i.2xlarge | c6i.4xlarge | c6i.8xlarge | c6i.large | c6i.xlarge | m3.2xlarge | m3.large | m3.medium | m3.xlarge | m4.10xlarge | m4.2xlarge | m4.4xlarge | m4.large | m4.xlarge | m5.12xlarge | m5.16xlarge | m5.24xlarge | m5.2xlarge | m5.4xlarge | m5.8xlarge | m5.large | m5.xlarge | m5a.12xlarge | m5a.16xlarge | m5a.24xlarge | m5a.2xlarge | m5a.4xlarge | m5a.8xlarge | m5a.large | m5a.xlarge | r3.2xlarge | r3.4xlarge | r3.8xlarge | r3.large | r3.xlarge | r4.16xlarge | r4.2xlarge | r4.4xlarge | r4.8xlarge | r4.large | r4.xlarge | r5.12xlarge | r5.16xlarge | r5.24xlarge | r5.2xlarge | r5.4xlarge | r5.8xlarge | r5.large | r5.xlarge | r5a.12xlarge | r5a.16xlarge | r5a.24xlarge | r5a.2xlarge | r5a.4xlarge | r5a.8xlarge | r5a.large | r5a.xlarge | r5d.12xlarge | r5d.16xlarge | r5d.24xlarge | r5d.2xlarge | r5d.4xlarge | r5d.8xlarge | r5d.large | r5d.xlarge | t2.large | t2.medium | t2.micro | t2.small`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FleetType`  <a name="cfn-gamelift-fleet-fleettype"></a>
@@ -156,7 +175,7 @@ The minimum number of instances that are allowed in the specified fleet location
 
 `Name`  <a name="cfn-gamelift-fleet-name"></a>
 A descriptive label that is associated with a fleet\. Fleet names do not need to be unique\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  
@@ -180,7 +199,7 @@ Used when peering your GameLift fleet with a VPC, the unique identifier for the 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PeerVpcId`  <a name="cfn-gamelift-fleet-peervpcid"></a>
-A unique identifier for a VPC with resources to be accessed by your GameLift fleet\. The VPC must be in the same Region as your fleet\. To look up a VPC ID, use the [VPC Dashboard](https://console.aws.amazon.com/vpc/) in the AWS Management Console\. Learn more about VPC peering in [VPC Peering with GameLift Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html)\.   
+A unique identifier for a VPC with resources to be accessed by your GameLift fleet\. The VPC must be in the same Region as your fleet\. To look up a VPC ID, use the [VPC Dashboard](https://console.aws.amazon.com/vpc/) in the AWS Management Console\. Learn more about VPC peering in [VPC Peering with GameLift Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html)\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

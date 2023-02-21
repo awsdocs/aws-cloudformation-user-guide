@@ -1,6 +1,6 @@
 # AWS::DMS::Endpoint KafkaSettings<a name="aws-properties-dms-endpoint-kafkasettings"></a>
 
-Not currently supported by AWS CloudFormation\.
+Provides information that describes an Apache Kafka endpoint\. This information includes the output format of records applied to the endpoint and details of transaction and control table data information\. For more information about other available settings, see [ Using object mapping to migrate data to a Kafka topic](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kafka.html#CHAP_Target.Kafka.ObjectMapping) in the *AWS Database Migration Service User Guide*\.
 
 ## Syntax<a name="aws-properties-dms-endpoint-kafkasettings-syntax"></a>
 
@@ -13,8 +13,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Broker](#cfn-dms-endpoint-kafkasettings-broker)" : String,
   "[IncludeControlDetails](#cfn-dms-endpoint-kafkasettings-includecontroldetails)" : Boolean,
   "[IncludeNullAndEmpty](#cfn-dms-endpoint-kafkasettings-includenullandempty)" : Boolean,
+  "[IncludePartitionValue](#cfn-dms-endpoint-kafkasettings-includepartitionvalue)" : Boolean,
   "[IncludeTableAlterOperations](#cfn-dms-endpoint-kafkasettings-includetablealteroperations)" : Boolean,
   "[IncludeTransactionDetails](#cfn-dms-endpoint-kafkasettings-includetransactiondetails)" : Boolean,
+  "[MessageFormat](#cfn-dms-endpoint-kafkasettings-messageformat)" : String,
+  "[MessageMaxBytes](#cfn-dms-endpoint-kafkasettings-messagemaxbytes)" : Integer,
   "[NoHexPrefix](#cfn-dms-endpoint-kafkasettings-nohexprefix)" : Boolean,
   "[PartitionIncludeSchemaTable](#cfn-dms-endpoint-kafkasettings-partitionincludeschematable)" : Boolean,
   "[SaslPassword](#cfn-dms-endpoint-kafkasettings-saslpassword)" : String,
@@ -34,8 +37,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Broker](#cfn-dms-endpoint-kafkasettings-broker): String
   [IncludeControlDetails](#cfn-dms-endpoint-kafkasettings-includecontroldetails): Boolean
   [IncludeNullAndEmpty](#cfn-dms-endpoint-kafkasettings-includenullandempty): Boolean
+  [IncludePartitionValue](#cfn-dms-endpoint-kafkasettings-includepartitionvalue): Boolean
   [IncludeTableAlterOperations](#cfn-dms-endpoint-kafkasettings-includetablealteroperations): Boolean
   [IncludeTransactionDetails](#cfn-dms-endpoint-kafkasettings-includetransactiondetails): Boolean
+  [MessageFormat](#cfn-dms-endpoint-kafkasettings-messageformat): String
+  [MessageMaxBytes](#cfn-dms-endpoint-kafkasettings-messagemaxbytes): Integer
   [NoHexPrefix](#cfn-dms-endpoint-kafkasettings-nohexprefix): Boolean
   [PartitionIncludeSchemaTable](#cfn-dms-endpoint-kafkasettings-partitionincludeschematable): Boolean
   [SaslPassword](#cfn-dms-endpoint-kafkasettings-saslpassword): String
@@ -51,7 +57,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dms-endpoint-kafkasettings-properties"></a>
 
 `Broker`  <a name="cfn-dms-endpoint-kafkasettings-broker"></a>
-Not currently supported by AWS CloudFormation\.  
+A comma\-separated list of one or more broker locations in your Kafka cluster that host your Kafka instance\. Specify each broker location in the form `broker-hostname-or-ip:port`\. For example, `"ec2-12-345-678-901.compute-1.amazonaws.com:2345"`\. For more information and examples of specifying a list of broker locations, see [ Using Apache Kafka as a target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kafka.html) in the *AWS Database Migration Service User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -68,6 +74,12 @@ Include NULL and empty columns for records migrated to the endpoint\. The defaul
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`IncludePartitionValue`  <a name="cfn-dms-endpoint-kafkasettings-includepartitionvalue"></a>
+Shows the partition value within the Kafka message output unless the partition type is `schema-table-type`\. The default is `false`\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `IncludeTableAlterOperations`  <a name="cfn-dms-endpoint-kafkasettings-includetablealteroperations"></a>
 Includes any data definition language \(DDL\) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`\. The default is `false`\.  
 *Required*: No  
@@ -78,6 +90,19 @@ Includes any data definition language \(DDL\) operations that change the table i
 Provides detailed transaction information from the source database\. This information includes a commit timestamp, a log position, and values for `transaction_id`, previous `transaction_id`, and `transaction_record_id` \(the record offset within a transaction\)\. The default is `false`\.  
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MessageFormat`  <a name="cfn-dms-endpoint-kafkasettings-messageformat"></a>
+The output format for the records created on the endpoint\. The message format is `JSON` \(default\) or `JSON_UNFORMATTED` \(a single line with no tab\)\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `json | json-unformatted`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MessageMaxBytes`  <a name="cfn-dms-endpoint-kafkasettings-messagemaxbytes"></a>
+The maximum size in bytes for records created on the endpoint The default is 1,000,000\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NoHexPrefix`  <a name="cfn-dms-endpoint-kafkasettings-nohexprefix"></a>
@@ -93,13 +118,13 @@ Prefixes schema and table names to partition values, when the partition type is 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SaslPassword`  <a name="cfn-dms-endpoint-kafkasettings-saslpassword"></a>
-The secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL\-SSL authentication\.  
+The secure password that you created when you first set up your Amazon MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL\-SSL authentication\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SaslUserName`  <a name="cfn-dms-endpoint-kafkasettings-saslusername"></a>
- The secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL\-SSL authentication\.  
+ The secure user name you created when you first set up your Amazon MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL\-SSL authentication\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -136,7 +161,7 @@ The Amazon Resource Name \(ARN\) for the client private key used to securely con
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Topic`  <a name="cfn-dms-endpoint-kafkasettings-topic"></a>
-Not currently supported by AWS CloudFormation\.  
+The topic to which you migrate the data\. If you don't specify a topic, AWS DMS specifies `"kafka-default-topic"` as the migration topic\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

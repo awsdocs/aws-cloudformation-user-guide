@@ -1,6 +1,6 @@
 # AWS::DLM::LifecyclePolicy ShareRule<a name="aws-properties-dlm-lifecyclepolicy-sharerule"></a>
 
-Specifies a rule for sharing snapshots across AWS accounts\.
+ **\[Snapshot policies only\]** Specifies a rule for sharing snapshots across AWS accounts\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-sharerule-syntax"></a>
 

@@ -16,11 +16,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Backup::ReportPlan",
   "Properties" : {
-      "[ReportDeliveryChannel](#cfn-backup-reportplan-reportdeliverychannel)" : Json,
+      "[ReportDeliveryChannel](#cfn-backup-reportplan-reportdeliverychannel)" : ReportDeliveryChannel,
       "[ReportPlanDescription](#cfn-backup-reportplan-reportplandescription)" : String,
       "[ReportPlanName](#cfn-backup-reportplan-reportplanname)" : String,
       "[ReportPlanTags](#cfn-backup-reportplan-reportplantags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[ReportSetting](#cfn-backup-reportplan-reportsetting)" : Json
+      "[ReportSetting](#cfn-backup-reportplan-reportsetting)" : ReportSetting
     }
 }
 ```
@@ -30,12 +30,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Backup::ReportPlan
 Properties: 
-  [ReportDeliveryChannel](#cfn-backup-reportplan-reportdeliverychannel): Json
+  [ReportDeliveryChannel](#cfn-backup-reportplan-reportdeliverychannel): 
+    ReportDeliveryChannel
   [ReportPlanDescription](#cfn-backup-reportplan-reportplandescription): String
   [ReportPlanName](#cfn-backup-reportplan-reportplanname): String
   [ReportPlanTags](#cfn-backup-reportplan-reportplantags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-  [ReportSetting](#cfn-backup-reportplan-reportsetting): Json
+  [ReportSetting](#cfn-backup-reportplan-reportsetting): 
+    ReportSetting
 ```
 
 ## Properties<a name="aws-resource-backup-reportplan-properties"></a>
@@ -43,7 +45,7 @@ Properties:
 `ReportDeliveryChannel`  <a name="cfn-backup-reportplan-reportdeliverychannel"></a>
 Contains information about where and how to deliver your reports, specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your reports\.  
 *Required*: Yes  
-*Type*: Json  
+*Type*: [ReportDeliveryChannel](aws-properties-backup-reportplan-reportdeliverychannel.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReportPlanDescription`  <a name="cfn-backup-reportplan-reportplandescription"></a>
@@ -75,7 +77,7 @@ Identifies the report template for the report\. Reports are built using a report
  `RESOURCE_COMPLIANCE_REPORT | CONTROL_COMPLIANCE_REPORT | BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`   
 If the report template is `RESOURCE_COMPLIANCE_REPORT` or `CONTROL_COMPLIANCE_REPORT`, this API resource also describes the report coverage by AWS Regions and frameworks\.  
 *Required*: Yes  
-*Type*: Json  
+*Type*: [ReportSetting](aws-properties-backup-reportplan-reportsetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-backup-reportplan-return-values"></a>

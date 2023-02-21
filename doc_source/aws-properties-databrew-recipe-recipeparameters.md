@@ -39,7 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[HiddenColumns](#cfn-databrew-recipe-recipeparameters-hiddencolumns)" : String,
   "[IgnoreCase](#cfn-databrew-recipe-recipeparameters-ignorecase)" : String,
   "[IncludeInSplit](#cfn-databrew-recipe-recipeparameters-includeinsplit)" : String,
-  "[Input](#cfn-databrew-recipe-recipeparameters-input)" : Json,
+  "[Input](#cfn-databrew-recipe-recipeparameters-input)" : Input,
   "[Interval](#cfn-databrew-recipe-recipeparameters-interval)" : String,
   "[IsText](#cfn-databrew-recipe-recipeparameters-istext)" : String,
   "[JoinKeys](#cfn-databrew-recipe-recipeparameters-joinkeys)" : String,
@@ -147,7 +147,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [HiddenColumns](#cfn-databrew-recipe-recipeparameters-hiddencolumns): String
   [IgnoreCase](#cfn-databrew-recipe-recipeparameters-ignorecase): String
   [IncludeInSplit](#cfn-databrew-recipe-recipeparameters-includeinsplit): String
-  [Input](#cfn-databrew-recipe-recipeparameters-input): Json
+  [Input](#cfn-databrew-recipe-recipeparameters-input): 
+    Input
   [Interval](#cfn-databrew-recipe-recipeparameters-interval): String
   [IsText](#cfn-databrew-recipe-recipeparameters-istext): String
   [JoinKeys](#cfn-databrew-recipe-recipeparameters-joinkeys): String
@@ -404,7 +405,7 @@ Indicates if this column is participating in a split transform\.
 `Input`  <a name="cfn-databrew-recipe-recipeparameters-input"></a>
 The input location to load the dataset from \- Amazon S3 or AWS Glue Data Catalog\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [Input](aws-properties-databrew-recipe-input.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Interval`  <a name="cfn-databrew-recipe-recipeparameters-interval"></a>

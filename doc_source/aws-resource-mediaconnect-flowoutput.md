@@ -1,6 +1,6 @@
 # AWS::MediaConnect::FlowOutput<a name="aws-resource-mediaconnect-flowoutput"></a>
 
-The AWS::MediaConnect::FlowOutput resource defines the destination address, protocol, and port that AWS Elemental MediaConnect sends the ingested video to\. Each flow can have up to 50 outputs\. An output can have the same protocol or a different protocol from the source\.
+The AWS::MediaConnect::FlowOutput resource defines the destination address, protocol, and port that AWS Elemental MediaConnect sends the ingested video to\. Each flow can have up to 50 outputs\. An output can have the same protocol or a different protocol from the source\. The following protocols are supported: RIST, RTP, RTP\-FEC, SRT\-listener, SRT\-caller, Zixi pull, Zixi push, and Fujitsu\-QoS\. CDI and ST 2110 JPEG XS protocols are not currently supported by AWS CloudFormation\. 
 
 ## Syntax<a name="aws-resource-mediaconnect-flowoutput-syntax"></a>
 
@@ -81,13 +81,13 @@ The encryption credentials that you want to use for the output\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FlowArn`  <a name="cfn-mediaconnect-flowoutput-flowarn"></a>
-The Amazon Resource Name \(ARN\) of the flow\.  
+The Amazon Resource Name \(ARN\) of the flow this output is attached to\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxLatency`  <a name="cfn-mediaconnect-flowoutput-maxlatency"></a>
-The maximum latency in milliseconds for Zixi\-based streams\.  
+The maximum latency in milliseconds\. This parameter applies only to RIST\-based, Zixi\-based, and Fujitsu\-based streams\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -129,7 +129,7 @@ The smoothing latency in milliseconds for RIST, RTP, and RTP\-FEC streams\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamId`  <a name="cfn-mediaconnect-flowoutput-streamid"></a>
-The stream ID that you want to use for the transport\. This parameter applies only to Zixi\-based streams\.  
+The stream ID that you want to use for this transport\. This parameter applies only to Zixi and SRT caller\-based streams\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

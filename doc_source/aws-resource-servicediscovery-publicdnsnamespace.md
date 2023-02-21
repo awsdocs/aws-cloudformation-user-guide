@@ -47,9 +47,10 @@ A description for the namespace\.
 
 `Name`  <a name="cfn-servicediscovery-publicdnsnamespace-name"></a>
 The name that you want to assign to this namespace\.  
+Do not include sensitive information in the name\. The name is publicly available using DNS queries\.
 *Required*: Yes  
 *Type*: String  
-*Maximum*: `1024`  
+*Maximum*: `253`  
 *Pattern*: `^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

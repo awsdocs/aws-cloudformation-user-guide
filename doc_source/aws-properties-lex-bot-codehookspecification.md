@@ -1,6 +1,6 @@
 # AWS::Lex::Bot CodeHookSpecification<a name="aws-properties-lex-bot-codehookspecification"></a>
 
-Specifies information about code hooks that Amazon Lex calls during a conversation\.
+Contains information about code hooks that Amazon Lex calls during a conversation\.
 
 ## Syntax<a name="aws-properties-lex-bot-codehookspecification-syntax"></a>
 

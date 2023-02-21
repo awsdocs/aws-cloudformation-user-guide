@@ -48,7 +48,7 @@ The ARN of the stream with which you registered the consumer\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
-*Pattern*: `arn:aws.*:kinesis:.*:\d{12}:stream/.+`  
+*Pattern*: `arn:aws.*:kinesis:.*:\d{12}:stream/\S+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-kinesis-streamconsumer-return-values"></a>

@@ -16,7 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EventCategories](#cfn-rds-eventsubscription-eventcategories)" : [ String, ... ],
       "[SnsTopicArn](#cfn-rds-eventsubscription-snstopicarn)" : String,
       "[SourceIds](#cfn-rds-eventsubscription-sourceids)" : [ String, ... ],
-      "[SourceType](#cfn-rds-eventsubscription-sourcetype)" : String
+      "[SourceType](#cfn-rds-eventsubscription-sourcetype)" : String,
+      "[SubscriptionName](#cfn-rds-eventsubscription-subscriptionname)" : String,
+      "[Tags](#cfn-rds-eventsubscription-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -33,18 +35,21 @@ Properties:
   [SourceIds](#cfn-rds-eventsubscription-sourceids): 
     - String
   [SourceType](#cfn-rds-eventsubscription-sourcetype): String
+  [SubscriptionName](#cfn-rds-eventsubscription-subscriptionname): String
+  [Tags](#cfn-rds-eventsubscription-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-rds-eventsubscription-properties"></a>
 
 `Enabled`  <a name="cfn-rds-eventsubscription-enabled"></a>
- A Boolean value; set to **true** to activate the subscription, set to **false** to create the subscription but not active it\.   
+A value that indicates whether to activate the subscription\. If the event notification subscription isn't activated, the subscription is created but not active\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventCategories`  <a name="cfn-rds-eventsubscription-eventcategories"></a>
- A list of event categories for a SourceType that you want to subscribe to\. You can see a list of the categories for a given SourceType in the [Events](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html) topic in the Amazon RDS User Guide or by using the **DescribeEventCategories** action\.   
+A list of event categories for a particular source type \(`SourceType`\) that you want to subscribe to\. You can see a list of the categories for a given source type in the "Amazon RDS event categories and event messages" section of the [https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.Messages.html](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.Messages.html) or the [https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Events.Messages.html](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Events.Messages.html)\. You can also see this list by using the `DescribeEventCategories` operation\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -74,7 +79,20 @@ The type of source that is generating the events\. For example, if you want to b
 Valid values: `db-instance` \| `db-cluster` \| `db-parameter-group` \| `db-security-group` \| `db-snapshot` \| `db-cluster-snapshot`   
 *Required*: No  
 *Type*: String  
-*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SubscriptionName`  <a name="cfn-rds-eventsubscription-subscriptionname"></a>
+The name of the subscription\.  
+Constraints: The name must be less than 255 characters\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-rds-eventsubscription-tags"></a>
+An optional array of key\-value pairs to apply to this subscription\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-rds-eventsubscription-return-values"></a>
 

@@ -10,7 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[PublicAccess](#cfn-msk-cluster-connectivityinfo-publicaccess)" : PublicAccess
+  "[PublicAccess](#cfn-msk-cluster-connectivityinfo-publicaccess)" : PublicAccess,
+  "[VpcConnectivity](#cfn-msk-cluster-connectivityinfo-vpcconnectivity)" : VpcConnectivity
 }
 ```
 
@@ -19,6 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [PublicAccess](#cfn-msk-cluster-connectivityinfo-publicaccess): 
     PublicAccess
+  [VpcConnectivity](#cfn-msk-cluster-connectivityinfo-vpcconnectivity): 
+    VpcConnectivity
 ```
 
 ## Properties<a name="aws-properties-msk-cluster-connectivityinfo-properties"></a>
@@ -27,4 +30,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Specifies whether the cluster's brokers are accessible from the internet\. Public access is off by default\.  
 *Required*: No  
 *Type*: [PublicAccess](aws-properties-msk-cluster-publicaccess.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`VpcConnectivity`  <a name="cfn-msk-cluster-connectivityinfo-vpcconnectivity"></a>
+Not currently supported by AWS CloudFormation\.  
+*Required*: No  
+*Type*: [VpcConnectivity](aws-properties-msk-cluster-vpcconnectivity.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile DynatraceConnectorProfileProperties<a name="aws-properties-appflow-connectorprofile-dynatraceconnectorprofileproperties"></a>
 
- The `DynatraceConnectorProfileProperties` property type specifies the connector\-specific profile properties required by Dynatrace\. 
+ The connector\-specific profile properties required by Dynatrace\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-dynatraceconnectorprofileproperties-syntax"></a>
 

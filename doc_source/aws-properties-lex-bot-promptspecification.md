@@ -39,25 +39,25 @@ Indicates whether the user can interrupt a speech prompt from the bot\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxRetries`  <a name="cfn-lex-bot-promptspecification-maxretries"></a>
-The maximum number of times the bot tries to elicit a response from the user using this prompt  
+The maximum number of times the bot tries to elicit a response from the user using this prompt\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MessageGroupsList`  <a name="cfn-lex-bot-promptspecification-messagegroupslist"></a>
-A collection of responses that Amazon Lex can send to the user\. Amazon Lex chooses the actual response to send at runtime\.  
+A collection of messages that Amazon Lex can send to the user\. Amazon Lex chooses the actual message to send at runtime\.  
 *Required*: Yes  
 *Type*: List of [MessageGroup](aws-properties-lex-bot-messagegroup.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MessageSelectionStrategy`  <a name="cfn-lex-bot-promptspecification-messageselectionstrategy"></a>
-Property description not available\.  
+Indicates how a message is selected from a message group among retries\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PromptAttemptsSpecification`  <a name="cfn-lex-bot-promptspecification-promptattemptsspecification"></a>
-Property description not available\.  
+Specifies the advanced settings on each attempt of the prompt\.  
 *Required*: No  
 *Type*: Map of [PromptAttemptSpecification](aws-properties-lex-bot-promptattemptspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

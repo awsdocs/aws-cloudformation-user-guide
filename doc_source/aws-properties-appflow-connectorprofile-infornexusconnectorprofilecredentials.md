@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile InforNexusConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials"></a>
 
- The `InforNexusConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required by Infor Nexus\. 
+ The connector\-specific profile credentials required by Infor Nexus\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials-syntax"></a>
 

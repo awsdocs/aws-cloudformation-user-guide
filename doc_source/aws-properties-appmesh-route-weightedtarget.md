@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[Port](#cfn-appmesh-route-weightedtarget-port)" : Integer,
   "[VirtualNode](#cfn-appmesh-route-weightedtarget-virtualnode)" : String,
   "[Weight](#cfn-appmesh-route-weightedtarget-weight)" : Integer
 }
@@ -18,11 +19,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appmesh-route-weightedtarget-syntax.yaml"></a>
 
 ```
+  [Port](#cfn-appmesh-route-weightedtarget-port): Integer
   [VirtualNode](#cfn-appmesh-route-weightedtarget-virtualnode): String
   [Weight](#cfn-appmesh-route-weightedtarget-weight): Integer
 ```
 
 ## Properties<a name="aws-properties-appmesh-route-weightedtarget-properties"></a>
+
+`Port`  <a name="cfn-appmesh-route-weightedtarget-port"></a>
+The targeted port of the weighted object\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `65535`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VirtualNode`  <a name="cfn-appmesh-route-weightedtarget-virtualnode"></a>
 The virtual node to associate with the weighted target\.  

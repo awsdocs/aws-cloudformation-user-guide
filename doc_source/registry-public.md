@@ -55,9 +55,9 @@ While extension aliases are only required to be unique in a given account and re
 
 When activating a resource, you can specify the IAM execution role for CloudFormation to assume when invoking that extension in your account and region\.
 
-In order for CloudFormation to assume the execution role, the role must have a trust policy defined with CloudFormation\. In addition, if the extension requires permissions to perform an operation, you must include these in the execution role\. The required permissions are defined in the handler section of the extension schema\.
+In order for CloudFormation to assume the execution role, the role must have a trust policy defined with CloudFormation\. In addition, permission to perform an operation is granted by creating an IAM policy and attaching to the execution role\. The required permissions are defined in the handler section of the extension schema\.
 
-The following is an example for resource type and hook extension\.
+The following is an example IAM Role trust policy for resource type and hook extension
 
 ```
 {
@@ -65,17 +65,19 @@ The following is an example for resource type and hook extension\.
     "Statement":[
         {
             "Effect":"Allow",
-            "Principal": [
-                "Service":"resources.cloudformation.amazonaws.com",
-                "Service":"hooks.cloudformation.amazonaws.com"
-            ],
+            "Principal": {
+                "Service": [
+                    "resources.cloudformation.amazonaws.com",
+                    "hooks.cloudformation.amazonaws.com"
+                ]
+            },
             "Action":"sts:AssumeRole",
             "Condition":{
                 "StringEquals":{
                     "aws:SourceAccount":"123456789012"
                 },
                 "StringLike":{
-                    "aws:SourceArn":"arn:aws:cloudformation:us-east-1:123456789012:type/resource/Organization-Service-Resource/*"
+                     "aws:SourceArn":"arn:aws:cloudformation:us-east-1:123456789012:type/hook/Organization-Service-Resource/*"
                 }
             }
         }
@@ -196,7 +198,7 @@ By enabling hooks in your account, you are authorizing a hook to use defined per
 
   ```
   aws cloudformation --region us-west-2 set-type-configuration \
-    --configuration "{\"CloudFormationConfiguration\":{\"HookConfiguration\":{\"TargetStacks\":\"ALL\",\"FailureMode\":\"FAIL\",\"Properties\":{}}}}" \
+    --configuration "{"CloudFormationConfiguration":{"HookConfiguration":{"TargetStacks": "ALL", "FailureMode": "FAIL", "Properties":{}}}}" \
     --type-arn $HOOK_TYPE_ARN
   ```
 **Important**  
@@ -274,6 +276,6 @@ The following example specifies the AWS Region and the Amazon Resource Name \(AR
 ```
 aws cloudformation set-type-configuration \
   --region us-west-2 \
-  --configuration "{\"CloudFormationConfiguration\":{\"HookConfiguration\":{\"TargetStacks\":\"NONE\",\"FailureMode\":\"FAIL\",\"Properties\":{}}}}" \
+  --configuration "{"CloudFormationConfiguration":{"HookConfiguration":{"TargetStacks": "NONE", "FailureMode": "FAIL", "Properties":{}}}}" \
   --type-arn HOOK_TYPE_ARN
 ```

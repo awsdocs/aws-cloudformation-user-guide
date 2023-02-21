@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ExecutionRole](#cfn-sagemaker-userprofile-usersettings-executionrole)" : String,
   "[JupyterServerAppSettings](#cfn-sagemaker-userprofile-usersettings-jupyterserverappsettings)" : JupyterServerAppSettings,
   "[KernelGatewayAppSettings](#cfn-sagemaker-userprofile-usersettings-kernelgatewayappsettings)" : KernelGatewayAppSettings,
+  "[RStudioServerProAppSettings](#cfn-sagemaker-userprofile-usersettings-rstudioserverproappsettings)" : RStudioServerProAppSettings,
   "[SecurityGroups](#cfn-sagemaker-userprofile-usersettings-securitygroups)" : [ String, ... ],
   "[SharingSettings](#cfn-sagemaker-userprofile-usersettings-sharingsettings)" : SharingSettings
 }
@@ -28,6 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     JupyterServerAppSettings
   [KernelGatewayAppSettings](#cfn-sagemaker-userprofile-usersettings-kernelgatewayappsettings): 
     KernelGatewayAppSettings
+  [RStudioServerProAppSettings](#cfn-sagemaker-userprofile-usersettings-rstudioserverproappsettings): 
+    RStudioServerProAppSettings
   [SecurityGroups](#cfn-sagemaker-userprofile-usersettings-securitygroups): 
     - String
   [SharingSettings](#cfn-sagemaker-userprofile-usersettings-sharingsettings): 
@@ -55,6 +58,12 @@ The Jupyter server's app settings\.
 The kernel gateway app settings\.  
 *Required*: No  
 *Type*: [KernelGatewayAppSettings](aws-properties-sagemaker-userprofile-kernelgatewayappsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RStudioServerProAppSettings`  <a name="cfn-sagemaker-userprofile-usersettings-rstudioserverproappsettings"></a>
+A collection of settings that configure user interaction with the `RStudioServerPro` app\.  
+*Required*: No  
+*Type*: [RStudioServerProAppSettings](aws-properties-sagemaker-userprofile-rstudioserverproappsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroups`  <a name="cfn-sagemaker-userprofile-usersettings-securitygroups"></a>

@@ -1,6 +1,6 @@
 # AWS::Lex::Bot S3BucketLogDestination<a name="aws-properties-lex-bot-s3bucketlogdestination"></a>
 
-Specifies an Amazon S3 bucket for logging audio conversations\.
+Specifies an Amazon S3 bucket for logging audio conversations
 
 ## Syntax<a name="aws-properties-lex-bot-s3bucketlogdestination-syntax"></a>
 
@@ -27,19 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-s3bucketlogdestination-properties"></a>
 
 `KmsKeyArn`  <a name="cfn-lex-bot-s3bucketlogdestination-kmskeyarn"></a>
-Specifies the Amazon Resource Name \(ARN\) of an AWS Key Management Service key for encrypting audio log files stored in an Amazon S3 bucket\.  
+The Amazon Resource Name \(ARN\) of an AWS Key Management Service \(KMS\) key for encrypting audio log files stored in an Amazon S3 bucket\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogPrefix`  <a name="cfn-lex-bot-s3bucketlogdestination-logprefix"></a>
-Specifies the Amazon S3 prefix to assign to audio log files\.  
+The S3 prefix to assign to audio log files\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3BucketArn`  <a name="cfn-lex-bot-s3bucketlogdestination-s3bucketarn"></a>
-Specifies the Amazon Resource Name \(ARN\) of the Amazon S3 bucket where audio files are stored\.  
+The Amazon Resource Name \(ARN\) of an Amazon S3 bucket where audio log files are stored\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

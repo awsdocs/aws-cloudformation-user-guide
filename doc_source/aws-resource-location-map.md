@@ -35,7 +35,7 @@ Properties:
 ## Properties<a name="aws-resource-location-map-properties"></a>
 
 `Configuration`  <a name="cfn-location-map-configuration"></a>
-Specifies the map style selected from an available data provider\.  
+Specifies the `MapConfiguration`, including the map style, for the map resource that you create\. The map style defines the look of maps and the data provider for your map resource\.  
 *Required*: Yes  
 *Type*: [MapConfiguration](aws-properties-location-map-mapconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -51,8 +51,8 @@ An optional description for the map resource\.
 `MapName`  <a name="cfn-location-map-mapname"></a>
 The name for the map resource\.  
 Requirements:  
-+ Must contain only alphanumeric characters \(A–Z, a–z, 0–9\), hyphens \(\-\), periods \(\.\), and underscores \(\_\)\.
-+ Must be a unique map resource name\.
++ Must contain only alphanumeric characters \(A–Z, a–z, 0–9\), hyphens \(\-\), periods \(\.\), and underscores \(\_\)\. 
++ Must be a unique map resource name\. 
 + No spaces allowed\. For example, `ExampleMap`\.
 *Required*: Yes  
 *Type*: String  

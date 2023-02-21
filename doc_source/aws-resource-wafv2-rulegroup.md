@@ -17,7 +17,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::WAFv2::RuleGroup",
   "Properties" : {
+      "[AvailableLabels](#cfn-wafv2-rulegroup-availablelabels)" : [ LabelSummary, ... ],
       "[Capacity](#cfn-wafv2-rulegroup-capacity)" : Integer,
+      "[ConsumedLabels](#cfn-wafv2-rulegroup-consumedlabels)" : [ LabelSummary, ... ],
       "[CustomResponseBodies](#cfn-wafv2-rulegroup-customresponsebodies)" : {Key : Value, ...},
       "[Description](#cfn-wafv2-rulegroup-description)" : String,
       "[Name](#cfn-wafv2-rulegroup-name)" : String,
@@ -34,7 +36,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::WAFv2::RuleGroup
 Properties: 
+  [AvailableLabels](#cfn-wafv2-rulegroup-availablelabels): 
+    - LabelSummary
   [Capacity](#cfn-wafv2-rulegroup-capacity): Integer
+  [ConsumedLabels](#cfn-wafv2-rulegroup-consumedlabels): 
+    - LabelSummary
   [CustomResponseBodies](#cfn-wafv2-rulegroup-customresponsebodies): 
     Key : Value
   [Description](#cfn-wafv2-rulegroup-description): String
@@ -50,12 +56,24 @@ Properties:
 
 ## Properties<a name="aws-resource-wafv2-rulegroup-properties"></a>
 
+`AvailableLabels`  <a name="cfn-wafv2-rulegroup-availablelabels"></a>
+The labels that one or more rules in this rule group add to matching web requests\. These labels are defined in the `RuleLabels` for a Rule\.  
+*Required*: No  
+*Type*: List of [LabelSummary](aws-properties-wafv2-rulegroup-labelsummary.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Capacity`  <a name="cfn-wafv2-rulegroup-capacity"></a>
 The web ACL capacity units \(WCUs\) required for this rule group\.  
 When you create your own rule group, you define this, and you cannot change it after creation\. When you add or modify the rules in a rule group, AWS WAF enforces this limit\.   
-AWS WAF uses WCUs to calculate and control the operating resources that are used to run your rules, rule groups, and web ACLs\. AWS WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule\. Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power\. Rule group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group\. The WCU limit for web ACLs is 1,500\.   
+ AWS WAF uses WCUs to calculate and control the operating resources that are used to run your rules, rule groups, and web ACLs\. AWS WAF calculates capacity differently for each rule type, to reflect the relative cost of each rule\. Simple rules that cost little to run use fewer WCUs than more complex rules that use more processing power\. Rule group capacity is fixed at creation, which helps users plan their web ACL WCU usage when they use a rule group\. The WCU limit for web ACLs is 1,500\.   
 *Required*: Yes  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ConsumedLabels`  <a name="cfn-wafv2-rulegroup-consumedlabels"></a>
+The labels that one or more rules in this rule group match against in label match statements\. These labels are defined in a `LabelMatchStatement` specification, in the [Statement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-notstatement.html#cfn-wafv2-webacl-notstatement-statement) definition of a rule\.   
+*Required*: No  
+*Type*: List of [LabelSummary](aws-properties-wafv2-rulegroup-labelsummary.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomResponseBodies`  <a name="cfn-wafv2-rulegroup-customresponsebodies"></a>
@@ -76,7 +94,7 @@ A description of the rule group that helps with identification\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-wafv2-rulegroup-name"></a>
-The descriptive name of the rule group\. You cannot change the name of a rule group after you create it\.  
+The name of the rule group\. You cannot change the name of a rule group after you create it\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -91,7 +109,7 @@ The rule statements used to identify the web requests that you want to allow, bl
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-wafv2-rulegroup-scope"></a>
-Specifies whether this is for an Amazon CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, or an AWS AppSync GraphQL API\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
+Specifies whether this is for an Amazon CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, an AWS AppSync GraphQL API, or an Amazon Cognito user pool\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
 For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virginia\) Region, `us-east-1`\.
 *Required*: Yes  
 *Type*: String  
@@ -124,12 +142,6 @@ For example: `my-webacl-name|1234a1a-a1b1-12a1-abcd-a123b123456|REGIONAL`\.
 
 `Arn`  <a name="Arn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the rule group\.
-
-`AvailableLabels`  <a name="AvailableLabels-fn::getatt"></a>
-Labels that rules in this rule group add to matching requests\. These labels are defined in the `RuleLabels` for a `Rule`\. 
-
-`ConsumedLabels`  <a name="ConsumedLabels-fn::getatt"></a>
-Labels that rules in this rule group match against\. Each of these labels is defined in a `LabelMatchStatement` specification, in the rule statement\. 
 
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the rule group\.

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AppStream::DirectoryConfig",
   "Properties" : {
+      "[CertificateBasedAuthProperties](#cfn-appstream-directoryconfig-certificatebasedauthproperties)" : CertificateBasedAuthProperties,
       "[DirectoryName](#cfn-appstream-directoryconfig-directoryname)" : String,
       "[OrganizationalUnitDistinguishedNames](#cfn-appstream-directoryconfig-organizationalunitdistinguishednames)" : [ String, ... ],
       "[ServiceAccountCredentials](#cfn-appstream-directoryconfig-serviceaccountcredentials)" : ServiceAccountCredentials
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::AppStream::DirectoryConfig
 Properties: 
+  [CertificateBasedAuthProperties](#cfn-appstream-directoryconfig-certificatebasedauthproperties): 
+    CertificateBasedAuthProperties
   [DirectoryName](#cfn-appstream-directoryconfig-directoryname): String
   [OrganizationalUnitDistinguishedNames](#cfn-appstream-directoryconfig-organizationalunitdistinguishednames): 
     - String
@@ -32,6 +35,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-appstream-directoryconfig-properties"></a>
+
+`CertificateBasedAuthProperties`  <a name="cfn-appstream-directoryconfig-certificatebasedauthproperties"></a>
+The certificate\-based authentication properties used to authenticate SAML 2\.0 Identity Provider \(IdP\) user identities to Active Directory domain\-joined streaming instances\.  
+*Required*: No  
+*Type*: [CertificateBasedAuthProperties](aws-properties-appstream-directoryconfig-certificatebasedauthproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DirectoryName`  <a name="cfn-appstream-directoryconfig-directoryname"></a>
 The fully qualified name of the directory \(for example, corp\.example\.com\)\.  

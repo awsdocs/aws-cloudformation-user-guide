@@ -40,7 +40,7 @@ The delay between when the Lambda fulfillment function starts running and the st
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MessageGroups`  <a name="cfn-lex-bot-fulfillmentstartresponsespecification-messagegroups"></a>
-One to 5 message groups that contain start messages\. Amazon Lex chooses one of the messages to play to the user\.  
+1 \- 5 message groups that contain start messages\. Amazon Lex chooses one of the messages to play to the user\.  
 *Required*: Yes  
 *Type*: List of [MessageGroup](aws-properties-lex-bot-messagegroup.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -34,7 +34,7 @@ If you specify the `AttachentFieldMappings` parameter, you must specify at least
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CrawlAttachments`  <a name="cfn-kendra-datasource-confluenceattachmentconfiguration-crawlattachments"></a>
-Indicates whether Amazon Kendra indexes attachments to the pages and blogs in the Confluence data source\.   
+ `TRUE` to index attachments of pages and blogs in Confluence\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -47,9 +47,6 @@ Properties:
 The name of the Auto Scaling group\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
-*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceReusePolicy`  <a name="cfn-autoscaling-warmpool-instancereusepolicy"></a>
@@ -84,7 +81,7 @@ Sets the instance state to transition to after the lifecycle actions are complet
 
 ## Remarks<a name="aws-resource-autoscaling-warmpool--remarks"></a>
 
-CloudFormation won't mark the warm pool as successful \(by setting its status to CREATE\_COMPLETE\) if there are lifecycle hooks that haven't been completed\. If the state of an instance is `Warmed:Pending:Wait`, the lifeycle hook is not considered complete\. For more information, see [Using lifecycle hooks with a warm pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/warm-pool-instance-lifecycle.html) in the *Amazon EC2 Auto Scaling User Guide*\.
+CloudFormation won't mark the warm pool as successful \(by setting its status to CREATE\_COMPLETE\) if there are lifecycle hooks that haven't been completed\. If the state of an instance is `Warmed:Pending:Wait`, the lifeycle hook is not considered complete\. For more information, see [Use lifecycle hooks with a warm pool](https://docs.aws.amazon.com/autoscaling/ec2/userguide/warm-pool-instance-lifecycle.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 If you want to hibernate instances on scale in and there are existing instances in the Auto Scaling group, they must meet the requirements for instance hibernation\. If they don't, when instances return to the warm pool, they will fallback to being stopped instead of being hibernated\.
 
@@ -92,7 +89,7 @@ If you want to hibernate instances on scale in and there are existing instances 
 
 The following example defines a warm pool for an Auto Scaling group\.
 
-For other examples, see our [GitHub repository](https://github.com/aws-samples/amazon-ec2-auto-scaling-group-examples)\. Included are examples of lifecycle hooks that work with warm pools\.
+For more template snippets, see our [GitHub repository](https://github.com/aws-samples/amazon-ec2-auto-scaling-group-examples)\. Included are examples of lifecycle hooks that work with warm pools\. 
 
 ### Auto Scaling group with warm pool<a name="aws-resource-autoscaling-warmpool--examples--Auto_Scaling_group_with_warm_pool"></a>
 
@@ -126,10 +123,9 @@ Resources:
     Type: AWS::AutoScaling::WarmPool
     Properties:
       AutoScalingGroupName: !Ref myASG
-      MinSize: 30
+      MinSize: '30'
       PoolState: Stopped
 ```
 
 ## See also<a name="aws-resource-autoscaling-warmpool--seealso"></a>
-+ [Scaling your applications faster with EC2 Auto Scaling Warm Pools](http://aws.amazon.com/blogs/compute/scaling-your-applications-faster-with-ec2-auto-scaling-warm-pools/) on the AWS Compute Blog
-
++ [PutWarmPool](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutWarmPool.html) in the *Amazon EC2 Auto Scaling API Reference*

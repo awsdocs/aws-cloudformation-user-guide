@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile VeevaConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-veevaconnectorprofilecredentials"></a>
 
- The `VeevaConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required when using Veeva\. 
+ The connector\-specific profile credentials required when using Veeva\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-veevaconnectorprofilecredentials-syntax"></a>
 

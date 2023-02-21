@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `BasePath`  <a name="cfn-kinesisanalyticsv2-application-s3contentbaselocation-basepath"></a>
 The base path for the S3 bucket\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1024`  

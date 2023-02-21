@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `EventType`  <a name="cfn-cloudfront-distribution-lambdafunctionassociation-eventtype"></a>
 Specifies the event type that triggers a Lambda@Edge function invocation\. You can specify the following values:  
-+  `viewer-request`: The function executes when CloudFront receives a request from a viewer and before it checks to see whether the requested object is in the edge cache\. 
++  `viewer-request`: The function executes when CloudFront receives a request from a viewer and before it checks to see whether the requested object is in the edge cache\.
 +  `origin-request`: The function executes only when CloudFront sends a request to your origin\. When the requested object is in the edge cache, the function doesn't execute\.
 +  `origin-response`: The function executes after CloudFront receives a response from the origin and before it caches the object in the response\. When the requested object is in the edge cache, the function doesn't execute\.
 +  `viewer-response`: The function executes before CloudFront returns the requested object to the viewer\. The function executes regardless of whether the object was already in the edge cache\.

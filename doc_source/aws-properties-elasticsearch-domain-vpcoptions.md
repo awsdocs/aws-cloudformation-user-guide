@@ -37,6 +37,7 @@ The list of security group IDs that are associated with the VPC endpoints for th
 
 `SubnetIds`  <a name="cfn-elasticsearch-domain-vpcoptions-subnetids"></a>
 Provide one subnet ID for each Availability Zone that your domain uses\. For example, you must specify three subnet IDs for a three Availability Zone domain\. To learn more, see [VPCs and subnets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html) in the *Amazon VPC User Guide*\.  
+Required if you're creating your domain inside a VPC\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

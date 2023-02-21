@@ -1,6 +1,6 @@
 # AWS::Lex::Bot Condition<a name="aws-properties-lex-bot-condition"></a>
 
-<a name="aws-properties-lex-bot-condition-description"></a>The `Condition` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
+Provides an expression that evaluates to true or false\. 
 
 ## Syntax<a name="aws-properties-lex-bot-condition-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-condition-properties"></a>
 
 `ExpressionString`  <a name="cfn-lex-bot-condition-expressionstring"></a>
-Property description not available\.  
+The expression string that is evaluated\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

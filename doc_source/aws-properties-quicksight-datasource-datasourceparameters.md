@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AthenaParameters](#cfn-quicksight-datasource-datasourceparameters-athenaparameters)" : AthenaParameters,
   "[AuroraParameters](#cfn-quicksight-datasource-datasourceparameters-auroraparameters)" : AuroraParameters,
   "[AuroraPostgreSqlParameters](#cfn-quicksight-datasource-datasourceparameters-aurorapostgresqlparameters)" : AuroraPostgreSqlParameters,
+  "[DatabricksParameters](#cfn-quicksight-datasource-datasourceparameters-databricksparameters)" : DatabricksParameters,
   "[MariaDbParameters](#cfn-quicksight-datasource-datasourceparameters-mariadbparameters)" : MariaDbParameters,
   "[MySqlParameters](#cfn-quicksight-datasource-datasourceparameters-mysqlparameters)" : MySqlParameters,
   "[OracleParameters](#cfn-quicksight-datasource-datasourceparameters-oracleparameters)" : OracleParameters,
@@ -43,6 +44,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     AuroraParameters
   [AuroraPostgreSqlParameters](#cfn-quicksight-datasource-datasourceparameters-aurorapostgresqlparameters): 
     AuroraPostgreSqlParameters
+  [DatabricksParameters](#cfn-quicksight-datasource-datasourceparameters-databricksparameters): 
+    DatabricksParameters
   [MariaDbParameters](#cfn-quicksight-datasource-datasourceparameters-mariadbparameters): 
     MariaDbParameters
   [MySqlParameters](#cfn-quicksight-datasource-datasourceparameters-mysqlparameters): 
@@ -99,6 +102,12 @@ The parameters for Amazon Aurora MySQL\.
 The parameters for Amazon Aurora\.  
 *Required*: No  
 *Type*: [AuroraPostgreSqlParameters](aws-properties-quicksight-datasource-aurorapostgresqlparameters.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DatabricksParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-databricksparameters"></a>
+The required parameters that are needed to connect to a Databricks data source\.  
+*Required*: No  
+*Type*: [DatabricksParameters](aws-properties-quicksight-datasource-databricksparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MariaDbParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-mariadbparameters"></a>

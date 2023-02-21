@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-gamelift-gamesessionqueue-destination-properties"></a>
 
 `DestinationArn`  <a name="cfn-gamelift-gamesessionqueue-destination-destinationarn"></a>
-The Amazon Resource Name \(ARN\) that is assigned to fleet or fleet alias\. ARNs, which include a fleet ID or alias ID and a Region name, provide a unique identifier across all Regions\.   
+The Amazon Resource Name \(ARN\) that is assigned to fleet or fleet alias\. ARNs, which include a fleet ID or alias ID and a Region name, provide a unique identifier across all Regions\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

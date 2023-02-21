@@ -21,7 +21,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ClusterName](#cfn-elasticache-cachecluster-clustername)" : String,
       "[Engine](#cfn-elasticache-cachecluster-engine)" : String,
       "[EngineVersion](#cfn-elasticache-cachecluster-engineversion)" : String,
+      "[IpDiscovery](#cfn-elasticache-cachecluster-ipdiscovery)" : String,
       "[LogDeliveryConfigurations](#cfn-elasticache-cachecluster-logdeliveryconfigurations)" : [ LogDeliveryConfigurationRequest, ... ],
+      "[NetworkType](#cfn-elasticache-cachecluster-networktype)" : String,
       "[NotificationTopicArn](#cfn-elasticache-cachecluster-notificationtopicarn)" : String,
       "[NumCacheNodes](#cfn-elasticache-cachecluster-numcachenodes)" : Integer,
       "[Port](#cfn-elasticache-cachecluster-port)" : Integer,
@@ -33,6 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SnapshotRetentionLimit](#cfn-elasticache-cachecluster-snapshotretentionlimit)" : Integer,
       "[SnapshotWindow](#cfn-elasticache-cachecluster-snapshotwindow)" : String,
       "[Tags](#cfn-elasticache-cachecluster-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[TransitEncryptionEnabled](#cfn-elasticache-cachecluster-transitencryptionenabled)" : Boolean,
       "[VpcSecurityGroupIds](#cfn-elasticache-cachecluster-vpcsecuritygroupids)" : [ String, ... ]
     }
 }
@@ -53,8 +56,10 @@ Properties:
   [ClusterName](#cfn-elasticache-cachecluster-clustername): String
   [Engine](#cfn-elasticache-cachecluster-engine): String
   [EngineVersion](#cfn-elasticache-cachecluster-engineversion): String
+  [IpDiscovery](#cfn-elasticache-cachecluster-ipdiscovery): String
   [LogDeliveryConfigurations](#cfn-elasticache-cachecluster-logdeliveryconfigurations): 
     - LogDeliveryConfigurationRequest
+  [NetworkType](#cfn-elasticache-cachecluster-networktype): String
   [NotificationTopicArn](#cfn-elasticache-cachecluster-notificationtopicarn): String
   [NumCacheNodes](#cfn-elasticache-cachecluster-numcachenodes): Integer
   [Port](#cfn-elasticache-cachecluster-port): Integer
@@ -69,6 +74,7 @@ Properties:
   [SnapshotWindow](#cfn-elasticache-cachecluster-snapshotwindow): String
   [Tags](#cfn-elasticache-cachecluster-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [TransitEncryptionEnabled](#cfn-elasticache-cachecluster-transitencryptionenabled): Boolean
   [VpcSecurityGroupIds](#cfn-elasticache-cachecluster-vpcsecuritygroupids): 
     - String
 ```
@@ -135,7 +141,7 @@ The `r6gd` family is available in the following regions: `us-east-2`, `us-east-1
     **M2 node types:** `cache.m2.xlarge`, `cache.m2.2xlarge`, `cache.m2.4xlarge`
 
     **R3 node types:** `cache.r3.large`, `cache.r3.xlarge`, `cache.r3.2xlarge`, `cache.r3.4xlarge`, `cache.r3.8xlarge`
-For region availability, see [Supported Node Types by Amazon Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)  
+For region availability, see [Supported Node Types by Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)  
 **Additional node type info**  
 + All current generation instance types are created in Amazon VPC by default\.
 + Redis append\-only files \(AOF\) are not supported for T1 or T2 instances\.
@@ -187,11 +193,25 @@ The version number of the cache engine to be used for this cluster\. To view the
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`IpDiscovery`  <a name="cfn-elasticache-cachecluster-ipdiscovery"></a>
+The network type you choose when modifying a cluster, either `ipv4` \| `ipv6`\. IPv6 is supported for workloads using Redis engine version 6\.2 onward or Memcached engine version 1\.6\.6 on all instances built on the [Nitro system](http://aws.amazon.com/ec2/nitro/)\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `ipv4 | ipv6`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `LogDeliveryConfigurations`  <a name="cfn-elasticache-cachecluster-logdeliveryconfigurations"></a>
 Specifies the destination, format and type of the logs\.  
 *Required*: No  
 *Type*: List of [LogDeliveryConfigurationRequest](aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`NetworkType`  <a name="cfn-elasticache-cachecluster-networktype"></a>
+Must be either `ipv4` \| `ipv6` \| `dual_stack`\. IPv6 is supported for workloads using Redis engine version 6\.2 onward or Memcached engine version 1\.6\.6 on all instances built on the [Nitro system](http://aws.amazon.com/ec2/nitro/)\.   
+*Required*: No  
+*Type*: String  
+*Allowed values*: `dual_stack | ipv4 | ipv6`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NotificationTopicArn`  <a name="cfn-elasticache-cachecluster-notificationtopicarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon Simple Notification Service \(SNS\) topic to which notifications are sent\.  
@@ -284,6 +304,13 @@ This parameter is only valid if the `Engine` parameter is `redis`\.
 A list of tags to be added to this resource\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TransitEncryptionEnabled`  <a name="cfn-elasticache-cachecluster-transitencryptionenabled"></a>
+A flag that enables in\-transit encryption when set to true\.  
+ Only available when creating a cache cluster in an Amazon VPC using Memcached version 1\.6\.12 or later\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcSecurityGroupIds`  <a name="cfn-elasticache-cachecluster-vpcsecuritygroupids"></a>
@@ -380,28 +407,24 @@ For the cache cluster, the `VpcSecurityGroupIds` property is used to associate t
 
 ```
 ElasticacheSecurityGroup:
-  Type: AWS::EC2::SecurityGroup
+  Type: 'AWS::EC2::SecurityGroup'
   Properties:
-    GroupDescription: "Elasticache Security Group"
+    GroupDescription: Elasticache Security Group
     SecurityGroupIngress:
-      -
-        IpProtocol: "tcp"
-        FromPort: "11211"
-        ToPort: "11211"
-        SourceSecurityGroupName:
-        Ref: "InstanceSecurityGroup"
+      - IpProtocol: tcp
+        FromPort: 11211
+        ToPort: 11211
+        SourceSecurityGroupName: !Ref InstanceSecurityGroup
 ElasticacheCluster:
-  Type: AWS::ElastiCache::CacheCluster
-  Properties:
-    AutoMinorVersionUpgrade: "true"
-    Engine: "memcached"
-    CacheNodeType: "cache.t2.micro"
-    NumCacheNodes: "1"
+  Type: 'AWS::ElastiCache::CacheCluster'
+  Properties:    
+    Engine: memcached
+    CacheNodeType: cache.t2.micro
+    NumCacheNodes: '1'
     VpcSecurityGroupIds:
-      -
-        Fn::GetAtt:
-          - "ElasticacheSecurityGroup"
-          - "GroupId"
+      - !GetAtt 
+        - ElasticacheSecurityGroup
+        - GroupId
 ```
 
 ### Memcached Nodes in Multiple Availability Zones<a name="aws-properties-elasticache-cache-cluster--examples--Memcached_Nodes_in_Multiple_Availability_Zones"></a>
@@ -433,16 +456,16 @@ The following example launches a cache cluster with three nodes, where two nodes
 
 ```
 myCacheCluster:
-  Type: AWS::ElastiCache::CacheCluster
+  Type: 'AWS::ElastiCache::CacheCluster'
   Properties:
-    AZMode: "cross-az"
-    CacheNodeType: "cache.m3.medium"
-    Engine: "memcached"
-    NumCacheNodes: "3"
+    AZMode: cross-az
+    CacheNodeType: cache.m3.medium
+    Engine: memcached
+    NumCacheNodes: '3'
     PreferredAvailabilityZones:
-      - "us-west-2a"
-      - "us-west-2a"
-      - "us-west-2b"
+      - us-west-2a
+      - us-west-2a
+      - us-west-2b
 ```
 
 ## See also<a name="aws-properties-elasticache-cache-cluster--seealso"></a>

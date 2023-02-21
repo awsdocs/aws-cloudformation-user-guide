@@ -1,6 +1,6 @@
 # AWS::WAFv2::WebACL Rule<a name="aws-properties-wafv2-webacl-rule"></a>
 
-A single rule, which you can use to identify web requests that you want to allow, block, or count\. Each rule includes one top\-level Statement that AWS WAF uses to identify matching web requests, and parameters that govern how AWS WAF handles them\. 
+A single rule, which you can use in a [AWS::WAFv2::WebACL](aws-resource-wafv2-webacl.md) or [AWS::WAFv2::RuleGroup](aws-resource-wafv2-rulegroup.md) to identify web requests that you want to allow, block, or count\. Each rule includes one top\-level [Statement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-rule.html#cfn-wafv2-webacl-rule-statement) that AWS WAF uses to identify matching web requests, and parameters that govern how AWS WAF handles them\. 
 
 ## Syntax<a name="aws-properties-wafv2-webacl-rule-syntax"></a>
 
@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Action](#cfn-wafv2-webacl-rule-action)" : RuleAction,
   "[CaptchaConfig](#cfn-wafv2-webacl-rule-captchaconfig)" : CaptchaConfig,
+  "[ChallengeConfig](#cfn-wafv2-webacl-rule-challengeconfig)" : ChallengeConfig,
   "[Name](#cfn-wafv2-webacl-rule-name)" : String,
   "[OverrideAction](#cfn-wafv2-webacl-rule-overrideaction)" : OverrideAction,
   "[Priority](#cfn-wafv2-webacl-rule-priority)" : Integer,
@@ -28,6 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     RuleAction
   [CaptchaConfig](#cfn-wafv2-webacl-rule-captchaconfig): 
     CaptchaConfig
+  [ChallengeConfig](#cfn-wafv2-webacl-rule-challengeconfig): 
+    ChallengeConfig
   [Name](#cfn-wafv2-webacl-rule-name): String
   [OverrideAction](#cfn-wafv2-webacl-rule-overrideaction): 
     OverrideAction
@@ -58,8 +61,14 @@ Specifies how AWS WAF should handle `CAPTCHA` evaluations\. If you don't specify
 *Type*: [CaptchaConfig](aws-properties-wafv2-webacl-captchaconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ChallengeConfig`  <a name="cfn-wafv2-webacl-rule-challengeconfig"></a>
+Specifies how AWS WAF should handle `Challenge` evaluations\. If you don't specify this, AWS WAF uses the challenge configuration that's defined for the web ACL\.   
+*Required*: No  
+*Type*: [ChallengeConfig](aws-properties-wafv2-webacl-challengeconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Name`  <a name="cfn-wafv2-webacl-rule-name"></a>
-The descriptive name of the rule\. You can't change the name of a `Rule` after you create it\.   
+The name of the rule\. You can't change the name of a `Rule` after you create it\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -98,7 +107,7 @@ For example, `myLabelName` or `nameSpace1:nameSpace2:myLabelName`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Statement`  <a name="cfn-wafv2-webacl-rule-statement"></a>
-The AWS WAF processing statement for the rule, for example ByteMatchStatement or SizeConstraintStatement\.   
+The AWS WAF processing statement for the rule, for example [ByteMatchStatement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-statement.html#cfn-wafv2-rulegroup-statement-bytematchstatement) or [SizeConstraintStatement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-statement.html#cfn-wafv2-rulegroup-statement-sizeconstraintstatement)\.   
 *Required*: Yes  
 *Type*: [Statement](aws-properties-wafv2-webacl-statement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

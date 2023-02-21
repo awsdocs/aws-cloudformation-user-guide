@@ -28,7 +28,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The encryption mode to use for job bookmarks data\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | CSE-KMS`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyArn`  <a name="cfn-glue-securityconfiguration-jobbookmarksencryption-kmskeyarn"></a>

@@ -1,6 +1,6 @@
 # AWS::BillingConductor::CustomLineItem<a name="aws-resource-billingconductor-customlineitem"></a>
 
- Creates a custom line item that can be used to create a one\-time fixed charge that can be applied to a single billing group for the current or previous billing period\. The one\-time fixed charge is either a fee or discount\. 
+ Creates a custom line item that can be used to create a one\-time or recurring, fixed or percentage\-based charge that you can apply to a single billing group\. You can apply custom line items to the current or previous billing period\. You can create either a fee or a discount custom line item\.
 
 ## Syntax<a name="aws-resource-billingconductor-customlineitem-syntax"></a>
 
@@ -130,10 +130,13 @@ The following example shows a flat charge custom line item of $10 attached to a 
                       "ChargeValue": 10
                   },
                   "Type": "FEE"
+              },
+              "BillingPeriodRange": {
+              "InclusiveStartBillingPeriod": "2022-11"
               }
-          }
-      }
-  }
+            }
+        }
+    }
 }
 ```
 
@@ -151,6 +154,8 @@ Resources:
               Flat:
                   ChargeValue: 10
               Type: 'FEE'
+          BillingPeriodRange:
+            InclusiveStartBillingPeriod: 2022-11
 ```
 
 ### Percentage custom line item<a name="aws-resource-billingconductor-customlineitem--examples--Percentage_custom_line_item"></a>

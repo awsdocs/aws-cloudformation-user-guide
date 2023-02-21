@@ -108,12 +108,12 @@ The following example shows how to declare a GuardDuty `Member` resource:
 #### YAML<a name="aws-resource-guardduty-member--examples--Declare_a_Member_Resource--yaml"></a>
 
 ```
-Type: AWS::GuardDuty::Member
-Properties:
-      Status: Invited
-      MemberId: 012345678901
-      Email: guarddutymember@amazon.com
-      Message: You are invited to enable Amazon Guardduty.
-      DetectorId: a12abc34d567e8fa901bc2d34e56789f0
-      DisableEmailNotification: true
+      Type: AWS::GuardDuty::Member
+      Properties:
+            Status: Invited
+            MemberId: 012345678901
+            Email: guarddutymember@amazon.com
+            Message: You are invited to enable Amazon Guardduty.
+            DetectorId: a12abc34d567e8fa901bc2d34e56789f0
+            DisableEmailNotification: true
 ```

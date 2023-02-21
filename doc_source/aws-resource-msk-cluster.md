@@ -23,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LoggingInfo](#cfn-msk-cluster-logginginfo)" : LoggingInfo,
       "[NumberOfBrokerNodes](#cfn-msk-cluster-numberofbrokernodes)" : Integer,
       "[OpenMonitoring](#cfn-msk-cluster-openmonitoring)" : OpenMonitoring,
+      "[StorageMode](#cfn-msk-cluster-storagemode)" : String,
       "[Tags](#cfn-msk-cluster-tags)" : {Key : Value, ...}
     }
 }
@@ -50,6 +51,7 @@ Properties:
   [NumberOfBrokerNodes](#cfn-msk-cluster-numberofbrokernodes): Integer
   [OpenMonitoring](#cfn-msk-cluster-openmonitoring): 
     OpenMonitoring
+  [StorageMode](#cfn-msk-cluster-storagemode): String
   [Tags](#cfn-msk-cluster-tags): 
     Key : Value
 ```
@@ -123,6 +125,12 @@ The settings for open monitoring\.
 *Type*: [OpenMonitoring](aws-properties-msk-cluster-openmonitoring.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`StorageMode`  <a name="cfn-msk-cluster-storagemode"></a>
+This controls storage mode for supported storage tiers\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Tags`  <a name="cfn-msk-cluster-tags"></a>
 A map of key:value pairs to apply to this resource\. Both key and value are of type String\.  
 *Required*: No  
@@ -146,7 +154,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### <a name="aws-resource-msk-cluster-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.
 
 ## Examples<a name="aws-resource-msk-cluster--examples"></a>
 
@@ -511,8 +519,9 @@ Resources:
   MSKSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Enable Zookeeper and Kafka access
-      VpcId: !Ref VPC
+      GroupDescription: Enable SSH access via port 22
+      VpcId:
+        Ref: VPC
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 2181
@@ -994,7 +1003,7 @@ Outputs:
         "MSKSecurityGroup": {
             "Type": "AWS::EC2::SecurityGroup",
             "Properties": {
-                "GroupDescription": "Enable Zookeeper and Kafka access",
+                "GroupDescription": "Enable SSH access via port 22",
                 "VpcId": {
                     "Ref": "VPC"
                 },

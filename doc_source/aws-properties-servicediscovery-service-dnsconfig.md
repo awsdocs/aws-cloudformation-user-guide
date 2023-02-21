@@ -2,6 +2,9 @@
 
 A complex type that contains information about the Amazon Route 53 DNS records that you want AWS Cloud Map to create when you register an instance\.
 
+**Important**  
+The record types of a service can only be changed by deleting the service and recreating it with a new `Dnsconfig`\.
+
 ## Syntax<a name="aws-properties-servicediscovery-service-dnsconfig-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

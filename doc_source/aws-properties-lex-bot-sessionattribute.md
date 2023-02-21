@@ -1,6 +1,6 @@
 # AWS::Lex::Bot SessionAttribute<a name="aws-properties-lex-bot-sessionattribute"></a>
 
-<a name="aws-properties-lex-bot-sessionattribute-description"></a>The `SessionAttribute` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
+A key/value pair representing session\-specific context information\. It contains application information passed between Amazon Lex V2 and a client application\.
 
 ## Syntax<a name="aws-properties-lex-bot-sessionattribute-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-sessionattribute-properties"></a>
 
 `Key`  <a name="cfn-lex-bot-sessionattribute-key"></a>
-Property description not available\.  
+The name of the session attribute\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-lex-bot-sessionattribute-value"></a>
-Property description not available\.  
+The session\-specific context information for the session attribute\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

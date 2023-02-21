@@ -10,18 +10,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Overrides](#cfn-amplifyuibuilder-component-componentvariant-overrides)" : ComponentOverrides,
-  "[VariantValues](#cfn-amplifyuibuilder-component-componentvariant-variantvalues)" : ComponentVariantValues
+  "[Overrides](#cfn-amplifyuibuilder-component-componentvariant-overrides)" : Json,
+  "[VariantValues](#cfn-amplifyuibuilder-component-componentvariant-variantvalues)" : {Key : Value, ...}
 }
 ```
 
 ### YAML<a name="aws-properties-amplifyuibuilder-component-componentvariant-syntax.yaml"></a>
 
 ```
-  [Overrides](#cfn-amplifyuibuilder-component-componentvariant-overrides): 
-    ComponentOverrides
+  [Overrides](#cfn-amplifyuibuilder-component-componentvariant-overrides): Json
   [VariantValues](#cfn-amplifyuibuilder-component-componentvariant-variantvalues): 
-    ComponentVariantValues
+    Key : Value
 ```
 
 ## Properties<a name="aws-properties-amplifyuibuilder-component-componentvariant-properties"></a>
@@ -29,11 +28,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Overrides`  <a name="cfn-amplifyuibuilder-component-componentvariant-overrides"></a>
 The properties of the component variant that can be overriden when customizing an instance of the component\. You can't specify `tags` as a valid property for `overrides`\.  
 *Required*: No  
-*Type*: [ComponentOverrides](aws-properties-amplifyuibuilder-component-componentoverrides.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VariantValues`  <a name="cfn-amplifyuibuilder-component-componentvariant-variantvalues"></a>
 The combination of variants that comprise this variant\.  
 *Required*: No  
-*Type*: [ComponentVariantValues](aws-properties-amplifyuibuilder-component-componentvariantvalues.md)  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

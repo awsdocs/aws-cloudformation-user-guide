@@ -18,7 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ProvisioningRoleArn](#cfn-iot-provisioningtemplate-provisioningrolearn)" : String,
       "[Tags](#cfn-iot-provisioningtemplate-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TemplateBody](#cfn-iot-provisioningtemplate-templatebody)" : String,
-      "[TemplateName](#cfn-iot-provisioningtemplate-templatename)" : String
+      "[TemplateName](#cfn-iot-provisioningtemplate-templatename)" : String,
+      "[TemplateType](#cfn-iot-provisioningtemplate-templatetype)" : String
     }
 }
 ```
@@ -37,6 +38,7 @@ Properties:
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TemplateBody](#cfn-iot-provisioningtemplate-templatebody): String
   [TemplateName](#cfn-iot-provisioningtemplate-templatename): String
+  [TemplateType](#cfn-iot-provisioningtemplate-templatetype): String
 ```
 
 ## Properties<a name="aws-resource-iot-provisioningtemplate-properties"></a>
@@ -79,6 +81,12 @@ The JSON formatted contents of the fleet provisioning template version\.
 
 `TemplateName`  <a name="cfn-iot-provisioningtemplate-templatename"></a>
 The name of the fleet provisioning template\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`TemplateType`  <a name="cfn-iot-provisioningtemplate-templatetype"></a>
+The type of the provisioning template\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

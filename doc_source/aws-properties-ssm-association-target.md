@@ -35,7 +35,7 @@ User\-defined criteria for sending commands that target managed nodes that meet 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Values`  <a name="cfn-ssm-association-target-values"></a>
-User\-defined criteria that maps to `Key`\. For example, if you specified `tag:ServerRole`, you could specify Value `WebServer` to run a command on instances that include EC2 tags of `ServerRole,WebServer`\.   
+User\-defined criteria that maps to `Key`\. For example, if you specified `tag:ServerRole`, you could specify `value:WebServer` to run a command on instances that include EC2 tags of `ServerRole,WebServer`\.   
 Depending on the type of target, the maximum number of values for a key might be lower than the global maximum of 50\.  
 *Required*: Yes  
 *Type*: List of String  

@@ -24,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[KubernetesNetworkConfig](#cfn-eks-cluster-kubernetesnetworkconfig)" : KubernetesNetworkConfig,
       "[Logging](#cfn-eks-cluster-logging)" : Logging,
       "[Name](#cfn-eks-cluster-name)" : String,
+      "[OutpostConfig](#cfn-eks-cluster-outpostconfig)" : OutpostConfig,
       "[ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig)" : ResourcesVpcConfig,
       "[RoleArn](#cfn-eks-cluster-rolearn)" : String,
       "[Tags](#cfn-eks-cluster-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -44,6 +45,8 @@ Properties:
   [Logging](#cfn-eks-cluster-logging): 
     Logging
   [Name](#cfn-eks-cluster-name): String
+  [OutpostConfig](#cfn-eks-cluster-outpostconfig): 
+    OutpostConfig
   [ResourcesVpcConfig](#cfn-eks-cluster-resourcesvpcconfig): 
     ResourcesVpcConfig
   [RoleArn](#cfn-eks-cluster-rolearn): String
@@ -82,6 +85,12 @@ The unique name to give to your cluster\.
 *Pattern*: `^[0-9A-Za-z][A-Za-z0-9\-_]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`OutpostConfig`  <a name="cfn-eks-cluster-outpostconfig"></a>
+An object representing the configuration of your local Amazon EKS cluster on an AWS Outpost\. This object isn't available for clusters on the AWS cloud\.  
+*Required*: No  
+*Type*: [OutpostConfig](aws-properties-eks-cluster-outpostconfig.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `ResourcesVpcConfig`  <a name="cfn-eks-cluster-resourcesvpcconfig"></a>
 The VPC configuration that's used by the cluster control plane\. Amazon EKS VPC resources have specific requirements to work properly with Kubernetes\. For more information, see [Cluster VPC Considerations](https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html) and [Cluster Security Group Considerations](https://docs.aws.amazon.com/eks/latest/userguide/sec-group-reqs.html) in the *Amazon EKS User Guide*\. You must specify at least two subnets\. You can specify up to five security groups, but we recommend that you use a dedicated security group for your cluster control plane\.  
 Updates require replacement of the `SecurityGroupIds` and `SubnetIds` sub\-properties\.
@@ -103,7 +112,8 @@ You must have the `eks:TagResource` and `eks:UntagResource` permissions in your 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-eks-cluster-version"></a>
-The desired Kubernetes version for your cluster\. If you don't specify a value here, the latest version available in Amazon EKS is used\.  
+The desired Kubernetes version for your cluster\. If you don't specify a value here, the default version available in Amazon EKS is used\.  
+The default version might not be the latest version available\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -144,11 +154,14 @@ Amazon Resource Name \(ARN\) or alias of the customer master key \(CMK\)\.
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
 The endpoint for your Kubernetes API server, such as `https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com`\.
 
+`Id`  <a name="Id-fn::getatt"></a>
+The ID of your local Amazon EKS cluster on an AWS Outpost\. This property isn't available for an Amazon EKS cluster on the AWS cloud\.
+
 `KubernetesNetworkConfig.ServiceIpv6Cidr`  <a name="KubernetesNetworkConfig.ServiceIpv6Cidr-fn::getatt"></a>
 The CIDR block that Kubernetes Service IP addresses are assigned from if you created a 1\.21 or later cluster with version 1\.10\.1 or later of the Amazon VPC CNI add\-on and specified `ipv6` for **ipFamily** when you created the cluster\. Kubernetes assigns Service addresses from the unique local address range \(`fc00::/7`\) because you can't specify a custom IPv6 CIDR block when you create the cluster\.
 
 `OpenIdConnectIssuerUrl`  <a name="OpenIdConnectIssuerUrl-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The issuer URL for the OIDC identity provider\.
 
 ## Examples<a name="aws-resource-eks-cluster--examples"></a>
 
@@ -232,5 +245,5 @@ EKSCluster:
 ```
 
 ## See also<a name="aws-resource-eks-cluster--seealso"></a>
-+  [Clusters](https://docs.aws.amazon.com/eks/latest/userguide/clusters.html) in the *Amazon EKS User Guide *\.
++  [Clusters](https://docs.aws.amazon.com/eks/latest/userguide/clusters.html) in the *Amazon EKS User Guide*\.
 +  [https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateCluster.html](https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateCluster.html) in the *Amazon EKS API Reference*\.

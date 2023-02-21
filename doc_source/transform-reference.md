@@ -7,6 +7,7 @@ For information about using transforms in your templates, see [Transform templat
 **Topics**
 + [AWS::CodeDeployBlueGreen transform](transform-aws-codedeploybluegreen.md)
 + [AWS::Include transform](create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.md)
++ [AWS::LanguageExtensions transform](transform-aws-languageextensions.md)
 + [AWS::SecretsManager transform](transform-aws-secretsmanager.md)
 + [AWS::Serverless transform](transform-aws-serverless.md)
 + [AWS::ServiceCatalog transform](transform-aws-servicecatalog.md)

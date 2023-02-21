@@ -30,7 +30,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LoadBalancerInfo](#cfn-codedeploy-deploymentgroup-loadbalancerinfo)" : LoadBalancerInfo,
       "[OnPremisesInstanceTagFilters](#cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters)" : [ TagFilter, ... ],
       "[OnPremisesTagSet](#cfn-codedeploy-deploymentgroup-onpremisestagset)" : OnPremisesTagSet,
+      "[OutdatedInstancesStrategy](#cfn-codedeploy-deploymentgroup-outdatedinstancesstrategy)" : String,
       "[ServiceRoleArn](#cfn-codedeploy-deploymentgroup-servicerolearn)" : String,
+      "[Tags](#cfn-codedeploy-deploymentgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TriggerConfigurations](#cfn-codedeploy-deploymentgroup-triggerconfigurations)" : [ TriggerConfig, ... ]
     }
 }
@@ -68,7 +70,10 @@ Properties:
     - TagFilter
   [OnPremisesTagSet](#cfn-codedeploy-deploymentgroup-onpremisestagset): 
     OnPremisesTagSet
+  [OutdatedInstancesStrategy](#cfn-codedeploy-deploymentgroup-outdatedinstancesstrategy): String
   [ServiceRoleArn](#cfn-codedeploy-deploymentgroup-servicerolearn): String
+  [Tags](#cfn-codedeploy-deploymentgroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TriggerConfigurations](#cfn-codedeploy-deploymentgroup-triggerconfigurations): 
     - TriggerConfig
 ```
@@ -177,11 +182,26 @@ Information about groups of tags applied to on\-premises instances\. The deploym
 *Type*: [OnPremisesTagSet](aws-properties-codedeploy-deploymentgroup-onpremisestagset.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`OutdatedInstancesStrategy`  <a name="cfn-codedeploy-deploymentgroup-outdatedinstancesstrategy"></a>
+Indicates what happens when new Amazon EC2 instances are launched mid\-deployment and do not receive the deployed application revision\.  
+If this option is set to `UPDATE` or is unspecified, CodeDeploy initiates one or more 'auto\-update outdated instances' deployments to apply the deployed application revision to the new Amazon EC2 instances\.  
+If this option is set to `IGNORE`, CodeDeploy does not initiate a deployment to update the new Amazon EC2 instances\. This may result in instances having different revisions\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `IGNORE | UPDATE`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ServiceRoleArn`  <a name="cfn-codedeploy-deploymentgroup-servicerolearn"></a>
 A service role Amazon Resource Name \(ARN\) that grants CodeDeploy permission to make calls to AWS services on your behalf\. For more information, see [Create a Service Role for AWS CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/getting-started-create-service-role.html) in the *AWS CodeDeploy User Guide*\.   
  In some cases, you might need to add a dependency on the service role's policy\. For more information, see IAM role policy in [DependsOn Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)\.
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-codedeploy-deploymentgroup-tags"></a>
+ The metadata that you apply to CodeDeploy deployment groups to help you organize and categorize them\. Each tag consists of a key and an optional value, both of which you define\.   
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TriggerConfigurations`  <a name="cfn-codedeploy-deploymentgroup-triggerconfigurations"></a>

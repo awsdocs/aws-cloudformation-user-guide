@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::MemoryDB::User",
   "Properties" : {
       "[AccessString](#cfn-memorydb-user-accessstring)" : String,
-      "[AuthenticationMode](#cfn-memorydb-user-authenticationmode)" : Json,
+      "[AuthenticationMode](#cfn-memorydb-user-authenticationmode)" : AuthenticationMode,
       "[Tags](#cfn-memorydb-user-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[UserName](#cfn-memorydb-user-username)" : String
     }
@@ -27,7 +27,8 @@ Type: AWS::MemoryDB::User
 Properties: 
   [AccessString](#cfn-memorydb-user-accessstring): 
     String
-  [AuthenticationMode](#cfn-memorydb-user-authenticationmode): Json
+  [AuthenticationMode](#cfn-memorydb-user-authenticationmode): 
+    AuthenticationMode
   [Tags](#cfn-memorydb-user-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UserName](#cfn-memorydb-user-username): String
@@ -43,8 +44,26 @@ Access permissions string used for this user\.
 
 `AuthenticationMode`  <a name="cfn-memorydb-user-authenticationmode"></a>
 Denotes whether the user requires a password to authenticate\.  
+**Example:**   
+
+```
+mynewdbuser:
+     Type: AWS::MemoryDB::User
+     Properties: 
+     AccessString: on ~* &* +@all
+     AuthenticationMode: 
+         Passwords: '1234567890123456'
+         Type: password
+     UserName: mynewdbuser
+     
+     AuthenticationMode:
+     {
+         "Passwords": ["1234567890123456"],
+         "Type": "Password"
+     }
+```
 *Required*: Yes  
-*Type*: Json  
+*Type*: [AuthenticationMode](aws-properties-memorydb-user-authenticationmode.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-memorydb-user-tags"></a>

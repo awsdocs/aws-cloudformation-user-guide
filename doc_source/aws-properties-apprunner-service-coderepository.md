@@ -30,6 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `CodeConfiguration`  <a name="cfn-apprunner-service-coderepository-codeconfiguration"></a>
 Configuration for building and running the service from a source code repository\.  
+ `CodeConfiguration` is required only for `CreateService` request\.
 *Required*: No  
 *Type*: [CodeConfiguration](aws-properties-apprunner-service-codeconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

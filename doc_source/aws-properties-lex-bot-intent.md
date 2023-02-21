@@ -78,7 +78,7 @@ Specifies that Amazon Lex invokes the alias Lambda function when the intent is r
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InitialResponseSetting`  <a name="cfn-lex-bot-intent-initialresponsesetting"></a>
-Property description not available\.  
+Configuration setting for a response sent to the user before Amazon Lex starts eliciting slots\.  
 *Required*: No  
 *Type*: [InitialResponseSetting](aws-properties-lex-bot-initialresponsesetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -102,7 +102,7 @@ Provides prompts that Amazon Lex sends to the user to confirm the completion of 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KendraConfiguration`  <a name="cfn-lex-bot-intent-kendraconfiguration"></a>
-Configuration information required to use the AMAZON\.KendraSearchIntent intent to connect to an Amazon Kendra index\. The AMAZON\.KendraSearchIntent intent is called when Amazon Lex can't determine another intent to invoke\.  
+Provides configuration information for the `AMAZON.KendraSearchIntent` intent\. When you use this intent, Amazon Lex searches the specified Amazon Kendra index and returns documents from the index that match the user's utterance\.  
 *Required*: No  
 *Type*: [KendraConfiguration](aws-properties-lex-bot-kendraconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

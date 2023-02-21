@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ComponentMonitoringSettings](#cfn-applicationinsights-application-componentmonitoringsettings)" : [ ComponentMonitoringSetting, ... ],
       "[CustomComponents](#cfn-applicationinsights-application-customcomponents)" : [ CustomComponent, ... ],
       "[CWEMonitorEnabled](#cfn-applicationinsights-application-cwemonitorenabled)" : Boolean,
+      "[GroupingType](#cfn-applicationinsights-application-groupingtype)" : String,
       "[LogPatternSets](#cfn-applicationinsights-application-logpatternsets)" : [ LogPatternSet, ... ],
       "[OpsCenterEnabled](#cfn-applicationinsights-application-opscenterenabled)" : Boolean,
       "[OpsItemSNSTopicArn](#cfn-applicationinsights-application-opsitemsnstopicarn)" : String,
@@ -36,6 +37,7 @@ Properties:
   [CustomComponents](#cfn-applicationinsights-application-customcomponents): 
     - CustomComponent
   [CWEMonitorEnabled](#cfn-applicationinsights-application-cwemonitorenabled): Boolean
+  [GroupingType](#cfn-applicationinsights-application-groupingtype): String
   [LogPatternSets](#cfn-applicationinsights-application-logpatternsets): 
     - LogPatternSet
   [OpsCenterEnabled](#cfn-applicationinsights-application-opscenterenabled): Boolean
@@ -69,6 +71,13 @@ Describes a custom component by grouping similar standalone instances to monitor
  Indicates whether Application Insights can listen to CloudWatch events for the application resources, such as `instance terminated`, `failed deployment`, and others\.   
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`GroupingType`  <a name="cfn-applicationinsights-application-groupingtype"></a>
+Application Insights can create applications based on a resource group or on an account\. To create an account\-based application using all of the resources in the account, set this parameter to `ACCOUNT_BASED`\.   
+*Required*: No  
+*Type*: String  
+*Allowed values*: `ACCOUNT_BASED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogPatternSets`  <a name="cfn-applicationinsights-application-logpatternsets"></a>
@@ -133,27 +142,59 @@ Returns the Amazon Resource Name \(ARN\) of the application, such as ` arn:aws:a
 ### The following example template creates an Application Insights application with all components configured with recommended monitoring settings<a name="aws-resource-applicationinsights-application--examples--The_following_example_template_creates_an_Application_Insights_application_with_all_components_configured_with_recommended_monitoring_settings"></a>
 
 The following example template performs the following actions:
-+ Creates an Application Insights application\. For more information, see [CreateApplication](https://docs.aws.amazon.com/appinsights/latest/APIReference/API_CreateApplication.html) in the *Amazon CloudWatch Application Insights API Reference*\.
-+ Sets `AutoConfigurationEnabled` to `true`, which configures all components of the application with the recommended monitoring settings for the `DEFAULT` tier\. For more information, see [DescribeComponentConfigurationRecommendation](https://docs.aws.amazon.com/appinsights/latest/APIReference/API_DescribeComponentConfigurationRecommendation.html) in the *Amazon CloudWatch Application Insights API Reference*\.
++ Creates an Application Insights application\. For more information, see [CreateApplication](https://docs.aws.amazon.com/cloudwatch/latest/APIReference/API_CreateApplication.html) in the *Amazon CloudWatch Application Insights API Reference*\.
++ Sets `AutoConfigurationEnabled` to `true`, which configures all components of the application with the recommended monitoring settings for the `DEFAULT` tier\. For more information, see [DescribeComponentConfigurationRecommendation](https://docs.aws.amazon.com/cloudwatch/latest/APIReference/API_DescribeComponentConfigurationRecommendation.html) in the *Amazon CloudWatch Application Insights API Reference*\.
 
 #### YAML<a name="aws-resource-applicationinsights-application--examples--The_following_example_template_creates_an_Application_Insights_application_with_all_components_configured_with_recommended_monitoring_settings--yaml"></a>
 
 ```
 ---
-Type: AWS::ApplicationInsights::Application
+Type: AWS::ApplicationInsights::Application 
 Properties:
-  ResourceGroupName: my_resource_group
+  ResourceGroupName: my_resource_group 
   AutoConfigurationEnabled: true
 ```
 
 #### JSON<a name="aws-resource-applicationinsights-application--examples--The_following_example_template_creates_an_Application_Insights_application_with_all_components_configured_with_recommended_monitoring_settings--json"></a>
 
 ```
+{   
+    "Type": "AWS::ApplicationInsights::Application",
+    "Properties": { 
+        "ResourceGroupName": "my_resource_group",
+        "AutoConfigurationEnabled": true 
+    } 
+}
+```
+
+### The following example template creates an Application Insights application that includes all of the components in the account<a name="aws-resource-applicationinsights-application--examples--The_following_example_template_creates_an_Application_Insights_application_that_includes_all_of_the_components_in_the_account"></a>
+
+The following example template performs the following actions:
++ Creates an Application Insights application\. For more information, see [CreateApplication](https://docs.aws.amazon.com/cloudwatch/latest/APIReference/API_CreateApplication.html) in the *Amazon CloudWatch Application Insights API Reference*\.
++ Sets `GroupingType` to `ACCOUNT_BASED`, which creates an account level\-based application that includes all of the supported resources in the account\.
++ Sets `AutoConfigurationEnabled` to `true`, which configures all components of the application with the recommended monitoring settings for the `DEFAULT` tier\. For more information, see [DescribeComponentConfigurationRecommendation](https://docs.aws.amazon.com/cloudwatch/latest/APIReference/API_DescribeComponentConfigurationRecommendation.html) in the *Amazon CloudWatch Application Insights API Reference*\.
++ You can specify any name for the `ResourceGroupName`\.
+
+#### YAML<a name="aws-resource-applicationinsights-application--examples--The_following_example_template_creates_an_Application_Insights_application_that_includes_all_of_the_components_in_the_account--yaml"></a>
+
+```
+---
+Type: AWS::ApplicationInsights::Application
+Properties:
+  AutoConfigurationEnabled: true
+  GroupingType: ACCOUNT_BASED
+  ResourceGroupName: my_resource_group
+```
+
+#### JSON<a name="aws-resource-applicationinsights-application--examples--The_following_example_template_creates_an_Application_Insights_application_that_includes_all_of_the_components_in_the_account--json"></a>
+
+```
 {
     "Type": "AWS::ApplicationInsights::Application",
     "Properties": {
-        "ResourceGroupName": "my_resource_group",
-        "AutoConfigurationEnabled": true
+        "AutoConfigurationEnabled": true,
+        "GroupingType": ACCOUNT_BASED,
+        "ResourceGroupName": "my_resource_group"
     }
 }
 ```
@@ -161,11 +202,11 @@ Properties:
 ### The following example template creates an Application Insights application with detailed settings<a name="aws-resource-applicationinsights-application--examples--The_following_example_template_creates_an_Application_Insights_application_with_detailed_settings"></a>
 
 The following example template performs the following actions:
-+ Creates an Application Insights application with CloudWatch Events notification and OpsCenter enabled\. For more information, see [CreateApplication](https://docs.aws.amazon.com/appinsights/latest/APIReference/API_CreateApplication.html) in the *Amazon CloudWatch Application Insights API Reference*\.
-+ Tags the application with two tags, one of which has no tag values\. For more information, see [TagResource](https://docs.aws.amazon.com/appinsights/latest/APIReference/API_TagResource.html) in the *Amazon CloudWatch Application Insights API Reference*\.
-+ Creates two custom instance group components\. For more information, see [CreateComponent](https://docs.aws.amazon.com/appinsights/latest/APIReference/API_CreateComponent.html) in the *Amazon CloudWatch Application Insights API Reference*\.
-+ Creates two log pattern sets\. For more information, see [CreateLogPattern](https://docs.aws.amazon.com/appinsights/latest/APIReference/API_CreateLogPattern.html) in the *Amazon CloudWatch Application Insights API Reference*\.
-+ Sets `AutoConfigurationEnabled` to `true`, which configures all components of the application with the recommended monitoring settings for the `DEFAULT` tier\. For more information, see [DescribeComponentConfigurationRecommendation](https://docs.aws.amazon.com/appinsights/latest/APIReference/API_DescribeComponentConfigurationRecommendation.html) in the *Amazon CloudWatch Application Insights API Reference*\.
++ Creates an Application Insights application with CloudWatch Events notification and OpsCenter enabled\. For more information, see [CreateApplication](https://docs.aws.amazon.com/cloudwatch/latest/APIReference/API_CreateApplication.html) in the *Amazon CloudWatch Application Insights API Reference*\.
++ Tags the application with two tags, one of which has no tag values\. For more information, see [TagResource](https://docs.aws.amazon.com/cloudwatch/latest/APIReference/API_TagResource.html) in the *Amazon CloudWatch Application Insights API Reference*\.
++ Creates two custom instance group components\. For more information, see [CreateComponent](https://docs.aws.amazon.com/cloudwatch/latest/APIReference/API_CreateComponent.html) in the *Amazon CloudWatch Application Insights API Reference*\.
++ Creates two log pattern sets\. For more information, see [CreateLogPattern](https://docs.aws.amazon.com/cloudwatch/latest/APIReference/API_CreateLogPattern.html) in the *Amazon CloudWatch Application Insights API Reference*\.
++ Sets `AutoConfigurationEnabled` to `true`, which configures all components of the application with the recommended monitoring settings for the `DEFAULT` tier\. For more information, see [DescribeComponentConfigurationRecommendation](https://docs.aws.amazon.com/cloudwatch/latest/APIReference/API_DescribeComponentConfigurationRecommendation.html) in the *Amazon CloudWatch Application Insights API Reference*\.
 
 #### YAML<a name="aws-resource-applicationinsights-application--examples--The_following_example_template_creates_an_Application_Insights_application_with_detailed_settings--yaml"></a>
 
@@ -277,8 +318,8 @@ Properties:
 ### The following example template creates an Application Insights application with CUSTOM mode component configuration<a name="aws-resource-applicationinsights-application--examples--The_following_example_template_creates_an_Application_Insights_application_with_CUSTOM_mode_component_configuration"></a>
 
 The following example template performs the following actions:
-+ Creates an Application Insights application\. For more information, see [CreateApplication](https://docs.aws.amazon.com/appinsights/latest/APIReference/API_CreateApplication.html) in the *Amazon CloudWatch Application Insights API Reference*\.
-+ Component `my_component` sets `ComponentConfigurationMode` to `CUSTOM`, which causes this component to be configured as specified in `CustomComponentConfiguration`\. For more information, see [UpdateComponentConfiguration](https://docs.aws.amazon.com/appinsights/latest/APIReference/API_UpdateComponentConfiguration.html) in the *Amazon CloudWatch Application Insights API Reference*\.
++ Creates an Application Insights application\. For more information, see [CreateApplication](https://docs.aws.amazon.com/cloudwatch/latest/APIReference/API_CreateApplication.html) in the *Amazon CloudWatch Application Insights API Reference*\.
++ Component `my_component` sets `ComponentConfigurationMode` to `CUSTOM`, which causes this component to be configured as specified in `CustomComponentConfiguration`\. For more information, see [UpdateComponentConfiguration](https://docs.aws.amazon.com/cloudwatch/latest/APIReference/API_UpdateComponentConfiguration.html) in the *Amazon CloudWatch Application Insights API Reference*\.
 
 #### YAML<a name="aws-resource-applicationinsights-application--examples--The_following_example_template_creates_an_Application_Insights_application_with_CUSTOM_mode_component_configuration--yaml"></a>
 
@@ -441,8 +482,8 @@ Properties:
 ### The following example template creates an Application Insights application with DEFAULT mode component configuration<a name="aws-resource-applicationinsights-application--examples--The_following_example_template_creates_an_Application_Insights_application_with_DEFAULT_mode_component_configuration"></a>
 
 The following example template performs the following actions:
-+ Creates an Application Insights application\. For more information, see [CreateApplication](https://docs.aws.amazon.com/appinsights/latest/APIReference/API_CreateApplication.html) in the *Amazon CloudWatch Application Insights API Reference*\.
-+ Component `my_component` sets `ComponentConfigurationMode` to `DEFAULT` and `Tier` to `SQL_SERVER`, which causes this component to be configured with the configuration settings that Application Insights recommends for the `SQL_Server` tier\. For more information, see [DescribeComponentConfiguration](https://docs.aws.amazon.com/appinsights/latest/APIReference/API_DescribeComponentConfiguration.html) and [UpdateComponentConfiguration](https://docs.aws.amazon.com/appinsights/latest/APIReference/API_UpdateComponentConfiguration.html) in the *Amazon CloudWatch Application Insights API Reference*\.
++ Creates an Application Insights application\. For more information, see [CreateApplication](https://docs.aws.amazon.com/cloudwatch/latest/APIReference/API_CreateApplication.html) in the *Amazon CloudWatch Application Insights API Reference*\.
++ Component `my_component` sets `ComponentConfigurationMode` to `DEFAULT` and `Tier` to `SQL_SERVER`, which causes this component to be configured with the configuration settings that Application Insights recommends for the `SQL_Server` tier\. For more information, see [DescribeComponentConfiguration](https://docs.aws.amazon.com/cloudwatch/latest/APIReference/API_DescribeComponentConfiguration.html) and [UpdateComponentConfiguration](https://docs.aws.amazon.com/appinsights/latest/APIReference/API_UpdateComponentConfiguration.html) in the *Amazon CloudWatch Application Insights API Reference*\.
 
 #### YAML<a name="aws-resource-applicationinsights-application--examples--The_following_example_template_creates_an_Application_Insights_application_with_DEFAULT_mode_component_configuration--yaml"></a>
 
@@ -478,12 +519,12 @@ Properties:
 ### The following example template creates an Application Insights application with DEFAULT\_WITH\_OVERWRITE mode component configuration<a name="aws-resource-applicationinsights-application--examples--The_following_example_template_creates_an_Application_Insights_application_with_DEFAULT_WITH_OVERWRITE_mode_component_configuration"></a>
 
 The following example template performs the following actions:
-+ Creates an Application Insights application\. For more information, see [CreateApplication](https://docs.aws.amazon.com/appinsights/latest/APIReference/API_CreateApplication.html) in the *Amazon CloudWatch Application Insights API Reference*\.
++ Creates an Application Insights application\. For more information, see [CreateApplication](https://docs.aws.amazon.com/cloudwatch/latest/APIReference/API_CreateApplication.html) in the *Amazon CloudWatch Application Insights API Reference*\.
 + Component `my_component` sets `ComponentConfigurationMode` to `DEFAULT_WITH_OVERWRITE` and `tier` to `DOT_NET_CORE`, which causes this component to be configured with the configuration settings that Application Insights recommends for the `DOT_NET_CORE` tier\. Overwritten configuration settings are specified in the `DefaultOverwriteComponentConfiguration`: 
   + At the component level, `AlarmMetrics` settings are overwritten\.
   + At the sub\-component level, for the `EC2_Instance` type sub\-components, `Logs` settings are overwritten\.
 
-  For more information, see [UpdateComponentConfiguration](https://docs.aws.amazon.com/appinsights/latest/APIReference/API_UpdateComponentConfiguration.html) in the *Amazon CloudWatch Application Insights API Reference*\.
+  For more information, see [UpdateComponentConfiguration](https://docs.aws.amazon.com/cloudwatch/latest/APIReference/API_UpdateComponentConfiguration.html) in the *Amazon CloudWatch Application Insights API Reference*\.
 
 #### YAML<a name="aws-resource-applicationinsights-application--examples--The_following_example_template_creates_an_Application_Insights_application_with_DEFAULT_WITH_OVERWRITE_mode_component_configuration--yaml"></a>
 

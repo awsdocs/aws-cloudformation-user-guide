@@ -37,7 +37,7 @@ A display name for the logical table\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataTransforms`  <a name="cfn-quicksight-dataset-logicaltable-datatransforms"></a>
-Transform operations that act on this logical table\.  
+Transform operations that act on this logical table\. For this structure to be valid, only one of the attributes can be non\-null\.   
 *Required*: No  
 *Type*: List of [TransformOperation](aws-properties-quicksight-dataset-transformoperation.md)  
 *Maximum*: `2048`  

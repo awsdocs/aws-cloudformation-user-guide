@@ -54,7 +54,7 @@ The action to take when `TargetSpotCapacity` has not been fulfilled when the `Ti
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeoutDurationMinutes`  <a name="cfn-elasticmapreduce-cluster-spotprovisioningspecification-timeoutdurationminutes"></a>
-The spot provisioning timeout period in minutes\. If Spot Instances are not provisioned within this time period, the `TimeOutAction` is taken\. Minimum value is 5 and maximum value is 1440\. The timeout applies only during initial provisioning, when the cluster is first created\.  
+The Spot provisioning timeout period in minutes\. If Spot Instances are not provisioned within this time period, the `TimeOutAction` is taken\. Minimum value is 5 and maximum value is 1440\. The timeout applies only during initial provisioning, when the cluster is first created\.  
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `0`  

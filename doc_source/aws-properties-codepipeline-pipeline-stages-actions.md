@@ -57,7 +57,7 @@ The values can be represented in either JSON or YAML format\. For example, the J
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputArtifacts`  <a name="cfn-codepipeline-pipeline-stages-actions-inputartifacts"></a>
-The name or ID of the artifact consumed by the action, such as a test or build artifact\.  
+The name or ID of the artifact consumed by the action, such as a test or build artifact\. While the field is not a required parameter, most actions have an action configuration that requires a specified quantity of input artifacts\. To refer to the action configuration specification by action provider, see the [Action structure reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) in the *AWS CodePipeline User Guide*\.  
 For a CodeBuild action with multiple input artifacts, one of your input sources must be designated the PrimarySource\. For more information, see the [CodeBuild action reference page](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference-CodeBuild.html) in the *AWS CodePipeline User Guide*\.
 *Required*: No  
 *Type*: List of [InputArtifact](aws-properties-codepipeline-pipeline-stages-actions-inputartifacts.md)  
@@ -82,7 +82,7 @@ The variable namespace associated with the action\. All variables produced as ou
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutputArtifacts`  <a name="cfn-codepipeline-pipeline-stages-actions-outputartifacts"></a>
-The name or ID of the result of the action declaration, such as a test or build artifact\.  
+The name or ID of the result of the action declaration, such as a test or build artifact\. While the field is not a required parameter, most actions have an action configuration that requires a specified quantity of output artifacts\. To refer to the action configuration specification by action provider, see the [Action structure reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/action-reference.html) in the *AWS CodePipeline User Guide*\.  
 *Required*: No  
 *Type*: List of [OutputArtifact](aws-properties-codepipeline-pipeline-stages-actions-outputartifacts.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

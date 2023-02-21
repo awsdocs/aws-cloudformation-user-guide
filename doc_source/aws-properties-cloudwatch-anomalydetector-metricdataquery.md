@@ -4,7 +4,7 @@ This structure is used in both `GetMetricData` and `PutMetricAlarm`\. The suppor
 
 When used in `GetMetricData`, it indicates the metric data to return, and whether this call is just retrieving a batch set of data for one metric, or is performing a Metrics Insights query or a math expression\. A single `GetMetricData` call can include up to 500 `MetricDataQuery` structures\.
 
-When used in `PutMetricAlarm`, it enables you to create an alarm based on a metric math expression\. Each `MetricDataQuery` in the array specifies either a metric to retrieve, or a math expression to be performed on retrieved metrics\. A single `PutMetricAlarm` call can include up to 20 `MetricDataQuery` structures in the array\. The 20 structures can include as many as 10 structures that contain a `MetricStat` parameter to retrieve a metric, and as many as 10 structures that contain the `Expression` parameter to perform a math expression\. Of those `Expression` structures, one must have `True` as the value for `ReturnData`\. The result of this expression is the value the alarm watches\.
+When used in `PutMetricAlarm`, it enables you to create an alarm based on a metric math expression\. Each `MetricDataQuery` in the array specifies either a metric to retrieve, or a math expression to be performed on retrieved metrics\. A single `PutMetricAlarm` call can include up to 20 `MetricDataQuery` structures in the array\. The 20 structures can include as many as 10 structures that contain a `MetricStat` parameter to retrieve a metric, and as many as 10 structures that contain the `Expression` parameter to perform a math expression\. Of those `Expression` structures, one must have `true` as the value for `ReturnData`\. The result of this expression is the value the alarm watches\.
 
 Any expression used in a `PutMetricAlarm` operation must return a single time series\. For more information, see [Metric Math Syntax and Functions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax) in the *Amazon CloudWatch User Guide*\.
 
@@ -44,8 +44,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudwatch-anomalydetector-metricdataquery-properties"></a>
 
 `AccountId`  <a name="cfn-cloudwatch-anomalydetector-metricdataquery-accountid"></a>
-The ID of the account where the metrics are located, if this is a cross\-account alarm\.  
-Use this field only for `PutMetricAlarm` operations\. It is not used in `GetMetricData` operations\.  
+The ID of the account where the metrics are located\.  
+If you are performing a `GetMetricData` operation in a monitoring account, use this to specify which account to retrieve this metric from\.  
+If you are performing a `PutMetricAlarm` operation, use this to specify which account contains the metric that the alarm is watching\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -59,7 +60,7 @@ Within each MetricDataQuery object, you must specify either `Expression` or `Met
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `1024`  
+*Maximum*: `2048`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Id`  <a name="cfn-cloudwatch-anomalydetector-metricdataquery-id"></a>
@@ -92,8 +93,8 @@ The granularity, in seconds, of the returned data points\. For metrics with regu
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ReturnData`  <a name="cfn-cloudwatch-anomalydetector-metricdataquery-returndata"></a>
-When used in `GetMetricData`, this option indicates whether to return the timestamps and raw data values of this metric\. If you are performing this call just to do math expressions and do not also need the raw data returned, you can specify `False`\. If you omit this, the default of `True` is used\.  
-When used in `PutMetricAlarm`, specify `True` for the one expression result to use as the alarm\. For all other metrics and expressions in the same `PutMetricAlarm` operation, specify `ReturnData` as False\.  
+When used in `GetMetricData`, this option indicates whether to return the timestamps and raw data values of this metric\. If you are performing this call just to do math expressions and do not also need the raw data returned, you can specify `false`\. If you omit this, the default of `true` is used\.  
+When used in `PutMetricAlarm`, specify `true` for the one expression result to use as the alarm\. For all other metrics and expressions in the same `PutMetricAlarm` operation, specify `ReturnData` as False\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

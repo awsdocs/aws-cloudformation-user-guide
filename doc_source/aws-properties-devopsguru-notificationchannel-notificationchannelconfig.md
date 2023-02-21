@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[Filters](#cfn-devopsguru-notificationchannel-notificationchannelconfig-filters)" : NotificationFilterConfig,
   "[Sns](#cfn-devopsguru-notificationchannel-notificationchannelconfig-sns)" : SnsChannelConfig
 }
 ```
@@ -17,11 +18,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-devopsguru-notificationchannel-notificationchannelconfig-syntax.yaml"></a>
 
 ```
+  [Filters](#cfn-devopsguru-notificationchannel-notificationchannelconfig-filters): 
+    NotificationFilterConfig
   [Sns](#cfn-devopsguru-notificationchannel-notificationchannelconfig-sns): 
     SnsChannelConfig
 ```
 
 ## Properties<a name="aws-properties-devopsguru-notificationchannel-notificationchannelconfig-properties"></a>
+
+`Filters`  <a name="cfn-devopsguru-notificationchannel-notificationchannelconfig-filters"></a>
+ The filter configurations for the Amazon SNS notification topic you use with DevOps Guru\. If you do not provide filter configurations, the default configurations are to receive notifications for all message types of `High` or `Medium` severity\.   
+*Required*: No  
+*Type*: [NotificationFilterConfig](aws-properties-devopsguru-notificationchannel-notificationfilterconfig.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Sns`  <a name="cfn-devopsguru-notificationchannel-notificationchannelconfig-sns"></a>
  Information about a notification channel configured in DevOps Guru to send notifications when insights are created\.   

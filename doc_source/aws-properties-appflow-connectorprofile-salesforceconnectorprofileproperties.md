@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile SalesforceConnectorProfileProperties<a name="aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties"></a>
 
- The `SalesforceConnectorProfileProperties` property type specifies the connector\-specific profile properties required when using Salesforce\. 
+ The connector\-specific profile properties required when using Salesforce\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties-syntax"></a>
 

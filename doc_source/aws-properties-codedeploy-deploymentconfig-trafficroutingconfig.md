@@ -10,39 +10,39 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[TimeBasedCanary](#cfn-properties-codedeploy-deploymentconfig-trafficroutingconfig-timebasedcanary)" : TimeBasedCanary,
-  "[TimeBasedLinear](#cfn-properties-codedeploy-deploymentconfig-trafficroutingconfig-timebasedlinear)" : TimeBasedLinear,
-  "[Type](#cfn-properties-codedeploy-deploymentconfig-trafficroutingconfig-type)" : String
+  "[TimeBasedCanary](#cfn-codedeploy-deploymentconfig-trafficroutingconfig-timebasedcanary)" : TimeBasedCanary,
+  "[TimeBasedLinear](#cfn-codedeploy-deploymentconfig-trafficroutingconfig-timebasedlinear)" : TimeBasedLinear,
+  "[Type](#cfn-codedeploy-deploymentconfig-trafficroutingconfig-type)" : String
 }
 ```
 
 ### YAML<a name="aws-properties-codedeploy-deploymentconfig-trafficroutingconfig-syntax.yaml"></a>
 
 ```
-  [TimeBasedCanary](#cfn-properties-codedeploy-deploymentconfig-trafficroutingconfig-timebasedcanary): 
+  [TimeBasedCanary](#cfn-codedeploy-deploymentconfig-trafficroutingconfig-timebasedcanary): 
     TimeBasedCanary
-  [TimeBasedLinear](#cfn-properties-codedeploy-deploymentconfig-trafficroutingconfig-timebasedlinear): 
+  [TimeBasedLinear](#cfn-codedeploy-deploymentconfig-trafficroutingconfig-timebasedlinear): 
     TimeBasedLinear
-  [Type](#cfn-properties-codedeploy-deploymentconfig-trafficroutingconfig-type): String
+  [Type](#cfn-codedeploy-deploymentconfig-trafficroutingconfig-type): String
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentconfig-trafficroutingconfig-properties"></a>
 
-`TimeBasedCanary`  <a name="cfn-properties-codedeploy-deploymentconfig-trafficroutingconfig-timebasedcanary"></a>
+`TimeBasedCanary`  <a name="cfn-codedeploy-deploymentconfig-trafficroutingconfig-timebasedcanary"></a>
 A configuration that shifts traffic from one version of a Lambda function or ECS task set to another in two increments\. The original and target Lambda function versions or ECS task sets are specified in the deployment's AppSpec file\.  
 *Required*: No  
 *Type*: [TimeBasedCanary](aws-properties-codedeploy-deploymentconfig-timebasedcanary.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`TimeBasedLinear`  <a name="cfn-properties-codedeploy-deploymentconfig-trafficroutingconfig-timebasedlinear"></a>
+`TimeBasedLinear`  <a name="cfn-codedeploy-deploymentconfig-trafficroutingconfig-timebasedlinear"></a>
 A configuration that shifts traffic from one version of a Lambda function or Amazon ECS task set to another in equal increments, with an equal number of minutes between each increment\. The original and target Lambda function versions or Amazon ECS task sets are specified in the deployment's AppSpec file\.  
 *Required*: No  
 *Type*: [TimeBasedLinear](aws-properties-codedeploy-deploymentconfig-timebasedlinear.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`Type`  <a name="cfn-properties-codedeploy-deploymentconfig-trafficroutingconfig-type"></a>
+`Type`  <a name="cfn-codedeploy-deploymentconfig-trafficroutingconfig-type"></a>
 The type of traffic shifting \(`TimeBasedCanary` or `TimeBasedLinear`\) used by a deployment configuration\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `AllAtOnce | TimeBasedCanary | TimeBasedLinear`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

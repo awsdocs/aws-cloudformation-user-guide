@@ -1,6 +1,6 @@
 # AWS::AuditManager::Assessment AssessmentReportsDestination<a name="aws-properties-auditmanager-assessment-assessmentreportsdestination"></a>
 
- The `AssessmentReportsDestination` property type specifies the location in which AWS Audit Manager saves assessment reports for the given assessment\. 
+The `AssessmentReportsDestination` property type specifies the location in which AWS Audit Manager saves assessment reports for the given assessment\.
 
 ## Syntax<a name="aws-properties-auditmanager-assessment-assessmentreportsdestination-syntax"></a>
 

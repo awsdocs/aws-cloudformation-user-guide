@@ -7,8 +7,8 @@ The following procedures help you create sample AWS CloudFormation templates usi
 **Topics**
 + [Walkthrough: Use AWS CloudFormation Designer to create a basic web server](working-with-templates-cfn-designer-walkthrough-createbasicwebserver.md)
 + [Walkthrough: Use AWS CloudFormation Designer to modify a stack's template](working-with-templates-cfn-designer-walkthrough-updatebasicwebserver.md)
-+ [Walkthrough: Peer with an VPC in another AWS account](peer-with-vpc-in-another-account.md)
++ [Walkthrough: Peer with a VPC in another AWS account](peer-with-vpc-in-another-account.md)
 + [Walkthrough: Refer to resource outputs in another AWS CloudFormation stack](walkthrough-crossstackref.md)
-+ [Walkthrough: Create a scalable, load\-balancing web server](example-templates-autoscaling.md)
++ [Walkthrough: Create a scaled and load\-balanced application](example-templates-autoscaling.md)
 + [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)
 + [Creating wait conditions in a template](using-cfn-waitcondition.md)

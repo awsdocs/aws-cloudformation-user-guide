@@ -29,7 +29,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PreferredBackupWindow](#cfn-opsworkscm-server-preferredbackupwindow)" : String,
       "[PreferredMaintenanceWindow](#cfn-opsworkscm-server-preferredmaintenancewindow)" : String,
       "[SecurityGroupIds](#cfn-opsworkscm-server-securitygroupids)" : [ String, ... ],
-      "[ServerName](#cfn-opsworkscm-server-servername)" : String,
       "[ServiceRoleArn](#cfn-opsworkscm-server-servicerolearn)" : String,
       "[SubnetIds](#cfn-opsworkscm-server-subnetids)" : [ String, ... ],
       "[Tags](#cfn-opsworkscm-server-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -61,7 +60,6 @@ Properties:
   [PreferredMaintenanceWindow](#cfn-opsworkscm-server-preferredmaintenancewindow): String
   [SecurityGroupIds](#cfn-opsworkscm-server-securitygroupids): 
     - String
-  [ServerName](#cfn-opsworkscm-server-servername): String
   [ServiceRoleArn](#cfn-opsworkscm-server-servicerolearn): String
   [SubnetIds](#cfn-opsworkscm-server-subnetids): 
     - String
@@ -215,15 +213,6 @@ The ARN of the instance profile that your Amazon EC2 instances use\.
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`ServerName`  <a name="cfn-opsworkscm-server-servername"></a>
- The name of the server\. The server name must be unique within your AWS account, within each region\. Server names must start with a letter; then letters, numbers, or hyphens \(\-\) are allowed, up to a maximum of 40 characters\.   
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `40`  
-*Pattern*: `[a-zA-Z][a-zA-Z0-9\-]*`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
 `ServiceRoleArn`  <a name="cfn-opsworkscm-server-servicerolearn"></a>
  The service role that the AWS OpsWorks CM service backend uses to work with your account\. Although the AWS OpsWorks management console typically creates the service role for you, if you are using the AWS CLI or API commands, run the service\-role\-creation\.yaml AWS CloudFormation template, located at https://s3\.amazonaws\.com/opsworks\-cm\-us\-east\-1\-prod\-default\-assets/misc/opsworks\-cm\-roles\.yaml\. This template creates a CloudFormation stack that includes the service role and instance profile that you need\.   
 *Required*: Yes  
@@ -275,8 +264,8 @@ The Amazon Resource Name \(ARN\) of the server, such as `arn:aws:OpsWorksCM:us-e
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
 A DNS name that can be used to access the engine\. Example: `myserver-asdfghjkl.us-east-1.opsworks.io`\.
 
-`Id`  <a name="Id-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+`ServerName`  <a name="ServerName-fn::getatt"></a>
+Property description not available\.
 
 ## Examples<a name="aws-resource-opsworkscm-server--examples"></a>
 

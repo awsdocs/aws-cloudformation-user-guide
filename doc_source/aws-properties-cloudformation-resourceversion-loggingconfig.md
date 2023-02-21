@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudformation-resourceversion-loggingconfig-properties"></a>
 
 `LogGroupName`  <a name="cfn-cloudformation-resourceversion-loggingconfig-loggroupname"></a>
-The Amazon CloudWatch log group to which CloudFormation sends error logging information when invoking the type's handlers\.  
+The Amazon CloudWatch logs group to which CloudFormation sends error logging information when invoking the type's handlers\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

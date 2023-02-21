@@ -33,7 +33,7 @@ A boolean indicating whether the associated resource sends metrics to Amazon Clo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricName`  <a name="cfn-wafv2-rulegroup-visibilityconfig-metricname"></a>
-The descriptive name of the Amazon CloudWatch metric\. The name can contain only alphanumeric characters \(A\-Z, a\-z, 0\-9\), with length from one to 128 characters\. It can't contain whitespace or metric names reserved for AWS WAF, for example "All" and "Default\_Action\." You can't change a `MetricName` after you create a `VisibilityConfig`\.  
+A name of the Amazon CloudWatch metric dimension\. The name can contain only the characters: A\-Z, a\-z, 0\-9, \- \(hyphen\), and \_ \(underscore\)\. The name can be from one to 128 characters long\. It can't contain whitespace or metric names that are reserved for AWS WAF, for example `All` and `Default_Action`\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

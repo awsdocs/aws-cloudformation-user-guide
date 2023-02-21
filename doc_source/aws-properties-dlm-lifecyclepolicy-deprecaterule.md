@@ -1,6 +1,8 @@
 # AWS::DLM::LifecyclePolicy DeprecateRule<a name="aws-properties-dlm-lifecyclepolicy-deprecaterule"></a>
 
-Specifies an AMI deprecation rule for a schedule\.
+ **\[AMI policies only\]** Specifies an AMI deprecation rule for AMIs created by an AMI lifecycle policy\.
+
+For age\-based schedules, you must specify **Interval** and **IntervalUnit**\. For count\-based schedules, you must specify **Count**\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-deprecaterule-syntax"></a>
 

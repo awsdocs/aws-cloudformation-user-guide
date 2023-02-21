@@ -69,6 +69,17 @@ For the Amazon Cognito user pool domain `your-test-domain`, Ref returns the name
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-cognito-userpooldomain-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-cognito-userpooldomain-return-values-fn--getatt-fn--getatt"></a>
+
+`CloudFrontDistribution`  <a name="CloudFrontDistribution-fn::getatt"></a>
+The Amazon CloudFront endpoint that you use as the target of the alias that you set up with your Domain Name Service \(DNS\) provider\.
+
 ## Examples<a name="aws-resource-cognito-userpooldomain--examples"></a>
 
 
@@ -80,34 +91,18 @@ The following example creates a custom domain, "my\-test\-user\-pool\-domain", i
 #### JSON<a name="aws-resource-cognito-userpooldomain--examples--Creating_a_new_custom_domain_for_a_user_pool--json"></a>
 
 ```
-{
-   "UserPoolDomain":{
-      "Type":"AWS::Cognito::UserPoolDomain",
-      "Properties":{
-         "UserPoolId":{
-            "Ref":"UserPool"
-         },
-         "Domain":"my-test-user-pool-domain.myapplication.com",
-         "CustomDomainConfig":{
-            "CertificateArn":{
-               "Ref":"CertificateArn"
-            }
-         }
-      }
-   }
-}
+{ "UserPoolDomain":{ "Type":"AWS::Cognito::UserPoolDomain",
+        "Properties":{ "UserPoolId":{ "Ref":"UserPool" },
+        "Domain":"my-test-user-pool-domain.myapplication.com", "CustomDomainConfig":{
+        "CertificateArn":{ "Ref":"CertificateArn" } } } } }
 ```
 
 #### YAML<a name="aws-resource-cognito-userpooldomain--examples--Creating_a_new_custom_domain_for_a_user_pool--yaml"></a>
 
 ```
-UserPoolDomain: 
-  Type: AWS::Cognito::UserPoolDomain 
-  Properties:
-    UserPoolId: !Ref UserPool 
-    Domain: "my-test-user-pool-domain.myapplication.com"
-    CustomDomainConfig: 
-      CertificateArn: !Ref CertificateArn
+UserPoolDomain: Type: AWS::Cognito::UserPoolDomain Properties:
+        UserPoolId: !Ref UserPool Domain: "my-test-user-pool-domain.myapplication.com"
+        CustomDomainConfig: CertificateArn: !Ref CertificateArn
 ```
 
 ### Creating a new default domain for a user pool<a name="aws-resource-cognito-userpooldomain--examples--Creating_a_new_default_domain_for_a_user_pool"></a>
@@ -117,25 +112,14 @@ The following example creates a new default domain, "my\-test\-user\-pool\-domai
 #### JSON<a name="aws-resource-cognito-userpooldomain--examples--Creating_a_new_default_domain_for_a_user_pool--json"></a>
 
 ```
-{
-   "UserPoolDomain":{
-      "Type":"AWS::Cognito::UserPoolDomain",
-      "Properties":{
-         "UserPoolId":{
-            "Ref":"UserPool"
-         },
-         "Domain":"my-test-user-pool-domain"
-      }
-   }
-}
+{ "UserPoolDomain":{ "Type":"AWS::Cognito::UserPoolDomain",
+        "Properties":{ "UserPoolId":{ "Ref":"UserPool" }, "Domain":"my-test-user-pool-domain" } }
+        }
 ```
 
 #### YAML<a name="aws-resource-cognito-userpooldomain--examples--Creating_a_new_default_domain_for_a_user_pool--yaml"></a>
 
 ```
-UserPoolDomain: 
-  Type: AWS::Cognito::UserPoolDomain 
-  Properties:
-    UserPoolId: !Ref UserPool 
-    Domain: "my-test-user-pool-domain"
+UserPoolDomain: Type: AWS::Cognito::UserPoolDomain Properties:
+        UserPoolId: !Ref UserPool Domain: "my-test-user-pool-domain"
 ```

@@ -44,25 +44,25 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-apikey-properties"></a>
 
 `CustomerId`  <a name="cfn-apigateway-apikey-customerid"></a>
-An AWS Marketplace customer identifier to use when integrating with the AWS SaaS Marketplace\.  
+An AWS Marketplace customer identifier, when integrating with the AWS SaaS Marketplace\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-apigateway-apikey-description"></a>
-A description of the purpose of the API key\.  
+The description of the ApiKey\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-apigateway-apikey-enabled"></a>
-Indicates whether the API key can be used by clients\.  
+Specifies whether the ApiKey can be used by callers\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GenerateDistinctId`  <a name="cfn-apigateway-apikey-generatedistinctid"></a>
-Specifies whether the key identifier is distinct from the created API key value\. This parameter is deprecated and should not be used\.  
+Specifies whether \(`true`\) or not \(`false`\) the key identifier is distinct from the created API key value\. This parameter is deprecated and should not be used\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -75,19 +75,19 @@ If you specify a name, you cannot perform updates that require replacement of th
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StageKeys`  <a name="cfn-apigateway-apikey-stagekeys"></a>
-A list of stages to associate with this API key\.  
+DEPRECATED FOR USAGE PLANS \- Specifies stages associated with the API key\.  
 *Required*: No  
 *Type*: List of [StageKey](aws-properties-apigateway-apikey-stagekey.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-apigateway-apikey-tags"></a>
-An array of arbitrary tags \(key\-value pairs\) to associate with the API key\.  
+The key\-value map of strings\. The valid character set is \[a\-zA\-Z\+\-=\.\_:/\]\. The tag key can be up to 128 characters and must not start with `aws:`\. The tag value can be up to 256 characters\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-apigateway-apikey-value"></a>
-The value of the API key\. Must be at least 20 characters long\.  
+Specifies a value of the API key\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -221,5 +221,5 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-apigateway-apikey--seealso"></a>
-+ [apikey:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/apikey-create/) in the *Amazon API Gateway REST API Reference*
++ [apikey:create](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateApiKey.html) in the *Amazon API Gateway REST API Reference*
 

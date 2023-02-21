@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Conditions](#cfn-backup-backupselection-backupselectionresourcetype-conditions)" : Json,
+  "[Conditions](#cfn-backup-backupselection-backupselectionresourcetype-conditions)" : Conditions,
   "[IamRoleArn](#cfn-backup-backupselection-backupselectionresourcetype-iamrolearn)" : String,
   "[ListOfTags](#cfn-backup-backupselection-backupselectionresourcetype-listoftags)" : [ ConditionResourceType, ... ],
   "[NotResources](#cfn-backup-backupselection-backupselectionresourcetype-notresources)" : [ String, ... ],
@@ -22,7 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-backup-backupselection-backupselectionresourcetype-syntax.yaml"></a>
 
 ```
-  [Conditions](#cfn-backup-backupselection-backupselectionresourcetype-conditions): Json
+  [Conditions](#cfn-backup-backupselection-backupselectionresourcetype-conditions): 
+    Conditions
   [IamRoleArn](#cfn-backup-backupselection-backupselectionresourcetype-iamrolearn): String
   [ListOfTags](#cfn-backup-backupselection-backupselectionresourcetype-listoftags): 
     - ConditionResourceType
@@ -36,12 +37,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-backup-backupselection-backupselectionresourcetype-properties"></a>
 
 `Conditions`  <a name="cfn-backup-backupselection-backupselectionresourcetype-conditions"></a>
-A list of conditions that you define to assign resources to your backup plans using tags\. For example, `"StringEquals": {"Department": "accounting"`\. Condition operators are case sensitive\.  
+A list of conditions that you define to assign resources to your backup plans using tags\. For example, `"StringEquals": { "ConditionKey": "aws:ResourceTag/CreatedByCryo", "ConditionValue": "true" },`\. Condition operators are case sensitive\.  
 `Conditions` differs from `ListOfTags` as follows:  
 + When you specify more than one condition, you only assign the resources that match ALL conditions \(using AND logic\)\.
 + `Conditions` supports `StringEquals`, `StringLike`, `StringNotEquals`, and `StringNotLike`\. `ListOfTags` only supports `StringEquals`\.
 *Required*: No  
-*Type*: Json  
+*Type*: [Conditions](aws-properties-backup-backupselection-conditions.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IamRoleArn`  <a name="cfn-backup-backupselection-backupselectionresourcetype-iamrolearn"></a>
@@ -51,7 +52,10 @@ The ARN of the IAM role that AWS Backup uses to authenticate when backing up the
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ListOfTags`  <a name="cfn-backup-backupselection-backupselectionresourcetype-listoftags"></a>
-An array of conditions used to specify a set of resources to assign to a backup plan; for example, `"STRINGEQUALS": {"Department":"accounting"`\.  
+A list of conditions that you define to assign resources to your backup plans using tags\. For example, `"StringEquals": { "ConditionKey": "aws:ResourceTag/CreatedByCryo", "ConditionValue": "true" },`\. Condition operators are case sensitive\.  
+`ListOfTags` differs from `Conditions` as follows:  
++ When you specify more than one condition, you assign all resources that match AT LEAST ONE condition \(using OR logic\)\.
++ `ListOfTags` only supports `StringEquals`\. `Conditions` supports `StringEquals`, `StringLike`, `StringNotEquals`, and `StringNotLike`\. 
 *Required*: No  
 *Type*: List of [ConditionResourceType](aws-properties-backup-backupselection-conditionresourcetype.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -71,7 +71,7 @@ Properties:
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExternalConnections`  <a name="cfn-codeartifact-repository-externalconnections"></a>
- An array of external connections associated with the repository. Currently only one external connection is allowed per repository.\.   
+ An array of external connections associated with the repository\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

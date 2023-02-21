@@ -66,9 +66,11 @@ Indicates whether the NAT gateway supports public or private connectivity\. The 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MaxDrainDurationSeconds`  <a name="cfn-ec2-natgateway-maxdraindurationseconds"></a>
-Property description not available\.  
+The maximum amount of time to wait \(in seconds\) before forcibly releasing the IP addresses if connections are still in progress\. Default value is 350 seconds\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `4000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivateIpAddress`  <a name="cfn-ec2-natgateway-privateipaddress"></a>
@@ -78,19 +80,23 @@ The private IPv4 address to assign to the NAT gateway\. If you don't provide an 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecondaryAllocationIds`  <a name="cfn-ec2-natgateway-secondaryallocationids"></a>
-Property description not available\.  
+Secondary EIP allocation IDs\. For more information about secondary addresses, see [Create a NAT gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-creating) in the *Amazon Virtual Private Cloud User Guide*\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecondaryPrivateIpAddressCount`  <a name="cfn-ec2-natgateway-secondaryprivateipaddresscount"></a>
-Property description not available\.  
+\[Private NAT gateway only\] The number of secondary private IPv4 addresses you want to assign to the NAT gateway\. For more information about secondary addresses, see [Create a NAT gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-creating) in the *Amazon Virtual Private Cloud User Guide*\.  
+`SecondaryPrivateIpAddressCount` and `SecondaryPrivateIpAddresses` cannot be set at the same time\.
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `7`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecondaryPrivateIpAddresses`  <a name="cfn-ec2-natgateway-secondaryprivateipaddresses"></a>
-Property description not available\.  
+Secondary private IPv4 addresses\. For more information about secondary addresses, see [Create a NAT gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-creating) in the *Amazon Virtual Private Cloud User Guide*\.  
+`SecondaryPrivateIpAddressCount` and `SecondaryPrivateIpAddresses` cannot be set at the same time\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

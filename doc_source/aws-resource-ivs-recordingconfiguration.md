@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DestinationConfiguration](#cfn-ivs-recordingconfiguration-destinationconfiguration)" : DestinationConfiguration,
       "[Name](#cfn-ivs-recordingconfiguration-name)" : String,
+      "[RecordingReconnectWindowSeconds](#cfn-ivs-recordingconfiguration-recordingreconnectwindowseconds)" : Integer,
       "[Tags](#cfn-ivs-recordingconfiguration-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[ThumbnailConfiguration](#cfn-ivs-recordingconfiguration-thumbnailconfiguration)" : ThumbnailConfiguration
     }
@@ -28,6 +29,7 @@ Properties:
   [DestinationConfiguration](#cfn-ivs-recordingconfiguration-destinationconfiguration): 
     DestinationConfiguration
   [Name](#cfn-ivs-recordingconfiguration-name): String
+  [RecordingReconnectWindowSeconds](#cfn-ivs-recordingconfiguration-recordingreconnectwindowseconds): Integer
   [Tags](#cfn-ivs-recordingconfiguration-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [ThumbnailConfiguration](#cfn-ivs-recordingconfiguration-thumbnailconfiguration): 
@@ -49,6 +51,15 @@ Recording\-configuration name\. The value does not need to be unique\.
 *Minimum*: `0`  
 *Maximum*: `128`  
 *Pattern*: `^[a-zA-Z0-9-_]*$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`RecordingReconnectWindowSeconds`  <a name="cfn-ivs-recordingconfiguration-recordingreconnectwindowseconds"></a>
+If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will be considered a single broadcast and merged together\.  
+*Default*: `0`  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `300`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ivs-recordingconfiguration-tags"></a>

@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ADMMessage](#cfn-pinpoint-campaign-messageconfiguration-admmessage)" : Message,
   "[APNSMessage](#cfn-pinpoint-campaign-messageconfiguration-apnsmessage)" : Message,
   "[BaiduMessage](#cfn-pinpoint-campaign-messageconfiguration-baidumessage)" : Message,
+  "[CustomMessage](#cfn-pinpoint-campaign-messageconfiguration-custommessage)" : CampaignCustomMessage,
   "[DefaultMessage](#cfn-pinpoint-campaign-messageconfiguration-defaultmessage)" : Message,
   "[EmailMessage](#cfn-pinpoint-campaign-messageconfiguration-emailmessage)" : CampaignEmailMessage,
   "[GCMMessage](#cfn-pinpoint-campaign-messageconfiguration-gcmmessage)" : Message,
@@ -30,6 +31,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     Message
   [BaiduMessage](#cfn-pinpoint-campaign-messageconfiguration-baidumessage): 
     Message
+  [CustomMessage](#cfn-pinpoint-campaign-messageconfiguration-custommessage): 
+    CampaignCustomMessage
   [DefaultMessage](#cfn-pinpoint-campaign-messageconfiguration-defaultmessage): 
     Message
   [EmailMessage](#cfn-pinpoint-campaign-messageconfiguration-emailmessage): 
@@ -60,6 +63,12 @@ The message that the campaign sends through the APNs \(Apple Push Notification s
 The message that the campaign sends through the Baidu \(Baidu Cloud Push\) channel\. If specified, this message overrides the default message\.  
 *Required*: No  
 *Type*: [Message](aws-properties-pinpoint-campaign-message.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomMessage`  <a name="cfn-pinpoint-campaign-messageconfiguration-custommessage"></a>
+The message that the campaign sends through a custom channel, as specified by the delivery configuration \(`CustomDeliveryConfiguration`\) settings for the campaign\. If specified, this message overrides the default message\.  
+*Required*: No  
+*Type*: [CampaignCustomMessage](aws-properties-pinpoint-campaign-campaigncustommessage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DefaultMessage`  <a name="cfn-pinpoint-campaign-messageconfiguration-defaultmessage"></a>

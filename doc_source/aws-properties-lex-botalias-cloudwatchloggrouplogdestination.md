@@ -31,7 +31,7 @@ The Amazon Resource Name \(ARN\) of the log group where text and metadata logs a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogPrefix`  <a name="cfn-lex-botalias-cloudwatchloggrouplogdestination-logprefix"></a>
-The prefix of the log stream name within the log group that you specified\.  
+The prefix of the log stream name within the log group that you specified   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

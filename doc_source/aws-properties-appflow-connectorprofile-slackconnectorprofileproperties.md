@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile SlackConnectorProfileProperties<a name="aws-properties-appflow-connectorprofile-slackconnectorprofileproperties"></a>
 
- The `SlackConnectorProfileProperties` property type specifies the connector\-specific profile properties required when using Slack\. 
+ The connector\-specific profile properties required when using Slack\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-slackconnectorprofileproperties-syntax"></a>
 

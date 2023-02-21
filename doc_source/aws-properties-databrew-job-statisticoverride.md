@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Parameters](#cfn-databrew-job-statisticoverride-parameters)" : ParameterMap,
+  "[Parameters](#cfn-databrew-job-statisticoverride-parameters)" : {Key : Value, ...},
   "[Statistic](#cfn-databrew-job-statisticoverride-statistic)" : String
 }
 ```
@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Parameters](#cfn-databrew-job-statisticoverride-parameters): 
-    ParameterMap
+    Key : Value
   [Statistic](#cfn-databrew-job-statisticoverride-statistic): String
 ```
 
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Parameters`  <a name="cfn-databrew-job-statisticoverride-parameters"></a>
 A map that includes overrides of an evaluation’s parameters\.  
 *Required*: Yes  
-*Type*: [ParameterMap](aws-properties-databrew-job-parametermap.md)  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Statistic`  <a name="cfn-databrew-job-statisticoverride-statistic"></a>

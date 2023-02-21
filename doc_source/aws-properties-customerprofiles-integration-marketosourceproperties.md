@@ -1,6 +1,6 @@
 # AWS::CustomerProfiles::Integration MarketoSourceProperties<a name="aws-properties-customerprofiles-integration-marketosourceproperties"></a>
 
-<a name="aws-properties-customerprofiles-integration-marketosourceproperties-description"></a>The `MarketoSourceProperties` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::CustomerProfiles::Integration](aws-resource-customerprofiles-integration.md)\.
+The properties that are applied when Marketo is being used as a source\.
 
 ## Syntax<a name="aws-properties-customerprofiles-integration-marketosourceproperties-syntax"></a>
 
@@ -23,7 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-customerprofiles-integration-marketosourceproperties-properties"></a>
 
 `Object`  <a name="cfn-customerprofiles-integration-marketosourceproperties-object"></a>
-Not currently supported by AWS CloudFormation\.  
+The object specified in the Marketo flow source\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `512`  
+*Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

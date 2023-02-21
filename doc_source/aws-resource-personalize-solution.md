@@ -65,6 +65,7 @@ The name of the solution\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PerformAutoML`  <a name="cfn-personalize-solution-performautoml"></a>
+We don't recommend enabling automated machine learning\. Instead, match your use case to the available Amazon Personalize recipes\. For more information, see [Determining your use case\.](https://docs.aws.amazon.com/personalize/latest/dg/determining-use-case.html) 
 When true, Amazon Personalize performs a search for the best USER\_PERSONALIZATION recipe from the list specified in the solution configuration \(`recipeArn` must not be specified\)\. When false \(the default\), Amazon Personalize uses `recipeArn` for training\.  
 *Required*: No  
 *Type*: Boolean  

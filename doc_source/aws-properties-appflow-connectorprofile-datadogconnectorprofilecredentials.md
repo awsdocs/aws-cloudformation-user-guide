@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile DatadogConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials"></a>
 
- The `DatadogConnectorProfileCredentials` property type specifies the connector\-specific credentials required by Datadog\. 
+ The connector\-specific credentials required by Datadog\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials-syntax"></a>
 

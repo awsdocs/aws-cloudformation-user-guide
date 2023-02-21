@@ -1,6 +1,6 @@
 # AWS::Lex::Bot AudioLogDestination<a name="aws-properties-lex-bot-audiologdestination"></a>
 
-Specifies the location of audio log files collected when conversation logging is enabled for a bot\.
+The location of audio log files collected when conversation logging is enabled for a bot\.
 
 ## Syntax<a name="aws-properties-lex-bot-audiologdestination-syntax"></a>
 

@@ -45,8 +45,6 @@ Specifies whether to block resource\-based policies that allow broad access to t
 A JSON\-formatted string for an AWS resource\-based policy\. For example policies, see [Permissions policy examples](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html)\.  
 *Required*: Yes  
 *Type*: Json  
-*Minimum*: `1`  
-*Maximum*: `20480`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretId`  <a name="cfn-secretsmanager-resourcepolicy-secretid"></a>
@@ -54,8 +52,6 @@ The ARN or name of the secret to attach the resource\-based policy\.
 For an ARN, we recommend that you specify a complete ARN rather than a partial ARN\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `2048`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-secretsmanager-resourcepolicy-return-values"></a>
@@ -120,7 +116,7 @@ The following example shows how to attach a resource\-based policy to a secret\.
 MySecret:
   Type: AWS::SecretsManager::Secret
   Properties:
-    Description: This is a secret that I want to attach a resource-based policy to
+        Description: This is a secret that I want to attach a resource-based policy to
 MySecretResourcePolicy:
   Type: AWS::SecretsManager::ResourcePolicy
   Properties:

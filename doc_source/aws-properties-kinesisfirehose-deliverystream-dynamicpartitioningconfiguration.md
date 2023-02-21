@@ -1,6 +1,6 @@
 # AWS::KinesisFirehose::DeliveryStream DynamicPartitioningConfiguration<a name="aws-properties-kinesisfirehose-deliverystream-dynamicpartitioningconfiguration"></a>
 
-The `DynamicPartitioningConfiguration` property type specifies the configuration of the dynamic partitioning mechanism that creates targeted data sets from the streaming data by partitioning it based on partition keys\. Partitioning keys may be applied using a [ProcessingConfiguration](#aws-properties-kinesisfirehose-deliverystream-processingconfiguration.md).
+The `DynamicPartitioningConfiguration` property type specifies the configuration of the dynamic partitioning mechanism that creates targeted data sets from the streaming data by partitioning it based on partition keys\.
 
 ## Syntax<a name="aws-properties-kinesisfirehose-deliverystream-dynamicpartitioningconfiguration-syntax"></a>
 

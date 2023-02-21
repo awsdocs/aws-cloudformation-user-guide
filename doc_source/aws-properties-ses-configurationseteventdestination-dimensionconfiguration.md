@@ -38,7 +38,7 @@ The default value of the dimension that is published to Amazon CloudWatch if you
 
 `DimensionName`  <a name="cfn-ses-configurationseteventdestination-dimensionconfiguration-dimensionname"></a>
 The name of an Amazon CloudWatch dimension associated with an email sending metric\. The name must meet the following requirements:  
-+ Contain only ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), or dashes \(\-\)\.
++ Contain only ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), dashes \(\-\), or colons \(:\)\.
 + Contain 256 characters or fewer\.
 *Required*: Yes  
 *Type*: String  

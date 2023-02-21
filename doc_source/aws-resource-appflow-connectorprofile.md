@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AppFlow::ConnectorProfile",
   "Properties" : {
       "[ConnectionMode](#cfn-appflow-connectorprofile-connectionmode)" : String,
+      "[ConnectorLabel](#cfn-appflow-connectorprofile-connectorlabel)" : String,
       "[ConnectorProfileConfig](#cfn-appflow-connectorprofile-connectorprofileconfig)" : ConnectorProfileConfig,
       "[ConnectorProfileName](#cfn-appflow-connectorprofile-connectorprofilename)" : String,
       "[ConnectorType](#cfn-appflow-connectorprofile-connectortype)" : String,
@@ -30,6 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AppFlow::ConnectorProfile
 Properties: 
   [ConnectionMode](#cfn-appflow-connectorprofile-connectionmode): String
+  [ConnectorLabel](#cfn-appflow-connectorprofile-connectorlabel): String
   [ConnectorProfileConfig](#cfn-appflow-connectorprofile-connectorprofileconfig): 
     ConnectorProfileConfig
   [ConnectorProfileName](#cfn-appflow-connectorprofile-connectorprofilename): String
@@ -44,6 +46,14 @@ Properties:
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `Private | Public`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ConnectorLabel`  <a name="cfn-appflow-connectorprofile-connectorlabel"></a>
+The label for the connector profile being created\.  
+*Required*: No  
+*Type*: String  
+*Maximum*: `256`  
+*Pattern*: `[a-zA-Z0-9][\w!@#.-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectorProfileConfig`  <a name="cfn-appflow-connectorprofile-connectorprofileconfig"></a>
@@ -64,7 +74,7 @@ Properties:
  The type of connector, such as Salesforce, Amplitude, and so on\.   
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `Amplitude | CustomConnector | CustomerProfiles | Datadog | Dynatrace | EventBridge | Googleanalytics | Honeycode | Infornexus | LookoutMetrics | Marketo | Redshift | S3 | Salesforce | SAPOData | Servicenow | Singular | Slack | Snowflake | Trendmicro | Upsolver | Veeva | Zendesk`  
+*Allowed values*: `Amplitude | CustomConnector | CustomerProfiles | Datadog | Dynatrace | EventBridge | Googleanalytics | Honeycode | Infornexus | LookoutMetrics | Marketo | Pardot | Redshift | S3 | Salesforce | SAPOData | Servicenow | Singular | Slack | Snowflake | Trendmicro | Upsolver | Veeva | Zendesk`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KMSArn`  <a name="cfn-appflow-connectorprofile-kmsarn"></a>

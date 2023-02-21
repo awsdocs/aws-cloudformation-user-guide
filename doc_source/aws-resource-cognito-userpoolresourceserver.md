@@ -2,6 +2,9 @@
 
 The `AWS::Cognito::UserPoolResourceServer` resource creates a new OAuth2\.0 resource server and defines custom scopes in it\.
 
+**Note**  
+If you don't specify a value for a parameter, Amazon Cognito sets it to a default value\.
+
 ## Syntax<a name="aws-resource-cognito-userpoolresourceserver-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -91,39 +94,18 @@ The following example creates a resource server "Name" with the identifier "Iden
 #### JSON<a name="aws-resource-cognito-userpoolresourceserver--examples--Creating_a_new_resource_server_for_a_user_pool--json"></a>
 
 ```
-{
-	"UserPoolResourceServer": {
-		"Type": "AWS::Cognito::UserPoolResourceServer",
-		"Properties": {
-			"UserPoolId": {
-				"Ref": "UserPool"
-			},
-			"Identifier": "Identifier",
-			"Name": "Name",
-			"Scopes": [{
-				"ScopeName": "ScopeName1",
-				"ScopeDescription": "description"
-			}, {
-				"ScopeName": "ScopeName2",
-				"ScopeDescription": "description"
-			}]
-		}
-	}
-}
+{ "UserPoolResourceServer": { "Type":
+        "AWS::Cognito::UserPoolResourceServer", "Properties": { "UserPoolId": { "Ref": "UserPool" },
+        "Identifier": "Identifier", "Name": "Name", "Scopes": [{ "ScopeName": "ScopeName1",
+        "ScopeDescription": "description" }, { "ScopeName": "ScopeName2", "ScopeDescription":
+        "description" }] } } }
 ```
 
 #### YAML<a name="aws-resource-cognito-userpoolresourceserver--examples--Creating_a_new_resource_server_for_a_user_pool--yaml"></a>
 
 ```
-UserPoolResourceServer: 
-  Type: AWS::Cognito::UserPoolResourceServer
-  Properties: 
-    UserPoolId: !Ref UserPool 
-    Identifier: "Identifier" 
-    Name: "Name" 
-    Scopes: 
-     - ScopeName: "ScopeName1" 
-       ScopeDescription: "description" 
-     - ScopeName: "ScopeName2"
-       ScopeDescription: "description"
+UserPoolResourceServer: Type: AWS::Cognito::UserPoolResourceServer
+        Properties: UserPoolId: !Ref UserPool Identifier: "Identifier" Name: "Name" Scopes: -
+        ScopeName: "ScopeName1" ScopeDescription: "description" - ScopeName: "ScopeName2"
+        ScopeDescription: "description"
 ```

@@ -44,7 +44,7 @@ A descriptive label that is associated with a script\. Script names do not need 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StorageLocation`  <a name="cfn-gamelift-script-storagelocation"></a>
-The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored\. The storage location must specify the Amazon S3 bucket name, the zip file name \(the "key"\), and a role ARN that allows Amazon Web Services to access the Amazon S3 storage location\. The S3 bucket must be in the same Region where you want to create a new script\. By default, Amazon Web Services uploads the latest version of the zip file; if you have S3 object versioning turned on, you can use the `ObjectVersion` parameter to specify an earlier version\.   
+The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored\. The storage location must specify the Amazon S3 bucket name, the zip file name \(the "key"\), and a role ARN that allows Amazon GameLift to access the Amazon S3 storage location\. The S3 bucket must be in the same Region where you want to create a new script\. By default, Amazon GameLift uploads the latest version of the zip file; if you have S3 object versioning turned on, you can use the `ObjectVersion` parameter to specify an earlier version\.   
 *Required*: Yes  
 *Type*: [S3Location](aws-properties-gamelift-script-s3location.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

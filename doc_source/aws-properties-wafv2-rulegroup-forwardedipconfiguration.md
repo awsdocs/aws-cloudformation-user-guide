@@ -5,9 +5,9 @@ The configuration for inspecting IP addresses in an HTTP header that you specify
 **Note**  
 If the specified header isn't present in the request, AWS WAF doesn't apply the rule to the web request at all\.
 
-This configuration is used for `GeoMatchStatement` and `RateBasedStatement`\. For `IPSetReferenceStatement`, use `IPSetForwardedIPConfig` instead\. 
+This configuration is used for [GeoMatchStatement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-statement.html#cfn-wafv2-rulegroup-statement-geomatchstatement) and [RateBasedStatement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-statement.html#cfn-wafv2-rulegroup-statement-ratebasedstatement)\. For [IPSetReferenceStatement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-statement.html#cfn-wafv2-rulegroup-statement-ipsetreferencestatement), use [IPSetForwardedIPConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ipsetreferencestatement.html#cfn-wafv2-rulegroup-ipsetreferencestatement-ipsetforwardedipconfig) instead\. 
 
-AWS WAF only evaluates the first IP address found in the specified HTTP header\. 
+ AWS WAF only evaluates the first IP address found in the specified HTTP header\. 
 
 ## Syntax<a name="aws-properties-wafv2-rulegroup-forwardedipconfiguration-syntax"></a>
 

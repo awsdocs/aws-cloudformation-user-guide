@@ -2,6 +2,8 @@
 
 Specifies a stop condition for an experiment template\.
 
+For more information, see [Stop conditions](https://docs.aws.amazon.com/fis/latest/userguide/stop-conditions.html) in the *AWS Fault Injection Simulator User Guide*\.
+
 ## Syntax<a name="aws-properties-fis-experimenttemplate-experimenttemplatestopcondition-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

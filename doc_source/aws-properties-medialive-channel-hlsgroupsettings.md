@@ -306,7 +306,7 @@ Includes or excludes the EXT\-X\-PROGRAM\-DATE\-TIME tag in \.m3u8 manifest file
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProgramDateTimeClock`  <a name="cfn-medialive-channel-hlsgroupsettings-programdatetimeclock"></a>
-Not currently supported by AWS CloudFormation\.  
+Specifies the algorithm used to drive the HLS EXT\-X\-PROGRAM\-DATE\-TIME clock\. Options include: INITIALIZE\_FROM\_OUTPUT\_TIMECODE: The PDT clock is initialized as a function of the first output timecode, then incremented by the EXTINF duration of each encoded segment\. SYSTEM\_CLOCK: The PDT clock is initialized as a function of the UTC wall clock, then incremented by the EXTINF duration of each encoded segment\. If the PDT clock diverges from the wall clock by more than 500ms, it is resynchronized to the wall clock\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -32,19 +32,19 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-documentationversion-properties"></a>
 
 `Description`  <a name="cfn-apigateway-documentationversion-description"></a>
-The description of the API documentation snapshot\.  
+A description about the new documentation snapshot\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DocumentationVersion`  <a name="cfn-apigateway-documentationversion-documentationversion"></a>
-The version identifier of the API documentation snapshot\.  
+The version identifier of the to\-be\-updated documentation version\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RestApiId`  <a name="cfn-apigateway-documentationversion-restapiid"></a>
-The identifier of the API\.  
+The string identifier of the associated RestApi\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -236,5 +236,5 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-apigateway-documentationversion--seealso"></a>
-+ [documentationpart:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/documentationpart-create/) in the *Amazon API Gateway REST API Reference*
++ [documentationpart:create](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateDocumentationPart.html) in the *Amazon API Gateway REST API Reference*
 

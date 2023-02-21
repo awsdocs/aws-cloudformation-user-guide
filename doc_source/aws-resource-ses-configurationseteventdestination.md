@@ -1,9 +1,6 @@
 # AWS::SES::ConfigurationSetEventDestination<a name="aws-resource-ses-configurationseteventdestination"></a>
 
-Specifies a configuration set event destination\. An event destination is an AWS service that Amazon SES publishes email sending events to\. When you specify an event destination, you provide one, and only one, destination\. You can send event data to Amazon CloudWatch or Amazon Kinesis Data Firehose\.
-
-**Note**  
-You can't specify Amazon SNS event destinations in CloudFormation templates\.
+Specifies a configuration set event destination\. An event destination is an AWS service that Amazon SES publishes email sending events to\. When you specify an event destination, you provide one, and only one, destination\. You can send event data to Amazon CloudWatch, Amazon Kinesis Data Firehose, or Amazon Simple Notification Service \(Amazon SNS\)\.
 
 ## Syntax<a name="aws-resource-ses-configurationseteventdestination-syntax"></a>
 
@@ -52,7 +49,7 @@ The event destination object\.
 #### <a name="aws-resource-ses-configurationseteventdestination-return-values-fn--getatt-fn--getatt"></a>
 
 `Id`  <a name="Id-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.
 
 ## Examples<a name="aws-resource-ses-configurationseteventdestination--examples"></a>
 
@@ -67,7 +64,7 @@ Specifies an event destination for a configuration set\.
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "Amazon SES ConfigurationSetEventDestination Sample Template",
+    "Description": "AWS SES ConfigurationSetEventDestination Sample Template",
     "Parameters": {
         "ConfigSetName": {
             "Type": "String"
@@ -171,7 +168,7 @@ Specifies an event destination for a configuration set\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: Amazon SES ConfigurationSetEventDestination Sample Template
+Description: AWS SES ConfigurationSetEventDestination Sample Template
 Parameters:
   ConfigSetName:
     Type: String

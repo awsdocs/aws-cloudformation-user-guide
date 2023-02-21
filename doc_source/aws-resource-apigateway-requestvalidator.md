@@ -34,25 +34,25 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-requestvalidator-properties"></a>
 
 `Name`  <a name="cfn-apigateway-requestvalidator-name"></a>
-The name of this request validator\.  
+The name of this RequestValidator  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RestApiId`  <a name="cfn-apigateway-requestvalidator-restapiid"></a>
-The identifier of the targeted API entity\.  
+The string identifier of the associated RestApi\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ValidateRequestBody`  <a name="cfn-apigateway-requestvalidator-validaterequestbody"></a>
-Indicates whether to validate the request body according to the configured schema for the targeted API and method\.  
+A Boolean flag to indicate whether to validate a request body according to the configured Model schema\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ValidateRequestParameters`  <a name="cfn-apigateway-requestvalidator-validaterequestparameters"></a>
-Indicates whether to validate request parameters\.  
+A Boolean flag to indicate whether to validate request parameters \(`true`\) or not \(`false`\)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -159,5 +159,5 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-apigateway-requestvalidator--seealso"></a>
-+ [requestvalidator:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/requestvalidator-create/) in the *Amazon API Gateway REST API Reference*
++ [requestvalidator:create](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateRequestValidator.html) in the *Amazon API Gateway REST API Reference*
 

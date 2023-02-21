@@ -29,11 +29,11 @@ The name of the required SSM document\. The name can be an Amazon Resource Name 
 *Required*: No  
 *Type*: String  
 *Pattern*: `^[a-zA-Z0-9_\-.:/]{3,128}$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Version`  <a name="cfn-ssm-document-documentrequires-version"></a>
 The document version required by the current document\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `([$]LATEST|[$]DEFAULT|^[1-9][0-9]*$)`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

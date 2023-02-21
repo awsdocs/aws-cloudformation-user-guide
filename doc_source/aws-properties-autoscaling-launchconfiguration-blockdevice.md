@@ -44,7 +44,7 @@ Indicates whether the volume is deleted on instance termination\. For Amazon EC2
 Specifies whether the volume should be encrypted\. Encrypted EBS volumes can only be attached to instances that support Amazon EBS encryption\. For more information, see [Supported instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)\. If your AMI uses encrypted volumes, you can also only launch it on supported instance types\.  
 If you are creating a volume from a snapshot, you cannot create an unencrypted volume from an encrypted snapshot\. Also, you cannot specify a KMS key ID when using a launch configuration\.  
 If you enable encryption by default, the EBS volumes that you create are always encrypted, either using the AWS managed KMS key or a customer\-managed KMS key, regardless of whether the snapshot was encrypted\.   
-For more information, see [Using AWS KMS keys to encrypt Amazon EBS volumes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-data-protection.html#encryption) in the *Amazon EC2 Auto Scaling User Guide*\.
+For more information, see [Use AWS KMS keys to encrypt Amazon EBS volumes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-data-protection.html#encryption) in the *Amazon EC2 Auto Scaling User Guide*\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -68,7 +68,7 @@ You must specify either a `VolumeSize` or a `SnapshotId`\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Throughput`  <a name="cfn-autoscaling-launchconfiguration-blockdevice-throughput"></a>
-The throughput \(MiBps\) to provision for a `gp3` volume\.   
+The throughput \(MiBps\) to provision for a `gp3` volume\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `125`  
@@ -89,13 +89,13 @@ You must specify either a `SnapshotId` or a `VolumeSize`\. If you specify both `
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VolumeType`  <a name="cfn-autoscaling-launchconfiguration-blockdevice-volumetype"></a>
-The volume type\. For more information, see [Amazon EBS Volume Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
-Valid Values: `standard` \| `io1` \| `gp2` \| `st1` \| `sc1` \| `gp3`   
+The volume type\. For more information, see [Amazon EBS volume types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon EC2 User Guide for Linux Instances*\.  
+Valid values: `standard` \| `io1` \| `gp2` \| `st1` \| `sc1` \| `gp3`   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See also<a name="aws-properties-autoscaling-launchconfiguration-blockdevice--seealso"></a>
 + [Required KMS key policy for use with encrypted volumes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/key-policy-requirements-EBS-encryption.html) in the *Amazon EC2 Auto Scaling User Guide*
-+ [Using encryption with EBS\-backed AMIs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html) in the *Amazon EC2 User Guide for Linux Instances*
++ [Use encryption with EBS\-backed AMIs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIEncryption.html) in the *Amazon EC2 User Guide for Linux Instances*
 

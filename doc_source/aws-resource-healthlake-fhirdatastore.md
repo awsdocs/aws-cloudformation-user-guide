@@ -84,6 +84,15 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 #### <a name="aws-resource-healthlake-fhirdatastore-return-values-fn--getatt-fn--getatt"></a>
 
+`CreatedAt`  <a name="CreatedAt-fn::getatt"></a>
+Property description not available\.
+
+`CreatedAt.Nanos`  <a name="CreatedAt.Nanos-fn::getatt"></a>
+Property description not available\.
+
+`CreatedAt.Seconds`  <a name="CreatedAt.Seconds-fn::getatt"></a>
+Property description not available\.
+
 `DatastoreArn`  <a name="DatastoreArn-fn::getatt"></a>
 The Data Store ARN is generated during the creation of the Data Store and can be found in the output from the initial Data Store creation request\.
 

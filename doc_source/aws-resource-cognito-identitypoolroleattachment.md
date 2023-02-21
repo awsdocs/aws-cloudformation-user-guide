@@ -70,105 +70,29 @@ The following example sets roles for an identity pool\. It sets “authenticated
 #### JSON<a name="aws-resource-cognito-identitypoolroleattachment--examples--Setting_the_roles_for_an_identity_pool--json"></a>
 
 ```
-{
-   "IdentityPoolRoleAttachment":{
-      "Type":"AWS::Cognito::IdentityPoolRoleAttachment",
-      "Properties":{
-         "IdentityPoolId":{
-            "Ref":"IdentityPool"
-         },
-         "Roles":{
-            "authenticated":{
-               "Fn::GetAtt":[
-                  "AuthenticatedRole",
-                  "Arn"
-               ]
-            },
-            "unauthenticated":{
-               "Fn::GetAtt":[
-                  "UnAuthenticatedRole",
-                  "Arn"
-               ]
-            }
-         },
-         "RoleMappings":{
-            "graph.facebook.com":{
-               "IdentityProvider":"graph.facebook.com",
-               "AmbiguousRoleResolution":"Deny",
-               "Type":"Rules",
-               "RulesConfiguration":{
-                  "Rules":[
-                     {
-                        "Claim":"sub",
-                        "MatchType":"Equals",
-                        "RoleARN":{
-                           "Fn::GetAtt":[
-                              "AuthenticatedRole",
-                              "Arn"
-                           ]
-                        },
-                        "Value":"goodvalue"
-                     }
-                  ]
-               }
-            },
-            "userpool1":{
-               "IdentityProvider":{
-                  "Ref":"CognitoUserPool"
-               },
-               "AmbiguousRoleResolution":"Deny",
-               "Type":"Rules",
-               "RulesConfiguration":{
-                  "Rules":[
-                     {
-                        "Claim":"sub",
-                        "MatchType":"Equals",
-                        "RoleARN":{
-                           "Fn::GetAtt":[
-                              "AuthenticatedRole",
-                              "Arn"
-                           ]
-                        },
-                        "Value":"goodvalue"
-                     }
-                  ]
-               }
-            }
-         }
-      }
-   }
-}
+{ "IdentityPoolRoleAttachment":{
+        "Type":"AWS::Cognito::IdentityPoolRoleAttachment", "Properties":{ "IdentityPoolId":{
+        "Ref":"IdentityPool" }, "Roles":{ "authenticated":{ "Fn::GetAtt":[ "AuthenticatedRole",
+        "Arn" ] }, "unauthenticated":{ "Fn::GetAtt":[ "UnAuthenticatedRole", "Arn" ] } },
+        "RoleMappings":{ "graph.facebook.com":{ "IdentityProvider":"graph.facebook.com",
+        "AmbiguousRoleResolution":"Deny", "Type":"Rules", "RulesConfiguration":{ "Rules":[ {
+        "Claim":"sub", "MatchType":"Equals", "RoleARN":{ "Fn::GetAtt":[ "AuthenticatedRole", "Arn" ]
+        }, "Value":"goodvalue" } ] } }, "userpool1":{ "IdentityProvider":{ "Ref":"CognitoUserPool"
+        }, "AmbiguousRoleResolution":"Deny", "Type":"Rules", "RulesConfiguration":{ "Rules":[ {
+        "Claim":"sub", "MatchType":"Equals", "RoleARN":{ "Fn::GetAtt":[ "AuthenticatedRole", "Arn" ]
+        }, "Value":"goodvalue" } ] } } } } } }
 ```
 
 #### YAML<a name="aws-resource-cognito-identitypoolroleattachment--examples--Setting_the_roles_for_an_identity_pool--yaml"></a>
 
 ```
-IdentityPoolRoleAttachment: 
-  Type: AWS::Cognito::IdentityPoolRoleAttachment 
-  Properties: 
-    IdentityPoolId: !Ref IdentityPool
-    Roles: 
-      "authenticated": !GetAtt AuthenticatedRole.Arn 
-      "unauthenticated": !GetAtt UnAuthenticatedRole.Arn 
-    RoleMappings:  
-      "graph.facebook.com":
-        IdentityProvider: "graph.facebook.com" 
-        AmbiguousRoleResolution: Deny 
-        Type: Rules 
-        RulesConfiguration: 
-          Rules: 
-            - Claim: "sub" 
-              MatchType: "Equals" 
-              RoleARN: !GetAtt AuthenticatedRole.Arn 
-              Value: "goodvalue"
-      "userpool1": 
-        IdentityProvider: !Ref CognitoUserPool 
-        AmbiguousRoleResolution: Deny 
-        Type: Rules 
-        RulesConfiguration: 
-          Rules: 
-            - Claim: "sub" 
-              MatchType: "Equals" 
-              RoleARN: !GetAtt AuthenticatedRole.Arn 
-              Value: "goodvalue"
+IdentityPoolRoleAttachment: Type:
+        AWS::Cognito::IdentityPoolRoleAttachment Properties: IdentityPoolId: !Ref IdentityPool
+        Roles: "authenticated": !GetAtt AuthenticatedRole.Arn "unauthenticated": !GetAtt
+        UnAuthenticatedRole.Arn RoleMappings: "graph.facebook.com": IdentityProvider:
+        "graph.facebook.com" AmbiguousRoleResolution: Deny Type: Rules RulesConfiguration: Rules: -
+        Claim: "sub" MatchType: "Equals" RoleARN: !GetAtt AuthenticatedRole.Arn Value: "goodvalue"
+        "userpool1": IdentityProvider: !Ref CognitoUserPool AmbiguousRoleResolution: Deny Type:
+        Rules RulesConfiguration: Rules: - Claim: "sub" MatchType: "Equals" RoleARN: !GetAtt
+        AuthenticatedRole.Arn Value: "goodvalue"
 ```

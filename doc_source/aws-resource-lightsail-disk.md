@@ -101,6 +101,15 @@ The input/output operations per second \(IOPS\) of the disk\.
 `IsAttached`  <a name="IsAttached-fn::getatt"></a>
 A Boolean value indicating whether the disk is attached to an instance\.
 
+`Location`  <a name="Location-fn::getatt"></a>
+Property description not available\.
+
+`Location.AvailabilityZone`  <a name="Location.AvailabilityZone-fn::getatt"></a>
+Property description not available\.
+
+`Location.RegionName`  <a name="Location.RegionName-fn::getatt"></a>
+Property description not available\.
+
 `Path`  <a name="Path-fn::getatt"></a>
 The path of the disk\.
 

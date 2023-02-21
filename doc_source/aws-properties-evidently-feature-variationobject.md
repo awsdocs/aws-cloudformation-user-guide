@@ -59,6 +59,6 @@ The value assigned to this variation, if the variation type is a string\.
 
 `VariationName`  <a name="cfn-evidently-feature-variationobject-variationname"></a>
 A name for the variation\. It can include up to 127 characters\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

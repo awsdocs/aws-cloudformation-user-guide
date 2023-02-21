@@ -14,7 +14,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ACLName](#cfn-memorydb-cluster-aclname)" : String,
       "[AutoMinorVersionUpgrade](#cfn-memorydb-cluster-autominorversionupgrade)" : Boolean,
+      "[ClusterEndpoint](#cfn-memorydb-cluster-clusterendpoint)" : Endpoint,
       "[ClusterName](#cfn-memorydb-cluster-clustername)" : String,
+      "[DataTiering](#cfn-memorydb-cluster-datatiering)" : String,
       "[Description](#cfn-memorydb-cluster-description)" : String,
       "[EngineVersion](#cfn-memorydb-cluster-engineversion)" : String,
       "[FinalSnapshotName](#cfn-memorydb-cluster-finalsnapshotname)" : String,
@@ -46,7 +48,10 @@ Type: AWS::MemoryDB::Cluster
 Properties: 
   [ACLName](#cfn-memorydb-cluster-aclname): String
   [AutoMinorVersionUpgrade](#cfn-memorydb-cluster-autominorversionupgrade): Boolean
+  [ClusterEndpoint](#cfn-memorydb-cluster-clusterendpoint): 
+    Endpoint
   [ClusterName](#cfn-memorydb-cluster-clustername): String
+  [DataTiering](#cfn-memorydb-cluster-datatiering): String
   [Description](#cfn-memorydb-cluster-description): String
   [EngineVersion](#cfn-memorydb-cluster-engineversion): String
   [FinalSnapshotName](#cfn-memorydb-cluster-finalsnapshotname): String
@@ -88,9 +93,21 @@ When set to true, the cluster will automatically receive minor engine version up
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ClusterEndpoint`  <a name="cfn-memorydb-cluster-clusterendpoint"></a>
+The cluster's configuration endpoint\.  
+*Required*: No  
+*Type*: [Endpoint](aws-properties-memorydb-cluster-endpoint.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ClusterName`  <a name="cfn-memorydb-cluster-clustername"></a>
 The name of the cluster\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`DataTiering`  <a name="cfn-memorydb-cluster-datatiering"></a>
+Enables data tiering\. Data tiering is only supported for replication groups using the r6gd node type\. This parameter must be set to true when using r6gd nodes\. For more information, see [Data tiering](https://docs.aws.amazon.com/memorydb/latest/devguide/data-tiering.html)\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -126,7 +143,7 @@ Specifies the weekly time range during which maintenance on the cluster is perfo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NodeType`  <a name="cfn-memorydb-cluster-nodetype"></a>
-The cluster's [node type](https://docs.aws.amazon.com/memorydb/latest/devguide/nodes.supportedtypes.html)\.  
+The cluster's node type\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

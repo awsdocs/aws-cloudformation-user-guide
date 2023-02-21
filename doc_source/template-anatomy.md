@@ -116,3 +116,6 @@ Specifies the stack resources and their properties, such as an Amazon Elastic Co
 
 **[Outputs \(optional\)](outputs-section-structure.md)**  
 Describes the values that are returned whenever you view your stack's properties\. For example, you can declare an output for an S3 bucket name and then call the `aws cloudformation describe-stacks` AWS CLI command to view the name\.
+
+**Note**  
+When authoring templates, do not use duplicate major sections, for example using multiple resource sections\. Although CloudFormation may accept the template, it will have an undefined behavior when processing the template, and may incorrectly provision resources, or return inexplicable errors\.

@@ -72,8 +72,8 @@ A description of the task\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoggingInfo`  <a name="cfn-ssm-maintenancewindowtask-logginginfo"></a>
-Information about an Amazon S3 bucket to write task\-level logs to\.  
- `LoggingInfo` has been deprecated\. To specify an Amazon S3 bucket to contain logs, instead use the `OutputS3BucketName` and `OutputS3KeyPrefix` options in the `TaskInvocationParameters` structure\. For information about how Systems Manager handles these options for the supported maintenance window task types, see [AWS Systems Manager MaintenanceWindowTask TaskInvocationParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html)\.
+Information about an Amazon S3 bucket to write Run Command task\-level logs to\.  
+ `LoggingInfo` has been deprecated\. To specify an Amazon S3 bucket to contain logs for Run Command tasks, instead use the `OutputS3BucketName` and `OutputS3KeyPrefix` options in the `TaskInvocationParameters` structure\. For information about how Systems Manager handles these options for the supported maintenance window task types, see [AWS::SSM::MaintenanceWindowTask MaintenanceWindowRunCommandParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)\.
 *Required*: No  
 *Type*: [LoggingInfo](aws-properties-ssm-maintenancewindowtask-logginginfo.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -408,6 +408,10 @@ The following example demonstrates running a command with AWS\-RunPowerShellScri
                 "TaskInvocationParameters": {
                     "MaintenanceWindowRunCommandParameters": {
                         "Comment": "This is a comment",
+                        "CloudWatchOutputConfig": {
+                            "CloudWatchLogGroupName": "MyLogGroupName",
+                            "CloudWatchOutputEnabled": true
+                        },
                         "Parameters": {
                             "executionTimeout": [
                                 "3600"
@@ -446,6 +450,9 @@ Resources:
       TaskInvocationParameters:
         MaintenanceWindowRunCommandParameters:
           Comment: This is a comment
+          CloudWatchOutputConfig:
+            CloudWatchLogGroupName: MyLogGroupName
+            CloudWatchOutputEnabled: true
           Parameters:
             executionTimeout:
               - '3600'
@@ -461,7 +468,7 @@ Resources:
 
 ### Create a task that runs an Automation runbook<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_task_that_runs_an_Automation_runbook"></a>
 
-The following example creates a Systems Manager maintenance window task that uses the runbook AWS\-PatchInstanceWithRollback to patch instances\.
+The following example creates a Systems Manager maintenance window task that uses the runbook `AWS-PatchInstanceWithRollback` to patch instances\.
 
 #### JSON<a name="aws-resource-ssm-maintenancewindowtask--examples--Create_a_task_that_runs_an_Automation_runbook--json"></a>
 
@@ -486,7 +493,11 @@ The following example creates a Systems Manager maintenance window task that use
                 "TaskInvocationParameters": {
                     "MaintenanceWindowAutomationParameters": {
                         "DocumentVersion": "1",
-                        "Parameters": '{ \"instanceId\": \"{{RESOURCE_ID}}\" }'
+                        "Parameters": {
+                            "instanceId": [
+                                "{{RESOURCE_ID}}"
+                            ]
+                        }
                     }
                 },
                 "Priority": 1,
@@ -518,8 +529,10 @@ Resources:
       TaskType: AUTOMATION
       TaskInvocationParameters:
         MaintenanceWindowAutomationParameters:
-    DocumentVersion: 1
-    Parameters: '{ \"instanceId\": \"{{RESOURCE_ID}}\" }'
+          DocumentVersion: 1
+          Parameters:
+            instanceId:
+              - '{{RESOURCE_ID}}'
       Priority: 1
       MaxConcurrency: 5
       MaxErrors: 5

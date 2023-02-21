@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Actions](#cfn-s3objectlambda-accesspoint-transformationconfiguration-actions)" : [ String, ... ],
-  "[ContentTransformation](#cfn-s3objectlambda-accesspoint-transformationconfiguration-contenttransformation)" : Json
+  "[ContentTransformation](#cfn-s3objectlambda-accesspoint-transformationconfiguration-contenttransformation)" : ContentTransformation
 }
 ```
 
@@ -20,13 +20,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Actions](#cfn-s3objectlambda-accesspoint-transformationconfiguration-actions): 
     - String
-  [ContentTransformation](#cfn-s3objectlambda-accesspoint-transformationconfiguration-contenttransformation): Json
+  [ContentTransformation](#cfn-s3objectlambda-accesspoint-transformationconfiguration-contenttransformation): 
+    ContentTransformation
 ```
 
 ## Properties<a name="aws-properties-s3objectlambda-accesspoint-transformationconfiguration-properties"></a>
 
 `Actions`  <a name="cfn-s3objectlambda-accesspoint-transformationconfiguration-actions"></a>
-A container for the action of an Object Lambda Access Point configuration\. Valid input is `GetObject`\.  
+A container for the action of an Object Lambda Access Point configuration\. Valid inputs are `GetObject`, `HeadObject`, `ListObject`, and `ListObjectV2`\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -34,5 +35,5 @@ A container for the action of an Object Lambda Access Point configuration\. Vali
 `ContentTransformation`  <a name="cfn-s3objectlambda-accesspoint-transformationconfiguration-contenttransformation"></a>
 A container for the content transformation of an Object Lambda Access Point configuration\. Can include the FunctionArn and FunctionPayload\. For more information, see [AwsLambdaTransformation](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_AwsLambdaTransformation.html) in the *Amazon S3 API Reference*\.  
 *Required*: Yes  
-*Type*: Json  
+*Type*: [ContentTransformation](aws-properties-s3objectlambda-accesspoint-contenttransformation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

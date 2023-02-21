@@ -1,6 +1,6 @@
 # AWS::CloudFront::ResponseHeadersPolicy CustomHeader<a name="aws-properties-cloudfront-responseheaderspolicy-customheader"></a>
 
-An HTTP response header name and its value\. CloudFront includes this header in HTTP responses that it sends for requests that match a cache behavior that’s associated with this response headers policy\.
+An HTTP response header name and its value\. CloudFront includes this header in HTTP responses that it sends for requests that match a cache behavior that's associated with this response headers policy\.
 
 ## Syntax<a name="aws-properties-cloudfront-responseheaderspolicy-customheader-syntax"></a>
 

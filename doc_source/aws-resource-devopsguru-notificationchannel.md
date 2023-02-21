@@ -57,9 +57,9 @@ The ID of the notification channel\.
 
 ## Examples<a name="aws-resource-devopsguru-notificationchannel--examples"></a>
 
-### Create one notification channel<a name="aws-resource-devopsguru-notificationchannel--examples--Create_one_notification_channel"></a>
+### Create one notification channel with filters<a name="aws-resource-devopsguru-notificationchannel--examples--Create_one_notification_channel_with_filters"></a>
 
-#### JSON<a name="aws-resource-devopsguru-notificationchannel--examples--Create_one_notification_channel--json"></a>
+#### JSON<a name="aws-resource-devopsguru-notificationchannel--examples--Create_one_notification_channel_with_filters--json"></a>
 
 ```
 {
@@ -68,6 +68,10 @@ The ID of the notification channel\.
       "Type": "AWS::DevOpsGuru::NotificationChannel",
       "Properties": {
         "Config": {
+	  "Filters": {
+	    "MessageTypes": ["NEW_INSIGHT", "CLOSED_INSIGHT", "SEVERITY_UPGRADED"],
+	    "Severities": ["MEDIUM", "HIGH"]
+	  }
           "Sns": {
             "TopicArn": "arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel"
           }
@@ -78,7 +82,7 @@ The ID of the notification channel\.
 }
 ```
 
-#### YAML<a name="aws-resource-devopsguru-notificationchannel--examples--Create_one_notification_channel--yaml"></a>
+#### YAML<a name="aws-resource-devopsguru-notificationchannel--examples--Create_one_notification_channel_with_filters--yaml"></a>
 
 ```
 Resources:
@@ -86,6 +90,14 @@ Resources:
     Type: AWS::DevOpsGuru::NotificationChannel
     Properties:
       Config:
+      Filters:
+	  MessageTypes:
+	    - NEW_INSIGHT
+	    - CLOSED_INSIGHT
+	    - SEVERITY_UPGRADED
+	  Severities:
+	    - MEDIUM
+	    - HIGH
         Sns:
           TopicArn: arn:aws:sns:us-east-1:123456789012:DefaultNotificationChannel
 ```

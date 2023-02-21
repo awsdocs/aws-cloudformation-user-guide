@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AbortIncompleteMultipartUpload](#cfn-s3outposts-bucket-rule-abortincompletemultipartupload)" : AbortIncompleteMultipartUpload,
   "[ExpirationDate](#cfn-s3outposts-bucket-rule-expirationdate)" : String,
   "[ExpirationInDays](#cfn-s3outposts-bucket-rule-expirationindays)" : Integer,
-  "[Filter](#cfn-s3outposts-bucket-rule-filter)" : Json,
+  "[Filter](#cfn-s3outposts-bucket-rule-filter)" : Filter,
   "[Id](#cfn-s3outposts-bucket-rule-id)" : String,
   "[Status](#cfn-s3outposts-bucket-rule-status)" : String
 }
@@ -26,7 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     AbortIncompleteMultipartUpload
   [ExpirationDate](#cfn-s3outposts-bucket-rule-expirationdate): String
   [ExpirationInDays](#cfn-s3outposts-bucket-rule-expirationindays): Integer
-  [Filter](#cfn-s3outposts-bucket-rule-filter): Json
+  [Filter](#cfn-s3outposts-bucket-rule-filter): 
+    Filter
   [Id](#cfn-s3outposts-bucket-rule-id): String
   [Status](#cfn-s3outposts-bucket-rule-status): String
 ```
@@ -54,7 +55,7 @@ Specifies the expiration for the lifecycle of the object in the form of days tha
 `Filter`  <a name="cfn-s3outposts-bucket-rule-filter"></a>
 The container for the filter of the lifecycle rule\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [Filter](aws-properties-s3outposts-bucket-filter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-s3outposts-bucket-rule-id"></a>
@@ -65,6 +66,6 @@ The container for the filter of the lifecycle rule\.
 
 `Status`  <a name="cfn-s3outposts-bucket-rule-status"></a>
 If `Enabled`, the rule is currently being applied\. If `Disabled`, the rule is not currently being applied\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

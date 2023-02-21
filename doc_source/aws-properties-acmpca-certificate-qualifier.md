@@ -1,6 +1,6 @@
 # AWS::ACMPCA::Certificate Qualifier<a name="aws-properties-acmpca-certificate-qualifier"></a>
 
-Defines a `PolicyInformation` qualifier\. ACM Private CA supports the [certification practice statement \(CPS\) qualifier](https://tools.ietf.org/html/rfc5280#section-4.2.1.4) defined in RFC 5280\. 
+Defines a `PolicyInformation` qualifier\. AWS Private CA supports the [certification practice statement \(CPS\) qualifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.4) defined in RFC 5280\. 
 
 ## Syntax<a name="aws-properties-acmpca-certificate-qualifier-syntax"></a>
 

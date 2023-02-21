@@ -15,8 +15,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AsyncInferenceConfig](#cfn-sagemaker-endpointconfig-asyncinferenceconfig)" : AsyncInferenceConfig,
       "[DataCaptureConfig](#cfn-sagemaker-endpointconfig-datacaptureconfig)" : DataCaptureConfig,
       "[EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname)" : String,
+      "[ExplainerConfig](#cfn-sagemaker-endpointconfig-explainerconfig)" : ExplainerConfig,
       "[KmsKeyId](#cfn-sagemaker-endpointconfig-kmskeyid)" : String,
       "[ProductionVariants](#cfn-sagemaker-endpointconfig-productionvariants)" : [ ProductionVariant, ... ],
+      "[ShadowProductionVariants](#cfn-sagemaker-endpointconfig-shadowproductionvariants)" : [ ProductionVariant, ... ],
       "[Tags](#cfn-sagemaker-endpointconfig-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -32,8 +34,12 @@ Properties:
   [DataCaptureConfig](#cfn-sagemaker-endpointconfig-datacaptureconfig): 
     DataCaptureConfig
   [EndpointConfigName](#cfn-sagemaker-endpointconfig-endpointconfigname): String
+  [ExplainerConfig](#cfn-sagemaker-endpointconfig-explainerconfig): 
+    ExplainerConfig
   [KmsKeyId](#cfn-sagemaker-endpointconfig-kmskeyid): String
   [ProductionVariants](#cfn-sagemaker-endpointconfig-productionvariants): 
+    - ProductionVariant
+  [ShadowProductionVariants](#cfn-sagemaker-endpointconfig-shadowproductionvariants): 
     - ProductionVariant
   [Tags](#cfn-sagemaker-endpointconfig-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -61,6 +67,12 @@ The name of the endpoint configuration\.
 *Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ExplainerConfig`  <a name="cfn-sagemaker-endpointconfig-explainerconfig"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ExplainerConfig](aws-properties-sagemaker-endpointconfig-explainerconfig.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `KmsKeyId`  <a name="cfn-sagemaker-endpointconfig-kmskeyid"></a>
 The Amazon Resource Name \(ARN\) of an AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint\.  
 + Key ID: `1234abcd-12ab-34cd-56ef-1234567890ab`
@@ -80,6 +92,13 @@ For more information about local instance storage encryption, see [SSD Instance 
 `ProductionVariants`  <a name="cfn-sagemaker-endpointconfig-productionvariants"></a>
 A list of `ProductionVariant` objects, one for each model that you want to host at this endpoint\.  
 *Required*: Yes  
+*Type*: List of [ProductionVariant](aws-properties-sagemaker-endpointconfig-productionvariant.md)  
+*Maximum*: `10`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ShadowProductionVariants`  <a name="cfn-sagemaker-endpointconfig-shadowproductionvariants"></a>
+Array of `ProductionVariant` objects\. There is one for each model that you want to host at this endpoint in shadow mode with production traffic replicated from the model specified on `ProductionVariants`\. If you use this field, you can only specify one variant for `ProductionVariants` and one variant for `ShadowProductionVariants`\.  
+*Required*: No  
 *Type*: List of [ProductionVariant](aws-properties-sagemaker-endpointconfig-productionvariant.md)  
 *Maximum*: `10`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -34,5 +34,4 @@ The Amazon Resource Name \(ARN\) of the KMS key to be used to encrypt the data\.
 The encryption mode to use for Amazon S3 data\.  
 *Required*: No  
 *Type*: String  
-*Allowed Values*: `DISABLED | SSE-KMS | SSE-S3`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

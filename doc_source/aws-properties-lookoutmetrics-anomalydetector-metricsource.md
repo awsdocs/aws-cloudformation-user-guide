@@ -36,25 +36,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lookoutmetrics-anomalydetector-metricsource-properties"></a>
 
 `AppFlowConfig`  <a name="cfn-lookoutmetrics-anomalydetector-metricsource-appflowconfig"></a>
-An object containing information about the AppFlow configuration\.  
+Details about an AppFlow datasource\.  
 *Required*: No  
 *Type*: [AppFlowConfig](aws-properties-lookoutmetrics-anomalydetector-appflowconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CloudwatchConfig`  <a name="cfn-lookoutmetrics-anomalydetector-metricsource-cloudwatchconfig"></a>
-An object containing information about the Amazon CloudWatch monitoring configuration\.  
+Details about an Amazon CloudWatch monitoring datasource\.  
 *Required*: No  
 *Type*: [CloudwatchConfig](aws-properties-lookoutmetrics-anomalydetector-cloudwatchconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RDSSourceConfig`  <a name="cfn-lookoutmetrics-anomalydetector-metricsource-rdssourceconfig"></a>
-An object containing information about the Amazon Relational Database Service \(RDS\) configuration\.  
+Details about an Amazon Relational Database Service \(RDS\) datasource\.  
 *Required*: No  
 *Type*: [RDSSourceConfig](aws-properties-lookoutmetrics-anomalydetector-rdssourceconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RedshiftSourceConfig`  <a name="cfn-lookoutmetrics-anomalydetector-metricsource-redshiftsourceconfig"></a>
-An object containing information about the Amazon Redshift database configuration\.  
+Details about an Amazon Redshift database datasource\.  
 *Required*: No  
 *Type*: [RedshiftSourceConfig](aws-properties-lookoutmetrics-anomalydetector-redshiftsourceconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -32,7 +32,7 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-account-properties"></a>
 
 `CloudWatchRoleArn`  <a name="cfn-apigateway-account-cloudwatchrolearn"></a>
-The Amazon Resource Name \(ARN\) of an IAM role that has write access to CloudWatch Logs in your account\.  
+The ARN of an Amazon CloudWatch role for the current Account\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -132,5 +132,5 @@ Account:
 ```
 
 ## See also<a name="aws-resource-apigateway-account--seealso"></a>
-+ [account:update](https://docs.aws.amazon.com/apigateway/api-reference/resource/account/) in the *Amazon API Gateway REST API Reference*
++ [account:update](https://docs.aws.amazon.com/apigateway/latest/api/API_UpdateAccount.html) in the *Amazon API Gateway REST API Reference*
 

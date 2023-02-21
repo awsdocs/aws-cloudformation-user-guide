@@ -1,6 +1,6 @@
 # AWS::Lex::Bot AudioLogSetting<a name="aws-properties-lex-bot-audiologsetting"></a>
 
-Specifies settings for logging the audio of conversations between Amazon Lex and a user\. You specify whether to log audio and the Amazon S3 bucket where the audio file is stored\.
+Settings for logging audio of conversations between Amazon Lex and a user\. You specify whether to log audio and the Amazon S3 bucket where the audio file is stored\.
 
 ## Syntax<a name="aws-properties-lex-bot-audiologsetting-syntax"></a>
 
@@ -32,7 +32,7 @@ Specifies the location of the audio log files collected when conversation loggin
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-lex-bot-audiologsetting-enabled"></a>
-Specifies whether audio logging is enabled for the bot\.  
+Determines whether audio logging in enabled for the bot\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

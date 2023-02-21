@@ -1,6 +1,6 @@
 # AWS::DMS::Endpoint NeptuneSettings<a name="aws-properties-dms-endpoint-neptunesettings"></a>
 
-Provides information that defines an Amazon Neptune endpoint\.
+Provides information that defines an Amazon Neptune endpoint\. This information includes the output format of records applied to the endpoint and details of transaction and control table data information\. For more information about the available settings, see [ Specifying endpoint settings for Amazon Neptune as a target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.EndpointSettings) in the *AWS Database Migration Service User Guide*\.
 
 ## Syntax<a name="aws-properties-dms-endpoint-neptunesettings-syntax"></a>
 
@@ -41,7 +41,7 @@ The number of milliseconds for AWS DMS to wait to retry a bulk\-load of migrated
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IamAuthEnabled`  <a name="cfn-dms-endpoint-neptunesettings-iamauthenabled"></a>
-If you want AWS Identity and Access Management \(IAM\) authorization enabled for this endpoint, set this parameter to `true`\. Then attach the appropriate IAM policy document to your service role specified by `ServiceAccessRoleArn`\. The default is `false`\.  
+If you want IAM authorization enabled for this endpoint, set this parameter to `true`\. Then attach the appropriate IAM policy document to your service role specified by `ServiceAccessRoleArn`\. The default is `false`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -71,7 +71,8 @@ The name of the Amazon S3 bucket where AWS DMS can temporarily store migrated gr
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceAccessRoleArn`  <a name="cfn-dms-endpoint-neptunesettings-serviceaccessrolearn"></a>
-The Amazon Resource Name \(ARN\) of the service role that you created for the Neptune target endpoint\. The role must allow the `iam:PassRole` action\. For more information, see [Creating an IAM Service Role for Accessing Amazon Neptune as a Target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.ServiceRole) in the * AWS Database Migration Service User Guide\. *   
+The Amazon Resource Name \(ARN\) of the service role that you created for the Neptune target endpoint\. The role must allow the `iam:PassRole` action\.  
+For more information, see [ Creating an IAM Service Role for Accessing Amazon Neptune as a Target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Neptune.html#CHAP_Target.Neptune.ServiceRole) in the *AWS Database Migration Service User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

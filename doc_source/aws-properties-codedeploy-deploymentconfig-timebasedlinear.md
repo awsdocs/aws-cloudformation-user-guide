@@ -10,28 +10,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[LinearInterval](#cfn-properties-codedeploy-deploymentconfig-trafficroutingconfig-timebasedlinear-linearinterval)" : Integer,
-  "[LinearPercentage](#cfn-properties-codedeploy-deploymentconfig-trafficroutingconfig-timebasedlinear-linearpercentage)" : Integer
+  "[LinearInterval](#cfn-codedeploy-deploymentconfig-timebasedlinear-linearinterval)" : Integer,
+  "[LinearPercentage](#cfn-codedeploy-deploymentconfig-timebasedlinear-linearpercentage)" : Integer
 }
 ```
 
 ### YAML<a name="aws-properties-codedeploy-deploymentconfig-timebasedlinear-syntax.yaml"></a>
 
 ```
-  [LinearInterval](#cfn-properties-codedeploy-deploymentconfig-trafficroutingconfig-timebasedlinear-linearinterval): Integer
-  [LinearPercentage](#cfn-properties-codedeploy-deploymentconfig-trafficroutingconfig-timebasedlinear-linearpercentage): Integer
+  [LinearInterval](#cfn-codedeploy-deploymentconfig-timebasedlinear-linearinterval): Integer
+  [LinearPercentage](#cfn-codedeploy-deploymentconfig-timebasedlinear-linearpercentage): Integer
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentconfig-timebasedlinear-properties"></a>
 
-`LinearInterval`  <a name="cfn-properties-codedeploy-deploymentconfig-trafficroutingconfig-timebasedlinear-linearinterval"></a>
+`LinearInterval`  <a name="cfn-codedeploy-deploymentconfig-timebasedlinear-linearinterval"></a>
 The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment\.  
 *Required*: Yes  
 *Type*: Integer  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`LinearPercentage`  <a name="cfn-properties-codedeploy-deploymentconfig-trafficroutingconfig-timebasedlinear-linearpercentage"></a>
+`LinearPercentage`  <a name="cfn-codedeploy-deploymentconfig-timebasedlinear-linearpercentage"></a>
 The percentage of traffic that is shifted at the start of each increment of a `TimeBasedLinear` deployment\.  
 *Required*: Yes  
 *Type*: Integer  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

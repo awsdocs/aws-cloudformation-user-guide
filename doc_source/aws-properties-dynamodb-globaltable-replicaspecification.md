@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ContributorInsightsSpecification](#cfn-dynamodb-globaltable-replicaspecification-contributorinsightsspecification)" : ContributorInsightsSpecification,
   "[GlobalSecondaryIndexes](#cfn-dynamodb-globaltable-replicaspecification-globalsecondaryindexes)" : [ ReplicaGlobalSecondaryIndexSpecification, ... ],
+  "[KinesisStreamSpecification](#cfn-dynamodb-globaltable-replicaspecification-kinesisstreamspecification)" : KinesisStreamSpecification,
   "[PointInTimeRecoverySpecification](#cfn-dynamodb-globaltable-replicaspecification-pointintimerecoveryspecification)" : PointInTimeRecoverySpecification,
   "[ReadProvisionedThroughputSettings](#cfn-dynamodb-globaltable-replicaspecification-readprovisionedthroughputsettings)" : ReadProvisionedThroughputSettings,
   "[Region](#cfn-dynamodb-globaltable-replicaspecification-region)" : String,
@@ -28,6 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     ContributorInsightsSpecification
   [GlobalSecondaryIndexes](#cfn-dynamodb-globaltable-replicaspecification-globalsecondaryindexes): 
     - ReplicaGlobalSecondaryIndexSpecification
+  [KinesisStreamSpecification](#cfn-dynamodb-globaltable-replicaspecification-kinesisstreamspecification): 
+    KinesisStreamSpecification
   [PointInTimeRecoverySpecification](#cfn-dynamodb-globaltable-replicaspecification-pointintimerecoveryspecification): 
     PointInTimeRecoverySpecification
   [ReadProvisionedThroughputSettings](#cfn-dynamodb-globaltable-replicaspecification-readprovisionedthroughputsettings): 
@@ -52,6 +55,12 @@ The settings used to enable or disable CloudWatch Contributor Insights for the s
 Defines additional settings for the global secondary indexes of this replica\.  
 *Required*: No  
 *Type*: List of [ReplicaGlobalSecondaryIndexSpecification](aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`KinesisStreamSpecification`  <a name="cfn-dynamodb-globaltable-replicaspecification-kinesisstreamspecification"></a>
+Defines the Kinesis Data Streams configuration for the specified replica\.  
+*Required*: No  
+*Type*: [KinesisStreamSpecification](aws-properties-dynamodb-globaltable-kinesisstreamspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PointInTimeRecoverySpecification`  <a name="cfn-dynamodb-globaltable-replicaspecification-pointintimerecoveryspecification"></a>
@@ -82,7 +91,6 @@ Allows you to specify a customer\-managed key for the replica\. When using custo
 The table class of the specified table\. Valid values are `STANDARD` and `STANDARD_INFREQUENT_ACCESS`\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `STANDARD | STANDARD_INFREQUENT_ACCESS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-dynamodb-globaltable-replicaspecification-tags"></a>

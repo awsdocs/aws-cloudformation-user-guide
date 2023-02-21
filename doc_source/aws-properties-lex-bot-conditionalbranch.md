@@ -1,6 +1,6 @@
 # AWS::Lex::Bot ConditionalBranch<a name="aws-properties-lex-bot-conditionalbranch"></a>
 
-<a name="aws-properties-lex-bot-conditionalbranch-description"></a>The `ConditionalBranch` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
+A set of actions that Amazon Lex should run if the condition is matched\.
 
 ## Syntax<a name="aws-properties-lex-bot-conditionalbranch-syntax"></a>
 
@@ -32,25 +32,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-conditionalbranch-properties"></a>
 
 `Condition`  <a name="cfn-lex-bot-conditionalbranch-condition"></a>
-Property description not available\.  
+Contains the expression to evaluate\. If the condition is true, the branch's actions are taken\.  
 *Required*: Yes  
 *Type*: [Condition](aws-properties-lex-bot-condition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-lex-bot-conditionalbranch-name"></a>
-Property description not available\.  
+The name of the branch\.   
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NextStep`  <a name="cfn-lex-bot-conditionalbranch-nextstep"></a>
-Property description not available\.  
+The next step in the conversation\.  
 *Required*: Yes  
 *Type*: [DialogState](aws-properties-lex-bot-dialogstate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Response`  <a name="cfn-lex-bot-conditionalbranch-response"></a>
-Property description not available\.  
+Specifies a list of message groups that Amazon Lex uses to respond the user input\.  
 *Required*: No  
 *Type*: [ResponseSpecification](aws-properties-lex-bot-responsespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

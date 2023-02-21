@@ -16,7 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DetectorId](#cfn-guardduty-threatintelset-detectorid)" : String,
       "[Format](#cfn-guardduty-threatintelset-format)" : String,
       "[Location](#cfn-guardduty-threatintelset-location)" : String,
-      "[Name](#cfn-guardduty-threatintelset-name)" : String
+      "[Name](#cfn-guardduty-threatintelset-name)" : String,
+      "[Tags](#cfn-guardduty-threatintelset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -31,6 +32,8 @@ Properties:
   [Format](#cfn-guardduty-threatintelset-format): String
   [Location](#cfn-guardduty-threatintelset-location): String
   [Name](#cfn-guardduty-threatintelset-name): String
+  [Tags](#cfn-guardduty-threatintelset-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-guardduty-threatintelset-properties"></a>
@@ -70,6 +73,13 @@ A user\-friendly ThreatIntelSet name displayed in all findings that are generate
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `300`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-guardduty-threatintelset-tags"></a>
+The tags to be added to a new threat list resource\. Each tag consists of a key and an optional value, both of which you define\.  
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.   
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-guardduty-threatintelset-return-values"></a>

@@ -11,33 +11,33 @@ The calls that CloudFormation makes are all declared by your template\. For exam
 
    ```
    {
-     "AWSTemplateFormatVersion" : "2010-09-09",
-     "Description" : "A simple EC2 instance",
-     "Resources" : {
-       "MyEC2Instance" : {
-         "Type" : "AWS::EC2::Instance",
-         "Properties" : {
-           "ImageId" : "ami-0ff8a91507f77f867",
-           "InstanceType" : "t2.micro"
-         }
+       "AWSTemplateFormatVersion": "2010-09-09",
+       "Description": "A simple EC2 instance",
+       "Resources": {
+           "MyEC2Instance": {
+               "Type": "AWS::EC2::Instance",
+               "Properties": {
+                   "ImageId": "ami-0ff8a91507f77f867",
+                   "InstanceType": "t2.micro"
+               }
+           }
        }
-     }
    }
    ```  
 **Example YAML**  
 
    ```
-   AWSTemplateFormatVersion: '2010-09-09'
+   AWSTemplateFormatVersion: 2010-09-09
    Description: A simple EC2 instance
    Resources:
      MyEC2Instance:
-       Type: AWS::EC2::Instance
+       Type: 'AWS::EC2::Instance'
        Properties:
          ImageId: ami-0ff8a91507f77f867
          InstanceType: t2.micro
    ```
 
-1. Save the template locally or in an S3 bucket\. If you created a template, save it with a file extension like: `.json`, `.yaml`, or `.txt`\.
+1. Save the template locally or in an Amazon S3 bucket\. If you created a template, save it with a file extension like: `.json`, `.yaml`, or `.txt`\.
 
 1. Create a CloudFormation stack by specifying the location of your template file, such as a path on your local computer or an Amazon S3 URL\. If the template contains parameters, you can specify input values when you create the stack\. Parameters allow you to pass in values to your template so that you can customize your resources each time you create a stack\.
 

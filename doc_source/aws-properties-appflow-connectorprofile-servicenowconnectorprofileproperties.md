@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile ServiceNowConnectorProfileProperties<a name="aws-properties-appflow-connectorprofile-servicenowconnectorprofileproperties"></a>
 
- The `ServiceNowConnectorProfileProperties` property type specifies the connector\-specific profile properties required when using ServiceNow\. 
+ The connector\-specific profile properties required when using ServiceNow\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-servicenowconnectorprofileproperties-syntax"></a>
 

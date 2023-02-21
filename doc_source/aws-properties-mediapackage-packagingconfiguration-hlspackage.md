@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Encryption](#cfn-mediapackage-packagingconfiguration-hlspackage-encryption)" : HlsEncryption,
   "[HlsManifests](#cfn-mediapackage-packagingconfiguration-hlspackage-hlsmanifests)" : [ HlsManifest, ... ],
+  "[IncludeDvbSubtitles](#cfn-mediapackage-packagingconfiguration-hlspackage-includedvbsubtitles)" : Boolean,
   "[SegmentDurationSeconds](#cfn-mediapackage-packagingconfiguration-hlspackage-segmentdurationseconds)" : Integer,
   "[UseAudioRenditionGroup](#cfn-mediapackage-packagingconfiguration-hlspackage-useaudiorenditiongroup)" : Boolean
 }
@@ -24,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     HlsEncryption
   [HlsManifests](#cfn-mediapackage-packagingconfiguration-hlspackage-hlsmanifests): 
     - HlsManifest
+  [IncludeDvbSubtitles](#cfn-mediapackage-packagingconfiguration-hlspackage-includedvbsubtitles): Boolean
   [SegmentDurationSeconds](#cfn-mediapackage-packagingconfiguration-hlspackage-segmentdurationseconds): Integer
   [UseAudioRenditionGroup](#cfn-mediapackage-packagingconfiguration-hlspackage-useaudiorenditiongroup): Boolean
 ```
@@ -40,6 +42,12 @@ Parameters for encrypting content\.
 A list of HLS manifest configurations that are available from this endpoint\.  
 *Required*: Yes  
 *Type*: List of [HlsManifest](aws-properties-mediapackage-packagingconfiguration-hlsmanifest.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IncludeDvbSubtitles`  <a name="cfn-mediapackage-packagingconfiguration-hlspackage-includedvbsubtitles"></a>
+When enabled, MediaPackage passes through digital video broadcasting \(DVB\) subtitles into the output\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SegmentDurationSeconds`  <a name="cfn-mediapackage-packagingconfiguration-hlspackage-segmentdurationseconds"></a>

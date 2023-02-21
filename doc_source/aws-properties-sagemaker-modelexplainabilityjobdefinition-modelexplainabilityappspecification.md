@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-properties"></a>
 
 `ConfigUri`  <a name="cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification-configuri"></a>
-JSON formatted S3 file that defines explainability parameters\. For more information on this JSON configuration file, see [Configure model explainability parameters](https://docs.aws.amazon.com/sagemaker/latest/json-model-explainability-parameter-config.html)\.  
+JSON formatted S3 file that defines explainability parameters\. For more information on this JSON configuration file, see [Configure model explainability parameters](https://docs.aws.amazon.com/sagemaker/latest/dg/clarify-config-json-monitor-model-explainability-parameters.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `1024`  

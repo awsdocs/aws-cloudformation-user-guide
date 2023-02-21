@@ -1,6 +1,6 @@
 # AWS::Lex::BotAlias TextLogSetting<a name="aws-properties-lex-botalias-textlogsetting"></a>
 
-Defines settings to enable conversation logs\.
+Defines settings to enable text conversation logs\.
 
 ## Syntax<a name="aws-properties-lex-botalias-textlogsetting-syntax"></a>
 

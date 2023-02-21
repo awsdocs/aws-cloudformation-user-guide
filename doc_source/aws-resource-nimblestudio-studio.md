@@ -90,7 +90,7 @@ The IAM role that studio users assume when logging in to the Nimble Studio porta
 The AWS Region where the studio resource is located\. For example, `us-west-2`\.
 
 `SsoClientId`  <a name="SsoClientId-fn::getatt"></a>
-The AWS SSO application client ID that is used to integrate with AWS SSO, which enables AWS SSO users to log into the Amazon Nimble Studio portal\.
+The IAM Identity Center application client ID that is used to integrate with IAM Identity Center, which enables IAM Identity Center users to log into the Amazon Nimble Studio portal\.
 
 `StudioId`  <a name="StudioId-fn::getatt"></a>
 The unique identifier for the studio resource\.

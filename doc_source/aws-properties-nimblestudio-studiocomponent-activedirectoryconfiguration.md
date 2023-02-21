@@ -1,6 +1,6 @@
 # AWS::NimbleStudio::StudioComponent ActiveDirectoryConfiguration<a name="aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration"></a>
 
-The configuration for a Microsoft Active Directory \(Microsoft AD\) studio resource\.
+The configuration for a AWS Directory Service for Microsoft Active Directory studio resource\.
 
 ## Syntax<a name="aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration-syntax"></a>
 
@@ -34,7 +34,7 @@ A collection of custom attributes for an Active Directory computer\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DirectoryId`  <a name="cfn-nimblestudio-studiocomponent-activedirectoryconfiguration-directoryid"></a>
-The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component\.  
+The directory ID of the AWS Directory Service for Microsoft Active Directory to access using this studio component\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

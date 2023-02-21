@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AdditionalTreatments](#cfn-pinpoint-campaign-additionaltreatments)" : [ WriteTreatmentResource, ... ],
       "[ApplicationId](#cfn-pinpoint-campaign-applicationid)" : String,
       "[CampaignHook](#cfn-pinpoint-campaign-campaignhook)" : CampaignHook,
+      "[CustomDeliveryConfiguration](#cfn-pinpoint-campaign-customdeliveryconfiguration)" : CustomDeliveryConfiguration,
       "[Description](#cfn-pinpoint-campaign-description)" : String,
       "[HoldoutPercent](#cfn-pinpoint-campaign-holdoutpercent)" : Integer,
       "[IsPaused](#cfn-pinpoint-campaign-ispaused)" : Boolean,
@@ -26,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SegmentId](#cfn-pinpoint-campaign-segmentid)" : String,
       "[SegmentVersion](#cfn-pinpoint-campaign-segmentversion)" : Integer,
       "[Tags](#cfn-pinpoint-campaign-tags)" : Json,
+      "[TemplateConfiguration](#cfn-pinpoint-campaign-templateconfiguration)" : TemplateConfiguration,
       "[TreatmentDescription](#cfn-pinpoint-campaign-treatmentdescription)" : String,
       "[TreatmentName](#cfn-pinpoint-campaign-treatmentname)" : String
     }
@@ -42,6 +44,8 @@ Properties:
   [ApplicationId](#cfn-pinpoint-campaign-applicationid): String
   [CampaignHook](#cfn-pinpoint-campaign-campaignhook): 
     CampaignHook
+  [CustomDeliveryConfiguration](#cfn-pinpoint-campaign-customdeliveryconfiguration): 
+    CustomDeliveryConfiguration
   [Description](#cfn-pinpoint-campaign-description): String
   [HoldoutPercent](#cfn-pinpoint-campaign-holdoutpercent): Integer
   [IsPaused](#cfn-pinpoint-campaign-ispaused): Boolean
@@ -56,6 +60,8 @@ Properties:
   [SegmentId](#cfn-pinpoint-campaign-segmentid): String
   [SegmentVersion](#cfn-pinpoint-campaign-segmentversion): Integer
   [Tags](#cfn-pinpoint-campaign-tags): Json
+  [TemplateConfiguration](#cfn-pinpoint-campaign-templateconfiguration): 
+    TemplateConfiguration
   [TreatmentDescription](#cfn-pinpoint-campaign-treatmentdescription): String
   [TreatmentName](#cfn-pinpoint-campaign-treatmentname): String
 ```
@@ -78,6 +84,12 @@ The unique identifier for the Amazon Pinpoint application that the campaign is a
 Specifies the Lambda function to use as a code hook for a campaign\.  
 *Required*: No  
 *Type*: [CampaignHook](aws-properties-pinpoint-campaign-campaignhook.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomDeliveryConfiguration`  <a name="cfn-pinpoint-campaign-customdeliveryconfiguration"></a>
+The delivery configuration settings for sending the treatment through a custom channel\. This object is required if the `MessageConfiguration` object for the treatment specifies a `CustomMessage` object\.  
+*Required*: No  
+*Type*: [CustomDeliveryConfiguration](aws-properties-pinpoint-campaign-customdeliveryconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-pinpoint-campaign-description"></a>
@@ -106,7 +118,7 @@ The messaging limits for the campaign\.
 
 `MessageConfiguration`  <a name="cfn-pinpoint-campaign-messageconfiguration"></a>
 The message configuration settings for the campaign\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [MessageConfiguration](aws-properties-pinpoint-campaign-messageconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -145,6 +157,12 @@ An array of key\-value pairs to apply to this resource\.
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TemplateConfiguration`  <a name="cfn-pinpoint-campaign-templateconfiguration"></a>
+The message template to use for the treatment\.  
+*Required*: No  
+*Type*: [TemplateConfiguration](aws-properties-pinpoint-campaign-templateconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TreatmentDescription`  <a name="cfn-pinpoint-campaign-treatmentdescription"></a>

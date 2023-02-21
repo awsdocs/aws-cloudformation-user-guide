@@ -41,7 +41,7 @@ A list of the cell Amazon Resource Names \(ARNs\) in the recovery group\.
 
 `RecoveryGroupName`  <a name="cfn-route53recoveryreadiness-recoverygroup-recoverygroupname"></a>
 The name of the recovery group to create\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

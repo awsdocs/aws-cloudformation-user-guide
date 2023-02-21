@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[RouteTableRoute](#cfn-ec2-networkinsightsanalysis-pathcomponent-routetableroute)" : AnalysisRouteTableRoute,
   "[SecurityGroupRule](#cfn-ec2-networkinsightsanalysis-pathcomponent-securitygrouprule)" : AnalysisSecurityGroupRule,
   "[SequenceNumber](#cfn-ec2-networkinsightsanalysis-pathcomponent-sequencenumber)" : Integer,
+  "[ServiceName](#cfn-ec2-networkinsightsanalysis-pathcomponent-servicename)" : String,
   "[SourceVpc](#cfn-ec2-networkinsightsanalysis-pathcomponent-sourcevpc)" : AnalysisComponent,
   "[Subnet](#cfn-ec2-networkinsightsanalysis-pathcomponent-subnet)" : AnalysisComponent,
   "[TransitGateway](#cfn-ec2-networkinsightsanalysis-pathcomponent-transitgateway)" : AnalysisComponent,
@@ -53,6 +54,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [SecurityGroupRule](#cfn-ec2-networkinsightsanalysis-pathcomponent-securitygrouprule): 
     AnalysisSecurityGroupRule
   [SequenceNumber](#cfn-ec2-networkinsightsanalysis-pathcomponent-sequencenumber): Integer
+  [ServiceName](#cfn-ec2-networkinsightsanalysis-pathcomponent-servicename): String
   [SourceVpc](#cfn-ec2-networkinsightsanalysis-pathcomponent-sourcevpc): 
     AnalysisComponent
   [Subnet](#cfn-ec2-networkinsightsanalysis-pathcomponent-subnet): 
@@ -131,6 +133,12 @@ The security group rule\.
 The sequence number\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ServiceName`  <a name="cfn-ec2-networkinsightsanalysis-pathcomponent-servicename"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceVpc`  <a name="cfn-ec2-networkinsightsanalysis-pathcomponent-sourcevpc"></a>

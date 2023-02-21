@@ -38,7 +38,7 @@ The account ID\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DefaultLogLevel`  <a name="cfn-iot-logging-defaultloglevel"></a>
-The default log level\.Valid Values: `DEBUG | INFO | ERROR | WARN | DISABLED`  
+The default log level\. Valid Values: `DEBUG | INFO | ERROR | WARN | DISABLED`  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -44,7 +44,7 @@ Properties:
 
 `Destination`  <a name="cfn-ec2-networkinsightspath-destination"></a>
 The AWS resource that is the destination of the path\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

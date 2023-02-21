@@ -54,7 +54,7 @@ An array of parameters to be modified\. A maximum of 20 parameters can be modifi
 For each parameter to be modified, you must supply at least the parameter name and parameter value; other name\-value pairs of the parameter are optional\.  
 For the workload management \(WLM\) configuration, you must supply all the name\-value pairs in the wlm\_json\_configuration parameter\.  
 *Required*: No  
-*Type*: List of [Parameter](aws-property-redshift-clusterparametergroup-parameter.md)  
+*Type*: List of [Parameter](aws-properties-redshift-clusterparametergroup-parameter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-redshift-clusterparametergroup-tags"></a>
@@ -74,6 +74,17 @@ The list of tags for the cluster parameter group\.
 For the Amazon Redshift cluster parameter group `myClusterParameterGroup`, `Ref` returns the name of the cluster parameter group\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-redshift-clusterparametergroup-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-redshift-clusterparametergroup-return-values-fn--getatt-fn--getatt"></a>
+
+`ParameterGroupName`  <a name="ParameterGroupName-fn::getatt"></a>
+The name of the parameter group\.
 
 ## Examples<a name="aws-resource-redshift-clusterparametergroup--examples"></a>
 
@@ -102,13 +113,13 @@ The following example describes a parameter group with one parameter that's spec
 #### YAML<a name="aws-resource-redshift-clusterparametergroup--examples--Single_Parameter--yaml"></a>
 
 ```
-myClusterParameterGroup: 
+myClusterParameterGroup:
   Type: "AWS::Redshift::ClusterParameterGroup"
-  Properties: 
+  Properties:
     Description: "My parameter group"
     ParameterGroupFamily: "redshift-1.0"
-    Parameters: 
-      - 
+    Parameters:
+      -
         ParameterName: "enable_user_activity_logging"
         ParameterValue: "true"
 ```
@@ -142,13 +153,13 @@ The following example modifies the workload management configuration using the `
 #### YAML<a name="aws-resource-redshift-clusterparametergroup--examples--Workload_Management_Configuration--yaml"></a>
 
 ```
-RedshiftClusterParameterGroup: 
+RedshiftClusterParameterGroup:
   Type: "AWS::Redshift::ClusterParameterGroup"
-  Properties: 
+  Properties:
     Description: "Cluster parameter group"
     ParameterGroupFamily: "redshift-1.0"
-    Parameters: 
-      - 
+    Parameters:
+      -
         ParameterName: "wlm_json_configuration"
         ParameterValue: "[{\"user_group\":[\"example_user_group1\"],\"query_group\":[\"example_query_group1\"],\"query_concurrency\":7},{\"query_concurrency\":5}]"
     Tags:

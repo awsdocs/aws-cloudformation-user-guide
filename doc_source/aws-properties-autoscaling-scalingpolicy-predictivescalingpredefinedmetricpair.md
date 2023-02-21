@@ -41,6 +41,9 @@ Where:
 + app/<load\-balancer\-name>/<load\-balancer\-id> is the final portion of the load balancer ARN
 + targetgroup/<target\-group\-name>/<target\-group\-id> is the final portion of the target group ARN\.
 To find the ARN for an Application Load Balancer, use the [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html) API operation\. To find the ARN for the target group, use the [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html) API operation\.  
-*Required*: Conditional  
+*Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1023`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

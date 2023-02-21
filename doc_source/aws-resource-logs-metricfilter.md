@@ -14,9 +14,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Logs::MetricFilter",
   "Properties" : {
-      "[FilterPattern](#cfn-cwl-metricfilter-filterpattern)" : String,
-      "[LogGroupName](#cfn-cwl-metricfilter-loggroupname)" : String,
-      "[MetricTransformations](#cfn-cwl-metricfilter-metrictransformations)" : [ MetricTransformation, ... ]
+      "[FilterName](#cfn-logs-metricfilter-filtername)" : String,
+      "[FilterPattern](#cfn-logs-metricfilter-filterpattern)" : String,
+      "[LogGroupName](#cfn-logs-metricfilter-loggroupname)" : String,
+      "[MetricTransformations](#cfn-logs-metricfilter-metrictransformations)" : [ MetricTransformation, ... ]
     }
 }
 ```
@@ -26,21 +27,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Logs::MetricFilter
 Properties: 
-  [FilterPattern](#cfn-cwl-metricfilter-filterpattern): String
-  [LogGroupName](#cfn-cwl-metricfilter-loggroupname): String
-  [MetricTransformations](#cfn-cwl-metricfilter-metrictransformations): 
+  [FilterName](#cfn-logs-metricfilter-filtername): String
+  [FilterPattern](#cfn-logs-metricfilter-filterpattern): String
+  [LogGroupName](#cfn-logs-metricfilter-loggroupname): String
+  [MetricTransformations](#cfn-logs-metricfilter-metrictransformations): 
     - MetricTransformation
 ```
 
 ## Properties<a name="aws-resource-logs-metricfilter-properties"></a>
 
-`FilterPattern`  <a name="cfn-cwl-metricfilter-filterpattern"></a>
+`FilterName`  <a name="cfn-logs-metricfilter-filtername"></a>
+The name of the metric filter\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `512`  
+*Pattern*: `[^:*]*`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`FilterPattern`  <a name="cfn-logs-metricfilter-filterpattern"></a>
 A filter pattern for extracting metric data out of ingested log events\. For more information, see [Filter and Pattern Syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/FilterAndPatternSyntax.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
-`LogGroupName`  <a name="cfn-cwl-metricfilter-loggroupname"></a>
+`LogGroupName`  <a name="cfn-logs-metricfilter-loggroupname"></a>
 The name of an existing log group that you want to associate with this metric filter\.  
 *Required*: Yes  
 *Type*: String  
@@ -49,7 +60,7 @@ The name of an existing log group that you want to associate with this metric fi
 *Pattern*: `[\.\-_/#A-Za-z0-9]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`MetricTransformations`  <a name="cfn-cwl-metricfilter-metrictransformations"></a>
+`MetricTransformations`  <a name="cfn-logs-metricfilter-metrictransformations"></a>
 The metric transformations\.  
 *Required*: Yes  
 *Type*: List of [MetricTransformation](aws-properties-logs-metricfilter-metrictransformation.md)  

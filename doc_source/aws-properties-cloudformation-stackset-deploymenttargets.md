@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AccountFilterType](#cfn-cloudformation-stackset-deploymenttargets-accountfiltertype)" : String,
   "[Accounts](#cfn-cloudformation-stackset-deploymenttargets-accounts)" : [ String, ... ],
   "[OrganizationalUnitIds](#cfn-cloudformation-stackset-deploymenttargets-organizationalunitids)" : [ String, ... ]
 }
@@ -18,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudformation-stackset-deploymenttargets-syntax.yaml"></a>
 
 ```
+  [AccountFilterType](#cfn-cloudformation-stackset-deploymenttargets-accountfiltertype): String
   [Accounts](#cfn-cloudformation-stackset-deploymenttargets-accounts): 
     - String
   [OrganizationalUnitIds](#cfn-cloudformation-stackset-deploymenttargets-organizationalunitids): 
@@ -25,6 +27,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-cloudformation-stackset-deploymenttargets-properties"></a>
+
+`AccountFilterType`  <a name="cfn-cloudformation-stackset-deploymenttargets-accountfiltertype"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Accounts`  <a name="cfn-cloudformation-stackset-deploymenttargets-accounts"></a>
 The names of one or more AWS accounts for which you want to deploy stack set updates\.  

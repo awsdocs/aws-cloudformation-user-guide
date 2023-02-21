@@ -1,8 +1,8 @@
 # AWS::WAFv2::WebACL BlockAction<a name="aws-properties-wafv2-webacl-blockaction"></a>
 
-Specifies that AWS WAF should block requests\.
+Specifies that AWS WAF should block the request and optionally defines additional custom handling for the response to the web request\.
 
-This is used only in the context of other settings, for example to specify values for the web ACL and rule group `RuleAction` and for the web ACL `DefaultAction`\. 
+This is used in the context of other settings, for example to specify values for a rule action or a web ACL default action\. 
 
 ## Syntax<a name="aws-properties-wafv2-webacl-blockaction-syntax"></a>
 

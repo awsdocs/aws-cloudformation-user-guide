@@ -17,7 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DeliveryS3Bucket](#cfn-config-conformancepack-deliverys3bucket)" : String,
       "[DeliveryS3KeyPrefix](#cfn-config-conformancepack-deliverys3keyprefix)" : String,
       "[TemplateBody](#cfn-config-conformancepack-templatebody)" : String,
-      "[TemplateS3Uri](#cfn-config-conformancepack-templates3uri)" : String
+      "[TemplateS3Uri](#cfn-config-conformancepack-templates3uri)" : String,
+      "[TemplateSSMDocumentDetails](#cfn-config-conformancepack-templatessmdocumentdetails)" : TemplateSSMDocumentDetails
     }
 }
 ```
@@ -34,6 +35,8 @@ Properties:
   [DeliveryS3KeyPrefix](#cfn-config-conformancepack-deliverys3keyprefix): String
   [TemplateBody](#cfn-config-conformancepack-templatebody): String
   [TemplateS3Uri](#cfn-config-conformancepack-templates3uri): String
+  [TemplateSSMDocumentDetails](#cfn-config-conformancepack-templatessmdocumentdetails): 
+    TemplateSSMDocumentDetails
 ```
 
 ## Properties<a name="aws-resource-config-conformancepack-properties"></a>
@@ -74,6 +77,12 @@ Location of file containing the template body \(s3://bucketname/prefix\)\. The u
 You must have access to read Amazon S3 bucket\.
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TemplateSSMDocumentDetails`  <a name="cfn-config-conformancepack-templatessmdocumentdetails"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [TemplateSSMDocumentDetails](aws-properties-config-conformancepack-templatessmdocumentdetails.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-config-conformancepack-return-values"></a>

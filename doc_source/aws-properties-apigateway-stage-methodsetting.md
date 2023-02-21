@@ -43,25 +43,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-apigateway-stage-methodsetting-properties"></a>
 
 `CacheDataEncrypted`  <a name="cfn-apigateway-stage-methodsetting-cachedataencrypted"></a>
-Indicates whether the cached responses are encrypted\.  
+Specifies whether the cached responses are encrypted\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CacheTtlInSeconds`  <a name="cfn-apigateway-stage-methodsetting-cachettlinseconds"></a>
-The time\-to\-live \(TTL\) period, in seconds, that specifies how long API Gateway caches responses\.  
+Specifies the time to live \(TTL\), in seconds, for cached responses\. The higher the TTL, the longer the response will be cached\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CachingEnabled`  <a name="cfn-apigateway-stage-methodsetting-cachingenabled"></a>
-Indicates whether responses are cached and returned for requests\. You must enable a cache cluster on the stage to cache responses\.  
+Specifies whether responses should be cached and returned for requests\. A cache cluster must be enabled on the stage for responses to be cached\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataTraceEnabled`  <a name="cfn-apigateway-stage-methodsetting-datatraceenabled"></a>
-Indicates whether data trace logging is enabled for methods in the stage\. API Gateway pushes these logs to Amazon CloudWatch Logs\.  
+Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to Amazon CloudWatch Logs\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -73,13 +73,13 @@ The HTTP method\. To apply settings to multiple resources and methods, specify a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoggingLevel`  <a name="cfn-apigateway-stage-methodsetting-logginglevel"></a>
-The logging level for this method\. For valid values, see the `loggingLevel` property of the [Stage](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/#loggingLevel) resource in the *Amazon API Gateway API Reference*\.  
+Specifies the logging level for this method, which affects the log entries pushed to Amazon CloudWatch Logs\. Valid values are `OFF`, `ERROR`, and `INFO`\. Choose `ERROR` to write only error\-level entries to CloudWatch Logs, or choose `INFO` to include all `ERROR` events as well as extra informational events\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricsEnabled`  <a name="cfn-apigateway-stage-methodsetting-metricsenabled"></a>
-Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage\.  
+Specifies whether Amazon CloudWatch metrics are enabled for this method\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -91,17 +91,17 @@ The resource path for this method\. Forward slashes \(`/`\) are encoded as `~1` 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThrottlingBurstLimit`  <a name="cfn-apigateway-stage-methodsetting-throttlingburstlimit"></a>
-The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account\. For more information, see [Manage API Request Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.  
+Specifies the throttling burst limit\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThrottlingRateLimit`  <a name="cfn-apigateway-stage-methodsetting-throttlingratelimit"></a>
-The number of steady\-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account\. For more information, see [Manage API Request Throttling](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html) in the *API Gateway Developer Guide*\.   
+Specifies the throttling rate limit\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-apigateway-stage-methodsetting--seealso"></a>
-+ [Stage](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/) in the *Amazon API Gateway REST API Reference*
++ [Stage](https://docs.aws.amazon.com/apigateway/latest/api/API_Stage.html) in the *Amazon API Gateway REST API Reference*
 

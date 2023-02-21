@@ -77,8 +77,8 @@ Whether the proxy includes detailed information about SQL statements in its logs
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineFamily`  <a name="cfn-rds-dbproxy-enginefamily"></a>
-The kinds of databases that the proxy can connect to\. This value determines which database network protocol the proxy recognizes when it interprets network traffic to and from the database\. The engine family applies to MySQL and PostgreSQL for both RDS and Aurora\.  
-*Valid values*: `MYSQL` \| `POSTGRESQL`  
+The kinds of databases that the proxy can connect to\. This value determines which database network protocol the proxy recognizes when it interprets network traffic to and from the database\. For Aurora MySQL, RDS for MariaDB, and RDS for MySQL databases, specify `MYSQL`\. For Aurora PostgreSQL and RDS for PostgreSQL databases, specify `POSTGRESQL`\. For RDS for Microsoft SQL Server, specify `SQLSERVER`\.  
+*Valid values*: `MYSQL` \| `POSTGRESQL` \| `SQLSERVER`  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -137,6 +137,9 @@ The Amazon Resource Name \(ARN\) representing the target group\.
 
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
 The writer endpoint for the RDS DB instance or Aurora DB cluster\.
+
+`VpcId`  <a name="VpcId-fn::getatt"></a>
+The VPC ID to associate with the DB proxy\.
 
 ## Examples<a name="aws-resource-rds-dbproxy--examples"></a>
 

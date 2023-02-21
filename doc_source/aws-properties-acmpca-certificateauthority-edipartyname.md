@@ -1,6 +1,6 @@
 # AWS::ACMPCA::CertificateAuthority EdiPartyName<a name="aws-properties-acmpca-certificateauthority-edipartyname"></a>
 
-Describes an Electronic Data Interchange \(EDI\) entity as described in as defined in [Subject Alternative Name](https://tools.ietf.org/html/rfc5280) in RFC 5280\.
+Describes an Electronic Data Interchange \(EDI\) entity as described in as defined in [Subject Alternative Name](https://datatracker.ietf.org/doc/html/rfc5280) in RFC 5280\.
 
 ## Syntax<a name="aws-properties-acmpca-certificateauthority-edipartyname-syntax"></a>
 

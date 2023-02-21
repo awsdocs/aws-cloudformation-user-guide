@@ -30,7 +30,7 @@ The maximum number of artifacts allowed for the action type\.
 *Type*: Integer  
 *Minimum*: `0`  
 *Maximum*: `5`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MinimumCount`  <a name="cfn-codepipeline-customactiontype-artifactdetails-minimumcount"></a>
 The minimum number of artifacts allowed for the action type\.  
@@ -38,4 +38,4 @@ The minimum number of artifacts allowed for the action type\.
 *Type*: Integer  
 *Minimum*: `0`  
 *Maximum*: `5`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

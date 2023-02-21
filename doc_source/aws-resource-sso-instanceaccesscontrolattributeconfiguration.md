@@ -1,6 +1,6 @@
 # AWS::SSO::InstanceAccessControlAttributeConfiguration<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration"></a>
 
-Enables the attribute\-based access control \(ABAC\) feature for the specified AWS SSO instance\. You can also specify new attributes to add to your ABAC configuration during the enabling process\. For more information about ABAC, see [Attribute\-Based Access Control](https://docs.aws.amazon.com/singlesignon/latest/userguide/abac.html) in the *AWS SSO User Guide*\.
+Enables the attribute\-based access control \(ABAC\) feature for the specified IAM Identity Center instance\. You can also specify new attributes to add to your ABAC configuration during the enabling process\. For more information about ABAC, see [Attribute\-Based Access Control](https://docs.aws.amazon.com/singlesignon/latest/userguide/abac.html) in the *IAM Identity Center User Guide*\.
 
 **Note**  
 The `InstanceAccessControlAttributeConfiguration` property has been deprecated but is still supported for backwards compatibility purposes\. We recommend that you use the `AccessControlAttributes` property instead\.
@@ -34,14 +34,14 @@ Properties:
 ## Properties<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration-properties"></a>
 
 `AccessControlAttributes`  <a name="cfn-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattributes"></a>
-Lists the attributes that are configured for ABAC in the specified AWS SSO instance\.  
+Lists the attributes that are configured for ABAC in the specified IAM Identity Center instance\.  
 *Required*: No  
 *Type*: List of [AccessControlAttribute](aws-properties-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattribute.md)  
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceArn`  <a name="cfn-sso-instanceaccesscontrolattributeconfiguration-instancearn"></a>
-The ARN of the AWS SSO instance under which the operation will be executed\.  
+The ARN of the IAM Identity Center instance under which the operation will be executed\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `10`  
@@ -53,15 +53,15 @@ The ARN of the AWS SSO instance under which the operation will be executed\.
 
 ### Ref<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration-return-values-ref"></a>
 
-Specifies the AWS SSO identity store attributes to add to your ABAC configuration\. When using an external identity provider as an identity source, you can pass attributes through the SAML assertion\. Doing so provides an alternative to configuring attributes from the AWS SSO identity store\. If a SAML assertion passes any of these attributes, AWS SSO will replace the attribute value with the value from the AWS SSO identity store\.
+Specifies the IAM Identity Center identity store attributes to add to your ABAC configuration\. When using an external identity provider as an identity source, you can pass attributes through the SAML assertion\. Doing so provides an alternative to configuring attributes from the IAM Identity Center identity store\. If a SAML assertion passes any of these attributes, IAM Identity Center will replace the attribute value with the value from the IAM Identity Center identity store\.
 
 ## Examples<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration--examples"></a>
 
 
 
-### Enabling and configuring attributes used for access control in AWS SSO<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration--examples--Enabling_and_configuring_attributes_used_for_access_control_in_"></a>
+### Enabling and configuring attributes used for access control in IAM Identity Center<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration--examples--Enabling_and_configuring_attributes_used_for_access_control_in_"></a>
 
-The following example enables ABAC in AWS SSO and creates a new attribute key `CostCenter` that is mapped to the Value `“${path:enterprise.costCenter}”` which is coming from your identity source\.
+The following example enables ABAC in IAM Identity Center and creates a new attribute key `CostCenter` that is mapped to the Value `“${path:enterprise.costCenter}”` which is coming from your identity source\.
 
 #### JSON<a name="aws-resource-sso-instanceaccesscontrolattributeconfiguration--examples--Enabling_and_configuring_attributes_used_for_access_control_in_--json"></a>
 

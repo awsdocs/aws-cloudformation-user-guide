@@ -37,7 +37,7 @@ Properties:
 
 `FsxFilesystemArn`  <a name="cfn-datasync-locationfsxlustre-fsxfilesystemarn"></a>
 The Amazon Resource Name \(ARN\) for the FSx for Lustre file system\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Maximum*: `128`  
 *Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):fsx:[a-z\-0-9]*:[0-9]{12}:file-system/fs-.*$`  
@@ -49,6 +49,7 @@ The ARNs of the security groups that are used to configure the FSx for Lustre fi
 *Length constraints*: Maximum length of 128\.  
 *Required*: Yes  
 *Type*: List of String  
+*Maximum*: `5`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Subdirectory`  <a name="cfn-datasync-locationfsxlustre-subdirectory"></a>

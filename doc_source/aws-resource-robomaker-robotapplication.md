@@ -62,7 +62,7 @@ The name of the robot application\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RobotSoftwareSuite`  <a name="cfn-robomaker-robotapplication-robotsoftwaresuite"></a>
-The robot software suite \(ROS distribuition\) used by the robot application\.  
+The robot software suite used by the robot application\.  
 *Required*: Yes  
 *Type*: [RobotSoftwareSuite](aws-properties-robomaker-robotapplication-robotsoftwaresuite.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -119,16 +119,9 @@ The following example creates a robot application\.
       "Type": "AWS::RoboMaker::RobotApplication",
       "Properties": {
         "Name": "MyRobotApplication",
-        "Sources": [
-          {
-            "S3Bucket": "my-bucket",
-            "S3Key": "robot_bundle_x86.tar.gz",
-            "Architecture": "ARMHF"
-          }
-        ],
+        "Environment": "111122223333.dkr.ecr.us-west-2.amazonaws.com/my-robot-app:latest",
         "RobotSoftwareSuite": {
-          "Name": "ROS",
-          "Version": "Kinetic"
+          "Name": "General"
         },
         "Tags": {
           "Name": "BasicRobotApplication",
@@ -149,23 +142,18 @@ The following example creates a robot application\.
 
 ```
 ---
-Description: "Basic RobotApplication test"
+Description: "Robot Application example"
 Resources:
   BasicRobotApplication:
     Type: "AWS::RoboMaker::RobotApplication"
     Properties:
       Name: "MyRobotApplication"
-      Sources:
-        - S3Bucket: "my-bucket"
-          S3Key: "robot_bundle_x86.tar.gz"
-          Architecture: "ARMHF"
+      Environment: "111122223333.dkr.ecr.us-west-2.amazonaws.com/my-robot-app:latest"
       RobotSoftwareSuite:
-        Name: "ROS"
-        Version: "Kinetic"
+        Name: "General"
       Tags:
         "Name" : "BasicRobotApplication"
         "Type" : "CFN"
-
 Outputs:
   RobotApplication:
     Value: !Ref BasicRobotApplication

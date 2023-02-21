@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Evidently::Project",
   "Properties" : {
+      "[AppConfigResource](#cfn-evidently-project-appconfigresource)" : AppConfigResourceObject,
       "[DataDelivery](#cfn-evidently-project-datadelivery)" : DataDeliveryObject,
       "[Description](#cfn-evidently-project-description)" : String,
       "[Name](#cfn-evidently-project-name)" : String,
@@ -25,6 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Evidently::Project
 Properties: 
+  [AppConfigResource](#cfn-evidently-project-appconfigresource): 
+    AppConfigResourceObject
   [DataDelivery](#cfn-evidently-project-datadelivery): 
     DataDeliveryObject
   [Description](#cfn-evidently-project-description): String
@@ -34,6 +37,14 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-evidently-project-properties"></a>
+
+`AppConfigResource`  <a name="cfn-evidently-project-appconfigresource"></a>
+Use this parameter if the project will use *client\-side evaluation powered by AWS AppConfig*\. Client\-side evaluation allows your application to assign variations to user sessions locally instead of by calling the [EvaluateFeature](https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_EvaluateFeature.html) operation\. This mitigates the latency and availability risks that come with an API call\. For more information, see [ Use client\-side evaluation \- powered by AWS AppConfig\.](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-client-side-evaluation.html)  
+This parameter is a structure that contains information about the AWS AppConfig application that will be used as for client\-side evaluation\.  
+To create a project that uses client\-side evaluation, you must have the `evidently:ExportProjectAsConfiguration` permission\.  
+*Required*: No  
+*Type*: [AppConfigResourceObject](aws-properties-evidently-project-appconfigresourceobject.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataDelivery`  <a name="cfn-evidently-project-datadelivery"></a>
 A structure that contains information about where Evidently is to store evaluation events for longer term storage, if you choose to do so\. If you choose not to store these events, Evidently deletes them after using them to produce metrics and other experiment results that you can view\.  

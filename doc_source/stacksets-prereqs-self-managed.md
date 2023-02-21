@@ -122,7 +122,7 @@ Be aware that this template grants administrator access\. After you use the temp
    }
    ```
 
-   You must add the S3 and Amazon SNS service action and resources to `AWSCloudFormationStackSetExecutionRole` policy statement for each target account for StackSets to work\. Service managed stacks automatically take care of the permissions required to access the Amazon SNS topic in the CloudFormation service account\. StackSets uses these permissions to notify the stack instance state in the target accounts and in the administrator account\.
+   You must add the S3 service action and resources to `AWSCloudFormationStackSetExecutionRole` policy statement for each target account for StackSets to work\. StackSets uses these permissions to notify the stack instance state in the target accounts and in the administrator account\.
 
    To create stacks in target accounts that use resources from services other than CloudFormation, you must add those service actions and resources to the `AWSCloudFormationStackSetExecutionRole` policy statement for each target account\. The following example shows a policy statement with the required permissions for StackSets\.
 
@@ -135,8 +135,7 @@ Be aware that this template grants administrator access\. After you use the temp
                "Action": 
                   [
                     "cloudformation:*",
-                    "s3:*",
-                    "sns:*"
+                    "s3:*"
                   ],
                "Resource": "*"
            }
@@ -284,8 +283,7 @@ You must scope the permissions in the policy statement to the types of resources
                "Action": 
                   [
                     "cloudformation:*",
-                    "s3:*",
-                    "sns:*"
+                    "s3:*"
                   ],
                "Resource": "*"
            }
@@ -356,7 +354,6 @@ Similarly, the user can also specify a customized execution role\. If they speci
                   [
                     "cloudformation:*",
                     "s3:*",
-                    "sns:*"
                   ],
                "Resource": "*"
            },

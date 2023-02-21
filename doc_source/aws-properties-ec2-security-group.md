@@ -82,8 +82,8 @@ Any tags assigned to the security group\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcId`  <a name="cfn-ec2-securitygroup-vpcid"></a>
-\[VPC only\] The ID of the VPC for the security group\. Your default VPC ID will be used if you do not define the VpcId here\. Furthermore\, VpcId is required if you specify SecurityGroupEgress rules\.  
-*Required*: Conditional  
+\[VPC only\] The ID of the VPC for the security group\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

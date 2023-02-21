@@ -1,6 +1,6 @@
 # AWS::GreengrassV2::ComponentVersion<a name="aws-resource-greengrassv2-componentversion"></a>
 
-Creates a component\. Components are software that run on Greengrass core devices\. After you develop and test a component on your core device, you can use this operation to upload your component to AWS IoT Greengrass\. Then, you can deploy the component to other core devices\.
+Creates a component\. Components are software that run on AWS IoT Greengrass core devices\. After you develop and test a component on your core device, you can use this operation to upload your component to AWS IoT Greengrass\. Then, you can deploy the component to other core devices\.
 
 You can use this operation to do the following:
 + **Create components from recipes**

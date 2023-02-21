@@ -49,7 +49,7 @@ Properties:
 ## Properties<a name="aws-resource-gamelift-gamesessionqueue-properties"></a>
 
 `CustomEventData`  <a name="cfn-gamelift-gamesessionqueue-customeventdata"></a>
- Information to be added to all events that are related to this game session queue\.   
+Information to be added to all events that are related to this game session queue\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

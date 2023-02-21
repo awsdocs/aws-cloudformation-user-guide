@@ -1,6 +1,6 @@
 # AWS::Lex::Bot PostFulfillmentStatusSpecification<a name="aws-properties-lex-bot-postfulfillmentstatusspecification"></a>
 
-Provides a setting that determines whether the post\-fulfillment response is sent to the user\. For more information, see [ Post\-fulfillment response ](https://docs.aws.amazon.com/lex/latest/dg/streaming-progress.html#progress-complete) in the *Amazon Lex developer guide*\.
+Provides a setting that determines whether the post\-fulfillment response is sent to the user\. For more information, see [https://docs.aws.amazon.com/lexv2/latest/dg/streaming-progress.html#progress-complete](https://docs.aws.amazon.com/lexv2/latest/dg/streaming-progress.html#progress-complete) 
 
 ## Syntax<a name="aws-properties-lex-bot-postfulfillmentstatusspecification-syntax"></a>
 
@@ -48,13 +48,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-postfulfillmentstatusspecification-properties"></a>
 
 `FailureConditional`  <a name="cfn-lex-bot-postfulfillmentstatusspecification-failureconditional"></a>
-Property description not available\.  
+A list of conditional branches to evaluate after the fulfillment code hook throws an exception or returns with the `State` field of the `Intent` object set to `Failed`\.  
 *Required*: No  
 *Type*: [ConditionalSpecification](aws-properties-lex-bot-conditionalspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FailureNextStep`  <a name="cfn-lex-bot-postfulfillmentstatusspecification-failurenextstep"></a>
-Property description not available\.  
+Specifies the next step the bot runs after the fulfillment code hook throws an exception or returns with the `State` field of the `Intent` object set to `Failed`\.  
 *Required*: No  
 *Type*: [DialogState](aws-properties-lex-bot-dialogstate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -66,13 +66,13 @@ Specifies a list of message groups that Amazon Lex uses to respond when fulfillm
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SuccessConditional`  <a name="cfn-lex-bot-postfulfillmentstatusspecification-successconditional"></a>
-Property description not available\.  
+A list of conditional branches to evaluate after the fulfillment code hook finishes successfully\.  
 *Required*: No  
 *Type*: [ConditionalSpecification](aws-properties-lex-bot-conditionalspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SuccessNextStep`  <a name="cfn-lex-bot-postfulfillmentstatusspecification-successnextstep"></a>
-Property description not available\.  
+Specifies the next step in the conversation that Amazon Lex invokes when the fulfillment code hook completes successfully\.  
 *Required*: No  
 *Type*: [DialogState](aws-properties-lex-bot-dialogstate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -84,13 +84,13 @@ Specifies a list of message groups that Amazon Lex uses to respond when the fulf
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeoutConditional`  <a name="cfn-lex-bot-postfulfillmentstatusspecification-timeoutconditional"></a>
-Property description not available\.  
+A list of conditional branches to evaluate if the fulfillment code hook times out\.  
 *Required*: No  
 *Type*: [ConditionalSpecification](aws-properties-lex-bot-conditionalspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeoutNextStep`  <a name="cfn-lex-bot-postfulfillmentstatusspecification-timeoutnextstep"></a>
-Property description not available\.  
+Specifies the next step that the bot runs when the fulfillment code hook times out\.  
 *Required*: No  
 *Type*: [DialogState](aws-properties-lex-bot-dialogstate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

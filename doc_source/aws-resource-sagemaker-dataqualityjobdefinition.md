@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DataQualityBaselineConfig](#cfn-sagemaker-dataqualityjobdefinition-dataqualitybaselineconfig)" : DataQualityBaselineConfig,
       "[DataQualityJobInput](#cfn-sagemaker-dataqualityjobdefinition-dataqualityjobinput)" : DataQualityJobInput,
       "[DataQualityJobOutputConfig](#cfn-sagemaker-dataqualityjobdefinition-dataqualityjoboutputconfig)" : MonitoringOutputConfig,
+      "[EndpointName](#cfn-sagemaker-dataqualityjobdefinition-endpointname)" : String,
       "[JobDefinitionName](#cfn-sagemaker-dataqualityjobdefinition-jobdefinitionname)" : String,
       "[JobResources](#cfn-sagemaker-dataqualityjobdefinition-jobresources)" : MonitoringResources,
       "[NetworkConfig](#cfn-sagemaker-dataqualityjobdefinition-networkconfig)" : NetworkConfig,
@@ -39,6 +40,7 @@ Properties:
     DataQualityJobInput
   [DataQualityJobOutputConfig](#cfn-sagemaker-dataqualityjobdefinition-dataqualityjoboutputconfig): 
     MonitoringOutputConfig
+  [EndpointName](#cfn-sagemaker-dataqualityjobdefinition-endpointname): String
   [JobDefinitionName](#cfn-sagemaker-dataqualityjobdefinition-jobdefinitionname): String
   [JobResources](#cfn-sagemaker-dataqualityjobdefinition-jobresources): 
     MonitoringResources
@@ -76,6 +78,12 @@ The output configuration for monitoring jobs\.
 *Required*: Yes  
 *Type*: [MonitoringOutputConfig](aws-properties-sagemaker-dataqualityjobdefinition-monitoringoutputconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EndpointName`  <a name="cfn-sagemaker-dataqualityjobdefinition-endpointname"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JobDefinitionName`  <a name="cfn-sagemaker-dataqualityjobdefinition-jobdefinitionname"></a>
 The name for the monitoring job definition\.  

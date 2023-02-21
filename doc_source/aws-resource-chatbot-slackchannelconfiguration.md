@@ -2,7 +2,7 @@
 
 The `AWS::Chatbot::SlackChannelConfiguration` resource configures a Slack channel to allow users to use AWS Chatbot with AWS CloudFormation templates\.
 
-This resource requires some setup to be done in the AWS Chatbot console\. To provide the required Slack workspace ID, you must perform the initial authorization flow with Slack in the AWS Chatbot console, then copy and paste the workspace ID from the console\. For more details, see steps 1\-4 in [Setting Up AWS Chatbot with Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/slack-setup.html#slack-client-setup) in the *AWS Chatbot User Guide*\.
+This resource requires some setup to be done in the AWS Chatbot console\. To provide the required Slack workspace ID, you must perform the initial authorization flow with Slack in the AWS Chatbot console, then copy and paste the workspace ID from the console\. For more details, see steps 1\-4 in [Setting Up AWS Chatbot with Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/setting-up.html#Setup_intro) in the *AWS Chatbot User Guide*\.
 
 ## Syntax<a name="aws-resource-chatbot-slackchannelconfiguration-syntax"></a>
 
@@ -52,14 +52,14 @@ The name of the configuration\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GuardrailPolicies`  <a name="cfn-chatbot-slackchannelconfiguration-guardrailpolicies"></a>
-The list of IAM policy ARNs that are applied as channel guardrails\. The AWS managed 'AdministratorAccess' policy is applied as a default if this is not set\. Currently, only 1 IAM policy is supported\.  
+The list of IAM policy ARNs that are applied as channel guardrails\. The AWS managed 'AdministratorAccess' policy is applied as a default if this is not set\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IamRoleArn`  <a name="cfn-chatbot-slackchannelconfiguration-iamrolearn"></a>
 The ARN of the IAM role that defines the permissions for AWS Chatbot\.  
-This is a user\-definworked role that AWS Chatbot will assume\. This is not the service\-linked role\. For more information, see [IAM Policies for AWS Chatbot](https://docs.aws.amazon.com/chatbot/latest/adminguide/chatbot-iam-policies.html)\.  
+This is a user\-defined role that AWS Chatbot will assume\. This is not the service\-linked role\. For more information, see [IAM Policies for AWS Chatbot](https://docs.aws.amazon.com/chatbot/latest/adminguide/chatbot-iam-policies.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -108,7 +108,7 @@ When you pass the logical ID of this resource to the intrinsic Ref function, Ref
 #### <a name="aws-resource-chatbot-slackchannelconfiguration-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.
 
 ## Remarks<a name="aws-resource-chatbot-slackchannelconfiguration--remarks"></a>
 

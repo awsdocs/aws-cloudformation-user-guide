@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile RedshiftConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-redshiftconnectorprofilecredentials"></a>
 
- The `RedshiftConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required when using Amazon Redshift\. 
+ The connector\-specific profile credentials required when using Amazon Redshift\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-redshiftconnectorprofilecredentials-syntax"></a>
 
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Password`  <a name="cfn-appflow-connectorprofile-redshiftconnectorprofilecredentials-password"></a>
  The password that corresponds to the user name\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Maximum*: `512`  
 *Pattern*: `.*`  
@@ -34,10 +34,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Username`  <a name="cfn-appflow-connectorprofile-redshiftconnectorprofilecredentials-username"></a>
  The name of the user\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
-*Maximum*: `512`  
-*Pattern*: `\S+`  
+*Maximum*: `2048`  
+*Pattern*: `.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-appflow-connectorprofile-redshiftconnectorprofilecredentials--seealso"></a>

@@ -1,6 +1,6 @@
 # AWS::Location::Tracker<a name="aws-resource-location-tracker"></a>
 
-The `AWS::Location::Tracker` resource specifies a tracker resource in your AWS account, which lets you receive current and historical location of devices\.
+Specifies a tracker resource in your AWS account, which lets you receive current and historical location of devices\.
 
 ## Syntax<a name="aws-resource-location-tracker-syntax"></a>
 
@@ -76,7 +76,7 @@ No longer used\. If included, the only allowed value is `RequestBasedUsage`\.
 This parameter is no longer used\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrackerName`  <a name="cfn-location-tracker-trackername"></a>
 The name for the tracker resource\.  

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[ClassBTimeout](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-classbtimeout)" : Integer,
   "[ClassCTimeout](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-classctimeout)" : Integer,
+  "[FactoryPresetFreqsList](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-factorypresetfreqslist)" : [ Integer, ... ],
   "[MacVersion](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-macversion)" : String,
   "[MaxDutyCycle](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-maxdutycycle)" : Integer,
   "[MaxEirp](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-maxeirp)" : Integer,
@@ -20,6 +21,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[PingSlotPeriod](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-pingslotperiod)" : Integer,
   "[RegParamsRevision](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-regparamsrevision)" : String,
   "[RfRegion](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-rfregion)" : String,
+  "[RxDataRate2](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-rxdatarate2)" : Integer,
+  "[RxDelay1](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-rxdelay1)" : Integer,
+  "[RxDrOffset1](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-rxdroffset1)" : Integer,
+  "[RxFreq2](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-rxfreq2)" : Integer,
   "[Supports32BitFCnt](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-supports32bitfcnt)" : Boolean,
   "[SupportsClassB](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-supportsclassb)" : Boolean,
   "[SupportsClassC](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-supportsclassc)" : Boolean,
@@ -32,6 +37,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [ClassBTimeout](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-classbtimeout): Integer
   [ClassCTimeout](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-classctimeout): Integer
+  [FactoryPresetFreqsList](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-factorypresetfreqslist): 
+    - Integer
   [MacVersion](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-macversion): String
   [MaxDutyCycle](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-maxdutycycle): Integer
   [MaxEirp](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-maxeirp): Integer
@@ -40,6 +47,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [PingSlotPeriod](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-pingslotperiod): Integer
   [RegParamsRevision](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-regparamsrevision): String
   [RfRegion](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-rfregion): String
+  [RxDataRate2](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-rxdatarate2): Integer
+  [RxDelay1](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-rxdelay1): Integer
+  [RxDrOffset1](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-rxdroffset1): Integer
+  [RxFreq2](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-rxfreq2): Integer
   [Supports32BitFCnt](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-supports32bitfcnt): Boolean
   [SupportsClassB](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-supportsclassb): Boolean
   [SupportsClassC](#cfn-iotwireless-deviceprofile-lorawandeviceprofile-supportsclassc): Boolean
@@ -62,6 +73,13 @@ The ClassCTimeout value\.
 *Type*: Integer  
 *Minimum*: `0`  
 *Maximum*: `1000`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`FactoryPresetFreqsList`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-factorypresetfreqslist"></a>
+The list of values that make up the FactoryPresetFreqs value\.  
+*Required*: No  
+*Type*: List of Integer  
+*Maximum*: `20`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MacVersion`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-macversion"></a>
@@ -122,6 +140,38 @@ The version of regional parameters\.
 The frequency band \(RFRegion\) value\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RxDataRate2`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-rxdatarate2"></a>
+The RXDataRate2 value\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `15`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RxDelay1`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-rxdelay1"></a>
+The RXDelay1 value\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `15`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RxDrOffset1`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-rxdroffset1"></a>
+The RXDROffset1 value\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `7`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RxFreq2`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-rxfreq2"></a>
+The RXFreq2 value\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `1000000`  
+*Maximum*: `16700000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Supports32BitFCnt`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-supports32bitfcnt"></a>

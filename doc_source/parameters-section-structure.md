@@ -96,11 +96,11 @@ Parameters:
 ## Properties<a name="parameters-section-structure-properties"></a>
 
 `AllowedPattern`  
-A regular expression that represents the patterns to allow for `String` types\. The pattern must match the entire parameter value provided\.  
+A regular expression that represents the patterns to allow for `String` or `CommaDelimitedList` types\. When applied on a parameter of type `String`, the pattern must match the entire parameter value provided\. When applied to a parameter of type `CommaDelimitedList`, the pattern must match each value in the list\.  
 *Required*: No
 
 `AllowedValues`  
-An array containing the list of values allowed for the parameter\.  
+An array containing the list of values allowed for the parameter\. When applied to a parameter of type `String`, the parameter value must be one of the allowed values\. When applied to a parameter of type `CommaDelimitedList`, each value in the list must be one of the specified allowed values\.  
 *Required*: No
 
 `ConstraintDescription`  
@@ -173,7 +173,7 @@ Parameters that correspond to existing parameters in Systems Manager Parameter S
 
 AWS\-specific parameter types are helpful in catching invalid values at the start of creating or updating a stack\. To specify parameters with AWS\-specific types, a template user must enter existing AWS values that are in their AWS account\. AWS CloudFormation validates these input values against existing values in the account\. For example, with the `AWS::EC2::VPC::Id` parameter type, a user must [enter an existing VPC ID](cfn-using-console-create-stack-parameters.md) that is in the account and region in which they are creating the stack\.
 
-If you want to allow template users to enter input values from different AWS accounts, don't define parameters with AWS\-specific types; instead, define parameters of type `String` \(or `CommaDelimitedList`\)\.
+If you want to allow template users to enter input values from different AWS accounts, don't define parameters with AWS\-specific types; instead, define parameters of type `String` or `CommaDelimitedList`\.
 
 ### Supported AWS\-specific parameter types<a name="aws-specific-parameter-types-supported"></a>
 

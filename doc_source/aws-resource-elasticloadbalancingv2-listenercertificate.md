@@ -34,7 +34,7 @@ Properties:
 The certificate\. You can specify one certificate per resource\.  
 *Required*: Yes  
 *Type*: List of [Certificate](aws-properties-elasticloadbalancingv2-listener-certificates.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ListenerArn`  <a name="cfn-elasticloadbalancingv2-listenercertificate-listenerarn"></a>
 The Amazon Resource Name \(ARN\) of the listener\.  
@@ -45,4 +45,5 @@ The Amazon Resource Name \(ARN\) of the listener\.
 ## See also<a name="aws-resource-elasticloadbalancingv2-listenercertificate--seealso"></a>
 +  [AddListenerCertificates](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_AddListenerCertificates.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
 +  [SSL Certificates](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html#https-listener-certificates) in the *User Guide for Application Load Balancers* 
++  [Server certificates](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/create-tls-listener.html#tls-listener-certificates) in the *User Guide for Network Load Balancers* 
 

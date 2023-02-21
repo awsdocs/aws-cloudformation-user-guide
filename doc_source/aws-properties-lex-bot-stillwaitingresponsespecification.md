@@ -42,7 +42,7 @@ How often a message should be sent to the user\. Minimum of 1 second, maximum of
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MessageGroupsList`  <a name="cfn-lex-bot-stillwaitingresponsespecification-messagegroupslist"></a>
-A collection of responses that Amazon Lex can send to the user\. Amazon Lex chooses the actual response to send at runtime\.  
+One or more message groups, each containing one or more messages, that define the prompts that Amazon Lex sends to the user\.  
 *Required*: Yes  
 *Type*: List of [MessageGroup](aws-properties-lex-bot-messagegroup.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

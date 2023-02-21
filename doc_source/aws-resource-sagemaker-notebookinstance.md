@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AdditionalCodeRepositories](#cfn-sagemaker-notebookinstance-additionalcoderepositories)" : [ String, ... ],
       "[DefaultCodeRepository](#cfn-sagemaker-notebookinstance-defaultcoderepository)" : String,
       "[DirectInternetAccess](#cfn-sagemaker-notebookinstance-directinternetaccess)" : String,
+      "[InstanceMetadataServiceConfiguration](#cfn-sagemaker-notebookinstance-instancemetadataserviceconfiguration)" : InstanceMetadataServiceConfiguration,
       "[InstanceType](#cfn-sagemaker-notebookinstance-instancetype)" : String,
       "[KmsKeyId](#cfn-sagemaker-notebookinstance-kmskeyid)" : String,
       "[LifecycleConfigName](#cfn-sagemaker-notebookinstance-lifecycleconfigname)" : String,
@@ -42,6 +43,8 @@ Properties:
     - String
   [DefaultCodeRepository](#cfn-sagemaker-notebookinstance-defaultcoderepository): String
   [DirectInternetAccess](#cfn-sagemaker-notebookinstance-directinternetaccess): String
+  [InstanceMetadataServiceConfiguration](#cfn-sagemaker-notebookinstance-instancemetadataserviceconfiguration): 
+    InstanceMetadataServiceConfiguration
   [InstanceType](#cfn-sagemaker-notebookinstance-instancetype): String
   [KmsKeyId](#cfn-sagemaker-notebookinstance-kmskeyid): String
   [LifecycleConfigName](#cfn-sagemaker-notebookinstance-lifecycleconfigname): String
@@ -90,12 +93,18 @@ For more information, see [Notebook Instances Are Internet\-Enabled by Default](
 *Allowed values*: `Disabled | Enabled`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`InstanceMetadataServiceConfiguration`  <a name="cfn-sagemaker-notebookinstance-instancemetadataserviceconfiguration"></a>
+Information on the IMDS configuration of the notebook instance  
+*Required*: No  
+*Type*: [InstanceMetadataServiceConfiguration](aws-properties-sagemaker-notebookinstance-instancemetadataserviceconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `InstanceType`  <a name="cfn-sagemaker-notebookinstance-instancetype"></a>
 The type of ML compute instance to launch for the notebook instance\.  
 Expect some interruption of service if this parameter is changed as CloudFormation stops a notebook instance and starts it up again to update it\.
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `ml.c4.2xlarge | ml.c4.4xlarge | ml.c4.8xlarge | ml.c4.xlarge | ml.c5.18xlarge | ml.c5.2xlarge | ml.c5.4xlarge | ml.c5.9xlarge | ml.c5.xlarge | ml.c5d.18xlarge | ml.c5d.2xlarge | ml.c5d.4xlarge | ml.c5d.9xlarge | ml.c5d.xlarge | ml.g4dn.12xlarge | ml.g4dn.16xlarge | ml.g4dn.2xlarge | ml.g4dn.4xlarge | ml.g4dn.8xlarge | ml.g4dn.xlarge | ml.m4.10xlarge | ml.m4.16xlarge | ml.m4.2xlarge | ml.m4.4xlarge | ml.m4.xlarge | ml.m5.12xlarge | ml.m5.24xlarge | ml.m5.2xlarge | ml.m5.4xlarge | ml.m5.xlarge | ml.m5d.12xlarge | ml.m5d.16xlarge | ml.m5d.24xlarge | ml.m5d.2xlarge | ml.m5d.4xlarge | ml.m5d.8xlarge | ml.m5d.large | ml.m5d.xlarge | ml.p2.16xlarge | ml.p2.8xlarge | ml.p2.xlarge | ml.p3.16xlarge | ml.p3.2xlarge | ml.p3.8xlarge | ml.p3dn.24xlarge | ml.r5.12xlarge | ml.r5.16xlarge | ml.r5.24xlarge | ml.r5.2xlarge | ml.r5.4xlarge | ml.r5.8xlarge | ml.r5.large | ml.r5.xlarge | ml.t2.2xlarge | ml.t2.large | ml.t2.medium | ml.t2.xlarge | ml.t3.2xlarge | ml.t3.large | ml.t3.medium | ml.t3.xlarge`  
+*Allowed values*: `ml.c4.2xlarge | ml.c4.4xlarge | ml.c4.8xlarge | ml.c4.xlarge | ml.c5.18xlarge | ml.c5.2xlarge | ml.c5.4xlarge | ml.c5.9xlarge | ml.c5.xlarge | ml.c5d.18xlarge | ml.c5d.2xlarge | ml.c5d.4xlarge | ml.c5d.9xlarge | ml.c5d.xlarge | ml.g4dn.12xlarge | ml.g4dn.16xlarge | ml.g4dn.2xlarge | ml.g4dn.4xlarge | ml.g4dn.8xlarge | ml.g4dn.xlarge | ml.g5.12xlarge | ml.g5.16xlarge | ml.g5.24xlarge | ml.g5.2xlarge | ml.g5.48xlarge | ml.g5.4xlarge | ml.g5.8xlarge | ml.g5.xlarge | ml.m4.10xlarge | ml.m4.16xlarge | ml.m4.2xlarge | ml.m4.4xlarge | ml.m4.xlarge | ml.m5.12xlarge | ml.m5.24xlarge | ml.m5.2xlarge | ml.m5.4xlarge | ml.m5.xlarge | ml.m5d.12xlarge | ml.m5d.16xlarge | ml.m5d.24xlarge | ml.m5d.2xlarge | ml.m5d.4xlarge | ml.m5d.8xlarge | ml.m5d.large | ml.m5d.xlarge | ml.p2.16xlarge | ml.p2.8xlarge | ml.p2.xlarge | ml.p3.16xlarge | ml.p3.2xlarge | ml.p3.8xlarge | ml.p3dn.24xlarge | ml.r5.12xlarge | ml.r5.16xlarge | ml.r5.24xlarge | ml.r5.2xlarge | ml.r5.4xlarge | ml.r5.8xlarge | ml.r5.large | ml.r5.xlarge | ml.t2.2xlarge | ml.t2.large | ml.t2.medium | ml.t2.xlarge | ml.t3.2xlarge | ml.t3.large | ml.t3.medium | ml.t3.xlarge`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyId`  <a name="cfn-sagemaker-notebookinstance-kmskeyid"></a>
@@ -127,7 +136,7 @@ The platform identifier of the notebook instance runtime environment\.
 *Required*: No  
 *Type*: String  
 *Maximum*: `15`  
-*Pattern*: `^(notebook-al1-v1|notebook-al2-v1)$`  
+*Pattern*: `^(notebook-al1-v1|notebook-al2-v1|notebook-al2-v2)$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RoleArn`  <a name="cfn-sagemaker-notebookinstance-rolearn"></a>

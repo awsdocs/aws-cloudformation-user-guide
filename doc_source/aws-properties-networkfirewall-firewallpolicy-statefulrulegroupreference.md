@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[Override](#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-override)" : StatefulRuleGroupOverride,
   "[Priority](#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-priority)" : Integer,
   "[ResourceArn](#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-resourcearn)" : String
 }
@@ -18,11 +19,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference-syntax.yaml"></a>
 
 ```
+  [Override](#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-override): 
+    StatefulRuleGroupOverride
   [Priority](#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-priority): Integer
   [ResourceArn](#cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-resourcearn): String
 ```
 
 ## Properties<a name="aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference-properties"></a>
+
+`Override`  <a name="cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-override"></a>
+The action that allows the policy owner to override the behavior of the rule group within a policy\.  
+*Required*: No  
+*Type*: [StatefulRuleGroupOverride](aws-properties-networkfirewall-firewallpolicy-statefulrulegroupoverride.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Priority`  <a name="cfn-networkfirewall-firewallpolicy-statefulrulegroupreference-priority"></a>
 An integer setting that indicates the order in which to run the stateful rule groups in a single [AWS::NetworkFirewall::FirewallPolicy](aws-resource-networkfirewall-firewallpolicy.md)\. This setting only applies to firewall policies that specify the `STRICT_ORDER` rule order in the stateful engine options settings\.  

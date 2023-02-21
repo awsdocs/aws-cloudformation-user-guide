@@ -87,12 +87,12 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 
 `Type`  <a name="cfn-ivs-channel-type"></a>
 The channel type, which determines the allowable resolution and bitrate\. *If you exceed the allowable resolution or bitrate, the stream probably will disconnect immediately\.* Valid values:  
-+  `STANDARD`: Multiple qualities are generated from the original input, to automatically give viewers the best experience for their devices and network conditions\. Resolution can be up to 1080p and bitrate can be up to 8\.5 Mbps\. Audio is transcoded only for renditions 360p and below; above that, audio is passed through\.
-+  `BASIC`: delivers the original input to viewers\. The viewer’s video\-quality choice is limited to the original input\. Resolution can be up to 480p and bitrate can be up to 1\.5 Mbps\.
++  `STANDARD`: Video is transcoded: multiple qualities are generated from the original input to automatically give viewers the best experience for their devices and network conditions\. Transcoding allows higher playback quality across a range of download speeds\. Resolution can be up to 1080p and bitrate can be up to 8\.5 Mbps\. Audio is transcoded only for renditions 360p and below; above that, audio is passed through\.
++  `BASIC`: Video is transmuxed: Amazon IVS delivers the original input to viewers\. The viewer’s video\-quality choice is limited to the original input\. Resolution can be up to 1080p and bitrate can be up to 1\.5 Mbps for 480p and up to 3\.5 Mbps for resolutions between 480p and 1080p\.
 *Default*: `STANDARD`  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `BASIC | STANDARD`  
+*Allowed values*: `ADVANCED_HD | ADVANCED_SD | BASIC | STANDARD`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-ivs-channel-return-values"></a>

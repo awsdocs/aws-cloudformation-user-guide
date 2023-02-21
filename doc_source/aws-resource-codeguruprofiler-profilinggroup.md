@@ -12,7 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CodeGuruProfiler::ProfilingGroup",
   "Properties" : {
-      "[AgentPermissions](#cfn-codeguruprofiler-profilinggroup-agentpermissions)" : Json,
+      "[AgentPermissions](#cfn-codeguruprofiler-profilinggroup-agentpermissions)" : AgentPermissions,
       "[AnomalyDetectionNotificationConfiguration](#cfn-codeguruprofiler-profilinggroup-anomalydetectionnotificationconfiguration)" : [ Channel, ... ],
       "[ComputePlatform](#cfn-codeguruprofiler-profilinggroup-computeplatform)" : String,
       "[ProfilingGroupName](#cfn-codeguruprofiler-profilinggroup-profilinggroupname)" : String,
@@ -26,7 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::CodeGuruProfiler::ProfilingGroup
 Properties: 
-  [AgentPermissions](#cfn-codeguruprofiler-profilinggroup-agentpermissions): Json
+  [AgentPermissions](#cfn-codeguruprofiler-profilinggroup-agentpermissions): 
+    AgentPermissions
   [AnomalyDetectionNotificationConfiguration](#cfn-codeguruprofiler-profilinggroup-anomalydetectionnotificationconfiguration): 
     - Channel
   [ComputePlatform](#cfn-codeguruprofiler-profilinggroup-computeplatform): String
@@ -42,7 +43,7 @@ The agent permissions attached to this profiling group\. This action group grant
 *Principals*: A list of string ARNs for the roles and users you want to grant access to the profiling group\. Wildcards are not supported in the ARNs\. You are allowed to provide up to 50 ARNs\. An empty list is not permitted\. This is a required key\.   
 For more information, see [Resource\-based policies in CodeGuru Profiler](https://docs.aws.amazon.com/codeguru/latest/profiler-ug/resource-based-policies.html) in the *Amazon CodeGuru Profiler user guide*, [ConfigureAgent](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_ConfigureAgent.html), and [PostAgentProfile](https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_PostAgentProfile.html)\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [AgentPermissions](aws-properties-codeguruprofiler-profilinggroup-agentpermissions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AnomalyDetectionNotificationConfiguration`  <a name="cfn-codeguruprofiler-profilinggroup-anomalydetectionnotificationconfiguration"></a>

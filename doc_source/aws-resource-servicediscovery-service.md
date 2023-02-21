@@ -61,6 +61,7 @@ The description of the service\.
 
 `DnsConfig`  <a name="cfn-servicediscovery-service-dnsconfig"></a>
 A complex type that contains information about the Route 53 DNS records that you want AWS Cloud Map to create when you register an instance\.  
+The record types of a service can only be changed by deleting the service and recreating it with a new `Dnsconfig`\.
 *Required*: No  
 *Type*: [DnsConfig](aws-properties-servicediscovery-service-dnsconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

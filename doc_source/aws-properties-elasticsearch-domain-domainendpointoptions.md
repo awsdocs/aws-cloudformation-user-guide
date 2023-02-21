@@ -34,14 +34,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticsearch-domain-domainendpointoptions-properties"></a>
 
 `CustomEndpoint`  <a name="cfn-elasticsearch-domain-domainendpointoptions-customendpoint"></a>
-The fully qualified URL for your custom endpoint\.  
-*Required*: No  
+The fully qualified URL for your custom endpoint\. Required if you enabled a custom endpoint for the domain\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomEndpointCertificateArn`  <a name="cfn-elasticsearch-domain-domainendpointoptions-customendpointcertificatearn"></a>
-The AWS Certificate Manager ARN for your domain's SSL/TLS certificate\.  
-*Required*: No  
+The AWS Certificate Manager ARN for your domain's SSL/TLS certificate\. Required if you enabled a custom endpoint for the domain\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

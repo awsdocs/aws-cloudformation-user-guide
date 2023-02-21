@@ -42,11 +42,11 @@ Stage variables overridden for a canary release deployment, including new stage 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UseStageCache`  <a name="cfn-apigateway-deployment-canarysetting-usestagecache"></a>
-Whether the canary deployment uses the stage cache or not\.  
+A Boolean flag to indicate whether the canary deployment uses the stage cache or not\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-apigateway-deployment-canarysetting--seealso"></a>
-+ [Stage](https://docs.aws.amazon.com/apigateway/api-reference/resource/stage/) in the *Amazon API Gateway REST API Reference*
++ [Stage](https://docs.aws.amazon.com/apigateway/latest/api/API_Stage.html) in the *Amazon API Gateway REST API Reference*
 

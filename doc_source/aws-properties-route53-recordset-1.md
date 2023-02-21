@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AliasTarget](#cfn-route53-recordset-aliastarget)" : AliasTarget,
+  "[CidrRoutingConfig](#cfn-route53-recordset-cidrroutingconfig)" : CidrRoutingConfig,
   "[Failover](#cfn-route53-recordset-failover)" : String,
   "[GeoLocation](#cfn-route53-recordset-geolocation)" : GeoLocation,
   "[HealthCheckId](#cfn-route53-recordset-healthcheckid)" : String,
@@ -32,6 +33,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AliasTarget](#cfn-route53-recordset-aliastarget): 
     AliasTarget
+  [CidrRoutingConfig](#cfn-route53-recordset-cidrroutingconfig): 
+    CidrRoutingConfig
   [Failover](#cfn-route53-recordset-failover): String
   [GeoLocation](#cfn-route53-recordset-geolocation): 
     GeoLocation
@@ -55,10 +58,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  *Alias resource record sets only:* Information about the AWS resource, such as a CloudFront distribution or an Amazon S3 bucket, that you want to route traffic to\.   
 If you're creating resource records sets for a private hosted zone, note the following:  
 + You can't create an alias resource record set in a private hosted zone to route traffic to a CloudFront distribution\.
-+ Creating geolocation alias resource record sets or latency alias resource record sets in a private hosted zone is unsupported\.
 + For information about creating failover resource record sets in a private hosted zone, see [Configuring Failover in a Private Hosted Zone](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-private-hosted-zones.html) in the *Amazon Route 53 Developer Guide*\.
 *Required*: No  
-*Type*: [AliasTarget](aws-properties-route53-aliastarget.md)  
+*Type*: [AliasTarget](aws-properties-route53-aliastarget-1.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CidrRoutingConfig`  <a name="cfn-route53-recordset-cidrroutingconfig"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [CidrRoutingConfig](aws-properties-route53-cidrroutingconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Failover`  <a name="cfn-route53-recordset-failover"></a>
@@ -184,7 +192,6 @@ You can use the \* wildcard as the leftmost label in a domain name, for example,
 
 `Region`  <a name="cfn-route53-recordset-region"></a>
  *Latency\-based resource record sets only:* The Amazon EC2 Region where you created the resource that this resource record set refers to\. The resource typically is an AWS resource, such as an EC2 instance or an ELB load balancer, and is referred to by an IP address or a DNS domain name, depending on the record type\.  
-Although creating latency and latency alias resource record sets in a private hosted zone is allowed, it's not supported\.
 When Amazon Route 53 receives a DNS query for a domain name and type for which you have created latency resource record sets, Route 53 selects the latency resource record set that has the lowest latency between the end user and the associated Amazon EC2 Region\. Route 53 then returns the value that is associated with the selected resource record set\.  
 Note the following:  
 + You can only specify one `ResourceRecord` per latency resource record set\.

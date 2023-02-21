@@ -8,3 +8,5 @@ Designer is part of the AWS CloudFormation console\. To use it, open Designer at
 + [Why use AWS CloudFormation Designer?](working-with-templates-cfn-designer-why.md)
 + [AWS CloudFormation Designer interface overview](working-with-templates-cfn-designer-overview.md)
 + [How to get started with Designer](working-with-templates-cfn-designer-additional-info.md)
+
+For information about validating your templates, see [Validating a template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-validate-template.html)\.

@@ -10,7 +10,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[EgressConfiguration](#cfn-apprunner-service-networkconfiguration-egressconfiguration)" : EgressConfiguration
+  "[EgressConfiguration](#cfn-apprunner-service-networkconfiguration-egressconfiguration)" : EgressConfiguration,
+  "[IngressConfiguration](#cfn-apprunner-service-networkconfiguration-ingressconfiguration)" : IngressConfiguration
 }
 ```
 
@@ -19,12 +20,20 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [EgressConfiguration](#cfn-apprunner-service-networkconfiguration-egressconfiguration): 
     EgressConfiguration
+  [IngressConfiguration](#cfn-apprunner-service-networkconfiguration-ingressconfiguration): 
+    IngressConfiguration
 ```
 
 ## Properties<a name="aws-properties-apprunner-service-networkconfiguration-properties"></a>
 
 `EgressConfiguration`  <a name="cfn-apprunner-service-networkconfiguration-egressconfiguration"></a>
 Network configuration settings for outbound message traffic\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [EgressConfiguration](aws-properties-apprunner-service-egressconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IngressConfiguration`  <a name="cfn-apprunner-service-networkconfiguration-ingressconfiguration"></a>
+Network configuration settings for inbound message traffic\.  
+*Required*: No  
+*Type*: [IngressConfiguration](aws-properties-apprunner-service-ingressconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

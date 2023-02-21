@@ -1,6 +1,6 @@
 # AWS::NimbleStudio::StudioComponent ScriptParameterKeyValue<a name="aws-properties-nimblestudio-studiocomponent-scriptparameterkeyvalue"></a>
 
-A parameter for a studio component script, in the form of a key:value pair\.
+A parameter for a studio component script, in the form of a key\-value pair\.
 
 ## Syntax<a name="aws-properties-nimblestudio-studiocomponent-scriptparameterkeyvalue-syntax"></a>
 

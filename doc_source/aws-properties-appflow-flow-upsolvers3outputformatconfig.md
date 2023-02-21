@@ -42,7 +42,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrefixConfig`  <a name="cfn-appflow-flow-upsolvers3outputformatconfig-prefixconfig"></a>
- Determines the prefix that Amazon AppFlow applies to the destination folder name\. You can name your destination folders according to the flow frequency and date\.   
+Specifies elements that Amazon AppFlow includes in the file and folder names in the flow destination\.  
 *Required*: Yes  
 *Type*: [PrefixConfig](aws-properties-appflow-flow-prefixconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

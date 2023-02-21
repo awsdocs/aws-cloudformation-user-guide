@@ -29,7 +29,6 @@ If your stack set template references one or more macros, you must create the st
 
 **Note**  
 If you are comfortable creating or updating a stack directly from a processed template, without first reviewing the proposed changes in a change set, you can do so by specifying the `CAPABILITY_AUTO_EXPAND` capability during a `CreateStack` or `UpdateStack` request\. You should only create stacks directly from a template that references macros if you know what processing the macros performs\.  
-In addition, change sets don't currently support nested stacks\. If you want to create a stack from a stack template that references macros and contains nested stacks, you must create the stack directly from the template using this capability\.  
 For more information, see [CreateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) or [UpdateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_UpdateStack.html) in the *AWS CloudFormation API Reference*\.
 
 ## Creating an AWS CloudFormation macro definition<a name="template-macros-author"></a>
@@ -84,6 +83,7 @@ AWS CloudFormation expects the underlying function to return a response in the f
     "requestId" : "$REQUEST_ID",
     "status" : "$STATUS",
     "fragment" : { ... }
+    "errorMessage": "optional error message for failures"
 }
 ```
 + **requestId**
@@ -218,7 +218,7 @@ AWSTemplateFormatVersion: 2010-09-09
         'Fn::Transform':
           - Name: 'AWS::Include'
               Parameters:
-                Location: s3://MyAmazonS3BucketName/MyFileName.yaml
+                Location: s3://DOC-EXAMPLE-BUCKET/MyFileName.yaml
         CorsConfiguration:[]   //End of processable content for AWS::Include
     MyEc2Instance:
       Type: 'AWS::EC2::Instance' 

@@ -49,7 +49,7 @@ Information about code to be committed to a repository after it is created in an
 *Update requires*: Updates are not supported\.
 
 `ConnectionArn`  <a name="cfn-codestar-githubrepository-connectionarn"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

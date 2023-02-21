@@ -52,6 +52,7 @@ The template developer\-chosen name \(logical ID\) of the custom resource in the
 
 PhysicalResourceId  <a name="crpg-ref-request-physicalresourceid"></a>
 A required custom resource provider\-defined physical ID that is unique for that provider\.  
+The value returned for a `PhysicalResourceId` can change custom resource update operations\. If the value returned is the same, it is considered a normal update\. If the value returned is different, AWS CloudFormation recognizes the update as a replacement and sends a delete request to the old resource\. For more information, see [AWS::CloudFormation::CustomResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html)\.  
 *Required*: Always sent with `Update` and `Delete` requests; never sent with `Create`\.  
 *Type*: String
 

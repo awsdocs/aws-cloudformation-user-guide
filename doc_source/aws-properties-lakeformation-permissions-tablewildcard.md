@@ -17,3 +17,54 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 ```
+
+## Examples<a name="aws-properties-lakeformation-permissions-tablewildcard--examples"></a>
+
+### Permissions on all tables in a database<a name="aws-properties-lakeformation-permissions-tablewildcard--examples--Permissions_on_all_tables_in_a_database"></a>
+
+The following example demonstrates how to grant permissions on all tables in a database using the `TableWildcard` object\.
+
+#### JSON<a name="aws-properties-lakeformation-permissions-tablewildcard--examples--Permissions_on_all_tables_in_a_database--json"></a>
+
+```
+"ExamplePermission": {
+  "Type": "AWS::LakeFormation::Permissions",
+  "Properties": {
+    "DataLakePrincipal": {
+      "DataLakePrincipalIdentifier": {
+        "arn:sample_principal"
+      }
+    },
+    "Resource": {
+      "TableResource": {
+        "DatabaseName": "example_database",
+        "TableWildcard": {}
+      }
+    },
+    "Permissions": [
+      "SELECT"
+    ],
+    "PermissionsWithGrantOption": [
+      "SELECT"
+    ]
+  }
+}
+```
+
+#### YAML<a name="aws-properties-lakeformation-permissions-tablewildcard--examples--Permissions_on_all_tables_in_a_database--yaml"></a>
+
+```
+ExamplePermission:
+  Type: AWS::LakeFormation::Permissions
+  Properties:
+    Principal:
+      DataLakePrincipalIdentifier: "arn:sample_principal"
+    Resource:
+      Table:
+        DatabaseName: "example_database"
+        TableWildcard: { }
+    Permissions: 
+          - "SELECT"
+    PermissionsWithGrantOption: 
+          - "SELECT"
+```

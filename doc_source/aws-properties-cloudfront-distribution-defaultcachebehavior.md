@@ -1,6 +1,6 @@
 # AWS::CloudFront::Distribution DefaultCacheBehavior<a name="aws-properties-cloudfront-distribution-defaultcachebehavior"></a>
 
-A complex type that describes the default cache behavior if you don’t specify a `CacheBehavior` element or if request URLs don’t match any of the values of `PathPattern` in `CacheBehavior` elements\. You must create exactly one default cache behavior\.
+A complex type that describes the default cache behavior if you don't specify a `CacheBehavior` element or if request URLs don't match any of the values of `PathPattern` in `CacheBehavior` elements\. You must create exactly one default cache behavior\.
 
 ## Syntax<a name="aws-properties-cloudfront-distribution-defaultcachebehavior-syntax"></a>
 
@@ -79,7 +79,7 @@ If you pick the third choice, you may need to restrict access to your Amazon S3 
 A complex type that controls whether CloudFront caches the response to requests using the specified HTTP methods\. There are two choices:  
 + CloudFront caches responses to `GET` and `HEAD` requests\.
 + CloudFront caches responses to `GET`, `HEAD`, and `OPTIONS` requests\.
-If you pick the second choice for your Amazon S3 Origin, you may need to forward Access\-Control\-Request\-Method, Access\-Control\-Request\-Headers, and Origin headers for the responses to be cached correctly\.   
+If you pick the second choice for your Amazon S3 Origin, you may need to forward Access\-Control\-Request\-Method, Access\-Control\-Request\-Headers, and Origin headers for the responses to be cached correctly\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -166,7 +166,7 @@ The identifier for a response headers policy\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SmoothStreaming`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-smoothstreaming"></a>
-Indicates whether you want to distribute media files in the Microsoft Smooth Streaming format using the origin that is associated with this cache behavior\. If so, specify `true`; if not, specify `false`\. If you specify `true` for `SmoothStreaming`, you can still distribute other content using this cache behavior if the content matches the value of `PathPattern`\.   
+Indicates whether you want to distribute media files in the Microsoft Smooth Streaming format using the origin that is associated with this cache behavior\. If so, specify `true`; if not, specify `false`\. If you specify `true` for `SmoothStreaming`, you can still distribute other content using this cache behavior if the content matches the value of `PathPattern`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -187,7 +187,7 @@ When a cache behavior contains trusted key groups, CloudFront requires signed UR
 `TrustedSigners`  <a name="cfn-cloudfront-distribution-defaultcachebehavior-trustedsigners"></a>
 We recommend using `TrustedKeyGroups` instead of `TrustedSigners`\.
 A list of AWS account IDs whose public keys CloudFront can use to validate signed URLs or signed cookies\.  
-When a cache behavior contains trusted signers, CloudFront requires signed URLs or signed cookies for all requests that match the cache behavior\. The URLs or cookies must be signed with the private key of a CloudFront key pair in a trusted signer’s AWS account\. The signed URL or cookie contains information about which public key CloudFront should use to verify the signature\. For more information, see [Serving private content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the *Amazon CloudFront Developer Guide*\.  
+When a cache behavior contains trusted signers, CloudFront requires signed URLs or signed cookies for all requests that match the cache behavior\. The URLs or cookies must be signed with the private key of a CloudFront key pair in a trusted signer's AWS account\. The signed URL or cookie contains information about which public key CloudFront should use to verify the signature\. For more information, see [Serving private content](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the *Amazon CloudFront Developer Guide*\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -198,7 +198,7 @@ The protocol that viewers can use to access the files in the origin specified by
 +  `redirect-to-https`: If a viewer submits an HTTP request, CloudFront returns an HTTP status code of 301 \(Moved Permanently\) to the viewer along with the HTTPS URL\. The viewer then resubmits the request using the new URL\.
 +  `https-only`: If a viewer sends an HTTP request, CloudFront returns an HTTP status code of 403 \(Forbidden\)\.
 For more information about requiring the HTTPS protocol, see [Requiring HTTPS Between Viewers and CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-https-viewers-to-cloudfront.html) in the *Amazon CloudFront Developer Guide*\.  
-The only way to guarantee that viewers retrieve an object that was fetched from the origin using HTTPS is never to use any other protocol to fetch the object\. If you have recently changed from HTTP to HTTPS, we recommend that you clear your objects’ cache because cached objects are protocol agnostic\. That means that an edge location will return an object from the cache regardless of whether the current request protocol matches the protocol used previously\. For more information, see [Managing Cache Expiration](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html) in the *Amazon CloudFront Developer Guide*\.
+The only way to guarantee that viewers retrieve an object that was fetched from the origin using HTTPS is never to use any other protocol to fetch the object\. If you have recently changed from HTTP to HTTPS, we recommend that you clear your objects' cache because cached objects are protocol agnostic\. That means that an edge location will return an object from the cache regardless of whether the current request protocol matches the protocol used previously\. For more information, see [Managing Cache Expiration](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html) in the *Amazon CloudFront Developer Guide*\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `allow-all | https-only | redirect-to-https`  

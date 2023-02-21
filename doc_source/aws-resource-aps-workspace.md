@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AlertManagerDefinition](#cfn-aps-workspace-alertmanagerdefinition)" : String,
       "[Alias](#cfn-aps-workspace-alias)" : String,
+      "[LoggingConfiguration](#cfn-aps-workspace-loggingconfiguration)" : LoggingConfiguration,
       "[Tags](#cfn-aps-workspace-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -26,6 +27,8 @@ Type: AWS::APS::Workspace
 Properties: 
   [AlertManagerDefinition](#cfn-aps-workspace-alertmanagerdefinition): String
   [Alias](#cfn-aps-workspace-alias): String
+  [LoggingConfiguration](#cfn-aps-workspace-loggingconfiguration): 
+    LoggingConfiguration
   [Tags](#cfn-aps-workspace-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -43,6 +46,12 @@ An alias that you assign to this workspace to help you identify it\. It does not
  The alias can be as many as 100 characters and can include any type of characters\. Amazon Managed Service for Prometheus automatically strips any blank spaces from the beginning and end of the alias that you specify\.   
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LoggingConfiguration`  <a name="cfn-aps-workspace-loggingconfiguration"></a>
+The LoggingConfiguration attribute is used to set the logging configuration for the workspace\.  
+*Required*: No  
+*Type*: [LoggingConfiguration](aws-properties-aps-workspace-loggingconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-aps-workspace-tags"></a>
@@ -114,4 +123,47 @@ Resources:
       Tags:
       - Key: BusinessPurpose
         Value: LoadTesting
+```
+
+### Amazon Managed Service for Prometheus logging configuration example<a name="aws-resource-aps-workspace--examples--_logging_configuration_example"></a>
+
+The following example creates a new workspace and sets a new logging configuration\.
+
+#### JSON<a name="aws-resource-aps-workspace--examples--_logging_configuration_example--json"></a>
+
+```
+{
+    "Resources": {
+        "APSWorkspace": {
+            "Type": "AWS::APS::Workspace",
+            "Properties": {
+                "Alias": "TestWorkspace",
+                "LoggingConfiguration": {
+                    "LogGroupArn": "arn:aws:logs:{region}:{account}:log-group:test-log-group:*"
+                },
+                "Tags": [
+                    {
+                        "Key": "BusinessPurpose",
+                        "Value": "LoadTesting"
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-aps-workspace--examples--_logging_configuration_example--yaml"></a>
+
+```
+Resources:
+  APSWorkspace:
+    Type: AWS::APS::Workspace
+    Properties:
+      Alias: TestWorkspace
+      LoggingConfiguration:
+        LogGroupArn: "arn:aws:logs:{region}:{account}:log-group:test-log-group:*"
+      Tags:
+        - Key: BusinessPurpose
+          Value: LoadTesting
 ```

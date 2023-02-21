@@ -78,6 +78,6 @@ An array of key\-value pairs that contain metadata to help you categorize and or
 
 ### Ref<a name="aws-resource-sagemaker-devicefleet-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returnsWhen you pass the logical ID of this resource to the intrinsic `Ref` function, Ref returns the DeviceFleetName\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the DeviceFleetName\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

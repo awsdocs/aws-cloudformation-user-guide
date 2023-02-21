@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ArtifactConfig](#cfn-synthetics-canary-artifactconfig)" : ArtifactConfig,
       "[ArtifactS3Location](#cfn-synthetics-canary-artifacts3location)" : String,
       "[Code](#cfn-synthetics-canary-code)" : Code,
+      "[DeleteLambdaResourcesOnCanaryDeletion](#cfn-synthetics-canary-deletelambdaresourcesoncanarydeletion)" : Boolean,
       "[ExecutionRoleArn](#cfn-synthetics-canary-executionrolearn)" : String,
       "[FailureRetentionPeriod](#cfn-synthetics-canary-failureretentionperiod)" : Integer,
       "[Name](#cfn-synthetics-canary-name)" : String,
@@ -44,6 +45,7 @@ Properties:
   [ArtifactS3Location](#cfn-synthetics-canary-artifacts3location): String
   [Code](#cfn-synthetics-canary-code): 
     Code
+  [DeleteLambdaResourcesOnCanaryDeletion](#cfn-synthetics-canary-deletelambdaresourcesoncanarydeletion): Boolean
   [ExecutionRoleArn](#cfn-synthetics-canary-executionrolearn): String
   [FailureRetentionPeriod](#cfn-synthetics-canary-failureretentionperiod): Integer
   [Name](#cfn-synthetics-canary-name): String
@@ -82,6 +84,12 @@ The location in Amazon S3 where Synthetics stores artifacts from the runs of thi
 Use this structure to input your script code for the canary\. This structure contains the Lambda handler with the location where the canary should start running the script\. If the script is stored in an S3 bucket, the bucket name, key, and version are also included\. If the script is passed into the canary directly, the script code is contained in the value of `Script`\.   
 *Required*: Yes  
 *Type*: [Code](aws-properties-synthetics-canary-code.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DeleteLambdaResourcesOnCanaryDeletion`  <a name="cfn-synthetics-canary-deletelambdaresourcesoncanarydeletion"></a>
+Specifies whether AWS CloudFormation is to also delete the Lambda functions and layers used by this canary, when the canary is deleted\. The default is false\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExecutionRoleArn`  <a name="cfn-synthetics-canary-executionrolearn"></a>
@@ -304,7 +312,7 @@ This example creates a canary and passes the script code directly into the canar
                 "StartCanaryAfterCreation": false,
                 "Tags": [
                     {
-                        "Key": "key00AtCreate",
+                        "Id": "key00AtCreate",
                         "Value": "value001AtCreate"
                     }
                 ]

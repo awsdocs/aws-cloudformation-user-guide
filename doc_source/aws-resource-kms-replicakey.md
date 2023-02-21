@@ -4,15 +4,17 @@ The `AWS::KMS::ReplicaKey` resource specifies a multi\-Region replica key that i
 
 *Multi\-Region keys* are an AWS KMS feature that lets you create multiple interoperable KMS keys in different AWS Regions\. Because these KMS keys have the same key ID, key material, and other metadata, you can use them to encrypt data in one AWS Region and decrypt it in a different AWS Region without making a cross\-Region call or exposing the plaintext data\. For more information, see [Multi\-Region keys](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html) in the *AWS Key Management Service Developer Guide*\.
 
-A multi\-Region *primary key* is a fully functional symmetric or asymmetric KMS key that is also the model for replica keys in other AWS Regions\. To create a multi\-Region primary key, add an [AWS::KMS::Key](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html) resource to your CloudFormation stack\. Set its `MultiRegion` property to true\.
+A multi\-Region *primary key* is a fully functional symmetric encryption KMS key, HMAC KMS key, or asymmetric KMS key that is also the model for replica keys in other AWS Regions\. To create a multi\-Region primary key, add an [AWS::KMS::Key](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html) resource to your CloudFormation stack\. Set its `MultiRegion` property to true\.
 
-A multi\-Region *replica key* is a fully functional symmetric or asymmetric KMS key that has the same key ID and key material as a multi\-Region primary key, but is located in a different AWS Region of the same AWS partition\. There can be multiple replicas of a primary key, but each must be in a different AWS Region \.
+A multi\-Region *replica key* is a fully functional KMS key that has the same key ID and key material as a multi\-Region primary key, but is located in a different AWS Region of the same AWS partition\. There can be multiple replicas of a primary key, but each must be in a different AWS Region\. 
+
+When you create a replica key in AWS CloudFormation, the replica key is created in the AWS Region represented by the endpoint you use for the request\. If you try to replicate a multi\-Region key into a Region in which the key type is not supported, the request will fail\.
 
 A primary key and its replicas have the same key ID and key material\. They also have the same key spec, key usage, key material origin, and automatic key rotation status\. These properties are known as *shared properties*\. If they change, AWS KMS synchronizes the change to all related multi\-Region keys\. All other properties of a replica key can differ, including its key policy, tags, aliases, and key state\. AWS KMS does not synchronize these properties\.
 
 **Regions**
 
-AWS KMS CloudFormation resources are supported in all Regions in which AWS CloudFormation is supported\. However, in the Asia Pacific \(Jakarta\) Region \(ap\-southeast\-3\), you cannot use a CloudFormation template to create or manage multi\-Region KMS keys \(primary or replica\)\.
+AWS KMS CloudFormation resources are available in all AWS Regions in which AWS KMS and AWS CloudFormation are supported\. You can use the `AWS::KMS::ReplicaKey` resource to create replica keys in all Regions that support multi\-Region KMS keys\. For details, see [Multi\-Region keys in AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html) in the *AWS Key Management Service Developer Guide*\.
 
 ## Syntax<a name="aws-resource-kms-replicakey-syntax"></a>
 
@@ -75,7 +77,10 @@ The key policy is not a shared property of multi\-Region keys\. You can specify 
 The key policy must conform to the following rules\.  
 + The key policy must give the caller [PutKeyPolicy](https://docs.aws.amazon.com/kms/latest/APIReference/API_PutKeyPolicy.html) permission on the KMS key\. This reduces the risk that the KMS key becomes unmanageable\. For more information, refer to the scenario in the [Default key policy](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam) section of the * *AWS Key Management Service Developer Guide* *\.
 + Each statement in the key policy must contain one or more principals\. The principals in the key policy must exist and be visible to AWS KMS\. When you create a new AWSprincipal \(for example, an IAM user or role\), you might need to enforce a delay before including the new principal in a key policy because the new principal might not be immediately visible to AWS KMS\. For more information, see [Changes that I make are not always immediately visible](https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_general.html#troubleshoot_general_eventual-consistency) in the *AWS Identity and Access Management User Guide*\.
-+ The key policy size limit is 32 kilobytes \(32768 bytes\)\.
+A key policy document can include only the following characters:  
++ Printable ASCII characters from the space character \(`\u0020`\) through the end of the ASCII character range\.
++ Printable characters in the Basic Latin and Latin\-1 Supplement character set \(through `\u00FF`\)\.
++ The tab \(`\u0009`\), line feed \(`\u000A`\), and carriage return \(`\u000D`\) special characters
 *Minimum*: `1`  
 *Maximum*: `32768`  
 *Required*: Yes  
@@ -85,6 +90,7 @@ The key policy must conform to the following rules\.
 `PendingWindowInDays`  <a name="cfn-kms-replicakey-pendingwindowindays"></a>
 Specifies the number of days in the waiting period before AWS KMS deletes a replica key that has been removed from a CloudFormation stack\. Enter a value between 7 and 30 days\. The default value is 30 days\.  
 When you remove a replica key from a CloudFormation stack, AWS KMS schedules the replica key for deletion and starts the mandatory waiting period\. The `PendingWindowInDays` property determines the length of waiting period\. During the waiting period, the key state of replica key is `Pending Deletion`, which prevents it from being used in cryptographic operations\. When the waiting period expires, AWS KMS permanently deletes the replica key\.  
+If the KMS key is a multi\-Region primary key with replica keys, the waiting period begins when the last of its replica keys is deleted\. Otherwise, the waiting period begins immediately\.  
 You cannot use a CloudFormation template to cancel deletion of the replica after you remove it from the stack, regardless of the waiting period\. However, if you specify a replica key in your template that is based on the same primary key as the original replica key, CloudFormation creates a new replica key with the same key ID, key material, and other shared properties of the original replica key\. This new replica key can decrypt ciphertext that was encrypted under the original replica key, or any related multi\-Region key\.  
 For detailed information about deleting multi\-Region keys, see [Deleting multi\-Region keys](https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-delete.html) in the *AWS Key Management Service Developer Guide*\.  
 For information about the `PendingDeletion` key state, see [Key state: Effect on your KMS key](https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html) in the *AWS Key Management Service Developer Guide*\. For more information about deleting KMS keys, see the [ScheduleKeyDeletion](https://docs.aws.amazon.com/kms/latest/APIReference/API_ScheduleKeyDeletion.html) operation in the *AWS Key Management Service API Reference* and [Deleting KMS keys](https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html) in the *AWS Key Management Service Developer Guide*\.   

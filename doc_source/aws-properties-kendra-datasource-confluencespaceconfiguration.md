@@ -34,13 +34,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-datasource-confluencespaceconfiguration-properties"></a>
 
 `CrawlArchivedSpaces`  <a name="cfn-kendra-datasource-confluencespaceconfiguration-crawlarchivedspaces"></a>
-Specifies whether Amazon Kendra should index archived spaces\.  
+ `TRUE` to index archived spaces\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CrawlPersonalSpaces`  <a name="cfn-kendra-datasource-confluencespaceconfiguration-crawlpersonalspaces"></a>
-Specifies whether Amazon Kendra should index personal spaces\. Users can add restrictions to items in personal spaces\. If personal spaces are indexed, queries without user context information may return restricted items from a personal space in their results\. For more information, see [Filtering on user context](https://docs.aws.amazon.com/kendra/latest/dg/user-context-filter.html)\.  
+ `TRUE` to index personal spaces\. You can add restrictions to items in personal spaces\. If personal spaces are indexed, queries without user context information may return restricted items from a personal space in their results\. For more information, see [Filtering on user context](https://docs.aws.amazon.com/kendra/latest/dg/user-context-filter.html)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

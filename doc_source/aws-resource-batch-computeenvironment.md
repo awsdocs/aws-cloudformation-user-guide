@@ -110,7 +110,9 @@ Depending on how you created your AWS Batch service role, its ARN might contain 
 `State`  <a name="cfn-batch-computeenvironment-state"></a>
 The state of the compute environment\. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues\.  
 If the state is `ENABLED`, then the AWS Batch scheduler can attempt to place jobs from an associated job queue on the compute resources within the environment\. If the compute environment is managed, then it can scale its instances out or in automatically, based on the job queue demand\.  
-If the state is `DISABLED`, then the AWS Batch scheduler doesn't attempt to place jobs within the environment\. Jobs in a `STARTING` or `RUNNING` state continue to progress normally\. Managed compute environments in the `DISABLED` state don't scale out\. However, they scale in to `minvCpus` value after instances become idle\.  
+If the state is `DISABLED`, then the AWS Batch scheduler doesn't attempt to place jobs within the environment\. Jobs in a `STARTING` or `RUNNING` state continue to progress normally\. Managed compute environments in the `DISABLED` state don't scale out\.   
+Compute environments in a `DISABLED` state may continue to incur billing charges\. To prevent additional charges, turn off and then delete the compute environment\. For more information, see [State](https://docs.aws.amazon.com/batch/latest/userguide/compute_environment_parameters.html#compute_environment_state) in the * AWS Batch User Guide*\.
+When an instance is idle, the instance scales down to the `minvCpus` value\. However, the instance size doesn't change\. For example, consider a `c5.8xlarge` instance with a `minvCpus` value of `4` and a `desiredvCpus` value of `36`\. This instance doesn't scale down to a `c5.large` instance\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DISABLED | ENABLED`  

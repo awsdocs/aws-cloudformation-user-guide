@@ -57,7 +57,7 @@ A description of the role that you provide\.
 *Required*: No  
 *Type*: String  
 *Maximum*: `1000`  
-*Pattern*: `[\p{L}\p{M}\p{Z}\p{S}\p{N}\p{P}]*`  
+*Pattern*: `[\u0009\u000A\u000D\u0020-\u007E\u00A1-\u00FF]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ManagedPolicyArns`  <a name="cfn-iam-role-managepolicyarns"></a>
@@ -68,8 +68,8 @@ For more information about ARNs, see [Amazon Resource Names \(ARNs\) and AWS Ser
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxSessionDuration`  <a name="cfn-iam-role-maxsessionduration"></a>
-The maximum session duration \(in seconds\) that you want to set for the specified role\. If you do not specify a value for this setting, the default maximum of one hour is applied\. This setting can have a value from 1 hour to 12 hours\.  
-Anyone who assumes the role from the or API can use the `DurationSeconds` API parameter or the `duration-seconds` CLI parameter to request a longer session\. The `MaxSessionDuration` setting determines the maximum duration that can be requested using the `DurationSeconds` parameter\. If users don't specify a value for the `DurationSeconds` parameter, their security credentials are valid for one hour by default\. This applies when you use the `AssumeRole*` API operations or the `assume-role*` CLI operations but does not apply when you use those operations to create a console URL\. For more information, see [Using IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html) in the *IAM User Guide*\.  
+The maximum session duration \(in seconds\) that you want to set for the specified role\. If you do not specify a value for this setting, the default value of one hour is applied\. This setting can have a value from 1 hour to 12 hours\.  
+Anyone who assumes the role from the AWS CLI or API can use the `DurationSeconds` API parameter or the `duration-seconds` AWS CLI parameter to request a longer session\. The `MaxSessionDuration` setting determines the maximum duration that can be requested using the `DurationSeconds` parameter\. If users don't specify a value for the `DurationSeconds` parameter, their security credentials are valid for one hour by default\. This applies when you use the `AssumeRole*` API operations or the `assume-role*` AWS CLI operations but does not apply when you use those operations to create a console URL\. For more information, see [Using IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html) in the *IAM User Guide*\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `3600`  
@@ -101,7 +101,7 @@ A role can also have an attached managed policy\. For information about policies
 For information about limits on the number of inline policies that you can embed with a role, see [Limitations on IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM User Guide*\.  
 If an external policy \(such as `AWS::IAM::Policy` or `AWS::IAM::ManagedPolicy`\) has a `Ref` to a role and if a resource \(such as `AWS::ECS::Service`\) also has a `Ref` to the same role, add a `DependsOn` attribute to the resource to make the resource depend on the external policy\. This dependency ensures that the role's policy is available throughout the resource's lifecycle\. For example, when you delete a stack with an `AWS::ECS::Service` resource, the `DependsOn` attribute ensures that AWS CloudFormation deletes the `AWS::ECS::Service` resource before deleting its role's policy\.
 *Required*: No  
-*Type*: List of [Policy](aws-properties-iam-policy.md)  
+*Type*: List of [Policy](aws-properties-iam-policy-1.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleName`  <a name="cfn-iam-role-rolename"></a>

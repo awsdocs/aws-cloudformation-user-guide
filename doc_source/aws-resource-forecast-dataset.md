@@ -28,9 +28,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DatasetName](#cfn-forecast-dataset-datasetname)" : String,
       "[DatasetType](#cfn-forecast-dataset-datasettype)" : String,
       "[Domain](#cfn-forecast-dataset-domain)" : String,
-      "[EncryptionConfig](#cfn-forecast-dataset-encryptionconfig)" : Json,
-      "[Schema](#cfn-forecast-dataset-schema)" : Json,
-      "[Tags](#cfn-forecast-dataset-tags)" : [ Json, ... ]
+      "[EncryptionConfig](#cfn-forecast-dataset-encryptionconfig)" : EncryptionConfig,
+      "[Schema](#cfn-forecast-dataset-schema)" : Schema,
+      "[Tags](#cfn-forecast-dataset-tags)" : [ TagsItems, ... ]
     }
 }
 ```
@@ -44,17 +44,26 @@ Properties:
   [DatasetName](#cfn-forecast-dataset-datasetname): String
   [DatasetType](#cfn-forecast-dataset-datasettype): String
   [Domain](#cfn-forecast-dataset-domain): String
-  [EncryptionConfig](#cfn-forecast-dataset-encryptionconfig): Json
-  [Schema](#cfn-forecast-dataset-schema): Json
+  [EncryptionConfig](#cfn-forecast-dataset-encryptionconfig): 
+    EncryptionConfig
+  [Schema](#cfn-forecast-dataset-schema): 
+    Schema
   [Tags](#cfn-forecast-dataset-tags): 
-    - Json
+    - TagsItems
 ```
 
 ## Properties<a name="aws-resource-forecast-dataset-properties"></a>
 
 `DataFrequency`  <a name="cfn-forecast-dataset-datafrequency"></a>
 The frequency of data collection\. This parameter is required for RELATED\_TIME\_SERIES datasets\.  
-Valid intervals are Y \(Year\), M \(Month\), W \(Week\), D \(Day\), H \(Hour\), 30min \(30 minutes\), 15min \(15 minutes\), 10min \(10 minutes\), 5min \(5 minutes\), and 1min \(1 minute\)\. For example, "D" indicates every day and "15min" indicates every 15 minutes\.  
+Valid intervals are an integer followed by Y \(Year\), M \(Month\), W \(Week\), D \(Day\), H \(Hour\), and min \(Minute\)\. For example, "1D" indicates every day and "15min" indicates every 15 minutes\. You cannot specify a value that would overlap with the next larger frequency\. That means, for example, you cannot specify a frequency of 60 minutes, because that is equivalent to 1 hour\. The valid values for each frequency are the following:  
++ Minute \- 1\-59
++ Hour \- 1\-23
++ Day \- 1\-6
++ Week \- 1\-4
++ Month \- 1\-11
++ Year \- 1
+Thus, if you want every other week forecasts, specify "2W"\. Or, if you want quarterly forecasts, you specify "3M"\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -88,20 +97,20 @@ The domain associated with the dataset\.
 `EncryptionConfig`  <a name="cfn-forecast-dataset-encryptionconfig"></a>
 A Key Management Service \(KMS\) key and the Identity and Access Management \(IAM\) role that Amazon Forecast can assume to access the key\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [EncryptionConfig](aws-properties-forecast-dataset-encryptionconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Schema`  <a name="cfn-forecast-dataset-schema"></a>
 The schema for the dataset\. The schema attributes and their order must match the fields in your data\. The dataset `Domain` and `DatasetType` that you choose determine the minimum required fields in your training data\. For information about the required fields for a specific dataset domain and type, see [Dataset Domains and Dataset Types](https://docs.aws.amazon.com/forecast/latest/dg/howitworks-domains-ds-types.html)\.  
 *Required*: Yes  
-*Type*: Json  
+*Type*: [Schema](aws-properties-forecast-dataset-schema.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-forecast-dataset-tags"></a>
 An array of key\-value pairs to apply to this resource\.  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
-*Type*: List of Json  
+*Type*: List of [TagsItems](aws-properties-forecast-dataset-tagsitems.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-forecast-dataset-return-values"></a>

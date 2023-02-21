@@ -1,6 +1,6 @@
 # AWS::Lex::Bot SlotPriority<a name="aws-properties-lex-bot-slotpriority"></a>
 
-Sets the priority that Amazon Lex should use when eliciting slots values from a user\.
+Sets the priority that Amazon Lex should use when eliciting slot values from a user\.
 
 ## Syntax<a name="aws-properties-lex-bot-slotpriority-syntax"></a>
 

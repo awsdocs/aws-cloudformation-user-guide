@@ -1,6 +1,6 @@
 # AWS::CustomerProfiles::ObjectType<a name="aws-resource-customerprofiles-objecttype"></a>
 
-The AWS::CustomerProfiles::ObjectType resource specifies an Amazon Connect Customer Profiles Object Type Mapping\.
+Specifies an Amazon Connect Customer Profiles Object Type Mapping\.
 
 ## Syntax<a name="aws-resource-customerprofiles-objecttype-syntax"></a>
 
@@ -139,72 +139,53 @@ The following example creates a object type if Domain existed\.
 #### YAML<a name="aws-resource-customerprofiles-objecttype--examples----yaml"></a>
 
 ```
-Resources:
-    ObjectType:
-      Type: "AWS::CustomerProfiles::ObjectType"
-      Properties:
-        DomainName: "ExampleDomain"
-        ObjectTypeName: "ExampleObjectType"
-        AllowProfileCreation: false
-        Description: "Description Example"
-        ExpirationDays: 1
-        Fields:
-          - Name: "email"
-            ObjectTypeField:
-              Source: "_source.email"
-              Target: "_profile.BusinessEmail"
-              ContentType: "EMAIL_ADDRESS"
-        Keys:
-          - Name: "_email"
-            ObjectTypeKeyList:
-              - FieldNames:
-                  - "email"
-                StandardIdentifiers:
-                  - "PROFILE"
-                  - "UNIQUE"
+Type: "AWS::CustomerProfiles::ObjectType"
+Properties: 
+    DomainName: "ExampleDomain" 
+    ObjectTypeName: "ExampleObjectType"
+    AllowProfileCreation: false 
+    Description: "Description Example" 
+    ExpirationDays: 1 
+    Fields: 
+      - Name: "email" 
+        ObjectTypeField: 
+          Source: "_source.email" 
+          Target: "_profile.BusinessEmail"
+          ContentType: "EMAIL_ADDRESS" 
+    Keys: 
+      - Name: "_email" 
+        ObjectTypeKeyList: 
+          - FieldNames: 
+            - "email" 
+            StandardIdentifiers: 
+              - "PROFILE" 
+              - "UNIQUE"
 ```
 
 #### JSON<a name="aws-resource-customerprofiles-objecttype--examples----json"></a>
 
 ```
-{
-  "Resources": {
-    "ObjectType": {
-      "Type": "AWS::CustomerProfiles::ObjectType",
-      "Properties": {
-        "DomainName": "ExampleDomain",
-        "ObjectTypeName": "ExampleObjectType",
-        "AllowProfileCreation": false,
-        "Description": "Description Example",
-        "ExpirationDays": 1,
-        "Fields": [
-          {
-            "Name": "email",
-            "ObjectTypeField": {
-              "Source": "_source.email",
-              "Target": "_profile.BusinessEmail",
-              "ContentType": "EMAIL_ADDRESS"
-            }
-          }
-        ],
-        "Keys": [
-          {
-            "Name": "_email",
-            "ObjectTypeKeyList": [
-              {
-                "FieldNames": [
-                    "email"
-                ],
-                "StandardIdentifiers": [
-                    "PROFILE",
-                    "UNIQUE"
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    }
-  }
+"Type": "AWS::CustomerProfiles::ObjectType", 
+"Properties": { 
+    "DomainName": "ExampleDomain",
+    "ObjectTypeName": "ExampleObjectType", 
+    "AllowProfileCreation": false, 
+    "Description": "Description Example", 
+    "ExpirationDays": 1, 
+    "Fields": [{ 
+        "Name": "email",
+        "ObjectTypeField": { 
+            "Source": "_source.email", 
+            "Target": "_profile.BusinessEmail",
+            "ContentType": "EMAIL_ADDRESS" 
+        } 
+    }], 
+    "Keys": [{ 
+        "Name": "_email", 
+        "ObjectTypeKeyList": [{
+            "FieldNames": [ "email" ], 
+            "StandardIdentifiers": [ "PROFILE", "UNIQUE" ] 
+        }] 
+    }]
 }
 ```

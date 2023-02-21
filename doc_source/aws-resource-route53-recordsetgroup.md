@@ -42,15 +42,18 @@ Properties:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HostedZoneId`  <a name="cfn-route53-recordsetgroup-hostedzoneid"></a>
-The ID of the hosted zone that contains the resource record sets that you want to change\.  
-*Required*: Conditional  
+The ID of the hosted zone that you want to create records in\.  
+Specify either `HostedZoneName` or `HostedZoneId`, but not both\. If you have multiple hosted zones with the same domain name, you must specify the hosted zone using `HostedZoneId`\.   
+*Required*: No  
 *Type*: String  
 *Maximum*: `32`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HostedZoneName`  <a name="cfn-route53-recordsetgroup-hostedzonename"></a>
-The name of the hosted zone that you want to create, update, or delete resource record sets in\.  
-*Required*: Conditional  
+The name of the hosted zone that you want to create records in\. You must include a trailing dot \(for example, `www.example.com.`\) as part of the `HostedZoneName`\.  
+When you create a stack using an `AWS::Route53::RecordSet` that specifies `HostedZoneName`, AWS CloudFormation attempts to find a hosted zone whose name matches the `HostedZoneName`\. If AWS CloudFormation can't find a hosted zone with a matching domain name, or if there is more than one hosted zone with the specified domain name, AWS CloudFormation will not create the stack\.   
+Specify either `HostedZoneName` or `HostedZoneId`, but not both\. If you have multiple hosted zones with the same domain name, you must specify the hosted zone using `HostedZoneId`\.   
+*Required*: No  
 *Type*: String  
 *Maximum*: `1024`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -146,5 +149,6 @@ myExampleDotComEmailServer:
       Type: TXT
 ```
 
-## See Also<a name="aws-resource-route53-recordsetgroup--seealso"></a>
+## See also<a name="aws-resource-route53-recordsetgroup--seealso"></a>
 + For `AWS::Route53::RecordSetGroup` examples, see [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html) in the *Amazon Route 53 API Reference*
+

@@ -1,16 +1,26 @@
 # AWS::RefactorSpaces::Route<a name="aws-resource-refactorspaces-route"></a>
 
-Creates an AWS Migration Hub Refactor Spaces route\. The account owner of the service resource is always the environment owner, regardless of the account creating the route\. Routes target a service in the application\. If an application does not have any routes, then the first route must be created as a `DEFAULT` `RouteType`\.
+Creates an AWS Migration Hub Refactor Spaces route\. The account owner of the service resource is always the environment owner, regardless of which account creates the route\. Routes target a service in the application\. If an application does not have any routes, then the first route must be created as a `DEFAULT` `RouteType`\.
+
+When created, the default route defaults to an active state so state is not a required input\. However, like all other state values the state of the default route can be updated after creation, but only when all other routes are also inactive\. Conversely, no route can be active without the default route also being active\.
 
 **Note**  
-In the `AWS::RefactorSpaces::Route` resource, you can only update the `SourcePath` and `Methods` properties, which reside under the `UriPathRoute` property\. All other properties associated with the `AWS::RefactorSpaces::Route` cannot be updated, even though the property description might indicate otherwise\.
+ In the `AWS::RefactorSpaces::Route` resource, you can only update the `ActivationState` property, which resides under the `UriPathRoute` and `DefaultRoute` properties\. All other properties associated with the `AWS::RefactorSpaces::Route` cannot be updated, even though the property description might indicate otherwise\. Updating all other properties will result in the replacement of Route\. 
 
-When you create a route, Refactor Spaces configures the Amazon API Gateway to send traffic to the target service\.
+When you create a route, Refactor Spaces configures the Amazon API Gateway to send traffic to the target service as follows:
 + If the service has a URL endpoint, and the endpoint resolves to a private IP address, Refactor Spaces routes traffic using the API Gateway VPC link\. 
 + If the service has a URL endpoint, and the endpoint resolves to a public IP address, Refactor Spaces routes traffic over the public internet\.
-+ If the service has a AWS Lambda function endpoint, then Refactor Spaces uses API Gateway’s Lambda integration\.
++ If the service has an AWS Lambda function endpoint, then Refactor Spaces configures the Lambda function's resource policy to allow the application's API Gateway to invoke the function\.
 
-A health check is performed on the service when the route is created\. If the health check fails, the route transitions to `FAILED`, and no traffic is sent to the service\. For Lambda functions, the Lambda function state is checked\. If the function is not active, the function configuration is updated so Lambda resources are provisioned\. If the Lambda state is `Failed`, then the route creation fails\. For more information, see the [GetFunctionConfiguration's State response parameter](https://docs.aws.amazon.com/lambda/latest/dg/API_GetFunctionConfiguration.html#SSS-GetFunctionConfiguration-response-State) in the *AWS Lambda Developer Guide*\. For public URLs, a connection is opened to the public endpoint\. If the URL is not reachable, the health check fails\. For private URLs, a target groups is created and the target group health check is run\. The `HealthCheckProtocol`, `HealthCheckPort`, and `HealthCheckPath` are the same protocol, port, and path specified in the URL or Health URL if used\. All other settings use the default values, as described in [Health checks for your target groups](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/target-group-health-checks.html)\. The health check is considered successful if at least one target within the target group transitions to healthy state\.
+A one\-time health check is performed on the service when either the route is updated from inactive to active, or when it is created with an active state\. If the health check fails, the route transitions the route state to `FAILED`, an error code of `SERVICE_ENDPOINT_HEALTH_CHECK_FAILURE` is provided, and no traffic is sent to the service\.
+
+For Lambda functions, the Lambda function state is checked\. If the function is not active, the function configuration is updated so that Lambda resources are provisioned\. If the Lambda state is `Failed`, then the route creation fails\. For more information, see the [GetFunctionConfiguration's State response parameter](https://docs.aws.amazon.com/lambda/latest/dg/API_GetFunctionConfiguration.html#SSS-GetFunctionConfiguration-response-State) in the *AWS Lambda Developer Guide*\.
+
+For Lambda endpoints, a check is performed to determine that a Lambda function with the specified ARN exists\. If it does not exist, the health check fails\. For public URLs, a connection is opened to the public endpoint\. If the URL is not reachable, the health check fails\. 
+
+For private URLS, a target group is created on the Elastic Load Balancing and the target group health check is run\. The `HealthCheckProtocol`, `HealthCheckPort`, and `HealthCheckPath` are the same protocol, port, and path specified in the URL or health URL, if used\. All other settings use the default values, as described in [Health checks for your target groups](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/target-group-health-checks.html)\. The health check is considered successful if at least one target within the target group transitions to a healthy state\.
+
+Services can have HTTP or HTTPS URL endpoints\. For HTTPS URLs, publicly\-signed certificates are supported\. Private Certificate Authorities \(CAs\) are permitted only if the CA's domain is also publicly resolvable\.
 
 ## Syntax<a name="aws-resource-refactorspaces-route-syntax"></a>
 
@@ -23,6 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::RefactorSpaces::Route",
   "Properties" : {
       "[ApplicationIdentifier](#cfn-refactorspaces-route-applicationidentifier)" : String,
+      "[DefaultRoute](#cfn-refactorspaces-route-defaultroute)" : DefaultRouteInput,
       "[EnvironmentIdentifier](#cfn-refactorspaces-route-environmentidentifier)" : String,
       "[RouteType](#cfn-refactorspaces-route-routetype)" : String,
       "[ServiceIdentifier](#cfn-refactorspaces-route-serviceidentifier)" : String,
@@ -38,6 +49,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::RefactorSpaces::Route
 Properties: 
   [ApplicationIdentifier](#cfn-refactorspaces-route-applicationidentifier): String
+  [DefaultRoute](#cfn-refactorspaces-route-defaultroute): 
+    DefaultRouteInput
   [EnvironmentIdentifier](#cfn-refactorspaces-route-environmentidentifier): String
   [RouteType](#cfn-refactorspaces-route-routetype): String
   [ServiceIdentifier](#cfn-refactorspaces-route-serviceidentifier): String
@@ -54,6 +67,12 @@ The unique identifier of the application\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`DefaultRoute`  <a name="cfn-refactorspaces-route-defaultroute"></a>
+ Configuration for the default route type\.   
+*Required*: No  
+*Type*: [DefaultRouteInput](aws-properties-refactorspaces-route-defaultrouteinput.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnvironmentIdentifier`  <a name="cfn-refactorspaces-route-environmentidentifier"></a>
 The unique identifier of the environment\.  
@@ -83,7 +102,7 @@ The tags assigned to the route\.
 The configuration for the URI path route type\.  
 *Required*: No  
 *Type*: [UriPathRouteInput](aws-properties-refactorspaces-route-uripathrouteinput.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-refactorspaces-route-return-values"></a>
 

@@ -1,6 +1,6 @@
 # AWS::NetworkManager::LinkAssociation<a name="aws-resource-networkmanager-linkassociation"></a>
 
-Specifies the association between a device and a link\. A device can be associated to multiple links and a link can be associated to multiple devices\. The device and link must be in the same global network and the same site\.
+Describes the association between a device and a link\.
 
 ## Syntax<a name="aws-resource-networkmanager-linkassociation-syntax"></a>
 

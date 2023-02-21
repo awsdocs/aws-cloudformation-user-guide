@@ -1,6 +1,6 @@
 # AWS::SSO::InstanceAccessControlAttributeConfiguration AccessControlAttribute<a name="aws-properties-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattribute"></a>
 
-These are AWS SSO identity store attributes that you can configure for use in attributes\-based access control \(ABAC\)\. You can create permissions policies that determine who can access your AWS resources based upon the configured attribute values\. When you enable ABAC and specify `AccessControlAttributes`, AWS SSO passes the attribute values of the authenticated user into IAM for use in policy evaluation\.
+These are IAM Identity Center identity store attributes that you can configure for use in attributes\-based access control \(ABAC\)\. You can create permissions policies that determine who can access your AWS resources based upon the configured attribute values\. When you enable ABAC and specify `AccessControlAttributes`, IAM Identity Center passes the attribute values of the authenticated user into IAM for use in policy evaluation\.
 
 ## Syntax<a name="aws-properties-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattribute-syntax"></a>
 
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattribute-properties"></a>
 
 `Key`  <a name="cfn-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattribute-key"></a>
-The name of the attribute associated with your identities in your identity source\. This is used to map a specified attribute in your identity source with an attribute in AWS SSO\.  
+The name of the attribute associated with your identities in your identity source\. This is used to map a specified attribute in your identity source with an attribute in IAM Identity Center\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

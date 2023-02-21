@@ -60,7 +60,7 @@ The maximum length is 256 characters with the pattern `[^\u0000-\u001F\u007F]+`\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-iotsitewise-assetmodel-assetmodelproperty-type"></a>
-Contains a property type, which can be one of `attribute`, `measurement`, `metric`, or `transform`\.  
+Contains a property type, which can be one of `Attribute`, `Measurement`, `Metric`, or `Transform`\.  
 *Required*: Yes  
 *Type*: [PropertyType](aws-properties-iotsitewise-assetmodel-propertytype.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattributevalue-properties"></a>
 
 `Source`  <a name="cfn-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattributevalue-source"></a>
-The identity source to use when mapping a specified attribute to AWS SSO\.  
+The identity source to use when mapping a specified attribute to IAM Identity Center\.  
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `1`  

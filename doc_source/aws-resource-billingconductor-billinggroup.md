@@ -16,7 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ComputationPreference](#cfn-billingconductor-billinggroup-computationpreference)" : ComputationPreference,
       "[Description](#cfn-billingconductor-billinggroup-description)" : String,
       "[Name](#cfn-billingconductor-billinggroup-name)" : String,
-      "[PrimaryAccountId](#cfn-billingconductor-billinggroup-primaryaccountid)" : String
+      "[PrimaryAccountId](#cfn-billingconductor-billinggroup-primaryaccountid)" : String,
+      "[Tags](#cfn-billingconductor-billinggroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -33,6 +34,8 @@ Properties:
   [Description](#cfn-billingconductor-billinggroup-description): String
   [Name](#cfn-billingconductor-billinggroup-name): String
   [PrimaryAccountId](#cfn-billingconductor-billinggroup-primaryaccountid): String
+  [Tags](#cfn-billingconductor-billinggroup-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-billingconductor-billinggroup-properties"></a>
@@ -50,7 +53,7 @@ Properties:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-billingconductor-billinggroup-description"></a>
-The billing group description\.   
+The description of the billing group\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -66,6 +69,12 @@ The account ID that serves as the main account in a billing group\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-billingconductor-billinggroup-tags"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-billingconductor-billinggroup-return-values"></a>
 
@@ -109,7 +118,7 @@ The following example is a billing group that takes a list of linked account IDs
 {
   "Parameters": {
       "LinkedAccountIds": {
-          "Type": "List<Number>"
+      "Type": "ListNumber"
       },
       "PrimaryAccountId": {
           "Type": "Number"
@@ -145,18 +154,18 @@ The following example is a billing group that takes a list of linked account IDs
 ```
 Parameters:
   LinkedAccountIds:
-    Type: List<Number>
+  Type: ListNumber
   PrimaryAccountId:
-    Type: Number
+      Type: Number
 Resources:
   TestBillingGroup:
-    Type: 'AWS::BillingConductor::BillingGroup'
-    Properties:
-      Name: 'TestBillingGroup'
-      Description: 'Test billing group created through CloudFormation with 1 linked account. The linked account is also the primary account.'
-      PrimaryAccountId: !Ref PrimaryAccountId
-      AccountGrouping:
-        LinkedAccountIds: !Ref LinkedAccountIds
-      ComputationPreference:
-        PricingPlanArn: !GetAtt TestPricingPlan.Arn
+      Type: 'AWS::BillingConductor::BillingGroup'
+      Properties:
+        Name: 'TestBillingGroup'
+        Description: 'Test billing group created through CloudFormation with 1 linked account. The linked account is also the primary account.'
+        PrimaryAccountId: !Ref PrimaryAccountId
+        AccountGrouping:
+            LinkedAccountIds: !Ref LinkedAccountIds
+        ComputationPreference:
+            PricingPlanArn: !GetAtt TestPricingPlan.Arn
 ```

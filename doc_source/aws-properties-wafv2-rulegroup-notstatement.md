@@ -1,6 +1,6 @@
 # AWS::WAFv2::RuleGroup NotStatement<a name="aws-properties-wafv2-rulegroup-notstatement"></a>
 
-A logical rule statement used to negate the results of another rule statement\. You provide one [Statement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-notstatement.html#cfn-wafv2-rulegroup-notstatement-statement) within the `NotStatement`\.
+A logical rule statement used to negate the results of another rule statement\. You provide one `Statement` within the `NotStatement`\.
 
 ## Syntax<a name="aws-properties-wafv2-rulegroup-notstatement-syntax"></a>
 

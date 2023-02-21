@@ -1,6 +1,6 @@
 # AWS::ApiGateway::VpcLink<a name="aws-resource-apigateway-vpclink"></a>
 
-The `AWS::ApiGateway::VpcLink` resource creates an API Gateway VPC link for a REST API to access resources in an Amazon Virtual Private Cloud \(VPC\)\. For more information, see [vpclink:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/vpclink-create/) in the `Amazon API Gateway REST API Reference`\.
+The `AWS::ApiGateway::VpcLink` resource creates an API Gateway VPC link for a REST API to access resources in an Amazon Virtual Private Cloud \(VPC\)\. For more information, see [vpclink:create](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateVpcLink.html) in the `Amazon API Gateway REST API Reference`\.
 
 ## Syntax<a name="aws-resource-apigateway-vpclink-syntax"></a>
 
@@ -36,13 +36,13 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-vpclink-properties"></a>
 
 `Description`  <a name="cfn-apigateway-vpclink-description"></a>
-A description of the VPC link\.  
+The description of the VPC link\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-apigateway-vpclink-name"></a>
-A name for the VPC link\.  
+The name used to label and identify the VPC link\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -54,7 +54,7 @@ An array of arbitrary tags \(key\-value pairs\) to associate with the VPC link\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetArns`  <a name="cfn-apigateway-vpclink-targetarns"></a>
-The ARN of network load balancer of the VPC targeted by the VPC link\. The network load balancer must be owned by the same AWS account of the API owner\.  
+The ARN of the network load balancer of the VPC targeted by the VPC link\. The network load balancer must be owned by the same AWS account of the API owner\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -189,5 +189,5 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-apigateway-vpclink--seealso"></a>
-+ [vpclink:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/vpclink-create/) in the *Amazon API Gateway REST API Reference*
++ [vpclink:create](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateVpcLink.html) in the *Amazon API Gateway REST API Reference*
 

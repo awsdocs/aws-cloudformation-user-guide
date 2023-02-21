@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lakeformation-permissions-datalocationresource-properties"></a>
 
 `CatalogId`  <a name="cfn-lakeformation-permissions-datalocationresource-catalogid"></a>
-Not currently supported by AWS CloudFormation\.  
+The identifier for the Data Catalog\. By default, it is the account ID of the caller\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3Resource`  <a name="cfn-lakeformation-permissions-datalocationresource-s3resource"></a>
-Currently not supported by AWS CloudFormation\.  
+The Amazon Resource Name \(ARN\) that uniquely identifies the data location resource\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

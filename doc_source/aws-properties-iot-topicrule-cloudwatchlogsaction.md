@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[BatchMode](#cfn-iot-topicrule-cloudwatchlogsaction-batchmode)" : Boolean,
   "[LogGroupName](#cfn-iot-topicrule-cloudwatchlogsaction-loggroupname)" : String,
   "[RoleArn](#cfn-iot-topicrule-cloudwatchlogsaction-rolearn)" : String
 }
@@ -18,11 +19,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-iot-topicrule-cloudwatchlogsaction-syntax.yaml"></a>
 
 ```
+  [BatchMode](#cfn-iot-topicrule-cloudwatchlogsaction-batchmode): Boolean
   [LogGroupName](#cfn-iot-topicrule-cloudwatchlogsaction-loggroupname): String
   [RoleArn](#cfn-iot-topicrule-cloudwatchlogsaction-rolearn): String
 ```
 
 ## Properties<a name="aws-properties-iot-topicrule-cloudwatchlogsaction-properties"></a>
+
+`BatchMode`  <a name="cfn-iot-topicrule-cloudwatchlogsaction-batchmode"></a>
+Indicates whether batches of log records will be extracted and uploaded into CloudWatch\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogGroupName`  <a name="cfn-iot-topicrule-cloudwatchlogsaction-loggroupname"></a>
 The CloudWatch log name\.  

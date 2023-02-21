@@ -2,29 +2,44 @@
 
 A list of AWS Lake Formation principals\.
 
-## Syntax<a name="aws-resource-lakeformation-datalakesettings-syntax"></a>
+## Examples<a name="aws-properties-lakeformation-datalakesettings-admins--examples"></a>
 
-To declare this entity in your AWS CloudFormation template, use the following syntax:
+### Input format for Admins resource<a name="aws-properties-lakeformation-datalakesettings-admins--examples--Input_format_for_Admins_resource"></a>
 
-### JSON<a name="aws-resource-lakeformation-datalakesettings-syntax.json"></a>
+#### JSON<a name="aws-properties-lakeformation-datalakesettings-admins--examples--Input_format_for_Admins_resource--json"></a>
 
 ```
 {
-      [
-          "[DataLakePrincipalIdentifier](aws-properties-lakeformation-datalakesettings-datalakeprincipal.md)" : String)
-      ]
-}
+    "SampleDataLakeSettings": {
+      "Type": "AWS::LakeFormation::DataLakeSettings",
+      "Properties": {
+        "Admins": [
+            DataLakePrincipalIdentifier: "arn:sample_principal_1",
+            DataLakePrincipalIdentifier: "arn:sample_principal_2"
+        ],
+        "TrustedResourceOwners": [
+            "12345678910",
+            "23456789101" 
+        ]
+      }
+    }
+  }
 ```
 
-### YAML<a name="aws-resource-lakeformation-datalakesettings-syntax.yaml"></a>
+#### YAML<a name="aws-properties-lakeformation-datalakesettings-admins--examples--Input_format_for_Admins_resource--yaml"></a>
 
 ```
-  [Admins](#cfn-lakeformation-datalakesettings-admins): 
-    - [DataLakePrincipalIdentifier](aws-properties-lakeformation-datalakesettings-datalakeprincipal.md): String
+SampleDataLakeSettings  
+  Type: AWS::LakeFormation::DataLakeSettings
+    Properties:
+      Admins:
+        - DataLakePrincipalIdentifier: 'arn:sample_principal_1'
+        - DataLakePrincipalIdentifier: 'arn:sample_principal_2'
+      TrustedResourceOwners:
+        - '12345678910'
+        - '23456789101'
 ```
-`DataLakePrincipalIdentifier` 
-A list of Amazon Resource Names \(ARNs\) of the Lake Formation Administrtor Principals that you want to make Lake Formation Administrators\.  
-For more information about ARNs, see [Amazon Resource Names \(ARNs\) and AWS Service Namespaces](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the *AWS General Reference*\.  
-*Required*: No  
-*Type*: List of DataLakePrincipal  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## See also<a name="aws-properties-lakeformation-datalakesettings-admins--seealso"></a>
+
+[AWS::LakeFormation::DataLakeSettings DataLakePrincipal ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-datalakesettings-datalakeprincipal.html)

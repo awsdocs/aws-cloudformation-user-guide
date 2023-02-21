@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-mediapackage-channel-description)" : String,
       "[EgressAccessLogs](#cfn-mediapackage-channel-egressaccesslogs)" : LogConfiguration,
+      "[HlsIngest](#cfn-mediapackage-channel-hlsingest)" : HlsIngest,
       "[Id](#cfn-mediapackage-channel-id)" : String,
       "[IngressAccessLogs](#cfn-mediapackage-channel-ingressaccesslogs)" : LogConfiguration,
       "[Tags](#cfn-mediapackage-channel-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -31,6 +32,8 @@ Properties:
   [Description](#cfn-mediapackage-channel-description): String
   [EgressAccessLogs](#cfn-mediapackage-channel-egressaccesslogs): 
     LogConfiguration
+  [HlsIngest](#cfn-mediapackage-channel-hlsingest): 
+    HlsIngest
   [Id](#cfn-mediapackage-channel-id): String
   [IngressAccessLogs](#cfn-mediapackage-channel-ingressaccesslogs): 
     LogConfiguration
@@ -47,9 +50,15 @@ Any descriptive information that you want to add to the channel for future ident
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EgressAccessLogs`  <a name="cfn-mediapackage-channel-egressaccesslogs"></a>
- Configures egress access logs\.   
+Configures egress access logs\.  
 *Required*: No  
 *Type*: [LogConfiguration](aws-properties-mediapackage-channel-logconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`HlsIngest`  <a name="cfn-mediapackage-channel-hlsingest"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [HlsIngest](aws-properties-mediapackage-channel-hlsingest.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-mediapackage-channel-id"></a>
@@ -59,7 +68,7 @@ Unique identifier that you assign to the channel\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IngressAccessLogs`  <a name="cfn-mediapackage-channel-ingressaccesslogs"></a>
- Configures ingress access logs\.   
+Configures ingress access logs\.  
 *Required*: No  
 *Type*: [LogConfiguration](aws-properties-mediapackage-channel-logconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

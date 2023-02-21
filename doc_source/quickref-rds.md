@@ -6,7 +6,7 @@
 + [Amazon RDS DBSecurityGroup resource for CIDR range](#scenario-rds-security-group-cidr)
 + [Amazon RDS DBSecurityGroup with an Amazon EC2 security group](#scenario-rds-security-group-ec2)
 + [Multiple VPC security groups](#scenario-multiple-vpc-security-groups)
-+ [Amazon RDS database instance in a VPC security group](#w11339ab1c23c21c76c15)
++ [Amazon RDS database instance in a VPC security group](#w2ab1c23c21c80c15)
 
 ## Amazon RDS DB instance resource<a name="scenario-rds-instance"></a>
 
@@ -22,7 +22,7 @@ This example shows an Amazon RDS DB Instance resource\. Because the optional Eng
  5.         {"Ref" : "MyDbSecurityByEC2SecurityGroup"}, {"Ref" : "MyDbSecurityByCIDRIPGroup"} ],
  6.      "AllocatedStorage" : "5",
  7.      "DBInstanceClass" : "db.t2.small",
- 8.      "Engine" : "mysql",
+ 8.      "Engine" : "MySQL",
  9.      "MasterUsername" : "MyName",
 10.      "MasterUserPassword" : "MyPassword"
 11.  },
@@ -41,7 +41,7 @@ This example shows an Amazon RDS DB Instance resource\. Because the optional Eng
  6.     - Ref: MyDbSecurityByCIDRIPGroup
  7.     AllocatedStorage: '5'
  8.     DBInstanceClass: db.t2.small
- 9.     Engine: mysql
+ 9.     Engine: MySQL
 10.     MasterUsername: MyName
 11.     MasterUserPassword: MyPassword
 12.   DeletionPolicy: Snapshot
@@ -130,7 +130,7 @@ To do this, you define an EC2 security group and then use the intrinsic Ref func
    "Type": "AWS::RDS::DBInstance",
    "Properties": {
       "DBName"            : { "Ref" : "DBName" },
-      "Engine"            : "mysql",
+      "Engine"            : "MySQL",
       "MasterUsername"    : { "Ref" : "DBUsername" },
       "DBInstanceClass"   : { "Ref" : "DBClass" },
       "DBSecurityGroups"  : [ { "Ref" : "DBSecurityGroup" } ],
@@ -169,7 +169,7 @@ DBInstance:
   Properties:
     DBName:
       Ref: DBName
-    Engine: mysql
+    Engine: MySQL
     MasterUsername:
       Ref: DBUsername
     DBInstanceClass:
@@ -219,7 +219,7 @@ This example shows an [AWS::RDS::DBSecurityGroup](https://docs.aws.amazon.com/AW
            "DBName" : {"Ref": "MyDBName" },
             "DBSecurityGroups" : [ { "Ref" : "DbSecurityByEC2SecurityGroup" } ],
             "DBSubnetGroupName" : { "Ref" : "MyDBSubnetGroup" },
-            "Engine" : "mysql",
+            "Engine" : "MySQL",
            "MasterUserPassword": { "Ref" : "MyDBPassword" },
            "MasterUsername"    : { "Ref" : "MyDBUsername" }
         },
@@ -258,7 +258,7 @@ Resources:
       - Ref: DbSecurityByEC2SecurityGroup
       DBSubnetGroupName:
         Ref: MyDBSubnetGroup
-      Engine: mysql
+      Engine: MySQL
       MasterUserPassword:
         Ref: MyDBPassword
       MasterUsername:
@@ -277,7 +277,7 @@ Resources:
         EC2SecurityGroupOwnerId: '111122223333'
 ```
 
-## Amazon RDS database instance in a VPC security group<a name="w11339ab1c23c21c76c15"></a>
+## Amazon RDS database instance in a VPC security group<a name="w2ab1c23c21c80c15"></a>
 
 This example shows an Amazon RDS database instance associated with an Amazon EC2 VPC security group\.
 
@@ -301,7 +301,7 @@ This example shows an Amazon RDS database instance associated with an Amazon EC2
     "Type": "AWS::RDS::DBInstance",
     "Properties": {
       "DBName"            : { "Ref" : "DBName" },
-      "Engine"            : "mysql",
+      "Engine"            : "MySQL",
       "MultiAZ"           : { "Ref": "MultiAZDatabase" },
       "MasterUsername"    : { "Ref" : "DBUser" },
       "DBInstanceClass"   : { "Ref" : "DBClass" },
@@ -331,7 +331,7 @@ DBInstance:
   Properties:
     DBName:
       Ref: DBName
-    Engine: mysql
+    Engine: MySQL
     MultiAZ:
       Ref: MultiAZDatabase
     MasterUsername:

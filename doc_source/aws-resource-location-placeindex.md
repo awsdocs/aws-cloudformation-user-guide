@@ -1,6 +1,9 @@
 # AWS::Location::PlaceIndex<a name="aws-resource-location-placeindex"></a>
 
-The `AWS::Location::PlaceIndex` resource specifies a place index resource in your AWS account, which supports Places functions with geospatial data sourced from your chosen data provider\.
+Specifies a place index resource in your AWS account\. Use a place index resource to geocode addresses and other text queries by using the `SearchPlaceIndexForText` operation, and reverse geocode coordinates by using the `SearchPlaceIndexForPosition` operation, and enable autosuggestions by using the `SearchPlaceIndexForSuggestions` operation\.
+
+**Note**  
+If your application is tracking or routing assets you use in your business, such as delivery vehicles or employees, you must not use Esri as your geolocation provider\. See section 82 of the [AWS service terms](http://aws.amazon.com/service-terms) for more details\.
 
 ## Syntax<a name="aws-resource-location-placeindex-syntax"></a>
 
@@ -37,20 +40,21 @@ Properties:
 ## Properties<a name="aws-resource-location-placeindex-properties"></a>
 
 `DataSource`  <a name="cfn-location-placeindex-datasource"></a>
-Specifies the data provider of geospatial data\.  
-This field is case\-sensitive\. Enter the valid values as shown\. For example, entering `HERE` will return an error\.
+Specifies the geospatial data provider for the new place index\.  
+This field is case\-sensitive\. Enter the valid values as shown\. For example, entering `HERE` returns an error\.
 Valid values include:  
-+ `Esri`
-+ `Here`
++ `Esri` – For additional information about [Esri](https://docs.aws.amazon.com/location/latest/developerguide/esri.html)'s coverage in your region of interest, see [Esri details on geocoding coverage](https://developers.arcgis.com/rest/geocode/api-reference/geocode-coverage.htm)\.
++ `Grab` – Grab provides place index functionality for Southeast Asia\. For additional information about [GrabMaps](https://docs.aws.amazon.com/location/latest/developerguide/grab.html)' coverage, see [GrabMaps countries and areas covered](https://docs.aws.amazon.com/location/latest/developerguide/grab.html#grab-coverage-area)\.
++ `Here` – For additional information about [HERE Technologies](https://docs.aws.amazon.com/location/latest/developerguide/HERE.html)' coverage in your region of interest, see [HERE details on goecoding coverage](https://developer.here.com/documentation/geocoder/dev_guide/topics/coverage-geocoder.html)\.
 **Important**  
-Place index resources using HERE as a data provider can't be used to [store](https://docs.aws.amazon.com/location-places/latest/APIReference/API_DataSourceConfiguration.html) results for locations in Japan\. For more information, see the [AWS Service Terms](http://aws.amazon.com/service-terms/) for Amazon Location Service\.
-For additional details on data providers, see the [Amazon Location Service data providers page](https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html)\.  
+If you specify HERE Technologies \(`Here`\) as the data provider, you may not [store results](https://docs.aws.amazon.com/location-places/latest/APIReference/API_DataSourceConfiguration.html) for locations in Japan\. For more information, see the [AWS Service Terms](http://aws.amazon.com/service-terms/) for Amazon Location Service\.
+For additional information , see [Data providers](https://docs.aws.amazon.com/location/latest/developerguide/what-is-data-provider.html) on the *Amazon Location Service Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DataSourceConfiguration`  <a name="cfn-location-placeindex-datasourceconfiguration"></a>
-Specifies the data storage option for requesting Places\.  
+Specifies the data storage option requesting Places\.  
 *Required*: No  
 *Type*: [DataSourceConfiguration](aws-properties-location-placeindex-datasourceconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -64,7 +68,7 @@ The optional description for the place index resource\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IndexName`  <a name="cfn-location-placeindex-indexname"></a>
-The name of the place index resource\.  
+The name of the place index resource\.   
 Requirements:  
 + Contain only alphanumeric characters \(A–Z, a–z, 0–9\), hyphens \(\-\), periods \(\.\), and underscores \(\_\)\.
 + Must be a unique place index resource name\.

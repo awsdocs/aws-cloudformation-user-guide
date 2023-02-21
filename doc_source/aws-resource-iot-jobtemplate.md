@@ -12,17 +12,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoT::JobTemplate",
   "Properties" : {
-      "[AbortConfig](#cfn-iot-jobtemplate-abortconfig)" : Json,
+      "[AbortConfig](#cfn-iot-jobtemplate-abortconfig)" : AbortConfig,
       "[Description](#cfn-iot-jobtemplate-description)" : String,
       "[Document](#cfn-iot-jobtemplate-document)" : String,
       "[DocumentSource](#cfn-iot-jobtemplate-documentsource)" : String,
       "[JobArn](#cfn-iot-jobtemplate-jobarn)" : String,
-      "[JobExecutionsRetryConfig](#cfn-iot-jobtemplate-jobexecutionsretryconfig)" : Json,
-      "[JobExecutionsRolloutConfig](#cfn-iot-jobtemplate-jobexecutionsrolloutconfig)" : Json,
+      "[JobExecutionsRetryConfig](#cfn-iot-jobtemplate-jobexecutionsretryconfig)" : JobExecutionsRetryConfig,
+      "[JobExecutionsRolloutConfig](#cfn-iot-jobtemplate-jobexecutionsrolloutconfig)" : JobExecutionsRolloutConfig,
       "[JobTemplateId](#cfn-iot-jobtemplate-jobtemplateid)" : String,
-      "[PresignedUrlConfig](#cfn-iot-jobtemplate-presignedurlconfig)" : Json,
+      "[PresignedUrlConfig](#cfn-iot-jobtemplate-presignedurlconfig)" : PresignedUrlConfig,
       "[Tags](#cfn-iot-jobtemplate-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[TimeoutConfig](#cfn-iot-jobtemplate-timeoutconfig)" : Json
+      "[TimeoutConfig](#cfn-iot-jobtemplate-timeoutconfig)" : TimeoutConfig
     }
 }
 ```
@@ -32,18 +32,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::IoT::JobTemplate
 Properties: 
-  [AbortConfig](#cfn-iot-jobtemplate-abortconfig): Json
+  [AbortConfig](#cfn-iot-jobtemplate-abortconfig): 
+    AbortConfig
   [Description](#cfn-iot-jobtemplate-description): String
   [Document](#cfn-iot-jobtemplate-document): String
   [DocumentSource](#cfn-iot-jobtemplate-documentsource): String
   [JobArn](#cfn-iot-jobtemplate-jobarn): String
-  [JobExecutionsRetryConfig](#cfn-iot-jobtemplate-jobexecutionsretryconfig): Json
-  [JobExecutionsRolloutConfig](#cfn-iot-jobtemplate-jobexecutionsrolloutconfig): Json
+  [JobExecutionsRetryConfig](#cfn-iot-jobtemplate-jobexecutionsretryconfig): 
+    JobExecutionsRetryConfig
+  [JobExecutionsRolloutConfig](#cfn-iot-jobtemplate-jobexecutionsrolloutconfig): 
+    JobExecutionsRolloutConfig
   [JobTemplateId](#cfn-iot-jobtemplate-jobtemplateid): String
-  [PresignedUrlConfig](#cfn-iot-jobtemplate-presignedurlconfig): Json
+  [PresignedUrlConfig](#cfn-iot-jobtemplate-presignedurlconfig): 
+    PresignedUrlConfig
   [Tags](#cfn-iot-jobtemplate-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-  [TimeoutConfig](#cfn-iot-jobtemplate-timeoutconfig): Json
+  [TimeoutConfig](#cfn-iot-jobtemplate-timeoutconfig): 
+    TimeoutConfig
 ```
 
 ## Properties<a name="aws-resource-iot-jobtemplate-properties"></a>
@@ -51,7 +56,7 @@ Properties:
 `AbortConfig`  <a name="cfn-iot-jobtemplate-abortconfig"></a>
 The criteria that determine when and how a job abort takes place\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [AbortConfig](aws-properties-iot-jobtemplate-abortconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-iot-jobtemplate-description"></a>
@@ -86,13 +91,13 @@ The ARN of the job to use as the basis for the job template\.
 `JobExecutionsRetryConfig`  <a name="cfn-iot-jobtemplate-jobexecutionsretryconfig"></a>
 Allows you to create the criteria to retry a job\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [JobExecutionsRetryConfig](aws-properties-iot-jobtemplate-jobexecutionsretryconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JobExecutionsRolloutConfig`  <a name="cfn-iot-jobtemplate-jobexecutionsrolloutconfig"></a>
 Allows you to create a staged rollout of a job\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [JobExecutionsRolloutConfig](aws-properties-iot-jobtemplate-jobexecutionsrolloutconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `JobTemplateId`  <a name="cfn-iot-jobtemplate-jobtemplateid"></a>
@@ -104,7 +109,7 @@ A unique identifier for the job template\. We recommend using a UUID\. Alpha\-nu
 `PresignedUrlConfig`  <a name="cfn-iot-jobtemplate-presignedurlconfig"></a>
 Configuration for pre\-signed S3 URLs\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [PresignedUrlConfig](aws-properties-iot-jobtemplate-presignedurlconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-iot-jobtemplate-tags"></a>
@@ -116,7 +121,7 @@ Metadata that can be used to manage the job template\.
 `TimeoutConfig`  <a name="cfn-iot-jobtemplate-timeoutconfig"></a>
 Specifies the amount of time each device has to finish its execution of the job\. A timer is started when the job execution status is set to `IN_PROGRESS`\. If the job execution status is not set to another terminal state before the timer expires, it will be automatically set to `TIMED_OUT`\.   
 *Required*: No  
-*Type*: Json  
+*Type*: [TimeoutConfig](aws-properties-iot-jobtemplate-timeoutconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-iot-jobtemplate-return-values"></a>

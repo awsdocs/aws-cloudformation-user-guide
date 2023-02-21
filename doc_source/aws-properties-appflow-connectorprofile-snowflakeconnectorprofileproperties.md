@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile SnowflakeConnectorProfileProperties<a name="aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties"></a>
 
- The `SnowflakeConnectorProfileProperties` property type specifies the connector\-specific profile properties required when using Snowflake\. 
+ The connector\-specific profile properties required when using Snowflake\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-snowflakeconnectorprofileproperties-syntax"></a>
 

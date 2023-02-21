@@ -1,6 +1,6 @@
 # AWS::IoTSiteWise::AccessPolicy AccessPolicyIdentity<a name="aws-properties-iotsitewise-accesspolicy-accesspolicyidentity"></a>
 
-The identity \(AWS SSO user, AWS SSO group, or IAM user\) to which this access policy applies\.
+The identity \(IAM Identity Center user, IAM Identity Center group, or IAM user\) to which this access policy applies\.
 
 ## Syntax<a name="aws-properties-iotsitewise-accesspolicy-accesspolicyidentity-syntax"></a>
 
@@ -42,7 +42,7 @@ An IAM user identity\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `User`  <a name="cfn-iotsitewise-accesspolicy-accesspolicyidentity-user"></a>
-The AWS SSO user to which this access policy maps\.  
+The IAM Identity Center user to which this access policy maps\.  
 *Required*: No  
 *Type*: [User](aws-properties-iotsitewise-accesspolicy-user.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

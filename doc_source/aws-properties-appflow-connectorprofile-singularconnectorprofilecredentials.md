@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile SingularConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-singularconnectorprofilecredentials"></a>
 
- The `SingularConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required when using Singular\. 
+ The connector\-specific profile credentials required when using Singular\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-singularconnectorprofilecredentials-syntax"></a>
 

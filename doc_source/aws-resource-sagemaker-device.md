@@ -46,7 +46,7 @@ The name of the fleet the device belongs to\.
 *Minimum*: `1`  
 *Maximum*: `63`  
 *Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-sagemaker-device-tags"></a>
 An array of key\-value pairs that contain metadata to help you categorize and organize your devices\. Each tag consists of a key and a value, both of which you define\.  
@@ -59,6 +59,6 @@ An array of key\-value pairs that contain metadata to help you categorize and or
 
 ### Ref<a name="aws-resource-sagemaker-device-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returnsWhen you pass the logical ID of this resource to the intrinsic `Ref` function, Ref returns the DeviceFleetName\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the DeviceFleetName\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

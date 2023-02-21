@@ -1,6 +1,6 @@
 # AWS::DataSync::LocationEFS<a name="aws-resource-datasync-locationefs"></a>
 
-The `AWS::DataSync::LocationEFS` resource specifies an endpoint for an Amazon EFS location\.
+The `AWS::DataSync::LocationEFS` resource creates an endpoint for an Amazon EFS file system\. AWS DataSync can access this endpoint as a source or destination location\.
 
 ## Syntax<a name="aws-resource-datasync-locationefs-syntax"></a>
 
@@ -12,8 +12,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::DataSync::LocationEFS",
   "Properties" : {
+      "[AccessPointArn](#cfn-datasync-locationefs-accesspointarn)" : String,
       "[Ec2Config](#cfn-datasync-locationefs-ec2config)" : Ec2Config,
       "[EfsFilesystemArn](#cfn-datasync-locationefs-efsfilesystemarn)" : String,
+      "[FileSystemAccessRoleArn](#cfn-datasync-locationefs-filesystemaccessrolearn)" : String,
+      "[InTransitEncryption](#cfn-datasync-locationefs-intransitencryption)" : String,
       "[Subdirectory](#cfn-datasync-locationefs-subdirectory)" : String,
       "[Tags](#cfn-datasync-locationefs-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -25,9 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::DataSync::LocationEFS
 Properties: 
+  [AccessPointArn](#cfn-datasync-locationefs-accesspointarn): String
   [Ec2Config](#cfn-datasync-locationefs-ec2config): 
     Ec2Config
   [EfsFilesystemArn](#cfn-datasync-locationefs-efsfilesystemarn): String
+  [FileSystemAccessRoleArn](#cfn-datasync-locationefs-filesystemaccessrolearn): String
+  [InTransitEncryption](#cfn-datasync-locationefs-intransitencryption): String
   [Subdirectory](#cfn-datasync-locationefs-subdirectory): String
   [Tags](#cfn-datasync-locationefs-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -35,28 +41,47 @@ Properties:
 
 ## Properties<a name="aws-resource-datasync-locationefs-properties"></a>
 
-`Ec2Config`  <a name="cfn-datasync-locationefs-ec2config"></a>
-The subnet and security group that the Amazon EFS file system uses\. The security group that you provide needs to be able to communicate with the security group on the mount target in the subnet specified\.  
-The exact relationship between security group M \(of the mount target\) and security group S \(which you provide for DataSync to use at this stage\) is as follows:   
-+  Security group M \(which you associate with the mount target\) must allow inbound access for the Transmission Control Protocol \(TCP\) on the NFS port \(2049\) from security group S\. You can enable inbound connections either by IP address \(CIDR range\) or security group\. 
-+ Security group S \(provided to DataSync to access EFS\) should have a rule that enables outbound connections to the NFS port on one of the file system’s mount targets\. You can enable outbound connections either by IP address \(CIDR range\) or security group\.
+`AccessPointArn`  <a name="cfn-datasync-locationefs-accesspointarn"></a>
+Specifies the Amazon Resource Name \(ARN\) of the access point that DataSync uses to access the Amazon EFS file system\.  
+*Required*: No  
+*Type*: String  
+*Maximum*: `128`  
+*Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):elasticfilesystem:[a-z\-0-9]+:[0-9]{12}:access-point/fsap-[0-9a-f]{8,40}$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-  For information about security groups and mount targets, see [Security Groups for Amazon EC2 Instances and Mount Targets](https://docs.aws.amazon.com/efs/latest/ug/security-considerations.html#network-access) in the *Amazon EFS User Guide\.* 
+`Ec2Config`  <a name="cfn-datasync-locationefs-ec2config"></a>
+Specifies the subnet and security groups DataSync uses to access your Amazon EFS file system\.  
 *Required*: Yes  
 *Type*: [Ec2Config](aws-properties-datasync-locationefs-ec2config.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EfsFilesystemArn`  <a name="cfn-datasync-locationefs-efsfilesystemarn"></a>
-The Amazon Resource Name \(ARN\) for the Amazon EFS file system\.  
-*Required*: Yes  
+Specifies the ARN for the Amazon EFS file system\.  
+*Required*: No  
 *Type*: String  
 *Maximum*: `128`  
 *Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):elasticfilesystem:[a-z\-0-9]*:[0-9]{12}:file-system/fs-.*$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`FileSystemAccessRoleArn`  <a name="cfn-datasync-locationefs-filesystemaccessrolearn"></a>
+Specifies an AWS Identity and Access Management \(IAM\) role that DataSync assumes when mounting the Amazon EFS file system\.  
+*Required*: No  
+*Type*: String  
+*Maximum*: `2048`  
+*Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):iam::[0-9]{12}:role/.*$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`InTransitEncryption`  <a name="cfn-datasync-locationefs-intransitencryption"></a>
+Specifies whether you want DataSync to use Transport Layer Security \(TLS\) 1\.2 encryption when it copies data to or from the Amazon EFS file system\.  
+If you specify an access point using `AccessPointArn` or an IAM role using `FileSystemAccessRoleArn`, you must set this parameter to `TLS1_2`\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `NONE | TLS1_2`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Subdirectory`  <a name="cfn-datasync-locationefs-subdirectory"></a>
-A subdirectory in the location’s path\. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination\. By default, AWS DataSync uses the root directory\.  
- `Subdirectory` must be specified with forward slashes\. For example, `/path/to/folder`\.
+Specifies a mount path for your Amazon EFS file system\. This is where DataSync reads or writes data \(depending on if this is a source or destination location\)\. By default, DataSync uses the root directory, but you can also include subdirectories\.  
+You must specify a value with forward slashes \(for example, `/path/to/folder`\)\.
 *Required*: No  
 *Type*: String  
 *Maximum*: `4096`  
@@ -64,7 +89,7 @@ A subdirectory in the location’s path\. This subdirectory in the EFS file syst
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-datasync-locationefs-tags"></a>
-The key\-value pair that represents a tag that you want to add to the resource\. The value can be an empty string\. This value helps you manage, filter, and search for your resources\. We recommend that you create a name tag for your location\.  
+Specifies the key\-value pair that represents a tag that you want to add to the resource\. The value can be an empty string\. This value helps you manage, filter, and search for your resources\. We recommend that you create a name tag for your location\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `50`  
@@ -96,49 +121,96 @@ The URI of the Amazon EFS file system\.
 
 ## Examples<a name="aws-resource-datasync-locationefs--examples"></a>
 
+### Creating an Amazon EFS location<a name="aws-resource-datasync-locationefs--examples--Creating_an_Amazon_EFS_location"></a>
 
+The following example creates a DataSync location for an Amazon EFS file system\.
 
-### Create an Amazon EFS location for DataSync<a name="aws-resource-datasync-locationefs--examples--Create_an_Amazon_EFS_location_for_DataSync"></a>
-
-The following example specifies an EFS location to be used by DataSync, with the subdirectory `MySubdirectory`\.
-
-#### JSON<a name="aws-resource-datasync-locationefs--examples--Create_an_Amazon_EFS_location_for_DataSync--json"></a>
+#### JSON<a name="aws-resource-datasync-locationefs--examples--Creating_an_Amazon_EFS_location--json"></a>
 
 ```
 {
-"AWSTemplateFormatVersion": "2010-09-09",
-"Description": "Specifies an EFS location for DataSync",
-"Resources": 
-  {
-  "LocationEFS": {
-    "Type": "AWS::DataSync::LocationEFS",
-    "Properties": {
-      "Ec2Config": {
-      "SecurityGroupArns": [
-        "arn:aws:ec2:us-east-2:11122233344:security-group/sg-0117195988293d62f"
-        ],
-        "SubnetArn": "arn:aws:ec2:us-east-2:11122233344:subnet/subnet-f45a0e678"
-      },
-      "EfsFilesystemArn": "arn:aws:elasticfilesystem:us-east-2:111222333444:file-system/fs-12345efs",
-      "Subdirectory": "/MySubdirectory"
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Specifies a DataSync location for an Amazon EFS file system.",
+    "Resources": {
+        "LocationEFS": {
+            "Type": "AWS::DataSync::LocationEFS",
+            "Properties": {
+                "Ec2Config": {
+                    "SecurityGroupArns": [
+                        "arn:aws:ec2:us-east-2:11122233344:security-group/sg-1234567890abcdef2"
+                    ],
+                    "SubnetArn": "arn:aws:ec2:us-east-2:11122233344:subnet/subnet-1234567890abcdef1"
+                },
+                "EfsFilesystemArn": "arn:aws:elasticfilesystem:us-east-2:111222333444:file-system/fs-021345abcdef6789",
+                "Subdirectory": "/mount/path"
+            }
+        }
     }
-  }
 }
 ```
 
-#### YAML<a name="aws-resource-datasync-locationefs--examples--Create_an_Amazon_EFS_location_for_DataSync--yaml"></a>
+#### YAML<a name="aws-resource-datasync-locationefs--examples--Creating_an_Amazon_EFS_location--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: Specifies an EFS location for DataSync
+Description: Specifies a DataSync location for an Amazon EFS file system.
 Resources:
   LocationEFS:
     Type: AWS::DataSync::LocationEFS
       Properties: 
         Ec2Config: 
           SecurityGroupArns: 
-            - arn:aws:ec2:us-east-2:11122233344:security-group/sg-0117195988293d62f
-          SubnetArn: arn:aws:ec2:us-east-2:11122233344:subnet/subnet-f45a0e678
-        EfsFilesystemArn: arn:aws:elasticfilesystem:us-east-2:111222333444:file-system/fs-12345efs
-        Subdirectory: /MySubdirectory
+            - arn:aws:ec2:us-east-2:11122233344:security-group/sg-1234567890abcdef2
+          SubnetArn: arn:aws:ec2:us-east-2:11122233344:subnet/subnet-1234567890abcdef1
+        EfsFilesystemArn: arn:aws:elasticfilesystem:us-east-2:111222333444:file-system/fs-021345abcdef6789
+        Subdirectory: /mount/path
+```
+
+### Creating an Amazon EFS location with a higher level of security<a name="aws-resource-datasync-locationefs--examples--Creating_an_Amazon_EFS_location_with_a_higher_level_of_security"></a>
+
+The following example creates a DataSync location for an Amazon EFS file system that's configured for restricted access\.
+
+#### JSON<a name="aws-resource-datasync-locationefs--examples--Creating_an_Amazon_EFS_location_with_a_higher_level_of_security--json"></a>
+
+```
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Specifies a DataSync location for an Amazon EFS file system configured for restricted access.",
+    "Resources": {
+        "LocationEFS": {
+            "Type": "AWS::DataSync::LocationEFS",
+            "Properties": {
+                "AccessPointArn": "arn:aws:elasticfilesystem:us-east-2:111222333444:access-point/fsap-1234567890abcdef0",
+                "Ec2Config": {
+                    "SecurityGroupArns": [
+                        "arn:aws:ec2:us-east-2:11122233344:security-group/sg-1234567890abcdef2"
+                    ],
+                    "SubnetArn": "arn:aws:ec2:us-east-2:11122233344:subnet/subnet-1234567890abcdef1"
+                },
+                "EfsFilesystemArn": "arn:aws:elasticfilesystem:us-east-2:111222333444:file-system/fs-021345abcdef6789",
+                "FileSystemAccessRoleArn": "arn:aws:iam::111222333444:role/AllowDataSyncAccess",
+                "InTransitEncryption": "TLS1_2"
+            }
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-datasync-locationefs--examples--Creating_an_Amazon_EFS_location_with_a_higher_level_of_security--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: Specifies a DataSync location for an Amazon EFS file system configured for restricted access.
+Resources:
+  LocationEFS:
+    Type: AWS::DataSync::LocationEFS
+      Properties: 
+        AccessPointArn: arn:aws:elasticfilesystem:us-east-2:111222333444:access-point/fsap-1234567890abcdef0
+        Ec2Config: 
+          SecurityGroupArns: 
+            - arn:aws:ec2:us-east-2:11122233344:security-group/sg-1234567890abcdef2
+          SubnetArn: arn:aws:ec2:us-east-2:11122233344:subnet/subnet-1234567890abcdef1
+        EfsFilesystemArn: arn:aws:elasticfilesystem:us-east-2:111222333444:file-system/fs-021345abcdef6789
+        FileSystemAccessRoleArn: arn:aws:iam::111222333444:role/AllowDataSyncAccess
+        InTransitEncryption: TLS1_2
 ```

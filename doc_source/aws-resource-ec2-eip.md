@@ -86,7 +86,7 @@ Updates to the `Tags` property may require *some interruptions*\. Updates on an 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TransferAddress`  <a name="cfn-ec2-eip-transferaddress"></a>
-The Elastic IP address you are accepting for transfer\.  
+The Elastic IP address you are accepting for transfer\. You can only accept one transferred address\. For more information on Elastic IP address transfers, see [Transfer Elastic IP addresses](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#transfer-EIPs-intro) in the *Amazon Virtual Private Cloud User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
