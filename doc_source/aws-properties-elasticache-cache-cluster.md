@@ -161,7 +161,7 @@ Use this parameter only when you are creating a cluster outside of an Amazon Vir
 `CacheSubnetGroupName`  <a name="cfn-elasticache-cachecluster-cachesubnetgroupname"></a>
 The name of the subnet group to be used for the cluster\.  
 Use this parameter only when you are creating a cluster in an Amazon Virtual Private Cloud \(Amazon VPC\)\.  
-If you're going to launch your cluster in an Amazon VPC, you need to create a subnet group before you start creating a cluster\. For more information, see [AWS::ElastiCache::SubnetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html)\.
+If you're going to launch your cluster in an Amazon VPC, you need to create a subnet group before you start creating a cluster\. For more information, see [AWS::ElastiCache::SubnetGroup]((https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-subnetgroup.html)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
