@@ -65,3 +65,6 @@ The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of
 
 `ProfileVersionArn`  <a name="ProfileVersionArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the Signing Profile Version\.
+
+`ProfileName` <a name="ProfileName-fn::getatt"></a>
+The Name of the Signing Profile.
