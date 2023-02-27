@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Action](#cfn-appmesh-route-tcproute-action)" : TcpRouteAction,
+  "[Match](#cfn-appmesh-route-tcproute-match)" : TcpRouteMatch,
   "[Timeout](#cfn-appmesh-route-tcproute-timeout)" : TcpTimeout
 }
 ```
@@ -20,6 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Action](#cfn-appmesh-route-tcproute-action): 
     TcpRouteAction
+  [Match](#cfn-appmesh-route-tcproute-match): 
+    TcpRouteMatch
   [Timeout](#cfn-appmesh-route-tcproute-timeout): 
     TcpTimeout
 ```
@@ -30,6 +33,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The action to take if a match is determined\.  
 *Required*: Yes  
 *Type*: [TcpRouteAction](aws-properties-appmesh-route-tcprouteaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Match`  <a name="cfn-appmesh-route-tcproute-match"></a>
+An object that represents the criteria for determining a request match\.  
+*Required*: No  
+*Type*: [TcpRouteMatch](aws-properties-appmesh-route-tcproutematch.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Timeout`  <a name="cfn-appmesh-route-tcproute-timeout"></a>

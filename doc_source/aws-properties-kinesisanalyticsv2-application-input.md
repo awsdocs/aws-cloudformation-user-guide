@@ -79,3 +79,4 @@ The name prefix to use when creating an in\-application stream\. Suppose that yo
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-input--seealso"></a>
 +  [Input](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_Input.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

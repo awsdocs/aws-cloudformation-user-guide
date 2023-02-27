@@ -25,11 +25,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractiontype-properties"></a>
 
 `EventAction`  <a name="cfn-cognito-userpoolriskconfigurationattachment-accounttakeoveractiontype-eventaction"></a>
-The event action\.  
+The action to take in response to the account takeover action\. Valid values are as follows:  
 +  `BLOCK` Choosing this action will block the request\.
-+  `MFA_IF_CONFIGURED` Throw MFA challenge if user has configured it, else allow the request\.
-+  `MFA_REQUIRED` Throw MFA challenge if user has configured it, else block the request\.
-+  `NO_ACTION` Allow the user sign\-in\.
++  `MFA_IF_CONFIGURED` Present an MFA challenge if user has configured it, else allow the request\.
++  `MFA_REQUIRED` Present an MFA challenge if user has configured it, else block the request\.
++  `NO_ACTION` Allow the user to sign in\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `BLOCK | MFA_IF_CONFIGURED | MFA_REQUIRED | NO_ACTION`  

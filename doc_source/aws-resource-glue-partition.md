@@ -70,3 +70,4 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 ## See also<a name="aws-resource-glue-partition--seealso"></a>
 +  [CreatePartition Action](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-CreatePartition) in the *AWS Glue Developer Guide* 
 +  [Partition Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-Partition) in the *AWS Glue Developer Guide* 
+

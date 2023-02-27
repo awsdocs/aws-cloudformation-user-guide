@@ -14,7 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Name](#cfn-gamelift-build-name)" : String,
       "[OperatingSystem](#cfn-gamelift-build-operatingsystem)" : String,
-      "[StorageLocation](#cfn-gamelift-build-storagelocation)" : S3Location,
+      "[StorageLocation](#cfn-gamelift-build-storagelocation)" : StorageLocation,
       "[Version](#cfn-gamelift-build-version)" : String
     }
 }
@@ -28,7 +28,7 @@ Properties:
   [Name](#cfn-gamelift-build-name): String
   [OperatingSystem](#cfn-gamelift-build-operatingsystem): String
   [StorageLocation](#cfn-gamelift-build-storagelocation): 
-    S3Location
+    StorageLocation
   [Version](#cfn-gamelift-build-version): String
 ```
 
@@ -43,16 +43,17 @@ A descriptive label that is associated with a build\. Build names do not need to
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OperatingSystem`  <a name="cfn-gamelift-build-operatingsystem"></a>
-The operating system that the game server binaries are built to run on\. This value determines the type of fleet resources that you can use for this build\. If your game build contains multiple executables, they all must run on the same operating system\. If an operating system is not specified when creating a build, Amazon GameLift uses the default value \(WINDOWS\_2012\)\. This value cannot be changed later\.  
+The operating system that you built the game server binaries to run on\. This value determines the type of fleet resources that you can use for this build\. If your game build contains multiple executables, they all must run on the same operating system\. If an operating system is not specified when creating a build, GameLift uses the default value \(WINDOWS\_2012\)\. This value cannot be changed later\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `AMAZON_LINUX | AMAZON_LINUX_2 | WINDOWS_2012`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageLocation`  <a name="cfn-gamelift-build-storagelocation"></a>
-Information indicating where your game build files are stored\. Use this parameter only when creating a build with files stored in an S3 bucket that you own\. The storage location must specify an S3 bucket name and key\. The location must also specify a role ARN that you set up to allow Amazon GameLift to access your S3 bucket\. The S3 bucket and your new build must be in the same Region\.  
+Information indicating where your game build files are stored\. Use this parameter only when creating a build with files stored in an Amazon S3 bucket that you own\. The storage location must specify an Amazon S3 bucket name and key\. The location must also specify a role ARN that you set up to allow Amazon GameLift to access your Amazon S3 bucket\. The S3 bucket and your new build must be in the same Region\.  
+If a `StorageLocation` is specified, the size of your file can be found in your Amazon S3 bucket\. Amazon GameLift will report a `SizeOnDisk` of 0\.   
 *Required*: No  
-*Type*: [S3Location](aws-properties-gamelift-build-storagelocation.md)  
+*Type*: [StorageLocation](aws-properties-gamelift-build-storagelocation.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Version`  <a name="cfn-gamelift-build-version"></a>
@@ -71,11 +72,18 @@ Version information that is associated with this build\. Version strings do not 
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-gamelift-build-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-gamelift-build-return-values-fn--getatt-fn--getatt"></a>
+
+`BuildId`  <a name="BuildId-fn::getatt"></a>
+Property description not available\.
+
 ## Examples<a name="aws-resource-gamelift-build--examples"></a>
 
 ### Create a Custom Game Server Build<a name="aws-resource-gamelift-build--examples--Create_a_Custom_Game_Server_Build"></a>
 
-The following example creates a GameLift build named `MyGameServerBuild`\. The build package is located in an S3 bucket, specified by the `S3Bucket` and `S3Key` input parameters\. The example also creates the AWS Identity and Access Management \(IAM\) role that GameLift assumes so that it has permissions to download the build package files\.
+The following example creates a GameLift build named `MyGameServerBuild`\. The build package is located in an S3 bucket, specified by the `S3Bucket` and `S3Key` input parameters\. The example also creates the AWS Identity and Access Management role that GameLift assumes so that it has permissions to download the build package files\.
 
 #### JSON<a name="aws-resource-gamelift-build--examples--Create_a_Custom_Game_Server_Build--json"></a>
 
@@ -188,7 +196,8 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-gamelift-build--seealso"></a>
-+ [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
-+ [ Create a Build with Files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-build-cli-uploading.html#gamelift-build-cli-uploading-create-build) in the *Amazon GameLift Developer Guide*
-+ [ Upload Script Files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-script-uploading.html#realtime-script-uploading-s3) in the *Amazon GameLift Developer Guide*
++ [ Create GameLift resources using Amazon CloudFront](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++ [ Create a build with files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-build-cli-uploading.html#gamelift-build-cli-uploading-create-build) in the *Amazon GameLift Developer Guide*
++ [ Upload script files in Amazon S3](https://docs.aws.amazon.com/gamelift/latest/developerguide/realtime-script-uploading.html#realtime-script-uploading-s3) in the *Amazon GameLift Developer Guide*
 +  [CreateBuild](https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateBuild.html) in the *Amazon GameLift API Reference* 
+

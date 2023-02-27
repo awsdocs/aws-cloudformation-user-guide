@@ -1,6 +1,6 @@
 # AWS::NetworkManager::TransitGatewayRegistration<a name="aws-resource-networkmanager-transitgatewayregistration"></a>
 
-Registers a transit gateway in your global network\. The transit gateway can be in any AWS Region, but it must be owned by the same AWS account that owns the global network\. You cannot register a transit gateway in more than one global network\.
+Registers a transit gateway in your global network\. Not all Regions support transit gateways for global networks\. For a list of the supported Regions, see [Region Availability](https://docs.aws.amazon.com/network-manager/latest/tgwnm/what-are-global-networks.html#nm-available-regions) in the * AWS Transit Gateways for Global Networks User Guide*\. The transit gateway can be in any of the supported AWS Regions, but it must be owned by the same AWS account that owns the global network\. You cannot register a transit gateway in more than one global network\.
 
 ## Syntax<a name="aws-resource-networkmanager-transitgatewayregistration-syntax"></a>
 
@@ -33,12 +33,18 @@ Properties:
 The ID of the global network\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `50`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TransitGatewayArn`  <a name="cfn-networkmanager-transitgatewayregistration-transitgatewayarn"></a>
 The Amazon Resource Name \(ARN\) of the transit gateway\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `500`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-networkmanager-transitgatewayregistration-return-values"></a>
@@ -50,6 +56,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-networkmanager-transitgatewayregistration--examples"></a>
+
+
 
 ### Transit Gateway Registration<a name="aws-resource-networkmanager-transitgatewayregistration--examples--Transit_Gateway_Registration"></a>
 

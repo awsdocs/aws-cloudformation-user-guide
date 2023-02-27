@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel MultiplexGroupSettings<a name="aws-properties-medialive-channel-multiplexgroupsettings"></a>
 
-Identifies this output group as a Multiplex output group, and configures all the parts of the output group except for its outputs\. This element belongs to OutputGroupSettings\.
+The settings for a Multiplex output group\.
+
+The parent of this entity is OutputGroupSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-multiplexgroupsettings-syntax"></a>
 

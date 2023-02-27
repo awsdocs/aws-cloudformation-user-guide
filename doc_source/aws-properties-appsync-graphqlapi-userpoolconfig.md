@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appsync-graphqlapi-userpoolconfig-properties"></a>
 
 `AppIdClientRegex`  <a name="cfn-appsync-graphqlapi-userpoolconfig-appidclientregex"></a>
-A regular expression for validating the incoming Amazon Cognito user pool app client ID\.  
+A regular expression for validating the incoming Amazon Cognito user pool app client ID\. If this value isn't set, no filtering is applied\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -42,7 +42,7 @@ The AWS Region in which the user pool was created\.
 
 `DefaultAction`  <a name="cfn-appsync-graphqlapi-userpoolconfig-defaultaction"></a>
 The action that you want your GraphQL API to take when a request that uses Amazon Cognito user pool authentication doesn't match the Amazon Cognito user pool configuration\.  
-When specifying Cognito user pools as the default authentication, you must set the value for `DefaultAction` to `ALLOW` if specifying `AdditionalAuthenticationProviders`\.  
+When specifying Amazon Cognito user pools as the default authentication, you must set the value for `DefaultAction` to `ALLOW` if specifying `AdditionalAuthenticationProviders`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

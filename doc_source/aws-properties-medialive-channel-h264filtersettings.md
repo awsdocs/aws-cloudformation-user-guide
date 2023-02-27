@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel H264FilterSettings<a name="aws-properties-medialive-channel-h264filtersettings"></a>
 
-Configure filters that apply to an H264 encode in the output\. This element belongs to H264Settings\.
+Settings to configure video filters that apply to the H264 codec\.
+
+The parent of this entity is H264Settings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-h264filtersettings-syntax"></a>
 
@@ -24,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-h264filtersettings-properties"></a>
 
 `TemporalFilterSettings`  <a name="cfn-medialive-channel-h264filtersettings-temporalfiltersettings"></a>
-Include this element only if you want to configure this filter\.  
+Settings for applying the temporal filter to the video\.  
 *Required*: No  
 *Type*: [TemporalFilterSettings](aws-properties-medialive-channel-temporalfiltersettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

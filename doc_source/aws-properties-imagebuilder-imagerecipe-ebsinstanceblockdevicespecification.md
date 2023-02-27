@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Iops](#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-iops)" : Integer,
   "[KmsKeyId](#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-kmskeyid)" : String,
   "[SnapshotId](#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-snapshotid)" : String,
+  "[Throughput](#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-throughput)" : Integer,
   "[VolumeSize](#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-volumesize)" : Integer,
   "[VolumeType](#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-volumetype)" : String
 }
@@ -28,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Iops](#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-iops): Integer
   [KmsKeyId](#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-kmskeyid): String
   [SnapshotId](#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-snapshotid): String
+  [Throughput](#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-throughput): Integer
   [VolumeSize](#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-volumesize): Integer
   [VolumeType](#cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-volumetype): String
 ```
@@ -51,7 +53,7 @@ Use to configure device IOPS\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `100`  
-*Maximum*: `10000`  
+*Maximum*: `64000`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-kmskeyid"></a>
@@ -70,6 +72,14 @@ The snapshot that defines the device contents\.
 *Maximum*: `1024`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`Throughput`  <a name="cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-throughput"></a>
+ **For GP3 volumes only** – The throughput in MiB/s that the volume supports\.   
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `125`  
+*Maximum*: `1000`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `VolumeSize`  <a name="cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-volumesize"></a>
 Overrides the volume size of the device\.  
 *Required*: No  
@@ -82,5 +92,5 @@ Overrides the volume size of the device\.
 Overrides the volume type of the device\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `gp2 | io1 | io2 | sc1 | st1 | standard`  
+*Allowed values*: `gp2 | gp3 | io1 | io2 | sc1 | st1 | standard`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

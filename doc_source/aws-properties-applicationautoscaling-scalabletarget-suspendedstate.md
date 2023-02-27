@@ -1,6 +1,8 @@
 # AWS::ApplicationAutoScaling::ScalableTarget SuspendedState<a name="aws-properties-applicationautoscaling-scalabletarget-suspendedstate"></a>
 
-Specifies whether the scaling activities for a scalable target are in a suspended state\. 
+`SuspendedState` is a property of the [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html) resource that specifies whether the scaling activities for a scalable target are in a suspended state\.
+
+For more information, see [Suspending and resuming scaling](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-suspend-resume-scaling.html) in the *Application Auto Scaling User Guide*\.
 
 ## Syntax<a name="aws-properties-applicationautoscaling-scalabletarget-suspendedstate-syntax"></a>
 

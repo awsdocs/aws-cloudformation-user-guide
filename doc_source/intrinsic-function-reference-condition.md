@@ -60,4 +60,4 @@ MyAndCondition: !And
 
 ## Supported functions<a name="intrinsic-function-reference-condition-syntax-supported-functions"></a>
 
-You cannot use any functions in the `Condition` function\. You must specify a string that is a condition name\.
+You can't use any functions in the `Condition` function\. You must specify a string that's a condition name\.

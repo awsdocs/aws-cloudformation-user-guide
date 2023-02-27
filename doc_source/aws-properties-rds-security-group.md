@@ -3,7 +3,7 @@
 The `AWS::RDS::DBSecurityGroup` resource creates or updates an Amazon RDS DB security group\.
 
 **Note**  
-DB security groups are a part of the EC2\-Classic Platform and as such are not supported in all regions\. It is advised to use the `AWS::EC2::SecurityGroup` resource in those regions instead\. To determine which platform you are on, see [Determining Whether You Are Using the EC2\-VPC or EC2\-Classic Platform](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.FindDefaultVPC.html)\. For more information on the `AWS::EC2::SecurityGroup`, see the documentation for [EC2 security groups](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html)\.
+EC2\-Classic was retired on August 15, 2022\. If you haven't migrated from EC2\-Classic to a VPC, we recommend that you migrate as soon as possible\. For more information, see [Migrate from EC2\-Classic to a VPC](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-migrate.html) in the *Amazon EC2 User Guide*, the blog [EC2\-Classic Networking is Retiring – Here’s How to Prepare](http://aws.amazon.com/blogs/aws/ec2-classic-is-retiring-heres-how-to-prepare/), and [Moving a DB instance not in a VPC into a VPC](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.Non-VPC2VPC.html) in the *Amazon RDS User Guide*\.
 
 ## Syntax<a name="aws-properties-rds-security-group-syntax"></a>
 
@@ -58,7 +58,7 @@ Provides the description of the DB security group\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-rds-dbsecuritygroup-tags"></a>
-Tags to assign to the DB security group\.  
+An optional array of key\-value pairs to apply to this DB security group\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -72,6 +72,8 @@ Tags to assign to the DB security group\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-properties-rds-security-group--examples"></a>
+
+
 
 ### Creating a single VPC security group<a name="aws-properties-rds-security-group--examples--Creating_a_single_VPC_security_group"></a>
 

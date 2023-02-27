@@ -32,19 +32,19 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-usageplankey-properties"></a>
 
 `KeyId`  <a name="cfn-apigateway-usageplankey-keyid"></a>
-The ID of the usage plan key\.  
+The Id of the UsagePlanKey resource to be deleted\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KeyType`  <a name="cfn-apigateway-usageplankey-keytype"></a>
-The type of usage plan key\. Currently, the only valid key type is `API_KEY`\.  
+The type of a UsagePlanKey resource for a plan customer\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UsagePlanId`  <a name="cfn-apigateway-usageplankey-usageplanid"></a>
-The ID of the usage plan\.  
+The Id of the UsagePlan resource representing the usage plan containing the to\-be\-deleted UsagePlanKey resource representing a plan customer\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -57,9 +57,24 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-apigateway-usageplankey-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-apigateway-usageplankey-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+The ID for the usage plan key\. For example: `abc123`\.
+
 ## Examples<a name="aws-resource-apigateway-usageplankey--examples"></a>
 
+
+
 ### Create usage plan key<a name="aws-resource-apigateway-usageplankey--examples--Create_usage_plan_key"></a>
+
+
 
 #### JSON<a name="aws-resource-apigateway-usageplankey--examples--Create_usage_plan_key--json"></a>
 
@@ -92,4 +107,5 @@ usagePlanKey:
 ```
 
 ## See also<a name="aws-resource-apigateway-usageplankey--seealso"></a>
-+ [usageplankey:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/usageplankey-create/) in the *Amazon API Gateway REST API Reference*
++ [usageplankey:create](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateUsagePlanKey.html) in the *Amazon API Gateway REST API Reference*
+

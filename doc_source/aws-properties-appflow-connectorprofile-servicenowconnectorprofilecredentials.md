@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile ServiceNowConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials"></a>
 
- The `ServiceNowConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required when using ServiceNow\. 
+ The connector\-specific profile credentials required when using ServiceNow\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials-syntax"></a>
 
@@ -42,3 +42,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials--seealso"></a>
 + [ServiceNowConnectorProfileCredentials](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ServiceNowConnectorProfileCredentials.html) in the *Amazon AppFlow API Reference*\.
+

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Encryption](#cfn-mediapackage-packagingconfiguration-cmafpackage-encryption)" : CmafEncryption,
   "[HlsManifests](#cfn-mediapackage-packagingconfiguration-cmafpackage-hlsmanifests)" : [ HlsManifest, ... ],
+  "[IncludeEncoderConfigurationInSegments](#cfn-mediapackage-packagingconfiguration-cmafpackage-includeencoderconfigurationinsegments)" : Boolean,
   "[SegmentDurationSeconds](#cfn-mediapackage-packagingconfiguration-cmafpackage-segmentdurationseconds)" : Integer
 }
 ```
@@ -23,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     CmafEncryption
   [HlsManifests](#cfn-mediapackage-packagingconfiguration-cmafpackage-hlsmanifests): 
     - HlsManifest
+  [IncludeEncoderConfigurationInSegments](#cfn-mediapackage-packagingconfiguration-cmafpackage-includeencoderconfigurationinsegments): Boolean
   [SegmentDurationSeconds](#cfn-mediapackage-packagingconfiguration-cmafpackage-segmentdurationseconds): Integer
 ```
 
@@ -38,6 +40,12 @@ Parameters for encrypting content\.
 A list of HLS manifest configurations that are available from this endpoint\.  
 *Required*: Yes  
 *Type*: List of [HlsManifest](aws-properties-mediapackage-packagingconfiguration-hlsmanifest.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IncludeEncoderConfigurationInSegments`  <a name="cfn-mediapackage-packagingconfiguration-cmafpackage-includeencoderconfigurationinsegments"></a>
+When includeEncoderConfigurationInSegments is set to true, AWS Elemental MediaPackage places your encoder's Sequence Parameter Set \(SPS\), Picture Parameter Set \(PPS\), and Video Parameter Set \(VPS\) metadata in every video segment instead of in the init fragment\. This lets you use different SPS/PPS/VPS settings for your assets during content playback\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SegmentDurationSeconds`  <a name="cfn-mediapackage-packagingconfiguration-cmafpackage-segmentdurationseconds"></a>

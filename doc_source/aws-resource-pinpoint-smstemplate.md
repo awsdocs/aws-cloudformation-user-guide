@@ -1,6 +1,6 @@
 # AWS::Pinpoint::SmsTemplate<a name="aws-resource-pinpoint-smstemplate"></a>
 
-The AWS::Pinpoint::SmsTemplate resource is a message template that you can use in messages that are sent through the SMS channel\. A *message template* is a set of content and settings that you can define, save, and reuse in messages for one or more Amazon Pinpoint applications\.
+Creates a message template that you can use in messages that are sent through the SMS channel\. A *message template* is a set of content and settings that you can define, save, and reuse in messages for any of your Amazon Pinpoint applications\.
 
 ## Syntax<a name="aws-resource-pinpoint-smstemplate-syntax"></a>
 
@@ -48,7 +48,8 @@ A JSON object that specifies the default values to use for message variables in 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-pinpoint-smstemplate-tags"></a>
-A string\-to\-string map of key\-value pairs that defines the tags to associate with the message template\. Each tag consists of a required tag key and an associated tag value\.  
+An array of key\-value pairs to apply to this resource\.  
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

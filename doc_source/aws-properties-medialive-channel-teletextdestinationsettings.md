@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel TeletextDestinationSettings<a name="aws-properties-medialive-channel-teletextdestinationsettings"></a>
 
-Configures the output captions encode for the Teletext format\. This element belongs to CaptionDestinationSettings \.
+The settings for a Teletext captions output encode\.
+
+The parent of this entity is CaptionDestinationSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-teletextdestinationsettings-syntax"></a>
 

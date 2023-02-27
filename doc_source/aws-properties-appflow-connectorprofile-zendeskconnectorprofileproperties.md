@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile ZendeskConnectorProfileProperties<a name="aws-properties-appflow-connectorprofile-zendeskconnectorprofileproperties"></a>
 
- The `ZendeskConnectorProfileProperties` property type specifies the connector\-specific profile properties required when using Zendesk\. 
+ The connector\-specific profile properties required when using Zendesk\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-zendeskconnectorprofileproperties-syntax"></a>
 
@@ -32,3 +32,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-zendeskconnectorprofileproperties--seealso"></a>
 + [ZendeskConnectorProfileProperties](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ZendeskConnectorProfileProperties.html) in the *Amazon AppFlow API Reference*\.
+

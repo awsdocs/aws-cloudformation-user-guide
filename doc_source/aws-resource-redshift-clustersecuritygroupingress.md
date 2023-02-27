@@ -43,18 +43,21 @@ Properties:
 The IP range to be added the Amazon Redshift security group\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ClusterSecurityGroupName`  <a name="cfn-redshift-clustersecuritygroupingress-clustersecuritygroupname"></a>
 The name of the security group to which the ingress rule is added\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EC2SecurityGroupName`  <a name="cfn-redshift-clustersecuritygroupingress-ec2securitygroupname"></a>
 The EC2 security group to be added the Amazon Redshift security group\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EC2SecurityGroupOwnerId`  <a name="cfn-redshift-clustersecuritygroupingress-ec2securitygroupownerid"></a>
@@ -63,9 +66,12 @@ Example: `111122223333`
 Conditional\. If you specify the `EC2SecurityGroupName` property, you must specify this property\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Examples<a name="aws-resource-redshift-clustersecuritygroupingress--examples"></a>
+
+
 
 ### Ingress Rules<a name="aws-resource-redshift-clustersecuritygroupingress--examples--Ingress_Rules"></a>
 
@@ -86,10 +92,10 @@ The following snippet describes a ingress rules for an Amazon Redshift cluster s
 #### YAML<a name="aws-resource-redshift-clustersecuritygroupingress--examples--Ingress_Rules--yaml"></a>
 
 ```
-myClusterSecurityGroupIngressIP: 
+myClusterSecurityGroupIngressIP:
   Type: "AWS::Redshift::ClusterSecurityGroupIngress"
-  Properties: 
-    ClusterSecurityGroupName: 
+  Properties:
+    ClusterSecurityGroupName:
     Ref: "myClusterSecurityGroup"
     CIDRIP: "10.0.0.0/16"
 ```

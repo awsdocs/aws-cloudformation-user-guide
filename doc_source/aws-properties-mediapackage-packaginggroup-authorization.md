@@ -31,7 +31,7 @@ The Amazon Resource Name \(ARN\) for the secret in AWS Secrets Manager that is u
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretsRoleArn`  <a name="cfn-mediapackage-packaginggroup-authorization-secretsrolearn"></a>
-The Amazon Resource Name \(ARN\) for the IAM role that allows MediaPackage to communicate with AWS Secrets Manager\.  
+The Amazon Resource Name \(ARN\) for the IAM role that allows AWS Elemental MediaPackage to communicate with AWS Secrets Manager\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

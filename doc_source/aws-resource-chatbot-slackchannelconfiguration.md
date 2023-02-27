@@ -15,11 +15,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Chatbot::SlackChannelConfiguration",
   "Properties" : {
       "[ConfigurationName](#cfn-chatbot-slackchannelconfiguration-configurationname)" : String,
+      "[GuardrailPolicies](#cfn-chatbot-slackchannelconfiguration-guardrailpolicies)" : [ String, ... ],
       "[IamRoleArn](#cfn-chatbot-slackchannelconfiguration-iamrolearn)" : String,
       "[LoggingLevel](#cfn-chatbot-slackchannelconfiguration-logginglevel)" : String,
       "[SlackChannelId](#cfn-chatbot-slackchannelconfiguration-slackchannelid)" : String,
       "[SlackWorkspaceId](#cfn-chatbot-slackchannelconfiguration-slackworkspaceid)" : String,
-      "[SnsTopicArns](#cfn-chatbot-slackchannelconfiguration-snstopicarns)" : [ String, ... ]
+      "[SnsTopicArns](#cfn-chatbot-slackchannelconfiguration-snstopicarns)" : [ String, ... ],
+      "[UserRoleRequired](#cfn-chatbot-slackchannelconfiguration-userrolerequired)" : Boolean
     }
 }
 ```
@@ -30,12 +32,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Chatbot::SlackChannelConfiguration
 Properties: 
   [ConfigurationName](#cfn-chatbot-slackchannelconfiguration-configurationname): String
+  [GuardrailPolicies](#cfn-chatbot-slackchannelconfiguration-guardrailpolicies): 
+    - String
   [IamRoleArn](#cfn-chatbot-slackchannelconfiguration-iamrolearn): String
   [LoggingLevel](#cfn-chatbot-slackchannelconfiguration-logginglevel): String
   [SlackChannelId](#cfn-chatbot-slackchannelconfiguration-slackchannelid): String
   [SlackWorkspaceId](#cfn-chatbot-slackchannelconfiguration-slackworkspaceid): String
   [SnsTopicArns](#cfn-chatbot-slackchannelconfiguration-snstopicarns): 
     - String
+  [UserRoleRequired](#cfn-chatbot-slackchannelconfiguration-userrolerequired): Boolean
 ```
 
 ## Properties<a name="aws-resource-chatbot-slackchannelconfiguration-properties"></a>
@@ -45,6 +50,12 @@ The name of the configuration\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`GuardrailPolicies`  <a name="cfn-chatbot-slackchannelconfiguration-guardrailpolicies"></a>
+The list of IAM policy ARNs that are applied as channel guardrails\. The AWS managed 'AdministratorAccess' policy is applied as a default if this is not set\.  
+*Required*: No  
+*Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IamRoleArn`  <a name="cfn-chatbot-slackchannelconfiguration-iamrolearn"></a>
 The ARN of the IAM role that defines the permissions for AWS Chatbot\.  
@@ -80,6 +91,12 @@ The ARNs of the SNS topics that deliver notifications to AWS Chatbot\.
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`UserRoleRequired`  <a name="cfn-chatbot-slackchannelconfiguration-userrolerequired"></a>
+Enables use of a user role requirement in your chat configuration\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Return values<a name="aws-resource-chatbot-slackchannelconfiguration-return-values"></a>
 
 ### Ref<a name="aws-resource-chatbot-slackchannelconfiguration-return-values-ref"></a>
@@ -91,7 +108,7 @@ When you pass the logical ID of this resource to the intrinsic Ref function, Ref
 #### <a name="aws-resource-chatbot-slackchannelconfiguration-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.
 
 ## Remarks<a name="aws-resource-chatbot-slackchannelconfiguration--remarks"></a>
 

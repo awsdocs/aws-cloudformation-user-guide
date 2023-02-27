@@ -90,6 +90,8 @@ The version number\.
 
 ## Examples<a name="aws-resource-lambda-version--examples"></a>
 
+
+
 ### Function Version<a name="aws-resource-lambda-version--examples--Function_Version"></a>
 
 Publish a version with provisioned concurrency\.
@@ -118,7 +120,7 @@ Resources:
         Mode: Active
   version:
     Type: AWS::Lambda::Version
-    Properties: 
+    Properties:
       FunctionName: !Ref function
       Description: v1
       ProvisionedConcurrencyConfig:

@@ -10,23 +10,35 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[CreateTableDefaultPermissions](#cfn-glue-database-databaseinput-createtabledefaultpermissions)" : [ PrincipalPrivileges, ... ],
   "[Description](#cfn-glue-database-databaseinput-description)" : String,
   "[LocationUri](#cfn-glue-database-databaseinput-locationuri)" : String,
   "[Name](#cfn-glue-database-databaseinput-name)" : String,
-  "[Parameters](#cfn-glue-database-databaseinput-parameters)" : Json
+  "[Parameters](#cfn-glue-database-databaseinput-parameters)" : Json,
+  "[TargetDatabase](#cfn-glue-database-databaseinput-targetdatabase)" : DatabaseIdentifier
 }
 ```
 
 ### YAML<a name="aws-properties-glue-database-databaseinput-syntax.yaml"></a>
 
 ```
+  [CreateTableDefaultPermissions](#cfn-glue-database-databaseinput-createtabledefaultpermissions): 
+    - PrincipalPrivileges
   [Description](#cfn-glue-database-databaseinput-description): String
   [LocationUri](#cfn-glue-database-databaseinput-locationuri): String
   [Name](#cfn-glue-database-databaseinput-name): String
   [Parameters](#cfn-glue-database-databaseinput-parameters): Json
+  [TargetDatabase](#cfn-glue-database-databaseinput-targetdatabase): 
+    DatabaseIdentifier
 ```
 
 ## Properties<a name="aws-properties-glue-database-databaseinput-properties"></a>
+
+`CreateTableDefaultPermissions`  <a name="cfn-glue-database-databaseinput-createtabledefaultpermissions"></a>
+Creates a set of default permissions on the table for principals\. Used by AWS Lake Formation\. Not used in the normal course of AWS Glue operations\.  
+*Required*: No  
+*Type*: List of [PrincipalPrivileges](aws-properties-glue-database-principalprivileges.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-glue-database-databaseinput-description"></a>
 A description of the database\.  
@@ -50,4 +62,10 @@ The name of the database\. For Hive compatibility, this is folded to lowercase w
 These key\-value pairs define parameters and properties of the database\.  
 *Required*: No  
 *Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TargetDatabase`  <a name="cfn-glue-database-databaseinput-targetdatabase"></a>
+A `DatabaseIdentifier` structure that describes a target database for resource linking\.  
+*Required*: No  
+*Type*: [DatabaseIdentifier](aws-properties-glue-database-databaseidentifier.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

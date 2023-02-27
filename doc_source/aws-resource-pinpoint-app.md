@@ -1,6 +1,8 @@
 # AWS::Pinpoint::App<a name="aws-resource-pinpoint-app"></a>
 
-The AWS::Pinpoint::App resource is an Amazon Pinpoint application, also referred to as a *project* or *app*\. An application is a collection of related settings, customer information, segments, campaigns, and other types of Amazon Pinpoint resources\.
+An *app* is an Amazon Pinpoint application, also referred to as a *project*\. An application is a collection of related settings, customer information, segments, campaigns, and other types of Amazon Pinpoint resources\.
+
+The App resource represents an Amazon Pinpoint application\.
 
 ## Syntax<a name="aws-resource-pinpoint-app-syntax"></a>
 
@@ -30,13 +32,14 @@ Properties:
 ## Properties<a name="aws-resource-pinpoint-app-properties"></a>
 
 `Name`  <a name="cfn-pinpoint-app-name"></a>
-The display name of the application\. This name is displayed as the **Project name** on the Amazon Pinpoint console\.  
+The display name of the application\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-pinpoint-app-tags"></a>
-A string\-to\-string map of key\-value pairs that defines the tags to associate with the application\. Each tag consists of a required tag key and an associated tag value\.  
+An array of key\-value pairs to apply to this resource\.  
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

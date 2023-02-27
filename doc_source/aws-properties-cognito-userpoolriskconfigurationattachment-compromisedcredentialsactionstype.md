@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPoolRiskConfigurationAttachment CompromisedCredentialsActionsType<a name="aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsactionstype"></a>
 
-The compromised credentials actions type
+The compromised credentials actions type\.
 
 ## Syntax<a name="aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsactionstype-syntax"></a>
 

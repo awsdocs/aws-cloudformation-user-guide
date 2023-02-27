@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `SpectrumConfig`  <a name="cfn-groundstation-config-antennadownlinkconfig-spectrumconfig"></a>
  Defines the spectrum configuration\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: [SpectrumConfig](aws-properties-groundstation-config-spectrumconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

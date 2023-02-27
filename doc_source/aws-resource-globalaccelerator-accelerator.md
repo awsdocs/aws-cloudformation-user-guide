@@ -54,22 +54,22 @@ For more information, see [Bring Your Own IP Addresses \(BYOIP\)](https://docs.a
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IpAddressType`  <a name="cfn-globalaccelerator-accelerator-ipaddresstype"></a>
-The value for the address type must be IPv4\.   
+The IP address type that an accelerator supports\. For a standard accelerator, the value can be IPV4 or DUAL\_STACK\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `IPV4`  
+*Allowed values*: `DUAL_STACK | IPV4`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-globalaccelerator-accelerator-name"></a>
 The name of the accelerator\. The name must contain only alphanumeric characters or hyphens \(\-\), and must not begin or end with a hyphen\.  
 *Required*: Yes  
 *Type*: String  
-*Maximum*: `255`  
+*Maximum*: `64`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-globalaccelerator-accelerator-tags"></a>
 Create tags for an accelerator\.  
-For more information, see [Tagging in AWS Global Accelerator](https://docs.aws.amazon.com/global-accelerator/latest/dg/tagging-in-global-accelerator.html) in the *AWS Global Accelerator Developer Guide*\.  
+For more information, see [Tagging ](https://docs.aws.amazon.com/global-accelerator/latest/dg/tagging-in-global-accelerator.html) in the *AWS Global Accelerator Developer Guide*\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -94,9 +94,20 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The ARN of the accelerator, such as `arn:aws:globalaccelerator::012345678901:accelerator/1234abcd-abcd-1234-abcd-1234abcdefgh`\.
 
 `DnsName`  <a name="DnsName-fn::getatt"></a>
-The Domain Name System \(DNS\) name that Global Accelerator creates that points to your accelerator's static IP addresses\.
+The Domain Name System \(DNS\) name that Global Accelerator creates that points to an accelerator's static IPv4 addresses\.
+
+`DualStackDnsName`  <a name="DualStackDnsName-fn::getatt"></a>
+The DNS name that Global Accelerator creates that points to a dual\-stack accelerator's four static IP addresses: two IPv4 addresses and two IPv6 addresses\.
+
+`Ipv4Addresses`  <a name="Ipv4Addresses-fn::getatt"></a>
+The array of IPv4 addresses in the IP address set\. An IP address set can have a maximum of two IP addresses\.
+
+`Ipv6Addresses`  <a name="Ipv6Addresses-fn::getatt"></a>
+The array of IPv6 addresses in the IP address set\. An IP address set can have a maximum of two IP addresses\.
 
 ## Examples<a name="aws-resource-globalaccelerator-accelerator--examples"></a>
+
+
 
 ### Add an accelerator<a name="aws-resource-globalaccelerator-accelerator--examples--Add_an_accelerator"></a>
 

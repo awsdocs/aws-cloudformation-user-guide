@@ -2,6 +2,8 @@
 
 A policy type that defines the voting rules for the network\. The rules decide if a proposal is approved\. Approval may be based on criteria such as the percentage of `YES` votes and the duration of the proposal\. The policy applies to all proposals and is specified when the network is created\.
 
+Applies only to Hyperledger Fabric\.
+
 ## Syntax<a name="aws-properties-managedblockchain-member-approvalthresholdpolicy-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -27,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-managedblockchain-member-approvalthresholdpolicy-properties"></a>
 
 `ProposalDurationInHours`  <a name="cfn-managedblockchain-member-approvalthresholdpolicy-proposaldurationinhours"></a>
-The duration from the time that a proposal is created until it expires\. If members cast neither the required number of `YES` votes to approve the proposal nor the number of `NO` votes required to reject it before the duration expires, the proposal is `EXPIRED` and `ProposalActions` are not carried out\.  
+The duration from the time that a proposal is created until it expires\. If members cast neither the required number of `YES` votes to approve the proposal nor the number of `NO` votes required to reject it before the duration expires, the proposal is `EXPIRED` and `ProposalActions` aren't carried out\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  

@@ -1,6 +1,6 @@
 # AWS::ECS::Cluster ClusterSettings<a name="aws-properties-ecs-cluster-clustersettings"></a>
 
-The settings to use when creating a cluster\. This parameter is used to enable CloudWatch Container Insights for a cluster\.
+The settings to use when creating a cluster\. This parameter is used to turn on CloudWatch Container Insights for a cluster\.
 
 ## Syntax<a name="aws-properties-ecs-cluster-clustersettings-syntax"></a>
 
@@ -32,7 +32,7 @@ The name of the cluster setting\. The only supported value is `containerInsights
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-ecs-cluster-clustersettings-value"></a>
-The value to set for the cluster setting\. The supported values are `enabled` and `disabled`\. If `enabled` is specified, CloudWatch Container Insights will be enabled for the cluster, otherwise it will be disabled unless the `containerInsights` account setting is enabled\. If a cluster value is specified, it will override the `containerInsights` value set with [PutAccountSetting](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSetting.html) or [PutAccountSettingDefault](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSettingDefault.html)\.  
+The value to set for the cluster setting\. The supported values are `enabled` and `disabled`\. If `enabled` is specified, CloudWatch Container Insights will be enabled for the cluster, otherwise it will be off unless the `containerInsights` account setting is turned on\. If a cluster value is specified, it will override the `containerInsights` value set with [PutAccountSetting](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSetting.html) or [PutAccountSettingDefault](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutAccountSettingDefault.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

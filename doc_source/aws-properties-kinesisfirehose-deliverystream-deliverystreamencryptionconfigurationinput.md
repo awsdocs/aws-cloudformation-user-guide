@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-deliverystreamencryptionconfigurationinput-properties"></a>
 
 `KeyARN`  <a name="cfn-kinesisfirehose-deliverystream-deliverystreamencryptionconfigurationinput-keyarn"></a>
-If you set `KeyType` to `CUSTOMER_MANAGED_CMK`, you must specify the Amazon Resource Name \(ARN\) of the CMK\. If you set `KeyType` to `AWS_OWNED_CMK`, Kinesis Data Firehose uses a service\-account CMK\.  
+If you set `KeyType` to `CUSTOMER_MANAGED_CMK`, you must specify the Amazon Resource Name \(ARN\) of the CMK\. If you set `KeyType` to ` AWS_OWNED_CMK`, Kinesis Data Firehose uses a service\-account CMK\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

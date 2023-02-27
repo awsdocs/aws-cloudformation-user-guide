@@ -6,7 +6,7 @@ The `AWS::SSM::Parameter` resource creates an SSM parameter in AWS Systems Manag
 To create an SSM parameter, you must have the AWS Identity and Access Management \(IAM\) permissions `ssm:PutParameter` and `ssm:AddTagsToResource`\. On stack creation, AWS CloudFormation adds the following three tags to the parameter: `aws:cloudformation:stack-name`, `aws:cloudformation:logical-id`, and `aws:cloudformation:stack-id`, in addition to any custom tags you specify\.  
 To add, update, or remove tags during stack update, you must have IAM permissions for both `ssm:AddTagsToResource` and `ssm:RemoveTagsFromResource`\. For more information, see [Managing Access Using Policies](https://docs.aws.amazon.com/systems-manager/latest/userguide/security-iam.html#security_iam_access-manage) in the *AWS Systems Manager User Guide*\.
 
-For information about valid values for parameters, see [Requirements and Constraints for Parameter Names](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-parameter-name-constraints.html) in the *AWS Systems Manager User Guide* and [PutParameter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PutParameter.html) in the *AWS Systems Manager API Reference*\.
+For information about valid values for parameters, see [Requirements and Constraints for Parameter Names](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-su-create.html#sysman-parameter-name-constraints) in the *AWS Systems Manager User Guide* and [PutParameter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PutParameter.html) in the *AWS Systems Manager API Reference*\.
 
 ## Syntax<a name="aws-resource-ssm-parameter-syntax"></a>
 
@@ -75,6 +75,7 @@ Information about the parameter\.
 
 `Name`  <a name="cfn-ssm-parameter-name"></a>
 The name of the parameter\.  
+The maximum length constraint listed below includes capacity for additional system attributes that aren't part of the name\. The maximum length for a parameter name, including the full length of the parameter ARN, is 1011 characters\. For example, the length of the following parameter name is 65 characters, not 20 characters: `arn:aws:ssm:us-east-2:111222333444:parameter/ExampleParameterName` 
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -83,7 +84,7 @@ The name of the parameter\.
 
 `Policies`  <a name="cfn-ssm-parameter-policies"></a>
 Information about the policies assigned to a parameter\.  
- [Assigning parameter policies](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-policies.html) in the *AWS Systems Manager User Guide*\.  
+ [Assigning parameter policies](https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-policies.html) in the * AWS Systems Manager User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -112,6 +113,7 @@ AWS CloudFormation doesn't support creating a `SecureString` parameter type\.
 
 `Value`  <a name="cfn-ssm-parameter-value"></a>
 The parameter value\.  
+If type is `StringList`, the system returns a comma\-separated string with no spaces between commas in the `Value` field\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -120,7 +122,7 @@ The parameter value\.
 
 ### Ref<a name="aws-resource-ssm-parameter-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Name of the SSM parameter\. For example, `ssm-myparameter-ABCNPH3XCAO6`\.
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the SSM parameter\. For example, `ssm-myparameter-ABCNPH3XCAO6`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

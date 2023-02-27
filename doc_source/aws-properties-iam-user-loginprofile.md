@@ -1,6 +1,6 @@
 # AWS::IAM::User LoginProfile<a name="aws-properties-iam-user-loginprofile"></a>
 
-Contains the user name and password create date for a user\.
+Creates a password for the specified user, giving the user the ability to access AWS services through the AWS Management Console\. For more information about managing passwords, see [Managing Passwords](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_ManagingLogins.html) in the *IAM User Guide*\.
 
 ## Syntax<a name="aws-properties-iam-user-loginprofile-syntax"></a>
 
@@ -38,3 +38,4 @@ Specifies whether the user is required to set a new password on next sign\-in\.
 
 ## See also<a name="aws-properties-iam-user-loginprofile--seealso"></a>
 +  [LoginProfile](https://docs.aws.amazon.com/IAM/latest/APIReference/API_LoginProfile.html) in the *AWS Identity and Access Management API Reference* 
+

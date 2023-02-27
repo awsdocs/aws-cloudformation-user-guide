@@ -27,3 +27,26 @@ The size of the array, if this is an array batch job\. Valid values are integers
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-events-rule-batcharrayproperties--examples"></a>
+
+
+
+### Set the BatchArrayProperties property<a name="aws-properties-events-rule-batcharrayproperties--examples--Set_the_BatchArrayProperties_property"></a>
+
+The following example sets the `BatchArrayProperties` property to 950\.
+
+#### JSON<a name="aws-properties-events-rule-batcharrayproperties--examples--Set_the_BatchArrayProperties_property--json"></a>
+
+```
+"ArrayProperties": {
+  "Size": 950
+}
+```
+
+#### YAML<a name="aws-properties-events-rule-batcharrayproperties--examples--Set_the_BatchArrayProperties_property--yaml"></a>
+
+```
+ArrayProperties:
+  Size: 950
+```

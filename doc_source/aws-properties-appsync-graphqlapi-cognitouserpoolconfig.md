@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appsync-graphqlapi-cognitouserpoolconfig-properties"></a>
 
 `AppIdClientRegex`  <a name="cfn-appsync-graphqlapi-cognitouserpoolconfig-appidclientregex"></a>
-A regular expression for validating the incoming Amazon Cognito user pool app client ID\.  
+A regular expression for validating the incoming Amazon Cognito user pool app client ID\. If this value isn't set, no filtering is applied\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

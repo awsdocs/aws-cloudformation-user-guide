@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CertificateArn](#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatearn)" : String,
   "[CertificateName](#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatename)" : String,
   "[EndpointType](#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype)" : String,
+  "[OwnershipVerificationCertificateArn](#cfn-apigatewayv2-domainname-domainnameconfiguration-ownershipverificationcertificatearn)" : String,
   "[SecurityPolicy](#cfn-apigatewayv2-domainname-domainnameconfiguration-securitypolicy)" : String
 }
 ```
@@ -25,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CertificateArn](#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatearn): String
   [CertificateName](#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatename): String
   [EndpointType](#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype): String
+  [OwnershipVerificationCertificateArn](#cfn-apigatewayv2-domainname-domainnameconfiguration-ownershipverificationcertificatearn): String
   [SecurityPolicy](#cfn-apigatewayv2-domainname-domainnameconfiguration-securitypolicy): String
 ```
 
@@ -48,6 +50,12 @@ The endpoint type\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`OwnershipVerificationCertificateArn`  <a name="cfn-apigatewayv2-domainname-domainnameconfiguration-ownershipverificationcertificatearn"></a>
+The Amazon resource name \(ARN\) for the public certificate issued by AWS Certificate Manager\. This ARN is used to validate custom domain ownership\. It's required only if you configure mutual TLS and use either an ACM\-imported or a private CA certificate ARN as the regionalCertificateArn\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SecurityPolicy`  <a name="cfn-apigatewayv2-domainname-domainnameconfiguration-securitypolicy"></a>
 The Transport Layer Security \(TLS\) version of the security policy for this domain name\. The valid values are `TLS_1_0` and `TLS_1_2`\.  
 *Required*: No  
@@ -56,3 +64,4 @@ The Transport Layer Security \(TLS\) version of the security policy for this dom
 
 ## See also<a name="aws-properties-apigatewayv2-domainname-domainnameconfiguration--seealso"></a>
 + [DomainNameConfiguration](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/domainnames-domainname.html#domainnames-domainname-model-domainnameconfiguration) in the *Amazon API Gateway Version 2 API Reference*
+

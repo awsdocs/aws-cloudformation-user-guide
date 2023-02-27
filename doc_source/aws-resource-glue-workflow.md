@@ -1,6 +1,6 @@
 # AWS::Glue::Workflow<a name="aws-resource-glue-workflow"></a>
 
-The AWS::Glue::Workflow is an AWS Glue resource type that manages AWS Glue workflows\. A workflow is a container for a set of related jobs, crawlers, and triggers in AWS Glue\. Using a workflow, you can design a complex multi\-job extract, transform, and load \(ETL\) activity that AWS Glue can execute and track as single entity
+The `AWS::Glue::Workflow` is an AWS Glue resource type that manages AWS Glue workflows\. A workflow is a container for a set of related jobs, crawlers, and triggers in AWS Glue\. Using a workflow, you can design a complex multi\-job extract, transform, and load \(ETL\) activity that AWS Glue can execute and track as single entity\.
 
 ## Syntax<a name="aws-resource-glue-workflow-syntax"></a>
 
@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DefaultRunProperties](#cfn-glue-workflow-defaultrunproperties)" : Json,
       "[Description](#cfn-glue-workflow-description)" : String,
+      "[MaxConcurrentRuns](#cfn-glue-workflow-maxconcurrentruns)" : Integer,
       "[Name](#cfn-glue-workflow-name)" : String,
       "[Tags](#cfn-glue-workflow-tags)" : Json
     }
@@ -27,6 +28,7 @@ Type: AWS::Glue::Workflow
 Properties: 
   [DefaultRunProperties](#cfn-glue-workflow-defaultrunproperties): Json
   [Description](#cfn-glue-workflow-description): String
+  [MaxConcurrentRuns](#cfn-glue-workflow-maxconcurrentruns): Integer
   [Name](#cfn-glue-workflow-name): String
   [Tags](#cfn-glue-workflow-tags): Json
 ```
@@ -43,6 +45,12 @@ A collection of properties to be used as part of each execution of the workflow
 A description of the workflow  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MaxConcurrentRuns`  <a name="cfn-glue-workflow-maxconcurrentruns"></a>
+You can use this parameter to prevent unwanted multiple updates to data, to control costs, or in some cases, to prevent exceeding the maximum number of concurrent runs of any of the component jobs\. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-glue-workflow-name"></a>

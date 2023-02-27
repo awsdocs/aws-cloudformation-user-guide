@@ -116,6 +116,7 @@ The contact email for product support\.
 
 `SupportUrl`  <a name="cfn-servicecatalog-cloudformationproduct-supporturl"></a>
 The contact URL for product support\.  
+ `^https?:\/\// `/ is the pattern used to validate SupportUrl\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `2083`  
@@ -132,7 +133,7 @@ One or more tags\.
 
 ### Ref<a name="aws-resource-servicecatalog-cloudformationproduct-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the provisioning artifact, such as `prod-nd24wbqkm4pju`\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the provisioning artifact, such as `pa-3mc34fbybfmgp`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -155,3 +156,4 @@ The names of the provisioning artifacts\.
 
 ## See also<a name="aws-resource-servicecatalog-cloudformationproduct--seealso"></a>
 + [CreateProduct](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_CreateProduct.html) in the *AWS Service Catalog API Reference*
+

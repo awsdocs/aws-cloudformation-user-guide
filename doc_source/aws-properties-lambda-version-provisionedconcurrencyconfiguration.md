@@ -1,6 +1,6 @@
 # AWS::Lambda::Version ProvisionedConcurrencyConfiguration<a name="aws-properties-lambda-version-provisionedconcurrencyconfiguration"></a>
 
-A provisioned concurrency configuration for a function's version\.
+A [provisioned concurrency](https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html) configuration for a function's version\.
 
 ## Syntax<a name="aws-properties-lambda-version-provisionedconcurrencyconfiguration-syntax"></a>
 
@@ -29,6 +29,8 @@ The amount of provisioned concurrency to allocate for the version\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-lambda-version-provisionedconcurrencyconfiguration--examples"></a>
+
+
 
 ### Provisioned Concurrency Configuration<a name="aws-properties-lambda-version-provisionedconcurrencyconfiguration--examples--Provisioned_Concurrency_Configuration"></a>
 

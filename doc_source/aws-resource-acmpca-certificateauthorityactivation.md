@@ -1,6 +1,6 @@
 # AWS::ACMPCA::CertificateAuthorityActivation<a name="aws-resource-acmpca-certificateauthorityactivation"></a>
 
-The `AWS::ACMPCA::CertificateAuthorityActivation` resource creates and installs a CA certificate on a CA\. If no status is specified, the `AWS::ACMPCA::CertificateAuthorityActivation` resource status defaults to ACTIVE\. Once the CA has a CA certificate installed, you can use the resource to toggle the CA status field between ACTIVE and DISABLED\.
+The `AWS::ACMPCA::CertificateAuthorityActivation` resource creates and installs a CA certificate on a CA\. If no status is specified, the `AWS::ACMPCA::CertificateAuthorityActivation` resource status defaults to ACTIVE\. Once the CA has a CA certificate installed, you can use the resource to toggle the CA status field between `ACTIVE` and `DISABLED`\.
 
 ## Syntax<a name="aws-resource-acmpca-certificateauthorityactivation-syntax"></a>
 
@@ -46,7 +46,7 @@ The Amazon Resource Name \(ARN\) of your private CA\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificateChain`  <a name="cfn-acmpca-certificateauthorityactivation-certificatechain"></a>
-The Base64 PEM\-encoded certificate chain that chains up to the root CA certificate that you used to sign your private CA certificate\.   
+The Base64 PEM\-encoded certificate chain that chains up to the root CA certificate that you used to sign your private CA certificate\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

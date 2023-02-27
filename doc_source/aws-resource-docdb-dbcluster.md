@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AvailabilityZones](#cfn-docdb-dbcluster-availabilityzones)" : [ String, ... ],
       "[BackupRetentionPeriod](#cfn-docdb-dbcluster-backupretentionperiod)" : Integer,
+      "[CopyTagsToSnapshot](#cfn-docdb-dbcluster-copytagstosnapshot)" : Boolean,
       "[DBClusterIdentifier](#cfn-docdb-dbcluster-dbclusteridentifier)" : String,
       "[DBClusterParameterGroupName](#cfn-docdb-dbcluster-dbclusterparametergroupname)" : String,
       "[DBSubnetGroupName](#cfn-docdb-dbcluster-dbsubnetgroupname)" : String,
@@ -26,9 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Port](#cfn-docdb-dbcluster-port)" : Integer,
       "[PreferredBackupWindow](#cfn-docdb-dbcluster-preferredbackupwindow)" : String,
       "[PreferredMaintenanceWindow](#cfn-docdb-dbcluster-preferredmaintenancewindow)" : String,
+      "[RestoreToTime](#cfn-docdb-dbcluster-restoretotime)" : String,
+      "[RestoreType](#cfn-docdb-dbcluster-restoretype)" : String,
       "[SnapshotIdentifier](#cfn-docdb-dbcluster-snapshotidentifier)" : String,
+      "[SourceDBClusterIdentifier](#cfn-docdb-dbcluster-sourcedbclusteridentifier)" : String,
       "[StorageEncrypted](#cfn-docdb-dbcluster-storageencrypted)" : Boolean,
       "[Tags](#cfn-docdb-dbcluster-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[UseLatestRestorableTime](#cfn-docdb-dbcluster-uselatestrestorabletime)" : Boolean,
       "[VpcSecurityGroupIds](#cfn-docdb-dbcluster-vpcsecuritygroupids)" : [ String, ... ]
     }
 }
@@ -42,6 +47,7 @@ Properties:
   [AvailabilityZones](#cfn-docdb-dbcluster-availabilityzones): 
     - String
   [BackupRetentionPeriod](#cfn-docdb-dbcluster-backupretentionperiod): Integer
+  [CopyTagsToSnapshot](#cfn-docdb-dbcluster-copytagstosnapshot): Boolean
   [DBClusterIdentifier](#cfn-docdb-dbcluster-dbclusteridentifier): String
   [DBClusterParameterGroupName](#cfn-docdb-dbcluster-dbclusterparametergroupname): String
   [DBSubnetGroupName](#cfn-docdb-dbcluster-dbsubnetgroupname): String
@@ -55,10 +61,14 @@ Properties:
   [Port](#cfn-docdb-dbcluster-port): Integer
   [PreferredBackupWindow](#cfn-docdb-dbcluster-preferredbackupwindow): String
   [PreferredMaintenanceWindow](#cfn-docdb-dbcluster-preferredmaintenancewindow): String
+  [RestoreToTime](#cfn-docdb-dbcluster-restoretotime): String
+  [RestoreType](#cfn-docdb-dbcluster-restoretype): String
   [SnapshotIdentifier](#cfn-docdb-dbcluster-snapshotidentifier): String
+  [SourceDBClusterIdentifier](#cfn-docdb-dbcluster-sourcedbclusteridentifier): String
   [StorageEncrypted](#cfn-docdb-dbcluster-storageencrypted): Boolean
   [Tags](#cfn-docdb-dbcluster-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [UseLatestRestorableTime](#cfn-docdb-dbcluster-uselatestrestorabletime): Boolean
   [VpcSecurityGroupIds](#cfn-docdb-dbcluster-vpcsecuritygroupids): 
     - String
 ```
@@ -78,6 +88,12 @@ Constraints:
 + Must be a value from 1 to 35\.
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CopyTagsToSnapshot`  <a name="cfn-docdb-dbcluster-copytagstosnapshot"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DBClusterIdentifier`  <a name="cfn-docdb-dbcluster-dbclusteridentifier"></a>
@@ -118,7 +134,7 @@ The list of log types that need to be enabled for exporting to Amazon CloudWatch
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineVersion`  <a name="cfn-docdb-dbcluster-engineversion"></a>
-The version number of the database engine to use\. The \-\-engine\-version will default to the latest major engine version\. For production workloads, we recommend explicitly declaring this parameter with the intended major engine version\.  
+The version number of the database engine to use\. The `--engine-version` will default to the latest major engine version\. For production workloads, we recommend explicitly declaring this parameter with the intended major engine version\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -128,7 +144,7 @@ The AWS KMS key identifier for an encrypted cluster\.
 The AWS KMS key identifier is the Amazon Resource Name \(ARN\) for the AWS KMS encryption key\. If you are creating a cluster using the same AWS account that owns the AWS KMS encryption key that is used to encrypt the new cluster, you can use the AWS KMS key alias instead of the ARN for the AWS KMS encryption key\.  
 If an encryption key is not specified in `KmsKeyId`:   
 + If the `StorageEncrypted` parameter is `true`, Amazon DocumentDB uses your default encryption key\. 
-AWS KMS creates the default encryption key for your AWS account\. Your AWS account has a different default encryption key for each AWS Region\.  
+ AWS KMS creates the default encryption key for your AWS account\. Your AWS account has a different default encryption key for each AWS Regions\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -178,11 +194,42 @@ Constraints: Minimum 30\-minute window\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`RestoreToTime`  <a name="cfn-docdb-dbcluster-restoretotime"></a>
+The date and time to restore the cluster to\.  
+Valid values: A time in Universal Coordinated Time \(UTC\) format\.  
+Constraints:  
++ Must be before the latest restorable time for the instance\.
++ Must be specified if the `UseLatestRestorableTime` parameter is not provided\.
++ Cannot be specified if the `UseLatestRestorableTime` parameter is `true`\.
++ Cannot be specified if the `RestoreType` parameter is `copy-on-write`\.
+Example: `2015-03-07T23:45:00Z`   
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RestoreType`  <a name="cfn-docdb-dbcluster-restoretype"></a>
+The type of restore to be performed\. You can specify one of the following values:  
++  `full-copy` \- The new DB cluster is restored as a full copy of the source DB cluster\.
++  `copy-on-write` \- The new DB cluster is restored as a clone of the source DB cluster\.
+Constraints: You can't specify `copy-on-write` if the engine version of the source DB cluster is earlier than 1\.11\.  
+If you don't specify a `RestoreType` value, then the new DB cluster is restored as a full copy of the source DB cluster\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SnapshotIdentifier`  <a name="cfn-docdb-dbcluster-snapshotidentifier"></a>
 The identifier for the snapshot or cluster snapshot to restore from\.  
 You can use either the name or the Amazon Resource Name \(ARN\) to specify a cluster snapshot\. However, you can use only the ARN to specify a snapshot\.  
 Constraints:  
 + Must match the identifier of an existing snapshot\.
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`SourceDBClusterIdentifier`  <a name="cfn-docdb-dbcluster-sourcedbclusteridentifier"></a>
+The identifier of the source cluster from which to restore\.  
+Constraints:  
++ Must match the identifier of an existing `DBCluster`\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -197,6 +244,14 @@ Specifies whether the cluster is encrypted\.
 The tags to be assigned to the cluster\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`UseLatestRestorableTime`  <a name="cfn-docdb-dbcluster-uselatestrestorabletime"></a>
+A value that is set to `true` to restore the cluster to the latest restorable backup time, and `false` otherwise\.   
+Default: `false`   
+Constraints: Cannot be specified if the `RestoreToTime` parameter is provided\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VpcSecurityGroupIds`  <a name="cfn-docdb-dbcluster-vpcsecuritygroupids"></a>
@@ -235,7 +290,11 @@ The reader endpoint for the cluster\. For example: `sample-cluster.cluster-ro-co
 
 ## Examples<a name="aws-resource-docdb-dbcluster--examples"></a>
 
+
+
 ### <a name="aws-resource-docdb-dbcluster--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-docdb-dbcluster--examples----json"></a>
 
@@ -297,3 +356,4 @@ Resources:
 +  [DeleteDBCluster](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DeleteDBCluster.html) 
 +  [DescribeDBClusters](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DescribeDBClusters.html) 
 +  [ModifyDBCluster](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_ModifyDBCluster.html) 
+

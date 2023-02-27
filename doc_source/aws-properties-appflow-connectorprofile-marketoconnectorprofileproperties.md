@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile MarketoConnectorProfileProperties<a name="aws-properties-appflow-connectorprofile-marketoconnectorprofileproperties"></a>
 
- The `MarketoConnectorProfileProperties` property type specifies the connector\-specific profile properties required when using Marketo\. 
+ The connector\-specific profile properties required when using Marketo\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-marketoconnectorprofileproperties-syntax"></a>
 
@@ -32,3 +32,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-marketoconnectorprofileproperties--seealso"></a>
 + [MarketoConnectorProfileProperties](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_MarketoConnectorProfileProperties.html) in the *Amazon AppFlow API Reference*\.
+

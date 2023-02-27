@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Metadata](#cfn-appmesh-route-grpcroutematch-metadata)" : [ GrpcRouteMetadata, ... ],
   "[MethodName](#cfn-appmesh-route-grpcroutematch-methodname)" : String,
+  "[Port](#cfn-appmesh-route-grpcroutematch-port)" : Integer,
   "[ServiceName](#cfn-appmesh-route-grpcroutematch-servicename)" : String
 }
 ```
@@ -22,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Metadata](#cfn-appmesh-route-grpcroutematch-metadata): 
     - GrpcRouteMetadata
   [MethodName](#cfn-appmesh-route-grpcroutematch-methodname): String
+  [Port](#cfn-appmesh-route-grpcroutematch-port): Integer
   [ServiceName](#cfn-appmesh-route-grpcroutematch-servicename): String
 ```
 
@@ -31,12 +33,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 An object that represents the data to match from the request\.  
 *Required*: No  
 *Type*: List of [GrpcRouteMetadata](aws-properties-appmesh-route-grpcroutemetadata.md)  
+*Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MethodName`  <a name="cfn-appmesh-route-grpcroutematch-methodname"></a>
 The method name to match from the request\. If you specify a name, you must also specify a `serviceName`\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `50`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Port`  <a name="cfn-appmesh-route-grpcroutematch-port"></a>
+The port number to match on\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `65535`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceName`  <a name="cfn-appmesh-route-grpcroutematch-servicename"></a>

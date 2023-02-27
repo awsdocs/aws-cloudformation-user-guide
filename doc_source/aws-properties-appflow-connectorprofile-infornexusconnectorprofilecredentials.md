@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile InforNexusConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials"></a>
 
- The `InforNexusConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required by Infor Nexus\. 
+ The connector\-specific profile credentials required by Infor Nexus\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials-syntax"></a>
 
@@ -62,3 +62,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-infornexusconnectorprofilecredentials--seealso"></a>
 + [InforNexusConnectorProfileCredentials](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_InforNexusConnectorProfileCredentials.html) in the *Amazon AppFlow API Reference*\.
+

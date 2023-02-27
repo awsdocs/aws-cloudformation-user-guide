@@ -2,6 +2,9 @@
 
 Adds an Amazon CloudWatch log stream to monitor application configuration errors\.
 
+**Note**  
+Only one *ApplicationCloudWatchLoggingOption* resource can be attached per application\.
+
 ## Syntax<a name="aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -46,6 +49,8 @@ Provides a description of Amazon CloudWatch logging options, including the log s
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption--examples"></a>
+
+
 
 ### Create an ApplicationCloudWatchLoggingOption resource<a name="aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption--examples--Create_an_ApplicationCloudWatchLoggingOption_resource"></a>
 
@@ -92,20 +97,23 @@ Provides a description of Amazon CloudWatch logging options, including the log s
 
 ```
 BasicApplicationV2CloudWatchLoggingOption:
-  Type: 'AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption'
+  Type: AWS::KinesisAnalyticsV2::ApplicationCloudWatchLoggingOption
   Properties:
-    ApplicationName: !Ref BasicApplication
+    ApplicationName:
+      Ref: BasicApplication
     CloudWatchLoggingOption:
-      LogStreamARN: !Join 
-        - ':'
-        - - 'arn:aws:logs'
-          - !Ref 'AWS::Region'
-          - !Ref 'AWS::AccountId'
+      LogStreamARN:
+        Fn::Join:
+        - ":"
+        - - arn:aws:logs
+          - Ref: AWS::Region
+          - Ref: AWS::AccountId
           - log-group
-          - !Ref TestCWLogGroup
+          - Ref: TestCWLogGroup
           - log-stream
-          - !Ref TestCWLogStream
+          - Ref: TestCWLogStream
 ```
 
 ## See also<a name="aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption--seealso"></a>
 +  [AddApplicationCloudWatchLoggingOption](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationCloudWatchLoggingOption.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

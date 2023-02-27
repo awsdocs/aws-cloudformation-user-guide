@@ -52,7 +52,7 @@ The path of the logs to be monitored\. The log path must be an absolute Windows 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogType`  <a name="cfn-applicationinsights-application-log-logtype"></a>
-The log type decides the log patterns against which Application Insights analyzes the log\. The log type is selected from the following: `SQL_SERVER`, `IIS`, `APPLICATION`, and `DEFAULT`\.  
+The log type decides the log patterns against which Application Insights analyzes the log\. The log type is selected from the following: `SQL_SERVER`, `MYSQL`, `MYSQL_SLOW_QUERY`, `POSTGRESQL`, `ORACLE_ALERT`, `ORACLE_LISTENER`, `IIS`, `APPLICATION`, `WINDOWS_EVENTS`, `WINDOWS_EVENTS_ACTIVE_DIRECTORY`, `WINDOWS_EVENTS_DNS `, `WINDOWS_EVENTS_IIS `, `WINDOWS_EVENTS_SHAREPOINT`, `SQL_SERVER_ALWAYSON_AVAILABILITY_GROUP`, `SQL_SERVER_FAILOVER_CLUSTER_INSTANCE`, `STEP_FUNCTION`, `API_GATEWAY_ACCESS`, `API_GATEWAY_EXECUTION`, `SAP_HANA_LOGS`, `SAP_HANA_TRACE`, `SAP_HANA_HIGH_AVAILABILITY`, and `DEFAULT`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

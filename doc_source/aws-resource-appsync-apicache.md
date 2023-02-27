@@ -46,26 +46,26 @@ Caching behavior\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApiId`  <a name="cfn-appsync-apicache-apiid"></a>
-The GraphQL API Id\.  
+The GraphQL API ID\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AtRestEncryptionEnabled`  <a name="cfn-appsync-apicache-atrestencryptionenabled"></a>
-At rest encryption flag for cache\. This setting cannot be updated after creation\.  
+At\-rest encryption flag for cache\. You cannot update this setting after creation\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TransitEncryptionEnabled`  <a name="cfn-appsync-apicache-transitencryptionenabled"></a>
-Transit encryption flag when connecting to cache\. This setting cannot be updated after creation\.  
+Transit encryption flag when connecting to cache\. You cannot update this setting after creation\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Ttl`  <a name="cfn-appsync-apicache-ttl"></a>
 TTL in seconds for cache entries\.  
-Valid values are between 1 and 3600 seconds\.  
+Valid values are 1–3,600 seconds\.  
 *Required*: Yes  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -95,6 +95,8 @@ The following legacy instance types are available, but their use is discouraged:
 
 ## Examples<a name="aws-resource-appsync-apicache--examples"></a>
 
+
+
 ### ApiCache Creation Example<a name="aws-resource-appsync-apicache--examples--ApiCache_Creation_Example"></a>
 
 The following example creates an ApiCache for your GraphQL API\.
@@ -102,18 +104,42 @@ The following example creates an ApiCache for your GraphQL API\.
 #### YAML<a name="aws-resource-appsync-apicache--examples--ApiCache_Creation_Example--yaml"></a>
 
 ```
-Parameters: graphQlApiId: Type: String Resources: ApiCache: Type:
-            'AWS::AppSync::ApiCache' Properties: ApiId: graphQlApiId Type: T2_SMALL
-            ApiCachingBehavior: FULL_REQUEST_CACHING Ttl: 1200 TransitEncryptionEnabled: true
-            AtRestEncryptionEnabled: true
+Parameters: 
+  graphQlApiId: 
+    Type: String 
+Resources: 
+  ApiCache: 
+    Type:  AWS::AppSync::ApiCache 
+    Properties: 
+      ApiId: !Ref graphQlApiId 
+      Type: SMALL
+      ApiCachingBehavior: FULL_REQUEST_CACHING 
+      Ttl: 1200 
+      TransitEncryptionEnabled: true
+      AtRestEncryptionEnabled: true
 ```
 
 #### JSON<a name="aws-resource-appsync-apicache--examples--ApiCache_Creation_Example--json"></a>
 
 ```
-{ "Parameters": { "graphQlApiId": { "Type": "String" } },
-            "Resources": { "ApiCache": { "Type": "AWS::AppSync::ApiCache", "Properties": { "ApiId":
-            "graphQlApiId", "Type": "T2_SMALL", "ApiCachingBehavior": "FULL_REQUEST_CACHING", "Ttl":
-            1200, "TransitEncryptionEnabled": true, "AtRestEncryptionEnabled": true } } }
-            }
+{ 
+  "Parameters": { 
+    "graphQlApiId": { 
+      "Type": "String" 
+    } 
+  },
+  "Resources": { 
+    "ApiCache": { 
+      "Type": "AWS::AppSync::ApiCache", 
+      "Properties": { 
+        "ApiId": { "Ref": "graphQlApiId" }, 
+        "Type": "SMALL", 
+        "ApiCachingBehavior": "FULL_REQUEST_CACHING", 
+        "Ttl": 1200, 
+        "TransitEncryptionEnabled": true,
+        "AtRestEncryptionEnabled": true 
+      } 
+    } 
+  } 
+}
 ```

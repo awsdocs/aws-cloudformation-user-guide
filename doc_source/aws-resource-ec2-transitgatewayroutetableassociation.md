@@ -1,9 +1,8 @@
 # AWS::EC2::TransitGatewayRouteTableAssociation<a name="aws-resource-ec2-transitgatewayroutetableassociation"></a>
 
-Associates the specified attachment with the specified transit gateway route table\. You can associate only one route table with an attachment\.
+Associates the specified attachment with the specified transit gateway route table\. You can associate one route table with an attachment\.
 
-**Note**  
-The `TransitGatewayRouteTableId` value changes when you use `AWS::EC2::TransitGatewayRouteTableAssociation`\. To update the route table on the resource, detach the route table and update the Cloud Formation stack\. After you have the new `TransitGatewayRouteTableId`, perform another Cloud Formation stack update with the new ID\. For more information, see [Update Behaviors of Stack Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html)\.
+Before you can update the route table associated with an attachment, you must disassociate the transit gateway route table that is currently associated with the attachment\. First update the stack to remove the associated transit gateway route table, and then update the stack with the ID of the new transit gateway route table to associate\.
 
 ## Syntax<a name="aws-resource-ec2-transitgatewayroutetableassociation-syntax"></a>
 
@@ -54,3 +53,4 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## See also<a name="aws-resource-ec2-transitgatewayroutetableassociation--seealso"></a>
 +  [AssociateTransitGatewayRouteTable](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AssociateTransitGatewayRouteTable.html) in the *Amazon EC2 API Reference*
+

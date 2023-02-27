@@ -37,8 +37,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-taskdefinition-healthcheck-properties"></a>
 
 `Command`  <a name="cfn-ecs-taskdefinition-healthcheck-command"></a>
-A string array representing the command that the container runs to determine if it is healthy\. The string array must start with `CMD` to execute the command arguments directly, or `CMD-SHELL` to run the command with the container's default shell\. For example:  
+A string array representing the command that the container runs to determine if it is healthy\. The string array must start with `CMD` to run the command arguments directly, or `CMD-SHELL` to run the command with the container's default shell\.   
+ When you use the AWS Management Console JSON panel, the AWS Command Line Interface, or the APIs, enclose the list of commands in double quotes and brackets\.  
  `[ "CMD-SHELL", "curl -f http://localhost/ || exit 1" ]`   
+You don't include the double quotes and brackets when you use the AWS Management Console\.  
+ ` CMD-SHELL, curl -f http://localhost/ || exit 1`   
 An exit code of 0 indicates success, and non\-zero exit code indicates failure\. For more information, see `HealthCheck` in the [Create a container](https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate) section of the [Docker Remote API](https://docs.docker.com/engine/api/v1.35/)\.  
 *Required*: No  
 *Type*: List of String  
@@ -57,7 +60,7 @@ The number of times to retry a failed health check before the container is consi
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StartPeriod`  <a name="cfn-ecs-taskdefinition-healthcheck-startperiod"></a>
-The optional grace period within which to provide containers time to bootstrap before failed health checks count towards the maximum number of retries\. You may specify between 0 and 300 seconds\. The `startPeriod` is disabled by default\.  
+The optional grace period to provide containers time to bootstrap before failed health checks count towards the maximum number of retries\. You can specify between 0 and 300 seconds\. By default, the `startPeriod` is off\.  
 If a health check succeeds within the `startPeriod`, then the container is considered healthy and any subsequent failures count toward the maximum number of retries\.
 *Required*: No  
 *Type*: Integer  
@@ -68,3 +71,35 @@ The time period in seconds to wait for a health check to succeed before it is co
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+## Examples<a name="aws-properties-ecs-taskdefinition-healthcheck--examples"></a>
+
+### Creating an Amazon ECS container health check<a name="aws-properties-ecs-taskdefinition-healthcheck--examples--Creating_an_Amazon_ECS_container_health_check"></a>
+
+The following example creates a container health check\.
+
+#### JSON<a name="aws-properties-ecs-taskdefinition-healthcheck--examples--Creating_an_Amazon_ECS_container_health_check--json"></a>
+
+```
+"HealthCheck": {
+    "Command": [
+        "CMD-SHELL",
+	  "echo hello"
+    ],
+    "Interval": 5,
+    "Timeout": 2,
+    "Retries": 3
+}
+```
+
+#### YAML<a name="aws-properties-ecs-taskdefinition-healthcheck--examples--Creating_an_Amazon_ECS_container_health_check--yaml"></a>
+
+```
+HealthCheck:
+    Command:
+        - "CMD-SHELL"
+        - "echo hello"
+    Interval: 5
+    Retries: 2
+    Timeout: 3
+```

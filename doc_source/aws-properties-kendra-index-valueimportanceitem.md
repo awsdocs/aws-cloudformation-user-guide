@@ -1,6 +1,6 @@
 # AWS::Kendra::Index ValueImportanceItem<a name="aws-properties-kendra-index-valueimportanceitem"></a>
 
-Specifies a key\-value pair that determines the search boost value that a document receives when the key is part of the metadata of a document\.
+Specifies a key\-value pair of the search boost value for a document when the key is part of the metadata of a document\.
 
 ## Syntax<a name="aws-properties-kendra-index-valueimportanceitem-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-index-valueimportanceitem-properties"></a>
 
 `Key`  <a name="cfn-kendra-index-valueimportanceitem-key"></a>
-The document metadata value that receives the search boost\.  
+The document metadata value used for the search boost\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-kendra-index-valueimportanceitem-value"></a>
-The boost value that a document receives when the key is part of the metadata of a document\.  
+The boost value for a document when the key is part of the metadata of a document\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

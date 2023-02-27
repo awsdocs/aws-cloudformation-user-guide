@@ -1,6 +1,6 @@
 # AWS::ECS::TaskSet NetworkConfiguration<a name="aws-properties-ecs-taskset-networkconfiguration"></a>
 
-The network configuration for a task\.
+The network configuration for a task or service\.
 
 ## Syntax<a name="aws-properties-ecs-taskset-networkconfiguration-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-taskset-networkconfiguration-properties"></a>
 
 `AwsVpcConfiguration`  <a name="cfn-ecs-taskset-networkconfiguration-awsvpcconfiguration"></a>
-The VPC subnets and security groups associated with a task\.  
+The VPC subnets and security groups that are associated with a task\.  
 All specified subnets and security groups must be from the same VPC\.
 *Required*: No  
 *Type*: [AwsVpcConfiguration](aws-properties-ecs-taskset-awsvpcconfiguration.md)  

@@ -1,6 +1,6 @@
 # AWS::S3::AccessPoint PublicAccessBlockConfiguration<a name="aws-properties-s3-accesspoint-publicaccessblockconfiguration"></a>
 
-The PublicAccessBlock configuration that you want to apply to this Amazon S3 bucket\. You can enable the configuration options in any combination\. For more information about when Amazon S3 considers a bucket or object public, see [The Meaning of "Public"](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status) in the *Amazon Simple Storage Service Developer Guide*\. 
+The PublicAccessBlock configuration that you want to apply to this Amazon S3 bucket\. You can enable the configuration options in any combination\. For more information about when Amazon S3 considers a bucket or object public, see [The Meaning of "Public"](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status) in the *Amazon S3 User Guide*\. 
 
 ## Syntax<a name="aws-properties-s3-accesspoint-publicaccessblockconfiguration-syntax"></a>
 
@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `BlockPublicAcls`  <a name="cfn-s3-accesspoint-publicaccessblockconfiguration-blockpublicacls"></a>
 Specifies whether Amazon S3 should block public access control lists \(ACLs\) for this bucket and objects in this bucket\. Setting this element to `TRUE` causes the following behavior:  
-+ PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public\.
++ PUT Bucket ACL and PUT Object ACL calls fail if the specified ACL is public\.
 + PUT Object calls fail if the request includes a public ACL\.
 + PUT Bucket calls fail if the request includes a public ACL\.
 Enabling this setting doesn't affect existing policies or ACLs\.  

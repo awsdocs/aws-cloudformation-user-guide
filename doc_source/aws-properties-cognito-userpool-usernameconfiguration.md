@@ -23,10 +23,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cognito-userpool-usernameconfiguration-properties"></a>
 
 `CaseSensitive`  <a name="cfn-cognito-userpool-usernameconfiguration-casesensitive"></a>
-Specifies whether username case sensitivity will be applied for all users in the user pool through Cognito APIs\.  
-Valid values include:  
-+  ** `True` **: Enables case sensitivity for all username input\. When this option is set to `True`, users must sign in using the exact capitalization of their given username\. For example, “UserName”\. This is the default value\.
-+  ** `False` **: Enables case insensitivity for all username input\. For example, when this option is set to `False`, users will be able to sign in using either "username" or "Username"\. This option also enables both `preferred_username` and `email` alias to be case insensitive, in addition to the `username` attribute\.
+Specifies whether user name case sensitivity will be applied for all users in the user pool through Amazon Cognito APIs\. For most use cases, set case sensitivity to `False` \(case insensitive\) as a best practice\. When usernames and email addresses are case insensitive, users can sign in as the same user when they enter a different capitalization of their user name\.  
+Valid values include:    
+True  
+Enables case sensitivity for all username input\. When this option is set to `True`, users must sign in using the exact capitalization of their given username, such as “UserName”\. This is the default value\.  
+False  
+Enables case insensitivity for all username input\. For example, when this option is set to `False`, users can sign in using `username`, `USERNAME`, or `UserName`\. This option also enables both `preferred_username` and `email` alias to be case insensitive, in addition to the `username` attribute\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

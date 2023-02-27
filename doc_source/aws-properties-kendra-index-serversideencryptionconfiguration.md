@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-index-serversideencryptionconfiguration-properties"></a>
 
 `KmsKeyId`  <a name="cfn-kendra-index-serversideencryptionconfiguration-kmskeyid"></a>
-The identifier of the AWS KMS customer master key \(CMK\)\. Amazon Kendra doesn't support asymmetric CMKs\.  
+The identifier of the AWS KMS key\. Amazon Kendra doesn't support asymmetric keys\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

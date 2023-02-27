@@ -37,21 +37,21 @@ The actions to be performed\.
 
 `Condition`  <a name="cfn-iotevents-detectormodel-transitionevent-condition"></a>
 Required\. A Boolean expression that when TRUE causes the actions to be performed and the `nextState` to be entered\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Maximum*: `512`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventName`  <a name="cfn-iotevents-detectormodel-transitionevent-eventname"></a>
 The name of the transition event\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Maximum*: `128`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NextState`  <a name="cfn-iotevents-detectormodel-transitionevent-nextstate"></a>
 The next state to enter\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  

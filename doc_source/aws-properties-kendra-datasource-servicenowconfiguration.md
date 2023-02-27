@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource ServiceNowConfiguration<a name="aws-properties-kendra-datasource-servicenowconfiguration"></a>
 
-Provides configuration information required to connect to a ServiceNow data source\.
+Provides the configuration information to connect to ServiceNow as your data source\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-servicenowconfiguration-syntax"></a>
 
@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AuthenticationType](#cfn-kendra-datasource-servicenowconfiguration-authenticationtype)" : String,
   "[HostUrl](#cfn-kendra-datasource-servicenowconfiguration-hosturl)" : String,
   "[KnowledgeArticleConfiguration](#cfn-kendra-datasource-servicenowconfiguration-knowledgearticleconfiguration)" : ServiceNowKnowledgeArticleConfiguration,
   "[SecretArn](#cfn-kendra-datasource-servicenowconfiguration-secretarn)" : String,
@@ -21,6 +22,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-kendra-datasource-servicenowconfiguration-syntax.yaml"></a>
 
 ```
+  [AuthenticationType](#cfn-kendra-datasource-servicenowconfiguration-authenticationtype): String
   [HostUrl](#cfn-kendra-datasource-servicenowconfiguration-hosturl): String
   [KnowledgeArticleConfiguration](#cfn-kendra-datasource-servicenowconfiguration-knowledgearticleconfiguration): 
     ServiceNowKnowledgeArticleConfiguration
@@ -32,8 +34,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-kendra-datasource-servicenowconfiguration-properties"></a>
 
+`AuthenticationType`  <a name="cfn-kendra-datasource-servicenowconfiguration-authenticationtype"></a>
+The type of authentication used to connect to the ServiceNow instance\. If you choose `HTTP_BASIC`, Amazon Kendra is authenticated using the user name and password provided in the AWS Secrets Manager secret in the `SecretArn` field\. If you choose `OAUTH2`, Amazon Kendra is authenticated using the credentials of client ID, client secret, user name and password\.  
+When you use `OAUTH2` authentication, you must generate a token and a client secret using the ServiceNow console\. For more information, see [Using a ServiceNow data source](https://docs.aws.amazon.com/kendra/latest/dg/data-source-servicenow.html)\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `HTTP_BASIC | OAUTH2`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `HostUrl`  <a name="cfn-kendra-datasource-servicenowconfiguration-hosturl"></a>
-The ServiceNow instance that the data source connects to\. The host endpoint should look like the following: `{instance}.service-now.com.`   
+The ServiceNow instance that the data source connects to\. The host endpoint should look like the following: *\{instance\}\.service\-now\.com\.*   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -42,13 +52,13 @@ The ServiceNow instance that the data source connects to\. The host endpoint sho
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KnowledgeArticleConfiguration`  <a name="cfn-kendra-datasource-servicenowconfiguration-knowledgearticleconfiguration"></a>
-Provides configuration information for crawling knowledge articles in the ServiceNow site\.  
+Configuration information for crawling knowledge articles in the ServiceNow site\.  
 *Required*: No  
 *Type*: [ServiceNowKnowledgeArticleConfiguration](aws-properties-kendra-datasource-servicenowknowledgearticleconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretArn`  <a name="cfn-kendra-datasource-servicenowconfiguration-secretarn"></a>
-The Amazon Resource Name \(ARN\) of the AWS Secret Manager secret that contains the user name and password required to connect to the ServiceNow instance\.  
+The Amazon Resource Name \(ARN\) of the AWS Secrets Manager secret that contains the user name and password required to connect to the ServiceNow instance\. You can also provide OAuth authentication credentials of user name, password, client ID, and client secret\. For more information, see [Using a ServiceNow data source](https://docs.aws.amazon.com/kendra/latest/dg/data-source-servicenow.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -57,7 +67,7 @@ The Amazon Resource Name \(ARN\) of the AWS Secret Manager secret that contains 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceCatalogConfiguration`  <a name="cfn-kendra-datasource-servicenowconfiguration-servicecatalogconfiguration"></a>
-Provides configuration information for crawling service catalogs in the ServiceNow site\.  
+Configuration information for crawling service catalogs in the ServiceNow site\.  
 *Required*: No  
 *Type*: [ServiceNowServiceCatalogConfiguration](aws-properties-kendra-datasource-servicenowservicecatalogconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

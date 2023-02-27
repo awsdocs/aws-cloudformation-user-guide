@@ -1,6 +1,6 @@
 # AWS::MSK::Cluster BrokerLogs<a name="aws-properties-msk-cluster-brokerlogs"></a>
 
-You can configure your MSK cluster to send broker logs to different destination types\. This configuration specifies the details of these destinations\.
+You can configure your Amazon MSK cluster to send broker logs to different destination types\. This configuration specifies the details of these destinations\.
 
 ## Syntax<a name="aws-properties-msk-cluster-brokerlogs-syntax"></a>
 
@@ -42,7 +42,7 @@ Details of the Kinesis Data Firehose delivery stream that is the destination for
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3`  <a name="cfn-msk-cluster-brokerlogs-s3"></a>
-Details of the Amazon S3 destination for broker logs\.  
+Details of the Amazon MSK destination for broker logs\.  
 *Required*: No  
 *Type*: [S3](aws-properties-msk-cluster-s3.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

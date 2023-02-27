@@ -29,28 +29,28 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-codepipeline-customactiontype-settings-properties"></a>
 
 `EntityUrlTemplate`  <a name="cfn-codepipeline-customactiontype-settings-entityurltemplate"></a>
-The URL returned to the AWS CodePipeline console that provides a deep link to the resources of the external system, such as the configuration page for an AWS CodeDeploy deployment group\. This link is provided as part of the action display in the pipeline\.  
+The URL returned to the CodePipeline console that provides a deep link to the resources of the external system, such as the configuration page for a CodeDeploy deployment group\. This link is provided as part of the action display in the pipeline\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ExecutionUrlTemplate`  <a name="cfn-codepipeline-customactiontype-settings-executionurltemplate"></a>
-The URL returned to the AWS CodePipeline console that contains a link to the top\-level landing page for the external system, such as the console page for AWS CodeDeploy\. This link is shown on the pipeline view page in the AWS CodePipeline console and provides a link to the execution entity of the external action\.  
+The URL returned to the CodePipeline console that contains a link to the top\-level landing page for the external system, such as the console page for CodeDeploy\. This link is shown on the pipeline view page in the CodePipeline console and provides a link to the execution entity of the external action\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RevisionUrlTemplate`  <a name="cfn-codepipeline-customactiontype-settings-revisionurltemplate"></a>
-The URL returned to the AWS CodePipeline console that contains a link to the page where customers can update or change the configuration of the external action\.  
+The URL returned to the CodePipeline console that contains a link to the page where customers can update or change the configuration of the external action\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ThirdPartyConfigurationUrl`  <a name="cfn-codepipeline-customactiontype-settings-thirdpartyconfigurationurl"></a>
 The URL of a sign\-up page where users can sign up for an external service and perform initial configuration of the action provided by that service\.  
@@ -58,4 +58,4 @@ The URL of a sign\-up page where users can sign up for an external service and p
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

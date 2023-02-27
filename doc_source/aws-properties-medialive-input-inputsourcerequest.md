@@ -1,6 +1,8 @@
 # AWS::MediaLive::Input InputSourceRequest<a name="aws-properties-medialive-input-inputsourcerequest"></a>
 
-Settings for an input that is a pull input\. This element belongs to CreateInput, UpdateInput, and Input\.
+Settings that apply only if the input is a pull type of input\.
+
+The parent of this entity is Input\.
 
 ## Syntax<a name="aws-properties-medialive-input-inputsourcerequest-syntax"></a>
 
@@ -27,19 +29,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-input-inputsourcerequest-properties"></a>
 
 `PasswordParam`  <a name="cfn-medialive-input-inputsourcerequest-passwordparam"></a>
-The key used to extract the password from EC2 Parameter store\.  
+The password parameter that holds the password for accessing the upstream system\. The password parameter applies only if the upstream system requires credentials\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Url`  <a name="cfn-medialive-input-inputsourcerequest-url"></a>
-This represents the customer's source URL where stream is pulled from\.  
+For a pull input, the URL where MediaLive pulls the source content from\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Username`  <a name="cfn-medialive-input-inputsourcerequest-username"></a>
-The username for the input source\.  
+The user name to connect to the upstream system\. The user name applies only if the upstream system requires credentials\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

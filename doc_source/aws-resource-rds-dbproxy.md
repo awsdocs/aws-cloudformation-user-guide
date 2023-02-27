@@ -77,8 +77,8 @@ Whether the proxy includes detailed information about SQL statements in its logs
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EngineFamily`  <a name="cfn-rds-dbproxy-enginefamily"></a>
-The kinds of databases that the proxy can connect to\. This value determines which database network protocol the proxy recognizes when it interprets network traffic to and from the database\. The engine family applies to MySQL and PostgreSQL for both RDS and Aurora\.  
-*Valid values*: `MYSQL` \| `POSTGRESQL`  
+The kinds of databases that the proxy can connect to\. This value determines which database network protocol the proxy recognizes when it interprets network traffic to and from the database\. For Aurora MySQL, RDS for MariaDB, and RDS for MySQL databases, specify `MYSQL`\. For Aurora PostgreSQL and RDS for PostgreSQL databases, specify `POSTGRESQL`\. For RDS for Microsoft SQL Server, specify `SQLSERVER`\.  
+*Valid values*: `MYSQL` \| `POSTGRESQL` \| `SQLSERVER`  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -138,13 +138,16 @@ The Amazon Resource Name \(ARN\) representing the target group\.
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
 The writer endpoint for the RDS DB instance or Aurora DB cluster\.
 
+`VpcId`  <a name="VpcId-fn::getatt"></a>
+The VPC ID to associate with the DB proxy\.
+
 ## Examples<a name="aws-resource-rds-dbproxy--examples"></a>
 
-### Creating a DB Proxy and registering a DB instance<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_registering_a_DB_instance"></a>
+### Creating a DB proxy and registering a DB instance<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_proxy_and_registering_a_DB_instance"></a>
 
 The following example creates a DB proxy and registers a DB instance\.
 
-#### JSON<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_registering_a_DB_instance--json"></a>
+#### JSON<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_proxy_and_registering_a_DB_instance--json"></a>
 
 ```
 {
@@ -217,8 +220,8 @@ The following example creates a DB proxy and registers a DB instance\.
                 ],
                 "TargetGroupName": "default",
                 "ConnectionPoolConfigurationInfo": {
-                    "MaxConnectionsPercent": 12,
-                    "MaxIdleConnectionsPercent": 11,
+                    "MaxConnectionsPercent": 100,
+                    "MaxIdleConnectionsPercent": 50,
                     "ConnectionBorrowTimeout": 120
                 }
             }
@@ -227,7 +230,7 @@ The following example creates a DB proxy and registers a DB instance\.
 }
 ```
 
-#### YAML<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_Proxy_and_registering_a_DB_instance--yaml"></a>
+#### YAML<a name="aws-resource-rds-dbproxy--examples--Creating_a_DB_proxy_and_registering_a_DB_instance--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -269,7 +272,7 @@ Resources:
       DBInstanceIdentifiers: [!Ref InstanceName]
       TargetGroupName: default
       ConnectionPoolConfigurationInfo:
-          MaxConnectionsPercent: 12
-          MaxIdleConnectionsPercent: 11
+          MaxConnectionsPercent: 100
+          MaxIdleConnectionsPercent: 50
           ConnectionBorrowTimeout: 120
 ```

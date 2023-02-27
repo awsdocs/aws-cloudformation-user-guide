@@ -17,6 +17,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Direction](#cfn-route53resolver-resolverendpoint-direction)" : String,
       "[IpAddresses](#cfn-route53resolver-resolverendpoint-ipaddresses)" : [ IpAddressRequest, ... ],
       "[Name](#cfn-route53resolver-resolverendpoint-name)" : String,
+      "[OutpostArn](#cfn-route53resolver-resolverendpoint-outpostarn)" : String,
+      "[PreferredInstanceType](#cfn-route53resolver-resolverendpoint-preferredinstancetype)" : String,
+      "[ResolverEndpointType](#cfn-route53resolver-resolverendpoint-resolverendpointtype)" : String,
       "[SecurityGroupIds](#cfn-route53resolver-resolverendpoint-securitygroupids)" : [ String, ... ],
       "[Tags](#cfn-route53resolver-resolverendpoint-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -32,6 +35,9 @@ Properties:
   [IpAddresses](#cfn-route53resolver-resolverendpoint-ipaddresses): 
     - IpAddressRequest
   [Name](#cfn-route53resolver-resolverendpoint-name): String
+  [OutpostArn](#cfn-route53resolver-resolverendpoint-outpostarn): String
+  [PreferredInstanceType](#cfn-route53resolver-resolverendpoint-preferredinstancetype): String
+  [ResolverEndpointType](#cfn-route53resolver-resolverendpoint-resolverendpointtype): String
   [SecurityGroupIds](#cfn-route53resolver-resolverendpoint-securitygroupids): 
     - String
   [Tags](#cfn-route53resolver-resolverendpoint-tags): 
@@ -64,6 +70,24 @@ A friendly name that lets you easily find a configuration in the Resolver dashbo
 *Pattern*: `(?!^[0-9]+$)([a-zA-Z0-9\-_' ']+)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`OutpostArn`  <a name="cfn-route53resolver-resolverendpoint-outpostarn"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`PreferredInstanceType`  <a name="cfn-route53resolver-resolverendpoint-preferredinstancetype"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ResolverEndpointType`  <a name="cfn-route53resolver-resolverendpoint-resolverendpointtype"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SecurityGroupIds`  <a name="cfn-route53resolver-resolverendpoint-securitygroupids"></a>
 The ID of one or more security groups that control access to this VPC\. The security group must include one or more inbound rules \(for inbound endpoints\) or outbound rules \(for outbound endpoints\)\. Inbound and outbound rules must allow TCP and UDP access\. For inbound access, open port 53\. For outbound access, open the port that you're using for DNS queries on your network\.  
 *Required*: Yes  
@@ -71,7 +95,7 @@ The ID of one or more security groups that control access to this VPC\. The secu
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-route53resolver-resolverendpoint-tags"></a>
-A list of the tag keys and values that you want to associate with the endpoint\.  
+Route 53 Resolver doesn't support updating tags through CloudFormation\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `200`  
@@ -94,7 +118,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-route53resolver-resolverendpoint-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the resolver endpoint, such as `arn:aws:route53Resolver:us-east-1:123456789012:resolver-endpoint/resolver-endpoint-a1bzhi`\.
+The Amazon Resource Name \(ARN\) of the resolver endpoint, such as `arn:aws:route53resolver:us-east-1:123456789012:resolver-endpoint/resolver-endpoint-a1bzhi`\.
 
 `Direction`  <a name="Direction-fn::getatt"></a>
 Indicates whether the resolver endpoint allows inbound or outbound DNS queries\.
@@ -108,10 +132,21 @@ The number of IP addresses that the resolver endpoint can use for DNS queries\.
 `Name`  <a name="Name-fn::getatt"></a>
 The name that you assigned to the resolver endpoint when you created the endpoint\.
 
+`OutpostArn`  <a name="OutpostArn-fn::getatt"></a>
+Property description not available\.
+
+`PreferredInstanceType`  <a name="PreferredInstanceType-fn::getatt"></a>
+Property description not available\.
+
 `ResolverEndpointId`  <a name="ResolverEndpointId-fn::getatt"></a>
 The ID of the resolver endpoint\.
 
+`ResolverEndpointType`  <a name="ResolverEndpointType-fn::getatt"></a>
+Property description not available\.
+
 ## Examples<a name="aws-resource-route53resolver-resolverendpoint--examples"></a>
+
+
 
 ### Create Resolver endpoint<a name="aws-resource-route53resolver-resolverendpoint--examples--Create_Resolver_endpoint"></a>
 
@@ -164,3 +199,4 @@ Properties :
 
 ## See also<a name="aws-resource-route53resolver-resolverendpoint--seealso"></a>
 +  [ResolverEndpoint](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ResolverEndpoint.html) in the *Amazon Route 53 API Reference* 
+

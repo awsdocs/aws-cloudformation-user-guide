@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource S3DataSourceConfiguration<a name="aws-properties-kendra-datasource-s3datasourceconfiguration"></a>
 
-Provides configuration information for a data source to index documents in an Amazon S3 bucket\.
+Provides the configuration information to connect to an Amazon S3 bucket\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-s3datasourceconfiguration-syntax"></a>
 
@@ -13,8 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AccessControlListConfiguration](#cfn-kendra-datasource-s3datasourceconfiguration-accesscontrollistconfiguration)" : AccessControlListConfiguration,
   "[BucketName](#cfn-kendra-datasource-s3datasourceconfiguration-bucketname)" : String,
   "[DocumentsMetadataConfiguration](#cfn-kendra-datasource-s3datasourceconfiguration-documentsmetadataconfiguration)" : DocumentsMetadataConfiguration,
-  "[ExclusionPatterns](#cfn-kendra-datasource-s3datasourceconfiguration-exclusionpatterns)" : DataSourceInclusionsExclusionsStrings,
-  "[InclusionPrefixes](#cfn-kendra-datasource-s3datasourceconfiguration-inclusionprefixes)" : DataSourceInclusionsExclusionsStrings
+  "[ExclusionPatterns](#cfn-kendra-datasource-s3datasourceconfiguration-exclusionpatterns)" : [ String, ... ],
+  "[InclusionPatterns](#cfn-kendra-datasource-s3datasourceconfiguration-inclusionpatterns)" : [ String, ... ],
+  "[InclusionPrefixes](#cfn-kendra-datasource-s3datasourceconfiguration-inclusionprefixes)" : [ String, ... ]
 }
 ```
 
@@ -27,15 +28,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DocumentsMetadataConfiguration](#cfn-kendra-datasource-s3datasourceconfiguration-documentsmetadataconfiguration): 
     DocumentsMetadataConfiguration
   [ExclusionPatterns](#cfn-kendra-datasource-s3datasourceconfiguration-exclusionpatterns): 
-    DataSourceInclusionsExclusionsStrings
+    - String
+  [InclusionPatterns](#cfn-kendra-datasource-s3datasourceconfiguration-inclusionpatterns): 
+    - String
   [InclusionPrefixes](#cfn-kendra-datasource-s3datasourceconfiguration-inclusionprefixes): 
-    DataSourceInclusionsExclusionsStrings
+    - String
 ```
 
 ## Properties<a name="aws-properties-kendra-datasource-s3datasourceconfiguration-properties"></a>
 
 `AccessControlListConfiguration`  <a name="cfn-kendra-datasource-s3datasourceconfiguration-accesscontrollistconfiguration"></a>
-Provides the path to the S3 bucket that contains the user context filtering files for the data source\.  
+Provides the path to the S3 bucket that contains the user context filtering files for the data source\. For the format of the file, see [Access control for S3 data sources](https://docs.aws.amazon.com/kendra/latest/dg/s3-acl.html)\.  
 *Required*: No  
 *Type*: [AccessControlListConfiguration](aws-properties-kendra-datasource-accesscontrollistconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -57,15 +60,29 @@ Specifies document metadata files that contain information such as the document 
 
 `ExclusionPatterns`  <a name="cfn-kendra-datasource-s3datasourceconfiguration-exclusionpatterns"></a>
 A list of glob patterns for documents that should not be indexed\. If a document that matches an inclusion prefix or inclusion pattern also matches an exclusion pattern, the document is not indexed\.  
-For more information about glob patterns, see [glob \(programming\)](https://en.wikipedia.org/wiki/Glob_(programming)) in *Wikipedia*\.  
+Some [examples](https://docs.aws.amazon.com/cli/latest/reference/s3/#use-of-exclude-and-include-filters) are:  
++  *\*\.png , \*\.jpg* will exclude all PNG and JPEG image files in a directory \(files with the extensions \.png and \.jpg\)\.
++  *\*internal\** will exclude all files in a directory that contain 'internal' in the file name, such as 'internal', 'internal\_only', 'company\_internal'\.
++  *\*\*/\*internal\** will exclude all internal\-related files in a directory and its subdirectories\.
 *Required*: No  
-*Type*: [DataSourceInclusionsExclusionsStrings](aws-properties-kendra-datasource-datasourceinclusionsexclusionsstrings.md)  
+*Type*: List of String  
+*Maximum*: `100`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`InclusionPatterns`  <a name="cfn-kendra-datasource-s3datasourceconfiguration-inclusionpatterns"></a>
+A list of glob patterns for documents that should be indexed\. If a document that matches an inclusion pattern also matches an exclusion pattern, the document is not indexed\.  
+Some [examples](https://docs.aws.amazon.com/cli/latest/reference/s3/#use-of-exclude-and-include-filters) are:  
++  *\*\.txt* will include all text files in a directory \(files with the extension \.txt\)\.
++  *\*\*/\*\.txt* will include all text files in a directory and its subdirectories\.
++  *\*tax\** will include all files in a directory that contain 'tax' in the file name, such as 'tax', 'taxes', 'income\_tax'\.
+*Required*: No  
+*Type*: List of String  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InclusionPrefixes`  <a name="cfn-kendra-datasource-s3datasourceconfiguration-inclusionprefixes"></a>
 A list of S3 prefixes for the documents that should be included in the index\.  
 *Required*: No  
-*Type*: [DataSourceInclusionsExclusionsStrings](aws-properties-kendra-datasource-datasourceinclusionsexclusionsstrings.md)  
+*Type*: List of String  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

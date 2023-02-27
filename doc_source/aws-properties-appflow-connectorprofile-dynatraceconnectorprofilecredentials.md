@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile DynatraceConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-dynatraceconnectorprofilecredentials"></a>
 
- The `DynatraceConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required by Dynatrace\. 
+ The connector\-specific profile credentials required by Dynatrace\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-dynatraceconnectorprofilecredentials-syntax"></a>
 
@@ -32,3 +32,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-dynatraceconnectorprofilecredentials--seealso"></a>
 + [DynatraceConnectorProfileCredentials](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_DynatraceConnectorProfileCredentials.html) in the *Amazon AppFlow API Reference*\.
+

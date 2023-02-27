@@ -1,8 +1,8 @@
 # AWS::ECS::CapacityProvider<a name="aws-resource-ecs-capacityprovider"></a>
 
-The `AWS::ECS::CapacityProvider` resource creates an Amazon Elastic Container Service \(Amazon ECS\) capacity provider\. Capacity providers are associated with an Amazon ECS cluster and are used in capacity provider strategies to facilitate cluster auto scaling\.
+Creates a new capacity provider\. Capacity providers are associated with an Amazon ECS cluster and are used in capacity provider strategies to facilitate cluster auto scaling\.
 
-Only capacity providers using an Auto Scaling group can be created\. Amazon ECS tasks on AWS Fargate use the `FARGATE` and `FARGATE_SPOT` capacity providers which are already created and available to all accounts in Regions supported by AWS Fargate\.
+Only capacity providers that use an Auto Scaling group can be created\. Amazon ECS tasks on AWS Fargate use the `FARGATE` and `FARGATE_SPOT` capacity providers\. These providers are available to all accounts in the AWS Regions that AWS Fargate supports\.
 
 ## Syntax<a name="aws-resource-ecs-capacityprovider-syntax"></a>
 
@@ -39,16 +39,16 @@ Properties:
 The Auto Scaling group settings for the capacity provider\.  
 *Required*: Yes  
 *Type*: [AutoScalingGroupProvider](aws-properties-ecs-capacityprovider-autoscalinggroupprovider.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ecs-capacityprovider-name"></a>
-The name of the capacity provider\.  
+The name of the capacity provider\. If a name is specified, it cannot start with `aws`, `ecs`, or `fargate`\. If no name is specified, a default name in the `CFNStackName-CFNResourceName-RandomString` format is used\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ecs-capacityprovider-tags"></a>
-The metadata that you apply to the capacity provider to help you categorize and organize it\. Each tag consists of a key and an optional value, both of which you define\.  
+The metadata that you apply to the capacity provider to help you categorize and organize it\. Each tag consists of a key and an optional value\. You define both\.  
 The following basic restrictions apply to tags:  
 + Maximum number of tags per resource \- 50
 + For each resource, each tag key must be unique, and each tag key can have only one value\.
@@ -76,6 +76,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-ecs-capacityprovider--examples"></a>
 
+
+
 ### Creating an Amazon ECS capacity provider<a name="aws-resource-ecs-capacityprovider--examples--Creating_an_Amazon_ECS_capacity_provider"></a>
 
 The following example creates a capacity provider that uses the Auto Scaling group `MyAutoScalingGroup`, has managed scaling and managed termination protection enabled\. This configuration is used for Amazon ECS cluster auto scaling\.
@@ -86,7 +88,7 @@ The following example creates a capacity provider that uses the Auto Scaling gro
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Resources": {
-        "ECSCapacityProvider": {
+    "MyCapacityProvider": {
             "Type": "AWS::ECS::CapacityProvider",
             "Properties": {
                 "AutoScalingGroupProvider": {
@@ -116,7 +118,7 @@ The following example creates a capacity provider that uses the Auto Scaling gro
 ```
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
-  ECSCapacityProvider:
+ MyCapacityProvider:
     Type: AWS::ECS::CapacityProvider
     Properties:
         AutoScalingGroupProvider:

@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel VideoSelectorPid<a name="aws-properties-medialive-channel-videoselectorpid"></a>
 
-Fields for specifying the video asset using the PID\. This element belongs to VideoSelectorSettings\.
+Selects a specific PID from within a video source\.
+
+The parent of this entity is VideoSelectorSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-videoselectorpid-syntax"></a>
 

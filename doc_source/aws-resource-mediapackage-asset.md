@@ -14,7 +14,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::MediaPackage::Asset",
   "Properties" : {
-      "[EgressEndpoints](#cfn-mediapackage-asset-egressendpoints)" : [ EgressEndpoint, ... ],
       "[Id](#cfn-mediapackage-asset-id)" : String,
       "[PackagingGroupId](#cfn-mediapackage-asset-packaginggroupid)" : String,
       "[ResourceId](#cfn-mediapackage-asset-resourceid)" : String,
@@ -30,8 +29,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::MediaPackage::Asset
 Properties: 
-  [EgressEndpoints](#cfn-mediapackage-asset-egressendpoints): 
-    - EgressEndpoint
   [Id](#cfn-mediapackage-asset-id): String
   [PackagingGroupId](#cfn-mediapackage-asset-packaginggroupid): String
   [ResourceId](#cfn-mediapackage-asset-resourceid): String
@@ -42,12 +39,6 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-mediapackage-asset-properties"></a>
-
-`EgressEndpoints`  <a name="cfn-mediapackage-asset-egressendpoints"></a>
-List of playback endpoints that are available for this asset\.  
-*Required*: No  
-*Type*: List of [EgressEndpoint](aws-properties-mediapackage-asset-egressendpoint.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-mediapackage-asset-id"></a>
 Unique identifier that you assign to the asset\.  
@@ -63,18 +54,18 @@ The ID of the packaging group associated with this asset\.
 
 `ResourceId`  <a name="cfn-mediapackage-asset-resourceid"></a>
 Unique identifier for this asset, as it's configured in the key provider service\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceArn`  <a name="cfn-mediapackage-asset-sourcearn"></a>
-The ARN for the source content in Amazon S3\.   
+The ARN for the source content in Amazon S3\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceRoleArn`  <a name="cfn-mediapackage-asset-sourcerolearn"></a>
-The ARN for the IAM role that provides AWS Elemental MediaPackage access to the Amazon S3 bucket where the source content is stored\. Valid format: arn:aws:iam::\{accountID\}:role/\{name\}   
+The ARN for the IAM role that provides AWS Elemental MediaPackage access to the Amazon S3 bucket where the source content is stored\. Valid format: arn:aws:iam::\{accountID\}:role/\{name\}  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -98,3 +89,6 @@ The Amazon Resource Name \(ARN\) for the asset\. You can get this from the respo
 
 `CreatedAt`  <a name="CreatedAt-fn::getatt"></a>
 The time that the asset was initially submitted for ingest\.
+
+`EgressEndpoints`  <a name="EgressEndpoints-fn::getatt"></a>
+Property description not available\.

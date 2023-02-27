@@ -1,6 +1,6 @@
 # AWS::Pinpoint::PushTemplate DefaultPushNotificationTemplate<a name="aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate"></a>
 
-The AWS::Pinpoint::PushTemplate DefaultPushNotificationTemplate resource defines the default settings and content for a message template that can be used in messages that are sent through a push notification channel\.
+Specifies the default settings and content for a message template that can be used in messages that are sent through a push notification channel\.
 
 ## Syntax<a name="aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate-syntax"></a>
 
@@ -32,9 +32,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Action`  <a name="cfn-pinpoint-pushtemplate-defaultpushnotificationtemplate-action"></a>
 The action to occur if a recipient taps a push notification that's based on the message template\. Valid values are:  
-+  `OPEN_APP` \- Your app opens or it becomes the foreground app if it was sent to the background\. This is the default action\.
-+  `DEEP_LINK` \- Your app opens and displays a designated user interface in the app\. This setting uses the deep\-linking features of the iOS and Android platforms\.
-+  `URL` \- The default mobile browser on the recipient's device opens and loads the web page at a URL that you specify\.
++  `OPEN_APP` – Your app opens or it becomes the foreground app if it was sent to the background\. This is the default action\.
++  `DEEP_LINK` – Your app opens and displays a designated user interface in the app\. This setting uses the deep\-linking features of the iOS and Android platforms\.
++  `URL` – The default mobile browser on the recipient's device opens and loads the web page at a URL that you specify\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::CodeDeploy::DeploymentGroup LoadBalancerInfo<a name="aws-properties-codedeploy-deploymentgroup-loadbalancerinfo"></a>
 
-The `LoadBalancerInfo` property type specifies information about the load balancer or target group used for an AWS CodeDeploy deployment group\. For more information, see [ Integrating CodeDeploy with Elastic Load Balancing ](https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-elastic-load-balancing.html) in the *AWS CodeDeploy User Guide*\.
+The `LoadBalancerInfo` property type specifies information about the load balancer or target group used for an AWS CodeDeploy deployment group\. For more information, see [ Integrating CodeDeploy with Elastic Load Balancing](https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-aws-elastic-load-balancing.html) in the *AWS CodeDeploy User Guide*\.
 
 For AWS CloudFormation to use the properties specified in `LoadBalancerInfo`, the `DeploymentStyle.DeploymentOption` property must be set to `WITH_TRAFFIC_CONTROL`\. If `DeploymentStyle.DeploymentOption` is not set to `WITH_TRAFFIC_CONTROL`, AWS CloudFormation ignores any settings specified in `LoadBalancerInfo`\.
 
@@ -18,7 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ElbInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist)" : [ ELBInfo, ... ],
-  "[TargetGroupInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist)" : [ TargetGroupInfo, ... ]
+  "[TargetGroupInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist)" : [ TargetGroupInfo, ... ],
+  "[TargetGroupPairInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgrouppairinfolist)" : [ TargetGroupPairInfo, ... ]
 }
 ```
 
@@ -29,6 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - ELBInfo
   [TargetGroupInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist): 
     - TargetGroupInfo
+  [TargetGroupPairInfoList](#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgrouppairinfolist): 
+    - TargetGroupPairInfo
 ```
 
 ## Properties<a name="aws-properties-codedeploy-deploymentgroup-loadbalancerinfo-properties"></a>
@@ -45,4 +48,10 @@ An array that contains information about the target group to use for load balanc
  Adding more than one target group to the array is not supported\. 
 *Required*: Conditional  
 *Type*: List of [TargetGroupInfo](aws-properties-codedeploy-deploymentgroup-targetgroupinfo.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TargetGroupPairInfoList`  <a name="cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgrouppairinfolist"></a>
+ The target group pair information\. This is an array of `TargeGroupPairInfo` objects with a maximum size of one\.   
+*Required*: No  
+*Type*: List of [TargetGroupPairInfo](aws-properties-codedeploy-deploymentgroup-targetgrouppairinfo.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

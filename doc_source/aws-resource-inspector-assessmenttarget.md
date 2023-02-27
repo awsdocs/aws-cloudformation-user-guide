@@ -66,6 +66,8 @@ The Amazon Resource Name \(ARN\) that specifies the assessment target that is cr
 
 ## Examples<a name="aws-resource-inspector-assessmenttarget--examples"></a>
 
+
+
 ### Declaring an Amazon Inspector Assessment Target Resource<a name="aws-resource-inspector-assessmenttarget--examples--Declaring_an_Amazon_Inspector_Assessment_Target_Resource"></a>
 
 The following examples show how to declare an `AWS::Inspector::AssessmentTarget` resource to create an Amazon Inspector assessment target\.
@@ -73,21 +75,20 @@ The following examples show how to declare an `AWS::Inspector::AssessmentTarget`
 #### JSON<a name="aws-resource-inspector-assessmenttarget--examples--Declaring_an_Amazon_Inspector_Assessment_Target_Resource--json"></a>
 
 ```
-"myassessmenttarget": {
-  "Type": "AWS::Inspector::AssessmentTarget",
-  "Properties": {
-    "AssessmentTargetName" : "MyAssessmentTarget",
-    "ResourceGroupArn" : "arn:aws:inspector:us-west-2:123456789012:resourcegroup/0-AB6DMKnv"
-  }
+{
+    "Type": "AWS::Inspector::AssessmentTarget",
+    "Properties": {
+        "AssessmentTargetName": "MyAssessmentTarget",
+        "ResourceGroupArn": "arn:aws:inspector:us-west-2:123456789012:resourcegroup/0-AB6DMKnv"
+    }
 }
 ```
 
 #### YAML<a name="aws-resource-inspector-assessmenttarget--examples--Declaring_an_Amazon_Inspector_Assessment_Target_Resource--yaml"></a>
 
 ```
-myassessmenttarget: 
-  Type: AWS::Inspector::AssessmentTarget
-  Properties: 
-      AssessmentTargetName : "MyAssessmentTarget"
-      ResourceGroupArn : "arn:aws:inspector:us-west-2:123456789012:resourcegroup/0-AB6DMKnv"
+Type: AWS::Inspector::AssessmentTarget
+Properties:
+  AssessmentTargetName: MyAssessmentTarget
+  ResourceGroupArn: arn:aws:inspector:us-west-2:123456789012:resourcegroup/0-AB6DMKnv
 ```

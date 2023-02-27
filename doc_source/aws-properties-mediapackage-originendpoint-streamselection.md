@@ -1,6 +1,6 @@
 # AWS::MediaPackage::OriginEndpoint StreamSelection<a name="aws-properties-mediapackage-originendpoint-streamselection"></a>
 
-Limitations for outputs from the endpoint, based on the video bitrate\. 
+Limitations for outputs from the endpoint, based on the video bitrate\.
 
 ## Syntax<a name="aws-properties-mediapackage-originendpoint-streamselection-syntax"></a>
 
@@ -40,6 +40,7 @@ The lower limit of the bitrates that this endpoint serves\. If the video track i
 
 `StreamOrder`  <a name="cfn-mediapackage-originendpoint-streamselection-streamorder"></a>
 Order in which the different video bitrates are presented to the player\.  
+Valid values: **ORIGINAL**, **VIDEO\_BITRATE\_ASCENDING**, **VIDEO\_BITRATE\_DESCENDING**\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

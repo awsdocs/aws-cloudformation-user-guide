@@ -70,6 +70,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-accessanalyzer-analyzer--examples"></a>
 
+
+
 ### Declare an Analyzer Resource<a name="aws-resource-accessanalyzer-analyzer--examples--Declare_an_Analyzer_Resource"></a>
 
 The following example shows how to declare a IAM Access Analyzer `Analyzer` resource:

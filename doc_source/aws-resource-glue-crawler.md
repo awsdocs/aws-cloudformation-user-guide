@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DatabaseName](#cfn-glue-crawler-databasename)" : String,
       "[Description](#cfn-glue-crawler-description)" : String,
       "[Name](#cfn-glue-crawler-name)" : String,
+      "[RecrawlPolicy](#cfn-glue-crawler-recrawlpolicy)" : RecrawlPolicy,
       "[Role](#cfn-glue-crawler-role)" : String,
       "[Schedule](#cfn-glue-crawler-schedule)" : Schedule,
       "[SchemaChangePolicy](#cfn-glue-crawler-schemachangepolicy)" : SchemaChangePolicy,
@@ -40,6 +41,8 @@ Properties:
   [DatabaseName](#cfn-glue-crawler-databasename): String
   [Description](#cfn-glue-crawler-description): String
   [Name](#cfn-glue-crawler-name): String
+  [RecrawlPolicy](#cfn-glue-crawler-recrawlpolicy): 
+    RecrawlPolicy
   [Role](#cfn-glue-crawler-role): String
   [Schedule](#cfn-glue-crawler-schedule): 
     Schedule
@@ -54,7 +57,7 @@ Properties:
 ## Properties<a name="aws-resource-glue-crawler-properties"></a>
 
 `Classifiers`  <a name="cfn-glue-crawler-classifiers"></a>
-A list of UTF\-8 strings that specify the custom classifiers that are associated with the crawler\.  
+A list of UTF\-8 strings that specify the names of custom classifiers that are associated with the crawler\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -89,6 +92,12 @@ The name of the crawler\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`RecrawlPolicy`  <a name="cfn-glue-crawler-recrawlpolicy"></a>
+A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run\.  
+*Required*: No  
+*Type*: [RecrawlPolicy](aws-properties-glue-crawler-recrawlpolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Role`  <a name="cfn-glue-crawler-role"></a>
 The Amazon Resource Name \(ARN\) of an IAM role that's used to access customer resources, such as Amazon Simple Storage Service \(Amazon S3\) data\.  
 *Required*: Yes  
@@ -102,7 +111,8 @@ For scheduled crawlers, the schedule when the crawler runs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SchemaChangePolicy`  <a name="cfn-glue-crawler-schemachangepolicy"></a>
-The policy that specifies update and delete behaviors for the crawler\.  
+The policy that specifies update and delete behaviors for the crawler\. The policy tells the crawler what to do in the event that it detects a change in a table that already exists in the customer's database at the time of the crawl\. The `SchemaChangePolicy` does not affect whether or how new tables and partitions are added\. New tables and partitions are always created regardless of the `SchemaChangePolicy` on a crawler\.  
+The SchemaChangePolicy consists of two components, `UpdateBehavior` and `DeleteBehavior`\.  
 *Required*: No  
 *Type*: [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -135,6 +145,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-glue-crawler--examples"></a>
 
+
+
 ### <a name="aws-resource-glue-crawler--examples--"></a>
 
 The following example creates a crawler for an Amazon S3 target\. 
@@ -143,7 +155,7 @@ The following example creates a crawler for an Amazon S3 target\.
 
 ```
 {
-    "Description": "AWS Glue Crawler Test",
+    "Description": "AWS Glue crawler test",
     "Resources": {
         "MyRole": {
             "Type": "AWS::IAM::Role",
@@ -165,16 +177,30 @@ The following example creates a crawler for an Amazon S3 target\.
                     ]
                 },
                 "Path": "/",
+                "ManagedPolicyArns": ["arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole"],
                 "Policies": [
                     {
-                        "PolicyName": "root",
+                        "PolicyName": "S3BucketAccessPolicy",
                         "PolicyDocument": {
                             "Version": "2012-10-17",
                             "Statement": [
                                 {
                                     "Effect": "Allow",
-                                    "Action": "*",
-                                    "Resource": "*"
+                                    "Action": [
+                                        "s3:GetObject",
+                                        "s3:PutObject"
+                                    ],
+                                    "Resource": {
+                                        "Fn::Join": [
+                                            "", 
+                                            [
+                                                {
+                                                    "Fn::GetAtt": ["MyS3Bucket", "Arn"]
+                                                },
+                                                "*"
+                                            ]
+                                        ]
+                                    }
                                 }
                             ]
                         }
@@ -189,7 +215,7 @@ The following example creates a crawler for an Amazon S3 target\.
                     "Ref": "AWS::AccountId"
                 },
                 "DatabaseInput": {
-                    "Name": "dbCrawler",
+                    "Name": "dbcrawler",
                     "Description": "TestDatabaseDescription",
                     "LocationUri": "TestLocationUri",
                     "Parameters": {
@@ -247,6 +273,9 @@ The following example creates a crawler for an Amazon S3 target\.
                     "UpdateBehavior": "UPDATE_IN_DATABASE",
                     "DeleteBehavior": "LOG"
                 },
+                "Tags": {
+                    "key1": "value1"
+                },
                 "Schedule": {
                     "ScheduleExpression": "cron(0/10 * ? * MON-FRI *)"
                 }
@@ -274,23 +303,31 @@ Resources:
             Action:
               - "sts:AssumeRole"
       Path: "/"
+      ManagedPolicyArns:
+        ['arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole']
       Policies:
         -
-          PolicyName: "root"
+          PolicyName: "S3BucketAccessPolicy"
           PolicyDocument:
             Version: "2012-10-17"
             Statement:
               -
                 Effect: "Allow"
-                Action: "*"
-                Resource: "*"
+                Action: 
+                  - "s3:GetObject"
+                  - "s3:PutObject"
+                Resource: 
+                  !Join
+                    - ''
+                    - - !GetAtt MyS3Bucket.Arn
+                      - "*"
  
   MyDatabase:
     Type: AWS::Glue::Database
     Properties:
       CatalogId: !Ref AWS::AccountId
       DatabaseInput:
-        Name: "dbCrawler"
+        Name: "dbcrawler"
         Description: "TestDatabaseDescription"
         LocationUri: "TestLocationUri"
         Parameters:
@@ -325,6 +362,8 @@ Resources:
       SchemaChangePolicy:
         UpdateBehavior: "UPDATE_IN_DATABASE"
         DeleteBehavior: "LOG"
+      Tags:
+        "Key1": "Value1"
       Schedule:
         ScheduleExpression: "cron(0/10 * ? * MON-FRI *)"
 ```

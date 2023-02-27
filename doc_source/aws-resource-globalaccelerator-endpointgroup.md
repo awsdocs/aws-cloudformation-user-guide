@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[HealthCheckPort](#cfn-globalaccelerator-endpointgroup-healthcheckport)" : Integer,
       "[HealthCheckProtocol](#cfn-globalaccelerator-endpointgroup-healthcheckprotocol)" : String,
       "[ListenerArn](#cfn-globalaccelerator-endpointgroup-listenerarn)" : String,
+      "[PortOverrides](#cfn-globalaccelerator-endpointgroup-portoverrides)" : [ PortOverride, ... ],
       "[ThresholdCount](#cfn-globalaccelerator-endpointgroup-thresholdcount)" : Integer,
       "[TrafficDialPercentage](#cfn-globalaccelerator-endpointgroup-trafficdialpercentage)" : Double
     }
@@ -38,6 +39,8 @@ Properties:
   [HealthCheckPort](#cfn-globalaccelerator-endpointgroup-healthcheckport): Integer
   [HealthCheckProtocol](#cfn-globalaccelerator-endpointgroup-healthcheckprotocol): String
   [ListenerArn](#cfn-globalaccelerator-endpointgroup-listenerarn): String
+  [PortOverrides](#cfn-globalaccelerator-endpointgroup-portoverrides): 
+    - PortOverride
   [ThresholdCount](#cfn-globalaccelerator-endpointgroup-thresholdcount): Integer
   [TrafficDialPercentage](#cfn-globalaccelerator-endpointgroup-trafficdialpercentage): Double
 ```
@@ -52,7 +55,7 @@ The list of endpoint objects\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointGroupRegion`  <a name="cfn-globalaccelerator-endpointgroup-endpointgroupregion"></a>
-The AWS Region where the endpoint group is located\.  
+The AWS Regions where the endpoint group is located\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `255`  
@@ -71,6 +74,7 @@ If the protocol is HTTP/S, then this value provides the ping path that Global Ac
 *Required*: No  
 *Type*: String  
 *Maximum*: `255`  
+*Pattern*: `^/[-a-zA-Z0-9@:%_\\+.~#?&/=]*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckPort`  <a name="cfn-globalaccelerator-endpointgroup-healthcheckport"></a>
@@ -96,6 +100,13 @@ The Amazon Resource Name \(ARN\) of the listener\.
 *Maximum*: `255`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`PortOverrides`  <a name="cfn-globalaccelerator-endpointgroup-portoverrides"></a>
+Allows you to override the destination ports used to route traffic to an endpoint\. Using a port override lets you map a list of external destination ports \(that your users send traffic to\) to a list of internal destination ports that you want an application endpoint to receive traffic on\.   
+*Required*: No  
+*Type*: List of [PortOverride](aws-properties-globalaccelerator-endpointgroup-portoverride.md)  
+*Maximum*: `10`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ThresholdCount`  <a name="cfn-globalaccelerator-endpointgroup-thresholdcount"></a>
 The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy\. The default value is 3\.  
 *Required*: No  
@@ -105,7 +116,7 @@ The number of consecutive health checks required to set the state of a healthy e
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrafficDialPercentage`  <a name="cfn-globalaccelerator-endpointgroup-trafficdialpercentage"></a>
-The percentage of traffic to send to an AWS Region\. Additional traffic is distributed to other endpoint groups for this listener\.   
+The percentage of traffic to send to an AWS Regions\. Additional traffic is distributed to other endpoint groups for this listener\.   
 Use this action to increase \(dial up\) or decrease \(dial down\) traffic to a specific Region\. The percentage is applied to the traffic that would otherwise have been routed to the Region based on optimal routing\.  
 The default value is 100\.  
 *Required*: No  
@@ -132,6 +143,8 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The ARN of the endpoint group, such as `arn:aws:globalaccelerator::012345678901:accelerator/1234abcd-abcd-1234-abcd-1234abcdefgh/listener/0123vxyz/endpoint-group/098765zyxwvu`\.
 
 ## Examples<a name="aws-resource-globalaccelerator-endpointgroup--examples"></a>
+
+
 
 ### Add an endpoint group<a name="aws-resource-globalaccelerator-endpointgroup--examples--Add_an_endpoint_group"></a>
 

@@ -34,13 +34,13 @@ The name of the secondary cluster
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplicationGroupRegion`  <a name="cfn-elasticache-globalreplicationgroup-regionalconfiguration-replicationgroupregion"></a>
-The AWS region where the cluster is stored  
+The Amazon region where the cluster is stored  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReshardingConfigurations`  <a name="cfn-elasticache-globalreplicationgroup-regionalconfiguration-reshardingconfigurations"></a>
-Not currently supported by AWS CloudFormation\.  
+A list of PreferredAvailabilityZones objects that specifies the configuration of a node group in the resharded cluster\.  
 *Required*: No  
 *Type*: List of [ReshardingConfiguration](aws-properties-elasticache-globalreplicationgroup-reshardingconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

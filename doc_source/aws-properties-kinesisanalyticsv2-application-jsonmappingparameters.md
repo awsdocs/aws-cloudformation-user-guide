@@ -33,3 +33,4 @@ The path to the top\-level parent that contains the records\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-jsonmappingparameters--seealso"></a>
 +  [JSONMappingParameters](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_JSONMappingParameters.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

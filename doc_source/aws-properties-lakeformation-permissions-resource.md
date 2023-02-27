@@ -39,7 +39,7 @@ A structure for the database object\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataLocationResource`  <a name="cfn-lakeformation-permissions-resource-datalocationresource"></a>
-Currently not supported by AWS CloudFormation\.  
+A structure for a data location object where permissions are granted or revoked\.   
 *Required*: No  
 *Type*: [DataLocationResource](aws-properties-lakeformation-permissions-datalocationresource.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -51,7 +51,7 @@ A structure for the table object\. A table is a metadata definition that represe
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableWithColumnsResource`  <a name="cfn-lakeformation-permissions-resource-tablewithcolumnsresource"></a>
-Currently not supported by AWS CloudFormation\.  
+A structure for a table with columns object\. This object is only used when granting a SELECT permission\.  
 *Required*: No  
 *Type*: [TableWithColumnsResource](aws-properties-lakeformation-permissions-tablewithcolumnsresource.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

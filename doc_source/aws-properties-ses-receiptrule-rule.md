@@ -4,7 +4,7 @@ Receipt rules enable you to specify which actions Amazon SES should take when it
 
 Each receipt rule defines a set of email addresses or domains that it applies to\. If the email addresses or domains match at least one recipient address of the message, Amazon SES executes all of the receipt rule's actions on the message\.
 
-For information about setting up receipt rules, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rules.html)\.
+For information about setting up receipt rules, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-receipt-rules-console-walkthrough.html)\.
 
 ## Syntax<a name="aws-properties-ses-receiptrule-rule-syntax"></a>
 
@@ -51,16 +51,16 @@ If `true`, the receipt rule is active\. The default value is `false`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ses-receiptrule-rule-name"></a>
-The name of the receipt rule\. The name must:  
-+ This value can only contain ASCII letters \(a–z, A–Z\), numbers \(0–9\), underscores \(\_\), or dashes \(\-\)\.
+The name of the receipt rule\. The name must meet the following requirements:  
++ Contain only ASCII letters \(a\-z, A\-Z\), numbers \(0\-9\), underscores \(\_\), dashes \(\-\), or periods \(\.\)\. 
 + Start and end with a letter or number\.
-+ Contain fewer than 64 characters\.
++ Contain 64 characters or fewer\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Recipients`  <a name="cfn-ses-receiptrule-rule-recipients"></a>
-Contains the recipient domains and email addresses that the receipt rule applies to\. If this field isn't specified, this rule matches all recipients on all verified domains\.  
+The recipient domains and email addresses that the receipt rule applies to\. If this field is not specified, this rule matches all recipients on all verified domains\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -73,6 +73,7 @@ If `true`, then messages that this receipt rule applies to are scanned for spam 
 
 `TlsPolicy`  <a name="cfn-ses-receiptrule-rule-tlspolicy"></a>
 Specifies whether Amazon SES should require that incoming email is delivered over a connection encrypted with Transport Layer Security \(TLS\)\. If this parameter is set to `Require`, Amazon SES bounces emails that are not received over TLS\. The default is `Optional`\.  
+Valid Values: `Require | Optional`  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

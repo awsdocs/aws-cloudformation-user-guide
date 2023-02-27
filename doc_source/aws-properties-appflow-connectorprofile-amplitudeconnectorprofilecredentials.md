@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile AmplitudeConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials"></a>
 
- The `AmplitudeConnectorProfileCredentials` property type specifies the connector\-specific credentials required when using Amplitude\. 
+ The connector\-specific credentials required when using Amplitude\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials-syntax"></a>
 
@@ -42,3 +42,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-amplitudeconnectorprofilecredentials--seealso"></a>
 + [AmplitudeConnectorProfileCredentials](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_AmplitudeConnectorProfileCredentials.html) in the *Amazon AppFlow API Reference*\.
+

@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-s3-bucket-accesscontroltranslation-properties"></a>
 
 `Owner`  <a name="cfn-s3-bucket-accesscontroltranslation-owner"></a>
-Specifies the replica ownership\. For default and valid values, see [PUT bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) in the *Amazon Simple Storage Service API Reference*\.  
+Specifies the replica ownership\. For default and valid values, see [PUT bucket replication](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTreplication.html) in the *Amazon S3 API Reference*\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `Destination`  

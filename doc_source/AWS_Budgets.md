@@ -2,3 +2,4 @@
 
 **Resource types**
 + [AWS::Budgets::Budget](aws-resource-budgets-budget.md)
++ [AWS::Budgets::BudgetsAction](aws-resource-budgets-budgetsaction.md)

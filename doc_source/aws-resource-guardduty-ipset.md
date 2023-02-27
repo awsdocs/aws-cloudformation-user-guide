@@ -16,7 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DetectorId](#cfn-guardduty-ipset-detectorid)" : String,
       "[Format](#cfn-guardduty-ipset-format)" : String,
       "[Location](#cfn-guardduty-ipset-location)" : String,
-      "[Name](#cfn-guardduty-ipset-name)" : String
+      "[Name](#cfn-guardduty-ipset-name)" : String,
+      "[Tags](#cfn-guardduty-ipset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -31,6 +32,8 @@ Properties:
   [Format](#cfn-guardduty-ipset-format): String
   [Location](#cfn-guardduty-ipset-location): String
   [Name](#cfn-guardduty-ipset-name): String
+  [Tags](#cfn-guardduty-ipset-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-guardduty-ipset-properties"></a>
@@ -57,7 +60,7 @@ The format of the file that contains the IPSet\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Location`  <a name="cfn-guardduty-ipset-location"></a>
-The URI of the file that contains the IPSet\. For example: https://s3\.us\-west\-2\.amazonaws\.com/my\-bucket/my\-object\-key\.  
+The URI of the file that contains the IPSet\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -66,11 +69,18 @@ The URI of the file that contains the IPSet\. For example: https://s3\.us\-west\
 
 `Name`  <a name="cfn-guardduty-ipset-name"></a>
 The user\-friendly name to identify the IPSet\.  
- Allowed characters are alphanumerics, spaces, hyphens \(\-\), and underscores \(\_\)\.  
+ Allowed characters are alphanumeric, whitespace, dash \(\-\), and underscores \(\_\)\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `300`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-guardduty-ipset-tags"></a>
+The tags to be added to a new IP set resource\. Each tag consists of a key and an optional value, both of which you define\.  
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.   
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-guardduty-ipset-return-values"></a>
@@ -82,6 +92,8 @@ The user\-friendly name to identify the IPSet\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-guardduty-ipset--examples"></a>
+
+
 
 ### Declare an IPSet Resource<a name="aws-resource-guardduty-ipset--examples--Declare_an_IPSet_Resource"></a>
 

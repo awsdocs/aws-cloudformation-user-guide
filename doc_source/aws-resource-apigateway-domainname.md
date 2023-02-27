@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DomainName](#cfn-apigateway-domainname-domainname)" : String,
       "[EndpointConfiguration](#cfn-apigateway-domainname-endpointconfiguration)" : EndpointConfiguration,
       "[MutualTlsAuthentication](#cfn-apigateway-domainname-mutualtlsauthentication)" : MutualTlsAuthentication,
+      "[OwnershipVerificationCertificateArn](#cfn-apigateway-domainname-ownershipverificationcertificatearn)" : String,
       "[RegionalCertificateArn](#cfn-apigateway-domainname-regionalcertificatearn)" : String,
       "[SecurityPolicy](#cfn-apigateway-domainname-securitypolicy)" : String,
       "[Tags](#cfn-apigateway-domainname-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -36,6 +37,7 @@ Properties:
     EndpointConfiguration
   [MutualTlsAuthentication](#cfn-apigateway-domainname-mutualtlsauthentication): 
     MutualTlsAuthentication
+  [OwnershipVerificationCertificateArn](#cfn-apigateway-domainname-ownershipverificationcertificatearn): String
   [RegionalCertificateArn](#cfn-apigateway-domainname-regionalcertificatearn): String
   [SecurityPolicy](#cfn-apigateway-domainname-securitypolicy): String
   [Tags](#cfn-apigateway-domainname-tags): 
@@ -45,44 +47,50 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-domainname-properties"></a>
 
 `CertificateArn`  <a name="cfn-apigateway-domainname-certificatearn"></a>
-The reference to an AWS\-managed certificate for use by the edge\-optimized endpoint for this domain name\. AWS Certificate Manager is the only supported source\. For requirements and additional information about setting up certificates, see [Get Certificates Ready in AWS Certificate Manager](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html#how-to-custom-domains-prerequisites) in the *API Gateway Developer Guide*\.  
+The reference to an AWS\-managed certificate that will be used by edge\-optimized endpoint for this domain name\. AWS Certificate Manager is the only supported source\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DomainName`  <a name="cfn-apigateway-domainname-domainname"></a>
-The custom domain name for your API\. Uppercase letters are not supported\.  
+The custom domain name as an API host name, for example, `my-api.example.com`\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EndpointConfiguration`  <a name="cfn-apigateway-domainname-endpointconfiguration"></a>
-A list of the endpoint types of the domain name\.  
+The endpoint configuration of this DomainName showing the endpoint types of the domain name\.   
 *Required*: No  
 *Type*: [EndpointConfiguration](aws-properties-apigateway-domainname-endpointconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MutualTlsAuthentication`  <a name="cfn-apigateway-domainname-mutualtlsauthentication"></a>
-The mutual TLS authentication configuration for a custom domain name\.  
+The mutual TLS authentication configuration for a custom domain name\. If specified, API Gateway performs two\-way authentication between the client and the server\. Clients must present a trusted certificate to access your API\.  
 *Required*: No  
 *Type*: [MutualTlsAuthentication](aws-properties-apigateway-domainname-mutualtlsauthentication.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`OwnershipVerificationCertificateArn`  <a name="cfn-apigateway-domainname-ownershipverificationcertificatearn"></a>
+The ARN of the public certificate issued by ACM to validate ownership of your custom domain\. Only required when configuring mutual TLS and using an ACM imported or private CA certificate ARN as the RegionalCertificateArn\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `RegionalCertificateArn`  <a name="cfn-apigateway-domainname-regionalcertificatearn"></a>
-The reference to an AWS\-managed certificate for use by the regional endpoint for the domain name\. AWS Certificate Manager is the only supported source\.  
+The reference to an AWS\-managed certificate that will be used for validating the regional domain name\. AWS Certificate Manager is the only supported source\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityPolicy`  <a name="cfn-apigateway-domainname-securitypolicy"></a>
-The Transport Layer Security \(TLS\) version \+ cipher suite for this domain name\.  
-Valid values include `TLS_1_0` and `TLS_1_2`\.  
+The Transport Layer Security \(TLS\) version \+ cipher suite for this DomainName\. The valid values are `TLS_1_0` and `TLS_1_2`\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `TLS_1_0 | TLS_1_2`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-apigateway-domainname-tags"></a>
-An array of arbitrary tags \(key\-value pairs\) to associate with the domain name\.  
+The collection of tags\. Each tag element is associated with a given resource\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -117,6 +125,8 @@ The domain name associated with the regional endpoint for this custom domain nam
 The region\-specific Amazon Route 53 Hosted Zone ID of the regional endpoint\.
 
 ## Examples<a name="aws-resource-apigateway-domainname--examples"></a>
+
+
 
 ### Create Custom Domain<a name="aws-resource-apigateway-domainname--examples--Create_Custom_Domain"></a>
 
@@ -443,4 +453,5 @@ Outputs:
 ```
 
 ## See also<a name="aws-resource-apigateway-domainname--seealso"></a>
-+ [domainname:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/domainname-create/) in the *Amazon API Gateway REST API Reference*
++ [domainname:create](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateDomainName.html) in the *Amazon API Gateway REST API Reference*
+

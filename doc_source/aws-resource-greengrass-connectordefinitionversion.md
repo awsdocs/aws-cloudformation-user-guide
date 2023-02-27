@@ -56,6 +56,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-greengrass-connectordefinitionversion--examples"></a>
 
+
+
 ### Connector Definition Version Snippet<a name="aws-resource-greengrass-connectordefinitionversion--examples--Connector_Definition_Version_Snippet"></a>
 
 The following snippet defines connector definition and connector definition version resources\. The connector definition version references the connector definition and contains a connector\.
@@ -143,5 +145,5 @@ TestConnectorDefinitionVersion:
 ```
 
 ## See also<a name="aws-resource-greengrass-connectordefinitionversion--seealso"></a>
-+  [CreateConnectorDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createconnectordefinitionversion-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [CreateConnectorDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createconnectordefinitionversion-post.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

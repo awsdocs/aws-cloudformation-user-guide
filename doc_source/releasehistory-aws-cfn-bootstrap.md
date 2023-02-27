@@ -1,8 +1,8 @@
 # Release history for AWS CloudFormation helper scripts<a name="releasehistory-aws-cfn-bootstrap"></a>
 
-The following table describes the changes to the aws\-cfn\-bootstrap package, which contains the AWS CloudFormation helper scripts\. 
+The following table describes the changes to the aws\-cfn\-bootstrap package, which contains the AWS CloudFormation helper scripts\.
 
-You can also download the latest version of the helper scripts at the following links\. These links redirect to the most recent version of the helper scripts listed in the table below\. 
+You can also download the latest version of the helper scripts at the following links\. These links redirect to the most recent version of the helper scripts listed in the table below\.
 + [ TAR\.GZ](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-py3-latest.tar.gz)
 + [ ZIP](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-py3-latest.zip)
 + [ EXE \(32\-bit Windows\)](https://s3.amazonaws.com/cloudformation-examples/aws-cfn-bootstrap-py3-latest.exe)
@@ -14,7 +14,20 @@ Version 2\.0\-1 and above of the helper scripts support Python 3\.4 and above\. 
 
 | Version | Release Date | Change Description | Download Packages | 
 | --- | --- | --- | --- | 
-|  2\.0\-2 \(Latest; recommended\)  |  9/14/2020  |  The default and user specified interval for `cfn-hup` has an accuracy of plus or minus 30 seconds\.  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
+|  2\.0\-21 \(Latest; recommended\)  |  01/9/2023  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
+|  2\.0\-19  |  11/8/2022  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
+|  2\.0\-18  |  10/31/2022  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
+|  2\.0\-17  |  10/24/2022  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
+|  2\.0\-16   | 08/19/2022 |  Addressing issues with temp files being locked when logging commands for Windows\.  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
+|  2\.0\-15   | 07/28/2022 |  Bug fixes issue causing some commands in Windows to fail\.  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
+| 2\.0\-14 | 07/20/2022 |  Update for Windows installers to use Python 3\.9\.13 version\.  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
+|  2\.0\-12   |  6/13/2022  |  Bug fixes for issues on Windows AMI caused by the KB5010359 security patch\.  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
+|  2\.0\-10  |  1/11/2022  |  Added support for Zypper package manager and systemd service management tool\.  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
+|  2\.0\-6  |  3/17/2021  |  Bug fixes for: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
+|  2\.0\-5  |  3/5/2021  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
+|  2\.0\-4  |  2/3/2021  |  Updated Visual Studio C\+\+ 2010 redistributable\.  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
+|  2\.0\-3  |  1/8/2021  |  Windows installer succeeds even if a newer C\+\+ Redistributable is already installed\.  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
+|  2\.0\-2  |  9/14/2020  |  The default and user specified interval for `cfn-hup` has an accuracy of plus or minus 30 seconds\.  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
 |  2\.0\-1  |  6/24/2020  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
 
 ## Release History for CloudFormation Helper Scripts 1\.4<a name="releasehistory-aws-cfn-bootstrap-v1"></a>
@@ -29,7 +42,7 @@ The AWS CloudFormation helper scripts are preinstalled on Amazon Linux AMI image
 | --- | --- | --- | --- | 
 |  1\.4\-34  |  9/14/2020  |  The default and user specified interval for `cfn-hup` has an accuracy of plus or minus 30 seconds\.  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
 |  1\.4\-33  |  5/28/2020  |  Supports Python 2\.6 and 2\.7\.  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
-|  1\.4\-32   |   |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  |   | 
+|  1\.4\-32   |    |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  |   | 
 |  1\.4\-31  |  9/10/2018  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
 |  1\.4\-30  |  3/21/2018  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 
 |  1\.4\-29   |  2/12/2018  |  Extending support for newer AWS regions\.  |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/releasehistory-aws-cfn-bootstrap.html)  | 

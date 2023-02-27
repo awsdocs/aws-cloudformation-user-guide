@@ -37,7 +37,7 @@ Properties:
 The identifier of the API\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ApiMappingKey`  <a name="cfn-apigatewayv2-apimapping-apimappingkey"></a>
 The API mapping key\.  
@@ -66,6 +66,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-apigatewayv2-apimapping--examples"></a>
+
+
 
 ### API mapping creation example<a name="aws-resource-apigatewayv2-apimapping--examples--API_mapping_creation_example"></a>
 
@@ -103,3 +105,4 @@ MyApiMapping:
 
 ## See also<a name="aws-resource-apigatewayv2-apimapping--seealso"></a>
 + [CreateApiMapping](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/domainnames-domainname-apimappings.html#CreateApiMapping) in the *Amazon API Gateway Version 2 API Reference*
+

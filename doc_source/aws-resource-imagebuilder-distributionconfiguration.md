@@ -81,13 +81,18 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 Returns the Amazon Resource Name \(ARN\) of this distribution configuration\. The following pattern is applied: `^arn:aws[^:]*:imagebuilder:[^:]+:(?:\d{12}|aws):(?:image-recipe|infrastructure-configuration|distribution-configuration|component|image|image-pipeline)/[a-z0-9-_]+(?:/(?:(?:x|\d+)\.(?:x|\d+)\.(?:x|\d+))(?:/\d+)?)?$`\.
 
+`Name`  <a name="Name-fn::getatt"></a>
+Returns the name of the distribution configuration\.
+
 ## Examples<a name="aws-resource-imagebuilder-distributionconfiguration--examples"></a>
 
-### Create a distribution configuration<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration"></a>
 
-The following example shows the schema for all of the parameters of the DistributionConfiguration resource document in both YAML and JSON format \.
 
-#### YAML<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration--yaml"></a>
+### Create a distribution configuration resource for an AMI<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration_resource_for_an_AMI"></a>
+
+The following example shows the schema for a DistributionConfiguration resource document for an AMI that is shared using launch permissions, presented in both YAML and JSON\.
+
+#### YAML<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration_resource_for_an_AMI--yaml"></a>
 
 ```
 Resources:
@@ -99,29 +104,44 @@ Resources:
       Distributions:
         - Region: 'us-west-2'
           AmiDistributionConfiguration:
-            Name: 'ami-distro-config-name-1 {{ imagebuilder:buildDate }}'
-            Description: 'description'
+            Name: 'ami-dist-config-name-1 {{ imagebuilder:buildDate }}'
+            Description: 'Set launch permissions and specify a license configuration for destination Region.'
             AmiTags:
               AmiTagKey: 'ami-tag-key'
             LaunchPermissionConfiguration:
               UserGroups:
-                - 'DummyGroup1'
-                - 'DummyGroup2'
+                - 'ExampleGroup1'
+                - 'ExampleGroup2'
               UserIds:
-                - '123123123123' # Dummy account Id A
-                - '321321321321' # Dummy account Id B
+                - '123123123123' # Example user Id A
+                - '321321321321' # Example user Id B
           LicenseConfigurationArns:
             - 'example-license-configuration-arn'
         - Region: 'us-east-1'
           AmiDistributionConfiguration:
-            Name: 'ami-distro-config-name-2 {{ imagebuilder:buildDate }}'
-            Description: 'description'
-      Tags:
-        CustomerDistributionConfigTagKey1: 'CustomerDistributionConfigTagValue1'
-        CustomerDistributionConfigTagKey2: 'CustomerDistributionConfigTagValue2'
+            Name: 'ami-dist-config-name-2 {{ imagebuilder:buildDate }}'
+            Description: 'Distribute a copy of the AMI to specified target accounts.'
+            TargetAccountIds:
+              - '111122223333'
+              - '444455556666'
+        - Region: 'us-east-2'
+          AmiDistributionConfiguration:
+            Name: 'ami-dist-config-name-3 {{ imagebuilder:buildDate }}'
+            Description: 'Distribute to orgs and OUs.'
+            AmiTags:
+              auto-delete: 'no'
+            LaunchPermissionConfiguration:
+              OrganizationArns:
+                - 'arn:aws:organizations::123456789012:organization/o-myorganization123'
+              OrganizationalUnitArns:
+                - 'arn:aws:organizations::123456789012:ou/o-123example/ou-1234-myorganizationalunit'
+          
+    Tags:
+      CustomerDistributionConfigTagKey1: 'CustomerDistributionConfigTagValue1'
+      CustomerDistributionConfigTagKey2: 'CustomerDistributionConfigTagValue2'
 ```
 
-#### JSON<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration--json"></a>
+#### JSON<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration_resource_for_an_AMI--json"></a>
 
 ```
 {
@@ -135,15 +155,15 @@ Resources:
                     {
                         "Region": "us-west-2",
                         "AmiDistributionConfiguration": {
-                            "Name": "ami-distro-config-name-1 {{ imagebuilder:buildDate }}",
-                            "Description": "description",
+                            "Name": "ami-dist-config-name-1 {{ imagebuilder:buildDate }}",
+                            "Description": "Set launch permissions and specify a license configuration for destination Region.",
                             "AmiTags": {
                                 "AmiTagKey": "ami-tag-key"
                             },
                             "LaunchPermissionConfiguration": {
                                 "UserGroups": [
-                                    "DummyGroup1",
-                                    "DummyGroup2"
+                                    "ExampleGroup1",
+                                    "ExampleGroup2"
                                 ],
                                 "UserIds": [
                                     "123123123123",
@@ -158,15 +178,120 @@ Resources:
                     {
                         "Region": "us-east-1",
                         "AmiDistributionConfiguration": {
-                            "Name": "ami-distro-config-name-2 {{ imagebuilder:buildDate }}",
-                            "Description": "description"
+                            "Name": "ami-dist-config-name-2 {{ imagebuilder:buildDate }}",
+                            "Description": "Distribute to specified target accounts.",
+                            "TargetAccountIds": [
+                                "111122223333",
+                                "444455556666"
+                            ]
+                            
+                        }
+                    },
+                    {
+                        "Region": "us-east-2",
+                        "AmiDistributionConfiguration": {
+	                        "Name": "ami-dist-config-name-3 {{ imagebuilder:buildDate }}",
+	                        "Description": "Distribute to orgs and OUs.",
+	                        "AmiTags": {
+	                            "auto-delete": "no"
+	                        },
+	                        "LaunchPermissionConfiguration": {
+	                    	    "OrganizationArns": [
+	                    	   	 "arn:aws:organizations::123456789012:organization/o-myorganization123"
+		                        ],
+		                        "OrganizationalUnitArns": [
+		                       	 "arn:aws:organizations::123456789012:ou/o-123example/ou-1234-myorganizationalunit"
+		                        ]
+	                        }
+                        
                         }
                     }
-                ],
-                "Tags": {
-                    "CustomerDistributionConfigTagKey1": "CustomerDistributionConfigTagValue1",
-                    "CustomerDistributionConfigTagKey2": "CustomerDistributionConfigTagValue2"
-                }
+                ]
+            },
+            "Tags": {
+                "CustomerDistributionConfigTagKey1": "CustomerDistributionConfigTagValue1",
+                "CustomerDistributionConfigTagKey2": "CustomerDistributionConfigTagValue2"
+            }
+        }
+    }
+}
+```
+
+### Create a distribution configuration resource for a container image<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration_resource_for_a_container_image"></a>
+
+The following example shows the schema for a DistributionConfiguration resource document for a container image that is distributed to two Regions, presented in both YAML and JSON\.
+
+#### YAML<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration_resource_for_a_container_image--yaml"></a>
+
+```
+Resources:
+  DistributionConfigurationAllParameters:
+    Type: 'AWS::ImageBuilder::DistributionConfiguration'
+    Properties:
+      Name: 'distribution-configuration-all-parameters'
+      Description: 'Set target repository and container tags for container distribution to two Regions.'
+      Distributions:
+        - Region: 'us-west-2'
+          ContainerDistributionConfiguration:
+            Description: 'test distribution cfn template'
+            TargetRepository:
+              Service: ECR
+              RepositoryName: 'cfn-test'
+            ContainerTags:
+              - 'Tag1'
+              - 'Tag2'
+        - Region: 'us-east-1'
+          ContainerDistributionConfiguration:
+            Description: 'test distribution cfn template'
+            TargetRepository:
+              Service: ECR
+              RepositoryName: 'cfn-test'
+            ContainerTags:
+              - 'Tag1'
+              - 'Tag2'      
+    Tags:
+      DistributionConfigurationTestTagKey1: 'DistributionConfigurationTestTagValue1'
+      DistributionConfigurationTestTagKey2: 'DistributionConfigurationTestTagValue2'
+```
+
+#### JSON<a name="aws-resource-imagebuilder-distributionconfiguration--examples--Create_a_distribution_configuration_resource_for_a_container_image--json"></a>
+
+```
+{
+    "Resources": {
+        "DistributionConfigurationAllParameters": {
+            "Type": "AWS::ImageBuilder::DistributionConfiguration",
+            "Properties": {
+                "Name": "distribution-configuration-name",
+                "Description": "Set target repository and container tags for container distribution to two Regions.",
+                "Distributions": [
+                    {
+                        "Region": "us-west-2",
+                        "ContainerDistributionConfiguration": {
+                            "Description": "description",
+                            "TargetRepository": {
+                                "Service": "ECR",
+                                "RepositoryName": "cfn-test"
+                            },
+                            "ContainerTags": ["Tag1", "Tag2"]
+                        }
+                    },
+                    {
+                        "Region": "us-east-1",
+                        "ContainerDistributionConfiguration": {
+                            "Description": "description",
+                            "TargetRepository": {
+                                "Service": "ECR",
+                                "RepositoryName": "cfn-test"
+                            },
+                           "ContainerTags": ["Tag1", "Tag2"]
+                        }
+                    }
+                ]
+            },
+            "Tags": {
+   			"DistributionConfigurationTestTagKey1": "DistributionConfigurationTestTagValue1",
+   			"DistributionConfigurationTestTagKey2": "DistributionConfigurationTestTagValue2"
             }
         }
     }
@@ -174,4 +299,5 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-imagebuilder-distributionconfiguration--seealso"></a>
-+ [Create a distribution configuration](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-distribution-configuration) in the *EC2 Image Builder User Guide*\.
++ [Create a distribution configuration](https://docs.aws.amazon.com/imagebuilder/latest/userguide/managing-image-builder-cli.html#image-builder-cli-create-distribution-configuration) in the *Image Builder User Guide*\.
+

@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile InforNexusConnectorProfileProperties<a name="aws-properties-appflow-connectorprofile-infornexusconnectorprofileproperties"></a>
 
- The `InforNexusConnectorProfileProperties` property type specifies the connector\-specific profile properties required by Infor Nexus\. 
+ The connector\-specific profile properties required by Infor Nexus\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-infornexusconnectorprofileproperties-syntax"></a>
 
@@ -32,3 +32,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-infornexusconnectorprofileproperties--seealso"></a>
 + [InforNexusConnectorProfileProperties](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_InforNexusConnectorProfileProperties.html) in the *Amazon AppFlow API Reference*\.
+

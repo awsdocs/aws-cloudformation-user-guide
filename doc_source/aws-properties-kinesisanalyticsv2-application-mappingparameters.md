@@ -40,3 +40,4 @@ Provides additional mapping information when JSON is the record format on the st
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-mappingparameters--seealso"></a>
 +  [MappingParameters](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_MappingParameters.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Bandwidth](#cfn-groundstation-config-spectrumconfig-bandwidth)" : Bandwidth,
+  "[Bandwidth](#cfn-groundstation-config-spectrumconfig-bandwidth)" : FrequencyBandwidth,
   "[CenterFrequency](#cfn-groundstation-config-spectrumconfig-centerfrequency)" : Frequency,
   "[Polarization](#cfn-groundstation-config-spectrumconfig-polarization)" : String
 }
@@ -20,7 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Bandwidth](#cfn-groundstation-config-spectrumconfig-bandwidth): 
-    Bandwidth
+    FrequencyBandwidth
   [CenterFrequency](#cfn-groundstation-config-spectrumconfig-centerfrequency): 
     Frequency
   [Polarization](#cfn-groundstation-config-spectrumconfig-polarization): String
@@ -33,13 +33,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 + For `AntennaDownlinkDemodDecodeconfig`, valid values are between 125 kHz to 650 MHz\.
 + For `AntennaDownlinkconfig`, valid values are between 10 kHz to 54 MHz\.
 + For `AntennaUplinkConfig`, valid values are between 10 kHz to 54 MHz\.
-*Required*: Yes  
-*Type*: [Bandwidth](aws-properties-groundstation-config-bandwidth.md)  
+*Required*: No  
+*Type*: [FrequencyBandwidth](aws-properties-groundstation-config-frequencybandwidth.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CenterFrequency`  <a name="cfn-groundstation-config-spectrumconfig-centerfrequency"></a>
  The center frequency of the spectrum\. Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to 2120 MHz for uplink\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: [Frequency](aws-properties-groundstation-config-frequency.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

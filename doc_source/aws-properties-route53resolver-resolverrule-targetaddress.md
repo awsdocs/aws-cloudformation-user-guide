@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Ip](#cfn-route53resolver-resolverrule-targetaddress-ip)" : String,
+  "[Ipv6](#cfn-route53resolver-resolverrule-targetaddress-ipv6)" : String,
   "[Port](#cfn-route53resolver-resolverrule-targetaddress-port)" : String
 }
 ```
@@ -19,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Ip](#cfn-route53resolver-resolverrule-targetaddress-ip): String
+  [Ipv6](#cfn-route53resolver-resolverrule-targetaddress-ipv6): String
   [Port](#cfn-route53resolver-resolverrule-targetaddress-port): String
 ```
 
@@ -26,10 +28,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Ip`  <a name="cfn-route53resolver-resolverrule-targetaddress-ip"></a>
 One IP address that you want to forward DNS queries to\. You can specify only IPv4 addresses\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `7`  
 *Maximum*: `36`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Ipv6`  <a name="cfn-route53resolver-resolverrule-targetaddress-ipv6"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Port`  <a name="cfn-route53resolver-resolverrule-targetaddress-port"></a>
@@ -43,3 +51,4 @@ The port at `Ip` that you want to forward DNS queries to\.
 ## See also<a name="aws-properties-route53resolver-resolverrule-targetaddress--seealso"></a>
 +  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#aws-resource-route53resolver-resolverrule-return-values) in the topic [AWS::Route53Resolver::ResolverRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html) 
 +  [TargetAddress](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_TargetAddress.html) in the *Amazon Route 53 API Reference* 
+

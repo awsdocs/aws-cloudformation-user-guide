@@ -96,6 +96,8 @@ The Amazon Resource Name \(ARN\) that specifies the assessment template that is 
 
 ## Examples<a name="aws-resource-inspector-assessmenttemplate--examples"></a>
 
+
+
 ### Declaring an Amazon Inspector Assessment Template Resource<a name="aws-resource-inspector-assessmenttemplate--examples--Declaring_an_Amazon_Inspector_Assessment_Template_Resource"></a>
 
 The following example shows how to declare an `AWS::Inspector::AssessmentTemplate` resource to create an Amazon Inspector assessment template\.
@@ -103,7 +105,7 @@ The following example shows how to declare an `AWS::Inspector::AssessmentTemplat
 #### JSON<a name="aws-resource-inspector-assessmenttemplate--examples--Declaring_an_Amazon_Inspector_Assessment_Template_Resource--json"></a>
 
 ```
-"myassessmenttemplate": {
+{
     "Type": "AWS::Inspector::AssessmentTemplate",
     "Properties": {
         "AssessmentTargetArn": "arn:aws:inspector:us-west-2:123456789012:target/0-nvgVhaxX",
@@ -112,12 +114,10 @@ The following example shows how to declare an `AWS::Inspector::AssessmentTemplat
         "RulesPackageArns": [
             "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-11B9DBXp"
         ],
-        "UserAttributesForFindings": [
-            {
-                "Key": "Example",
-                "Value": "example"
-            }
-        ]
+        "UserAttributesForFindings": [{
+            "Key": "Example",
+            "Value": "example"
+        }]
     }
 }
 ```
@@ -125,16 +125,14 @@ The following example shows how to declare an `AWS::Inspector::AssessmentTemplat
 #### YAML<a name="aws-resource-inspector-assessmenttemplate--examples--Declaring_an_Amazon_Inspector_Assessment_Template_Resource--yaml"></a>
 
 ```
-myassessmenttemplate: 
-  Type: AWS::Inspector::AssessmentTemplate
-  Properties: 
-    AssessmentTargetArn: "arn:aws:inspector:us-west-2:123456789012:target/0-nvgVhaxX"
-    AssessmentTemplateName: MyAssessmentTemplate
-    DurationInSeconds: 180
-    RulesPackageArns: 
-      - "arn:aws:inspector:us-west-2:758058086616:rulespackage/0-11B9DBXp"
-    UserAttributesForFindings: 
-      - 
-        Key: Example
-        Value: example
+Type: AWS::Inspector::AssessmentTemplate
+Properties:
+  AssessmentTargetArn: arn:aws:inspector:us-west-2:123456789012:target/0-nvgVhaxX
+  DurationInSeconds: 180
+  AssessmentTemplateName: MyAssessmentTemplate
+  RulesPackageArns:
+    - arn:aws:inspector:us-west-2:758058086616:rulespackage/0-11B9DBXp
+  UserAttributesForFindings:
+    - Key: Example
+      Value: example
 ```

@@ -2,6 +2,8 @@
 
 The `AWS::EMR::Cluster` resource specifies an Amazon EMR cluster\. This cluster is a collection of Amazon EC2 instances that run open source big data frameworks and applications to process and analyze vast amounts of data\. For more information, see the [Amazon EMR Management Guide](https://docs.aws.amazon.com/emr/latest/ManagementGuide/)\.
 
+Amazon EMR now supports launching task instance groups and task instance fleets as part of the `AWS::EMR::Cluster` resource\. This can be done by using the `JobFlowInstancesConfig` property type's `TaskInstanceGroups` and `TaskInstanceFleets` subproperties\. Using these subproperties reduces delays in provisioning task nodes compared to specifying task nodes with the `AWS::EMR::InstanceGroupConfig` and `AWS::EMR::InstanceFleetConfig` resources\. Please refer to the examples at the bottom of this page to learn how to use these subproperties\.
+
 ## Syntax<a name="aws-resource-elasticmapreduce-cluster-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -15,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AdditionalInfo](#cfn-elasticmapreduce-cluster-additionalinfo)" : Json,
       "[Applications](#cfn-elasticmapreduce-cluster-applications)" : [ Application, ... ],
       "[AutoScalingRole](#cfn-elasticmapreduce-cluster-autoscalingrole)" : String,
+      "[AutoTerminationPolicy](#cfn-elasticmapreduce-cluster-autoterminationpolicy)" : AutoTerminationPolicy,
       "[BootstrapActions](#cfn-elasticmapreduce-cluster-bootstrapactions)" : [ BootstrapActionConfig, ... ],
       "[Configurations](#cfn-elasticmapreduce-cluster-configurations)" : [ Configuration, ... ],
       "[CustomAmiId](#cfn-elasticmapreduce-cluster-customamiid)" : String,
@@ -26,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LogUri](#cfn-elasticmapreduce-cluster-loguri)" : String,
       "[ManagedScalingPolicy](#cfn-elasticmapreduce-cluster-managedscalingpolicy)" : ManagedScalingPolicy,
       "[Name](#cfn-elasticmapreduce-cluster-name)" : String,
+      "[OSReleaseLabel](#cfn-elasticmapreduce-cluster-osreleaselabel)" : String,
       "[ReleaseLabel](#cfn-elasticmapreduce-cluster-releaselabel)" : String,
       "[ScaleDownBehavior](#cfn-elasticmapreduce-cluster-scaledownbehavior)" : String,
       "[SecurityConfiguration](#cfn-elasticmapreduce-cluster-securityconfiguration)" : String,
@@ -47,6 +51,8 @@ Properties:
   [Applications](#cfn-elasticmapreduce-cluster-applications): 
     - Application
   [AutoScalingRole](#cfn-elasticmapreduce-cluster-autoscalingrole): String
+  [AutoTerminationPolicy](#cfn-elasticmapreduce-cluster-autoterminationpolicy): 
+    AutoTerminationPolicy
   [BootstrapActions](#cfn-elasticmapreduce-cluster-bootstrapactions): 
     - BootstrapActionConfig
   [Configurations](#cfn-elasticmapreduce-cluster-configurations): 
@@ -63,6 +69,7 @@ Properties:
   [ManagedScalingPolicy](#cfn-elasticmapreduce-cluster-managedscalingpolicy): 
     ManagedScalingPolicy
   [Name](#cfn-elasticmapreduce-cluster-name): String
+  [OSReleaseLabel](#cfn-elasticmapreduce-cluster-osreleaselabel): String
   [ReleaseLabel](#cfn-elasticmapreduce-cluster-releaselabel): String
   [ScaleDownBehavior](#cfn-elasticmapreduce-cluster-scaledownbehavior): String
   [SecurityConfiguration](#cfn-elasticmapreduce-cluster-securityconfiguration): String
@@ -101,6 +108,12 @@ An IAM role for automatic scaling policies\. The default role is `EMR_AutoScalin
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`AutoTerminationPolicy`  <a name="cfn-elasticmapreduce-cluster-autoterminationpolicy"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [AutoTerminationPolicy](aws-properties-elasticmapreduce-cluster-autoterminationpolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `BootstrapActions`  <a name="cfn-elasticmapreduce-cluster-bootstrapactions"></a>
 A list of bootstrap actions to run before Hadoop starts on the cluster nodes\.  
 *Required*: No  
@@ -123,7 +136,7 @@ Available only in Amazon EMR version 5\.7\.0 and later\. The ID of a custom Amaz
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EbsRootVolumeSize`  <a name="cfn-elasticmapreduce-cluster-ebsrootvolumesize"></a>
-The size, in GiB, of the EBS root device volume of the Linux AMI that is used for each EC2 instance\. Available in Amazon EMR version 4\.x and later\.  
+The size, in GiB, of the Amazon EBS root device volume of the Linux AMI that is used for each EC2 instance\. Available in Amazon EMR version 4\.x and later\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -144,13 +157,13 @@ Also called instance profile and EC2 role\. An IAM role for an EMR cluster\. The
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KerberosAttributes`  <a name="cfn-elasticmapreduce-cluster-kerberosattributes"></a>
-Attributes for Kerberos configuration when Kerberos authentication is enabled using a security configuration\. For more information see [Use Kerberos Authentication](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-kerberos.html) in the *EMR Management Guide*\.  
+Attributes for Kerberos configuration when Kerberos authentication is enabled using a security configuration\. For more information see [Use Kerberos Authentication](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-kerberos.html) in the *Amazon EMR Management Guide*\.  
 *Required*: No  
 *Type*: [KerberosAttributes](aws-properties-elasticmapreduce-cluster-kerberosattributes.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LogEncryptionKmsKeyId`  <a name="cfn-elasticmapreduce-cluster-logencryptionkmskeyid"></a>
- The AWS KMS customer master key \(CMK\) used for encrypting log files\. This attribute is only available with EMR version 5\.30\.0 and later, excluding EMR 6\.0\.0\.   
+ The AWS KMS key used for encrypting log files\. This attribute is only available with EMR version 5\.30\.0 and later, excluding EMR 6\.0\.0\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -162,7 +175,7 @@ The path to the Amazon S3 location where logs for this cluster are stored\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ManagedScalingPolicy`  <a name="cfn-elasticmapreduce-cluster-managedscalingpolicy"></a>
- Creates or updates a managed scaling policy for an Amazon EMR cluster\. The managed scaling policy defines the limits for resources, such as EC2 instances that can be added or terminated from a cluster\. The policy only applies to the core and task nodes\. The master node cannot be scaled after initial configuration\.   
+Creates or updates a managed scaling policy for an Amazon EMR cluster\. The managed scaling policy defines the limits for resources, such as EC2 instances that can be added or terminated from a cluster\. The policy only applies to the core and task nodes\. The master node cannot be scaled after initial configuration\.   
 *Required*: No  
 *Type*: [ManagedScalingPolicy](aws-properties-elasticmapreduce-cluster-managedscalingpolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -173,6 +186,12 @@ The name of the cluster\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`OSReleaseLabel`  <a name="cfn-elasticmapreduce-cluster-osreleaselabel"></a>
+The Amazon Linux release specified in a cluster launch RunJobFlow request\. If no Amazon Linux release was specified, the default Amazon Linux release is shown in the response\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `ReleaseLabel`  <a name="cfn-elasticmapreduce-cluster-releaselabel"></a>
 The Amazon EMR release label, which determines the version of open\-source application packages installed on the cluster\. Release labels are in the form `emr-x.x.x`, where x\.x\.x is an Amazon EMR release version such as `emr-5.14.0`\. For more information about Amazon EMR release versions and included application versions and features, see [https://docs.aws.amazon.com/emr/latest/ReleaseGuide/](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/)\. The release label applies only to Amazon EMR releases version 4\.0 and later\. Earlier versions use `AmiVersion`\.  
 *Required*: No  
@@ -180,7 +199,7 @@ The Amazon EMR release label, which determines the version of open\-source appli
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ScaleDownBehavior`  <a name="cfn-elasticmapreduce-cluster-scaledownbehavior"></a>
-The way that individual Amazon EC2 instances terminate when an automatic scale\-in activity occurs or an instance group is resized\. `TERMINATE_AT_INSTANCE_HOUR` indicates that Amazon EMR terminates nodes at the instance\-hour boundary, regardless of when the request to terminate the instance was submitted\. This option is only available with Amazon EMR 5\.1\.0 and later and is the default for clusters created using that version\. `TERMINATE_AT_TASK_COMPLETION` indicates that Amazon EMR blacklists and drains tasks from nodes before terminating the Amazon EC2 instances, regardless of the instance\-hour boundary\. With either behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to HDFS corruption\. `TERMINATE_AT_TASK_COMPLETION` is available only in Amazon EMR version 4\.1\.0 and later, and is the default for versions of Amazon EMR earlier than 5\.1\.0\.  
+The way that individual Amazon EC2 instances terminate when an automatic scale\-in activity occurs or an instance group is resized\. `TERMINATE_AT_INSTANCE_HOUR` indicates that Amazon EMR terminates nodes at the instance\-hour boundary, regardless of when the request to terminate the instance was submitted\. This option is only available with Amazon EMR 5\.1\.0 and later and is the default for clusters created using that version\. `TERMINATE_AT_TASK_COMPLETION` indicates that Amazon EMR adds nodes to a deny list and drains tasks from nodes before terminating the Amazon EC2 instances, regardless of the instance\-hour boundary\. With either behavior, Amazon EMR removes the least active nodes first and blocks instance termination if it could lead to HDFS corruption\. `TERMINATE_AT_TASK_COMPLETION` is available only in Amazon EMR version 4\.1\.0 and later, and is the default for versions of Amazon EMR earlier than 5\.1\.0\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `TERMINATE_AT_INSTANCE_HOUR | TERMINATE_AT_TASK_COMPLETION`  
@@ -196,7 +215,7 @@ The name of the security configuration applied to the cluster\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceRole`  <a name="cfn-elasticmapreduce-cluster-servicerole"></a>
-The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf\.  
+The IAM role that Amazon EMR assumes in order to access AWS resources on your behalf\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -249,11 +268,11 @@ The public DNS name of the master node \(instance\), such as `ec2-12-123-123-123
 
 Create cluster examples\.
 
-### Create a Cluster Using a Custom AMI for EC2 Instances<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_Cluster_Using_a_Custom_AMI_for_EC2_Instances"></a>
+### Create a cluster using a custom AMI for EC2 instances<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_using_a_custom_AMI_for_EC2_instances"></a>
 
 The following example template specifies a cluster using a custom Amazon Linux AMI for the EC2 instances in the cluster\.
 
-#### JSON<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_Cluster_Using_a_Custom_AMI_for_EC2_Instances--json"></a>
+#### JSON<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_using_a_custom_AMI_for_EC2_instances--json"></a>
 
 ```
 {
@@ -300,6 +319,20 @@ The following example template specifies a cluster using a custom Amazon Linux A
             "Market": "ON_DEMAND",
             "Name": "cfnCore"
           },
+          "TaskInstanceGroups": [
+            {
+              "InstanceCount": 1,
+              "InstanceType": {"Ref" : "InstanceType"},
+              "Market": "ON_DEMAND",
+              "Name": "cfnTask-1"  
+            },
+            {
+              "InstanceCount": 1,
+              "InstanceType": {"Ref" : "InstanceType"},
+              "Market": "ON_DEMAND",
+              "Name": "cfnTask-2"  
+            }
+          ],
           "TerminationProtected" : {"Ref" : "TerminationProtected"},
           "Ec2SubnetId" : {"Ref" : "SubnetId"}
         },
@@ -369,7 +402,7 @@ The following example template specifies a cluster using a custom Amazon Linux A
 }
 ```
 
-#### YAML<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_Cluster_Using_a_Custom_AMI_for_EC2_Instances--yaml"></a>
+#### YAML<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_using_a_custom_AMI_for_EC2_instances--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -405,6 +438,15 @@ Resources:
           InstanceType: !Ref InstanceType
           Market: ON_DEMAND
           Name: cfnCore
+        TaskInstanceGroups:
+          - InstanceCount: 1
+            InstanceType: !Ref InstanceType
+            Market: ON_DEMAND
+            Name: cfnTask-1
+          - InstanceCount: 1
+            InstanceType: !Ref InstanceType
+            Market: ON_DEMAND
+            Name: cfnTask-2
         TerminationProtected: !Ref TerminationProtected
         Ec2SubnetId: !Ref SubnetId
       Name: CFNtest
@@ -451,11 +493,11 @@ Resources:
         - !Ref emrEc2Role
 ```
 
-### Create a Cluster and Specify the Root Volume Size of EC2 Instances<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_Cluster_and_Specify_the_Root_Volume_Size_of_EC2_Instances"></a>
+### Create a cluster and specify the root volume size of EC2 instances<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_and_specify_the_root_volume_size_of_EC2_instances"></a>
 
 The following example template enables you to specify the size of the EBS root volume for cluster instances\.
 
-#### JSON<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_Cluster_and_Specify_the_Root_Volume_Size_of_EC2_Instances--json"></a>
+#### JSON<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_and_specify_the_root_volume_size_of_EC2_instances--json"></a>
 
 ```
 {
@@ -496,6 +538,20 @@ The following example template enables you to specify the size of the EBS root v
             "Market": "ON_DEMAND",
             "Name": "cfnCore"
           },
+          "TaskInstanceGroups": [
+            {
+              "InstanceCount": 1,
+              "InstanceType": {"Ref" : "InstanceType"},
+              "Market": "ON_DEMAND",
+              "Name": "cfnTask-1"  
+            },
+            {
+              "InstanceCount": 1,
+              "InstanceType": {"Ref" : "InstanceType"},
+              "Market": "ON_DEMAND",
+              "Name": "cfnTask-2"  
+            }
+          ],
           "TerminationProtected" : {"Ref" : "TerminationProtected"},
           "Ec2SubnetId" : {"Ref" : "SubnetId"}
         },
@@ -565,7 +621,7 @@ The following example template enables you to specify the size of the EBS root v
 }
 ```
 
-#### YAML<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_Cluster_and_Specify_the_Root_Volume_Size_of_EC2_Instances--yaml"></a>
+#### YAML<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_and_specify_the_root_volume_size_of_EC2_instances--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -597,6 +653,15 @@ Resources:
           InstanceType: !Ref InstanceType
           Market: ON_DEMAND
           Name: cfnCore
+        TaskInstanceGroups:
+          - InstanceCount: 1
+            InstanceType: !Ref InstanceType
+            Market: ON_DEMAND
+            Name: cfnTask-1
+          - InstanceCount: 1
+            InstanceType: !Ref InstanceType
+            Market: ON_DEMAND
+            Name: cfnTask-2
         TerminationProtected: !Ref TerminationProtected
         Ec2SubnetId: !Ref SubnetId
       Name: CFNtest
@@ -643,11 +708,11 @@ Resources:
         - !Ref emrEc2Role
 ```
 
-### Create a Cluster with Kerberos Authentication<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_Cluster_with_Kerberos_Authentication"></a>
+### Create a cluster with Kerberos authentication<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_with_Kerberos_authentication"></a>
 
 The following example template enables you to specify the Kerberos authentication configuration for an EMR cluster\.
 
-#### JSON<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_Cluster_with_Kerberos_Authentication--json"></a>
+#### JSON<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_with_Kerberos_authentication--json"></a>
 
 ```
 {
@@ -689,6 +754,20 @@ The following example template enables you to specify the Kerberos authenticatio
             "Market": "ON_DEMAND",
             "Name": "cfnCore"
           },
+          "TaskInstanceGroups": [
+            {
+              "InstanceCount": 1,
+              "InstanceType": {"Ref" : "InstanceType"},
+              "Market": "ON_DEMAND",
+              "Name": "cfnTask-1"  
+            },
+            {
+              "InstanceCount": 1,
+              "InstanceType": {"Ref" : "InstanceType"},
+              "Market": "ON_DEMAND",
+              "Name": "cfnTask-2"  
+            }
+          ],
           "Ec2SubnetId" : {"Ref" : "SubnetId"}
         },
         "Name": "CFNtest2",
@@ -818,7 +897,7 @@ The following example template enables you to specify the Kerberos authenticatio
 }
 ```
 
-#### YAML<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_Cluster_with_Kerberos_Authentication--yaml"></a>
+#### YAML<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_with_Kerberos_authentication--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -850,6 +929,15 @@ Resources:
           InstanceType: !Ref InstanceType
           Market: ON_DEMAND
           Name: cfnCore
+        TaskInstanceGroups:
+          - InstanceCount: 1
+            InstanceType: !Ref InstanceType
+            Market: ON_DEMAND
+            Name: cfnTask-1
+          - InstanceCount: 1
+            InstanceType: !Ref InstanceType
+            Market: ON_DEMAND
+            Name: cfnTask-2
         Ec2SubnetId: !Ref SubnetId
       Name: CFNtest2
       JobFlowRole: !Ref emrEc2InstanceProfile
@@ -946,7 +1034,7 @@ Outputs:
 
 ### Create a cluster with a managed scaling policy<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_with_a_managed_scaling_policy"></a>
 
-The following example template enables you to specify the managed scaling policy for an EMR cluster\. 
+The following example template enables you to specify the managed scaling policy for an EMR cluster\.
 
 #### JSON<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_with_a_managed_scaling_policy--json"></a>
 
@@ -996,6 +1084,20 @@ The following example template enables you to specify the managed scaling policy
             "Market": "ON_DEMAND",
             "Name": "core"
           },
+          "TaskInstanceGroups": [
+            {
+              "InstanceCount": 1,
+              "InstanceType": {"Ref" : "InstanceType"},
+              "Market": "ON_DEMAND",
+              "Name": "cfnTask-1"  
+            },
+            {
+              "InstanceCount": 1,
+              "InstanceType": {"Ref" : "InstanceType"},
+              "Market": "ON_DEMAND",
+              "Name": "cfnTask-2"  
+            }
+          ],
           "Ec2SubnetId" : {"Ref" : "SubnetId"}
         },
         "Name": "ManagedScalingExample",
@@ -1053,6 +1155,15 @@ Resources:
           InstanceType: !Ref InstanceType
           Market: ON_DEMAND
           Name: core
+        TaskInstanceGroups:
+          - InstanceCount: 1
+            InstanceType: !Ref InstanceType
+            Market: ON_DEMAND
+            Name: cfnTask-1
+          - InstanceCount: 1
+            InstanceType: !Ref InstanceType
+            Market: ON_DEMAND
+            Name: cfnTask-2
         Ec2SubnetId: !Ref SubnetId
       Name: ManagedScalingExample
       JobFlowRole: EMR_EC2_DefaultRole
@@ -1065,4 +1176,456 @@ Resources:
           MaximumCoreCapacityUnits: !Ref MaximumCoreCapacityUnits
           MaximumOnDemandCapacityUnits: !Ref MaximumOnDemandCapacityUnits
           UnitType: !Ref UnitType
+```
+
+### Create a cluster with task instance groups<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_with_task_instance_groups"></a>
+
+The following example template enables you to create task instance groups for an EMR cluster\.
+
+#### JSON<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_with_task_instance_groups--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Parameters" : {
+    "InstanceType" : {
+      "Type" : "String"
+    },
+    "ReleaseLabel" : {
+      "Type" : "String"
+    },
+    "SubnetId" : {
+      "Type" : "String"
+    },
+    "TerminationProtected" : {
+      "Type" : "String",
+      "Default" : "false"
+    },
+    "ElasticMapReducePrincipal" : {
+      "Type" : "String"
+    },
+    "Ec2Principal" : {
+      "Type" : "String"
+    }
+  },
+  "Resources": {
+    "cluster": {
+      "Type": "AWS::EMR::Cluster",
+      "Properties": {
+        "Instances": {
+          "MasterInstanceGroup": {
+            "InstanceCount": 1,
+            "InstanceType": {"Ref" : "InstanceType"},
+            "Market": "ON_DEMAND",
+            "Name": "cfnMaster"
+          },
+          "CoreInstanceGroup": {
+            "InstanceCount": 1,
+            "InstanceType": {"Ref" : "InstanceType"},
+            "Market": "ON_DEMAND",
+            "Name": "cfnCore"
+          },
+          "TaskInstanceGroups": [
+            {
+              "InstanceCount": 1,
+              "InstanceType": {"Ref" : "InstanceType"},
+              "Market": "ON_DEMAND",
+              "Name": "cfnTask-1"  
+            },
+            {
+              "InstanceCount": 1,
+              "InstanceType": {"Ref" : "InstanceType"},
+              "Market": "ON_DEMAND",
+              "Name": "cfnTask-2"  
+            }
+          ],
+          "TerminationProtected" : {"Ref" : "TerminationProtected"},
+          "Ec2SubnetId" : {"Ref" : "SubnetId"}
+        },
+        "Name": "CFNtest",
+        "JobFlowRole" : {"Ref": "emrEc2InstanceProfile"},
+        "ServiceRole" : {"Ref": "emrRole"},
+        "ReleaseLabel" : {"Ref" : "ReleaseLabel"},
+
+        "VisibleToAllUsers" : true,
+        "Tags": [
+          {
+            "Key": "key1",
+            "Value": "value1"
+          }
+        ]
+      }
+    },
+    "emrRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2008-10-17",
+          "Statement": [
+            {
+              "Sid": "",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {"Ref" : "ElasticMapReducePrincipal"}
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Path": "/",
+        "ManagedPolicyArns": ["arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole"]
+      }
+    },
+    "emrEc2Role": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2008-10-17",
+          "Statement": [
+            {
+              "Sid": "",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {"Ref" : "Ec2Principal"}
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Path": "/",
+        "ManagedPolicyArns": ["arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role"]
+      }
+    },
+    "emrEc2InstanceProfile": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Path": "/",
+        "Roles": [ {
+          "Ref": "emrEc2Role"
+        } ]
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_with_task_instance_groups--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Parameters:
+  InstanceType:
+    Type: String
+  ReleaseLabel:
+    Type: String
+  SubnetId:
+    Type: String
+  TerminationProtected:
+    Type: String
+    Default: 'false'
+  ElasticMapReducePrincipal:
+    Type: String
+  Ec2Principal:
+    Type: String
+Resources:
+  cluster:
+    Type: AWS::EMR::Cluster
+    Properties:
+      Instances:
+        MasterInstanceGroup:
+          InstanceCount: 1
+          InstanceType: !Ref InstanceType
+          Market: ON_DEMAND
+          Name: cfnMaster
+        CoreInstanceGroup:
+          InstanceCount: 1
+          InstanceType: !Ref InstanceType
+          Market: ON_DEMAND
+          Name: cfnCore
+        TaskInstanceGroups:
+          - InstanceCount: 1
+            InstanceType: !Ref InstanceType
+            Market: ON_DEMAND
+            Name: cfnTask-1
+          - InstanceCount: 1
+            InstanceType: !Ref InstanceType
+            Market: ON_DEMAND
+            Name: cfnTask-2
+        TerminationProtected: !Ref TerminationProtected
+        Ec2SubnetId: !Ref SubnetId
+      Name: CFNtest
+      JobFlowRole: !Ref emrEc2InstanceProfile
+      ServiceRole: !Ref emrRole
+      ReleaseLabel: !Ref ReleaseLabel
+      VisibleToAllUsers: true
+      Tags:
+        - Key: key1
+          Value: value1
+  emrRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2008-10-17
+        Statement:
+          - Sid: ''
+            Effect: Allow
+            Principal:
+              Service: !Ref ElasticMapReducePrincipal
+            Action: 'sts:AssumeRole'
+      Path: /
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole'
+  emrEc2Role:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2008-10-17
+        Statement:
+          - Sid: ''
+            Effect: Allow
+            Principal:
+              Service: !Ref Ec2Principal
+            Action: 'sts:AssumeRole'
+      Path: /
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role'
+  emrEc2InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: /
+      Roles:
+        - !Ref emrEc2Role
+```
+
+### Create a cluster with a task instance fleet<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_with_a_task_instance_fleet"></a>
+
+The following example template enables you to create a task instance fleet for an EMR cluster\.
+
+#### JSON<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_with_a_task_instance_fleet--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Parameters" : {
+    "InstanceType" : {
+      "Type" : "String"
+    },
+    "ReleaseLabel" : {
+      "Type" : "String"
+    },
+    "SubnetId" : {
+      "Type" : "String"
+    },
+    "TerminationProtected" : {
+      "Type" : "String",
+      "Default" : "false"
+    },
+    "ElasticMapReducePrincipal" : {
+      "Type" : "String"
+    },
+    "Ec2Principal" : {
+      "Type" : "String"
+    }
+  },
+  "Resources": {
+    "cluster": {
+      "Type": "AWS::EMR::Cluster",
+      "Properties": {
+        "Instances": {
+          "MasterInstanceFleet": {
+            "Name": "cfnMaster",
+            "TargetOnDemandCapacity": 1,
+            "TargetSpotCapacity": 0,
+            "InstanceTypeConfigs": [
+              {
+                "InstanceType": {"Ref" : "InstanceType"},
+                "WeightedCapacity": 1
+              }
+            ]
+          },
+          "CoreInstanceFleet": {
+            "Name": "cfnCore",
+            "TargetOnDemandCapacity": 1,
+            "TargetSpotCapacity": 0,
+            "InstanceTypeConfigs": [
+              {
+                "InstanceType": {"Ref" : "InstanceType"},
+                "WeightedCapacity": 1
+              }
+            ]
+          },
+          "TaskInstanceFleets": [
+            {
+              "Name": "cfnTask",
+              "TargetOnDemandCapacity": 1,
+              "TargetSpotCapacity": 0,
+              "InstanceTypeConfigs": [
+                {
+                  "InstanceType": {"Ref" : "InstanceType"},
+                  "WeightedCapacity": 1
+                }
+              ]
+            }
+          ],
+          "TerminationProtected" : {"Ref" : "TerminationProtected"},
+          "Ec2SubnetIds" : [
+            {"Ref" : "SubnetId"}
+          ]
+        },
+        "Name": "CFNtest",
+        "JobFlowRole" : {"Ref": "emrEc2InstanceProfile"},
+        "ServiceRole" : {"Ref": "emrRole"},
+        "ReleaseLabel" : {"Ref" : "ReleaseLabel"},
+        "VisibleToAllUsers" : true,
+        "Tags": [
+          {
+            "Key": "key1",
+            "Value": "value1"
+          }
+        ]
+      }
+    },
+    "emrRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2008-10-17",
+          "Statement": [
+            {
+              "Sid": "",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {"Ref" : "ElasticMapReducePrincipal"}
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Path": "/",
+        "ManagedPolicyArns": ["arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole"]
+      }
+    },
+    "emrEc2Role": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2008-10-17",
+          "Statement": [
+            {
+              "Sid": "",
+
+              "Effect": "Allow",
+              "Principal": {
+                "Service": {"Ref" : "Ec2Principal"}
+              },
+              "Action": "sts:AssumeRole"
+            }
+          ]
+        },
+        "Path": "/",
+        "ManagedPolicyArns": ["arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role"]
+      }
+    },
+    "emrEc2InstanceProfile": {
+      "Type": "AWS::IAM::InstanceProfile",
+      "Properties": {
+        "Path": "/",
+        "Roles": [ {
+          "Ref": "emrEc2Role"
+        } ]
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-elasticmapreduce-cluster--examples--Create_a_cluster_with_a_task_instance_fleet--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Parameters:
+  InstanceType:
+    Type: String
+  ReleaseLabel:
+    Type: String
+  SubnetId:
+    Type: String
+  TerminationProtected:
+    Type: String
+    Default: 'false'
+  ElasticMapReducePrincipal:
+    Type: String
+  Ec2Principal:
+    Type: String
+Resources:
+  cluster:
+    Type: AWS::EMR::Cluster
+    Properties:
+      Instances:
+        MasterInstanceFleet:
+          Name: cfnMaster
+          TargetOnDemandCapacity: 1
+          TargetSpotCapacity: 0
+          InstanceTypeConfigs:
+            - InstanceType: !Ref InstanceType
+              WeightedCapacity: 1
+        CoreInstanceFleet:
+          Name: cfnCore
+          TargetOnDemandCapacity: 1
+          TargetSpotCapacity: 0
+          InstanceTypeConfigs:
+            - InstanceType: !Ref InstanceType
+              WeightedCapacity: 1
+        TaskInstanceFleets:
+          - Name: cfnTask
+            TargetOnDemandCapacity: 1
+            TargetSpotCapacity: 0
+            InstanceTypeConfigs:
+              - InstanceType: !Ref InstanceType
+                WeightedCapacity: 1
+        TerminationProtected: !Ref TerminationProtected
+        Ec2SubnetIds:
+          - !Ref SubnetId
+      Name: CFNtest
+      JobFlowRole: !Ref emrEc2InstanceProfile
+      ServiceRole: !Ref emrRole
+      ReleaseLabel: !Ref ReleaseLabel
+      VisibleToAllUsers: true
+      Tags:
+        - Key: key1
+          Value: value1
+  emrRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2008-10-17
+        Statement:
+          - Sid: ''
+            Effect: Allow
+            Principal:
+              Service: !Ref ElasticMapReducePrincipal
+            Action: 'sts:AssumeRole'
+      Path: /
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceRole'
+  emrEc2Role:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2008-10-17
+        Statement:
+          - Sid: ''
+            Effect: Allow
+            Principal:
+              Service: !Ref Ec2Principal
+            Action: 'sts:AssumeRole'
+      Path: /
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AmazonElasticMapReduceforEC2Role'
+  emrEc2InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: /
+      Roles:
+        - !Ref emrEc2Role
 ```

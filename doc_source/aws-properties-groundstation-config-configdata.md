@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AntennaDownlinkDemodDecodeConfig](#cfn-groundstation-config-configdata-antennadownlinkdemoddecodeconfig)" : AntennaDownlinkDemodDecodeConfig,
   "[AntennaUplinkConfig](#cfn-groundstation-config-configdata-antennauplinkconfig)" : AntennaUplinkConfig,
   "[DataflowEndpointConfig](#cfn-groundstation-config-configdata-dataflowendpointconfig)" : DataflowEndpointConfig,
+  "[S3RecordingConfig](#cfn-groundstation-config-configdata-s3recordingconfig)" : S3RecordingConfig,
   "[TrackingConfig](#cfn-groundstation-config-configdata-trackingconfig)" : TrackingConfig,
   "[UplinkEchoConfig](#cfn-groundstation-config-configdata-uplinkechoconfig)" : UplinkEchoConfig
 }
@@ -30,6 +31,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     AntennaUplinkConfig
   [DataflowEndpointConfig](#cfn-groundstation-config-configdata-dataflowendpointconfig): 
     DataflowEndpointConfig
+  [S3RecordingConfig](#cfn-groundstation-config-configdata-s3recordingconfig): 
+    S3RecordingConfig
   [TrackingConfig](#cfn-groundstation-config-configdata-trackingconfig): 
     TrackingConfig
   [UplinkEchoConfig](#cfn-groundstation-config-configdata-uplinkechoconfig): 
@@ -60,6 +63,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  Provides information for a dataflow endpoint config object\. Dataflow endpoint config objects are used to provide parameters about which IP endpoint\(s\) to use during a contact\. Dataflow endpoints are where Ground Station sends data during a downlink contact and where Ground Station receives data to send to the satellite during an uplink contact\.   
 *Required*: No  
 *Type*: [DataflowEndpointConfig](aws-properties-groundstation-config-dataflowendpointconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`S3RecordingConfig`  <a name="cfn-groundstation-config-configdata-s3recordingconfig"></a>
+ Provides information for an S3 recording config object\. S3 recording config objects are used to provide parameters for S3 recording during downlink contacts\.   
+*Required*: No  
+*Type*: [S3RecordingConfig](aws-properties-groundstation-config-s3recordingconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrackingConfig`  <a name="cfn-groundstation-config-configdata-trackingconfig"></a>

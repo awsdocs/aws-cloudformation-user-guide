@@ -14,7 +14,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration)" : ApplicationConfiguration,
       "[ApplicationDescription](#cfn-kinesisanalyticsv2-application-applicationdescription)" : String,
+      "[ApplicationMaintenanceConfiguration](#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration)" : ApplicationMaintenanceConfiguration,
+      "[ApplicationMode](#cfn-kinesisanalyticsv2-application-applicationmode)" : String,
       "[ApplicationName](#cfn-kinesisanalyticsv2-application-applicationname)" : String,
+      "[RunConfiguration](#cfn-kinesisanalyticsv2-application-runconfiguration)" : RunConfiguration,
       "[RuntimeEnvironment](#cfn-kinesisanalyticsv2-application-runtimeenvironment)" : String,
       "[ServiceExecutionRole](#cfn-kinesisanalyticsv2-application-serviceexecutionrole)" : String,
       "[Tags](#cfn-kinesisanalyticsv2-application-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -30,7 +33,12 @@ Properties:
   [ApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration): 
     ApplicationConfiguration
   [ApplicationDescription](#cfn-kinesisanalyticsv2-application-applicationdescription): String
+  [ApplicationMaintenanceConfiguration](#cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration): 
+    ApplicationMaintenanceConfiguration
+  [ApplicationMode](#cfn-kinesisanalyticsv2-application-applicationmode): String
   [ApplicationName](#cfn-kinesisanalyticsv2-application-applicationname): String
+  [RunConfiguration](#cfn-kinesisanalyticsv2-application-runconfiguration): 
+    RunConfiguration
   [RuntimeEnvironment](#cfn-kinesisanalyticsv2-application-runtimeenvironment): String
   [ServiceExecutionRole](#cfn-kinesisanalyticsv2-application-serviceexecutionrole): String
   [Tags](#cfn-kinesisanalyticsv2-application-tags): 
@@ -53,6 +61,19 @@ The description of the application\.
 *Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ApplicationMaintenanceConfiguration`  <a name="cfn-kinesisanalyticsv2-application-applicationmaintenanceconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ApplicationMaintenanceConfiguration](aws-properties-kinesisanalyticsv2-application-applicationmaintenanceconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ApplicationMode`  <a name="cfn-kinesisanalyticsv2-application-applicationmode"></a>
+To create a Kinesis Data Analytics Studio notebook, you must set the mode to `INTERACTIVE`\. However, for a Kinesis Data Analytics for Apache Flink application, the mode is optional\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `INTERACTIVE | STREAMING`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `ApplicationName`  <a name="cfn-kinesisanalyticsv2-application-applicationname"></a>
 The name of the application\.  
 *Required*: No  
@@ -62,11 +83,17 @@ The name of the application\.
 *Pattern*: `[a-zA-Z0-9_.-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`RunConfiguration`  <a name="cfn-kinesisanalyticsv2-application-runconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [RunConfiguration](aws-properties-kinesisanalyticsv2-application-runconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `RuntimeEnvironment`  <a name="cfn-kinesisanalyticsv2-application-runtimeenvironment"></a>
-The runtime environment for the application \(`SQL-1.0`, `FLINK-1_6`, or `FLINK-1_8`\)\.  
+The runtime environment for the application\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `FLINK-1_6 | FLINK-1_8 | SQL-1_0`  
+*Allowed values*: `FLINK-1_11 | FLINK-1_13 | FLINK-1_15 | FLINK-1_6 | FLINK-1_8 | SQL-1_0 | ZEPPELIN-FLINK-1_0 | ZEPPELIN-FLINK-2_0`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceExecutionRole`  <a name="cfn-kinesisanalyticsv2-application-serviceexecutionrole"></a>
@@ -86,20 +113,30 @@ A list of one or more tags to assign to the application\. A tag is a key\-value 
 
 ## Examples<a name="aws-resource-kinesisanalyticsv2-application--examples"></a>
 
-### Create an application<a name="aws-resource-kinesisanalyticsv2-application--examples--Create_an_application"></a>
 
-#### JSON<a name="aws-resource-kinesisanalyticsv2-application--examples--Create_an_application--json"></a>
+
+### Creating an Amazon Kinesis Data Analytics Application using Apache Flink<a name="aws-resource-kinesisanalyticsv2-application--examples--Creating_an_Amazon_Kinesis_Data_Analytics_Application_using_Apache_Flink"></a>
+
+The following example shows how to create a simple application by using a deployment package from Amazon S3\. You must add permissions to the IAM role to access any streams that your code requires\. 
+
+#### JSON<a name="aws-resource-kinesisanalyticsv2-application--examples--Creating_an_Amazon_Kinesis_Data_Analytics_Application_using_Apache_Flink--json"></a>
 
 ```
 {
-    "Description": "Sample KinesisAnalytics via CloudFormation",
+    "Description": "Simple KDA Flink application",
+    "Parameters": {
+        "CodeBucketArn": {
+            "Type": "String"
+        },
+        "CodeKey": {
+            "Type": "String"
+        }
+    },
     "Resources": {
-        "BasicApplication": {
+        "MyApplication": {
             "Type": "AWS::KinesisAnalyticsV2::Application",
             "Properties": {
-                "ApplicationName": "sampleApplication",
-                "ApplicationDescription": "SampleApp",
-                "RuntimeEnvironment": "SQL-1_0",
+                "RuntimeEnvironment": "FLINK-1_15",
                 "ServiceExecutionRole": {
                     "Fn::GetAtt": [
                         "ServiceExecutionRole",
@@ -107,43 +144,18 @@ A list of one or more tags to assign to the application\. A tag is a key\-value 
                     ]
                 },
                 "ApplicationConfiguration": {
-                    "SqlApplicationConfiguration": {
-                        "Inputs": [
-                            {
-                                "NamePrefix": "exampleNamePrefix",
-                                "InputSchema": {
-                                    "RecordColumns": [
-                                        {
-                                            "Name": "example",
-                                            "SqlType": "VARCHAR(16)",
-                                            "Mapping": "$.example"
-                                        }
-                                    ],
-                                    "RecordFormat": {
-                                        "RecordFormatType": "JSON",
-                                        "MappingParameters": {
-                                            "JSONMappingParameters": {
-                                                "RecordRowPath": "$"
-                                            }
-                                        }
-                                    }
-                                },
-                                "KinesisStreamsInput": {
-                                    "ResourceARN": {
-                                        "Fn::GetAtt": [
-                                            "InputKinesisStream",
-                                            "Arn"
-                                        ]
-                                    }
-                                }
-                            }
-                        ]
-                    },
                     "ApplicationCodeConfiguration": {
                         "CodeContent": {
-                            "TextContent": "Example Application Code"
+                            "S3ContentLocation": {
+                                "BucketARN": {
+                                    "Ref": "CodeBucketArn"
+                                },
+                                "FileKey": {
+                                    "Ref": "CodeKey"
+                                }
+                            }
                         },
-                        "CodeContentType": "PLAINTEXT"
+                        "CodeContentType": "ZIPFILE"
                     }
                 }
             }
@@ -166,28 +178,156 @@ A list of one or more tags to assign to the application\. A tag is a key\-value 
                 "Path": "/",
                 "Policies": [
                     {
-                        "PolicyName": "Open",
+                        "PolicyName": "s3-code-access",
                         "PolicyDocument": {
                             "Version": "2012-10-17",
                             "Statement": [
                                 {
                                     "Effect": "Allow",
-                                    "Action": "*",
-                                    "Resource": "*"
+                                    "Action": [
+                                        "s3:GetObject"
+                                    ],
+                                    "Resource": [
+                                        {
+                                            "Fn::Sub": "${CodeBucketArn}/${CodeKey}"
+                                        }
+                                    ]
                                 }
                             ]
                         }
-                    } 
+                    }
                 ]
             }
-        },
-        "InputKinesisStream": {
-            "Type": "AWS::Kinesis::Stream",
+        }
+    }
+}
+```
+
+#### YAML<a name="aws-resource-kinesisanalyticsv2-application--examples--Creating_an_Amazon_Kinesis_Data_Analytics_Application_using_Apache_Flink--yaml"></a>
+
+```
+Description: Simple KDA Flink application
+Parameters:
+  CodeBucketArn:
+    Type: String
+  CodeKey:
+    Type: String
+​
+Resources:
+  MyApplication:
+    Type: AWS::KinesisAnalyticsV2::Application
+    Properties:
+      RuntimeEnvironment: FLINK-1_15
+      ServiceExecutionRole: !GetAtt ServiceExecutionRole.Arn
+      ApplicationConfiguration:
+        ApplicationCodeConfiguration:
+          CodeContent:
+            S3ContentLocation:
+              BucketARN: !Ref CodeBucketArn
+              FileKey: !Ref CodeKey
+          CodeContentType: 'ZIPFILE'
+​
+  ServiceExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: kinesisanalytics.amazonaws.com
+            Action: 'sts:AssumeRole'
+      Path: /
+      Policies:
+        - PolicyName: s3-code-access
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                Resource:
+                  - !Sub "${CodeBucketArn}/${CodeKey}"
+```
+
+### Creating an Amazon Kinesis Data Analytics Studio Application<a name="aws-resource-kinesisanalyticsv2-application--examples--Creating_an_Amazon_Kinesis_Data_Analytics_Studio_Application"></a>
+
+The following example shows how to create a simple Studio application with an Amazon Glue database\. You must add permissions to the IAM role to create or access any streams you require, and any that already exist must be added to the Glue database\.
+
+#### JSON<a name="aws-resource-kinesisanalyticsv2-application--examples--Creating_an_Amazon_Kinesis_Data_Analytics_Studio_Application--json"></a>
+
+```
+{
+    "Description": "KDA Studio application",
+    "Parameters": {
+        "GlueDatabaseName": {
+            "Type": "String"
+        }
+    },
+    "Resources": {
+        "MyApplication": {
+            "Type": "AWS::KinesisAnalyticsV2::Application",
             "Properties": {
-                "ShardCount": 1
+                "ApplicationMode": "INTERACTIVE",
+                "RuntimeEnvironment": "ZEPPELIN-FLINK-2_0",
+                "ServiceExecutionRole": {
+                    "Fn::GetAtt": [
+                        "ServiceExecutionRole",
+                        "Arn"
+                    ]
+                },
+                "ApplicationConfiguration": {
+                    "FlinkApplicationConfiguration": {
+                        "ParallelismConfiguration": {
+                            "Parallelism": 4,
+                            "ConfigurationType": "CUSTOM"
+                        }
+                    },
+                    "ZeppelinApplicationConfiguration": {
+                        "CatalogConfiguration": {
+                            "GlueDataCatalogConfiguration": {
+                                "DatabaseARN": {
+                                    "Fn::Sub": "arn:aws:glue:${AWS::Region}:${AWS::AccountId}:database/${GlueDatabase}"
+                                }
+                            }
+                        },
+                        "CustomArtifactsConfiguration": [
+                            {
+                                "ArtifactType": "DEPENDENCY_JAR",
+                                "MavenReference": {
+                                    "GroupId": "software.amazon.kinesis",
+                                    "ArtifactId": "amazon-kinesis-sql-connector-flink",
+                                    "Version": "2.0.3"
+                                }
+                            },
+                            {
+                                "ArtifactType": "DEPENDENCY_JAR",
+                                "MavenReference": {
+                                    "GroupId": "org.apache.flink",
+                                    "ArtifactId": "flink-sql-connector-kafka_2.12",
+                                    "Version": "1.15.2"
+                                }
+                            }
+                        ]
+                    }
+                }
             }
         },
-        "KinesisAnalyticsRole": {
+        "GlueDatabase": {
+            "Type": "AWS::Glue::Database",
+            "Properties": {
+                "CatalogId": {
+                    "Ref": "AWS::AccountId"
+                },
+                "DatabaseInput": {
+                    "Name": {
+                        "Ref": "GlueDatabaseName"
+                    },
+                    "Description": "My glue database"
+                }
+            }
+        },
+        "ServiceExecutionRole": {
             "Type": "AWS::IAM::Role",
             "Properties": {
                 "AssumeRolePolicyDocument": {
@@ -205,142 +345,104 @@ A list of one or more tags to assign to the application\. A tag is a key\-value 
                 "Path": "/",
                 "Policies": [
                     {
-                        "PolicyName": "Open",
+                        "PolicyName": "glue-access",
                         "PolicyDocument": {
                             "Version": "2012-10-17",
                             "Statement": [
                                 {
                                     "Effect": "Allow",
-                                    "Action": "*",
-                                    "Resource": "*"
+                                    "Action": [
+                                        "glue:GetConnection",
+                                        "glue:GetTable",
+                                        "glue:GetTables",
+                                        "glue:CreateTable",
+                                        "glue:UpdateTable",
+                                        "glue:GetDatabases",
+                                        "glue:GetUserDefinedFunction"
+                                    ],
+                                    "Resource": [
+                                        {
+                                            "Fn::Sub": "arn:${AWS::Partition}:glue:${AWS::Region}:${AWS::AccountId}:connection/*"
+                                        },
+                                        {
+                                            "Fn::Sub": "arn:${AWS::Partition}:glue:${AWS::Region}:${AWS::AccountId}:table/*"
+                                        },
+                                        {
+                                            "Fn::Sub": "arn:${AWS::Partition}:glue:${AWS::Region}:${AWS::AccountId}:database/${GlueDatabase}/*"
+                                        },
+                                        {
+                                            "Fn::Sub": "arn:${AWS::Partition}:glue:${AWS::Region}:${AWS::AccountId}:catalog"
+                                        },
+                                        {
+                                            "Fn::Sub": "arn:${AWS::Partition}:glue:${AWS::Region}:${AWS::AccountId}:userDefinedFunction/*"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Effect": "Allow",
+                                    "Action": [
+                                        "glue:GetDatabase"
+                                    ],
+                                    "Resource": [
+                                        "*"
+                                    ]
                                 }
                             ]
                         }
                     }
                 ]
             }
-        },
-        "BasicApplicationOutputs": {
-            "Type": "AWS::KinesisAnalyticsV2::ApplicationOutput",
-            "DependsOn": "BasicApplication",
-            "Properties": {
-                "ApplicationName": {
-                    "Ref": "BasicApplication"
-                },
-                "Output": {
-                    "Name": "exampleOutput",
-                    "DestinationSchema": {
-                        "RecordFormatType": "CSV"
-                    },
-                    "KinesisStreamsOutput": {
-                        "ResourceARN": {
-                            "Fn::GetAtt": [
-                                "OutputKinesisStream",
-                                "Arn"
-                            ]
-                        }
-                    }
-                }
-            }
-        },
-        "OutputKinesisStream": {
-            "Type": "AWS::Kinesis::Stream",
-            "Properties": {
-                "ShardCount": 1
-            }
-        },
-        "BasicApplicationReferenceDataSource": {
-            "Type": "AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource",
-            "DependsOn": "BasicApplicationOutputs",
-            "Properties": {
-                "ApplicationName": {
-                    "Ref": "BasicApplication"
-                },
-                "ReferenceDataSource": {
-                    "TableName": "exampleTable",
-                    "ReferenceSchema": {
-                        "RecordColumns": [
-                            {
-                                "Name": "example",
-                                "SqlType": "VARCHAR(16)",
-                                "Mapping": "$.example"
-                            }
-                        ],
-                        "RecordFormat": {
-                            "RecordFormatType": "JSON",
-                            "MappingParameters": {
-                                "JSONMappingParameters": {
-                                    "RecordRowPath": "$"
-                                }
-                            }
-                        }
-                    },
-                    "S3ReferenceDataSource": {
-                        "BucketARN": {
-                            "Fn::GetAtt": [
-                                "S3Bucket",
-                                "Arn"
-                            ]
-                        },
-                        "FileKey": "fakeKey"
-                    }
-                }
-            }
-        },
-        "S3Bucket": {
-            "Type": "AWS::S3::Bucket"
-        }
-    },
-    "Outputs": {
-        "ApplicationPhysicalResourceId": {
-            "Value": {
-                "Ref": "BasicApplication"
-            }
         }
     }
 }
 ```
 
-#### YAML<a name="aws-resource-kinesisanalyticsv2-application--examples--Create_an_application--yaml"></a>
+#### YAML<a name="aws-resource-kinesisanalyticsv2-application--examples--Creating_an_Amazon_Kinesis_Data_Analytics_Studio_Application--yaml"></a>
 
 ```
-Description: Sample KinesisAnalytics via CloudFormation
+Description: KDA Studio application
+Parameters:
+  GlueDatabaseName:
+    Type: String
 
-Description: Sample KinesisAnalytics via CloudFormation
 Resources:
-  BasicApplication:
-    Type: 'AWS::KinesisAnalyticsV2::Application'
+  MyApplication:
+    Type: AWS::KinesisAnalyticsV2::Application
     Properties:
-      ApplicationName: sampleApplication
-      ApplicationDescription: SampleApp
-      RuntimeEnvironment: SQL-1_0
-      ServiceExecutionRole: !GetAtt 
-        - ServiceExecutionRole
-        - Arn
+      ApplicationMode: INTERACTIVE
+      RuntimeEnvironment: ZEPPELIN-FLINK-2_0
+      ServiceExecutionRole: !GetAtt ServiceExecutionRole.Arn
       ApplicationConfiguration:
-        SqlApplicationConfiguration:
-          Inputs:
-            - NamePrefix: exampleNamePrefix
-              InputSchema:
-                RecordColumns:
-                  - Name: example
-                    SqlType: VARCHAR(16)
-                    Mapping: $.example
-                RecordFormat:
-                  RecordFormatType: JSON
-                  MappingParameters:
-                    JSONMappingParameters:
-                      RecordRowPath: $
-              KinesisStreamsInput:
-                ResourceARN: !GetAtt 
-                  - InputKinesisStream
-                  - Arn
-        ApplicationCodeConfiguration:
-          CodeContent:
-            TextContent: Example Application Code
-          CodeContentType: PLAINTEXT
+        FlinkApplicationConfiguration:
+          ParallelismConfiguration:
+            Parallelism: 4
+            ConfigurationType: CUSTOM
+        ZeppelinApplicationConfiguration:
+          CatalogConfiguration:
+            GlueDataCatalogConfiguration:
+              DatabaseARN: !Sub "arn:aws:glue:${AWS::Region}:${AWS::AccountId}:database/${GlueDatabase}"
+          CustomArtifactsConfiguration:
+            - ArtifactType: DEPENDENCY_JAR
+              MavenReference:
+                GroupId: software.amazon.kinesis
+                ArtifactId: amazon-kinesis-sql-connector-flink
+                Version: 2.0.3
+            - ArtifactType: DEPENDENCY_JAR
+              MavenReference:
+                GroupId: org.apache.flink
+                ArtifactId: flink-sql-connector-kafka_2.12
+                Version: 1.15.2
+
+  GlueDatabase:
+    Type: AWS::Glue::Database
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseInput:
+        Name: !Ref GlueDatabaseName
+        Description: My glue database
+
   ServiceExecutionRole:
-    Type: 'AWS::IAM::Role'
+    Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Version: 2012-10-17
@@ -351,81 +453,32 @@ Resources:
             Action: 'sts:AssumeRole'
       Path: /
       Policies:
-        - PolicyName: Open
+        - PolicyName: glue-access
           PolicyDocument:
             Version: 2012-10-17
             Statement:
               - Effect: Allow
-                Action: '*'
-                Resource: '*'
-  InputKinesisStream:
-    Type: 'AWS::Kinesis::Stream'
-    Properties:
-      ShardCount: 1
-  KinesisAnalyticsRole:
-    Type: 'AWS::IAM::Role'
-    Properties:
-      AssumeRolePolicyDocument:
-        Version: 2012-10-17
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service: kinesisanalytics.amazonaws.com
-            Action: 'sts:AssumeRole'
-      Path: /
-      Policies:
-        - PolicyName: Open
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
+                Action:
+                  - glue:GetConnection
+                  - glue:GetTable
+                  - glue:GetTables
+                  - glue:CreateTable
+                  - glue:UpdateTable
+                  - glue:GetDatabases
+                  - glue:GetUserDefinedFunction
+                Resource:
+                  - !Sub "arn:${AWS::Partition}:glue:${AWS::Region}:${AWS::AccountId}:connection/*"
+                  - !Sub "arn:${AWS::Partition}:glue:${AWS::Region}:${AWS::AccountId}:table/*"
+                  - !Sub "arn:${AWS::Partition}:glue:${AWS::Region}:${AWS::AccountId}:database/${GlueDatabase}/*"
+                  - !Sub "arn:${AWS::Partition}:glue:${AWS::Region}:${AWS::AccountId}:catalog"
+                  - !Sub "arn:${AWS::Partition}:glue:${AWS::Region}:${AWS::AccountId}:userDefinedFunction/*"
               - Effect: Allow
-                Action: '*'
-                Resource: '*'
-  BasicApplicationOutputs:
-    Type: 'AWS::KinesisAnalyticsV2::ApplicationOutput'
-    DependsOn: BasicApplication
-    Properties:
-      ApplicationName: !Ref BasicApplication
-      Output:
-        Name: exampleOutput
-        DestinationSchema:
-          RecordFormatType: CSV
-        KinesisStreamsOutput:
-          ResourceARN: !GetAtt 
-            - OutputKinesisStream
-            - Arn
-  OutputKinesisStream:
-    Type: 'AWS::Kinesis::Stream'
-    Properties:
-      ShardCount: 1
-  BasicApplicationReferenceDataSource:
-    Type: 'AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource'
-    DependsOn: BasicApplicationOutputs
-    Properties:
-      ApplicationName: !Ref BasicApplication
-      ReferenceDataSource:
-        TableName: exampleTable
-        ReferenceSchema:
-          RecordColumns:
-            - Name: example
-              SqlType: VARCHAR(16)
-              Mapping: $.example
-          RecordFormat:
-            RecordFormatType: JSON
-            MappingParameters:
-              JSONMappingParameters:
-                RecordRowPath: $
-        S3ReferenceDataSource:
-          BucketARN: !GetAtt 
-            - S3Bucket
-            - Arn
-          FileKey: fakeKey
-  S3Bucket:
-    Type: 'AWS::S3::Bucket'
-Outputs:
-  ApplicationPhysicalResourceId:
-    Value: !Ref BasicApplication
+                Action:
+                  - glue:GetDatabase
+                Resource:
+                  - "*"
 ```
 
 ## See also<a name="aws-resource-kinesisanalyticsv2-application--seealso"></a>
 +  [CreateApplication](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CreateApplication.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

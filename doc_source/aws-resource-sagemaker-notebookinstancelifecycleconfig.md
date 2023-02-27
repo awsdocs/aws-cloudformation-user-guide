@@ -152,7 +152,8 @@ The following example creates a notebook instance with an associated lifecycle c
     "BasicNotebookInstanceLifecycleConfigId": {
       "Value": { "Ref" : "BasicNotebookInstanceLifecycleConfig" }
     }
-  },
+  }
+}
 }
 ```
 

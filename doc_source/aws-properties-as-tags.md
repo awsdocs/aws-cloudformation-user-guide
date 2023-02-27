@@ -1,10 +1,10 @@
 # AWS::AutoScaling::AutoScalingGroup TagProperty<a name="aws-properties-as-tags"></a>
 
- `TagProperty` specifies a list of tags for the `Tag` property of [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)\. `TagProperty` adds tags to all associated instances in an Auto Scaling group\. 
+A structure that specifies a tag for the `Tags` property of [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.
 
-For more information, see [Tagging Auto Scaling groups and instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html) in the *Amazon EC2 Auto Scaling User Guide*\. You can find a sample template snippet in the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples) section of the `AWS::AutoScaling::AutoScalingGroup` documentation\.
+For more information, see [Tag Auto Scaling groups and instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html) in the *Amazon EC2 Auto Scaling User Guide*\. You can find a sample template snippet in the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples) section of the `AWS::AutoScaling::AutoScalingGroup` resource\.
 
-AWS CloudFormation adds the following tags to all Auto Scaling groups and associated instances: 
+CloudFormation adds the following tags to all Auto Scaling groups and associated instances: 
 + aws:cloudformation:stack\-name
 + aws:cloudformation:stack\-id
 + aws:cloudformation:logical\-id 
@@ -43,7 +43,7 @@ The tag key\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PropagateAtLaunch`  <a name="cfn-as-tags-PropagateAtLaunch"></a>
-Set to `true` if you want AWS CloudFormation to copy the tag to EC2 instances that are launched as part of the Auto Scaling group\. Set to `false` if you want the tag attached only to the Auto Scaling group and not copied to any instances launched as part of the Auto Scaling group\.   
+Set to `true` if you want CloudFormation to copy the tag to EC2 instances that are launched as part of the Auto Scaling group\. Set to `false` if you want the tag attached only to the Auto Scaling group and not copied to any instances launched as part of the Auto Scaling group\.   
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

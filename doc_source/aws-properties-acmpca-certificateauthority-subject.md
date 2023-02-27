@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[CommonName](#cfn-acmpca-certificateauthority-subject-commonname)" : String,
   "[Country](#cfn-acmpca-certificateauthority-subject-country)" : String,
+  "[CustomAttributes](#cfn-acmpca-certificateauthority-subject-customattributes)" : [ CustomAttribute, ... ],
   "[DistinguishedNameQualifier](#cfn-acmpca-certificateauthority-subject-distinguishednamequalifier)" : String,
   "[GenerationQualifier](#cfn-acmpca-certificateauthority-subject-generationqualifier)" : String,
   "[GivenName](#cfn-acmpca-certificateauthority-subject-givenname)" : String,
@@ -32,6 +33,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CommonName](#cfn-acmpca-certificateauthority-subject-commonname): String
   [Country](#cfn-acmpca-certificateauthority-subject-country): String
+  [CustomAttributes](#cfn-acmpca-certificateauthority-subject-customattributes): 
+    - CustomAttribute
   [DistinguishedNameQualifier](#cfn-acmpca-certificateauthority-subject-distinguishednamequalifier): String
   [GenerationQualifier](#cfn-acmpca-certificateauthority-subject-generationqualifier): String
   [GivenName](#cfn-acmpca-certificateauthority-subject-givenname): String
@@ -60,14 +63,23 @@ Two\-digit code that specifies the country in which the certificate subject loca
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`CustomAttributes`  <a name="cfn-acmpca-certificateauthority-subject-customattributes"></a>
+  
+Contains a sequence of one or more X\.500 relative distinguished names \(RDNs\), each of which consists of an object identifier \(OID\) and a value\. For more information, see NIST’s definition of [Object Identifier \(OID\)](https://csrc.nist.gov/glossary/term/Object_Identifier)\.  
+Custom attributes cannot be used in combination with standard attributes\.
+*Required*: No  
+*Type*: List of [CustomAttribute](aws-properties-acmpca-certificateauthority-customattribute.md)  
+*Maximum*: `30`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `DistinguishedNameQualifier`  <a name="cfn-acmpca-certificateauthority-subject-distinguishednamequalifier"></a>
-Disambiguating information for the certificate subject\.   
+Disambiguating information for the certificate subject\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GenerationQualifier`  <a name="cfn-acmpca-certificateauthority-subject-generationqualifier"></a>
-Typically a qualifier appended to the name of an individual\. Examples include Jr\. for junior, Sr\. for senior, and III for third\.   
+Typically a qualifier appended to the name of an individual\. Examples include Jr\. for junior, Sr\. for senior, and III for third\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -79,7 +91,7 @@ First name\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Initials`  <a name="cfn-acmpca-certificateauthority-subject-initials"></a>
- Concatenation that typically contains the first letter of the GivenName, the first letter of the middle name if one exists, and the first letter of the SurName\.  
+Concatenation that typically contains the first letter of the GivenName, the first letter of the middle name if one exists, and the first letter of the SurName\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -103,7 +115,7 @@ A subdivision or unit of the organization \(such as sales or finance\) with whic
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Pseudonym`  <a name="cfn-acmpca-certificateauthority-subject-pseudonym"></a>
-Typically a shortened version of a longer GivenName\. For example, Jonathan is often shortened to John\. Elizabeth is often shortened to Beth, Liz, or Eliza\.   
+Typically a shortened version of a longer GivenName\. For example, Jonathan is often shortened to John\. Elizabeth is often shortened to Beth, Liz, or Eliza\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

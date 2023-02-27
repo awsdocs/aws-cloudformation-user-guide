@@ -41,8 +41,8 @@ See also [Customizing User Invitation Messages](https://docs.aws.amazon.com/cogn
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UnusedAccountValidityDays`  <a name="cfn-cognito-userpool-admincreateuserconfig-unusedaccountvaliditydays"></a>
-The user account expiration limit, in days, after which the account is no longer usable\. To reset the account after that time limit, you must call `AdminCreateUser` again, specifying `"RESEND"` for the `MessageAction` parameter\. The default value for this parameter is 7\.   
-If you set a value for `TemporaryPasswordValidityDays` in `PasswordPolicy`, that value will be used and `UnusedAccountValidityDays` will be deprecated for that user pool\. 
+The user account expiration limit, in days, after which a new account that hasn't signed in is no longer usable\. To reset the account after that time limit, you must call `AdminCreateUser` again, specifying `"RESEND"` for the `MessageAction` parameter\. The default value for this parameter is 7\.   
+If you set a value for `TemporaryPasswordValidityDays` in `PasswordPolicy`, that value will be used, and `UnusedAccountValidityDays` will be no longer be an available parameter for that user pool\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  

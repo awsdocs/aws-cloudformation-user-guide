@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-imagebuilder-infrastructureconfiguration-s3logs-properties"></a>
 
 `S3BucketName`  <a name="cfn-imagebuilder-infrastructureconfiguration-s3logs-s3bucketname"></a>
-The Amazon S3 bucket in which to store the logs\.  
+The S3 bucket in which to store the logs\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -33,7 +33,7 @@ The Amazon S3 bucket in which to store the logs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3KeyPrefix`  <a name="cfn-imagebuilder-infrastructureconfiguration-s3logs-s3keyprefix"></a>
-The Amazon S3 path in which to store the logs\.  
+The Amazon S3 path to the bucket where the logs are stored\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

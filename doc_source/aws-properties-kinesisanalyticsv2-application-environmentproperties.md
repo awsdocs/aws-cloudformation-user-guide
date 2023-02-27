@@ -32,3 +32,4 @@ Describes the execution property groups\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-environmentproperties--seealso"></a>
 +  [EnvironmentProperties](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_EnvironmentProperties.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

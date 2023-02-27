@@ -31,3 +31,4 @@ The array of [Input](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/A
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration--seealso"></a>
 +  [SqlApplicationConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_SqlApplicationConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

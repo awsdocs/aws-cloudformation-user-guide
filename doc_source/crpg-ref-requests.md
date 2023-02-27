@@ -7,7 +7,7 @@ The template developer uses the AWS CloudFormation resource, [AWS::CloudFormatio
 In `AWS::CloudFormation::CustomResource`, all properties are defined by the custom resource provider\. There is only one required property: `ServiceToken`\.
 
 ServiceToken  <a name="crpg-ref-request-servicetoken"></a>
-The service token \(an Amazon SNS topic or AWS Lambda function Amazon Resource Name\) that is obtained from the custom resource provider to access the service\. The service token must be in the same region in which you are creating the stack\.  
+The service token \(an Amazon SNS topic or AWS Lambda function Amazon Resource Name\) that's obtained from the custom resource provider to access the service\. The service token must be in the same region in which you are creating the stack\.  
 *Required*: Yes  
 *Type*: String
 
@@ -52,6 +52,7 @@ The template developer\-chosen name \(logical ID\) of the custom resource in the
 
 PhysicalResourceId  <a name="crpg-ref-request-physicalresourceid"></a>
 A required custom resource provider\-defined physical ID that is unique for that provider\.  
+The value returned for a `PhysicalResourceId` can change custom resource update operations\. If the value returned is the same, it is considered a normal update\. If the value returned is different, AWS CloudFormation recognizes the update as a replacement and sends a delete request to the old resource\. For more information, see [AWS::CloudFormation::CustomResource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html)\.  
 *Required*: Always sent with `Update` and `Delete` requests; never sent with `Create`\.  
 *Type*: String
 

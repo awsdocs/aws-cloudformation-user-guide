@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel EncoderSettings<a name="aws-properties-medialive-channel-encodersettings"></a>
 
-This element contains information about all the output encodes \(video, audio, captions\), and about several channel\-wide features\. This element is a top\-level element in the channel\.
+The settings for the encoding of outputs\.
+
+This entity is at the top level in the channel\.
 
 ## Syntax<a name="aws-properties-medialive-channel-encodersettings-syntax"></a>
 
@@ -17,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CaptionDescriptions](#cfn-medialive-channel-encodersettings-captiondescriptions)" : [ CaptionDescription, ... ],
   "[FeatureActivations](#cfn-medialive-channel-encodersettings-featureactivations)" : FeatureActivations,
   "[GlobalConfiguration](#cfn-medialive-channel-encodersettings-globalconfiguration)" : GlobalConfiguration,
+  "[MotionGraphicsConfiguration](#cfn-medialive-channel-encodersettings-motiongraphicsconfiguration)" : MotionGraphicsConfiguration,
   "[NielsenConfiguration](#cfn-medialive-channel-encodersettings-nielsenconfiguration)" : NielsenConfiguration,
   "[OutputGroups](#cfn-medialive-channel-encodersettings-outputgroups)" : [ OutputGroup, ... ],
   "[TimecodeConfig](#cfn-medialive-channel-encodersettings-timecodeconfig)" : TimecodeConfig,
@@ -41,6 +44,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     FeatureActivations
   [GlobalConfiguration](#cfn-medialive-channel-encodersettings-globalconfiguration): 
     GlobalConfiguration
+  [MotionGraphicsConfiguration](#cfn-medialive-channel-encodersettings-motiongraphicsconfiguration): 
+    MotionGraphicsConfiguration
   [NielsenConfiguration](#cfn-medialive-channel-encodersettings-nielsenconfiguration): 
     NielsenConfiguration
   [OutputGroups](#cfn-medialive-channel-encodersettings-outputgroups): 
@@ -54,67 +59,73 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-encodersettings-properties"></a>
 
 `AudioDescriptions`  <a name="cfn-medialive-channel-encodersettings-audiodescriptions"></a>
-Required if at least one output in the channel has at least one audio encode\. The list of all the audioDescriptions in all the outputs in this channel\.  
+The encoding information for output audio\.  
 *Required*: No  
 *Type*: List of [AudioDescription](aws-properties-medialive-channel-audiodescription.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailBlanking`  <a name="cfn-medialive-channel-encodersettings-availblanking"></a>
-Settings for ad avail blanking\.  
+The settings for ad avail blanking\.  
 *Required*: No  
 *Type*: [AvailBlanking](aws-properties-medialive-channel-availblanking.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AvailConfiguration`  <a name="cfn-medialive-channel-encodersettings-availconfiguration"></a>
-Include this element once in each channel, only if you want to configure the SCTE\-35 message processing feature in the channel\.  
+The configuration settings for the ad avail handling\.  
 *Required*: No  
 *Type*: [AvailConfiguration](aws-properties-medialive-channel-availconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BlackoutSlate`  <a name="cfn-medialive-channel-encodersettings-blackoutslate"></a>
-Include this element once in each channel, only if you want to enable the blackout feature of SCTE\-35 message processing\.  
+The settings for the blackout slate\.  
 *Required*: No  
 *Type*: [BlackoutSlate](aws-properties-medialive-channel-blackoutslate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CaptionDescriptions`  <a name="cfn-medialive-channel-encodersettings-captiondescriptions"></a>
-Required if at least one output in the channel has at least one captions encode\. The list of all the captionDescriptions in all the outputs in this channel\.  
+The encoding information for output captions\.  
 *Required*: No  
 *Type*: List of [CaptionDescription](aws-properties-medialive-channel-captiondescription.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FeatureActivations`  <a name="cfn-medialive-channel-encodersettings-featureactivations"></a>
-Include this element only if you want to enable any of the features that must be explicitly enabled in the channel\.  
+Settings to enable specific features\.   
 *Required*: No  
 *Type*: [FeatureActivations](aws-properties-medialive-channel-featureactivations.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalConfiguration`  <a name="cfn-medialive-channel-encodersettings-globalconfiguration"></a>
-This element is optional\. Include it if you want to change any default behavior\. This element includes fields that apply to all the inputs, and fields for customizing the input loss behavior feature and output locking feature\.  
+The configuration settings that apply to the entire channel\.  
 *Required*: No  
 *Type*: [GlobalConfiguration](aws-properties-medialive-channel-globalconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`MotionGraphicsConfiguration`  <a name="cfn-medialive-channel-encodersettings-motiongraphicsconfiguration"></a>
+Settings to enable and configure the motion graphics overlay feature in the channel\.  
+*Required*: No  
+*Type*: [MotionGraphicsConfiguration](aws-properties-medialive-channel-motiongraphicsconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `NielsenConfiguration`  <a name="cfn-medialive-channel-encodersettings-nielsenconfiguration"></a>
-Include this element once in each channel, if you want to configure for Nielsen watermark handling\.  
+The settings to configure Nielsen watermarks\.  
 *Required*: No  
 *Type*: [NielsenConfiguration](aws-properties-medialive-channel-nielsenconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutputGroups`  <a name="cfn-medialive-channel-encodersettings-outputgroups"></a>
-The list of all output groups in the Configuration information for one output group in thechannel\.  
+The settings for the output groups in the channel\.  
 *Required*: No  
 *Type*: List of [OutputGroup](aws-properties-medialive-channel-outputgroup.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimecodeConfig`  <a name="cfn-medialive-channel-encodersettings-timecodeconfig"></a>
-Include this element once in each channel, if you want to configure to include timecode metadata in the outputs\.  
+Contains settings used to acquire and adjust timecode information from the inputs\.  
 *Required*: No  
 *Type*: [TimecodeConfig](aws-properties-medialive-channel-timecodeconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VideoDescriptions`  <a name="cfn-medialive-channel-encodersettings-videodescriptions"></a>
-Required because every output group must include video\. The list of all the videoDescriptions in all the outputs in this channel\.  
+The encoding information for output videos\.  
 *Required*: No  
 *Type*: List of [VideoDescription](aws-properties-medialive-channel-videodescription.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

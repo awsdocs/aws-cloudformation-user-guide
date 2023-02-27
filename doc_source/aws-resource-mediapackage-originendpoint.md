@@ -71,7 +71,7 @@ Parameters for CDN authorization\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ChannelId`  <a name="cfn-mediapackage-originendpoint-channelid"></a>
-The ID of the channel associated with this endpoint\.   
+The ID of the channel associated with this endpoint\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -104,7 +104,7 @@ Parameters for Apple HLS packaging\.
 The manifest ID is required and must be unique within the OriginEndpoint\. The ID can't be changed after the endpoint is created\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ManifestName`  <a name="cfn-mediapackage-originendpoint-manifestname"></a>
 A short string that's appended to the end of the endpoint URL to create a unique path to this endpoint\.  
@@ -119,15 +119,16 @@ Parameters for Microsoft Smooth Streaming packaging\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Origination`  <a name="cfn-mediapackage-originendpoint-origination"></a>
-Controls video origination from this endpoint\.   
-+  **ALLOW** \- enables this endpoint to serve content to requesting devices\.
-+  **DENY** \- prevents this endpoint from serving content\. Denying origination is helpful for harvesting live\-to\-VOD assets\. For more information about harvesting and origination, see [Live\-to\-VOD Requirements](https://docs.aws.amazon.com/mediapackage/latest/ug/ltov-reqmts.html)\.
+Controls video origination from this endpoint\.  
+Valid values:  
++ **ALLOW** \- enables this endpoint to serve content to requesting devices\.
++ **DENY** \- prevents this endpoint from serving content\. Denying origination is helpful for harvesting live\-to\-VOD assets\. For more information about harvesting and origination, see [Live\-to\-VOD Requirements](https://docs.aws.amazon.com/mediapackage/latest/ug/ltov-reqmts.html)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StartoverWindowSeconds`  <a name="cfn-mediapackage-originendpoint-startoverwindowseconds"></a>
-Maximum duration \(seconds\) of content to retain for startover playback\. Omit this attribute or enter `0` to indicate that startover playback is disabled for this endpoint\.   
+Maximum duration \(seconds\) of content to retain for startover playback\. Omit this attribute or enter `0` to indicate that startover playback is disabled for this endpoint\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -139,7 +140,7 @@ The tags to assign to the endpoint\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeDelaySeconds`  <a name="cfn-mediapackage-originendpoint-timedelayseconds"></a>
-Minimum duration \(seconds\) of delay to enforce on the playback of live content\. Omit this attribute or enter `0` to indicate that there is no time delay in effect for this endpoint   
+Minimum duration \(seconds\) of delay to enforce on the playback of live content\. Omit this attribute or enter `0` to indicate that there is no time delay in effect for this endpoint\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

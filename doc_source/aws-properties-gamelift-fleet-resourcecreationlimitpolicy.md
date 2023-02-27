@@ -27,7 +27,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-gamelift-fleet-resourcecreationlimitpolicy-properties"></a>
 
 `NewGameSessionsPerCreator`  <a name="cfn-gamelift-fleet-resourcecreationlimitpolicy-newgamesessionspercreator"></a>
-The maximum number of game sessions that an individual can create during the policy period\.   
+A policy that puts limits on the number of game sessions that a player can create within a specified span of time\. With this policy, you can control players' ability to consume available resources\.  
+The policy is evaluated when a player tries to create a new game session\. On receiving a `CreateGameSession` request, GameLift checks that the player \(identified by `CreatorId`\) has created fewer than game session limit in the specified time period\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -41,5 +42,6 @@ The time span used in evaluating the resource creation limit policy\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-gamelift-fleet-resourcecreationlimitpolicy--seealso"></a>
-+ [ Create GameLift Resources Using AWS CloudFormation](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
++ [ Create GameLift resources using Amazon CloudFront](https://docs.aws.amazon.com/gamelift/latest/developerguide/resources-cloudformation.html) in the *Amazon GameLift Developer Guide*
 +  [ResourceCreationLimitPolicy](https://docs.aws.amazon.com/gamelift/latest/apireference/API_ResourceCreationLimitPolicy.html) in the *Amazon GameLift API Reference* 
+

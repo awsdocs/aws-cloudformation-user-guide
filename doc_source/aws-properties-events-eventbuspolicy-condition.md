@@ -45,3 +45,27 @@ Specifies the value for the key\. Currently, this must be the ID of the organiza
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-events-eventbuspolicy-condition--examples"></a>
+
+
+
+### Set the Condition parameter<a name="aws-properties-events-eventbuspolicy-condition--examples--Set_the_Condition_parameter"></a>
+
+The following example sets the condition parameter to all AWS accounts in the organization with an organization ID of `o-1234567890`\.
+
+#### JSON<a name="aws-properties-events-eventbuspolicy-condition--examples--Set_the_Condition_parameter--json"></a>
+
+```
+"Condition": {
+    "StringEquals": {"aws:PrincipalOrgID": "o-1234567890"}
+}
+```
+
+#### YAML<a name="aws-properties-events-eventbuspolicy-condition--examples--Set_the_Condition_parameter--yaml"></a>
+
+```
+Condition:
+    StringEquals:
+        "aws:PrincipalOrgID": "o-1234567890"
+```

@@ -23,4 +23,4 @@ The following example shows the resources for the `myteststack` stack:
 AWS CloudFormation reports resource details on any running or deleted stack\. If you specify the name of a stack whose status is `CREATE_IN_PROCESS`, AWS CloudFormation reports only those resources whose status is `CREATE_COMPLETE`\.
 
 **Note**  
-The aws cloudformation describe\-stack\-resources command returns information on deleted stacks for 90 days after they have been deleted\.
+The `aws cloudformation describe-stack-resources` command returns information on deleted stacks for 90 days after they have been deleted\.

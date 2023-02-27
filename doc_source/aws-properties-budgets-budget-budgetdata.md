@@ -2,7 +2,7 @@
 
 Represents the output of the `CreateBudget` operation\. The content consists of the detailed metadata and data file information, and the current status of the `budget` object\.
 
-This is the ARN pattern for a budget: 
+This is the Amazon Resource Name \(ARN\) pattern for a budget: 
 
  `arn:aws:budgets::AccountId:budget/budgetName` 
 
@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AutoAdjustData](#cfn-budgets-budget-budgetdata-autoadjustdata)" : AutoAdjustData,
   "[BudgetLimit](#cfn-budgets-budget-budgetdata-budgetlimit)" : Spend,
   "[BudgetName](#cfn-budgets-budget-budgetdata-budgetname)" : String,
   "[BudgetType](#cfn-budgets-budget-budgetdata-budgettype)" : String,
@@ -28,6 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-budgets-budget-budgetdata-syntax.yaml"></a>
 
 ```
+  [AutoAdjustData](#cfn-budgets-budget-budgetdata-autoadjustdata): 
+    AutoAdjustData
   [BudgetLimit](#cfn-budgets-budget-budgetdata-budgetlimit): 
     Spend
   [BudgetName](#cfn-budgets-budget-budgetdata-budgetname): String
@@ -43,9 +46,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-budgets-budget-budgetdata-properties"></a>
 
+`AutoAdjustData`  <a name="cfn-budgets-budget-budgetdata-autoadjustdata"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [AutoAdjustData](aws-properties-budgets-budget-autoadjustdata.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `BudgetLimit`  <a name="cfn-budgets-budget-budgetdata-budgetlimit"></a>
 The total amount of cost, usage, RI utilization, RI coverage, Savings Plans utilization, or Savings Plans coverage that you want to track with your budget\.  
- `BudgetLimit` is required for cost or usage budgets, but optional for RI or Savings Plans utilization or coverage budgets\. RI and Savings Plans utilization or coverage budgets default to `100`, which is the only valid value for RI or Savings Plans utilization or coverage budgets\. You can't use `BudgetLimit` with `PlannedBudgetLimits` for `CreateBudget` and `UpdateBudget` actions\.   
+ `BudgetLimit` is required for cost or usage budgets, but optional for RI or Savings Plans utilization or coverage budgets\. RI and Savings Plans utilization or coverage budgets default to `100`\. This is the only valid value for RI or Savings Plans utilization or coverage budgets\. You can't use `BudgetLimit` with `PlannedBudgetLimits` for `CreateBudget` and `UpdateBudget` actions\.   
 *Required*: No  
 *Type*: [Spend](aws-properties-budgets-budget-spend.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -57,20 +66,20 @@ The name of a budget\. The value must be unique within an account\. `BudgetName`
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BudgetType`  <a name="cfn-budgets-budget-budgetdata-budgettype"></a>
-Whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or Savings Plans coverage\.  
+Specifies whether this budget tracks costs, usage, RI utilization, RI coverage, Savings Plans utilization, or Savings Plans coverage\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `COST | RI_COVERAGE | RI_UTILIZATION | SAVINGS_PLANS_COVERAGE | SAVINGS_PLANS_UTILIZATION | USAGE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CostFilters`  <a name="cfn-budgets-budget-budgetdata-costfilters"></a>
-The cost filters, such as service or tag, that are applied to a budget\.  
-AWS Budgets supports the following services as a filter for RI budgets:  
-+ Amazon Elastic Compute Cloud \- Compute
+The cost filters, such as `Region`, `Service`, `member account`, `Tag`, or `Cost Category`, that are applied to a budget\.  
+ AWS Budgets supports the following services as a `Service` filter for RI budgets:  
++ Amazon EC2
 + Amazon Redshift
 + Amazon Relational Database Service
 + Amazon ElastiCache
-+ Amazon Elasticsearch Service
++ Amazon OpenSearch Service
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -84,13 +93,13 @@ The types of costs that are included in this `COST` budget\.
 
 `PlannedBudgetLimits`  <a name="cfn-budgets-budget-budgetdata-plannedbudgetlimits"></a>
 A map containing multiple `BudgetLimit`, including current or future limits\.  
- `PlannedBudgetLimits` is available for cost or usage budget and supports monthly and quarterly `TimeUnit`\.   
+ `PlannedBudgetLimits` is available for cost or usage budget and supports both monthly and quarterly `TimeUnit`\.   
 For monthly budgets, provide 12 months of `PlannedBudgetLimits` values\. This must start from the current month and include the next 11 months\. The `key` is the start of the month, `UTC` in epoch seconds\.   
-For quarterly budgets, provide 4 quarters of `PlannedBudgetLimits` value entries in standard calendar quarter increments\. This must start from the current quarter and include the next 3 quarters\. The `key` is the start of the quarter, `UTC` in epoch seconds\.   
-If the planned budget expires before 12 months for monthly or 4 quarters for quarterly, provide the `PlannedBudgetLimits` values only for the remaining periods\.  
+For quarterly budgets, provide four quarters of `PlannedBudgetLimits` value entries in standard calendar quarter increments\. This must start from the current quarter and include the next three quarters\. The `key` is the start of the quarter, `UTC` in epoch seconds\.   
+If the planned budget expires before 12 months for monthly or four quarters for quarterly, provide the `PlannedBudgetLimits` values only for the remaining periods\.  
 If the budget begins at a date in the future, provide `PlannedBudgetLimits` values from the start date of the budget\.   
 After all of the `BudgetLimit` values in `PlannedBudgetLimits` are used, the budget continues to use the last limit as the `BudgetLimit`\. At that point, the planned budget provides the same experience as a fixed budget\.   
- `DescribeBudget` and `DescribeBudgets` response along with `PlannedBudgetLimits` will also contain `BudgetLimit` representing the current month or quarter limit present in `PlannedBudgetLimits`\. This only applies to budgets created with `PlannedBudgetLimits`\. Budgets created without `PlannedBudgetLimits` will only contain `BudgetLimit`, and no `PlannedBudgetLimits`\.  
+ `DescribeBudget` and `DescribeBudgets` response along with `PlannedBudgetLimits` also contain `BudgetLimit` representing the current month or quarter limit present in `PlannedBudgetLimits`\. This only applies to budgets that are created with `PlannedBudgetLimits`\. Budgets that are created without `PlannedBudgetLimits` only contain `BudgetLimit`\. They don't contain `PlannedBudgetLimits`\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -111,5 +120,98 @@ The length of time until a budget resets the actual and forecasted spend\. `DAIL
 *Allowed values*: `ANNUALLY | DAILY | MONTHLY | QUARTERLY`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+## Examples<a name="aws-properties-budgets-budget-budgetdata--examples"></a>
+
+
+
+### Create a budget<a name="aws-properties-budgets-budget-budgetdata--examples--Create_a_budget"></a>
+
+The following example creates a budget and shows the format for the CostFilters parameter\.
+
+#### JSON<a name="aws-properties-budgets-budget-budgetdata--examples--Create_a_budget--json"></a>
+
+```
+{
+    "Budget": {
+        "BudgetName": "Example S3 Usage Budget",
+        "BudgetLimit": {
+            "Amount": "100.0",
+            "Unit": "GB"
+        },
+        "CostFilters": {
+            "UsageType": [
+                "APS1-APN1-AWS-Out-Bytes"
+            ],
+            "UsageTypeGroup": [
+                "S3: Data Transfer - Region to Region (In)"
+            ]
+        },
+        "CostTypes": {
+            "IncludeTax": true,
+            "IncludeSubscription": true,
+            "UseBlended": false,
+            "IncludeRefund": true,
+            "IncludeCredit": true,
+            "IncludeUpfront": true,
+            "IncludeRecurring": true,
+            "IncludeOtherSubscription": true,
+            "IncludeSupport": true,
+            "IncludeDiscount": true,
+            "UseAmortized": false
+        },
+        "TimeUnit": "MONTHLY",
+        "TimePeriod": {
+            "Start": "2017-10-31T17:00:00-07:00",
+            "End": "2087-06-14T17:00:00-07:00"
+        },
+        "CalculatedSpend": {
+            "ActualSpend": {
+                "Amount": "0.0",
+                "Unit": "GB"
+            }
+        },
+        "BudgetType": "USAGE"
+    }
+}
+```
+
+#### YAML<a name="aws-properties-budgets-budget-budgetdata--examples--Create_a_budget--yaml"></a>
+
+```
+---
+Budget:
+  BudgetName: Example S3 Usage Budget
+  BudgetLimit:
+    Amount: '100.0'
+    Unit: GB
+  CostFilters:
+    UsageType:
+    - APS1-APN1-AWS-Out-Bytes
+    UsageTypeGroup:
+    - 'S3: Data Transfer - Region to Region (In)'
+  CostTypes:
+    IncludeTax: true
+    IncludeSubscription: true
+    UseBlended: false
+    IncludeRefund: true
+    IncludeCredit: true
+    IncludeUpfront: true
+    IncludeRecurring: true
+    IncludeOtherSubscription: true
+    IncludeSupport: true
+    IncludeDiscount: true
+    UseAmortized: false
+  TimeUnit: MONTHLY
+  TimePeriod:
+    Start: '2017-10-31T17:00:00-07:00'
+    End: '2087-06-14T17:00:00-07:00'
+  CalculatedSpend:
+    ActualSpend:
+      Amount: '0.0'
+      Unit: GB
+  BudgetType: USAGE
+```
+
 ## See also<a name="aws-properties-budgets-budget-budgetdata--seealso"></a>
 +  [Budget](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_budget.html) in the *AWS Cost Explorer Service Cost Management APIs* 
+

@@ -46,3 +46,4 @@ The row delimiter\. For example, in a CSV format, *'\\n'* is the typical row del
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-csvmappingparameters--seealso"></a>
 +  [CSVMappingParameters](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_CSVMappingParameters.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

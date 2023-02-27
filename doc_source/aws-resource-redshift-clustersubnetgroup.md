@@ -2,7 +2,7 @@
 
 Specifies an Amazon Redshift subnet group\. You must provide a list of one or more subnets in your existing Amazon Virtual Private Cloud \(Amazon VPC\) when creating Amazon Redshift subnet group\.
 
- For information about subnet groups, go to [Amazon Redshift Cluster Subnet Groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-cluster-subnet-groups.html) in the *Amazon Redshift Cluster Management Guide*\.
+For information about subnet groups, go to [Amazon Redshift Cluster Subnet Groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-cluster-subnet-groups.html) in the *Amazon Redshift Cluster Management Guide*\.
 
 ## Syntax<a name="aws-resource-redshift-clustersubnetgroup-syntax"></a>
 
@@ -39,6 +39,7 @@ Properties:
 A description for the subnet group\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `2147483647`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetIds`  <a name="cfn-redshift-clustersubnetgroup-subnetids"></a>
@@ -65,7 +66,20 @@ For the Amazon Redshift subnet group `myClusterSubnetGroup`, Ref returns the nam
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-redshift-clustersubnetgroup-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-redshift-clustersubnetgroup-return-values-fn--getatt-fn--getatt"></a>
+
+`ClusterSubnetGroupName`  <a name="ClusterSubnetGroupName-fn::getatt"></a>
+Property description not available\.
+
 ## Examples<a name="aws-resource-redshift-clustersubnetgroup--examples"></a>
+
+
 
 ### Specify a Subnet<a name="aws-resource-redshift-clustersubnetgroup--examples--Specify_a_Subnet"></a>
 

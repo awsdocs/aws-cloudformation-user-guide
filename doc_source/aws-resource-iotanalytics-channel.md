@@ -42,7 +42,7 @@ The name of the channel\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9_]+$`  
+*Pattern*: `(^(?!_{2}))(^[a-zA-Z0-9_]+$)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ChannelStorage`  <a name="cfn-iotanalytics-channel-channelstorage"></a>
@@ -66,6 +66,8 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-iotanalytics-channel--examples"></a>
+
+
 
 ### Simple Channel<a name="aws-resource-iotanalytics-channel--examples--Simple_Channel"></a>
 

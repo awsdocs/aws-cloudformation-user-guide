@@ -33,7 +33,7 @@ The name of the job command\. For an Apache Spark ETL job, this must be `glueetl
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PythonVersion`  <a name="cfn-glue-job-jobcommand-pythonversion"></a>
-The Python version being used to execute a Python shell job\. Allowed values are 2 or 3\.  
+The Python version being used to execute a Python shell job\. Allowed values are 3 or 3\.9\. Version 2 is deprecated\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

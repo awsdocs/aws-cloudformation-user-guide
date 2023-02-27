@@ -1,10 +1,6 @@
 # AWS::CloudFront::StreamingDistribution TrustedSigners<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners"></a>
 
-Specifies the AWS accounts, if any, that you want to allow to create signed URLs for private content\.
-
-If you want to require signed URLs in requests for objects in the target origin, specify `true` for `Enabled`, and specify a list of AWS account IDs\. For more information, see [Serving Private Content through CloudFront](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) in the * Amazon CloudFront Developer Guide*\.
-
-If you don't want to require signed URLs in requests for objects, specify `false` for `Enabled` and omit the list of AWS account IDs\.
+A list of AWS accounts whose public keys CloudFront can use to verify the signatures of signed URLs and signed cookies\.
 
 ## Syntax<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners-syntax"></a>
 
@@ -43,3 +39,4 @@ This field is `true` if any of the AWS accounts have public keys that CloudFront
 
 ## See also<a name="aws-properties-cloudfront-streamingdistribution-trustedsigners--seealso"></a>
 +  [TrustedSigners](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_TrustedSigners.html) in the *Amazon CloudFront API Reference* 
+

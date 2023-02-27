@@ -1,6 +1,6 @@
 # AWS::Pinpoint::PushTemplate AndroidPushNotificationTemplate<a name="aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate"></a>
 
-The AWS::Pinpoint::PushTemplate AndroidPushNotificationTemplate resource defines channel\-specific content and settings for a message template that can be used in push notifications that are sent through the following channels: ADM \(Amazon Device Messaging\), Baidu \(Baidu Cloud Push\), or GCM \(Firebase Cloud Messaging, formerly Google Cloud Messaging\)\.
+Specifies channel\-specific content and settings for a message template that can be used in push notifications that are sent through the ADM \(Amazon Device Messaging\), Baidu \(Baidu Cloud Push\), or GCM \(Firebase Cloud Messaging, formerly Google Cloud Messaging\) channel\.
 
 ## Syntax<a name="aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate-syntax"></a>
 
@@ -38,9 +38,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Action`  <a name="cfn-pinpoint-pushtemplate-androidpushnotificationtemplate-action"></a>
 The action to occur if a recipient taps a push notification that's based on the message template\. Valid values are:  
-+  `OPEN_APP` \- Your app opens or it becomes the foreground app if it was sent to the background\. This is the default action\.
-+  `DEEP_LINK` \- Your app opens and displays a designated user interface in the app\. This action uses the deep\-linking features of the Android platform\.
-+  `URL` \- The default mobile browser on the recipient's device opens and loads the web page at a URL that you specify\.
++  `OPEN_APP` – Your app opens or it becomes the foreground app if it was sent to the background\. This is the default action\.
++  `DEEP_LINK` – Your app opens and displays a designated user interface in the app\. This action uses the deep\-linking features of the Android platform\.
++  `URL` – The default mobile browser on the recipient's device opens and loads the web page at a URL that you specify\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

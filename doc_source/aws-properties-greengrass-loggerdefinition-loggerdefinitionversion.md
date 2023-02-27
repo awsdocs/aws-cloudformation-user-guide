@@ -5,7 +5,7 @@
 **Note**  
 After you create a logger definition version that contains the loggers you want to deploy, you must add it to your group version\. For more information, see [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)\.
 
-<a name="aws-properties-greengrass-loggerdefinition-loggerdefinitionversion-inheritance"></a> In an AWS CloudFormation template, `LoggerDefinitionVersion` is the property type of the `InitialVersion` property in the [ `AWS::Greengrass::LoggerDefinition` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html) resource\.
+<a name="aws-properties-greengrass-loggerdefinition-loggerdefinitionversion-inheritance"></a> In an AWS CloudFormation template, `LoggerDefinitionVersion` is the property type of the `InitialVersion` property in the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html) resource\.
 
 ## Syntax<a name="aws-properties-greengrass-loggerdefinition-loggerdefinitionversion-syntax"></a>
 
@@ -35,5 +35,5 @@ The loggers in this version\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See also<a name="aws-properties-greengrass-loggerdefinition-loggerdefinitionversion--seealso"></a>
-+  [LoggerDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-loggerdefinitionversion.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [LoggerDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-loggerdefinitionversion.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

@@ -1,6 +1,6 @@
 # AWS::AutoScaling::ScalingPolicy MetricDimension<a name="aws-properties-autoscaling-scalingpolicy-metricdimension"></a>
 
- `MetricDimension` is a subproperty of [CustomizedMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html) that specifies the dimensions of a metric for a target tracking scaling policy\. Dimensions are arbitrary name/value pairs that can be associated with a CloudWatch metric\. Duplicate dimensions are not allowed\. 
+ `MetricDimension` specifies a name/value pair that is part of the identity of a CloudWatch metric for the `Dimensions` property of the [AWS::AutoScaling::ScalingPolicy CustomizedMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html) property type\. Duplicate dimensions are not allowed\. 
 
 ## Syntax<a name="aws-properties-autoscaling-scalingpolicy-metricdimension-syntax"></a>
 

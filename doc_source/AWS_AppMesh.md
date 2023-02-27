@@ -1,4 +1,4 @@
-# App Mesh resource type reference<a name="AWS_AppMesh"></a>
+# AWS App Mesh resource type reference<a name="AWS_AppMesh"></a>
 
 **Resource types**
 + [AWS::AppMesh::GatewayRoute](aws-resource-appmesh-gatewayroute.md)

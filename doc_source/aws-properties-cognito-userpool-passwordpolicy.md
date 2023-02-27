@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cognito-userpool-passwordpolicy-properties"></a>
 
 `MinimumLength`  <a name="cfn-cognito-userpool-passwordpolicy-minimumlength"></a>
-The minimum length of the password policy that you have set\. Cannot be less than 6\.  
+The minimum length of the password in the policy that you have set\. This value can't be less than 6\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `6`  
@@ -65,8 +65,8 @@ In the password policy that you have set, refers to whether you have required us
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TemporaryPasswordValidityDays`  <a name="cfn-cognito-userpool-passwordpolicy-temporarypasswordvaliditydays"></a>
-In the password policy you have set, refers to the number of days a temporary password is valid\. If the user does not sign\-in during this time, their password will need to be reset by an administrator\.  
-When you set `TemporaryPasswordValidityDays` for a user pool, you will no longer be able to set the deprecated `UnusedAccountValidityDays` value for that user pool\.
+The number of days a temporary password is valid in the password policy\. If the user doesn't sign in during this time, an administrator must reset their password\.  
+When you set `TemporaryPasswordValidityDays` for a user pool, you can no longer set a value for the legacy `UnusedAccountValidityDays` parameter in that user pool\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  

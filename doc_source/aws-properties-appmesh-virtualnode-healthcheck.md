@@ -38,6 +38,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The number of consecutive successful health checks that must occur before declaring listener healthy\.  
 *Required*: Yes  
 *Type*: Integer  
+*Minimum*: `2`  
+*Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IntervalMillis`  <a name="cfn-appmesh-virtualnode-healthcheck-intervalmillis"></a>
@@ -56,12 +58,15 @@ The destination path for the health check request\. This value is only used if t
 The destination port for the health check request\. This port must match the port defined in the [PortMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listener.html#cfn-appmesh-virtualnode-listener-portmapping) for the listener\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `65535`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Protocol`  <a name="cfn-appmesh-virtualnode-healthcheck-protocol"></a>
 The protocol for the health check request\. If you specify `grpc`, then your service must conform to the [GRPC Health Checking Protocol](https://github.com/grpc/grpc/blob/master/doc/health-checking.md)\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `grpc | http | http2 | tcp`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeoutMillis`  <a name="cfn-appmesh-virtualnode-healthcheck-timeoutmillis"></a>
@@ -74,4 +79,6 @@ The amount of time to wait when receiving a response from the health check, in m
 The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy\.   
 *Required*: Yes  
 *Type*: Integer  
+*Minimum*: `2`  
+*Maximum*: `10`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -4,7 +4,7 @@ The `AWS::CertificateManager::Certificate` resource requests an AWS Certificate 
 
 **Important**  
 When you use the `AWS::CertificateManager::Certificate` resource in a CloudFormation stack, domain validation is handled automatically if all three of the following are true: The certificate domain is hosted in Amazon Route 53, the domain resides in your AWS account, and you are using DNS validation\.  
-However, if the certificate uses email validation, or if the domain is not hosted in Route 53, then the stack will remain in the `CREATE_IN_PROGRESS` state\. Further stack operations are delayed until you validate the certificate request, either by acting upon the instructions in the validation email, or by adding a CNAME record to your DNS configuration\. For more information, see [Use Email to Validate Domain Ownership](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-email.html) and [Use DNS to Validate Domain Ownership](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html)\.
+However, if the certificate uses email validation, or if the domain is not hosted in Route 53, then the stack will remain in the `CREATE_IN_PROGRESS` state\. Further stack operations are delayed until you validate the certificate request, either by acting upon the instructions in the validation email, or by adding a CNAME record to your DNS configuration\. For more information, see [Option 1: DNS Validation](https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html) and [Option 2: Email Validation](https://docs.aws.amazon.com/acm/latest/userguide/email-validation.html)\.
 
 ## Syntax<a name="aws-resource-certificatemanager-certificate-syntax"></a>
 
@@ -47,13 +47,13 @@ Properties:
 ## Properties<a name="aws-resource-certificatemanager-certificate-properties"></a>
 
 `CertificateAuthorityArn`  <a name="cfn-certificatemanager-certificate-certificateauthorityarn"></a>
-The Amazon Resource Name \(ARN\) of the private certificate authority \(CA\) that will be used to issue the certificate\. If you do not provide an ARN and you are trying to request a private certificate, ACM will attempt to issue a public certificate\. For more information about private CAs, see the [AWS Certificate Manager Private Certificate Authority \(PCA\)](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html) user guide\. The ARN must have the following form:   
+The Amazon Resource Name \(ARN\) of the private certificate authority \(CA\) that will be used to issue the certificate\. If you do not provide an ARN and you are trying to request a private certificate, ACM will attempt to issue a public certificate\. For more information about private CAs, see the [AWS Private Certificate Authority](https://docs.aws.amazon.com/privateca/latest/userguide/PcaWelcome.html) user guide\. The ARN must have the following form:   
  `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012`   
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `2048`  
-*Pattern*: `arn:[\w+=/,.@-]+:[\w+=/,.@-]+:[\w+=/,.@-]*:[0-9]+:[\w+=,.@-]+(/[\w+=,.@-]+)*`  
+*Pattern*: `arn:[\w+=/,.@-]+:acm-pca:[\w+=/,.@-]*:[0-9]+:[\w+=,.@-]+(/[\w+=,.@-]+)*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificateTransparencyLoggingPreference`  <a name="cfn-certificatemanager-certificate-certificatetransparencyloggingpreference"></a>
@@ -76,6 +76,7 @@ The fully qualified domain name \(FQDN\), such as www\.example\.com, with which 
 
 `DomainValidationOptions`  <a name="cfn-certificatemanager-certificate-domainvalidationoptions"></a>
 Domain information that domain name registrars use to verify your identity\.  
+In order for a AWS::CertificateManager::Certificate to be provisioned and validated in CloudFormation automatically, the `DomainName` property needs to be identical to one of the `DomainName` property supplied in DomainValidationOptions, if the ValidationMethod is \*\*DNS\*\*\. Failing to keep them like\-for\-like will result in failure to create the domain validation records in Route53\.
 *Required*: No  
 *Type*: List of [DomainValidationOption](aws-properties-certificatemanager-certificate-domainvalidationoption.md)  
 *Maximum*: `100`  
@@ -97,6 +98,7 @@ Key\-value pairs that can identify the certificate\.
 
 `ValidationMethod`  <a name="cfn-certificatemanager-certificate-validationmethod"></a>
 The method you want to use to validate that you own or control the domain associated with a public certificate\. You can [validate with DNS](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html) or [validate with email](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-email.html)\. We recommend that you use DNS validation\.  
+If not specified, this property defaults to email validation\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DNS | EMAIL`  
@@ -112,6 +114,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-certificatemanager-certificate--examples"></a>
 
+
+
 ### Declaring an Amazon Certificate Manager Certificate Resource<a name="aws-resource-certificatemanager-certificate--examples--Declaring_an_Amazon_Certificate_Manager_Certificate_Resource"></a>
 
 The following example shows how to declare an `AWS::CertificateManager::Certificate` resource to create an ACM certificate\.
@@ -119,26 +123,26 @@ The following example shows how to declare an `AWS::CertificateManager::Certific
 #### JSON<a name="aws-resource-certificatemanager-certificate--examples--Declaring_an_Amazon_Certificate_Manager_Certificate_Resource--json"></a>
 
 ```
-"mycert" : {
-  "Type" : "AWS::CertificateManager::Certificate",
-  "Properties" : {
-    "DomainName" : "example.com",
-    "DomainValidationOptions" : [{
-      "DomainName" : "example.com",
-      "ValidationDomain" : "example.com"
-    }]
-  }
+{
+   "Resources":{
+      "MyCertificate":{
+         "Type":"AWS::CertificateManager::Certificate",
+         "Properties":{
+            "DomainName":"example.com",
+            "ValidationMethod":"DNS"
+         }
+      }
+   }
 }
 ```
 
 #### YAML<a name="aws-resource-certificatemanager-certificate--examples--Declaring_an_Amazon_Certificate_Manager_Certificate_Resource--yaml"></a>
 
 ```
-mycert:
-  Type: AWS::CertificateManager::Certificate
-  Properties:
-    DomainName: example.com
-    DomainValidationOptions:
-          - DomainName: example.com
-            ValidationDomain: example.com
+Resources: 
+  MyCertificate: 
+    Type: "AWS::CertificateManager::Certificate"
+    Properties: 
+      DomainName: example.com
+      ValidationMethod: DNS
 ```

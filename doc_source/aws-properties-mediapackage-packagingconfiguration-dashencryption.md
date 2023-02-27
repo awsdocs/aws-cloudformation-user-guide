@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[SpekeKeyProvider](#cfn-mediapackage-packagingconfiguration-dashencryption-spekekeyprovider)" : 
+  "[SpekeKeyProvider](#cfn-mediapackage-packagingconfiguration-dashencryption-spekekeyprovider)" : SpekeKeyProvider
 }
 ```
 
@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [SpekeKeyProvider](#cfn-mediapackage-packagingconfiguration-dashencryption-spekekeyprovider): 
+    SpekeKeyProvider
 ```
 
 ## Properties<a name="aws-properties-mediapackage-packagingconfiguration-dashencryption-properties"></a>
@@ -25,5 +26,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `SpekeKeyProvider`  <a name="cfn-mediapackage-packagingconfiguration-dashencryption-spekekeyprovider"></a>
 Parameters for the SPEKE key provider\.  
 *Required*: Yes  
-*Type*:   
+*Type*: [SpekeKeyProvider](aws-properties-mediapackage-packagingconfiguration-spekekeyprovider.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

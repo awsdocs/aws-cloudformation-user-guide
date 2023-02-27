@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile TrendmicroConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-trendmicroconnectorprofilecredentials"></a>
 
- The `TrendmicroConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required when using Trend Micro\. 
+ The connector\-specific profile credentials required when using Trend Micro\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-trendmicroconnectorprofilecredentials-syntax"></a>
 
@@ -32,3 +32,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-trendmicroconnectorprofilecredentials--seealso"></a>
 + [TrendmicroConnectorProfileCredentials](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_TrendmicroConnectorProfileCredentials.html) in the *Amazon AppFlow API Reference*\.
+

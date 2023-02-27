@@ -69,7 +69,7 @@ The authorization scopes supported by this route\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthorizationType`  <a name="cfn-apigatewayv2-route-authorizationtype"></a>
-The authorization type for the route\. For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer\.  
+The authorization type for the route\. For WebSocket APIs, valid values are `NONE` for open access, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer\. For HTTP APIs, valid values are `NONE` for open access, `JWT` for using JSON Web Tokens, `AWS_IAM` for using AWS IAM permissions, and `CUSTOM` for using a Lambda authorizer\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -229,3 +229,4 @@ MyRoute:
 
 ## See also<a name="aws-resource-apigatewayv2-route--seealso"></a>
 + [CreateRoute](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis-apiid-routes.html#CreateRoute) in the *Amazon API Gateway Version 2 API Reference*
+

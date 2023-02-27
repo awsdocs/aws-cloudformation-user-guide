@@ -1,6 +1,6 @@
 # AWS::Config::OrganizationConformancePack<a name="aws-resource-config-organizationconformancepack"></a>
 
-OrganizationConformancePack deploys conformance packs across member accounts in an AWS Organization\. OrganizationConformancePack enables organization service access for `config-multiaccountsetup.amazonaws.com` through the `EnableAWSServiceAccess` action and creates a service linked role in the master account of your organization\. The service linked role is created only when the role does not exist in the master account\.
+OrganizationConformancePack deploys conformance packs across member accounts in an AWS Organizations\. OrganizationConformancePack enables organization service access for `config-multiaccountsetup.amazonaws.com` through the `EnableAWSServiceAccess` action and creates a service linked role in the master account of your organization\. The service linked role is created only when the role does not exist in the master account\.
 
 ## Syntax<a name="aws-resource-config-organizationconformancepack-syntax"></a>
 
@@ -49,7 +49,7 @@ A list of `ConformancePackInputParameter` objects\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeliveryS3Bucket`  <a name="cfn-config-organizationconformancepack-deliverys3bucket"></a>
-Amazon S3 bucket where AWS Config stores conformance pack templates\.   
+The name of the Amazon S3 bucket where AWS Config stores conformance pack templates\.   
 This field is optional\.
 *Required*: No  
 *Type*: String  
@@ -59,7 +59,7 @@ This field is optional\.
 
 `DeliveryS3KeyPrefix`  <a name="cfn-config-organizationconformancepack-deliverys3keyprefix"></a>
 Any folder structure you want to add to an Amazon S3 bucket\.  
-This field if optional\.
+This field is optional\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -103,6 +103,8 @@ Location of file containing the template body\. The uri must point to the confor
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-config-organizationconformancepack--examples"></a>
+
+
 
 ### Organization Conformance Pack<a name="aws-resource-config-organizationconformancepack--examples--Organization_Conformance_Pack"></a>
 

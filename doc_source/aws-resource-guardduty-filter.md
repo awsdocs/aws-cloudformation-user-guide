@@ -17,7 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DetectorId](#cfn-guardduty-filter-detectorid)" : String,
       "[FindingCriteria](#cfn-guardduty-filter-findingcriteria)" : FindingCriteria,
       "[Name](#cfn-guardduty-filter-name)" : String,
-      "[Rank](#cfn-guardduty-filter-rank)" : Integer
+      "[Rank](#cfn-guardduty-filter-rank)" : Integer,
+      "[Tags](#cfn-guardduty-filter-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -34,6 +35,8 @@ Properties:
     FindingCriteria
   [Name](#cfn-guardduty-filter-name): String
   [Rank](#cfn-guardduty-filter-rank): Integer
+  [Tags](#cfn-guardduty-filter-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-guardduty-filter-properties"></a>
@@ -46,7 +49,7 @@ Specifies the action that is to be applied to the findings that match the filter
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-guardduty-filter-description"></a>
-The description of the filter\.  
+The description of the filter\. Valid special characters include period \(\.\), underscore \(\_\), dash \(\-\), and whitespace\. The new line character is considered to be an invalid input for description\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `0`  
@@ -68,7 +71,7 @@ Represents the criteria to be used in the filter for querying findings\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-guardduty-filter-name"></a>
-The name of the filter\. Minimum length of 3\. Maximum length of 64\. Valid characters include alphanumeric characters, dot \(\.\), underscore \(\_\), and dash \(\-\)\. Spaces are not allowed\.  
+The name of the filter\. Valid characters include period \(\.\), underscore \(\_\), dash \(\-\), and alphanumeric characters\. A whitespace is considered to be an invalid character\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `3`  
@@ -76,10 +79,17 @@ The name of the filter\. Minimum length of 3\. Maximum length of 64\. Valid char
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Rank`  <a name="cfn-guardduty-filter-rank"></a>
-Specifies the position of the filter in the list of current filters\. Also specifies the order in which this filter is applied to the findings\.  
-By default filters may not be created in the same order as they are ranked\. To ensure filters are created in the correct order you can use the optional `DependsOn` attribute with the following syntax: `"DependsOn":[ "ObjectName" ]`\. You can find more information on using this attribute [here](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)\.
+Specifies the position of the filter in the list of current filters\. Also specifies the order in which this filter is applied to the findings\. The minimum value for this property is 1 and the maximum is 100\.  
+By default, filters may not be created in the same order as they are ranked\. To ensure that the filters are created in the expected order, you can use an optional attribute, [DependsOn](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html), with the following syntax: `"DependsOn":[ "ObjectName" ]`\.   
 *Required*: Yes  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-guardduty-filter-tags"></a>
+The tags to be added to a new filter resource\. Each tag consists of a key and an optional value, both of which you define\.  
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.   
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-guardduty-filter-return-values"></a>
@@ -91,6 +101,8 @@ By default filters may not be created in the same order as they are ranked\. To 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-guardduty-filter--examples"></a>
+
+
 
 ### Declare a Filter Resource<a name="aws-resource-guardduty-filter--examples--Declare_a_Filter_Resource"></a>
 

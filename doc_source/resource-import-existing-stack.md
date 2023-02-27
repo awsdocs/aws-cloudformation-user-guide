@@ -4,34 +4,34 @@ During this import operation, you need to provide the following\.
 + A template that describes the entire stack, including both the resources that are already part of the stack and the resources to import\. Each resource to import must have a [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html) attribute in your template\.
 + A unique identifier for each target resource\. Visit the appropriate service console to obtain unique identifiers\.
 
-In this walkthrough, we provide the following example template, called `templateToImport.json`\. `ServiceTable` is currently part of the stack, and `GamesTable` is the target of the import\.
+In this walkthrough, we provide the following example template, called `TemplateToImport.json`\. `ServiceTable` is currently part of the stack, and `GamesTable` is the target of the import\.
 
 ```
 {
     "AWSTemplateFormatVersion": "2010-09-09",
     "Description": "Import test",
     "Resources": {
-         "ServiceTable":{
-           "Type":"AWS::DynamoDB::Table",
-           "Properties":{
-              "TableName":"Service",
-              "AttributeDefinitions":[
-                 {
-                    "AttributeName":"key",
-                    "AttributeType":"S"
-                 }
-              ],
-              "KeySchema":[
-                 {
-                    "AttributeName":"key",
-                    "KeyType":"HASH"
-                 }
-              ],
-              "ProvisionedThroughput":{
-                 "ReadCapacityUnits":5,
-                 "WriteCapacityUnits":1
-              }
-           }
+        "ServiceTable": {
+            "Type": "AWS::DynamoDB::Table",
+            "Properties": {
+                "TableName": "Service",
+                "AttributeDefinitions": [
+                    {
+                        "AttributeName": "key",
+                        "AttributeType": "S"
+                    }
+                ],
+                "KeySchema": [
+                    {
+                        "AttributeName": "key",
+                        "KeyType": "HASH"
+                    }
+                ],
+                "ProvisionedThroughput": {
+                    "ReadCapacityUnits": 5,
+                    "WriteCapacityUnits": 1
+                }
+            }
         },
         "GamesTable": {
             "Type": "AWS::DynamoDB::Table",
@@ -60,9 +60,12 @@ In this walkthrough, we provide the following example template, called `template
 }
 ```
 
-## Import an existing resource into a stack using the AWS CloudFormation console<a name="resource-import-existing-stack-console"></a>
+## Import an existing resource into a stack using the AWS Management Console<a name="resource-import-existing-stack-console"></a>
 
-1. Open the AWS CloudFormation console\.
+**Note**  
+The AWS CloudFormation console doesn't support the use of the intrinsic function Fn::Transform when importing resources\. You can use the AWS Command Line Interface to import resources that use of the intrinsic function Fn::Transform\.
+
+1. Sign in to the AWS Management Console and open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
 1. On the **Stacks** page, choose the stack you want to import resources into\.
 
@@ -86,11 +89,11 @@ In this walkthrough, we provide the following example template, called `template
 
 1. On the **Specify stack details** page, update any parameters, and then choose **Next**\. This automatically creates a change set\.
 **Note**  
-The import operation fails if you modify existing parameters that trigger a create, update, or delete operation\.
+The import operation fails if you modify existing parameters that initiate a create, update, or delete operation\.
 
 1. On the **Review *stack\-name*** page, review the resources to import, and then choose **Import resources**\. This automatically executes the change set created in the last step\. Any [stack\-level tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html) are applied to imported resources at this time\.
 
-   The **Events** page for the stack displays\.   
+   The **Events** page for the stack displays\.  
 ![\[The Events tab in the console.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/import-events.png)
 
 1. \(Optional\) Run drift detection on the stack to make sure the template and actual configuration of the imported resources match\. For more information about detecting drift, see [Detect drift on an entire CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\.
@@ -103,30 +106,32 @@ The import operation fails if you modify existing parameters that trigger a crea
 
    ```
    > aws cloudformation get-template-summary 
-       --template-body file://templateToImport.json
+       --template-url https://DOC-EXAMPLE-BUCKET.s3.us-west-2.amazonaws.com/TemplateToImport.json
    ```
 
 1. Compose a list of resources to import and their unique identifiers in the following format\.
 
-   "\[\{\\"ResourceType\\":\\"*AWS::DynamoDB::Table*\\",\\"LogicalResourceId\\":\\"*GamesTable*\\",\\"ResourceIdentifier\\":\{\\"*TableName*\\":\\"*Games*\\"\}\}\]"
+   ```
+   [{\"ResourceType\":\"AWS::DynamoDB::Table\",\"LogicalResourceId\":\"GamesTable\",\"ResourceIdentifier\":{\"TableName\":\"Games\"}}]
+   ```
 
-1. Create a change set of type `IMPORT` with the following parameters\. `--resources-to-import` does not support inline YAML\.
+1. Create a change set of type `IMPORT` with the following parameters\. `--resources-to-import` doesn't support inline YAML\.
 
    ```
    > aws cloudformation create-change-set
        --stack-name TargetStack --change-set-name ImportChangeSet
        --change-set-type IMPORT
        --resources-to-import "[{\"ResourceType\":\"AWS::DynamoDB::Table\",\"LogicalResourceId\":\"GamesTable\",\"ResourceIdentifier\":{\"TableName\":\"Games\"}}]"
-       --template-body file://templateToImport.json
+       --template-url https://DOC-EXAMPLE-BUCKET.s3.us-west-2.amazonaws.com/TemplateToImport.json
    ```
 
-   The AWS CLI also supports text files as input for the `resources-to-import` parameter, as shown in the following example\. 
+   The AWS CLI also supports text files as input for the `resources-to-import` parameter, as shown in the following example\.
 
    ```
-   --resources-to-import: file://resourcesToImport.txt
+   --resources-to-import: file://ResourcesToImport.txt
    ```
 
-   In this walkthrough, *file://resourcesToImport\.txt* contains the following\.
+   In this walkthrough, *file://ResourcesToImport\.txt* contains the following\.
 
    ```
    [
@@ -152,7 +157,7 @@ The import operation fails if you modify existing parameters that trigger a crea
    > aws cloudformation execute-change-set --change-set-name ImportChangeSet --stack-name TargetStack
    ```
 
-1. \(Optional\) Run drift detection on the `IMPORT_COMPLETE` stack to make sure the template and actual configuration of the imported resources match\. For more information about detecting drift, see [Detect drift on an entire CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\. 
+1. \(Optional\) Run drift detection on the `IMPORT_COMPLETE` stack to make sure the template and actual configuration of the imported resources match\. For more information about detecting drift, see [Detect drift on an entire CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/detect-drift-stack.html)\.
 
    ```
    > aws cloudformation detect-stack-drift --stack-name TargetStack

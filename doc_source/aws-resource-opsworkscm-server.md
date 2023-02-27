@@ -1,6 +1,6 @@
 # AWS::OpsWorksCM::Server<a name="aws-resource-opsworkscm-server"></a>
 
-The `AWS::OpsWorksCM::Server` resource creates an AWS OpsWorks for Chef Automate or AWS OpsWorks for Puppet Enterprise configuration management server\. For more information, see [Create a Chef Automate Server in AWS CloudFormation](https://docs.aws.amazon.com/opsworks/latest/userguide/opscm-create-server-cfn.html) or [Create a Puppet Enterprise Master in AWS CloudFormation](https://docs.aws.amazon.com/opsworks/latest/userguide/opspup-create-server-cfn.html) in the *AWS OpsWorks User Guide*, and [CreateServer](https://docs.aws.amazon.com/opsworks-cm/latest/APIReference/API_CreateServer.html) in the *AWS OpsWorks CM API Reference*\.
+The `AWS::OpsWorksCM::Server` resource creates an AWS OpsWorks for Chef Automate or OpsWorks for Puppet Enterprise configuration management server\. For more information, see [Create a Chef Automate Server in AWS CloudFormation](https://docs.aws.amazon.com/opsworks/latest/userguide/opscm-create-server-cfn.html) or [Create a Puppet Enterprise Master in AWS CloudFormation](https://docs.aws.amazon.com/opsworks/latest/userguide/opspup-create-server-cfn.html) in the *AWS OpsWorks User Guide*, and [CreateServer](https://docs.aws.amazon.com/opsworks-cm/latest/APIReference/API_CreateServer.html) in the *AWS OpsWorks CM API Reference*\.
 
 ## Syntax<a name="aws-resource-opsworkscm-server-syntax"></a>
 
@@ -29,7 +29,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PreferredBackupWindow](#cfn-opsworkscm-server-preferredbackupwindow)" : String,
       "[PreferredMaintenanceWindow](#cfn-opsworkscm-server-preferredmaintenancewindow)" : String,
       "[SecurityGroupIds](#cfn-opsworkscm-server-securitygroupids)" : [ String, ... ],
-      "[ServerName](#cfn-opsworkscm-server-servername)" : String,
       "[ServiceRoleArn](#cfn-opsworkscm-server-servicerolearn)" : String,
       "[SubnetIds](#cfn-opsworkscm-server-subnetids)" : [ String, ... ],
       "[Tags](#cfn-opsworkscm-server-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -61,7 +60,6 @@ Properties:
   [PreferredMaintenanceWindow](#cfn-opsworkscm-server-preferredmaintenancewindow): String
   [SecurityGroupIds](#cfn-opsworkscm-server-securitygroupids): 
     - String
-  [ServerName](#cfn-opsworkscm-server-servername): String
   [ServiceRoleArn](#cfn-opsworkscm-server-servicerolearn): String
   [SubnetIds](#cfn-opsworkscm-server-subnetids): 
     - String
@@ -159,7 +157,7 @@ Optional engine attributes on a specified server\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `EngineVersion`  <a name="cfn-opsworkscm-server-engineversion"></a>
- The major release version of the engine that you want to use\. For a Chef server, the valid value for EngineVersion is currently `2`\. For a Puppet server, the valid value is `2017`\.   
+ The major release version of the engine that you want to use\. For a Chef server, the valid value for EngineVersion is currently `2`\. For a Puppet server, valid values are `2019` or `2017`\.   
 *Required*: No  
 *Type*: String  
 *Maximum*: `10000`  
@@ -215,15 +213,6 @@ The ARN of the instance profile that your Amazon EC2 instances use\.
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`ServerName`  <a name="cfn-opsworkscm-server-servername"></a>
- The name of the server\. The server name must be unique within your AWS account, within each region\. Server names must start with a letter; then letters, numbers, or hyphens \(\-\) are allowed, up to a maximum of 40 characters\.   
-*Required*: No  
-*Type*: String  
-*Minimum*: `1`  
-*Maximum*: `40`  
-*Pattern*: `[a-zA-Z][a-zA-Z0-9\-]*`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
 `ServiceRoleArn`  <a name="cfn-opsworkscm-server-servicerolearn"></a>
  The service role that the AWS OpsWorks CM service backend uses to work with your account\. Although the AWS OpsWorks management console typically creates the service role for you, if you are using the AWS CLI or API commands, run the service\-role\-creation\.yaml AWS CloudFormation template, located at https://s3\.amazonaws\.com/opsworks\-cm\-us\-east\-1\-prod\-default\-assets/misc/opsworks\-cm\-roles\.yaml\. This template creates a CloudFormation stack that includes the service role and instance profile that you need\.   
 *Required*: Yes  
@@ -242,12 +231,12 @@ For more information about supported Amazon EC2 platforms, see [Supported Platfo
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-opsworkscm-server-tags"></a>
-A map that contains tag keys and tag values to attach to an AWS OpsWorks for Chef Automate or AWS OpsWorks for Puppet Enterprise server\.  
+A map that contains tag keys and tag values to attach to an AWS OpsWorks for Chef Automate or OpsWorks for Puppet Enterprise server\.  
 + The key cannot be empty\.
 + The key can be a maximum of 127 characters, and can contain only Unicode letters, numbers, or separators, or the following special characters: `+ - = . _ : / @` 
 + The value can be a maximum 255 characters, and contain only Unicode letters, numbers, or separators, or the following special characters: `+ - = . _ : / @` 
-+ Leading and trailing white spaces are trimmed from both the key and value\.
-+ A maximum of 50 user\-applied tags is allowed for any AWS OpsWorks\-CM server\.
++ Leading and trailing spaces are trimmed from both the key and value\.
++ A maximum of 50 user\-applied tags is allowed for any AWS OpsWorks CM server\.
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `200`  
@@ -275,16 +264,18 @@ The Amazon Resource Name \(ARN\) of the server, such as `arn:aws:OpsWorksCM:us-e
 `Endpoint`  <a name="Endpoint-fn::getatt"></a>
 A DNS name that can be used to access the engine\. Example: `myserver-asdfghjkl.us-east-1.opsworks.io`\.
 
-`Id`  <a name="Id-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+`ServerName`  <a name="ServerName-fn::getatt"></a>
+Property description not available\.
 
 ## Examples<a name="aws-resource-opsworkscm-server--examples"></a>
 
-### Create an AWS OpsWorks for Chef Automate server<a name="aws-resource-opsworkscm-server--examples--Create_an_AWS_OpsWorks_for_Chef_Automate_server"></a>
+
+
+### Create an OpsWorks for Chef Automate server<a name="aws-resource-opsworkscm-server--examples--Create_an_OpsWorks_for_Chef_Automate_server"></a>
 
 The following example creates an AWS OpsWorks for Chef Automate server\.
 
-#### JSON<a name="aws-resource-opsworkscm-server--examples--Create_an_AWS_OpsWorks_for_Chef_Automate_server--json"></a>
+#### JSON<a name="aws-resource-opsworkscm-server--examples--Create_an_OpsWorks_for_Chef_Automate_server--json"></a>
 
 ```
 {
@@ -355,7 +346,7 @@ The following example creates an AWS OpsWorks for Chef Automate server\.
 }
 ```
 
-#### YAML<a name="aws-resource-opsworkscm-server--examples--Create_an_AWS_OpsWorks_for_Chef_Automate_server--yaml"></a>
+#### YAML<a name="aws-resource-opsworkscm-server--examples--Create_an_OpsWorks_for_Chef_Automate_server--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
@@ -399,11 +390,11 @@ Outputs:
     Value: !GetAtt [MyChefServer, Endpoint]
 ```
 
-### Create an AWS OpsWorks for Puppet Enterprise server<a name="aws-resource-opsworkscm-server--examples--Create_an_AWS_OpsWorks_for_Puppet_Enterprise_server"></a>
+### Create an OpsWorks for Puppet Enterprise server<a name="aws-resource-opsworkscm-server--examples--Create_an_OpsWorks_for_Puppet_Enterprise_server"></a>
 
-The following example creates an AWS OpsWorks for Puppet Enterprise server\.
+The following example creates an OpsWorks for Puppet Enterprise server\.
 
-#### JSON<a name="aws-resource-opsworkscm-server--examples--Create_an_AWS_OpsWorks_for_Puppet_Enterprise_server--json"></a>
+#### JSON<a name="aws-resource-opsworkscm-server--examples--Create_an_OpsWorks_for_Puppet_Enterprise_server--json"></a>
 
 ```
 {
@@ -453,7 +444,7 @@ The following example creates an AWS OpsWorks for Puppet Enterprise server\.
 }
 ```
 
-#### YAML<a name="aws-resource-opsworkscm-server--examples--Create_an_AWS_OpsWorks_for_Puppet_Enterprise_server--yaml"></a>
+#### YAML<a name="aws-resource-opsworkscm-server--examples--Create_an_OpsWorks_for_Puppet_Enterprise_server--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: '2010-09-09'
@@ -493,4 +484,5 @@ Outputs:
 ## See also<a name="aws-resource-opsworkscm-server--seealso"></a>
 +  [Create a Chef Automate Server in AWS CloudFormation](https://docs.aws.amazon.com/opsworks/latest/userguide/opscm-create-server-cfn.html) in the *AWS OpsWorks User Guide* 
 +  [Create a Puppet Enterprise Master in AWS CloudFormation](https://docs.aws.amazon.com/opsworks/latest/userguide/opspup-create-server-cfn.html) in the *AWS OpsWorks User Guide* 
-+  [ `CreateServer` ](https://docs.aws.amazon.com/opsworks-cm/latest/APIReference/API_CreateServer.html) in the *AWS OpsWorks CM API Reference* 
++  [https://docs.aws.amazon.com/opsworks-cm/latest/APIReference/API_CreateServer.html](https://docs.aws.amazon.com/opsworks-cm/latest/APIReference/API_CreateServer.html) in the *AWS OpsWorks CM API Reference* 
+

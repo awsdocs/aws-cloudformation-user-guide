@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile ServiceNowConnectorProfileProperties<a name="aws-properties-appflow-connectorprofile-servicenowconnectorprofileproperties"></a>
 
- The `ServiceNowConnectorProfileProperties` property type specifies the connector\-specific profile properties required when using ServiceNow\. 
+ The connector\-specific profile properties required when using ServiceNow\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-servicenowconnectorprofileproperties-syntax"></a>
 
@@ -32,3 +32,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-servicenowconnectorprofileproperties--seealso"></a>
 + [ServiceNowConnectorProfileProperties](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ServiceNowConnectorProfileProperties.html) in the *Amazon AppFlow API Reference*\.
+

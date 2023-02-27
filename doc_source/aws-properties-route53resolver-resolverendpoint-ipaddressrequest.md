@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Ip](#cfn-route53resolver-resolverendpoint-ipaddressrequest-ip)" : String,
+  "[Ipv6](#cfn-route53resolver-resolverendpoint-ipaddressrequest-ipv6)" : String,
   "[SubnetId](#cfn-route53resolver-resolverendpoint-ipaddressrequest-subnetid)" : String
 }
 ```
@@ -19,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [Ip](#cfn-route53resolver-resolverendpoint-ipaddressrequest-ip): String
+  [Ipv6](#cfn-route53resolver-resolverendpoint-ipaddressrequest-ipv6): String
   [SubnetId](#cfn-route53resolver-resolverendpoint-ipaddressrequest-subnetid): String
 ```
 
@@ -32,6 +34,12 @@ The IP address that you want to use for DNS queries\.
 *Maximum*: `36`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Ipv6`  <a name="cfn-route53resolver-resolverendpoint-ipaddressrequest-ipv6"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SubnetId`  <a name="cfn-route53resolver-resolverendpoint-ipaddressrequest-subnetid"></a>
 The ID of the subnet that contains the IP address\.   
 *Required*: Yes  
@@ -43,3 +51,4 @@ The ID of the subnet that contains the IP address\.
 ## See also<a name="aws-properties-route53resolver-resolverendpoint-ipaddressrequest--seealso"></a>
 +  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html#aws-resource-route53resolver-resolverendpoint-return-values) in the topic [AWS::Route53Resolver::ResolverEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html) 
 +  [IpAddressRequest](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_IpAddressRequest.html) in the *Amazon Route 53 API Reference* 
+

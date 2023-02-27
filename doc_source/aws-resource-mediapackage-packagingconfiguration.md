@@ -2,7 +2,7 @@
 
 Creates a packaging configuration in a packaging group\.
 
-The packaging configuration represents a single delivery point for an asset\. It determines how the output from this endpoint is formatted\.
+The packaging configuration represents a single delivery point for an asset\. It determines the format and setting for the egressing content\. Specify only one package format per configuration, such as `HlsPackage`\.
 
 ## Syntax<a name="aws-resource-mediapackage-packagingconfiguration-syntax"></a>
 
@@ -68,10 +68,10 @@ Parameters for Apple HLS packaging\.
 Unique identifier that you assign to the packaging configuration\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MssPackage`  <a name="cfn-mediapackage-packagingconfiguration-msspackage"></a>
-Parameters for Microsoft Smooth Streaming packaging\.   
+Parameters for Microsoft Smooth Streaming packaging\.  
 *Required*: No  
 *Type*: [MssPackage](aws-properties-mediapackage-packagingconfiguration-msspackage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

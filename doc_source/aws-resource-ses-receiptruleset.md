@@ -1,8 +1,8 @@
 # AWS::SES::ReceiptRuleSet<a name="aws-resource-ses-receiptruleset"></a>
 
-Specifies an empty receipt rule set\.
+Creates an empty receipt rule set\.
 
-For information about setting up receipt rule sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-receipt-rule-set.html)\.
+For information about setting up receipt rule sets, see the [Amazon SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-concepts.html#receiving-email-concepts-rules)\.
 
 You can execute this operation no more than once per second\.
 
@@ -32,7 +32,7 @@ Properties:
 ## Properties<a name="aws-resource-ses-receiptruleset-properties"></a>
 
 `RuleSetName`  <a name="cfn-ses-receiptruleset-rulesetname"></a>
-The name of the receipt rule set that you want to reorder\.  
+The name of the receipt rule set to reorder\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -41,7 +41,7 @@ The name of the receipt rule set that you want to reorder\.
 
 ### Ref<a name="aws-resource-ses-receiptruleset-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\. For example:
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -50,6 +50,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 Specifies a collection of receipt rules that are applied to incoming email\.
 
 ### <a name="aws-resource-ses-receiptruleset--examples--"></a>
+
+
 
 #### JSON<a name="aws-resource-ses-receiptruleset--examples----json"></a>
 
@@ -79,13 +81,13 @@ Specifies a collection of receipt rules that are applied to incoming email\.
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
-Description: 'AWS SES ReceiptRuleSet Sample Template'
+Description: AWS SES ReceiptRuleSet Sample Template
 Parameters:
   ReceiptRuleSetName:
     Type: String
 Resources:
   ReceiptRuleSet:
-    Type: AWS::SES::ReceiptRuleSet
+    Type: 'AWS::SES::ReceiptRuleSet'
     Properties:
       RuleSetName: !Ref ReceiptRuleSetName
 ```

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AccountId](#cfn-cloudwatch-alarm-metricdataquery-accountid)" : String,
   "[Expression](#cfn-cloudwatch-alarm-metricdataquery-expression)" : String,
   "[Id](#cfn-cloudwatch-alarm-metricdataquery-id)" : String,
   "[Label](#cfn-cloudwatch-alarm-metricdataquery-label)" : String,
@@ -24,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-cloudwatch-alarm-metricdataquery-syntax.yaml"></a>
 
 ```
+  [AccountId](#cfn-cloudwatch-alarm-metricdataquery-accountid): String
   [Expression](#cfn-cloudwatch-alarm-metricdataquery-expression): String
   [Id](#cfn-cloudwatch-alarm-metricdataquery-id): String
   [Label](#cfn-cloudwatch-alarm-metricdataquery-label): String
@@ -35,13 +37,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-cloudwatch-alarm-metricdataquery-properties"></a>
 
+`AccountId`  <a name="cfn-cloudwatch-alarm-metricdataquery-accountid"></a>
+The ID of the account where the metrics are located, if this is a cross\-account alarm\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Expression`  <a name="cfn-cloudwatch-alarm-metricdataquery-expression"></a>
 The math expression to be performed on the returned data, if this object is performing a math expression\. This expression can use the `Id` of the other metrics to refer to those metrics, and can also use the `Id` of other expressions to use the result of those expressions\. For more information about metric math expressions, see [Metric Math Syntax and Functions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax) in the *Amazon CloudWatch User Guide*\.  
 Within each MetricDataQuery object, you must specify either `Expression` or `MetricStat` but not both\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `1024`  
+*Maximum*: `2048`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-cloudwatch-alarm-metricdataquery-id"></a>

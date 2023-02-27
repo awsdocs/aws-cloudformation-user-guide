@@ -1,6 +1,6 @@
 # AWS::Amplify::Branch<a name="aws-resource-amplify-branch"></a>
 
- The AWS::Amplify::Branch resource creates a new branch within an app\. 
+ The AWS::Amplify::Branch resource specifies a new branch within an app\. 
 
 ## Syntax<a name="aws-resource-amplify-branch-syntax"></a>
 
@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EnablePerformanceMode](#cfn-amplify-branch-enableperformancemode)" : Boolean,
       "[EnablePullRequestPreview](#cfn-amplify-branch-enablepullrequestpreview)" : Boolean,
       "[EnvironmentVariables](#cfn-amplify-branch-environmentvariables)" : [ EnvironmentVariable, ... ],
+      "[Framework](#cfn-amplify-branch-framework)" : String,
       "[PullRequestEnvironmentName](#cfn-amplify-branch-pullrequestenvironmentname)" : String,
       "[Stage](#cfn-amplify-branch-stage)" : String,
       "[Tags](#cfn-amplify-branch-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -44,6 +45,7 @@ Properties:
   [EnablePullRequestPreview](#cfn-amplify-branch-enablepullrequestpreview): Boolean
   [EnvironmentVariables](#cfn-amplify-branch-environmentvariables): 
     - EnvironmentVariable
+  [Framework](#cfn-amplify-branch-framework): String
   [PullRequestEnvironmentName](#cfn-amplify-branch-pullrequestenvironmentname): String
   [Stage](#cfn-amplify-branch-stage): String
   [Tags](#cfn-amplify-branch-tags): 
@@ -54,30 +56,38 @@ Properties:
 
 `AppId`  <a name="cfn-amplify-branch-appid"></a>
  The unique ID for an Amplify app\.   
+*Length Constraints:* Minimum length of 1\. Maximum length of 20\.  
+*Pattern:* d\[a\-z0\-9\]\+  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BasicAuthConfig`  <a name="cfn-amplify-branch-basicauthconfig"></a>
- The basic authorization credentials for a branch of an Amplify app\.   
+ The basic authorization credentials for a branch of an Amplify app\. You must base64\-encode the authorization credentials and provide them in the format `user:password`\.  
 *Required*: No  
 *Type*: [BasicAuthConfig](aws-properties-amplify-branch-basicauthconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BranchName`  <a name="cfn-amplify-branch-branchname"></a>
  The name for the branch\.   
+*Length Constraints:* Minimum length of 1\. Maximum length of 255\.  
+*Pattern:* \(?s\)\.\+  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BuildSpec`  <a name="cfn-amplify-branch-buildspec"></a>
  The build specification \(build spec\) for the branch\.   
+*Length Constraints:* Minimum length of 1\. Maximum length of 25000\.  
+*Pattern:* \(?s\)\.\+  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-amplify-branch-description"></a>
- The description for the branch\.   
+ The description for the branch that is part of an Amplify app\.   
+*Length Constraints:* Maximum length of 1000\.  
+*Pattern:* \(?s\)\.\*  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -96,9 +106,9 @@ Performance mode optimizes for faster hosting performance by keeping content cac
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnablePullRequestPreview`  <a name="cfn-amplify-branch-enablepullrequestpreview"></a>
-Sets whether the Amplify Console creates a preview for each pull request that is made for this branch\. If this property is enabled, the Amplify Console deploys your app to a unique preview URL after each pull request is opened\. Development and QA teams can use this preview to test the pull request before it's merged into a production or integration branch\.  
-To provide backend support for your preview, the Amplify Console automatically provisions a temporary backend environment that it deletes when the pull request is closed\. If you want to specify a dedicated backend environment for your previews, use the `PullRequestEnvironmentName` property\.  
-For more information, see [Web Previews](https://docs.aws.amazon.com/amplify/latest/userguide/pr-previews.html) in the *AWS Amplify Console User Guide*\.  
+Specifies whether Amplify Hosting creates a preview for each pull request that is made for this branch\. If this property is enabled, Amplify deploys your app to a unique preview URL after each pull request is opened\. Development and QA teams can use this preview to test the pull request before it's merged into a production or integration branch\.  
+To provide backend support for your preview, Amplify automatically provisions a temporary backend environment that it deletes when the pull request is closed\. If you want to specify a dedicated backend environment for your previews, use the `PullRequestEnvironmentName` property\.  
+For more information, see [Web Previews](https://docs.aws.amazon.com/amplify/latest/userguide/pr-previews.html) in the *AWS Amplify Hosting User Guide*\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -109,17 +119,26 @@ For more information, see [Web Previews](https://docs.aws.amazon.com/amplify/lat
 *Type*: List of [EnvironmentVariable](aws-properties-amplify-branch-environmentvariable.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Framework`  <a name="cfn-amplify-branch-framework"></a>
+ The framework for the branch\.   
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `PullRequestEnvironmentName`  <a name="cfn-amplify-branch-pullrequestenvironmentname"></a>
 If pull request previews are enabled for this branch, you can use this property to specify a dedicated backend environment for your previews\. For example, you could specify an environment named `prod`, `test`, or `dev` that you initialized with the Amplify CLI and mapped to this branch\.  
 To enable pull request previews, set the `EnablePullRequestPreview` property to `true`\.  
-If you don't specify an environment, the Amplify Console provides backend support for each preview by automatically provisioning a temporary backend environment\. Amplify Console deletes this environment when the pull request is closed\.  
-For more information about creating backend environments, see [Feature Branch Deployments and Team Workflows](https://docs.aws.amazon.com/amplify/latest/userguide/multi-environments.html) in the *AWS Amplify Console User Guide*\.  
+If you don't specify an environment, Amplify Hosting provides backend support for each preview by automatically provisioning a temporary backend environment\. Amplify Hosting deletes this environment when the pull request is closed\.  
+For more information about creating backend environments, see [Feature Branch Deployments and Team Workflows](https://docs.aws.amazon.com/amplify/latest/userguide/multi-environments.html) in the *AWS Amplify Hosting User Guide*\.  
+*Length Constraints:* Maximum length of 20\.  
+*Pattern:* \(?s\)\.\*  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Stage`  <a name="cfn-amplify-branch-stage"></a>
  Describes the current stage for the branch\.   
+*Valid Values:* PRODUCTION \| BETA \| DEVELOPMENT \| EXPERIMENTAL \| PULL\_REQUEST  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -25,13 +25,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-events-rule-retrypolicy-properties"></a>
 
 `MaximumEventAgeInSeconds`  <a name="cfn-events-rule-retrypolicy-maximumeventageinseconds"></a>
-The maximum amount of time, in seconds, to continue to make retry attempts\. Retry attempts continue until either the `MaximumRetryAttempts` are tried or until the duration of the `MaximumEventAgeInSeconds` is met\.  
+The maximum amount of time, in seconds, to continue to make retry attempts\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `60`  
+*Maximum*: `86400`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumRetryAttempts`  <a name="cfn-events-rule-retrypolicy-maximumretryattempts"></a>
 The maximum number of retry attempts to make before the request fails\. Retry attempts continue until either the maximum number of attempts is made or until the duration of the `MaximumEventAgeInSeconds` is met\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
+*Maximum*: `185`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

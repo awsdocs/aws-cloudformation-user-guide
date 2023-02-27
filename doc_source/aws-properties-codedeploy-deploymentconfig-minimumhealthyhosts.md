@@ -34,10 +34,10 @@ For more information, see [AWS CodeDeploy Instance Health](https://docs.aws.amaz
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `FLEET_PERCENT | HOST_COUNT`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Value`  <a name="cfn-codedeploy-deploymentconfig-minimumhealthyhosts-value"></a>
 The minimum healthy instance value\.  
 *Required*: Yes  
 *Type*: Integer  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

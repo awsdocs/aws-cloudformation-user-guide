@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ProtocolType](#cfn-apigatewayv2-api-protocoltype)" : String,
       "[RouteKey](#cfn-apigatewayv2-api-routekey)" : String,
       "[RouteSelectionExpression](#cfn-apigatewayv2-api-routeselectionexpression)" : String,
-      "[Tags](#cfn-apigatewayv2-api-tags)" : Json,
+      "[Tags](#cfn-apigatewayv2-api-tags)" : {Key : Value, ...},
       "[Target](#cfn-apigatewayv2-api-target)" : String,
       "[Version](#cfn-apigatewayv2-api-version)" : String
     }
@@ -54,7 +54,8 @@ Properties:
   [ProtocolType](#cfn-apigatewayv2-api-protocoltype): String
   [RouteKey](#cfn-apigatewayv2-api-routekey): String
   [RouteSelectionExpression](#cfn-apigatewayv2-api-routeselectionexpression): String
-  [Tags](#cfn-apigatewayv2-api-tags): Json
+  [Tags](#cfn-apigatewayv2-api-tags): 
+    Key : Value
   [Target](#cfn-apigatewayv2-api-target): String
   [Version](#cfn-apigatewayv2-api-version): String
 ```
@@ -74,13 +75,13 @@ Specifies how to interpret the base path of the API during import\. Valid values
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Body`  <a name="cfn-apigatewayv2-api-body"></a>
-The OpenAPI definition\. Supported only for HTTP APIs\. To import an HTTP API, you must specify a `Body` or `BodyS3Location`\.  
+The OpenAPI definition\. Supported only for HTTP APIs\. To import an HTTP API, you must specify a `Body` or `BodyS3Location`\. If you specify a `Body` or `BodyS3Location`, don't specify CloudFormation resources such as `AWS::ApiGatewayV2::Authorizer` or `AWS::ApiGatewayV2::Route`\. API Gateway doesn't support the combination of OpenAPI and CloudFormation resources\.   
 *Required*: Conditional  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BodyS3Location`  <a name="cfn-apigatewayv2-api-bodys3location"></a>
-The S3 location of an OpenAPI definition\. Supported only for HTTP APIs\. To import an HTTP API, you must specify a `Body` or `BodyS3Location`\.  
+The S3 location of an OpenAPI definition\. Supported only for HTTP APIs\. To import an HTTP API, you must specify a `Body` or `BodyS3Location`\. If you specify a `Body` or `BodyS3Location`, don't specify CloudFormation resources such as `AWS::ApiGatewayV2::Authorizer` or `AWS::ApiGatewayV2::Route`\. API Gateway doesn't support the combination of OpenAPI and CloudFormation resources\.  
 *Required*: Conditional  
 *Type*: [BodyS3Location](aws-properties-apigatewayv2-api-bodys3location.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -148,7 +149,7 @@ The route selection expression for the API\. For HTTP APIs, the `routeSelectionE
 `Tags`  <a name="cfn-apigatewayv2-api-tags"></a>
 The collection of tags\. Each tag element is associated with a given resource\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Target`  <a name="cfn-apigatewayv2-api-target"></a>
@@ -182,7 +183,12 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `ApiEndpoint`  <a name="ApiEndpoint-fn::getatt"></a>
 The default endpoint for an API\. For example: `https://abcdef.execute-api.us-west-2.amazonaws.com`\.
 
+`ApiId`  <a name="ApiId-fn::getatt"></a>
+The API identifier\.
+
 ## Examples<a name="aws-resource-apigatewayv2-api--examples"></a>
+
+
 
 ### API creation example<a name="aws-resource-apigatewayv2-api--examples--API_creation_example"></a>
 
@@ -251,3 +257,4 @@ HttpApi:
 
 ## See also<a name="aws-resource-apigatewayv2-api--seealso"></a>
 + [CreateApi](https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/apis.html#CreateApi) in the *Amazon API Gateway Version 2 API Reference*
+

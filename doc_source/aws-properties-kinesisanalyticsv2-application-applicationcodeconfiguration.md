@@ -1,6 +1,6 @@
 # AWS::KinesisAnalyticsV2::Application ApplicationCodeConfiguration<a name="aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration"></a>
 
-Describes code configuration for a Flink\-based Kinesis Data Analytics application\.
+Describes code configuration for an application\.
 
 ## Syntax<a name="aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration-syntax"></a>
 
@@ -40,3 +40,4 @@ Specifies whether the code content is in text or zip format\.
 
 ## See also<a name="aws-properties-kinesisanalyticsv2-application-applicationcodeconfiguration--seealso"></a>
 +  [ApplicationCodeConfiguration](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_ApplicationCodeConfiguration.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

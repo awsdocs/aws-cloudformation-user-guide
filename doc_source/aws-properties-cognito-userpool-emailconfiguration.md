@@ -1,6 +1,6 @@
 # AWS::Cognito::UserPool EmailConfiguration<a name="aws-properties-cognito-userpool-emailconfiguration"></a>
 
-The email configuration\.
+The email configuration of your user pool\. The email configuration type sets your preferred sending method, AWS Region, and sender for messages from your user pool\.
 
 ## Syntax<a name="aws-properties-cognito-userpool-emailconfiguration-syntax"></a>
 
@@ -42,25 +42,15 @@ The set of configuration rules that can be applied to emails sent using Amazon S
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailSendingAccount`  <a name="cfn-cognito-userpool-emailconfiguration-emailsendingaccount"></a>
-Specifies whether Amazon Cognito emails your users by using its built\-in email functionality or your Amazon SES email configuration\. Specify one of the following values:    
+Specifies whether Amazon Cognito uses its built\-in functionality to send your users email messages, or uses your Amazon Simple Email Service email configuration\. Specify one of the following values:    
 COGNITO\_DEFAULT  
-When Amazon Cognito emails your users, it uses its built\-in email functionality\. When you use the default option, Amazon Cognito allows only a limited number of emails each day for your user pool\. For typical production environments, the default email limit is below the required delivery volume\. To achieve a higher delivery volume, specify DEVELOPER to use your Amazon SES email configuration\.  
-To look up the email delivery limit for the default option, see [Limits in Amazon Cognito](https://docs.aws.amazon.com/cognito/latest/developerguide/limits.html) in the *Amazon Cognito Developer Guide*\.  
-The default FROM address is no\-reply@verificationemail\.com\. To customize the FROM address, provide the ARN of an Amazon SES verified email address for the `SourceArn` parameter\.  
- If EmailSendingAccount is COGNITO\_DEFAULT, the following parameters aren't allowed:  
-+ EmailVerificationMessage
-+ EmailVerificationSubject
-+ InviteMessageTemplate\.EmailMessage
-+ InviteMessageTemplate\.EmailSubject
-+ VerificationMessageTemplate\.EmailMessage
-+ VerificationMessageTemplate\.EmailMessageByLink
-+ VerificationMessageTemplate\.EmailSubject,
-+ VerificationMessageTemplate\.EmailSubjectByLink
-DEVELOPER EmailSendingAccount is required\.  
+When Amazon Cognito emails your users, it uses its built\-in email functionality\. When you use the default option, Amazon Cognito allows only a limited number of emails each day for your user pool\. For typical production environments, the default email limit is less than the required delivery volume\. To achieve a higher delivery volume, specify DEVELOPER to use your Amazon SES email configuration\.  
+To look up the email delivery limit for the default option, see [Limits](https://docs.aws.amazon.com/cognito/latest/developerguide/limits.html) in the *Amazon Cognito Developer Guide*\.  
+The default FROM address is `no-reply@verificationemail.com`\. To customize the FROM address, provide the Amazon Resource Name \(ARN\) of an Amazon SES verified email address for the `SourceArn` parameter\.  
 DEVELOPER  
 When Amazon Cognito emails your users, it uses your Amazon SES configuration\. Amazon Cognito calls Amazon SES on your behalf to send email from your verified email address\. When you use this option, the email delivery limits are the same limits that apply to your Amazon SES verified email address in your AWS account\.  
-If you use this option, you must provide the ARN of an Amazon SES verified email address for the `SourceArn` parameter\.  
-Before Amazon Cognito can email your users, it requires additional permissions to call Amazon SES on your behalf\. When you update your user pool with this option, Amazon Cognito creates a *service\-linked role*, which is a type of IAM role, in your AWS account\. This role contains the permissions that allow Amazon Cognito to access Amazon SES and send email messages with your address\. For more information about the service\-linked role that Amazon Cognito creates, see [Using Service\-Linked Roles for Amazon Cognito](https://docs.aws.amazon.com/cognito/latest/developerguide/using-service-linked-roles.html) in the *Amazon Cognito Developer Guide*\.
+If you use this option, provide the ARN of an Amazon SES verified email address for the `SourceArn` parameter\.  
+Before Amazon Cognito can email your users, it requires additional permissions to call Amazon SES on your behalf\. When you update your user pool with this option, Amazon Cognito creates a *service\-linked role*, which is a type of role in your AWS account\. This role contains the permissions that allow you to access Amazon SES and send email messages from your email address\. For more information about the service\-linked role that Amazon Cognito creates, see [Using Service\-Linked Roles for Amazon Cognito](https://docs.aws.amazon.com/cognito/latest/developerguide/using-service-linked-roles.html) in the *Amazon Cognito Developer Guide*\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `COGNITO_DEFAULT | DEVELOPER`  
@@ -73,16 +63,17 @@ Identifies either the sender's email address or the sender's name with their ema
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplyToEmailAddress`  <a name="cfn-cognito-userpool-emailconfiguration-replytoemailaddress"></a>
-The destination to which the receiver of the email should reply to\.  
+The destination to which the receiver of the email should reply\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `[\p{L}\p{M}\p{S}\p{N}\p{P}]+@[\p{L}\p{M}\p{S}\p{N}\p{P}]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceArn`  <a name="cfn-cognito-userpool-emailconfiguration-sourcearn"></a>
-The Amazon Resource Name \(ARN\) of a verified email address in Amazon SES\. This email address is used in one of the following ways, depending on the value that you specify for the `EmailSendingAccount` parameter:  
-+ If you specify `COGNITO_DEFAULT`, Amazon Cognito uses this address as the custom FROM address when it emails your users by using its built\-in email account\.
+The ARN of a verified email address in Amazon SES\. Amazon Cognito uses this email address in one of the following ways, depending on the value that you specify for the `EmailSendingAccount` parameter:  
++ If you specify `COGNITO_DEFAULT`, Amazon Cognito uses this address as the custom FROM address when it emails your users using its built\-in email account\.
 + If you specify `DEVELOPER`, Amazon Cognito emails your users with this address by calling Amazon SES on your behalf\.
+The Region value of the `SourceArn` parameter must indicate a supported AWS Region of your user pool\. Typically, the Region in the `SourceArn` and the user pool Region are the same\. For more information, see [Amazon SES email configuration regions](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-email.html#user-pool-email-developer-region-mapping) in the [Amazon Cognito Developer Guide](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html)\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  

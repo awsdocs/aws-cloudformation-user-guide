@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile ZendeskConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials"></a>
 
- The `ZendeskConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required when using Zendesk\. 
+ The connector\-specific profile credentials required when using Zendesk\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials-syntax"></a>
 
@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The credentials used to access protected Zendesk resources\.   
 *Required*: No  
 *Type*: String  
-*Maximum*: `512`  
+*Maximum*: `4096`  
 *Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -61,3 +61,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-zendeskconnectorprofilecredentials--seealso"></a>
 + [ZendeskConnectorProfileCredentials](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ZendeskConnectorProfileCredentials.html) in the *Amazon AppFlow API Reference*\.
+

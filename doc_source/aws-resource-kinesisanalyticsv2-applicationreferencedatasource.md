@@ -49,6 +49,8 @@ For a SQL\-based Kinesis Data Analytics application, describes the reference dat
 
 ## Examples<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--examples"></a>
 
+
+
 ### Create an ApplicationReferenceDataSource resource<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--examples--Create_an_ApplicationReferenceDataSource_resource"></a>
 
 #### JSON<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--examples--Create_an_ApplicationReferenceDataSource_resource--json"></a>
@@ -99,23 +101,25 @@ For a SQL\-based Kinesis Data Analytics application, describes the reference dat
 
 ```
 ApplicationReferenceDataSource:
-  Type: 'AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource'
+  Type: AWS::KinesisAnalyticsV2::ApplicationReferenceDataSource
   Properties:
-    ApplicationName: !Ref BasicApplication
+    ApplicationName:
+      Ref: BasicApplication
     ReferenceDataSource:
       TableName: exampleTable
       ReferenceSchema:
         RecordColumns:
-          - Name: example
-            SqlType: VARCHAR(16)
-            Mapping: $.example
+        - Name: example
+          SqlType: VARCHAR(16)
+          Mapping: "$.example"
         RecordFormat:
           RecordFormatType: JSON
           MappingParameters:
             JSONMappingParameters:
-              RecordRowPath: $
+              RecordRowPath: "$"
       S3ReferenceDataSource:
-        BucketARN: !GetAtt 
+        BucketARN:
+          Fn::GetAtt:
           - S3Bucket
           - Arn
         FileKey: fakeKey
@@ -123,3 +127,4 @@ ApplicationReferenceDataSource:
 
 ## See also<a name="aws-resource-kinesisanalyticsv2-applicationreferencedatasource--seealso"></a>
 +  [AddApplicationReferenceDataSource](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_AddApplicationReferenceDataSource.html) in the *Amazon Kinesis Data Analytics API Reference* 
+

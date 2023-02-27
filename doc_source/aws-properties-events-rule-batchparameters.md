@@ -53,3 +53,38 @@ The retry strategy to use for failed jobs, if the target is an AWS Batch job\. T
 *Required*: No  
 *Type*: [BatchRetryStrategy](aws-properties-events-rule-batchretrystrategy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Examples<a name="aws-properties-events-rule-batchparameters--examples"></a>
+
+
+
+### Set the BatchParameters parameters<a name="aws-properties-events-rule-batchparameters--examples--Set_the_BatchParameters_parameters"></a>
+
+The following example sets the `BatchParameters` parameter for a job that has 950 objects and will be tried 8 times\.
+
+#### JSON<a name="aws-properties-events-rule-batchparameters--examples--Set_the_BatchParameters_parameters--json"></a>
+
+```
+"BatchParameters": {
+  "ArrayProperties": {
+      "Size": 950
+   },
+  "JobDefinition": "NewBatchJobDefinition",
+  "JobName": "Job1",
+  "RetryStrategy": {
+      "Attempts": 8
+   }
+}
+```
+
+#### YAML<a name="aws-properties-events-rule-batchparameters--examples--Set_the_BatchParameters_parameters--yaml"></a>
+
+```
+BatchParameters:
+  ArrayProperties:
+    Size: 950
+  JobDefinition: NewBatchJobDefinition
+  JobName: Job1
+  RetryStrategy:
+    Attempts: 8
+```

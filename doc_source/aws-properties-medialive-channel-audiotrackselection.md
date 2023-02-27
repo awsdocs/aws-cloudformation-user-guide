@@ -1,6 +1,8 @@
 # AWS::MediaLive::Channel AudioTrackSelection<a name="aws-properties-medialive-channel-audiotrackselection"></a>
 
-This element specifies the audio by its track number\. This element belongs to AudioSelectorSettings\.
+Information about the audio track to extract\.
+
+The parent of this entity is AudioSelectorSettings\.
 
 ## Syntax<a name="aws-properties-medialive-channel-audiotrackselection-syntax"></a>
 
@@ -24,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-medialive-channel-audiotrackselection-properties"></a>
 
 `Tracks`  <a name="cfn-medialive-channel-audiotrackselection-tracks"></a>
-Selects one or more unique audio tracks from within an mp4 source\.  
+Selects one or more unique audio tracks from within a source\.  
 *Required*: No  
 *Type*: List of [AudioTrack](aws-properties-medialive-channel-audiotrack.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

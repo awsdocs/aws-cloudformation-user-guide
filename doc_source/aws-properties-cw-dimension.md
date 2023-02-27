@@ -37,16 +37,18 @@ The value for the dimension, from 1–255 characters in length\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `255`  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-cw-dimension--examples"></a>
 
-### Two CloudWatch alarms with dimension values supplied by the Ref function<a name="aws-properties-cw-dimension--examples--Two_CloudWatch_alarms_with_dimension_values_supplied_by_the_Ref_function"></a>
+
+
+### Two alarms with dimension values supplied by the Ref function<a name="aws-properties-cw-dimension--examples--Two_alarms_with_dimension_values_supplied_by_the_Ref_function"></a>
 
 The [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) and [GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html) intrinsic functions are often used to supply values for CloudWatch metric dimensions\. Here is an example using the Ref function\.
 
-#### JSON<a name="aws-properties-cw-dimension--examples--Two_CloudWatch_alarms_with_dimension_values_supplied_by_the_Ref_function--json"></a>
+#### JSON<a name="aws-properties-cw-dimension--examples--Two_alarms_with_dimension_values_supplied_by_the_Ref_function--json"></a>
 
 ```
 {
@@ -105,7 +107,7 @@ The [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrins
 }
 ```
 
-#### YAML<a name="aws-properties-cw-dimension--examples--Two_CloudWatch_alarms_with_dimension_values_supplied_by_the_Ref_function--yaml"></a>
+#### YAML<a name="aws-properties-cw-dimension--examples--Two_alarms_with_dimension_values_supplied_by_the_Ref_function--yaml"></a>
 
 ```
 CPUAlarmHigh:

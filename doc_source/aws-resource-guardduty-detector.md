@@ -14,7 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DataSources](#cfn-guardduty-detector-datasources)" : CFNDataSourceConfigurations,
       "[Enable](#cfn-guardduty-detector-enable)" : Boolean,
-      "[FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency)" : String
+      "[FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency)" : String,
+      "[Tags](#cfn-guardduty-detector-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -28,6 +29,8 @@ Properties:
     CFNDataSourceConfigurations
   [Enable](#cfn-guardduty-detector-enable): Boolean
   [FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency): String
+  [Tags](#cfn-guardduty-detector-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-guardduty-detector-properties"></a>
@@ -51,6 +54,13 @@ Specifies how frequently updated findings are exported\.
 *Allowed values*: `FIFTEEN_MINUTES | ONE_HOUR | SIX_HOURS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Tags`  <a name="cfn-guardduty-detector-tags"></a>
+The tags to be added to a new detector resource\. Each tag consists of a key and an optional value, both of which you define\.  
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.   
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Return values<a name="aws-resource-guardduty-detector-return-values"></a>
 
 ### Ref<a name="aws-resource-guardduty-detector-return-values-ref"></a>
@@ -60,6 +70,8 @@ Specifies how frequently updated findings are exported\.
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-guardduty-detector--examples"></a>
+
+
 
 ### Declare a Detector Resource<a name="aws-resource-guardduty-detector--examples--Declare_a_Detector_Resource"></a>
 

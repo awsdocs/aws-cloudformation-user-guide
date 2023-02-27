@@ -1,6 +1,6 @@
 # AWS::EC2::CapacityReservation<a name="aws-resource-ec2-capacityreservation"></a>
 
-Creates a new Capacity Reservation with the specified attributes\. For more information, see [Capacity Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html) in the *Amazon Elastic Compute Cloud User Guide*\.
+Creates a new Capacity Reservation with the specified attributes\. For more information, see [Capacity Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html) in the *Amazon EC2 User Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-capacityreservation-syntax"></a>
 
@@ -21,6 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[InstanceMatchCriteria](#cfn-ec2-capacityreservation-instancematchcriteria)" : String,
       "[InstancePlatform](#cfn-ec2-capacityreservation-instanceplatform)" : String,
       "[InstanceType](#cfn-ec2-capacityreservation-instancetype)" : String,
+      "[OutPostArn](#cfn-ec2-capacityreservation-outpostarn)" : String,
+      "[PlacementGroupArn](#cfn-ec2-capacityreservation-placementgrouparn)" : String,
       "[TagSpecifications](#cfn-ec2-capacityreservation-tagspecifications)" : [ TagSpecification, ... ],
       "[Tenancy](#cfn-ec2-capacityreservation-tenancy)" : String
     }
@@ -41,6 +43,8 @@ Properties:
   [InstanceMatchCriteria](#cfn-ec2-capacityreservation-instancematchcriteria): String
   [InstancePlatform](#cfn-ec2-capacityreservation-instanceplatform): String
   [InstanceType](#cfn-ec2-capacityreservation-instancetype): String
+  [OutPostArn](#cfn-ec2-capacityreservation-outpostarn): String
+  [PlacementGroupArn](#cfn-ec2-capacityreservation-placementgrouparn): String
   [TagSpecifications](#cfn-ec2-capacityreservation-tagspecifications): 
     - TagSpecification
   [Tenancy](#cfn-ec2-capacityreservation-tenancy): String
@@ -78,13 +82,14 @@ Indicates the way in which the Capacity Reservation ends\. A Capacity Reservatio
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EphemeralStorage`  <a name="cfn-ec2-capacityreservation-ephemeralstorage"></a>
-Indicates whether the Capacity Reservation supports instances with temporary, block\-level storage\.  
+ *Deprecated\.*   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceCount`  <a name="cfn-ec2-capacityreservation-instancecount"></a>
 The number of instances for which to reserve capacity\.  
+Valid range: 1 \- 1000  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -103,13 +108,27 @@ Default: `open`
 The type of operating system for which to reserve capacity\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `Linux with SQL Server Enterprise | Linux with SQL Server Standard | Linux with SQL Server Web | Linux/UNIX | Red Hat Enterprise Linux | SUSE Linux | Windows | Windows with SQL Server | Windows with SQL Server Enterprise | Windows with SQL Server Standard | Windows with SQL Server Web`  
+*Allowed values*: `Linux with SQL Server Enterprise | Linux with SQL Server Standard | Linux with SQL Server Web | Linux/UNIX | Red Hat Enterprise Linux | RHEL with HA | RHEL with HA and SQL Server Enterprise | RHEL with HA and SQL Server Standard | RHEL with SQL Server Enterprise | RHEL with SQL Server Standard | RHEL with SQL Server Web | SUSE Linux | Windows | Windows with SQL Server | Windows with SQL Server Enterprise | Windows with SQL Server Standard | Windows with SQL Server Web`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceType`  <a name="cfn-ec2-capacityreservation-instancetype"></a>
-The instance type for which to reserve capacity\. For more information, see [Instance Types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon Elastic Compute Cloud User Guide*\.  
+The instance type for which to reserve capacity\. For more information, see [Instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon EC2 User Guide*\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`OutPostArn`  <a name="cfn-ec2-capacityreservation-outpostarn"></a>
+The Amazon Resource Name \(ARN\) of the Outpost on which to create the Capacity Reservation\.  
+*Required*: No  
+*Type*: String  
+*Pattern*: `^arn:aws([a-z-]+)?:outposts:[a-z\d-]+:\d{12}:outpost/op-[a-f0-9]{17}$`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`PlacementGroupArn`  <a name="cfn-ec2-capacityreservation-placementgrouparn"></a>
+The Amazon Resource Name \(ARN\) of the cluster placement group in which to create the Capacity Reservation\. For more information, see [ Capacity Reservations for cluster placement groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html) in the *Amazon EC2 User Guide*\.  
+*Required*: No  
+*Type*: String  
+*Pattern*: `^arn:aws([a-z-]+)?:ec2:[a-z\d-]+:\d{12}:placement-group/([^\s].+[^\s]){1,255}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TagSpecifications`  <a name="cfn-ec2-capacityreservation-tagspecifications"></a>
@@ -149,6 +168,9 @@ Returns the Availability Zone in which the capacity is reserved\. For example: `
 `AvailableInstanceCount`  <a name="AvailableInstanceCount-fn::getatt"></a>
 Returns the remaining capacity, which indicates the number of instances that can be launched in the Capacity Reservation\. For example: `9`\.
 
+`Id`  <a name="Id-fn::getatt"></a>
+The ID of the Capacity Reservation\.
+
 `InstanceType`  <a name="InstanceType-fn::getatt"></a>
 Returns the type of instance for which the capacity is reserved\. For example: `m4.large`\.
 
@@ -159,4 +181,5 @@ Returns the tenancy of the Capacity Reservation\. For example: `dedicated`\.
 Returns the total number of instances for which the Capacity Reservation reserves capacity\. For example: `15`\.
 
 ## See also<a name="aws-resource-ec2-capacityreservation--seealso"></a>
-+  [ On\-Demand Capacity Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html) in the *Amazon Elastic Compute Cloud User Guide for Linux Instances* 
++  [ On\-Demand Capacity Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html) in the *Amazon EC2 User Guide* 
+

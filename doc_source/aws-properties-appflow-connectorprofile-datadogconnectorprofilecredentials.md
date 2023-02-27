@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile DatadogConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials"></a>
 
- The `DatadogConnectorProfileCredentials` property type specifies the connector\-specific credentials required by Datadog\. 
+ The connector\-specific credentials required by Datadog\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials-syntax"></a>
 
@@ -42,3 +42,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-datadogconnectorprofilecredentials--seealso"></a>
 + [DatadogConnectorProfileCredentials](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_DatadogConnectorProfileCredentials.html) in the *Amazon AppFlow API Reference*\.
+

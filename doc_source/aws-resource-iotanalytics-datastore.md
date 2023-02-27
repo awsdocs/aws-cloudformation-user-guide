@@ -13,7 +13,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IoTAnalytics::Datastore",
   "Properties" : {
       "[DatastoreName](#cfn-iotanalytics-datastore-datastorename)" : String,
+      "[DatastorePartitions](#cfn-iotanalytics-datastore-datastorepartitions)" : DatastorePartitions,
       "[DatastoreStorage](#cfn-iotanalytics-datastore-datastorestorage)" : DatastoreStorage,
+      "[FileFormatConfiguration](#cfn-iotanalytics-datastore-fileformatconfiguration)" : FileFormatConfiguration,
       "[RetentionPeriod](#cfn-iotanalytics-datastore-retentionperiod)" : RetentionPeriod,
       "[Tags](#cfn-iotanalytics-datastore-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -26,8 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IoTAnalytics::Datastore
 Properties: 
   [DatastoreName](#cfn-iotanalytics-datastore-datastorename): String
+  [DatastorePartitions](#cfn-iotanalytics-datastore-datastorepartitions): 
+    DatastorePartitions
   [DatastoreStorage](#cfn-iotanalytics-datastore-datastorestorage): 
     DatastoreStorage
+  [FileFormatConfiguration](#cfn-iotanalytics-datastore-fileformatconfiguration): 
+    FileFormatConfiguration
   [RetentionPeriod](#cfn-iotanalytics-datastore-retentionperiod): 
     RetentionPeriod
   [Tags](#cfn-iotanalytics-datastore-tags): 
@@ -42,13 +48,27 @@ The name of the data store\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `128`  
-*Pattern*: `^[a-zA-Z0-9_]+$`  
+*Pattern*: `(^(?!_{2}))(^[a-zA-Z0-9_]+$)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`DatastorePartitions`  <a name="cfn-iotanalytics-datastore-datastorepartitions"></a>
+Information about the partition dimensions in a data store\.  
+*Required*: No  
+*Type*: [DatastorePartitions](aws-properties-iotanalytics-datastore-datastorepartitions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatastoreStorage`  <a name="cfn-iotanalytics-datastore-datastorestorage"></a>
 Where data store data is stored\.  
 *Required*: No  
 *Type*: [DatastoreStorage](aws-properties-iotanalytics-datastore-datastorestorage.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`FileFormatConfiguration`  <a name="cfn-iotanalytics-datastore-fileformatconfiguration"></a>
+Contains the configuration information of file formats\. AWS IoT Analytics data stores support JSON and [Parquet](https://parquet.apache.org/)\.  
+The default file format is JSON\. You can specify only one format\.  
+You can't change the file format after you create the data store\.  
+*Required*: No  
+*Type*: [FileFormatConfiguration](aws-properties-iotanalytics-datastore-fileformatconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RetentionPeriod`  <a name="cfn-iotanalytics-datastore-retentionperiod"></a>
@@ -66,6 +86,8 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-resource-iotanalytics-datastore--examples"></a>
+
+
 
 ### Simple Datastore<a name="aws-resource-iotanalytics-datastore--examples--Simple_Datastore"></a>
 

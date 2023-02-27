@@ -1,10 +1,11 @@
 # Template snippets<a name="CHAP_TemplateQuickRef"></a>
 
-This section provides a number of example scenarios that you can use to understand how to declare various AWS CloudFormation template parts\. You can also use the snippets as a starting point for sections of your custom templates\. 
+This section provides a number of example scenarios that you can use to understand how to declare various AWS CloudFormation template parts\. You can also use the snippets as a starting point for sections of your custom templates\.
 
 **Topics**
 + [General template snippets](quickref-general.md)
 + [Auto scaling template snippets](quickref-autoscaling.md)
++ [AWS Billing Console template snippets](quickref-billingconductor.md)
 + [AWS CloudFormation template snippets](quickref-cloudformation.md)
 + [Amazon CloudFront template snippets](quickref-cloudfront.md)
 + [Amazon CloudWatch template snippets](quickref-cloudwatch.md)

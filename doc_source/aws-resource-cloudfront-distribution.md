@@ -32,7 +32,7 @@ Properties:
 ## Properties<a name="aws-resource-cloudfront-distribution-properties"></a>
 
 `DistributionConfig`  <a name="cfn-cloudfront-distribution-distributionconfig"></a>
-The current configuration information for the distribution\. Send a `GET` request to the `/CloudFront API version/distribution ID/config` resource\.  
+The distribution's configuration\.  
 *Required*: Yes  
 *Type*: [DistributionConfig](aws-properties-cloudfront-distribution-distributionconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -62,7 +62,12 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `DomainName`  <a name="DomainName-fn::getatt"></a>
 The domain name of the resource, such as `d111111abcdef8.cloudfront.net`\.
 
+`Id`  <a name="Id-fn::getatt"></a>
+The identifier for the distribution, for example `EDFDVBD632BHDS5`\.
+
 ## Examples<a name="aws-resource-cloudfront-distribution--examples"></a>
+
+
 
 ### Create a distribution<a name="aws-resource-cloudfront-distribution--examples--Create_a_distribution"></a>
 
@@ -147,3 +152,4 @@ Resources:
 
 ## See also<a name="aws-resource-cloudfront-distribution--seealso"></a>
 +  [CreateDistribution](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html) in the *Amazon CloudFront API Reference* 
+

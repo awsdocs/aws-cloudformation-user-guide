@@ -1,8 +1,8 @@
 # AWS::Greengrass::DeviceDefinitionVersion Device<a name="aws-properties-greengrass-devicedefinitionversion-device"></a>
 
-<a name="aws-properties-greengrass-devicedefinitionversion-device-description"></a> A device is an AWS IoT device \(thing\) that's added to a Greengrass group\. Greengrass devices can communicate with the Greengrass core in the same group\. For more information, see [What Is AWS IoT Greengrass?](https://docs.aws.amazon.com/greengrass/latest/developerguide/what-is-gg.html) in the *AWS IoT Greengrass Developer Guide*\.
+<a name="aws-properties-greengrass-devicedefinitionversion-device-description"></a> A device is an AWS IoT device \(thing\) that's added to a Greengrass group\. Greengrass devices can communicate with the Greengrass core in the same group\. For more information, see [What Is AWS IoT Greengrass?](https://docs.aws.amazon.com/greengrass/latest/developerguide/what-is-gg.html) in the *AWS IoT Greengrass Version 1 Developer Guide*\.
 
-<a name="aws-properties-greengrass-devicedefinitionversion-device-inheritance"></a> In an AWS CloudFormation template, the `Devices` property of the [ `AWS::Greengrass::DeviceDefinitionVersion` ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinitionversion.html) resource contains a list of `Device` property types\.
+<a name="aws-properties-greengrass-devicedefinitionversion-device-inheritance"></a> In an AWS CloudFormation template, the `Devices` property of the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinitionversion.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinitionversion.html) resource contains a list of `Device` property types\.
 
 ## Syntax<a name="aws-properties-greengrass-devicedefinitionversion-device-syntax"></a>
 
@@ -55,5 +55,5 @@ The Amazon Resource Name \(ARN\) of the device, which is an AWS IoT device \(thi
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See also<a name="aws-properties-greengrass-devicedefinitionversion-device--seealso"></a>
-+  [Device](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-device.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [Device](https://docs.aws.amazon.com/greengrass/latest/apireference/definitions-device.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

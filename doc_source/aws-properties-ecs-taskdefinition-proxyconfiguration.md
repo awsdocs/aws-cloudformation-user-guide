@@ -47,7 +47,7 @@ The set of network configuration parameters to provide the Container Network Int
 +  `EgressIgnoredPorts` \- \(Required\) The egress traffic going to the specified ports is ignored and not redirected to the `ProxyEgressPort`\. It can be an empty list\.
 +  `EgressIgnoredIPs` \- \(Required\) The egress traffic going to the specified IP addresses is ignored and not redirected to the `ProxyEgressPort`\. It can be an empty list\.
 *Required*: No  
-*Type*: List of [KeyValuePair](aws-properties-ecs-taskdefinition-containerdefinitions-environment.md)  
+*Type*: List of [KeyValuePair](aws-properties-ecs-taskdefinition-keyvaluepair.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Type`  <a name="cfn-ecs-taskdefinition-proxyconfiguration-type"></a>

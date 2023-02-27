@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile SalesforceConnectorProfileProperties<a name="aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties"></a>
 
- The `SalesforceConnectorProfileProperties` property type specifies the connector\-specific profile properties required when using Salesforce\. 
+ The connector\-specific profile properties required when using Salesforce\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties-syntax"></a>
 
@@ -40,3 +40,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-salesforceconnectorprofileproperties--seealso"></a>
 + [SalesforceConnectorProfileProperties](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_SalesforceConnectorProfileProperties.html) in the *Amazon AppFlow API Reference*\.
+

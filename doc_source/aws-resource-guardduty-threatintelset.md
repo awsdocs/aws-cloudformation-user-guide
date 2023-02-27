@@ -16,7 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DetectorId](#cfn-guardduty-threatintelset-detectorid)" : String,
       "[Format](#cfn-guardduty-threatintelset-format)" : String,
       "[Location](#cfn-guardduty-threatintelset-location)" : String,
-      "[Name](#cfn-guardduty-threatintelset-name)" : String
+      "[Name](#cfn-guardduty-threatintelset-name)" : String,
+      "[Tags](#cfn-guardduty-threatintelset-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -31,6 +32,8 @@ Properties:
   [Format](#cfn-guardduty-threatintelset-format): String
   [Location](#cfn-guardduty-threatintelset-location): String
   [Name](#cfn-guardduty-threatintelset-name): String
+  [Tags](#cfn-guardduty-threatintelset-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-guardduty-threatintelset-properties"></a>
@@ -57,7 +60,7 @@ The format of the file that contains the ThreatIntelSet\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Location`  <a name="cfn-guardduty-threatintelset-location"></a>
-The URI of the file that contains the ThreatIntelSet\. For example: https://s3\.us\-west\-2\.amazonaws\.com/my\-bucket/my\-object\-key\.  
+The URI of the file that contains the ThreatIntelSet\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -72,6 +75,13 @@ A user\-friendly ThreatIntelSet name displayed in all findings that are generate
 *Maximum*: `300`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Tags`  <a name="cfn-guardduty-threatintelset-tags"></a>
+The tags to be added to a new threat list resource\. Each tag consists of a key and an optional value, both of which you define\.  
+For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.   
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Return values<a name="aws-resource-guardduty-threatintelset-return-values"></a>
 
 ### Ref<a name="aws-resource-guardduty-threatintelset-return-values-ref"></a>
@@ -81,6 +91,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-guardduty-threatintelset--examples"></a>
+
+
 
 ### Declare a ThreatIntelSet Resource<a name="aws-resource-guardduty-threatintelset--examples--Declare_a_ThreatIntelSet_Resource"></a>
 

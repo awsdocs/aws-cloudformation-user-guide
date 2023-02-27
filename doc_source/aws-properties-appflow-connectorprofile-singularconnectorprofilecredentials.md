@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile SingularConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-singularconnectorprofilecredentials"></a>
 
- The `SingularConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required when using Singular\. 
+ The connector\-specific profile credentials required when using Singular\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-singularconnectorprofilecredentials-syntax"></a>
 
@@ -32,3 +32,4 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## See also<a name="aws-properties-appflow-connectorprofile-singularconnectorprofilecredentials--seealso"></a>
 + [SingularConnectorProfileCredentials](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_SingularConnectorProfileCredentials.html) in the *Amazon AppFlow API Reference*\.
+

@@ -65,6 +65,8 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-greengrass-functiondefinitionversion--examples"></a>
 
+
+
 ### Function Definition Version Snippet<a name="aws-resource-greengrass-functiondefinitionversion--examples--Function_Definition_Version_Snippet"></a>
 
 The following snippet defines function definition and function definition version resources\. The function definition version references the function definition and contains a function\. In this example, the Lambda function is created in another stack and is referenced using the `ImportValue` function\.
@@ -178,5 +180,5 @@ TestFunctionDefinitionVersion:
 ```
 
 ## See also<a name="aws-resource-greengrass-functiondefinitionversion--seealso"></a>
-+  [CreateFunctionDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createfunctiondefinitionversion-post.html) in the * AWS IoT Greengrass API Reference * 
-+  [AWS IoT Greengrass Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 
++  [CreateFunctionDefinitionVersion](https://docs.aws.amazon.com/greengrass/latest/apireference/createfunctiondefinitionversion-post.html) in the * AWS IoT Greengrass Version 1 API Reference * 
++  [AWS IoT Greengrass Version 1 Developer Guide](https://docs.aws.amazon.com/greengrass/latest/developerguide/) 

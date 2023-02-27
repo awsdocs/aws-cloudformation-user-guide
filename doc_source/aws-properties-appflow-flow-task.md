@@ -1,6 +1,6 @@
 # AWS::AppFlow::Flow Task<a name="aws-properties-appflow-flow-task"></a>
 
- The `Task` property type specifies the class for modeling different type of tasks\. Task implementation varies based on the `TaskType`\. 
+ A class for modeling different type of tasks\. Task implementation varies based on the `TaskType`\. 
 
 ## Syntax<a name="aws-properties-appflow-flow-task-syntax"></a>
 
@@ -60,11 +60,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TaskType`  <a name="cfn-appflow-flow-task-tasktype"></a>
- Specifies the particular task implementation that Amazon AppFlow performs\.   
+Specifies the particular task implementation that Amazon AppFlow performs\.  
+*Allowed values*: `Arithmetic` \| `Filter` \| `Map` \| `Map_all` \| `Mask` \| `Merge` \| `Truncate` \| `Validate`  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `Arithmetic | Filter | Map | Mask | Merge | Truncate | Validate`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-appflow-flow-task--seealso"></a>
 + [Task](https://docs.aws.amazon.com/appflow/1.0/APIReference/API_Task.html) in the *Amazon AppFlow API Reference*\.
+

@@ -1,4 +1,4 @@
-# IoT1Click resource type reference<a name="AWS_IoT1Click"></a>
+# AWS IoT 1\-Click resource type reference<a name="AWS_IoT1Click"></a>
 
 **Resource types**
 + [AWS::IoT1Click::Device](aws-resource-iot1click-device.md)

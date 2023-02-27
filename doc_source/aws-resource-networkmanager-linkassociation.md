@@ -1,6 +1,6 @@
 # AWS::NetworkManager::LinkAssociation<a name="aws-resource-networkmanager-linkassociation"></a>
 
-Specifies the association between a device and a link\. A device can be associated to multiple links and a link can be associated to multiple devices\. The device and link must be in the same global network and the same site\.
+Describes the association between a device and a link\.
 
 ## Syntax<a name="aws-resource-networkmanager-linkassociation-syntax"></a>
 
@@ -35,18 +35,27 @@ Properties:
 The device ID for the link association\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `50`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GlobalNetworkId`  <a name="cfn-networkmanager-linkassociation-globalnetworkid"></a>
 The ID of the global network\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `50`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LinkId`  <a name="cfn-networkmanager-linkassociation-linkid"></a>
 The ID of the link\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `50`  
+*Pattern*: `[\s\S]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-networkmanager-linkassociation-return-values"></a>
@@ -58,6 +67,8 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-networkmanager-linkassociation--examples"></a>
+
+
 
 ### Link Association<a name="aws-resource-networkmanager-linkassociation--examples--Link_Association"></a>
 

@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudfront-distribution-georestriction-properties"></a>
 
 `Locations`  <a name="cfn-cloudfront-distribution-georestriction-locations"></a>
- A complex type that contains a `Location` element for each country in which you want CloudFront either to distribute your content \(`whitelist`\) or not distribute your content \(`blacklist`\)\.  
+A complex type that contains a `Location` element for each country in which you want CloudFront either to distribute your content \(`whitelist`\) or not distribute your content \(`blacklist`\)\.  
 The `Location` element is a two\-letter, uppercase country code for a country that you want to include in your `blacklist` or `whitelist`\. Include one `Location` element for each country\.  
 CloudFront and `MaxMind` both use `ISO 3166` country codes\. For the current list of countries and the corresponding codes, see `ISO 3166-1-alpha-2` code on the *International Organization for Standardization* website\. You can also refer to the country list on the CloudFront console, which includes both country names and codes\.  
 *Required*: Conditional  
@@ -45,3 +45,4 @@ The method that you want to use to restrict distribution of your content by coun
 
 ## See also<a name="aws-properties-cloudfront-distribution-georestriction--seealso"></a>
 +  [GeoRestriction](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_GeoRestriction.html) in the *Amazon CloudFront API Reference* 
+

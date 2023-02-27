@@ -1,6 +1,6 @@
 # AWS::EC2::ClientVpnEndpoint ClientAuthenticationRequest<a name="aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest"></a>
 
-Describes the authentication method to be used by a Client VPN endpoint\. For more information, see [Authentication](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/authentication-authrization.html#client-authentication) in the *AWS Client VPN Administrator Guide*\.
+Describes the authentication method to be used by a Client VPN endpoint\. For more information, see [Authentication](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/authentication-authrization.html#client-authentication) in the * AWS Client VPN Administrator Guide*\.
 
 ## Syntax<a name="aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest-syntax"></a>
 

@@ -16,7 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GroundStation::DataflowEndpointGroup",
   "Properties" : {
-      "[EndpointDetailsList](#cfn-groundstation-dataflowendpointgroup-endpointdetailslist)" : [ EndpointDetails, ... ],
+      "[ContactPostPassDurationSeconds](#cfn-groundstation-dataflowendpointgroup-contactpostpassdurationseconds)" : Integer,
+      "[ContactPrePassDurationSeconds](#cfn-groundstation-dataflowendpointgroup-contactprepassdurationseconds)" : Integer,
+      "[EndpointDetails](#cfn-groundstation-dataflowendpointgroup-endpointdetails)" : [ EndpointDetails, ... ],
       "[Tags](#cfn-groundstation-dataflowendpointgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -27,7 +29,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::GroundStation::DataflowEndpointGroup
 Properties: 
-  [EndpointDetailsList](#cfn-groundstation-dataflowendpointgroup-endpointdetailslist): 
+  [ContactPostPassDurationSeconds](#cfn-groundstation-dataflowendpointgroup-contactpostpassdurationseconds): Integer
+  [ContactPrePassDurationSeconds](#cfn-groundstation-dataflowendpointgroup-contactprepassdurationseconds): Integer
+  [EndpointDetails](#cfn-groundstation-dataflowendpointgroup-endpointdetails): 
     - EndpointDetails
   [Tags](#cfn-groundstation-dataflowendpointgroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -35,10 +39,22 @@ Properties:
 
 ## Properties<a name="aws-resource-groundstation-dataflowendpointgroup-properties"></a>
 
-`EndpointDetailsList`  <a name="cfn-groundstation-dataflowendpointgroup-endpointdetailslist"></a>
+`ContactPostPassDurationSeconds`  <a name="cfn-groundstation-dataflowendpointgroup-contactpostpassdurationseconds"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ContactPrePassDurationSeconds`  <a name="cfn-groundstation-dataflowendpointgroup-contactprepassdurationseconds"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EndpointDetails`  <a name="cfn-groundstation-dataflowendpointgroup-endpointdetails"></a>
  List of Endpoint Details, containing address and port for each endpoint\.   
 *Required*: Yes  
-*Type*: List of [EndpointDetails](aws-properties-groundstation-dataflowendpointgroup-endpointdetails.md)  
+*Type*: [List](aws-properties-groundstation-dataflowendpointgroup-endpointdetails.md) of [EndpointDetails](aws-properties-groundstation-dataflowendpointgroup-endpointdetails.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-groundstation-dataflowendpointgroup-tags"></a>

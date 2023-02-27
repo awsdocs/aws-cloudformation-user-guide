@@ -29,11 +29,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The identifiers of the subnets for the directory servers\. The two subnets must be in different Availability Zones\. AWS Directory Service specifies a directory server and a DNS server in each of these subnets\.  
 *Required*: Yes  
 *Type*: List of String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcId`  <a name="cfn-directoryservice-simplead-vpcsettings-vpcid"></a>
 The identifier of the VPC in which to create the directory\.  
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `^(vpc-[0-9a-f]{8}|vpc-[0-9a-f]{17})$`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

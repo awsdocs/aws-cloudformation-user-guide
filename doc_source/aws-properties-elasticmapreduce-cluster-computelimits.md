@@ -31,25 +31,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticmapreduce-cluster-computelimits-properties"></a>
 
 `MaximumCapacityUnits`  <a name="cfn-elasticmapreduce-cluster-computelimits-maximumcapacityunits"></a>
- The upper boundary of EC2 units\. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets\. Managed scaling activities are not allowed beyond this boundary\. The limit only applies to the core and task nodes\. The master node cannot be scaled after initial configuration\.   
+ The upper boundary of EC2 units\. It is measured through vCPU cores or instances for instance groups and measured through units for instance fleets\. Managed scaling activities are not allowed beyond this boundary\. The limit only applies to the core and task nodes\. The master node cannot be scaled after initial configuration\.   
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumCoreCapacityUnits`  <a name="cfn-elasticmapreduce-cluster-computelimits-maximumcorecapacityunits"></a>
- The upper boundary of EC2 units for core node type in a cluster\. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets\. The core units are not allowed to scale beyond this boundary\. The parameter is used to split capacity allocation between core and task nodes\.   
+ The upper boundary of EC2 units for core node type in a cluster\. It is measured through vCPU cores or instances for instance groups and measured through units for instance fleets\. The core units are not allowed to scale beyond this boundary\. The parameter is used to split capacity allocation between core and task nodes\.   
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumOnDemandCapacityUnits`  <a name="cfn-elasticmapreduce-cluster-computelimits-maximumondemandcapacityunits"></a>
- The upper boundary of On\-Demand EC2 units\. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets\. The On\-Demand units are not allowed to scale beyond this boundary\. The parameter is used to split capacity allocation between On\-Demand and Spot instances\.   
+ The upper boundary of On\-Demand EC2 units\. It is measured through vCPU cores or instances for instance groups and measured through units for instance fleets\. The On\-Demand units are not allowed to scale beyond this boundary\. The parameter is used to split capacity allocation between On\-Demand and Spot Instances\.   
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinimumCapacityUnits`  <a name="cfn-elasticmapreduce-cluster-computelimits-minimumcapacityunits"></a>
- The lower boundary of EC2 units\. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets\. Managed scaling activities are not allowed beyond this boundary\. The limit only applies to the core and task nodes\. The master node cannot be scaled after initial configuration\.   
+ The lower boundary of EC2 units\. It is measured through vCPU cores or instances for instance groups and measured through units for instance fleets\. Managed scaling activities are not allowed beyond this boundary\. The limit only applies to the core and task nodes\. The master node cannot be scaled after initial configuration\.   
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

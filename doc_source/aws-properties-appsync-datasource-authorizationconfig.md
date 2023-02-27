@@ -28,14 +28,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appsync-datasource-authorizationconfig-properties"></a>
 
 `AuthorizationType`  <a name="cfn-appsync-datasource-authorizationconfig-authorizationtype"></a>
-The authorization type required by the HTTP endpoint\.  
-+  **AWS\_IAM**: The authorization type is Sigv4\.
+The authorization type that the HTTP endpoint requires\.  
++  **AWS\_IAM**: The authorization type is Signature Version 4 \(SigV4\)\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AwsIamConfig`  <a name="cfn-appsync-datasource-authorizationconfig-awsiamconfig"></a>
-The AWS IAM settings\.  
+The AWS Identity and Access Management settings\.  
 *Required*: No  
 *Type*: [AwsIamConfig](aws-properties-appsync-datasource-awsiamconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
