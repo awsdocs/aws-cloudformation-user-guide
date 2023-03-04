@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[CertificateTransparencyLoggingPreference](#cfn-certificatemanager-certificate-certificatetransparencyloggingpreference)" : String,
       "[DomainName](#cfn-certificatemanager-certificate-domainname)" : String,
       "[DomainValidationOptions](#cfn-certificatemanager-certificate-domainvalidationoptions)" : [ DomainValidationOption, ... ],
+      "[KeyAlgorithm](#cfn-certificatemanager-certificate-keyalgorithm)" : String,
       "[SubjectAlternativeNames](#cfn-certificatemanager-certificate-subjectalternativenames)" : [ String, ... ],
       "[Tags](#cfn-certificatemanager-certificate-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[ValidationMethod](#cfn-certificatemanager-certificate-validationmethod)" : String
@@ -37,6 +38,7 @@ Properties:
   [DomainName](#cfn-certificatemanager-certificate-domainname): String
   [DomainValidationOptions](#cfn-certificatemanager-certificate-domainvalidationoptions): 
     - DomainValidationOption
+  [KeyAlgorithm](#cfn-certificatemanager-certificate-keyalgorithm): String
   [SubjectAlternativeNames](#cfn-certificatemanager-certificate-subjectalternativenames): 
     - String
   [Tags](#cfn-certificatemanager-certificate-tags): 
@@ -81,6 +83,14 @@ In order for a AWS::CertificateManager::Certificate to be provisioned and valida
 *Type*: List of [DomainValidationOption](aws-properties-certificatemanager-certificate-domainvalidationoption.md)  
 *Maximum*: `100`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`KeyAlgorithm`  <a name="cfn-certificatemanager-certificate-keyalgorithm"></a>
+Specifies the algorithm of the public and private key pair that your certificate uses to encrypt data. RSA is the default key algorithm for ACM certificates. Elliptic Curve Digital Signature Algorithm (ECDSA) keys are smaller, offering security comparable to RSA keys but with greater computing efficiency. However, ECDSA is not supported by all network clients. Some AWS services may require RSA keys, or only support ECDSA keys of a particular size, while others allow the use of either RSA and ECDSA keys to ensure that compatibility is not broken. Check the requirements for the AWS service where you plan to deploy your certificate\.
+If not specified, this property defaults to RSA_2048\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `RSA_1024 | RSA_2048 | RSA_3072 | RSA_4096 | EC_prime256v1 | EC_secp384r1 | EC_secp521r1`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)  
 
 `SubjectAlternativeNames`  <a name="cfn-certificatemanager-certificate-subjectalternativenames"></a>
 Additional FQDNs to be included in the Subject Alternative Name extension of the ACM certificate\. For example, you can add www\.example\.net to a certificate for which the `DomainName` field is www\.example\.com if users can reach your site by using either name\.  
