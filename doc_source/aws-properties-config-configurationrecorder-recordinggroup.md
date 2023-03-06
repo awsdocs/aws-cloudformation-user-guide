@@ -62,7 +62,7 @@ The configuration details for any global resource are the same in all regions\. 
 `ResourceTypes`  <a name="cfn-config-configurationrecorder-recordinggroup-resourcetypes"></a>
 A comma\-separated list that specifies the types of AWS resources for which AWS Config records configuration changes \(for example, `AWS::EC2::Instance` or `AWS::CloudTrail::Trail`\)\.  
 To record all configuration changes, you must set the `AllSupported` option to `false`\.  
-If you set this option to `true`, when AWS Config adds support for a new type of resource, it will not record resources of that type unless you manually add that type to your recording group\.  
+If you set the `AllSupported` option to false and populate the `ResourceTypes` option with values, when AWS Config adds support for a new type of resource, it will not record resources of that type unless you manually add that type to your recording group\.  
 For a list of valid `resourceTypes` values, see the **resourceType Value** column in [Supported AWS Resource Types](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources)\.  
 *Required*: No  
 *Type*: List of String  

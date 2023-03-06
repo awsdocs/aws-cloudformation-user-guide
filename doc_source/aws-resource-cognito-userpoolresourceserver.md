@@ -94,18 +94,39 @@ The following example creates a resource server "Name" with the identifier "Iden
 #### JSON<a name="aws-resource-cognito-userpoolresourceserver--examples--Creating_a_new_resource_server_for_a_user_pool--json"></a>
 
 ```
-{ "UserPoolResourceServer": { "Type":
-        "AWS::Cognito::UserPoolResourceServer", "Properties": { "UserPoolId": { "Ref": "UserPool" },
-        "Identifier": "Identifier", "Name": "Name", "Scopes": [{ "ScopeName": "ScopeName1",
-        "ScopeDescription": "description" }, { "ScopeName": "ScopeName2", "ScopeDescription":
-        "description" }] } } }
+{
+	"UserPoolResourceServer": {
+		"Type": "AWS::Cognito::UserPoolResourceServer",
+		"Properties": {
+			"UserPoolId": {
+				"Ref": "UserPool"
+			},
+			"Identifier": "Identifier",
+			"Name": "Name",
+			"Scopes": [{
+				"ScopeName": "ScopeName1",
+				"ScopeDescription": "description"
+			}, {
+				"ScopeName": "ScopeName2",
+				"ScopeDescription": "description"
+			}]
+		}
+	}
+}
 ```
 
 #### YAML<a name="aws-resource-cognito-userpoolresourceserver--examples--Creating_a_new_resource_server_for_a_user_pool--yaml"></a>
 
 ```
-UserPoolResourceServer: Type: AWS::Cognito::UserPoolResourceServer
-        Properties: UserPoolId: !Ref UserPool Identifier: "Identifier" Name: "Name" Scopes: -
-        ScopeName: "ScopeName1" ScopeDescription: "description" - ScopeName: "ScopeName2"
-        ScopeDescription: "description"
+UserPoolResourceServer: 
+  Type: AWS::Cognito::UserPoolResourceServer
+  Properties: 
+    UserPoolId: !Ref UserPool 
+    Identifier: "Identifier" 
+    Name: "Name" 
+    Scopes: 
+     - ScopeName: "ScopeName1" 
+       ScopeDescription: "description" 
+     - ScopeName: "ScopeName2"
+       ScopeDescription: "description"
 ```

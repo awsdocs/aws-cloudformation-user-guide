@@ -41,10 +41,7 @@ Credential pair\. For more information, see ` [CredentialPair](https://docs.aws.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecretArn`  <a name="cfn-quicksight-datasource-datasourcecredentials-secretarn"></a>
-The Amazon Resource Name \(ARN\) of the secret associated with the data source in Amazon Secrets Manager\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `2048`  
-*Pattern*: `^arn:[-a-z0-9]*:secretsmanager:[-a-z0-9]*:[0-9]{12}:secret:.+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

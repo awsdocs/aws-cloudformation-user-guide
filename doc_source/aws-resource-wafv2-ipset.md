@@ -126,6 +126,20 @@ The ID of the IP set\.
 
 The following shows an example IP set specification\. 
 
+#### YAML<a name="aws-resource-wafv2-ipset--examples--Create_an_IP_set--yaml"></a>
+
+```
+ SampleIPSet:
+      Type: 'AWS::WAFv2::IPSet'
+      Properties:
+        Description: SampleIPSet
+        Name: SampleIPSet
+        Scope: REGIONAL
+        IPAddressVersion: IPV4
+        Addresses:
+          - 1.2.1.1/32
+```
+
 #### JSON<a name="aws-resource-wafv2-ipset--examples--Create_an_IP_set--json"></a>
 
 ```
@@ -141,18 +155,4 @@ The following shows an example IP set specification\.
         ]
       }
     }
-```
-
-#### YAML<a name="aws-resource-wafv2-ipset--examples--Create_an_IP_set--yaml"></a>
-
-```
- SampleIPSet:
-      Type: 'AWS::WAFv2::IPSet'
-      Properties:
-        Description: SampleIPSet
-        Name: SampleIPSet
-        Scope: REGIONAL
-        IPAddressVersion: IPV4
-        Addresses:
-          - 1.2.1.1/32
 ```

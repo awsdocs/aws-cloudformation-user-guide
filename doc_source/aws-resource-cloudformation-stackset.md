@@ -143,6 +143,7 @@ Describes how the IAM roles required for stack set operations are created\.
 The `PermissionModel` property is required\.
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `SELF_MANAGED | SERVICE_MANAGED`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StackInstancesGroup`  <a name="cfn-cloudformation-stackset-stackinstancesgroup"></a>

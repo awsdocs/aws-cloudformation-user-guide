@@ -106,7 +106,7 @@ The Amazon Resource Name \(ARN\) of the IAM role that provides permissions for t
 
 `Tags`  <a name="cfn-eks-cluster-tags"></a>
 The metadata that you apply to the cluster to assist with categorization and organization\. Each tag consists of a key and an optional value, both of which you define\. Cluster tags don't propagate to any other resources associated with the cluster\.  
-You must have the `eks:TagResource` and `eks:UntagResource` permissions in your IAM user or IAM role used to manage the CloudFormation stack\. If you don't have these permissions, there might be unexpected behavior with stack\-level tags propagating to the resource during resource creation and update\.
+You must have the `eks:TagResource` and `eks:UntagResource` permissions for your [IAM principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html) to manage the AWS CloudFormation stack\. If you don't have these permissions, there might be unexpected behavior with stack\-level tags propagating to the resource during resource creation and update\.
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -158,7 +158,7 @@ The endpoint for your Kubernetes API server, such as `https://5E1D0CEXAMPLEA591B
 The ID of your local Amazon EKS cluster on an AWS Outpost\. This property isn't available for an Amazon EKS cluster on the AWS cloud\.
 
 `KubernetesNetworkConfig.ServiceIpv6Cidr`  <a name="KubernetesNetworkConfig.ServiceIpv6Cidr-fn::getatt"></a>
-The CIDR block that Kubernetes Service IP addresses are assigned from if you created a 1\.21 or later cluster with version 1\.10\.1 or later of the Amazon VPC CNI add\-on and specified `ipv6` for **ipFamily** when you created the cluster\. Kubernetes assigns Service addresses from the unique local address range \(`fc00::/7`\) because you can't specify a custom IPv6 CIDR block when you create the cluster\.
+The CIDR block that Kubernetes Service IP addresses are assigned from if you created a `1.21` or later cluster with version `>1.10.1` or later of the Amazon VPC CNI add\-on and specified `ipv6` for **ipFamily** when you created the cluster\. Kubernetes assigns Service addresses from the unique local address range \(`fc00::/7`\) because you can't specify a custom `IPv6` CIDR block when you create the cluster\.
 
 `OpenIdConnectIssuerUrl`  <a name="OpenIdConnectIssuerUrl-fn::getatt"></a>
 The issuer URL for the OIDC identity provider\.

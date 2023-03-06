@@ -99,13 +99,16 @@ The status of the endpoint\.
 The port number on which the cluster accepts incoming connections\.
 
 `VpcEndpoint`  <a name="VpcEndpoint-fn::getatt"></a>
-Property description not available\.
+The connection endpoint for connecting to an Amazon Redshift cluster through the proxy\.
 
 `VpcEndpoint.NetworkInterfaces`  <a name="VpcEndpoint.NetworkInterfaces-fn::getatt"></a>
 Property description not available\.
 
 `VpcEndpoint.VpcEndpointId`  <a name="VpcEndpoint.VpcEndpointId-fn::getatt"></a>
-Property description not available\.
+The connection endpoint ID for connecting an Amazon Redshift cluster through the proxy\.
 
 `VpcEndpoint.VpcId`  <a name="VpcEndpoint.VpcId-fn::getatt"></a>
-Property description not available\.
+The VPC identifier that the endpoint is associated\.
+
+`VpcSecurityGroups`  <a name="VpcSecurityGroups-fn::getatt"></a>
+The security groups associated with the endpoint\.

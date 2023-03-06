@@ -1,6 +1,6 @@
 # AWS::EKS::Cluster ControlPlanePlacement<a name="aws-properties-eks-cluster-controlplaneplacement"></a>
 
-The placement configuration for all the control plane instances of your local Amazon EKS cluster on an AWS Outpost\. For more information, see [Capacity considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html) in the *Amazon EKS User Guide* 
+The placement configuration for all the control plane instances of your local Amazon EKS cluster on an AWS Outpost\. For more information, see [Capacity considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html) in the Amazon EKS User Guide\.
 
 ## Syntax<a name="aws-properties-eks-cluster-controlplaneplacement-syntax"></a>
 

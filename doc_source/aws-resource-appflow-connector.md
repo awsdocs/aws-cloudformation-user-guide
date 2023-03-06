@@ -56,7 +56,7 @@ The provisioning type used to register the connector\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-appflow-connector-description"></a>
- A description of the connector entity field\.   
+A description about the connector runtime setting\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `1024`  

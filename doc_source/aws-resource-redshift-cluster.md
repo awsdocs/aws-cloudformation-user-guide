@@ -365,7 +365,7 @@ The value must be either \-1 or an integer between 1 and 3,653\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MasterUsername`  <a name="cfn-redshift-cluster-masterusername"></a>
-The user name associated with the admin user account for the cluster that is being created\.  
+The user name associated with the admin user for the cluster that is being created\.  
 Constraints:  
 + Must be 1 \- 128 alphanumeric characters or hyphens\. The user name can't be `PUBLIC`\.
 + Must contain only lowercase letters, numbers, underscore, plus sign, period \(dot\), at symbol \(@\), or hyphen\.
@@ -378,7 +378,7 @@ Constraints:
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MasterUserPassword`  <a name="cfn-redshift-cluster-masteruserpassword"></a>
-The password associated with the admin user account for the cluster that is being created\.  
+The password associated with the admin user for the cluster that is being created\.  
 Constraints:  
 + Must be between 8 and 64 characters in length\.
 + Must contain at least one uppercase letter\.
@@ -460,7 +460,7 @@ Property description not available\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SnapshotClusterIdentifier`  <a name="cfn-redshift-cluster-snapshotclusteridentifier"></a>
-The name of the cluster the source snapshot was created from\. This parameter is required if your IAM user has a policy containing a snapshot resource element that specifies anything other than \* for the cluster name\.  
+The name of the cluster the source snapshot was created from\. This parameter is required if your user or role has a policy containing a snapshot resource element that specifies anything other than \* for the cluster name\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `2147483647`  
@@ -592,5 +592,6 @@ myCluster:
 ```
 
 ## See also<a name="aws-resource-redshift-cluster--seealso"></a>
-+ For a complete example template, see [Amazon Redshift Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-redshift.html)\.
-+ [CreateCluster](https://docs.aws.amazon.com/redshift/latest/APIReference/API_CreateCluster.html) in the *Redshift API Reference*\.
++ For a complete example template, see [Amazon Redshift Template Snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-redshift.html) \.
++  [CreateCluster](https://docs.aws.amazon.com/redshift/latest/APIReference/API_CreateCluster.html) in the *Redshift API Reference*\.
+

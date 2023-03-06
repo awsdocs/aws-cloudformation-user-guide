@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[MasterSecretKmsKeyArn](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-mastersecretkmskeyarn)" : String,
   "[RotationLambdaName](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-rotationlambdaname)" : String,
   "[RotationType](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-rotationtype)" : String,
+  "[Runtime](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-runtime)" : String,
   "[SuperuserSecretArn](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-superusersecretarn)" : String,
   "[SuperuserSecretKmsKeyArn](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-superusersecretkmskeyarn)" : String,
   "[VpcSecurityGroupIds](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-vpcsecuritygroupids)" : String,
@@ -36,6 +37,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [MasterSecretKmsKeyArn](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-mastersecretkmskeyarn): String
   [RotationLambdaName](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-rotationlambdaname): String
   [RotationType](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-rotationtype): String
+  [Runtime](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-runtime): String
   [SuperuserSecretArn](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-superusersecretarn): String
   [SuperuserSecretKmsKeyArn](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-superusersecretkmskeyarn): String
   [VpcSecurityGroupIds](#cfn-secretsmanager-rotationschedule-hostedrotationlambda-vpcsecuritygroupids): String
@@ -57,14 +59,16 @@ The ARN of the KMS key that Secrets Manager uses to encrypt the secret\. If you 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MasterSecretArn`  <a name="cfn-secretsmanager-rotationschedule-hostedrotationlambda-mastersecretarn"></a>
-The ARN of the secret that contains elevated credentials\. You must create the elevated secret before you can set this property\. The Lambda rotation function uses this secret for the [ Alternating users rotation strategy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users)\.  
+The ARN of the secret that contains superuser credentials, if you use the [ Alternating users rotation strategy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users)\. CloudFormation grants the execution role for the Lambda rotation function `GetSecretValue` permission to the secret in this property\. For more information, see [Lambda rotation function execution role permissions for Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets-required-permissions-function.html)\.   
+You must create the superuser secret before you can set this property\.   
+You must also include the superuser secret ARN as a key in the JSON of the rotating secret so that the Lambda rotation function can find it\. CloudFormation does not hardcode secret ARNs in the Lambda rotation function, so you can use the function to rotate multiple secrets\. For more information, see [JSON structure of Secrets Manager secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_secret_json_structure.html)\.   
 You can specify `MasterSecretArn` or `SuperuserSecretArn` but not both\. They represent the same superuser secret\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MasterSecretKmsKeyArn`  <a name="cfn-secretsmanager-rotationschedule-hostedrotationlambda-mastersecretkmskeyarn"></a>
-The ARN of the KMS key that Secrets Manager uses to encrypt the elevated secret if you use the [alternating users strategy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users)\. If you don't specify this value and you use the alternating users strategy, then Secrets Manager uses the key `aws/secretsmanager`\. If `aws/secretsmanager` doesn't yet exist, then Secrets Manager creates it for you automatically the first time it encrypts the secret value\.  
+The ARN of the KMS key that Secrets Manager used to encrypt the superuser secret, if you use the [alternating users strategy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users) and the superuser secret is encrypted with a customer managed key\. You don't need to specify this property if the superuser secret is encrypted using the key `aws/secretsmanager`\. CloudFormation grants the execution role for the Lambda rotation function `Decrypt`, `DescribeKey`, and `GenerateDataKey` permission to the key in this property\. For more information, see [Lambda rotation function execution role permissions for Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets-required-permissions-function.html)\.   
 You can specify `MasterSecretKmsKeyArn` or `SuperuserSecretKmsKeyArn` but not both\. They represent the same superuser secret KMS key\.  
 *Required*: No  
 *Type*: String  
@@ -96,15 +100,23 @@ The rotation template to base the rotation function on, one of the following:
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Runtime`  <a name="cfn-secretsmanager-rotationschedule-hostedrotationlambda-runtime"></a>
+The Python runtime version associated with the Lambda function\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SuperuserSecretArn`  <a name="cfn-secretsmanager-rotationschedule-hostedrotationlambda-superusersecretarn"></a>
-The ARN of the secret that contains elevated credentials\. You must create the superuser secret before you can set this property\. The Lambda rotation function uses this secret for the [ Alternating users rotation strategy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users)\.  
+The ARN of the secret that contains superuser credentials, if you use the [ Alternating users rotation strategy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users)\. CloudFormation grants the execution role for the Lambda rotation function `GetSecretValue` permission to the secret in this property\. For more information, see [Lambda rotation function execution role permissions for Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets-required-permissions-function.html)\.   
+You must create the superuser secret before you can set this property\.   
+You must also include the superuser secret ARN as a key in the JSON of the rotating secret so that the Lambda rotation function can find it\. CloudFormation does not hardcode secret ARNs in the Lambda rotation function, so you can use the function to rotate multiple secrets\. For more information, see [JSON structure of Secrets Manager secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_secret_json_structure.html)\.   
 You can specify `MasterSecretArn` or `SuperuserSecretArn` but not both\. They represent the same superuser secret\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SuperuserSecretKmsKeyArn`  <a name="cfn-secretsmanager-rotationschedule-hostedrotationlambda-superusersecretkmskeyarn"></a>
-The ARN of the KMS key that Secrets Manager uses to encrypt the elevated secret if you use the [alternating users strategy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users)\. If you don't specify this value and you use the alternating users strategy, then Secrets Manager uses the key `aws/secretsmanager`\. If `aws/secretsmanager` doesn't yet exist, then Secrets Manager creates it for you automatically the first time it encrypts the secret value\.  
+The ARN of the KMS key that Secrets Manager used to encrypt the superuser secret, if you use the [alternating users strategy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users) and the superuser secret is encrypted with a customer managed key\. You don't need to specify this property if the superuser secret is encrypted using the key `aws/secretsmanager`\. CloudFormation grants the execution role for the Lambda rotation function `Decrypt`, `DescribeKey`, and `GenerateDataKey` permission to the key in this property\. For more information, see [Lambda rotation function execution role permissions for Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets-required-permissions-function.html)\.   
 You can specify `MasterSecretKmsKeyArn` or `SuperuserSecretKmsKeyArn` but not both\. They represent the same superuser secret KMS key\.  
 *Required*: No  
 *Type*: String  

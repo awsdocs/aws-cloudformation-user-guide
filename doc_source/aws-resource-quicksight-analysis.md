@@ -1,6 +1,6 @@
 # AWS::QuickSight::Analysis<a name="aws-resource-quicksight-analysis"></a>
 
-Creates an analysis in Amazon QuickSight\. Analyses can be created either from a template or from an `AnalysisDefinition`\.
+Creates an analysis in Amazon QuickSight\.
 
 ## Syntax<a name="aws-resource-quicksight-analysis-syntax"></a>
 

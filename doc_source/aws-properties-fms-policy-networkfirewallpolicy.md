@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-fms-policy-networkfirewallpolicy-properties"></a>
 
 `FirewallDeploymentModel`  <a name="cfn-fms-policy-networkfirewallpolicy-firewalldeploymentmodel"></a>
-Defines the deployment model to use for the firewall policy\. To use a distributed model, set [PolicyOption](https://docs.aws.amazon.com/fms/2018-01-01/APIReference/API_PolicyOption.html) to `NULL`\.  
+Defines the deployment model to use for the firewall policy\. To use a distributed model, set [FirewallDeploymentModel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-thirdpartyfirewallpolicy.html) to `DISTRIBUTED`\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `CENTRALIZED | DISTRIBUTED`  

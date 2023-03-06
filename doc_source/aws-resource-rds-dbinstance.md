@@ -615,7 +615,7 @@ The ARN of the AWS KMS key that's used to encrypt the DB instance, such as `arn:
 If you specify the `SourceDBInstanceIdentifier` property, the value is inherited from the source DB instance if the read replica is created in the same region\.  
 If you create an encrypted read replica in a different AWS Region, then you must specify a KMS key for the destination AWS Region\. KMS encryption keys are specific to the region that they're created in, and you can't use encryption keys from one region in another region\.  
 If you specify the `SnapshotIdentifier` property, the `StorageEncrypted` property value is inherited from the snapshot, and if the DB instance is encrypted, the specified `KmsKeyId` property is used\.  
-If you specify `DBSecurityGroups`, AWS CloudFormation ignores this property\. To specify both a security group and this property, you must use a VPC security group\. For more information about Amazon RDS and VPC, see [Using Amazon RDS with Amazon VPC](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html) in the *Amazon RDS User Guide*\.  
+If you specify `DBSecurityGroups`, AWS CloudFormation ignores this property\. To specify both a security group and this property, you must use a VPC security group\. For more information about Amazon RDS and VPC, see [Using Amazon RDS with Amazon VPC](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html) in the *Amazon RDS User Guide*\.  
  **Amazon Aurora**   
 Not applicable\. The KMS key identifier is managed by the DB cluster\.  
 *Required*: No  
@@ -780,8 +780,17 @@ For information about enabling Performance Insights, see [ EnablePerformanceInsi
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `PerformanceInsightsRetentionPeriod`  <a name="cfn-rds-dbinstance-performanceinsightsretentionperiod"></a>
-The amount of time, in days, to retain Performance Insights data\. Valid values are 7 or 731 \(2 years\)\.   
-For information about enabling Performance Insights, see [ EnablePerformanceInsights](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-enableperformanceinsights)\.  
+The number of days to retain Performance Insights data\. The default is 7 days\. The following values are valid:  
++ 7
++  *month* \* 31, where *month* is a number of months from 1\-23
++ 731
+For example, the following values are valid:  
++ 93 \(3 months \* 31\)
++ 341 \(11 months \* 31\)
++ 589 \(19 months \* 31\)
++ 731
+If you specify a retention period such as 94, which isn't a valid value, RDS issues an error\.  
+This setting doesn't apply to RDS Custom\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -985,10 +994,10 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-rds-dbinstance-return-values-fn--getatt-fn--getatt"></a>
 
 `CertificateDetails.CAIdentifier`  <a name="CertificateDetails.CAIdentifier-fn::getatt"></a>
-Property description not available\.
+The CA identifier of the CA certificate used for the DB instance's server certificate\.
 
 `CertificateDetails.ValidTill`  <a name="CertificateDetails.ValidTill-fn::getatt"></a>
-Property description not available\.
+The expiration date of the DB instance’s server certificate\.
 
 `DBInstanceArn`  <a name="DBInstanceArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) for the DB instance\.

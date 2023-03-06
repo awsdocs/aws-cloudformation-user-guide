@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetFileSize`  <a name="cfn-appflow-flow-aggregationconfig-targetfilesize"></a>
-The desired file size, in MB, for each output file that Amazon AppFlow writes to the flow destination\. For each file, Amazon AppFlow attempts to achieve the size that you specify\. The actual file sizes might differ from this target based on the number and size of the records that each file contains\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -13,4 +13,5 @@
 + [AWS::NetworkManager::SiteToSiteVpnAttachment](aws-resource-networkmanager-sitetositevpnattachment.md)
 + [AWS::NetworkManager::TransitGatewayPeering](aws-resource-networkmanager-transitgatewaypeering.md)
 + [AWS::NetworkManager::TransitGatewayRegistration](aws-resource-networkmanager-transitgatewayregistration.md)
++ [AWS::NetworkManager::TransitGatewayRouteTableAttachment](aws-resource-networkmanager-transitgatewayroutetableattachment.md)
 + [AWS::NetworkManager::VpcAttachment](aws-resource-networkmanager-vpcattachment.md)

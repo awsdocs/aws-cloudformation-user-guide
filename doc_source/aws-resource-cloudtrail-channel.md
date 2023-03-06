@@ -12,7 +12,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::CloudTrail::Channel",
   "Properties" : {
-      "[Channel](#cfn-cloudtrail-channel-channel)" : String,
       "[Destinations](#cfn-cloudtrail-channel-destinations)" : [ Destination, ... ],
       "[Name](#cfn-cloudtrail-channel-name)" : String,
       "[Source](#cfn-cloudtrail-channel-source)" : String,
@@ -26,7 +25,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::CloudTrail::Channel
 Properties: 
-  [Channel](#cfn-cloudtrail-channel-channel): String
   [Destinations](#cfn-cloudtrail-channel-destinations): 
     - Destination
   [Name](#cfn-cloudtrail-channel-name): String
@@ -36,12 +34,6 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-cloudtrail-channel-properties"></a>
-
-`Channel`  <a name="cfn-cloudtrail-channel-channel"></a>
-Contains information about a returned CloudTrail channel\.  
-*Required*: No  
-*Type*: [String](aws-properties-cloudtrail-channel-channel.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Destinations`  <a name="cfn-cloudtrail-channel-destinations"></a>
 One or more event data stores to which events arriving through a channel will be logged\.  
@@ -67,7 +59,7 @@ The name of the partner or external event source\. You cannot change this name a
 *Minimum*: `1`  
 *Maximum*: `256`  
 *Pattern*: `.*`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-cloudtrail-channel-tags"></a>
 A list of tags\.  
@@ -92,9 +84,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `ChannelArn`  <a name="ChannelArn-fn::getatt"></a>
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ARN of the CloudTrail channel, such as `arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890`\.
-
-`Channels`  <a name="Channels-fn::getatt"></a>
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the names of CloudTrail channels\.
 
 ## Examples<a name="aws-resource-cloudtrail-channel--examples"></a>
 

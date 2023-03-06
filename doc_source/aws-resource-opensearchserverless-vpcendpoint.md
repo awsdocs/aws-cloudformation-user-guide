@@ -49,7 +49,7 @@ The unique identifiers of the security groups that define the ports, protocols, 
 
 `SubnetIds`  <a name="cfn-opensearchserverless-vpcendpoint-subnetids"></a>
 The ID of the subnets from which you access OpenSearch Serverless\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -76,7 +76,7 @@ If you specify the `AuthorizerId` property, specify `CUSTOM` or `COGNITO_USER_PO
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthorizerId`  <a name="cfn-apigateway-method-authorizerid"></a>
-The identifier of an Authorizer to use on this method\. The `authorizationType` must be `CUSTOM`\.  
+The identifier of an authorizer to use on this method\. The method's authorization type must be `CUSTOM` or `COGNITO_USER_POOLS`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

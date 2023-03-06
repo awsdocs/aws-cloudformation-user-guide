@@ -49,7 +49,7 @@ Specifies the action that is to be applied to the findings that match the filter
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-guardduty-filter-description"></a>
-The description of the filter\. Valid special characters include period \(\.\), underscore \(\_\), dash \(\-\), and whitespace\. The new line character is considered to be an invalid input for description\.  
+The description of the filter\. Valid characters include alphanumeric characters, and special characters such as hyphen, period, colon, underscore, parentheses \(`{ }`, `[ ]`, and `( )`\), forward slash, horizontal tab, vertical tab, newline, form feed, return, and whitespace\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `0`  

@@ -17,7 +17,7 @@ For more information about all the services that you can control access to, see 
 
 ## AWS CloudFormation actions<a name="using-iam-template-actions"></a>
 
-When you create a group or an IAM user in your AWS account, you can associate an IAM policy with that group or user, which specifies the permissions that you want to grant\. For example, imagine you have a group of entry\-level developers\. You can create a `Junior application developers` group that includes all entry\-level developers\. Then, you associate a policy with that group that allows users to only view AWS CloudFormation stacks\. In this scenario, you might have a policy such as the following sample:
+When you create a group or a user in your AWS account, you can associate an IAM policy with that group or user, which specifies the permissions that you want to grant\. For example, imagine you have a group of entry\-level developers\. You can create a `Junior application developers` group that includes all entry\-level developers\. Then, you associate a policy with that group that allows users to only view AWS CloudFormation stacks\. In this scenario, you might have a policy such as the following sample:
 
 **Example A sample policy that grants view stack permissions**  
 
@@ -42,7 +42,7 @@ The policy grants permissions to all `DescribeStack` API actions listed in the `
 **Important**  
 If you don't specify a stack name or ID in your statement, you must also grant the permission to use all resources for the action using the `*` wildcard for the `Resource` element\.
 
-In addition to AWS CloudFormation actions, IAM users who create or delete stacks require additional permissions that depend on the stack templates\. For example, if you have a template that describes an Amazon SQS Queue, the user must have the corresponding permissions for Amazon SQS actions to successfully create the stack, as shown in the following sample policy:
+In addition to AWS CloudFormation actions, users who create or delete stacks require additional permissions that depend on the stack templates\. For example, if you have a template that describes an Amazon SQS Queue, the user must have the corresponding permissions for Amazon SQS actions to successfully create the stack, as shown in the following sample policy:
 
 **Example A sample policy that grants create and view stack actions and all Amazon SQS actions**  
 
@@ -69,7 +69,7 @@ For a list of all AWS CloudFormation actions that you can allow or deny, see the
 
 ### AWS CloudFormation console\-specific actions<a name="w2ab1c17c19c11c16"></a>
 
-IAM users who use the AWS CloudFormation console require additional permissions that aren't required for using the AWS Command Line Interface or AWS CloudFormation APIs\. Compared to the AWS CLI and API, the console provides additional features that require additional permissions, such as template uploads to Amazon S3 buckets and drop\-down lists for [AWS\-specific parameter types](parameters-section-structure.md#aws-specific-parameter-types)\.
+Users who use the AWS CloudFormation console require additional permissions that aren't required for using the AWS Command Line Interface or AWS CloudFormation APIs\. Compared to the AWS CLI and API, the console provides additional features that require additional permissions, such as template uploads to Amazon S3 buckets and drop\-down lists for [AWS\-specific parameter types](parameters-section-structure.md#aws-specific-parameter-types)\.
 
 For all the following actions, grant permissions to all resources; don't limit actions to specific stacks or buckets\.
 
@@ -175,7 +175,7 @@ These policy restrictions only apply when stack set operations target the `us-ea
 
 ## AWS CloudFormation conditions<a name="using-iam-template-conditions"></a>
 
-In an IAM policy, you can optionally specify conditions that control when a policy is in effect\. For example, you can define a policy that allows IAM users to create a stack only when they specify a certain template URL\. You can define AWS CloudFormation\-specific conditions and AWS\-wide conditions, such as `DateLessThan`, which specifies when a policy stops taking effect\. For more information and a list of AWS\-wide conditions, see Condition in [IAM policy elements reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/AccessPolicyLanguage_ElementDescriptions.html#Condition) in *IAM User Guide*\.
+In an IAM policy, you can optionally specify conditions that control when a policy is in effect\. For example, you can define a policy that allows users to create a stack only when they specify a certain template URL\. You can define AWS CloudFormation\-specific conditions and AWS\-wide conditions, such as `DateLessThan`, which specifies when a policy stops taking effect\. For more information and a list of AWS\-wide conditions, see Condition in [IAM policy elements reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/AccessPolicyLanguage_ElementDescriptions.html#Condition) in *IAM User Guide*\.
 
 **Note**  
 Don't use the `aws:SourceIp` AWS\-wide condition\. AWS CloudFormation provisions resources by using its own IP address, not the IP address of the originating request\. For example, when you create a stack, AWS CloudFormation makes requests from its IP address to launch an Amazon EC2 instance or to create an Amazon S3 bucket, not from the IP address from the `CreateStack` call or the `aws cloudformation create-stack` command\.
@@ -183,10 +183,10 @@ Don't use the `aws:SourceIp` AWS\-wide condition\. AWS CloudFormation provisions
 The following list describes the AWS CloudFormation\-specific conditions\. These conditions are applied only when users create or update stacks:
 
 `cloudformation:ChangeSetName`  
-An AWS CloudFormation change set name that you want to associate with a policy\. Use this condition to control which change sets IAM users can execute or delete\.
+An AWS CloudFormation change set name that you want to associate with a policy\. Use this condition to control which change sets users can execute or delete\.
 
 `cloudformation:ImportResourceTypes`  
-The template resource types that you want to associate with a policy, such as `AWS::EC2::Instance`\. Use this condition to control which resource types IAM users can work with when they import resources into a stack\. This condition is checked against the resource types that users declare in the `ResourcesToImport` parameter, which is currently supported only for AWS CLI and API requests\. When using this parameter, you must specify all the resource types you want users to control during import operations\. For more information about the `ResourcesToImport` parameter, see the [CreateChangeSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateChangeSet.html) action in the *AWS CloudFormation API Reference*\.  
+The template resource types that you want to associate with a policy, such as `AWS::EC2::Instance`\. Use this condition to control which resource types users can work with when they import resources into a stack\. This condition is checked against the resource types that users declare in the `ResourcesToImport` parameter, which is currently supported only for AWS CLI and API requests\. When using this parameter, you must specify all the resource types you want users to control during import operations\. For more information about the `ResourcesToImport` parameter, see the [CreateChangeSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateChangeSet.html) action in the *AWS CloudFormation API Reference*\.  
 For a list of possible `ResourcesToImport`, see [Resources that support import operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import-supported-resources.html)\.  
 Use the three\-part resource naming convention to specify which resource types users can work with, from all resources across an organization, down to an individual resource type\.    
 `organization::*`  
@@ -204,7 +204,7 @@ Specify all supported resources for a specific AWS service\.
 Specify a specific AWS resource type, such as `AWS::EC2::Instance` \(all EC2 instances\)\.
 
 `cloudformation:ResourceTypes`  
-The template resource types, such as `AWS::EC2::Instance`, that you want to associate with a policy\. Use this condition to control which resource types IAM users can work with when they create or update a stack\. This condition is checked against the resource types that users declare in the `ResourceTypes` parameter, which is currently supported only for AWS CLI and API requests\. When using this parameter, users must specify all the resource types that are in their template\. For more information about the `ResourceTypes` parameter, see the [CreateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) action in the *AWS CloudFormation API Reference*\.  
+The template resource types, such as `AWS::EC2::Instance`, that you want to associate with a policy\. Use this condition to control which resource types users can work with when they create or update a stack\. This condition is checked against the resource types that users declare in the `ResourceTypes` parameter, which is currently supported only for AWS CLI and API requests\. When using this parameter, users must specify all the resource types that are in their template\. For more information about the `ResourceTypes` parameter, see the [CreateStack](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_CreateStack.html) action in the *AWS CloudFormation API Reference*\.  
 For a list of resource types, see [AWS resource and property types reference](aws-template-resource-type-ref.md)\.  
 Use the three\-part resource naming convention to specify which resource types users can work with, from all resources across an organization, down to an individual resource type\.    
 `organization::*`  
@@ -232,15 +232,15 @@ Specify a specific custom resource type\.
 For more information about custom resources, see [Custom resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html)\.
 
 `cloudformation:RoleARN`  
-The Amazon Resource Name \(ARN\) of an IAM service role that you want to associate with a policy\. Use this condition to control which service role IAM users can use when they work with stacks or change sets\.
+The Amazon Resource Name \(ARN\) of an IAM service role that you want to associate with a policy\. Use this condition to control which service role users can use when they work with stacks or change sets\.
 
 `cloudformation:StackPolicyUrl`  
-An Amazon S3 stack policy URL that you want to associate with a policy\. Use this condition to control which stack policies IAM users can associate with a stack during a create or update stack action\. For more information about stack policies, see [Prevent updates to stack resources](protect-stack-resources.md)\.  
-To ensure that IAM users can only create or update stacks with the stack policies that you uploaded, set the S3 bucket to `read only` for those users\.
+An Amazon S3 stack policy URL that you want to associate with a policy\. Use this condition to control which stack policies users can associate with a stack during a create or update stack action\. For more information about stack policies, see [Prevent updates to stack resources](protect-stack-resources.md)\.  
+To ensure that users can only create or update stacks with the stack policies that you uploaded, set the S3 bucket to `read only` for those users\.
 
 `cloudformation:TemplateUrl`  
-An Amazon S3 template URL that you want to associate with a policy\. Use this condition to control which templates IAM users can use when they create or update stacks\.  
-To ensure that IAM users can only create or update stacks with the templates that you uploaded, set the S3 bucket to `read only` for those users\.
+An Amazon S3 template URL that you want to associate with a policy\. Use this condition to control which templates users can use when they create or update stacks\.  
+To ensure that users can only create or update stacks with the templates that you uploaded, set the S3 bucket to `read only` for those users\.
 The following AWS CloudFormation\-specific conditions apply to the API parameters of the same name:  
 + `cloudformation:ChangeSetName`
 + `cloudformation:RoleARN`
@@ -392,7 +392,7 @@ The following example policy is similar to the preceding example\. The policy al
 
 ## Acknowledging IAM resources in AWS CloudFormation templates<a name="using-iam-capabilities"></a>
 
-Before you can create a stack, AWS CloudFormation validates your template\. During validation, AWS CloudFormation checks your template for IAM resources that it might create\. IAM resources, such as an IAM user with full access, can access and modify any resource in your AWS account\. Therefore, we suggest that you review the permissions associated with each IAM resource before proceeding so that you don't unintentionally create resources with escalated permissions\. To ensure that you've done so, you must acknowledge that the template contains those resources, giving AWS CloudFormation the specified capabilities before it creates the stack\.
+Before you can create a stack, AWS CloudFormation validates your template\. During validation, AWS CloudFormation checks your template for IAM resources that it might create\. IAM resources, such as a user with full access, can access and modify any resource in your AWS account\. Therefore, we suggest that you review the permissions associated with each IAM resource before proceeding so that you don't unintentionally create resources with escalated permissions\. To ensure that you've done so, you must acknowledge that the template contains those resources, giving AWS CloudFormation the specified capabilities before it creates the stack\.
 
 You can acknowledge the capabilities of AWS CloudFormation templates by using the AWS CloudFormation console, AWS Command Line Interface \(AWS CLI\), or API:
 + In the AWS CloudFormation console, on the **Review** page of the Create Stack or Update Stack wizards, choose **I acknowledge that this template may create IAM resources**\.

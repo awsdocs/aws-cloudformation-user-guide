@@ -219,7 +219,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### <a name="aws-resource-glue-job--examples--"></a>
 
-The following example creates a job with an associated role\. 
+The following example creates a job with an associated role\. The ScriptLocation is an Amazon S3 location\. The example provided below is a placeholder for your Amazon S3 location\.
 
 #### JSON<a name="aws-resource-glue-job--examples----json"></a>
 
@@ -269,7 +269,7 @@ The following example creates a job with an associated role\.
       "Properties": {
         "Command": {
           "Name": "glueetl",
-          "ScriptLocation": "s3://aws-glue-scripts//prod-job1"
+          "ScriptLocation": "s3://<your-S3-script-uri>"
         },
         "DefaultArguments": {
           "--job-bookmark-option": "job-bookmark-enable"
@@ -324,7 +324,7 @@ Resources:
     Properties:
       Command:
         Name: glueetl
-        ScriptLocation: "s3://aws-glue-scripts//prod-job1"
+        ScriptLocation: "s3://<your-S3-script-uri>"
       DefaultArguments:
         "--job-bookmark-option": "job-bookmark-enable"
       ExecutionProperty:

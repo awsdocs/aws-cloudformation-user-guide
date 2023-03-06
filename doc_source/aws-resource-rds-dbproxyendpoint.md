@@ -92,7 +92,7 @@ The custom endpoint for the RDS DB instance or Aurora DB cluster\.
 A value that indicates whether this endpoint is the default endpoint for the associated DB proxy\. Default DB proxy endpoints always have read/write capability\. Other endpoints that you associate with the DB proxy can be either read/write or read\-only\.
 
 `TargetRole`  <a name="TargetRole-fn::getatt"></a>
-Property description not available\.
+A value that indicates whether the DB proxy endpoint can be used for read/write or read\-only operations\.
 
 `VpcId`  <a name="VpcId-fn::getatt"></a>
 The VPC ID of the DB proxy endpoint\.

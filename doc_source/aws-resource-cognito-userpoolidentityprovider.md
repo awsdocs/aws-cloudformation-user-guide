@@ -136,22 +136,43 @@ The following example creates a Login with Amazon identity provider in the refer
 #### JSON<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_Login_with_Amazon_identity_provider--json"></a>
 
 ```
-{ "UserPoolIdentityProvider": { "Type":
-        "AWS::Cognito::UserPoolIdentityProvider", "Properties": { "UserPoolId": { "Ref": "UserPool"
-        }, "ProviderName": "LoginWithAmazon", "ProviderDetails": { "client_id":
-        "YourLoginWithAmazonAppId", "client_secret": "YourLoginWithAmazonAppSecret",
-        "authorize_scopes": "profile postal_code" }, "ProviderType": "LoginWithAmazon",
-        "AttributeMapping": { "email": "email" } } } }
+{
+  "UserPoolIdentityProvider": {
+    "Type": "AWS::Cognito::UserPoolIdentityProvider",
+    "Properties": {
+      "UserPoolId": {
+        "Ref": "UserPool"
+      },
+      "ProviderName": "LoginWithAmazon",
+      "ProviderDetails": {
+        "client_id": "YourLoginWithAmazonAppId",
+        "client_secret": "YourLoginWithAmazonAppSecret",
+        "authorize_scopes": "profile postal_code"
+      },
+      "ProviderType": "LoginWithAmazon",
+      "AttributeMapping": {
+        "email": "email"
+      }
+    }
+  }
+}
 ```
 
 #### YAML<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_Login_with_Amazon_identity_provider--yaml"></a>
 
 ```
-UserPoolIdentityProvider: Type:
-        AWS::Cognito::UserPoolIdentityProvider Properties: UserPoolId: !Ref UserPool ProviderName:
-        "LoginWithAmazon" ProviderDetails: client_id: "YourLoginWithAmazonAppId" client_secret:
-        "YourLoginWithAmazonAppSecret" authorize_scopes: "profile postal_code" ProviderType:
-        "LoginWithAmazon" AttributeMapping: email: "email"
+UserPoolIdentityProvider:
+  Type: AWS::Cognito::UserPoolIdentityProvider
+  Properties:
+    UserPoolId: !Ref UserPool
+    ProviderName: "LoginWithAmazon"
+    ProviderDetails:
+      client_id: "YourLoginWithAmazonAppId"
+      client_secret: "YourLoginWithAmazonAppSecret"
+      authorize_scopes: "profile postal_code"
+    ProviderType: "LoginWithAmazon"
+    AttributeMapping:
+      email: "email"
 ```
 
 ### Creating a new Google identity provider<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_Google_identity_provider"></a>
@@ -161,21 +182,43 @@ The following example creates a Google identity provider in the referenced user 
 #### JSON<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_Google_identity_provider--json"></a>
 
 ```
-{ "UserPoolIdentityProvider": { "Type":
-        "AWS::Cognito::UserPoolIdentityProvider", "Properties": { "UserPoolId": { "Ref": "UserPool"
-        }, "ProviderName": "Google", "ProviderDetails": { "client_id": "YourGoogleAppId",
-        "client_secret": "YourGoogleAppSecret", "authorize_scopes": "profile email openid" },
-        "ProviderType": "Google", "AttributeMapping": { "email": "email" } } } }
+{
+  "UserPoolIdentityProvider": {
+    "Type": "AWS::Cognito::UserPoolIdentityProvider",
+    "Properties": {
+      "UserPoolId": {
+        "Ref": "UserPool"
+      },
+      "ProviderName": "Google",
+      "ProviderDetails": {
+        "client_id": "YourGoogleAppId",
+        "client_secret": "YourGoogleAppSecret",
+        "authorize_scopes": "profile email openid"
+      },
+      "ProviderType": "Google",
+      "AttributeMapping": {
+        "email": "email"
+      }
+    }
+  }
+}
 ```
 
 #### YAML<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_Google_identity_provider--yaml"></a>
 
 ```
-UserPoolIdentityProvider: Type:
-        AWS::Cognito::UserPoolIdentityProvider Properties: UserPoolId: !Ref UserPool ProviderName:
-        "Google" ProviderDetails: client_id: "YourGoogleAppId" client_secret: "YourGoogleAppSecret"
-        authorize_scopes: "profile email openid" ProviderType: "Google" AttributeMapping: email:
-        "email"
+UserPoolIdentityProvider:
+  Type: AWS::Cognito::UserPoolIdentityProvider
+  Properties:
+    UserPoolId: !Ref UserPool
+    ProviderName: "Google"
+    ProviderDetails:
+      client_id: "YourGoogleAppId"
+      client_secret: "YourGoogleAppSecret"
+      authorize_scopes: "profile email openid"
+    ProviderType: "Google"
+    AttributeMapping:
+      email: "email"
 ```
 
 ### Creating a new Facebook identity provider<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_Facebook_identity_provider"></a>
@@ -185,21 +228,43 @@ The following example creates a Facebook identity provider in the referenced use
 #### JSON<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_Facebook_identity_provider--json"></a>
 
 ```
-{ "UserPoolIdentityProvider": { "Type":
-        "AWS::Cognito::UserPoolIdentityProvider", "Properties": { "UserPoolId": { "Ref": "UserPool"
-        }, "ProviderName": "Facebook", "ProviderDetails": { "client_id": "YourFacebookAppId",
-        "client_secret": "YourFacebookAppSecret", "authorize_scopes": "public_profile,email" },
-        "ProviderType": "Facebook", "AttributeMapping": { "email": "email" } } } }
+{
+  "UserPoolIdentityProvider": {
+    "Type": "AWS::Cognito::UserPoolIdentityProvider",
+    "Properties": {
+      "UserPoolId": {
+        "Ref": "UserPool"
+      },
+      "ProviderName": "Facebook",
+      "ProviderDetails": {
+        "client_id": "YourFacebookAppId",
+        "client_secret": "YourFacebookAppSecret",
+        "authorize_scopes": "public_profile,email"
+      },
+      "ProviderType": "Facebook",
+      "AttributeMapping": {
+        "email": "email"
+      }
+    }
+  }
+}
 ```
 
 #### YAML<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_Facebook_identity_provider--yaml"></a>
 
 ```
-UserPoolIdentityProvider: Type:
-        AWS::Cognito::UserPoolIdentityProvider Properties: UserPoolId: !Ref UserPool ProviderName:
-        "Facebook" ProviderDetails: client_id: "YourFacebookAppId" client_secret:
-        "YourFacebookAppSecret" authorize_scopes: "public_profile,email" ProviderType: "Facebook"
-        AttributeMapping: email: "email"
+UserPoolIdentityProvider:
+  Type: AWS::Cognito::UserPoolIdentityProvider
+  Properties:
+    UserPoolId: !Ref UserPool
+    ProviderName: "Facebook"
+    ProviderDetails:
+      client_id: "YourFacebookAppId"
+      client_secret: "YourFacebookAppSecret"
+      authorize_scopes: "public_profile,email"
+    ProviderType: "Facebook"
+    AttributeMapping:
+      email: "email"
 ```
 
 ### Creating a new Sign in with Apple identity provider<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_Sign_in_with_Apple_identity_provider"></a>
@@ -209,23 +274,47 @@ The following example creates a Sign in with Apple identity provider in the refe
 #### JSON<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_Sign_in_with_Apple_identity_provider--json"></a>
 
 ```
-{ "UserPoolIdentityProvider": { "Type":
-        "AWS::Cognito::UserPoolIdentityProvider", "Properties": { "UserPoolId": { "Ref": "UserPool"
-        }, "ProviderName": "SignInWithApple", "ProviderDetails": { "client_id":
-        "YourAppleServicesId", "team_id": "YourAppleTeamId", "key_id": "YourApplePrivateKeyID",
-        "private_key": "YourApplePrivateKey", "authorize_scopes": "public_profile,email" },
-        "ProviderType": "SignInWithApple", "AttributeMapping": { "email": "email" } } } }
+{
+  "UserPoolIdentityProvider": {
+    "Type": "AWS::Cognito::UserPoolIdentityProvider",
+    "Properties": {
+      "UserPoolId": {
+        "Ref": "UserPool"
+      },
+      "ProviderName": "SignInWithApple",
+      "ProviderDetails": {
+        "client_id": "YourAppleServicesId",
+        "team_id": "YourAppleTeamId",
+        "key_id": "YourApplePrivateKeyID",
+        "private_key": "YourApplePrivateKey",
+        "authorize_scopes": "public_profile,email"
+      },
+      "ProviderType": "SignInWithApple",
+      "AttributeMapping": {
+        "email": "email"
+      }
+    }
+  }
+}
 ```
 
 #### YAML<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_Sign_in_with_Apple_identity_provider--yaml"></a>
 
 ```
-UserPoolIdentityProvider: Type:
-        AWS::Cognito::UserPoolIdentityProvider Properties: UserPoolId: !Ref UserPool ProviderName:
-        "SignInWithApple" ProviderDetails: client_id: "YourSign" team_id: "YourAppleTeamId" key_id:
-        "YourApplePrivateKeyID" private_key: "YourApplePrivateKey" authorize_scopes:
-        "public_profile,email" ProviderType: "SignInWithApple" AttributeMapping: email:
-        "email"
+UserPoolIdentityProvider:
+  Type: AWS::Cognito::UserPoolIdentityProvider
+  Properties:
+    UserPoolId: !Ref UserPool
+    ProviderName: "SignInWithApple"
+    ProviderDetails:
+      client_id: "YourSign"
+      team_id: "YourAppleTeamId"
+      key_id: "YourApplePrivateKeyID"
+      private_key: "YourApplePrivateKey"
+      authorize_scopes: "public_profile,email"
+    ProviderType: "SignInWithApple"
+    AttributeMapping:
+      email: "email"
 ```
 
 ### Creating a new OIDC identity provider<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_OIDC_identity_provider"></a>
@@ -235,24 +324,52 @@ The following example creates the OIDC identity provider "YourOIDCProviderName" 
 #### JSON<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_OIDC_identity_provider--json"></a>
 
 ```
-{ "UserPoolIdentityProvider": { "Type":
-        "AWS::Cognito::UserPoolIdentityProvider", "Properties": { "UserPoolId": { "Ref": "UserPool"
-        }, "ProviderName": "YourOIDCProviderName", "ProviderDetails": { "client_id":
-        "YourOIDCClientId", "client_secret": "YourOIDCClientSecret", "attributes_request_method":
-        "GET", "oidc_issuer": "YourOIDCIssuerURL", "authorize_scopes": "email profile openid" },
-        "ProviderType": "OIDC", "AttributeMapping": { "email": "email" }, "IdpIdentifiers": [
-        "IdpIdentifier" ] } } }
+{
+  "UserPoolIdentityProvider": {
+    "Type": "AWS::Cognito::UserPoolIdentityProvider",
+    "Properties": {
+      "UserPoolId": {
+        "Ref": "UserPool"
+      },
+      "ProviderName": "YourOIDCProviderName",
+      "ProviderDetails": {
+        "client_id": "YourOIDCClientId",
+        "client_secret": "YourOIDCClientSecret",
+        "attributes_request_method": "GET",
+        "oidc_issuer": "YourOIDCIssuerURL",
+        "authorize_scopes": "email profile openid"
+      },
+      "ProviderType": "OIDC",
+      "AttributeMapping": {
+        "email": "email"
+      },
+      "IdpIdentifiers": [
+        "IdpIdentifier"
+      ]
+    }
+  }
+}
 ```
 
 #### YAML<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_OIDC_identity_provider--yaml"></a>
 
 ```
-UserPoolIdentityProvider: Type:
-        AWS::Cognito::UserPoolIdentityProvider Properties: UserPoolId: !Ref UserPool ProviderName:
-        "YourOIDCProviderName" ProviderDetails: client_id: "YourOIDCClientId" client_secret:
-        "YourOIDCClientSecret" attributes_request_method: "GET" oidc_issuer: "YourOIDCIssuerURL"
-        authorize_scopes: "email profile openid" ProviderType: "OIDC" AttributeMapping: email:
-        "email" IdpIdentifiers: - "IdpIdentifier"
+UserPoolIdentityProvider:
+  Type: AWS::Cognito::UserPoolIdentityProvider
+  Properties:
+    UserPoolId: !Ref UserPool
+    ProviderName: "YourOIDCProviderName"
+    ProviderDetails:
+      client_id: "YourOIDCClientId"
+      client_secret: "YourOIDCClientSecret"
+      attributes_request_method: "GET"
+      oidc_issuer: "YourOIDCIssuerURL"
+      authorize_scopes: "email profile openid"
+    ProviderType: "OIDC"
+    AttributeMapping:
+      email: "email"
+    IdpIdentifiers:
+      - "IdpIdentifier"
 ```
 
 ### Creating a new SAML identity provider<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_SAML_identity_provider"></a>
@@ -262,18 +379,40 @@ The following example creates a SAML identity provider "YourProviderName" in the
 #### JSON<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_SAML_identity_provider--json"></a>
 
 ```
-{ "UserPoolIdentityProvider": { "Type":
-        "AWS::Cognito::UserPoolIdentityProvider", "Properties": { "UserPoolId": {"Ref": "UserPool"},
-        "ProviderName": "YourProviderName", "ProviderDetails": { "MetadataURL": "YourMetadataURL" },
-        "ProviderType": "SAML", "AttributeMapping": { "email": "Attribute" }, "IdpIdentifiers": [
-        "IdpIdentifier" ] } } }
+{
+   "UserPoolIdentityProvider": {
+      "Type": "AWS::Cognito::UserPoolIdentityProvider",
+      "Properties": {
+         "UserPoolId": {"Ref": "UserPool"},
+         "ProviderName": "YourProviderName",
+         "ProviderDetails": {
+            "MetadataURL": "YourMetadataURL"
+         },
+         "ProviderType": "SAML",
+         "AttributeMapping": {
+            "email": "Attribute"
+         },
+         "IdpIdentifiers": [
+            "IdpIdentifier"
+         ]
+      }
+   }
+}
 ```
 
 #### YAML<a name="aws-resource-cognito-userpoolidentityprovider--examples--Creating_a_new_SAML_identity_provider--yaml"></a>
 
 ```
-UserPoolIdentityProvider: Type:
-        AWS::Cognito::UserPoolIdentityProvider Properties: UserPoolId: !Ref UserPool ProviderName:
-        "YourProviderName" ProviderDetails: MetadataURL: "YourMetadataURL" ProviderType: "SAML"
-        AttributeMapping: email: "Attribute" IdpIdentifiers: - "IdpIdentifier"
+UserPoolIdentityProvider:
+  Type: AWS::Cognito::UserPoolIdentityProvider
+  Properties:
+    UserPoolId: !Ref UserPool
+    ProviderName: "YourProviderName"
+    ProviderDetails:
+      MetadataURL: "YourMetadataURL"
+    ProviderType: "SAML"
+    AttributeMapping:
+      email: "Attribute"
+    IdpIdentifiers:
+      - "IdpIdentifier"
 ```

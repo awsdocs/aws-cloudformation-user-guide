@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-redshift-clusterparametergroup-description)" : String,
       "[ParameterGroupFamily](#cfn-redshift-clusterparametergroup-parametergroupfamily)" : String,
+      "[ParameterGroupName](#cfn-redshift-clusterparametergroup-parametergroupname)" : String,
       "[Parameters](#cfn-redshift-clusterparametergroup-parameters)" : [ Parameter, ... ],
       "[Tags](#cfn-redshift-clusterparametergroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -27,6 +28,7 @@ Type: AWS::Redshift::ClusterParameterGroup
 Properties: 
   [Description](#cfn-redshift-clusterparametergroup-description): String
   [ParameterGroupFamily](#cfn-redshift-clusterparametergroup-parametergroupfamily): String
+  [ParameterGroupName](#cfn-redshift-clusterparametergroup-parametergroupname): String
   [Parameters](#cfn-redshift-clusterparametergroup-parameters): 
     - Parameter
   [Tags](#cfn-redshift-clusterparametergroup-tags): 
@@ -45,6 +47,13 @@ The description of the parameter group\.
 `ParameterGroupFamily`  <a name="cfn-redshift-clusterparametergroup-parametergroupfamily"></a>
 The name of the cluster parameter group family that this cluster parameter group is compatible with\.  
 *Required*: Yes  
+*Type*: String  
+*Maximum*: `2147483647`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ParameterGroupName`  <a name="cfn-redshift-clusterparametergroup-parametergroupname"></a>
+The name of the cluster parameter group\.  
+*Required*: No  
 *Type*: String  
 *Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -74,17 +83,6 @@ The list of tags for the cluster parameter group\.
 For the Amazon Redshift cluster parameter group `myClusterParameterGroup`, `Ref` returns the name of the cluster parameter group\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
-
-### Fn::GetAtt<a name="aws-resource-redshift-clusterparametergroup-return-values-fn--getatt"></a>
-
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
-
-For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
-
-#### <a name="aws-resource-redshift-clusterparametergroup-return-values-fn--getatt-fn--getatt"></a>
-
-`ParameterGroupName`  <a name="ParameterGroupName-fn::getatt"></a>
-The name of the parameter group\.
 
 ## Examples<a name="aws-resource-redshift-clusterparametergroup--examples"></a>
 

@@ -106,6 +106,20 @@ The ID of the regex pattern set\.
 
 The following shows an example regex pattern set specification\. 
 
+#### YAML<a name="aws-resource-wafv2-regexpatternset--examples--Create_a_regex_pattern_set--yaml"></a>
+
+```
+ ExampleRegexPatternSet:
+    Type: AWS::WAFv2::RegexPatternSet
+    Properties:
+      Name: ExampleRegexPatternSet
+      Scope: REGIONAL
+      Description: This is an example RegexPatternSet
+      RegularExpressionList:
+        - ^foobar$
+        - ^example$
+```
+
 #### JSON<a name="aws-resource-wafv2-regexpatternset--examples--Create_a_regex_pattern_set--json"></a>
 
 ```
@@ -121,18 +135,4 @@ The following shows an example regex pattern set specification\.
         ]
       }
     }
-```
-
-#### YAML<a name="aws-resource-wafv2-regexpatternset--examples--Create_a_regex_pattern_set--yaml"></a>
-
-```
- ExampleRegexPatternSet:
-    Type: AWS::WAFv2::RegexPatternSet
-    Properties:
-      Name: ExampleRegexPatternSet
-      Scope: REGIONAL
-      Description: This is an example RegexPatternSet
-      RegularExpressionList:
-        - ^foobar$
-        - ^example$
 ```

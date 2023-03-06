@@ -70,7 +70,7 @@ For `Length Constraints`, if a valid ARN is provided for a permission set, it is
 *Required*: No  
 *Type*: Json  
 *Minimum*: `1`  
-*Maximum*: `10240`  
+*Maximum*: `32768`  
 *Pattern*: `[\u0009\u000A\u000D\u0020-\u00FF]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

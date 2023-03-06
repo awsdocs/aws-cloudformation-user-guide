@@ -91,18 +91,34 @@ The following example creates a custom domain, "my\-test\-user\-pool\-domain", i
 #### JSON<a name="aws-resource-cognito-userpooldomain--examples--Creating_a_new_custom_domain_for_a_user_pool--json"></a>
 
 ```
-{ "UserPoolDomain":{ "Type":"AWS::Cognito::UserPoolDomain",
-        "Properties":{ "UserPoolId":{ "Ref":"UserPool" },
-        "Domain":"my-test-user-pool-domain.myapplication.com", "CustomDomainConfig":{
-        "CertificateArn":{ "Ref":"CertificateArn" } } } } }
+{
+   "UserPoolDomain":{
+      "Type":"AWS::Cognito::UserPoolDomain",
+      "Properties":{
+         "UserPoolId":{
+            "Ref":"UserPool"
+         },
+         "Domain":"my-test-user-pool-domain.myapplication.com",
+         "CustomDomainConfig":{
+            "CertificateArn":{
+               "Ref":"CertificateArn"
+            }
+         }
+      }
+   }
+}
 ```
 
 #### YAML<a name="aws-resource-cognito-userpooldomain--examples--Creating_a_new_custom_domain_for_a_user_pool--yaml"></a>
 
 ```
-UserPoolDomain: Type: AWS::Cognito::UserPoolDomain Properties:
-        UserPoolId: !Ref UserPool Domain: "my-test-user-pool-domain.myapplication.com"
-        CustomDomainConfig: CertificateArn: !Ref CertificateArn
+UserPoolDomain: 
+  Type: AWS::Cognito::UserPoolDomain 
+  Properties:
+    UserPoolId: !Ref UserPool 
+    Domain: "my-test-user-pool-domain.myapplication.com"
+    CustomDomainConfig: 
+      CertificateArn: !Ref CertificateArn
 ```
 
 ### Creating a new default domain for a user pool<a name="aws-resource-cognito-userpooldomain--examples--Creating_a_new_default_domain_for_a_user_pool"></a>
@@ -112,14 +128,25 @@ The following example creates a new default domain, "my\-test\-user\-pool\-domai
 #### JSON<a name="aws-resource-cognito-userpooldomain--examples--Creating_a_new_default_domain_for_a_user_pool--json"></a>
 
 ```
-{ "UserPoolDomain":{ "Type":"AWS::Cognito::UserPoolDomain",
-        "Properties":{ "UserPoolId":{ "Ref":"UserPool" }, "Domain":"my-test-user-pool-domain" } }
-        }
+{
+   "UserPoolDomain":{
+      "Type":"AWS::Cognito::UserPoolDomain",
+      "Properties":{
+         "UserPoolId":{
+            "Ref":"UserPool"
+         },
+         "Domain":"my-test-user-pool-domain"
+      }
+   }
+}
 ```
 
 #### YAML<a name="aws-resource-cognito-userpooldomain--examples--Creating_a_new_default_domain_for_a_user_pool--yaml"></a>
 
 ```
-UserPoolDomain: Type: AWS::Cognito::UserPoolDomain Properties:
-        UserPoolId: !Ref UserPool Domain: "my-test-user-pool-domain"
+UserPoolDomain: 
+  Type: AWS::Cognito::UserPoolDomain 
+  Properties:
+    UserPoolId: !Ref UserPool 
+    Domain: "my-test-user-pool-domain"
 ```

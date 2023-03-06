@@ -8,7 +8,7 @@ You can only add, update, or delete up to 10 deployments at a time to a single t
 
 Every deployment has a revision number that indicates how many deployment revisions you define for a target\. Use this operation to create a new revision of an existing deployment\. This operation returns the revision number of the new deployment when you create it\.
 
-For more information, see the [Create deployments](https://docs.aws.amazon.com/greengrass/v2/latest/developerguide/create-deployments.html) in the *AWS IoT Greengrass V2 Developer Guide*\.
+For more information, see the [Create deployments](https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html) in the *AWS IoT Greengrass V2 Developer Guide*\.
 
 **Important**  
 Deployment resources are deleted when you delete stacks\. To keep the deployments in a stack, you must specify `"DeletionPolicy": "Retain"` on each deployment resource in the stack template that you want to keep\. For more information, see [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)\.  

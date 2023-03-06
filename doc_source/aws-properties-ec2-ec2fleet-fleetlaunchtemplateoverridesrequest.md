@@ -55,6 +55,7 @@ If you specify `InstanceRequirements`, you can't specify `InstanceType`\.
 
 `InstanceType`  <a name="cfn-ec2-ec2fleet-fleetlaunchtemplateoverridesrequest-instancetype"></a>
 The instance type\.  
+ `mac1.metal` is not supported as a launch template override\.  
 If you specify `InstanceType`, you can't specify `InstanceRequirements`\.
 *Required*: No  
 *Type*: String  

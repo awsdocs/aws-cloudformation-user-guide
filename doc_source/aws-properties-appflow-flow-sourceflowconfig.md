@@ -49,10 +49,10 @@ The API version of the connector when it's used as a source in the flow\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectorType`  <a name="cfn-appflow-flow-sourceflowconfig-connectortype"></a>
- The type of source connector, such as Salesforce, Amplitude, and so on\.   
-*Allowed Values*: S3 \| Amplitude \| Datadog \| Dynatrace \| Googleanalytics \| Infornexus \| Salesforce \| Servicenow \| Singular \| Slack \| Trendmicro \| Veeva \| Zendesk  
+ The type of connector, such as Salesforce, Amplitude, and so on\.   
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `Amplitude | CustomConnector | CustomerProfiles | Datadog | Dynatrace | EventBridge | Googleanalytics | Honeycode | Infornexus | LookoutMetrics | Marketo | Pardot | Redshift | S3 | Salesforce | SAPOData | Servicenow | Singular | Slack | Snowflake | Trendmicro | Upsolver | Veeva | Zendesk`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncrementalPullConfig`  <a name="cfn-appflow-flow-sourceflowconfig-incrementalpullconfig"></a>

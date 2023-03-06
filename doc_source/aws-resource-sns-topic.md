@@ -116,7 +116,7 @@ If you specify a name, you can't perform updates that require replacement of thi
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TracingConfig`  <a name="cfn-sns-topic-tracingconfig"></a>
-Tracing mode of an Amazon SNS topic\. By default `TracingConfig` is set to `PassThrough`, and the topic passes through the tracing header it receives from an SNS publisher to its subscriptions\. If set to Active, SNS will vend X\-Ray segment data to topic owner account if the sampled flag in the tracing header is true\. Only supported on standard topics\.  
+Tracing mode of an Amazon SNS topic\. By default `TracingConfig` is set to `PassThrough`, and the topic passes through the tracing header it receives from an SNS publisher to its subscriptions\. If set to `Active`, SNS will vend X\-Ray segment data to topic owner account if the sampled flag in the tracing header is true\. Only supported on standard topics\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

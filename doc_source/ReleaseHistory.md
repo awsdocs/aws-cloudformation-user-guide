@@ -4,6 +4,35 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_Lambda.md) | The following resource was updated: AWS::Lambda::EventSourceMapping\. 
+
+ [AWS::Lambda::EventSourceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html)   
+ Use the `DocumentDBEventSourceConfig` property to define specific configuration settings for a DocumentDB event source, such as the database name\.   | March 2, 2023 | 
+| [Updated resource](AWS_WAFv2.md) | The following resource was updated: AWS::WAFv2::WebACL\. 
+
+ [AWS::WAFv2::WebACL](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html)   
+Use the `AWSManagedRulesATPRuleSet` property to configure your use of the Fraud Control account takeover prevention \(ATP\) managed rule group in a managed rule group reference statement\. For protected CloudFront distributions, in addition to inspecting login requests, you can now use ATP to block new login attempts from clients that have recently submitted too many failed login attempts\.  | March 2, 2023 | 
+| [New resources](AWS_IVSChat.md) | The following resources were added: AWS::IVSChat::Room and AWS::IVSChat::LoggingConfiguration 
+
+ [AWS::IVSChat::Room](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivschat-room.html)   
+Use the `AWS::IVSChat::Room` resource to specify and Amazon IVS Chat Room\. 
+
+ [AWS::IVSChat::LoggingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivschat-loggingconfiguration.html)   
+Use the `AWS::IVSChat::LoggingConfiguration` resource to specify and Amazon IVS Chat Logging Configuration, which stores configuration information related to loggin your chat session to a data store\.  | March 2, 2023 | 
+| [New resource](AWS_SystemsManagerSAP.md) | The following resource was released: [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html)\.Use `AWS::SystemsManagerSAP::Application` to register an SAP application with AWS Systems Manager for SAP\. | March 2, 2023 | 
+| [New resource](AWS_NetworkManager.md) | A new resource was added to Network Manager: AWS::NetworkManager::TransitGatewayRouteTableAttachment 
+
+ [ AWS::NetworkManager::TransitGatewayRouteTableAttachment\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html)   
+Use `AWS::NetworkManager::TransitGatewayRouteTableAttachment` to create a transit gateway route table attachment\.  | February 23, 2023 | 
+| [Updated resource](AWS_FMS.md) | The following resource was updated: AWS::FMS::Policy\. 
+
+ [AWS::FMS::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html)   
+Use the `PolicyDescription` property to establish default actions to take on a packet that doesn't match any stateful rules when using strict rule ordering\.   
+Use the `ResourceSetIds` property to configure the resources to include in a resource set\.   | February 17, 2023 | 
+| [New resource](AWS_FMS.md) | The following resource was added: AWS::FMS::ResourceSet\. 
+
+ [AWS::FMS::ResourceSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-resourceset.html)   
+Use the `AWS::FMS::ResourceSet` resource to import resources into your firewall policy from another AWS service\.  | February 17, 2023 | 
 | [New resource](AWS_Organizations.md) | The following resource was added: `AWS::Organizations::ResourcePolicy.` 
 
  [AWS::Organizations::ResourcePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-organizations-resourcepolicy.html)   
@@ -429,6 +458,10 @@ Use the `AWS::EMRServerless::Application:Architecture` resource to specify the C
  [AWS::CloudFront::ContinuousDeploymentPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-continuousdeploymentpolicy.html)   
 Use the `AWS::CloudFront::ContinuousDeploymentPolicy` resource in a CloudFront continuous deployment workflow\.  
 For more information, see [Using CloudFront continuous deployment to safely test CDN configuration changes](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/continuous-deployment.html) in the *Amazon CloudFront Developer Guide*\.  | November 17, 2022 | 
+| [New property](AWS_GreengrassV2.md) | The following property was added: AWS::GreengrassV2::Deployment\.ParentTargetArn\. 
+
+ [AWS::GreengrassV2::Deployment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrassv2-deployment.html)   
+Use the `AWS::GreengrassV2::Deployment.ParentTargetArn` property to set the parent deployment of a subdeployment\.  | November 15, 2022 | 
 | [Updated resources](AWS_AppStream.md) | The following resources were updated: `AWS::AppStream::DirectoryConfig` 
 
  [AWS::AppStream::DirectoryConfig RSS ](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-directoryconfig.html)   
@@ -730,6 +763,10 @@ Use the `AWS::SupportApp::AccountAlias` resource to specify your alias name\. Yo
 
  [AWS::WAFv2::WebACLAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webaclassociation.html)   
 The `ResourceArn` property now accepts `AWS::Cognito::UserPool` ARNs\.   | August 23, 2022 | 
+| [Updated resource](AWS_FMS.md) | The following resource was updated: AWS::FMS::Policy\. 
+
+ [AWS::FMS::Policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html)   
+The `AWS::FMS::Policy` resource now allows you to manage third\-party firewalls, as well as AWS Network Firewall policies that use centralized or distributed deployment models\.  | August 18, 2022 | 
 | [Updated resource](AWS_Lambda.md) | The following resource was updated: AWS::Lambda::EventSourceMapping\. 
 
  [AWS::Lambda::EventSourceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html)   
@@ -1211,6 +1248,10 @@ Use the `OidcIdentityProviderConfig` property to specify an identity provider co
 
  [AWS::DataBrew::Job](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-output.html)   
 Add MaxOutputFiles parameter to the Output data type to specify the maximum number of files to be generated by a profile job and written to the output folder\.  | March 3, 2022 | 
+| [Added resource](AWS_ManagedBlockchain.md) | The following resource was added: AWS::ManagedBlockchain::Accessor 
+
+ [AWS::ManagedBlockchain::Accessor](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-accessor.html)   
+Use the `Accessor` to create a new accessor for use with Managed Blockchain Ethereum nodes\.  | March 2, 2022 | 
 | [Updated resources](AWS_Batch.md) | The following resources were updated: [AWS::Batch::ComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html), and [AWS::Batch::JobQueue](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html) 
 
  [AWS::Batch::ComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html)   
@@ -1248,16 +1289,16 @@ You can now define `ManagedRuleGroupConfigs` for a `ManagedRuleGroupStatement`, 
  [AWS::NetworkManager::ConnectAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectattachment.html)   
 Use the `AWS::NetworkManager::ConnectAttachment` to create a core network Connect attachment\. 
 
- [AWS::NetworkManager::ConnectPeer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuid/aws-resource-networkmanager-connectpeer.html)   
+ [AWS::NetworkManager::ConnectPeer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectpeer.html)   
 Use the `AWS::NetworkManager::ConnectPeer` create a core network Connect Peer attachment\. 
 
  [AWS::NetworkManager::CoreNetwork](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-corenetwork.html)   
 Use the `AWS::NetworkManager::CoreNetwork` to create a core network\. 
 
- [AWS::NetworkManager::SiteToSiteVPNAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuid/aws-resource-networkmanager-sitetositevpnattachment.html)   
+ [AWS::NetworkManager::SiteToSiteVPNAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html)   
 Use the `AWS::NetworkManager::SiteToSiteVPNAttachment` create a core network site\-to\-site VPN attachment\. 
 
- [AWS::NetworkManager::VPCAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuid/aws-resource-networkmanager-vpcattachment.html)   
+ [AWS::NetworkManager::VPCAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html)   
 Use the `AWS::NetworkManager::VPCAttachment` create a core network VPC attachment\.  | February 17, 2022 | 
 | [Updated resources](AWS_EC2.md) | The following resource was updated: AWS::EC2::LaunchTemplate\. 
 
@@ -2726,7 +2767,7 @@ For more information, see [Monitoring data with alarms](https://docs.aws.amazon.
 Use the `Format` property to define the file format of a dataset\.  | February 25, 2021 | 
 | [Updated resource](AWS_ManagedBlockchain.md) | The following resource was updated: AWS::ManagedBlockchain::Node 
 
- [AWS::ManagedBlockchain::Node](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/ResourceName.html)   
+ [AWS::ManagedBlockchain::Node](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-node.html)   
 Use the `NodeConfiguration` property to create a node on an Ethereum network\.  | February 25, 2021 | 
 | [Updated resource](AWS_SageMaker.md) | The following resource was updated: AWS::SageMaker::Model 
 

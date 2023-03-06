@@ -71,6 +71,7 @@ An operator that includes events that match the last few characters of the event
   +  `AWS::CloudTrail::Channel` 
   +  `AWS::Cognito::IdentityPool` 
   +  `AWS::DynamoDB::Stream` 
+  +  `AWS::EC2::InstanceConnectEndpoint` 
   +  `AWS::EC2::Snapshot` 
   +  `AWS::FinSpace::Environment` 
   +  `AWS::Glue::Table` 
@@ -103,6 +104,9 @@ An operator that includes events that match the last few characters of the event
 
   When `resources.type` equals `AWS::DynamoDB::Stream`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:dynamodb:<region>:<account_ID>:table/<table_name>/stream/<date_time>` 
+
+  When `resources.type` equals `AWS::EC2::InstanceConnectEndpoint`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
+  +  `arn:<partition>:ec2:<region>::instance-connect-endpoint/<instance_connect_endpoint_ID>` 
 
   When `resources.type` equals `AWS::EC2::Snapshot`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:ec2:<region>::snapshot/<snapshot_ID>` 

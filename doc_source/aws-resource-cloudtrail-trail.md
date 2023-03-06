@@ -92,7 +92,9 @@ Specifies whether the trail is publishing events from global services such as IA
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InsightSelectors`  <a name="cfn-cloudtrail-trail-insightselectors"></a>
-A JSON string that contains the insight types you want to log on a trail\. `ApiCallRateInsight` and `ApiErrorRateInsight` are valid insight types\.  
+A JSON string that contains the insight types you want to log on a trail\. `ApiCallRateInsight` and `ApiErrorRateInsight` are valid Insight types\.  
+The `ApiCallRateInsight` Insights type analyzes write\-only management API calls that are aggregated per minute against a baseline API call volume\.  
+The `ApiErrorRateInsight` Insights type analyzes management API calls that result in error codes\. The error is shown if the API call is unsuccessful\.  
 *Required*: No  
 *Type*: List of [InsightSelector](aws-properties-cloudtrail-trail-insightselector.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

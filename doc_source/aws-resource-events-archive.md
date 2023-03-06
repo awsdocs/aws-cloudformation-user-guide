@@ -88,9 +88,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 #### <a name="aws-resource-events-archive-return-values-fn--getatt-fn--getatt"></a>
 
-`ArchiveName`  <a name="ArchiveName-fn::getatt"></a>
-The archive name\.
-
 `Arn`  <a name="Arn-fn::getatt"></a>
 The ARN of the archive created\.
 

@@ -82,6 +82,13 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-ec2-vpcendpointservice-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-ec2-vpcendpointservice-return-values-fn--getatt-fn--getatt"></a>
+
+`ServiceId`  <a name="ServiceId-fn::getatt"></a>
+Property description not available\.
+
 ## See also<a name="aws-resource-ec2-vpcendpointservice--seealso"></a>
 + [CreateVpcEndpointServiceConfiguration](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/ApiReference-query-CreateVpcEndpointServiceConfiguration.html) in the *Amazon EC2 API Reference*
 + [VPC endpoint services](https://docs.aws.amazon.com/vpc/latest/privatelink/endpoint-service.html) in *AWS PrivateLink*

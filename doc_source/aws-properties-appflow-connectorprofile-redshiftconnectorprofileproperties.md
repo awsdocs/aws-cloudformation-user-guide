@@ -56,27 +56,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClusterIdentifier`  <a name="cfn-appflow-connectorprofile-redshiftconnectorprofileproperties-clusteridentifier"></a>
-The unique ID that's assigned to an Amazon Redshift cluster\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Maximum*: `512`  
-*Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataApiRoleArn`  <a name="cfn-appflow-connectorprofile-redshiftconnectorprofileproperties-dataapirolearn"></a>
-The Amazon Resource Name \(ARN\) of an IAM role that permits Amazon AppFlow to access your Amazon Redshift database through the Data API\. For more information, and for the polices that you attach to this role, see [Allow Amazon AppFlow to access Amazon Redshift databases with the Data API](https://docs.aws.amazon.com/appflow/latest/userguide/security_iam_service-role-policies.html#access-redshift)\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Maximum*: `512`  
-*Pattern*: `arn:aws:iam:.*:[0-9]+:.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatabaseName`  <a name="cfn-appflow-connectorprofile-redshiftconnectorprofileproperties-databasename"></a>
-The name of an Amazon Redshift database\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Maximum*: `512`  
-*Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatabaseUrl`  <a name="cfn-appflow-connectorprofile-redshiftconnectorprofileproperties-databaseurl"></a>
@@ -88,7 +82,7 @@ The name of an Amazon Redshift database\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsRedshiftServerless`  <a name="cfn-appflow-connectorprofile-redshiftconnectorprofileproperties-isredshiftserverless"></a>
-Indicates whether the connector profile defines a connection to an Amazon Redshift Serverless data warehouse\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -102,11 +96,9 @@ Indicates whether the connector profile defines a connection to an Amazon Redshi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WorkgroupName`  <a name="cfn-appflow-connectorprofile-redshiftconnectorprofileproperties-workgroupname"></a>
-The name of an Amazon Redshift workgroup\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Maximum*: `512`  
-*Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-appflow-connectorprofile-redshiftconnectorprofileproperties--seealso"></a>

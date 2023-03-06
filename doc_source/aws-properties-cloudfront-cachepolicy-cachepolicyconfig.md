@@ -6,7 +6,7 @@ This configuration determines the following:
 + The values that CloudFront includes in the cache key\. These values can include HTTP headers, cookies, and URL query strings\. CloudFront uses the cache key to find an object in its cache that it can return to the viewer\.
 + The default, minimum, and maximum time to live \(TTL\) values that you want objects to stay in the CloudFront cache\.
 
-The headers, cookies, and query strings that are included in the cache key are automatically included in requests that CloudFront sends to the origin\. CloudFront sends a request when it can't find a valid object in its cache that matches the request's cache key\. If you want to send values to the origin but *not* include them in the cache key, use `OriginRequestPolicy`\.
+The headers, cookies, and query strings that are included in the cache key are also included in requests that CloudFront sends to the origin\. CloudFront sends a request when it can't find a valid object in its cache that matches the request's cache key\. If you want to send values to the origin but *not* include them in the cache key, use `OriginRequestPolicy`\.
 
 ## Syntax<a name="aws-properties-cloudfront-cachepolicy-cachepolicyconfig-syntax"></a>
 
@@ -72,7 +72,7 @@ A unique name to identify the cache policy\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParametersInCacheKeyAndForwardedToOrigin`  <a name="cfn-cloudfront-cachepolicy-cachepolicyconfig-parametersincachekeyandforwardedtoorigin"></a>
-The HTTP headers, cookies, and URL query strings to include in the cache key\. The values included in the cache key are automatically included in requests that CloudFront sends to the origin\.  
+The HTTP headers, cookies, and URL query strings to include in the cache key\. The values included in the cache key are also included in requests that CloudFront sends to the origin\.  
 *Required*: Yes  
 *Type*: [ParametersInCacheKeyAndForwardedToOrigin](aws-properties-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

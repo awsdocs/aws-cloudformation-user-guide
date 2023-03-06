@@ -75,7 +75,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-redshift-clustersubnetgroup-return-values-fn--getatt-fn--getatt"></a>
 
 `ClusterSubnetGroupName`  <a name="ClusterSubnetGroupName-fn::getatt"></a>
-Property description not available\.
+The name of the cluster subnet group\.
 
 ## Examples<a name="aws-resource-redshift-clustersubnetgroup--examples"></a>
 

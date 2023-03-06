@@ -2,7 +2,7 @@
 
 This object determines the values that CloudFront includes in the cache key\. These values can include HTTP headers, cookies, and URL query strings\. CloudFront uses the cache key to find an object in its cache that it can return to the viewer\.
 
-The headers, cookies, and query strings that are included in the cache key are automatically included in requests that CloudFront sends to the origin\. CloudFront sends a request when it can't find an object in its cache that matches the request's cache key\. If you want to send values to the origin but *not* include them in the cache key, use `OriginRequestPolicy`\.
+The headers, cookies, and query strings that are included in the cache key are also included in requests that CloudFront sends to the origin\. CloudFront sends a request when it can't find an object in its cache that matches the request's cache key\. If you want to send values to the origin but *not* include them in the cache key, use `OriginRequestPolicy`\.
 
 ## Syntax<a name="aws-properties-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin-syntax"></a>
 
@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin-properties"></a>
 
 `CookiesConfig`  <a name="cfn-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin-cookiesconfig"></a>
-An object that determines whether any cookies in viewer requests \(and if so, which cookies\) are included in the cache key and automatically included in requests that CloudFront sends to the origin\.  
+An object that determines whether any cookies in viewer requests \(and if so, which cookies\) are included in the cache key and in requests that CloudFront sends to the origin\.  
 *Required*: Yes  
 *Type*: [CookiesConfig](aws-properties-cloudfront-cachepolicy-cookiesconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -68,13 +68,13 @@ If both of these fields are `false`, then CloudFront treats the `Accept-Encoding
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HeadersConfig`  <a name="cfn-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin-headersconfig"></a>
-An object that determines whether any HTTP headers \(and if so, which headers\) are included in the cache key and automatically included in requests that CloudFront sends to the origin\.  
+An object that determines whether any HTTP headers \(and if so, which headers\) are included in the cache key and in requests that CloudFront sends to the origin\.  
 *Required*: Yes  
 *Type*: [HeadersConfig](aws-properties-cloudfront-cachepolicy-headersconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `QueryStringsConfig`  <a name="cfn-cloudfront-cachepolicy-parametersincachekeyandforwardedtoorigin-querystringsconfig"></a>
-An object that determines whether any URL query strings in viewer requests \(and if so, which query strings\) are included in the cache key and automatically included in requests that CloudFront sends to the origin\.  
+An object that determines whether any URL query strings in viewer requests \(and if so, which query strings\) are included in the cache key and in requests that CloudFront sends to the origin\.  
 *Required*: Yes  
 *Type*: [QueryStringsConfig](aws-properties-cloudfront-cachepolicy-querystringsconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

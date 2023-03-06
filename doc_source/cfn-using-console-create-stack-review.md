@@ -1,14 +1,12 @@
-# Reviewing your stack and estimating stack cost on the AWS CloudFormation console<a name="cfn-using-console-create-stack-review"></a>
+# Reviewing your stack on the AWS CloudFormation console<a name="cfn-using-console-create-stack-review"></a>
 
-The final step before your stack is launched is to review the values entered while creating the stack\. You can also estimate the cost of your stack\.
+The final step before your stack is launched is to review the values entered while creating the stack\.
 
 1. On the **Review** page, review the details of your stack\.
 
    If you need to change any of the values before launching the stack, choose **Edit** on the appropriate section to go back to the page that has the setting that you want to change\.
 
-1. \(Optional\) To estimate the cost of your stack, select the **Estimate cost** link in the **Template** section\. The AWS Pricing Calculator displays values from your stack template and launch settings\.
-
-1. After you review the stack creation settings and the estimated cost of your stack, choose **Create stack** to launch your stack\.
+1. After you review the stack creation settings, choose **Create stack** to launch your stack\.
 **Note**  
 As this point, you can also choose to create a new change set rather than a new stack\. To do so, click **Create change set** instead of **Create stack**\. For more information, see [Creating stacks using change sets](cfn-console-create-stacks-changesets.md)
 

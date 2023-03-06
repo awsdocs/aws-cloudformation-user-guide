@@ -28,14 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appflow-flow-prefixconfig-properties"></a>
 
 `PathPrefixHierarchy`  <a name="cfn-appflow-flow-prefixconfig-pathprefixhierarchy"></a>
-Specifies whether the destination file path includes either or both of the following elements:    
-EXECUTION\_ID  
-The ID that Amazon AppFlow assigns to the flow run\.  
-SCHEMA\_VERSION  
-The version number of your data schema\. Amazon AppFlow assigns this version number\. The version number increases by one when you change any of the following settings in your flow configuration:  
-+ Source\-to\-destination field mappings
-+ Field data types
-+ Partition keys
+Property description not available\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -62,7 +62,7 @@ The alias of instance\. `InstanceAlias` is only required when `IdentityManagemen
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `62`  
+*Maximum*: `45`  
 *Pattern*: `^(?!d-)([\da-zA-Z]+)([-]*[\da-zA-Z])*$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

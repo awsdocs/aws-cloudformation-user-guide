@@ -174,7 +174,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-apigateway-restapi-return-values-fn--getatt-fn--getatt"></a>
 
 `RestApiId`  <a name="RestApiId-fn::getatt"></a>
-Property description not available\.
+The string identifier of the associated RestApi\.
 
 `RootResourceId`  <a name="RootResourceId-fn::getatt"></a>
 The root resource ID for a `RestApi` resource, such as `a0bc123d4e`\.

@@ -2,7 +2,7 @@
 
 Specifies that AWS WAF should allow the request and optionally defines additional custom handling for the request\.
 
-This is used in the context of other settings, for example to specify values for RuleAction and web ACL [DefaultAction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-defaultaction)\. 
+This is used in the context of other settings, for example to specify values for `RuleAction` and web ACL `DefaultAction`\. 
 
 ## Syntax<a name="aws-properties-wafv2-rulegroup-allowaction-syntax"></a>
 

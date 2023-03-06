@@ -51,7 +51,7 @@ Properties:
 Specifies the access key \(for example, a user name\) if credentials are required to authenticate with the object storage server\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `8`  
+*Minimum*: `1`  
 *Maximum*: `200`  
 *Pattern*: `^.+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -76,7 +76,7 @@ Specifies the name of the object storage bucket involved in the transfer\.
 Specifies the secret key \(for example, a password\) if credentials are required to authenticate with the object storage server\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `8`  
+*Minimum*: `1`  
 *Maximum*: `200`  
 *Pattern*: `^.+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

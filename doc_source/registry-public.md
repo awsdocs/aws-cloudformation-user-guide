@@ -57,7 +57,32 @@ When activating a resource, you can specify the IAM execution role for CloudForm
 
 In order for CloudFormation to assume the execution role, the role must have a trust policy defined with CloudFormation\. In addition, permission to perform an operation is granted by creating an IAM policy and attaching to the execution role\. The required permissions are defined in the handler section of the extension schema\.
 
-The following is an example IAM Role trust policy for resource type and hook extension
+The following is an example IAM Role trust policy for the resource type extension:
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement":[
+        {
+            "Effect": "Allow",
+            "Principal":{
+                "Service": "resources.cloudformation.amazonaws.com"
+            },
+            "Action":"sts:AssumeRole",
+            "Condition":{
+                "StringEquals":{
+                    "aws:SourceAccount":"123456789012"
+                },
+                "StringLike":{
+                    "aws:SourceArn":"arn:aws:cloudformation:us-east-1:123456789012:type/resource/Organization-Service-Resource/*"
+                }
+            }
+        }
+    ]
+}
+```
+
+The following is an example IAM Role trust policy for the hook extension:
 
 ```
 {
@@ -77,7 +102,7 @@ The following is an example IAM Role trust policy for resource type and hook ext
                     "aws:SourceAccount":"123456789012"
                 },
                 "StringLike":{
-                     "aws:SourceArn":"arn:aws:cloudformation:us-east-1:123456789012:type/hook/Organization-Service-Resource/*"
+                     "aws:SourceArn":"arn:aws:cloudformation:us-east-1:123456789012:type/hook/Organization-Service-Hook/*"
                 }
             }
         }

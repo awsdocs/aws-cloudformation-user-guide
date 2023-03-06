@@ -68,7 +68,7 @@ Filtering that specifies which web requests are kept in the logs and which are d
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RedactedFields`  <a name="cfn-wafv2-loggingconfiguration-redactedfields"></a>
-The parts of the request that you want to keep out of the logs\. For example, if you redact the `SingleHeader` field, the `HEADER` field in the logs will be `xxx`\.   
+The parts of the request that you want to keep out of the logs\. For example, if you redact the `SingleHeader` field, the `HEADER` field in the logs will be `REDACTED`\.   
 You can specify only the following fields for redaction: `UriPath`, `QueryString`, `SingleHeader`, `Method`, and `JsonBody`\.
 *Required*: No  
 *Type*: List of [FieldToMatch](aws-properties-wafv2-loggingconfiguration-fieldtomatch.md)  

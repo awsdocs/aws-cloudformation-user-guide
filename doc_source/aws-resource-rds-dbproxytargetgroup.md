@@ -73,7 +73,7 @@ One or more DB instance identifiers\.
 The identifier of the `DBProxy` that is associated with the `DBProxyTargetGroup`\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TargetGroupName`  <a name="cfn-rds-dbproxytargetgroup-targetgroupname"></a>
 The identifier for the target group\.  

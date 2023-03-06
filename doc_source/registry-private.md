@@ -110,8 +110,8 @@ An extension can include configuration properties meant to apply to all instance
 
 **Note**  
 If your type configuration includes dynamic references to values stored in AWS Systems Manager or AWS Secrets Manager, any role used to provision the type \(for example, when creating or updating a stack\) must have the proper permissions to retrieve that value\. Specifically:  
-If the type configuration contains a parameter stored in AWS Systems Manager Parameter Store, the IAM user or role used to provision the type must have permissions to call [GetParameter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_GetParameter.html)\.
-If the type configuration contains a secret stored in AWS Secrets Manager, the IAM user or role used to provision the type must have permissions to call [GetSecretValue](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html)\. 
+If the type configuration contains a parameter stored in AWS Systems Manager Parameter Store, the user or role used to provision the type must have permissions to call [GetParameter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_GetParameter.html)\.
+If the type configuration contains a secret stored in AWS Secrets Manager, the user or role used to provision the type must have permissions to call [GetSecretValue](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html)\. 
 For more information on dynamic references, see [Using dynamic references to specify template values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html)\.
 
 For more information about how configuration definitions are defined when developing an extension, see [Defining the account\-level configuration of an extension](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-model.html#resource-type-howto-configuration) in the *CloudFormation User Guide for Extension Development*\.

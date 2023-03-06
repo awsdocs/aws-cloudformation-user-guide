@@ -105,7 +105,7 @@ The allocated percentage of users \(segment members\) who shouldn't receive mess
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsPaused`  <a name="cfn-pinpoint-campaign-ispaused"></a>
-Specifies whether to pause the campaign\. A paused campaign doesn't run unless you resume it by changing this value to `false`\. If you restart a campaign, the campaign restarts from the beginning and not at the point you paused it\.  
+Specifies whether to pause the campaign\. A paused campaign doesn't run unless you resume it by changing this value to `false`\. If you restart a campaign, the campaign restarts from the beginning and not at the point you paused it\. If a campaign is running it will complete and then pause\. Pause only pauses or skips the next run for a recurring future scheduled campaign\. A campaign scheduled for immediate can't be paused\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

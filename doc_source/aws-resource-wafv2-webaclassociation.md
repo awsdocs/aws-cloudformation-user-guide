@@ -43,6 +43,7 @@ The ARN must be in one of the following formats:
 + For an Amazon API Gateway REST API: `arn:aws:apigateway:region::/restapis/api-id/stages/stage-name ` 
 + For an AWS AppSync GraphQL API: `arn:aws:appsync:region:account-id:apis/GraphQLApiId ` 
 + For an Amazon Cognito user pool: `arn:aws:cognito-idp:region:account-id:userpool/user-pool-id ` 
++ For an AWS App Runner service: `arn:aws:apprunner:region:account-id:service/apprunner-service-name/apprunner-service-id ` 
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  

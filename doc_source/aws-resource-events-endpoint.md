@@ -57,7 +57,7 @@ The event buses being used by the endpoint\.
 
 `Name`  <a name="cfn-events-endpoint-name"></a>
 The name of the endpoint\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `64`  

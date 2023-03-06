@@ -50,21 +50,3 @@ A list of tags associated with the signing profile\.
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-## Return values<a name="aws-resource-signer-signingprofile-return-values"></a>
-
-### Ref<a name="aws-resource-signer-signingprofile-return-values-ref"></a>
-
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ARN\.
-
-### Fn::GetAtt<a name="aws-resource-signer-signingprofile-return-values-fn--getatt"></a>
-
-The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
-
-#### <a name="aws-resource-signer-signingprofile-return-values-fn--getatt-fn--getatt"></a>
-
-`ProfileVersionArn`  <a name="ProfileVersionArn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the Signing Profile Version\.
-
-`ProfileName` <a name="ProfileName-fn::getatt"></a>
-The Name of the Signing Profile.

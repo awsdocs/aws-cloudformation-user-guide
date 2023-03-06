@@ -206,7 +206,7 @@ Boolean to specify whether you want to generate a secret for the user pool clien
 `IdTokenValidity`  <a name="cfn-cognito-userpoolclient-idtokenvalidity"></a>
 The ID token time limit\. After this limit expires, your user can't use their ID token\. To specify the time unit for `IdTokenValidity` as `seconds`, `minutes`, `hours`, or `days`, set a `TokenValidityUnits` value in your API request\.  
 For example, when you set `IdTokenValidity` as `10` and `TokenValidityUnits` as `hours`, your user can authenticate their session with their ID token for 10 hours\.  
-The default time unit for `AccessTokenValidity` in an API request is hours\.   
+The default time unit for `IdTokenValidity` in an API request is hours\.   
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

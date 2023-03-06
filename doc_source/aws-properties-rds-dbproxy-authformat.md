@@ -38,7 +38,7 @@ Valid Values: `SECRETS`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClientPasswordAuthType`  <a name="cfn-rds-dbproxy-authformat-clientpasswordauthtype"></a>
-Property description not available\.  
+Specifies the details of authentication used by a proxy to log in as a specific database user\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

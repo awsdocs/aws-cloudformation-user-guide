@@ -24,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BatchSize](#cfn-lambda-eventsourcemapping-batchsize)" : Integer,
       "[BisectBatchOnFunctionError](#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror)" : Boolean,
       "[DestinationConfig](#cfn-lambda-eventsourcemapping-destinationconfig)" : DestinationConfig,
+      "[DocumentDBEventSourceConfig](#cfn-lambda-eventsourcemapping-documentdbeventsourceconfig)" : DocumentDBEventSourceConfig,
       "[Enabled](#cfn-lambda-eventsourcemapping-enabled)" : Boolean,
       "[EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn)" : String,
       "[FilterCriteria](#cfn-lambda-eventsourcemapping-filtercriteria)" : FilterCriteria,
@@ -57,6 +58,8 @@ Properties:
   [BisectBatchOnFunctionError](#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror): Boolean
   [DestinationConfig](#cfn-lambda-eventsourcemapping-destinationconfig): 
     DestinationConfig
+  [DocumentDBEventSourceConfig](#cfn-lambda-eventsourcemapping-documentdbeventsourceconfig): 
+    DocumentDBEventSourceConfig
   [Enabled](#cfn-lambda-eventsourcemapping-enabled): Boolean
   [EventSourceArn](#cfn-lambda-eventsourcemapping-eventsourcearn): String
   [FilterCriteria](#cfn-lambda-eventsourcemapping-filtercriteria): 
@@ -101,6 +104,7 @@ The maximum number of records in each batch that Lambda pulls from your stream o
 +  **Amazon Managed Streaming for Apache Kafka** – Default 100\. Max 10,000\.
 +  **Self\-managed Apache Kafka** – Default 100\. Max 10,000\.
 +  **Amazon MQ \(ActiveMQ and RabbitMQ\)** – Default 100\. Max 10,000\.
++  **DocumentDB** – Default 100\. Max 10,000\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -119,6 +123,12 @@ The maximum number of records in each batch that Lambda pulls from your stream o
 *Type*: [DestinationConfig](aws-properties-lambda-eventsourcemapping-destinationconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`DocumentDBEventSourceConfig`  <a name="cfn-lambda-eventsourcemapping-documentdbeventsourceconfig"></a>
+Specific configuration settings for a DocumentDB event source\.  
+*Required*: No  
+*Type*: [DocumentDBEventSourceConfig](aws-properties-lambda-eventsourcemapping-documentdbeventsourceconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Enabled`  <a name="cfn-lambda-eventsourcemapping-enabled"></a>
 When true, the event source mapping is active\. When false, Lambda pauses polling and invocation\.  
 Default: True  
@@ -133,6 +143,7 @@ The Amazon Resource Name \(ARN\) of the event source\.
 +  **Amazon Simple Queue Service** – The ARN of the queue\.
 +  **Amazon Managed Streaming for Apache Kafka** – The ARN of the cluster\.
 +  **Amazon MQ** – The ARN of the broker\.
++  **Amazon DocumentDB** – The ARN of the DocumentDB change stream\.
 *Required*: No  
 *Type*: String  
 *Pattern*: `arn:(aws[a-zA-Z0-9-]*):([a-zA-Z0-9\-])+:([a-z]{2}(-gov)?-[a-z]+-\d{1})?:(\d{12})?:(.*)`  
