@@ -9,6 +9,8 @@ CloudFormation supports the following URL query parameters:
 `templateURL`  
 Required\. Specifies the URL of the stack template\. URL encoding is supported, but it isn't required\.
 
+The URL must point to a template with a maximum size of 1 MB that is stored in an S3 bucket that you have read permissions to and that is located in the same region as the stack\. The URL can be a maximum of 1024 characters long\.
+
 `stackName`  
 Optional\. Specifies the stack name\. A stack name can contain only alphanumeric characters \(case\-sensitive\) and hyphens\. It must start with an alphabetic character and can't be longer than 128 characters\.
 
