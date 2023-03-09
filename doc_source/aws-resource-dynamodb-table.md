@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AttributeDefinitions](#cfn-dynamodb-table-attributedefinitions)" : [ AttributeDefinition, ... ],
       "[BillingMode](#cfn-dynamodb-table-billingmode)" : String,
       "[ContributorInsightsSpecification](#cfn-dynamodb-table-contributorinsightsspecification)" : ContributorInsightsSpecification,
+      "[DeletionProtectionEnabled](#cfn-dynamodb-table-deletionprotectionenabled)" : Boolean,
       "[GlobalSecondaryIndexes](#cfn-dynamodb-table-globalsecondaryindexes)" : [ GlobalSecondaryIndex, ... ],
       "[ImportSourceSpecification](#cfn-dynamodb-table-importsourcespecification)" : ImportSourceSpecification,
       "[KeySchema](#cfn-dynamodb-table-keyschema)" : Json,
@@ -48,6 +49,7 @@ Properties:
   [BillingMode](#cfn-dynamodb-table-billingmode): String
   [ContributorInsightsSpecification](#cfn-dynamodb-table-contributorinsightsspecification): 
     ContributorInsightsSpecification
+  [DeletionProtectionEnabled](#cfn-dynamodb-table-deletionprotectionenabled): Boolean,
   [GlobalSecondaryIndexes](#cfn-dynamodb-table-globalsecondaryindexes): 
     - GlobalSecondaryIndex
   [ImportSourceSpecification](#cfn-dynamodb-table-importsourcespecification): 
@@ -98,6 +100,12 @@ If not specified, the default is `PROVISIONED`\.
 The settings used to enable or disable CloudWatch Contributor Insights for the specified table\.  
 *Required*: No  
 *Type*: [ContributorInsightsSpecification](aws-properties-dynamodb-table-contributorinsightsspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DeletionProtectionEnabled`  <a name="cfn-dynamodb-table-deletionprotectionenabled"></a>
+Indicates that table deletion protection are enabled for the table\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalSecondaryIndexes`  <a name="cfn-dynamodb-table-globalsecondaryindexes"></a>
