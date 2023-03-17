@@ -294,7 +294,7 @@ The following example enables AWS Config and creates an AWS Config rule, an aggr
                 },
                 "Path": "/",
                 "ManagedPolicyArns": [
-                    "arn:aws:iam::aws:policy/service-role/AWSConfigRole"
+                    "arn:aws:iam::aws:policy/service-role/AWS_ConfigRole"
                 ]
             }
         },
@@ -498,7 +498,7 @@ Resources:
               - sts:AssumeRole
       Path: /
       ManagedPolicyArns:
-        - arn:aws:iam::aws:policy/service-role/AWSConfigRole
+        - arn:aws:iam::aws:policy/service-role/AWS_ConfigRole
 
   ConfigRecorder:
     Type: AWS::Config::ConfigurationRecorder
