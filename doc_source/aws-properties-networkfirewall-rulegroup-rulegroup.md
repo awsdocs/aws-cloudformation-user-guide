@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[ReferenceSets](#cfn-networkfirewall-rulegroup-rulegroup-referencesets)" : ReferenceSets,
   "[RulesSource](#cfn-networkfirewall-rulegroup-rulegroup-rulessource)" : RulesSource,
   "[RuleVariables](#cfn-networkfirewall-rulegroup-rulegroup-rulevariables)" : RuleVariables,
   "[StatefulRuleOptions](#cfn-networkfirewall-rulegroup-rulegroup-statefulruleoptions)" : StatefulRuleOptions
@@ -23,6 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-networkfirewall-rulegroup-rulegroup-syntax.yaml"></a>
 
 ```
+  [ReferenceSets](#cfn-networkfirewall-rulegroup-rulegroup-referencesets): 
+    ReferenceSets
   [RulesSource](#cfn-networkfirewall-rulegroup-rulegroup-rulessource): 
     RulesSource
   [RuleVariables](#cfn-networkfirewall-rulegroup-rulegroup-rulevariables): 
@@ -32,6 +35,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-networkfirewall-rulegroup-rulegroup-properties"></a>
+
+`ReferenceSets`  <a name="cfn-networkfirewall-rulegroup-rulegroup-referencesets"></a>
+The reference sets for the stateful rule group\.  
+*Required*: No  
+*Type*: [ReferenceSets](aws-properties-networkfirewall-rulegroup-referencesets.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RulesSource`  <a name="cfn-networkfirewall-rulegroup-rulegroup-rulessource"></a>
 The stateful rules or stateless rules for the rule group\.   

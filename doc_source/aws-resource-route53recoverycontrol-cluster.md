@@ -32,7 +32,7 @@ Properties:
 
 `Name`  <a name="cfn-route53recoverycontrol-cluster-name"></a>
 Name of the cluster\. You can use any non\-white space character in the name\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

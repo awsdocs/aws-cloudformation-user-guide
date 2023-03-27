@@ -41,7 +41,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-config-organizationconfigrule-organizationcustomrulemetadata-properties"></a>
 
 `Description`  <a name="cfn-config-organizationconfigrule-organizationcustomrulemetadata-description"></a>
-The description that you provide for organization config rule\.  
+The description that you provide for your organization AWS Config rule\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -49,7 +49,7 @@ The description that you provide for organization config rule\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputParameters`  <a name="cfn-config-organizationconfigrule-organizationcustomrulemetadata-inputparameters"></a>
-A string, in JSON format, that is passed to organization config rule Lambda function\.  
+A string, in JSON format, that is passed to your organization AWS Config rule Lambda function\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

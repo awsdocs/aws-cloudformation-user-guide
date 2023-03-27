@@ -1,6 +1,6 @@
 # AWS::EC2::TransitGatewayPeeringAttachment<a name="aws-resource-ec2-transitgatewaypeeringattachment"></a>
 
-Requests a transit gateway peering attachment between the specified transit gateway \(requester\) and a peer transit gateway \(accepter\)\. The transit gateways must be in different Regions\. The peer transit gateway can be in your account or a different AWS account\.
+Requests a transit gateway peering attachment between the specified transit gateway \(requester\) and a peer transit gateway \(accepter\)\. The peer transit gateway can be in your account or a different AWS account\.
 
 After you create the peering attachment, the owner of the accepter transit gateway must accept the attachment request\.
 
@@ -14,7 +14,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::EC2::TransitGatewayPeeringAttachment",
   "Properties" : {
-      "[Options](#cfn-ec2-transitgatewaypeeringattachment-options)" : TransitGatewayPeeringAttachmentOptions,
       "[PeerAccountId](#cfn-ec2-transitgatewaypeeringattachment-peeraccountid)" : String,
       "[PeerRegion](#cfn-ec2-transitgatewaypeeringattachment-peerregion)" : String,
       "[PeerTransitGatewayId](#cfn-ec2-transitgatewaypeeringattachment-peertransitgatewayid)" : String,
@@ -29,8 +28,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::EC2::TransitGatewayPeeringAttachment
 Properties: 
-  [Options](#cfn-ec2-transitgatewaypeeringattachment-options): 
-    TransitGatewayPeeringAttachmentOptions
   [PeerAccountId](#cfn-ec2-transitgatewaypeeringattachment-peeraccountid): String
   [PeerRegion](#cfn-ec2-transitgatewaypeeringattachment-peerregion): String
   [PeerTransitGatewayId](#cfn-ec2-transitgatewaypeeringattachment-peertransitgatewayid): String
@@ -40,12 +37,6 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-ec2-transitgatewaypeeringattachment-properties"></a>
-
-`Options`  <a name="cfn-ec2-transitgatewaypeeringattachment-options"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
-*Type*: [TransitGatewayPeeringAttachmentOptions](aws-properties-ec2-transitgatewaypeeringattachment-transitgatewaypeeringattachmentoptions.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PeerAccountId`  <a name="cfn-ec2-transitgatewaypeeringattachment-peeraccountid"></a>
 The ID of the AWS account that owns the transit gateway\.  
@@ -98,6 +89,15 @@ The time the transit gateway peering attachment was created\.
 
 `State`  <a name="State-fn::getatt"></a>
 The state of the transit gateway peering attachment\. Note that the `initiating` state has been deprecated\.
+
+`Status`  <a name="Status-fn::getatt"></a>
+The status of the transit gateway peering attachment\.
+
+`Status.Code`  <a name="Status.Code-fn::getatt"></a>
+The status code\.
+
+`Status.Message`  <a name="Status.Message-fn::getatt"></a>
+The status message\.
 
 `TransitGatewayAttachmentId`  <a name="TransitGatewayAttachmentId-fn::getatt"></a>
 The ID of the transit gateway peering attachment\.

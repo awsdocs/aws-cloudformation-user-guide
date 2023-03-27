@@ -27,13 +27,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `HeaderBehavior`  <a name="cfn-cloudfront-originrequestpolicy-headersconfig-headerbehavior"></a>
 Determines whether any HTTP headers are included in requests that CloudFront sends to the origin\. Valid values are:  
-+  `none` – HTTP headers are not included in requests that CloudFront sends to the origin\. Even when this field is set to `none`, any headers that are listed in a `CachePolicy` *are* included in origin requests\.
-+  `whitelist` – The HTTP headers that are listed in the `Headers` type are included in requests that CloudFront sends to the origin\.
++  `none` – No HTTP headers in viewer requests are included in requests that CloudFront sends to the origin\. Even when this field is set to `none`, any headers that are listed in a `CachePolicy` *are* included in origin requests\.
++  `whitelist` – Only the HTTP headers that are listed in the `Headers` type are included in requests that CloudFront sends to the origin\.
 +  `allViewer` – All HTTP headers in viewer requests are included in requests that CloudFront sends to the origin\.
 +  `allViewerAndWhitelistCloudFront` – All HTTP headers in viewer requests and the additional CloudFront headers that are listed in the `Headers` type are included in requests that CloudFront sends to the origin\. The additional headers are added by CloudFront\.
++  `allExcept` – All HTTP headers in viewer requests are included in requests that CloudFront sends to the origin, * **except** * for those listed in the `Headers` type, which are not included\.
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `allViewer | allViewerAndWhitelistCloudFront | none | whitelist`  
+*Allowed values*: `allExcept | allViewer | allViewerAndWhitelistCloudFront | none | whitelist`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Headers`  <a name="cfn-cloudfront-originrequestpolicy-headersconfig-headers"></a>

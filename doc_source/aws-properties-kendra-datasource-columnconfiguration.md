@@ -49,7 +49,7 @@ The column that contains the contents of the document\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DocumentIdColumnName`  <a name="cfn-kendra-datasource-columnconfiguration-documentidcolumnname"></a>
-The column that provides the document's unique identifier\.  
+The column that provides the document's identifier\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

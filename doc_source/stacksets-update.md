@@ -25,8 +25,9 @@ To override parameter values for specific stack *instances*, see [Override param
 
    1. \[Self\-managed permissions\] For **Deployment targets**, choose **Deploy stacks in accounts**\. Paste your target account numbers in the text box, separating multiple numbers with commas\.
 
-      \[Service\-managed permissions\] For **Deployment targets**, choose the accounts in your organization to deploy to\.  
-![\[Deploy stack set updates to all accounts in select OUs within your organization.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-update-deployment-targets.png)
+      \[Service\-managed permissions\] For **Deployment targets**, choose the accounts in your organization to deploy to\.
+
+   1. Select the **Region**\.
 
    1. Change the value of the **Frequency** parameter from **24hours** to **12hours**\.
 

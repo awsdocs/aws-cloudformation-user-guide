@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-inspectorv2-filter-stringfilter-properties"></a>
 
 `Comparison`  <a name="cfn-inspectorv2-filter-stringfilter-comparison"></a>
-The operator to use when comparing values in the filter  
+The operator to use when comparing values in the filter\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

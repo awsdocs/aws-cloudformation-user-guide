@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CertificateArn](#cfn-mediapackage-originendpoint-spekekeyprovider-certificatearn)" : String,
+  "[EncryptionContractConfiguration](#cfn-mediapackage-originendpoint-spekekeyprovider-encryptioncontractconfiguration)" : EncryptionContractConfiguration,
   "[ResourceId](#cfn-mediapackage-originendpoint-spekekeyprovider-resourceid)" : String,
   "[RoleArn](#cfn-mediapackage-originendpoint-spekekeyprovider-rolearn)" : String,
   "[SystemIds](#cfn-mediapackage-originendpoint-spekekeyprovider-systemids)" : [ String, ... ],
@@ -22,6 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CertificateArn](#cfn-mediapackage-originendpoint-spekekeyprovider-certificatearn): String
+  [EncryptionContractConfiguration](#cfn-mediapackage-originendpoint-spekekeyprovider-encryptioncontractconfiguration): 
+    EncryptionContractConfiguration
   [ResourceId](#cfn-mediapackage-originendpoint-spekekeyprovider-resourceid): String
   [RoleArn](#cfn-mediapackage-originendpoint-spekekeyprovider-rolearn): String
   [SystemIds](#cfn-mediapackage-originendpoint-spekekeyprovider-systemids): 
@@ -32,13 +35,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-mediapackage-originendpoint-spekekeyprovider-properties"></a>
 
 `CertificateArn`  <a name="cfn-mediapackage-originendpoint-spekekeyprovider-certificatearn"></a>
-The Amazon Resource Name \(ARN\) for the certificate that you imported to AWS Certificate Manager to add content key encryption to this endpoint\. For this feature to work, your DRM key provider must support content key encryption\.   
+The Amazon Resource Name \(ARN\) for the certificate that you imported to AWS Certificate Manager to add content key encryption to this endpoint\. For this feature to work, your DRM key provider must support content key encryption\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`EncryptionContractConfiguration`  <a name="cfn-mediapackage-originendpoint-spekekeyprovider-encryptioncontractconfiguration"></a>
+Use `encryptionContractConfiguration` to configure one or more content encryption keys for your endpoints that use SPEKE Version 2\.0\. The encryption contract defines which content keys are used to encrypt the audio and video tracks in your stream\. To configure the encryption contract, specify which audio and video encryption presets to use\.  
+*Required*: No  
+*Type*: [EncryptionContractConfiguration](aws-properties-mediapackage-originendpoint-encryptioncontractconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ResourceId`  <a name="cfn-mediapackage-originendpoint-spekekeyprovider-resourceid"></a>
-Unique identifier for this endpoint, as it is configured in the key provider service\.   
+Unique identifier for this endpoint, as it is configured in the key provider service\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -50,7 +59,7 @@ The ARN for the IAM role that's granted by the key provider to provide access to
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SystemIds`  <a name="cfn-mediapackage-originendpoint-spekekeyprovider-systemids"></a>
-List of unique identifiers for the DRM systems to use, as defined in the CPIX specification\.   
+List of unique identifiers for the DRM systems to use, as defined in the CPIX specification\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

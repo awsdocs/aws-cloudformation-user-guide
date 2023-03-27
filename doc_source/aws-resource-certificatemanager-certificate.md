@@ -47,13 +47,13 @@ Properties:
 ## Properties<a name="aws-resource-certificatemanager-certificate-properties"></a>
 
 `CertificateAuthorityArn`  <a name="cfn-certificatemanager-certificate-certificateauthorityarn"></a>
-The Amazon Resource Name \(ARN\) of the private certificate authority \(CA\) that will be used to issue the certificate\. If you do not provide an ARN and you are trying to request a private certificate, ACM will attempt to issue a public certificate\. For more information about private CAs, see the [AWS Certificate Manager Private Certificate Authority \(PCA\)](https://docs.aws.amazon.com/acm-pca/latest/userguide/PcaWelcome.html) user guide\. The ARN must have the following form:   
+The Amazon Resource Name \(ARN\) of the private certificate authority \(CA\) that will be used to issue the certificate\. If you do not provide an ARN and you are trying to request a private certificate, ACM will attempt to issue a public certificate\. For more information about private CAs, see the [AWS Private Certificate Authority](https://docs.aws.amazon.com/privateca/latest/userguide/PcaWelcome.html) user guide\. The ARN must have the following form:   
  `arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012`   
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `2048`  
-*Pattern*: `arn:[\w+=/,.@-]+:[\w+=/,.@-]+:[\w+=/,.@-]*:[0-9]+:[\w+=,.@-]+(/[\w+=,.@-]+)*`  
+*Pattern*: `arn:[\w+=/,.@-]+:acm-pca:[\w+=/,.@-]*:[0-9]+:[\w+=,.@-]+(/[\w+=,.@-]+)*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificateTransparencyLoggingPreference`  <a name="cfn-certificatemanager-certificate-certificatetransparencyloggingpreference"></a>

@@ -43,7 +43,7 @@ This table describes the various status types used with `resource import`\.
 + Import operations don't allow new resource creations, resource deletions, or changes to property configurations\.
 + Each resource to import must have a `DeletionPolicy` attribute for the import operation to succeed\. The `DeletionPolicy` can be set to any possible value\. Only target resources need a `DeletionPolicy`\. Resources that are already part of the stack don't need a `DeletionPolicy`\.
 + You can't import the same resource into multiple stacks\.
-+ You can use the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions) IAM policy condition to control which resource types IAM users can work with during an import operation\.
++ You can use the [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#using-iam-template-conditions) IAM policy condition to control which resource types users can work with during an import operation\.
 + The AWS CloudFormation stack limits apply when importing resources\. For more information on limits, see [AWS CloudFormation limits](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html)\.
 
 ## Getting started with resource import<a name="resource-import-getting-started"></a>

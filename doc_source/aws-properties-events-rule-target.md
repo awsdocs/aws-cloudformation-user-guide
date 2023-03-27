@@ -26,6 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[RetryPolicy](#cfn-events-rule-target-retrypolicy)" : RetryPolicy,
   "[RoleArn](#cfn-events-rule-target-rolearn)" : String,
   "[RunCommandParameters](#cfn-events-rule-target-runcommandparameters)" : RunCommandParameters,
+  "[SageMakerPipelineParameters](#cfn-events-rule-target-sagemakerpipelineparameters)" : SageMakerPipelineParameters,
   "[SqsParameters](#cfn-events-rule-target-sqsparameters)" : SqsParameters
 }
 ```
@@ -56,6 +57,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [RoleArn](#cfn-events-rule-target-rolearn): String
   [RunCommandParameters](#cfn-events-rule-target-runcommandparameters): 
     RunCommandParameters
+  [SageMakerPipelineParameters](#cfn-events-rule-target-sagemakerpipelineparameters): 
+    SageMakerPipelineParameters
   [SqsParameters](#cfn-events-rule-target-sqsparameters): 
     SqsParameters
 ```
@@ -89,8 +92,8 @@ Contains the Amazon ECS task definition and task count to be used, if the event 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HttpParameters`  <a name="cfn-events-rule-target-httpparameters"></a>
-Contains the HTTP parameters to use when the target is a API Gateway REST endpoint or EventBridge ApiDestination\.  
-If you specify an API Gateway REST API or EventBridge ApiDestination as a target, you can use this parameter to specify headers, path parameters, and query string keys/values as part of your target invoking request\. If you're using ApiDestinations, the corresponding Connection can also have these values configured\. In case of any conflicting keys, values from the Connection take precedence\.  
+Contains the HTTP parameters to use when the target is a API Gateway endpoint or EventBridge ApiDestination\.  
+If you specify an API Gateway API or EventBridge ApiDestination as a target, you can use this parameter to specify headers, path parameters, and query string keys/values as part of your target invoking request\. If you're using ApiDestinations, the corresponding Connection can also have these values configured\. In case of any conflicting keys, values from the Connection take precedence\.  
 *Required*: No  
 *Type*: [HttpParameters](aws-properties-events-rule-httpparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -112,7 +115,7 @@ Valid JSON text passed to the target\. In this case, nothing from the event itse
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InputPath`  <a name="cfn-events-rule-target-inputpath"></a>
-The value of the JSONPath that is used for extracting part of the matched event when passing it to the target\. You must use JSON dot notation, not bracket notation\. For more information about JSON paths, see [JSONPath](http://goessner.net/articles/JsonPath/)\.  
+The value of the JSONPath that is used for extracting part of the matched event when passing it to the target\. You may use JSON dot notation or bracket notation\. For more information about JSON paths, see [JSONPath](http://goessner.net/articles/JsonPath/)\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `256`  
@@ -145,7 +148,7 @@ The `RetryPolicy` object that contains the retry policy configuration to use for
 
 `RoleArn`  <a name="cfn-events-rule-target-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role to be used for this target when the rule is triggered\. If one rule triggers multiple targets, you can use a different IAM role for each target\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `1600`  
@@ -155,6 +158,13 @@ The Amazon Resource Name \(ARN\) of the IAM role to be used for this target when
 Parameters used when you are using the rule to invoke Amazon EC2 Run Command\.  
 *Required*: No  
 *Type*: [RunCommandParameters](aws-properties-events-rule-runcommandparameters.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SageMakerPipelineParameters`  <a name="cfn-events-rule-target-sagemakerpipelineparameters"></a>
+Contains the SageMaker Model Building Pipeline parameters to start execution of a SageMaker Model Building Pipeline\.  
+If you specify a SageMaker Model Building Pipeline as a target, you can use this to specify parameters to start a pipeline execution based on EventBridge events\.  
+*Required*: No  
+*Type*: [SageMakerPipelineParameters](aws-properties-events-rule-sagemakerpipelineparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SqsParameters`  <a name="cfn-events-rule-target-sqsparameters"></a>

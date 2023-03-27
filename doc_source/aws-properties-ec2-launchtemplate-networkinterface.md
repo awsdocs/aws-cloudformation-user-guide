@@ -19,8 +19,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DeviceIndex](#cfn-ec2-launchtemplate-networkinterface-deviceindex)" : Integer,
   "[Groups](#cfn-ec2-launchtemplate-networkinterface-groups)" : [ String, ... ],
   "[InterfaceType](#cfn-ec2-launchtemplate-networkinterface-interfacetype)" : String,
+  "[Ipv4PrefixCount](#cfn-ec2-launchtemplate-networkinterface-ipv4prefixcount)" : Integer,
+  "[Ipv4Prefixes](#cfn-ec2-launchtemplate-networkinterface-ipv4prefixes)" : [ Ipv4PrefixSpecification, ... ],
   "[Ipv6AddressCount](#cfn-ec2-launchtemplate-networkinterface-ipv6addresscount)" : Integer,
   "[Ipv6Addresses](#cfn-ec2-launchtemplate-networkinterface-ipv6addresses)" : [ Ipv6Add, ... ],
+  "[Ipv6PrefixCount](#cfn-ec2-launchtemplate-networkinterface-ipv6prefixcount)" : Integer,
+  "[Ipv6Prefixes](#cfn-ec2-launchtemplate-networkinterface-ipv6prefixes)" : [ Ipv6PrefixSpecification, ... ],
   "[NetworkCardIndex](#cfn-ec2-launchtemplate-networkinterface-networkcardindex)" : Integer,
   "[NetworkInterfaceId](#cfn-ec2-launchtemplate-networkinterface-networkinterfaceid)" : String,
   "[PrivateIpAddress](#cfn-ec2-launchtemplate-networkinterface-privateipaddress)" : String,
@@ -41,9 +45,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Groups](#cfn-ec2-launchtemplate-networkinterface-groups): 
     - String
   [InterfaceType](#cfn-ec2-launchtemplate-networkinterface-interfacetype): String
+  [Ipv4PrefixCount](#cfn-ec2-launchtemplate-networkinterface-ipv4prefixcount): Integer
+  [Ipv4Prefixes](#cfn-ec2-launchtemplate-networkinterface-ipv4prefixes): 
+    - Ipv4PrefixSpecification
   [Ipv6AddressCount](#cfn-ec2-launchtemplate-networkinterface-ipv6addresscount): Integer
   [Ipv6Addresses](#cfn-ec2-launchtemplate-networkinterface-ipv6addresses): 
     - Ipv6Add
+  [Ipv6PrefixCount](#cfn-ec2-launchtemplate-networkinterface-ipv6prefixcount): Integer
+  [Ipv6Prefixes](#cfn-ec2-launchtemplate-networkinterface-ipv6prefixes): 
+    - Ipv6PrefixSpecification
   [NetworkCardIndex](#cfn-ec2-launchtemplate-networkinterface-networkcardindex): Integer
   [NetworkInterfaceId](#cfn-ec2-launchtemplate-networkinterface-networkinterfaceid): String
   [PrivateIpAddress](#cfn-ec2-launchtemplate-networkinterface-privateipaddress): String
@@ -100,6 +110,18 @@ Valid values: `interface` \| `efa`
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Ipv4PrefixCount`  <a name="cfn-ec2-launchtemplate-networkinterface-ipv4prefixcount"></a>
+The number of IPv4 prefixes to be automatically assigned to the network interface\. You cannot use this option if you use the `Ipv4Prefix` option\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Ipv4Prefixes`  <a name="cfn-ec2-launchtemplate-networkinterface-ipv4prefixes"></a>
+One or more IPv4 prefixes to be assigned to the network interface\. You cannot use this option if you use the `Ipv4PrefixCount` option\.  
+*Required*: No  
+*Type*: List of [Ipv4PrefixSpecification](aws-properties-ec2-launchtemplate-ipv4prefixspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Ipv6AddressCount`  <a name="cfn-ec2-launchtemplate-networkinterface-ipv6addresscount"></a>
 The number of IPv6 addresses to assign to a network interface\. Amazon EC2 automatically selects the IPv6 addresses from the subnet range\. You can't use this option if specifying specific IPv6 addresses\.  
 *Required*: No  
@@ -110,6 +132,18 @@ The number of IPv6 addresses to assign to a network interface\. Amazon EC2 autom
 One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet\. You can't use this option if you're specifying a number of IPv6 addresses\.  
 *Required*: No  
 *Type*: List of [Ipv6Add](aws-properties-ec2-launchtemplate-ipv6add.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Ipv6PrefixCount`  <a name="cfn-ec2-launchtemplate-networkinterface-ipv6prefixcount"></a>
+The number of IPv6 prefixes to be automatically assigned to the network interface\. You cannot use this option if you use the `Ipv6Prefix` option\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Ipv6Prefixes`  <a name="cfn-ec2-launchtemplate-networkinterface-ipv6prefixes"></a>
+One or more IPv6 prefixes to be assigned to the network interface\. You cannot use this option if you use the `Ipv6PrefixCount` option\.  
+*Required*: No  
+*Type*: List of [Ipv6PrefixSpecification](aws-properties-ec2-launchtemplate-ipv6prefixspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkCardIndex`  <a name="cfn-ec2-launchtemplate-networkinterface-networkcardindex"></a>

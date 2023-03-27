@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::ModelExplainabilityJobDefinition",
   "Properties" : {
+      "[EndpointName](#cfn-sagemaker-modelexplainabilityjobdefinition-endpointname)" : String,
       "[JobDefinitionName](#cfn-sagemaker-modelexplainabilityjobdefinition-jobdefinitionname)" : String,
       "[JobResources](#cfn-sagemaker-modelexplainabilityjobdefinition-jobresources)" : MonitoringResources,
       "[ModelExplainabilityAppSpecification](#cfn-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification)" : ModelExplainabilityAppSpecification,
@@ -31,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SageMaker::ModelExplainabilityJobDefinition
 Properties: 
+  [EndpointName](#cfn-sagemaker-modelexplainabilityjobdefinition-endpointname): String
   [JobDefinitionName](#cfn-sagemaker-modelexplainabilityjobdefinition-jobdefinitionname): String
   [JobResources](#cfn-sagemaker-modelexplainabilityjobdefinition-jobresources): 
     MonitoringResources
@@ -52,6 +54,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-sagemaker-modelexplainabilityjobdefinition-properties"></a>
+
+`EndpointName`  <a name="cfn-sagemaker-modelexplainabilityjobdefinition-endpointname"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JobDefinitionName`  <a name="cfn-sagemaker-modelexplainabilityjobdefinition-jobdefinitionname"></a>
 The name of the model explainability job definition\. The name must be unique within an AWS Region in the AWS account\.  
@@ -102,7 +110,7 @@ The Amazon Resource Name \(ARN\) of an IAM role that Amazon SageMaker can assume
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StoppingCondition`  <a name="cfn-sagemaker-modelexplainabilityjobdefinition-stoppingcondition"></a>
-Not currently supported by AWS CloudFormation\.  
+A time limit for how long the monitoring job is allowed to run before stopping\.  
 *Required*: No  
 *Type*: [StoppingCondition](aws-properties-sagemaker-modelexplainabilityjobdefinition-stoppingcondition.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

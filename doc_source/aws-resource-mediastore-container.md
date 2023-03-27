@@ -75,7 +75,7 @@ For information about how to construct an object lifecycle policy, see [Componen
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MetricPolicy`  <a name="cfn-mediastore-container-metricpolicy"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [MetricPolicy](aws-properties-mediastore-container-metricpolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -88,7 +88,7 @@ For this release of the REST API, you can create only one policy for a container
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-mediastore-container-tags"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

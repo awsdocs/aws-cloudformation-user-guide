@@ -1,8 +1,6 @@
 # AWS::MediaConnect::FlowSource<a name="aws-resource-mediaconnect-flowsource"></a>
 
-The AWS::MediaConnect::FlowSource resource is the external video content that includes configuration information \(encryption and source type\) and a network address\. Each flow has at least one source\. A standard source comes from a source other than another AWS Elemental MediaConnect flow, such as an on\-premises encoder\. An entitled source comes from a MediaConnect flow that is owned by another AWS account and has granted an entitlement to your account\.
-
-Note: MediaConnect does not currently support using CloudFormation to add sources that use the SRT\-listener protocol\.
+The AWS::MediaConnect::FlowSource resource is used to add additional sources to an existing flow\. Adding an additional source requires Failover to be enabled\. When you enable Failover, the additional source must use the same protocol as the existing source\. A source is the external video content that includes configuration information \(encryption and source type\) and a network address\. Each flow has at least one source\. A standard source comes from a source other than another AWS Elemental MediaConnect flow, such as an on\-premises encoder\.
 
 ## Syntax<a name="aws-resource-mediaconnect-flowsource-syntax"></a>
 
@@ -71,7 +69,7 @@ The ARN of the entitlement that allows you to subscribe to the flow\. The entitl
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FlowArn`  <a name="cfn-mediaconnect-flowsource-flowarn"></a>
-The Amazon Resource Name \(ARN\) of the flow\.  
+The Amazon Resource Name \(ARN\) of the flow this source is connected to\. The flow must have Failover enabled to add an additional source\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -101,13 +99,13 @@ The name of the source\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Protocol`  <a name="cfn-mediaconnect-flowsource-protocol"></a>
-The protocol that the source uses to deliver the content to MediaConnect\.  
+The protocol that the source uses to deliver the content to MediaConnect\. Adding additional sources to an existing flow requires Failover to be enabled\. When you enable Failover, the additional source must use the same protocol as the existing source\. Only the following protocols support failover: Zixi\-push, RTP\-FEC, RTP, and RIST\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamId`  <a name="cfn-mediaconnect-flowsource-streamid"></a>
-The stream ID that you want to use for the transport\. This parameter applies only to Zixi\-based streams\.  
+The stream ID that you want to use for this transport\. This parameter applies only to Zixi and SRT caller\-based streams\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -149,4 +147,4 @@ The IP address that the flow listens on for incoming content\.
 The ARN of the source\.
 
 `SourceIngestPort`  <a name="SourceIngestPort-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.

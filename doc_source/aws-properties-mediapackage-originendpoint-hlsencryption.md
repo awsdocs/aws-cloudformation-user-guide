@@ -1,6 +1,6 @@
 # AWS::MediaPackage::OriginEndpoint HlsEncryption<a name="aws-properties-mediapackage-originendpoint-hlsencryption"></a>
 
-Holds encryption information so that access to the content can be controlled by a DRM solution\. 
+Holds encryption information so that access to the content can be controlled by a DRM solution\.
 
 ## Syntax<a name="aws-properties-mediapackage-originendpoint-hlsencryption-syntax"></a>
 
@@ -38,19 +38,19 @@ A 128\-bit, 16\-byte hex value represented by a 32\-character string, used with 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncryptionMethod`  <a name="cfn-mediapackage-originendpoint-hlsencryption-encryptionmethod"></a>
-HLS encryption type\.   
+HLS encryption type\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KeyRotationIntervalSeconds`  <a name="cfn-mediapackage-originendpoint-hlsencryption-keyrotationintervalseconds"></a>
-Number of seconds before AWS Elemental MediaPackage rotates to a new key\. By default, rotation is set to 60 seconds\. Set to `0` to disable key rotation\.   
+Number of seconds before AWS Elemental MediaPackage rotates to a new key\. By default, rotation is set to 60 seconds\. Set to `0` to disable key rotation\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RepeatExtXKey`  <a name="cfn-mediapackage-originendpoint-hlsencryption-repeatextxkey"></a>
-Repeat the `EXT-X-KEY `directive for every media segment\. This might result in an increase in client requests to the DRM server\.   
+Repeat the `EXT-X-KEY `directive for every media segment\. This might result in an increase in client requests to the DRM server\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

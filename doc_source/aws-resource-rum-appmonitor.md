@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::RUM::AppMonitor",
   "Properties" : {
       "[AppMonitorConfiguration](#cfn-rum-appmonitor-appmonitorconfiguration)" : AppMonitorConfiguration,
+      "[CustomEvents](#cfn-rum-appmonitor-customevents)" : CustomEvents,
       "[CwLogEnabled](#cfn-rum-appmonitor-cwlogenabled)" : Boolean,
       "[Domain](#cfn-rum-appmonitor-domain)" : String,
       "[Name](#cfn-rum-appmonitor-name)" : String,
@@ -30,6 +31,8 @@ Type: AWS::RUM::AppMonitor
 Properties: 
   [AppMonitorConfiguration](#cfn-rum-appmonitor-appmonitorconfiguration): 
     AppMonitorConfiguration
+  [CustomEvents](#cfn-rum-appmonitor-customevents): 
+    CustomEvents
   [CwLogEnabled](#cfn-rum-appmonitor-cwlogenabled): Boolean
   [Domain](#cfn-rum-appmonitor-domain): String
   [Name](#cfn-rum-appmonitor-name): String
@@ -44,6 +47,12 @@ A structure that contains much of the configuration data for the app monitor\. I
 If you omit this argument, the sample rate used for CloudWatch RUM is set to 10% of the user sessions\.  
 *Required*: No  
 *Type*: [AppMonitorConfiguration](aws-properties-rum-appmonitor-appmonitorconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CustomEvents`  <a name="cfn-rum-appmonitor-customevents"></a>
+Specifies whether this app monitor allows the web client to define and send custom events\. If you omit this parameter, custom events are `DISABLED`\.  
+*Required*: No  
+*Type*: [CustomEvents](aws-properties-rum-appmonitor-customevents.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CwLogEnabled`  <a name="cfn-rum-appmonitor-cwlogenabled"></a>

@@ -52,7 +52,7 @@ Specifies whether the attribute type is developer only\. This attribute can only
 
 `Mutable`  <a name="cfn-cognito-userpool-schemaattribute-mutable"></a>
 Specifies whether the value of the attribute can be changed\.  
-For any user pool attribute that is mapped to an identity provider attribute, you must set this parameter to `true`\. Amazon Cognito updates mapped attributes when users sign in to your application through an identity provider\. If an attribute is immutable, Amazon Cognito throws an error when it attempts to update the attribute\. For more information, see [Specifying Identity Provider Attribute Mappings for Your User Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)\.  
+For any user pool attribute that is mapped to an IdP attribute, you must set this parameter to `true`\. Amazon Cognito updates mapped attributes when users sign in to your application through an IdP\. If an attribute is immutable, Amazon Cognito throws an error when it attempts to update the attribute\. For more information, see [Specifying Identity Provider Attribute Mappings for Your User Pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-specifying-attribute-mapping.html)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

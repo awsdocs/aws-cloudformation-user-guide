@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AgentArns](#cfn-datasync-locationobjectstorage-agentarns)" : [ String, ... ],
       "[BucketName](#cfn-datasync-locationobjectstorage-bucketname)" : String,
       "[SecretKey](#cfn-datasync-locationobjectstorage-secretkey)" : String,
+      "[ServerCertificate](#cfn-datasync-locationobjectstorage-servercertificate)" : String,
       "[ServerHostname](#cfn-datasync-locationobjectstorage-serverhostname)" : String,
       "[ServerPort](#cfn-datasync-locationobjectstorage-serverport)" : Integer,
       "[ServerProtocol](#cfn-datasync-locationobjectstorage-serverprotocol)" : String,
@@ -35,6 +36,7 @@ Properties:
     - String
   [BucketName](#cfn-datasync-locationobjectstorage-bucketname): String
   [SecretKey](#cfn-datasync-locationobjectstorage-secretkey): String
+  [ServerCertificate](#cfn-datasync-locationobjectstorage-servercertificate): String
   [ServerHostname](#cfn-datasync-locationobjectstorage-serverhostname): String
   [ServerPort](#cfn-datasync-locationobjectstorage-serverport): Integer
   [ServerProtocol](#cfn-datasync-locationobjectstorage-serverprotocol): String
@@ -46,24 +48,24 @@ Properties:
 ## Properties<a name="aws-resource-datasync-locationobjectstorage-properties"></a>
 
 `AccessKey`  <a name="cfn-datasync-locationobjectstorage-accesskey"></a>
-Optional\. The access key is used if credentials are required to access the self\-managed object storage server\. If your object storage requires a user name and password to authenticate, use `AccessKey` and `SecretKey` to provide the user name and password, respectively\.  
+Specifies the access key \(for example, a user name\) if credentials are required to authenticate with the object storage server\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `8`  
+*Minimum*: `1`  
 *Maximum*: `200`  
 *Pattern*: `^.+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AgentArns`  <a name="cfn-datasync-locationobjectstorage-agentarns"></a>
-The Amazon Resource Name \(ARN\) of the agents associated with the self\-managed object storage server location\.  
+Specifies the Amazon Resource Names \(ARNs\) of the DataSync agents that can securely connect with your location\.  
 *Required*: Yes  
 *Type*: List of String  
 *Maximum*: `4`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BucketName`  <a name="cfn-datasync-locationobjectstorage-bucketname"></a>
-The bucket on the self\-managed object storage server that is used to read data from\.  
-*Required*: Yes  
+Specifies the name of the object storage bucket involved in the transfer\.  
+*Required*: No  
 *Type*: String  
 *Minimum*: `3`  
 *Maximum*: `63`  
@@ -71,24 +73,31 @@ The bucket on the self\-managed object storage server that is used to read data 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecretKey`  <a name="cfn-datasync-locationobjectstorage-secretkey"></a>
-Optional\. The secret key is used if credentials are required to access the self\-managed object storage server\. If your object storage requires a user name and password to authenticate, use `AccessKey` and `SecretKey` to provide the user name and password, respectively\.  
+Specifies the secret key \(for example, a password\) if credentials are required to authenticate with the object storage server\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `8`  
+*Minimum*: `1`  
 *Maximum*: `200`  
 *Pattern*: `^.+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ServerCertificate`  <a name="cfn-datasync-locationobjectstorage-servercertificate"></a>
+Specifies a certificate to authenticate with an object storage system that uses a private or self\-signed certificate authority \(CA\)\. You must specify a Base64\-encoded `.pem` file \(for example, `file:///home/user/.ssh/storage_sys_certificate.pem`\)\. The certificate can be up to 32768 bytes \(before Base64 encoding\)\.  
+To use this parameter, configure `ServerProtocol` to `HTTPS`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ServerHostname`  <a name="cfn-datasync-locationobjectstorage-serverhostname"></a>
-The name of the self\-managed object storage server\. This value is the IP address or Domain Name Service \(DNS\) name of the object storage server\. An agent uses this host name to mount the object storage server in a network\.   
-*Required*: Yes  
+Specifies the domain name or IP address of the object storage server\. A DataSync agent uses this hostname to mount the object storage server in a network\.  
+*Required*: No  
 *Type*: String  
 *Maximum*: `255`  
 *Pattern*: `^(([a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9\-]*[A-Za-z0-9])$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServerPort`  <a name="cfn-datasync-locationobjectstorage-serverport"></a>
-The port that your self\-managed object storage server accepts inbound network traffic on\. The server port is set by default to TCP 80 \(HTTP\) or TCP 443 \(HTTPS\)\. You can specify a custom port if your self\-managed object storage server requires one\.  
+Specifies the port that your object storage server accepts inbound network traffic on \(for example, port 443\)\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -96,14 +105,14 @@ The port that your self\-managed object storage server accepts inbound network t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerProtocol`  <a name="cfn-datasync-locationobjectstorage-serverprotocol"></a>
-The protocol that the object storage server uses to communicate\. Valid values are HTTP or HTTPS\.  
+Specifies the protocol that your object storage server uses to communicate\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `HTTP | HTTPS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Subdirectory`  <a name="cfn-datasync-locationobjectstorage-subdirectory"></a>
-The subdirectory in the self\-managed object storage server that is used to read data from\.  
+Specifies the object prefix for your object storage server\. If this is a source location, DataSync only copies objects with this prefix\. If this is a destination location, DataSync writes all objects with this prefix\.   
 *Required*: No  
 *Type*: String  
 *Maximum*: `4096`  
@@ -111,7 +120,7 @@ The subdirectory in the self\-managed object storage server that is used to read
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-datasync-locationobjectstorage-tags"></a>
-The key\-value pair that represents the tag that you want to add to the location\. The value can be an empty string\. We recommend using tags to name your resources\.  
+Specifies the key\-value pair that represents a tag that you want to add to the resource\. Tags can help you manage, filter, and search for your resources\. We recommend creating a name tag for your location\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `50`  

@@ -1,6 +1,6 @@
 # AWS::Lex::Bot ResponseSpecification<a name="aws-properties-lex-bot-responsespecification"></a>
 
-Specifies a list of message groups that Amazon Lex uses to respond to user input\.
+Specifies a list of message groups that Amazon Lex uses to respond the user input\.
 
 ## Syntax<a name="aws-properties-lex-bot-responsespecification-syntax"></a>
 

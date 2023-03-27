@@ -2,7 +2,7 @@
 
 The `AWS::RDS::DBClusterParameterGroup` resource creates a new Amazon RDS DB cluster parameter group\.
 
-For information about configuring parameters for Amazon Aurora DB instances, see [Working with DB parameter groups and DB cluster parameter groups](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_WorkingWithParamGroups.html) in the *Amazon Aurora User Guide*\.
+For information about configuring parameters for Amazon Aurora DB clusters, see [Working with parameter groups](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_WorkingWithParamGroups.html) in the *Amazon Aurora User Guide*\.
 
 **Note**  
 If you apply a parameter group to a DB cluster, then its DB instances might need to reboot\. This can result in an outage while the DB instances are rebooting\.  
@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::RDS::DBClusterParameterGroup",
   "Properties" : {
+      "[DBClusterParameterGroupName](#cfn-rds-dbclusterparametergroup-dbclusterparametergroupname)" : String,
       "[Description](#cfn-rds-dbclusterparametergroup-description)" : String,
       "[Family](#cfn-rds-dbclusterparametergroup-family)" : String,
       "[Parameters](#cfn-rds-dbclusterparametergroup-parameters)" : Json,
@@ -31,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::RDS::DBClusterParameterGroup
 Properties: 
+  [DBClusterParameterGroupName](#cfn-rds-dbclusterparametergroup-dbclusterparametergroupname): String
   [Description](#cfn-rds-dbclusterparametergroup-description): String
   [Family](#cfn-rds-dbclusterparametergroup-family): String
   [Parameters](#cfn-rds-dbclusterparametergroup-parameters): Json
@@ -39,6 +41,16 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-rds-dbclusterparametergroup-properties"></a>
+
+`DBClusterParameterGroupName`  <a name="cfn-rds-dbclusterparametergroup-dbclusterparametergroupname"></a>
+The name of the DB cluster parameter group\.  
+Constraints:  
++ Must not match the name of an existing DB cluster parameter group\.
+If you don't specify a value for `DBClusterParameterGroupName` property, a name is automatically created for the DB cluster parameter group\.  
+This value is stored as a lowercase string\.
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-rds-dbclusterparametergroup-description"></a>
 A friendly description for this DB cluster parameter group\.  
@@ -64,7 +76,7 @@ Provides a list of parameters for the DB cluster parameter group\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-rds-dbclusterparametergroup-tags"></a>
-Tags to assign to the DB cluster parameter group\.  
+An optional array of key\-value pairs to apply to this DB cluster parameter group\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

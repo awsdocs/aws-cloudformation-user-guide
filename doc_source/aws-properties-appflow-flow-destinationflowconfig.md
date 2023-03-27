@@ -1,6 +1,6 @@
 # AWS::AppFlow::Flow DestinationFlowConfig<a name="aws-properties-appflow-flow-destinationflowconfig"></a>
 
- The `DestinationFlowConfig` property type specifies information about the configuration of destination connectors present in the flow\. 
+ Contains information about the configuration of destination connectors present in the flow\. 
 
 ## Syntax<a name="aws-properties-appflow-flow-destinationflowconfig-syntax"></a>
 
@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[ApiVersion](#cfn-appflow-flow-destinationflowconfig-apiversion)" : String,
   "[ConnectorProfileName](#cfn-appflow-flow-destinationflowconfig-connectorprofilename)" : String,
   "[ConnectorType](#cfn-appflow-flow-destinationflowconfig-connectortype)" : String,
   "[DestinationConnectorProperties](#cfn-appflow-flow-destinationflowconfig-destinationconnectorproperties)" : DestinationConnectorProperties
@@ -19,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appflow-flow-destinationflowconfig-syntax.yaml"></a>
 
 ```
+  [ApiVersion](#cfn-appflow-flow-destinationflowconfig-apiversion): String
   [ConnectorProfileName](#cfn-appflow-flow-destinationflowconfig-connectorprofilename): String
   [ConnectorType](#cfn-appflow-flow-destinationflowconfig-connectortype): String
   [DestinationConnectorProperties](#cfn-appflow-flow-destinationflowconfig-destinationconnectorproperties): 
@@ -26,6 +28,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-appflow-flow-destinationflowconfig-properties"></a>
+
+`ApiVersion`  <a name="cfn-appflow-flow-destinationflowconfig-apiversion"></a>
+The API version that the destination connector uses\.  
+*Required*: No  
+*Type*: String  
+*Maximum*: `256`  
+*Pattern*: `\S+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectorProfileName`  <a name="cfn-appflow-flow-destinationflowconfig-connectorprofilename"></a>
  The name of the connector profile\. This name must be unique for each connector profile in the AWS account\.   

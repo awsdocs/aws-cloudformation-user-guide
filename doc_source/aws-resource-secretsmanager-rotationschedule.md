@@ -1,9 +1,14 @@
 # AWS::SecretsManager::RotationSchedule<a name="aws-resource-secretsmanager-rotationschedule"></a>
 
-Configures rotation for a secret\. You must already configure the secret with the details of the database or service\. If you define both the secret and the database or service in an AWS CloudFormation template, then define the [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) resource to populate the secret with the connection details of the database or service before you attempt to configure rotation\.
+Sets the rotation schedule and Lambda rotation function for a secret\. For more information, see [How rotation works](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html)\. 
 
-**Important**  
-When you configure rotation for a secret, AWS CloudFormation automatically rotates the secret one time\.
+For Amazon RDS master user credentials, see [AWS::RDS::DBCluster MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)\.
+
+For the rotation function, you have two options:
++ You can create a new rotation function based on one of the [ Secrets Manager rotation function templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html) by using `HostedRotationLambda`\.
++ You can choose an existing rotation function by using `RotationLambdaARN`\.
+
+For database secrets, if you define both the secret and the database or service in the AWS CloudFormation template, then you need to define the [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) resource to populate the secret with the connection details of the database or service before you attempt to configure rotation\.
 
 ## Syntax<a name="aws-resource-secretsmanager-rotationschedule-syntax"></a>
 
@@ -41,25 +46,27 @@ Properties:
 ## Properties<a name="aws-resource-secretsmanager-rotationschedule-properties"></a>
 
 `HostedRotationLambda`  <a name="cfn-secretsmanager-rotationschedule-hostedrotationlambda"></a>
-To use these values, you must specify `Transform: AWS::SecretsManager-2020-07-23` at the beginning of the CloudFormation template\.  
-When you enter valid values for `RotationSchedule.HostedRotationLambda`, Secrets Manager launches a Lambda that performs rotation on the secret specified in the `secret-id` property\. The template creates a Lambda as part of a nested stack within the current stack\.   
+Creates a new Lambda rotation function based on one of the [ Secrets Manager rotation function templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)\. To use a rotation function that already exists, specify `RotationLambdaARN` instead\.  
+For Amazon RDS master user credentials, see [AWS::RDS::DBCluster MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)\.  
 *Required*: No  
 *Type*: [HostedRotationLambda](aws-properties-secretsmanager-rotationschedule-hostedrotationlambda.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RotateImmediatelyOnUpdate`  <a name="cfn-secretsmanager-rotationschedule-rotateimmediatelyonupdate"></a>
-Not currently supported by AWS CloudFormation\.  
+Specifies whether to rotate the secret immediately or wait until the next scheduled rotation window\. The rotation schedule is defined in `RotationRules`\.  
+If you don't immediately rotate the secret, Secrets Manager tests the rotation configuration by running the [`testSecret` step](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) of the Lambda rotation function\. The test creates an `AWSPENDING` version of the secret and then removes it\.  
+If you don't specify this value, then by default, Secrets Manager rotates the secret immediately\.  
+Rotation is an asynchronous process\. For more information, see [How rotation works](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RotationLambdaARN`  <a name="cfn-secretsmanager-rotationschedule-rotationlambdaarn"></a>
-The ARN of the Lambda function that can rotate the secret\. If you don't specify this parameter, then the secret must already have the ARN of a Lambda function configured\.  
-To reference a Lambda function also created in this template, use the [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function with the function's logical ID\.  
+The ARN of an existing Lambda rotation function\. To specify a rotation function that is also defined in this template, use the [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function\.  
+For Amazon RDS master user credentials, see [AWS::RDS::DBCluster MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)\.  
+To create a new rotation function based on one of the [ Secrets Manager rotation function templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html), specify `HostedRotationLambda` instead\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `0`  
-*Maximum*: `2048`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RotationRules`  <a name="cfn-secretsmanager-rotationschedule-rotationrules"></a>
@@ -73,8 +80,6 @@ The ARN or name of the secret to rotate\.
 To reference a secret also created in this template, use the [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function with the secret's logical ID\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `2048`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-secretsmanager-rotationschedule-return-values"></a>
@@ -91,319 +96,79 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ## Examples<a name="aws-resource-secretsmanager-rotationschedule--examples"></a>
 
-The following examples display complete examples of creating a secret, creating an RDS database instance associated with the secret and configuring rotation\. The example shows how to define a Lambda rotation function, attach the required trust and permissions policies, and associate the function with the secret on a defined schedule\.
+### Automatic rotation with a cron expression<a name="aws-resource-secretsmanager-rotationschedule--examples--Automatic_rotation_with_a_cron_expression"></a>
 
-RDS Secret Rotation
+The following example rotates a secret every day between 1:00 AM and 3:00 AM UTC\.
 
-### Configuring RDS database secret rotation<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_RDS_database_secret_rotation"></a>
-
-#### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_RDS_database_secret_rotation--json"></a>
+#### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--Automatic_rotation_with_a_cron_expression--json"></a>
 
 ```
-{
-   "AWSTemplateFormatVersion":"2010-09-09",
-   "Transform":"AWS::SecretsManager-2020-07-23",
-   "Resources":{
-      "TestVPC":{
-         "Type":"AWS::EC2::VPC",
-         "Properties":{
-            "CidrBlock":"10.0.0.0/16",
-            "EnableDnsHostnames":true,
-            "EnableDnsSupport":true
-         }
-      },
-      "TestSubnet01":{
-         "Type":"AWS::EC2::Subnet",
-         "Properties":{
-            "CidrBlock":"10.0.96.0/19",
-            "AvailabilityZone":{
-               "Fn::Select":[
-                  "0",
-                  {
-                     "Fn::GetAZs":{
-                        "Ref":"AWS::Region"
-                     }
-                  }
-               ]
-            },
-            "VpcId":{
-               "Ref":"TestVPC"
-            }
-         }
-      },
-      "TestSubnet02":{
-         "Type":"AWS::EC2::Subnet",
-         "Properties":{
-            "CidrBlock":"10.0.128.0/19",
-            "AvailabilityZone":{
-               "Fn::Select":[
-                  "1",
-                  {
-                     "Fn::GetAZs":{
-                        "Ref":"AWS::Region"
-                     }
-                  }
-               ]
-            },
-            "VpcId":{
-               "Ref":"TestVPC"
-            }
-         }
-      },
-      "SecretsManagerVPCEndpoint":{
-         "Type":"AWS::EC2::VPCEndpoint",
-         "Properties":{
-            "SubnetIds":[
-               {
-                  "Ref":"TestSubnet01"
-               },
-               {
-                  "Ref":"TestSubnet02"
-               }
-            ],
-            "SecurityGroupIds":[
-               {
-                  "Fn::GetAtt":[
-                     "TestVPC",
-                     "DefaultSecurityGroup"
-                  ]
-               }
-            ],
-            "VpcEndpointType":"Interface",
-            "ServiceName":{
-               "Fn::Sub":"com.amazonaws.${AWS::Region}.secretsmanager"
-            },
-            "PrivateDnsEnabled":true,
-            "VpcId":{
-               "Ref":"TestVPC"
-            }
-         }
-      },
-      "MyRDSInstanceRotationSecret":{
-         "Type":"AWS::SecretsManager::Secret",
-         "Properties":{
-            "GenerateSecretString":{
-               "SecretStringTemplate":"{\"username\": \"admin\"}",
-               "GenerateStringKey":"password",
-               "PasswordLength":16,
-               "ExcludeCharacters":"\"@/\\"
-            },
-            "Tags":[
-               {
-                  "Key":"AppName",
-                  "Value":"MyApp"
-               }
-            ]
-         }
-      },
-      "MyDBInstance":{
-         "Type":"AWS::RDS::DBInstance",
-         "Properties":{
-            "AllocatedStorage":20,
-            "DBInstanceClass":"db.t3.micro",
-            "Engine":"mysql",
-            "DBSubnetGroupName":{
-               "Ref":"MyDBSubnetGroup"
-            },
-            "MasterUsername":{
-               "Fn::Sub":"{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::username}}"
-            },
-            "MasterUserPassword":{
-               "Fn::Sub":"{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::password}}"
-            },
-            "BackupRetentionPeriod":0,
-            "VPCSecurityGroups":[
-               {
-                  "Fn::GetAtt":[
-                     "TestVPC",
-                     "DefaultSecurityGroup"
-                  ]
-               }
-            ]
-         }
-      },
-      "MyDBSubnetGroup":{
-         "Type":"AWS::RDS::DBSubnetGroup",
-         "Properties":{
-            "DBSubnetGroupDescription":"Test Group",
-            "SubnetIds":[
-               {
-                  "Ref":"TestSubnet01"
-               },
-               {
-                  "Ref":"TestSubnet02"
-               }
-            ]
-         }
-      },
-      "SecretRDSInstanceAttachment":{
-         "Type":"AWS::SecretsManager::SecretTargetAttachment",
-         "Properties":{
-            "SecretId":{
-               "Ref":"MyRDSInstanceRotationSecret"
-            },
-            "TargetId":{
-               "Ref":"MyDBInstance"
-            },
-            "TargetType":"AWS::RDS::DBInstance"
-         }
-      },
-      "MySecretRotationSchedule":{
-         "Type":"AWS::SecretsManager::RotationSchedule",
-         "DependsOn":"SecretRDSInstanceAttachment",
-         "Properties":{
-            "SecretId":{
-               "Ref":"MyRDSInstanceRotationSecret"
-            },
-            "HostedRotationLambda":{
-               "RotationType":"MySQLSingleUser",
-               "RotationLambdaName":"SecretsManagerRotation",
-               "VpcSecurityGroupIds":{
-                  "Fn::GetAtt":[
-                     "TestVPC",
-                     "DefaultSecurityGroup"
-                  ]
-               },
-               "VpcSubnetIds":{
-                  "Fn::Join":[
-                     ",",
-                     [
-                        {
-                           "Ref":"TestSubnet01"
-                        },
-                        {
-                           "Ref":"TestSubnet02"
-                        }
-                     ]
-                  ]
-               }
-            },
-            "RotationRules":{
-               "AutomaticallyAfterDays":30
-            }
-         }
-      }
-   }
+"MySecretRotationSchedule": {
+  "Type": "AWS::SecretsManager::RotationSchedule",
+  "DependsOn": "MyRotationLambda",
+  "Properties": {
+    "SecretId": {"Ref": "MySecret"},
+    "RotationLambdaARN": {"Fn::GetAtt": "MyRotationLambda.Arn"},
+    "RotationRules": {
+      "Duration": "2h",
+      "ScheduleExpression": "cron(0 1 * * ? *)"
+    }
+  }
 }
 ```
 
-#### YAML<a name="aws-resource-secretsmanager-rotationschedule--examples--Configuring_RDS_database_secret_rotation--yaml"></a>
+#### YAML<a name="aws-resource-secretsmanager-rotationschedule--examples--Automatic_rotation_with_a_cron_expression--yaml"></a>
 
 ```
----
-AWSTemplateFormatVersion: '2010-09-09'
-Transform: AWS::SecretsManager-2020-07-23
-Resources:
-  TestVPC:
-    Type: AWS::EC2::VPC
-    Properties:
-      CidrBlock: 10.0.0.0/16
-      EnableDnsHostnames: true
-      EnableDnsSupport: true
-  TestSubnet01:
-    Type: AWS::EC2::Subnet
-    Properties:
-      CidrBlock: 10.0.96.0/19
-      AvailabilityZone:
-        Fn::Select:
-        - '0'
-        - Fn::GetAZs:
-            Ref: AWS::Region
-      VpcId:
-        Ref: TestVPC
-  TestSubnet02:
-    Type: AWS::EC2::Subnet
-    Properties:
-      CidrBlock: 10.0.128.0/19
-      AvailabilityZone:
-        Fn::Select:
-        - '1'
-        - Fn::GetAZs:
-            Ref: AWS::Region
-      VpcId:
-        Ref: TestVPC
-  SecretsManagerVPCEndpoint:
-    Type: AWS::EC2::VPCEndpoint
-    Properties:
-      SubnetIds:
-      - Ref: TestSubnet01
-      - Ref: TestSubnet02
-      SecurityGroupIds:
-      - Fn::GetAtt:
-        - TestVPC
-        - DefaultSecurityGroup
-      VpcEndpointType: Interface
-      ServiceName:
-        Fn::Sub: com.amazonaws.${AWS::Region}.secretsmanager
-      PrivateDnsEnabled: true
-      VpcId:
-        Ref: TestVPC
-  MyRDSInstanceRotationSecret:
-    Type: AWS::SecretsManager::Secret
-    Properties:
-      GenerateSecretString:
-        SecretStringTemplate: '{"username": "admin"}'
-        GenerateStringKey: password
-        PasswordLength: 16
-        ExcludeCharacters: "\"@/\\"
-      Tags:
-      - Key: AppName
-        Value: MyApp
-  MyDBInstance:
-    Type: AWS::RDS::DBInstance
-    Properties:
-      AllocatedStorage: 20
-      DBInstanceClass: db.t3.micro
-      Engine: mysql
-      DBSubnetGroupName:
-        Ref: MyDBSubnetGroup
-      MasterUsername:
-        Fn::Sub: "{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::username}}"
-      MasterUserPassword:
-        Fn::Sub: "{{resolve:secretsmanager:${MyRDSInstanceRotationSecret}::password}}"
-      BackupRetentionPeriod: 0
-      VPCSecurityGroups:
-      - Fn::GetAtt:
-        - TestVPC
-        - DefaultSecurityGroup
-  MyDBSubnetGroup:
-    Type: AWS::RDS::DBSubnetGroup
-    Properties:
-      DBSubnetGroupDescription: Test Group
-      SubnetIds:
-      - Ref: TestSubnet01
-      - Ref: TestSubnet02
-  SecretRDSInstanceAttachment:
-    Type: AWS::SecretsManager::SecretTargetAttachment
-    Properties:
-      SecretId:
-        Ref: MyRDSInstanceRotationSecret
-      TargetId:
-        Ref: MyDBInstance
-      TargetType: AWS::RDS::DBInstance
-  MySecretRotationSchedule:
-    Type: AWS::SecretsManager::RotationSchedule
-    DependsOn: SecretRDSInstanceAttachment
-    Properties:
-      SecretId:
-        Ref: MyRDSInstanceRotationSecret
-      HostedRotationLambda:
-        RotationType: MySQLSingleUser
-        RotationLambdaName: SecretsManagerRotation
-        VpcSecurityGroupIds:
-          Fn::GetAtt:
-          - TestVPC
-          - DefaultSecurityGroup
-        VpcSubnetIds:
-          Fn::Join:
-          - ","
-          - - Ref: TestSubnet01
-            - Ref: TestSubnet02
-      RotationRules:
-        AutomaticallyAfterDays: 30
+MySecretRotationSchedule:
+  Type: AWS::SecretsManager::RotationSchedule
+  DependsOn: MyRotationLambda 
+  Properties:
+    SecretId: !Ref MySecret
+    RotationLambdaARN: !GetAtt MyRotationLambda.Arn
+    RotationRules:
+      Duration: 2h
+      ScheduleExpression: 'cron(0 1 * * ? *)'
+```
+
+### Automatic rotation with a rate expression<a name="aws-resource-secretsmanager-rotationschedule--examples--Automatic_rotation_with_a_rate_expression"></a>
+
+The following example rotates a secret between midnight and 6:00 AM UTC every 10 days\.
+
+#### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--Automatic_rotation_with_a_rate_expression--json"></a>
+
+```
+"MySecretRotationSchedule": {
+  "Type": "AWS::SecretsManager::RotationSchedule",
+  "DependsOn": "MyRotationLambda",
+  "Properties": {
+  "SecretId": {"Ref": "MySecret"},
+    "RotationLambdaARN": {"Fn::GetAtt": "MyRotationLambda.Arn"},
+    "RotationRules": {
+      "Duration": "6h",
+      "ScheduleExpression": "rate(10 days)"
+      }
+    }
+  }
+```
+
+#### YAML<a name="aws-resource-secretsmanager-rotationschedule--examples--Automatic_rotation_with_a_rate_expression--yaml"></a>
+
+```
+MySecretRotationSchedule:
+  Type: AWS::SecretsManager::RotationSchedule
+  DependsOn: MyRotationLambda 
+  Properties:
+    SecretId: !Ref MySecret
+    RotationLambdaARN: !GetAtt MyRotationLambda.Arn
+    RotationRules:
+      Duration: 6h
+      ScheduleExpression: 'rate(10 days)'
 ```
 
 ### Redshift cluster secret rotation example<a name="aws-resource-secretsmanager-rotationschedule--examples--Redshift_cluster_secret_rotation_example"></a>
+
+The following example creates a Redshift cluster and a secret with credentials\. The secret is configured to rotate on the first Sunday of every month between 4:00 AM and 6:00 AM UTC\.
 
 #### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--Redshift_cluster_secret_rotation_example--json"></a>
 
@@ -490,7 +255,7 @@ Resources:
       "MyRedshiftSecret":{
          "Type":"AWS::SecretsManager::Secret",
          "Properties":{
-            "Description":"This is my rds instance secret",
+            "Description":"This is my secret",
             "GenerateSecretString":{
                "SecretStringTemplate":"{\"username\": \"admin\"}",
                "GenerateStringKey":"password",
@@ -588,7 +353,8 @@ Resources:
                }
             },
             "RotationRules":{
-               "AutomaticallyAfterDays":30
+               "Duration": "2h",
+               "ScheduleExpression": "cron(0 4 ? * SUN#1 *)"
             }
          }
       }
@@ -649,7 +415,7 @@ Resources:
   MyRedshiftSecret:
     Type: AWS::SecretsManager::Secret
     Properties:
-      Description: This is my rds instance secret
+      Description: This is my secret
       GenerateSecretString:
         SecretStringTemplate: '{"username": "admin"}'
         GenerateStringKey: password
@@ -709,10 +475,13 @@ Resources:
           - - Ref: TestSubnet01
             - Ref: TestSubnet02
       RotationRules:
-        AutomaticallyAfterDays: 30
+        Duration: 2h
+        ScheduleExpression: 'cron(0 4 ? * SUN#1 *)'
 ```
 
 ### DocumentDB secret rotation example<a name="aws-resource-secretsmanager-rotationschedule--examples--DocumentDB_secret_rotation_example"></a>
+
+The following example creates a DocumentDB database instance and a secret with credentials\. The secret is configured to rotate on the first Sunday of every month between 4:00 AM and 6:00 AM UTC\.
 
 #### JSON<a name="aws-resource-secretsmanager-rotationschedule--examples--DocumentDB_secret_rotation_example--json"></a>
 
@@ -800,7 +569,7 @@ Resources:
          "Type":"AWS::SecretsManager::Secret",
          "Properties":{
             "GenerateSecretString":{
-               "SecretStringTemplate":"{\"username\": \"someadmin\",\"ssl\": true}",
+        "SecretStringTemplate":"{\"username\": \"someadmin\",\"ssl\": true}",
                "GenerateStringKey":"password",
                "PasswordLength":16,
                "ExcludeCharacters":"\"@/\\"
@@ -822,7 +591,7 @@ Resources:
             "MasterUsername":{
                "Fn::Sub":"{{resolve:secretsmanager:${MyDocDBClusterRotationSecret}::username}}"
             },
-            "MasterUserPassword":{
+        "MasterUserPassword":{
                "Fn::Sub":"{{resolve:secretsmanager:${MyDocDBClusterRotationSecret}::password}}"
             },
             "VpcSecurityGroupIds":[
@@ -901,7 +670,8 @@ Resources:
                }
             },
             "RotationRules":{
-               "AutomaticallyAfterDays":30
+              "Duration": "2h",
+              "ScheduleExpression": "cron(0 4 ? * SUN#1 *)"
             }
          }
       }
@@ -1023,7 +793,8 @@ Resources:
           - - Ref: TestSubnet01
             - Ref: TestSubnet02
       RotationRules:
-        AutomaticallyAfterDays: 30
+        Duration: 2h
+        ScheduleExpression: 'cron(0 4 ? * SUN#1 *)'
 ```
 
 ## See also<a name="aws-resource-secretsmanager-rotationschedule--seealso"></a>

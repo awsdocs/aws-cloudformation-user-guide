@@ -58,7 +58,7 @@ An optional custom string that is prepended to the name of each segment\. If not
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamSelection`  <a name="cfn-mediapackage-originendpoint-cmafpackage-streamselection"></a>
-Limitations for outputs from the endpoint, based on the video bitrate\.   
+Limitations for outputs from the endpoint, based on the video bitrate\.  
 *Required*: No  
 *Type*: [StreamSelection](aws-properties-mediapackage-originendpoint-streamselection.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

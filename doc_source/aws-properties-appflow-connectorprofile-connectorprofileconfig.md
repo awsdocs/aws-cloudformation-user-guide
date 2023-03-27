@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `ConnectorProfileCredentials`  <a name="cfn-appflow-connectorprofile-connectorprofileconfig-connectorprofilecredentials"></a>
  The connector\-specific credentials required by each connector\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: [ConnectorProfileCredentials](aws-properties-appflow-connectorprofile-connectorprofilecredentials.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

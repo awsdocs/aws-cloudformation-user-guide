@@ -17,7 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LoRaWAN](#cfn-iotwireless-wirelessgateway-lorawan)" : LoRaWANGateway,
       "[Name](#cfn-iotwireless-wirelessgateway-name)" : String,
       "[Tags](#cfn-iotwireless-wirelessgateway-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[ThingArn](#cfn-iotwireless-wirelessgateway-thingarn)" : String
+      "[ThingArn](#cfn-iotwireless-wirelessgateway-thingarn)" : String,
+      "[ThingName](#cfn-iotwireless-wirelessgateway-thingname)" : String
     }
 }
 ```
@@ -35,6 +36,7 @@ Properties:
   [Tags](#cfn-iotwireless-wirelessgateway-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [ThingArn](#cfn-iotwireless-wirelessgateway-thingarn): String
+  [ThingName](#cfn-iotwireless-wirelessgateway-thingname): String
 ```
 
 ## Properties<a name="aws-resource-iotwireless-wirelessgateway-properties"></a>
@@ -77,6 +79,12 @@ The ARN of the thing to associate with the wireless gateway\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ThingName`  <a name="cfn-iotwireless-wirelessgateway-thingname"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 ## Return values<a name="aws-resource-iotwireless-wirelessgateway-return-values"></a>
 
 ### Ref<a name="aws-resource-iotwireless-wirelessgateway-return-values-ref"></a>
@@ -92,6 +100,3 @@ The ARN of the wireless gateway created\.
 
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the wireless gateway created\.
-
-`ThingName`  <a name="ThingName-fn::getatt"></a>
-The name of the thing associated with the wireless gateway\. The value is empty if a thing isn't associated with the gateway\.

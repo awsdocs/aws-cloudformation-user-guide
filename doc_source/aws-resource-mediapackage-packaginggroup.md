@@ -74,4 +74,4 @@ The tags to assign to the packaging group\.
 The Amazon Resource Name \(ARN\) for the packaging group\. You can get this from the response to any request to the packaging group\.
 
 `DomainName`  <a name="DomainName-fn::getatt"></a>
-The fully qualified domain name for the assets in the PackagingGroup\.
+The URL for the assets in the PackagingGroup\.

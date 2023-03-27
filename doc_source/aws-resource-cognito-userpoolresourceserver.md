@@ -2,6 +2,9 @@
 
 The `AWS::Cognito::UserPoolResourceServer` resource creates a new OAuth2\.0 resource server and defines custom scopes in it\.
 
+**Note**  
+If you don't specify a value for a parameter, Amazon Cognito sets it to a default value\.
+
 ## Syntax<a name="aws-resource-cognito-userpoolresourceserver-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

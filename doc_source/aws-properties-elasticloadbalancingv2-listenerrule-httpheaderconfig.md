@@ -34,7 +34,7 @@ The name of the HTTP header field\. The maximum size is 40 characters\. The head
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Values`  <a name="cfn-elasticloadbalancingv2-listenerrule-httpheaderconfig-values"></a>
-One or more strings to compare against the value of the HTTP header\. The maximum size of each string is 128 characters\. The comparison strings are case insensitive\. The following wildcard characters are supported: \* \(matches 0 or more characters\) and ? \(matches exactly 1 character\)\.  
+The strings to compare against the value of the HTTP header\. The maximum size of each string is 128 characters\. The comparison strings are case insensitive\. The following wildcard characters are supported: \* \(matches 0 or more characters\) and ? \(matches exactly 1 character\)\.  
 If the same header appears multiple times in the request, we search them in order until a match is found\.  
 If you specify multiple strings, the condition is satisfied if one of the strings matches the value of the HTTP header\. To require that all of the strings are a match, create one condition per string\.  
 *Required*: No  

@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile SalesforceConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials"></a>
 
- The `SalesforceConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required when using Salesforce\. 
+ The connector\-specific profile credentials required when using Salesforce\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials-syntax"></a>
 
@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The credentials used to access protected Salesforce resources\.   
 *Required*: No  
 *Type*: String  
-*Maximum*: `2048`  
+*Maximum*: `4096`  
 *Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -56,7 +56,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The credentials used to acquire new access tokens\.   
 *Required*: No  
 *Type*: String  
-*Maximum*: `1024`  
+*Maximum*: `2048`  
 *Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

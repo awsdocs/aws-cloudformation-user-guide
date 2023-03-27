@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CustomerManagedS3](#cfn-iotanalytics-channel-channelstorage-customermanageds3)" : CustomerManagedS3,
-  "[ServiceManagedS3](#cfn-iotanalytics-channel-channelstorage-servicemanageds3)" : ServiceManagedS3
+  "[ServiceManagedS3](#cfn-iotanalytics-channel-channelstorage-servicemanageds3)" : Json
 }
 ```
 
@@ -20,8 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [CustomerManagedS3](#cfn-iotanalytics-channel-channelstorage-customermanageds3): 
     CustomerManagedS3
-  [ServiceManagedS3](#cfn-iotanalytics-channel-channelstorage-servicemanageds3): 
-    ServiceManagedS3
+  [ServiceManagedS3](#cfn-iotanalytics-channel-channelstorage-servicemanageds3): Json
 ```
 
 ## Properties<a name="aws-properties-iotanalytics-channel-channelstorage-properties"></a>
@@ -35,5 +34,5 @@ Used to store channel data in an S3 bucket that you manage\. If customer managed
 `ServiceManagedS3`  <a name="cfn-iotanalytics-channel-channelstorage-servicemanageds3"></a>
 Used to store channel data in an S3 bucket managed by AWS IoT Analytics\. You can't change the choice of S3 storage after the data store is created\.  
 *Required*: No  
-*Type*: [ServiceManagedS3](aws-properties-iotanalytics-channel-servicemanageds3.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

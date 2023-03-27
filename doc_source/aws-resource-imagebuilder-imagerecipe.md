@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::ImageRecipe<a name="aws-resource-imagebuilder-imagerecipe"></a>
 
-An Image Builder image recipe is a document that defines the source image and the components to be applied to the source image to produce the desired configuration for the output image\. You can use an image recipe to duplicate builds\. Image Builder image recipes can be shared, branched, and edited using the console wizard, the AWS CLI, or the API\. You can use image recipes with your version control software to maintain shareable versioned image recipes\.
+An Image Builder image recipe is a document that defines the base image and the components to be applied to the base image to produce the desired configuration for the output image\. You can use an image recipe to duplicate builds\. Image Builder image recipes can be shared, branched, and edited using the console wizard, the AWS CLI, or the API\. You can use image recipes with your version control software to maintain shareable versioned image recipes\.
 
 ## Syntax<a name="aws-resource-imagebuilder-imagerecipe-syntax"></a>
 
@@ -81,7 +81,7 @@ The name of the image recipe\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ParentImage`  <a name="cfn-imagebuilder-imagerecipe-parentimage"></a>
-The parent image of the image recipe\. The string must be either an Image ARN \(SemVers is ok\) or an AMI ID\.   
+The parent image of the image recipe\. The string must be either an Image ARN or an AMI ID\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

@@ -41,7 +41,7 @@ StackSets also deletes stack instances from any child OUs of the specified targe
 1. On the **Review** page, review your choices and choose **Submit**\.
 
 1. After stack deletion is finished, you can verify that stack instances were deleted from your stack set in the StackSet detail page, on the **Stack instances** tab\.  
-![\[Use the Stack instances tab of the stack set details page to view information on your stack instances.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-detail-stack-instances.png)
+![\[Use the Stack instances tab of the stack set details page to view information about your stack instances.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-detail-stack-instances.png)
 
 ## Delete stack instances using the AWS CLI<a name="stackinstances-delete-cli"></a>
 

@@ -1,6 +1,6 @@
 # AWS::SageMaker::App<a name="aws-resource-sagemaker-app"></a>
 
-Creates a running app for the specified UserProfile\. Supported apps are `JupyterServer` and `KernelGateway`\. This operation is automatically invoked by Amazon SageMaker Studio upon access to the associated Domain, and when new kernel configurations are selected by the user\. A user may have multiple Apps active simultaneously\.
+Creates a running app for the specified UserProfile\. This operation is automatically invoked by Amazon SageMaker Studio upon access to the associated Domain, and when new kernel configurations are selected by the user\. A user may have multiple Apps active simultaneously\.
 
 ## Syntax<a name="aws-resource-sagemaker-app-syntax"></a>
 
@@ -49,9 +49,9 @@ The name of the app\.
 
 `AppType`  <a name="cfn-sagemaker-app-apptype"></a>
 The type of app\.  
+*Allowed Values*: `JupyterServer | KernelGateway | RSessionGateway | RStudioServerPro | TensorBoard | Canvas`  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `JupyterServer | KernelGateway | RSessionGateway | RStudioServerPro | TensorBoard`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DomainId`  <a name="cfn-sagemaker-app-domainid"></a>
@@ -62,7 +62,7 @@ The domain ID\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ResourceSpec`  <a name="cfn-sagemaker-app-resourcespec"></a>
-Specifies the ARN's of a SageMaker image and SageMaker image version, and the instance type that the version runs on\.  
+Specifies the ARNs of a SageMaker image and SageMaker image version, and the instance type that the version runs on\.  
 *Required*: No  
 *Type*: [ResourceSpec](aws-properties-sagemaker-app-resourcespec.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -86,7 +86,7 @@ The user profile name\.
 
 ### Ref<a name="aws-resource-sagemaker-app-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the App type, App name, domain ID, and user profile name\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the app type, app name, Domain ID, and user profile name\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -99,4 +99,4 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-sagemaker-app-return-values-fn--getatt-fn--getatt"></a>
 
 `AppArn`  <a name="AppArn-fn::getatt"></a>
-The Amazon Resource Name \(ARN\) of the App, such as `arn:aws:sagemaker:us-west-2:account-id:app/my-app-name`\.
+The Amazon Resource Name \(ARN\) of the app, such as `arn:aws:sagemaker:us-west-2:account-id:app/my-app-name`\.

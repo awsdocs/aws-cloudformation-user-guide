@@ -1,6 +1,6 @@
 # AWS::FSx::Volume<a name="aws-resource-fsx-volume"></a>
 
-Creates an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS storage volume\.
+Creates an FSx for ONTAP or Amazon FSx for OpenZFS storage volume\.
 
 ## Syntax<a name="aws-resource-fsx-volume-syntax"></a>
 
@@ -16,8 +16,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-fsx-volume-name)" : String,
       "[OntapConfiguration](#cfn-fsx-volume-ontapconfiguration)" : OntapConfiguration,
       "[OpenZFSConfiguration](#cfn-fsx-volume-openzfsconfiguration)" : OpenZFSConfiguration,
-      "[Options](#cfn-fsx-volume-options)" : [ String, ... ],
-      "[SnapshotId](#cfn-fsx-volume-snapshotid)" : String,
       "[Tags](#cfn-fsx-volume-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VolumeType](#cfn-fsx-volume-volumetype)" : String
     }
@@ -35,9 +33,6 @@ Properties:
     OntapConfiguration
   [OpenZFSConfiguration](#cfn-fsx-volume-openzfsconfiguration): 
     OpenZFSConfiguration
-  [Options](#cfn-fsx-volume-options): 
-    - String
-  [SnapshotId](#cfn-fsx-volume-snapshotid): String
   [Tags](#cfn-fsx-volume-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VolumeType](#cfn-fsx-volume-volumetype): String
@@ -46,14 +41,14 @@ Properties:
 ## Properties<a name="aws-resource-fsx-volume-properties"></a>
 
 `BackupId`  <a name="cfn-fsx-volume-backupid"></a>
-The ID of the source backup\. Specifies the backup that you are copying\.  
+Specifies the ID of the volume backup to use to create a new volume\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-fsx-volume-name"></a>
 The name of the volume\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `203`  
@@ -67,23 +62,10 @@ The configuration of an Amazon FSx for NetApp ONTAP volume\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OpenZFSConfiguration`  <a name="cfn-fsx-volume-openzfsconfiguration"></a>
-Specifies the configuration of the OpenZFS volume that you are creating\.  
+The configuration of an Amazon FSx for OpenZFS volume\.  
 *Required*: No  
 *Type*: [OpenZFSConfiguration](aws-properties-fsx-volume-openzfsconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`Options`  <a name="cfn-fsx-volume-options"></a>
-To delete the volume's child volumes, snapshots, and clones, use the string `DELETE_CHILD_VOLUMES_AND_SNAPSHOTS`\.  
-*Required*: No  
-*Type*: List of String  
-*Maximum*: `1`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`SnapshotId`  <a name="cfn-fsx-volume-snapshotid"></a>
-A unique ID that represents the snapshot\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-fsx-volume-tags"></a>
 An array of key\-value pairs to apply to this resource\.  

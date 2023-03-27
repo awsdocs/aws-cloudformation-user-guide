@@ -1,6 +1,6 @@
 # AWS::Lex::Bot ImageResponseCard<a name="aws-properties-lex-bot-imageresponsecard"></a>
 
-A card that is shown to the user by a messaging platform\. You define the contents of the card, the card is displayed by the platform\.
+A card that is shown to the user by a messaging platform\. You define the contents of the card, the card is displayed by the platform\. 
 
 When you use a response card, the response from the user is constrained to the text associated with a button on the card\.
 
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-imageresponsecard-properties"></a>
 
 `Buttons`  <a name="cfn-lex-bot-imageresponsecard-buttons"></a>
-A list of buttons that should be displayed on the response card\. The arrangement of the buttons is determined by the platform that displays the buttons\.  
+A list of buttons that should be displayed on the response card\. The arrangement of the buttons is determined by the platform that displays the button\.  
 *Required*: No  
 *Type*: List of [Button](aws-properties-lex-bot-button.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

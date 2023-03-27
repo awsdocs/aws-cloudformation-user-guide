@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Enabled](#cfn-lex-bot-fulfillmentcodehooksetting-enabled)" : Boolean,
   "[FulfillmentUpdatesSpecification](#cfn-lex-bot-fulfillmentcodehooksetting-fulfillmentupdatesspecification)" : FulfillmentUpdatesSpecification,
+  "[IsActive](#cfn-lex-bot-fulfillmentcodehooksetting-isactive)" : Boolean,
   "[PostFulfillmentStatusSpecification](#cfn-lex-bot-fulfillmentcodehooksetting-postfulfillmentstatusspecification)" : PostFulfillmentStatusSpecification
 }
 ```
@@ -22,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Enabled](#cfn-lex-bot-fulfillmentcodehooksetting-enabled): Boolean
   [FulfillmentUpdatesSpecification](#cfn-lex-bot-fulfillmentcodehooksetting-fulfillmentupdatesspecification): 
     FulfillmentUpdatesSpecification
+  [IsActive](#cfn-lex-bot-fulfillmentcodehooksetting-isactive): Boolean
   [PostFulfillmentStatusSpecification](#cfn-lex-bot-fulfillmentcodehooksetting-postfulfillmentstatusspecification): 
     PostFulfillmentStatusSpecification
 ```
@@ -29,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-fulfillmentcodehooksetting-properties"></a>
 
 `Enabled`  <a name="cfn-lex-bot-fulfillmentcodehooksetting-enabled"></a>
-Indicates whether a Lambda function should be invoked for fulfill a specific intent\.  
+Indicates whether a Lambda function should be invoked to fulfill a specific intent\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -38,6 +40,12 @@ Indicates whether a Lambda function should be invoked for fulfill a specific int
 Provides settings for update messages sent to the user for long\-running Lambda fulfillment functions\. Fulfillment updates can be used only with streaming conversations\.  
 *Required*: No  
 *Type*: [FulfillmentUpdatesSpecification](aws-properties-lex-bot-fulfillmentupdatesspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IsActive`  <a name="cfn-lex-bot-fulfillmentcodehooksetting-isactive"></a>
+Determines whether the fulfillment code hook is used\. When `active` is false, the code hook doesn't run\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PostFulfillmentStatusSpecification`  <a name="cfn-lex-bot-fulfillmentcodehooksetting-postfulfillmentstatusspecification"></a>

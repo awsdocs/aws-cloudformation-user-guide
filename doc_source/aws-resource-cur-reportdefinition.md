@@ -52,13 +52,13 @@ Properties:
 ## Properties<a name="aws-resource-cur-reportdefinition-properties"></a>
 
 `AdditionalArtifacts`  <a name="cfn-cur-reportdefinition-additionalartifacts"></a>
-A list of manifests that you want Amazon Web Services to create for this report\.  
+A list of manifests that you want AWS to create for this report\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AdditionalSchemaElements`  <a name="cfn-cur-reportdefinition-additionalschemaelements"></a>
-A list of strings that indicate additional content that Amazon Web Services includes in the report, such as individual resource IDs\.   
+A list of strings that indicate additional content that AWS includes in the report, such as individual resource IDs\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -82,7 +82,7 @@ The format that Amazon Web Services saves the report in\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RefreshClosedReports`  <a name="cfn-cur-reportdefinition-refreshclosedreports"></a>
-Whether you want Amazon Web Services to update your reports after they have been finalized if Amazon Web Services detects charges related to previous months\. These charges can include refunds, credits, or support fees\.  
+Whether you want AWS to update your reports after they have been finalized if AWS detects charges related to previous months\. These charges can include refunds, credits, or support fees\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -94,7 +94,7 @@ The name of the report that you want to create\. The name must be unique, is cas
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ReportVersioning`  <a name="cfn-cur-reportdefinition-reportversioning"></a>
-Whether you want Amazon Web Services to overwrite the previous version of each report or to deliver the report in addition to the previous versions\.  
+Whether you want AWS to overwrite the previous version of each report or to deliver the report in addition to the previous versions\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `CREATE_NEW_REPORT | OVERWRITE_REPORT`  

@@ -1,6 +1,6 @@
 # AWS::EMRContainers::VirtualCluster EksInfo<a name="aws-properties-emrcontainers-virtualcluster-eksinfo"></a>
 
-The information about the EKS cluster\.
+The information about the Amazon EKS cluster\.
 
 ## Syntax<a name="aws-properties-emrcontainers-virtualcluster-eksinfo-syntax"></a>
 

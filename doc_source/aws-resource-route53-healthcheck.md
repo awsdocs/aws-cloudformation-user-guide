@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Route53::HealthCheck",
   "Properties" : {
-      "[HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig)" : Json,
+      "[HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig)" : HealthCheckConfig,
       "[HealthCheckTags](#cfn-route53-healthcheck-healthchecktags)" : [ HealthCheckTag, ... ]
     }
 }
@@ -39,7 +39,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Route53::HealthCheck
 Properties: 
-  [HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig): Json
+  [HealthCheckConfig](#cfn-route53-healthcheck-healthcheckconfig): 
+    HealthCheckConfig
   [HealthCheckTags](#cfn-route53-healthcheck-healthchecktags): 
     - HealthCheckTag
 ```
@@ -50,7 +51,7 @@ Properties:
 A complex type that contains detailed information about one health check\.  
 For the values to enter for `HealthCheckConfig`, see [HealthCheckConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html)  
 *Required*: Yes  
-*Type*: Json  
+*Type*: [HealthCheckConfig](aws-properties-route53-healthcheck-healthcheckconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckTags`  <a name="cfn-route53-healthcheck-healthchecktags"></a>

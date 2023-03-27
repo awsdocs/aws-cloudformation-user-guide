@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile ConnectorOAuthRequest<a name="aws-properties-appflow-connectorprofile-connectoroauthrequest"></a>
 
- The `ConnectorOAuthRequest` property type specifies the select connectors for which the OAuth workflow is supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack\. 
+ Used by select connectors for which the OAuth workflow is supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-connectoroauthrequest-syntax"></a>
 
@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The code provided by the connector when it has been authenticated via the connected app\.   
 *Required*: No  
 *Type*: String  
-*Maximum*: `512`  
+*Maximum*: `2048`  
 *Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

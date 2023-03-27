@@ -17,7 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Priority](#cfn-batch-jobqueue-priority)" : Integer,
       "[SchedulingPolicyArn](#cfn-batch-jobqueue-schedulingpolicyarn)" : String,
       "[State](#cfn-batch-jobqueue-state)" : String,
-      "[Tags](#cfn-batch-jobqueue-tags)" : Json
+      "[Tags](#cfn-batch-jobqueue-tags)" : {Key : Value, ...}
     }
 }
 ```
@@ -33,13 +33,14 @@ Properties:
   [Priority](#cfn-batch-jobqueue-priority): Integer
   [SchedulingPolicyArn](#cfn-batch-jobqueue-schedulingpolicyarn): String
   [State](#cfn-batch-jobqueue-state): String
-  [Tags](#cfn-batch-jobqueue-tags): Json
+  [Tags](#cfn-batch-jobqueue-tags): 
+    Key : Value
 ```
 
 ## Properties<a name="aws-resource-batch-jobqueue-properties"></a>
 
 `ComputeEnvironmentOrder`  <a name="cfn-batch-jobqueue-computeenvironmentorder"></a>
-The set of compute environments mapped to a job queue and their order relative to each other\. The job scheduler uses this parameter to determine which compute environment should run a specific job\. Compute environments must be in the `VALID` state before you can associate them with a job queue\. You can associate up to three compute environments with a job queue\. All of the compute environments must be either EC2 \(`EC2` or `SPOT`\) or Fargate \(`FARGATE` or `FARGATE_SPOT`\); EC2 and Fargate compute environments can't be mixed\.  
+The set of compute environments mapped to a job queue and their order relative to each other\. The job scheduler uses this parameter to determine which compute environment runs a specific job\. Compute environments must be in the `VALID` state before you can associate them with a job queue\. You can associate up to three compute environments with a job queue\. All of the compute environments must be either EC2 \(`EC2` or `SPOT`\) or Fargate \(`FARGATE` or `FARGATE_SPOT`\); EC2 and Fargate compute environments can't be mixed\.  
 All compute environments that are associated with a job queue must share the same architecture\. AWS Batch doesn't support mixing compute environment architecture types in a single job queue\.
 *Required*: Yes  
 *Type*: [List](aws-properties-batch-jobqueue-computeenvironmentorder.md) of [ComputeEnvironmentOrder](aws-properties-batch-jobqueue-computeenvironmentorder.md)  
@@ -58,7 +59,7 @@ The priority of the job queue\. Job queues with a higher priority \(or a higher 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SchedulingPolicyArn`  <a name="cfn-batch-jobqueue-schedulingpolicyarn"></a>
-The Amazon Resource Name \(ARN\) of the scheduling policy\. The format is `aws:Partition:batch:Region:Account:scheduling-policy/Name `\. For example, `aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy`\.  
+The Amazon Resource Name \(ARN\) of the scheduling policy\. The format is `aws:Partition:batch:Region:Account:scheduling-policy/Name `\. For example, `aws:aws:batch:us-west-2:123456789012:scheduling-policy/MySchedulingPolicy`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -71,9 +72,9 @@ The state of the job queue\. If the job queue state is `ENABLED`, it is able to 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-batch-jobqueue-tags"></a>
-The tags applied to the job queue\. For more information, see [Tagging your AWS Batch resources](https://docs.aws.amazon.com/batch/latest/userguide/using-tags.html) in * AWS Batch User Guide*\.  
+The tags that are applied to the job queue\. For more information, see [Tagging your AWS Batch resources](https://docs.aws.amazon.com/batch/latest/userguide/using-tags.html) in * AWS Batch User Guide*\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-batch-jobqueue-return-values"></a>
@@ -83,6 +84,17 @@ The tags applied to the job queue\. For more information, see [Tagging your AWS 
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the job queue ARN, such as `arn:aws:batch:us-east-1:111122223333:job-queue/HighPriority`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-batch-jobqueue-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
+#### <a name="aws-resource-batch-jobqueue-return-values-fn--getatt-fn--getatt"></a>
+
+`JobQueueArn`  <a name="JobQueueArn-fn::getatt"></a>
+Returns the job queue ARN, such as `arn:aws:batch:us-east-1:111122223333:job-queue/JobQueueName`\.
 
 ## Examples<a name="aws-resource-batch-jobqueue--examples"></a>
 

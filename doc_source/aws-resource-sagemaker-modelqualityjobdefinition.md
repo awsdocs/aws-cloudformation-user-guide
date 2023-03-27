@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::ModelQualityJobDefinition",
   "Properties" : {
+      "[EndpointName](#cfn-sagemaker-modelqualityjobdefinition-endpointname)" : String,
       "[JobDefinitionName](#cfn-sagemaker-modelqualityjobdefinition-jobdefinitionname)" : String,
       "[JobResources](#cfn-sagemaker-modelqualityjobdefinition-jobresources)" : MonitoringResources,
       "[ModelQualityAppSpecification](#cfn-sagemaker-modelqualityjobdefinition-modelqualityappspecification)" : ModelQualityAppSpecification,
@@ -31,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SageMaker::ModelQualityJobDefinition
 Properties: 
+  [EndpointName](#cfn-sagemaker-modelqualityjobdefinition-endpointname): String
   [JobDefinitionName](#cfn-sagemaker-modelqualityjobdefinition-jobdefinitionname): String
   [JobResources](#cfn-sagemaker-modelqualityjobdefinition-jobresources): 
     MonitoringResources
@@ -52,6 +54,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-sagemaker-modelqualityjobdefinition-properties"></a>
+
+`EndpointName`  <a name="cfn-sagemaker-modelqualityjobdefinition-endpointname"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JobDefinitionName`  <a name="cfn-sagemaker-modelqualityjobdefinition-jobdefinitionname"></a>
 The name of the monitoring job definition\.  

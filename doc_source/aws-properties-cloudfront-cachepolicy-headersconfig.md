@@ -1,6 +1,6 @@
 # AWS::CloudFront::CachePolicy HeadersConfig<a name="aws-properties-cloudfront-cachepolicy-headersconfig"></a>
 
-An object that determines whether any HTTP headers \(and if so, which headers\) are included in the cache key and automatically included in requests that CloudFront sends to the origin\.
+An object that determines whether any HTTP headers \(and if so, which headers\) are included in the cache key and in requests that CloudFront sends to the origin\.
 
 ## Syntax<a name="aws-properties-cloudfront-cachepolicy-headersconfig-syntax"></a>
 
@@ -26,9 +26,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudfront-cachepolicy-headersconfig-properties"></a>
 
 `HeaderBehavior`  <a name="cfn-cloudfront-cachepolicy-headersconfig-headerbehavior"></a>
-Determines whether any HTTP headers are included in the cache key and automatically included in requests that CloudFront sends to the origin\. Valid values are:  
-+  `none` – HTTP headers are not included in the cache key and are not automatically included in requests that CloudFront sends to the origin\. Even when this field is set to `none`, any headers that are listed in an `OriginRequestPolicy` *are* included in origin requests\.
-+  `whitelist` – The HTTP headers that are listed in the `Headers` type are included in the cache key and are automatically included in requests that CloudFront sends to the origin\.
+Determines whether any HTTP headers are included in the cache key and in requests that CloudFront sends to the origin\. Valid values are:  
++  `none` – No HTTP headers are included in the cache key or in requests that CloudFront sends to the origin\. Even when this field is set to `none`, any headers that are listed in an `OriginRequestPolicy` *are* included in origin requests\.
++  `whitelist` – Only the HTTP headers that are listed in the `Headers` type are included in the cache key and in requests that CloudFront sends to the origin\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `none | whitelist`  

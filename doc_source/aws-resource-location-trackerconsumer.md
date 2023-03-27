@@ -33,7 +33,7 @@ Properties:
 ## Properties<a name="aws-resource-location-trackerconsumer-properties"></a>
 
 `ConsumerArn`  <a name="cfn-location-trackerconsumer-consumerarn"></a>
-The Amazon Resource Name \(ARN\) for the geofence collection that consumes the tracker resource updates\.  
+The Amazon Resource Name \(ARN\) for the geofence collection to be associated to tracker resource\. Used when you need to specify a resource across all AWS\.  
 + Format example: `arn:aws:geo:region:account-id:geofence-collection/ExampleGeofenceCollectionConsumer`
 *Required*: Yes  
 *Type*: String  
@@ -59,6 +59,6 @@ Requirements:
 
 ### Ref<a name="aws-resource-location-trackerconsumer-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `GeofenceCollection` ARN\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `GeofenceCollection` name\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

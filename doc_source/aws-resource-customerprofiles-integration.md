@@ -1,6 +1,6 @@
 # AWS::CustomerProfiles::Integration<a name="aws-resource-customerprofiles-integration"></a>
 
-The AWS::CustomerProfiles::Integration resource specifies an Amazon Connect Customer Profiles Integration\.
+Specifies an Amazon Connect Customer Profiles Integration\.
 
 ## Syntax<a name="aws-resource-customerprofiles-integration-syntax"></a>
 
@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DomainName](#cfn-customerprofiles-integration-domainname)" : String,
       "[FlowDefinition](#cfn-customerprofiles-integration-flowdefinition)" : FlowDefinition,
       "[ObjectTypeName](#cfn-customerprofiles-integration-objecttypename)" : String,
+      "[ObjectTypeNames](#cfn-customerprofiles-integration-objecttypenames)" : [ ObjectTypeMapping, ... ],
       "[Tags](#cfn-customerprofiles-integration-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Uri](#cfn-customerprofiles-integration-uri)" : String
     }
@@ -30,6 +31,8 @@ Properties:
   [FlowDefinition](#cfn-customerprofiles-integration-flowdefinition): 
     FlowDefinition
   [ObjectTypeName](#cfn-customerprofiles-integration-objecttypename): String
+  [ObjectTypeNames](#cfn-customerprofiles-integration-objecttypenames): 
+    - ObjectTypeMapping
   [Tags](#cfn-customerprofiles-integration-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Uri](#cfn-customerprofiles-integration-uri): String
@@ -44,15 +47,21 @@ The unique name of the domain\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FlowDefinition`  <a name="cfn-customerprofiles-integration-flowdefinition"></a>
-Not currently supported by AWS CloudFormation\.  
+The configuration that controls how Customer Profiles retrieves data from the source\.  
 *Required*: No  
 *Type*: [FlowDefinition](aws-properties-customerprofiles-integration-flowdefinition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ObjectTypeName`  <a name="cfn-customerprofiles-integration-objecttypename"></a>
 The name of the profile object type mapping to use\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ObjectTypeNames`  <a name="cfn-customerprofiles-integration-objecttypenames"></a>
+The object type mapping\.  
+*Required*: No  
+*Type*: List of [ObjectTypeMapping](aws-properties-customerprofiles-integration-objecttypemapping.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-customerprofiles-integration-tags"></a>
@@ -98,28 +107,20 @@ The following example creates an integration if Domain existed\.
 #### YAML<a name="aws-resource-customerprofiles-integration--examples----yaml"></a>
 
 ```
-Resources:
-    Integration:
-      Type: "AWS::CustomerProfiles::Integration"
-      Properties:
-        DomainName: "ExampleDomain"
-        ObjectTypeName: "CTR"
-        Uri: "arn:aws:connect:us-east-1:123456789012:instance/11111111-1111-1111-1111-111111111111"
+Type: "AWS::CustomerProfiles::Integration"
+Properties: 
+    DomainName: "ExampleDomain" 
+    ObjectTypeName: "CTR" 
+    Uri: "arn:aws:connect:us-east-1:123456789012:instance/11111111-1111-1111-1111-111111111111"
 ```
 
 #### JSON<a name="aws-resource-customerprofiles-integration--examples----json"></a>
 
 ```
-{
-  "Resources": {
-    "TestIntegration": {
-      "Type": "AWS::CustomerProfiles::Integration",
-      "Properties": {
-        "DomainName": "ExampleDomain",
-        "ObjectTypeName": "CTR",
-        "Uri": "arn:aws:connect:us-east-1:123456789012:instance/11111111-1111-1111-1111-111111111111"
-      }
-    }
-  }
+"Type": "AWS::CustomerProfiles::Integration", 
+"Properties": { 
+    "DomainName": "ExampleDomain",
+    "ObjectTypeName": "CTR", 
+    "Uri": "arn:aws:connect:us-east-1:123456789012:instance/11111111-1111-1111-1111-111111111111" } } }
 }
 ```

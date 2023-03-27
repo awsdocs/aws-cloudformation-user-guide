@@ -1,6 +1,6 @@
 # AWS::Lex::Bot SlotTypeValue<a name="aws-properties-lex-bot-slottypevalue"></a>
 
-Each slot type can have a set of values\. The `SlotTypeValue` represents a value that the slot type can take\.
+Each slot type can have a set of values\. Each `SlotTypeValue` represents a value that the slot type can take\.
 
 ## Syntax<a name="aws-properties-lex-bot-slottypevalue-syntax"></a>
 

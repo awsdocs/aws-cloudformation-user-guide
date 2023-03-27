@@ -2,7 +2,7 @@
 
 Specifies the license configuration to use\.
 
- `LicenseSpecification` is a property of the [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource\.
+`LicenseSpecification` is a property of the [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html) resource\.
 
 ## Syntax<a name="aws-properties-ec2-instance-licensespecification-syntax"></a>
 

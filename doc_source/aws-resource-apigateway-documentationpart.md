@@ -33,19 +33,19 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-documentationpart-properties"></a>
 
 `Location`  <a name="cfn-apigateway-documentationpart-location"></a>
-The location of the API entity that the documentation applies to\.  
+The location of the targeted API entity of the to\-be\-created documentation part\.  
 *Required*: Yes  
 *Type*: [Location](aws-properties-apigateway-documentationpart-location.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Properties`  <a name="cfn-apigateway-documentationpart-properties"></a>
-The documentation content map of the targeted API entity\.  
+The new documentation content map of the targeted API entity\. Enclosed key\-value pairs are API\-specific, but only OpenAPI\-compliant key\-value pairs can be exported and, hence, published\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RestApiId`  <a name="cfn-apigateway-documentationpart-restapiid"></a>
-The identifier of the targeted API entity\.  
+The string identifier of the associated RestApi\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -57,6 +57,13 @@ The identifier of the targeted API entity\.
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the documentation part, such as `abc123`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-apigateway-documentationpart-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-apigateway-documentationpart-return-values-fn--getatt-fn--getatt"></a>
+
+`DocumentationPartId`  <a name="DocumentationPartId-fn::getatt"></a>
+The ID for the documentation part\.
 
 ## Examples<a name="aws-resource-apigateway-documentationpart--examples"></a>
 
@@ -107,7 +114,7 @@ The following example associates a documentation part for an API entity with a d
                 "RestApiId": {
                     "Ref": "RestApi"
                 },
-                "Property": {
+                "Properties": {
                     "Ref": "property"
                 }
             }
@@ -156,7 +163,7 @@ Resources:
       Location:
         Type: !Ref type
       RestApiId: !Ref RestApi
-      Property: !Ref property
+      Properties: !Ref property
   DocumentationVersion:
     Type: AWS::ApiGateway::DocumentationVersion
     Properties:
@@ -167,5 +174,5 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-apigateway-documentationpart--seealso"></a>
-+ [documentationpart:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/documentationpart-create/) in the *Amazon API Gateway REST API Reference*
++ [documentationpart:create](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateDocumentationPart.html) in the *Amazon API Gateway REST API Reference*
 

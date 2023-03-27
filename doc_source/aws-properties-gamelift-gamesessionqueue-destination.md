@@ -1,6 +1,6 @@
 # AWS::GameLift::GameSessionQueue Destination<a name="aws-properties-gamelift-gamesessionqueue-destination"></a>
 
-The fleet designated in a game session queue\. Requests for new game sessions in the queue are fulfilled by starting a new game session on any destination that is configured for a queue\. 
+A fleet or alias designated in a game session queue\. Queues fulfill requests for new game sessions by placing a new game session on any of the queue's destinations\. 
 
 ## Syntax<a name="aws-properties-gamelift-gamesessionqueue-destination-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-gamelift-gamesessionqueue-destination-properties"></a>
 
 `DestinationArn`  <a name="cfn-gamelift-gamesessionqueue-destination-destinationarn"></a>
-The Amazon Resource Name \(ARN\) that is assigned to fleet or fleet alias\. ARNs, which include a fleet ID or alias ID and a Region name, provide a unique identifier across all Regions\.   
+The Amazon Resource Name \(ARN\) that is assigned to fleet or fleet alias\. ARNs, which include a fleet ID or alias ID and a Region name, provide a unique identifier across all Regions\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

@@ -2,8 +2,6 @@
 
 Specifies a secondary private IPv4 address for a network interface\.
 
- `PrivateIpAddressSpecification` is a property of the [AWS::EC2::NetworkInterface](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface.html) resource\.
-
 ## Syntax<a name="aws-properties-ec2-network-interface-privateipspec-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -33,7 +31,7 @@ Indicates whether the private IPv4 address is the primary private IPv4 address\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrivateIpAddress`  <a name="cfn-ec2-networkinterface-privateipspecification-privateipaddress"></a>
-The private IPv4 addresses\.  
+The private IPv4 address\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

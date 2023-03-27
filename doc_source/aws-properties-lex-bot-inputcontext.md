@@ -1,6 +1,6 @@
 # AWS::Lex::Bot InputContext<a name="aws-properties-lex-bot-inputcontext"></a>
 
-The name of a context that must be active for an intent to be selected by Amazon Lex\.
+A context that must be active for an intent to be selected by Amazon Lex\.
 
 ## Syntax<a name="aws-properties-lex-bot-inputcontext-syntax"></a>
 

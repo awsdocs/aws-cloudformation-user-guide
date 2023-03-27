@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-nimblestudio-studiocomponent-studiocomponentconfiguration-properties"></a>
 
 `ActiveDirectoryConfiguration`  <a name="cfn-nimblestudio-studiocomponent-studiocomponentconfiguration-activedirectoryconfiguration"></a>
-The configuration for a Microsoft Active Directory \(Microsoft AD\) studio resource\.  
+The configuration for a AWS Directory Service for Microsoft Active Directory studio resource\.  
 *Required*: No  
 *Type*: [ActiveDirectoryConfiguration](aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

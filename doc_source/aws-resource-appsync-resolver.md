@@ -18,6 +18,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ApiId](#cfn-appsync-resolver-apiid)" : String,
       "[CachingConfig](#cfn-appsync-resolver-cachingconfig)" : CachingConfig,
+      "[Code](#cfn-appsync-resolver-code)" : String,
+      "[CodeS3Location](#cfn-appsync-resolver-codes3location)" : String,
       "[DataSourceName](#cfn-appsync-resolver-datasourcename)" : String,
       "[FieldName](#cfn-appsync-resolver-fieldname)" : String,
       "[Kind](#cfn-appsync-resolver-kind)" : String,
@@ -27,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RequestMappingTemplateS3Location](#cfn-appsync-resolver-requestmappingtemplates3location)" : String,
       "[ResponseMappingTemplate](#cfn-appsync-resolver-responsemappingtemplate)" : String,
       "[ResponseMappingTemplateS3Location](#cfn-appsync-resolver-responsemappingtemplates3location)" : String,
+      "[Runtime](#cfn-appsync-resolver-runtime)" : AppSyncRuntime,
       "[SyncConfig](#cfn-appsync-resolver-syncconfig)" : SyncConfig,
       "[TypeName](#cfn-appsync-resolver-typename)" : String
     }
@@ -41,6 +44,8 @@ Properties:
   [ApiId](#cfn-appsync-resolver-apiid): String
   [CachingConfig](#cfn-appsync-resolver-cachingconfig): 
     CachingConfig
+  [Code](#cfn-appsync-resolver-code): String
+  [CodeS3Location](#cfn-appsync-resolver-codes3location): String
   [DataSourceName](#cfn-appsync-resolver-datasourcename): String
   [FieldName](#cfn-appsync-resolver-fieldname): String
   [Kind](#cfn-appsync-resolver-kind): String
@@ -51,6 +56,8 @@ Properties:
   [RequestMappingTemplateS3Location](#cfn-appsync-resolver-requestmappingtemplates3location): String
   [ResponseMappingTemplate](#cfn-appsync-resolver-responsemappingtemplate): String
   [ResponseMappingTemplateS3Location](#cfn-appsync-resolver-responsemappingtemplates3location): String
+  [Runtime](#cfn-appsync-resolver-runtime): 
+    AppSyncRuntime
   [SyncConfig](#cfn-appsync-resolver-syncconfig): 
     SyncConfig
   [TypeName](#cfn-appsync-resolver-typename): String
@@ -68,6 +75,18 @@ The AWS AppSync GraphQL API to which you want to attach this resolver\.
 The caching configuration for the resolver\.  
 *Required*: No  
 *Type*: [CachingConfig](aws-properties-appsync-resolver-cachingconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Code`  <a name="cfn-appsync-resolver-code"></a>
+The `resolver` code that contains the request and response functions\. When code is used, the `runtime` is required\. The runtime value must be `APPSYNC_JS`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`CodeS3Location`  <a name="cfn-appsync-resolver-codes3location"></a>
+The Amazon S3 endpoint\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataSourceName`  <a name="cfn-appsync-resolver-datasourcename"></a>
@@ -125,6 +144,12 @@ The response mapping template\.
 The location of a response mapping template in an Amazon S3 bucket\. Use this if you want to provision with a template file in Amazon S3 rather than embedding it in your CloudFormation template\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Runtime`  <a name="cfn-appsync-resolver-runtime"></a>
+Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function\. Specifies the name and version of the runtime to use\. Note that if a runtime is specified, code must also be specified\.  
+*Required*: No  
+*Type*: [AppSyncRuntime](aws-properties-appsync-resolver-appsyncruntime.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SyncConfig`  <a name="cfn-appsync-resolver-syncconfig"></a>

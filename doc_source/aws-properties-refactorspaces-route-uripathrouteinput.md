@@ -30,10 +30,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-refactorspaces-route-uripathrouteinput-properties"></a>
 
 `ActivationState`  <a name="cfn-refactorspaces-route-uripathrouteinput-activationstate"></a>
-Indicates whether traffic is forwarded to this route’s service after the route is created\.   
+If set to `ACTIVE`, traffic is forwarded to this route’s service after the route is created\.   
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeChildPaths`  <a name="cfn-refactorspaces-route-uripathrouteinput-includechildpaths"></a>
 Indicates whether to match all subpaths of the given source path\. If this value is `false`, requests must match the source path exactly before they are forwarded to this route's service\.   

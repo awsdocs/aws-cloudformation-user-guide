@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-rulegroup-regexpatternsetreferencestatement-properties"></a>
 
 `Arn`  <a name="cfn-wafv2-rulegroup-regexpatternsetreferencestatement-arn"></a>
-The Amazon Resource Name \(ARN\) of the regular expression pattern set that this statement references\.  
+The Amazon Resource Name \(ARN\) of the [AWS::WAFv2::RegexPatternSet](aws-resource-wafv2-regexpatternset.md) that this statement references\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
@@ -40,13 +40,13 @@ The Amazon Resource Name \(ARN\) of the regular expression pattern set that this
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldToMatch`  <a name="cfn-wafv2-rulegroup-regexpatternsetreferencestatement-fieldtomatch"></a>
-The part of a web request that you want AWS WAF to inspect\.   
+The part of the web request that you want AWS WAF to inspect\.   
 *Required*: Yes  
 *Type*: [FieldToMatch](aws-properties-wafv2-rulegroup-fieldtomatch.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TextTransformations`  <a name="cfn-wafv2-rulegroup-regexpatternsetreferencestatement-texttransformations"></a>
-Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection\. If you specify one or more transformations in a rule statement, AWS WAF performs all transformations on the content identified by `FieldToMatch`, starting from the lowest priority setting, before inspecting the content for a match\.  
+Text transformations eliminate some of the unusual formatting that attackers use in web requests in an effort to bypass detection\. If you specify one or more transformations in a rule statement, AWS WAF performs all transformations on the content of the request component identified by `FieldToMatch`, starting from the lowest priority setting, before inspecting the content for a match\.  
 *Required*: Yes  
 *Type*: List of [TextTransformation](aws-properties-wafv2-rulegroup-texttransformation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

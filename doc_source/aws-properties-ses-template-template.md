@@ -36,7 +36,7 @@ The HTML body of the email\.
 
 `SubjectPart`  <a name="cfn-ses-template-template-subjectpart"></a>
 The subject line of the email\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

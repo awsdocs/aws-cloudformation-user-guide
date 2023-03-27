@@ -1,6 +1,6 @@
 # AWS::CustomerProfiles::Integration ServiceNowSourceProperties<a name="aws-properties-customerprofiles-integration-servicenowsourceproperties"></a>
 
-<a name="aws-properties-customerprofiles-integration-servicenowsourceproperties-description"></a>The `ServiceNowSourceProperties` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::CustomerProfiles::Integration](aws-resource-customerprofiles-integration.md)\.
+The properties that are applied when ServiceNow is being used as a source\.
 
 ## Syntax<a name="aws-properties-customerprofiles-integration-servicenowsourceproperties-syntax"></a>
 
@@ -23,7 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-customerprofiles-integration-servicenowsourceproperties-properties"></a>
 
 `Object`  <a name="cfn-customerprofiles-integration-servicenowsourceproperties-object"></a>
-Not currently supported by AWS CloudFormation\.  
+The object specified in the ServiceNow flow source\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `512`  
+*Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -37,7 +37,7 @@ Properties:
 ## Properties<a name="aws-resource-ec2-vpcendpointconnectionnotification-properties"></a>
 
 `ConnectionEvents`  <a name="cfn-ec2-vpcendpointconnectionnotification-connectionevents"></a>
-One or more endpoint events for which to receive notifications\. Valid values are `Accept`, `Connect`, `Delete`, and `Reject`\.  
+The endpoint events for which to receive notifications\. Valid values are `Accept`, `Connect`, `Delete`, and `Reject`\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

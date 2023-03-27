@@ -1,6 +1,8 @@
 # AWS::AutoScaling::WarmPool InstanceReusePolicy<a name="aws-properties-autoscaling-warmpool-instancereusepolicy"></a>
 
-<a name="aws-properties-autoscaling-warmpool-instancereusepolicy-description"></a>The `InstanceReusePolicy` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::AutoScaling::WarmPool](aws-resource-autoscaling-warmpool.md)\.
+A structure that specifies an instance reuse policy for the `InstanceReusePolicy` property of the [AWS::AutoScaling::WarmPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-warmpool.html) resource\.
+
+For more information, see [Warm pools for Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html) in the *Amazon EC2 Auto Scaling User Guide*\.
 
 ## Syntax<a name="aws-properties-autoscaling-warmpool-instancereusepolicy-syntax"></a>
 
@@ -23,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-autoscaling-warmpool-instancereusepolicy-properties"></a>
 
 `ReuseOnScaleIn`  <a name="cfn-autoscaling-warmpool-instancereusepolicy-reuseonscalein"></a>
-Not currently supported by AWS CloudFormation\.  
+Specifies whether instances in the Auto Scaling group can be returned to the warm pool on scale in\.   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

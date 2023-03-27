@@ -87,7 +87,7 @@ The method used to backfill game sessions that are created with this matchmaking
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomEventData`  <a name="cfn-gamelift-matchmakingconfiguration-customeventdata"></a>
-Information that is attached to all events related to the matchmaking configuration\.   
+Information to add to all events related to the matchmaking configuration\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -95,7 +95,7 @@ Information that is attached to all events related to the matchmaking configurat
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-gamelift-matchmakingconfiguration-description"></a>
-A descriptive label that is associated with matchmaking configuration\.  
+A description for the matchmaking configuration\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -103,7 +103,7 @@ A descriptive label that is associated with matchmaking configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FlexMatchMode`  <a name="cfn-gamelift-matchmakingconfiguration-flexmatchmode"></a>
-Indicates whether this matchmaking configuration is being used with GameLift managed hosting or as a standalone matchmaking solution\.   
+Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone matchmaking solution\.   
 +  **STANDALONE** \- FlexMatch forms matches and returns match information, including players and team assignments, in a [ MatchmakingSucceeded](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-events.html#match-events-matchmakingsucceeded) event\.
 +  **WITH\_QUEUE** \- FlexMatch forms matches and uses the specified GameLift queue to start a game session for the match\. 
 *Required*: No  
@@ -133,7 +133,7 @@ The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-gamelift-matchmakingconfiguration-name"></a>
-A unique identifier for a matchmaking configuration\. Matchmaking requests use this name to identify which matchmaking configuration to use\.  
+A unique identifier for the matchmaking configuration\. This name is used to identify the configuration associated with a matchmaking request or ticket\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `128`  

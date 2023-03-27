@@ -2,7 +2,7 @@
 
 The types of cost that are included in a `COST` budget, such as tax and subscriptions\.
 
- `USAGE`, `RI_UTILIZATION`, `RI_COVERAGE`, `SAVINGS_PLANS_UTILIZATION`, and `SAVINGS_PLANS_COVERAGE` budgets do not have `CostTypes`\.
+ `USAGE`, `RI_UTILIZATION`, `RI_COVERAGE`, `SAVINGS_PLANS_UTILIZATION`, and `SAVINGS_PLANS_COVERAGE` budgets don't have `CostTypes`\.
 
 ## Syntax<a name="aws-properties-budgets-budget-costtypes-syntax"></a>
 

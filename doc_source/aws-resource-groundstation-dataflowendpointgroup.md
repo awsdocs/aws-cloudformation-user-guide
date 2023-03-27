@@ -16,6 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::GroundStation::DataflowEndpointGroup",
   "Properties" : {
+      "[ContactPostPassDurationSeconds](#cfn-groundstation-dataflowendpointgroup-contactpostpassdurationseconds)" : Integer,
+      "[ContactPrePassDurationSeconds](#cfn-groundstation-dataflowendpointgroup-contactprepassdurationseconds)" : Integer,
       "[EndpointDetails](#cfn-groundstation-dataflowendpointgroup-endpointdetails)" : [ EndpointDetails, ... ],
       "[Tags](#cfn-groundstation-dataflowendpointgroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -27,6 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::GroundStation::DataflowEndpointGroup
 Properties: 
+  [ContactPostPassDurationSeconds](#cfn-groundstation-dataflowendpointgroup-contactpostpassdurationseconds): Integer
+  [ContactPrePassDurationSeconds](#cfn-groundstation-dataflowendpointgroup-contactprepassdurationseconds): Integer
   [EndpointDetails](#cfn-groundstation-dataflowendpointgroup-endpointdetails): 
     - EndpointDetails
   [Tags](#cfn-groundstation-dataflowendpointgroup-tags): 
@@ -34,6 +38,18 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-groundstation-dataflowendpointgroup-properties"></a>
+
+`ContactPostPassDurationSeconds`  <a name="cfn-groundstation-dataflowendpointgroup-contactpostpassdurationseconds"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ContactPrePassDurationSeconds`  <a name="cfn-groundstation-dataflowendpointgroup-contactprepassdurationseconds"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointDetails`  <a name="cfn-groundstation-dataflowendpointgroup-endpointdetails"></a>
  List of Endpoint Details, containing address and port for each endpoint\.   

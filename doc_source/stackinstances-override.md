@@ -2,7 +2,7 @@
 
 In certain cases, you might want stack instances in certain Regions or accounts to have different property values than those specified in the stack set itself\. For example, you might want to specify a different value for a given parameter based on whether an account is used for development or production\. For these situations, AWS CloudFormation allows you to override parameter values in stack instances by account and Region\. You can override template parameter values when you first create the stack instances, and you can override parameter values for existing stack instances\. You can only set parameters you've previously overridden in stack instances back to the values specified in the stack set\.
 
-Parameter value overrides apply to stack instances in the accounts and Regions you select\. During stack set updates, any parameter values overridden for a stack instance are not updated, but retain their overridden value\.
+Parameter value overrides apply to stack instances in the accounts and Regions you select\. During stack set updates, any parameter values overridden for a stack instance aren't updated, but retain their overridden value\.
 
 You can only override parameter *values* that are specified in the stack set; to add or delete a parameter itself, you need to update the stack set template\. If you add a parameter to a stack set template, then before you can override that parameter value in a stack instance you must first update all stack instances with the new parameter and value specified in the stack set\. Once all stack instances have been updated with the new parameter, you can then override the parameter value in individual stack instances as desired\.
 
@@ -23,7 +23,7 @@ To learn how to override stack set parameter values when you create stack instan
 
 1. On the **Set deployment options** page, provide the accounts and Regions for the stack instances whose parameters you want to override\.
 
-   AWS CloudFormation will deploy stacks in the specified accounts within the first Region, then moves on to the next, and so on, as long as a Region's deployment failures don't exceed a specified failure tolerance\.
+   AWS CloudFormation will deploy stacks in the specified accounts within the first Region, then moves on to the next, and so on, provided that a Region's deployment failures don't exceed a specified failure tolerance\.
 
    1. \[Self\-managed permissions\] For **Deployment targets**, choose **Deploy stacks in accounts**\. Paste some or all the target account IDs that you used to create your stack set in [Create a stack set](stacksets-getting-started-create.md)\.
 

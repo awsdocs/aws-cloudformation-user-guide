@@ -5,6 +5,7 @@
 + [AWS::IoTWireless::DeviceProfile](aws-resource-iotwireless-deviceprofile.md)
 + [AWS::IoTWireless::FuotaTask](aws-resource-iotwireless-fuotatask.md)
 + [AWS::IoTWireless::MulticastGroup](aws-resource-iotwireless-multicastgroup.md)
++ [AWS::IoTWireless::NetworkAnalyzerConfiguration](aws-resource-iotwireless-networkanalyzerconfiguration.md)
 + [AWS::IoTWireless::PartnerAccount](aws-resource-iotwireless-partneraccount.md)
 + [AWS::IoTWireless::ServiceProfile](aws-resource-iotwireless-serviceprofile.md)
 + [AWS::IoTWireless::TaskDefinition](aws-resource-iotwireless-taskdefinition.md)

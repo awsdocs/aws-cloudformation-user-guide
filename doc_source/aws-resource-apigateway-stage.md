@@ -59,80 +59,80 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-stage-properties"></a>
 
 `AccessLogSetting`  <a name="cfn-apigateway-stage-accesslogsetting"></a>
-Specifies settings for logging access in this stage\.  
+Access log settings, including the access log format and access log destination ARN\.  
 *Required*: No  
 *Type*: [AccessLogSetting](aws-properties-apigateway-stage-accesslogsetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CacheClusterEnabled`  <a name="cfn-apigateway-stage-cacheclusterenabled"></a>
-Indicates whether cache clustering is enabled for the stage\.  
+Specifies whether a cache cluster is enabled for the stage\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CacheClusterSize`  <a name="cfn-apigateway-stage-cacheclustersize"></a>
-The stage's cache cluster size\.  
+The stage's cache capacity in GB\. For more information about choosing a cache size, see [Enabling API caching to enhance responsiveness](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-caching.html)\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `0.5 | 1.6 | 118 | 13.5 | 237 | 28.4 | 58.2 | 6.1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CanarySetting`  <a name="cfn-apigateway-stage-canarysetting"></a>
-Specifies settings for the canary deployment in this stage\.  
+Settings for the canary deployment in this stage\.  
 *Required*: No  
 *Type*: [CanarySetting](aws-properties-apigateway-stage-canarysetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ClientCertificateId`  <a name="cfn-apigateway-stage-clientcertificateid"></a>
-The ID of the client certificate that API Gateway uses to call your integration endpoints in the stage\.  
+The identifier of a client certificate for an API stage\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeploymentId`  <a name="cfn-apigateway-stage-deploymentid"></a>
-The ID of the deployment that the stage is associated with\. This parameter is required to create a stage\.  
-*Required*: Conditional  
+The identifier of the Deployment that the stage points to\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-apigateway-stage-description"></a>
-A description of the stage\.  
+The stage's description\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DocumentationVersion`  <a name="cfn-apigateway-stage-documentationversion"></a>
-The version ID of the API documentation snapshot\.  
+The version of the associated API documentation\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MethodSettings`  <a name="cfn-apigateway-stage-methodsettings"></a>
-Settings for all methods in the stage\.  
+A map that defines the method settings for a Stage resource\. Keys \(designated as `/{method_setting_key` below\) are method paths defined as `{resource_path}/{http_method}` for an individual method override, or `/\*/\*` for overriding all methods in the stage\.   
 *Required*: No  
 *Type*: List of [MethodSetting](aws-properties-apigateway-stage-methodsetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RestApiId`  <a name="cfn-apigateway-stage-restapiid"></a>
-The ID of the `RestApi` resource that you're deploying with this stage\.  
+The string identifier of the associated RestApi\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StageName`  <a name="cfn-apigateway-stage-stagename"></a>
-The name of the stage, which API Gateway uses as the first path segment in the invoked Uniform Resource Identifier \(URI\)\.  
+The name of the stage is the first path segment in the Uniform Resource Identifier \(URI\) of a call to API Gateway\. Stage names can only contain alphanumeric characters, hyphens, and underscores\. Maximum length is 128 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-apigateway-stage-tags"></a>
-An array of arbitrary tags \(key\-value pairs\) to associate with the stage\.  
+The collection of tags\. Each tag element is associated with a given resource\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TracingEnabled`  <a name="cfn-apigateway-stage-tracingenabled"></a>
-Specifies whether active X\-Ray tracing is enabled for this stage\.  
-For more information, see [Trace API Gateway API Execution with AWS X\-Ray](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-xray.html) in the *API Gateway Developer Guide*\.  
+Specifies whether active tracing with X\-ray is enabled for the Stage\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -245,5 +245,5 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-apigateway-stage--seealso"></a>
-+ [stage:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/stage-create/) in the *Amazon API Gateway REST API Reference*
++ [stage:create](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateStage.html) in the *Amazon API Gateway REST API Reference*
 

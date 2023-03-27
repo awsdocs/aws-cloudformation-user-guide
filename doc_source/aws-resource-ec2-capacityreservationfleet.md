@@ -74,13 +74,13 @@ Information about the instance types for which to reserve the capacity\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NoRemoveEndDate`  <a name="cfn-ec2-capacityreservationfleet-noremoveenddate"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RemoveEndDate`  <a name="cfn-ec2-capacityreservationfleet-removeenddate"></a>
-Not currently supported by AWS CloudFormation\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -139,18 +139,16 @@ Resources:
     Properties:
       AllocationStrategy: "prioritized"
       InstanceTypeSpecifications:
-        - InstanceTypeSpecification:
-            InstanceType: "c4.large"
-            InstancePlatform: "Linux/UNIX"
-            AvailabilityZone: "us-east-1a"
-            Weight: 1
-            Priority: 1
-        - InstanceTypeSpecification:
-            InstanceType: "c5.large"
-            InstancePlatform: "Linux/UNIX"
-            AvailabilityZone: "us-east-1a"
-            Weight: 1
-            Priority: 2
+        - InstanceType: "c4.large"
+          InstancePlatform: "Linux/UNIX"
+          AvailabilityZone: "us-east-1a"
+          Weight: 1
+          Priority: 1
+        - InstanceType: "c5.large"
+          InstancePlatform: "Linux/UNIX"
+          AvailabilityZone: "us-east-1a"
+          Weight: 1
+          Priority: 2
       Tenancy: "default"
       TotalTargetCapacity: 2
       InstanceMatchCriteria: "open"

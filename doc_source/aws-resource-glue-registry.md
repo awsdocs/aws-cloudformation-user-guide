@@ -63,4 +63,4 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### <a name="aws-resource-glue-registry-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.

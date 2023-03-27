@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AdditionalInfo](#cfn-elasticmapreduce-cluster-additionalinfo)" : Json,
       "[Applications](#cfn-elasticmapreduce-cluster-applications)" : [ Application, ... ],
       "[AutoScalingRole](#cfn-elasticmapreduce-cluster-autoscalingrole)" : String,
+      "[AutoTerminationPolicy](#cfn-elasticmapreduce-cluster-autoterminationpolicy)" : AutoTerminationPolicy,
       "[BootstrapActions](#cfn-elasticmapreduce-cluster-bootstrapactions)" : [ BootstrapActionConfig, ... ],
       "[Configurations](#cfn-elasticmapreduce-cluster-configurations)" : [ Configuration, ... ],
       "[CustomAmiId](#cfn-elasticmapreduce-cluster-customamiid)" : String,
@@ -28,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[LogUri](#cfn-elasticmapreduce-cluster-loguri)" : String,
       "[ManagedScalingPolicy](#cfn-elasticmapreduce-cluster-managedscalingpolicy)" : ManagedScalingPolicy,
       "[Name](#cfn-elasticmapreduce-cluster-name)" : String,
+      "[OSReleaseLabel](#cfn-elasticmapreduce-cluster-osreleaselabel)" : String,
       "[ReleaseLabel](#cfn-elasticmapreduce-cluster-releaselabel)" : String,
       "[ScaleDownBehavior](#cfn-elasticmapreduce-cluster-scaledownbehavior)" : String,
       "[SecurityConfiguration](#cfn-elasticmapreduce-cluster-securityconfiguration)" : String,
@@ -49,6 +51,8 @@ Properties:
   [Applications](#cfn-elasticmapreduce-cluster-applications): 
     - Application
   [AutoScalingRole](#cfn-elasticmapreduce-cluster-autoscalingrole): String
+  [AutoTerminationPolicy](#cfn-elasticmapreduce-cluster-autoterminationpolicy): 
+    AutoTerminationPolicy
   [BootstrapActions](#cfn-elasticmapreduce-cluster-bootstrapactions): 
     - BootstrapActionConfig
   [Configurations](#cfn-elasticmapreduce-cluster-configurations): 
@@ -65,6 +69,7 @@ Properties:
   [ManagedScalingPolicy](#cfn-elasticmapreduce-cluster-managedscalingpolicy): 
     ManagedScalingPolicy
   [Name](#cfn-elasticmapreduce-cluster-name): String
+  [OSReleaseLabel](#cfn-elasticmapreduce-cluster-osreleaselabel): String
   [ReleaseLabel](#cfn-elasticmapreduce-cluster-releaselabel): String
   [ScaleDownBehavior](#cfn-elasticmapreduce-cluster-scaledownbehavior): String
   [SecurityConfiguration](#cfn-elasticmapreduce-cluster-securityconfiguration): String
@@ -102,6 +107,12 @@ An IAM role for automatic scaling policies\. The default role is `EMR_AutoScalin
 *Maximum*: `10280`  
 *Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`AutoTerminationPolicy`  <a name="cfn-elasticmapreduce-cluster-autoterminationpolicy"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [AutoTerminationPolicy](aws-properties-elasticmapreduce-cluster-autoterminationpolicy.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BootstrapActions`  <a name="cfn-elasticmapreduce-cluster-bootstrapactions"></a>
 A list of bootstrap actions to run before Hadoop starts on the cluster nodes\.  
@@ -172,6 +183,12 @@ Creates or updates a managed scaling policy for an Amazon EMR cluster\. The mana
 `Name`  <a name="cfn-elasticmapreduce-cluster-name"></a>
 The name of the cluster\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`OSReleaseLabel`  <a name="cfn-elasticmapreduce-cluster-osreleaselabel"></a>
+The Amazon Linux release specified in a cluster launch RunJobFlow request\. If no Amazon Linux release was specified, the default Amazon Linux release is shown in the response\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

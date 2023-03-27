@@ -1,6 +1,6 @@
 # AWS::NetworkManager::Site<a name="aws-resource-networkmanager-site"></a>
 
-Specifies a site in a global network\.
+Creates a new site in a global network\.
 
 ## Syntax<a name="aws-resource-networkmanager-site-syntax"></a>
 

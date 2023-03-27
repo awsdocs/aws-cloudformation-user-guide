@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `BlockPublicAcls`  <a name="cfn-s3-accesspoint-publicaccessblockconfiguration-blockpublicacls"></a>
 Specifies whether Amazon S3 should block public access control lists \(ACLs\) for this bucket and objects in this bucket\. Setting this element to `TRUE` causes the following behavior:  
-+ PUT Bucket acl and PUT Object acl calls fail if the specified ACL is public\.
++ PUT Bucket ACL and PUT Object ACL calls fail if the specified ACL is public\.
 + PUT Object calls fail if the request includes a public ACL\.
 + PUT Bucket calls fail if the request includes a public ACL\.
 Enabling this setting doesn't affect existing policies or ACLs\.  

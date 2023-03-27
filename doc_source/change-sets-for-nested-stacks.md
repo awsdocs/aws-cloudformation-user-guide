@@ -19,8 +19,8 @@ Change sets for nested stacks combines the following features together to expand
 **Note**  
 A root change set is the change set associated with the stack from which the whole hierarchy of change sets are created\. You must execute or delete change sets for nested stacks from the root change set\.
 + **View the change set** – Visualize changes to resources inside nested stacks before executing them\. You can view the proposed changes in the **Changes** section of your change set by navigating through the current stack and its nested change sets\. For more information, see [Viewing a change set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-view.html)\.
-+ **Execute the change set** – Execute the changes described in the change set that pertain to the current stack and its descendants\. The execute action must be made from the root change set\. For more information, see [Executing a change set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-execute.html)\.
-+ **Delete the change set** – Removes the change sets from the current stack\. Deleting a change set helps to prevent you or another user from accidentally initiating a change set that shouldn't be applied\. The delete action must be executed from the root change set\. For more information, see [Deleting a change set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-delete.html)\.
++ **Execute the change set** – Execute the changes described in the change set that pertain to the current stack and its descendants\. The execute operation must be made from the root change set\. For more information, see [Executing a change set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-execute.html)\.
++ **Delete the change set** – Removes the change sets from the current stack\. Deleting a change set helps to prevent you or another user from accidentally initiating a change set that shouldn't be applied\. The delete operation must be executed from the root change set\. For more information, see [Deleting a change set](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets-delete.html)\.
 
 ## Working with change sets for nested stacks \(AWS CLI\)<a name="change-sets-for-nested-stacks-cli"></a>
 
@@ -195,7 +195,7 @@ aws cloudformation execute-change-set \
 ### delete\-change\-set<a name="working-with-change-set-delete-cli"></a>
 + [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/delete-change-set.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/delete-change-set.html) – Deletes the specified change set\. Deleting change sets ensures that no one uses the wrong change set\. Deleting change sets is asynchronous for change sets created with the `–include-nested-stacks` parameter\. For more information, see [To delete a change set \(AWS CLI\)](using-cfn-updating-stacks-changesets-delete.md) \.
 **Note**  
-`delete-change-set` must be executed from the root change set and will delete the whole hierarchy of change sets\. Nested stacks in the `REVIEW_IN_PROGRESS` status will also be deleted if they were created during the `create-change-set` action\.
+`delete-change-set` must be executed from the root change set and will delete the whole hierarchy of change sets\. Nested stacks in the `REVIEW_IN_PROGRESS` status will also be deleted if they were created during the `create-change-set` operation\.
 
 The following AWS CLI example is of a `delete-change-set` input on the root change set\.
 

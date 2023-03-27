@@ -2,8 +2,6 @@
 
 Specifies a managed prefix list\. You can add one or more entries to the prefix list\. Each entry consists of a CIDR block and an optional description\.
 
-You must specify the maximum number of entries for the prefix list\. The maximum number of entries cannot be changed later\.
-
 ## Syntax<a name="aws-resource-ec2-prefixlist-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -57,7 +55,7 @@ One or more entries for the prefix list\.
 The maximum number of entries for the prefix list\.  
 *Required*: Yes  
 *Type*: Integer  
-*Update requires*: Updates are not supported\.
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PrefixListName`  <a name="cfn-ec2-prefixlist-prefixlistname"></a>
 A name for the prefix list\.  

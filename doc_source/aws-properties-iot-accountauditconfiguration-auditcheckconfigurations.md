@@ -17,7 +17,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DeviceCertificateExpiringCheck](#cfn-iot-accountauditconfiguration-auditcheckconfigurations-devicecertificateexpiringcheck)" : AuditCheckConfiguration,
   "[DeviceCertificateKeyQualityCheck](#cfn-iot-accountauditconfiguration-auditcheckconfigurations-devicecertificatekeyqualitycheck)" : AuditCheckConfiguration,
   "[DeviceCertificateSharedCheck](#cfn-iot-accountauditconfiguration-auditcheckconfigurations-devicecertificatesharedcheck)" : AuditCheckConfiguration,
+  "[IntermediateCaRevokedForActiveDeviceCertificatesCheck](#cfn-iot-accountauditconfiguration-auditcheckconfigurations-intermediatecarevokedforactivedevicecertificatescheck)" : AuditCheckConfiguration,
   "[IotPolicyOverlyPermissiveCheck](#cfn-iot-accountauditconfiguration-auditcheckconfigurations-iotpolicyoverlypermissivecheck)" : AuditCheckConfiguration,
+  "[IoTPolicyPotentialMisConfigurationCheck](#cfn-iot-accountauditconfiguration-auditcheckconfigurations-iotpolicypotentialmisconfigurationcheck)" : AuditCheckConfiguration,
   "[IotRoleAliasAllowsAccessToUnusedServicesCheck](#cfn-iot-accountauditconfiguration-auditcheckconfigurations-iotrolealiasallowsaccesstounusedservicescheck)" : AuditCheckConfiguration,
   "[IotRoleAliasOverlyPermissiveCheck](#cfn-iot-accountauditconfiguration-auditcheckconfigurations-iotrolealiasoverlypermissivecheck)" : AuditCheckConfiguration,
   "[LoggingDisabledCheck](#cfn-iot-accountauditconfiguration-auditcheckconfigurations-loggingdisabledcheck)" : AuditCheckConfiguration,
@@ -44,7 +46,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     AuditCheckConfiguration
   [DeviceCertificateSharedCheck](#cfn-iot-accountauditconfiguration-auditcheckconfigurations-devicecertificatesharedcheck): 
     AuditCheckConfiguration
+  [IntermediateCaRevokedForActiveDeviceCertificatesCheck](#cfn-iot-accountauditconfiguration-auditcheckconfigurations-intermediatecarevokedforactivedevicecertificatescheck): 
+    AuditCheckConfiguration
   [IotPolicyOverlyPermissiveCheck](#cfn-iot-accountauditconfiguration-auditcheckconfigurations-iotpolicyoverlypermissivecheck): 
+    AuditCheckConfiguration
+  [IoTPolicyPotentialMisConfigurationCheck](#cfn-iot-accountauditconfiguration-auditcheckconfigurations-iotpolicypotentialmisconfigurationcheck): 
     AuditCheckConfiguration
   [IotRoleAliasAllowsAccessToUnusedServicesCheck](#cfn-iot-accountauditconfiguration-auditcheckconfigurations-iotrolealiasallowsaccesstounusedservicescheck): 
     AuditCheckConfiguration
@@ -104,8 +110,20 @@ Checks if multiple concurrent connections use the same X\.509 certificate to aut
 *Type*: [AuditCheckConfiguration](aws-properties-iot-accountauditconfiguration-auditcheckconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`IntermediateCaRevokedForActiveDeviceCertificatesCheck`  <a name="cfn-iot-accountauditconfiguration-auditcheckconfigurations-intermediatecarevokedforactivedevicecertificatescheck"></a>
+  
+*Required*: No  
+*Type*: [AuditCheckConfiguration](aws-properties-iot-accountauditconfiguration-auditcheckconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `IotPolicyOverlyPermissiveCheck`  <a name="cfn-iot-accountauditconfiguration-auditcheckconfigurations-iotpolicyoverlypermissivecheck"></a>
 Checks the permissiveness of a policy attached to an authenticated Amazon Cognito identity pool role\.  
+*Required*: No  
+*Type*: [AuditCheckConfiguration](aws-properties-iot-accountauditconfiguration-auditcheckconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`IoTPolicyPotentialMisConfigurationCheck`  <a name="cfn-iot-accountauditconfiguration-auditcheckconfigurations-iotpolicypotentialmisconfigurationcheck"></a>
+  
 *Required*: No  
 *Type*: [AuditCheckConfiguration](aws-properties-iot-accountauditconfiguration-auditcheckconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

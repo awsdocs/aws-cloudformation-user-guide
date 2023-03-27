@@ -13,7 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::EC2::TransitGatewayVpcAttachment",
   "Properties" : {
       "[AddSubnetIds](#cfn-ec2-transitgatewayvpcattachment-addsubnetids)" : [ String, ... ],
-      "[Options](#cfn-ec2-transitgatewayvpcattachment-options)" : Json,
+      "[Options](#cfn-ec2-transitgatewayvpcattachment-options)" : Options,
       "[RemoveSubnetIds](#cfn-ec2-transitgatewayvpcattachment-removesubnetids)" : [ String, ... ],
       "[SubnetIds](#cfn-ec2-transitgatewayvpcattachment-subnetids)" : [ String, ... ],
       "[Tags](#cfn-ec2-transitgatewayvpcattachment-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -30,7 +30,8 @@ Type: AWS::EC2::TransitGatewayVpcAttachment
 Properties: 
   [AddSubnetIds](#cfn-ec2-transitgatewayvpcattachment-addsubnetids): 
     - String
-  [Options](#cfn-ec2-transitgatewayvpcattachment-options): Json
+  [Options](#cfn-ec2-transitgatewayvpcattachment-options): 
+    Options
   [RemoveSubnetIds](#cfn-ec2-transitgatewayvpcattachment-removesubnetids): 
     - String
   [SubnetIds](#cfn-ec2-transitgatewayvpcattachment-subnetids): 
@@ -50,12 +51,12 @@ The IDs of one or more subnets to add\. You can specify at most one subnet per A
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Options`  <a name="cfn-ec2-transitgatewayvpcattachment-options"></a>
-The VPC attachment options in JSON or YAML\.  
-+ DnsSupport \(enable \| disable\)
-+ Ipv6Support \(enable\| disable\)
-+ ApplianceModeSupport \(enable \| disable\)
+The VPC attachment options, in JSON or YAML\.  
++ `ApplianceModeSupport` \- Set to `enable` or `disable`\. The default is `disable`\.
++ `DnsSupport` \- Set to `enable` or `disable`\. The default is `enable`\.
++ `Ipv6Support` \- Set to `enable` or `disable`\. The default is `disable`\.
 *Required*: No  
-*Type*: Json  
+*Type*: [Options](aws-properties-ec2-transitgatewayvpcattachment-options.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RemoveSubnetIds`  <a name="cfn-ec2-transitgatewayvpcattachment-removesubnetids"></a>
@@ -66,7 +67,7 @@ The IDs of one or more subnets to remove\.
 
 `SubnetIds`  <a name="cfn-ec2-transitgatewayvpcattachment-subnetids"></a>
 The IDs of the subnets\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -78,13 +79,13 @@ The tags for the VPC attachment\.
 
 `TransitGatewayId`  <a name="cfn-ec2-transitgatewayvpcattachment-transitgatewayid"></a>
 The ID of the transit gateway\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcId`  <a name="cfn-ec2-transitgatewayvpcattachment-vpcid"></a>
 The ID of the VPC\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

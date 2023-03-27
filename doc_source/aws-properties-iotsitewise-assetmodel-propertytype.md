@@ -1,6 +1,6 @@
 # AWS::IoTSiteWise::AssetModel PropertyType<a name="aws-properties-iotsitewise-assetmodel-propertytype"></a>
 
-Contains a property type, which can be one of `attribute`, `measurement`, `metric`, or `transform`\.
+Contains a property type, which can be one of `Attribute`, `Measurement`, `Metric`, or `Transform`\.
 
 ## Syntax<a name="aws-properties-iotsitewise-assetmodel-propertytype-syntax"></a>
 

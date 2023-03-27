@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::SageMaker::ModelBiasJobDefinition",
   "Properties" : {
+      "[EndpointName](#cfn-sagemaker-modelbiasjobdefinition-endpointname)" : String,
       "[JobDefinitionName](#cfn-sagemaker-modelbiasjobdefinition-jobdefinitionname)" : String,
       "[JobResources](#cfn-sagemaker-modelbiasjobdefinition-jobresources)" : MonitoringResources,
       "[ModelBiasAppSpecification](#cfn-sagemaker-modelbiasjobdefinition-modelbiasappspecification)" : ModelBiasAppSpecification,
@@ -31,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::SageMaker::ModelBiasJobDefinition
 Properties: 
+  [EndpointName](#cfn-sagemaker-modelbiasjobdefinition-endpointname): String
   [JobDefinitionName](#cfn-sagemaker-modelbiasjobdefinition-jobdefinitionname): String
   [JobResources](#cfn-sagemaker-modelbiasjobdefinition-jobresources): 
     MonitoringResources
@@ -52,6 +54,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-sagemaker-modelbiasjobdefinition-properties"></a>
+
+`EndpointName`  <a name="cfn-sagemaker-modelbiasjobdefinition-endpointname"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JobDefinitionName`  <a name="cfn-sagemaker-modelbiasjobdefinition-jobdefinitionname"></a>
 The name of the bias job definition\. The name must be unique within an AWS Region in the AWS account\.  

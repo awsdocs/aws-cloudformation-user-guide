@@ -1,6 +1,6 @@
 # AWS::CloudFront::CachePolicy CookiesConfig<a name="aws-properties-cloudfront-cachepolicy-cookiesconfig"></a>
 
-An object that determines whether any cookies in viewer requests \(and if so, which cookies\) are included in the cache key and automatically included in requests that CloudFront sends to the origin\.
+An object that determines whether any cookies in viewer requests \(and if so, which cookies\) are included in the cache key and in requests that CloudFront sends to the origin\.
 
 ## Syntax<a name="aws-properties-cloudfront-cachepolicy-cookiesconfig-syntax"></a>
 
@@ -26,11 +26,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-cloudfront-cachepolicy-cookiesconfig-properties"></a>
 
 `CookieBehavior`  <a name="cfn-cloudfront-cachepolicy-cookiesconfig-cookiebehavior"></a>
-Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin\. Valid values are:  
-+  `none` – Cookies in viewer requests are not included in the cache key and are not automatically included in requests that CloudFront sends to the origin\. Even when this field is set to `none`, any cookies that are listed in an `OriginRequestPolicy` *are* included in origin requests\.
-+  `whitelist` – The cookies in viewer requests that are listed in the `CookieNames` type are included in the cache key and automatically included in requests that CloudFront sends to the origin\.
-+  `allExcept` – All cookies in viewer requests that are * **not** * listed in the `CookieNames` type are included in the cache key and automatically included in requests that CloudFront sends to the origin\.
-+  `all` – All cookies in viewer requests are included in the cache key and are automatically included in requests that CloudFront sends to the origin\.
+Determines whether any cookies in viewer requests are included in the cache key and in requests that CloudFront sends to the origin\. Valid values are:  
++  `none` – No cookies in viewer requests are included in the cache key or in requests that CloudFront sends to the origin\. Even when this field is set to `none`, any cookies that are listed in an `OriginRequestPolicy` *are* included in origin requests\.
++  `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames` type are included in the cache key and in requests that CloudFront sends to the origin\.
++  `allExcept` – All cookies in viewer requests are included in the cache key and in requests that CloudFront sends to the origin, * **except** * for those that are listed in the `CookieNames` type, which are not included\.
++  `all` – All cookies in viewer requests are included in the cache key and in requests that CloudFront sends to the origin\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `all | allExcept | none | whitelist`  

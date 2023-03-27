@@ -1,6 +1,6 @@
 # AWS::Lex::Bot CustomPayload<a name="aws-properties-lex-bot-custompayload"></a>
 
-A custom response string that Amazon Lex sends to your application\. You define the content and structure of the string\.
+A custom response string that Amazon Lex sends to your application\. You define the content and structure the string\.
 
 ## Syntax<a name="aws-properties-lex-bot-custompayload-syntax"></a>
 

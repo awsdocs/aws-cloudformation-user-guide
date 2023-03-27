@@ -1,8 +1,8 @@
 # AWS::EC2::RouteTable<a name="aws-resource-ec2-routetable"></a>
 
-Specifies a route table for a specified VPC\. After you create a route table, you can add routes and associate the table with a subnet\.
+Specifies a route table for the specified VPC\. After you create a route table, you can add routes and associate the table with a subnet\.
 
-For more information, see [Route Tables](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html) in the *Amazon Virtual Private Cloud User Guide*\.
+For more information, see [Route Tables](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html) in the *Amazon VPC User Guide*\.
 
 ## Syntax<a name="aws-resource-ec2-routetable-syntax"></a>
 

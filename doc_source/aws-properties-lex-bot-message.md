@@ -1,6 +1,6 @@
 # AWS::Lex::Bot Message<a name="aws-properties-lex-bot-message"></a>
 
-The object that provides message text and it's type\.
+The object that provides message text and its type\.
 
 ## Syntax<a name="aws-properties-lex-bot-message-syntax"></a>
 
@@ -51,7 +51,7 @@ A message in plain text format\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SSMLMessage`  <a name="cfn-lex-bot-message-ssmlmessage"></a>
-A message in Speech Synthesis Markup Language \(SSML\) format\.  
+A message in Speech Synthesis Markup Language \(SSML\)\.  
 *Required*: No  
 *Type*: [SSMLMessage](aws-properties-lex-bot-ssmlmessage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

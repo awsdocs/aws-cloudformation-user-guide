@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[GuestRoleArn](#cfn-rum-appmonitor-appmonitorconfiguration-guestrolearn)" : String,
   "[IdentityPoolId](#cfn-rum-appmonitor-appmonitorconfiguration-identitypoolid)" : String,
   "[IncludedPages](#cfn-rum-appmonitor-appmonitorconfiguration-includedpages)" : [ String, ... ],
+  "[MetricDestinations](#cfn-rum-appmonitor-appmonitorconfiguration-metricdestinations)" : [ MetricDestination, ... ],
   "[SessionSampleRate](#cfn-rum-appmonitor-appmonitorconfiguration-sessionsamplerate)" : Double,
   "[Telemetries](#cfn-rum-appmonitor-appmonitorconfiguration-telemetries)" : [ String, ... ]
 }
@@ -35,6 +36,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [IdentityPoolId](#cfn-rum-appmonitor-appmonitorconfiguration-identitypoolid): String
   [IncludedPages](#cfn-rum-appmonitor-appmonitorconfiguration-includedpages): 
     - String
+  [MetricDestinations](#cfn-rum-appmonitor-appmonitorconfiguration-metricdestinations): 
+    - MetricDestination
   [SessionSampleRate](#cfn-rum-appmonitor-appmonitorconfiguration-sessionsamplerate): Double
   [Telemetries](#cfn-rum-appmonitor-appmonitorconfiguration-telemetries): 
     - String
@@ -84,6 +87,12 @@ If this app monitor is to collect data from only certain pages in your applicati
 You can't include both `ExcludedPages` and `IncludedPages` in the same app monitor\.  
 *Required*: No  
 *Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MetricDestinations`  <a name="cfn-rum-appmonitor-appmonitorconfiguration-metricdestinations"></a>
+An array of structures that each define a destination that this app monitor will send extended metrics to\.  
+*Required*: No  
+*Type*: List of [MetricDestination](aws-properties-rum-appmonitor-metricdestination.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SessionSampleRate`  <a name="cfn-rum-appmonitor-appmonitorconfiguration-sessionsamplerate"></a>

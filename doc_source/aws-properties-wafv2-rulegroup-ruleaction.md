@@ -10,20 +10,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[Allow](#cfn-wafv2-rulegroup-ruleaction-allow)" : Json,
-  "[Block](#cfn-wafv2-rulegroup-ruleaction-block)" : Json,
-  "[Captcha](#cfn-wafv2-rulegroup-ruleaction-captcha)" : Json,
-  "[Count](#cfn-wafv2-rulegroup-ruleaction-count)" : Json
+  "[Allow](#cfn-wafv2-rulegroup-ruleaction-allow)" : AllowAction,
+  "[Block](#cfn-wafv2-rulegroup-ruleaction-block)" : BlockAction,
+  "[Captcha](#cfn-wafv2-rulegroup-ruleaction-captcha)" : CaptchaAction,
+  "[Challenge](#cfn-wafv2-rulegroup-ruleaction-challenge)" : ChallengeAction,
+  "[Count](#cfn-wafv2-rulegroup-ruleaction-count)" : CountAction
 }
 ```
 
 ### YAML<a name="aws-properties-wafv2-rulegroup-ruleaction-syntax.yaml"></a>
 
 ```
-  [Allow](#cfn-wafv2-rulegroup-ruleaction-allow): Json
-  [Block](#cfn-wafv2-rulegroup-ruleaction-block): Json
-  [Captcha](#cfn-wafv2-rulegroup-ruleaction-captcha): Json
-  [Count](#cfn-wafv2-rulegroup-ruleaction-count): Json
+  [Allow](#cfn-wafv2-rulegroup-ruleaction-allow): 
+    AllowAction
+  [Block](#cfn-wafv2-rulegroup-ruleaction-block): 
+    BlockAction
+  [Captcha](#cfn-wafv2-rulegroup-ruleaction-captcha): 
+    CaptchaAction
+  [Challenge](#cfn-wafv2-rulegroup-ruleaction-challenge): 
+    ChallengeAction
+  [Count](#cfn-wafv2-rulegroup-ruleaction-count): 
+    CountAction
 ```
 
 ## Properties<a name="aws-properties-wafv2-rulegroup-ruleaction-properties"></a>
@@ -31,13 +38,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Allow`  <a name="cfn-wafv2-rulegroup-ruleaction-allow"></a>
 Instructs AWS WAF to allow the web request\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [AllowAction](aws-properties-wafv2-rulegroup-allowaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Block`  <a name="cfn-wafv2-rulegroup-ruleaction-block"></a>
 Instructs AWS WAF to block the web request\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [BlockAction](aws-properties-wafv2-rulegroup-blockaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Captcha`  <a name="cfn-wafv2-rulegroup-ruleaction-captcha"></a>
@@ -51,15 +58,20 @@ Specifies that AWS WAF should run a `CAPTCHA` check against the request:
   + If the request contains an `Accept` header with a value of `text/html`, the response includes a `CAPTCHA` challenge\. 
 You can configure the expiration time in the `CaptchaConfig` `ImmunityTimeProperty` setting at the rule and web ACL level\. The rule setting overrides the web ACL setting\.   
 This action option is available for rules\. It isn't available for web ACL default actions\.   
-This is used in the context of other settings, for example to specify values for `RuleAction` and web ACL `DefaultAction`\.   
 *Required*: No  
-*Type*: Json  
+*Type*: [CaptchaAction](aws-properties-wafv2-rulegroup-captchaaction.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Challenge`  <a name="cfn-wafv2-rulegroup-ruleaction-challenge"></a>
+Instructs AWS WAF to run a `Challenge` check against the web request\.  
+*Required*: No  
+*Type*: [ChallengeAction](aws-properties-wafv2-rulegroup-challengeaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Count`  <a name="cfn-wafv2-rulegroup-ruleaction-count"></a>
-Instructs AWS WAF to count the web request and allow it\.  
+Instructs AWS WAF to count the web request and then continue evaluating the request using the remaining rules in the web ACL\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [CountAction](aws-properties-wafv2-rulegroup-countaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-wafv2-rulegroup-ruleaction--examples"></a>

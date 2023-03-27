@@ -31,11 +31,11 @@ The type of this dependency\. Choose from the following options:
 Default: `HARD`  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VersionRequirement`  <a name="cfn-greengrassv2-componentversion-componentdependencyrequirement-versionrequirement"></a>
 The component version requirement for the component dependency\.  
 AWS IoT Greengrass uses semantic version constraints\. For more information, see [Semantic Versioning](https://semver.org/)\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

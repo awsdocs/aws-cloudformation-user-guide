@@ -38,31 +38,31 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-deployment-properties"></a>
 
 `DeploymentCanarySettings`  <a name="cfn-apigateway-deployment-deploymentcanarysettings"></a>
-Specifies settings for the canary deployment\.  
+The input configuration for a canary deployment\.  
 *Required*: No  
 *Type*: [DeploymentCanarySettings](aws-properties-apigateway-deployment-deploymentcanarysettings.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-apigateway-deployment-description"></a>
-A description of the purpose of the API Gateway deployment\.  
+The description for the Deployment resource to create\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RestApiId`  <a name="cfn-apigateway-deployment-restapiid"></a>
-The ID of the `RestApi` resource to deploy\.  
+The string identifier of the associated RestApi\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StageDescription`  <a name="cfn-apigateway-deployment-stagedescription"></a>
-Configures the stage that API Gateway creates with this deployment\.  
+The description of the Stage resource for the Deployment resource to create\.  
 *Required*: No  
 *Type*: [StageDescription](aws-properties-apigateway-deployment-stagedescription.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StageName`  <a name="cfn-apigateway-deployment-stagename"></a>
-A name for the stage that API Gateway creates with this deployment\. Use only alphanumeric characters\.  
+The name of the Stage resource for the Deployment resource to create\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -157,5 +157,5 @@ Deployment:
 ```
 
 ## See also<a name="aws-resource-apigateway-deployment--seealso"></a>
-+ [deployment:create](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/deployment-create/) in the *Amazon API Gateway REST API Reference*
++ [deployment:create](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateDeployment.html) in the *Amazon API Gateway REST API Reference*
 

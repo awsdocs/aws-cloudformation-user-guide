@@ -1,8 +1,6 @@
 # AWS::Kendra::DataSource ConfluencePageToIndexFieldMapping<a name="aws-properties-kendra-datasource-confluencepagetoindexfieldmapping"></a>
 
-Defines the mapping between a field in the Confluence data source to a Amazon Kendra index field\.
-
-You must first create the index field using the `UpdateIndex` operation\. 
+Maps attributes or field names of Confluence pages to Amazon Kendra index field names\. To create custom fields, use the `UpdateIndex` API before you map to Confluence fields\. For more information, see [Mapping data source fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html)\. The Confluence data source field names must exist in your Confluence custom metadata\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-confluencepagetoindexfieldmapping-syntax"></a>
 
@@ -29,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-datasource-confluencepagetoindexfieldmapping-properties"></a>
 
 `DataSourceFieldName`  <a name="cfn-kendra-datasource-confluencepagetoindexfieldmapping-datasourcefieldname"></a>
-The name of the field in the data source\.   
+The name of the field in the data source\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `AUTHOR | CONTENT_STATUS | CREATED_DATE | DISPLAY_URL | ITEM_TYPE | LABELS | MODIFIED_DATE | PARENT_ID | SPACE_KEY | SPACE_NAME | URL | VERSION`  

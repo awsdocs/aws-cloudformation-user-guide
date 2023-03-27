@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource SalesforceChatterFeedConfiguration<a name="aws-properties-kendra-datasource-salesforcechatterfeedconfiguration"></a>
 
-Defines configuration for syncing a Salesforce chatter feed\. The contents of the object comes from the Salesforce FeedItem table\.
+The configuration information for syncing a Salesforce chatter feed\. The contents of the object comes from the Salesforce FeedItem table\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-salesforcechatterfeedconfiguration-syntax"></a>
 

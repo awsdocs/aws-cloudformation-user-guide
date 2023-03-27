@@ -32,7 +32,7 @@ Specifies the Lambda function that should be used in the locale\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-lex-botalias-botaliaslocalesettings-enabled"></a>
-Determines whether the locale is enabled for the bot\. If the value is false, the locale isn't available for use\.  
+Determines whether the locale is enabled for the bot\. If the value is `false`, the locale isn't available for use\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

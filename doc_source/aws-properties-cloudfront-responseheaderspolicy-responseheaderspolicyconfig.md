@@ -2,7 +2,7 @@
 
 A response headers policy configuration\.
 
-A response headers policy configuration contains metadata about the response headers policy, and configurations for sets of HTTP response headers and their values\. CloudFront adds the headers in the policy to HTTP responses that it sends for requests that match a cache behavior associated with the policy\.
+A response headers policy configuration contains metadata about the response headers policy, and configurations for sets of HTTP response headers\.
 
 ## Syntax<a name="aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-syntax"></a>
 
@@ -16,7 +16,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[CorsConfig](#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-corsconfig)" : CorsConfig,
   "[CustomHeadersConfig](#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-customheadersconfig)" : CustomHeadersConfig,
   "[Name](#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-name)" : String,
-  "[SecurityHeadersConfig](#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-securityheadersconfig)" : SecurityHeadersConfig
+  "[RemoveHeadersConfig](#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-removeheadersconfig)" : RemoveHeadersConfig,
+  "[SecurityHeadersConfig](#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-securityheadersconfig)" : SecurityHeadersConfig,
+  "[ServerTimingHeadersConfig](#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-servertimingheadersconfig)" : ServerTimingHeadersConfig
 }
 ```
 
@@ -29,8 +31,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CustomHeadersConfig](#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-customheadersconfig): 
     CustomHeadersConfig
   [Name](#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-name): String
+  [RemoveHeadersConfig](#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-removeheadersconfig): 
+    RemoveHeadersConfig
   [SecurityHeadersConfig](#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-securityheadersconfig): 
     SecurityHeadersConfig
+  [ServerTimingHeadersConfig](#cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-servertimingheadersconfig): 
+    ServerTimingHeadersConfig
 ```
 
 ## Properties<a name="aws-properties-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-properties"></a>
@@ -61,8 +67,20 @@ The name must be unique for response headers policies in this AWS account\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`RemoveHeadersConfig`  <a name="cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-removeheadersconfig"></a>
+A configuration for a set of HTTP headers to remove from the HTTP response\.  
+*Required*: No  
+*Type*: [RemoveHeadersConfig](aws-properties-cloudfront-responseheaderspolicy-removeheadersconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SecurityHeadersConfig`  <a name="cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-securityheadersconfig"></a>
 A configuration for a set of security\-related HTTP response headers\.  
 *Required*: No  
 *Type*: [SecurityHeadersConfig](aws-properties-cloudfront-responseheaderspolicy-securityheadersconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ServerTimingHeadersConfig`  <a name="cfn-cloudfront-responseheaderspolicy-responseheaderspolicyconfig-servertimingheadersconfig"></a>
+A configuration for enabling the `Server-Timing` header in HTTP responses sent from CloudFront\.  
+*Required*: No  
+*Type*: [ServerTimingHeadersConfig](aws-properties-cloudfront-responseheaderspolicy-servertimingheadersconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

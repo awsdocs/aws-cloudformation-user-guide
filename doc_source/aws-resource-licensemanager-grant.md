@@ -66,7 +66,10 @@ License ARN\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Principals`  <a name="cfn-licensemanager-grant-principals"></a>
-The grant principals\.  
+The grant principals\. You can specify one of the following as an Amazon Resource Name \(ARN\):  
++ An AWS account, which includes only the account specified\.
++ An organizational unit \(OU\), which includes all accounts in the OU\.
++ An organization, which will include all accounts across your organization\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

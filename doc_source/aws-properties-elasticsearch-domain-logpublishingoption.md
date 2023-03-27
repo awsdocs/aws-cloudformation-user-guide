@@ -30,8 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-elasticsearch-domain-logpublishingoption-properties"></a>
 
 `CloudWatchLogsLogGroupArn`  <a name="cfn-elasticsearch-domain-logpublishingoption-cloudwatchlogsloggrouparn"></a>
-Specifies the CloudWatch log group to publish to\.  
-*Required*: No  
+Specifies the CloudWatch log group to publish to\. Required if you enable log publishing for the domain\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

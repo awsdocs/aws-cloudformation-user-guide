@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource GoogleDriveConfiguration<a name="aws-properties-kendra-datasource-googledriveconfiguration"></a>
 
-Provides configuration information for data sources that connect to Google Drive\.
+Provides the configuration information to connect to Google Drive as your data source\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-googledriveconfiguration-syntax"></a>
 
@@ -63,22 +63,21 @@ A list of email addresses of the users\. Documents owned by these users are excl
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExclusionPatterns`  <a name="cfn-kendra-datasource-googledriveconfiguration-exclusionpatterns"></a>
-A list of regular expression patterns that apply to the path on Google Drive\. Items that match the pattern are excluded from the index from both shared drives and users' My Drives\. Items that don't match the pattern are included in the index\. If an item matches both an exclusion pattern and an inclusion pattern, it is excluded from the index\.  
+A list of regular expression patterns to exclude certain items in your Google Drive, including shared drives and users' My Drives\. Items that match the patterns are excluded from the index\. Items that don't match the patterns are included in the index\. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the item isn't included in the index\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FieldMappings`  <a name="cfn-kendra-datasource-googledriveconfiguration-fieldmappings"></a>
-Defines mapping between a field in the Google Drive and a Amazon Kendra index field\.  
-If you are using the console, you can define index fields when creating the mapping\. If you are using the API, you must first create the field using the `UpdateIndex` operation\.  
+Maps Google Drive data source attributes or field names to Amazon Kendra index field names\. To create custom fields, use the `UpdateIndex` API before you map to Google Drive fields\. For more information, see [Mapping data source fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html)\. The Google Drive data source field names must exist in your Google Drive custom metadata\.  
 *Required*: No  
 *Type*: List of [DataSourceToIndexFieldMapping](aws-properties-kendra-datasource-datasourcetoindexfieldmapping.md)  
 *Maximum*: `100`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InclusionPatterns`  <a name="cfn-kendra-datasource-googledriveconfiguration-inclusionpatterns"></a>
-A list of regular expression patterns that apply to path on Google Drive\. Items that match the pattern are included in the index from both shared drives and users' My Drives\. Items that don't match the pattern are excluded from the index\. If an item matches both an inclusion pattern and an exclusion pattern, it is excluded from the index\.  
+A list of regular expression patterns to include certain items in your Google Drive, including shared drives and users' My Drives\. Items that match the patterns are included in the index\. Items that don't match the patterns are excluded from the index\. If an item matches both an inclusion and exclusion pattern, the exclusion pattern takes precedence and the item isn't included in the index\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `100`  

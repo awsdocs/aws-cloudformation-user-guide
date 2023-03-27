@@ -1,6 +1,6 @@
 # AWS::Lex::Bot DialogCodeHookSetting<a name="aws-properties-lex-bot-dialogcodehooksetting"></a>
 
-Specifies whether an intent uses the dialog code hook during conversations with a user\.
+Settings that determine the Lambda function that Amazon Lex uses for processing user responses\.
 
 ## Syntax<a name="aws-properties-lex-bot-dialogcodehooksetting-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-dialogcodehooksetting-properties"></a>
 
 `Enabled`  <a name="cfn-lex-bot-dialogcodehooksetting-enabled"></a>
-Indicates whether an intent uses the dialog code hook during a conversation with a user\.  
+Enables the dialog code hook so that it processes user requests\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

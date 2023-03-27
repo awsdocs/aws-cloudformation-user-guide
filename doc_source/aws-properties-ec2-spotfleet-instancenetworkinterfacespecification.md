@@ -83,7 +83,7 @@ A number of IPv6 addresses to assign to the network interface\. Amazon EC2 choos
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ipv6Addresses`  <a name="cfn-ec2-spotfleet-instancenetworkinterfacespecification-ipv6addresses"></a>
-One or more IPv6 addresses to assign to the network interface\. You cannot specify this option and the option to assign a number of IPv6 addresses in the same request\. You cannot specify this option if you've specified a minimum number of instances to launch\.  
+The IPv6 addresses to assign to the network interface\. You cannot specify this option and the option to assign a number of IPv6 addresses in the same request\. You cannot specify this option if you've specified a minimum number of instances to launch\.  
 *Required*: No  
 *Type*: List of [InstanceIpv6Address](aws-properties-ec2-spotfleet-instanceipv6address.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -96,7 +96,7 @@ If you are creating a Spot Fleet, omit this parameter because you can’t specif
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PrivateIpAddresses`  <a name="cfn-ec2-spotfleet-instancenetworkinterfacespecification-privateipaddresses"></a>
-One or more private IPv4 addresses to assign to the network interface\. Only one private IPv4 address can be designated as primary\. You cannot specify this option if you're launching more than one instance in a [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) request\.  
+The private IPv4 addresses to assign to the network interface\. Only one private IPv4 address can be designated as primary\. You cannot specify this option if you're launching more than one instance in a [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) request\.  
 *Required*: No  
 *Type*: List of [PrivateIpAddressSpecification](aws-properties-ec2-spotfleet-privateipaddressspecification.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

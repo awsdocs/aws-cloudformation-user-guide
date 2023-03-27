@@ -38,7 +38,8 @@ A list of AWS Lake Formation principals\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrustedResourceOwners`  <a name="cfn-lakeformation-datalakesettings-trustedresourceowners"></a>
-Not currently supported by AWS CloudFormation\.  
+ An array of UTF\-8 strings\.  
+A list of the resource\-owning account IDs that the caller's account can use to share their user access details \(user ARNs\)\. The user ARNs can be logged in the resource owner's CloudTrail log\. You may want to specify this property when you are in a high\-trust boundary, such as the same team or company\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

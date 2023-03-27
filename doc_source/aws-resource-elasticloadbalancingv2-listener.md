@@ -1,6 +1,6 @@
 # AWS::ElasticLoadBalancingV2::Listener<a name="aws-resource-elasticloadbalancingv2-listener"></a>
 
-Specifies a listener for an Application Load Balancer or Network Load Balancer\.
+Specifies a listener for an Application Load Balancer, Network Load Balancer, or Gateway Load Balancer\.
 
 ## Syntax<a name="aws-resource-elasticloadbalancingv2-listener-syntax"></a>
 
@@ -145,26 +145,27 @@ HTTPlistener:
             {
                 "Type": "redirect",
                 "RedirectConfig": {
-                       "Protocol": "HTTPS",
-                       "Port": 443,
-                       "Host": "#{host}",
-                       "Path": "/#{path}",
-                       "Query": "#{query}",
-                       "StatusCode": "HTTP_301"
-                   }
-               }
-           ],
-           "LoadBalancerArn": {
-               "Ref": "myLoadBalancer"
-           },
-           "Port": 80,
-           "Protocol": "HTTP"
-       }
-   }
+                    "Protocol": "HTTPS",
+                    "Port": 443,
+                    "Host": "#{host}",
+                    "Path": "/#{path}",
+                    "Query": "#{query}",
+                    "StatusCode": "HTTP_301"
+                }
+            }
+        ],
+        "LoadBalancerArn": {
+            "Ref": "myLoadBalancer"
+        },
+        "Port": 80,
+        "Protocol": "HTTP"
+    }
+}
 ```
 
 ## See also<a name="aws-resource-elasticloadbalancingv2-listener--seealso"></a>
 +  [CreateListener](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html) in the *Elastic Load Balancing API Reference \(version 2015\-12\-01\)* 
 +  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-listeners.html) in the *User Guide for Application Load Balancers* 
 +  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-listeners.html) in the *User Guide for Network Load Balancers* 
++  [Listeners](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/gateway-listeners.html) in the *User Guide for Gateway Load Balancers* 
 

@@ -1,5 +1,8 @@
 # AWS::Lex::BotVersion<a name="aws-resource-lex-botversion"></a>
 
+**Note**  
+Amazon Lex V2 is the only supported version in AWS CloudFormation\.
+
 Specifies a new version of the bot based on the `DRAFT` version\. If the `DRAFT` version of this resource hasn't changed since you created the last version, Amazon Lex doesn't create a new version, it returns the last created version\.
 
 When you specify the first version of a bot, Amazon Lex sets the version to 1\. Subsequent versions increment by 1\.
@@ -15,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Lex::BotVersion",
   "Properties" : {
       "[BotId](#cfn-lex-botversion-botid)" : String,
-      "[BotVersionLocaleSpecification](#cfn-lex-botversion-botversionlocalespecification)" : [ BotVersionLocaleSpecificationItem, ... ],
+      "[BotVersionLocaleSpecification](#cfn-lex-botversion-botversionlocalespecification)" : [ BotVersionLocaleSpecification, ... ],
       "[Description](#cfn-lex-botversion-description)" : String
     }
 }
@@ -28,7 +31,7 @@ Type: AWS::Lex::BotVersion
 Properties: 
   [BotId](#cfn-lex-botversion-botid): String
   [BotVersionLocaleSpecification](#cfn-lex-botversion-botversionlocalespecification): 
-    - BotVersionLocaleSpecificationItem
+    - BotVersionLocaleSpecification
   [Description](#cfn-lex-botversion-description): String
 ```
 
@@ -38,12 +41,12 @@ Properties:
 The unique identifier of the bot\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `BotVersionLocaleSpecification`  <a name="cfn-lex-botversion-botversionlocalespecification"></a>
 Specifies the locales that Amazon Lex adds to this version\. You can choose the Draft version or any other previously published version for each locale\. When you specify a source version, the locale data is copied from the source version to the new version\.  
 *Required*: Yes  
-*Type*: [List](aws-properties-lex-botversion-botversionlocalespecification.md) of [BotVersionLocaleSpecificationItem](aws-properties-lex-botversion-botversionlocalespecificationitem.md)  
+*Type*: [List](aws-properties-lex-botversion-botversionlocalespecification.md) of [BotVersionLocaleSpecification](aws-properties-lex-botversion-botversionlocalespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-lex-botversion-description"></a>

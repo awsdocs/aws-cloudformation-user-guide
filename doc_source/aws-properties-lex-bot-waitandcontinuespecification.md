@@ -1,6 +1,6 @@
 # AWS::Lex::Bot WaitAndContinueSpecification<a name="aws-properties-lex-bot-waitandcontinuespecification"></a>
 
-Specifies the prompts that Amazon Lex uses while a bot is waiting for customer input\.
+Specifies the prompts that Amazon Lex uses while a bot is waiting for customer input\. 
 
 ## Syntax<a name="aws-properties-lex-bot-waitandcontinuespecification-syntax"></a>
 
@@ -38,7 +38,7 @@ The response that Amazon Lex sends to indicate that the bot is ready to continue
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsActive`  <a name="cfn-lex-bot-waitandcontinuespecification-isactive"></a>
-Specifies whether the bot will wait for a user to respond\. When this field is false, wait and continue responses for a slot aren't used and the bot expects an appropriate response within the configured timeout\. If the IsActive field isn't specified, the default is true\.  
+Specifies whether the bot will wait for a user to respond\. When this field is false, wait and continue responses for a slot aren't used\. If the `IsActive` field isn't specified, the default is true\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

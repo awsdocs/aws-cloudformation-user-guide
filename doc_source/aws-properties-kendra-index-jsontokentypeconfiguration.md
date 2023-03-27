@@ -1,6 +1,6 @@
 # AWS::Kendra::Index JsonTokenTypeConfiguration<a name="aws-properties-kendra-index-jsontokentypeconfiguration"></a>
 
-Configuration information for the JSON token type\.
+Provides the configuration information for the JSON token type\.
 
 ## Syntax<a name="aws-properties-kendra-index-jsontokentypeconfiguration-syntax"></a>
 

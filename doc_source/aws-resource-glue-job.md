@@ -17,12 +17,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Connections](#cfn-glue-job-connections)" : ConnectionsList,
       "[DefaultArguments](#cfn-glue-job-defaultarguments)" : Json,
       "[Description](#cfn-glue-job-description)" : String,
+      "[ExecutionClass](#cfn-glue-job-executionclass)" : String,
       "[ExecutionProperty](#cfn-glue-job-executionproperty)" : ExecutionProperty,
       "[GlueVersion](#cfn-glue-job-glueversion)" : String,
       "[LogUri](#cfn-glue-job-loguri)" : String,
       "[MaxCapacity](#cfn-glue-job-maxcapacity)" : Double,
       "[MaxRetries](#cfn-glue-job-maxretries)" : Double,
       "[Name](#cfn-glue-job-name)" : String,
+      "[NonOverridableArguments](#cfn-glue-job-nonoverridablearguments)" : Json,
       "[NotificationProperty](#cfn-glue-job-notificationproperty)" : NotificationProperty,
       "[NumberOfWorkers](#cfn-glue-job-numberofworkers)" : Integer,
       "[Role](#cfn-glue-job-role)" : String,
@@ -46,6 +48,7 @@ Properties:
     ConnectionsList
   [DefaultArguments](#cfn-glue-job-defaultarguments): Json
   [Description](#cfn-glue-job-description): String
+  [ExecutionClass](#cfn-glue-job-executionclass): String
   [ExecutionProperty](#cfn-glue-job-executionproperty): 
     ExecutionProperty
   [GlueVersion](#cfn-glue-job-glueversion): String
@@ -53,6 +56,7 @@ Properties:
   [MaxCapacity](#cfn-glue-job-maxcapacity): Double
   [MaxRetries](#cfn-glue-job-maxretries): Double
   [Name](#cfn-glue-job-name): String
+  [NonOverridableArguments](#cfn-glue-job-nonoverridablearguments): Json
   [NotificationProperty](#cfn-glue-job-notificationproperty): 
     NotificationProperty
   [NumberOfWorkers](#cfn-glue-job-numberofworkers): Integer
@@ -66,6 +70,7 @@ Properties:
 ## Properties<a name="aws-resource-glue-job-properties"></a>
 
 `AllocatedCapacity`  <a name="cfn-glue-job-allocatedcapacity"></a>
+This parameter is no longer supported\. Use `MaxCapacity` instead\.  
 The number of capacity units that are allocated to this job\.  
 *Required*: No  
 *Type*: Double  
@@ -94,6 +99,14 @@ For information about the key\-value pairs that AWS Glue consumes to set up your
 
 `Description`  <a name="cfn-glue-job-description"></a>
 A description of the job\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ExecutionClass`  <a name="cfn-glue-job-executionclass"></a>
+Indicates whether the job is run with a standard or flexible execution class\. The standard execution class is ideal for time\-sensitive workloads that require fast job startup and dedicated resources\.  
+The flexible execution class is appropriate for time\-insensitive jobs whose start and completion times may vary\.  
+Only jobs with AWS Glue version 3\.0 and above and command type `glueetl` will be allowed to set `ExecutionClass` to `FLEX`\. The flexible execution class is available for Spark jobs\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -139,6 +152,12 @@ The name you assign to this job definition\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`NonOverridableArguments`  <a name="cfn-glue-job-nonoverridablearguments"></a>
+Non\-overridable arguments for this job, specified as name\-value pairs\.  
+*Required*: No  
+*Type*: Json  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotificationProperty`  <a name="cfn-glue-job-notificationproperty"></a>
 Specifies configuration properties of a notification\.  
@@ -200,7 +219,7 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 ### <a name="aws-resource-glue-job--examples--"></a>
 
-The following example creates a job with an associated role\. 
+The following example creates a job with an associated role\. The ScriptLocation is an Amazon S3 location\. The example provided below is a placeholder for your Amazon S3 location\.
 
 #### JSON<a name="aws-resource-glue-job--examples----json"></a>
 
@@ -250,7 +269,7 @@ The following example creates a job with an associated role\.
       "Properties": {
         "Command": {
           "Name": "glueetl",
-          "ScriptLocation": "s3://aws-glue-scripts//prod-job1"
+          "ScriptLocation": "s3://<your-S3-script-uri>"
         },
         "DefaultArguments": {
           "--job-bookmark-option": "job-bookmark-enable"
@@ -305,7 +324,7 @@ Resources:
     Properties:
       Command:
         Name: glueetl
-        ScriptLocation: "s3://aws-glue-scripts//prod-job1"
+        ScriptLocation: "s3://<your-S3-script-uri>"
       DefaultArguments:
         "--job-bookmark-option": "job-bookmark-enable"
       ExecutionProperty:

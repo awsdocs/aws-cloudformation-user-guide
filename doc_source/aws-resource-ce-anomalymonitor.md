@@ -15,7 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MonitorDimension](#cfn-ce-anomalymonitor-monitordimension)" : String,
       "[MonitorName](#cfn-ce-anomalymonitor-monitorname)" : String,
       "[MonitorSpecification](#cfn-ce-anomalymonitor-monitorspecification)" : String,
-      "[MonitorType](#cfn-ce-anomalymonitor-monitortype)" : String
+      "[MonitorType](#cfn-ce-anomalymonitor-monitortype)" : String,
+      "[ResourceTags](#cfn-ce-anomalymonitor-resourcetags)" : [ ResourceTag, ... ]
     }
 }
 ```
@@ -29,6 +30,8 @@ Properties:
   [MonitorName](#cfn-ce-anomalymonitor-monitorname): String
   [MonitorSpecification](#cfn-ce-anomalymonitor-monitorspecification): String
   [MonitorType](#cfn-ce-anomalymonitor-monitortype): String
+  [ResourceTags](#cfn-ce-anomalymonitor-resourcetags): 
+    - ResourceTag
 ```
 
 ## Properties<a name="aws-resource-ce-anomalymonitor-properties"></a>
@@ -60,6 +63,12 @@ The possible type values\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `CUSTOM | DIMENSIONAL`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ResourceTags`  <a name="cfn-ce-anomalymonitor-resourcetags"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [ResourceTag](aws-properties-ce-anomalymonitor-resourcetag.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-ce-anomalymonitor-return-values"></a>

@@ -1,8 +1,11 @@
 # AWS::Lex::Bot<a name="aws-resource-lex-bot"></a>
 
+**Note**  
+Amazon Lex V2 is the only supported version in AWS CloudFormation\.
+
 Specifies an Amazon Lex conversational bot\. 
 
-You must configure an intent based on the AMAZON\.FallbackIntent built\-in intent\. If you don't add one, creating the bot will fail\.
+You must configure an intent based on the `AMAZON.FallbackIntent` built\-in intent\. If you don't add one, creating the bot will fail\.
 
 ## Syntax<a name="aws-resource-lex-bot-syntax"></a>
 
@@ -18,11 +21,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BotFileS3Location](#cfn-lex-bot-botfiles3location)" : S3Location,
       "[BotLocales](#cfn-lex-bot-botlocales)" : [ BotLocale, ... ],
       "[BotTags](#cfn-lex-bot-bottags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[DataPrivacy](#cfn-lex-bot-dataprivacy)" : Json,
+      "[DataPrivacy](#cfn-lex-bot-dataprivacy)" : DataPrivacy,
       "[Description](#cfn-lex-bot-description)" : String,
       "[IdleSessionTTLInSeconds](#cfn-lex-bot-idlesessionttlinseconds)" : Integer,
       "[Name](#cfn-lex-bot-name)" : String,
       "[RoleArn](#cfn-lex-bot-rolearn)" : String,
+      "[TestBotAliasSettings](#cfn-lex-bot-testbotaliassettings)" : TestBotAliasSettings,
       "[TestBotAliasTags](#cfn-lex-bot-testbotaliastags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -40,11 +44,14 @@ Properties:
     - BotLocale
   [BotTags](#cfn-lex-bot-bottags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-  [DataPrivacy](#cfn-lex-bot-dataprivacy): Json
+  [DataPrivacy](#cfn-lex-bot-dataprivacy): 
+    DataPrivacy
   [Description](#cfn-lex-bot-description): String
   [IdleSessionTTLInSeconds](#cfn-lex-bot-idlesessionttlinseconds): Integer
   [Name](#cfn-lex-bot-name): String
   [RoleArn](#cfn-lex-bot-rolearn): String
+  [TestBotAliasSettings](#cfn-lex-bot-testbotaliassettings): 
+    TestBotAliasSettings
   [TestBotAliasTags](#cfn-lex-bot-testbotaliastags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -76,9 +83,9 @@ A list of tags to add to the bot\. You can only add tags when you import a bot\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataPrivacy`  <a name="cfn-lex-bot-dataprivacy"></a>
-Provides information on additional privacy protections Amazon Lex should use with the bot's data\.  
+Property description not available\.  
 *Required*: Yes  
-*Type*: Json  
+*Type*: [DataPrivacy](aws-properties-lex-bot-dataprivacy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-lex-bot-description"></a>
@@ -98,16 +105,21 @@ You can specify between 60 \(1 minute\) and 86,400 \(24 hours\) seconds\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-lex-bot-name"></a>
-The name of the field to filter the list of bots\.  
+The name of the bot locale\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `BotLocaleName`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-lex-bot-rolearn"></a>
 The Amazon Resource Name \(ARN\) of the IAM role used to build and run the bot\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TestBotAliasSettings`  <a name="cfn-lex-bot-testbotaliassettings"></a>
+Specifies configuration settings for the alias used to test the bot\. If the `TestBotAliasSettings` property is not specified, the settings are configured with default values\.  
+*Required*: No  
+*Type*: [TestBotAliasSettings](aws-properties-lex-bot-testbotaliassettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TestBotAliasTags`  <a name="cfn-lex-bot-testbotaliastags"></a>
@@ -132,75 +144,6 @@ The unique identifier of the bot\.
 
 
 
-### Sample bot<a name="aws-resource-lex-bot--examples--Sample_bot"></a>
-
-The following is a simple bot for the English \(US\) language\. It includes the required intent based on the AMAZON\.FallbackIntent\.
-
-#### JSON<a name="aws-resource-lex-bot--examples--Sample_bot--json"></a>
-
-```
-{
-  "AWSTemplateFormatVersion": "2010-09-09",
-  "Resources": {
-    "FirstBotWithCFN": {
-      "Type": "AWS::Lex::Bot",
-      "Properties": {
-        "Name": "FirstBotWithCFN",
-        "RoleArn": "arn:aws:iam::123456789012:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots_5JSRXSE3QDQ",
-        "DataPrivacy": {
-          "ChildDirected": false
-        },
-        "IdleSessionTTLInSeconds": 300,
-        "AutoBuildBotLocales": true,
-        "BotLocales": [
-          {
-            "LocaleId": "en_US",
-            "Description": "Simple test bot for the en_US locale",
-            "NluConfidenceThreshold": 0.5,
-            "VoiceSettings": {
-              "VoiceId": "Ivy"
-            },
-            "Intents": [
-              {
-                "Name": "SimpleIntent",
-                "SampleUtterances": [
-                  {
-                    "Utterance": "Book a car"
-                  },
-                  {
-                    "Utterance": "Reserve a car"
-                  },
-                  {
-                    "Utterance": "Make a car reservation"
-                  }
-                ]
-              },
-              {
-                "Name": "FallbackIntent",
-                "Description": "Default intent when no other intent matches",
-                "ParentIntentSignature": "AMAZON.FallbackIntent"
-              }
-            ]
-          }
-        ],
-        "BotTags": [
-          {
-            "Key": "TestTagKey1",
-            "Value": "TestTagValue1"
-          }
-        ],
-        "TestBotAliasTags": [
-          {
-            "Key": "TestAliasTagKey1",
-            "Value": "TestAliasTagValue1"
-          }
-        ]
-      }
-    }
-  }
-}
-```
-
 ### Order flowers example bot<a name="aws-resource-lex-bot--examples--Order_flowers_example_bot"></a>
 
 The example creates a bot to order flowers\. It is the same as the example bot that you can create using the console\. 
@@ -208,13 +151,13 @@ The example creates a bot to order flowers\. It is the same as the example bot t
 #### YAML<a name="aws-resource-lex-bot--examples--Order_flowers_example_bot--yaml"></a>
 
 ```
-# OrderFlower bot consists of the following
-# 1. IAM role used by the bot at runtime
+# The OrderFlower bot consists of the following:
+# 1. IAM role that is used by the bot at runtime
 # 2. Inline Bot
 # 3. Bot Version
 # 4. Alias
 Resources:
-  # 1. IAM role used by the Amazon Lex service to make runtime calls
+  # 1. IAM Role used by the Lex service to make runtime calls
   BotRuntimeRole:
     Type: AWS::IAM::Role
     Properties:
@@ -239,9 +182,9 @@ Resources:
                   - "comprehend:DetectSentiment"
                 Resource: "*"
  
-  # 2. The inline bot definition depends on the IAM role.
-  # The bot definition combines all child resources into one CFN resource.
-  # This includes Locales, Intents, Slots, SlotTypes.
+  # 2. Inline bot definition that depends on the IAM role.
+  # The bot definition consists of combining all the child resources into one CFN resource.
+  # This includes Locales, Intents, Slots, and SlotTypes.
   OrderFlowersTemplateBot:
     DependsOn: BotRuntimeRole
     Type: AWS::Lex::Bot
@@ -251,9 +194,10 @@ Resources:
       DataPrivacy:
         ChildDirected: false
       IdleSessionTTLInSeconds: 300
-      Description: "How to create a OrderFlowers bot with AWS CloudFormation"
-      # We provide a setting that enables you to auto build the locales.
-      # Locale builds are also kicked off if you attempt to create a bot version that depends on an unbuilt locale.
+      Description: "How to create a OrderFlowers bot with CFN"
+      # We provide a setting that allows you to auto build the locales provided.
+      # Locale builds are also kicked off if you attempt to create a bot version 
+      # that depends on an unbuilt locale.
       AutoBuildBotLocales: false
       BotLocales:
         - LocaleId: "en_US"
@@ -293,6 +237,13 @@ Resources:
                         PlainTextMessage:
                           Value: "Okay, I will not place your order."
                   AllowInterrupt: false
+              SlotPriorities:
+                - Priority: 2
+                  SlotName: PickupDate
+                - Priority: 1
+                  SlotName: FlowerType
+                - Priority: 3
+                  SlotName: PickupTime
               Slots:
                 - Name: "FlowerType"
                   Description: "something"
@@ -306,7 +257,7 @@ Resources:
                               Value: "What type of flowers would you like to order?"
                       MaxRetries: 3
                       AllowInterrupt: false
-                - Name: "PickUpDate"
+                - Name: "PickupDate"
                   Description: "something"
                   SlotTypeName: "AMAZON.Date"
                   ValueElicitationSetting:
@@ -318,7 +269,7 @@ Resources:
                               Value: "What day do you want the {FlowerType} to be picked up?"
                       MaxRetries: 3
                       AllowInterrupt: false
-                - Name: "PickUpTime"
+                - Name: "PickupTime"
                   Description: "something"
                   SlotTypeName: "AMAZON.Time"
                   ValueElicitationSetting:
@@ -334,7 +285,7 @@ Resources:
               Description: "Default intent when no other intent matches"
               ParentIntentSignature: "AMAZON.FallbackIntent"
  
-  # 3. We define a bot version which depends on the DRAFT version of the Amazon Lex Bot.
+  # 3. Define a bot version that depends on the DRAFT version of the Lex Bot.
   OrderFlowersTemplateBotVersionWithCFN:
     DependsOn: OrderFlowersTemplateBot
     Type: AWS::Lex::BotVersion
@@ -346,7 +297,8 @@ Resources:
             SourceBotVersion: DRAFT
       Description: OrderFlowers Version
  
-  # 4. We define the alias by providing the bot version created by the AWS::Lex::BotVersion resource above.
+  # 4. Define the alias by providing the bot version created by the 
+  #    AWS::Lex::BotVersion resource above.
   FirstBotAliasWithCFN:
     DependsOn: OrderFlowersTemplateBotVersionWithCFN
     Type: AWS::Lex::BotAlias
@@ -365,13 +317,13 @@ The example creates a bot to book hotel rooms and rental cars\. It is the same a
 #### YAML<a name="aws-resource-lex-bot--examples--Book_trip_example_bot--yaml"></a>
 
 ```
-# BookTrip bot consists of the following
-# 1. IAM role used by the bot at runtime.
+# The BookTrip bot consists of the following:
+# 1. IAM role that is used by the bot at runtime
 # 2. Inline Bot
 # 3. Bot Version
 # 4. Alias
 Resources:
-  # 1. IAM role used by the Amazon Lex service to make runtime calls.
+  # 1. IAM Role used by the Lex service to make runtime calls
   BotRuntimeRole:
     Type: AWS::IAM::Role
     Properties:
@@ -396,9 +348,9 @@ Resources:
                   - "comprehend:DetectSentiment"
                 Resource: "*"
  
-  # 2. The inline bot definition depends on the IAM role.
-  # The bot definition combines all child resources into one CFN resource.
-  # This includes Locales, Intents, Slots, SlotTypes.
+  # 2. Inline bot definition which depends on the IAM role
+  # The bot definition consists of combining all the child resources into one CFN resource.
+  # This includes Locales, Intents, Slots, and SlotTypes.
   BookTripTemplateBot:
     DependsOn: BotRuntimeRole
     Type: AWS::Lex::Bot
@@ -409,8 +361,9 @@ Resources:
         ChildDirected: false
       IdleSessionTTLInSeconds: 300
       Description: "How to create a BookTrip bot with CFN"
-      # We provide a setting that enables you to auto build the locales provided.
-      # Locale builds are also kicked off if you attempt to create a bot version that depends on an unbuilt locale.
+      # Provide a setting that allows you to either auto build the locales provided.
+      # Locale builds are also kicked off if you attempt to create a bot version 
+      # that depends on an unbuilt locale.
       AutoBuildBotLocales: false
       BotLocales:
         - LocaleId: "en_US"
@@ -454,6 +407,17 @@ Resources:
                 - Utterance: "Book a car"
                 - Utterance: "Reserve a car"
                 - Utterance: "Make a car reservation"
+              SlotPriorities:
+                - Priority: 4
+                  SlotName: DriverAge
+                - Priority: 1
+                  SlotName: PickUpCity
+                - Priority: 3
+                  SlotName: ReturnDate
+                - Priority: 5
+                  SlotName: CarType
+                - Priority: 2
+                  SlotName: PickUpDate 
               IntentConfirmationSetting:
                 PromptSpecification:
                   MessageGroupsList:
@@ -530,7 +494,7 @@ Resources:
                       MaxRetries: 3
                       AllowInterrupt: false
             # We expect developers to provide the FallbackIntent when generating their bot.
-            # The service will throw an exception when it is not provided.
+            # The service will throw an exception if it isn't provided.
             - Name: "BookHotel"
               Description: "Intent to book a hotel on StayBooker"
               SampleUtterances:
@@ -551,6 +515,15 @@ Resources:
                         PlainTextMessage:
                           Value: "Okay, I have cancelled your reservation in progress."
                   AllowInterrupt: true
+              SlotPriorities:
+                - Priority: 4
+                  SlotName: RoomType
+                - Priority: 1
+                  SlotName: Location
+                - Priority: 3
+                  SlotName: Nights
+                - Priority: 2
+                  SlotName: CheckInDate 
               Slots:
                 - Name: "Location"
                   Description: "something"
@@ -604,7 +577,7 @@ Resources:
               Description: "Default intent when no other intent matches"
               ParentIntentSignature: "AMAZON.FallbackIntent"
  
-  # 3. We define a bot version that depends on the DRAFT version of the Amazon Lex Bot.
+  # 3. Define a bot version which depends on the DRAFT version of the Lex Bot
   BookTripBotVersionWithCFN:
     DependsOn: BookTripTemplateBot
     Type: AWS::Lex::BotVersion
@@ -616,13 +589,23 @@ Resources:
             SourceBotVersion: DRAFT
       Description: BookTrip Version
  
-  # 4. We define the alias by providing the bot version created by the AWS::Lex::BotVersion resource above.
+  # 4. We define the alias by providing the bot version created by the AWS::Lex::BotVersion resource above
   FirstBotAliasWithCFN:
     DependsOn: BookTripBotVersionWithCFN
     Type: AWS::Lex::BotAlias
     Properties:
       BotId: !Ref BookTripTemplateBot
       BotAliasName: "BookTripVersion1Alias"
+      # Remove BotAliasLocaleSettings if you aren't concerned with Lambda setup.
+      # If you are you can modify the LambdaArn below to get started.
+      # BotAliasLocaleSettings:
+      #   - LocaleId: en_US
+      #     BotAliasLocaleSetting:
+      #       Enabled: false
+      #       CodeHookSpecification: 
+      #         LambdaCodeHook:
+      #           CodeHookInterfaceVersion: "1.0"
+      #           LambdaArn: "arn:aws:lambda:us-east-1:111111111111:function:ReplaceWithYourOwnLambda"
       BotVersion: !GetAtt BookTripBotVersionWithCFN.BotVersion
       SentimentAnalysisSettings:
         DetectSentiment: true

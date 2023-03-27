@@ -51,4 +51,4 @@ The schema definition for the schema version\.
 #### <a name="aws-resource-glue-schemaversion-return-values-fn--getatt-fn--getatt"></a>
 
 `VersionId`  <a name="VersionId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.

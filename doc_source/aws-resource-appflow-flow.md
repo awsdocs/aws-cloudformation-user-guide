@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DestinationFlowConfigList](#cfn-appflow-flow-destinationflowconfiglist)" : [ DestinationFlowConfig, ... ],
       "[FlowName](#cfn-appflow-flow-flowname)" : String,
       "[KMSArn](#cfn-appflow-flow-kmsarn)" : String,
+      "[MetadataCatalogConfig](#cfn-appflow-flow-metadatacatalogconfig)" : MetadataCatalogConfig,
       "[SourceFlowConfig](#cfn-appflow-flow-sourceflowconfig)" : SourceFlowConfig,
       "[Tags](#cfn-appflow-flow-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[Tasks](#cfn-appflow-flow-tasks)" : [ Task, ... ],
@@ -37,6 +38,8 @@ Properties:
     - DestinationFlowConfig
   [FlowName](#cfn-appflow-flow-flowname): String
   [KMSArn](#cfn-appflow-flow-kmsarn): String
+  [MetadataCatalogConfig](#cfn-appflow-flow-metadatacatalogconfig): 
+    MetadataCatalogConfig
   [SourceFlowConfig](#cfn-appflow-flow-sourceflowconfig): 
     SourceFlowConfig
   [Tags](#cfn-appflow-flow-tags): 
@@ -79,6 +82,12 @@ Properties:
 *Maximum*: `2048`  
 *Pattern*: `arn:aws:kms:.*:[0-9]+:.*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MetadataCatalogConfig`  <a name="cfn-appflow-flow-metadatacatalogconfig"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [MetadataCatalogConfig](aws-properties-appflow-flow-metadatacatalogconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceFlowConfig`  <a name="cfn-appflow-flow-sourceflowconfig"></a>
  Contains information about the configuration of the source connector used in the flow\.   

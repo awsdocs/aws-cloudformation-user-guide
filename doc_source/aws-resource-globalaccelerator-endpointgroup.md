@@ -101,7 +101,7 @@ The Amazon Resource Name \(ARN\) of the listener\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PortOverrides`  <a name="cfn-globalaccelerator-endpointgroup-portoverrides"></a>
-Allows you to override the destination ports used to route traffic to an endpoint\. Using a port override lets you to map a list of external destination ports \(that your users send traffic to\) to a list of internal destination ports that you want an application endpoint to receive traffic on\.   
+Allows you to override the destination ports used to route traffic to an endpoint\. Using a port override lets you map a list of external destination ports \(that your users send traffic to\) to a list of internal destination ports that you want an application endpoint to receive traffic on\.   
 *Required*: No  
 *Type*: List of [PortOverride](aws-properties-globalaccelerator-endpointgroup-portoverride.md)  
 *Maximum*: `10`  

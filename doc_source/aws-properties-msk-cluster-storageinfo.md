@@ -1,6 +1,6 @@
 # AWS::MSK::Cluster StorageInfo<a name="aws-properties-msk-cluster-storageinfo"></a>
 
-Contains information about storage volumes attached to MSK broker nodes\.
+Contains information about storage volumes attached to Amazon MSK broker nodes\.
 
 ## Syntax<a name="aws-properties-msk-cluster-storageinfo-syntax"></a>
 

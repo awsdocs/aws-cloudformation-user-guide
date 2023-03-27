@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[DocumentName](#cfn-ssmincidents-responseplan-ssmautomation-documentname)" : String,
   "[DocumentVersion](#cfn-ssmincidents-responseplan-ssmautomation-documentversion)" : String,
+  "[DynamicParameters](#cfn-ssmincidents-responseplan-ssmautomation-dynamicparameters)" : [ DynamicSsmParameter, ... ],
   "[Parameters](#cfn-ssmincidents-responseplan-ssmautomation-parameters)" : [ SsmParameter, ... ],
   "[RoleArn](#cfn-ssmincidents-responseplan-ssmautomation-rolearn)" : String,
   "[TargetAccount](#cfn-ssmincidents-responseplan-ssmautomation-targetaccount)" : String
@@ -23,6 +24,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [DocumentName](#cfn-ssmincidents-responseplan-ssmautomation-documentname): String
   [DocumentVersion](#cfn-ssmincidents-responseplan-ssmautomation-documentversion): String
+  [DynamicParameters](#cfn-ssmincidents-responseplan-ssmautomation-dynamicparameters): 
+    - DynamicSsmParameter
   [Parameters](#cfn-ssmincidents-responseplan-ssmautomation-parameters): 
     - SsmParameter
   [RoleArn](#cfn-ssmincidents-responseplan-ssmautomation-rolearn): String
@@ -44,6 +47,12 @@ The automation document's version to use when running\.
 *Type*: String  
 *Minimum*: `0`  
 *Maximum*: `128`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DynamicParameters`  <a name="cfn-ssmincidents-responseplan-ssmautomation-dynamicparameters"></a>
+The key\-value pairs to resolve dynamic parameter values when processing a Systems Manager Automation runbook\.  
+*Required*: No  
+*Type*: List of [DynamicSsmParameter](aws-properties-ssmincidents-responseplan-dynamicssmparameter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-ssmincidents-responseplan-ssmautomation-parameters"></a>

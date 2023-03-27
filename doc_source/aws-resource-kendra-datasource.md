@@ -1,8 +1,8 @@
 # AWS::Kendra::DataSource<a name="aws-resource-kendra-datasource"></a>
 
-Specifies a data source that you use to with an Amazon Kendra index\. 
+Creates a data source connector that you want to use with an Amazon Kendra index\.
 
-You specify a name, connector type and description for your data source\.
+You specify a name, data source connector type and description for your data source\. You also specify configuration information for the data source connector\.
 
 ## Syntax<a name="aws-resource-kendra-datasource-syntax"></a>
 
@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Kendra::DataSource",
   "Properties" : {
+      "[CustomDocumentEnrichmentConfiguration](#cfn-kendra-datasource-customdocumentenrichmentconfiguration)" : CustomDocumentEnrichmentConfiguration,
       "[DataSourceConfiguration](#cfn-kendra-datasource-datasourceconfiguration)" : DataSourceConfiguration,
       "[Description](#cfn-kendra-datasource-description)" : String,
       "[IndexId](#cfn-kendra-datasource-indexid)" : String,
@@ -31,6 +32,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Kendra::DataSource
 Properties: 
+  [CustomDocumentEnrichmentConfiguration](#cfn-kendra-datasource-customdocumentenrichmentconfiguration): 
+    CustomDocumentEnrichmentConfiguration
   [DataSourceConfiguration](#cfn-kendra-datasource-datasourceconfiguration): 
     DataSourceConfiguration
   [Description](#cfn-kendra-datasource-description): String
@@ -45,16 +48,14 @@ Properties:
 
 ## Properties<a name="aws-resource-kendra-datasource-properties"></a>
 
+`CustomDocumentEnrichmentConfiguration`  <a name="cfn-kendra-datasource-customdocumentenrichmentconfiguration"></a>
+Configuration information for altering document metadata and content during the document ingestion process\.  
+*Required*: No  
+*Type*: [CustomDocumentEnrichmentConfiguration](aws-properties-kendra-datasource-customdocumentenrichmentconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `DataSourceConfiguration`  <a name="cfn-kendra-datasource-datasourceconfiguration"></a>
-Configuration information for an Amazon Kendra data source\. The contents of the configuration depend on the type of data source\. You can only specify one type of data source in the configuration\. Choose from one of the following data sources\.  
-+ Amazon S3
-+ Confluence
-+ Custom
-+ Database
-+ Microsoft OneDrive
-+ Microsoft SharePoint 
-+ Salesforce
-+ ServiceNow
+Configuration information for an Amazon Kendra data source\. The contents of the configuration depend on the type of data source\. You can only specify one type of data source in the configuration\.  
 You can't specify the `Configuration` parameter when the `Type` parameter is set to `CUSTOM`\.  
 The `Configuration` parameter is required for all other data sources\.  
 *Required*: No  
@@ -62,13 +63,13 @@ The `Configuration` parameter is required for all other data sources\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-kendra-datasource-description"></a>
-A description of the data source\.  
+A description for the data source connector\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IndexId`  <a name="cfn-kendra-datasource-indexid"></a>
-The identifier of the index that should be associated with this data source\.  
+The identifier of the index you want to use with the data source connector\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -107,7 +108,7 @@ For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/la
 The type of the data source\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `CONFLUENCE | CUSTOM | DATABASE | GOOGLEDRIVE | ONEDRIVE | S3 | SALESFORCE | SERVICENOW | SHAREPOINT | WEBCRAWLER | WORKDOCS`  
+*Allowed values*: `ALFRESCO | BOX | CONFLUENCE | CUSTOM | DATABASE | FSX | GITHUB | GOOGLEDRIVE | JIRA | ONEDRIVE | QUIP | S3 | SALESFORCE | SERVICENOW | SHAREPOINT | SLACK | TEMPLATE | WEBCRAWLER | WORKDOCS`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-kendra-datasource-return-values"></a>

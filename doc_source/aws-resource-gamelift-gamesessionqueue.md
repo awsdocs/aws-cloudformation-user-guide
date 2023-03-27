@@ -49,7 +49,7 @@ Properties:
 ## Properties<a name="aws-resource-gamelift-gamesessionqueue-properties"></a>
 
 `CustomEventData`  <a name="cfn-gamelift-gamesessionqueue-customeventdata"></a>
- Information to be added to all events that are related to this game session queue\.   
+Information to be added to all events that are related to this game session queue\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -165,7 +165,25 @@ The following example creates a GameLift game session queue named `MyGameSession
                         "MaximumIndividualPlayerLatencyMilliseconds": 1000,
                         "PolicyDurationSeconds": 60
                     }
-                ]
+                ],
+                "PriorityConfiguration": {
+                    "LocationOrder": [
+                        "us-west-2",
+                        "us-east-1"
+                    ],
+                    "PriorityOrder": [
+                        "COST",
+                        "LATENCY",
+                        "LOCATION",
+                        "DESTINATION"
+                    ]
+                },
+                "FilterConfiguration": {
+                    "AllowedLocations": [
+                        "us-east-1",
+                        "us-west-2"
+                    ]
+                }
             }
         }
     }
@@ -189,6 +207,19 @@ Resources:
       PlayerLatencyPolicies:
         - MaximumIndividualPlayerLatencyMilliseconds: 1000
           PolicyDurationSeconds: 60
+          PriorityConfiguration:
+          LocationOrder: 
+          - 'us-west-2'
+          - 'us-east-1'
+          PriorityOrder: 
+          - 'COST'
+          - 'LATENCY'
+          - 'LOCATION'
+          - 'DESTINATION'
+      FilterConfiguration:
+        AllowedLocations:
+          - 'us-east-1'
+          - 'us-west-2'
 ```
 
 ## See also<a name="aws-resource-gamelift-gamesessionqueue--seealso"></a>

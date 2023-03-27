@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ProtocolType](#cfn-apigatewayv2-api-protocoltype)" : String,
       "[RouteKey](#cfn-apigatewayv2-api-routekey)" : String,
       "[RouteSelectionExpression](#cfn-apigatewayv2-api-routeselectionexpression)" : String,
-      "[Tags](#cfn-apigatewayv2-api-tags)" : Json,
+      "[Tags](#cfn-apigatewayv2-api-tags)" : {Key : Value, ...},
       "[Target](#cfn-apigatewayv2-api-target)" : String,
       "[Version](#cfn-apigatewayv2-api-version)" : String
     }
@@ -54,7 +54,8 @@ Properties:
   [ProtocolType](#cfn-apigatewayv2-api-protocoltype): String
   [RouteKey](#cfn-apigatewayv2-api-routekey): String
   [RouteSelectionExpression](#cfn-apigatewayv2-api-routeselectionexpression): String
-  [Tags](#cfn-apigatewayv2-api-tags): Json
+  [Tags](#cfn-apigatewayv2-api-tags): 
+    Key : Value
   [Target](#cfn-apigatewayv2-api-target): String
   [Version](#cfn-apigatewayv2-api-version): String
 ```
@@ -148,7 +149,7 @@ The route selection expression for the API\. For HTTP APIs, the `routeSelectionE
 `Tags`  <a name="cfn-apigatewayv2-api-tags"></a>
 The collection of tags\. Each tag element is associated with a given resource\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Target`  <a name="cfn-apigatewayv2-api-target"></a>
@@ -181,6 +182,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `ApiEndpoint`  <a name="ApiEndpoint-fn::getatt"></a>
 The default endpoint for an API\. For example: `https://abcdef.execute-api.us-west-2.amazonaws.com`\.
+
+`ApiId`  <a name="ApiId-fn::getatt"></a>
+The API identifier\.
 
 ## Examples<a name="aws-resource-apigatewayv2-api--examples"></a>
 

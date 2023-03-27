@@ -74,7 +74,7 @@ The rendering engine for the simulation application\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RobotSoftwareSuite`  <a name="cfn-robomaker-simulationapplication-robotsoftwaresuite"></a>
-The robot software suite \(ROS distribution\) used by the simulation application\.  
+The robot software suite used by the simulation application\.  
 *Required*: Yes  
 *Type*: [RobotSoftwareSuite](aws-properties-robomaker-simulationapplication-robotsoftwaresuite.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -137,24 +137,12 @@ The following example creates a simulation application\.
       "Type": "AWS::RoboMaker::SimulationApplication",
       "Properties": {
         "Name": "MySimulationApplication",
-        "Sources": [
-          {
-            "S3Bucket": "my-bucket",
-            "S3Key": "robot_bundle_x86.tar.gz",
-            "Architecture": "X86_64"
-          }
-        ],
+        "Environment": "111122223333.dkr.ecr.us-west-2.amazonaws.com/my-sim-app:latest",
         "RobotSoftwareSuite": {
-          "Name": "ROS",
-          "Version": "Kinetic"
+          "Name": "General"
         },
         "SimulationSoftwareSuite": {
-          "Name": "Gazebo",
-          "Version": "7"
-        },
-        "RenderingEngine": {
-          "Name": "OGRE",
-          "Version": "1.x"
+          "Name": "SimulationRuntime"
         },
         "Tags": {
           "Name": "BasicSimulationApplication",
@@ -181,19 +169,11 @@ Resources:
     Type: "AWS::RoboMaker::SimulationApplication"
     Properties:
       Name: "MySimulationApplication"
-      Sources:
-        - S3Bucket: "my-bucket"
-          S3Key: "robot_bundle_x86.tar.gz"
-          Architecture: "X86_64"
+      Environment: "111122223333.dkr.ecr.us-west-2.amazonaws.com/my-sim-app:latest"
       RobotSoftwareSuite:
-        Name: "ROS"
-        Version: "Kinetic"
+        Name: "General"
       SimulationSoftwareSuite:
-        Name: "Gazebo"
-        Version: "7"
-      RenderingEngine:
-        Name: "OGRE"
-        Version: "1.x"
+        Name: "SimulationRuntime"
       Tags:
         "Name" : "BasicSimulationApplication"
         "Type" : "CFN"

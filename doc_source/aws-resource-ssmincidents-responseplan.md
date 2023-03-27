@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DisplayName](#cfn-ssmincidents-responseplan-displayname)" : String,
       "[Engagements](#cfn-ssmincidents-responseplan-engagements)" : [ String, ... ],
       "[IncidentTemplate](#cfn-ssmincidents-responseplan-incidenttemplate)" : IncidentTemplate,
+      "[Integrations](#cfn-ssmincidents-responseplan-integrations)" : [ Integration, ... ],
       "[Name](#cfn-ssmincidents-responseplan-name)" : String,
       "[Tags](#cfn-ssmincidents-responseplan-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -37,6 +38,8 @@ Properties:
     - String
   [IncidentTemplate](#cfn-ssmincidents-responseplan-incidenttemplate): 
     IncidentTemplate
+  [Integrations](#cfn-ssmincidents-responseplan-integrations): 
+    - Integration
   [Name](#cfn-ssmincidents-responseplan-name): String
   [Tags](#cfn-ssmincidents-responseplan-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -66,7 +69,7 @@ The human readable name of the response plan\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Engagements`  <a name="cfn-ssmincidents-responseplan-engagements"></a>
-The contacts and escalation plans that the response plan engages during an incident\.  
+The Amazon Resource Name \(ARN\) for the contacts and escalation plans that the response plan engages during an incident\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `5`  
@@ -76,6 +79,12 @@ The contacts and escalation plans that the response plan engages during an incid
 Details used to create an incident when using this response plan\.  
 *Required*: Yes  
 *Type*: [IncidentTemplate](aws-properties-ssmincidents-responseplan-incidenttemplate.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Integrations`  <a name="cfn-ssmincidents-responseplan-integrations"></a>
+Information about third\-party services integrated into the response plan\.  
+*Required*: No  
+*Type*: List of [Integration](aws-properties-ssmincidents-responseplan-integration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ssmincidents-responseplan-name"></a>

@@ -25,6 +25,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `S3Bucket`  <a name="cfn-lex-botalias-audiologdestination-s3bucket"></a>
 The S3 bucket location where audio logs are stored\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [S3BucketLogDestination](aws-properties-lex-botalias-s3bucketlogdestination.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

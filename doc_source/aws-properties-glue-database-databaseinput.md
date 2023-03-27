@@ -35,7 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-glue-database-databaseinput-properties"></a>
 
 `CreateTableDefaultPermissions`  <a name="cfn-glue-database-databaseinput-createtabledefaultpermissions"></a>
-Creates a set of default permissions on the table for principals\.   
+Creates a set of default permissions on the table for principals\. Used by AWS Lake Formation\. Not used in the normal course of AWS Glue operations\.  
 *Required*: No  
 *Type*: List of [PrincipalPrivileges](aws-properties-glue-database-principalprivileges.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

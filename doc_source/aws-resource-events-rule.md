@@ -78,6 +78,7 @@ The name or ARN of the event bus associated with the rule\. If you omit this, th
 The event pattern of the rule\. For more information, see [Events and Event Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) in the *Amazon EventBridge User Guide*\.  
 *Required*: Conditional  
 *Type*: Json  
+*Maximum*: `4096`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-events-rule-name"></a>
@@ -115,41 +116,23 @@ The state of the rule\.
 `Targets`  <a name="cfn-events-rule-targets"></a>
 Adds the specified targets to the specified rule, or updates the targets if they are already associated with the rule\.  
 Targets are the resources that are invoked when a rule is triggered\.  
+The maximum number of entries per request is 10\.  
 Each rule can have up to five \(5\) targets associated with it at one time\.
-You can configure the following as targets for Events:  
-+  [API destination](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-api-destinations.html) 
-+ Amazon API Gateway REST API endpoints
-+ API Gateway
-+  AWS Batch job queue
-+ CloudWatch Logs group
-+ CodeBuild project
-+ CodePipeline
-+ Amazon EC2 `CreateSnapshot` API call
-+ EC2 Image Builder
-+ Amazon EC2 `RebootInstances` API call
-+ Amazon EC2 `StopInstances` API call
-+ Amazon EC2 `TerminateInstances` API call
-+ Amazon ECS tasks
-+ Event bus in a different AWS account or Region\.
-
-  You can use an event bus in the US East \(N\. Virginia\) us\-east\-1, US West \(Oregon\) us\-west\-2, or Europe \(Ireland\) eu\-west\-1 Regions as a target for a rule\.
-+ Firehose delivery stream \(Kinesis Data Firehose\)
-+ Inspector assessment template \(Amazon Inspector\)
-+ Kinesis stream \(Kinesis Data Stream\)
-+  AWS Lambda function
-+ Redshift clusters \(Data API statement execution\)
-+ Amazon SNS topic
-+ Amazon SQS queues \(includes FIFO queues\)
-+ SSM Automation
-+ SSM OpsItem
-+ SSM Run Command
-+ Step Functions state machines
-Creating rules with built\-in targets is supported only in the AWS Management Console\. The built\-in targets are `EC2 CreateSnapshot API call`, `EC2 RebootInstances API call`, `EC2 StopInstances API call`, and `EC2 TerminateInstances API call`\.   
+For a list of services you can configure as targets for events, see [EventBridge targets](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-targets.html) in the *Amazon EventBridge User Guide*\.  
+Creating rules with built\-in targets is supported only in the AWS Management Console\. The built\-in targets are:  
++  `Amazon EBS CreateSnapshot API call` 
++  `Amazon EC2 RebootInstances API call` 
++  `Amazon EC2 StopInstances API call` 
++  `Amazon EC2 TerminateInstances API call` 
 For some target types, `PutTargets` provides target\-specific parameters\. If the target is a Kinesis data stream, you can optionally specify which shard the event goes to by using the `KinesisParameters` argument\. To invoke a command on multiple EC2 instances with one rule, you can use the `RunCommandParameters` field\.  
-To be able to make API calls against the resources that you own, Amazon EventBridge needs the appropriate permissions\. For AWS Lambda and Amazon SNS resources, EventBridge relies on resource\-based policies\. For EC2 instances, Kinesis Data Streams, AWS Step Functions state machines and API Gateway REST APIs, EventBridge relies on IAM roles that you specify in the `RoleARN` argument in `PutTargets`\. For more information, see [Authentication and Access Control](https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html) in the *Amazon EventBridge User Guide*\.  
+To be able to make API calls against the resources that you own, Amazon EventBridge needs the appropriate permissions:   
++ For AWS Lambda and Amazon SNS resources, EventBridge relies on resource\-based policies\.
++ For EC2 instances, Kinesis Data Streams, AWS Step Functions state machines and API Gateway APIs, EventBridge relies on IAM roles that you specify in the `RoleARN` argument in `PutTargets`\.
+For more information, see [Authentication and Access Control](https://docs.aws.amazon.com/eventbridge/latest/userguide/auth-and-access-control-eventbridge.html) in the *Amazon EventBridge User Guide*\.  
 If another AWS account is in the same region and has granted you permission \(using `PutPermission`\), you can send events to that account\. Set that account's event bus as a target of the rules in your account\. To send the matched events to the other account, specify that account's event bus as the `Arn` value when you run `PutTargets`\. If your account sends events to another account, your account is charged for each sent event\. Each event sent to another account is charged as a custom event\. The account receiving the event is not charged\. For more information, see [Amazon EventBridge Pricing](http://aws.amazon.com/eventbridge/pricing/)\.  
  `Input`, `InputPath`, and `InputTransformer` are not available with `PutTarget` if the target is an event bus of a different AWS account\.
 If you are setting the event bus of another account as the target, and that account granted permission to your account through an organization instead of directly by the account ID, then you must specify a `RoleArn` with proper permissions in the `Target` structure\. For more information, see [Sending and Receiving Events Between AWS Accounts](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-cross-account-event-delivery.html) in the *Amazon EventBridge User Guide*\.  
+If you have an IAM role on a cross\-account event bus target, a `PutTargets` call without a role on the same target \(same `Id` and `Arn`\) will not remove the role\.
 For more information about enabling cross\-account events, see [PutPermission](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutPermission.html)\.  
  **Input**, **InputPath**, and **InputTransformer** are mutually exclusive and optional parameters of a target\. When a rule is triggered due to a matched event:  
 + If none of the following arguments are specified for a target, then the entire event is passed to the target in JSON format \(unless the target is Amazon EC2 Run Command or Amazon ECS task, in which case nothing from the event is passed to the target\)\.

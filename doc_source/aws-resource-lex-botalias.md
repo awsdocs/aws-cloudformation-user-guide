@@ -1,5 +1,8 @@
 # AWS::Lex::BotAlias<a name="aws-resource-lex-botalias"></a>
 
+**Note**  
+Amazon Lex V2 is the only supported version in AWS CloudFormation\.
+
 Specifies an alias for the specified version of a bot\. Use an alias to enable you to change the version of a bot without updating applications that use the bot\.
 
 For example, you can specify an alias called "PROD" that your applications use to call the Amazon Lex bot\. 
@@ -21,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[BotVersion](#cfn-lex-botalias-botversion)" : String,
       "[ConversationLogSettings](#cfn-lex-botalias-conversationlogsettings)" : ConversationLogSettings,
       "[Description](#cfn-lex-botalias-description)" : String,
-      "[SentimentAnalysisSettings](#cfn-lex-botalias-sentimentanalysissettings)" : Json
+      "[SentimentAnalysisSettings](#cfn-lex-botalias-sentimentanalysissettings)" : SentimentAnalysisSettings
     }
 }
 ```
@@ -41,13 +44,14 @@ Properties:
   [ConversationLogSettings](#cfn-lex-botalias-conversationlogsettings): 
     ConversationLogSettings
   [Description](#cfn-lex-botalias-description): String
-  [SentimentAnalysisSettings](#cfn-lex-botalias-sentimentanalysissettings): Json
+  [SentimentAnalysisSettings](#cfn-lex-botalias-sentimentanalysissettings): 
+    SentimentAnalysisSettings
 ```
 
 ## Properties<a name="aws-resource-lex-botalias-properties"></a>
 
 `BotAliasLocaleSettings`  <a name="cfn-lex-botalias-botaliaslocalesettings"></a>
-Maps configuration information to a specific locale\. You can use this parameter to specify a specific Lambda function to run different functions in different locales\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [List](aws-properties-lex-botalias-botaliaslocalesettings.md) of [BotAliasLocaleSettingsItem](aws-properties-lex-botalias-botaliaslocalesettingsitem.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -67,7 +71,7 @@ You can only add tags when you specify an alias\.
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BotId`  <a name="cfn-lex-botalias-botid"></a>
 The unique identifier of the bot\.  
@@ -101,7 +105,7 @@ The description of the bot alias\.
 `SentimentAnalysisSettings`  <a name="cfn-lex-botalias-sentimentanalysissettings"></a>
 Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [SentimentAnalysisSettings](aws-properties-lex-botalias-sentimentanalysissettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-lex-botalias-return-values"></a>

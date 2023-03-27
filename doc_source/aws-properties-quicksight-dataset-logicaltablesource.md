@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[DataSetArn](#cfn-quicksight-dataset-logicaltablesource-datasetarn)" : String,
   "[JoinInstruction](#cfn-quicksight-dataset-logicaltablesource-joininstruction)" : JoinInstruction,
   "[PhysicalTableId](#cfn-quicksight-dataset-logicaltablesource-physicaltableid)" : String
 }
@@ -18,12 +19,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-quicksight-dataset-logicaltablesource-syntax.yaml"></a>
 
 ```
+  [DataSetArn](#cfn-quicksight-dataset-logicaltablesource-datasetarn): String
   [JoinInstruction](#cfn-quicksight-dataset-logicaltablesource-joininstruction): 
     JoinInstruction
   [PhysicalTableId](#cfn-quicksight-dataset-logicaltablesource-physicaltableid): String
 ```
 
 ## Properties<a name="aws-properties-quicksight-dataset-logicaltablesource-properties"></a>
+
+`DataSetArn`  <a name="cfn-quicksight-dataset-logicaltablesource-datasetarn"></a>
+The Amazon Resource Number \(ARN\) of the parent dataset\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JoinInstruction`  <a name="cfn-quicksight-dataset-logicaltablesource-joininstruction"></a>
 Specifies the result of a join of two logical tables\.  

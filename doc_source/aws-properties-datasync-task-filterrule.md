@@ -36,6 +36,6 @@ A single filter string that consists of the patterns to include or exclude\. The
    
 *Required*: No  
 *Type*: String  
-*Maximum*: `409600`  
+*Maximum*: `102400`  
 *Pattern*: `^[^\x00]+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

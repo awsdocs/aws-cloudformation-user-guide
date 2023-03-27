@@ -44,7 +44,7 @@ Properties:
 
 `Destination`  <a name="cfn-ec2-networkinsightspath-destination"></a>
 The AWS resource that is the destination of the path\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -61,7 +61,7 @@ The IP address of the AWS resource that is the destination of the path\.
 The destination port\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `1`  
+*Minimum*: `0`  
 *Maximum*: `65535`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -112,8 +112,14 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `CreatedDate`  <a name="CreatedDate-fn::getatt"></a>
 The time stamp when the path was created\.
 
+`DestinationArn`  <a name="DestinationArn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the destination\.
+
 `NetworkInsightsPathArn`  <a name="NetworkInsightsPathArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the path\.
 
 `NetworkInsightsPathId`  <a name="NetworkInsightsPathId-fn::getatt"></a>
 The ID of the path\.
+
+`SourceArn`  <a name="SourceArn-fn::getatt"></a>
+The Amazon Resource Name \(ARN\) of the source\.

@@ -22,7 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Content](#cfn-appconfig-hostedconfigurationversion-content)" : String,
       "[ContentType](#cfn-appconfig-hostedconfigurationversion-contenttype)" : String,
       "[Description](#cfn-appconfig-hostedconfigurationversion-description)" : String,
-      "[LatestVersionNumber](#cfn-appconfig-hostedconfigurationversion-latestversionnumber)" : Double
+      "[LatestVersionNumber](#cfn-appconfig-hostedconfigurationversion-latestversionnumber)" : Double,
+      "[VersionLabel](#cfn-appconfig-hostedconfigurationversion-versionlabel)" : String
     }
 }
 ```
@@ -38,6 +39,7 @@ Properties:
   [ContentType](#cfn-appconfig-hostedconfigurationversion-contenttype): String
   [Description](#cfn-appconfig-hostedconfigurationversion-description): String
   [LatestVersionNumber](#cfn-appconfig-hostedconfigurationversion-latestversionnumber): Double
+  [VersionLabel](#cfn-appconfig-hostedconfigurationversion-versionlabel): String
 ```
 
 ## Properties<a name="aws-resource-appconfig-hostedconfigurationversion-properties"></a>
@@ -82,6 +84,15 @@ A description of the configuration\.
 An optional locking token used to prevent race conditions from overwriting configuration updates when creating a new version\. To ensure your data is not overwritten when creating multiple hosted configuration versions in rapid succession, specify the version number of the latest hosted configuration version\.  
 *Required*: No  
 *Type*: Double  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`VersionLabel`  <a name="cfn-appconfig-hostedconfigurationversion-versionlabel"></a>
+A user\-defined label for an AWS AppConfig hosted configuration version\.  
+*Required*: No  
+*Type*: String  
+*Minimum*: `1`  
+*Maximum*: `64`  
+*Pattern*: `.*[^0-9].*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-appconfig-hostedconfigurationversion-return-values"></a>

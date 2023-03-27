@@ -1,6 +1,9 @@
 # AWS::EC2::CapacityReservationFleet TagSpecification<a name="aws-properties-ec2-capacityreservationfleet-tagspecification"></a>
 
-The tags to apply to a resource when the resource is being created\.
+The tags to apply to a resource when the resource is being created\. When you specify a tag, you must specify the resource type to tag, otherwise the request will fail\.
+
+**Note**  
+The `Valid Values` lists all the resource types that can be tagged\. However, the action you're using might not support tagging all of these resource types\. If you try to tag a resource type that is unsupported for the action you're using, you'll get an error\.
 
 ## Syntax<a name="aws-properties-ec2-capacityreservationfleet-tagspecification-syntax"></a>
 

@@ -1,6 +1,6 @@
 # AWS::CloudFormation::StackSet<a name="aws-resource-cloudformation-stackset"></a>
 
-The `AWS::CloudFormation::StackSet` enables you to provision stacks into AWS accounts and across Regions by using a single CloudFormation template\. In the stack set, you specify the template to use, as well as any parameters and capabilities that the template requires\.
+The `AWS::CloudFormation::StackSet` enables you to provision stacks into AWS accounts and across Regions by using a single CloudFormation template\. In the stack set, you specify the template to use, in addition to any parameters and capabilities that the template requires\.
 
 ## Syntax<a name="aws-resource-cloudformation-stackset-syntax"></a>
 
@@ -18,7 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Capabilities](#cfn-cloudformation-stackset-capabilities)" : [ String, ... ],
       "[Description](#cfn-cloudformation-stackset-description)" : String,
       "[ExecutionRoleName](#cfn-cloudformation-stackset-executionrolename)" : String,
-      "[ManagedExecution](#cfn-cloudformation-stackset-managedexecution)" : Json,
+      "[ManagedExecution](#cfn-cloudformation-stackset-managedexecution)" : ManagedExecution,
       "[OperationPreferences](#cfn-cloudformation-stackset-operationpreferences)" : OperationPreferences,
       "[Parameters](#cfn-cloudformation-stackset-parameters)" : [ Parameter, ... ],
       "[PermissionModel](#cfn-cloudformation-stackset-permissionmodel)" : String,
@@ -44,7 +44,8 @@ Properties:
     - String
   [Description](#cfn-cloudformation-stackset-description): String
   [ExecutionRoleName](#cfn-cloudformation-stackset-executionrolename): String
-  [ManagedExecution](#cfn-cloudformation-stackset-managedexecution): Json
+  [ManagedExecution](#cfn-cloudformation-stackset-managedexecution): 
+    ManagedExecution
   [OperationPreferences](#cfn-cloudformation-stackset-operationpreferences): 
     OperationPreferences
   [Parameters](#cfn-cloudformation-stackset-parameters): 
@@ -119,7 +120,7 @@ If there are already running or queued operations, StackSets queues all incoming
 You can't modify your stack set's execution configuration while there are running or queued operations for that stack set\.
 When inactive \(default\), StackSets performs one operation at a time in request order\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [ManagedExecution](aws-properties-cloudformation-stackset-managedexecution.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OperationPreferences`  <a name="cfn-cloudformation-stackset-operationpreferences"></a>
@@ -142,6 +143,7 @@ Describes how the IAM roles required for stack set operations are created\.
 The `PermissionModel` property is required\.
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `SELF_MANAGED | SERVICE_MANAGED`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StackInstancesGroup`  <a name="cfn-cloudformation-stackset-stackinstancesgroup"></a>

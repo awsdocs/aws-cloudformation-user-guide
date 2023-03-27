@@ -28,9 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AvailabilityZone`  <a name="cfn-elasticloadbalancingv2-targetgroup-targetdescription-availabilityzone"></a>
 An Availability Zone or `all`\. This determines whether the target receives traffic from the load balancer nodes in the specified Availability Zone or from all enabled Availability Zones for the load balancer\.  
+For Application Load Balancer target groups, the specified Availability Zone value is only applicable when cross\-zone load balancing is off\. Otherwise the parameter is ignored and treated as `all`\.  
 This parameter is not supported if the target type of the target group is `instance` or `alb`\.  
 If the target type is `ip` and the IP address is in a subnet of the VPC for the target group, the Availability Zone is automatically detected and this parameter is optional\. If the IP address is outside the VPC, this parameter is required\.  
-With an Application Load Balancer, if the target type is `ip` and the IP address is outside the VPC for the target group, the only supported value is `all`\.  
+For Application Load Balancer target groups with cross\-zone load balancing off, if the target type is `ip` and the IP address is outside of the VPC for the target group, this should be an Availability Zone inside the VPC for the target group\.  
 If the target type is `lambda`, this parameter is optional and the only supported value is `all`\.  
 *Required*: No  
 *Type*: String  

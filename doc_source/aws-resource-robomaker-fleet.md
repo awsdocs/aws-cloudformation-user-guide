@@ -1,5 +1,10 @@
 # AWS::RoboMaker::Fleet<a name="aws-resource-robomaker-fleet"></a>
 
+**Important**  
+The following resource is now deprecated\. This resource can no longer be provisioned via stack create or update operations, and should not be included in your stack templates\.  
+  
+We recommend migrating to AWS IoT Greengrass Version 2\. For more information, see [Support Changes: May 2, 2022](https://docs.aws.amazon.com/robomaker/latest/dg/chapter-support-policy.html#software-support-policy-may2022) in the *AWS RoboMaker Developer Guide*\.
+
 The `AWS::RoboMaker::Fleet` resource creates an AWS RoboMaker fleet\. Fleets contain robots and can receive deployments\.
 
 ## Syntax<a name="aws-resource-robomaker-fleet-syntax"></a>

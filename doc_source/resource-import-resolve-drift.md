@@ -114,9 +114,9 @@ In this example, let's assume a user changed a resource *outside* of CloudFormat
 
 Our stack is now out of date, our resources are live, but we want to preserve the intended resource configuration\. We can do this by resolving drift through an import operation, without interrupting services\.
 
-## Resolve drift with an import operation using the CloudFormation console<a name="w11088ab1c25c19c19c24"></a>
+## Resolve drift with an import operation using the CloudFormation console<a name="w2ab1c25c19c19c24"></a>
 
-### Step 1\. Update stack with Retain deletion policy<a name="w11088ab1c25c19c19c24b3"></a>
+### Step 1\. Update stack with Retain deletion policy<a name="w2ab1c25c19c19c24b3"></a>
 
 **To update stack using a `DeletionPolicy` attribute with the `Retain` option**
 
@@ -166,7 +166,7 @@ To resolve drift through an import operation, without interrupting services, spe
 
 ------
 
-### Step 2\. Remove drifted resources, related parameters, and outputs<a name="w11088ab1c25c19c19c24b5"></a>
+### Step 2\. Remove drifted resources, related parameters, and outputs<a name="w2ab1c25c19c19c24b5"></a>
 
 **To remove drifted resources, related parameters, and outputs**
 
@@ -248,7 +248,7 @@ Resources:
 
 ------
 
-### Step 3\. Update template to match the live state of your resources<a name="w11088ab1c25c19c19c24b7"></a>
+### Step 3\. Update template to match the live state of your resources<a name="w2ab1c25c19c19c24b7"></a>
 
 **To update template to match the live state of resources**
 
@@ -276,7 +276,7 @@ Resources:
 
 1. On the **Import overview** page, review the resources being imported, and then choose **Import resources**\. This will import the `AWS::DynamoDB::Table` resource type back into your stack\.
 
-*Results*: In this example, we resolved the resource drift through an import operation, without interrupting services\. You can check the progress of an import action in the CloudFormation console in the Events tab\. Imported resources will have a `IMPORT_COMPLETE` status followed by a `CREATE_COMPLETE` status with **Resource import complete** as the status reason\. In this example, we resolved the resource drift through an import operation, without interrupting services\.
+*Results*: In this example, we resolved the resource drift through an import operation, without interrupting services\. You can check the progress of an import action in the CloudFormation console in the Events tab\. Imported resources will have a `IMPORT_COMPLETE` status followed by a `CREATE_COMPLETE` status with **Resource import complete** as the status reason\.
 
 Wait until CloudFormation completes the stack update operation\. After the stack update operation completes, update your template to match the actual, drifted state of your resources\. For example, the `BillingMode` will be set to `PAY_PER_REQUEST` and `ReadCapacityUnits` and `WriteCapacityUnits` will be set to `0`\.
 

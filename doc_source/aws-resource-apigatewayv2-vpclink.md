@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-apigatewayv2-vpclink-name)" : String,
       "[SecurityGroupIds](#cfn-apigatewayv2-vpclink-securitygroupids)" : [ String, ... ],
       "[SubnetIds](#cfn-apigatewayv2-vpclink-subnetids)" : [ String, ... ],
-      "[Tags](#cfn-apigatewayv2-vpclink-tags)" : Json
+      "[Tags](#cfn-apigatewayv2-vpclink-tags)" : {Key : Value, ...}
     }
 }
 ```
@@ -30,7 +30,8 @@ Properties:
     - String
   [SubnetIds](#cfn-apigatewayv2-vpclink-subnetids): 
     - String
-  [Tags](#cfn-apigatewayv2-vpclink-tags): Json
+  [Tags](#cfn-apigatewayv2-vpclink-tags): 
+    Key : Value
 ```
 
 ## Properties<a name="aws-resource-apigatewayv2-vpclink-properties"></a>
@@ -56,7 +57,7 @@ A list of subnet IDs to include in the VPC link\.
 `Tags`  <a name="cfn-apigatewayv2-vpclink-tags"></a>
 The collection of tags\. Each tag element is associated with a given resource\.  
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-apigatewayv2-vpclink-return-values"></a>
@@ -66,3 +67,10 @@ The collection of tags\. Each tag element is associated with a given resource\.
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the VPC link's ID, such as `abcde1`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-apigatewayv2-vpclink-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-apigatewayv2-vpclink-return-values-fn--getatt-fn--getatt"></a>
+
+`VpcLinkId`  <a name="VpcLinkId-fn::getatt"></a>
+Property description not available\.

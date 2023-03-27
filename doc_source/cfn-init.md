@@ -54,29 +54,50 @@ cfn-init --stack|-s stack.name.or.id \
 
 ## Example<a name="cfn-init-Examples"></a>
 
-### Amazon Linux example<a name="w11088ab1c31c42c29b9b3"></a>
+### Amazon Linux example<a name="w2ab1c33c42c29b9b3"></a>
 
-The following snippet shows the `UserData` property of an EC2 instance, which runs the `InstallAndRun` configset that's associated with the `WebServerInstance` resource\.
+The following snippets shows the `UserData` property of an EC2 instance, which runs the `InstallAndRun` configset that's associated with the `WebServerInstance` resource\.
 
 For a complete example template, see [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
 
+To include the latest version, add `yum install -y aws-cfn-bootstrap` to the `UserData`\.
+
 #### JSON<a name="cfn-init-example.json"></a>
 
+`UserData` property using the `Fn::Join` intrinsic function\.
+
 ```
-"UserData" : { "Fn::Base64" :
-  { "Fn::Join" : ["", [
-     "#!/bin/bash -xe\n",
-     "# Install the files and packages from the metadata\n",
-     "/opt/aws/bin/cfn-init -v ",
-     "         --stack ", { "Ref" : "AWS::StackName" },
-     "         --resource WebServerInstance ",
-     "         --configsets InstallAndRun ",
-     "         --region ", { "Ref" : "AWS::Region" }, "\n"
-  ]]}
+{
+    "UserData": {
+        "Fn::Base64": {
+            "Fn::Join": [
+                "",
+                [
+                    "#!/bin/bash -xe\n",
+                    "",
+                    "yum install -y aws-cfn-bootstrap",
+                    "/opt/aws/bin/cfn-init -v ",
+                    "         --stack ",
+                    {
+                        "Ref": "AWS::StackName"
+                    },
+                    "         --resource WebServerInstance ",
+                    "         --configsets InstallAndRun ",
+                    "         --region ",
+                    {
+                        "Ref": "AWS::Region"
+                    },
+                    "\n"
+                ]
+            ]
+        }
+    }
 }
 ```
 
 #### YAML<a name="cfn-init-example.yaml"></a>
+
+`UserData` property using the `Fn::Join` intrinsic function\.
 
 ```
 UserData: !Base64 
@@ -84,8 +105,8 @@ UserData: !Base64
     - ''
     - - |
         #!/bin/bash -xe
-      - |
-        # Install the files and packages from the metadata
+      - ''
+      - yum install -y aws-cfn-bootstrap
       - '/opt/aws/bin/cfn-init -v '
       - '         --stack '
       - !Ref 'AWS::StackName'
@@ -94,4 +115,44 @@ UserData: !Base64
       - '         --region '
       - !Ref 'AWS::Region'
       - |+
+```
+
+#### JSON<a name="cfn-init-example-fn-sub.json"></a>
+
+`UserData` property using the `Fn::Sub` intrinsic function\.
+
+```
+{
+    "UserData": {
+        "Fn::Base64": {
+            "Fn::Sub": [
+                "#!/bin/bash -x\n# Install the files and packages from the metadata\n/opt/aws/bin/cfn-init -v --stack ${AWS::StackName} --resource MyInstance --region ${AWS::Region}\n\n# Signal the status from cfn-init\n/opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource MyInstance --region ${AWS::Region}\n",
+                {}
+            ]
+        }
+    }
+}
+```
+
+#### YAML<a name="cfn-init-example-fn-sub.yaml"></a>
+
+`UserData` property using the `Fn::Sub` intrinsic function\.
+
+```
+UserData: !Base64 
+  'Fn::Sub':
+    - >
+      #!/bin/bash -x
+
+      # Install the files and packages from the metadata
+
+      /opt/aws/bin/cfn-init -v --stack ${AWS::StackName} --resource MyInstance
+      --region ${AWS::Region}
+
+
+      # Signal the status from cfn-init
+
+      /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource
+      MyInstance --region ${AWS::Region}
+    - {}
 ```

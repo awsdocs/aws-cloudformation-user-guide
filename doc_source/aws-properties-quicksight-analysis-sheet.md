@@ -28,7 +28,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The name of a sheet\. This name is displayed on the sheet's tab in the Amazon QuickSight console\.  
 *Required*: No  
 *Type*: String  
-*Pattern*: `.*\S.*`  
+*Minimum*: `1`  
+*Maximum*: `2048`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SheetId`  <a name="cfn-quicksight-analysis-sheet-sheetid"></a>
@@ -36,6 +37,6 @@ The unique identifier associated with a sheet\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `2048`  
+*Maximum*: `512`  
 *Pattern*: `[\w\-]+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

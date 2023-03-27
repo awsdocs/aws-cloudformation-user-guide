@@ -38,31 +38,32 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-gatewayresponse-properties"></a>
 
 `ResponseParameters`  <a name="cfn-apigateway-gatewayresponse-responseparameters"></a>
-The response parameters \(paths, query strings, and headers\) for the response\. Duplicates not allowed\.  
+Response parameters \(paths, query strings and headers\) of the GatewayResponse as a string\-to\-string map of key\-value pairs\.  
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseTemplates`  <a name="cfn-apigateway-gatewayresponse-responsetemplates"></a>
-The response templates for the response\. Duplicates not allowed\.  
+Response templates of the GatewayResponse as a string\-to\-string map of key\-value pairs\.  
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResponseType`  <a name="cfn-apigateway-gatewayresponse-responsetype"></a>
-The response type\. For valid values, see [GatewayResponse](https://docs.aws.amazon.com/apigateway/api-reference/resource/gateway-response/) in the *API Gateway API Reference*\.  
+The response type of the associated GatewayResponse\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `ACCESS_DENIED | API_CONFIGURATION_ERROR | AUTHORIZER_CONFIGURATION_ERROR | AUTHORIZER_FAILURE | BAD_REQUEST_BODY | BAD_REQUEST_PARAMETERS | DEFAULT_4XX | DEFAULT_5XX | EXPIRED_TOKEN | INTEGRATION_FAILURE | INTEGRATION_TIMEOUT | INVALID_API_KEY | INVALID_SIGNATURE | MISSING_AUTHENTICATION_TOKEN | QUOTA_EXCEEDED | REQUEST_TOO_LARGE | RESOURCE_NOT_FOUND | THROTTLED | UNAUTHORIZED | UNSUPPORTED_MEDIA_TYPE`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RestApiId`  <a name="cfn-apigateway-gatewayresponse-restapiid"></a>
-The identifier of the API\.  
+The string identifier of the associated RestApi\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StatusCode`  <a name="cfn-apigateway-gatewayresponse-statuscode"></a>
-The HTTP status code for the response\.  
+The HTTP status code for this GatewayResponse\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -225,5 +226,5 @@ Resources :
 ```
 
 ## See also<a name="aws-resource-apigateway-gatewayresponse--seealso"></a>
-+ [gatewayresponse:put](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/gatewayresponse-put/) in the *Amazon API Gateway REST API Reference*
++ [gatewayresponse:put](https://docs.aws.amazon.com/apigateway/latest/api/API_PutGatewayResponse.html) in the *Amazon API Gateway REST API Reference*
 

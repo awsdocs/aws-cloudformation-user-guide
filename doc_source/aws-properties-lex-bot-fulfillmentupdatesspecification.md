@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `Active`  <a name="cfn-lex-bot-fulfillmentupdatesspecification-active"></a>
 Determines whether fulfillment updates are sent to the user\. When this field is true, updates are sent\.  
-If the active field is set to true, the `startResponse`, `updateResponse`, and `timeoutInSeconds` fields are required\.  
+If the `active` field is set to true, the `startResponse`, `updateResponse`, and `timeoutInSeconds` fields are required\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

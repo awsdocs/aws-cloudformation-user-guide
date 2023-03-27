@@ -1,6 +1,6 @@
 # AWS::QuickSight::Dashboard AdHocFilteringOption<a name="aws-properties-quicksight-dashboard-adhocfilteringoption"></a>
 
-Ad hoc \(one\-time\) filtering option\.
+An ad hoc \(one\-time\) filtering option\.
 
 ## Syntax<a name="aws-properties-quicksight-dashboard-adhocfilteringoption-syntax"></a>
 

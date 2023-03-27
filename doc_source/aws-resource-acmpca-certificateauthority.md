@@ -22,7 +22,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[SigningAlgorithm](#cfn-acmpca-certificateauthority-signingalgorithm)" : String,
       "[Subject](#cfn-acmpca-certificateauthority-subject)" : Subject,
       "[Tags](#cfn-acmpca-certificateauthority-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[Type](#cfn-acmpca-certificateauthority-type)" : String
+      "[Type](#cfn-acmpca-certificateauthority-type)" : String,
+      "[UsageMode](#cfn-acmpca-certificateauthority-usagemode)" : String
     }
 }
 ```
@@ -44,6 +45,7 @@ Properties:
   [Tags](#cfn-acmpca-certificateauthority-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [Type](#cfn-acmpca-certificateauthority-type): String
+  [UsageMode](#cfn-acmpca-certificateauthority-usagemode): String
 ```
 
 ## Properties<a name="aws-resource-acmpca-certificateauthority-properties"></a>
@@ -64,14 +66,22 @@ Type of the public key algorithm and size, in bits, of the key pair that your CA
 `KeyStorageSecurityStandard`  <a name="cfn-acmpca-certificateauthority-keystoragesecuritystandard"></a>
 Specifies a cryptographic key management compliance standard used for handling CA keys\.  
 Default: FIPS\_140\_2\_LEVEL\_3\_OR\_HIGHER  
-Note: `FIPS_140_2_LEVEL_3_OR_HIGHER` is not supported in Region ap\-northeast\-3\. When creating a CA in the ap\-northeast\-3, you must provide `FIPS_140_2_LEVEL_2_OR_HIGHER` as the argument for `KeyStorageSecurityStandard`\. Failure to do this results in an `InvalidArgsException` with the message, "A certificate authority cannot be created in this region with the specified security standard\."  
+ *Note:* `FIPS_140_2_LEVEL_3_OR_HIGHER` is not supported in the following Regions:  
++ ap\-northeast\-3
++ ap\-southeast\-3
+When creating a CA in these Regions, you must provide `FIPS_140_2_LEVEL_2_OR_HIGHER` as the argument for `KeyStorageSecurityStandard`\. Failure to do this results in an `InvalidArgsException` with the message, "A certificate authority cannot be created in this region with the specified security standard\."  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `FIPS_140_2_LEVEL_2_OR_HIGHER | FIPS_140_2_LEVEL_3_OR_HIGHER`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RevocationConfiguration`  <a name="cfn-acmpca-certificateauthority-revocationconfiguration"></a>
-Information about the certificate revocation list \(CRL\) created and maintained by your private CA\. Certificate revocation information used by the CreateCertificateAuthority and UpdateCertificateAuthority actions\. Your certificate authority can create and maintain a certificate revocation list \(CRL\)\. A CRL contains information about certificates that have been revoked\.  
+Certificate revocation information used by the [CreateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_CreateCertificateAuthority.html) and [UpdateCertificateAuthority](https://docs.aws.amazon.com/privateca/latest/APIReference/API_UpdateCertificateAuthority.html) actions\. Your private certificate authority \(CA\) can configure Online Certificate Status Protocol \(OCSP\) support and/or maintain a certificate revocation list \(CRL\)\. OCSP returns validation information about certificates as requested by clients, and a CRL contains an updated list of certificates revoked by your CA\. For more information, see [RevokeCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_RevokeCertificate.html) in the *AWS Private CA API Reference* and [Setting up a certificate revocation method](https://docs.aws.amazon.com/privateca/latest/userguide/revocation-setup.html) in the *AWS Private CA User Guide*\.  
+The following requirements apply to revocation configurations\.  
++ A configuration disabling CRLs or OCSP must contain only the `Enabled=False` parameter, and will fail if other parameters such as `CustomCname` or `ExpirationInDays` are included\.
++ In a CRL configuration, the `S3BucketName` parameter must conform to the [Amazon S3 bucket naming rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html)\.
++ A configuration containing a custom Canonical Name \(CNAME\) parameter for CRLs or OCSP must conform to [RFC2396](https://www.ietf.org/rfc/rfc2396.txt) restrictions on the use of special characters in a CNAME\. 
++ In a CRL or OCSP configuration, the value of a CNAME parameter must not include a protocol prefix such as "http://" or "https://"\.
 *Required*: No  
 *Type*: [RevocationConfiguration](aws-properties-acmpca-certificateauthority-revocationconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -103,6 +113,14 @@ Type of your private CA\.
 *Allowed values*: `ROOT | SUBORDINATE`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`UsageMode`  <a name="cfn-acmpca-certificateauthority-usagemode"></a>
+Specifies whether the CA issues general\-purpose certificates that typically require a revocation mechanism, or short\-lived certificates that may optionally omit revocation because they expire quickly\. Short\-lived certificate validity is limited to seven days\.  
+The default value is GENERAL\_PURPOSE\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `GENERAL_PURPOSE | SHORT_LIVED_CERTIFICATE`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 ## Return values<a name="aws-resource-acmpca-certificateauthority-return-values"></a>
 
 ### Ref<a name="aws-resource-acmpca-certificateauthority-return-values-ref"></a>
@@ -127,9 +145,9 @@ The Base64 PEM\-encoded certificate signing request \(CSR\) for your certificate
 
 The following example of a CloudFormation template sets up a CA hierarchy and permission\. The example illustrates the use of `AWS::ACMPCA::Certificate`, `AWS::ACMPCA::CertificateAuthority`, and `AWS::ACMPCA::CertificateAuthorityActivation`, and `AWS::ACMPCA::Permission` resources\. 
 
-### Declaring a Private CA Hierarchy<a name="aws-resource-acmpca-certificateauthority--examples--Declaring_a_Private_CA_Hierarchy"></a>
+### Declaring a private CA Hierarchy<a name="aws-resource-acmpca-certificateauthority--examples--Declaring_a_private_CA_Hierarchy"></a>
 
-#### JSON<a name="aws-resource-acmpca-certificateauthority--examples--Declaring_a_Private_CA_Hierarchy--json"></a>
+#### JSON<a name="aws-resource-acmpca-certificateauthority--examples--Declaring_a_private_CA_Hierarchy--json"></a>
 
 ```
 {
@@ -448,7 +466,7 @@ The following example of a CloudFormation template sets up a CA hierarchy and pe
 }
 ```
 
-#### YAML<a name="aws-resource-acmpca-certificateauthority--examples--Declaring_a_Private_CA_Hierarchy--yaml"></a>
+#### YAML<a name="aws-resource-acmpca-certificateauthority--examples--Declaring_a_private_CA_Hierarchy--yaml"></a>
 
 ```
 ---

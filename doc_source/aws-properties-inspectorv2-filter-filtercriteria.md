@@ -288,7 +288,7 @@ Details on the vulnerability ID used to filter findings\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VulnerabilitySource`  <a name="cfn-inspectorv2-filter-filtercriteria-vulnerabilitysource"></a>
-Not currently supported by AWS CloudFormation\.  
+Details on the vulnerability score to filter findings by\.  
 *Required*: No  
 *Type*: List of [StringFilter](aws-properties-inspectorv2-filter-stringfilter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

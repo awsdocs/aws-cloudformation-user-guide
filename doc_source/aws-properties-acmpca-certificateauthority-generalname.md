@@ -1,6 +1,6 @@
 # AWS::ACMPCA::CertificateAuthority GeneralName<a name="aws-properties-acmpca-certificateauthority-generalname"></a>
 
-Describes an ASN\.1 X\.400 `GeneralName` as defined in [RFC 5280](https://tools.ietf.org/html/rfc5280)\. Only one of the following naming options should be provided\. Providing more than one option results in an `InvalidArgsException` error\.
+Describes an ASN\.1 X\.400 `GeneralName` as defined in [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280)\. Only one of the following naming options should be provided\. Providing more than one option results in an `InvalidArgsException` error\.
 
 ## Syntax<a name="aws-properties-acmpca-certificateauthority-generalname-syntax"></a>
 
@@ -83,7 +83,7 @@ Represents `GeneralName` using an `OtherName` object\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Rfc822Name`  <a name="cfn-acmpca-certificateauthority-generalname-rfc822name"></a>
-Represents `GeneralName` as an [RFC 822](https://tools.ietf.org/html/rfc822) email address\.  
+Represents `GeneralName` as an [RFC 822](https://datatracker.ietf.org/doc/html/rfc822) email address\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

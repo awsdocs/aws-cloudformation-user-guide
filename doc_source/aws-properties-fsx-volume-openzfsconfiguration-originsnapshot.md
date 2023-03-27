@@ -34,7 +34,7 @@ The strategy used when copying data from the snapshot to the new volume\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SnapshotARN`  <a name="cfn-fsx-volume-openzfsconfiguration-originsnapshot-snapshotarn"></a>
-The Amazon Resource Name \(ARN\) for a given resource\. ARNs uniquely identify AWS resources\. We require an ARN when you need to specify a resource unambiguously across all of AWS\. For more information, see [Amazon Resource Names \(ARNs\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) in the * AWS General Reference*\.  
+Specifies the snapshot to use when creating an OpenZFS volume from a snapshot\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

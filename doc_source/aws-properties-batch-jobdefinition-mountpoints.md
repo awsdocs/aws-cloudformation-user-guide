@@ -1,6 +1,6 @@
 # AWS::Batch::JobDefinition MountPoints<a name="aws-properties-batch-jobdefinition-mountpoints"></a>
 
-Details on a Docker volume mount point that's used in a job's container properties\. This parameter maps to `Volumes` in the [Create a container](https://docs.docker.com/engine/reference/api/docker_remote_api_v1.19/#create-a-container) section of the Docker Remote API and the `--volume` option to docker run\.
+Details for a Docker volume mount point that's used in a job's container properties\. This parameter maps to `Volumes` in the [Create a container](https://docs.docker.com/engine/reference/api/docker_remote_api_v1.19/#create-a-container) section of the *Docker Remote API* and the `--volume` option to docker run\.
 
 ## Syntax<a name="aws-properties-batch-jobdefinition-mountpoints-syntax"></a>
 

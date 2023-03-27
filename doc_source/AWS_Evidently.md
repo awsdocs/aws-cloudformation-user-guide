@@ -5,3 +5,4 @@
 + [AWS::Evidently::Feature](aws-resource-evidently-feature.md)
 + [AWS::Evidently::Launch](aws-resource-evidently-launch.md)
 + [AWS::Evidently::Project](aws-resource-evidently-project.md)
++ [AWS::Evidently::Segment](aws-resource-evidently-segment.md)

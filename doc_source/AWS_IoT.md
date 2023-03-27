@@ -3,6 +3,7 @@
 **Resource types**
 + [AWS::IoT::AccountAuditConfiguration](aws-resource-iot-accountauditconfiguration.md)
 + [AWS::IoT::Authorizer](aws-resource-iot-authorizer.md)
++ [AWS::IoT::CACertificate](aws-resource-iot-cacertificate.md)
 + [AWS::IoT::Certificate](aws-resource-iot-certificate.md)
 + [AWS::IoT::CustomMetric](aws-resource-iot-custommetric.md)
 + [AWS::IoT::Dimension](aws-resource-iot-dimension.md)
@@ -15,6 +16,7 @@
 + [AWS::IoT::PolicyPrincipalAttachment](aws-resource-iot-policyprincipalattachment.md)
 + [AWS::IoT::ProvisioningTemplate](aws-resource-iot-provisioningtemplate.md)
 + [AWS::IoT::ResourceSpecificLogging](aws-resource-iot-resourcespecificlogging.md)
++ [AWS::IoT::RoleAlias](aws-resource-iot-rolealias.md)
 + [AWS::IoT::ScheduledAudit](aws-resource-iot-scheduledaudit.md)
 + [AWS::IoT::SecurityProfile](aws-resource-iot-securityprofile.md)
 + [AWS::IoT::Thing](aws-resource-iot-thing.md)

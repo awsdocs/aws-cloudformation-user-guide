@@ -1,6 +1,6 @@
 # AWS::Lex::Bot SlotDefaultValueSpecification<a name="aws-properties-lex-bot-slotdefaultvaluespecification"></a>
 
-Defines a list of values that Amazon Lex should use as the default value for a slot\.
+The default value to use when a user doesn't provide a value for a slot\.
 
 ## Syntax<a name="aws-properties-lex-bot-slotdefaultvaluespecification-syntax"></a>
 

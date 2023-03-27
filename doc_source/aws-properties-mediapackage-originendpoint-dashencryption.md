@@ -1,6 +1,6 @@
 # AWS::MediaPackage::OriginEndpoint DashEncryption<a name="aws-properties-mediapackage-originendpoint-dashencryption"></a>
 
-Holds encryption information so that access to the content can be controlled by a DRM solution\. 
+Holds encryption information so that access to the content can be controlled by a DRM solution\.
 
 ## Syntax<a name="aws-properties-mediapackage-originendpoint-dashencryption-syntax"></a>
 
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-mediapackage-originendpoint-dashencryption-properties"></a>
 
 `KeyRotationIntervalSeconds`  <a name="cfn-mediapackage-originendpoint-dashencryption-keyrotationintervalseconds"></a>
-Number of seconds before AWS Elemental MediaPackage rotates to a new key\. By default, rotation is set to 60 seconds\. Set to `0` to disable key rotation\.   
+Number of seconds before AWS Elemental MediaPackage rotates to a new key\. By default, rotation is set to 60 seconds\. Set to `0` to disable key rotation\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

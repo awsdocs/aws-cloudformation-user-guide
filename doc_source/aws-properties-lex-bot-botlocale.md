@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[CustomVocabulary](#cfn-lex-bot-botlocale-customvocabulary)" : CustomVocabulary,
   "[Description](#cfn-lex-bot-botlocale-description)" : String,
   "[Intents](#cfn-lex-bot-botlocale-intents)" : [ Intent, ... ],
   "[LocaleId](#cfn-lex-bot-botlocale-localeid)" : String,
@@ -22,6 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-lex-bot-botlocale-syntax.yaml"></a>
 
 ```
+  [CustomVocabulary](#cfn-lex-bot-botlocale-customvocabulary): 
+    CustomVocabulary
   [Description](#cfn-lex-bot-botlocale-description): String
   [Intents](#cfn-lex-bot-botlocale-intents): 
     - Intent
@@ -34,6 +37,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-lex-bot-botlocale-properties"></a>
+
+`CustomVocabulary`  <a name="cfn-lex-bot-botlocale-customvocabulary"></a>
+Specifies a custom vocabulary to use with a specific locale\.  
+*Required*: No  
+*Type*: [CustomVocabulary](aws-properties-lex-bot-customvocabulary.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Description`  <a name="cfn-lex-bot-botlocale-description"></a>
 A description of the bot locale\. Use this to help identify the bot locale in lists\.  
@@ -54,7 +63,7 @@ The identifier of the language and locale that the bot will be used in\. The str
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NluConfidenceThreshold`  <a name="cfn-lex-bot-botlocale-nluconfidencethreshold"></a>
-Determines the threshold where Amazon Lex will insert the AMAZON\.FallbackIntent, AMAZON\.KendraSearchIntent, or both when returning alternative intents\. You must configure an AMAZON\.FallbackIntent\. AMAZON\.KendraSearchIntent is only inserted if it is configured for the bot\.  
+Determines the threshold where Amazon Lex will insert the `AMAZON.FallbackIntent`, `AMAZON.KendraSearchIntent`, or both when returning alternative intents\. You must configure an `AMAZON.FallbackIntent`\. `AMAZON.KendraSearchIntent` is only inserted if it is configured for the bot\.  
 *Required*: Yes  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -66,7 +75,7 @@ One or more slot types defined for the locale\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VoiceSettings`  <a name="cfn-lex-bot-botlocale-voicesettings"></a>
-Identifies the Amazon Polly voice used for audio interaction with the user\.  
+Defines settings for using an Amazon Polly voice to communicate with a user\.  
 *Required*: No  
 *Type*: [VoiceSettings](aws-properties-lex-bot-voicesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -51,10 +51,10 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 #### <a name="aws-resource-servicecatalogappregistry-attributegroupassociation-return-values-fn--getatt-fn--getatt"></a>
 
 `ApplicationArn`  <a name="ApplicationArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.
 
 `AttributeGroupArn`  <a name="AttributeGroupArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.
 
 `Id`  <a name="Id-fn::getatt"></a>
 The Id of the Association\.  

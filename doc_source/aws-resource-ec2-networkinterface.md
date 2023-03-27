@@ -64,7 +64,7 @@ The security group IDs associated with this network interface\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InterfaceType`  <a name="cfn-ec2-networkinterface-interfacetype"></a>
-Indicates the type of network interface\. To create an Elastic Fabric Adapter \(EFA\), specify `efa`\. For more information, see [ Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon Elastic Compute Cloud User Guide*\. To create a trunk network interface, specify `trunk`\.  
+The type of network interface\. The default is `interface`\. The supported values are `efa` and `trunk`\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `branch | efa | trunk`  
@@ -92,11 +92,11 @@ Assigns a single private IP address to the network interface, which is used as t
 Assigns private IP addresses to the network interface\. You can specify a primary private IP address by setting the value of the `Primary` property to `true` in the `PrivateIpAddressSpecification` property\. If you want EC2 to automatically assign private IP addresses, use the `SecondaryPrivateIpAddressCount` property and do not specify this property\.  
 *Required*: No  
 *Type*: List of [PrivateIpAddressSpecification](aws-properties-ec2-networkinterface-privateipaddressspecification.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `SecondaryPrivateIpAddressCount`  <a name="cfn-ec2-networkinterface-secondaryprivateipaddresscount"></a>
 The number of secondary private IPv4 addresses to assign to a network interface\. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet's IPv4 CIDR range\. You can't specify this option and specify more than one private IP address using `privateIpAddresses`\.  
-The number of IP addresses you can assign to a network interface varies by instance type\. For more information, see [IP Addresses Per ENI Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) in the *Amazon Virtual Private Cloud User Guide*\.  
+You can't specify a count of private IPv4 addresses if you've specified one of the following: specific private IPv4 addresses, specific IPv4 prefixes, or a count of IPv4 prefixes\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -123,7 +123,7 @@ An arbitrary set of tags \(key\-value pairs\) for this network interface\.
 
 ### Ref<a name="aws-resource-ec2-networkinterface-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource name\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the network interface\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

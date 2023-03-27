@@ -1,6 +1,9 @@
 # AWS::WAFv2::WebACL ExcludedRule<a name="aws-properties-wafv2-webacl-excludedrule"></a>
 
-Specifies a single rule to exclude from the rule group\. Excluding a rule overrides its action setting for the rule group in the web ACL, setting it to `COUNT`\. This effectively excludes the rule from acting on web requests\. 
+Specifies a single rule in a rule group whose action you want to override to `Count`\. 
+
+**Note**  
+Instead of this option, use `RuleActionOverrides`\. It accepts any valid action setting, including `Count`\.
 
 ## Syntax<a name="aws-properties-wafv2-webacl-excludedrule-syntax"></a>
 
@@ -23,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-webacl-excludedrule-properties"></a>
 
 `Name`  <a name="cfn-wafv2-webacl-excludedrule-name"></a>
-The name of the rule to exclude\.  
+The name of the rule whose action you want to override to `Count`\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

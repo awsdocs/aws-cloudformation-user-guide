@@ -43,7 +43,7 @@ The information about the container cluster\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Type`  <a name="cfn-emrcontainers-virtualcluster-containerprovider-type"></a>
-The type of the container provider\. EKS is the only supported type as of now\.  
+The type of the container provider\. Amazon EKS is the only supported type as of now\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `EKS`  

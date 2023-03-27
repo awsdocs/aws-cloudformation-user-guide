@@ -1,6 +1,6 @@
 # AWS::DMS::Endpoint KinesisSettings<a name="aws-properties-dms-endpoint-kinesissettings"></a>
 
-Not currently supported by AWS CloudFormation\.\.
+Provides information that describes an Amazon Kinesis Data Stream endpoint\. This information includes the output format of records applied to the endpoint and details of transaction and control table data information\. For more information about other available settings, see [ Using object mapping to migrate data to a Kinesis data stream](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html#CHAP_Target.Kinesis.ObjectMapping) in the *AWS Database Migration Service User Guide*\.
 
 ## Syntax<a name="aws-properties-dms-endpoint-kinesissettings-syntax"></a>
 
@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[IncludeControlDetails](#cfn-dms-endpoint-kinesissettings-includecontroldetails)" : Boolean,
   "[IncludeNullAndEmpty](#cfn-dms-endpoint-kinesissettings-includenullandempty)" : Boolean,
+  "[IncludePartitionValue](#cfn-dms-endpoint-kinesissettings-includepartitionvalue)" : Boolean,
   "[IncludeTableAlterOperations](#cfn-dms-endpoint-kinesissettings-includetablealteroperations)" : Boolean,
   "[IncludeTransactionDetails](#cfn-dms-endpoint-kinesissettings-includetransactiondetails)" : Boolean,
   "[MessageFormat](#cfn-dms-endpoint-kinesissettings-messageformat)" : String,
@@ -27,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [IncludeControlDetails](#cfn-dms-endpoint-kinesissettings-includecontroldetails): Boolean
   [IncludeNullAndEmpty](#cfn-dms-endpoint-kinesissettings-includenullandempty): Boolean
+  [IncludePartitionValue](#cfn-dms-endpoint-kinesissettings-includepartitionvalue): Boolean
   [IncludeTableAlterOperations](#cfn-dms-endpoint-kinesissettings-includetablealteroperations): Boolean
   [IncludeTransactionDetails](#cfn-dms-endpoint-kinesissettings-includetransactiondetails): Boolean
   [MessageFormat](#cfn-dms-endpoint-kinesissettings-messageformat): String
@@ -50,6 +52,12 @@ Include NULL and empty columns for records migrated to the endpoint\. The defaul
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`IncludePartitionValue`  <a name="cfn-dms-endpoint-kinesissettings-includepartitionvalue"></a>
+Shows the partition value within the Kinesis message output, unless the partition type is `schema-table-type`\. The default is `false`\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `IncludeTableAlterOperations`  <a name="cfn-dms-endpoint-kinesissettings-includetablealteroperations"></a>
 Includes any data definition language \(DDL\) operations that change the table in the control data, such as `rename-table`, `drop-table`, `add-column`, `drop-column`, and `rename-column`\. The default is `false`\.  
 *Required*: No  
@@ -63,7 +71,7 @@ Provides detailed transaction information from the source database\. This inform
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MessageFormat`  <a name="cfn-dms-endpoint-kinesissettings-messageformat"></a>
-Not currently supported by AWS CloudFormation\.  
+The output format for the records created on the endpoint\. The message format is `JSON` \(default\) or `JSON_UNFORMATTED` \(a single line with no tab\)\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `json | json-unformatted`  
@@ -82,13 +90,13 @@ Prefixes schema and table names to partition values, when the partition type is 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceAccessRoleArn`  <a name="cfn-dms-endpoint-kinesissettings-serviceaccessrolearn"></a>
-Not currently supported by AWS CloudFormation\.  
-*Required*: No  
+The Amazon Resource Name \(ARN\) for the IAM role that AWS DMS uses to write to the Kinesis data stream\. The role must allow the `iam:PassRole` action\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamArn`  <a name="cfn-dms-endpoint-kinesissettings-streamarn"></a>
-Not currently supported by AWS CloudFormation\.  
+The Amazon Resource Name \(ARN\) for the Amazon Kinesis Data Streams endpoint\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

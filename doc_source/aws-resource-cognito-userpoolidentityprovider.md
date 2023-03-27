@@ -39,20 +39,20 @@ Properties:
 ## Properties<a name="aws-resource-cognito-userpoolidentityprovider-properties"></a>
 
 `AttributeMapping`  <a name="cfn-cognito-userpoolidentityprovider-attributemapping"></a>
-A mapping of identity provider attributes to standard and custom user pool attributes\.  
+A mapping of IdP attributes to standard and custom user pool attributes\.  
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IdpIdentifiers`  <a name="cfn-cognito-userpoolidentityprovider-idpidentifiers"></a>
-A list of identity provider identifiers\.  
+A list of IdP identifiers\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProviderDetails`  <a name="cfn-cognito-userpoolidentityprovider-providerdetails"></a>
-The identity provider details\. The following list describes the provider detail keys for each identity provider type\.  
+The IdP details\. The following list describes the provider detail keys for each IdP type\.  
 + For Google and Login with Amazon:
   + client\_id
   + client\_secret
@@ -74,29 +74,31 @@ The identity provider details\. The following list describes the provider detail
   + attributes\_request\_method
   + oidc\_issuer
   + authorize\_scopes
-  + authorize\_url *if not available from discovery URL specified by oidc\_issuer key* 
-  + token\_url *if not available from discovery URL specified by oidc\_issuer key* 
-  + attributes\_url *if not available from discovery URL specified by oidc\_issuer key* 
-  + jwks\_uri *if not available from discovery URL specified by oidc\_issuer key* 
-  + attributes\_url\_add\_attributes *a read\-only property that is set automatically* 
+  + The following keys are only present if Amazon Cognito didn't discover them at the `oidc_issuer` URL\.
+    + authorize\_url 
+    + token\_url 
+    + attributes\_url 
+    + jwks\_uri 
+  + Amazon Cognito sets the value of the following keys automatically\. They are read\-only\.
+    + attributes\_url\_add\_attributes 
 + For SAML providers:
-  + MetadataFile OR MetadataURL
-  + IDPSignout \(optional\)
+  + MetadataFile or MetadataURL
+  + IDPSignout *optional* 
 *Required*: No  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProviderName`  <a name="cfn-cognito-userpoolidentityprovider-providername"></a>
-The identity provider name\.  
+The IdP name\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
+*Minimum*: `3`  
 *Maximum*: `32`  
 *Pattern*: `[^_][\p{L}\p{M}\p{S}\p{N}\p{P}][^_]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ProviderType`  <a name="cfn-cognito-userpoolidentityprovider-providertype"></a>
-The identity provider type\.  
+The IdP type\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `Facebook | Google | LoginWithAmazon | OIDC | SAML | SignInWithApple`  
@@ -306,9 +308,9 @@ UserPoolIdentityProvider:
     ProviderName: "SignInWithApple"
     ProviderDetails:
       client_id: "YourSign"
-      team_id: "YourAppleTeamId",
-      key_id: "YourApplePrivateKeyID",
-      private_key: "YourApplePrivateKey",
+      team_id: "YourAppleTeamId"
+      key_id: "YourApplePrivateKeyID"
+      private_key: "YourApplePrivateKey"
       authorize_scopes: "public_profile,email"
     ProviderType: "SignInWithApple"
     AttributeMapping:

@@ -82,7 +82,7 @@ Indicates the way in which the Capacity Reservation ends\. A Capacity Reservatio
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EphemeralStorage`  <a name="cfn-ec2-capacityreservation-ephemeralstorage"></a>
-Indicates whether the Capacity Reservation supports instances with temporary, block\-level storage\.  
+ *Deprecated\.*   
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -167,6 +167,9 @@ Returns the Availability Zone in which the capacity is reserved\. For example: `
 
 `AvailableInstanceCount`  <a name="AvailableInstanceCount-fn::getatt"></a>
 Returns the remaining capacity, which indicates the number of instances that can be launched in the Capacity Reservation\. For example: `9`\.
+
+`Id`  <a name="Id-fn::getatt"></a>
+The ID of the Capacity Reservation\.
 
 `InstanceType`  <a name="InstanceType-fn::getatt"></a>
 Returns the type of instance for which the capacity is reserved\. For example: `m4.large`\.

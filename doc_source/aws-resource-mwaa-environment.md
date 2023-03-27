@@ -2,15 +2,6 @@
 
 The `AWS::MWAA::Environment` resource creates an Amazon Managed Workflows for Apache Airflow \(MWAA\) environment\. 
 
-**Topics**
-+ [Syntax](#aws-resource-mwaa-environment-syntax)
-+ [Properties](#aws-resource-mwaa-environment-properties)
-+ [Return values](#aws-resource-mwaa-environment-return-values)
-+ [Examples](#aws-resource-mwaa-environment--examples)
-+ [AWS::MWAA::Environment LoggingConfiguration](aws-properties-mwaa-environment-loggingconfiguration.md)
-+ [AWS::MWAA::Environment ModuleLoggingConfiguration](aws-properties-mwaa-environment-moduleloggingconfiguration.md)
-+ [AWS::MWAA::Environment NetworkConfiguration](aws-properties-mwaa-environment-networkconfiguration.md)
-
 ## Syntax<a name="aws-resource-mwaa-environment-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -83,7 +74,7 @@ A list of key\-value pairs containing the Airflow configuration options for your
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AirflowVersion`  <a name="cfn-mwaa-environment-airflowversion"></a>
-The version of Apache Airflow to use for the environment\. If no value is specified, defaults to the latest version\. Valid values: `2.0.2`, `1.10.12`\.  
+The version of Apache Airflow to use for the environment\. If no value is specified, defaults to the latest version\. Valid values: `2.0.2`, `1.10.12`, `2.2.2`, and `2.4.3`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -168,8 +159,8 @@ The relative path to the `requirements.txt` file on your Amazon S3 bucket\. For 
 
 `Schedulers`  <a name="cfn-mwaa-environment-schedulers"></a>
 The number of schedulers that you want to run in your environment\. Valid values:   
-+ **v2\.0\.2** \- Accepts between 2 to 5\. Defaults to 2\.
-+ **v1\.10\.12** \- Accepts 1\.
++ **v2** \- Accepts between 2 to 5\. Defaults to 2\.
++ **v1** \- Accepts 1\.
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

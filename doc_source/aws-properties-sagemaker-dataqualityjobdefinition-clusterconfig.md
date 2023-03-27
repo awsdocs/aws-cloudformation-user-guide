@@ -35,7 +35,7 @@ The number of ML compute instances to use in the model monitoring job\. For dist
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InstanceType`  <a name="cfn-sagemaker-dataqualityjobdefinition-clusterconfig-instancetype"></a>
-Not currently supported by AWS CloudFormation\.  
+The ML compute instance type for the processing job\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

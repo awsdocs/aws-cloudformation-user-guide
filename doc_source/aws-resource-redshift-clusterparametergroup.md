@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Description](#cfn-redshift-clusterparametergroup-description)" : String,
       "[ParameterGroupFamily](#cfn-redshift-clusterparametergroup-parametergroupfamily)" : String,
+      "[ParameterGroupName](#cfn-redshift-clusterparametergroup-parametergroupname)" : String,
       "[Parameters](#cfn-redshift-clusterparametergroup-parameters)" : [ Parameter, ... ],
       "[Tags](#cfn-redshift-clusterparametergroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -27,6 +28,7 @@ Type: AWS::Redshift::ClusterParameterGroup
 Properties: 
   [Description](#cfn-redshift-clusterparametergroup-description): String
   [ParameterGroupFamily](#cfn-redshift-clusterparametergroup-parametergroupfamily): String
+  [ParameterGroupName](#cfn-redshift-clusterparametergroup-parametergroupname): String
   [Parameters](#cfn-redshift-clusterparametergroup-parameters): 
     - Parameter
   [Tags](#cfn-redshift-clusterparametergroup-tags): 
@@ -49,12 +51,19 @@ The name of the cluster parameter group family that this cluster parameter group
 *Maximum*: `2147483647`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`ParameterGroupName`  <a name="cfn-redshift-clusterparametergroup-parametergroupname"></a>
+The name of the cluster parameter group\.  
+*Required*: No  
+*Type*: String  
+*Maximum*: `2147483647`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Parameters`  <a name="cfn-redshift-clusterparametergroup-parameters"></a>
 An array of parameters to be modified\. A maximum of 20 parameters can be modified in a single request\.  
 For each parameter to be modified, you must supply at least the parameter name and parameter value; other name\-value pairs of the parameter are optional\.  
 For the workload management \(WLM\) configuration, you must supply all the name\-value pairs in the wlm\_json\_configuration parameter\.  
 *Required*: No  
-*Type*: List of [Parameter](aws-property-redshift-clusterparametergroup-parameter.md)  
+*Type*: List of [Parameter](aws-properties-redshift-clusterparametergroup-parameter.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-redshift-clusterparametergroup-tags"></a>
@@ -102,13 +111,13 @@ The following example describes a parameter group with one parameter that's spec
 #### YAML<a name="aws-resource-redshift-clusterparametergroup--examples--Single_Parameter--yaml"></a>
 
 ```
-myClusterParameterGroup: 
+myClusterParameterGroup:
   Type: "AWS::Redshift::ClusterParameterGroup"
-  Properties: 
+  Properties:
     Description: "My parameter group"
     ParameterGroupFamily: "redshift-1.0"
-    Parameters: 
-      - 
+    Parameters:
+      -
         ParameterName: "enable_user_activity_logging"
         ParameterValue: "true"
 ```
@@ -142,13 +151,13 @@ The following example modifies the workload management configuration using the `
 #### YAML<a name="aws-resource-redshift-clusterparametergroup--examples--Workload_Management_Configuration--yaml"></a>
 
 ```
-RedshiftClusterParameterGroup: 
+RedshiftClusterParameterGroup:
   Type: "AWS::Redshift::ClusterParameterGroup"
-  Properties: 
+  Properties:
     Description: "Cluster parameter group"
     ParameterGroupFamily: "redshift-1.0"
-    Parameters: 
-      - 
+    Parameters:
+      -
         ParameterName: "wlm_json_configuration"
         ParameterValue: "[{\"user_group\":[\"example_user_group1\"],\"query_group\":[\"example_query_group1\"],\"query_concurrency\":7},{\"query_concurrency\":5}]"
     Tags:

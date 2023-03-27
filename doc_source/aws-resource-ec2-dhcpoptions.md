@@ -50,7 +50,7 @@ This value is used to complete unqualified DNS hostnames\. If you're using Amazo
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DomainNameServers`  <a name="cfn-ec2-dhcpoptions-domainnameservers"></a>
-The IPv4 addresses of up to four domain name servers, or AmazonProvidedDNS\. The default DHCP option set specifies `AmazonProvidedDNS`\. If specifying more than one domain name server, specify the IP addresses in a single parameter, separated by commas\. To have your instance to receive a custom DNS hostname as specified in `DomainName`, you must set this to a custom DNS server\.  
+The IPv4 addresses of up to four domain name servers, or `AmazonProvidedDNS`\. The default is `AmazonProvidedDNS`\. To have your instance receive a custom DNS hostname as specified in `DomainName`, you must set this property to a custom DNS server\.  
 *Required*: Conditional  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

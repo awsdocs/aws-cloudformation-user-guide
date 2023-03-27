@@ -47,6 +47,7 @@ CloudFormation deletes the resource and all its content if applicable during sta
 + For `AWS::RDS::DBCluster` resources, the default policy is `Snapshot`\.
 + For `AWS::RDS::DBInstance` resources that don't specify the `DBClusterIdentifier` property, the default policy is `Snapshot`\.
 + For Amazon S3 buckets, you must delete all objects in the bucket for deletion to succeed\.
+The default behavior of CloudFormation is to delete the secret with the ForceDeleteWithoutRecovery flag\.
 
 Retain  
 CloudFormation keeps the resource without deleting the resource or its contents when its stack is deleted\. You can add this deletion policy to any resource type\. When CloudFormation completes the stack deletion, the stack will be in `Delete_Complete` state; however, resources that are retained continue to exist and continue to incur applicable charges until you delete those resources\.  

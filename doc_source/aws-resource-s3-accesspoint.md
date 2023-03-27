@@ -13,9 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::S3::AccessPoint",
   "Properties" : {
       "[Bucket](#cfn-s3-accesspoint-bucket)" : String,
+      "[BucketAccountId](#cfn-s3-accesspoint-bucketaccountid)" : String,
       "[Name](#cfn-s3-accesspoint-name)" : String,
       "[Policy](#cfn-s3-accesspoint-policy)" : Json,
-      "[PolicyStatus](#cfn-s3-accesspoint-policystatus)" : Json,
+      "[PolicyStatus](#cfn-s3-accesspoint-policystatus)" : PolicyStatus,
       "[PublicAccessBlockConfiguration](#cfn-s3-accesspoint-publicaccessblockconfiguration)" : PublicAccessBlockConfiguration,
       "[VpcConfiguration](#cfn-s3-accesspoint-vpcconfiguration)" : VpcConfiguration
     }
@@ -28,9 +29,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::S3::AccessPoint
 Properties: 
   [Bucket](#cfn-s3-accesspoint-bucket): String
+  [BucketAccountId](#cfn-s3-accesspoint-bucketaccountid): String
   [Name](#cfn-s3-accesspoint-name): String
   [Policy](#cfn-s3-accesspoint-policy): Json
-  [PolicyStatus](#cfn-s3-accesspoint-policystatus): Json
+  [PolicyStatus](#cfn-s3-accesspoint-policystatus): 
+    PolicyStatus
   [PublicAccessBlockConfiguration](#cfn-s3-accesspoint-publicaccessblockconfiguration): 
     PublicAccessBlockConfiguration
   [VpcConfiguration](#cfn-s3-accesspoint-vpcconfiguration): 
@@ -42,6 +45,12 @@ Properties:
 `Bucket`  <a name="cfn-s3-accesspoint-bucket"></a>
 The name of the bucket associated with this access point\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`BucketAccountId`  <a name="cfn-s3-accesspoint-bucketaccountid"></a>
+The AWS account ID associated with the S3 bucket associated with this access point\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -60,7 +69,7 @@ The access point policy associated with this access point\.
 `PolicyStatus`  <a name="cfn-s3-accesspoint-policystatus"></a>
 The container element for a bucket's policy status\.  
 *Required*: No  
-*Type*: Json  
+*Type*: [PolicyStatus](aws-properties-s3-accesspoint-policystatus.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PublicAccessBlockConfiguration`  <a name="cfn-s3-accesspoint-publicaccessblockconfiguration"></a>
@@ -267,8 +276,7 @@ Resources:
               - 's3:PutObject'
             Effect: Allow
             Resource:
-              - !Sub &gt;-
-                arn:${AWS::Partition}:s3:${AWS::Region}:${AWS::AccountId}:accesspoint/my-access-point/object/janedoe/*
+               - !Sub  'arn:${AWS::Partition}:s3:${AWS::Region}:${AWS::AccountId}:accesspoint/my-access-point/object/janedoe/*'
             Principal:
               AWS: !Sub 'arn:${AWS::Partition}:iam::${AWS::AccountId}:user/JaneDoe'
 Outputs:

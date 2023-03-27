@@ -35,7 +35,7 @@ The version number of the protocol that is used by the launch profile\. The only
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Platform`  <a name="cfn-nimblestudio-studiocomponent-studiocomponentinitializationscript-platform"></a>
-The platform of the initialization script, either WINDOWS or LINUX\.  
+The platform of the initialization script, either Windows or Linux\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -40,7 +40,7 @@ The default email option\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailMessage`  <a name="cfn-cognito-userpool-verificationmessagetemplate-emailmessage"></a>
-The email message template\. EmailMessage is allowed only if [ EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is DEVELOPER\.   
+The template for email messages that Amazon Cognito sends to your users\. You can set an `EmailMessage` template only if the value of [ EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is `DEVELOPER`\. When your [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is `DEVELOPER`, your user pool sends email messages with your own Amazon SES configuration\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `6`  
@@ -49,7 +49,7 @@ The email message template\. EmailMessage is allowed only if [ EmailSendingAccou
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailMessageByLink`  <a name="cfn-cognito-userpool-verificationmessagetemplate-emailmessagebylink"></a>
-The email message template for sending a confirmation link to the user\. EmailMessageByLink is allowed only if [ EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is DEVELOPER\.  
+The email message template for sending a confirmation link to the user\. You can set an `EmailMessageByLink` template only if the value of [ EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is `DEVELOPER`\. When your [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is `DEVELOPER`, your user pool sends email messages with your own Amazon SES configuration\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `6`  
@@ -58,7 +58,7 @@ The email message template for sending a confirmation link to the user\. EmailMe
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailSubject`  <a name="cfn-cognito-userpool-verificationmessagetemplate-emailsubject"></a>
-The subject line for the email message template\. EmailSubject is allowed only if [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is DEVELOPER\.   
+The subject line for the email message template\. You can set an `EmailSubject` template only if the value of [ EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is `DEVELOPER`\. When your [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is `DEVELOPER`, your user pool sends email messages with your own Amazon SES configuration\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -67,7 +67,7 @@ The subject line for the email message template\. EmailSubject is allowed only i
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EmailSubjectByLink`  <a name="cfn-cognito-userpool-verificationmessagetemplate-emailsubjectbylink"></a>
-The subject line for the email message template for sending a confirmation link to the user\. EmailSubjectByLink is allowed only [ EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is DEVELOPER\.  
+The subject line for the email message template for sending a confirmation link to the user\. You can set an `EmailSubjectByLink` template only if the value of [ EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is `DEVELOPER`\. When your [EmailSendingAccount](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_EmailConfigurationType.html#CognitoUserPools-Type-EmailConfigurationType-EmailSendingAccount) is `DEVELOPER`, your user pool sends email messages with your own Amazon SES configuration\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -76,7 +76,7 @@ The subject line for the email message template for sending a confirmation link 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SmsMessage`  <a name="cfn-cognito-userpool-verificationmessagetemplate-smsmessage"></a>
-The SMS message template\.  
+The template for SMS messages that Amazon Cognito sends to your users\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `6`  

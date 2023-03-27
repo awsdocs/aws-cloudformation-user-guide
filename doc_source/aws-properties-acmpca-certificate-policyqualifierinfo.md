@@ -1,6 +1,6 @@
 # AWS::ACMPCA::Certificate PolicyQualifierInfo<a name="aws-properties-acmpca-certificate-policyqualifierinfo"></a>
 
-Modifies the `CertPolicyId` of a `PolicyInformation` object with a qualifier\. ACM Private CA supports the certification practice statement \(CPS\) qualifier\.
+Modifies the `CertPolicyId` of a `PolicyInformation` object with a qualifier\. AWS Private CA supports the certification practice statement \(CPS\) qualifier\.
 
 ## Syntax<a name="aws-properties-acmpca-certificate-policyqualifierinfo-syntax"></a>
 
@@ -33,7 +33,7 @@ Identifies the qualifier modifying a `CertPolicyId`\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Qualifier`  <a name="cfn-acmpca-certificate-policyqualifierinfo-qualifier"></a>
-Defines the qualifier type\. ACM Private CA supports the use of a URI for a CPS qualifier in this field\.  
+Defines the qualifier type\. AWS Private CA supports the use of a URI for a CPS qualifier in this field\.  
 *Required*: Yes  
 *Type*: [Qualifier](aws-properties-acmpca-certificate-qualifier.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -44,8 +44,8 @@ This parameter is currently not in use\.
 
 `ClientSubnets`  <a name="cfn-msk-cluster-brokernodegroupinfo-clientsubnets"></a>
 The list of subnets to connect to in the client virtual private cloud \(VPC\)\. Amazon creates elastic network interfaces inside these subnets\. Client applications use elastic network interfaces to produce and consume data\.   
-Specify exactly two subnets if you are using the US West \(N\. California\) Region\. For other Regions where Amazon MSK is available, you can specify either two or three subnets\. The subnets that you specify must be in distinct Availability Zones\. When you create a cluster, Amazon MSK distributes the broker nodes evenly across the subnets that you specify\.  
-Client subnets can't be in Availability Zone us\-east\-1e\.  
+If you use the US West \(N\. California\) Region, specify exactly two subnets\. For other Regions where Amazon MSK is available, you can specify either two or three subnets\. The subnets that you specify must be in distinct Availability Zones\. When you create a cluster, Amazon MSK distributes the broker nodes evenly across the subnets that you specify\.  
+Client subnets can't occupy the Availability Zone with ID `use1-az3`\.  
 *Required*: Yes  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -57,7 +57,7 @@ Information about the cluster's connectivity setting\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceType`  <a name="cfn-msk-cluster-brokernodegroupinfo-instancetype"></a>
-The type of Amazon EC2 instances to use for brokers\. The following instance types are allowed: kafka\.m5\.large, kafka\.m5\.xlarge, kafka\.m5\.2xlarge, kafka\.m5\.4xlarge, kafka\.m5\.8xlarge, kafka\.m5\.12xlarge, kafka\.m5\.16xlarge, and kafka\.m5\.24xlarge\.  
+The type of Amazon EC2 instances to use for brokers\. The following instance types are allowed: kafka\.m5\.large, kafka\.m5\.xlarge, kafka\.m5\.2xlarge, kafka\.m5\.4xlarge, kafka\.m5\.8xlarge, kafka\.m5\.12xlarge, kafka\.m5\.16xlarge, kafka\.m5\.24xlarge, and kafka\.t3\.small\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -69,7 +69,7 @@ The security groups to associate with the elastic network interfaces in order to
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageInfo`  <a name="cfn-msk-cluster-brokernodegroupinfo-storageinfo"></a>
-Contains information about storage volumes attached to MSK broker nodes\.  
+Contains information about storage volumes attached to Amazon MSK broker nodes\.  
 *Required*: No  
 *Type*: [StorageInfo](aws-properties-msk-cluster-storageinfo.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

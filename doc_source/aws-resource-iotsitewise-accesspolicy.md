@@ -1,6 +1,6 @@
 # AWS::IoTSiteWise::AccessPolicy<a name="aws-resource-iotsitewise-accesspolicy"></a>
 
-Creates an access policy that grants the specified identity \(AWS SSO user, AWS SSO group, or IAM user\) access to the specified AWS IoT SiteWise Monitor portal or project resource\.
+Creates an access policy that grants the specified identity \(IAM Identity Center user, IAM Identity Center group, or IAM user\) access to the specified AWS IoT SiteWise Monitor portal or project resource\.
 
 ## Syntax<a name="aws-resource-iotsitewise-accesspolicy-syntax"></a>
 
@@ -34,7 +34,7 @@ Properties:
 ## Properties<a name="aws-resource-iotsitewise-accesspolicy-properties"></a>
 
 `AccessPolicyIdentity`  <a name="cfn-iotsitewise-accesspolicy-accesspolicyidentity"></a>
-The identity for this access policy\. Choose an AWS SSO user, an AWS SSO group, or an IAM user\.  
+The identity for this access policy\. Choose an IAM Identity Center user, an IAM Identity Center group, or an IAM user\.  
 *Required*: Yes  
 *Type*: [AccessPolicyIdentity](aws-properties-iotsitewise-accesspolicy-accesspolicyidentity.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

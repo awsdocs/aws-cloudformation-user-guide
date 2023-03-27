@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-rulegroup-captchaconfig-properties"></a>
 
 `ImmunityTimeProperty`  <a name="cfn-wafv2-rulegroup-captchaconfig-immunitytimeproperty"></a>
-Determines how long a `CAPTCHA` token remains valid after the client successfully solves a `CAPTCHA` puzzle\.   
+Determines how long a `CAPTCHA` timestamp in the token remains valid after the client successfully solves a `CAPTCHA` puzzle\.   
 *Required*: No  
 *Type*: [ImmunityTimeProperty](aws-properties-wafv2-rulegroup-immunitytimeproperty.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

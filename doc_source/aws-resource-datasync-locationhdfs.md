@@ -1,6 +1,6 @@
 # AWS::DataSync::LocationHDFS<a name="aws-resource-datasync-locationhdfs"></a>
 
-Creates an endpoint for a Hadoop Distributed File System \(HDFS\)\. 
+The `AWS::DataSync::LocationHDFS` resource specifies an endpoint for a Hadoop Distributed File System \(HDFS\)\.
 
 ## Syntax<a name="aws-resource-datasync-locationhdfs-syntax"></a>
 
@@ -63,10 +63,9 @@ The Amazon Resource Names \(ARNs\) of the agents that are used to connect to the
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthenticationType`  <a name="cfn-datasync-locationhdfs-authenticationtype"></a>
-The type of authentication used to determine the identity of the user\.   
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `KERBEROS | SIMPLE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BlockSize`  <a name="cfn-datasync-locationhdfs-blocksize"></a>

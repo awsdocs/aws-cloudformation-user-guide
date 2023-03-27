@@ -34,7 +34,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The compute type\. For more information, see [Amazon WorkSpaces Bundles](http://aws.amazon.com/workspaces/details/#Amazon_WorkSpaces_Bundles)\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `GRAPHICS | GRAPHICSPRO | PERFORMANCE | POWER | POWERPRO | STANDARD | VALUE`  
+*Allowed values*: `GRAPHICS | GRAPHICS_G4DN | GRAPHICSPRO | GRAPHICSPRO_G4DN | PERFORMANCE | POWER | POWERPRO | STANDARD | VALUE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RootVolumeSizeGib`  <a name="cfn-workspaces-workspace-workspaceproperties-rootvolumesizegib"></a>
@@ -45,9 +45,10 @@ The size of the root volume\. For important information about how to modify the 
 
 `RunningMode`  <a name="cfn-workspaces-workspace-workspaceproperties-runningmode"></a>
 The running mode\. For more information, see [Manage the WorkSpace Running Mode](https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html)\.  
+The `MANUAL` value is only supported by Amazon WorkSpaces Core\. Contact your account team to be allow\-listed to use this value\. For more information, see [Amazon WorkSpaces Core](http://aws.amazon.com/workspaces/core/)\.
 *Required*: No  
 *Type*: String  
-*Allowed values*: `ALWAYS_ON | AUTO_STOP`  
+*Allowed values*: `ALWAYS_ON | AUTO_STOP | MANUAL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RunningModeAutoStopTimeoutInMinutes`  <a name="cfn-workspaces-workspace-workspaceproperties-runningmodeautostoptimeoutinminutes"></a>

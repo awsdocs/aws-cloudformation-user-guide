@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource ConfluenceSpaceConfiguration<a name="aws-properties-kendra-datasource-confluencespaceconfiguration"></a>
 
-Specifies the configuration for indexing Confluence spaces\.
+Configuration information for indexing Confluence spaces\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-confluencespaceconfiguration-syntax"></a>
 
@@ -34,13 +34,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kendra-datasource-confluencespaceconfiguration-properties"></a>
 
 `CrawlArchivedSpaces`  <a name="cfn-kendra-datasource-confluencespaceconfiguration-crawlarchivedspaces"></a>
-Specifies whether Amazon Kendra should index archived spaces\.  
+ `TRUE` to index archived spaces\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CrawlPersonalSpaces`  <a name="cfn-kendra-datasource-confluencespaceconfiguration-crawlpersonalspaces"></a>
-Specifies whether Amazon Kendra should index personal spaces\. Users can add restrictions to items in personal spaces\. If personal spaces are indexed, queries without user context information may return restricted items from a personal space in their results\. For more information, see [Filtering on user context](https://docs.aws.amazon.com/kendra/latest/dg/user-context-filter.html)\.  
+ `TRUE` to index personal spaces\. You can add restrictions to items in personal spaces\. If personal spaces are indexed, queries without user context information may return restricted items from a personal space in their results\. For more information, see [Filtering on user context](https://docs.aws.amazon.com/kendra/latest/dg/user-context-filter.html)\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -58,7 +58,7 @@ A list of space keys for Confluence spaces\. If you include a key, the blogs, do
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SpaceFieldMappings`  <a name="cfn-kendra-datasource-confluencespaceconfiguration-spacefieldmappings"></a>
-Defines how space metadata fields should be mapped to index fields\. Before you can map a field, you must first create an index field with a matching type using the console or the `UpdateIndex` operation\.  
+Maps attributes or field names of Confluence spaces to Amazon Kendra index field names\. To create custom fields, use the `UpdateIndex` API before you map to Confluence fields\. For more information, see [Mapping data source fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html)\. The Confluence data source field names must exist in your Confluence custom metadata\.  
 If you specify the `SpaceFieldMappings` parameter, you must specify at least one field mapping\.  
 *Required*: No  
 *Type*: List of [ConfluenceSpaceToIndexFieldMapping](aws-properties-kendra-datasource-confluencespacetoindexfieldmapping.md)  

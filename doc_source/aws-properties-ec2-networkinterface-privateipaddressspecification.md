@@ -28,10 +28,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Sets the private IP address as the primary private address\. You can set only one primary private IP address\. If you don't specify a primary private IP address, Amazon EC2 automatically assigns a primary private IP address\.  
 *Required*: Yes  
 *Type*: Boolean  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `PrivateIpAddress`  <a name="cfn-ec2-networkinterface-privateipaddressspecification-privateipaddress"></a>
 The private IP address of the network interface\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

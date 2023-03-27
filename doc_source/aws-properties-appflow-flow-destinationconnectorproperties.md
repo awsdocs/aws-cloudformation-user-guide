@@ -10,11 +10,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[CustomConnector](#cfn-appflow-flow-destinationconnectorproperties-customconnector)" : CustomConnectorDestinationProperties,
   "[EventBridge](#cfn-appflow-flow-destinationconnectorproperties-eventbridge)" : EventBridgeDestinationProperties,
   "[LookoutMetrics](#cfn-appflow-flow-destinationconnectorproperties-lookoutmetrics)" : LookoutMetricsDestinationProperties,
+  "[Marketo](#cfn-appflow-flow-destinationconnectorproperties-marketo)" : MarketoDestinationProperties,
   "[Redshift](#cfn-appflow-flow-destinationconnectorproperties-redshift)" : RedshiftDestinationProperties,
   "[S3](#cfn-appflow-flow-destinationconnectorproperties-s3)" : S3DestinationProperties,
   "[Salesforce](#cfn-appflow-flow-destinationconnectorproperties-salesforce)" : SalesforceDestinationProperties,
+  "[SAPOData](#cfn-appflow-flow-destinationconnectorproperties-sapodata)" : SAPODataDestinationProperties,
   "[Snowflake](#cfn-appflow-flow-destinationconnectorproperties-snowflake)" : SnowflakeDestinationProperties,
   "[Upsolver](#cfn-appflow-flow-destinationconnectorproperties-upsolver)" : UpsolverDestinationProperties,
   "[Zendesk](#cfn-appflow-flow-destinationconnectorproperties-zendesk)" : ZendeskDestinationProperties
@@ -24,16 +27,22 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appflow-flow-destinationconnectorproperties-syntax.yaml"></a>
 
 ```
+  [CustomConnector](#cfn-appflow-flow-destinationconnectorproperties-customconnector): 
+    CustomConnectorDestinationProperties
   [EventBridge](#cfn-appflow-flow-destinationconnectorproperties-eventbridge): 
     EventBridgeDestinationProperties
   [LookoutMetrics](#cfn-appflow-flow-destinationconnectorproperties-lookoutmetrics): 
     LookoutMetricsDestinationProperties
+  [Marketo](#cfn-appflow-flow-destinationconnectorproperties-marketo): 
+    MarketoDestinationProperties
   [Redshift](#cfn-appflow-flow-destinationconnectorproperties-redshift): 
     RedshiftDestinationProperties
   [S3](#cfn-appflow-flow-destinationconnectorproperties-s3): 
     S3DestinationProperties
   [Salesforce](#cfn-appflow-flow-destinationconnectorproperties-salesforce): 
     SalesforceDestinationProperties
+  [SAPOData](#cfn-appflow-flow-destinationconnectorproperties-sapodata): 
+    SAPODataDestinationProperties
   [Snowflake](#cfn-appflow-flow-destinationconnectorproperties-snowflake): 
     SnowflakeDestinationProperties
   [Upsolver](#cfn-appflow-flow-destinationconnectorproperties-upsolver): 
@@ -43,6 +52,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-appflow-flow-destinationconnectorproperties-properties"></a>
+
+`CustomConnector`  <a name="cfn-appflow-flow-destinationconnectorproperties-customconnector"></a>
+The properties that are required to query the custom Connector\.  
+*Required*: No  
+*Type*: [CustomConnectorDestinationProperties](aws-properties-appflow-flow-customconnectordestinationproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventBridge`  <a name="cfn-appflow-flow-destinationconnectorproperties-eventbridge"></a>
  The properties required to query Amazon EventBridge\.   
@@ -54,6 +69,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The properties required to query Amazon Lookout for Metrics\.   
 *Required*: No  
 *Type*: [LookoutMetricsDestinationProperties](aws-properties-appflow-flow-lookoutmetricsdestinationproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Marketo`  <a name="cfn-appflow-flow-destinationconnectorproperties-marketo"></a>
+The properties required to query Marketo\.  
+*Required*: No  
+*Type*: [MarketoDestinationProperties](aws-properties-appflow-flow-marketodestinationproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Redshift`  <a name="cfn-appflow-flow-destinationconnectorproperties-redshift"></a>
@@ -74,6 +95,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Type*: [SalesforceDestinationProperties](aws-properties-appflow-flow-salesforcedestinationproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SAPOData`  <a name="cfn-appflow-flow-destinationconnectorproperties-sapodata"></a>
+The properties required to query SAPOData\.  
+*Required*: No  
+*Type*: [SAPODataDestinationProperties](aws-properties-appflow-flow-sapodatadestinationproperties.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Snowflake`  <a name="cfn-appflow-flow-destinationconnectorproperties-snowflake"></a>
  The properties required to query Snowflake\.   
 *Required*: No  
@@ -87,7 +114,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Zendesk`  <a name="cfn-appflow-flow-destinationconnectorproperties-zendesk"></a>
-Not currently supported by AWS CloudFormation\.  
+The properties required to query Zendesk\.  
 *Required*: No  
 *Type*: [ZendeskDestinationProperties](aws-properties-appflow-flow-zendeskdestinationproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

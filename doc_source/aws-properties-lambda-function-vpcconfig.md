@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lambda-function-vpcconfig-properties"></a>
 
 `SecurityGroupIds`  <a name="cfn-lambda-function-vpcconfig-securitygroupids"></a>
-A list of VPC security groups IDs\.  
+A list of VPC security group IDs\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `5`  

@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-botalias-s3bucketlogdestination-properties"></a>
 
 `KmsKeyArn`  <a name="cfn-lex-botalias-s3bucketlogdestination-kmskeyarn"></a>
-The Amazon Resource Name \(ARN\) of an AWS Key Management Service key for encrypting audio log files stored in an S3 bucket\.  
+The Amazon Resource Name \(ARN\) of an AWS Key Management Service \(KMS\) key for encrypting audio log files stored in an Amazon S3 bucket\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

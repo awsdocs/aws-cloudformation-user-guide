@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile ServiceNowConnectorProfileCredentials<a name="aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials"></a>
 
- The `ServiceNowConnectorProfileCredentials` property type specifies the connector\-specific profile credentials required when using ServiceNow\. 
+ The connector\-specific profile credentials required when using ServiceNow\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials-syntax"></a>
 

@@ -44,6 +44,7 @@ The unique identifier of the member to which the node belongs\. Applies only to 
 The unique identifier of the network for the node\.  
 Ethereum public networks have the following `NetworkId`s:  
 +  `n-ethereum-mainnet` 
++  `n-ethereum-goerli` 
 +  `n-ethereum-rinkeby` 
 +  `n-ethereum-ropsten` 
 *Required*: Yes  

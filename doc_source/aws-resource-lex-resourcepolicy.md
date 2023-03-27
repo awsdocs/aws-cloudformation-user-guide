@@ -1,5 +1,8 @@
 # AWS::Lex::ResourcePolicy<a name="aws-resource-lex-resourcepolicy"></a>
 
+**Note**  
+Amazon Lex V2 is the only supported version in AWS CloudFormation\.
+
 Specifies a new resource policy with the specified policy statements\.
 
 ## Syntax<a name="aws-resource-lex-resourcepolicy-syntax"></a>
@@ -12,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Lex::ResourcePolicy",
   "Properties" : {
-      "[Policy](#cfn-lex-resourcepolicy-policy)" : String,
+      "[Policy](#cfn-lex-resourcepolicy-policy)" : Json,
       "[ResourceArn](#cfn-lex-resourcepolicy-resourcearn)" : String
     }
 }
@@ -23,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Lex::ResourcePolicy
 Properties: 
-  [Policy](#cfn-lex-resourcepolicy-policy): String
+  [Policy](#cfn-lex-resourcepolicy-policy): Json
   [ResourceArn](#cfn-lex-resourcepolicy-resourcearn): String
 ```
 
@@ -32,7 +35,7 @@ Properties:
 `Policy`  <a name="cfn-lex-resourcepolicy-policy"></a>
 A resource policy to add to the resource\. The policy is a JSON structure that contains one or more statements that define the policy\. The policy must follow IAM syntax\. If the policy isn't valid, Amazon Lex returns a validation exception\.  
 *Required*: Yes  
-*Type*: [String](aws-properties-lex-resourcepolicy-policy.md)  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceArn`  <a name="cfn-lex-resourcepolicy-resourcearn"></a>
@@ -49,3 +52,6 @@ The Amazon Resource Name \(ARN\) of the bot or bot alias that the resource polic
 
 `Id`  <a name="Id-fn::getatt"></a>
 The identifier of the resource policy\.
+
+`RevisionId`  <a name="RevisionId-fn::getatt"></a>
+Specifies the current revision of a resource policy\. 

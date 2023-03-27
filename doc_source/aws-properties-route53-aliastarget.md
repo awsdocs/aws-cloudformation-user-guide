@@ -1,4 +1,4 @@
-# AWS::Route53::RecordSetGroup AliasTarget<a name="aws-properties-route53-aliastarget"></a>
+# AWS::Route53::RecordSet AliasTarget<a name="aws-properties-route53-aliastarget"></a>
 
 *Alias records only:* Information about the AWS resource, such as a CloudFront distribution or an Amazon S3 bucket, that you want to route traffic to\.
 
@@ -57,20 +57,20 @@ Specify the DNS name that is associated with the load balancer\. Get the DNS nam
 
   If you're routing traffic to a Classic Load Balancer, get the value that begins with **dualstack**\. If you're routing traffic to another type of load balancer, get the value that applies to the record type, A or AAAA\.
 + **Elastic Load Balancing API**: Use `DescribeLoadBalancers` to get the value of `DNSName`\. For more information, see the applicable guide:
-  + Classic Load Balancers: [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_DescribeLoadBalancers.html)
-  + Application and Network Load Balancers: [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+  + Classic Load Balancers: [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_DescribeLoadBalancers.html) 
+  + Application and Network Load Balancers: [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html) 
 + **CloudFormation Fn::GetAtt intrinsic function**: Use the [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html) intrinsic function to get the value of `DNSName`:
   +  [Classic Load Balancers](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#aws-properties-ec2-elb-return-values)\. 
   +  [Application and Network Load Balancers](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#aws-resource-elasticloadbalancingv2-loadbalancer-return-values)\. 
 + **AWS CLI**: Use `describe-load-balancers` to get the value of `DNSName`\. For more information, see the applicable guide:
-  + Classic Load Balancers: [describe\-load\-balancers](https://docs.aws.amazon.com/cli/latest/reference/elb/describe-load-balancers.html)
-  + Application and Network Load Balancers: [describe\-load\-balancers](https://docs.aws.amazon.com/cli/latest/reference/elbv2/describe-load-balancers.html)  
+  + Classic Load Balancers: [describe\-load\-balancers](https://docs.aws.amazon.com/cli/latest/reference/elb/describe-load-balancers.html) 
+  + Application and Network Load Balancers: [describe\-load\-balancers](https://docs.aws.amazon.com/cli/latest/reference/elbv2/describe-load-balancers.html)   
 Global Accelerator accelerator  
 Specify the DNS name for your accelerator:  
 + **Global Accelerator API**: To get the DNS name, use [DescribeAccelerator](https://docs.aws.amazon.com/global-accelerator/latest/api/API_DescribeAccelerator.html)\. 
 + **AWS CLI**: To get the DNS name, use [describe\-accelerator](https://docs.aws.amazon.com/cli/latest/reference/globalaccelerator/describe-accelerator.html)\.  
 Amazon S3 bucket that is configured as a static website  
-Specify the domain name of the Amazon S3 website endpoint that you created the bucket in, for example, `s3-website.us-east-2.amazonaws.com`\. For more information about valid values, see the table [Amazon S3 Website Endpoints](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints) in the *Amazon Web Services General Reference*\. For more information about using S3 buckets for websites, see [Getting Started with Amazon Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started.html) in the *Amazon Route 53 Developer Guide\.*  
+Specify the domain name of the Amazon S3 website endpoint that you created the bucket in, for example, `s3-website.us-east-2.amazonaws.com`\. For more information about valid values, see the table [Amazon S3 Website Endpoints](https://docs.aws.amazon.com/general/latest/gr/s3.html#s3_website_region_endpoints) in the *Amazon Web Services General Reference*\. For more information about using S3 buckets for websites, see [Getting Started with Amazon Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started.html) in the *Amazon Route 53 Developer Guide\.*   
 Another Route 53 record  
 Specify the value of the `Name` element for a record in the current hosted zone\.  
 If you're creating an alias record that has the same name as the hosted zone \(known as the zone apex\), you can't specify the domain name for a record for which the value of `Type` is `CNAME`\. This is because the alias record must have the same type as the record that you're routing traffic to, and creating a CNAME record for the zone apex isn't supported even for an alias record\.
@@ -80,7 +80,7 @@ If you're creating an alias record that has the same name as the hosted zone \(k
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EvaluateTargetHealth`  <a name="cfn-route53-aliastarget-evaluatetargethealth"></a>
-*Applies only to alias records with any routing policy:* When `EvaluateTargetHealth` is `true`, an alias record inherits the health of the referenced AWS resource, such as an ELB load balancer or another record in the hosted zone\.  
+ *Applies only to alias, failover alias, geolocation alias, latency alias, and weighted alias resource record sets:* When `EvaluateTargetHealth` is `true`, an alias resource record set inherits the health of the referenced AWS resource, such as an ELB load balancer or another resource record set in the hosted zone\.  
 Note the following:    
 CloudFront distributions  
 You can't set `EvaluateTargetHealth` to `true` when the alias target is a CloudFront distribution\.  
@@ -89,8 +89,8 @@ If you specify an Elastic Beanstalk environment in `DNSName` and the environment
 If the environment contains a single Amazon EC2 instance, there are no special requirements\.  
 ELB load balancers  
 Health checking behavior depends on the type of load balancer:  
-+ **Classic Load Balancers**: If you specify an ELB Classic Load Balancer in `DNSName`, Elastic Load Balancing routes queries only to the healthy Amazon EC2 instances that are registered with the load balancer\. If you set `EvaluateTargetHealth` to `true` and either no EC2 instances are healthy or the load balancer itself is unhealthy, Route 53 routes queries to other resources\.
-+ **Application and Network Load Balancers**: If you specify an ELB Application or Network Load Balancer and you set `EvaluateTargetHealth` to `true`, Route 53 routes queries to the load balancer based on the health of the target groups that are associated with the load balancer:
++  **Classic Load Balancers**: If you specify an ELB Classic Load Balancer in `DNSName`, Elastic Load Balancing routes queries only to the healthy Amazon EC2 instances that are registered with the load balancer\. If you set `EvaluateTargetHealth` to `true` and either no EC2 instances are healthy or the load balancer itself is unhealthy, Route 53 routes queries to other resources\.
++  **Application and Network Load Balancers**: If you specify an ELB Application or Network Load Balancer and you set `EvaluateTargetHealth` to `true`, Route 53 routes queries to the load balancer based on the health of the target groups that are associated with the load balancer:
   + For an Application or Network Load Balancer to be considered healthy, every target group that contains targets must contain at least one healthy target\. If any target group contains only unhealthy targets, the load balancer is considered unhealthy, and Route 53 routes queries to other resources\.
   + A target group that has no registered targets is considered unhealthy\.
 When you create a load balancer, you configure settings for Elastic Load Balancing health checks; they're not Route 53 health checks, but they perform a similar function\. Do not create Route 53 health checks for the EC2 instances that you register with an ELB load balancer\.   
@@ -118,7 +118,7 @@ Elastic Beanstalk environment
 Specify the hosted zone ID for the region that you created the environment in\. The environment must have a regionalized subdomain\. For a list of regions and the corresponding hosted zone IDs, see [AWS Elastic Beanstalk endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/elasticbeanstalk.html) in the *Amazon Web Services General Reference*\.  
 ELB load balancer  
 Specify the value of the hosted zone ID for the load balancer\. Use the following methods to get the hosted zone ID:  
-+ [Service Endpoints](https://docs.aws.amazon.com/general/latest/gr/elb.html) table in the "Elastic Load Balancing endpoints and quotas" topic in the *Amazon Web Services General Reference*: Use the value that corresponds with the region that you created your load balancer in\. Note that there are separate columns for Application and Classic Load Balancers and for Network Load Balancers\.
++ [Service Endpoints](https://docs.aws.amazon.com/general/latest/gr/elb.html) table in the "Elastic Load Balancing Endpoints and Quotas" topic in the *Amazon Web Services General Reference*: Use the value that corresponds with the region that you created your load balancer in\. Note that there are separate columns for Application and Classic Load Balancers and for Network Load Balancers\.
 + **AWS Management Console**: Go to the Amazon EC2 page, choose **Load Balancers** in the navigation pane, select the load balancer, and get the value of the **Hosted zone** field on the **Description** tab\.
 + **Elastic Load Balancing API**: Use `DescribeLoadBalancers` to get the applicable value\. For more information, see the applicable guide:
   + Classic Load Balancers: Use [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/2012-06-01/APIReference/API_DescribeLoadBalancers.html) to get the value of `CanonicalHostedZoneNameID`\.
@@ -141,6 +141,6 @@ Specify the hosted zone ID of your hosted zone\. \(An alias record can't referen
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-route53-aliastarget--seealso"></a>
-+  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html#aws-resource-route53-recordsetgroup-return-values) in the topic [AWS::Route53::RecordSetGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html) 
++  [Return values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#aws-properties-route53-recordset-return-values) in the topic [AWS::Route53::RecordSet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html) 
 +  [AliasTarget](https://docs.aws.amazon.com/Route53/latest/APIReference/API_AliasTarget.html) in the *Amazon Route 53 API Reference*
 

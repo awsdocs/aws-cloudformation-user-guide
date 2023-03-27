@@ -12,13 +12,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::AmplifyUIBuilder::Component",
   "Properties" : {
+      "[AppId](#cfn-amplifyuibuilder-component-appid)" : String,
       "[BindingProperties](#cfn-amplifyuibuilder-component-bindingproperties)" : {Key : Value, ...},
       "[Children](#cfn-amplifyuibuilder-component-children)" : [ ComponentChild, ... ],
       "[CollectionProperties](#cfn-amplifyuibuilder-component-collectionproperties)" : {Key : Value, ...},
       "[ComponentType](#cfn-amplifyuibuilder-component-componenttype)" : String,
+      "[EnvironmentName](#cfn-amplifyuibuilder-component-environmentname)" : String,
+      "[Events](#cfn-amplifyuibuilder-component-events)" : {Key : Value, ...},
       "[Name](#cfn-amplifyuibuilder-component-name)" : String,
-      "[Overrides](#cfn-amplifyuibuilder-component-overrides)" : {Key : Value, ...},
+      "[Overrides](#cfn-amplifyuibuilder-component-overrides)" : Json,
       "[Properties](#cfn-amplifyuibuilder-component-properties)" : {Key : Value, ...},
+      "[SchemaVersion](#cfn-amplifyuibuilder-component-schemaversion)" : String,
       "[SourceId](#cfn-amplifyuibuilder-component-sourceid)" : String,
       "[Tags](#cfn-amplifyuibuilder-component-tags)" : {Key : Value, ...},
       "[Variants](#cfn-amplifyuibuilder-component-variants)" : [ ComponentVariant, ... ]
@@ -31,6 +35,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::AmplifyUIBuilder::Component
 Properties: 
+  [AppId](#cfn-amplifyuibuilder-component-appid): String
   [BindingProperties](#cfn-amplifyuibuilder-component-bindingproperties): 
     Key : Value
   [Children](#cfn-amplifyuibuilder-component-children): 
@@ -38,11 +43,14 @@ Properties:
   [CollectionProperties](#cfn-amplifyuibuilder-component-collectionproperties): 
     Key : Value
   [ComponentType](#cfn-amplifyuibuilder-component-componenttype): String
-  [Name](#cfn-amplifyuibuilder-component-name): String
-  [Overrides](#cfn-amplifyuibuilder-component-overrides): 
+  [EnvironmentName](#cfn-amplifyuibuilder-component-environmentname): String
+  [Events](#cfn-amplifyuibuilder-component-events): 
     Key : Value
+  [Name](#cfn-amplifyuibuilder-component-name): String
+  [Overrides](#cfn-amplifyuibuilder-component-overrides): Json
   [Properties](#cfn-amplifyuibuilder-component-properties): 
     Key : Value
+  [SchemaVersion](#cfn-amplifyuibuilder-component-schemaversion): String
   [SourceId](#cfn-amplifyuibuilder-component-sourceid): String
   [Tags](#cfn-amplifyuibuilder-component-tags): 
     Key : Value
@@ -52,10 +60,16 @@ Properties:
 
 ## Properties<a name="aws-resource-amplifyuibuilder-component-properties"></a>
 
+`AppId`  <a name="cfn-amplifyuibuilder-component-appid"></a>
+The unique ID of the Amplify app associated with the component\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `BindingProperties`  <a name="cfn-amplifyuibuilder-component-bindingproperties"></a>
 The information to connect a component's properties to data at runtime\. You can't specify `tags` as a valid property for `bindingProperties`\.  
   
-*Required*: No  
+*Required*: Yes  
 *Type*: Map of [ComponentBindingPropertiesValue](aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalue.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -73,26 +87,44 @@ The data binding configuration for the component's properties\. Use this for a c
 
 `ComponentType`  <a name="cfn-amplifyuibuilder-component-componenttype"></a>
 The type of the component\. This can be an Amplify custom UI component or another custom component\.  
+*Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EnvironmentName`  <a name="cfn-amplifyuibuilder-component-environmentname"></a>
+The name of the backend environment that is a part of the Amplify app\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Events`  <a name="cfn-amplifyuibuilder-component-events"></a>
+Describes the events that can be raised on the component\. Use for the workflow feature in Amplify Studio that allows you to bind events and actions to components\.  
+*Required*: No  
+*Type*: Map of [ComponentEvent](aws-properties-amplifyuibuilder-component-componentevent.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Name`  <a name="cfn-amplifyuibuilder-component-name"></a>
 The name of the component\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Overrides`  <a name="cfn-amplifyuibuilder-component-overrides"></a>
 Describes the component's properties that can be overriden in a customized instance of the component\. You can't specify `tags` as a valid property for `overrides`\.  
-*Required*: No  
-*Type*: Map of [ComponentOverridesValue](aws-properties-amplifyuibuilder-component-componentoverridesvalue.md)  
+*Required*: Yes  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Properties`  <a name="cfn-amplifyuibuilder-component-properties"></a>
 Describes the component's properties\. You can't specify `tags` as a valid property for `properties`\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: Map of [ComponentProperty](aws-properties-amplifyuibuilder-component-componentproperty.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SchemaVersion`  <a name="cfn-amplifyuibuilder-component-schemaversion"></a>
+The schema version of the component when it was imported\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceId`  <a name="cfn-amplifyuibuilder-component-sourceid"></a>
@@ -109,7 +141,7 @@ One or more key\-value pairs to use when tagging the component\.
 
 `Variants`  <a name="cfn-amplifyuibuilder-component-variants"></a>
 A list of the component's variants\. A variant is a unique style configuration of a main component\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of [ComponentVariant](aws-properties-amplifyuibuilder-component-componentvariant.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -125,17 +157,5 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 #### <a name="aws-resource-amplifyuibuilder-component-return-values-fn--getatt-fn--getatt"></a>
 
-`AppId`  <a name="AppId-fn::getatt"></a>
-The unique ID for the Amplify app\.
-
-`CreatedAt`  <a name="CreatedAt-fn::getatt"></a>
-The time that the component was created\.
-
-`EnvironmentName`  <a name="EnvironmentName-fn::getatt"></a>
-The name of the backend environment that is a part of the Amplify app\.
-
 `Id`  <a name="Id-fn::getatt"></a>
 The unique ID of the component\.
-
-`ModifiedAt`  <a name="ModifiedAt-fn::getatt"></a>
-The time that the component was modified\.

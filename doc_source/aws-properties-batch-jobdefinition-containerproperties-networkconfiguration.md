@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-jobdefinition-containerproperties-networkconfiguration-properties"></a>
 
 `AssignPublicIp`  <a name="cfn-batch-jobdefinition-containerproperties-networkconfiguration-assignpublicip"></a>
-Indicates whether the job should have a public IP address\. For a job that is running on Fargate resources in a private subnet to send outbound traffic to the internet \(for example, to pull container images\), the private subnet requires a NAT gateway be attached to route requests to the internet\. For more information, see [Amazon ECS task networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html)\. The default value is "DISABLED"\.  
+Indicates whether the job has a public IP address\. For a job that's running on Fargate resources in a private subnet to send outbound traffic to the internet \(for example, to pull container images\), the private subnet requires a NAT gateway be attached to route requests to the internet\. For more information, see [Amazon ECS task networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html) in the *Amazon Elastic Container Service Developer Guide*\. The default value is "`DISABLED`"\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DISABLED | ENABLED`  

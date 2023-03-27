@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[EnvironmentProperties](#cfn-kinesisanalyticsv2-application-applicationconfiguration-environmentproperties)" : EnvironmentProperties,
   "[FlinkApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration-flinkapplicationconfiguration)" : FlinkApplicationConfiguration,
   "[SqlApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration-sqlapplicationconfiguration)" : SqlApplicationConfiguration,
+  "[VpcConfigurations](#cfn-kinesisanalyticsv2-application-applicationconfiguration-vpcconfigurations)" : [ VpcConfiguration, ... ],
   "[ZeppelinApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration-zeppelinapplicationconfiguration)" : ZeppelinApplicationConfiguration
 }
 ```
@@ -32,6 +33,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     FlinkApplicationConfiguration
   [SqlApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration-sqlapplicationconfiguration): 
     SqlApplicationConfiguration
+  [VpcConfigurations](#cfn-kinesisanalyticsv2-application-applicationconfiguration-vpcconfigurations): 
+    - VpcConfiguration
   [ZeppelinApplicationConfiguration](#cfn-kinesisanalyticsv2-application-applicationconfiguration-zeppelinapplicationconfiguration): 
     ZeppelinApplicationConfiguration
 ```
@@ -66,6 +69,12 @@ The creation and update parameters for a Flink\-based Kinesis Data Analytics app
 The creation and update parameters for a SQL\-based Kinesis Data Analytics application\.  
 *Required*: No  
 *Type*: [SqlApplicationConfiguration](aws-properties-kinesisanalyticsv2-application-sqlapplicationconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`VpcConfigurations`  <a name="cfn-kinesisanalyticsv2-application-applicationconfiguration-vpcconfigurations"></a>
+The array of descriptions of VPC configurations available to the application\.  
+*Required*: No  
+*Type*: List of [VpcConfiguration](aws-properties-kinesisanalyticsv2-application-vpcconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ZeppelinApplicationConfiguration`  <a name="cfn-kinesisanalyticsv2-application-applicationconfiguration-zeppelinapplicationconfiguration"></a>

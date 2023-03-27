@@ -15,6 +15,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ExecutionRole](#cfn-sagemaker-domain-usersettings-executionrole)" : String,
   "[JupyterServerAppSettings](#cfn-sagemaker-domain-usersettings-jupyterserverappsettings)" : JupyterServerAppSettings,
   "[KernelGatewayAppSettings](#cfn-sagemaker-domain-usersettings-kernelgatewayappsettings)" : KernelGatewayAppSettings,
+  "[RSessionAppSettings](#cfn-sagemaker-domain-usersettings-rsessionappsettings)" : RSessionAppSettings,
+  "[RStudioServerProAppSettings](#cfn-sagemaker-domain-usersettings-rstudioserverproappsettings)" : RStudioServerProAppSettings,
   "[SecurityGroups](#cfn-sagemaker-domain-usersettings-securitygroups)" : [ String, ... ],
   "[SharingSettings](#cfn-sagemaker-domain-usersettings-sharingsettings)" : SharingSettings
 }
@@ -28,6 +30,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     JupyterServerAppSettings
   [KernelGatewayAppSettings](#cfn-sagemaker-domain-usersettings-kernelgatewayappsettings): 
     KernelGatewayAppSettings
+  [RSessionAppSettings](#cfn-sagemaker-domain-usersettings-rsessionappsettings): 
+    RSessionAppSettings
+  [RStudioServerProAppSettings](#cfn-sagemaker-domain-usersettings-rstudioserverproappsettings): 
+    RStudioServerProAppSettings
   [SecurityGroups](#cfn-sagemaker-domain-usersettings-securitygroups): 
     - String
   [SharingSettings](#cfn-sagemaker-domain-usersettings-sharingsettings): 
@@ -55,6 +61,18 @@ The Jupyter server's app settings\.
 The kernel gateway app settings\.  
 *Required*: No  
 *Type*: [KernelGatewayAppSettings](aws-properties-sagemaker-domain-kernelgatewayappsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RSessionAppSettings`  <a name="cfn-sagemaker-domain-usersettings-rsessionappsettings"></a>
+A collection of settings that configure the `RSessionGateway` app\.  
+*Required*: No  
+*Type*: [RSessionAppSettings](aws-properties-sagemaker-domain-rsessionappsettings.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RStudioServerProAppSettings`  <a name="cfn-sagemaker-domain-usersettings-rstudioserverproappsettings"></a>
+A collection of settings that configure user interaction with the `RStudioServerPro` app\.  
+*Required*: No  
+*Type*: [RStudioServerProAppSettings](aws-properties-sagemaker-domain-rstudioserverproappsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroups`  <a name="cfn-sagemaker-domain-usersettings-securitygroups"></a>

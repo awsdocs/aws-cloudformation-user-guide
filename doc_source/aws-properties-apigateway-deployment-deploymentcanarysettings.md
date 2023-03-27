@@ -28,24 +28,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-apigateway-deployment-deploymentcanarysettings-properties"></a>
 
 `PercentTraffic`  <a name="cfn-apigateway-deployment-deploymentcanarysettings-percenttraffic"></a>
-The percentage \(0\-100\) of traffic diverted to a canary deployment\.  
+The percentage \(0\.0\-100\.0\) of traffic routed to the canary deployment\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StageVariableOverrides`  <a name="cfn-apigateway-deployment-deploymentcanarysettings-stagevariableoverrides"></a>
-Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary\. These stage variables are represented as a string\-to\-string map between stage variable names and their values\.  
-Duplicates are not allowed\.  
+A stage variable overrides used for the canary release deployment\. They can override existing stage variables or add new stage variables for the canary release deployment\. These stage variables are represented as a string\-to\-string map between stage variable names and their values\.  
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UseStageCache`  <a name="cfn-apigateway-deployment-deploymentcanarysettings-usestagecache"></a>
-Whether the canary deployment uses the stage cache\.  
+A Boolean flag to indicate whether the canary release deployment uses the stage cache or not\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See also<a name="aws-properties-apigateway-deployment-deploymentcanarysettings--seealso"></a>
-+ [Deployment](https://docs.aws.amazon.com/apigateway/api-reference/resource/deployment/) in the *Amazon API Gateway REST API Reference*
++ [Deployment](https://docs.aws.amazon.com/apigateway/latest/api/API_Deployment.html/) in the *Amazon API Gateway REST API Reference*
 

@@ -1,6 +1,6 @@
 # AWS::Connect::QuickConnect QueueQuickConnectConfig<a name="aws-properties-connect-quickconnect-queuequickconnectconfig"></a>
 
-Contains information about a queue for a quick connect\. The contact flow must be of type Transfer to Queue\.
+Contains information about a queue for a quick connect\. The flow must be of type Transfer to Queue\.
 
 ## Syntax<a name="aws-properties-connect-quickconnect-queuequickconnectconfig-syntax"></a>
 
@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-connect-quickconnect-queuequickconnectconfig-properties"></a>
 
 `ContactFlowArn`  <a name="cfn-connect-quickconnect-queuequickconnectconfig-contactflowarn"></a>
-The Amazon Resource Name \(ARN\) of the contact flow\.  
+The Amazon Resource Name \(ARN\) of the flow\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `500`  

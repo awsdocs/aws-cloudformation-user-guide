@@ -194,7 +194,7 @@ You can't modify your stack set's execution configuration while there are runnin
 1. If you enabled automatic deployment, under **Account removal behavior**, choose whether stack resources are retained or deleted when an account is removed from a target organization or OU\.  
 ![\[Account removal behavior settings for stack sets with service-managed permissions.\]](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/images/console-stackset-account-removal-retain.png)
 **Note**  
-With **Retain stacks** selected, stack instances are removed from your stack set, but the stacks and their associated resources are retained\. The resources stay in their current state, but will no longer be part of the stack set\. The stacks can't be reassociated with an existing or new stack set\.
+With **Retain stacks** selected, stack instances are removed from your stack set, but the stacks and their associated resources are retained\. The resources stay in their current state, but will no longer be part of the stack set\.
 
 1. Under **Deployment regions**, choose the Regions in which you want to deploy stack instances\. Choose **Next**\.
 

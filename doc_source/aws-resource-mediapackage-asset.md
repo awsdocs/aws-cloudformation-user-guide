@@ -59,13 +59,13 @@ Unique identifier for this asset, as it's configured in the key provider service
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceArn`  <a name="cfn-mediapackage-asset-sourcearn"></a>
-The ARN for the source content in Amazon S3\.   
+The ARN for the source content in Amazon S3\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceRoleArn`  <a name="cfn-mediapackage-asset-sourcerolearn"></a>
-The ARN for the IAM role that provides AWS Elemental MediaPackage access to the Amazon S3 bucket where the source content is stored\. Valid format: arn:aws:iam::\{accountID\}:role/\{name\}   
+The ARN for the IAM role that provides AWS Elemental MediaPackage access to the Amazon S3 bucket where the source content is stored\. Valid format: arn:aws:iam::\{accountID\}:role/\{name\}  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -91,4 +91,4 @@ The Amazon Resource Name \(ARN\) for the asset\. You can get this from the respo
 The time that the asset was initially submitted for ingest\.
 
 `EgressEndpoints`  <a name="EgressEndpoints-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.

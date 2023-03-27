@@ -33,7 +33,7 @@ Properties:
 ## Properties<a name="aws-resource-glue-table-properties"></a>
 
 `CatalogId`  <a name="cfn-glue-table-catalogid"></a>
-The ID of the Data Catalog in which to create the `Table`\. If none is supplied, the AWS account ID is used by default\.  
+The ID of the Data Catalog in which to create the `Table`\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

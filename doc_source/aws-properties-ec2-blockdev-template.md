@@ -71,8 +71,8 @@ The identifier of the AWS KMS key to use for Amazon EBS encryption\. If `KmsKeyI
 You can specify the KMS key using any of the following:  
 + Key ID\. For example, 1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
 + Key alias\. For example, alias/ExampleAlias\.
-+ Key ARN\. For example, arn:aws:kms:us\-east\-1:012345678910:1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
-+ Alias ARN\. For example, arn:aws:kms:us\-east\-1:012345678910:alias/ExampleAlias\.
++ Key ARN\. For example, arn:aws:kms:us\-west\-2:111122223333:key/1234abcd\-12ab\-34cd\-56ef\-1234567890ab\.
++ Alias ARN\. For example, arn:aws:kms:us\-west\-2:111122223333:alias/ExampleAlias\.
 After the instance is running, modifying this parameter results in instance [ replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)\.
 *Required*: No  
 *Type*: String  

@@ -1,6 +1,6 @@
 # AWS::AuditManager::Assessment Delegation<a name="aws-properties-auditmanager-assessment-delegation"></a>
 
- The `Delegation` property type specifies the assignment of a control set to a delegate for review\. 
+The `Delegation` property type specifies the assignment of a control set to a delegate for review\.
 
 ## Syntax<a name="aws-properties-auditmanager-assessment-delegation-syntax"></a>
 
@@ -78,7 +78,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CreatedBy`  <a name="cfn-auditmanager-assessment-delegation-createdby"></a>
- The IAM user or role that created the delegation\.   
+ The user or role that created the delegation\.  
 *Minimum*: `1`  
 *Maximum*: `100`  
 *Pattern*: `^[a-zA-Z0-9-_()\\[\\]\\s]+$`  

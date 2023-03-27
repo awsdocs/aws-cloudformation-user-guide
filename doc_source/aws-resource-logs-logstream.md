@@ -62,6 +62,13 @@ The name of the log stream\. The name must be unique within the log group\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-logs-logstream-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-logs-logstream-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+Property description not available\.
+
 ## Examples<a name="aws-resource-logs-logstream--examples"></a>
 
 

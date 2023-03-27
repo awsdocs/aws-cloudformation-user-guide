@@ -69,9 +69,7 @@ Only Organizational Unit \(OU\) objects can be the direct parent of the file sys
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Password`  <a name="cfn-fsx-filesystem-windowsconfiguration-selfmanagedactivedirectoryconfiguration-password"></a>
-The password for the service account on your self\-managed AD domain that Amazon FSx will use to join to your AD domain\. We strongly suggest that you follow best practices and *do not* embed passwords in your CFN templates\.   
-The recommended approach is to use AWS Secrets Manager to store your passwords\. You can retrieve them for use in your templates using the `secretsmanager` dynamic reference\. There are additional costs associated with using AWS Secrets Manager\. To learn more, see [Secrets Manager secrets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager) in the *AWS CloudFormation User Guide*\.  
-Alternatively, you can use the `NoEcho` property to obfuscate the password parameter value\. For more information, see [Do Not Embed Credentials in Your Templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/best-practices.html#creds) in the *AWS CloudFormation User Guide*\.   
+The password for the service account on your self\-managed AD domain that Amazon FSx will use to join to your AD domain\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

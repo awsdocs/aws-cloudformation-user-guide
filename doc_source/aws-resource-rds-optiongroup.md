@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MajorEngineVersion](#cfn-rds-optiongroup-majorengineversion)" : String,
       "[OptionConfigurations](#cfn-rds-optiongroup-optionconfigurations)" : [ OptionConfiguration, ... ],
       "[OptionGroupDescription](#cfn-rds-optiongroup-optiongroupdescription)" : String,
+      "[OptionGroupName](#cfn-rds-optiongroup-optiongroupname)" : String,
       "[Tags](#cfn-rds-optiongroup-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -31,6 +32,7 @@ Properties:
   [OptionConfigurations](#cfn-rds-optiongroup-optionconfigurations): 
     - OptionConfiguration
   [OptionGroupDescription](#cfn-rds-optiongroup-optiongroupdescription): String
+  [OptionGroupName](#cfn-rds-optiongroup-optiongroupname): String
   [Tags](#cfn-rds-optiongroup-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -43,9 +45,9 @@ Valid Values:
 + `mariadb`
 + `mysql`
 + `oracle-ee`
++ `oracle-ee-cdb`
 + `oracle-se2`
-+ `oracle-se1`
-+ `oracle-se`
++ `oracle-se2-cdb`
 + `postgres`
 + `sqlserver-ee`
 + `sqlserver-se`
@@ -64,8 +66,8 @@ Specifies the major version of the engine that this option group should be assoc
 `OptionConfigurations`  <a name="cfn-rds-optiongroup-optionconfigurations"></a>
 A list of options and the settings for each option\.  
 *Required*: Conditional  
-*Type*: List of [OptionConfiguration](aws-properties-rds-optiongroup-optionconfigurations.md)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Type*: List of [OptionConfiguration](aws-properties-rds-optiongroup-optionconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OptionGroupDescription`  <a name="cfn-rds-optiongroup-optiongroupdescription"></a>
 The description of the option group\.  
@@ -73,8 +75,21 @@ The description of the option group\.
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
+`OptionGroupName`  <a name="cfn-rds-optiongroup-optiongroupname"></a>
+The name of the option group to be created\.  
+Constraints:  
++ Must be 1 to 255 letters, numbers, or hyphens
++ First character must be a letter
++ Can't end with a hyphen or contain two consecutive hyphens
+Example: `myoptiongroup`   
+If you don't specify a value for `OptionGroupName` property, a name is automatically created for the option group\.  
+This value is stored as a lowercase string\.
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `Tags`  <a name="cfn-rds-optiongroup-tags"></a>
-Tags to assign to the option group\.  
+An optional array of key\-value pairs to apply to this option group\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

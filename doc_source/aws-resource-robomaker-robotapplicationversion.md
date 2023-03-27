@@ -87,16 +87,9 @@ The following example creates a robot application\.
       "Type": "AWS::RoboMaker::RobotApplication",
       "Properties": {
         "Name": "MyRobotApplication",
-        "Sources": [
-          {
-            "S3Bucket": "my-bucket",
-            "S3Key": "robot_bundle_x86.tar.gz",
-            "Architecture": "ARMHF"
-          }
-        ],
+        "Environment": "111122223333.dkr.ecr.us-west-2.amazonaws.com/my-robot-app:latest",
         "RobotSoftwareSuite": {
-          "Name": "ROS",
-          "Version": "Kinetic"
+          "Name": "General"
         }
       }
     },
@@ -130,13 +123,9 @@ Resources:
     Type: "AWS::RoboMaker::RobotApplication"
     Properties:
       Name: "MyRobotApplication"
-      Sources:
-        - S3Bucket: "my-bucket"
-          S3Key: "robot_bundle_x86.tar.gz"
-          Architecture: "ARMHF"
+      Environment: "111122223333.dkr.ecr.us-west-2.amazonaws.com/my-robot-app:latest"
       RobotSoftwareSuite:
-        Name: "ROS"
-        Version: "Kinetic"
+        Name: "General"
   BasicRobotApplicationVersion:
     Type: "AWS::RoboMaker::RobotApplicationVersion"
     Properties:

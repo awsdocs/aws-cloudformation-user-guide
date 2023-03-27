@@ -49,7 +49,7 @@ Within each MetricDataQuery object, you must specify either `Expression` or `Met
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `1024`  
+*Maximum*: `2048`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-cloudwatch-alarm-metricdataquery-id"></a>

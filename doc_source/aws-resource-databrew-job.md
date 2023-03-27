@@ -146,7 +146,7 @@ The unique name of the job\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OutputLocation`  <a name="cfn-databrew-job-outputlocation"></a>
-The location in Amazon S3 or AWS Glue Data Catalog where the job writes its output\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [OutputLocation](aws-properties-databrew-job-outputlocation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

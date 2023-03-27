@@ -79,26 +79,26 @@ The name of the pipeline\.
 
 `ParameterObjects`  <a name="cfn-datapipeline-pipeline-parameterobjects"></a>
 The parameter objects used with the pipeline\.  
-*Required*: Yes  
-*Type*: List of [ParameterObject](aws-properties-datapipeline-pipeline-parameterobjects.md)  
+*Required*: No  
+*Type*: List of [ParameterObject](aws-properties-datapipeline-pipeline-parameterobject.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParameterValues`  <a name="cfn-datapipeline-pipeline-parametervalues"></a>
 The parameter values used with the pipeline\.  
 *Required*: No  
-*Type*: List of [ParameterValue](aws-properties-datapipeline-pipeline-parametervalues.md)  
+*Type*: List of [ParameterValue](aws-properties-datapipeline-pipeline-parametervalue.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PipelineObjects`  <a name="cfn-datapipeline-pipeline-pipelineobjects"></a>
 The objects that define the pipeline\. These objects overwrite the existing pipeline definition\. Not all objects, fields, and values can be updated\. For information about restrictions, see [Editing Your Pipeline](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-manage-pipeline-modify-console.html) in the *AWS Data Pipeline Developer Guide*\.  
 *Required*: No  
-*Type*: List of [PipelineObject](aws-properties-datapipeline-pipeline-pipelineobjects.md)  
+*Type*: List of [PipelineObject](aws-properties-datapipeline-pipeline-pipelineobject.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PipelineTags`  <a name="cfn-datapipeline-pipeline-pipelinetags"></a>
 A list of arbitrary tags \(key\-value pairs\) to associate with the pipeline, which you can use to control permissions\. For more information, see [Controlling Access to Pipelines and Resources](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-control-access.html) in the *AWS Data Pipeline Developer Guide*\.  
 *Required*: No  
-*Type*: List of [PipelineTag](aws-properties-datapipeline-pipeline-pipelinetags.md)  
+*Type*: List of [PipelineTag](aws-properties-datapipeline-pipeline-pipelinetag.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-datapipeline-pipeline-return-values"></a>
@@ -108,6 +108,13 @@ A list of arbitrary tags \(key\-value pairs\) to associate with the pipeline, wh
  When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the pipeline ID\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-datapipeline-pipeline-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-datapipeline-pipeline-return-values-fn--getatt-fn--getatt"></a>
+
+`PipelineId`  <a name="PipelineId-fn::getatt"></a>
+Property description not available\.
 
 ## Examples<a name="aws-resource-datapipeline-pipeline--examples"></a>
 

@@ -25,6 +25,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AppIntegrations`  <a name="cfn-wisdom-knowledgebase-sourceconfiguration-appintegrations"></a>
 Configuration information for Amazon AppIntegrations to automatically ingest content\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: [AppIntegrationsConfiguration](aws-properties-wisdom-knowledgebase-appintegrationsconfiguration.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

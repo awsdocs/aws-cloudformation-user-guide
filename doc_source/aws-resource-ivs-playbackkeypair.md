@@ -43,7 +43,7 @@ Playback\-key\-pair name\. The value does not need to be unique\.
 
 `PublicKeyMaterial`  <a name="cfn-ivs-playbackkeypair-publickeymaterial"></a>
 The public portion of a customer\-generated key pair\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

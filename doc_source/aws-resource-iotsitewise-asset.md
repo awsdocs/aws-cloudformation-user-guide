@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::IoTSiteWise::Asset",
   "Properties" : {
+      "[AssetDescription](#cfn-iotsitewise-asset-assetdescription)" : String,
       "[AssetHierarchies](#cfn-iotsitewise-asset-assethierarchies)" : [ AssetHierarchy, ... ],
       "[AssetModelId](#cfn-iotsitewise-asset-assetmodelid)" : String,
       "[AssetName](#cfn-iotsitewise-asset-assetname)" : String,
@@ -26,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::IoTSiteWise::Asset
 Properties: 
+  [AssetDescription](#cfn-iotsitewise-asset-assetdescription): String
   [AssetHierarchies](#cfn-iotsitewise-asset-assethierarchies): 
     - AssetHierarchy
   [AssetModelId](#cfn-iotsitewise-asset-assetmodelid): String
@@ -37,6 +39,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-iotsitewise-asset-properties"></a>
+
+`AssetDescription`  <a name="cfn-iotsitewise-asset-assetdescription"></a>
+A description for the asset\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AssetHierarchies`  <a name="cfn-iotsitewise-asset-assethierarchies"></a>
 A list of asset hierarchies that each contain a `hierarchyLogicalId`\. A hierarchy specifies allowed parent/child asset relationships\.  
@@ -74,7 +82,7 @@ A list of key\-value pairs that contain metadata for the asset\. For more inform
 
 ### Ref<a name="aws-resource-iotsitewise-asset-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `AssetId`\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns `AssetId` and `AssetArn`\.
 
 ### Fn::GetAtt<a name="aws-resource-iotsitewise-asset-return-values-fn--getatt"></a>
 
@@ -84,5 +92,10 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 #### <a name="aws-resource-iotsitewise-asset-return-values-fn--getatt-fn--getatt"></a>
 
+`AssetArn`  <a name="AssetArn-fn::getatt"></a>
+The ARN of the asset\.  
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 `AssetId`  <a name="AssetId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ID of the asset\.  
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.

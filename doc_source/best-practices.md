@@ -3,6 +3,7 @@
 Best practices are recommendations that can help you use AWS CloudFormation more effectively and securely throughout its entire workflow\. Learn how to plan and organize your stacks, create templates that describe your resources and the software applications that run on them, and manage your stacks and their resources\. The following best practices are based on real\-world experience from current CloudFormation customers\.
 
 **Planning and organizing**  
++ [Shorten the feedback loop to improve delivery velocity](#shortenfeedbackloop)
 + [Organize your stacks by lifecycle and ownership](#organizingstacks)
 + [Use cross\-stack references to export shared resources](#cross-stack)
 + [Use IAM to control access](security-best-practices.md#use-iam-to-control-access)
@@ -14,6 +15,7 @@ Best practices are recommendations that can help you use AWS CloudFormation more
 + [Do not embed credentials in your templates](security-best-practices.md#creds)
 + [Use AWS\-specific parameter types](#parmtypes)
 + [Use parameter constraints](#parmconstraints)
++ [Use pseudo parameters to promote portability](#pseudoparameters)
 + [Use `AWS::CloudFormation::Init` to deploy software applications on Amazon EC2 instances](#cfninit)
 + [Use the latest helper scripts](#helper-scripts)
 + [Validate templates before using them](#validate)
@@ -25,6 +27,14 @@ Best practices are recommendations that can help you use AWS CloudFormation more
 + [Use AWS CloudTrail to log AWS CloudFormation calls](security-best-practices.md#cloudtrail)
 + [Use code reviews and revision controls to manage your templates](#code)
 + [Update your Amazon EC2 instances regularly](#update-ec2-linux)
+
+## Shorten the feedback loop to improve delivery velocity<a name="shortenfeedbackloop"></a>
+
+Adopt practices and tools that help you shorten the feedback loop for your infrastructure you describe with CloudFormation templates\. This includes performing early linting and testing of your templates in your workstation; when you do, you have the opportunity to discover potential syntax and configuration issues even before you submit your contributions to a source code repository\. Early discovery of such issues helps with preventing them from reaching formal lifecycle environments, such as development, quality assurance, and production\. This early\-testing, fail\-fast approach gives you the benefits of reducing rework wait time, reducing potential areas of impact, and increasing your level of confidence in having successful provisioning operations\.
+
+Tooling choices that help you achieve fail\-fast practices include the [AWS CloudFormation Linter](https://github.com/aws-cloudformation/cfn-lint) \(cfn\-lint\) and [TaskCat](https://github.com/aws-ia/taskcat) command line tools\. The cfn\-lint tool gives you the ability to validate your CloudFormation templates against the [AWS CloudFormation Resource Specification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-resource-specification.html)\. This includes checking valid values for resource properties, as well as best practices\. Plugins for cfn\-lint are [available for a number of code editors](https://github.com/aws-cloudformation/cfn-lint#editor-plugins); this gives you the ability to visualize issues within your editor and to get direct linter feedback\. You can also choose to integrate cfn\-lint in your source code repository’s configuration, so that you can perform template validation when you commit your contributions\. For more information, see [Git pre\-commit validation of AWS CloudFormation templates with cfn\-lint](https://aws.amazon.com/blogs/mt/git-pre-commit-validation-of-aws-cloudformation-templates-with-cfn-lint/)\. Once you have performed your initial linting—and fixed any issues cfn\-lint might have raised—you can use TaskCat to test your templates by programmatically creating stacks in AWS regions you choose\. TaskCat also generates a report with a pass/fail grades for each region you chose\.
+
+For a step\-by\-step, hands\-on walkthrough on how to use both tools to shorten the feedback loop, follow the [Linting and Testing lab](https://catalog.workshops.aws/cfn101/en-US/basics/templates/linting-and-testing) of the [AWS CloudFormation Workshop](https://catalog.workshops.aws/cfn101/en-US)\.
 
 ## Organize your stacks by lifecycle and ownership<a name="organizingstacks"></a>
 
@@ -65,6 +75,18 @@ If your template requires inputs for existing AWS\-specific values, such as exis
 ## Use parameter constraints<a name="parmconstraints"></a>
 
 With constraints, you can describe allowed input values so that CloudFormation catches any not valid values before creating a stack\. You can set constraints such as a minimum length, maximum length, and allowed patterns\. For example, you can set constraints on a database user name value so that it must be a minimum length of eight character and contain only alphanumeric characters\. For more information, see [Parameters](parameters-section-structure.md)\.
+
+## Use pseudo parameters to promote portability<a name="pseudoparameters"></a>
+
+You can use [pseudo parameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html) in your templates as arguments for [intrinsic functions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference.html), such as `Ref` and `Fn::Sub`\. Pseudo parameters are parameters that are predefined by CloudFormation\. You don't declare them in your template\. Using pseudo parameters in intrinsic functions increases the portability of your stack templates across regions and accounts\.
+
+For example, imagine you wanted to create a template where, for a given resource property, you need to specify the [Amazon Resource Name](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) \(ARN\) of another existing resource\. In this case, the existing resource is an [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) resource with the following ARN: `arn:aws:ssm:us-east-1:111122223333:parameter/MySampleParameter`\. You will need to adapt the [ARN format](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arns-syntax) to your target AWS partition, region, and Account ID\. Instead of hard\-coding these values, you can use `AWS::Partition`, `AWS::Region`, and `AWS::AccountId` pseudo parameters to make your template more portable\. In this case, the following example shows you how to concatenate elements in an ARN with CloudFormation: `!Sub 'arn:${AWS::Partition}:ssm:${AWS::Region}:${AWS::AccountId}:parameter/MySampleParameter`\.
+
+For another example, assume you want to use [cross\-stack references](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/walkthrough-crossstackref.html) to refer to resource outputs in another CloudFormation stack\. In this example, assume you have created a [subnet](https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html) for your VPC, and then [exported](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html) its ID for use with other stacks in the same account and region\. In another stack, you reference the exported value of the subnet ID when describing an Amazon EC2 instance\.
+
+Stack exports must be unique per account and region\. So, in this case, you can use the `AWS::StackName` pseudo parameter to create a prefix for your export\. Since stack names must also be unique per account and region, the usage of this pseudo parameter as a prefix increases the possibility of having a unique export name while also promoting a reusable approach across stacks from where you export values\. Alternatively, you can use a prefix of your own choice\.
+
+For a detailed example of using the `Export` output field and `Fn::ImportValue` intrinsic function, see [Walkthrough: Refer to resource outputs in another AWS CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/walkthrough-crossstackref)\.
 
 ## Use `AWS::CloudFormation::Init` to deploy software applications on Amazon EC2 instances<a name="cfninit"></a>
 

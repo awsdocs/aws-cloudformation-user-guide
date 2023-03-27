@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::ContainerRecipe InstanceConfiguration<a name="aws-properties-imagebuilder-containerrecipe-instanceconfiguration"></a>
 
-Defines a custom source AMI and block device mapping configurations of an instance used for building and testing container images\.
+Defines a custom base AMI and block device mapping configurations of an instance used for building and testing container images\.
 
 ## Syntax<a name="aws-properties-imagebuilder-containerrecipe-instanceconfiguration-syntax"></a>
 

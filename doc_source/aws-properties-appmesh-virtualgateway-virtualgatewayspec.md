@@ -39,7 +39,6 @@ A reference to an object that represents the defaults for backends\.
 The listeners that the mesh endpoint is expected to receive inbound traffic from\. You can specify one listener\.  
 *Required*: Yes  
 *Type*: List of [VirtualGatewayListener](aws-properties-appmesh-virtualgateway-virtualgatewaylistener.md)  
-*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Logging`  <a name="cfn-appmesh-virtualgateway-virtualgatewayspec-logging"></a>

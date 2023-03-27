@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-inspectorv2-filter-portrangefilter-properties"></a>
 
 `BeginInclusive`  <a name="cfn-inspectorv2-filter-portrangefilter-begininclusive"></a>
-Not currently supported by AWS CloudFormation\.  
+The port number the port range begins at\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

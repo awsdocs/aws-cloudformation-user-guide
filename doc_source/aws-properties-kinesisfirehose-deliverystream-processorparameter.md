@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-kinesisfirehose-deliverystream-processorparameter-properties"></a>
 
 `ParameterName`  <a name="cfn-kinesisfirehose-deliverystream-processorparameter-parametername"></a>
-The name of the parameter\. Currently the following default values are supported: 3 for `NumberOfRetries`, 60 for the `BufferIntervalInSeconds`, and 3 for the `BufferSizeInMBs`\.  
+The name of the parameter\. Currently the following default values are supported: 3 for `NumberOfRetries` and 60 for the `BufferIntervalInSeconds`\. The `BufferSizeInMBs` ranges between 0\.2 MB and up to 3MB\. The default buffering hint is 1MB for all destinations, except Splunk\. For Splunk, the default buffering hint is 256 KB\.   
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `BufferIntervalInSeconds | BufferSizeInMBs | Delimiter | JsonParsingEngine | LambdaArn | MetadataExtractionQuery | NumberOfRetries | RoleArn | SubRecordType`  

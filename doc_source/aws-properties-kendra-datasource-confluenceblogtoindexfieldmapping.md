@@ -1,8 +1,6 @@
 # AWS::Kendra::DataSource ConfluenceBlogToIndexFieldMapping<a name="aws-properties-kendra-datasource-confluenceblogtoindexfieldmapping"></a>
 
-Defines the mapping between a blog field in the Confluence data source to a Amazon Kendra index field\.
-
-You must first create the index field using the `UpdateIndex` operation\. 
+Maps attributes or field names of Confluence blog to Amazon Kendra index field names\. To create custom fields, use the `UpdateIndex` API before you map to Confluence fields\. For more information, see [Mapping data source fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html)\. The Confluence data source field names must exist in your Confluence custom metadata\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-confluenceblogtoindexfieldmapping-syntax"></a>
 

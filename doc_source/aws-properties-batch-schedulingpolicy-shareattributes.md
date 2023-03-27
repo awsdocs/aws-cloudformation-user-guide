@@ -25,9 +25,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-batch-schedulingpolicy-shareattributes-properties"></a>
 
 `ShareIdentifier`  <a name="cfn-batch-schedulingpolicy-shareattributes-shareidentifier"></a>
-A fair share identifier or fair share identifier prefix\. If the string ends with an asterisk \(\*\), this entry specifies the weight factor to use for fair share identifiers that start with that prefix\. The list of fair share identifiers in a fair share policy cannot overlap\. For example, you can't have one that specifies a `shareIdentifier` of `UserA*` and another that specifies a `shareIdentifier` of `UserA-1`\.  
+A fair share identifier or fair share identifier prefix\. If the string ends with an asterisk \(\*\), this entry specifies the weight factor to use for fair share identifiers that start with that prefix\. The list of fair share identifiers in a fair share policy can't overlap\. For example, you can't have one that specifies a `shareIdentifier` of `UserA*` and another that specifies a `shareIdentifier` of `UserA-1`\.  
 There can be no more than 500 fair share identifiers active in a job queue\.  
-The string is limited to 255 alphanumeric characters, optionally followed by an asterisk \(\*\)\.  
+The string is limited to 255 alphanumeric characters, and can be followed by an asterisk \(\*\)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

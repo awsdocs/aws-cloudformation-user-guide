@@ -1,6 +1,6 @@
 # AWS::AppFlow::Flow ZendeskDestinationProperties<a name="aws-properties-appflow-flow-zendeskdestinationproperties"></a>
 
-<a name="aws-properties-appflow-flow-zendeskdestinationproperties-description"></a>The `ZendeskDestinationProperties` property type specifies Not currently supported by AWS CloudFormation\. for an [AWS::AppFlow::Flow](aws-resource-appflow-flow.md)\.
+The properties that are applied when Zendesk is used as a destination\.
 
 ## Syntax<a name="aws-properties-appflow-flow-zendeskdestinationproperties-syntax"></a>
 
@@ -31,25 +31,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appflow-flow-zendeskdestinationproperties-properties"></a>
 
 `ErrorHandlingConfig`  <a name="cfn-appflow-flow-zendeskdestinationproperties-errorhandlingconfig"></a>
-Not currently supported by AWS CloudFormation\.  
+ The settings that determine how Amazon AppFlow handles an error when placing data in the destination\. For example, this setting would determine if the flow should fail after one insertion error, or continue and attempt to insert every record regardless of the initial failure\. `ErrorHandlingConfig` is a part of the destination connector details\.   
 *Required*: No  
 *Type*: [ErrorHandlingConfig](aws-properties-appflow-flow-errorhandlingconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IdFieldNames`  <a name="cfn-appflow-flow-zendeskdestinationproperties-idfieldnames"></a>
-Not currently supported by AWS CloudFormation\.  
+ A list of field names that can be used as an ID field when performing a write operation\.   
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Object`  <a name="cfn-appflow-flow-zendeskdestinationproperties-object"></a>
-Not currently supported by AWS CloudFormation\.  
+The object specified in the Zendesk flow destination\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `512`  
+*Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WriteOperationType`  <a name="cfn-appflow-flow-zendeskdestinationproperties-writeoperationtype"></a>
-Not currently supported by AWS CloudFormation\.  
+ The possible write operations in the destination connector\. When this value is not provided, this defaults to the `INSERT` operation\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

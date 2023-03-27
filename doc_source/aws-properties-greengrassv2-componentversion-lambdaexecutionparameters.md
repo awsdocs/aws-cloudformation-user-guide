@@ -78,7 +78,7 @@ The parameters for the Linux process that contains the Lambda function\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MaxIdleTimeInSeconds`  <a name="cfn-greengrassv2-componentversion-lambdaexecutionparameters-maxidletimeinseconds"></a>
-The maximum amount of time in seconds that a non\-pinned Lambda function can idle before the software stops its process\.  
+The maximum amount of time in seconds that a non\-pinned Lambda function can idle before the AWS IoT Greengrass Core software stops its process\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -90,15 +90,15 @@ The maximum number of instances that a non\-pinned Lambda function can run at th
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MaxQueueSize`  <a name="cfn-greengrassv2-componentversion-lambdaexecutionparameters-maxqueuesize"></a>
-The maximum size of the message queue for the Lambda function component\. The Greengrass core device stores messages in a FIFO \(first\-in\-first\-out\) queue until it can run the Lambda function to consume each message\.  
+The maximum size of the message queue for the Lambda function component\. The AWS IoT Greengrass core device stores messages in a FIFO \(first\-in\-first\-out\) queue until it can run the Lambda function to consume each message\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Pinned`  <a name="cfn-greengrassv2-componentversion-lambdaexecutionparameters-pinned"></a>
 Whether or not the Lambda function is pinned, or long\-lived\.  
-+ A pinned Lambda function starts when the starts and keeps running in its own container\.
-+ A non\-pinned Lambda function starts only when it receives a work item and exists after it idles for `maxIdleTimeInSeconds`\. If the function has multiple work items, the software creates multiple instances of the function\.
++ A pinned Lambda function starts when the AWS IoT Greengrass Core starts and keeps running in its own container\.
++ A non\-pinned Lambda function starts only when it receives a work item and exists after it idles for `maxIdleTimeInSeconds`\. If the function has multiple work items, the AWS IoT Greengrass Core software creates multiple instances of the function\.
 Default: `true`  
 *Required*: No  
 *Type*: Boolean  

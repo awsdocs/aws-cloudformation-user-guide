@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-opensearchservice-domain-nodetonodeencryptionoptions-properties"></a>
 
 `Enabled`  <a name="cfn-opensearchservice-domain-nodetonodeencryptionoptions-enabled"></a>
-Specifies to enable or disable node\-to\-node encryption on the domain\.  
-*Required*: No  
+Specifies to enable or disable node\-to\-node encryption on the domain\. Required if you enable fine\-grained access control in [AdvancedSecurityOptionsInput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)\.  
+*Required*: Conditional  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -132,13 +132,13 @@ Timestamp of when detector was created\.
 The name of the detector\.
 
 `EventType.Arn`  <a name="EventType.Arn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.
 
 `EventType.CreatedTime`  <a name="EventType.CreatedTime-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.
 
 `EventType.LastUpdatedTime`  <a name="EventType.LastUpdatedTime-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.
 
 `LastUpdatedTime`  <a name="LastUpdatedTime-fn::getatt"></a>
 Timestamp of when detector was last updated\.

@@ -33,9 +33,9 @@ Let's take a look at a basic template\. The following template declares a single
 
 ```
 {
-    "Resources" : {
-        "HelloBucket" : {
-            "Type" : "AWS::S3::Bucket"
+    "Resources": {
+        "HelloBucket": {
+            "Type": "AWS::S3::Bucket"
         }
     }
 }
@@ -46,7 +46,7 @@ Let's take a look at a basic template\. The following template declares a single
 ```
 Resources:
   HelloBucket:
-    Type: AWS::S3::Bucket
+    Type: 'AWS::S3::Bucket'
 ```
 
 If you use this template to create a stack, AWS CloudFormation will create an Amazon S3 bucket\. Creating a bucket is simple, because CloudFormation can create a bucket with default settings\. For other resources, such as an Amazon EC2 Auto Scaling group or EC2 instance, CloudFormation requires more information\. Resource declarations use a `Properties` attribute to specify the information used to create a resource\.
@@ -63,11 +63,11 @@ Usually, a property for a resource is simply a string value\. For example, the f
 
 ```
 {
-    "Resources" : {
-        "HelloBucket" : {
-            "Type" : "AWS::S3::Bucket",
-            "Properties" : {
-               "AccessControl" : "PublicRead"               
+    "Resources": {
+        "HelloBucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "AccessControl": "PublicRead"
             }
         }
     }
@@ -79,7 +79,7 @@ Usually, a property for a resource is simply a string value\. For example, the f
 ```
 Resources:
   HelloBucket:
-    Type: AWS::S3::Bucket
+    Type: 'AWS::S3::Bucket'
     Properties:
       AccessControl: PublicRead
 ```
@@ -90,15 +90,15 @@ Some resources can have multiple properties, and some properties can have one or
 
 ```
 {
-    "Resources" : {
-        "HelloBucket" : {
-            "Type" : "AWS::S3::Bucket",
-            "Properties" : {
-               "AccessControl" : "PublicRead",
-               "WebsiteConfiguration" : {
-                    "IndexDocument" : "index.html",
-                    "ErrorDocument" : "error.html"            
-               }               
+    "Resources": {
+        "HelloBucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "AccessControl": "PublicRead",
+                "WebsiteConfiguration": {
+                    "IndexDocument": "index.html",
+                    "ErrorDocument": "error.html"
+                }
             }
         }
     }
@@ -110,7 +110,7 @@ Some resources can have multiple properties, and some properties can have one or
 ```
 Resources:
   HelloBucket:
-    Type: AWS::S3::Bucket
+    Type: 'AWS::S3::Bucket'
     Properties:
       AccessControl: PublicRead
       WebsiteConfiguration:
@@ -655,41 +655,43 @@ The Fn::Join function is also useful for declaring output values for the stack\.
 ### JSON<a name="gettingstarted.templatebasics.outputs.json2"></a>
 
 ```
-"Outputs": {
-  "InstallURL": {
-    "Value": {
-      "Fn::Join": [
-        "",
-        [
-          "http://",
-          {
-            "Fn::GetAtt": [
-              "ElasticLoadBalancer",
-              "DNSName"
-            ]
-          },
-          "/wp-admin/install.php"
-        ]
-      ]
-    },
-    "Description": "Installation URL of the WordPress website"
-  },
-  "WebsiteURL": {
-    "Value": {
-      "Fn::Join": [
-        "",
-        [
-          "http://",
-          {
-            "Fn::GetAtt": [
-              "ElasticLoadBalancer",
-              "DNSName"
-            ]
-          }
-        ]
-      ]
+{
+    "Outputs": {
+        "InstallURL": {
+            "Value": {
+                "Fn::Join": [
+                    "",
+                    [
+                        "http://",
+                        {
+                            "Fn::GetAtt": [
+                                "ElasticLoadBalancer",
+                                "DNSName"
+                            ]
+                        },
+                        "/wp-admin/install.php"
+                    ]
+                ]
+            },
+            "Description": "Installation URL of the WordPress website"
+        },
+        "WebsiteURL": {
+            "Value": {
+                "Fn::Join": [
+                    "",
+                    [
+                        "http://",
+                        {
+                            "Fn::GetAtt": [
+                                "ElasticLoadBalancer",
+                                "DNSName"
+                            ]
+                        }
+                    ]
+                ]
+            }
+        }
     }
-  }
 }
 ```
 

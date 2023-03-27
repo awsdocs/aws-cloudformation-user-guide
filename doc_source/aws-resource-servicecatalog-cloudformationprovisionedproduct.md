@@ -104,7 +104,7 @@ You must specify either the ID or the name of the product, but not both\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProductName`  <a name="cfn-servicecatalog-cloudformationprovisionedproduct-productname"></a>
-A user\-friendly name for the provisioned product\. This value must be unique for the AWS account and cannot be updated after the product is provisioned\.  
+The name of the Service Catalog product\.  
 Each time a stack is created or updated, if `ProductName` is provided it will successfully resolve to `ProductId` as long as only one product exists in the account or Region with that `ProductName`\.  
 You must specify either the name or the ID of the product, but not both\.
 *Required*: Conditional  
@@ -179,6 +179,9 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 `CloudformationStackArn`  <a name="CloudformationStackArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the CloudFormation stack, such as `arn:aws:cloudformation:eu-west-1:123456789012:stack/SC-499278721343-pp-hfyszaotincww/8f3df460-346a-11e8-9444-503abe701c29`\.
+
+`Outputs`  <a name="Outputs-fn::getatt"></a>
+The output of the product you are provisioning\. For example, the DNS of an EC2 instance\.
 
 `ProvisionedProductId`  <a name="ProvisionedProductId-fn::getatt"></a>
 The ID of the provisioned product\.

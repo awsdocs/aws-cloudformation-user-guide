@@ -1,9 +1,9 @@
 # AWS::DMS::ReplicationSubnetGroup<a name="aws-resource-dms-replicationsubnetgroup"></a>
 
-The `AWS::DMS::ReplicationSubnetGroup` resource creates an AWS DMS replication subnet group\. Subnet groups must contain at least two subnets in two different Availability Zones in the same region\.
+The `AWS::DMS::ReplicationSubnetGroup` resource creates an AWS DMS replication subnet group\. Subnet groups must contain at least two subnets in two different Availability Zones in the same AWS Region\.
 
 **Note**  
-Resource creation will fail if the `dms-vpc-role` IAM role doesn't already exist\. For more information, see [Creating the IAM Roles to Use With the AWS CLI and AWS DMS API](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.APIRole.html) in the *AWS Database Migration Service User Guide\.* 
+Resource creation fails if the `dms-vpc-role` AWS Identity and Access Management \(IAM\) role doesn't already exist\. For more information, see [ Creating the IAM Roles to Use With the AWS CLI and AWS DMS API](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.APIRole.html) in the *AWS Database Migration Service User Guide*\.
 
 ## Syntax<a name="aws-resource-dms-replicationsubnetgroup-syntax"></a>
 
@@ -45,7 +45,7 @@ The description for the subnet group\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReplicationSubnetGroupIdentifier`  <a name="cfn-dms-replicationsubnetgroup-replicationsubnetgroupidentifier"></a>
-The identifier for the replication subnet group\. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the identifier\.   
+The identifier for the replication subnet group\. If you don't specify a name, AWS CloudFormation generates a unique ID and uses that ID for the identifier\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -60,13 +60,13 @@ One or more subnet IDs to be assigned to the subnet group\.
 One or more tags to be assigned to the subnet group\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-dms-replicationsubnetgroup-return-values"></a>
 
 ### Ref<a name="aws-resource-dms-replicationsubnetgroup-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the replication subnet group, such as `mystack-myrepsubnetgroup-0a12bc456789de0fg`\. 
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the replication subnet group, such as `mystack-myrepsubnetgroup-0a12bc456789de0fg`\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -123,6 +123,6 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-dms-replicationsubnetgroup--seealso"></a>
-+  [CreateReplicationSubnetGroup](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationSubnetGroup.html) in the *AWS Database Migration Service API Reference* 
-+  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html) 
++  [ CreateReplicationSubnetGroup](https://docs.aws.amazon.com/dms/latest/APIReference/API_CreateReplicationSubnetGroup.html) in the *AWS Database Migration Service API Reference*
++  [AWS CloudFormation Stacks Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)
 

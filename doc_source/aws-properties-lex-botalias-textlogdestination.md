@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[CloudWatch](#cfn-lex-botalias-textlogdestination-cloudwatch)" : 
+  "[CloudWatch](#cfn-lex-botalias-textlogdestination-cloudwatch)" : CloudWatchLogGroupLogDestination
 }
 ```
 
@@ -18,12 +18,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [CloudWatch](#cfn-lex-botalias-textlogdestination-cloudwatch): 
+    CloudWatchLogGroupLogDestination
 ```
 
 ## Properties<a name="aws-properties-lex-botalias-textlogdestination-properties"></a>
 
 `CloudWatch`  <a name="cfn-lex-botalias-textlogdestination-cloudwatch"></a>
 Defines the Amazon CloudWatch Logs log group where text and metadata logs are delivered\.  
-*Required*: No  
-*Type*:   
+*Required*: Yes  
+*Type*: [CloudWatchLogGroupLogDestination](aws-properties-lex-botalias-cloudwatchloggrouplogdestination.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

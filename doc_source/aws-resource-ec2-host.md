@@ -15,7 +15,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AutoPlacement](#cfn-ec2-host-autoplacement)" : String,
       "[AvailabilityZone](#cfn-ec2-host-availabilityzone)" : String,
       "[HostRecovery](#cfn-ec2-host-hostrecovery)" : String,
-      "[InstanceType](#cfn-ec2-host-instancetype)" : String
+      "[InstanceFamily](#cfn-ec2-host-instancefamily)" : String,
+      "[InstanceType](#cfn-ec2-host-instancetype)" : String,
+      "[OutpostArn](#cfn-ec2-host-outpostarn)" : String
     }
 }
 ```
@@ -28,7 +30,9 @@ Properties:
   [AutoPlacement](#cfn-ec2-host-autoplacement): String
   [AvailabilityZone](#cfn-ec2-host-availabilityzone): String
   [HostRecovery](#cfn-ec2-host-hostrecovery): String
+  [InstanceFamily](#cfn-ec2-host-instancefamily): String
   [InstanceType](#cfn-ec2-host-instancetype): String
+  [OutpostArn](#cfn-ec2-host-outpostarn): String
 ```
 
 ## Properties<a name="aws-resource-ec2-host-properties"></a>
@@ -55,9 +59,21 @@ Default: `off`
 *Allowed values*: `off | on`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`InstanceFamily`  <a name="cfn-ec2-host-instancefamily"></a>
+The instance family supported by the Dedicated Host\. For example, `m5`\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `InstanceType`  <a name="cfn-ec2-host-instancetype"></a>
 Specifies the instance type to be supported by the Dedicated Hosts\. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only\.  
-*Required*: Yes  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`OutpostArn`  <a name="cfn-ec2-host-outpostarn"></a>
+The Amazon Resource Name \(ARN\) of the AWS Outpost on which the Dedicated Host is allocated\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

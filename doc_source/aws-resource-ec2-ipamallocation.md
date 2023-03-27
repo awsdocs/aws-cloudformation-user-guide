@@ -1,6 +1,6 @@
 # AWS::EC2::IPAMAllocation<a name="aws-resource-ec2-ipamallocation"></a>
 
-In IPAM, an allocation is a CIDR assignment from an IPAM pool to another resource or IPAM pool\.
+In IPAM, an allocation is a CIDR assignment from an IPAM pool to another IPAM pool or to a resource\.
 
 ## Syntax<a name="aws-resource-ec2-ipamallocation-syntax"></a>
 

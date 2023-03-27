@@ -43,7 +43,7 @@ A list of resource objects in the resource set\.
 
 `ResourceSetName`  <a name="cfn-route53recoveryreadiness-resourceset-resourcesetname"></a>
 The name of the resource set to create\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

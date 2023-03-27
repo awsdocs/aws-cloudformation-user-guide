@@ -1,6 +1,6 @@
 # AWS::Batch::JobDefinition Device<a name="aws-properties-batch-jobdefinition-device"></a>
 
-An object representing a container instance host device\.
+An object that represents a container instance host device\.
 
 **Note**  
 This object isn't applicable to jobs that are running on Fargate resources and shouldn't be provided\.
@@ -39,7 +39,7 @@ The path inside the container that's used to expose the host device\. By default
 `HostPath`  <a name="cfn-batch-jobdefinition-device-hostpath"></a>
 The path for the device on the host container instance\.  
 *Required*: No  
-*Type*: String  
+*Type*: [String](aws-properties-batch-jobdefinition-eksvolume-hostpath.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Permissions`  <a name="cfn-batch-jobdefinition-device-permissions"></a>

@@ -23,8 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MaxErrors](#cfn-ssm-association-maxerrors)" : String,
       "[Name](#cfn-ssm-association-name)" : String,
       "[OutputLocation](#cfn-ssm-association-outputlocation)" : InstanceAssociationOutputLocation,
-      "[Parameters](#cfn-ssm-association-parameters)" : {Key : Value, ...},
+      "[Parameters](#cfn-ssm-association-parameters)" : Json,
       "[ScheduleExpression](#cfn-ssm-association-scheduleexpression)" : String,
+      "[ScheduleOffset](#cfn-ssm-association-scheduleoffset)" : Integer,
       "[SyncCompliance](#cfn-ssm-association-synccompliance)" : String,
       "[Targets](#cfn-ssm-association-targets)" : [ Target, ... ],
       "[WaitForSuccessTimeoutSeconds](#cfn-ssm-association-waitforsuccesstimeoutseconds)" : Integer
@@ -50,9 +51,9 @@ Properties:
   [Name](#cfn-ssm-association-name): String
   [OutputLocation](#cfn-ssm-association-outputlocation): 
     InstanceAssociationOutputLocation
-  [Parameters](#cfn-ssm-association-parameters): 
-    Key : Value
+  [Parameters](#cfn-ssm-association-parameters): Json
   [ScheduleExpression](#cfn-ssm-association-scheduleexpression): String
+  [ScheduleOffset](#cfn-ssm-association-scheduleoffset): Integer
   [SyncCompliance](#cfn-ssm-association-synccompliance): String
   [Targets](#cfn-ssm-association-targets): 
     - Target
@@ -137,7 +138,7 @@ Executions that are already running an association when `MaxErrors` is reached a
 The name of the SSM document that contains the configuration information for the instance\. You can specify `Command` or `Automation` documents\. The documents can be AWS\-predefined documents, documents you created, or a document that is shared with you from another account\. For SSM documents that are shared with you from other AWS accounts, you must specify the complete SSM document ARN, in the following format:  
 `arn:partition:ssm:region:account-id:document/document-name`  
 For example: `arn:aws:ssm:us-east-2:12345678912:document/My-Shared-Document`  
-For AWS\-predefined documents and SSM documents you created in your account, you only need to specify the document name\. For example, AWS\-ApplyPatchBaseline or My\-Document\.   
+For AWS\-predefined documents and SSM documents you created in your account, you only need to specify the document name\. For example, `AWS-ApplyPatchBaseline` or `My-Document`\.   
 *Required*: Yes  
 *Type*: String  
 *Pattern*: `^[a-zA-Z0-9_\-.:/]{3,128}$`  
@@ -152,7 +153,7 @@ An Amazon Simple Storage Service \(Amazon S3\) bucket where you want to store th
 `Parameters`  <a name="cfn-ssm-association-parameters"></a>
 The parameters for the runtime configuration of the document\.  
 *Required*: No  
-*Type*: Map of Json  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduleExpression`  <a name="cfn-ssm-association-scheduleexpression"></a>
@@ -161,6 +162,14 @@ A cron expression that specifies a schedule when the association runs\. The sche
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ScheduleOffset`  <a name="cfn-ssm-association-scheduleoffset"></a>
+Number of days to wait after the scheduled day to run an association\.  
+*Required*: No  
+*Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `6`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SyncCompliance`  <a name="cfn-ssm-association-synccompliance"></a>

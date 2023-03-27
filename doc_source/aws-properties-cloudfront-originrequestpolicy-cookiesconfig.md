@@ -27,12 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `CookieBehavior`  <a name="cfn-cloudfront-originrequestpolicy-cookiesconfig-cookiebehavior"></a>
 Determines whether cookies in viewer requests are included in requests that CloudFront sends to the origin\. Valid values are:  
-+  `none` – Cookies in viewer requests are not included in requests that CloudFront sends to the origin\. Even when this field is set to `none`, any cookies that are listed in a `CachePolicy` *are* included in origin requests\.
-+  `whitelist` – The cookies in viewer requests that are listed in the `CookieNames` type are included in requests that CloudFront sends to the origin\.
++  `none` – No cookies in viewer requests are included in requests that CloudFront sends to the origin\. Even when this field is set to `none`, any cookies that are listed in a `CachePolicy` *are* included in origin requests\.
++  `whitelist` – Only the cookies in viewer requests that are listed in the `CookieNames` type are included in requests that CloudFront sends to the origin\.
 +  `all` – All cookies in viewer requests are included in requests that CloudFront sends to the origin\.
++  `allExcept` – All cookies in viewer requests are included in requests that CloudFront sends to the origin, * **except** * for those listed in the `CookieNames` type, which are not included\.
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `all | none | whitelist`  
+*Allowed values*: `all | allExcept | none | whitelist`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Cookies`  <a name="cfn-cloudfront-originrequestpolicy-cookiesconfig-cookies"></a>

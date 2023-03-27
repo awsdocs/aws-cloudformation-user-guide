@@ -66,26 +66,23 @@ The following example shows how to declare an `AWS::Inspector::ResourceGroup` re
 #### JSON<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Resource_Group_Resource--json"></a>
 
 ```
-"myresourcegroup": {
-  "Type": "AWS::Inspector::ResourceGroup",
-  "Properties": {
-    "ResourceGroupTags": [
-      {
-        "Key": "Name",
-        "Value": "example"
-      }
-    ]
-  }
+{
+    "Type": "AWS::Inspector::ResourceGroup",
+    "Properties": {
+        "ResourceGroupTags": [{
+            "Key": "Name",
+            "Value": "example"
+        }]
+    }
 }
 ```
 
 #### YAML<a name="aws-resource-inspector-resourcegroup--examples--Declaring_an_Amazon_Inspector_Resource_Group_Resource--yaml"></a>
 
 ```
-myresourcegroup: 
-  Type: "AWS::Inspector::ResourceGroup"
-  Properties: 
-    ResourceGroupTags: 
-      - Key: "Name"
-      Value: "example"
+Type: AWS::Inspector::ResourceGroup
+Properties:
+  ResourceGroupTags:
+    - Key: Name
+      Value: example
 ```

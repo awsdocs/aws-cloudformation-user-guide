@@ -31,13 +31,13 @@ Properties:
 ## Properties<a name="aws-resource-apigateway-clientcertificate-properties"></a>
 
 `Description`  <a name="cfn-apigateway-clientcertificate-description"></a>
-A description of the client certificate\.  
+The description of the client certificate\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-apigateway-clientcertificate-tags"></a>
-An array of arbitrary tags \(key\-value pairs\) to associate with the client certificate\.  
+The collection of tags\. Each tag element is associated with a given resource\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -92,5 +92,5 @@ TestClientCertificate:
 ```
 
 ## See also<a name="aws-resource-apigateway-clientcertificate--seealso"></a>
-+ [clientcertificate:generate](https://docs.aws.amazon.com/apigateway/api-reference/link-relation/clientcertificate-generate/) in the *Amazon API Gateway REST API Reference*
++ [clientcertificate:generate](https://docs.aws.amazon.com/apigateway/latest/api/API_GenerateClientCertificate.html) in the *Amazon API Gateway REST API Reference*
 

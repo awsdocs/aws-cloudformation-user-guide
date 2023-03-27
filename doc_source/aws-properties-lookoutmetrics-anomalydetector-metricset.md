@@ -79,7 +79,7 @@ Contains information about how the source data should be interpreted\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Offset`  <a name="cfn-lookoutmetrics-anomalydetector-metricset-offset"></a>
-After an interval ends, the amount of seconds that the detector waits before importing data\. Offset is only supported for S3 and Redshift datasources\.  
+After an interval ends, the amount of seconds that the detector waits before importing data\. Offset is only supported for S3, Redshift, Athena and datasources\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

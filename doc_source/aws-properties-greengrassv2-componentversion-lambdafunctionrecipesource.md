@@ -42,7 +42,7 @@ The component versions on which this Lambda function component depends\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ComponentLambdaParameters`  <a name="cfn-greengrassv2-componentversion-lambdafunctionrecipesource-componentlambdaparameters"></a>
-The system and runtime parameters for the Lambda function as it runs on the Greengrass core device\.  
+The system and runtime parameters for the Lambda function as it runs on the AWS IoT Greengrass core device\.  
 *Required*: No  
 *Type*: [LambdaExecutionParameters](aws-properties-greengrassv2-componentversion-lambdaexecutionparameters.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

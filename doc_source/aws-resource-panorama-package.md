@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Panorama::Package",
   "Properties" : {
       "[PackageName](#cfn-panorama-package-packagename)" : String,
+      "[StorageLocation](#cfn-panorama-package-storagelocation)" : StorageLocation,
       "[Tags](#cfn-panorama-package-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -24,6 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Panorama::Package
 Properties: 
   [PackageName](#cfn-panorama-package-packagename): String
+  [StorageLocation](#cfn-panorama-package-storagelocation): 
+    StorageLocation
   [Tags](#cfn-panorama-package-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
@@ -38,6 +41,12 @@ A name for the package\.
 *Maximum*: `128`  
 *Pattern*: `[a-zA-Z0-9\-\_]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`StorageLocation`  <a name="cfn-panorama-package-storagelocation"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [StorageLocation](aws-properties-panorama-package-storagelocation.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-panorama-package-tags"></a>
 Tags for the package\.  
@@ -67,3 +76,18 @@ The item's created time\.
 
 `PackageId`  <a name="PackageId-fn::getatt"></a>
 The package's ID\.
+
+`StorageLocation.BinaryPrefixLocation`  <a name="StorageLocation.BinaryPrefixLocation-fn::getatt"></a>
+Property description not available\.
+
+`StorageLocation.Bucket`  <a name="StorageLocation.Bucket-fn::getatt"></a>
+Property description not available\.
+
+`StorageLocation.GeneratedPrefixLocation`  <a name="StorageLocation.GeneratedPrefixLocation-fn::getatt"></a>
+Property description not available\.
+
+`StorageLocation.ManifestPrefixLocation`  <a name="StorageLocation.ManifestPrefixLocation-fn::getatt"></a>
+Property description not available\.
+
+`StorageLocation.RepoPrefixLocation`  <a name="StorageLocation.RepoPrefixLocation-fn::getatt"></a>
+Property description not available\.

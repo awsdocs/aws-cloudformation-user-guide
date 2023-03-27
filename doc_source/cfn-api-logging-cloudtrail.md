@@ -34,7 +34,7 @@ A trail is a configuration that enables delivery of events as log files to an Am
 The following example shows a CloudTrail log entry that demonstrates the `CreateStack` operation\. The operation was made by an IAM user named Alice\.
 
 **Note**  
-Only the input parameter key names are logged; no parameter values are logged\.
+Only the input parameter key names are logged\. Parameter values aren't logged\.
 
 ```
 {

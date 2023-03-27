@@ -54,6 +54,12 @@ The ID of the VPC\.
 
 ### Ref<a name="aws-resource-ec2-localgatewayroutetablevpcassociation-return-values-ref"></a>
 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the local gateway route table VPC association\. For example:
+
+`{ "Ref": "lgw-vpc-assoc-0ee765bcc8EXAMPLE" }`
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 ### Fn::GetAtt<a name="aws-resource-ec2-localgatewayroutetablevpcassociation-return-values-fn--getatt"></a>
 
 The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
@@ -72,6 +78,6 @@ The ID of the association\.
 The state of the association\.
 
 ## See also<a name="aws-resource-ec2-localgatewayroutetablevpcassociation--seealso"></a>
-+ [Local Gateways](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-local-gateways.html) in *AWS Outposts User Guide*
++ [Local gateway](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-local-gateways.html) in *AWS Outposts User Guide*
 + [CreateLocalGatewayRouteTableVpcAssociation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateLocalGatewayRouteTableVpcAssociation.html) in the *Amazon EC2 API Reference*
 

@@ -16,6 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EncryptionConfiguration](#cfn-apprunner-service-encryptionconfiguration)" : EncryptionConfiguration,
       "[HealthCheckConfiguration](#cfn-apprunner-service-healthcheckconfiguration)" : HealthCheckConfiguration,
       "[InstanceConfiguration](#cfn-apprunner-service-instanceconfiguration)" : InstanceConfiguration,
+      "[NetworkConfiguration](#cfn-apprunner-service-networkconfiguration)" : NetworkConfiguration,
+      "[ObservabilityConfiguration](#cfn-apprunner-service-observabilityconfiguration)" : ServiceObservabilityConfiguration,
       "[ServiceName](#cfn-apprunner-service-servicename)" : String,
       "[SourceConfiguration](#cfn-apprunner-service-sourceconfiguration)" : SourceConfiguration,
       "[Tags](#cfn-apprunner-service-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -35,6 +37,10 @@ Properties:
     HealthCheckConfiguration
   [InstanceConfiguration](#cfn-apprunner-service-instanceconfiguration): 
     InstanceConfiguration
+  [NetworkConfiguration](#cfn-apprunner-service-networkconfiguration): 
+    NetworkConfiguration
+  [ObservabilityConfiguration](#cfn-apprunner-service-observabilityconfiguration): 
+    ServiceObservabilityConfiguration
   [ServiceName](#cfn-apprunner-service-servicename): String
   [SourceConfiguration](#cfn-apprunner-service-sourceconfiguration): 
     SourceConfiguration
@@ -46,6 +52,8 @@ Properties:
 
 `AutoScalingConfigurationArn`  <a name="cfn-apprunner-service-autoscalingconfigurationarn"></a>
 The Amazon Resource Name \(ARN\) of an App Runner automatic scaling configuration resource that you want to associate with your service\. If not provided, App Runner associates the latest revision of a default auto scaling configuration\.  
+Specify an ARN with a name and a revision number to associate that revision\. For example: `arn:aws:apprunner:us-east-1:123456789012:autoscalingconfiguration/high-availability/3`   
+Specify just the name to associate the latest revision\. For example: `arn:aws:apprunner:us-east-1:123456789012:autoscalingconfiguration/high-availability`   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -60,19 +68,32 @@ An optional custom encryption key that App Runner uses to encrypt the copy of yo
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HealthCheckConfiguration`  <a name="cfn-apprunner-service-healthcheckconfiguration"></a>
-The settings for the health check that AWS App Runner performs to monitor the health of your service\.  
+The settings for the health check that AWS App Runner performs to monitor the health of the App Runner service\.  
 *Required*: No  
 *Type*: [HealthCheckConfiguration](aws-properties-apprunner-service-healthcheckconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceConfiguration`  <a name="cfn-apprunner-service-instanceconfiguration"></a>
-The runtime configuration of instances \(scaling units\) of the App Runner service\.  
+The runtime configuration of instances \(scaling units\) of your service\.  
 *Required*: No  
 *Type*: [InstanceConfiguration](aws-properties-apprunner-service-instanceconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`NetworkConfiguration`  <a name="cfn-apprunner-service-networkconfiguration"></a>
+Configuration settings related to network traffic of the web application that the App Runner service runs\.  
+*Required*: No  
+*Type*: [NetworkConfiguration](aws-properties-apprunner-service-networkconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ObservabilityConfiguration`  <a name="cfn-apprunner-service-observabilityconfiguration"></a>
+The observability configuration of your service\.  
+*Required*: No  
+*Type*: [ServiceObservabilityConfiguration](aws-properties-apprunner-service-serviceobservabilityconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ServiceName`  <a name="cfn-apprunner-service-servicename"></a>
-A name for the new service\. It must be unique across all the running App Runner services in your AWS account in the AWS Region\.  
+A name for the App Runner service\. It must be unique across all the running App Runner services in your AWS account in the AWS Region\.  
+If you don't specify a name, AWS CloudFormation generates a name for your service\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `4`  
@@ -87,7 +108,7 @@ The source to deploy to the App Runner service\. It can be a code or an image re
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-apprunner-service-tags"></a>
-An optional list of metadata items that you can associate with your service resource\. A tag is a key\-value pair\.  
+An optional list of metadata items that you can associate with the App Runner service resource\. A tag is a key\-value pair\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -96,7 +117,7 @@ An optional list of metadata items that you can associate with your service reso
 
 ### Ref<a name="aws-resource-apprunner-service-return-values-ref"></a>
 
-When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the resource name\.
+When the logical ID of this resource is provided to the `Ref` intrinsic function, `Ref` returns the ARN of the App Runner service\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -134,8 +155,8 @@ This example illustrates creating a service based on a Python source code reposi
 
 ```
 {
-  "Type" : "AWS::AppRunner::Service",
-  "Properties" : {
+  "Type": "AWS::AppRunner::Service",
+  "Properties": {
     "ServiceName": "python-app",
     "SourceConfiguration": {
       "AuthenticationConfiguration": {
@@ -178,7 +199,7 @@ This example illustrates creating a service based on a Python source code reposi
 ```
 Type: AWS::AppRunner::Service
 Properties:
-  ServiceName: python-app,
+  ServiceName: python-app
   SourceConfiguration:
     AuthenticationConfiguration:
       ConnectionArn: "arn:aws:apprunner:us-east-1:123456789012:connection/my-github-connection/e7656250f67242d7819feade6800f59e"
@@ -212,8 +233,8 @@ This example illustrates creating a service based on an image stored in Amazon E
 
 ```
 {
-  "Type" : "AWS::AppRunner::Service",
-  "Properties" : {
+  "Type": "AWS::AppRunner::Service",
+  "Properties": {
     "ServiceName": "golang-container-app",
     "SourceConfiguration": {
       "AuthenticationConfiguration": {

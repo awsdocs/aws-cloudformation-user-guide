@@ -66,13 +66,13 @@ The name of the network\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NetworkFrameworkConfiguration`  <a name="cfn-managedblockchain-member-networkconfiguration-networkframeworkconfiguration"></a>
- Configuration properties relevant to the network for the blockchain framework that the network uses\.   
+Configuration properties relevant to the network for the blockchain framework that the network uses\.   
 *Required*: No  
 *Type*: [NetworkFrameworkConfiguration](aws-properties-managedblockchain-member-networkframeworkconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VotingPolicy`  <a name="cfn-managedblockchain-member-networkconfiguration-votingpolicy"></a>
-The voting rules for the network to decide if a proposal is accepted\.  
+The voting rules that the network uses to decide if a proposal is accepted\.  
 *Required*: Yes  
 *Type*: [VotingPolicy](aws-properties-managedblockchain-member-votingpolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -66,7 +66,7 @@ The ID for the dashboard, also added to the IAM policy\.
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `2048`  
+*Maximum*: `512`  
 *Pattern*: `[\w\-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -146,3 +146,36 @@ The time that the dashboard was last published\.
 
 `LastUpdatedTime`  <a name="LastUpdatedTime-fn::getatt"></a>
 The time that the dashboard was last updated\.
+
+`Version`  <a name="Version-fn::getatt"></a>
+The version of the dashboard\.
+
+`Version.Arn`  <a name="Version.Arn-fn::getatt"></a>
+Property description not available\.
+
+`Version.CreatedTime`  <a name="Version.CreatedTime-fn::getatt"></a>
+Property description not available\.
+
+`Version.DataSetArns`  <a name="Version.DataSetArns-fn::getatt"></a>
+Property description not available\.
+
+`Version.Description`  <a name="Version.Description-fn::getatt"></a>
+Property description not available\.
+
+`Version.Errors`  <a name="Version.Errors-fn::getatt"></a>
+Property description not available\.
+
+`Version.Sheets`  <a name="Version.Sheets-fn::getatt"></a>
+Property description not available\.
+
+`Version.SourceEntityArn`  <a name="Version.SourceEntityArn-fn::getatt"></a>
+Property description not available\.
+
+`Version.Status`  <a name="Version.Status-fn::getatt"></a>
+Property description not available\.
+
+`Version.ThemeArn`  <a name="Version.ThemeArn-fn::getatt"></a>
+Property description not available\.
+
+`Version.VersionNumber`  <a name="Version.VersionNumber-fn::getatt"></a>
+Property description not available\.

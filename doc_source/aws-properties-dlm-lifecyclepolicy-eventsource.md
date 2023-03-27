@@ -1,6 +1,6 @@
 # AWS::DLM::LifecyclePolicy EventSource<a name="aws-properties-dlm-lifecyclepolicy-eventsource"></a>
 
-Specifies an event that triggers an event\-based policy\.
+ **\[Event\-based policies only\]** Specifies an event that activates an event\-based policy\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-eventsource-syntax"></a>
 

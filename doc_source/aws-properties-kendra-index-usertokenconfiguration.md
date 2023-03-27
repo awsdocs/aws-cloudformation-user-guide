@@ -1,6 +1,6 @@
 # AWS::Kendra::Index UserTokenConfiguration<a name="aws-properties-kendra-index-usertokenconfiguration"></a>
 
-Provides configuration information for a token configuration\.
+Provides the configuration information for a token\.
 
 ## Syntax<a name="aws-properties-kendra-index-usertokenconfiguration-syntax"></a>
 

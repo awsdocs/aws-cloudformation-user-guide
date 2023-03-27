@@ -45,7 +45,7 @@ DNS queries for this domain name are forwarded to the IP addresses that are spec
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `256`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Name`  <a name="cfn-route53resolver-resolverrule-name"></a>
 The name for the Resolver rule, which you specified when you created the Resolver rule\.  

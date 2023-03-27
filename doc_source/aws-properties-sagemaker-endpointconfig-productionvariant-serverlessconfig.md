@@ -1,8 +1,5 @@
 # AWS::SageMaker::EndpointConfig ServerlessConfig<a name="aws-properties-sagemaker-endpointconfig-productionvariant-serverlessconfig"></a>
 
-**Important**  
-Serverless Inference is in preview release for Amazon SageMaker and is subject to change\. We do not recommend using this feature in production environments\.
-
 Specifies the serverless configuration for an endpoint variant\.
 
 ## Syntax<a name="aws-properties-sagemaker-endpointconfig-productionvariant-serverlessconfig-syntax"></a>
@@ -32,7 +29,7 @@ The maximum number of concurrent invocations your serverless endpoint can proces
 *Required*: Yes  
 *Type*: Integer  
 *Minimum*: `1`  
-*Maximum*: `50`  
+*Maximum*: `200`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MemorySizeInMB`  <a name="cfn-sagemaker-endpointconfig-productionvariant-serverlessconfig-memorysizeinmb"></a>

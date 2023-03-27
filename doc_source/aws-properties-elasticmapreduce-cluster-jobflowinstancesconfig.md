@@ -180,6 +180,7 @@ The identifier of the Amazon EC2 security group for the Amazon EMR service to ac
 `TaskInstanceFleets`  <a name="cfn-elasticmapreduce-cluster-jobflowinstancesconfig-taskinstancefleets"></a>
 Describes the EC2 instances and instance configurations for the task instance fleets when using clusters with the instance fleet configuration\. These task instance fleets are added to the cluster as part of the cluster launch\. Each task instance fleet must have a unique name specified so that CloudFormation can differentiate between the task instance fleets\.  
 You can currently specify only one task instance fleet for a cluster\. After creating the cluster, you can only modify the mutable properties of `InstanceFleetConfig`, which are `TargetOnDemandCapacity` and `TargetSpotCapacity`\. Modifying any other property results in cluster replacement\.
+To allow a maximum of 30 Amazon EC2 instance types per fleet, include `TaskInstanceFleets` when you create your cluster\. If you create your cluster without `TaskInstanceFleets`, Amazon EMR uses its default allocation strategy, which allows for a maximum of five Amazon EC2 instance types\.
 *Required*: No  
 *Type*: List of [InstanceFleetConfig](aws-properties-elasticmapreduce-cluster-instancefleetconfig.md)  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

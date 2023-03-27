@@ -1,6 +1,6 @@
 # AWS::DLM::LifecyclePolicy FastRestoreRule<a name="aws-properties-dlm-lifecyclepolicy-fastrestorerule"></a>
 
-Specifies a rule for enabling fast snapshot restore\. You can enable fast snapshot restore based on either a count or a time interval\.
+ **\[Snapshot policies only\]** Specifies a rule for enabling fast snapshot restore for snapshots created by snapshot policies\. You can enable fast snapshot restore based on either a count or a time interval\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-fastrestorerule-syntax"></a>
 

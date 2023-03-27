@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[ApiVersion](#cfn-appflow-flow-sourceflowconfig-apiversion)" : String,
   "[ConnectorProfileName](#cfn-appflow-flow-sourceflowconfig-connectorprofilename)" : String,
   "[ConnectorType](#cfn-appflow-flow-sourceflowconfig-connectortype)" : String,
   "[IncrementalPullConfig](#cfn-appflow-flow-sourceflowconfig-incrementalpullconfig)" : IncrementalPullConfig,
@@ -20,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-appflow-flow-sourceflowconfig-syntax.yaml"></a>
 
 ```
+  [ApiVersion](#cfn-appflow-flow-sourceflowconfig-apiversion): String
   [ConnectorProfileName](#cfn-appflow-flow-sourceflowconfig-connectorprofilename): String
   [ConnectorType](#cfn-appflow-flow-sourceflowconfig-connectortype): String
   [IncrementalPullConfig](#cfn-appflow-flow-sourceflowconfig-incrementalpullconfig): 
@@ -30,6 +32,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ## Properties<a name="aws-properties-appflow-flow-sourceflowconfig-properties"></a>
 
+`ApiVersion`  <a name="cfn-appflow-flow-sourceflowconfig-apiversion"></a>
+The API version of the connector when it's used as a source in the flow\.  
+*Required*: No  
+*Type*: String  
+*Maximum*: `256`  
+*Pattern*: `\S+`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ConnectorProfileName`  <a name="cfn-appflow-flow-sourceflowconfig-connectorprofilename"></a>
  The name of the connector profile\. This name must be unique for each connector profile in the AWS account\.   
 *Required*: No  
@@ -39,10 +49,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConnectorType`  <a name="cfn-appflow-flow-sourceflowconfig-connectortype"></a>
- The type of source connector, such as Salesforce, Amplitude, and so on\.   
-*Allowed Values*: S3 \| Amplitude \| Datadog \| Dynatrace \| Googleanalytics \| Infornexus \| Salesforce \| Servicenow \| Singular \| Slack \| Trendmicro \| Veeva \| Zendesk  
+ The type of connector, such as Salesforce, Amplitude, and so on\.   
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `Amplitude | CustomConnector | CustomerProfiles | Datadog | Dynatrace | EventBridge | Googleanalytics | Honeycode | Infornexus | LookoutMetrics | Marketo | Pardot | Redshift | S3 | Salesforce | SAPOData | Servicenow | Singular | Slack | Snowflake | Trendmicro | Upsolver | Veeva | Zendesk`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncrementalPullConfig`  <a name="cfn-appflow-flow-sourceflowconfig-incrementalpullconfig"></a>

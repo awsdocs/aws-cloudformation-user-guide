@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile VeevaConnectorProfileProperties<a name="aws-properties-appflow-connectorprofile-veevaconnectorprofileproperties"></a>
 
- The `VeevaConnectorProfileProperties` property type specifies the connector\-specific profile properties required when using Veeva\. 
+ The connector\-specific profile properties required when using Veeva\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-veevaconnectorprofileproperties-syntax"></a>
 

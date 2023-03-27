@@ -1,10 +1,10 @@
 # AWS::ECS::CapacityProvider ManagedScaling<a name="aws-properties-ecs-capacityprovider-managedscaling"></a>
 
-The `ManagedScaling` property specifies the settings for the Auto Scaling group capacity provider\.
+The managed scaling settings for the Auto Scaling group capacity provider\.
 
-When managed scaling is enabled, Amazon ECS manages the scale\-in and scale\-out actions of the Auto Scaling group\. Amazon ECS manages a target tracking scaling policy using an Amazon ECS\-managed CloudWatch metric with the specified `targetCapacity` value as the target value for the metric\. For more information, see [Using Managed Scaling](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/asg-capacity-providers.html#asg-capacity-providers-managed-scaling) in the *Amazon Elastic Container Service Developer Guide*\.
+When managed scaling is enabled, Amazon ECS manages the scale\-in and scale\-out actions of the Auto Scaling group\. Amazon ECS manages a target tracking scaling policy using an Amazon ECS managed CloudWatch metric with the specified `targetCapacity` value as the target value for the metric\. For more information, see [Using managed scaling](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/asg-capacity-providers.html#asg-capacity-providers-managed-scaling) in the *Amazon Elastic Container Service Developer Guide*\.
 
-If managed scaling is disabled, the user must manage the scaling of the Auto Scaling group\.
+If managed scaling is off, the user must manage the scaling of the Auto Scaling group\.
 
 ## Syntax<a name="aws-properties-ecs-capacityprovider-managedscaling-syntax"></a>
 
@@ -43,7 +43,7 @@ The period of time, in seconds, after a newly launched Amazon EC2 instance can c
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumScalingStepSize`  <a name="cfn-ecs-capacityprovider-managedscaling-maximumscalingstepsize"></a>
-The maximum number of container instances that Amazon ECS scales in or scales out at one time\. If this parameter is omitted, the default value of `10000` is used\.  
+The maximum number of Amazon EC2 instances that Amazon ECS will scale out at one time\. The scale in process is not affected by this parameter\. If this parameter is omitted, the default value of `1` is used\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -51,7 +51,9 @@ The maximum number of container instances that Amazon ECS scales in or scales ou
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MinimumScalingStepSize`  <a name="cfn-ecs-capacityprovider-managedscaling-minimumscalingstepsize"></a>
-The minimum number of container instances that Amazon ECS scales in or scales out at one time\. If this parameter is omitted, the default value of `1` is used\.  
+The minimum number of Amazon EC2 instances that Amazon ECS will scale out at one time\. The scale in process is not affected by this parameter If this parameter is omitted, the default value of `1` is used\.  
+When additional capacity is required, Amazon ECS will scale up the minimum scaling step size even if the actual demand is less than the minimum scaling step size\.  
+If you use a capacity provider with an Auto Scaling group configured with more than one Amazon EC2 instance type or Availability Zone, Amazon ECS will scale up by the exact minimum scaling step size value and will ignore both the maximum scaling step size as well as the capacity demand\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -59,7 +61,7 @@ The minimum number of container instances that Amazon ECS scales in or scales ou
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Status`  <a name="cfn-ecs-capacityprovider-managedscaling-status"></a>
-Determines whether to enable managed scaling for the capacity provider\.  
+Determines whether to use managed scaling for the capacity provider\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `DISABLED | ENABLED`  

@@ -54,7 +54,7 @@ Properties:
 ## Properties<a name="aws-resource-emr-studio-properties"></a>
 
 `AuthMode`  <a name="cfn-emr-studio-authmode"></a>
-Specifies whether the Studio authenticates users using AWS SSO or IAM\.  
+Specifies whether the Studio authenticates users using IAM Identity Center or IAM\.  
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `IAM | SSO`  

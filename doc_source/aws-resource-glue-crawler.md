@@ -57,7 +57,7 @@ Properties:
 ## Properties<a name="aws-resource-glue-crawler-properties"></a>
 
 `Classifiers`  <a name="cfn-glue-crawler-classifiers"></a>
-A list of UTF\-8 strings that specify the custom classifiers that are associated with the crawler\.  
+A list of UTF\-8 strings that specify the names of custom classifiers that are associated with the crawler\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -111,7 +111,8 @@ For scheduled crawlers, the schedule when the crawler runs\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SchemaChangePolicy`  <a name="cfn-glue-crawler-schemachangepolicy"></a>
-The policy that specifies update and delete behaviors for the crawler\.  
+The policy that specifies update and delete behaviors for the crawler\. The policy tells the crawler what to do in the event that it detects a change in a table that already exists in the customer's database at the time of the crawl\. The `SchemaChangePolicy` does not affect whether or how new tables and partitions are added\. New tables and partitions are always created regardless of the `SchemaChangePolicy` on a crawler\.  
+The SchemaChangePolicy consists of two components, `UpdateBehavior` and `DeleteBehavior`\.  
 *Required*: No  
 *Type*: [SchemaChangePolicy](aws-properties-glue-crawler-schemachangepolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -176,16 +177,30 @@ The following example creates a crawler for an Amazon S3 target\.
                     ]
                 },
                 "Path": "/",
+                "ManagedPolicyArns": ["arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole"],
                 "Policies": [
                     {
-                        "PolicyName": "root",
+                        "PolicyName": "S3BucketAccessPolicy",
                         "PolicyDocument": {
                             "Version": "2012-10-17",
                             "Statement": [
                                 {
                                     "Effect": "Allow",
-                                    "Action": "*",
-                                    "Resource": "*"
+                                    "Action": [
+                                        "s3:GetObject",
+                                        "s3:PutObject"
+                                    ],
+                                    "Resource": {
+                                        "Fn::Join": [
+                                            "", 
+                                            [
+                                                {
+                                                    "Fn::GetAtt": ["MyS3Bucket", "Arn"]
+                                                },
+                                                "*"
+                                            ]
+                                        ]
+                                    }
                                 }
                             ]
                         }
@@ -200,7 +215,7 @@ The following example creates a crawler for an Amazon S3 target\.
                     "Ref": "AWS::AccountId"
                 },
                 "DatabaseInput": {
-                    "Name": "dbCrawler",
+                    "Name": "dbcrawler",
                     "Description": "TestDatabaseDescription",
                     "LocationUri": "TestLocationUri",
                     "Parameters": {
@@ -258,6 +273,9 @@ The following example creates a crawler for an Amazon S3 target\.
                     "UpdateBehavior": "UPDATE_IN_DATABASE",
                     "DeleteBehavior": "LOG"
                 },
+                "Tags": {
+                    "key1": "value1"
+                },
                 "Schedule": {
                     "ScheduleExpression": "cron(0/10 * ? * MON-FRI *)"
                 }
@@ -285,23 +303,31 @@ Resources:
             Action:
               - "sts:AssumeRole"
       Path: "/"
+      ManagedPolicyArns:
+        ['arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole']
       Policies:
         -
-          PolicyName: "root"
+          PolicyName: "S3BucketAccessPolicy"
           PolicyDocument:
             Version: "2012-10-17"
             Statement:
               -
                 Effect: "Allow"
-                Action: "*"
-                Resource: "*"
+                Action: 
+                  - "s3:GetObject"
+                  - "s3:PutObject"
+                Resource: 
+                  !Join
+                    - ''
+                    - - !GetAtt MyS3Bucket.Arn
+                      - "*"
  
   MyDatabase:
     Type: AWS::Glue::Database
     Properties:
       CatalogId: !Ref AWS::AccountId
       DatabaseInput:
-        Name: "dbCrawler"
+        Name: "dbcrawler"
         Description: "TestDatabaseDescription"
         LocationUri: "TestLocationUri"
         Parameters:
@@ -336,6 +362,8 @@ Resources:
       SchemaChangePolicy:
         UpdateBehavior: "UPDATE_IN_DATABASE"
         DeleteBehavior: "LOG"
+      Tags:
+        "Key1": "Value1"
       Schedule:
         ScheduleExpression: "cron(0/10 * ? * MON-FRI *)"
 ```

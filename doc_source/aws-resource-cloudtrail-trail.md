@@ -59,13 +59,14 @@ Properties:
 ## Properties<a name="aws-resource-cloudtrail-trail-properties"></a>
 
 `CloudWatchLogsLogGroupArn`  <a name="cfn-cloudtrail-trail-cloudwatchlogsloggrouparn"></a>
-Specifies a log group name using an Amazon Resource Name \(ARN\), a unique identifier that represents the log group to which CloudTrail logs are delivered\. Not required unless you specify `CloudWatchLogsRoleArn`\.  
+Specifies a log group name using an Amazon Resource Name \(ARN\), a unique identifier that represents the log group to which CloudTrail logs are delivered\. You must use a log group that exists in your account\.  
+Not required unless you specify `CloudWatchLogsRoleArn`\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CloudWatchLogsRoleArn`  <a name="cfn-cloudtrail-trail-cloudwatchlogsrolearn"></a>
-Specifies the role for the CloudWatch Logs endpoint to assume to write to a user's log group\.  
+Specifies the role for the CloudWatch Logs endpoint to assume to write to a user's log group\. You must use a role that exists in your account\.  
 *Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -80,7 +81,6 @@ When you disable log file integrity validation, the chain of digest files is bro
 `EventSelectors`  <a name="cfn-cloudtrail-trail-eventselectors"></a>
 Use event selectors to further specify the management and data event settings for your trail\. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events\. When an event occurs in your account, CloudTrail evaluates the event selector for all trails\. For each trail, if the event matches any event selector, the trail processes and logs the event\. If the event doesn't match any event selector, the trail doesn't log the event\.  
 You can configure up to five event selectors for a trail\.  
-You cannot apply both event selectors and advanced event selectors to a trail\.  
 *Required*: No  
 *Type*: List of [EventSelector](aws-properties-cloudtrail-trail-eventselector.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -92,7 +92,9 @@ Specifies whether the trail is publishing events from global services such as IA
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InsightSelectors`  <a name="cfn-cloudtrail-trail-insightselectors"></a>
-Specifies whether a trail has insight types specified in an `InsightSelector` list\.  
+A JSON string that contains the insight types you want to log on a trail\. `ApiCallRateInsight` and `ApiErrorRateInsight` are valid Insight types\.  
+The `ApiCallRateInsight` Insights type analyzes write\-only management API calls that are aggregated per minute against a baseline API call volume\.  
+The `ApiErrorRateInsight` Insights type analyzes management API calls that result in error codes\. The error is shown if the API call is unsuccessful\.  
 *Required*: No  
 *Type*: List of [InsightSelector](aws-properties-cloudtrail-trail-insightselector.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -110,7 +112,7 @@ Specifies whether the trail applies only to the current region or to all regions
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsOrganizationTrail`  <a name="cfn-cloudtrail-trail-isorganizationtrail"></a>
-Specifies whether the trail is created for all accounts in an organization in AWS Organizations, or only for the current AWS account\. The default is false, and cannot be true unless the call is made on behalf of an AWS account that is the management account for an organization in AWS Organizations\.  
+Specifies whether the trail is applied to all accounts in an organization in AWS Organizations, or only for the current AWS account\. The default is false, and cannot be true unless the call is made on behalf of an AWS account that is the management account or delegated administrator account for an organization in AWS Organizations\. If the trail is not an organization trail and this is set to `true`, the trail will be created in all AWS accounts that belong to the organization\. If the trail is an organization trail and this is set to `false`, the trail will remain in the current AWS account but be deleted from all member accounts in the organization\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -196,7 +198,6 @@ The following example creates a trail that logs events in all regions, an Amazon
 
 ```
 {
-    "AWSTemplateFormatVersion": "2010-09-09",
     "Parameters": {
         "TrailName": {
             "Type": "String"
@@ -259,13 +260,13 @@ The following example creates a trail that logs events in all regions, an Amazon
                                 "Type": "AWS::S3::Object",
                                 "Values": [
                                     {
-                                        "Fn::Sub": "arn:${AWS::Partition}:s3:::"
+                                        "Fn::Sub": "arn:${AWS::Partition}:s3"
                                     }
                                 ]
                             }
                         ],
                         "IncludeManagementEvents": true,
-                        "ReadWriteType": "All",
+                        "ReadWriteType": "All"
                     }
                 ]
             }
@@ -335,7 +336,7 @@ Resources:
         - DataResources:
             - Type: AWS::S3::Object
               Values:
-                - !Sub "arn:${AWS::Partition}:s3:::"
+                - !Sub "arn:${AWS::Partition}:s3"
           IncludeManagementEvents: true
           ReadWriteType: All
 Outputs:

@@ -48,8 +48,8 @@ A description for the namespace\.
 The name that you want to assign to this namespace\. When you create a private DNS namespace, AWS Cloud Map automatically creates an Amazon Route 53 private hosted zone that has the same name as the namespace\.  
 *Required*: Yes  
 *Type*: String  
-*Maximum*: `1024`  
-*Pattern*: `^[!-~]{1,1024}$`  
+*Maximum*: `253`  
+*Pattern*: `^[!-~]{1,253}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Properties`  <a name="cfn-servicediscovery-privatednsnamespace-properties"></a>
@@ -92,7 +92,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) of the private namespace\.
 
 `HostedZoneId`  <a name="HostedZoneId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The ID for the Route 53 hosted zone that AWS Cloud Map creates when you create a namespace\.
 
 `Id`  <a name="Id-fn::getatt"></a>
 The ID of the private namespace\.

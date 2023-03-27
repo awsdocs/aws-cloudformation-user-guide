@@ -1,8 +1,8 @@
 # AWS::ECS::CapacityProvider<a name="aws-resource-ecs-capacityprovider"></a>
 
-The `AWS::ECS::CapacityProvider` resource creates an Amazon Elastic Container Service \(Amazon ECS\) capacity provider\. Capacity providers are associated with an Amazon ECS cluster and are used in capacity provider strategies to facilitate cluster auto scaling\.
+Creates a new capacity provider\. Capacity providers are associated with an Amazon ECS cluster and are used in capacity provider strategies to facilitate cluster auto scaling\.
 
-Only capacity providers using an Auto Scaling group can be created\. Amazon ECS tasks on AWS Fargate use the `FARGATE` and `FARGATE_SPOT` capacity providers which are already created and available to all accounts in Regions supported by AWS Fargate\.
+Only capacity providers that use an Auto Scaling group can be created\. Amazon ECS tasks on AWS Fargate use the `FARGATE` and `FARGATE_SPOT` capacity providers\. These providers are available to all accounts in the AWS Regions that AWS Fargate supports\.
 
 ## Syntax<a name="aws-resource-ecs-capacityprovider-syntax"></a>
 

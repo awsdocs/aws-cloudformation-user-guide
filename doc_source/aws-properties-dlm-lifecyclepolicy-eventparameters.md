@@ -1,6 +1,6 @@
 # AWS::DLM::LifecyclePolicy EventParameters<a name="aws-properties-dlm-lifecyclepolicy-eventparameters"></a>
 
-Specifies an event that triggers an event\-based policy\.
+ **\[Event\-based policies only\]** Specifies an event that activates an event\-based policy\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-eventparameters-syntax"></a>
 

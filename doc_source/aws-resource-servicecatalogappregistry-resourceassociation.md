@@ -58,11 +58,11 @@ The type of resource of which the application will be associated\. Possible valu
 #### <a name="aws-resource-servicecatalogappregistry-resourceassociation-return-values-fn--getatt-fn--getatt"></a>
 
 `ApplicationArn`  <a name="ApplicationArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.
 
 `Id`  <a name="Id-fn::getatt"></a>
 The Id of the Association\.  
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 `ResourceArn`  <a name="ResourceArn-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.

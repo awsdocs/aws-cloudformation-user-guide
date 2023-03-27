@@ -104,4 +104,4 @@ AWS tags that contain a key value pair and may be searched by console, command l
 The Amazon Resource Name \(ARN\) of the schema\.
 
 `InitialSchemaVersionId`  <a name="InitialSchemaVersionId-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+Property description not available\.

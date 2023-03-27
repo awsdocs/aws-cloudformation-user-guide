@@ -28,8 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[MinLatency](#cfn-mediaconnect-flow-source-minlatency)" : Integer,
   "[Name](#cfn-mediaconnect-flow-source-name)" : String,
   "[Protocol](#cfn-mediaconnect-flow-source-protocol)" : String,
+  "[SenderControlPort](#cfn-mediaconnect-flow-source-sendercontrolport)" : Integer,
+  "[SenderIpAddress](#cfn-mediaconnect-flow-source-senderipaddress)" : String,
   "[SourceArn](#cfn-mediaconnect-flow-source-sourcearn)" : String,
   "[SourceIngestPort](#cfn-mediaconnect-flow-source-sourceingestport)" : String,
+  "[SourceListenerAddress](#cfn-mediaconnect-flow-source-sourcelisteneraddress)" : String,
+  "[SourceListenerPort](#cfn-mediaconnect-flow-source-sourcelistenerport)" : Integer,
   "[StreamId](#cfn-mediaconnect-flow-source-streamid)" : String,
   "[VpcInterfaceName](#cfn-mediaconnect-flow-source-vpcinterfacename)" : String,
   "[WhitelistCidr](#cfn-mediaconnect-flow-source-whitelistcidr)" : String
@@ -50,8 +54,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [MinLatency](#cfn-mediaconnect-flow-source-minlatency): Integer
   [Name](#cfn-mediaconnect-flow-source-name): String
   [Protocol](#cfn-mediaconnect-flow-source-protocol): String
+  [SenderControlPort](#cfn-mediaconnect-flow-source-sendercontrolport): Integer
+  [SenderIpAddress](#cfn-mediaconnect-flow-source-senderipaddress): String
   [SourceArn](#cfn-mediaconnect-flow-source-sourcearn): String
   [SourceIngestPort](#cfn-mediaconnect-flow-source-sourceingestport): String
+  [SourceListenerAddress](#cfn-mediaconnect-flow-source-sourcelisteneraddress): String
+  [SourceListenerPort](#cfn-mediaconnect-flow-source-sourcelistenerport): Integer
   [StreamId](#cfn-mediaconnect-flow-source-streamid): String
   [VpcInterfaceName](#cfn-mediaconnect-flow-source-vpcinterfacename): String
   [WhitelistCidr](#cfn-mediaconnect-flow-source-whitelistcidr): String
@@ -114,7 +122,19 @@ The name of the source\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Protocol`  <a name="cfn-mediaconnect-flow-source-protocol"></a>
-The protocol that is used by the source\. For a full list of available protocols, see: [Source protocols](https://docs.aws.amazon.com/mediaconnect/latest/api/v1-flows-flowarn-source.html#v1-flows-flowarn-source-prop-setsourcerequest-protocol) in the *AWS Elemental MediaConnect API Reference*\.  
+The protocol that is used by the source\. AWS CloudFormation does not currently support CDI or ST 2110 JPEG XS source protocols\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SenderControlPort`  <a name="cfn-mediaconnect-flow-source-sendercontrolport"></a>
+The port that the flow uses to send outbound requests to initiate connection with the sender\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SenderIpAddress`  <a name="cfn-mediaconnect-flow-source-senderipaddress"></a>
+The IP address that the flow communicates with to initiate connection with the sender\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -129,6 +149,18 @@ The ARN of the source\.
 The port that the flow will be listening on for incoming content\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SourceListenerAddress`  <a name="cfn-mediaconnect-flow-source-sourcelisteneraddress"></a>
+Source IP or domain name for SRT\-caller protocol\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SourceListenerPort`  <a name="cfn-mediaconnect-flow-source-sourcelistenerport"></a>
+Source port for SRT\-caller protocol\.  
+*Required*: No  
+*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StreamId`  <a name="cfn-mediaconnect-flow-source-streamid"></a>

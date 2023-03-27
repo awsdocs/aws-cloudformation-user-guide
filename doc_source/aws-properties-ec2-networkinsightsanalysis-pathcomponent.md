@@ -11,15 +11,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[AclRule](#cfn-ec2-networkinsightsanalysis-pathcomponent-aclrule)" : AnalysisAclRule,
+  "[AdditionalDetails](#cfn-ec2-networkinsightsanalysis-pathcomponent-additionaldetails)" : [ AdditionalDetail, ... ],
   "[Component](#cfn-ec2-networkinsightsanalysis-pathcomponent-component)" : AnalysisComponent,
   "[DestinationVpc](#cfn-ec2-networkinsightsanalysis-pathcomponent-destinationvpc)" : AnalysisComponent,
+  "[ElasticLoadBalancerListener](#cfn-ec2-networkinsightsanalysis-pathcomponent-elasticloadbalancerlistener)" : AnalysisComponent,
+  "[Explanations](#cfn-ec2-networkinsightsanalysis-pathcomponent-explanations)" : [ Explanation, ... ],
   "[InboundHeader](#cfn-ec2-networkinsightsanalysis-pathcomponent-inboundheader)" : AnalysisPacketHeader,
   "[OutboundHeader](#cfn-ec2-networkinsightsanalysis-pathcomponent-outboundheader)" : AnalysisPacketHeader,
   "[RouteTableRoute](#cfn-ec2-networkinsightsanalysis-pathcomponent-routetableroute)" : AnalysisRouteTableRoute,
   "[SecurityGroupRule](#cfn-ec2-networkinsightsanalysis-pathcomponent-securitygrouprule)" : AnalysisSecurityGroupRule,
   "[SequenceNumber](#cfn-ec2-networkinsightsanalysis-pathcomponent-sequencenumber)" : Integer,
+  "[ServiceName](#cfn-ec2-networkinsightsanalysis-pathcomponent-servicename)" : String,
   "[SourceVpc](#cfn-ec2-networkinsightsanalysis-pathcomponent-sourcevpc)" : AnalysisComponent,
   "[Subnet](#cfn-ec2-networkinsightsanalysis-pathcomponent-subnet)" : AnalysisComponent,
+  "[TransitGateway](#cfn-ec2-networkinsightsanalysis-pathcomponent-transitgateway)" : AnalysisComponent,
+  "[TransitGatewayRouteTableRoute](#cfn-ec2-networkinsightsanalysis-pathcomponent-transitgatewayroutetableroute)" : TransitGatewayRouteTableRoute,
   "[Vpc](#cfn-ec2-networkinsightsanalysis-pathcomponent-vpc)" : AnalysisComponent
 }
 ```
@@ -29,10 +35,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AclRule](#cfn-ec2-networkinsightsanalysis-pathcomponent-aclrule): 
     AnalysisAclRule
+  [AdditionalDetails](#cfn-ec2-networkinsightsanalysis-pathcomponent-additionaldetails): 
+    - AdditionalDetail
   [Component](#cfn-ec2-networkinsightsanalysis-pathcomponent-component): 
     AnalysisComponent
   [DestinationVpc](#cfn-ec2-networkinsightsanalysis-pathcomponent-destinationvpc): 
     AnalysisComponent
+  [ElasticLoadBalancerListener](#cfn-ec2-networkinsightsanalysis-pathcomponent-elasticloadbalancerlistener): 
+    AnalysisComponent
+  [Explanations](#cfn-ec2-networkinsightsanalysis-pathcomponent-explanations): 
+    - Explanation
   [InboundHeader](#cfn-ec2-networkinsightsanalysis-pathcomponent-inboundheader): 
     AnalysisPacketHeader
   [OutboundHeader](#cfn-ec2-networkinsightsanalysis-pathcomponent-outboundheader): 
@@ -42,10 +54,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [SecurityGroupRule](#cfn-ec2-networkinsightsanalysis-pathcomponent-securitygrouprule): 
     AnalysisSecurityGroupRule
   [SequenceNumber](#cfn-ec2-networkinsightsanalysis-pathcomponent-sequencenumber): Integer
+  [ServiceName](#cfn-ec2-networkinsightsanalysis-pathcomponent-servicename): String
   [SourceVpc](#cfn-ec2-networkinsightsanalysis-pathcomponent-sourcevpc): 
     AnalysisComponent
   [Subnet](#cfn-ec2-networkinsightsanalysis-pathcomponent-subnet): 
     AnalysisComponent
+  [TransitGateway](#cfn-ec2-networkinsightsanalysis-pathcomponent-transitgateway): 
+    AnalysisComponent
+  [TransitGatewayRouteTableRoute](#cfn-ec2-networkinsightsanalysis-pathcomponent-transitgatewayroutetableroute): 
+    TransitGatewayRouteTableRoute
   [Vpc](#cfn-ec2-networkinsightsanalysis-pathcomponent-vpc): 
     AnalysisComponent
 ```
@@ -58,6 +75,12 @@ The network ACL rule\.
 *Type*: [AnalysisAclRule](aws-properties-ec2-networkinsightsanalysis-analysisaclrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`AdditionalDetails`  <a name="cfn-ec2-networkinsightsanalysis-pathcomponent-additionaldetails"></a>
+The additional details\.  
+*Required*: No  
+*Type*: List of [AdditionalDetail](aws-properties-ec2-networkinsightsanalysis-additionaldetail.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Component`  <a name="cfn-ec2-networkinsightsanalysis-pathcomponent-component"></a>
 The component\.  
 *Required*: No  
@@ -68,6 +91,18 @@ The component\.
 The destination VPC\.  
 *Required*: No  
 *Type*: [AnalysisComponent](aws-properties-ec2-networkinsightsanalysis-analysiscomponent.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ElasticLoadBalancerListener`  <a name="cfn-ec2-networkinsightsanalysis-pathcomponent-elasticloadbalancerlistener"></a>
+The load balancer listener\.  
+*Required*: No  
+*Type*: [AnalysisComponent](aws-properties-ec2-networkinsightsanalysis-analysiscomponent.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Explanations`  <a name="cfn-ec2-networkinsightsanalysis-pathcomponent-explanations"></a>
+The explanation codes\.  
+*Required*: No  
+*Type*: List of [Explanation](aws-properties-ec2-networkinsightsanalysis-explanation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InboundHeader`  <a name="cfn-ec2-networkinsightsanalysis-pathcomponent-inboundheader"></a>
@@ -100,6 +135,12 @@ The sequence number\.
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ServiceName`  <a name="cfn-ec2-networkinsightsanalysis-pathcomponent-servicename"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SourceVpc`  <a name="cfn-ec2-networkinsightsanalysis-pathcomponent-sourcevpc"></a>
 The source VPC\.  
 *Required*: No  
@@ -110,6 +151,18 @@ The source VPC\.
 The subnet\.  
 *Required*: No  
 *Type*: [AnalysisComponent](aws-properties-ec2-networkinsightsanalysis-analysiscomponent.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TransitGateway`  <a name="cfn-ec2-networkinsightsanalysis-pathcomponent-transitgateway"></a>
+The transit gateway\.  
+*Required*: No  
+*Type*: [AnalysisComponent](aws-properties-ec2-networkinsightsanalysis-analysiscomponent.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TransitGatewayRouteTableRoute`  <a name="cfn-ec2-networkinsightsanalysis-pathcomponent-transitgatewayroutetableroute"></a>
+The route in a transit gateway route table\.  
+*Required*: No  
+*Type*: [TransitGatewayRouteTableRoute](aws-properties-ec2-networkinsightsanalysis-transitgatewayroutetableroute.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Vpc`  <a name="cfn-ec2-networkinsightsanalysis-pathcomponent-vpc"></a>

@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DistributionConfigurationArn](#cfn-imagebuilder-imagepipeline-distributionconfigurationarn)" : String,
       "[EnhancedImageMetadataEnabled](#cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled)" : Boolean,
       "[ImageRecipeArn](#cfn-imagebuilder-imagepipeline-imagerecipearn)" : String,
+      "[ImageScanningConfiguration](#cfn-imagebuilder-imagepipeline-imagescanningconfiguration)" : ImageScanningConfiguration,
       "[ImageTestsConfiguration](#cfn-imagebuilder-imagepipeline-imagetestsconfiguration)" : ImageTestsConfiguration,
       "[InfrastructureConfigurationArn](#cfn-imagebuilder-imagepipeline-infrastructureconfigurationarn)" : String,
       "[Name](#cfn-imagebuilder-imagepipeline-name)" : String,
@@ -37,6 +38,8 @@ Properties:
   [DistributionConfigurationArn](#cfn-imagebuilder-imagepipeline-distributionconfigurationarn): String
   [EnhancedImageMetadataEnabled](#cfn-imagebuilder-imagepipeline-enhancedimagemetadataenabled): Boolean
   [ImageRecipeArn](#cfn-imagebuilder-imagepipeline-imagerecipearn): String
+  [ImageScanningConfiguration](#cfn-imagebuilder-imagepipeline-imagescanningconfiguration): 
+    ImageScanningConfiguration
   [ImageTestsConfiguration](#cfn-imagebuilder-imagepipeline-imagetestsconfiguration): 
     ImageTestsConfiguration
   [InfrastructureConfigurationArn](#cfn-imagebuilder-imagepipeline-infrastructureconfigurationarn): String
@@ -80,6 +83,12 @@ The Amazon Resource Name \(ARN\) of the distribution configuration associated wi
 The Amazon Resource Name \(ARN\) of the image recipe associated with this image pipeline\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ImageScanningConfiguration`  <a name="cfn-imagebuilder-imagepipeline-imagescanningconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [ImageScanningConfiguration](aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageTestsConfiguration`  <a name="cfn-imagebuilder-imagepipeline-imagetestsconfiguration"></a>

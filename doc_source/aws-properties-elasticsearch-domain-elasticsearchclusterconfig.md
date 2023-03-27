@@ -84,8 +84,8 @@ The instance type for your data nodes, such as `m3.medium.elasticsearch`\. For v
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WarmCount`  <a name="cfn-elasticsearch-domain-elasticsearchclusterconfig-warmcount"></a>
-The number of warm nodes in the cluster\.  
-*Required*: No  
+The number of warm nodes in the cluster\. Required if you enable warm storage\.  
+*Required*: Conditional  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -96,14 +96,14 @@ Whether to enable warm storage for the cluster\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WarmType`  <a name="cfn-elasticsearch-domain-elasticsearchclusterconfig-warmtype"></a>
-The instance type for the cluster's warm nodes\.  
-*Required*: No  
+The instance type for the cluster's warm nodes\. Required if you enable warm storage\.  
+*Required*: Conditional  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ZoneAwarenessConfig`  <a name="cfn-elasticsearch-domain-elasticsearchclusterconfig-zoneawarenessconfig"></a>
 Specifies zone awareness configuration options\. Only use if `ZoneAwarenessEnabled` is `true`\.  
-*Required*: No  
+*Required*: Conditional  
 *Type*: [ZoneAwarenessConfig](aws-properties-elasticsearch-domain-zoneawarenessconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -1,6 +1,6 @@
 # AWS::ECS::TaskSet<a name="aws-resource-ecs-taskset"></a>
 
-Create a task set in the specified cluster and service\. This is used when a service uses the `EXTERNAL` deployment controller type\. For more information, see [Amazon ECS Deployment Types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html) in the *Amazon Elastic Container Service Developer Guide*\.
+Create a task set in the specified cluster and service\. This is used when a service uses the `EXTERNAL` deployment controller type\. For more information, see [Amazon ECS deployment types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html) in the *Amazon Elastic Container Service Developer Guide*\.
 
 ## Syntax<a name="aws-resource-ecs-taskset-syntax"></a>
 
@@ -62,7 +62,7 @@ An optional non\-unique tag that identifies this task set in external systems\. 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `LaunchType`  <a name="cfn-ecs-taskset-launchtype"></a>
-The launch type that new tasks in the task set uses\. For more information, see [Amazon ECS Launch Types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The launch type that new tasks in the task set uses\. For more information, see [Amazon ECS launch types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 If a `launchType` is specified, the `capacityProviderStrategy` parameter must be omitted\.  
 *Required*: No  
 *Type*: String  
@@ -100,7 +100,7 @@ The short name or full Amazon Resource Name \(ARN\) of the service to create the
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceRegistries`  <a name="cfn-ecs-taskset-serviceregistries"></a>
-The details of the service discovery registries to assign to this task set\. For more information, see [Service Discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html)\.  
+The details of the service discovery registries to assign to this task set\. For more information, see [Service discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html)\.  
 *Required*: No  
 *Type*: List of [ServiceRegistry](aws-properties-ecs-taskset-serviceregistry.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

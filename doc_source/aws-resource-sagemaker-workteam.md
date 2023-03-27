@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[MemberDefinitions](#cfn-sagemaker-workteam-memberdefinitions)" : [ MemberDefinition, ... ],
       "[NotificationConfiguration](#cfn-sagemaker-workteam-notificationconfiguration)" : NotificationConfiguration,
       "[Tags](#cfn-sagemaker-workteam-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[WorkforceName](#cfn-sagemaker-workteam-workforcename)" : String,
       "[WorkteamName](#cfn-sagemaker-workteam-workteamname)" : String
     }
 }
@@ -35,6 +36,7 @@ Properties:
     NotificationConfiguration
   [Tags](#cfn-sagemaker-workteam-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [WorkforceName](#cfn-sagemaker-workteam-workforcename): String
   [WorkteamName](#cfn-sagemaker-workteam-workteamname): String
 ```
 
@@ -64,10 +66,16 @@ Configures SNS notifications of available or expiring work items for work teams\
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-sagemaker-workteam-tags"></a>
-Not currently supported by AWS CloudFormation\.  
+An array of key\-value pairs\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`WorkforceName`  <a name="cfn-sagemaker-workteam-workforcename"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WorkteamName`  <a name="cfn-sagemaker-workteam-workteamname"></a>
 The name of the work team\.  
@@ -87,4 +95,4 @@ The name of the work team\.
 #### <a name="aws-resource-sagemaker-workteam-return-values-fn--getatt-fn--getatt"></a>
 
 `WorkteamName`  <a name="WorkteamName-fn::getatt"></a>
-Not currently supported by AWS CloudFormation\.
+The name of the work team\.

@@ -1,6 +1,6 @@
 # AWS::MediaPackage::OriginEndpoint StreamSelection<a name="aws-properties-mediapackage-originendpoint-streamselection"></a>
 
-Limitations for outputs from the endpoint, based on the video bitrate\. 
+Limitations for outputs from the endpoint, based on the video bitrate\.
 
 ## Syntax<a name="aws-properties-mediapackage-originendpoint-streamselection-syntax"></a>
 

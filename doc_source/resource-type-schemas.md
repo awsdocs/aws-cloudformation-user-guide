@@ -24,6 +24,7 @@ To learn more about resource provider schemas, including schema format and defin
 |  Asia Pacific \(Seoul\)  |  [ap\-northeast\-2](https://schema.cloudformation.ap-northeast-2.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Singapore\)  |  [ap\-southeast\-1](https://schema.cloudformation.ap-southeast-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Sydney\)  |  [ap\-southeast\-2](https://schema.cloudformation.ap-southeast-2.amazonaws.com/CloudformationSchema.zip)  | 
+|  Asia Pacific \(Jakarta\)  |  [ap\-southeast\-3](https://schema.cloudformation.ap-southeast-3.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Tokyo\)  |  [ap\-northeast\-1](https://schema.cloudformation.ap-northeast-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  Canada \(Central\)  |  [ca\-central\-1](https://schema.cloudformation.ca-central-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  China \(Beijing\)  |  [cn\-north\-1](https://schema.cloudformation.cn-north-1.amazonaws.com.cn/CloudformationSchema.zip)  | 

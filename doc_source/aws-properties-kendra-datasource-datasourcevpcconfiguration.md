@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource DataSourceVpcConfiguration<a name="aws-properties-kendra-datasource-datasourcevpcconfiguration"></a>
 
-Provides information for connecting to an Amazon VPC\.
+Provides the configuration information to connect to an Amazon VPC\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-datasourcevpcconfiguration-syntax"></a>
 

@@ -51,6 +51,7 @@ The criteria that define the dimensions for the segment\.
 
 `Name`  <a name="cfn-pinpoint-segment-name"></a>
 The name of the segment\.  
+A segment must have a name otherwise it will not appear in the Amazon Pinpoint console\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

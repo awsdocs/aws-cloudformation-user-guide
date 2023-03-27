@@ -4,7 +4,7 @@ The optional [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/int
 
 You might use conditions when you want to reuse a template that can create resources in different contexts, such as a test environment versus a production environment\. In your template, you can add an `EnvironmentType` input parameter, which accepts either **prod** or **test** as inputs\. For the production environment, you might include Amazon EC2 instances with certain capabilities; however, for the test environment, you want to use reduced capabilities to save money\. With conditions, you can define which resources are created and how they're configured for each environment type\.
 
-Conditions are evaluated based on predefined pseudo parameters or input parameter values that you specify when you create or update a stack\. Within each condition, you can reference another condition, a parameter value, or a mapping\. After you define all your conditions, you can associate them with resources and resource properties in the `Resources` and `Outputs` sections of a template\.
+Conditions are evaluated based on predefined [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html) or input parameter values that you specify when you create or update a stack\. Within each condition, you can reference another condition, a parameter value, or a mapping\. After you define all your conditions, you can associate them with resources and resource properties in the `Resources` and `Outputs` sections of a template\.
 
 At stack creation or stack update, AWS CloudFormation evaluates all the conditions in your template before creating any resources\. Resources that are associated with a true condition are created\. Resources that are associated with a false condition are ignored\. AWS CloudFormation also re\-evaluates these conditions at each stack update before updating any resources\. Resources that are still associated with a true condition are updated\. Resources that are now associated with a false condition are deleted\.
 
@@ -61,7 +61,7 @@ For the syntax and information about each function, see [Condition functions](in
 
 ## Examples<a name="conditions-section-structure-examples"></a>
 
-### Simple condition<a name="w11088ab1c23c15c23c17b3"></a>
+### Simple condition<a name="w2ab1c23c15c23c17b3"></a>
 
 The following sample template includes an `EnvType` input parameter, where you can specify `prod` to create a stack for production or `test` to create a stack for testing\. For a production environment, AWS CloudFormation creates an Amazon EC2 instance and attaches a volume to the instance\. For a test environment, AWS CloudFormation creates only the Amazon EC2 instance\.
 
@@ -170,7 +170,7 @@ Resources:
         - AvailabilityZone
 ```
 
-#### Nested condition<a name="w11088ab1c23c15c23c17b3c11"></a>
+#### Nested condition<a name="w2ab1c23c15c23c17b3c11"></a>
 
 The following sample template references a condition within another condition\. You can create a stack that creates an s3 bucket\. For a stack deployed in a production environment, AWS CloudFormation creates a policy for the S3 bucket\.
 

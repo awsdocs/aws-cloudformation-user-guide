@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[SessionCookieName](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-sessioncookiename)" : String,
   "[SessionTimeout](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-sessiontimeout)" : String,
   "[TokenEndpoint](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-tokenendpoint)" : String,
+  "[UseExistingClientSecret](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-useexistingclientsecret)" : Boolean,
   "[UserInfoEndpoint](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-userinfoendpoint)" : String
 }
 ```
@@ -38,6 +39,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [SessionCookieName](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-sessioncookiename): String
   [SessionTimeout](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-sessiontimeout): String
   [TokenEndpoint](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-tokenendpoint): String
+  [UseExistingClientSecret](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-useexistingclientsecret): Boolean
   [UserInfoEndpoint](#cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-userinfoendpoint): String
 ```
 
@@ -63,7 +65,7 @@ The OAuth 2\.0 client identifier\.
 
 `ClientSecret`  <a name="cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-clientsecret"></a>
 The OAuth 2\.0 client secret\. This parameter is required if you are creating a rule\. If you are modifying a rule, you can omit this parameter if you set `UseExistingClientSecret` to true\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -106,6 +108,12 @@ The maximum duration of the authentication session, in seconds\. The default is 
 The token endpoint of the IdP\. This must be a full URL, including the HTTPS protocol, the domain, and the path\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`UseExistingClientSecret`  <a name="cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-useexistingclientsecret"></a>
+Indicates whether to use the existing client secret when modifying a rule\. If you are creating a rule, you can omit this parameter or set it to false\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserInfoEndpoint`  <a name="cfn-elasticloadbalancingv2-listener-authenticateoidcconfig-userinfoendpoint"></a>

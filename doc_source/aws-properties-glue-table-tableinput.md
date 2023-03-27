@@ -58,7 +58,7 @@ The table name\. For Hive compatibility, this is folded to lowercase when it is 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Owner`  <a name="cfn-glue-table-tableinput-owner"></a>
-The table owner\.  
+The table owner\. Included for Apache Hive compatibility\. Not used in the normal course of AWS Glue operations\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -90,7 +90,12 @@ A storage descriptor containing information about the physical storage of this t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableType`  <a name="cfn-glue-table-tableinput-tabletype"></a>
-The type of this table \(`EXTERNAL_TABLE`, `VIRTUAL_VIEW`, etc\.\)\.  
+The type of this table\. AWS Glue will create tables with the `EXTERNAL_TABLE` type\. Other services, such as Athena, may create tables with additional table types\.   
+ AWS Glue related table types:    
+EXTERNAL\_TABLE  
+Hive compatible attribute \- indicates a non\-Hive managed table\.  
+GOVERNED  
+Used by AWS Lake Formation\. The AWS Glue Data Catalog understands `GOVERNED`\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -102,13 +107,13 @@ A `TableIdentifier` structure that describes a target table for resource linking
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ViewExpandedText`  <a name="cfn-glue-table-tableinput-viewexpandedtext"></a>
-If the table is a view, the expanded text of the view; otherwise `null`\.  
+Included for Apache Hive compatibility\. Not used in the normal course of AWS Glue operations\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ViewOriginalText`  <a name="cfn-glue-table-tableinput-vieworiginaltext"></a>
-If the table is a view, the original text of the view; otherwise `null`\.  
+Included for Apache Hive compatibility\. Not used in the normal course of AWS Glue operations\. If the table is a `VIRTUAL_VIEW`, certain Athena configuration encoded in base64\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

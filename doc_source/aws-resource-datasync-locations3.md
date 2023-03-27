@@ -41,7 +41,7 @@ Properties:
 
 `S3BucketArn`  <a name="cfn-datasync-locations3-s3bucketarn"></a>
 The ARN of the Amazon S3 bucket\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Maximum*: `156`  
 *Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):(s3|s3-outposts):[a-z\-0-9]*:[0-9]*:.*$`  
@@ -59,7 +59,7 @@ The Amazon S3 storage class that you want to store your files in when this locat
 For more information about S3 storage classes, see [Amazon S3 Storage Classes](http://aws.amazon.com/s3/storage-classes/)\. Some storage classes have behaviors that can affect your S3 storage costs\. For detailed information, see [Considerations When Working with Amazon S3 Storage Classes in DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/create-s3-location.html#using-storage-classes)\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `DEEP_ARCHIVE | GLACIER | INTELLIGENT_TIERING | ONEZONE_IA | OUTPOSTS | STANDARD | STANDARD_IA`  
+*Allowed values*: `DEEP_ARCHIVE | GLACIER | GLACIER_INSTANT_RETRIEVAL | INTELLIGENT_TIERING | ONEZONE_IA | OUTPOSTS | STANDARD | STANDARD_IA`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Subdirectory`  <a name="cfn-datasync-locations3-subdirectory"></a>

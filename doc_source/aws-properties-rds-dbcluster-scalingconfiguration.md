@@ -4,6 +4,10 @@ The `ScalingConfiguration` property type specifies the scaling configuration of 
 
 For more information, see [Using Amazon Aurora Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html) in the *Amazon Aurora User Guide*\.
 
+This property is only supported for Aurora Serverless v1\. For Aurora Serverless v2, use `ServerlessV2ScalingConfiguration` property\.
+
+Valid for: Aurora DB clusters only
+
 ## Syntax<a name="aws-properties-rds-dbcluster-scalingconfiguration-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -15,7 +19,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[AutoPause](#cfn-rds-dbcluster-scalingconfiguration-autopause)" : Boolean,
   "[MaxCapacity](#cfn-rds-dbcluster-scalingconfiguration-maxcapacity)" : Integer,
   "[MinCapacity](#cfn-rds-dbcluster-scalingconfiguration-mincapacity)" : Integer,
-  "[SecondsUntilAutoPause](#cfn-rds-dbcluster-scalingconfiguration-secondsuntilautopause)" : Integer
+  "[SecondsBeforeTimeout](#cfn-rds-dbcluster-scalingconfiguration-secondsbeforetimeout)" : Integer,
+  "[SecondsUntilAutoPause](#cfn-rds-dbcluster-scalingconfiguration-secondsuntilautopause)" : Integer,
+  "[TimeoutAction](#cfn-rds-dbcluster-scalingconfiguration-timeoutaction)" : String
 }
 ```
 
@@ -25,14 +31,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [AutoPause](#cfn-rds-dbcluster-scalingconfiguration-autopause): Boolean
   [MaxCapacity](#cfn-rds-dbcluster-scalingconfiguration-maxcapacity): Integer
   [MinCapacity](#cfn-rds-dbcluster-scalingconfiguration-mincapacity): Integer
+  [SecondsBeforeTimeout](#cfn-rds-dbcluster-scalingconfiguration-secondsbeforetimeout): Integer
   [SecondsUntilAutoPause](#cfn-rds-dbcluster-scalingconfiguration-secondsuntilautopause): Integer
+  [TimeoutAction](#cfn-rds-dbcluster-scalingconfiguration-timeoutaction): String
 ```
 
 ## Properties<a name="aws-properties-rds-dbcluster-scalingconfiguration-properties"></a>
 
 `AutoPause`  <a name="cfn-rds-dbcluster-scalingconfiguration-autopause"></a>
 A value that indicates whether to allow or disallow automatic pause for an Aurora DB cluster in `serverless` DB engine mode\. A DB cluster can be paused only when it's idle \(it has no connections\)\.  
-If a DB cluster is paused for more than seven days, the DB cluster might be backed up with a snapshot\. In this case, the DB cluster is restored when there is a request to connect to it\. 
+If a DB cluster is paused for more than seven days, the DB cluster might be backed up with a snapshot\. In this case, the DB cluster is restored when there is a request to connect to it\.
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -55,11 +63,28 @@ The minimum capacity must be less than or equal to the maximum capacity\.
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`SecondsBeforeTimeout`  <a name="cfn-rds-dbcluster-scalingconfiguration-secondsbeforetimeout"></a>
+The amount of time, in seconds, that Aurora Serverless v1 tries to find a scaling point to perform seamless scaling before enforcing the timeout action\. The default is 300\.  
+Specify a value between 60 and 600 seconds\.  
+*Required*: No  
+*Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SecondsUntilAutoPause`  <a name="cfn-rds-dbcluster-scalingconfiguration-secondsuntilautopause"></a>
 The time, in seconds, before an Aurora DB cluster in `serverless` mode is paused\.  
 Specify a value between 300 and 86,400 seconds\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TimeoutAction`  <a name="cfn-rds-dbcluster-scalingconfiguration-timeoutaction"></a>
+The action to take when the timeout is reached, either `ForceApplyCapacityChange` or `RollbackCapacityChange`\.  
+ `ForceApplyCapacityChange` sets the capacity to the specified value as soon as possible\.  
+ `RollbackCapacityChange`, the default, ignores the capacity change if a scaling point isn't found in the timeout period\.  
+If you specify `ForceApplyCapacityChange`, connections that prevent Aurora Serverless v1 from finding a scaling point might be dropped\.
+For more information, see [ Autoscaling for Aurora Serverless v1](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.auto-scaling) in the *Amazon Aurora User Guide*\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-rds-dbcluster-scalingconfiguration--examples"></a>

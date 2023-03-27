@@ -1,6 +1,6 @@
 # AWS::CustomerProfiles::Domain<a name="aws-resource-customerprofiles-domain"></a>
 
-The AWS::CustomerProfiles::Domain resource specifies an Amazon Connect Customer Profiles Domain\.
+Specifies an Amazon Connect Customer Profiles Domain\.
 
 ## Syntax<a name="aws-resource-customerprofiles-domain-syntax"></a>
 
@@ -97,30 +97,22 @@ The following example creates a Domain\.
 #### YAML<a name="aws-resource-customerprofiles-domain--examples----yaml"></a>
 
 ```
-Resources:
-    Domain:
-      Type: "AWS::CustomerProfiles::Domain"
-      Properties:
-        DomainName: "ExampleDomain"
-        DefaultEncryptionKey: "arn:aws:kms:us-east-1:123456789012:key/1988472d-6b77-4bb6-ae39-efce5EXAMPLE"
-        DeadLetterQueueUrl: "arn:aws:sqs:us-east-1:123456789012:DLQName"
-        DefaultExpirationDays: 6
+Type: "AWS::CustomerProfiles::Domain" 
+Properties:
+    DomainName: "ExampleDomain" 
+    DefaultEncryptionKey: "arn:aws:kms:us-east-1:123456789012:key/1988472d-6b77-4bb6-ae39-efce5EXAMPLE"
+    DeadLetterQueueUrl: "arn:aws:sqs:us-east-1:123456789012:DLQName" 
+    DefaultExpirationDays: 6
 ```
 
 #### JSON<a name="aws-resource-customerprofiles-domain--examples----json"></a>
 
 ```
-{
-  "Resources": {
-    "Domain": {
-      "Type": "AWS::CustomerProfiles::Domain",
-      "Properties": {
-        "DomainName": "ExampleDomain",
-        "DefaultEncryptionKey": "arn:aws:kms:us-east-1:123456789012:key/1988472d-6b77-4bb6-ae39-efce5EXAMPLE",
-        "DeadLetterQueueUrl": "arn:aws:sqs:us-east-1:123456789012:DLQName",
-        "DefaultExpirationDays": 6
-      }
-    }
-  }
+"Type": "AWS::CustomerProfiles::Domain",
+"Properties": { 
+    "DomainName": "ExampleDomain", 
+    "DefaultEncryptionKey": "arn:aws:kms:us-east-1:123456789012:key/1988472d-6b77-4bb6-ae39-efce5EXAMPLE",
+    "DeadLetterQueueUrl": "arn:aws:sqs:us-east-1:123456789012:DLQName", 
+    "DefaultExpirationDays": 6
 }
 ```

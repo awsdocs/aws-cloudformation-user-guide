@@ -1,6 +1,6 @@
 # AWS::SageMaker::ModelExplainabilityJobDefinition ConstraintsResource<a name="aws-properties-sagemaker-modelexplainabilityjobdefinition-constraintsresource"></a>
 
-The constraints resource for a monitoring job\.
+Input object for the endpoint
 
 ## Syntax<a name="aws-properties-sagemaker-modelexplainabilityjobdefinition-constraintsresource-syntax"></a>
 

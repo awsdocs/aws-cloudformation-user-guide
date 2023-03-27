@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::Evidently::Launch",
   "Properties" : {
       "[Description](#cfn-evidently-launch-description)" : String,
+      "[ExecutionStatus](#cfn-evidently-launch-executionstatus)" : ExecutionStatusObject,
       "[Groups](#cfn-evidently-launch-groups)" : [ LaunchGroupObject, ... ],
       "[MetricMonitors](#cfn-evidently-launch-metricmonitors)" : [ MetricDefinitionObject, ... ],
       "[Name](#cfn-evidently-launch-name)" : String,
@@ -32,6 +33,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::Evidently::Launch
 Properties: 
   [Description](#cfn-evidently-launch-description): String
+  [ExecutionStatus](#cfn-evidently-launch-executionstatus): 
+    ExecutionStatusObject
   [Groups](#cfn-evidently-launch-groups): 
     - LaunchGroupObject
   [MetricMonitors](#cfn-evidently-launch-metricmonitors): 
@@ -51,6 +54,12 @@ Properties:
 An optional description for the launch\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ExecutionStatus`  <a name="cfn-evidently-launch-executionstatus"></a>
+A structure that you can use to start and stop the launch\.  
+*Required*: No  
+*Type*: [ExecutionStatusObject](aws-properties-evidently-launch-executionstatusobject.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Groups`  <a name="cfn-evidently-launch-groups"></a>

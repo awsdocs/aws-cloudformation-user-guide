@@ -42,7 +42,7 @@ The name of the device\.
 *Minimum*: `1`  
 *Maximum*: `63`  
 *Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,62}$`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `IotThingName`  <a name="cfn-sagemaker-device-device-iotthingname"></a>
 AWS Internet of Things \(IoT\) object name\.  

@@ -26,4 +26,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The phone number in E\.164 format\.  
 *Required*: Yes  
 *Type*: String  
+*Pattern*: `\\+[1-9]\\d{1,14}$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

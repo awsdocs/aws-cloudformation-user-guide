@@ -1,6 +1,6 @@
 # AWS::S3::StorageLens CloudWatchMetrics<a name="aws-properties-s3-storagelens-cloudwatchmetrics"></a>
 
-This resource enables the Amazon CloudWatch publishing option for S3 Storage Lens metrics\.
+This resource enables the Amazon CloudWatch publishing option for Amazon S3 Storage Lens metrics\.
 
 For more information, see [ Monitor S3 Storage Lens metrics in CloudWatch](https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage_lens_view_metrics_cloudwatch.html) in the *Amazon S3 User Guide*\.
 

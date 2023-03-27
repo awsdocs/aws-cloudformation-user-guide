@@ -25,7 +25,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-creditspecification-properties"></a>
 
 `CpuCredits`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-creditspecification-cpucredits"></a>
-The credit option for CPU usage of a T2, T3, or T3a instance\. Valid values are `standard` and `unlimited`\.  
+The credit option for CPU usage of a T instance\.  
+Valid values: `standard` \| `unlimited`   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

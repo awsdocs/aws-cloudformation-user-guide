@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AuthorizerFunctionArn](#cfn-iot-authorizer-authorizerfunctionarn)" : String,
       "[AuthorizerName](#cfn-iot-authorizer-authorizername)" : String,
+      "[EnableCachingForHttp](#cfn-iot-authorizer-enablecachingforhttp)" : Boolean,
       "[SigningDisabled](#cfn-iot-authorizer-signingdisabled)" : Boolean,
       "[Status](#cfn-iot-authorizer-status)" : String,
       "[Tags](#cfn-iot-authorizer-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -30,6 +31,7 @@ Type: AWS::IoT::Authorizer
 Properties: 
   [AuthorizerFunctionArn](#cfn-iot-authorizer-authorizerfunctionarn): String
   [AuthorizerName](#cfn-iot-authorizer-authorizername): String
+  [EnableCachingForHttp](#cfn-iot-authorizer-enablecachingforhttp): Boolean
   [SigningDisabled](#cfn-iot-authorizer-signingdisabled): Boolean
   [Status](#cfn-iot-authorizer-status): String
   [Tags](#cfn-iot-authorizer-tags): 
@@ -52,6 +54,12 @@ The authorizer name\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EnableCachingForHttp`  <a name="cfn-iot-authorizer-enablecachingforhttp"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SigningDisabled`  <a name="cfn-iot-authorizer-signingdisabled"></a>
 Specifies whether AWS IoT validates the token signature in an authorization request\.  

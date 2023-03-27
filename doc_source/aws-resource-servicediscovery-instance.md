@@ -73,6 +73,7 @@ An identifier that you want to associate with the instance\. Note the following:
 + If you specify an existing `InstanceId` and `ServiceId`, AWS Cloud Map updates the existing DNS records, if any\. If there's also an existing health check, AWS Cloud Map deletes the old health check and creates a new one\. 
 **Note**  
 The health check isn't deleted immediately, so it will still appear for a while if you submit a `ListHealthChecks` request, for example\.
+Do not include sensitive information in `InstanceId` if the namespace is discoverable by public DNS queries and any `Type` member of `DnsRecord` for the service contains `SRV` because the `InstanceId` is discoverable by public DNS queries\.
 *Required*: No  
 *Type*: String  
 *Maximum*: `64`  

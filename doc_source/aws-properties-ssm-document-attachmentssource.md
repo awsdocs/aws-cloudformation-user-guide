@@ -32,14 +32,14 @@ The key of a key\-value pair that identifies the location of an attachment to a 
 *Required*: No  
 *Type*: String  
 *Allowed values*: `AttachmentReference | S3FileUrl | SourceUrl`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-ssm-document-attachmentssource-name"></a>
 The name of the document attachment file\.  
 *Required*: No  
 *Type*: String  
 *Pattern*: `^[a-zA-Z0-9_\-.]{3,128}$`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Values`  <a name="cfn-ssm-document-attachmentssource-values"></a>
 The value of a key\-value pair that identifies the location of an attachment to a document\. The format for **Value** depends on the type of key you specify\.  
@@ -59,4 +59,4 @@ The value of a key\-value pair that identifies the location of an attachment to 
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `1`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

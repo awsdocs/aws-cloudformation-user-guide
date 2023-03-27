@@ -17,7 +17,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DBProxyEndpointName](#cfn-rds-dbproxyendpoint-dbproxyendpointname)" : String,
       "[DBProxyName](#cfn-rds-dbproxyendpoint-dbproxyname)" : String,
       "[Tags](#cfn-rds-dbproxyendpoint-tags)" : [ TagFormat, ... ],
-      "[TargetRole](#cfn-rds-dbproxyendpoint-targetrole)" : String,
       "[VpcSecurityGroupIds](#cfn-rds-dbproxyendpoint-vpcsecuritygroupids)" : [ String, ... ],
       "[VpcSubnetIds](#cfn-rds-dbproxyendpoint-vpcsubnetids)" : [ String, ... ]
     }
@@ -33,7 +32,6 @@ Properties:
   [DBProxyName](#cfn-rds-dbproxyendpoint-dbproxyname): String
   [Tags](#cfn-rds-dbproxyendpoint-tags): 
     - TagFormat
-  [TargetRole](#cfn-rds-dbproxyendpoint-targetrole): String
   [VpcSecurityGroupIds](#cfn-rds-dbproxyendpoint-vpcsecuritygroupids): 
     - String
   [VpcSubnetIds](#cfn-rds-dbproxyendpoint-vpcsubnetids): 
@@ -59,13 +57,6 @@ An optional set of key\-value pairs to associate arbitrary data of your choosing
 *Required*: No  
 *Type*: List of [TagFormat](aws-properties-rds-dbproxyendpoint-tagformat.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`TargetRole`  <a name="cfn-rds-dbproxyendpoint-targetrole"></a>
-A value that indicates whether the DB proxy endpoint can be used for read/write or read\-only operations\.  
-Valid Values: `READ_WRITE | READ_ONLY`  
-*Required*: No  
-*Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `VpcSecurityGroupIds`  <a name="cfn-rds-dbproxyendpoint-vpcsecuritygroupids"></a>
 The VPC security group IDs for the DB proxy endpoint that you create\. You can specify a different set of security group IDs than for the original DB proxy\. The default is the default security group for the VPC\.  
@@ -99,6 +90,9 @@ The custom endpoint for the RDS DB instance or Aurora DB cluster\.
 
 `IsDefault`  <a name="IsDefault-fn::getatt"></a>
 A value that indicates whether this endpoint is the default endpoint for the associated DB proxy\. Default DB proxy endpoints always have read/write capability\. Other endpoints that you associate with the DB proxy can be either read/write or read\-only\.
+
+`TargetRole`  <a name="TargetRole-fn::getatt"></a>
+A value that indicates whether the DB proxy endpoint can be used for read/write or read\-only operations\.
 
 `VpcId`  <a name="VpcId-fn::getatt"></a>
 The VPC ID of the DB proxy endpoint\.

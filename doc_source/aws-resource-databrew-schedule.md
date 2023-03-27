@@ -36,7 +36,7 @@ Properties:
 ## Properties<a name="aws-resource-databrew-schedule-properties"></a>
 
 `CronExpression`  <a name="cfn-databrew-schedule-cronexpression"></a>
-The dates and times when the job is to run\. For more information, see [Cron expressions](https://docs.aws.amazon.com/databrew/latest/dg/jobs.cron.html) in the * AWS Glue DataBrew Developer Guide*\.  
+The dates and times when the job is to run\. For more information, see [Working with cron expressions for recipe jobs](https://docs.aws.amazon.com/databrew/latest/dg/jobs.recipe.html#jobs.cron) in the * AWS Glue DataBrew Developer Guide*\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

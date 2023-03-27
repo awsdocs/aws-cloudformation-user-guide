@@ -1,6 +1,9 @@
 # AWS::SageMaker::UserProfile<a name="aws-resource-sagemaker-userprofile"></a>
 
-Creates a user profile\. A user profile represents a single user within a domain, and is the main way to reference a "person" for the purposes of sharing, reporting, and other user\-oriented features\. This entity is created when a user onboards to Amazon SageMaker Studio\. If an administrator invites a person by email or imports them from SSO, a user profile is automatically created\. A user profile is the primary holder of settings for an individual user and has a reference to the user's private Amazon Elastic File System \(EFS\) home directory\. 
+Creates a user profile\. A user profile represents a single user within a domain, and is the main way to reference a "person" for the purposes of sharing, reporting, and other user\-oriented features\. This entity is created when a user onboards to Amazon SageMaker Studio\. If an administrator invites a person by email or imports them from IAM Identity Center, a user profile is automatically created\. A user profile is the primary holder of settings for an individual user and has a reference to the user's private Amazon Elastic File System \(EFS\) home directory\. 
+
+**Note**  
+If you're using IAM Identity Center authentication, a user in IAM Identity Center, or a group in IAM Identity Center containing that user, must be assigned to the Amazon SageMaker Studio application from the IAM Identity Center Console to create a user profile\. For more information about application assignment, see [Assign user access](singlesignon/latest/userguide/assignuserstoapp.html)\. After assignment is complete, a user profile can be created for that user in IAM Identity Center with AWS CloudFormation\. 
 
 ## Syntax<a name="aws-resource-sagemaker-userprofile-syntax"></a>
 
@@ -47,20 +50,20 @@ The domain ID\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SingleSignOnUserIdentifier`  <a name="cfn-sagemaker-userprofile-singlesignonuseridentifier"></a>
-A specifier for the type of value specified in SingleSignOnUserValue\. Currently, the only supported value is "UserName"\. If the Domain's AuthMode is SSO, this field is required\. If the Domain's AuthMode is not SSO, this field cannot be specified\.  
+A specifier for the type of value specified in SingleSignOnUserValue\. Currently, the only supported value is "UserName"\. If the Domain's AuthMode is IAM Identity Center, this field is required\. If the Domain's AuthMode is not IAM Identity Center, this field cannot be specified\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SingleSignOnUserValue`  <a name="cfn-sagemaker-userprofile-singlesignonuservalue"></a>
-The username of the associated AWS Single Sign\-On User for this UserProfile\. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory\. If the Domain's AuthMode is not SSO, this field cannot be specified\.  
+The username of the associated AWS Single Sign\-On User for this UserProfile\. If the Domain's AuthMode is IAM Identity Center, this field is required, and must match a valid username of a user in your directory\. If the Domain's AuthMode is not IAM Identity Center, this field cannot be specified\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-sagemaker-userprofile-tags"></a>
 An array of key\-value pairs to apply to this resource\.  
-Tags that you specify for the User Profile are also added to all Apps that the User Profile launches\.  
+Tags that you specify for the User Profile are also added to all apps that the User Profile launches\.  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
@@ -84,7 +87,7 @@ A collection of settings that apply to users of Amazon SageMaker Studio\.
 
 ### Ref<a name="aws-resource-sagemaker-userprofile-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the domain ID and the user profile name, such as `d-xxxxxxxxxxxx` and `my-user-profile`, respectively\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the Domain ID and the user profile name, such as `d-xxxxxxxxxxxx` and `my-user-profile`, respectively\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

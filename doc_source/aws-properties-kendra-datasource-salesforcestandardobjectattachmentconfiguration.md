@@ -1,6 +1,6 @@
 # AWS::Kendra::DataSource SalesforceStandardObjectAttachmentConfiguration<a name="aws-properties-kendra-datasource-salesforcestandardobjectattachmentconfiguration"></a>
 
-Provides configuration information for processing attachments to Salesforce standard objects\. 
+Provides the configuration information for processing attachments to Salesforce standard objects\.
 
 ## Syntax<a name="aws-properties-kendra-datasource-salesforcestandardobjectattachmentconfiguration-syntax"></a>
 

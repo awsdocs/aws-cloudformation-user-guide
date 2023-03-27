@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Actions](#cfn-glue-trigger-actions)" : [ Action, ... ],
       "[Description](#cfn-glue-trigger-description)" : String,
+      "[EventBatchingCondition](#cfn-glue-trigger-eventbatchingcondition)" : EventBatchingCondition,
       "[Name](#cfn-glue-trigger-name)" : String,
       "[Predicate](#cfn-glue-trigger-predicate)" : Predicate,
       "[Schedule](#cfn-glue-trigger-schedule)" : String,
@@ -33,6 +34,8 @@ Properties:
   [Actions](#cfn-glue-trigger-actions): 
     - Action
   [Description](#cfn-glue-trigger-description): String
+  [EventBatchingCondition](#cfn-glue-trigger-eventbatchingcondition): 
+    EventBatchingCondition
   [Name](#cfn-glue-trigger-name): String
   [Predicate](#cfn-glue-trigger-predicate): 
     Predicate
@@ -55,6 +58,12 @@ The actions initiated by this trigger\.
 A description of this trigger\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EventBatchingCondition`  <a name="cfn-glue-trigger-eventbatchingcondition"></a>
+Batch condition that must be met \(specified number of events received or batch time window expired\) before EventBridge event trigger fires\.  
+*Required*: No  
+*Type*: [EventBatchingCondition](aws-properties-glue-trigger-eventbatchingcondition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-glue-trigger-name"></a>
@@ -91,7 +100,7 @@ The tags to use with this trigger\.
 The type of trigger that this is\.  
 *Required*: Yes  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WorkflowName`  <a name="cfn-glue-trigger-workflowname"></a>
 The name of the workflow associated with the trigger\.  

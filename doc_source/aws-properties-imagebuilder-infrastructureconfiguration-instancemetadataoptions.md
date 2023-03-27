@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-imagebuilder-infrastructureconfiguration-instancemetadataoptions-properties"></a>
 
 `HttpPutResponseHopLimit`  <a name="cfn-imagebuilder-infrastructureconfiguration-instancemetadataoptions-httpputresponsehoplimit"></a>
-Limit the number of hops that an instance metadata request can traverse to reach its destination\.  
+Limit the number of hops that an instance metadata request can traverse to reach its destination\. The default is one hop\. However, if HTTP tokens are required, container image builds need a minimum of two hops\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  

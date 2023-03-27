@@ -59,8 +59,16 @@ The description of the role\.
 *Required*: No  
 *Type*: String  
 *Maximum*: `1000`  
-*Pattern*: `[\p{L}\p{M}\p{Z}\p{S}\p{N}\p{P}]*`  
+*Pattern*: `[\u0009\u000A\u000D\u0020-\u007E\u00A1-\u00FF]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+## Return values<a name="aws-resource-iam-servicelinkedrole-return-values"></a>
+
+### Ref<a name="aws-resource-iam-servicelinkedrole-return-values-ref"></a>
+
+ When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the `RoleName` created for the service\-linked role appended with an underscore followed by the `CustomSuffix`\. For example: `AWSServiceRoleForAutoScaling_TestSuffix`\.
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-iam-servicelinkedrole--examples"></a>
 

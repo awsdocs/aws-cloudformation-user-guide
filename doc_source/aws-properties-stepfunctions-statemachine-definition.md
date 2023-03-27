@@ -1,3 +1,0 @@
-# AWS::StepFunctions::StateMachine Definition<a name="aws-properties-stepfunctions-statemachine-definition"></a>
-
-The state machine definition is an object, where the format of the object matches the format of your AWS Step Functions template file, for example, JSON or YAML\. State machine definitions adhere to the [Amazon States Language](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html)\. For example definition templates, see the [Definition format support](https://docs.aws.amazon.com/step-functions/latest/dg/development-options.html#development-options-format) section of the *Development options* page in the Step Functions developer guide\. 

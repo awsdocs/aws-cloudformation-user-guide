@@ -2,7 +2,7 @@
 
 The AWS CloudFormation *stack import* operation can import existing stacks into new or existing stack sets, so that you can migrate existing stacks to a stack set in one operation\. *StackSets* extends the functionality of stacks, so you can create, update, or delete stacks across multiple accounts and Regions with a single operation\.
 
-Use the stack import operations for *self\-managed* or *service\-managed* StackSets\. For *self\-managed* StackSets, the import operation can import stacks in the administrator account or in different target accounts and AWS Regions\. For *service\-managed* StackSets, the import operation can import any stack in the same AWS Organizations as the management account\. The import operation can import up to 10 stacks using inline stack IDs or up to 10,000 stacks using an Amazon S3 object\.
+Use the stack import operations for *self\-managed* or *service\-managed* StackSets\. For *self\-managed* StackSets, the import operation can import stacks in the administrator account or in different target accounts and AWS Regions\. For *service\-managed* StackSets, the import operation can import any stack in the same AWS Organizations as the management account\. The import operation can import up to 10 stacks using inline stack IDs or up to 200 stacks using an Amazon S3 object\.
 
 Stack import is available wherever StackSets are supported\. For information about StackSets Region support, see [StackSets regional support](https://docs.aws.amazon.com/general/latest/gr/cfn.html#regional-support-stacksets)\.
 

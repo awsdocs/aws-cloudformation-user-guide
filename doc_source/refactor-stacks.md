@@ -387,7 +387,7 @@ It's not necessary to run drift detection on the parent stack after this import 
    The AWS CLI also supports text files as input for the `resources-to-import` parameter, as shown in the previous example\.
 
    ```
-   --resources-to-import: file://resourcesToImport.txt
+   --resources-to-import file://resourcesToImport.txt
    ```
 
    In this walkthrough, *file://resourcesToImport\.txt* contains the following\.
@@ -413,7 +413,7 @@ It's not necessary to run drift detection on the parent stack after this import 
 1. Initiate the change set to import the resource into the target stack\. Any [stack\-level tags](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html) are applied to imported resources at this time\. On successful completion of the operation `(IMPORT_COMPLETE)`, the resource is successfully imported\.
 
    ```
-   aws cloudformation execute-change-set --change-set-name ImportChangeSet
+   aws cloudformation execute-change-set --change-set-name ImportChangeSet --stack-name (TargetStackName)
    ```
 **Note**  
 It's not necessary to run drift detection on the target stack after this import operation because the resource is already managed by AWS CloudFormation\.

@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile MarketoConnectorProfileProperties<a name="aws-properties-appflow-connectorprofile-marketoconnectorprofileproperties"></a>
 
- The `MarketoConnectorProfileProperties` property type specifies the connector\-specific profile properties required when using Marketo\. 
+ The connector\-specific profile properties required when using Marketo\. 
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-marketoconnectorprofileproperties-syntax"></a>
 

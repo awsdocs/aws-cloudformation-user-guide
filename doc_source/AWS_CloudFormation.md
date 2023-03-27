@@ -2,6 +2,9 @@
 
 **Resource types**
 + [AWS::CloudFormation::CustomResource](aws-resource-cfn-customresource.md)
++ [AWS::CloudFormation::HookDefaultVersion](aws-resource-cloudformation-hookdefaultversion.md)
++ [AWS::CloudFormation::HookTypeConfig](aws-resource-cloudformation-hooktypeconfig.md)
++ [AWS::CloudFormation::HookVersion](aws-resource-cloudformation-hookversion.md)
 + [AWS::CloudFormation::Macro](aws-resource-cloudformation-macro.md)
 + [AWS::CloudFormation::ModuleDefaultVersion](aws-resource-cloudformation-moduledefaultversion.md)
 + [AWS::CloudFormation::ModuleVersion](aws-resource-cloudformation-moduleversion.md)

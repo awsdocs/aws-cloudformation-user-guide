@@ -12,7 +12,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[AggregationConfig](#cfn-appflow-flow-s3outputformatconfig-aggregationconfig)" : AggregationConfig,
   "[FileType](#cfn-appflow-flow-s3outputformatconfig-filetype)" : String,
-  "[PrefixConfig](#cfn-appflow-flow-s3outputformatconfig-prefixconfig)" : PrefixConfig
+  "[PrefixConfig](#cfn-appflow-flow-s3outputformatconfig-prefixconfig)" : PrefixConfig,
+  "[PreserveSourceDataTyping](#cfn-appflow-flow-s3outputformatconfig-preservesourcedatatyping)" : Boolean
 }
 ```
 
@@ -24,6 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [FileType](#cfn-appflow-flow-s3outputformatconfig-filetype): String
   [PrefixConfig](#cfn-appflow-flow-s3outputformatconfig-prefixconfig): 
     PrefixConfig
+  [PreserveSourceDataTyping](#cfn-appflow-flow-s3outputformatconfig-preservesourcedatatyping): Boolean
 ```
 
 ## Properties<a name="aws-properties-appflow-flow-s3outputformatconfig-properties"></a>
@@ -45,6 +47,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  Determines the prefix that Amazon AppFlow applies to the folder name in the Amazon S3 bucket\. You can name folders according to the flow frequency and date\.   
 *Required*: No  
 *Type*: [PrefixConfig](aws-properties-appflow-flow-prefixconfig.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`PreserveSourceDataTyping`  <a name="cfn-appflow-flow-s3outputformatconfig-preservesourcedatatyping"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-appflow-flow-s3outputformatconfig--seealso"></a>

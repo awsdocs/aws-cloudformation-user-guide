@@ -47,7 +47,7 @@ Determines whether the field is used in the search\. If the `Searchable` field i
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Sortable`  <a name="cfn-kendra-index-search-sortable"></a>
-Indicates that the field can be used to sort the search results\. The default is `false`\.  
+Determines whether the field can be used to sort the results of a query\. The default is `false`\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

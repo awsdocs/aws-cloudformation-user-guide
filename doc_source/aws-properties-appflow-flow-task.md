@@ -1,6 +1,6 @@
 # AWS::AppFlow::Flow Task<a name="aws-properties-appflow-flow-task"></a>
 
- The `Task` property type specifies the class for modeling different type of tasks\. Task implementation varies based on the `TaskType`\. 
+ A class for modeling different type of tasks\. Task implementation varies based on the `TaskType`\. 
 
 ## Syntax<a name="aws-properties-appflow-flow-task-syntax"></a>
 

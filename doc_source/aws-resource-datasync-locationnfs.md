@@ -52,10 +52,10 @@ If you are copying data to or from your AWS Snowcone device, see [NFS Server on 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServerHostname`  <a name="cfn-datasync-locationnfs-serverhostname"></a>
-The name of the NFS server\. This value is the IP address or Domain Name Service \(DNS\) name of the NFS server\. An agent that is installed on\-premises uses this host name to mount the NFS server in a network\.   
+The name of the NFS server\. This value is the IP address or Domain Name Service \(DNS\) name of the NFS server\. An agent that is installed on\-premises uses this hostname to mount the NFS server in a network\.   
 If you are copying data to or from your AWS Snowcone device, see [NFS Server on AWS Snowcone](https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone) for more information\.  
 This name must either be DNS\-compliant or must be an IP version 4 \(IPv4\) address\.
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Maximum*: `255`  
 *Pattern*: `^(([a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9\-]*[A-Za-z0-9])$`  
@@ -67,7 +67,7 @@ To see all the paths exported by your NFS server, run "`showmount -e nfs-server-
 To transfer all the data in the folder you specified, DataSync needs to have permissions to read all the data\. To ensure this, either configure the NFS export with `no_root_squash,` or ensure that the permissions for all of the files that you want DataSync allow read access for all users\. Doing either enables the agent to read the files\. For the agent to access directories, you must additionally enable all execute access\.  
 If you are copying data to or from your AWS Snowcone device, see [NFS Server on AWS Snowcone](https://docs.aws.amazon.com/datasync/latest/userguide/create-nfs-location.html#nfs-on-snowcone) for more information\.  
 For information about NFS export configuration, see [18\.7\. The /etc/exports Configuration File](http://web.mit.edu/rhel-doc/5/RHEL-5-manual/Deployment_Guide-en-US/s1-nfs-server-config-exports.html) in the Red Hat Enterprise Linux documentation\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Maximum*: `4096`  
 *Pattern*: `^[a-zA-Z0-9_\-\+\./\(\)\p{Zs}]+$`  

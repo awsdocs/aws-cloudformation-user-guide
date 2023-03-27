@@ -46,13 +46,13 @@ Describes the Microsoft Active Directory configuration to which the SVM is joine
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FileSystemId`  <a name="cfn-fsx-storagevirtualmachine-filesystemid"></a>
-The system\-generated, unique 17\-digit ID of the file system\.  
+Specifies the FSx for ONTAP file system on which to create the SVM\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-fsx-storagevirtualmachine-name"></a>
-The name of the SVM, if provisioned\.  
+The name of the SVM\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -71,7 +71,7 @@ The security style of the root volume of the SVM\. Specify one of the following 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SvmAdminPassword`  <a name="cfn-fsx-storagevirtualmachine-svmadminpassword"></a>
-The password to use when managing the SVM using the NetApp ONTAP CLI or REST API\. If you do not specify a password, you can still use the file system's `fsxadmin` user to manage the SVM\.  
+Specifies the password to use when logging on to the SVM using a secure shell \(SSH\) connection to the SVM's management endpoint\. Doing so enables you to manage the SVM using the NetApp ONTAP CLI or REST API\. If you do not specify a password, you can still use the file system's `fsxadmin` user to manage the SVM\. For more information, see [ Managing SVMs using the NetApp ONTAP CLI](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-resources-ontap-apps.html#vsadmin-ontap-cli) in the *FSx for ONTAP User Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -121,7 +121,7 @@ Example: `abcd0123-cd45-ef67-11aa-1111aaaa23bc`
 
 ### Create an Amazon FSx for NetApp ONTAP Storage Virtual Machine<a name="aws-resource-fsx-storagevirtualmachine--examples--Create_an_Amazon_FSx_for_NetApp_ONTAP_Storage_Virtual_Machine"></a>
 
-The following examples create a 1\.2 TiB persistent Amazon FSx for Lustre file system, with a `PerUnitStorageThroughput` of 200 MB/s/TiB\.
+The following examples create an Amazon FSx for NetApp ONTAP storage virtual machine \(SVN\) that's joined to a self\-managed Active Directory domain\.
 
 #### JSON<a name="aws-resource-fsx-storagevirtualmachine--examples--Create_an_Amazon_FSx_for_NetApp_ONTAP_Storage_Virtual_Machine--json"></a>
 

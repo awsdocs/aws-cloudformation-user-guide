@@ -51,7 +51,7 @@ Specifies the type of physical resource identifier\.
 Arn  
 The resource identifier is an Amazon Resource Name \(ARN\) \.  
 Native  
-The resource identifier is a Resilience Hub\-native identifier\.
+The resource identifier is an AWS Resilience Hub\-native identifier\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

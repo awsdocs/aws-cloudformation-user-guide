@@ -1,6 +1,6 @@
 # AWS::GreengrassV2::ComponentVersion LambdaContainerParams<a name="aws-properties-greengrassv2-componentversion-lambdacontainerparams"></a>
 
-Contains information about a container in which AWS Lambda functions run on Greengrass core devices\.
+Contains information about a container in which AWS Lambda functions run on AWS IoT Greengrass core devices\.
 
 ## Syntax<a name="aws-properties-greengrassv2-componentversion-lambdacontainerparams-syntax"></a>
 

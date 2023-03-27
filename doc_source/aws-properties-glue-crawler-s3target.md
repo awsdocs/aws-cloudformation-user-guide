@@ -40,13 +40,13 @@ The name of a connection which allows a job or crawler to access data in Amazon 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DlqEventQueueArn`  <a name="cfn-glue-crawler-s3target-dlqeventqueuearn"></a>
-Not currently supported by AWS CloudFormation\.  
+A valid Amazon dead\-letter SQS ARN\. For example, `arn:aws:sqs:region:account:deadLetterQueue`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventQueueArn`  <a name="cfn-glue-crawler-s3target-eventqueuearn"></a>
-Not currently supported by AWS CloudFormation\.  
+A valid Amazon SQS ARN\. For example, `arn:aws:sqs:region:account:sqs`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
