@@ -2,7 +2,7 @@
 
 A *broker* is a message broker environment running on Amazon MQ\. It is the basic building block of Amazon MQ\.
 
-The `AWS::AmazonMQ::Broker` resource lets you create Amazon MQ for ActiveMQ and Amazon MQ for RabbitMQ brokers, add configuration changes or modify users for a speified ActiveMQ broker, return information about the specified broker, and delete the broker\. For more information, see [How Amazon MQ works](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-how-it-works.html) in the *Amazon MQ Developer Guide*\.
+The `AWS::AmazonMQ::Broker` resource lets you create Amazon MQ for ActiveMQ and Amazon MQ for RabbitMQ brokers, add configuration changes or modify users for a specified ActiveMQ broker, return information about the specified broker, and delete the broker\. For more information, see [How Amazon MQ works](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/amazon-mq-how-it-works.html) in the *Amazon MQ Developer Guide*\.
 + `ec2:CreateNetworkInterface`
 
   This permission is required to allow Amazon MQ to create an elastic network interface \(ENI\) on behalf of your account\.
