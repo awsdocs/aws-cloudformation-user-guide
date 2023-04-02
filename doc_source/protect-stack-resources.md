@@ -63,7 +63,7 @@ You define a stack policy with five elements: `Effect`, `Action`, `Principal`, `
           "ResourceType" : [resource_type, ...]
         }
       }
-    }  
+    }
   ]
 }
 ```
@@ -252,7 +252,7 @@ During a stack update, AWS CloudFormation automatically updates resources that d
          "Action" : "Update:*",
          "Principal": "*",
          "Resource" : "*"
-       }  
+       }
      ]
    }
    ```
@@ -297,7 +297,7 @@ You can't delete a stack policy\. To remove all protection from all resources, y
       "Action" : "Update:*",
       "Principal": "*",
       "Resource" : "*"
-    }  
+    }
   ]
 }
 ```
@@ -318,7 +318,7 @@ To prevent updates to all stack resources, the following policy specifies a `Den
       "Action" : "Update:*",
       "Principal": "*",
       "Resource" : "*"
-    }  
+    }
   ]
 }
 ```
