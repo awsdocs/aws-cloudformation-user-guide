@@ -11,7 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Message](#cfn-quicksight-dashboard-dashboarderror-message)" : String,
-  "[Type](#cfn-quicksight-dashboard-dashboarderror-type)" : String
+  "[Type](#cfn-quicksight-dashboard-dashboarderror-type)" : String,
+  "[ViolatedEntities](#cfn-quicksight-dashboard-dashboarderror-violatedentities)" : [ Entity, ... ]
 }
 ```
 
@@ -20,6 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Message](#cfn-quicksight-dashboard-dashboarderror-message): String
   [Type](#cfn-quicksight-dashboard-dashboarderror-type): String
+  [ViolatedEntities](#cfn-quicksight-dashboard-dashboarderror-violatedentities): 
+    - Entity
 ```
 
 ## Properties<a name="aws-properties-quicksight-dashboard-dashboarderror-properties"></a>
@@ -36,4 +39,11 @@ Type\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ACCESS_DENIED | COLUMN_GEOGRAPHIC_ROLE_MISMATCH | COLUMN_REPLACEMENT_MISSING | COLUMN_TYPE_MISMATCH | DATA_SET_NOT_FOUND | INTERNAL_FAILURE | PARAMETER_NOT_FOUND | PARAMETER_TYPE_INVALID | PARAMETER_VALUE_INCOMPATIBLE | SOURCE_NOT_FOUND`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ViolatedEntities`  <a name="cfn-quicksight-dashboard-dashboarderror-violatedentities"></a>
+Lists the violated entities that caused the dashboard error\.  
+*Required*: No  
+*Type*: List of [Entity](aws-properties-quicksight-dashboard-entity.md)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

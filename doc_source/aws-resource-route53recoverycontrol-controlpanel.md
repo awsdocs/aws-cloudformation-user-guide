@@ -1,6 +1,6 @@
 # AWS::Route53RecoveryControl::ControlPanel<a name="aws-resource-route53recoverycontrol-controlpanel"></a>
 
-Creates a new control panel\. A control panel represents a group of routing controls that can be changed together in a single transaction\. You can use a control panel to centrally view the operational status of applications across your organization, and trigger multi\-app failovers in a single transaction, for example, to fail over an Availability Zone or AWS Region\.
+Creates a new control panel in Amazon Route 53 Application Recovery Controller\. A control panel represents a group of routing controls that can be changed together in a single transaction\. You can use a control panel to centrally view the operational status of applications across your organization, and trigger multi\-app failovers in a single transaction, for example, to fail over from one AWS Region \(cell\) to another\.
 
 ## Syntax<a name="aws-resource-route53recoverycontrol-controlpanel-syntax"></a>
 

@@ -77,7 +77,7 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `512`  
-*Pattern*: `(\u002F)|(\u002F[\u0021-\u007F]+\u002F)`  
+*Pattern*: `(\u002F)|(\u002F[\u0021-\u007E]+\u002F)`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PermissionsBoundary`  <a name="cfn-iam-user-permissionsboundary"></a>

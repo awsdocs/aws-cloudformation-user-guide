@@ -1,6 +1,6 @@
 # AWS::GameLift::Fleet LocationConfiguration<a name="aws-properties-gamelift-fleet-locationconfiguration"></a>
 
-A remote location where a multi\-location fleet can deploy EC2 instances for game hosting\. 
+A remote location where a multi\-location fleet can deploy game servers for game hosting\. 
 
 ## Syntax<a name="aws-properties-gamelift-fleet-locationconfiguration-syntax"></a>
 

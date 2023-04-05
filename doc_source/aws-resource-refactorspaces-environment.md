@@ -1,6 +1,8 @@
 # AWS::RefactorSpaces::Environment<a name="aws-resource-refactorspaces-environment"></a>
 
-Creates an AWS Migration Hub Refactor Spaces environment\. The caller owns the environment resource, and all Refactor Spaces applications, services, and routes created within the environment\. They are referred to as the *environment owner*\. The environment owner has cross\-account visibility and control of Refactor Spaces resources that are added to the environment by other accounts that the environment is shared with\. When creating an environment, Refactor Spaces provisions a transit gateway in your account\.
+Creates an AWS Migration Hub Refactor Spaces environment\. The caller owns the environment resource, and all Refactor Spaces applications, services, and routes created within the environment\. They are referred to as the *environment owner*\. The environment owner has cross\-account visibility and control of Refactor Spaces resources that are added to the environment by other accounts that the environment is shared with\.
+
+When creating an environment with a [CreateEnvironment:NetworkFabricType](https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/APIReference/API_CreateEnvironment.html#migrationhubrefactorspaces-CreateEnvironment-request-NetworkFabricType) of `TRANSIT_GATEWAY`, Refactor Spaces provisions a transit gateway to enable services in VPCs to communicate directly across accounts\. If [CreateEnvironment:NetworkFabricType](https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/APIReference/API_CreateEnvironment.html#migrationhubrefactorspaces-CreateEnvironment-request-NetworkFabricType) is `NONE`, Refactor Spaces does not create a transit gateway and you must use your network infrastructure to route traffic to services with private URL endpoints\.
 
 ## Syntax<a name="aws-resource-refactorspaces-environment-syntax"></a>
 
@@ -42,13 +44,13 @@ A description of the environment\.
 
 `Name`  <a name="cfn-refactorspaces-environment-name"></a>
 The name of the environment\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NetworkFabricType`  <a name="cfn-refactorspaces-environment-networkfabrictype"></a>
 The network fabric type of the environment\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

@@ -1,6 +1,6 @@
 # AWS::VoiceID::Domain<a name="aws-resource-voiceid-domain"></a>
 
-Creates a domain that contains all Amazon Connect Voice ID data, such as speakers, fraudsters, customer audio, and voiceprints\. 
+Creates a domain that contains all Amazon Connect Voice ID data, such as speakers, fraudsters, customer audio, and voiceprints\. Every domain is created with a default watchlist that fraudsters can be a part of\.
 
 ## Syntax<a name="aws-resource-voiceid-domain-syntax"></a>
 
@@ -36,13 +36,13 @@ Properties:
 ## Properties<a name="aws-resource-voiceid-domain-properties"></a>
 
 `Description`  <a name="cfn-voiceid-domain-description"></a>
-The client\-provided description of the domain\.  
+The description of the domain\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-voiceid-domain-name"></a>
-The client\-provided name for the domain\.  
+The name for the domain\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

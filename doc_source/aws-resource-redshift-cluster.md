@@ -257,25 +257,25 @@ Constraints:
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DeferMaintenance`  <a name="cfn-redshift-cluster-defermaintenance"></a>
-Property description not available\.  
+A Boolean indicating whether to enable the deferred maintenance window\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeferMaintenanceDuration`  <a name="cfn-redshift-cluster-defermaintenanceduration"></a>
-Property description not available\.  
+An integer indicating the duration of the maintenance window in days\. If you specify a duration, you can't specify an end time\. The duration must be 45 days or less\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeferMaintenanceEndTime`  <a name="cfn-redshift-cluster-defermaintenanceendtime"></a>
-Property description not available\.  
+A timestamp for the end of the time period when we defer maintenance\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeferMaintenanceStartTime`  <a name="cfn-redshift-cluster-defermaintenancestarttime"></a>
-Property description not available\.  
+A timestamp indicating the start time for the deferred maintenance window\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -442,19 +442,19 @@ If `true`, the cluster can be accessed from a public network\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourceAction`  <a name="cfn-redshift-cluster-resourceaction"></a>
-Property description not available\.  
+The Amazon Redshift operation to be performed\. Supported operations are `pause-cluster` and `resume-cluster`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RevisionTarget`  <a name="cfn-redshift-cluster-revisiontarget"></a>
-Property description not available\.  
+Describes a `RevisionTarget` object\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RotateEncryptionKey`  <a name="cfn-redshift-cluster-rotateencryptionkey"></a>
-Property description not available\.  
+Rotates the encryption keys for a cluster\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -533,7 +533,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-redshift-cluster-return-values-fn--getatt-fn--getatt"></a>
 
 `DeferMaintenanceIdentifier`  <a name="DeferMaintenanceIdentifier-fn::getatt"></a>
-Property description not available\.
+A unique identifier for the maintenance window\.
 
 `Endpoint.Address`  <a name="Endpoint.Address-fn::getatt"></a>
 The connection endpoint for the Amazon Redshift cluster\. For example: `examplecluster.cg034hpkmmjt.us-east-1.redshift.amazonaws.com`\.

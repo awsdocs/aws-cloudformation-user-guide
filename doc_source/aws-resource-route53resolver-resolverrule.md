@@ -74,14 +74,14 @@ Currently, only Resolver can create rules that have a value of `RECURSIVE` for `
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-route53resolver-resolverrule-tags"></a>
-Route 53 Resolver doesn't support updating tags through CloudFormation\.  
+Tags help organize and categorize your Resolver rules\. Each tag consists of a key and an optional value, both of which you define\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetIps`  <a name="cfn-route53resolver-resolverrule-targetips"></a>
-An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to\. Typically, these are the IP addresses of DNS resolvers on your network\. Specify IPv4 addresses\. IPv6 is not supported\.  
+An array that contains the IP addresses and ports that an outbound endpoint forwards DNS queries to\. Typically, these are the IP addresses of DNS resolvers on your network\.   
 *Required*: No  
 *Type*: List of [TargetAddress](aws-properties-route53resolver-resolverrule-targetaddress.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -150,7 +150,7 @@ The following example creates an Amazon Route 53 outbound resolver rule\.
         "Port" : "53"
       },
       {
-        "Ip" : "192.0.2.99",
+        "Ip" : "192.0.2.99,
         "Port" : "53"
       }
     ]

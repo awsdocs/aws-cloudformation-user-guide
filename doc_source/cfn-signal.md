@@ -4,12 +4,12 @@
 
 The cfn\-signal helper script signals CloudFormation to indicate whether Amazon EC2 instances have been successfully created or updated\. If you install and configure software applications on instances, you can signal CloudFormation when those software applications are ready\.
 
-You use the cfn\-signal script in conjunction with a [`CreationPolicy`](aws-attribute-creationpolicy.md) or an Auto Scaling group with a [`WaitOnResourceSignals`](aws-attribute-updatepolicy.md) update policy\. When CloudFormation creates or updates resources with those policies, it suspends work on the stack until the resource receives the requisite number of signals or until the timeout period is exceeded\. For each valid signal that CloudFormation receives, CloudFormation publishes the signals to the stack events so that you track each signal\. For a walkthrough that uses a creation policy and cfn\-signal, see [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
+You use the cfn\-signal script in conjunction with a [`CreationPolicy` attribute`CreationPolicy`](aws-attribute-creationpolicy.md) or an Auto Scaling group with a [`WaitOnResourceSignals`](aws-attribute-updatepolicy.md) update policy\. When CloudFormation creates or updates resources with those policies, it suspends work on the stack until the resource receives the requisite number of signals or until the timeout period is exceeded\. For each valid signal that CloudFormation receives, CloudFormation publishes the signals to the stack events so that you track each signal\. For a walkthrough that uses a creation policy and cfn\-signal, see [Deploying applications on Amazon EC2 with AWS CloudFormation](deploying.applications.md)\.
 
 **Note**  
 cfn\-signal doesn't require credentials, so you don't need to use the `--access-key`, `--secret-key`, `--role`, or `--credential-file` options\. However, if no credentials are specified, CloudFormation checks for stack membership and limits the scope of the call to the stack that the instance belongs to\.
 
-## Syntax for resource signaling \(recommended\)<a name="w2ab1c33c42c31b5"></a>
+## Syntax for resource signaling \(recommended\)<a name="w2ab1c33c41c31b5"></a>
 
 If you want to signal CloudFormation resources, use the following syntax\.
 
@@ -68,7 +68,7 @@ The options that you can use depend on whether you're signaling a creation polic
 
 ## Example<a name="cfn-signal-Examples"></a>
 
-### Amazon Linux example<a name="w2ab1c33c42c31c11b3"></a>
+### Amazon Linux example<a name="w2ab1c33c41c31c11b3"></a>
 
 A common usage pattern is to use cfn\-init and cfn\-signal together\. The cfn\-signal call uses the return status of the call to cfn\-init \(using the $? shell construct\)\. If the application fails to install, the instance will fail to create and the stack will rollback\. For Windows stacks, see [Bootstrapping AWS CloudFormation Windows stacks](cfn-windows-stacks-bootstrapping.md)\.
 
@@ -195,7 +195,7 @@ Resources:
         Timeout: PT5M
 ```
 
-#### Examples<a name="w2ab1c33c42c31c11b3b9"></a>
+#### Examples<a name="w2ab1c33c41c31c11b3b9"></a>
 
 Several CloudFormation sample templates use cfn\-signal, including the following templates\.
 +  [LAMP: Single EC2 instance with local MySQL database](https://s3.amazonaws.com/cloudformation-templates-us-east-1/LAMP_Single_Instance.template) 

@@ -66,5 +66,5 @@ The IP address of the Connect peer\.
 The protocol used for a Connect peer configuration\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `GRE | NO_ENCAP`  
+*Allowed values*: `GRE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

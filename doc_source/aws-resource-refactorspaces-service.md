@@ -63,7 +63,7 @@ A description of the service\.
 
 `EndpointType`  <a name="cfn-refactorspaces-service-endpointtype"></a>
 The endpoint type of the service\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -81,7 +81,7 @@ A summary of the configuration for the AWS Lambda endpoint type\.
 
 `Name`  <a name="cfn-refactorspaces-service-name"></a>
 The name of the service\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

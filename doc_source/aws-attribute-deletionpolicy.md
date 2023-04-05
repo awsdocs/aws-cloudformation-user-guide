@@ -7,10 +7,10 @@ This capability also applies to stack update operations that lead to resources b
 **Note**  
 **Exception**: The default policy is `Snapshot` for `AWS::RDS::DBCluster` resources and for `AWS::RDS::DBInstance` resources that don't specify the `DBClusterIdentifier` property\.
 
-To keep a resource when its stack is deleted, specify `Retain` for that resource\. You can use retain for any resource\. For example, you can retain a nested stack, Amazon S3 bucket, or EC2 instance so that you can continue to use or modify those resources after you delete their stacks\.
+To keep a resource when its stack is deleted, specify `Retain` for that resource\. You can use `Retain` for any resource\. For example, you can retain a nested stack, Amazon S3 bucket, or EC2 instance so that you can continue to use or modify those resources after you delete their stacks\.
 
 **Note**  
-If you want to modify resources outside of CloudFormation, use a retain policy and then delete the stack\. Otherwise, your resources might get out of sync with your CloudFormation template and cause stack errors\.
+If you want to modify resources outside of CloudFormation, use a `Retain` deletion policy and then delete the stack\. Otherwise, your resources might get out of sync with your CloudFormation template and cause stack errors\.
 
 For resources that support snapshots, such as `AWS::EC2::Volume`, specify `Snapshot` to have CloudFormation create a snapshot before deleting the resource\.
 
@@ -58,7 +58,7 @@ For update operations, the following considerations apply:
 Snapshot  
 For resources that support snapshots, CloudFormation creates a snapshot for the resource before deleting it\. When CloudFormation completes the stack deletion, the stack will be in the `Delete_Complete` state; however, the snapshots that are created with this policy continue to exist and continue to incur applicable charges until you delete those snapshots\.  
 Resources that support snapshots include:  
-+ `[AWS::EC2::Volume](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html)`
++ `[AWS::EC2::Volume](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-volume.html)`
 + `[AWS::ElastiCache::CacheCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cache-cluster.html)`
 + `[AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html)`
 + `[AWS::Neptune::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html)`

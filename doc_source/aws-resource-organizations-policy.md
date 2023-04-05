@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Organizations::Policy",
   "Properties" : {
-      "[Content](#cfn-organizations-policy-content)" : String,
+      "[Content](#cfn-organizations-policy-content)" : Json,
       "[Description](#cfn-organizations-policy-description)" : String,
       "[Name](#cfn-organizations-policy-name)" : String,
       "[Tags](#cfn-organizations-policy-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
@@ -36,7 +36,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Organizations::Policy
 Properties: 
-  [Content](#cfn-organizations-policy-content): String
+  [Content](#cfn-organizations-policy-content): Json
   [Description](#cfn-organizations-policy-description): String
   [Name](#cfn-organizations-policy-name): String
   [Tags](#cfn-organizations-policy-tags): 
@@ -49,14 +49,16 @@ Properties:
 ## Properties<a name="aws-resource-organizations-policy-properties"></a>
 
 `Content`  <a name="cfn-organizations-policy-content"></a>
-The policy text content\. The text that you supply must adhere to the rules of the policy type you specify in the `Type` parameter\. The following AWS Organizations quotas are enforced for the maximum size of a policy document:  
+The policy text content\. You can specify the policy content as a JSON object or a JSON string\.  
+When you specify the policy content as a JSON string, you can't perform drift detection on the CloudFormation stack\. For this reason, we recommend specifying the policy content as a JSON object instead\.
+The text that you supply must adhere to the rules of the policy type you specify in the `Type` parameter\. The following AWS Organizations quotas are enforced for the maximum size of a policy document:  
 + Service control policies: 5,120 bytes *\(not characters\)*
 + AI services opt\-out policies: 2,500 characters
 + Backup policies: 10,000 characters
 + Tag policies: 10,000 characters
 For more information about Organizations service quotas, see [Quotas for AWS Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html) in the *AWS Organizations User Guide*\.  
 *Required*: Yes  
-*Type*: String  
+*Type*: Json  
 *Minimum*: `1`  
 *Maximum*: `1000000`  
 *Pattern*: `[\s\S]*`  
@@ -130,3 +132,133 @@ Returns a boolean value that indicates whether the specified policy is an AWS ma
 
 `Id`  <a name="Id-fn::getatt"></a>
 Returns the unique identifier \(ID\) of the policy\. For example: `p-examplepolicyid111`\.
+
+## Examples<a name="aws-resource-organizations-policy--examples"></a>
+
+
+
+### Organization Policy Content Specified as a JSON Object<a name="aws-resource-organizations-policy--examples--Organization_Policy_Content_Specified_as_a_JSON_Object"></a>
+
+This example illustrates how to specify the organization policy content as a JSON object in `AWS::Organizations::Policy`\. The organization policy is specified inline as a JSON object in the `Content` property of `AWS::Organizations::Policy`\.
+
+#### JSON<a name="aws-resource-organizations-policy--examples--Organization_Policy_Content_Specified_as_a_JSON_Object--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "AWS CloudFormation Organizations Template Example",
+  "Resources": {
+    "PolicyTestTemplate": {
+      "DeletionPolicy": "Retain",
+      "Type": "AWS::Organizations::Policy",
+      "Properties": {
+        "Type": "SERVICE_CONTROL_POLICY",
+        "Name": "SCPDenyLeaveOrganization",
+        "Content": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "SCPDenyLeaveOrganization",
+              "Effect": "Deny",
+              "Action": [
+                "organizations:LeaveOrganization"
+              ],
+              "Resource": "*"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-organizations-policy--examples--Organization_Policy_Content_Specified_as_a_JSON_Object--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: AWS CloudFormation Organizations Template Example
+Resources:
+  PolicyTestTemplate:
+    DeletionPolicy: Retain
+    Type: AWS::Organizations::Policy
+    Properties:
+      Type: SERVICE_CONTROL_POLICY
+      Name: SCPDenyLeaveOrganization
+      Content:
+        Version: 2012-10-17
+        Statement:
+          - Sid: SCPDenyLeaveOrganization
+            Effect: Deny
+            Action:
+              - 'organizations:LeaveOrganization'
+            Resource: '*'
+```
+
+### Organization Policy Content Specified as a JSON String<a name="aws-resource-organizations-policy--examples--Organization_Policy_Content_Specified_as_a_JSON_String"></a>
+
+This example illustrates how to specify the organization policy content as a JSON string in `AWS::Organizations::Policy`\. The organization policy is specified inline as a JSON string in the `Content` property of `AWS::Organizations::Policy`\.
+
+#### JSON<a name="aws-resource-organizations-policy--examples--Organization_Policy_Content_Specified_as_a_JSON_String--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "AWS CloudFormation Organizations Template Example",
+  "Resources": {
+    "PolicyTestTemplate": {
+      "DeletionPolicy": "Retain",
+      "Type": "AWS::Organizations::Policy",
+      "Properties": {
+        "Type": "SERVICE_CONTROL_POLICY",
+        "Name": "SCPDenyLeaveOrganization",
+        "Content": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"SCPDenyLeaveOrganization\",\"Effect\":\"Deny\",\"Action\":[\"organizations:LeaveOrganization\"],\"Resource\":\"*\"}]}"
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-organizations-policy--examples--Organization_Policy_Content_Specified_as_a_JSON_String--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: AWS CloudFormation Organizations Template Example
+Resources:
+  PolicyTestTemplate:
+    DeletionPolicy: Retain
+    Type: AWS::Organizations::Policy
+    Properties:
+      Type: SERVICE_CONTROL_POLICY
+      Name: SCPDenyLeaveOrganization
+      Content: >-
+        {"Version":"2012-10-17","Statement":[{"Sid":"SCPDenyLeaveOrganization","Effect":"Deny","Action":["organizations:LeaveOrganization"],"Resource":"*"}]}
+```
+
+#### YAML<a name="aws-resource-organizations-policy--examples--Organization_Policy_Content_Specified_as_a_JSON_String--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Description: AWS CloudFormation Organizations Template Example
+Resources:
+  PolicyTestTemplate:
+    DeletionPolicy: Retain
+    Type: AWS::Organizations::Policy
+    Properties:
+      Type: SERVICE_CONTROL_POLICY
+      Name: SCPDenyLeaveOrganization
+      Content: >-
+        {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Sid": "SCPDenyLeaveOrganization",
+              "Effect": "Deny",
+              "Action": [
+                "organizations:LeaveOrganization"
+              ],
+              "Resource": "*"
+            }
+          ]
+        }
+```

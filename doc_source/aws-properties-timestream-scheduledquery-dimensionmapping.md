@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-timestream-scheduledquery-dimensionmapping-properties"></a>
 
 `DimensionValueType`  <a name="cfn-timestream-scheduledquery-dimensionmapping-dimensionvaluetype"></a>
-Type for the dimension\.   
+Type for the dimension: VARCHAR  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

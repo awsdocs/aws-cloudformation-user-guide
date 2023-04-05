@@ -2,6 +2,12 @@
 
 The `AWS::ECS::Service` resource creates an Amazon Elastic Container Service \(Amazon ECS\) service that runs and maintains the requested number of tasks and associated load balancers\.
 
+**Important**  
+The stack update fails if you change any properties that require replacement and at least one Amazon ECS Service Connect `ServiceConnectService` is configured\. This is because AWS CloudFormation creates the replacement service first, but each `ServiceConnectService` must have a name that is unique in the namespace\.
+
+**Note**  
+Starting April 15, 2023, AWS; will not onboard new customers to Amazon Elastic Inference \(EI\), and will help current customers migrate their workloads to options that offer better price and performance\. After April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2\. However, customers who have used Amazon EI at least once during the past 30\-day period are considered current customers and will be able to continue using the service\. 
+
 ## Syntax<a name="aws-resource-ecs-service-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -81,12 +87,8 @@ Properties:
 
 `CapacityProviderStrategy`  <a name="cfn-ecs-service-capacityproviderstrategy"></a>
 The capacity provider strategy to use for the service\.  
-A capacity provider strategy consists of one or more capacity providers along with the `base` and `weight` to assign to them\. A capacity provider must be associated with the cluster to be used in a capacity provider strategy\. The PutClusterCapacityProviders API is used to associate a capacity provider with a cluster\. Only capacity providers with an `ACTIVE` or `UPDATING` status can be used\.  
-Review the [Capacity provider considerations](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-capacity-providers.html#capacity-providers-considerations) in the *Amazon Elastic Container Service Developer Guide\.*  
 If a `capacityProviderStrategy` is specified, the `launchType` parameter must be omitted\. If no `capacityProviderStrategy` or `launchType` is specified, the `defaultCapacityProviderStrategy` for the cluster is used\.  
-If specifying a capacity provider that uses an Auto Scaling group, the capacity provider must already be created\. New capacity providers can be created with the CreateCapacityProvider API operation\.  
-To use an AWS Fargate capacity provider, specify either the `FARGATE` or `FARGATE_SPOT` capacity providers\. The AWS Fargate capacity providers are available to all accounts and only need to be associated with a cluster to be used\.  
-The PutClusterCapacityProviders API operation is used to update the list of available capacity providers for a cluster after the cluster is created\.  
+A capacity provider strategy may contain a maximum of 6 capacity providers\.  
 *Required*: No  
 *Type*: List of [CapacityProviderStrategyItem](aws-properties-ecs-service-capacityproviderstrategyitem.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -163,7 +165,7 @@ An array of placement constraint objects to use for tasks in your service\. You 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PlacementStrategies`  <a name="cfn-ecs-service-placementstrategies"></a>
-The placement strategy objects to use for tasks in your service\. You can specify a maximum of five strategy rules per service\. For more information, see [Task Placement Strategies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-strategies.html) in the *Amazon Elastic Container Service Developer Guide*\.  
+The placement strategy objects to use for tasks in your service\. You can specify a maximum of 5 strategy rules for each service\.  
 *Required*: No  
 *Type*: List of [PlacementStrategy](aws-properties-ecs-service-placementstrategy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -175,7 +177,7 @@ The platform version that your tasks in the service are running on\. A platform 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PropagateTags`  <a name="cfn-ecs-service-propagatetags"></a>
-Specifies whether to propagate the tags from the task definition or the service to the tasks in the service\. If no value is specified, the tags are not propagated\. Tags can only be propagated to the tasks within the service during service creation\. To add tags to a task after service creation, use the [TagResource](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html) API action\.  
+Specifies whether to propagate the tags from the task definition to the task\. If no value is specified, the tags aren't propagated\. Tags can only be propagated to the task during task creation\. To add tags to a task after task creation, use the [TagResource](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html) API action\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `NONE | SERVICE | TASK_DEFINITION`  
@@ -210,6 +212,7 @@ Tasks that run in a namespace can use short names to connect to services in the 
 
 `ServiceName`  <a name="cfn-ecs-service-servicename"></a>
 The name of your service\. Up to 255 letters \(uppercase and lowercase\), numbers, underscores, and hyphens are allowed\. Service names must be unique within a cluster, but you can have similarly named services in multiple clusters within a Region or across multiple Regions\.  
+The stack update fails if you change any properties that require replacement and the `ServiceName` is configured\. This is because AWS CloudFormation creates the replacement service first, but each `ServiceName` must be unique in the cluster\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -237,9 +240,8 @@ The following basic restrictions apply to tags:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TaskDefinition`  <a name="cfn-ecs-service-taskdefinition"></a>
-The `family` and `revision` \(`family:revision`\) or full ARN of the task definition to run in your service\. The `revision` is required in order for the resource to stabilize\.  
-A task definition must be specified if the service is using either the `ECS` or `CODE_DEPLOY` deployment controllers\.  
-For more information about deployment types, see [Amazon ECS deployment types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html)\.  
+The `family` and `revision` \(`family:revision`\) or full ARN of the task definition to run in your service\. If a `revision` isn't specified, the latest `ACTIVE` revision is used\.  
+A task definition must be specified if the service uses either the `ECS` or `CODE_DEPLOY` deployment controllers\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

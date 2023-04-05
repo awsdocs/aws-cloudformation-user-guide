@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-route53resolver-resolverrule-targetaddress-properties"></a>
 
 `Ip`  <a name="cfn-route53resolver-resolverrule-targetaddress-ip"></a>
-One IP address that you want to forward DNS queries to\. You can specify only IPv4 addresses\.  
+One IPv4 address that you want to forward DNS queries to\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `7`  
@@ -35,9 +35,11 @@ One IP address that you want to forward DNS queries to\. You can specify only IP
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Ipv6`  <a name="cfn-route53resolver-resolverrule-targetaddress-ipv6"></a>
-Property description not available\.  
+ One IPv6 address that you want to forward DNS queries to\.   
 *Required*: No  
 *Type*: String  
+*Minimum*: `7`  
+*Maximum*: `39`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Port`  <a name="cfn-route53resolver-resolverrule-targetaddress-port"></a>

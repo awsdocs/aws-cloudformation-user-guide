@@ -73,7 +73,7 @@ The configuration profile ID\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConfigurationVersion`  <a name="cfn-appconfig-deployment-configurationversion"></a>
-The configuration version to deploy\. If deploying an AWS AppConfig hosted configuration version, you can specify either the version number or version label\.  
+The configuration version to deploy\. If deploying an AWS AppConfig hosted configuration version, you can specify either the version number or version label\. For all other configurations, you must specify the version number\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

@@ -57,7 +57,9 @@ The parameters for using a DynamoDB stream as a source\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FilterCriteria`  <a name="cfn-pipes-pipe-pipesourceparameters-filtercriteria"></a>
-The collection of event patterns used to filter events\. For more information, see [Events and Event Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) in the *Amazon EventBridge User Guide*\.  
+The collection of event patterns used to filter events\.  
+To remove a filter, specify a `FilterCriteria` object with an empty array of `Filter` objects\.  
+For more information, see [Events and Event Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) in the *Amazon EventBridge User Guide*\.  
 *Required*: No  
 *Type*: [FilterCriteria](aws-properties-pipes-pipe-filtercriteria.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

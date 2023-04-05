@@ -1,6 +1,10 @@
 # AWS::Route53RecoveryReadiness::ReadinessCheck<a name="aws-resource-route53recoveryreadiness-readinesscheck"></a>
 
-Creates a readiness check in an account\. A readiness check monitors a resource set in your application, such as a set of Amazon Aurora instances, that Application Recovery Controller is auditing recovery readiness for\. The audits run once every minute on every resource that's associated with a readiness check\.
+Creates a readiness check in Amazon Route 53 Application Recovery Controller\. A readiness check continually monitors a resource set in your application, such as a set of Amazon Aurora instances, that Route 53 ARC is auditing recovery readiness for\. The audits run once every minute on every resource that's associated with a readiness check\.
+
+Every resource type has a set of rules associated with it that Route 53 ARC uses to audit resources for readiness\. For more information, see [Readiness rules descriptions](https://docs.aws.amazon.com/r53recovery/latest/dg/recovery-readiness.rules-resources.html) in the Amazon Route 53 Application Recovery Controller Developer Guide\.
+
+Route 53 ARC Readiness supports us\-east\-1 and us\-west\-2 AWS Regions only\.
 
 ## Syntax<a name="aws-resource-route53recoveryreadiness-readinesscheck-syntax"></a>
 

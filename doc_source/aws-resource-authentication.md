@@ -2,7 +2,7 @@
 
 Use the `AWS::CloudFormation::Authentication` resource to specify authentication credentials for files or sources that you specify with the [`AWS::CloudFormation::Init`](aws-resource-init.md) resource\.
 
-To include authentication information for a file or source that you specify with `AWS::CloudFormation::Init`, use the `uris` property if the source is a URI or the `buckets` property if the source is an Amazon S3 bucket\. For more information about files, see [Files](aws-resource-init.md#aws-resource-init-files)\. For more information about sources, see [Sources](aws-resource-init.md#aws-resource-init-sources)\.
+To include authentication information for a file or source that you specify with `AWS::CloudFormation::Init`, use the `uris` property if the source is a URI or the `buckets` property if the source is an Amazon S3 bucket\. For more information about files, see [Files](aws-resource-init.md#aws-resource-init-files)\. For more information about sources, see [SourcesSupported formats](aws-resource-init.md#aws-resource-init-sources)\.
 
 You can also specify authentication information for files directly in the `AWS::CloudFormation::Init` resource\. The files key of the resource contains a property named `authentication`\. You can use the `authentication` property to associate authentication information defined in an `AWS::CloudFormation::Authentication` resource directly with a file\.
 

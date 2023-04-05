@@ -106,7 +106,7 @@ The `StackId` value copied from the [delete request](#crpg-ref-requesttypes-dele
 PhysicalResourceId  
 A required custom resource provider\-defined physical ID that's unique for that provider\.
 
-#### Example<a name="w2ab1c23c23c19c19c13b7b4b6"></a>
+#### Example<a name="crpg-ref-requesttypes-delete-responses-failed-example"></a>
 
 ```
 {

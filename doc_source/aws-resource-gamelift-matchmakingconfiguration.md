@@ -103,9 +103,9 @@ A description for the matchmaking configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FlexMatchMode`  <a name="cfn-gamelift-matchmakingconfiguration-flexmatchmode"></a>
-Indicates whether this matchmaking configuration is being used with GameLift hosting or as a standalone matchmaking solution\.   
+Indicates whether this matchmaking configuration is being used with Amazon GameLift hosting or as a standalone matchmaking solution\.   
 +  **STANDALONE** \- FlexMatch forms matches and returns match information, including players and team assignments, in a [ MatchmakingSucceeded](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-events.html#match-events-matchmakingsucceeded) event\.
-+  **WITH\_QUEUE** \- FlexMatch forms matches and uses the specified GameLift queue to start a game session for the match\. 
++  **WITH\_QUEUE** \- FlexMatch forms matches and uses the specified Amazon GameLift queue to start a game session for the match\. 
 *Required*: No  
 *Type*: String  
 *Allowed values*: `STANDALONE | WITH_QUEUE`  
@@ -127,7 +127,7 @@ A set of custom game session properties, formatted as a single string value\. Th
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GameSessionQueueArns`  <a name="cfn-gamelift-matchmakingconfiguration-gamesessionqueuearns"></a>
-The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html)\) that is assigned to a GameLift game session queue resource and uniquely identifies it\. ARNs are unique across all Regions\. Format is `arn:aws:gamelift:<region>::gamesessionqueue/<queue name>`\. Queues can be located in any Region\. Queues are used to start new GameLift\-hosted game sessions for matches that are created with this matchmaking configuration\. If `FlexMatchMode` is set to `STANDALONE`, do not set this parameter\.  
+The Amazon Resource Name \([ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html)\) that is assigned to a Amazon GameLift game session queue resource and uniquely identifies it\. ARNs are unique across all Regions\. Format is `arn:aws:gamelift:<region>::gamesessionqueue/<queue name>`\. Queues can be located in any Region\. Queues are used to start new Amazon GameLift\-hosted game sessions for matches that are created with this matchmaking configuration\. If `FlexMatchMode` is set to `STANDALONE`, do not set this parameter\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -76,7 +76,7 @@ The summary describes what has happened during the incident\.
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
-*Maximum*: `4000`  
+*Maximum*: `8000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Title`  <a name="cfn-ssmincidents-responseplan-incidenttemplate-title"></a>

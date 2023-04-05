@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[JobExecutionsRetryConfig](#cfn-iot-jobtemplate-jobexecutionsretryconfig)" : JobExecutionsRetryConfig,
       "[JobExecutionsRolloutConfig](#cfn-iot-jobtemplate-jobexecutionsrolloutconfig)" : JobExecutionsRolloutConfig,
       "[JobTemplateId](#cfn-iot-jobtemplate-jobtemplateid)" : String,
+      "[MaintenanceWindows](#cfn-iot-jobtemplate-maintenancewindows)" : [ MaintenanceWindow, ... ],
       "[PresignedUrlConfig](#cfn-iot-jobtemplate-presignedurlconfig)" : PresignedUrlConfig,
       "[Tags](#cfn-iot-jobtemplate-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TimeoutConfig](#cfn-iot-jobtemplate-timeoutconfig)" : TimeoutConfig
@@ -43,6 +44,8 @@ Properties:
   [JobExecutionsRolloutConfig](#cfn-iot-jobtemplate-jobexecutionsrolloutconfig): 
     JobExecutionsRolloutConfig
   [JobTemplateId](#cfn-iot-jobtemplate-jobtemplateid): String
+  [MaintenanceWindows](#cfn-iot-jobtemplate-maintenancewindows): 
+    - MaintenanceWindow
   [PresignedUrlConfig](#cfn-iot-jobtemplate-presignedurlconfig): 
     PresignedUrlConfig
   [Tags](#cfn-iot-jobtemplate-tags): 
@@ -105,6 +108,12 @@ A unique identifier for the job template\. We recommend using a UUID\. Alpha\-nu
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`MaintenanceWindows`  <a name="cfn-iot-jobtemplate-maintenancewindows"></a>
+An optional configuration within the SchedulingConfig to setup a recurring maintenance window with a predetermined start time and duration for the rollout of a job document to all devices in a target group for a job\.  
+*Required*: No  
+*Type*: List of [MaintenanceWindow](aws-properties-iot-jobtemplate-maintenancewindow.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PresignedUrlConfig`  <a name="cfn-iot-jobtemplate-presignedurlconfig"></a>
 Configuration for pre\-signed S3 URLs\.  

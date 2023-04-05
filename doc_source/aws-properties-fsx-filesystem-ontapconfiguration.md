@@ -71,7 +71,7 @@ The SSD IOPS configuration for the FSx for ONTAP file system\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EndpointIpAddressRange`  <a name="cfn-fsx-filesystem-ontapconfiguration-endpointipaddressrange"></a>
-\(Multi\-AZ only\) Specifies the IP address range in which the endpoints to access your file system will be created\. By default in the Amazon FSx API, Amazon FSx selects an unused IP address range for you from the 198\.19\.\* range\. By default in the Amazon FSx console, Amazon FSx chooses the last 64 IP addresses from the VPC’s primary CIDR range to use as the endpoint IP address range for the file system\. You can have overlapping endpoint IP addresses for file systems deployed in the same VPC/route tables\.  
+\(Multi\-AZ only\) Specifies the IP address range in which the endpoints to access your file system will be created\. By default in the Amazon FSx API, Amazon FSx selects an unused IP address range for you from the 198\.19\.\* range\. By default in the Amazon FSx console, Amazon FSx chooses the last 64 IP addresses from the VPC’s primary CIDR range to use as the endpoint IP address range for the file system\. You can have overlapping endpoint IP addresses for file systems deployed in the same VPC/route tables, as long as they don't overlap with any subnet\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `9`  

@@ -1,6 +1,8 @@
 # AWS::RolesAnywhere::CRL<a name="aws-resource-rolesanywhere-crl"></a>
 
-The state of the certificate revocation list \(CRL\) after a read or write operation\.
+Imports the certificate revocation list \(CRL\)\. A CRL is a list of certificates that have been revoked by the issuing certificate Authority \(CA\)\. IAM Roles Anywhere validates against the CRL before issuing credentials\. 
+
+**Required permissions: **`rolesanywhere:ImportCrl`\. 
 
 ## Syntax<a name="aws-resource-rolesanywhere-crl-syntax"></a>
 
@@ -37,13 +39,13 @@ Properties:
 ## Properties<a name="aws-resource-rolesanywhere-crl-properties"></a>
 
 `CrlData`  <a name="cfn-rolesanywhere-crl-crldata"></a>
-The revocation record for a certificate, following the x509 v3 standard\.  
+The x509 v3 specified certificate revocation list \(CRL\)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-rolesanywhere-crl-enabled"></a>
-Indicates whether the certificate revocation list \(CRL\) is enabled\.  
+Specifies whether the certificate revocation list \(CRL\) is enabled\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -52,18 +54,25 @@ Indicates whether the certificate revocation list \(CRL\) is enabled\.
 The name of the certificate revocation list \(CRL\)\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `^[ a-zA-Z0-9-_]*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-rolesanywhere-crl-tags"></a>
-A list of tags to attach to the CRL\.  
+A list of tags to attach to the certificate revocation list \(CRL\)\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrustAnchorArn`  <a name="cfn-rolesanywhere-crl-trustanchorarn"></a>
-The ARN of the TrustAnchor the certificate revocation list \(CRL\) will provide revocation for\.   
+The ARN of the TrustAnchor the certificate revocation list \(CRL\) will provide revocation for\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1011`  
+*Pattern*: `^arn:aws(-[^:]+)?:rolesanywhere(:.*){2}(:trust-anchor.*)$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-rolesanywhere-crl-return-values"></a>

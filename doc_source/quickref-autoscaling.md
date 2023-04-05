@@ -180,7 +180,7 @@ The launch template also includes an IAM role that allows applications running o
 51.       - !Ref myInstanceRole
 ```
 
-### See also<a name="scenario-as-group-see-also"></a>
+### See also<a name="scenario-as-launch-template-see-also"></a>
 
 For more examples of launch templates, see the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate--examples) section in the `AWS::EC2::LaunchTemplate` resource and the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples) section in the `AWS::AutoScaling::AutoScalingGroup` resource\.
 
@@ -362,7 +362,7 @@ The `VPCZoneIdentifier` property of the Auto Scaling group specifies a list of e
 
 ## Declaring an Auto Scaling group with a CreationPolicy and an UpdatePolicy<a name="scenario-as-updatepolicy"></a>
 
-The following example shows how to add [`CreationPolicy`](aws-attribute-creationpolicy.md) and [`UpdatePolicy`](aws-attribute-updatepolicy.md) attributes to an [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.
+The following example shows how to add [`CreationPolicy` attribute`CreationPolicy`](aws-attribute-creationpolicy.md) and [`UpdatePolicy`](aws-attribute-updatepolicy.md) attributes to an [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.
 
 The sample creation policy prevents the Auto Scaling group from reaching `CREATE_COMPLETE` status until AWS CloudFormation receives `Count` number of success signals when the group is ready\. To signal that the Auto Scaling group is ready, a [cfn\-signal](cfn-signal.md) helper script added to the launch template's user data \(not shown\) is run on the instances\. If the instances don't send a signal within the specified `Timeout`, CloudFormation assumes that the instances were not created, the resource creation fails, and CloudFormation rolls the stack back\.
 

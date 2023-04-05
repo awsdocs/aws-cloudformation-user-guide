@@ -1,6 +1,6 @@
 # AWS::ECS::TaskDefinition LinuxParameters<a name="aws-properties-ecs-taskdefinition-linuxparameters"></a>
 
-The `LinuxParameters` property specifies Linux\-specific options that are applied to the container, such as Linux [KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html)\.
+The Linux\-specific options that are applied to the container, such as Linux [KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html)\.
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-linuxparameters-syntax"></a>
 

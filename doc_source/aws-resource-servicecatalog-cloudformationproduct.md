@@ -17,8 +17,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Distributor](#cfn-servicecatalog-cloudformationproduct-distributor)" : String,
       "[Name](#cfn-servicecatalog-cloudformationproduct-name)" : String,
       "[Owner](#cfn-servicecatalog-cloudformationproduct-owner)" : String,
+      "[ProductType](#cfn-servicecatalog-cloudformationproduct-producttype)" : String,
       "[ProvisioningArtifactParameters](#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters)" : [ ProvisioningArtifactProperties, ... ],
       "[ReplaceProvisioningArtifacts](#cfn-servicecatalog-cloudformationproduct-replaceprovisioningartifacts)" : Boolean,
+      "[SourceConnection](#cfn-servicecatalog-cloudformationproduct-sourceconnection)" : SourceConnection,
       "[SupportDescription](#cfn-servicecatalog-cloudformationproduct-supportdescription)" : String,
       "[SupportEmail](#cfn-servicecatalog-cloudformationproduct-supportemail)" : String,
       "[SupportUrl](#cfn-servicecatalog-cloudformationproduct-supporturl)" : String,
@@ -37,9 +39,12 @@ Properties:
   [Distributor](#cfn-servicecatalog-cloudformationproduct-distributor): String
   [Name](#cfn-servicecatalog-cloudformationproduct-name): String
   [Owner](#cfn-servicecatalog-cloudformationproduct-owner): String
+  [ProductType](#cfn-servicecatalog-cloudformationproduct-producttype): String
   [ProvisioningArtifactParameters](#cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters): 
     - ProvisioningArtifactProperties
   [ReplaceProvisioningArtifacts](#cfn-servicecatalog-cloudformationproduct-replaceprovisioningartifacts): Boolean
+  [SourceConnection](#cfn-servicecatalog-cloudformationproduct-sourceconnection): 
+    SourceConnection
   [SupportDescription](#cfn-servicecatalog-cloudformationproduct-supportdescription): String
   [SupportEmail](#cfn-servicecatalog-cloudformationproduct-supportemail): String
   [SupportUrl](#cfn-servicecatalog-cloudformationproduct-supporturl): String
@@ -51,7 +56,6 @@ Properties:
 
 `AcceptLanguage`  <a name="cfn-servicecatalog-cloudformationproduct-acceptlanguage"></a>
 The language code\.  
-+  `en` \- English \(default\)
 +  `jp` \- Japanese
 +  `zh` \- Chinese
 *Required*: No  
@@ -87,9 +91,16 @@ The owner of the product\.
 *Maximum*: `8191`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`ProductType`  <a name="cfn-servicecatalog-cloudformationproduct-producttype"></a>
+The type of product\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `CLOUD_FORMATION_TEMPLATE | DEFAULT_CUSTOM | MARKETPLACE | TERRAFORM_OPEN_SOURCE`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ProvisioningArtifactParameters`  <a name="cfn-servicecatalog-cloudformationproduct-provisioningartifactparameters"></a>
 The configuration of the provisioning artifact \(also known as a version\)\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: List of [ProvisioningArtifactProperties](aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -98,6 +109,12 @@ This property is turned off by default\. If turned off, you can update provision
 If turned on, provisioning artifacts will be given a new unique identifier when you update the product or provisioning artifacts\.  
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SourceConnection`  <a name="cfn-servicecatalog-cloudformationproduct-sourceconnection"></a>
+A top level `ProductViewDetail` response containing details about the product’s connection\. AWS Service Catalog returns this field for the `CreateProduct`, `UpdateProduct`, `DescribeProductAsAdmin`, and `SearchProductAsAdmin` APIs\. This response contains the same fields as the `ConnectionParameters` request, with the addition of the `LastSync` response\.  
+*Required*: No  
+*Type*: [SourceConnection](aws-properties-servicecatalog-cloudformationproduct-sourceconnection.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SupportDescription`  <a name="cfn-servicecatalog-cloudformationproduct-supportdescription"></a>

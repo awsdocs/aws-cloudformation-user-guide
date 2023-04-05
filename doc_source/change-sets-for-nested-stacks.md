@@ -35,15 +35,15 @@ aws cloudformation create-change-set \
     --change-set-name my-root-stack-change-set \
     --template-body file://template.yaml \
     --capabilities CAPABILITY_IAM \
-    --include-nested-stacks 
+    --include-nested-stacks
 ```
 
 The following AWS CLI example is of a `create-change-set` output\.
 
 ```
 {
-    "Id":"arn:aws:cloudformation:us-west-2:123456789012:changeSet/my-root-stack-change-set/4eca1a01-e285-xmpl-8026-9a1967bfb4b0",
-    "StackId": "arn:aws:cloudformation:us-west-2:123456789012:Stack/my-root-stack/d0a825a0-e4cd-xmpl-b9fb-061c69e99204"
+    "Id":"arn:aws:cloudformation:us-west-2:123456789012:changeSet/my-root-stack-change-set/4eca1a01-e285-xmpl-8026-9a1967bfb4b0",
+    "StackId": "arn:aws:cloudformation:us-west-2:123456789012:Stack/my-root-stack/d0a825a0-e4cd-xmpl-b9fb-061c69e99204"
 }
 ```
 
@@ -54,8 +54,8 @@ The following AWS CLI example is of a `describe-change-set` input for the root s
 
 ```
 aws cloudformation describe-change-set \
-    --change-set-name my-root-stack-change-set \
-    --stack-name my-root-stack
+    --change-set-name my-root-stack-change-set \
+    --stack-name my-root-stack
 ```
 
 The following AWS CLI example is of a `describe-change-set` output for the root stack change set\.
@@ -118,8 +118,8 @@ The following AWS CLI example is of a `describe-change-set` input for the nested
 
 ```
 aws cloudformation describe-change-set \
-    --change-set-name my-nested-stack-change-set \
-    --stack-name my-nested-stack
+    --change-set-name my-nested-stack-change-set \
+    --stack-name my-nested-stack
 ```
 
 The following AWS CLI example is of a `describe-change-set` output for the nested stack change set\.
@@ -188,8 +188,8 @@ The following AWS CLI example is of an `execute-change-set` input\.
 
 ```
 aws cloudformation execute-change-set \
-    --stack-name my-root-stack \ 
-    --change-set-name my-root-stack-change-set
+    --stack-name my-root-stack \
+    --change-set-name my-root-stack-change-set
 ```
 
 ### delete\-change\-set<a name="working-with-change-set-delete-cli"></a>
@@ -201,6 +201,6 @@ The following AWS CLI example is of a `delete-change-set` input on the root chan
 
 ```
 aws cloudformation delete-change-set \
-    --stack-name my-root-stack \ 
-    --change-set-name my-root-stack-change-set
+    --stack-name my-root-stack \ 
+    --change-set-name my-root-stack-change-set
 ```

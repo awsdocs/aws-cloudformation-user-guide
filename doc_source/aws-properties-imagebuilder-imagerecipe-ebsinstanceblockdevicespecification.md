@@ -73,7 +73,7 @@ The snapshot that defines the device contents\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Throughput`  <a name="cfn-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification-throughput"></a>
- **For GP3 volumes only** – The throughput in MiB/s that the volume supports\.   
+ **For GP3 volumes only** – The throughput in MiB/s that the volume supports\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `125`  

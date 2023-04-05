@@ -1,6 +1,6 @@
 # AWS::GameLift::MatchmakingConfiguration GameProperty<a name="aws-properties-gamelift-matchmakingconfiguration-gameproperty"></a>
 
-Set of key\-value pairs that contain information about a game session\. When included in a game session request, these properties communicate details to be used when setting up the new game session\. For example, a game property might specify a game mode, level, or map\. Game properties are passed to the game server process when initiating a new game session\. For more information, see the [ GameLift Developer Guide](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-client-api.html#gamelift-sdk-client-api-create)\.
+Set of key\-value pairs that contain information about a game session\. When included in a game session request, these properties communicate details to be used when setting up the new game session\. For example, a game property might specify a game mode, level, or map\. Game properties are passed to the game server process when initiating a new game session\. For more information, see the [ Amazon GameLift Developer Guide](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-client-api.html#gamelift-sdk-client-api-create)\.
 
 ## Syntax<a name="aws-properties-gamelift-matchmakingconfiguration-gameproperty-syntax"></a>
 

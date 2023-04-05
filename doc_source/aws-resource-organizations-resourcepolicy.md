@@ -122,7 +122,7 @@ Description: AWS CloudFormation Organizations Template Example
 Resources:
   ResourcePolicyTestTemplate:
     DeletionPolicy: Retain
-    Type: 'AWS::Organizations::ResourcePolicy'
+    Type: AWS::Organizations::ResourcePolicy
     Properties:
       Content:
         Version: 2012-10-17

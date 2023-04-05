@@ -22,7 +22,7 @@ This topic contains some common AWS CloudFormation StackSets issues, and suggest
 + The maximum number of a resource that is specified in your template already exists in your target account\. For example, you might have reached the limit of allowed IAM roles in a target account, but the template creates more IAM roles\.
 + You have reached the maximum number of stacks that are allowed in a stack set\. See [AWS CloudFormation limits](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html) for the maximum number of stacks per stack set\.
 
-**Solution:** For more information about the permissions required of target and administrator accounts before you can create stack sets, see [Set up basic permissions for stack set operations](stacksets-prereqs-self-managed.md#stacksets-prereqs-accountsetup)\.
+**Solution:** For more information about the permissions required of target and administrator accounts before you can create stack sets, see [Set up basic permissions for stack set operationsSet up permissions for all users of the administrator account to perform stack set operations in all target accounts](stacksets-prereqs-self-managed.md#stacksets-prereqs-accountsetup)\.
 
 ## Retrying failed stack creation or update operations<a name="retrying-failed-stack-creation-or-update-operations"></a>
 

@@ -86,8 +86,5 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 #### <a name="aws-resource-appintegrations-eventintegration-return-values-fn--getatt-fn--getatt"></a>
 
-`Associations`  <a name="Associations-fn::getatt"></a>
-The association status of the event integration, returned as an array of EventIntegrationAssociation objects\.
-
 `EventIntegrationArn`  <a name="EventIntegrationArn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the event integration\.

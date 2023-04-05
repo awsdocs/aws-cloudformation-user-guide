@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ssmcontacts-contact-targets-properties"></a>
 
 `ChannelTargetInfo`  <a name="cfn-ssmcontacts-contact-targets-channeltargetinfo"></a>
-Information about the contact channel Incident Manager is engaging\.  
+Information about the contact channel that Incident Manager engages\.  
 *Required*: No  
 *Type*: [ChannelTargetInfo](aws-properties-ssmcontacts-contact-channeltargetinfo.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

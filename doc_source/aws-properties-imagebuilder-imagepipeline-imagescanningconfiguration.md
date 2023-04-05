@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::ImagePipeline ImageScanningConfiguration<a name="aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration"></a>
 
-<a name="aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration-description"></a>The `ImageScanningConfiguration` property type specifies Property description not available\. for an [AWS::ImageBuilder::ImagePipeline](aws-resource-imagebuilder-imagepipeline.md)\.
+Contains settings for Image Builder image resource and container image scans\.
 
 ## Syntax<a name="aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration-syntax"></a>
 
@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration-properties"></a>
 
 `EcrConfiguration`  <a name="cfn-imagebuilder-imagepipeline-imagescanningconfiguration-ecrconfiguration"></a>
-Property description not available\.  
+Contains Amazon ECR settings for vulnerability scans\.  
 *Required*: No  
 *Type*: [EcrConfiguration](aws-properties-imagebuilder-imagepipeline-ecrconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageScanningEnabled`  <a name="cfn-imagebuilder-imagepipeline-imagescanningconfiguration-imagescanningenabled"></a>
-Property description not available\.  
+A setting that indicates whether Image Builder keeps a snapshot of the vulnerability scans that Amazon Inspector runs against the build instance when you create a new image\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

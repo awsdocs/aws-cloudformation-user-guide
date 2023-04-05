@@ -350,6 +350,7 @@ Valid for: Aurora DB clusters and Multi\-AZ DB clusters
 
 `EngineMode`  <a name="cfn-rds-dbcluster-enginemode"></a>
 The DB engine mode of the DB cluster, either `provisioned`, `serverless`, `parallelquery`, `global`, or `multimaster`\.  
+The `serverless` engine mode only applies for Aurora Serverless v1 DB clusters\.  
 The `parallelquery` engine mode isn't required for Aurora MySQL version 1\.23 and higher 1\.x versions, and version 2\.09 and higher 2\.x versions\.  
 The `global` engine mode isn't required for Aurora MySQL version 1\.22 and higher 1\.x versions, and `global` engine mode isn't required for any 2\.x versions\.  
 The `multimaster` engine mode only applies for DB clusters created with Aurora MySQL version 5\.6\.10a\.  
@@ -389,7 +390,7 @@ Valid for: Aurora DB clusters only
 
 `Iops`  <a name="cfn-rds-dbcluster-iops"></a>
 The amount of Provisioned IOPS \(input/output operations per second\) to be initially allocated for each DB instance in the Multi\-AZ DB cluster\.  
-For information about valid IOPS values, see [Amazon RDS Provisioned IOPS storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS) in the *Amazon RDS User Guide*\.  
+For information about valid IOPS values, see [Provisioned IOPS storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS) in the *Amazon RDS User Guide*\.  
 This setting is required to create a Multi\-AZ DB cluster\.  
 Constraints: Must be a multiple between \.5 and 50 of the storage amount for the DB cluster\.  
 Valid for: Multi\-AZ DB clusters only  

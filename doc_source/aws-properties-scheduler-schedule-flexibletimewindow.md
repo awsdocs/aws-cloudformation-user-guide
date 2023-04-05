@@ -26,12 +26,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `MaximumWindowInMinutes`  <a name="cfn-scheduler-schedule-flexibletimewindow-maximumwindowinminutes"></a>
 The maximum time window during which a schedule can be invoked\.  
+*Minimum*: `1`  
+*Maximum*: `1440`  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Mode`  <a name="cfn-scheduler-schedule-flexibletimewindow-mode"></a>
 Determines whether the schedule is invoked within a flexible time window\.  
+*Allowed Values*: `OFF` \| `FLEXIBLE`  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::ContainerRecipe ComponentConfiguration<a name="aws-properties-imagebuilder-containerrecipe-componentconfiguration"></a>
 
- Configuration details of the component\.
+Configuration details of the component\.
 
 ## Syntax<a name="aws-properties-imagebuilder-containerrecipe-componentconfiguration-syntax"></a>
 

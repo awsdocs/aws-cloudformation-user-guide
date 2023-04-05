@@ -98,7 +98,7 @@ Rules:
 
 In the following example, the two rules check the value of the `InstanceType` parameter\. Depending on the value of the environment parameter \(`test` or `prod`\), the user must specify `a1.medium` or `a1.large` for the `InstanceType` parameter\. The `InstanceType` and `Environment` parameters must be declared in the `Parameters` section of the same template\.
 
-#### Example JSON<a name="rules-section-example-syntax.json"></a>
+#### Example JSON<a name="rules-section-example-conditionally-verify.json"></a>
 
 ```
 {
@@ -157,7 +157,7 @@ In the following example, the two rules check the value of the `InstanceType` pa
 }
 ```
 
-#### Example YAML<a name="rules-section-example-syntax.yaml"></a>
+#### Example YAML<a name="rules-section-example-conditionally-verify-2.yaml"></a>
 
 ```
 Rules:
@@ -190,7 +190,7 @@ The following template example, creates a sample web site that uses Amazon EC2 A
 **Note**  
 You will be billed for the AWS resources used if you create a stack from this template\.
 
-### Example JSON<a name="rules-section-example-syntax.json"></a>
+### Example JSON<a name="rules-section-example-cross-parameter-validation.json"></a>
 
 ```
 {

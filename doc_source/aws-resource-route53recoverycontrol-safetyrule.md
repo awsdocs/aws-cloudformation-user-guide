@@ -1,6 +1,14 @@
 # AWS::Route53RecoveryControl::SafetyRule<a name="aws-resource-route53recoverycontrol-safetyrule"></a>
 
-List the safety rules \(the assertion rules and gating rules\) that you've defined for the routing controls in a control panel\. 
+Creates a safety rule in a control panel in Amazon Route 53 Application Recovery Controller\. Safety rules in Amazon Route 53 Application Recovery Controller let you add safeguards around changing routing control states, and enabling and disabling routing controls, to help prevent unwanted outcomes\. Note that the name of a safety rule must be unique within a control panel\.
+
+There are two types of safety rules in Route 53 ARC: assertion rules and gating rules\. 
+
+Assertion rule: An assertion rule enforces that, when you change a routing control state, certain criteria are met\. For example, the criteria might be that at least one routing control state is `On` after the transaction completes so that traffic continues to be directed to at least one cell for the application\. This prevents a fail\-open scenario\.
+
+Gating rule: A gating rule lets you configure a gating routing control as an overall on\-off switch for a group of routing controls\. Or, you can configure more complex gating scenarios, for example, by configuring multiple gating routing controls\.
+
+For more information, see [Safety rules](https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.safety-rules.html) in the Amazon Route 53 Application Recovery Controller Developer Guide\.
 
 ## Syntax<a name="aws-resource-route53recoverycontrol-safetyrule-syntax"></a>
 
@@ -55,7 +63,7 @@ The Amazon Resource Name \(ARN\) for the control panel\.
 
 `GatingRule`  <a name="cfn-route53recoverycontrol-safetyrule-gatingrule"></a>
 A gating rule verifies that a gating routing control or set of gating routing controls, evaluates as true, based on a rule configuration that you specify, which allows a set of routing control state changes to complete\.  
-For example, if you specify one gating routing control and you set the `Type` in the rule configuration to `OR`, that indicates that you must set the gating routing control to `On` for the rule to evaluate as true; that is, for the gating control "switch" to be "On"\. When you do that, then you can update the routing control states for the target routing controls that you specify in the gating rule\.  
+For example, if you specify one gating routing control and you set the `Type` in the rule configuration to `OR`, that indicates that you must set the gating routing control to `On` for the rule to evaluate as true; that is, for the gating control switch to be On\. When you do that, then you can update the routing control states for the target routing controls that you specify in the gating rule\.  
 *Required*: No  
 *Type*: [GatingRule](aws-properties-route53recoverycontrol-safetyrule-gatingrule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

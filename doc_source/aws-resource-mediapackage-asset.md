@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::MediaPackage::Asset",
   "Properties" : {
+      "[EgressEndpoints](#cfn-mediapackage-asset-egressendpoints)" : [ EgressEndpoint, ... ],
       "[Id](#cfn-mediapackage-asset-id)" : String,
       "[PackagingGroupId](#cfn-mediapackage-asset-packaginggroupid)" : String,
       "[ResourceId](#cfn-mediapackage-asset-resourceid)" : String,
@@ -29,6 +30,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::MediaPackage::Asset
 Properties: 
+  [EgressEndpoints](#cfn-mediapackage-asset-egressendpoints): 
+    - EgressEndpoint
   [Id](#cfn-mediapackage-asset-id): String
   [PackagingGroupId](#cfn-mediapackage-asset-packaginggroupid): String
   [ResourceId](#cfn-mediapackage-asset-resourceid): String
@@ -39,6 +42,12 @@ Properties:
 ```
 
 ## Properties<a name="aws-resource-mediapackage-asset-properties"></a>
+
+`EgressEndpoints`  <a name="cfn-mediapackage-asset-egressendpoints"></a>
+List of playback endpoints that are available for this asset\.  
+*Required*: No  
+*Type*: List of [EgressEndpoint](aws-properties-mediapackage-asset-egressendpoint.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Id`  <a name="cfn-mediapackage-asset-id"></a>
 Unique identifier that you assign to the asset\.  
@@ -89,6 +98,3 @@ The Amazon Resource Name \(ARN\) for the asset\. You can get this from the respo
 
 `CreatedAt`  <a name="CreatedAt-fn::getatt"></a>
 The time that the asset was initially submitted for ingest\.
-
-`EgressEndpoints`  <a name="EgressEndpoints-fn::getatt"></a>
-Property description not available\.

@@ -68,7 +68,7 @@ Determines whether to use managed scaling for the capacity provider\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetCapacity`  <a name="cfn-ecs-capacityprovider-managedscaling-targetcapacity"></a>
-The target capacity value for the capacity provider\. The specified value must be greater than `0` and less than or equal to `100`\. A value of `100` results in the Amazon EC2 instances in your Auto Scaling group being completely used\.  
+The target capacity utilization as a percentage for the capacity provider\. The specified value must be greater than `0` and less than or equal to `100`\. For example, if you want the capacity provider to maintain 10% spare capacity, then that means the utilization is 90%, so use a `targetCapacity` of `90`\. The default value of `100` percent results in the Amazon EC2 instances in your Auto Scaling group being completely used\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  

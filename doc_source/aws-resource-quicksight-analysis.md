@@ -14,11 +14,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AnalysisId](#cfn-quicksight-analysis-analysisid)" : String,
       "[AwsAccountId](#cfn-quicksight-analysis-awsaccountid)" : String,
-      "[Errors](#cfn-quicksight-analysis-errors)" : [ AnalysisError, ... ],
+      "[Definition](#cfn-quicksight-analysis-definition)" : AnalysisDefinition,
       "[Name](#cfn-quicksight-analysis-name)" : String,
       "[Parameters](#cfn-quicksight-analysis-parameters)" : Parameters,
       "[Permissions](#cfn-quicksight-analysis-permissions)" : [ ResourcePermission, ... ],
       "[SourceEntity](#cfn-quicksight-analysis-sourceentity)" : AnalysisSourceEntity,
+      "[Status](#cfn-quicksight-analysis-status)" : String,
       "[Tags](#cfn-quicksight-analysis-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[ThemeArn](#cfn-quicksight-analysis-themearn)" : String
     }
@@ -32,8 +33,8 @@ Type: AWS::QuickSight::Analysis
 Properties: 
   [AnalysisId](#cfn-quicksight-analysis-analysisid): String
   [AwsAccountId](#cfn-quicksight-analysis-awsaccountid): String
-  [Errors](#cfn-quicksight-analysis-errors): 
-    - AnalysisError
+  [Definition](#cfn-quicksight-analysis-definition): 
+    AnalysisDefinition
   [Name](#cfn-quicksight-analysis-name): String
   [Parameters](#cfn-quicksight-analysis-parameters): 
     Parameters
@@ -41,6 +42,7 @@ Properties:
     - ResourcePermission
   [SourceEntity](#cfn-quicksight-analysis-sourceentity): 
     AnalysisSourceEntity
+  [Status](#cfn-quicksight-analysis-status): String
   [Tags](#cfn-quicksight-analysis-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [ThemeArn](#cfn-quicksight-analysis-themearn): String
@@ -66,15 +68,15 @@ The ID of the AWS account where you are creating an analysis\.
 *Pattern*: `^[0-9]{12}$`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
-`Errors`  <a name="cfn-quicksight-analysis-errors"></a>
+`Definition`  <a name="cfn-quicksight-analysis-definition"></a>
 Property description not available\.  
 *Required*: No  
-*Type*: List of [AnalysisError](aws-properties-quicksight-analysis-analysiserror.md)  
+*Type*: [AnalysisDefinition](aws-properties-quicksight-analysis-analysisdefinition.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-quicksight-analysis-name"></a>
 A descriptive name for the analysis that you're creating\. This name displays for the analysis in the Amazon QuickSight console\.   
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
@@ -97,8 +99,15 @@ To specify no permissions, omit `Permissions`\.
 `SourceEntity`  <a name="cfn-quicksight-analysis-sourceentity"></a>
 A source entity to use for the analysis that you're creating\. This metadata structure contains details that describe a source template and one or more datasets\.  
 Either a `SourceEntity` or a `Definition` must be provided in order for the request to be valid\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: [AnalysisSourceEntity](aws-properties-quicksight-analysis-analysissourceentity.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Status`  <a name="cfn-quicksight-analysis-status"></a>
+Status associated with the analysis\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `CREATION_FAILED | CREATION_IN_PROGRESS | CREATION_SUCCESSFUL | DELETED | UPDATE_FAILED | UPDATE_IN_PROGRESS | UPDATE_SUCCESSFUL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-quicksight-analysis-tags"></a>
@@ -124,10 +133,13 @@ The ARN for the theme to apply to the analysis that you're creating\. To see the
 The Amazon Resource Name \(ARN\) of the analysis\.
 
 `CreatedTime`  <a name="CreatedTime-fn::getatt"></a>
-Property description not available\.
+The time that the analysis was created\.
 
 `DataSetArns`  <a name="DataSetArns-fn::getatt"></a>
 The ARNs of the datasets of the analysis\.
+
+`Errors`  <a name="Errors-fn::getatt"></a>
+Property description not available\.
 
 `LastUpdatedTime`  <a name="LastUpdatedTime-fn::getatt"></a>
 The time that the analysis was last updated\.

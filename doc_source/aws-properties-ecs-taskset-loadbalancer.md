@@ -1,6 +1,12 @@
 # AWS::ECS::TaskSet LoadBalancer<a name="aws-properties-ecs-taskset-loadbalancer"></a>
 
-Details on the load balancer or load balancers to use with a task set\.
+The load balancer configuration to use with a service or task set\.
+
+When you add, update, or remove a load balancer configuration, Amazon ECS starts a new deployment with the updated Elastic Load Balancing configuration\. This causes tasks to register to and deregister from load balancers\.
+
+We recommend that you verify this on a test environment before you update the Elastic Load Balancing configuration\. 
+
+A service\-linked role is required for services that use multiple target groups\. For more information, see [Using service\-linked roles](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html) in the *Amazon Elastic Container Service Developer Guide*\.
 
 ## Syntax<a name="aws-properties-ecs-taskset-loadbalancer-syntax"></a>
 

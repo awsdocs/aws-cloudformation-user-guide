@@ -1,6 +1,6 @@
 # AWS::ECR::ReplicationConfiguration RepositoryFilter<a name="aws-properties-ecr-replicationconfiguration-repositoryfilter"></a>
 
-The filter settings used with image replication\. Specifying a repository filter to a replication rule provides a method for controlling which repositories in a private registry are replicated\. If no repository filter is specified, all images in the repository are replicated\.
+The filter settings used with image replication\. Specifying a repository filter to a replication rule provides a method for controlling which repositories in a private registry are replicated\. If no filters are added, the contents of all repositories are replicated\.
 
 ## Syntax<a name="aws-properties-ecr-replicationconfiguration-repositoryfilter-syntax"></a>
 

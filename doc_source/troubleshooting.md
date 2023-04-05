@@ -77,7 +77,7 @@ For resource property names and values, update your template to use valid names 
 
 Verify that you didn't reach a resource quota\. For example, the default maximum number of Amazon EC2 On\-Demand instances that you can launch is 5\. If try to create more Amazon EC2 On\-Demand instances than your account quota, the instance creation fails and you receive the error `Status=start_failed`\. To view the default AWS quotas by service, see [AWS service quotas](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) in the *AWS General Reference*\.
 
-For AWS CloudFormation quotas and tweaking strategies, see [AWS CloudFormation quotas](cloudformation-limits.md)\.
+For AWS CloudFormation quotas and tweaking strategies, see [AWS CloudFormation quotasAWS CloudFormation quotas](cloudformation-limits.md)\.
 
 Also, during an update, if a resource is replaced, AWS CloudFormation creates new resource before it deletes the old one\. This replacement might put your account over the resource quota, which would cause your update to fail\. You can delete excess resources or request a [quota increase](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html)\.
 
@@ -140,7 +140,7 @@ Delete resources that you don't need or request a [quota increase](https://docs.
 Resource didn't stabilize  
 A resource didn't respond because the operation might have exceeded the AWS CloudFormation timeout period or an AWS service might have been interrupted\. No change is required\. After the resource operation is complete or the AWS service is back in operation, continue rolling back the update\.
 
-To continue rolling back an update, you can use the AWS CloudFormation console or AWS command line interface \(AWS CLI\)\. For more information, see [Continue rolling back an update](using-cfn-updating-stacks-continueupdaterollback.md)\.
+To continue rolling back an update, you can use the AWS CloudFormation console or AWS command line interface \(AWS CLI\)\. For more information, see [Continue rolling back an updateTo continue rolling back an update \(console\)To continue rolling back an update \(AWS CLI\)](using-cfn-updating-stacks-continueupdaterollback.md)\.
 
 If none of these solutions work, you can skip the resources that AWS CloudFormation can't successfully roll back\. For more information, see the `ResourcesToSkip` parameter for the [ContinueUpdateRollback](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_ContinueUpdateRollback.html) operation in the *AWS CloudFormation API Reference*\. AWS CloudFormation sets the status of the specified resources to `UPDATE_COMPLETE` and continues to roll back the stack\. After the rollback is complete, the state of the skipped resources will be inconsistent with the state of the resources in the stack template\. Before you perform another stack update, you must modify the resources or update the stack to be consistent with each other\. If you don't, subsequent stack updates might fail and make your stack unrecoverable\.
 

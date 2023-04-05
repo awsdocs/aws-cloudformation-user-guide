@@ -43,13 +43,13 @@ Properties:
 ## Properties<a name="aws-resource-ec2-networkinsightspath-properties"></a>
 
 `Destination`  <a name="cfn-ec2-networkinsightspath-destination"></a>
-The AWS resource that is the destination of the path\.  
+The ID or ARN of the destination\. If the resource is in another account, you must specify an ARN\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DestinationIp`  <a name="cfn-ec2-networkinsightspath-destinationip"></a>
-The IP address of the AWS resource that is the destination of the path\.  
+The IP address of the destination\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  
@@ -73,13 +73,13 @@ The protocol\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Source`  <a name="cfn-ec2-networkinsightspath-source"></a>
-The AWS resource that is the source of the path\.  
+The ID or ARN of the source\. If the resource is in another account, you must specify an ARN\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceIp`  <a name="cfn-ec2-networkinsightspath-sourceip"></a>
-The IP address of the AWS resource that is the source of the path\.  
+The IP address of the source\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `0`  

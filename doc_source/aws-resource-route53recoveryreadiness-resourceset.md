@@ -1,6 +1,12 @@
 # AWS::Route53RecoveryReadiness::ResourceSet<a name="aws-resource-route53recoveryreadiness-resourceset"></a>
 
-Creates a resource set\. A resource set is a set of resources of one type that span multiple cells\. You can associate a resource set with a readiness check to monitor the resources for failover readiness\.
+Creates a resource set in Amazon Route 53 Application Recovery Controller\. A resource set is a set of resources of one type, such as Network Load Balancers, that span multiple cells\. You can associate a resource set with a readiness check to have Route 53 ARC continually monitor the resources in the set for failover readiness\.
+
+You typically create a resource set and a readiness check for each supported type of AWS resource in your application\.
+
+For more information, see [Readiness checks, resource sets, and readiness scopes](https://docs.aws.amazon.com/r53recovery/latest/dg/recovery-readiness.recovery-groups.readiness-scope.html) in the Amazon Route 53 Application Recovery Controller Developer Guide\.
+
+Route 53 ARC Readiness supports us\-east\-1 and us\-west\-2 AWS Regions only\.
 
 ## Syntax<a name="aws-resource-route53recoveryreadiness-resourceset-syntax"></a>
 
@@ -49,7 +55,7 @@ The name of the resource set to create\.
 
 `ResourceSetType`  <a name="cfn-route53recoveryreadiness-resourceset-resourcesettype"></a>
 The resource type of the resources in the resource set\. Enter one of the following values for resource type:  
-AWS::AutoScaling::AutoScalingGroup, AWS::CloudWatch::Alarm, AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume, AWS::ElasticLoadBalancing::LoadBalancer, AWS::ElasticLoadBalancingV2::LoadBalancer, AWS::MSK::Cluster, AWS::RDS::DBCluster, AWS::Route53::HealthCheck, AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC, AWS::EC2::VPNConnection, AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource\.   
+ AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup, AWS::CloudWatch::Alarm, AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume, AWS::ElasticLoadBalancing::LoadBalancer, AWS::ElasticLoadBalancingV2::LoadBalancer, AWS::Lambda::Function, AWS::MSK::Cluster, AWS::RDS::DBCluster, AWS::Route53::HealthCheck, AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC, AWS::EC2::VPNConnection, AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource\.   
 Note that AWS::Route53RecoveryReadiness::DNSTargetResource is only used for this setting\. It isn't an actual AWS CloudFormation resource type\.   
 *Required*: Yes  
 *Type*: String  

@@ -46,7 +46,7 @@ Properties:
 ## Properties<a name="aws-properties-ec2-security-group-properties"></a>
 
 `GroupDescription`  <a name="cfn-ec2-securitygroup-groupdescription"></a>
-A description for the security group\. This is informational only\.  
+A description for the security group\.  
 Constraints: Up to 255 characters in length  
 Constraints for EC2\-Classic: ASCII characters  
 Constraints for EC2\-VPC: a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=&;\{\}\!$\*  

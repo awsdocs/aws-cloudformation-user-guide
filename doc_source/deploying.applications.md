@@ -218,7 +218,7 @@ You start with a basic template that defines a single Amazon EC2 instance with a
 }
 ```
 
-### YAML<a name="deployment-walkthrough-basic-server.json"></a>
+### YAML<a name="deployment-walkthrough-basic-server.yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -1321,7 +1321,7 @@ In order to run the MySQL commands after the installation is complete, the examp
 
 ## CreationPolicy attribute<a name="deployment-walkthrough-cfn-signal"></a>
 
-Finally, you need a way to instruct CloudFormation to complete stack creation only after all the services \(such as Apache and MySQL\) are running and not after all the stack resources are created\. In other words, if you use the template from the earlier section to launch a stack, CloudFormation sets the status of the stack as `CREATE_COMPLETE` after it successfully creates all the resources\. However, if one or more services failed to start, CloudFormation still sets the stack status as `CREATE_COMPLETE`\. To prevent the status from changing to `CREATE_COMPLETE` until all the services have successfully started, you can add a [`CreationPolicy`](aws-attribute-creationpolicy.md) attribute to the instance\. This attribute puts the instance's status in `CREATE_IN_PROGRESS` until CloudFormation receives the required number of success signals or the timeout period is exceeded, so you can control when the instance has been successfully created\.
+Finally, you need a way to instruct CloudFormation to complete stack creation only after all the services \(such as Apache and MySQL\) are running and not after all the stack resources are created\. In other words, if you use the template from the earlier section to launch a stack, CloudFormation sets the status of the stack as `CREATE_COMPLETE` after it successfully creates all the resources\. However, if one or more services failed to start, CloudFormation still sets the stack status as `CREATE_COMPLETE`\. To prevent the status from changing to `CREATE_COMPLETE` until all the services have successfully started, you can add a [`CreationPolicy` attribute`CreationPolicy`](aws-attribute-creationpolicy.md) attribute to the instance\. This attribute puts the instance's status in `CREATE_IN_PROGRESS` until CloudFormation receives the required number of success signals or the timeout period is exceeded, so you can control when the instance has been successfully created\.
 
 The following example adds a creation policy to the Amazon EC2 instance to ensure that cfn\-init completes the LAMP installation and configuration before the stack creation is completed\. In conjunction with the creation policy, the example needs to run the [cfn\-signal](cfn-signal.md) helper script to signal CloudFormation when all the applications are installed and configured\.
 
@@ -1361,7 +1361,7 @@ The following example adds a creation policy to the Amazon EC2 instance to ensur
              "# Signal the status from cfn-init\n",
              "/opt/aws/bin/cfn-signal -e $? ",
              "         --stack ", { "Ref" : "AWS::StackName" },
-             "         --resource WebServerInstance ",
+             "         --resource WebServerInstance ",
              "         --region ", { "Ref" : "AWS::Region" }, "\n"
         ]]}}        
       },
@@ -1820,7 +1820,7 @@ You can also view the template at the following location: [LAMP\_Single\_Instanc
              "# Signal the status from cfn-init\n",
              "/opt/aws/bin/cfn-signal -e $? ",
              "         --stack ", { "Ref" : "AWS::StackName" },
-             "         --resource WebServerInstance ",
+             "         --resource WebServerInstance ",
              "         --region ", { "Ref" : "AWS::Region" }, "\n"
         ]]}}        
       },

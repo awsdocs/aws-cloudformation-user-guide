@@ -1,6 +1,6 @@
 # AWS::ECS::TaskDefinition<a name="aws-resource-ecs-taskdefinition"></a>
 
-The `AWS::ECS::TaskDefinition` resource describes the container and volume definitions of a task\. You can specify which Docker images to use, the required resources, and other configurations related to launching the task definition through an Amazon ECS service or task\.
+The details of a task definition which describes the container and volume definitions of an Amazon Elastic Container Service task\. You can specify which Docker images to use, the required resources, and other configurations related to launching the task definition through an Amazon ECS service or task\.
 
 ## Syntax<a name="aws-resource-ecs-taskdefinition-syntax"></a>
 
@@ -186,11 +186,7 @@ Your Amazon ECS container instances require at least version 1\.26\.0 of the con
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RequiresCompatibilities`  <a name="cfn-ecs-taskdefinition-requirescompatibilities"></a>
-The task launch types the task definition was validated against\. To determine which task launch types the task definition is validated for, see the `TaskDefinition$compatibilities` parameter\.  
-The valid values are:  
-+ `EC2` \- The EC2 launch type
-+ `FARGATE` \- The Fargate launch type
-+ `EXTERNAL` \- The external instance \(ECS Anywhere\) launch type
+The task launch types the task definition was validated against\. For more information, see [Amazon ECS launch types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html) in the *Amazon Elastic Container Service Developer Guide*\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

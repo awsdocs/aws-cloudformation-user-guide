@@ -24,7 +24,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EngineVersion](#cfn-opensearchservice-domain-engineversion)" : String,
       "[LogPublishingOptions](#cfn-opensearchservice-domain-logpublishingoptions)" : {Key : Value, ...},
       "[NodeToNodeEncryptionOptions](#cfn-opensearchservice-domain-nodetonodeencryptionoptions)" : NodeToNodeEncryptionOptions,
+      "[OffPeakWindowOptions](#cfn-opensearchservice-domain-offpeakwindowoptions)" : OffPeakWindowOptions,
       "[SnapshotOptions](#cfn-opensearchservice-domain-snapshotoptions)" : SnapshotOptions,
+      "[SoftwareUpdateOptions](#cfn-opensearchservice-domain-softwareupdateoptions)" : SoftwareUpdateOptions,
       "[Tags](#cfn-opensearchservice-domain-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[VPCOptions](#cfn-opensearchservice-domain-vpcoptions)" : VPCOptions
     }
@@ -57,8 +59,12 @@ Properties:
     Key : Value
   [NodeToNodeEncryptionOptions](#cfn-opensearchservice-domain-nodetonodeencryptionoptions): 
     NodeToNodeEncryptionOptions
+  [OffPeakWindowOptions](#cfn-opensearchservice-domain-offpeakwindowoptions): 
+    OffPeakWindowOptions
   [SnapshotOptions](#cfn-opensearchservice-domain-snapshotoptions): 
     SnapshotOptions
+  [SoftwareUpdateOptions](#cfn-opensearchservice-domain-softwareupdateoptions): 
+    SoftwareUpdateOptions
   [Tags](#cfn-opensearchservice-domain-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [VPCOptions](#cfn-opensearchservice-domain-vpcoptions): 
@@ -146,10 +152,22 @@ Specifies whether node\-to\-node encryption is enabled\. See [Node\-to\-node enc
 *Type*: [NodeToNodeEncryptionOptions](aws-properties-opensearchservice-domain-nodetonodeencryptionoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`OffPeakWindowOptions`  <a name="cfn-opensearchservice-domain-offpeakwindowoptions"></a>
+Options for a domain's off\-peak window, during which OpenSearch Service can perform mandatory configuration changes on the domain\.  
+*Required*: No  
+*Type*: [OffPeakWindowOptions](aws-properties-opensearchservice-domain-offpeakwindowoptions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `SnapshotOptions`  <a name="cfn-opensearchservice-domain-snapshotoptions"></a>
 **DEPRECATED**\. The automated snapshot configuration for the OpenSearch Service domain indexes\.  
 *Required*: No  
 *Type*: [SnapshotOptions](aws-properties-opensearchservice-domain-snapshotoptions.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`SoftwareUpdateOptions`  <a name="cfn-opensearchservice-domain-softwareupdateoptions"></a>
+Options for configuring service software updates for a domain\.  
+*Required*: No  
+*Type*: [SoftwareUpdateOptions](aws-properties-opensearchservice-domain-softwareupdateoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-opensearchservice-domain-tags"></a>

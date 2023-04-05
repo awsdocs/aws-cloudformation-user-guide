@@ -37,7 +37,6 @@ Properties:
 
 `AcceptLanguage`  <a name="cfn-servicecatalog-launchtemplateconstraint-acceptlanguage"></a>
 The language code\.  
-+  `en` \- English \(default\)
 +  `jp` \- Japanese
 +  `zh` \- Chinese
 *Required*: No  

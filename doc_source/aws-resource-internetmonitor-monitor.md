@@ -56,7 +56,7 @@ For more information, see [ Choosing a city\-network maximum value](https://docs
 
 `MonitorName`  <a name="cfn-internetmonitor-monitor-monitorname"></a>
 The name of the monitor\. A monitor name can contain only alphanumeric characters, dashes \(\-\), periods \(\.\), and underscores \(\_\)\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

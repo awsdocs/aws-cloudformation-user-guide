@@ -164,7 +164,7 @@ The import operation fails if you modify existing parameters that initiate a cre
    { "Stack-Drift-Detection-Id" : "624af370-311a-11e8-b6b7-500cexample" }
    
    > aws cloudformation describe-stack-drift-detection-status --stack-drift-detection-id 624af370-311a-11e8-b6b7-500cexample
-               
+   
    > aws cloudformation describe-stack-resource-drifts --stack-name TargetStack
    ```
 

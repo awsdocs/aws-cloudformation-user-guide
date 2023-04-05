@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-rolesanywhere-trustanchor-sourcedata-properties"></a>
 
 `AcmPcaArn`  <a name="cfn-rolesanywhere-trustanchor-sourcedata-acmpcaarn"></a>
-The root certificate of the AWS Private Certificate Authority specified by this ARN is used in trust validation for temporary credential requests\. Included for trust anchors of type `AWS_ACM_PCA`\.   
+ The root certificate of the AWS Private Certificate Authority specified by this ARN is used in trust validation for temporary credential requests\. Included for trust anchors of type `AWS_ACM_PCA`\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

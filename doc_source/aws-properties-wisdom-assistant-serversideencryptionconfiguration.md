@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wisdom-assistant-serversideencryptionconfiguration-properties"></a>
 
 `KmsKeyId`  <a name="cfn-wisdom-assistant-serversideencryptionconfiguration-kmskeyid"></a>
-The KMS key\. For information about valid ID values, see [Key identifiers \(KeyId\)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id)\.  
+The KMS key\. For information about valid ID values, see [Key identifiers \(KeyId\)](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id) in the *AWS Key Management Service Developer Guide*\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

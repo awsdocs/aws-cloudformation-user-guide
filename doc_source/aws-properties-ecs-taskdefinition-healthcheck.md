@@ -1,6 +1,11 @@
 # AWS::ECS::TaskDefinition HealthCheck<a name="aws-properties-ecs-taskdefinition-healthcheck"></a>
 
-The `HealthCheck` property specifies an object representing a container health check\. Health check parameters that are specified in a container definition override any Docker health checks that exist in the container image \(such as those specified in a parent image or from the image's Dockerfile\)\.
+The `HealthCheck` property specifies an object representing a container health check\. Health check parameters that are specified in a container definition override any Docker health checks that exist in the container image \(such as those specified in a parent image or from the image's Dockerfile\)\. This configuration maps to the `HEALTHCHECK` parameter of [docker run](https://docs.docker.com/engine/reference/run/)\.
+
+**Note**  
+The Amazon ECS container agent only monitors and reports on the health checks specified in the task definition\. Amazon ECS does not monitor Docker health checks that are embedded in a container image and not specified in the container definition\. Health check parameters that are specified in a container definition override any Docker health checks that exist in the container image\.
+
+If a task is run manually, and not as part of a service, the task will continue its lifecycle regardless of its health status\. For tasks that are part of a service, if the task reports as unhealthy then the task will be stopped and the service scheduler will replace it\.
 
 The following are notes about container health check support:
 + Container health checks require version 1\.17\.0 or greater of the Amazon ECS container agent\. For more information, see [Updating the Amazon ECS Container Agent](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html)\.

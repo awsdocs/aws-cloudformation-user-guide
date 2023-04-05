@@ -139,8 +139,6 @@ The input parameters for the stack set template\.
 Describes how the IAM roles required for stack set operations are created\.  
 + With `SELF_MANAGED` permissions, you must create the administrator and execution roles required to deploy to target accounts\. For more information, see [Grant Self\-Managed Stack Set Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-self-managed.html)\.
 + With `SERVICE_MANAGED` permissions, StackSets automatically creates the IAM roles required to deploy to accounts managed by AWS Organizations\. For more information, see [Grant Service\-Managed Stack Set Permissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html)\.
-*Allowed Values*: `SERVICE_MANAGED` \| `SELF_MANAGED`  
-The `PermissionModel` property is required\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `SELF_MANAGED | SERVICE_MANAGED`  
@@ -289,7 +287,7 @@ In the following example, secret's resolution are avoided at stack level by prov
 #### YAML<a name="aws-resource-cloudformation-stackset--examples--Specifying__secrets_in_--yaml"></a>
 
 ```
-!Join 
+!Join
 - ''
 - - '{{'
   - 'resolve:secretsmanager:'

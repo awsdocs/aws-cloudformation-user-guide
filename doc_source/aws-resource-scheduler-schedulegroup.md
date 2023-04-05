@@ -1,6 +1,10 @@
 # AWS::Scheduler::ScheduleGroup<a name="aws-resource-scheduler-schedulegroup"></a>
 
-Creates the specified schedule group\.
+ A *schedule group* is an Amazon EventBridge Scheduler resource you use to organize your schedules\. 
+
+ Your AWS account comes with a `default` scheduler group\. You associate a new schedule with the `default` group or with schedule groups that you create and manage\. You can create up to [500 schedule groups](https://docs.aws.amazon.com/scheduler/latest/UserGuide/scheduler-quotas.html) in your AWS account\. With EventBridge Scheduler, you apply [tags](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) to schedule groups, not to individual schedules to organize your resources\. 
+
+ For more information about managing schedule groups, see [Managing a schedule group](https://docs.aws.amazon.com/scheduler/latest/UserGuide/managing-schedule-group.html) in the *EventBridge Scheduler User Guide*\. 
 
 ## Syntax<a name="aws-resource-scheduler-schedulegroup-syntax"></a>
 
@@ -66,4 +70,4 @@ The date and time at which the schedule group was created\.
 
 `State`  <a name="State-fn::getatt"></a>
 Specifies the state of the schedule group\.  
-Valid values are `ACTIVE` and `DELETING`\.
+*Allowed Values*: `ACTIVE` \| `DELETING`

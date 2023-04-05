@@ -1,6 +1,10 @@
 # AWS::Route53RecoveryReadiness::RecoveryGroup<a name="aws-resource-route53recoveryreadiness-recoverygroup"></a>
 
-Creates a recovery group in an account\. A recovery group corresponds to an application and includes a list of the cells that make up the application\.
+Creates a recovery group in Amazon Route 53 Application Recovery Controller\. A recovery group represents your application\. It typically consists of two or more cells that are replicas of each other in terms of resources and functionality, so that you can fail over from one to the other, for example, from one Region to another\. You create recovery groups so you can use readiness checks to audit resources in your application\.
+
+For more information, see [Readiness checks, resource sets, and readiness scopes](https://docs.aws.amazon.com/r53recovery/latest/dg/recovery-readiness.recovery-groups.readiness-scope.html) in the Amazon Route 53 Application Recovery Controller Developer Guide\.
+
+Route 53 ARC Readiness supports us\-east\-1 and us\-west\-2 AWS Regions only\.
 
 ## Syntax<a name="aws-resource-route53recoveryreadiness-recoverygroup-syntax"></a>
 

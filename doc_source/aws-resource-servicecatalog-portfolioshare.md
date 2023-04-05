@@ -35,7 +35,6 @@ Properties:
 
 `AcceptLanguage`  <a name="cfn-servicecatalog-portfolioshare-acceptlanguage"></a>
 The language code\.  
-+  `en` \- English \(default\)
 +  `jp` \- Japanese
 +  `zh` \- Chinese
 *Required*: No  

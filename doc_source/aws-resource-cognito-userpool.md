@@ -118,9 +118,11 @@ The attributes to be auto\-verified\. Possible values: **email**, **phone\_numbe
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeletionProtection`  <a name="cfn-cognito-userpool-deletionprotection"></a>
-Property description not available\.  
+When active, `DeletionProtection` prevents accidental deletion of your user pool\. Before you can delete a user pool that you have protected against deletion, you must deactivate this feature\.  
+When you try to delete a protected user pool in a `DeleteUserPool` API request, Amazon Cognito returns an `InvalidParameterException` error\. To delete a protected user pool, send a new `DeleteUserPool` request after you deactivate deletion protection in an `UpdateUserPool` API request\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `ACTIVE | INACTIVE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeviceConfiguration`  <a name="cfn-cognito-userpool-deviceconfiguration"></a>

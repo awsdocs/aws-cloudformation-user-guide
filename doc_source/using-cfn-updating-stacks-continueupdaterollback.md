@@ -48,7 +48,7 @@ To successfully get the root stack into an operable state using `continue-update
 The following example is the full AWS CLI command:
 
 ```
-1. PROMPT> aws cloudformation continue-update-rollback --stack-name WebInfra --resources-to-skip myCustom WebInfra-Compute-Asg.myAsg WebInfra-Compute-LB.myLoadBalancer WebInfra-Storage.DB
+1. $ aws cloudformation continue-update-rollback --stack-name WebInfra --resources-to-skip myCustom WebInfra-Compute-Asg.myAsg WebInfra-Compute-LB.myLoadBalancer WebInfra-Storage.DB
 ```
 
 We specified resources from nested stacks by using the `NestedStackName.ResourceLogicalID` format, but for the resources of the root stack, such as *myCustom*, we specified only the logical ID\.

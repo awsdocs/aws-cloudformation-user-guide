@@ -85,7 +85,7 @@ The name of the `FeatureGroup`\.
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `64`  
-*Pattern*: `^[a-zA-Z0-9](-*[a-zA-Z0-9]){0,63}`  
+*Pattern*: `^[a-zA-Z0-9]([_-]*[a-zA-Z0-9]){0,63}`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OfflineStoreConfig`  <a name="cfn-sagemaker-featuregroup-offlinestoreconfig"></a>

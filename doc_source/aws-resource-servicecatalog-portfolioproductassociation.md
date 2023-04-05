@@ -37,7 +37,6 @@ Properties:
 
 `AcceptLanguage`  <a name="cfn-servicecatalog-portfolioproductassociation-acceptlanguage"></a>
 The language code\.  
-+  `en` \- English \(default\)
 +  `jp` \- Japanese
 +  `zh` \- Chinese
 *Required*: No  

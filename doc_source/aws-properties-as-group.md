@@ -164,8 +164,9 @@ Default: `0` seconds
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthCheckType`  <a name="cfn-as-group-healthchecktype"></a>
-Determines whether any additional health checks are performed on the instances in this group\. Amazon EC2 health checks are always on\. For more information, see [Health checks for Auto Scaling instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
-The valid values are `EC2` \(default\), `ELB`, and `VPC_LATTICE`\. The `VPC_LATTICE` health check type is reserved for use with VPC Lattice, which is in preview release and is subject to change\.  
+A comma\-separated value string of one or more health check types\.  
+The valid values are `EC2`, `ELB`, and `VPC_LATTICE`\. `EC2` is the default health check and cannot be disabled\. For more information, see [Health checks for Auto Scaling instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html) in the *Amazon EC2 Auto Scaling User Guide*\.  
+Only specify `EC2` if you must clear a value that was previously set\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -198,7 +199,7 @@ One or more lifecycle hooks to add to the Auto Scaling group before instances ar
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LoadBalancerNames`  <a name="cfn-as-group-loadbalancernames"></a>
-A list of Classic Load Balancers associated with this Auto Scaling group\. For Application Load Balancers, Network Load Balancers, and Gateway Load Balancer, specify the `TargetGroupARNs` property instead\.  
+A list of Classic Load Balancers associated with this Auto Scaling group\. For Application Load Balancers, Network Load Balancers, and Gateway Load Balancers, specify the `TargetGroupARNs` property instead\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

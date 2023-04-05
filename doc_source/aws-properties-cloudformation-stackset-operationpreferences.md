@@ -38,6 +38,7 @@ The number of accounts, per Region, for which this operation can fail before AWS
 Conditional: You must specify either `FailureToleranceCount` or `FailureTolerancePercentage` \(but not both\)\.  
 *Required*: Conditional  
 *Type*: Integer  
+*Minimum*: `0`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FailureTolerancePercentage`  <a name="cfn-cloudformation-stackset-operationpreferences-failuretolerancepercentage"></a>

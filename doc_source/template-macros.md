@@ -257,7 +257,7 @@ The maximum size for a processed stack template is 51,200 bytes when passed dire
 If CloudFormation returns a `Transformation data limit exceeded` error while processing your template, your template has exceeded the maximum template size CloudFormation allows during processing\.  
 To resolve this issue, consider doing the following:  
 Restructure your template into multiple templates to avoid exceeding the maximum size for in\-process templates\. For example:  
-Use nested stack templates to encapsulate parts of the template\. For more information, see [Working with nested stacks](using-cfn-nested-stacks.md)\.
+Use nested stack templates to encapsulate parts of the template\. For more information, see [Working with nested stacksTo view the root stack of a nested stackTo view the nested stacks that belong to a root stack](using-cfn-nested-stacks.md)\.
 Create multiple stacks and use cross\-stack references to exchange information between them\. For more information, see [Walkthrough: Refer to resource outputs in another AWS CloudFormation stack](walkthrough-crossstackref.md)\.
 Reduce the size of template fragment returned by a given macro\. CloudFormation doesn't tamper with the contents of fragments returned by macros\.
 

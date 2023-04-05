@@ -32,7 +32,7 @@ The data field of the trust anchor depending on its type\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SourceType`  <a name="cfn-rolesanywhere-trustanchor-source-sourcetype"></a>
-The type of the trust anchor\.   
+ The type of the TrustAnchor\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `AWS_ACM_PCA | CERTIFICATE_BUNDLE`  

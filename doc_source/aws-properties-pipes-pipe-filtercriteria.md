@@ -1,6 +1,10 @@
 # AWS::Pipes::Pipe FilterCriteria<a name="aws-properties-pipes-pipe-filtercriteria"></a>
 
-The collection of event patterns used to filter events\. For more information, see [Events and Event Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) in the *Amazon EventBridge User Guide*\.
+The collection of event patterns used to filter events\.
+
+To remove a filter, specify a `FilterCriteria` object with an empty array of `Filter` objects\.
+
+For more information, see [Events and Event Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html) in the *Amazon EventBridge User Guide*\.
 
 ## Syntax<a name="aws-properties-pipes-pipe-filtercriteria-syntax"></a>
 

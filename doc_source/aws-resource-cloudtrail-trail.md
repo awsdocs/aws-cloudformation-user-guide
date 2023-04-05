@@ -81,6 +81,7 @@ When you disable log file integrity validation, the chain of digest files is bro
 `EventSelectors`  <a name="cfn-cloudtrail-trail-eventselectors"></a>
 Use event selectors to further specify the management and data event settings for your trail\. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events\. When an event occurs in your account, CloudTrail evaluates the event selector for all trails\. For each trail, if the event matches any event selector, the trail processes and logs the event\. If the event doesn't match any event selector, the trail doesn't log the event\.  
 You can configure up to five event selectors for a trail\.  
+For more information about how to configure event selectors, see [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#aws-resource-cloudtrail-trail--examples) and [Configuring event selectors](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-additional-cli-commands.html#configuring-event-selector-examples) in the *AWS CloudTrail User Guide*\.  
 *Required*: No  
 *Type*: List of [EventSelector](aws-properties-cloudtrail-trail-eventselector.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -192,7 +193,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 ### Example<a name="aws-resource-cloudtrail-trail--examples--Example"></a>
 
-The following example creates a trail that logs events in all regions, an Amazon S3 bucket where logs are published, and an Amazon SNS topic where notifications are sent\. The bucket and topic policies allow CloudTrail \(from the specified regions\) to publish logs to the S3 bucket and to send notifications to an email that you specify\. For information about CloudTrail bucket policies, see [Amazon S3 Bucket Policy](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_bucket_policy.html) in the *AWS CloudTrail User Guide*\.
+The following example creates a trail that logs events in all regions, an Amazon S3 bucket where logs are published, and an Amazon SNS topic where notifications are sent\. This example uses `EventSelectors` to log all read\-only and write\-only management events, and data events for Amazon S3 buckets\. The bucket and topic policies allow CloudTrail \(from the specified regions\) to publish logs to the S3 bucket and to send notifications to an email that you specify\. For information about CloudTrail bucket policies, see [Amazon S3 Bucket Policy](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_bucket_policy.html) in the *AWS CloudTrail User Guide*\.
 
 #### JSON<a name="aws-resource-cloudtrail-trail--examples--Example--json"></a>
 
