@@ -41,7 +41,7 @@ The object or array converted to a JSON string\.
 
 ## Examples<a name="intrinsic-function-reference-tojsonstring-examples"></a>
 
-### Convert an object to a JSON string<a name="intrinsic-function-reference-tojsonstring-example"></a>
+### Convert an object to a JSON string<a name="intrinsic-function-reference-tojsonstring-example-subsection"></a>
 
 This example snippet converts the object passed to the intrinsic function to a JSON string\.
 

@@ -28,7 +28,7 @@ Amazon AppStream configuration for a creation policy\.
 }
 ```
 
-#### YAML<a name="aws-attribute-creationpolicy-startfleet-syntax-yaml"></a>
+#### YAML<a name="aws-attribute-update-policy-app-stream-fleet-syntax-yaml"></a>
 
 ```
 CreationPolicy:
@@ -40,7 +40,7 @@ CreationPolicy:
 Starts the specified fleet\.  
 *Required*: No
 
-## Amazon EC2 Auto Scaling creation properties<a name="w2ab1c33c22b7c13"></a>
+## Amazon EC2 Auto Scaling creation properties<a name="w4ab1c33c22b7c13"></a>
 
 Amazon EC2 Auto Scaling configuration for a creation policy\.
 
@@ -193,7 +193,7 @@ LaunchConfig:
           /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource AutoScalingGroup --region ${AWS::Region}
 ```
 
-#### WaitCondition<a name="w2ab1c33c22b7c13b9b5"></a>
+#### WaitCondition<a name="w4ab1c33c22b7c13b9b5"></a>
 
 The following example shows how to add a creation policy to a wait condition\.
 

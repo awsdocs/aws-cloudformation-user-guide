@@ -10,7 +10,7 @@ Use the `AWS::SecretsManager` transform at the top level of the template\. You c
 
 The value for the transform declaration must be a literal string\. You can't use a parameter or function to specify a transform value\.
 
-### Syntax at the top level of a template<a name="aws-secretsmanager-syntax-top-level-overview"></a>
+### Syntax at the top level of a template<a name="transform-aws-secretsmanager-syntax-top-level-overview"></a>
 
 To include `AWS::SecretsManager` at the top level of a template, in the `Transform` section, use the following syntax\.
 

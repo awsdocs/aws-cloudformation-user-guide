@@ -6,13 +6,13 @@ When you are declaring a condition in a template and you need to use another con
 
 ## Declaration<a name="intrinsic-function-reference-condition-declaration"></a>
 
-### JSON<a name="intrinsic-function-reference-condition.json"></a>
+### JSON<a name="intrinsic-function-reference-condition-syntax-json"></a>
 
 ```
 { "Condition" : "conditionName" }
 ```
 
-### YAML<a name="intrinsic-function-reference-condition.yaml"></a>
+### YAML<a name="intrinsic-function-reference-condition-syntax-yaml.yaml"></a>
 
 Syntax for the full function name:
 
@@ -39,7 +39,7 @@ The boolean result of the condition referenced\.
 
 The following snippet is from the `Conditions` section of a template\. The `MyAndCondition` condition includes the `SomeOtherCondition` condition:
 
-### JSON<a name="intrinsic-function-reference-condition-mycondition-example.json"></a>
+### JSON<a name="intrinsic-function-reference-condition-syntax-example-json"></a>
 
 ```
 "MyAndCondition": {

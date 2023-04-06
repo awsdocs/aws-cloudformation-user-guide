@@ -96,6 +96,7 @@ The signature version corresponds to the hashing algorithm used while creating t
 
 `Subscription`  <a name="cfn-sns-topic-subscription"></a>
 The Amazon SNS subscriptions \(endpoints\) for this topic\.  
+If you specify the `Subscription` property in the `AWS::SNS::Topic` resource and it creates an associated subscription resource, the associated subscription is not deleted when the `AWS::SNS::Topic` resource is deleted\.
 *Required*: No  
 *Type*: [List](aws-properties-sns-topic-subscription.md) of [Subscription](aws-properties-sns-topic-subscription.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
