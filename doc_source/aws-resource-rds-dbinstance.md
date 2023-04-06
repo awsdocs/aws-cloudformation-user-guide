@@ -927,7 +927,7 @@ This setting doesn't apply to RDS Custom or Amazon Aurora\.
 Specifies the storage type to be associated with the DB instance\.  
  Valid values: ` gp2 | gp3 | io1 | standard`   
 The `standard` value is also known as magnetic\.  
- If you specify `io1` or `gp3`, you must also include a value for the `Iops` parameter\.   
+ If you specify `io1` you must also include a value for the `Iops` parameter\.   
  Default: `io1` if the `Iops` parameter is specified, otherwise `gp2`   
 For more information, see [Amazon RDS DB Instance Storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html) in the *Amazon RDS User Guide*\.  
  **Amazon Aurora**   
