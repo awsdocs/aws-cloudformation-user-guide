@@ -10,4 +10,5 @@
 + [AWS::IoTWireless::ServiceProfile](aws-resource-iotwireless-serviceprofile.md)
 + [AWS::IoTWireless::TaskDefinition](aws-resource-iotwireless-taskdefinition.md)
 + [AWS::IoTWireless::WirelessDevice](aws-resource-iotwireless-wirelessdevice.md)
++ [AWS::IoTWireless::WirelessDeviceImportTask](aws-resource-iotwireless-wirelessdeviceimporttask.md)
 + [AWS::IoTWireless::WirelessGateway](aws-resource-iotwireless-wirelessgateway.md)

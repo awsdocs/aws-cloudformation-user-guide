@@ -40,7 +40,7 @@ The Amazon Resource Name \(ARN\) of the destination\. The supported destination 
 
 `ResourceIdentifier`  <a name="cfn-vpclattice-accesslogsubscription-resourceidentifier"></a>
 The ID or Amazon Resource Name \(ARN\) of the service network or service\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

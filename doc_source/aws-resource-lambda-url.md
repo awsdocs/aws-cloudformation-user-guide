@@ -50,7 +50,9 @@ The [Cross\-Origin Resource Sharing \(CORS\)](https://developer.mozilla.org/en-U
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InvokeMode`  <a name="cfn-lambda-url-invokemode"></a>
-Property description not available\.  
+Use one of the following options:  
++  `BUFFERED` – This is the default option\. Lambda invokes your function using the `Invoke` API operation\. Invocation results are available when the payload is complete\. The maximum payload size is 6 MB\.
++  `RESPONSE_STREAM` – Your function streams payload results as they become available\. Lambda invokes your function using the `InvokeWithResponseStream` API operation\. The maximum response payload size is 20 MB, however, you can [request a quota increase](https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

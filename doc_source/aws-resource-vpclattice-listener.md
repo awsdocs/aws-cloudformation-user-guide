@@ -66,7 +66,7 @@ The listener protocol HTTP or HTTPS\.
 
 `ServiceIdentifier`  <a name="cfn-vpclattice-listener-serviceidentifier"></a>
 The ID or Amazon Resource Name \(ARN\) of the service\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

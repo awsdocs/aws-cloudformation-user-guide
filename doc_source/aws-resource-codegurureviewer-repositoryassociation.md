@@ -46,7 +46,7 @@ Properties:
 ## Properties<a name="aws-resource-codegurureviewer-repositoryassociation-properties"></a>
 
 `BucketName`  <a name="cfn-codegurureviewer-repositoryassociation-bucketname"></a>
-The name of the bucket\. This is required for your S3Bucket repositoryThe name must start with the prefix, `codeguru-reviewer-*`\.  
+The name of the bucket\. This is required for your S3Bucket repository\. The name must start with the prefix `codeguru-reviewer-*`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

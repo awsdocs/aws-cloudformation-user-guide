@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::VpcLattice::ServiceNetworkServiceAssociation",
   "Properties" : {
+      "[DnsEntry](#cfn-vpclattice-servicenetworkserviceassociation-dnsentry)" : DnsEntry,
       "[ServiceIdentifier](#cfn-vpclattice-servicenetworkserviceassociation-serviceidentifier)" : String,
       "[ServiceNetworkIdentifier](#cfn-vpclattice-servicenetworkserviceassociation-servicenetworkidentifier)" : String,
       "[Tags](#cfn-vpclattice-servicenetworkserviceassociation-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -30,6 +31,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::VpcLattice::ServiceNetworkServiceAssociation
 Properties: 
+  [DnsEntry](#cfn-vpclattice-servicenetworkserviceassociation-dnsentry): 
+    DnsEntry
   [ServiceIdentifier](#cfn-vpclattice-servicenetworkserviceassociation-serviceidentifier): String
   [ServiceNetworkIdentifier](#cfn-vpclattice-servicenetworkserviceassociation-servicenetworkidentifier): String
   [Tags](#cfn-vpclattice-servicenetworkserviceassociation-tags): 
@@ -38,15 +41,21 @@ Properties:
 
 ## Properties<a name="aws-resource-vpclattice-servicenetworkserviceassociation-properties"></a>
 
+`DnsEntry`  <a name="cfn-vpclattice-servicenetworkserviceassociation-dnsentry"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [DnsEntry](aws-properties-vpclattice-servicenetworkserviceassociation-dnsentry.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `ServiceIdentifier`  <a name="cfn-vpclattice-servicenetworkserviceassociation-serviceidentifier"></a>
 The ID or Amazon Resource Name \(ARN\) of the service\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ServiceNetworkIdentifier`  <a name="cfn-vpclattice-servicenetworkserviceassociation-servicenetworkidentifier"></a>
 The ID or Amazon Resource Name \(ARN\) of the service network\. You must use the ARN if the resources specified in the operation are in different accounts\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

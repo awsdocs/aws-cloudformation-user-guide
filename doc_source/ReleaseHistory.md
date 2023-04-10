@@ -4,6 +4,22 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [New resources](AWS_IoTWireless.md) | The following resources were added: AWS::IoTWireless::WirelessDeviceImportTask 
+
+ [AWS::IoTWireless::WirelessDeviceImportTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdeviceimporttask.html)   
+ Gets information about a wireless device import task\.   | April 7, 2023 | 
+| [Updated resource](AWS_InternetMonitor.md) | The following resource was updated: `AWS::InternetMonitor::Monitor`\. 
+
+ [AWS::InternetMonitor::Monitor](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-internetmonitor-monitor.html)   
+Use `Monitor.InternetMeasurementsLogDelivery` to publish internet measurements to another location in addition to CloudWatch Logs, such as an Amazon S3 bucket\.  | April 6, 2023 | 
+| [Updated resource](AWS_Lambda.md) | The following resource was updated: AWS::Lambda::Url\. 
+
+ [AWS::Lambda::Url](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-url.html)   
+ Use the `InvokeMode` property to stream responses from your functions\.   | April 6, 2023 | 
+| [Updated resource](AWS_RDS.md) | The following resource was updated: AWS::RDS::DBCluster 
+
+ [AWS::RDS::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html)   
+Use `RestoreToTime` property for the date and time to restore the DB cluster to\.  | April 6, 2023 | 
 | [Updated resources](AWS_RefactorSpaces.md) | The following resources were updated: AWS::RefactorSpaces::Application, AWS::RefactorSpaces::Environment, AWS::RefactorSpaces::Route, AWS::RefactorSpaces::Service\. 
 
  [AWS::RefactorSpaces::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-application.html)   
@@ -27,6 +43,10 @@ The `Name` property was changed to `Required: Yes`\.  | March 30, 2023 |
 
  [AWS::GuardDuty::Detector](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-detector.html)   
 Use `Features` property to configure a GuardDuty feature\. For more information about `features`, see [Feature activation in GuardDuty\.](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty-features-activation-model.html)  | March 30, 2023 | 
+| [Updated resource](AWS_SageMaker.md) | The following resource was added: AWS::SageMaker::InferenceExperiment\. 
+
+ [AWS::SageMaker::InferenceExperiment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferenceexperiment.html)   
+Use the `AWS::SageMaker::InferenceExperiment` resource to create a new inference experiment for comparing model variants on a SageMaker endpoint\.  | March 30, 2023 | 
 | [Updated resources](AWS_Route53Resolver.md) | The following resources were updated: `AWS::Route53Resolver::ResolverEndpoint` `AWS::Route53Resolver::ResolverEndpoint IpAddressRequest`, and `AWS::Route53Resolver::ResolverRule TargetAddress` 
 
 [AWS::Route53Resolver::ResolverEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html)  
@@ -121,6 +141,7 @@ Use the `AWS::IVSChat::Room` resource to specify and Amazon IVS Chat Room\.
  [AWS::IVSChat::LoggingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivschat-loggingconfiguration.html)   
 Use the `AWS::IVSChat::LoggingConfiguration` resource to specify and Amazon IVS Chat Logging Configuration, which stores configuration information related to loggin your chat session to a data store\.  | March 2, 2023 | 
 | [New resource](AWS_SystemsManagerSAP.md) | The following resource was released: [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html)\.Use `AWS::SystemsManagerSAP::Application` to register an SAP application with AWS Systems Manager for SAP\. | March 2, 2023 | 
+| [New resource](AWS_InternetMonitor.md) | The following resource was released: [AWS::InternetMonitor::Monitor](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-internetmonitor-monitor.html)\.Use `AWS::InternetMonitor::Monitor` to create a monitor in Amazon CloudWatch Internet Monitor to provide visibility into the performance and availability between your applications hosted on AWS and your end users, and to reduce the time it takes for you to diagnose internet issues\. | February 28, 2023 | 
 | [Updated resource](AWS_IoT.md) | The following resource was updated: AWS::IoT::JobTemplate\. 
 
  [AWS::IoT::JobTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html)   
@@ -173,6 +194,13 @@ Use the `AWS::Omics::ReferenceStore` resource to specify a reference store in Am
 
  [AWS::Omics::RunGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-sequencestore.html)   
 Use the `AWS::Omics::SequenceStore` resource to specify a sequence store in Amazon Omics\.  | February 3, 2023 | 
+| [Updated resources](AWS_NetworkFirewall.md) | The following resources were updated: AWS::NetworkFirewall::FirewallPolicy and AWS::NetworkFirewall::RuleGroup 
+
+ [AWS::NetworkFirewall::FirewallPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html)   
+Use the `IPAddressType` property to configure your firewall endpoint as IPv4,IPv6, or dualstack\.  
+
+ [AWS::NetworkFirewall::RuleGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-rulegroup.html)   
+The `StatefulRule$Action` property now the `REJECT` option\. With `REJECT`, Network Firewall drops TCP traffic that matches the conditions of the stateful rule, and sends a TCP reset packet back to sender of the packet\.  | February 2, 2023 | 
 | [Updated resource](AWS_AppSync.md) | The following resources were updated: AWS::AppSync::DataSource 
 
  [AWS::AppSync::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-eventbridgeconfig)   
@@ -271,14 +299,6 @@ For more information, see [Adding or removing response headers](https://docs.aws
 
  [AirflowVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowversion)   
 The `AirflowVersion` property has been updated to include a new valid value for Apache Airflow version 2\.4\.3\.  | January 5, 2023 | 
-| [Updated resource](AWS_AppRunner.md) | The following resource was updated: AWS::AppRunner::Service 
-
- [AWS::AppRunner::Service\.ImageConfiguration\.RuntimeEnvironmentSecrets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-service.html#cfn-apprunner-service-imageconfiguration-runtimeenvironmentsecrets)   
-New property\. To add runtime environment variables as secrets in Image Configuration in App Runner service\.  | December 30, 2022 | 
-| [Updated resource](AWS_AppRunner.md) | The following resource was updated: AWS::AppRunner::Service 
-
- [AWS::AppRunner::Service\.CodeConfigurationValues\.RuntimeEnvironmentSecrets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-service.html#cfn-apprunner-service-codeconfigurationvalues-runtimeenvironmentsecrets)   
-New property\. To add runtime environment variables as secrets in Code Configuration values in App Runner service\.  | December 30, 2022 | 
 | [Updated resource](AWS_Lex.md) | The following property type was updated: AWS::Lex::Bot\. 
 
 [AWS::Lex::Bot](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-bot.html)  

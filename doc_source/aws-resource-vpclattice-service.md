@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AuthType](#cfn-vpclattice-service-authtype)" : String,
       "[CertificateArn](#cfn-vpclattice-service-certificatearn)" : String,
       "[CustomDomainName](#cfn-vpclattice-service-customdomainname)" : String,
+      "[DnsEntry](#cfn-vpclattice-service-dnsentry)" : DnsEntry,
       "[Name](#cfn-vpclattice-service-name)" : String,
       "[Tags](#cfn-vpclattice-service-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -31,6 +32,8 @@ Properties:
   [AuthType](#cfn-vpclattice-service-authtype): String
   [CertificateArn](#cfn-vpclattice-service-certificatearn): String
   [CustomDomainName](#cfn-vpclattice-service-customdomainname): String
+  [DnsEntry](#cfn-vpclattice-service-dnsentry): 
+    DnsEntry
   [Name](#cfn-vpclattice-service-name): String
   [Tags](#cfn-vpclattice-service-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -57,6 +60,12 @@ The custom domain name of the service\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`DnsEntry`  <a name="cfn-vpclattice-service-dnsentry"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [DnsEntry](aws-properties-vpclattice-service-dnsentry.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-vpclattice-service-name"></a>
 The name of the service\. The name must be unique within the account\. The valid characters are a\-z, 0\-9, and hyphens \(\-\)\. You can't use a hyphen as the first or last character, or immediately after another hyphen\.  

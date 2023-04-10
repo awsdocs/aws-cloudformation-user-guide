@@ -50,7 +50,7 @@ Describes the action for a rule\. Each rule must include exactly one of the foll
 
 `ListenerIdentifier`  <a name="cfn-vpclattice-rule-listeneridentifier"></a>
 The ID or Amazon Resource Name \(ARN\) of the listener\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -75,7 +75,7 @@ The priority assigned to the rule\. Each rule for a specific listener must have 
 
 `ServiceIdentifier`  <a name="cfn-vpclattice-rule-serviceidentifier"></a>
 The ID or Amazon Resource Name \(ARN\) of the service\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

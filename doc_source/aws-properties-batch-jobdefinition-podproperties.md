@@ -13,6 +13,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Containers](#cfn-batch-jobdefinition-podproperties-containers)" : [ EksContainer, ... ],
   "[DnsPolicy](#cfn-batch-jobdefinition-podproperties-dnspolicy)" : String,
   "[HostNetwork](#cfn-batch-jobdefinition-podproperties-hostnetwork)" : Boolean,
+  "[Metadata](#cfn-batch-jobdefinition-podproperties-metadata)" : Metadata,
   "[ServiceAccountName](#cfn-batch-jobdefinition-podproperties-serviceaccountname)" : String,
   "[Volumes](#cfn-batch-jobdefinition-podproperties-volumes)" : [ EksVolume, ... ]
 }
@@ -25,6 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - EksContainer
   [DnsPolicy](#cfn-batch-jobdefinition-podproperties-dnspolicy): String
   [HostNetwork](#cfn-batch-jobdefinition-podproperties-hostnetwork): Boolean
+  [Metadata](#cfn-batch-jobdefinition-podproperties-metadata): 
+    Metadata
   [ServiceAccountName](#cfn-batch-jobdefinition-podproperties-serviceaccountname): String
   [Volumes](#cfn-batch-jobdefinition-podproperties-volumes): 
     - EksVolume
@@ -49,6 +52,12 @@ Valid values: `Default` \| `ClusterFirst` \| `ClusterFirstWithHostNet`
 Indicates if the pod uses the hosts' network IP address\. The default value is `true`\. Setting this to `false` enables the Kubernetes pod networking model\. Most AWS Batch workloads are egress\-only and don't require the overhead of IP allocation for each pod for incoming connections\. For more information, see [Host namespaces](https://kubernetes.io/docs/concepts/security/pod-security-policy/#host-namespaces) and [Pod networking](https://kubernetes.io/docs/concepts/workloads/pods/#pod-networking) in the *Kubernetes documentation*\.  
 *Required*: No  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Metadata`  <a name="cfn-batch-jobdefinition-podproperties-metadata"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [Metadata](aws-properties-batch-jobdefinition-podproperties-metadata.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceAccountName`  <a name="cfn-batch-jobdefinition-podproperties-serviceaccountname"></a>

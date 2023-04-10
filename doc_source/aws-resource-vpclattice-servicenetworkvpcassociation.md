@@ -49,7 +49,7 @@ The IDs of the security groups\. Security groups aren't added by default\. You c
 
 `ServiceNetworkIdentifier`  <a name="cfn-vpclattice-servicenetworkvpcassociation-servicenetworkidentifier"></a>
 The ID or Amazon Resource Name \(ARN\) of the service network\. You must use the ARN when the resources specified in the operation are in different accounts\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -61,7 +61,7 @@ The tags for the association\.
 
 `VpcIdentifier`  <a name="cfn-vpclattice-servicenetworkvpcassociation-vpcidentifier"></a>
 The ID of the VPC\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

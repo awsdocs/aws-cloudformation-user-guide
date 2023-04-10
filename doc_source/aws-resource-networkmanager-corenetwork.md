@@ -53,7 +53,7 @@ The ID of the global network that your core network is a part of\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PolicyDocument`  <a name="cfn-networkmanager-corenetwork-policydocument"></a>
-Describes a core network policy\. For more information, see [Core network policies](https://docs.aws.amazon.com/vpc/latest/cloudwan/cloudwan-policy-changesets.html)\.  
+Describes a core network policy\. For more information, see [Core network policies](https://docs.aws.amazon.com/network-manager/latest/cloudwan/cloudwan-policy-change-sets.html)\.  
 If you update the policy document, CloudFormation will apply the core network change set generated from the updated policy document, and then set it as the LIVE policy\.  
 *Required*: No  
 *Type*: Json  

@@ -130,6 +130,13 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
+### Fn::GetAtt<a name="aws-resource-apigatewayv2-route-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-apigatewayv2-route-return-values-fn--getatt-fn--getatt"></a>
+
+`RouteId`  <a name="RouteId-fn::getatt"></a>
+Property description not available\.
+
 ## Examples<a name="aws-resource-apigatewayv2-route--examples"></a>
 
 ### HTTP API route creation example<a name="aws-resource-apigatewayv2-route--examples--HTTP_API_route_creation_example"></a>

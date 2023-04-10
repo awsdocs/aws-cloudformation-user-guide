@@ -34,7 +34,7 @@ The maximum amount of network bandwidth, in Gbps\. To specify no maximum limit, 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Min`  <a name="cfn-ec2-launchtemplate-networkbandwidthgbps-min"></a>
-The minimum amount of network bandwidth, in Gbps\. To specify no minimum limit, omit this parameter\.  
+The minimum amount of network bandwidth, in Gbps\. If this parameter is not specified, there is no minimum limit\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

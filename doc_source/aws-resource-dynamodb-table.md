@@ -94,6 +94,7 @@ Valid values include:
 If not specified, the default is `PROVISIONED`\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `PAY_PER_REQUEST | PROVISIONED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ContributorInsightsSpecification`  <a name="cfn-dynamodb-table-contributorinsightsspecification"></a>
@@ -151,7 +152,7 @@ The settings used to enable point in time recovery\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProvisionedThroughput`  <a name="cfn-dynamodb-table-provisionedthroughput"></a>
-Throughput for the specified table, which consists of values for `ReadCapacityUnits` and `WriteCapacityUnits`\. For more information about the contents of a provisioned throughput structure, see [Amazon DynamoDB Table ProvisionedThroughput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html)\.   
+Throughput for the specified table, which consists of values for `ReadCapacityUnits` and `WriteCapacityUnits`\. For more information about the contents of a provisioned throughput structure, see [Amazon DynamoDB Table ProvisionedThroughput](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_ProvisionedThroughput.html)\.   
 If you set `BillingMode` as `PROVISIONED`, you must specify this property\. If you set `BillingMode` as `PAY_PER_REQUEST`, you cannot specify this property\.  
 *Required*: Conditional  
 *Type*: [ProvisionedThroughput](aws-properties-dynamodb-table-provisionedthroughput.md)  
@@ -173,6 +174,7 @@ The settings for the DynamoDB table stream, which capture changes to items store
 The table class of the new table\. Valid values are `STANDARD` and `STANDARD_INFREQUENT_ACCESS`\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `STANDARD | STANDARD_INFREQUENT_ACCESS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableName`  <a name="cfn-dynamodb-table-tablename"></a>

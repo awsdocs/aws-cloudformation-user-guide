@@ -45,7 +45,7 @@ The description of the security policy\.
 
 `Name`  <a name="cfn-opensearchserverless-securitypolicy-name"></a>
 The name of the policy\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -57,7 +57,7 @@ The JSON policy document without any whitespaces\.
 
 `Type`  <a name="cfn-opensearchserverless-securitypolicy-type"></a>
 The type of security policy\. Can be either `encryption` or `network`\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[Command](#cfn-batch-jobdefinition-containerproperties-command)" : [ String, ... ],
   "[Environment](#cfn-batch-jobdefinition-containerproperties-environment)" : [ Environment, ... ],
+  "[EphemeralStorage](#cfn-batch-jobdefinition-containerproperties-ephemeralstorage)" : EphemeralStorage,
   "[ExecutionRoleArn](#cfn-batch-jobdefinition-containerproperties-executionrolearn)" : String,
   "[FargatePlatformConfiguration](#cfn-batch-jobdefinition-containerproperties-fargateplatformconfiguration)" : FargatePlatformConfiguration,
   "[Image](#cfn-batch-jobdefinition-containerproperties-image)" : String,
@@ -40,6 +41,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
     - String
   [Environment](#cfn-batch-jobdefinition-containerproperties-environment): 
     - Environment
+  [EphemeralStorage](#cfn-batch-jobdefinition-containerproperties-ephemeralstorage): 
+    EphemeralStorage
   [ExecutionRoleArn](#cfn-batch-jobdefinition-containerproperties-executionrolearn): String
   [FargatePlatformConfiguration](#cfn-batch-jobdefinition-containerproperties-fargateplatformconfiguration): 
     FargatePlatformConfiguration
@@ -83,6 +86,12 @@ We don't recommend using plaintext environment variables for sensitive informati
 Environment variables cannot start with "`AWS_BATCH`"\. This naming convention is reserved for variables that AWS Batch sets\.
 *Required*: No  
 *Type*: [List](aws-properties-batch-jobdefinition-environment.md) of [Environment](aws-properties-batch-jobdefinition-environment.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`EphemeralStorage`  <a name="cfn-batch-jobdefinition-containerproperties-ephemeralstorage"></a>
+The amount of ephemeral storage to allocate for the task\. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate\.  
+*Required*: No  
+*Type*: [EphemeralStorage](aws-properties-batch-jobdefinition-containerproperties-ephemeralstorage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExecutionRoleArn`  <a name="cfn-batch-jobdefinition-containerproperties-executionrolearn"></a>

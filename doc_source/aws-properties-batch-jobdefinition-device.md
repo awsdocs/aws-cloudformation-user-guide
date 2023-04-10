@@ -39,7 +39,7 @@ The path inside the container that's used to expose the host device\. By default
 `HostPath`  <a name="cfn-batch-jobdefinition-device-hostpath"></a>
 The path for the device on the host container instance\.  
 *Required*: No  
-*Type*: [String](aws-properties-batch-jobdefinition-eksvolume-hostpath.md)  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Permissions`  <a name="cfn-batch-jobdefinition-device-permissions"></a>

@@ -41,19 +41,19 @@ The description of the policy\.
 
 `Name`  <a name="cfn-opensearchserverless-accesspolicy-name"></a>
 The name of the policy\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Policy`  <a name="cfn-opensearchserverless-accesspolicy-policy"></a>
 The JSON policy document without any whitespaces\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-opensearchserverless-accesspolicy-type"></a>
 The type of access policy\. Currently the only option is `data`\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

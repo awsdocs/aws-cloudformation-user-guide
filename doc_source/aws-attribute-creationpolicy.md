@@ -40,7 +40,7 @@ CreationPolicy:
 Starts the specified fleet\.  
 *Required*: No
 
-## Amazon EC2 Auto Scaling creation properties<a name="w4ab1c33c22b7c13"></a>
+## Amazon EC2 Auto Scaling creation properties<a name="w4ab1c33c23b7c13"></a>
 
 Amazon EC2 Auto Scaling configuration for a creation policy\.
 
@@ -193,7 +193,7 @@ LaunchConfig:
           /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource AutoScalingGroup --region ${AWS::Region}
 ```
 
-#### WaitCondition<a name="w4ab1c33c22b7c13b9b5"></a>
+#### WaitCondition<a name="w4ab1c33c23b7c13b9b5"></a>
 
 The following example shows how to add a creation policy to a wait condition\.
 

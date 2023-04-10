@@ -28,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The subnet's IP address type\. You can't change the IP address type after you create the subnet\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `DUALSTACK | IPV4 | IPV6`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-networkfirewall-firewall-subnetmapping-subnetid"></a>

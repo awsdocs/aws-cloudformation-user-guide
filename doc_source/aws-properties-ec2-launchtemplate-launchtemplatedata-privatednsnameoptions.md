@@ -1,6 +1,6 @@
 # AWS::EC2::LaunchTemplate PrivateDnsNameOptions<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-privatednsnameoptions"></a>
 
-Describes the options for instance hostnames\.
+The hostname type for EC2 instances launched into this subnet and how DNS A and AAAA record queries should be handled\. For more information, see [Amazon EC2 instance hostname types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the *Amazon Elastic Compute Cloud User Guide*\.
 
 ## Syntax<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-privatednsnameoptions-syntax"></a>
 

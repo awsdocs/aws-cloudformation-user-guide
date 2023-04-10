@@ -46,5 +46,5 @@ A Boolean flag to indicate whether the canary release deployment uses the stage 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## See also<a name="aws-properties-apigateway-deployment-deploymentcanarysettings--seealso"></a>
-+ [Deployment](https://docs.aws.amazon.com/apigateway/latest/api/API_Deployment.html/) in the *Amazon API Gateway REST API Reference*
++ [CreateDeployment](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateDeployment.html) in the *Amazon API Gateway REST API Reference*
 

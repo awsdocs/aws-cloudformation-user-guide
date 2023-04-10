@@ -66,7 +66,7 @@ The type of provisioning artifact\.
 +  `MARKETPLACE_CAR` \- AWS Marketplace Clusters and AWS Resources
 *Required*: No  
 *Type*: String  
-*Allowed values*: `CLOUD_FORMATION_TEMPLATE | DEFAULT_CUSTOM | MARKETPLACE_AMI | MARKETPLACE_CAR | TERRAFORM_OPEN_SOURCE`  
+*Allowed values*: `CLOUD_FORMATION_TEMPLATE | MARKETPLACE_AMI | MARKETPLACE_CAR | TERRAFORM_OPEN_SOURCE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties--seealso"></a>
