@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ecs-capacityprovider-autoscalinggroupprovider-properties"></a>
 
 `AutoScalingGroupArn`  <a name="cfn-ecs-capacityprovider-autoscalinggroupprovider-autoscalinggrouparn"></a>
-The Amazon Resource Name \(ARN\) that identifies the Auto Scaling group\.  
+The Amazon Resource Name \(ARN\) that identifies the Auto Scaling group\. You can also provide only the resource name for the Auto Scaling group instead of the full ARN.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
