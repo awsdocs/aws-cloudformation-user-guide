@@ -29,7 +29,7 @@ The namespace name or full Amazon Resource Name \(ARN\) of the AWS Cloud Map nam
 If you enter an existing namespace name or ARN, then that namespace will be used\. Any namespace type is supported\. The namespace must be in this account and this AWS Region\.  
 If you enter a new name, a AWS Cloud Map namespace will be created\. Amazon ECS creates a AWS Cloud Map namespace with the "API calls" method of instance discovery only\. This instance discovery method is the "HTTP" namespace type in the AWS Command Line Interface\. Other types of instance discovery aren't used by Service Connect\.  
 If you update the service with an empty string `""` for the namespace name, the cluster configuration for Service Connect is removed\. Note that the namespace will remain in AWS Cloud Map and must be deleted separately\.  
-For more information about AWS Cloud Map, see [Working with Services](https://docs.aws.amazon.com/) in the * AWS Cloud Map Developer Guide*\.  
+For more information about AWS Cloud Map, see [Working with Services](https://docs.aws.amazon.com/cloud-map/latest/dg/working-with-services.html) in the * AWS Cloud Map Developer Guide*\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

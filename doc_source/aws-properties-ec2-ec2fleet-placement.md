@@ -86,7 +86,7 @@ Reserved for future use\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tenancy`  <a name="cfn-ec2-ec2fleet-placement-tenancy"></a>
-The tenancy of the instance \(if the instance is running in a VPC\)\. An instance with a tenancy of `dedicated` runs on single\-tenant hardware\.  
+The tenancy of the instance\. An instance with a tenancy of `dedicated` runs on single\-tenant hardware\.  
 This parameter is not supported for [CreateFleet](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateFleet)\. The `host` tenancy is not supported for [ImportInstance](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ImportInstance.html) or for T3 instances that are configured for the `unlimited` CPU credit option\.  
 *Required*: No  
 *Type*: String  

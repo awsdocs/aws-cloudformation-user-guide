@@ -19,7 +19,7 @@ Application Auto Scaling provides automatic scaling of different resources beyon
 
 ## Declaring a launch template with user data and an IAM Role<a name="scenario-as-launch-template"></a>
 
-This snippet shows an [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) resource that contains the instance configuration information for an Auto Scaling group\. You specify values for the `ImageId`, `InstanceType`, `SecurityGroups`, `UserData`, and `TagSpecifications` properties\. The `SecurityGroups` property specifies an existing EC2 security group named `myExistingEC2SecurityGroup` and a new security group\. The [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function gets the name of the [AWS::EC2::SecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html) resource `myNewEC2SecurityGroup` that's declared elsewhere in the stack template\. 
+This snippet shows an [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) resource that contains the instance configuration information for an Auto Scaling group\. You specify values for the `ImageId`, `InstanceType`, `SecurityGroups`, `UserData`, and `TagSpecifications` properties\. The `SecurityGroups` property specifies an existing EC2 security group and a new security group\. The [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function gets the ID of the [AWS::EC2::SecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html) resource `myNewEC2SecurityGroup` that's declared elsewhere in the stack template\. 
 
 The launch template includes a section for custom user data\. You can pass in configuration tasks and scripts that run when an instance launches in this section\. In this example, the user data installs the AWS Systems Manager Agent and starts the agent\.
 
@@ -42,11 +42,11 @@ The launch template also includes an IAM role that allows applications running o
 12.               "Ref":"myInstanceProfile"
 13.             }
 14.           },
-15.           "SecurityGroups":[
+15.           "SecurityGroupIds":[
 16.             {
 17.               "Ref":"myNewEC2SecurityGroup"
 18.             },
-19.             "myExistingEC2SecurityGroup"
+19.             "sg-083cd3bfb8example"
 20.           ],
 21.           "UserData":{
 22.             "Fn::Base64":{
@@ -138,9 +138,9 @@ The launch template also includes an IAM role that allows applications running o
  9.         InstanceType: t3.micro
 10.         IamInstanceProfile:
 11.           Name: !Ref myInstanceProfile
-12.         SecurityGroups:
-13.         - Ref! myNewEC2SecurityGroup
-14.         - myExistingEC2SecurityGroup
+12.         SecurityGroupIds:
+13.         - !Ref myNewEC2SecurityGroup
+14.         - sg-083cd3bfb8example
 15.         UserData:
 16.           Fn::Base64:!Sub |
 17.             #!/bin/bash
@@ -533,7 +533,7 @@ The [AWS::CloudWatch::Alarm](https://docs.aws.amazon.com/AWSCloudFormation/lates
 23.       Dimensions:
 24.       - Name: AutoScalingGroupName
 25.         Value:
-26.           Ref! logicalName
+26.           !Ref logicalName
 27.       ComparisonOperator: GreaterThanThreshold
 28.       MetricName: CPUUtilization
 ```
@@ -657,7 +657,7 @@ This example shows an [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.a
 4.     ImageId: ami-02354e95b3example
 5.     InstanceType: t3.micro
 6.     SecurityGroups:
-7.     - Ref! logicalName
+7.     - !Ref logicalName
 8.     - myExistingEC2SecurityGroup
 ```
 

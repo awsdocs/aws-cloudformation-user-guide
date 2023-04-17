@@ -4,6 +4,32 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_MWAA.md) | The following resource was updated: AWS::MWAA::Environment 
+
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3path](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3path)   
+Amazon MWAA adds the `StartupScriptS3Path` property\. This property specifies the relative path to a shell script that you upload to your environment's Amazon S3 bucket\. 
+
+ [https://docs.aws.amazon.com/AWSCFNMWAADocs/build/server-root/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3objectversion](https://docs.aws.amazon.com/AWSCFNMWAADocs/build/server-root/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3objectversion)   
+Amazon MWAA adds the `StartupScriptS3ObjectVersion` property\. This property specifies the version ID for the shell script that you upload to your environment's Amazon S3 bucket\. 
+
+ [AirflowVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowversion)   
+The `AirflowVersion` property has been updated to include a new valid value for Apache Airflow version 2\.5\.1\.  | April 13, 2023 | 
+| [Updated resource](AWS_RDS.md) | The following resource was updated: AWS::RDS::DBInstance 
+
+ [AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html)   
+Use `SourceDBClusterIdentifier` property as the identifier of the Multi\-AZ DB cluster that will act as the source for the read replica\.  | April 13, 2023 | 
+| [New resource](AWS_QuickSight.md) | The following resource was added: AWS::QuickSight::RefreshSchedule\. 
+
+ [ AWS::QuickSight::RefreshSchedule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-refreshschedule.html)   
+Use the `AWS::QuickSight::RefreshSchedule` resource to create a refresh schedule for a dataset in Amazon QuickSight\.  | April 13, 2023 | 
+| [New resource](AWS_AppConfig.md) | The following resource was added: AWS::AppConfig::Extension 
+
+ [AWS::AppConfig::Extension](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-extension.html)   
+This resource lets you creates an AWS AppConfig extension\. An extension augments your ability to inject logic or behavior at different points during the AWS AppConfig workflow of creating or deploying a configuration\.  | April 12, 2023 | 
+| [New resource](AWS_AppConfig.md) | The following resource was added: AWS::AppConfig::ExtensionAssociation 
+
+ [AWS::AppConfig::Extension](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-extensionassociation.html)   
+This resource lets you creates an AWS AppConfig extension association\. An extension association is a specified relationship between an extension and an AWS AppConfig resource, such as an application or a configuration profile\.   | April 12, 2023 | 
 | [New resources](AWS_IoTWireless.md) | The following resources were added: AWS::IoTWireless::WirelessDeviceImportTask 
 
  [AWS::IoTWireless::WirelessDeviceImportTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdeviceimporttask.html)   
@@ -1113,10 +1139,6 @@ Use the `TrackingOptions` property to specify a custom domain to use for open an
 
  [AWS::Connect::TaskTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-tasktemplate.html)   
 Use the `AWS::Connect::TaskTemplate` resource to create a task template\.  | June 9, 2022 | 
-| [Updated resource](AWS_IoTEvents.md) | The following property was updated: AWS::IoTEvents::AlarmModel\.IotSiteWise\. 
-
- [ AWS::IoTEvents::AlarmModel\.IotSiteWise](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-alarmmodel-iotsitewise.html)   
-The following property is no longer required: `PropertyValue`\.  | May 26, 2022 | 
 | [Updated resource](AWS_Transfer.md) | The following resource was updated: 
 
  [AWS::Transfer::Server ProtocolDetails](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html)   

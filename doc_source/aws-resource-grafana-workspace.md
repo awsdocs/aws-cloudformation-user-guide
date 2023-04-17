@@ -60,15 +60,15 @@ Properties:
 ## Properties<a name="aws-resource-grafana-workspace-properties"></a>
 
 `AccountAccessType`  <a name="cfn-grafana-workspace-accountaccesstype"></a>
-Specifies whether the workspace can access AWS resources in this AWS account only, or whether it can also access AWS resources in other accounts in the same organization\. If this is `ORGANIZATION`, the `workspaceOrganizationalUnits` parameter specifies which organizational units the workspace can access\.  
-*Required*: No  
+Specifies whether the workspace can access AWS resources in this AWS account only, or whether it can also access AWS resources in other accounts in the same organization\. If this is `ORGANIZATION`, the `OrganizationalUnits` parameter specifies which organizational units the workspace can access\.  
+*Required*: Yes  
 *Type*: String  
 *Allowed values*: `CURRENT_ACCOUNT | ORGANIZATION`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AuthenticationProviders`  <a name="cfn-grafana-workspace-authenticationproviders"></a>
 Specifies whether this workspace uses SAML 2\.0, AWS IAM Identity Center \(successor to AWS Single Sign\-On\), or both to authenticate users for using the Grafana console within a workspace\. For more information, see [User authentication in Amazon Managed Grafana](https://docs.aws.amazon.com/grafana/latest/userguide/authentication-in-AMG.html)\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -126,7 +126,7 @@ If this is `SERVICE_MANAGED`, and the workplace was created through the Amazon M
 If this is `CUSTOMER_MANAGED`, you must manage those roles and permissions yourself\.  
 If you are working with a workspace in a member account of an organization and that account is not a delegated administrator account, and you want the workspace to access data sources in other AWS accounts in the organization, this parameter must be set to `CUSTOMER_MANAGED`\.  
 For more information about converting between customer and service managed, see [Managing permissions for data sources and notification channels](https://docs.aws.amazon.com/grafana/latest/userguide/AMG-datasource-and-notification.html)\. For more information about the roles and permissions that must be managed for customer managed workspaces, see [Amazon Managed Grafana permissions and policies for AWS data sources and notification channels](https://docs.aws.amazon.com/grafana/latest/userguide/AMG-manage-permissions.html)  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Allowed values*: `CUSTOMER_MANAGED | SERVICE_MANAGED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

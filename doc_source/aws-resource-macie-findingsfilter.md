@@ -89,9 +89,6 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 `Arn`  <a name="Arn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the findings filter\.
 
-`FindingsFilterListItems`  <a name="FindingsFilterListItems-fn::getatt"></a>
-An array of `FindingsFilterListItem` objects, one for each findings filter that's associated with the account\.
-
 `Id`  <a name="Id-fn::getatt"></a>
 The unique identifier for the findings filter\.
 

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[CreateTableDefaultPermissions](#cfn-glue-database-databaseinput-createtabledefaultpermissions)" : [ PrincipalPrivileges, ... ],
   "[Description](#cfn-glue-database-databaseinput-description)" : String,
+  "[FederatedDatabase](#cfn-glue-database-databaseinput-federateddatabase)" : FederatedDatabase,
   "[LocationUri](#cfn-glue-database-databaseinput-locationuri)" : String,
   "[Name](#cfn-glue-database-databaseinput-name)" : String,
   "[Parameters](#cfn-glue-database-databaseinput-parameters)" : Json,
@@ -25,6 +26,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CreateTableDefaultPermissions](#cfn-glue-database-databaseinput-createtabledefaultpermissions): 
     - PrincipalPrivileges
   [Description](#cfn-glue-database-databaseinput-description): String
+  [FederatedDatabase](#cfn-glue-database-databaseinput-federateddatabase): 
+    FederatedDatabase
   [LocationUri](#cfn-glue-database-databaseinput-locationuri): String
   [Name](#cfn-glue-database-databaseinput-name): String
   [Parameters](#cfn-glue-database-databaseinput-parameters): Json
@@ -44,6 +47,12 @@ Creates a set of default permissions on the table for principals\. Used by AWS L
 A description of the database\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`FederatedDatabase`  <a name="cfn-glue-database-databaseinput-federateddatabase"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [FederatedDatabase](aws-properties-glue-database-databaseinput-federateddatabase.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LocationUri`  <a name="cfn-glue-database-databaseinput-locationuri"></a>

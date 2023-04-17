@@ -48,7 +48,7 @@ The priority you want to assign to a source\. You can have a primary stream and 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `State`  <a name="cfn-mediaconnect-flow-failoverconfig-state"></a>
-The state of source failover on the flow\. If the state is disabled, the flow can have only one source\. If the state is enabled, the flow can have one or two sources\.  
+The state of source failover on the flow\. If the state is inactive, the flow can have only one source\. If the state is active, the flow can have one or two sources\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -29,6 +29,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[RequirementsS3Path](#cfn-mwaa-environment-requirementss3path)" : String,
       "[Schedulers](#cfn-mwaa-environment-schedulers)" : Integer,
       "[SourceBucketArn](#cfn-mwaa-environment-sourcebucketarn)" : String,
+      "[StartupScriptS3ObjectVersion](#cfn-mwaa-environment-startupscripts3objectversion)" : String,
+      "[StartupScriptS3Path](#cfn-mwaa-environment-startupscripts3path)" : String,
       "[Tags](#cfn-mwaa-environment-tags)" : Json,
       "[WebserverAccessMode](#cfn-mwaa-environment-webserveraccessmode)" : String,
       "[WeeklyMaintenanceWindowStart](#cfn-mwaa-environment-weeklymaintenancewindowstart)" : String
@@ -60,6 +62,8 @@ Properties:
   [RequirementsS3Path](#cfn-mwaa-environment-requirementss3path): String
   [Schedulers](#cfn-mwaa-environment-schedulers): Integer
   [SourceBucketArn](#cfn-mwaa-environment-sourcebucketarn): String
+  [StartupScriptS3ObjectVersion](#cfn-mwaa-environment-startupscripts3objectversion): String
+  [StartupScriptS3Path](#cfn-mwaa-environment-startupscripts3path): String
   [Tags](#cfn-mwaa-environment-tags): Json
   [WebserverAccessMode](#cfn-mwaa-environment-webserveraccessmode): String
   [WeeklyMaintenanceWindowStart](#cfn-mwaa-environment-weeklymaintenancewindowstart): String
@@ -74,7 +78,8 @@ A list of key\-value pairs containing the Airflow configuration options for your
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AirflowVersion`  <a name="cfn-mwaa-environment-airflowversion"></a>
-The version of Apache Airflow to use for the environment\. If no value is specified, defaults to the latest version\. Valid values: `2.0.2`, `1.10.12`, `2.2.2`, and `2.4.3`\.  
+The version of Apache Airflow to use for the environment\. If no value is specified, defaults to the latest version\.  
+*Allowed Values*: `2.0.2` \| `1.10.12` \| `2.2.2` \| `2.4.3` \| `2.5.1` \(latest\)  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -167,6 +172,22 @@ The number of schedulers that you want to run in your environment\. Valid values
 
 `SourceBucketArn`  <a name="cfn-mwaa-environment-sourcebucketarn"></a>
 The Amazon Resource Name \(ARN\) of the Amazon S3 bucket where your DAG code and supporting files are stored\. For example, `arn:aws:s3:::my-airflow-bucket-unique-name`\. To learn more, see [Create an Amazon S3 bucket for Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-s3-bucket.html)\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`StartupScriptS3ObjectVersion`  <a name="cfn-mwaa-environment-startupscripts3objectversion"></a>
+The version of the startup shell script in your Amazon S3 bucket\. You must specify the [version ID](https://docs.aws.amazon.com/AmazonS3/latest/userguide/versioning-workflows.html) that Amazon S3 assigns to the file every time you update the script\.   
+ Version IDs are Unicode, UTF\-8 encoded, URL\-ready, opaque strings that are no more than 1,024 bytes long\. The following is an example:   
+ `3sL4kqtJlcpXroDTDmJ+rmSpXd3dIbrHY+MTRCxf3vjVBH40Nr8X8gdRQBpUMLUo`   
+ For more information, see [Using a startup script](https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html)\.   
+*Required*: No  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`StartupScriptS3Path`  <a name="cfn-mwaa-environment-startupscripts3path"></a>
+The relative path to the startup shell script in your Amazon S3 bucket\. For example, `s3://mwaa-environment/startup.sh`\.  
+ Amazon MWAA runs the script as your environment starts, and before running the Apache Airflow process\. You can use this script to install dependencies, modify Apache Airflow configuration options, and set environment variables\. For more information, see [Using a startup script](https://docs.aws.amazon.com/mwaa/latest/userguide/using-startup-script.html)\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

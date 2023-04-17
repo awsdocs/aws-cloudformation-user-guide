@@ -59,7 +59,10 @@ A list of stages\. A contact has an engagement plan with stages that contact spe
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-ssmcontacts-contact-type"></a>
-Refers to the type of contact\. A single contact is type `PERSONAL` and an escalation plan is type `ESCALATION`\.  
+Refers to the type of contact:  
++  `PERSONAL`: A single, individual contact\.
++  `ESCALATION`: An escalation plan\.
++  `ONCALL_SCHEDULE`: An on\-call schedule\.
 *Required*: Yes  
 *Type*: String  
 *Allowed values*: `ESCALATION | ONCALL_SCHEDULE | PERSONAL`  

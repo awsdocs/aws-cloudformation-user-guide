@@ -117,10 +117,11 @@ Key\-value pairs that can be used to group and search for agreements\.
 
 ### Fn::GetAtt<a name="aws-resource-transfer-agreement-return-values-fn--getatt"></a>
 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
 #### <a name="aws-resource-transfer-agreement-return-values-fn--getatt-fn--getatt"></a>
 
 `AgreementId`  <a name="AgreementId-fn::getatt"></a>
-Property description not available\.
-
-`Arn`  <a name="Arn-fn::getatt"></a>
-Property description not available\.
+The unique identifier for the AS2 agreement, returned after the API call succeeds\.

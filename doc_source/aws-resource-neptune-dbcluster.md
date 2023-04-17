@@ -30,7 +30,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EngineVersion](#cfn-neptune-dbcluster-engineversion)" : String,
       "[IamAuthEnabled](#cfn-neptune-dbcluster-iamauthenabled)" : Boolean,
       "[KmsKeyId](#cfn-neptune-dbcluster-kmskeyid)" : String,
-      "[Port](#cfn-neptune-dbcluster-port)" : Integer,
       "[PreferredBackupWindow](#cfn-neptune-dbcluster-preferredbackupwindow)" : String,
       "[PreferredMaintenanceWindow](#cfn-neptune-dbcluster-preferredmaintenancewindow)" : String,
       "[RestoreToTime](#cfn-neptune-dbcluster-restoretotime)" : String,
@@ -64,7 +63,6 @@ Properties:
   [EngineVersion](#cfn-neptune-dbcluster-engineversion): String
   [IamAuthEnabled](#cfn-neptune-dbcluster-iamauthenabled): Boolean
   [KmsKeyId](#cfn-neptune-dbcluster-kmskeyid): String
-  [Port](#cfn-neptune-dbcluster-port): Integer
   [PreferredBackupWindow](#cfn-neptune-dbcluster-preferredbackupwindow): String
   [PreferredMaintenanceWindow](#cfn-neptune-dbcluster-preferredmaintenancewindow): String
   [RestoreToTime](#cfn-neptune-dbcluster-restoretotime): String
@@ -148,12 +146,6 @@ If `StorageEncrypted` is true, the Amazon KMS key identifier for the encrypted D
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`Port`  <a name="cfn-neptune-dbcluster-port"></a>
-Specifies the port that the database engine is listening on\.  
-*Required*: No  
-*Type*: Integer  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PreferredBackupWindow`  <a name="cfn-neptune-dbcluster-preferredbackupwindow"></a>
 Specifies the daily time range during which automated backups are created if automated backups are enabled, as determined by the `BackupRetentionPeriod`\.  

@@ -64,6 +64,7 @@ The type of provisioning artifact\.
 +  `CLOUD_FORMATION_TEMPLATE` \- AWS CloudFormation template
 +  `MARKETPLACE_AMI` \- AWS Marketplace AMI
 +  `MARKETPLACE_CAR` \- AWS Marketplace Clusters and AWS Resources
++  `TERRAFORM_OPEN_SOURCE` \- Terraform open source configuration file
 *Required*: No  
 *Type*: String  
 *Allowed values*: `CLOUD_FORMATION_TEMPLATE | MARKETPLACE_AMI | MARKETPLACE_CAR | TERRAFORM_OPEN_SOURCE`  

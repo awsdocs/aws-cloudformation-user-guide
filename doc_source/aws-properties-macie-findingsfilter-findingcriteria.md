@@ -1,6 +1,6 @@
 # AWS::Macie::FindingsFilter FindingCriteria<a name="aws-properties-macie-findingsfilter-findingcriteria"></a>
 
-Specifies, as a map, one or more property\-based conditions that filter the results of a query for findings\. For more information, see [Filtering findings](https://docs.aws.amazon.com/macie/latest/user/findings-filter-overview.html) in the *Amazon Macie User Guide*\.
+Specifies, as a map, one or more property\-based conditions for a findings filter\. A *findings filter*, also referred to as a *filter rule*, is a set of custom criteria that specifies which findings to include or exclude from the results of a query for findings\. You can also configure a findings filter to suppress \(automatically archive\) findings that match the filter's criteria\. For more information, see [Filtering findings](https://docs.aws.amazon.com/macie/latest/user/findings-filter-overview.html) in the *Amazon Macie User Guide*\.
 
 ## Syntax<a name="aws-properties-macie-findingsfilter-findingcriteria-syntax"></a>
 

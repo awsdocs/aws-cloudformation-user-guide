@@ -85,6 +85,9 @@ The summary information of count of wireless devices that have been onboarded to
 `PendingImportedDevicesCount`  <a name="PendingImportedDevicesCount-fn::getatt"></a>
 The summary information of count of wireless devices that are waiting in the queue to be onboarded to the import task\.
 
+`Sidewalk.DeviceCreationFileList`  <a name="Sidewalk.DeviceCreationFileList-fn::getatt"></a>
+Property description not available\.
+
 `Status`  <a name="Status-fn::getatt"></a>
 The status of a wireless device import task\. The status can be `INITIALIZING`, `INITIALIZED`, `PENDING`, `COMPLETE`, `FAILED`, or `DELETING`\.
 

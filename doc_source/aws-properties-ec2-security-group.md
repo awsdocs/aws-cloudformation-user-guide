@@ -48,8 +48,7 @@ Properties:
 `GroupDescription`  <a name="cfn-ec2-securitygroup-groupdescription"></a>
 A description for the security group\.  
 Constraints: Up to 255 characters in length  
-Constraints for EC2\-Classic: ASCII characters  
-Constraints for EC2\-VPC: a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=&;\{\}\!$\*  
+Valid characters: a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=&;\{\}\!$\*  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -57,8 +56,7 @@ Constraints for EC2\-VPC: a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=&
 `GroupName`  <a name="cfn-ec2-securitygroup-groupname"></a>
 The name of the security group\.  
 Constraints: Up to 255 characters in length\. Cannot start with `sg-`\.  
-Constraints for EC2\-Classic: ASCII characters  
-Constraints for EC2\-VPC: a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=&;\{\}\!$\*  
+Valid characters: a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=&;\{\}\!$\*  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -91,7 +89,7 @@ Any tags assigned to the security group\.
 
 ### Ref<a name="aws-properties-ec2-security-group-return-values-ref"></a>
 
-When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ID\. For security groups that were created without specifying a VPC \(EC2\-Classic or a default VPC\), `Ref` returns the resource name\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the resource ID\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 

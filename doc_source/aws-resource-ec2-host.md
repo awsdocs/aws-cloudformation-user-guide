@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[AutoPlacement](#cfn-ec2-host-autoplacement)" : String,
       "[AvailabilityZone](#cfn-ec2-host-availabilityzone)" : String,
+      "[HostMaintenance](#cfn-ec2-host-hostmaintenance)" : String,
       "[HostRecovery](#cfn-ec2-host-hostrecovery)" : String,
       "[InstanceFamily](#cfn-ec2-host-instancefamily)" : String,
       "[InstanceType](#cfn-ec2-host-instancetype)" : String,
@@ -29,6 +30,7 @@ Type: AWS::EC2::Host
 Properties: 
   [AutoPlacement](#cfn-ec2-host-autoplacement): String
   [AvailabilityZone](#cfn-ec2-host-availabilityzone): String
+  [HostMaintenance](#cfn-ec2-host-hostmaintenance): String
   [HostRecovery](#cfn-ec2-host-hostrecovery): String
   [InstanceFamily](#cfn-ec2-host-instancefamily): String
   [InstanceType](#cfn-ec2-host-instancetype): String
@@ -50,6 +52,13 @@ The Availability Zone in which to allocate the Dedicated Host\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`HostMaintenance`  <a name="cfn-ec2-host-hostmaintenance"></a>
+Indicates whether host maintenance is enabled or disabled for the Dedicated Host\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `off | on`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HostRecovery`  <a name="cfn-ec2-host-hostrecovery"></a>
 Indicates whether to enable or disable host recovery for the Dedicated Host\. Host recovery is disabled by default\. For more information, see [ Host recovery](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-recovery.html) in the *Amazon EC2 User Guide*\.  

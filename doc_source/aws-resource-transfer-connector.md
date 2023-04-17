@@ -78,13 +78,3 @@ The URL of the partner's AS2 endpoint\.
 ## Return values<a name="aws-resource-transfer-connector-return-values"></a>
 
 ### Ref<a name="aws-resource-transfer-connector-return-values-ref"></a>
-
-### Fn::GetAtt<a name="aws-resource-transfer-connector-return-values-fn--getatt"></a>
-
-#### <a name="aws-resource-transfer-connector-return-values-fn--getatt-fn--getatt"></a>
-
-`Arn`  <a name="Arn-fn::getatt"></a>
-Property description not available\.
-
-`ConnectorId`  <a name="ConnectorId-fn::getatt"></a>
-Property description not available\.

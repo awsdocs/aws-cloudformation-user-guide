@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "[AcceleratorType](#cfn-sagemaker-endpointconfig-productionvariant-acceleratortype)" : String,
   "[ContainerStartupHealthCheckTimeoutInSeconds](#cfn-sagemaker-endpointconfig-productionvariant-containerstartuphealthchecktimeoutinseconds)" : Integer,
+  "[EnableSSMAccess](#cfn-sagemaker-endpointconfig-productionvariant-enablessmaccess)" : Boolean,
   "[InitialInstanceCount](#cfn-sagemaker-endpointconfig-productionvariant-initialinstancecount)" : Integer,
   "[InitialVariantWeight](#cfn-sagemaker-endpointconfig-productionvariant-initialvariantweight)" : Double,
   "[InstanceType](#cfn-sagemaker-endpointconfig-productionvariant-instancetype)" : String,
@@ -28,6 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [AcceleratorType](#cfn-sagemaker-endpointconfig-productionvariant-acceleratortype): String
   [ContainerStartupHealthCheckTimeoutInSeconds](#cfn-sagemaker-endpointconfig-productionvariant-containerstartuphealthchecktimeoutinseconds): Integer
+  [EnableSSMAccess](#cfn-sagemaker-endpointconfig-productionvariant-enablessmaccess): Boolean
   [InitialInstanceCount](#cfn-sagemaker-endpointconfig-productionvariant-initialinstancecount): Integer
   [InitialVariantWeight](#cfn-sagemaker-endpointconfig-productionvariant-initialvariantweight): Double
   [InstanceType](#cfn-sagemaker-endpointconfig-productionvariant-instancetype): String
@@ -52,6 +54,12 @@ The size of the Elastic Inference \(EI\) instance to use for the production vari
 Property description not available\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`EnableSSMAccess`  <a name="cfn-sagemaker-endpointconfig-productionvariant-enablessmaccess"></a>
+ You can use this parameter to turn on native AWS Systems Manager \(SSM\) access for a production variant behind an endpoint\. By default, SSM access is disabled for all production variants behind an endpoint\. You can turn on or turn off SSM access for a production variant behind an existing endpoint by creating a new endpoint configuration and calling `UpdateEndpoint`\.   
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `InitialInstanceCount`  <a name="cfn-sagemaker-endpointconfig-productionvariant-initialinstancecount"></a>

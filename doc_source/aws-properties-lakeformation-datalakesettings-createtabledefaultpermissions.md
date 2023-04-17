@@ -1,0 +1,3 @@
+# AWS::LakeFormation::DataLakeSettings CreateTableDefaultPermissions<a name="aws-properties-lakeformation-datalakesettings-createtabledefaultpermissions"></a>
+
+<a name="aws-properties-lakeformation-datalakesettings-createtabledefaultpermissions-description"></a>The `CreateTableDefaultPermissions` property type specifies Property description not available\. for an [AWS::LakeFormation::DataLakeSettings](aws-resource-lakeformation-datalakesettings.md)\.

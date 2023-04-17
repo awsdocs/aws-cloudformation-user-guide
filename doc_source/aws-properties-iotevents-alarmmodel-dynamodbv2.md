@@ -46,7 +46,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotevents-alarmmodel-dynamodbv2-properties"></a>
 
 `Payload`  <a name="cfn-iotevents-alarmmodel-dynamodbv2-payload"></a>
-Property description not available\.  
+Information needed to configure the payload\.  
+By default, AWS IoT Events generates a standard payload in JSON for any action\. This action payload contains all attribute\-value pairs that have the information about the detector model instance and the event triggered the action\. To configure the action payload, you can use `contentExpression`\.  
 *Required*: No  
 *Type*: [Payload](aws-properties-iotevents-alarmmodel-payload.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -69,7 +69,7 @@ A collection of settings that configure user interaction with the `RStudioServer
 `SecurityGroups`  <a name="cfn-sagemaker-userprofile-usersettings-securitygroups"></a>
 The security groups for the Amazon Virtual Private Cloud \(VPC\) that Studio uses for communication\.  
 Optional when the `CreateDomain.AppNetworkAccessType` parameter is set to `PublicInternetOnly`\.  
-Required when the `CreateDomain.AppNetworkAccessType` parameter is set to `VpcOnly`\.  
+Required when the `CreateDomain.AppNetworkAccessType` parameter is set to `VpcOnly`, unless specified as part of the `DefaultUserSettings` for the domain\.  
 Amazon SageMaker adds a security group to allow NFS traffic from SageMaker Studio\. Therefore, the number of security groups that you can specify is one less than the maximum number shown\.  
 *Required*: No  
 *Type*: List of String  

@@ -126,7 +126,7 @@ Specifies whether to turn on Amazon ECS managed tags for the tasks within the se
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnableExecuteCommand`  <a name="cfn-ecs-service-enableexecutecommand"></a>
-Determines whether the execute command functionality is enabled for the service\. If `true`, the execute command functionality is enabled for all containers in tasks as part of the service\.  
+Determines whether the execute command functionality is turned on for the service\. If `true`, the execute command functionality is turned on for all containers in tasks as part of the service\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -242,6 +242,7 @@ The following basic restrictions apply to tags:
 `TaskDefinition`  <a name="cfn-ecs-service-taskdefinition"></a>
 The `family` and `revision` \(`family:revision`\) or full ARN of the task definition to run in your service\. If a `revision` isn't specified, the latest `ACTIVE` revision is used\.  
 A task definition must be specified if the service uses either the `ECS` or `CODE_DEPLOY` deployment controllers\.  
+For more information about deployment types, see [Amazon ECS deployment types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html)\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

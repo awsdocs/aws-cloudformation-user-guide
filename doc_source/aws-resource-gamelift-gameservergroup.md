@@ -120,7 +120,7 @@ The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when b
 `LaunchTemplate`  <a name="cfn-gamelift-gameservergroup-launchtemplate"></a>
 The Amazon EC2 launch template that contains configuration settings and game server code to be deployed to all instances in the game server group\. You can specify the template using either the template name or ID\. For help with creating a launch template, see [Creating a Launch Template for an Auto Scaling Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html) in the *Amazon Elastic Compute Cloud Auto Scaling User Guide*\. After the Auto Scaling group is created, update this value directly in the Auto Scaling group using the AWS console or APIs\.  
 If you specify network interfaces in your launch template, you must explicitly set the property `AssociatePublicIpAddress` to "true"\. If no network interface is specified in the launch template, Amazon GameLift FleetIQ uses your account's default VPC\.
-*Required*: Yes  
+*Required*: No  
 *Type*: [LaunchTemplate](aws-properties-gamelift-gameservergroup-launchtemplate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

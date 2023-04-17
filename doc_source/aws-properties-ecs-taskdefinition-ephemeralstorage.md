@@ -3,7 +3,8 @@
 The amount of ephemeral storage to allocate for the task\. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate\. For more information, see [Fargate task storage](https://docs.aws.amazon.com/AmazonECS/latest/userguide/using_data_volumes.html) in the *Amazon ECS User Guide for AWS Fargate *\.
 
 **Note**  
-This parameter is only supported for tasks hosted on Fargate using Linux platform version `1.4.0` or later\. This parameter is not supported for Windows containers on Fargate\.
+For tasks using the Fargate launch type, the task requires the following platforms:  
+Linux platform version `1.4.0` or later\.
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-ephemeralstorage-syntax"></a>
 

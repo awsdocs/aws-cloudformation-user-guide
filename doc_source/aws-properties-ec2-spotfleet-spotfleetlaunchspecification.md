@@ -141,7 +141,7 @@ The ID of the RAM disk\. Some kernels require additional drivers at launch\. Che
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SecurityGroups`  <a name="cfn-ec2-spotfleet-spotfleetlaunchspecification-securitygroups"></a>
-One or more security groups\. When requesting instances in a VPC, you must specify the IDs of the security groups\. When requesting instances in EC2\-Classic, you can specify the names or the IDs of the security groups\.  
+The security groups\.  
 *Required*: No  
 *Type*: List of [GroupIdentifier](aws-properties-ec2-spotfleet-groupidentifier.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

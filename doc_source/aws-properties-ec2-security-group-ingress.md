@@ -90,8 +90,7 @@ Use this for ICMP and any protocol that uses ports\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `GroupId`  <a name="cfn-ec2-security-group-ingress-groupid"></a>
-The ID of the security group\. You must specify either the security group ID or the security group name in the request\. For security groups in a nondefault VPC, you must specify the security group ID\.  
-You must specify the `GroupName` property or the `GroupId` property\. For security groups that are in a VPC, you must use the `GroupId` property\.  
+The ID of the security group\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -99,8 +98,7 @@ You must specify the `GroupName` property or the `GroupId` property\. For securi
 `GroupName`  <a name="cfn-ec2-security-group-ingress-groupname"></a>
 The name of the security group\.  
 Constraints: Up to 255 characters in length\. Cannot start with `sg-`\.  
-Constraints for EC2\-Classic: ASCII characters  
-Constraints for EC2\-VPC: a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=&;\{\}\!$\*  
+Valid characters: a\-z, A\-Z, 0\-9, spaces, and \.\_\-:/\(\)\#,@\[\]\+=&;\{\}\!$\*  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -113,7 +111,7 @@ The IP protocol name \(`tcp`, `udp`, `icmp`, `icmpv6`\) or number \(see [Protoco
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourcePrefixListId`  <a name="cfn-ec2-securitygroupingress-sourceprefixlistid"></a>
-\[EC2\-VPC only\] The ID of a prefix list\.  
+The ID of a prefix list\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -125,8 +123,8 @@ The ID of the security group\. You must specify either the security group ID or 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceSecurityGroupName`  <a name="cfn-ec2-security-group-ingress-sourcesecuritygroupname"></a>
-\[EC2\-Classic, default VPC\] The name of the source security group\. You can't specify this parameter in combination with an IP address range\. Creates rules that grant full ICMP, UDP, and TCP access\.  
-You must specify the `GroupName` property or the `GroupId` property\. For security groups that are in a VPC, you must use the `GroupId` property\.  
+\[Default VPC\] The name of the source security group\. You must specify either the security group ID or the security group name\. You can't specify the group name in combination with an IP address range\. Creates rules that grant full ICMP, UDP, and TCP access\.  
+For security groups in a nondefault VPC, you must specify the group ID\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

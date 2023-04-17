@@ -1,6 +1,8 @@
 # AWS::Transfer::Workflow TagStepDetails<a name="aws-properties-transfer-workflow-tagstepdetails"></a>
 
-<a name="aws-properties-transfer-workflow-tagstepdetails-description"></a>The `TagStepDetails` property type specifies Property description not available\. for an [AWS::Transfer::Workflow](aws-resource-transfer-workflow.md)\.
+Details for a step that creates one or more tags\.
+
+You specify one or more tags\. Each tag contains a key\-value pair\.
 
 ## Syntax<a name="aws-properties-transfer-workflow-tagstepdetails-syntax"></a>
 
@@ -28,19 +30,21 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-transfer-workflow-tagstepdetails-properties"></a>
 
 `Name`  <a name="cfn-transfer-workflow-tagstepdetails-name"></a>
-Property description not available\.  
+The name of the step, used as an identifier\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceFileLocation`  <a name="cfn-transfer-workflow-tagstepdetails-sourcefilelocation"></a>
-Property description not available\.  
+Specifies which file to use as input to the workflow step: either the output from the previous step, or the originally uploaded file for the workflow\.  
++ To use the previous file as the input, enter `${previous.file}`\. In this case, this workflow step uses the output file from the previous workflow step as input\. This is the default value\.
++ To use the originally uploaded file location as input for this step, enter `${original.file}`\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-transfer-workflow-tagstepdetails-tags"></a>
-Property description not available\.  
+Array that contains from 1 to 10 key/value pairs\.  
 *Required*: No  
 *Type*: List of [S3Tag](aws-properties-transfer-workflow-s3tag.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

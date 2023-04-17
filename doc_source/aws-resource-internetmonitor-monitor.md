@@ -23,8 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ResourcesToAdd](#cfn-internetmonitor-monitor-resourcestoadd)" : [ String, ... ],
       "[ResourcesToRemove](#cfn-internetmonitor-monitor-resourcestoremove)" : [ String, ... ],
       "[Status](#cfn-internetmonitor-monitor-status)" : String,
-      "[Tags](#cfn-internetmonitor-monitor-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
-      "[TrafficPercentageToMonitor](#cfn-internetmonitor-monitor-trafficpercentagetomonitor)" : Integer
+      "[Tags](#cfn-internetmonitor-monitor-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -47,7 +46,6 @@ Properties:
   [Status](#cfn-internetmonitor-monitor-status): String
   [Tags](#cfn-internetmonitor-monitor-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-  [TrafficPercentageToMonitor](#cfn-internetmonitor-monitor-trafficpercentagetomonitor): Integer
 ```
 
 ## Properties<a name="aws-resource-internetmonitor-monitor-properties"></a>
@@ -68,7 +66,7 @@ For more information, see [ Choosing a city\-network maximum value](https://docs
 
 `MonitorName`  <a name="cfn-internetmonitor-monitor-monitorname"></a>
 The name of the monitor\. A monitor name can contain only alphanumeric characters, dashes \(\-\), periods \(\.\), and underscores \(\_\)\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -102,12 +100,6 @@ The status of a monitor\. The accepted values that you can specify for `Status` 
 The tags for a monitor, listed as a set of *key:value* pairs\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
-
-`TrafficPercentageToMonitor`  <a name="cfn-internetmonitor-monitor-trafficpercentagetomonitor"></a>
-Property description not available\.  
-*Required*: No  
-*Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-internetmonitor-monitor-return-values"></a>

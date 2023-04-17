@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-sagemaker-domain-defaultspacesettings-properties"></a>
 
 `ExecutionRole`  <a name="cfn-sagemaker-domain-defaultspacesettings-executionrole"></a>
-The execution role for the space\.  
+The ARN of the execution role for the space\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  
@@ -53,7 +53,7 @@ The KernelGateway app settings\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroups`  <a name="cfn-sagemaker-domain-defaultspacesettings-securitygroups"></a>
-The security groups for the Amazon Virtual Private Cloud that the space uses for communication\.  
+The security group IDs for the Amazon Virtual Private Cloud that the space uses for communication\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `5`  

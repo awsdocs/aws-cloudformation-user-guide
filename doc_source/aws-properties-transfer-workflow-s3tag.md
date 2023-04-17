@@ -1,6 +1,6 @@
 # AWS::Transfer::Workflow S3Tag<a name="aws-properties-transfer-workflow-s3tag"></a>
 
-<a name="aws-properties-transfer-workflow-s3tag-description"></a>The `S3Tag` property type specifies Property description not available\. for an [AWS::Transfer::Workflow](aws-resource-transfer-workflow.md)\.
+Specifies the key\-value pair that are assigned to a file during the execution of a Tagging step\.
 
 ## Syntax<a name="aws-properties-transfer-workflow-s3tag-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-transfer-workflow-s3tag-properties"></a>
 
 `Key`  <a name="cfn-transfer-workflow-s3tag-key"></a>
-Property description not available\.  
+The name assigned to the tag that you create\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Value`  <a name="cfn-transfer-workflow-s3tag-value"></a>
-Property description not available\.  
+The value that corresponds to the key\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
