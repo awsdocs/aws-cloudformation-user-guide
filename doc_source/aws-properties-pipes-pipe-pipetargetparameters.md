@@ -89,6 +89,7 @@ These are custom parameter to be used when the target is an API Gateway REST API
 
 `InputTemplate`  <a name="cfn-pipes-pipe-pipetargetparameters-inputtemplate"></a>
 Valid JSON text passed to the target\. In this case, nothing from the event itself is passed to the target\. For more information, see [The JavaScript Object Notation \(JSON\) Data Interchange Format](http://www.rfc-editor.org/rfc/rfc7159.txt)\.  
+To remove an input template, specify an empty string\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

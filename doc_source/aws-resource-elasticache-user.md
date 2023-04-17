@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Engine](#cfn-elasticache-user-engine)" : String,
       "[NoPasswordRequired](#cfn-elasticache-user-nopasswordrequired)" : Boolean,
       "[Passwords](#cfn-elasticache-user-passwords)" : [ String, ... ],
+      "[Tags](#cfn-elasticache-user-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[UserId](#cfn-elasticache-user-userid)" : String,
       "[UserName](#cfn-elasticache-user-username)" : String
     }
@@ -36,6 +37,8 @@ Properties:
   [NoPasswordRequired](#cfn-elasticache-user-nopasswordrequired): Boolean
   [Passwords](#cfn-elasticache-user-passwords): 
     - String
+  [Tags](#cfn-elasticache-user-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UserId](#cfn-elasticache-user-userid): String
   [UserName](#cfn-elasticache-user-username): String
 ```
@@ -79,6 +82,12 @@ Indicates a password is not required for this user\.
 Passwords used for this user\. You can create up to two passwords for each user\.  
 *Required*: No  
 *Type*: List of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Tags`  <a name="cfn-elasticache-user-tags"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UserId`  <a name="cfn-elasticache-user-userid"></a>

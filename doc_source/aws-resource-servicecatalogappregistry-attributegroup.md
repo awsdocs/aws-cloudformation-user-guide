@@ -35,7 +35,7 @@ Properties:
 ## Properties<a name="aws-resource-servicecatalogappregistry-attributegroup-properties"></a>
 
 `Attributes`  <a name="cfn-servicecatalogappregistry-attributegroup-attributes"></a>
-A JSON string in the form of nested key\-value pairs that represent the attributes in the group and describes an application and its components\.  
+ A nested object in a JSON or YAML template that supports arbitrary definitions\. Represents the attributes in an attribute group that describes an application and its components\.   
 *Required*: Yes  
 *Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -66,13 +66,24 @@ Key\-value pairs you can use to associate with the attribute group\.
 
 ### Ref<a name="aws-resource-servicecatalogappregistry-attributegroup-return-values-ref"></a>
 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the id\.
+
+ 
+
+
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 ### Fn::GetAtt<a name="aws-resource-servicecatalogappregistry-attributegroup-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-servicecatalogappregistry-attributegroup-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The Arn for the attribute group\.  
-For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+ The Amazon resource name \(ARN\) that specifies the attribute group across services\. 
 
 `Id`  <a name="Id-fn::getatt"></a>
-The attribute group Id in the respective resource\.
+ The globally unique attribute group identifier of the attribute group\. 

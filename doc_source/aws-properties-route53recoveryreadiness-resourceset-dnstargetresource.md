@@ -44,7 +44,7 @@ The hosted zone Amazon Resource Name \(ARN\) that contains the DNS record with t
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RecordSetId`  <a name="cfn-route53recoveryreadiness-resourceset-dnstargetresource-recordsetid"></a>
-The Route 53 record set ID that uniquely identifies a DNS record, given a name and a type\.  
+The Amazon Route 53 record set ID that uniquely identifies a DNS record, given a name and a type\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

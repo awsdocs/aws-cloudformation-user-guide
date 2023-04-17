@@ -92,7 +92,7 @@ This example creates one pricing plan with a 10% global markup pricing rule\. Th
 85. }
 ```
 
-## YAML<a name="quickref-sns-example-1.yaml"></a>
+## YAML<a name="quickref-billingconductor-example-1.yaml"></a>
 
 ```
  1. Parameters:

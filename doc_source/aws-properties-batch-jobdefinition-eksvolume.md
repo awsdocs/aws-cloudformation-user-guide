@@ -10,10 +10,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
-  "[EmptyDir](#cfn-batch-jobdefinition-eksvolume-emptydir)" : EmptyDir,
-  "[HostPath](#cfn-batch-jobdefinition-eksvolume-hostpath)" : HostPath,
+  "[EmptyDir](#cfn-batch-jobdefinition-eksvolume-emptydir)" : EksEmptyDir,
+  "[HostPath](#cfn-batch-jobdefinition-eksvolume-hostpath)" : EksHostPath,
   "[Name](#cfn-batch-jobdefinition-eksvolume-name)" : String,
-  "[Secret](#cfn-batch-jobdefinition-eksvolume-secret)" : Secret
+  "[Secret](#cfn-batch-jobdefinition-eksvolume-secret)" : EksSecret
 }
 ```
 
@@ -21,12 +21,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [EmptyDir](#cfn-batch-jobdefinition-eksvolume-emptydir): 
-    EmptyDir
+    EksEmptyDir
   [HostPath](#cfn-batch-jobdefinition-eksvolume-hostpath): 
-    HostPath
+    EksHostPath
   [Name](#cfn-batch-jobdefinition-eksvolume-name): String
   [Secret](#cfn-batch-jobdefinition-eksvolume-secret): 
-    Secret
+    EksSecret
 ```
 
 ## Properties<a name="aws-properties-batch-jobdefinition-eksvolume-properties"></a>
@@ -34,13 +34,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `EmptyDir`  <a name="cfn-batch-jobdefinition-eksvolume-emptydir"></a>
 Specifies the configuration of a Kubernetes `emptyDir` volume\. For more information, see [emptyDir](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir) in the *Kubernetes documentation*\.  
 *Required*: No  
-*Type*: [EmptyDir](aws-properties-batch-jobdefinition-eksvolume-emptydir.md)  
+*Type*: [EksEmptyDir](aws-properties-batch-jobdefinition-eksemptydir.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HostPath`  <a name="cfn-batch-jobdefinition-eksvolume-hostpath"></a>
 Specifies the configuration of a Kubernetes `hostPath` volume\. For more information, see [hostPath](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath) in the *Kubernetes documentation*\.  
 *Required*: No  
-*Type*: [HostPath](aws-properties-batch-jobdefinition-eksvolume-hostpath.md)  
+*Type*: [EksHostPath](aws-properties-batch-jobdefinition-ekshostpath.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-batch-jobdefinition-eksvolume-name"></a>
@@ -52,5 +52,5 @@ The name of the volume\. The name must be allowed as a DNS subdomain name\. For 
 `Secret`  <a name="cfn-batch-jobdefinition-eksvolume-secret"></a>
 Specifies the configuration of a Kubernetes `secret` volume\. For more information, see [secret](https://kubernetes.io/docs/concepts/storage/volumes/#secret) in the *Kubernetes documentation*\.  
 *Required*: No  
-*Type*: [Secret](aws-properties-batch-jobdefinition-secret.md)  
+*Type*: [EksSecret](aws-properties-batch-jobdefinition-ekssecret.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

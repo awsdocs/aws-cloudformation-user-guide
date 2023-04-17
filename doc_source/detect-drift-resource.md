@@ -36,7 +36,7 @@ When performing drift detection on a resource, CloudFormation also updates the o
   The following example runs a drift detection operation on a specific stack resources, *my\-drifted\-resource*\. The response returns information that confirms the resource has been modified, including details about two of its properties whose values have been changed\.
 
   ```
-   1. PROMPT> aws cloudformation detect-stack-resource-drift --stack-name my-stack-with-resource-drift --logical-resource-id my-drifted-resource
+   1. $ aws cloudformation detect-stack-resource-drift --stack-name my-stack-with-resource-drift --logical-resource-id my-drifted-resource
    2. {
    3.     "StackResourceDrift": {
    4.         "StackId": "arn:aws:cloudformation:us-east-1:099908667365:stack/my-stack-with-resource-drift/489e5570-df85-11e7-a7d9-50example", 

@@ -57,7 +57,7 @@ Indicates how a message is selected from a message group among retries\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PromptAttemptsSpecification`  <a name="cfn-lex-bot-promptspecification-promptattemptsspecification"></a>
-Specifies the advanced settings on each attempt of the prompt\.  
+Specifies the advanced settings on each attempt of the prompt\. The valid keys are `Initial`, `Retry1`, `Retry2`, `Retry3`, `Retry4`, and `Retry5`\.  
 *Required*: No  
 *Type*: Map of [PromptAttemptSpecification](aws-properties-lex-bot-promptattemptspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

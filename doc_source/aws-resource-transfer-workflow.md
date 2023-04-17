@@ -78,7 +78,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-transfer-workflow-return-values-fn--getatt-fn--getatt"></a>
 
 `WorkflowId`  <a name="WorkflowId-fn::getatt"></a>
-A unique identifier for a workflow\.
+Property description not available\.
 
 ## Examples<a name="aws-resource-transfer-workflow--examples"></a>
 

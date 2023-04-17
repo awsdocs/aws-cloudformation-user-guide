@@ -1,9 +1,12 @@
 # AWS::Neptune::DBParameterGroup<a name="aws-resource-neptune-dbparametergroup"></a>
 
- `AWS::Neptune::DBParameterGroup` creates a new DB parameter group\. This type can be declared in a template and referenced in the `DBParameterGroupName` parameter of `AWS::Neptune::DBInstance`\.
+`AWS::Neptune::DBParameterGroup` creates a new DB parameter group\. This type can be declared in a template and referenced in the `DBParameterGroupName` parameter of `AWS::Neptune::DBInstance`\.
 
 **Note**  
 Applying a parameter group to a DB instance might require the instance to reboot, resulting in a database outage for the duration of the reboot\.
+
+**Note**  
+If you provide a custom `DBParameterGroup` that you associate with `DBInstance`, it is best to specify an `EngineVersion` property in `DBCluster`\. That `EngineVersion` needs to be compatible with the value of the `Family` property in the `DBParameterGroup`\.
 
 A DB parameter group is initially created with the default parameters for the database engine used by the DB instance\. To provide custom values for any of the parameters, you must modify the group after creating it using *ModifyDBParameterGroup*\. Once you've created a DB parameter group, you need to associate it with your DB instance using *ModifyDBInstance*\. When you associate a new DB parameter group with a running DB instance, you need to reboot the DB instance without failover for the new DB parameter group and associated settings to take effect\.
 

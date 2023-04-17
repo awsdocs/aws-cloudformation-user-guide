@@ -1,6 +1,6 @@
 # AWS::Route53RecoveryReadiness::ResourceSet R53ResourceRecord<a name="aws-properties-route53recoveryreadiness-resourceset-r53resourcerecord"></a>
 
-The Route 53 resource that a DNS target resource record points to\.
+The Amazon Route 53 resource that a DNS target resource record points to\.
 
 ## Syntax<a name="aws-properties-route53recoveryreadiness-resourceset-r53resourcerecord-syntax"></a>
 
@@ -31,7 +31,7 @@ The DNS target domain name\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RecordSetId`  <a name="cfn-route53recoveryreadiness-resourceset-r53resourcerecord-recordsetid"></a>
-The Route 53 Resource Record Set ID\.  
+The Amazon Route 53 Resource Record Set ID\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -120,20 +120,17 @@ For more information about using the Ref function, see [Ref](https://docs.aws.am
 `CreatedBy.DomainId`  <a name="CreatedBy.DomainId-fn::getatt"></a>
 Property description not available\.
 
-`CreatedBy.UserProfileArn`  <a name="CreatedBy.UserProfileArn-fn::getatt"></a>
-Property description not available\.
-
-`CreationTime`  <a name="CreationTime-fn::getatt"></a>
-Property description not available\.
-
-`LastModifiedBy.DomainId`  <a name="LastModifiedBy.DomainId-fn::getatt"></a>
-Property description not available\.
-
 `LastModifiedBy.UserProfileArn`  <a name="LastModifiedBy.UserProfileArn-fn::getatt"></a>
 Property description not available\.
 
+`LastModifiedTime`  <a name="LastModifiedTime-fn::getatt"></a>
+Property description not available\.
+
 `ModelCardArn`  <a name="ModelCardArn-fn::getatt"></a>
-The Amazon Resource Number \(ARN\) of the model card\. For example, `arn:aws:sagemaker:us-west-2:012345678901:modelcard/examplemodelcard`\.
+Property description not available\.
 
 `ModelCardProcessingStatus`  <a name="ModelCardProcessingStatus-fn::getatt"></a>
+Property description not available\.
+
+`ModelCardVersion`  <a name="ModelCardVersion-fn::getatt"></a>
 Property description not available\.

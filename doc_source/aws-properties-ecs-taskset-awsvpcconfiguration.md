@@ -1,6 +1,6 @@
 # AWS::ECS::TaskSet AwsVpcConfiguration<a name="aws-properties-ecs-taskset-awsvpcconfiguration"></a>
 
-The networking details for a task\.
+An object representing the networking details for a task or service\.
 
 ## Syntax<a name="aws-properties-ecs-taskset-awsvpcconfiguration-syntax"></a>
 

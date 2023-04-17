@@ -19,7 +19,7 @@ Application Auto Scaling provides automatic scaling of different resources beyon
 
 ## Declaring a launch template with user data and an IAM Role<a name="scenario-as-launch-template"></a>
 
-This snippet shows an [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) resource that contains the instance configuration information for an Auto Scaling group\. You specify values for the `ImageId`, `InstanceType`, `SecurityGroups`, `UserData`, and `TagSpecifications` properties\. The `SecurityGroups` property specifies an existing EC2 security group named `myExistingEC2SecurityGroup` and a new security group\. The [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function gets the name of the [AWS::EC2::SecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html) resource `myNewEC2SecurityGroup` that's declared elsewhere in the stack template\. 
+This snippet shows an [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html) resource that contains the instance configuration information for an Auto Scaling group\. You specify values for the `ImageId`, `InstanceType`, `SecurityGroups`, `UserData`, and `TagSpecifications` properties\. The `SecurityGroups` property specifies an existing EC2 security group and a new security group\. The [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html) function gets the ID of the [AWS::EC2::SecurityGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html) resource `myNewEC2SecurityGroup` that's declared elsewhere in the stack template\. 
 
 The launch template includes a section for custom user data\. You can pass in configuration tasks and scripts that run when an instance launches in this section\. In this example, the user data installs the AWS Systems Manager Agent and starts the agent\.
 
@@ -42,11 +42,11 @@ The launch template also includes an IAM role that allows applications running o
 12.               "Ref":"myInstanceProfile"
 13.             }
 14.           },
-15.           "SecurityGroups":[
+15.           "SecurityGroupIds":[
 16.             {
 17.               "Ref":"myNewEC2SecurityGroup"
 18.             },
-19.             "myExistingEC2SecurityGroup"
+19.             "sg-083cd3bfb8example"
 20.           ],
 21.           "UserData":{
 22.             "Fn::Base64":{
@@ -138,9 +138,9 @@ The launch template also includes an IAM role that allows applications running o
  9.         InstanceType: t3.micro
 10.         IamInstanceProfile:
 11.           Name: !Ref myInstanceProfile
-12.         SecurityGroups:
-13.         - Ref! myNewEC2SecurityGroup
-14.         - myExistingEC2SecurityGroup
+12.         SecurityGroupIds:
+13.         - !Ref myNewEC2SecurityGroup
+14.         - sg-083cd3bfb8example
 15.         UserData:
 16.           Fn::Base64:!Sub |
 17.             #!/bin/bash
@@ -180,7 +180,7 @@ The launch template also includes an IAM role that allows applications running o
 51.       - !Ref myInstanceRole
 ```
 
-### See also<a name="scenario-as-group-see-also"></a>
+### See also<a name="scenario-as-launch-template-see-also"></a>
 
 For more examples of launch templates, see the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate--examples) section in the `AWS::EC2::LaunchTemplate` resource and the [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples) section in the `AWS::AutoScaling::AutoScalingGroup` resource\.
 
@@ -362,7 +362,7 @@ The `VPCZoneIdentifier` property of the Auto Scaling group specifies a list of e
 
 ## Declaring an Auto Scaling group with a CreationPolicy and an UpdatePolicy<a name="scenario-as-updatepolicy"></a>
 
-The following example shows how to add [`CreationPolicy`](aws-attribute-creationpolicy.md) and [`UpdatePolicy`](aws-attribute-updatepolicy.md) attributes to an [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.
+The following example shows how to add [`CreationPolicy` attribute`CreationPolicy`](aws-attribute-creationpolicy.md) and [`UpdatePolicy`](aws-attribute-updatepolicy.md) attributes to an [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) resource\.
 
 The sample creation policy prevents the Auto Scaling group from reaching `CREATE_COMPLETE` status until AWS CloudFormation receives `Count` number of success signals when the group is ready\. To signal that the Auto Scaling group is ready, a [cfn\-signal](cfn-signal.md) helper script added to the launch template's user data \(not shown\) is run on the instances\. If the instances don't send a signal within the specified `Timeout`, CloudFormation assumes that the instances were not created, the resource creation fails, and CloudFormation rolls the stack back\.
 
@@ -533,7 +533,7 @@ The [AWS::CloudWatch::Alarm](https://docs.aws.amazon.com/AWSCloudFormation/lates
 23.       Dimensions:
 24.       - Name: AutoScalingGroupName
 25.         Value:
-26.           Ref! logicalName
+26.           !Ref logicalName
 27.       ComparisonOperator: GreaterThanThreshold
 28.       MetricName: CPUUtilization
 ```
@@ -657,7 +657,7 @@ This example shows an [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.a
 4.     ImageId: ami-02354e95b3example
 5.     InstanceType: t3.micro
 6.     SecurityGroups:
-7.     - Ref! logicalName
+7.     - !Ref logicalName
 8.     - myExistingEC2SecurityGroup
 ```
 
@@ -701,18 +701,18 @@ This example shows an [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amaz
 This section provides AWS CloudFormation template examples for Application Auto Scaling scaling policies and scheduled actions for different AWS resources\.
 
 **Topics**
-+ [Declaring a scaling policy for an AppStream fleet](#w2ab1c23c21c15c33b9)
-+ [Declaring a scaling policy for an Aurora DB cluster](#w2ab1c23c21c15c33c11)
-+ [Declaring a scaling policy for a DynamoDB table](#w2ab1c23c21c15c33c13)
-+ [Declaring a scaling policy for an Amazon ECS service \(metrics: average CPU and memory\)](#w2ab1c23c21c15c33c15)
-+ [Declaring a scaling policy for an Amazon ECS service \(metric: average request count per target\)](#w2ab1c23c21c15c33c17)
-+ [Declaring a scheduled action with a cron expression for a Lambda function](#w2ab1c23c21c15c33c19)
-+ [Declaring a scheduled action with an `at` expression for a Spot Fleet](#w2ab1c23c21c15c33c21)
++ [Declaring a scaling policy for an AppStream fleet](#w4ab1c23c21c15c33b9)
++ [Declaring a scaling policy for an Aurora DB cluster](#w4ab1c23c21c15c33c11)
++ [Declaring a scaling policy for a DynamoDB table](#w4ab1c23c21c15c33c13)
++ [Declaring a scaling policy for an Amazon ECS service \(metrics: average CPU and memory\)](#w4ab1c23c21c15c33c15)
++ [Declaring a scaling policy for an Amazon ECS service \(metric: average request count per target\)](#w4ab1c23c21c15c33c17)
++ [Declaring a scheduled action with a cron expression for a Lambda function](#w4ab1c23c21c15c33c19)
++ [Declaring a scheduled action with an `at` expression for a Spot Fleet](#w4ab1c23c21c15c33c21)
 
 **Important**  
 When an Application Auto Scaling snippet is included in the template, you might need to declare a dependency on the specific scalable resource that's created through the template using the [DependsOn](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html) attribute\. This overrides the default parallelism and directs AWS CloudFormation to operate on resources in a specified order\. Otherwise, the scaling configuration might be applied before the resource has been set up completely\.
 
-### Declaring a scaling policy for an AppStream fleet<a name="w2ab1c23c21c15c33b9"></a>
+### Declaring a scaling policy for an AppStream fleet<a name="w4ab1c23c21c15c33b9"></a>
 
 This snippet shows how to create a policy and apply it to an [AWS::AppStream::Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html) resource using the [AWS::ApplicationAutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html) resource\. The [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html) resource declares a scalable target to which this policy is applied\. Application Auto Scaling can scale the number of fleet instances at a minimum of 1 instance and a maximum of 20\. The policy keeps the average capacity utilization of the fleet at 75 percent, with scale\-out and scale\-in cooldown periods of 300 seconds \(5 minutes\)\.
 
@@ -813,7 +813,7 @@ Resources:
         ScaleOutCooldown: 300
 ```
 
-### Declaring a scaling policy for an Aurora DB cluster<a name="w2ab1c23c21c15c33c11"></a>
+### Declaring a scaling policy for an Aurora DB cluster<a name="w4ab1c23c21c15c33c11"></a>
 
 In this snippet, you register an [AWS::RDS::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html) resource\. The [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html) resource indicates that the DB cluster should be dynamically scaled to have from one to eight Aurora Replicas\. You also apply a target tracking scaling policy to the cluster using the [AWS::ApplicationAutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html) resource\.
 
@@ -890,7 +890,7 @@ Resources:
         ScaleOutCooldown: 300
 ```
 
-### Declaring a scaling policy for a DynamoDB table<a name="w2ab1c23c21c15c33c13"></a>
+### Declaring a scaling policy for a DynamoDB table<a name="w4ab1c23c21c15c33c13"></a>
 
 This snippet shows how to create a policy with the `TargetTrackingScaling` policy type and apply it to an [AWS::DynamoDB::Table](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html) resource using the [AWS::ApplicationAutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html) resource\. The [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html) resource declares a scalable target to which this policy is applied, with a minimum of five write capacity units and a maximum of 15\. The scaling policy scales the table's write capacity throughput to maintain the target utilization at 50 percent based on the `DynamoDBWriteCapacityUtilization` predefined metric\.
 
@@ -977,7 +977,7 @@ Resources:
           PredefinedMetricType: DynamoDBWriteCapacityUtilization
 ```
 
-### Declaring a scaling policy for an Amazon ECS service \(metrics: average CPU and memory\)<a name="w2ab1c23c21c15c33c15"></a>
+### Declaring a scaling policy for an Amazon ECS service \(metrics: average CPU and memory\)<a name="w4ab1c23c21c15c33c15"></a>
 
 This snippet shows how to create a policy and apply it to an [AWS::ECS::Service](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html) resource using the [AWS::ApplicationAutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html) resource\. The [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html) resource declares a scalable target to which this policy is applied\. Application Auto Scaling can scale the number of tasks at a minimum of 1 task and a maximum of 6\.
 
@@ -1096,7 +1096,7 @@ Resources:
           PredefinedMetricType: ECSServiceAverageMemoryUtilization
 ```
 
-### Declaring a scaling policy for an Amazon ECS service \(metric: average request count per target\)<a name="w2ab1c23c21c15c33c17"></a>
+### Declaring a scaling policy for an Amazon ECS service \(metric: average request count per target\)<a name="w4ab1c23c21c15c33c17"></a>
 
 The following example applies a target tracking scaling policy with the `ALBRequestCountPerTarget` predefined metric to an ECS service\. The policy is used to add capacity to the ECS service when the request count per target \(per minute\) exceeds the target value\. Because the value of `DisableScaleIn` is set to `true`, the target tracking policy won't remove capacity from the scalable target\.
 
@@ -1214,7 +1214,7 @@ Resources:
               - !GetAtt myTargetGroup.TargetGroupFullName
 ```
 
-### Declaring a scheduled action with a cron expression for a Lambda function<a name="w2ab1c23c21c15c33c19"></a>
+### Declaring a scheduled action with a cron expression for a Lambda function<a name="w4ab1c23c21c15c33c19"></a>
 
 This snippet registers the provisioned concurrency for a function alias \([AWS::Lambda::Alias](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html)\) named `BLUE` using the [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html) resource\. It also creates a scheduled action with a recurring schedule using a cron expression\. The time zone for the recurring schedule is UTC\.
 
@@ -1287,7 +1287,7 @@ ScalableTarget:
         EndTime: '2022-12-31T12:00:00.000Z'
 ```
 
-### Declaring a scheduled action with an `at` expression for a Spot Fleet<a name="w2ab1c23c21c15c33c21"></a>
+### Declaring a scheduled action with an `at` expression for a Spot Fleet<a name="w4ab1c23c21c15c33c21"></a>
 
 This snippet shows how to create two scheduled actions that occur only once for an [AWS::EC2::SpotFleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html) resource using the [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html) resource\. The time zone for each one\-time scheduled action is UTC\.
 

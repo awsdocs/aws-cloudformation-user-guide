@@ -78,8 +78,8 @@ The labels that one or more rules in this rule group match against in label matc
 
 `CustomResponseBodies`  <a name="cfn-wafv2-rulegroup-customresponsebodies"></a>
 A map of custom response keys and content bodies\. When you create a rule with a block action, you can send a custom response to the web request\. You define these for the rule group, and then use them in the rules that you define in the rule group\.   
-For information about customizing web requests and responses, see [Customizing web requests and responses in AWS WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html) in the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\.   
-For information about the limits on count and size for custom request and response settings, see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\.   
+For information about customizing web requests and responses, see [Customizing web requests and responses in AWS WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html) in the * AWS WAF Developer Guide*\.   
+For information about the limits on count and size for custom request and response settings, see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the * AWS WAF Developer Guide*\.   
 *Required*: No  
 *Type*: Map of [CustomResponseBody](aws-properties-wafv2-rulegroup-customresponsebody.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -109,7 +109,7 @@ The rule statements used to identify the web requests that you want to allow, bl
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scope`  <a name="cfn-wafv2-rulegroup-scope"></a>
-Specifies whether this is for an Amazon CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, an AWS AppSync GraphQL API, or an Amazon Cognito user pool\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
+Specifies whether this is for an Amazon CloudFront distribution or for a regional application\. A regional application can be an Application Load Balancer \(ALB\), an Amazon API Gateway REST API, an AWS AppSync GraphQL API, an Amazon Cognito user pool, or an AWS App Runner service\. Valid Values are `CLOUDFRONT` and `REGIONAL`\.  
 For `CLOUDFRONT`, you must create your WAFv2 resources in the US East \(N\. Virginia\) Region, `us-east-1`\.
 *Required*: Yes  
 *Type*: String  

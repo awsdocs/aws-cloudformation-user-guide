@@ -1,6 +1,6 @@
 # AWS::ECS::TaskDefinition KeyValuePair<a name="aws-properties-ecs-taskdefinition-keyvaluepair"></a>
 
-The `KeyValuePair` property specifies a key\-value pair object\.
+A key\-value pair object\.
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-keyvaluepair-syntax"></a>
 

@@ -91,3 +91,10 @@ For more information, see [Tagging AWS resources](https://docs.aws.amazon.com/ge
 When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the app monitor\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
+### Fn::GetAtt<a name="aws-resource-rum-appmonitor-return-values-fn--getatt"></a>
+
+#### <a name="aws-resource-rum-appmonitor-return-values-fn--getatt-fn--getatt"></a>
+
+`Id`  <a name="Id-fn::getatt"></a>
+The ID of the app monitor, such as `123456ab-1234-4ca9-9d2f-a1b2c3456789`\.

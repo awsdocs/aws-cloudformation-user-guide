@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `Content`  <a name="cfn-wafv2-webacl-customresponsebody-content"></a>
 The payload of the custom response\.   
 You can use JSON escape strings in JSON content\. To do this, you must specify JSON content in the `ContentType` setting\.   
-For information about the limits on count and size for custom request and response settings, see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html)\.   
+For information about the limits on count and size for custom request and response settings, see [AWS WAF quotas](https://docs.aws.amazon.com/waf/latest/developerguide/limits.html) in the * AWS WAF Developer Guide*\.   
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

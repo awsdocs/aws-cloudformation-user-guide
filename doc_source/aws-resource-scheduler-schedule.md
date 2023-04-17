@@ -1,6 +1,12 @@
 # AWS::Scheduler::Schedule<a name="aws-resource-scheduler-schedule"></a>
 
-Creates the specified schedule\.
+ A *schedule* is the main resource you create, configure, and manage using Amazon EventBridge Scheduler\. 
+
+ Every schedule has a *schedule expression* that determines when, and with what frequency, the schedule runs\. EventBridge Scheduler supports three types of schedules: rate, cron, and one\-time schedules\. For more information about different schedule types, see [Schedule types](https://docs.aws.amazon.com/scheduler/latest/UserGuide/schedule-types.html) in the * EventBridge Scheduler User Guide*\. 
+
+ When you create a schedule, you configure a target for the schedule to invoke\. A target is an API operation that EventBridge Scheduler calls on your behalf every time your schedule runs\. EventBridge Scheduler supports two types of targets: *templated* targets invoke common API operations across a core groups of services, and customizeable *universal* targets that you can use to call more than 6,000 operations across over 270 services\. For more information about configuring targets, see [Managing targets](https://docs.aws.amazon.com/scheduler/latest/UserGuide/managing-targets.html) in the * EventBridge Scheduler User Guide*\. 
+
+ For more information about managing schedules, changing the schedule state, setting up flexible time windows, and configuring a dead\-letter queue for a schedule, see [Managing a schedule](https://docs.aws.amazon.com/scheduler/latest/UserGuide/managing-schedule.html) in the *EventBridge Scheduler User Guide*\. 
 
 ## Syntax<a name="aws-resource-scheduler-schedule-syntax"></a>
 
@@ -112,6 +118,7 @@ The date, in UTC, after which the schedule can begin invoking its target\. Depen
 
 `State`  <a name="cfn-scheduler-schedule-state"></a>
 Specifies whether the schedule is enabled or disabled\.  
+*Allowed Values*: `ENABLED` \| `DISABLED`  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

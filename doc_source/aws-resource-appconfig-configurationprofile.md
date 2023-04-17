@@ -79,7 +79,8 @@ A description of the configuration profile\.
 A URI to locate the configuration\. You can specify the following:  
 + For the AWS AppConfig hosted configuration store and for feature flags, specify `hosted`\.
 + For an AWS Systems Manager Parameter Store parameter, specify either the parameter name in the format `ssm-parameter://<parameter name>` or the ARN\.
-+ For an AWS Secrets Manager secret, specify the URI in the following format: `secrets-manager`://<secret name>\.
++ For an AWS CodePipeline pipeline, specify the URI in the following format: `codepipeline`://<pipeline name>\.
++ For an AWS Secrets Manager secret, specify the URI in the following format: `secretsmanager`://<secret name>\.
 + For an Amazon S3 object, specify the URI in the following format: `s3://<bucket>/<objectKey> `\. Here is an example: `s3://my-bucket/my-app/us-east-1/my-config.json` 
 + For an SSM document, specify either the document name in the format `ssm-document://<document name>` or the Amazon Resource Name \(ARN\)\.
 *Required*: Yes  
@@ -137,6 +138,143 @@ When you pass the logical ID of this resource to the intrinsic `Ref` function, `
 ## Examples<a name="aws-resource-appconfig-configurationprofile--examples"></a>
 
 
+
+### AWS AppConfig feature flag<a name="aws-resource-appconfig-configurationprofile--examples--_feature_flag"></a>
+
+The following example creates an AWS AppConfig configuration profile of type `HostedConfigurationVersion`\. The feature flag created by this example enables cryptocurrency at checkout\. AWS AppConfig stores the configuration data for this profile in the AWS AppConfig hosted configuration store\.
+
+#### JSON<a name="aws-resource-appconfig-configurationprofile--examples--_feature_flag--json"></a>
+
+```
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Transform": "AWS::LanguageExtensions",
+  "Resources": {
+    "MySuperCoolApp": {
+      "Type": "AWS::AppConfig::Application",
+      "Properties": {
+        "Name": "MySuperCoolApp"
+      }
+    },
+    "MyFeatureFlags": {
+      "Type": "AWS::AppConfig::ConfigurationProfile",
+      "Properties": {
+        "Name": "MyFeatureFlags",
+        "ApplicationId": "MySuperCoolApp",
+        "LocationUri": "hosted",
+        "Type": "AWS.AppConfig.FeatureFlags"
+      }
+    },
+    "MyFeatureFlagsVersion": {
+      "Type": "AWS::AppConfig::HostedConfigurationVersion",
+      "Properties": {
+        "ApplicationId": "MySuperCoolApp",
+        "ConfigurationProfileId": "MyFeatureFlags",
+        "ContentType": "application/json",
+        "VersionLabel": "v1.0.0",
+        "Content": {
+          "Fn::ToJsonString": {
+            "flags": {
+              "allow-cryptocurrency-at-checkout": {
+                "attributes": {
+                  "allowed-currency": {
+                    "constraints": {
+                      "elements": {
+                        "enum": [
+                          "BTC",
+                          "ETH",
+                          "XRP"
+                        ],
+                        "type": "string"
+                      },
+                      "type": "array"
+                    }
+                  },
+                  "bitcoin-discount-percentage": {
+                    "constraints": {
+                      "maximum": 25,
+                      "minimum": 0,
+                      "type": "number"
+                    }
+                  }
+                },
+                "name": "Allow Cryptocurrency at Checkout"
+              }
+            },
+            "values": {
+              "allow-cryptocurrency-at-checkout": {
+                "allowed-currency": [
+                  "BTC",
+                  "ETH"
+                ],
+                "bitcoin-discount-percentage": 5,
+                "enabled": true
+              }
+            },
+            "version": "1"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+#### YAML<a name="aws-resource-appconfig-configurationprofile--examples--_feature_flag--yaml"></a>
+
+```
+AWSTemplateFormatVersion: 2010-09-09
+Transform: 'AWS::LanguageExtensions'
+Resources:
+  MySuperCoolApp:
+    Type: 'AWS::AppConfig::Application'
+    Properties:
+      Name: MySuperCoolApp
+
+  MyFeatureFlags:
+    Type: 'AWS::AppConfig::ConfigurationProfile'
+    Properties:
+      Name: MyFeatureFlags
+      ApplicationId: !Ref MySuperCoolApp
+      LocationUri: hosted
+      Type: AWS.AppConfig.FeatureFlags
+
+  MyFeatureFlagsVersion:
+    Type: 'AWS::AppConfig::HostedConfigurationVersion'
+    Properties:
+      ApplicationId: !Ref MySuperCoolApp
+      ConfigurationProfileId: !Ref MyFeatureFlags
+      ContentType: application/json
+      VersionLabel: "v1.0.0"
+      Content: 
+        Fn::ToJsonString:
+            flags:
+              allow-cryptocurrency-at-checkout:
+                attributes:
+                  allowed-currency:
+                    constraints:
+                      elements:
+                        enum:
+                          - BTC
+                          - ETH
+                          - XRP
+                        type: string
+                      type: array
+                  bitcoin-discount-percentage:
+                    constraints:
+                      maximum: 25
+                      minimum: 0
+                      type: number
+                name: Allow Cryptocurrency at Checkout
+            values:
+              allow-cryptocurrency-at-checkout:
+                allowed-currency:
+                  - BTC
+                  - ETH
+                bitcoin-discount-percentage: 5
+                enabled: true
+            version: '1'
+```
 
 ### AWS AppConfig configuration profile example \- AWS CodePipeline<a name="aws-resource-appconfig-configurationprofile--examples--_configuration_profile_example_-_"></a>
 

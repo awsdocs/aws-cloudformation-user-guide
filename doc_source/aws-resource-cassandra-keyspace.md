@@ -1,6 +1,6 @@
 # AWS::Cassandra::Keyspace<a name="aws-resource-cassandra-keyspace"></a>
 
-The `AWS::Cassandra::Keyspace` resource allows you to create a new keyspace in Amazon Keyspaces \(for Apache Cassandra\)\. For more information, see [Create a keyspace and a table](https://docs.aws.amazon.com/keyspaces/latest/devguide/getting-started.ddl.html) in the *Amazon Keyspaces Developer Guide*\.
+You can use the `AWS::Cassandra::Keyspace` resource to create a new keyspace in Amazon Keyspaces \(for Apache Cassandra\)\. For more information, see [Create a keyspace and a table](https://docs.aws.amazon.com/keyspaces/latest/devguide/getting-started.ddl.html) in the *Amazon Keyspaces Developer Guide*\.
 
 ## Syntax<a name="aws-resource-cassandra-keyspace-syntax"></a>
 
@@ -58,11 +58,11 @@ For more information about using the `Ref` function, see [Ref](https://docs.aws.
 
 
 
-### Create a New Keyspace<a name="aws-resource-cassandra-keyspace--examples--Create_a_New_Keyspace"></a>
+### Create a new keyspace<a name="aws-resource-cassandra-keyspace--examples--Create_a_new_keyspace"></a>
 
-The following example creates a new keyspace named `MyNewKeyspace` with the following tags `{'key1':'val1', 'key2':'val2'}`:
+The following example creates a new keyspace named `MyNewKeyspace` with the following tags: `{'key1':'val1', 'key2':'val2'}`\.
 
-#### JSON<a name="aws-resource-cassandra-keyspace--examples--Create_a_New_Keyspace--json"></a>
+#### JSON<a name="aws-resource-cassandra-keyspace--examples--Create_a_new_keyspace--json"></a>
 
 ```
 {
@@ -79,7 +79,7 @@ The following example creates a new keyspace named `MyNewKeyspace` with the foll
 }
 ```
 
-#### YAML<a name="aws-resource-cassandra-keyspace--examples--Create_a_New_Keyspace--yaml"></a>
+#### YAML<a name="aws-resource-cassandra-keyspace--examples--Create_a_new_keyspace--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09

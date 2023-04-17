@@ -1,6 +1,6 @@
 # AWS::ECS::TaskDefinition VolumeFrom<a name="aws-properties-ecs-taskdefinition-volumefrom"></a>
 
-The `VolumeFrom` property specifies details on a data volume from another container in the same task definition\.
+Details on a data volume from another container in the same task definition\.
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-volumefrom-syntax"></a>
 

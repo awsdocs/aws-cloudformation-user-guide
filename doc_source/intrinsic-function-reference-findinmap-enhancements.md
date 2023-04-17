@@ -78,7 +78,7 @@ The following is an example of using intrinsic functions to define the top level
 17. }
 ```
 
-### YAML<a name="intrinsic-function-reference-findinmap-example.yaml"></a>
+### YAML<a name="intrinsic-function-reference-findinmap-enhance-example.yaml"></a>
 
 ```
 Transform: 'AWS::LanguageExtensions'

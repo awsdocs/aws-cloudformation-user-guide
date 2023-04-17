@@ -19,7 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Name](#cfn-codestarnotifications-notificationrule-name)" : String,
       "[Resource](#cfn-codestarnotifications-notificationrule-resource)" : String,
       "[Status](#cfn-codestarnotifications-notificationrule-status)" : String,
-      "[Tags](#cfn-codestarnotifications-notificationrule-tags)" : Json,
+      "[Tags](#cfn-codestarnotifications-notificationrule-tags)" : {Key : Value, ...},
       "[TargetAddress](#cfn-codestarnotifications-notificationrule-targetaddress)" : String,
       "[Targets](#cfn-codestarnotifications-notificationrule-targets)" : [ Target, ... ]
     }
@@ -39,7 +39,8 @@ Properties:
   [Name](#cfn-codestarnotifications-notificationrule-name): String
   [Resource](#cfn-codestarnotifications-notificationrule-resource): String
   [Status](#cfn-codestarnotifications-notificationrule-status): String
-  [Tags](#cfn-codestarnotifications-notificationrule-tags): Json
+  [Tags](#cfn-codestarnotifications-notificationrule-tags): 
+    Key : Value
   [TargetAddress](#cfn-codestarnotifications-notificationrule-targetaddress): String
   [Targets](#cfn-codestarnotifications-notificationrule-targets): 
     - Target
@@ -98,7 +99,7 @@ The status of the notification rule\. The default value is `ENABLED`\. If the st
 `Tags`  <a name="cfn-codestarnotifications-notificationrule-tags"></a>
 A list of tags to apply to this notification rule\. Key names cannot start with "`aws`"\.   
 *Required*: No  
-*Type*: Json  
+*Type*: Map of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetAddress`  <a name="cfn-codestarnotifications-notificationrule-targetaddress"></a>

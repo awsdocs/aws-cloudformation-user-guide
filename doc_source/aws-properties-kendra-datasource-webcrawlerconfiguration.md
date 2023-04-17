@@ -53,7 +53,7 @@ You must provide the website host name and port number\. For example, the host n
 
 `CrawlDepth`  <a name="cfn-kendra-datasource-webcrawlerconfiguration-crawldepth"></a>
 Specifies the number of levels in a website that you want to crawl\.  
-The first level begins from the website seed or starting point URL\. For example, if a website has 3 levels – index level \(i\.e\. seed in this example\), sections level, and subsections level – and you are only interested in crawling information up to the sections level \(i\.e\. levels 0\-1\), you can set your depth to 1\.  
+The first level begins from the website seed or starting point URL\. For example, if a website has three levels—index level \(the seed in this example\), sections level, and subsections level—and you are only interested in crawling information up to the sections level \(levels 0\-1\), you can set your depth to 1\.  
 The default crawl depth is set to 2\.  
 *Required*: No  
 *Type*: Integer  
@@ -62,16 +62,16 @@ The default crawl depth is set to 2\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxContentSizePerPageInMegaBytes`  <a name="cfn-kendra-datasource-webcrawlerconfiguration-maxcontentsizeperpageinmegabytes"></a>
-The maximum size \(in MB\) of a webpage or attachment to crawl\.  
+The maximum size \(in MB\) of a web page or attachment to crawl\.  
 Files larger than this size \(in MB\) are skipped/not crawled\.  
-The default maximum size of a webpage or attachment is set to 50 MB\.  
+The default maximum size of a web page or attachment is set to 50 MB\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxLinksPerPage`  <a name="cfn-kendra-datasource-webcrawlerconfiguration-maxlinksperpage"></a>
-The maximum number of URLs on a webpage to include when crawling a website\. This number is per webpage\.  
-As a website’s webpages are crawled, any URLs the webpages link to are also crawled\. URLs on a webpage are crawled in order of appearance\.  
+The maximum number of URLs on a web page to include when crawling a website\. This number is per web page\.  
+As a website’s web pages are crawled, any URLs the web pages link to are also crawled\. URLs on a web page are crawled in order of appearance\.  
 The default maximum links per page is 100\.  
 *Required*: No  
 *Type*: Integer  

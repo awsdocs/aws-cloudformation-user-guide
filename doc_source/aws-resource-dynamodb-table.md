@@ -21,9 +21,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AttributeDefinitions](#cfn-dynamodb-table-attributedefinitions)" : [ AttributeDefinition, ... ],
       "[BillingMode](#cfn-dynamodb-table-billingmode)" : String,
       "[ContributorInsightsSpecification](#cfn-dynamodb-table-contributorinsightsspecification)" : ContributorInsightsSpecification,
+      "[DeletionProtectionEnabled](#cfn-dynamodb-table-deletionprotectionenabled)" : Boolean,
       "[GlobalSecondaryIndexes](#cfn-dynamodb-table-globalsecondaryindexes)" : [ GlobalSecondaryIndex, ... ],
       "[ImportSourceSpecification](#cfn-dynamodb-table-importsourcespecification)" : ImportSourceSpecification,
-      "[KeySchema](#cfn-dynamodb-table-keyschema)" : Json,
+      "[KeySchema](#cfn-dynamodb-table-keyschema)" : [ KeySchema, ... ],
       "[KinesisStreamSpecification](#cfn-dynamodb-table-kinesisstreamspecification)" : KinesisStreamSpecification,
       "[LocalSecondaryIndexes](#cfn-dynamodb-table-localsecondaryindexes)" : [ LocalSecondaryIndex, ... ],
       "[PointInTimeRecoverySpecification](#cfn-dynamodb-table-pointintimerecoveryspecification)" : PointInTimeRecoverySpecification,
@@ -48,11 +49,13 @@ Properties:
   [BillingMode](#cfn-dynamodb-table-billingmode): String
   [ContributorInsightsSpecification](#cfn-dynamodb-table-contributorinsightsspecification): 
     ContributorInsightsSpecification
+  [DeletionProtectionEnabled](#cfn-dynamodb-table-deletionprotectionenabled): Boolean
   [GlobalSecondaryIndexes](#cfn-dynamodb-table-globalsecondaryindexes): 
     - GlobalSecondaryIndex
   [ImportSourceSpecification](#cfn-dynamodb-table-importsourcespecification): 
     ImportSourceSpecification
-  [KeySchema](#cfn-dynamodb-table-keyschema): Json
+  [KeySchema](#cfn-dynamodb-table-keyschema): 
+    - KeySchema
   [KinesisStreamSpecification](#cfn-dynamodb-table-kinesisstreamspecification): 
     KinesisStreamSpecification
   [LocalSecondaryIndexes](#cfn-dynamodb-table-localsecondaryindexes): 
@@ -91,13 +94,18 @@ Valid values include:
 If not specified, the default is `PROVISIONED`\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `PAY_PER_REQUEST | PROVISIONED`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ContributorInsightsSpecification`  <a name="cfn-dynamodb-table-contributorinsightsspecification"></a>
 The settings used to enable or disable CloudWatch Contributor Insights for the specified table\.  
 *Required*: No  
 *Type*: [ContributorInsightsSpecification](aws-properties-dynamodb-table-contributorinsightsspecification.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`DeletionProtectionEnabled`  <a name="cfn-dynamodb-table-deletionprotectionenabled"></a>
+Determines if a table is protected from deletion\. When enabled, the table cannot be deleted by any user or process\. This setting is disabled by default\. For more information, see [Using deletion protection](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.Basics.html#WorkingWithTables.Basics.DeletionProtection) in the *Amazon DynamoDBDeveloper Guide*\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalSecondaryIndexes`  <a name="cfn-dynamodb-table-globalsecondaryindexes"></a>
@@ -113,7 +121,7 @@ Updates are not supported\. The following are exceptions:
 
 `ImportSourceSpecification`  <a name="cfn-dynamodb-table-importsourcespecification"></a>
 Specifies the properties of data being imported from the S3 bucket source to the table\.  
-If you specify the `ImportSourceSpecification` property, and also specify either the `StreamSpecification` or `TableClass` property, the IAM entity creating/updating stack must have `UpdateTable` permission\.
+If you specify the `ImportSourceSpecification` property, and also specify either the `StreamSpecification`, the `TableClass` property, or the `DeletionProtectionEnabled` property, the IAM entity creating/updating stack must have `UpdateTable` permission\.
 *Required*: No  
 *Type*: [ImportSourceSpecification](aws-properties-dynamodb-table-importsourcespecification.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -121,8 +129,8 @@ If you specify the `ImportSourceSpecification` property, and also specify either
 `KeySchema`  <a name="cfn-dynamodb-table-keyschema"></a>
 Specifies the attributes that make up the primary key for the table\. The attributes in the `KeySchema` property must also be defined in the `AttributeDefinitions` property\.  
 *Required*: Yes  
-*Type*: [Json](aws-properties-dynamodb-table-keyschema.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Type*: [List](aws-properties-dynamodb-table-keyschema.md) of [KeySchema](aws-properties-dynamodb-table-keyschema.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KinesisStreamSpecification`  <a name="cfn-dynamodb-table-kinesisstreamspecification"></a>
 The Kinesis Data Streams configuration for the specified table\.  
@@ -143,7 +151,7 @@ The settings used to enable point in time recovery\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ProvisionedThroughput`  <a name="cfn-dynamodb-table-provisionedthroughput"></a>
-Throughput for the specified table, which consists of values for `ReadCapacityUnits` and `WriteCapacityUnits`\. For more information about the contents of a provisioned throughput structure, see [Amazon DynamoDB Table ProvisionedThroughput](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html)\.   
+Throughput for the specified table, which consists of values for `ReadCapacityUnits` and `WriteCapacityUnits`\. For more information about the contents of a provisioned throughput structure, see [Amazon DynamoDB Table ProvisionedThroughput](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_ProvisionedThroughput.html)\.   
 If you set `BillingMode` as `PROVISIONED`, you must specify this property\. If you set `BillingMode` as `PAY_PER_REQUEST`, you cannot specify this property\.  
 *Required*: Conditional  
 *Type*: [ProvisionedThroughput](aws-properties-dynamodb-table-provisionedthroughput.md)  
@@ -165,7 +173,6 @@ The settings for the DynamoDB table stream, which capture changes to items store
 The table class of the new table\. Valid values are `STANDARD` and `STANDARD_INFREQUENT_ACCESS`\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `STANDARD | STANDARD_INFREQUENT_ACCESS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TableName`  <a name="cfn-dynamodb-table-tablename"></a>

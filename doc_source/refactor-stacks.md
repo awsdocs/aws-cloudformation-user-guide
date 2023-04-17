@@ -377,7 +377,7 @@ It's not necessary to run drift detection on the parent stack after this import 
 1. Create a change set of type `IMPORT` with the following parameters\. `--resources-to-import` doesn't support inline YAML\.
 
    ```
-   > aws cloudformation create-change-set
+   >aws cloudformation create-change-set
        --stack-name TargetStack --change-set-name ImportChangeSet
        --change-set-type IMPORT
        --resources-to-import "[{\"ResourceType\":\"AWS::DynamoDB::Table\",\"LogicalResourceId\":\"GamesTable\",\"ResourceIdentifier\":{\"TableName\":\"Games\"}}]"

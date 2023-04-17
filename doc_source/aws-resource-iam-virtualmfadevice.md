@@ -48,7 +48,7 @@ This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/re
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `512`  
-*Pattern*: `(\u002F)|(\u002F[\u0021-\u007F]+\u002F)`  
+*Pattern*: `(\u002F)|(\u002F[\u0021-\u007E]+\u002F)`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-iam-virtualmfadevice-tags"></a>
@@ -66,7 +66,7 @@ The IAM user associated with this virtual MFA device\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VirtualMfaDeviceName`  <a name="cfn-iam-virtualmfadevice-virtualmfadevicename"></a>
-The name of the virtual MFA device\. Use with path to uniquely identify a virtual MFA device\.  
+The name of the virtual MFA device, which must be unique\. Use with path to uniquely identify a virtual MFA device\.  
 This parameter allows \(through its [regex pattern](http://wikipedia.org/wiki/regex)\) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces\. You can also include any of the following characters: \_\+=,\.@\-  
 *Required*: No  
 *Type*: String  

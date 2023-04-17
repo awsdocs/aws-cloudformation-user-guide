@@ -1,6 +1,6 @@
 # AWS::Transfer::Workflow InputFileLocation<a name="aws-properties-transfer-workflow-inputfilelocation"></a>
 
-<a name="aws-properties-transfer-workflow-inputfilelocation-description"></a>The `InputFileLocation` property type specifies Property description not available\. for an [AWS::Transfer::Workflow](aws-resource-transfer-workflow.md)\.
+Specifies the location for the file that's being processed\.
 
 ## Syntax<a name="aws-properties-transfer-workflow-inputfilelocation-syntax"></a>
 
@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-transfer-workflow-inputfilelocation-properties"></a>
 
 `EfsFileLocation`  <a name="cfn-transfer-workflow-inputfilelocation-efsfilelocation"></a>
-Property description not available\.  
+Specifies the details for the Amazon Elastic File System \(Amazon EFS\) file that's being decrypted\.  
 *Required*: No  
 *Type*: [EfsInputFileLocation](aws-properties-transfer-workflow-efsinputfilelocation.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `S3FileLocation`  <a name="cfn-transfer-workflow-inputfilelocation-s3filelocation"></a>
-Property description not available\.  
+Specifies the details for the Amazon S3 file that's being copied or decrypted\.  
 *Required*: No  
 *Type*: [S3InputFileLocation](aws-properties-transfer-workflow-s3inputfilelocation.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

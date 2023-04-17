@@ -10,6 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AwsGroundStationAgentEndpoint](#cfn-groundstation-dataflowendpointgroup-endpointdetails-awsgroundstationagentendpoint)" : AwsGroundStationAgentEndpoint,
   "[Endpoint](#cfn-groundstation-dataflowendpointgroup-endpointdetails-endpoint)" : DataflowEndpoint,
   "[SecurityDetails](#cfn-groundstation-dataflowendpointgroup-endpointdetails-securitydetails)" : SecurityDetails
 }
@@ -18,6 +19,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-groundstation-dataflowendpointgroup-endpointdetails-syntax.yaml"></a>
 
 ```
+  [AwsGroundStationAgentEndpoint](#cfn-groundstation-dataflowendpointgroup-endpointdetails-awsgroundstationagentendpoint): 
+    AwsGroundStationAgentEndpoint
   [Endpoint](#cfn-groundstation-dataflowendpointgroup-endpointdetails-endpoint): 
     DataflowEndpoint
   [SecurityDetails](#cfn-groundstation-dataflowendpointgroup-endpointdetails-securitydetails): 
@@ -25,6 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-groundstation-dataflowendpointgroup-endpointdetails-properties"></a>
+
+`AwsGroundStationAgentEndpoint`  <a name="cfn-groundstation-dataflowendpointgroup-endpointdetails-awsgroundstationagentendpoint"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [AwsGroundStationAgentEndpoint](aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Endpoint`  <a name="cfn-groundstation-dataflowendpointgroup-endpointdetails-endpoint"></a>
  Information about the endpoint such as name and the endpoint address\.   

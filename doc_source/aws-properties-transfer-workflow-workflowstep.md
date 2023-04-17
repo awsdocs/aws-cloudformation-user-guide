@@ -55,7 +55,13 @@ Consists of the Lambda function's name, target, and timeout \(in seconds\)\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `DecryptStepDetails`  <a name="cfn-transfer-workflow-workflowstep-decryptstepdetails"></a>
-Property description not available\.  
+Details for a step that decrypts an encrypted file\.  
+Consists of the following values:  
++ A descriptive name
++ An Amazon S3 or Amazon Elastic File System \(Amazon EFS\) location for the source file to decrypt\.
++ An S3 or Amazon EFS location for the destination of the file decryption\.
++ A flag that indicates whether to overwrite an existing file of the same name\. The default is `FALSE`\.
++ The type of encryption that's used\. Currently, only PGP encryption is supported\.
 *Required*: No  
 *Type*: [DecryptStepDetails](aws-properties-transfer-workflow-decryptstepdetails.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -67,10 +67,10 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 #### <a name="aws-resource-ec2-ipamresourcediscoveryassociation-return-values-fn--getatt-fn--getatt"></a>
 
 `IpamArn`  <a name="IpamArn-fn::getatt"></a>
-Property description not available\.
+The IPAM ARN\.
 
 `IpamRegion`  <a name="IpamRegion-fn::getatt"></a>
-Property description not available\.
+The IPAM home Region\.
 
 `IpamResourceDiscoveryAssociationArn`  <a name="IpamResourceDiscoveryAssociationArn-fn::getatt"></a>
 The resource discovery association ARN\.
@@ -85,7 +85,9 @@ Defines if the resource discovery is the default\. When you create an IPAM, a de
 The owner ID\.
 
 `ResourceDiscoveryStatus`  <a name="ResourceDiscoveryStatus-fn::getatt"></a>
-Property description not available\.
+The resource discovery status\.  
++ `active` \- Connection or permissions required to read the results of the resource discovery are intact\.
++ `not-found` \- Connection or permissions required to read the results of the resource discovery are broken\. This may happen if the owner of the resource discovery stopped sharing it or deleted the resource discovery\. Verify the resource discovery still exists and the AWS RAM resource share is still intact\.
 
 `State`  <a name="State-fn::getatt"></a>
 The lifecycle state of the association when you associate or disassociate a resource discovery\.  

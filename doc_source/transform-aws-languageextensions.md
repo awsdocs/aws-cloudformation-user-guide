@@ -36,11 +36,11 @@ The `AWS::LanguageExtensions` transform doesn't accept parameters\.
 
 When using the `AWS::LanguageExtensions` transform, keep the following considerations in mind:
 + If you update a stack using a different parameter value, don't use the `--use-previous-template` option where the original template contains the transform\. Use the original template, before transformation, in the `UpdateStack` call\. The stack will update with the new parameter values\.
-+ Short\-form YAML syntax isn't supported within a template for intrinsic functions provided by the `AWS::LanguageExtensions` transform\. Use explicit references to functions\. For example, use `Fn::Length` instead of `!Length`\.
++ Short\-form YAML syntax isn't supported within a template for intrinsic functions that are only available in the `AWS::LanguageExtensions` transform\. Examples of intrinsic functions only available in the `AWS::LanguageExtensions` transform are `[Fn::Length](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-length.html)` and `[Fn::ToJsonString](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-tojsonstring.html)`\. Use explicit references to these functions\. For example, use `Fn::Length` instead of `!Length`\.
 + If you're using multiple transforms, use a list format\. If you're using custom macros, place AWS\-provided transforms after your custom macros\. If you're using both the `AWS::LanguageExtensions` and `AWS::Serverless` transforms, the `AWS::LanguageExtensions` transform must come before the `AWS::Serverless` transform in the list\.
 + Functions and attributes provided by the `AWS::LanguageExtensions` transform are only supported in the `Resources`, `Conditions`, and `Outputs` sections of a template\.
 
-For more information on using macros, see [Creating an AWS CloudFormation macro definition](template-macros.md#template-macros-author)\.
+For more information on using macros, see [Creating an AWS CloudFormation macro definitionTo create an AWS CloudFormation macro definition:](template-macros.md#template-macros-author)\.
 
 ## Example<a name="transform-aws-languageextensions-example"></a>
 

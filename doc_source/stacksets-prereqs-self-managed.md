@@ -294,7 +294,7 @@ You must scope the permissions in the policy statement to the types of resources
    You must provide the following trust policy when you create the role to define the trust relationship:
 
    ```
-   { 
+   {
      "Version": "2012-10-17", 
      "Statement": [ 
        { 
@@ -372,7 +372,7 @@ Similarly, the user can also specify a customized execution role\. If they speci
    You must provide the following trust policy when you create the role to define the trust relationship:
 
    ```
-   { 
+   {
      "Version": "2012-10-17", 
      "Statement": [ 
        { 
@@ -386,7 +386,7 @@ Similarly, the user can also specify a customized execution role\. If they speci
    }
    ```
 
-1. Create a customized administrator role in your administrator account, as detailed in [Set up advanced permissions options for stack set operationsSet up permissions to control target account access](#stacksets-prereqs-multiadmin)\. Include a trust relationship between the customized administrator role and the customized execution roles which you want it to use\.
+1. Create a customized administrator role in your administrator account, as detailed in [Set up advanced permissions options for stack set operationsSet up permissions to control target account accessSet up permissions for which users and groups can perform stack set operations in specific target accounts](#stacksets-prereqs-multiadmin)\. Include a trust relationship between the customized administrator role and the customized execution roles which you want it to use\.
 
    The following example includes an `sts::AssumeRole` policy for both the **AWSCloudFormationStackSetExecutionRole** defined for the target account, in addition to a customized execution role\.
 

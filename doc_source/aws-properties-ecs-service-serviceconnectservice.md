@@ -40,7 +40,7 @@ For each `ServiceConnectService`, you must provide at least one `clientAlias` wi
 
 `DiscoveryName`  <a name="cfn-ecs-service-serviceconnectservice-discoveryname"></a>
 The `discoveryName` is the name of the new AWS Cloud Map service that Amazon ECS creates for this Amazon ECS service\. This must be unique within the AWS Cloud Map namespace\. The name can contain up to 64 characters\. The name can include lowercase letters, numbers, underscores \(\_\), and hyphens \(\-\)\. The name can't start with a hyphen\.  
-If this parameter isn't specified, the default value of `discoveryName.namespace` is used\. If the `discoveryName` isn't specified, the port mapping name from the task definition is used in `portName.namespace`\.  
+If the `discoveryName` isn't specified, the port mapping name from the task definition is used in `portName.namespace`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

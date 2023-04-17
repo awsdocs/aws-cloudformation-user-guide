@@ -105,7 +105,7 @@ The parameters for Amazon Aurora\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatabricksParameters`  <a name="cfn-quicksight-datasource-datasourceparameters-databricksparameters"></a>
-Property description not available\.  
+The required parameters that are needed to connect to a Databricks data source\.  
 *Required*: No  
 *Type*: [DatabricksParameters](aws-properties-quicksight-datasource-databricksparameters.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

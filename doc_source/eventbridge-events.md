@@ -471,7 +471,7 @@ The following is an example response for StackSet stack instance status event\.
 }
 ```
 
-## StackSet operation status event schema<a name="schema-stackset-operation-status"></a>
+## StackSet operation status event schema<a name="schema-stackset-stack-instance-status"></a>
 
 The following schema is the structure for a StackSet operation status event\.
 

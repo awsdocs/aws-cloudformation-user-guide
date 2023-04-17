@@ -28,14 +28,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `AutoExportPolicy`  <a name="cfn-fsx-datarepositoryassociation-s3-autoexportpolicy"></a>
 Describes a data repository association's automatic export policy\. The `AutoExportPolicy` defines the types of updated objects on the file system that will be automatically exported to the data repository\. As you create, modify, or delete files, Amazon FSx for Lustre automatically exports the defined changes asynchronously once your application finishes modifying the file\.  
-This `AutoExportPolicy` is supported only for Amazon FSx for Lustre file systems with the `Persistent_2` deployment type\.  
+The `AutoExportPolicy` is only supported on Amazon FSx for Lustre file systems with a data repository association\.  
 *Required*: No  
 *Type*: [AutoExportPolicy](aws-properties-fsx-datarepositoryassociation-autoexportpolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AutoImportPolicy`  <a name="cfn-fsx-datarepositoryassociation-s3-autoimportpolicy"></a>
 Describes the data repository association's automatic import policy\. The AutoImportPolicy defines how Amazon FSx keeps your file metadata and directory listings up to date by importing changes to your Amazon FSx for Lustre file system as you modify objects in a linked S3 bucket\.  
-The `AutoImportPolicy` is supported only for Amazon FSx for Lustre file systems with the `Persistent_2` deployment type\.  
+The `AutoImportPolicy` is only supported on Amazon FSx for Lustre file systems with a data repository association\.  
 *Required*: No  
 *Type*: [AutoImportPolicy](aws-properties-fsx-datarepositoryassociation-autoimportpolicy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -45,7 +45,7 @@ The description of the parameter group\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ParameterGroupFamily`  <a name="cfn-redshift-clusterparametergroup-parametergroupfamily"></a>
-The name of the cluster parameter group family that this cluster parameter group is compatible with\.  
+The name of the cluster parameter group family that this cluster parameter group is compatible with\. You can create a custom parameter group and then associate your cluster with it\. For more information, see [Amazon Redshift parameter groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html)\.  
 *Required*: Yes  
 *Type*: String  
 *Maximum*: `2147483647`  

@@ -103,7 +103,7 @@ The weekly time range during which system maintenance can occur, in Universal Co
 *Constraints*: Minimum 30\-minute window\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ShardCapacity`  <a name="cfn-docdbelastic-cluster-shardcapacity"></a>
 The number of vCPUs assigned to each elastic cluster shard\. Maximum is 64\. Allowed values are 2, 4, 8, 16, 32, 64\.  
@@ -144,4 +144,7 @@ A list of EC2 VPC security groups to associate with the new elastic cluster\.
 #### <a name="aws-resource-docdbelastic-cluster-return-values-fn--getatt-fn--getatt"></a>
 
 `ClusterArn`  <a name="ClusterArn-fn::getatt"></a>
+Property description not available\.
+
+`ClusterEndpoint`  <a name="ClusterEndpoint-fn::getatt"></a>
 Property description not available\.

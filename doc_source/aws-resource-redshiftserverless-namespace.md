@@ -105,7 +105,7 @@ The types of logs the namespace can export\. Available export types are `userlog
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NamespaceName`  <a name="cfn-redshiftserverless-namespace-namespacename"></a>
-The name of the namespace\.  
+The name of the namespace\. Must be between 3\-64 alphanumeric characters in lowercase, and it cannot be a reserved word\. A list of reserved words can be found in [Reserved Words](https://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html) in the Amazon Redshift Database Developer Guide\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -129,37 +129,37 @@ GetAtt returns a value for a specified attribute of this type\. For more informa
 #### <a name="aws-resource-redshiftserverless-namespace-return-values-fn--getatt-fn--getatt"></a>
 
 `Namespace`  <a name="Namespace-fn::getatt"></a>
-Returns the `Namespace` value\.
+The collection of computing resources from which an endpoint is created\.
 
 `Namespace.AdminUsername`  <a name="Namespace.AdminUsername-fn::getatt"></a>
-Property description not available\.
+The username of the administrator for the first database created in the namespace\.
 
 `Namespace.CreationDate`  <a name="Namespace.CreationDate-fn::getatt"></a>
-Property description not available\.
+The date of when the namespace was created\.
 
 `Namespace.DbName`  <a name="Namespace.DbName-fn::getatt"></a>
-Property description not available\.
+The name of the first database created in the namespace\.
 
 `Namespace.DefaultIamRoleArn`  <a name="Namespace.DefaultIamRoleArn-fn::getatt"></a>
-Property description not available\.
+The Amazon Resource Name \(ARN\) of the IAM role to set as a default in the namespace\.
 
 `Namespace.IamRoles`  <a name="Namespace.IamRoles-fn::getatt"></a>
-Property description not available\.
+A list of IAM roles to associate with the namespace\.
 
 `Namespace.KmsKeyId`  <a name="Namespace.KmsKeyId-fn::getatt"></a>
-Property description not available\.
+The ID of the AWS Key Management Service key used to encrypt your data\.
 
 `Namespace.LogExports`  <a name="Namespace.LogExports-fn::getatt"></a>
-Property description not available\.
+The types of logs the namespace can export\. Available export types are `User log`, `Connection log`, and `User activity log`\.
 
 `Namespace.NamespaceArn`  <a name="Namespace.NamespaceArn-fn::getatt"></a>
-Property description not available\.
+The Amazon Resource Name \(ARN\) associated with a namespace\.
 
 `Namespace.NamespaceId`  <a name="Namespace.NamespaceId-fn::getatt"></a>
-Property description not available\.
+The unique identifier of a namespace\.
 
 `Namespace.NamespaceName`  <a name="Namespace.NamespaceName-fn::getatt"></a>
-Property description not available\.
+The name of the namespace\. Must be between 3\-64 alphanumeric characters in lowercase, and it cannot be a reserved word\. A list of reserved words can be found in [Reserved Words](https://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html) in the Amazon Redshift Database Developer Guide\.
 
 `Namespace.Status`  <a name="Namespace.Status-fn::getatt"></a>
-Property description not available\.
+The status of the namespace\.

@@ -2,7 +2,7 @@
 
 Describes the data repository association's automatic import policy\. The AutoImportPolicy defines how Amazon FSx keeps your file metadata and directory listings up to date by importing changes to your Amazon FSx for Lustre file system as you modify objects in a linked S3 bucket\.
 
-The `AutoImportPolicy` is supported only for Amazon FSx for Lustre file systems with the `Persistent_2` deployment type\.
+The `AutoImportPolicy` is only supported on Amazon FSx for Lustre file systems with a data repository association\.
 
 ## Syntax<a name="aws-properties-fsx-datarepositoryassociation-autoimportpolicy-syntax"></a>
 

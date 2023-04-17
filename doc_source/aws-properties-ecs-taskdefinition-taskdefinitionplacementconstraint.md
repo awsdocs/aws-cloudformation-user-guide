@@ -1,10 +1,9 @@
 # AWS::ECS::TaskDefinition TaskDefinitionPlacementConstraint<a name="aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint"></a>
 
-The `TaskDefinitionPlacementConstraint` property specifies an object representing a constraint on task placement in the task definition\.
+The constraint on task placement in the task definition\. For more information, see [Task placement constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html) in the *Amazon Elastic Container Service Developer Guide*\.
 
-If you are using the Fargate launch type, task placement constraints are not supported\.
-
-For more information, see [Task Placement Constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html) in the *Amazon Elastic Container Service Developer Guide*\.
+**Note**  
+Task placement constraints aren't supported for tasks run on AWS Fargate\.
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint-syntax"></a>
 

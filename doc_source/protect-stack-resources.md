@@ -63,7 +63,7 @@ You define a stack policy with five elements: `Effect`, `Action`, `Principal`, `
           "ResourceType" : [resource_type, ...]
         }
       }
-    }  
+    }
   ]
 }
 ```
@@ -89,7 +89,7 @@ Specifies all update actions\. The asterisk is a wild card that represents all u
 The following example shows how to specify just the replace and delete actions:  
 
 ```
-"Action" : ["Update:Replace", "Update:Delete"]
+"Action" : ["Update:Replace", "Update:Delete"]
 ```
 To allow all update actions except for one, use `NotAction`\. For example, to allow all update actions except for `Update:Delete`, use `NotAction`, as shown in this example:  
 
@@ -252,12 +252,12 @@ During a stack update, AWS CloudFormation automatically updates resources that d
          "Action" : "Update:*",
          "Principal": "*",
          "Resource" : "*"
-       }  
+       }
      ]
    }
    ```
 **Note**  
-AWS CloudFormation applies the override policy only during this update\. The override policy doesn't permanently change the stack policy\. To modify a stack policy, see [Modifying a stack policy ](#protect-stack-resources-modifying)\.
+AWS CloudFormation applies the override policy only during this update\. The override policy doesn't permanently change the stack policy\. To modify a stack policy, see [Modifying a stack policy To modify a stack policy \(AWS CLI\)](#protect-stack-resources-modifying)\.
 
 1. Review the stack information and the changes that you submitted\.
 
@@ -276,7 +276,7 @@ At this point, you also have the option to view the change set to review your pr
 **To update a protected resource \(AWS CLI\)**
 + Use the `[aws cloudformation update\-stack](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html)` command with the `--stack-policy-during-update-body` option to type in a modified policy or the `--stack-policy-during-update-url` option to specify a file containing the policy\.
 **Note**  
-AWS CloudFormation applies the override policy only during this update\. The override policy doesn't permanently change the stack policy\. To modify a stack policy, see [Modifying a stack policy ](#protect-stack-resources-modifying)\.
+AWS CloudFormation applies the override policy only during this update\. The override policy doesn't permanently change the stack policy\. To modify a stack policy, see [Modifying a stack policy To modify a stack policy \(AWS CLI\)](#protect-stack-resources-modifying)\.
 
 ## Modifying a stack policy<a name="protect-stack-resources-modifying"></a>
 
@@ -297,7 +297,7 @@ You can't delete a stack policy\. To remove all protection from all resources, y
       "Action" : "Update:*",
       "Principal": "*",
       "Resource" : "*"
-    }  
+    }
   ]
 }
 ```
@@ -306,7 +306,7 @@ You can't delete a stack policy\. To remove all protection from all resources, y
 
 The following example policies show how to prevent updates to all stack resources and to specific resources, and prevent specific types of updates\.
 
-### Prevent updates to all stack resources<a name="w2ab1c25c17c29c21b4"></a>
+### Prevent updates to all stack resources<a name="w4ab1c25c17c29c21b5"></a>
 
 To prevent updates to all stack resources, the following policy specifies a `Deny` statement for all update actions on all resources\.
 
@@ -318,12 +318,12 @@ To prevent updates to all stack resources, the following policy specifies a `Den
       "Action" : "Update:*",
       "Principal": "*",
       "Resource" : "*"
-    }  
+    }
   ]
 }
 ```
 
-### Prevent updates to a single resource<a name="w2ab1c25c17c29c21b6"></a>
+### Prevent updates to a single resource<a name="w4ab1c25c17c29c21b7"></a>
 
 The following policy denies all update actions on the database with the `MyDatabase` logical ID\. It allows all update actions on all other stack resources with an `Allow` statement\. The `Allow` statement doesn't apply to the `MyDatabase` resource because the `Deny` statement always overrides allow actions\.
 
@@ -364,7 +364,7 @@ You can achieve the same result as the previous example by using a default denia
 **Important**  
 There is risk in using a default denial\. If you have an `Allow` statement elsewhere in the policy \(such as an `Allow` statement that uses a wildcard\), you might unknowingly grant update permission to resources that you don't intend to\. Because an explicit denial overrides any allow actions, you can ensure that a resource is protected by using a `Deny` statement\.
 
-### Prevent updates to all instances of a resource type<a name="w2ab1c25c17c29c21b8"></a>
+### Prevent updates to all instances of a resource type<a name="w4ab1c25c17c29c21b9"></a>
 
 The following policy denies all update actions on the RDS DB instance resource type\. It allows all update actions on all other stack resources with an `Allow` statement\. The `Allow` statement doesn't apply to the RDS DB instance resources because a `Deny` statement always overrides allow actions\.
 
@@ -392,7 +392,7 @@ The following policy denies all update actions on the RDS DB instance resource t
 }
 ```
 
-### Prevent replacement updates for an instance<a name="w2ab1c25c17c29c21c10"></a>
+### Prevent replacement updates for an instance<a name="w4ab1c25c17c29c21c11"></a>
 
 The following policy denies updates that would cause a replacement of the instance with the `MyInstance` logical ID\. It allows all update actions on all other stack resources with an `Allow` statement\. The `Allow` statement doesn't apply to the `MyInstance` resource because the `Deny` statement always overrides allow actions\.
 
@@ -415,7 +415,7 @@ The following policy denies updates that would cause a replacement of the instan
 }
 ```
 
-### Prevent updates to nested stacks<a name="w2ab1c25c17c29c21c12"></a>
+### Prevent updates to nested stacks<a name="w4ab1c25c17c29c21c13"></a>
 
 The following policy denies all update actions on the AWS CloudFormation stack resource type \(nested stacks\)\. It allows all update actions on all other stack resources with an `Allow` statement\. The `Allow` statement doesn't apply to the AWS CloudFormationstack resources because the `Deny` statement always overrides allow actions\.
 

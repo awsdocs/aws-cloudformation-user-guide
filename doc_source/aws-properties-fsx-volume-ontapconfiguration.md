@@ -46,7 +46,7 @@ A boolean flag indicating whether tags for the volume should be copied to backup
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `JunctionPath`  <a name="cfn-fsx-volume-ontapconfiguration-junctionpath"></a>
-Specifies the location in the SVM's namespace where the volume is mounted\. The `JunctionPath` must have a leading forward slash, such as `/vol3`\.  
+Specifies the location in the SVM's namespace where the volume is mounted\. This parameter is required\. The `JunctionPath` must have a leading forward slash, such as `/vol3`\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -75,7 +75,7 @@ Specifies the security style for the volume\. If a volume's security style is no
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SizeInMegabytes`  <a name="cfn-fsx-volume-ontapconfiguration-sizeinmegabytes"></a>
-Specifies the size of the volume, in megabytes \(MB\), that you are creating\.  
+Specifies the size of the volume, in megabytes \(MB\), that you are creating\. Provide any whole number in the range of 20–104857600 to specify the size of the volume\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `0`  
@@ -96,7 +96,7 @@ For more information, see [Snapshot policies](https://docs.aws.amazon.com/fsx/la
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StorageEfficiencyEnabled`  <a name="cfn-fsx-volume-ontapconfiguration-storageefficiencyenabled"></a>
-Set to true to enable deduplication, compression, and compaction storage efficiency features on the volume\.  
+Set to true to enable deduplication, compression, and compaction storage efficiency features on the volume, or set to false to disable them\. This parameter is required\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

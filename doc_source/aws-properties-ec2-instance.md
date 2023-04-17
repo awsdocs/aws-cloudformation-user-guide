@@ -189,6 +189,7 @@ An elastic GPU to associate with the instance\. An Elastic GPU is a GPU resource
 `ElasticInferenceAccelerators`  <a name="cfn-ec2-instance-elasticinferenceaccelerators"></a>
 An elastic inference accelerator to associate with the instance\. Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances to accelerate your Deep Learning \(DL\) inference workloads\.  
 You cannot specify accelerators from different generations in the same request\.  
+Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference \(EI\), and will help current customers migrate their workloads to options that offer better price and performance\. After April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2\. However, customers who have used Amazon EI at least once during the past 30\-day period are considered current customers and will be able to continue using the service\.
 *Required*: No  
 *Type*: List of [ElasticInferenceAccelerator](aws-properties-ec2-instance-elasticinferenceaccelerator.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -247,14 +248,14 @@ Default: `m1.small`
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `Ipv6AddressCount`  <a name="cfn-ec2-instance-ipv6addresscount"></a>
-\[EC2\-VPC\] The number of IPv6 addresses to associate with the primary network interface\. Amazon EC2 chooses the IPv6 addresses from the range of your subnet\. You cannot specify this option and the option to assign specific IPv6 addresses in the same request\. You can specify this option if you've specified a minimum number of instances to launch\.  
+The number of IPv6 addresses to associate with the primary network interface\. Amazon EC2 chooses the IPv6 addresses from the range of your subnet\. You cannot specify this option and the option to assign specific IPv6 addresses in the same request\. You can specify this option if you've specified a minimum number of instances to launch\.  
 You cannot specify this option and the network interfaces option in the same request\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Ipv6Addresses`  <a name="cfn-ec2-instance-ipv6addresses"></a>
-\[EC2\-VPC\] The IPv6 addresses from the range of the subnet to associate with the primary network interface\. You cannot specify this option and the option to assign a number of IPv6 addresses in the same request\. You cannot specify this option if you've specified a minimum number of instances to launch\.  
+The IPv6 addresses from the range of the subnet to associate with the primary network interface\. You cannot specify this option and the option to assign a number of IPv6 addresses in the same request\. You cannot specify this option if you've specified a minimum number of instances to launch\.  
 You cannot specify this option and the network interfaces option in the same request\.  
 *Required*: No  
 *Type*: List of [InstanceIpv6Address](aws-properties-ec2-instance-instanceipv6address.md)  
@@ -313,7 +314,7 @@ The options for the instance hostname\.
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `PrivateIpAddress`  <a name="cfn-ec2-instance-privateipaddress"></a>
-\[EC2\-VPC\] The primary IPv4 address\. You must specify a value from the IPv4 address range of the subnet\.  
+The primary IPv4 address\. You must specify a value from the IPv4 address range of the subnet\.  
 Only one private IP address can be designated as primary\. You can't specify this option if you've specified the option to designate a private IP address as the primary IP address in a network interface specification\. You cannot specify this option if you're launching more than one instance in the request\.  
 You cannot specify this option and the network interfaces option in the same request\.  
 If you make an update to an instance that requires replacement, you must assign a new private IP address\. During a replacement, AWS CloudFormation creates a new instance but doesn't delete the old instance until the stack has successfully updated\. If the stack update fails, AWS CloudFormation uses the old instance to roll back the stack to the previous working state\. The old and new instances cannot have the same private IP address\.  
@@ -342,7 +343,7 @@ If you specify a network interface, you must specify any security groups as part
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
 
 `SecurityGroups`  <a name="cfn-ec2-instance-securitygroups"></a>
-\[EC2\-Classic, default VPC\] The names of the security groups\. For a nondefault VPC, you must use security group IDs instead\.  
+\[Default VPC\] The names of the security groups\. For a nondefault VPC, you must use security group IDs instead\.  
 You cannot specify this option and the network interfaces option in the same request\. The list can contain both the name of existing Amazon EC2 security groups or references to AWS::EC2::SecurityGroup resources created in the template\.  
 Default: Amazon EC2 uses the default security group\.  
 *Required*: No  
@@ -363,20 +364,20 @@ You can currently associate only one document with an instance\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-ec2-instance-subnetid"></a>
-\[EC2\-VPC\] The ID of the subnet to launch the instance into\.  
+The ID of the subnet to launch the instance into\.  
 If you specify a network interface, you must specify any subnets as part of the network interface\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-ec2-instance-tags"></a>
-The tags to add to the instance\. These tags are not applied to the EBS volumes, such as the root volume\.  
+The tags to add to the instance\. These tags are not applied to the EBS volumes, such as the root volume, unless [PropagateTagsToVolumeOnCreation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-propagatetagstovolumeoncreation) is `true`\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tenancy`  <a name="cfn-ec2-instance-tenancy"></a>
-The tenancy of the instance \(if the instance is running in a VPC\)\. An instance with a tenancy of `dedicated` runs on single\-tenant hardware\.   
+The tenancy of the instance\. An instance with a tenancy of `dedicated` runs on single\-tenant hardware\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `dedicated | default | host`  

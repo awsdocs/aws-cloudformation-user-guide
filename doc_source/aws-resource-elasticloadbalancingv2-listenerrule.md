@@ -53,7 +53,7 @@ The rule can optionally include up to one of each of the following conditions: `
 
 `ListenerArn`  <a name="cfn-elasticloadbalancingv2-listenerrule-listenerarn"></a>
 The Amazon Resource Name \(ARN\) of the listener\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

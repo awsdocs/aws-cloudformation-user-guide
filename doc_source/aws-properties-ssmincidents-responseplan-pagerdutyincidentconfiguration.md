@@ -1,6 +1,6 @@
 # AWS::SSMIncidents::ResponsePlan PagerDutyIncidentConfiguration<a name="aws-properties-ssmincidents-responseplan-pagerdutyincidentconfiguration"></a>
 
-<a name="aws-properties-ssmincidents-responseplan-pagerdutyincidentconfiguration-description"></a>The `PagerDutyIncidentConfiguration` property type specifies Property description not available\. for an [AWS::SSMIncidents::ResponsePlan](aws-resource-ssmincidents-responseplan.md)\.
+Details about the PagerDuty service where the response plan creates an incident\.
 
 ## Syntax<a name="aws-properties-ssmincidents-responseplan-pagerdutyincidentconfiguration-syntax"></a>
 

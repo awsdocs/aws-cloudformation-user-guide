@@ -71,10 +71,10 @@ An operator that includes events that match the last few characters of the event
   +  `AWS::CloudTrail::Channel` 
   +  `AWS::Cognito::IdentityPool` 
   +  `AWS::DynamoDB::Stream` 
-  +  `AWS::EC2::InstanceConnectEndpoint` 
   +  `AWS::EC2::Snapshot` 
   +  `AWS::FinSpace::Environment` 
   +  `AWS::Glue::Table` 
+  +  `AWS::GuardDuty::Detector` 
   +  `AWS::KendraRanking::ExecutionPlan` 
   +  `AWS::ManagedBlockchain::Node` 
   +  `AWS::SageMaker::ExperimentTrialComponent` 
@@ -105,9 +105,6 @@ An operator that includes events that match the last few characters of the event
   When `resources.type` equals `AWS::DynamoDB::Stream`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:dynamodb:<region>:<account_ID>:table/<table_name>/stream/<date_time>` 
 
-  When `resources.type` equals `AWS::EC2::InstanceConnectEndpoint`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
-  +  `arn:<partition>:ec2:<region>::instance-connect-endpoint/<instance_connect_endpoint_ID>` 
-
   When `resources.type` equals `AWS::EC2::Snapshot`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:ec2:<region>::snapshot/<snapshot_ID>` 
 
@@ -117,8 +114,11 @@ An operator that includes events that match the last few characters of the event
   When `resources.type` equals `AWS::Glue::Table`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:glue:<region>:<account_ID>:table/<database_name>/<table_name>` 
 
+  When `resources.type` equals `AWS::GuardDuty::Detector`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
+  +  `arn:<partition>:guardduty:<region>:<account_ID>:detector/<detector_ID>` 
+
   When `resources.type` equals `AWS::KendraRanking::ExecutionPlan`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
-  +  `arn:<partition>:kendra-ranking:<region>:<account_ID>:table/<rescore-execution-plan>/<rescore_execution_plan_ID>` 
+  +  `arn:<partition>:kendra-ranking:<region>:<account_ID>:rescore-execution-plan/<rescore_execution_plan_ID>` 
 
   When `resources.type` equals `AWS::ManagedBlockchain::Node`, and the operator is set to `Equals` or `NotEquals`, the ARN must be in the following format:
   +  `arn:<partition>:managedblockchain:<region>:<account_ID>:nodes/<node_ID>` 

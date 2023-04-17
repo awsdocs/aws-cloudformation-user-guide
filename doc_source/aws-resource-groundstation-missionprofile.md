@@ -17,6 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DataflowEdges](#cfn-groundstation-missionprofile-dataflowedges)" : [ DataflowEdge, ... ],
       "[MinimumViableContactDurationSeconds](#cfn-groundstation-missionprofile-minimumviablecontactdurationseconds)" : Integer,
       "[Name](#cfn-groundstation-missionprofile-name)" : String,
+      "[StreamsKmsKey](#cfn-groundstation-missionprofile-streamskmskey)" : StreamsKmsKey,
+      "[StreamsKmsRole](#cfn-groundstation-missionprofile-streamskmsrole)" : String,
       "[Tags](#cfn-groundstation-missionprofile-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[TrackingConfigArn](#cfn-groundstation-missionprofile-trackingconfigarn)" : String
     }
@@ -34,6 +36,9 @@ Properties:
     - DataflowEdge
   [MinimumViableContactDurationSeconds](#cfn-groundstation-missionprofile-minimumviablecontactdurationseconds): Integer
   [Name](#cfn-groundstation-missionprofile-name): String
+  [StreamsKmsKey](#cfn-groundstation-missionprofile-streamskmskey): 
+    StreamsKmsKey
+  [StreamsKmsRole](#cfn-groundstation-missionprofile-streamskmsrole): String
   [Tags](#cfn-groundstation-missionprofile-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [TrackingConfigArn](#cfn-groundstation-missionprofile-trackingconfigarn): String
@@ -68,6 +73,18 @@ Properties:
 `Name`  <a name="cfn-groundstation-missionprofile-name"></a>
  The name of the mission profile\.   
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`StreamsKmsKey`  <a name="cfn-groundstation-missionprofile-streamskmskey"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [StreamsKmsKey](aws-properties-groundstation-missionprofile-streamskmskey.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`StreamsKmsRole`  <a name="cfn-groundstation-missionprofile-streamskmsrole"></a>
+Property description not available\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

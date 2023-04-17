@@ -125,49 +125,49 @@ GetAtt returns a value for a specified attribute of this type\. For more informa
 Returns the `Workgroup` value\.
 
 `Workgroup.BaseCapacity`  <a name="Workgroup.BaseCapacity-fn::getatt"></a>
-Property description not available\.
+The base data warehouse capacity of the workgroup in Redshift Processing Units \(RPUs\)\.
 
 `Workgroup.ConfigParameters`  <a name="Workgroup.ConfigParameters-fn::getatt"></a>
 Property description not available\.
 
 `Workgroup.CreationDate`  <a name="Workgroup.CreationDate-fn::getatt"></a>
-Property description not available\.
+The creation date of the workgroup\.
 
 `Workgroup.Endpoint`  <a name="Workgroup.Endpoint-fn::getatt"></a>
 Property description not available\.
 
 `Workgroup.Endpoint.Address`  <a name="Workgroup.Endpoint.Address-fn::getatt"></a>
-Property description not available\.
+The DNS address of the VPC endpoint\.
 
 `Workgroup.Endpoint.Port`  <a name="Workgroup.Endpoint.Port-fn::getatt"></a>
-Property description not available\.
+The custom port to use when connecting to a workgroup\. Valid port ranges are 5431\-5455 and 8191\-8215\. The default is 5439\.
 
 `Workgroup.Endpoint.VpcEndpoints`  <a name="Workgroup.Endpoint.VpcEndpoints-fn::getatt"></a>
 Property description not available\.
 
 `Workgroup.EnhancedVpcRouting`  <a name="Workgroup.EnhancedVpcRouting-fn::getatt"></a>
-Property description not available\.
+The value that specifies whether to enable enhanced virtual private cloud \(VPC\) routing, which forces Amazon Redshift Serverless to route traffic through your VPC\.
 
 `Workgroup.NamespaceName`  <a name="Workgroup.NamespaceName-fn::getatt"></a>
-Property description not available\.
+The namespace the workgroup is associated with\.
 
 `Workgroup.PubliclyAccessible`  <a name="Workgroup.PubliclyAccessible-fn::getatt"></a>
-Property description not available\.
+A value that specifies whether the workgroup can be accessible from a public network\.
 
 `Workgroup.SecurityGroupIds`  <a name="Workgroup.SecurityGroupIds-fn::getatt"></a>
-Property description not available\.
+An array of security group IDs to associate with the workgroup\.
 
 `Workgroup.Status`  <a name="Workgroup.Status-fn::getatt"></a>
-Property description not available\.
+The status of the workgroup\.
 
 `Workgroup.SubnetIds`  <a name="Workgroup.SubnetIds-fn::getatt"></a>
-Property description not available\.
+An array of subnet IDs the workgroup is associated with\.
 
 `Workgroup.WorkgroupArn`  <a name="Workgroup.WorkgroupArn-fn::getatt"></a>
-Property description not available\.
+The Amazon Resource Name \(ARN\) that links to the workgroup\.
 
 `Workgroup.WorkgroupId`  <a name="Workgroup.WorkgroupId-fn::getatt"></a>
-Property description not available\.
+The unique identifier of the workgroup\.
 
 `Workgroup.WorkgroupName`  <a name="Workgroup.WorkgroupName-fn::getatt"></a>
-Property description not available\.
+The name of the workgroup\.

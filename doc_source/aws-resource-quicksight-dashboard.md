@@ -17,6 +17,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AwsAccountId](#cfn-quicksight-dashboard-awsaccountid)" : String,
       "[DashboardId](#cfn-quicksight-dashboard-dashboardid)" : String,
       "[DashboardPublishOptions](#cfn-quicksight-dashboard-dashboardpublishoptions)" : DashboardPublishOptions,
+      "[Definition](#cfn-quicksight-dashboard-definition)" : DashboardVersionDefinition,
       "[Name](#cfn-quicksight-dashboard-name)" : String,
       "[Parameters](#cfn-quicksight-dashboard-parameters)" : Parameters,
       "[Permissions](#cfn-quicksight-dashboard-permissions)" : [ ResourcePermission, ... ],
@@ -37,6 +38,8 @@ Properties:
   [DashboardId](#cfn-quicksight-dashboard-dashboardid): String
   [DashboardPublishOptions](#cfn-quicksight-dashboard-dashboardpublishoptions): 
     DashboardPublishOptions
+  [Definition](#cfn-quicksight-dashboard-definition): 
+    DashboardVersionDefinition
   [Name](#cfn-quicksight-dashboard-name): String
   [Parameters](#cfn-quicksight-dashboard-parameters): 
     Parameters
@@ -79,9 +82,15 @@ Options for publishing the dashboard when you create it:
 *Type*: [DashboardPublishOptions](aws-properties-quicksight-dashboard-dashboardpublishoptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Definition`  <a name="cfn-quicksight-dashboard-definition"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [DashboardVersionDefinition](aws-properties-quicksight-dashboard-dashboardversiondefinition.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `Name`  <a name="cfn-quicksight-dashboard-name"></a>
 The display name of the dashboard\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
 *Maximum*: `2048`  
@@ -104,7 +113,7 @@ To specify no permissions, omit the permissions list\.
 `SourceEntity`  <a name="cfn-quicksight-dashboard-sourceentity"></a>
 The entity that you are using as a source when you create the dashboard\. In `SourceEntity`, you specify the type of object that you want to use\. You can only create a dashboard from a template, so you use a `SourceTemplate` entity\. If you need to create a dashboard from an analysis, first convert the analysis to a template by using the `CreateTemplate` API operation\. For `SourceTemplate`, specify the Amazon Resource Name \(ARN\) of the source template\. The `SourceTemplate`ARN can contain any AWS account; and any QuickSight\-supported AWS Region\.   
 Use the `DataSetReferences` entity within `SourceTemplate` to list the replacement datasets for the placeholders listed in the original\. The schema in each dataset must match its placeholder\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: [DashboardSourceEntity](aws-properties-quicksight-dashboard-dashboardsourceentity.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

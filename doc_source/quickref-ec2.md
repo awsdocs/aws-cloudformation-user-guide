@@ -2,7 +2,7 @@
 
 ## EC2 block device mapping examples<a name="scenario-ec2-bdm"></a>
 
-### EC2 instance with block device mapping<a name="w2ab1c23c21c43b3b2"></a>
+### EC2 instance with block device mapping<a name="w4ab1c23c21c43b3b2"></a>
 
 #### JSON<a name="quickref-ec2-example-1.json"></a>
 
@@ -50,7 +50,7 @@ EC2Instance:
             VolumeSize: 100
 ```
 
-### EC2 instance with ephemeral drives<a name="w2ab1c23c21c43b3b4"></a>
+### EC2 instance with ephemeral drives<a name="w4ab1c23c21c43b3b4"></a>
 
 #### JSON<a name="quickref-ec2-example-2.json"></a>
 
@@ -458,7 +458,7 @@ This snippet shows a simple AWS::EC2::Instance resource\.
 
 ## Amazon EC2 instance with Volume, Tag, and UserData properties<a name="scenario-ec2-instance-with-vol-and-tags"></a>
 
-This snippet shows an AWS::EC2::Instance resource with one Amazon EC2 volume, one tag, and a user data property\. An AWS::EC2::SecurityGroup resource, an AWS::SNS::Topic resource, and an AWS::EC2::Volume resource all must be defined in the same template\. Also, the reference to `KeyName` is a parameters that must be defined in the Parameters section of the template\.
+This snippet shows an `AWS::EC2::Instance` resource with one Amazon EC2 volume, one tag, and a user data property\. An `AWS::EC2::SecurityGroup` resource, an `AWS::SNS::Topic` resource, and an `AWS::EC2::Volume` resource all must be defined in the same template\. Also, the reference to `KeyName` is a parameters that must be defined in the Parameters section of the template\.
 
 ### JSON<a name="quickref-ec2-example-7.json"></a>
 

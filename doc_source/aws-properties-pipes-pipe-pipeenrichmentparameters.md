@@ -34,6 +34,7 @@ If you specify an API Gateway REST API or EventBridge ApiDestination as a target
 
 `InputTemplate`  <a name="cfn-pipes-pipe-pipeenrichmentparameters-inputtemplate"></a>
 Valid JSON text passed to the enrichment\. In this case, nothing from the event itself is passed to the enrichment\. For more information, see [The JavaScript Object Notation \(JSON\) Data Interchange Format](http://www.rfc-editor.org/rfc/rfc7159.txt)\.  
+To remove an input template, specify an empty string\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

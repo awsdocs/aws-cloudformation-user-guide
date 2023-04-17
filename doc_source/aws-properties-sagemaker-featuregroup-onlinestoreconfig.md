@@ -1,6 +1,8 @@
 # AWS::SageMaker::FeatureGroup OnlineStoreConfig<a name="aws-properties-sagemaker-featuregroup-onlinestoreconfig"></a>
 
-Use this to specify the AWS Key Management Service \(KMS\) Key ID, or `KMSKeyId`, for at rest data encryption\. You can turn `OnlineStore` on or off by specifying the `EnableOnlineStore` flag at General Assembly; the default value is `False`\.
+Use this to specify the AWS Key Management Service \(KMS\) Key ID, or `KMSKeyId`, for at rest data encryption\. You can turn `OnlineStore` on or off by specifying the `EnableOnlineStore` flag at General Assembly\.
+
+The default value is `False`\.
 
 ## Syntax<a name="aws-properties-sagemaker-featuregroup-onlinestoreconfig-syntax"></a>
 

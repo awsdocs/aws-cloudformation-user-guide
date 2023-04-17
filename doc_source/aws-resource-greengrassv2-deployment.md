@@ -28,6 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DeploymentName](#cfn-greengrassv2-deployment-deploymentname)" : String,
       "[DeploymentPolicies](#cfn-greengrassv2-deployment-deploymentpolicies)" : DeploymentPolicies,
       "[IotJobConfiguration](#cfn-greengrassv2-deployment-iotjobconfiguration)" : DeploymentIoTJobConfiguration,
+      "[ParentTargetArn](#cfn-greengrassv2-deployment-parenttargetarn)" : String,
       "[Tags](#cfn-greengrassv2-deployment-tags)" : {Key : Value, ...},
       "[TargetArn](#cfn-greengrassv2-deployment-targetarn)" : String
     }
@@ -46,6 +47,7 @@ Properties:
     DeploymentPolicies
   [IotJobConfiguration](#cfn-greengrassv2-deployment-iotjobconfiguration): 
     DeploymentIoTJobConfiguration
+  [ParentTargetArn](#cfn-greengrassv2-deployment-parenttargetarn): String
   [Tags](#cfn-greengrassv2-deployment-tags): 
     Key : Value
   [TargetArn](#cfn-greengrassv2-deployment-targetarn): String
@@ -75,6 +77,12 @@ The deployment policies for the deployment\. These policies define how the deplo
 The job configuration for the deployment configuration\. The job configuration specifies the rollout, timeout, and stop configurations for the deployment configuration\.  
 *Required*: No  
 *Type*: [DeploymentIoTJobConfiguration](aws-properties-greengrassv2-deployment-deploymentiotjobconfiguration.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ParentTargetArn`  <a name="cfn-greengrassv2-deployment-parenttargetarn"></a>
+The parent deployment's [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) for a subdeployment\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-greengrassv2-deployment-tags"></a>

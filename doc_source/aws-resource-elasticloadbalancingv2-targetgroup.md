@@ -115,7 +115,7 @@ The amount of time, in seconds, during which no response from a target means a f
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HealthyThresholdCount`  <a name="cfn-elasticloadbalancingv2-targetgroup-healthythresholdcount"></a>
-The number of consecutive health check successes required before considering a target healthy\. The range is 2\-10\. If the target group protocol is TCP, TCP\_UDP, UDP, TLS, HTTP or HTTPS, the default is 5\. For target groups with a protocol of GENEVE, the default is 3\. If the target type is `lambda`, the default is 5\.  
+The number of consecutive health check successes required before considering a target healthy\. The range is 2\-10\. If the target group protocol is TCP, TCP\_UDP, UDP, TLS, HTTP or HTTPS, the default is 5\. For target groups with a protocol of GENEVE, the default is 5\. If the target type is `lambda`, the default is 5\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `2`  
@@ -193,7 +193,7 @@ The type of target that you must specify when registering targets with this targ
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `UnhealthyThresholdCount`  <a name="cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount"></a>
-The number of consecutive health check failures required before considering a target unhealthy\. The range is 2\-10\. If the target group protocol is TCP, TCP\_UDP, UDP, TLS, HTTP or HTTPS, the default is 2\. For target groups with a protocol of GENEVE, the default is 3\. If the target type is `lambda`, the default is 5\.  
+The number of consecutive health check failures required before considering a target unhealthy\. The range is 2\-10\. If the target group protocol is TCP, TCP\_UDP, UDP, TLS, HTTP or HTTPS, the default is 2\. For target groups with a protocol of GENEVE, the default is 2\. If the target type is `lambda`, the default is 5\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `2`  

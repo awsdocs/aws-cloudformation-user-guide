@@ -15,8 +15,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Description](#cfn-location-tracker-description)" : String,
       "[KmsKeyId](#cfn-location-tracker-kmskeyid)" : String,
       "[PositionFiltering](#cfn-location-tracker-positionfiltering)" : String,
-      "[PricingPlan](#cfn-location-tracker-pricingplan)" : String,
-      "[PricingPlanDataSource](#cfn-location-tracker-pricingplandatasource)" : String,
       "[TrackerName](#cfn-location-tracker-trackername)" : String
     }
 }
@@ -30,8 +28,6 @@ Properties:
   [Description](#cfn-location-tracker-description): String
   [KmsKeyId](#cfn-location-tracker-kmskeyid): String
   [PositionFiltering](#cfn-location-tracker-positionfiltering): String
-  [PricingPlan](#cfn-location-tracker-pricingplan): String
-  [PricingPlanDataSource](#cfn-location-tracker-pricingplandatasource): String
   [TrackerName](#cfn-location-tracker-trackername): String
 ```
 
@@ -64,19 +60,6 @@ This field is optional\. If not specified, the default value is `TimeBased`\.
 *Type*: String  
 *Allowed values*: `AccuracyBased | DistanceBased | TimeBased`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`PricingPlan`  <a name="cfn-location-tracker-pricingplan"></a>
-No longer used\. If included, the only allowed value is `RequestBasedUsage`\.  
-*Required*: No  
-*Type*: String  
-*Allowed values*: `MobileAssetManagement | MobileAssetTracking | RequestBasedUsage`  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
-
-`PricingPlanDataSource`  <a name="cfn-location-tracker-pricingplandatasource"></a>
-This parameter is no longer used\.  
-*Required*: No  
-*Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TrackerName`  <a name="cfn-location-tracker-trackername"></a>
 The name for the tracker resource\.  

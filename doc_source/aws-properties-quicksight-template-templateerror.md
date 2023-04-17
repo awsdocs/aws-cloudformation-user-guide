@@ -11,7 +11,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[Message](#cfn-quicksight-template-templateerror-message)" : String,
-  "[Type](#cfn-quicksight-template-templateerror-type)" : String
+  "[Type](#cfn-quicksight-template-templateerror-type)" : String,
+  "[ViolatedEntities](#cfn-quicksight-template-templateerror-violatedentities)" : [ Entity, ... ]
 }
 ```
 
@@ -20,6 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
   [Message](#cfn-quicksight-template-templateerror-message): String
   [Type](#cfn-quicksight-template-templateerror-type): String
+  [ViolatedEntities](#cfn-quicksight-template-templateerror-violatedentities): 
+    - Entity
 ```
 
 ## Properties<a name="aws-properties-quicksight-template-templateerror-properties"></a>
@@ -36,4 +39,11 @@ Type of error\.
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ACCESS_DENIED | DATA_SET_NOT_FOUND | INTERNAL_FAILURE | SOURCE_NOT_FOUND`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ViolatedEntities`  <a name="cfn-quicksight-template-templateerror-violatedentities"></a>
+An error path that shows which entities caused the template error\.  
+*Required*: No  
+*Type*: List of [Entity](aws-properties-quicksight-template-entity.md)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

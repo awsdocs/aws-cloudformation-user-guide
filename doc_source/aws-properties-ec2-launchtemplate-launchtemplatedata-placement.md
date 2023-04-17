@@ -89,7 +89,7 @@ Reserved for future use\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tenancy`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-placement-tenancy"></a>
-The tenancy of the instance \(if the instance is running in a VPC\)\. An instance with a tenancy of dedicated runs on single\-tenant hardware\.  
+The tenancy of the instance\. An instance with a tenancy of dedicated runs on single\-tenant hardware\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `dedicated | default | host`  

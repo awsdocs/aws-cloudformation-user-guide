@@ -13,6 +13,7 @@
 + [AWS::SageMaker::FeatureGroup](aws-resource-sagemaker-featuregroup.md)
 + [AWS::SageMaker::Image](aws-resource-sagemaker-image.md)
 + [AWS::SageMaker::ImageVersion](aws-resource-sagemaker-imageversion.md)
++ [AWS::SageMaker::InferenceExperiment](aws-resource-sagemaker-inferenceexperiment.md)
 + [AWS::SageMaker::Model](aws-resource-sagemaker-model.md)
 + [AWS::SageMaker::ModelBiasJobDefinition](aws-resource-sagemaker-modelbiasjobdefinition.md)
 + [AWS::SageMaker::ModelCard](aws-resource-sagemaker-modelcard.md)

@@ -25,7 +25,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-sagemaker-featuregroup-s3storageconfig-properties"></a>
 
 `KmsKeyId`  <a name="cfn-sagemaker-featuregroup-s3storageconfig-kmskeyid"></a>
-The AWS Key Management Service \(KMS\) key ID of the key used to encrypt any objects written into the `OfflineStore` S3 location\.  
+The AWS Key Management Service \(KMS\) key ARN of the key used to encrypt any objects written into the `OfflineStore` S3 location\.  
 The IAM `roleARN` that is passed as a parameter to `CreateFeatureGroup` must have below permissions to the `KmsKeyId`:  
 +  `"kms:GenerateDataKey"` 
 *Required*: No  

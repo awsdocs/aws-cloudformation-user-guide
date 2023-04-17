@@ -1,6 +1,6 @@
 # AWS::ECS::TaskDefinition MountPoint<a name="aws-properties-ecs-taskdefinition-mountpoint"></a>
 
-The `MountPoint` property specifies details on a volume mount point that is used in a container definition\.
+The details for a volume mount point that's used in a container definition\.
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-mountpoint-syntax"></a>
 

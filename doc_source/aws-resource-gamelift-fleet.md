@@ -88,7 +88,7 @@ A unique identifier for a build to be deployed on the new fleet\. If you are dep
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `CertificateConfiguration`  <a name="cfn-gamelift-fleet-certificateconfiguration"></a>
-Prompts GameLift to generate a TLS/SSL certificate for the fleet\. GameLift uses the certificates to encrypt traffic between game clients and the game servers running on GameLift\. By default, the `CertificateConfiguration` is `DISABLED`\. You can't change this property after you create the fleet\.   
+Prompts Amazon GameLift to generate a TLS/SSL certificate for the fleet\. Amazon GameLift uses the certificates to encrypt traffic between game clients and the game servers running on Amazon GameLift\. By default, the `CertificateConfiguration` is `DISABLED`\. You can't change this property after you create the fleet\.   
  AWS Certificate Manager \(ACM\) certificates expire after 13 months\. Certificate expiration can cause fleets to fail, preventing players from connecting to instances in the fleet\. We recommend you replace fleets before 13 months, consider using fleet aliases for a smooth transition\.  
 ACM isn't available in all AWS regions\. A fleet creation request with certificate generation enabled in an unsupported Region, fails with a 4xx error\. For more information about the supported Regions, see [Supported Regions](https://docs.aws.amazon.com/acm/latest/userguide/acm-regions.html) in the * AWS Certificate Manager User Guide*\.
 *Required*: No  
@@ -96,7 +96,7 @@ ACM isn't available in all AWS regions\. A fleet creation request with certifica
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ComputeType`  <a name="cfn-gamelift-fleet-computetype"></a>
-The type of compute resource used to host your game servers\. You can use your own compute resources with GameLift Anywhere or use Amazon EC2 instances with managed GameLift\.  
+The type of compute resource used to host your game servers\. You can use your own compute resources with Amazon GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `ANYWHERE | EC2`  
@@ -118,14 +118,14 @@ The number of EC2 instances that you want this fleet to host\. When creating a n
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EC2InboundPermissions`  <a name="cfn-gamelift-fleet-ec2inboundpermissions"></a>
-The allowed IP address ranges and port settings that allow inbound traffic to access game sessions on this fleet\. If the fleet is hosting a custom game build, this property must be set before players can connect to game sessions\. For Realtime Servers fleets, GameLift automatically sets TCP and UDP ranges\.   
+The allowed IP address ranges and port settings that allow inbound traffic to access game sessions on this fleet\. If the fleet is hosting a custom game build, this property must be set before players can connect to game sessions\. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and UDP ranges\.   
 *Required*: No  
 *Type*: List of [IpPermission](aws-properties-gamelift-fleet-ippermission.md)  
 *Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EC2InstanceType`  <a name="cfn-gamelift-fleet-ec2instancetype"></a>
-The GameLift\-supported Amazon EC2 instance type to use for all fleet instances\. Instance type determines the computing resources that will be used to host your game servers, including CPU, memory, storage, and networking capacity\. See [Amazon Elastic Compute Cloud Instance Types](http://aws.amazon.com/ec2/instance-types/) for detailed descriptions of Amazon EC2 instance types\.  
+The Amazon GameLift\-supported Amazon EC2 instance type to use for all fleet instances\. Instance type determines the computing resources that will be used to host your game servers, including CPU, memory, storage, and networking capacity\. See [Amazon Elastic Compute Cloud Instance Types](http://aws.amazon.com/ec2/instance-types/) for detailed descriptions of Amazon EC2 instance types\.  
 *Required*: No  
 *Type*: String  
 *Allowed values*: `c3.2xlarge | c3.4xlarge | c3.8xlarge | c3.large | c3.xlarge | c4.2xlarge | c4.4xlarge | c4.8xlarge | c4.large | c4.xlarge | c5.12xlarge | c5.18xlarge | c5.24xlarge | c5.2xlarge | c5.4xlarge | c5.9xlarge | c5.large | c5.xlarge | c5a.12xlarge | c5a.16xlarge | c5a.24xlarge | c5a.2xlarge | c5a.4xlarge | c5a.8xlarge | c5a.large | c5a.xlarge | c5d.12xlarge | c5d.18xlarge | c5d.24xlarge | c5d.2xlarge | c5d.4xlarge | c5d.9xlarge | c5d.large | c5d.xlarge | c6a.12xlarge | c6a.16xlarge | c6a.24xlarge | c6a.2xlarge | c6a.4xlarge | c6a.8xlarge | c6a.large | c6a.xlarge | c6i.12xlarge | c6i.16xlarge | c6i.24xlarge | c6i.2xlarge | c6i.4xlarge | c6i.8xlarge | c6i.large | c6i.xlarge | m3.2xlarge | m3.large | m3.medium | m3.xlarge | m4.10xlarge | m4.2xlarge | m4.4xlarge | m4.large | m4.xlarge | m5.12xlarge | m5.16xlarge | m5.24xlarge | m5.2xlarge | m5.4xlarge | m5.8xlarge | m5.large | m5.xlarge | m5a.12xlarge | m5a.16xlarge | m5a.24xlarge | m5a.2xlarge | m5a.4xlarge | m5a.8xlarge | m5a.large | m5a.xlarge | r3.2xlarge | r3.4xlarge | r3.8xlarge | r3.large | r3.xlarge | r4.16xlarge | r4.2xlarge | r4.4xlarge | r4.8xlarge | r4.large | r4.xlarge | r5.12xlarge | r5.16xlarge | r5.24xlarge | r5.2xlarge | r5.4xlarge | r5.8xlarge | r5.large | r5.xlarge | r5a.12xlarge | r5a.16xlarge | r5a.24xlarge | r5a.2xlarge | r5a.4xlarge | r5a.8xlarge | r5a.large | r5a.xlarge | r5d.12xlarge | r5d.16xlarge | r5d.24xlarge | r5d.2xlarge | r5d.4xlarge | r5d.8xlarge | r5d.large | r5d.xlarge | t2.large | t2.medium | t2.micro | t2.small`  
@@ -146,7 +146,8 @@ A unique identifier for an IAM role that manages access to your AWS services\. W
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Locations`  <a name="cfn-gamelift-fleet-locations"></a>
-A set of remote locations to deploy additional instances to and manage as part of the fleet\. This parameter can only be used when creating fleets in AWS Regions that support multiple locations\. You can add any GameLift\-supported AWS Region as a remote location, in the form of an AWS Region code such as `us-west-2`\. To create a fleet with instances in the home Region only, omit this parameter\.   
+A set of remote locations to deploy additional instances to and manage as part of the fleet\. This parameter can only be used when creating fleets in AWS Regions that support multiple locations\. You can add any Amazon GameLift\-supported AWS Region as a remote location, in the form of an AWS Region code such as `us-west-2`\. To create a fleet with instances in the home Region only, don't use this parameter\.   
+To use this parameter, Amazon GameLift requires you to use your home location in the request\.  
 *Required*: No  
 *Type*: List of [LocationConfiguration](aws-properties-gamelift-fleet-locationconfiguration.md)  
 *Maximum*: `100`  
@@ -191,7 +192,7 @@ The status of termination protection for active game sessions on the fleet\. By 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PeerVpcAwsAccountId`  <a name="cfn-gamelift-fleet-peervpcawsaccountid"></a>
-Used when peering your GameLift fleet with a VPC, the unique identifier for the AWS account that owns the VPC\. You can find your account ID in the AWS Management Console under account settings\.   
+Used when peering your Amazon GameLift fleet with a VPC, the unique identifier for the AWS account that owns the VPC\. You can find your account ID in the AWS Management Console under account settings\.   
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -199,7 +200,7 @@ Used when peering your GameLift fleet with a VPC, the unique identifier for the 
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `PeerVpcId`  <a name="cfn-gamelift-fleet-peervpcid"></a>
-A unique identifier for a VPC with resources to be accessed by your GameLift fleet\. The VPC must be in the same Region as your fleet\. To look up a VPC ID, use the [VPC Dashboard](https://console.aws.amazon.com/vpc/) in the AWS Management Console\. Learn more about VPC peering in [VPC Peering with GameLift Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html)\.  
+A unique identifier for a VPC with resources to be accessed by your Amazon GameLift fleet\. The VPC must be in the same Region as your fleet\. To look up a VPC ID, use the [VPC Dashboard](https://console.aws.amazon.com/vpc/) in the AWS Management Console\. Learn more about VPC peering in [VPC Peering with Amazon GameLift Fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/vpc-peering.html)\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -220,7 +221,7 @@ The `RuntimeConfiguration` parameter is required unless the fleet is being confi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScriptId`  <a name="cfn-gamelift-fleet-scriptid"></a>
-The unique identifier for a Realtime configuration script to be deployed on fleet instances\. You can use either the script ID or ARN\. Scripts must be uploaded to GameLift prior to creating the fleet\. This fleet property cannot be changed later\.  
+The unique identifier for a Realtime configuration script to be deployed on fleet instances\. You can use either the script ID or ARN\. Scripts must be uploaded to Amazon GameLift prior to creating the fleet\. This fleet property cannot be changed later\.  
 You can't use the `!Ref` command to reference a script created with a CloudFormation template for the fleet property `ScriptId`\. Instead, use `Fn::GetAtt Script.Arn` or `Fn::GetAtt Script.Id` to retrieve either of these properties as input for `ScriptId`\. Alternatively, enter a `ScriptId` string manually\.
 *Required*: Conditional  
 *Type*: String  

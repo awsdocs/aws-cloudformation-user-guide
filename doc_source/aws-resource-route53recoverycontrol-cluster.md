@@ -1,6 +1,6 @@
 # AWS::Route53RecoveryControl::Cluster<a name="aws-resource-route53recoverycontrol-cluster"></a>
 
-Returns an array of all the clusters in an account\.
+Creates a cluster in Amazon Route 53 Application Recovery Controller\. A cluster is a set of redundant Regional endpoints that you can run Route 53 ARC API calls against to update or get the state of one or more routing controls\.
 
 ## Syntax<a name="aws-resource-route53recoverycontrol-cluster-syntax"></a>
 
@@ -31,7 +31,7 @@ Properties:
 ## Properties<a name="aws-resource-route53recoverycontrol-cluster-properties"></a>
 
 `Name`  <a name="cfn-route53recoverycontrol-cluster-name"></a>
-Name of the cluster\. You can use any non\-white space character in the name\.  
+Name of the cluster\. You can use any non\-white space character in the name except the following: & > < ' \(single quote\) " \(double quote\) ; \(semicolon\)\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -62,7 +62,7 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The Amazon Resource Name \(ARN\) of the cluster\.
 
 `ClusterEndpoints`  <a name="ClusterEndpoints-fn::getatt"></a>
-Endpoints for the cluster\. 
+An array of endpoints for the cluster\. You specify one of these endpoints when you want to set or retrieve a routing control state in the cluster\. 
 
 `Status`  <a name="Status-fn::getatt"></a>
-Deployment status of a resource\. Status can be one of the following: PENDING, DEPLOYED, PENDING\_DELETION\.
+The deployment status of the cluster\. Status can be one of the following: PENDING, DEPLOYED, PENDING\_DELETION\.

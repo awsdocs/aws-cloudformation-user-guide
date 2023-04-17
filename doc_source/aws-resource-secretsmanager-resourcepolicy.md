@@ -64,7 +64,7 @@ When you pass the logical ID of an `AWS::SecretsManager::ResourcePolicy` resourc
 
 This enables you to reference a secret you created in one part of the stack template from within the definition of another resource later, in the same template\. You would typically use this with the [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html) resource type\.
 
-For more information about using the Ref function, see [Ref](url-doc-domain/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+For more information about using the Ref function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
 ## Examples<a name="aws-resource-secretsmanager-resourcepolicy--examples"></a>
 

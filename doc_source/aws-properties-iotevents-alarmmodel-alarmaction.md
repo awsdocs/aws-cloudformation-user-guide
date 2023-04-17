@@ -136,7 +136,7 @@ Calls a Lambda function, passing in information about the detector model instanc
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Sns`  <a name="cfn-iotevents-alarmmodel-alarmaction-sns"></a>
-Property description not available\.  
+Information required to publish the Amazon SNS message\.  
 *Required*: No  
 *Type*: [Sns](aws-properties-iotevents-alarmmodel-sns.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

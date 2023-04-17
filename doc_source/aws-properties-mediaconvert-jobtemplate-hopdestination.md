@@ -39,7 +39,7 @@ Optional unless the job is submitted on the default queue\. When you set up a jo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WaitMinutes`  <a name="cfn-mediaconvert-jobtemplate-hopdestination-waitminutes"></a>
-Required for setting up a job to use queue hopping\. Minimum wait time in minutes until the job can hop to the destination queue\. Valid range is 1 to 1440 minutes, inclusive\.  
+Required for setting up a job to use queue hopping\. Minimum wait time in minutes until the job can hop to the destination queue\. Valid range is 1 to 4320 minutes, inclusive\.  
 *Required*: No  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

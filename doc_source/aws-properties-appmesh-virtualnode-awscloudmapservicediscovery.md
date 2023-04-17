@@ -46,7 +46,7 @@ The preferred IP version that this virtual node uses\. Setting the IP preference
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NamespaceName`  <a name="cfn-appmesh-virtualnode-awscloudmapservicediscovery-namespacename"></a>
-The name of the AWS Cloud Map namespace to use\.  
+The HTTP name of the AWS Cloud Map namespace to use\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

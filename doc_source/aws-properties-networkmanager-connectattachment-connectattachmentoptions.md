@@ -26,5 +26,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The protocol used for the attachment connection\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `GRE | NO_ENCAP`  
+*Allowed values*: `GRE`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -1,6 +1,6 @@
 # AWS::EC2::Route<a name="aws-resource-ec2-route"></a>
 
-Specifies a route in a route table within a VPC\.
+Specifies a route in a route table\.
 
 You must specify either `DestinationCidrBlock` or `DestinationIpv6CidrBlock`, plus the ID of one of the target resources\.
 

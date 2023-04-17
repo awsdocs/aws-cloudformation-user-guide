@@ -145,7 +145,7 @@ Resources:
 
 ### Specifying the default hook version<a name="aws-resource-cloudformation-hookversion--examples--Specifying_the_default_hook_version"></a>
 
-The following example demonstrates how to specify a new hook version and use the Ref return value to set that version as the default version\.
+The following example demonstrates how to specify a new hook version and use the `Ref` return value to set that version as the default version\.
 
 #### JSON<a name="aws-resource-cloudformation-hookversion--examples--Specifying_the_default_hook_version--json"></a>
 

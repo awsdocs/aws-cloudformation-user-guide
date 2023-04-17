@@ -100,6 +100,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PubliclyAccessible](#cfn-rds-dbinstance-publiclyaccessible)" : Boolean,
       "[ReplicaMode](#cfn-rds-dbinstance-replicamode)" : String,
       "[RestoreTime](#cfn-rds-dbinstance-restoretime)" : String,
+      "[SourceDBClusterIdentifier](#cfn-rds-dbinstance-sourcedbclusteridentifier)" : String,
       "[SourceDBInstanceAutomatedBackupsArn](#cfn-rds-dbinstance-sourcedbinstanceautomatedbackupsarn)" : String,
       "[SourceDBInstanceIdentifier](#cfn-rds-dbinstance-sourcedbinstanceidentifier)" : String,
       "[SourceDbiResourceId](#cfn-rds-dbinstance-sourcedbiresourceid)" : String,
@@ -183,6 +184,7 @@ Properties:
   [PubliclyAccessible](#cfn-rds-dbinstance-publiclyaccessible): Boolean
   [ReplicaMode](#cfn-rds-dbinstance-replicamode): String
   [RestoreTime](#cfn-rds-dbinstance-restoretime): String
+  [SourceDBClusterIdentifier](#cfn-rds-dbinstance-sourcedbclusteridentifier): String
   [SourceDBInstanceAutomatedBackupsArn](#cfn-rds-dbinstance-sourcedbinstanceautomatedbackupsarn): String
   [SourceDBInstanceIdentifier](#cfn-rds-dbinstance-sourcedbinstanceidentifier): String
   [SourceDbiResourceId](#cfn-rds-dbinstance-sourcedbiresourceid): String
@@ -867,6 +869,17 @@ Constraints:
 + Must be before the latest restorable time for the DB instance
 + Can't be specified if the `UseLatestRestorableTime` parameter is enabled
 Example: `2009-09-07T23:45:00Z`   
+*Required*: No  
+*Type*: String  
+*Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)
+
+`SourceDBClusterIdentifier`  <a name="cfn-rds-dbinstance-sourcedbclusteridentifier"></a>
+The identifier of the Multi\-AZ DB cluster that will act as the source for the read replica\. Each DB cluster can have up to 15 read replicas\.  
+Constraints:  
++ Must be the identifier of an existing Multi\-AZ DB cluster\.
++ Can't be specified if the `SourceDBInstanceIdentifier` parameter is also specified\.
++ The specified DB cluster must have automatic backups enabled, that is, its backup retention period must be greater than 0\.
++ The source DB cluster must be in the same AWS Region as the read replica\. Cross\-Region replication isn't supported\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [Some interruptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-some-interrupt)

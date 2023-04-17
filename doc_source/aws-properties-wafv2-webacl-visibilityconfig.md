@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-wafv2-webacl-visibilityconfig-properties"></a>
 
 `CloudWatchMetricsEnabled`  <a name="cfn-wafv2-webacl-visibilityconfig-cloudwatchmetricsenabled"></a>
-A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch\. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics)\.  
+A boolean indicating whether the associated resource sends metrics to Amazon CloudWatch\. For the list of available metrics, see [AWS WAF Metrics](https://docs.aws.amazon.com/waf/latest/developerguide/monitoring-cloudwatch.html#waf-metrics) in the * AWS WAF Developer Guide*\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

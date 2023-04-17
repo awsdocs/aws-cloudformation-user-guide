@@ -41,7 +41,7 @@ The number of elements in the intrinsic function that returns an array or in the
 
 ## Examples<a name="intrinsic-function-reference-length-examples"></a>
 
-### Return the number of elements in an intrinsic function that returns an array<a name="intrinsic-function-reference-length-example"></a>
+### Return the number of elements in an intrinsic function that returns an array<a name="intrinsic-function-reference-length-example-subsection"></a>
 
 This example snippet returns the number of elements in an intrinsic function that returns an array\. The function returns 3\.
 
@@ -59,7 +59,7 @@ This example snippet returns the number of elements in an intrinsic function tha
 9. }
 ```
 
-#### YAML<a name="intrinsic-function-reference-length-example.yaml"></a>
+#### YAML<a name="intrinsic-function-reference-legnth-example.yaml"></a>
 
 ```
 1. Transform: 'AWS::LanguageExtensions'
@@ -87,7 +87,7 @@ This example snippet returns the number of elements in a `Ref` intrinsic functio
 9. }
 ```
 
-#### YAML<a name="intrinsic-function-reference-length-example2.yaml"></a>
+#### YAML<a name="intrinsic-function-reference-legnth-example2.yaml"></a>
 
 ```
 1. Transform: 'AWS::LanguageExtensions'
@@ -117,7 +117,7 @@ This example snippet returns the number of elements in the array passed to the i
 11. }
 ```
 
-#### YAML<a name="intrinsic-function-reference-length-example3.yaml"></a>
+#### YAML<a name="intrinsic-function-reference-legnth-example3.yaml"></a>
 
 ```
 1. Transform: 'AWS::LanguageExtensions'

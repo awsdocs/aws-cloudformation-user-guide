@@ -56,6 +56,15 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 
 #### <a name="aws-resource-s3objectlambda-accesspoint-return-values-fn--getatt-fn--getatt"></a>
 
+`Alias`  <a name="Alias-fn::getatt"></a>
+The alias of the Object Lambda Access Point\.
+
+`Alias.Status`  <a name="Alias.Status-fn::getatt"></a>
+The status of the Object Lambda Access Point alias\. Valid Values: `PROVISIONING` \| `READY`\.
+
+`Alias.Value`  <a name="Alias.Value-fn::getatt"></a>
+The alias name value of the Object Lambda Access Point\. For example: `myolap-1a4n8yjrb3kda96f67zwrwiiuse1a--ol-s3`\.
+
 `Arn`  <a name="Arn-fn::getatt"></a>
 Specifies the ARN for the Object Lambda Access Point\.
 

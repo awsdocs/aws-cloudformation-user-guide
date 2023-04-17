@@ -40,7 +40,7 @@ CreationPolicy:
 Starts the specified fleet\.  
 *Required*: No
 
-## Amazon EC2 Auto Scaling creation properties<a name="w2ab1c33c23b7c13"></a>
+## Amazon EC2 Auto Scaling creation properties<a name="w4ab1c33c23b7c13"></a>
 
 Amazon EC2 Auto Scaling configuration for a creation policy\.
 
@@ -51,7 +51,7 @@ Amazon EC2 Auto Scaling configuration for a creation policy\.
 ```
 "CreationPolicy" : {
   "AutoScalingCreationPolicy" : {
-    "MinSuccessfulInstancesPercent." : Integer
+    "MinSuccessfulInstancesPercent" : Integer
   },
   "ResourceSignal" : {    
     "Count" : Integer,
@@ -65,7 +65,7 @@ Amazon EC2 Auto Scaling configuration for a creation policy\.
 ```
 CreationPolicy:
   AutoScalingCreationPolicy:
-    MinSuccessfulInstancesPercent.: Integer
+    MinSuccessfulInstancesPercent: Integer
   ResourceSignal:    
     Count: Integer
     Timeout: String
@@ -77,7 +77,7 @@ Amazon EC2 Auto Scaling configuration for a creation policy\.
 
 `AutoScalingCreationPolicy`  <a name="cfn-attributes-creationpolicy-autoscalingcreationpolicy"></a>
 For a new Amazon EC2 Auto Scaling group, specifies how the number of instances that must signal success before setting the group's status to `CREATE_COMPLETE`\.    
-`MinSuccessfulInstancesPercent`\.  <a name="cfn-attributes-creationpolicy-autoscalingcreationpolicy-minsuccessfulinstancespercent"></a>
+`MinSuccessfulInstancesPercent`  <a name="cfn-attributes-creationpolicy-autoscalingcreationpolicy-minsuccessfulinstancespercent"></a>
 Specifies the percentage of instances in an Amazon EC2 Auto Scaling that must signal success before setting the group's status to `CREATE_COMPLETE`\. You can specify a value from `0` to `100`\. CloudFormation rounds to the nearest tenth of a percent\. For example, if you create five instances with a minimum successful percentage of `50`, three instances must signal success\. If an instance doesn't send a signal within the time specified by the `Timeout` property, CloudFormation assumes that the instance wasn't created\.  
 *Default*: `100`  
 *Type*: Integer  
@@ -193,7 +193,7 @@ LaunchConfig:
           /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource AutoScalingGroup --region ${AWS::Region}
 ```
 
-#### WaitCondition<a name="w2ab1c33c23b7c13b9b5"></a>
+#### WaitCondition<a name="w4ab1c33c23b7c13b9b5"></a>
 
 The following example shows how to add a creation policy to a wait condition\.
 

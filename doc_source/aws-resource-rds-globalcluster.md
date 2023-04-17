@@ -61,7 +61,7 @@ If the `SourceDBClusterIdentifier` property isn't specified, this property is re
 The engine version of the Aurora global database\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GlobalClusterIdentifier`  <a name="cfn-rds-globalcluster-globalclusteridentifier"></a>
 The cluster identifier of the global database cluster\.  

@@ -9,6 +9,7 @@ For details about each event source type, see the following topics\. In particul
 + [ Configuring an MQ broker as an event source](https://docs.aws.amazon.com/lambda/latest/dg/with-mq.html#services-mq-eventsourcemapping)
 + [ Configuring MSK as an event source](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html)
 + [ Configuring Self\-Managed Apache Kafka as an event source](https://docs.aws.amazon.com/lambda/latest/dg/kafka-smaa.html)
++ [ Configuring Amazon DocumentDB as an event source](https://docs.aws.amazon.com/lambda/latest/dg/with-documentdb.html)
 
 ## Syntax<a name="aws-resource-lambda-eventsourcemapping-syntax"></a>
 
@@ -112,13 +113,13 @@ The maximum number of records in each batch that Lambda pulls from your stream o
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BisectBatchOnFunctionError`  <a name="cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror"></a>
-\(Streams only\) If the function returns an error, split the batch in two and retry\. The default value is false\.  
+\(Kinesis and DynamoDB Streams only\) If the function returns an error, split the batch in two and retry\. The default value is false\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DestinationConfig`  <a name="cfn-lambda-eventsourcemapping-destinationconfig"></a>
-\(Streams only\) An Amazon SQS queue or Amazon SNS topic destination for discarded records\.  
+\(Kinesis and DynamoDB Streams only\) An Amazon SQS queue or Amazon SNS topic destination for discarded records\.  
 *Required*: No  
 *Type*: [DestinationConfig](aws-properties-lambda-eventsourcemapping-destinationconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -182,8 +183,8 @@ Valid Values: `ReportBatchItemFailures`
 `MaximumBatchingWindowInSeconds`  <a name="cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds"></a>
 The maximum amount of time, in seconds, that Lambda spends gathering records before invoking the function\.  
 **Default \(Kinesis, DynamoDB, Amazon SQS event sources\)**: 0  
-**Default \(Amazon MSK, Kafka, Amazon MQ event sources\)**: 500 ms  
-**Related setting: ** When you set `BatchSize` to a value greater than 10, you must set `MaximumBatchingWindowInSeconds` to at least 1\.  
+**Default \(Amazon MSK, Kafka, Amazon MQ, Amazon DocumentDB event sources\)**: 500 ms  
+**Related setting: ** For Amazon SQS event sources, when you set `BatchSize` to a value greater than 10, you must set `MaximumBatchingWindowInSeconds` to at least 1\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
@@ -191,7 +192,8 @@ The maximum amount of time, in seconds, that Lambda spends gathering records bef
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumRecordAgeInSeconds`  <a name="cfn-lambda-eventsourcemapping-maximumrecordageinseconds"></a>
-\(Streams only\) Discard records older than the specified age\. The default value is \-1, which sets the maximum age to infinite\. When the value is set to infinite, Lambda never discards old records\.   
+\(Kinesis and DynamoDB Streams only\) Discard records older than the specified age\. The default value is \-1, which sets the maximum age to infinite\. When the value is set to infinite, Lambda never discards old records\.  
+The minimum value that can be set is 60 seconds\.
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `-1`  
@@ -199,7 +201,7 @@ The maximum amount of time, in seconds, that Lambda spends gathering records bef
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaximumRetryAttempts`  <a name="cfn-lambda-eventsourcemapping-maximumretryattempts"></a>
-\(Streams only\) Discard records after the specified number of retries\. The default value is \-1, which sets the maximum number of retries to infinite\. When MaximumRetryAttempts is infinite, Lambda retries failed records until the record expires in the event source\.  
+\(Kinesis and DynamoDB Streams only\) Discard records after the specified number of retries\. The default value is \-1, which sets the maximum number of retries to infinite\. When MaximumRetryAttempts is infinite, Lambda retries failed records until the record expires in the event source\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `-1`  
@@ -207,7 +209,7 @@ The maximum amount of time, in seconds, that Lambda spends gathering records bef
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ParallelizationFactor`  <a name="cfn-lambda-eventsourcemapping-parallelizationfactor"></a>
-\(Streams only\) The number of batches to process concurrently from each shard\. The default value is 1\.  
+\(Kinesis and DynamoDB Streams only\) The number of batches to process concurrently from each shard\. The default value is 1\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  
@@ -269,7 +271,7 @@ The name of the Kafka topic\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TumblingWindowInSeconds`  <a name="cfn-lambda-eventsourcemapping-tumblingwindowinseconds"></a>
-\(Streams only\) The duration in seconds of a processing window\. The range is between 1 second and 900 seconds\.  
+\(Kinesis and DynamoDB Streams only\) The duration in seconds of a processing window for DynamoDB and Kinesis Streams event sources\. A value of 0 seconds indicates no tumbling window\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  

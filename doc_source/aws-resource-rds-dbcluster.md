@@ -80,6 +80,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[PreferredMaintenanceWindow](#cfn-rds-dbcluster-preferredmaintenancewindow)" : String,
       "[PubliclyAccessible](#cfn-rds-dbcluster-publiclyaccessible)" : Boolean,
       "[ReplicationSourceIdentifier](#cfn-rds-dbcluster-replicationsourceidentifier)" : String,
+      "[RestoreToTime](#cfn-rds-dbcluster-restoretotime)" : String,
       "[RestoreType](#cfn-rds-dbcluster-restoretype)" : String,
       "[ScalingConfiguration](#cfn-rds-dbcluster-scalingconfiguration)" : ScalingConfiguration,
       "[ServerlessV2ScalingConfiguration](#cfn-rds-dbcluster-serverlessv2scalingconfiguration)" : ServerlessV2ScalingConfiguration,
@@ -145,6 +146,7 @@ Properties:
   [PreferredMaintenanceWindow](#cfn-rds-dbcluster-preferredmaintenancewindow): String
   [PubliclyAccessible](#cfn-rds-dbcluster-publiclyaccessible): Boolean
   [ReplicationSourceIdentifier](#cfn-rds-dbcluster-replicationsourceidentifier): String
+  [RestoreToTime](#cfn-rds-dbcluster-restoretotime): String
   [RestoreType](#cfn-rds-dbcluster-restoretype): String
   [ScalingConfiguration](#cfn-rds-dbcluster-scalingconfiguration): 
     ScalingConfiguration
@@ -350,6 +352,7 @@ Valid for: Aurora DB clusters and Multi\-AZ DB clusters
 
 `EngineMode`  <a name="cfn-rds-dbcluster-enginemode"></a>
 The DB engine mode of the DB cluster, either `provisioned`, `serverless`, `parallelquery`, `global`, or `multimaster`\.  
+The `serverless` engine mode only applies for Aurora Serverless v1 DB clusters\.  
 The `parallelquery` engine mode isn't required for Aurora MySQL version 1\.23 and higher 1\.x versions, and version 2\.09 and higher 2\.x versions\.  
 The `global` engine mode isn't required for Aurora MySQL version 1\.22 and higher 1\.x versions, and `global` engine mode isn't required for any 2\.x versions\.  
 The `multimaster` engine mode only applies for DB clusters created with Aurora MySQL version 5\.6\.10a\.  
@@ -389,7 +392,7 @@ Valid for: Aurora DB clusters only
 
 `Iops`  <a name="cfn-rds-dbcluster-iops"></a>
 The amount of Provisioned IOPS \(input/output operations per second\) to be initially allocated for each DB instance in the Multi\-AZ DB cluster\.  
-For information about valid IOPS values, see [Amazon RDS Provisioned IOPS storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS) in the *Amazon RDS User Guide*\.  
+For information about valid IOPS values, see [Provisioned IOPS storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#USER_PIOPS) in the *Amazon RDS User Guide*\.  
 This setting is required to create a Multi\-AZ DB cluster\.  
 Constraints: Must be a multiple between \.5 and 50 of the storage amount for the DB cluster\.  
 Valid for: Multi\-AZ DB clusters only  
@@ -558,6 +561,20 @@ Valid for: Aurora DB clusters only
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RestoreToTime`  <a name="cfn-rds-dbcluster-restoretotime"></a>
+The date and time to restore the DB cluster to\.  
+Valid Values: Value must be a time in Universal Coordinated Time \(UTC\) format  
+Constraints:  
++ Must be before the latest restorable time for the DB instance
++ Must be specified if `UseLatestRestorableTime` parameter isn't provided
++ Can't be specified if the `UseLatestRestorableTime` parameter is enabled
++ Can't be specified if the `RestoreType` parameter is `copy-on-write` 
+Example: `2015-03-07T23:45:00Z`   
+Valid for: Aurora DB clusters and Multi\-AZ DB clusters  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RestoreType`  <a name="cfn-rds-dbcluster-restoretype"></a>
 The type of restore to be performed\. You can specify one of the following values:  

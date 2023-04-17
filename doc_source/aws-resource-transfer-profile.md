@@ -70,10 +70,14 @@ Key\-value pairs that can be used to group and search for profiles\.
 
 ### Fn::GetAtt<a name="aws-resource-transfer-profile-return-values-fn--getatt"></a>
 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
 #### <a name="aws-resource-transfer-profile-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-Property description not available\.
+The Amazon Resource Name associated with the profile, in the form `arn:aws:transfer:region:account-id:profile/profile-id/`\.
 
 `ProfileId`  <a name="ProfileId-fn::getatt"></a>
-Property description not available\.
+The unique identifier for the AS2 profile, returned after the API call succeeds\.

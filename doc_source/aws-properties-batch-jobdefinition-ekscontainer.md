@@ -16,8 +16,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Image](#cfn-batch-jobdefinition-ekscontainer-image)" : String,
   "[ImagePullPolicy](#cfn-batch-jobdefinition-ekscontainer-imagepullpolicy)" : String,
   "[Name](#cfn-batch-jobdefinition-ekscontainer-name)" : String,
-  "[Resources](#cfn-batch-jobdefinition-ekscontainer-resources)" : Resources,
-  "[SecurityContext](#cfn-batch-jobdefinition-ekscontainer-securitycontext)" : SecurityContext,
+  "[Resources](#cfn-batch-jobdefinition-ekscontainer-resources)" : EksContainerResourceRequirements,
+  "[SecurityContext](#cfn-batch-jobdefinition-ekscontainer-securitycontext)" : EksContainerSecurityContext,
   "[VolumeMounts](#cfn-batch-jobdefinition-ekscontainer-volumemounts)" : [ EksContainerVolumeMount, ... ]
 }
 ```
@@ -35,9 +35,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ImagePullPolicy](#cfn-batch-jobdefinition-ekscontainer-imagepullpolicy): String
   [Name](#cfn-batch-jobdefinition-ekscontainer-name): String
   [Resources](#cfn-batch-jobdefinition-ekscontainer-resources): 
-    Resources
+    EksContainerResourceRequirements
   [SecurityContext](#cfn-batch-jobdefinition-ekscontainer-securitycontext): 
-    SecurityContext
+    EksContainerSecurityContext
   [VolumeMounts](#cfn-batch-jobdefinition-ekscontainer-volumemounts): 
     - EksContainerVolumeMount
 ```
@@ -86,13 +86,13 @@ The name of the container\. If the name isn't specified, the default name "`Defa
 `Resources`  <a name="cfn-batch-jobdefinition-ekscontainer-resources"></a>
 The type and amount of resources to assign to a container\. The supported resources include `memory`, `cpu`, and `nvidia.com/gpu`\. For more information, see [Resource management for pods and containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) in the *Kubernetes documentation*\.  
 *Required*: No  
-*Type*: [Resources](aws-properties-batch-jobdefinition-ekscontainer-resources.md)  
+*Type*: [EksContainerResourceRequirements](aws-properties-batch-jobdefinition-ekscontainerresourcerequirements.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityContext`  <a name="cfn-batch-jobdefinition-ekscontainer-securitycontext"></a>
 The security context for a job\. For more information, see [Configure a security context for a pod or container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/) in the *Kubernetes documentation*\.  
 *Required*: No  
-*Type*: [SecurityContext](aws-properties-batch-jobdefinition-ekscontainer-securitycontext.md)  
+*Type*: [EksContainerSecurityContext](aws-properties-batch-jobdefinition-ekscontainersecuritycontext.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeMounts`  <a name="cfn-batch-jobdefinition-ekscontainer-volumemounts"></a>

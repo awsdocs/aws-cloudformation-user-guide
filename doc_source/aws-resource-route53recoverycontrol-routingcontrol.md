@@ -1,6 +1,8 @@
 # AWS::Route53RecoveryControl::RoutingControl<a name="aws-resource-route53recoverycontrol-routingcontrol"></a>
 
-Defines a routing control\. To get or update the routing control state, see the Recovery Cluster \(data plane\) API actions for Amazon Route 53 Application Recovery Controller\.
+Creates a routing control in Amazon Route 53 Application Recovery Controller\. Routing control states are maintained on the highly reliable cluster data plane\.
+
+To get or update the state of the routing control, you must specify a cluster endpoint, which is an endpoint URL and an AWS Region\. For more information, see [Code examples](https://docs.aws.amazon.com/r53recovery/latest/dg/service_code_examples.html) in the Amazon Route 53 Application Recovery Controller Developer Guide\.
 
 ## Syntax<a name="aws-resource-route53recoverycontrol-routingcontrol-syntax"></a>
 
@@ -32,7 +34,7 @@ Properties:
 ## Properties<a name="aws-resource-route53recoverycontrol-routingcontrol-properties"></a>
 
 `ClusterArn`  <a name="cfn-route53recoverycontrol-routingcontrol-clusterarn"></a>
-The Amazon Resource Name \(ARN\) of the cluster that includes the routing control\.  
+The Amazon Resource Name \(ARN\) of the cluster that hosts the routing control\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

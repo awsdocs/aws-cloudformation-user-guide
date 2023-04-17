@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DataSources](#cfn-guardduty-detector-datasources)" : CFNDataSourceConfigurations,
       "[Enable](#cfn-guardduty-detector-enable)" : Boolean,
+      "[Features](#cfn-guardduty-detector-features)" : [ FeatureConfigurations, ... ],
       "[FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency)" : String,
       "[Tags](#cfn-guardduty-detector-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -28,6 +29,8 @@ Properties:
   [DataSources](#cfn-guardduty-detector-datasources): 
     CFNDataSourceConfigurations
   [Enable](#cfn-guardduty-detector-enable): Boolean
+  [Features](#cfn-guardduty-detector-features): 
+    - FeatureConfigurations
   [FindingPublishingFrequency](#cfn-guardduty-detector-findingpublishingfrequency): String
   [Tags](#cfn-guardduty-detector-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -45,6 +48,12 @@ Describes which data sources will be enabled for the detector\.
 Specifies whether the detector is to be enabled on creation\.  
 *Required*: Yes  
 *Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Features`  <a name="cfn-guardduty-detector-features"></a>
+A list of features that will be configured for the detector\.  
+*Required*: No  
+*Type*: List of [FeatureConfigurations](aws-properties-guardduty-detector-featureconfigurations.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FindingPublishingFrequency`  <a name="cfn-guardduty-detector-findingpublishingfrequency"></a>

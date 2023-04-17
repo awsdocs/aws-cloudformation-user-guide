@@ -1,6 +1,6 @@
 # AWS::RolesAnywhere::TrustAnchor<a name="aws-resource-rolesanywhere-trustanchor"></a>
 
-The state of the trust anchor after a read or write operation\. 
+ Creates a TrustAnchor\. 
 
 ## Syntax<a name="aws-resource-rolesanywhere-trustanchor-syntax"></a>
 
@@ -57,9 +57,10 @@ The trust anchor type and its related certificate data\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-rolesanywhere-trustanchor-tags"></a>
-A list of tags to attach to the trust anchor\.  
+The tags to attach to the trust anchor\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-rolesanywhere-trustanchor-return-values"></a>
@@ -80,4 +81,4 @@ For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::G
 The ARN of the trust anchor\.
 
 `TrustAnchorId`  <a name="TrustAnchorId-fn::getatt"></a>
- The unique primary identifier of the TrustAnchor 
+The unique identifier of the trust anchor\.

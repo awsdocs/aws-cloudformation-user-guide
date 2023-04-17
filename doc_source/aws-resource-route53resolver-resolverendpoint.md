@@ -4,6 +4,10 @@ Creates a Resolver endpoint\. There are two types of Resolver endpoints, inbound
 + An *inbound Resolver endpoint* forwards DNS queries to the DNS service for a VPC from your network\.
 + An *outbound Resolver endpoint* forwards DNS queries from the DNS service for a VPC to your network\.
 
+**Important**  
+You cannot update `ResolverEndpointType` and `IpAddresses` in the same request\.
+When you update a dual\-stack IP address, you must update both IP addresses\. You can’t update only an IPv4 or IPv6 and keep an existing IP address\.
+
 ## Syntax<a name="aws-resource-route53resolver-resolverendpoint-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:
@@ -59,7 +63,7 @@ Indicates whether the Resolver endpoint allows inbound or outbound DNS queries:
 The subnets and IP addresses in your VPC that DNS queries originate from \(for outbound endpoints\) or that you forward DNS queries to \(for inbound endpoints\)\. The subnet ID uniquely identifies a VPC\.   
 *Required*: Yes  
 *Type*: List of [IpAddressRequest](aws-properties-route53resolver-resolverendpoint-ipaddressrequest.md)  
-*Maximum*: `10`  
+*Maximum*: `20`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-route53resolver-resolverendpoint-name"></a>
@@ -83,9 +87,10 @@ Property description not available\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ResolverEndpointType`  <a name="cfn-route53resolver-resolverendpoint-resolverendpointtype"></a>
-Property description not available\.  
+ The Resolver endpoint IP address type\.   
 *Required*: No  
 *Type*: String  
+*Allowed values*: `DUALSTACK | IPV4 | IPV6`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIds`  <a name="cfn-route53resolver-resolverendpoint-securitygroupids"></a>
@@ -142,7 +147,7 @@ Property description not available\.
 The ID of the resolver endpoint\.
 
 `ResolverEndpointType`  <a name="ResolverEndpointType-fn::getatt"></a>
-Property description not available\.
+For the endpoint type you can choose either IPv4, IPv6\. or dual\-stack\. A dual\-stack endpoint means that it will resolve via both IPv4 and IPv6\. If you choose either IPv4 or IPv6, this endpoint type is applied to all IP addresses\.
 
 ## Examples<a name="aws-resource-route53resolver-resolverendpoint--examples"></a>
 

@@ -74,7 +74,7 @@ Properties:
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Operation`  <a name="cfn-billingconductor-pricingrule-operation"></a>
-Property description not available\.  
+Operation is the specific AWS action covered by this line item\. This describes the specific usage of the line item\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -67,7 +67,7 @@ The ID of the network ACL\.
 
 ### Network ACL<a name="aws-resource-ec2-networkacl--examples--Network_ACL"></a>
 
-The following example creates a Network ACL in a VPC\.
+The following example creates a network ACL\.
 
 #### JSON<a name="aws-resource-ec2-networkacl--examples--Network_ACL--json"></a>
 

@@ -1,8 +1,8 @@
 # AWS::InternetMonitor::Monitor<a name="aws-resource-internetmonitor-monitor"></a>
 
-The `AWS::InternetMonitor::Monitor` resource is an Internet Monitor resource type that contains information about how you create a monitor in Amazon CloudWatch Internet Monitor\. A monitor in Internet Monitor provides visibility into performance and availability between your applications hosted on AWS and your end users, using a traffic profile that it creates based on the application resources that you add: Virtual Private Clouds \(VPCs\), Amazon CloudFront distributions, or WorkSpaces directories\. 
+The `AWS::InternetMonitor::Monitor` resource contains information about how you create a monitor in Amazon CloudWatch Internet Monitor\. A monitor in Internet Monitor provides visibility into performance and availability between your applications hosted on AWS and your end users, using a traffic profile that it creates based on the application resources that you add: Virtual Private Clouds \(VPCs\), Amazon CloudFront distributions, or WorkSpaces directories\. 
 
-Internet Monitor also alerts you to internet issues that impact your application in the city\-networks \(geographies and networks\) where your end users use it\. With Internet Monitor, you can quickly pinpoint the locations and providers that are affected, so that you can address the issue\.
+Internet Monitor also alerts you to internet issues that impact your application in the city\-networks \(locations and ASNs, typically internet service providers or ISPs\) where your end users use it\. With Internet Monitor, you can quickly pinpoint the locations and ASNs that are affected, so that you can address the issue\.
 
 For more information, see [ Using Amazon CloudWatch Internet Monitor](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-InternetMonitor.html) in the *Amazon CloudWatch User Guide*\.
 
@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::InternetMonitor::Monitor",
   "Properties" : {
+      "[InternetMeasurementsLogDelivery](#cfn-internetmonitor-monitor-internetmeasurementslogdelivery)" : InternetMeasurementsLogDelivery,
       "[MaxCityNetworksToMonitor](#cfn-internetmonitor-monitor-maxcitynetworkstomonitor)" : Integer,
       "[MonitorName](#cfn-internetmonitor-monitor-monitorname)" : String,
       "[Resources](#cfn-internetmonitor-monitor-resources)" : [ String, ... ],
@@ -32,6 +33,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::InternetMonitor::Monitor
 Properties: 
+  [InternetMeasurementsLogDelivery](#cfn-internetmonitor-monitor-internetmeasurementslogdelivery): 
+    InternetMeasurementsLogDelivery
   [MaxCityNetworksToMonitor](#cfn-internetmonitor-monitor-maxcitynetworkstomonitor): Integer
   [MonitorName](#cfn-internetmonitor-monitor-monitorname): String
   [Resources](#cfn-internetmonitor-monitor-resources): 
@@ -47,8 +50,15 @@ Properties:
 
 ## Properties<a name="aws-resource-internetmonitor-monitor-properties"></a>
 
+`InternetMeasurementsLogDelivery`  <a name="cfn-internetmonitor-monitor-internetmeasurementslogdelivery"></a>
+Publish internet measurements for a monitor for all city\-networks \(up to the 500,000 service limit\) to another location, such as an Amazon S3 bucket\. Measurements are also published to Amazon CloudWatch Logs for the first 500 \(by traffic volume\) city\-networks \(client locations and ASNs, typically internet service providers or ISPs\)\.  
+*Required*: No  
+*Type*: [InternetMeasurementsLogDelivery](aws-properties-internetmonitor-monitor-internetmeasurementslogdelivery.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `MaxCityNetworksToMonitor`  <a name="cfn-internetmonitor-monitor-maxcitynetworkstomonitor"></a>
-The maximum number of city\-networks to monitor for your resources\. A city\-network is the location \(city\) where clients access your application resources from and the network, such as an internet service provider, that clients access the resources through\.  
+The maximum number of city\-networks to monitor for your resources\. A city\-network is the location \(city\) where clients access your application resources from and the ASN, typically an internet service provider, that clients access the resources through\.  
+The city\-network maximum that you choose sets a cap on the total that *can* be included when Internet Monitor monitors traffic with your monitor\. You only pay for the number of city\-networks that are actually monitored, not this maximum limit, and you can change the maximum at any time, by updating your monitor\.  
 For more information, see [ Choosing a city\-network maximum value](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/IMCityNetworksMaximum.html) in *Using Amazon CloudWatch Internet Monitor*\.  
 *Required*: No  
 *Type*: Integer  
@@ -56,7 +66,7 @@ For more information, see [ Choosing a city\-network maximum value](https://docs
 
 `MonitorName`  <a name="cfn-internetmonitor-monitor-monitorname"></a>
 The name of the monitor\. A monitor name can contain only alphanumeric characters, dashes \(\-\), periods \(\.\), and underscores \(\_\)\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
@@ -75,7 +85,7 @@ If you add only VPC resources, at least one VPC must have an Internet Gateway at
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ResourcesToRemove`  <a name="cfn-internetmonitor-monitor-resourcestoremove"></a>
-The resources to remove from a monitor, which you provide as a set of Amazon Resource Names \(ARNs\)\.  
+The resources to remove from a monitor\. Provide the resources as a set of Amazon Resource Names \(ARNs\)\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

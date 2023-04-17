@@ -1,6 +1,6 @@
 # AWS::IoTWireless::NetworkAnalyzerConfiguration TraceContent<a name="aws-properties-iotwireless-networkanalyzerconfiguration-tracecontent"></a>
 
-<a name="aws-properties-iotwireless-networkanalyzerconfiguration-tracecontent-description"></a>The `TraceContent` property type specifies Property description not available\. for an [AWS::IoTWireless::NetworkAnalyzerConfiguration](aws-resource-iotwireless-networkanalyzerconfiguration.md)\.
+Trace content for your wireless gateway and wireless device resources\.
 
 ## Syntax<a name="aws-properties-iotwireless-networkanalyzerconfiguration-tracecontent-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotwireless-networkanalyzerconfiguration-tracecontent-properties"></a>
 
 `LogLevel`  <a name="cfn-iotwireless-networkanalyzerconfiguration-tracecontent-loglevel"></a>
-Property description not available\.  
+The log level for a log message\. The log levels can be disabled, or set to `ERROR` to display less verbose logs containing only error information, or to `INFO` for more detailed logs  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WirelessDeviceFrameInfo`  <a name="cfn-iotwireless-networkanalyzerconfiguration-tracecontent-wirelessdeviceframeinfo"></a>
-Property description not available\.  
+`FrameInfo` of your wireless device resources for the trace content\. Use FrameInfo to debug the communication between your LoRaWAN end devices and the network server\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

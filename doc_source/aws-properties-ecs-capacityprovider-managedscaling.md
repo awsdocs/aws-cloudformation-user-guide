@@ -2,7 +2,7 @@
 
 The managed scaling settings for the Auto Scaling group capacity provider\.
 
-When managed scaling is enabled, Amazon ECS manages the scale\-in and scale\-out actions of the Auto Scaling group\. Amazon ECS manages a target tracking scaling policy using an Amazon ECS managed CloudWatch metric with the specified `targetCapacity` value as the target value for the metric\. For more information, see [Using managed scaling](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/asg-capacity-providers.html#asg-capacity-providers-managed-scaling) in the *Amazon Elastic Container Service Developer Guide*\.
+When managed scaling is turned on, Amazon ECS manages the scale\-in and scale\-out actions of the Auto Scaling group\. Amazon ECS manages a target tracking scaling policy using an Amazon ECS managed CloudWatch metric with the specified `targetCapacity` value as the target value for the metric\. For more information, see [Using managed scaling](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/asg-capacity-providers.html#asg-capacity-providers-managed-scaling) in the *Amazon Elastic Container Service Developer Guide*\.
 
 If managed scaling is off, the user must manage the scaling of the Auto Scaling group\.
 
@@ -68,7 +68,7 @@ Determines whether to use managed scaling for the capacity provider\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetCapacity`  <a name="cfn-ecs-capacityprovider-managedscaling-targetcapacity"></a>
-The target capacity value for the capacity provider\. The specified value must be greater than `0` and less than or equal to `100`\. A value of `100` results in the Amazon EC2 instances in your Auto Scaling group being completely used\.  
+The target capacity utilization as a percentage for the capacity provider\. The specified value must be greater than `0` and less than or equal to `100`\. For example, if you want the capacity provider to maintain 10% spare capacity, then that means the utilization is 90%, so use a `targetCapacity` of `90`\. The default value of `100` percent results in the Amazon EC2 instances in your Auto Scaling group being completely used\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `1`  

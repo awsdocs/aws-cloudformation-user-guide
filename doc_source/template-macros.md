@@ -18,7 +18,7 @@ To use a macro, reference the macro in your template:
 + To process a section, or *snippet*, of a template, reference the macro in an ``Fn::Transform`` function located relative to the template content you want to transform\. When using `Fn::Transform`, you can also pass any specified parameters it requires\.
 + To process an entire template, reference the macro in the [Transform](transform-section-structure.md) section of the template\.
 
-Next, you typically create a change set and then execute it\. \(Processing macros can add multiple resources that you might not be aware of\. To ensure that you're aware of all of the changes introduced by macros, we strongly advice that you use change sets\.\) AWS CloudFormation passes the specified template content, along with any additional specified parameters, to the Lambda function specified in the macro resource\. The Lambda function returns the processed template content, be it a snippet or an entire template\.
+Next, you typically create a change set and then execute it\. \(Processing macros can add multiple resources that you might not be aware of\. To ensure that you're aware of all of the changes introduced by macros, we strongly advise that you use change sets\.\) AWS CloudFormation passes the specified template content, along with any additional specified parameters, to the Lambda function specified in the macro resource\. The Lambda function returns the processed template content, be it a snippet or an entire template\.
 
 After all macros in the template have been called, AWS CloudFormation generates a change set that includes the processed template content\. After you review the change set, execute it to apply the changes\.
 
@@ -257,7 +257,7 @@ The maximum size for a processed stack template is 51,200 bytes when passed dire
 If CloudFormation returns a `Transformation data limit exceeded` error while processing your template, your template has exceeded the maximum template size CloudFormation allows during processing\.  
 To resolve this issue, consider doing the following:  
 Restructure your template into multiple templates to avoid exceeding the maximum size for in\-process templates\. For example:  
-Use nested stack templates to encapsulate parts of the template\. For more information, see [Working with nested stacks](using-cfn-nested-stacks.md)\.
+Use nested stack templates to encapsulate parts of the template\. For more information, see [Working with nested stacksTo view the root stack of a nested stackTo view the nested stacks that belong to a root stack](using-cfn-nested-stacks.md)\.
 Create multiple stacks and use cross\-stack references to exchange information between them\. For more information, see [Walkthrough: Refer to resource outputs in another AWS CloudFormation stack](walkthrough-crossstackref.md)\.
 Reduce the size of template fragment returned by a given macro\. CloudFormation doesn't tamper with the contents of fragments returned by macros\.
 

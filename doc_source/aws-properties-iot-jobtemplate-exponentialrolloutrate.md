@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-jobtemplate-exponentialrolloutrate-properties"></a>
 
 `BaseRatePerMinute`  <a name="cfn-iot-jobtemplate-exponentialrolloutrate-baserateperminute"></a>
-The minimum number of things that will be notified of a pending job, per minute at the start of job rollout\. This parameter allows you to define the initial rate of rollout\.   
+The minimum number of things that will be notified of a pending job, per minute at the start of job rollout\. This parameter allows you to define the initial rate of rollout\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

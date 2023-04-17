@@ -1,6 +1,6 @@
 # AWS::EC2::SecurityGroup Egress<a name="aws-properties-ec2-security-group-rule"></a>
 
-\[EC2\-VPC only\] Adds the specified egress rules to a security group for use with a VPC\. 
+Adds the specified egress rules to a security group for use with a VPC\. 
 
 An outbound rule permits instances to send traffic to the specified destination IPv4 or IPv6 CIDR address ranges, or to the specified destination security groups for the same VPC\.
 
@@ -76,7 +76,7 @@ Constraints: Up to 255 characters in length\. Allowed characters are a\-z, A\-Z,
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DestinationPrefixListId`  <a name="cfn-ec2-security-group-rule-destinationprefixlistid"></a>
-\[EC2\-VPC only\] The prefix list IDs for the destination AWS service\. This is the AWS service that you want to access through a VPC endpoint from instances associated with the security group\.  
+The prefix list IDs for the destination AWS service\. This is the AWS service that you want to access through a VPC endpoint from instances associated with the security group\.  
 You must specify a destination security group \(`DestinationPrefixListId` or `DestinationSecurityGroupId`\) or a CIDR range \(`CidrIp` or `CidrIpv6`\)\.  
 *Required*: No  
 *Type*: String  

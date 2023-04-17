@@ -97,7 +97,7 @@ The operating system platform of the component\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SupportedOsVersions`  <a name="cfn-imagebuilder-component-supportedosversions"></a>
- The operating system \(OS\) version supported by the component\. If the OS information is available, a prefix match is performed against the base image OS version during image recipe creation\.  
+The operating system \(OS\) version supported by the component\. If the OS information is available, a prefix match is performed against the base image OS version during image recipe creation\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `25`  

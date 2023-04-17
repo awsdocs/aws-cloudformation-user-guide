@@ -75,7 +75,7 @@ The entity type for which the assignment will be created\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `TargetId`  <a name="cfn-sso-assignment-targetid"></a>
-TargetID is an AWS account identifier, typically a 10\-12 digit string \(For example, 123456789012\)\.  
+TargetID is an AWS account identifier, \(For example, 123456789012\)\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `12`  

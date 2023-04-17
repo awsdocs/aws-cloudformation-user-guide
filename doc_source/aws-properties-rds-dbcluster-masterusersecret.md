@@ -1,6 +1,6 @@
 # AWS::RDS::DBCluster MasterUserSecret<a name="aws-properties-rds-dbcluster-masterusersecret"></a>
 
-Contains the secret managed by RDS in AWS Secrets Manager for the master user password\.
+The `MasterUserSecret` return value specifies the secret managed by RDS in AWS Secrets Manager for the master user password\.
 
 For more information, see [Password management with AWS Secrets Manager](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-secrets-manager.html) in the *Amazon RDS User Guide* and [Password management with AWS Secrets Manager](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/rds-secrets-manager.html) in the *Amazon Aurora User Guide\.* 
 

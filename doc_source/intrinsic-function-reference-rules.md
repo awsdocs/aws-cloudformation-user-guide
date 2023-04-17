@@ -38,7 +38,7 @@ The following example evaluates to `true` if the referenced security group name 
 ```
 "Fn::And" : [
   {"Fn::Equals" : ["sg-mysggroup", {"Ref" : "ASecurityGroup"}]},
-  {"Fn::Contains" : [["m1.large", "m1.small"], {"Ref" : "InstanceType"}]}
+  {"Fn::Contains" : [["m1.large", "m1.small"], {"Ref" : "InstanceType"}]}
 ]
 ```
 
@@ -66,7 +66,7 @@ The following function evaluates to `true` if the `InstanceType` parameter value
 
 ```
 "Fn::Contains" : [
-  ["m1.large", "m1.small"], {"Ref" : "InstanceType"}
+  ["m1.large", "m1.small"], {"Ref" : "InstanceType"}
 ]
 ```
 
@@ -94,7 +94,7 @@ The following function returns `true` if the `Department` tag for all parameters
 
 ```
 "Fn::EachMemberEquals" : [
-  {"Fn::ValueOfAll" : ["AWS::EC2::VPC::Id", "Tags.Department"]}, "IT"
+  {"Fn::ValueOfAll" : ["AWS::EC2::VPC::Id", "Tags.Department"]}, "IT"
 ]
 ```
 
@@ -122,7 +122,7 @@ The following function checks whether users specify a subnet that's in a valid v
 
 ```
 "Fn::EachMemberIn" : [ 
-  {"Fn::ValueOfAll" : ["AWS::EC2::Subnet::Id", "VpcId"]}, {"Fn::RefAll" : "AWS::EC2::VPC::Id"}
+  {"Fn::ValueOfAll" : ["AWS::EC2::Subnet::Id", "VpcId"]}, {"Fn::RefAll" : "AWS::EC2::VPC::Id"}
 ]
 ```
 
@@ -133,7 +133,7 @@ Compares two values to determine whether they're equal\. Returns `true` if the t
 ### Declaration<a name="fn-equals-declaration"></a>
 
 ```
-"Fn::Equals" : ["value_1", "value_2"]
+"Fn::Equals" : ["value_1", "value_2"]
 ```
 
 ### Parameters<a name="fn-equals-parameters"></a>
@@ -194,7 +194,7 @@ The following example evaluates to `true` if the referenced security group name 
 ```
 "Fn::Or" : [
   {"Fn::Equals" : ["sg-mysggroup", {"Ref" : "ASecurityGroup"}]},
-  {"Fn::Contains" : [["m1.large", "m1.small"], {"Ref" : "InstanceType"}]}
+  {"Fn::Contains" : [["m1.large", "m1.small"], {"Ref" : "InstanceType"}]}
 ]
 ```
 

@@ -53,16 +53,19 @@ The full name of the contact or escalation plan\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Plan`  <a name="cfn-ssmcontacts-contact-plan"></a>
-A list of stages\. A contact has an engagement plan with stages that contact specified contact channels\. An escalation plan uses stages that contact specified contacts\.   
-*Required*: Yes  
+A list of stages\. A contact has an engagement plan with stages that contact specified contact channels\. An escalation plan uses stages that contact specified contacts\.  
+*Required*: No  
 *Type*: List of [Stage](aws-properties-ssmcontacts-contact-stage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-ssmcontacts-contact-type"></a>
-Refers to the type of contact\. A single contact is type `PERSONAL` and an escalation plan is type `ESCALATION`\.  
+Refers to the type of contact:  
++  `PERSONAL`: A single, individual contact\.
++  `ESCALATION`: An escalation plan\.
++  `ONCALL_SCHEDULE`: An on\-call schedule\.
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `ESCALATION | PERSONAL`  
+*Allowed values*: `ESCALATION | ONCALL_SCHEDULE | PERSONAL`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-ssmcontacts-contact-return-values"></a>

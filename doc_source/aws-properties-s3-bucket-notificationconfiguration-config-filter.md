@@ -1,6 +1,6 @@
 # AWS::S3::Bucket NotificationFilter<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter"></a>
 
-Specifies object key name filtering rules\. For information about key name filtering, see [Configuring Event Notifications](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html) in the *Amazon S3 User Guide*\.
+Specifies object key name filtering rules\. For information about key name filtering, see [Configuring event notifications using object key name filtering](https://docs.aws.amazon.com/AmazonS3/latest/userguide/notification-how-to-filtering.html) in the *Amazon S3 User Guide*\.
 
 ## Syntax<a name="aws-properties-s3-bucket-notificationconfiguration-config-filter-syntax"></a>
 

@@ -73,7 +73,7 @@ The configuration profile ID\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ConfigurationVersion`  <a name="cfn-appconfig-deployment-configurationversion"></a>
-The configuration version to deploy\. If deploying an AWS AppConfig hosted configuration version, you can specify either the version number or version label\.  
+The configuration version to deploy\. If deploying an AWS AppConfig hosted configuration version, you can specify either the version number or version label\. For all other configurations, you must specify the version number\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  
@@ -103,9 +103,11 @@ The environment ID\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyIdentifier`  <a name="cfn-appconfig-deployment-kmskeyidentifier"></a>
-Property description not available\.  
+The AWS KMS key identifier \(key ID, key alias, or key ARN\)\. AWS AppConfig uses this ID to encrypt the configuration data using a customer managed key\.   
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `2048`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-appconfig-deployment-tags"></a>

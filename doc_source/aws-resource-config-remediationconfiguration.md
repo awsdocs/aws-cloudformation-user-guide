@@ -97,7 +97,7 @@ For example, if you specify RetryAttemptSeconds as 50 seconds and MaximumAutomat
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetId`  <a name="cfn-config-remediationconfiguration-targetid"></a>
-Target ID is the name of the public document\.  
+Target ID is the name of the SSM document\.  
 *Required*: Yes  
 *Type*: String  
 *Minimum*: `1`  

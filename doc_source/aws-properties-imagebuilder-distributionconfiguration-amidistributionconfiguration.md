@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::DistributionConfiguration AmiDistributionConfiguration<a name="aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration"></a>
 
- Define and configure the output AMIs of the pipeline\.
+Define and configure the output AMIs of the pipeline\.
 
 ## Syntax<a name="aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration-syntax"></a>
 
@@ -58,7 +58,7 @@ The KMS key identifier used to encrypt the distributed image\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LaunchPermissionConfiguration`  <a name="cfn-imagebuilder-distributionconfiguration-amidistributionconfiguration-launchpermissionconfiguration"></a>
- Launch permissions can be used to configure which AWS accounts can use the AMI to launch instances\.  
+Launch permissions can be used to configure which AWS accounts can use the AMI to launch instances\.  
 *Required*: No  
 *Type*: [LaunchPermissionConfiguration](aws-properties-imagebuilder-distributionconfiguration-launchpermissionconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
