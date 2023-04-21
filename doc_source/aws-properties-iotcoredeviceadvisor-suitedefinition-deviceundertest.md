@@ -1,6 +1,6 @@
 # AWS::IoTCoreDeviceAdvisor::SuiteDefinition DeviceUnderTest<a name="aws-properties-iotcoredeviceadvisor-suitedefinition-deviceundertest"></a>
 
-Information of a test device\. A thing ARN or a certificate ARN is required\.
+<a name="aws-properties-iotcoredeviceadvisor-suitedefinition-deviceundertest-description"></a>The `DeviceUnderTest` property type specifies Property description not available\. for an [AWS::IoTCoreDeviceAdvisor::SuiteDefinition](aws-resource-iotcoredeviceadvisor-suitedefinition.md)\.
 
 ## Syntax<a name="aws-properties-iotcoredeviceadvisor-suitedefinition-deviceundertest-syntax"></a>
 
@@ -25,17 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iotcoredeviceadvisor-suitedefinition-deviceundertest-properties"></a>
 
 `CertificateArn`  <a name="cfn-iotcoredeviceadvisor-suitedefinition-deviceundertest-certificatearn"></a>
-Lists devices certificate ARN\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `20`  
-*Maximum*: `2048`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThingArn`  <a name="cfn-iotcoredeviceadvisor-suitedefinition-deviceundertest-thingarn"></a>
-Lists devices thing ARN\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `20`  
-*Maximum*: `2048`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

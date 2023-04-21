@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-athena-workgroup-resultconfiguration-properties"></a>
 
 `AclConfiguration`  <a name="cfn-athena-workgroup-resultconfiguration-aclconfiguration"></a>
-Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query results\. Currently the only supported canned ACL is `BUCKET_OWNER_FULL_CONTROL`\. This is a client\-side setting\. If workgroup settings override client\-side settings, then the query uses the ACL configuration that is specified for the workgroup, and also uses the location for storing query results specified in the workgroup\. For more information, see WorkGroupConfiguration$EnforceWorkGroupConfiguration and [Workgroup Settings Override Client\-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html)\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [AclConfiguration](aws-properties-athena-workgroup-aclconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -43,13 +43,9 @@ If query results are encrypted in Amazon S3, indicates the encryption option use
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExpectedBucketOwner`  <a name="cfn-athena-workgroup-resultconfiguration-expectedbucketowner"></a>
-The AWS account ID that you expect to be the owner of the Amazon S3 bucket specified by ResultConfiguration$OutputLocation\. If set, Athena uses the value for `ExpectedBucketOwner` when it makes Amazon S3 calls to your specified output location\. If the `ExpectedBucketOwner` AWS account ID does not match the actual owner of the Amazon S3 bucket, the call fails with a permissions error\.  
-This is a client\-side setting\. If workgroup settings override client\-side settings, then the query uses the `ExpectedBucketOwner` setting that is specified for the workgroup, and also uses the location for storing query results specified in the workgroup\. See WorkGroupConfiguration$EnforceWorkGroupConfiguration and [Workgroup Settings Override Client\-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html)\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `12`  
-*Maximum*: `12`  
-*Pattern*: `^[0-9]+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutputLocation`  <a name="cfn-athena-workgroup-resultconfiguration-outputlocation"></a>

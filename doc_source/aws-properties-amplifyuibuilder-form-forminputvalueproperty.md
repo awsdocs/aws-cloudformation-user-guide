@@ -1,6 +1,6 @@
 # AWS::AmplifyUIBuilder::Form FormInputValueProperty<a name="aws-properties-amplifyuibuilder-form-forminputvalueproperty"></a>
 
-Describes the configuration for an input field on a form\. Use `FormInputValueProperty` to specify the values to render or bind by default\.
+The `FormInputValueProperty` property specifies the configuration for an input field on a form\. Use `FormInputValueProperty` to specify the values to render or bind by default\.
 
 ## Syntax<a name="aws-properties-amplifyuibuilder-form-forminputvalueproperty-syntax"></a>
 

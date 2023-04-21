@@ -1,6 +1,6 @@
 # AWS::Budgets::Budget AutoAdjustData<a name="aws-properties-budgets-budget-autoadjustdata"></a>
 
-The parameters that determine the budget amount for an auto\-adjusting budget\.
+<a name="aws-properties-budgets-budget-autoadjustdata-description"></a>The `AutoAdjustData` property type specifies Property description not available\. for an [AWS::Budgets::Budget](aws-resource-budgets-budget.md)\.
 
 ## Syntax<a name="aws-properties-budgets-budget-autoadjustdata-syntax"></a>
 
@@ -26,14 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-budgets-budget-autoadjustdata-properties"></a>
 
 `AutoAdjustType`  <a name="cfn-budgets-budget-autoadjustdata-autoadjusttype"></a>
-The string that defines whether your budget auto\-adjusts based on historical or forecasted data\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `FORECAST | HISTORICAL`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `HistoricalOptions`  <a name="cfn-budgets-budget-autoadjustdata-historicaloptions"></a>
-The parameters that define or describe the historical data that your auto\-adjusting budget is based on\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [HistoricalOptions](aws-properties-budgets-budget-historicaloptions.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

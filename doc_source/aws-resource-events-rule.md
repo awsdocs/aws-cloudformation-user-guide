@@ -486,7 +486,7 @@ PermissionForEventsToInvokeLambda:
 
 ### Notify a Topic in Response to a Log Entry<a name="aws-resource-events-rule--examples--Notify_a_Topic_in_Response_to_a_Log_Entry"></a>
 
-The following example creates a rule that notifies an Amazon Simple Notification Service topic if an AWS CloudTrail log entry contains a call by the Root user\. The `EventTopicPolicy ` resource grants Amazon EventBridge permission to notify the associated Amazon SNS topic\. 
+The following example creates a rule that notifies an Amazon Simple Notification Service topic if an AWS CloudTrail log entry contains a call by the root user\. The `EventTopicPolicy ` resource grants Amazon EventBridge permission to notify the associated Amazon SNS topic\. 
 
 #### JSON<a name="aws-resource-events-rule--examples--Notify_a_Topic_in_Response_to_a_Log_Entry--json"></a>
 

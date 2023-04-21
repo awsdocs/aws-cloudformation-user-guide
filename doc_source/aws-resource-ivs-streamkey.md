@@ -95,7 +95,8 @@ The following examples specify an Amazon IVS channel and stream key\.
                          "Key": "MyKey",
                          "Value": "MyValue"
                      }
-                 ]
+                 ],
+                 "InsecureIngest": true
              }
          },
          "StreamKey": {
@@ -150,6 +151,7 @@ AWSTemplateFormatVersion: 2010-09-09
        Tags:
          - Key: MyKey
            Value: MyValue
+       InsecureIngest: true
    StreamKey:
      Type: AWS::IVS::StreamKey
      Properties:

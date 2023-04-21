@@ -1,6 +1,6 @@
 # AWS::AmplifyUIBuilder::Form FormButton<a name="aws-properties-amplifyuibuilder-form-formbutton"></a>
 
-Describes the configuration for a button UI element that is a part of a form\.
+The `FormButton` property specifies the configuration for a button UI element that is a part of a form\.
 
 ## Syntax<a name="aws-properties-amplifyuibuilder-form-formbutton-syntax"></a>
 

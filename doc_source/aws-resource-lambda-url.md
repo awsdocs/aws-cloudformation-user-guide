@@ -55,6 +55,7 @@ Use one of the following options:
 +  `RESPONSE_STREAM` – Your function streams payload results as they become available\. Lambda invokes your function using the `InvokeWithResponseStream` API operation\. The maximum response payload size is 20 MB, however, you can [request a quota increase](https://docs.aws.amazon.com/servicequotas/latest/userguide/request-quota-increase.html)\.
 *Required*: No  
 *Type*: String  
+*Allowed values*: `BUFFERED | RESPONSE_STREAM`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Qualifier`  <a name="cfn-lambda-url-qualifier"></a>

@@ -1,8 +1,6 @@
 # AWS::NimbleStudio::LaunchProfile VolumeConfiguration<a name="aws-properties-nimblestudio-launchprofile-volumeconfiguration"></a>
 
-Custom volume configuration for the root volumes that are attached to streaming sessions\.
-
-This parameter is only allowed when `sessionPersistenceMode` is `ACTIVATED`\.
+<a name="aws-properties-nimblestudio-launchprofile-volumeconfiguration-description"></a>The `VolumeConfiguration` property type specifies Property description not available\. for an [AWS::NimbleStudio::LaunchProfile](aws-resource-nimblestudio-launchprofile.md)\.
 
 ## Syntax<a name="aws-properties-nimblestudio-launchprofile-volumeconfiguration-syntax"></a>
 
@@ -29,19 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-nimblestudio-launchprofile-volumeconfiguration-properties"></a>
 
 `Iops`  <a name="cfn-nimblestudio-launchprofile-volumeconfiguration-iops"></a>
-The number of I/O operations per second for the root volume that is attached to streaming session\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Size`  <a name="cfn-nimblestudio-launchprofile-volumeconfiguration-size"></a>
-The size of the root volume that is attached to the streaming session\. The root volume size is measured in GiBs\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Throughput`  <a name="cfn-nimblestudio-launchprofile-volumeconfiguration-throughput"></a>
-The throughput to provision for the root volume that is attached to the streaming session\. The throughput is measured in MiB/s\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

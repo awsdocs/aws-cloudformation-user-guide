@@ -1,6 +1,6 @@
 # AWS::AmplifyUIBuilder::Form<a name="aws-resource-amplifyuibuilder-form"></a>
 
-Contains the configuration settings for a `Form` user interface \(UI\) element for an Amplify app\. A form is a component you can add to your project by specifying a data source as the default configuration for the form\.
+The AWS::AmplifyUIBuilder::Form resource specifies all of the information that is required to create a form\.
 
 ## Syntax<a name="aws-resource-amplifyuibuilder-form-syntax"></a>
 
@@ -60,7 +60,7 @@ The unique ID of the Amplify app associated with the form\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Cta`  <a name="cfn-amplifyuibuilder-form-cta"></a>
-Stores the call to action configuration for the form\.  
+The `FormCTA` object that stores the call to action configuration for the form\.  
 *Required*: No  
 *Type*: [FormCTA](aws-properties-amplifyuibuilder-form-formcta.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -78,13 +78,13 @@ The name of the backend environment that is a part of the Amplify app\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Fields`  <a name="cfn-amplifyuibuilder-form-fields"></a>
-Stores the information about the form's fields\.  
+The configuration information for the form's fields\.  
 *Required*: Yes  
 *Type*: Map of [FieldConfig](aws-properties-amplifyuibuilder-form-fieldconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FormActionType`  <a name="cfn-amplifyuibuilder-form-formactiontype"></a>
-The operation to perform on the specified form\.  
+Specifies whether to perform a create or update action on the form\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -96,25 +96,25 @@ The name of the form\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SchemaVersion`  <a name="cfn-amplifyuibuilder-form-schemaversion"></a>
-The schema version of the form when it was imported\.  
+The schema version of the form\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SectionalElements`  <a name="cfn-amplifyuibuilder-form-sectionalelements"></a>
-Stores the visual helper elements for the form that are not associated with any data\.  
+The configuration information for the visual helper elements for the form\. These elements are not associated with any data\.  
 *Required*: Yes  
 *Type*: Map of [SectionalElement](aws-properties-amplifyuibuilder-form-sectionalelement.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Style`  <a name="cfn-amplifyuibuilder-form-style"></a>
-Stores the configuration for the form's style\.  
+The configuration for the form's style\.  
 *Required*: Yes  
 *Type*: [FormStyle](aws-properties-amplifyuibuilder-form-formstyle.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-amplifyuibuilder-form-tags"></a>
-One or more key\-value pairs to use when tagging the form\.  
+One or more key\-value pairs to use when tagging the form data\.  
 *Required*: No  
 *Type*: Map of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -125,7 +125,11 @@ One or more key\-value pairs to use when tagging the form\.
 
 ### Fn::GetAtt<a name="aws-resource-amplifyuibuilder-form-return-values-fn--getatt"></a>
 
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
+
 #### <a name="aws-resource-amplifyuibuilder-form-return-values-fn--getatt-fn--getatt"></a>
 
 `Id`  <a name="Id-fn::getatt"></a>
-Property description not available\.
+The ID for the form\.

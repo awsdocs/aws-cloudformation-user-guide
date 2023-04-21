@@ -1,6 +1,6 @@
 # AWS::Backup::ReportPlan ReportSetting<a name="aws-properties-backup-reportplan-reportsetting"></a>
 
-Contains detailed information about a report setting\.
+<a name="aws-properties-backup-reportplan-reportsetting-description"></a>The `ReportSetting` property type specifies Property description not available\. for an [AWS::Backup::ReportPlan](aws-resource-backup-reportplan.md)\.
 
 ## Syntax<a name="aws-properties-backup-reportplan-reportsetting-syntax"></a>
 
@@ -35,32 +35,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-backup-reportplan-reportsetting-properties"></a>
 
 `Accounts`  <a name="cfn-backup-reportplan-reportsetting-accounts"></a>
-These are the accounts to be included in the report\.  
+Property description not available\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FrameworkArns`  <a name="cfn-backup-reportplan-reportsetting-frameworkarns"></a>
-The Amazon Resource Names \(ARNs\) of the frameworks a report covers\.  
+Property description not available\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OrganizationUnits`  <a name="cfn-backup-reportplan-reportsetting-organizationunits"></a>
-These are the Organizational Units to be included in the report\.  
+Property description not available\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Regions`  <a name="cfn-backup-reportplan-reportsetting-regions"></a>
-These are the Regions to be included in the report\.  
+Property description not available\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ReportTemplate`  <a name="cfn-backup-reportplan-reportsetting-reporttemplate"></a>
-Identifies the report template for the report\. Reports are built using a report template\. The report templates are:  
- `RESOURCE_COMPLIANCE_REPORT | CONTROL_COMPLIANCE_REPORT | BACKUP_JOB_REPORT | COPY_JOB_REPORT | RESTORE_JOB_REPORT`   
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

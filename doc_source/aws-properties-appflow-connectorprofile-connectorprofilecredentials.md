@@ -117,7 +117,7 @@ The connector\-specific profile credentials that are required when using the cus
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Pardot`  <a name="cfn-appflow-connectorprofile-connectorprofilecredentials-pardot"></a>
-The connector\-specific credentials required when using Salesforce Pardot\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [PardotConnectorProfileCredentials](aws-properties-appflow-connectorprofile-pardotconnectorprofilecredentials.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

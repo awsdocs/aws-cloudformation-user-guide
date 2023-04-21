@@ -1,6 +1,6 @@
 # AWS::AmplifyUIBuilder::Form ValueMappings<a name="aws-properties-amplifyuibuilder-form-valuemappings"></a>
 
-Represents the data binding configuration for a value map\.
+The `ValueMappings` property specifies the data binding configuration for a value map\.
 
 ## Syntax<a name="aws-properties-amplifyuibuilder-form-valuemappings-syntax"></a>
 

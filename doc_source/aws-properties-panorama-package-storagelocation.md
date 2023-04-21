@@ -1,6 +1,6 @@
 # AWS::Panorama::Package StorageLocation<a name="aws-properties-panorama-package-storagelocation"></a>
 
-A storage location\.
+<a name="aws-properties-panorama-package-storagelocation-description"></a>The `StorageLocation` property type specifies Property description not available\. for an [AWS::Panorama::Package](aws-resource-panorama-package.md)\.
 
 ## Syntax<a name="aws-properties-panorama-package-storagelocation-syntax"></a>
 
@@ -31,31 +31,31 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-panorama-package-storagelocation-properties"></a>
 
 `BinaryPrefixLocation`  <a name="cfn-panorama-package-storagelocation-binaryprefixlocation"></a>
-The location's binary prefix\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Bucket`  <a name="cfn-panorama-package-storagelocation-bucket"></a>
-The location's bucket\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `GeneratedPrefixLocation`  <a name="cfn-panorama-package-storagelocation-generatedprefixlocation"></a>
-The location's generated prefix\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ManifestPrefixLocation`  <a name="cfn-panorama-package-storagelocation-manifestprefixlocation"></a>
-The location's manifest prefix\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RepoPrefixLocation`  <a name="cfn-panorama-package-storagelocation-repoprefixlocation"></a>
-The location's repo prefix\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

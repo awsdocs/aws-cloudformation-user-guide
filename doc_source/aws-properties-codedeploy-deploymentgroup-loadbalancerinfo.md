@@ -51,7 +51,7 @@ An array that contains information about the target group to use for load balanc
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetGroupPairInfoList`  <a name="cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgrouppairinfolist"></a>
- The target group pair information\. This is an array of `TargeGroupPairInfo` objects with a maximum size of one\.   
+Property description not available\.  
 *Required*: No  
 *Type*: List of [TargetGroupPairInfo](aws-properties-codedeploy-deploymentgroup-targetgrouppairinfo.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -55,7 +55,7 @@ Indicates whether to copy all user\-defined tags from the source snapshot or AMI
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeprecateRule`  <a name="cfn-dlm-lifecyclepolicy-crossregioncopyrule-deprecaterule"></a>
- **\[AMI policies only\]** The AMI deprecation rule for cross\-Region AMI copies created by the rule\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [CrossRegionCopyDeprecateRule](aws-properties-dlm-lifecyclepolicy-crossregioncopydeprecaterule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

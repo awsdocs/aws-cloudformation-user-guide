@@ -12,6 +12,9 @@ During an import operation, you create a change set that imports your existing r
   + An identifier property\. This is a resource property that can be used to identify each resource type\. For example, an `AWS::S3::Bucket` resource can be identified using its `BucketName`\.
   + An identifier value\. This is the target resource's actual property value\. For example, the actual value for the `BucketName` property might be `MyS3Bucket`\.
 
+**Note**  
+AWS CloudFormation only supports one level of nesting using `resource import`\. This means that you can't import a stack into a child stack or import a stack that has children\.
+
 ## Resource import validation<a name="resource-import-validation"></a>
 
 During an import operation, CloudFormation performs the following validations\.

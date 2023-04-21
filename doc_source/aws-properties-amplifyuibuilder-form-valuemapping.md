@@ -1,6 +1,6 @@
 # AWS::AmplifyUIBuilder::Form ValueMapping<a name="aws-properties-amplifyuibuilder-form-valuemapping"></a>
 
-Associates a complex object with a display value\. Use `ValueMapping` to store how to represent complex objects when they are displayed\.
+The `ValueMapping` property specifies the association between a complex object and a display value\. Use `ValueMapping` to store how to represent complex objects when they are displayed\.
 
 ## Syntax<a name="aws-properties-amplifyuibuilder-form-valuemapping-syntax"></a>
 

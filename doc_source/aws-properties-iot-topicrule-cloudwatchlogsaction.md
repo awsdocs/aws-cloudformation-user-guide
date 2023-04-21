@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-iot-topicrule-cloudwatchlogsaction-properties"></a>
 
 `BatchMode`  <a name="cfn-iot-topicrule-cloudwatchlogsaction-batchmode"></a>
-Property description not available\.  
+Indicates whether batches of log records will be extracted and uploaded into CloudWatch\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

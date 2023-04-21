@@ -96,10 +96,9 @@ ACM isn't available in all AWS regions\. A fleet creation request with certifica
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `ComputeType`  <a name="cfn-gamelift-fleet-computetype"></a>
-The type of compute resource used to host your game servers\. You can use your own compute resources with Amazon GameLift Anywhere or use Amazon EC2 instances with managed Amazon GameLift\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `ANYWHERE | EC2`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-gamelift-fleet-description"></a>

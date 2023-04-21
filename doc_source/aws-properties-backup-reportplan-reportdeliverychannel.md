@@ -1,6 +1,6 @@
 # AWS::Backup::ReportPlan ReportDeliveryChannel<a name="aws-properties-backup-reportplan-reportdeliverychannel"></a>
 
-Contains information from your report plan about where to deliver your reports, specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your reports\.
+<a name="aws-properties-backup-reportplan-reportdeliverychannel-description"></a>The `ReportDeliveryChannel` property type specifies Property description not available\. for an [AWS::Backup::ReportPlan](aws-resource-backup-reportplan.md)\.
 
 ## Syntax<a name="aws-properties-backup-reportplan-reportdeliverychannel-syntax"></a>
 
@@ -28,19 +28,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-backup-reportplan-reportdeliverychannel-properties"></a>
 
 `Formats`  <a name="cfn-backup-reportplan-reportdeliverychannel-formats"></a>
-A list of the format of your reports: `CSV`, `JSON`, or both\. If not specified, the default format is `CSV`\.  
+Property description not available\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3BucketName`  <a name="cfn-backup-reportplan-reportdeliverychannel-s3bucketname"></a>
-The unique name of the S3 bucket that receives your reports\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3KeyPrefix`  <a name="cfn-backup-reportplan-reportdeliverychannel-s3keyprefix"></a>
-The prefix for where AWS Backup Audit Manager delivers your reports to Amazon S3\. The prefix is this part of the following path: s3://your\-bucket\-name/`prefix`/Backup/us\-west\-2/year/month/day/report\-name\. If not specified, there is no prefix\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -183,12 +183,9 @@ Information about groups of tags applied to on\-premises instances\. The deploym
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OutdatedInstancesStrategy`  <a name="cfn-codedeploy-deploymentgroup-outdatedinstancesstrategy"></a>
-Indicates what happens when new Amazon EC2 instances are launched mid\-deployment and do not receive the deployed application revision\.  
-If this option is set to `UPDATE` or is unspecified, CodeDeploy initiates one or more 'auto\-update outdated instances' deployments to apply the deployed application revision to the new Amazon EC2 instances\.  
-If this option is set to `IGNORE`, CodeDeploy does not initiate a deployment to update the new Amazon EC2 instances\. This may result in instances having different revisions\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `IGNORE | UPDATE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ServiceRoleArn`  <a name="cfn-codedeploy-deploymentgroup-servicerolearn"></a>
@@ -199,7 +196,7 @@ A service role Amazon Resource Name \(ARN\) that grants CodeDeploy permission to
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-codedeploy-deploymentgroup-tags"></a>
- The metadata that you apply to CodeDeploy deployment groups to help you organize and categorize them\. Each tag consists of a key and an optional value, both of which you define\.   
+Property description not available\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

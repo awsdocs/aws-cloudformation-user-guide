@@ -1,6 +1,6 @@
 # AWS::DLM::LifecyclePolicy ArchiveRetainRule<a name="aws-properties-dlm-lifecyclepolicy-archiveretainrule"></a>
 
- **\[Snapshot policies only\]** Specifies information about the archive storage tier retention period\.
+<a name="aws-properties-dlm-lifecyclepolicy-archiveretainrule-description"></a>The `ArchiveRetainRule` property type specifies Property description not available\. for an [AWS::DLM::LifecyclePolicy](aws-resource-dlm-lifecyclepolicy.md)\.
 
 ## Syntax<a name="aws-properties-dlm-lifecyclepolicy-archiveretainrule-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dlm-lifecyclepolicy-archiveretainrule-properties"></a>
 
 `RetentionArchiveTier`  <a name="cfn-dlm-lifecyclepolicy-archiveretainrule-retentionarchivetier"></a>
-Information about retention period in the Amazon EBS Snapshots Archive\. For more information, see [Archive Amazon EBS snapshots](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/snapshot-archive.html)\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: [RetentionArchiveTier](aws-properties-dlm-lifecyclepolicy-retentionarchivetier.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

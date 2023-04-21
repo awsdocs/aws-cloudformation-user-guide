@@ -1,6 +1,6 @@
 # AWS::AmplifyUIBuilder::Component MutationActionSetStateParameter<a name="aws-properties-amplifyuibuilder-component-mutationactionsetstateparameter"></a>
 
-The `MutationActionSetStateParameter` property specifies the state configuration when an action modifies a property of another element within the same component\.
+Represents the state configuration when an action modifies a property of another element within the same component\.
 
 ## Syntax<a name="aws-properties-amplifyuibuilder-component-mutationactionsetstateparameter-syntax"></a>
 

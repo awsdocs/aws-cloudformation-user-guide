@@ -36,11 +36,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExcludeDataVolumeTags`  <a name="cfn-dlm-lifecyclepolicy-parameters-excludedatavolumetags"></a>
- **\[Snapshot policies that target instances only\]** The tags used to identify data \(non\-root\) volumes to exclude from multi\-volume snapshot sets\.  
-If you create a snapshot lifecycle policy that targets instances and you specify tags for this parameter, then data volumes with the specified tags that are attached to targeted instances will be excluded from the multi\-volume snapshot sets created by the policy\.  
+Property description not available\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
-*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NoReboot`  <a name="cfn-dlm-lifecyclepolicy-parameters-noreboot"></a>

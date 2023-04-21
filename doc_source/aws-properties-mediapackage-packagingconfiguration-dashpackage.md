@@ -56,7 +56,7 @@ When includeEncoderConfigurationInSegments is set to true, AWS Elemental MediaPa
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeIframeOnlyStream`  <a name="cfn-mediapackage-packagingconfiguration-dashpackage-includeiframeonlystream"></a>
-This applies only to stream sets with a single video track\. When true, the stream set includes an additional I\-frame trick\-play only stream, along with the other tracks\. If false, this extra stream is not included\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

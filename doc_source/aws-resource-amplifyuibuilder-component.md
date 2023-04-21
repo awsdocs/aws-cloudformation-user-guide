@@ -61,7 +61,7 @@ Properties:
 ## Properties<a name="aws-resource-amplifyuibuilder-component-properties"></a>
 
 `AppId`  <a name="cfn-amplifyuibuilder-component-appid"></a>
-The unique ID of the Amplify app associated with the component\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -92,7 +92,7 @@ The type of the component\. This can be an Amplify custom UI component or anothe
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnvironmentName`  <a name="cfn-amplifyuibuilder-component-environmentname"></a>
-The name of the backend environment that is a part of the Amplify app\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

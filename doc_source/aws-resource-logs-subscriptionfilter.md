@@ -57,12 +57,9 @@ Property description not available\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FilterName`  <a name="cfn-logs-subscriptionfilter-filtername"></a>
-The name of the subscription filter\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `512`  
-*Pattern*: `[^:*]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FilterPattern`  <a name="cfn-logs-subscriptionfilter-filterpattern"></a>

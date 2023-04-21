@@ -1,6 +1,6 @@
 # AWS::MemoryDB::User AuthenticationMode<a name="aws-properties-memorydb-user-authenticationmode"></a>
 
-Denotes the user's authentication properties, such as whether it requires a password to authenticate\. Used in output responses\.
+<a name="aws-properties-memorydb-user-authenticationmode-description"></a>The `AuthenticationMode` property type specifies Property description not available\. for an [AWS::MemoryDB::User](aws-resource-memorydb-user.md)\.
 
 ## Syntax<a name="aws-properties-memorydb-user-authenticationmode-syntax"></a>
 
@@ -26,14 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-memorydb-user-authenticationmode-properties"></a>
 
 `Passwords`  <a name="cfn-memorydb-user-authenticationmode-passwords"></a>
-The password\(s\) used for authentication  
+Property description not available\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-memorydb-user-authenticationmode-type"></a>
-Indicates whether the user requires a password to authenticate\. All newly\-created users require a password\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `password`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

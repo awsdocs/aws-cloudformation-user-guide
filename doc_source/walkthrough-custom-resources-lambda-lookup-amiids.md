@@ -308,7 +308,7 @@ If stack creation succeeds, all resources in the stack, such as the Lambda funct
 
 To see which AMI ID AWS CloudFormation used to create the EC2 instance, view the stack outputs\.
 
-If the Lambda function returns an error, view the function's logs in the Amazon CloudWatch Logs [console](https://console.aws.amazon.com/cloudwatch/home#logs:)\. The name of the log stream is the physical ID of the custom resource, which you can find by viewing the stack's resources\. For more information, see [Viewing log data](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/ViewingLogData.html) in the *Amazon CloudWatch User Guide*\.
+If the Lambda function returns an error, view the function's logs in the Amazon CloudWatch Logs [console](https://console.aws.amazon.com/cloudwatch/home#logs:)\. The name of the log stream is the physical ID of the custom resource, which you can find by viewing the stack's resources\. For more information, see [Viewing log data](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html#ViewingLogData) in the *Amazon CloudWatch User Guide*\.
 
 ## Step 3: Clean up resources<a name="walkthrough-custom-resources-lambda-lookup-amiids-createfunction-cleanup"></a>
 

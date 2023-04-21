@@ -196,12 +196,9 @@ The path, if any, that you want Amazon Route 53 to request when performing healt
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoutingControlArn`  <a name="cfn-route53-healthcheck-healthcheckconfig-routingcontrolarn"></a>
-The Amazon Resource Name \(ARN\) for the Route 53 Application Recovery Controller routing control\.  
-For more information about Route 53 Application Recovery Controller, see [Route 53 Application Recovery Controller Developer Guide\.](https://docs.aws.amazon.com/r53recovery/latest/dg/what-is-route-53-recovery.html)\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SearchString`  <a name="cfn-route53-healthcheck-healthcheckconfig-searchstring"></a>

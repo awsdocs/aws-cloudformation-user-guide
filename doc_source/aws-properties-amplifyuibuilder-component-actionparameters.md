@@ -1,6 +1,6 @@
 # AWS::AmplifyUIBuilder::Component ActionParameters<a name="aws-properties-amplifyuibuilder-component-actionparameters"></a>
 
-The `ActionParameters` property specifies the event action configuration for an element of a `Component` or `ComponentChild`\. Use for the workflow feature in Amplify Studio that allows you to bind events and actions to components\. `ActionParameters` defines the action that is performed when an event occurs on the component\.
+Represents the event action configuration for an element of a `Component` or `ComponentChild`\. Use for the workflow feature in Amplify Studio that allows you to bind events and actions to components\. `ActionParameters` defines the action that is performed when an event occurs on the component\.
 
 ## Syntax<a name="aws-properties-amplifyuibuilder-component-actionparameters-syntax"></a>
 

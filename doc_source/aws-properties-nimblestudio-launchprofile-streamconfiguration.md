@@ -46,10 +46,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-nimblestudio-launchprofile-streamconfiguration-properties"></a>
 
 `AutomaticTerminationMode`  <a name="cfn-nimblestudio-launchprofile-streamconfiguration-automaticterminationmode"></a>
-Indicates if a streaming session created from this launch profile should be terminated automatically or retained without termination after being in a `STOPPED` state\.  
-+ When `ACTIVATED`, the streaming session is scheduled for termination after being in the `STOPPED` state for the time specified in `maxStoppedSessionLengthInMinutes`\.
-+ When `DEACTIVATED`, the streaming session can remain in the `STOPPED` state indefinitely\.
-This parameter is only allowed when `sessionPersistenceMode` is `ACTIVATED`\. When allowed, the default value for this parameter is `DEACTIVATED`\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -82,13 +79,13 @@ If the value is set to a positive number, the session can be stopped\. You can c
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SessionBackup`  <a name="cfn-nimblestudio-launchprofile-streamconfiguration-sessionbackup"></a>
-Information about the streaming session backup\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [StreamConfigurationSessionBackup](aws-properties-nimblestudio-launchprofile-streamconfigurationsessionbackup.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SessionPersistenceMode`  <a name="cfn-nimblestudio-launchprofile-streamconfiguration-sessionpersistencemode"></a>
-Determine if a streaming session created from this launch profile can configure persistent storage\. This means that `volumeConfiguration` and `automaticTerminationMode` are configured\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -106,8 +103,7 @@ The streaming images that users can select from when launching a streaming sessi
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VolumeConfiguration`  <a name="cfn-nimblestudio-launchprofile-streamconfiguration-volumeconfiguration"></a>
-Custom volume configuration for the root volumes that are attached to streaming sessions\.  
-This parameter is only allowed when `sessionPersistenceMode` is `ACTIVATED`\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [VolumeConfiguration](aws-properties-nimblestudio-launchprofile-volumeconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

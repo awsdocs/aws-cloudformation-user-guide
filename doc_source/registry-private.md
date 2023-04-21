@@ -129,7 +129,7 @@ For more information about how configuration definitions are defined when develo
 1. Expand the **Configuration** tab to see the current configuration that you have set for this extension\.
 
 **To view the current configuration data for an extension in the AWS CLI**
-+ Use the [describe\-type](cli/latest/reference/cloudformation/describe-type.html) command to return detailed information about the extension\. The `ConfigurationSchema` element of the output contains the current configuration definition of the extension in a given Region\.
++ Use the [describe\-type](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/describe-type.html) command to return detailed information about the extension\. The `ConfigurationSchema` element of the output contains the current configuration definition of the extension in a given Region\.
 
   Alternatively, use the [https://docs.aws.amazon.com/cli/latest/reference/cloudformation/batch-describe-type-configurations.html](https://docs.aws.amazon.com/cli/latest/reference/cloudformation/batch-describe-type-configurations.html) command to return configuration data about multiple extensions\.
 

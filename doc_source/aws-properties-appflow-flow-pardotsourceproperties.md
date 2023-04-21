@@ -1,6 +1,6 @@
 # AWS::AppFlow::Flow PardotSourceProperties<a name="aws-properties-appflow-flow-pardotsourceproperties"></a>
 
-The properties that are applied when Salesforce Pardot is being used as a source\.
+<a name="aws-properties-appflow-flow-pardotsourceproperties-description"></a>The `PardotSourceProperties` property type specifies Property description not available\. for an [AWS::AppFlow::Flow](aws-resource-appflow-flow.md)\.
 
 ## Syntax<a name="aws-properties-appflow-flow-pardotsourceproperties-syntax"></a>
 
@@ -23,9 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appflow-flow-pardotsourceproperties-properties"></a>
 
 `Object`  <a name="cfn-appflow-flow-pardotsourceproperties-object"></a>
-The object specified in the Salesforce Pardot flow source\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
-*Maximum*: `512`  
-*Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

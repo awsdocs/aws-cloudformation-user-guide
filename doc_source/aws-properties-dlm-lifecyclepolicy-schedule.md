@@ -52,8 +52,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dlm-lifecyclepolicy-schedule-properties"></a>
 
 `ArchiveRule`  <a name="cfn-dlm-lifecyclepolicy-schedule-archiverule"></a>
- **\[Snapshot policies that target volumes only\]** The snapshot archiving rule for the schedule\. When you specify an archiving rule, snapshots are automatically moved from the standard tier to the archive tier once the schedule's retention threshold is met\. Snapshots are then retained in the archive tier for the archive retention period that you specify\.   
-For more information about using snapshot archiving, see [Considerations for snapshot lifecycle policies](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-ami-policy.html#dlm-archive)\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [ArchiveRule](aws-properties-dlm-lifecyclepolicy-archiverule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -79,7 +78,7 @@ You can't specify cross\-Region copy rules for policies that create snapshots on
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeprecateRule`  <a name="cfn-dlm-lifecyclepolicy-schedule-deprecaterule"></a>
- **\[AMI policies only\]** The AMI deprecation rule for the schedule\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [DeprecateRule](aws-properties-dlm-lifecyclepolicy-deprecaterule.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -193,7 +193,7 @@ The maximum amount of time, in seconds, that Lambda spends gathering records bef
 
 `MaximumRecordAgeInSeconds`  <a name="cfn-lambda-eventsourcemapping-maximumrecordageinseconds"></a>
 \(Kinesis and DynamoDB Streams only\) Discard records older than the specified age\. The default value is \-1, which sets the maximum age to infinite\. When the value is set to infinite, Lambda never discards old records\.  
-The minimum value that can be set is 60 seconds\.
+The minimum valid value for maximum record age is 60s\. Although values less than 60 and greater than \-1 fall within the parameter's absolute range, they are not allowed
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `-1`  
@@ -224,7 +224,7 @@ The minimum value that can be set is 60 seconds\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScalingConfig`  <a name="cfn-lambda-eventsourcemapping-scalingconfig"></a>
-\(Amazon Simple Queue Service only\) The scaling configuration for the event source\. For more information, see [Configuring maximum concurrency for Amazon SQS event sources](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency)\.  
+\(Amazon SQS only\) The scaling configuration for the event source\. For more information, see [Configuring maximum concurrency for Amazon SQS event sources](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency)\.  
 *Required*: No  
 *Type*: [ScalingConfig](aws-properties-lambda-eventsourcemapping-scalingconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

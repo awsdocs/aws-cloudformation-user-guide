@@ -1,6 +1,6 @@
 # AWS::AmplifyUIBuilder::Form FormDataTypeConfig<a name="aws-properties-amplifyuibuilder-form-formdatatypeconfig"></a>
 
-Describes the data type configuration for the data source associated with a form\.
+The `FormDataTypeConfig` property specifies the data type configuration for the data source associated with a form\.
 
 ## Syntax<a name="aws-properties-amplifyuibuilder-form-formdatatypeconfig-syntax"></a>
 

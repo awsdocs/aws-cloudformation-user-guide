@@ -1,6 +1,6 @@
 # AWS::AmplifyUIBuilder::Form FieldValidationConfiguration<a name="aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration"></a>
 
-Describes the validation configuration for a field\.
+The `FieldValidationConfiguration` property specifies the validation configuration for a field\.
 
 ## Syntax<a name="aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration-syntax"></a>
 

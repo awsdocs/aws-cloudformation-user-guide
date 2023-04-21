@@ -1,6 +1,6 @@
 # AWS::Personalize::Solution HpoResourceConfig<a name="aws-properties-personalize-solution-hporesourceconfig"></a>
 
-Describes the resource configuration for hyperparameter optimization \(HPO\)\.
+<a name="aws-properties-personalize-solution-hporesourceconfig-description"></a>The `HpoResourceConfig` property type specifies Property description not available\. for an [AWS::Personalize::Solution](aws-resource-personalize-solution.md)\.
 
 ## Syntax<a name="aws-properties-personalize-solution-hporesourceconfig-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-personalize-solution-hporesourceconfig-properties"></a>
 
 `MaxNumberOfTrainingJobs`  <a name="cfn-personalize-solution-hporesourceconfig-maxnumberoftrainingjobs"></a>
-The maximum number of training jobs when you create a solution version\. The maximum value for `maxNumberOfTrainingJobs` is `40`\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MaxParallelTrainingJobs`  <a name="cfn-personalize-solution-hporesourceconfig-maxparalleltrainingjobs"></a>
-The maximum number of parallel training jobs when you create a solution version\. The maximum value for `maxParallelTrainingJobs` is `10`\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

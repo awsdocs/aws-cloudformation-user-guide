@@ -105,7 +105,7 @@ Tags associated with the endpoint being created\. A tag is a key\-value pair tha
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TaskConfig`  <a name="cfn-comprehend-flywheel-taskconfig"></a>
-Configuration about the custom classifier associated with the flywheel\.  
+Configuration about the model associated with a flywheel\.  
 *Required*: No  
 *Type*: [TaskConfig](aws-properties-comprehend-flywheel-taskconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

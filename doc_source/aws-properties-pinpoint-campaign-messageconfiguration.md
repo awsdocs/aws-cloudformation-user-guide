@@ -66,7 +66,7 @@ The message that the campaign sends through the Baidu \(Baidu Cloud Push\) chann
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CustomMessage`  <a name="cfn-pinpoint-campaign-messageconfiguration-custommessage"></a>
-The message that the campaign sends through a custom channel, as specified by the delivery configuration \(`CustomDeliveryConfiguration`\) settings for the campaign\. If specified, this message overrides the default message\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [CampaignCustomMessage](aws-properties-pinpoint-campaign-campaigncustommessage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

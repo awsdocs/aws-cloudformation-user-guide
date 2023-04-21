@@ -63,7 +63,7 @@ Specifies the [Amazon Resource Names \(ARNs\)](https://docs.aws.amazon.com/gener
 Specifies a list of one or more principals to associate with the resource share\.  
 You can include the following values:  
 + An AWS account ID, for example: `123456789012` 
-+ An [Amazon Resoure Name \(ARN\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of an organization in AWS Organizations, for example: `arn:aws:organizations::123456789012:organization/o-exampleorgid` 
++ An [Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of an organization in AWS Organizations, for example: `arn:aws:organizations::123456789012:organization/o-exampleorgid` 
 + An ARN of an organizational unit \(OU\) in AWS Organizations, for example: `arn:aws:organizations::123456789012:ou/o-exampleorgid/ou-examplerootid-exampleouid123` 
 + An ARN of an IAM role, for example: `arn:aws:iam::123456789012:role/rolename` 
 + An ARN of an IAM user, for example: `arn:aws:iam::123456789012user/username` 

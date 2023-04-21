@@ -1,6 +1,6 @@
 # AWS::AmplifyUIBuilder::Form FormCTA<a name="aws-properties-amplifyuibuilder-form-formcta"></a>
 
-Describes the call to action button configuration for the form\.
+The `FormCTA` property specifies the call to action button configuration for the form\.
 
 ## Syntax<a name="aws-properties-amplifyuibuilder-form-formcta-syntax"></a>
 

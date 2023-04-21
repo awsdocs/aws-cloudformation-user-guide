@@ -5,6 +5,7 @@ The amount of ephemeral storage to allocate for the task\. This parameter is use
 **Note**  
 For tasks using the Fargate launch type, the task requires the following platforms:  
 Linux platform version `1.4.0` or later\.
+Windows platform version `1.0.0` or later\.
 
 ## Syntax<a name="aws-properties-ecs-taskdefinition-ephemeralstorage-syntax"></a>
 

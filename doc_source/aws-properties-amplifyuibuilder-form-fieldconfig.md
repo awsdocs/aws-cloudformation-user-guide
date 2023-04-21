@@ -1,6 +1,6 @@
 # AWS::AmplifyUIBuilder::Form FieldConfig<a name="aws-properties-amplifyuibuilder-form-fieldconfig"></a>
 
-Describes the configuration information for a field in a table\.
+The `FieldConfig` property specifies the configuration information for a field in a table\.
 
 ## Syntax<a name="aws-properties-amplifyuibuilder-form-fieldconfig-syntax"></a>
 

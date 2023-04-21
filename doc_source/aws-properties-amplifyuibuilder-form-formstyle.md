@@ -1,6 +1,6 @@
 # AWS::AmplifyUIBuilder::Form FormStyle<a name="aws-properties-amplifyuibuilder-form-formstyle"></a>
 
-Describes the configuration for the form's style\.
+The `FormStyle` property specifies the configuration for the form's style\.
 
 ## Syntax<a name="aws-properties-amplifyuibuilder-form-formstyle-syntax"></a>
 

@@ -76,7 +76,7 @@ The configuration for an application to automatically stop after a certain amoun
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageConfiguration`  <a name="cfn-emrserverless-application-imageconfiguration"></a>
-The image configuration applied to all worker types\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [ImageConfigurationInput](aws-properties-emrserverless-application-imageconfigurationinput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -130,7 +130,7 @@ The type of application, such as Spark or Hive\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WorkerTypeSpecifications`  <a name="cfn-emrserverless-application-workertypespecifications"></a>
-The specification applied to each worker type\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Map of [WorkerTypeSpecificationInput](aws-properties-emrserverless-application-workertypespecificationinput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

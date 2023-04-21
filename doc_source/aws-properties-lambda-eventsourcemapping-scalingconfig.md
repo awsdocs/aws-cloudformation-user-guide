@@ -1,6 +1,6 @@
 # AWS::Lambda::EventSourceMapping ScalingConfig<a name="aws-properties-lambda-eventsourcemapping-scalingconfig"></a>
 
-\(Amazon Simple Queue Service only\) The scaling configuration for the event source\. For more information, see [Configuring maximum concurrency for Amazon SQS event sources](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency)\.
+\(Amazon SQS only\) The scaling configuration for the event source\. To remove the configuration, pass an empty value\.
 
 ## Syntax<a name="aws-properties-lambda-eventsourcemapping-scalingconfig-syntax"></a>
 

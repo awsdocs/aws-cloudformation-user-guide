@@ -1,6 +1,6 @@
 # AWS::Personalize::Solution HpoConfig<a name="aws-properties-personalize-solution-hpoconfig"></a>
 
-Describes the properties for hyperparameter optimization \(HPO\)\.
+<a name="aws-properties-personalize-solution-hpoconfig-description"></a>The `HpoConfig` property type specifies Property description not available\. for an [AWS::Personalize::Solution](aws-resource-personalize-solution.md)\.
 
 ## Syntax<a name="aws-properties-personalize-solution-hpoconfig-syntax"></a>
 
@@ -30,20 +30,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-personalize-solution-hpoconfig-properties"></a>
 
 `AlgorithmHyperParameterRanges`  <a name="cfn-personalize-solution-hpoconfig-algorithmhyperparameterranges"></a>
-The hyperparameters and their allowable ranges\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [AlgorithmHyperParameterRanges](aws-properties-personalize-solution-algorithmhyperparameterranges.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HpoObjective`  <a name="cfn-personalize-solution-hpoconfig-hpoobjective"></a>
-The metric to optimize during HPO\.  
-Amazon Personalize doesn't support configuring the `hpoObjective` at this time\.
+Property description not available\.  
 *Required*: No  
 *Type*: [HpoObjective](aws-properties-personalize-solution-hpoobjective.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `HpoResourceConfig`  <a name="cfn-personalize-solution-hpoconfig-hporesourceconfig"></a>
-Describes the resource configuration for HPO\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [HpoResourceConfig](aws-properties-personalize-solution-hporesourceconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

@@ -1,6 +1,6 @@
 # AWS::AmplifyUIBuilder::Form FormStyleConfig<a name="aws-properties-amplifyuibuilder-form-formstyleconfig"></a>
 
-Describes the configuration settings for the form's style properties\.
+The `FormStyleConfig` property specifies the configuration settings for the form's style properties\.
 
 ## Syntax<a name="aws-properties-amplifyuibuilder-form-formstyleconfig-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-amplifyuibuilder-form-formstyleconfig-properties"></a>
 
 `TokenReference`  <a name="cfn-amplifyuibuilder-form-formstyleconfig-tokenreference"></a>
-A reference to a design token to use to bind the form's style properties to an existing theme\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Value`  <a name="cfn-amplifyuibuilder-form-formstyleconfig-value"></a>
-The value of the style setting\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

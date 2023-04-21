@@ -41,9 +41,7 @@ Default: `8080`
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuntimeEnvironmentSecrets`  <a name="cfn-apprunner-service-imageconfiguration-runtimeenvironmentsecrets"></a>
-An array of key\-value pairs representing the secrets and parameters that get referenced to your service as an environment variable\. The supported values are either the full Amazon Resource Name \(ARN\) of the AWS Secrets Manager secret or the full ARN of the parameter in the AWS Systems Manager Parameter Store\.  
-+  If the AWS Systems Manager Parameter Store parameter exists in the same AWS Region as the service that you're launching, you can use either the full ARN or name of the secret\. If the parameter exists in a different Region, then the full ARN must be specified\. 
-+  Currently, cross account referencing of AWS Systems Manager Parameter Store parameter is not supported\. 
+Property description not available\.  
 *Required*: No  
 *Type*: List of [KeyValuePair](aws-properties-apprunner-service-keyvaluepair.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

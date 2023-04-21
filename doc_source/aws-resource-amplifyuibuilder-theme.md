@@ -41,13 +41,13 @@ Properties:
 ## Properties<a name="aws-resource-amplifyuibuilder-theme-properties"></a>
 
 `AppId`  <a name="cfn-amplifyuibuilder-theme-appid"></a>
-The unique ID for the Amplify app associated with the theme\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EnvironmentName`  <a name="cfn-amplifyuibuilder-theme-environmentname"></a>
-The name of the backend environment that is a part of the Amplify app\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::Comprehend::Flywheel TaskConfig<a name="aws-properties-comprehend-flywheel-taskconfig"></a>
 
-Configuration about the custom classifier associated with the flywheel\.
+Configuration about the model associated with a flywheel\.
 
 ## Syntax<a name="aws-properties-comprehend-flywheel-taskconfig-syntax"></a>
 
@@ -29,7 +29,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-comprehend-flywheel-taskconfig-properties"></a>
 
 `DocumentClassificationConfig`  <a name="cfn-comprehend-flywheel-taskconfig-documentclassificationconfig"></a>
-Configuration required for a classification model\.  
+Configuration required for a document classification model\.  
 *Required*: No  
 *Type*: [DocumentClassificationConfig](aws-properties-comprehend-flywheel-documentclassificationconfig.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

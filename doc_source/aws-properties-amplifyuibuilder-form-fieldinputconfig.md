@@ -1,6 +1,6 @@
 # AWS::AmplifyUIBuilder::Form FieldInputConfig<a name="aws-properties-amplifyuibuilder-form-fieldinputconfig"></a>
 
-Describes the configuration for the default input values to display for a field\.
+The `FieldInputConfig` property specifies the configuration for the default input values to display for a field\.
 
 ## Syntax<a name="aws-properties-amplifyuibuilder-form-fieldinputconfig-syntax"></a>
 
@@ -76,7 +76,7 @@ The text to display to describe the field\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsArray`  <a name="cfn-amplifyuibuilder-form-fieldinputconfig-isarray"></a>
-Specifies whether to render the field as an array\. This property is ignored if the `dataSourceType` for the form is a Data Store\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

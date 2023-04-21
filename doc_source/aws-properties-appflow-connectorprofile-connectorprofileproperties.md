@@ -93,7 +93,7 @@ The properties required by the custom connector\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Pardot`  <a name="cfn-appflow-connectorprofile-connectorprofileproperties-pardot"></a>
-The connector\-specific properties required by Salesforce Pardot\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [PardotConnectorProfileProperties](aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

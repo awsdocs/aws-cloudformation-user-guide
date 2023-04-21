@@ -195,24 +195,13 @@ Constraints: Minimum 30\-minute window\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RestoreToTime`  <a name="cfn-docdb-dbcluster-restoretotime"></a>
-The date and time to restore the cluster to\.  
-Valid values: A time in Universal Coordinated Time \(UTC\) format\.  
-Constraints:  
-+ Must be before the latest restorable time for the instance\.
-+ Must be specified if the `UseLatestRestorableTime` parameter is not provided\.
-+ Cannot be specified if the `UseLatestRestorableTime` parameter is `true`\.
-+ Cannot be specified if the `RestoreType` parameter is `copy-on-write`\.
-Example: `2015-03-07T23:45:00Z`   
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RestoreType`  <a name="cfn-docdb-dbcluster-restoretype"></a>
-The type of restore to be performed\. You can specify one of the following values:  
-+  `full-copy` \- The new DB cluster is restored as a full copy of the source DB cluster\.
-+  `copy-on-write` \- The new DB cluster is restored as a clone of the source DB cluster\.
-Constraints: You can't specify `copy-on-write` if the engine version of the source DB cluster is earlier than 1\.11\.  
-If you don't specify a `RestoreType` value, then the new DB cluster is restored as a full copy of the source DB cluster\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -227,9 +216,7 @@ Constraints:
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SourceDBClusterIdentifier`  <a name="cfn-docdb-dbcluster-sourcedbclusteridentifier"></a>
-The identifier of the source cluster from which to restore\.  
-Constraints:  
-+ Must match the identifier of an existing `DBCluster`\.
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -247,9 +234,7 @@ The tags to be assigned to the cluster\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UseLatestRestorableTime`  <a name="cfn-docdb-dbcluster-uselatestrestorabletime"></a>
-A value that is set to `true` to restore the cluster to the latest restorable backup time, and `false` otherwise\.   
-Default: `false`   
-Constraints: Cannot be specified if the `RestoreToTime` parameter is provided\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -104,10 +104,9 @@ Operators supported by the custom connector\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Pardot`  <a name="cfn-appflow-flow-connectoroperator-pardot"></a>
-The operation to be performed on the provided Salesforce Pardot source fields\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `ADDITION | DIVISION | EQUAL_TO | MASK_ALL | MASK_FIRST_N | MASK_LAST_N | MULTIPLICATION | NO_OP | PROJECTION | SUBTRACTION | VALIDATE_NON_NEGATIVE | VALIDATE_NON_NULL | VALIDATE_NON_ZERO | VALIDATE_NUMERIC`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3`  <a name="cfn-appflow-flow-connectoroperator-s3"></a>

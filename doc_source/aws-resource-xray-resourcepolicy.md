@@ -1,6 +1,6 @@
 # AWS::XRay::ResourcePolicy<a name="aws-resource-xray-resourcepolicy"></a>
 
- Sets the resource policy to grant one or more AWS services and accounts permissions to access X\-Ray\. Each resource policy will be associated with a specific AWS account\. Each AWS account can have a maximum of 5 resource policies, and each policy name must be unique within that account\. The maximum size of each resource policy is 5KB\. 
+<a name="aws-resource-xray-resourcepolicy-description"></a>The `AWS::XRay::ResourcePolicy` resource Property description not available\. for XRay\.
 
 ## Syntax<a name="aws-resource-xray-resourcepolicy-syntax"></a>
 
@@ -38,18 +38,15 @@ Property description not available\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyDocument`  <a name="cfn-xray-resourcepolicy-policydocument"></a>
-The resource policy document, which can be up to 5kb in size\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PolicyName`  <a name="cfn-xray-resourcepolicy-policyname"></a>
-The name of the resource policy\. Must be unique within a specific AWS account\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `128`  
-*Pattern*: `[\w+=,.@-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-xray-resourcepolicy-return-values"></a>

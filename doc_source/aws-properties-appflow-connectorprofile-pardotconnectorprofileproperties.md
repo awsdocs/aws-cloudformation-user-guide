@@ -1,6 +1,6 @@
 # AWS::AppFlow::ConnectorProfile PardotConnectorProfileProperties<a name="aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties"></a>
 
-The connector\-specific profile properties required when using Salesforce Pardot\.
+<a name="aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties-description"></a>The `PardotConnectorProfileProperties` property type specifies Property description not available\. for an [AWS::AppFlow::ConnectorProfile](aws-resource-appflow-connectorprofile.md)\.
 
 ## Syntax<a name="aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties-syntax"></a>
 
@@ -27,23 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appflow-connectorprofile-pardotconnectorprofileproperties-properties"></a>
 
 `BusinessUnitId`  <a name="cfn-appflow-connectorprofile-pardotconnectorprofileproperties-businessunitid"></a>
-The business unit id of Salesforce Pardot instance\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
-*Maximum*: `18`  
-*Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceUrl`  <a name="cfn-appflow-connectorprofile-pardotconnectorprofileproperties-instanceurl"></a>
-The location of the Salesforce Pardot resource\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Maximum*: `256`  
-*Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsSandboxEnvironment`  <a name="cfn-appflow-connectorprofile-pardotconnectorprofileproperties-issandboxenvironment"></a>
-Indicates whether the connector profile applies to a sandbox or production environment\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

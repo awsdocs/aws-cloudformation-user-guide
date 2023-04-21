@@ -1,6 +1,6 @@
 # AWS::Personalize::Solution IntegerHyperParameterRange<a name="aws-properties-personalize-solution-integerhyperparameterrange"></a>
 
-Provides the name and range of an integer\-valued hyperparameter\.
+<a name="aws-properties-personalize-solution-integerhyperparameterrange-description"></a>The `IntegerHyperParameterRange` property type specifies Property description not available\. for an [AWS::Personalize::Solution](aws-resource-personalize-solution.md)\.
 
 ## Syntax<a name="aws-properties-personalize-solution-integerhyperparameterrange-syntax"></a>
 
@@ -27,22 +27,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-personalize-solution-integerhyperparameterrange-properties"></a>
 
 `MaxValue`  <a name="cfn-personalize-solution-integerhyperparameterrange-maxvalue"></a>
-The maximum allowable value for the hyperparameter\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Integer  
-*Maximum*: `1000000`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `MinValue`  <a name="cfn-personalize-solution-integerhyperparameterrange-minvalue"></a>
-The minimum allowable value for the hyperparameter\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `-1000000`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Name`  <a name="cfn-personalize-solution-integerhyperparameterrange-name"></a>
-The name of the hyperparameter\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Maximum*: `256`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

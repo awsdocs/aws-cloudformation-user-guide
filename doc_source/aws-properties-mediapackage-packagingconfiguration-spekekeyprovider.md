@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-mediapackage-packagingconfiguration-spekekeyprovider-properties"></a>
 
 `EncryptionContractConfiguration`  <a name="cfn-mediapackage-packagingconfiguration-spekekeyprovider-encryptioncontractconfiguration"></a>
-Use `encryptionContractConfiguration` to configure one or more content encryption keys for your endpoints that use SPEKE Version 2\.0\. The encryption contract defines which content keys are used to encrypt the audio and video tracks in your stream\. To configure the encryption contract, specify which audio and video encryption presets to use\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [EncryptionContractConfiguration](aws-properties-mediapackage-packagingconfiguration-encryptioncontractconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

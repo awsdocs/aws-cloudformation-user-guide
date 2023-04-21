@@ -114,7 +114,7 @@ The properties that are applied when the custom connector is being used as a sou
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Pardot`  <a name="cfn-appflow-flow-sourceconnectorproperties-pardot"></a>
-Specifies the information that is required for querying Salesforce Pardot\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [PardotSourceProperties](aws-properties-appflow-flow-pardotsourceproperties.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

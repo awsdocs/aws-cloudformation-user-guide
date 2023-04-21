@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-connectcampaigns-campaign-outboundcallconfig-properties"></a>
 
 `AnswerMachineDetectionConfig`  <a name="cfn-connectcampaigns-campaign-outboundcallconfig-answermachinedetectionconfig"></a>
-Whether answering machine detection has been enabled\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [AnswerMachineDetectionConfig](aws-properties-connectcampaigns-campaign-answermachinedetectionconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -9,7 +9,7 @@ The following table describes important changes in each release of the AWS Cloud
  [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3path](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3path)   
 Amazon MWAA adds the `StartupScriptS3Path` property\. This property specifies the relative path to a shell script that you upload to your environment's Amazon S3 bucket\. 
 
- [https://docs.aws.amazon.com/AWSCFNMWAADocs/build/server-root/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3objectversion](https://docs.aws.amazon.com/AWSCFNMWAADocs/build/server-root/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3objectversion)   
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3objectversion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3objectversion)   
 Amazon MWAA adds the `StartupScriptS3ObjectVersion` property\. This property specifies the version ID for the shell script that you upload to your environment's Amazon S3 bucket\. 
 
  [AirflowVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-airflowversion)   
@@ -28,7 +28,7 @@ Use the `AWS::QuickSight::RefreshSchedule` resource to create a refresh schedule
 This resource lets you creates an AWS AppConfig extension\. An extension augments your ability to inject logic or behavior at different points during the AWS AppConfig workflow of creating or deploying a configuration\.  | April 12, 2023 | 
 | [New resource](AWS_AppConfig.md) | The following resource was added: AWS::AppConfig::ExtensionAssociation 
 
- [AWS::AppConfig::Extension](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-extensionassociation.html)   
+ [AWS::AppConfig::ExtensionAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-extensionassociation.html)   
 This resource lets you creates an AWS AppConfig extension association\. An extension association is a specified relationship between an extension and an AWS AppConfig resource, such as an application or a configuration profile\.   | April 12, 2023 | 
 | [New resources](AWS_IoTWireless.md) | The following resources were added: AWS::IoTWireless::WirelessDeviceImportTask 
 
@@ -539,10 +539,10 @@ Use the `AWS::IoTTwinMaker::ComponentType.PropertyGroups` property to declare a 
 Use the `AWS::IoTTwinMaker::Entity.PropertyGroup` to declare an entity PropertyGroup\.  | November 17, 2022 | 
 | [Updated resources](AWS_Amplify.md) | The following resources were updated: AWS::Amplify::App and AWS::Amplify::Branch 
 
- [AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/userguide/aws-resource-amplify-app.html)   
+ [AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html)   
 Use the `Platform` property to specify the platform type for the Amplify app\. 
 
- [AWS::Amplify::Branch](https://docs.aws.amazon.com/AWSCloudFormation/latest/userguide/aws-resource-amplify-branch.html)   
+ [AWS::Amplify::Branch](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html)   
 Use the `Framework` property to specify the framework for the Amplify app\.  | November 17, 2022 | 
 | [Updated resource](AWS_AppSync.md) | The following resources were updated: AWS::AppSync::Resolver and AWS::AppSync::FunctionConfiguration 
 
@@ -738,6 +738,10 @@ The `DeletionProtection` property of a user pool prevents accidental deletion of
 
  [AWS::SES::DedicatedIpPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-dedicatedippool.html)   
 Use the `ScalingMode` property to specify the scaling mode of a dedicated IP pool\.  | October 20, 2022 | 
+| [New resources](AWS_AmplifyUIBuilder.md) | The following resources were added: AWS::AmplifyUIBuilder::Form\. 
+
+ [AWS::AmplifyUIBuilder::Form](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplifyuibuilder-form.html)   
+Use the `AWS::AmplifyUIBuilder::Form` resource to specify a form within an Amplify app\.  | October 20, 2022 | 
 | [New resource](AWS_FSx.md) | The following new resource was added: AWS::FSx::DataRepositoryAssociation 
 
 [AWS::FSx::DataRepositoryAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-datarepositoryassociation.html)  
@@ -879,6 +883,10 @@ Use the `AWS::ControlTower::EnabledControl` resource to specify an asynchronous 
 
  [AWS::Macie::AllowList](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-allowlist.html)   
 Use the `AWS::Macie::AllowList` resource to specify text or a text pattern for Amazon Macie to ignore when it inspects data sources for sensitive data\.  | September 1, 2022 | 
+| [New resource ](AWS_APS.md) | The following resource was added \| updated: AWS::AMP::LoggingConfiguration\. 
+
+ [Workspace](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/workspace.html)   
+Use the `LoggingConfiguration` property to specify Amazon Managed Service for Prometheus workspace logging configuration\.  | August 30, 2022 | 
 | [Updated resources](AWS_AppMesh.md) | The following resources were updated: AWS::AppMesh::VirtualNode, AWS::AppMesh::VirtualGateway, AWS::AppMesh::GatewayRoute and AWS::AppMesh::Route 
 
  [AWS::AppMesh::VirtualNode](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualnode.html)   
@@ -3377,10 +3385,10 @@ Use the `DeploymentCircuitBreaker` property to turn on the deployment circuit br
 | [Updated resources](AWS_ElastiCache.md) | The following resources were updated: AWS::ElastiCache::User AWS::ElastiCache::UserGroup and AWS::ElastiCache::ReplicationGroup\. 
 
  [AWS::ElastiCache::User](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html)   
-For Redis engine version 6\.0 onwards: Creates a Redis user\. For more information, see [Using Role Based Access Control \(RBAC\)](AmazonElastiCache/latest/red-ug/Clusters.RBAC.html)  
+For Redis engine version 6\.0 onwards: Creates a Redis user\. For more information, see [Using Role Based Access Control \(RBAC\)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html)  
 
  [AWS::ElastiCache::UserGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html)   
-For Redis engine version 6\.0 onwards: Creates a Redis user group\. For more information, see [Using Role Based Access Control \(RBAC\)](AmazonElastiCache/latest/red-ug/Clusters.RBAC.html) 
+For Redis engine version 6\.0 onwards: Creates a Redis user group\. For more information, see [Using Role Based Access Control \(RBAC\)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html) 
 
  [AWS::ElastiCache::ReplicationGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-usergroupids)   
 Use the `UserGroupIds` property to associate a list of user groups with the replication group\.  | December 18, 2020 | 
@@ -4029,11 +4037,11 @@ Use the `DataCaptureConfig` resource/property to configure how the endpoint capt
 Use the `HostedRotationLambda` property type to create a rotation Lambda\.  | July 23, 2020 | 
 | [Updated resource](AWS_Amplify.md) | The following resource was updated: AWS::Amplify::App 
 
- [AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/userguide/aws-resource-amplify-app.html)   
+ [AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html)   
 Use the `EnableBranchAutoDeletion` property to automatically disconnect a branch in the Amplify Console when you delete a branch from your Git repository\.  | July 9, 2020 | 
 | [Updated resource](AWS_Amplify.md) | The following resource was updated: AWS::Amplify::Domain 
 
- [AWS::Amplify::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/userguide/aws-resource-amplify-domain.html)   
+ [AWS::Amplify::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html)   
 Use the `AutoSubDomainCreationPatterns` property to set branch patterns for automatic subdomain creation\.  
 Use the `AutoSubDomainIAMRole` property to specify the required AWS Identity and Access Management \(IAM\) service role for the Amazon Resource Name \(ARN\) for automatically creating subdomains\.  
 Use the `EnableAutoSubDomain` property to enable the automated creation of subdomains for branches\.  | July 9, 2020 | 
@@ -4898,7 +4906,7 @@ Use the `Tags` property to specify the tags for the custom action\.
 Use the `Tags` property to specify the tags for the pipeline\.  | October 31, 2019 | 
 | [Updated resource](AWS_Amplify.md) | The following resource was updated: AWS::Amplify::App 
 
- [AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/userguide/aws-resource-amplify-app.html)   
+ [AWS::Amplify::App](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-app.html)   
 Use the `EnablePullRequestPreview` property to specify whether pull request previews are enabled for each branch that Amplify Console automatically creates for your app\.  
 Use the `PullRequestEnvironmentName` property to specify a dedicated backend environment for your pull request previews\.  | October 31, 2019 | 
 | [Updated resource](AWS_ECS.md) | The following resource was updated: AWS::ECS::TaskDefinition\. 
@@ -4925,7 +4933,7 @@ Use the `AWS::Pinpoint::PushTemplate` resource to create a message template that
 Use the `AWS::Pinpoint::SmsTemplate` resource to create a message template that you can use in messages that are sent through the SMS channel\.  | October 31, 2019 | 
 | [Updated resource](AWS_Amplify.md) | The following resource was updated: AWS::Amplify::Branch 
 
- [AWS::Amplify::Branch](https://docs.aws.amazon.com/AWSCloudFormation/latest/userguide/aws-resource-amplify-branch.html)   
+ [AWS::Amplify::Branch](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html)   
 Use the `EnablePullRequestPreview` property to specify whether Amplify Console creates a preview for each pull request that is made for the branch\.  
 Use the `PullRequestEnvironmentName` property to specify a dedicated backend environment for your pull request previews\.  | October 24, 2019 | 
 | [Updated resource](AWS_Cognito.md) | The following resource was updated: AWS::Cognito::UserPool 

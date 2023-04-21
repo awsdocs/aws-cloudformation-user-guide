@@ -124,7 +124,7 @@ You can specify `MasterSecretKmsKeyArn` or `SuperuserSecretKmsKeyArn` but not bo
 
 `VpcSecurityGroupIds`  <a name="cfn-secretsmanager-rotationschedule-hostedrotationlambda-vpcsecuritygroupids"></a>
 A comma\-separated list of security group IDs applied to the target database\.  
-The templates applies the same security groups as on the Lambda rotation function that is created as part of this stack\.  
+The template applies the same security groups as on the Lambda rotation function that is created as part of this stack\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::EMRServerless::Application ImageConfigurationInput<a name="aws-properties-emrserverless-application-imageconfigurationinput"></a>
 
-The image configuration\.
+<a name="aws-properties-emrserverless-application-imageconfigurationinput-description"></a>The `ImageConfigurationInput` property type specifies Property description not available\. for an [AWS::EMRServerless::Application](aws-resource-emrserverless-application.md)\.
 
 ## Syntax<a name="aws-properties-emrserverless-application-imageconfigurationinput-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-emrserverless-application-imageconfigurationinput-properties"></a>
 
 `ImageUri`  <a name="cfn-emrserverless-application-imageconfigurationinput-imageuri"></a>
-The URI of an image in the Amazon ECR registry\. This field is required when you create a new application\. If you leave this field blank in an update, Amazon EMR will remove the image configuration\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

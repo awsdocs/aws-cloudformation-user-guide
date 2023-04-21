@@ -1,6 +1,6 @@
 # AWS::ResourceExplorer2::Index<a name="aws-resource-resourceexplorer2-index"></a>
 
-Turns on Resource Explorer in the AWS Region in which you called this operation by creating an index\. Resource Explorer begins discovering the resources in this Region and stores the details about the resources in the index so that they can be queried by using the [Search](https://docs.aws.amazon.com/resource-explorer/latest/APIReference/API_Search.html) operation\.
+Turns on Resource Explorer in the AWS Region in which you called this operation by creating an index\. Resource Explorer begins discovering the resources in this Region and stores the details about the resources in the index so that they can be queried by using the [Search](https://docs.aws.amazon.com/resource-explorer/latest/apireference/API_Search.html) operation\.
 
 You can create either a local index that returns search results from only the AWS Region in which the index exists, or you can create an aggregator index that returns search results from all AWS Regions in the AWS account\.
 

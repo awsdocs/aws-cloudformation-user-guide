@@ -187,7 +187,7 @@ The name of the cluster\.
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `OSReleaseLabel`  <a name="cfn-elasticmapreduce-cluster-osreleaselabel"></a>
-The Amazon Linux release specified in a cluster launch RunJobFlow request\. If no Amazon Linux release was specified, the default Amazon Linux release is shown in the response\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

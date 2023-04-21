@@ -1,6 +1,6 @@
 # AWS::Comprehend::Flywheel DocumentClassificationConfig<a name="aws-properties-comprehend-flywheel-documentclassificationconfig"></a>
 
-Configuration required for a custom classification model\.
+Configuration required for a document classification model\.
 
 ## Syntax<a name="aws-properties-comprehend-flywheel-documentclassificationconfig-syntax"></a>
 

@@ -1,6 +1,6 @@
 # AWS::GameLift::Location<a name="aws-resource-gamelift-location"></a>
 
-Creates a custom location for use in an Anywhere fleet\.
+<a name="aws-resource-gamelift-location-description"></a>The `AWS::GameLift::Location` resource Property description not available\. for GameLift\.
 
 ## Syntax<a name="aws-resource-gamelift-location-syntax"></a>
 
@@ -31,12 +31,9 @@ Properties:
 ## Properties<a name="aws-resource-gamelift-location-properties"></a>
 
 `LocationName`  <a name="cfn-gamelift-location-locationname"></a>
-The location's name\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `64`  
-*Pattern*: `^[A-Za-z0-9\-]+`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-gamelift-location-tags"></a>

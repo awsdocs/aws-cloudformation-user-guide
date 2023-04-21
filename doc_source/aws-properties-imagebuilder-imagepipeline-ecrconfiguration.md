@@ -1,6 +1,6 @@
 # AWS::ImageBuilder::ImagePipeline EcrConfiguration<a name="aws-properties-imagebuilder-imagepipeline-ecrconfiguration"></a>
 
-Settings that Image Builder uses to configure the ECR repository and the output container images that Amazon Inspector scans\.
+<a name="aws-properties-imagebuilder-imagepipeline-ecrconfiguration-description"></a>The `EcrConfiguration` property type specifies Property description not available\. for an [AWS::ImageBuilder::ImagePipeline](aws-resource-imagebuilder-imagepipeline.md)\.
 
 ## Syntax<a name="aws-properties-imagebuilder-imagepipeline-ecrconfiguration-syntax"></a>
 
@@ -26,15 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-imagebuilder-imagepipeline-ecrconfiguration-properties"></a>
 
 `ContainerTags`  <a name="cfn-imagebuilder-imagepipeline-ecrconfiguration-containertags"></a>
-Tags for Image Builder to apply to the output container image that &INS; scans\. Tags can help you identify and manage your scanned images\.  
+Property description not available\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RepositoryName`  <a name="cfn-imagebuilder-imagepipeline-ecrconfiguration-repositoryname"></a>
-The name of the container repository that Amazon Inspector scans to identify findings for your container images\. The name includes the path for the repository location\. If you don’t provide this information, Image Builder creates a repository in your account named `image-builder-image-scanning-repository` for vulnerability scans of your output container images\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
