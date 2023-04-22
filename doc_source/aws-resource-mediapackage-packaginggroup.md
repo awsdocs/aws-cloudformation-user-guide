@@ -66,7 +66,17 @@ The tags to assign to the packaging group\.
 
 ### Ref<a name="aws-resource-mediapackage-packaginggroup-return-values-ref"></a>
 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the packaging group\.
+
+For example: `{ "Ref": "myPackagingGroup" }`
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 ### Fn::GetAtt<a name="aws-resource-mediapackage-packaginggroup-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-mediapackage-packaginggroup-return-values-fn--getatt-fn--getatt"></a>
 

@@ -1,6 +1,6 @@
 # AWS::InternetMonitor::Monitor InternetMeasurementsLogDelivery<a name="aws-properties-internetmonitor-monitor-internetmeasurementslogdelivery"></a>
 
-The internet measurements for Amazon CloudWatch Internet Monitor published to another location, such as an Amazon S3 bucket\. Measurements are automatically published to Amazon CloudWatch Logs for the top 500 city\-networks \(by traffic volume\)\.
+<a name="aws-properties-internetmonitor-monitor-internetmeasurementslogdelivery-description"></a>The `InternetMeasurementsLogDelivery` property type specifies Property description not available\. for an [AWS::InternetMonitor::Monitor](aws-resource-internetmonitor-monitor.md)\.
 
 ## Syntax<a name="aws-properties-internetmonitor-monitor-internetmeasurementslogdelivery-syntax"></a>
 

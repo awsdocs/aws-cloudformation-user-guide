@@ -65,14 +65,14 @@ The flags on SCTE\-35 segmentation descriptors that have to be present for AWS E
 `AdTriggers`  <a name="cfn-mediapackage-originendpoint-dashpackage-adtriggers"></a>
 Specifies the SCTE\-35 message types that AWS Elemental MediaPackage treats as ad markers in the output manifest\.  
 Valid values:  
-+ **BREAK**
-+ **DISTRIBUTOR\_ADVERTISEMENT**
-+ **DISTRIBUTOR\_OVERLAY\_PLACEMENT\_OPPORTUNITY**\.
-+ **DISTRIBUTOR\_PLACEMENT\_OPPORTUNITY**\.
-+ **PROVIDER\_ADVERTISEMENT**\.
-+ **PROVIDER\_OVERLAY\_PLACEMENT\_OPPORTUNITY**\.
-+ **PROVIDER\_PLACEMENT\_OPPORTUNITY**\.
-+ **SPLICE\_INSERT**\.
++ `BREAK`
++ `DISTRIBUTOR_ADVERTISEMENT`
++ `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`\.
++ `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`\.
++ `PROVIDER_ADVERTISEMENT`\.
++ `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`\.
++ `PROVIDER_PLACEMENT_OPPORTUNITY`\.
++ `SPLICE_INSERT`\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -92,8 +92,8 @@ This applies only to stream sets with a single video track\. When true, the stre
 `ManifestLayout`  <a name="cfn-mediapackage-originendpoint-dashpackage-manifestlayout"></a>
 Determines the position of some tags in the manifest\.   
 Valid values:  
-+ **FULL** \- Elements like `SegmentTemplate` and `ContentProtection` are included in each `Representation`\.
-+ **COMPACT** \- Duplicate elements are combined and presented at the `AdaptationSet` level\.
++ `FULL` \- Elements like `SegmentTemplate` and `ContentProtection` are included in each `Representation`\.
++ `COMPACT` \- Duplicate elements are combined and presented at the `AdaptationSet` level\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -119,7 +119,7 @@ Minimum amount of time \(in seconds\) that the player should wait before request
 `PeriodTriggers`  <a name="cfn-mediapackage-originendpoint-dashpackage-periodtriggers"></a>
 Controls whether AWS Elemental MediaPackage produces single\-period or multi\-period DASH manifests\. For more information about periods, see [Multi\-period DASH in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/multi-period.html)\.  
 Valid values:  
-+ **ADS** \- AWS Elemental MediaPackage will produce multi\-period DASH manifests\. Periods are created based on the SCTE\-35 ad markers present in the input manifest\.
++ `ADS` \- AWS Elemental MediaPackage will produce multi\-period DASH manifests\. Periods are created based on the SCTE\-35 ad markers present in the input manifest\.
 + *No value* \- AWS Elemental MediaPackage will produce single\-period DASH manifests\. This is the default setting\.
 *Required*: No  
 *Type*: List of String  
@@ -128,9 +128,9 @@ Valid values:
 `Profile`  <a name="cfn-mediapackage-originendpoint-dashpackage-profile"></a>
 The DASH profile for the output\.  
 Valid values:  
-+ **NONE** \- The output doesn't use a DASH profile\.
-+ **HBBTV\_1\_5** \- The output is compliant with HbbTV v1\.5\.
-+ **DVB\_DASH\_2014** \- The output is compliant with DVB\-DASH 2014\.
++ `NONE` \- The output doesn't use a DASH profile\.
++ `HBBTV_1_5` \- The output is compliant with HbbTV v1\.5\.
++ `DVB_DASH_2014` \- The output is compliant with DVB\-DASH 2014\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -144,9 +144,9 @@ Duration \(in seconds\) of each fragment\. Actual fragments are rounded to the n
 `SegmentTemplateFormat`  <a name="cfn-mediapackage-originendpoint-dashpackage-segmenttemplateformat"></a>
 Determines the type of variable used in the `media` URL of the `SegmentTemplate` tag in the manifest\. Also specifies if segment timeline information is included in `SegmentTimeline` or `SegmentTemplate`\.  
 Valid values:  
-+ **NUMBER\_WITH\_TIMELINE** \- The `$Number$` variable is used in the `media` URL\. The value of this variable is the sequential number of the segment\. A full `SegmentTimeline` object is presented in each `SegmentTemplate`\.
-+ **NUMBER\_WITH\_DURATION** \- The `$Number$` variable is used in the `media` URL and a `duration` attribute is added to the segment template\. The `SegmentTimeline` object is removed from the representation\.
-+ **TIME\_WITH\_TIMELINE** \- The `$Time$` variable is used in the `media` URL\. The value of this variable is the timestamp of when the segment starts\. A full `SegmentTimeline` object is presented in each `SegmentTemplate`\.
++ `NUMBER_WITH_TIMELINE` \- The `$Number$` variable is used in the `media` URL\. The value of this variable is the sequential number of the segment\. A full `SegmentTimeline` object is presented in each `SegmentTemplate`\.
++ `NUMBER_WITH_DURATION` \- The `$Number$` variable is used in the `media` URL and a `duration` attribute is added to the segment template\. The `SegmentTimeline` object is removed from the representation\.
++ `TIME_WITH_TIMELINE` \- The `$Time$` variable is used in the `media` URL\. The value of this variable is the timestamp of when the segment starts\. A full `SegmentTimeline` object is presented in each `SegmentTemplate`\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

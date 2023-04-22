@@ -89,7 +89,17 @@ The tags to assign to the asset\.
 
 ### Ref<a name="aws-resource-mediapackage-asset-return-values-ref"></a>
 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the asset\.
+
+For example: `{ "Ref": "myAsset" }`
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 ### Fn::GetAtt<a name="aws-resource-mediapackage-asset-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-mediapackage-asset-return-values-fn--getatt-fn--getatt"></a>
 
@@ -97,4 +107,4 @@ The tags to assign to the asset\.
 The Amazon Resource Name \(ARN\) for the asset\. You can get this from the response to any request to the asset\.
 
 `CreatedAt`  <a name="CreatedAt-fn::getatt"></a>
-The time that the asset was initially submitted for ingest\.
+The date and time that the asset was initially submitted for ingest\.

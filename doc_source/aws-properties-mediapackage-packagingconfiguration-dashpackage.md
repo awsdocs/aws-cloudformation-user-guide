@@ -56,7 +56,7 @@ When includeEncoderConfigurationInSegments is set to true, AWS Elemental MediaPa
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeIframeOnlyStream`  <a name="cfn-mediapackage-packagingconfiguration-dashpackage-includeiframeonlystream"></a>
-Property description not available\.  
+This applies only to stream sets with a single video track\. When true, the stream set includes an additional I\-frame trick\-play only stream, along with the other tracks\. If false, this extra stream is not included\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -64,7 +64,7 @@ Property description not available\.
 `PeriodTriggers`  <a name="cfn-mediapackage-packagingconfiguration-dashpackage-periodtriggers"></a>
 Controls whether AWS Elemental MediaPackage produces single\-period or multi\-period DASH manifests\. For more information about periods, see [Multi\-period DASH in AWS Elemental MediaPackage](https://docs.aws.amazon.com/mediapackage/latest/ug/multi-period.html)\.  
 Valid values:  
-+ **ADS** \- AWS Elemental MediaPackage will produce multi\-period DASH manifests\. Periods are created based on the SCTE\-35 ad markers present in the input manifest\.
++ `ADS` \- AWS Elemental MediaPackage will produce multi\-period DASH manifests\. Periods are created based on the SCTE\-35 ad markers present in the input manifest\.
 + *No value* \- AWS Elemental MediaPackage will produce single\-period DASH manifests\. This is the default setting\.
 *Required*: No  
 *Type*: List of String  
@@ -77,7 +77,7 @@ Duration \(in seconds\) of each fragment\. Actual fragments are rounded to the n
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SegmentTemplateFormat`  <a name="cfn-mediapackage-packagingconfiguration-dashpackage-segmenttemplateformat"></a>
-Determines the type of SegmentTemplate included in the Media Presentation Description \(MPD\)\. When set to **NUMBER\_WITH\_TIMELINE**, a full timeline is presented in each SegmentTemplate, with $Number$ media URLs\. When set to **TIME\_WITH\_TIMELINE**, a full timeline is presented in each SegmentTemplate, with $Time$ media URLs\. When set to **NUMBER\_WITH\_DURATION**, only a duration is included in each SegmentTemplate, with $Number$ media URLs\.  
+Determines the type of SegmentTemplate included in the Media Presentation Description \(MPD\)\. When set to `NUMBER_WITH_TIMELINE`, a full timeline is presented in each SegmentTemplate, with $Number$ media URLs\. When set to `TIME_WITH_TIMELINE`, a full timeline is presented in each SegmentTemplate, with $Time$ media URLs\. When set to `NUMBER_WITH_DURATION`, only a duration is included in each SegmentTemplate, with $Number$ media URLs\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

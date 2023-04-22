@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[DataSources](#cfn-grafana-workspace-datasources)" : [ String, ... ],
       "[Description](#cfn-grafana-workspace-description)" : String,
       "[Name](#cfn-grafana-workspace-name)" : String,
+      "[NetworkAccessControl](#cfn-grafana-workspace-networkaccesscontrol)" : NetworkAccessControl,
       "[NotificationDestinations](#cfn-grafana-workspace-notificationdestinations)" : [ String, ... ],
       "[OrganizationalUnits](#cfn-grafana-workspace-organizationalunits)" : [ String, ... ],
       "[OrganizationRoleName](#cfn-grafana-workspace-organizationrolename)" : String,
@@ -43,6 +44,8 @@ Properties:
     - String
   [Description](#cfn-grafana-workspace-description): String
   [Name](#cfn-grafana-workspace-name): String
+  [NetworkAccessControl](#cfn-grafana-workspace-networkaccesscontrol): 
+    NetworkAccessControl
   [NotificationDestinations](#cfn-grafana-workspace-notificationdestinations): 
     - String
   [OrganizationalUnits](#cfn-grafana-workspace-organizationalunits): 
@@ -99,6 +102,12 @@ The name of the workspace\.
 *Required*: No  
 *Type*: String  
 *Pattern*: `^[a-zA-Z0-9-._~]{1,255}$`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`NetworkAccessControl`  <a name="cfn-grafana-workspace-networkaccesscontrol"></a>
+The configuration settings for network access to your workspace\.  
+*Required*: No  
+*Type*: [NetworkAccessControl](aws-properties-grafana-workspace-networkaccesscontrol.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NotificationDestinations`  <a name="cfn-grafana-workspace-notificationdestinations"></a>

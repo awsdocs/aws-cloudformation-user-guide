@@ -36,7 +36,7 @@ An optional 128\-bit, 16\-byte hex value represented by a 32\-character string, 
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EncryptionMethod`  <a name="cfn-mediapackage-originendpoint-cmafencryption-encryptionmethod"></a>
-Property description not available\.  
+The encryption method to use\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

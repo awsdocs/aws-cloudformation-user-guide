@@ -1,6 +1,6 @@
 # AWS::MediaPackage::Channel HlsIngest<a name="aws-properties-mediapackage-channel-hlsingest"></a>
 
-<a name="aws-properties-mediapackage-channel-hlsingest-description"></a>The `HlsIngest` property type specifies Property description not available\. for an [AWS::MediaPackage::Channel](aws-resource-mediapackage-channel.md)\.
+HLS ingest configuration\.
 
 ## Syntax<a name="aws-properties-mediapackage-channel-hlsingest-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-mediapackage-channel-hlsingest-properties"></a>
 
 `ingestEndpoints`  <a name="cfn-mediapackage-channel-hlsingest-ingestendpoints"></a>
-Property description not available\.  
+The input URL where the source stream should be sent\.  
 *Required*: No  
 *Type*: List of [IngestEndpoint](aws-properties-mediapackage-channel-ingestendpoint.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

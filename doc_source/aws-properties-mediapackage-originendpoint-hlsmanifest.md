@@ -44,9 +44,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `AdMarkers`  <a name="cfn-mediapackage-originendpoint-hlsmanifest-admarkers"></a>
 Controls how ad markers are included in the packaged endpoint\.  
 Valid values:  
-+ **NONE** \- Omits all SCTE\-35 ad markers from the output\.
-+ **PASSTHROUGH** \- Creates a copy in the output of the SCTE\-35 ad markers \(comments\) taken directly from the input manifest\.
-+ **SCTE35\_ENHANCED** \- Generates ad markers and blackout tags in the output based on the SCTE\-35 messages from the input manifest\.
++ `NONE` \- Omits all SCTE\-35 ad markers from the output\.
++ `PASSTHROUGH` \- Creates a copy in the output of the SCTE\-35 ad markers \(comments\) taken directly from the input manifest\.
++ `SCTE35_ENHANCED` \- Generates ad markers and blackout tags in the output based on the SCTE\-35 messages from the input manifest\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -60,14 +60,14 @@ The flags on SCTE\-35 segmentation descriptors that have to be present for AWS E
 `AdTriggers`  <a name="cfn-mediapackage-originendpoint-hlsmanifest-adtriggers"></a>
 Specifies the SCTE\-35 message types that AWS Elemental MediaPackage treats as ad markers in the output manifest\.  
 Valid values:  
-+ **BREAK**
-+ **DISTRIBUTOR\_ADVERTISEMENT**
-+ **DISTRIBUTOR\_OVERLAY\_PLACEMENT\_OPPORTUNITY**
-+ **DISTRIBUTOR\_PLACEMENT\_OPPORTUNITY**
-+ **PROVIDER\_ADVERTISEMENT**
-+ **PROVIDER\_OVERLAY\_PLACEMENT\_OPPORTUNITY**
-+ **PROVIDER\_PLACEMENT\_OPPORTUNITY**
-+ **SPLICE\_INSERT**
++ `BREAK`
++ `DISTRIBUTOR_ADVERTISEMENT`
++ `DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY`
++ `DISTRIBUTOR_PLACEMENT_OPPORTUNITY`
++ `PROVIDER_ADVERTISEMENT`
++ `PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY`
++ `PROVIDER_PLACEMENT_OPPORTUNITY`
++ `SPLICE_INSERT`
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -45,7 +45,7 @@ A list of HLS manifest configurations that are available from this endpoint\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IncludeDvbSubtitles`  <a name="cfn-mediapackage-packagingconfiguration-hlspackage-includedvbsubtitles"></a>
-Property description not available\.  
+When enabled, MediaPackage passes through digital video broadcasting \(DVB\) subtitles into the output\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

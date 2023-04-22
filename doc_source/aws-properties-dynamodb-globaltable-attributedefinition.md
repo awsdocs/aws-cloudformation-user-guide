@@ -28,8 +28,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A name for the attribute\.  
 *Required*: Yes  
 *Type*: String  
-*Minimum*: `1`  
-*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `AttributeType`  <a name="cfn-dynamodb-globaltable-attributedefinition-attributetype"></a>
@@ -39,5 +37,4 @@ The data type for the attribute, where:
 +  `B` \- the attribute is of type Binary
 *Required*: Yes  
 *Type*: String  
-*Allowed values*: `B | N | S`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

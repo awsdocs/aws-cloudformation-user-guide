@@ -1,6 +1,6 @@
 # AWS::MediaPackage::OriginEndpoint SpekeKeyProvider<a name="aws-properties-mediapackage-originendpoint-spekekeyprovider"></a>
 
-Keyprovider settings for DRM\.
+Key provider settings for DRM\.
 
 ## Syntax<a name="aws-properties-mediapackage-originendpoint-spekekeyprovider-syntax"></a>
 

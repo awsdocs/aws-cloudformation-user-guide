@@ -83,7 +83,7 @@ A list of tags to add to the bot\. You can only add tags when you import a bot\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataPrivacy`  <a name="cfn-lex-bot-dataprivacy"></a>
-Property description not available\.  
+By default, data stored by Amazon Lex is encrypted\. The `DataPrivacy` structure provides settings that determine how Amazon Lex handles special cases of securing the data for your bot\.   
 *Required*: Yes  
 *Type*: [DataPrivacy](aws-properties-lex-bot-dataprivacy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

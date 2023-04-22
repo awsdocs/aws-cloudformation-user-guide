@@ -121,8 +121,8 @@ Parameters for Microsoft Smooth Streaming packaging\.
 `Origination`  <a name="cfn-mediapackage-originendpoint-origination"></a>
 Controls video origination from this endpoint\.  
 Valid values:  
-+ **ALLOW** \- enables this endpoint to serve content to requesting devices\.
-+ **DENY** \- prevents this endpoint from serving content\. Denying origination is helpful for harvesting live\-to\-VOD assets\. For more information about harvesting and origination, see [Live\-to\-VOD Requirements](https://docs.aws.amazon.com/mediapackage/latest/ug/ltov-reqmts.html)\.
++ `ALLOW` \- enables this endpoint to serve content to requesting devices\.
++ `DENY` \- prevents this endpoint from serving content\. Denying origination is helpful for harvesting live\-to\-VOD assets\. For more information about harvesting and origination, see [Live\-to\-VOD Requirements](https://docs.aws.amazon.com/mediapackage/latest/ug/ltov-reqmts.html)\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -155,7 +155,17 @@ The IP addresses that can access this endpoint\.
 
 ### Ref<a name="aws-resource-mediapackage-originendpoint-return-values-ref"></a>
 
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the name of the origin endpoint\.
+
+For example: `{ "Ref": "myOriginEndpoint" }`
+
+For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
+
 ### Fn::GetAtt<a name="aws-resource-mediapackage-originendpoint-return-values-fn--getatt"></a>
+
+The `Fn::GetAtt` intrinsic function returns a value for a specified attribute of this type\. The following are the available attributes and sample return values\.
+
+For more information about using the `Fn::GetAtt` intrinsic function, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
 #### <a name="aws-resource-mediapackage-originendpoint-return-values-fn--getatt-fn--getatt"></a>
 

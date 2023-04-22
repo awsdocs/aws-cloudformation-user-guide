@@ -42,7 +42,8 @@ Type of error\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ViolatedEntities`  <a name="cfn-quicksight-template-templateerror-violatedentities"></a>
-Property description not available\.  
+An error path that shows which entities caused the template error\.  
 *Required*: No  
 *Type*: List of [Entity](aws-properties-quicksight-template-entity.md)  
+*Maximum*: `200`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

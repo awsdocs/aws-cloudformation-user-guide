@@ -4,6 +4,29 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_SSMContacts.md) | The following resources was updated: AWS::SSMContacts::Contact and AWS::SSMContacts::Rotation 
+
+ [AWS::SSMContacts::Contacts](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html)   
+`ONCALL_SCHEDULE` was added as a supported contact type\. 
+
+ [AWS::SSMContacts::Rotation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html)   
+Use the `AWS::SSMContacts::Rotation` resource to specify a rotation in an on\-call schedule\.  | April 20, 2023 | 
+| [Updated resource](AWS_InternetMonitor.md) | The following resource was updated: `AWS::InternetMonitor::Monitor`\. 
+
+ [AWS::InternetMonitor::Monitor](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-internetmonitor-monitor.html)   
+Use `Monitor.TrafficPercentageToMonitor` to set the percentage of your internet\-facing traffic to monitor\.  | April 20, 2023 | 
+| [Updated resource](AWS_IVS.md) | The following resource was updated: AWS::IVS::Channel 
+
+ [AWS::IVS::Channel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html)   
+Use the `InsecureIngest` property to control whether a channel allows insecure RTMP ingest\.  | April 20, 2023 | 
+| [New resource](AWS_FraudDetector.md) | The following resource was added: AWS::FraudDetector::List\. 
+
+ [AWS::FraudDetector::List](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-list.html)   
+Use the `AWS::FraudDetector::List` resource to create a list of input data\. After creating the list, use the list in a rule to allow or deny access or a transaction\.  | April 20, 2023 | 
+| [New resource](AWS_RAM.md) | Added new resource type `AWS::RAM::Permission` 
+
+ [AWS::RAM::Permission](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-permission.html)   
+Creates a customer managed permission that you can then assign to resource shares and applies to resources of the specified resource type that are included in the share\.  | April 19, 2023 | 
 | [Updated resource](AWS_MWAA.md) | The following resource was updated: AWS::MWAA::Environment 
 
  [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3path](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3path)   
@@ -46,6 +69,13 @@ Use `Monitor.InternetMeasurementsLogDelivery` to publish internet measurements t
 
  [AWS::RDS::DBCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html)   
 Use `RestoreToTime` property for the date and time to restore the DB cluster to\.  | April 6, 2023 | 
+| [New resources](AWS_SSMContacts.md) | The following resources were added: AWS::SSMContacts::Plan and AWS::SSMContacts::Rotation 
+
+ [AWS::SSMContacts::Plan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-plan.html)   
+Use the `AWS::SSMContacts::Plan` resource to specify the stages that an escalation plan or engagement plan engages contacts and contact methods in\. 
+
+ [AWS::SSMContacts::Rotation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html)   
+Use the `AWS::SSMContacts::Rotation` resource to specify a rotation in an on\-call schedule\.  | April 6, 2023 | 
 | [Updated resources](AWS_RefactorSpaces.md) | The following resources were updated: AWS::RefactorSpaces::Application, AWS::RefactorSpaces::Environment, AWS::RefactorSpaces::Route, AWS::RefactorSpaces::Service\. 
 
  [AWS::RefactorSpaces::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-application.html)   
@@ -908,7 +938,7 @@ Use the `Port` property to represent an object that is the criteria for determin
 Use the `TcpRouteMatch` resource to represent an object that is the TCP route to match\.  | August 25, 2022 | 
 | [Updated resource](AWS_MediaPackage.md) | The following resource was updated: AWS::MediaPackage::OriginEndpoint\. 
 
- [AWS::MediaPackage::OriginEndpoint\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html)>   
+ [AWS::MediaPackage::OriginEndpoint\.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html)   
 Use the `DVB_DASH_2014` property to select the DVB\_DASH\_2014 profile for the output\.  | August 25, 2022 | 
 | [New resource](AWS_Connect.md) | The following resource was added: AWS::Connect::Instance 
 

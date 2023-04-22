@@ -1,6 +1,6 @@
 # AWS::SSMContacts::Rotation ShiftCoverage<a name="aws-properties-ssmcontacts-rotation-shiftcoverage"></a>
 
-<a name="aws-properties-ssmcontacts-rotation-shiftcoverage-description"></a>The `ShiftCoverage` property type specifies Property description not available\. for an [AWS::SSMContacts::Rotation](aws-resource-ssmcontacts-rotation.md)\.
+Information about the days of the week that the on\-call rotation coverage includes\.
 
 ## Syntax<a name="aws-properties-ssmcontacts-rotation-shiftcoverage-syntax"></a>
 
@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-ssmcontacts-rotation-shiftcoverage-properties"></a>
 
 `CoverageTimes`  <a name="cfn-ssmcontacts-rotation-shiftcoverage-coveragetimes"></a>
-Property description not available\.  
+The start and end times of the shift\.  
 *Required*: Yes  
 *Type*: List of [CoverageTime](aws-properties-ssmcontacts-rotation-coveragetime.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DayOfWeek`  <a name="cfn-ssmcontacts-rotation-shiftcoverage-dayofweek"></a>
-Property description not available\.  
+A list of days on which the schedule is active\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

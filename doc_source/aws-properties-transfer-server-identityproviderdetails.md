@@ -1,6 +1,6 @@
 # AWS::Transfer::Server IdentityProviderDetails<a name="aws-properties-transfer-server-identityproviderdetails"></a>
 
-Required when `IdentityProviderType` is set to `AWS_DIRECTORY_SERVICE` or `API_GATEWAY`\. Accepts an array containing all of the information required to use a directory in `AWS_DIRECTORY_SERVICE` or invoke a customer\-supplied authentication API, including the API Gateway URL\. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED`\.
+Required when `IdentityProviderType` is set to `AWS_DIRECTORY_SERVICE`, ` AWS_LAMBDA` or `API_GATEWAY`\. Accepts an array containing all of the information required to use a directory in `AWS_DIRECTORY_SERVICE` or invoke a customer\-supplied authentication API, including the API Gateway URL\. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED`\.
 
 ## Syntax<a name="aws-properties-transfer-server-identityproviderdetails-syntax"></a>
 
@@ -47,7 +47,7 @@ The ARN for a lambda function to use for the Identity provider\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InvocationRole`  <a name="cfn-transfer-server-identityproviderdetails-invocationrole"></a>
-Provides the type of `InvocationRole` used to authenticate the user account\.  
+This parameter is only applicable if your `IdentityProviderType` is `API_GATEWAY`\. Provides the type of `InvocationRole` used to authenticate the user account\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `20`  

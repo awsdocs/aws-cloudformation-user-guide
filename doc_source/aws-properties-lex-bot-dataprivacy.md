@@ -1,6 +1,6 @@
 # AWS::Lex::Bot DataPrivacy<a name="aws-properties-lex-bot-dataprivacy"></a>
 
-Provides information on additional privacy protections Amazon Lex should use with the bot's data\.
+<a name="aws-properties-lex-bot-dataprivacy-description"></a>The `DataPrivacy` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
 
 ## Syntax<a name="aws-properties-lex-bot-dataprivacy-syntax"></a>
 

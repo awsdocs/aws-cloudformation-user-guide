@@ -64,7 +64,7 @@ The number of days, weeks, or months a single rotation lasts\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ShiftCoverages`  <a name="cfn-ssmcontacts-rotation-recurrencesettings-shiftcoverages"></a>
-Information about the days of the week that the on\-call rotation coverage includes\.  
+Information about the days of the week included in on\-call rotation coverage\.  
 *Required*: No  
 *Type*: List of [ShiftCoverage](aws-properties-ssmcontacts-rotation-shiftcoverage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

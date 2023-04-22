@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::IVS::Channel",
   "Properties" : {
       "[Authorized](#cfn-ivs-channel-authorized)" : Boolean,
+      "[InsecureIngest](#cfn-ivs-channel-insecureingest)" : Boolean,
       "[LatencyMode](#cfn-ivs-channel-latencymode)" : String,
       "[Name](#cfn-ivs-channel-name)" : String,
       "[RecordingConfigurationArn](#cfn-ivs-channel-recordingconfigurationarn)" : String,
@@ -31,6 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::IVS::Channel
 Properties: 
   [Authorized](#cfn-ivs-channel-authorized): Boolean
+  [InsecureIngest](#cfn-ivs-channel-insecureingest): Boolean
   [LatencyMode](#cfn-ivs-channel-latencymode): String
   [Name](#cfn-ivs-channel-name): String
   [RecordingConfigurationArn](#cfn-ivs-channel-recordingconfigurationarn): String
@@ -43,6 +45,13 @@ Properties:
 
 `Authorized`  <a name="cfn-ivs-channel-authorized"></a>
 Whether the channel is authorized\.  
+*Default*: `false`  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`InsecureIngest`  <a name="cfn-ivs-channel-insecureingest"></a>
+Whether the channel allows insecure RTMP ingest\.  
 *Default*: `false`  
 *Required*: No  
 *Type*: Boolean  

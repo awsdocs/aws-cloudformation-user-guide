@@ -36,9 +36,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 `AdMarkers`  <a name="cfn-mediapackage-packagingconfiguration-hlsmanifest-admarkers"></a>
 This setting controls ad markers in the packaged content\.  
 Valid values:  
-+ **NONE** \- Omits all SCTE\-35 ad markers from the output\.
-+ **PASSTHROUGH** \- Creates a copy in the output of the SCTE\-35 ad markers \(comments\) taken directly from the input manifest\.
-+ **SCTE35\_ENHANCED** \- Generates ad markers and blackout tags in the output based on the SCTE\-35 messages from the input manifest\.
++ `NONE` \- Omits all SCTE\-35 ad markers from the output\.
++ `PASSTHROUGH` \- Creates a copy in the output of the SCTE\-35 ad markers \(comments\) taken directly from the input manifest\.
++ `SCTE35_ENHANCED` \- Generates ad markers and blackout tags in the output based on the SCTE\-35 messages from the input manifest\.
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

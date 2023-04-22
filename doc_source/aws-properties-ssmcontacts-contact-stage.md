@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[DurationInMinutes](#cfn-ssmcontacts-contact-stage-durationinminutes)" : Integer,
+  "[RotationIds](#cfn-ssmcontacts-contact-stage-rotationids)" : [ String, ... ],
   "[Targets](#cfn-ssmcontacts-contact-stage-targets)" : [ Targets, ... ]
 }
 ```
@@ -19,6 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [DurationInMinutes](#cfn-ssmcontacts-contact-stage-durationinminutes): Integer
+  [RotationIds](#cfn-ssmcontacts-contact-stage-rotationids): 
+    - String
   [Targets](#cfn-ssmcontacts-contact-stage-targets): 
     - Targets
 ```
@@ -27,10 +30,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `DurationInMinutes`  <a name="cfn-ssmcontacts-contact-stage-durationinminutes"></a>
 The time to wait until beginning the next stage\. The duration can only be set to 0 if a target is specified\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  
 *Maximum*: `30`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`RotationIds`  <a name="cfn-ssmcontacts-contact-stage-rotationids"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Targets`  <a name="cfn-ssmcontacts-contact-stage-targets"></a>

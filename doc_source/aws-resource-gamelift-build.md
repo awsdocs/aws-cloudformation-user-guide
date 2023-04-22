@@ -43,10 +43,11 @@ A descriptive label that is associated with a build\. Build names do not need to
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `OperatingSystem`  <a name="cfn-gamelift-build-operatingsystem"></a>
-The operating system that you built the game server binaries to run on\. This value determines the type of fleet resources that you can use for this build\. If your game build contains multiple executables, they all must run on the same operating system\. If an operating system isn't specified when creating a build, Amazon GameLift uses the default value \(WINDOWS\_2012\)\. This value can't be changed later\.  
+The operating system that your game server binaries run on\. This value determines the type of fleet resources that you use for this build\. If your game build contains multiple executables, they all must run on the same operating system\. You must specify a valid operating system in this request\. There is no default value\. You can't change a build's operating system later\.  
+If you have active fleets using the Windows Server 2012 operating system, you can continue to create new builds using this OS until October 10, 2023, when Microsoft ends its support\. All others must use Windows Server 2016 when creating new Windows\-based builds\.
 *Required*: No  
 *Type*: String  
-*Allowed values*: `AMAZON_LINUX | AMAZON_LINUX_2 | WINDOWS_2012`  
+*Allowed values*: `AMAZON_LINUX | AMAZON_LINUX_2 | WINDOWS_2012 | WINDOWS_2016`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageLocation`  <a name="cfn-gamelift-build-storagelocation"></a>

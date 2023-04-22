@@ -1,6 +1,9 @@
 # AWS::RAM::ResourceShare<a name="aws-resource-ram-resourceshare"></a>
 
-Specifies a resource share\.
+Creates a resource share\. You can provide a list of the Amazon Resource Names \(ARNs\) for the resources that you want to share, a list of principals you want to share the resources with, and the permissions to grant those principals\.
+
+**Note**  
+Sharing a resource makes it available for use by principals outside of the AWS account that created the resource\. Sharing doesn't change any permissions or quotas that apply to the resource in the account that created it\.
 
 ## Syntax<a name="aws-resource-ram-resourceshare-syntax"></a>
 
@@ -60,14 +63,13 @@ Specifies the [Amazon Resource Names \(ARNs\)](https://docs.aws.amazon.com/gener
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Principals`  <a name="cfn-ram-resourceshare-principals"></a>
-Specifies a list of one or more principals to associate with the resource share\.  
-You can include the following values:  
-+ An AWS account ID, for example: `123456789012` 
-+ An [Amazon Resource Name \(ARN\)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of an organization in AWS Organizations, for example: `arn:aws:organizations::123456789012:organization/o-exampleorgid` 
-+ An ARN of an organizational unit \(OU\) in AWS Organizations, for example: `arn:aws:organizations::123456789012:ou/o-exampleorgid/ou-examplerootid-exampleouid123` 
-+ An ARN of an IAM role, for example: `arn:aws:iam::123456789012:role/rolename` 
-+ An ARN of an IAM user, for example: `arn:aws:iam::123456789012user/username` 
-Not all resource types can be shared with IAM roles and users\. For more information, see [Sharing with IAM roles and users](https://docs.aws.amazon.com/ram/latest/userguide/permissions.html#permissions-rbp-supported-resource-types) in the * AWS Resource Access Manager User Guide*\.
+Specifies the principals to associate with the resource share\. The possible values are:  
++ An AWS account ID
++ An Amazon Resource Name \(ARN\) of an organization in AWS Organizations 
++ An ARN of an organizational unit \(OU\) in AWS Organizations 
++ An ARN of an IAM role
++ An ARN of an IAM user
+Not all resource types can be shared with IAM roles and users\. For more information, see the column **Can share with IAM roles and users** in the tables on [Shareable AWS resources](https://docs.aws.amazon.com/ram/latest/userguide/shareable.html) in the * AWS Resource Access Manager User Guide*\.
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -88,7 +90,7 @@ Specifies one or more tags to attach to the resource share itself\. It doesn't a
 
 ### Ref<a name="aws-resource-ram-resourceshare-return-values-ref"></a>
 
- When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns the ID of the resource share\.
+When you pass the logical ID of this resource to the intrinsic `Ref` function, `Ref` returns The ID of the resource share\.
 
 For more information about using the `Ref` function, see [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)\.
 
@@ -105,11 +107,11 @@ The Amazon Resource Name \(ARN\) of the resource share\.
 
 ## Examples<a name="aws-resource-ram-resourceshare--examples"></a>
 
-### Creating a Resource Share<a name="aws-resource-ram-resourceshare--examples--Creating_a_Resource_Share"></a>
+### Creating a resource share<a name="aws-resource-ram-resourceshare--examples--Creating_a_resource_share"></a>
 
 The following example demonstrates how to create a resource share\.
 
-#### YAML<a name="aws-resource-ram-resourceshare--examples--Creating_a_Resource_Share--yaml"></a>
+#### YAML<a name="aws-resource-ram-resourceshare--examples--Creating_a_resource_share--yaml"></a>
 
 ```
 AWSTemplateFormatVersion: 2010-09-09
@@ -129,7 +131,7 @@ Resources:
           Value: "Value2"
 ```
 
-#### JSON<a name="aws-resource-ram-resourceshare--examples--Creating_a_Resource_Share--json"></a>
+#### JSON<a name="aws-resource-ram-resourceshare--examples--Creating_a_resource_share--json"></a>
 
 ```
 {
@@ -162,6 +164,6 @@ Resources:
 ```
 
 ## See also<a name="aws-resource-ram-resourceshare--seealso"></a>
-+  [CreateResourceShare](https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html) in the *AWS Resource Access Manager API Reference* 
++  [CreateResourceShare](https://docs.aws.amazon.com/ram/latest/APIReference/API_CreateResourceShare.html) in the * AWS Resource Access Manager API Reference* 
 +  [AWS Resource Access Manager User Guide](https://docs.aws.amazon.com/ram/latest/userguide) 
 
