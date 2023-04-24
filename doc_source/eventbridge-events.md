@@ -471,7 +471,7 @@ The following is an example response for StackSet stack instance status event\.
 }
 ```
 
-## StackSet operation status event schema<a name="schema-stackset-stack-instance-status"></a>
+## StackSet operation status event schema<a name="schema-stackset-stack-operation-status"></a>
 
 The following schema is the structure for a StackSet operation status event\.
 
@@ -532,7 +532,7 @@ The unique ID that's associated with the StackSet operation\.
 `status`  
 The StackSet operation status\. StackSet operation statuses can be `RUNNING`, `SUCCEEDED`, `FAILED`, `STOPPING`, `STOPPED`, or `QUEUED`\.
 
-**Example StackSet operation status event**  <a name="schema-stackset-stack-instance-status.example"></a>
+**Example StackSet operation status event**  <a name="schema-stackset-stack-operation-status.example"></a>
 The following is an example response for StackSet operation status event\.  
 
 ```
