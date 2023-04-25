@@ -562,7 +562,7 @@ The name of the database engine that you want to use for this DB instance\.
 When you are creating a DB instance, the `Engine` property is required\.
 Valid Values:  
 + `aurora` \(for MySQL 5\.6\-compatible Aurora\)
-+ `aurora-mysql` \(for MySQL 5\.7\-compatible Aurora\)
++ `aurora-mysql` \(for MySQL 5\.7\-compatible and MySQL 8\.0\-compatible Aurora\)
 + `aurora-postgresql`
 + `custom-oracle-ee`
 + `custom-oracle-ee-cdb`

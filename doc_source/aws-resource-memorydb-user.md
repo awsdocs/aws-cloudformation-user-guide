@@ -38,7 +38,7 @@ Properties:
 
 `AccessString`  <a name="cfn-memorydb-user-accessstring"></a>
 Access permissions string used for this user\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
@@ -62,7 +62,7 @@ mynewdbuser:
          "Type": "Password"
      }
 ```
-*Required*: Yes  
+*Required*: No  
 *Type*: [AuthenticationMode](aws-properties-memorydb-user-authenticationmode.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

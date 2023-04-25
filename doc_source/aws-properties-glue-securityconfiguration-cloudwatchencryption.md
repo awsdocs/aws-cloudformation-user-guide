@@ -28,10 +28,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The encryption mode to use for CloudWatch data\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `DISABLED | SSE-KMS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KmsKeyArn`  <a name="cfn-glue-securityconfiguration-cloudwatchencryption-kmskeyarn"></a>
 The Amazon Resource Name \(ARN\) of the KMS key to be used to encrypt the data\.  
 *Required*: No  
 *Type*: String  
+*Pattern*: `arn:aws:kms:.*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

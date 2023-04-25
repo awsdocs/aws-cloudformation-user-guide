@@ -58,6 +58,9 @@ The actions initiated by this trigger\.
 A description of this trigger\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `2048`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `EventBatchingCondition`  <a name="cfn-glue-trigger-eventbatchingcondition"></a>
@@ -70,6 +73,9 @@ Batch condition that must be met \(specified number of events received or batch 
 The name of the trigger\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Predicate`  <a name="cfn-glue-trigger-predicate"></a>
@@ -100,6 +106,7 @@ The tags to use with this trigger\.
 The type of trigger that this is\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `CONDITIONAL | EVENT | ON_DEMAND | SCHEDULED`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `WorkflowName`  <a name="cfn-glue-trigger-workflowname"></a>

@@ -47,6 +47,9 @@ Creates a set of default permissions on the table for principals\. Used by AWS L
 A description of the database\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `2048`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FederatedDatabase`  <a name="cfn-glue-database-databaseinput-federateddatabase"></a>
@@ -59,12 +62,18 @@ Property description not available\.
 The location of the database \(for example, an HDFS path\)\.   
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1024`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-glue-database-databaseinput-name"></a>
 The name of the database\. For Hive compatibility, this is folded to lowercase when it is stored\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Parameters`  <a name="cfn-glue-database-databaseinput-parameters"></a>

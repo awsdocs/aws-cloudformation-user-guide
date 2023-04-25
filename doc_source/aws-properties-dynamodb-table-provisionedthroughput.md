@@ -25,14 +25,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-dynamodb-table-provisionedthroughput-properties"></a>
 
 `ReadCapacityUnits`  <a name="cfn-dynamodb-table-provisionedthroughput-readcapacityunits"></a>
-The maximum number of strongly consistent reads consumed per second before DynamoDB returns a `ThrottlingException`\. For more information, see [Specifying Read and Write Requirements](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#ProvisionedThroughput) in the *Amazon DynamoDB Developer Guide*\.  
+The maximum number of strongly consistent reads consumed per second before DynamoDB returns a `ThrottlingException`\. For more information, see [Specifying Read and Write Requirements](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughput.html) in the *Amazon DynamoDB Developer Guide*\.  
 If read/write capacity mode is `PAY_PER_REQUEST` the value is set to 0\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WriteCapacityUnits`  <a name="cfn-dynamodb-table-provisionedthroughput-writecapacityunits"></a>
-The maximum number of writes consumed per second before DynamoDB returns a `ThrottlingException`\. For more information, see [Specifying Read and Write Requirements](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#ProvisionedThroughput) in the *Amazon DynamoDB Developer Guide*\.  
+The maximum number of writes consumed per second before DynamoDB returns a `ThrottlingException`\. For more information, see [Specifying Read and Write Requirements](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ProvisionedThroughput.html) in the *Amazon DynamoDB Developer Guide*\.  
 If read/write capacity mode is `PAY_PER_REQUEST` the value is set to 0\.  
 *Required*: Yes  
 *Type*: Integer  

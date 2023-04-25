@@ -35,6 +35,7 @@ A list of the conditions that determine when the trigger will fire\.
 An optional field if only one condition is listed\. If multiple conditions are listed, then this field is required\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `AND | ANY`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-glue-trigger-predicate--seealso"></a>

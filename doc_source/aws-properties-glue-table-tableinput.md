@@ -49,18 +49,27 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 A description of the table\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `2048`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-glue-table-tableinput-name"></a>
 The table name\. For Hive compatibility, this is folded to lowercase when it is stored\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Owner`  <a name="cfn-glue-table-tableinput-owner"></a>
 The table owner\. Included for Apache Hive compatibility\. Not used in the normal course of AWS Glue operations\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-glue-table-tableinput-parameters"></a>
@@ -81,6 +90,7 @@ When you create a table used by Amazon Athena, and you do not specify any `parti
 The retention time for this table\.  
 *Required*: No  
 *Type*: Integer  
+*Minimum*: `0`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StorageDescriptor`  <a name="cfn-glue-table-tableinput-storagedescriptor"></a>
@@ -98,6 +108,7 @@ GOVERNED
 Used by AWS Lake Formation\. The AWS Glue Data Catalog understands `GOVERNED`\.
 *Required*: No  
 *Type*: String  
+*Maximum*: `255`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TargetTable`  <a name="cfn-glue-table-tableinput-targettable"></a>
@@ -110,10 +121,12 @@ A `TableIdentifier` structure that describes a target table for resource linking
 Included for Apache Hive compatibility\. Not used in the normal course of AWS Glue operations\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `409600`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ViewOriginalText`  <a name="cfn-glue-table-tableinput-vieworiginaltext"></a>
 Included for Apache Hive compatibility\. Not used in the normal course of AWS Glue operations\. If the table is a `VIRTUAL_VIEW`, certain Athena configuration encoded in base64\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `409600`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

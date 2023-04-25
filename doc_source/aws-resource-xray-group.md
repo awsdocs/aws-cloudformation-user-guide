@@ -15,7 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[FilterExpression](#cfn-xray-group-filterexpression)" : String,
       "[GroupName](#cfn-xray-group-groupname)" : String,
       "[InsightsConfiguration](#cfn-xray-group-insightsconfiguration)" : InsightsConfiguration,
-      "[Tags](#cfn-xray-group-tags)" : [ TagsItems, ... ]
+      "[Tags](#cfn-xray-group-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -30,7 +30,7 @@ Properties:
   [InsightsConfiguration](#cfn-xray-group-insightsconfiguration): 
     InsightsConfiguration
   [Tags](#cfn-xray-group-tags): 
-    - TagsItems
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-xray-group-properties"></a>
@@ -59,7 +59,7 @@ The structure containing configurations related to insights\.
 An array of key\-value pairs to apply to this resource\.  
 For more information, see [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)\.  
 *Required*: No  
-*Type*: List of [TagsItems](aws-properties-xray-group-tagsitems.md)  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-xray-group-return-values"></a>

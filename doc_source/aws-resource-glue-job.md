@@ -101,6 +101,9 @@ For information about the key\-value pairs that AWS Glue consumes to set up your
 A description of the job\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `2048`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ExecutionClass`  <a name="cfn-glue-job-executionclass"></a>
@@ -123,6 +126,9 @@ For more information about the available AWS Glue versions and corresponding Spa
 Jobs that are created without specifying a Glue version default to Glue 0\.9\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `^\w+\.\w+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogUri`  <a name="cfn-glue-job-loguri"></a>
@@ -151,6 +157,9 @@ The maximum number of times to retry this job after a JobRun fails\.
 The name you assign to this job definition\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `NonOverridableArguments`  <a name="cfn-glue-job-nonoverridablearguments"></a>
@@ -182,6 +191,9 @@ The name or Amazon Resource Name \(ARN\) of the IAM role associated with this jo
 The name of the `SecurityConfiguration` structure to be used with this job\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-glue-job-tags"></a>
@@ -203,6 +215,7 @@ The type of predefined worker that is allocated when a job runs\. Accepts a valu
 + For the `G.2X` worker type, each worker maps to 2 DPU \(8 vCPU, 32 GB of memory, 128 GB disk\), and provides 1 executor per worker\. We recommend this worker type for memory\-intensive jobs\.
 *Required*: No  
 *Type*: String  
+*Allowed values*: `G.025X | G.1X | G.2X | Standard`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-glue-job-return-values"></a>

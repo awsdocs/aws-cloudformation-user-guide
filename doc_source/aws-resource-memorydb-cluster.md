@@ -220,7 +220,7 @@ The SNS topic must be in Active status to receive notifications\.
 The name of the subnet group used by the cluster\.  
 *Required*: No  
 *Type*: String  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-memorydb-cluster-tags"></a>
 An array of key\-value pairs to apply to this resource\.  

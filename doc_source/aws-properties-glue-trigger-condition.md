@@ -46,18 +46,23 @@ The state of the crawler to which this condition applies\.
 The name of the job whose `JobRuns` this condition applies to, and on which this trigger waits\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogicalOperator`  <a name="cfn-glue-trigger-condition-logicaloperator"></a>
 A logical operator\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `EQUALS`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `State`  <a name="cfn-glue-trigger-condition-state"></a>
 The condition state\. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT`, and `FAILED`\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `ERROR | FAILED | RUNNING | STARTING | STOPPED | STOPPING | SUCCEEDED | TIMEOUT | WAITING`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## See also<a name="aws-properties-glue-trigger-condition--seealso"></a>

@@ -33,6 +33,7 @@ A value of `DELETE_FROM_DATABASE` specifies that if a table or partition is foun
 A value of `DEPRECATE_IN_DATABASE` specifies that if a table has been found to no longer exist, to add a property to the table that says "DEPRECATED" and includes a timestamp with the time of deprecation\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `DELETE_FROM_DATABASE | DEPRECATE_IN_DATABASE | LOG`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `UpdateBehavior`  <a name="cfn-glue-crawler-schemachangepolicy-updatebehavior"></a>
@@ -41,4 +42,5 @@ A value of `LOG` specifies that if a table or a partition already exists, and a 
 A value of `UPDATE_IN_DATABASE` specifies that if a table or partition already exists, and a change is detected, update it\. Add new tables and partitions\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `LOG | UPDATE_IN_DATABASE`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -23,6 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[ExplicitIds](#cfn-dms-endpoint-redshiftsettings-explicitids)" : Boolean,
   "[FileTransferUploadStreams](#cfn-dms-endpoint-redshiftsettings-filetransferuploadstreams)" : Integer,
   "[LoadTimeout](#cfn-dms-endpoint-redshiftsettings-loadtimeout)" : Integer,
+  "[MapBooleanAsBoolean](#cfn-dms-endpoint-redshiftsettings-mapbooleanasboolean)" : Boolean,
   "[MaxFileSize](#cfn-dms-endpoint-redshiftsettings-maxfilesize)" : Integer,
   "[RemoveQuotes](#cfn-dms-endpoint-redshiftsettings-removequotes)" : Boolean,
   "[ReplaceChars](#cfn-dms-endpoint-redshiftsettings-replacechars)" : String,
@@ -54,6 +55,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [ExplicitIds](#cfn-dms-endpoint-redshiftsettings-explicitids): Boolean
   [FileTransferUploadStreams](#cfn-dms-endpoint-redshiftsettings-filetransferuploadstreams): Integer
   [LoadTimeout](#cfn-dms-endpoint-redshiftsettings-loadtimeout): Integer
+  [MapBooleanAsBoolean](#cfn-dms-endpoint-redshiftsettings-mapbooleanasboolean): 
+    Boolean
   [MaxFileSize](#cfn-dms-endpoint-redshiftsettings-maxfilesize): Integer
   [RemoveQuotes](#cfn-dms-endpoint-redshiftsettings-removequotes): Boolean
   [ReplaceChars](#cfn-dms-endpoint-redshiftsettings-replacechars): String
@@ -155,6 +158,12 @@ The number of parallel streams used to upload a single \.csv file to an S3 bucke
 The amount of time to wait \(in milliseconds\) before timing out of operations performed by AWS DMS on a Redshift cluster, such as Redshift COPY, INSERT, DELETE, and UPDATE\.  
 *Required*: No  
 *Type*: Integer  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MapBooleanAsBoolean`  <a name="cfn-dms-endpoint-redshiftsettings-mapbooleanasboolean"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxFileSize`  <a name="cfn-dms-endpoint-redshiftsettings-maxfilesize"></a>

@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-glue-job-jobcommand-properties"></a>
 
 `Name`  <a name="cfn-glue-job-jobcommand-name"></a>
-The name of the job command\. For an Apache Spark ETL job, this must be `glueetl`\. For a Python shell job, it must be `pythonshell`\.  
+The name of the job command\. For an Apache Spark ETL job, this must be `glueetl`\. For a Python shell job, it must be `pythonshell`\. For an Apache Spark streaming ETL job, this must be `gluestreaming`\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -36,10 +36,12 @@ The name of the job command\. For an Apache Spark ETL job, this must be `glueetl
 The Python version being used to execute a Python shell job\. Allowed values are 3 or 3\.9\. Version 2 is deprecated\.  
 *Required*: No  
 *Type*: String  
+*Pattern*: `^([2-3]|3[.]9)$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScriptLocation`  <a name="cfn-glue-job-jobcommand-scriptlocation"></a>
 Specifies the Amazon Simple Storage Service \(Amazon S3\) path to a script that executes a job \(required\)\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `400000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

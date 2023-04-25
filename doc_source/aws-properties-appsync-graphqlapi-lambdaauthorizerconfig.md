@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-appsync-graphqlapi-lambdaauthorizerconfig-properties"></a>
 
 `AuthorizerResultTtlInSeconds`  <a name="cfn-appsync-graphqlapi-lambdaauthorizerconfig-authorizerresultttlinseconds"></a>
-The number of seconds a response should be cached for\. The default is 5 minutes \(300 seconds\)\. The Lambda function can override this by returning a `ttlOverride` key in its response\. A value of 0 disables caching of responses\.  
+The number of seconds a response should be cached for\. The default is 0 seconds, which disables caching\. If you don't specify a value for `authorizerResultTtlInSeconds`, the default value is used\. The maximum value is one hour \(3600 seconds\)\. The Lambda function can override this by returning a `ttlOverride` key in its response\.  
 *Required*: No  
 *Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

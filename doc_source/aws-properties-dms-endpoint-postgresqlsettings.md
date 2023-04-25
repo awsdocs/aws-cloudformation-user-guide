@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[HeartbeatEnable](#cfn-dms-endpoint-postgresqlsettings-heartbeatenable)" : Boolean,
   "[HeartbeatFrequency](#cfn-dms-endpoint-postgresqlsettings-heartbeatfrequency)" : Integer,
   "[HeartbeatSchema](#cfn-dms-endpoint-postgresqlsettings-heartbeatschema)" : String,
+  "[MapBooleanAsBoolean](#cfn-dms-endpoint-postgresqlsettings-mapbooleanasboolean)" : Boolean,
   "[MaxFileSize](#cfn-dms-endpoint-postgresqlsettings-maxfilesize)" : Integer,
   "[PluginName](#cfn-dms-endpoint-postgresqlsettings-pluginname)" : String,
   "[SecretsManagerAccessRoleArn](#cfn-dms-endpoint-postgresqlsettings-secretsmanageraccessrolearn)" : String,
@@ -37,6 +38,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [HeartbeatEnable](#cfn-dms-endpoint-postgresqlsettings-heartbeatenable): Boolean
   [HeartbeatFrequency](#cfn-dms-endpoint-postgresqlsettings-heartbeatfrequency): Integer
   [HeartbeatSchema](#cfn-dms-endpoint-postgresqlsettings-heartbeatschema): String
+  [MapBooleanAsBoolean](#cfn-dms-endpoint-postgresqlsettings-mapbooleanasboolean): 
+    Boolean
   [MaxFileSize](#cfn-dms-endpoint-postgresqlsettings-maxfilesize): Integer
   [PluginName](#cfn-dms-endpoint-postgresqlsettings-pluginname): String
   [SecretsManagerAccessRoleArn](#cfn-dms-endpoint-postgresqlsettings-secretsmanageraccessrolearn): String
@@ -97,6 +100,12 @@ Sets the WAL heartbeat frequency \(in minutes\)\.
 Sets the schema in which the heartbeat artifacts are created\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`MapBooleanAsBoolean`  <a name="cfn-dms-endpoint-postgresqlsettings-mapbooleanasboolean"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxFileSize`  <a name="cfn-dms-endpoint-postgresqlsettings-maxfilesize"></a>

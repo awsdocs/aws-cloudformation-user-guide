@@ -31,16 +31,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The connection's Availability Zone\. This field is redundant because the specified subnet implies the Availability Zone to be used\. Currently the field must be populated, but it will be deprecated in the future\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SecurityGroupIdList`  <a name="cfn-glue-connection-physicalconnectionrequirements-securitygroupidlist"></a>
 The security group ID list used by the connection\.  
 *Required*: No  
 *Type*: List of String  
+*Maximum*: `50`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SubnetId`  <a name="cfn-glue-connection-physicalconnectionrequirements-subnetid"></a>
 The subnet ID used by the connection\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

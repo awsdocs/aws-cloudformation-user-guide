@@ -16,6 +16,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ContentLocation](#cfn-iottwinmaker-scene-contentlocation)" : String,
       "[Description](#cfn-iottwinmaker-scene-description)" : String,
       "[SceneId](#cfn-iottwinmaker-scene-sceneid)" : String,
+      "[SceneMetadata](#cfn-iottwinmaker-scene-scenemetadata)" : {Key : Value, ...},
       "[Tags](#cfn-iottwinmaker-scene-tags)" : {Key : Value, ...},
       "[WorkspaceId](#cfn-iottwinmaker-scene-workspaceid)" : String
     }
@@ -32,6 +33,8 @@ Properties:
   [ContentLocation](#cfn-iottwinmaker-scene-contentlocation): String
   [Description](#cfn-iottwinmaker-scene-description): String
   [SceneId](#cfn-iottwinmaker-scene-sceneid): String
+  [SceneMetadata](#cfn-iottwinmaker-scene-scenemetadata): 
+    Key : Value
   [Tags](#cfn-iottwinmaker-scene-tags): 
     Key : Value
   [WorkspaceId](#cfn-iottwinmaker-scene-workspaceid): String
@@ -62,6 +65,12 @@ The scene ID\.
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`SceneMetadata`  <a name="cfn-iottwinmaker-scene-scenemetadata"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Map of String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-iottwinmaker-scene-tags"></a>
 The ComponentType tags\.  
@@ -96,6 +105,9 @@ The scene ARN\.
 
 `CreationDateTime`  <a name="CreationDateTime-fn::getatt"></a>
 The date and time when the scene was created\.
+
+`GeneratedSceneMetadata`  <a name="GeneratedSceneMetadata-fn::getatt"></a>
+Property description not available\.
 
 `UpdateDateTime`  <a name="UpdateDateTime-fn::getatt"></a>
 The scene the update time\.

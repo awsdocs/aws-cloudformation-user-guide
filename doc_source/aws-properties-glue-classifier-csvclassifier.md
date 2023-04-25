@@ -48,12 +48,16 @@ A value of `PRESENT` specifies that the CSV file contains headings\.
 A value of `ABSENT` specifies that the CSV file does not contain headings\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `ABSENT | PRESENT | UNKNOWN`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Delimiter`  <a name="cfn-glue-classifier-csvclassifier-delimiter"></a>
 A custom symbol to denote what separates each column entry in the row\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1`  
+*Pattern*: `[^\r\n]`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DisableValueTrimming`  <a name="cfn-glue-classifier-csvclassifier-disablevaluetrimming"></a>
@@ -72,12 +76,18 @@ A list of strings representing column names\.
 The name of the classifier\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `QuoteSymbol`  <a name="cfn-glue-classifier-csvclassifier-quotesymbol"></a>
 A custom symbol to denote what combines content into a single column value\. It must be different from the column delimiter\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1`  
+*Pattern*: `[^\r\n]`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Examples<a name="aws-properties-glue-classifier-csvclassifier--examples"></a>

@@ -74,12 +74,16 @@ A list of the `Columns` in the table\.
 The input format: `SequenceFileInputFormat` \(binary\), or `TextInputFormat`, or a custom format\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `128`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Location`  <a name="cfn-glue-partition-storagedescriptor-location"></a>
 The physical location of the table\. By default, this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `2056`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `NumberOfBuckets`  <a name="cfn-glue-partition-storagedescriptor-numberofbuckets"></a>
@@ -93,6 +97,8 @@ You must specify this property if the partition contains any dimension columns\.
 The output format: `SequenceFileOutputFormat` \(binary\), or `IgnoreKeyTextOutputFormat`, or a custom format\.  
 *Required*: No  
 *Type*: String  
+*Maximum*: `128`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Parameters`  <a name="cfn-glue-partition-storagedescriptor-parameters"></a>

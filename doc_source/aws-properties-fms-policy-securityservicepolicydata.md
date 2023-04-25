@@ -110,7 +110,7 @@ Valid values for `preProcessRuleGroups` are between 1 and 99\. Valid values for 
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
-*Maximum*: `8192`  
+*Maximum*: `10000`  
 *Pattern*: `^((?!\\[nr]).)+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

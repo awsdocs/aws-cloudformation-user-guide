@@ -72,6 +72,8 @@ Crawler configuration information\. This versioned JSON string allows users to s
 The name of the `SecurityConfiguration` structure to be used by this crawler\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `128`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DatabaseName`  <a name="cfn-glue-crawler-databasename"></a>
@@ -84,12 +86,18 @@ The name of the database in which the crawler's output is stored\.
 A description of the crawler\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `2048`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\r\n\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-glue-crawler-name"></a>
 The name of the crawler\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `RecrawlPolicy`  <a name="cfn-glue-crawler-recrawlpolicy"></a>
@@ -121,6 +129,8 @@ The SchemaChangePolicy consists of two components, `UpdateBehavior` and `DeleteB
 The prefix added to the names of tables that are created\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `0`  
+*Maximum*: `128`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-glue-crawler-tags"></a>

@@ -29,6 +29,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The name of the database to be synchronized\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `255`  
+*Pattern*: `[\u0020-\uD7FF\uE000-\uFFFD\uD800\uDC00-\uDBFF\uDFFF\t]*`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tables`  <a name="cfn-glue-crawler-catalogtarget-tables"></a>

@@ -11,6 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ErrorTopic](#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-errortopic)" : String,
+  "[IncludeInferenceResponseIn](#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-includeinferenceresponsein)" : [ String, ... ],
   "[SuccessTopic](#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-successtopic)" : String
 }
 ```
@@ -19,6 +20,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ErrorTopic](#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-errortopic): String
+  [IncludeInferenceResponseIn](#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-includeinferenceresponsein): 
+    - String
   [SuccessTopic](#cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-successtopic): String
 ```
 
@@ -28,6 +31,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Amazon SNS topic to post a notification to when an inference fails\. If no topic is provided, no notification is sent on failure\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`IncludeInferenceResponseIn`  <a name="cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-includeinferenceresponsein"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SuccessTopic`  <a name="cfn-sagemaker-endpointconfig-asyncinferencenotificationconfig-successtopic"></a>
