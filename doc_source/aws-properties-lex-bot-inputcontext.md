@@ -1,6 +1,6 @@
 # AWS::Lex::Bot InputContext<a name="aws-properties-lex-bot-inputcontext"></a>
 
-A context that must be active for an intent to be selected by Amazon Lex\.
+<a name="aws-properties-lex-bot-inputcontext-description"></a>The `InputContext` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
 
 ## Syntax<a name="aws-properties-lex-bot-inputcontext-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-inputcontext-properties"></a>
 
 `Name`  <a name="cfn-lex-bot-inputcontext-name"></a>
-The name of the context\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

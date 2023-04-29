@@ -56,7 +56,6 @@ The following example template creates two S3 buckets\. The `LoggingBucket` buck
         "S3Bucket": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
-                "AccessControl": "Private",
                 "LoggingConfiguration": {
                     "DestinationBucketName": {
                         "Ref": "LoggingBucket"
@@ -66,9 +65,55 @@ The following example template creates two S3 buckets\. The `LoggingBucket` buck
             }
         },
         "LoggingBucket": {
-            "Type": "AWS::S3::Bucket",
+            "Type": "AWS::S3::Bucket"
+        },
+        "S3BucketPolicy": {
+            "Type": "AWS::S3::BucketPolicy",
             "Properties": {
-                "AccessControl": "LogDeliveryWrite"
+                "Bucket": {
+                    "Ref": "LoggingBucket"
+                },
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Action": [
+                                "s3:PutObject"
+                            ],
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": "logging.s3.amazonaws.com"
+                            },
+                            "Resource": {
+                                "Fn::Join": [
+                                    "",
+                                    [
+                                        "arn:aws:s3:::",
+                                        {
+                                            "Ref": "LoggingBucket"
+                                        },
+                                        "/*"
+                                    ]
+                                ]
+                            },
+                            "Condition": {
+                                "ArnLike": {
+                                    "aws:SourceArn": {
+                                        "Fn::GetAtt": [
+                                            "S3Bucket",
+                                            "Arn"
+                                        ]
+                                    }
+                                },
+                                "StringEquals": {
+                                    "aws:SourceAccount": {
+                                        "Fn::Sub": "${AWS::AccountId}"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
             }
         }
     },
@@ -91,14 +136,35 @@ Resources:
   S3Bucket:
     Type: 'AWS::S3::Bucket'
     Properties:
-      AccessControl: Private
       LoggingConfiguration:
         DestinationBucketName: !Ref LoggingBucket
         LogFilePrefix: testing-logs
   LoggingBucket:
     Type: 'AWS::S3::Bucket'
+  S3BucketPolicy:
+    Type: 'AWS::S3::BucketPolicy'
     Properties:
-      AccessControl: LogDeliveryWrite
+      Bucket: !Ref LoggingBucket
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Action:
+              - 's3:PutObject'
+            Effect: Allow
+            Principal:
+              Service: logging.s3.amazonaws.com
+            Resource: !Join 
+              - ''
+              - - 'arn:aws:s3:::'
+                - !Ref LoggingBucket
+                - /*
+            Condition:
+              ArnLike:
+                'aws:SourceArn': !GetAtt 
+                  - S3Bucket
+                  - Arn
+              StringEquals:
+                'aws:SourceAccount': !Sub '${AWS::AccountId}'
 Outputs:
   BucketName:
     Value: !Ref S3Bucket

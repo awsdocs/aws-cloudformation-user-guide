@@ -80,7 +80,7 @@ The ARN of the thing to associate with the wireless gateway\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ThingName`  <a name="cfn-iotwireless-wirelessgateway-thingname"></a>
-Property description not available\.  
+The name of the thing associated with the wireless gateway\. The value is empty if a thing isn't associated with the gateway\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -219,7 +219,7 @@ The identifier of the function's [runtime](https://docs.aws.amazon.com/lambda/la
 The following list includes deprecated runtimes\. For more information, see [Runtime deprecation policy](https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html#runtime-support-policy)\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `dotnet6 | dotnetcore1.0 | dotnetcore2.0 | dotnetcore2.1 | dotnetcore3.1 | go1.x | java11 | java8 | java8.al2 | nodejs | nodejs10.x | nodejs12.x | nodejs14.x | nodejs16.x | nodejs18.x | nodejs4.3 | nodejs4.3-edge | nodejs6.10 | nodejs8.10 | provided | provided.al2 | python2.7 | python3.10 | python3.6 | python3.7 | python3.8 | python3.9 | ruby2.5 | ruby2.7`  
+*Allowed values*: `dotnet6 | dotnetcore1.0 | dotnetcore2.0 | dotnetcore2.1 | dotnetcore3.1 | go1.x | java11 | java17 | java8 | java8.al2 | nodejs | nodejs10.x | nodejs12.x | nodejs14.x | nodejs16.x | nodejs18.x | nodejs4.3 | nodejs4.3-edge | nodejs6.10 | nodejs8.10 | provided | provided.al2 | python2.7 | python3.10 | python3.6 | python3.7 | python3.8 | python3.9 | ruby2.5 | ruby2.7`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RuntimeManagementConfig`  <a name="cfn-lambda-function-runtimemanagementconfig"></a>

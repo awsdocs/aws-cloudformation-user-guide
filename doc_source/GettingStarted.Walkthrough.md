@@ -285,23 +285,23 @@ You will create your stack based on the *WordPress\-1\.0\.0* file discussed earl
 
 1. Sign in to the AWS Management Console and open the AWS CloudFormation console at [https://console\.aws\.amazon\.com/cloudformation](https://console.aws.amazon.com/cloudformation/)\.
 
-1. If this is a new CloudFormation account, choose **Create New Stack**\. Otherwise, choose **Create Stack**\.
+1. Choose **Create Stack**\.
 
-1. In the **Template** section, select **Specify an Amazon S3 Template URL** to type or paste the URL for the sample WordPress template, and then choose **Next**:
+1. In the **Specify template** section, select **Amazon S3 Template URL** to type or paste the URL for the sample WordPress template, and then choose **Next**:
 
    `https://s3.us-west-2.amazonaws.com/cloudformation-templates-us-west-2/WordPress_Single_Instance.template`
 **Note**  
 AWS CloudFormation templates that are stored in an S3 bucket must be accessible to the user who is creating the stack, and must be located in the *same region* as the stack that is being created\. Therefore, if the S3 bucket is located in the `us-east-2` Region, the stack must also be created in `us-east-2`\.
 
-1. In the **Specify Details** section, enter a stack name in the **Name** field\. For this example, use **MyWPTestStack**\. The stack name can't contain spaces\.
+1. In the **Specify stack details** section, enter a name in the **Stack name** field\. For this example, use **MyWPTestStack**\. The stack name can't contain spaces\.
 
-1. On the **Specify Parameters** page, you'll recognize the parameters from the Parameters section of the template\. You must provide values for all parameters that don't have default values, including **DBUser**, **DBPassword**, **DBRootPassword**, and **KeyName**\. In the **KeyName** field, enter the name of a valid Amazon EC2 pair in the same region you are creating the stack\.
+1. In the **Parameters** section, you must provide values for all parameters that don't have default values, including **DBUser**, **DBPassword**, **DBRootPassword**, and **KeyName**\. In the **KeyName** field, enter the name of a valid Amazon EC2 pair in the same region you are creating the stack\.
 
 1. Choose **Next**\.
 
 1. In this scenario, we won't add any tags\. Choose **Next**\. Tags, which are key\-value pairs, can help you identify your stacks\. For more information, see [ Adding tags to your CloudFormation stack](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-console-add-tags.html)\.
 
-1. Review the information for the stack\. When you're satisfied with the settings, choose **Create**\.
+1. Review the information for the stack\. When you're satisfied with the settings, choose **Submit**\.
 
 Your stack might take several minutes to create – but you probably don't want to just sit around waiting\. If you're like us, you'll want to know how the stack creation is going\.
 

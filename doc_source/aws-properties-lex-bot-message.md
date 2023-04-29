@@ -1,6 +1,6 @@
 # AWS::Lex::Bot Message<a name="aws-properties-lex-bot-message"></a>
 
-The object that provides message text and its type\.
+<a name="aws-properties-lex-bot-message-description"></a>The `Message` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
 
 ## Syntax<a name="aws-properties-lex-bot-message-syntax"></a>
 
@@ -33,25 +33,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-message-properties"></a>
 
 `CustomPayload`  <a name="cfn-lex-bot-message-custompayload"></a>
-A message in a custom format defined by the client application\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [CustomPayload](aws-properties-lex-bot-custompayload.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ImageResponseCard`  <a name="cfn-lex-bot-message-imageresponsecard"></a>
-A message that defines a response card that the client application can show to the user\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [ImageResponseCard](aws-properties-lex-bot-imageresponsecard.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PlainTextMessage`  <a name="cfn-lex-bot-message-plaintextmessage"></a>
-A message in plain text format\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [PlainTextMessage](aws-properties-lex-bot-plaintextmessage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SSMLMessage`  <a name="cfn-lex-bot-message-ssmlmessage"></a>
-A message in Speech Synthesis Markup Language \(SSML\)\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [SSMLMessage](aws-properties-lex-bot-ssmlmessage.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -71,7 +71,7 @@ Whether or not to enable the execute command functionality for the containers in
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Group`  <a name="cfn-scheduler-schedule-ecsparameters-group"></a>
-Specifies an ECS task group for the task\. The maximum length is 255 characters\.  
+Specifies an Amazon ECS task group for the task\. The maximum length is 255 characters\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -107,7 +107,7 @@ Specifies the platform version for the task\. Specify only the numeric portion o
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PropagateTags`  <a name="cfn-scheduler-schedule-ecsparameters-propagatetags"></a>
-Specifies whether to propagate the tags from the task definition to the task\. If no value is specified, the tags are not propagated\. Tags can only be propagated to the task during task creation\. To add tags to a task after task creation, use Amazon ECS's [https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html) API action\.   
+Specifies whether to propagate the tags from the task definition to the task\. If no value is specified, the tags are not propagated\. Tags can only be propagated to the task during task creation\. To add tags to a task after task creation, use the Amazon ECS [https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html) API action\.   
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

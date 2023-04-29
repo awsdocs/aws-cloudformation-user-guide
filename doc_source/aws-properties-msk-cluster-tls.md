@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-msk-cluster-tls-properties"></a>
 
 `CertificateAuthorityArnList`  <a name="cfn-msk-cluster-tls-certificateauthorityarnlist"></a>
-List of ACM Certificate Authority ARNs\.  
+List of AWS Private CA ARNs\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

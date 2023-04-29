@@ -1,6 +1,6 @@
 # AWS::Lex::Bot ObfuscationSetting<a name="aws-properties-lex-bot-obfuscationsetting"></a>
 
-Determines whether Amazon Lex obscures slot values in conversation logs\. 
+<a name="aws-properties-lex-bot-obfuscationsetting-description"></a>The `ObfuscationSetting` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
 
 ## Syntax<a name="aws-properties-lex-bot-obfuscationsetting-syntax"></a>
 

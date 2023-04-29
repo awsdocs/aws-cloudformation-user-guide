@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[Esam](#cfn-medialive-channel-availsettings-esam)" : Esam,
   "[Scte35SpliceInsert](#cfn-medialive-channel-availsettings-scte35spliceinsert)" : Scte35SpliceInsert,
   "[Scte35TimeSignalApos](#cfn-medialive-channel-availsettings-scte35timesignalapos)" : Scte35TimeSignalApos
 }
@@ -20,6 +21,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-medialive-channel-availsettings-syntax.yaml"></a>
 
 ```
+  [Esam](#cfn-medialive-channel-availsettings-esam): 
+    Esam
   [Scte35SpliceInsert](#cfn-medialive-channel-availsettings-scte35spliceinsert): 
     Scte35SpliceInsert
   [Scte35TimeSignalApos](#cfn-medialive-channel-availsettings-scte35timesignalapos): 
@@ -27,6 +30,12 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-availsettings-properties"></a>
+
+`Esam`  <a name="cfn-medialive-channel-availsettings-esam"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [Esam](aws-properties-medialive-channel-esam.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scte35SpliceInsert`  <a name="cfn-medialive-channel-availsettings-scte35spliceinsert"></a>
 The setup for SCTE\-35 splice insert handling\.  

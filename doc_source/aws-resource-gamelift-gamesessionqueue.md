@@ -107,7 +107,7 @@ A list of labels to assign to the new game session queue resource\. Tags are dev
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeoutInSeconds`  <a name="cfn-gamelift-gamesessionqueue-timeoutinseconds"></a>
-The maximum time, in seconds, that a new game session placement request remains in the queue\. When a request exceeds this time, the game session placement changes to a `TIMED_OUT` status\.  
+The maximum time, in seconds, that a new game session placement request remains in the queue\. When a request exceeds this time, the game session placement changes to a `TIMED_OUT` status\. By default, this property is set to `600`\.  
 *Required*: No  
 *Type*: Integer  
 *Minimum*: `0`  

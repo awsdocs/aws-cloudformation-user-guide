@@ -4,6 +4,38 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster\. 
+
+ [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
+Use the `VpcConnectivity` property to specify VPC connection control settings for brokers\.  
+Use the `VpcConnectivityClientAuthentication` property to get all client authentication information for VpcConnectivity\.  
+Use the `VpcConnectivitySasl` property to get details for SASL client authentication for VpcConnectivity\.  
+Use the `VpcConnectivityIam` property to get details for IAM client authentication for VpcConnectivity\.  
+Use the `VpcConnectivity.Iam.Enabled` property get details about whether IAM authentication is on or off\.  
+Use the `VpcConnectivityTls` property to get details for TLS client authentication for VpcConnectivity\.  
+Use the `VpcConnectivityTls.Enabled` property get details about whether TLS authentication is on or off\.  
+Use the `VpcConnectivityScram` property to get details for SCRAM client authentication for VpcConnectivity\.  
+Use the `VpcConnectivityScram.Enabled` property get details about whether SCRAM authentication is on or off\.  
+Use the `ConnectivityInfo.VpcConnectivity` property to get details for VPC connection control settings for brokers\.  | April 27, 2023 | 
+| [New resource](AWS_DataSync.md) | The following resource was added: AWS::DataSync::StorageSystem\. 
+
+[AWS::DataSync::StorageSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-storagesystem.html)  
+Use the `AWS::DataSync::StorageSystem` resource to create an AWS resource for an on\-premises storage system that DataSync Discovery can collect information about\.  | April 27, 2023 | 
+| [New resource](AWS_IoT.md) | The following resource was added: AWS::IoT::DomainConfiguration TlsConfig\. 
+
+ [AWS::IoT::DomainConfiguration TlsConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-tlsconfig.html)   
+Use AWS::IoT::DomainConfiguration TlsConfig resource to specify security policy settings in domain configuration\.  | April 27, 2023 | 
+| [New resource](AWS_MSK.md) | The following resources were added: AWS::MSK::ClusterPolicy and AWS::MSK::VpcConnection\. 
+
+ [AWS::MSK::ClusterPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-clusterpolicy.html)   
+You can now create or update cluster policy\. 
+
+ [AWS::MSK::VpcConnection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html)   
+You can now create a remote VPC connection\.  | April 27, 2023 | 
+| [New resource](AWS_Connect.md) | The following resource was added: AWS::Connect::EvaluationForm 
+
+ [AWS::Connect::EvaluationForm](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-evaluationform.html)   
+Use the `AWS::Connect::EvaluationForm` resource to create an evaluation form for the specified Amazon Connect instance\.   | April 25, 2023 | 
 | [Updated resource](AWS_SSMContacts.md) | The following resources was updated: AWS::SSMContacts::Contact and AWS::SSMContacts::Rotation 
 
  [AWS::SSMContacts::Contacts](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html)   
@@ -994,10 +1026,6 @@ Use the `AWS::M2::Application` resource to specify an application in the AWS Mai
 
  [AWS::M2::Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-m2-environment.html)   
 Use the `AWS::M2::Environment` resource to specify a runtime environment in the AWS Mainframe Modernization service\.  | August 11, 2022 | 
-| [New resource](AWS_MSK.md) | The following resource was added: AWS::MSK::ServerlessCluster 
-
- [AWS::MSK::ServerlessCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html)   
-This resource represents an Amazon MSK Serverless cluster\.  | August 11, 2022 | 
 | [Updated resources](AWS_WAFv2.md) | The following resources were updated: AWS::WAFv2::WebACL and AWS::WAFv2::RuleGroup\. 
 
  [AWS::WAFv2::WebACL](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html)   
@@ -1479,14 +1507,6 @@ Use the `PostAuthenticationLoginBanner` property to specify a string to display 
 
 [AWS::DataSync::LocationFSxLustre](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxlustre.html)  
 Use the `AWS::DataSync::LocationFSxLustre` resource to specify an Amazon FSx for Lustre file system\.  | February 24, 2022 | 
-| [New resource](AWS_MSK.md) | The following resource was added: AWS::MSK::BatchScramSecret 
-
- [AWS::MSK::BatchScramSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html)   
-This resource represents a secret stored in the Amazon Secrets Manager that can be used to authenticate with a cluster using a user name and a password\.  | February 24, 2022 | 
-| [New resource](AWS_MSK.md) | The following resource was added: AWS::MSK::Configuration 
-
- [AWS::MSK::Configuration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html)   
-Represents an MSK configuration\.  | February 24, 2022 | 
 | [Updated resource](AWS_WAFv2.md) | The following resource was updated: AWS::WAFv2::WebACL\. 
 
  [AWS::WAFv2::WebACL](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html)   
@@ -1816,10 +1836,6 @@ Use the `SuperuserParameters` property to specify configuration information of t
 
 [AWS::FSx::FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)  
 Use ONTAP for the FileSystemType, to use an ONTAP file system\. Use `OntapConfiguration` parameter to configure an Amazon FSx ONTAP file system\.  | November 18, 2021 | 
-| [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster 
-
- [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
-You can now turn on public access to an MSK cluster's brokers\.  | November 18, 2021 | 
 | [New resources](AWS_AppStream.md) | The following resources were added: `AWS::AppStream::Application`, `AWS::AppStream::AppBlock`, and `AWS::AppStream::ApplicationFleetAssociation` 
 
  [AWS::AppStream::Application](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-application.html)   
@@ -2152,10 +2168,6 @@ Use the `AccessPointArn` property in `AWS::S3::Bucket MetricsConfiguration` to f
 
  [AWS::ACMPCA::Permission](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aaws-resource-acmpca-permission.html)   
 Use the `AWS::ACMPCA::Permission` object to grant permissions on a private CA to the AWS Certificate Manager \(ACM\) service principal \(acm\.amazonaws\.com\)\. These permissions allow ACM to issue and renew ACM certificates that reside in the same AWS account as the CA\.  | September 16, 2021 | 
-| [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster 
-
- [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
-You can now update the authentication and encryption settings for an existing MSK cluster\.  | September 16, 2021 | 
 | [New resources](AWS_OpenSearchService.md) | The following resource was added: AWS::OpenSearchService::Domain\. 
 
  [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)   
@@ -2595,10 +2607,6 @@ Use the `CloudwatchLogsAction` property to specify a Cloudwatch logs action\.
 Use the `TimestreamAction` property to specify a timestream action\.  
 Use the `KafkaAction` property to specify a kafka action\.  
 In the `S3Action` property, use the `CannedAcl` value to specify a canned ACL action\.  | May 6, 2021 | 
-| [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster 
-
- [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
-You can now create clusters with IAM access control\. This enables you to authenticate clients, as well as to authorize Apache Kafka actions\.  | May 6, 2021 | 
 | [New resources](AWS_FraudDetector.md) | The following resources were added: AWS::FraudDetector::Detector, AWS::FraudDetector::EntityType, AWS::FraudDetector::EventType, AWS::FraudDetector::Label, AWS::FraudDetector::Outcome, and AWS::FraudDetector::Variable 
 
  [AWS::FraudDetector::Detector](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-detector.html)   
@@ -3257,10 +3265,6 @@ Use the `AWS::SageMaker::Project` resource to create a new project in Amazon Sag
 
  [Access Points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html)   
 Use the `AWS::S3::AccessPoint` resource to specify an S3 access point\.  | January 20, 2021 | 
-| [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster 
-
- [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
-You can now change the broker type for an existing cluster\.  | January 15, 2021 | 
 | [New resource](AWS_EMRContainers.md) | The AWS::EMRContainers::VirtualCluster resource was added\. 
 
  [AWS::EMRContainers::VirtualCluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html)   
@@ -3871,10 +3875,6 @@ Use the `ServiceIpv4Cidr` property to specify the CIDR block that you want Kuber
  [AWS::WorkSpaces::ConnectionAlias](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-connectionalias.html)   
 Use the `AWS::WorkSpaces::ConnectionAlias` resource to specify a connection alias\. Connection aliases are used for cross\-Region redirection\.   | October 1, 2020 | 
 | [Drift detection for private resources](#ReleaseHistory) | CloudFormation supports drift detection operations on an expanded list of AWS resources, as well as private resources that are defined as provisonable\.In addition to the resources that previously supported drift detection, CloudFormation now supports drift detection on all resources defined as provisionable in the CloudFormation registry\. For more information, see [Resources that support import and drift detection operations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/resource-import-supported-resources.html)\. | October 1, 2020 | 
-| [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster 
-
- [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
-Adding support for SASL/Scram \(sign\-in credentials client authentication\.\)  | September 24, 2020 | 
 | [Updated resource](AWS_ApiGateway.md) | The following resource was updated: `AWS::ApiGateway::DomainName`\. 
 
  [AWS::ApiGateway::DomainName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html)   
@@ -4200,10 +4200,6 @@ The `AWS::CodeGuruProfiler::ProfilingGroup.AgentPermissions` property shows the 
 
  [AWS::EC2::ClientVpnEndpoint ClientAuthenticationRequest](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest.html)   
 Use the `FederatedAuthentication` property to specify an IAM SAML identity provider for your Client VPN endpoint\.  | May 28, 2020 | 
-| [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster 
-
- [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
-You can now update an existing MSK cluster to a newer version of Apache Kafka\. You can't update it to an older version\.  | May 28, 2020 | 
 | [Updated resource](AWS_CodeBuild.md) | The following resource was updated: AWS::CodeBuild::ReportGroup 
 
  [AWS::CodeBuild::ReportGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-reportgroup.html)   
@@ -4401,10 +4397,6 @@ Use the `MeshOwner` property to specify the account ID that owns a shared mesh\.
 
  [AWS::AppMesh::VirtualService](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html)   
 Use the `MeshOwner` property to specify the account ID that owns a shared mesh\.  | March 12, 2020 | 
-| [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster 
-
- [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
-Use `LoggingInfo` to stream broker logs to one or more of the following destination types: Amazon CloudWatch Logs, Amazon S3, Kinesis Data Firehose\.  | March 12, 2020 | 
 | [New and updated resources](AWS_ApiGatewayV2.md) | The following resources were added or updated: `AWS::ApiGatewayV2::ApiGatewayManagedOverrides`, `AWS::ApiGatewayV2::Integration`, and `AWS::ApiGatewayV2::VpcLink`\. 
 
  [AWS::ApiGatewayV2::ApiGatewayManagedOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apigatewaymanagedoverrides.html)   

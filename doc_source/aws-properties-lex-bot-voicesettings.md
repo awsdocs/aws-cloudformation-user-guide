@@ -1,6 +1,6 @@
 # AWS::Lex::Bot VoiceSettings<a name="aws-properties-lex-bot-voicesettings"></a>
 
-Defines settings for using an Amazon Polly voice to communicate with a user\.
+<a name="aws-properties-lex-bot-voicesettings-description"></a>The `VoiceSettings` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
 
 ## Syntax<a name="aws-properties-lex-bot-voicesettings-syntax"></a>
 
@@ -25,14 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-voicesettings-properties"></a>
 
 `Engine`  <a name="cfn-lex-bot-voicesettings-engine"></a>
-Indicates the type of Amazon Polly voice that Amazon Lex should use for voice interaction with the user\. For more information, see the [`engine` parameter of the `SynthesizeSpeech` operation](https://docs.aws.amazon.com/polly/latest/dg/API_SynthesizeSpeech.html#polly-SynthesizeSpeech-request-Engine) in the *Amazon Polly developer guide*\.  
-If you do not specify a value, the default is `standard`\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VoiceId`  <a name="cfn-lex-bot-voicesettings-voiceid"></a>
-The identifier of the Amazon Polly voice to use\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

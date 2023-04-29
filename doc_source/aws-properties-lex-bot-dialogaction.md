@@ -1,6 +1,6 @@
 # AWS::Lex::Bot DialogAction<a name="aws-properties-lex-bot-dialogaction"></a>
 
-Defines the action that the bot executes at runtime when the conversation reaches this step\.
+<a name="aws-properties-lex-bot-dialogaction-description"></a>The `DialogAction` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
 
 ## Syntax<a name="aws-properties-lex-bot-dialogaction-syntax"></a>
 
@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-dialogaction-properties"></a>
 
 `SlotToElicit`  <a name="cfn-lex-bot-dialogaction-slottoelicit"></a>
-If the dialog action is `ElicitSlot`, defines the slot to elicit from the user\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SuppressNextMessage`  <a name="cfn-lex-bot-dialogaction-suppressnextmessage"></a>
-When true the next message for the intent is not used\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

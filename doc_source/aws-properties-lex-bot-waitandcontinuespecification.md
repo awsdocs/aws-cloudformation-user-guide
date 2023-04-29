@@ -1,6 +1,6 @@
 # AWS::Lex::Bot WaitAndContinueSpecification<a name="aws-properties-lex-bot-waitandcontinuespecification"></a>
 
-Specifies the prompts that Amazon Lex uses while a bot is waiting for customer input\. 
+<a name="aws-properties-lex-bot-waitandcontinuespecification-description"></a>The `WaitAndContinueSpecification` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
 
 ## Syntax<a name="aws-properties-lex-bot-waitandcontinuespecification-syntax"></a>
 
@@ -32,7 +32,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-waitandcontinuespecification-properties"></a>
 
 `ContinueResponse`  <a name="cfn-lex-bot-waitandcontinuespecification-continueresponse"></a>
-The response that Amazon Lex sends to indicate that the bot is ready to continue the conversation\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: [ResponseSpecification](aws-properties-lex-bot-responsespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -44,13 +44,13 @@ Specifies whether the bot will wait for a user to respond\. When this field is f
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `StillWaitingResponse`  <a name="cfn-lex-bot-waitandcontinuespecification-stillwaitingresponse"></a>
-A response that Amazon Lex sends periodically to the user to indicate that the bot is still waiting for input from the user\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [StillWaitingResponseSpecification](aws-properties-lex-bot-stillwaitingresponsespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WaitingResponse`  <a name="cfn-lex-bot-waitandcontinuespecification-waitingresponse"></a>
-The response that Amazon Lex sends to indicate that the bot is waiting for the conversation to continue\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: [ResponseSpecification](aws-properties-lex-bot-responsespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

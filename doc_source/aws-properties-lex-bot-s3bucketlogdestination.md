@@ -1,6 +1,6 @@
 # AWS::Lex::Bot S3BucketLogDestination<a name="aws-properties-lex-bot-s3bucketlogdestination"></a>
 
-Specifies an Amazon S3 bucket for logging audio conversations
+<a name="aws-properties-lex-bot-s3bucketlogdestination-description"></a>The `S3BucketLogDestination` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
 
 ## Syntax<a name="aws-properties-lex-bot-s3bucketlogdestination-syntax"></a>
 
@@ -33,13 +33,13 @@ The Amazon Resource Name \(ARN\) of an AWS Key Management Service \(KMS\) key fo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogPrefix`  <a name="cfn-lex-bot-s3bucketlogdestination-logprefix"></a>
-The S3 prefix to assign to audio log files\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3BucketArn`  <a name="cfn-lex-bot-s3bucketlogdestination-s3bucketarn"></a>
-The Amazon Resource Name \(ARN\) of an Amazon S3 bucket where audio log files are stored\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

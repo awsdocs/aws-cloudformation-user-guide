@@ -52,6 +52,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[SubgopLength](#cfn-medialive-channel-h264settings-subgoplength)" : String,
   "[Syntax](#cfn-medialive-channel-h264settings-syntax)" : String,
   "[TemporalAq](#cfn-medialive-channel-h264settings-temporalaq)" : String,
+  "[TimecodeBurninSettings](#cfn-medialive-channel-h264settings-timecodeburninsettings)" : TimecodeBurninSettings,
   "[TimecodeInsertion](#cfn-medialive-channel-h264settings-timecodeinsertion)" : String
 }
 ```
@@ -101,6 +102,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [SubgopLength](#cfn-medialive-channel-h264settings-subgoplength): String
   [Syntax](#cfn-medialive-channel-h264settings-syntax): String
   [TemporalAq](#cfn-medialive-channel-h264settings-temporalaq): String
+  [TimecodeBurninSettings](#cfn-medialive-channel-h264settings-timecodeburninsettings): 
+    TimecodeBurninSettings
   [TimecodeInsertion](#cfn-medialive-channel-h264settings-timecodeinsertion): String
 ```
 
@@ -344,6 +347,12 @@ Produces a bitstream that is compliant with SMPTE RP\-2027\.
 If set to enabled, adjusts quantization within each frame based on the temporal variation of content complexity\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TimecodeBurninSettings`  <a name="cfn-medialive-channel-h264settings-timecodeburninsettings"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [TimecodeBurninSettings](aws-properties-medialive-channel-timecodeburninsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimecodeInsertion`  <a name="cfn-medialive-channel-h264settings-timecodeinsertion"></a>

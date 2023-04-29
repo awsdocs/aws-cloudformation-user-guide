@@ -55,7 +55,7 @@ For more information about these groups, see [Working with Log Groups and Log St
 *Required*: No  
 *Type*: String  
 *Maximum*: `562`  
-*Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):logs:[a-z\-0-9]*:[0-9]{12}:log-group:([^:\*]*)(:\*)?$`  
+*Pattern*: `^arn:(aws|aws-cn|aws-us-gov|aws-iso|aws-iso-b):logs:[a-z\-0-9]+:[0-9]{12}:log-group:([^:\*]*)(:\*)?$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DestinationLocationArn`  <a name="cfn-datasync-task-destinationlocationarn"></a>

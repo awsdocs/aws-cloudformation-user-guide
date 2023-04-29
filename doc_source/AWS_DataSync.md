@@ -12,4 +12,5 @@
 + [AWS::DataSync::LocationObjectStorage](aws-resource-datasync-locationobjectstorage.md)
 + [AWS::DataSync::LocationS3](aws-resource-datasync-locations3.md)
 + [AWS::DataSync::LocationSMB](aws-resource-datasync-locationsmb.md)
++ [AWS::DataSync::StorageSystem](aws-resource-datasync-storagesystem.md)
 + [AWS::DataSync::Task](aws-resource-datasync-task.md)

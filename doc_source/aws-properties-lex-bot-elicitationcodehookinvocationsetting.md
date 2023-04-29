@@ -1,6 +1,6 @@
 # AWS::Lex::Bot ElicitationCodeHookInvocationSetting<a name="aws-properties-lex-bot-elicitationcodehookinvocationsetting"></a>
 
-Settings that specify the dialog code hook that is called by Amazon Lex between eliciting slot values\.
+<a name="aws-properties-lex-bot-elicitationcodehookinvocationsetting-description"></a>The `ElicitationCodeHookInvocationSetting` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
 
 ## Syntax<a name="aws-properties-lex-bot-elicitationcodehookinvocationsetting-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-elicitationcodehookinvocationsetting-properties"></a>
 
 `EnableCodeHookInvocation`  <a name="cfn-lex-bot-elicitationcodehookinvocationsetting-enablecodehookinvocation"></a>
-Indicates whether a Lambda function should be invoked for the dialog\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InvocationLabel`  <a name="cfn-lex-bot-elicitationcodehookinvocationsetting-invocationlabel"></a>
-A label that indicates the dialog step from which the dialog code hook is happening\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

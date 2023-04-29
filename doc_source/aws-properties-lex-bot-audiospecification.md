@@ -1,6 +1,6 @@
 # AWS::Lex::Bot AudioSpecification<a name="aws-properties-lex-bot-audiospecification"></a>
 
-Specifies the audio input specifications\.
+<a name="aws-properties-lex-bot-audiospecification-description"></a>The `AudioSpecification` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
 
 ## Syntax<a name="aws-properties-lex-bot-audiospecification-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-audiospecification-properties"></a>
 
 `EndTimeoutMs`  <a name="cfn-lex-bot-audiospecification-endtimeoutms"></a>
-Time for which a bot waits after the customer stops speaking to assume the utterance is finished\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxLengthMs`  <a name="cfn-lex-bot-audiospecification-maxlengthms"></a>
-Time for how long Amazon Lex waits before speech input is truncated and the speech is returned to application\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

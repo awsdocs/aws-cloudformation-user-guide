@@ -1,6 +1,6 @@
 # AWS::Lex::Bot SlotValueElicitationSetting<a name="aws-properties-lex-bot-slotvalueelicitationsetting"></a>
 
-Specifies the elicitation setting details eliciting a slot\.
+<a name="aws-properties-lex-bot-slotvalueelicitationsetting-description"></a>The `SlotValueElicitationSetting` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
 
 ## Syntax<a name="aws-properties-lex-bot-slotvalueelicitationsetting-syntax"></a>
 
@@ -38,37 +38,37 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-slotvalueelicitationsetting-properties"></a>
 
 `DefaultValueSpecification`  <a name="cfn-lex-bot-slotvalueelicitationsetting-defaultvaluespecification"></a>
-A list of default values for a slot\. Default values are used when Amazon Lex hasn't determined a value for a slot\. You can specify default values from context variables, session attributes, and defined values\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [SlotDefaultValueSpecification](aws-properties-lex-bot-slotdefaultvaluespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PromptSpecification`  <a name="cfn-lex-bot-slotvalueelicitationsetting-promptspecification"></a>
-The prompt that Amazon Lex uses to elicit the slot value from the user\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [PromptSpecification](aws-properties-lex-bot-promptspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SampleUtterances`  <a name="cfn-lex-bot-slotvalueelicitationsetting-sampleutterances"></a>
-If you know a specific pattern that users might respond to an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy\. This is optional\. In most cases, Amazon Lex is capable of understanding user utterances\.  
+Property description not available\.  
 *Required*: No  
 *Type*: List of [SampleUtterance](aws-properties-lex-bot-sampleutterance.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SlotCaptureSetting`  <a name="cfn-lex-bot-slotvalueelicitationsetting-slotcapturesetting"></a>
-Specifies the settings that Amazon Lex uses when a slot value is successfully entered by a user\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [SlotCaptureSetting](aws-properties-lex-bot-slotcapturesetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SlotConstraint`  <a name="cfn-lex-bot-slotvalueelicitationsetting-slotconstraint"></a>
-Specifies whether the slot is required or optional\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `WaitAndContinueSpecification`  <a name="cfn-lex-bot-slotvalueelicitationsetting-waitandcontinuespecification"></a>
-Specifies the prompts that Amazon Lex uses while a bot is waiting for customer input\.   
+Property description not available\.  
 *Required*: No  
 *Type*: [WaitAndContinueSpecification](aws-properties-lex-bot-waitandcontinuespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::MSK::Cluster EBSStorageInfo<a name="aws-properties-msk-cluster-ebsstorageinfo"></a>
 
-Contains information about the EBS storage volumes attached to brokers\.
+Contains information about the EBS storage volumes attached to the broker nodes\.
 
 ## Syntax<a name="aws-properties-msk-cluster-ebsstorageinfo-syntax"></a>
 
@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-msk-cluster-ebsstorageinfo-properties"></a>
 
 `ProvisionedThroughput`  <a name="cfn-msk-cluster-ebsstorageinfo-provisionedthroughput"></a>
-Specifies whether provisioned throughput is turned on and the volume throughput target\.  
+EBS volume provisioned throughput information\.  
 *Required*: No  
 *Type*: [ProvisionedThroughput](aws-properties-msk-cluster-provisionedthroughput.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

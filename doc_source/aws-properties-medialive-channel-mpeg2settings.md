@@ -27,6 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[GopSizeUnits](#cfn-medialive-channel-mpeg2settings-gopsizeunits)" : String,
   "[ScanType](#cfn-medialive-channel-mpeg2settings-scantype)" : String,
   "[SubgopLength](#cfn-medialive-channel-mpeg2settings-subgoplength)" : String,
+  "[TimecodeBurninSettings](#cfn-medialive-channel-mpeg2settings-timecodeburninsettings)" : TimecodeBurninSettings,
   "[TimecodeInsertion](#cfn-medialive-channel-mpeg2settings-timecodeinsertion)" : String
 }
 ```
@@ -50,6 +51,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [GopSizeUnits](#cfn-medialive-channel-mpeg2settings-gopsizeunits): String
   [ScanType](#cfn-medialive-channel-mpeg2settings-scantype): String
   [SubgopLength](#cfn-medialive-channel-mpeg2settings-subgoplength): String
+  [TimecodeBurninSettings](#cfn-medialive-channel-mpeg2settings-timecodeburninsettings): 
+    TimecodeBurninSettings
   [TimecodeInsertion](#cfn-medialive-channel-mpeg2settings-timecodeinsertion): String
 ```
 
@@ -143,6 +146,12 @@ Set the scan type of the output to PROGRESSIVE or INTERLACED \(top field first\)
 Relates to the GOP structure\. If you do not know what GOP is, use the default\. FIXED: Set the number of B\-frames in each sub\-GOP to the value in gopNumBFrames\. DYNAMIC: Let MediaLive optimize the number of B\-frames in each sub\-GOP, to improve visual quality\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TimecodeBurninSettings`  <a name="cfn-medialive-channel-mpeg2settings-timecodeburninsettings"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [TimecodeBurninSettings](aws-properties-medialive-channel-timecodeburninsettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimecodeInsertion`  <a name="cfn-medialive-channel-mpeg2settings-timecodeinsertion"></a>

@@ -1,6 +1,6 @@
 # AWS::Lex::Bot FulfillmentStartResponseSpecification<a name="aws-properties-lex-bot-fulfillmentstartresponsespecification"></a>
 
-Provides settings for a message that is sent to the user when a fulfillment Lambda function starts running\.
+<a name="aws-properties-lex-bot-fulfillmentstartresponsespecification-description"></a>The `FulfillmentStartResponseSpecification` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
 
 ## Syntax<a name="aws-properties-lex-bot-fulfillmentstartresponsespecification-syntax"></a>
 
@@ -28,19 +28,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-fulfillmentstartresponsespecification-properties"></a>
 
 `AllowInterrupt`  <a name="cfn-lex-bot-fulfillmentstartresponsespecification-allowinterrupt"></a>
-Determines whether the user can interrupt the start message while it is playing\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DelayInSeconds`  <a name="cfn-lex-bot-fulfillmentstartresponsespecification-delayinseconds"></a>
-The delay between when the Lambda fulfillment function starts running and the start message is played\. If the Lambda function returns before the delay is over, the start message isn't played\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MessageGroups`  <a name="cfn-lex-bot-fulfillmentstartresponsespecification-messagegroups"></a>
-1 \- 5 message groups that contain start messages\. Amazon Lex chooses one of the messages to play to the user\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: List of [MessageGroup](aws-properties-lex-bot-messagegroup.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

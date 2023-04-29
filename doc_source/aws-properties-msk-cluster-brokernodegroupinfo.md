@@ -1,6 +1,6 @@
 # AWS::MSK::Cluster BrokerNodeGroupInfo<a name="aws-properties-msk-cluster-brokernodegroupinfo"></a>
 
-The setup to be used for brokers in the cluster\.
+Describes the setup to be used for the broker nodes in the cluster\.
 
 ## Syntax<a name="aws-properties-msk-cluster-brokernodegroupinfo-syntax"></a>
 
@@ -57,7 +57,7 @@ Information about the cluster's connectivity setting\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `InstanceType`  <a name="cfn-msk-cluster-brokernodegroupinfo-instancetype"></a>
-The type of Amazon EC2 instances to use for brokers\. The following instance types are allowed: kafka\.m5\.large, kafka\.m5\.xlarge, kafka\.m5\.2xlarge, kafka\.m5\.4xlarge, kafka\.m5\.8xlarge, kafka\.m5\.12xlarge, kafka\.m5\.16xlarge, kafka\.m5\.24xlarge, and kafka\.t3\.small\.  
+The type of Amazon EC2 instances to use for brokers\. The following instance types are allowed: kafka\.m5\.large, kafka\.m5\.xlarge, kafka\.m5\.2xlarge, kafka\.m5\.4xlarge, kafka\.m5\.8xlarge, kafka\.m5\.12xlarge, kafka\.m5\.16xlarge, and kafka\.m5\.24xlarge, and kafka\.t3\.small\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

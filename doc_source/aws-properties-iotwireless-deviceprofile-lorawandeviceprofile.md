@@ -76,7 +76,7 @@ The ClassCTimeout value\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FactoryPresetFreqsList`  <a name="cfn-iotwireless-deviceprofile-lorawandeviceprofile-factorypresetfreqslist"></a>
-The list of values that make up the FactoryPresetFreqs value\.  
+The list of values that make up the FactoryPresetFreqs value\. Valid range of values include a minimum value of 1000000 and a maximum value of 16700000\.  
 *Required*: No  
 *Type*: List of Integer  
 *Maximum*: `20`  
@@ -125,7 +125,7 @@ The PingSlotFreq value\.
 The PingSlotPeriod value\.  
 *Required*: No  
 *Type*: Integer  
-*Minimum*: `128`  
+*Minimum*: `32`  
 *Maximum*: `4096`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

@@ -1,6 +1,6 @@
 # AWS::MSK::Cluster VpcConnectivitySasl<a name="aws-properties-msk-cluster-vpcconnectivitysasl"></a>
 
-Not currently supported by AWS CloudFormation\.
+Details for client authentication using SASL for VpcConnectivity\.
 
 ## Syntax<a name="aws-properties-msk-cluster-vpcconnectivitysasl-syntax"></a>
 
@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-msk-cluster-vpcconnectivitysasl-properties"></a>
 
 `Iam`  <a name="cfn-msk-cluster-vpcconnectivitysasl-iam"></a>
-Property description not available\.  
+Details for ClientAuthentication using IAM for VpcConnectivity\.  
 *Required*: No  
 *Type*: [VpcConnectivityIam](aws-properties-msk-cluster-vpcconnectivityiam.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Scram`  <a name="cfn-msk-cluster-vpcconnectivitysasl-scram"></a>
-Property description not available\.  
+Details for SASL/SCRAM client authentication for VpcConnectivity\.  
 *Required*: No  
 *Type*: [VpcConnectivityScram](aws-properties-msk-cluster-vpcconnectivityscram.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::Lex::BotAlias BotAliasLocaleSettingsItem<a name="aws-properties-lex-botalias-botaliaslocalesettingsitem"></a>
 
-Specifies settings that are unique to a locale\. For example, you can use different Lambda function depending on the bot's locale\.
+<a name="aws-properties-lex-botalias-botaliaslocalesettingsitem-description"></a>The `BotAliasLocaleSettingsItem` property type specifies Property description not available\. for an [AWS::Lex::BotAlias](aws-resource-lex-botalias.md)\.
 
 ## Syntax<a name="aws-properties-lex-botalias-botaliaslocalesettingsitem-syntax"></a>
 

@@ -1,6 +1,6 @@
 # AWS::MSK::Cluster VpcConnectivity<a name="aws-properties-msk-cluster-vpcconnectivity"></a>
 
-<a name="aws-properties-msk-cluster-vpcconnectivity-description"></a>The `VpcConnectivity` property type specifies Property description not available\. for an [AWS::MSK::Cluster](aws-resource-msk-cluster.md)\.
+VPC connection control settings for brokers\.
 
 ## Syntax<a name="aws-properties-msk-cluster-vpcconnectivity-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-msk-cluster-vpcconnectivity-properties"></a>
 
 `ClientAuthentication`  <a name="cfn-msk-cluster-vpcconnectivity-clientauthentication"></a>
-Not currently supported by AWS CloudFormation\.  
+VPC connection control settings for brokers\.  
 *Required*: No  
 *Type*: [VpcConnectivityClientAuthentication](aws-properties-msk-cluster-vpcconnectivityclientauthentication.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

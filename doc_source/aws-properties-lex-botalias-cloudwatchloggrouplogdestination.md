@@ -1,6 +1,6 @@
 # AWS::Lex::BotAlias CloudWatchLogGroupLogDestination<a name="aws-properties-lex-botalias-cloudwatchloggrouplogdestination"></a>
 
-The Amazon CloudWatch Logs log group where the text and metadata logs are delivered\. The log group must exist before you enable logging\.
+<a name="aws-properties-lex-botalias-cloudwatchloggrouplogdestination-description"></a>The `CloudWatchLogGroupLogDestination` property type specifies Property description not available\. for an [AWS::Lex::BotAlias](aws-resource-lex-botalias.md)\.
 
 ## Syntax<a name="aws-properties-lex-botalias-cloudwatchloggrouplogdestination-syntax"></a>
 
@@ -25,13 +25,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-botalias-cloudwatchloggrouplogdestination-properties"></a>
 
 `CloudWatchLogGroupArn`  <a name="cfn-lex-botalias-cloudwatchloggrouplogdestination-cloudwatchloggrouparn"></a>
-The Amazon Resource Name \(ARN\) of the log group where text and metadata logs are delivered\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogPrefix`  <a name="cfn-lex-botalias-cloudwatchloggrouplogdestination-logprefix"></a>
-The prefix of the log stream name within the log group that you specified   
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

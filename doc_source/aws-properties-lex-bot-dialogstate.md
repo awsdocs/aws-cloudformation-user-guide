@@ -1,6 +1,6 @@
 # AWS::Lex::Bot DialogState<a name="aws-properties-lex-bot-dialogstate"></a>
 
-The current state of the conversation with the user\.
+<a name="aws-properties-lex-bot-dialogstate-description"></a>The `DialogState` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
 
 ## Syntax<a name="aws-properties-lex-bot-dialogstate-syntax"></a>
 
@@ -30,19 +30,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-dialogstate-properties"></a>
 
 `DialogAction`  <a name="cfn-lex-bot-dialogstate-dialogaction"></a>
-Defines the action that the bot executes at runtime when the conversation reaches this step\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [DialogAction](aws-properties-lex-bot-dialogaction.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Intent`  <a name="cfn-lex-bot-dialogstate-intent"></a>
-Override settings to configure the intent state\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [IntentOverride](aws-properties-lex-bot-intentoverride.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SessionAttributes`  <a name="cfn-lex-bot-dialogstate-sessionattributes"></a>
-Map of key/value pairs representing session\-specific context information\. It contains application information passed between Amazon Lex and a client application\.  
+Property description not available\.  
 *Required*: No  
 *Type*: List of [SessionAttribute](aws-properties-lex-bot-sessionattribute.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

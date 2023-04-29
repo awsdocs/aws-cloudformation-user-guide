@@ -1,6 +1,35 @@
 # AWS::MSK::Configuration<a name="aws-resource-msk-configuration"></a>
 
-Creates a new MSK configuration\.
+Creates a new MSK configuration\. To see an example of how to use this operation, first save the following text to a file and name the file `config-file.txt`\.
+
+```
+auto.create.topics.enable = true
+
+zookeeper.connection.timeout.ms = 1000
+
+log.roll.ms = 604800000
+```
+
+Now run the following Python 3\.6 script in the folder where you saved `config-file.txt`\. This script uses the properties specified in `config-file.txt` to create a configuration named `SalesClusterConfiguration`\. This configuration can work with Apache Kafka versions 1\.1\.1 and 2\.1\.0\.
+
+```
+import boto3
+
+client = boto3.client('kafka')
+
+config_file = open('config-file.txt', 'r')
+
+server_properties = config_file.read()
+
+response = client.create_configuration(
+    Name='SalesClusterConfiguration',
+    Description='The configuration to use on all sales clusters.',
+    KafkaVersions=['1.1.1', '2.1.0'],
+    ServerProperties=server_properties
+)
+
+print(response)
+```
 
 ## Syntax<a name="aws-resource-msk-configuration-syntax"></a>
 
@@ -41,7 +70,7 @@ The description of the configuration\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `KafkaVersionsList`  <a name="cfn-msk-configuration-kafkaversionslist"></a>
-A list of the versions of Apache Kafka with which you can use this MSK configuration\. You can use this configuration for an MSK cluster only if the Apache Kafka version specified for the cluster appears in this list\.  
+Property description not available\.  
 *Required*: No  
 *Type*: List of String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
@@ -62,13 +91,9 @@ Contents of the `server.properties` file\. When using the API, you must ensure t
 
 ### Ref<a name="aws-resource-msk-configuration-return-values-ref"></a>
 
-The ARN of the configuration\.
-
 ### Fn::GetAtt<a name="aws-resource-msk-configuration-return-values-fn--getatt"></a>
-
-The ARN of the configuration\.
 
 #### <a name="aws-resource-msk-configuration-return-values-fn--getatt-fn--getatt"></a>
 
 `Arn`  <a name="Arn-fn::getatt"></a>
-The ARN of the configuration\.
+Property description not available\.

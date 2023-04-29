@@ -1,6 +1,6 @@
 # AWS::Lex::Bot PlainTextMessage<a name="aws-properties-lex-bot-plaintextmessage"></a>
 
-Defines an ASCII text message to send to the user\.
+<a name="aws-properties-lex-bot-plaintextmessage-description"></a>The `PlainTextMessage` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
 
 ## Syntax<a name="aws-properties-lex-bot-plaintextmessage-syntax"></a>
 
@@ -23,7 +23,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-plaintextmessage-properties"></a>
 
 `Value`  <a name="cfn-lex-bot-plaintextmessage-value"></a>
-The message to send to the user\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

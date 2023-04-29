@@ -1,6 +1,6 @@
 # AWS::MSK::ServerlessCluster Iam<a name="aws-properties-msk-serverlesscluster-iam"></a>
 
-Details for IAM client authentication\.
+Details for SASL/IAM client authentication\.
 
 ## Syntax<a name="aws-properties-msk-serverlesscluster-iam-syntax"></a>
 

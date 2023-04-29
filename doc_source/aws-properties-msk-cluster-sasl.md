@@ -27,7 +27,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-msk-cluster-sasl-properties"></a>
 
 `Iam`  <a name="cfn-msk-cluster-sasl-iam"></a>
-Details for IAM access control\.  
+Details for ClientAuthentication using IAM\.  
 *Required*: No  
 *Type*: [Iam](aws-properties-msk-cluster-iam.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

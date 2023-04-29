@@ -152,6 +152,9 @@ If you did not specify the name it will be similar to the following:
  `MyStateMachine-1234abcdefgh`   
 For more information about using `Fn::GetAtt`, see [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getatt.html)\.
 
+`StateMachineRevisionId`  <a name="StateMachineRevisionId-fn::getatt"></a>
+Property description not available\.
+
 ## Examples<a name="aws-resource-stepfunctions-statemachine--examples"></a>
 
 The following examples create a Step Functions state machine\.

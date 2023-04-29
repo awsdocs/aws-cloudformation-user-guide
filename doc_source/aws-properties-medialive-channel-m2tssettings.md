@@ -52,6 +52,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[Scte27Pids](#cfn-medialive-channel-m2tssettings-scte27pids)" : String,
   "[Scte35Control](#cfn-medialive-channel-m2tssettings-scte35control)" : String,
   "[Scte35Pid](#cfn-medialive-channel-m2tssettings-scte35pid)" : String,
+  "[Scte35PrerollPullupMilliseconds](#cfn-medialive-channel-m2tssettings-scte35prerollpullupmilliseconds)" : Double,
   "[SegmentationMarkers](#cfn-medialive-channel-m2tssettings-segmentationmarkers)" : String,
   "[SegmentationStyle](#cfn-medialive-channel-m2tssettings-segmentationstyle)" : String,
   "[SegmentationTime](#cfn-medialive-channel-m2tssettings-segmentationtime)" : Double,
@@ -108,6 +109,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [Scte27Pids](#cfn-medialive-channel-m2tssettings-scte27pids): String
   [Scte35Control](#cfn-medialive-channel-m2tssettings-scte35control): String
   [Scte35Pid](#cfn-medialive-channel-m2tssettings-scte35pid): String
+  [Scte35PrerollPullupMilliseconds](#cfn-medialive-channel-m2tssettings-scte35prerollpullupmilliseconds): Double
   [SegmentationMarkers](#cfn-medialive-channel-m2tssettings-segmentationmarkers): String
   [SegmentationStyle](#cfn-medialive-channel-m2tssettings-segmentationstyle): String
   [SegmentationTime](#cfn-medialive-channel-m2tssettings-segmentationtime): Double
@@ -357,6 +359,12 @@ Optionally passes SCTE\-35 signals from the input source to this output\.
 The PID of the SCTE\-35 stream in the transport stream\. You can enter the value as a decimal or hexadecimal value\. Valid values are 32 \(or 0x20\)\.\.8182 \(or 0x1ff6\)\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Scte35PrerollPullupMilliseconds`  <a name="cfn-medialive-channel-m2tssettings-scte35prerollpullupmilliseconds"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Double  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SegmentationMarkers`  <a name="cfn-medialive-channel-m2tssettings-segmentationmarkers"></a>

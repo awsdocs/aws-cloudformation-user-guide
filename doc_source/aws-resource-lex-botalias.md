@@ -51,7 +51,7 @@ Properties:
 ## Properties<a name="aws-resource-lex-botalias-properties"></a>
 
 `BotAliasLocaleSettings`  <a name="cfn-lex-botalias-botaliaslocalesettings"></a>
-Specifies settings that are unique to a locale\. For example, you can use different Lambda function depending on the bot's locale\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [List](aws-properties-lex-botalias-botaliaslocalesettings.md) of [BotAliasLocaleSettingsItem](aws-properties-lex-botalias-botaliaslocalesettingsitem.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -103,7 +103,7 @@ The description of the bot alias\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SentimentAnalysisSettings`  <a name="cfn-lex-botalias-sentimentanalysissettings"></a>
-Determines whether Amazon Lex will use Amazon Comprehend to detect the sentiment of user utterances\.  
+Property description not available\.  
 *Required*: No  
 *Type*: [SentimentAnalysisSettings](aws-properties-lex-botalias-sentimentanalysissettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

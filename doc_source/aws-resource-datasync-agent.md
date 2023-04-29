@@ -1,16 +1,11 @@
 # AWS::DataSync::Agent<a name="aws-resource-datasync-agent"></a>
 
-The `AWS::DataSync::Agent` resource specifies an AWS DataSync agent to be deployed and activated on your host\. The activation process associates your agent with your account\. In the activation process, you specify information such as the AWS Region that you want to activate the agent in\. You activate the agent in the AWS Region where your target locations \(in Amazon S3, Amazon EFS, or Amazon FSx for Windows File Server\) reside\. Your tasks are created in this AWS Region\.
+The `AWS::DataSync::Agent` resource activates an AWS DataSync agent that you've deployed for storage discovery or data transfers\. The activation process associates the agent with your AWS account\.
 
-You can activate the agent in a virtual private cloud \(VPC\) or provide the agent access to a VPC endpoint so that you can run tasks without sending them over the public internet\.
-
-You can specify an agent to be used for more than one location\. If a task uses multiple agents, all of them must have a status of AVAILABLE for the task to run\. If you use multiple agents for a source location, the status of all the agents must be AVAILABLE for the task to run\. 
-
-For more information, see [Activating an Agent](https://docs.aws.amazon.com/datasync/latest/userguide/activating-agent.html) in the *AWS DataSync User Guide*\.
-
-Agents are automatically updated by AWS on a regular basis, using a mechanism that ensures minimal interruption to your tasks\.
-
-
+For more information, see the following topics in the *AWS DataSync User Guide*:
++ [DataSync agent requirements](https://docs.aws.amazon.com/datasync/latest/userguide/agent-requirements.html)
++ [DataSync network requirements](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-network.html)
++ [Create a DataSync agent](https://docs.aws.amazon.com/datasync/latest/userguide/configure-agent.html)
 
 ## Syntax<a name="aws-resource-datasync-agent-syntax"></a>
 

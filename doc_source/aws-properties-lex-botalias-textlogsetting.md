@@ -1,6 +1,6 @@
 # AWS::Lex::BotAlias TextLogSetting<a name="aws-properties-lex-botalias-textlogsetting"></a>
 
-Defines settings to enable text conversation logs\.
+<a name="aws-properties-lex-botalias-textlogsetting-description"></a>The `TextLogSetting` property type specifies Property description not available\. for an [AWS::Lex::BotAlias](aws-resource-lex-botalias.md)\.
 
 ## Syntax<a name="aws-properties-lex-botalias-textlogsetting-syntax"></a>
 
@@ -32,7 +32,7 @@ Defines the Amazon CloudWatch Logs destination log group for conversation text l
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-lex-botalias-textlogsetting-enabled"></a>
-Determines whether conversation logs should be stored for an alias\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

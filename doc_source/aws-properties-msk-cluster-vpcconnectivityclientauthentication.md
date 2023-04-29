@@ -1,6 +1,6 @@
 # AWS::MSK::Cluster VpcConnectivityClientAuthentication<a name="aws-properties-msk-cluster-vpcconnectivityclientauthentication"></a>
 
-Not currently supported by AWS CloudFormation\.
+Includes all client authentication information for VpcConnectivity\.
 
 ## Syntax<a name="aws-properties-msk-cluster-vpcconnectivityclientauthentication-syntax"></a>
 
@@ -27,13 +27,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-msk-cluster-vpcconnectivityclientauthentication-properties"></a>
 
 `Sasl`  <a name="cfn-msk-cluster-vpcconnectivityclientauthentication-sasl"></a>
-Property description not available\.  
+Details for VpcConnectivity ClientAuthentication using SASL\.  
 *Required*: No  
 *Type*: [VpcConnectivitySasl](aws-properties-msk-cluster-vpcconnectivitysasl.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tls`  <a name="cfn-msk-cluster-vpcconnectivityclientauthentication-tls"></a>
-Property description not available\.  
+Details for VpcConnectivity ClientAuthentication using TLS\.  
 *Required*: No  
 *Type*: [VpcConnectivityTls](aws-properties-msk-cluster-vpcconnectivitytls.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

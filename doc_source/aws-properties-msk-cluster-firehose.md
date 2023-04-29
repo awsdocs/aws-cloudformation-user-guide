@@ -1,6 +1,6 @@
 # AWS::MSK::Cluster Firehose<a name="aws-properties-msk-cluster-firehose"></a>
 
-Details of the Kinesis Data Firehose delivery stream that is the destination for broker logs\.
+Firehose details for BrokerLogs\.
 
 ## Syntax<a name="aws-properties-msk-cluster-firehose-syntax"></a>
 
@@ -31,7 +31,7 @@ The Kinesis Data Firehose delivery stream that is the destination for broker log
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-msk-cluster-firehose-enabled"></a>
-Specifies whether broker logs get sent to the specified Kinesis Data Firehose delivery stream\.  
+Specifies whether broker logs get send to the specified Kinesis Data Firehose delivery stream\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

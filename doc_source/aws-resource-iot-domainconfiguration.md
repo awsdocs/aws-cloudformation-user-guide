@@ -19,6 +19,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[ServerCertificateArns](#cfn-iot-domainconfiguration-servercertificatearns)" : [ String, ... ],
       "[ServiceType](#cfn-iot-domainconfiguration-servicetype)" : String,
       "[Tags](#cfn-iot-domainconfiguration-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[TlsConfig](#cfn-iot-domainconfiguration-tlsconfig)" : TlsConfig,
       "[ValidationCertificateArn](#cfn-iot-domainconfiguration-validationcertificatearn)" : String
     }
 }
@@ -39,6 +40,8 @@ Properties:
   [ServiceType](#cfn-iot-domainconfiguration-servicetype): String
   [Tags](#cfn-iot-domainconfiguration-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [TlsConfig](#cfn-iot-domainconfiguration-tlsconfig): 
+    TlsConfig
   [ValidationCertificateArn](#cfn-iot-domainconfiguration-validationcertificatearn): String
 ```
 
@@ -89,6 +92,12 @@ For the CLI command\-line parameter use format: &&tags "key1=value1&key2=value2\
 For the cli\-input\-json file use format: "tags": "key1=value1&key2=value2\.\.\."
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`TlsConfig`  <a name="cfn-iot-domainconfiguration-tlsconfig"></a>
+An object that specifies the TLS configuration for a domain\.  
+*Required*: No  
+*Type*: [TlsConfig](aws-properties-iot-domainconfiguration-tlsconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ValidationCertificateArn`  <a name="cfn-iot-domainconfiguration-validationcertificatearn"></a>

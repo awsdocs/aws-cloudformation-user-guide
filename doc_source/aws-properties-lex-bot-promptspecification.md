@@ -1,6 +1,6 @@
 # AWS::Lex::Bot PromptSpecification<a name="aws-properties-lex-bot-promptspecification"></a>
 
-Specifies a list of message groups that Amazon Lex sends to a user to elicit a response\.
+<a name="aws-properties-lex-bot-promptspecification-description"></a>The `PromptSpecification` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
 
 ## Syntax<a name="aws-properties-lex-bot-promptspecification-syntax"></a>
 
@@ -33,25 +33,25 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-promptspecification-properties"></a>
 
 `AllowInterrupt`  <a name="cfn-lex-bot-promptspecification-allowinterrupt"></a>
-Indicates whether the user can interrupt a speech prompt from the bot\.  
+Property description not available\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MaxRetries`  <a name="cfn-lex-bot-promptspecification-maxretries"></a>
-The maximum number of times the bot tries to elicit a response from the user using this prompt\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MessageGroupsList`  <a name="cfn-lex-bot-promptspecification-messagegroupslist"></a>
-A collection of messages that Amazon Lex can send to the user\. Amazon Lex chooses the actual message to send at runtime\.  
+Property description not available\.  
 *Required*: Yes  
 *Type*: List of [MessageGroup](aws-properties-lex-bot-messagegroup.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MessageSelectionStrategy`  <a name="cfn-lex-bot-promptspecification-messageselectionstrategy"></a>
-Indicates how a message is selected from a message group among retries\.  
+Property description not available\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

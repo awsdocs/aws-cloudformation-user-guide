@@ -6,8 +6,6 @@ CloudFormation includes a set of helper scripts \(cfn\-init, cfn\-signal, cfn\-g
 
 The following walkthrough describes how to create a template that launches a LAMP stack by using cfn helper scripts to install, configure, and start Apache, MySQL, and PHP\. You'll start with a simple template that sets up a basic Amazon EC2 instance running Amazon Linux, and then continue adding to the template until it describes a full LAMP stack\.
 
-For additional strategies and examples about deploying applications with CloudFormation, see the [Bootstrapping applications via AWS CloudFormation](http://aws.amazon.com/cloudformation/aws-cloudformation-articles-and-tutorials/) article\.
-
 **Topics**
 + [Basic Amazon EC2 instance](#deployment-walkthrough-basic-server)
 + [LAMP installation](#deployment-walkthrough-lamp-install)

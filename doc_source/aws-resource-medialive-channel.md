@@ -21,6 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[InputAttachments](#cfn-medialive-channel-inputattachments)" : [ InputAttachment, ... ],
       "[InputSpecification](#cfn-medialive-channel-inputspecification)" : InputSpecification,
       "[LogLevel](#cfn-medialive-channel-loglevel)" : String,
+      "[Maintenance](#cfn-medialive-channel-maintenance)" : MaintenanceCreateSettings,
       "[Name](#cfn-medialive-channel-name)" : String,
       "[RoleArn](#cfn-medialive-channel-rolearn)" : String,
       "[Tags](#cfn-medialive-channel-tags)" : Json,
@@ -46,6 +47,8 @@ Properties:
   [InputSpecification](#cfn-medialive-channel-inputspecification): 
     InputSpecification
   [LogLevel](#cfn-medialive-channel-loglevel): String
+  [Maintenance](#cfn-medialive-channel-maintenance): 
+    MaintenanceCreateSettings
   [Name](#cfn-medialive-channel-name): String
   [RoleArn](#cfn-medialive-channel-rolearn): String
   [Tags](#cfn-medialive-channel-tags): Json
@@ -95,6 +98,12 @@ The input specification for this channel\. It specifies the key characteristics 
 The verbosity for logging activity for this channel\. Charges for logging \(which are generated through Amazon CloudWatch Logging\) are higher for higher verbosities\.   
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Maintenance`  <a name="cfn-medialive-channel-maintenance"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [MaintenanceCreateSettings](aws-properties-medialive-channel-maintenancecreatesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-medialive-channel-name"></a>

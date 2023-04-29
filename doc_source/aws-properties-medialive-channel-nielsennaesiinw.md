@@ -13,7 +13,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[CheckDigitString](#cfn-medialive-channel-nielsennaesiinw-checkdigitstring)" : String,
-  "[Sid](#cfn-medialive-channel-nielsennaesiinw-sid)" : Double
+  "[Sid](#cfn-medialive-channel-nielsennaesiinw-sid)" : Double,
+  "[Timezone](#cfn-medialive-channel-nielsennaesiinw-timezone)" : String
 }
 ```
 
@@ -23,6 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [CheckDigitString](#cfn-medialive-channel-nielsennaesiinw-checkdigitstring): 
     String
   [Sid](#cfn-medialive-channel-nielsennaesiinw-sid): Double
+  [Timezone](#cfn-medialive-channel-nielsennaesiinw-timezone): String
 ```
 
 ## Properties<a name="aws-properties-medialive-channel-nielsennaesiinw-properties"></a>
@@ -37,4 +39,10 @@ Enter the check digit string for the watermark
 Enter the Nielsen Source ID \(SID\) to include in the watermark  
 *Required*: No  
 *Type*: Double  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`Timezone`  <a name="cfn-medialive-channel-nielsennaesiinw-timezone"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

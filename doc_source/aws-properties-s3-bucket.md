@@ -540,6 +540,140 @@ Resources:
         - !Ref WorkItemBucketBackupRole
 ```
 
+### Granting public access to S3 buckets<a name="aws-properties-s3-bucket--examples--Granting_public_access_to_S3_buckets"></a>
+
+When you create a new bucket, all Block Public Access settings are automatically enabled\. We recommend that you keep all Block Public Access settings enabled\. If you require some level of public access to your buckets, you can disable Block Public Access settings\. The following example shows creating a bucket called `my-bucket` and then disabling Block Public Access\. A public bucket policy is then added to the bucket\. 
+
+**Note**  
+The following example assumes the Block Public Access setting, `BlockPublicPolicy`, is set to `FALSE`\. If the `BlockPublicPolicy` setting is set to `TRUE`, calls to `PUTBucketPolicy` are rejected when the specified bucket policy allows public access\.
+
+#### JSON<a name="aws-properties-s3-bucket--examples--Granting_public_access_to_S3_buckets--json"></a>
+
+```
+        {
+          "Resources": {
+            "MyBucket": {
+              "Type": "AWS::S3::Bucket",
+              "Properties": {
+                "BucketName": "my-bucket",
+                "PublicAccessBlockConfiguration": {
+                  "BlockPublicAcls": false,
+                  "BlockPublicPolicy": false,
+                  "IgnorePublicAcls": false,
+                  "RestrictPublicBuckets": false
+                  
+                }
+              }
+            },
+            "MyBucketPolicy": {
+              "Type": "AWS::S3::BucketPolicy",
+              "Properties": {
+                "Bucket": {
+                  "Ref": "MyBucket"
+                },
+                "PolicyDocument": {
+                  "Version": "2012-10-17",
+                  "Statement": [
+                    {
+                       "Effect": "Allow",
+                       "Principal": "*",
+                       "Action": "s3:GetObject",
+                       "Resource": {
+                         "Fn::Join": [
+                           "",
+                           [
+                             "arn:aws:s3:::",
+                             {
+                               "Ref": "MyBucket"
+                             },
+                             "/*"
+                           ]
+                         ]
+                       }
+                     }
+                   ]
+                 }
+               }
+             }
+           }
+         }
+```
+
+#### YAML<a name="aws-properties-s3-bucket--examples--Granting_public_access_to_S3_buckets--yaml"></a>
+
+```
+        Resources:
+          MyBucket:
+            Type: 'AWS::S3::Bucket'
+            Properties:
+              BucketName: my-bucket
+              PublicAccessBlockConfiguration:
+                BlockPublicAcls: true
+                BlockPublicPolicy: true
+                IgnorePublicAcls: true
+                RestrictPublicBuckets: true
+          MyBucketPolicy:
+            Type: 'AWS::S3::BucketPolicy'
+            Properties:
+              Bucket:
+                Ref: 'MyBucket'
+              PolicyDocument:
+                Version: '2012-10-17'
+                Statement:
+                  - Effect: Allow
+                    Principal: '*'
+                    Action: 's3:GetObject'
+                    Resource:
+                      Fn::Join:
+                        - ''
+                        - - 'arn:aws:s3:::'
+                          - Ref: 'MyBucket'
+                          - '/*'
+```
+
+### Enabling ACLs<a name="aws-properties-s3-bucket--examples--Enabling_ACLs"></a>
+
+ By default, S3 Object Ownership is set to `BucketOwnerEnforced` and ACLs are disabled\. A majority of modern use cases in S3 no longer require the use of ACLs, and we recommend that you keep ACLs disabled\. With ACLs disabled, you can control access to all objects in your bucket, regardless of who uploaded the objects to your bucket\. If your specific use case requires enabling ACLs, you can set S3 Object Ownership to `BucketOwnerPreferred` or `ObjectWriter`\. For more information, see [Controlling ownership of objects and disabling ACLs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/about-object-ownership.html) in the *Amazon S3 User Guide*\. 
+
+The following example shows Object Ownership set to `BucketOwnerPreferred`\. 
+
+#### JSON<a name="aws-properties-s3-bucket--examples--Enabling_ACLs--json"></a>
+
+```
+        {
+          "Resources": {
+            "MyBucket": {
+              "Type": "AWS::S3::Bucket",
+              "Properties": {
+                "BucketName": "my-bucket",
+                "OwnershipControls": {
+                       "Rules": [
+                           {
+                               "ObjectOwnership": "BucketOwnerPreferred"
+                           }
+                       ]
+                   }
+                "AccessControl" : "AwsExecRead"
+              }
+           }
+         }
+       }
+```
+
+#### YAML<a name="aws-properties-s3-bucket--examples--Enabling_ACLs--yaml"></a>
+
+```
+        Resources:
+          MyBucket:
+            Type: 'AWS::S3::Bucket'
+            Properties:
+              BucketName: my-bucket
+              OwnershipControls:
+                Rules:
+                - ObjectOwnership: BucketOwnerPreferred
+              AccessControl: AwsExecRead
+```
+
 ### Configure a static website with a routing rule<a name="aws-properties-s3-bucket--examples--Configure_a_static_website_with_a_routing_rule"></a>
 
 In this example, `AWS::S3::Bucket's Fn::GetAtt` values are used to provide outputs\. If an HTTP 404 error occurs, the routing rule redirects requests to an EC2 instance and inserts the object key prefix `report-404/` in the redirect\. For example, if you request a page called `ExamplePage.html` and it results in an HTTP 404 error, the request is routed to a page called `report-404/ExamplePage.html` on the specified instance\. For all other HTTP error codes, `error.html` is returned\. 
@@ -838,7 +972,6 @@ The following example template creates two S3 buckets\. The `LoggingBucket` buck
         "S3Bucket": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
-                "AccessControl": "Private",
                 "LoggingConfiguration": {
                     "DestinationBucketName": {
                         "Ref": "LoggingBucket"
@@ -848,9 +981,55 @@ The following example template creates two S3 buckets\. The `LoggingBucket` buck
             }
         },
         "LoggingBucket": {
-            "Type": "AWS::S3::Bucket",
+            "Type": "AWS::S3::Bucket"
+        },
+        "S3BucketPolicy": {
+            "Type": "AWS::S3::BucketPolicy",
             "Properties": {
-                "AccessControl": "LogDeliveryWrite"
+                "Bucket": {
+                    "Ref": "LoggingBucket"
+                },
+                "PolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Action": [
+                                "s3:PutObject"
+                            ],
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": "logging.s3.amazonaws.com"
+                            },
+                            "Resource": {
+                                "Fn::Join": [
+                                    "",
+                                    [
+                                        "arn:aws:s3:::",
+                                        {
+                                            "Ref": "LoggingBucket"
+                                        },
+                                        "/*"
+                                    ]
+                                ]
+                            },
+                            "Condition": {
+                                "ArnLike": {
+                                    "aws:SourceArn": {
+                                        "Fn::GetAtt": [
+                                            "S3Bucket",
+                                            "Arn"
+                                        ]
+                                    }
+                                },
+                                "StringEquals": {
+                                    "aws:SourceAccount": {
+                                        "Fn::Sub": "${AWS::AccountId}"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
             }
         }
     },
@@ -873,14 +1052,35 @@ Resources:
   S3Bucket:
     Type: 'AWS::S3::Bucket'
     Properties:
-      AccessControl: Private
       LoggingConfiguration:
         DestinationBucketName: !Ref LoggingBucket
         LogFilePrefix: testing-logs
   LoggingBucket:
     Type: 'AWS::S3::Bucket'
+  S3BucketPolicy:
+    Type: 'AWS::S3::BucketPolicy'
     Properties:
-      AccessControl: LogDeliveryWrite
+      Bucket: !Ref LoggingBucket
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Action:
+              - 's3:PutObject'
+            Effect: Allow
+            Principal:
+              Service: logging.s3.amazonaws.com
+            Resource: !Join 
+              - ''
+              - - 'arn:aws:s3:::'
+                - !Ref LoggingBucket
+                - /*
+            Condition:
+              ArnLike:
+                'aws:SourceArn': !GetAtt 
+                  - S3Bucket
+                  - Arn
+              StringEquals:
+                'aws:SourceAccount': !Sub '${AWS::AccountId}'
 Outputs:
   BucketName:
     Value: !Ref S3Bucket
