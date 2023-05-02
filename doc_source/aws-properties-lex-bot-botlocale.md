@@ -75,7 +75,7 @@ One or more slot types defined for the locale\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `VoiceSettings`  <a name="cfn-lex-bot-botlocale-voicesettings"></a>
-Property description not available\.  
+Defines settings for using an Amazon Polly voice to communicate with a user\.  
 *Required*: No  
 *Type*: [VoiceSettings](aws-properties-lex-bot-voicesettings.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

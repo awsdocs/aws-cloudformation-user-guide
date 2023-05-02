@@ -65,6 +65,6 @@ Property description not available\.
 The refresh token used to refresh an expired access token\.  
 *Required*: No  
 *Type*: String  
-*Maximum*: `2048`  
+*Maximum*: `4096`  
 *Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

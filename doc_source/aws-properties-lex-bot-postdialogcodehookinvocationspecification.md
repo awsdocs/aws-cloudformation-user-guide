@@ -1,6 +1,6 @@
 # AWS::Lex::Bot PostDialogCodeHookInvocationSpecification<a name="aws-properties-lex-bot-postdialogcodehookinvocationspecification"></a>
 
-<a name="aws-properties-lex-bot-postdialogcodehookinvocationspecification-description"></a>The `PostDialogCodeHookInvocationSpecification` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
+Specifies next steps to run after the dialog code hook finishes\.
 
 ## Syntax<a name="aws-properties-lex-bot-postdialogcodehookinvocationspecification-syntax"></a>
 
@@ -48,13 +48,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-postdialogcodehookinvocationspecification-properties"></a>
 
 `FailureConditional`  <a name="cfn-lex-bot-postdialogcodehookinvocationspecification-failureconditional"></a>
-Property description not available\.  
+A list of conditional branches to evaluate after the dialog code hook throws an exception or returns with the `State` field of the `Intent` object set to `Failed`\.  
 *Required*: No  
 *Type*: [ConditionalSpecification](aws-properties-lex-bot-conditionalspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FailureNextStep`  <a name="cfn-lex-bot-postdialogcodehookinvocationspecification-failurenextstep"></a>
-Property description not available\.  
+Specifies the next step the bot runs after the dialog code hook throws an exception or returns with the `State` field of the `Intent` object set to `Failed`\.  
 *Required*: No  
 *Type*: [DialogState](aws-properties-lex-bot-dialogstate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -66,13 +66,13 @@ Specifies a list of message groups that Amazon Lex uses to respond the user inpu
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SuccessConditional`  <a name="cfn-lex-bot-postdialogcodehookinvocationspecification-successconditional"></a>
-Property description not available\.  
+A list of conditional branches to evaluate after the dialog code hook finishes successfully\.  
 *Required*: No  
 *Type*: [ConditionalSpecification](aws-properties-lex-bot-conditionalspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SuccessNextStep`  <a name="cfn-lex-bot-postdialogcodehookinvocationspecification-successnextstep"></a>
-Property description not available\.  
+Specifics the next step the bot runs after the dialog code hook finishes successfully\.   
 *Required*: No  
 *Type*: [DialogState](aws-properties-lex-bot-dialogstate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -84,13 +84,13 @@ Specifies a list of message groups that Amazon Lex uses to respond when the code
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeoutConditional`  <a name="cfn-lex-bot-postdialogcodehookinvocationspecification-timeoutconditional"></a>
-Property description not available\.  
+A list of conditional branches to evaluate if the code hook times out\.  
 *Required*: No  
 *Type*: [ConditionalSpecification](aws-properties-lex-bot-conditionalspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeoutNextStep`  <a name="cfn-lex-bot-postdialogcodehookinvocationspecification-timeoutnextstep"></a>
-Property description not available\.  
+Specifies the next step that the bot runs when the code hook times out\.  
 *Required*: No  
 *Type*: [DialogState](aws-properties-lex-bot-dialogstate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

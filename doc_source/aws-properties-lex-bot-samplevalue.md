@@ -1,6 +1,6 @@
 # AWS::Lex::Bot SampleValue<a name="aws-properties-lex-bot-samplevalue"></a>
 
-<a name="aws-properties-lex-bot-samplevalue-description"></a>The `SampleValue` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
+Defines one of the values for a slot type\.
 
 ## Syntax<a name="aws-properties-lex-bot-samplevalue-syntax"></a>
 
@@ -23,7 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-samplevalue-properties"></a>
 
 `Value`  <a name="cfn-lex-bot-samplevalue-value"></a>
-Property description not available\.  
+The value that can be used for a slot type\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `140`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

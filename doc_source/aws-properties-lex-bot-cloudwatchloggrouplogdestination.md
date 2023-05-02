@@ -1,6 +1,6 @@
 # AWS::Lex::Bot CloudWatchLogGroupLogDestination<a name="aws-properties-lex-bot-cloudwatchloggrouplogdestination"></a>
 
-<a name="aws-properties-lex-bot-cloudwatchloggrouplogdestination-description"></a>The `CloudWatchLogGroupLogDestination` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
+The Amazon CloudWatch Logs log group where the text and metadata logs are delivered\. The log group must exist before you enable logging\.
 
 ## Syntax<a name="aws-properties-lex-bot-cloudwatchloggrouplogdestination-syntax"></a>
 
@@ -25,13 +25,17 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-cloudwatchloggrouplogdestination-properties"></a>
 
 `CloudWatchLogGroupArn`  <a name="cfn-lex-bot-cloudwatchloggrouplogdestination-cloudwatchloggrouparn"></a>
-Property description not available\.  
+The Amazon Resource Name \(ARN\) of the log group where text and metadata logs are delivered\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `2048`  
+*Pattern*: `^arn:[\w\-]+:logs:[\w\-]+:[\d]{12}:log-group:[\.\-_/#A-Za-z0-9]{1,512}(?::\*)?$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogPrefix`  <a name="cfn-lex-bot-cloudwatchloggrouplogdestination-logprefix"></a>
-Property description not available\.  
+The prefix of the log stream name within the log group that you specified   
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

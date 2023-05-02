@@ -44,7 +44,7 @@ The description of the slot\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MultipleValuesSetting`  <a name="cfn-lex-bot-slot-multiplevaluessetting"></a>
-Property description not available\.  
+Indicates whether a slot can return multiple values\.  
 *Required*: No  
 *Type*: [MultipleValuesSetting](aws-properties-lex-bot-multiplevaluessetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::Lex::Bot ConversationLogSettings<a name="aws-properties-lex-bot-conversationlogsettings"></a>
 
-<a name="aws-properties-lex-bot-conversationlogsettings-description"></a>The `ConversationLogSettings` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
+Configures conversation logging that saves audio, text, and metadata for the conversations with your users\.
 
 ## Syntax<a name="aws-properties-lex-bot-conversationlogsettings-syntax"></a>
 
@@ -27,13 +27,15 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-conversationlogsettings-properties"></a>
 
 `AudioLogSettings`  <a name="cfn-lex-bot-conversationlogsettings-audiologsettings"></a>
-Property description not available\.  
+The Amazon S3 settings for logging audio to an S3 bucket\.  
 *Required*: No  
 *Type*: List of [AudioLogSetting](aws-properties-lex-bot-audiologsetting.md)  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TextLogSettings`  <a name="cfn-lex-bot-conversationlogsettings-textlogsettings"></a>
-Property description not available\.  
+The Amazon CloudWatch Logs settings for logging text and metadata\.  
 *Required*: No  
 *Type*: List of [TextLogSetting](aws-properties-lex-bot-textlogsetting.md)  
+*Maximum*: `1`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

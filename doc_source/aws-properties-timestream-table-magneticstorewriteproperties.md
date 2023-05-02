@@ -1,6 +1,6 @@
 # AWS::Timestream::Table MagneticStoreWriteProperties<a name="aws-properties-timestream-table-magneticstorewriteproperties"></a>
 
-<a name="aws-properties-timestream-table-magneticstorewriteproperties-description"></a>The `MagneticStoreWriteProperties` property type specifies Property description not available\. for an [AWS::Timestream::Table](aws-resource-timestream-table.md)\.
+The set of properties on a table for configuring magnetic store writes\.
 
 ## Syntax<a name="aws-properties-timestream-table-magneticstorewriteproperties-syntax"></a>
 
@@ -26,13 +26,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-timestream-table-magneticstorewriteproperties-properties"></a>
 
 `EnableMagneticStoreWrites`  <a name="cfn-timestream-table-magneticstorewriteproperties-enablemagneticstorewrites"></a>
-Property description not available\.  
+A flag to enable magnetic store writes\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `MagneticStoreRejectedDataLocation`  <a name="cfn-timestream-table-magneticstorewriteproperties-magneticstorerejecteddatalocation"></a>
-Property description not available\.  
+The location to write error reports for records rejected asynchronously during magnetic store writes\.  
 *Required*: No  
 *Type*: [MagneticStoreRejectedDataLocation](aws-properties-timestream-table-magneticstorerejecteddatalocation.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

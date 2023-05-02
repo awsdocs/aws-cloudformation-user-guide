@@ -31,7 +31,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The OAuth 2\.0 grant type used by connector for OAuth 2\.0 authentication\.  
 *Required*: No  
 *Type*: String  
-*Allowed values*: `AUTHORIZATION_CODE | CLIENT_CREDENTIALS`  
+*Allowed values*: `AUTHORIZATION_CODE | CLIENT_CREDENTIALS | JWT_BEARER`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TokenUrl`  <a name="cfn-appflow-connectorprofile-oauth2properties-tokenurl"></a>

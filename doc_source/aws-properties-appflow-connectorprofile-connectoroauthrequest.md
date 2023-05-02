@@ -28,7 +28,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
  The code provided by the connector when it has been authenticated via the connected app\.   
 *Required*: No  
 *Type*: String  
-*Maximum*: `2048`  
+*Maximum*: `4096`  
 *Pattern*: `\S+`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

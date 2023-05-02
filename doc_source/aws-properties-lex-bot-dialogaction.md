@@ -1,6 +1,6 @@
 # AWS::Lex::Bot DialogAction<a name="aws-properties-lex-bot-dialogaction"></a>
 
-<a name="aws-properties-lex-bot-dialogaction-description"></a>The `DialogAction` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
+Defines the action that the bot executes at runtime when the conversation reaches this step\.
 
 ## Syntax<a name="aws-properties-lex-bot-dialogaction-syntax"></a>
 
@@ -27,19 +27,23 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-dialogaction-properties"></a>
 
 `SlotToElicit`  <a name="cfn-lex-bot-dialogaction-slottoelicit"></a>
-Property description not available\.  
+If the dialog action is `ElicitSlot`, defines the slot to elicit from the user\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `100`  
+*Pattern*: `^([0-9a-zA-Z][_-]?)+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SuppressNextMessage`  <a name="cfn-lex-bot-dialogaction-suppressnextmessage"></a>
-Property description not available\.  
+When true the next message for the intent is not used\.  
 *Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Type`  <a name="cfn-lex-bot-dialogaction-type"></a>
-The action that the bot should execute\. Valid values are `ElicitIntent`, `StartIntent`, `ElicitSlot`, `EvaluateConditional`, `InvokeDialogCodeHook`, `ConfirmIntent`, `FulfillIntent`, `CloseIntent`, and `EndConversation`\.  
+The action that the bot should execute\.   
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `CloseIntent | ConfirmIntent | ElicitIntent | ElicitSlot | EndConversation | EvaluateConditional | FulfillIntent | InvokeDialogCodeHook | StartIntent`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

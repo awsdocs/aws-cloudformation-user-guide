@@ -26,7 +26,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-botversion-botversionlocalespecification-properties"></a>
 
 `BotVersionLocaleDetails`  <a name="cfn-lex-botversion-botversionlocalespecification-botversionlocaledetails"></a>
-Property description not available\.  
+The version of a bot used for a bot locale\.  
 *Required*: Yes  
 *Type*: [BotVersionLocaleDetails](aws-properties-lex-botversion-botversionlocaledetails.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

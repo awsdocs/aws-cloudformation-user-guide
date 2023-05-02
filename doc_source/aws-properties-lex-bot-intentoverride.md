@@ -1,6 +1,6 @@
 # AWS::Lex::Bot IntentOverride<a name="aws-properties-lex-bot-intentoverride"></a>
 
-<a name="aws-properties-lex-bot-intentoverride-description"></a>The `IntentOverride` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
+Override settings to configure the intent state\.
 
 ## Syntax<a name="aws-properties-lex-bot-intentoverride-syntax"></a>
 
@@ -26,13 +26,16 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-intentoverride-properties"></a>
 
 `Name`  <a name="cfn-lex-bot-intentoverride-name"></a>
-Property description not available\.  
+The name of the intent\. Only required when you're switching intents\.  
 *Required*: No  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `100`  
+*Pattern*: `^([0-9a-zA-Z][_-]?)+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Slots`  <a name="cfn-lex-bot-intentoverride-slots"></a>
-Property description not available\.  
+A map of all of the slot value overrides for the intent\. The name of the slot maps to the value of the slot\. Slots that are not included in the map aren't overridden\.  
 *Required*: No  
 *Type*: List of [SlotValueOverrideMap](aws-properties-lex-bot-slotvalueoverridemap.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

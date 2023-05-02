@@ -2,8 +2,6 @@
 
  Creates a new AWS secret access key and corresponding AWS access key ID for the specified user\. The default status for new keys is `Active`\.
 
-If you do not specify a user name, IAM determines the user name implicitly based on the AWS access key ID signing the request\. This operation works for access keys under the AWS account\. Consequently, you can use this operation to manage AWS account root user credentials\. This is true even if the AWS account has no associated users\.
-
  For information about quotas on the number of keys you can create, see [IAM and AWS STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
 
 **Important**  

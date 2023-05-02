@@ -1,6 +1,6 @@
 # AWS::Lex::Bot ObfuscationSetting<a name="aws-properties-lex-bot-obfuscationsetting"></a>
 
-<a name="aws-properties-lex-bot-obfuscationsetting-description"></a>The `ObfuscationSetting` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
+Determines whether Amazon Lex obscures slot values in conversation logs\. 
 
 ## Syntax<a name="aws-properties-lex-bot-obfuscationsetting-syntax"></a>
 
@@ -23,7 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-obfuscationsetting-properties"></a>
 
 `ObfuscationSettingType`  <a name="cfn-lex-bot-obfuscationsetting-obfuscationsettingtype"></a>
-Value that determines whether Amazon Lex obscures slot values in conversation logs\. The default is to obscure the values\. The valid values are `None` and `DefaultObfuscation.`  
+Value that determines whether Amazon Lex obscures slot values in conversation logs\. The default is to obscure the values\.  
 *Required*: Yes  
 *Type*: String  
+*Allowed values*: `DefaultObfuscation | None`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

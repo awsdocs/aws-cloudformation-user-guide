@@ -1,6 +1,6 @@
 # AWS::Lex::Bot SSMLMessage<a name="aws-properties-lex-bot-ssmlmessage"></a>
 
-<a name="aws-properties-lex-bot-ssmlmessage-description"></a>The `SSMLMessage` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
+Defines a Speech Synthesis Markup Language \(SSML\) prompt\.
 
 ## Syntax<a name="aws-properties-lex-bot-ssmlmessage-syntax"></a>
 
@@ -23,7 +23,9 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-ssmlmessage-properties"></a>
 
 `Value`  <a name="cfn-lex-bot-ssmlmessage-value"></a>
-Property description not available\.  
+The SSML text that defines the prompt\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `1000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

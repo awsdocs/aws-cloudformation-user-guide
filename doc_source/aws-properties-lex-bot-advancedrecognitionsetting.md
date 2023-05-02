@@ -26,4 +26,5 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Enables using the slot values as a custom vocabulary for recognizing user utterances\.  
 *Required*: No  
 *Type*: String  
+*Allowed values*: `UseSlotValuesAsCustomVocabulary`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::Lex::Bot SlotTypeValue<a name="aws-properties-lex-bot-slottypevalue"></a>
 
-<a name="aws-properties-lex-bot-slottypevalue-description"></a>The `SlotTypeValue` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
+Each slot type can have a set of values\. Each `SlotTypeValue` represents a value that the slot type can take\.
 
 ## Syntax<a name="aws-properties-lex-bot-slottypevalue-syntax"></a>
 
@@ -27,13 +27,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-slottypevalue-properties"></a>
 
 `SampleValue`  <a name="cfn-lex-bot-slottypevalue-samplevalue"></a>
-Property description not available\.  
+The value of the slot type entry\.  
 *Required*: Yes  
 *Type*: [SampleValue](aws-properties-lex-bot-samplevalue.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Synonyms`  <a name="cfn-lex-bot-slottypevalue-synonyms"></a>
-Property description not available\.  
+Additional values related to the slot type entry\.  
 *Required*: No  
 *Type*: List of [SampleValue](aws-properties-lex-bot-samplevalue.md)  
+*Maximum*: `10000`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -1,6 +1,6 @@
 # AWS::Lex::Bot IntentConfirmationSetting<a name="aws-properties-lex-bot-intentconfirmationsetting"></a>
 
-<a name="aws-properties-lex-bot-intentconfirmationsetting-description"></a>The `IntentConfirmationSetting` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
+Provides a prompt for making sure that the user is ready for the intent to be fulfilled\.
 
 ## Syntax<a name="aws-properties-lex-bot-intentconfirmationsetting-syntax"></a>
 
@@ -59,61 +59,61 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-intentconfirmationsetting-properties"></a>
 
 `CodeHook`  <a name="cfn-lex-bot-intentconfirmationsetting-codehook"></a>
-Property description not available\.  
+The `DialogCodeHookInvocationSetting` object associated with intent's confirmation step\. The dialog code hook is triggered based on these invocation settings when the confirmation next step or declination next step or failure next step is `InvokeDialogCodeHook`\.   
 *Required*: No  
 *Type*: [DialogCodeHookInvocationSetting](aws-properties-lex-bot-dialogcodehookinvocationsetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConfirmationConditional`  <a name="cfn-lex-bot-intentconfirmationsetting-confirmationconditional"></a>
-Property description not available\.  
+A list of conditional branches to evaluate after the intent is closed\.  
 *Required*: No  
 *Type*: [ConditionalSpecification](aws-properties-lex-bot-conditionalspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConfirmationNextStep`  <a name="cfn-lex-bot-intentconfirmationsetting-confirmationnextstep"></a>
-Property description not available\.  
+Specifies the next step that the bot executes when the customer confirms the intent\.  
 *Required*: No  
 *Type*: [DialogState](aws-properties-lex-bot-dialogstate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ConfirmationResponse`  <a name="cfn-lex-bot-intentconfirmationsetting-confirmationresponse"></a>
-Property description not available\.  
+Specifies a list of message groups that Amazon Lex uses to respond the user input\.  
 *Required*: No  
 *Type*: [ResponseSpecification](aws-properties-lex-bot-responsespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeclinationConditional`  <a name="cfn-lex-bot-intentconfirmationsetting-declinationconditional"></a>
-Property description not available\.  
+A list of conditional branches to evaluate after the intent is declined\.  
 *Required*: No  
 *Type*: [ConditionalSpecification](aws-properties-lex-bot-conditionalspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeclinationNextStep`  <a name="cfn-lex-bot-intentconfirmationsetting-declinationnextstep"></a>
-Property description not available\.  
+Specifies the next step that the bot executes when the customer declines the intent\.  
 *Required*: No  
 *Type*: [DialogState](aws-properties-lex-bot-dialogstate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DeclinationResponse`  <a name="cfn-lex-bot-intentconfirmationsetting-declinationresponse"></a>
-Property description not available\.  
+When the user answers "no" to the question defined in `promptSpecification`, Amazon Lex responds with this response to acknowledge that the intent was canceled\.   
 *Required*: No  
 *Type*: [ResponseSpecification](aws-properties-lex-bot-responsespecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ElicitationCodeHook`  <a name="cfn-lex-bot-intentconfirmationsetting-elicitationcodehook"></a>
-Property description not available\.  
+The `DialogCodeHookInvocationSetting` used when the code hook is invoked during confirmation prompt retries\.  
 *Required*: No  
 *Type*: [ElicitationCodeHookInvocationSetting](aws-properties-lex-bot-elicitationcodehookinvocationsetting.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FailureConditional`  <a name="cfn-lex-bot-intentconfirmationsetting-failureconditional"></a>
-Property description not available\.  
+Provides a list of conditional branches\. Branches are evaluated in the order that they are entered in the list\. The first branch with a condition that evaluates to true is executed\. The last branch in the list is the default branch\. The default branch should not have any condition expression\. The default branch is executed if no other branch has a matching condition\.  
 *Required*: No  
 *Type*: [ConditionalSpecification](aws-properties-lex-bot-conditionalspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `FailureNextStep`  <a name="cfn-lex-bot-intentconfirmationsetting-failurenextstep"></a>
-Property description not available\.  
+The next step to take in the conversation if the confirmation step fails\.  
 *Required*: No  
 *Type*: [DialogState](aws-properties-lex-bot-dialogstate.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -131,7 +131,8 @@ Specifies whether the intent's confirmation is sent to the user\. When this fiel
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `PromptSpecification`  <a name="cfn-lex-bot-intentconfirmationsetting-promptspecification"></a>
-Property description not available\.  
+Prompts the user to confirm the intent\. This question should have a yes or no answer\.  
+Amazon Lex uses this prompt to ensure that the user acknowledges that the intent is ready for fulfillment\. For example, with the `OrderPizza` intent, you might want to confirm that the order is correct before placing it\. For other intents, such as intents that simply respond to user questions, you might not need to ask the user for confirmation before providing the information\.   
 *Required*: Yes  
 *Type*: [PromptSpecification](aws-properties-lex-bot-promptspecification.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

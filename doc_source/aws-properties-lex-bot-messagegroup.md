@@ -1,6 +1,6 @@
 # AWS::Lex::Bot MessageGroup<a name="aws-properties-lex-bot-messagegroup"></a>
 
-<a name="aws-properties-lex-bot-messagegroup-description"></a>The `MessageGroup` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
+Provides one or more messages that Amazon Lex should send to the user\.
 
 ## Syntax<a name="aws-properties-lex-bot-messagegroup-syntax"></a>
 
@@ -27,13 +27,14 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-messagegroup-properties"></a>
 
 `Message`  <a name="cfn-lex-bot-messagegroup-message"></a>
-Property description not available\.  
+The primary message that Amazon Lex should send to the user\.  
 *Required*: Yes  
 *Type*: [Message](aws-properties-lex-bot-message.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Variations`  <a name="cfn-lex-bot-messagegroup-variations"></a>
-Property description not available\.  
+Message variations to send to the user\. When variations are defined, Amazon Lex chooses the primary message or one of the variations to send to the user\.  
 *Required*: No  
 *Type*: List of [Message](aws-properties-lex-bot-message.md)  
+*Maximum*: `2`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

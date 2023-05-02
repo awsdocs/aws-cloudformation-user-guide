@@ -1,6 +1,6 @@
 # AWS::Lex::BotAlias S3BucketLogDestination<a name="aws-properties-lex-botalias-s3bucketlogdestination"></a>
 
-<a name="aws-properties-lex-botalias-s3bucketlogdestination-description"></a>The `S3BucketLogDestination` property type specifies Property description not available\. for an [AWS::Lex::BotAlias](aws-resource-lex-botalias.md)\.
+Specifies an Amazon S3 bucket for logging audio conversations
 
 ## Syntax<a name="aws-properties-lex-botalias-s3bucketlogdestination-syntax"></a>
 
@@ -33,13 +33,17 @@ The Amazon Resource Name \(ARN\) of an AWS Key Management Service \(KMS\) key fo
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `LogPrefix`  <a name="cfn-lex-botalias-s3bucketlogdestination-logprefix"></a>
-Property description not available\.  
+The S3 prefix to assign to audio log files\.  
 *Required*: Yes  
 *Type*: String  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `S3BucketArn`  <a name="cfn-lex-botalias-s3bucketlogdestination-s3bucketarn"></a>
-Property description not available\.  
+The Amazon Resource Name \(ARN\) of an Amazon S3 bucket where audio log files are stored\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `2048`  
+*Pattern*: `^arn:[\w\-]+:s3:::[a-z0-9][\.\-a-z0-9]{1,61}[a-z0-9]$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

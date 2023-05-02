@@ -42,9 +42,6 @@ Syntax for the short form:
   - DefaultValue: DefaultValue
 ```
 
-**Note**  
-
-
 ## Parameters<a name="intrinsic-function-reference-findinmap-enhancements-parameters"></a>
 
 DefaultValue  <a name="DefaultValue"></a>

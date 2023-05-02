@@ -1,6 +1,6 @@
 # AWS::Lex::Bot TextLogSetting<a name="aws-properties-lex-bot-textlogsetting"></a>
 
-<a name="aws-properties-lex-bot-textlogsetting-description"></a>The `TextLogSetting` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
+Defines settings to enable text conversation logs\.
 
 ## Syntax<a name="aws-properties-lex-bot-textlogsetting-syntax"></a>
 
@@ -32,7 +32,7 @@ Specifies the Amazon CloudWatch Logs destination log group for conversation text
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Enabled`  <a name="cfn-lex-bot-textlogsetting-enabled"></a>
-Property description not available\.  
+Determines whether conversation logs should be stored for an alias\.  
 *Required*: Yes  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

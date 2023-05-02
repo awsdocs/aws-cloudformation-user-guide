@@ -1,6 +1,6 @@
 # AWS::Lex::BotAlias TextLogDestination<a name="aws-properties-lex-botalias-textlogdestination"></a>
 
-<a name="aws-properties-lex-botalias-textlogdestination-description"></a>The `TextLogDestination` property type specifies Property description not available\. for an [AWS::Lex::BotAlias](aws-resource-lex-botalias.md)\.
+Defines the Amazon CloudWatch Logs destination log group for conversation text logs\.
 
 ## Syntax<a name="aws-properties-lex-botalias-textlogdestination-syntax"></a>
 
@@ -24,7 +24,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-botalias-textlogdestination-properties"></a>
 
 `CloudWatch`  <a name="cfn-lex-botalias-textlogdestination-cloudwatch"></a>
-Property description not available\.  
+Defines the Amazon CloudWatch Logs log group where text and metadata logs are delivered\.  
 *Required*: Yes  
 *Type*: [CloudWatchLogGroupLogDestination](aws-properties-lex-botalias-cloudwatchloggrouplogdestination.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

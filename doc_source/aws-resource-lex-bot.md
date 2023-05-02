@@ -77,13 +77,13 @@ A list of locales for the bot\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `BotTags`  <a name="cfn-lex-bot-bottags"></a>
-Property description not available\.  
+A list of tags to add to the bot\. You can only add tags when you import a bot\. You can't use the `UpdateBot` operation to update tags\. To update tags, use the `TagResource` operation\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `DataPrivacy`  <a name="cfn-lex-bot-dataprivacy"></a>
-Property description not available\.  
+By default, data stored by Amazon Lex is encrypted\. The `DataPrivacy` structure provides settings that determine how Amazon Lex handles special cases of securing the data for your bot\.   
 *Required*: Yes  
 *Type*: [DataPrivacy](aws-properties-lex-bot-dataprivacy.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
@@ -97,9 +97,13 @@ The description of the version\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IdleSessionTTLInSeconds`  <a name="cfn-lex-bot-idlesessionttlinseconds"></a>
-Property description not available\.  
+The time, in seconds, that Amazon Lex should keep information about a user's conversation with the bot\.   
+A user interaction remains active for the amount of time specified\. If no conversation occurs during this time, the session expires and Amazon Lex deletes any data provided before the timeout\.  
+You can specify between 60 \(1 minute\) and 86,400 \(24 hours\) seconds\.  
 *Required*: Yes  
 *Type*: Integer  
+*Minimum*: `60`  
+*Maximum*: `86400`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Name`  <a name="cfn-lex-bot-name"></a>
@@ -109,9 +113,12 @@ The name of the bot locale\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `RoleArn`  <a name="cfn-lex-bot-rolearn"></a>
-Property description not available\.  
+The Amazon Resource Name \(ARN\) of the IAM role used to build and run the bot\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `32`  
+*Maximum*: `2048`  
+*Pattern*: `^arn:aws:iam::[0-9]{12}:role/.*$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TestBotAliasSettings`  <a name="cfn-lex-bot-testbotaliassettings"></a>
@@ -121,7 +128,7 @@ Specifies configuration settings for the alias used to test the bot\. If the `Te
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TestBotAliasTags`  <a name="cfn-lex-bot-testbotaliastags"></a>
-Property description not available\.  
+A list of tags to add to the test alias for a bot\. You can only add tags when you import a bot\. You can't use the `UpdateAlias` operation to update tags\. To update tags on the test alias, use the `TagResource` operation\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

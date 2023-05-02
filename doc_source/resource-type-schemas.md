@@ -20,7 +20,9 @@ To learn more about resource provider schemas, including schema format and defin
 |  Africa \(Cape Town\)  |  [af\-south\-1](https://schema.cloudformation.af-south-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Hong Kong\)  |  [ap\-east\-1](https://schema.cloudformation.ap-east-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Mumbai\)  |  [ap\-south\-1](https://schema.cloudformation.ap-south-1.amazonaws.com/CloudformationSchema.zip)  | 
+|  Asia Pacific \(Hyderabad\)  |  [ap\-south\-2](https://schema.cloudformation.ap-south-2.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Jakarta\)  |  [ap\-southeast\-3](https://schema.cloudformation.ap-southeast-3.amazonaws.com/CloudformationSchema.zip)  | 
+|  Asia Pacific \(Melbourne\)  |  [ap\-southeast\-4](https://schema.cloudformation.ap-southeast-4.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Mumbai\)  |  [ap\-south\-1](https://schema.cloudformation.ap-south-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Osaka\)  |  [ap\-northeast\-3](https://schema.cloudformation.ap-northeast-3.amazonaws.com/CloudformationSchema.zip)  | 
 |  Asia Pacific \(Seoul\)  |  [ap\-northeast\-2](https://schema.cloudformation.ap-northeast-2.amazonaws.com/CloudformationSchema.zip)  | 
@@ -35,7 +37,9 @@ To learn more about resource provider schemas, including schema format and defin
 |  Europe \(London\)  |  [eu\-west\-2](https://schema.cloudformation.eu-west-2.amazonaws.com/CloudformationSchema.zip)  | 
 |  Europe \(Milan\)  |  [eu\-south\-1](https://schema.cloudformation.eu-south-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  Europe \(Paris\)  |  [eu\-west\-3](https://schema.cloudformation.eu-west-3.amazonaws.com/CloudformationSchema.zip)  | 
+|  Europe \(Spain\)  |  [eu\-south\-2](https://schema.cloudformation.eu-south-2.amazonaws.com/CloudformationSchema.zip)  | 
 |  Europe \(Stockholm\)  |  [eu\-north\-1](https://schema.cloudformation.eu-north-1.amazonaws.com/CloudformationSchema.zip)  | 
+|  Europe \(Zurich\)  |  [eu\-central\-2](https://schema.cloudformation.eu-central-2.amazonaws.com/CloudformationSchema.zip)  | 
 |  Middle East \(Bahrain\)  |  [me\-south\-1](https://schema.cloudformation.me-south-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  South America \(São Paulo\)  |  [sa\-east\-1](https://schema.cloudformation.sa-east-1.amazonaws.com/CloudformationSchema.zip)  | 
 |  AWS GovCloud \(US\-East\)  |  [us\-gov\-east\-1](https://schema.cloudformation.us-gov-east-1.amazonaws.com/CloudformationSchema.zip)  | 

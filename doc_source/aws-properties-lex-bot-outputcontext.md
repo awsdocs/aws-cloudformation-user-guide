@@ -1,6 +1,6 @@
 # AWS::Lex::Bot OutputContext<a name="aws-properties-lex-bot-outputcontext"></a>
 
-<a name="aws-properties-lex-bot-outputcontext-description"></a>The `OutputContext` property type specifies Property description not available\. for an [AWS::Lex::Bot](aws-resource-lex-bot.md)\.
+Describes a session context that is activated when an intent is fulfilled\.
 
 ## Syntax<a name="aws-properties-lex-bot-outputcontext-syntax"></a>
 
@@ -27,19 +27,26 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-lex-bot-outputcontext-properties"></a>
 
 `Name`  <a name="cfn-lex-bot-outputcontext-name"></a>
-Property description not available\.  
+The name of the output context\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `1`  
+*Maximum*: `100`  
+*Pattern*: `^([0-9a-zA-Z][_-]?)+$`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TimeToLiveInSeconds`  <a name="cfn-lex-bot-outputcontext-timetoliveinseconds"></a>
-Property description not available\.  
+The amount of time, in seconds, that the output context should remain active\. The time is figured from the first time the context is sent to the user\.  
 *Required*: Yes  
 *Type*: Integer  
+*Minimum*: `5`  
+*Maximum*: `86400`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `TurnsToLive`  <a name="cfn-lex-bot-outputcontext-turnstolive"></a>
-Property description not available\.  
+The number of conversation turns that the output context should remain active\. The number of turns is counted from the first time that the context is sent to the user\.  
 *Required*: Yes  
 *Type*: Integer  
+*Minimum*: `1`  
+*Maximum*: `20`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
