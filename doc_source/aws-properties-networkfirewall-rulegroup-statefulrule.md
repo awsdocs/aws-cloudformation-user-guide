@@ -1,6 +1,6 @@
 # AWS::NetworkFirewall::RuleGroup StatefulRule<a name="aws-properties-networkfirewall-rulegroup-statefulrule"></a>
 
-A single Suricata rules specification, for use in a stateful rule group\. Use this option to specify a simple Suricata rule with protocol, source and destination, ports, direction, and rule options\. For information about the Suricata `Rules` format, see [Rules Format](https://suricata.readthedocs.iorules/intro.html#)\. 
+A single Suricata rules specification, for use in a stateful rule group\. Use this option to specify a simple Suricata rule with protocol, source and destination, ports, direction, and rule options\. For information about the Suricata `Rules` format, see [Rules Format](https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)\. 
 
 ## Syntax<a name="aws-properties-networkfirewall-rulegroup-statefulrule-syntax"></a>
 

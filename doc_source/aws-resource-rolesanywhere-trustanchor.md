@@ -1,8 +1,6 @@
 # AWS::RolesAnywhere::TrustAnchor<a name="aws-resource-rolesanywhere-trustanchor"></a>
 
-Creates a trust anchor to establish trust between IAM Roles Anywhere and your certificate authority \(CA\)\. You can define a trust anchor as a reference to an AWS Private Certificate Authority \(AWS Private CA\) or by uploading a CA certificate\. Your AWS workloads can authenticate with the trust anchor using certificates issued by the CA in exchange for temporary AWS credentials\.
-
-**Required permissions: **`rolesanywhere:CreateTrustAnchor`\. 
+ Creates a TrustAnchor\. 
 
 ## Syntax<a name="aws-resource-rolesanywhere-trustanchor-syntax"></a>
 

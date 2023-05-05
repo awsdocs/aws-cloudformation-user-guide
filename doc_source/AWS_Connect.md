@@ -4,6 +4,7 @@
 + [AWS::Connect::ApprovedOrigin](aws-resource-connect-approvedorigin.md)
 + [AWS::Connect::ContactFlow](aws-resource-connect-contactflow.md)
 + [AWS::Connect::ContactFlowModule](aws-resource-connect-contactflowmodule.md)
++ [AWS::Connect::EvaluationForm](aws-resource-connect-evaluationform.md)
 + [AWS::Connect::HoursOfOperation](aws-resource-connect-hoursofoperation.md)
 + [AWS::Connect::Instance](aws-resource-connect-instance.md)
 + [AWS::Connect::InstanceStorageConfig](aws-resource-connect-instancestorageconfig.md)

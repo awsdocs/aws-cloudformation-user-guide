@@ -12,13 +12,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::FinSpace::Environment",
   "Properties" : {
-      "[DataBundles](#cfn-finspace-environment-databundles)" : [ String, ... ],
       "[Description](#cfn-finspace-environment-description)" : String,
       "[FederationMode](#cfn-finspace-environment-federationmode)" : String,
       "[FederationParameters](#cfn-finspace-environment-federationparameters)" : FederationParameters,
       "[KmsKeyId](#cfn-finspace-environment-kmskeyid)" : String,
       "[Name](#cfn-finspace-environment-name)" : String,
-      "[SuperuserParameters](#cfn-finspace-environment-superuserparameters)" : SuperuserParameters
+      "[SuperuserParameters](#cfn-finspace-environment-superuserparameters)" : SuperuserParameters,
+      "[Tags](#cfn-finspace-environment-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
 ```
@@ -28,8 +28,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::FinSpace::Environment
 Properties: 
-  [DataBundles](#cfn-finspace-environment-databundles): 
-    - String
   [Description](#cfn-finspace-environment-description): String
   [FederationMode](#cfn-finspace-environment-federationmode): String
   [FederationParameters](#cfn-finspace-environment-federationparameters): 
@@ -38,17 +36,11 @@ Properties:
   [Name](#cfn-finspace-environment-name): String
   [SuperuserParameters](#cfn-finspace-environment-superuserparameters): 
     SuperuserParameters
+  [Tags](#cfn-finspace-environment-tags): 
+    - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-finspace-environment-properties"></a>
-
-`DataBundles`  <a name="cfn-finspace-environment-databundles"></a>
-The list of Amazon Resource Names \(ARN\) of the data bundles to install\. Currently supported data bundle ARNs:  
-+  `arn:aws:finspace:${Region}::data-bundle/capital-markets-sample` \- Contains sample Capital Markets datasets, categories and controlled vocabularies\.
-+  `arn:aws:finspace:${Region}::data-bundle/taq` \(default\) \- Contains trades and quotes data in addition to sample Capital Markets data\.
-*Required*: No  
-*Type*: List of String  
-*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Description`  <a name="cfn-finspace-environment-description"></a>
 The description of the FinSpace environment\.  
@@ -70,7 +62,7 @@ The authentication mode for the environment\.
 Configuration information when authentication mode is FEDERATED\.  
 *Required*: No  
 *Type*: [FederationParameters](aws-properties-finspace-environment-federationparameters.md)  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `KmsKeyId`  <a name="cfn-finspace-environment-kmskeyid"></a>
 The KMS key id used to encrypt in the FinSpace environment\.  
@@ -94,6 +86,12 @@ The name of the FinSpace environment\.
 Configuration information for the superuser\.  
 *Required*: No  
 *Type*: [SuperuserParameters](aws-properties-finspace-environment-superuserparameters.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Tags`  <a name="cfn-finspace-environment-tags"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 ## Return values<a name="aws-resource-finspace-environment-return-values"></a>

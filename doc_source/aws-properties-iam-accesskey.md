@@ -5,7 +5,7 @@
  For information about quotas on the number of keys you can create, see [IAM and AWS STS quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User Guide*\.
 
 **Important**  
-To ensure the security of your AWS account, the secret access key is accessible only during key and user creation\. You must save the key \(for example, in a text file\) if you want to be able to access it again\. If a secret key is lost, you can delete the access keys for the associated user and then create new keys\.
+To ensure the security of your AWS account, the secret access key is accessible only during key and user creation\. You must save the key \(for example, in a text file\) if you want to be able to access it again\. If a secret key is lost, you can rotate access keys by increasing the value of the `serial` property\.
 
 ## Syntax<a name="aws-properties-iam-accesskey-syntax"></a>
 

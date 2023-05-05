@@ -81,7 +81,8 @@ Specifies the VPC used for non\-EFS traffic\. The default value is `PublicIntern
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AppSecurityGroupManagement`  <a name="cfn-sagemaker-domain-appsecuritygroupmanagement"></a>
-The entity that creates and manages the required security groups for inter\-app communication in `VpcOnly` mode\. Required when `CreateDomain.AppNetworkAccessType` is `VpcOnly` and `DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn` is provided\.  
+The entity that creates and manages the required security groups for inter\-app communication in `VpcOnly` mode\. Required when `CreateDomain.AppNetworkAccessType` is `VpcOnly` and `DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn` is provided\. If setting up the domain for use with RStudio, this value must be set to `Service`\.  
+*Allowed Values*: `Service` \| `Customer`  
 *Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

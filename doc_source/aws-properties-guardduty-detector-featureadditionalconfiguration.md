@@ -1,6 +1,8 @@
 # AWS::GuardDuty::Detector FeatureAdditionalConfiguration<a name="aws-properties-guardduty-detector-featureadditionalconfiguration"></a>
 
-Describes the additional configuration for a feature\. If you provide any additional configuration for your feature, it is required to also provide `Name` and `Status`\.
+Describes the additional configuration for a feature\. If you want to specify any additional configuration for your feature, it is required to provide the `Name` and `Status` for that additional configuration\. For more information, see [DetectorAdditionalConfiguration](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_DetectorAdditionalConfiguration.html)\.
+
+If you're providing additional configuration, ensure to provide the corresponding [FeatureConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-featureconfigurations.html#cfn-guardduty-detector-featureconfigurations-additionalconfiguration)\.
 
 ## Syntax<a name="aws-properties-guardduty-detector-featureadditionalconfiguration-syntax"></a>
 

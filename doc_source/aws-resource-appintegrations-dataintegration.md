@@ -13,8 +13,10 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Type" : "AWS::AppIntegrations::DataIntegration",
   "Properties" : {
       "[Description](#cfn-appintegrations-dataintegration-description)" : String,
+      "[FileConfiguration](#cfn-appintegrations-dataintegration-fileconfiguration)" : FileConfiguration,
       "[KmsKey](#cfn-appintegrations-dataintegration-kmskey)" : String,
       "[Name](#cfn-appintegrations-dataintegration-name)" : String,
+      "[ObjectConfiguration](#cfn-appintegrations-dataintegration-objectconfiguration)" : Json,
       "[ScheduleConfig](#cfn-appintegrations-dataintegration-scheduleconfig)" : ScheduleConfig,
       "[SourceURI](#cfn-appintegrations-dataintegration-sourceuri)" : String,
       "[Tags](#cfn-appintegrations-dataintegration-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
@@ -28,8 +30,11 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 Type: AWS::AppIntegrations::DataIntegration
 Properties: 
   [Description](#cfn-appintegrations-dataintegration-description): String
+  [FileConfiguration](#cfn-appintegrations-dataintegration-fileconfiguration): 
+    FileConfiguration
   [KmsKey](#cfn-appintegrations-dataintegration-kmskey): String
   [Name](#cfn-appintegrations-dataintegration-name): String
+  [ObjectConfiguration](#cfn-appintegrations-dataintegration-objectconfiguration): Json
   [ScheduleConfig](#cfn-appintegrations-dataintegration-scheduleconfig): 
     ScheduleConfig
   [SourceURI](#cfn-appintegrations-dataintegration-sourceuri): String
@@ -45,6 +50,12 @@ A description of the DataIntegration\.
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`FileConfiguration`  <a name="cfn-appintegrations-dataintegration-fileconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [FileConfiguration](aws-properties-appintegrations-dataintegration-fileconfiguration.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
 `KmsKey`  <a name="cfn-appintegrations-dataintegration-kmskey"></a>
 The KMS key for the DataIntegration\.  
 *Required*: Yes  
@@ -55,6 +66,12 @@ The KMS key for the DataIntegration\.
 The name of the DataIntegration\.  
 *Required*: Yes  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`ObjectConfiguration`  <a name="cfn-appintegrations-dataintegration-objectconfiguration"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Json  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScheduleConfig`  <a name="cfn-appintegrations-dataintegration-scheduleconfig"></a>

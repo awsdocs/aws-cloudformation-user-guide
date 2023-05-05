@@ -2,6 +2,8 @@
 
 The `AWS::GuardDuty::Detector` resource specifies a new Amazon GuardDuty detector\. A detector is an object that represents the Amazon GuardDuty service\. A detector is required for Amazon GuardDuty to become operational\.
 
+Make sure you use either `DataSources` or `Features` in a one request, and not both\.
+
 ## Syntax<a name="aws-resource-guardduty-detector-syntax"></a>
 
 To declare this entity in your AWS CloudFormation template, use the following syntax:

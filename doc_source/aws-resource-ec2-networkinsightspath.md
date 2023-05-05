@@ -17,6 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[Destination](#cfn-ec2-networkinsightspath-destination)" : String,
       "[DestinationIp](#cfn-ec2-networkinsightspath-destinationip)" : String,
       "[DestinationPort](#cfn-ec2-networkinsightspath-destinationport)" : Integer,
+      "[FilterAtDestination](#cfn-ec2-networkinsightspath-filteratdestination)" : PathFilter,
+      "[FilterAtSource](#cfn-ec2-networkinsightspath-filteratsource)" : PathFilter,
       "[Protocol](#cfn-ec2-networkinsightspath-protocol)" : String,
       "[Source](#cfn-ec2-networkinsightspath-source)" : String,
       "[SourceIp](#cfn-ec2-networkinsightspath-sourceip)" : String,
@@ -33,6 +35,10 @@ Properties:
   [Destination](#cfn-ec2-networkinsightspath-destination): String
   [DestinationIp](#cfn-ec2-networkinsightspath-destinationip): String
   [DestinationPort](#cfn-ec2-networkinsightspath-destinationport): Integer
+  [FilterAtDestination](#cfn-ec2-networkinsightspath-filteratdestination): 
+    PathFilter
+  [FilterAtSource](#cfn-ec2-networkinsightspath-filteratsource): 
+    PathFilter
   [Protocol](#cfn-ec2-networkinsightspath-protocol): String
   [Source](#cfn-ec2-networkinsightspath-source): String
   [SourceIp](#cfn-ec2-networkinsightspath-sourceip): String
@@ -63,6 +69,18 @@ The destination port\.
 *Type*: Integer  
 *Minimum*: `0`  
 *Maximum*: `65535`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`FilterAtDestination`  <a name="cfn-ec2-networkinsightspath-filteratdestination"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [PathFilter](aws-properties-ec2-networkinsightspath-pathfilter.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`FilterAtSource`  <a name="cfn-ec2-networkinsightspath-filteratsource"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [PathFilter](aws-properties-ec2-networkinsightspath-pathfilter.md)  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Protocol`  <a name="cfn-ec2-networkinsightspath-protocol"></a>

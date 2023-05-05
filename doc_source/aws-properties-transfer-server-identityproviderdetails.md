@@ -38,7 +38,7 @@ The identifier of the AWS Directory Service directory that you want to stop shar
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Function`  <a name="cfn-transfer-server-identityproviderdetails-function"></a>
-The ARN for a lambda function to use for the Identity provider\.  
+The ARN for a Lambda function to use for the Identity provider\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  

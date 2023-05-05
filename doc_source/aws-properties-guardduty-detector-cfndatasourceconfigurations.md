@@ -30,7 +30,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ## Properties<a name="aws-properties-guardduty-detector-cfndatasourceconfigurations-properties"></a>
 
 `Kubernetes`  <a name="cfn-guardduty-detector-cfndatasourceconfigurations-kubernetes"></a>
-Describes which Kuberentes data sources are enabled for a detector\.  
+Describes which Kubernetes data sources are enabled for a detector\.  
 *Required*: No  
 *Type*: [CFNKubernetesConfiguration](aws-properties-guardduty-detector-cfnkubernetesconfiguration.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

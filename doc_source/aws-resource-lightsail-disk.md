@@ -15,6 +15,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[AddOns](#cfn-lightsail-disk-addons)" : [ AddOn, ... ],
       "[AvailabilityZone](#cfn-lightsail-disk-availabilityzone)" : String,
       "[DiskName](#cfn-lightsail-disk-diskname)" : String,
+      "[Location](#cfn-lightsail-disk-location)" : Location,
       "[SizeInGb](#cfn-lightsail-disk-sizeingb)" : Integer,
       "[Tags](#cfn-lightsail-disk-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
@@ -30,6 +31,8 @@ Properties:
     - AddOn
   [AvailabilityZone](#cfn-lightsail-disk-availabilityzone): String
   [DiskName](#cfn-lightsail-disk-diskname): String
+  [Location](#cfn-lightsail-disk-location): 
+    Location
   [SizeInGb](#cfn-lightsail-disk-sizeingb): Integer
   [Tags](#cfn-lightsail-disk-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
@@ -56,6 +59,12 @@ The name of the disk\.
 *Type*: String  
 *Pattern*: `\w[\w\-]*\w`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`Location`  <a name="cfn-lightsail-disk-location"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [Location](aws-properties-lightsail-disk-location.md)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `SizeInGb`  <a name="cfn-lightsail-disk-sizeingb"></a>
 The size of the disk in GB\.  
@@ -100,9 +109,6 @@ The input/output operations per second \(IOPS\) of the disk\.
 
 `IsAttached`  <a name="IsAttached-fn::getatt"></a>
 A Boolean value indicating whether the disk is attached to an instance\.
-
-`Location`  <a name="Location-fn::getatt"></a>
-Property description not available\.
 
 `Location.AvailabilityZone`  <a name="Location.AvailabilityZone-fn::getatt"></a>
 Property description not available\.

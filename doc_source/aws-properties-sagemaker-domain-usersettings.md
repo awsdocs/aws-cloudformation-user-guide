@@ -44,7 +44,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `ExecutionRole`  <a name="cfn-sagemaker-domain-usersettings-executionrole"></a>
 The execution role for the user\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `2048`  

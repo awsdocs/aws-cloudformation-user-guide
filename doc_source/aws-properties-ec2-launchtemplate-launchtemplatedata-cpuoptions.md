@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
 {
+  "[AmdSevSnp](#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions-amdsevsnp)" : String,
   "[CoreCount](#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions-corecount)" : Integer,
   "[ThreadsPerCore](#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions-threadspercore)" : Integer
 }
@@ -20,11 +21,19 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-cpuoptions-syntax.yaml"></a>
 
 ```
+  [AmdSevSnp](#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions-amdsevsnp): String
   [CoreCount](#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions-corecount): Integer
   [ThreadsPerCore](#cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions-threadspercore): Integer
 ```
 
 ## Properties<a name="aws-properties-ec2-launchtemplate-launchtemplatedata-cpuoptions-properties"></a>
+
+`AmdSevSnp`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions-amdsevsnp"></a>
+Indicates whether to enable the instance for AMD SEV\-SNP\. AMD SEV\-SNP is supported with M6a, R6a, and C6a instance types only\.  
+*Required*: No  
+*Type*: String  
+*Allowed values*: `disabled | enabled`  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `CoreCount`  <a name="cfn-ec2-launchtemplate-launchtemplatedata-cpuoptions-corecount"></a>
 The number of CPU cores for the instance\.  

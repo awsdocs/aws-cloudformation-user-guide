@@ -45,7 +45,7 @@ Specifies which file to use as input to the workflow step: either the output fro
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Target`  <a name="cfn-transfer-workflow-customstepdetails-target"></a>
-The ARN for the lambda function that is being called\.  
+The ARN for the Lambda function that is being called\.  
 *Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

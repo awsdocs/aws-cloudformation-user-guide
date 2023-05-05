@@ -116,7 +116,7 @@ Required if the policy type is `PredictiveScaling`\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScalingAdjustment`  <a name="cfn-autoscaling-scalingpolicy-scalingadjustment"></a>
-The amount by which to scale, based on the specified adjustment type\. A positive value adds to the current capacity while a negative number removes from the current capacity\. For exact capacity, you must specify a positive value\.  
+The amount by which to scale, based on the specified adjustment type\. A positive value adds to the current capacity while a negative number removes from the current capacity\. For exact capacity, you must specify a non\-negative value\.  
 Required if the policy type is `SimpleScaling`\. \(Not used with any other policy type\.\)   
 *Required*: Conditional  
 *Type*: Integer  

@@ -46,9 +46,7 @@ Properties:
 ## Properties<a name="aws-resource-datasync-agent-properties"></a>
 
 `ActivationKey`  <a name="cfn-datasync-agent-activationkey"></a>
-Your agent activation key\. You can get the activation key either by sending an HTTP GET request with redirects that enable you to get the agent IP address \(port 80\)\. Alternatively, you can get it from the DataSync console\.  
-The redirect URL returned in the response provides you the activation key for your agent in the query string parameter `activationKey`\. It might also include other activation\-related parameters; however, these are merely defaults\. The arguments you pass to this API call determine the actual configuration of your agent\.  
-For more information, see [Creating and activating an agent](https://docs.aws.amazon.com/datasync/latest/userguide/activating-agent.html) in the * AWS DataSync User Guide\.*   
+Specifies your DataSync agent's activation key\. If you don't have an activation key, see [Activate your agent](https://docs.aws.amazon.com/datasync/latest/userguide/activate-agent.html)\.  
 *Required*: No  
 *Type*: String  
 *Maximum*: `29`  
@@ -56,7 +54,7 @@ For more information, see [Creating and activating an agent](https://docs.aws.am
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AgentName`  <a name="cfn-datasync-agent-agentname"></a>
-The name you configured for your agent\. This value is a text reference that is used to identify the agent in the console\.  
+Specifies a name for your agent\. You can see this name in the DataSync console\.  
 *Required*: No  
 *Type*: String  
 *Minimum*: `1`  
@@ -73,15 +71,14 @@ The Amazon Resource Names \(ARNs\) of the security groups used to protect your d
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SubnetArns`  <a name="cfn-datasync-agent-subnetarns"></a>
-The Amazon Resource Names \(ARNs\) of the subnets in which DataSync will create elastic network interfaces for each data transfer task\. The agent that runs a task must be private\. When you start a task that is associated with an agent created in a VPC, or one that has access to an IP address in a VPC, then the task is also private\. In this case, DataSync creates four network interfaces for each task in your subnet\. For a data transfer to work, the agent must be able to route to all these four network interfaces\.  
+Specifies the ARN of the subnet where you want to run your DataSync task when using a VPC endpoint\. This is the subnet where DataSync creates and manages the [network interfaces](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-network.html#required-network-interfaces) for your transfer\.  
 *Required*: No  
 *Type*: List of String  
 *Maximum*: `1`  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Tags`  <a name="cfn-datasync-agent-tags"></a>
-The key\-value pair that represents the tag that you want to associate with the agent\. The value can be an empty string\. This value helps you manage, filter, and search for your agents\.  
-Valid characters for key and value are letters, spaces, and numbers representable in UTF\-8 format, and the following special characters: \+ \- = \. \_ : / @\. 
+Specifies labels that help you categorize, filter, and search for your AWS resources\. We recommend creating at least one tag for your agent\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
 *Maximum*: `50`  

@@ -54,8 +54,7 @@ The upper bound must be greater than the lower bound\.
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `ScalingAdjustment`  <a name="cfn-autoscaling-scalingpolicy-stepadjustment-scalingadjustment"></a>
-The amount by which to scale, based on the specified adjustment type\. A positive value adds to the current capacity while a negative number removes from the current capacity\.  
-The amount by which to scale\. The adjustment is based on the value that you specified in the `AdjustmentType` property \(either an absolute number or a percentage\)\. A positive value adds to the current capacity and a negative number subtracts from the current capacity\.   
+The amount by which to scale, based on the specified adjustment type\. A positive value adds to the current capacity while a negative number removes from the current capacity\. For exact capacity, you must specify a non\-negative value\.  
 *Required*: Yes  
 *Type*: Integer  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

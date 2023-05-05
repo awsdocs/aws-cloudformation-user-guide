@@ -28,13 +28,13 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `FirstExecutionFrom`  <a name="cfn-appintegrations-dataintegration-scheduleconfig-firstexecutionfrom"></a>
 The start date for objects to import in the first flow run as an Unix/epoch timestamp in milliseconds or in ISO\-8601 format\.   
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `Object`  <a name="cfn-appintegrations-dataintegration-scheduleconfig-object"></a>
 The name of the object to pull from the data source\.  
-*Required*: Yes  
+*Required*: No  
 *Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 

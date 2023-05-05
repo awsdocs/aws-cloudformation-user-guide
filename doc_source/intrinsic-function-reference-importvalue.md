@@ -124,22 +124,14 @@ Alternatively, you can use the short form:
 ```
 
 **Important**  
-You can't use the short form of `!ImportValue` when it contains a `!Sub`\.   
+You can't use the short form of `!ImportValue` when it contains the short form of `!Sub`\.   
 
 ```
 # do not use
-!ImportValue:
-  'Fn::Sub': '${NetworkStack}-SubnetID'
+!ImportValue
+  !Sub '${NetworkStack}-SubnetID'
 ```
 Instead, you must use the full function name, for example:  
-
-```
-{
-    "Fn::ImportValue": {
-        "Fn::Sub": "${NetworkStack}-SubnetID"
-    }
-}
-```
 
 ```
 Fn::ImportValue:

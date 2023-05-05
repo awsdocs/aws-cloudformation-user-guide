@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "[DefaultCountryCode](#cfn-amplifyuibuilder-form-fieldinputconfig-defaultcountrycode)" : String,
   "[DefaultValue](#cfn-amplifyuibuilder-form-fieldinputconfig-defaultvalue)" : String,
   "[DescriptiveText](#cfn-amplifyuibuilder-form-fieldinputconfig-descriptivetext)" : String,
+  "[FileUploaderConfig](#cfn-amplifyuibuilder-form-fieldinputconfig-fileuploaderconfig)" : FileUploaderFieldConfig,
   "[IsArray](#cfn-amplifyuibuilder-form-fieldinputconfig-isarray)" : Boolean,
   "[MaxValue](#cfn-amplifyuibuilder-form-fieldinputconfig-maxvalue)" : Double,
   "[MinValue](#cfn-amplifyuibuilder-form-fieldinputconfig-minvalue)" : Double,
@@ -35,6 +36,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   [DefaultCountryCode](#cfn-amplifyuibuilder-form-fieldinputconfig-defaultcountrycode): String
   [DefaultValue](#cfn-amplifyuibuilder-form-fieldinputconfig-defaultvalue): String
   [DescriptiveText](#cfn-amplifyuibuilder-form-fieldinputconfig-descriptivetext): String
+  [FileUploaderConfig](#cfn-amplifyuibuilder-form-fieldinputconfig-fileuploaderconfig): 
+    FileUploaderFieldConfig
   [IsArray](#cfn-amplifyuibuilder-form-fieldinputconfig-isarray): Boolean
   [MaxValue](#cfn-amplifyuibuilder-form-fieldinputconfig-maxvalue): Double
   [MinValue](#cfn-amplifyuibuilder-form-fieldinputconfig-minvalue): Double
@@ -73,6 +76,12 @@ The default value for the field\.
 The text to display to describe the field\.  
 *Required*: No  
 *Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`FileUploaderConfig`  <a name="cfn-amplifyuibuilder-form-fieldinputconfig-fileuploaderconfig"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: [FileUploaderFieldConfig](aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `IsArray`  <a name="cfn-amplifyuibuilder-form-fieldinputconfig-isarray"></a>

@@ -11,7 +11,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 {
   "[ApplicationCallBackURL](#cfn-finspace-environment-federationparameters-applicationcallbackurl)" : String,
-  "[AttributeMap](#cfn-finspace-environment-federationparameters-attributemap)" : Json,
+  "[AttributeMap](#cfn-finspace-environment-federationparameters-attributemap)" : [ AttributeMapItems, ... ],
   "[FederationProviderName](#cfn-finspace-environment-federationparameters-federationprovidername)" : String,
   "[FederationURN](#cfn-finspace-environment-federationparameters-federationurn)" : String,
   "[SamlMetadataDocument](#cfn-finspace-environment-federationparameters-samlmetadatadocument)" : String,
@@ -23,7 +23,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 ```
   [ApplicationCallBackURL](#cfn-finspace-environment-federationparameters-applicationcallbackurl): String
-  [AttributeMap](#cfn-finspace-environment-federationparameters-attributemap): Json
+  [AttributeMap](#cfn-finspace-environment-federationparameters-attributemap): 
+    - AttributeMapItems
   [FederationProviderName](#cfn-finspace-environment-federationparameters-federationprovidername): String
   [FederationURN](#cfn-finspace-environment-federationparameters-federationurn): String
   [SamlMetadataDocument](#cfn-finspace-environment-federationparameters-samlmetadatadocument): String
@@ -39,13 +40,13 @@ The redirect or sign\-in URL that should be entered into the SAML 2\.0 compliant
 *Minimum*: `1`  
 *Maximum*: `1000`  
 *Pattern*: `^https?://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `AttributeMap`  <a name="cfn-finspace-environment-federationparameters-attributemap"></a>
 SAML attribute name and value\. The name must always be `Email` and the value should be set to the attribute definition in which user email is set\. For example, name would be `Email` and value `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress`\. Please check your SAML 2\.0 compliant identity provider \(IdP\) documentation for details\.  
 *Required*: No  
-*Type*: Json  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Type*: List of [AttributeMapItems](aws-properties-finspace-environment-attributemapitems.md)  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FederationProviderName`  <a name="cfn-finspace-environment-federationparameters-federationprovidername"></a>
 Name of the identity provider \(IdP\)\.  
@@ -54,7 +55,7 @@ Name of the identity provider \(IdP\)\.
 *Minimum*: `1`  
 *Maximum*: `32`  
 *Pattern*: `[^_\p{Z}][\p{L}\p{M}\p{S}\p{N}\p{P}][^_\p{Z}]+`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `FederationURN`  <a name="cfn-finspace-environment-federationparameters-federationurn"></a>
 The Uniform Resource Name \(URN\)\. Also referred as Service Provider URN or Audience URI or Service Provider Entity ID\.  
@@ -63,7 +64,7 @@ The Uniform Resource Name \(URN\)\. Also referred as Service Provider URN or Aud
 *Minimum*: `1`  
 *Maximum*: `255`  
 *Pattern*: `^[A-Za-z0-9._\-:\/#\+]+$`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SamlMetadataDocument`  <a name="cfn-finspace-environment-federationparameters-samlmetadatadocument"></a>
 SAML 2\.0 Metadata document from identity provider \(IdP\)\.  
@@ -72,7 +73,7 @@ SAML 2\.0 Metadata document from identity provider \(IdP\)\.
 *Minimum*: `1000`  
 *Maximum*: `10000000`  
 *Pattern*: `.*`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `SamlMetadataURL`  <a name="cfn-finspace-environment-federationparameters-samlmetadataurl"></a>
 Provide the metadata URL from your SAML 2\.0 compliant identity provider \(IdP\)\.  
@@ -81,4 +82,4 @@ Provide the metadata URL from your SAML 2\.0 compliant identity provider \(IdP\)
 *Minimum*: `1`  
 *Maximum*: `1000`  
 *Pattern*: `^https?://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]`  
-*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)

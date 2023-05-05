@@ -545,7 +545,7 @@ Resources:
 When you create a new bucket, all Block Public Access settings are automatically enabled\. We recommend that you keep all Block Public Access settings enabled\. If you require some level of public access to your buckets, you can disable Block Public Access settings\. The following example shows creating a bucket called `my-bucket` and then disabling Block Public Access\. A public bucket policy is then added to the bucket\. 
 
 **Note**  
-The following example assumes the Block Public Access setting, `BlockPublicPolicy`, is set to `FALSE`\. If the `BlockPublicPolicy` setting is set to `TRUE`, calls to `PUTBucketPolicy` are rejected when the specified bucket policy allows public access\.
+The following example assumes the `BlockPublicPolicy` and `RestrictPublicBuckets` Block Public Access settings have been disabled at the account level\. 
 
 #### JSON<a name="aws-properties-s3-bucket--examples--Granting_public_access_to_S3_buckets--json"></a>
 
@@ -608,10 +608,10 @@ The following example assumes the Block Public Access setting, `BlockPublicPolic
             Properties:
               BucketName: my-bucket
               PublicAccessBlockConfiguration:
-                BlockPublicAcls: true
-                BlockPublicPolicy: true
-                IgnorePublicAcls: true
-                RestrictPublicBuckets: true
+                BlockPublicAcls: false
+                BlockPublicPolicy: false
+                IgnorePublicAcls: false
+                RestrictPublicBuckets: false
           MyBucketPolicy:
             Type: 'AWS::S3::BucketPolicy'
             Properties:

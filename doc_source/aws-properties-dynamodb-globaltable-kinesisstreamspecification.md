@@ -26,4 +26,6 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 The ARN for a specific Kinesis data stream\.  
 *Required*: Yes  
 *Type*: String  
+*Minimum*: `37`  
+*Maximum*: `1024`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

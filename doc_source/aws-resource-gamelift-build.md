@@ -14,6 +14,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[Name](#cfn-gamelift-build-name)" : String,
       "[OperatingSystem](#cfn-gamelift-build-operatingsystem)" : String,
+      "[ServerSdkVersion](#cfn-gamelift-build-serversdkversion)" : String,
       "[StorageLocation](#cfn-gamelift-build-storagelocation)" : StorageLocation,
       "[Version](#cfn-gamelift-build-version)" : String
     }
@@ -27,6 +28,7 @@ Type: AWS::GameLift::Build
 Properties: 
   [Name](#cfn-gamelift-build-name): String
   [OperatingSystem](#cfn-gamelift-build-operatingsystem): String
+  [ServerSdkVersion](#cfn-gamelift-build-serversdkversion): String
   [StorageLocation](#cfn-gamelift-build-storagelocation): 
     StorageLocation
   [Version](#cfn-gamelift-build-version): String
@@ -48,6 +50,12 @@ If you have active fleets using the Windows Server 2012 operating system, you ca
 *Required*: No  
 *Type*: String  
 *Allowed values*: `AMAZON_LINUX | AMAZON_LINUX_2 | WINDOWS_2012 | WINDOWS_2016`  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
+`ServerSdkVersion`  <a name="cfn-gamelift-build-serversdkversion"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: String  
 *Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
 
 `StorageLocation`  <a name="cfn-gamelift-build-storagelocation"></a>

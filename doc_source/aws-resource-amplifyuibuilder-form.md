@@ -18,6 +18,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[EnvironmentName](#cfn-amplifyuibuilder-form-environmentname)" : String,
       "[Fields](#cfn-amplifyuibuilder-form-fields)" : {Key : Value, ...},
       "[FormActionType](#cfn-amplifyuibuilder-form-formactiontype)" : String,
+      "[LabelDecorator](#cfn-amplifyuibuilder-form-labeldecorator)" : String,
       "[Name](#cfn-amplifyuibuilder-form-name)" : String,
       "[SchemaVersion](#cfn-amplifyuibuilder-form-schemaversion)" : String,
       "[SectionalElements](#cfn-amplifyuibuilder-form-sectionalelements)" : {Key : Value, ...},
@@ -41,6 +42,7 @@ Properties:
   [Fields](#cfn-amplifyuibuilder-form-fields): 
     Key : Value
   [FormActionType](#cfn-amplifyuibuilder-form-formactiontype): String
+  [LabelDecorator](#cfn-amplifyuibuilder-form-labeldecorator): String
   [Name](#cfn-amplifyuibuilder-form-name): String
   [SchemaVersion](#cfn-amplifyuibuilder-form-schemaversion): String
   [SectionalElements](#cfn-amplifyuibuilder-form-sectionalelements): 
@@ -86,6 +88,12 @@ The configuration information for the form's fields\.
 `FormActionType`  <a name="cfn-amplifyuibuilder-form-formactiontype"></a>
 Specifies whether to perform a create or update action on the form\.  
 *Required*: Yes  
+*Type*: String  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`LabelDecorator`  <a name="cfn-amplifyuibuilder-form-labeldecorator"></a>
+Property description not available\.  
+*Required*: No  
 *Type*: String  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 

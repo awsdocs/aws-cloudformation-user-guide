@@ -8,3 +8,4 @@
 + [AWS::QuickSight::RefreshSchedule](aws-resource-quicksight-refreshschedule.md)
 + [AWS::QuickSight::Template](aws-resource-quicksight-template.md)
 + [AWS::QuickSight::Theme](aws-resource-quicksight-theme.md)
++ [AWS::QuickSight::VPCConnection](aws-resource-quicksight-vpcconnection.md)

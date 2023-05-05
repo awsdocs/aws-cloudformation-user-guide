@@ -1,6 +1,8 @@
 # AWS::GuardDuty::Detector FeatureConfigurations<a name="aws-properties-guardduty-detector-featureconfigurations"></a>
 
-Describes the configuration for a feature\. Make sure you use either `dataSources` or `Features`, and not both\.
+Describes the configuration for a feature\. 
+
+Although the `Required` field associated with the following properties specifies `No`, if you provide information for `Name`, you will need to provide the information for `Status` too\. For information about the available feature configurations, see [DetectorFeatureConfiguration](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_DetectorFeatureConfiguration.html)\.
 
 ## Syntax<a name="aws-properties-guardduty-detector-featureconfigurations-syntax"></a>
 

@@ -12,6 +12,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 {
   "Type" : "AWS::Detective::Graph",
   "Properties" : {
+      "[AutoEnableMembers](#cfn-detective-graph-autoenablemembers)" : Boolean,
       "[Tags](#cfn-detective-graph-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
     }
 }
@@ -22,11 +23,18 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ```
 Type: AWS::Detective::Graph
 Properties: 
+  [AutoEnableMembers](#cfn-detective-graph-autoenablemembers): Boolean
   [Tags](#cfn-detective-graph-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
 ```
 
 ## Properties<a name="aws-resource-detective-graph-properties"></a>
+
+`AutoEnableMembers`  <a name="cfn-detective-graph-autoenablemembers"></a>
+Property description not available\.  
+*Required*: No  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 `Tags`  <a name="cfn-detective-graph-tags"></a>
 The tag values to assign to the new behavior graph\.  

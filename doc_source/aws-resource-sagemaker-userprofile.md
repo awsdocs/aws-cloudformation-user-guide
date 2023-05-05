@@ -3,7 +3,7 @@
 Creates a user profile\. A user profile represents a single user within a domain, and is the main way to reference a "person" for the purposes of sharing, reporting, and other user\-oriented features\. This entity is created when a user onboards to Amazon SageMaker Studio\. If an administrator invites a person by email or imports them from IAM Identity Center, a user profile is automatically created\. A user profile is the primary holder of settings for an individual user and has a reference to the user's private Amazon Elastic File System \(EFS\) home directory\. 
 
 **Note**  
-If you're using IAM Identity Center authentication, a user in IAM Identity Center, or a group in IAM Identity Center containing that user, must be assigned to the Amazon SageMaker Studio application from the IAM Identity Center Console to create a user profile\. For more information about application assignment, see [Assign user access](singlesignon/latest/userguide/assignuserstoapp.html)\. After assignment is complete, a user profile can be created for that user in IAM Identity Center with AWS CloudFormation\. 
+If you're using IAM Identity Center authentication, a user in IAM Identity Center, or a group in IAM Identity Center containing that user, must be assigned to the Amazon SageMaker Studio application from the IAM Identity Center Console to create a user profile\. For more information about application assignment, see [Assign user access](https://docs.aws.amazon.com/singlesignon/latest/userguide/assignuserstoapp.html)\. After assignment is complete, a user profile can be created for that user in IAM Identity Center with AWS CloudFormation\. 
 
 ## Syntax<a name="aws-resource-sagemaker-userprofile-syntax"></a>
 

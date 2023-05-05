@@ -33,7 +33,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 `ExecutionRole`  <a name="cfn-sagemaker-domain-defaultspacesettings-executionrole"></a>
 The ARN of the execution role for the space\.  
-*Required*: No  
+*Required*: Yes  
 *Type*: String  
 *Minimum*: `20`  
 *Maximum*: `2048`  

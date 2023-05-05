@@ -4,6 +4,36 @@ The following table describes important changes in each release of the AWS Cloud
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Updated resources](AWS_DeviceFarm.md) | The following resources were updated: AWS::DeviceFarm::Project\. 
+
+ [AWS::DeviceFarm::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-project.html)   
+Use the `AWS::DeviceFarm::Project VpcConfig` resource to specify the VPC security groups and subnets that are attached to a project\.  | May 4, 2023 | 
+| [Updated resource](AWS_AppSync.md) | The following resources were updated: AWS::AppSync::GraphQLApi 
+
+ [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html)   
+Use the `Visibility` property to specify the scoping of the GraphQL API\.  | May 4, 2023 | 
+| [Updated resource](AWS_CloudWatch.md) | The following resource was updated: AWS::CloudWatch::MetricStreamFilter 
+
+ [AWS::CloudWatch::MetricStream MetricSTreamFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-metricstream.html)   
+In the [MetricStreamFilter](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamfilter.html.html) resource, use `MetricNames` to specify individual metrics to include or exclude from a metric stream\.  | May 4, 2023 | 
+| [New resources](AWS_BackupGateway.md) | The following resource was added: AWS::BackupGateway::Hypervisor\. 
+
+[AWS::BackupGateway::Hypervisor](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backupgateway-hypervisor.html)  
+Use the `AWS::BackupGateway::Hypervisor` resource to specify a hypervisor in AWS Backup;\.  | May 4, 2023 | 
+| [New resources](AWS_Proton.md) | The following resources were added: `AWS::Proton::EnvironmentAccountConnection`, `AWS::Proton::EnvironmentTemplate` and `AWS::Proton::ServiceTemplate`\. 
+
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-proton-servicetemplate.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-proton-servicetemplate.html)   
+Use the `AWS::Proton::ServiceTemplate` resource to specify standardized infrastructure and an optional CI/CD service pipeline in AWS Proton\. 
+
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-proton-environmenttemplate.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-proton-environmenttemplate.html)   
+Use the `AWS::Proton::EnvironmentTemplate` resource to specify an environment template in AWS Proton\. 
+
+ [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-proton-environmentaccountconnection.html](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-proton-environmentaccountconnection.html)   
+Use the `AWS::Proton::EnvironmentAccountConnection` resource to specify an environment account connection resource in AWS Proton\.  | May 4, 2023 | 
+| [New resource](AWS_QuickSight.md) | The following resource was added: AWS::QuickSight::VPCConnection\. 
+
+ [ AWS::QuickSight::VPCConnection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html)   
+Use the `AWS::QuickSight::VPCConnection` resource to create a new VPC connection in Amazon QuickSight\.  | May 4, 2023 | 
 | [Updated resource](AWS_MSK.md) | The following resource was updated: AWS::MSK::Cluster\. 
 
  [AWS::MSK::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)   
@@ -59,6 +89,7 @@ Use the `AWS::FraudDetector::List` resource to create a list of input data\. Aft
 
  [AWS::RAM::Permission](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-permission.html)   
 Creates a customer managed permission that you can then assign to resource shares and applies to resources of the specified resource type that are included in the share\.  | April 19, 2023 | 
+| [Updated resource](AWS_GuardDuty.md) | The AWS:GuardDuty:Detector resource was updated\. | April 13, 2023 | 
 | [Updated resource](AWS_MWAA.md) | The following resource was updated: AWS::MWAA::Environment 
 
  [https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3path](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-startupscripts3path)   
@@ -359,7 +390,7 @@ Create a rescore execution plan, which is an Amazon Kendra Intelligent Ranking r
 | [Updated resource](AWS_CloudWatch.md) | The following resource was updated: AWS::CloudWatch::MetricStream\. 
 
  [AWS::CloudWatch::MetricStream](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-metricstream.html)   
-In the [MetricStream](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricstream.html) resource, use `IncludeLinkedAccountsMetrics` to specify whether the metric stream should metric streams from source accounts, if the metric stream is created in a monitoring account\.  | January 19, 2023 | 
+In the [MetricStream](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream.html) resource, use `IncludeLinkedAccountsMetrics` to specify whether the metric stream should metric streams from source accounts, if the metric stream is created in a monitoring account\.  | January 19, 2023 | 
 | [Updated resource](AWS_Lambda.md) | The following resource was updated: AWS::Lambda::EventSourceMapping\. 
 
  [AWS::Lambda::EventSourceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html)   

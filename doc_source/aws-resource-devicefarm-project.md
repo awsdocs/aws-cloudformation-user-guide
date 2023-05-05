@@ -14,7 +14,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[DefaultJobTimeoutMinutes](#cfn-devicefarm-project-defaultjobtimeoutminutes)" : Integer,
       "[Name](#cfn-devicefarm-project-name)" : String,
-      "[Tags](#cfn-devicefarm-project-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ]
+      "[Tags](#cfn-devicefarm-project-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
+      "[VpcConfig](#cfn-devicefarm-project-vpcconfig)" : VpcConfig
     }
 }
 ```
@@ -28,6 +29,8 @@ Properties:
   [Name](#cfn-devicefarm-project-name): String
   [Tags](#cfn-devicefarm-project-tags): 
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+  [VpcConfig](#cfn-devicefarm-project-vpcconfig): 
+    VpcConfig
 ```
 
 ## Properties<a name="aws-resource-devicefarm-project-properties"></a>
@@ -50,6 +53,12 @@ The project's name\.
 The tags to add to the resource\. A tag is an array of key\-value pairs\. Tag keys can have a maximum character length of 128 characters\. Tag values can have a maximum length of 256 characters\.  
 *Required*: No  
 *Type*: List of [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`VpcConfig`  <a name="cfn-devicefarm-project-vpcconfig"></a>
+The VPC security groups and subnets that are attached to a project\.  
+*Required*: No  
+*Type*: [VpcConfig](aws-properties-devicefarm-project-vpcconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
 ## Return values<a name="aws-resource-devicefarm-project-return-values"></a>

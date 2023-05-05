@@ -20,6 +20,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
       "[OpenIDConnectConfig](#cfn-appsync-graphqlapi-openidconnectconfig)" : OpenIDConnectConfig,
       "[Tags](#cfn-appsync-graphqlapi-tags)" : [ [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html), ... ],
       "[UserPoolConfig](#cfn-appsync-graphqlapi-userpoolconfig)" : UserPoolConfig,
+      "[Visibility](#cfn-appsync-graphqlapi-visibility)" : String,
       "[XrayEnabled](#cfn-appsync-graphqlapi-xrayenabled)" : Boolean
     }
 }
@@ -44,6 +45,7 @@ Properties:
     - [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
   [UserPoolConfig](#cfn-appsync-graphqlapi-userpoolconfig): 
     UserPoolConfig
+  [Visibility](#cfn-appsync-graphqlapi-visibility): String
   [XrayEnabled](#cfn-appsync-graphqlapi-xrayenabled): Boolean
 ```
 
@@ -97,6 +99,12 @@ Optional authorization configuration for using Amazon Cognito user pools with yo
 *Type*: [UserPoolConfig](aws-properties-appsync-graphqlapi-userpoolconfig.md)  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
 
+`Visibility`  <a name="cfn-appsync-graphqlapi-visibility"></a>
+Sets the scope of the GraphQL API to public \(`GLOBAL`\) or private \(`PRIVATE`\)\. By default, the scope is set to `Global` if no value is provided\.  
+*Required*: No  
+*Type*: String  
+*Update requires*: [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+
 `XrayEnabled`  <a name="cfn-appsync-graphqlapi-xrayenabled"></a>
 A flag indicating whether to use AWS X\-Ray tracing for this `GraphqlApi`\.  
 *Required*: No  
@@ -125,8 +133,17 @@ Unique AWS AppSync GraphQL API identifier\.
 `Arn`  <a name="Arn-fn::getatt"></a>
 The Amazon Resource Name \(ARN\) of the API key, such as `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid`\. 
 
+`GraphQLDns`  <a name="GraphQLDns-fn::getatt"></a>
+The fully qualified domain name \(FQDN\) of the endpoint URL of your GraphQL API\.
+
 `GraphQLUrl`  <a name="GraphQLUrl-fn::getatt"></a>
 The Endpoint URL of your GraphQL API\. 
+
+`RealtimeDns`  <a name="RealtimeDns-fn::getatt"></a>
+The fully qualified domain name \(FQDN\) of the real\-time endpoint URL of your GraphQL API\.
+
+`RealtimeUrl`  <a name="RealtimeUrl-fn::getatt"></a>
+The GraphQL API real\-time endpoint URL\. For more information, see [Discovering the real\-time endpoint from the GraphQL endpoint](https://docs.aws.amazon.com/appsync/latest/devguide/real-time-websocket-client.html#handshake-details-to-establish-the-websocket-connection)\.
 
 ## Examples<a name="aws-resource-appsync-graphqlapi--examples"></a>
 

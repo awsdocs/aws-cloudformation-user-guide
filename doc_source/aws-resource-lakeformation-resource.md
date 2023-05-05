@@ -17,7 +17,8 @@ To declare this entity in your AWS CloudFormation template, use the following sy
   "Properties" : {
       "[ResourceArn](#cfn-lakeformation-resource-resourcearn)" : String,
       "[RoleArn](#cfn-lakeformation-resource-rolearn)" : String,
-      "[UseServiceLinkedRole](#cfn-lakeformation-resource-useservicelinkedrole)" : Boolean
+      "[UseServiceLinkedRole](#cfn-lakeformation-resource-useservicelinkedrole)" : Boolean,
+      "[WithFederation](#cfn-lakeformation-resource-withfederation)" : Boolean
     }
 }
 ```
@@ -30,6 +31,7 @@ Properties:
   [ResourceArn](#cfn-lakeformation-resource-resourcearn): String
   [RoleArn](#cfn-lakeformation-resource-rolearn): String
   [UseServiceLinkedRole](#cfn-lakeformation-resource-useservicelinkedrole): Boolean
+  [WithFederation](#cfn-lakeformation-resource-withfederation): Boolean
 ```
 
 ## Properties<a name="aws-resource-lakeformation-resource-properties"></a>
@@ -49,5 +51,11 @@ The IAM role that registered a resource\.
 `UseServiceLinkedRole`  <a name="cfn-lakeformation-resource-useservicelinkedrole"></a>
 Designates a trusted caller, an IAM principal, by registering this caller with the Data Catalog\.  
 *Required*: Yes  
+*Type*: Boolean  
+*Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
+
+`WithFederation`  <a name="cfn-lakeformation-resource-withfederation"></a>
+Property description not available\.  
+*Required*: No  
 *Type*: Boolean  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)

@@ -37,5 +37,5 @@ Configures how Network Firewall processes traffic when a network connection brea
 + `CONTINUE` \- Network Firewall continues to apply rules to the subsequent traffic without context from traffic before the break\. This impacts the behavior of rules that depend on this context\. For example, if you have a stateful rule to `drop http` traffic, Network Firewall won't match the traffic for this rule because the service won't have the context from session initialization defining the application layer protocol as HTTP\. However, this behavior is rule dependent—a TCP\-layer rule using a `flow:stateless` rule would still match, as would the `aws:drop_strict` default action\.
 *Required*: No  
 *Type*: String  
-*Allowed values*: `CONTINUE | DROP`  
+*Allowed values*: `CONTINUE | DROP | REJECT`  
 *Update requires*: [No interruption](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-no-interrupt)
