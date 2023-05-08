@@ -5904,7 +5904,6 @@ sponsored by Amazon.
             + [AWS::RUM::AppMonitor MetricDestination](aws-properties-rum-appmonitor-metricdestination.md)
       + [Amazon Simple Storage Service resource type reference](AWS_S3.md)
          + [AWS::S3::AccessPoint](aws-resource-s3-accesspoint.md)
-            + [AWS::S3::AccessPoint PolicyStatus](aws-properties-s3-accesspoint-policystatus.md)
             + [AWS::S3::AccessPoint PublicAccessBlockConfiguration](aws-properties-s3-accesspoint-publicaccessblockconfiguration.md)
             + [AWS::S3::AccessPoint VpcConfiguration](aws-properties-s3-accesspoint-vpcconfiguration.md)
          + [AWS::S3::Bucket](aws-properties-s3-bucket.md)
