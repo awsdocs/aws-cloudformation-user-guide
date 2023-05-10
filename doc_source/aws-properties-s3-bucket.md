@@ -961,7 +961,7 @@ Outputs:
 
 ### Log access requests for a specific S3 bucket<a name="aws-properties-s3-bucket--examples--Log_access_requests_for_a_specific_S3_bucket"></a>
 
-The following example template creates two S3 buckets\. The `LoggingBucket` bucket store the logs from the `S3Bucket` bucket\. To receive logs from the `S3Bucket` bucket, the logging bucket requires log delivery write permissions\.
+The following example template creates two S3 buckets\. The `LoggingBucket` bucket stores the logs from the `S3Bucket` bucket\. To receive logs from the `S3Bucket` bucket, the logging bucket requires log delivery write permissions\.
 
 #### JSON<a name="aws-properties-s3-bucket--examples--Log_access_requests_for_a_specific_S3_bucket--json"></a>
 
